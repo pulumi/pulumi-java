@@ -62,22 +62,22 @@ public final class LogAnalyticsConfigurationArgs extends io.pulumi.resources.Res
     	      this.sharedKey = defaults.sharedKey;
         }
 
-        public Builder setCustomerId(@Nullable Input<String> customerId) {
+        public Builder customerId(@Nullable Input<String> customerId) {
             this.customerId = customerId;
             return this;
         }
 
-        public Builder setCustomerId(@Nullable String customerId) {
+        public Builder customerId(@Nullable String customerId) {
             this.customerId = Input.ofNullable(customerId);
             return this;
         }
 
-        public Builder setSharedKey(@Nullable Input<String> sharedKey) {
+        public Builder sharedKey(@Nullable Input<String> sharedKey) {
             this.sharedKey = sharedKey;
             return this;
         }
 
-        public Builder setSharedKey(@Nullable String sharedKey) {
+        public Builder sharedKey(@Nullable String sharedKey) {
             this.sharedKey = Input.ofNullable(sharedKey);
             return this;
         }

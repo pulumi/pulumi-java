@@ -134,32 +134,32 @@ public final class DetectorResponse {
     	      this.supportedResourceTypes = defaults.supportedResourceTypes;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setImagePaths(@Nullable List<String> imagePaths) {
+        public Builder imagePaths(@Nullable List<String> imagePaths) {
             this.imagePaths = imagePaths;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setParameters(@Nullable Map<String,Object> parameters) {
+        public Builder parameters(@Nullable Map<String,Object> parameters) {
             this.parameters = parameters;
             return this;
         }
 
-        public Builder setSupportedResourceTypes(@Nullable List<String> supportedResourceTypes) {
+        public Builder supportedResourceTypes(@Nullable List<String> supportedResourceTypes) {
             this.supportedResourceTypes = supportedResourceTypes;
             return this;
         }

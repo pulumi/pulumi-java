@@ -90,32 +90,32 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
     	      this.storageType = defaults.storageType;
         }
 
-        public Builder setAccountKey(Input<String> accountKey) {
+        public Builder accountKey(Input<String> accountKey) {
             this.accountKey = Objects.requireNonNull(accountKey);
             return this;
         }
 
-        public Builder setAccountKey(String accountKey) {
+        public Builder accountKey(String accountKey) {
             this.accountKey = Input.of(Objects.requireNonNull(accountKey));
             return this;
         }
 
-        public Builder setAccountName(Input<String> accountName) {
+        public Builder accountName(Input<String> accountName) {
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
 
-        public Builder setAccountName(String accountName) {
+        public Builder accountName(String accountName) {
             this.accountName = Input.of(Objects.requireNonNull(accountName));
             return this;
         }
 
-        public Builder setStorageType(Input<String> storageType) {
+        public Builder storageType(Input<String> storageType) {
             this.storageType = Objects.requireNonNull(storageType);
             return this;
         }
 
-        public Builder setStorageType(String storageType) {
+        public Builder storageType(String storageType) {
             this.storageType = Input.of(Objects.requireNonNull(storageType));
             return this;
         }

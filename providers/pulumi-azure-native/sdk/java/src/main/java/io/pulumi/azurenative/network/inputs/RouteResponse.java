@@ -187,47 +187,47 @@ public final class RouteResponse extends io.pulumi.resources.InvokeArgs {
     	      this.type = defaults.type;
         }
 
-        public Builder setAddressPrefix(@Nullable String addressPrefix) {
+        public Builder addressPrefix(@Nullable String addressPrefix) {
             this.addressPrefix = addressPrefix;
             return this;
         }
 
-        public Builder setEtag(String etag) {
+        public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
 
-        public Builder setHasBgpOverride(@Nullable Boolean hasBgpOverride) {
+        public Builder hasBgpOverride(@Nullable Boolean hasBgpOverride) {
             this.hasBgpOverride = hasBgpOverride;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setNextHopIpAddress(@Nullable String nextHopIpAddress) {
+        public Builder nextHopIpAddress(@Nullable String nextHopIpAddress) {
             this.nextHopIpAddress = nextHopIpAddress;
             return this;
         }
 
-        public Builder setNextHopType(String nextHopType) {
+        public Builder nextHopType(String nextHopType) {
             this.nextHopType = Objects.requireNonNull(nextHopType);
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = type;
             return this;
         }

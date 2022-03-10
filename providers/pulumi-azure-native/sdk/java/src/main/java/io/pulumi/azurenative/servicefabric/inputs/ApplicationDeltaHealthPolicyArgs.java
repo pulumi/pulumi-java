@@ -76,22 +76,22 @@ public final class ApplicationDeltaHealthPolicyArgs extends io.pulumi.resources.
     	      this.serviceTypeDeltaHealthPolicies = defaults.serviceTypeDeltaHealthPolicies;
         }
 
-        public Builder setDefaultServiceTypeDeltaHealthPolicy(@Nullable Input<ServiceTypeDeltaHealthPolicyArgs> defaultServiceTypeDeltaHealthPolicy) {
+        public Builder defaultServiceTypeDeltaHealthPolicy(@Nullable Input<ServiceTypeDeltaHealthPolicyArgs> defaultServiceTypeDeltaHealthPolicy) {
             this.defaultServiceTypeDeltaHealthPolicy = defaultServiceTypeDeltaHealthPolicy;
             return this;
         }
 
-        public Builder setDefaultServiceTypeDeltaHealthPolicy(@Nullable ServiceTypeDeltaHealthPolicyArgs defaultServiceTypeDeltaHealthPolicy) {
+        public Builder defaultServiceTypeDeltaHealthPolicy(@Nullable ServiceTypeDeltaHealthPolicyArgs defaultServiceTypeDeltaHealthPolicy) {
             this.defaultServiceTypeDeltaHealthPolicy = Input.ofNullable(defaultServiceTypeDeltaHealthPolicy);
             return this;
         }
 
-        public Builder setServiceTypeDeltaHealthPolicies(@Nullable Input<Map<String,ServiceTypeDeltaHealthPolicyArgs>> serviceTypeDeltaHealthPolicies) {
+        public Builder serviceTypeDeltaHealthPolicies(@Nullable Input<Map<String,ServiceTypeDeltaHealthPolicyArgs>> serviceTypeDeltaHealthPolicies) {
             this.serviceTypeDeltaHealthPolicies = serviceTypeDeltaHealthPolicies;
             return this;
         }
 
-        public Builder setServiceTypeDeltaHealthPolicies(@Nullable Map<String,ServiceTypeDeltaHealthPolicyArgs> serviceTypeDeltaHealthPolicies) {
+        public Builder serviceTypeDeltaHealthPolicies(@Nullable Map<String,ServiceTypeDeltaHealthPolicyArgs> serviceTypeDeltaHealthPolicies) {
             this.serviceTypeDeltaHealthPolicies = Input.ofNullable(serviceTypeDeltaHealthPolicies);
             return this;
         }

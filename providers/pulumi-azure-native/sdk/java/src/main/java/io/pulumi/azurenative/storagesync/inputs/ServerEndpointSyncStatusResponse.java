@@ -219,57 +219,57 @@ public final class ServerEndpointSyncStatusResponse extends io.pulumi.resources.
     	      this.uploadStatus = defaults.uploadStatus;
         }
 
-        public Builder setCombinedHealth(String combinedHealth) {
+        public Builder combinedHealth(String combinedHealth) {
             this.combinedHealth = Objects.requireNonNull(combinedHealth);
             return this;
         }
 
-        public Builder setDownloadActivity(ServerEndpointSyncActivityStatusResponse downloadActivity) {
+        public Builder downloadActivity(ServerEndpointSyncActivityStatusResponse downloadActivity) {
             this.downloadActivity = Objects.requireNonNull(downloadActivity);
             return this;
         }
 
-        public Builder setDownloadHealth(String downloadHealth) {
+        public Builder downloadHealth(String downloadHealth) {
             this.downloadHealth = Objects.requireNonNull(downloadHealth);
             return this;
         }
 
-        public Builder setDownloadStatus(ServerEndpointSyncSessionStatusResponse downloadStatus) {
+        public Builder downloadStatus(ServerEndpointSyncSessionStatusResponse downloadStatus) {
             this.downloadStatus = Objects.requireNonNull(downloadStatus);
             return this;
         }
 
-        public Builder setLastUpdatedTimestamp(String lastUpdatedTimestamp) {
+        public Builder lastUpdatedTimestamp(String lastUpdatedTimestamp) {
             this.lastUpdatedTimestamp = Objects.requireNonNull(lastUpdatedTimestamp);
             return this;
         }
 
-        public Builder setOfflineDataTransferStatus(String offlineDataTransferStatus) {
+        public Builder offlineDataTransferStatus(String offlineDataTransferStatus) {
             this.offlineDataTransferStatus = Objects.requireNonNull(offlineDataTransferStatus);
             return this;
         }
 
-        public Builder setSyncActivity(String syncActivity) {
+        public Builder syncActivity(String syncActivity) {
             this.syncActivity = Objects.requireNonNull(syncActivity);
             return this;
         }
 
-        public Builder setTotalPersistentFilesNotSyncingCount(Double totalPersistentFilesNotSyncingCount) {
+        public Builder totalPersistentFilesNotSyncingCount(Double totalPersistentFilesNotSyncingCount) {
             this.totalPersistentFilesNotSyncingCount = Objects.requireNonNull(totalPersistentFilesNotSyncingCount);
             return this;
         }
 
-        public Builder setUploadActivity(ServerEndpointSyncActivityStatusResponse uploadActivity) {
+        public Builder uploadActivity(ServerEndpointSyncActivityStatusResponse uploadActivity) {
             this.uploadActivity = Objects.requireNonNull(uploadActivity);
             return this;
         }
 
-        public Builder setUploadHealth(String uploadHealth) {
+        public Builder uploadHealth(String uploadHealth) {
             this.uploadHealth = Objects.requireNonNull(uploadHealth);
             return this;
         }
 
-        public Builder setUploadStatus(ServerEndpointSyncSessionStatusResponse uploadStatus) {
+        public Builder uploadStatus(ServerEndpointSyncSessionStatusResponse uploadStatus) {
             this.uploadStatus = Objects.requireNonNull(uploadStatus);
             return this;
         }

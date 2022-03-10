@@ -50,7 +50,7 @@ public final class DataCollectionEndpointResponseNetworkAcls {
     	      this.publicNetworkAccess = defaults.publicNetworkAccess;
         }
 
-        public Builder setPublicNetworkAccess(@Nullable String publicNetworkAccess) {
+        public Builder publicNetworkAccess(@Nullable String publicNetworkAccess) {
             this.publicNetworkAccess = publicNetworkAccess;
             return this;
         }

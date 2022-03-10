@@ -57,7 +57,7 @@ public final class IpRuleResponse extends io.pulumi.resources.InvokeArgs {
     	      this.value = defaults.value;
         }
 
-        public Builder setValue(@Nullable String value) {
+        public Builder value(@Nullable String value) {
             this.value = value;
             return this;
         }

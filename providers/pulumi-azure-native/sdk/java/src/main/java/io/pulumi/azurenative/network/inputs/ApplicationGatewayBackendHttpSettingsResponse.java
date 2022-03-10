@@ -335,92 +335,92 @@ public final class ApplicationGatewayBackendHttpSettingsResponse extends io.pulu
     	      this.type = defaults.type;
         }
 
-        public Builder setAffinityCookieName(@Nullable String affinityCookieName) {
+        public Builder affinityCookieName(@Nullable String affinityCookieName) {
             this.affinityCookieName = affinityCookieName;
             return this;
         }
 
-        public Builder setAuthenticationCertificates(@Nullable List<SubResourceResponse> authenticationCertificates) {
+        public Builder authenticationCertificates(@Nullable List<SubResourceResponse> authenticationCertificates) {
             this.authenticationCertificates = authenticationCertificates;
             return this;
         }
 
-        public Builder setConnectionDraining(@Nullable ApplicationGatewayConnectionDrainingResponse connectionDraining) {
+        public Builder connectionDraining(@Nullable ApplicationGatewayConnectionDrainingResponse connectionDraining) {
             this.connectionDraining = connectionDraining;
             return this;
         }
 
-        public Builder setCookieBasedAffinity(@Nullable String cookieBasedAffinity) {
+        public Builder cookieBasedAffinity(@Nullable String cookieBasedAffinity) {
             this.cookieBasedAffinity = cookieBasedAffinity;
             return this;
         }
 
-        public Builder setEtag(String etag) {
+        public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
 
-        public Builder setHostName(@Nullable String hostName) {
+        public Builder hostName(@Nullable String hostName) {
             this.hostName = hostName;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setPath(@Nullable String path) {
+        public Builder path(@Nullable String path) {
             this.path = path;
             return this;
         }
 
-        public Builder setPickHostNameFromBackendAddress(@Nullable Boolean pickHostNameFromBackendAddress) {
+        public Builder pickHostNameFromBackendAddress(@Nullable Boolean pickHostNameFromBackendAddress) {
             this.pickHostNameFromBackendAddress = pickHostNameFromBackendAddress;
             return this;
         }
 
-        public Builder setPort(@Nullable Integer port) {
+        public Builder port(@Nullable Integer port) {
             this.port = port;
             return this;
         }
 
-        public Builder setProbe(@Nullable SubResourceResponse probe) {
+        public Builder probe(@Nullable SubResourceResponse probe) {
             this.probe = probe;
             return this;
         }
 
-        public Builder setProbeEnabled(@Nullable Boolean probeEnabled) {
+        public Builder probeEnabled(@Nullable Boolean probeEnabled) {
             this.probeEnabled = probeEnabled;
             return this;
         }
 
-        public Builder setProtocol(@Nullable String protocol) {
+        public Builder protocol(@Nullable String protocol) {
             this.protocol = protocol;
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setRequestTimeout(@Nullable Integer requestTimeout) {
+        public Builder requestTimeout(@Nullable Integer requestTimeout) {
             this.requestTimeout = requestTimeout;
             return this;
         }
 
-        public Builder setTrustedRootCertificates(@Nullable List<SubResourceResponse> trustedRootCertificates) {
+        public Builder trustedRootCertificates(@Nullable List<SubResourceResponse> trustedRootCertificates) {
             this.trustedRootCertificates = trustedRootCertificates;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

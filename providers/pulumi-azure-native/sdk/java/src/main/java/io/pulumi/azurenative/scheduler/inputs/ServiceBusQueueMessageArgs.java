@@ -154,72 +154,72 @@ public final class ServiceBusQueueMessageArgs extends io.pulumi.resources.Resour
     	      this.transportType = defaults.transportType;
         }
 
-        public Builder setAuthentication(@Nullable Input<ServiceBusAuthenticationArgs> authentication) {
+        public Builder authentication(@Nullable Input<ServiceBusAuthenticationArgs> authentication) {
             this.authentication = authentication;
             return this;
         }
 
-        public Builder setAuthentication(@Nullable ServiceBusAuthenticationArgs authentication) {
+        public Builder authentication(@Nullable ServiceBusAuthenticationArgs authentication) {
             this.authentication = Input.ofNullable(authentication);
             return this;
         }
 
-        public Builder setBrokeredMessageProperties(@Nullable Input<ServiceBusBrokeredMessagePropertiesArgs> brokeredMessageProperties) {
+        public Builder brokeredMessageProperties(@Nullable Input<ServiceBusBrokeredMessagePropertiesArgs> brokeredMessageProperties) {
             this.brokeredMessageProperties = brokeredMessageProperties;
             return this;
         }
 
-        public Builder setBrokeredMessageProperties(@Nullable ServiceBusBrokeredMessagePropertiesArgs brokeredMessageProperties) {
+        public Builder brokeredMessageProperties(@Nullable ServiceBusBrokeredMessagePropertiesArgs brokeredMessageProperties) {
             this.brokeredMessageProperties = Input.ofNullable(brokeredMessageProperties);
             return this;
         }
 
-        public Builder setCustomMessageProperties(@Nullable Input<Map<String,String>> customMessageProperties) {
+        public Builder customMessageProperties(@Nullable Input<Map<String,String>> customMessageProperties) {
             this.customMessageProperties = customMessageProperties;
             return this;
         }
 
-        public Builder setCustomMessageProperties(@Nullable Map<String,String> customMessageProperties) {
+        public Builder customMessageProperties(@Nullable Map<String,String> customMessageProperties) {
             this.customMessageProperties = Input.ofNullable(customMessageProperties);
             return this;
         }
 
-        public Builder setMessage(@Nullable Input<String> message) {
+        public Builder message(@Nullable Input<String> message) {
             this.message = message;
             return this;
         }
 
-        public Builder setMessage(@Nullable String message) {
+        public Builder message(@Nullable String message) {
             this.message = Input.ofNullable(message);
             return this;
         }
 
-        public Builder setNamespace(@Nullable Input<String> namespace) {
+        public Builder namespace(@Nullable Input<String> namespace) {
             this.namespace = namespace;
             return this;
         }
 
-        public Builder setNamespace(@Nullable String namespace) {
+        public Builder namespace(@Nullable String namespace) {
             this.namespace = Input.ofNullable(namespace);
             return this;
         }
 
-        public Builder setQueueName(@Nullable Input<String> queueName) {
+        public Builder queueName(@Nullable Input<String> queueName) {
             this.queueName = queueName;
             return this;
         }
 
-        public Builder setQueueName(@Nullable String queueName) {
+        public Builder queueName(@Nullable String queueName) {
             this.queueName = Input.ofNullable(queueName);
             return this;
         }
 
-        public Builder setTransportType(@Nullable Input<ServiceBusTransportType> transportType) {
+        public Builder transportType(@Nullable Input<ServiceBusTransportType> transportType) {
             this.transportType = transportType;
             return this;
         }
 
-        public Builder setTransportType(@Nullable ServiceBusTransportType transportType) {
+        public Builder transportType(@Nullable ServiceBusTransportType transportType) {
             this.transportType = Input.ofNullable(transportType);
             return this;
         }

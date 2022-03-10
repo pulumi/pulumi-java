@@ -66,12 +66,12 @@ public final class AutoScaleSettingsResponse extends io.pulumi.resources.InvokeA
     	      this.formula = defaults.formula;
         }
 
-        public Builder setEvaluationInterval(@Nullable String evaluationInterval) {
+        public Builder evaluationInterval(@Nullable String evaluationInterval) {
             this.evaluationInterval = evaluationInterval;
             return this;
         }
 
-        public Builder setFormula(String formula) {
+        public Builder formula(String formula) {
             this.formula = Objects.requireNonNull(formula);
             return this;
         }

@@ -102,22 +102,22 @@ public final class SourcePropertiesResponse {
     	      this.sourceControlType = defaults.sourceControlType;
         }
 
-        public Builder setBranch(@Nullable String branch) {
+        public Builder branch(@Nullable String branch) {
             this.branch = branch;
             return this;
         }
 
-        public Builder setRepositoryUrl(String repositoryUrl) {
+        public Builder repositoryUrl(String repositoryUrl) {
             this.repositoryUrl = Objects.requireNonNull(repositoryUrl);
             return this;
         }
 
-        public Builder setSourceControlAuthProperties(@Nullable AuthInfoResponse sourceControlAuthProperties) {
+        public Builder sourceControlAuthProperties(@Nullable AuthInfoResponse sourceControlAuthProperties) {
             this.sourceControlAuthProperties = sourceControlAuthProperties;
             return this;
         }
 
-        public Builder setSourceControlType(String sourceControlType) {
+        public Builder sourceControlType(String sourceControlType) {
             this.sourceControlType = Objects.requireNonNull(sourceControlType);
             return this;
         }

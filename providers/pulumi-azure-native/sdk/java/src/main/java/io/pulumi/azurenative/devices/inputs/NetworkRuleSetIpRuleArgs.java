@@ -92,32 +92,32 @@ public final class NetworkRuleSetIpRuleArgs extends io.pulumi.resources.Resource
     	      this.ipMask = defaults.ipMask;
         }
 
-        public Builder setAction(@Nullable Input<Either<String,NetworkRuleIPAction>> action) {
+        public Builder action(@Nullable Input<Either<String,NetworkRuleIPAction>> action) {
             this.action = action;
             return this;
         }
 
-        public Builder setAction(@Nullable Either<String,NetworkRuleIPAction> action) {
+        public Builder action(@Nullable Either<String,NetworkRuleIPAction> action) {
             this.action = Input.ofNullable(action);
             return this;
         }
 
-        public Builder setFilterName(Input<String> filterName) {
+        public Builder filterName(Input<String> filterName) {
             this.filterName = Objects.requireNonNull(filterName);
             return this;
         }
 
-        public Builder setFilterName(String filterName) {
+        public Builder filterName(String filterName) {
             this.filterName = Input.of(Objects.requireNonNull(filterName));
             return this;
         }
 
-        public Builder setIpMask(Input<String> ipMask) {
+        public Builder ipMask(Input<String> ipMask) {
             this.ipMask = Objects.requireNonNull(ipMask);
             return this;
         }
 
-        public Builder setIpMask(String ipMask) {
+        public Builder ipMask(String ipMask) {
             this.ipMask = Input.of(Objects.requireNonNull(ipMask));
             return this;
         }

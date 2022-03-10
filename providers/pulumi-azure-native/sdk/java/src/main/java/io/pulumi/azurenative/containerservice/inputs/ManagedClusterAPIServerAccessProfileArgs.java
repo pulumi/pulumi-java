@@ -92,32 +92,32 @@ public final class ManagedClusterAPIServerAccessProfileArgs extends io.pulumi.re
     	      this.privateDNSZone = defaults.privateDNSZone;
         }
 
-        public Builder setAuthorizedIPRanges(@Nullable Input<List<String>> authorizedIPRanges) {
+        public Builder authorizedIPRanges(@Nullable Input<List<String>> authorizedIPRanges) {
             this.authorizedIPRanges = authorizedIPRanges;
             return this;
         }
 
-        public Builder setAuthorizedIPRanges(@Nullable List<String> authorizedIPRanges) {
+        public Builder authorizedIPRanges(@Nullable List<String> authorizedIPRanges) {
             this.authorizedIPRanges = Input.ofNullable(authorizedIPRanges);
             return this;
         }
 
-        public Builder setEnablePrivateCluster(@Nullable Input<Boolean> enablePrivateCluster) {
+        public Builder enablePrivateCluster(@Nullable Input<Boolean> enablePrivateCluster) {
             this.enablePrivateCluster = enablePrivateCluster;
             return this;
         }
 
-        public Builder setEnablePrivateCluster(@Nullable Boolean enablePrivateCluster) {
+        public Builder enablePrivateCluster(@Nullable Boolean enablePrivateCluster) {
             this.enablePrivateCluster = Input.ofNullable(enablePrivateCluster);
             return this;
         }
 
-        public Builder setPrivateDNSZone(@Nullable Input<String> privateDNSZone) {
+        public Builder privateDNSZone(@Nullable Input<String> privateDNSZone) {
             this.privateDNSZone = privateDNSZone;
             return this;
         }
 
-        public Builder setPrivateDNSZone(@Nullable String privateDNSZone) {
+        public Builder privateDNSZone(@Nullable String privateDNSZone) {
             this.privateDNSZone = Input.ofNullable(privateDNSZone);
             return this;
         }

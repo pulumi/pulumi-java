@@ -403,222 +403,222 @@ public final class VirtualNetworkGatewayConnectionArgs extends io.pulumi.resourc
     	      this.virtualNetworkGatewayConnectionName = defaults.virtualNetworkGatewayConnectionName;
         }
 
-        public Builder setAuthorizationKey(@Nullable Input<String> authorizationKey) {
+        public Builder authorizationKey(@Nullable Input<String> authorizationKey) {
             this.authorizationKey = authorizationKey;
             return this;
         }
 
-        public Builder setAuthorizationKey(@Nullable String authorizationKey) {
+        public Builder authorizationKey(@Nullable String authorizationKey) {
             this.authorizationKey = Input.ofNullable(authorizationKey);
             return this;
         }
 
-        public Builder setConnectionMode(@Nullable Input<Either<String,VirtualNetworkGatewayConnectionMode>> connectionMode) {
+        public Builder connectionMode(@Nullable Input<Either<String,VirtualNetworkGatewayConnectionMode>> connectionMode) {
             this.connectionMode = connectionMode;
             return this;
         }
 
-        public Builder setConnectionMode(@Nullable Either<String,VirtualNetworkGatewayConnectionMode> connectionMode) {
+        public Builder connectionMode(@Nullable Either<String,VirtualNetworkGatewayConnectionMode> connectionMode) {
             this.connectionMode = Input.ofNullable(connectionMode);
             return this;
         }
 
-        public Builder setConnectionProtocol(@Nullable Input<Either<String,VirtualNetworkGatewayConnectionProtocol>> connectionProtocol) {
+        public Builder connectionProtocol(@Nullable Input<Either<String,VirtualNetworkGatewayConnectionProtocol>> connectionProtocol) {
             this.connectionProtocol = connectionProtocol;
             return this;
         }
 
-        public Builder setConnectionProtocol(@Nullable Either<String,VirtualNetworkGatewayConnectionProtocol> connectionProtocol) {
+        public Builder connectionProtocol(@Nullable Either<String,VirtualNetworkGatewayConnectionProtocol> connectionProtocol) {
             this.connectionProtocol = Input.ofNullable(connectionProtocol);
             return this;
         }
 
-        public Builder setConnectionType(Input<Either<String,VirtualNetworkGatewayConnectionType>> connectionType) {
+        public Builder connectionType(Input<Either<String,VirtualNetworkGatewayConnectionType>> connectionType) {
             this.connectionType = Objects.requireNonNull(connectionType);
             return this;
         }
 
-        public Builder setConnectionType(Either<String,VirtualNetworkGatewayConnectionType> connectionType) {
+        public Builder connectionType(Either<String,VirtualNetworkGatewayConnectionType> connectionType) {
             this.connectionType = Input.of(Objects.requireNonNull(connectionType));
             return this;
         }
 
-        public Builder setDpdTimeoutSeconds(@Nullable Input<Integer> dpdTimeoutSeconds) {
+        public Builder dpdTimeoutSeconds(@Nullable Input<Integer> dpdTimeoutSeconds) {
             this.dpdTimeoutSeconds = dpdTimeoutSeconds;
             return this;
         }
 
-        public Builder setDpdTimeoutSeconds(@Nullable Integer dpdTimeoutSeconds) {
+        public Builder dpdTimeoutSeconds(@Nullable Integer dpdTimeoutSeconds) {
             this.dpdTimeoutSeconds = Input.ofNullable(dpdTimeoutSeconds);
             return this;
         }
 
-        public Builder setEnableBgp(@Nullable Input<Boolean> enableBgp) {
+        public Builder enableBgp(@Nullable Input<Boolean> enableBgp) {
             this.enableBgp = enableBgp;
             return this;
         }
 
-        public Builder setEnableBgp(@Nullable Boolean enableBgp) {
+        public Builder enableBgp(@Nullable Boolean enableBgp) {
             this.enableBgp = Input.ofNullable(enableBgp);
             return this;
         }
 
-        public Builder setExpressRouteGatewayBypass(@Nullable Input<Boolean> expressRouteGatewayBypass) {
+        public Builder expressRouteGatewayBypass(@Nullable Input<Boolean> expressRouteGatewayBypass) {
             this.expressRouteGatewayBypass = expressRouteGatewayBypass;
             return this;
         }
 
-        public Builder setExpressRouteGatewayBypass(@Nullable Boolean expressRouteGatewayBypass) {
+        public Builder expressRouteGatewayBypass(@Nullable Boolean expressRouteGatewayBypass) {
             this.expressRouteGatewayBypass = Input.ofNullable(expressRouteGatewayBypass);
             return this;
         }
 
-        public Builder setId(@Nullable Input<String> id) {
+        public Builder id(@Nullable Input<String> id) {
             this.id = id;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = Input.ofNullable(id);
             return this;
         }
 
-        public Builder setIpsecPolicies(@Nullable Input<List<IpsecPolicyArgs>> ipsecPolicies) {
+        public Builder ipsecPolicies(@Nullable Input<List<IpsecPolicyArgs>> ipsecPolicies) {
             this.ipsecPolicies = ipsecPolicies;
             return this;
         }
 
-        public Builder setIpsecPolicies(@Nullable List<IpsecPolicyArgs> ipsecPolicies) {
+        public Builder ipsecPolicies(@Nullable List<IpsecPolicyArgs> ipsecPolicies) {
             this.ipsecPolicies = Input.ofNullable(ipsecPolicies);
             return this;
         }
 
-        public Builder setLocalNetworkGateway2(@Nullable Input<LocalNetworkGatewayArgs> localNetworkGateway2) {
+        public Builder localNetworkGateway2(@Nullable Input<LocalNetworkGatewayArgs> localNetworkGateway2) {
             this.localNetworkGateway2 = localNetworkGateway2;
             return this;
         }
 
-        public Builder setLocalNetworkGateway2(@Nullable LocalNetworkGatewayArgs localNetworkGateway2) {
+        public Builder localNetworkGateway2(@Nullable LocalNetworkGatewayArgs localNetworkGateway2) {
             this.localNetworkGateway2 = Input.ofNullable(localNetworkGateway2);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setPeer(@Nullable Input<SubResourceArgs> peer) {
+        public Builder peer(@Nullable Input<SubResourceArgs> peer) {
             this.peer = peer;
             return this;
         }
 
-        public Builder setPeer(@Nullable SubResourceArgs peer) {
+        public Builder peer(@Nullable SubResourceArgs peer) {
             this.peer = Input.ofNullable(peer);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setRoutingWeight(@Nullable Input<Integer> routingWeight) {
+        public Builder routingWeight(@Nullable Input<Integer> routingWeight) {
             this.routingWeight = routingWeight;
             return this;
         }
 
-        public Builder setRoutingWeight(@Nullable Integer routingWeight) {
+        public Builder routingWeight(@Nullable Integer routingWeight) {
             this.routingWeight = Input.ofNullable(routingWeight);
             return this;
         }
 
-        public Builder setSharedKey(@Nullable Input<String> sharedKey) {
+        public Builder sharedKey(@Nullable Input<String> sharedKey) {
             this.sharedKey = sharedKey;
             return this;
         }
 
-        public Builder setSharedKey(@Nullable String sharedKey) {
+        public Builder sharedKey(@Nullable String sharedKey) {
             this.sharedKey = Input.ofNullable(sharedKey);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTrafficSelectorPolicies(@Nullable Input<List<TrafficSelectorPolicyArgs>> trafficSelectorPolicies) {
+        public Builder trafficSelectorPolicies(@Nullable Input<List<TrafficSelectorPolicyArgs>> trafficSelectorPolicies) {
             this.trafficSelectorPolicies = trafficSelectorPolicies;
             return this;
         }
 
-        public Builder setTrafficSelectorPolicies(@Nullable List<TrafficSelectorPolicyArgs> trafficSelectorPolicies) {
+        public Builder trafficSelectorPolicies(@Nullable List<TrafficSelectorPolicyArgs> trafficSelectorPolicies) {
             this.trafficSelectorPolicies = Input.ofNullable(trafficSelectorPolicies);
             return this;
         }
 
-        public Builder setUseLocalAzureIpAddress(@Nullable Input<Boolean> useLocalAzureIpAddress) {
+        public Builder useLocalAzureIpAddress(@Nullable Input<Boolean> useLocalAzureIpAddress) {
             this.useLocalAzureIpAddress = useLocalAzureIpAddress;
             return this;
         }
 
-        public Builder setUseLocalAzureIpAddress(@Nullable Boolean useLocalAzureIpAddress) {
+        public Builder useLocalAzureIpAddress(@Nullable Boolean useLocalAzureIpAddress) {
             this.useLocalAzureIpAddress = Input.ofNullable(useLocalAzureIpAddress);
             return this;
         }
 
-        public Builder setUsePolicyBasedTrafficSelectors(@Nullable Input<Boolean> usePolicyBasedTrafficSelectors) {
+        public Builder usePolicyBasedTrafficSelectors(@Nullable Input<Boolean> usePolicyBasedTrafficSelectors) {
             this.usePolicyBasedTrafficSelectors = usePolicyBasedTrafficSelectors;
             return this;
         }
 
-        public Builder setUsePolicyBasedTrafficSelectors(@Nullable Boolean usePolicyBasedTrafficSelectors) {
+        public Builder usePolicyBasedTrafficSelectors(@Nullable Boolean usePolicyBasedTrafficSelectors) {
             this.usePolicyBasedTrafficSelectors = Input.ofNullable(usePolicyBasedTrafficSelectors);
             return this;
         }
 
-        public Builder setVirtualNetworkGateway1(Input<VirtualNetworkGatewayArgs> virtualNetworkGateway1) {
+        public Builder virtualNetworkGateway1(Input<VirtualNetworkGatewayArgs> virtualNetworkGateway1) {
             this.virtualNetworkGateway1 = Objects.requireNonNull(virtualNetworkGateway1);
             return this;
         }
 
-        public Builder setVirtualNetworkGateway1(VirtualNetworkGatewayArgs virtualNetworkGateway1) {
+        public Builder virtualNetworkGateway1(VirtualNetworkGatewayArgs virtualNetworkGateway1) {
             this.virtualNetworkGateway1 = Input.of(Objects.requireNonNull(virtualNetworkGateway1));
             return this;
         }
 
-        public Builder setVirtualNetworkGateway2(@Nullable Input<VirtualNetworkGatewayArgs> virtualNetworkGateway2) {
+        public Builder virtualNetworkGateway2(@Nullable Input<VirtualNetworkGatewayArgs> virtualNetworkGateway2) {
             this.virtualNetworkGateway2 = virtualNetworkGateway2;
             return this;
         }
 
-        public Builder setVirtualNetworkGateway2(@Nullable VirtualNetworkGatewayArgs virtualNetworkGateway2) {
+        public Builder virtualNetworkGateway2(@Nullable VirtualNetworkGatewayArgs virtualNetworkGateway2) {
             this.virtualNetworkGateway2 = Input.ofNullable(virtualNetworkGateway2);
             return this;
         }
 
-        public Builder setVirtualNetworkGatewayConnectionName(@Nullable Input<String> virtualNetworkGatewayConnectionName) {
+        public Builder virtualNetworkGatewayConnectionName(@Nullable Input<String> virtualNetworkGatewayConnectionName) {
             this.virtualNetworkGatewayConnectionName = virtualNetworkGatewayConnectionName;
             return this;
         }
 
-        public Builder setVirtualNetworkGatewayConnectionName(@Nullable String virtualNetworkGatewayConnectionName) {
+        public Builder virtualNetworkGatewayConnectionName(@Nullable String virtualNetworkGatewayConnectionName) {
             this.virtualNetworkGatewayConnectionName = Input.ofNullable(virtualNetworkGatewayConnectionName);
             return this;
         }

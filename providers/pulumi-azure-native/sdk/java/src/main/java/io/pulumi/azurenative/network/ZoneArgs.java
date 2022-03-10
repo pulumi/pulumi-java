@@ -154,72 +154,72 @@ public final class ZoneArgs extends io.pulumi.resources.ResourceArgs {
     	      this.zoneType = defaults.zoneType;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setRegistrationVirtualNetworks(@Nullable Input<List<SubResourceArgs>> registrationVirtualNetworks) {
+        public Builder registrationVirtualNetworks(@Nullable Input<List<SubResourceArgs>> registrationVirtualNetworks) {
             this.registrationVirtualNetworks = registrationVirtualNetworks;
             return this;
         }
 
-        public Builder setRegistrationVirtualNetworks(@Nullable List<SubResourceArgs> registrationVirtualNetworks) {
+        public Builder registrationVirtualNetworks(@Nullable List<SubResourceArgs> registrationVirtualNetworks) {
             this.registrationVirtualNetworks = Input.ofNullable(registrationVirtualNetworks);
             return this;
         }
 
-        public Builder setResolutionVirtualNetworks(@Nullable Input<List<SubResourceArgs>> resolutionVirtualNetworks) {
+        public Builder resolutionVirtualNetworks(@Nullable Input<List<SubResourceArgs>> resolutionVirtualNetworks) {
             this.resolutionVirtualNetworks = resolutionVirtualNetworks;
             return this;
         }
 
-        public Builder setResolutionVirtualNetworks(@Nullable List<SubResourceArgs> resolutionVirtualNetworks) {
+        public Builder resolutionVirtualNetworks(@Nullable List<SubResourceArgs> resolutionVirtualNetworks) {
             this.resolutionVirtualNetworks = Input.ofNullable(resolutionVirtualNetworks);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setZoneName(@Nullable Input<String> zoneName) {
+        public Builder zoneName(@Nullable Input<String> zoneName) {
             this.zoneName = zoneName;
             return this;
         }
 
-        public Builder setZoneName(@Nullable String zoneName) {
+        public Builder zoneName(@Nullable String zoneName) {
             this.zoneName = Input.ofNullable(zoneName);
             return this;
         }
 
-        public Builder setZoneType(@Nullable Input<ZoneType> zoneType) {
+        public Builder zoneType(@Nullable Input<ZoneType> zoneType) {
             this.zoneType = zoneType;
             return this;
         }
 
-        public Builder setZoneType(@Nullable ZoneType zoneType) {
+        public Builder zoneType(@Nullable ZoneType zoneType) {
             this.zoneType = Input.ofNullable(zoneType);
             return this;
         }

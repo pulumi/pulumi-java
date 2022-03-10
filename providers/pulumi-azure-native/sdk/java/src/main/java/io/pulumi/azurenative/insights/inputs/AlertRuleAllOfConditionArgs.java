@@ -57,12 +57,12 @@ public final class AlertRuleAllOfConditionArgs extends io.pulumi.resources.Resou
     	      this.allOf = defaults.allOf;
         }
 
-        public Builder setAllOf(Input<List<AlertRuleAnyOfOrLeafConditionArgs>> allOf) {
+        public Builder allOf(Input<List<AlertRuleAnyOfOrLeafConditionArgs>> allOf) {
             this.allOf = Objects.requireNonNull(allOf);
             return this;
         }
 
-        public Builder setAllOf(List<AlertRuleAnyOfOrLeafConditionArgs> allOf) {
+        public Builder allOf(List<AlertRuleAnyOfOrLeafConditionArgs> allOf) {
             this.allOf = Input.of(Objects.requireNonNull(allOf));
             return this;
         }

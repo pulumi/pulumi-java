@@ -126,52 +126,52 @@ public final class OpenShiftManagedClusterMasterPoolProfileArgs extends io.pulum
     	      this.vmSize = defaults.vmSize;
         }
 
-        public Builder setCount(Input<Integer> count) {
+        public Builder count(Input<Integer> count) {
             this.count = Objects.requireNonNull(count);
             return this;
         }
 
-        public Builder setCount(Integer count) {
+        public Builder count(Integer count) {
             this.count = Input.of(Objects.requireNonNull(count));
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setOsType(@Nullable Input<Either<String,OSType>> osType) {
+        public Builder osType(@Nullable Input<Either<String,OSType>> osType) {
             this.osType = osType;
             return this;
         }
 
-        public Builder setOsType(@Nullable Either<String,OSType> osType) {
+        public Builder osType(@Nullable Either<String,OSType> osType) {
             this.osType = Input.ofNullable(osType);
             return this;
         }
 
-        public Builder setSubnetCidr(@Nullable Input<String> subnetCidr) {
+        public Builder subnetCidr(@Nullable Input<String> subnetCidr) {
             this.subnetCidr = subnetCidr;
             return this;
         }
 
-        public Builder setSubnetCidr(@Nullable String subnetCidr) {
+        public Builder subnetCidr(@Nullable String subnetCidr) {
             this.subnetCidr = Input.ofNullable(subnetCidr);
             return this;
         }
 
-        public Builder setVmSize(Input<Either<String,OpenShiftContainerServiceVMSize>> vmSize) {
+        public Builder vmSize(Input<Either<String,OpenShiftContainerServiceVMSize>> vmSize) {
             this.vmSize = Objects.requireNonNull(vmSize);
             return this;
         }
 
-        public Builder setVmSize(Either<String,OpenShiftContainerServiceVMSize> vmSize) {
+        public Builder vmSize(Either<String,OpenShiftContainerServiceVMSize> vmSize) {
             this.vmSize = Input.of(Objects.requireNonNull(vmSize));
             return this;
         }

@@ -88,17 +88,17 @@ public final class AzureContainerInfoResponse extends io.pulumi.resources.Invoke
     	      this.storageAccountCredentialId = defaults.storageAccountCredentialId;
         }
 
-        public Builder setContainerName(String containerName) {
+        public Builder containerName(String containerName) {
             this.containerName = Objects.requireNonNull(containerName);
             return this;
         }
 
-        public Builder setDataFormat(String dataFormat) {
+        public Builder dataFormat(String dataFormat) {
             this.dataFormat = Objects.requireNonNull(dataFormat);
             return this;
         }
 
-        public Builder setStorageAccountCredentialId(String storageAccountCredentialId) {
+        public Builder storageAccountCredentialId(String storageAccountCredentialId) {
             this.storageAccountCredentialId = Objects.requireNonNull(storageAccountCredentialId);
             return this;
         }

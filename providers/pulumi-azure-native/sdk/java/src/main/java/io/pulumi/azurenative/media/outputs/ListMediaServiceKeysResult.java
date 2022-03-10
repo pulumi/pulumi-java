@@ -115,27 +115,27 @@ public final class ListMediaServiceKeysResult {
     	      this.secondaryKey = defaults.secondaryKey;
         }
 
-        public Builder setPrimaryAuthEndpoint(@Nullable String primaryAuthEndpoint) {
+        public Builder primaryAuthEndpoint(@Nullable String primaryAuthEndpoint) {
             this.primaryAuthEndpoint = primaryAuthEndpoint;
             return this;
         }
 
-        public Builder setPrimaryKey(@Nullable String primaryKey) {
+        public Builder primaryKey(@Nullable String primaryKey) {
             this.primaryKey = primaryKey;
             return this;
         }
 
-        public Builder setScope(@Nullable String scope) {
+        public Builder scope(@Nullable String scope) {
             this.scope = scope;
             return this;
         }
 
-        public Builder setSecondaryAuthEndpoint(@Nullable String secondaryAuthEndpoint) {
+        public Builder secondaryAuthEndpoint(@Nullable String secondaryAuthEndpoint) {
             this.secondaryAuthEndpoint = secondaryAuthEndpoint;
             return this;
         }
 
-        public Builder setSecondaryKey(@Nullable String secondaryKey) {
+        public Builder secondaryKey(@Nullable String secondaryKey) {
             this.secondaryKey = secondaryKey;
             return this;
         }

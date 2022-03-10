@@ -152,72 +152,72 @@ public final class WorkloadNetworkSegmentArgs extends io.pulumi.resources.Resour
     	      this.subnet = defaults.subnet;
         }
 
-        public Builder setConnectedGateway(@Nullable Input<String> connectedGateway) {
+        public Builder connectedGateway(@Nullable Input<String> connectedGateway) {
             this.connectedGateway = connectedGateway;
             return this;
         }
 
-        public Builder setConnectedGateway(@Nullable String connectedGateway) {
+        public Builder connectedGateway(@Nullable String connectedGateway) {
             this.connectedGateway = Input.ofNullable(connectedGateway);
             return this;
         }
 
-        public Builder setDisplayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Input<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setDisplayName(@Nullable String displayName) {
+        public Builder displayName(@Nullable String displayName) {
             this.displayName = Input.ofNullable(displayName);
             return this;
         }
 
-        public Builder setPrivateCloudName(Input<String> privateCloudName) {
+        public Builder privateCloudName(Input<String> privateCloudName) {
             this.privateCloudName = Objects.requireNonNull(privateCloudName);
             return this;
         }
 
-        public Builder setPrivateCloudName(String privateCloudName) {
+        public Builder privateCloudName(String privateCloudName) {
             this.privateCloudName = Input.of(Objects.requireNonNull(privateCloudName));
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setRevision(@Nullable Input<Double> revision) {
+        public Builder revision(@Nullable Input<Double> revision) {
             this.revision = revision;
             return this;
         }
 
-        public Builder setRevision(@Nullable Double revision) {
+        public Builder revision(@Nullable Double revision) {
             this.revision = Input.ofNullable(revision);
             return this;
         }
 
-        public Builder setSegmentId(@Nullable Input<String> segmentId) {
+        public Builder segmentId(@Nullable Input<String> segmentId) {
             this.segmentId = segmentId;
             return this;
         }
 
-        public Builder setSegmentId(@Nullable String segmentId) {
+        public Builder segmentId(@Nullable String segmentId) {
             this.segmentId = Input.ofNullable(segmentId);
             return this;
         }
 
-        public Builder setSubnet(@Nullable Input<WorkloadNetworkSegmentSubnetArgs> subnet) {
+        public Builder subnet(@Nullable Input<WorkloadNetworkSegmentSubnetArgs> subnet) {
             this.subnet = subnet;
             return this;
         }
 
-        public Builder setSubnet(@Nullable WorkloadNetworkSegmentSubnetArgs subnet) {
+        public Builder subnet(@Nullable WorkloadNetworkSegmentSubnetArgs subnet) {
             this.subnet = Input.ofNullable(subnet);
             return this;
         }

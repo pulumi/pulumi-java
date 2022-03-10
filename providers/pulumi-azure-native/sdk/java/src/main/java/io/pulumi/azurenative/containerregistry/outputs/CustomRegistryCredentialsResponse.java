@@ -94,17 +94,17 @@ public final class CustomRegistryCredentialsResponse {
     	      this.userName = defaults.userName;
         }
 
-        public Builder setIdentity(@Nullable String identity) {
+        public Builder identity(@Nullable String identity) {
             this.identity = identity;
             return this;
         }
 
-        public Builder setPassword(@Nullable SecretObjectResponse password) {
+        public Builder password(@Nullable SecretObjectResponse password) {
             this.password = password;
             return this;
         }
 
-        public Builder setUserName(@Nullable SecretObjectResponse userName) {
+        public Builder userName(@Nullable SecretObjectResponse userName) {
             this.userName = userName;
             return this;
         }

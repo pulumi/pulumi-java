@@ -100,22 +100,22 @@ public final class JitNetworkAccessRequestResponse extends io.pulumi.resources.I
     	      this.virtualMachines = defaults.virtualMachines;
         }
 
-        public Builder setJustification(@Nullable String justification) {
+        public Builder justification(@Nullable String justification) {
             this.justification = justification;
             return this;
         }
 
-        public Builder setRequestor(String requestor) {
+        public Builder requestor(String requestor) {
             this.requestor = Objects.requireNonNull(requestor);
             return this;
         }
 
-        public Builder setStartTimeUtc(String startTimeUtc) {
+        public Builder startTimeUtc(String startTimeUtc) {
             this.startTimeUtc = Objects.requireNonNull(startTimeUtc);
             return this;
         }
 
-        public Builder setVirtualMachines(List<JitNetworkAccessRequestVirtualMachineResponse> virtualMachines) {
+        public Builder virtualMachines(List<JitNetworkAccessRequestVirtualMachineResponse> virtualMachines) {
             this.virtualMachines = Objects.requireNonNull(virtualMachines);
             return this;
         }

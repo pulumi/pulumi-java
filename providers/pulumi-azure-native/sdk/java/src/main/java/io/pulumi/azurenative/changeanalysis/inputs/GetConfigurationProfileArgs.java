@@ -51,7 +51,7 @@ public final class GetConfigurationProfileArgs extends io.pulumi.resources.Invok
     	      this.profileName = defaults.profileName;
         }
 
-        public Builder setProfileName(String profileName) {
+        public Builder profileName(String profileName) {
             this.profileName = Objects.requireNonNull(profileName);
             return this;
         }

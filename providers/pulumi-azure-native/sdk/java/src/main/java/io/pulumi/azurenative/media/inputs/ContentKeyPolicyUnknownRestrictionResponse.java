@@ -56,7 +56,7 @@ public final class ContentKeyPolicyUnknownRestrictionResponse extends io.pulumi.
     	      this.odataType = defaults.odataType;
         }
 
-        public Builder setOdataType(String odataType) {
+        public Builder odataType(String odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }

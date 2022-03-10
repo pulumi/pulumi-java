@@ -202,52 +202,52 @@ public final class ShippingAddressResponse extends io.pulumi.resources.InvokeArg
     	      this.zipExtendedCode = defaults.zipExtendedCode;
         }
 
-        public Builder setAddressType(@Nullable String addressType) {
+        public Builder addressType(@Nullable String addressType) {
             this.addressType = addressType;
             return this;
         }
 
-        public Builder setCity(@Nullable String city) {
+        public Builder city(@Nullable String city) {
             this.city = city;
             return this;
         }
 
-        public Builder setCompanyName(@Nullable String companyName) {
+        public Builder companyName(@Nullable String companyName) {
             this.companyName = companyName;
             return this;
         }
 
-        public Builder setCountry(String country) {
+        public Builder country(String country) {
             this.country = Objects.requireNonNull(country);
             return this;
         }
 
-        public Builder setPostalCode(@Nullable String postalCode) {
+        public Builder postalCode(@Nullable String postalCode) {
             this.postalCode = postalCode;
             return this;
         }
 
-        public Builder setStateOrProvince(@Nullable String stateOrProvince) {
+        public Builder stateOrProvince(@Nullable String stateOrProvince) {
             this.stateOrProvince = stateOrProvince;
             return this;
         }
 
-        public Builder setStreetAddress1(String streetAddress1) {
+        public Builder streetAddress1(String streetAddress1) {
             this.streetAddress1 = Objects.requireNonNull(streetAddress1);
             return this;
         }
 
-        public Builder setStreetAddress2(@Nullable String streetAddress2) {
+        public Builder streetAddress2(@Nullable String streetAddress2) {
             this.streetAddress2 = streetAddress2;
             return this;
         }
 
-        public Builder setStreetAddress3(@Nullable String streetAddress3) {
+        public Builder streetAddress3(@Nullable String streetAddress3) {
             this.streetAddress3 = streetAddress3;
             return this;
         }
 
-        public Builder setZipExtendedCode(@Nullable String zipExtendedCode) {
+        public Builder zipExtendedCode(@Nullable String zipExtendedCode) {
             this.zipExtendedCode = zipExtendedCode;
             return this;
         }

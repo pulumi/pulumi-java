@@ -91,17 +91,17 @@ public final class LogAnalyticsDestinationResponse extends io.pulumi.resources.I
     	      this.workspaceResourceId = defaults.workspaceResourceId;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setWorkspaceId(String workspaceId) {
+        public Builder workspaceId(String workspaceId) {
             this.workspaceId = Objects.requireNonNull(workspaceId);
             return this;
         }
 
-        public Builder setWorkspaceResourceId(@Nullable String workspaceResourceId) {
+        public Builder workspaceResourceId(@Nullable String workspaceResourceId) {
             this.workspaceResourceId = workspaceResourceId;
             return this;
         }

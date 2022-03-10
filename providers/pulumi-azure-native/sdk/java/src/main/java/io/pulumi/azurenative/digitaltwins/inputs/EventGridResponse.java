@@ -187,47 +187,47 @@ public final class EventGridResponse extends io.pulumi.resources.InvokeArgs {
     	      this.topicEndpoint = defaults.topicEndpoint;
         }
 
-        public Builder setAccessKey1(String accessKey1) {
+        public Builder accessKey1(String accessKey1) {
             this.accessKey1 = Objects.requireNonNull(accessKey1);
             return this;
         }
 
-        public Builder setAccessKey2(@Nullable String accessKey2) {
+        public Builder accessKey2(@Nullable String accessKey2) {
             this.accessKey2 = accessKey2;
             return this;
         }
 
-        public Builder setAuthenticationType(@Nullable String authenticationType) {
+        public Builder authenticationType(@Nullable String authenticationType) {
             this.authenticationType = authenticationType;
             return this;
         }
 
-        public Builder setCreatedTime(String createdTime) {
+        public Builder createdTime(String createdTime) {
             this.createdTime = Objects.requireNonNull(createdTime);
             return this;
         }
 
-        public Builder setDeadLetterSecret(@Nullable String deadLetterSecret) {
+        public Builder deadLetterSecret(@Nullable String deadLetterSecret) {
             this.deadLetterSecret = deadLetterSecret;
             return this;
         }
 
-        public Builder setDeadLetterUri(@Nullable String deadLetterUri) {
+        public Builder deadLetterUri(@Nullable String deadLetterUri) {
             this.deadLetterUri = deadLetterUri;
             return this;
         }
 
-        public Builder setEndpointType(String endpointType) {
+        public Builder endpointType(String endpointType) {
             this.endpointType = Objects.requireNonNull(endpointType);
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setTopicEndpoint(String topicEndpoint) {
+        public Builder topicEndpoint(String topicEndpoint) {
             this.topicEndpoint = Objects.requireNonNull(topicEndpoint);
             return this;
         }

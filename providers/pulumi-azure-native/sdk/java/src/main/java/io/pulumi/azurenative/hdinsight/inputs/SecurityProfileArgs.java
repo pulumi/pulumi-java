@@ -188,92 +188,92 @@ public final class SecurityProfileArgs extends io.pulumi.resources.ResourceArgs 
     	      this.organizationalUnitDN = defaults.organizationalUnitDN;
         }
 
-        public Builder setAaddsResourceId(@Nullable Input<String> aaddsResourceId) {
+        public Builder aaddsResourceId(@Nullable Input<String> aaddsResourceId) {
             this.aaddsResourceId = aaddsResourceId;
             return this;
         }
 
-        public Builder setAaddsResourceId(@Nullable String aaddsResourceId) {
+        public Builder aaddsResourceId(@Nullable String aaddsResourceId) {
             this.aaddsResourceId = Input.ofNullable(aaddsResourceId);
             return this;
         }
 
-        public Builder setClusterUsersGroupDNs(@Nullable Input<List<String>> clusterUsersGroupDNs) {
+        public Builder clusterUsersGroupDNs(@Nullable Input<List<String>> clusterUsersGroupDNs) {
             this.clusterUsersGroupDNs = clusterUsersGroupDNs;
             return this;
         }
 
-        public Builder setClusterUsersGroupDNs(@Nullable List<String> clusterUsersGroupDNs) {
+        public Builder clusterUsersGroupDNs(@Nullable List<String> clusterUsersGroupDNs) {
             this.clusterUsersGroupDNs = Input.ofNullable(clusterUsersGroupDNs);
             return this;
         }
 
-        public Builder setDirectoryType(@Nullable Input<DirectoryType> directoryType) {
+        public Builder directoryType(@Nullable Input<DirectoryType> directoryType) {
             this.directoryType = directoryType;
             return this;
         }
 
-        public Builder setDirectoryType(@Nullable DirectoryType directoryType) {
+        public Builder directoryType(@Nullable DirectoryType directoryType) {
             this.directoryType = Input.ofNullable(directoryType);
             return this;
         }
 
-        public Builder setDomain(@Nullable Input<String> domain) {
+        public Builder domain(@Nullable Input<String> domain) {
             this.domain = domain;
             return this;
         }
 
-        public Builder setDomain(@Nullable String domain) {
+        public Builder domain(@Nullable String domain) {
             this.domain = Input.ofNullable(domain);
             return this;
         }
 
-        public Builder setDomainUserPassword(@Nullable Input<String> domainUserPassword) {
+        public Builder domainUserPassword(@Nullable Input<String> domainUserPassword) {
             this.domainUserPassword = domainUserPassword;
             return this;
         }
 
-        public Builder setDomainUserPassword(@Nullable String domainUserPassword) {
+        public Builder domainUserPassword(@Nullable String domainUserPassword) {
             this.domainUserPassword = Input.ofNullable(domainUserPassword);
             return this;
         }
 
-        public Builder setDomainUsername(@Nullable Input<String> domainUsername) {
+        public Builder domainUsername(@Nullable Input<String> domainUsername) {
             this.domainUsername = domainUsername;
             return this;
         }
 
-        public Builder setDomainUsername(@Nullable String domainUsername) {
+        public Builder domainUsername(@Nullable String domainUsername) {
             this.domainUsername = Input.ofNullable(domainUsername);
             return this;
         }
 
-        public Builder setLdapsUrls(@Nullable Input<List<String>> ldapsUrls) {
+        public Builder ldapsUrls(@Nullable Input<List<String>> ldapsUrls) {
             this.ldapsUrls = ldapsUrls;
             return this;
         }
 
-        public Builder setLdapsUrls(@Nullable List<String> ldapsUrls) {
+        public Builder ldapsUrls(@Nullable List<String> ldapsUrls) {
             this.ldapsUrls = Input.ofNullable(ldapsUrls);
             return this;
         }
 
-        public Builder setMsiResourceId(@Nullable Input<String> msiResourceId) {
+        public Builder msiResourceId(@Nullable Input<String> msiResourceId) {
             this.msiResourceId = msiResourceId;
             return this;
         }
 
-        public Builder setMsiResourceId(@Nullable String msiResourceId) {
+        public Builder msiResourceId(@Nullable String msiResourceId) {
             this.msiResourceId = Input.ofNullable(msiResourceId);
             return this;
         }
 
-        public Builder setOrganizationalUnitDN(@Nullable Input<String> organizationalUnitDN) {
+        public Builder organizationalUnitDN(@Nullable Input<String> organizationalUnitDN) {
             this.organizationalUnitDN = organizationalUnitDN;
             return this;
         }
 
-        public Builder setOrganizationalUnitDN(@Nullable String organizationalUnitDN) {
+        public Builder organizationalUnitDN(@Nullable String organizationalUnitDN) {
             this.organizationalUnitDN = Input.ofNullable(organizationalUnitDN);
             return this;
         }

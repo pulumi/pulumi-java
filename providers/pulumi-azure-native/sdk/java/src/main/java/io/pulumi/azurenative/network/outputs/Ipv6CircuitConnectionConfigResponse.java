@@ -67,12 +67,12 @@ public final class Ipv6CircuitConnectionConfigResponse {
     	      this.circuitConnectionStatus = defaults.circuitConnectionStatus;
         }
 
-        public Builder setAddressPrefix(@Nullable String addressPrefix) {
+        public Builder addressPrefix(@Nullable String addressPrefix) {
             this.addressPrefix = addressPrefix;
             return this;
         }
 
-        public Builder setCircuitConnectionStatus(String circuitConnectionStatus) {
+        public Builder circuitConnectionStatus(String circuitConnectionStatus) {
             this.circuitConnectionStatus = Objects.requireNonNull(circuitConnectionStatus);
             return this;
         }

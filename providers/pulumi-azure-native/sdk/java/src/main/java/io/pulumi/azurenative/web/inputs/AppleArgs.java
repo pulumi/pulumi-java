@@ -92,32 +92,32 @@ public final class AppleArgs extends io.pulumi.resources.ResourceArgs {
     	      this.registration = defaults.registration;
         }
 
-        public Builder setEnabled(@Nullable Input<Boolean> enabled) {
+        public Builder enabled(@Nullable Input<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
 
-        public Builder setEnabled(@Nullable Boolean enabled) {
+        public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Input.ofNullable(enabled);
             return this;
         }
 
-        public Builder setLogin(@Nullable Input<LoginScopesArgs> login) {
+        public Builder login(@Nullable Input<LoginScopesArgs> login) {
             this.login = login;
             return this;
         }
 
-        public Builder setLogin(@Nullable LoginScopesArgs login) {
+        public Builder login(@Nullable LoginScopesArgs login) {
             this.login = Input.ofNullable(login);
             return this;
         }
 
-        public Builder setRegistration(@Nullable Input<AppleRegistrationArgs> registration) {
+        public Builder registration(@Nullable Input<AppleRegistrationArgs> registration) {
             this.registration = registration;
             return this;
         }
 
-        public Builder setRegistration(@Nullable AppleRegistrationArgs registration) {
+        public Builder registration(@Nullable AppleRegistrationArgs registration) {
             this.registration = Input.ofNullable(registration);
             return this;
         }

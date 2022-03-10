@@ -75,22 +75,22 @@ public final class AzureToAzureCreateNetworkMappingInputArgs extends io.pulumi.r
     	      this.primaryNetworkId = defaults.primaryNetworkId;
         }
 
-        public Builder setInstanceType(@Nullable Input<String> instanceType) {
+        public Builder instanceType(@Nullable Input<String> instanceType) {
             this.instanceType = instanceType;
             return this;
         }
 
-        public Builder setInstanceType(@Nullable String instanceType) {
+        public Builder instanceType(@Nullable String instanceType) {
             this.instanceType = Input.ofNullable(instanceType);
             return this;
         }
 
-        public Builder setPrimaryNetworkId(@Nullable Input<String> primaryNetworkId) {
+        public Builder primaryNetworkId(@Nullable Input<String> primaryNetworkId) {
             this.primaryNetworkId = primaryNetworkId;
             return this;
         }
 
-        public Builder setPrimaryNetworkId(@Nullable String primaryNetworkId) {
+        public Builder primaryNetworkId(@Nullable String primaryNetworkId) {
             this.primaryNetworkId = Input.ofNullable(primaryNetworkId);
             return this;
         }

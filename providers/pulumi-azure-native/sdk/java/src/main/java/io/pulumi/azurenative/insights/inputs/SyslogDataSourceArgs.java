@@ -114,42 +114,42 @@ public final class SyslogDataSourceArgs extends io.pulumi.resources.ResourceArgs
     	      this.streams = defaults.streams;
         }
 
-        public Builder setFacilityNames(@Nullable Input<List<Either<String,KnownSyslogDataSourceFacilityNames>>> facilityNames) {
+        public Builder facilityNames(@Nullable Input<List<Either<String,KnownSyslogDataSourceFacilityNames>>> facilityNames) {
             this.facilityNames = facilityNames;
             return this;
         }
 
-        public Builder setFacilityNames(@Nullable List<Either<String,KnownSyslogDataSourceFacilityNames>> facilityNames) {
+        public Builder facilityNames(@Nullable List<Either<String,KnownSyslogDataSourceFacilityNames>> facilityNames) {
             this.facilityNames = Input.ofNullable(facilityNames);
             return this;
         }
 
-        public Builder setLogLevels(@Nullable Input<List<Either<String,KnownSyslogDataSourceLogLevels>>> logLevels) {
+        public Builder logLevels(@Nullable Input<List<Either<String,KnownSyslogDataSourceLogLevels>>> logLevels) {
             this.logLevels = logLevels;
             return this;
         }
 
-        public Builder setLogLevels(@Nullable List<Either<String,KnownSyslogDataSourceLogLevels>> logLevels) {
+        public Builder logLevels(@Nullable List<Either<String,KnownSyslogDataSourceLogLevels>> logLevels) {
             this.logLevels = Input.ofNullable(logLevels);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setStreams(@Nullable Input<List<Either<String,KnownSyslogDataSourceStreams>>> streams) {
+        public Builder streams(@Nullable Input<List<Either<String,KnownSyslogDataSourceStreams>>> streams) {
             this.streams = streams;
             return this;
         }
 
-        public Builder setStreams(@Nullable List<Either<String,KnownSyslogDataSourceStreams>> streams) {
+        public Builder streams(@Nullable List<Either<String,KnownSyslogDataSourceStreams>> streams) {
             this.streams = Input.ofNullable(streams);
             return this;
         }

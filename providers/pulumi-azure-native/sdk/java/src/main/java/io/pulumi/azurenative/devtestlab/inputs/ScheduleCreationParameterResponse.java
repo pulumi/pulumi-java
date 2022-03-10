@@ -223,57 +223,57 @@ public final class ScheduleCreationParameterResponse extends io.pulumi.resources
     	      this.weeklyRecurrence = defaults.weeklyRecurrence;
         }
 
-        public Builder setDailyRecurrence(@Nullable DayDetailsResponse dailyRecurrence) {
+        public Builder dailyRecurrence(@Nullable DayDetailsResponse dailyRecurrence) {
             this.dailyRecurrence = dailyRecurrence;
             return this;
         }
 
-        public Builder setHourlyRecurrence(@Nullable HourDetailsResponse hourlyRecurrence) {
+        public Builder hourlyRecurrence(@Nullable HourDetailsResponse hourlyRecurrence) {
             this.hourlyRecurrence = hourlyRecurrence;
             return this;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setNotificationSettings(@Nullable NotificationSettingsResponse notificationSettings) {
+        public Builder notificationSettings(@Nullable NotificationSettingsResponse notificationSettings) {
             this.notificationSettings = notificationSettings;
             return this;
         }
 
-        public Builder setStatus(@Nullable String status) {
+        public Builder status(@Nullable String status) {
             this.status = status;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTargetResourceId(@Nullable String targetResourceId) {
+        public Builder targetResourceId(@Nullable String targetResourceId) {
             this.targetResourceId = targetResourceId;
             return this;
         }
 
-        public Builder setTaskType(@Nullable String taskType) {
+        public Builder taskType(@Nullable String taskType) {
             this.taskType = taskType;
             return this;
         }
 
-        public Builder setTimeZoneId(@Nullable String timeZoneId) {
+        public Builder timeZoneId(@Nullable String timeZoneId) {
             this.timeZoneId = timeZoneId;
             return this;
         }
 
-        public Builder setWeeklyRecurrence(@Nullable WeekDetailsResponse weeklyRecurrence) {
+        public Builder weeklyRecurrence(@Nullable WeekDetailsResponse weeklyRecurrence) {
             this.weeklyRecurrence = weeklyRecurrence;
             return this;
         }

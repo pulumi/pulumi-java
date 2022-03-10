@@ -154,37 +154,37 @@ public final class SourceTriggerDescriptorResponse extends io.pulumi.resources.I
     	      this.repositoryUrl = defaults.repositoryUrl;
         }
 
-        public Builder setBranchName(@Nullable String branchName) {
+        public Builder branchName(@Nullable String branchName) {
             this.branchName = branchName;
             return this;
         }
 
-        public Builder setCommitId(@Nullable String commitId) {
+        public Builder commitId(@Nullable String commitId) {
             this.commitId = commitId;
             return this;
         }
 
-        public Builder setEventType(@Nullable String eventType) {
+        public Builder eventType(@Nullable String eventType) {
             this.eventType = eventType;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setProviderType(@Nullable String providerType) {
+        public Builder providerType(@Nullable String providerType) {
             this.providerType = providerType;
             return this;
         }
 
-        public Builder setPullRequestId(@Nullable String pullRequestId) {
+        public Builder pullRequestId(@Nullable String pullRequestId) {
             this.pullRequestId = pullRequestId;
             return this;
         }
 
-        public Builder setRepositoryUrl(@Nullable String repositoryUrl) {
+        public Builder repositoryUrl(@Nullable String repositoryUrl) {
             this.repositoryUrl = repositoryUrl;
             return this;
         }

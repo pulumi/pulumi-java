@@ -106,22 +106,22 @@ public final class MediaGraphAssetSinkResponse extends io.pulumi.resources.Invok
     	      this.odataType = defaults.odataType;
         }
 
-        public Builder setAssetName(String assetName) {
+        public Builder assetName(String assetName) {
             this.assetName = Objects.requireNonNull(assetName);
             return this;
         }
 
-        public Builder setInputs(List<String> inputs) {
+        public Builder inputs(List<String> inputs) {
             this.inputs = Objects.requireNonNull(inputs);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setOdataType(String odataType) {
+        public Builder odataType(String odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }

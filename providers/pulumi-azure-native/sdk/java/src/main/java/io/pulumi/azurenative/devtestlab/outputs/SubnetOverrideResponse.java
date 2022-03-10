@@ -132,32 +132,32 @@ public final class SubnetOverrideResponse {
     	      this.virtualNetworkPoolName = defaults.virtualNetworkPoolName;
         }
 
-        public Builder setLabSubnetName(@Nullable String labSubnetName) {
+        public Builder labSubnetName(@Nullable String labSubnetName) {
             this.labSubnetName = labSubnetName;
             return this;
         }
 
-        public Builder setResourceId(@Nullable String resourceId) {
+        public Builder resourceId(@Nullable String resourceId) {
             this.resourceId = resourceId;
             return this;
         }
 
-        public Builder setSharedPublicIpAddressConfiguration(@Nullable SubnetSharedPublicIpAddressConfigurationResponse sharedPublicIpAddressConfiguration) {
+        public Builder sharedPublicIpAddressConfiguration(@Nullable SubnetSharedPublicIpAddressConfigurationResponse sharedPublicIpAddressConfiguration) {
             this.sharedPublicIpAddressConfiguration = sharedPublicIpAddressConfiguration;
             return this;
         }
 
-        public Builder setUseInVmCreationPermission(@Nullable String useInVmCreationPermission) {
+        public Builder useInVmCreationPermission(@Nullable String useInVmCreationPermission) {
             this.useInVmCreationPermission = useInVmCreationPermission;
             return this;
         }
 
-        public Builder setUsePublicIpAddressPermission(@Nullable String usePublicIpAddressPermission) {
+        public Builder usePublicIpAddressPermission(@Nullable String usePublicIpAddressPermission) {
             this.usePublicIpAddressPermission = usePublicIpAddressPermission;
             return this;
         }
 
-        public Builder setVirtualNetworkPoolName(@Nullable String virtualNetworkPoolName) {
+        public Builder virtualNetworkPoolName(@Nullable String virtualNetworkPoolName) {
             this.virtualNetworkPoolName = virtualNetworkPoolName;
             return this;
         }

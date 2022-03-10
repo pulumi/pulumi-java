@@ -68,12 +68,12 @@ public final class AzureStaticWebAppsResponse {
     	      this.registration = defaults.registration;
         }
 
-        public Builder setEnabled(@Nullable Boolean enabled) {
+        public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = enabled;
             return this;
         }
 
-        public Builder setRegistration(@Nullable AzureStaticWebAppsRegistrationResponse registration) {
+        public Builder registration(@Nullable AzureStaticWebAppsRegistrationResponse registration) {
             this.registration = registration;
             return this;
         }

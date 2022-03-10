@@ -84,17 +84,17 @@ public final class GetPrivateEndpointConnectionArgs extends io.pulumi.resources.
     	      this.resourceGroupName = defaults.resourceGroupName;
         }
 
-        public Builder setConfigStoreName(String configStoreName) {
+        public Builder configStoreName(String configStoreName) {
             this.configStoreName = Objects.requireNonNull(configStoreName);
             return this;
         }
 
-        public Builder setPrivateEndpointConnectionName(String privateEndpointConnectionName) {
+        public Builder privateEndpointConnectionName(String privateEndpointConnectionName) {
             this.privateEndpointConnectionName = Objects.requireNonNull(privateEndpointConnectionName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }

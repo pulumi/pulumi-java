@@ -100,22 +100,22 @@ public final class GetVolumeContainerArgs extends io.pulumi.resources.InvokeArgs
     	      this.volumeContainerName = defaults.volumeContainerName;
         }
 
-        public Builder setDeviceName(String deviceName) {
+        public Builder deviceName(String deviceName) {
             this.deviceName = Objects.requireNonNull(deviceName);
             return this;
         }
 
-        public Builder setManagerName(String managerName) {
+        public Builder managerName(String managerName) {
             this.managerName = Objects.requireNonNull(managerName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setVolumeContainerName(String volumeContainerName) {
+        public Builder volumeContainerName(String volumeContainerName) {
             this.volumeContainerName = Objects.requireNonNull(volumeContainerName);
             return this;
         }

@@ -74,22 +74,22 @@ public final class UserDefinedResourcesPropertiesArgs extends io.pulumi.resource
     	      this.querySubscriptions = defaults.querySubscriptions;
         }
 
-        public Builder setQuery(Input<String> query) {
+        public Builder query(Input<String> query) {
             this.query = Objects.requireNonNull(query);
             return this;
         }
 
-        public Builder setQuery(String query) {
+        public Builder query(String query) {
             this.query = Input.of(Objects.requireNonNull(query));
             return this;
         }
 
-        public Builder setQuerySubscriptions(Input<List<String>> querySubscriptions) {
+        public Builder querySubscriptions(Input<List<String>> querySubscriptions) {
             this.querySubscriptions = Objects.requireNonNull(querySubscriptions);
             return this;
         }
 
-        public Builder setQuerySubscriptions(List<String> querySubscriptions) {
+        public Builder querySubscriptions(List<String> querySubscriptions) {
             this.querySubscriptions = Input.of(Objects.requireNonNull(querySubscriptions));
             return this;
         }

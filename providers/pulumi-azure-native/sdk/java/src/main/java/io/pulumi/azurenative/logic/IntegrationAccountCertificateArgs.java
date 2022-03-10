@@ -169,82 +169,82 @@ public final class IntegrationAccountCertificateArgs extends io.pulumi.resources
     	      this.tags = defaults.tags;
         }
 
-        public Builder setCertificateName(@Nullable Input<String> certificateName) {
+        public Builder certificateName(@Nullable Input<String> certificateName) {
             this.certificateName = certificateName;
             return this;
         }
 
-        public Builder setCertificateName(@Nullable String certificateName) {
+        public Builder certificateName(@Nullable String certificateName) {
             this.certificateName = Input.ofNullable(certificateName);
             return this;
         }
 
-        public Builder setIntegrationAccountName(Input<String> integrationAccountName) {
+        public Builder integrationAccountName(Input<String> integrationAccountName) {
             this.integrationAccountName = Objects.requireNonNull(integrationAccountName);
             return this;
         }
 
-        public Builder setIntegrationAccountName(String integrationAccountName) {
+        public Builder integrationAccountName(String integrationAccountName) {
             this.integrationAccountName = Input.of(Objects.requireNonNull(integrationAccountName));
             return this;
         }
 
-        public Builder setKey(@Nullable Input<KeyVaultKeyReferenceArgs> key) {
+        public Builder key(@Nullable Input<KeyVaultKeyReferenceArgs> key) {
             this.key = key;
             return this;
         }
 
-        public Builder setKey(@Nullable KeyVaultKeyReferenceArgs key) {
+        public Builder key(@Nullable KeyVaultKeyReferenceArgs key) {
             this.key = Input.ofNullable(key);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setMetadata(@Nullable Input<Object> metadata) {
+        public Builder metadata(@Nullable Input<Object> metadata) {
             this.metadata = metadata;
             return this;
         }
 
-        public Builder setMetadata(@Nullable Object metadata) {
+        public Builder metadata(@Nullable Object metadata) {
             this.metadata = Input.ofNullable(metadata);
             return this;
         }
 
-        public Builder setPublicCertificate(@Nullable Input<String> publicCertificate) {
+        public Builder publicCertificate(@Nullable Input<String> publicCertificate) {
             this.publicCertificate = publicCertificate;
             return this;
         }
 
-        public Builder setPublicCertificate(@Nullable String publicCertificate) {
+        public Builder publicCertificate(@Nullable String publicCertificate) {
             this.publicCertificate = Input.ofNullable(publicCertificate);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

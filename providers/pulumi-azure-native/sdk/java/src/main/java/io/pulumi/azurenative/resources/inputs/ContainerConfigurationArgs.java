@@ -57,12 +57,12 @@ public final class ContainerConfigurationArgs extends io.pulumi.resources.Resour
     	      this.containerGroupName = defaults.containerGroupName;
         }
 
-        public Builder setContainerGroupName(@Nullable Input<String> containerGroupName) {
+        public Builder containerGroupName(@Nullable Input<String> containerGroupName) {
             this.containerGroupName = containerGroupName;
             return this;
         }
 
-        public Builder setContainerGroupName(@Nullable String containerGroupName) {
+        public Builder containerGroupName(@Nullable String containerGroupName) {
             this.containerGroupName = Input.ofNullable(containerGroupName);
             return this;
         }

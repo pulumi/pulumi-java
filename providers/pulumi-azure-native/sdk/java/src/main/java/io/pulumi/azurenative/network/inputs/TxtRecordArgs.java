@@ -58,12 +58,12 @@ public final class TxtRecordArgs extends io.pulumi.resources.ResourceArgs {
     	      this.value = defaults.value;
         }
 
-        public Builder setValue(@Nullable Input<List<String>> value) {
+        public Builder value(@Nullable Input<List<String>> value) {
             this.value = value;
             return this;
         }
 
-        public Builder setValue(@Nullable List<String> value) {
+        public Builder value(@Nullable List<String> value) {
             this.value = Input.ofNullable(value);
             return this;
         }

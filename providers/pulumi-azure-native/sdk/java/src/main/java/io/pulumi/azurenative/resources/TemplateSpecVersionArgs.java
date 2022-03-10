@@ -202,102 +202,102 @@ public final class TemplateSpecVersionArgs extends io.pulumi.resources.ResourceA
     	      this.uiFormDefinition = defaults.uiFormDefinition;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setLinkedTemplates(@Nullable Input<List<LinkedTemplateArtifactArgs>> linkedTemplates) {
+        public Builder linkedTemplates(@Nullable Input<List<LinkedTemplateArtifactArgs>> linkedTemplates) {
             this.linkedTemplates = linkedTemplates;
             return this;
         }
 
-        public Builder setLinkedTemplates(@Nullable List<LinkedTemplateArtifactArgs> linkedTemplates) {
+        public Builder linkedTemplates(@Nullable List<LinkedTemplateArtifactArgs> linkedTemplates) {
             this.linkedTemplates = Input.ofNullable(linkedTemplates);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setMainTemplate(@Nullable Input<Object> mainTemplate) {
+        public Builder mainTemplate(@Nullable Input<Object> mainTemplate) {
             this.mainTemplate = mainTemplate;
             return this;
         }
 
-        public Builder setMainTemplate(@Nullable Object mainTemplate) {
+        public Builder mainTemplate(@Nullable Object mainTemplate) {
             this.mainTemplate = Input.ofNullable(mainTemplate);
             return this;
         }
 
-        public Builder setMetadata(@Nullable Input<Object> metadata) {
+        public Builder metadata(@Nullable Input<Object> metadata) {
             this.metadata = metadata;
             return this;
         }
 
-        public Builder setMetadata(@Nullable Object metadata) {
+        public Builder metadata(@Nullable Object metadata) {
             this.metadata = Input.ofNullable(metadata);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTemplateSpecName(Input<String> templateSpecName) {
+        public Builder templateSpecName(Input<String> templateSpecName) {
             this.templateSpecName = Objects.requireNonNull(templateSpecName);
             return this;
         }
 
-        public Builder setTemplateSpecName(String templateSpecName) {
+        public Builder templateSpecName(String templateSpecName) {
             this.templateSpecName = Input.of(Objects.requireNonNull(templateSpecName));
             return this;
         }
 
-        public Builder setTemplateSpecVersion(@Nullable Input<String> templateSpecVersion) {
+        public Builder templateSpecVersion(@Nullable Input<String> templateSpecVersion) {
             this.templateSpecVersion = templateSpecVersion;
             return this;
         }
 
-        public Builder setTemplateSpecVersion(@Nullable String templateSpecVersion) {
+        public Builder templateSpecVersion(@Nullable String templateSpecVersion) {
             this.templateSpecVersion = Input.ofNullable(templateSpecVersion);
             return this;
         }
 
-        public Builder setUiFormDefinition(@Nullable Input<Object> uiFormDefinition) {
+        public Builder uiFormDefinition(@Nullable Input<Object> uiFormDefinition) {
             this.uiFormDefinition = uiFormDefinition;
             return this;
         }
 
-        public Builder setUiFormDefinition(@Nullable Object uiFormDefinition) {
+        public Builder uiFormDefinition(@Nullable Object uiFormDefinition) {
             this.uiFormDefinition = Input.ofNullable(uiFormDefinition);
             return this;
         }

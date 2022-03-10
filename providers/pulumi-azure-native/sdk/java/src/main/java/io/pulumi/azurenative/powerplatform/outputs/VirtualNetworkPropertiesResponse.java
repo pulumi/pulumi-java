@@ -68,12 +68,12 @@ public final class VirtualNetworkPropertiesResponse {
     	      this.subnet = defaults.subnet;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setSubnet(@Nullable SubnetPropertiesResponse subnet) {
+        public Builder subnet(@Nullable SubnetPropertiesResponse subnet) {
             this.subnet = subnet;
             return this;
         }

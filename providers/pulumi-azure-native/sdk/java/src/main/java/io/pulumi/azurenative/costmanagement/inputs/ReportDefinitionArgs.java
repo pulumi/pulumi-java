@@ -111,42 +111,42 @@ public final class ReportDefinitionArgs extends io.pulumi.resources.ResourceArgs
     	      this.type = defaults.type;
         }
 
-        public Builder setDataset(@Nullable Input<ReportDatasetArgs> dataset) {
+        public Builder dataset(@Nullable Input<ReportDatasetArgs> dataset) {
             this.dataset = dataset;
             return this;
         }
 
-        public Builder setDataset(@Nullable ReportDatasetArgs dataset) {
+        public Builder dataset(@Nullable ReportDatasetArgs dataset) {
             this.dataset = Input.ofNullable(dataset);
             return this;
         }
 
-        public Builder setTimePeriod(@Nullable Input<ReportTimePeriodArgs> timePeriod) {
+        public Builder timePeriod(@Nullable Input<ReportTimePeriodArgs> timePeriod) {
             this.timePeriod = timePeriod;
             return this;
         }
 
-        public Builder setTimePeriod(@Nullable ReportTimePeriodArgs timePeriod) {
+        public Builder timePeriod(@Nullable ReportTimePeriodArgs timePeriod) {
             this.timePeriod = Input.ofNullable(timePeriod);
             return this;
         }
 
-        public Builder setTimeframe(Input<Either<String,TimeframeType>> timeframe) {
+        public Builder timeframe(Input<Either<String,TimeframeType>> timeframe) {
             this.timeframe = Objects.requireNonNull(timeframe);
             return this;
         }
 
-        public Builder setTimeframe(Either<String,TimeframeType> timeframe) {
+        public Builder timeframe(Either<String,TimeframeType> timeframe) {
             this.timeframe = Input.of(Objects.requireNonNull(timeframe));
             return this;
         }
 
-        public Builder setType(Input<Either<String,ReportType>> type) {
+        public Builder type(Input<Either<String,ReportType>> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setType(Either<String,ReportType> type) {
+        public Builder type(Either<String,ReportType> type) {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }

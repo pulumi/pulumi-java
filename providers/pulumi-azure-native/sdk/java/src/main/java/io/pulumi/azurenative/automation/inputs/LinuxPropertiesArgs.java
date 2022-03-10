@@ -109,42 +109,42 @@ public final class LinuxPropertiesArgs extends io.pulumi.resources.ResourceArgs 
     	      this.rebootSetting = defaults.rebootSetting;
         }
 
-        public Builder setExcludedPackageNameMasks(@Nullable Input<List<String>> excludedPackageNameMasks) {
+        public Builder excludedPackageNameMasks(@Nullable Input<List<String>> excludedPackageNameMasks) {
             this.excludedPackageNameMasks = excludedPackageNameMasks;
             return this;
         }
 
-        public Builder setExcludedPackageNameMasks(@Nullable List<String> excludedPackageNameMasks) {
+        public Builder excludedPackageNameMasks(@Nullable List<String> excludedPackageNameMasks) {
             this.excludedPackageNameMasks = Input.ofNullable(excludedPackageNameMasks);
             return this;
         }
 
-        public Builder setIncludedPackageClassifications(@Nullable Input<Either<String,LinuxUpdateClasses>> includedPackageClassifications) {
+        public Builder includedPackageClassifications(@Nullable Input<Either<String,LinuxUpdateClasses>> includedPackageClassifications) {
             this.includedPackageClassifications = includedPackageClassifications;
             return this;
         }
 
-        public Builder setIncludedPackageClassifications(@Nullable Either<String,LinuxUpdateClasses> includedPackageClassifications) {
+        public Builder includedPackageClassifications(@Nullable Either<String,LinuxUpdateClasses> includedPackageClassifications) {
             this.includedPackageClassifications = Input.ofNullable(includedPackageClassifications);
             return this;
         }
 
-        public Builder setIncludedPackageNameMasks(@Nullable Input<List<String>> includedPackageNameMasks) {
+        public Builder includedPackageNameMasks(@Nullable Input<List<String>> includedPackageNameMasks) {
             this.includedPackageNameMasks = includedPackageNameMasks;
             return this;
         }
 
-        public Builder setIncludedPackageNameMasks(@Nullable List<String> includedPackageNameMasks) {
+        public Builder includedPackageNameMasks(@Nullable List<String> includedPackageNameMasks) {
             this.includedPackageNameMasks = Input.ofNullable(includedPackageNameMasks);
             return this;
         }
 
-        public Builder setRebootSetting(@Nullable Input<String> rebootSetting) {
+        public Builder rebootSetting(@Nullable Input<String> rebootSetting) {
             this.rebootSetting = rebootSetting;
             return this;
         }
 
-        public Builder setRebootSetting(@Nullable String rebootSetting) {
+        public Builder rebootSetting(@Nullable String rebootSetting) {
             this.rebootSetting = Input.ofNullable(rebootSetting);
             return this;
         }

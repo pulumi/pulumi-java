@@ -223,57 +223,57 @@ public final class IotDpsPropertiesDescriptionResponse extends io.pulumi.resourc
     	      this.state = defaults.state;
         }
 
-        public Builder setAllocationPolicy(@Nullable String allocationPolicy) {
+        public Builder allocationPolicy(@Nullable String allocationPolicy) {
             this.allocationPolicy = allocationPolicy;
             return this;
         }
 
-        public Builder setAuthorizationPolicies(@Nullable List<SharedAccessSignatureAuthorizationRuleAccessRightsDescriptionResponse> authorizationPolicies) {
+        public Builder authorizationPolicies(@Nullable List<SharedAccessSignatureAuthorizationRuleAccessRightsDescriptionResponse> authorizationPolicies) {
             this.authorizationPolicies = authorizationPolicies;
             return this;
         }
 
-        public Builder setDeviceProvisioningHostName(String deviceProvisioningHostName) {
+        public Builder deviceProvisioningHostName(String deviceProvisioningHostName) {
             this.deviceProvisioningHostName = Objects.requireNonNull(deviceProvisioningHostName);
             return this;
         }
 
-        public Builder setIdScope(String idScope) {
+        public Builder idScope(String idScope) {
             this.idScope = Objects.requireNonNull(idScope);
             return this;
         }
 
-        public Builder setIotHubs(@Nullable List<IotHubDefinitionDescriptionResponse> iotHubs) {
+        public Builder iotHubs(@Nullable List<IotHubDefinitionDescriptionResponse> iotHubs) {
             this.iotHubs = iotHubs;
             return this;
         }
 
-        public Builder setIpFilterRules(@Nullable List<TargetIpFilterRuleResponse> ipFilterRules) {
+        public Builder ipFilterRules(@Nullable List<TargetIpFilterRuleResponse> ipFilterRules) {
             this.ipFilterRules = ipFilterRules;
             return this;
         }
 
-        public Builder setPrivateEndpointConnections(@Nullable List<PrivateEndpointConnectionResponse> privateEndpointConnections) {
+        public Builder privateEndpointConnections(@Nullable List<PrivateEndpointConnectionResponse> privateEndpointConnections) {
             this.privateEndpointConnections = privateEndpointConnections;
             return this;
         }
 
-        public Builder setProvisioningState(@Nullable String provisioningState) {
+        public Builder provisioningState(@Nullable String provisioningState) {
             this.provisioningState = provisioningState;
             return this;
         }
 
-        public Builder setPublicNetworkAccess(@Nullable String publicNetworkAccess) {
+        public Builder publicNetworkAccess(@Nullable String publicNetworkAccess) {
             this.publicNetworkAccess = publicNetworkAccess;
             return this;
         }
 
-        public Builder setServiceOperationsHostName(String serviceOperationsHostName) {
+        public Builder serviceOperationsHostName(String serviceOperationsHostName) {
             this.serviceOperationsHostName = Objects.requireNonNull(serviceOperationsHostName);
             return this;
         }
 
-        public Builder setState(@Nullable String state) {
+        public Builder state(@Nullable String state) {
             this.state = state;
             return this;
         }

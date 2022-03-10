@@ -99,22 +99,22 @@ public final class SiteMachineKeyResponse {
     	      this.validationKey = defaults.validationKey;
         }
 
-        public Builder setDecryption(@Nullable String decryption) {
+        public Builder decryption(@Nullable String decryption) {
             this.decryption = decryption;
             return this;
         }
 
-        public Builder setDecryptionKey(@Nullable String decryptionKey) {
+        public Builder decryptionKey(@Nullable String decryptionKey) {
             this.decryptionKey = decryptionKey;
             return this;
         }
 
-        public Builder setValidation(@Nullable String validation) {
+        public Builder validation(@Nullable String validation) {
             this.validation = validation;
             return this;
         }
 
-        public Builder setValidationKey(@Nullable String validationKey) {
+        public Builder validationKey(@Nullable String validationKey) {
             this.validationKey = validationKey;
             return this;
         }

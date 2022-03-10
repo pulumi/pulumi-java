@@ -183,7 +183,7 @@ public class PeriodicTimerEventTrigger extends io.pulumi.resources.CustomResourc
     private static PeriodicTimerEventTriggerArgs makeArgs(PeriodicTimerEventTriggerArgs args) {
         var builder = args == null ? PeriodicTimerEventTriggerArgs.builder() : PeriodicTimerEventTriggerArgs.builder(args);
         return builder
-            .setKind("PeriodicTimerEvent")
+            .kind("PeriodicTimerEvent")
             .build();
     }
 

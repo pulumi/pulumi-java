@@ -204,102 +204,102 @@ public final class SnapshotPolicyArgs extends io.pulumi.resources.ResourceArgs {
     	      this.weeklySchedule = defaults.weeklySchedule;
         }
 
-        public Builder setAccountName(Input<String> accountName) {
+        public Builder accountName(Input<String> accountName) {
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
 
-        public Builder setAccountName(String accountName) {
+        public Builder accountName(String accountName) {
             this.accountName = Input.of(Objects.requireNonNull(accountName));
             return this;
         }
 
-        public Builder setDailySchedule(@Nullable Input<DailyScheduleArgs> dailySchedule) {
+        public Builder dailySchedule(@Nullable Input<DailyScheduleArgs> dailySchedule) {
             this.dailySchedule = dailySchedule;
             return this;
         }
 
-        public Builder setDailySchedule(@Nullable DailyScheduleArgs dailySchedule) {
+        public Builder dailySchedule(@Nullable DailyScheduleArgs dailySchedule) {
             this.dailySchedule = Input.ofNullable(dailySchedule);
             return this;
         }
 
-        public Builder setEnabled(@Nullable Input<Boolean> enabled) {
+        public Builder enabled(@Nullable Input<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
 
-        public Builder setEnabled(@Nullable Boolean enabled) {
+        public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Input.ofNullable(enabled);
             return this;
         }
 
-        public Builder setHourlySchedule(@Nullable Input<HourlyScheduleArgs> hourlySchedule) {
+        public Builder hourlySchedule(@Nullable Input<HourlyScheduleArgs> hourlySchedule) {
             this.hourlySchedule = hourlySchedule;
             return this;
         }
 
-        public Builder setHourlySchedule(@Nullable HourlyScheduleArgs hourlySchedule) {
+        public Builder hourlySchedule(@Nullable HourlyScheduleArgs hourlySchedule) {
             this.hourlySchedule = Input.ofNullable(hourlySchedule);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setMonthlySchedule(@Nullable Input<MonthlyScheduleArgs> monthlySchedule) {
+        public Builder monthlySchedule(@Nullable Input<MonthlyScheduleArgs> monthlySchedule) {
             this.monthlySchedule = monthlySchedule;
             return this;
         }
 
-        public Builder setMonthlySchedule(@Nullable MonthlyScheduleArgs monthlySchedule) {
+        public Builder monthlySchedule(@Nullable MonthlyScheduleArgs monthlySchedule) {
             this.monthlySchedule = Input.ofNullable(monthlySchedule);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setSnapshotPolicyName(@Nullable Input<String> snapshotPolicyName) {
+        public Builder snapshotPolicyName(@Nullable Input<String> snapshotPolicyName) {
             this.snapshotPolicyName = snapshotPolicyName;
             return this;
         }
 
-        public Builder setSnapshotPolicyName(@Nullable String snapshotPolicyName) {
+        public Builder snapshotPolicyName(@Nullable String snapshotPolicyName) {
             this.snapshotPolicyName = Input.ofNullable(snapshotPolicyName);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setWeeklySchedule(@Nullable Input<WeeklyScheduleArgs> weeklySchedule) {
+        public Builder weeklySchedule(@Nullable Input<WeeklyScheduleArgs> weeklySchedule) {
             this.weeklySchedule = weeklySchedule;
             return this;
         }
 
-        public Builder setWeeklySchedule(@Nullable WeeklyScheduleArgs weeklySchedule) {
+        public Builder weeklySchedule(@Nullable WeeklyScheduleArgs weeklySchedule) {
             this.weeklySchedule = Input.ofNullable(weeklySchedule);
             return this;
         }

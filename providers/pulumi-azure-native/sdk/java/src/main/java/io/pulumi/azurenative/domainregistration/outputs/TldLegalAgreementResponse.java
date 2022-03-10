@@ -99,22 +99,22 @@ public final class TldLegalAgreementResponse {
     	      this.url = defaults.url;
         }
 
-        public Builder setAgreementKey(String agreementKey) {
+        public Builder agreementKey(String agreementKey) {
             this.agreementKey = Objects.requireNonNull(agreementKey);
             return this;
         }
 
-        public Builder setContent(String content) {
+        public Builder content(String content) {
             this.content = Objects.requireNonNull(content);
             return this;
         }
 
-        public Builder setTitle(String title) {
+        public Builder title(String title) {
             this.title = Objects.requireNonNull(title);
             return this;
         }
 
-        public Builder setUrl(@Nullable String url) {
+        public Builder url(@Nullable String url) {
             this.url = url;
             return this;
         }

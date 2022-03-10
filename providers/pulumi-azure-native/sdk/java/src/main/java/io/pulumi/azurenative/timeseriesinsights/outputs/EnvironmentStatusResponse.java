@@ -66,12 +66,12 @@ public final class EnvironmentStatusResponse {
     	      this.warmStorage = defaults.warmStorage;
         }
 
-        public Builder setIngress(IngressEnvironmentStatusResponse ingress) {
+        public Builder ingress(IngressEnvironmentStatusResponse ingress) {
             this.ingress = Objects.requireNonNull(ingress);
             return this;
         }
 
-        public Builder setWarmStorage(WarmStorageEnvironmentStatusResponse warmStorage) {
+        public Builder warmStorage(WarmStorageEnvironmentStatusResponse warmStorage) {
             this.warmStorage = Objects.requireNonNull(warmStorage);
             return this;
         }

@@ -151,37 +151,37 @@ public final class ContentKeyPolicyFairPlayConfigurationResponse {
     	      this.rentalDuration = defaults.rentalDuration;
         }
 
-        public Builder setAsk(String ask) {
+        public Builder ask(String ask) {
             this.ask = Objects.requireNonNull(ask);
             return this;
         }
 
-        public Builder setFairPlayPfx(String fairPlayPfx) {
+        public Builder fairPlayPfx(String fairPlayPfx) {
             this.fairPlayPfx = Objects.requireNonNull(fairPlayPfx);
             return this;
         }
 
-        public Builder setFairPlayPfxPassword(String fairPlayPfxPassword) {
+        public Builder fairPlayPfxPassword(String fairPlayPfxPassword) {
             this.fairPlayPfxPassword = Objects.requireNonNull(fairPlayPfxPassword);
             return this;
         }
 
-        public Builder setOdataType(String odataType) {
+        public Builder odataType(String odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
 
-        public Builder setOfflineRentalConfiguration(@Nullable ContentKeyPolicyFairPlayOfflineRentalConfigurationResponse offlineRentalConfiguration) {
+        public Builder offlineRentalConfiguration(@Nullable ContentKeyPolicyFairPlayOfflineRentalConfigurationResponse offlineRentalConfiguration) {
             this.offlineRentalConfiguration = offlineRentalConfiguration;
             return this;
         }
 
-        public Builder setRentalAndLeaseKeyType(String rentalAndLeaseKeyType) {
+        public Builder rentalAndLeaseKeyType(String rentalAndLeaseKeyType) {
             this.rentalAndLeaseKeyType = Objects.requireNonNull(rentalAndLeaseKeyType);
             return this;
         }
 
-        public Builder setRentalDuration(Double rentalDuration) {
+        public Builder rentalDuration(Double rentalDuration) {
             this.rentalDuration = Objects.requireNonNull(rentalDuration);
             return this;
         }

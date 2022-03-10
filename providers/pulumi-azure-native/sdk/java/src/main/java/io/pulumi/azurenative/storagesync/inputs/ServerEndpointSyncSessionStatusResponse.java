@@ -172,42 +172,42 @@ public final class ServerEndpointSyncSessionStatusResponse extends io.pulumi.res
     	      this.transientFilesNotSyncingCount = defaults.transientFilesNotSyncingCount;
         }
 
-        public Builder setFilesNotSyncingErrors(List<ServerEndpointFilesNotSyncingErrorResponse> filesNotSyncingErrors) {
+        public Builder filesNotSyncingErrors(List<ServerEndpointFilesNotSyncingErrorResponse> filesNotSyncingErrors) {
             this.filesNotSyncingErrors = Objects.requireNonNull(filesNotSyncingErrors);
             return this;
         }
 
-        public Builder setLastSyncMode(String lastSyncMode) {
+        public Builder lastSyncMode(String lastSyncMode) {
             this.lastSyncMode = Objects.requireNonNull(lastSyncMode);
             return this;
         }
 
-        public Builder setLastSyncPerItemErrorCount(Double lastSyncPerItemErrorCount) {
+        public Builder lastSyncPerItemErrorCount(Double lastSyncPerItemErrorCount) {
             this.lastSyncPerItemErrorCount = Objects.requireNonNull(lastSyncPerItemErrorCount);
             return this;
         }
 
-        public Builder setLastSyncResult(Integer lastSyncResult) {
+        public Builder lastSyncResult(Integer lastSyncResult) {
             this.lastSyncResult = Objects.requireNonNull(lastSyncResult);
             return this;
         }
 
-        public Builder setLastSyncSuccessTimestamp(String lastSyncSuccessTimestamp) {
+        public Builder lastSyncSuccessTimestamp(String lastSyncSuccessTimestamp) {
             this.lastSyncSuccessTimestamp = Objects.requireNonNull(lastSyncSuccessTimestamp);
             return this;
         }
 
-        public Builder setLastSyncTimestamp(String lastSyncTimestamp) {
+        public Builder lastSyncTimestamp(String lastSyncTimestamp) {
             this.lastSyncTimestamp = Objects.requireNonNull(lastSyncTimestamp);
             return this;
         }
 
-        public Builder setPersistentFilesNotSyncingCount(Double persistentFilesNotSyncingCount) {
+        public Builder persistentFilesNotSyncingCount(Double persistentFilesNotSyncingCount) {
             this.persistentFilesNotSyncingCount = Objects.requireNonNull(persistentFilesNotSyncingCount);
             return this;
         }
 
-        public Builder setTransientFilesNotSyncingCount(Double transientFilesNotSyncingCount) {
+        public Builder transientFilesNotSyncingCount(Double transientFilesNotSyncingCount) {
             this.transientFilesNotSyncingCount = Objects.requireNonNull(transientFilesNotSyncingCount);
             return this;
         }

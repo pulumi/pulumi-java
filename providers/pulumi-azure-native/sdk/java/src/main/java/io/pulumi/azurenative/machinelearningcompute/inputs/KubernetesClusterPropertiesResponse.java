@@ -57,7 +57,7 @@ public final class KubernetesClusterPropertiesResponse extends io.pulumi.resourc
     	      this.servicePrincipal = defaults.servicePrincipal;
         }
 
-        public Builder setServicePrincipal(@Nullable ServicePrincipalPropertiesResponse servicePrincipal) {
+        public Builder servicePrincipal(@Nullable ServicePrincipalPropertiesResponse servicePrincipal) {
             this.servicePrincipal = servicePrincipal;
             return this;
         }

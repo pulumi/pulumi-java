@@ -86,17 +86,17 @@ public final class TriggerPropertiesResponse {
     	      this.timerTriggers = defaults.timerTriggers;
         }
 
-        public Builder setBaseImageTrigger(@Nullable BaseImageTriggerResponse baseImageTrigger) {
+        public Builder baseImageTrigger(@Nullable BaseImageTriggerResponse baseImageTrigger) {
             this.baseImageTrigger = baseImageTrigger;
             return this;
         }
 
-        public Builder setSourceTriggers(@Nullable List<SourceTriggerResponse> sourceTriggers) {
+        public Builder sourceTriggers(@Nullable List<SourceTriggerResponse> sourceTriggers) {
             this.sourceTriggers = sourceTriggers;
             return this;
         }
 
-        public Builder setTimerTriggers(@Nullable List<TimerTriggerResponse> timerTriggers) {
+        public Builder timerTriggers(@Nullable List<TimerTriggerResponse> timerTriggers) {
             this.timerTriggers = timerTriggers;
             return this;
         }

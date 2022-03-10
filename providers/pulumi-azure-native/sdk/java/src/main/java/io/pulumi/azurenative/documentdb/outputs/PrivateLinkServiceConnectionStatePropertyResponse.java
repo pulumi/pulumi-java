@@ -83,17 +83,17 @@ public final class PrivateLinkServiceConnectionStatePropertyResponse {
     	      this.status = defaults.status;
         }
 
-        public Builder setActionsRequired(String actionsRequired) {
+        public Builder actionsRequired(String actionsRequired) {
             this.actionsRequired = Objects.requireNonNull(actionsRequired);
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setStatus(@Nullable String status) {
+        public Builder status(@Nullable String status) {
             this.status = status;
             return this;
         }

@@ -120,52 +120,52 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
     	      this.resourceGroupName = defaults.resourceGroupName;
         }
 
-        public Builder setAccountName(Input<String> accountName) {
+        public Builder accountName(Input<String> accountName) {
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
 
-        public Builder setAccountName(String accountName) {
+        public Builder accountName(String accountName) {
             this.accountName = Input.of(Objects.requireNonNull(accountName));
             return this;
         }
 
-        public Builder setPrivateEndpoint(@Nullable Input<PrivateEndpointArgs> privateEndpoint) {
+        public Builder privateEndpoint(@Nullable Input<PrivateEndpointArgs> privateEndpoint) {
             this.privateEndpoint = privateEndpoint;
             return this;
         }
 
-        public Builder setPrivateEndpoint(@Nullable PrivateEndpointArgs privateEndpoint) {
+        public Builder privateEndpoint(@Nullable PrivateEndpointArgs privateEndpoint) {
             this.privateEndpoint = Input.ofNullable(privateEndpoint);
             return this;
         }
 
-        public Builder setPrivateEndpointConnectionName(@Nullable Input<String> privateEndpointConnectionName) {
+        public Builder privateEndpointConnectionName(@Nullable Input<String> privateEndpointConnectionName) {
             this.privateEndpointConnectionName = privateEndpointConnectionName;
             return this;
         }
 
-        public Builder setPrivateEndpointConnectionName(@Nullable String privateEndpointConnectionName) {
+        public Builder privateEndpointConnectionName(@Nullable String privateEndpointConnectionName) {
             this.privateEndpointConnectionName = Input.ofNullable(privateEndpointConnectionName);
             return this;
         }
 
-        public Builder setPrivateLinkServiceConnectionState(@Nullable Input<PrivateLinkServiceConnectionStateArgs> privateLinkServiceConnectionState) {
+        public Builder privateLinkServiceConnectionState(@Nullable Input<PrivateLinkServiceConnectionStateArgs> privateLinkServiceConnectionState) {
             this.privateLinkServiceConnectionState = privateLinkServiceConnectionState;
             return this;
         }
 
-        public Builder setPrivateLinkServiceConnectionState(@Nullable PrivateLinkServiceConnectionStateArgs privateLinkServiceConnectionState) {
+        public Builder privateLinkServiceConnectionState(@Nullable PrivateLinkServiceConnectionStateArgs privateLinkServiceConnectionState) {
             this.privateLinkServiceConnectionState = Input.ofNullable(privateLinkServiceConnectionState);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }

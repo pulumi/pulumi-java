@@ -223,57 +223,57 @@ public final class NodeTypeDescriptionResponse {
     	      this.vmInstanceCount = defaults.vmInstanceCount;
         }
 
-        public Builder setApplicationPorts(@Nullable EndpointRangeDescriptionResponse applicationPorts) {
+        public Builder applicationPorts(@Nullable EndpointRangeDescriptionResponse applicationPorts) {
             this.applicationPorts = applicationPorts;
             return this;
         }
 
-        public Builder setCapacities(@Nullable Map<String,String> capacities) {
+        public Builder capacities(@Nullable Map<String,String> capacities) {
             this.capacities = capacities;
             return this;
         }
 
-        public Builder setClientConnectionEndpointPort(Integer clientConnectionEndpointPort) {
+        public Builder clientConnectionEndpointPort(Integer clientConnectionEndpointPort) {
             this.clientConnectionEndpointPort = Objects.requireNonNull(clientConnectionEndpointPort);
             return this;
         }
 
-        public Builder setDurabilityLevel(@Nullable String durabilityLevel) {
+        public Builder durabilityLevel(@Nullable String durabilityLevel) {
             this.durabilityLevel = durabilityLevel;
             return this;
         }
 
-        public Builder setEphemeralPorts(@Nullable EndpointRangeDescriptionResponse ephemeralPorts) {
+        public Builder ephemeralPorts(@Nullable EndpointRangeDescriptionResponse ephemeralPorts) {
             this.ephemeralPorts = ephemeralPorts;
             return this;
         }
 
-        public Builder setHttpGatewayEndpointPort(Integer httpGatewayEndpointPort) {
+        public Builder httpGatewayEndpointPort(Integer httpGatewayEndpointPort) {
             this.httpGatewayEndpointPort = Objects.requireNonNull(httpGatewayEndpointPort);
             return this;
         }
 
-        public Builder setIsPrimary(Boolean isPrimary) {
+        public Builder isPrimary(Boolean isPrimary) {
             this.isPrimary = Objects.requireNonNull(isPrimary);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPlacementProperties(@Nullable Map<String,String> placementProperties) {
+        public Builder placementProperties(@Nullable Map<String,String> placementProperties) {
             this.placementProperties = placementProperties;
             return this;
         }
 
-        public Builder setReverseProxyEndpointPort(@Nullable Integer reverseProxyEndpointPort) {
+        public Builder reverseProxyEndpointPort(@Nullable Integer reverseProxyEndpointPort) {
             this.reverseProxyEndpointPort = reverseProxyEndpointPort;
             return this;
         }
 
-        public Builder setVmInstanceCount(Integer vmInstanceCount) {
+        public Builder vmInstanceCount(Integer vmInstanceCount) {
             this.vmInstanceCount = Objects.requireNonNull(vmInstanceCount);
             return this;
         }

@@ -123,52 +123,52 @@ public final class AddRecoveryServicesProviderInputPropertiesArgs extends io.pul
     	      this.resourceAccessIdentityInput = defaults.resourceAccessIdentityInput;
         }
 
-        public Builder setAuthenticationIdentityInput(Input<IdentityProviderInputArgs> authenticationIdentityInput) {
+        public Builder authenticationIdentityInput(Input<IdentityProviderInputArgs> authenticationIdentityInput) {
             this.authenticationIdentityInput = Objects.requireNonNull(authenticationIdentityInput);
             return this;
         }
 
-        public Builder setAuthenticationIdentityInput(IdentityProviderInputArgs authenticationIdentityInput) {
+        public Builder authenticationIdentityInput(IdentityProviderInputArgs authenticationIdentityInput) {
             this.authenticationIdentityInput = Input.of(Objects.requireNonNull(authenticationIdentityInput));
             return this;
         }
 
-        public Builder setDataPlaneAuthenticationIdentityInput(@Nullable Input<IdentityProviderInputArgs> dataPlaneAuthenticationIdentityInput) {
+        public Builder dataPlaneAuthenticationIdentityInput(@Nullable Input<IdentityProviderInputArgs> dataPlaneAuthenticationIdentityInput) {
             this.dataPlaneAuthenticationIdentityInput = dataPlaneAuthenticationIdentityInput;
             return this;
         }
 
-        public Builder setDataPlaneAuthenticationIdentityInput(@Nullable IdentityProviderInputArgs dataPlaneAuthenticationIdentityInput) {
+        public Builder dataPlaneAuthenticationIdentityInput(@Nullable IdentityProviderInputArgs dataPlaneAuthenticationIdentityInput) {
             this.dataPlaneAuthenticationIdentityInput = Input.ofNullable(dataPlaneAuthenticationIdentityInput);
             return this;
         }
 
-        public Builder setMachineId(@Nullable Input<String> machineId) {
+        public Builder machineId(@Nullable Input<String> machineId) {
             this.machineId = machineId;
             return this;
         }
 
-        public Builder setMachineId(@Nullable String machineId) {
+        public Builder machineId(@Nullable String machineId) {
             this.machineId = Input.ofNullable(machineId);
             return this;
         }
 
-        public Builder setMachineName(Input<String> machineName) {
+        public Builder machineName(Input<String> machineName) {
             this.machineName = Objects.requireNonNull(machineName);
             return this;
         }
 
-        public Builder setMachineName(String machineName) {
+        public Builder machineName(String machineName) {
             this.machineName = Input.of(Objects.requireNonNull(machineName));
             return this;
         }
 
-        public Builder setResourceAccessIdentityInput(Input<IdentityProviderInputArgs> resourceAccessIdentityInput) {
+        public Builder resourceAccessIdentityInput(Input<IdentityProviderInputArgs> resourceAccessIdentityInput) {
             this.resourceAccessIdentityInput = Objects.requireNonNull(resourceAccessIdentityInput);
             return this;
         }
 
-        public Builder setResourceAccessIdentityInput(IdentityProviderInputArgs resourceAccessIdentityInput) {
+        public Builder resourceAccessIdentityInput(IdentityProviderInputArgs resourceAccessIdentityInput) {
             this.resourceAccessIdentityInput = Input.of(Objects.requireNonNull(resourceAccessIdentityInput));
             return this;
         }

@@ -91,17 +91,17 @@ public final class SecretValueReferenceResponse extends io.pulumi.resources.Invo
     	      this.secretVersion = defaults.secretVersion;
         }
 
-        public Builder setKeyVault(KeyVaultReferenceResponse keyVault) {
+        public Builder keyVault(KeyVaultReferenceResponse keyVault) {
             this.keyVault = Objects.requireNonNull(keyVault);
             return this;
         }
 
-        public Builder setSecretName(String secretName) {
+        public Builder secretName(String secretName) {
             this.secretName = Objects.requireNonNull(secretName);
             return this;
         }
 
-        public Builder setSecretVersion(@Nullable String secretVersion) {
+        public Builder secretVersion(@Nullable String secretVersion) {
             this.secretVersion = secretVersion;
             return this;
         }

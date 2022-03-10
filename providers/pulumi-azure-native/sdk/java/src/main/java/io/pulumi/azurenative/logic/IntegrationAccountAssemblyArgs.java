@@ -136,62 +136,62 @@ public final class IntegrationAccountAssemblyArgs extends io.pulumi.resources.Re
     	      this.tags = defaults.tags;
         }
 
-        public Builder setAssemblyArtifactName(@Nullable Input<String> assemblyArtifactName) {
+        public Builder assemblyArtifactName(@Nullable Input<String> assemblyArtifactName) {
             this.assemblyArtifactName = assemblyArtifactName;
             return this;
         }
 
-        public Builder setAssemblyArtifactName(@Nullable String assemblyArtifactName) {
+        public Builder assemblyArtifactName(@Nullable String assemblyArtifactName) {
             this.assemblyArtifactName = Input.ofNullable(assemblyArtifactName);
             return this;
         }
 
-        public Builder setIntegrationAccountName(Input<String> integrationAccountName) {
+        public Builder integrationAccountName(Input<String> integrationAccountName) {
             this.integrationAccountName = Objects.requireNonNull(integrationAccountName);
             return this;
         }
 
-        public Builder setIntegrationAccountName(String integrationAccountName) {
+        public Builder integrationAccountName(String integrationAccountName) {
             this.integrationAccountName = Input.of(Objects.requireNonNull(integrationAccountName));
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setProperties(Input<AssemblyPropertiesArgs> properties) {
+        public Builder properties(Input<AssemblyPropertiesArgs> properties) {
             this.properties = Objects.requireNonNull(properties);
             return this;
         }
 
-        public Builder setProperties(AssemblyPropertiesArgs properties) {
+        public Builder properties(AssemblyPropertiesArgs properties) {
             this.properties = Input.of(Objects.requireNonNull(properties));
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

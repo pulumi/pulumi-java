@@ -91,17 +91,17 @@ public final class ImageRepositoryCredentialResponse extends io.pulumi.resources
     	      this.userName = defaults.userName;
         }
 
-        public Builder setImageRepositoryUrl(String imageRepositoryUrl) {
+        public Builder imageRepositoryUrl(String imageRepositoryUrl) {
             this.imageRepositoryUrl = Objects.requireNonNull(imageRepositoryUrl);
             return this;
         }
 
-        public Builder setPassword(@Nullable AsymmetricEncryptedSecretResponse password) {
+        public Builder password(@Nullable AsymmetricEncryptedSecretResponse password) {
             this.password = password;
             return this;
         }
 
-        public Builder setUserName(String userName) {
+        public Builder userName(String userName) {
             this.userName = Objects.requireNonNull(userName);
             return this;
         }

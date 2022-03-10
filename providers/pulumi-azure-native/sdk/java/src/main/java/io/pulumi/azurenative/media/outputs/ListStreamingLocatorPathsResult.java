@@ -68,12 +68,12 @@ public final class ListStreamingLocatorPathsResult {
     	      this.streamingPaths = defaults.streamingPaths;
         }
 
-        public Builder setDownloadPaths(@Nullable List<String> downloadPaths) {
+        public Builder downloadPaths(@Nullable List<String> downloadPaths) {
             this.downloadPaths = downloadPaths;
             return this;
         }
 
-        public Builder setStreamingPaths(@Nullable List<StreamingPathResponse> streamingPaths) {
+        public Builder streamingPaths(@Nullable List<StreamingPathResponse> streamingPaths) {
             this.streamingPaths = streamingPaths;
             return this;
         }

@@ -492,282 +492,282 @@ public final class SysctlConfigArgs extends io.pulumi.resources.ResourceArgs {
     	      this.vmVfsCachePressure = defaults.vmVfsCachePressure;
         }
 
-        public Builder setFsAioMaxNr(@Nullable Input<Integer> fsAioMaxNr) {
+        public Builder fsAioMaxNr(@Nullable Input<Integer> fsAioMaxNr) {
             this.fsAioMaxNr = fsAioMaxNr;
             return this;
         }
 
-        public Builder setFsAioMaxNr(@Nullable Integer fsAioMaxNr) {
+        public Builder fsAioMaxNr(@Nullable Integer fsAioMaxNr) {
             this.fsAioMaxNr = Input.ofNullable(fsAioMaxNr);
             return this;
         }
 
-        public Builder setFsFileMax(@Nullable Input<Integer> fsFileMax) {
+        public Builder fsFileMax(@Nullable Input<Integer> fsFileMax) {
             this.fsFileMax = fsFileMax;
             return this;
         }
 
-        public Builder setFsFileMax(@Nullable Integer fsFileMax) {
+        public Builder fsFileMax(@Nullable Integer fsFileMax) {
             this.fsFileMax = Input.ofNullable(fsFileMax);
             return this;
         }
 
-        public Builder setFsInotifyMaxUserWatches(@Nullable Input<Integer> fsInotifyMaxUserWatches) {
+        public Builder fsInotifyMaxUserWatches(@Nullable Input<Integer> fsInotifyMaxUserWatches) {
             this.fsInotifyMaxUserWatches = fsInotifyMaxUserWatches;
             return this;
         }
 
-        public Builder setFsInotifyMaxUserWatches(@Nullable Integer fsInotifyMaxUserWatches) {
+        public Builder fsInotifyMaxUserWatches(@Nullable Integer fsInotifyMaxUserWatches) {
             this.fsInotifyMaxUserWatches = Input.ofNullable(fsInotifyMaxUserWatches);
             return this;
         }
 
-        public Builder setFsNrOpen(@Nullable Input<Integer> fsNrOpen) {
+        public Builder fsNrOpen(@Nullable Input<Integer> fsNrOpen) {
             this.fsNrOpen = fsNrOpen;
             return this;
         }
 
-        public Builder setFsNrOpen(@Nullable Integer fsNrOpen) {
+        public Builder fsNrOpen(@Nullable Integer fsNrOpen) {
             this.fsNrOpen = Input.ofNullable(fsNrOpen);
             return this;
         }
 
-        public Builder setKernelThreadsMax(@Nullable Input<Integer> kernelThreadsMax) {
+        public Builder kernelThreadsMax(@Nullable Input<Integer> kernelThreadsMax) {
             this.kernelThreadsMax = kernelThreadsMax;
             return this;
         }
 
-        public Builder setKernelThreadsMax(@Nullable Integer kernelThreadsMax) {
+        public Builder kernelThreadsMax(@Nullable Integer kernelThreadsMax) {
             this.kernelThreadsMax = Input.ofNullable(kernelThreadsMax);
             return this;
         }
 
-        public Builder setNetCoreNetdevMaxBacklog(@Nullable Input<Integer> netCoreNetdevMaxBacklog) {
+        public Builder netCoreNetdevMaxBacklog(@Nullable Input<Integer> netCoreNetdevMaxBacklog) {
             this.netCoreNetdevMaxBacklog = netCoreNetdevMaxBacklog;
             return this;
         }
 
-        public Builder setNetCoreNetdevMaxBacklog(@Nullable Integer netCoreNetdevMaxBacklog) {
+        public Builder netCoreNetdevMaxBacklog(@Nullable Integer netCoreNetdevMaxBacklog) {
             this.netCoreNetdevMaxBacklog = Input.ofNullable(netCoreNetdevMaxBacklog);
             return this;
         }
 
-        public Builder setNetCoreOptmemMax(@Nullable Input<Integer> netCoreOptmemMax) {
+        public Builder netCoreOptmemMax(@Nullable Input<Integer> netCoreOptmemMax) {
             this.netCoreOptmemMax = netCoreOptmemMax;
             return this;
         }
 
-        public Builder setNetCoreOptmemMax(@Nullable Integer netCoreOptmemMax) {
+        public Builder netCoreOptmemMax(@Nullable Integer netCoreOptmemMax) {
             this.netCoreOptmemMax = Input.ofNullable(netCoreOptmemMax);
             return this;
         }
 
-        public Builder setNetCoreRmemDefault(@Nullable Input<Integer> netCoreRmemDefault) {
+        public Builder netCoreRmemDefault(@Nullable Input<Integer> netCoreRmemDefault) {
             this.netCoreRmemDefault = netCoreRmemDefault;
             return this;
         }
 
-        public Builder setNetCoreRmemDefault(@Nullable Integer netCoreRmemDefault) {
+        public Builder netCoreRmemDefault(@Nullable Integer netCoreRmemDefault) {
             this.netCoreRmemDefault = Input.ofNullable(netCoreRmemDefault);
             return this;
         }
 
-        public Builder setNetCoreRmemMax(@Nullable Input<Integer> netCoreRmemMax) {
+        public Builder netCoreRmemMax(@Nullable Input<Integer> netCoreRmemMax) {
             this.netCoreRmemMax = netCoreRmemMax;
             return this;
         }
 
-        public Builder setNetCoreRmemMax(@Nullable Integer netCoreRmemMax) {
+        public Builder netCoreRmemMax(@Nullable Integer netCoreRmemMax) {
             this.netCoreRmemMax = Input.ofNullable(netCoreRmemMax);
             return this;
         }
 
-        public Builder setNetCoreSomaxconn(@Nullable Input<Integer> netCoreSomaxconn) {
+        public Builder netCoreSomaxconn(@Nullable Input<Integer> netCoreSomaxconn) {
             this.netCoreSomaxconn = netCoreSomaxconn;
             return this;
         }
 
-        public Builder setNetCoreSomaxconn(@Nullable Integer netCoreSomaxconn) {
+        public Builder netCoreSomaxconn(@Nullable Integer netCoreSomaxconn) {
             this.netCoreSomaxconn = Input.ofNullable(netCoreSomaxconn);
             return this;
         }
 
-        public Builder setNetCoreWmemDefault(@Nullable Input<Integer> netCoreWmemDefault) {
+        public Builder netCoreWmemDefault(@Nullable Input<Integer> netCoreWmemDefault) {
             this.netCoreWmemDefault = netCoreWmemDefault;
             return this;
         }
 
-        public Builder setNetCoreWmemDefault(@Nullable Integer netCoreWmemDefault) {
+        public Builder netCoreWmemDefault(@Nullable Integer netCoreWmemDefault) {
             this.netCoreWmemDefault = Input.ofNullable(netCoreWmemDefault);
             return this;
         }
 
-        public Builder setNetCoreWmemMax(@Nullable Input<Integer> netCoreWmemMax) {
+        public Builder netCoreWmemMax(@Nullable Input<Integer> netCoreWmemMax) {
             this.netCoreWmemMax = netCoreWmemMax;
             return this;
         }
 
-        public Builder setNetCoreWmemMax(@Nullable Integer netCoreWmemMax) {
+        public Builder netCoreWmemMax(@Nullable Integer netCoreWmemMax) {
             this.netCoreWmemMax = Input.ofNullable(netCoreWmemMax);
             return this;
         }
 
-        public Builder setNetIpv4IpLocalPortRange(@Nullable Input<String> netIpv4IpLocalPortRange) {
+        public Builder netIpv4IpLocalPortRange(@Nullable Input<String> netIpv4IpLocalPortRange) {
             this.netIpv4IpLocalPortRange = netIpv4IpLocalPortRange;
             return this;
         }
 
-        public Builder setNetIpv4IpLocalPortRange(@Nullable String netIpv4IpLocalPortRange) {
+        public Builder netIpv4IpLocalPortRange(@Nullable String netIpv4IpLocalPortRange) {
             this.netIpv4IpLocalPortRange = Input.ofNullable(netIpv4IpLocalPortRange);
             return this;
         }
 
-        public Builder setNetIpv4NeighDefaultGcThresh1(@Nullable Input<Integer> netIpv4NeighDefaultGcThresh1) {
+        public Builder netIpv4NeighDefaultGcThresh1(@Nullable Input<Integer> netIpv4NeighDefaultGcThresh1) {
             this.netIpv4NeighDefaultGcThresh1 = netIpv4NeighDefaultGcThresh1;
             return this;
         }
 
-        public Builder setNetIpv4NeighDefaultGcThresh1(@Nullable Integer netIpv4NeighDefaultGcThresh1) {
+        public Builder netIpv4NeighDefaultGcThresh1(@Nullable Integer netIpv4NeighDefaultGcThresh1) {
             this.netIpv4NeighDefaultGcThresh1 = Input.ofNullable(netIpv4NeighDefaultGcThresh1);
             return this;
         }
 
-        public Builder setNetIpv4NeighDefaultGcThresh2(@Nullable Input<Integer> netIpv4NeighDefaultGcThresh2) {
+        public Builder netIpv4NeighDefaultGcThresh2(@Nullable Input<Integer> netIpv4NeighDefaultGcThresh2) {
             this.netIpv4NeighDefaultGcThresh2 = netIpv4NeighDefaultGcThresh2;
             return this;
         }
 
-        public Builder setNetIpv4NeighDefaultGcThresh2(@Nullable Integer netIpv4NeighDefaultGcThresh2) {
+        public Builder netIpv4NeighDefaultGcThresh2(@Nullable Integer netIpv4NeighDefaultGcThresh2) {
             this.netIpv4NeighDefaultGcThresh2 = Input.ofNullable(netIpv4NeighDefaultGcThresh2);
             return this;
         }
 
-        public Builder setNetIpv4NeighDefaultGcThresh3(@Nullable Input<Integer> netIpv4NeighDefaultGcThresh3) {
+        public Builder netIpv4NeighDefaultGcThresh3(@Nullable Input<Integer> netIpv4NeighDefaultGcThresh3) {
             this.netIpv4NeighDefaultGcThresh3 = netIpv4NeighDefaultGcThresh3;
             return this;
         }
 
-        public Builder setNetIpv4NeighDefaultGcThresh3(@Nullable Integer netIpv4NeighDefaultGcThresh3) {
+        public Builder netIpv4NeighDefaultGcThresh3(@Nullable Integer netIpv4NeighDefaultGcThresh3) {
             this.netIpv4NeighDefaultGcThresh3 = Input.ofNullable(netIpv4NeighDefaultGcThresh3);
             return this;
         }
 
-        public Builder setNetIpv4TcpFinTimeout(@Nullable Input<Integer> netIpv4TcpFinTimeout) {
+        public Builder netIpv4TcpFinTimeout(@Nullable Input<Integer> netIpv4TcpFinTimeout) {
             this.netIpv4TcpFinTimeout = netIpv4TcpFinTimeout;
             return this;
         }
 
-        public Builder setNetIpv4TcpFinTimeout(@Nullable Integer netIpv4TcpFinTimeout) {
+        public Builder netIpv4TcpFinTimeout(@Nullable Integer netIpv4TcpFinTimeout) {
             this.netIpv4TcpFinTimeout = Input.ofNullable(netIpv4TcpFinTimeout);
             return this;
         }
 
-        public Builder setNetIpv4TcpKeepaliveProbes(@Nullable Input<Integer> netIpv4TcpKeepaliveProbes) {
+        public Builder netIpv4TcpKeepaliveProbes(@Nullable Input<Integer> netIpv4TcpKeepaliveProbes) {
             this.netIpv4TcpKeepaliveProbes = netIpv4TcpKeepaliveProbes;
             return this;
         }
 
-        public Builder setNetIpv4TcpKeepaliveProbes(@Nullable Integer netIpv4TcpKeepaliveProbes) {
+        public Builder netIpv4TcpKeepaliveProbes(@Nullable Integer netIpv4TcpKeepaliveProbes) {
             this.netIpv4TcpKeepaliveProbes = Input.ofNullable(netIpv4TcpKeepaliveProbes);
             return this;
         }
 
-        public Builder setNetIpv4TcpKeepaliveTime(@Nullable Input<Integer> netIpv4TcpKeepaliveTime) {
+        public Builder netIpv4TcpKeepaliveTime(@Nullable Input<Integer> netIpv4TcpKeepaliveTime) {
             this.netIpv4TcpKeepaliveTime = netIpv4TcpKeepaliveTime;
             return this;
         }
 
-        public Builder setNetIpv4TcpKeepaliveTime(@Nullable Integer netIpv4TcpKeepaliveTime) {
+        public Builder netIpv4TcpKeepaliveTime(@Nullable Integer netIpv4TcpKeepaliveTime) {
             this.netIpv4TcpKeepaliveTime = Input.ofNullable(netIpv4TcpKeepaliveTime);
             return this;
         }
 
-        public Builder setNetIpv4TcpMaxSynBacklog(@Nullable Input<Integer> netIpv4TcpMaxSynBacklog) {
+        public Builder netIpv4TcpMaxSynBacklog(@Nullable Input<Integer> netIpv4TcpMaxSynBacklog) {
             this.netIpv4TcpMaxSynBacklog = netIpv4TcpMaxSynBacklog;
             return this;
         }
 
-        public Builder setNetIpv4TcpMaxSynBacklog(@Nullable Integer netIpv4TcpMaxSynBacklog) {
+        public Builder netIpv4TcpMaxSynBacklog(@Nullable Integer netIpv4TcpMaxSynBacklog) {
             this.netIpv4TcpMaxSynBacklog = Input.ofNullable(netIpv4TcpMaxSynBacklog);
             return this;
         }
 
-        public Builder setNetIpv4TcpMaxTwBuckets(@Nullable Input<Integer> netIpv4TcpMaxTwBuckets) {
+        public Builder netIpv4TcpMaxTwBuckets(@Nullable Input<Integer> netIpv4TcpMaxTwBuckets) {
             this.netIpv4TcpMaxTwBuckets = netIpv4TcpMaxTwBuckets;
             return this;
         }
 
-        public Builder setNetIpv4TcpMaxTwBuckets(@Nullable Integer netIpv4TcpMaxTwBuckets) {
+        public Builder netIpv4TcpMaxTwBuckets(@Nullable Integer netIpv4TcpMaxTwBuckets) {
             this.netIpv4TcpMaxTwBuckets = Input.ofNullable(netIpv4TcpMaxTwBuckets);
             return this;
         }
 
-        public Builder setNetIpv4TcpTwReuse(@Nullable Input<Boolean> netIpv4TcpTwReuse) {
+        public Builder netIpv4TcpTwReuse(@Nullable Input<Boolean> netIpv4TcpTwReuse) {
             this.netIpv4TcpTwReuse = netIpv4TcpTwReuse;
             return this;
         }
 
-        public Builder setNetIpv4TcpTwReuse(@Nullable Boolean netIpv4TcpTwReuse) {
+        public Builder netIpv4TcpTwReuse(@Nullable Boolean netIpv4TcpTwReuse) {
             this.netIpv4TcpTwReuse = Input.ofNullable(netIpv4TcpTwReuse);
             return this;
         }
 
-        public Builder setNetIpv4TcpkeepaliveIntvl(@Nullable Input<Integer> netIpv4TcpkeepaliveIntvl) {
+        public Builder netIpv4TcpkeepaliveIntvl(@Nullable Input<Integer> netIpv4TcpkeepaliveIntvl) {
             this.netIpv4TcpkeepaliveIntvl = netIpv4TcpkeepaliveIntvl;
             return this;
         }
 
-        public Builder setNetIpv4TcpkeepaliveIntvl(@Nullable Integer netIpv4TcpkeepaliveIntvl) {
+        public Builder netIpv4TcpkeepaliveIntvl(@Nullable Integer netIpv4TcpkeepaliveIntvl) {
             this.netIpv4TcpkeepaliveIntvl = Input.ofNullable(netIpv4TcpkeepaliveIntvl);
             return this;
         }
 
-        public Builder setNetNetfilterNfConntrackBuckets(@Nullable Input<Integer> netNetfilterNfConntrackBuckets) {
+        public Builder netNetfilterNfConntrackBuckets(@Nullable Input<Integer> netNetfilterNfConntrackBuckets) {
             this.netNetfilterNfConntrackBuckets = netNetfilterNfConntrackBuckets;
             return this;
         }
 
-        public Builder setNetNetfilterNfConntrackBuckets(@Nullable Integer netNetfilterNfConntrackBuckets) {
+        public Builder netNetfilterNfConntrackBuckets(@Nullable Integer netNetfilterNfConntrackBuckets) {
             this.netNetfilterNfConntrackBuckets = Input.ofNullable(netNetfilterNfConntrackBuckets);
             return this;
         }
 
-        public Builder setNetNetfilterNfConntrackMax(@Nullable Input<Integer> netNetfilterNfConntrackMax) {
+        public Builder netNetfilterNfConntrackMax(@Nullable Input<Integer> netNetfilterNfConntrackMax) {
             this.netNetfilterNfConntrackMax = netNetfilterNfConntrackMax;
             return this;
         }
 
-        public Builder setNetNetfilterNfConntrackMax(@Nullable Integer netNetfilterNfConntrackMax) {
+        public Builder netNetfilterNfConntrackMax(@Nullable Integer netNetfilterNfConntrackMax) {
             this.netNetfilterNfConntrackMax = Input.ofNullable(netNetfilterNfConntrackMax);
             return this;
         }
 
-        public Builder setVmMaxMapCount(@Nullable Input<Integer> vmMaxMapCount) {
+        public Builder vmMaxMapCount(@Nullable Input<Integer> vmMaxMapCount) {
             this.vmMaxMapCount = vmMaxMapCount;
             return this;
         }
 
-        public Builder setVmMaxMapCount(@Nullable Integer vmMaxMapCount) {
+        public Builder vmMaxMapCount(@Nullable Integer vmMaxMapCount) {
             this.vmMaxMapCount = Input.ofNullable(vmMaxMapCount);
             return this;
         }
 
-        public Builder setVmSwappiness(@Nullable Input<Integer> vmSwappiness) {
+        public Builder vmSwappiness(@Nullable Input<Integer> vmSwappiness) {
             this.vmSwappiness = vmSwappiness;
             return this;
         }
 
-        public Builder setVmSwappiness(@Nullable Integer vmSwappiness) {
+        public Builder vmSwappiness(@Nullable Integer vmSwappiness) {
             this.vmSwappiness = Input.ofNullable(vmSwappiness);
             return this;
         }
 
-        public Builder setVmVfsCachePressure(@Nullable Input<Integer> vmVfsCachePressure) {
+        public Builder vmVfsCachePressure(@Nullable Input<Integer> vmVfsCachePressure) {
             this.vmVfsCachePressure = vmVfsCachePressure;
             return this;
         }
 
-        public Builder setVmVfsCachePressure(@Nullable Integer vmVfsCachePressure) {
+        public Builder vmVfsCachePressure(@Nullable Integer vmVfsCachePressure) {
             this.vmVfsCachePressure = Input.ofNullable(vmVfsCachePressure);
             return this;
         }

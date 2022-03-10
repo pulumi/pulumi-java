@@ -120,27 +120,27 @@ public final class AlertingActionResponse {
     	      this.trigger = defaults.trigger;
         }
 
-        public Builder setAznsAction(@Nullable AzNsActionGroupResponse aznsAction) {
+        public Builder aznsAction(@Nullable AzNsActionGroupResponse aznsAction) {
             this.aznsAction = aznsAction;
             return this;
         }
 
-        public Builder setOdataType(String odataType) {
+        public Builder odataType(String odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
 
-        public Builder setSeverity(String severity) {
+        public Builder severity(String severity) {
             this.severity = Objects.requireNonNull(severity);
             return this;
         }
 
-        public Builder setThrottlingInMin(@Nullable Integer throttlingInMin) {
+        public Builder throttlingInMin(@Nullable Integer throttlingInMin) {
             this.throttlingInMin = throttlingInMin;
             return this;
         }
 
-        public Builder setTrigger(TriggerConditionResponse trigger) {
+        public Builder trigger(TriggerConditionResponse trigger) {
             this.trigger = Objects.requireNonNull(trigger);
             return this;
         }

@@ -172,82 +172,82 @@ public final class AzureInternalMonitoringPipelineSinkDescriptionArgs extends io
     	      this.namespace = defaults.namespace;
         }
 
-        public Builder setAccountName(@Nullable Input<String> accountName) {
+        public Builder accountName(@Nullable Input<String> accountName) {
             this.accountName = accountName;
             return this;
         }
 
-        public Builder setAccountName(@Nullable String accountName) {
+        public Builder accountName(@Nullable String accountName) {
             this.accountName = Input.ofNullable(accountName);
             return this;
         }
 
-        public Builder setAutoKeyConfigUrl(@Nullable Input<String> autoKeyConfigUrl) {
+        public Builder autoKeyConfigUrl(@Nullable Input<String> autoKeyConfigUrl) {
             this.autoKeyConfigUrl = autoKeyConfigUrl;
             return this;
         }
 
-        public Builder setAutoKeyConfigUrl(@Nullable String autoKeyConfigUrl) {
+        public Builder autoKeyConfigUrl(@Nullable String autoKeyConfigUrl) {
             this.autoKeyConfigUrl = Input.ofNullable(autoKeyConfigUrl);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setFluentdConfigUrl(@Nullable Input<Object> fluentdConfigUrl) {
+        public Builder fluentdConfigUrl(@Nullable Input<Object> fluentdConfigUrl) {
             this.fluentdConfigUrl = fluentdConfigUrl;
             return this;
         }
 
-        public Builder setFluentdConfigUrl(@Nullable Object fluentdConfigUrl) {
+        public Builder fluentdConfigUrl(@Nullable Object fluentdConfigUrl) {
             this.fluentdConfigUrl = Input.ofNullable(fluentdConfigUrl);
             return this;
         }
 
-        public Builder setKind(Input<String> kind) {
+        public Builder kind(Input<String> kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Input.of(Objects.requireNonNull(kind));
             return this;
         }
 
-        public Builder setMaConfigUrl(@Nullable Input<String> maConfigUrl) {
+        public Builder maConfigUrl(@Nullable Input<String> maConfigUrl) {
             this.maConfigUrl = maConfigUrl;
             return this;
         }
 
-        public Builder setMaConfigUrl(@Nullable String maConfigUrl) {
+        public Builder maConfigUrl(@Nullable String maConfigUrl) {
             this.maConfigUrl = Input.ofNullable(maConfigUrl);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setNamespace(@Nullable Input<String> namespace) {
+        public Builder namespace(@Nullable Input<String> namespace) {
             this.namespace = namespace;
             return this;
         }
 
-        public Builder setNamespace(@Nullable String namespace) {
+        public Builder namespace(@Nullable String namespace) {
             this.namespace = Input.ofNullable(namespace);
             return this;
         }

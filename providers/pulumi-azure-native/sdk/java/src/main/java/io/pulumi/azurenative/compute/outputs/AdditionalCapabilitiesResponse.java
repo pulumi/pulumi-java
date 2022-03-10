@@ -50,7 +50,7 @@ public final class AdditionalCapabilitiesResponse {
     	      this.ultraSSDEnabled = defaults.ultraSSDEnabled;
         }
 
-        public Builder setUltraSSDEnabled(@Nullable Boolean ultraSSDEnabled) {
+        public Builder ultraSSDEnabled(@Nullable Boolean ultraSSDEnabled) {
             this.ultraSSDEnabled = ultraSSDEnabled;
             return this;
         }

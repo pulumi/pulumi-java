@@ -230,62 +230,62 @@ public final class GetVolumeContainerResult {
     	      this.volumeCount = defaults.volumeCount;
         }
 
-        public Builder setBandWidthRateInMbps(@Nullable Integer bandWidthRateInMbps) {
+        public Builder bandWidthRateInMbps(@Nullable Integer bandWidthRateInMbps) {
             this.bandWidthRateInMbps = bandWidthRateInMbps;
             return this;
         }
 
-        public Builder setBandwidthSettingId(@Nullable String bandwidthSettingId) {
+        public Builder bandwidthSettingId(@Nullable String bandwidthSettingId) {
             this.bandwidthSettingId = bandwidthSettingId;
             return this;
         }
 
-        public Builder setEncryptionKey(@Nullable AsymmetricEncryptedSecretResponse encryptionKey) {
+        public Builder encryptionKey(@Nullable AsymmetricEncryptedSecretResponse encryptionKey) {
             this.encryptionKey = encryptionKey;
             return this;
         }
 
-        public Builder setEncryptionStatus(String encryptionStatus) {
+        public Builder encryptionStatus(String encryptionStatus) {
             this.encryptionStatus = Objects.requireNonNull(encryptionStatus);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setKind(@Nullable String kind) {
+        public Builder kind(@Nullable String kind) {
             this.kind = kind;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setOwnerShipStatus(String ownerShipStatus) {
+        public Builder ownerShipStatus(String ownerShipStatus) {
             this.ownerShipStatus = Objects.requireNonNull(ownerShipStatus);
             return this;
         }
 
-        public Builder setStorageAccountCredentialId(String storageAccountCredentialId) {
+        public Builder storageAccountCredentialId(String storageAccountCredentialId) {
             this.storageAccountCredentialId = Objects.requireNonNull(storageAccountCredentialId);
             return this;
         }
 
-        public Builder setTotalCloudStorageUsageInBytes(Double totalCloudStorageUsageInBytes) {
+        public Builder totalCloudStorageUsageInBytes(Double totalCloudStorageUsageInBytes) {
             this.totalCloudStorageUsageInBytes = Objects.requireNonNull(totalCloudStorageUsageInBytes);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setVolumeCount(Integer volumeCount) {
+        public Builder volumeCount(Integer volumeCount) {
             this.volumeCount = Objects.requireNonNull(volumeCount);
             return this;
         }

@@ -154,72 +154,72 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setAccountName(@Nullable Input<String> accountName) {
+        public Builder accountName(@Nullable Input<String> accountName) {
             this.accountName = accountName;
             return this;
         }
 
-        public Builder setAccountName(@Nullable String accountName) {
+        public Builder accountName(@Nullable String accountName) {
             this.accountName = Input.ofNullable(accountName);
             return this;
         }
 
-        public Builder setIdentity(@Nullable Input<IdentityArgs> identity) {
+        public Builder identity(@Nullable Input<IdentityArgs> identity) {
             this.identity = identity;
             return this;
         }
 
-        public Builder setIdentity(@Nullable IdentityArgs identity) {
+        public Builder identity(@Nullable IdentityArgs identity) {
             this.identity = Input.ofNullable(identity);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setManagedResourceGroupName(@Nullable Input<String> managedResourceGroupName) {
+        public Builder managedResourceGroupName(@Nullable Input<String> managedResourceGroupName) {
             this.managedResourceGroupName = managedResourceGroupName;
             return this;
         }
 
-        public Builder setManagedResourceGroupName(@Nullable String managedResourceGroupName) {
+        public Builder managedResourceGroupName(@Nullable String managedResourceGroupName) {
             this.managedResourceGroupName = Input.ofNullable(managedResourceGroupName);
             return this;
         }
 
-        public Builder setPublicNetworkAccess(@Nullable Input<Either<String,PublicNetworkAccess>> publicNetworkAccess) {
+        public Builder publicNetworkAccess(@Nullable Input<Either<String,PublicNetworkAccess>> publicNetworkAccess) {
             this.publicNetworkAccess = publicNetworkAccess;
             return this;
         }
 
-        public Builder setPublicNetworkAccess(@Nullable Either<String,PublicNetworkAccess> publicNetworkAccess) {
+        public Builder publicNetworkAccess(@Nullable Either<String,PublicNetworkAccess> publicNetworkAccess) {
             this.publicNetworkAccess = Input.ofNullable(publicNetworkAccess);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

@@ -72,12 +72,12 @@ public final class IscsiLunResponse extends io.pulumi.resources.InvokeArgs {
     	      this.name = defaults.name;
         }
 
-        public Builder setManagedDiskAzureResourceId(String managedDiskAzureResourceId) {
+        public Builder managedDiskAzureResourceId(String managedDiskAzureResourceId) {
             this.managedDiskAzureResourceId = Objects.requireNonNull(managedDiskAzureResourceId);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }

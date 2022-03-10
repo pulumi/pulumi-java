@@ -83,17 +83,17 @@ public final class GetInsightsErrorResponse {
     	      this.queryId = defaults.queryId;
         }
 
-        public Builder setErrorMessage(String errorMessage) {
+        public Builder errorMessage(String errorMessage) {
             this.errorMessage = Objects.requireNonNull(errorMessage);
             return this;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setQueryId(@Nullable String queryId) {
+        public Builder queryId(@Nullable String queryId) {
             this.queryId = queryId;
             return this;
         }

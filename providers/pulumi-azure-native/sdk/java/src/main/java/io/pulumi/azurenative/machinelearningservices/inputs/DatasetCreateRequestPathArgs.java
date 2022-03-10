@@ -67,22 +67,22 @@ public final class DatasetCreateRequestPathArgs extends io.pulumi.resources.Reso
     	      this.httpUrl = defaults.httpUrl;
         }
 
-        public Builder setDataPath(@Nullable Input<DatasetCreateRequestDataPathArgs> dataPath) {
+        public Builder dataPath(@Nullable Input<DatasetCreateRequestDataPathArgs> dataPath) {
             this.dataPath = dataPath;
             return this;
         }
 
-        public Builder setDataPath(@Nullable DatasetCreateRequestDataPathArgs dataPath) {
+        public Builder dataPath(@Nullable DatasetCreateRequestDataPathArgs dataPath) {
             this.dataPath = Input.ofNullable(dataPath);
             return this;
         }
 
-        public Builder setHttpUrl(@Nullable Input<String> httpUrl) {
+        public Builder httpUrl(@Nullable Input<String> httpUrl) {
             this.httpUrl = httpUrl;
             return this;
         }
 
-        public Builder setHttpUrl(@Nullable String httpUrl) {
+        public Builder httpUrl(@Nullable String httpUrl) {
             this.httpUrl = Input.ofNullable(httpUrl);
             return this;
         }

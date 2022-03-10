@@ -86,17 +86,17 @@ public final class PreferencesResponse {
     	      this.transportPreferences = defaults.transportPreferences;
         }
 
-        public Builder setEncryptionPreferences(@Nullable EncryptionPreferencesResponse encryptionPreferences) {
+        public Builder encryptionPreferences(@Nullable EncryptionPreferencesResponse encryptionPreferences) {
             this.encryptionPreferences = encryptionPreferences;
             return this;
         }
 
-        public Builder setPreferredDataCenterRegion(@Nullable List<String> preferredDataCenterRegion) {
+        public Builder preferredDataCenterRegion(@Nullable List<String> preferredDataCenterRegion) {
             this.preferredDataCenterRegion = preferredDataCenterRegion;
             return this;
         }
 
-        public Builder setTransportPreferences(@Nullable TransportPreferencesResponse transportPreferences) {
+        public Builder transportPreferences(@Nullable TransportPreferencesResponse transportPreferences) {
             this.transportPreferences = transportPreferences;
             return this;
         }

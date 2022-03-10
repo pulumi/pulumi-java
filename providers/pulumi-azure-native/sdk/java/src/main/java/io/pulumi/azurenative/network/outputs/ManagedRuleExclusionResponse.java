@@ -81,17 +81,17 @@ public final class ManagedRuleExclusionResponse {
     	      this.selectorMatchOperator = defaults.selectorMatchOperator;
         }
 
-        public Builder setMatchVariable(String matchVariable) {
+        public Builder matchVariable(String matchVariable) {
             this.matchVariable = Objects.requireNonNull(matchVariable);
             return this;
         }
 
-        public Builder setSelector(String selector) {
+        public Builder selector(String selector) {
             this.selector = Objects.requireNonNull(selector);
             return this;
         }
 
-        public Builder setSelectorMatchOperator(String selectorMatchOperator) {
+        public Builder selectorMatchOperator(String selectorMatchOperator) {
             this.selectorMatchOperator = Objects.requireNonNull(selectorMatchOperator);
             return this;
         }

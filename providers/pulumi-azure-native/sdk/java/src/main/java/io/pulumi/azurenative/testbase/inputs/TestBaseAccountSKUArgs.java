@@ -109,42 +109,42 @@ public final class TestBaseAccountSKUArgs extends io.pulumi.resources.ResourceAr
     	      this.tier = defaults.tier;
         }
 
-        public Builder setLocations(@Nullable Input<List<String>> locations) {
+        public Builder locations(@Nullable Input<List<String>> locations) {
             this.locations = locations;
             return this;
         }
 
-        public Builder setLocations(@Nullable List<String> locations) {
+        public Builder locations(@Nullable List<String> locations) {
             this.locations = Input.ofNullable(locations);
             return this;
         }
 
-        public Builder setName(Input<String> name) {
+        public Builder name(Input<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder setResourceType(@Nullable Input<String> resourceType) {
+        public Builder resourceType(@Nullable Input<String> resourceType) {
             this.resourceType = resourceType;
             return this;
         }
 
-        public Builder setResourceType(@Nullable String resourceType) {
+        public Builder resourceType(@Nullable String resourceType) {
             this.resourceType = Input.ofNullable(resourceType);
             return this;
         }
 
-        public Builder setTier(Input<Either<String,Tier>> tier) {
+        public Builder tier(Input<Either<String,Tier>> tier) {
             this.tier = Objects.requireNonNull(tier);
             return this;
         }
 
-        public Builder setTier(Either<String,Tier> tier) {
+        public Builder tier(Either<String,Tier> tier) {
             this.tier = Input.of(Objects.requireNonNull(tier));
             return this;
         }

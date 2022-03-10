@@ -53,12 +53,12 @@ public final class ProviderHubMetadataResponseThirdPartyProviderAuthorization {
     	      this.managedByTenantId = defaults.managedByTenantId;
         }
 
-        public Builder setAuthorizations(@Nullable List<LightHouseAuthorizationResponse> authorizations) {
+        public Builder authorizations(@Nullable List<LightHouseAuthorizationResponse> authorizations) {
             this.authorizations = authorizations;
             return this;
         }
 
-        public Builder setManagedByTenantId(@Nullable String managedByTenantId) {
+        public Builder managedByTenantId(@Nullable String managedByTenantId) {
             this.managedByTenantId = managedByTenantId;
             return this;
         }

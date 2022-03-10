@@ -57,7 +57,7 @@ public final class DataConnectorDataTypeCommonResponse extends io.pulumi.resourc
     	      this.state = defaults.state;
         }
 
-        public Builder setState(@Nullable String state) {
+        public Builder state(@Nullable String state) {
             this.state = state;
             return this;
         }

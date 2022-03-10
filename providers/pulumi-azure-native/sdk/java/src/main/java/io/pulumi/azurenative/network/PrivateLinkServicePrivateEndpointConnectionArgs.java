@@ -135,62 +135,62 @@ public final class PrivateLinkServicePrivateEndpointConnectionArgs extends io.pu
     	      this.serviceName = defaults.serviceName;
         }
 
-        public Builder setId(@Nullable Input<String> id) {
+        public Builder id(@Nullable Input<String> id) {
             this.id = id;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = Input.ofNullable(id);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setPeConnectionName(@Nullable Input<String> peConnectionName) {
+        public Builder peConnectionName(@Nullable Input<String> peConnectionName) {
             this.peConnectionName = peConnectionName;
             return this;
         }
 
-        public Builder setPeConnectionName(@Nullable String peConnectionName) {
+        public Builder peConnectionName(@Nullable String peConnectionName) {
             this.peConnectionName = Input.ofNullable(peConnectionName);
             return this;
         }
 
-        public Builder setPrivateLinkServiceConnectionState(@Nullable Input<PrivateLinkServiceConnectionStateArgs> privateLinkServiceConnectionState) {
+        public Builder privateLinkServiceConnectionState(@Nullable Input<PrivateLinkServiceConnectionStateArgs> privateLinkServiceConnectionState) {
             this.privateLinkServiceConnectionState = privateLinkServiceConnectionState;
             return this;
         }
 
-        public Builder setPrivateLinkServiceConnectionState(@Nullable PrivateLinkServiceConnectionStateArgs privateLinkServiceConnectionState) {
+        public Builder privateLinkServiceConnectionState(@Nullable PrivateLinkServiceConnectionStateArgs privateLinkServiceConnectionState) {
             this.privateLinkServiceConnectionState = Input.ofNullable(privateLinkServiceConnectionState);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setServiceName(Input<String> serviceName) {
+        public Builder serviceName(Input<String> serviceName) {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
         }
 
-        public Builder setServiceName(String serviceName) {
+        public Builder serviceName(String serviceName) {
             this.serviceName = Input.of(Objects.requireNonNull(serviceName));
             return this;
         }

@@ -170,42 +170,42 @@ public final class ListWebAppSitePushSettingsSlotResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setDynamicTagsJson(@Nullable String dynamicTagsJson) {
+        public Builder dynamicTagsJson(@Nullable String dynamicTagsJson) {
             this.dynamicTagsJson = dynamicTagsJson;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setIsPushEnabled(Boolean isPushEnabled) {
+        public Builder isPushEnabled(Boolean isPushEnabled) {
             this.isPushEnabled = Objects.requireNonNull(isPushEnabled);
             return this;
         }
 
-        public Builder setKind(@Nullable String kind) {
+        public Builder kind(@Nullable String kind) {
             this.kind = kind;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setTagWhitelistJson(@Nullable String tagWhitelistJson) {
+        public Builder tagWhitelistJson(@Nullable String tagWhitelistJson) {
             this.tagWhitelistJson = tagWhitelistJson;
             return this;
         }
 
-        public Builder setTagsRequiringAuth(@Nullable String tagsRequiringAuth) {
+        public Builder tagsRequiringAuth(@Nullable String tagsRequiringAuth) {
             this.tagsRequiringAuth = tagsRequiringAuth;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

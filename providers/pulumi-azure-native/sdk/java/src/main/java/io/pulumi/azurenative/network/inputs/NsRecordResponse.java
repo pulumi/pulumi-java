@@ -57,7 +57,7 @@ public final class NsRecordResponse extends io.pulumi.resources.InvokeArgs {
     	      this.nsdname = defaults.nsdname;
         }
 
-        public Builder setNsdname(@Nullable String nsdname) {
+        public Builder nsdname(@Nullable String nsdname) {
             this.nsdname = nsdname;
             return this;
         }

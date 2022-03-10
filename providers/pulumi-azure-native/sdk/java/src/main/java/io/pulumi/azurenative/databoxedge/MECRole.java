@@ -168,7 +168,7 @@ public class MECRole extends io.pulumi.resources.CustomResource {
     private static MECRoleArgs makeArgs(MECRoleArgs args) {
         var builder = args == null ? MECRoleArgs.builder() : MECRoleArgs.builder(args);
         return builder
-            .setKind("MEC")
+            .kind("MEC")
             .build();
     }
 

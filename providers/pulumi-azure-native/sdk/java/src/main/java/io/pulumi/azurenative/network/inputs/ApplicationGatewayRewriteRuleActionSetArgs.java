@@ -92,32 +92,32 @@ public final class ApplicationGatewayRewriteRuleActionSetArgs extends io.pulumi.
     	      this.urlConfiguration = defaults.urlConfiguration;
         }
 
-        public Builder setRequestHeaderConfigurations(@Nullable Input<List<ApplicationGatewayHeaderConfigurationArgs>> requestHeaderConfigurations) {
+        public Builder requestHeaderConfigurations(@Nullable Input<List<ApplicationGatewayHeaderConfigurationArgs>> requestHeaderConfigurations) {
             this.requestHeaderConfigurations = requestHeaderConfigurations;
             return this;
         }
 
-        public Builder setRequestHeaderConfigurations(@Nullable List<ApplicationGatewayHeaderConfigurationArgs> requestHeaderConfigurations) {
+        public Builder requestHeaderConfigurations(@Nullable List<ApplicationGatewayHeaderConfigurationArgs> requestHeaderConfigurations) {
             this.requestHeaderConfigurations = Input.ofNullable(requestHeaderConfigurations);
             return this;
         }
 
-        public Builder setResponseHeaderConfigurations(@Nullable Input<List<ApplicationGatewayHeaderConfigurationArgs>> responseHeaderConfigurations) {
+        public Builder responseHeaderConfigurations(@Nullable Input<List<ApplicationGatewayHeaderConfigurationArgs>> responseHeaderConfigurations) {
             this.responseHeaderConfigurations = responseHeaderConfigurations;
             return this;
         }
 
-        public Builder setResponseHeaderConfigurations(@Nullable List<ApplicationGatewayHeaderConfigurationArgs> responseHeaderConfigurations) {
+        public Builder responseHeaderConfigurations(@Nullable List<ApplicationGatewayHeaderConfigurationArgs> responseHeaderConfigurations) {
             this.responseHeaderConfigurations = Input.ofNullable(responseHeaderConfigurations);
             return this;
         }
 
-        public Builder setUrlConfiguration(@Nullable Input<ApplicationGatewayUrlConfigurationArgs> urlConfiguration) {
+        public Builder urlConfiguration(@Nullable Input<ApplicationGatewayUrlConfigurationArgs> urlConfiguration) {
             this.urlConfiguration = urlConfiguration;
             return this;
         }
 
-        public Builder setUrlConfiguration(@Nullable ApplicationGatewayUrlConfigurationArgs urlConfiguration) {
+        public Builder urlConfiguration(@Nullable ApplicationGatewayUrlConfigurationArgs urlConfiguration) {
             this.urlConfiguration = Input.ofNullable(urlConfiguration);
             return this;
         }

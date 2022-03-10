@@ -221,112 +221,112 @@ public final class SapHanaSourceArgs extends io.pulumi.resources.ResourceArgs {
     	      this.type = defaults.type;
         }
 
-        public Builder setAdditionalColumns(@Nullable Input<Object> additionalColumns) {
+        public Builder additionalColumns(@Nullable Input<Object> additionalColumns) {
             this.additionalColumns = additionalColumns;
             return this;
         }
 
-        public Builder setAdditionalColumns(@Nullable Object additionalColumns) {
+        public Builder additionalColumns(@Nullable Object additionalColumns) {
             this.additionalColumns = Input.ofNullable(additionalColumns);
             return this;
         }
 
-        public Builder setDisableMetricsCollection(@Nullable Input<Object> disableMetricsCollection) {
+        public Builder disableMetricsCollection(@Nullable Input<Object> disableMetricsCollection) {
             this.disableMetricsCollection = disableMetricsCollection;
             return this;
         }
 
-        public Builder setDisableMetricsCollection(@Nullable Object disableMetricsCollection) {
+        public Builder disableMetricsCollection(@Nullable Object disableMetricsCollection) {
             this.disableMetricsCollection = Input.ofNullable(disableMetricsCollection);
             return this;
         }
 
-        public Builder setMaxConcurrentConnections(@Nullable Input<Object> maxConcurrentConnections) {
+        public Builder maxConcurrentConnections(@Nullable Input<Object> maxConcurrentConnections) {
             this.maxConcurrentConnections = maxConcurrentConnections;
             return this;
         }
 
-        public Builder setMaxConcurrentConnections(@Nullable Object maxConcurrentConnections) {
+        public Builder maxConcurrentConnections(@Nullable Object maxConcurrentConnections) {
             this.maxConcurrentConnections = Input.ofNullable(maxConcurrentConnections);
             return this;
         }
 
-        public Builder setPacketSize(@Nullable Input<Object> packetSize) {
+        public Builder packetSize(@Nullable Input<Object> packetSize) {
             this.packetSize = packetSize;
             return this;
         }
 
-        public Builder setPacketSize(@Nullable Object packetSize) {
+        public Builder packetSize(@Nullable Object packetSize) {
             this.packetSize = Input.ofNullable(packetSize);
             return this;
         }
 
-        public Builder setPartitionOption(@Nullable Input<Object> partitionOption) {
+        public Builder partitionOption(@Nullable Input<Object> partitionOption) {
             this.partitionOption = partitionOption;
             return this;
         }
 
-        public Builder setPartitionOption(@Nullable Object partitionOption) {
+        public Builder partitionOption(@Nullable Object partitionOption) {
             this.partitionOption = Input.ofNullable(partitionOption);
             return this;
         }
 
-        public Builder setPartitionSettings(@Nullable Input<SapHanaPartitionSettingsArgs> partitionSettings) {
+        public Builder partitionSettings(@Nullable Input<SapHanaPartitionSettingsArgs> partitionSettings) {
             this.partitionSettings = partitionSettings;
             return this;
         }
 
-        public Builder setPartitionSettings(@Nullable SapHanaPartitionSettingsArgs partitionSettings) {
+        public Builder partitionSettings(@Nullable SapHanaPartitionSettingsArgs partitionSettings) {
             this.partitionSettings = Input.ofNullable(partitionSettings);
             return this;
         }
 
-        public Builder setQuery(@Nullable Input<Object> query) {
+        public Builder query(@Nullable Input<Object> query) {
             this.query = query;
             return this;
         }
 
-        public Builder setQuery(@Nullable Object query) {
+        public Builder query(@Nullable Object query) {
             this.query = Input.ofNullable(query);
             return this;
         }
 
-        public Builder setQueryTimeout(@Nullable Input<Object> queryTimeout) {
+        public Builder queryTimeout(@Nullable Input<Object> queryTimeout) {
             this.queryTimeout = queryTimeout;
             return this;
         }
 
-        public Builder setQueryTimeout(@Nullable Object queryTimeout) {
+        public Builder queryTimeout(@Nullable Object queryTimeout) {
             this.queryTimeout = Input.ofNullable(queryTimeout);
             return this;
         }
 
-        public Builder setSourceRetryCount(@Nullable Input<Object> sourceRetryCount) {
+        public Builder sourceRetryCount(@Nullable Input<Object> sourceRetryCount) {
             this.sourceRetryCount = sourceRetryCount;
             return this;
         }
 
-        public Builder setSourceRetryCount(@Nullable Object sourceRetryCount) {
+        public Builder sourceRetryCount(@Nullable Object sourceRetryCount) {
             this.sourceRetryCount = Input.ofNullable(sourceRetryCount);
             return this;
         }
 
-        public Builder setSourceRetryWait(@Nullable Input<Object> sourceRetryWait) {
+        public Builder sourceRetryWait(@Nullable Input<Object> sourceRetryWait) {
             this.sourceRetryWait = sourceRetryWait;
             return this;
         }
 
-        public Builder setSourceRetryWait(@Nullable Object sourceRetryWait) {
+        public Builder sourceRetryWait(@Nullable Object sourceRetryWait) {
             this.sourceRetryWait = Input.ofNullable(sourceRetryWait);
             return this;
         }
 
-        public Builder setType(Input<String> type) {
+        public Builder type(Input<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }

@@ -135,62 +135,62 @@ public final class ReplicationStorageClassificationMappingArgs extends io.pulumi
     	      this.storageClassificationName = defaults.storageClassificationName;
         }
 
-        public Builder setFabricName(Input<String> fabricName) {
+        public Builder fabricName(Input<String> fabricName) {
             this.fabricName = Objects.requireNonNull(fabricName);
             return this;
         }
 
-        public Builder setFabricName(String fabricName) {
+        public Builder fabricName(String fabricName) {
             this.fabricName = Input.of(Objects.requireNonNull(fabricName));
             return this;
         }
 
-        public Builder setProperties(@Nullable Input<StorageMappingInputPropertiesArgs> properties) {
+        public Builder properties(@Nullable Input<StorageMappingInputPropertiesArgs> properties) {
             this.properties = properties;
             return this;
         }
 
-        public Builder setProperties(@Nullable StorageMappingInputPropertiesArgs properties) {
+        public Builder properties(@Nullable StorageMappingInputPropertiesArgs properties) {
             this.properties = Input.ofNullable(properties);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setResourceName(Input<String> resourceName) {
+        public Builder resourceName(Input<String> resourceName) {
             this.resourceName = Objects.requireNonNull(resourceName);
             return this;
         }
 
-        public Builder setResourceName(String resourceName) {
+        public Builder resourceName(String resourceName) {
             this.resourceName = Input.of(Objects.requireNonNull(resourceName));
             return this;
         }
 
-        public Builder setStorageClassificationMappingName(@Nullable Input<String> storageClassificationMappingName) {
+        public Builder storageClassificationMappingName(@Nullable Input<String> storageClassificationMappingName) {
             this.storageClassificationMappingName = storageClassificationMappingName;
             return this;
         }
 
-        public Builder setStorageClassificationMappingName(@Nullable String storageClassificationMappingName) {
+        public Builder storageClassificationMappingName(@Nullable String storageClassificationMappingName) {
             this.storageClassificationMappingName = Input.ofNullable(storageClassificationMappingName);
             return this;
         }
 
-        public Builder setStorageClassificationName(Input<String> storageClassificationName) {
+        public Builder storageClassificationName(Input<String> storageClassificationName) {
             this.storageClassificationName = Objects.requireNonNull(storageClassificationName);
             return this;
         }
 
-        public Builder setStorageClassificationName(String storageClassificationName) {
+        public Builder storageClassificationName(String storageClassificationName) {
             this.storageClassificationName = Input.of(Objects.requireNonNull(storageClassificationName));
             return this;
         }

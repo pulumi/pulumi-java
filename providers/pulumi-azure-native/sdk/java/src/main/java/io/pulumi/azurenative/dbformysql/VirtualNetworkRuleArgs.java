@@ -119,52 +119,52 @@ public final class VirtualNetworkRuleArgs extends io.pulumi.resources.ResourceAr
     	      this.virtualNetworkSubnetId = defaults.virtualNetworkSubnetId;
         }
 
-        public Builder setIgnoreMissingVnetServiceEndpoint(@Nullable Input<Boolean> ignoreMissingVnetServiceEndpoint) {
+        public Builder ignoreMissingVnetServiceEndpoint(@Nullable Input<Boolean> ignoreMissingVnetServiceEndpoint) {
             this.ignoreMissingVnetServiceEndpoint = ignoreMissingVnetServiceEndpoint;
             return this;
         }
 
-        public Builder setIgnoreMissingVnetServiceEndpoint(@Nullable Boolean ignoreMissingVnetServiceEndpoint) {
+        public Builder ignoreMissingVnetServiceEndpoint(@Nullable Boolean ignoreMissingVnetServiceEndpoint) {
             this.ignoreMissingVnetServiceEndpoint = Input.ofNullable(ignoreMissingVnetServiceEndpoint);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setServerName(Input<String> serverName) {
+        public Builder serverName(Input<String> serverName) {
             this.serverName = Objects.requireNonNull(serverName);
             return this;
         }
 
-        public Builder setServerName(String serverName) {
+        public Builder serverName(String serverName) {
             this.serverName = Input.of(Objects.requireNonNull(serverName));
             return this;
         }
 
-        public Builder setVirtualNetworkRuleName(@Nullable Input<String> virtualNetworkRuleName) {
+        public Builder virtualNetworkRuleName(@Nullable Input<String> virtualNetworkRuleName) {
             this.virtualNetworkRuleName = virtualNetworkRuleName;
             return this;
         }
 
-        public Builder setVirtualNetworkRuleName(@Nullable String virtualNetworkRuleName) {
+        public Builder virtualNetworkRuleName(@Nullable String virtualNetworkRuleName) {
             this.virtualNetworkRuleName = Input.ofNullable(virtualNetworkRuleName);
             return this;
         }
 
-        public Builder setVirtualNetworkSubnetId(Input<String> virtualNetworkSubnetId) {
+        public Builder virtualNetworkSubnetId(Input<String> virtualNetworkSubnetId) {
             this.virtualNetworkSubnetId = Objects.requireNonNull(virtualNetworkSubnetId);
             return this;
         }
 
-        public Builder setVirtualNetworkSubnetId(String virtualNetworkSubnetId) {
+        public Builder virtualNetworkSubnetId(String virtualNetworkSubnetId) {
             this.virtualNetworkSubnetId = Input.of(Objects.requireNonNull(virtualNetworkSubnetId));
             return this;
         }

@@ -86,17 +86,17 @@ public final class GetNetworkVirtualApplianceArgs extends io.pulumi.resources.In
     	      this.resourceGroupName = defaults.resourceGroupName;
         }
 
-        public Builder setExpand(@Nullable String expand) {
+        public Builder expand(@Nullable String expand) {
             this.expand = expand;
             return this;
         }
 
-        public Builder setNetworkVirtualApplianceName(String networkVirtualApplianceName) {
+        public Builder networkVirtualApplianceName(String networkVirtualApplianceName) {
             this.networkVirtualApplianceName = Objects.requireNonNull(networkVirtualApplianceName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }

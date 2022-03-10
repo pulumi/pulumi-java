@@ -102,42 +102,42 @@ public final class StorageQueueMessageArgs extends io.pulumi.resources.ResourceA
     	      this.storageAccount = defaults.storageAccount;
         }
 
-        public Builder setMessage(@Nullable Input<String> message) {
+        public Builder message(@Nullable Input<String> message) {
             this.message = message;
             return this;
         }
 
-        public Builder setMessage(@Nullable String message) {
+        public Builder message(@Nullable String message) {
             this.message = Input.ofNullable(message);
             return this;
         }
 
-        public Builder setQueueName(@Nullable Input<String> queueName) {
+        public Builder queueName(@Nullable Input<String> queueName) {
             this.queueName = queueName;
             return this;
         }
 
-        public Builder setQueueName(@Nullable String queueName) {
+        public Builder queueName(@Nullable String queueName) {
             this.queueName = Input.ofNullable(queueName);
             return this;
         }
 
-        public Builder setSasToken(@Nullable Input<String> sasToken) {
+        public Builder sasToken(@Nullable Input<String> sasToken) {
             this.sasToken = sasToken;
             return this;
         }
 
-        public Builder setSasToken(@Nullable String sasToken) {
+        public Builder sasToken(@Nullable String sasToken) {
             this.sasToken = Input.ofNullable(sasToken);
             return this;
         }
 
-        public Builder setStorageAccount(@Nullable Input<String> storageAccount) {
+        public Builder storageAccount(@Nullable Input<String> storageAccount) {
             this.storageAccount = storageAccount;
             return this;
         }
 
-        public Builder setStorageAccount(@Nullable String storageAccount) {
+        public Builder storageAccount(@Nullable String storageAccount) {
             this.storageAccount = Input.ofNullable(storageAccount);
             return this;
         }

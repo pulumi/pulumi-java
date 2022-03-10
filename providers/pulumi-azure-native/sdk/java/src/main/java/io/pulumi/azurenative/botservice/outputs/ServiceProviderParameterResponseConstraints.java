@@ -50,7 +50,7 @@ public final class ServiceProviderParameterResponseConstraints {
     	      this.required = defaults.required;
         }
 
-        public Builder setRequired(@Nullable Boolean required) {
+        public Builder required(@Nullable Boolean required) {
             this.required = required;
             return this;
         }

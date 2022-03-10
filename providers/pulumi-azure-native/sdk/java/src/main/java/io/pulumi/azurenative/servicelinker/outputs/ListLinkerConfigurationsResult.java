@@ -50,7 +50,7 @@ public final class ListLinkerConfigurationsResult {
     	      this.configurations = defaults.configurations;
         }
 
-        public Builder setConfigurations(@Nullable List<SourceConfigurationResponse> configurations) {
+        public Builder configurations(@Nullable List<SourceConfigurationResponse> configurations) {
             this.configurations = configurations;
             return this;
         }

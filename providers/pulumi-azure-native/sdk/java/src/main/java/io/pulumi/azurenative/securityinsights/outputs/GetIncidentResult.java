@@ -376,107 +376,107 @@ public final class GetIncidentResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setAdditionalData(IncidentAdditionalDataResponse additionalData) {
+        public Builder additionalData(IncidentAdditionalDataResponse additionalData) {
             this.additionalData = Objects.requireNonNull(additionalData);
             return this;
         }
 
-        public Builder setClassification(@Nullable String classification) {
+        public Builder classification(@Nullable String classification) {
             this.classification = classification;
             return this;
         }
 
-        public Builder setClassificationComment(@Nullable String classificationComment) {
+        public Builder classificationComment(@Nullable String classificationComment) {
             this.classificationComment = classificationComment;
             return this;
         }
 
-        public Builder setClassificationReason(@Nullable String classificationReason) {
+        public Builder classificationReason(@Nullable String classificationReason) {
             this.classificationReason = classificationReason;
             return this;
         }
 
-        public Builder setCreatedTimeUtc(String createdTimeUtc) {
+        public Builder createdTimeUtc(String createdTimeUtc) {
             this.createdTimeUtc = Objects.requireNonNull(createdTimeUtc);
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setEtag(@Nullable String etag) {
+        public Builder etag(@Nullable String etag) {
             this.etag = etag;
             return this;
         }
 
-        public Builder setFirstActivityTimeUtc(@Nullable String firstActivityTimeUtc) {
+        public Builder firstActivityTimeUtc(@Nullable String firstActivityTimeUtc) {
             this.firstActivityTimeUtc = firstActivityTimeUtc;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setIncidentNumber(Integer incidentNumber) {
+        public Builder incidentNumber(Integer incidentNumber) {
             this.incidentNumber = Objects.requireNonNull(incidentNumber);
             return this;
         }
 
-        public Builder setIncidentUrl(String incidentUrl) {
+        public Builder incidentUrl(String incidentUrl) {
             this.incidentUrl = Objects.requireNonNull(incidentUrl);
             return this;
         }
 
-        public Builder setLabels(@Nullable List<IncidentLabelResponse> labels) {
+        public Builder labels(@Nullable List<IncidentLabelResponse> labels) {
             this.labels = labels;
             return this;
         }
 
-        public Builder setLastActivityTimeUtc(@Nullable String lastActivityTimeUtc) {
+        public Builder lastActivityTimeUtc(@Nullable String lastActivityTimeUtc) {
             this.lastActivityTimeUtc = lastActivityTimeUtc;
             return this;
         }
 
-        public Builder setLastModifiedTimeUtc(String lastModifiedTimeUtc) {
+        public Builder lastModifiedTimeUtc(String lastModifiedTimeUtc) {
             this.lastModifiedTimeUtc = Objects.requireNonNull(lastModifiedTimeUtc);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setOwner(@Nullable IncidentOwnerInfoResponse owner) {
+        public Builder owner(@Nullable IncidentOwnerInfoResponse owner) {
             this.owner = owner;
             return this;
         }
 
-        public Builder setRelatedAnalyticRuleIds(List<String> relatedAnalyticRuleIds) {
+        public Builder relatedAnalyticRuleIds(List<String> relatedAnalyticRuleIds) {
             this.relatedAnalyticRuleIds = Objects.requireNonNull(relatedAnalyticRuleIds);
             return this;
         }
 
-        public Builder setSeverity(String severity) {
+        public Builder severity(String severity) {
             this.severity = Objects.requireNonNull(severity);
             return this;
         }
 
-        public Builder setStatus(String status) {
+        public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
 
-        public Builder setTitle(String title) {
+        public Builder title(String title) {
             this.title = Objects.requireNonNull(title);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

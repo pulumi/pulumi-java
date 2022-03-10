@@ -92,17 +92,17 @@ public final class FileSystemHttpLogsConfigResponse {
     	      this.retentionInMb = defaults.retentionInMb;
         }
 
-        public Builder setEnabled(@Nullable Boolean enabled) {
+        public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = enabled;
             return this;
         }
 
-        public Builder setRetentionInDays(@Nullable Integer retentionInDays) {
+        public Builder retentionInDays(@Nullable Integer retentionInDays) {
             this.retentionInDays = retentionInDays;
             return this;
         }
 
-        public Builder setRetentionInMb(@Nullable Integer retentionInMb) {
+        public Builder retentionInMb(@Nullable Integer retentionInMb) {
             this.retentionInMb = retentionInMb;
             return this;
         }

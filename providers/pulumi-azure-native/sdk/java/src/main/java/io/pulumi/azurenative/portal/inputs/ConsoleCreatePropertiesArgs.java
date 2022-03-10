@@ -93,32 +93,32 @@ public final class ConsoleCreatePropertiesArgs extends io.pulumi.resources.Resou
     	      this.uri = defaults.uri;
         }
 
-        public Builder setOsType(Input<Either<String,OsType>> osType) {
+        public Builder osType(Input<Either<String,OsType>> osType) {
             this.osType = Objects.requireNonNull(osType);
             return this;
         }
 
-        public Builder setOsType(Either<String,OsType> osType) {
+        public Builder osType(Either<String,OsType> osType) {
             this.osType = Input.of(Objects.requireNonNull(osType));
             return this;
         }
 
-        public Builder setProvisioningState(@Nullable Input<Either<String,ProvisioningState>> provisioningState) {
+        public Builder provisioningState(@Nullable Input<Either<String,ProvisioningState>> provisioningState) {
             this.provisioningState = provisioningState;
             return this;
         }
 
-        public Builder setProvisioningState(@Nullable Either<String,ProvisioningState> provisioningState) {
+        public Builder provisioningState(@Nullable Either<String,ProvisioningState> provisioningState) {
             this.provisioningState = Input.ofNullable(provisioningState);
             return this;
         }
 
-        public Builder setUri(@Nullable Input<String> uri) {
+        public Builder uri(@Nullable Input<String> uri) {
             this.uri = uri;
             return this;
         }
 
-        public Builder setUri(@Nullable String uri) {
+        public Builder uri(@Nullable String uri) {
             this.uri = Input.ofNullable(uri);
             return this;
         }

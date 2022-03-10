@@ -201,52 +201,52 @@ public final class VirtualMachineScaleSetOSDiskResponse {
     	      this.writeAcceleratorEnabled = defaults.writeAcceleratorEnabled;
         }
 
-        public Builder setCaching(@Nullable String caching) {
+        public Builder caching(@Nullable String caching) {
             this.caching = caching;
             return this;
         }
 
-        public Builder setCreateOption(String createOption) {
+        public Builder createOption(String createOption) {
             this.createOption = Objects.requireNonNull(createOption);
             return this;
         }
 
-        public Builder setDiffDiskSettings(@Nullable DiffDiskSettingsResponse diffDiskSettings) {
+        public Builder diffDiskSettings(@Nullable DiffDiskSettingsResponse diffDiskSettings) {
             this.diffDiskSettings = diffDiskSettings;
             return this;
         }
 
-        public Builder setDiskSizeGB(@Nullable Integer diskSizeGB) {
+        public Builder diskSizeGB(@Nullable Integer diskSizeGB) {
             this.diskSizeGB = diskSizeGB;
             return this;
         }
 
-        public Builder setImage(@Nullable VirtualHardDiskResponse image) {
+        public Builder image(@Nullable VirtualHardDiskResponse image) {
             this.image = image;
             return this;
         }
 
-        public Builder setManagedDisk(@Nullable VirtualMachineScaleSetManagedDiskParametersResponse managedDisk) {
+        public Builder managedDisk(@Nullable VirtualMachineScaleSetManagedDiskParametersResponse managedDisk) {
             this.managedDisk = managedDisk;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setOsType(@Nullable String osType) {
+        public Builder osType(@Nullable String osType) {
             this.osType = osType;
             return this;
         }
 
-        public Builder setVhdContainers(@Nullable List<String> vhdContainers) {
+        public Builder vhdContainers(@Nullable List<String> vhdContainers) {
             this.vhdContainers = vhdContainers;
             return this;
         }
 
-        public Builder setWriteAcceleratorEnabled(@Nullable Boolean writeAcceleratorEnabled) {
+        public Builder writeAcceleratorEnabled(@Nullable Boolean writeAcceleratorEnabled) {
             this.writeAcceleratorEnabled = writeAcceleratorEnabled;
             return this;
         }

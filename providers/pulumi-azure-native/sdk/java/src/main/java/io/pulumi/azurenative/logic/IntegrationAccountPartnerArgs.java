@@ -171,82 +171,82 @@ public final class IntegrationAccountPartnerArgs extends io.pulumi.resources.Res
     	      this.tags = defaults.tags;
         }
 
-        public Builder setContent(Input<PartnerContentArgs> content) {
+        public Builder content(Input<PartnerContentArgs> content) {
             this.content = Objects.requireNonNull(content);
             return this;
         }
 
-        public Builder setContent(PartnerContentArgs content) {
+        public Builder content(PartnerContentArgs content) {
             this.content = Input.of(Objects.requireNonNull(content));
             return this;
         }
 
-        public Builder setIntegrationAccountName(Input<String> integrationAccountName) {
+        public Builder integrationAccountName(Input<String> integrationAccountName) {
             this.integrationAccountName = Objects.requireNonNull(integrationAccountName);
             return this;
         }
 
-        public Builder setIntegrationAccountName(String integrationAccountName) {
+        public Builder integrationAccountName(String integrationAccountName) {
             this.integrationAccountName = Input.of(Objects.requireNonNull(integrationAccountName));
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setMetadata(@Nullable Input<Object> metadata) {
+        public Builder metadata(@Nullable Input<Object> metadata) {
             this.metadata = metadata;
             return this;
         }
 
-        public Builder setMetadata(@Nullable Object metadata) {
+        public Builder metadata(@Nullable Object metadata) {
             this.metadata = Input.ofNullable(metadata);
             return this;
         }
 
-        public Builder setPartnerName(@Nullable Input<String> partnerName) {
+        public Builder partnerName(@Nullable Input<String> partnerName) {
             this.partnerName = partnerName;
             return this;
         }
 
-        public Builder setPartnerName(@Nullable String partnerName) {
+        public Builder partnerName(@Nullable String partnerName) {
             this.partnerName = Input.ofNullable(partnerName);
             return this;
         }
 
-        public Builder setPartnerType(Input<Either<String,PartnerType>> partnerType) {
+        public Builder partnerType(Input<Either<String,PartnerType>> partnerType) {
             this.partnerType = Objects.requireNonNull(partnerType);
             return this;
         }
 
-        public Builder setPartnerType(Either<String,PartnerType> partnerType) {
+        public Builder partnerType(Either<String,PartnerType> partnerType) {
             this.partnerType = Input.of(Objects.requireNonNull(partnerType));
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

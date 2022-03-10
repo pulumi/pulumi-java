@@ -156,37 +156,37 @@ public final class SsisVariableResponse extends io.pulumi.resources.InvokeArgs {
     	      this.value = defaults.value;
         }
 
-        public Builder setDataType(@Nullable String dataType) {
+        public Builder dataType(@Nullable String dataType) {
             this.dataType = dataType;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setId(@Nullable Double id) {
+        public Builder id(@Nullable Double id) {
             this.id = id;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setSensitive(@Nullable Boolean sensitive) {
+        public Builder sensitive(@Nullable Boolean sensitive) {
             this.sensitive = sensitive;
             return this;
         }
 
-        public Builder setSensitiveValue(@Nullable String sensitiveValue) {
+        public Builder sensitiveValue(@Nullable String sensitiveValue) {
             this.sensitiveValue = sensitiveValue;
             return this;
         }
 
-        public Builder setValue(@Nullable String value) {
+        public Builder value(@Nullable String value) {
             this.value = value;
             return this;
         }

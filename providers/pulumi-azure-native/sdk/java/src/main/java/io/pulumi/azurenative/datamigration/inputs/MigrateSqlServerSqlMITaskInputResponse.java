@@ -175,42 +175,42 @@ public final class MigrateSqlServerSqlMITaskInputResponse extends io.pulumi.reso
     	      this.targetConnectionInfo = defaults.targetConnectionInfo;
         }
 
-        public Builder setBackupBlobShare(BlobShareResponse backupBlobShare) {
+        public Builder backupBlobShare(BlobShareResponse backupBlobShare) {
             this.backupBlobShare = Objects.requireNonNull(backupBlobShare);
             return this;
         }
 
-        public Builder setBackupFileShare(@Nullable FileShareResponse backupFileShare) {
+        public Builder backupFileShare(@Nullable FileShareResponse backupFileShare) {
             this.backupFileShare = backupFileShare;
             return this;
         }
 
-        public Builder setBackupMode(@Nullable String backupMode) {
+        public Builder backupMode(@Nullable String backupMode) {
             this.backupMode = backupMode;
             return this;
         }
 
-        public Builder setSelectedAgentJobs(@Nullable List<String> selectedAgentJobs) {
+        public Builder selectedAgentJobs(@Nullable List<String> selectedAgentJobs) {
             this.selectedAgentJobs = selectedAgentJobs;
             return this;
         }
 
-        public Builder setSelectedDatabases(List<MigrateSqlServerSqlMIDatabaseInputResponse> selectedDatabases) {
+        public Builder selectedDatabases(List<MigrateSqlServerSqlMIDatabaseInputResponse> selectedDatabases) {
             this.selectedDatabases = Objects.requireNonNull(selectedDatabases);
             return this;
         }
 
-        public Builder setSelectedLogins(@Nullable List<String> selectedLogins) {
+        public Builder selectedLogins(@Nullable List<String> selectedLogins) {
             this.selectedLogins = selectedLogins;
             return this;
         }
 
-        public Builder setSourceConnectionInfo(SqlConnectionInfoResponse sourceConnectionInfo) {
+        public Builder sourceConnectionInfo(SqlConnectionInfoResponse sourceConnectionInfo) {
             this.sourceConnectionInfo = Objects.requireNonNull(sourceConnectionInfo);
             return this;
         }
 
-        public Builder setTargetConnectionInfo(SqlConnectionInfoResponse targetConnectionInfo) {
+        public Builder targetConnectionInfo(SqlConnectionInfoResponse targetConnectionInfo) {
             this.targetConnectionInfo = Objects.requireNonNull(targetConnectionInfo);
             return this;
         }

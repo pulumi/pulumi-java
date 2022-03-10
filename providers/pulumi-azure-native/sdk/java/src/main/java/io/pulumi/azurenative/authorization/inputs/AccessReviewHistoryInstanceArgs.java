@@ -138,62 +138,62 @@ public final class AccessReviewHistoryInstanceArgs extends io.pulumi.resources.R
     	      this.runDateTime = defaults.runDateTime;
         }
 
-        public Builder setDisplayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Input<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setDisplayName(@Nullable String displayName) {
+        public Builder displayName(@Nullable String displayName) {
             this.displayName = Input.ofNullable(displayName);
             return this;
         }
 
-        public Builder setExpiration(@Nullable Input<String> expiration) {
+        public Builder expiration(@Nullable Input<String> expiration) {
             this.expiration = expiration;
             return this;
         }
 
-        public Builder setExpiration(@Nullable String expiration) {
+        public Builder expiration(@Nullable String expiration) {
             this.expiration = Input.ofNullable(expiration);
             return this;
         }
 
-        public Builder setFulfilledDateTime(@Nullable Input<String> fulfilledDateTime) {
+        public Builder fulfilledDateTime(@Nullable Input<String> fulfilledDateTime) {
             this.fulfilledDateTime = fulfilledDateTime;
             return this;
         }
 
-        public Builder setFulfilledDateTime(@Nullable String fulfilledDateTime) {
+        public Builder fulfilledDateTime(@Nullable String fulfilledDateTime) {
             this.fulfilledDateTime = Input.ofNullable(fulfilledDateTime);
             return this;
         }
 
-        public Builder setReviewHistoryPeriodEndDateTime(@Nullable Input<String> reviewHistoryPeriodEndDateTime) {
+        public Builder reviewHistoryPeriodEndDateTime(@Nullable Input<String> reviewHistoryPeriodEndDateTime) {
             this.reviewHistoryPeriodEndDateTime = reviewHistoryPeriodEndDateTime;
             return this;
         }
 
-        public Builder setReviewHistoryPeriodEndDateTime(@Nullable String reviewHistoryPeriodEndDateTime) {
+        public Builder reviewHistoryPeriodEndDateTime(@Nullable String reviewHistoryPeriodEndDateTime) {
             this.reviewHistoryPeriodEndDateTime = Input.ofNullable(reviewHistoryPeriodEndDateTime);
             return this;
         }
 
-        public Builder setReviewHistoryPeriodStartDateTime(@Nullable Input<String> reviewHistoryPeriodStartDateTime) {
+        public Builder reviewHistoryPeriodStartDateTime(@Nullable Input<String> reviewHistoryPeriodStartDateTime) {
             this.reviewHistoryPeriodStartDateTime = reviewHistoryPeriodStartDateTime;
             return this;
         }
 
-        public Builder setReviewHistoryPeriodStartDateTime(@Nullable String reviewHistoryPeriodStartDateTime) {
+        public Builder reviewHistoryPeriodStartDateTime(@Nullable String reviewHistoryPeriodStartDateTime) {
             this.reviewHistoryPeriodStartDateTime = Input.ofNullable(reviewHistoryPeriodStartDateTime);
             return this;
         }
 
-        public Builder setRunDateTime(@Nullable Input<String> runDateTime) {
+        public Builder runDateTime(@Nullable Input<String> runDateTime) {
             this.runDateTime = runDateTime;
             return this;
         }
 
-        public Builder setRunDateTime(@Nullable String runDateTime) {
+        public Builder runDateTime(@Nullable String runDateTime) {
             this.runDateTime = Input.ofNullable(runDateTime);
             return this;
         }

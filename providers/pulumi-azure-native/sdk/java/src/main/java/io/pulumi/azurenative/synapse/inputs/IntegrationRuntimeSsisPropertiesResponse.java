@@ -146,32 +146,32 @@ public final class IntegrationRuntimeSsisPropertiesResponse extends io.pulumi.re
     	      this.licenseType = defaults.licenseType;
         }
 
-        public Builder setCatalogInfo(@Nullable IntegrationRuntimeSsisCatalogInfoResponse catalogInfo) {
+        public Builder catalogInfo(@Nullable IntegrationRuntimeSsisCatalogInfoResponse catalogInfo) {
             this.catalogInfo = catalogInfo;
             return this;
         }
 
-        public Builder setCustomSetupScriptProperties(@Nullable IntegrationRuntimeCustomSetupScriptPropertiesResponse customSetupScriptProperties) {
+        public Builder customSetupScriptProperties(@Nullable IntegrationRuntimeCustomSetupScriptPropertiesResponse customSetupScriptProperties) {
             this.customSetupScriptProperties = customSetupScriptProperties;
             return this;
         }
 
-        public Builder setDataProxyProperties(@Nullable IntegrationRuntimeDataProxyPropertiesResponse dataProxyProperties) {
+        public Builder dataProxyProperties(@Nullable IntegrationRuntimeDataProxyPropertiesResponse dataProxyProperties) {
             this.dataProxyProperties = dataProxyProperties;
             return this;
         }
 
-        public Builder setEdition(@Nullable String edition) {
+        public Builder edition(@Nullable String edition) {
             this.edition = edition;
             return this;
         }
 
-        public Builder setExpressCustomSetupProperties(@Nullable List<Object> expressCustomSetupProperties) {
+        public Builder expressCustomSetupProperties(@Nullable List<Object> expressCustomSetupProperties) {
             this.expressCustomSetupProperties = expressCustomSetupProperties;
             return this;
         }
 
-        public Builder setLicenseType(@Nullable String licenseType) {
+        public Builder licenseType(@Nullable String licenseType) {
             this.licenseType = licenseType;
             return this;
         }

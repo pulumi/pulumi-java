@@ -138,62 +138,62 @@ public final class ApiVersionSetContractDetailsArgs extends io.pulumi.resources.
     	      this.versioningScheme = defaults.versioningScheme;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setId(@Nullable Input<String> id) {
+        public Builder id(@Nullable Input<String> id) {
             this.id = id;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = Input.ofNullable(id);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setVersionHeaderName(@Nullable Input<String> versionHeaderName) {
+        public Builder versionHeaderName(@Nullable Input<String> versionHeaderName) {
             this.versionHeaderName = versionHeaderName;
             return this;
         }
 
-        public Builder setVersionHeaderName(@Nullable String versionHeaderName) {
+        public Builder versionHeaderName(@Nullable String versionHeaderName) {
             this.versionHeaderName = Input.ofNullable(versionHeaderName);
             return this;
         }
 
-        public Builder setVersionQueryName(@Nullable Input<String> versionQueryName) {
+        public Builder versionQueryName(@Nullable Input<String> versionQueryName) {
             this.versionQueryName = versionQueryName;
             return this;
         }
 
-        public Builder setVersionQueryName(@Nullable String versionQueryName) {
+        public Builder versionQueryName(@Nullable String versionQueryName) {
             this.versionQueryName = Input.ofNullable(versionQueryName);
             return this;
         }
 
-        public Builder setVersioningScheme(@Nullable Input<String> versioningScheme) {
+        public Builder versioningScheme(@Nullable Input<String> versioningScheme) {
             this.versioningScheme = versioningScheme;
             return this;
         }
 
-        public Builder setVersioningScheme(@Nullable String versioningScheme) {
+        public Builder versioningScheme(@Nullable String versioningScheme) {
             this.versioningScheme = Input.ofNullable(versioningScheme);
             return this;
         }

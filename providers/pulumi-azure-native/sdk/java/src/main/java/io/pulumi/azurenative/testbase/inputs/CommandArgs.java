@@ -207,102 +207,102 @@ public final class CommandArgs extends io.pulumi.resources.ResourceArgs {
     	      this.runElevated = defaults.runElevated;
         }
 
-        public Builder setAction(Input<Either<String,Action>> action) {
+        public Builder action(Input<Either<String,Action>> action) {
             this.action = Objects.requireNonNull(action);
             return this;
         }
 
-        public Builder setAction(Either<String,Action> action) {
+        public Builder action(Either<String,Action> action) {
             this.action = Input.of(Objects.requireNonNull(action));
             return this;
         }
 
-        public Builder setAlwaysRun(@Nullable Input<Boolean> alwaysRun) {
+        public Builder alwaysRun(@Nullable Input<Boolean> alwaysRun) {
             this.alwaysRun = alwaysRun;
             return this;
         }
 
-        public Builder setAlwaysRun(@Nullable Boolean alwaysRun) {
+        public Builder alwaysRun(@Nullable Boolean alwaysRun) {
             this.alwaysRun = Input.ofNullable(alwaysRun);
             return this;
         }
 
-        public Builder setApplyUpdateBefore(@Nullable Input<Boolean> applyUpdateBefore) {
+        public Builder applyUpdateBefore(@Nullable Input<Boolean> applyUpdateBefore) {
             this.applyUpdateBefore = applyUpdateBefore;
             return this;
         }
 
-        public Builder setApplyUpdateBefore(@Nullable Boolean applyUpdateBefore) {
+        public Builder applyUpdateBefore(@Nullable Boolean applyUpdateBefore) {
             this.applyUpdateBefore = Input.ofNullable(applyUpdateBefore);
             return this;
         }
 
-        public Builder setContent(Input<String> content) {
+        public Builder content(Input<String> content) {
             this.content = Objects.requireNonNull(content);
             return this;
         }
 
-        public Builder setContent(String content) {
+        public Builder content(String content) {
             this.content = Input.of(Objects.requireNonNull(content));
             return this;
         }
 
-        public Builder setContentType(Input<Either<String,ContentType>> contentType) {
+        public Builder contentType(Input<Either<String,ContentType>> contentType) {
             this.contentType = Objects.requireNonNull(contentType);
             return this;
         }
 
-        public Builder setContentType(Either<String,ContentType> contentType) {
+        public Builder contentType(Either<String,ContentType> contentType) {
             this.contentType = Input.of(Objects.requireNonNull(contentType));
             return this;
         }
 
-        public Builder setMaxRunTime(@Nullable Input<Integer> maxRunTime) {
+        public Builder maxRunTime(@Nullable Input<Integer> maxRunTime) {
             this.maxRunTime = maxRunTime;
             return this;
         }
 
-        public Builder setMaxRunTime(@Nullable Integer maxRunTime) {
+        public Builder maxRunTime(@Nullable Integer maxRunTime) {
             this.maxRunTime = Input.ofNullable(maxRunTime);
             return this;
         }
 
-        public Builder setName(Input<String> name) {
+        public Builder name(Input<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder setRestartAfter(@Nullable Input<Boolean> restartAfter) {
+        public Builder restartAfter(@Nullable Input<Boolean> restartAfter) {
             this.restartAfter = restartAfter;
             return this;
         }
 
-        public Builder setRestartAfter(@Nullable Boolean restartAfter) {
+        public Builder restartAfter(@Nullable Boolean restartAfter) {
             this.restartAfter = Input.ofNullable(restartAfter);
             return this;
         }
 
-        public Builder setRunAsInteractive(@Nullable Input<Boolean> runAsInteractive) {
+        public Builder runAsInteractive(@Nullable Input<Boolean> runAsInteractive) {
             this.runAsInteractive = runAsInteractive;
             return this;
         }
 
-        public Builder setRunAsInteractive(@Nullable Boolean runAsInteractive) {
+        public Builder runAsInteractive(@Nullable Boolean runAsInteractive) {
             this.runAsInteractive = Input.ofNullable(runAsInteractive);
             return this;
         }
 
-        public Builder setRunElevated(@Nullable Input<Boolean> runElevated) {
+        public Builder runElevated(@Nullable Input<Boolean> runElevated) {
             this.runElevated = runElevated;
             return this;
         }
 
-        public Builder setRunElevated(@Nullable Boolean runElevated) {
+        public Builder runElevated(@Nullable Boolean runElevated) {
             this.runElevated = Input.ofNullable(runElevated);
             return this;
         }

@@ -112,42 +112,42 @@ public final class PermissionsArgs extends io.pulumi.resources.ResourceArgs {
     	      this.storage = defaults.storage;
         }
 
-        public Builder setCertificates(@Nullable Input<List<Either<String,CertificatePermissions>>> certificates) {
+        public Builder certificates(@Nullable Input<List<Either<String,CertificatePermissions>>> certificates) {
             this.certificates = certificates;
             return this;
         }
 
-        public Builder setCertificates(@Nullable List<Either<String,CertificatePermissions>> certificates) {
+        public Builder certificates(@Nullable List<Either<String,CertificatePermissions>> certificates) {
             this.certificates = Input.ofNullable(certificates);
             return this;
         }
 
-        public Builder setKeys(@Nullable Input<List<Either<String,KeyPermissions>>> keys) {
+        public Builder keys(@Nullable Input<List<Either<String,KeyPermissions>>> keys) {
             this.keys = keys;
             return this;
         }
 
-        public Builder setKeys(@Nullable List<Either<String,KeyPermissions>> keys) {
+        public Builder keys(@Nullable List<Either<String,KeyPermissions>> keys) {
             this.keys = Input.ofNullable(keys);
             return this;
         }
 
-        public Builder setSecrets(@Nullable Input<List<Either<String,SecretPermissions>>> secrets) {
+        public Builder secrets(@Nullable Input<List<Either<String,SecretPermissions>>> secrets) {
             this.secrets = secrets;
             return this;
         }
 
-        public Builder setSecrets(@Nullable List<Either<String,SecretPermissions>> secrets) {
+        public Builder secrets(@Nullable List<Either<String,SecretPermissions>> secrets) {
             this.secrets = Input.ofNullable(secrets);
             return this;
         }
 
-        public Builder setStorage(@Nullable Input<List<Either<String,StoragePermissions>>> storage) {
+        public Builder storage(@Nullable Input<List<Either<String,StoragePermissions>>> storage) {
             this.storage = storage;
             return this;
         }
 
-        public Builder setStorage(@Nullable List<Either<String,StoragePermissions>> storage) {
+        public Builder storage(@Nullable List<Either<String,StoragePermissions>> storage) {
             this.storage = Input.ofNullable(storage);
             return this;
         }

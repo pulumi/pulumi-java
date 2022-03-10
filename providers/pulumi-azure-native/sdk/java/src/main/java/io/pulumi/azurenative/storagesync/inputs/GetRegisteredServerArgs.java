@@ -84,17 +84,17 @@ public final class GetRegisteredServerArgs extends io.pulumi.resources.InvokeArg
     	      this.storageSyncServiceName = defaults.storageSyncServiceName;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setServerId(String serverId) {
+        public Builder serverId(String serverId) {
             this.serverId = Objects.requireNonNull(serverId);
             return this;
         }
 
-        public Builder setStorageSyncServiceName(String storageSyncServiceName) {
+        public Builder storageSyncServiceName(String storageSyncServiceName) {
             this.storageSyncServiceName = Objects.requireNonNull(storageSyncServiceName);
             return this;
         }

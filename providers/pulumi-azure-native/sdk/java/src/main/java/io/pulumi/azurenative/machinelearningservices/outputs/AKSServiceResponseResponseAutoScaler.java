@@ -116,27 +116,27 @@ public final class AKSServiceResponseResponseAutoScaler {
     	      this.targetUtilization = defaults.targetUtilization;
         }
 
-        public Builder setAutoscaleEnabled(@Nullable Boolean autoscaleEnabled) {
+        public Builder autoscaleEnabled(@Nullable Boolean autoscaleEnabled) {
             this.autoscaleEnabled = autoscaleEnabled;
             return this;
         }
 
-        public Builder setMaxReplicas(@Nullable Integer maxReplicas) {
+        public Builder maxReplicas(@Nullable Integer maxReplicas) {
             this.maxReplicas = maxReplicas;
             return this;
         }
 
-        public Builder setMinReplicas(@Nullable Integer minReplicas) {
+        public Builder minReplicas(@Nullable Integer minReplicas) {
             this.minReplicas = minReplicas;
             return this;
         }
 
-        public Builder setRefreshPeriodInSeconds(@Nullable Integer refreshPeriodInSeconds) {
+        public Builder refreshPeriodInSeconds(@Nullable Integer refreshPeriodInSeconds) {
             this.refreshPeriodInSeconds = refreshPeriodInSeconds;
             return this;
         }
 
-        public Builder setTargetUtilization(@Nullable Integer targetUtilization) {
+        public Builder targetUtilization(@Nullable Integer targetUtilization) {
             this.targetUtilization = targetUtilization;
             return this;
         }

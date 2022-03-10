@@ -120,52 +120,52 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
     	      this.triggerName = defaults.triggerName;
         }
 
-        public Builder setAccountName(Input<String> accountName) {
+        public Builder accountName(Input<String> accountName) {
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
 
-        public Builder setAccountName(String accountName) {
+        public Builder accountName(String accountName) {
             this.accountName = Input.of(Objects.requireNonNull(accountName));
             return this;
         }
 
-        public Builder setKind(Input<Either<String,TriggerKind>> kind) {
+        public Builder kind(Input<Either<String,TriggerKind>> kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setKind(Either<String,TriggerKind> kind) {
+        public Builder kind(Either<String,TriggerKind> kind) {
             this.kind = Input.of(Objects.requireNonNull(kind));
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setShareSubscriptionName(Input<String> shareSubscriptionName) {
+        public Builder shareSubscriptionName(Input<String> shareSubscriptionName) {
             this.shareSubscriptionName = Objects.requireNonNull(shareSubscriptionName);
             return this;
         }
 
-        public Builder setShareSubscriptionName(String shareSubscriptionName) {
+        public Builder shareSubscriptionName(String shareSubscriptionName) {
             this.shareSubscriptionName = Input.of(Objects.requireNonNull(shareSubscriptionName));
             return this;
         }
 
-        public Builder setTriggerName(@Nullable Input<String> triggerName) {
+        public Builder triggerName(@Nullable Input<String> triggerName) {
             this.triggerName = triggerName;
             return this;
         }
 
-        public Builder setTriggerName(@Nullable String triggerName) {
+        public Builder triggerName(@Nullable String triggerName) {
             this.triggerName = Input.ofNullable(triggerName);
             return this;
         }

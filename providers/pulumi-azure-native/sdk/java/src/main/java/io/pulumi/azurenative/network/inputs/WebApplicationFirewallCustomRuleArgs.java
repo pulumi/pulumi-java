@@ -128,52 +128,52 @@ public final class WebApplicationFirewallCustomRuleArgs extends io.pulumi.resour
     	      this.ruleType = defaults.ruleType;
         }
 
-        public Builder setAction(Input<Either<String,WebApplicationFirewallAction>> action) {
+        public Builder action(Input<Either<String,WebApplicationFirewallAction>> action) {
             this.action = Objects.requireNonNull(action);
             return this;
         }
 
-        public Builder setAction(Either<String,WebApplicationFirewallAction> action) {
+        public Builder action(Either<String,WebApplicationFirewallAction> action) {
             this.action = Input.of(Objects.requireNonNull(action));
             return this;
         }
 
-        public Builder setMatchConditions(Input<List<MatchConditionArgs>> matchConditions) {
+        public Builder matchConditions(Input<List<MatchConditionArgs>> matchConditions) {
             this.matchConditions = Objects.requireNonNull(matchConditions);
             return this;
         }
 
-        public Builder setMatchConditions(List<MatchConditionArgs> matchConditions) {
+        public Builder matchConditions(List<MatchConditionArgs> matchConditions) {
             this.matchConditions = Input.of(Objects.requireNonNull(matchConditions));
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setPriority(Input<Integer> priority) {
+        public Builder priority(Input<Integer> priority) {
             this.priority = Objects.requireNonNull(priority);
             return this;
         }
 
-        public Builder setPriority(Integer priority) {
+        public Builder priority(Integer priority) {
             this.priority = Input.of(Objects.requireNonNull(priority));
             return this;
         }
 
-        public Builder setRuleType(Input<Either<String,WebApplicationFirewallRuleType>> ruleType) {
+        public Builder ruleType(Input<Either<String,WebApplicationFirewallRuleType>> ruleType) {
             this.ruleType = Objects.requireNonNull(ruleType);
             return this;
         }
 
-        public Builder setRuleType(Either<String,WebApplicationFirewallRuleType> ruleType) {
+        public Builder ruleType(Either<String,WebApplicationFirewallRuleType> ruleType) {
             this.ruleType = Input.of(Objects.requireNonNull(ruleType));
             return this;
         }

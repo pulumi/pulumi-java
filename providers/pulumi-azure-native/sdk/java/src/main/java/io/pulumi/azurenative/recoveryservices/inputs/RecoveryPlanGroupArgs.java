@@ -111,42 +111,42 @@ public final class RecoveryPlanGroupArgs extends io.pulumi.resources.ResourceArg
     	      this.startGroupActions = defaults.startGroupActions;
         }
 
-        public Builder setEndGroupActions(@Nullable Input<List<RecoveryPlanActionArgs>> endGroupActions) {
+        public Builder endGroupActions(@Nullable Input<List<RecoveryPlanActionArgs>> endGroupActions) {
             this.endGroupActions = endGroupActions;
             return this;
         }
 
-        public Builder setEndGroupActions(@Nullable List<RecoveryPlanActionArgs> endGroupActions) {
+        public Builder endGroupActions(@Nullable List<RecoveryPlanActionArgs> endGroupActions) {
             this.endGroupActions = Input.ofNullable(endGroupActions);
             return this;
         }
 
-        public Builder setGroupType(Input<Either<String,RecoveryPlanGroupType>> groupType) {
+        public Builder groupType(Input<Either<String,RecoveryPlanGroupType>> groupType) {
             this.groupType = Objects.requireNonNull(groupType);
             return this;
         }
 
-        public Builder setGroupType(Either<String,RecoveryPlanGroupType> groupType) {
+        public Builder groupType(Either<String,RecoveryPlanGroupType> groupType) {
             this.groupType = Input.of(Objects.requireNonNull(groupType));
             return this;
         }
 
-        public Builder setReplicationProtectedItems(@Nullable Input<List<RecoveryPlanProtectedItemArgs>> replicationProtectedItems) {
+        public Builder replicationProtectedItems(@Nullable Input<List<RecoveryPlanProtectedItemArgs>> replicationProtectedItems) {
             this.replicationProtectedItems = replicationProtectedItems;
             return this;
         }
 
-        public Builder setReplicationProtectedItems(@Nullable List<RecoveryPlanProtectedItemArgs> replicationProtectedItems) {
+        public Builder replicationProtectedItems(@Nullable List<RecoveryPlanProtectedItemArgs> replicationProtectedItems) {
             this.replicationProtectedItems = Input.ofNullable(replicationProtectedItems);
             return this;
         }
 
-        public Builder setStartGroupActions(@Nullable Input<List<RecoveryPlanActionArgs>> startGroupActions) {
+        public Builder startGroupActions(@Nullable Input<List<RecoveryPlanActionArgs>> startGroupActions) {
             this.startGroupActions = startGroupActions;
             return this;
         }
 
-        public Builder setStartGroupActions(@Nullable List<RecoveryPlanActionArgs> startGroupActions) {
+        public Builder startGroupActions(@Nullable List<RecoveryPlanActionArgs> startGroupActions) {
             this.startGroupActions = Input.ofNullable(startGroupActions);
             return this;
         }

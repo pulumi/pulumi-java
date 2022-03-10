@@ -120,27 +120,27 @@ public final class ProductDetailsResponse {
     	      this.productDoubleEncryptionStatus = defaults.productDoubleEncryptionStatus;
         }
 
-        public Builder setCount(Integer count) {
+        public Builder count(Integer count) {
             this.count = Objects.requireNonNull(count);
             return this;
         }
 
-        public Builder setDeviceDetails(List<DeviceDetailsResponse> deviceDetails) {
+        public Builder deviceDetails(List<DeviceDetailsResponse> deviceDetails) {
             this.deviceDetails = Objects.requireNonNull(deviceDetails);
             return this;
         }
 
-        public Builder setDisplayInfo(@Nullable DisplayInfoResponse displayInfo) {
+        public Builder displayInfo(@Nullable DisplayInfoResponse displayInfo) {
             this.displayInfo = displayInfo;
             return this;
         }
 
-        public Builder setHierarchyInformation(HierarchyInformationResponse hierarchyInformation) {
+        public Builder hierarchyInformation(HierarchyInformationResponse hierarchyInformation) {
             this.hierarchyInformation = Objects.requireNonNull(hierarchyInformation);
             return this;
         }
 
-        public Builder setProductDoubleEncryptionStatus(String productDoubleEncryptionStatus) {
+        public Builder productDoubleEncryptionStatus(String productDoubleEncryptionStatus) {
             this.productDoubleEncryptionStatus = Objects.requireNonNull(productDoubleEncryptionStatus);
             return this;
         }

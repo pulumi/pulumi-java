@@ -124,52 +124,52 @@ public final class IngressArgs extends io.pulumi.resources.ResourceArgs {
     	      this.transport = defaults.transport;
         }
 
-        public Builder setAllowInsecure(@Nullable Input<Boolean> allowInsecure) {
+        public Builder allowInsecure(@Nullable Input<Boolean> allowInsecure) {
             this.allowInsecure = allowInsecure;
             return this;
         }
 
-        public Builder setAllowInsecure(@Nullable Boolean allowInsecure) {
+        public Builder allowInsecure(@Nullable Boolean allowInsecure) {
             this.allowInsecure = Input.ofNullable(allowInsecure);
             return this;
         }
 
-        public Builder setExternal(@Nullable Input<Boolean> external) {
+        public Builder external(@Nullable Input<Boolean> external) {
             this.external = external;
             return this;
         }
 
-        public Builder setExternal(@Nullable Boolean external) {
+        public Builder external(@Nullable Boolean external) {
             this.external = Input.ofNullable(external);
             return this;
         }
 
-        public Builder setTargetPort(@Nullable Input<Integer> targetPort) {
+        public Builder targetPort(@Nullable Input<Integer> targetPort) {
             this.targetPort = targetPort;
             return this;
         }
 
-        public Builder setTargetPort(@Nullable Integer targetPort) {
+        public Builder targetPort(@Nullable Integer targetPort) {
             this.targetPort = Input.ofNullable(targetPort);
             return this;
         }
 
-        public Builder setTraffic(@Nullable Input<List<TrafficWeightArgs>> traffic) {
+        public Builder traffic(@Nullable Input<List<TrafficWeightArgs>> traffic) {
             this.traffic = traffic;
             return this;
         }
 
-        public Builder setTraffic(@Nullable List<TrafficWeightArgs> traffic) {
+        public Builder traffic(@Nullable List<TrafficWeightArgs> traffic) {
             this.traffic = Input.ofNullable(traffic);
             return this;
         }
 
-        public Builder setTransport(@Nullable Input<Either<String,IngressTransportMethod>> transport) {
+        public Builder transport(@Nullable Input<Either<String,IngressTransportMethod>> transport) {
             this.transport = transport;
             return this;
         }
 
-        public Builder setTransport(@Nullable Either<String,IngressTransportMethod> transport) {
+        public Builder transport(@Nullable Either<String,IngressTransportMethod> transport) {
             this.transport = Input.ofNullable(transport);
             return this;
         }

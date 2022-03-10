@@ -57,12 +57,12 @@ public final class BlockchainMemberNodesSkuArgs extends io.pulumi.resources.Reso
     	      this.capacity = defaults.capacity;
         }
 
-        public Builder setCapacity(@Nullable Input<Integer> capacity) {
+        public Builder capacity(@Nullable Input<Integer> capacity) {
             this.capacity = capacity;
             return this;
         }
 
-        public Builder setCapacity(@Nullable Integer capacity) {
+        public Builder capacity(@Nullable Integer capacity) {
             this.capacity = Input.ofNullable(capacity);
             return this;
         }

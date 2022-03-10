@@ -109,42 +109,42 @@ public final class RequestContractArgs extends io.pulumi.resources.ResourceArgs 
     	      this.representations = defaults.representations;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setHeaders(@Nullable Input<List<ParameterContractArgs>> headers) {
+        public Builder headers(@Nullable Input<List<ParameterContractArgs>> headers) {
             this.headers = headers;
             return this;
         }
 
-        public Builder setHeaders(@Nullable List<ParameterContractArgs> headers) {
+        public Builder headers(@Nullable List<ParameterContractArgs> headers) {
             this.headers = Input.ofNullable(headers);
             return this;
         }
 
-        public Builder setQueryParameters(@Nullable Input<List<ParameterContractArgs>> queryParameters) {
+        public Builder queryParameters(@Nullable Input<List<ParameterContractArgs>> queryParameters) {
             this.queryParameters = queryParameters;
             return this;
         }
 
-        public Builder setQueryParameters(@Nullable List<ParameterContractArgs> queryParameters) {
+        public Builder queryParameters(@Nullable List<ParameterContractArgs> queryParameters) {
             this.queryParameters = Input.ofNullable(queryParameters);
             return this;
         }
 
-        public Builder setRepresentations(@Nullable Input<List<RepresentationContractArgs>> representations) {
+        public Builder representations(@Nullable Input<List<RepresentationContractArgs>> representations) {
             this.representations = representations;
             return this;
         }
 
-        public Builder setRepresentations(@Nullable List<RepresentationContractArgs> representations) {
+        public Builder representations(@Nullable List<RepresentationContractArgs> representations) {
             this.representations = Input.ofNullable(representations);
             return this;
         }

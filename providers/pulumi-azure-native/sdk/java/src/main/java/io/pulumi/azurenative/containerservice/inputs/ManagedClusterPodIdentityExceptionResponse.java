@@ -85,17 +85,17 @@ public final class ManagedClusterPodIdentityExceptionResponse extends io.pulumi.
     	      this.podLabels = defaults.podLabels;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setNamespace(String namespace) {
+        public Builder namespace(String namespace) {
             this.namespace = Objects.requireNonNull(namespace);
             return this;
         }
 
-        public Builder setPodLabels(Map<String,String> podLabels) {
+        public Builder podLabels(Map<String,String> podLabels) {
             this.podLabels = Objects.requireNonNull(podLabels);
             return this;
         }

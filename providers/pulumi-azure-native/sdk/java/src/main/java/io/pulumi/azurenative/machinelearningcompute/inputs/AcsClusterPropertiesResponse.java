@@ -158,37 +158,37 @@ public final class AcsClusterPropertiesResponse extends io.pulumi.resources.Invo
     	      this.systemServices = defaults.systemServices;
         }
 
-        public Builder setAgentCount(@Nullable Integer agentCount) {
+        public Builder agentCount(@Nullable Integer agentCount) {
             this.agentCount = agentCount;
             return this;
         }
 
-        public Builder setAgentVmSize(@Nullable String agentVmSize) {
+        public Builder agentVmSize(@Nullable String agentVmSize) {
             this.agentVmSize = agentVmSize;
             return this;
         }
 
-        public Builder setClusterFqdn(String clusterFqdn) {
+        public Builder clusterFqdn(String clusterFqdn) {
             this.clusterFqdn = Objects.requireNonNull(clusterFqdn);
             return this;
         }
 
-        public Builder setMasterCount(@Nullable Integer masterCount) {
+        public Builder masterCount(@Nullable Integer masterCount) {
             this.masterCount = masterCount;
             return this;
         }
 
-        public Builder setOrchestratorProperties(@Nullable KubernetesClusterPropertiesResponse orchestratorProperties) {
+        public Builder orchestratorProperties(@Nullable KubernetesClusterPropertiesResponse orchestratorProperties) {
             this.orchestratorProperties = orchestratorProperties;
             return this;
         }
 
-        public Builder setOrchestratorType(String orchestratorType) {
+        public Builder orchestratorType(String orchestratorType) {
             this.orchestratorType = Objects.requireNonNull(orchestratorType);
             return this;
         }
 
-        public Builder setSystemServices(@Nullable List<SystemServiceResponse> systemServices) {
+        public Builder systemServices(@Nullable List<SystemServiceResponse> systemServices) {
             this.systemServices = systemServices;
             return this;
         }

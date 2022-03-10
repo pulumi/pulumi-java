@@ -69,12 +69,12 @@ public final class ServerCertificateCommonNamesResponse {
     	      this.x509StoreName = defaults.x509StoreName;
         }
 
-        public Builder setCommonNames(@Nullable List<ServerCertificateCommonNameResponse> commonNames) {
+        public Builder commonNames(@Nullable List<ServerCertificateCommonNameResponse> commonNames) {
             this.commonNames = commonNames;
             return this;
         }
 
-        public Builder setX509StoreName(@Nullable String x509StoreName) {
+        public Builder x509StoreName(@Nullable String x509StoreName) {
             this.x509StoreName = x509StoreName;
             return this;
         }

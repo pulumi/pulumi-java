@@ -94,32 +94,32 @@ public final class SecurityPolicyWebApplicationFirewallParametersArgs extends io
     	      this.wafPolicy = defaults.wafPolicy;
         }
 
-        public Builder setAssociations(@Nullable Input<List<SecurityPolicyWebApplicationFirewallAssociationArgs>> associations) {
+        public Builder associations(@Nullable Input<List<SecurityPolicyWebApplicationFirewallAssociationArgs>> associations) {
             this.associations = associations;
             return this;
         }
 
-        public Builder setAssociations(@Nullable List<SecurityPolicyWebApplicationFirewallAssociationArgs> associations) {
+        public Builder associations(@Nullable List<SecurityPolicyWebApplicationFirewallAssociationArgs> associations) {
             this.associations = Input.ofNullable(associations);
             return this;
         }
 
-        public Builder setType(Input<String> type) {
+        public Builder type(Input<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }
 
-        public Builder setWafPolicy(@Nullable Input<ResourceReferenceArgs> wafPolicy) {
+        public Builder wafPolicy(@Nullable Input<ResourceReferenceArgs> wafPolicy) {
             this.wafPolicy = wafPolicy;
             return this;
         }
 
-        public Builder setWafPolicy(@Nullable ResourceReferenceArgs wafPolicy) {
+        public Builder wafPolicy(@Nullable ResourceReferenceArgs wafPolicy) {
             this.wafPolicy = Input.ofNullable(wafPolicy);
             return this;
         }

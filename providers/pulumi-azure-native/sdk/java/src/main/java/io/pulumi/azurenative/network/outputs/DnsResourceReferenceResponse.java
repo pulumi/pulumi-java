@@ -68,12 +68,12 @@ public final class DnsResourceReferenceResponse {
     	      this.targetResource = defaults.targetResource;
         }
 
-        public Builder setDnsResources(@Nullable List<SubResourceResponse> dnsResources) {
+        public Builder dnsResources(@Nullable List<SubResourceResponse> dnsResources) {
             this.dnsResources = dnsResources;
             return this;
         }
 
-        public Builder setTargetResource(@Nullable SubResourceResponse targetResource) {
+        public Builder targetResource(@Nullable SubResourceResponse targetResource) {
             this.targetResource = targetResource;
             return this;
         }

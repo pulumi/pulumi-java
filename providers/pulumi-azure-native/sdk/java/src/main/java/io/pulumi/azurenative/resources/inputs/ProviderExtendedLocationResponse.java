@@ -91,17 +91,17 @@ public final class ProviderExtendedLocationResponse extends io.pulumi.resources.
     	      this.type = defaults.type;
         }
 
-        public Builder setExtendedLocations(@Nullable List<String> extendedLocations) {
+        public Builder extendedLocations(@Nullable List<String> extendedLocations) {
             this.extendedLocations = extendedLocations;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = type;
             return this;
         }

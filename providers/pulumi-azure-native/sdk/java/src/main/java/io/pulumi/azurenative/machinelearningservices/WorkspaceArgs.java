@@ -366,202 +366,202 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
     	      this.workspaceName = defaults.workspaceName;
         }
 
-        public Builder setAllowPublicAccessWhenBehindVnet(@Nullable Input<Boolean> allowPublicAccessWhenBehindVnet) {
+        public Builder allowPublicAccessWhenBehindVnet(@Nullable Input<Boolean> allowPublicAccessWhenBehindVnet) {
             this.allowPublicAccessWhenBehindVnet = allowPublicAccessWhenBehindVnet;
             return this;
         }
 
-        public Builder setAllowPublicAccessWhenBehindVnet(@Nullable Boolean allowPublicAccessWhenBehindVnet) {
+        public Builder allowPublicAccessWhenBehindVnet(@Nullable Boolean allowPublicAccessWhenBehindVnet) {
             this.allowPublicAccessWhenBehindVnet = Input.ofNullable(allowPublicAccessWhenBehindVnet);
             return this;
         }
 
-        public Builder setApplicationInsights(@Nullable Input<String> applicationInsights) {
+        public Builder applicationInsights(@Nullable Input<String> applicationInsights) {
             this.applicationInsights = applicationInsights;
             return this;
         }
 
-        public Builder setApplicationInsights(@Nullable String applicationInsights) {
+        public Builder applicationInsights(@Nullable String applicationInsights) {
             this.applicationInsights = Input.ofNullable(applicationInsights);
             return this;
         }
 
-        public Builder setContainerRegistry(@Nullable Input<String> containerRegistry) {
+        public Builder containerRegistry(@Nullable Input<String> containerRegistry) {
             this.containerRegistry = containerRegistry;
             return this;
         }
 
-        public Builder setContainerRegistry(@Nullable String containerRegistry) {
+        public Builder containerRegistry(@Nullable String containerRegistry) {
             this.containerRegistry = Input.ofNullable(containerRegistry);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setDiscoveryUrl(@Nullable Input<String> discoveryUrl) {
+        public Builder discoveryUrl(@Nullable Input<String> discoveryUrl) {
             this.discoveryUrl = discoveryUrl;
             return this;
         }
 
-        public Builder setDiscoveryUrl(@Nullable String discoveryUrl) {
+        public Builder discoveryUrl(@Nullable String discoveryUrl) {
             this.discoveryUrl = Input.ofNullable(discoveryUrl);
             return this;
         }
 
-        public Builder setEncryption(@Nullable Input<EncryptionPropertyArgs> encryption) {
+        public Builder encryption(@Nullable Input<EncryptionPropertyArgs> encryption) {
             this.encryption = encryption;
             return this;
         }
 
-        public Builder setEncryption(@Nullable EncryptionPropertyArgs encryption) {
+        public Builder encryption(@Nullable EncryptionPropertyArgs encryption) {
             this.encryption = Input.ofNullable(encryption);
             return this;
         }
 
-        public Builder setFriendlyName(@Nullable Input<String> friendlyName) {
+        public Builder friendlyName(@Nullable Input<String> friendlyName) {
             this.friendlyName = friendlyName;
             return this;
         }
 
-        public Builder setFriendlyName(@Nullable String friendlyName) {
+        public Builder friendlyName(@Nullable String friendlyName) {
             this.friendlyName = Input.ofNullable(friendlyName);
             return this;
         }
 
-        public Builder setHbiWorkspace(@Nullable Input<Boolean> hbiWorkspace) {
+        public Builder hbiWorkspace(@Nullable Input<Boolean> hbiWorkspace) {
             this.hbiWorkspace = hbiWorkspace;
             return this;
         }
 
-        public Builder setHbiWorkspace(@Nullable Boolean hbiWorkspace) {
+        public Builder hbiWorkspace(@Nullable Boolean hbiWorkspace) {
             this.hbiWorkspace = Input.ofNullable(hbiWorkspace);
             return this;
         }
 
-        public Builder setIdentity(@Nullable Input<IdentityArgs> identity) {
+        public Builder identity(@Nullable Input<IdentityArgs> identity) {
             this.identity = identity;
             return this;
         }
 
-        public Builder setIdentity(@Nullable IdentityArgs identity) {
+        public Builder identity(@Nullable IdentityArgs identity) {
             this.identity = Input.ofNullable(identity);
             return this;
         }
 
-        public Builder setImageBuildCompute(@Nullable Input<String> imageBuildCompute) {
+        public Builder imageBuildCompute(@Nullable Input<String> imageBuildCompute) {
             this.imageBuildCompute = imageBuildCompute;
             return this;
         }
 
-        public Builder setImageBuildCompute(@Nullable String imageBuildCompute) {
+        public Builder imageBuildCompute(@Nullable String imageBuildCompute) {
             this.imageBuildCompute = Input.ofNullable(imageBuildCompute);
             return this;
         }
 
-        public Builder setKeyVault(@Nullable Input<String> keyVault) {
+        public Builder keyVault(@Nullable Input<String> keyVault) {
             this.keyVault = keyVault;
             return this;
         }
 
-        public Builder setKeyVault(@Nullable String keyVault) {
+        public Builder keyVault(@Nullable String keyVault) {
             this.keyVault = Input.ofNullable(keyVault);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setPrimaryUserAssignedIdentity(@Nullable Input<String> primaryUserAssignedIdentity) {
+        public Builder primaryUserAssignedIdentity(@Nullable Input<String> primaryUserAssignedIdentity) {
             this.primaryUserAssignedIdentity = primaryUserAssignedIdentity;
             return this;
         }
 
-        public Builder setPrimaryUserAssignedIdentity(@Nullable String primaryUserAssignedIdentity) {
+        public Builder primaryUserAssignedIdentity(@Nullable String primaryUserAssignedIdentity) {
             this.primaryUserAssignedIdentity = Input.ofNullable(primaryUserAssignedIdentity);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setServiceManagedResourcesSettings(@Nullable Input<ServiceManagedResourcesSettingsArgs> serviceManagedResourcesSettings) {
+        public Builder serviceManagedResourcesSettings(@Nullable Input<ServiceManagedResourcesSettingsArgs> serviceManagedResourcesSettings) {
             this.serviceManagedResourcesSettings = serviceManagedResourcesSettings;
             return this;
         }
 
-        public Builder setServiceManagedResourcesSettings(@Nullable ServiceManagedResourcesSettingsArgs serviceManagedResourcesSettings) {
+        public Builder serviceManagedResourcesSettings(@Nullable ServiceManagedResourcesSettingsArgs serviceManagedResourcesSettings) {
             this.serviceManagedResourcesSettings = Input.ofNullable(serviceManagedResourcesSettings);
             return this;
         }
 
-        public Builder setSharedPrivateLinkResources(@Nullable Input<List<SharedPrivateLinkResourceArgs>> sharedPrivateLinkResources) {
+        public Builder sharedPrivateLinkResources(@Nullable Input<List<SharedPrivateLinkResourceArgs>> sharedPrivateLinkResources) {
             this.sharedPrivateLinkResources = sharedPrivateLinkResources;
             return this;
         }
 
-        public Builder setSharedPrivateLinkResources(@Nullable List<SharedPrivateLinkResourceArgs> sharedPrivateLinkResources) {
+        public Builder sharedPrivateLinkResources(@Nullable List<SharedPrivateLinkResourceArgs> sharedPrivateLinkResources) {
             this.sharedPrivateLinkResources = Input.ofNullable(sharedPrivateLinkResources);
             return this;
         }
 
-        public Builder setSku(@Nullable Input<SkuArgs> sku) {
+        public Builder sku(@Nullable Input<SkuArgs> sku) {
             this.sku = sku;
             return this;
         }
 
-        public Builder setSku(@Nullable SkuArgs sku) {
+        public Builder sku(@Nullable SkuArgs sku) {
             this.sku = Input.ofNullable(sku);
             return this;
         }
 
-        public Builder setStorageAccount(@Nullable Input<String> storageAccount) {
+        public Builder storageAccount(@Nullable Input<String> storageAccount) {
             this.storageAccount = storageAccount;
             return this;
         }
 
-        public Builder setStorageAccount(@Nullable String storageAccount) {
+        public Builder storageAccount(@Nullable String storageAccount) {
             this.storageAccount = Input.ofNullable(storageAccount);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setWorkspaceName(@Nullable Input<String> workspaceName) {
+        public Builder workspaceName(@Nullable Input<String> workspaceName) {
             this.workspaceName = workspaceName;
             return this;
         }
 
-        public Builder setWorkspaceName(@Nullable String workspaceName) {
+        public Builder workspaceName(@Nullable String workspaceName) {
             this.workspaceName = Input.ofNullable(workspaceName);
             return this;
         }

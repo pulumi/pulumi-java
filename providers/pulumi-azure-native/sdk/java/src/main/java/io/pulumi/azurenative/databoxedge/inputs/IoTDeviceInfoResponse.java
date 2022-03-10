@@ -107,22 +107,22 @@ public final class IoTDeviceInfoResponse extends io.pulumi.resources.InvokeArgs 
     	      this.ioTHostHubId = defaults.ioTHostHubId;
         }
 
-        public Builder setAuthentication(@Nullable AuthenticationResponse authentication) {
+        public Builder authentication(@Nullable AuthenticationResponse authentication) {
             this.authentication = authentication;
             return this;
         }
 
-        public Builder setDeviceId(String deviceId) {
+        public Builder deviceId(String deviceId) {
             this.deviceId = Objects.requireNonNull(deviceId);
             return this;
         }
 
-        public Builder setIoTHostHub(String ioTHostHub) {
+        public Builder ioTHostHub(String ioTHostHub) {
             this.ioTHostHub = Objects.requireNonNull(ioTHostHub);
             return this;
         }
 
-        public Builder setIoTHostHubId(@Nullable String ioTHostHubId) {
+        public Builder ioTHostHubId(@Nullable String ioTHostHubId) {
             this.ioTHostHubId = ioTHostHubId;
             return this;
         }

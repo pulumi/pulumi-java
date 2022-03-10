@@ -106,22 +106,22 @@ public final class SapTablePartitionSettingsResponse extends io.pulumi.resources
     	      this.partitionUpperBound = defaults.partitionUpperBound;
         }
 
-        public Builder setMaxPartitionsNumber(@Nullable Object maxPartitionsNumber) {
+        public Builder maxPartitionsNumber(@Nullable Object maxPartitionsNumber) {
             this.maxPartitionsNumber = maxPartitionsNumber;
             return this;
         }
 
-        public Builder setPartitionColumnName(@Nullable Object partitionColumnName) {
+        public Builder partitionColumnName(@Nullable Object partitionColumnName) {
             this.partitionColumnName = partitionColumnName;
             return this;
         }
 
-        public Builder setPartitionLowerBound(@Nullable Object partitionLowerBound) {
+        public Builder partitionLowerBound(@Nullable Object partitionLowerBound) {
             this.partitionLowerBound = partitionLowerBound;
             return this;
         }
 
-        public Builder setPartitionUpperBound(@Nullable Object partitionUpperBound) {
+        public Builder partitionUpperBound(@Nullable Object partitionUpperBound) {
             this.partitionUpperBound = partitionUpperBound;
             return this;
         }

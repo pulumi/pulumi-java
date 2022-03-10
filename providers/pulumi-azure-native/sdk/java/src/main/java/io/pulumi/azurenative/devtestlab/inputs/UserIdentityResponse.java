@@ -122,27 +122,27 @@ public final class UserIdentityResponse extends io.pulumi.resources.InvokeArgs {
     	      this.tenantId = defaults.tenantId;
         }
 
-        public Builder setAppId(@Nullable String appId) {
+        public Builder appId(@Nullable String appId) {
             this.appId = appId;
             return this;
         }
 
-        public Builder setObjectId(@Nullable String objectId) {
+        public Builder objectId(@Nullable String objectId) {
             this.objectId = objectId;
             return this;
         }
 
-        public Builder setPrincipalId(@Nullable String principalId) {
+        public Builder principalId(@Nullable String principalId) {
             this.principalId = principalId;
             return this;
         }
 
-        public Builder setPrincipalName(@Nullable String principalName) {
+        public Builder principalName(@Nullable String principalName) {
             this.principalName = principalName;
             return this;
         }
 
-        public Builder setTenantId(@Nullable String tenantId) {
+        public Builder tenantId(@Nullable String tenantId) {
             this.tenantId = tenantId;
             return this;
         }

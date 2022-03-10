@@ -102,42 +102,42 @@ public final class ApplicationPackageArgs extends io.pulumi.resources.ResourceAr
     	      this.versionName = defaults.versionName;
         }
 
-        public Builder setAccountName(Input<String> accountName) {
+        public Builder accountName(Input<String> accountName) {
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
 
-        public Builder setAccountName(String accountName) {
+        public Builder accountName(String accountName) {
             this.accountName = Input.of(Objects.requireNonNull(accountName));
             return this;
         }
 
-        public Builder setApplicationName(Input<String> applicationName) {
+        public Builder applicationName(Input<String> applicationName) {
             this.applicationName = Objects.requireNonNull(applicationName);
             return this;
         }
 
-        public Builder setApplicationName(String applicationName) {
+        public Builder applicationName(String applicationName) {
             this.applicationName = Input.of(Objects.requireNonNull(applicationName));
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setVersionName(@Nullable Input<String> versionName) {
+        public Builder versionName(@Nullable Input<String> versionName) {
             this.versionName = versionName;
             return this;
         }
 
-        public Builder setVersionName(@Nullable String versionName) {
+        public Builder versionName(@Nullable String versionName) {
             this.versionName = Input.ofNullable(versionName);
             return this;
         }

@@ -184,47 +184,47 @@ public final class CustomEventsTriggerResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setAnnotations(@Nullable List<Object> annotations) {
+        public Builder annotations(@Nullable List<Object> annotations) {
             this.annotations = annotations;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setEvents(List<Object> events) {
+        public Builder events(List<Object> events) {
             this.events = Objects.requireNonNull(events);
             return this;
         }
 
-        public Builder setPipelines(@Nullable List<TriggerPipelineReferenceResponse> pipelines) {
+        public Builder pipelines(@Nullable List<TriggerPipelineReferenceResponse> pipelines) {
             this.pipelines = pipelines;
             return this;
         }
 
-        public Builder setRuntimeState(String runtimeState) {
+        public Builder runtimeState(String runtimeState) {
             this.runtimeState = Objects.requireNonNull(runtimeState);
             return this;
         }
 
-        public Builder setScope(String scope) {
+        public Builder scope(String scope) {
             this.scope = Objects.requireNonNull(scope);
             return this;
         }
 
-        public Builder setSubjectBeginsWith(@Nullable String subjectBeginsWith) {
+        public Builder subjectBeginsWith(@Nullable String subjectBeginsWith) {
             this.subjectBeginsWith = subjectBeginsWith;
             return this;
         }
 
-        public Builder setSubjectEndsWith(@Nullable String subjectEndsWith) {
+        public Builder subjectEndsWith(@Nullable String subjectEndsWith) {
             this.subjectEndsWith = subjectEndsWith;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

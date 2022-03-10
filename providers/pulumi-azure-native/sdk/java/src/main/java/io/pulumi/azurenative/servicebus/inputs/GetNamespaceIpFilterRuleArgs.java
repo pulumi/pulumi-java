@@ -84,17 +84,17 @@ public final class GetNamespaceIpFilterRuleArgs extends io.pulumi.resources.Invo
     	      this.resourceGroupName = defaults.resourceGroupName;
         }
 
-        public Builder setIpFilterRuleName(String ipFilterRuleName) {
+        public Builder ipFilterRuleName(String ipFilterRuleName) {
             this.ipFilterRuleName = Objects.requireNonNull(ipFilterRuleName);
             return this;
         }
 
-        public Builder setNamespaceName(String namespaceName) {
+        public Builder namespaceName(String namespaceName) {
             this.namespaceName = Objects.requireNonNull(namespaceName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }

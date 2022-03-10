@@ -65,12 +65,12 @@ public final class ParticipantProfilePropertyReferenceResponse {
     	      this.profilePropertyName = defaults.profilePropertyName;
         }
 
-        public Builder setInteractionPropertyName(String interactionPropertyName) {
+        public Builder interactionPropertyName(String interactionPropertyName) {
             this.interactionPropertyName = Objects.requireNonNull(interactionPropertyName);
             return this;
         }
 
-        public Builder setProfilePropertyName(String profilePropertyName) {
+        public Builder profilePropertyName(String profilePropertyName) {
             this.profilePropertyName = Objects.requireNonNull(profilePropertyName);
             return this;
         }

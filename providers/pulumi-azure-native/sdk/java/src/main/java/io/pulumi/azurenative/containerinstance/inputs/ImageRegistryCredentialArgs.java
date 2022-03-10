@@ -90,32 +90,32 @@ public final class ImageRegistryCredentialArgs extends io.pulumi.resources.Resou
     	      this.username = defaults.username;
         }
 
-        public Builder setPassword(@Nullable Input<String> password) {
+        public Builder password(@Nullable Input<String> password) {
             this.password = password;
             return this;
         }
 
-        public Builder setPassword(@Nullable String password) {
+        public Builder password(@Nullable String password) {
             this.password = Input.ofNullable(password);
             return this;
         }
 
-        public Builder setServer(Input<String> server) {
+        public Builder server(Input<String> server) {
             this.server = Objects.requireNonNull(server);
             return this;
         }
 
-        public Builder setServer(String server) {
+        public Builder server(String server) {
             this.server = Input.of(Objects.requireNonNull(server));
             return this;
         }
 
-        public Builder setUsername(Input<String> username) {
+        public Builder username(Input<String> username) {
             this.username = Objects.requireNonNull(username);
             return this;
         }
 
-        public Builder setUsername(String username) {
+        public Builder username(String username) {
             this.username = Input.of(Objects.requireNonNull(username));
             return this;
         }

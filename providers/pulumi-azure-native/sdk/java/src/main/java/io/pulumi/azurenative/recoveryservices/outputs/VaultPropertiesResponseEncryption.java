@@ -85,17 +85,17 @@ public final class VaultPropertiesResponseEncryption {
     	      this.keyVaultProperties = defaults.keyVaultProperties;
         }
 
-        public Builder setInfrastructureEncryption(@Nullable String infrastructureEncryption) {
+        public Builder infrastructureEncryption(@Nullable String infrastructureEncryption) {
             this.infrastructureEncryption = infrastructureEncryption;
             return this;
         }
 
-        public Builder setKekIdentity(@Nullable CmkKekIdentityResponse kekIdentity) {
+        public Builder kekIdentity(@Nullable CmkKekIdentityResponse kekIdentity) {
             this.kekIdentity = kekIdentity;
             return this;
         }
 
-        public Builder setKeyVaultProperties(@Nullable CmkKeyVaultPropertiesResponse keyVaultProperties) {
+        public Builder keyVaultProperties(@Nullable CmkKeyVaultPropertiesResponse keyVaultProperties) {
             this.keyVaultProperties = keyVaultProperties;
             return this;
         }

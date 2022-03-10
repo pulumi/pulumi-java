@@ -120,52 +120,52 @@ public final class TransformArgs extends io.pulumi.resources.ResourceArgs {
     	      this.transformName = defaults.transformName;
         }
 
-        public Builder setAccountName(Input<String> accountName) {
+        public Builder accountName(Input<String> accountName) {
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
 
-        public Builder setAccountName(String accountName) {
+        public Builder accountName(String accountName) {
             this.accountName = Input.of(Objects.requireNonNull(accountName));
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setOutputs(Input<List<TransformOutputArgs>> outputs) {
+        public Builder outputs(Input<List<TransformOutputArgs>> outputs) {
             this.outputs = Objects.requireNonNull(outputs);
             return this;
         }
 
-        public Builder setOutputs(List<TransformOutputArgs> outputs) {
+        public Builder outputs(List<TransformOutputArgs> outputs) {
             this.outputs = Input.of(Objects.requireNonNull(outputs));
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setTransformName(@Nullable Input<String> transformName) {
+        public Builder transformName(@Nullable Input<String> transformName) {
             this.transformName = transformName;
             return this;
         }
 
-        public Builder setTransformName(@Nullable String transformName) {
+        public Builder transformName(@Nullable String transformName) {
             this.transformName = Input.ofNullable(transformName);
             return this;
         }

@@ -245,62 +245,62 @@ public final class AzureBatchLinkedServiceResponse extends io.pulumi.resources.I
     	      this.type = defaults.type;
         }
 
-        public Builder setAccessKey(@Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> accessKey) {
+        public Builder accessKey(@Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> accessKey) {
             this.accessKey = accessKey;
             return this;
         }
 
-        public Builder setAccountName(Object accountName) {
+        public Builder accountName(Object accountName) {
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
 
-        public Builder setAnnotations(@Nullable List<Object> annotations) {
+        public Builder annotations(@Nullable List<Object> annotations) {
             this.annotations = annotations;
             return this;
         }
 
-        public Builder setBatchUri(Object batchUri) {
+        public Builder batchUri(Object batchUri) {
             this.batchUri = Objects.requireNonNull(batchUri);
             return this;
         }
 
-        public Builder setConnectVia(@Nullable IntegrationRuntimeReferenceResponse connectVia) {
+        public Builder connectVia(@Nullable IntegrationRuntimeReferenceResponse connectVia) {
             this.connectVia = connectVia;
             return this;
         }
 
-        public Builder setCredential(@Nullable CredentialReferenceResponse credential) {
+        public Builder credential(@Nullable CredentialReferenceResponse credential) {
             this.credential = credential;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setEncryptedCredential(@Nullable Object encryptedCredential) {
+        public Builder encryptedCredential(@Nullable Object encryptedCredential) {
             this.encryptedCredential = encryptedCredential;
             return this;
         }
 
-        public Builder setLinkedServiceName(LinkedServiceReferenceResponse linkedServiceName) {
+        public Builder linkedServiceName(LinkedServiceReferenceResponse linkedServiceName) {
             this.linkedServiceName = Objects.requireNonNull(linkedServiceName);
             return this;
         }
 
-        public Builder setParameters(@Nullable Map<String,ParameterSpecificationResponse> parameters) {
+        public Builder parameters(@Nullable Map<String,ParameterSpecificationResponse> parameters) {
             this.parameters = parameters;
             return this;
         }
 
-        public Builder setPoolName(Object poolName) {
+        public Builder poolName(Object poolName) {
             this.poolName = Objects.requireNonNull(poolName);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

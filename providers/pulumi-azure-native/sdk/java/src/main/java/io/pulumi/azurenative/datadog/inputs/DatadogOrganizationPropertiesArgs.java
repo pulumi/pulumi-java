@@ -138,62 +138,62 @@ public final class DatadogOrganizationPropertiesArgs extends io.pulumi.resources
     	      this.redirectUri = defaults.redirectUri;
         }
 
-        public Builder setApiKey(@Nullable Input<String> apiKey) {
+        public Builder apiKey(@Nullable Input<String> apiKey) {
             this.apiKey = apiKey;
             return this;
         }
 
-        public Builder setApiKey(@Nullable String apiKey) {
+        public Builder apiKey(@Nullable String apiKey) {
             this.apiKey = Input.ofNullable(apiKey);
             return this;
         }
 
-        public Builder setApplicationKey(@Nullable Input<String> applicationKey) {
+        public Builder applicationKey(@Nullable Input<String> applicationKey) {
             this.applicationKey = applicationKey;
             return this;
         }
 
-        public Builder setApplicationKey(@Nullable String applicationKey) {
+        public Builder applicationKey(@Nullable String applicationKey) {
             this.applicationKey = Input.ofNullable(applicationKey);
             return this;
         }
 
-        public Builder setEnterpriseAppId(@Nullable Input<String> enterpriseAppId) {
+        public Builder enterpriseAppId(@Nullable Input<String> enterpriseAppId) {
             this.enterpriseAppId = enterpriseAppId;
             return this;
         }
 
-        public Builder setEnterpriseAppId(@Nullable String enterpriseAppId) {
+        public Builder enterpriseAppId(@Nullable String enterpriseAppId) {
             this.enterpriseAppId = Input.ofNullable(enterpriseAppId);
             return this;
         }
 
-        public Builder setLinkingAuthCode(@Nullable Input<String> linkingAuthCode) {
+        public Builder linkingAuthCode(@Nullable Input<String> linkingAuthCode) {
             this.linkingAuthCode = linkingAuthCode;
             return this;
         }
 
-        public Builder setLinkingAuthCode(@Nullable String linkingAuthCode) {
+        public Builder linkingAuthCode(@Nullable String linkingAuthCode) {
             this.linkingAuthCode = Input.ofNullable(linkingAuthCode);
             return this;
         }
 
-        public Builder setLinkingClientId(@Nullable Input<String> linkingClientId) {
+        public Builder linkingClientId(@Nullable Input<String> linkingClientId) {
             this.linkingClientId = linkingClientId;
             return this;
         }
 
-        public Builder setLinkingClientId(@Nullable String linkingClientId) {
+        public Builder linkingClientId(@Nullable String linkingClientId) {
             this.linkingClientId = Input.ofNullable(linkingClientId);
             return this;
         }
 
-        public Builder setRedirectUri(@Nullable Input<String> redirectUri) {
+        public Builder redirectUri(@Nullable Input<String> redirectUri) {
             this.redirectUri = redirectUri;
             return this;
         }
 
-        public Builder setRedirectUri(@Nullable String redirectUri) {
+        public Builder redirectUri(@Nullable String redirectUri) {
             this.redirectUri = Input.ofNullable(redirectUri);
             return this;
         }

@@ -179,82 +179,82 @@ public final class IotDpsPropertiesDescriptionArgs extends io.pulumi.resources.R
     	      this.state = defaults.state;
         }
 
-        public Builder setAllocationPolicy(@Nullable Input<Either<String,AllocationPolicy>> allocationPolicy) {
+        public Builder allocationPolicy(@Nullable Input<Either<String,AllocationPolicy>> allocationPolicy) {
             this.allocationPolicy = allocationPolicy;
             return this;
         }
 
-        public Builder setAllocationPolicy(@Nullable Either<String,AllocationPolicy> allocationPolicy) {
+        public Builder allocationPolicy(@Nullable Either<String,AllocationPolicy> allocationPolicy) {
             this.allocationPolicy = Input.ofNullable(allocationPolicy);
             return this;
         }
 
-        public Builder setAuthorizationPolicies(@Nullable Input<List<SharedAccessSignatureAuthorizationRuleAccessRightsDescriptionArgs>> authorizationPolicies) {
+        public Builder authorizationPolicies(@Nullable Input<List<SharedAccessSignatureAuthorizationRuleAccessRightsDescriptionArgs>> authorizationPolicies) {
             this.authorizationPolicies = authorizationPolicies;
             return this;
         }
 
-        public Builder setAuthorizationPolicies(@Nullable List<SharedAccessSignatureAuthorizationRuleAccessRightsDescriptionArgs> authorizationPolicies) {
+        public Builder authorizationPolicies(@Nullable List<SharedAccessSignatureAuthorizationRuleAccessRightsDescriptionArgs> authorizationPolicies) {
             this.authorizationPolicies = Input.ofNullable(authorizationPolicies);
             return this;
         }
 
-        public Builder setIotHubs(@Nullable Input<List<IotHubDefinitionDescriptionArgs>> iotHubs) {
+        public Builder iotHubs(@Nullable Input<List<IotHubDefinitionDescriptionArgs>> iotHubs) {
             this.iotHubs = iotHubs;
             return this;
         }
 
-        public Builder setIotHubs(@Nullable List<IotHubDefinitionDescriptionArgs> iotHubs) {
+        public Builder iotHubs(@Nullable List<IotHubDefinitionDescriptionArgs> iotHubs) {
             this.iotHubs = Input.ofNullable(iotHubs);
             return this;
         }
 
-        public Builder setIpFilterRules(@Nullable Input<List<TargetIpFilterRuleArgs>> ipFilterRules) {
+        public Builder ipFilterRules(@Nullable Input<List<TargetIpFilterRuleArgs>> ipFilterRules) {
             this.ipFilterRules = ipFilterRules;
             return this;
         }
 
-        public Builder setIpFilterRules(@Nullable List<TargetIpFilterRuleArgs> ipFilterRules) {
+        public Builder ipFilterRules(@Nullable List<TargetIpFilterRuleArgs> ipFilterRules) {
             this.ipFilterRules = Input.ofNullable(ipFilterRules);
             return this;
         }
 
-        public Builder setPrivateEndpointConnections(@Nullable Input<List<PrivateEndpointConnectionArgs>> privateEndpointConnections) {
+        public Builder privateEndpointConnections(@Nullable Input<List<PrivateEndpointConnectionArgs>> privateEndpointConnections) {
             this.privateEndpointConnections = privateEndpointConnections;
             return this;
         }
 
-        public Builder setPrivateEndpointConnections(@Nullable List<PrivateEndpointConnectionArgs> privateEndpointConnections) {
+        public Builder privateEndpointConnections(@Nullable List<PrivateEndpointConnectionArgs> privateEndpointConnections) {
             this.privateEndpointConnections = Input.ofNullable(privateEndpointConnections);
             return this;
         }
 
-        public Builder setProvisioningState(@Nullable Input<String> provisioningState) {
+        public Builder provisioningState(@Nullable Input<String> provisioningState) {
             this.provisioningState = provisioningState;
             return this;
         }
 
-        public Builder setProvisioningState(@Nullable String provisioningState) {
+        public Builder provisioningState(@Nullable String provisioningState) {
             this.provisioningState = Input.ofNullable(provisioningState);
             return this;
         }
 
-        public Builder setPublicNetworkAccess(@Nullable Input<Either<String,PublicNetworkAccess>> publicNetworkAccess) {
+        public Builder publicNetworkAccess(@Nullable Input<Either<String,PublicNetworkAccess>> publicNetworkAccess) {
             this.publicNetworkAccess = publicNetworkAccess;
             return this;
         }
 
-        public Builder setPublicNetworkAccess(@Nullable Either<String,PublicNetworkAccess> publicNetworkAccess) {
+        public Builder publicNetworkAccess(@Nullable Either<String,PublicNetworkAccess> publicNetworkAccess) {
             this.publicNetworkAccess = Input.ofNullable(publicNetworkAccess);
             return this;
         }
 
-        public Builder setState(@Nullable Input<Either<String,State>> state) {
+        public Builder state(@Nullable Input<Either<String,State>> state) {
             this.state = state;
             return this;
         }
 
-        public Builder setState(@Nullable Either<String,State> state) {
+        public Builder state(@Nullable Either<String,State> state) {
             this.state = Input.ofNullable(state);
             return this;
         }

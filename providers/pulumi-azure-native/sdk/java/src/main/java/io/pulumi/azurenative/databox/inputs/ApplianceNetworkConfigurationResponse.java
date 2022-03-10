@@ -72,12 +72,12 @@ public final class ApplianceNetworkConfigurationResponse extends io.pulumi.resou
     	      this.name = defaults.name;
         }
 
-        public Builder setMacAddress(String macAddress) {
+        public Builder macAddress(String macAddress) {
             this.macAddress = Objects.requireNonNull(macAddress);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }

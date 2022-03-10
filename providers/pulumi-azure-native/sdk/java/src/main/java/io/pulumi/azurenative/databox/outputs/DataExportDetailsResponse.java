@@ -87,17 +87,17 @@ public final class DataExportDetailsResponse {
     	      this.transferConfiguration = defaults.transferConfiguration;
         }
 
-        public Builder setAccountDetails(Either<ManagedDiskDetailsResponse,StorageAccountDetailsResponse> accountDetails) {
+        public Builder accountDetails(Either<ManagedDiskDetailsResponse,StorageAccountDetailsResponse> accountDetails) {
             this.accountDetails = Objects.requireNonNull(accountDetails);
             return this;
         }
 
-        public Builder setLogCollectionLevel(@Nullable String logCollectionLevel) {
+        public Builder logCollectionLevel(@Nullable String logCollectionLevel) {
             this.logCollectionLevel = logCollectionLevel;
             return this;
         }
 
-        public Builder setTransferConfiguration(TransferConfigurationResponse transferConfiguration) {
+        public Builder transferConfiguration(TransferConfigurationResponse transferConfiguration) {
             this.transferConfiguration = Objects.requireNonNull(transferConfiguration);
             return this;
         }

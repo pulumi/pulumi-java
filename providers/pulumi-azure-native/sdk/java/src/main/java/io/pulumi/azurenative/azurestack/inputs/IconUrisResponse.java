@@ -122,27 +122,27 @@ public final class IconUrisResponse extends io.pulumi.resources.InvokeArgs {
     	      this.wide = defaults.wide;
         }
 
-        public Builder setHero(@Nullable String hero) {
+        public Builder hero(@Nullable String hero) {
             this.hero = hero;
             return this;
         }
 
-        public Builder setLarge(@Nullable String large) {
+        public Builder large(@Nullable String large) {
             this.large = large;
             return this;
         }
 
-        public Builder setMedium(@Nullable String medium) {
+        public Builder medium(@Nullable String medium) {
             this.medium = medium;
             return this;
         }
 
-        public Builder setSmall(@Nullable String small) {
+        public Builder small(@Nullable String small) {
             this.small = small;
             return this;
         }
 
-        public Builder setWide(@Nullable String wide) {
+        public Builder wide(@Nullable String wide) {
             this.wide = wide;
             return this;
         }

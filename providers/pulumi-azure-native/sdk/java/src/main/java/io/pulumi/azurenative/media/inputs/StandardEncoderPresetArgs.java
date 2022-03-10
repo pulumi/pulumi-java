@@ -126,42 +126,42 @@ public final class StandardEncoderPresetArgs extends io.pulumi.resources.Resourc
     	      this.odataType = defaults.odataType;
         }
 
-        public Builder setCodecs(Input<List<Object>> codecs) {
+        public Builder codecs(Input<List<Object>> codecs) {
             this.codecs = Objects.requireNonNull(codecs);
             return this;
         }
 
-        public Builder setCodecs(List<Object> codecs) {
+        public Builder codecs(List<Object> codecs) {
             this.codecs = Input.of(Objects.requireNonNull(codecs));
             return this;
         }
 
-        public Builder setFilters(@Nullable Input<FiltersArgs> filters) {
+        public Builder filters(@Nullable Input<FiltersArgs> filters) {
             this.filters = filters;
             return this;
         }
 
-        public Builder setFilters(@Nullable FiltersArgs filters) {
+        public Builder filters(@Nullable FiltersArgs filters) {
             this.filters = Input.ofNullable(filters);
             return this;
         }
 
-        public Builder setFormats(Input<List<Object>> formats) {
+        public Builder formats(Input<List<Object>> formats) {
             this.formats = Objects.requireNonNull(formats);
             return this;
         }
 
-        public Builder setFormats(List<Object> formats) {
+        public Builder formats(List<Object> formats) {
             this.formats = Input.of(Objects.requireNonNull(formats));
             return this;
         }
 
-        public Builder setOdataType(Input<String> odataType) {
+        public Builder odataType(Input<String> odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
 
-        public Builder setOdataType(String odataType) {
+        public Builder odataType(String odataType) {
             this.odataType = Input.of(Objects.requireNonNull(odataType));
             return this;
         }

@@ -121,52 +121,52 @@ public final class BandwidthSettingArgs extends io.pulumi.resources.ResourceArgs
     	      this.schedules = defaults.schedules;
         }
 
-        public Builder setBandwidthSettingName(@Nullable Input<String> bandwidthSettingName) {
+        public Builder bandwidthSettingName(@Nullable Input<String> bandwidthSettingName) {
             this.bandwidthSettingName = bandwidthSettingName;
             return this;
         }
 
-        public Builder setBandwidthSettingName(@Nullable String bandwidthSettingName) {
+        public Builder bandwidthSettingName(@Nullable String bandwidthSettingName) {
             this.bandwidthSettingName = Input.ofNullable(bandwidthSettingName);
             return this;
         }
 
-        public Builder setKind(@Nullable Input<Kind> kind) {
+        public Builder kind(@Nullable Input<Kind> kind) {
             this.kind = kind;
             return this;
         }
 
-        public Builder setKind(@Nullable Kind kind) {
+        public Builder kind(@Nullable Kind kind) {
             this.kind = Input.ofNullable(kind);
             return this;
         }
 
-        public Builder setManagerName(Input<String> managerName) {
+        public Builder managerName(Input<String> managerName) {
             this.managerName = Objects.requireNonNull(managerName);
             return this;
         }
 
-        public Builder setManagerName(String managerName) {
+        public Builder managerName(String managerName) {
             this.managerName = Input.of(Objects.requireNonNull(managerName));
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setSchedules(Input<List<BandwidthScheduleArgs>> schedules) {
+        public Builder schedules(Input<List<BandwidthScheduleArgs>> schedules) {
             this.schedules = Objects.requireNonNull(schedules);
             return this;
         }
 
-        public Builder setSchedules(List<BandwidthScheduleArgs> schedules) {
+        public Builder schedules(List<BandwidthScheduleArgs> schedules) {
             this.schedules = Input.of(Objects.requireNonNull(schedules));
             return this;
         }

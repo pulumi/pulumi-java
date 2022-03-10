@@ -148,37 +148,37 @@ public final class GetConfigurationAssignmentParentArgs extends io.pulumi.resour
     	      this.resourceType = defaults.resourceType;
         }
 
-        public Builder setConfigurationAssignmentName(String configurationAssignmentName) {
+        public Builder configurationAssignmentName(String configurationAssignmentName) {
             this.configurationAssignmentName = Objects.requireNonNull(configurationAssignmentName);
             return this;
         }
 
-        public Builder setProviderName(String providerName) {
+        public Builder providerName(String providerName) {
             this.providerName = Objects.requireNonNull(providerName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceName(String resourceName) {
+        public Builder resourceName(String resourceName) {
             this.resourceName = Objects.requireNonNull(resourceName);
             return this;
         }
 
-        public Builder setResourceParentName(String resourceParentName) {
+        public Builder resourceParentName(String resourceParentName) {
             this.resourceParentName = Objects.requireNonNull(resourceParentName);
             return this;
         }
 
-        public Builder setResourceParentType(String resourceParentType) {
+        public Builder resourceParentType(String resourceParentType) {
             this.resourceParentType = Objects.requireNonNull(resourceParentType);
             return this;
         }
 
-        public Builder setResourceType(String resourceType) {
+        public Builder resourceType(String resourceType) {
             this.resourceType = Objects.requireNonNull(resourceType);
             return this;
         }

@@ -138,32 +138,32 @@ public final class ReportConfigDatasetResponse {
     	      this.sorting = defaults.sorting;
         }
 
-        public Builder setAggregation(@Nullable Map<String,ReportConfigAggregationResponse> aggregation) {
+        public Builder aggregation(@Nullable Map<String,ReportConfigAggregationResponse> aggregation) {
             this.aggregation = aggregation;
             return this;
         }
 
-        public Builder setConfiguration(@Nullable ReportConfigDatasetConfigurationResponse configuration) {
+        public Builder configuration(@Nullable ReportConfigDatasetConfigurationResponse configuration) {
             this.configuration = configuration;
             return this;
         }
 
-        public Builder setFilter(@Nullable ReportConfigFilterResponse filter) {
+        public Builder filter(@Nullable ReportConfigFilterResponse filter) {
             this.filter = filter;
             return this;
         }
 
-        public Builder setGranularity(@Nullable String granularity) {
+        public Builder granularity(@Nullable String granularity) {
             this.granularity = granularity;
             return this;
         }
 
-        public Builder setGrouping(@Nullable List<ReportConfigGroupingResponse> grouping) {
+        public Builder grouping(@Nullable List<ReportConfigGroupingResponse> grouping) {
             this.grouping = grouping;
             return this;
         }
 
-        public Builder setSorting(@Nullable List<ReportConfigSortingResponse> sorting) {
+        public Builder sorting(@Nullable List<ReportConfigSortingResponse> sorting) {
             this.sorting = sorting;
             return this;
         }

@@ -155,72 +155,72 @@ public final class IntegrationAccountArgs extends io.pulumi.resources.ResourceAr
     	      this.tags = defaults.tags;
         }
 
-        public Builder setIntegrationAccountName(@Nullable Input<String> integrationAccountName) {
+        public Builder integrationAccountName(@Nullable Input<String> integrationAccountName) {
             this.integrationAccountName = integrationAccountName;
             return this;
         }
 
-        public Builder setIntegrationAccountName(@Nullable String integrationAccountName) {
+        public Builder integrationAccountName(@Nullable String integrationAccountName) {
             this.integrationAccountName = Input.ofNullable(integrationAccountName);
             return this;
         }
 
-        public Builder setIntegrationServiceEnvironment(@Nullable Input<ResourceReferenceArgs> integrationServiceEnvironment) {
+        public Builder integrationServiceEnvironment(@Nullable Input<ResourceReferenceArgs> integrationServiceEnvironment) {
             this.integrationServiceEnvironment = integrationServiceEnvironment;
             return this;
         }
 
-        public Builder setIntegrationServiceEnvironment(@Nullable ResourceReferenceArgs integrationServiceEnvironment) {
+        public Builder integrationServiceEnvironment(@Nullable ResourceReferenceArgs integrationServiceEnvironment) {
             this.integrationServiceEnvironment = Input.ofNullable(integrationServiceEnvironment);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setSku(@Nullable Input<IntegrationAccountSkuArgs> sku) {
+        public Builder sku(@Nullable Input<IntegrationAccountSkuArgs> sku) {
             this.sku = sku;
             return this;
         }
 
-        public Builder setSku(@Nullable IntegrationAccountSkuArgs sku) {
+        public Builder sku(@Nullable IntegrationAccountSkuArgs sku) {
             this.sku = Input.ofNullable(sku);
             return this;
         }
 
-        public Builder setState(@Nullable Input<Either<String,WorkflowState>> state) {
+        public Builder state(@Nullable Input<Either<String,WorkflowState>> state) {
             this.state = state;
             return this;
         }
 
-        public Builder setState(@Nullable Either<String,WorkflowState> state) {
+        public Builder state(@Nullable Either<String,WorkflowState> state) {
             this.state = Input.ofNullable(state);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

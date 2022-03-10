@@ -172,82 +172,82 @@ public final class AutomationRuleArgs extends io.pulumi.resources.ResourceArgs {
     	      this.workspaceName = defaults.workspaceName;
         }
 
-        public Builder setActions(Input<List<Either<AutomationRuleModifyPropertiesActionArgs,AutomationRuleRunPlaybookActionArgs>>> actions) {
+        public Builder actions(Input<List<Either<AutomationRuleModifyPropertiesActionArgs,AutomationRuleRunPlaybookActionArgs>>> actions) {
             this.actions = Objects.requireNonNull(actions);
             return this;
         }
 
-        public Builder setActions(List<Either<AutomationRuleModifyPropertiesActionArgs,AutomationRuleRunPlaybookActionArgs>> actions) {
+        public Builder actions(List<Either<AutomationRuleModifyPropertiesActionArgs,AutomationRuleRunPlaybookActionArgs>> actions) {
             this.actions = Input.of(Objects.requireNonNull(actions));
             return this;
         }
 
-        public Builder setAutomationRuleId(@Nullable Input<String> automationRuleId) {
+        public Builder automationRuleId(@Nullable Input<String> automationRuleId) {
             this.automationRuleId = automationRuleId;
             return this;
         }
 
-        public Builder setAutomationRuleId(@Nullable String automationRuleId) {
+        public Builder automationRuleId(@Nullable String automationRuleId) {
             this.automationRuleId = Input.ofNullable(automationRuleId);
             return this;
         }
 
-        public Builder setDisplayName(Input<String> displayName) {
+        public Builder displayName(Input<String> displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Input.of(Objects.requireNonNull(displayName));
             return this;
         }
 
-        public Builder setOperationalInsightsResourceProvider(Input<String> operationalInsightsResourceProvider) {
+        public Builder operationalInsightsResourceProvider(Input<String> operationalInsightsResourceProvider) {
             this.operationalInsightsResourceProvider = Objects.requireNonNull(operationalInsightsResourceProvider);
             return this;
         }
 
-        public Builder setOperationalInsightsResourceProvider(String operationalInsightsResourceProvider) {
+        public Builder operationalInsightsResourceProvider(String operationalInsightsResourceProvider) {
             this.operationalInsightsResourceProvider = Input.of(Objects.requireNonNull(operationalInsightsResourceProvider));
             return this;
         }
 
-        public Builder setOrder(Input<Integer> order) {
+        public Builder order(Input<Integer> order) {
             this.order = Objects.requireNonNull(order);
             return this;
         }
 
-        public Builder setOrder(Integer order) {
+        public Builder order(Integer order) {
             this.order = Input.of(Objects.requireNonNull(order));
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setTriggeringLogic(Input<AutomationRuleTriggeringLogicArgs> triggeringLogic) {
+        public Builder triggeringLogic(Input<AutomationRuleTriggeringLogicArgs> triggeringLogic) {
             this.triggeringLogic = Objects.requireNonNull(triggeringLogic);
             return this;
         }
 
-        public Builder setTriggeringLogic(AutomationRuleTriggeringLogicArgs triggeringLogic) {
+        public Builder triggeringLogic(AutomationRuleTriggeringLogicArgs triggeringLogic) {
             this.triggeringLogic = Input.of(Objects.requireNonNull(triggeringLogic));
             return this;
         }
 
-        public Builder setWorkspaceName(Input<String> workspaceName) {
+        public Builder workspaceName(Input<String> workspaceName) {
             this.workspaceName = Objects.requireNonNull(workspaceName);
             return this;
         }
 
-        public Builder setWorkspaceName(String workspaceName) {
+        public Builder workspaceName(String workspaceName) {
             this.workspaceName = Input.of(Objects.requireNonNull(workspaceName));
             return this;
         }

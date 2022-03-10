@@ -108,22 +108,22 @@ public final class SSISLogLocationResponse extends io.pulumi.resources.InvokeArg
     	      this.type = defaults.type;
         }
 
-        public Builder setAccessCredential(@Nullable SSISAccessCredentialResponse accessCredential) {
+        public Builder accessCredential(@Nullable SSISAccessCredentialResponse accessCredential) {
             this.accessCredential = accessCredential;
             return this;
         }
 
-        public Builder setLogPath(Object logPath) {
+        public Builder logPath(Object logPath) {
             this.logPath = Objects.requireNonNull(logPath);
             return this;
         }
 
-        public Builder setLogRefreshInterval(@Nullable Object logRefreshInterval) {
+        public Builder logRefreshInterval(@Nullable Object logRefreshInterval) {
             this.logRefreshInterval = logRefreshInterval;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

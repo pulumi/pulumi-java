@@ -139,32 +139,32 @@ public final class PresentationTimeRangeResponse extends io.pulumi.resources.Inv
     	      this.timescale = defaults.timescale;
         }
 
-        public Builder setEndTimestamp(@Nullable Double endTimestamp) {
+        public Builder endTimestamp(@Nullable Double endTimestamp) {
             this.endTimestamp = endTimestamp;
             return this;
         }
 
-        public Builder setForceEndTimestamp(@Nullable Boolean forceEndTimestamp) {
+        public Builder forceEndTimestamp(@Nullable Boolean forceEndTimestamp) {
             this.forceEndTimestamp = forceEndTimestamp;
             return this;
         }
 
-        public Builder setLiveBackoffDuration(@Nullable Double liveBackoffDuration) {
+        public Builder liveBackoffDuration(@Nullable Double liveBackoffDuration) {
             this.liveBackoffDuration = liveBackoffDuration;
             return this;
         }
 
-        public Builder setPresentationWindowDuration(@Nullable Double presentationWindowDuration) {
+        public Builder presentationWindowDuration(@Nullable Double presentationWindowDuration) {
             this.presentationWindowDuration = presentationWindowDuration;
             return this;
         }
 
-        public Builder setStartTimestamp(@Nullable Double startTimestamp) {
+        public Builder startTimestamp(@Nullable Double startTimestamp) {
             this.startTimestamp = startTimestamp;
             return this;
         }
 
-        public Builder setTimescale(@Nullable Double timescale) {
+        public Builder timescale(@Nullable Double timescale) {
             this.timescale = timescale;
             return this;
         }

@@ -68,12 +68,12 @@ public final class GetguestDiagnosticsSettingArgs extends io.pulumi.resources.In
     	      this.resourceGroupName = defaults.resourceGroupName;
         }
 
-        public Builder setDiagnosticSettingsName(String diagnosticSettingsName) {
+        public Builder diagnosticSettingsName(String diagnosticSettingsName) {
             this.diagnosticSettingsName = Objects.requireNonNull(diagnosticSettingsName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }

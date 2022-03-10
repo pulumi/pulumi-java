@@ -48,7 +48,7 @@ public final class GetApiManagementServiceDomainOwnershipIdentifierResult {
     	      this.domainOwnershipIdentifier = defaults.domainOwnershipIdentifier;
         }
 
-        public Builder setDomainOwnershipIdentifier(String domainOwnershipIdentifier) {
+        public Builder domainOwnershipIdentifier(String domainOwnershipIdentifier) {
             this.domainOwnershipIdentifier = Objects.requireNonNull(domainOwnershipIdentifier);
             return this;
         }

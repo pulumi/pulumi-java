@@ -124,52 +124,52 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
     	      this.url = defaults.url;
         }
 
-        public Builder setBranch(@Nullable Input<String> branch) {
+        public Builder branch(@Nullable Input<String> branch) {
             this.branch = branch;
             return this;
         }
 
-        public Builder setBranch(@Nullable String branch) {
+        public Builder branch(@Nullable String branch) {
             this.branch = Input.ofNullable(branch);
             return this;
         }
 
-        public Builder setDeploymentLogsUrl(@Nullable Input<String> deploymentLogsUrl) {
+        public Builder deploymentLogsUrl(@Nullable Input<String> deploymentLogsUrl) {
             this.deploymentLogsUrl = deploymentLogsUrl;
             return this;
         }
 
-        public Builder setDeploymentLogsUrl(@Nullable String deploymentLogsUrl) {
+        public Builder deploymentLogsUrl(@Nullable String deploymentLogsUrl) {
             this.deploymentLogsUrl = Input.ofNullable(deploymentLogsUrl);
             return this;
         }
 
-        public Builder setDisplayUrl(@Nullable Input<String> displayUrl) {
+        public Builder displayUrl(@Nullable Input<String> displayUrl) {
             this.displayUrl = displayUrl;
             return this;
         }
 
-        public Builder setDisplayUrl(@Nullable String displayUrl) {
+        public Builder displayUrl(@Nullable String displayUrl) {
             this.displayUrl = Input.ofNullable(displayUrl);
             return this;
         }
 
-        public Builder setPathMapping(@Nullable Input<List<ContentPathMapArgs>> pathMapping) {
+        public Builder pathMapping(@Nullable Input<List<ContentPathMapArgs>> pathMapping) {
             this.pathMapping = pathMapping;
             return this;
         }
 
-        public Builder setPathMapping(@Nullable List<ContentPathMapArgs> pathMapping) {
+        public Builder pathMapping(@Nullable List<ContentPathMapArgs> pathMapping) {
             this.pathMapping = Input.ofNullable(pathMapping);
             return this;
         }
 
-        public Builder setUrl(@Nullable Input<String> url) {
+        public Builder url(@Nullable Input<String> url) {
             this.url = url;
             return this;
         }
 
-        public Builder setUrl(@Nullable String url) {
+        public Builder url(@Nullable String url) {
             this.url = Input.ofNullable(url);
             return this;
         }

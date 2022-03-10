@@ -50,7 +50,7 @@ public final class ManagedClusterAutoUpgradeProfileResponse {
     	      this.upgradeChannel = defaults.upgradeChannel;
         }
 
-        public Builder setUpgradeChannel(@Nullable String upgradeChannel) {
+        public Builder upgradeChannel(@Nullable String upgradeChannel) {
             this.upgradeChannel = upgradeChannel;
             return this;
         }

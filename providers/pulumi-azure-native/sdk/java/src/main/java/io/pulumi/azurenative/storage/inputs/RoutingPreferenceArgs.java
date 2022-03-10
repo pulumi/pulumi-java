@@ -93,32 +93,32 @@ public final class RoutingPreferenceArgs extends io.pulumi.resources.ResourceArg
     	      this.routingChoice = defaults.routingChoice;
         }
 
-        public Builder setPublishInternetEndpoints(@Nullable Input<Boolean> publishInternetEndpoints) {
+        public Builder publishInternetEndpoints(@Nullable Input<Boolean> publishInternetEndpoints) {
             this.publishInternetEndpoints = publishInternetEndpoints;
             return this;
         }
 
-        public Builder setPublishInternetEndpoints(@Nullable Boolean publishInternetEndpoints) {
+        public Builder publishInternetEndpoints(@Nullable Boolean publishInternetEndpoints) {
             this.publishInternetEndpoints = Input.ofNullable(publishInternetEndpoints);
             return this;
         }
 
-        public Builder setPublishMicrosoftEndpoints(@Nullable Input<Boolean> publishMicrosoftEndpoints) {
+        public Builder publishMicrosoftEndpoints(@Nullable Input<Boolean> publishMicrosoftEndpoints) {
             this.publishMicrosoftEndpoints = publishMicrosoftEndpoints;
             return this;
         }
 
-        public Builder setPublishMicrosoftEndpoints(@Nullable Boolean publishMicrosoftEndpoints) {
+        public Builder publishMicrosoftEndpoints(@Nullable Boolean publishMicrosoftEndpoints) {
             this.publishMicrosoftEndpoints = Input.ofNullable(publishMicrosoftEndpoints);
             return this;
         }
 
-        public Builder setRoutingChoice(@Nullable Input<Either<String,RoutingChoice>> routingChoice) {
+        public Builder routingChoice(@Nullable Input<Either<String,RoutingChoice>> routingChoice) {
             this.routingChoice = routingChoice;
             return this;
         }
 
-        public Builder setRoutingChoice(@Nullable Either<String,RoutingChoice> routingChoice) {
+        public Builder routingChoice(@Nullable Either<String,RoutingChoice> routingChoice) {
             this.routingChoice = Input.ofNullable(routingChoice);
             return this;
         }

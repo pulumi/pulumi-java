@@ -136,62 +136,62 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
     	      this.workspaceName = defaults.workspaceName;
         }
 
-        public Builder setDatabaseName(@Nullable Input<String> databaseName) {
+        public Builder databaseName(@Nullable Input<String> databaseName) {
             this.databaseName = databaseName;
             return this;
         }
 
-        public Builder setDatabaseName(@Nullable String databaseName) {
+        public Builder databaseName(@Nullable String databaseName) {
             this.databaseName = Input.ofNullable(databaseName);
             return this;
         }
 
-        public Builder setKind(Input<Either<String,Kind>> kind) {
+        public Builder kind(Input<Either<String,Kind>> kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setKind(Either<String,Kind> kind) {
+        public Builder kind(Either<String,Kind> kind) {
             this.kind = Input.of(Objects.requireNonNull(kind));
             return this;
         }
 
-        public Builder setKustoPoolName(Input<String> kustoPoolName) {
+        public Builder kustoPoolName(Input<String> kustoPoolName) {
             this.kustoPoolName = Objects.requireNonNull(kustoPoolName);
             return this;
         }
 
-        public Builder setKustoPoolName(String kustoPoolName) {
+        public Builder kustoPoolName(String kustoPoolName) {
             this.kustoPoolName = Input.of(Objects.requireNonNull(kustoPoolName));
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setWorkspaceName(Input<String> workspaceName) {
+        public Builder workspaceName(Input<String> workspaceName) {
             this.workspaceName = Objects.requireNonNull(workspaceName);
             return this;
         }
 
-        public Builder setWorkspaceName(String workspaceName) {
+        public Builder workspaceName(String workspaceName) {
             this.workspaceName = Input.of(Objects.requireNonNull(workspaceName));
             return this;
         }

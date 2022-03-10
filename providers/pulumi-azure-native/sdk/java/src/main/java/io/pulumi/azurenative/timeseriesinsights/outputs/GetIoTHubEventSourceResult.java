@@ -279,77 +279,77 @@ public final class GetIoTHubEventSourceResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setConsumerGroupName(String consumerGroupName) {
+        public Builder consumerGroupName(String consumerGroupName) {
             this.consumerGroupName = Objects.requireNonNull(consumerGroupName);
             return this;
         }
 
-        public Builder setCreationTime(String creationTime) {
+        public Builder creationTime(String creationTime) {
             this.creationTime = Objects.requireNonNull(creationTime);
             return this;
         }
 
-        public Builder setEventSourceResourceId(String eventSourceResourceId) {
+        public Builder eventSourceResourceId(String eventSourceResourceId) {
             this.eventSourceResourceId = Objects.requireNonNull(eventSourceResourceId);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setIotHubName(String iotHubName) {
+        public Builder iotHubName(String iotHubName) {
             this.iotHubName = Objects.requireNonNull(iotHubName);
             return this;
         }
 
-        public Builder setKeyName(String keyName) {
+        public Builder keyName(String keyName) {
             this.keyName = Objects.requireNonNull(keyName);
             return this;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setLocalTimestamp(@Nullable LocalTimestampResponse localTimestamp) {
+        public Builder localTimestamp(@Nullable LocalTimestampResponse localTimestamp) {
             this.localTimestamp = localTimestamp;
             return this;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTime(@Nullable String time) {
+        public Builder time(@Nullable String time) {
             this.time = time;
             return this;
         }
 
-        public Builder setTimestampPropertyName(@Nullable String timestampPropertyName) {
+        public Builder timestampPropertyName(@Nullable String timestampPropertyName) {
             this.timestampPropertyName = timestampPropertyName;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

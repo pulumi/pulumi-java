@@ -94,32 +94,32 @@ public final class CreateNetworkMappingInputPropertiesArgs extends io.pulumi.res
     	      this.recoveryNetworkId = defaults.recoveryNetworkId;
         }
 
-        public Builder setFabricSpecificDetails(@Nullable Input<Object> fabricSpecificDetails) {
+        public Builder fabricSpecificDetails(@Nullable Input<Object> fabricSpecificDetails) {
             this.fabricSpecificDetails = fabricSpecificDetails;
             return this;
         }
 
-        public Builder setFabricSpecificDetails(@Nullable Object fabricSpecificDetails) {
+        public Builder fabricSpecificDetails(@Nullable Object fabricSpecificDetails) {
             this.fabricSpecificDetails = Input.ofNullable(fabricSpecificDetails);
             return this;
         }
 
-        public Builder setRecoveryFabricName(@Nullable Input<String> recoveryFabricName) {
+        public Builder recoveryFabricName(@Nullable Input<String> recoveryFabricName) {
             this.recoveryFabricName = recoveryFabricName;
             return this;
         }
 
-        public Builder setRecoveryFabricName(@Nullable String recoveryFabricName) {
+        public Builder recoveryFabricName(@Nullable String recoveryFabricName) {
             this.recoveryFabricName = Input.ofNullable(recoveryFabricName);
             return this;
         }
 
-        public Builder setRecoveryNetworkId(@Nullable Input<String> recoveryNetworkId) {
+        public Builder recoveryNetworkId(@Nullable Input<String> recoveryNetworkId) {
             this.recoveryNetworkId = recoveryNetworkId;
             return this;
         }
 
-        public Builder setRecoveryNetworkId(@Nullable String recoveryNetworkId) {
+        public Builder recoveryNetworkId(@Nullable String recoveryNetworkId) {
             this.recoveryNetworkId = Input.ofNullable(recoveryNetworkId);
             return this;
         }

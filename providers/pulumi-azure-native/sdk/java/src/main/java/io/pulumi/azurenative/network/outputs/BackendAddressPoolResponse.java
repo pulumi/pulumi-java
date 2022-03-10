@@ -215,57 +215,57 @@ public final class BackendAddressPoolResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setBackendIPConfigurations(List<NetworkInterfaceIPConfigurationResponse> backendIPConfigurations) {
+        public Builder backendIPConfigurations(List<NetworkInterfaceIPConfigurationResponse> backendIPConfigurations) {
             this.backendIPConfigurations = Objects.requireNonNull(backendIPConfigurations);
             return this;
         }
 
-        public Builder setEtag(String etag) {
+        public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setLoadBalancerBackendAddresses(@Nullable List<LoadBalancerBackendAddressResponse> loadBalancerBackendAddresses) {
+        public Builder loadBalancerBackendAddresses(@Nullable List<LoadBalancerBackendAddressResponse> loadBalancerBackendAddresses) {
             this.loadBalancerBackendAddresses = loadBalancerBackendAddresses;
             return this;
         }
 
-        public Builder setLoadBalancingRules(List<SubResourceResponse> loadBalancingRules) {
+        public Builder loadBalancingRules(List<SubResourceResponse> loadBalancingRules) {
             this.loadBalancingRules = Objects.requireNonNull(loadBalancingRules);
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setOutboundRule(SubResourceResponse outboundRule) {
+        public Builder outboundRule(SubResourceResponse outboundRule) {
             this.outboundRule = Objects.requireNonNull(outboundRule);
             return this;
         }
 
-        public Builder setOutboundRules(List<SubResourceResponse> outboundRules) {
+        public Builder outboundRules(List<SubResourceResponse> outboundRules) {
             this.outboundRules = Objects.requireNonNull(outboundRules);
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

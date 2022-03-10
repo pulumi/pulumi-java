@@ -92,17 +92,17 @@ public final class ModuleAssetParameterResponse extends io.pulumi.resources.Invo
     	      this.parameterType = defaults.parameterType;
         }
 
-        public Builder setModeValuesInfo(@Nullable Map<String,ModeValueInfoResponse> modeValuesInfo) {
+        public Builder modeValuesInfo(@Nullable Map<String,ModeValueInfoResponse> modeValuesInfo) {
             this.modeValuesInfo = modeValuesInfo;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setParameterType(@Nullable String parameterType) {
+        public Builder parameterType(@Nullable String parameterType) {
             this.parameterType = parameterType;
             return this;
         }

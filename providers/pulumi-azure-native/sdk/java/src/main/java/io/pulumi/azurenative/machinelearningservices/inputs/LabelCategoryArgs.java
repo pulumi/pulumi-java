@@ -93,32 +93,32 @@ public final class LabelCategoryArgs extends io.pulumi.resources.ResourceArgs {
     	      this.displayName = defaults.displayName;
         }
 
-        public Builder setAllowMultiSelect(@Nullable Input<Boolean> allowMultiSelect) {
+        public Builder allowMultiSelect(@Nullable Input<Boolean> allowMultiSelect) {
             this.allowMultiSelect = allowMultiSelect;
             return this;
         }
 
-        public Builder setAllowMultiSelect(@Nullable Boolean allowMultiSelect) {
+        public Builder allowMultiSelect(@Nullable Boolean allowMultiSelect) {
             this.allowMultiSelect = Input.ofNullable(allowMultiSelect);
             return this;
         }
 
-        public Builder setClasses(Input<Map<String,LabelClassArgs>> classes) {
+        public Builder classes(Input<Map<String,LabelClassArgs>> classes) {
             this.classes = Objects.requireNonNull(classes);
             return this;
         }
 
-        public Builder setClasses(Map<String,LabelClassArgs> classes) {
+        public Builder classes(Map<String,LabelClassArgs> classes) {
             this.classes = Input.of(Objects.requireNonNull(classes));
             return this;
         }
 
-        public Builder setDisplayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Input<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setDisplayName(@Nullable String displayName) {
+        public Builder displayName(@Nullable String displayName) {
             this.displayName = Input.ofNullable(displayName);
             return this;
         }

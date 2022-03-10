@@ -104,22 +104,22 @@ public final class VmStateDetailsResponse extends io.pulumi.resources.InvokeArgs
     	      this.sshAuthority = defaults.sshAuthority;
         }
 
-        public Builder setLastKnownPowerState(String lastKnownPowerState) {
+        public Builder lastKnownPowerState(String lastKnownPowerState) {
             this.lastKnownPowerState = Objects.requireNonNull(lastKnownPowerState);
             return this;
         }
 
-        public Builder setPowerState(String powerState) {
+        public Builder powerState(String powerState) {
             this.powerState = Objects.requireNonNull(powerState);
             return this;
         }
 
-        public Builder setRdpAuthority(String rdpAuthority) {
+        public Builder rdpAuthority(String rdpAuthority) {
             this.rdpAuthority = Objects.requireNonNull(rdpAuthority);
             return this;
         }
 
-        public Builder setSshAuthority(String sshAuthority) {
+        public Builder sshAuthority(String sshAuthority) {
             this.sshAuthority = Objects.requireNonNull(sshAuthority);
             return this;
         }

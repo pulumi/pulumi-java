@@ -69,12 +69,12 @@ public final class ListShareSubscriptionSynchronizationsResult {
     	      this.value = defaults.value;
         }
 
-        public Builder setNextLink(@Nullable String nextLink) {
+        public Builder nextLink(@Nullable String nextLink) {
             this.nextLink = nextLink;
             return this;
         }
 
-        public Builder setValue(List<ShareSubscriptionSynchronizationResponse> value) {
+        public Builder value(List<ShareSubscriptionSynchronizationResponse> value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }

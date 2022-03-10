@@ -276,122 +276,122 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
     	      this.variables = defaults.variables;
         }
 
-        public Builder setActivities(@Nullable Input<List<Object>> activities) {
+        public Builder activities(@Nullable Input<List<Object>> activities) {
             this.activities = activities;
             return this;
         }
 
-        public Builder setActivities(@Nullable List<Object> activities) {
+        public Builder activities(@Nullable List<Object> activities) {
             this.activities = Input.ofNullable(activities);
             return this;
         }
 
-        public Builder setAnnotations(@Nullable Input<List<Object>> annotations) {
+        public Builder annotations(@Nullable Input<List<Object>> annotations) {
             this.annotations = annotations;
             return this;
         }
 
-        public Builder setAnnotations(@Nullable List<Object> annotations) {
+        public Builder annotations(@Nullable List<Object> annotations) {
             this.annotations = Input.ofNullable(annotations);
             return this;
         }
 
-        public Builder setConcurrency(@Nullable Input<Integer> concurrency) {
+        public Builder concurrency(@Nullable Input<Integer> concurrency) {
             this.concurrency = concurrency;
             return this;
         }
 
-        public Builder setConcurrency(@Nullable Integer concurrency) {
+        public Builder concurrency(@Nullable Integer concurrency) {
             this.concurrency = Input.ofNullable(concurrency);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setFactoryName(Input<String> factoryName) {
+        public Builder factoryName(Input<String> factoryName) {
             this.factoryName = Objects.requireNonNull(factoryName);
             return this;
         }
 
-        public Builder setFactoryName(String factoryName) {
+        public Builder factoryName(String factoryName) {
             this.factoryName = Input.of(Objects.requireNonNull(factoryName));
             return this;
         }
 
-        public Builder setFolder(@Nullable Input<PipelineFolderArgs> folder) {
+        public Builder folder(@Nullable Input<PipelineFolderArgs> folder) {
             this.folder = folder;
             return this;
         }
 
-        public Builder setFolder(@Nullable PipelineFolderArgs folder) {
+        public Builder folder(@Nullable PipelineFolderArgs folder) {
             this.folder = Input.ofNullable(folder);
             return this;
         }
 
-        public Builder setParameters(@Nullable Input<Map<String,ParameterSpecificationArgs>> parameters) {
+        public Builder parameters(@Nullable Input<Map<String,ParameterSpecificationArgs>> parameters) {
             this.parameters = parameters;
             return this;
         }
 
-        public Builder setParameters(@Nullable Map<String,ParameterSpecificationArgs> parameters) {
+        public Builder parameters(@Nullable Map<String,ParameterSpecificationArgs> parameters) {
             this.parameters = Input.ofNullable(parameters);
             return this;
         }
 
-        public Builder setPipelineName(@Nullable Input<String> pipelineName) {
+        public Builder pipelineName(@Nullable Input<String> pipelineName) {
             this.pipelineName = pipelineName;
             return this;
         }
 
-        public Builder setPipelineName(@Nullable String pipelineName) {
+        public Builder pipelineName(@Nullable String pipelineName) {
             this.pipelineName = Input.ofNullable(pipelineName);
             return this;
         }
 
-        public Builder setPolicy(@Nullable Input<PipelinePolicyArgs> policy) {
+        public Builder policy(@Nullable Input<PipelinePolicyArgs> policy) {
             this.policy = policy;
             return this;
         }
 
-        public Builder setPolicy(@Nullable PipelinePolicyArgs policy) {
+        public Builder policy(@Nullable PipelinePolicyArgs policy) {
             this.policy = Input.ofNullable(policy);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setRunDimensions(@Nullable Input<Map<String,Object>> runDimensions) {
+        public Builder runDimensions(@Nullable Input<Map<String,Object>> runDimensions) {
             this.runDimensions = runDimensions;
             return this;
         }
 
-        public Builder setRunDimensions(@Nullable Map<String,Object> runDimensions) {
+        public Builder runDimensions(@Nullable Map<String,Object> runDimensions) {
             this.runDimensions = Input.ofNullable(runDimensions);
             return this;
         }
 
-        public Builder setVariables(@Nullable Input<Map<String,VariableSpecificationArgs>> variables) {
+        public Builder variables(@Nullable Input<Map<String,VariableSpecificationArgs>> variables) {
             this.variables = variables;
             return this;
         }
 
-        public Builder setVariables(@Nullable Map<String,VariableSpecificationArgs> variables) {
+        public Builder variables(@Nullable Map<String,VariableSpecificationArgs> variables) {
             this.variables = Input.ofNullable(variables);
             return this;
         }

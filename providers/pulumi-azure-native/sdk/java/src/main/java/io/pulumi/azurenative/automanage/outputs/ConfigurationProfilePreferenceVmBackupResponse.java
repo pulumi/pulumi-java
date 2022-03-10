@@ -100,22 +100,22 @@ public final class ConfigurationProfilePreferenceVmBackupResponse {
     	      this.timeZone = defaults.timeZone;
         }
 
-        public Builder setInstantRpRetentionRangeInDays(@Nullable Integer instantRpRetentionRangeInDays) {
+        public Builder instantRpRetentionRangeInDays(@Nullable Integer instantRpRetentionRangeInDays) {
             this.instantRpRetentionRangeInDays = instantRpRetentionRangeInDays;
             return this;
         }
 
-        public Builder setRetentionPolicy(@Nullable String retentionPolicy) {
+        public Builder retentionPolicy(@Nullable String retentionPolicy) {
             this.retentionPolicy = retentionPolicy;
             return this;
         }
 
-        public Builder setSchedulePolicy(@Nullable String schedulePolicy) {
+        public Builder schedulePolicy(@Nullable String schedulePolicy) {
             this.schedulePolicy = schedulePolicy;
             return this;
         }
 
-        public Builder setTimeZone(@Nullable String timeZone) {
+        public Builder timeZone(@Nullable String timeZone) {
             this.timeZone = timeZone;
             return this;
         }

@@ -84,17 +84,17 @@ public final class GetSnapshotPolicyArgs extends io.pulumi.resources.InvokeArgs 
     	      this.snapshotPolicyName = defaults.snapshotPolicyName;
         }
 
-        public Builder setAccountName(String accountName) {
+        public Builder accountName(String accountName) {
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setSnapshotPolicyName(String snapshotPolicyName) {
+        public Builder snapshotPolicyName(String snapshotPolicyName) {
             this.snapshotPolicyName = Objects.requireNonNull(snapshotPolicyName);
             return this;
         }

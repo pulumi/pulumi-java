@@ -70,22 +70,22 @@ public final class CloudServiceConfigurationArgs extends io.pulumi.resources.Res
     	      this.osVersion = defaults.osVersion;
         }
 
-        public Builder setOsFamily(Input<String> osFamily) {
+        public Builder osFamily(Input<String> osFamily) {
             this.osFamily = Objects.requireNonNull(osFamily);
             return this;
         }
 
-        public Builder setOsFamily(String osFamily) {
+        public Builder osFamily(String osFamily) {
             this.osFamily = Input.of(Objects.requireNonNull(osFamily));
             return this;
         }
 
-        public Builder setOsVersion(@Nullable Input<String> osVersion) {
+        public Builder osVersion(@Nullable Input<String> osVersion) {
             this.osVersion = osVersion;
             return this;
         }
 
-        public Builder setOsVersion(@Nullable String osVersion) {
+        public Builder osVersion(@Nullable String osVersion) {
             this.osVersion = Input.ofNullable(osVersion);
             return this;
         }

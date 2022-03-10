@@ -91,32 +91,32 @@ public final class DnsConfigurationArgs extends io.pulumi.resources.ResourceArgs
     	      this.searchDomains = defaults.searchDomains;
         }
 
-        public Builder setNameServers(Input<List<String>> nameServers) {
+        public Builder nameServers(Input<List<String>> nameServers) {
             this.nameServers = Objects.requireNonNull(nameServers);
             return this;
         }
 
-        public Builder setNameServers(List<String> nameServers) {
+        public Builder nameServers(List<String> nameServers) {
             this.nameServers = Input.of(Objects.requireNonNull(nameServers));
             return this;
         }
 
-        public Builder setOptions(@Nullable Input<String> options) {
+        public Builder options(@Nullable Input<String> options) {
             this.options = options;
             return this;
         }
 
-        public Builder setOptions(@Nullable String options) {
+        public Builder options(@Nullable String options) {
             this.options = Input.ofNullable(options);
             return this;
         }
 
-        public Builder setSearchDomains(@Nullable Input<String> searchDomains) {
+        public Builder searchDomains(@Nullable Input<String> searchDomains) {
             this.searchDomains = searchDomains;
             return this;
         }
 
-        public Builder setSearchDomains(@Nullable String searchDomains) {
+        public Builder searchDomains(@Nullable String searchDomains) {
             this.searchDomains = Input.ofNullable(searchDomains);
             return this;
         }

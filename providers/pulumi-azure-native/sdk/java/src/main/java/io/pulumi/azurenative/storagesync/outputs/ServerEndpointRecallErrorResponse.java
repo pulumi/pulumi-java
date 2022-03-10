@@ -66,12 +66,12 @@ public final class ServerEndpointRecallErrorResponse {
     	      this.errorCode = defaults.errorCode;
         }
 
-        public Builder setCount(Double count) {
+        public Builder count(Double count) {
             this.count = Objects.requireNonNull(count);
             return this;
         }
 
-        public Builder setErrorCode(Integer errorCode) {
+        public Builder errorCode(Integer errorCode) {
             this.errorCode = Objects.requireNonNull(errorCode);
             return this;
         }

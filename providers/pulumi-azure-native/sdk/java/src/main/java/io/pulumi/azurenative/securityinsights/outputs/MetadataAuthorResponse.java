@@ -83,17 +83,17 @@ public final class MetadataAuthorResponse {
     	      this.name = defaults.name;
         }
 
-        public Builder setEmail(@Nullable String email) {
+        public Builder email(@Nullable String email) {
             this.email = email;
             return this;
         }
 
-        public Builder setLink(@Nullable String link) {
+        public Builder link(@Nullable String link) {
             this.link = link;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }

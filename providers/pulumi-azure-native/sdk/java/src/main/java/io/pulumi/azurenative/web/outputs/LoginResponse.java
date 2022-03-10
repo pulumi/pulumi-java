@@ -141,32 +141,32 @@ public final class LoginResponse {
     	      this.tokenStore = defaults.tokenStore;
         }
 
-        public Builder setAllowedExternalRedirectUrls(@Nullable List<String> allowedExternalRedirectUrls) {
+        public Builder allowedExternalRedirectUrls(@Nullable List<String> allowedExternalRedirectUrls) {
             this.allowedExternalRedirectUrls = allowedExternalRedirectUrls;
             return this;
         }
 
-        public Builder setCookieExpiration(@Nullable CookieExpirationResponse cookieExpiration) {
+        public Builder cookieExpiration(@Nullable CookieExpirationResponse cookieExpiration) {
             this.cookieExpiration = cookieExpiration;
             return this;
         }
 
-        public Builder setNonce(@Nullable NonceResponse nonce) {
+        public Builder nonce(@Nullable NonceResponse nonce) {
             this.nonce = nonce;
             return this;
         }
 
-        public Builder setPreserveUrlFragmentsForLogins(@Nullable Boolean preserveUrlFragmentsForLogins) {
+        public Builder preserveUrlFragmentsForLogins(@Nullable Boolean preserveUrlFragmentsForLogins) {
             this.preserveUrlFragmentsForLogins = preserveUrlFragmentsForLogins;
             return this;
         }
 
-        public Builder setRoutes(@Nullable LoginRoutesResponse routes) {
+        public Builder routes(@Nullable LoginRoutesResponse routes) {
             this.routes = routes;
             return this;
         }
 
-        public Builder setTokenStore(@Nullable TokenStoreResponse tokenStore) {
+        public Builder tokenStore(@Nullable TokenStoreResponse tokenStore) {
             this.tokenStore = tokenStore;
             return this;
         }

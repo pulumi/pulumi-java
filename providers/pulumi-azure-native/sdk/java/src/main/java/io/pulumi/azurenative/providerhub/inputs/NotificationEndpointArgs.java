@@ -63,22 +63,22 @@ public final class NotificationEndpointArgs extends io.pulumi.resources.Resource
     	      this.notificationDestination = defaults.notificationDestination;
         }
 
-        public Builder setLocations(@Nullable Input<List<String>> locations) {
+        public Builder locations(@Nullable Input<List<String>> locations) {
             this.locations = locations;
             return this;
         }
 
-        public Builder setLocations(@Nullable List<String> locations) {
+        public Builder locations(@Nullable List<String> locations) {
             this.locations = Input.ofNullable(locations);
             return this;
         }
 
-        public Builder setNotificationDestination(@Nullable Input<String> notificationDestination) {
+        public Builder notificationDestination(@Nullable Input<String> notificationDestination) {
             this.notificationDestination = notificationDestination;
             return this;
         }
 
-        public Builder setNotificationDestination(@Nullable String notificationDestination) {
+        public Builder notificationDestination(@Nullable String notificationDestination) {
             this.notificationDestination = Input.ofNullable(notificationDestination);
             return this;
         }

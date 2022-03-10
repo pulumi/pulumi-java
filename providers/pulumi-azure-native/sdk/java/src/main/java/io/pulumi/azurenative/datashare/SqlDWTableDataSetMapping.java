@@ -237,7 +237,7 @@ public class SqlDWTableDataSetMapping extends io.pulumi.resources.CustomResource
     private static SqlDWTableDataSetMappingArgs makeArgs(SqlDWTableDataSetMappingArgs args) {
         var builder = args == null ? SqlDWTableDataSetMappingArgs.builder() : SqlDWTableDataSetMappingArgs.builder(args);
         return builder
-            .setKind("SqlDWTable")
+            .kind("SqlDWTable")
             .build();
     }
 

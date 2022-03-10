@@ -90,32 +90,32 @@ public final class IngressProfileArgs extends io.pulumi.resources.ResourceArgs {
     	      this.visibility = defaults.visibility;
         }
 
-        public Builder setIp(@Nullable Input<String> ip) {
+        public Builder ip(@Nullable Input<String> ip) {
             this.ip = ip;
             return this;
         }
 
-        public Builder setIp(@Nullable String ip) {
+        public Builder ip(@Nullable String ip) {
             this.ip = Input.ofNullable(ip);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setVisibility(@Nullable Input<String> visibility) {
+        public Builder visibility(@Nullable Input<String> visibility) {
             this.visibility = visibility;
             return this;
         }
 
-        public Builder setVisibility(@Nullable String visibility) {
+        public Builder visibility(@Nullable String visibility) {
             this.visibility = Input.ofNullable(visibility);
             return this;
         }

@@ -49,7 +49,7 @@ public final class RelationshipTypeMappingResponse {
     	      this.fieldMappings = defaults.fieldMappings;
         }
 
-        public Builder setFieldMappings(List<RelationshipTypeFieldMappingResponse> fieldMappings) {
+        public Builder fieldMappings(List<RelationshipTypeFieldMappingResponse> fieldMappings) {
             this.fieldMappings = Objects.requireNonNull(fieldMappings);
             return this;
         }

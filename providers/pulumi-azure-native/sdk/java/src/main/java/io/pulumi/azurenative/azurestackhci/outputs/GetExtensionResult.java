@@ -327,92 +327,92 @@ public final class GetExtensionResult {
     	      this.typeHandlerVersion = defaults.typeHandlerVersion;
         }
 
-        public Builder setAggregateState(String aggregateState) {
+        public Builder aggregateState(String aggregateState) {
             this.aggregateState = Objects.requireNonNull(aggregateState);
             return this;
         }
 
-        public Builder setAutoUpgradeMinorVersion(@Nullable Boolean autoUpgradeMinorVersion) {
+        public Builder autoUpgradeMinorVersion(@Nullable Boolean autoUpgradeMinorVersion) {
             this.autoUpgradeMinorVersion = autoUpgradeMinorVersion;
             return this;
         }
 
-        public Builder setCreatedAt(@Nullable String createdAt) {
+        public Builder createdAt(@Nullable String createdAt) {
             this.createdAt = createdAt;
             return this;
         }
 
-        public Builder setCreatedBy(@Nullable String createdBy) {
+        public Builder createdBy(@Nullable String createdBy) {
             this.createdBy = createdBy;
             return this;
         }
 
-        public Builder setCreatedByType(@Nullable String createdByType) {
+        public Builder createdByType(@Nullable String createdByType) {
             this.createdByType = createdByType;
             return this;
         }
 
-        public Builder setForceUpdateTag(@Nullable String forceUpdateTag) {
+        public Builder forceUpdateTag(@Nullable String forceUpdateTag) {
             this.forceUpdateTag = forceUpdateTag;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setLastModifiedAt(@Nullable String lastModifiedAt) {
+        public Builder lastModifiedAt(@Nullable String lastModifiedAt) {
             this.lastModifiedAt = lastModifiedAt;
             return this;
         }
 
-        public Builder setLastModifiedBy(@Nullable String lastModifiedBy) {
+        public Builder lastModifiedBy(@Nullable String lastModifiedBy) {
             this.lastModifiedBy = lastModifiedBy;
             return this;
         }
 
-        public Builder setLastModifiedByType(@Nullable String lastModifiedByType) {
+        public Builder lastModifiedByType(@Nullable String lastModifiedByType) {
             this.lastModifiedByType = lastModifiedByType;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPerNodeExtensionDetails(List<PerNodeExtensionStateResponse> perNodeExtensionDetails) {
+        public Builder perNodeExtensionDetails(List<PerNodeExtensionStateResponse> perNodeExtensionDetails) {
             this.perNodeExtensionDetails = Objects.requireNonNull(perNodeExtensionDetails);
             return this;
         }
 
-        public Builder setProtectedSettings(@Nullable Object protectedSettings) {
+        public Builder protectedSettings(@Nullable Object protectedSettings) {
             this.protectedSettings = protectedSettings;
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setPublisher(@Nullable String publisher) {
+        public Builder publisher(@Nullable String publisher) {
             this.publisher = publisher;
             return this;
         }
 
-        public Builder setSettings(@Nullable Object settings) {
+        public Builder settings(@Nullable Object settings) {
             this.settings = settings;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setTypeHandlerVersion(@Nullable String typeHandlerVersion) {
+        public Builder typeHandlerVersion(@Nullable String typeHandlerVersion) {
             this.typeHandlerVersion = typeHandlerVersion;
             return this;
         }

@@ -85,17 +85,17 @@ public final class ManagedClusterAPIServerAccessProfileResponse {
     	      this.privateDNSZone = defaults.privateDNSZone;
         }
 
-        public Builder setAuthorizedIPRanges(@Nullable List<String> authorizedIPRanges) {
+        public Builder authorizedIPRanges(@Nullable List<String> authorizedIPRanges) {
             this.authorizedIPRanges = authorizedIPRanges;
             return this;
         }
 
-        public Builder setEnablePrivateCluster(@Nullable Boolean enablePrivateCluster) {
+        public Builder enablePrivateCluster(@Nullable Boolean enablePrivateCluster) {
             this.enablePrivateCluster = enablePrivateCluster;
             return this;
         }
 
-        public Builder setPrivateDNSZone(@Nullable String privateDNSZone) {
+        public Builder privateDNSZone(@Nullable String privateDNSZone) {
             this.privateDNSZone = privateDNSZone;
             return this;
         }

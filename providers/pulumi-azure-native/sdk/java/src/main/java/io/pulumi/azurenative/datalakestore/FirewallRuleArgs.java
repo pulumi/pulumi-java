@@ -118,52 +118,52 @@ public final class FirewallRuleArgs extends io.pulumi.resources.ResourceArgs {
     	      this.startIpAddress = defaults.startIpAddress;
         }
 
-        public Builder setAccountName(Input<String> accountName) {
+        public Builder accountName(Input<String> accountName) {
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
 
-        public Builder setAccountName(String accountName) {
+        public Builder accountName(String accountName) {
             this.accountName = Input.of(Objects.requireNonNull(accountName));
             return this;
         }
 
-        public Builder setEndIpAddress(Input<String> endIpAddress) {
+        public Builder endIpAddress(Input<String> endIpAddress) {
             this.endIpAddress = Objects.requireNonNull(endIpAddress);
             return this;
         }
 
-        public Builder setEndIpAddress(String endIpAddress) {
+        public Builder endIpAddress(String endIpAddress) {
             this.endIpAddress = Input.of(Objects.requireNonNull(endIpAddress));
             return this;
         }
 
-        public Builder setFirewallRuleName(@Nullable Input<String> firewallRuleName) {
+        public Builder firewallRuleName(@Nullable Input<String> firewallRuleName) {
             this.firewallRuleName = firewallRuleName;
             return this;
         }
 
-        public Builder setFirewallRuleName(@Nullable String firewallRuleName) {
+        public Builder firewallRuleName(@Nullable String firewallRuleName) {
             this.firewallRuleName = Input.ofNullable(firewallRuleName);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setStartIpAddress(Input<String> startIpAddress) {
+        public Builder startIpAddress(Input<String> startIpAddress) {
             this.startIpAddress = Objects.requireNonNull(startIpAddress);
             return this;
         }
 
-        public Builder setStartIpAddress(String startIpAddress) {
+        public Builder startIpAddress(String startIpAddress) {
             this.startIpAddress = Input.of(Objects.requireNonNull(startIpAddress));
             return this;
         }

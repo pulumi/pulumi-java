@@ -250,67 +250,67 @@ public final class GetP2sVpnServerConfigurationResult {
     	      this.vpnProtocols = defaults.vpnProtocols;
         }
 
-        public Builder setEtag(String etag) {
+        public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setP2SVpnGateways(List<SubResourceResponse> p2SVpnGateways) {
+        public Builder p2SVpnGateways(List<SubResourceResponse> p2SVpnGateways) {
             this.p2SVpnGateways = Objects.requireNonNull(p2SVpnGateways);
             return this;
         }
 
-        public Builder setP2SVpnServerConfigRadiusClientRootCertificates(@Nullable List<P2SVpnServerConfigRadiusClientRootCertificateResponse> p2SVpnServerConfigRadiusClientRootCertificates) {
+        public Builder p2SVpnServerConfigRadiusClientRootCertificates(@Nullable List<P2SVpnServerConfigRadiusClientRootCertificateResponse> p2SVpnServerConfigRadiusClientRootCertificates) {
             this.p2SVpnServerConfigRadiusClientRootCertificates = p2SVpnServerConfigRadiusClientRootCertificates;
             return this;
         }
 
-        public Builder setP2SVpnServerConfigRadiusServerRootCertificates(@Nullable List<P2SVpnServerConfigRadiusServerRootCertificateResponse> p2SVpnServerConfigRadiusServerRootCertificates) {
+        public Builder p2SVpnServerConfigRadiusServerRootCertificates(@Nullable List<P2SVpnServerConfigRadiusServerRootCertificateResponse> p2SVpnServerConfigRadiusServerRootCertificates) {
             this.p2SVpnServerConfigRadiusServerRootCertificates = p2SVpnServerConfigRadiusServerRootCertificates;
             return this;
         }
 
-        public Builder setP2SVpnServerConfigVpnClientRevokedCertificates(@Nullable List<P2SVpnServerConfigVpnClientRevokedCertificateResponse> p2SVpnServerConfigVpnClientRevokedCertificates) {
+        public Builder p2SVpnServerConfigVpnClientRevokedCertificates(@Nullable List<P2SVpnServerConfigVpnClientRevokedCertificateResponse> p2SVpnServerConfigVpnClientRevokedCertificates) {
             this.p2SVpnServerConfigVpnClientRevokedCertificates = p2SVpnServerConfigVpnClientRevokedCertificates;
             return this;
         }
 
-        public Builder setP2SVpnServerConfigVpnClientRootCertificates(@Nullable List<P2SVpnServerConfigVpnClientRootCertificateResponse> p2SVpnServerConfigVpnClientRootCertificates) {
+        public Builder p2SVpnServerConfigVpnClientRootCertificates(@Nullable List<P2SVpnServerConfigVpnClientRootCertificateResponse> p2SVpnServerConfigVpnClientRootCertificates) {
             this.p2SVpnServerConfigVpnClientRootCertificates = p2SVpnServerConfigVpnClientRootCertificates;
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setRadiusServerAddress(@Nullable String radiusServerAddress) {
+        public Builder radiusServerAddress(@Nullable String radiusServerAddress) {
             this.radiusServerAddress = radiusServerAddress;
             return this;
         }
 
-        public Builder setRadiusServerSecret(@Nullable String radiusServerSecret) {
+        public Builder radiusServerSecret(@Nullable String radiusServerSecret) {
             this.radiusServerSecret = radiusServerSecret;
             return this;
         }
 
-        public Builder setVpnClientIpsecPolicies(@Nullable List<IpsecPolicyResponse> vpnClientIpsecPolicies) {
+        public Builder vpnClientIpsecPolicies(@Nullable List<IpsecPolicyResponse> vpnClientIpsecPolicies) {
             this.vpnClientIpsecPolicies = vpnClientIpsecPolicies;
             return this;
         }
 
-        public Builder setVpnProtocols(@Nullable List<String> vpnProtocols) {
+        public Builder vpnProtocols(@Nullable List<String> vpnProtocols) {
             this.vpnProtocols = vpnProtocols;
             return this;
         }

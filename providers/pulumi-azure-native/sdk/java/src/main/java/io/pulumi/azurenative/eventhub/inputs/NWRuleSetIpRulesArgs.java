@@ -76,22 +76,22 @@ public final class NWRuleSetIpRulesArgs extends io.pulumi.resources.ResourceArgs
     	      this.ipMask = defaults.ipMask;
         }
 
-        public Builder setAction(@Nullable Input<Either<String,NetworkRuleIPAction>> action) {
+        public Builder action(@Nullable Input<Either<String,NetworkRuleIPAction>> action) {
             this.action = action;
             return this;
         }
 
-        public Builder setAction(@Nullable Either<String,NetworkRuleIPAction> action) {
+        public Builder action(@Nullable Either<String,NetworkRuleIPAction> action) {
             this.action = Input.ofNullable(action);
             return this;
         }
 
-        public Builder setIpMask(@Nullable Input<String> ipMask) {
+        public Builder ipMask(@Nullable Input<String> ipMask) {
             this.ipMask = ipMask;
             return this;
         }
 
-        public Builder setIpMask(@Nullable String ipMask) {
+        public Builder ipMask(@Nullable String ipMask) {
             this.ipMask = Input.ofNullable(ipMask);
             return this;
         }

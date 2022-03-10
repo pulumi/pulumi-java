@@ -107,22 +107,22 @@ public final class RecoveryPlanAutomationRunbookActionDetailsResponse extends io
     	      this.timeout = defaults.timeout;
         }
 
-        public Builder setFabricLocation(String fabricLocation) {
+        public Builder fabricLocation(String fabricLocation) {
             this.fabricLocation = Objects.requireNonNull(fabricLocation);
             return this;
         }
 
-        public Builder setInstanceType(String instanceType) {
+        public Builder instanceType(String instanceType) {
             this.instanceType = Objects.requireNonNull(instanceType);
             return this;
         }
 
-        public Builder setRunbookId(@Nullable String runbookId) {
+        public Builder runbookId(@Nullable String runbookId) {
             this.runbookId = runbookId;
             return this;
         }
 
-        public Builder setTimeout(@Nullable String timeout) {
+        public Builder timeout(@Nullable String timeout) {
             this.timeout = timeout;
             return this;
         }

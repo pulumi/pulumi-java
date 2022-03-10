@@ -175,82 +175,82 @@ public final class EnvironmentImageRequestEnvironmentArgs extends io.pulumi.reso
     	      this.version = defaults.version;
         }
 
-        public Builder setDocker(@Nullable Input<ModelEnvironmentDefinitionDockerArgs> docker) {
+        public Builder docker(@Nullable Input<ModelEnvironmentDefinitionDockerArgs> docker) {
             this.docker = docker;
             return this;
         }
 
-        public Builder setDocker(@Nullable ModelEnvironmentDefinitionDockerArgs docker) {
+        public Builder docker(@Nullable ModelEnvironmentDefinitionDockerArgs docker) {
             this.docker = Input.ofNullable(docker);
             return this;
         }
 
-        public Builder setEnvironmentVariables(@Nullable Input<Map<String,String>> environmentVariables) {
+        public Builder environmentVariables(@Nullable Input<Map<String,String>> environmentVariables) {
             this.environmentVariables = environmentVariables;
             return this;
         }
 
-        public Builder setEnvironmentVariables(@Nullable Map<String,String> environmentVariables) {
+        public Builder environmentVariables(@Nullable Map<String,String> environmentVariables) {
             this.environmentVariables = Input.ofNullable(environmentVariables);
             return this;
         }
 
-        public Builder setInferencingStackVersion(@Nullable Input<String> inferencingStackVersion) {
+        public Builder inferencingStackVersion(@Nullable Input<String> inferencingStackVersion) {
             this.inferencingStackVersion = inferencingStackVersion;
             return this;
         }
 
-        public Builder setInferencingStackVersion(@Nullable String inferencingStackVersion) {
+        public Builder inferencingStackVersion(@Nullable String inferencingStackVersion) {
             this.inferencingStackVersion = Input.ofNullable(inferencingStackVersion);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setPython(@Nullable Input<ModelEnvironmentDefinitionPythonArgs> python) {
+        public Builder python(@Nullable Input<ModelEnvironmentDefinitionPythonArgs> python) {
             this.python = python;
             return this;
         }
 
-        public Builder setPython(@Nullable ModelEnvironmentDefinitionPythonArgs python) {
+        public Builder python(@Nullable ModelEnvironmentDefinitionPythonArgs python) {
             this.python = Input.ofNullable(python);
             return this;
         }
 
-        public Builder setR(@Nullable Input<ModelEnvironmentDefinitionRArgs> r) {
+        public Builder r(@Nullable Input<ModelEnvironmentDefinitionRArgs> r) {
             this.r = r;
             return this;
         }
 
-        public Builder setR(@Nullable ModelEnvironmentDefinitionRArgs r) {
+        public Builder r(@Nullable ModelEnvironmentDefinitionRArgs r) {
             this.r = Input.ofNullable(r);
             return this;
         }
 
-        public Builder setSpark(@Nullable Input<ModelEnvironmentDefinitionSparkArgs> spark) {
+        public Builder spark(@Nullable Input<ModelEnvironmentDefinitionSparkArgs> spark) {
             this.spark = spark;
             return this;
         }
 
-        public Builder setSpark(@Nullable ModelEnvironmentDefinitionSparkArgs spark) {
+        public Builder spark(@Nullable ModelEnvironmentDefinitionSparkArgs spark) {
             this.spark = Input.ofNullable(spark);
             return this;
         }
 
-        public Builder setVersion(@Nullable Input<String> version) {
+        public Builder version(@Nullable Input<String> version) {
             this.version = version;
             return this;
         }
 
-        public Builder setVersion(@Nullable String version) {
+        public Builder version(@Nullable String version) {
             this.version = Input.ofNullable(version);
             return this;
         }

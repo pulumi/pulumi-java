@@ -58,12 +58,12 @@ public final class SystemAssignedServiceIdentityArgs extends io.pulumi.resources
     	      this.type = defaults.type;
         }
 
-        public Builder setType(Input<Either<String,SystemAssignedServiceIdentityType>> type) {
+        public Builder type(Input<Either<String,SystemAssignedServiceIdentityType>> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setType(Either<String,SystemAssignedServiceIdentityType> type) {
+        public Builder type(Either<String,SystemAssignedServiceIdentityType> type) {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }

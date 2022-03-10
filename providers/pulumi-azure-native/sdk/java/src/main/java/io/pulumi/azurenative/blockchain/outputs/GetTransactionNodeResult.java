@@ -197,52 +197,52 @@ public final class GetTransactionNodeResult {
     	      this.userName = defaults.userName;
         }
 
-        public Builder setDns(String dns) {
+        public Builder dns(String dns) {
             this.dns = Objects.requireNonNull(dns);
             return this;
         }
 
-        public Builder setFirewallRules(@Nullable List<FirewallRuleResponse> firewallRules) {
+        public Builder firewallRules(@Nullable List<FirewallRuleResponse> firewallRules) {
             this.firewallRules = firewallRules;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPassword(@Nullable String password) {
+        public Builder password(@Nullable String password) {
             this.password = password;
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setPublicKey(String publicKey) {
+        public Builder publicKey(String publicKey) {
             this.publicKey = Objects.requireNonNull(publicKey);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setUserName(String userName) {
+        public Builder userName(String userName) {
             this.userName = Objects.requireNonNull(userName);
             return this;
         }

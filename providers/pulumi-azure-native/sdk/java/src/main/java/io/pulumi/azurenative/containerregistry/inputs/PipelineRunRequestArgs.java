@@ -128,52 +128,52 @@ public final class PipelineRunRequestArgs extends io.pulumi.resources.ResourceAr
     	      this.target = defaults.target;
         }
 
-        public Builder setArtifacts(@Nullable Input<List<String>> artifacts) {
+        public Builder artifacts(@Nullable Input<List<String>> artifacts) {
             this.artifacts = artifacts;
             return this;
         }
 
-        public Builder setArtifacts(@Nullable List<String> artifacts) {
+        public Builder artifacts(@Nullable List<String> artifacts) {
             this.artifacts = Input.ofNullable(artifacts);
             return this;
         }
 
-        public Builder setCatalogDigest(@Nullable Input<String> catalogDigest) {
+        public Builder catalogDigest(@Nullable Input<String> catalogDigest) {
             this.catalogDigest = catalogDigest;
             return this;
         }
 
-        public Builder setCatalogDigest(@Nullable String catalogDigest) {
+        public Builder catalogDigest(@Nullable String catalogDigest) {
             this.catalogDigest = Input.ofNullable(catalogDigest);
             return this;
         }
 
-        public Builder setPipelineResourceId(@Nullable Input<String> pipelineResourceId) {
+        public Builder pipelineResourceId(@Nullable Input<String> pipelineResourceId) {
             this.pipelineResourceId = pipelineResourceId;
             return this;
         }
 
-        public Builder setPipelineResourceId(@Nullable String pipelineResourceId) {
+        public Builder pipelineResourceId(@Nullable String pipelineResourceId) {
             this.pipelineResourceId = Input.ofNullable(pipelineResourceId);
             return this;
         }
 
-        public Builder setSource(@Nullable Input<PipelineRunSourcePropertiesArgs> source) {
+        public Builder source(@Nullable Input<PipelineRunSourcePropertiesArgs> source) {
             this.source = source;
             return this;
         }
 
-        public Builder setSource(@Nullable PipelineRunSourcePropertiesArgs source) {
+        public Builder source(@Nullable PipelineRunSourcePropertiesArgs source) {
             this.source = Input.ofNullable(source);
             return this;
         }
 
-        public Builder setTarget(@Nullable Input<PipelineRunTargetPropertiesArgs> target) {
+        public Builder target(@Nullable Input<PipelineRunTargetPropertiesArgs> target) {
             this.target = target;
             return this;
         }
 
-        public Builder setTarget(@Nullable PipelineRunTargetPropertiesArgs target) {
+        public Builder target(@Nullable PipelineRunTargetPropertiesArgs target) {
             this.target = Input.ofNullable(target);
             return this;
         }

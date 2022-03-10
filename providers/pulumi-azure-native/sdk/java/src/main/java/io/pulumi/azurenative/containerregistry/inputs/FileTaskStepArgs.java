@@ -141,62 +141,62 @@ public final class FileTaskStepArgs extends io.pulumi.resources.ResourceArgs {
     	      this.valuesFilePath = defaults.valuesFilePath;
         }
 
-        public Builder setContextAccessToken(@Nullable Input<String> contextAccessToken) {
+        public Builder contextAccessToken(@Nullable Input<String> contextAccessToken) {
             this.contextAccessToken = contextAccessToken;
             return this;
         }
 
-        public Builder setContextAccessToken(@Nullable String contextAccessToken) {
+        public Builder contextAccessToken(@Nullable String contextAccessToken) {
             this.contextAccessToken = Input.ofNullable(contextAccessToken);
             return this;
         }
 
-        public Builder setContextPath(@Nullable Input<String> contextPath) {
+        public Builder contextPath(@Nullable Input<String> contextPath) {
             this.contextPath = contextPath;
             return this;
         }
 
-        public Builder setContextPath(@Nullable String contextPath) {
+        public Builder contextPath(@Nullable String contextPath) {
             this.contextPath = Input.ofNullable(contextPath);
             return this;
         }
 
-        public Builder setTaskFilePath(Input<String> taskFilePath) {
+        public Builder taskFilePath(Input<String> taskFilePath) {
             this.taskFilePath = Objects.requireNonNull(taskFilePath);
             return this;
         }
 
-        public Builder setTaskFilePath(String taskFilePath) {
+        public Builder taskFilePath(String taskFilePath) {
             this.taskFilePath = Input.of(Objects.requireNonNull(taskFilePath));
             return this;
         }
 
-        public Builder setType(Input<String> type) {
+        public Builder type(Input<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }
 
-        public Builder setValues(@Nullable Input<List<SetValueArgs>> values) {
+        public Builder values(@Nullable Input<List<SetValueArgs>> values) {
             this.values = values;
             return this;
         }
 
-        public Builder setValues(@Nullable List<SetValueArgs> values) {
+        public Builder values(@Nullable List<SetValueArgs> values) {
             this.values = Input.ofNullable(values);
             return this;
         }
 
-        public Builder setValuesFilePath(@Nullable Input<String> valuesFilePath) {
+        public Builder valuesFilePath(@Nullable Input<String> valuesFilePath) {
             this.valuesFilePath = valuesFilePath;
             return this;
         }
 
-        public Builder setValuesFilePath(@Nullable String valuesFilePath) {
+        public Builder valuesFilePath(@Nullable String valuesFilePath) {
             this.valuesFilePath = Input.ofNullable(valuesFilePath);
             return this;
         }

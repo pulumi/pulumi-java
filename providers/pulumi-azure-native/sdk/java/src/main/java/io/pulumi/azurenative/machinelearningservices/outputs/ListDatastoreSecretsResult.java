@@ -48,7 +48,7 @@ public final class ListDatastoreSecretsResult {
     	      this.secretsType = defaults.secretsType;
         }
 
-        public Builder setSecretsType(String secretsType) {
+        public Builder secretsType(String secretsType) {
             this.secretsType = Objects.requireNonNull(secretsType);
             return this;
         }

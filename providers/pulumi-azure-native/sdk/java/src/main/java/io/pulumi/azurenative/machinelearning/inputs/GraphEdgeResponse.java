@@ -106,22 +106,22 @@ public final class GraphEdgeResponse extends io.pulumi.resources.InvokeArgs {
     	      this.targetPortId = defaults.targetPortId;
         }
 
-        public Builder setSourceNodeId(@Nullable String sourceNodeId) {
+        public Builder sourceNodeId(@Nullable String sourceNodeId) {
             this.sourceNodeId = sourceNodeId;
             return this;
         }
 
-        public Builder setSourcePortId(@Nullable String sourcePortId) {
+        public Builder sourcePortId(@Nullable String sourcePortId) {
             this.sourcePortId = sourcePortId;
             return this;
         }
 
-        public Builder setTargetNodeId(@Nullable String targetNodeId) {
+        public Builder targetNodeId(@Nullable String targetNodeId) {
             this.targetNodeId = targetNodeId;
             return this;
         }
 
-        public Builder setTargetPortId(@Nullable String targetPortId) {
+        public Builder targetPortId(@Nullable String targetPortId) {
             this.targetPortId = targetPortId;
             return this;
         }

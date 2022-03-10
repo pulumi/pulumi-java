@@ -110,22 +110,22 @@ public final class EnvelopeEncryptionResponse extends io.pulumi.resources.Invoke
     	      this.enabledProtocols = defaults.enabledProtocols;
         }
 
-        public Builder setClearTracks(@Nullable List<TrackSelectionResponse> clearTracks) {
+        public Builder clearTracks(@Nullable List<TrackSelectionResponse> clearTracks) {
             this.clearTracks = clearTracks;
             return this;
         }
 
-        public Builder setContentKeys(@Nullable StreamingPolicyContentKeysResponse contentKeys) {
+        public Builder contentKeys(@Nullable StreamingPolicyContentKeysResponse contentKeys) {
             this.contentKeys = contentKeys;
             return this;
         }
 
-        public Builder setCustomKeyAcquisitionUrlTemplate(@Nullable String customKeyAcquisitionUrlTemplate) {
+        public Builder customKeyAcquisitionUrlTemplate(@Nullable String customKeyAcquisitionUrlTemplate) {
             this.customKeyAcquisitionUrlTemplate = customKeyAcquisitionUrlTemplate;
             return this;
         }
 
-        public Builder setEnabledProtocols(@Nullable EnabledProtocolsResponse enabledProtocols) {
+        public Builder enabledProtocols(@Nullable EnabledProtocolsResponse enabledProtocols) {
             this.enabledProtocols = enabledProtocols;
             return this;
         }

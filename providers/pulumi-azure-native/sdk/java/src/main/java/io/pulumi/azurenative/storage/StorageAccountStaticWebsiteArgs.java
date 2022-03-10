@@ -102,42 +102,42 @@ public final class StorageAccountStaticWebsiteArgs extends io.pulumi.resources.R
     	      this.resourceGroupName = defaults.resourceGroupName;
         }
 
-        public Builder setAccountName(Input<String> accountName) {
+        public Builder accountName(Input<String> accountName) {
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
 
-        public Builder setAccountName(String accountName) {
+        public Builder accountName(String accountName) {
             this.accountName = Input.of(Objects.requireNonNull(accountName));
             return this;
         }
 
-        public Builder setError404Document(@Nullable Input<String> error404Document) {
+        public Builder error404Document(@Nullable Input<String> error404Document) {
             this.error404Document = error404Document;
             return this;
         }
 
-        public Builder setError404Document(@Nullable String error404Document) {
+        public Builder error404Document(@Nullable String error404Document) {
             this.error404Document = Input.ofNullable(error404Document);
             return this;
         }
 
-        public Builder setIndexDocument(@Nullable Input<String> indexDocument) {
+        public Builder indexDocument(@Nullable Input<String> indexDocument) {
             this.indexDocument = indexDocument;
             return this;
         }
 
-        public Builder setIndexDocument(@Nullable String indexDocument) {
+        public Builder indexDocument(@Nullable String indexDocument) {
             this.indexDocument = Input.ofNullable(indexDocument);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }

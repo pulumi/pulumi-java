@@ -75,12 +75,12 @@ public final class WeeklyRetentionFormatResponse extends io.pulumi.resources.Inv
     	      this.weeksOfTheMonth = defaults.weeksOfTheMonth;
         }
 
-        public Builder setDaysOfTheWeek(@Nullable List<String> daysOfTheWeek) {
+        public Builder daysOfTheWeek(@Nullable List<String> daysOfTheWeek) {
             this.daysOfTheWeek = daysOfTheWeek;
             return this;
         }
 
-        public Builder setWeeksOfTheMonth(@Nullable List<String> weeksOfTheMonth) {
+        public Builder weeksOfTheMonth(@Nullable List<String> weeksOfTheMonth) {
             this.weeksOfTheMonth = weeksOfTheMonth;
             return this;
         }

@@ -135,62 +135,62 @@ public final class SerialPortArgs extends io.pulumi.resources.ResourceArgs {
     	      this.state = defaults.state;
         }
 
-        public Builder setParentResource(Input<String> parentResource) {
+        public Builder parentResource(Input<String> parentResource) {
             this.parentResource = Objects.requireNonNull(parentResource);
             return this;
         }
 
-        public Builder setParentResource(String parentResource) {
+        public Builder parentResource(String parentResource) {
             this.parentResource = Input.of(Objects.requireNonNull(parentResource));
             return this;
         }
 
-        public Builder setParentResourceType(Input<String> parentResourceType) {
+        public Builder parentResourceType(Input<String> parentResourceType) {
             this.parentResourceType = Objects.requireNonNull(parentResourceType);
             return this;
         }
 
-        public Builder setParentResourceType(String parentResourceType) {
+        public Builder parentResourceType(String parentResourceType) {
             this.parentResourceType = Input.of(Objects.requireNonNull(parentResourceType));
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setResourceProviderNamespace(Input<String> resourceProviderNamespace) {
+        public Builder resourceProviderNamespace(Input<String> resourceProviderNamespace) {
             this.resourceProviderNamespace = Objects.requireNonNull(resourceProviderNamespace);
             return this;
         }
 
-        public Builder setResourceProviderNamespace(String resourceProviderNamespace) {
+        public Builder resourceProviderNamespace(String resourceProviderNamespace) {
             this.resourceProviderNamespace = Input.of(Objects.requireNonNull(resourceProviderNamespace));
             return this;
         }
 
-        public Builder setSerialPort(@Nullable Input<String> serialPort) {
+        public Builder serialPort(@Nullable Input<String> serialPort) {
             this.serialPort = serialPort;
             return this;
         }
 
-        public Builder setSerialPort(@Nullable String serialPort) {
+        public Builder serialPort(@Nullable String serialPort) {
             this.serialPort = Input.ofNullable(serialPort);
             return this;
         }
 
-        public Builder setState(@Nullable Input<SerialPortState> state) {
+        public Builder state(@Nullable Input<SerialPortState> state) {
             this.state = state;
             return this;
         }
 
-        public Builder setState(@Nullable SerialPortState state) {
+        public Builder state(@Nullable SerialPortState state) {
             this.state = Input.ofNullable(state);
             return this;
         }

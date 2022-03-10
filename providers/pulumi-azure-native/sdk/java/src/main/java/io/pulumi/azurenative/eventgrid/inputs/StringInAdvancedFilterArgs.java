@@ -92,32 +92,32 @@ public final class StringInAdvancedFilterArgs extends io.pulumi.resources.Resour
     	      this.values = defaults.values;
         }
 
-        public Builder setKey(@Nullable Input<String> key) {
+        public Builder key(@Nullable Input<String> key) {
             this.key = key;
             return this;
         }
 
-        public Builder setKey(@Nullable String key) {
+        public Builder key(@Nullable String key) {
             this.key = Input.ofNullable(key);
             return this;
         }
 
-        public Builder setOperatorType(Input<String> operatorType) {
+        public Builder operatorType(Input<String> operatorType) {
             this.operatorType = Objects.requireNonNull(operatorType);
             return this;
         }
 
-        public Builder setOperatorType(String operatorType) {
+        public Builder operatorType(String operatorType) {
             this.operatorType = Input.of(Objects.requireNonNull(operatorType));
             return this;
         }
 
-        public Builder setValues(@Nullable Input<List<String>> values) {
+        public Builder values(@Nullable Input<List<String>> values) {
             this.values = values;
             return this;
         }
 
-        public Builder setValues(@Nullable List<String> values) {
+        public Builder values(@Nullable List<String> values) {
             this.values = Input.ofNullable(values);
             return this;
         }

@@ -234,62 +234,62 @@ public final class CustomApiPropertiesDefinitionResponse {
     	      this.wsdlDefinition = defaults.wsdlDefinition;
         }
 
-        public Builder setApiDefinitions(@Nullable ApiResourceDefinitionsResponse apiDefinitions) {
+        public Builder apiDefinitions(@Nullable ApiResourceDefinitionsResponse apiDefinitions) {
             this.apiDefinitions = apiDefinitions;
             return this;
         }
 
-        public Builder setApiType(@Nullable String apiType) {
+        public Builder apiType(@Nullable String apiType) {
             this.apiType = apiType;
             return this;
         }
 
-        public Builder setBackendService(@Nullable ApiResourceBackendServiceResponse backendService) {
+        public Builder backendService(@Nullable ApiResourceBackendServiceResponse backendService) {
             this.backendService = backendService;
             return this;
         }
 
-        public Builder setBrandColor(@Nullable String brandColor) {
+        public Builder brandColor(@Nullable String brandColor) {
             this.brandColor = brandColor;
             return this;
         }
 
-        public Builder setCapabilities(@Nullable List<String> capabilities) {
+        public Builder capabilities(@Nullable List<String> capabilities) {
             this.capabilities = capabilities;
             return this;
         }
 
-        public Builder setConnectionParameters(@Nullable Map<String,ConnectionParameterResponse> connectionParameters) {
+        public Builder connectionParameters(@Nullable Map<String,ConnectionParameterResponse> connectionParameters) {
             this.connectionParameters = connectionParameters;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDisplayName(@Nullable String displayName) {
+        public Builder displayName(@Nullable String displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setIconUri(@Nullable String iconUri) {
+        public Builder iconUri(@Nullable String iconUri) {
             this.iconUri = iconUri;
             return this;
         }
 
-        public Builder setRuntimeUrls(@Nullable List<String> runtimeUrls) {
+        public Builder runtimeUrls(@Nullable List<String> runtimeUrls) {
             this.runtimeUrls = runtimeUrls;
             return this;
         }
 
-        public Builder setSwagger(@Nullable Object swagger) {
+        public Builder swagger(@Nullable Object swagger) {
             this.swagger = swagger;
             return this;
         }
 
-        public Builder setWsdlDefinition(@Nullable WsdlDefinitionResponse wsdlDefinition) {
+        public Builder wsdlDefinition(@Nullable WsdlDefinitionResponse wsdlDefinition) {
             this.wsdlDefinition = wsdlDefinition;
             return this;
         }

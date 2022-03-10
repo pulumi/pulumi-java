@@ -124,52 +124,52 @@ public final class BanditPolicyArgs extends io.pulumi.resources.ResourceArgs {
     	      this.slackFactor = defaults.slackFactor;
         }
 
-        public Builder setDelayEvaluation(@Nullable Input<Integer> delayEvaluation) {
+        public Builder delayEvaluation(@Nullable Input<Integer> delayEvaluation) {
             this.delayEvaluation = delayEvaluation;
             return this;
         }
 
-        public Builder setDelayEvaluation(@Nullable Integer delayEvaluation) {
+        public Builder delayEvaluation(@Nullable Integer delayEvaluation) {
             this.delayEvaluation = Input.ofNullable(delayEvaluation);
             return this;
         }
 
-        public Builder setEvaluationInterval(@Nullable Input<Integer> evaluationInterval) {
+        public Builder evaluationInterval(@Nullable Input<Integer> evaluationInterval) {
             this.evaluationInterval = evaluationInterval;
             return this;
         }
 
-        public Builder setEvaluationInterval(@Nullable Integer evaluationInterval) {
+        public Builder evaluationInterval(@Nullable Integer evaluationInterval) {
             this.evaluationInterval = Input.ofNullable(evaluationInterval);
             return this;
         }
 
-        public Builder setPolicyType(Input<String> policyType) {
+        public Builder policyType(Input<String> policyType) {
             this.policyType = Objects.requireNonNull(policyType);
             return this;
         }
 
-        public Builder setPolicyType(String policyType) {
+        public Builder policyType(String policyType) {
             this.policyType = Input.of(Objects.requireNonNull(policyType));
             return this;
         }
 
-        public Builder setSlackAmount(@Nullable Input<Double> slackAmount) {
+        public Builder slackAmount(@Nullable Input<Double> slackAmount) {
             this.slackAmount = slackAmount;
             return this;
         }
 
-        public Builder setSlackAmount(@Nullable Double slackAmount) {
+        public Builder slackAmount(@Nullable Double slackAmount) {
             this.slackAmount = Input.ofNullable(slackAmount);
             return this;
         }
 
-        public Builder setSlackFactor(@Nullable Input<Double> slackFactor) {
+        public Builder slackFactor(@Nullable Input<Double> slackFactor) {
             this.slackFactor = slackFactor;
             return this;
         }
 
-        public Builder setSlackFactor(@Nullable Double slackFactor) {
+        public Builder slackFactor(@Nullable Double slackFactor) {
             this.slackFactor = Input.ofNullable(slackFactor);
             return this;
         }

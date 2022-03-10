@@ -414,122 +414,122 @@ public final class GetWebAppSiteExtensionSlotResult {
     	      this.version = defaults.version;
         }
 
-        public Builder setAuthors(@Nullable List<String> authors) {
+        public Builder authors(@Nullable List<String> authors) {
             this.authors = authors;
             return this;
         }
 
-        public Builder setComment(@Nullable String comment) {
+        public Builder comment(@Nullable String comment) {
             this.comment = comment;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDownloadCount(@Nullable Integer downloadCount) {
+        public Builder downloadCount(@Nullable Integer downloadCount) {
             this.downloadCount = downloadCount;
             return this;
         }
 
-        public Builder setExtensionId(@Nullable String extensionId) {
+        public Builder extensionId(@Nullable String extensionId) {
             this.extensionId = extensionId;
             return this;
         }
 
-        public Builder setExtensionType(@Nullable String extensionType) {
+        public Builder extensionType(@Nullable String extensionType) {
             this.extensionType = extensionType;
             return this;
         }
 
-        public Builder setExtensionUrl(@Nullable String extensionUrl) {
+        public Builder extensionUrl(@Nullable String extensionUrl) {
             this.extensionUrl = extensionUrl;
             return this;
         }
 
-        public Builder setFeedUrl(@Nullable String feedUrl) {
+        public Builder feedUrl(@Nullable String feedUrl) {
             this.feedUrl = feedUrl;
             return this;
         }
 
-        public Builder setIconUrl(@Nullable String iconUrl) {
+        public Builder iconUrl(@Nullable String iconUrl) {
             this.iconUrl = iconUrl;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setInstalledDateTime(@Nullable String installedDateTime) {
+        public Builder installedDateTime(@Nullable String installedDateTime) {
             this.installedDateTime = installedDateTime;
             return this;
         }
 
-        public Builder setInstallerCommandLineParams(@Nullable String installerCommandLineParams) {
+        public Builder installerCommandLineParams(@Nullable String installerCommandLineParams) {
             this.installerCommandLineParams = installerCommandLineParams;
             return this;
         }
 
-        public Builder setKind(@Nullable String kind) {
+        public Builder kind(@Nullable String kind) {
             this.kind = kind;
             return this;
         }
 
-        public Builder setLicenseUrl(@Nullable String licenseUrl) {
+        public Builder licenseUrl(@Nullable String licenseUrl) {
             this.licenseUrl = licenseUrl;
             return this;
         }
 
-        public Builder setLocalIsLatestVersion(@Nullable Boolean localIsLatestVersion) {
+        public Builder localIsLatestVersion(@Nullable Boolean localIsLatestVersion) {
             this.localIsLatestVersion = localIsLatestVersion;
             return this;
         }
 
-        public Builder setLocalPath(@Nullable String localPath) {
+        public Builder localPath(@Nullable String localPath) {
             this.localPath = localPath;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setProjectUrl(@Nullable String projectUrl) {
+        public Builder projectUrl(@Nullable String projectUrl) {
             this.projectUrl = projectUrl;
             return this;
         }
 
-        public Builder setProvisioningState(@Nullable String provisioningState) {
+        public Builder provisioningState(@Nullable String provisioningState) {
             this.provisioningState = provisioningState;
             return this;
         }
 
-        public Builder setPublishedDateTime(@Nullable String publishedDateTime) {
+        public Builder publishedDateTime(@Nullable String publishedDateTime) {
             this.publishedDateTime = publishedDateTime;
             return this;
         }
 
-        public Builder setSummary(@Nullable String summary) {
+        public Builder summary(@Nullable String summary) {
             this.summary = summary;
             return this;
         }
 
-        public Builder setTitle(@Nullable String title) {
+        public Builder title(@Nullable String title) {
             this.title = title;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setVersion(@Nullable String version) {
+        public Builder version(@Nullable String version) {
             this.version = version;
             return this;
         }

@@ -76,22 +76,22 @@ public final class CloudServiceVaultSecretGroupArgs extends io.pulumi.resources.
     	      this.vaultCertificates = defaults.vaultCertificates;
         }
 
-        public Builder setSourceVault(@Nullable Input<SubResourceArgs> sourceVault) {
+        public Builder sourceVault(@Nullable Input<SubResourceArgs> sourceVault) {
             this.sourceVault = sourceVault;
             return this;
         }
 
-        public Builder setSourceVault(@Nullable SubResourceArgs sourceVault) {
+        public Builder sourceVault(@Nullable SubResourceArgs sourceVault) {
             this.sourceVault = Input.ofNullable(sourceVault);
             return this;
         }
 
-        public Builder setVaultCertificates(@Nullable Input<List<CloudServiceVaultCertificateArgs>> vaultCertificates) {
+        public Builder vaultCertificates(@Nullable Input<List<CloudServiceVaultCertificateArgs>> vaultCertificates) {
             this.vaultCertificates = vaultCertificates;
             return this;
         }
 
-        public Builder setVaultCertificates(@Nullable List<CloudServiceVaultCertificateArgs> vaultCertificates) {
+        public Builder vaultCertificates(@Nullable List<CloudServiceVaultCertificateArgs> vaultCertificates) {
             this.vaultCertificates = Input.ofNullable(vaultCertificates);
             return this;
         }

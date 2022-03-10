@@ -116,27 +116,27 @@ public final class GuestOSCustomizationResponse {
     	      this.username = defaults.username;
         }
 
-        public Builder setDnsServers(@Nullable List<String> dnsServers) {
+        public Builder dnsServers(@Nullable List<String> dnsServers) {
             this.dnsServers = dnsServers;
             return this;
         }
 
-        public Builder setHostName(@Nullable String hostName) {
+        public Builder hostName(@Nullable String hostName) {
             this.hostName = hostName;
             return this;
         }
 
-        public Builder setPassword(@Nullable String password) {
+        public Builder password(@Nullable String password) {
             this.password = password;
             return this;
         }
 
-        public Builder setPolicyId(@Nullable String policyId) {
+        public Builder policyId(@Nullable String policyId) {
             this.policyId = policyId;
             return this;
         }
 
-        public Builder setUsername(@Nullable String username) {
+        public Builder username(@Nullable String username) {
             this.username = username;
             return this;
         }

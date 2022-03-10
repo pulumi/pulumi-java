@@ -72,22 +72,22 @@ public final class MetricsTagRulesPropertiesArgs extends io.pulumi.resources.Res
     	      this.sendMetrics = defaults.sendMetrics;
         }
 
-        public Builder setMetricRules(@Nullable Input<List<MetricRulesArgs>> metricRules) {
+        public Builder metricRules(@Nullable Input<List<MetricRulesArgs>> metricRules) {
             this.metricRules = metricRules;
             return this;
         }
 
-        public Builder setMetricRules(@Nullable List<MetricRulesArgs> metricRules) {
+        public Builder metricRules(@Nullable List<MetricRulesArgs> metricRules) {
             this.metricRules = Input.ofNullable(metricRules);
             return this;
         }
 
-        public Builder setSendMetrics(@Nullable Input<Boolean> sendMetrics) {
+        public Builder sendMetrics(@Nullable Input<Boolean> sendMetrics) {
             this.sendMetrics = sendMetrics;
             return this;
         }
 
-        public Builder setSendMetrics(@Nullable Boolean sendMetrics) {
+        public Builder sendMetrics(@Nullable Boolean sendMetrics) {
             this.sendMetrics = Input.ofNullable(sendMetrics);
             return this;
         }

@@ -66,12 +66,12 @@ public final class KeyVaultSecretReferenceResponse {
     	      this.sourceVault = defaults.sourceVault;
         }
 
-        public Builder setSecretUrl(String secretUrl) {
+        public Builder secretUrl(String secretUrl) {
             this.secretUrl = Objects.requireNonNull(secretUrl);
             return this;
         }
 
-        public Builder setSourceVault(SubResourceResponse sourceVault) {
+        public Builder sourceVault(SubResourceResponse sourceVault) {
             this.sourceVault = Objects.requireNonNull(sourceVault);
             return this;
         }

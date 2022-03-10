@@ -52,12 +52,12 @@ public final class AppLogsConfigurationResponse {
     	      this.logAnalyticsConfiguration = defaults.logAnalyticsConfiguration;
         }
 
-        public Builder setDestination(@Nullable String destination) {
+        public Builder destination(@Nullable String destination) {
             this.destination = destination;
             return this;
         }
 
-        public Builder setLogAnalyticsConfiguration(@Nullable LogAnalyticsConfigurationResponse logAnalyticsConfiguration) {
+        public Builder logAnalyticsConfiguration(@Nullable LogAnalyticsConfigurationResponse logAnalyticsConfiguration) {
             this.logAnalyticsConfiguration = logAnalyticsConfiguration;
             return this;
         }

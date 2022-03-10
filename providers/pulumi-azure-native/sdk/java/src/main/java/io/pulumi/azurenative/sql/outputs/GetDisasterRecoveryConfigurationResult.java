@@ -209,57 +209,57 @@ public final class GetDisasterRecoveryConfigurationResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setAutoFailover(String autoFailover) {
+        public Builder autoFailover(String autoFailover) {
             this.autoFailover = Objects.requireNonNull(autoFailover);
             return this;
         }
 
-        public Builder setFailoverPolicy(String failoverPolicy) {
+        public Builder failoverPolicy(String failoverPolicy) {
             this.failoverPolicy = Objects.requireNonNull(failoverPolicy);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setLogicalServerName(String logicalServerName) {
+        public Builder logicalServerName(String logicalServerName) {
             this.logicalServerName = Objects.requireNonNull(logicalServerName);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPartnerLogicalServerName(String partnerLogicalServerName) {
+        public Builder partnerLogicalServerName(String partnerLogicalServerName) {
             this.partnerLogicalServerName = Objects.requireNonNull(partnerLogicalServerName);
             return this;
         }
 
-        public Builder setPartnerServerId(String partnerServerId) {
+        public Builder partnerServerId(String partnerServerId) {
             this.partnerServerId = Objects.requireNonNull(partnerServerId);
             return this;
         }
 
-        public Builder setRole(String role) {
+        public Builder role(String role) {
             this.role = Objects.requireNonNull(role);
             return this;
         }
 
-        public Builder setStatus(String status) {
+        public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

@@ -65,12 +65,12 @@ public final class ObjectiveResponse {
     	      this.primaryMetric = defaults.primaryMetric;
         }
 
-        public Builder setGoal(String goal) {
+        public Builder goal(String goal) {
             this.goal = Objects.requireNonNull(goal);
             return this;
         }
 
-        public Builder setPrimaryMetric(String primaryMetric) {
+        public Builder primaryMetric(String primaryMetric) {
             this.primaryMetric = Objects.requireNonNull(primaryMetric);
             return this;
         }

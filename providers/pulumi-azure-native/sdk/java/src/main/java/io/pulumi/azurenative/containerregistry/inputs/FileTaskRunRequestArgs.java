@@ -243,122 +243,122 @@ public final class FileTaskRunRequestArgs extends io.pulumi.resources.ResourceAr
     	      this.valuesFilePath = defaults.valuesFilePath;
         }
 
-        public Builder setAgentConfiguration(@Nullable Input<AgentPropertiesArgs> agentConfiguration) {
+        public Builder agentConfiguration(@Nullable Input<AgentPropertiesArgs> agentConfiguration) {
             this.agentConfiguration = agentConfiguration;
             return this;
         }
 
-        public Builder setAgentConfiguration(@Nullable AgentPropertiesArgs agentConfiguration) {
+        public Builder agentConfiguration(@Nullable AgentPropertiesArgs agentConfiguration) {
             this.agentConfiguration = Input.ofNullable(agentConfiguration);
             return this;
         }
 
-        public Builder setAgentPoolName(@Nullable Input<String> agentPoolName) {
+        public Builder agentPoolName(@Nullable Input<String> agentPoolName) {
             this.agentPoolName = agentPoolName;
             return this;
         }
 
-        public Builder setAgentPoolName(@Nullable String agentPoolName) {
+        public Builder agentPoolName(@Nullable String agentPoolName) {
             this.agentPoolName = Input.ofNullable(agentPoolName);
             return this;
         }
 
-        public Builder setCredentials(@Nullable Input<CredentialsArgs> credentials) {
+        public Builder credentials(@Nullable Input<CredentialsArgs> credentials) {
             this.credentials = credentials;
             return this;
         }
 
-        public Builder setCredentials(@Nullable CredentialsArgs credentials) {
+        public Builder credentials(@Nullable CredentialsArgs credentials) {
             this.credentials = Input.ofNullable(credentials);
             return this;
         }
 
-        public Builder setIsArchiveEnabled(@Nullable Input<Boolean> isArchiveEnabled) {
+        public Builder isArchiveEnabled(@Nullable Input<Boolean> isArchiveEnabled) {
             this.isArchiveEnabled = isArchiveEnabled;
             return this;
         }
 
-        public Builder setIsArchiveEnabled(@Nullable Boolean isArchiveEnabled) {
+        public Builder isArchiveEnabled(@Nullable Boolean isArchiveEnabled) {
             this.isArchiveEnabled = Input.ofNullable(isArchiveEnabled);
             return this;
         }
 
-        public Builder setLogTemplate(@Nullable Input<String> logTemplate) {
+        public Builder logTemplate(@Nullable Input<String> logTemplate) {
             this.logTemplate = logTemplate;
             return this;
         }
 
-        public Builder setLogTemplate(@Nullable String logTemplate) {
+        public Builder logTemplate(@Nullable String logTemplate) {
             this.logTemplate = Input.ofNullable(logTemplate);
             return this;
         }
 
-        public Builder setPlatform(Input<PlatformPropertiesArgs> platform) {
+        public Builder platform(Input<PlatformPropertiesArgs> platform) {
             this.platform = Objects.requireNonNull(platform);
             return this;
         }
 
-        public Builder setPlatform(PlatformPropertiesArgs platform) {
+        public Builder platform(PlatformPropertiesArgs platform) {
             this.platform = Input.of(Objects.requireNonNull(platform));
             return this;
         }
 
-        public Builder setSourceLocation(@Nullable Input<String> sourceLocation) {
+        public Builder sourceLocation(@Nullable Input<String> sourceLocation) {
             this.sourceLocation = sourceLocation;
             return this;
         }
 
-        public Builder setSourceLocation(@Nullable String sourceLocation) {
+        public Builder sourceLocation(@Nullable String sourceLocation) {
             this.sourceLocation = Input.ofNullable(sourceLocation);
             return this;
         }
 
-        public Builder setTaskFilePath(Input<String> taskFilePath) {
+        public Builder taskFilePath(Input<String> taskFilePath) {
             this.taskFilePath = Objects.requireNonNull(taskFilePath);
             return this;
         }
 
-        public Builder setTaskFilePath(String taskFilePath) {
+        public Builder taskFilePath(String taskFilePath) {
             this.taskFilePath = Input.of(Objects.requireNonNull(taskFilePath));
             return this;
         }
 
-        public Builder setTimeout(@Nullable Input<Integer> timeout) {
+        public Builder timeout(@Nullable Input<Integer> timeout) {
             this.timeout = timeout;
             return this;
         }
 
-        public Builder setTimeout(@Nullable Integer timeout) {
+        public Builder timeout(@Nullable Integer timeout) {
             this.timeout = Input.ofNullable(timeout);
             return this;
         }
 
-        public Builder setType(Input<String> type) {
+        public Builder type(Input<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }
 
-        public Builder setValues(@Nullable Input<List<SetValueArgs>> values) {
+        public Builder values(@Nullable Input<List<SetValueArgs>> values) {
             this.values = values;
             return this;
         }
 
-        public Builder setValues(@Nullable List<SetValueArgs> values) {
+        public Builder values(@Nullable List<SetValueArgs> values) {
             this.values = Input.ofNullable(values);
             return this;
         }
 
-        public Builder setValuesFilePath(@Nullable Input<String> valuesFilePath) {
+        public Builder valuesFilePath(@Nullable Input<String> valuesFilePath) {
             this.valuesFilePath = valuesFilePath;
             return this;
         }
 
-        public Builder setValuesFilePath(@Nullable String valuesFilePath) {
+        public Builder valuesFilePath(@Nullable String valuesFilePath) {
             this.valuesFilePath = Input.ofNullable(valuesFilePath);
             return this;
         }

@@ -50,7 +50,7 @@ public final class EncryptionPropertiesResponse {
     	      this.keyVaultProperties = defaults.keyVaultProperties;
         }
 
-        public Builder setKeyVaultProperties(@Nullable KeyVaultPropertiesResponse keyVaultProperties) {
+        public Builder keyVaultProperties(@Nullable KeyVaultPropertiesResponse keyVaultProperties) {
             this.keyVaultProperties = keyVaultProperties;
             return this;
         }

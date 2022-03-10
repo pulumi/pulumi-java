@@ -84,17 +84,17 @@ public final class ListSecretValueArgs extends io.pulumi.resources.InvokeArgs {
     	      this.secretValueResourceName = defaults.secretValueResourceName;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setSecretResourceName(String secretResourceName) {
+        public Builder secretResourceName(String secretResourceName) {
             this.secretResourceName = Objects.requireNonNull(secretResourceName);
             return this;
         }
 
-        public Builder setSecretValueResourceName(String secretValueResourceName) {
+        public Builder secretValueResourceName(String secretValueResourceName) {
             this.secretValueResourceName = Objects.requireNonNull(secretValueResourceName);
             return this;
         }

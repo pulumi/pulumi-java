@@ -81,17 +81,17 @@ public final class WorkbookUserAssignedIdentitiesResponse {
     	      this.tenantId = defaults.tenantId;
         }
 
-        public Builder setClientId(String clientId) {
+        public Builder clientId(String clientId) {
             this.clientId = Objects.requireNonNull(clientId);
             return this;
         }
 
-        public Builder setPrincipalId(String principalId) {
+        public Builder principalId(String principalId) {
             this.principalId = Objects.requireNonNull(principalId);
             return this;
         }
 
-        public Builder setTenantId(String tenantId) {
+        public Builder tenantId(String tenantId) {
             this.tenantId = Objects.requireNonNull(tenantId);
             return this;
         }

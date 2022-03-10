@@ -74,22 +74,22 @@ public final class ThreatIntelligenceParsedPatternTypeValueArgs extends io.pulum
     	      this.valueType = defaults.valueType;
         }
 
-        public Builder setValue(@Nullable Input<String> value) {
+        public Builder value(@Nullable Input<String> value) {
             this.value = value;
             return this;
         }
 
-        public Builder setValue(@Nullable String value) {
+        public Builder value(@Nullable String value) {
             this.value = Input.ofNullable(value);
             return this;
         }
 
-        public Builder setValueType(@Nullable Input<String> valueType) {
+        public Builder valueType(@Nullable Input<String> valueType) {
             this.valueType = valueType;
             return this;
         }
 
-        public Builder setValueType(@Nullable String valueType) {
+        public Builder valueType(@Nullable String valueType) {
             this.valueType = Input.ofNullable(valueType);
             return this;
         }

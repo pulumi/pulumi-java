@@ -85,17 +85,17 @@ public final class CustomImagePropertiesFromVmResponse {
     	      this.windowsOsInfo = defaults.windowsOsInfo;
         }
 
-        public Builder setLinuxOsInfo(@Nullable LinuxOsInfoResponse linuxOsInfo) {
+        public Builder linuxOsInfo(@Nullable LinuxOsInfoResponse linuxOsInfo) {
             this.linuxOsInfo = linuxOsInfo;
             return this;
         }
 
-        public Builder setSourceVmId(@Nullable String sourceVmId) {
+        public Builder sourceVmId(@Nullable String sourceVmId) {
             this.sourceVmId = sourceVmId;
             return this;
         }
 
-        public Builder setWindowsOsInfo(@Nullable WindowsOsInfoResponse windowsOsInfo) {
+        public Builder windowsOsInfo(@Nullable WindowsOsInfoResponse windowsOsInfo) {
             this.windowsOsInfo = windowsOsInfo;
             return this;
         }

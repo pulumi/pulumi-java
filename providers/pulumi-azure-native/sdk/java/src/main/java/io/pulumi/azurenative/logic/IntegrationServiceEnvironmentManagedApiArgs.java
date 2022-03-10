@@ -153,72 +153,72 @@ public final class IntegrationServiceEnvironmentManagedApiArgs extends io.pulumi
     	      this.tags = defaults.tags;
         }
 
-        public Builder setApiName(@Nullable Input<String> apiName) {
+        public Builder apiName(@Nullable Input<String> apiName) {
             this.apiName = apiName;
             return this;
         }
 
-        public Builder setApiName(@Nullable String apiName) {
+        public Builder apiName(@Nullable String apiName) {
             this.apiName = Input.ofNullable(apiName);
             return this;
         }
 
-        public Builder setDeploymentParameters(@Nullable Input<IntegrationServiceEnvironmentManagedApiDeploymentParametersArgs> deploymentParameters) {
+        public Builder deploymentParameters(@Nullable Input<IntegrationServiceEnvironmentManagedApiDeploymentParametersArgs> deploymentParameters) {
             this.deploymentParameters = deploymentParameters;
             return this;
         }
 
-        public Builder setDeploymentParameters(@Nullable IntegrationServiceEnvironmentManagedApiDeploymentParametersArgs deploymentParameters) {
+        public Builder deploymentParameters(@Nullable IntegrationServiceEnvironmentManagedApiDeploymentParametersArgs deploymentParameters) {
             this.deploymentParameters = Input.ofNullable(deploymentParameters);
             return this;
         }
 
-        public Builder setIntegrationServiceEnvironment(@Nullable Input<ResourceReferenceArgs> integrationServiceEnvironment) {
+        public Builder integrationServiceEnvironment(@Nullable Input<ResourceReferenceArgs> integrationServiceEnvironment) {
             this.integrationServiceEnvironment = integrationServiceEnvironment;
             return this;
         }
 
-        public Builder setIntegrationServiceEnvironment(@Nullable ResourceReferenceArgs integrationServiceEnvironment) {
+        public Builder integrationServiceEnvironment(@Nullable ResourceReferenceArgs integrationServiceEnvironment) {
             this.integrationServiceEnvironment = Input.ofNullable(integrationServiceEnvironment);
             return this;
         }
 
-        public Builder setIntegrationServiceEnvironmentName(Input<String> integrationServiceEnvironmentName) {
+        public Builder integrationServiceEnvironmentName(Input<String> integrationServiceEnvironmentName) {
             this.integrationServiceEnvironmentName = Objects.requireNonNull(integrationServiceEnvironmentName);
             return this;
         }
 
-        public Builder setIntegrationServiceEnvironmentName(String integrationServiceEnvironmentName) {
+        public Builder integrationServiceEnvironmentName(String integrationServiceEnvironmentName) {
             this.integrationServiceEnvironmentName = Input.of(Objects.requireNonNull(integrationServiceEnvironmentName));
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setResourceGroup(Input<String> resourceGroup) {
+        public Builder resourceGroup(Input<String> resourceGroup) {
             this.resourceGroup = Objects.requireNonNull(resourceGroup);
             return this;
         }
 
-        public Builder setResourceGroup(String resourceGroup) {
+        public Builder resourceGroup(String resourceGroup) {
             this.resourceGroup = Input.of(Objects.requireNonNull(resourceGroup));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

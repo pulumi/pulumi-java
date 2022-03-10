@@ -48,7 +48,7 @@ public final class FileSourceInfoResponse {
     	      this.shareId = defaults.shareId;
         }
 
-        public Builder setShareId(String shareId) {
+        public Builder shareId(String shareId) {
             this.shareId = Objects.requireNonNull(shareId);
             return this;
         }

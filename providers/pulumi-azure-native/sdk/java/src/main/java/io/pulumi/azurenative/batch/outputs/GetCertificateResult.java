@@ -220,67 +220,67 @@ public final class GetCertificateResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setDeleteCertificateError(DeleteCertificateErrorResponse deleteCertificateError) {
+        public Builder deleteCertificateError(DeleteCertificateErrorResponse deleteCertificateError) {
             this.deleteCertificateError = Objects.requireNonNull(deleteCertificateError);
             return this;
         }
 
-        public Builder setEtag(String etag) {
+        public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
 
-        public Builder setFormat(@Nullable String format) {
+        public Builder format(@Nullable String format) {
             this.format = format;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPreviousProvisioningState(String previousProvisioningState) {
+        public Builder previousProvisioningState(String previousProvisioningState) {
             this.previousProvisioningState = Objects.requireNonNull(previousProvisioningState);
             return this;
         }
 
-        public Builder setPreviousProvisioningStateTransitionTime(String previousProvisioningStateTransitionTime) {
+        public Builder previousProvisioningStateTransitionTime(String previousProvisioningStateTransitionTime) {
             this.previousProvisioningStateTransitionTime = Objects.requireNonNull(previousProvisioningStateTransitionTime);
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setProvisioningStateTransitionTime(String provisioningStateTransitionTime) {
+        public Builder provisioningStateTransitionTime(String provisioningStateTransitionTime) {
             this.provisioningStateTransitionTime = Objects.requireNonNull(provisioningStateTransitionTime);
             return this;
         }
 
-        public Builder setPublicData(String publicData) {
+        public Builder publicData(String publicData) {
             this.publicData = Objects.requireNonNull(publicData);
             return this;
         }
 
-        public Builder setThumbprint(@Nullable String thumbprint) {
+        public Builder thumbprint(@Nullable String thumbprint) {
             this.thumbprint = thumbprint;
             return this;
         }
 
-        public Builder setThumbprintAlgorithm(@Nullable String thumbprintAlgorithm) {
+        public Builder thumbprintAlgorithm(@Nullable String thumbprintAlgorithm) {
             this.thumbprintAlgorithm = thumbprintAlgorithm;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

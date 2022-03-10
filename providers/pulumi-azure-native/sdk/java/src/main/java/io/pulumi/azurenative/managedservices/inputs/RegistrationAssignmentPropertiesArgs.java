@@ -56,12 +56,12 @@ public final class RegistrationAssignmentPropertiesArgs extends io.pulumi.resour
     	      this.registrationDefinitionId = defaults.registrationDefinitionId;
         }
 
-        public Builder setRegistrationDefinitionId(Input<String> registrationDefinitionId) {
+        public Builder registrationDefinitionId(Input<String> registrationDefinitionId) {
             this.registrationDefinitionId = Objects.requireNonNull(registrationDefinitionId);
             return this;
         }
 
-        public Builder setRegistrationDefinitionId(String registrationDefinitionId) {
+        public Builder registrationDefinitionId(String registrationDefinitionId) {
             this.registrationDefinitionId = Input.of(Objects.requireNonNull(registrationDefinitionId));
             return this;
         }

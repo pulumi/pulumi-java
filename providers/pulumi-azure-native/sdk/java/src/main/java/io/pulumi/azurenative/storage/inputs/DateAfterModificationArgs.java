@@ -74,22 +74,22 @@ public final class DateAfterModificationArgs extends io.pulumi.resources.Resourc
     	      this.daysAfterModificationGreaterThan = defaults.daysAfterModificationGreaterThan;
         }
 
-        public Builder setDaysAfterLastAccessTimeGreaterThan(@Nullable Input<Double> daysAfterLastAccessTimeGreaterThan) {
+        public Builder daysAfterLastAccessTimeGreaterThan(@Nullable Input<Double> daysAfterLastAccessTimeGreaterThan) {
             this.daysAfterLastAccessTimeGreaterThan = daysAfterLastAccessTimeGreaterThan;
             return this;
         }
 
-        public Builder setDaysAfterLastAccessTimeGreaterThan(@Nullable Double daysAfterLastAccessTimeGreaterThan) {
+        public Builder daysAfterLastAccessTimeGreaterThan(@Nullable Double daysAfterLastAccessTimeGreaterThan) {
             this.daysAfterLastAccessTimeGreaterThan = Input.ofNullable(daysAfterLastAccessTimeGreaterThan);
             return this;
         }
 
-        public Builder setDaysAfterModificationGreaterThan(@Nullable Input<Double> daysAfterModificationGreaterThan) {
+        public Builder daysAfterModificationGreaterThan(@Nullable Input<Double> daysAfterModificationGreaterThan) {
             this.daysAfterModificationGreaterThan = daysAfterModificationGreaterThan;
             return this;
         }
 
-        public Builder setDaysAfterModificationGreaterThan(@Nullable Double daysAfterModificationGreaterThan) {
+        public Builder daysAfterModificationGreaterThan(@Nullable Double daysAfterModificationGreaterThan) {
             this.daysAfterModificationGreaterThan = Input.ofNullable(daysAfterModificationGreaterThan);
             return this;
         }

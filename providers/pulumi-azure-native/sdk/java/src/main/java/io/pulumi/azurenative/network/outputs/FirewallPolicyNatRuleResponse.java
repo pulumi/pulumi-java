@@ -155,37 +155,37 @@ public final class FirewallPolicyNatRuleResponse {
     	      this.translatedPort = defaults.translatedPort;
         }
 
-        public Builder setAction(@Nullable FirewallPolicyNatRuleActionResponse action) {
+        public Builder action(@Nullable FirewallPolicyNatRuleActionResponse action) {
             this.action = action;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setPriority(@Nullable Integer priority) {
+        public Builder priority(@Nullable Integer priority) {
             this.priority = priority;
             return this;
         }
 
-        public Builder setRuleCondition(@Nullable Object ruleCondition) {
+        public Builder ruleCondition(@Nullable Object ruleCondition) {
             this.ruleCondition = ruleCondition;
             return this;
         }
 
-        public Builder setRuleType(String ruleType) {
+        public Builder ruleType(String ruleType) {
             this.ruleType = Objects.requireNonNull(ruleType);
             return this;
         }
 
-        public Builder setTranslatedAddress(@Nullable String translatedAddress) {
+        public Builder translatedAddress(@Nullable String translatedAddress) {
             this.translatedAddress = translatedAddress;
             return this;
         }
 
-        public Builder setTranslatedPort(@Nullable String translatedPort) {
+        public Builder translatedPort(@Nullable String translatedPort) {
             this.translatedPort = translatedPort;
             return this;
         }

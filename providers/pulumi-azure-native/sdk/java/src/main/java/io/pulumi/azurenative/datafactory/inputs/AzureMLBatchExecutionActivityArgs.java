@@ -211,102 +211,102 @@ public final class AzureMLBatchExecutionActivityArgs extends io.pulumi.resources
     	      this.webServiceOutputs = defaults.webServiceOutputs;
         }
 
-        public Builder setDependsOn(@Nullable Input<List<ActivityDependencyArgs>> dependsOn) {
+        public Builder dependsOn(@Nullable Input<List<ActivityDependencyArgs>> dependsOn) {
             this.dependsOn = dependsOn;
             return this;
         }
 
-        public Builder setDependsOn(@Nullable List<ActivityDependencyArgs> dependsOn) {
+        public Builder dependsOn(@Nullable List<ActivityDependencyArgs> dependsOn) {
             this.dependsOn = Input.ofNullable(dependsOn);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setGlobalParameters(@Nullable Input<Map<String,Object>> globalParameters) {
+        public Builder globalParameters(@Nullable Input<Map<String,Object>> globalParameters) {
             this.globalParameters = globalParameters;
             return this;
         }
 
-        public Builder setGlobalParameters(@Nullable Map<String,Object> globalParameters) {
+        public Builder globalParameters(@Nullable Map<String,Object> globalParameters) {
             this.globalParameters = Input.ofNullable(globalParameters);
             return this;
         }
 
-        public Builder setLinkedServiceName(@Nullable Input<LinkedServiceReferenceArgs> linkedServiceName) {
+        public Builder linkedServiceName(@Nullable Input<LinkedServiceReferenceArgs> linkedServiceName) {
             this.linkedServiceName = linkedServiceName;
             return this;
         }
 
-        public Builder setLinkedServiceName(@Nullable LinkedServiceReferenceArgs linkedServiceName) {
+        public Builder linkedServiceName(@Nullable LinkedServiceReferenceArgs linkedServiceName) {
             this.linkedServiceName = Input.ofNullable(linkedServiceName);
             return this;
         }
 
-        public Builder setName(Input<String> name) {
+        public Builder name(Input<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder setPolicy(@Nullable Input<ActivityPolicyArgs> policy) {
+        public Builder policy(@Nullable Input<ActivityPolicyArgs> policy) {
             this.policy = policy;
             return this;
         }
 
-        public Builder setPolicy(@Nullable ActivityPolicyArgs policy) {
+        public Builder policy(@Nullable ActivityPolicyArgs policy) {
             this.policy = Input.ofNullable(policy);
             return this;
         }
 
-        public Builder setType(Input<String> type) {
+        public Builder type(Input<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }
 
-        public Builder setUserProperties(@Nullable Input<List<UserPropertyArgs>> userProperties) {
+        public Builder userProperties(@Nullable Input<List<UserPropertyArgs>> userProperties) {
             this.userProperties = userProperties;
             return this;
         }
 
-        public Builder setUserProperties(@Nullable List<UserPropertyArgs> userProperties) {
+        public Builder userProperties(@Nullable List<UserPropertyArgs> userProperties) {
             this.userProperties = Input.ofNullable(userProperties);
             return this;
         }
 
-        public Builder setWebServiceInputs(@Nullable Input<Map<String,AzureMLWebServiceFileArgs>> webServiceInputs) {
+        public Builder webServiceInputs(@Nullable Input<Map<String,AzureMLWebServiceFileArgs>> webServiceInputs) {
             this.webServiceInputs = webServiceInputs;
             return this;
         }
 
-        public Builder setWebServiceInputs(@Nullable Map<String,AzureMLWebServiceFileArgs> webServiceInputs) {
+        public Builder webServiceInputs(@Nullable Map<String,AzureMLWebServiceFileArgs> webServiceInputs) {
             this.webServiceInputs = Input.ofNullable(webServiceInputs);
             return this;
         }
 
-        public Builder setWebServiceOutputs(@Nullable Input<Map<String,AzureMLWebServiceFileArgs>> webServiceOutputs) {
+        public Builder webServiceOutputs(@Nullable Input<Map<String,AzureMLWebServiceFileArgs>> webServiceOutputs) {
             this.webServiceOutputs = webServiceOutputs;
             return this;
         }
 
-        public Builder setWebServiceOutputs(@Nullable Map<String,AzureMLWebServiceFileArgs> webServiceOutputs) {
+        public Builder webServiceOutputs(@Nullable Map<String,AzureMLWebServiceFileArgs> webServiceOutputs) {
             this.webServiceOutputs = Input.ofNullable(webServiceOutputs);
             return this;
         }

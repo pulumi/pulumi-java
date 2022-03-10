@@ -221,112 +221,112 @@ public final class InMageEnableProtectionInputArgs extends io.pulumi.resources.R
     	      this.vmFriendlyName = defaults.vmFriendlyName;
         }
 
-        public Builder setDatastoreName(@Nullable Input<String> datastoreName) {
+        public Builder datastoreName(@Nullable Input<String> datastoreName) {
             this.datastoreName = datastoreName;
             return this;
         }
 
-        public Builder setDatastoreName(@Nullable String datastoreName) {
+        public Builder datastoreName(@Nullable String datastoreName) {
             this.datastoreName = Input.ofNullable(datastoreName);
             return this;
         }
 
-        public Builder setDiskExclusionInput(@Nullable Input<InMageDiskExclusionInputArgs> diskExclusionInput) {
+        public Builder diskExclusionInput(@Nullable Input<InMageDiskExclusionInputArgs> diskExclusionInput) {
             this.diskExclusionInput = diskExclusionInput;
             return this;
         }
 
-        public Builder setDiskExclusionInput(@Nullable InMageDiskExclusionInputArgs diskExclusionInput) {
+        public Builder diskExclusionInput(@Nullable InMageDiskExclusionInputArgs diskExclusionInput) {
             this.diskExclusionInput = Input.ofNullable(diskExclusionInput);
             return this;
         }
 
-        public Builder setDisksToInclude(@Nullable Input<List<String>> disksToInclude) {
+        public Builder disksToInclude(@Nullable Input<List<String>> disksToInclude) {
             this.disksToInclude = disksToInclude;
             return this;
         }
 
-        public Builder setDisksToInclude(@Nullable List<String> disksToInclude) {
+        public Builder disksToInclude(@Nullable List<String> disksToInclude) {
             this.disksToInclude = Input.ofNullable(disksToInclude);
             return this;
         }
 
-        public Builder setInstanceType(@Nullable Input<String> instanceType) {
+        public Builder instanceType(@Nullable Input<String> instanceType) {
             this.instanceType = instanceType;
             return this;
         }
 
-        public Builder setInstanceType(@Nullable String instanceType) {
+        public Builder instanceType(@Nullable String instanceType) {
             this.instanceType = Input.ofNullable(instanceType);
             return this;
         }
 
-        public Builder setMasterTargetId(Input<String> masterTargetId) {
+        public Builder masterTargetId(Input<String> masterTargetId) {
             this.masterTargetId = Objects.requireNonNull(masterTargetId);
             return this;
         }
 
-        public Builder setMasterTargetId(String masterTargetId) {
+        public Builder masterTargetId(String masterTargetId) {
             this.masterTargetId = Input.of(Objects.requireNonNull(masterTargetId));
             return this;
         }
 
-        public Builder setMultiVmGroupId(Input<String> multiVmGroupId) {
+        public Builder multiVmGroupId(Input<String> multiVmGroupId) {
             this.multiVmGroupId = Objects.requireNonNull(multiVmGroupId);
             return this;
         }
 
-        public Builder setMultiVmGroupId(String multiVmGroupId) {
+        public Builder multiVmGroupId(String multiVmGroupId) {
             this.multiVmGroupId = Input.of(Objects.requireNonNull(multiVmGroupId));
             return this;
         }
 
-        public Builder setMultiVmGroupName(Input<String> multiVmGroupName) {
+        public Builder multiVmGroupName(Input<String> multiVmGroupName) {
             this.multiVmGroupName = Objects.requireNonNull(multiVmGroupName);
             return this;
         }
 
-        public Builder setMultiVmGroupName(String multiVmGroupName) {
+        public Builder multiVmGroupName(String multiVmGroupName) {
             this.multiVmGroupName = Input.of(Objects.requireNonNull(multiVmGroupName));
             return this;
         }
 
-        public Builder setProcessServerId(Input<String> processServerId) {
+        public Builder processServerId(Input<String> processServerId) {
             this.processServerId = Objects.requireNonNull(processServerId);
             return this;
         }
 
-        public Builder setProcessServerId(String processServerId) {
+        public Builder processServerId(String processServerId) {
             this.processServerId = Input.of(Objects.requireNonNull(processServerId));
             return this;
         }
 
-        public Builder setRetentionDrive(Input<String> retentionDrive) {
+        public Builder retentionDrive(Input<String> retentionDrive) {
             this.retentionDrive = Objects.requireNonNull(retentionDrive);
             return this;
         }
 
-        public Builder setRetentionDrive(String retentionDrive) {
+        public Builder retentionDrive(String retentionDrive) {
             this.retentionDrive = Input.of(Objects.requireNonNull(retentionDrive));
             return this;
         }
 
-        public Builder setRunAsAccountId(@Nullable Input<String> runAsAccountId) {
+        public Builder runAsAccountId(@Nullable Input<String> runAsAccountId) {
             this.runAsAccountId = runAsAccountId;
             return this;
         }
 
-        public Builder setRunAsAccountId(@Nullable String runAsAccountId) {
+        public Builder runAsAccountId(@Nullable String runAsAccountId) {
             this.runAsAccountId = Input.ofNullable(runAsAccountId);
             return this;
         }
 
-        public Builder setVmFriendlyName(@Nullable Input<String> vmFriendlyName) {
+        public Builder vmFriendlyName(@Nullable Input<String> vmFriendlyName) {
             this.vmFriendlyName = vmFriendlyName;
             return this;
         }
 
-        public Builder setVmFriendlyName(@Nullable String vmFriendlyName) {
+        public Builder vmFriendlyName(@Nullable String vmFriendlyName) {
             this.vmFriendlyName = Input.ofNullable(vmFriendlyName);
             return this;
         }

@@ -100,22 +100,22 @@ public final class GetDeploymentLogFileUrlArgs extends io.pulumi.resources.Invok
     	      this.serviceName = defaults.serviceName;
         }
 
-        public Builder setAppName(String appName) {
+        public Builder appName(String appName) {
             this.appName = Objects.requireNonNull(appName);
             return this;
         }
 
-        public Builder setDeploymentName(String deploymentName) {
+        public Builder deploymentName(String deploymentName) {
             this.deploymentName = Objects.requireNonNull(deploymentName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setServiceName(String serviceName) {
+        public Builder serviceName(String serviceName) {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
         }

@@ -57,7 +57,7 @@ public final class TrustedExternalTenantResponse extends io.pulumi.resources.Inv
     	      this.value = defaults.value;
         }
 
-        public Builder setValue(@Nullable String value) {
+        public Builder value(@Nullable String value) {
             this.value = value;
             return this;
         }

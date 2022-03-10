@@ -237,7 +237,7 @@ public class BlobContainerDataSetMapping extends io.pulumi.resources.CustomResou
     private static BlobContainerDataSetMappingArgs makeArgs(BlobContainerDataSetMappingArgs args) {
         var builder = args == null ? BlobContainerDataSetMappingArgs.builder() : BlobContainerDataSetMappingArgs.builder(args);
         return builder
-            .setKind("Container")
+            .kind("Container")
             .build();
     }
 

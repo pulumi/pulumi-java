@@ -103,22 +103,22 @@ public final class EdgeUsageDataCollectionPolicyResponse extends io.pulumi.resou
     	      this.maxAllowedUnreportedUsageDuration = defaults.maxAllowedUnreportedUsageDuration;
         }
 
-        public Builder setDataCollectionFrequency(@Nullable String dataCollectionFrequency) {
+        public Builder dataCollectionFrequency(@Nullable String dataCollectionFrequency) {
             this.dataCollectionFrequency = dataCollectionFrequency;
             return this;
         }
 
-        public Builder setDataReportingFrequency(@Nullable String dataReportingFrequency) {
+        public Builder dataReportingFrequency(@Nullable String dataReportingFrequency) {
             this.dataReportingFrequency = dataReportingFrequency;
             return this;
         }
 
-        public Builder setEventHubDetails(@Nullable EdgeUsageDataEventHubResponse eventHubDetails) {
+        public Builder eventHubDetails(@Nullable EdgeUsageDataEventHubResponse eventHubDetails) {
             this.eventHubDetails = eventHubDetails;
             return this;
         }
 
-        public Builder setMaxAllowedUnreportedUsageDuration(@Nullable String maxAllowedUnreportedUsageDuration) {
+        public Builder maxAllowedUnreportedUsageDuration(@Nullable String maxAllowedUnreportedUsageDuration) {
             this.maxAllowedUnreportedUsageDuration = maxAllowedUnreportedUsageDuration;
             return this;
         }

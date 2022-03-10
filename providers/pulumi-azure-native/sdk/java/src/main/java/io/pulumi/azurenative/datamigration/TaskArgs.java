@@ -140,52 +140,52 @@ public final class TaskArgs extends io.pulumi.resources.ResourceArgs {
     	      this.taskName = defaults.taskName;
         }
 
-        public Builder setGroupName(Input<String> groupName) {
+        public Builder groupName(Input<String> groupName) {
             this.groupName = Objects.requireNonNull(groupName);
             return this;
         }
 
-        public Builder setGroupName(String groupName) {
+        public Builder groupName(String groupName) {
             this.groupName = Input.of(Objects.requireNonNull(groupName));
             return this;
         }
 
-        public Builder setProjectName(Input<String> projectName) {
+        public Builder projectName(Input<String> projectName) {
             this.projectName = Objects.requireNonNull(projectName);
             return this;
         }
 
-        public Builder setProjectName(String projectName) {
+        public Builder projectName(String projectName) {
             this.projectName = Input.of(Objects.requireNonNull(projectName));
             return this;
         }
 
-        public Builder setProperties(@Nullable Input<Object> properties) {
+        public Builder properties(@Nullable Input<Object> properties) {
             this.properties = properties;
             return this;
         }
 
-        public Builder setProperties(@Nullable Object properties) {
+        public Builder properties(@Nullable Object properties) {
             this.properties = Input.ofNullable(properties);
             return this;
         }
 
-        public Builder setServiceName(Input<String> serviceName) {
+        public Builder serviceName(Input<String> serviceName) {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
         }
 
-        public Builder setServiceName(String serviceName) {
+        public Builder serviceName(String serviceName) {
             this.serviceName = Input.of(Objects.requireNonNull(serviceName));
             return this;
         }
 
-        public Builder setTaskName(@Nullable Input<String> taskName) {
+        public Builder taskName(@Nullable Input<String> taskName) {
             this.taskName = taskName;
             return this;
         }
 
-        public Builder setTaskName(@Nullable String taskName) {
+        public Builder taskName(@Nullable String taskName) {
             this.taskName = Input.ofNullable(taskName);
             return this;
         }

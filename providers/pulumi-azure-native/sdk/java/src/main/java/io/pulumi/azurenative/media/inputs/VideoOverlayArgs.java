@@ -205,102 +205,102 @@ public final class VideoOverlayArgs extends io.pulumi.resources.ResourceArgs {
     	      this.start = defaults.start;
         }
 
-        public Builder setAudioGainLevel(@Nullable Input<Double> audioGainLevel) {
+        public Builder audioGainLevel(@Nullable Input<Double> audioGainLevel) {
             this.audioGainLevel = audioGainLevel;
             return this;
         }
 
-        public Builder setAudioGainLevel(@Nullable Double audioGainLevel) {
+        public Builder audioGainLevel(@Nullable Double audioGainLevel) {
             this.audioGainLevel = Input.ofNullable(audioGainLevel);
             return this;
         }
 
-        public Builder setCropRectangle(@Nullable Input<RectangleArgs> cropRectangle) {
+        public Builder cropRectangle(@Nullable Input<RectangleArgs> cropRectangle) {
             this.cropRectangle = cropRectangle;
             return this;
         }
 
-        public Builder setCropRectangle(@Nullable RectangleArgs cropRectangle) {
+        public Builder cropRectangle(@Nullable RectangleArgs cropRectangle) {
             this.cropRectangle = Input.ofNullable(cropRectangle);
             return this;
         }
 
-        public Builder setEnd(@Nullable Input<String> end) {
+        public Builder end(@Nullable Input<String> end) {
             this.end = end;
             return this;
         }
 
-        public Builder setEnd(@Nullable String end) {
+        public Builder end(@Nullable String end) {
             this.end = Input.ofNullable(end);
             return this;
         }
 
-        public Builder setFadeInDuration(@Nullable Input<String> fadeInDuration) {
+        public Builder fadeInDuration(@Nullable Input<String> fadeInDuration) {
             this.fadeInDuration = fadeInDuration;
             return this;
         }
 
-        public Builder setFadeInDuration(@Nullable String fadeInDuration) {
+        public Builder fadeInDuration(@Nullable String fadeInDuration) {
             this.fadeInDuration = Input.ofNullable(fadeInDuration);
             return this;
         }
 
-        public Builder setFadeOutDuration(@Nullable Input<String> fadeOutDuration) {
+        public Builder fadeOutDuration(@Nullable Input<String> fadeOutDuration) {
             this.fadeOutDuration = fadeOutDuration;
             return this;
         }
 
-        public Builder setFadeOutDuration(@Nullable String fadeOutDuration) {
+        public Builder fadeOutDuration(@Nullable String fadeOutDuration) {
             this.fadeOutDuration = Input.ofNullable(fadeOutDuration);
             return this;
         }
 
-        public Builder setInputLabel(Input<String> inputLabel) {
+        public Builder inputLabel(Input<String> inputLabel) {
             this.inputLabel = Objects.requireNonNull(inputLabel);
             return this;
         }
 
-        public Builder setInputLabel(String inputLabel) {
+        public Builder inputLabel(String inputLabel) {
             this.inputLabel = Input.of(Objects.requireNonNull(inputLabel));
             return this;
         }
 
-        public Builder setOdataType(Input<String> odataType) {
+        public Builder odataType(Input<String> odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
 
-        public Builder setOdataType(String odataType) {
+        public Builder odataType(String odataType) {
             this.odataType = Input.of(Objects.requireNonNull(odataType));
             return this;
         }
 
-        public Builder setOpacity(@Nullable Input<Double> opacity) {
+        public Builder opacity(@Nullable Input<Double> opacity) {
             this.opacity = opacity;
             return this;
         }
 
-        public Builder setOpacity(@Nullable Double opacity) {
+        public Builder opacity(@Nullable Double opacity) {
             this.opacity = Input.ofNullable(opacity);
             return this;
         }
 
-        public Builder setPosition(@Nullable Input<RectangleArgs> position) {
+        public Builder position(@Nullable Input<RectangleArgs> position) {
             this.position = position;
             return this;
         }
 
-        public Builder setPosition(@Nullable RectangleArgs position) {
+        public Builder position(@Nullable RectangleArgs position) {
             this.position = Input.ofNullable(position);
             return this;
         }
 
-        public Builder setStart(@Nullable Input<String> start) {
+        public Builder start(@Nullable Input<String> start) {
             this.start = start;
             return this;
         }
 
-        public Builder setStart(@Nullable String start) {
+        public Builder start(@Nullable String start) {
             this.start = Input.ofNullable(start);
             return this;
         }

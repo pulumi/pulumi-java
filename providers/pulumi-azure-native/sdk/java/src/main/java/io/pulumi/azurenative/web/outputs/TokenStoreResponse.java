@@ -106,22 +106,22 @@ public final class TokenStoreResponse {
     	      this.tokenRefreshExtensionHours = defaults.tokenRefreshExtensionHours;
         }
 
-        public Builder setAzureBlobStorage(@Nullable BlobStorageTokenStoreResponse azureBlobStorage) {
+        public Builder azureBlobStorage(@Nullable BlobStorageTokenStoreResponse azureBlobStorage) {
             this.azureBlobStorage = azureBlobStorage;
             return this;
         }
 
-        public Builder setEnabled(@Nullable Boolean enabled) {
+        public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = enabled;
             return this;
         }
 
-        public Builder setFileSystem(@Nullable FileSystemTokenStoreResponse fileSystem) {
+        public Builder fileSystem(@Nullable FileSystemTokenStoreResponse fileSystem) {
             this.fileSystem = fileSystem;
             return this;
         }
 
-        public Builder setTokenRefreshExtensionHours(@Nullable Double tokenRefreshExtensionHours) {
+        public Builder tokenRefreshExtensionHours(@Nullable Double tokenRefreshExtensionHours) {
             this.tokenRefreshExtensionHours = tokenRefreshExtensionHours;
             return this;
         }

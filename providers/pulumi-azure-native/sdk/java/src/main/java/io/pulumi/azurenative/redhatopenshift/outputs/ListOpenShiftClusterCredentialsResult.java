@@ -67,12 +67,12 @@ public final class ListOpenShiftClusterCredentialsResult {
     	      this.kubeadminUsername = defaults.kubeadminUsername;
         }
 
-        public Builder setKubeadminPassword(@Nullable String kubeadminPassword) {
+        public Builder kubeadminPassword(@Nullable String kubeadminPassword) {
             this.kubeadminPassword = kubeadminPassword;
             return this;
         }
 
-        public Builder setKubeadminUsername(@Nullable String kubeadminUsername) {
+        public Builder kubeadminUsername(@Nullable String kubeadminUsername) {
             this.kubeadminUsername = kubeadminUsername;
             return this;
         }

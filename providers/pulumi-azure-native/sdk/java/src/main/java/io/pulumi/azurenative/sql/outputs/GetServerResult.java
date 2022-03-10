@@ -328,92 +328,92 @@ public final class GetServerResult {
     	      this.workspaceFeature = defaults.workspaceFeature;
         }
 
-        public Builder setAdministratorLogin(@Nullable String administratorLogin) {
+        public Builder administratorLogin(@Nullable String administratorLogin) {
             this.administratorLogin = administratorLogin;
             return this;
         }
 
-        public Builder setAdministrators(@Nullable ServerExternalAdministratorResponse administrators) {
+        public Builder administrators(@Nullable ServerExternalAdministratorResponse administrators) {
             this.administrators = administrators;
             return this;
         }
 
-        public Builder setFullyQualifiedDomainName(String fullyQualifiedDomainName) {
+        public Builder fullyQualifiedDomainName(String fullyQualifiedDomainName) {
             this.fullyQualifiedDomainName = Objects.requireNonNull(fullyQualifiedDomainName);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setIdentity(@Nullable ResourceIdentityResponse identity) {
+        public Builder identity(@Nullable ResourceIdentityResponse identity) {
             this.identity = identity;
             return this;
         }
 
-        public Builder setKeyId(@Nullable String keyId) {
+        public Builder keyId(@Nullable String keyId) {
             this.keyId = keyId;
             return this;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setMinimalTlsVersion(@Nullable String minimalTlsVersion) {
+        public Builder minimalTlsVersion(@Nullable String minimalTlsVersion) {
             this.minimalTlsVersion = minimalTlsVersion;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPrimaryUserAssignedIdentityId(@Nullable String primaryUserAssignedIdentityId) {
+        public Builder primaryUserAssignedIdentityId(@Nullable String primaryUserAssignedIdentityId) {
             this.primaryUserAssignedIdentityId = primaryUserAssignedIdentityId;
             return this;
         }
 
-        public Builder setPrivateEndpointConnections(List<ServerPrivateEndpointConnectionResponse> privateEndpointConnections) {
+        public Builder privateEndpointConnections(List<ServerPrivateEndpointConnectionResponse> privateEndpointConnections) {
             this.privateEndpointConnections = Objects.requireNonNull(privateEndpointConnections);
             return this;
         }
 
-        public Builder setPublicNetworkAccess(@Nullable String publicNetworkAccess) {
+        public Builder publicNetworkAccess(@Nullable String publicNetworkAccess) {
             this.publicNetworkAccess = publicNetworkAccess;
             return this;
         }
 
-        public Builder setState(String state) {
+        public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setVersion(@Nullable String version) {
+        public Builder version(@Nullable String version) {
             this.version = version;
             return this;
         }
 
-        public Builder setWorkspaceFeature(String workspaceFeature) {
+        public Builder workspaceFeature(String workspaceFeature) {
             this.workspaceFeature = Objects.requireNonNull(workspaceFeature);
             return this;
         }

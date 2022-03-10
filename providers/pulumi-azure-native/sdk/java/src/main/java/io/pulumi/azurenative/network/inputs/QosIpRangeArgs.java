@@ -74,22 +74,22 @@ public final class QosIpRangeArgs extends io.pulumi.resources.ResourceArgs {
     	      this.startIP = defaults.startIP;
         }
 
-        public Builder setEndIP(@Nullable Input<String> endIP) {
+        public Builder endIP(@Nullable Input<String> endIP) {
             this.endIP = endIP;
             return this;
         }
 
-        public Builder setEndIP(@Nullable String endIP) {
+        public Builder endIP(@Nullable String endIP) {
             this.endIP = Input.ofNullable(endIP);
             return this;
         }
 
-        public Builder setStartIP(@Nullable Input<String> startIP) {
+        public Builder startIP(@Nullable Input<String> startIP) {
             this.startIP = startIP;
             return this;
         }
 
-        public Builder setStartIP(@Nullable String startIP) {
+        public Builder startIP(@Nullable String startIP) {
             this.startIP = Input.ofNullable(startIP);
             return this;
         }

@@ -67,12 +67,12 @@ public final class MigrationRequestPropertiesResponse {
     	      this.operation = defaults.operation;
         }
 
-        public Builder setMigrationPath(@Nullable String migrationPath) {
+        public Builder migrationPath(@Nullable String migrationPath) {
             this.migrationPath = migrationPath;
             return this;
         }
 
-        public Builder setOperation(@Nullable String operation) {
+        public Builder operation(@Nullable String operation) {
             this.operation = operation;
             return this;
         }

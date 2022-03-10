@@ -91,32 +91,32 @@ public final class DevicePropertiesArgs extends io.pulumi.resources.ResourceArgs
     	      this.linkSpeedInMbps = defaults.linkSpeedInMbps;
         }
 
-        public Builder setDeviceModel(@Nullable Input<String> deviceModel) {
+        public Builder deviceModel(@Nullable Input<String> deviceModel) {
             this.deviceModel = deviceModel;
             return this;
         }
 
-        public Builder setDeviceModel(@Nullable String deviceModel) {
+        public Builder deviceModel(@Nullable String deviceModel) {
             this.deviceModel = Input.ofNullable(deviceModel);
             return this;
         }
 
-        public Builder setDeviceVendor(@Nullable Input<String> deviceVendor) {
+        public Builder deviceVendor(@Nullable Input<String> deviceVendor) {
             this.deviceVendor = deviceVendor;
             return this;
         }
 
-        public Builder setDeviceVendor(@Nullable String deviceVendor) {
+        public Builder deviceVendor(@Nullable String deviceVendor) {
             this.deviceVendor = Input.ofNullable(deviceVendor);
             return this;
         }
 
-        public Builder setLinkSpeedInMbps(@Nullable Input<Integer> linkSpeedInMbps) {
+        public Builder linkSpeedInMbps(@Nullable Input<Integer> linkSpeedInMbps) {
             this.linkSpeedInMbps = linkSpeedInMbps;
             return this;
         }
 
-        public Builder setLinkSpeedInMbps(@Nullable Integer linkSpeedInMbps) {
+        public Builder linkSpeedInMbps(@Nullable Integer linkSpeedInMbps) {
             this.linkSpeedInMbps = Input.ofNullable(linkSpeedInMbps);
             return this;
         }

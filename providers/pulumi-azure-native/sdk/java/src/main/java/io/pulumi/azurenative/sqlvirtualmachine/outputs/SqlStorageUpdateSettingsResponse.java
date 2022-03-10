@@ -84,17 +84,17 @@ public final class SqlStorageUpdateSettingsResponse {
     	      this.startingDeviceId = defaults.startingDeviceId;
         }
 
-        public Builder setDiskConfigurationType(@Nullable String diskConfigurationType) {
+        public Builder diskConfigurationType(@Nullable String diskConfigurationType) {
             this.diskConfigurationType = diskConfigurationType;
             return this;
         }
 
-        public Builder setDiskCount(@Nullable Integer diskCount) {
+        public Builder diskCount(@Nullable Integer diskCount) {
             this.diskCount = diskCount;
             return this;
         }
 
-        public Builder setStartingDeviceId(@Nullable Integer startingDeviceId) {
+        public Builder startingDeviceId(@Nullable Integer startingDeviceId) {
             this.startingDeviceId = startingDeviceId;
             return this;
         }

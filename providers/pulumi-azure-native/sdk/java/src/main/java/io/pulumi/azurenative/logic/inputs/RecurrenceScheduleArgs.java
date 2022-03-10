@@ -125,52 +125,52 @@ public final class RecurrenceScheduleArgs extends io.pulumi.resources.ResourceAr
     	      this.weekDays = defaults.weekDays;
         }
 
-        public Builder setHours(@Nullable Input<List<Integer>> hours) {
+        public Builder hours(@Nullable Input<List<Integer>> hours) {
             this.hours = hours;
             return this;
         }
 
-        public Builder setHours(@Nullable List<Integer> hours) {
+        public Builder hours(@Nullable List<Integer> hours) {
             this.hours = Input.ofNullable(hours);
             return this;
         }
 
-        public Builder setMinutes(@Nullable Input<List<Integer>> minutes) {
+        public Builder minutes(@Nullable Input<List<Integer>> minutes) {
             this.minutes = minutes;
             return this;
         }
 
-        public Builder setMinutes(@Nullable List<Integer> minutes) {
+        public Builder minutes(@Nullable List<Integer> minutes) {
             this.minutes = Input.ofNullable(minutes);
             return this;
         }
 
-        public Builder setMonthDays(@Nullable Input<List<Integer>> monthDays) {
+        public Builder monthDays(@Nullable Input<List<Integer>> monthDays) {
             this.monthDays = monthDays;
             return this;
         }
 
-        public Builder setMonthDays(@Nullable List<Integer> monthDays) {
+        public Builder monthDays(@Nullable List<Integer> monthDays) {
             this.monthDays = Input.ofNullable(monthDays);
             return this;
         }
 
-        public Builder setMonthlyOccurrences(@Nullable Input<List<RecurrenceScheduleOccurrenceArgs>> monthlyOccurrences) {
+        public Builder monthlyOccurrences(@Nullable Input<List<RecurrenceScheduleOccurrenceArgs>> monthlyOccurrences) {
             this.monthlyOccurrences = monthlyOccurrences;
             return this;
         }
 
-        public Builder setMonthlyOccurrences(@Nullable List<RecurrenceScheduleOccurrenceArgs> monthlyOccurrences) {
+        public Builder monthlyOccurrences(@Nullable List<RecurrenceScheduleOccurrenceArgs> monthlyOccurrences) {
             this.monthlyOccurrences = Input.ofNullable(monthlyOccurrences);
             return this;
         }
 
-        public Builder setWeekDays(@Nullable Input<List<DaysOfWeek>> weekDays) {
+        public Builder weekDays(@Nullable Input<List<DaysOfWeek>> weekDays) {
             this.weekDays = weekDays;
             return this;
         }
 
-        public Builder setWeekDays(@Nullable List<DaysOfWeek> weekDays) {
+        public Builder weekDays(@Nullable List<DaysOfWeek> weekDays) {
             this.weekDays = Input.ofNullable(weekDays);
             return this;
         }

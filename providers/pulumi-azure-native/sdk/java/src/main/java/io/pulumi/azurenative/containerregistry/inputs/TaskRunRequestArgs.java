@@ -141,62 +141,62 @@ public final class TaskRunRequestArgs extends io.pulumi.resources.ResourceArgs {
     	      this.type = defaults.type;
         }
 
-        public Builder setAgentPoolName(@Nullable Input<String> agentPoolName) {
+        public Builder agentPoolName(@Nullable Input<String> agentPoolName) {
             this.agentPoolName = agentPoolName;
             return this;
         }
 
-        public Builder setAgentPoolName(@Nullable String agentPoolName) {
+        public Builder agentPoolName(@Nullable String agentPoolName) {
             this.agentPoolName = Input.ofNullable(agentPoolName);
             return this;
         }
 
-        public Builder setIsArchiveEnabled(@Nullable Input<Boolean> isArchiveEnabled) {
+        public Builder isArchiveEnabled(@Nullable Input<Boolean> isArchiveEnabled) {
             this.isArchiveEnabled = isArchiveEnabled;
             return this;
         }
 
-        public Builder setIsArchiveEnabled(@Nullable Boolean isArchiveEnabled) {
+        public Builder isArchiveEnabled(@Nullable Boolean isArchiveEnabled) {
             this.isArchiveEnabled = Input.ofNullable(isArchiveEnabled);
             return this;
         }
 
-        public Builder setLogTemplate(@Nullable Input<String> logTemplate) {
+        public Builder logTemplate(@Nullable Input<String> logTemplate) {
             this.logTemplate = logTemplate;
             return this;
         }
 
-        public Builder setLogTemplate(@Nullable String logTemplate) {
+        public Builder logTemplate(@Nullable String logTemplate) {
             this.logTemplate = Input.ofNullable(logTemplate);
             return this;
         }
 
-        public Builder setOverrideTaskStepProperties(@Nullable Input<OverrideTaskStepPropertiesArgs> overrideTaskStepProperties) {
+        public Builder overrideTaskStepProperties(@Nullable Input<OverrideTaskStepPropertiesArgs> overrideTaskStepProperties) {
             this.overrideTaskStepProperties = overrideTaskStepProperties;
             return this;
         }
 
-        public Builder setOverrideTaskStepProperties(@Nullable OverrideTaskStepPropertiesArgs overrideTaskStepProperties) {
+        public Builder overrideTaskStepProperties(@Nullable OverrideTaskStepPropertiesArgs overrideTaskStepProperties) {
             this.overrideTaskStepProperties = Input.ofNullable(overrideTaskStepProperties);
             return this;
         }
 
-        public Builder setTaskId(Input<String> taskId) {
+        public Builder taskId(Input<String> taskId) {
             this.taskId = Objects.requireNonNull(taskId);
             return this;
         }
 
-        public Builder setTaskId(String taskId) {
+        public Builder taskId(String taskId) {
             this.taskId = Input.of(Objects.requireNonNull(taskId));
             return this;
         }
 
-        public Builder setType(Input<String> type) {
+        public Builder type(Input<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }

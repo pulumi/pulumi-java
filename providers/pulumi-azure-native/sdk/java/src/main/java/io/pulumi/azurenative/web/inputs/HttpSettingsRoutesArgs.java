@@ -57,12 +57,12 @@ public final class HttpSettingsRoutesArgs extends io.pulumi.resources.ResourceAr
     	      this.apiPrefix = defaults.apiPrefix;
         }
 
-        public Builder setApiPrefix(@Nullable Input<String> apiPrefix) {
+        public Builder apiPrefix(@Nullable Input<String> apiPrefix) {
             this.apiPrefix = apiPrefix;
             return this;
         }
 
-        public Builder setApiPrefix(@Nullable String apiPrefix) {
+        public Builder apiPrefix(@Nullable String apiPrefix) {
             this.apiPrefix = Input.ofNullable(apiPrefix);
             return this;
         }

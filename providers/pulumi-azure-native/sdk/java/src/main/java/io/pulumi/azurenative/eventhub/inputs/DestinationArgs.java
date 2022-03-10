@@ -106,42 +106,42 @@ public final class DestinationArgs extends io.pulumi.resources.ResourceArgs {
     	      this.storageAccountResourceId = defaults.storageAccountResourceId;
         }
 
-        public Builder setArchiveNameFormat(@Nullable Input<String> archiveNameFormat) {
+        public Builder archiveNameFormat(@Nullable Input<String> archiveNameFormat) {
             this.archiveNameFormat = archiveNameFormat;
             return this;
         }
 
-        public Builder setArchiveNameFormat(@Nullable String archiveNameFormat) {
+        public Builder archiveNameFormat(@Nullable String archiveNameFormat) {
             this.archiveNameFormat = Input.ofNullable(archiveNameFormat);
             return this;
         }
 
-        public Builder setBlobContainer(@Nullable Input<String> blobContainer) {
+        public Builder blobContainer(@Nullable Input<String> blobContainer) {
             this.blobContainer = blobContainer;
             return this;
         }
 
-        public Builder setBlobContainer(@Nullable String blobContainer) {
+        public Builder blobContainer(@Nullable String blobContainer) {
             this.blobContainer = Input.ofNullable(blobContainer);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setStorageAccountResourceId(@Nullable Input<String> storageAccountResourceId) {
+        public Builder storageAccountResourceId(@Nullable Input<String> storageAccountResourceId) {
             this.storageAccountResourceId = storageAccountResourceId;
             return this;
         }
 
-        public Builder setStorageAccountResourceId(@Nullable String storageAccountResourceId) {
+        public Builder storageAccountResourceId(@Nullable String storageAccountResourceId) {
             this.storageAccountResourceId = Input.ofNullable(storageAccountResourceId);
             return this;
         }

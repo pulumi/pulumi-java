@@ -296,82 +296,82 @@ public final class GetLinkResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setDescription(@Nullable Map<String,String> description) {
+        public Builder description(@Nullable Map<String,String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDisplayName(@Nullable Map<String,String> displayName) {
+        public Builder displayName(@Nullable Map<String,String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setLinkName(String linkName) {
+        public Builder linkName(String linkName) {
             this.linkName = Objects.requireNonNull(linkName);
             return this;
         }
 
-        public Builder setMappings(@Nullable List<TypePropertiesMappingResponse> mappings) {
+        public Builder mappings(@Nullable List<TypePropertiesMappingResponse> mappings) {
             this.mappings = mappings;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setOperationType(@Nullable String operationType) {
+        public Builder operationType(@Nullable String operationType) {
             this.operationType = operationType;
             return this;
         }
 
-        public Builder setParticipantPropertyReferences(List<ParticipantPropertyReferenceResponse> participantPropertyReferences) {
+        public Builder participantPropertyReferences(List<ParticipantPropertyReferenceResponse> participantPropertyReferences) {
             this.participantPropertyReferences = Objects.requireNonNull(participantPropertyReferences);
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setReferenceOnly(@Nullable Boolean referenceOnly) {
+        public Builder referenceOnly(@Nullable Boolean referenceOnly) {
             this.referenceOnly = referenceOnly;
             return this;
         }
 
-        public Builder setSourceEntityType(String sourceEntityType) {
+        public Builder sourceEntityType(String sourceEntityType) {
             this.sourceEntityType = Objects.requireNonNull(sourceEntityType);
             return this;
         }
 
-        public Builder setSourceEntityTypeName(String sourceEntityTypeName) {
+        public Builder sourceEntityTypeName(String sourceEntityTypeName) {
             this.sourceEntityTypeName = Objects.requireNonNull(sourceEntityTypeName);
             return this;
         }
 
-        public Builder setTargetEntityType(String targetEntityType) {
+        public Builder targetEntityType(String targetEntityType) {
             this.targetEntityType = Objects.requireNonNull(targetEntityType);
             return this;
         }
 
-        public Builder setTargetEntityTypeName(String targetEntityTypeName) {
+        public Builder targetEntityTypeName(String targetEntityTypeName) {
             this.targetEntityTypeName = Objects.requireNonNull(targetEntityTypeName);
             return this;
         }
 
-        public Builder setTenantId(String tenantId) {
+        public Builder tenantId(String tenantId) {
             this.tenantId = Objects.requireNonNull(tenantId);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

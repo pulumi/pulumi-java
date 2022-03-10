@@ -74,22 +74,22 @@ public final class CustomDomainPropertiesArgs extends io.pulumi.resources.Resour
     	      this.thumbprint = defaults.thumbprint;
         }
 
-        public Builder setCertName(@Nullable Input<String> certName) {
+        public Builder certName(@Nullable Input<String> certName) {
             this.certName = certName;
             return this;
         }
 
-        public Builder setCertName(@Nullable String certName) {
+        public Builder certName(@Nullable String certName) {
             this.certName = Input.ofNullable(certName);
             return this;
         }
 
-        public Builder setThumbprint(@Nullable Input<String> thumbprint) {
+        public Builder thumbprint(@Nullable Input<String> thumbprint) {
             this.thumbprint = thumbprint;
             return this;
         }
 
-        public Builder setThumbprint(@Nullable String thumbprint) {
+        public Builder thumbprint(@Nullable String thumbprint) {
             this.thumbprint = Input.ofNullable(thumbprint);
             return this;
         }

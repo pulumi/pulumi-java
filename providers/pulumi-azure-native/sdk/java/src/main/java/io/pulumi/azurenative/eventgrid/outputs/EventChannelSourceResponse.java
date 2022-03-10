@@ -52,7 +52,7 @@ public final class EventChannelSourceResponse {
     	      this.source = defaults.source;
         }
 
-        public Builder setSource(@Nullable String source) {
+        public Builder source(@Nullable String source) {
             this.source = source;
             return this;
         }

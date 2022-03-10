@@ -75,12 +75,12 @@ public final class ParentPropertiesResponse extends io.pulumi.resources.InvokeAr
     	      this.syncProperties = defaults.syncProperties;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setSyncProperties(SyncPropertiesResponse syncProperties) {
+        public Builder syncProperties(SyncPropertiesResponse syncProperties) {
             this.syncProperties = Objects.requireNonNull(syncProperties);
             return this;
         }

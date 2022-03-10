@@ -127,52 +127,52 @@ public final class AutoscaleProfileArgs extends io.pulumi.resources.ResourceArgs
     	      this.rules = defaults.rules;
         }
 
-        public Builder setCapacity(Input<ScaleCapacityArgs> capacity) {
+        public Builder capacity(Input<ScaleCapacityArgs> capacity) {
             this.capacity = Objects.requireNonNull(capacity);
             return this;
         }
 
-        public Builder setCapacity(ScaleCapacityArgs capacity) {
+        public Builder capacity(ScaleCapacityArgs capacity) {
             this.capacity = Input.of(Objects.requireNonNull(capacity));
             return this;
         }
 
-        public Builder setFixedDate(@Nullable Input<TimeWindowArgs> fixedDate) {
+        public Builder fixedDate(@Nullable Input<TimeWindowArgs> fixedDate) {
             this.fixedDate = fixedDate;
             return this;
         }
 
-        public Builder setFixedDate(@Nullable TimeWindowArgs fixedDate) {
+        public Builder fixedDate(@Nullable TimeWindowArgs fixedDate) {
             this.fixedDate = Input.ofNullable(fixedDate);
             return this;
         }
 
-        public Builder setName(Input<String> name) {
+        public Builder name(Input<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder setRecurrence(@Nullable Input<RecurrenceArgs> recurrence) {
+        public Builder recurrence(@Nullable Input<RecurrenceArgs> recurrence) {
             this.recurrence = recurrence;
             return this;
         }
 
-        public Builder setRecurrence(@Nullable RecurrenceArgs recurrence) {
+        public Builder recurrence(@Nullable RecurrenceArgs recurrence) {
             this.recurrence = Input.ofNullable(recurrence);
             return this;
         }
 
-        public Builder setRules(Input<List<ScaleRuleArgs>> rules) {
+        public Builder rules(Input<List<ScaleRuleArgs>> rules) {
             this.rules = Objects.requireNonNull(rules);
             return this;
         }
 
-        public Builder setRules(List<ScaleRuleArgs> rules) {
+        public Builder rules(List<ScaleRuleArgs> rules) {
             this.rules = Input.of(Objects.requireNonNull(rules));
             return this;
         }

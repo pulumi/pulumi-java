@@ -74,12 +74,12 @@ public final class SqlDWUpsertSettingsResponse extends io.pulumi.resources.Invok
     	      this.keys = defaults.keys;
         }
 
-        public Builder setInterimSchemaName(@Nullable Object interimSchemaName) {
+        public Builder interimSchemaName(@Nullable Object interimSchemaName) {
             this.interimSchemaName = interimSchemaName;
             return this;
         }
 
-        public Builder setKeys(@Nullable Object keys) {
+        public Builder keys(@Nullable Object keys) {
             this.keys = keys;
             return this;
         }

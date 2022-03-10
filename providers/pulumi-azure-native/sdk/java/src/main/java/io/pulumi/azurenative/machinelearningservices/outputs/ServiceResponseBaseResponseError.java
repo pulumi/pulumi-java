@@ -48,7 +48,7 @@ public final class ServiceResponseBaseResponseError {
     	      this.error = defaults.error;
         }
 
-        public Builder setError(ErrorResponseResponse error) {
+        public Builder error(ErrorResponseResponse error) {
             this.error = Objects.requireNonNull(error);
             return this;
         }

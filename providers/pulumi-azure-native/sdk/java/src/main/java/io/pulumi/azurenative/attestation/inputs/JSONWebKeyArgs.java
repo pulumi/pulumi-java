@@ -336,172 +336,172 @@ public final class JSONWebKeyArgs extends io.pulumi.resources.ResourceArgs {
     	      this.y = defaults.y;
         }
 
-        public Builder setAlg(@Nullable Input<String> alg) {
+        public Builder alg(@Nullable Input<String> alg) {
             this.alg = alg;
             return this;
         }
 
-        public Builder setAlg(@Nullable String alg) {
+        public Builder alg(@Nullable String alg) {
             this.alg = Input.ofNullable(alg);
             return this;
         }
 
-        public Builder setCrv(@Nullable Input<String> crv) {
+        public Builder crv(@Nullable Input<String> crv) {
             this.crv = crv;
             return this;
         }
 
-        public Builder setCrv(@Nullable String crv) {
+        public Builder crv(@Nullable String crv) {
             this.crv = Input.ofNullable(crv);
             return this;
         }
 
-        public Builder setD(@Nullable Input<String> d) {
+        public Builder d(@Nullable Input<String> d) {
             this.d = d;
             return this;
         }
 
-        public Builder setD(@Nullable String d) {
+        public Builder d(@Nullable String d) {
             this.d = Input.ofNullable(d);
             return this;
         }
 
-        public Builder setDp(@Nullable Input<String> dp) {
+        public Builder dp(@Nullable Input<String> dp) {
             this.dp = dp;
             return this;
         }
 
-        public Builder setDp(@Nullable String dp) {
+        public Builder dp(@Nullable String dp) {
             this.dp = Input.ofNullable(dp);
             return this;
         }
 
-        public Builder setDq(@Nullable Input<String> dq) {
+        public Builder dq(@Nullable Input<String> dq) {
             this.dq = dq;
             return this;
         }
 
-        public Builder setDq(@Nullable String dq) {
+        public Builder dq(@Nullable String dq) {
             this.dq = Input.ofNullable(dq);
             return this;
         }
 
-        public Builder setE(@Nullable Input<String> e) {
+        public Builder e(@Nullable Input<String> e) {
             this.e = e;
             return this;
         }
 
-        public Builder setE(@Nullable String e) {
+        public Builder e(@Nullable String e) {
             this.e = Input.ofNullable(e);
             return this;
         }
 
-        public Builder setK(@Nullable Input<String> k) {
+        public Builder k(@Nullable Input<String> k) {
             this.k = k;
             return this;
         }
 
-        public Builder setK(@Nullable String k) {
+        public Builder k(@Nullable String k) {
             this.k = Input.ofNullable(k);
             return this;
         }
 
-        public Builder setKid(@Nullable Input<String> kid) {
+        public Builder kid(@Nullable Input<String> kid) {
             this.kid = kid;
             return this;
         }
 
-        public Builder setKid(@Nullable String kid) {
+        public Builder kid(@Nullable String kid) {
             this.kid = Input.ofNullable(kid);
             return this;
         }
 
-        public Builder setKty(Input<String> kty) {
+        public Builder kty(Input<String> kty) {
             this.kty = Objects.requireNonNull(kty);
             return this;
         }
 
-        public Builder setKty(String kty) {
+        public Builder kty(String kty) {
             this.kty = Input.of(Objects.requireNonNull(kty));
             return this;
         }
 
-        public Builder setN(@Nullable Input<String> n) {
+        public Builder n(@Nullable Input<String> n) {
             this.n = n;
             return this;
         }
 
-        public Builder setN(@Nullable String n) {
+        public Builder n(@Nullable String n) {
             this.n = Input.ofNullable(n);
             return this;
         }
 
-        public Builder setP(@Nullable Input<String> p) {
+        public Builder p(@Nullable Input<String> p) {
             this.p = p;
             return this;
         }
 
-        public Builder setP(@Nullable String p) {
+        public Builder p(@Nullable String p) {
             this.p = Input.ofNullable(p);
             return this;
         }
 
-        public Builder setQ(@Nullable Input<String> q) {
+        public Builder q(@Nullable Input<String> q) {
             this.q = q;
             return this;
         }
 
-        public Builder setQ(@Nullable String q) {
+        public Builder q(@Nullable String q) {
             this.q = Input.ofNullable(q);
             return this;
         }
 
-        public Builder setQi(@Nullable Input<String> qi) {
+        public Builder qi(@Nullable Input<String> qi) {
             this.qi = qi;
             return this;
         }
 
-        public Builder setQi(@Nullable String qi) {
+        public Builder qi(@Nullable String qi) {
             this.qi = Input.ofNullable(qi);
             return this;
         }
 
-        public Builder setUse(@Nullable Input<String> use) {
+        public Builder use(@Nullable Input<String> use) {
             this.use = use;
             return this;
         }
 
-        public Builder setUse(@Nullable String use) {
+        public Builder use(@Nullable String use) {
             this.use = Input.ofNullable(use);
             return this;
         }
 
-        public Builder setX(@Nullable Input<String> x) {
+        public Builder x(@Nullable Input<String> x) {
             this.x = x;
             return this;
         }
 
-        public Builder setX(@Nullable String x) {
+        public Builder x(@Nullable String x) {
             this.x = Input.ofNullable(x);
             return this;
         }
 
-        public Builder setX5c(@Nullable Input<List<String>> x5c) {
+        public Builder x5c(@Nullable Input<List<String>> x5c) {
             this.x5c = x5c;
             return this;
         }
 
-        public Builder setX5c(@Nullable List<String> x5c) {
+        public Builder x5c(@Nullable List<String> x5c) {
             this.x5c = Input.ofNullable(x5c);
             return this;
         }
 
-        public Builder setY(@Nullable Input<String> y) {
+        public Builder y(@Nullable Input<String> y) {
             this.y = y;
             return this;
         }
 
-        public Builder setY(@Nullable String y) {
+        public Builder y(@Nullable String y) {
             this.y = Input.ofNullable(y);
             return this;
         }

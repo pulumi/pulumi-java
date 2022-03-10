@@ -62,7 +62,7 @@ public final class VideoStreamingResponse {
     	      this.archiveBaseUrl = defaults.archiveBaseUrl;
         }
 
-        public Builder setArchiveBaseUrl(@Nullable String archiveBaseUrl) {
+        public Builder archiveBaseUrl(@Nullable String archiveBaseUrl) {
             this.archiveBaseUrl = archiveBaseUrl;
             return this;
         }

@@ -57,12 +57,12 @@ public final class ScopeClusterArgs extends io.pulumi.resources.ResourceArgs {
     	      this.releaseNamespace = defaults.releaseNamespace;
         }
 
-        public Builder setReleaseNamespace(@Nullable Input<String> releaseNamespace) {
+        public Builder releaseNamespace(@Nullable Input<String> releaseNamespace) {
             this.releaseNamespace = releaseNamespace;
             return this;
         }
 
-        public Builder setReleaseNamespace(@Nullable String releaseNamespace) {
+        public Builder releaseNamespace(@Nullable String releaseNamespace) {
             this.releaseNamespace = Input.ofNullable(releaseNamespace);
             return this;
         }

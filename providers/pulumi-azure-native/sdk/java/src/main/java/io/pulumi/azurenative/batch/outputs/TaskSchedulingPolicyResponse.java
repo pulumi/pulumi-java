@@ -40,7 +40,7 @@ public final class TaskSchedulingPolicyResponse {
     	      this.nodeFillType = defaults.nodeFillType;
         }
 
-        public Builder setNodeFillType(String nodeFillType) {
+        public Builder nodeFillType(String nodeFillType) {
             this.nodeFillType = Objects.requireNonNull(nodeFillType);
             return this;
         }

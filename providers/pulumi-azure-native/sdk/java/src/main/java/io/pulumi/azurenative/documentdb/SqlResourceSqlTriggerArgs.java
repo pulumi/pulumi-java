@@ -185,92 +185,92 @@ public final class SqlResourceSqlTriggerArgs extends io.pulumi.resources.Resourc
     	      this.triggerName = defaults.triggerName;
         }
 
-        public Builder setAccountName(Input<String> accountName) {
+        public Builder accountName(Input<String> accountName) {
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
 
-        public Builder setAccountName(String accountName) {
+        public Builder accountName(String accountName) {
             this.accountName = Input.of(Objects.requireNonNull(accountName));
             return this;
         }
 
-        public Builder setContainerName(Input<String> containerName) {
+        public Builder containerName(Input<String> containerName) {
             this.containerName = Objects.requireNonNull(containerName);
             return this;
         }
 
-        public Builder setContainerName(String containerName) {
+        public Builder containerName(String containerName) {
             this.containerName = Input.of(Objects.requireNonNull(containerName));
             return this;
         }
 
-        public Builder setDatabaseName(Input<String> databaseName) {
+        public Builder databaseName(Input<String> databaseName) {
             this.databaseName = Objects.requireNonNull(databaseName);
             return this;
         }
 
-        public Builder setDatabaseName(String databaseName) {
+        public Builder databaseName(String databaseName) {
             this.databaseName = Input.of(Objects.requireNonNull(databaseName));
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setOptions(@Nullable Input<CreateUpdateOptionsArgs> options) {
+        public Builder options(@Nullable Input<CreateUpdateOptionsArgs> options) {
             this.options = options;
             return this;
         }
 
-        public Builder setOptions(@Nullable CreateUpdateOptionsArgs options) {
+        public Builder options(@Nullable CreateUpdateOptionsArgs options) {
             this.options = Input.ofNullable(options);
             return this;
         }
 
-        public Builder setResource(Input<SqlTriggerResourceArgs> resource) {
+        public Builder resource(Input<SqlTriggerResourceArgs> resource) {
             this.resource = Objects.requireNonNull(resource);
             return this;
         }
 
-        public Builder setResource(SqlTriggerResourceArgs resource) {
+        public Builder resource(SqlTriggerResourceArgs resource) {
             this.resource = Input.of(Objects.requireNonNull(resource));
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTriggerName(@Nullable Input<String> triggerName) {
+        public Builder triggerName(@Nullable Input<String> triggerName) {
             this.triggerName = triggerName;
             return this;
         }
 
-        public Builder setTriggerName(@Nullable String triggerName) {
+        public Builder triggerName(@Nullable String triggerName) {
             this.triggerName = Input.ofNullable(triggerName);
             return this;
         }

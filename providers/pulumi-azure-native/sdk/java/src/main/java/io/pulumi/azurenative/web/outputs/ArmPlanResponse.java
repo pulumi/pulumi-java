@@ -115,27 +115,27 @@ public final class ArmPlanResponse {
     	      this.version = defaults.version;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setProduct(@Nullable String product) {
+        public Builder product(@Nullable String product) {
             this.product = product;
             return this;
         }
 
-        public Builder setPromotionCode(@Nullable String promotionCode) {
+        public Builder promotionCode(@Nullable String promotionCode) {
             this.promotionCode = promotionCode;
             return this;
         }
 
-        public Builder setPublisher(@Nullable String publisher) {
+        public Builder publisher(@Nullable String publisher) {
             this.publisher = publisher;
             return this;
         }
 
-        public Builder setVersion(@Nullable String version) {
+        public Builder version(@Nullable String version) {
             this.version = version;
             return this;
         }

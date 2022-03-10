@@ -105,42 +105,42 @@ public final class DatabaseBackupSettingArgs extends io.pulumi.resources.Resourc
     	      this.name = defaults.name;
         }
 
-        public Builder setConnectionString(@Nullable Input<String> connectionString) {
+        public Builder connectionString(@Nullable Input<String> connectionString) {
             this.connectionString = connectionString;
             return this;
         }
 
-        public Builder setConnectionString(@Nullable String connectionString) {
+        public Builder connectionString(@Nullable String connectionString) {
             this.connectionString = Input.ofNullable(connectionString);
             return this;
         }
 
-        public Builder setConnectionStringName(@Nullable Input<String> connectionStringName) {
+        public Builder connectionStringName(@Nullable Input<String> connectionStringName) {
             this.connectionStringName = connectionStringName;
             return this;
         }
 
-        public Builder setConnectionStringName(@Nullable String connectionStringName) {
+        public Builder connectionStringName(@Nullable String connectionStringName) {
             this.connectionStringName = Input.ofNullable(connectionStringName);
             return this;
         }
 
-        public Builder setDatabaseType(Input<Either<String,DatabaseType>> databaseType) {
+        public Builder databaseType(Input<Either<String,DatabaseType>> databaseType) {
             this.databaseType = Objects.requireNonNull(databaseType);
             return this;
         }
 
-        public Builder setDatabaseType(Either<String,DatabaseType> databaseType) {
+        public Builder databaseType(Either<String,DatabaseType> databaseType) {
             this.databaseType = Input.of(Objects.requireNonNull(databaseType));
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }

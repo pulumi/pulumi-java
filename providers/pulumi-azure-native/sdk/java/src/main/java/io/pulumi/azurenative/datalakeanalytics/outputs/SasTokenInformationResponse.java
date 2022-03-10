@@ -48,7 +48,7 @@ public final class SasTokenInformationResponse {
     	      this.accessToken = defaults.accessToken;
         }
 
-        public Builder setAccessToken(String accessToken) {
+        public Builder accessToken(String accessToken) {
             this.accessToken = Objects.requireNonNull(accessToken);
             return this;
         }

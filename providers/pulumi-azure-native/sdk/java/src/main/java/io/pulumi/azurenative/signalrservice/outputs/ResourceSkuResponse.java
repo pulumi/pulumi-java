@@ -132,27 +132,27 @@ public final class ResourceSkuResponse {
     	      this.tier = defaults.tier;
         }
 
-        public Builder setCapacity(@Nullable Integer capacity) {
+        public Builder capacity(@Nullable Integer capacity) {
             this.capacity = capacity;
             return this;
         }
 
-        public Builder setFamily(String family) {
+        public Builder family(String family) {
             this.family = Objects.requireNonNull(family);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setSize(String size) {
+        public Builder size(String size) {
             this.size = Objects.requireNonNull(size);
             return this;
         }
 
-        public Builder setTier(@Nullable String tier) {
+        public Builder tier(@Nullable String tier) {
             this.tier = tier;
             return this;
         }

@@ -171,82 +171,82 @@ public final class MigrateSqlServerSqlDbSyncDatabaseInputArgs extends io.pulumi.
     	      this.targetSetting = defaults.targetSetting;
         }
 
-        public Builder setId(@Nullable Input<String> id) {
+        public Builder id(@Nullable Input<String> id) {
             this.id = id;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = Input.ofNullable(id);
             return this;
         }
 
-        public Builder setMigrationSetting(@Nullable Input<Map<String,String>> migrationSetting) {
+        public Builder migrationSetting(@Nullable Input<Map<String,String>> migrationSetting) {
             this.migrationSetting = migrationSetting;
             return this;
         }
 
-        public Builder setMigrationSetting(@Nullable Map<String,String> migrationSetting) {
+        public Builder migrationSetting(@Nullable Map<String,String> migrationSetting) {
             this.migrationSetting = Input.ofNullable(migrationSetting);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setSchemaName(@Nullable Input<String> schemaName) {
+        public Builder schemaName(@Nullable Input<String> schemaName) {
             this.schemaName = schemaName;
             return this;
         }
 
-        public Builder setSchemaName(@Nullable String schemaName) {
+        public Builder schemaName(@Nullable String schemaName) {
             this.schemaName = Input.ofNullable(schemaName);
             return this;
         }
 
-        public Builder setSourceSetting(@Nullable Input<Map<String,String>> sourceSetting) {
+        public Builder sourceSetting(@Nullable Input<Map<String,String>> sourceSetting) {
             this.sourceSetting = sourceSetting;
             return this;
         }
 
-        public Builder setSourceSetting(@Nullable Map<String,String> sourceSetting) {
+        public Builder sourceSetting(@Nullable Map<String,String> sourceSetting) {
             this.sourceSetting = Input.ofNullable(sourceSetting);
             return this;
         }
 
-        public Builder setTableMap(@Nullable Input<Map<String,String>> tableMap) {
+        public Builder tableMap(@Nullable Input<Map<String,String>> tableMap) {
             this.tableMap = tableMap;
             return this;
         }
 
-        public Builder setTableMap(@Nullable Map<String,String> tableMap) {
+        public Builder tableMap(@Nullable Map<String,String> tableMap) {
             this.tableMap = Input.ofNullable(tableMap);
             return this;
         }
 
-        public Builder setTargetDatabaseName(@Nullable Input<String> targetDatabaseName) {
+        public Builder targetDatabaseName(@Nullable Input<String> targetDatabaseName) {
             this.targetDatabaseName = targetDatabaseName;
             return this;
         }
 
-        public Builder setTargetDatabaseName(@Nullable String targetDatabaseName) {
+        public Builder targetDatabaseName(@Nullable String targetDatabaseName) {
             this.targetDatabaseName = Input.ofNullable(targetDatabaseName);
             return this;
         }
 
-        public Builder setTargetSetting(@Nullable Input<Map<String,String>> targetSetting) {
+        public Builder targetSetting(@Nullable Input<Map<String,String>> targetSetting) {
             this.targetSetting = targetSetting;
             return this;
         }
 
-        public Builder setTargetSetting(@Nullable Map<String,String> targetSetting) {
+        public Builder targetSetting(@Nullable Map<String,String> targetSetting) {
             this.targetSetting = Input.ofNullable(targetSetting);
             return this;
         }

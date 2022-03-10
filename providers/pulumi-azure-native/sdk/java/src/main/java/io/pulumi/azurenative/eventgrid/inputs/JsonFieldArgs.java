@@ -57,12 +57,12 @@ public final class JsonFieldArgs extends io.pulumi.resources.ResourceArgs {
     	      this.sourceField = defaults.sourceField;
         }
 
-        public Builder setSourceField(@Nullable Input<String> sourceField) {
+        public Builder sourceField(@Nullable Input<String> sourceField) {
             this.sourceField = sourceField;
             return this;
         }
 
-        public Builder setSourceField(@Nullable String sourceField) {
+        public Builder sourceField(@Nullable String sourceField) {
             this.sourceField = Input.ofNullable(sourceField);
             return this;
         }

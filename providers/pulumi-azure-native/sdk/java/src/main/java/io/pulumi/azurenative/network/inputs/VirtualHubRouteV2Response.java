@@ -107,22 +107,22 @@ public final class VirtualHubRouteV2Response extends io.pulumi.resources.InvokeA
     	      this.nextHops = defaults.nextHops;
         }
 
-        public Builder setDestinationType(@Nullable String destinationType) {
+        public Builder destinationType(@Nullable String destinationType) {
             this.destinationType = destinationType;
             return this;
         }
 
-        public Builder setDestinations(@Nullable List<String> destinations) {
+        public Builder destinations(@Nullable List<String> destinations) {
             this.destinations = destinations;
             return this;
         }
 
-        public Builder setNextHopType(@Nullable String nextHopType) {
+        public Builder nextHopType(@Nullable String nextHopType) {
             this.nextHopType = nextHopType;
             return this;
         }
 
-        public Builder setNextHops(@Nullable List<String> nextHops) {
+        public Builder nextHops(@Nullable List<String> nextHops) {
             this.nextHops = nextHops;
             return this;
         }

@@ -294,152 +294,152 @@ public final class WebActivityArgs extends io.pulumi.resources.ResourceArgs {
     	      this.userProperties = defaults.userProperties;
         }
 
-        public Builder setAuthentication(@Nullable Input<WebActivityAuthenticationArgs> authentication) {
+        public Builder authentication(@Nullable Input<WebActivityAuthenticationArgs> authentication) {
             this.authentication = authentication;
             return this;
         }
 
-        public Builder setAuthentication(@Nullable WebActivityAuthenticationArgs authentication) {
+        public Builder authentication(@Nullable WebActivityAuthenticationArgs authentication) {
             this.authentication = Input.ofNullable(authentication);
             return this;
         }
 
-        public Builder setBody(@Nullable Input<Object> body) {
+        public Builder body(@Nullable Input<Object> body) {
             this.body = body;
             return this;
         }
 
-        public Builder setBody(@Nullable Object body) {
+        public Builder body(@Nullable Object body) {
             this.body = Input.ofNullable(body);
             return this;
         }
 
-        public Builder setConnectVia(@Nullable Input<IntegrationRuntimeReferenceArgs> connectVia) {
+        public Builder connectVia(@Nullable Input<IntegrationRuntimeReferenceArgs> connectVia) {
             this.connectVia = connectVia;
             return this;
         }
 
-        public Builder setConnectVia(@Nullable IntegrationRuntimeReferenceArgs connectVia) {
+        public Builder connectVia(@Nullable IntegrationRuntimeReferenceArgs connectVia) {
             this.connectVia = Input.ofNullable(connectVia);
             return this;
         }
 
-        public Builder setDatasets(@Nullable Input<List<DatasetReferenceArgs>> datasets) {
+        public Builder datasets(@Nullable Input<List<DatasetReferenceArgs>> datasets) {
             this.datasets = datasets;
             return this;
         }
 
-        public Builder setDatasets(@Nullable List<DatasetReferenceArgs> datasets) {
+        public Builder datasets(@Nullable List<DatasetReferenceArgs> datasets) {
             this.datasets = Input.ofNullable(datasets);
             return this;
         }
 
-        public Builder setDependsOn(@Nullable Input<List<ActivityDependencyArgs>> dependsOn) {
+        public Builder dependsOn(@Nullable Input<List<ActivityDependencyArgs>> dependsOn) {
             this.dependsOn = dependsOn;
             return this;
         }
 
-        public Builder setDependsOn(@Nullable List<ActivityDependencyArgs> dependsOn) {
+        public Builder dependsOn(@Nullable List<ActivityDependencyArgs> dependsOn) {
             this.dependsOn = Input.ofNullable(dependsOn);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setHeaders(@Nullable Input<Object> headers) {
+        public Builder headers(@Nullable Input<Object> headers) {
             this.headers = headers;
             return this;
         }
 
-        public Builder setHeaders(@Nullable Object headers) {
+        public Builder headers(@Nullable Object headers) {
             this.headers = Input.ofNullable(headers);
             return this;
         }
 
-        public Builder setLinkedServiceName(@Nullable Input<LinkedServiceReferenceArgs> linkedServiceName) {
+        public Builder linkedServiceName(@Nullable Input<LinkedServiceReferenceArgs> linkedServiceName) {
             this.linkedServiceName = linkedServiceName;
             return this;
         }
 
-        public Builder setLinkedServiceName(@Nullable LinkedServiceReferenceArgs linkedServiceName) {
+        public Builder linkedServiceName(@Nullable LinkedServiceReferenceArgs linkedServiceName) {
             this.linkedServiceName = Input.ofNullable(linkedServiceName);
             return this;
         }
 
-        public Builder setLinkedServices(@Nullable Input<List<LinkedServiceReferenceArgs>> linkedServices) {
+        public Builder linkedServices(@Nullable Input<List<LinkedServiceReferenceArgs>> linkedServices) {
             this.linkedServices = linkedServices;
             return this;
         }
 
-        public Builder setLinkedServices(@Nullable List<LinkedServiceReferenceArgs> linkedServices) {
+        public Builder linkedServices(@Nullable List<LinkedServiceReferenceArgs> linkedServices) {
             this.linkedServices = Input.ofNullable(linkedServices);
             return this;
         }
 
-        public Builder setMethod(Input<Either<String,WebActivityMethod>> method) {
+        public Builder method(Input<Either<String,WebActivityMethod>> method) {
             this.method = Objects.requireNonNull(method);
             return this;
         }
 
-        public Builder setMethod(Either<String,WebActivityMethod> method) {
+        public Builder method(Either<String,WebActivityMethod> method) {
             this.method = Input.of(Objects.requireNonNull(method));
             return this;
         }
 
-        public Builder setName(Input<String> name) {
+        public Builder name(Input<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder setPolicy(@Nullable Input<ActivityPolicyArgs> policy) {
+        public Builder policy(@Nullable Input<ActivityPolicyArgs> policy) {
             this.policy = policy;
             return this;
         }
 
-        public Builder setPolicy(@Nullable ActivityPolicyArgs policy) {
+        public Builder policy(@Nullable ActivityPolicyArgs policy) {
             this.policy = Input.ofNullable(policy);
             return this;
         }
 
-        public Builder setType(Input<String> type) {
+        public Builder type(Input<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }
 
-        public Builder setUrl(Input<Object> url) {
+        public Builder url(Input<Object> url) {
             this.url = Objects.requireNonNull(url);
             return this;
         }
 
-        public Builder setUrl(Object url) {
+        public Builder url(Object url) {
             this.url = Input.of(Objects.requireNonNull(url));
             return this;
         }
 
-        public Builder setUserProperties(@Nullable Input<List<UserPropertyArgs>> userProperties) {
+        public Builder userProperties(@Nullable Input<List<UserPropertyArgs>> userProperties) {
             this.userProperties = userProperties;
             return this;
         }
 
-        public Builder setUserProperties(@Nullable List<UserPropertyArgs> userProperties) {
+        public Builder userProperties(@Nullable List<UserPropertyArgs> userProperties) {
             this.userProperties = Input.ofNullable(userProperties);
             return this;
         }

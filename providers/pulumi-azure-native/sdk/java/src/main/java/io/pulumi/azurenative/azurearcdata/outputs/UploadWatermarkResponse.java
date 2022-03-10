@@ -83,17 +83,17 @@ public final class UploadWatermarkResponse {
     	      this.usages = defaults.usages;
         }
 
-        public Builder setLogs(@Nullable String logs) {
+        public Builder logs(@Nullable String logs) {
             this.logs = logs;
             return this;
         }
 
-        public Builder setMetrics(@Nullable String metrics) {
+        public Builder metrics(@Nullable String metrics) {
             this.metrics = metrics;
             return this;
         }
 
-        public Builder setUsages(@Nullable String usages) {
+        public Builder usages(@Nullable String usages) {
             this.usages = usages;
             return this;
         }

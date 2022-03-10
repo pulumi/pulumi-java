@@ -65,12 +65,12 @@ public final class KpiAliasResponse {
     	      this.expression = defaults.expression;
         }
 
-        public Builder setAliasName(String aliasName) {
+        public Builder aliasName(String aliasName) {
             this.aliasName = Objects.requireNonNull(aliasName);
             return this;
         }
 
-        public Builder setExpression(String expression) {
+        public Builder expression(String expression) {
             this.expression = Objects.requireNonNull(expression);
             return this;
         }

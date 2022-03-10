@@ -93,32 +93,32 @@ public final class TransferAllDetailsArgs extends io.pulumi.resources.ResourceAr
     	      this.transferAllFiles = defaults.transferAllFiles;
         }
 
-        public Builder setDataAccountType(Input<Either<String,DataAccountType>> dataAccountType) {
+        public Builder dataAccountType(Input<Either<String,DataAccountType>> dataAccountType) {
             this.dataAccountType = Objects.requireNonNull(dataAccountType);
             return this;
         }
 
-        public Builder setDataAccountType(Either<String,DataAccountType> dataAccountType) {
+        public Builder dataAccountType(Either<String,DataAccountType> dataAccountType) {
             this.dataAccountType = Input.of(Objects.requireNonNull(dataAccountType));
             return this;
         }
 
-        public Builder setTransferAllBlobs(@Nullable Input<Boolean> transferAllBlobs) {
+        public Builder transferAllBlobs(@Nullable Input<Boolean> transferAllBlobs) {
             this.transferAllBlobs = transferAllBlobs;
             return this;
         }
 
-        public Builder setTransferAllBlobs(@Nullable Boolean transferAllBlobs) {
+        public Builder transferAllBlobs(@Nullable Boolean transferAllBlobs) {
             this.transferAllBlobs = Input.ofNullable(transferAllBlobs);
             return this;
         }
 
-        public Builder setTransferAllFiles(@Nullable Input<Boolean> transferAllFiles) {
+        public Builder transferAllFiles(@Nullable Input<Boolean> transferAllFiles) {
             this.transferAllFiles = transferAllFiles;
             return this;
         }
 
-        public Builder setTransferAllFiles(@Nullable Boolean transferAllFiles) {
+        public Builder transferAllFiles(@Nullable Boolean transferAllFiles) {
             this.transferAllFiles = Input.ofNullable(transferAllFiles);
             return this;
         }

@@ -134,62 +134,62 @@ public final class BookmarkRelationArgs extends io.pulumi.resources.ResourceArgs
     	      this.workspaceName = defaults.workspaceName;
         }
 
-        public Builder setBookmarkId(Input<String> bookmarkId) {
+        public Builder bookmarkId(Input<String> bookmarkId) {
             this.bookmarkId = Objects.requireNonNull(bookmarkId);
             return this;
         }
 
-        public Builder setBookmarkId(String bookmarkId) {
+        public Builder bookmarkId(String bookmarkId) {
             this.bookmarkId = Input.of(Objects.requireNonNull(bookmarkId));
             return this;
         }
 
-        public Builder setOperationalInsightsResourceProvider(Input<String> operationalInsightsResourceProvider) {
+        public Builder operationalInsightsResourceProvider(Input<String> operationalInsightsResourceProvider) {
             this.operationalInsightsResourceProvider = Objects.requireNonNull(operationalInsightsResourceProvider);
             return this;
         }
 
-        public Builder setOperationalInsightsResourceProvider(String operationalInsightsResourceProvider) {
+        public Builder operationalInsightsResourceProvider(String operationalInsightsResourceProvider) {
             this.operationalInsightsResourceProvider = Input.of(Objects.requireNonNull(operationalInsightsResourceProvider));
             return this;
         }
 
-        public Builder setRelatedResourceId(Input<String> relatedResourceId) {
+        public Builder relatedResourceId(Input<String> relatedResourceId) {
             this.relatedResourceId = Objects.requireNonNull(relatedResourceId);
             return this;
         }
 
-        public Builder setRelatedResourceId(String relatedResourceId) {
+        public Builder relatedResourceId(String relatedResourceId) {
             this.relatedResourceId = Input.of(Objects.requireNonNull(relatedResourceId));
             return this;
         }
 
-        public Builder setRelationName(@Nullable Input<String> relationName) {
+        public Builder relationName(@Nullable Input<String> relationName) {
             this.relationName = relationName;
             return this;
         }
 
-        public Builder setRelationName(@Nullable String relationName) {
+        public Builder relationName(@Nullable String relationName) {
             this.relationName = Input.ofNullable(relationName);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setWorkspaceName(Input<String> workspaceName) {
+        public Builder workspaceName(Input<String> workspaceName) {
             this.workspaceName = Objects.requireNonNull(workspaceName);
             return this;
         }
 
-        public Builder setWorkspaceName(String workspaceName) {
+        public Builder workspaceName(String workspaceName) {
             this.workspaceName = Input.of(Objects.requireNonNull(workspaceName));
             return this;
         }

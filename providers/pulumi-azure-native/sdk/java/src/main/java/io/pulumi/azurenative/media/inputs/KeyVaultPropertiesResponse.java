@@ -70,12 +70,12 @@ public final class KeyVaultPropertiesResponse extends io.pulumi.resources.Invoke
     	      this.keyIdentifier = defaults.keyIdentifier;
         }
 
-        public Builder setCurrentKeyIdentifier(String currentKeyIdentifier) {
+        public Builder currentKeyIdentifier(String currentKeyIdentifier) {
             this.currentKeyIdentifier = Objects.requireNonNull(currentKeyIdentifier);
             return this;
         }
 
-        public Builder setKeyIdentifier(@Nullable String keyIdentifier) {
+        public Builder keyIdentifier(@Nullable String keyIdentifier) {
             this.keyIdentifier = keyIdentifier;
             return this;
         }

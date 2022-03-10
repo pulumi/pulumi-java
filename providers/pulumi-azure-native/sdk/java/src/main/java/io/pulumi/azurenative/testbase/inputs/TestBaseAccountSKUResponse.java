@@ -124,27 +124,27 @@ public final class TestBaseAccountSKUResponse extends io.pulumi.resources.Invoke
     	      this.tier = defaults.tier;
         }
 
-        public Builder setCapabilities(List<TestBaseAccountSKUCapabilityResponse> capabilities) {
+        public Builder capabilities(List<TestBaseAccountSKUCapabilityResponse> capabilities) {
             this.capabilities = Objects.requireNonNull(capabilities);
             return this;
         }
 
-        public Builder setLocations(@Nullable List<String> locations) {
+        public Builder locations(@Nullable List<String> locations) {
             this.locations = locations;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setResourceType(@Nullable String resourceType) {
+        public Builder resourceType(@Nullable String resourceType) {
             this.resourceType = resourceType;
             return this;
         }
 
-        public Builder setTier(String tier) {
+        public Builder tier(String tier) {
             this.tier = Objects.requireNonNull(tier);
             return this;
         }

@@ -104,52 +104,52 @@ public final class DefaultRolloutPropertiesStatusArgs extends io.pulumi.resource
     	      this.subscriptionReregistrationResult = defaults.subscriptionReregistrationResult;
         }
 
-        public Builder setCompletedRegions(@Nullable Input<List<String>> completedRegions) {
+        public Builder completedRegions(@Nullable Input<List<String>> completedRegions) {
             this.completedRegions = completedRegions;
             return this;
         }
 
-        public Builder setCompletedRegions(@Nullable List<String> completedRegions) {
+        public Builder completedRegions(@Nullable List<String> completedRegions) {
             this.completedRegions = Input.ofNullable(completedRegions);
             return this;
         }
 
-        public Builder setFailedOrSkippedRegions(@Nullable Input<Map<String,ExtendedErrorInfoArgs>> failedOrSkippedRegions) {
+        public Builder failedOrSkippedRegions(@Nullable Input<Map<String,ExtendedErrorInfoArgs>> failedOrSkippedRegions) {
             this.failedOrSkippedRegions = failedOrSkippedRegions;
             return this;
         }
 
-        public Builder setFailedOrSkippedRegions(@Nullable Map<String,ExtendedErrorInfoArgs> failedOrSkippedRegions) {
+        public Builder failedOrSkippedRegions(@Nullable Map<String,ExtendedErrorInfoArgs> failedOrSkippedRegions) {
             this.failedOrSkippedRegions = Input.ofNullable(failedOrSkippedRegions);
             return this;
         }
 
-        public Builder setNextTrafficRegion(@Nullable Input<Either<String,TrafficRegionCategory>> nextTrafficRegion) {
+        public Builder nextTrafficRegion(@Nullable Input<Either<String,TrafficRegionCategory>> nextTrafficRegion) {
             this.nextTrafficRegion = nextTrafficRegion;
             return this;
         }
 
-        public Builder setNextTrafficRegion(@Nullable Either<String,TrafficRegionCategory> nextTrafficRegion) {
+        public Builder nextTrafficRegion(@Nullable Either<String,TrafficRegionCategory> nextTrafficRegion) {
             this.nextTrafficRegion = Input.ofNullable(nextTrafficRegion);
             return this;
         }
 
-        public Builder setNextTrafficRegionScheduledTime(@Nullable Input<String> nextTrafficRegionScheduledTime) {
+        public Builder nextTrafficRegionScheduledTime(@Nullable Input<String> nextTrafficRegionScheduledTime) {
             this.nextTrafficRegionScheduledTime = nextTrafficRegionScheduledTime;
             return this;
         }
 
-        public Builder setNextTrafficRegionScheduledTime(@Nullable String nextTrafficRegionScheduledTime) {
+        public Builder nextTrafficRegionScheduledTime(@Nullable String nextTrafficRegionScheduledTime) {
             this.nextTrafficRegionScheduledTime = Input.ofNullable(nextTrafficRegionScheduledTime);
             return this;
         }
 
-        public Builder setSubscriptionReregistrationResult(@Nullable Input<Either<String,SubscriptionReregistrationResult>> subscriptionReregistrationResult) {
+        public Builder subscriptionReregistrationResult(@Nullable Input<Either<String,SubscriptionReregistrationResult>> subscriptionReregistrationResult) {
             this.subscriptionReregistrationResult = subscriptionReregistrationResult;
             return this;
         }
 
-        public Builder setSubscriptionReregistrationResult(@Nullable Either<String,SubscriptionReregistrationResult> subscriptionReregistrationResult) {
+        public Builder subscriptionReregistrationResult(@Nullable Either<String,SubscriptionReregistrationResult> subscriptionReregistrationResult) {
             this.subscriptionReregistrationResult = Input.ofNullable(subscriptionReregistrationResult);
             return this;
         }

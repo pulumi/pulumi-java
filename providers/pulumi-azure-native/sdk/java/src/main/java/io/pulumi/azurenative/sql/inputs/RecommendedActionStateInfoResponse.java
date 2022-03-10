@@ -88,17 +88,17 @@ public final class RecommendedActionStateInfoResponse extends io.pulumi.resource
     	      this.lastModified = defaults.lastModified;
         }
 
-        public Builder setActionInitiatedBy(String actionInitiatedBy) {
+        public Builder actionInitiatedBy(String actionInitiatedBy) {
             this.actionInitiatedBy = Objects.requireNonNull(actionInitiatedBy);
             return this;
         }
 
-        public Builder setCurrentValue(String currentValue) {
+        public Builder currentValue(String currentValue) {
             this.currentValue = Objects.requireNonNull(currentValue);
             return this;
         }
 
-        public Builder setLastModified(String lastModified) {
+        public Builder lastModified(String lastModified) {
             this.lastModified = Objects.requireNonNull(lastModified);
             return this;
         }

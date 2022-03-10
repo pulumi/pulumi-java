@@ -108,42 +108,42 @@ public final class VideoEncoderH264Args extends io.pulumi.resources.ResourceArgs
     	      this.type = defaults.type;
         }
 
-        public Builder setBitrateKbps(@Nullable Input<String> bitrateKbps) {
+        public Builder bitrateKbps(@Nullable Input<String> bitrateKbps) {
             this.bitrateKbps = bitrateKbps;
             return this;
         }
 
-        public Builder setBitrateKbps(@Nullable String bitrateKbps) {
+        public Builder bitrateKbps(@Nullable String bitrateKbps) {
             this.bitrateKbps = Input.ofNullable(bitrateKbps);
             return this;
         }
 
-        public Builder setFrameRate(@Nullable Input<String> frameRate) {
+        public Builder frameRate(@Nullable Input<String> frameRate) {
             this.frameRate = frameRate;
             return this;
         }
 
-        public Builder setFrameRate(@Nullable String frameRate) {
+        public Builder frameRate(@Nullable String frameRate) {
             this.frameRate = Input.ofNullable(frameRate);
             return this;
         }
 
-        public Builder setScale(@Nullable Input<VideoScaleArgs> scale) {
+        public Builder scale(@Nullable Input<VideoScaleArgs> scale) {
             this.scale = scale;
             return this;
         }
 
-        public Builder setScale(@Nullable VideoScaleArgs scale) {
+        public Builder scale(@Nullable VideoScaleArgs scale) {
             this.scale = Input.ofNullable(scale);
             return this;
         }
 
-        public Builder setType(Input<String> type) {
+        public Builder type(Input<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }

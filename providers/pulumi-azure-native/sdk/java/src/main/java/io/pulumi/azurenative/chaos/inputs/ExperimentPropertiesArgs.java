@@ -93,32 +93,32 @@ public final class ExperimentPropertiesArgs extends io.pulumi.resources.Resource
     	      this.steps = defaults.steps;
         }
 
-        public Builder setSelectors(Input<List<SelectorArgs>> selectors) {
+        public Builder selectors(Input<List<SelectorArgs>> selectors) {
             this.selectors = Objects.requireNonNull(selectors);
             return this;
         }
 
-        public Builder setSelectors(List<SelectorArgs> selectors) {
+        public Builder selectors(List<SelectorArgs> selectors) {
             this.selectors = Input.of(Objects.requireNonNull(selectors));
             return this;
         }
 
-        public Builder setStartOnCreation(@Nullable Input<Boolean> startOnCreation) {
+        public Builder startOnCreation(@Nullable Input<Boolean> startOnCreation) {
             this.startOnCreation = startOnCreation;
             return this;
         }
 
-        public Builder setStartOnCreation(@Nullable Boolean startOnCreation) {
+        public Builder startOnCreation(@Nullable Boolean startOnCreation) {
             this.startOnCreation = Input.ofNullable(startOnCreation);
             return this;
         }
 
-        public Builder setSteps(Input<List<StepArgs>> steps) {
+        public Builder steps(Input<List<StepArgs>> steps) {
             this.steps = Objects.requireNonNull(steps);
             return this;
         }
 
-        public Builder setSteps(List<StepArgs> steps) {
+        public Builder steps(List<StepArgs> steps) {
             this.steps = Input.of(Objects.requireNonNull(steps));
             return this;
         }

@@ -82,17 +82,17 @@ public final class ClusterJobResponse {
     	      this.streamingUnits = defaults.streamingUnits;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setJobState(String jobState) {
+        public Builder jobState(String jobState) {
             this.jobState = Objects.requireNonNull(jobState);
             return this;
         }
 
-        public Builder setStreamingUnits(Integer streamingUnits) {
+        public Builder streamingUnits(Integer streamingUnits) {
             this.streamingUnits = Objects.requireNonNull(streamingUnits);
             return this;
         }

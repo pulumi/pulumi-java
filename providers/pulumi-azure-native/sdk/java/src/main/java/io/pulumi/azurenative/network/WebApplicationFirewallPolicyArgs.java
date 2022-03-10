@@ -171,82 +171,82 @@ public final class WebApplicationFirewallPolicyArgs extends io.pulumi.resources.
     	      this.tags = defaults.tags;
         }
 
-        public Builder setCustomRules(@Nullable Input<List<WebApplicationFirewallCustomRuleArgs>> customRules) {
+        public Builder customRules(@Nullable Input<List<WebApplicationFirewallCustomRuleArgs>> customRules) {
             this.customRules = customRules;
             return this;
         }
 
-        public Builder setCustomRules(@Nullable List<WebApplicationFirewallCustomRuleArgs> customRules) {
+        public Builder customRules(@Nullable List<WebApplicationFirewallCustomRuleArgs> customRules) {
             this.customRules = Input.ofNullable(customRules);
             return this;
         }
 
-        public Builder setId(@Nullable Input<String> id) {
+        public Builder id(@Nullable Input<String> id) {
             this.id = id;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = Input.ofNullable(id);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setManagedRules(Input<ManagedRulesDefinitionArgs> managedRules) {
+        public Builder managedRules(Input<ManagedRulesDefinitionArgs> managedRules) {
             this.managedRules = Objects.requireNonNull(managedRules);
             return this;
         }
 
-        public Builder setManagedRules(ManagedRulesDefinitionArgs managedRules) {
+        public Builder managedRules(ManagedRulesDefinitionArgs managedRules) {
             this.managedRules = Input.of(Objects.requireNonNull(managedRules));
             return this;
         }
 
-        public Builder setPolicyName(@Nullable Input<String> policyName) {
+        public Builder policyName(@Nullable Input<String> policyName) {
             this.policyName = policyName;
             return this;
         }
 
-        public Builder setPolicyName(@Nullable String policyName) {
+        public Builder policyName(@Nullable String policyName) {
             this.policyName = Input.ofNullable(policyName);
             return this;
         }
 
-        public Builder setPolicySettings(@Nullable Input<PolicySettingsArgs> policySettings) {
+        public Builder policySettings(@Nullable Input<PolicySettingsArgs> policySettings) {
             this.policySettings = policySettings;
             return this;
         }
 
-        public Builder setPolicySettings(@Nullable PolicySettingsArgs policySettings) {
+        public Builder policySettings(@Nullable PolicySettingsArgs policySettings) {
             this.policySettings = Input.ofNullable(policySettings);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

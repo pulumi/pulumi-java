@@ -74,22 +74,22 @@ public final class LiveEventEndpointArgs extends io.pulumi.resources.ResourceArg
     	      this.url = defaults.url;
         }
 
-        public Builder setProtocol(@Nullable Input<String> protocol) {
+        public Builder protocol(@Nullable Input<String> protocol) {
             this.protocol = protocol;
             return this;
         }
 
-        public Builder setProtocol(@Nullable String protocol) {
+        public Builder protocol(@Nullable String protocol) {
             this.protocol = Input.ofNullable(protocol);
             return this;
         }
 
-        public Builder setUrl(@Nullable Input<String> url) {
+        public Builder url(@Nullable Input<String> url) {
             this.url = url;
             return this;
         }
 
-        public Builder setUrl(@Nullable String url) {
+        public Builder url(@Nullable String url) {
             this.url = Input.ofNullable(url);
             return this;
         }

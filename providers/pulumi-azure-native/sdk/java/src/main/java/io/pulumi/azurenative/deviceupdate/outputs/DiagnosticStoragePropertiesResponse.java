@@ -83,17 +83,17 @@ public final class DiagnosticStoragePropertiesResponse {
     	      this.resourceId = defaults.resourceId;
         }
 
-        public Builder setAuthenticationType(String authenticationType) {
+        public Builder authenticationType(String authenticationType) {
             this.authenticationType = Objects.requireNonNull(authenticationType);
             return this;
         }
 
-        public Builder setConnectionString(@Nullable String connectionString) {
+        public Builder connectionString(@Nullable String connectionString) {
             this.connectionString = connectionString;
             return this;
         }
 
-        public Builder setResourceId(String resourceId) {
+        public Builder resourceId(String resourceId) {
             this.resourceId = Objects.requireNonNull(resourceId);
             return this;
         }

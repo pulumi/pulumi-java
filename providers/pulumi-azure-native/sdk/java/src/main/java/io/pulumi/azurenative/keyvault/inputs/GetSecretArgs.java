@@ -84,17 +84,17 @@ public final class GetSecretArgs extends io.pulumi.resources.InvokeArgs {
     	      this.vaultName = defaults.vaultName;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setSecretName(String secretName) {
+        public Builder secretName(String secretName) {
             this.secretName = Objects.requireNonNull(secretName);
             return this;
         }
 
-        public Builder setVaultName(String vaultName) {
+        public Builder vaultName(String vaultName) {
             this.vaultName = Objects.requireNonNull(vaultName);
             return this;
         }

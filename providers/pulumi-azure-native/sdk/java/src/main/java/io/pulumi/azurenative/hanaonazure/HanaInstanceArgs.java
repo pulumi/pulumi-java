@@ -170,82 +170,82 @@ public final class HanaInstanceArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setHanaInstanceName(@Nullable Input<String> hanaInstanceName) {
+        public Builder hanaInstanceName(@Nullable Input<String> hanaInstanceName) {
             this.hanaInstanceName = hanaInstanceName;
             return this;
         }
 
-        public Builder setHanaInstanceName(@Nullable String hanaInstanceName) {
+        public Builder hanaInstanceName(@Nullable String hanaInstanceName) {
             this.hanaInstanceName = Input.ofNullable(hanaInstanceName);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setNetworkProfile(@Nullable Input<NetworkProfileArgs> networkProfile) {
+        public Builder networkProfile(@Nullable Input<NetworkProfileArgs> networkProfile) {
             this.networkProfile = networkProfile;
             return this;
         }
 
-        public Builder setNetworkProfile(@Nullable NetworkProfileArgs networkProfile) {
+        public Builder networkProfile(@Nullable NetworkProfileArgs networkProfile) {
             this.networkProfile = Input.ofNullable(networkProfile);
             return this;
         }
 
-        public Builder setOsProfile(@Nullable Input<OSProfileArgs> osProfile) {
+        public Builder osProfile(@Nullable Input<OSProfileArgs> osProfile) {
             this.osProfile = osProfile;
             return this;
         }
 
-        public Builder setOsProfile(@Nullable OSProfileArgs osProfile) {
+        public Builder osProfile(@Nullable OSProfileArgs osProfile) {
             this.osProfile = Input.ofNullable(osProfile);
             return this;
         }
 
-        public Builder setPartnerNodeId(@Nullable Input<String> partnerNodeId) {
+        public Builder partnerNodeId(@Nullable Input<String> partnerNodeId) {
             this.partnerNodeId = partnerNodeId;
             return this;
         }
 
-        public Builder setPartnerNodeId(@Nullable String partnerNodeId) {
+        public Builder partnerNodeId(@Nullable String partnerNodeId) {
             this.partnerNodeId = Input.ofNullable(partnerNodeId);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setStorageProfile(@Nullable Input<StorageProfileArgs> storageProfile) {
+        public Builder storageProfile(@Nullable Input<StorageProfileArgs> storageProfile) {
             this.storageProfile = storageProfile;
             return this;
         }
 
-        public Builder setStorageProfile(@Nullable StorageProfileArgs storageProfile) {
+        public Builder storageProfile(@Nullable StorageProfileArgs storageProfile) {
             this.storageProfile = Input.ofNullable(storageProfile);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

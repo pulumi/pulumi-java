@@ -138,62 +138,62 @@ public final class GuestAgentArgs extends io.pulumi.resources.ResourceArgs {
     	      this.virtualMachineName = defaults.virtualMachineName;
         }
 
-        public Builder setCredentials(@Nullable Input<GuestCredentialArgs> credentials) {
+        public Builder credentials(@Nullable Input<GuestCredentialArgs> credentials) {
             this.credentials = credentials;
             return this;
         }
 
-        public Builder setCredentials(@Nullable GuestCredentialArgs credentials) {
+        public Builder credentials(@Nullable GuestCredentialArgs credentials) {
             this.credentials = Input.ofNullable(credentials);
             return this;
         }
 
-        public Builder setHttpProxyConfig(@Nullable Input<HttpProxyConfigurationArgs> httpProxyConfig) {
+        public Builder httpProxyConfig(@Nullable Input<HttpProxyConfigurationArgs> httpProxyConfig) {
             this.httpProxyConfig = httpProxyConfig;
             return this;
         }
 
-        public Builder setHttpProxyConfig(@Nullable HttpProxyConfigurationArgs httpProxyConfig) {
+        public Builder httpProxyConfig(@Nullable HttpProxyConfigurationArgs httpProxyConfig) {
             this.httpProxyConfig = Input.ofNullable(httpProxyConfig);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setProvisioningAction(@Nullable Input<Either<String,ProvisioningAction>> provisioningAction) {
+        public Builder provisioningAction(@Nullable Input<Either<String,ProvisioningAction>> provisioningAction) {
             this.provisioningAction = provisioningAction;
             return this;
         }
 
-        public Builder setProvisioningAction(@Nullable Either<String,ProvisioningAction> provisioningAction) {
+        public Builder provisioningAction(@Nullable Either<String,ProvisioningAction> provisioningAction) {
             this.provisioningAction = Input.ofNullable(provisioningAction);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setVirtualMachineName(Input<String> virtualMachineName) {
+        public Builder virtualMachineName(Input<String> virtualMachineName) {
             this.virtualMachineName = Objects.requireNonNull(virtualMachineName);
             return this;
         }
 
-        public Builder setVirtualMachineName(String virtualMachineName) {
+        public Builder virtualMachineName(String virtualMachineName) {
             this.virtualMachineName = Input.of(Objects.requireNonNull(virtualMachineName));
             return this;
         }

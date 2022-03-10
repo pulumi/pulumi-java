@@ -84,17 +84,17 @@ public final class IndexesResponse {
     	      this.precision = defaults.precision;
         }
 
-        public Builder setDataType(@Nullable String dataType) {
+        public Builder dataType(@Nullable String dataType) {
             this.dataType = dataType;
             return this;
         }
 
-        public Builder setKind(@Nullable String kind) {
+        public Builder kind(@Nullable String kind) {
             this.kind = kind;
             return this;
         }
 
-        public Builder setPrecision(@Nullable Integer precision) {
+        public Builder precision(@Nullable Integer precision) {
             this.precision = precision;
             return this;
         }

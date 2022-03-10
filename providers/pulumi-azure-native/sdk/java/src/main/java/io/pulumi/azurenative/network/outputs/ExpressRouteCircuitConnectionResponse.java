@@ -213,57 +213,57 @@ public final class ExpressRouteCircuitConnectionResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setAddressPrefix(@Nullable String addressPrefix) {
+        public Builder addressPrefix(@Nullable String addressPrefix) {
             this.addressPrefix = addressPrefix;
             return this;
         }
 
-        public Builder setAuthorizationKey(@Nullable String authorizationKey) {
+        public Builder authorizationKey(@Nullable String authorizationKey) {
             this.authorizationKey = authorizationKey;
             return this;
         }
 
-        public Builder setCircuitConnectionStatus(String circuitConnectionStatus) {
+        public Builder circuitConnectionStatus(String circuitConnectionStatus) {
             this.circuitConnectionStatus = Objects.requireNonNull(circuitConnectionStatus);
             return this;
         }
 
-        public Builder setEtag(String etag) {
+        public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
 
-        public Builder setExpressRouteCircuitPeering(@Nullable SubResourceResponse expressRouteCircuitPeering) {
+        public Builder expressRouteCircuitPeering(@Nullable SubResourceResponse expressRouteCircuitPeering) {
             this.expressRouteCircuitPeering = expressRouteCircuitPeering;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setIpv6CircuitConnectionConfig(@Nullable Ipv6CircuitConnectionConfigResponse ipv6CircuitConnectionConfig) {
+        public Builder ipv6CircuitConnectionConfig(@Nullable Ipv6CircuitConnectionConfigResponse ipv6CircuitConnectionConfig) {
             this.ipv6CircuitConnectionConfig = ipv6CircuitConnectionConfig;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setPeerExpressRouteCircuitPeering(@Nullable SubResourceResponse peerExpressRouteCircuitPeering) {
+        public Builder peerExpressRouteCircuitPeering(@Nullable SubResourceResponse peerExpressRouteCircuitPeering) {
             this.peerExpressRouteCircuitPeering = peerExpressRouteCircuitPeering;
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

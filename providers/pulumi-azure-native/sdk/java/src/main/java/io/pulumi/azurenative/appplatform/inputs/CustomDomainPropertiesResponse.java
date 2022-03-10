@@ -90,17 +90,17 @@ public final class CustomDomainPropertiesResponse extends io.pulumi.resources.In
     	      this.thumbprint = defaults.thumbprint;
         }
 
-        public Builder setAppName(String appName) {
+        public Builder appName(String appName) {
             this.appName = Objects.requireNonNull(appName);
             return this;
         }
 
-        public Builder setCertName(@Nullable String certName) {
+        public Builder certName(@Nullable String certName) {
             this.certName = certName;
             return this;
         }
 
-        public Builder setThumbprint(@Nullable String thumbprint) {
+        public Builder thumbprint(@Nullable String thumbprint) {
             this.thumbprint = thumbprint;
             return this;
         }

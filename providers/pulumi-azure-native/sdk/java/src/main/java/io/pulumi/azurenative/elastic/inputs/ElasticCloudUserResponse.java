@@ -88,17 +88,17 @@ public final class ElasticCloudUserResponse extends io.pulumi.resources.InvokeAr
     	      this.id = defaults.id;
         }
 
-        public Builder setElasticCloudSsoDefaultUrl(String elasticCloudSsoDefaultUrl) {
+        public Builder elasticCloudSsoDefaultUrl(String elasticCloudSsoDefaultUrl) {
             this.elasticCloudSsoDefaultUrl = Objects.requireNonNull(elasticCloudSsoDefaultUrl);
             return this;
         }
 
-        public Builder setEmailAddress(String emailAddress) {
+        public Builder emailAddress(String emailAddress) {
             this.emailAddress = Objects.requireNonNull(emailAddress);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }

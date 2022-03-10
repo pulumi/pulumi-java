@@ -135,62 +135,62 @@ public final class ApplicationGatewayPrivateEndpointConnectionArgs extends io.pu
     	      this.resourceGroupName = defaults.resourceGroupName;
         }
 
-        public Builder setApplicationGatewayName(Input<String> applicationGatewayName) {
+        public Builder applicationGatewayName(Input<String> applicationGatewayName) {
             this.applicationGatewayName = Objects.requireNonNull(applicationGatewayName);
             return this;
         }
 
-        public Builder setApplicationGatewayName(String applicationGatewayName) {
+        public Builder applicationGatewayName(String applicationGatewayName) {
             this.applicationGatewayName = Input.of(Objects.requireNonNull(applicationGatewayName));
             return this;
         }
 
-        public Builder setConnectionName(@Nullable Input<String> connectionName) {
+        public Builder connectionName(@Nullable Input<String> connectionName) {
             this.connectionName = connectionName;
             return this;
         }
 
-        public Builder setConnectionName(@Nullable String connectionName) {
+        public Builder connectionName(@Nullable String connectionName) {
             this.connectionName = Input.ofNullable(connectionName);
             return this;
         }
 
-        public Builder setId(@Nullable Input<String> id) {
+        public Builder id(@Nullable Input<String> id) {
             this.id = id;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = Input.ofNullable(id);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setPrivateLinkServiceConnectionState(@Nullable Input<PrivateLinkServiceConnectionStateArgs> privateLinkServiceConnectionState) {
+        public Builder privateLinkServiceConnectionState(@Nullable Input<PrivateLinkServiceConnectionStateArgs> privateLinkServiceConnectionState) {
             this.privateLinkServiceConnectionState = privateLinkServiceConnectionState;
             return this;
         }
 
-        public Builder setPrivateLinkServiceConnectionState(@Nullable PrivateLinkServiceConnectionStateArgs privateLinkServiceConnectionState) {
+        public Builder privateLinkServiceConnectionState(@Nullable PrivateLinkServiceConnectionStateArgs privateLinkServiceConnectionState) {
             this.privateLinkServiceConnectionState = Input.ofNullable(privateLinkServiceConnectionState);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }

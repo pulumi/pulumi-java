@@ -169,82 +169,82 @@ public final class CustomAssessmentAutomationArgs extends io.pulumi.resources.Re
     	      this.supportedCloud = defaults.supportedCloud;
         }
 
-        public Builder setCompressedQuery(@Nullable Input<String> compressedQuery) {
+        public Builder compressedQuery(@Nullable Input<String> compressedQuery) {
             this.compressedQuery = compressedQuery;
             return this;
         }
 
-        public Builder setCompressedQuery(@Nullable String compressedQuery) {
+        public Builder compressedQuery(@Nullable String compressedQuery) {
             this.compressedQuery = Input.ofNullable(compressedQuery);
             return this;
         }
 
-        public Builder setCustomAssessmentAutomationName(@Nullable Input<String> customAssessmentAutomationName) {
+        public Builder customAssessmentAutomationName(@Nullable Input<String> customAssessmentAutomationName) {
             this.customAssessmentAutomationName = customAssessmentAutomationName;
             return this;
         }
 
-        public Builder setCustomAssessmentAutomationName(@Nullable String customAssessmentAutomationName) {
+        public Builder customAssessmentAutomationName(@Nullable String customAssessmentAutomationName) {
             this.customAssessmentAutomationName = Input.ofNullable(customAssessmentAutomationName);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setDisplayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Input<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setDisplayName(@Nullable String displayName) {
+        public Builder displayName(@Nullable String displayName) {
             this.displayName = Input.ofNullable(displayName);
             return this;
         }
 
-        public Builder setRemediationDescription(@Nullable Input<String> remediationDescription) {
+        public Builder remediationDescription(@Nullable Input<String> remediationDescription) {
             this.remediationDescription = remediationDescription;
             return this;
         }
 
-        public Builder setRemediationDescription(@Nullable String remediationDescription) {
+        public Builder remediationDescription(@Nullable String remediationDescription) {
             this.remediationDescription = Input.ofNullable(remediationDescription);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setSeverity(@Nullable Input<Either<String,SeverityEnum>> severity) {
+        public Builder severity(@Nullable Input<Either<String,SeverityEnum>> severity) {
             this.severity = severity;
             return this;
         }
 
-        public Builder setSeverity(@Nullable Either<String,SeverityEnum> severity) {
+        public Builder severity(@Nullable Either<String,SeverityEnum> severity) {
             this.severity = Input.ofNullable(severity);
             return this;
         }
 
-        public Builder setSupportedCloud(@Nullable Input<Either<String,SupportedCloudEnum>> supportedCloud) {
+        public Builder supportedCloud(@Nullable Input<Either<String,SupportedCloudEnum>> supportedCloud) {
             this.supportedCloud = supportedCloud;
             return this;
         }
 
-        public Builder setSupportedCloud(@Nullable Either<String,SupportedCloudEnum> supportedCloud) {
+        public Builder supportedCloud(@Nullable Either<String,SupportedCloudEnum> supportedCloud) {
             this.supportedCloud = Input.ofNullable(supportedCloud);
             return this;
         }

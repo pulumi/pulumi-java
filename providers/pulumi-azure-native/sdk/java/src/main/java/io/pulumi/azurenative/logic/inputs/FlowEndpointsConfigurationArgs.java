@@ -74,22 +74,22 @@ public final class FlowEndpointsConfigurationArgs extends io.pulumi.resources.Re
     	      this.workflow = defaults.workflow;
         }
 
-        public Builder setConnector(@Nullable Input<FlowEndpointsArgs> connector) {
+        public Builder connector(@Nullable Input<FlowEndpointsArgs> connector) {
             this.connector = connector;
             return this;
         }
 
-        public Builder setConnector(@Nullable FlowEndpointsArgs connector) {
+        public Builder connector(@Nullable FlowEndpointsArgs connector) {
             this.connector = Input.ofNullable(connector);
             return this;
         }
 
-        public Builder setWorkflow(@Nullable Input<FlowEndpointsArgs> workflow) {
+        public Builder workflow(@Nullable Input<FlowEndpointsArgs> workflow) {
             this.workflow = workflow;
             return this;
         }
 
-        public Builder setWorkflow(@Nullable FlowEndpointsArgs workflow) {
+        public Builder workflow(@Nullable FlowEndpointsArgs workflow) {
             this.workflow = Input.ofNullable(workflow);
             return this;
         }

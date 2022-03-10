@@ -214,57 +214,57 @@ public final class GetUserResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setEmail(@Nullable String email) {
+        public Builder email(@Nullable String email) {
             this.email = email;
             return this;
         }
 
-        public Builder setFirstName(@Nullable String firstName) {
+        public Builder firstName(@Nullable String firstName) {
             this.firstName = firstName;
             return this;
         }
 
-        public Builder setGroups(List<GroupContractPropertiesResponse> groups) {
+        public Builder groups(List<GroupContractPropertiesResponse> groups) {
             this.groups = Objects.requireNonNull(groups);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setIdentities(@Nullable List<UserIdentityContractResponse> identities) {
+        public Builder identities(@Nullable List<UserIdentityContractResponse> identities) {
             this.identities = identities;
             return this;
         }
 
-        public Builder setLastName(@Nullable String lastName) {
+        public Builder lastName(@Nullable String lastName) {
             this.lastName = lastName;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setNote(@Nullable String note) {
+        public Builder note(@Nullable String note) {
             this.note = note;
             return this;
         }
 
-        public Builder setRegistrationDate(@Nullable String registrationDate) {
+        public Builder registrationDate(@Nullable String registrationDate) {
             this.registrationDate = registrationDate;
             return this;
         }
 
-        public Builder setState(@Nullable String state) {
+        public Builder state(@Nullable String state) {
             this.state = state;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

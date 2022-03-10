@@ -323,172 +323,172 @@ public final class StreamingJobArgs extends io.pulumi.resources.ResourceArgs {
     	      this.transformation = defaults.transformation;
         }
 
-        public Builder setCompatibilityLevel(@Nullable Input<Either<String,CompatibilityLevel>> compatibilityLevel) {
+        public Builder compatibilityLevel(@Nullable Input<Either<String,CompatibilityLevel>> compatibilityLevel) {
             this.compatibilityLevel = compatibilityLevel;
             return this;
         }
 
-        public Builder setCompatibilityLevel(@Nullable Either<String,CompatibilityLevel> compatibilityLevel) {
+        public Builder compatibilityLevel(@Nullable Either<String,CompatibilityLevel> compatibilityLevel) {
             this.compatibilityLevel = Input.ofNullable(compatibilityLevel);
             return this;
         }
 
-        public Builder setDataLocale(@Nullable Input<String> dataLocale) {
+        public Builder dataLocale(@Nullable Input<String> dataLocale) {
             this.dataLocale = dataLocale;
             return this;
         }
 
-        public Builder setDataLocale(@Nullable String dataLocale) {
+        public Builder dataLocale(@Nullable String dataLocale) {
             this.dataLocale = Input.ofNullable(dataLocale);
             return this;
         }
 
-        public Builder setEventsLateArrivalMaxDelayInSeconds(@Nullable Input<Integer> eventsLateArrivalMaxDelayInSeconds) {
+        public Builder eventsLateArrivalMaxDelayInSeconds(@Nullable Input<Integer> eventsLateArrivalMaxDelayInSeconds) {
             this.eventsLateArrivalMaxDelayInSeconds = eventsLateArrivalMaxDelayInSeconds;
             return this;
         }
 
-        public Builder setEventsLateArrivalMaxDelayInSeconds(@Nullable Integer eventsLateArrivalMaxDelayInSeconds) {
+        public Builder eventsLateArrivalMaxDelayInSeconds(@Nullable Integer eventsLateArrivalMaxDelayInSeconds) {
             this.eventsLateArrivalMaxDelayInSeconds = Input.ofNullable(eventsLateArrivalMaxDelayInSeconds);
             return this;
         }
 
-        public Builder setEventsOutOfOrderMaxDelayInSeconds(@Nullable Input<Integer> eventsOutOfOrderMaxDelayInSeconds) {
+        public Builder eventsOutOfOrderMaxDelayInSeconds(@Nullable Input<Integer> eventsOutOfOrderMaxDelayInSeconds) {
             this.eventsOutOfOrderMaxDelayInSeconds = eventsOutOfOrderMaxDelayInSeconds;
             return this;
         }
 
-        public Builder setEventsOutOfOrderMaxDelayInSeconds(@Nullable Integer eventsOutOfOrderMaxDelayInSeconds) {
+        public Builder eventsOutOfOrderMaxDelayInSeconds(@Nullable Integer eventsOutOfOrderMaxDelayInSeconds) {
             this.eventsOutOfOrderMaxDelayInSeconds = Input.ofNullable(eventsOutOfOrderMaxDelayInSeconds);
             return this;
         }
 
-        public Builder setEventsOutOfOrderPolicy(@Nullable Input<Either<String,EventsOutOfOrderPolicy>> eventsOutOfOrderPolicy) {
+        public Builder eventsOutOfOrderPolicy(@Nullable Input<Either<String,EventsOutOfOrderPolicy>> eventsOutOfOrderPolicy) {
             this.eventsOutOfOrderPolicy = eventsOutOfOrderPolicy;
             return this;
         }
 
-        public Builder setEventsOutOfOrderPolicy(@Nullable Either<String,EventsOutOfOrderPolicy> eventsOutOfOrderPolicy) {
+        public Builder eventsOutOfOrderPolicy(@Nullable Either<String,EventsOutOfOrderPolicy> eventsOutOfOrderPolicy) {
             this.eventsOutOfOrderPolicy = Input.ofNullable(eventsOutOfOrderPolicy);
             return this;
         }
 
-        public Builder setFunctions(@Nullable Input<List<FunctionArgs>> functions) {
+        public Builder functions(@Nullable Input<List<FunctionArgs>> functions) {
             this.functions = functions;
             return this;
         }
 
-        public Builder setFunctions(@Nullable List<FunctionArgs> functions) {
+        public Builder functions(@Nullable List<FunctionArgs> functions) {
             this.functions = Input.ofNullable(functions);
             return this;
         }
 
-        public Builder setInputs(@Nullable Input<List<InputArgs>> inputs) {
+        public Builder inputs(@Nullable Input<List<InputArgs>> inputs) {
             this.inputs = inputs;
             return this;
         }
 
-        public Builder setInputs(@Nullable List<InputArgs> inputs) {
+        public Builder inputs(@Nullable List<InputArgs> inputs) {
             this.inputs = Input.ofNullable(inputs);
             return this;
         }
 
-        public Builder setJobName(@Nullable Input<String> jobName) {
+        public Builder jobName(@Nullable Input<String> jobName) {
             this.jobName = jobName;
             return this;
         }
 
-        public Builder setJobName(@Nullable String jobName) {
+        public Builder jobName(@Nullable String jobName) {
             this.jobName = Input.ofNullable(jobName);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setOutputErrorPolicy(@Nullable Input<Either<String,OutputErrorPolicy>> outputErrorPolicy) {
+        public Builder outputErrorPolicy(@Nullable Input<Either<String,OutputErrorPolicy>> outputErrorPolicy) {
             this.outputErrorPolicy = outputErrorPolicy;
             return this;
         }
 
-        public Builder setOutputErrorPolicy(@Nullable Either<String,OutputErrorPolicy> outputErrorPolicy) {
+        public Builder outputErrorPolicy(@Nullable Either<String,OutputErrorPolicy> outputErrorPolicy) {
             this.outputErrorPolicy = Input.ofNullable(outputErrorPolicy);
             return this;
         }
 
-        public Builder setOutputStartMode(@Nullable Input<Either<String,OutputStartMode>> outputStartMode) {
+        public Builder outputStartMode(@Nullable Input<Either<String,OutputStartMode>> outputStartMode) {
             this.outputStartMode = outputStartMode;
             return this;
         }
 
-        public Builder setOutputStartMode(@Nullable Either<String,OutputStartMode> outputStartMode) {
+        public Builder outputStartMode(@Nullable Either<String,OutputStartMode> outputStartMode) {
             this.outputStartMode = Input.ofNullable(outputStartMode);
             return this;
         }
 
-        public Builder setOutputStartTime(@Nullable Input<String> outputStartTime) {
+        public Builder outputStartTime(@Nullable Input<String> outputStartTime) {
             this.outputStartTime = outputStartTime;
             return this;
         }
 
-        public Builder setOutputStartTime(@Nullable String outputStartTime) {
+        public Builder outputStartTime(@Nullable String outputStartTime) {
             this.outputStartTime = Input.ofNullable(outputStartTime);
             return this;
         }
 
-        public Builder setOutputs(@Nullable Input<List<OutputArgs>> outputs) {
+        public Builder outputs(@Nullable Input<List<OutputArgs>> outputs) {
             this.outputs = outputs;
             return this;
         }
 
-        public Builder setOutputs(@Nullable List<OutputArgs> outputs) {
+        public Builder outputs(@Nullable List<OutputArgs> outputs) {
             this.outputs = Input.ofNullable(outputs);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setSku(@Nullable Input<SkuArgs> sku) {
+        public Builder sku(@Nullable Input<SkuArgs> sku) {
             this.sku = sku;
             return this;
         }
 
-        public Builder setSku(@Nullable SkuArgs sku) {
+        public Builder sku(@Nullable SkuArgs sku) {
             this.sku = Input.ofNullable(sku);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTransformation(@Nullable Input<TransformationArgs> transformation) {
+        public Builder transformation(@Nullable Input<TransformationArgs> transformation) {
             this.transformation = transformation;
             return this;
         }
 
-        public Builder setTransformation(@Nullable TransformationArgs transformation) {
+        public Builder transformation(@Nullable TransformationArgs transformation) {
             this.transformation = Input.ofNullable(transformation);
             return this;
         }

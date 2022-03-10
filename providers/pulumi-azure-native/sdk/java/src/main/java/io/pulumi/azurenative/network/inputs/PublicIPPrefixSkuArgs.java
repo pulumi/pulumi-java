@@ -77,22 +77,22 @@ public final class PublicIPPrefixSkuArgs extends io.pulumi.resources.ResourceArg
     	      this.tier = defaults.tier;
         }
 
-        public Builder setName(@Nullable Input<Either<String,PublicIPPrefixSkuName>> name) {
+        public Builder name(@Nullable Input<Either<String,PublicIPPrefixSkuName>> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable Either<String,PublicIPPrefixSkuName> name) {
+        public Builder name(@Nullable Either<String,PublicIPPrefixSkuName> name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setTier(@Nullable Input<Either<String,PublicIPPrefixSkuTier>> tier) {
+        public Builder tier(@Nullable Input<Either<String,PublicIPPrefixSkuTier>> tier) {
             this.tier = tier;
             return this;
         }
 
-        public Builder setTier(@Nullable Either<String,PublicIPPrefixSkuTier> tier) {
+        public Builder tier(@Nullable Either<String,PublicIPPrefixSkuTier> tier) {
             this.tier = Input.ofNullable(tier);
             return this;
         }

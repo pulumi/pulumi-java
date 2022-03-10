@@ -148,37 +148,37 @@ public final class RosettaNetPipRoleSettingsResponse {
     	      this.serviceClassification = defaults.serviceClassification;
         }
 
-        public Builder setAction(String action) {
+        public Builder action(String action) {
             this.action = Objects.requireNonNull(action);
             return this;
         }
 
-        public Builder setBusinessDocument(RosettaNetPipBusinessDocumentResponse businessDocument) {
+        public Builder businessDocument(RosettaNetPipBusinessDocumentResponse businessDocument) {
             this.businessDocument = Objects.requireNonNull(businessDocument);
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setRole(String role) {
+        public Builder role(String role) {
             this.role = Objects.requireNonNull(role);
             return this;
         }
 
-        public Builder setRoleType(String roleType) {
+        public Builder roleType(String roleType) {
             this.roleType = Objects.requireNonNull(roleType);
             return this;
         }
 
-        public Builder setService(String service) {
+        public Builder service(String service) {
             this.service = Objects.requireNonNull(service);
             return this;
         }
 
-        public Builder setServiceClassification(String serviceClassification) {
+        public Builder serviceClassification(String serviceClassification) {
             this.serviceClassification = Objects.requireNonNull(serviceClassification);
             return this;
         }

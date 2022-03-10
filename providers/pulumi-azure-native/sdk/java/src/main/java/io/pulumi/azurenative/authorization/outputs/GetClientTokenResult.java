@@ -48,7 +48,7 @@ public final class GetClientTokenResult {
     	      this.token = defaults.token;
         }
 
-        public Builder setToken(String token) {
+        public Builder token(String token) {
             this.token = Objects.requireNonNull(token);
             return this;
         }

@@ -84,17 +84,17 @@ public final class CustomImagePropertiesCustomResponse {
     	      this.sysPrep = defaults.sysPrep;
         }
 
-        public Builder setImageName(@Nullable String imageName) {
+        public Builder imageName(@Nullable String imageName) {
             this.imageName = imageName;
             return this;
         }
 
-        public Builder setOsType(String osType) {
+        public Builder osType(String osType) {
             this.osType = Objects.requireNonNull(osType);
             return this;
         }
 
-        public Builder setSysPrep(@Nullable Boolean sysPrep) {
+        public Builder sysPrep(@Nullable Boolean sysPrep) {
             this.sysPrep = sysPrep;
             return this;
         }

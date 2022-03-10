@@ -193,92 +193,92 @@ public final class FlowletArgs extends io.pulumi.resources.ResourceArgs {
     	      this.type = defaults.type;
         }
 
-        public Builder setAnnotations(@Nullable Input<List<Object>> annotations) {
+        public Builder annotations(@Nullable Input<List<Object>> annotations) {
             this.annotations = annotations;
             return this;
         }
 
-        public Builder setAnnotations(@Nullable List<Object> annotations) {
+        public Builder annotations(@Nullable List<Object> annotations) {
             this.annotations = Input.ofNullable(annotations);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setFolder(@Nullable Input<DataFlowFolderArgs> folder) {
+        public Builder folder(@Nullable Input<DataFlowFolderArgs> folder) {
             this.folder = folder;
             return this;
         }
 
-        public Builder setFolder(@Nullable DataFlowFolderArgs folder) {
+        public Builder folder(@Nullable DataFlowFolderArgs folder) {
             this.folder = Input.ofNullable(folder);
             return this;
         }
 
-        public Builder setScript(@Nullable Input<String> script) {
+        public Builder script(@Nullable Input<String> script) {
             this.script = script;
             return this;
         }
 
-        public Builder setScript(@Nullable String script) {
+        public Builder script(@Nullable String script) {
             this.script = Input.ofNullable(script);
             return this;
         }
 
-        public Builder setScriptLines(@Nullable Input<List<String>> scriptLines) {
+        public Builder scriptLines(@Nullable Input<List<String>> scriptLines) {
             this.scriptLines = scriptLines;
             return this;
         }
 
-        public Builder setScriptLines(@Nullable List<String> scriptLines) {
+        public Builder scriptLines(@Nullable List<String> scriptLines) {
             this.scriptLines = Input.ofNullable(scriptLines);
             return this;
         }
 
-        public Builder setSinks(@Nullable Input<List<DataFlowSinkArgs>> sinks) {
+        public Builder sinks(@Nullable Input<List<DataFlowSinkArgs>> sinks) {
             this.sinks = sinks;
             return this;
         }
 
-        public Builder setSinks(@Nullable List<DataFlowSinkArgs> sinks) {
+        public Builder sinks(@Nullable List<DataFlowSinkArgs> sinks) {
             this.sinks = Input.ofNullable(sinks);
             return this;
         }
 
-        public Builder setSources(@Nullable Input<List<DataFlowSourceArgs>> sources) {
+        public Builder sources(@Nullable Input<List<DataFlowSourceArgs>> sources) {
             this.sources = sources;
             return this;
         }
 
-        public Builder setSources(@Nullable List<DataFlowSourceArgs> sources) {
+        public Builder sources(@Nullable List<DataFlowSourceArgs> sources) {
             this.sources = Input.ofNullable(sources);
             return this;
         }
 
-        public Builder setTransformations(@Nullable Input<List<TransformationArgs>> transformations) {
+        public Builder transformations(@Nullable Input<List<TransformationArgs>> transformations) {
             this.transformations = transformations;
             return this;
         }
 
-        public Builder setTransformations(@Nullable List<TransformationArgs> transformations) {
+        public Builder transformations(@Nullable List<TransformationArgs> transformations) {
             this.transformations = Input.ofNullable(transformations);
             return this;
         }
 
-        public Builder setType(Input<String> type) {
+        public Builder type(Input<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }

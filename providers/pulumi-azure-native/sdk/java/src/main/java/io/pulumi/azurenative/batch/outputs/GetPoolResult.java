@@ -466,152 +466,152 @@ public final class GetPoolResult {
     	      this.vmSize = defaults.vmSize;
         }
 
-        public Builder setAllocationState(String allocationState) {
+        public Builder allocationState(String allocationState) {
             this.allocationState = Objects.requireNonNull(allocationState);
             return this;
         }
 
-        public Builder setAllocationStateTransitionTime(String allocationStateTransitionTime) {
+        public Builder allocationStateTransitionTime(String allocationStateTransitionTime) {
             this.allocationStateTransitionTime = Objects.requireNonNull(allocationStateTransitionTime);
             return this;
         }
 
-        public Builder setApplicationLicenses(@Nullable List<String> applicationLicenses) {
+        public Builder applicationLicenses(@Nullable List<String> applicationLicenses) {
             this.applicationLicenses = applicationLicenses;
             return this;
         }
 
-        public Builder setApplicationPackages(@Nullable List<ApplicationPackageReferenceResponse> applicationPackages) {
+        public Builder applicationPackages(@Nullable List<ApplicationPackageReferenceResponse> applicationPackages) {
             this.applicationPackages = applicationPackages;
             return this;
         }
 
-        public Builder setAutoScaleRun(AutoScaleRunResponse autoScaleRun) {
+        public Builder autoScaleRun(AutoScaleRunResponse autoScaleRun) {
             this.autoScaleRun = Objects.requireNonNull(autoScaleRun);
             return this;
         }
 
-        public Builder setCertificates(@Nullable List<CertificateReferenceResponse> certificates) {
+        public Builder certificates(@Nullable List<CertificateReferenceResponse> certificates) {
             this.certificates = certificates;
             return this;
         }
 
-        public Builder setCreationTime(String creationTime) {
+        public Builder creationTime(String creationTime) {
             this.creationTime = Objects.requireNonNull(creationTime);
             return this;
         }
 
-        public Builder setCurrentDedicatedNodes(Integer currentDedicatedNodes) {
+        public Builder currentDedicatedNodes(Integer currentDedicatedNodes) {
             this.currentDedicatedNodes = Objects.requireNonNull(currentDedicatedNodes);
             return this;
         }
 
-        public Builder setCurrentLowPriorityNodes(Integer currentLowPriorityNodes) {
+        public Builder currentLowPriorityNodes(Integer currentLowPriorityNodes) {
             this.currentLowPriorityNodes = Objects.requireNonNull(currentLowPriorityNodes);
             return this;
         }
 
-        public Builder setDeploymentConfiguration(@Nullable DeploymentConfigurationResponse deploymentConfiguration) {
+        public Builder deploymentConfiguration(@Nullable DeploymentConfigurationResponse deploymentConfiguration) {
             this.deploymentConfiguration = deploymentConfiguration;
             return this;
         }
 
-        public Builder setDisplayName(@Nullable String displayName) {
+        public Builder displayName(@Nullable String displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setEtag(String etag) {
+        public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setIdentity(@Nullable BatchPoolIdentityResponse identity) {
+        public Builder identity(@Nullable BatchPoolIdentityResponse identity) {
             this.identity = identity;
             return this;
         }
 
-        public Builder setInterNodeCommunication(@Nullable String interNodeCommunication) {
+        public Builder interNodeCommunication(@Nullable String interNodeCommunication) {
             this.interNodeCommunication = interNodeCommunication;
             return this;
         }
 
-        public Builder setLastModified(String lastModified) {
+        public Builder lastModified(String lastModified) {
             this.lastModified = Objects.requireNonNull(lastModified);
             return this;
         }
 
-        public Builder setMetadata(@Nullable List<MetadataItemResponse> metadata) {
+        public Builder metadata(@Nullable List<MetadataItemResponse> metadata) {
             this.metadata = metadata;
             return this;
         }
 
-        public Builder setMountConfiguration(@Nullable List<MountConfigurationResponse> mountConfiguration) {
+        public Builder mountConfiguration(@Nullable List<MountConfigurationResponse> mountConfiguration) {
             this.mountConfiguration = mountConfiguration;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setNetworkConfiguration(@Nullable NetworkConfigurationResponse networkConfiguration) {
+        public Builder networkConfiguration(@Nullable NetworkConfigurationResponse networkConfiguration) {
             this.networkConfiguration = networkConfiguration;
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setProvisioningStateTransitionTime(String provisioningStateTransitionTime) {
+        public Builder provisioningStateTransitionTime(String provisioningStateTransitionTime) {
             this.provisioningStateTransitionTime = Objects.requireNonNull(provisioningStateTransitionTime);
             return this;
         }
 
-        public Builder setResizeOperationStatus(ResizeOperationStatusResponse resizeOperationStatus) {
+        public Builder resizeOperationStatus(ResizeOperationStatusResponse resizeOperationStatus) {
             this.resizeOperationStatus = Objects.requireNonNull(resizeOperationStatus);
             return this;
         }
 
-        public Builder setScaleSettings(@Nullable ScaleSettingsResponse scaleSettings) {
+        public Builder scaleSettings(@Nullable ScaleSettingsResponse scaleSettings) {
             this.scaleSettings = scaleSettings;
             return this;
         }
 
-        public Builder setStartTask(@Nullable StartTaskResponse startTask) {
+        public Builder startTask(@Nullable StartTaskResponse startTask) {
             this.startTask = startTask;
             return this;
         }
 
-        public Builder setTaskSchedulingPolicy(@Nullable TaskSchedulingPolicyResponse taskSchedulingPolicy) {
+        public Builder taskSchedulingPolicy(@Nullable TaskSchedulingPolicyResponse taskSchedulingPolicy) {
             this.taskSchedulingPolicy = taskSchedulingPolicy;
             return this;
         }
 
-        public Builder setTaskSlotsPerNode(@Nullable Integer taskSlotsPerNode) {
+        public Builder taskSlotsPerNode(@Nullable Integer taskSlotsPerNode) {
             this.taskSlotsPerNode = taskSlotsPerNode;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setUserAccounts(@Nullable List<UserAccountResponse> userAccounts) {
+        public Builder userAccounts(@Nullable List<UserAccountResponse> userAccounts) {
             this.userAccounts = userAccounts;
             return this;
         }
 
-        public Builder setVmSize(@Nullable String vmSize) {
+        public Builder vmSize(@Nullable String vmSize) {
             this.vmSize = vmSize;
             return this;
         }

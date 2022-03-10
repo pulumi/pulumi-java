@@ -90,32 +90,32 @@ public final class SecurityAssessmentMetadataPartnerDataArgs extends io.pulumi.r
     	      this.secret = defaults.secret;
         }
 
-        public Builder setPartnerName(Input<String> partnerName) {
+        public Builder partnerName(Input<String> partnerName) {
             this.partnerName = Objects.requireNonNull(partnerName);
             return this;
         }
 
-        public Builder setPartnerName(String partnerName) {
+        public Builder partnerName(String partnerName) {
             this.partnerName = Input.of(Objects.requireNonNull(partnerName));
             return this;
         }
 
-        public Builder setProductName(@Nullable Input<String> productName) {
+        public Builder productName(@Nullable Input<String> productName) {
             this.productName = productName;
             return this;
         }
 
-        public Builder setProductName(@Nullable String productName) {
+        public Builder productName(@Nullable String productName) {
             this.productName = Input.ofNullable(productName);
             return this;
         }
 
-        public Builder setSecret(Input<String> secret) {
+        public Builder secret(Input<String> secret) {
             this.secret = Objects.requireNonNull(secret);
             return this;
         }
 
-        public Builder setSecret(String secret) {
+        public Builder secret(String secret) {
             this.secret = Input.of(Objects.requireNonNull(secret));
             return this;
         }

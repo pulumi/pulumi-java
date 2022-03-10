@@ -113,42 +113,42 @@ public final class ConfigurationArgs extends io.pulumi.resources.ResourceArgs {
     	      this.secrets = defaults.secrets;
         }
 
-        public Builder setActiveRevisionsMode(@Nullable Input<Either<String,ActiveRevisionsMode>> activeRevisionsMode) {
+        public Builder activeRevisionsMode(@Nullable Input<Either<String,ActiveRevisionsMode>> activeRevisionsMode) {
             this.activeRevisionsMode = activeRevisionsMode;
             return this;
         }
 
-        public Builder setActiveRevisionsMode(@Nullable Either<String,ActiveRevisionsMode> activeRevisionsMode) {
+        public Builder activeRevisionsMode(@Nullable Either<String,ActiveRevisionsMode> activeRevisionsMode) {
             this.activeRevisionsMode = Input.ofNullable(activeRevisionsMode);
             return this;
         }
 
-        public Builder setIngress(@Nullable Input<IngressArgs> ingress) {
+        public Builder ingress(@Nullable Input<IngressArgs> ingress) {
             this.ingress = ingress;
             return this;
         }
 
-        public Builder setIngress(@Nullable IngressArgs ingress) {
+        public Builder ingress(@Nullable IngressArgs ingress) {
             this.ingress = Input.ofNullable(ingress);
             return this;
         }
 
-        public Builder setRegistries(@Nullable Input<List<RegistryCredentialsArgs>> registries) {
+        public Builder registries(@Nullable Input<List<RegistryCredentialsArgs>> registries) {
             this.registries = registries;
             return this;
         }
 
-        public Builder setRegistries(@Nullable List<RegistryCredentialsArgs> registries) {
+        public Builder registries(@Nullable List<RegistryCredentialsArgs> registries) {
             this.registries = Input.ofNullable(registries);
             return this;
         }
 
-        public Builder setSecrets(@Nullable Input<List<SecretArgs>> secrets) {
+        public Builder secrets(@Nullable Input<List<SecretArgs>> secrets) {
             this.secrets = secrets;
             return this;
         }
 
-        public Builder setSecrets(@Nullable List<SecretArgs> secrets) {
+        public Builder secrets(@Nullable List<SecretArgs> secrets) {
             this.secrets = Input.ofNullable(secrets);
             return this;
         }

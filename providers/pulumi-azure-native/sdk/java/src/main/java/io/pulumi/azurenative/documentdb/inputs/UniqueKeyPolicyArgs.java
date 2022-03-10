@@ -58,12 +58,12 @@ public final class UniqueKeyPolicyArgs extends io.pulumi.resources.ResourceArgs 
     	      this.uniqueKeys = defaults.uniqueKeys;
         }
 
-        public Builder setUniqueKeys(@Nullable Input<List<UniqueKeyArgs>> uniqueKeys) {
+        public Builder uniqueKeys(@Nullable Input<List<UniqueKeyArgs>> uniqueKeys) {
             this.uniqueKeys = uniqueKeys;
             return this;
         }
 
-        public Builder setUniqueKeys(@Nullable List<UniqueKeyArgs> uniqueKeys) {
+        public Builder uniqueKeys(@Nullable List<UniqueKeyArgs> uniqueKeys) {
             this.uniqueKeys = Input.ofNullable(uniqueKeys);
             return this;
         }

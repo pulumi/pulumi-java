@@ -57,7 +57,7 @@ public final class AssignedComponentItemResponse extends io.pulumi.resources.Inv
     	      this.key = defaults.key;
         }
 
-        public Builder setKey(@Nullable String key) {
+        public Builder key(@Nullable String key) {
             this.key = key;
             return this;
         }

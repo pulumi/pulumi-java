@@ -187,47 +187,47 @@ public final class NetworkInterfacePropertiesResponse extends io.pulumi.resource
     	      this.virtualNetworkId = defaults.virtualNetworkId;
         }
 
-        public Builder setDnsName(@Nullable String dnsName) {
+        public Builder dnsName(@Nullable String dnsName) {
             this.dnsName = dnsName;
             return this;
         }
 
-        public Builder setPrivateIpAddress(@Nullable String privateIpAddress) {
+        public Builder privateIpAddress(@Nullable String privateIpAddress) {
             this.privateIpAddress = privateIpAddress;
             return this;
         }
 
-        public Builder setPublicIpAddress(@Nullable String publicIpAddress) {
+        public Builder publicIpAddress(@Nullable String publicIpAddress) {
             this.publicIpAddress = publicIpAddress;
             return this;
         }
 
-        public Builder setPublicIpAddressId(@Nullable String publicIpAddressId) {
+        public Builder publicIpAddressId(@Nullable String publicIpAddressId) {
             this.publicIpAddressId = publicIpAddressId;
             return this;
         }
 
-        public Builder setRdpAuthority(@Nullable String rdpAuthority) {
+        public Builder rdpAuthority(@Nullable String rdpAuthority) {
             this.rdpAuthority = rdpAuthority;
             return this;
         }
 
-        public Builder setSharedPublicIpAddressConfiguration(@Nullable SharedPublicIpAddressConfigurationResponse sharedPublicIpAddressConfiguration) {
+        public Builder sharedPublicIpAddressConfiguration(@Nullable SharedPublicIpAddressConfigurationResponse sharedPublicIpAddressConfiguration) {
             this.sharedPublicIpAddressConfiguration = sharedPublicIpAddressConfiguration;
             return this;
         }
 
-        public Builder setSshAuthority(@Nullable String sshAuthority) {
+        public Builder sshAuthority(@Nullable String sshAuthority) {
             this.sshAuthority = sshAuthority;
             return this;
         }
 
-        public Builder setSubnetId(@Nullable String subnetId) {
+        public Builder subnetId(@Nullable String subnetId) {
             this.subnetId = subnetId;
             return this;
         }
 
-        public Builder setVirtualNetworkId(@Nullable String virtualNetworkId) {
+        public Builder virtualNetworkId(@Nullable String virtualNetworkId) {
             this.virtualNetworkId = virtualNetworkId;
             return this;
         }

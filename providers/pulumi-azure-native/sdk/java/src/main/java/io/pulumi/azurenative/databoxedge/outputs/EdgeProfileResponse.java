@@ -50,7 +50,7 @@ public final class EdgeProfileResponse {
     	      this.subscription = defaults.subscription;
         }
 
-        public Builder setSubscription(@Nullable EdgeProfileSubscriptionResponse subscription) {
+        public Builder subscription(@Nullable EdgeProfileSubscriptionResponse subscription) {
             this.subscription = subscription;
             return this;
         }

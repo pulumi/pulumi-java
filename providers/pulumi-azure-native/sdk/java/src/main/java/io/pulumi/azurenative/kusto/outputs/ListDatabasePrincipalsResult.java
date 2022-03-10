@@ -50,7 +50,7 @@ public final class ListDatabasePrincipalsResult {
     	      this.value = defaults.value;
         }
 
-        public Builder setValue(@Nullable List<DatabasePrincipalResponse> value) {
+        public Builder value(@Nullable List<DatabasePrincipalResponse> value) {
             this.value = value;
             return this;
         }

@@ -255,67 +255,67 @@ public final class ClusterResourceResponseProperties extends io.pulumi.resources
     	      this.seedNodes = defaults.seedNodes;
         }
 
-        public Builder setAuthenticationMethod(@Nullable String authenticationMethod) {
+        public Builder authenticationMethod(@Nullable String authenticationMethod) {
             this.authenticationMethod = authenticationMethod;
             return this;
         }
 
-        public Builder setCassandraVersion(@Nullable String cassandraVersion) {
+        public Builder cassandraVersion(@Nullable String cassandraVersion) {
             this.cassandraVersion = cassandraVersion;
             return this;
         }
 
-        public Builder setClientCertificates(@Nullable List<CertificateResponse> clientCertificates) {
+        public Builder clientCertificates(@Nullable List<CertificateResponse> clientCertificates) {
             this.clientCertificates = clientCertificates;
             return this;
         }
 
-        public Builder setClusterNameOverride(@Nullable String clusterNameOverride) {
+        public Builder clusterNameOverride(@Nullable String clusterNameOverride) {
             this.clusterNameOverride = clusterNameOverride;
             return this;
         }
 
-        public Builder setDelegatedManagementSubnetId(@Nullable String delegatedManagementSubnetId) {
+        public Builder delegatedManagementSubnetId(@Nullable String delegatedManagementSubnetId) {
             this.delegatedManagementSubnetId = delegatedManagementSubnetId;
             return this;
         }
 
-        public Builder setExternalGossipCertificates(@Nullable List<CertificateResponse> externalGossipCertificates) {
+        public Builder externalGossipCertificates(@Nullable List<CertificateResponse> externalGossipCertificates) {
             this.externalGossipCertificates = externalGossipCertificates;
             return this;
         }
 
-        public Builder setExternalSeedNodes(@Nullable List<SeedNodeResponse> externalSeedNodes) {
+        public Builder externalSeedNodes(@Nullable List<SeedNodeResponse> externalSeedNodes) {
             this.externalSeedNodes = externalSeedNodes;
             return this;
         }
 
-        public Builder setGossipCertificates(List<CertificateResponse> gossipCertificates) {
+        public Builder gossipCertificates(List<CertificateResponse> gossipCertificates) {
             this.gossipCertificates = Objects.requireNonNull(gossipCertificates);
             return this;
         }
 
-        public Builder setHoursBetweenBackups(@Nullable Integer hoursBetweenBackups) {
+        public Builder hoursBetweenBackups(@Nullable Integer hoursBetweenBackups) {
             this.hoursBetweenBackups = hoursBetweenBackups;
             return this;
         }
 
-        public Builder setPrometheusEndpoint(@Nullable SeedNodeResponse prometheusEndpoint) {
+        public Builder prometheusEndpoint(@Nullable SeedNodeResponse prometheusEndpoint) {
             this.prometheusEndpoint = prometheusEndpoint;
             return this;
         }
 
-        public Builder setProvisioningState(@Nullable String provisioningState) {
+        public Builder provisioningState(@Nullable String provisioningState) {
             this.provisioningState = provisioningState;
             return this;
         }
 
-        public Builder setRepairEnabled(@Nullable Boolean repairEnabled) {
+        public Builder repairEnabled(@Nullable Boolean repairEnabled) {
             this.repairEnabled = repairEnabled;
             return this;
         }
 
-        public Builder setSeedNodes(List<SeedNodeResponse> seedNodes) {
+        public Builder seedNodes(List<SeedNodeResponse> seedNodes) {
             this.seedNodes = Objects.requireNonNull(seedNodes);
             return this;
         }

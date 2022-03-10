@@ -74,22 +74,22 @@ public final class LinkedTemplateArtifactArgs extends io.pulumi.resources.Resour
     	      this.template = defaults.template;
         }
 
-        public Builder setPath(Input<String> path) {
+        public Builder path(Input<String> path) {
             this.path = Objects.requireNonNull(path);
             return this;
         }
 
-        public Builder setPath(String path) {
+        public Builder path(String path) {
             this.path = Input.of(Objects.requireNonNull(path));
             return this;
         }
 
-        public Builder setTemplate(Input<Object> template) {
+        public Builder template(Input<Object> template) {
             this.template = Objects.requireNonNull(template);
             return this;
         }
 
-        public Builder setTemplate(Object template) {
+        public Builder template(Object template) {
             this.template = Input.of(Objects.requireNonNull(template));
             return this;
         }

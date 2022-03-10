@@ -90,32 +90,32 @@ public final class NetworkProfileArgs extends io.pulumi.resources.ResourceArgs {
     	      this.vnetId = defaults.vnetId;
         }
 
-        public Builder setPeerVnetId(@Nullable Input<String> peerVnetId) {
+        public Builder peerVnetId(@Nullable Input<String> peerVnetId) {
             this.peerVnetId = peerVnetId;
             return this;
         }
 
-        public Builder setPeerVnetId(@Nullable String peerVnetId) {
+        public Builder peerVnetId(@Nullable String peerVnetId) {
             this.peerVnetId = Input.ofNullable(peerVnetId);
             return this;
         }
 
-        public Builder setVnetCidr(@Nullable Input<String> vnetCidr) {
+        public Builder vnetCidr(@Nullable Input<String> vnetCidr) {
             this.vnetCidr = vnetCidr;
             return this;
         }
 
-        public Builder setVnetCidr(@Nullable String vnetCidr) {
+        public Builder vnetCidr(@Nullable String vnetCidr) {
             this.vnetCidr = Input.ofNullable(vnetCidr);
             return this;
         }
 
-        public Builder setVnetId(@Nullable Input<String> vnetId) {
+        public Builder vnetId(@Nullable Input<String> vnetId) {
             this.vnetId = vnetId;
             return this;
         }
 
-        public Builder setVnetId(@Nullable String vnetId) {
+        public Builder vnetId(@Nullable String vnetId) {
             this.vnetId = Input.ofNullable(vnetId);
             return this;
         }

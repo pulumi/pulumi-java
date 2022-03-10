@@ -121,32 +121,32 @@ public final class KeyVaultSigningKeyParametersResponse {
     	      this.vaultName = defaults.vaultName;
         }
 
-        public Builder setOdataType(String odataType) {
+        public Builder odataType(String odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setSecretName(String secretName) {
+        public Builder secretName(String secretName) {
             this.secretName = Objects.requireNonNull(secretName);
             return this;
         }
 
-        public Builder setSecretVersion(String secretVersion) {
+        public Builder secretVersion(String secretVersion) {
             this.secretVersion = Objects.requireNonNull(secretVersion);
             return this;
         }
 
-        public Builder setSubscriptionId(String subscriptionId) {
+        public Builder subscriptionId(String subscriptionId) {
             this.subscriptionId = Objects.requireNonNull(subscriptionId);
             return this;
         }
 
-        public Builder setVaultName(String vaultName) {
+        public Builder vaultName(String vaultName) {
             this.vaultName = Objects.requireNonNull(vaultName);
             return this;
         }

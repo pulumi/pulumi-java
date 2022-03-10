@@ -110,42 +110,42 @@ public final class CmdkeySetupArgs extends io.pulumi.resources.ResourceArgs {
     	      this.userName = defaults.userName;
         }
 
-        public Builder setPassword(Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password) {
+        public Builder password(Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password) {
             this.password = Objects.requireNonNull(password);
             return this;
         }
 
-        public Builder setPassword(Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> password) {
+        public Builder password(Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> password) {
             this.password = Input.of(Objects.requireNonNull(password));
             return this;
         }
 
-        public Builder setTargetName(Input<Object> targetName) {
+        public Builder targetName(Input<Object> targetName) {
             this.targetName = Objects.requireNonNull(targetName);
             return this;
         }
 
-        public Builder setTargetName(Object targetName) {
+        public Builder targetName(Object targetName) {
             this.targetName = Input.of(Objects.requireNonNull(targetName));
             return this;
         }
 
-        public Builder setType(Input<String> type) {
+        public Builder type(Input<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }
 
-        public Builder setUserName(Input<Object> userName) {
+        public Builder userName(Input<Object> userName) {
             this.userName = Objects.requireNonNull(userName);
             return this;
         }
 
-        public Builder setUserName(Object userName) {
+        public Builder userName(Object userName) {
             this.userName = Input.of(Objects.requireNonNull(userName));
             return this;
         }

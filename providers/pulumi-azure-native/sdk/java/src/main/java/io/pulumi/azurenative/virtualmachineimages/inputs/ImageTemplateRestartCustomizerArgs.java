@@ -123,52 +123,52 @@ public final class ImageTemplateRestartCustomizerArgs extends io.pulumi.resource
     	      this.type = defaults.type;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setRestartCheckCommand(@Nullable Input<String> restartCheckCommand) {
+        public Builder restartCheckCommand(@Nullable Input<String> restartCheckCommand) {
             this.restartCheckCommand = restartCheckCommand;
             return this;
         }
 
-        public Builder setRestartCheckCommand(@Nullable String restartCheckCommand) {
+        public Builder restartCheckCommand(@Nullable String restartCheckCommand) {
             this.restartCheckCommand = Input.ofNullable(restartCheckCommand);
             return this;
         }
 
-        public Builder setRestartCommand(@Nullable Input<String> restartCommand) {
+        public Builder restartCommand(@Nullable Input<String> restartCommand) {
             this.restartCommand = restartCommand;
             return this;
         }
 
-        public Builder setRestartCommand(@Nullable String restartCommand) {
+        public Builder restartCommand(@Nullable String restartCommand) {
             this.restartCommand = Input.ofNullable(restartCommand);
             return this;
         }
 
-        public Builder setRestartTimeout(@Nullable Input<String> restartTimeout) {
+        public Builder restartTimeout(@Nullable Input<String> restartTimeout) {
             this.restartTimeout = restartTimeout;
             return this;
         }
 
-        public Builder setRestartTimeout(@Nullable String restartTimeout) {
+        public Builder restartTimeout(@Nullable String restartTimeout) {
             this.restartTimeout = Input.ofNullable(restartTimeout);
             return this;
         }
 
-        public Builder setType(Input<String> type) {
+        public Builder type(Input<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }

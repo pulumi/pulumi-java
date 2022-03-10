@@ -103,22 +103,22 @@ public final class DataBoxHeavyJobSecretsResponse {
     	      this.jobSecretsType = defaults.jobSecretsType;
         }
 
-        public Builder setCabinetPodSecrets(List<DataBoxHeavySecretResponse> cabinetPodSecrets) {
+        public Builder cabinetPodSecrets(List<DataBoxHeavySecretResponse> cabinetPodSecrets) {
             this.cabinetPodSecrets = Objects.requireNonNull(cabinetPodSecrets);
             return this;
         }
 
-        public Builder setDcAccessSecurityCode(DcAccessSecurityCodeResponse dcAccessSecurityCode) {
+        public Builder dcAccessSecurityCode(DcAccessSecurityCodeResponse dcAccessSecurityCode) {
             this.dcAccessSecurityCode = Objects.requireNonNull(dcAccessSecurityCode);
             return this;
         }
 
-        public Builder setError(CloudErrorResponse error) {
+        public Builder error(CloudErrorResponse error) {
             this.error = Objects.requireNonNull(error);
             return this;
         }
 
-        public Builder setJobSecretsType(String jobSecretsType) {
+        public Builder jobSecretsType(String jobSecretsType) {
             this.jobSecretsType = Objects.requireNonNull(jobSecretsType);
             return this;
         }

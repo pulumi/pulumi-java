@@ -90,32 +90,32 @@ public final class BreakOutCategoryPoliciesArgs extends io.pulumi.resources.Reso
     	      this.optimize = defaults.optimize;
         }
 
-        public Builder setAllow(@Nullable Input<Boolean> allow) {
+        public Builder allow(@Nullable Input<Boolean> allow) {
             this.allow = allow;
             return this;
         }
 
-        public Builder setAllow(@Nullable Boolean allow) {
+        public Builder allow(@Nullable Boolean allow) {
             this.allow = Input.ofNullable(allow);
             return this;
         }
 
-        public Builder set$default(@Nullable Input<Boolean> $default) {
+        public Builder $default(@Nullable Input<Boolean> $default) {
             this.$default = $default;
             return this;
         }
 
-        public Builder set$default(@Nullable Boolean $default) {
+        public Builder $default(@Nullable Boolean $default) {
             this.$default = Input.ofNullable($default);
             return this;
         }
 
-        public Builder setOptimize(@Nullable Input<Boolean> optimize) {
+        public Builder optimize(@Nullable Input<Boolean> optimize) {
             this.optimize = optimize;
             return this;
         }
 
-        public Builder setOptimize(@Nullable Boolean optimize) {
+        public Builder optimize(@Nullable Boolean optimize) {
             this.optimize = Input.ofNullable(optimize);
             return this;
         }

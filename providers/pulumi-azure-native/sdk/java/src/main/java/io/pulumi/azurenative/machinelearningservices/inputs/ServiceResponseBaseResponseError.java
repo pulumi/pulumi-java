@@ -55,7 +55,7 @@ public final class ServiceResponseBaseResponseError extends io.pulumi.resources.
     	      this.error = defaults.error;
         }
 
-        public Builder setError(ErrorResponseResponse error) {
+        public Builder error(ErrorResponseResponse error) {
             this.error = Objects.requireNonNull(error);
             return this;
         }

@@ -123,52 +123,52 @@ public final class StaticSiteTemplateOptionsArgs extends io.pulumi.resources.Res
     	      this.templateRepositoryUrl = defaults.templateRepositoryUrl;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setIsPrivate(@Nullable Input<Boolean> isPrivate) {
+        public Builder isPrivate(@Nullable Input<Boolean> isPrivate) {
             this.isPrivate = isPrivate;
             return this;
         }
 
-        public Builder setIsPrivate(@Nullable Boolean isPrivate) {
+        public Builder isPrivate(@Nullable Boolean isPrivate) {
             this.isPrivate = Input.ofNullable(isPrivate);
             return this;
         }
 
-        public Builder setOwner(@Nullable Input<String> owner) {
+        public Builder owner(@Nullable Input<String> owner) {
             this.owner = owner;
             return this;
         }
 
-        public Builder setOwner(@Nullable String owner) {
+        public Builder owner(@Nullable String owner) {
             this.owner = Input.ofNullable(owner);
             return this;
         }
 
-        public Builder setRepositoryName(@Nullable Input<String> repositoryName) {
+        public Builder repositoryName(@Nullable Input<String> repositoryName) {
             this.repositoryName = repositoryName;
             return this;
         }
 
-        public Builder setRepositoryName(@Nullable String repositoryName) {
+        public Builder repositoryName(@Nullable String repositoryName) {
             this.repositoryName = Input.ofNullable(repositoryName);
             return this;
         }
 
-        public Builder setTemplateRepositoryUrl(@Nullable Input<String> templateRepositoryUrl) {
+        public Builder templateRepositoryUrl(@Nullable Input<String> templateRepositoryUrl) {
             this.templateRepositoryUrl = templateRepositoryUrl;
             return this;
         }
 
-        public Builder setTemplateRepositoryUrl(@Nullable String templateRepositoryUrl) {
+        public Builder templateRepositoryUrl(@Nullable String templateRepositoryUrl) {
             this.templateRepositoryUrl = Input.ofNullable(templateRepositoryUrl);
             return this;
         }

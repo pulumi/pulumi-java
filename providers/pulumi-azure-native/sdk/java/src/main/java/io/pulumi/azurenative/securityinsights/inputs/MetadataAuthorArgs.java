@@ -90,32 +90,32 @@ public final class MetadataAuthorArgs extends io.pulumi.resources.ResourceArgs {
     	      this.name = defaults.name;
         }
 
-        public Builder setEmail(@Nullable Input<String> email) {
+        public Builder email(@Nullable Input<String> email) {
             this.email = email;
             return this;
         }
 
-        public Builder setEmail(@Nullable String email) {
+        public Builder email(@Nullable String email) {
             this.email = Input.ofNullable(email);
             return this;
         }
 
-        public Builder setLink(@Nullable Input<String> link) {
+        public Builder link(@Nullable Input<String> link) {
             this.link = link;
             return this;
         }
 
-        public Builder setLink(@Nullable String link) {
+        public Builder link(@Nullable String link) {
             this.link = Input.ofNullable(link);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }

@@ -90,17 +90,17 @@ public final class GitRepoVolumeResponse extends io.pulumi.resources.InvokeArgs 
     	      this.revision = defaults.revision;
         }
 
-        public Builder setDirectory(@Nullable String directory) {
+        public Builder directory(@Nullable String directory) {
             this.directory = directory;
             return this;
         }
 
-        public Builder setRepository(String repository) {
+        public Builder repository(String repository) {
             this.repository = Objects.requireNonNull(repository);
             return this;
         }
 
-        public Builder setRevision(@Nullable String revision) {
+        public Builder revision(@Nullable String revision) {
             this.revision = revision;
             return this;
         }

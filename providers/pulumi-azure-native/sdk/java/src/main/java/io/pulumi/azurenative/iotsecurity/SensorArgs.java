@@ -121,52 +121,52 @@ public final class SensorArgs extends io.pulumi.resources.ResourceArgs {
     	      this.zone = defaults.zone;
         }
 
-        public Builder setScope(Input<String> scope) {
+        public Builder scope(Input<String> scope) {
             this.scope = Objects.requireNonNull(scope);
             return this;
         }
 
-        public Builder setScope(String scope) {
+        public Builder scope(String scope) {
             this.scope = Input.of(Objects.requireNonNull(scope));
             return this;
         }
 
-        public Builder setSensorName(@Nullable Input<String> sensorName) {
+        public Builder sensorName(@Nullable Input<String> sensorName) {
             this.sensorName = sensorName;
             return this;
         }
 
-        public Builder setSensorName(@Nullable String sensorName) {
+        public Builder sensorName(@Nullable String sensorName) {
             this.sensorName = Input.ofNullable(sensorName);
             return this;
         }
 
-        public Builder setSensorType(@Nullable Input<Either<String,SensorType>> sensorType) {
+        public Builder sensorType(@Nullable Input<Either<String,SensorType>> sensorType) {
             this.sensorType = sensorType;
             return this;
         }
 
-        public Builder setSensorType(@Nullable Either<String,SensorType> sensorType) {
+        public Builder sensorType(@Nullable Either<String,SensorType> sensorType) {
             this.sensorType = Input.ofNullable(sensorType);
             return this;
         }
 
-        public Builder setTiAutomaticUpdates(@Nullable Input<Boolean> tiAutomaticUpdates) {
+        public Builder tiAutomaticUpdates(@Nullable Input<Boolean> tiAutomaticUpdates) {
             this.tiAutomaticUpdates = tiAutomaticUpdates;
             return this;
         }
 
-        public Builder setTiAutomaticUpdates(@Nullable Boolean tiAutomaticUpdates) {
+        public Builder tiAutomaticUpdates(@Nullable Boolean tiAutomaticUpdates) {
             this.tiAutomaticUpdates = Input.ofNullable(tiAutomaticUpdates);
             return this;
         }
 
-        public Builder setZone(@Nullable Input<String> zone) {
+        public Builder zone(@Nullable Input<String> zone) {
             this.zone = zone;
             return this;
         }
 
-        public Builder setZone(@Nullable String zone) {
+        public Builder zone(@Nullable String zone) {
             this.zone = Input.ofNullable(zone);
             return this;
         }

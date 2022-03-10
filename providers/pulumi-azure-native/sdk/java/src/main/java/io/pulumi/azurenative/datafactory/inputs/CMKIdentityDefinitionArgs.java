@@ -57,12 +57,12 @@ public final class CMKIdentityDefinitionArgs extends io.pulumi.resources.Resourc
     	      this.userAssignedIdentity = defaults.userAssignedIdentity;
         }
 
-        public Builder setUserAssignedIdentity(@Nullable Input<String> userAssignedIdentity) {
+        public Builder userAssignedIdentity(@Nullable Input<String> userAssignedIdentity) {
             this.userAssignedIdentity = userAssignedIdentity;
             return this;
         }
 
-        public Builder setUserAssignedIdentity(@Nullable String userAssignedIdentity) {
+        public Builder userAssignedIdentity(@Nullable String userAssignedIdentity) {
             this.userAssignedIdentity = Input.ofNullable(userAssignedIdentity);
             return this;
         }

@@ -106,22 +106,22 @@ public final class VideoSourceResponse extends io.pulumi.resources.InvokeArgs {
     	      this.videoName = defaults.videoName;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setTimeSequences(VideoSequenceAbsoluteTimeMarkersResponse timeSequences) {
+        public Builder timeSequences(VideoSequenceAbsoluteTimeMarkersResponse timeSequences) {
             this.timeSequences = Objects.requireNonNull(timeSequences);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setVideoName(String videoName) {
+        public Builder videoName(String videoName) {
             this.videoName = Objects.requireNonNull(videoName);
             return this;
         }

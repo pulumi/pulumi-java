@@ -250,132 +250,132 @@ public final class ArtifactSourceArgs extends io.pulumi.resources.ResourceArgs {
     	      this.uri = defaults.uri;
         }
 
-        public Builder setArmTemplateFolderPath(@Nullable Input<String> armTemplateFolderPath) {
+        public Builder armTemplateFolderPath(@Nullable Input<String> armTemplateFolderPath) {
             this.armTemplateFolderPath = armTemplateFolderPath;
             return this;
         }
 
-        public Builder setArmTemplateFolderPath(@Nullable String armTemplateFolderPath) {
+        public Builder armTemplateFolderPath(@Nullable String armTemplateFolderPath) {
             this.armTemplateFolderPath = Input.ofNullable(armTemplateFolderPath);
             return this;
         }
 
-        public Builder setBranchRef(@Nullable Input<String> branchRef) {
+        public Builder branchRef(@Nullable Input<String> branchRef) {
             this.branchRef = branchRef;
             return this;
         }
 
-        public Builder setBranchRef(@Nullable String branchRef) {
+        public Builder branchRef(@Nullable String branchRef) {
             this.branchRef = Input.ofNullable(branchRef);
             return this;
         }
 
-        public Builder setDisplayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Input<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setDisplayName(@Nullable String displayName) {
+        public Builder displayName(@Nullable String displayName) {
             this.displayName = Input.ofNullable(displayName);
             return this;
         }
 
-        public Builder setFolderPath(@Nullable Input<String> folderPath) {
+        public Builder folderPath(@Nullable Input<String> folderPath) {
             this.folderPath = folderPath;
             return this;
         }
 
-        public Builder setFolderPath(@Nullable String folderPath) {
+        public Builder folderPath(@Nullable String folderPath) {
             this.folderPath = Input.ofNullable(folderPath);
             return this;
         }
 
-        public Builder setLabName(Input<String> labName) {
+        public Builder labName(Input<String> labName) {
             this.labName = Objects.requireNonNull(labName);
             return this;
         }
 
-        public Builder setLabName(String labName) {
+        public Builder labName(String labName) {
             this.labName = Input.of(Objects.requireNonNull(labName));
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setSecurityToken(@Nullable Input<String> securityToken) {
+        public Builder securityToken(@Nullable Input<String> securityToken) {
             this.securityToken = securityToken;
             return this;
         }
 
-        public Builder setSecurityToken(@Nullable String securityToken) {
+        public Builder securityToken(@Nullable String securityToken) {
             this.securityToken = Input.ofNullable(securityToken);
             return this;
         }
 
-        public Builder setSourceType(@Nullable Input<Either<String,SourceControlType>> sourceType) {
+        public Builder sourceType(@Nullable Input<Either<String,SourceControlType>> sourceType) {
             this.sourceType = sourceType;
             return this;
         }
 
-        public Builder setSourceType(@Nullable Either<String,SourceControlType> sourceType) {
+        public Builder sourceType(@Nullable Either<String,SourceControlType> sourceType) {
             this.sourceType = Input.ofNullable(sourceType);
             return this;
         }
 
-        public Builder setStatus(@Nullable Input<Either<String,EnableStatus>> status) {
+        public Builder status(@Nullable Input<Either<String,EnableStatus>> status) {
             this.status = status;
             return this;
         }
 
-        public Builder setStatus(@Nullable Either<String,EnableStatus> status) {
+        public Builder status(@Nullable Either<String,EnableStatus> status) {
             this.status = Input.ofNullable(status);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setUri(@Nullable Input<String> uri) {
+        public Builder uri(@Nullable Input<String> uri) {
             this.uri = uri;
             return this;
         }
 
-        public Builder setUri(@Nullable String uri) {
+        public Builder uri(@Nullable String uri) {
             this.uri = Input.ofNullable(uri);
             return this;
         }

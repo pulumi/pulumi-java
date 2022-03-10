@@ -301,162 +301,162 @@ public final class StreamingEndpointArgs extends io.pulumi.resources.ResourceArg
     	      this.tags = defaults.tags;
         }
 
-        public Builder setAccessControl(@Nullable Input<StreamingEndpointAccessControlArgs> accessControl) {
+        public Builder accessControl(@Nullable Input<StreamingEndpointAccessControlArgs> accessControl) {
             this.accessControl = accessControl;
             return this;
         }
 
-        public Builder setAccessControl(@Nullable StreamingEndpointAccessControlArgs accessControl) {
+        public Builder accessControl(@Nullable StreamingEndpointAccessControlArgs accessControl) {
             this.accessControl = Input.ofNullable(accessControl);
             return this;
         }
 
-        public Builder setAccountName(Input<String> accountName) {
+        public Builder accountName(Input<String> accountName) {
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
 
-        public Builder setAccountName(String accountName) {
+        public Builder accountName(String accountName) {
             this.accountName = Input.of(Objects.requireNonNull(accountName));
             return this;
         }
 
-        public Builder setAutoStart(@Nullable Input<Boolean> autoStart) {
+        public Builder autoStart(@Nullable Input<Boolean> autoStart) {
             this.autoStart = autoStart;
             return this;
         }
 
-        public Builder setAutoStart(@Nullable Boolean autoStart) {
+        public Builder autoStart(@Nullable Boolean autoStart) {
             this.autoStart = Input.ofNullable(autoStart);
             return this;
         }
 
-        public Builder setAvailabilitySetName(@Nullable Input<String> availabilitySetName) {
+        public Builder availabilitySetName(@Nullable Input<String> availabilitySetName) {
             this.availabilitySetName = availabilitySetName;
             return this;
         }
 
-        public Builder setAvailabilitySetName(@Nullable String availabilitySetName) {
+        public Builder availabilitySetName(@Nullable String availabilitySetName) {
             this.availabilitySetName = Input.ofNullable(availabilitySetName);
             return this;
         }
 
-        public Builder setCdnEnabled(@Nullable Input<Boolean> cdnEnabled) {
+        public Builder cdnEnabled(@Nullable Input<Boolean> cdnEnabled) {
             this.cdnEnabled = cdnEnabled;
             return this;
         }
 
-        public Builder setCdnEnabled(@Nullable Boolean cdnEnabled) {
+        public Builder cdnEnabled(@Nullable Boolean cdnEnabled) {
             this.cdnEnabled = Input.ofNullable(cdnEnabled);
             return this;
         }
 
-        public Builder setCdnProfile(@Nullable Input<String> cdnProfile) {
+        public Builder cdnProfile(@Nullable Input<String> cdnProfile) {
             this.cdnProfile = cdnProfile;
             return this;
         }
 
-        public Builder setCdnProfile(@Nullable String cdnProfile) {
+        public Builder cdnProfile(@Nullable String cdnProfile) {
             this.cdnProfile = Input.ofNullable(cdnProfile);
             return this;
         }
 
-        public Builder setCdnProvider(@Nullable Input<String> cdnProvider) {
+        public Builder cdnProvider(@Nullable Input<String> cdnProvider) {
             this.cdnProvider = cdnProvider;
             return this;
         }
 
-        public Builder setCdnProvider(@Nullable String cdnProvider) {
+        public Builder cdnProvider(@Nullable String cdnProvider) {
             this.cdnProvider = Input.ofNullable(cdnProvider);
             return this;
         }
 
-        public Builder setCrossSiteAccessPolicies(@Nullable Input<CrossSiteAccessPoliciesArgs> crossSiteAccessPolicies) {
+        public Builder crossSiteAccessPolicies(@Nullable Input<CrossSiteAccessPoliciesArgs> crossSiteAccessPolicies) {
             this.crossSiteAccessPolicies = crossSiteAccessPolicies;
             return this;
         }
 
-        public Builder setCrossSiteAccessPolicies(@Nullable CrossSiteAccessPoliciesArgs crossSiteAccessPolicies) {
+        public Builder crossSiteAccessPolicies(@Nullable CrossSiteAccessPoliciesArgs crossSiteAccessPolicies) {
             this.crossSiteAccessPolicies = Input.ofNullable(crossSiteAccessPolicies);
             return this;
         }
 
-        public Builder setCustomHostNames(@Nullable Input<List<String>> customHostNames) {
+        public Builder customHostNames(@Nullable Input<List<String>> customHostNames) {
             this.customHostNames = customHostNames;
             return this;
         }
 
-        public Builder setCustomHostNames(@Nullable List<String> customHostNames) {
+        public Builder customHostNames(@Nullable List<String> customHostNames) {
             this.customHostNames = Input.ofNullable(customHostNames);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setMaxCacheAge(@Nullable Input<Double> maxCacheAge) {
+        public Builder maxCacheAge(@Nullable Input<Double> maxCacheAge) {
             this.maxCacheAge = maxCacheAge;
             return this;
         }
 
-        public Builder setMaxCacheAge(@Nullable Double maxCacheAge) {
+        public Builder maxCacheAge(@Nullable Double maxCacheAge) {
             this.maxCacheAge = Input.ofNullable(maxCacheAge);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setScaleUnits(Input<Integer> scaleUnits) {
+        public Builder scaleUnits(Input<Integer> scaleUnits) {
             this.scaleUnits = Objects.requireNonNull(scaleUnits);
             return this;
         }
 
-        public Builder setScaleUnits(Integer scaleUnits) {
+        public Builder scaleUnits(Integer scaleUnits) {
             this.scaleUnits = Input.of(Objects.requireNonNull(scaleUnits));
             return this;
         }
 
-        public Builder setStreamingEndpointName(@Nullable Input<String> streamingEndpointName) {
+        public Builder streamingEndpointName(@Nullable Input<String> streamingEndpointName) {
             this.streamingEndpointName = streamingEndpointName;
             return this;
         }
 
-        public Builder setStreamingEndpointName(@Nullable String streamingEndpointName) {
+        public Builder streamingEndpointName(@Nullable String streamingEndpointName) {
             this.streamingEndpointName = Input.ofNullable(streamingEndpointName);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

@@ -54,7 +54,7 @@ public final class ResourceManagementPrivateLinkEndpointConnectionsResponse exte
     	      this.privateEndpointConnections = defaults.privateEndpointConnections;
         }
 
-        public Builder setPrivateEndpointConnections(@Nullable List<String> privateEndpointConnections) {
+        public Builder privateEndpointConnections(@Nullable List<String> privateEndpointConnections) {
             this.privateEndpointConnections = privateEndpointConnections;
             return this;
         }

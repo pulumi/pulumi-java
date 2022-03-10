@@ -108,42 +108,42 @@ public final class ConfigurationProfileAssignmentPropertiesArgs extends io.pulum
     	      this.targetId = defaults.targetId;
         }
 
-        public Builder setAccountId(@Nullable Input<String> accountId) {
+        public Builder accountId(@Nullable Input<String> accountId) {
             this.accountId = accountId;
             return this;
         }
 
-        public Builder setAccountId(@Nullable String accountId) {
+        public Builder accountId(@Nullable String accountId) {
             this.accountId = Input.ofNullable(accountId);
             return this;
         }
 
-        public Builder setConfigurationProfile(@Nullable Input<Either<String,ConfigurationProfile>> configurationProfile) {
+        public Builder configurationProfile(@Nullable Input<Either<String,ConfigurationProfile>> configurationProfile) {
             this.configurationProfile = configurationProfile;
             return this;
         }
 
-        public Builder setConfigurationProfile(@Nullable Either<String,ConfigurationProfile> configurationProfile) {
+        public Builder configurationProfile(@Nullable Either<String,ConfigurationProfile> configurationProfile) {
             this.configurationProfile = Input.ofNullable(configurationProfile);
             return this;
         }
 
-        public Builder setConfigurationProfilePreferenceId(@Nullable Input<String> configurationProfilePreferenceId) {
+        public Builder configurationProfilePreferenceId(@Nullable Input<String> configurationProfilePreferenceId) {
             this.configurationProfilePreferenceId = configurationProfilePreferenceId;
             return this;
         }
 
-        public Builder setConfigurationProfilePreferenceId(@Nullable String configurationProfilePreferenceId) {
+        public Builder configurationProfilePreferenceId(@Nullable String configurationProfilePreferenceId) {
             this.configurationProfilePreferenceId = Input.ofNullable(configurationProfilePreferenceId);
             return this;
         }
 
-        public Builder setTargetId(@Nullable Input<String> targetId) {
+        public Builder targetId(@Nullable Input<String> targetId) {
             this.targetId = targetId;
             return this;
         }
 
-        public Builder setTargetId(@Nullable String targetId) {
+        public Builder targetId(@Nullable String targetId) {
             this.targetId = Input.ofNullable(targetId);
             return this;
         }

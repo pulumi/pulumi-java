@@ -238,62 +238,62 @@ public final class GuestConfigurationAssignmentPropertiesResponse extends io.pul
     	      this.vmssVMList = defaults.vmssVMList;
         }
 
-        public Builder setAssignmentHash(String assignmentHash) {
+        public Builder assignmentHash(String assignmentHash) {
             this.assignmentHash = Objects.requireNonNull(assignmentHash);
             return this;
         }
 
-        public Builder setComplianceStatus(String complianceStatus) {
+        public Builder complianceStatus(String complianceStatus) {
             this.complianceStatus = Objects.requireNonNull(complianceStatus);
             return this;
         }
 
-        public Builder setContext(@Nullable String context) {
+        public Builder context(@Nullable String context) {
             this.context = context;
             return this;
         }
 
-        public Builder setGuestConfiguration(@Nullable GuestConfigurationNavigationResponse guestConfiguration) {
+        public Builder guestConfiguration(@Nullable GuestConfigurationNavigationResponse guestConfiguration) {
             this.guestConfiguration = guestConfiguration;
             return this;
         }
 
-        public Builder setLastComplianceStatusChecked(String lastComplianceStatusChecked) {
+        public Builder lastComplianceStatusChecked(String lastComplianceStatusChecked) {
             this.lastComplianceStatusChecked = Objects.requireNonNull(lastComplianceStatusChecked);
             return this;
         }
 
-        public Builder setLatestAssignmentReport(@Nullable AssignmentReportResponse latestAssignmentReport) {
+        public Builder latestAssignmentReport(@Nullable AssignmentReportResponse latestAssignmentReport) {
             this.latestAssignmentReport = latestAssignmentReport;
             return this;
         }
 
-        public Builder setLatestReportId(String latestReportId) {
+        public Builder latestReportId(String latestReportId) {
             this.latestReportId = Objects.requireNonNull(latestReportId);
             return this;
         }
 
-        public Builder setParameterHash(String parameterHash) {
+        public Builder parameterHash(String parameterHash) {
             this.parameterHash = Objects.requireNonNull(parameterHash);
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setResourceType(String resourceType) {
+        public Builder resourceType(String resourceType) {
             this.resourceType = Objects.requireNonNull(resourceType);
             return this;
         }
 
-        public Builder setTargetResourceId(String targetResourceId) {
+        public Builder targetResourceId(String targetResourceId) {
             this.targetResourceId = Objects.requireNonNull(targetResourceId);
             return this;
         }
 
-        public Builder setVmssVMList(@Nullable List<VMSSVMInfoResponse> vmssVMList) {
+        public Builder vmssVMList(@Nullable List<VMSSVMInfoResponse> vmssVMList) {
             this.vmssVMList = vmssVMList;
             return this;
         }

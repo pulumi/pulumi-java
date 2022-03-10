@@ -75,22 +75,22 @@ public final class FirewallPolicyThreatIntelWhitelistArgs extends io.pulumi.reso
     	      this.ipAddresses = defaults.ipAddresses;
         }
 
-        public Builder setFqdns(@Nullable Input<List<String>> fqdns) {
+        public Builder fqdns(@Nullable Input<List<String>> fqdns) {
             this.fqdns = fqdns;
             return this;
         }
 
-        public Builder setFqdns(@Nullable List<String> fqdns) {
+        public Builder fqdns(@Nullable List<String> fqdns) {
             this.fqdns = Input.ofNullable(fqdns);
             return this;
         }
 
-        public Builder setIpAddresses(@Nullable Input<List<String>> ipAddresses) {
+        public Builder ipAddresses(@Nullable Input<List<String>> ipAddresses) {
             this.ipAddresses = ipAddresses;
             return this;
         }
 
-        public Builder setIpAddresses(@Nullable List<String> ipAddresses) {
+        public Builder ipAddresses(@Nullable List<String> ipAddresses) {
             this.ipAddresses = Input.ofNullable(ipAddresses);
             return this;
         }

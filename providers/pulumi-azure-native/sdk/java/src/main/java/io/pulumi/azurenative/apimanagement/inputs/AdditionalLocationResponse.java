@@ -174,42 +174,42 @@ public final class AdditionalLocationResponse extends io.pulumi.resources.Invoke
     	      this.zones = defaults.zones;
         }
 
-        public Builder setDisableGateway(@Nullable Boolean disableGateway) {
+        public Builder disableGateway(@Nullable Boolean disableGateway) {
             this.disableGateway = disableGateway;
             return this;
         }
 
-        public Builder setGatewayRegionalUrl(String gatewayRegionalUrl) {
+        public Builder gatewayRegionalUrl(String gatewayRegionalUrl) {
             this.gatewayRegionalUrl = Objects.requireNonNull(gatewayRegionalUrl);
             return this;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setPrivateIPAddresses(List<String> privateIPAddresses) {
+        public Builder privateIPAddresses(List<String> privateIPAddresses) {
             this.privateIPAddresses = Objects.requireNonNull(privateIPAddresses);
             return this;
         }
 
-        public Builder setPublicIPAddresses(List<String> publicIPAddresses) {
+        public Builder publicIPAddresses(List<String> publicIPAddresses) {
             this.publicIPAddresses = Objects.requireNonNull(publicIPAddresses);
             return this;
         }
 
-        public Builder setSku(ApiManagementServiceSkuPropertiesResponse sku) {
+        public Builder sku(ApiManagementServiceSkuPropertiesResponse sku) {
             this.sku = Objects.requireNonNull(sku);
             return this;
         }
 
-        public Builder setVirtualNetworkConfiguration(@Nullable VirtualNetworkConfigurationResponse virtualNetworkConfiguration) {
+        public Builder virtualNetworkConfiguration(@Nullable VirtualNetworkConfigurationResponse virtualNetworkConfiguration) {
             this.virtualNetworkConfiguration = virtualNetworkConfiguration;
             return this;
         }
 
-        public Builder setZones(@Nullable List<String> zones) {
+        public Builder zones(@Nullable List<String> zones) {
             this.zones = zones;
             return this;
         }

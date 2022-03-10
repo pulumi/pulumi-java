@@ -183,47 +183,47 @@ public final class GetCustomResourceProviderResult {
     	      this.validations = defaults.validations;
         }
 
-        public Builder setActions(@Nullable List<CustomRPActionRouteDefinitionResponse> actions) {
+        public Builder actions(@Nullable List<CustomRPActionRouteDefinitionResponse> actions) {
             this.actions = actions;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setResourceTypes(@Nullable List<CustomRPResourceTypeRouteDefinitionResponse> resourceTypes) {
+        public Builder resourceTypes(@Nullable List<CustomRPResourceTypeRouteDefinitionResponse> resourceTypes) {
             this.resourceTypes = resourceTypes;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setValidations(@Nullable List<CustomRPValidationsResponse> validations) {
+        public Builder validations(@Nullable List<CustomRPValidationsResponse> validations) {
             this.validations = validations;
             return this;
         }

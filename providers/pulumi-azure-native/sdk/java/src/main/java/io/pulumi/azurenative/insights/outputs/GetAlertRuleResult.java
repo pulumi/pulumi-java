@@ -237,62 +237,62 @@ public final class GetAlertRuleResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setAction(@Nullable Either<RuleEmailActionResponse,RuleWebhookActionResponse> action) {
+        public Builder action(@Nullable Either<RuleEmailActionResponse,RuleWebhookActionResponse> action) {
             this.action = action;
             return this;
         }
 
-        public Builder setActions(@Nullable List<Either<RuleEmailActionResponse,RuleWebhookActionResponse>> actions) {
+        public Builder actions(@Nullable List<Either<RuleEmailActionResponse,RuleWebhookActionResponse>> actions) {
             this.actions = actions;
             return this;
         }
 
-        public Builder setCondition(Object condition) {
+        public Builder condition(Object condition) {
             this.condition = Objects.requireNonNull(condition);
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setIsEnabled(Boolean isEnabled) {
+        public Builder isEnabled(Boolean isEnabled) {
             this.isEnabled = Objects.requireNonNull(isEnabled);
             return this;
         }
 
-        public Builder setLastUpdatedTime(String lastUpdatedTime) {
+        public Builder lastUpdatedTime(String lastUpdatedTime) {
             this.lastUpdatedTime = Objects.requireNonNull(lastUpdatedTime);
             return this;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setProvisioningState(@Nullable String provisioningState) {
+        public Builder provisioningState(@Nullable String provisioningState) {
             this.provisioningState = provisioningState;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

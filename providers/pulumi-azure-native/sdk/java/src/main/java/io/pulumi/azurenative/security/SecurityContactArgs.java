@@ -120,52 +120,52 @@ public final class SecurityContactArgs extends io.pulumi.resources.ResourceArgs 
     	      this.securityContactName = defaults.securityContactName;
         }
 
-        public Builder setAlertNotifications(@Nullable Input<SecurityContactPropertiesAlertNotificationsArgs> alertNotifications) {
+        public Builder alertNotifications(@Nullable Input<SecurityContactPropertiesAlertNotificationsArgs> alertNotifications) {
             this.alertNotifications = alertNotifications;
             return this;
         }
 
-        public Builder setAlertNotifications(@Nullable SecurityContactPropertiesAlertNotificationsArgs alertNotifications) {
+        public Builder alertNotifications(@Nullable SecurityContactPropertiesAlertNotificationsArgs alertNotifications) {
             this.alertNotifications = Input.ofNullable(alertNotifications);
             return this;
         }
 
-        public Builder setEmails(@Nullable Input<String> emails) {
+        public Builder emails(@Nullable Input<String> emails) {
             this.emails = emails;
             return this;
         }
 
-        public Builder setEmails(@Nullable String emails) {
+        public Builder emails(@Nullable String emails) {
             this.emails = Input.ofNullable(emails);
             return this;
         }
 
-        public Builder setNotificationsByRole(@Nullable Input<SecurityContactPropertiesNotificationsByRoleArgs> notificationsByRole) {
+        public Builder notificationsByRole(@Nullable Input<SecurityContactPropertiesNotificationsByRoleArgs> notificationsByRole) {
             this.notificationsByRole = notificationsByRole;
             return this;
         }
 
-        public Builder setNotificationsByRole(@Nullable SecurityContactPropertiesNotificationsByRoleArgs notificationsByRole) {
+        public Builder notificationsByRole(@Nullable SecurityContactPropertiesNotificationsByRoleArgs notificationsByRole) {
             this.notificationsByRole = Input.ofNullable(notificationsByRole);
             return this;
         }
 
-        public Builder setPhone(@Nullable Input<String> phone) {
+        public Builder phone(@Nullable Input<String> phone) {
             this.phone = phone;
             return this;
         }
 
-        public Builder setPhone(@Nullable String phone) {
+        public Builder phone(@Nullable String phone) {
             this.phone = Input.ofNullable(phone);
             return this;
         }
 
-        public Builder setSecurityContactName(@Nullable Input<String> securityContactName) {
+        public Builder securityContactName(@Nullable Input<String> securityContactName) {
             this.securityContactName = securityContactName;
             return this;
         }
 
-        public Builder setSecurityContactName(@Nullable String securityContactName) {
+        public Builder securityContactName(@Nullable String securityContactName) {
             this.securityContactName = Input.ofNullable(securityContactName);
             return this;
         }

@@ -50,7 +50,7 @@ public final class ConnectionMonitorWorkspaceSettingsResponse {
     	      this.workspaceResourceId = defaults.workspaceResourceId;
         }
 
-        public Builder setWorkspaceResourceId(@Nullable String workspaceResourceId) {
+        public Builder workspaceResourceId(@Nullable String workspaceResourceId) {
             this.workspaceResourceId = workspaceResourceId;
             return this;
         }

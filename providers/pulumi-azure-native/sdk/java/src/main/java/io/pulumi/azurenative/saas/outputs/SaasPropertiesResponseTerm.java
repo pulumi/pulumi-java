@@ -83,17 +83,17 @@ public final class SaasPropertiesResponseTerm {
     	      this.termUnit = defaults.termUnit;
         }
 
-        public Builder setEndDate(@Nullable String endDate) {
+        public Builder endDate(@Nullable String endDate) {
             this.endDate = endDate;
             return this;
         }
 
-        public Builder setStartDate(@Nullable String startDate) {
+        public Builder startDate(@Nullable String startDate) {
             this.startDate = startDate;
             return this;
         }
 
-        public Builder setTermUnit(@Nullable String termUnit) {
+        public Builder termUnit(@Nullable String termUnit) {
             this.termUnit = termUnit;
             return this;
         }

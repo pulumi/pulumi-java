@@ -74,12 +74,12 @@ public final class B2CTenantResourcePropertiesResponseBillingConfig extends io.p
     	      this.effectiveStartDateUtc = defaults.effectiveStartDateUtc;
         }
 
-        public Builder setBillingType(@Nullable String billingType) {
+        public Builder billingType(@Nullable String billingType) {
             this.billingType = billingType;
             return this;
         }
 
-        public Builder setEffectiveStartDateUtc(String effectiveStartDateUtc) {
+        public Builder effectiveStartDateUtc(String effectiveStartDateUtc) {
             this.effectiveStartDateUtc = Objects.requireNonNull(effectiveStartDateUtc);
             return this;
         }

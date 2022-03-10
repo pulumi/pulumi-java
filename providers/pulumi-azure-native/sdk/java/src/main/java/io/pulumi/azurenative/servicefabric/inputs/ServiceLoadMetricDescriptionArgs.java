@@ -125,52 +125,52 @@ public final class ServiceLoadMetricDescriptionArgs extends io.pulumi.resources.
     	      this.weight = defaults.weight;
         }
 
-        public Builder setDefaultLoad(@Nullable Input<Integer> defaultLoad) {
+        public Builder defaultLoad(@Nullable Input<Integer> defaultLoad) {
             this.defaultLoad = defaultLoad;
             return this;
         }
 
-        public Builder setDefaultLoad(@Nullable Integer defaultLoad) {
+        public Builder defaultLoad(@Nullable Integer defaultLoad) {
             this.defaultLoad = Input.ofNullable(defaultLoad);
             return this;
         }
 
-        public Builder setName(Input<String> name) {
+        public Builder name(Input<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder setPrimaryDefaultLoad(@Nullable Input<Integer> primaryDefaultLoad) {
+        public Builder primaryDefaultLoad(@Nullable Input<Integer> primaryDefaultLoad) {
             this.primaryDefaultLoad = primaryDefaultLoad;
             return this;
         }
 
-        public Builder setPrimaryDefaultLoad(@Nullable Integer primaryDefaultLoad) {
+        public Builder primaryDefaultLoad(@Nullable Integer primaryDefaultLoad) {
             this.primaryDefaultLoad = Input.ofNullable(primaryDefaultLoad);
             return this;
         }
 
-        public Builder setSecondaryDefaultLoad(@Nullable Input<Integer> secondaryDefaultLoad) {
+        public Builder secondaryDefaultLoad(@Nullable Input<Integer> secondaryDefaultLoad) {
             this.secondaryDefaultLoad = secondaryDefaultLoad;
             return this;
         }
 
-        public Builder setSecondaryDefaultLoad(@Nullable Integer secondaryDefaultLoad) {
+        public Builder secondaryDefaultLoad(@Nullable Integer secondaryDefaultLoad) {
             this.secondaryDefaultLoad = Input.ofNullable(secondaryDefaultLoad);
             return this;
         }
 
-        public Builder setWeight(@Nullable Input<Either<String,ServiceLoadMetricWeight>> weight) {
+        public Builder weight(@Nullable Input<Either<String,ServiceLoadMetricWeight>> weight) {
             this.weight = weight;
             return this;
         }
 
-        public Builder setWeight(@Nullable Either<String,ServiceLoadMetricWeight> weight) {
+        public Builder weight(@Nullable Either<String,ServiceLoadMetricWeight> weight) {
             this.weight = Input.ofNullable(weight);
             return this;
         }

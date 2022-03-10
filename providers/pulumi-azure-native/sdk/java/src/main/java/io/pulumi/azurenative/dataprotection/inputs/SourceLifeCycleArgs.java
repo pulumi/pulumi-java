@@ -89,32 +89,32 @@ public final class SourceLifeCycleArgs extends io.pulumi.resources.ResourceArgs 
     	      this.targetDataStoreCopySettings = defaults.targetDataStoreCopySettings;
         }
 
-        public Builder setDeleteAfter(Input<AbsoluteDeleteOptionArgs> deleteAfter) {
+        public Builder deleteAfter(Input<AbsoluteDeleteOptionArgs> deleteAfter) {
             this.deleteAfter = Objects.requireNonNull(deleteAfter);
             return this;
         }
 
-        public Builder setDeleteAfter(AbsoluteDeleteOptionArgs deleteAfter) {
+        public Builder deleteAfter(AbsoluteDeleteOptionArgs deleteAfter) {
             this.deleteAfter = Input.of(Objects.requireNonNull(deleteAfter));
             return this;
         }
 
-        public Builder setSourceDataStore(Input<DataStoreInfoBaseArgs> sourceDataStore) {
+        public Builder sourceDataStore(Input<DataStoreInfoBaseArgs> sourceDataStore) {
             this.sourceDataStore = Objects.requireNonNull(sourceDataStore);
             return this;
         }
 
-        public Builder setSourceDataStore(DataStoreInfoBaseArgs sourceDataStore) {
+        public Builder sourceDataStore(DataStoreInfoBaseArgs sourceDataStore) {
             this.sourceDataStore = Input.of(Objects.requireNonNull(sourceDataStore));
             return this;
         }
 
-        public Builder setTargetDataStoreCopySettings(@Nullable Input<List<TargetCopySettingArgs>> targetDataStoreCopySettings) {
+        public Builder targetDataStoreCopySettings(@Nullable Input<List<TargetCopySettingArgs>> targetDataStoreCopySettings) {
             this.targetDataStoreCopySettings = targetDataStoreCopySettings;
             return this;
         }
 
-        public Builder setTargetDataStoreCopySettings(@Nullable List<TargetCopySettingArgs> targetDataStoreCopySettings) {
+        public Builder targetDataStoreCopySettings(@Nullable List<TargetCopySettingArgs> targetDataStoreCopySettings) {
             this.targetDataStoreCopySettings = Input.ofNullable(targetDataStoreCopySettings);
             return this;
         }

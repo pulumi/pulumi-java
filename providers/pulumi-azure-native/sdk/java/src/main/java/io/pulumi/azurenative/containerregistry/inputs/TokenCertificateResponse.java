@@ -102,22 +102,22 @@ public final class TokenCertificateResponse extends io.pulumi.resources.InvokeAr
     	      this.thumbprint = defaults.thumbprint;
         }
 
-        public Builder setEncodedPemCertificate(@Nullable String encodedPemCertificate) {
+        public Builder encodedPemCertificate(@Nullable String encodedPemCertificate) {
             this.encodedPemCertificate = encodedPemCertificate;
             return this;
         }
 
-        public Builder setExpiry(@Nullable String expiry) {
+        public Builder expiry(@Nullable String expiry) {
             this.expiry = expiry;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setThumbprint(@Nullable String thumbprint) {
+        public Builder thumbprint(@Nullable String thumbprint) {
             this.thumbprint = thumbprint;
             return this;
         }

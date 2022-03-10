@@ -134,62 +134,62 @@ public final class ScopeConnectionArgs extends io.pulumi.resources.ResourceArgs 
     	      this.tenantId = defaults.tenantId;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setNetworkManagerName(Input<String> networkManagerName) {
+        public Builder networkManagerName(Input<String> networkManagerName) {
             this.networkManagerName = Objects.requireNonNull(networkManagerName);
             return this;
         }
 
-        public Builder setNetworkManagerName(String networkManagerName) {
+        public Builder networkManagerName(String networkManagerName) {
             this.networkManagerName = Input.of(Objects.requireNonNull(networkManagerName));
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setResourceId(@Nullable Input<String> resourceId) {
+        public Builder resourceId(@Nullable Input<String> resourceId) {
             this.resourceId = resourceId;
             return this;
         }
 
-        public Builder setResourceId(@Nullable String resourceId) {
+        public Builder resourceId(@Nullable String resourceId) {
             this.resourceId = Input.ofNullable(resourceId);
             return this;
         }
 
-        public Builder setScopeConnectionName(@Nullable Input<String> scopeConnectionName) {
+        public Builder scopeConnectionName(@Nullable Input<String> scopeConnectionName) {
             this.scopeConnectionName = scopeConnectionName;
             return this;
         }
 
-        public Builder setScopeConnectionName(@Nullable String scopeConnectionName) {
+        public Builder scopeConnectionName(@Nullable String scopeConnectionName) {
             this.scopeConnectionName = Input.ofNullable(scopeConnectionName);
             return this;
         }
 
-        public Builder setTenantId(@Nullable Input<String> tenantId) {
+        public Builder tenantId(@Nullable Input<String> tenantId) {
             this.tenantId = tenantId;
             return this;
         }
 
-        public Builder setTenantId(@Nullable String tenantId) {
+        public Builder tenantId(@Nullable String tenantId) {
             this.tenantId = Input.ofNullable(tenantId);
             return this;
         }

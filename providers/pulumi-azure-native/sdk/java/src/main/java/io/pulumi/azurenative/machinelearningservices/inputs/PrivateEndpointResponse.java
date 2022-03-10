@@ -72,12 +72,12 @@ public final class PrivateEndpointResponse extends io.pulumi.resources.InvokeArg
     	      this.subnetArmId = defaults.subnetArmId;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setSubnetArmId(String subnetArmId) {
+        public Builder subnetArmId(String subnetArmId) {
             this.subnetArmId = Objects.requireNonNull(subnetArmId);
             return this;
         }

@@ -75,12 +75,12 @@ public final class LocalTimestampResponse extends io.pulumi.resources.InvokeArgs
     	      this.timeZoneOffset = defaults.timeZoneOffset;
         }
 
-        public Builder setFormat(@Nullable String format) {
+        public Builder format(@Nullable String format) {
             this.format = format;
             return this;
         }
 
-        public Builder setTimeZoneOffset(@Nullable LocalTimestampResponseTimeZoneOffset timeZoneOffset) {
+        public Builder timeZoneOffset(@Nullable LocalTimestampResponseTimeZoneOffset timeZoneOffset) {
             this.timeZoneOffset = timeZoneOffset;
             return this;
         }

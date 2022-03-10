@@ -163,42 +163,42 @@ public final class ActivityTimelineItemResponse {
     	      this.title = defaults.title;
         }
 
-        public Builder setBucketEndTimeUTC(String bucketEndTimeUTC) {
+        public Builder bucketEndTimeUTC(String bucketEndTimeUTC) {
             this.bucketEndTimeUTC = Objects.requireNonNull(bucketEndTimeUTC);
             return this;
         }
 
-        public Builder setBucketStartTimeUTC(String bucketStartTimeUTC) {
+        public Builder bucketStartTimeUTC(String bucketStartTimeUTC) {
             this.bucketStartTimeUTC = Objects.requireNonNull(bucketStartTimeUTC);
             return this;
         }
 
-        public Builder setContent(String content) {
+        public Builder content(String content) {
             this.content = Objects.requireNonNull(content);
             return this;
         }
 
-        public Builder setFirstActivityTimeUTC(String firstActivityTimeUTC) {
+        public Builder firstActivityTimeUTC(String firstActivityTimeUTC) {
             this.firstActivityTimeUTC = Objects.requireNonNull(firstActivityTimeUTC);
             return this;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setLastActivityTimeUTC(String lastActivityTimeUTC) {
+        public Builder lastActivityTimeUTC(String lastActivityTimeUTC) {
             this.lastActivityTimeUTC = Objects.requireNonNull(lastActivityTimeUTC);
             return this;
         }
 
-        public Builder setQueryId(String queryId) {
+        public Builder queryId(String queryId) {
             this.queryId = Objects.requireNonNull(queryId);
             return this;
         }
 
-        public Builder setTitle(String title) {
+        public Builder title(String title) {
             this.title = Objects.requireNonNull(title);
             return this;
         }

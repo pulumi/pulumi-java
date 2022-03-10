@@ -84,17 +84,17 @@ public final class GetExportPipelineArgs extends io.pulumi.resources.InvokeArgs 
     	      this.resourceGroupName = defaults.resourceGroupName;
         }
 
-        public Builder setExportPipelineName(String exportPipelineName) {
+        public Builder exportPipelineName(String exportPipelineName) {
             this.exportPipelineName = Objects.requireNonNull(exportPipelineName);
             return this;
         }
 
-        public Builder setRegistryName(String registryName) {
+        public Builder registryName(String registryName) {
             this.registryName = Objects.requireNonNull(registryName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }

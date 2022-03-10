@@ -72,12 +72,12 @@ public final class SkuResponse extends io.pulumi.resources.InvokeArgs {
     	      this.name = defaults.name;
         }
 
-        public Builder setFamily(String family) {
+        public Builder family(String family) {
             this.family = Objects.requireNonNull(family);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }

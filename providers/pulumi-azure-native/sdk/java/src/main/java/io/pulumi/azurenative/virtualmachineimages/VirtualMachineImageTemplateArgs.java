@@ -215,102 +215,102 @@ public final class VirtualMachineImageTemplateArgs extends io.pulumi.resources.R
     	      this.vmProfile = defaults.vmProfile;
         }
 
-        public Builder setBuildTimeoutInMinutes(@Nullable Input<Integer> buildTimeoutInMinutes) {
+        public Builder buildTimeoutInMinutes(@Nullable Input<Integer> buildTimeoutInMinutes) {
             this.buildTimeoutInMinutes = buildTimeoutInMinutes;
             return this;
         }
 
-        public Builder setBuildTimeoutInMinutes(@Nullable Integer buildTimeoutInMinutes) {
+        public Builder buildTimeoutInMinutes(@Nullable Integer buildTimeoutInMinutes) {
             this.buildTimeoutInMinutes = Input.ofNullable(buildTimeoutInMinutes);
             return this;
         }
 
-        public Builder setCustomize(@Nullable Input<List<Object>> customize) {
+        public Builder customize(@Nullable Input<List<Object>> customize) {
             this.customize = customize;
             return this;
         }
 
-        public Builder setCustomize(@Nullable List<Object> customize) {
+        public Builder customize(@Nullable List<Object> customize) {
             this.customize = Input.ofNullable(customize);
             return this;
         }
 
-        public Builder setDistribute(Input<List<Object>> distribute) {
+        public Builder distribute(Input<List<Object>> distribute) {
             this.distribute = Objects.requireNonNull(distribute);
             return this;
         }
 
-        public Builder setDistribute(List<Object> distribute) {
+        public Builder distribute(List<Object> distribute) {
             this.distribute = Input.of(Objects.requireNonNull(distribute));
             return this;
         }
 
-        public Builder setIdentity(Input<ImageTemplateIdentityArgs> identity) {
+        public Builder identity(Input<ImageTemplateIdentityArgs> identity) {
             this.identity = Objects.requireNonNull(identity);
             return this;
         }
 
-        public Builder setIdentity(ImageTemplateIdentityArgs identity) {
+        public Builder identity(ImageTemplateIdentityArgs identity) {
             this.identity = Input.of(Objects.requireNonNull(identity));
             return this;
         }
 
-        public Builder setImageTemplateName(@Nullable Input<String> imageTemplateName) {
+        public Builder imageTemplateName(@Nullable Input<String> imageTemplateName) {
             this.imageTemplateName = imageTemplateName;
             return this;
         }
 
-        public Builder setImageTemplateName(@Nullable String imageTemplateName) {
+        public Builder imageTemplateName(@Nullable String imageTemplateName) {
             this.imageTemplateName = Input.ofNullable(imageTemplateName);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setSource(Input<Object> source) {
+        public Builder source(Input<Object> source) {
             this.source = Objects.requireNonNull(source);
             return this;
         }
 
-        public Builder setSource(Object source) {
+        public Builder source(Object source) {
             this.source = Input.of(Objects.requireNonNull(source));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setVmProfile(@Nullable Input<ImageTemplateVmProfileArgs> vmProfile) {
+        public Builder vmProfile(@Nullable Input<ImageTemplateVmProfileArgs> vmProfile) {
             this.vmProfile = vmProfile;
             return this;
         }
 
-        public Builder setVmProfile(@Nullable ImageTemplateVmProfileArgs vmProfile) {
+        public Builder vmProfile(@Nullable ImageTemplateVmProfileArgs vmProfile) {
             this.vmProfile = Input.ofNullable(vmProfile);
             return this;
         }

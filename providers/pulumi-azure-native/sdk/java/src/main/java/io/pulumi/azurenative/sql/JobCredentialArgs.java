@@ -134,62 +134,62 @@ public final class JobCredentialArgs extends io.pulumi.resources.ResourceArgs {
     	      this.username = defaults.username;
         }
 
-        public Builder setCredentialName(@Nullable Input<String> credentialName) {
+        public Builder credentialName(@Nullable Input<String> credentialName) {
             this.credentialName = credentialName;
             return this;
         }
 
-        public Builder setCredentialName(@Nullable String credentialName) {
+        public Builder credentialName(@Nullable String credentialName) {
             this.credentialName = Input.ofNullable(credentialName);
             return this;
         }
 
-        public Builder setJobAgentName(Input<String> jobAgentName) {
+        public Builder jobAgentName(Input<String> jobAgentName) {
             this.jobAgentName = Objects.requireNonNull(jobAgentName);
             return this;
         }
 
-        public Builder setJobAgentName(String jobAgentName) {
+        public Builder jobAgentName(String jobAgentName) {
             this.jobAgentName = Input.of(Objects.requireNonNull(jobAgentName));
             return this;
         }
 
-        public Builder setPassword(Input<String> password) {
+        public Builder password(Input<String> password) {
             this.password = Objects.requireNonNull(password);
             return this;
         }
 
-        public Builder setPassword(String password) {
+        public Builder password(String password) {
             this.password = Input.of(Objects.requireNonNull(password));
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setServerName(Input<String> serverName) {
+        public Builder serverName(Input<String> serverName) {
             this.serverName = Objects.requireNonNull(serverName);
             return this;
         }
 
-        public Builder setServerName(String serverName) {
+        public Builder serverName(String serverName) {
             this.serverName = Input.of(Objects.requireNonNull(serverName));
             return this;
         }
 
-        public Builder setUsername(Input<String> username) {
+        public Builder username(Input<String> username) {
             this.username = Objects.requireNonNull(username);
             return this;
         }
 
-        public Builder setUsername(String username) {
+        public Builder username(String username) {
             this.username = Input.of(Objects.requireNonNull(username));
             return this;
         }

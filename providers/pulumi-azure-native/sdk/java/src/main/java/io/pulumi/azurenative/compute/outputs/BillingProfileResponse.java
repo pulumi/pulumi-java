@@ -50,7 +50,7 @@ public final class BillingProfileResponse {
     	      this.maxPrice = defaults.maxPrice;
         }
 
-        public Builder setMaxPrice(@Nullable Double maxPrice) {
+        public Builder maxPrice(@Nullable Double maxPrice) {
             this.maxPrice = maxPrice;
             return this;
         }

@@ -69,12 +69,12 @@ public final class TargetCopySettingResponse {
     	      this.dataStore = defaults.dataStore;
         }
 
-        public Builder setCopyAfter(Object copyAfter) {
+        public Builder copyAfter(Object copyAfter) {
             this.copyAfter = Objects.requireNonNull(copyAfter);
             return this;
         }
 
-        public Builder setDataStore(DataStoreInfoBaseResponse dataStore) {
+        public Builder dataStore(DataStoreInfoBaseResponse dataStore) {
             this.dataStore = Objects.requireNonNull(dataStore);
             return this;
         }

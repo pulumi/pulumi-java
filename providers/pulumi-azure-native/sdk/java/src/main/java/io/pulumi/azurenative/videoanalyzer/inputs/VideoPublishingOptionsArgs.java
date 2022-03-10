@@ -74,22 +74,22 @@ public final class VideoPublishingOptionsArgs extends io.pulumi.resources.Resour
     	      this.disableRtspPublishing = defaults.disableRtspPublishing;
         }
 
-        public Builder setDisableArchive(@Nullable Input<String> disableArchive) {
+        public Builder disableArchive(@Nullable Input<String> disableArchive) {
             this.disableArchive = disableArchive;
             return this;
         }
 
-        public Builder setDisableArchive(@Nullable String disableArchive) {
+        public Builder disableArchive(@Nullable String disableArchive) {
             this.disableArchive = Input.ofNullable(disableArchive);
             return this;
         }
 
-        public Builder setDisableRtspPublishing(@Nullable Input<String> disableRtspPublishing) {
+        public Builder disableRtspPublishing(@Nullable Input<String> disableRtspPublishing) {
             this.disableRtspPublishing = disableRtspPublishing;
             return this;
         }
 
-        public Builder setDisableRtspPublishing(@Nullable String disableRtspPublishing) {
+        public Builder disableRtspPublishing(@Nullable String disableRtspPublishing) {
             this.disableRtspPublishing = Input.ofNullable(disableRtspPublishing);
             return this;
         }

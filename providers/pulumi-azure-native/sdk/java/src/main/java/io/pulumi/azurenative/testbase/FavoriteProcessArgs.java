@@ -118,52 +118,52 @@ public final class FavoriteProcessArgs extends io.pulumi.resources.ResourceArgs 
     	      this.testBaseAccountName = defaults.testBaseAccountName;
         }
 
-        public Builder setActualProcessName(Input<String> actualProcessName) {
+        public Builder actualProcessName(Input<String> actualProcessName) {
             this.actualProcessName = Objects.requireNonNull(actualProcessName);
             return this;
         }
 
-        public Builder setActualProcessName(String actualProcessName) {
+        public Builder actualProcessName(String actualProcessName) {
             this.actualProcessName = Input.of(Objects.requireNonNull(actualProcessName));
             return this;
         }
 
-        public Builder setFavoriteProcessResourceName(@Nullable Input<String> favoriteProcessResourceName) {
+        public Builder favoriteProcessResourceName(@Nullable Input<String> favoriteProcessResourceName) {
             this.favoriteProcessResourceName = favoriteProcessResourceName;
             return this;
         }
 
-        public Builder setFavoriteProcessResourceName(@Nullable String favoriteProcessResourceName) {
+        public Builder favoriteProcessResourceName(@Nullable String favoriteProcessResourceName) {
             this.favoriteProcessResourceName = Input.ofNullable(favoriteProcessResourceName);
             return this;
         }
 
-        public Builder setPackageName(Input<String> packageName) {
+        public Builder packageName(Input<String> packageName) {
             this.packageName = Objects.requireNonNull(packageName);
             return this;
         }
 
-        public Builder setPackageName(String packageName) {
+        public Builder packageName(String packageName) {
             this.packageName = Input.of(Objects.requireNonNull(packageName));
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setTestBaseAccountName(Input<String> testBaseAccountName) {
+        public Builder testBaseAccountName(Input<String> testBaseAccountName) {
             this.testBaseAccountName = Objects.requireNonNull(testBaseAccountName);
             return this;
         }
 
-        public Builder setTestBaseAccountName(String testBaseAccountName) {
+        public Builder testBaseAccountName(String testBaseAccountName) {
             this.testBaseAccountName = Input.of(Objects.requireNonNull(testBaseAccountName));
             return this;
         }

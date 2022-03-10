@@ -182,47 +182,47 @@ public final class SqlConnectionInfoResponse {
     	      this.userName = defaults.userName;
         }
 
-        public Builder setAdditionalSettings(@Nullable String additionalSettings) {
+        public Builder additionalSettings(@Nullable String additionalSettings) {
             this.additionalSettings = additionalSettings;
             return this;
         }
 
-        public Builder setAuthentication(@Nullable String authentication) {
+        public Builder authentication(@Nullable String authentication) {
             this.authentication = authentication;
             return this;
         }
 
-        public Builder setDataSource(String dataSource) {
+        public Builder dataSource(String dataSource) {
             this.dataSource = Objects.requireNonNull(dataSource);
             return this;
         }
 
-        public Builder setEncryptConnection(@Nullable Boolean encryptConnection) {
+        public Builder encryptConnection(@Nullable Boolean encryptConnection) {
             this.encryptConnection = encryptConnection;
             return this;
         }
 
-        public Builder setPassword(@Nullable String password) {
+        public Builder password(@Nullable String password) {
             this.password = password;
             return this;
         }
 
-        public Builder setPlatform(@Nullable String platform) {
+        public Builder platform(@Nullable String platform) {
             this.platform = platform;
             return this;
         }
 
-        public Builder setTrustServerCertificate(@Nullable Boolean trustServerCertificate) {
+        public Builder trustServerCertificate(@Nullable Boolean trustServerCertificate) {
             this.trustServerCertificate = trustServerCertificate;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setUserName(@Nullable String userName) {
+        public Builder userName(@Nullable String userName) {
             this.userName = userName;
             return this;
         }

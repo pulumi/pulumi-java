@@ -102,22 +102,22 @@ public final class AliasPathResponse {
     	      this.pattern = defaults.pattern;
         }
 
-        public Builder setApiVersions(@Nullable List<String> apiVersions) {
+        public Builder apiVersions(@Nullable List<String> apiVersions) {
             this.apiVersions = apiVersions;
             return this;
         }
 
-        public Builder setMetadata(AliasPathMetadataResponse metadata) {
+        public Builder metadata(AliasPathMetadataResponse metadata) {
             this.metadata = Objects.requireNonNull(metadata);
             return this;
         }
 
-        public Builder setPath(@Nullable String path) {
+        public Builder path(@Nullable String path) {
             this.path = path;
             return this;
         }
 
-        public Builder setPattern(@Nullable AliasPatternResponse pattern) {
+        public Builder pattern(@Nullable AliasPatternResponse pattern) {
             this.pattern = pattern;
             return this;
         }

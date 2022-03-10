@@ -110,22 +110,22 @@ public final class PreferencesResponse extends io.pulumi.resources.InvokeArgs {
     	      this.transportPreferences = defaults.transportPreferences;
         }
 
-        public Builder setEncryptionPreferences(@Nullable EncryptionPreferencesResponse encryptionPreferences) {
+        public Builder encryptionPreferences(@Nullable EncryptionPreferencesResponse encryptionPreferences) {
             this.encryptionPreferences = encryptionPreferences;
             return this;
         }
 
-        public Builder setManagementResourcePreferences(@Nullable ManagementResourcePreferencesResponse managementResourcePreferences) {
+        public Builder managementResourcePreferences(@Nullable ManagementResourcePreferencesResponse managementResourcePreferences) {
             this.managementResourcePreferences = managementResourcePreferences;
             return this;
         }
 
-        public Builder setNotificationPreferences(@Nullable List<NotificationPreferenceResponse> notificationPreferences) {
+        public Builder notificationPreferences(@Nullable List<NotificationPreferenceResponse> notificationPreferences) {
             this.notificationPreferences = notificationPreferences;
             return this;
         }
 
-        public Builder setTransportPreferences(@Nullable TransportPreferencesResponse transportPreferences) {
+        public Builder transportPreferences(@Nullable TransportPreferencesResponse transportPreferences) {
             this.transportPreferences = transportPreferences;
             return this;
         }

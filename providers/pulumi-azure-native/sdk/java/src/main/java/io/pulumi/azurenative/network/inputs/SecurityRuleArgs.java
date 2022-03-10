@@ -337,182 +337,182 @@ public final class SecurityRuleArgs extends io.pulumi.resources.ResourceArgs {
     	      this.type = defaults.type;
         }
 
-        public Builder setAccess(Input<Either<String,SecurityRuleAccess>> access) {
+        public Builder access(Input<Either<String,SecurityRuleAccess>> access) {
             this.access = Objects.requireNonNull(access);
             return this;
         }
 
-        public Builder setAccess(Either<String,SecurityRuleAccess> access) {
+        public Builder access(Either<String,SecurityRuleAccess> access) {
             this.access = Input.of(Objects.requireNonNull(access));
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setDestinationAddressPrefix(@Nullable Input<String> destinationAddressPrefix) {
+        public Builder destinationAddressPrefix(@Nullable Input<String> destinationAddressPrefix) {
             this.destinationAddressPrefix = destinationAddressPrefix;
             return this;
         }
 
-        public Builder setDestinationAddressPrefix(@Nullable String destinationAddressPrefix) {
+        public Builder destinationAddressPrefix(@Nullable String destinationAddressPrefix) {
             this.destinationAddressPrefix = Input.ofNullable(destinationAddressPrefix);
             return this;
         }
 
-        public Builder setDestinationAddressPrefixes(@Nullable Input<List<String>> destinationAddressPrefixes) {
+        public Builder destinationAddressPrefixes(@Nullable Input<List<String>> destinationAddressPrefixes) {
             this.destinationAddressPrefixes = destinationAddressPrefixes;
             return this;
         }
 
-        public Builder setDestinationAddressPrefixes(@Nullable List<String> destinationAddressPrefixes) {
+        public Builder destinationAddressPrefixes(@Nullable List<String> destinationAddressPrefixes) {
             this.destinationAddressPrefixes = Input.ofNullable(destinationAddressPrefixes);
             return this;
         }
 
-        public Builder setDestinationApplicationSecurityGroups(@Nullable Input<List<ApplicationSecurityGroupArgs>> destinationApplicationSecurityGroups) {
+        public Builder destinationApplicationSecurityGroups(@Nullable Input<List<ApplicationSecurityGroupArgs>> destinationApplicationSecurityGroups) {
             this.destinationApplicationSecurityGroups = destinationApplicationSecurityGroups;
             return this;
         }
 
-        public Builder setDestinationApplicationSecurityGroups(@Nullable List<ApplicationSecurityGroupArgs> destinationApplicationSecurityGroups) {
+        public Builder destinationApplicationSecurityGroups(@Nullable List<ApplicationSecurityGroupArgs> destinationApplicationSecurityGroups) {
             this.destinationApplicationSecurityGroups = Input.ofNullable(destinationApplicationSecurityGroups);
             return this;
         }
 
-        public Builder setDestinationPortRange(@Nullable Input<String> destinationPortRange) {
+        public Builder destinationPortRange(@Nullable Input<String> destinationPortRange) {
             this.destinationPortRange = destinationPortRange;
             return this;
         }
 
-        public Builder setDestinationPortRange(@Nullable String destinationPortRange) {
+        public Builder destinationPortRange(@Nullable String destinationPortRange) {
             this.destinationPortRange = Input.ofNullable(destinationPortRange);
             return this;
         }
 
-        public Builder setDestinationPortRanges(@Nullable Input<List<String>> destinationPortRanges) {
+        public Builder destinationPortRanges(@Nullable Input<List<String>> destinationPortRanges) {
             this.destinationPortRanges = destinationPortRanges;
             return this;
         }
 
-        public Builder setDestinationPortRanges(@Nullable List<String> destinationPortRanges) {
+        public Builder destinationPortRanges(@Nullable List<String> destinationPortRanges) {
             this.destinationPortRanges = Input.ofNullable(destinationPortRanges);
             return this;
         }
 
-        public Builder setDirection(Input<Either<String,SecurityRuleDirection>> direction) {
+        public Builder direction(Input<Either<String,SecurityRuleDirection>> direction) {
             this.direction = Objects.requireNonNull(direction);
             return this;
         }
 
-        public Builder setDirection(Either<String,SecurityRuleDirection> direction) {
+        public Builder direction(Either<String,SecurityRuleDirection> direction) {
             this.direction = Input.of(Objects.requireNonNull(direction));
             return this;
         }
 
-        public Builder setId(@Nullable Input<String> id) {
+        public Builder id(@Nullable Input<String> id) {
             this.id = id;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = Input.ofNullable(id);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setPriority(@Nullable Input<Integer> priority) {
+        public Builder priority(@Nullable Input<Integer> priority) {
             this.priority = priority;
             return this;
         }
 
-        public Builder setPriority(@Nullable Integer priority) {
+        public Builder priority(@Nullable Integer priority) {
             this.priority = Input.ofNullable(priority);
             return this;
         }
 
-        public Builder setProtocol(Input<Either<String,SecurityRuleProtocol>> protocol) {
+        public Builder protocol(Input<Either<String,SecurityRuleProtocol>> protocol) {
             this.protocol = Objects.requireNonNull(protocol);
             return this;
         }
 
-        public Builder setProtocol(Either<String,SecurityRuleProtocol> protocol) {
+        public Builder protocol(Either<String,SecurityRuleProtocol> protocol) {
             this.protocol = Input.of(Objects.requireNonNull(protocol));
             return this;
         }
 
-        public Builder setSourceAddressPrefix(@Nullable Input<String> sourceAddressPrefix) {
+        public Builder sourceAddressPrefix(@Nullable Input<String> sourceAddressPrefix) {
             this.sourceAddressPrefix = sourceAddressPrefix;
             return this;
         }
 
-        public Builder setSourceAddressPrefix(@Nullable String sourceAddressPrefix) {
+        public Builder sourceAddressPrefix(@Nullable String sourceAddressPrefix) {
             this.sourceAddressPrefix = Input.ofNullable(sourceAddressPrefix);
             return this;
         }
 
-        public Builder setSourceAddressPrefixes(@Nullable Input<List<String>> sourceAddressPrefixes) {
+        public Builder sourceAddressPrefixes(@Nullable Input<List<String>> sourceAddressPrefixes) {
             this.sourceAddressPrefixes = sourceAddressPrefixes;
             return this;
         }
 
-        public Builder setSourceAddressPrefixes(@Nullable List<String> sourceAddressPrefixes) {
+        public Builder sourceAddressPrefixes(@Nullable List<String> sourceAddressPrefixes) {
             this.sourceAddressPrefixes = Input.ofNullable(sourceAddressPrefixes);
             return this;
         }
 
-        public Builder setSourceApplicationSecurityGroups(@Nullable Input<List<ApplicationSecurityGroupArgs>> sourceApplicationSecurityGroups) {
+        public Builder sourceApplicationSecurityGroups(@Nullable Input<List<ApplicationSecurityGroupArgs>> sourceApplicationSecurityGroups) {
             this.sourceApplicationSecurityGroups = sourceApplicationSecurityGroups;
             return this;
         }
 
-        public Builder setSourceApplicationSecurityGroups(@Nullable List<ApplicationSecurityGroupArgs> sourceApplicationSecurityGroups) {
+        public Builder sourceApplicationSecurityGroups(@Nullable List<ApplicationSecurityGroupArgs> sourceApplicationSecurityGroups) {
             this.sourceApplicationSecurityGroups = Input.ofNullable(sourceApplicationSecurityGroups);
             return this;
         }
 
-        public Builder setSourcePortRange(@Nullable Input<String> sourcePortRange) {
+        public Builder sourcePortRange(@Nullable Input<String> sourcePortRange) {
             this.sourcePortRange = sourcePortRange;
             return this;
         }
 
-        public Builder setSourcePortRange(@Nullable String sourcePortRange) {
+        public Builder sourcePortRange(@Nullable String sourcePortRange) {
             this.sourcePortRange = Input.ofNullable(sourcePortRange);
             return this;
         }
 
-        public Builder setSourcePortRanges(@Nullable Input<List<String>> sourcePortRanges) {
+        public Builder sourcePortRanges(@Nullable Input<List<String>> sourcePortRanges) {
             this.sourcePortRanges = sourcePortRanges;
             return this;
         }
 
-        public Builder setSourcePortRanges(@Nullable List<String> sourcePortRanges) {
+        public Builder sourcePortRanges(@Nullable List<String> sourcePortRanges) {
             this.sourcePortRanges = Input.ofNullable(sourcePortRanges);
             return this;
         }
 
-        public Builder setType(@Nullable Input<String> type) {
+        public Builder type(@Nullable Input<String> type) {
             this.type = type;
             return this;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = Input.ofNullable(type);
             return this;
         }

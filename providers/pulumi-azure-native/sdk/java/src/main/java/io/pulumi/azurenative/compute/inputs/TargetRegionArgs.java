@@ -110,42 +110,42 @@ public final class TargetRegionArgs extends io.pulumi.resources.ResourceArgs {
     	      this.storageAccountType = defaults.storageAccountType;
         }
 
-        public Builder setEncryption(@Nullable Input<EncryptionImagesArgs> encryption) {
+        public Builder encryption(@Nullable Input<EncryptionImagesArgs> encryption) {
             this.encryption = encryption;
             return this;
         }
 
-        public Builder setEncryption(@Nullable EncryptionImagesArgs encryption) {
+        public Builder encryption(@Nullable EncryptionImagesArgs encryption) {
             this.encryption = Input.ofNullable(encryption);
             return this;
         }
 
-        public Builder setName(Input<String> name) {
+        public Builder name(Input<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder setRegionalReplicaCount(@Nullable Input<Integer> regionalReplicaCount) {
+        public Builder regionalReplicaCount(@Nullable Input<Integer> regionalReplicaCount) {
             this.regionalReplicaCount = regionalReplicaCount;
             return this;
         }
 
-        public Builder setRegionalReplicaCount(@Nullable Integer regionalReplicaCount) {
+        public Builder regionalReplicaCount(@Nullable Integer regionalReplicaCount) {
             this.regionalReplicaCount = Input.ofNullable(regionalReplicaCount);
             return this;
         }
 
-        public Builder setStorageAccountType(@Nullable Input<Either<String,StorageAccountType>> storageAccountType) {
+        public Builder storageAccountType(@Nullable Input<Either<String,StorageAccountType>> storageAccountType) {
             this.storageAccountType = storageAccountType;
             return this;
         }
 
-        public Builder setStorageAccountType(@Nullable Either<String,StorageAccountType> storageAccountType) {
+        public Builder storageAccountType(@Nullable Either<String,StorageAccountType> storageAccountType) {
             this.storageAccountType = Input.ofNullable(storageAccountType);
             return this;
         }

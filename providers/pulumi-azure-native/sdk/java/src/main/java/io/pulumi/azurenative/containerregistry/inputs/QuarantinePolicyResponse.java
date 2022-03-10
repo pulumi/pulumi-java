@@ -57,7 +57,7 @@ public final class QuarantinePolicyResponse extends io.pulumi.resources.InvokeAr
     	      this.status = defaults.status;
         }
 
-        public Builder setStatus(@Nullable String status) {
+        public Builder status(@Nullable String status) {
             this.status = status;
             return this;
         }

@@ -103,42 +103,42 @@ public final class RegisteredAsnArgs extends io.pulumi.resources.ResourceArgs {
     	      this.resourceGroupName = defaults.resourceGroupName;
         }
 
-        public Builder setAsn(@Nullable Input<Integer> asn) {
+        public Builder asn(@Nullable Input<Integer> asn) {
             this.asn = asn;
             return this;
         }
 
-        public Builder setAsn(@Nullable Integer asn) {
+        public Builder asn(@Nullable Integer asn) {
             this.asn = Input.ofNullable(asn);
             return this;
         }
 
-        public Builder setPeeringName(Input<String> peeringName) {
+        public Builder peeringName(Input<String> peeringName) {
             this.peeringName = Objects.requireNonNull(peeringName);
             return this;
         }
 
-        public Builder setPeeringName(String peeringName) {
+        public Builder peeringName(String peeringName) {
             this.peeringName = Input.of(Objects.requireNonNull(peeringName));
             return this;
         }
 
-        public Builder setRegisteredAsnName(@Nullable Input<String> registeredAsnName) {
+        public Builder registeredAsnName(@Nullable Input<String> registeredAsnName) {
             this.registeredAsnName = registeredAsnName;
             return this;
         }
 
-        public Builder setRegisteredAsnName(@Nullable String registeredAsnName) {
+        public Builder registeredAsnName(@Nullable String registeredAsnName) {
             this.registeredAsnName = Input.ofNullable(registeredAsnName);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }

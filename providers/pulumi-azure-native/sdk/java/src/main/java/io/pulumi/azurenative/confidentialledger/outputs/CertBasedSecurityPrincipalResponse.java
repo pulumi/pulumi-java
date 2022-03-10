@@ -67,12 +67,12 @@ public final class CertBasedSecurityPrincipalResponse {
     	      this.ledgerRoleName = defaults.ledgerRoleName;
         }
 
-        public Builder setCert(@Nullable String cert) {
+        public Builder cert(@Nullable String cert) {
             this.cert = cert;
             return this;
         }
 
-        public Builder setLedgerRoleName(@Nullable String ledgerRoleName) {
+        public Builder ledgerRoleName(@Nullable String ledgerRoleName) {
             this.ledgerRoleName = ledgerRoleName;
             return this;
         }

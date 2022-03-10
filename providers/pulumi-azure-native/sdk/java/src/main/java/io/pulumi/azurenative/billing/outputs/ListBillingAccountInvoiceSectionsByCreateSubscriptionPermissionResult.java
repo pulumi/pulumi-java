@@ -68,12 +68,12 @@ public final class ListBillingAccountInvoiceSectionsByCreateSubscriptionPermissi
     	      this.value = defaults.value;
         }
 
-        public Builder setNextLink(String nextLink) {
+        public Builder nextLink(String nextLink) {
             this.nextLink = Objects.requireNonNull(nextLink);
             return this;
         }
 
-        public Builder setValue(@Nullable List<InvoiceSectionWithCreateSubPermissionResponse> value) {
+        public Builder value(@Nullable List<InvoiceSectionWithCreateSubPermissionResponse> value) {
             this.value = value;
             return this;
         }

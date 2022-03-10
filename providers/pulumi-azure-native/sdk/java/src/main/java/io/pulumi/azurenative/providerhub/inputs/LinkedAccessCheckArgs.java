@@ -98,52 +98,52 @@ public final class LinkedAccessCheckArgs extends io.pulumi.resources.ResourceArg
     	      this.linkedType = defaults.linkedType;
         }
 
-        public Builder setActionName(@Nullable Input<String> actionName) {
+        public Builder actionName(@Nullable Input<String> actionName) {
             this.actionName = actionName;
             return this;
         }
 
-        public Builder setActionName(@Nullable String actionName) {
+        public Builder actionName(@Nullable String actionName) {
             this.actionName = Input.ofNullable(actionName);
             return this;
         }
 
-        public Builder setLinkedAction(@Nullable Input<String> linkedAction) {
+        public Builder linkedAction(@Nullable Input<String> linkedAction) {
             this.linkedAction = linkedAction;
             return this;
         }
 
-        public Builder setLinkedAction(@Nullable String linkedAction) {
+        public Builder linkedAction(@Nullable String linkedAction) {
             this.linkedAction = Input.ofNullable(linkedAction);
             return this;
         }
 
-        public Builder setLinkedActionVerb(@Nullable Input<String> linkedActionVerb) {
+        public Builder linkedActionVerb(@Nullable Input<String> linkedActionVerb) {
             this.linkedActionVerb = linkedActionVerb;
             return this;
         }
 
-        public Builder setLinkedActionVerb(@Nullable String linkedActionVerb) {
+        public Builder linkedActionVerb(@Nullable String linkedActionVerb) {
             this.linkedActionVerb = Input.ofNullable(linkedActionVerb);
             return this;
         }
 
-        public Builder setLinkedProperty(@Nullable Input<String> linkedProperty) {
+        public Builder linkedProperty(@Nullable Input<String> linkedProperty) {
             this.linkedProperty = linkedProperty;
             return this;
         }
 
-        public Builder setLinkedProperty(@Nullable String linkedProperty) {
+        public Builder linkedProperty(@Nullable String linkedProperty) {
             this.linkedProperty = Input.ofNullable(linkedProperty);
             return this;
         }
 
-        public Builder setLinkedType(@Nullable Input<String> linkedType) {
+        public Builder linkedType(@Nullable Input<String> linkedType) {
             this.linkedType = linkedType;
             return this;
         }
 
-        public Builder setLinkedType(@Nullable String linkedType) {
+        public Builder linkedType(@Nullable String linkedType) {
             this.linkedType = Input.ofNullable(linkedType);
             return this;
         }

@@ -72,12 +72,12 @@ public final class UserAssignedResourceIdentityResponse extends io.pulumi.resour
     	      this.tenantId = defaults.tenantId;
         }
 
-        public Builder setPrincipalId(String principalId) {
+        public Builder principalId(String principalId) {
             this.principalId = Objects.requireNonNull(principalId);
             return this;
         }
 
-        public Builder setTenantId(String tenantId) {
+        public Builder tenantId(String tenantId) {
             this.tenantId = Objects.requireNonNull(tenantId);
             return this;
         }

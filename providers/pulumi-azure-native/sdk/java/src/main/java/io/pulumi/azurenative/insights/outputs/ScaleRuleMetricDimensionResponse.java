@@ -82,17 +82,17 @@ public final class ScaleRuleMetricDimensionResponse {
     	      this.values = defaults.values;
         }
 
-        public Builder setDimensionName(String dimensionName) {
+        public Builder dimensionName(String dimensionName) {
             this.dimensionName = Objects.requireNonNull(dimensionName);
             return this;
         }
 
-        public Builder setOperator(String operator) {
+        public Builder operator(String operator) {
             this.operator = Objects.requireNonNull(operator);
             return this;
         }
 
-        public Builder setValues(List<String> values) {
+        public Builder values(List<String> values) {
             this.values = Objects.requireNonNull(values);
             return this;
         }

@@ -104,42 +104,42 @@ public final class ConfigurationProfileArgs extends io.pulumi.resources.Resource
     	      this.properties = defaults.properties;
         }
 
-        public Builder setIdentity(@Nullable Input<ResourceIdentityArgs> identity) {
+        public Builder identity(@Nullable Input<ResourceIdentityArgs> identity) {
             this.identity = identity;
             return this;
         }
 
-        public Builder setIdentity(@Nullable ResourceIdentityArgs identity) {
+        public Builder identity(@Nullable ResourceIdentityArgs identity) {
             this.identity = Input.ofNullable(identity);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setProfileName(@Nullable Input<String> profileName) {
+        public Builder profileName(@Nullable Input<String> profileName) {
             this.profileName = profileName;
             return this;
         }
 
-        public Builder setProfileName(@Nullable String profileName) {
+        public Builder profileName(@Nullable String profileName) {
             this.profileName = Input.ofNullable(profileName);
             return this;
         }
 
-        public Builder setProperties(@Nullable Input<ConfigurationProfileResourcePropertiesArgs> properties) {
+        public Builder properties(@Nullable Input<ConfigurationProfileResourcePropertiesArgs> properties) {
             this.properties = properties;
             return this;
         }
 
-        public Builder setProperties(@Nullable ConfigurationProfileResourcePropertiesArgs properties) {
+        public Builder properties(@Nullable ConfigurationProfileResourcePropertiesArgs properties) {
             this.properties = Input.ofNullable(properties);
             return this;
         }

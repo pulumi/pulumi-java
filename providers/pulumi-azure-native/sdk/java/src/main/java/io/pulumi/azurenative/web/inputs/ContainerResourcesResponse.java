@@ -75,12 +75,12 @@ public final class ContainerResourcesResponse extends io.pulumi.resources.Invoke
     	      this.memory = defaults.memory;
         }
 
-        public Builder setCpu(@Nullable Double cpu) {
+        public Builder cpu(@Nullable Double cpu) {
             this.cpu = cpu;
             return this;
         }
 
-        public Builder setMemory(@Nullable String memory) {
+        public Builder memory(@Nullable String memory) {
             this.memory = memory;
             return this;
         }

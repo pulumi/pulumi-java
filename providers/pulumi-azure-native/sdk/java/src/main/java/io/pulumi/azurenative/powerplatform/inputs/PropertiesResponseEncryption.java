@@ -75,12 +75,12 @@ public final class PropertiesResponseEncryption extends io.pulumi.resources.Invo
     	      this.state = defaults.state;
         }
 
-        public Builder setKeyVault(@Nullable KeyVaultPropertiesResponse keyVault) {
+        public Builder keyVault(@Nullable KeyVaultPropertiesResponse keyVault) {
             this.keyVault = keyVault;
             return this;
         }
 
-        public Builder setState(@Nullable String state) {
+        public Builder state(@Nullable String state) {
             this.state = state;
             return this;
         }

@@ -77,32 +77,32 @@ public final class ProviderRegistrationPropertiesProviderHubMetadataArgs extends
     	      this.thirdPartyProviderAuthorization = defaults.thirdPartyProviderAuthorization;
         }
 
-        public Builder setProviderAuthentication(@Nullable Input<ProviderHubMetadataProviderAuthenticationArgs> providerAuthentication) {
+        public Builder providerAuthentication(@Nullable Input<ProviderHubMetadataProviderAuthenticationArgs> providerAuthentication) {
             this.providerAuthentication = providerAuthentication;
             return this;
         }
 
-        public Builder setProviderAuthentication(@Nullable ProviderHubMetadataProviderAuthenticationArgs providerAuthentication) {
+        public Builder providerAuthentication(@Nullable ProviderHubMetadataProviderAuthenticationArgs providerAuthentication) {
             this.providerAuthentication = Input.ofNullable(providerAuthentication);
             return this;
         }
 
-        public Builder setProviderAuthorizations(@Nullable Input<List<ResourceProviderAuthorizationArgs>> providerAuthorizations) {
+        public Builder providerAuthorizations(@Nullable Input<List<ResourceProviderAuthorizationArgs>> providerAuthorizations) {
             this.providerAuthorizations = providerAuthorizations;
             return this;
         }
 
-        public Builder setProviderAuthorizations(@Nullable List<ResourceProviderAuthorizationArgs> providerAuthorizations) {
+        public Builder providerAuthorizations(@Nullable List<ResourceProviderAuthorizationArgs> providerAuthorizations) {
             this.providerAuthorizations = Input.ofNullable(providerAuthorizations);
             return this;
         }
 
-        public Builder setThirdPartyProviderAuthorization(@Nullable Input<ProviderHubMetadataThirdPartyProviderAuthorizationArgs> thirdPartyProviderAuthorization) {
+        public Builder thirdPartyProviderAuthorization(@Nullable Input<ProviderHubMetadataThirdPartyProviderAuthorizationArgs> thirdPartyProviderAuthorization) {
             this.thirdPartyProviderAuthorization = thirdPartyProviderAuthorization;
             return this;
         }
 
-        public Builder setThirdPartyProviderAuthorization(@Nullable ProviderHubMetadataThirdPartyProviderAuthorizationArgs thirdPartyProviderAuthorization) {
+        public Builder thirdPartyProviderAuthorization(@Nullable ProviderHubMetadataThirdPartyProviderAuthorizationArgs thirdPartyProviderAuthorization) {
             this.thirdPartyProviderAuthorization = Input.ofNullable(thirdPartyProviderAuthorization);
             return this;
         }

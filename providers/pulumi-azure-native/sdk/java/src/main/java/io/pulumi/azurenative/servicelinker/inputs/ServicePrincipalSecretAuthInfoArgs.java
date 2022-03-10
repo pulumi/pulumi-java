@@ -106,42 +106,42 @@ public final class ServicePrincipalSecretAuthInfoArgs extends io.pulumi.resource
     	      this.secret = defaults.secret;
         }
 
-        public Builder setAuthType(Input<String> authType) {
+        public Builder authType(Input<String> authType) {
             this.authType = Objects.requireNonNull(authType);
             return this;
         }
 
-        public Builder setAuthType(String authType) {
+        public Builder authType(String authType) {
             this.authType = Input.of(Objects.requireNonNull(authType));
             return this;
         }
 
-        public Builder setClientId(Input<String> clientId) {
+        public Builder clientId(Input<String> clientId) {
             this.clientId = Objects.requireNonNull(clientId);
             return this;
         }
 
-        public Builder setClientId(String clientId) {
+        public Builder clientId(String clientId) {
             this.clientId = Input.of(Objects.requireNonNull(clientId));
             return this;
         }
 
-        public Builder setPrincipalId(Input<String> principalId) {
+        public Builder principalId(Input<String> principalId) {
             this.principalId = Objects.requireNonNull(principalId);
             return this;
         }
 
-        public Builder setPrincipalId(String principalId) {
+        public Builder principalId(String principalId) {
             this.principalId = Input.of(Objects.requireNonNull(principalId));
             return this;
         }
 
-        public Builder setSecret(Input<String> secret) {
+        public Builder secret(Input<String> secret) {
             this.secret = Objects.requireNonNull(secret);
             return this;
         }
 
-        public Builder setSecret(String secret) {
+        public Builder secret(String secret) {
             this.secret = Input.of(Objects.requireNonNull(secret));
             return this;
         }

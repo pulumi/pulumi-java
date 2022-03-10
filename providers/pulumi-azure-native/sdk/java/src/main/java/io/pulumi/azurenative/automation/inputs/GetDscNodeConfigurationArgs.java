@@ -84,17 +84,17 @@ public final class GetDscNodeConfigurationArgs extends io.pulumi.resources.Invok
     	      this.resourceGroupName = defaults.resourceGroupName;
         }
 
-        public Builder setAutomationAccountName(String automationAccountName) {
+        public Builder automationAccountName(String automationAccountName) {
             this.automationAccountName = Objects.requireNonNull(automationAccountName);
             return this;
         }
 
-        public Builder setNodeConfigurationName(String nodeConfigurationName) {
+        public Builder nodeConfigurationName(String nodeConfigurationName) {
             this.nodeConfigurationName = Objects.requireNonNull(nodeConfigurationName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }

@@ -68,12 +68,12 @@ public final class ListWorkspaceCollectionAccessKeysArgs extends io.pulumi.resou
     	      this.workspaceCollectionName = defaults.workspaceCollectionName;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setWorkspaceCollectionName(String workspaceCollectionName) {
+        public Builder workspaceCollectionName(String workspaceCollectionName) {
             this.workspaceCollectionName = Objects.requireNonNull(workspaceCollectionName);
             return this;
         }

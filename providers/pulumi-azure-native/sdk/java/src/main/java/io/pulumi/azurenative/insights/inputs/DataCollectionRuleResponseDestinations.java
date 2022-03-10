@@ -76,12 +76,12 @@ public final class DataCollectionRuleResponseDestinations extends io.pulumi.reso
     	      this.logAnalytics = defaults.logAnalytics;
         }
 
-        public Builder setAzureMonitorMetrics(@Nullable DestinationsSpecResponseAzureMonitorMetrics azureMonitorMetrics) {
+        public Builder azureMonitorMetrics(@Nullable DestinationsSpecResponseAzureMonitorMetrics azureMonitorMetrics) {
             this.azureMonitorMetrics = azureMonitorMetrics;
             return this;
         }
 
-        public Builder setLogAnalytics(@Nullable List<LogAnalyticsDestinationResponse> logAnalytics) {
+        public Builder logAnalytics(@Nullable List<LogAnalyticsDestinationResponse> logAnalytics) {
             this.logAnalytics = logAnalytics;
             return this;
         }

@@ -172,82 +172,82 @@ public final class KubernetesRoleArgs extends io.pulumi.resources.ResourceArgs {
     	      this.roleStatus = defaults.roleStatus;
         }
 
-        public Builder setDeviceName(Input<String> deviceName) {
+        public Builder deviceName(Input<String> deviceName) {
             this.deviceName = Objects.requireNonNull(deviceName);
             return this;
         }
 
-        public Builder setDeviceName(String deviceName) {
+        public Builder deviceName(String deviceName) {
             this.deviceName = Input.of(Objects.requireNonNull(deviceName));
             return this;
         }
 
-        public Builder setHostPlatform(Input<Either<String,PlatformType>> hostPlatform) {
+        public Builder hostPlatform(Input<Either<String,PlatformType>> hostPlatform) {
             this.hostPlatform = Objects.requireNonNull(hostPlatform);
             return this;
         }
 
-        public Builder setHostPlatform(Either<String,PlatformType> hostPlatform) {
+        public Builder hostPlatform(Either<String,PlatformType> hostPlatform) {
             this.hostPlatform = Input.of(Objects.requireNonNull(hostPlatform));
             return this;
         }
 
-        public Builder setKind(Input<String> kind) {
+        public Builder kind(Input<String> kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Input.of(Objects.requireNonNull(kind));
             return this;
         }
 
-        public Builder setKubernetesClusterInfo(Input<KubernetesClusterInfoArgs> kubernetesClusterInfo) {
+        public Builder kubernetesClusterInfo(Input<KubernetesClusterInfoArgs> kubernetesClusterInfo) {
             this.kubernetesClusterInfo = Objects.requireNonNull(kubernetesClusterInfo);
             return this;
         }
 
-        public Builder setKubernetesClusterInfo(KubernetesClusterInfoArgs kubernetesClusterInfo) {
+        public Builder kubernetesClusterInfo(KubernetesClusterInfoArgs kubernetesClusterInfo) {
             this.kubernetesClusterInfo = Input.of(Objects.requireNonNull(kubernetesClusterInfo));
             return this;
         }
 
-        public Builder setKubernetesRoleResources(Input<KubernetesRoleResourcesArgs> kubernetesRoleResources) {
+        public Builder kubernetesRoleResources(Input<KubernetesRoleResourcesArgs> kubernetesRoleResources) {
             this.kubernetesRoleResources = Objects.requireNonNull(kubernetesRoleResources);
             return this;
         }
 
-        public Builder setKubernetesRoleResources(KubernetesRoleResourcesArgs kubernetesRoleResources) {
+        public Builder kubernetesRoleResources(KubernetesRoleResourcesArgs kubernetesRoleResources) {
             this.kubernetesRoleResources = Input.of(Objects.requireNonNull(kubernetesRoleResources));
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setRoleStatus(Input<Either<String,RoleStatus>> roleStatus) {
+        public Builder roleStatus(Input<Either<String,RoleStatus>> roleStatus) {
             this.roleStatus = Objects.requireNonNull(roleStatus);
             return this;
         }
 
-        public Builder setRoleStatus(Either<String,RoleStatus> roleStatus) {
+        public Builder roleStatus(Either<String,RoleStatus> roleStatus) {
             this.roleStatus = Input.of(Objects.requireNonNull(roleStatus));
             return this;
         }

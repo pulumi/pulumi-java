@@ -156,37 +156,37 @@ public final class ContactProfileLinkChannelResponse extends io.pulumi.resources
     	      this.modulationConfiguration = defaults.modulationConfiguration;
         }
 
-        public Builder setBandwidthMHz(Double bandwidthMHz) {
+        public Builder bandwidthMHz(Double bandwidthMHz) {
             this.bandwidthMHz = Objects.requireNonNull(bandwidthMHz);
             return this;
         }
 
-        public Builder setCenterFrequencyMHz(Double centerFrequencyMHz) {
+        public Builder centerFrequencyMHz(Double centerFrequencyMHz) {
             this.centerFrequencyMHz = Objects.requireNonNull(centerFrequencyMHz);
             return this;
         }
 
-        public Builder setDecodingConfiguration(@Nullable String decodingConfiguration) {
+        public Builder decodingConfiguration(@Nullable String decodingConfiguration) {
             this.decodingConfiguration = decodingConfiguration;
             return this;
         }
 
-        public Builder setDemodulationConfiguration(@Nullable String demodulationConfiguration) {
+        public Builder demodulationConfiguration(@Nullable String demodulationConfiguration) {
             this.demodulationConfiguration = demodulationConfiguration;
             return this;
         }
 
-        public Builder setEncodingConfiguration(@Nullable String encodingConfiguration) {
+        public Builder encodingConfiguration(@Nullable String encodingConfiguration) {
             this.encodingConfiguration = encodingConfiguration;
             return this;
         }
 
-        public Builder setEndPoint(EndPointResponse endPoint) {
+        public Builder endPoint(EndPointResponse endPoint) {
             this.endPoint = Objects.requireNonNull(endPoint);
             return this;
         }
 
-        public Builder setModulationConfiguration(@Nullable String modulationConfiguration) {
+        public Builder modulationConfiguration(@Nullable String modulationConfiguration) {
             this.modulationConfiguration = modulationConfiguration;
             return this;
         }

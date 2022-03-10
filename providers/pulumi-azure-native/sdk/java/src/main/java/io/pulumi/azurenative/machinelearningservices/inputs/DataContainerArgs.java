@@ -91,32 +91,32 @@ public final class DataContainerArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setProperties(@Nullable Input<Map<String,String>> properties) {
+        public Builder properties(@Nullable Input<Map<String,String>> properties) {
             this.properties = properties;
             return this;
         }
 
-        public Builder setProperties(@Nullable Map<String,String> properties) {
+        public Builder properties(@Nullable Map<String,String> properties) {
             this.properties = Input.ofNullable(properties);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

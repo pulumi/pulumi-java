@@ -207,102 +207,102 @@ public final class AutomationArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setActions(@Nullable Input<List<Object>> actions) {
+        public Builder actions(@Nullable Input<List<Object>> actions) {
             this.actions = actions;
             return this;
         }
 
-        public Builder setActions(@Nullable List<Object> actions) {
+        public Builder actions(@Nullable List<Object> actions) {
             this.actions = Input.ofNullable(actions);
             return this;
         }
 
-        public Builder setAutomationName(@Nullable Input<String> automationName) {
+        public Builder automationName(@Nullable Input<String> automationName) {
             this.automationName = automationName;
             return this;
         }
 
-        public Builder setAutomationName(@Nullable String automationName) {
+        public Builder automationName(@Nullable String automationName) {
             this.automationName = Input.ofNullable(automationName);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setIsEnabled(@Nullable Input<Boolean> isEnabled) {
+        public Builder isEnabled(@Nullable Input<Boolean> isEnabled) {
             this.isEnabled = isEnabled;
             return this;
         }
 
-        public Builder setIsEnabled(@Nullable Boolean isEnabled) {
+        public Builder isEnabled(@Nullable Boolean isEnabled) {
             this.isEnabled = Input.ofNullable(isEnabled);
             return this;
         }
 
-        public Builder setKind(@Nullable Input<String> kind) {
+        public Builder kind(@Nullable Input<String> kind) {
             this.kind = kind;
             return this;
         }
 
-        public Builder setKind(@Nullable String kind) {
+        public Builder kind(@Nullable String kind) {
             this.kind = Input.ofNullable(kind);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setScopes(@Nullable Input<List<AutomationScopeArgs>> scopes) {
+        public Builder scopes(@Nullable Input<List<AutomationScopeArgs>> scopes) {
             this.scopes = scopes;
             return this;
         }
 
-        public Builder setScopes(@Nullable List<AutomationScopeArgs> scopes) {
+        public Builder scopes(@Nullable List<AutomationScopeArgs> scopes) {
             this.scopes = Input.ofNullable(scopes);
             return this;
         }
 
-        public Builder setSources(@Nullable Input<List<AutomationSourceArgs>> sources) {
+        public Builder sources(@Nullable Input<List<AutomationSourceArgs>> sources) {
             this.sources = sources;
             return this;
         }
 
-        public Builder setSources(@Nullable List<AutomationSourceArgs> sources) {
+        public Builder sources(@Nullable List<AutomationSourceArgs> sources) {
             this.sources = Input.ofNullable(sources);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

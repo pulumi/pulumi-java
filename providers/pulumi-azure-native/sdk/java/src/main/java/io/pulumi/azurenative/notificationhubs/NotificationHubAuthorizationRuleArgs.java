@@ -119,52 +119,52 @@ public final class NotificationHubAuthorizationRuleArgs extends io.pulumi.resour
     	      this.resourceGroupName = defaults.resourceGroupName;
         }
 
-        public Builder setAuthorizationRuleName(@Nullable Input<String> authorizationRuleName) {
+        public Builder authorizationRuleName(@Nullable Input<String> authorizationRuleName) {
             this.authorizationRuleName = authorizationRuleName;
             return this;
         }
 
-        public Builder setAuthorizationRuleName(@Nullable String authorizationRuleName) {
+        public Builder authorizationRuleName(@Nullable String authorizationRuleName) {
             this.authorizationRuleName = Input.ofNullable(authorizationRuleName);
             return this;
         }
 
-        public Builder setNamespaceName(Input<String> namespaceName) {
+        public Builder namespaceName(Input<String> namespaceName) {
             this.namespaceName = Objects.requireNonNull(namespaceName);
             return this;
         }
 
-        public Builder setNamespaceName(String namespaceName) {
+        public Builder namespaceName(String namespaceName) {
             this.namespaceName = Input.of(Objects.requireNonNull(namespaceName));
             return this;
         }
 
-        public Builder setNotificationHubName(Input<String> notificationHubName) {
+        public Builder notificationHubName(Input<String> notificationHubName) {
             this.notificationHubName = Objects.requireNonNull(notificationHubName);
             return this;
         }
 
-        public Builder setNotificationHubName(String notificationHubName) {
+        public Builder notificationHubName(String notificationHubName) {
             this.notificationHubName = Input.of(Objects.requireNonNull(notificationHubName));
             return this;
         }
 
-        public Builder setProperties(Input<SharedAccessAuthorizationRulePropertiesArgs> properties) {
+        public Builder properties(Input<SharedAccessAuthorizationRulePropertiesArgs> properties) {
             this.properties = Objects.requireNonNull(properties);
             return this;
         }
 
-        public Builder setProperties(SharedAccessAuthorizationRulePropertiesArgs properties) {
+        public Builder properties(SharedAccessAuthorizationRulePropertiesArgs properties) {
             this.properties = Input.of(Objects.requireNonNull(properties));
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }

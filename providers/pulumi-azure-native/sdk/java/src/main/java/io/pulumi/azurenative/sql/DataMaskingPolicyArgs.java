@@ -135,62 +135,62 @@ public final class DataMaskingPolicyArgs extends io.pulumi.resources.ResourceArg
     	      this.serverName = defaults.serverName;
         }
 
-        public Builder setDataMaskingPolicyName(@Nullable Input<String> dataMaskingPolicyName) {
+        public Builder dataMaskingPolicyName(@Nullable Input<String> dataMaskingPolicyName) {
             this.dataMaskingPolicyName = dataMaskingPolicyName;
             return this;
         }
 
-        public Builder setDataMaskingPolicyName(@Nullable String dataMaskingPolicyName) {
+        public Builder dataMaskingPolicyName(@Nullable String dataMaskingPolicyName) {
             this.dataMaskingPolicyName = Input.ofNullable(dataMaskingPolicyName);
             return this;
         }
 
-        public Builder setDataMaskingState(Input<DataMaskingState> dataMaskingState) {
+        public Builder dataMaskingState(Input<DataMaskingState> dataMaskingState) {
             this.dataMaskingState = Objects.requireNonNull(dataMaskingState);
             return this;
         }
 
-        public Builder setDataMaskingState(DataMaskingState dataMaskingState) {
+        public Builder dataMaskingState(DataMaskingState dataMaskingState) {
             this.dataMaskingState = Input.of(Objects.requireNonNull(dataMaskingState));
             return this;
         }
 
-        public Builder setDatabaseName(Input<String> databaseName) {
+        public Builder databaseName(Input<String> databaseName) {
             this.databaseName = Objects.requireNonNull(databaseName);
             return this;
         }
 
-        public Builder setDatabaseName(String databaseName) {
+        public Builder databaseName(String databaseName) {
             this.databaseName = Input.of(Objects.requireNonNull(databaseName));
             return this;
         }
 
-        public Builder setExemptPrincipals(@Nullable Input<String> exemptPrincipals) {
+        public Builder exemptPrincipals(@Nullable Input<String> exemptPrincipals) {
             this.exemptPrincipals = exemptPrincipals;
             return this;
         }
 
-        public Builder setExemptPrincipals(@Nullable String exemptPrincipals) {
+        public Builder exemptPrincipals(@Nullable String exemptPrincipals) {
             this.exemptPrincipals = Input.ofNullable(exemptPrincipals);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setServerName(Input<String> serverName) {
+        public Builder serverName(Input<String> serverName) {
             this.serverName = Objects.requireNonNull(serverName);
             return this;
         }
 
-        public Builder setServerName(String serverName) {
+        public Builder serverName(String serverName) {
             this.serverName = Input.of(Objects.requireNonNull(serverName));
             return this;
         }

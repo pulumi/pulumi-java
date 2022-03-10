@@ -141,62 +141,62 @@ public final class AppResourcePropertiesArgs extends io.pulumi.resources.Resourc
     	      this.temporaryDisk = defaults.temporaryDisk;
         }
 
-        public Builder setActiveDeploymentName(@Nullable Input<String> activeDeploymentName) {
+        public Builder activeDeploymentName(@Nullable Input<String> activeDeploymentName) {
             this.activeDeploymentName = activeDeploymentName;
             return this;
         }
 
-        public Builder setActiveDeploymentName(@Nullable String activeDeploymentName) {
+        public Builder activeDeploymentName(@Nullable String activeDeploymentName) {
             this.activeDeploymentName = Input.ofNullable(activeDeploymentName);
             return this;
         }
 
-        public Builder setFqdn(@Nullable Input<String> fqdn) {
+        public Builder fqdn(@Nullable Input<String> fqdn) {
             this.fqdn = fqdn;
             return this;
         }
 
-        public Builder setFqdn(@Nullable String fqdn) {
+        public Builder fqdn(@Nullable String fqdn) {
             this.fqdn = Input.ofNullable(fqdn);
             return this;
         }
 
-        public Builder setHttpsOnly(@Nullable Input<Boolean> httpsOnly) {
+        public Builder httpsOnly(@Nullable Input<Boolean> httpsOnly) {
             this.httpsOnly = httpsOnly;
             return this;
         }
 
-        public Builder setHttpsOnly(@Nullable Boolean httpsOnly) {
+        public Builder httpsOnly(@Nullable Boolean httpsOnly) {
             this.httpsOnly = Input.ofNullable(httpsOnly);
             return this;
         }
 
-        public Builder setPersistentDisk(@Nullable Input<PersistentDiskArgs> persistentDisk) {
+        public Builder persistentDisk(@Nullable Input<PersistentDiskArgs> persistentDisk) {
             this.persistentDisk = persistentDisk;
             return this;
         }
 
-        public Builder setPersistentDisk(@Nullable PersistentDiskArgs persistentDisk) {
+        public Builder persistentDisk(@Nullable PersistentDiskArgs persistentDisk) {
             this.persistentDisk = Input.ofNullable(persistentDisk);
             return this;
         }
 
-        public Builder set$public(@Nullable Input<Boolean> $public) {
+        public Builder $public(@Nullable Input<Boolean> $public) {
             this.$public = $public;
             return this;
         }
 
-        public Builder set$public(@Nullable Boolean $public) {
+        public Builder $public(@Nullable Boolean $public) {
             this.$public = Input.ofNullable($public);
             return this;
         }
 
-        public Builder setTemporaryDisk(@Nullable Input<TemporaryDiskArgs> temporaryDisk) {
+        public Builder temporaryDisk(@Nullable Input<TemporaryDiskArgs> temporaryDisk) {
             this.temporaryDisk = temporaryDisk;
             return this;
         }
 
-        public Builder setTemporaryDisk(@Nullable TemporaryDiskArgs temporaryDisk) {
+        public Builder temporaryDisk(@Nullable TemporaryDiskArgs temporaryDisk) {
             this.temporaryDisk = Input.ofNullable(temporaryDisk);
             return this;
         }

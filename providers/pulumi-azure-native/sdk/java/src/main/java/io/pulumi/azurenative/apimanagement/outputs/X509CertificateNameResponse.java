@@ -67,12 +67,12 @@ public final class X509CertificateNameResponse {
     	      this.name = defaults.name;
         }
 
-        public Builder setIssuerCertificateThumbprint(@Nullable String issuerCertificateThumbprint) {
+        public Builder issuerCertificateThumbprint(@Nullable String issuerCertificateThumbprint) {
             this.issuerCertificateThumbprint = issuerCertificateThumbprint;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }

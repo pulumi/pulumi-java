@@ -74,12 +74,12 @@ public final class ConsortiumResponse extends io.pulumi.resources.InvokeArgs {
     	      this.protocol = defaults.protocol;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setProtocol(@Nullable String protocol) {
+        public Builder protocol(@Nullable String protocol) {
             this.protocol = protocol;
             return this;
         }

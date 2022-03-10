@@ -50,7 +50,7 @@ public final class MapsAccountPropertiesResponse {
     	      this.xMsClientId = defaults.xMsClientId;
         }
 
-        public Builder setXMsClientId(@Nullable String xMsClientId) {
+        public Builder xMsClientId(@Nullable String xMsClientId) {
             this.xMsClientId = xMsClientId;
             return this;
         }

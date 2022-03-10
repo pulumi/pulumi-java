@@ -90,32 +90,32 @@ public final class MediaGraphUsernamePasswordCredentialsArgs extends io.pulumi.r
     	      this.username = defaults.username;
         }
 
-        public Builder setOdataType(Input<String> odataType) {
+        public Builder odataType(Input<String> odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
 
-        public Builder setOdataType(String odataType) {
+        public Builder odataType(String odataType) {
             this.odataType = Input.of(Objects.requireNonNull(odataType));
             return this;
         }
 
-        public Builder setPassword(Input<String> password) {
+        public Builder password(Input<String> password) {
             this.password = Objects.requireNonNull(password);
             return this;
         }
 
-        public Builder setPassword(String password) {
+        public Builder password(String password) {
             this.password = Input.of(Objects.requireNonNull(password));
             return this;
         }
 
-        public Builder setUsername(Input<String> username) {
+        public Builder username(Input<String> username) {
             this.username = Objects.requireNonNull(username);
             return this;
         }
 
-        public Builder setUsername(String username) {
+        public Builder username(String username) {
             this.username = Input.of(Objects.requireNonNull(username));
             return this;
         }

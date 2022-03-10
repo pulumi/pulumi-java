@@ -318,172 +318,172 @@ public final class KpiArgs extends io.pulumi.resources.ResourceArgs {
     	      this.unit = defaults.unit;
         }
 
-        public Builder setAliases(@Nullable Input<List<KpiAliasArgs>> aliases) {
+        public Builder aliases(@Nullable Input<List<KpiAliasArgs>> aliases) {
             this.aliases = aliases;
             return this;
         }
 
-        public Builder setAliases(@Nullable List<KpiAliasArgs> aliases) {
+        public Builder aliases(@Nullable List<KpiAliasArgs> aliases) {
             this.aliases = Input.ofNullable(aliases);
             return this;
         }
 
-        public Builder setCalculationWindow(Input<CalculationWindowTypes> calculationWindow) {
+        public Builder calculationWindow(Input<CalculationWindowTypes> calculationWindow) {
             this.calculationWindow = Objects.requireNonNull(calculationWindow);
             return this;
         }
 
-        public Builder setCalculationWindow(CalculationWindowTypes calculationWindow) {
+        public Builder calculationWindow(CalculationWindowTypes calculationWindow) {
             this.calculationWindow = Input.of(Objects.requireNonNull(calculationWindow));
             return this;
         }
 
-        public Builder setCalculationWindowFieldName(@Nullable Input<String> calculationWindowFieldName) {
+        public Builder calculationWindowFieldName(@Nullable Input<String> calculationWindowFieldName) {
             this.calculationWindowFieldName = calculationWindowFieldName;
             return this;
         }
 
-        public Builder setCalculationWindowFieldName(@Nullable String calculationWindowFieldName) {
+        public Builder calculationWindowFieldName(@Nullable String calculationWindowFieldName) {
             this.calculationWindowFieldName = Input.ofNullable(calculationWindowFieldName);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<Map<String,String>> description) {
+        public Builder description(@Nullable Input<Map<String,String>> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable Map<String,String> description) {
+        public Builder description(@Nullable Map<String,String> description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setDisplayName(@Nullable Input<Map<String,String>> displayName) {
+        public Builder displayName(@Nullable Input<Map<String,String>> displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setDisplayName(@Nullable Map<String,String> displayName) {
+        public Builder displayName(@Nullable Map<String,String> displayName) {
             this.displayName = Input.ofNullable(displayName);
             return this;
         }
 
-        public Builder setEntityType(Input<EntityTypes> entityType) {
+        public Builder entityType(Input<EntityTypes> entityType) {
             this.entityType = Objects.requireNonNull(entityType);
             return this;
         }
 
-        public Builder setEntityType(EntityTypes entityType) {
+        public Builder entityType(EntityTypes entityType) {
             this.entityType = Input.of(Objects.requireNonNull(entityType));
             return this;
         }
 
-        public Builder setEntityTypeName(Input<String> entityTypeName) {
+        public Builder entityTypeName(Input<String> entityTypeName) {
             this.entityTypeName = Objects.requireNonNull(entityTypeName);
             return this;
         }
 
-        public Builder setEntityTypeName(String entityTypeName) {
+        public Builder entityTypeName(String entityTypeName) {
             this.entityTypeName = Input.of(Objects.requireNonNull(entityTypeName));
             return this;
         }
 
-        public Builder setExpression(Input<String> expression) {
+        public Builder expression(Input<String> expression) {
             this.expression = Objects.requireNonNull(expression);
             return this;
         }
 
-        public Builder setExpression(String expression) {
+        public Builder expression(String expression) {
             this.expression = Input.of(Objects.requireNonNull(expression));
             return this;
         }
 
-        public Builder setExtracts(@Nullable Input<List<KpiExtractArgs>> extracts) {
+        public Builder extracts(@Nullable Input<List<KpiExtractArgs>> extracts) {
             this.extracts = extracts;
             return this;
         }
 
-        public Builder setExtracts(@Nullable List<KpiExtractArgs> extracts) {
+        public Builder extracts(@Nullable List<KpiExtractArgs> extracts) {
             this.extracts = Input.ofNullable(extracts);
             return this;
         }
 
-        public Builder setFilter(@Nullable Input<String> filter) {
+        public Builder filter(@Nullable Input<String> filter) {
             this.filter = filter;
             return this;
         }
 
-        public Builder setFilter(@Nullable String filter) {
+        public Builder filter(@Nullable String filter) {
             this.filter = Input.ofNullable(filter);
             return this;
         }
 
-        public Builder setFunction(Input<KpiFunctions> function) {
+        public Builder function(Input<KpiFunctions> function) {
             this.function = Objects.requireNonNull(function);
             return this;
         }
 
-        public Builder setFunction(KpiFunctions function) {
+        public Builder function(KpiFunctions function) {
             this.function = Input.of(Objects.requireNonNull(function));
             return this;
         }
 
-        public Builder setGroupBy(@Nullable Input<List<String>> groupBy) {
+        public Builder groupBy(@Nullable Input<List<String>> groupBy) {
             this.groupBy = groupBy;
             return this;
         }
 
-        public Builder setGroupBy(@Nullable List<String> groupBy) {
+        public Builder groupBy(@Nullable List<String> groupBy) {
             this.groupBy = Input.ofNullable(groupBy);
             return this;
         }
 
-        public Builder setHubName(Input<String> hubName) {
+        public Builder hubName(Input<String> hubName) {
             this.hubName = Objects.requireNonNull(hubName);
             return this;
         }
 
-        public Builder setHubName(String hubName) {
+        public Builder hubName(String hubName) {
             this.hubName = Input.of(Objects.requireNonNull(hubName));
             return this;
         }
 
-        public Builder setKpiName(@Nullable Input<String> kpiName) {
+        public Builder kpiName(@Nullable Input<String> kpiName) {
             this.kpiName = kpiName;
             return this;
         }
 
-        public Builder setKpiName(@Nullable String kpiName) {
+        public Builder kpiName(@Nullable String kpiName) {
             this.kpiName = Input.ofNullable(kpiName);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setThresHolds(@Nullable Input<KpiThresholdsArgs> thresHolds) {
+        public Builder thresHolds(@Nullable Input<KpiThresholdsArgs> thresHolds) {
             this.thresHolds = thresHolds;
             return this;
         }
 
-        public Builder setThresHolds(@Nullable KpiThresholdsArgs thresHolds) {
+        public Builder thresHolds(@Nullable KpiThresholdsArgs thresHolds) {
             this.thresHolds = Input.ofNullable(thresHolds);
             return this;
         }
 
-        public Builder setUnit(@Nullable Input<String> unit) {
+        public Builder unit(@Nullable Input<String> unit) {
             this.unit = unit;
             return this;
         }
 
-        public Builder setUnit(@Nullable String unit) {
+        public Builder unit(@Nullable String unit) {
             this.unit = Input.ofNullable(unit);
             return this;
         }

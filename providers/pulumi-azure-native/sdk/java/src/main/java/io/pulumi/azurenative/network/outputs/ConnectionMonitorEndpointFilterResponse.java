@@ -69,12 +69,12 @@ public final class ConnectionMonitorEndpointFilterResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setItems(@Nullable List<ConnectionMonitorEndpointFilterItemResponse> items) {
+        public Builder items(@Nullable List<ConnectionMonitorEndpointFilterItemResponse> items) {
             this.items = items;
             return this;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = type;
             return this;
         }

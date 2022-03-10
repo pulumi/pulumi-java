@@ -82,17 +82,17 @@ public final class KpiThresholdsResponse {
     	      this.upperLimit = defaults.upperLimit;
         }
 
-        public Builder setIncreasingKpi(Boolean increasingKpi) {
+        public Builder increasingKpi(Boolean increasingKpi) {
             this.increasingKpi = Objects.requireNonNull(increasingKpi);
             return this;
         }
 
-        public Builder setLowerLimit(Double lowerLimit) {
+        public Builder lowerLimit(Double lowerLimit) {
             this.lowerLimit = Objects.requireNonNull(lowerLimit);
             return this;
         }
 
-        public Builder setUpperLimit(Double upperLimit) {
+        public Builder upperLimit(Double upperLimit) {
             this.upperLimit = Objects.requireNonNull(upperLimit);
             return this;
         }

@@ -106,22 +106,22 @@ public final class ListProductFamiliesArgs extends io.pulumi.resources.InvokeArg
     	      this.skipToken = defaults.skipToken;
         }
 
-        public Builder setCustomerSubscriptionDetails(@Nullable CustomerSubscriptionDetails customerSubscriptionDetails) {
+        public Builder customerSubscriptionDetails(@Nullable CustomerSubscriptionDetails customerSubscriptionDetails) {
             this.customerSubscriptionDetails = customerSubscriptionDetails;
             return this;
         }
 
-        public Builder setExpand(@Nullable String expand) {
+        public Builder expand(@Nullable String expand) {
             this.expand = expand;
             return this;
         }
 
-        public Builder setFilterableProperties(Map<String,List<FilterableProperty>> filterableProperties) {
+        public Builder filterableProperties(Map<String,List<FilterableProperty>> filterableProperties) {
             this.filterableProperties = Objects.requireNonNull(filterableProperties);
             return this;
         }
 
-        public Builder setSkipToken(@Nullable String skipToken) {
+        public Builder skipToken(@Nullable String skipToken) {
             this.skipToken = skipToken;
             return this;
         }

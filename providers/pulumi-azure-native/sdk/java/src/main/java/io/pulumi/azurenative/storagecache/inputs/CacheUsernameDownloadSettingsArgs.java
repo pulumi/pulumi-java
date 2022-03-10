@@ -222,112 +222,112 @@ public final class CacheUsernameDownloadSettingsArgs extends io.pulumi.resources
     	      this.usernameSource = defaults.usernameSource;
         }
 
-        public Builder setAutoDownloadCertificate(@Nullable Input<Boolean> autoDownloadCertificate) {
+        public Builder autoDownloadCertificate(@Nullable Input<Boolean> autoDownloadCertificate) {
             this.autoDownloadCertificate = autoDownloadCertificate;
             return this;
         }
 
-        public Builder setAutoDownloadCertificate(@Nullable Boolean autoDownloadCertificate) {
+        public Builder autoDownloadCertificate(@Nullable Boolean autoDownloadCertificate) {
             this.autoDownloadCertificate = Input.ofNullable(autoDownloadCertificate);
             return this;
         }
 
-        public Builder setCaCertificateURI(@Nullable Input<String> caCertificateURI) {
+        public Builder caCertificateURI(@Nullable Input<String> caCertificateURI) {
             this.caCertificateURI = caCertificateURI;
             return this;
         }
 
-        public Builder setCaCertificateURI(@Nullable String caCertificateURI) {
+        public Builder caCertificateURI(@Nullable String caCertificateURI) {
             this.caCertificateURI = Input.ofNullable(caCertificateURI);
             return this;
         }
 
-        public Builder setCredentials(@Nullable Input<CacheUsernameDownloadSettingsCredentialsArgs> credentials) {
+        public Builder credentials(@Nullable Input<CacheUsernameDownloadSettingsCredentialsArgs> credentials) {
             this.credentials = credentials;
             return this;
         }
 
-        public Builder setCredentials(@Nullable CacheUsernameDownloadSettingsCredentialsArgs credentials) {
+        public Builder credentials(@Nullable CacheUsernameDownloadSettingsCredentialsArgs credentials) {
             this.credentials = Input.ofNullable(credentials);
             return this;
         }
 
-        public Builder setEncryptLdapConnection(@Nullable Input<Boolean> encryptLdapConnection) {
+        public Builder encryptLdapConnection(@Nullable Input<Boolean> encryptLdapConnection) {
             this.encryptLdapConnection = encryptLdapConnection;
             return this;
         }
 
-        public Builder setEncryptLdapConnection(@Nullable Boolean encryptLdapConnection) {
+        public Builder encryptLdapConnection(@Nullable Boolean encryptLdapConnection) {
             this.encryptLdapConnection = Input.ofNullable(encryptLdapConnection);
             return this;
         }
 
-        public Builder setExtendedGroups(@Nullable Input<Boolean> extendedGroups) {
+        public Builder extendedGroups(@Nullable Input<Boolean> extendedGroups) {
             this.extendedGroups = extendedGroups;
             return this;
         }
 
-        public Builder setExtendedGroups(@Nullable Boolean extendedGroups) {
+        public Builder extendedGroups(@Nullable Boolean extendedGroups) {
             this.extendedGroups = Input.ofNullable(extendedGroups);
             return this;
         }
 
-        public Builder setGroupFileURI(@Nullable Input<String> groupFileURI) {
+        public Builder groupFileURI(@Nullable Input<String> groupFileURI) {
             this.groupFileURI = groupFileURI;
             return this;
         }
 
-        public Builder setGroupFileURI(@Nullable String groupFileURI) {
+        public Builder groupFileURI(@Nullable String groupFileURI) {
             this.groupFileURI = Input.ofNullable(groupFileURI);
             return this;
         }
 
-        public Builder setLdapBaseDN(@Nullable Input<String> ldapBaseDN) {
+        public Builder ldapBaseDN(@Nullable Input<String> ldapBaseDN) {
             this.ldapBaseDN = ldapBaseDN;
             return this;
         }
 
-        public Builder setLdapBaseDN(@Nullable String ldapBaseDN) {
+        public Builder ldapBaseDN(@Nullable String ldapBaseDN) {
             this.ldapBaseDN = Input.ofNullable(ldapBaseDN);
             return this;
         }
 
-        public Builder setLdapServer(@Nullable Input<String> ldapServer) {
+        public Builder ldapServer(@Nullable Input<String> ldapServer) {
             this.ldapServer = ldapServer;
             return this;
         }
 
-        public Builder setLdapServer(@Nullable String ldapServer) {
+        public Builder ldapServer(@Nullable String ldapServer) {
             this.ldapServer = Input.ofNullable(ldapServer);
             return this;
         }
 
-        public Builder setRequireValidCertificate(@Nullable Input<Boolean> requireValidCertificate) {
+        public Builder requireValidCertificate(@Nullable Input<Boolean> requireValidCertificate) {
             this.requireValidCertificate = requireValidCertificate;
             return this;
         }
 
-        public Builder setRequireValidCertificate(@Nullable Boolean requireValidCertificate) {
+        public Builder requireValidCertificate(@Nullable Boolean requireValidCertificate) {
             this.requireValidCertificate = Input.ofNullable(requireValidCertificate);
             return this;
         }
 
-        public Builder setUserFileURI(@Nullable Input<String> userFileURI) {
+        public Builder userFileURI(@Nullable Input<String> userFileURI) {
             this.userFileURI = userFileURI;
             return this;
         }
 
-        public Builder setUserFileURI(@Nullable String userFileURI) {
+        public Builder userFileURI(@Nullable String userFileURI) {
             this.userFileURI = Input.ofNullable(userFileURI);
             return this;
         }
 
-        public Builder setUsernameSource(@Nullable Input<Either<String,UsernameSource>> usernameSource) {
+        public Builder usernameSource(@Nullable Input<Either<String,UsernameSource>> usernameSource) {
             this.usernameSource = usernameSource;
             return this;
         }
 
-        public Builder setUsernameSource(@Nullable Either<String,UsernameSource> usernameSource) {
+        public Builder usernameSource(@Nullable Either<String,UsernameSource> usernameSource) {
             this.usernameSource = Input.ofNullable(usernameSource);
             return this;
         }

@@ -107,42 +107,42 @@ public final class CertificateConfigurationArgs extends io.pulumi.resources.Reso
     	      this.storeName = defaults.storeName;
         }
 
-        public Builder setCertificate(@Nullable Input<CertificateInformationArgs> certificate) {
+        public Builder certificate(@Nullable Input<CertificateInformationArgs> certificate) {
             this.certificate = certificate;
             return this;
         }
 
-        public Builder setCertificate(@Nullable CertificateInformationArgs certificate) {
+        public Builder certificate(@Nullable CertificateInformationArgs certificate) {
             this.certificate = Input.ofNullable(certificate);
             return this;
         }
 
-        public Builder setCertificatePassword(@Nullable Input<String> certificatePassword) {
+        public Builder certificatePassword(@Nullable Input<String> certificatePassword) {
             this.certificatePassword = certificatePassword;
             return this;
         }
 
-        public Builder setCertificatePassword(@Nullable String certificatePassword) {
+        public Builder certificatePassword(@Nullable String certificatePassword) {
             this.certificatePassword = Input.ofNullable(certificatePassword);
             return this;
         }
 
-        public Builder setEncodedCertificate(@Nullable Input<String> encodedCertificate) {
+        public Builder encodedCertificate(@Nullable Input<String> encodedCertificate) {
             this.encodedCertificate = encodedCertificate;
             return this;
         }
 
-        public Builder setEncodedCertificate(@Nullable String encodedCertificate) {
+        public Builder encodedCertificate(@Nullable String encodedCertificate) {
             this.encodedCertificate = Input.ofNullable(encodedCertificate);
             return this;
         }
 
-        public Builder setStoreName(Input<String> storeName) {
+        public Builder storeName(Input<String> storeName) {
             this.storeName = Objects.requireNonNull(storeName);
             return this;
         }
 
-        public Builder setStoreName(String storeName) {
+        public Builder storeName(String storeName) {
             this.storeName = Input.of(Objects.requireNonNull(storeName));
             return this;
         }

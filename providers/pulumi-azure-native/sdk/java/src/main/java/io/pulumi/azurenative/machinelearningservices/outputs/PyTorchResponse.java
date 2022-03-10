@@ -70,12 +70,12 @@ public final class PyTorchResponse {
     	      this.processCount = defaults.processCount;
         }
 
-        public Builder setDistributionType(String distributionType) {
+        public Builder distributionType(String distributionType) {
             this.distributionType = Objects.requireNonNull(distributionType);
             return this;
         }
 
-        public Builder setProcessCount(@Nullable Integer processCount) {
+        public Builder processCount(@Nullable Integer processCount) {
             this.processCount = processCount;
             return this;
         }

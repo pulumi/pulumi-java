@@ -74,12 +74,12 @@ public final class SourceResponse extends io.pulumi.resources.InvokeArgs {
     	      this.instanceID = defaults.instanceID;
         }
 
-        public Builder setAddr(@Nullable String addr) {
+        public Builder addr(@Nullable String addr) {
             this.addr = addr;
             return this;
         }
 
-        public Builder setInstanceID(@Nullable String instanceID) {
+        public Builder instanceID(@Nullable String instanceID) {
             this.instanceID = instanceID;
             return this;
         }

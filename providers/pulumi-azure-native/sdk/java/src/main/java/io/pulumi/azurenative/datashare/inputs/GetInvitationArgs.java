@@ -100,22 +100,22 @@ public final class GetInvitationArgs extends io.pulumi.resources.InvokeArgs {
     	      this.shareName = defaults.shareName;
         }
 
-        public Builder setAccountName(String accountName) {
+        public Builder accountName(String accountName) {
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
 
-        public Builder setInvitationName(String invitationName) {
+        public Builder invitationName(String invitationName) {
             this.invitationName = Objects.requireNonNull(invitationName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setShareName(String shareName) {
+        public Builder shareName(String shareName) {
             this.shareName = Objects.requireNonNull(shareName);
             return this;
         }

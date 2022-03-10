@@ -57,12 +57,12 @@ public final class CdnCertificateSourceParametersResponse {
     	      this.odataType = defaults.odataType;
         }
 
-        public Builder setCertificateType(String certificateType) {
+        public Builder certificateType(String certificateType) {
             this.certificateType = Objects.requireNonNull(certificateType);
             return this;
         }
 
-        public Builder setOdataType(String odataType) {
+        public Builder odataType(String odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }

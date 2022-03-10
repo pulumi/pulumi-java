@@ -68,12 +68,12 @@ public final class GetEventSubscriptionFullUrlArgs extends io.pulumi.resources.I
     	      this.scope = defaults.scope;
         }
 
-        public Builder setEventSubscriptionName(String eventSubscriptionName) {
+        public Builder eventSubscriptionName(String eventSubscriptionName) {
             this.eventSubscriptionName = Objects.requireNonNull(eventSubscriptionName);
             return this;
         }
 
-        public Builder setScope(String scope) {
+        public Builder scope(String scope) {
             this.scope = Objects.requireNonNull(scope);
             return this;
         }

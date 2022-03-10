@@ -505,282 +505,282 @@ public final class DatabaseAccountArgs extends io.pulumi.resources.ResourceArgs 
     	      this.virtualNetworkRules = defaults.virtualNetworkRules;
         }
 
-        public Builder setAccountName(@Nullable Input<String> accountName) {
+        public Builder accountName(@Nullable Input<String> accountName) {
             this.accountName = accountName;
             return this;
         }
 
-        public Builder setAccountName(@Nullable String accountName) {
+        public Builder accountName(@Nullable String accountName) {
             this.accountName = Input.ofNullable(accountName);
             return this;
         }
 
-        public Builder setApiProperties(@Nullable Input<ApiPropertiesArgs> apiProperties) {
+        public Builder apiProperties(@Nullable Input<ApiPropertiesArgs> apiProperties) {
             this.apiProperties = apiProperties;
             return this;
         }
 
-        public Builder setApiProperties(@Nullable ApiPropertiesArgs apiProperties) {
+        public Builder apiProperties(@Nullable ApiPropertiesArgs apiProperties) {
             this.apiProperties = Input.ofNullable(apiProperties);
             return this;
         }
 
-        public Builder setBackupPolicy(@Nullable Input<Either<ContinuousModeBackupPolicyArgs,PeriodicModeBackupPolicyArgs>> backupPolicy) {
+        public Builder backupPolicy(@Nullable Input<Either<ContinuousModeBackupPolicyArgs,PeriodicModeBackupPolicyArgs>> backupPolicy) {
             this.backupPolicy = backupPolicy;
             return this;
         }
 
-        public Builder setBackupPolicy(@Nullable Either<ContinuousModeBackupPolicyArgs,PeriodicModeBackupPolicyArgs> backupPolicy) {
+        public Builder backupPolicy(@Nullable Either<ContinuousModeBackupPolicyArgs,PeriodicModeBackupPolicyArgs> backupPolicy) {
             this.backupPolicy = Input.ofNullable(backupPolicy);
             return this;
         }
 
-        public Builder setCapabilities(@Nullable Input<List<CapabilityArgs>> capabilities) {
+        public Builder capabilities(@Nullable Input<List<CapabilityArgs>> capabilities) {
             this.capabilities = capabilities;
             return this;
         }
 
-        public Builder setCapabilities(@Nullable List<CapabilityArgs> capabilities) {
+        public Builder capabilities(@Nullable List<CapabilityArgs> capabilities) {
             this.capabilities = Input.ofNullable(capabilities);
             return this;
         }
 
-        public Builder setConnectorOffer(@Nullable Input<Either<String,ConnectorOffer>> connectorOffer) {
+        public Builder connectorOffer(@Nullable Input<Either<String,ConnectorOffer>> connectorOffer) {
             this.connectorOffer = connectorOffer;
             return this;
         }
 
-        public Builder setConnectorOffer(@Nullable Either<String,ConnectorOffer> connectorOffer) {
+        public Builder connectorOffer(@Nullable Either<String,ConnectorOffer> connectorOffer) {
             this.connectorOffer = Input.ofNullable(connectorOffer);
             return this;
         }
 
-        public Builder setConsistencyPolicy(@Nullable Input<ConsistencyPolicyArgs> consistencyPolicy) {
+        public Builder consistencyPolicy(@Nullable Input<ConsistencyPolicyArgs> consistencyPolicy) {
             this.consistencyPolicy = consistencyPolicy;
             return this;
         }
 
-        public Builder setConsistencyPolicy(@Nullable ConsistencyPolicyArgs consistencyPolicy) {
+        public Builder consistencyPolicy(@Nullable ConsistencyPolicyArgs consistencyPolicy) {
             this.consistencyPolicy = Input.ofNullable(consistencyPolicy);
             return this;
         }
 
-        public Builder setCors(@Nullable Input<List<CorsPolicyArgs>> cors) {
+        public Builder cors(@Nullable Input<List<CorsPolicyArgs>> cors) {
             this.cors = cors;
             return this;
         }
 
-        public Builder setCors(@Nullable List<CorsPolicyArgs> cors) {
+        public Builder cors(@Nullable List<CorsPolicyArgs> cors) {
             this.cors = Input.ofNullable(cors);
             return this;
         }
 
-        public Builder setDatabaseAccountOfferType(Input<DatabaseAccountOfferType> databaseAccountOfferType) {
+        public Builder databaseAccountOfferType(Input<DatabaseAccountOfferType> databaseAccountOfferType) {
             this.databaseAccountOfferType = Objects.requireNonNull(databaseAccountOfferType);
             return this;
         }
 
-        public Builder setDatabaseAccountOfferType(DatabaseAccountOfferType databaseAccountOfferType) {
+        public Builder databaseAccountOfferType(DatabaseAccountOfferType databaseAccountOfferType) {
             this.databaseAccountOfferType = Input.of(Objects.requireNonNull(databaseAccountOfferType));
             return this;
         }
 
-        public Builder setDefaultIdentity(@Nullable Input<String> defaultIdentity) {
+        public Builder defaultIdentity(@Nullable Input<String> defaultIdentity) {
             this.defaultIdentity = defaultIdentity;
             return this;
         }
 
-        public Builder setDefaultIdentity(@Nullable String defaultIdentity) {
+        public Builder defaultIdentity(@Nullable String defaultIdentity) {
             this.defaultIdentity = Input.ofNullable(defaultIdentity);
             return this;
         }
 
-        public Builder setDisableKeyBasedMetadataWriteAccess(@Nullable Input<Boolean> disableKeyBasedMetadataWriteAccess) {
+        public Builder disableKeyBasedMetadataWriteAccess(@Nullable Input<Boolean> disableKeyBasedMetadataWriteAccess) {
             this.disableKeyBasedMetadataWriteAccess = disableKeyBasedMetadataWriteAccess;
             return this;
         }
 
-        public Builder setDisableKeyBasedMetadataWriteAccess(@Nullable Boolean disableKeyBasedMetadataWriteAccess) {
+        public Builder disableKeyBasedMetadataWriteAccess(@Nullable Boolean disableKeyBasedMetadataWriteAccess) {
             this.disableKeyBasedMetadataWriteAccess = Input.ofNullable(disableKeyBasedMetadataWriteAccess);
             return this;
         }
 
-        public Builder setEnableAnalyticalStorage(@Nullable Input<Boolean> enableAnalyticalStorage) {
+        public Builder enableAnalyticalStorage(@Nullable Input<Boolean> enableAnalyticalStorage) {
             this.enableAnalyticalStorage = enableAnalyticalStorage;
             return this;
         }
 
-        public Builder setEnableAnalyticalStorage(@Nullable Boolean enableAnalyticalStorage) {
+        public Builder enableAnalyticalStorage(@Nullable Boolean enableAnalyticalStorage) {
             this.enableAnalyticalStorage = Input.ofNullable(enableAnalyticalStorage);
             return this;
         }
 
-        public Builder setEnableAutomaticFailover(@Nullable Input<Boolean> enableAutomaticFailover) {
+        public Builder enableAutomaticFailover(@Nullable Input<Boolean> enableAutomaticFailover) {
             this.enableAutomaticFailover = enableAutomaticFailover;
             return this;
         }
 
-        public Builder setEnableAutomaticFailover(@Nullable Boolean enableAutomaticFailover) {
+        public Builder enableAutomaticFailover(@Nullable Boolean enableAutomaticFailover) {
             this.enableAutomaticFailover = Input.ofNullable(enableAutomaticFailover);
             return this;
         }
 
-        public Builder setEnableCassandraConnector(@Nullable Input<Boolean> enableCassandraConnector) {
+        public Builder enableCassandraConnector(@Nullable Input<Boolean> enableCassandraConnector) {
             this.enableCassandraConnector = enableCassandraConnector;
             return this;
         }
 
-        public Builder setEnableCassandraConnector(@Nullable Boolean enableCassandraConnector) {
+        public Builder enableCassandraConnector(@Nullable Boolean enableCassandraConnector) {
             this.enableCassandraConnector = Input.ofNullable(enableCassandraConnector);
             return this;
         }
 
-        public Builder setEnableFreeTier(@Nullable Input<Boolean> enableFreeTier) {
+        public Builder enableFreeTier(@Nullable Input<Boolean> enableFreeTier) {
             this.enableFreeTier = enableFreeTier;
             return this;
         }
 
-        public Builder setEnableFreeTier(@Nullable Boolean enableFreeTier) {
+        public Builder enableFreeTier(@Nullable Boolean enableFreeTier) {
             this.enableFreeTier = Input.ofNullable(enableFreeTier);
             return this;
         }
 
-        public Builder setEnableMultipleWriteLocations(@Nullable Input<Boolean> enableMultipleWriteLocations) {
+        public Builder enableMultipleWriteLocations(@Nullable Input<Boolean> enableMultipleWriteLocations) {
             this.enableMultipleWriteLocations = enableMultipleWriteLocations;
             return this;
         }
 
-        public Builder setEnableMultipleWriteLocations(@Nullable Boolean enableMultipleWriteLocations) {
+        public Builder enableMultipleWriteLocations(@Nullable Boolean enableMultipleWriteLocations) {
             this.enableMultipleWriteLocations = Input.ofNullable(enableMultipleWriteLocations);
             return this;
         }
 
-        public Builder setIdentity(@Nullable Input<ManagedServiceIdentityArgs> identity) {
+        public Builder identity(@Nullable Input<ManagedServiceIdentityArgs> identity) {
             this.identity = identity;
             return this;
         }
 
-        public Builder setIdentity(@Nullable ManagedServiceIdentityArgs identity) {
+        public Builder identity(@Nullable ManagedServiceIdentityArgs identity) {
             this.identity = Input.ofNullable(identity);
             return this;
         }
 
-        public Builder setIpRules(@Nullable Input<List<IpAddressOrRangeArgs>> ipRules) {
+        public Builder ipRules(@Nullable Input<List<IpAddressOrRangeArgs>> ipRules) {
             this.ipRules = ipRules;
             return this;
         }
 
-        public Builder setIpRules(@Nullable List<IpAddressOrRangeArgs> ipRules) {
+        public Builder ipRules(@Nullable List<IpAddressOrRangeArgs> ipRules) {
             this.ipRules = Input.ofNullable(ipRules);
             return this;
         }
 
-        public Builder setIsVirtualNetworkFilterEnabled(@Nullable Input<Boolean> isVirtualNetworkFilterEnabled) {
+        public Builder isVirtualNetworkFilterEnabled(@Nullable Input<Boolean> isVirtualNetworkFilterEnabled) {
             this.isVirtualNetworkFilterEnabled = isVirtualNetworkFilterEnabled;
             return this;
         }
 
-        public Builder setIsVirtualNetworkFilterEnabled(@Nullable Boolean isVirtualNetworkFilterEnabled) {
+        public Builder isVirtualNetworkFilterEnabled(@Nullable Boolean isVirtualNetworkFilterEnabled) {
             this.isVirtualNetworkFilterEnabled = Input.ofNullable(isVirtualNetworkFilterEnabled);
             return this;
         }
 
-        public Builder setKeyVaultKeyUri(@Nullable Input<String> keyVaultKeyUri) {
+        public Builder keyVaultKeyUri(@Nullable Input<String> keyVaultKeyUri) {
             this.keyVaultKeyUri = keyVaultKeyUri;
             return this;
         }
 
-        public Builder setKeyVaultKeyUri(@Nullable String keyVaultKeyUri) {
+        public Builder keyVaultKeyUri(@Nullable String keyVaultKeyUri) {
             this.keyVaultKeyUri = Input.ofNullable(keyVaultKeyUri);
             return this;
         }
 
-        public Builder setKind(@Nullable Input<Either<String,DatabaseAccountKind>> kind) {
+        public Builder kind(@Nullable Input<Either<String,DatabaseAccountKind>> kind) {
             this.kind = kind;
             return this;
         }
 
-        public Builder setKind(@Nullable Either<String,DatabaseAccountKind> kind) {
+        public Builder kind(@Nullable Either<String,DatabaseAccountKind> kind) {
             this.kind = Input.ofNullable(kind);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setLocations(Input<List<LocationArgs>> locations) {
+        public Builder locations(Input<List<LocationArgs>> locations) {
             this.locations = Objects.requireNonNull(locations);
             return this;
         }
 
-        public Builder setLocations(List<LocationArgs> locations) {
+        public Builder locations(List<LocationArgs> locations) {
             this.locations = Input.of(Objects.requireNonNull(locations));
             return this;
         }
 
-        public Builder setNetworkAclBypass(@Nullable Input<NetworkAclBypass> networkAclBypass) {
+        public Builder networkAclBypass(@Nullable Input<NetworkAclBypass> networkAclBypass) {
             this.networkAclBypass = networkAclBypass;
             return this;
         }
 
-        public Builder setNetworkAclBypass(@Nullable NetworkAclBypass networkAclBypass) {
+        public Builder networkAclBypass(@Nullable NetworkAclBypass networkAclBypass) {
             this.networkAclBypass = Input.ofNullable(networkAclBypass);
             return this;
         }
 
-        public Builder setNetworkAclBypassResourceIds(@Nullable Input<List<String>> networkAclBypassResourceIds) {
+        public Builder networkAclBypassResourceIds(@Nullable Input<List<String>> networkAclBypassResourceIds) {
             this.networkAclBypassResourceIds = networkAclBypassResourceIds;
             return this;
         }
 
-        public Builder setNetworkAclBypassResourceIds(@Nullable List<String> networkAclBypassResourceIds) {
+        public Builder networkAclBypassResourceIds(@Nullable List<String> networkAclBypassResourceIds) {
             this.networkAclBypassResourceIds = Input.ofNullable(networkAclBypassResourceIds);
             return this;
         }
 
-        public Builder setPublicNetworkAccess(@Nullable Input<Either<String,PublicNetworkAccess>> publicNetworkAccess) {
+        public Builder publicNetworkAccess(@Nullable Input<Either<String,PublicNetworkAccess>> publicNetworkAccess) {
             this.publicNetworkAccess = publicNetworkAccess;
             return this;
         }
 
-        public Builder setPublicNetworkAccess(@Nullable Either<String,PublicNetworkAccess> publicNetworkAccess) {
+        public Builder publicNetworkAccess(@Nullable Either<String,PublicNetworkAccess> publicNetworkAccess) {
             this.publicNetworkAccess = Input.ofNullable(publicNetworkAccess);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setVirtualNetworkRules(@Nullable Input<List<VirtualNetworkRuleArgs>> virtualNetworkRules) {
+        public Builder virtualNetworkRules(@Nullable Input<List<VirtualNetworkRuleArgs>> virtualNetworkRules) {
             this.virtualNetworkRules = virtualNetworkRules;
             return this;
         }
 
-        public Builder setVirtualNetworkRules(@Nullable List<VirtualNetworkRuleArgs> virtualNetworkRules) {
+        public Builder virtualNetworkRules(@Nullable List<VirtualNetworkRuleArgs> virtualNetworkRules) {
             this.virtualNetworkRules = Input.ofNullable(virtualNetworkRules);
             return this;
         }

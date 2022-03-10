@@ -77,22 +77,22 @@ public final class NetworkACLArgs extends io.pulumi.resources.ResourceArgs {
     	      this.deny = defaults.deny;
         }
 
-        public Builder setAllow(@Nullable Input<List<Either<String,SignalRRequestType>>> allow) {
+        public Builder allow(@Nullable Input<List<Either<String,SignalRRequestType>>> allow) {
             this.allow = allow;
             return this;
         }
 
-        public Builder setAllow(@Nullable List<Either<String,SignalRRequestType>> allow) {
+        public Builder allow(@Nullable List<Either<String,SignalRRequestType>> allow) {
             this.allow = Input.ofNullable(allow);
             return this;
         }
 
-        public Builder setDeny(@Nullable Input<List<Either<String,SignalRRequestType>>> deny) {
+        public Builder deny(@Nullable Input<List<Either<String,SignalRRequestType>>> deny) {
             this.deny = deny;
             return this;
         }
 
-        public Builder setDeny(@Nullable List<Either<String,SignalRRequestType>> deny) {
+        public Builder deny(@Nullable List<Either<String,SignalRRequestType>> deny) {
             this.deny = Input.ofNullable(deny);
             return this;
         }

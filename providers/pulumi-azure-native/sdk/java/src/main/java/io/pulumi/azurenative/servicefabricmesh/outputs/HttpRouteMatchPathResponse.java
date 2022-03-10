@@ -83,17 +83,17 @@ public final class HttpRouteMatchPathResponse {
     	      this.value = defaults.value;
         }
 
-        public Builder setRewrite(@Nullable String rewrite) {
+        public Builder rewrite(@Nullable String rewrite) {
             this.rewrite = rewrite;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setValue(String value) {
+        public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }

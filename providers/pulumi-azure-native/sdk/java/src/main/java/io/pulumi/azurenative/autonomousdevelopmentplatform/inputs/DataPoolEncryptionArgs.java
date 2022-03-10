@@ -106,42 +106,42 @@ public final class DataPoolEncryptionArgs extends io.pulumi.resources.ResourceAr
     	      this.userAssignedIdentity = defaults.userAssignedIdentity;
         }
 
-        public Builder setKeyName(Input<String> keyName) {
+        public Builder keyName(Input<String> keyName) {
             this.keyName = Objects.requireNonNull(keyName);
             return this;
         }
 
-        public Builder setKeyName(String keyName) {
+        public Builder keyName(String keyName) {
             this.keyName = Input.of(Objects.requireNonNull(keyName));
             return this;
         }
 
-        public Builder setKeyVaultUri(Input<String> keyVaultUri) {
+        public Builder keyVaultUri(Input<String> keyVaultUri) {
             this.keyVaultUri = Objects.requireNonNull(keyVaultUri);
             return this;
         }
 
-        public Builder setKeyVaultUri(String keyVaultUri) {
+        public Builder keyVaultUri(String keyVaultUri) {
             this.keyVaultUri = Input.of(Objects.requireNonNull(keyVaultUri));
             return this;
         }
 
-        public Builder setKeyVersion(@Nullable Input<String> keyVersion) {
+        public Builder keyVersion(@Nullable Input<String> keyVersion) {
             this.keyVersion = keyVersion;
             return this;
         }
 
-        public Builder setKeyVersion(@Nullable String keyVersion) {
+        public Builder keyVersion(@Nullable String keyVersion) {
             this.keyVersion = Input.ofNullable(keyVersion);
             return this;
         }
 
-        public Builder setUserAssignedIdentity(Input<String> userAssignedIdentity) {
+        public Builder userAssignedIdentity(Input<String> userAssignedIdentity) {
             this.userAssignedIdentity = Objects.requireNonNull(userAssignedIdentity);
             return this;
         }
 
-        public Builder setUserAssignedIdentity(String userAssignedIdentity) {
+        public Builder userAssignedIdentity(String userAssignedIdentity) {
             this.userAssignedIdentity = Input.of(Objects.requireNonNull(userAssignedIdentity));
             return this;
         }

@@ -156,72 +156,72 @@ public final class TaskRunArgs extends io.pulumi.resources.ResourceArgs {
     	      this.taskRunName = defaults.taskRunName;
         }
 
-        public Builder setForceUpdateTag(@Nullable Input<String> forceUpdateTag) {
+        public Builder forceUpdateTag(@Nullable Input<String> forceUpdateTag) {
             this.forceUpdateTag = forceUpdateTag;
             return this;
         }
 
-        public Builder setForceUpdateTag(@Nullable String forceUpdateTag) {
+        public Builder forceUpdateTag(@Nullable String forceUpdateTag) {
             this.forceUpdateTag = Input.ofNullable(forceUpdateTag);
             return this;
         }
 
-        public Builder setIdentity(@Nullable Input<IdentityPropertiesArgs> identity) {
+        public Builder identity(@Nullable Input<IdentityPropertiesArgs> identity) {
             this.identity = identity;
             return this;
         }
 
-        public Builder setIdentity(@Nullable IdentityPropertiesArgs identity) {
+        public Builder identity(@Nullable IdentityPropertiesArgs identity) {
             this.identity = Input.ofNullable(identity);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setRegistryName(Input<String> registryName) {
+        public Builder registryName(Input<String> registryName) {
             this.registryName = Objects.requireNonNull(registryName);
             return this;
         }
 
-        public Builder setRegistryName(String registryName) {
+        public Builder registryName(String registryName) {
             this.registryName = Input.of(Objects.requireNonNull(registryName));
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setRunRequest(@Nullable Input<Object> runRequest) {
+        public Builder runRequest(@Nullable Input<Object> runRequest) {
             this.runRequest = runRequest;
             return this;
         }
 
-        public Builder setRunRequest(@Nullable Object runRequest) {
+        public Builder runRequest(@Nullable Object runRequest) {
             this.runRequest = Input.ofNullable(runRequest);
             return this;
         }
 
-        public Builder setTaskRunName(@Nullable Input<String> taskRunName) {
+        public Builder taskRunName(@Nullable Input<String> taskRunName) {
             this.taskRunName = taskRunName;
             return this;
         }
 
-        public Builder setTaskRunName(@Nullable String taskRunName) {
+        public Builder taskRunName(@Nullable String taskRunName) {
             this.taskRunName = Input.ofNullable(taskRunName);
             return this;
         }

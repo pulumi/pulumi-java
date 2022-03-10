@@ -97,22 +97,22 @@ public final class ContainerRegistryCredentialsResponse {
     	      this.username = defaults.username;
         }
 
-        public Builder setLoginServer(String loginServer) {
+        public Builder loginServer(String loginServer) {
             this.loginServer = Objects.requireNonNull(loginServer);
             return this;
         }
 
-        public Builder setPassword(String password) {
+        public Builder password(String password) {
             this.password = Objects.requireNonNull(password);
             return this;
         }
 
-        public Builder setPassword2(String password2) {
+        public Builder password2(String password2) {
             this.password2 = Objects.requireNonNull(password2);
             return this;
         }
 
-        public Builder setUsername(String username) {
+        public Builder username(String username) {
             this.username = Objects.requireNonNull(username);
             return this;
         }

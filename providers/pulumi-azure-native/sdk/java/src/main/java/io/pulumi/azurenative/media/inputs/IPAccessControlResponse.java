@@ -58,7 +58,7 @@ public final class IPAccessControlResponse extends io.pulumi.resources.InvokeArg
     	      this.allow = defaults.allow;
         }
 
-        public Builder setAllow(@Nullable List<IPRangeResponse> allow) {
+        public Builder allow(@Nullable List<IPRangeResponse> allow) {
             this.allow = allow;
             return this;
         }

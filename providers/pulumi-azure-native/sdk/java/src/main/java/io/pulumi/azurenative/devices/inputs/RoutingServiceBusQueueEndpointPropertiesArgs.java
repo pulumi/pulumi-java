@@ -172,82 +172,82 @@ public final class RoutingServiceBusQueueEndpointPropertiesArgs extends io.pulum
     	      this.subscriptionId = defaults.subscriptionId;
         }
 
-        public Builder setAuthenticationType(@Nullable Input<Either<String,AuthenticationType>> authenticationType) {
+        public Builder authenticationType(@Nullable Input<Either<String,AuthenticationType>> authenticationType) {
             this.authenticationType = authenticationType;
             return this;
         }
 
-        public Builder setAuthenticationType(@Nullable Either<String,AuthenticationType> authenticationType) {
+        public Builder authenticationType(@Nullable Either<String,AuthenticationType> authenticationType) {
             this.authenticationType = Input.ofNullable(authenticationType);
             return this;
         }
 
-        public Builder setConnectionString(@Nullable Input<String> connectionString) {
+        public Builder connectionString(@Nullable Input<String> connectionString) {
             this.connectionString = connectionString;
             return this;
         }
 
-        public Builder setConnectionString(@Nullable String connectionString) {
+        public Builder connectionString(@Nullable String connectionString) {
             this.connectionString = Input.ofNullable(connectionString);
             return this;
         }
 
-        public Builder setEndpointUri(@Nullable Input<String> endpointUri) {
+        public Builder endpointUri(@Nullable Input<String> endpointUri) {
             this.endpointUri = endpointUri;
             return this;
         }
 
-        public Builder setEndpointUri(@Nullable String endpointUri) {
+        public Builder endpointUri(@Nullable String endpointUri) {
             this.endpointUri = Input.ofNullable(endpointUri);
             return this;
         }
 
-        public Builder setEntityPath(@Nullable Input<String> entityPath) {
+        public Builder entityPath(@Nullable Input<String> entityPath) {
             this.entityPath = entityPath;
             return this;
         }
 
-        public Builder setEntityPath(@Nullable String entityPath) {
+        public Builder entityPath(@Nullable String entityPath) {
             this.entityPath = Input.ofNullable(entityPath);
             return this;
         }
 
-        public Builder setId(@Nullable Input<String> id) {
+        public Builder id(@Nullable Input<String> id) {
             this.id = id;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = Input.ofNullable(id);
             return this;
         }
 
-        public Builder setName(Input<String> name) {
+        public Builder name(Input<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder setResourceGroup(@Nullable Input<String> resourceGroup) {
+        public Builder resourceGroup(@Nullable Input<String> resourceGroup) {
             this.resourceGroup = resourceGroup;
             return this;
         }
 
-        public Builder setResourceGroup(@Nullable String resourceGroup) {
+        public Builder resourceGroup(@Nullable String resourceGroup) {
             this.resourceGroup = Input.ofNullable(resourceGroup);
             return this;
         }
 
-        public Builder setSubscriptionId(@Nullable Input<String> subscriptionId) {
+        public Builder subscriptionId(@Nullable Input<String> subscriptionId) {
             this.subscriptionId = subscriptionId;
             return this;
         }
 
-        public Builder setSubscriptionId(@Nullable String subscriptionId) {
+        public Builder subscriptionId(@Nullable String subscriptionId) {
             this.subscriptionId = Input.ofNullable(subscriptionId);
             return this;
         }

@@ -94,17 +94,17 @@ public final class AzureBlobStorageHttpLogsConfigResponse extends io.pulumi.reso
     	      this.sasUrl = defaults.sasUrl;
         }
 
-        public Builder setEnabled(@Nullable Boolean enabled) {
+        public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = enabled;
             return this;
         }
 
-        public Builder setRetentionInDays(@Nullable Integer retentionInDays) {
+        public Builder retentionInDays(@Nullable Integer retentionInDays) {
             this.retentionInDays = retentionInDays;
             return this;
         }
 
-        public Builder setSasUrl(@Nullable String sasUrl) {
+        public Builder sasUrl(@Nullable String sasUrl) {
             this.sasUrl = sasUrl;
             return this;
         }

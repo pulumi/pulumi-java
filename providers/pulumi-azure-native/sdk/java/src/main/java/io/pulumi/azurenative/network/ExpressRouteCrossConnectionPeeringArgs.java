@@ -285,152 +285,152 @@ public final class ExpressRouteCrossConnectionPeeringArgs extends io.pulumi.reso
     	      this.vlanId = defaults.vlanId;
         }
 
-        public Builder setCrossConnectionName(Input<String> crossConnectionName) {
+        public Builder crossConnectionName(Input<String> crossConnectionName) {
             this.crossConnectionName = Objects.requireNonNull(crossConnectionName);
             return this;
         }
 
-        public Builder setCrossConnectionName(String crossConnectionName) {
+        public Builder crossConnectionName(String crossConnectionName) {
             this.crossConnectionName = Input.of(Objects.requireNonNull(crossConnectionName));
             return this;
         }
 
-        public Builder setGatewayManagerEtag(@Nullable Input<String> gatewayManagerEtag) {
+        public Builder gatewayManagerEtag(@Nullable Input<String> gatewayManagerEtag) {
             this.gatewayManagerEtag = gatewayManagerEtag;
             return this;
         }
 
-        public Builder setGatewayManagerEtag(@Nullable String gatewayManagerEtag) {
+        public Builder gatewayManagerEtag(@Nullable String gatewayManagerEtag) {
             this.gatewayManagerEtag = Input.ofNullable(gatewayManagerEtag);
             return this;
         }
 
-        public Builder setId(@Nullable Input<String> id) {
+        public Builder id(@Nullable Input<String> id) {
             this.id = id;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = Input.ofNullable(id);
             return this;
         }
 
-        public Builder setIpv6PeeringConfig(@Nullable Input<Ipv6ExpressRouteCircuitPeeringConfigArgs> ipv6PeeringConfig) {
+        public Builder ipv6PeeringConfig(@Nullable Input<Ipv6ExpressRouteCircuitPeeringConfigArgs> ipv6PeeringConfig) {
             this.ipv6PeeringConfig = ipv6PeeringConfig;
             return this;
         }
 
-        public Builder setIpv6PeeringConfig(@Nullable Ipv6ExpressRouteCircuitPeeringConfigArgs ipv6PeeringConfig) {
+        public Builder ipv6PeeringConfig(@Nullable Ipv6ExpressRouteCircuitPeeringConfigArgs ipv6PeeringConfig) {
             this.ipv6PeeringConfig = Input.ofNullable(ipv6PeeringConfig);
             return this;
         }
 
-        public Builder setMicrosoftPeeringConfig(@Nullable Input<ExpressRouteCircuitPeeringConfigArgs> microsoftPeeringConfig) {
+        public Builder microsoftPeeringConfig(@Nullable Input<ExpressRouteCircuitPeeringConfigArgs> microsoftPeeringConfig) {
             this.microsoftPeeringConfig = microsoftPeeringConfig;
             return this;
         }
 
-        public Builder setMicrosoftPeeringConfig(@Nullable ExpressRouteCircuitPeeringConfigArgs microsoftPeeringConfig) {
+        public Builder microsoftPeeringConfig(@Nullable ExpressRouteCircuitPeeringConfigArgs microsoftPeeringConfig) {
             this.microsoftPeeringConfig = Input.ofNullable(microsoftPeeringConfig);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setPeerASN(@Nullable Input<Double> peerASN) {
+        public Builder peerASN(@Nullable Input<Double> peerASN) {
             this.peerASN = peerASN;
             return this;
         }
 
-        public Builder setPeerASN(@Nullable Double peerASN) {
+        public Builder peerASN(@Nullable Double peerASN) {
             this.peerASN = Input.ofNullable(peerASN);
             return this;
         }
 
-        public Builder setPeeringName(@Nullable Input<String> peeringName) {
+        public Builder peeringName(@Nullable Input<String> peeringName) {
             this.peeringName = peeringName;
             return this;
         }
 
-        public Builder setPeeringName(@Nullable String peeringName) {
+        public Builder peeringName(@Nullable String peeringName) {
             this.peeringName = Input.ofNullable(peeringName);
             return this;
         }
 
-        public Builder setPeeringType(@Nullable Input<Either<String,ExpressRoutePeeringType>> peeringType) {
+        public Builder peeringType(@Nullable Input<Either<String,ExpressRoutePeeringType>> peeringType) {
             this.peeringType = peeringType;
             return this;
         }
 
-        public Builder setPeeringType(@Nullable Either<String,ExpressRoutePeeringType> peeringType) {
+        public Builder peeringType(@Nullable Either<String,ExpressRoutePeeringType> peeringType) {
             this.peeringType = Input.ofNullable(peeringType);
             return this;
         }
 
-        public Builder setPrimaryPeerAddressPrefix(@Nullable Input<String> primaryPeerAddressPrefix) {
+        public Builder primaryPeerAddressPrefix(@Nullable Input<String> primaryPeerAddressPrefix) {
             this.primaryPeerAddressPrefix = primaryPeerAddressPrefix;
             return this;
         }
 
-        public Builder setPrimaryPeerAddressPrefix(@Nullable String primaryPeerAddressPrefix) {
+        public Builder primaryPeerAddressPrefix(@Nullable String primaryPeerAddressPrefix) {
             this.primaryPeerAddressPrefix = Input.ofNullable(primaryPeerAddressPrefix);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setSecondaryPeerAddressPrefix(@Nullable Input<String> secondaryPeerAddressPrefix) {
+        public Builder secondaryPeerAddressPrefix(@Nullable Input<String> secondaryPeerAddressPrefix) {
             this.secondaryPeerAddressPrefix = secondaryPeerAddressPrefix;
             return this;
         }
 
-        public Builder setSecondaryPeerAddressPrefix(@Nullable String secondaryPeerAddressPrefix) {
+        public Builder secondaryPeerAddressPrefix(@Nullable String secondaryPeerAddressPrefix) {
             this.secondaryPeerAddressPrefix = Input.ofNullable(secondaryPeerAddressPrefix);
             return this;
         }
 
-        public Builder setSharedKey(@Nullable Input<String> sharedKey) {
+        public Builder sharedKey(@Nullable Input<String> sharedKey) {
             this.sharedKey = sharedKey;
             return this;
         }
 
-        public Builder setSharedKey(@Nullable String sharedKey) {
+        public Builder sharedKey(@Nullable String sharedKey) {
             this.sharedKey = Input.ofNullable(sharedKey);
             return this;
         }
 
-        public Builder setState(@Nullable Input<Either<String,ExpressRoutePeeringState>> state) {
+        public Builder state(@Nullable Input<Either<String,ExpressRoutePeeringState>> state) {
             this.state = state;
             return this;
         }
 
-        public Builder setState(@Nullable Either<String,ExpressRoutePeeringState> state) {
+        public Builder state(@Nullable Either<String,ExpressRoutePeeringState> state) {
             this.state = Input.ofNullable(state);
             return this;
         }
 
-        public Builder setVlanId(@Nullable Input<Integer> vlanId) {
+        public Builder vlanId(@Nullable Input<Integer> vlanId) {
             this.vlanId = vlanId;
             return this;
         }
 
-        public Builder setVlanId(@Nullable Integer vlanId) {
+        public Builder vlanId(@Nullable Integer vlanId) {
             this.vlanId = Input.ofNullable(vlanId);
             return this;
         }

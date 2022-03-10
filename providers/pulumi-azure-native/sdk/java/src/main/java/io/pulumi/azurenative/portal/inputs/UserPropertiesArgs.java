@@ -126,52 +126,52 @@ public final class UserPropertiesArgs extends io.pulumi.resources.ResourceArgs {
     	      this.terminalSettings = defaults.terminalSettings;
         }
 
-        public Builder setPreferredLocation(Input<String> preferredLocation) {
+        public Builder preferredLocation(Input<String> preferredLocation) {
             this.preferredLocation = Objects.requireNonNull(preferredLocation);
             return this;
         }
 
-        public Builder setPreferredLocation(String preferredLocation) {
+        public Builder preferredLocation(String preferredLocation) {
             this.preferredLocation = Input.of(Objects.requireNonNull(preferredLocation));
             return this;
         }
 
-        public Builder setPreferredOsType(Input<Either<String,OsType>> preferredOsType) {
+        public Builder preferredOsType(Input<Either<String,OsType>> preferredOsType) {
             this.preferredOsType = Objects.requireNonNull(preferredOsType);
             return this;
         }
 
-        public Builder setPreferredOsType(Either<String,OsType> preferredOsType) {
+        public Builder preferredOsType(Either<String,OsType> preferredOsType) {
             this.preferredOsType = Input.of(Objects.requireNonNull(preferredOsType));
             return this;
         }
 
-        public Builder setPreferredShellType(Input<Either<String,ShellType>> preferredShellType) {
+        public Builder preferredShellType(Input<Either<String,ShellType>> preferredShellType) {
             this.preferredShellType = Objects.requireNonNull(preferredShellType);
             return this;
         }
 
-        public Builder setPreferredShellType(Either<String,ShellType> preferredShellType) {
+        public Builder preferredShellType(Either<String,ShellType> preferredShellType) {
             this.preferredShellType = Input.of(Objects.requireNonNull(preferredShellType));
             return this;
         }
 
-        public Builder setStorageProfile(Input<StorageProfileArgs> storageProfile) {
+        public Builder storageProfile(Input<StorageProfileArgs> storageProfile) {
             this.storageProfile = Objects.requireNonNull(storageProfile);
             return this;
         }
 
-        public Builder setStorageProfile(StorageProfileArgs storageProfile) {
+        public Builder storageProfile(StorageProfileArgs storageProfile) {
             this.storageProfile = Input.of(Objects.requireNonNull(storageProfile));
             return this;
         }
 
-        public Builder setTerminalSettings(Input<TerminalSettingsArgs> terminalSettings) {
+        public Builder terminalSettings(Input<TerminalSettingsArgs> terminalSettings) {
             this.terminalSettings = Objects.requireNonNull(terminalSettings);
             return this;
         }
 
-        public Builder setTerminalSettings(TerminalSettingsArgs terminalSettings) {
+        public Builder terminalSettings(TerminalSettingsArgs terminalSettings) {
             this.terminalSettings = Input.of(Objects.requireNonNull(terminalSettings));
             return this;
         }

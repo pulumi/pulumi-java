@@ -260,72 +260,72 @@ public final class GetSyncMemberResult {
     	      this.userName = defaults.userName;
         }
 
-        public Builder setDatabaseName(@Nullable String databaseName) {
+        public Builder databaseName(@Nullable String databaseName) {
             this.databaseName = databaseName;
             return this;
         }
 
-        public Builder setDatabaseType(@Nullable String databaseType) {
+        public Builder databaseType(@Nullable String databaseType) {
             this.databaseType = databaseType;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPrivateEndpointName(String privateEndpointName) {
+        public Builder privateEndpointName(String privateEndpointName) {
             this.privateEndpointName = Objects.requireNonNull(privateEndpointName);
             return this;
         }
 
-        public Builder setServerName(@Nullable String serverName) {
+        public Builder serverName(@Nullable String serverName) {
             this.serverName = serverName;
             return this;
         }
 
-        public Builder setSqlServerDatabaseId(@Nullable String sqlServerDatabaseId) {
+        public Builder sqlServerDatabaseId(@Nullable String sqlServerDatabaseId) {
             this.sqlServerDatabaseId = sqlServerDatabaseId;
             return this;
         }
 
-        public Builder setSyncAgentId(@Nullable String syncAgentId) {
+        public Builder syncAgentId(@Nullable String syncAgentId) {
             this.syncAgentId = syncAgentId;
             return this;
         }
 
-        public Builder setSyncDirection(@Nullable String syncDirection) {
+        public Builder syncDirection(@Nullable String syncDirection) {
             this.syncDirection = syncDirection;
             return this;
         }
 
-        public Builder setSyncMemberAzureDatabaseResourceId(@Nullable String syncMemberAzureDatabaseResourceId) {
+        public Builder syncMemberAzureDatabaseResourceId(@Nullable String syncMemberAzureDatabaseResourceId) {
             this.syncMemberAzureDatabaseResourceId = syncMemberAzureDatabaseResourceId;
             return this;
         }
 
-        public Builder setSyncState(String syncState) {
+        public Builder syncState(String syncState) {
             this.syncState = Objects.requireNonNull(syncState);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setUsePrivateLinkConnection(@Nullable Boolean usePrivateLinkConnection) {
+        public Builder usePrivateLinkConnection(@Nullable Boolean usePrivateLinkConnection) {
             this.usePrivateLinkConnection = usePrivateLinkConnection;
             return this;
         }
 
-        public Builder setUserName(@Nullable String userName) {
+        public Builder userName(@Nullable String userName) {
             this.userName = userName;
             return this;
         }

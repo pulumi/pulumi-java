@@ -134,62 +134,62 @@ public final class ShareSubscriptionArgs extends io.pulumi.resources.ResourceArg
     	      this.sourceShareLocation = defaults.sourceShareLocation;
         }
 
-        public Builder setAccountName(Input<String> accountName) {
+        public Builder accountName(Input<String> accountName) {
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
 
-        public Builder setAccountName(String accountName) {
+        public Builder accountName(String accountName) {
             this.accountName = Input.of(Objects.requireNonNull(accountName));
             return this;
         }
 
-        public Builder setExpirationDate(@Nullable Input<String> expirationDate) {
+        public Builder expirationDate(@Nullable Input<String> expirationDate) {
             this.expirationDate = expirationDate;
             return this;
         }
 
-        public Builder setExpirationDate(@Nullable String expirationDate) {
+        public Builder expirationDate(@Nullable String expirationDate) {
             this.expirationDate = Input.ofNullable(expirationDate);
             return this;
         }
 
-        public Builder setInvitationId(Input<String> invitationId) {
+        public Builder invitationId(Input<String> invitationId) {
             this.invitationId = Objects.requireNonNull(invitationId);
             return this;
         }
 
-        public Builder setInvitationId(String invitationId) {
+        public Builder invitationId(String invitationId) {
             this.invitationId = Input.of(Objects.requireNonNull(invitationId));
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setShareSubscriptionName(@Nullable Input<String> shareSubscriptionName) {
+        public Builder shareSubscriptionName(@Nullable Input<String> shareSubscriptionName) {
             this.shareSubscriptionName = shareSubscriptionName;
             return this;
         }
 
-        public Builder setShareSubscriptionName(@Nullable String shareSubscriptionName) {
+        public Builder shareSubscriptionName(@Nullable String shareSubscriptionName) {
             this.shareSubscriptionName = Input.ofNullable(shareSubscriptionName);
             return this;
         }
 
-        public Builder setSourceShareLocation(Input<String> sourceShareLocation) {
+        public Builder sourceShareLocation(Input<String> sourceShareLocation) {
             this.sourceShareLocation = Objects.requireNonNull(sourceShareLocation);
             return this;
         }
 
-        public Builder setSourceShareLocation(String sourceShareLocation) {
+        public Builder sourceShareLocation(String sourceShareLocation) {
             this.sourceShareLocation = Input.of(Objects.requireNonNull(sourceShareLocation));
             return this;
         }

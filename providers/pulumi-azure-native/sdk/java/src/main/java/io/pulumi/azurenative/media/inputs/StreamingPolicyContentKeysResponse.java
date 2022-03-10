@@ -76,12 +76,12 @@ public final class StreamingPolicyContentKeysResponse extends io.pulumi.resource
     	      this.keyToTrackMappings = defaults.keyToTrackMappings;
         }
 
-        public Builder setDefaultKey(@Nullable DefaultKeyResponse defaultKey) {
+        public Builder defaultKey(@Nullable DefaultKeyResponse defaultKey) {
             this.defaultKey = defaultKey;
             return this;
         }
 
-        public Builder setKeyToTrackMappings(@Nullable List<StreamingPolicyContentKeyResponse> keyToTrackMappings) {
+        public Builder keyToTrackMappings(@Nullable List<StreamingPolicyContentKeyResponse> keyToTrackMappings) {
             this.keyToTrackMappings = keyToTrackMappings;
             return this;
         }

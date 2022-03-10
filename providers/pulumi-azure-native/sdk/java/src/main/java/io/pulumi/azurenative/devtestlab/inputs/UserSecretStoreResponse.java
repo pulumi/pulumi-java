@@ -74,12 +74,12 @@ public final class UserSecretStoreResponse extends io.pulumi.resources.InvokeArg
     	      this.keyVaultUri = defaults.keyVaultUri;
         }
 
-        public Builder setKeyVaultId(@Nullable String keyVaultId) {
+        public Builder keyVaultId(@Nullable String keyVaultId) {
             this.keyVaultId = keyVaultId;
             return this;
         }
 
-        public Builder setKeyVaultUri(@Nullable String keyVaultUri) {
+        public Builder keyVaultUri(@Nullable String keyVaultUri) {
             this.keyVaultUri = keyVaultUri;
             return this;
         }

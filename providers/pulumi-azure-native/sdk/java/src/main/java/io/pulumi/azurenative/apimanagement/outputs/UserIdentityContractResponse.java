@@ -67,12 +67,12 @@ public final class UserIdentityContractResponse {
     	      this.provider = defaults.provider;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setProvider(@Nullable String provider) {
+        public Builder provider(@Nullable String provider) {
             this.provider = provider;
             return this;
         }

@@ -63,22 +63,22 @@ public final class DefaultRolloutSpecificationLowTrafficArgs extends io.pulumi.r
     	      this.waitDuration = defaults.waitDuration;
         }
 
-        public Builder setRegions(@Nullable Input<List<String>> regions) {
+        public Builder regions(@Nullable Input<List<String>> regions) {
             this.regions = regions;
             return this;
         }
 
-        public Builder setRegions(@Nullable List<String> regions) {
+        public Builder regions(@Nullable List<String> regions) {
             this.regions = Input.ofNullable(regions);
             return this;
         }
 
-        public Builder setWaitDuration(@Nullable Input<String> waitDuration) {
+        public Builder waitDuration(@Nullable Input<String> waitDuration) {
             this.waitDuration = waitDuration;
             return this;
         }
 
-        public Builder setWaitDuration(@Nullable String waitDuration) {
+        public Builder waitDuration(@Nullable String waitDuration) {
             this.waitDuration = Input.ofNullable(waitDuration);
             return this;
         }

@@ -85,17 +85,17 @@ public final class NotificationReceiverValueResponse {
     	      this.userObjectReceiverValue = defaults.userObjectReceiverValue;
         }
 
-        public Builder setDistributionGroupListReceiverValue(@Nullable DistributionGroupListReceiverValueResponse distributionGroupListReceiverValue) {
+        public Builder distributionGroupListReceiverValue(@Nullable DistributionGroupListReceiverValueResponse distributionGroupListReceiverValue) {
             this.distributionGroupListReceiverValue = distributionGroupListReceiverValue;
             return this;
         }
 
-        public Builder setSubscriptionReceiverValue(@Nullable SubscriptionReceiverValueResponse subscriptionReceiverValue) {
+        public Builder subscriptionReceiverValue(@Nullable SubscriptionReceiverValueResponse subscriptionReceiverValue) {
             this.subscriptionReceiverValue = subscriptionReceiverValue;
             return this;
         }
 
-        public Builder setUserObjectReceiverValue(@Nullable UserObjectReceiverValueResponse userObjectReceiverValue) {
+        public Builder userObjectReceiverValue(@Nullable UserObjectReceiverValueResponse userObjectReceiverValue) {
             this.userObjectReceiverValue = userObjectReceiverValue;
             return this;
         }

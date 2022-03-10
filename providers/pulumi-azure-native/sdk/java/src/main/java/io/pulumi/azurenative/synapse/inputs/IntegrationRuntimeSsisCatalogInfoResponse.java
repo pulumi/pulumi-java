@@ -107,22 +107,22 @@ public final class IntegrationRuntimeSsisCatalogInfoResponse extends io.pulumi.r
     	      this.catalogServerEndpoint = defaults.catalogServerEndpoint;
         }
 
-        public Builder setCatalogAdminPassword(@Nullable SecureStringResponse catalogAdminPassword) {
+        public Builder catalogAdminPassword(@Nullable SecureStringResponse catalogAdminPassword) {
             this.catalogAdminPassword = catalogAdminPassword;
             return this;
         }
 
-        public Builder setCatalogAdminUserName(@Nullable String catalogAdminUserName) {
+        public Builder catalogAdminUserName(@Nullable String catalogAdminUserName) {
             this.catalogAdminUserName = catalogAdminUserName;
             return this;
         }
 
-        public Builder setCatalogPricingTier(@Nullable String catalogPricingTier) {
+        public Builder catalogPricingTier(@Nullable String catalogPricingTier) {
             this.catalogPricingTier = catalogPricingTier;
             return this;
         }
 
-        public Builder setCatalogServerEndpoint(@Nullable String catalogServerEndpoint) {
+        public Builder catalogServerEndpoint(@Nullable String catalogServerEndpoint) {
             this.catalogServerEndpoint = catalogServerEndpoint;
             return this;
         }

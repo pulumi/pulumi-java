@@ -55,7 +55,7 @@ public final class ContainerServiceSshPublicKeyResponse extends io.pulumi.resour
     	      this.keyData = defaults.keyData;
         }
 
-        public Builder setKeyData(String keyData) {
+        public Builder keyData(String keyData) {
             this.keyData = Objects.requireNonNull(keyData);
             return this;
         }

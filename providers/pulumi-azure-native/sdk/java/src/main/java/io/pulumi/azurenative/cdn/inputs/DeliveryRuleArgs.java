@@ -131,42 +131,42 @@ public final class DeliveryRuleArgs extends io.pulumi.resources.ResourceArgs {
     	      this.order = defaults.order;
         }
 
-        public Builder setActions(Input<List<Object>> actions) {
+        public Builder actions(Input<List<Object>> actions) {
             this.actions = Objects.requireNonNull(actions);
             return this;
         }
 
-        public Builder setActions(List<Object> actions) {
+        public Builder actions(List<Object> actions) {
             this.actions = Input.of(Objects.requireNonNull(actions));
             return this;
         }
 
-        public Builder setConditions(@Nullable Input<List<Object>> conditions) {
+        public Builder conditions(@Nullable Input<List<Object>> conditions) {
             this.conditions = conditions;
             return this;
         }
 
-        public Builder setConditions(@Nullable List<Object> conditions) {
+        public Builder conditions(@Nullable List<Object> conditions) {
             this.conditions = Input.ofNullable(conditions);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setOrder(Input<Integer> order) {
+        public Builder order(Input<Integer> order) {
             this.order = Objects.requireNonNull(order);
             return this;
         }
 
-        public Builder setOrder(Integer order) {
+        public Builder order(Integer order) {
             this.order = Input.of(Objects.requireNonNull(order));
             return this;
         }

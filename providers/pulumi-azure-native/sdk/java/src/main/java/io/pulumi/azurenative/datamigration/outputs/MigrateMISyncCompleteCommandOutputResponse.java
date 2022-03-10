@@ -50,7 +50,7 @@ public final class MigrateMISyncCompleteCommandOutputResponse {
     	      this.errors = defaults.errors;
         }
 
-        public Builder setErrors(@Nullable List<ReportableExceptionResponse> errors) {
+        public Builder errors(@Nullable List<ReportableExceptionResponse> errors) {
             this.errors = errors;
             return this;
         }

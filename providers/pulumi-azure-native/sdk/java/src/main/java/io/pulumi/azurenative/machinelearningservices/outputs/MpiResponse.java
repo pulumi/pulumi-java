@@ -70,12 +70,12 @@ public final class MpiResponse {
     	      this.processCountPerInstance = defaults.processCountPerInstance;
         }
 
-        public Builder setDistributionType(String distributionType) {
+        public Builder distributionType(String distributionType) {
             this.distributionType = Objects.requireNonNull(distributionType);
             return this;
         }
 
-        public Builder setProcessCountPerInstance(@Nullable Integer processCountPerInstance) {
+        public Builder processCountPerInstance(@Nullable Integer processCountPerInstance) {
             this.processCountPerInstance = processCountPerInstance;
             return this;
         }

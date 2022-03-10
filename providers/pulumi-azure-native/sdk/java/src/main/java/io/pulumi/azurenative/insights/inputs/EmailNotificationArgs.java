@@ -92,32 +92,32 @@ public final class EmailNotificationArgs extends io.pulumi.resources.ResourceArg
     	      this.sendToSubscriptionCoAdministrators = defaults.sendToSubscriptionCoAdministrators;
         }
 
-        public Builder setCustomEmails(@Nullable Input<List<String>> customEmails) {
+        public Builder customEmails(@Nullable Input<List<String>> customEmails) {
             this.customEmails = customEmails;
             return this;
         }
 
-        public Builder setCustomEmails(@Nullable List<String> customEmails) {
+        public Builder customEmails(@Nullable List<String> customEmails) {
             this.customEmails = Input.ofNullable(customEmails);
             return this;
         }
 
-        public Builder setSendToSubscriptionAdministrator(@Nullable Input<Boolean> sendToSubscriptionAdministrator) {
+        public Builder sendToSubscriptionAdministrator(@Nullable Input<Boolean> sendToSubscriptionAdministrator) {
             this.sendToSubscriptionAdministrator = sendToSubscriptionAdministrator;
             return this;
         }
 
-        public Builder setSendToSubscriptionAdministrator(@Nullable Boolean sendToSubscriptionAdministrator) {
+        public Builder sendToSubscriptionAdministrator(@Nullable Boolean sendToSubscriptionAdministrator) {
             this.sendToSubscriptionAdministrator = Input.ofNullable(sendToSubscriptionAdministrator);
             return this;
         }
 
-        public Builder setSendToSubscriptionCoAdministrators(@Nullable Input<Boolean> sendToSubscriptionCoAdministrators) {
+        public Builder sendToSubscriptionCoAdministrators(@Nullable Input<Boolean> sendToSubscriptionCoAdministrators) {
             this.sendToSubscriptionCoAdministrators = sendToSubscriptionCoAdministrators;
             return this;
         }
 
-        public Builder setSendToSubscriptionCoAdministrators(@Nullable Boolean sendToSubscriptionCoAdministrators) {
+        public Builder sendToSubscriptionCoAdministrators(@Nullable Boolean sendToSubscriptionCoAdministrators) {
             this.sendToSubscriptionCoAdministrators = Input.ofNullable(sendToSubscriptionCoAdministrators);
             return this;
         }

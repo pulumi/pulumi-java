@@ -65,12 +65,12 @@ public final class AssignmentReportResourceComplianceReasonResponse {
     	      this.phrase = defaults.phrase;
         }
 
-        public Builder setCode(String code) {
+        public Builder code(String code) {
             this.code = Objects.requireNonNull(code);
             return this;
         }
 
-        public Builder setPhrase(String phrase) {
+        public Builder phrase(String phrase) {
             this.phrase = Objects.requireNonNull(phrase);
             return this;
         }

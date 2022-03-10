@@ -68,12 +68,12 @@ public final class UrlSigningActionResponse {
     	      this.parameters = defaults.parameters;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setParameters(UrlSigningActionParametersResponse parameters) {
+        public Builder parameters(UrlSigningActionParametersResponse parameters) {
             this.parameters = Objects.requireNonNull(parameters);
             return this;
         }

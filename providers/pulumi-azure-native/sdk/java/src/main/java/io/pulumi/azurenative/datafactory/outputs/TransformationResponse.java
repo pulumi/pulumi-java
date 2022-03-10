@@ -118,27 +118,27 @@ public final class TransformationResponse {
     	      this.name = defaults.name;
         }
 
-        public Builder setDataset(@Nullable DatasetReferenceResponse dataset) {
+        public Builder dataset(@Nullable DatasetReferenceResponse dataset) {
             this.dataset = dataset;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setFlowlet(@Nullable DataFlowReferenceResponse flowlet) {
+        public Builder flowlet(@Nullable DataFlowReferenceResponse flowlet) {
             this.flowlet = flowlet;
             return this;
         }
 
-        public Builder setLinkedService(@Nullable LinkedServiceReferenceResponse linkedService) {
+        public Builder linkedService(@Nullable LinkedServiceReferenceResponse linkedService) {
             this.linkedService = linkedService;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }

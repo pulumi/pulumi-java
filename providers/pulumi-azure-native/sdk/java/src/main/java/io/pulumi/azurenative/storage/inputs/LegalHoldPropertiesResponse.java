@@ -76,12 +76,12 @@ public final class LegalHoldPropertiesResponse extends io.pulumi.resources.Invok
     	      this.tags = defaults.tags;
         }
 
-        public Builder setHasLegalHold(Boolean hasLegalHold) {
+        public Builder hasLegalHold(Boolean hasLegalHold) {
             this.hasLegalHold = Objects.requireNonNull(hasLegalHold);
             return this;
         }
 
-        public Builder setTags(@Nullable List<TagPropertyResponse> tags) {
+        public Builder tags(@Nullable List<TagPropertyResponse> tags) {
             this.tags = tags;
             return this;
         }

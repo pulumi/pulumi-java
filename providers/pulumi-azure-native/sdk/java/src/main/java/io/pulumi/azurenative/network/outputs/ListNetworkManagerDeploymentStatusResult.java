@@ -69,12 +69,12 @@ public final class ListNetworkManagerDeploymentStatusResult {
     	      this.value = defaults.value;
         }
 
-        public Builder setSkipToken(@Nullable String skipToken) {
+        public Builder skipToken(@Nullable String skipToken) {
             this.skipToken = skipToken;
             return this;
         }
 
-        public Builder setValue(@Nullable List<NetworkManagerDeploymentStatusResponse> value) {
+        public Builder value(@Nullable List<NetworkManagerDeploymentStatusResponse> value) {
             this.value = value;
             return this;
         }

@@ -93,22 +93,22 @@ public final class ModelEnvironmentDefinitionResponseResponsePython {
     	      this.userManagedDependencies = defaults.userManagedDependencies;
         }
 
-        public Builder setBaseCondaEnvironment(@Nullable String baseCondaEnvironment) {
+        public Builder baseCondaEnvironment(@Nullable String baseCondaEnvironment) {
             this.baseCondaEnvironment = baseCondaEnvironment;
             return this;
         }
 
-        public Builder setCondaDependencies(@Nullable Object condaDependencies) {
+        public Builder condaDependencies(@Nullable Object condaDependencies) {
             this.condaDependencies = condaDependencies;
             return this;
         }
 
-        public Builder setInterpreterPath(@Nullable String interpreterPath) {
+        public Builder interpreterPath(@Nullable String interpreterPath) {
             this.interpreterPath = interpreterPath;
             return this;
         }
 
-        public Builder setUserManagedDependencies(@Nullable Boolean userManagedDependencies) {
+        public Builder userManagedDependencies(@Nullable Boolean userManagedDependencies) {
             this.userManagedDependencies = userManagedDependencies;
             return this;
         }

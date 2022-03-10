@@ -84,17 +84,17 @@ public final class GetBandwidthScheduleArgs extends io.pulumi.resources.InvokeAr
     	      this.resourceGroupName = defaults.resourceGroupName;
         }
 
-        public Builder setDeviceName(String deviceName) {
+        public Builder deviceName(String deviceName) {
             this.deviceName = Objects.requireNonNull(deviceName);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }

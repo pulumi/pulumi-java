@@ -117,27 +117,27 @@ public final class BanditPolicyResponse {
     	      this.slackFactor = defaults.slackFactor;
         }
 
-        public Builder setDelayEvaluation(@Nullable Integer delayEvaluation) {
+        public Builder delayEvaluation(@Nullable Integer delayEvaluation) {
             this.delayEvaluation = delayEvaluation;
             return this;
         }
 
-        public Builder setEvaluationInterval(@Nullable Integer evaluationInterval) {
+        public Builder evaluationInterval(@Nullable Integer evaluationInterval) {
             this.evaluationInterval = evaluationInterval;
             return this;
         }
 
-        public Builder setPolicyType(String policyType) {
+        public Builder policyType(String policyType) {
             this.policyType = Objects.requireNonNull(policyType);
             return this;
         }
 
-        public Builder setSlackAmount(@Nullable Double slackAmount) {
+        public Builder slackAmount(@Nullable Double slackAmount) {
             this.slackAmount = slackAmount;
             return this;
         }
 
-        public Builder setSlackFactor(@Nullable Double slackFactor) {
+        public Builder slackFactor(@Nullable Double slackFactor) {
             this.slackFactor = slackFactor;
             return this;
         }

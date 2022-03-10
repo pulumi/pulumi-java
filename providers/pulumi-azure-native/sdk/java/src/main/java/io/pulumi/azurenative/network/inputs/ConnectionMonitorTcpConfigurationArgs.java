@@ -94,32 +94,32 @@ public final class ConnectionMonitorTcpConfigurationArgs extends io.pulumi.resou
     	      this.port = defaults.port;
         }
 
-        public Builder setDestinationPortBehavior(@Nullable Input<Either<String,DestinationPortBehavior>> destinationPortBehavior) {
+        public Builder destinationPortBehavior(@Nullable Input<Either<String,DestinationPortBehavior>> destinationPortBehavior) {
             this.destinationPortBehavior = destinationPortBehavior;
             return this;
         }
 
-        public Builder setDestinationPortBehavior(@Nullable Either<String,DestinationPortBehavior> destinationPortBehavior) {
+        public Builder destinationPortBehavior(@Nullable Either<String,DestinationPortBehavior> destinationPortBehavior) {
             this.destinationPortBehavior = Input.ofNullable(destinationPortBehavior);
             return this;
         }
 
-        public Builder setDisableTraceRoute(@Nullable Input<Boolean> disableTraceRoute) {
+        public Builder disableTraceRoute(@Nullable Input<Boolean> disableTraceRoute) {
             this.disableTraceRoute = disableTraceRoute;
             return this;
         }
 
-        public Builder setDisableTraceRoute(@Nullable Boolean disableTraceRoute) {
+        public Builder disableTraceRoute(@Nullable Boolean disableTraceRoute) {
             this.disableTraceRoute = Input.ofNullable(disableTraceRoute);
             return this;
         }
 
-        public Builder setPort(@Nullable Input<Integer> port) {
+        public Builder port(@Nullable Input<Integer> port) {
             this.port = port;
             return this;
         }
 
-        public Builder setPort(@Nullable Integer port) {
+        public Builder port(@Nullable Integer port) {
             this.port = Input.ofNullable(port);
             return this;
         }

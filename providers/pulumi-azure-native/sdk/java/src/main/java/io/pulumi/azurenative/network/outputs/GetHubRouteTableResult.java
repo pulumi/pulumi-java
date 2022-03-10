@@ -181,47 +181,47 @@ public final class GetHubRouteTableResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setAssociatedConnections(List<String> associatedConnections) {
+        public Builder associatedConnections(List<String> associatedConnections) {
             this.associatedConnections = Objects.requireNonNull(associatedConnections);
             return this;
         }
 
-        public Builder setEtag(String etag) {
+        public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setLabels(@Nullable List<String> labels) {
+        public Builder labels(@Nullable List<String> labels) {
             this.labels = labels;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setPropagatingConnections(List<String> propagatingConnections) {
+        public Builder propagatingConnections(List<String> propagatingConnections) {
             this.propagatingConnections = Objects.requireNonNull(propagatingConnections);
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setRoutes(@Nullable List<HubRouteResponse> routes) {
+        public Builder routes(@Nullable List<HubRouteResponse> routes) {
             this.routes = routes;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

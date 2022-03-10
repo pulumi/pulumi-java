@@ -134,32 +134,32 @@ public final class InMageAzureV2PolicyDetailsResponse {
     	      this.recoveryPointThresholdInMinutes = defaults.recoveryPointThresholdInMinutes;
         }
 
-        public Builder setAppConsistentFrequencyInMinutes(@Nullable Integer appConsistentFrequencyInMinutes) {
+        public Builder appConsistentFrequencyInMinutes(@Nullable Integer appConsistentFrequencyInMinutes) {
             this.appConsistentFrequencyInMinutes = appConsistentFrequencyInMinutes;
             return this;
         }
 
-        public Builder setCrashConsistentFrequencyInMinutes(@Nullable Integer crashConsistentFrequencyInMinutes) {
+        public Builder crashConsistentFrequencyInMinutes(@Nullable Integer crashConsistentFrequencyInMinutes) {
             this.crashConsistentFrequencyInMinutes = crashConsistentFrequencyInMinutes;
             return this;
         }
 
-        public Builder setInstanceType(String instanceType) {
+        public Builder instanceType(String instanceType) {
             this.instanceType = Objects.requireNonNull(instanceType);
             return this;
         }
 
-        public Builder setMultiVmSyncStatus(@Nullable String multiVmSyncStatus) {
+        public Builder multiVmSyncStatus(@Nullable String multiVmSyncStatus) {
             this.multiVmSyncStatus = multiVmSyncStatus;
             return this;
         }
 
-        public Builder setRecoveryPointHistory(@Nullable Integer recoveryPointHistory) {
+        public Builder recoveryPointHistory(@Nullable Integer recoveryPointHistory) {
             this.recoveryPointHistory = recoveryPointHistory;
             return this;
         }
 
-        public Builder setRecoveryPointThresholdInMinutes(@Nullable Integer recoveryPointThresholdInMinutes) {
+        public Builder recoveryPointThresholdInMinutes(@Nullable Integer recoveryPointThresholdInMinutes) {
             this.recoveryPointThresholdInMinutes = recoveryPointThresholdInMinutes;
             return this;
         }

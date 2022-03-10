@@ -75,12 +75,12 @@ public final class AutoscaleResponse extends io.pulumi.resources.InvokeArgs {
     	      this.recurrence = defaults.recurrence;
         }
 
-        public Builder setCapacity(@Nullable AutoscaleCapacityResponse capacity) {
+        public Builder capacity(@Nullable AutoscaleCapacityResponse capacity) {
             this.capacity = capacity;
             return this;
         }
 
-        public Builder setRecurrence(@Nullable AutoscaleRecurrenceResponse recurrence) {
+        public Builder recurrence(@Nullable AutoscaleRecurrenceResponse recurrence) {
             this.recurrence = recurrence;
             return this;
         }

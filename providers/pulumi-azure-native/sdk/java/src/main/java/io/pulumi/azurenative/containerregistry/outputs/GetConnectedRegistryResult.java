@@ -282,77 +282,77 @@ public final class GetConnectedRegistryResult {
     	      this.version = defaults.version;
         }
 
-        public Builder setActivation(ActivationPropertiesResponse activation) {
+        public Builder activation(ActivationPropertiesResponse activation) {
             this.activation = Objects.requireNonNull(activation);
             return this;
         }
 
-        public Builder setClientTokenIds(@Nullable List<String> clientTokenIds) {
+        public Builder clientTokenIds(@Nullable List<String> clientTokenIds) {
             this.clientTokenIds = clientTokenIds;
             return this;
         }
 
-        public Builder setConnectionState(String connectionState) {
+        public Builder connectionState(String connectionState) {
             this.connectionState = Objects.requireNonNull(connectionState);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setLastActivityTime(String lastActivityTime) {
+        public Builder lastActivityTime(String lastActivityTime) {
             this.lastActivityTime = Objects.requireNonNull(lastActivityTime);
             return this;
         }
 
-        public Builder setLogging(@Nullable LoggingPropertiesResponse logging) {
+        public Builder logging(@Nullable LoggingPropertiesResponse logging) {
             this.logging = logging;
             return this;
         }
 
-        public Builder setLoginServer(@Nullable LoginServerPropertiesResponse loginServer) {
+        public Builder loginServer(@Nullable LoginServerPropertiesResponse loginServer) {
             this.loginServer = loginServer;
             return this;
         }
 
-        public Builder setMode(String mode) {
+        public Builder mode(String mode) {
             this.mode = Objects.requireNonNull(mode);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setParent(ParentPropertiesResponse parent) {
+        public Builder parent(ParentPropertiesResponse parent) {
             this.parent = Objects.requireNonNull(parent);
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setStatusDetails(List<StatusDetailPropertiesResponse> statusDetails) {
+        public Builder statusDetails(List<StatusDetailPropertiesResponse> statusDetails) {
             this.statusDetails = Objects.requireNonNull(statusDetails);
             return this;
         }
 
-        public Builder setSystemData(SystemDataResponse systemData) {
+        public Builder systemData(SystemDataResponse systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setVersion(String version) {
+        public Builder version(String version) {
             this.version = Objects.requireNonNull(version);
             return this;
         }

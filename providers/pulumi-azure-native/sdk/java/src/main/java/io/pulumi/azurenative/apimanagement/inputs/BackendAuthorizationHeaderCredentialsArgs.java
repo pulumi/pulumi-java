@@ -73,22 +73,22 @@ public final class BackendAuthorizationHeaderCredentialsArgs extends io.pulumi.r
     	      this.scheme = defaults.scheme;
         }
 
-        public Builder setParameter(Input<String> parameter) {
+        public Builder parameter(Input<String> parameter) {
             this.parameter = Objects.requireNonNull(parameter);
             return this;
         }
 
-        public Builder setParameter(String parameter) {
+        public Builder parameter(String parameter) {
             this.parameter = Input.of(Objects.requireNonNull(parameter));
             return this;
         }
 
-        public Builder setScheme(Input<String> scheme) {
+        public Builder scheme(Input<String> scheme) {
             this.scheme = Objects.requireNonNull(scheme);
             return this;
         }
 
-        public Builder setScheme(String scheme) {
+        public Builder scheme(String scheme) {
             this.scheme = Input.of(Objects.requireNonNull(scheme));
             return this;
         }

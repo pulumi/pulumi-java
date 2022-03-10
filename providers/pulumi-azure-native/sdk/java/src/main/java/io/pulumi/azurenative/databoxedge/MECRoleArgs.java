@@ -138,62 +138,62 @@ public final class MECRoleArgs extends io.pulumi.resources.ResourceArgs {
     	      this.roleStatus = defaults.roleStatus;
         }
 
-        public Builder setConnectionString(@Nullable Input<AsymmetricEncryptedSecretArgs> connectionString) {
+        public Builder connectionString(@Nullable Input<AsymmetricEncryptedSecretArgs> connectionString) {
             this.connectionString = connectionString;
             return this;
         }
 
-        public Builder setConnectionString(@Nullable AsymmetricEncryptedSecretArgs connectionString) {
+        public Builder connectionString(@Nullable AsymmetricEncryptedSecretArgs connectionString) {
             this.connectionString = Input.ofNullable(connectionString);
             return this;
         }
 
-        public Builder setDeviceName(Input<String> deviceName) {
+        public Builder deviceName(Input<String> deviceName) {
             this.deviceName = Objects.requireNonNull(deviceName);
             return this;
         }
 
-        public Builder setDeviceName(String deviceName) {
+        public Builder deviceName(String deviceName) {
             this.deviceName = Input.of(Objects.requireNonNull(deviceName));
             return this;
         }
 
-        public Builder setKind(Input<String> kind) {
+        public Builder kind(Input<String> kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Input.of(Objects.requireNonNull(kind));
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setRoleStatus(Input<Either<String,RoleStatus>> roleStatus) {
+        public Builder roleStatus(Input<Either<String,RoleStatus>> roleStatus) {
             this.roleStatus = Objects.requireNonNull(roleStatus);
             return this;
         }
 
-        public Builder setRoleStatus(Either<String,RoleStatus> roleStatus) {
+        public Builder roleStatus(Either<String,RoleStatus> roleStatus) {
             this.roleStatus = Input.of(Objects.requireNonNull(roleStatus));
             return this;
         }

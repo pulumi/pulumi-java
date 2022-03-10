@@ -187,92 +187,92 @@ public final class AzureDataExplorerConnectionPropertiesArgs extends io.pulumi.r
     	      this.eventHubNamespaceResourceId = defaults.eventHubNamespaceResourceId;
         }
 
-        public Builder setAdxDatabaseName(Input<String> adxDatabaseName) {
+        public Builder adxDatabaseName(Input<String> adxDatabaseName) {
             this.adxDatabaseName = Objects.requireNonNull(adxDatabaseName);
             return this;
         }
 
-        public Builder setAdxDatabaseName(String adxDatabaseName) {
+        public Builder adxDatabaseName(String adxDatabaseName) {
             this.adxDatabaseName = Input.of(Objects.requireNonNull(adxDatabaseName));
             return this;
         }
 
-        public Builder setAdxEndpointUri(Input<String> adxEndpointUri) {
+        public Builder adxEndpointUri(Input<String> adxEndpointUri) {
             this.adxEndpointUri = Objects.requireNonNull(adxEndpointUri);
             return this;
         }
 
-        public Builder setAdxEndpointUri(String adxEndpointUri) {
+        public Builder adxEndpointUri(String adxEndpointUri) {
             this.adxEndpointUri = Input.of(Objects.requireNonNull(adxEndpointUri));
             return this;
         }
 
-        public Builder setAdxResourceId(Input<String> adxResourceId) {
+        public Builder adxResourceId(Input<String> adxResourceId) {
             this.adxResourceId = Objects.requireNonNull(adxResourceId);
             return this;
         }
 
-        public Builder setAdxResourceId(String adxResourceId) {
+        public Builder adxResourceId(String adxResourceId) {
             this.adxResourceId = Input.of(Objects.requireNonNull(adxResourceId));
             return this;
         }
 
-        public Builder setAdxTableName(@Nullable Input<String> adxTableName) {
+        public Builder adxTableName(@Nullable Input<String> adxTableName) {
             this.adxTableName = adxTableName;
             return this;
         }
 
-        public Builder setAdxTableName(@Nullable String adxTableName) {
+        public Builder adxTableName(@Nullable String adxTableName) {
             this.adxTableName = Input.ofNullable(adxTableName);
             return this;
         }
 
-        public Builder setConnectionType(Input<String> connectionType) {
+        public Builder connectionType(Input<String> connectionType) {
             this.connectionType = Objects.requireNonNull(connectionType);
             return this;
         }
 
-        public Builder setConnectionType(String connectionType) {
+        public Builder connectionType(String connectionType) {
             this.connectionType = Input.of(Objects.requireNonNull(connectionType));
             return this;
         }
 
-        public Builder setEventHubConsumerGroup(@Nullable Input<String> eventHubConsumerGroup) {
+        public Builder eventHubConsumerGroup(@Nullable Input<String> eventHubConsumerGroup) {
             this.eventHubConsumerGroup = eventHubConsumerGroup;
             return this;
         }
 
-        public Builder setEventHubConsumerGroup(@Nullable String eventHubConsumerGroup) {
+        public Builder eventHubConsumerGroup(@Nullable String eventHubConsumerGroup) {
             this.eventHubConsumerGroup = Input.ofNullable(eventHubConsumerGroup);
             return this;
         }
 
-        public Builder setEventHubEndpointUri(Input<String> eventHubEndpointUri) {
+        public Builder eventHubEndpointUri(Input<String> eventHubEndpointUri) {
             this.eventHubEndpointUri = Objects.requireNonNull(eventHubEndpointUri);
             return this;
         }
 
-        public Builder setEventHubEndpointUri(String eventHubEndpointUri) {
+        public Builder eventHubEndpointUri(String eventHubEndpointUri) {
             this.eventHubEndpointUri = Input.of(Objects.requireNonNull(eventHubEndpointUri));
             return this;
         }
 
-        public Builder setEventHubEntityPath(Input<String> eventHubEntityPath) {
+        public Builder eventHubEntityPath(Input<String> eventHubEntityPath) {
             this.eventHubEntityPath = Objects.requireNonNull(eventHubEntityPath);
             return this;
         }
 
-        public Builder setEventHubEntityPath(String eventHubEntityPath) {
+        public Builder eventHubEntityPath(String eventHubEntityPath) {
             this.eventHubEntityPath = Input.of(Objects.requireNonNull(eventHubEntityPath));
             return this;
         }
 
-        public Builder setEventHubNamespaceResourceId(Input<String> eventHubNamespaceResourceId) {
+        public Builder eventHubNamespaceResourceId(Input<String> eventHubNamespaceResourceId) {
             this.eventHubNamespaceResourceId = Objects.requireNonNull(eventHubNamespaceResourceId);
             return this;
         }
 
-        public Builder setEventHubNamespaceResourceId(String eventHubNamespaceResourceId) {
+        public Builder eventHubNamespaceResourceId(String eventHubNamespaceResourceId) {
             this.eventHubNamespaceResourceId = Input.of(Objects.requireNonNull(eventHubNamespaceResourceId));
             return this;
         }

@@ -102,22 +102,22 @@ public final class UserInfoResponse extends io.pulumi.resources.InvokeArgs {
     	      this.phoneNumber = defaults.phoneNumber;
         }
 
-        public Builder setEmailAddress(@Nullable String emailAddress) {
+        public Builder emailAddress(@Nullable String emailAddress) {
             this.emailAddress = emailAddress;
             return this;
         }
 
-        public Builder setFirstName(@Nullable String firstName) {
+        public Builder firstName(@Nullable String firstName) {
             this.firstName = firstName;
             return this;
         }
 
-        public Builder setLastName(@Nullable String lastName) {
+        public Builder lastName(@Nullable String lastName) {
             this.lastName = lastName;
             return this;
         }
 
-        public Builder setPhoneNumber(@Nullable String phoneNumber) {
+        public Builder phoneNumber(@Nullable String phoneNumber) {
             this.phoneNumber = phoneNumber;
             return this;
         }

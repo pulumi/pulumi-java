@@ -152,72 +152,72 @@ public final class DigitalTwinArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setIdentity(@Nullable Input<DigitalTwinsIdentityArgs> identity) {
+        public Builder identity(@Nullable Input<DigitalTwinsIdentityArgs> identity) {
             this.identity = identity;
             return this;
         }
 
-        public Builder setIdentity(@Nullable DigitalTwinsIdentityArgs identity) {
+        public Builder identity(@Nullable DigitalTwinsIdentityArgs identity) {
             this.identity = Input.ofNullable(identity);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setPrivateEndpointConnections(@Nullable Input<List<PrivateEndpointConnectionArgs>> privateEndpointConnections) {
+        public Builder privateEndpointConnections(@Nullable Input<List<PrivateEndpointConnectionArgs>> privateEndpointConnections) {
             this.privateEndpointConnections = privateEndpointConnections;
             return this;
         }
 
-        public Builder setPrivateEndpointConnections(@Nullable List<PrivateEndpointConnectionArgs> privateEndpointConnections) {
+        public Builder privateEndpointConnections(@Nullable List<PrivateEndpointConnectionArgs> privateEndpointConnections) {
             this.privateEndpointConnections = Input.ofNullable(privateEndpointConnections);
             return this;
         }
 
-        public Builder setPublicNetworkAccess(@Nullable Input<Either<String,PublicNetworkAccess>> publicNetworkAccess) {
+        public Builder publicNetworkAccess(@Nullable Input<Either<String,PublicNetworkAccess>> publicNetworkAccess) {
             this.publicNetworkAccess = publicNetworkAccess;
             return this;
         }
 
-        public Builder setPublicNetworkAccess(@Nullable Either<String,PublicNetworkAccess> publicNetworkAccess) {
+        public Builder publicNetworkAccess(@Nullable Either<String,PublicNetworkAccess> publicNetworkAccess) {
             this.publicNetworkAccess = Input.ofNullable(publicNetworkAccess);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setResourceName(@Nullable Input<String> resourceName) {
+        public Builder resourceName(@Nullable Input<String> resourceName) {
             this.resourceName = resourceName;
             return this;
         }
 
-        public Builder setResourceName(@Nullable String resourceName) {
+        public Builder resourceName(@Nullable String resourceName) {
             this.resourceName = Input.ofNullable(resourceName);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

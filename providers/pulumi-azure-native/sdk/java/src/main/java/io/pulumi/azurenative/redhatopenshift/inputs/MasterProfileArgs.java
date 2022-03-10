@@ -74,22 +74,22 @@ public final class MasterProfileArgs extends io.pulumi.resources.ResourceArgs {
     	      this.vmSize = defaults.vmSize;
         }
 
-        public Builder setSubnetId(@Nullable Input<String> subnetId) {
+        public Builder subnetId(@Nullable Input<String> subnetId) {
             this.subnetId = subnetId;
             return this;
         }
 
-        public Builder setSubnetId(@Nullable String subnetId) {
+        public Builder subnetId(@Nullable String subnetId) {
             this.subnetId = Input.ofNullable(subnetId);
             return this;
         }
 
-        public Builder setVmSize(@Nullable Input<String> vmSize) {
+        public Builder vmSize(@Nullable Input<String> vmSize) {
             this.vmSize = vmSize;
             return this;
         }
 
-        public Builder setVmSize(@Nullable String vmSize) {
+        public Builder vmSize(@Nullable String vmSize) {
             this.vmSize = Input.ofNullable(vmSize);
             return this;
         }

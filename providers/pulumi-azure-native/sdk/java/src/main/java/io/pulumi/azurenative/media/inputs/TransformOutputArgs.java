@@ -99,32 +99,32 @@ public final class TransformOutputArgs extends io.pulumi.resources.ResourceArgs 
     	      this.relativePriority = defaults.relativePriority;
         }
 
-        public Builder setOnError(@Nullable Input<Either<String,OnErrorType>> onError) {
+        public Builder onError(@Nullable Input<Either<String,OnErrorType>> onError) {
             this.onError = onError;
             return this;
         }
 
-        public Builder setOnError(@Nullable Either<String,OnErrorType> onError) {
+        public Builder onError(@Nullable Either<String,OnErrorType> onError) {
             this.onError = Input.ofNullable(onError);
             return this;
         }
 
-        public Builder setPreset(Input<Object> preset) {
+        public Builder preset(Input<Object> preset) {
             this.preset = Objects.requireNonNull(preset);
             return this;
         }
 
-        public Builder setPreset(Object preset) {
+        public Builder preset(Object preset) {
             this.preset = Input.of(Objects.requireNonNull(preset));
             return this;
         }
 
-        public Builder setRelativePriority(@Nullable Input<Either<String,Priority>> relativePriority) {
+        public Builder relativePriority(@Nullable Input<Either<String,Priority>> relativePriority) {
             this.relativePriority = relativePriority;
             return this;
         }
 
-        public Builder setRelativePriority(@Nullable Either<String,Priority> relativePriority) {
+        public Builder relativePriority(@Nullable Either<String,Priority> relativePriority) {
             this.relativePriority = Input.ofNullable(relativePriority);
             return this;
         }

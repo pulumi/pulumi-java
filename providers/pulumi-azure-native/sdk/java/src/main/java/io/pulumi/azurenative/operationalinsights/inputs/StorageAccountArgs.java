@@ -73,22 +73,22 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
     	      this.key = defaults.key;
         }
 
-        public Builder setId(Input<String> id) {
+        public Builder id(Input<String> id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Input.of(Objects.requireNonNull(id));
             return this;
         }
 
-        public Builder setKey(Input<String> key) {
+        public Builder key(Input<String> key) {
             this.key = Objects.requireNonNull(key);
             return this;
         }
 
-        public Builder setKey(String key) {
+        public Builder key(String key) {
             this.key = Input.of(Objects.requireNonNull(key));
             return this;
         }

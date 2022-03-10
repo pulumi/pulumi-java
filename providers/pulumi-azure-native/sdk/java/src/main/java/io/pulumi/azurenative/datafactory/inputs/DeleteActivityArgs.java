@@ -273,132 +273,132 @@ public final class DeleteActivityArgs extends io.pulumi.resources.ResourceArgs {
     	      this.userProperties = defaults.userProperties;
         }
 
-        public Builder setDataset(Input<DatasetReferenceArgs> dataset) {
+        public Builder dataset(Input<DatasetReferenceArgs> dataset) {
             this.dataset = Objects.requireNonNull(dataset);
             return this;
         }
 
-        public Builder setDataset(DatasetReferenceArgs dataset) {
+        public Builder dataset(DatasetReferenceArgs dataset) {
             this.dataset = Input.of(Objects.requireNonNull(dataset));
             return this;
         }
 
-        public Builder setDependsOn(@Nullable Input<List<ActivityDependencyArgs>> dependsOn) {
+        public Builder dependsOn(@Nullable Input<List<ActivityDependencyArgs>> dependsOn) {
             this.dependsOn = dependsOn;
             return this;
         }
 
-        public Builder setDependsOn(@Nullable List<ActivityDependencyArgs> dependsOn) {
+        public Builder dependsOn(@Nullable List<ActivityDependencyArgs> dependsOn) {
             this.dependsOn = Input.ofNullable(dependsOn);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setEnableLogging(@Nullable Input<Object> enableLogging) {
+        public Builder enableLogging(@Nullable Input<Object> enableLogging) {
             this.enableLogging = enableLogging;
             return this;
         }
 
-        public Builder setEnableLogging(@Nullable Object enableLogging) {
+        public Builder enableLogging(@Nullable Object enableLogging) {
             this.enableLogging = Input.ofNullable(enableLogging);
             return this;
         }
 
-        public Builder setLinkedServiceName(@Nullable Input<LinkedServiceReferenceArgs> linkedServiceName) {
+        public Builder linkedServiceName(@Nullable Input<LinkedServiceReferenceArgs> linkedServiceName) {
             this.linkedServiceName = linkedServiceName;
             return this;
         }
 
-        public Builder setLinkedServiceName(@Nullable LinkedServiceReferenceArgs linkedServiceName) {
+        public Builder linkedServiceName(@Nullable LinkedServiceReferenceArgs linkedServiceName) {
             this.linkedServiceName = Input.ofNullable(linkedServiceName);
             return this;
         }
 
-        public Builder setLogStorageSettings(@Nullable Input<LogStorageSettingsArgs> logStorageSettings) {
+        public Builder logStorageSettings(@Nullable Input<LogStorageSettingsArgs> logStorageSettings) {
             this.logStorageSettings = logStorageSettings;
             return this;
         }
 
-        public Builder setLogStorageSettings(@Nullable LogStorageSettingsArgs logStorageSettings) {
+        public Builder logStorageSettings(@Nullable LogStorageSettingsArgs logStorageSettings) {
             this.logStorageSettings = Input.ofNullable(logStorageSettings);
             return this;
         }
 
-        public Builder setMaxConcurrentConnections(@Nullable Input<Integer> maxConcurrentConnections) {
+        public Builder maxConcurrentConnections(@Nullable Input<Integer> maxConcurrentConnections) {
             this.maxConcurrentConnections = maxConcurrentConnections;
             return this;
         }
 
-        public Builder setMaxConcurrentConnections(@Nullable Integer maxConcurrentConnections) {
+        public Builder maxConcurrentConnections(@Nullable Integer maxConcurrentConnections) {
             this.maxConcurrentConnections = Input.ofNullable(maxConcurrentConnections);
             return this;
         }
 
-        public Builder setName(Input<String> name) {
+        public Builder name(Input<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder setPolicy(@Nullable Input<ActivityPolicyArgs> policy) {
+        public Builder policy(@Nullable Input<ActivityPolicyArgs> policy) {
             this.policy = policy;
             return this;
         }
 
-        public Builder setPolicy(@Nullable ActivityPolicyArgs policy) {
+        public Builder policy(@Nullable ActivityPolicyArgs policy) {
             this.policy = Input.ofNullable(policy);
             return this;
         }
 
-        public Builder setRecursive(@Nullable Input<Object> recursive) {
+        public Builder recursive(@Nullable Input<Object> recursive) {
             this.recursive = recursive;
             return this;
         }
 
-        public Builder setRecursive(@Nullable Object recursive) {
+        public Builder recursive(@Nullable Object recursive) {
             this.recursive = Input.ofNullable(recursive);
             return this;
         }
 
-        public Builder setStoreSettings(@Nullable Input<Object> storeSettings) {
+        public Builder storeSettings(@Nullable Input<Object> storeSettings) {
             this.storeSettings = storeSettings;
             return this;
         }
 
-        public Builder setStoreSettings(@Nullable Object storeSettings) {
+        public Builder storeSettings(@Nullable Object storeSettings) {
             this.storeSettings = Input.ofNullable(storeSettings);
             return this;
         }
 
-        public Builder setType(Input<String> type) {
+        public Builder type(Input<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }
 
-        public Builder setUserProperties(@Nullable Input<List<UserPropertyArgs>> userProperties) {
+        public Builder userProperties(@Nullable Input<List<UserPropertyArgs>> userProperties) {
             this.userProperties = userProperties;
             return this;
         }
 
-        public Builder setUserProperties(@Nullable List<UserPropertyArgs> userProperties) {
+        public Builder userProperties(@Nullable List<UserPropertyArgs> userProperties) {
             this.userProperties = Input.ofNullable(userProperties);
             return this;
         }

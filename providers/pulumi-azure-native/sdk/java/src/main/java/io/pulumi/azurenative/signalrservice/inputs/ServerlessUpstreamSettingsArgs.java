@@ -58,12 +58,12 @@ public final class ServerlessUpstreamSettingsArgs extends io.pulumi.resources.Re
     	      this.templates = defaults.templates;
         }
 
-        public Builder setTemplates(@Nullable Input<List<UpstreamTemplateArgs>> templates) {
+        public Builder templates(@Nullable Input<List<UpstreamTemplateArgs>> templates) {
             this.templates = templates;
             return this;
         }
 
-        public Builder setTemplates(@Nullable List<UpstreamTemplateArgs> templates) {
+        public Builder templates(@Nullable List<UpstreamTemplateArgs> templates) {
             this.templates = Input.ofNullable(templates);
             return this;
         }

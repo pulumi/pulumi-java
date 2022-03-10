@@ -75,12 +75,12 @@ public final class FunctionInputResponse extends io.pulumi.resources.InvokeArgs 
     	      this.isConfigurationParameter = defaults.isConfigurationParameter;
         }
 
-        public Builder setDataType(@Nullable String dataType) {
+        public Builder dataType(@Nullable String dataType) {
             this.dataType = dataType;
             return this;
         }
 
-        public Builder setIsConfigurationParameter(@Nullable Boolean isConfigurationParameter) {
+        public Builder isConfigurationParameter(@Nullable Boolean isConfigurationParameter) {
             this.isConfigurationParameter = isConfigurationParameter;
             return this;
         }

@@ -51,12 +51,12 @@ public final class EtwProviderConfigurationResponse {
     	      this.id = defaults.id;
         }
 
-        public Builder setEvents(List<EtwEventConfigurationResponse> events) {
+        public Builder events(List<EtwEventConfigurationResponse> events) {
             this.events = Objects.requireNonNull(events);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }

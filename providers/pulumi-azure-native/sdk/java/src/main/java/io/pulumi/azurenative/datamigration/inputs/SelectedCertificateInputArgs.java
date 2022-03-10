@@ -73,22 +73,22 @@ public final class SelectedCertificateInputArgs extends io.pulumi.resources.Reso
     	      this.password = defaults.password;
         }
 
-        public Builder setCertificateName(Input<String> certificateName) {
+        public Builder certificateName(Input<String> certificateName) {
             this.certificateName = Objects.requireNonNull(certificateName);
             return this;
         }
 
-        public Builder setCertificateName(String certificateName) {
+        public Builder certificateName(String certificateName) {
             this.certificateName = Input.of(Objects.requireNonNull(certificateName));
             return this;
         }
 
-        public Builder setPassword(Input<String> password) {
+        public Builder password(Input<String> password) {
             this.password = Objects.requireNonNull(password);
             return this;
         }
 
-        public Builder setPassword(String password) {
+        public Builder password(String password) {
             this.password = Input.of(Objects.requireNonNull(password));
             return this;
         }

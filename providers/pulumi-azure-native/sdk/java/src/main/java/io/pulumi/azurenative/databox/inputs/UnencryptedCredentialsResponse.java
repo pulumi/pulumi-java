@@ -76,12 +76,12 @@ public final class UnencryptedCredentialsResponse extends io.pulumi.resources.In
     	      this.jobSecrets = defaults.jobSecrets;
         }
 
-        public Builder setJobName(String jobName) {
+        public Builder jobName(String jobName) {
             this.jobName = Objects.requireNonNull(jobName);
             return this;
         }
 
-        public Builder setJobSecrets(Object jobSecrets) {
+        public Builder jobSecrets(Object jobSecrets) {
             this.jobSecrets = Objects.requireNonNull(jobSecrets);
             return this;
         }

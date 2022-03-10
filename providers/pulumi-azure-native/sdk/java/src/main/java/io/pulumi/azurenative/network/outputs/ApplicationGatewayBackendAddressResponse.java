@@ -67,12 +67,12 @@ public final class ApplicationGatewayBackendAddressResponse {
     	      this.ipAddress = defaults.ipAddress;
         }
 
-        public Builder setFqdn(@Nullable String fqdn) {
+        public Builder fqdn(@Nullable String fqdn) {
             this.fqdn = fqdn;
             return this;
         }
 
-        public Builder setIpAddress(@Nullable String ipAddress) {
+        public Builder ipAddress(@Nullable String ipAddress) {
             this.ipAddress = ipAddress;
             return this;
         }

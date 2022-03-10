@@ -50,7 +50,7 @@ public final class BackendPropertiesResponse {
     	      this.serviceFabricCluster = defaults.serviceFabricCluster;
         }
 
-        public Builder setServiceFabricCluster(@Nullable BackendServiceFabricClusterPropertiesResponse serviceFabricCluster) {
+        public Builder serviceFabricCluster(@Nullable BackendServiceFabricClusterPropertiesResponse serviceFabricCluster) {
             this.serviceFabricCluster = serviceFabricCluster;
             return this;
         }

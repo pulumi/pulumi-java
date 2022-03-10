@@ -50,7 +50,7 @@ public final class WindowsOsInfoResponse {
     	      this.windowsOsState = defaults.windowsOsState;
         }
 
-        public Builder setWindowsOsState(@Nullable String windowsOsState) {
+        public Builder windowsOsState(@Nullable String windowsOsState) {
             this.windowsOsState = windowsOsState;
             return this;
         }

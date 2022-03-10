@@ -150,37 +150,37 @@ public final class GetMongoDBResourceMongoRoleDefinitionResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setDatabaseName(@Nullable String databaseName) {
+        public Builder databaseName(@Nullable String databaseName) {
             this.databaseName = databaseName;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPrivileges(@Nullable List<PrivilegeResponse> privileges) {
+        public Builder privileges(@Nullable List<PrivilegeResponse> privileges) {
             this.privileges = privileges;
             return this;
         }
 
-        public Builder setRoleName(@Nullable String roleName) {
+        public Builder roleName(@Nullable String roleName) {
             this.roleName = roleName;
             return this;
         }
 
-        public Builder setRoles(@Nullable List<RoleResponse> roles) {
+        public Builder roles(@Nullable List<RoleResponse> roles) {
             this.roles = roles;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

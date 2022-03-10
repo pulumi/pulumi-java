@@ -115,27 +115,27 @@ public final class ImageTemplateLastRunStatusResponse {
     	      this.startTime = defaults.startTime;
         }
 
-        public Builder setEndTime(@Nullable String endTime) {
+        public Builder endTime(@Nullable String endTime) {
             this.endTime = endTime;
             return this;
         }
 
-        public Builder setMessage(@Nullable String message) {
+        public Builder message(@Nullable String message) {
             this.message = message;
             return this;
         }
 
-        public Builder setRunState(@Nullable String runState) {
+        public Builder runState(@Nullable String runState) {
             this.runState = runState;
             return this;
         }
 
-        public Builder setRunSubState(@Nullable String runSubState) {
+        public Builder runSubState(@Nullable String runSubState) {
             this.runSubState = runSubState;
             return this;
         }
 
-        public Builder setStartTime(@Nullable String startTime) {
+        public Builder startTime(@Nullable String startTime) {
             this.startTime = startTime;
             return this;
         }

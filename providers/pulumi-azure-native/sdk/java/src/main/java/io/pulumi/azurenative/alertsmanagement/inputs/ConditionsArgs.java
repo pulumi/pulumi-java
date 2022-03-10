@@ -154,72 +154,72 @@ public final class ConditionsArgs extends io.pulumi.resources.ResourceArgs {
     	      this.targetResourceType = defaults.targetResourceType;
         }
 
-        public Builder setAlertContext(@Nullable Input<ConditionArgs> alertContext) {
+        public Builder alertContext(@Nullable Input<ConditionArgs> alertContext) {
             this.alertContext = alertContext;
             return this;
         }
 
-        public Builder setAlertContext(@Nullable ConditionArgs alertContext) {
+        public Builder alertContext(@Nullable ConditionArgs alertContext) {
             this.alertContext = Input.ofNullable(alertContext);
             return this;
         }
 
-        public Builder setAlertRuleId(@Nullable Input<ConditionArgs> alertRuleId) {
+        public Builder alertRuleId(@Nullable Input<ConditionArgs> alertRuleId) {
             this.alertRuleId = alertRuleId;
             return this;
         }
 
-        public Builder setAlertRuleId(@Nullable ConditionArgs alertRuleId) {
+        public Builder alertRuleId(@Nullable ConditionArgs alertRuleId) {
             this.alertRuleId = Input.ofNullable(alertRuleId);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<ConditionArgs> description) {
+        public Builder description(@Nullable Input<ConditionArgs> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable ConditionArgs description) {
+        public Builder description(@Nullable ConditionArgs description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setMonitorCondition(@Nullable Input<ConditionArgs> monitorCondition) {
+        public Builder monitorCondition(@Nullable Input<ConditionArgs> monitorCondition) {
             this.monitorCondition = monitorCondition;
             return this;
         }
 
-        public Builder setMonitorCondition(@Nullable ConditionArgs monitorCondition) {
+        public Builder monitorCondition(@Nullable ConditionArgs monitorCondition) {
             this.monitorCondition = Input.ofNullable(monitorCondition);
             return this;
         }
 
-        public Builder setMonitorService(@Nullable Input<ConditionArgs> monitorService) {
+        public Builder monitorService(@Nullable Input<ConditionArgs> monitorService) {
             this.monitorService = monitorService;
             return this;
         }
 
-        public Builder setMonitorService(@Nullable ConditionArgs monitorService) {
+        public Builder monitorService(@Nullable ConditionArgs monitorService) {
             this.monitorService = Input.ofNullable(monitorService);
             return this;
         }
 
-        public Builder setSeverity(@Nullable Input<ConditionArgs> severity) {
+        public Builder severity(@Nullable Input<ConditionArgs> severity) {
             this.severity = severity;
             return this;
         }
 
-        public Builder setSeverity(@Nullable ConditionArgs severity) {
+        public Builder severity(@Nullable ConditionArgs severity) {
             this.severity = Input.ofNullable(severity);
             return this;
         }
 
-        public Builder setTargetResourceType(@Nullable Input<ConditionArgs> targetResourceType) {
+        public Builder targetResourceType(@Nullable Input<ConditionArgs> targetResourceType) {
             this.targetResourceType = targetResourceType;
             return this;
         }
 
-        public Builder setTargetResourceType(@Nullable ConditionArgs targetResourceType) {
+        public Builder targetResourceType(@Nullable ConditionArgs targetResourceType) {
             this.targetResourceType = Input.ofNullable(targetResourceType);
             return this;
         }

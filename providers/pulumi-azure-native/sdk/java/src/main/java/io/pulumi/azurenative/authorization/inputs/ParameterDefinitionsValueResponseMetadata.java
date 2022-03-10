@@ -107,22 +107,22 @@ public final class ParameterDefinitionsValueResponseMetadata extends io.pulumi.r
     	      this.strongType = defaults.strongType;
         }
 
-        public Builder setAssignPermissions(@Nullable Boolean assignPermissions) {
+        public Builder assignPermissions(@Nullable Boolean assignPermissions) {
             this.assignPermissions = assignPermissions;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDisplayName(@Nullable String displayName) {
+        public Builder displayName(@Nullable String displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setStrongType(@Nullable String strongType) {
+        public Builder strongType(@Nullable String strongType) {
             this.strongType = strongType;
             return this;
         }

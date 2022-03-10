@@ -168,82 +168,82 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
     	      this.template = defaults.template;
         }
 
-        public Builder setDisplayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Input<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setDisplayName(@Nullable String displayName) {
+        public Builder displayName(@Nullable String displayName) {
             this.displayName = Input.ofNullable(displayName);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setResourceName(@Nullable Input<String> resourceName) {
+        public Builder resourceName(@Nullable Input<String> resourceName) {
             this.resourceName = resourceName;
             return this;
         }
 
-        public Builder setResourceName(@Nullable String resourceName) {
+        public Builder resourceName(@Nullable String resourceName) {
             this.resourceName = Input.ofNullable(resourceName);
             return this;
         }
 
-        public Builder setSku(Input<AppSkuInfoArgs> sku) {
+        public Builder sku(Input<AppSkuInfoArgs> sku) {
             this.sku = Objects.requireNonNull(sku);
             return this;
         }
 
-        public Builder setSku(AppSkuInfoArgs sku) {
+        public Builder sku(AppSkuInfoArgs sku) {
             this.sku = Input.of(Objects.requireNonNull(sku));
             return this;
         }
 
-        public Builder setSubdomain(@Nullable Input<String> subdomain) {
+        public Builder subdomain(@Nullable Input<String> subdomain) {
             this.subdomain = subdomain;
             return this;
         }
 
-        public Builder setSubdomain(@Nullable String subdomain) {
+        public Builder subdomain(@Nullable String subdomain) {
             this.subdomain = Input.ofNullable(subdomain);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTemplate(@Nullable Input<String> template) {
+        public Builder template(@Nullable Input<String> template) {
             this.template = template;
             return this;
         }
 
-        public Builder setTemplate(@Nullable String template) {
+        public Builder template(@Nullable String template) {
             this.template = Input.ofNullable(template);
             return this;
         }

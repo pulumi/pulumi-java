@@ -93,32 +93,32 @@ public final class DefenderForServersAwsOfferingArgs extends io.pulumi.resources
     	      this.offeringType = defaults.offeringType;
         }
 
-        public Builder setArcAutoProvisioning(@Nullable Input<DefenderForServersAwsOfferingArcAutoProvisioningArgs> arcAutoProvisioning) {
+        public Builder arcAutoProvisioning(@Nullable Input<DefenderForServersAwsOfferingArcAutoProvisioningArgs> arcAutoProvisioning) {
             this.arcAutoProvisioning = arcAutoProvisioning;
             return this;
         }
 
-        public Builder setArcAutoProvisioning(@Nullable DefenderForServersAwsOfferingArcAutoProvisioningArgs arcAutoProvisioning) {
+        public Builder arcAutoProvisioning(@Nullable DefenderForServersAwsOfferingArcAutoProvisioningArgs arcAutoProvisioning) {
             this.arcAutoProvisioning = Input.ofNullable(arcAutoProvisioning);
             return this;
         }
 
-        public Builder setDefenderForServers(@Nullable Input<DefenderForServersAwsOfferingDefenderForServersArgs> defenderForServers) {
+        public Builder defenderForServers(@Nullable Input<DefenderForServersAwsOfferingDefenderForServersArgs> defenderForServers) {
             this.defenderForServers = defenderForServers;
             return this;
         }
 
-        public Builder setDefenderForServers(@Nullable DefenderForServersAwsOfferingDefenderForServersArgs defenderForServers) {
+        public Builder defenderForServers(@Nullable DefenderForServersAwsOfferingDefenderForServersArgs defenderForServers) {
             this.defenderForServers = Input.ofNullable(defenderForServers);
             return this;
         }
 
-        public Builder setOfferingType(Input<String> offeringType) {
+        public Builder offeringType(Input<String> offeringType) {
             this.offeringType = Objects.requireNonNull(offeringType);
             return this;
         }
 
-        public Builder setOfferingType(String offeringType) {
+        public Builder offeringType(String offeringType) {
             this.offeringType = Input.of(Objects.requireNonNull(offeringType));
             return this;
         }

@@ -91,17 +91,17 @@ public final class AzureToAzureNetworkMappingSettingsResponse extends io.pulumi.
     	      this.recoveryFabricLocation = defaults.recoveryFabricLocation;
         }
 
-        public Builder setInstanceType(String instanceType) {
+        public Builder instanceType(String instanceType) {
             this.instanceType = Objects.requireNonNull(instanceType);
             return this;
         }
 
-        public Builder setPrimaryFabricLocation(@Nullable String primaryFabricLocation) {
+        public Builder primaryFabricLocation(@Nullable String primaryFabricLocation) {
             this.primaryFabricLocation = primaryFabricLocation;
             return this;
         }
 
-        public Builder setRecoveryFabricLocation(@Nullable String recoveryFabricLocation) {
+        public Builder recoveryFabricLocation(@Nullable String recoveryFabricLocation) {
             this.recoveryFabricLocation = recoveryFabricLocation;
             return this;
         }

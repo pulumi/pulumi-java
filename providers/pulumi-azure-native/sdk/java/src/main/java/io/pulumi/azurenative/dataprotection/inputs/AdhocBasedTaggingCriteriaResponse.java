@@ -57,7 +57,7 @@ public final class AdhocBasedTaggingCriteriaResponse extends io.pulumi.resources
     	      this.tagInfo = defaults.tagInfo;
         }
 
-        public Builder setTagInfo(@Nullable RetentionTagResponse tagInfo) {
+        public Builder tagInfo(@Nullable RetentionTagResponse tagInfo) {
             this.tagInfo = tagInfo;
             return this;
         }

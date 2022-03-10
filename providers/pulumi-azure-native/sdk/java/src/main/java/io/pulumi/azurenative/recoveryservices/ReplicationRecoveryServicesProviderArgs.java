@@ -119,52 +119,52 @@ public final class ReplicationRecoveryServicesProviderArgs extends io.pulumi.res
     	      this.resourceName = defaults.resourceName;
         }
 
-        public Builder setFabricName(Input<String> fabricName) {
+        public Builder fabricName(Input<String> fabricName) {
             this.fabricName = Objects.requireNonNull(fabricName);
             return this;
         }
 
-        public Builder setFabricName(String fabricName) {
+        public Builder fabricName(String fabricName) {
             this.fabricName = Input.of(Objects.requireNonNull(fabricName));
             return this;
         }
 
-        public Builder setProperties(Input<AddRecoveryServicesProviderInputPropertiesArgs> properties) {
+        public Builder properties(Input<AddRecoveryServicesProviderInputPropertiesArgs> properties) {
             this.properties = Objects.requireNonNull(properties);
             return this;
         }
 
-        public Builder setProperties(AddRecoveryServicesProviderInputPropertiesArgs properties) {
+        public Builder properties(AddRecoveryServicesProviderInputPropertiesArgs properties) {
             this.properties = Input.of(Objects.requireNonNull(properties));
             return this;
         }
 
-        public Builder setProviderName(@Nullable Input<String> providerName) {
+        public Builder providerName(@Nullable Input<String> providerName) {
             this.providerName = providerName;
             return this;
         }
 
-        public Builder setProviderName(@Nullable String providerName) {
+        public Builder providerName(@Nullable String providerName) {
             this.providerName = Input.ofNullable(providerName);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setResourceName(Input<String> resourceName) {
+        public Builder resourceName(Input<String> resourceName) {
             this.resourceName = Objects.requireNonNull(resourceName);
             return this;
         }
 
-        public Builder setResourceName(String resourceName) {
+        public Builder resourceName(String resourceName) {
             this.resourceName = Input.of(Objects.requireNonNull(resourceName));
             return this;
         }

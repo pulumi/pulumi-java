@@ -68,12 +68,12 @@ public final class ApiProfileResponse extends io.pulumi.resources.InvokeArgs {
     	      this.profileVersion = defaults.profileVersion;
         }
 
-        public Builder setApiVersion(String apiVersion) {
+        public Builder apiVersion(String apiVersion) {
             this.apiVersion = Objects.requireNonNull(apiVersion);
             return this;
         }
 
-        public Builder setProfileVersion(String profileVersion) {
+        public Builder profileVersion(String profileVersion) {
             this.profileVersion = Objects.requireNonNull(profileVersion);
             return this;
         }

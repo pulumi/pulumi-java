@@ -93,32 +93,32 @@ public final class ScheduleBasedTriggerContextArgs extends io.pulumi.resources.R
     	      this.taggingCriteria = defaults.taggingCriteria;
         }
 
-        public Builder setObjectType(Input<String> objectType) {
+        public Builder objectType(Input<String> objectType) {
             this.objectType = Objects.requireNonNull(objectType);
             return this;
         }
 
-        public Builder setObjectType(String objectType) {
+        public Builder objectType(String objectType) {
             this.objectType = Input.of(Objects.requireNonNull(objectType));
             return this;
         }
 
-        public Builder setSchedule(Input<BackupScheduleArgs> schedule) {
+        public Builder schedule(Input<BackupScheduleArgs> schedule) {
             this.schedule = Objects.requireNonNull(schedule);
             return this;
         }
 
-        public Builder setSchedule(BackupScheduleArgs schedule) {
+        public Builder schedule(BackupScheduleArgs schedule) {
             this.schedule = Input.of(Objects.requireNonNull(schedule));
             return this;
         }
 
-        public Builder setTaggingCriteria(Input<List<TaggingCriteriaArgs>> taggingCriteria) {
+        public Builder taggingCriteria(Input<List<TaggingCriteriaArgs>> taggingCriteria) {
             this.taggingCriteria = Objects.requireNonNull(taggingCriteria);
             return this;
         }
 
-        public Builder setTaggingCriteria(List<TaggingCriteriaArgs> taggingCriteria) {
+        public Builder taggingCriteria(List<TaggingCriteriaArgs> taggingCriteria) {
             this.taggingCriteria = Input.of(Objects.requireNonNull(taggingCriteria));
             return this;
         }

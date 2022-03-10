@@ -57,12 +57,12 @@ public final class ConfigurationServiceSettingsArgs extends io.pulumi.resources.
     	      this.gitProperty = defaults.gitProperty;
         }
 
-        public Builder setGitProperty(@Nullable Input<ConfigurationServiceGitPropertyArgs> gitProperty) {
+        public Builder gitProperty(@Nullable Input<ConfigurationServiceGitPropertyArgs> gitProperty) {
             this.gitProperty = gitProperty;
             return this;
         }
 
-        public Builder setGitProperty(@Nullable ConfigurationServiceGitPropertyArgs gitProperty) {
+        public Builder gitProperty(@Nullable ConfigurationServiceGitPropertyArgs gitProperty) {
             this.gitProperty = Input.ofNullable(gitProperty);
             return this;
         }

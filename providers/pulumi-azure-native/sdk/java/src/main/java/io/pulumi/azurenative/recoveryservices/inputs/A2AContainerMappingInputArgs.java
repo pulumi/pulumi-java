@@ -93,32 +93,32 @@ public final class A2AContainerMappingInputArgs extends io.pulumi.resources.Reso
     	      this.instanceType = defaults.instanceType;
         }
 
-        public Builder setAgentAutoUpdateStatus(@Nullable Input<Either<String,AgentAutoUpdateStatus>> agentAutoUpdateStatus) {
+        public Builder agentAutoUpdateStatus(@Nullable Input<Either<String,AgentAutoUpdateStatus>> agentAutoUpdateStatus) {
             this.agentAutoUpdateStatus = agentAutoUpdateStatus;
             return this;
         }
 
-        public Builder setAgentAutoUpdateStatus(@Nullable Either<String,AgentAutoUpdateStatus> agentAutoUpdateStatus) {
+        public Builder agentAutoUpdateStatus(@Nullable Either<String,AgentAutoUpdateStatus> agentAutoUpdateStatus) {
             this.agentAutoUpdateStatus = Input.ofNullable(agentAutoUpdateStatus);
             return this;
         }
 
-        public Builder setAutomationAccountArmId(@Nullable Input<String> automationAccountArmId) {
+        public Builder automationAccountArmId(@Nullable Input<String> automationAccountArmId) {
             this.automationAccountArmId = automationAccountArmId;
             return this;
         }
 
-        public Builder setAutomationAccountArmId(@Nullable String automationAccountArmId) {
+        public Builder automationAccountArmId(@Nullable String automationAccountArmId) {
             this.automationAccountArmId = Input.ofNullable(automationAccountArmId);
             return this;
         }
 
-        public Builder setInstanceType(@Nullable Input<String> instanceType) {
+        public Builder instanceType(@Nullable Input<String> instanceType) {
             this.instanceType = instanceType;
             return this;
         }
 
-        public Builder setInstanceType(@Nullable String instanceType) {
+        public Builder instanceType(@Nullable String instanceType) {
             this.instanceType = Input.ofNullable(instanceType);
             return this;
         }

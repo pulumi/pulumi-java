@@ -90,17 +90,17 @@ public final class IotEventHubIngestionEndpointConfigurationResponse extends io.
     	      this.fullyQualifiedEventHubNamespace = defaults.fullyQualifiedEventHubNamespace;
         }
 
-        public Builder setConsumerGroup(@Nullable String consumerGroup) {
+        public Builder consumerGroup(@Nullable String consumerGroup) {
             this.consumerGroup = consumerGroup;
             return this;
         }
 
-        public Builder setEventHubName(@Nullable String eventHubName) {
+        public Builder eventHubName(@Nullable String eventHubName) {
             this.eventHubName = eventHubName;
             return this;
         }
 
-        public Builder setFullyQualifiedEventHubNamespace(@Nullable String fullyQualifiedEventHubNamespace) {
+        public Builder fullyQualifiedEventHubNamespace(@Nullable String fullyQualifiedEventHubNamespace) {
             this.fullyQualifiedEventHubNamespace = fullyQualifiedEventHubNamespace;
             return this;
         }

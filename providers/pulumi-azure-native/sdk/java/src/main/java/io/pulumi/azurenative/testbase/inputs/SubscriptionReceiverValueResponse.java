@@ -90,17 +90,17 @@ public final class SubscriptionReceiverValueResponse extends io.pulumi.resources
     	      this.subscriptionName = defaults.subscriptionName;
         }
 
-        public Builder setRole(@Nullable String role) {
+        public Builder role(@Nullable String role) {
             this.role = role;
             return this;
         }
 
-        public Builder setSubscriptionId(@Nullable String subscriptionId) {
+        public Builder subscriptionId(@Nullable String subscriptionId) {
             this.subscriptionId = subscriptionId;
             return this;
         }
 
-        public Builder setSubscriptionName(@Nullable String subscriptionName) {
+        public Builder subscriptionName(@Nullable String subscriptionName) {
             this.subscriptionName = subscriptionName;
             return this;
         }

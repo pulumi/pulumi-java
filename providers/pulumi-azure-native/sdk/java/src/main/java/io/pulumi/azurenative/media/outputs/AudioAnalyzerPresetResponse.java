@@ -102,22 +102,22 @@ public final class AudioAnalyzerPresetResponse {
     	      this.odataType = defaults.odataType;
         }
 
-        public Builder setAudioLanguage(@Nullable String audioLanguage) {
+        public Builder audioLanguage(@Nullable String audioLanguage) {
             this.audioLanguage = audioLanguage;
             return this;
         }
 
-        public Builder setExperimentalOptions(@Nullable Map<String,String> experimentalOptions) {
+        public Builder experimentalOptions(@Nullable Map<String,String> experimentalOptions) {
             this.experimentalOptions = experimentalOptions;
             return this;
         }
 
-        public Builder setMode(@Nullable String mode) {
+        public Builder mode(@Nullable String mode) {
             this.mode = mode;
             return this;
         }
 
-        public Builder setOdataType(String odataType) {
+        public Builder odataType(String odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }

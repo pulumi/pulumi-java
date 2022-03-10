@@ -74,22 +74,22 @@ public final class ThreatIntelligenceKillChainPhaseArgs extends io.pulumi.resour
     	      this.phaseName = defaults.phaseName;
         }
 
-        public Builder setKillChainName(@Nullable Input<String> killChainName) {
+        public Builder killChainName(@Nullable Input<String> killChainName) {
             this.killChainName = killChainName;
             return this;
         }
 
-        public Builder setKillChainName(@Nullable String killChainName) {
+        public Builder killChainName(@Nullable String killChainName) {
             this.killChainName = Input.ofNullable(killChainName);
             return this;
         }
 
-        public Builder setPhaseName(@Nullable Input<String> phaseName) {
+        public Builder phaseName(@Nullable Input<String> phaseName) {
             this.phaseName = phaseName;
             return this;
         }
 
-        public Builder setPhaseName(@Nullable String phaseName) {
+        public Builder phaseName(@Nullable String phaseName) {
             this.phaseName = Input.ofNullable(phaseName);
             return this;
         }

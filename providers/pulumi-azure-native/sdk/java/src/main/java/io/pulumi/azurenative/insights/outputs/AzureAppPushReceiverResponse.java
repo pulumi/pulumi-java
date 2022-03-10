@@ -65,12 +65,12 @@ public final class AzureAppPushReceiverResponse {
     	      this.name = defaults.name;
         }
 
-        public Builder setEmailAddress(String emailAddress) {
+        public Builder emailAddress(String emailAddress) {
             this.emailAddress = Objects.requireNonNull(emailAddress);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }

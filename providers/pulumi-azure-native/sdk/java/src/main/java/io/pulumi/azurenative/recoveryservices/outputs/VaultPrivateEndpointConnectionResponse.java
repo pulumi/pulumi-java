@@ -83,17 +83,17 @@ public final class VaultPrivateEndpointConnectionResponse {
     	      this.provisioningState = defaults.provisioningState;
         }
 
-        public Builder setPrivateEndpoint(PrivateEndpointResponse privateEndpoint) {
+        public Builder privateEndpoint(PrivateEndpointResponse privateEndpoint) {
             this.privateEndpoint = Objects.requireNonNull(privateEndpoint);
             return this;
         }
 
-        public Builder setPrivateLinkServiceConnectionState(VaultPrivateLinkServiceConnectionStateResponse privateLinkServiceConnectionState) {
+        public Builder privateLinkServiceConnectionState(VaultPrivateLinkServiceConnectionStateResponse privateLinkServiceConnectionState) {
             this.privateLinkServiceConnectionState = Objects.requireNonNull(privateLinkServiceConnectionState);
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }

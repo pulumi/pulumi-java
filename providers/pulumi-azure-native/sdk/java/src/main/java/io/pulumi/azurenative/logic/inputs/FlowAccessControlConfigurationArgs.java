@@ -106,42 +106,42 @@ public final class FlowAccessControlConfigurationArgs extends io.pulumi.resource
     	      this.workflowManagement = defaults.workflowManagement;
         }
 
-        public Builder setActions(@Nullable Input<FlowAccessControlConfigurationPolicyArgs> actions) {
+        public Builder actions(@Nullable Input<FlowAccessControlConfigurationPolicyArgs> actions) {
             this.actions = actions;
             return this;
         }
 
-        public Builder setActions(@Nullable FlowAccessControlConfigurationPolicyArgs actions) {
+        public Builder actions(@Nullable FlowAccessControlConfigurationPolicyArgs actions) {
             this.actions = Input.ofNullable(actions);
             return this;
         }
 
-        public Builder setContents(@Nullable Input<FlowAccessControlConfigurationPolicyArgs> contents) {
+        public Builder contents(@Nullable Input<FlowAccessControlConfigurationPolicyArgs> contents) {
             this.contents = contents;
             return this;
         }
 
-        public Builder setContents(@Nullable FlowAccessControlConfigurationPolicyArgs contents) {
+        public Builder contents(@Nullable FlowAccessControlConfigurationPolicyArgs contents) {
             this.contents = Input.ofNullable(contents);
             return this;
         }
 
-        public Builder setTriggers(@Nullable Input<FlowAccessControlConfigurationPolicyArgs> triggers) {
+        public Builder triggers(@Nullable Input<FlowAccessControlConfigurationPolicyArgs> triggers) {
             this.triggers = triggers;
             return this;
         }
 
-        public Builder setTriggers(@Nullable FlowAccessControlConfigurationPolicyArgs triggers) {
+        public Builder triggers(@Nullable FlowAccessControlConfigurationPolicyArgs triggers) {
             this.triggers = Input.ofNullable(triggers);
             return this;
         }
 
-        public Builder setWorkflowManagement(@Nullable Input<FlowAccessControlConfigurationPolicyArgs> workflowManagement) {
+        public Builder workflowManagement(@Nullable Input<FlowAccessControlConfigurationPolicyArgs> workflowManagement) {
             this.workflowManagement = workflowManagement;
             return this;
         }
 
-        public Builder setWorkflowManagement(@Nullable FlowAccessControlConfigurationPolicyArgs workflowManagement) {
+        public Builder workflowManagement(@Nullable FlowAccessControlConfigurationPolicyArgs workflowManagement) {
             this.workflowManagement = Input.ofNullable(workflowManagement);
             return this;
         }

@@ -120,52 +120,52 @@ public final class SqlPoolTransparentDataEncryptionArgs extends io.pulumi.resour
     	      this.workspaceName = defaults.workspaceName;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setSqlPoolName(Input<String> sqlPoolName) {
+        public Builder sqlPoolName(Input<String> sqlPoolName) {
             this.sqlPoolName = Objects.requireNonNull(sqlPoolName);
             return this;
         }
 
-        public Builder setSqlPoolName(String sqlPoolName) {
+        public Builder sqlPoolName(String sqlPoolName) {
             this.sqlPoolName = Input.of(Objects.requireNonNull(sqlPoolName));
             return this;
         }
 
-        public Builder setStatus(@Nullable Input<Either<String,TransparentDataEncryptionStatus>> status) {
+        public Builder status(@Nullable Input<Either<String,TransparentDataEncryptionStatus>> status) {
             this.status = status;
             return this;
         }
 
-        public Builder setStatus(@Nullable Either<String,TransparentDataEncryptionStatus> status) {
+        public Builder status(@Nullable Either<String,TransparentDataEncryptionStatus> status) {
             this.status = Input.ofNullable(status);
             return this;
         }
 
-        public Builder setTransparentDataEncryptionName(@Nullable Input<String> transparentDataEncryptionName) {
+        public Builder transparentDataEncryptionName(@Nullable Input<String> transparentDataEncryptionName) {
             this.transparentDataEncryptionName = transparentDataEncryptionName;
             return this;
         }
 
-        public Builder setTransparentDataEncryptionName(@Nullable String transparentDataEncryptionName) {
+        public Builder transparentDataEncryptionName(@Nullable String transparentDataEncryptionName) {
             this.transparentDataEncryptionName = Input.ofNullable(transparentDataEncryptionName);
             return this;
         }
 
-        public Builder setWorkspaceName(Input<String> workspaceName) {
+        public Builder workspaceName(Input<String> workspaceName) {
             this.workspaceName = Objects.requireNonNull(workspaceName);
             return this;
         }
 
-        public Builder setWorkspaceName(String workspaceName) {
+        public Builder workspaceName(String workspaceName) {
             this.workspaceName = Input.of(Objects.requireNonNull(workspaceName));
             return this;
         }

@@ -75,22 +75,22 @@ public final class AutomaticRepairsPolicyArgs extends io.pulumi.resources.Resour
     	      this.gracePeriod = defaults.gracePeriod;
         }
 
-        public Builder setEnabled(@Nullable Input<Boolean> enabled) {
+        public Builder enabled(@Nullable Input<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
 
-        public Builder setEnabled(@Nullable Boolean enabled) {
+        public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Input.ofNullable(enabled);
             return this;
         }
 
-        public Builder setGracePeriod(@Nullable Input<String> gracePeriod) {
+        public Builder gracePeriod(@Nullable Input<String> gracePeriod) {
             this.gracePeriod = gracePeriod;
             return this;
         }
 
-        public Builder setGracePeriod(@Nullable String gracePeriod) {
+        public Builder gracePeriod(@Nullable String gracePeriod) {
             this.gracePeriod = Input.ofNullable(gracePeriod);
             return this;
         }

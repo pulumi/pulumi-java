@@ -68,12 +68,12 @@ public final class AdvancedScheduleMonthlyOccurrenceResponse {
     	      this.occurrence = defaults.occurrence;
         }
 
-        public Builder setDay(@Nullable String day) {
+        public Builder day(@Nullable String day) {
             this.day = day;
             return this;
         }
 
-        public Builder setOccurrence(@Nullable Integer occurrence) {
+        public Builder occurrence(@Nullable Integer occurrence) {
             this.occurrence = occurrence;
             return this;
         }

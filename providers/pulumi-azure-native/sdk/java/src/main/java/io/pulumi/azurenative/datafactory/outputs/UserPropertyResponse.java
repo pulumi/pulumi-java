@@ -66,12 +66,12 @@ public final class UserPropertyResponse {
     	      this.value = defaults.value;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setValue(Object value) {
+        public Builder value(Object value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }

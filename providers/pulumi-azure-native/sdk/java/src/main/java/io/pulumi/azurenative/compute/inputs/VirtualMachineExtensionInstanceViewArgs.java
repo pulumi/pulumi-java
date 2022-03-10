@@ -124,52 +124,52 @@ public final class VirtualMachineExtensionInstanceViewArgs extends io.pulumi.res
     	      this.typeHandlerVersion = defaults.typeHandlerVersion;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setStatuses(@Nullable Input<List<InstanceViewStatusArgs>> statuses) {
+        public Builder statuses(@Nullable Input<List<InstanceViewStatusArgs>> statuses) {
             this.statuses = statuses;
             return this;
         }
 
-        public Builder setStatuses(@Nullable List<InstanceViewStatusArgs> statuses) {
+        public Builder statuses(@Nullable List<InstanceViewStatusArgs> statuses) {
             this.statuses = Input.ofNullable(statuses);
             return this;
         }
 
-        public Builder setSubstatuses(@Nullable Input<List<InstanceViewStatusArgs>> substatuses) {
+        public Builder substatuses(@Nullable Input<List<InstanceViewStatusArgs>> substatuses) {
             this.substatuses = substatuses;
             return this;
         }
 
-        public Builder setSubstatuses(@Nullable List<InstanceViewStatusArgs> substatuses) {
+        public Builder substatuses(@Nullable List<InstanceViewStatusArgs> substatuses) {
             this.substatuses = Input.ofNullable(substatuses);
             return this;
         }
 
-        public Builder setType(@Nullable Input<String> type) {
+        public Builder type(@Nullable Input<String> type) {
             this.type = type;
             return this;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = Input.ofNullable(type);
             return this;
         }
 
-        public Builder setTypeHandlerVersion(@Nullable Input<String> typeHandlerVersion) {
+        public Builder typeHandlerVersion(@Nullable Input<String> typeHandlerVersion) {
             this.typeHandlerVersion = typeHandlerVersion;
             return this;
         }
 
-        public Builder setTypeHandlerVersion(@Nullable String typeHandlerVersion) {
+        public Builder typeHandlerVersion(@Nullable String typeHandlerVersion) {
             this.typeHandlerVersion = Input.ofNullable(typeHandlerVersion);
             return this;
         }

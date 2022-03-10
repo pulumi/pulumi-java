@@ -74,12 +74,12 @@ public final class SelectVideoTrackByIdResponse extends io.pulumi.resources.Invo
     	      this.trackId = defaults.trackId;
         }
 
-        public Builder setOdataType(String odataType) {
+        public Builder odataType(String odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
 
-        public Builder setTrackId(Double trackId) {
+        public Builder trackId(Double trackId) {
             this.trackId = Objects.requireNonNull(trackId);
             return this;
         }

@@ -145,37 +145,37 @@ public final class GetLinkedServerResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setLinkedRedisCacheId(String linkedRedisCacheId) {
+        public Builder linkedRedisCacheId(String linkedRedisCacheId) {
             this.linkedRedisCacheId = Objects.requireNonNull(linkedRedisCacheId);
             return this;
         }
 
-        public Builder setLinkedRedisCacheLocation(String linkedRedisCacheLocation) {
+        public Builder linkedRedisCacheLocation(String linkedRedisCacheLocation) {
             this.linkedRedisCacheLocation = Objects.requireNonNull(linkedRedisCacheLocation);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setServerRole(String serverRole) {
+        public Builder serverRole(String serverRole) {
             this.serverRole = Objects.requireNonNull(serverRole);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

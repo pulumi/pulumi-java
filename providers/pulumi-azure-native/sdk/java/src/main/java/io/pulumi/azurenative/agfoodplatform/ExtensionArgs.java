@@ -86,32 +86,32 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
     	      this.resourceGroupName = defaults.resourceGroupName;
         }
 
-        public Builder setExtensionId(@Nullable Input<String> extensionId) {
+        public Builder extensionId(@Nullable Input<String> extensionId) {
             this.extensionId = extensionId;
             return this;
         }
 
-        public Builder setExtensionId(@Nullable String extensionId) {
+        public Builder extensionId(@Nullable String extensionId) {
             this.extensionId = Input.ofNullable(extensionId);
             return this;
         }
 
-        public Builder setFarmBeatsResourceName(Input<String> farmBeatsResourceName) {
+        public Builder farmBeatsResourceName(Input<String> farmBeatsResourceName) {
             this.farmBeatsResourceName = Objects.requireNonNull(farmBeatsResourceName);
             return this;
         }
 
-        public Builder setFarmBeatsResourceName(String farmBeatsResourceName) {
+        public Builder farmBeatsResourceName(String farmBeatsResourceName) {
             this.farmBeatsResourceName = Input.of(Objects.requireNonNull(farmBeatsResourceName));
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }

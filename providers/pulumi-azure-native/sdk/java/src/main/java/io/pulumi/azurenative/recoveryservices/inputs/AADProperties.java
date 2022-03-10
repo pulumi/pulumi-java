@@ -98,27 +98,27 @@ public final class AADProperties extends io.pulumi.resources.InvokeArgs {
     	      this.tenantId = defaults.tenantId;
         }
 
-        public Builder setAudience(@Nullable String audience) {
+        public Builder audience(@Nullable String audience) {
             this.audience = audience;
             return this;
         }
 
-        public Builder setAuthority(@Nullable String authority) {
+        public Builder authority(@Nullable String authority) {
             this.authority = authority;
             return this;
         }
 
-        public Builder setServicePrincipalClientId(@Nullable String servicePrincipalClientId) {
+        public Builder servicePrincipalClientId(@Nullable String servicePrincipalClientId) {
             this.servicePrincipalClientId = servicePrincipalClientId;
             return this;
         }
 
-        public Builder setServicePrincipalObjectId(@Nullable String servicePrincipalObjectId) {
+        public Builder servicePrincipalObjectId(@Nullable String servicePrincipalObjectId) {
             this.servicePrincipalObjectId = servicePrincipalObjectId;
             return this;
         }
 
-        public Builder setTenantId(@Nullable String tenantId) {
+        public Builder tenantId(@Nullable String tenantId) {
             this.tenantId = tenantId;
             return this;
         }

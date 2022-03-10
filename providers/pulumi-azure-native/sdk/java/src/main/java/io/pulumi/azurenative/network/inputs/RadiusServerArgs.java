@@ -91,32 +91,32 @@ public final class RadiusServerArgs extends io.pulumi.resources.ResourceArgs {
     	      this.radiusServerSecret = defaults.radiusServerSecret;
         }
 
-        public Builder setRadiusServerAddress(Input<String> radiusServerAddress) {
+        public Builder radiusServerAddress(Input<String> radiusServerAddress) {
             this.radiusServerAddress = Objects.requireNonNull(radiusServerAddress);
             return this;
         }
 
-        public Builder setRadiusServerAddress(String radiusServerAddress) {
+        public Builder radiusServerAddress(String radiusServerAddress) {
             this.radiusServerAddress = Input.of(Objects.requireNonNull(radiusServerAddress));
             return this;
         }
 
-        public Builder setRadiusServerScore(@Nullable Input<Double> radiusServerScore) {
+        public Builder radiusServerScore(@Nullable Input<Double> radiusServerScore) {
             this.radiusServerScore = radiusServerScore;
             return this;
         }
 
-        public Builder setRadiusServerScore(@Nullable Double radiusServerScore) {
+        public Builder radiusServerScore(@Nullable Double radiusServerScore) {
             this.radiusServerScore = Input.ofNullable(radiusServerScore);
             return this;
         }
 
-        public Builder setRadiusServerSecret(@Nullable Input<String> radiusServerSecret) {
+        public Builder radiusServerSecret(@Nullable Input<String> radiusServerSecret) {
             this.radiusServerSecret = radiusServerSecret;
             return this;
         }
 
-        public Builder setRadiusServerSecret(@Nullable String radiusServerSecret) {
+        public Builder radiusServerSecret(@Nullable String radiusServerSecret) {
             this.radiusServerSecret = Input.ofNullable(radiusServerSecret);
             return this;
         }

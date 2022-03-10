@@ -160,82 +160,82 @@ public final class MachineLearningDatasetArgs extends io.pulumi.resources.Resour
     	      this.workspaceName = defaults.workspaceName;
         }
 
-        public Builder setDatasetName(@Nullable Input<String> datasetName) {
+        public Builder datasetName(@Nullable Input<String> datasetName) {
             this.datasetName = datasetName;
             return this;
         }
 
-        public Builder setDatasetName(@Nullable String datasetName) {
+        public Builder datasetName(@Nullable String datasetName) {
             this.datasetName = Input.ofNullable(datasetName);
             return this;
         }
 
-        public Builder setDatasetType(Input<Either<String,DatasetType>> datasetType) {
+        public Builder datasetType(Input<Either<String,DatasetType>> datasetType) {
             this.datasetType = Objects.requireNonNull(datasetType);
             return this;
         }
 
-        public Builder setDatasetType(Either<String,DatasetType> datasetType) {
+        public Builder datasetType(Either<String,DatasetType> datasetType) {
             this.datasetType = Input.of(Objects.requireNonNull(datasetType));
             return this;
         }
 
-        public Builder setParameters(Input<DatasetCreateRequestParametersArgs> parameters) {
+        public Builder parameters(Input<DatasetCreateRequestParametersArgs> parameters) {
             this.parameters = Objects.requireNonNull(parameters);
             return this;
         }
 
-        public Builder setParameters(DatasetCreateRequestParametersArgs parameters) {
+        public Builder parameters(DatasetCreateRequestParametersArgs parameters) {
             this.parameters = Input.of(Objects.requireNonNull(parameters));
             return this;
         }
 
-        public Builder setRegistration(Input<DatasetCreateRequestRegistrationArgs> registration) {
+        public Builder registration(Input<DatasetCreateRequestRegistrationArgs> registration) {
             this.registration = Objects.requireNonNull(registration);
             return this;
         }
 
-        public Builder setRegistration(DatasetCreateRequestRegistrationArgs registration) {
+        public Builder registration(DatasetCreateRequestRegistrationArgs registration) {
             this.registration = Input.of(Objects.requireNonNull(registration));
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setSkipValidation(@Nullable Input<Boolean> skipValidation) {
+        public Builder skipValidation(@Nullable Input<Boolean> skipValidation) {
             this.skipValidation = skipValidation;
             return this;
         }
 
-        public Builder setSkipValidation(@Nullable Boolean skipValidation) {
+        public Builder skipValidation(@Nullable Boolean skipValidation) {
             this.skipValidation = Input.ofNullable(skipValidation);
             return this;
         }
 
-        public Builder setTimeSeries(@Nullable Input<DatasetCreateRequestTimeSeriesArgs> timeSeries) {
+        public Builder timeSeries(@Nullable Input<DatasetCreateRequestTimeSeriesArgs> timeSeries) {
             this.timeSeries = timeSeries;
             return this;
         }
 
-        public Builder setTimeSeries(@Nullable DatasetCreateRequestTimeSeriesArgs timeSeries) {
+        public Builder timeSeries(@Nullable DatasetCreateRequestTimeSeriesArgs timeSeries) {
             this.timeSeries = Input.ofNullable(timeSeries);
             return this;
         }
 
-        public Builder setWorkspaceName(Input<String> workspaceName) {
+        public Builder workspaceName(Input<String> workspaceName) {
             this.workspaceName = Objects.requireNonNull(workspaceName);
             return this;
         }
 
-        public Builder setWorkspaceName(String workspaceName) {
+        public Builder workspaceName(String workspaceName) {
             this.workspaceName = Input.of(Objects.requireNonNull(workspaceName));
             return this;
         }

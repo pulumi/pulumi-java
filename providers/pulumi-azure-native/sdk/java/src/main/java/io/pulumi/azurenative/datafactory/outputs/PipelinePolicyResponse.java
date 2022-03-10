@@ -50,7 +50,7 @@ public final class PipelinePolicyResponse {
     	      this.elapsedTimeMetric = defaults.elapsedTimeMetric;
         }
 
-        public Builder setElapsedTimeMetric(@Nullable PipelineElapsedTimeMetricPolicyResponse elapsedTimeMetric) {
+        public Builder elapsedTimeMetric(@Nullable PipelineElapsedTimeMetricPolicyResponse elapsedTimeMetric) {
             this.elapsedTimeMetric = elapsedTimeMetric;
             return this;
         }

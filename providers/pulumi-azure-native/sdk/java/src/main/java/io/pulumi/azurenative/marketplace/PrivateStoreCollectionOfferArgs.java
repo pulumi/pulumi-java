@@ -170,82 +170,82 @@ public final class PrivateStoreCollectionOfferArgs extends io.pulumi.resources.R
     	      this.updateSuppressedDueIdempotence = defaults.updateSuppressedDueIdempotence;
         }
 
-        public Builder setCollectionId(Input<String> collectionId) {
+        public Builder collectionId(Input<String> collectionId) {
             this.collectionId = Objects.requireNonNull(collectionId);
             return this;
         }
 
-        public Builder setCollectionId(String collectionId) {
+        public Builder collectionId(String collectionId) {
             this.collectionId = Input.of(Objects.requireNonNull(collectionId));
             return this;
         }
 
-        public Builder setETag(@Nullable Input<String> eTag) {
+        public Builder eTag(@Nullable Input<String> eTag) {
             this.eTag = eTag;
             return this;
         }
 
-        public Builder setETag(@Nullable String eTag) {
+        public Builder eTag(@Nullable String eTag) {
             this.eTag = Input.ofNullable(eTag);
             return this;
         }
 
-        public Builder setIconFileUris(@Nullable Input<Map<String,String>> iconFileUris) {
+        public Builder iconFileUris(@Nullable Input<Map<String,String>> iconFileUris) {
             this.iconFileUris = iconFileUris;
             return this;
         }
 
-        public Builder setIconFileUris(@Nullable Map<String,String> iconFileUris) {
+        public Builder iconFileUris(@Nullable Map<String,String> iconFileUris) {
             this.iconFileUris = Input.ofNullable(iconFileUris);
             return this;
         }
 
-        public Builder setOfferId(@Nullable Input<String> offerId) {
+        public Builder offerId(@Nullable Input<String> offerId) {
             this.offerId = offerId;
             return this;
         }
 
-        public Builder setOfferId(@Nullable String offerId) {
+        public Builder offerId(@Nullable String offerId) {
             this.offerId = Input.ofNullable(offerId);
             return this;
         }
 
-        public Builder setPlans(@Nullable Input<List<PlanArgs>> plans) {
+        public Builder plans(@Nullable Input<List<PlanArgs>> plans) {
             this.plans = plans;
             return this;
         }
 
-        public Builder setPlans(@Nullable List<PlanArgs> plans) {
+        public Builder plans(@Nullable List<PlanArgs> plans) {
             this.plans = Input.ofNullable(plans);
             return this;
         }
 
-        public Builder setPrivateStoreId(Input<String> privateStoreId) {
+        public Builder privateStoreId(Input<String> privateStoreId) {
             this.privateStoreId = Objects.requireNonNull(privateStoreId);
             return this;
         }
 
-        public Builder setPrivateStoreId(String privateStoreId) {
+        public Builder privateStoreId(String privateStoreId) {
             this.privateStoreId = Input.of(Objects.requireNonNull(privateStoreId));
             return this;
         }
 
-        public Builder setSpecificPlanIdsLimitation(@Nullable Input<List<String>> specificPlanIdsLimitation) {
+        public Builder specificPlanIdsLimitation(@Nullable Input<List<String>> specificPlanIdsLimitation) {
             this.specificPlanIdsLimitation = specificPlanIdsLimitation;
             return this;
         }
 
-        public Builder setSpecificPlanIdsLimitation(@Nullable List<String> specificPlanIdsLimitation) {
+        public Builder specificPlanIdsLimitation(@Nullable List<String> specificPlanIdsLimitation) {
             this.specificPlanIdsLimitation = Input.ofNullable(specificPlanIdsLimitation);
             return this;
         }
 
-        public Builder setUpdateSuppressedDueIdempotence(@Nullable Input<Boolean> updateSuppressedDueIdempotence) {
+        public Builder updateSuppressedDueIdempotence(@Nullable Input<Boolean> updateSuppressedDueIdempotence) {
             this.updateSuppressedDueIdempotence = updateSuppressedDueIdempotence;
             return this;
         }
 
-        public Builder setUpdateSuppressedDueIdempotence(@Nullable Boolean updateSuppressedDueIdempotence) {
+        public Builder updateSuppressedDueIdempotence(@Nullable Boolean updateSuppressedDueIdempotence) {
             this.updateSuppressedDueIdempotence = Input.ofNullable(updateSuppressedDueIdempotence);
             return this;
         }

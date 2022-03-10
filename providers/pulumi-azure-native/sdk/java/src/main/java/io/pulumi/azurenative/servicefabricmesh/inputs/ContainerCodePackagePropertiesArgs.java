@@ -277,142 +277,142 @@ public final class ContainerCodePackagePropertiesArgs extends io.pulumi.resource
     	      this.volumes = defaults.volumes;
         }
 
-        public Builder setCommands(@Nullable Input<List<String>> commands) {
+        public Builder commands(@Nullable Input<List<String>> commands) {
             this.commands = commands;
             return this;
         }
 
-        public Builder setCommands(@Nullable List<String> commands) {
+        public Builder commands(@Nullable List<String> commands) {
             this.commands = Input.ofNullable(commands);
             return this;
         }
 
-        public Builder setDiagnostics(@Nullable Input<DiagnosticsRefArgs> diagnostics) {
+        public Builder diagnostics(@Nullable Input<DiagnosticsRefArgs> diagnostics) {
             this.diagnostics = diagnostics;
             return this;
         }
 
-        public Builder setDiagnostics(@Nullable DiagnosticsRefArgs diagnostics) {
+        public Builder diagnostics(@Nullable DiagnosticsRefArgs diagnostics) {
             this.diagnostics = Input.ofNullable(diagnostics);
             return this;
         }
 
-        public Builder setEndpoints(@Nullable Input<List<EndpointPropertiesArgs>> endpoints) {
+        public Builder endpoints(@Nullable Input<List<EndpointPropertiesArgs>> endpoints) {
             this.endpoints = endpoints;
             return this;
         }
 
-        public Builder setEndpoints(@Nullable List<EndpointPropertiesArgs> endpoints) {
+        public Builder endpoints(@Nullable List<EndpointPropertiesArgs> endpoints) {
             this.endpoints = Input.ofNullable(endpoints);
             return this;
         }
 
-        public Builder setEntrypoint(@Nullable Input<String> entrypoint) {
+        public Builder entrypoint(@Nullable Input<String> entrypoint) {
             this.entrypoint = entrypoint;
             return this;
         }
 
-        public Builder setEntrypoint(@Nullable String entrypoint) {
+        public Builder entrypoint(@Nullable String entrypoint) {
             this.entrypoint = Input.ofNullable(entrypoint);
             return this;
         }
 
-        public Builder setEnvironmentVariables(@Nullable Input<List<EnvironmentVariableArgs>> environmentVariables) {
+        public Builder environmentVariables(@Nullable Input<List<EnvironmentVariableArgs>> environmentVariables) {
             this.environmentVariables = environmentVariables;
             return this;
         }
 
-        public Builder setEnvironmentVariables(@Nullable List<EnvironmentVariableArgs> environmentVariables) {
+        public Builder environmentVariables(@Nullable List<EnvironmentVariableArgs> environmentVariables) {
             this.environmentVariables = Input.ofNullable(environmentVariables);
             return this;
         }
 
-        public Builder setImage(Input<String> image) {
+        public Builder image(Input<String> image) {
             this.image = Objects.requireNonNull(image);
             return this;
         }
 
-        public Builder setImage(String image) {
+        public Builder image(String image) {
             this.image = Input.of(Objects.requireNonNull(image));
             return this;
         }
 
-        public Builder setImageRegistryCredential(@Nullable Input<ImageRegistryCredentialArgs> imageRegistryCredential) {
+        public Builder imageRegistryCredential(@Nullable Input<ImageRegistryCredentialArgs> imageRegistryCredential) {
             this.imageRegistryCredential = imageRegistryCredential;
             return this;
         }
 
-        public Builder setImageRegistryCredential(@Nullable ImageRegistryCredentialArgs imageRegistryCredential) {
+        public Builder imageRegistryCredential(@Nullable ImageRegistryCredentialArgs imageRegistryCredential) {
             this.imageRegistryCredential = Input.ofNullable(imageRegistryCredential);
             return this;
         }
 
-        public Builder setLabels(@Nullable Input<List<ContainerLabelArgs>> labels) {
+        public Builder labels(@Nullable Input<List<ContainerLabelArgs>> labels) {
             this.labels = labels;
             return this;
         }
 
-        public Builder setLabels(@Nullable List<ContainerLabelArgs> labels) {
+        public Builder labels(@Nullable List<ContainerLabelArgs> labels) {
             this.labels = Input.ofNullable(labels);
             return this;
         }
 
-        public Builder setName(Input<String> name) {
+        public Builder name(Input<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder setReliableCollectionsRefs(@Nullable Input<List<ReliableCollectionsRefArgs>> reliableCollectionsRefs) {
+        public Builder reliableCollectionsRefs(@Nullable Input<List<ReliableCollectionsRefArgs>> reliableCollectionsRefs) {
             this.reliableCollectionsRefs = reliableCollectionsRefs;
             return this;
         }
 
-        public Builder setReliableCollectionsRefs(@Nullable List<ReliableCollectionsRefArgs> reliableCollectionsRefs) {
+        public Builder reliableCollectionsRefs(@Nullable List<ReliableCollectionsRefArgs> reliableCollectionsRefs) {
             this.reliableCollectionsRefs = Input.ofNullable(reliableCollectionsRefs);
             return this;
         }
 
-        public Builder setResources(Input<ResourceRequirementsArgs> resources) {
+        public Builder resources(Input<ResourceRequirementsArgs> resources) {
             this.resources = Objects.requireNonNull(resources);
             return this;
         }
 
-        public Builder setResources(ResourceRequirementsArgs resources) {
+        public Builder resources(ResourceRequirementsArgs resources) {
             this.resources = Input.of(Objects.requireNonNull(resources));
             return this;
         }
 
-        public Builder setSettings(@Nullable Input<List<SettingArgs>> settings) {
+        public Builder settings(@Nullable Input<List<SettingArgs>> settings) {
             this.settings = settings;
             return this;
         }
 
-        public Builder setSettings(@Nullable List<SettingArgs> settings) {
+        public Builder settings(@Nullable List<SettingArgs> settings) {
             this.settings = Input.ofNullable(settings);
             return this;
         }
 
-        public Builder setVolumeRefs(@Nullable Input<List<VolumeReferenceArgs>> volumeRefs) {
+        public Builder volumeRefs(@Nullable Input<List<VolumeReferenceArgs>> volumeRefs) {
             this.volumeRefs = volumeRefs;
             return this;
         }
 
-        public Builder setVolumeRefs(@Nullable List<VolumeReferenceArgs> volumeRefs) {
+        public Builder volumeRefs(@Nullable List<VolumeReferenceArgs> volumeRefs) {
             this.volumeRefs = Input.ofNullable(volumeRefs);
             return this;
         }
 
-        public Builder setVolumes(@Nullable Input<List<ApplicationScopedVolumeArgs>> volumes) {
+        public Builder volumes(@Nullable Input<List<ApplicationScopedVolumeArgs>> volumes) {
             this.volumes = volumes;
             return this;
         }
 
-        public Builder setVolumes(@Nullable List<ApplicationScopedVolumeArgs> volumes) {
+        public Builder volumes(@Nullable List<ApplicationScopedVolumeArgs> volumes) {
             this.volumes = Input.ofNullable(volumes);
             return this;
         }

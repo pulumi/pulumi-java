@@ -104,22 +104,22 @@ public final class VirtualMachineResponseProperties extends io.pulumi.resources.
     	      this.virtualMachineSize = defaults.virtualMachineSize;
         }
 
-        public Builder setAddress(@Nullable String address) {
+        public Builder address(@Nullable String address) {
             this.address = address;
             return this;
         }
 
-        public Builder setAdministratorAccount(@Nullable VirtualMachineSshCredentialsResponse administratorAccount) {
+        public Builder administratorAccount(@Nullable VirtualMachineSshCredentialsResponse administratorAccount) {
             this.administratorAccount = administratorAccount;
             return this;
         }
 
-        public Builder setSshPort(@Nullable Integer sshPort) {
+        public Builder sshPort(@Nullable Integer sshPort) {
             this.sshPort = sshPort;
             return this;
         }
 
-        public Builder setVirtualMachineSize(@Nullable String virtualMachineSize) {
+        public Builder virtualMachineSize(@Nullable String virtualMachineSize) {
             this.virtualMachineSize = virtualMachineSize;
             return this;
         }

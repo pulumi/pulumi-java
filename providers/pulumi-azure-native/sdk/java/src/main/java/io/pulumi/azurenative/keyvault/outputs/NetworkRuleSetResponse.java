@@ -102,22 +102,22 @@ public final class NetworkRuleSetResponse {
     	      this.virtualNetworkRules = defaults.virtualNetworkRules;
         }
 
-        public Builder setBypass(@Nullable String bypass) {
+        public Builder bypass(@Nullable String bypass) {
             this.bypass = bypass;
             return this;
         }
 
-        public Builder setDefaultAction(@Nullable String defaultAction) {
+        public Builder defaultAction(@Nullable String defaultAction) {
             this.defaultAction = defaultAction;
             return this;
         }
 
-        public Builder setIpRules(@Nullable List<IPRuleResponse> ipRules) {
+        public Builder ipRules(@Nullable List<IPRuleResponse> ipRules) {
             this.ipRules = ipRules;
             return this;
         }
 
-        public Builder setVirtualNetworkRules(@Nullable List<VirtualNetworkRuleResponse> virtualNetworkRules) {
+        public Builder virtualNetworkRules(@Nullable List<VirtualNetworkRuleResponse> virtualNetworkRules) {
             this.virtualNetworkRules = virtualNetworkRules;
             return this;
         }

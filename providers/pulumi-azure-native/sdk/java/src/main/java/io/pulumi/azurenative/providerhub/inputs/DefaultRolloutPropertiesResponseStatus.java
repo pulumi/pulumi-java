@@ -101,27 +101,27 @@ public final class DefaultRolloutPropertiesResponseStatus extends io.pulumi.reso
     	      this.subscriptionReregistrationResult = defaults.subscriptionReregistrationResult;
         }
 
-        public Builder setCompletedRegions(@Nullable List<String> completedRegions) {
+        public Builder completedRegions(@Nullable List<String> completedRegions) {
             this.completedRegions = completedRegions;
             return this;
         }
 
-        public Builder setFailedOrSkippedRegions(@Nullable Map<String,ExtendedErrorInfoResponse> failedOrSkippedRegions) {
+        public Builder failedOrSkippedRegions(@Nullable Map<String,ExtendedErrorInfoResponse> failedOrSkippedRegions) {
             this.failedOrSkippedRegions = failedOrSkippedRegions;
             return this;
         }
 
-        public Builder setNextTrafficRegion(@Nullable String nextTrafficRegion) {
+        public Builder nextTrafficRegion(@Nullable String nextTrafficRegion) {
             this.nextTrafficRegion = nextTrafficRegion;
             return this;
         }
 
-        public Builder setNextTrafficRegionScheduledTime(@Nullable String nextTrafficRegionScheduledTime) {
+        public Builder nextTrafficRegionScheduledTime(@Nullable String nextTrafficRegionScheduledTime) {
             this.nextTrafficRegionScheduledTime = nextTrafficRegionScheduledTime;
             return this;
         }
 
-        public Builder setSubscriptionReregistrationResult(@Nullable String subscriptionReregistrationResult) {
+        public Builder subscriptionReregistrationResult(@Nullable String subscriptionReregistrationResult) {
             this.subscriptionReregistrationResult = subscriptionReregistrationResult;
             return this;
         }

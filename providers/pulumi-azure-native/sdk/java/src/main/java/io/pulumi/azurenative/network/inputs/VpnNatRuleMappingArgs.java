@@ -57,12 +57,12 @@ public final class VpnNatRuleMappingArgs extends io.pulumi.resources.ResourceArg
     	      this.addressSpace = defaults.addressSpace;
         }
 
-        public Builder setAddressSpace(@Nullable Input<String> addressSpace) {
+        public Builder addressSpace(@Nullable Input<String> addressSpace) {
             this.addressSpace = addressSpace;
             return this;
         }
 
-        public Builder setAddressSpace(@Nullable String addressSpace) {
+        public Builder addressSpace(@Nullable String addressSpace) {
             this.addressSpace = Input.ofNullable(addressSpace);
             return this;
         }

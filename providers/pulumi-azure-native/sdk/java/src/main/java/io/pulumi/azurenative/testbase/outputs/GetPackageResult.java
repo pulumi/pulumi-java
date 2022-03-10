@@ -345,97 +345,97 @@ public final class GetPackageResult {
     	      this.version = defaults.version;
         }
 
-        public Builder setApplicationName(String applicationName) {
+        public Builder applicationName(String applicationName) {
             this.applicationName = Objects.requireNonNull(applicationName);
             return this;
         }
 
-        public Builder setBlobPath(String blobPath) {
+        public Builder blobPath(String blobPath) {
             this.blobPath = Objects.requireNonNull(blobPath);
             return this;
         }
 
-        public Builder setEtag(String etag) {
+        public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
 
-        public Builder setFlightingRing(String flightingRing) {
+        public Builder flightingRing(String flightingRing) {
             this.flightingRing = Objects.requireNonNull(flightingRing);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setIsEnabled(Boolean isEnabled) {
+        public Builder isEnabled(Boolean isEnabled) {
             this.isEnabled = Objects.requireNonNull(isEnabled);
             return this;
         }
 
-        public Builder setLastModifiedTime(String lastModifiedTime) {
+        public Builder lastModifiedTime(String lastModifiedTime) {
             this.lastModifiedTime = Objects.requireNonNull(lastModifiedTime);
             return this;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPackageStatus(String packageStatus) {
+        public Builder packageStatus(String packageStatus) {
             this.packageStatus = Objects.requireNonNull(packageStatus);
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setSystemData(SystemDataResponse systemData) {
+        public Builder systemData(SystemDataResponse systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTargetOSList(List<TargetOSInfoResponse> targetOSList) {
+        public Builder targetOSList(List<TargetOSInfoResponse> targetOSList) {
             this.targetOSList = Objects.requireNonNull(targetOSList);
             return this;
         }
 
-        public Builder setTestTypes(List<String> testTypes) {
+        public Builder testTypes(List<String> testTypes) {
             this.testTypes = Objects.requireNonNull(testTypes);
             return this;
         }
 
-        public Builder setTests(List<TestResponse> tests) {
+        public Builder tests(List<TestResponse> tests) {
             this.tests = Objects.requireNonNull(tests);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setValidationResults(List<PackageValidationResultResponse> validationResults) {
+        public Builder validationResults(List<PackageValidationResultResponse> validationResults) {
             this.validationResults = Objects.requireNonNull(validationResults);
             return this;
         }
 
-        public Builder setVersion(String version) {
+        public Builder version(String version) {
             this.version = Objects.requireNonNull(version);
             return this;
         }

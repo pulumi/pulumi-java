@@ -76,12 +76,12 @@ public final class PrivateEndpointPropertiesResponse extends io.pulumi.resources
     	      this.manualPrivateLinkServiceConnections = defaults.manualPrivateLinkServiceConnections;
         }
 
-        public Builder setCreatedDate(String createdDate) {
+        public Builder createdDate(String createdDate) {
             this.createdDate = Objects.requireNonNull(createdDate);
             return this;
         }
 
-        public Builder setManualPrivateLinkServiceConnections(@Nullable List<PrivateLinkServiceConnectionResponse> manualPrivateLinkServiceConnections) {
+        public Builder manualPrivateLinkServiceConnections(@Nullable List<PrivateLinkServiceConnectionResponse> manualPrivateLinkServiceConnections) {
             this.manualPrivateLinkServiceConnections = manualPrivateLinkServiceConnections;
             return this;
         }

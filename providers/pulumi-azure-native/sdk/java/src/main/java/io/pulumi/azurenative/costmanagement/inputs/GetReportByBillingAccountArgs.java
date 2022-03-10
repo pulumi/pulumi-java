@@ -68,12 +68,12 @@ public final class GetReportByBillingAccountArgs extends io.pulumi.resources.Inv
     	      this.reportName = defaults.reportName;
         }
 
-        public Builder setBillingAccountId(String billingAccountId) {
+        public Builder billingAccountId(String billingAccountId) {
             this.billingAccountId = Objects.requireNonNull(billingAccountId);
             return this;
         }
 
-        public Builder setReportName(String reportName) {
+        public Builder reportName(String reportName) {
             this.reportName = Objects.requireNonNull(reportName);
             return this;
         }

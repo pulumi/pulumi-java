@@ -75,22 +75,22 @@ public final class PersistentDiskArgs extends io.pulumi.resources.ResourceArgs {
     	      this.sizeInGB = defaults.sizeInGB;
         }
 
-        public Builder setMountPath(@Nullable Input<String> mountPath) {
+        public Builder mountPath(@Nullable Input<String> mountPath) {
             this.mountPath = mountPath;
             return this;
         }
 
-        public Builder setMountPath(@Nullable String mountPath) {
+        public Builder mountPath(@Nullable String mountPath) {
             this.mountPath = Input.ofNullable(mountPath);
             return this;
         }
 
-        public Builder setSizeInGB(@Nullable Input<Integer> sizeInGB) {
+        public Builder sizeInGB(@Nullable Input<Integer> sizeInGB) {
             this.sizeInGB = sizeInGB;
             return this;
         }
 
-        public Builder setSizeInGB(@Nullable Integer sizeInGB) {
+        public Builder sizeInGB(@Nullable Integer sizeInGB) {
             this.sizeInGB = Input.ofNullable(sizeInGB);
             return this;
         }

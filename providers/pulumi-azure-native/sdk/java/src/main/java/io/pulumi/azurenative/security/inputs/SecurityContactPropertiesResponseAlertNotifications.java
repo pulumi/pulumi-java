@@ -74,12 +74,12 @@ public final class SecurityContactPropertiesResponseAlertNotifications extends i
     	      this.state = defaults.state;
         }
 
-        public Builder setMinimalSeverity(@Nullable String minimalSeverity) {
+        public Builder minimalSeverity(@Nullable String minimalSeverity) {
             this.minimalSeverity = minimalSeverity;
             return this;
         }
 
-        public Builder setState(@Nullable String state) {
+        public Builder state(@Nullable String state) {
             this.state = state;
             return this;
         }

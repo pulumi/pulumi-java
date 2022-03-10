@@ -227,112 +227,112 @@ public final class RoleArgs extends io.pulumi.resources.ResourceArgs {
     	      this.virtualNetworkProfile = defaults.virtualNetworkProfile;
         }
 
-        public Builder setAutoscaleConfiguration(@Nullable Input<AutoscaleArgs> autoscaleConfiguration) {
+        public Builder autoscaleConfiguration(@Nullable Input<AutoscaleArgs> autoscaleConfiguration) {
             this.autoscaleConfiguration = autoscaleConfiguration;
             return this;
         }
 
-        public Builder setAutoscaleConfiguration(@Nullable AutoscaleArgs autoscaleConfiguration) {
+        public Builder autoscaleConfiguration(@Nullable AutoscaleArgs autoscaleConfiguration) {
             this.autoscaleConfiguration = Input.ofNullable(autoscaleConfiguration);
             return this;
         }
 
-        public Builder setDataDisksGroups(@Nullable Input<List<DataDisksGroupsArgs>> dataDisksGroups) {
+        public Builder dataDisksGroups(@Nullable Input<List<DataDisksGroupsArgs>> dataDisksGroups) {
             this.dataDisksGroups = dataDisksGroups;
             return this;
         }
 
-        public Builder setDataDisksGroups(@Nullable List<DataDisksGroupsArgs> dataDisksGroups) {
+        public Builder dataDisksGroups(@Nullable List<DataDisksGroupsArgs> dataDisksGroups) {
             this.dataDisksGroups = Input.ofNullable(dataDisksGroups);
             return this;
         }
 
-        public Builder setEncryptDataDisks(@Nullable Input<Boolean> encryptDataDisks) {
+        public Builder encryptDataDisks(@Nullable Input<Boolean> encryptDataDisks) {
             this.encryptDataDisks = encryptDataDisks;
             return this;
         }
 
-        public Builder setEncryptDataDisks(@Nullable Boolean encryptDataDisks) {
+        public Builder encryptDataDisks(@Nullable Boolean encryptDataDisks) {
             this.encryptDataDisks = Input.ofNullable(encryptDataDisks);
             return this;
         }
 
-        public Builder setHardwareProfile(@Nullable Input<HardwareProfileArgs> hardwareProfile) {
+        public Builder hardwareProfile(@Nullable Input<HardwareProfileArgs> hardwareProfile) {
             this.hardwareProfile = hardwareProfile;
             return this;
         }
 
-        public Builder setHardwareProfile(@Nullable HardwareProfileArgs hardwareProfile) {
+        public Builder hardwareProfile(@Nullable HardwareProfileArgs hardwareProfile) {
             this.hardwareProfile = Input.ofNullable(hardwareProfile);
             return this;
         }
 
-        public Builder setMinInstanceCount(@Nullable Input<Integer> minInstanceCount) {
+        public Builder minInstanceCount(@Nullable Input<Integer> minInstanceCount) {
             this.minInstanceCount = minInstanceCount;
             return this;
         }
 
-        public Builder setMinInstanceCount(@Nullable Integer minInstanceCount) {
+        public Builder minInstanceCount(@Nullable Integer minInstanceCount) {
             this.minInstanceCount = Input.ofNullable(minInstanceCount);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setOsProfile(@Nullable Input<OsProfileArgs> osProfile) {
+        public Builder osProfile(@Nullable Input<OsProfileArgs> osProfile) {
             this.osProfile = osProfile;
             return this;
         }
 
-        public Builder setOsProfile(@Nullable OsProfileArgs osProfile) {
+        public Builder osProfile(@Nullable OsProfileArgs osProfile) {
             this.osProfile = Input.ofNullable(osProfile);
             return this;
         }
 
-        public Builder setScriptActions(@Nullable Input<List<ScriptActionArgs>> scriptActions) {
+        public Builder scriptActions(@Nullable Input<List<ScriptActionArgs>> scriptActions) {
             this.scriptActions = scriptActions;
             return this;
         }
 
-        public Builder setScriptActions(@Nullable List<ScriptActionArgs> scriptActions) {
+        public Builder scriptActions(@Nullable List<ScriptActionArgs> scriptActions) {
             this.scriptActions = Input.ofNullable(scriptActions);
             return this;
         }
 
-        public Builder setTargetInstanceCount(@Nullable Input<Integer> targetInstanceCount) {
+        public Builder targetInstanceCount(@Nullable Input<Integer> targetInstanceCount) {
             this.targetInstanceCount = targetInstanceCount;
             return this;
         }
 
-        public Builder setTargetInstanceCount(@Nullable Integer targetInstanceCount) {
+        public Builder targetInstanceCount(@Nullable Integer targetInstanceCount) {
             this.targetInstanceCount = Input.ofNullable(targetInstanceCount);
             return this;
         }
 
-        public Builder setVMGroupName(@Nullable Input<String> vMGroupName) {
+        public Builder vMGroupName(@Nullable Input<String> vMGroupName) {
             this.vMGroupName = vMGroupName;
             return this;
         }
 
-        public Builder setVMGroupName(@Nullable String vMGroupName) {
+        public Builder vMGroupName(@Nullable String vMGroupName) {
             this.vMGroupName = Input.ofNullable(vMGroupName);
             return this;
         }
 
-        public Builder setVirtualNetworkProfile(@Nullable Input<VirtualNetworkProfileArgs> virtualNetworkProfile) {
+        public Builder virtualNetworkProfile(@Nullable Input<VirtualNetworkProfileArgs> virtualNetworkProfile) {
             this.virtualNetworkProfile = virtualNetworkProfile;
             return this;
         }
 
-        public Builder setVirtualNetworkProfile(@Nullable VirtualNetworkProfileArgs virtualNetworkProfile) {
+        public Builder virtualNetworkProfile(@Nullable VirtualNetworkProfileArgs virtualNetworkProfile) {
             this.virtualNetworkProfile = Input.ofNullable(virtualNetworkProfile);
             return this;
         }

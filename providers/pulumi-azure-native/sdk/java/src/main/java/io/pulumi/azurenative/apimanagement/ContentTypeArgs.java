@@ -86,32 +86,32 @@ public final class ContentTypeArgs extends io.pulumi.resources.ResourceArgs {
     	      this.serviceName = defaults.serviceName;
         }
 
-        public Builder setContentTypeId(@Nullable Input<String> contentTypeId) {
+        public Builder contentTypeId(@Nullable Input<String> contentTypeId) {
             this.contentTypeId = contentTypeId;
             return this;
         }
 
-        public Builder setContentTypeId(@Nullable String contentTypeId) {
+        public Builder contentTypeId(@Nullable String contentTypeId) {
             this.contentTypeId = Input.ofNullable(contentTypeId);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setServiceName(Input<String> serviceName) {
+        public Builder serviceName(Input<String> serviceName) {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
         }
 
-        public Builder setServiceName(String serviceName) {
+        public Builder serviceName(String serviceName) {
             this.serviceName = Input.of(Objects.requireNonNull(serviceName));
             return this;
         }

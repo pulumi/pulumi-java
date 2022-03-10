@@ -165,42 +165,42 @@ public final class IPConfigurationResponse {
     	      this.subnet = defaults.subnet;
         }
 
-        public Builder setEtag(String etag) {
+        public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setPrivateIPAddress(@Nullable String privateIPAddress) {
+        public Builder privateIPAddress(@Nullable String privateIPAddress) {
             this.privateIPAddress = privateIPAddress;
             return this;
         }
 
-        public Builder setPrivateIPAllocationMethod(@Nullable String privateIPAllocationMethod) {
+        public Builder privateIPAllocationMethod(@Nullable String privateIPAllocationMethod) {
             this.privateIPAllocationMethod = privateIPAllocationMethod;
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setPublicIPAddress(@Nullable PublicIPAddressResponse publicIPAddress) {
+        public Builder publicIPAddress(@Nullable PublicIPAddressResponse publicIPAddress) {
             this.publicIPAddress = publicIPAddress;
             return this;
         }
 
-        public Builder setSubnet(@Nullable SubnetResponse subnet) {
+        public Builder subnet(@Nullable SubnetResponse subnet) {
             this.subnet = subnet;
             return this;
         }

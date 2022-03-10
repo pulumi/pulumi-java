@@ -108,22 +108,22 @@ public final class ClusterDefinitionResponse extends io.pulumi.resources.InvokeA
     	      this.kind = defaults.kind;
         }
 
-        public Builder setBlueprint(@Nullable String blueprint) {
+        public Builder blueprint(@Nullable String blueprint) {
             this.blueprint = blueprint;
             return this;
         }
 
-        public Builder setComponentVersion(@Nullable Map<String,String> componentVersion) {
+        public Builder componentVersion(@Nullable Map<String,String> componentVersion) {
             this.componentVersion = componentVersion;
             return this;
         }
 
-        public Builder setConfigurations(@Nullable Object configurations) {
+        public Builder configurations(@Nullable Object configurations) {
             this.configurations = configurations;
             return this;
         }
 
-        public Builder setKind(@Nullable String kind) {
+        public Builder kind(@Nullable String kind) {
             this.kind = kind;
             return this;
         }

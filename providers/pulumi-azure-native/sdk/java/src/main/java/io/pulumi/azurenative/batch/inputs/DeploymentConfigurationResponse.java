@@ -71,12 +71,12 @@ public final class DeploymentConfigurationResponse extends io.pulumi.resources.I
     	      this.virtualMachineConfiguration = defaults.virtualMachineConfiguration;
         }
 
-        public Builder setCloudServiceConfiguration(@Nullable CloudServiceConfigurationResponse cloudServiceConfiguration) {
+        public Builder cloudServiceConfiguration(@Nullable CloudServiceConfigurationResponse cloudServiceConfiguration) {
             this.cloudServiceConfiguration = cloudServiceConfiguration;
             return this;
         }
 
-        public Builder setVirtualMachineConfiguration(@Nullable VirtualMachineConfigurationResponse virtualMachineConfiguration) {
+        public Builder virtualMachineConfiguration(@Nullable VirtualMachineConfigurationResponse virtualMachineConfiguration) {
             this.virtualMachineConfiguration = virtualMachineConfiguration;
             return this;
         }

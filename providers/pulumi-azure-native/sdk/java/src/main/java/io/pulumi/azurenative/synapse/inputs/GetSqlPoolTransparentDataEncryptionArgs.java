@@ -100,22 +100,22 @@ public final class GetSqlPoolTransparentDataEncryptionArgs extends io.pulumi.res
     	      this.workspaceName = defaults.workspaceName;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setSqlPoolName(String sqlPoolName) {
+        public Builder sqlPoolName(String sqlPoolName) {
             this.sqlPoolName = Objects.requireNonNull(sqlPoolName);
             return this;
         }
 
-        public Builder setTransparentDataEncryptionName(String transparentDataEncryptionName) {
+        public Builder transparentDataEncryptionName(String transparentDataEncryptionName) {
             this.transparentDataEncryptionName = Objects.requireNonNull(transparentDataEncryptionName);
             return this;
         }
 
-        public Builder setWorkspaceName(String workspaceName) {
+        public Builder workspaceName(String workspaceName) {
             this.workspaceName = Objects.requireNonNull(workspaceName);
             return this;
         }

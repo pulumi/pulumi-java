@@ -56,12 +56,12 @@ public final class ManagerSkuArgs extends io.pulumi.resources.ResourceArgs {
     	      this.name = defaults.name;
         }
 
-        public Builder setName(Input<ManagerSkuType> name) {
+        public Builder name(Input<ManagerSkuType> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setName(ManagerSkuType name) {
+        public Builder name(ManagerSkuType name) {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }

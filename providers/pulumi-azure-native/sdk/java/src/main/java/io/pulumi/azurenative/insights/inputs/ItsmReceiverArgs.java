@@ -121,52 +121,52 @@ public final class ItsmReceiverArgs extends io.pulumi.resources.ResourceArgs {
     	      this.workspaceId = defaults.workspaceId;
         }
 
-        public Builder setConnectionId(Input<String> connectionId) {
+        public Builder connectionId(Input<String> connectionId) {
             this.connectionId = Objects.requireNonNull(connectionId);
             return this;
         }
 
-        public Builder setConnectionId(String connectionId) {
+        public Builder connectionId(String connectionId) {
             this.connectionId = Input.of(Objects.requireNonNull(connectionId));
             return this;
         }
 
-        public Builder setName(Input<String> name) {
+        public Builder name(Input<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder setRegion(Input<String> region) {
+        public Builder region(Input<String> region) {
             this.region = Objects.requireNonNull(region);
             return this;
         }
 
-        public Builder setRegion(String region) {
+        public Builder region(String region) {
             this.region = Input.of(Objects.requireNonNull(region));
             return this;
         }
 
-        public Builder setTicketConfiguration(Input<String> ticketConfiguration) {
+        public Builder ticketConfiguration(Input<String> ticketConfiguration) {
             this.ticketConfiguration = Objects.requireNonNull(ticketConfiguration);
             return this;
         }
 
-        public Builder setTicketConfiguration(String ticketConfiguration) {
+        public Builder ticketConfiguration(String ticketConfiguration) {
             this.ticketConfiguration = Input.of(Objects.requireNonNull(ticketConfiguration));
             return this;
         }
 
-        public Builder setWorkspaceId(Input<String> workspaceId) {
+        public Builder workspaceId(Input<String> workspaceId) {
             this.workspaceId = Objects.requireNonNull(workspaceId);
             return this;
         }
 
-        public Builder setWorkspaceId(String workspaceId) {
+        public Builder workspaceId(String workspaceId) {
             this.workspaceId = Input.of(Objects.requireNonNull(workspaceId));
             return this;
         }

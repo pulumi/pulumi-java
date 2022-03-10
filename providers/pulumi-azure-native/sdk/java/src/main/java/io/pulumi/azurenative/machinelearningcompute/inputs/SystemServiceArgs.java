@@ -58,12 +58,12 @@ public final class SystemServiceArgs extends io.pulumi.resources.ResourceArgs {
     	      this.systemServiceType = defaults.systemServiceType;
         }
 
-        public Builder setSystemServiceType(Input<Either<String,SystemServiceType>> systemServiceType) {
+        public Builder systemServiceType(Input<Either<String,SystemServiceType>> systemServiceType) {
             this.systemServiceType = Objects.requireNonNull(systemServiceType);
             return this;
         }
 
-        public Builder setSystemServiceType(Either<String,SystemServiceType> systemServiceType) {
+        public Builder systemServiceType(Either<String,SystemServiceType> systemServiceType) {
             this.systemServiceType = Input.of(Objects.requireNonNull(systemServiceType));
             return this;
         }

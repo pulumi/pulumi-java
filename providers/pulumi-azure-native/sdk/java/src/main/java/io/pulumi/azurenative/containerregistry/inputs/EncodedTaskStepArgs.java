@@ -141,62 +141,62 @@ public final class EncodedTaskStepArgs extends io.pulumi.resources.ResourceArgs 
     	      this.values = defaults.values;
         }
 
-        public Builder setContextAccessToken(@Nullable Input<String> contextAccessToken) {
+        public Builder contextAccessToken(@Nullable Input<String> contextAccessToken) {
             this.contextAccessToken = contextAccessToken;
             return this;
         }
 
-        public Builder setContextAccessToken(@Nullable String contextAccessToken) {
+        public Builder contextAccessToken(@Nullable String contextAccessToken) {
             this.contextAccessToken = Input.ofNullable(contextAccessToken);
             return this;
         }
 
-        public Builder setContextPath(@Nullable Input<String> contextPath) {
+        public Builder contextPath(@Nullable Input<String> contextPath) {
             this.contextPath = contextPath;
             return this;
         }
 
-        public Builder setContextPath(@Nullable String contextPath) {
+        public Builder contextPath(@Nullable String contextPath) {
             this.contextPath = Input.ofNullable(contextPath);
             return this;
         }
 
-        public Builder setEncodedTaskContent(Input<String> encodedTaskContent) {
+        public Builder encodedTaskContent(Input<String> encodedTaskContent) {
             this.encodedTaskContent = Objects.requireNonNull(encodedTaskContent);
             return this;
         }
 
-        public Builder setEncodedTaskContent(String encodedTaskContent) {
+        public Builder encodedTaskContent(String encodedTaskContent) {
             this.encodedTaskContent = Input.of(Objects.requireNonNull(encodedTaskContent));
             return this;
         }
 
-        public Builder setEncodedValuesContent(@Nullable Input<String> encodedValuesContent) {
+        public Builder encodedValuesContent(@Nullable Input<String> encodedValuesContent) {
             this.encodedValuesContent = encodedValuesContent;
             return this;
         }
 
-        public Builder setEncodedValuesContent(@Nullable String encodedValuesContent) {
+        public Builder encodedValuesContent(@Nullable String encodedValuesContent) {
             this.encodedValuesContent = Input.ofNullable(encodedValuesContent);
             return this;
         }
 
-        public Builder setType(Input<String> type) {
+        public Builder type(Input<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }
 
-        public Builder setValues(@Nullable Input<List<SetValueArgs>> values) {
+        public Builder values(@Nullable Input<List<SetValueArgs>> values) {
             this.values = values;
             return this;
         }
 
-        public Builder setValues(@Nullable List<SetValueArgs> values) {
+        public Builder values(@Nullable List<SetValueArgs> values) {
             this.values = Input.ofNullable(values);
             return this;
         }

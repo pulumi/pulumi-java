@@ -228,62 +228,62 @@ public final class RoutingStorageContainerPropertiesResponse {
     	      this.subscriptionId = defaults.subscriptionId;
         }
 
-        public Builder setAuthenticationType(@Nullable String authenticationType) {
+        public Builder authenticationType(@Nullable String authenticationType) {
             this.authenticationType = authenticationType;
             return this;
         }
 
-        public Builder setBatchFrequencyInSeconds(@Nullable Integer batchFrequencyInSeconds) {
+        public Builder batchFrequencyInSeconds(@Nullable Integer batchFrequencyInSeconds) {
             this.batchFrequencyInSeconds = batchFrequencyInSeconds;
             return this;
         }
 
-        public Builder setConnectionString(@Nullable String connectionString) {
+        public Builder connectionString(@Nullable String connectionString) {
             this.connectionString = connectionString;
             return this;
         }
 
-        public Builder setContainerName(String containerName) {
+        public Builder containerName(String containerName) {
             this.containerName = Objects.requireNonNull(containerName);
             return this;
         }
 
-        public Builder setEncoding(@Nullable String encoding) {
+        public Builder encoding(@Nullable String encoding) {
             this.encoding = encoding;
             return this;
         }
 
-        public Builder setEndpointUri(@Nullable String endpointUri) {
+        public Builder endpointUri(@Nullable String endpointUri) {
             this.endpointUri = endpointUri;
             return this;
         }
 
-        public Builder setFileNameFormat(@Nullable String fileNameFormat) {
+        public Builder fileNameFormat(@Nullable String fileNameFormat) {
             this.fileNameFormat = fileNameFormat;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setMaxChunkSizeInBytes(@Nullable Integer maxChunkSizeInBytes) {
+        public Builder maxChunkSizeInBytes(@Nullable Integer maxChunkSizeInBytes) {
             this.maxChunkSizeInBytes = maxChunkSizeInBytes;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setResourceGroup(@Nullable String resourceGroup) {
+        public Builder resourceGroup(@Nullable String resourceGroup) {
             this.resourceGroup = resourceGroup;
             return this;
         }
 
-        public Builder setSubscriptionId(@Nullable String subscriptionId) {
+        public Builder subscriptionId(@Nullable String subscriptionId) {
             this.subscriptionId = subscriptionId;
             return this;
         }

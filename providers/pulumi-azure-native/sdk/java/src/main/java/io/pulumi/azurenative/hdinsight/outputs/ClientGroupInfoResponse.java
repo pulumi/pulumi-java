@@ -67,12 +67,12 @@ public final class ClientGroupInfoResponse {
     	      this.groupName = defaults.groupName;
         }
 
-        public Builder setGroupId(@Nullable String groupId) {
+        public Builder groupId(@Nullable String groupId) {
             this.groupId = groupId;
             return this;
         }
 
-        public Builder setGroupName(@Nullable String groupName) {
+        public Builder groupName(@Nullable String groupName) {
             this.groupName = groupName;
             return this;
         }

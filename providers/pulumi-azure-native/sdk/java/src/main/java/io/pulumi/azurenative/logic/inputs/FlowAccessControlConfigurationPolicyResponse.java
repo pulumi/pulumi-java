@@ -76,12 +76,12 @@ public final class FlowAccessControlConfigurationPolicyResponse extends io.pulum
     	      this.openAuthenticationPolicies = defaults.openAuthenticationPolicies;
         }
 
-        public Builder setAllowedCallerIpAddresses(@Nullable List<IpAddressRangeResponse> allowedCallerIpAddresses) {
+        public Builder allowedCallerIpAddresses(@Nullable List<IpAddressRangeResponse> allowedCallerIpAddresses) {
             this.allowedCallerIpAddresses = allowedCallerIpAddresses;
             return this;
         }
 
-        public Builder setOpenAuthenticationPolicies(@Nullable OpenAuthenticationAccessPoliciesResponse openAuthenticationPolicies) {
+        public Builder openAuthenticationPolicies(@Nullable OpenAuthenticationAccessPoliciesResponse openAuthenticationPolicies) {
             this.openAuthenticationPolicies = openAuthenticationPolicies;
             return this;
         }

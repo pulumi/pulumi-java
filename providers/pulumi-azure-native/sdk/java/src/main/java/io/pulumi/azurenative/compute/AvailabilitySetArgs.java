@@ -187,92 +187,92 @@ public final class AvailabilitySetArgs extends io.pulumi.resources.ResourceArgs 
     	      this.virtualMachines = defaults.virtualMachines;
         }
 
-        public Builder setAvailabilitySetName(@Nullable Input<String> availabilitySetName) {
+        public Builder availabilitySetName(@Nullable Input<String> availabilitySetName) {
             this.availabilitySetName = availabilitySetName;
             return this;
         }
 
-        public Builder setAvailabilitySetName(@Nullable String availabilitySetName) {
+        public Builder availabilitySetName(@Nullable String availabilitySetName) {
             this.availabilitySetName = Input.ofNullable(availabilitySetName);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setPlatformFaultDomainCount(@Nullable Input<Integer> platformFaultDomainCount) {
+        public Builder platformFaultDomainCount(@Nullable Input<Integer> platformFaultDomainCount) {
             this.platformFaultDomainCount = platformFaultDomainCount;
             return this;
         }
 
-        public Builder setPlatformFaultDomainCount(@Nullable Integer platformFaultDomainCount) {
+        public Builder platformFaultDomainCount(@Nullable Integer platformFaultDomainCount) {
             this.platformFaultDomainCount = Input.ofNullable(platformFaultDomainCount);
             return this;
         }
 
-        public Builder setPlatformUpdateDomainCount(@Nullable Input<Integer> platformUpdateDomainCount) {
+        public Builder platformUpdateDomainCount(@Nullable Input<Integer> platformUpdateDomainCount) {
             this.platformUpdateDomainCount = platformUpdateDomainCount;
             return this;
         }
 
-        public Builder setPlatformUpdateDomainCount(@Nullable Integer platformUpdateDomainCount) {
+        public Builder platformUpdateDomainCount(@Nullable Integer platformUpdateDomainCount) {
             this.platformUpdateDomainCount = Input.ofNullable(platformUpdateDomainCount);
             return this;
         }
 
-        public Builder setProximityPlacementGroup(@Nullable Input<SubResourceArgs> proximityPlacementGroup) {
+        public Builder proximityPlacementGroup(@Nullable Input<SubResourceArgs> proximityPlacementGroup) {
             this.proximityPlacementGroup = proximityPlacementGroup;
             return this;
         }
 
-        public Builder setProximityPlacementGroup(@Nullable SubResourceArgs proximityPlacementGroup) {
+        public Builder proximityPlacementGroup(@Nullable SubResourceArgs proximityPlacementGroup) {
             this.proximityPlacementGroup = Input.ofNullable(proximityPlacementGroup);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setSku(@Nullable Input<SkuArgs> sku) {
+        public Builder sku(@Nullable Input<SkuArgs> sku) {
             this.sku = sku;
             return this;
         }
 
-        public Builder setSku(@Nullable SkuArgs sku) {
+        public Builder sku(@Nullable SkuArgs sku) {
             this.sku = Input.ofNullable(sku);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setVirtualMachines(@Nullable Input<List<SubResourceArgs>> virtualMachines) {
+        public Builder virtualMachines(@Nullable Input<List<SubResourceArgs>> virtualMachines) {
             this.virtualMachines = virtualMachines;
             return this;
         }
 
-        public Builder setVirtualMachines(@Nullable List<SubResourceArgs> virtualMachines) {
+        public Builder virtualMachines(@Nullable List<SubResourceArgs> virtualMachines) {
             this.virtualMachines = Input.ofNullable(virtualMachines);
             return this;
         }

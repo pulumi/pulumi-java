@@ -74,12 +74,12 @@ public final class PutAliasResponsePropertiesResponse extends io.pulumi.resource
     	      this.subscriptionId = defaults.subscriptionId;
         }
 
-        public Builder setProvisioningState(@Nullable String provisioningState) {
+        public Builder provisioningState(@Nullable String provisioningState) {
             this.provisioningState = provisioningState;
             return this;
         }
 
-        public Builder setSubscriptionId(String subscriptionId) {
+        public Builder subscriptionId(String subscriptionId) {
             this.subscriptionId = Objects.requireNonNull(subscriptionId);
             return this;
         }

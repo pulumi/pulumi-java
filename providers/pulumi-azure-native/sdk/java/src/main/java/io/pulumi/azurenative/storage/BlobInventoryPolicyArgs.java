@@ -103,42 +103,42 @@ public final class BlobInventoryPolicyArgs extends io.pulumi.resources.ResourceA
     	      this.resourceGroupName = defaults.resourceGroupName;
         }
 
-        public Builder setAccountName(Input<String> accountName) {
+        public Builder accountName(Input<String> accountName) {
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
 
-        public Builder setAccountName(String accountName) {
+        public Builder accountName(String accountName) {
             this.accountName = Input.of(Objects.requireNonNull(accountName));
             return this;
         }
 
-        public Builder setBlobInventoryPolicyName(@Nullable Input<String> blobInventoryPolicyName) {
+        public Builder blobInventoryPolicyName(@Nullable Input<String> blobInventoryPolicyName) {
             this.blobInventoryPolicyName = blobInventoryPolicyName;
             return this;
         }
 
-        public Builder setBlobInventoryPolicyName(@Nullable String blobInventoryPolicyName) {
+        public Builder blobInventoryPolicyName(@Nullable String blobInventoryPolicyName) {
             this.blobInventoryPolicyName = Input.ofNullable(blobInventoryPolicyName);
             return this;
         }
 
-        public Builder setPolicy(Input<BlobInventoryPolicySchemaArgs> policy) {
+        public Builder policy(Input<BlobInventoryPolicySchemaArgs> policy) {
             this.policy = Objects.requireNonNull(policy);
             return this;
         }
 
-        public Builder setPolicy(BlobInventoryPolicySchemaArgs policy) {
+        public Builder policy(BlobInventoryPolicySchemaArgs policy) {
             this.policy = Input.of(Objects.requireNonNull(policy));
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }

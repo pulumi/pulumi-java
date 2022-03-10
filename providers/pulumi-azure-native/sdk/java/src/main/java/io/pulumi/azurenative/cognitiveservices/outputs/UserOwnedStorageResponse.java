@@ -50,7 +50,7 @@ public final class UserOwnedStorageResponse {
     	      this.resourceId = defaults.resourceId;
         }
 
-        public Builder setResourceId(@Nullable String resourceId) {
+        public Builder resourceId(@Nullable String resourceId) {
             this.resourceId = resourceId;
             return this;
         }

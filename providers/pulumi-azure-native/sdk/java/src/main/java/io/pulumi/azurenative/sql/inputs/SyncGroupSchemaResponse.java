@@ -76,12 +76,12 @@ public final class SyncGroupSchemaResponse extends io.pulumi.resources.InvokeArg
     	      this.tables = defaults.tables;
         }
 
-        public Builder setMasterSyncMemberName(@Nullable String masterSyncMemberName) {
+        public Builder masterSyncMemberName(@Nullable String masterSyncMemberName) {
             this.masterSyncMemberName = masterSyncMemberName;
             return this;
         }
 
-        public Builder setTables(@Nullable List<SyncGroupSchemaTableResponse> tables) {
+        public Builder tables(@Nullable List<SyncGroupSchemaTableResponse> tables) {
             this.tables = tables;
             return this;
         }

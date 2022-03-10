@@ -117,27 +117,27 @@ public final class RoutePropertiesResponse {
     	      this.source = defaults.source;
         }
 
-        public Builder setCondition(@Nullable String condition) {
+        public Builder condition(@Nullable String condition) {
             this.condition = condition;
             return this;
         }
 
-        public Builder setEndpointNames(List<String> endpointNames) {
+        public Builder endpointNames(List<String> endpointNames) {
             this.endpointNames = Objects.requireNonNull(endpointNames);
             return this;
         }
 
-        public Builder setIsEnabled(Boolean isEnabled) {
+        public Builder isEnabled(Boolean isEnabled) {
             this.isEnabled = Objects.requireNonNull(isEnabled);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setSource(String source) {
+        public Builder source(String source) {
             this.source = Objects.requireNonNull(source);
             return this;
         }

@@ -57,12 +57,12 @@ public final class AccountEncryptionArgs extends io.pulumi.resources.ResourceArg
     	      this.keySource = defaults.keySource;
         }
 
-        public Builder setKeySource(@Nullable Input<String> keySource) {
+        public Builder keySource(@Nullable Input<String> keySource) {
             this.keySource = keySource;
             return this;
         }
 
-        public Builder setKeySource(@Nullable String keySource) {
+        public Builder keySource(@Nullable String keySource) {
             this.keySource = Input.ofNullable(keySource);
             return this;
         }

@@ -57,12 +57,12 @@ public final class LinuxConfigurationArgs extends io.pulumi.resources.ResourceAr
     	      this.ssh = defaults.ssh;
         }
 
-        public Builder setSsh(@Nullable Input<SshConfigurationArgs> ssh) {
+        public Builder ssh(@Nullable Input<SshConfigurationArgs> ssh) {
             this.ssh = ssh;
             return this;
         }
 
-        public Builder setSsh(@Nullable SshConfigurationArgs ssh) {
+        public Builder ssh(@Nullable SshConfigurationArgs ssh) {
             this.ssh = Input.ofNullable(ssh);
             return this;
         }

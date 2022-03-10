@@ -153,37 +153,37 @@ public final class DimensionsResponse extends io.pulumi.resources.InvokeArgs {
     	      this.width = defaults.width;
         }
 
-        public Builder setDepth(Double depth) {
+        public Builder depth(Double depth) {
             this.depth = Objects.requireNonNull(depth);
             return this;
         }
 
-        public Builder setHeight(Double height) {
+        public Builder height(Double height) {
             this.height = Objects.requireNonNull(height);
             return this;
         }
 
-        public Builder setLength(Double length) {
+        public Builder length(Double length) {
             this.length = Objects.requireNonNull(length);
             return this;
         }
 
-        public Builder setLengthHeightUnit(String lengthHeightUnit) {
+        public Builder lengthHeightUnit(String lengthHeightUnit) {
             this.lengthHeightUnit = Objects.requireNonNull(lengthHeightUnit);
             return this;
         }
 
-        public Builder setWeight(Double weight) {
+        public Builder weight(Double weight) {
             this.weight = Objects.requireNonNull(weight);
             return this;
         }
 
-        public Builder setWeightUnit(String weightUnit) {
+        public Builder weightUnit(String weightUnit) {
             this.weightUnit = Objects.requireNonNull(weightUnit);
             return this;
         }
 
-        public Builder setWidth(Double width) {
+        public Builder width(Double width) {
             this.width = Objects.requireNonNull(width);
             return this;
         }

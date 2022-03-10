@@ -196,92 +196,92 @@ public final class VirtualMachinePublicIPAddressConfigurationArgs extends io.pul
     	      this.sku = defaults.sku;
         }
 
-        public Builder setDeleteOption(@Nullable Input<Either<String,DeleteOptions>> deleteOption) {
+        public Builder deleteOption(@Nullable Input<Either<String,DeleteOptions>> deleteOption) {
             this.deleteOption = deleteOption;
             return this;
         }
 
-        public Builder setDeleteOption(@Nullable Either<String,DeleteOptions> deleteOption) {
+        public Builder deleteOption(@Nullable Either<String,DeleteOptions> deleteOption) {
             this.deleteOption = Input.ofNullable(deleteOption);
             return this;
         }
 
-        public Builder setDnsSettings(@Nullable Input<VirtualMachinePublicIPAddressDnsSettingsConfigurationArgs> dnsSettings) {
+        public Builder dnsSettings(@Nullable Input<VirtualMachinePublicIPAddressDnsSettingsConfigurationArgs> dnsSettings) {
             this.dnsSettings = dnsSettings;
             return this;
         }
 
-        public Builder setDnsSettings(@Nullable VirtualMachinePublicIPAddressDnsSettingsConfigurationArgs dnsSettings) {
+        public Builder dnsSettings(@Nullable VirtualMachinePublicIPAddressDnsSettingsConfigurationArgs dnsSettings) {
             this.dnsSettings = Input.ofNullable(dnsSettings);
             return this;
         }
 
-        public Builder setIdleTimeoutInMinutes(@Nullable Input<Integer> idleTimeoutInMinutes) {
+        public Builder idleTimeoutInMinutes(@Nullable Input<Integer> idleTimeoutInMinutes) {
             this.idleTimeoutInMinutes = idleTimeoutInMinutes;
             return this;
         }
 
-        public Builder setIdleTimeoutInMinutes(@Nullable Integer idleTimeoutInMinutes) {
+        public Builder idleTimeoutInMinutes(@Nullable Integer idleTimeoutInMinutes) {
             this.idleTimeoutInMinutes = Input.ofNullable(idleTimeoutInMinutes);
             return this;
         }
 
-        public Builder setIpTags(@Nullable Input<List<VirtualMachineIpTagArgs>> ipTags) {
+        public Builder ipTags(@Nullable Input<List<VirtualMachineIpTagArgs>> ipTags) {
             this.ipTags = ipTags;
             return this;
         }
 
-        public Builder setIpTags(@Nullable List<VirtualMachineIpTagArgs> ipTags) {
+        public Builder ipTags(@Nullable List<VirtualMachineIpTagArgs> ipTags) {
             this.ipTags = Input.ofNullable(ipTags);
             return this;
         }
 
-        public Builder setName(Input<String> name) {
+        public Builder name(Input<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder setPublicIPAddressVersion(@Nullable Input<Either<String,IPVersions>> publicIPAddressVersion) {
+        public Builder publicIPAddressVersion(@Nullable Input<Either<String,IPVersions>> publicIPAddressVersion) {
             this.publicIPAddressVersion = publicIPAddressVersion;
             return this;
         }
 
-        public Builder setPublicIPAddressVersion(@Nullable Either<String,IPVersions> publicIPAddressVersion) {
+        public Builder publicIPAddressVersion(@Nullable Either<String,IPVersions> publicIPAddressVersion) {
             this.publicIPAddressVersion = Input.ofNullable(publicIPAddressVersion);
             return this;
         }
 
-        public Builder setPublicIPAllocationMethod(@Nullable Input<Either<String,PublicIPAllocationMethod>> publicIPAllocationMethod) {
+        public Builder publicIPAllocationMethod(@Nullable Input<Either<String,PublicIPAllocationMethod>> publicIPAllocationMethod) {
             this.publicIPAllocationMethod = publicIPAllocationMethod;
             return this;
         }
 
-        public Builder setPublicIPAllocationMethod(@Nullable Either<String,PublicIPAllocationMethod> publicIPAllocationMethod) {
+        public Builder publicIPAllocationMethod(@Nullable Either<String,PublicIPAllocationMethod> publicIPAllocationMethod) {
             this.publicIPAllocationMethod = Input.ofNullable(publicIPAllocationMethod);
             return this;
         }
 
-        public Builder setPublicIPPrefix(@Nullable Input<SubResourceArgs> publicIPPrefix) {
+        public Builder publicIPPrefix(@Nullable Input<SubResourceArgs> publicIPPrefix) {
             this.publicIPPrefix = publicIPPrefix;
             return this;
         }
 
-        public Builder setPublicIPPrefix(@Nullable SubResourceArgs publicIPPrefix) {
+        public Builder publicIPPrefix(@Nullable SubResourceArgs publicIPPrefix) {
             this.publicIPPrefix = Input.ofNullable(publicIPPrefix);
             return this;
         }
 
-        public Builder setSku(@Nullable Input<PublicIPAddressSkuArgs> sku) {
+        public Builder sku(@Nullable Input<PublicIPAddressSkuArgs> sku) {
             this.sku = sku;
             return this;
         }
 
-        public Builder setSku(@Nullable PublicIPAddressSkuArgs sku) {
+        public Builder sku(@Nullable PublicIPAddressSkuArgs sku) {
             this.sku = Input.ofNullable(sku);
             return this;
         }

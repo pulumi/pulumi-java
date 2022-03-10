@@ -255,132 +255,132 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
     	      this.workspaceName = defaults.workspaceName;
         }
 
-        public Builder setETag(@Nullable Input<String> eTag) {
+        public Builder eTag(@Nullable Input<String> eTag) {
             this.eTag = eTag;
             return this;
         }
 
-        public Builder setETag(@Nullable String eTag) {
+        public Builder eTag(@Nullable String eTag) {
             this.eTag = Input.ofNullable(eTag);
             return this;
         }
 
-        public Builder setFeatures(@Nullable Input<WorkspaceFeaturesArgs> features) {
+        public Builder features(@Nullable Input<WorkspaceFeaturesArgs> features) {
             this.features = features;
             return this;
         }
 
-        public Builder setFeatures(@Nullable WorkspaceFeaturesArgs features) {
+        public Builder features(@Nullable WorkspaceFeaturesArgs features) {
             this.features = Input.ofNullable(features);
             return this;
         }
 
-        public Builder setForceCmkForQuery(@Nullable Input<Boolean> forceCmkForQuery) {
+        public Builder forceCmkForQuery(@Nullable Input<Boolean> forceCmkForQuery) {
             this.forceCmkForQuery = forceCmkForQuery;
             return this;
         }
 
-        public Builder setForceCmkForQuery(@Nullable Boolean forceCmkForQuery) {
+        public Builder forceCmkForQuery(@Nullable Boolean forceCmkForQuery) {
             this.forceCmkForQuery = Input.ofNullable(forceCmkForQuery);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setProvisioningState(@Nullable Input<Either<String,WorkspaceEntityStatus>> provisioningState) {
+        public Builder provisioningState(@Nullable Input<Either<String,WorkspaceEntityStatus>> provisioningState) {
             this.provisioningState = provisioningState;
             return this;
         }
 
-        public Builder setProvisioningState(@Nullable Either<String,WorkspaceEntityStatus> provisioningState) {
+        public Builder provisioningState(@Nullable Either<String,WorkspaceEntityStatus> provisioningState) {
             this.provisioningState = Input.ofNullable(provisioningState);
             return this;
         }
 
-        public Builder setPublicNetworkAccessForIngestion(@Nullable Input<Either<String,PublicNetworkAccessType>> publicNetworkAccessForIngestion) {
+        public Builder publicNetworkAccessForIngestion(@Nullable Input<Either<String,PublicNetworkAccessType>> publicNetworkAccessForIngestion) {
             this.publicNetworkAccessForIngestion = publicNetworkAccessForIngestion;
             return this;
         }
 
-        public Builder setPublicNetworkAccessForIngestion(@Nullable Either<String,PublicNetworkAccessType> publicNetworkAccessForIngestion) {
+        public Builder publicNetworkAccessForIngestion(@Nullable Either<String,PublicNetworkAccessType> publicNetworkAccessForIngestion) {
             this.publicNetworkAccessForIngestion = Input.ofNullable(publicNetworkAccessForIngestion);
             return this;
         }
 
-        public Builder setPublicNetworkAccessForQuery(@Nullable Input<Either<String,PublicNetworkAccessType>> publicNetworkAccessForQuery) {
+        public Builder publicNetworkAccessForQuery(@Nullable Input<Either<String,PublicNetworkAccessType>> publicNetworkAccessForQuery) {
             this.publicNetworkAccessForQuery = publicNetworkAccessForQuery;
             return this;
         }
 
-        public Builder setPublicNetworkAccessForQuery(@Nullable Either<String,PublicNetworkAccessType> publicNetworkAccessForQuery) {
+        public Builder publicNetworkAccessForQuery(@Nullable Either<String,PublicNetworkAccessType> publicNetworkAccessForQuery) {
             this.publicNetworkAccessForQuery = Input.ofNullable(publicNetworkAccessForQuery);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setRetentionInDays(@Nullable Input<Integer> retentionInDays) {
+        public Builder retentionInDays(@Nullable Input<Integer> retentionInDays) {
             this.retentionInDays = retentionInDays;
             return this;
         }
 
-        public Builder setRetentionInDays(@Nullable Integer retentionInDays) {
+        public Builder retentionInDays(@Nullable Integer retentionInDays) {
             this.retentionInDays = Input.ofNullable(retentionInDays);
             return this;
         }
 
-        public Builder setSku(@Nullable Input<WorkspaceSkuArgs> sku) {
+        public Builder sku(@Nullable Input<WorkspaceSkuArgs> sku) {
             this.sku = sku;
             return this;
         }
 
-        public Builder setSku(@Nullable WorkspaceSkuArgs sku) {
+        public Builder sku(@Nullable WorkspaceSkuArgs sku) {
             this.sku = Input.ofNullable(sku);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setWorkspaceCapping(@Nullable Input<WorkspaceCappingArgs> workspaceCapping) {
+        public Builder workspaceCapping(@Nullable Input<WorkspaceCappingArgs> workspaceCapping) {
             this.workspaceCapping = workspaceCapping;
             return this;
         }
 
-        public Builder setWorkspaceCapping(@Nullable WorkspaceCappingArgs workspaceCapping) {
+        public Builder workspaceCapping(@Nullable WorkspaceCappingArgs workspaceCapping) {
             this.workspaceCapping = Input.ofNullable(workspaceCapping);
             return this;
         }
 
-        public Builder setWorkspaceName(@Nullable Input<String> workspaceName) {
+        public Builder workspaceName(@Nullable Input<String> workspaceName) {
             this.workspaceName = workspaceName;
             return this;
         }
 
-        public Builder setWorkspaceName(@Nullable String workspaceName) {
+        public Builder workspaceName(@Nullable String workspaceName) {
             this.workspaceName = Input.ofNullable(workspaceName);
             return this;
         }

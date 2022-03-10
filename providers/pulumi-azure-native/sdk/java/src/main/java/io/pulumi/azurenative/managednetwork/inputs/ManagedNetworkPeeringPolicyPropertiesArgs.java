@@ -110,42 +110,42 @@ public final class ManagedNetworkPeeringPolicyPropertiesArgs extends io.pulumi.r
     	      this.type = defaults.type;
         }
 
-        public Builder setHub(@Nullable Input<ResourceIdArgs> hub) {
+        public Builder hub(@Nullable Input<ResourceIdArgs> hub) {
             this.hub = hub;
             return this;
         }
 
-        public Builder setHub(@Nullable ResourceIdArgs hub) {
+        public Builder hub(@Nullable ResourceIdArgs hub) {
             this.hub = Input.ofNullable(hub);
             return this;
         }
 
-        public Builder setMesh(@Nullable Input<List<ResourceIdArgs>> mesh) {
+        public Builder mesh(@Nullable Input<List<ResourceIdArgs>> mesh) {
             this.mesh = mesh;
             return this;
         }
 
-        public Builder setMesh(@Nullable List<ResourceIdArgs> mesh) {
+        public Builder mesh(@Nullable List<ResourceIdArgs> mesh) {
             this.mesh = Input.ofNullable(mesh);
             return this;
         }
 
-        public Builder setSpokes(@Nullable Input<List<ResourceIdArgs>> spokes) {
+        public Builder spokes(@Nullable Input<List<ResourceIdArgs>> spokes) {
             this.spokes = spokes;
             return this;
         }
 
-        public Builder setSpokes(@Nullable List<ResourceIdArgs> spokes) {
+        public Builder spokes(@Nullable List<ResourceIdArgs> spokes) {
             this.spokes = Input.ofNullable(spokes);
             return this;
         }
 
-        public Builder setType(Input<Either<String,Type>> type) {
+        public Builder type(Input<Either<String,Type>> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setType(Either<String,Type> type) {
+        public Builder type(Either<String,Type> type) {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }

@@ -103,42 +103,42 @@ public final class ConfigurationServiceArgs extends io.pulumi.resources.Resource
     	      this.serviceName = defaults.serviceName;
         }
 
-        public Builder setConfigurationServiceName(@Nullable Input<String> configurationServiceName) {
+        public Builder configurationServiceName(@Nullable Input<String> configurationServiceName) {
             this.configurationServiceName = configurationServiceName;
             return this;
         }
 
-        public Builder setConfigurationServiceName(@Nullable String configurationServiceName) {
+        public Builder configurationServiceName(@Nullable String configurationServiceName) {
             this.configurationServiceName = Input.ofNullable(configurationServiceName);
             return this;
         }
 
-        public Builder setProperties(@Nullable Input<ConfigurationServicePropertiesArgs> properties) {
+        public Builder properties(@Nullable Input<ConfigurationServicePropertiesArgs> properties) {
             this.properties = properties;
             return this;
         }
 
-        public Builder setProperties(@Nullable ConfigurationServicePropertiesArgs properties) {
+        public Builder properties(@Nullable ConfigurationServicePropertiesArgs properties) {
             this.properties = Input.ofNullable(properties);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setServiceName(Input<String> serviceName) {
+        public Builder serviceName(Input<String> serviceName) {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
         }
 
-        public Builder setServiceName(String serviceName) {
+        public Builder serviceName(String serviceName) {
             this.serviceName = Input.of(Objects.requireNonNull(serviceName));
             return this;
         }

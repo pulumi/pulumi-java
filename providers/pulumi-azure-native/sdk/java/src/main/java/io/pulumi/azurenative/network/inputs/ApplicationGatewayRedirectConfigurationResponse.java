@@ -237,62 +237,62 @@ public final class ApplicationGatewayRedirectConfigurationResponse extends io.pu
     	      this.urlPathMaps = defaults.urlPathMaps;
         }
 
-        public Builder setEtag(String etag) {
+        public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setIncludePath(@Nullable Boolean includePath) {
+        public Builder includePath(@Nullable Boolean includePath) {
             this.includePath = includePath;
             return this;
         }
 
-        public Builder setIncludeQueryString(@Nullable Boolean includeQueryString) {
+        public Builder includeQueryString(@Nullable Boolean includeQueryString) {
             this.includeQueryString = includeQueryString;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setPathRules(@Nullable List<SubResourceResponse> pathRules) {
+        public Builder pathRules(@Nullable List<SubResourceResponse> pathRules) {
             this.pathRules = pathRules;
             return this;
         }
 
-        public Builder setRedirectType(@Nullable String redirectType) {
+        public Builder redirectType(@Nullable String redirectType) {
             this.redirectType = redirectType;
             return this;
         }
 
-        public Builder setRequestRoutingRules(@Nullable List<SubResourceResponse> requestRoutingRules) {
+        public Builder requestRoutingRules(@Nullable List<SubResourceResponse> requestRoutingRules) {
             this.requestRoutingRules = requestRoutingRules;
             return this;
         }
 
-        public Builder setTargetListener(@Nullable SubResourceResponse targetListener) {
+        public Builder targetListener(@Nullable SubResourceResponse targetListener) {
             this.targetListener = targetListener;
             return this;
         }
 
-        public Builder setTargetUrl(@Nullable String targetUrl) {
+        public Builder targetUrl(@Nullable String targetUrl) {
             this.targetUrl = targetUrl;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setUrlPathMaps(@Nullable List<SubResourceResponse> urlPathMaps) {
+        public Builder urlPathMaps(@Nullable List<SubResourceResponse> urlPathMaps) {
             this.urlPathMaps = urlPathMaps;
             return this;
         }

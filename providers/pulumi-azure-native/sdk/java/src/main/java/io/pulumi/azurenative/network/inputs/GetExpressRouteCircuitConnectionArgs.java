@@ -100,22 +100,22 @@ public final class GetExpressRouteCircuitConnectionArgs extends io.pulumi.resour
     	      this.resourceGroupName = defaults.resourceGroupName;
         }
 
-        public Builder setCircuitName(String circuitName) {
+        public Builder circuitName(String circuitName) {
             this.circuitName = Objects.requireNonNull(circuitName);
             return this;
         }
 
-        public Builder setConnectionName(String connectionName) {
+        public Builder connectionName(String connectionName) {
             this.connectionName = Objects.requireNonNull(connectionName);
             return this;
         }
 
-        public Builder setPeeringName(String peeringName) {
+        public Builder peeringName(String peeringName) {
             this.peeringName = Objects.requireNonNull(peeringName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }

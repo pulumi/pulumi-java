@@ -50,7 +50,7 @@ public final class VolumePropertiesResponseExportPolicy {
     	      this.rules = defaults.rules;
         }
 
-        public Builder setRules(@Nullable List<ExportPolicyRuleResponse> rules) {
+        public Builder rules(@Nullable List<ExportPolicyRuleResponse> rules) {
             this.rules = rules;
             return this;
         }

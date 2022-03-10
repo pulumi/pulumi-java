@@ -329,182 +329,182 @@ public final class WebAppInstanceFunctionSlotArgs extends io.pulumi.resources.Re
     	      this.testDataHref = defaults.testDataHref;
         }
 
-        public Builder setConfig(@Nullable Input<Object> config) {
+        public Builder config(@Nullable Input<Object> config) {
             this.config = config;
             return this;
         }
 
-        public Builder setConfig(@Nullable Object config) {
+        public Builder config(@Nullable Object config) {
             this.config = Input.ofNullable(config);
             return this;
         }
 
-        public Builder setConfigHref(@Nullable Input<String> configHref) {
+        public Builder configHref(@Nullable Input<String> configHref) {
             this.configHref = configHref;
             return this;
         }
 
-        public Builder setConfigHref(@Nullable String configHref) {
+        public Builder configHref(@Nullable String configHref) {
             this.configHref = Input.ofNullable(configHref);
             return this;
         }
 
-        public Builder setFiles(@Nullable Input<Map<String,String>> files) {
+        public Builder files(@Nullable Input<Map<String,String>> files) {
             this.files = files;
             return this;
         }
 
-        public Builder setFiles(@Nullable Map<String,String> files) {
+        public Builder files(@Nullable Map<String,String> files) {
             this.files = Input.ofNullable(files);
             return this;
         }
 
-        public Builder setFunctionAppId(@Nullable Input<String> functionAppId) {
+        public Builder functionAppId(@Nullable Input<String> functionAppId) {
             this.functionAppId = functionAppId;
             return this;
         }
 
-        public Builder setFunctionAppId(@Nullable String functionAppId) {
+        public Builder functionAppId(@Nullable String functionAppId) {
             this.functionAppId = Input.ofNullable(functionAppId);
             return this;
         }
 
-        public Builder setFunctionName(@Nullable Input<String> functionName) {
+        public Builder functionName(@Nullable Input<String> functionName) {
             this.functionName = functionName;
             return this;
         }
 
-        public Builder setFunctionName(@Nullable String functionName) {
+        public Builder functionName(@Nullable String functionName) {
             this.functionName = Input.ofNullable(functionName);
             return this;
         }
 
-        public Builder setHref(@Nullable Input<String> href) {
+        public Builder href(@Nullable Input<String> href) {
             this.href = href;
             return this;
         }
 
-        public Builder setHref(@Nullable String href) {
+        public Builder href(@Nullable String href) {
             this.href = Input.ofNullable(href);
             return this;
         }
 
-        public Builder setInvokeUrlTemplate(@Nullable Input<String> invokeUrlTemplate) {
+        public Builder invokeUrlTemplate(@Nullable Input<String> invokeUrlTemplate) {
             this.invokeUrlTemplate = invokeUrlTemplate;
             return this;
         }
 
-        public Builder setInvokeUrlTemplate(@Nullable String invokeUrlTemplate) {
+        public Builder invokeUrlTemplate(@Nullable String invokeUrlTemplate) {
             this.invokeUrlTemplate = Input.ofNullable(invokeUrlTemplate);
             return this;
         }
 
-        public Builder setIsDisabled(@Nullable Input<Boolean> isDisabled) {
+        public Builder isDisabled(@Nullable Input<Boolean> isDisabled) {
             this.isDisabled = isDisabled;
             return this;
         }
 
-        public Builder setIsDisabled(@Nullable Boolean isDisabled) {
+        public Builder isDisabled(@Nullable Boolean isDisabled) {
             this.isDisabled = Input.ofNullable(isDisabled);
             return this;
         }
 
-        public Builder setKind(@Nullable Input<String> kind) {
+        public Builder kind(@Nullable Input<String> kind) {
             this.kind = kind;
             return this;
         }
 
-        public Builder setKind(@Nullable String kind) {
+        public Builder kind(@Nullable String kind) {
             this.kind = Input.ofNullable(kind);
             return this;
         }
 
-        public Builder setLanguage(@Nullable Input<String> language) {
+        public Builder language(@Nullable Input<String> language) {
             this.language = language;
             return this;
         }
 
-        public Builder setLanguage(@Nullable String language) {
+        public Builder language(@Nullable String language) {
             this.language = Input.ofNullable(language);
             return this;
         }
 
-        public Builder setName(Input<String> name) {
+        public Builder name(Input<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setScriptHref(@Nullable Input<String> scriptHref) {
+        public Builder scriptHref(@Nullable Input<String> scriptHref) {
             this.scriptHref = scriptHref;
             return this;
         }
 
-        public Builder setScriptHref(@Nullable String scriptHref) {
+        public Builder scriptHref(@Nullable String scriptHref) {
             this.scriptHref = Input.ofNullable(scriptHref);
             return this;
         }
 
-        public Builder setScriptRootPathHref(@Nullable Input<String> scriptRootPathHref) {
+        public Builder scriptRootPathHref(@Nullable Input<String> scriptRootPathHref) {
             this.scriptRootPathHref = scriptRootPathHref;
             return this;
         }
 
-        public Builder setScriptRootPathHref(@Nullable String scriptRootPathHref) {
+        public Builder scriptRootPathHref(@Nullable String scriptRootPathHref) {
             this.scriptRootPathHref = Input.ofNullable(scriptRootPathHref);
             return this;
         }
 
-        public Builder setSecretsFileHref(@Nullable Input<String> secretsFileHref) {
+        public Builder secretsFileHref(@Nullable Input<String> secretsFileHref) {
             this.secretsFileHref = secretsFileHref;
             return this;
         }
 
-        public Builder setSecretsFileHref(@Nullable String secretsFileHref) {
+        public Builder secretsFileHref(@Nullable String secretsFileHref) {
             this.secretsFileHref = Input.ofNullable(secretsFileHref);
             return this;
         }
 
-        public Builder setSlot(Input<String> slot) {
+        public Builder slot(Input<String> slot) {
             this.slot = Objects.requireNonNull(slot);
             return this;
         }
 
-        public Builder setSlot(String slot) {
+        public Builder slot(String slot) {
             this.slot = Input.of(Objects.requireNonNull(slot));
             return this;
         }
 
-        public Builder setTestData(@Nullable Input<String> testData) {
+        public Builder testData(@Nullable Input<String> testData) {
             this.testData = testData;
             return this;
         }
 
-        public Builder setTestData(@Nullable String testData) {
+        public Builder testData(@Nullable String testData) {
             this.testData = Input.ofNullable(testData);
             return this;
         }
 
-        public Builder setTestDataHref(@Nullable Input<String> testDataHref) {
+        public Builder testDataHref(@Nullable Input<String> testDataHref) {
             this.testDataHref = testDataHref;
             return this;
         }
 
-        public Builder setTestDataHref(@Nullable String testDataHref) {
+        public Builder testDataHref(@Nullable String testDataHref) {
             this.testDataHref = Input.ofNullable(testDataHref);
             return this;
         }

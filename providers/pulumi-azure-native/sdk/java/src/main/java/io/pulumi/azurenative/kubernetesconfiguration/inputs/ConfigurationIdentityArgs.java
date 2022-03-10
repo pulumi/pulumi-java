@@ -57,12 +57,12 @@ public final class ConfigurationIdentityArgs extends io.pulumi.resources.Resourc
     	      this.type = defaults.type;
         }
 
-        public Builder setType(@Nullable Input<ResourceIdentityType> type) {
+        public Builder type(@Nullable Input<ResourceIdentityType> type) {
             this.type = type;
             return this;
         }
 
-        public Builder setType(@Nullable ResourceIdentityType type) {
+        public Builder type(@Nullable ResourceIdentityType type) {
             this.type = Input.ofNullable(type);
             return this;
         }

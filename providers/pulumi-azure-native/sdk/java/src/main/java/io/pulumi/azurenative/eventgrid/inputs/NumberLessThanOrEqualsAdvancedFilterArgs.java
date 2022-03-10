@@ -92,32 +92,32 @@ public final class NumberLessThanOrEqualsAdvancedFilterArgs extends io.pulumi.re
     	      this.value = defaults.value;
         }
 
-        public Builder setKey(@Nullable Input<String> key) {
+        public Builder key(@Nullable Input<String> key) {
             this.key = key;
             return this;
         }
 
-        public Builder setKey(@Nullable String key) {
+        public Builder key(@Nullable String key) {
             this.key = Input.ofNullable(key);
             return this;
         }
 
-        public Builder setOperatorType(Input<String> operatorType) {
+        public Builder operatorType(Input<String> operatorType) {
             this.operatorType = Objects.requireNonNull(operatorType);
             return this;
         }
 
-        public Builder setOperatorType(String operatorType) {
+        public Builder operatorType(String operatorType) {
             this.operatorType = Input.of(Objects.requireNonNull(operatorType));
             return this;
         }
 
-        public Builder setValue(@Nullable Input<Double> value) {
+        public Builder value(@Nullable Input<Double> value) {
             this.value = value;
             return this;
         }
 
-        public Builder setValue(@Nullable Double value) {
+        public Builder value(@Nullable Double value) {
             this.value = Input.ofNullable(value);
             return this;
         }

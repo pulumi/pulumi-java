@@ -92,32 +92,32 @@ public final class OwaspCrsExclusionEntryArgs extends io.pulumi.resources.Resour
     	      this.selectorMatchOperator = defaults.selectorMatchOperator;
         }
 
-        public Builder setMatchVariable(Input<Either<String,OwaspCrsExclusionEntryMatchVariable>> matchVariable) {
+        public Builder matchVariable(Input<Either<String,OwaspCrsExclusionEntryMatchVariable>> matchVariable) {
             this.matchVariable = Objects.requireNonNull(matchVariable);
             return this;
         }
 
-        public Builder setMatchVariable(Either<String,OwaspCrsExclusionEntryMatchVariable> matchVariable) {
+        public Builder matchVariable(Either<String,OwaspCrsExclusionEntryMatchVariable> matchVariable) {
             this.matchVariable = Input.of(Objects.requireNonNull(matchVariable));
             return this;
         }
 
-        public Builder setSelector(Input<String> selector) {
+        public Builder selector(Input<String> selector) {
             this.selector = Objects.requireNonNull(selector);
             return this;
         }
 
-        public Builder setSelector(String selector) {
+        public Builder selector(String selector) {
             this.selector = Input.of(Objects.requireNonNull(selector));
             return this;
         }
 
-        public Builder setSelectorMatchOperator(Input<Either<String,OwaspCrsExclusionEntrySelectorMatchOperator>> selectorMatchOperator) {
+        public Builder selectorMatchOperator(Input<Either<String,OwaspCrsExclusionEntrySelectorMatchOperator>> selectorMatchOperator) {
             this.selectorMatchOperator = Objects.requireNonNull(selectorMatchOperator);
             return this;
         }
 
-        public Builder setSelectorMatchOperator(Either<String,OwaspCrsExclusionEntrySelectorMatchOperator> selectorMatchOperator) {
+        public Builder selectorMatchOperator(Either<String,OwaspCrsExclusionEntrySelectorMatchOperator> selectorMatchOperator) {
             this.selectorMatchOperator = Input.of(Objects.requireNonNull(selectorMatchOperator));
             return this;
         }

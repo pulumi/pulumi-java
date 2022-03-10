@@ -91,32 +91,32 @@ public final class SecretPropertiesArgs extends io.pulumi.resources.ResourceArgs
     	      this.value = defaults.value;
         }
 
-        public Builder setAttributes(@Nullable Input<SecretAttributesArgs> attributes) {
+        public Builder attributes(@Nullable Input<SecretAttributesArgs> attributes) {
             this.attributes = attributes;
             return this;
         }
 
-        public Builder setAttributes(@Nullable SecretAttributesArgs attributes) {
+        public Builder attributes(@Nullable SecretAttributesArgs attributes) {
             this.attributes = Input.ofNullable(attributes);
             return this;
         }
 
-        public Builder setContentType(@Nullable Input<String> contentType) {
+        public Builder contentType(@Nullable Input<String> contentType) {
             this.contentType = contentType;
             return this;
         }
 
-        public Builder setContentType(@Nullable String contentType) {
+        public Builder contentType(@Nullable String contentType) {
             this.contentType = Input.ofNullable(contentType);
             return this;
         }
 
-        public Builder setValue(@Nullable Input<String> value) {
+        public Builder value(@Nullable Input<String> value) {
             this.value = value;
             return this;
         }
 
-        public Builder setValue(@Nullable String value) {
+        public Builder value(@Nullable String value) {
             this.value = Input.ofNullable(value);
             return this;
         }

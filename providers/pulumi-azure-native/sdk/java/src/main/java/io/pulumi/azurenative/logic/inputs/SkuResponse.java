@@ -75,12 +75,12 @@ public final class SkuResponse extends io.pulumi.resources.InvokeArgs {
     	      this.plan = defaults.plan;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPlan(@Nullable ResourceReferenceResponse plan) {
+        public Builder plan(@Nullable ResourceReferenceResponse plan) {
             this.plan = plan;
             return this;
         }

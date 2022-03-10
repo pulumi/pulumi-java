@@ -90,17 +90,17 @@ public final class APIServerProfileResponse extends io.pulumi.resources.InvokeAr
     	      this.visibility = defaults.visibility;
         }
 
-        public Builder setIp(@Nullable String ip) {
+        public Builder ip(@Nullable String ip) {
             this.ip = ip;
             return this;
         }
 
-        public Builder setUrl(@Nullable String url) {
+        public Builder url(@Nullable String url) {
             this.url = url;
             return this;
         }
 
-        public Builder setVisibility(@Nullable String visibility) {
+        public Builder visibility(@Nullable String visibility) {
             this.visibility = visibility;
             return this;
         }

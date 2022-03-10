@@ -138,62 +138,62 @@ public final class DashboardArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setDashboardName(@Nullable Input<String> dashboardName) {
+        public Builder dashboardName(@Nullable Input<String> dashboardName) {
             this.dashboardName = dashboardName;
             return this;
         }
 
-        public Builder setDashboardName(@Nullable String dashboardName) {
+        public Builder dashboardName(@Nullable String dashboardName) {
             this.dashboardName = Input.ofNullable(dashboardName);
             return this;
         }
 
-        public Builder setLenses(@Nullable Input<List<DashboardLensArgs>> lenses) {
+        public Builder lenses(@Nullable Input<List<DashboardLensArgs>> lenses) {
             this.lenses = lenses;
             return this;
         }
 
-        public Builder setLenses(@Nullable List<DashboardLensArgs> lenses) {
+        public Builder lenses(@Nullable List<DashboardLensArgs> lenses) {
             this.lenses = Input.ofNullable(lenses);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setMetadata(@Nullable Input<Map<String,Object>> metadata) {
+        public Builder metadata(@Nullable Input<Map<String,Object>> metadata) {
             this.metadata = metadata;
             return this;
         }
 
-        public Builder setMetadata(@Nullable Map<String,Object> metadata) {
+        public Builder metadata(@Nullable Map<String,Object> metadata) {
             this.metadata = Input.ofNullable(metadata);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

@@ -65,12 +65,12 @@ public final class UrlSigningParamIdentifierResponse {
     	      this.paramName = defaults.paramName;
         }
 
-        public Builder setParamIndicator(String paramIndicator) {
+        public Builder paramIndicator(String paramIndicator) {
             this.paramIndicator = Objects.requireNonNull(paramIndicator);
             return this;
         }
 
-        public Builder setParamName(String paramName) {
+        public Builder paramName(String paramName) {
             this.paramName = Objects.requireNonNull(paramName);
             return this;
         }

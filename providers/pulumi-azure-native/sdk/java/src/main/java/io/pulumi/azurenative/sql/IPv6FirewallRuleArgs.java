@@ -134,62 +134,62 @@ public final class IPv6FirewallRuleArgs extends io.pulumi.resources.ResourceArgs
     	      this.startIPv6Address = defaults.startIPv6Address;
         }
 
-        public Builder setEndIPv6Address(@Nullable Input<String> endIPv6Address) {
+        public Builder endIPv6Address(@Nullable Input<String> endIPv6Address) {
             this.endIPv6Address = endIPv6Address;
             return this;
         }
 
-        public Builder setEndIPv6Address(@Nullable String endIPv6Address) {
+        public Builder endIPv6Address(@Nullable String endIPv6Address) {
             this.endIPv6Address = Input.ofNullable(endIPv6Address);
             return this;
         }
 
-        public Builder setFirewallRuleName(@Nullable Input<String> firewallRuleName) {
+        public Builder firewallRuleName(@Nullable Input<String> firewallRuleName) {
             this.firewallRuleName = firewallRuleName;
             return this;
         }
 
-        public Builder setFirewallRuleName(@Nullable String firewallRuleName) {
+        public Builder firewallRuleName(@Nullable String firewallRuleName) {
             this.firewallRuleName = Input.ofNullable(firewallRuleName);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setServerName(Input<String> serverName) {
+        public Builder serverName(Input<String> serverName) {
             this.serverName = Objects.requireNonNull(serverName);
             return this;
         }
 
-        public Builder setServerName(String serverName) {
+        public Builder serverName(String serverName) {
             this.serverName = Input.of(Objects.requireNonNull(serverName));
             return this;
         }
 
-        public Builder setStartIPv6Address(@Nullable Input<String> startIPv6Address) {
+        public Builder startIPv6Address(@Nullable Input<String> startIPv6Address) {
             this.startIPv6Address = startIPv6Address;
             return this;
         }
 
-        public Builder setStartIPv6Address(@Nullable String startIPv6Address) {
+        public Builder startIPv6Address(@Nullable String startIPv6Address) {
             this.startIPv6Address = Input.ofNullable(startIPv6Address);
             return this;
         }

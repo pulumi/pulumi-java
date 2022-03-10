@@ -75,22 +75,22 @@ public final class ConnectionParameterArgs extends io.pulumi.resources.ResourceA
     	      this.type = defaults.type;
         }
 
-        public Builder setOAuthSettings(@Nullable Input<ApiOAuthSettingsArgs> oAuthSettings) {
+        public Builder oAuthSettings(@Nullable Input<ApiOAuthSettingsArgs> oAuthSettings) {
             this.oAuthSettings = oAuthSettings;
             return this;
         }
 
-        public Builder setOAuthSettings(@Nullable ApiOAuthSettingsArgs oAuthSettings) {
+        public Builder oAuthSettings(@Nullable ApiOAuthSettingsArgs oAuthSettings) {
             this.oAuthSettings = Input.ofNullable(oAuthSettings);
             return this;
         }
 
-        public Builder setType(@Nullable Input<ConnectionParameterType> type) {
+        public Builder type(@Nullable Input<ConnectionParameterType> type) {
             this.type = type;
             return this;
         }
 
-        public Builder setType(@Nullable ConnectionParameterType type) {
+        public Builder type(@Nullable ConnectionParameterType type) {
             this.type = Input.ofNullable(type);
             return this;
         }

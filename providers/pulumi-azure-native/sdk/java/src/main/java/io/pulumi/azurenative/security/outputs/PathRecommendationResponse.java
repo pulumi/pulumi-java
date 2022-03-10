@@ -167,47 +167,47 @@ public final class PathRecommendationResponse {
     	      this.usernames = defaults.usernames;
         }
 
-        public Builder setAction(@Nullable String action) {
+        public Builder action(@Nullable String action) {
             this.action = action;
             return this;
         }
 
-        public Builder setCommon(@Nullable Boolean common) {
+        public Builder common(@Nullable Boolean common) {
             this.common = common;
             return this;
         }
 
-        public Builder setConfigurationStatus(@Nullable String configurationStatus) {
+        public Builder configurationStatus(@Nullable String configurationStatus) {
             this.configurationStatus = configurationStatus;
             return this;
         }
 
-        public Builder setFileType(@Nullable String fileType) {
+        public Builder fileType(@Nullable String fileType) {
             this.fileType = fileType;
             return this;
         }
 
-        public Builder setPath(@Nullable String path) {
+        public Builder path(@Nullable String path) {
             this.path = path;
             return this;
         }
 
-        public Builder setPublisherInfo(@Nullable PublisherInfoResponse publisherInfo) {
+        public Builder publisherInfo(@Nullable PublisherInfoResponse publisherInfo) {
             this.publisherInfo = publisherInfo;
             return this;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = type;
             return this;
         }
 
-        public Builder setUserSids(@Nullable List<String> userSids) {
+        public Builder userSids(@Nullable List<String> userSids) {
             this.userSids = userSids;
             return this;
         }
 
-        public Builder setUsernames(@Nullable List<UserRecommendationResponse> usernames) {
+        public Builder usernames(@Nullable List<UserRecommendationResponse> usernames) {
             this.usernames = usernames;
             return this;
         }

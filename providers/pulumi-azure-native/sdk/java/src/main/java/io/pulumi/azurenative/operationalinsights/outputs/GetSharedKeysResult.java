@@ -67,12 +67,12 @@ public final class GetSharedKeysResult {
     	      this.secondarySharedKey = defaults.secondarySharedKey;
         }
 
-        public Builder setPrimarySharedKey(@Nullable String primarySharedKey) {
+        public Builder primarySharedKey(@Nullable String primarySharedKey) {
             this.primarySharedKey = primarySharedKey;
             return this;
         }
 
-        public Builder setSecondarySharedKey(@Nullable String secondarySharedKey) {
+        public Builder secondarySharedKey(@Nullable String secondarySharedKey) {
             this.secondarySharedKey = secondarySharedKey;
             return this;
         }

@@ -67,12 +67,12 @@ public final class AutoscaleCapacityResponse {
     	      this.minInstanceCount = defaults.minInstanceCount;
         }
 
-        public Builder setMaxInstanceCount(@Nullable Integer maxInstanceCount) {
+        public Builder maxInstanceCount(@Nullable Integer maxInstanceCount) {
             this.maxInstanceCount = maxInstanceCount;
             return this;
         }
 
-        public Builder setMinInstanceCount(@Nullable Integer minInstanceCount) {
+        public Builder minInstanceCount(@Nullable Integer minInstanceCount) {
             this.minInstanceCount = minInstanceCount;
             return this;
         }

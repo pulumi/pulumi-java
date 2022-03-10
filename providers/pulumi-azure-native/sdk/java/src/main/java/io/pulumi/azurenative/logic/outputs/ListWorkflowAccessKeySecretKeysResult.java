@@ -65,12 +65,12 @@ public final class ListWorkflowAccessKeySecretKeysResult {
     	      this.secondarySecretKey = defaults.secondarySecretKey;
         }
 
-        public Builder setPrimarySecretKey(String primarySecretKey) {
+        public Builder primarySecretKey(String primarySecretKey) {
             this.primarySecretKey = Objects.requireNonNull(primarySecretKey);
             return this;
         }
 
-        public Builder setSecondarySecretKey(String secondarySecretKey) {
+        public Builder secondarySecretKey(String secondarySecretKey) {
             this.secondarySecretKey = Objects.requireNonNull(secondarySecretKey);
             return this;
         }

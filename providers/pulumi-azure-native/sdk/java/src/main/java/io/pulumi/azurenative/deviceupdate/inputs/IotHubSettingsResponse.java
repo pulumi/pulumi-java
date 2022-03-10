@@ -90,17 +90,17 @@ public final class IotHubSettingsResponse extends io.pulumi.resources.InvokeArgs
     	      this.resourceId = defaults.resourceId;
         }
 
-        public Builder setEventHubConnectionString(@Nullable String eventHubConnectionString) {
+        public Builder eventHubConnectionString(@Nullable String eventHubConnectionString) {
             this.eventHubConnectionString = eventHubConnectionString;
             return this;
         }
 
-        public Builder setIoTHubConnectionString(@Nullable String ioTHubConnectionString) {
+        public Builder ioTHubConnectionString(@Nullable String ioTHubConnectionString) {
             this.ioTHubConnectionString = ioTHubConnectionString;
             return this;
         }
 
-        public Builder setResourceId(String resourceId) {
+        public Builder resourceId(String resourceId) {
             this.resourceId = Objects.requireNonNull(resourceId);
             return this;
         }

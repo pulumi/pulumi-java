@@ -109,22 +109,22 @@ public final class ArmApplicationHealthPolicyResponse {
     	      this.serviceTypeHealthPolicyMap = defaults.serviceTypeHealthPolicyMap;
         }
 
-        public Builder setConsiderWarningAsError(@Nullable Boolean considerWarningAsError) {
+        public Builder considerWarningAsError(@Nullable Boolean considerWarningAsError) {
             this.considerWarningAsError = considerWarningAsError;
             return this;
         }
 
-        public Builder setDefaultServiceTypeHealthPolicy(@Nullable ArmServiceTypeHealthPolicyResponse defaultServiceTypeHealthPolicy) {
+        public Builder defaultServiceTypeHealthPolicy(@Nullable ArmServiceTypeHealthPolicyResponse defaultServiceTypeHealthPolicy) {
             this.defaultServiceTypeHealthPolicy = defaultServiceTypeHealthPolicy;
             return this;
         }
 
-        public Builder setMaxPercentUnhealthyDeployedApplications(@Nullable Integer maxPercentUnhealthyDeployedApplications) {
+        public Builder maxPercentUnhealthyDeployedApplications(@Nullable Integer maxPercentUnhealthyDeployedApplications) {
             this.maxPercentUnhealthyDeployedApplications = maxPercentUnhealthyDeployedApplications;
             return this;
         }
 
-        public Builder setServiceTypeHealthPolicyMap(@Nullable Map<String,ArmServiceTypeHealthPolicyResponse> serviceTypeHealthPolicyMap) {
+        public Builder serviceTypeHealthPolicyMap(@Nullable Map<String,ArmServiceTypeHealthPolicyResponse> serviceTypeHealthPolicyMap) {
             this.serviceTypeHealthPolicyMap = serviceTypeHealthPolicyMap;
             return this;
         }

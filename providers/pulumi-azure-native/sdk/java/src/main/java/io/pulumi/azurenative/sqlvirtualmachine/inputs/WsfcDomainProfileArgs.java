@@ -170,82 +170,82 @@ public final class WsfcDomainProfileArgs extends io.pulumi.resources.ResourceArg
     	      this.storageAccountUrl = defaults.storageAccountUrl;
         }
 
-        public Builder setClusterBootstrapAccount(@Nullable Input<String> clusterBootstrapAccount) {
+        public Builder clusterBootstrapAccount(@Nullable Input<String> clusterBootstrapAccount) {
             this.clusterBootstrapAccount = clusterBootstrapAccount;
             return this;
         }
 
-        public Builder setClusterBootstrapAccount(@Nullable String clusterBootstrapAccount) {
+        public Builder clusterBootstrapAccount(@Nullable String clusterBootstrapAccount) {
             this.clusterBootstrapAccount = Input.ofNullable(clusterBootstrapAccount);
             return this;
         }
 
-        public Builder setClusterOperatorAccount(@Nullable Input<String> clusterOperatorAccount) {
+        public Builder clusterOperatorAccount(@Nullable Input<String> clusterOperatorAccount) {
             this.clusterOperatorAccount = clusterOperatorAccount;
             return this;
         }
 
-        public Builder setClusterOperatorAccount(@Nullable String clusterOperatorAccount) {
+        public Builder clusterOperatorAccount(@Nullable String clusterOperatorAccount) {
             this.clusterOperatorAccount = Input.ofNullable(clusterOperatorAccount);
             return this;
         }
 
-        public Builder setDomainFqdn(@Nullable Input<String> domainFqdn) {
+        public Builder domainFqdn(@Nullable Input<String> domainFqdn) {
             this.domainFqdn = domainFqdn;
             return this;
         }
 
-        public Builder setDomainFqdn(@Nullable String domainFqdn) {
+        public Builder domainFqdn(@Nullable String domainFqdn) {
             this.domainFqdn = Input.ofNullable(domainFqdn);
             return this;
         }
 
-        public Builder setFileShareWitnessPath(@Nullable Input<String> fileShareWitnessPath) {
+        public Builder fileShareWitnessPath(@Nullable Input<String> fileShareWitnessPath) {
             this.fileShareWitnessPath = fileShareWitnessPath;
             return this;
         }
 
-        public Builder setFileShareWitnessPath(@Nullable String fileShareWitnessPath) {
+        public Builder fileShareWitnessPath(@Nullable String fileShareWitnessPath) {
             this.fileShareWitnessPath = Input.ofNullable(fileShareWitnessPath);
             return this;
         }
 
-        public Builder setOuPath(@Nullable Input<String> ouPath) {
+        public Builder ouPath(@Nullable Input<String> ouPath) {
             this.ouPath = ouPath;
             return this;
         }
 
-        public Builder setOuPath(@Nullable String ouPath) {
+        public Builder ouPath(@Nullable String ouPath) {
             this.ouPath = Input.ofNullable(ouPath);
             return this;
         }
 
-        public Builder setSqlServiceAccount(@Nullable Input<String> sqlServiceAccount) {
+        public Builder sqlServiceAccount(@Nullable Input<String> sqlServiceAccount) {
             this.sqlServiceAccount = sqlServiceAccount;
             return this;
         }
 
-        public Builder setSqlServiceAccount(@Nullable String sqlServiceAccount) {
+        public Builder sqlServiceAccount(@Nullable String sqlServiceAccount) {
             this.sqlServiceAccount = Input.ofNullable(sqlServiceAccount);
             return this;
         }
 
-        public Builder setStorageAccountPrimaryKey(@Nullable Input<String> storageAccountPrimaryKey) {
+        public Builder storageAccountPrimaryKey(@Nullable Input<String> storageAccountPrimaryKey) {
             this.storageAccountPrimaryKey = storageAccountPrimaryKey;
             return this;
         }
 
-        public Builder setStorageAccountPrimaryKey(@Nullable String storageAccountPrimaryKey) {
+        public Builder storageAccountPrimaryKey(@Nullable String storageAccountPrimaryKey) {
             this.storageAccountPrimaryKey = Input.ofNullable(storageAccountPrimaryKey);
             return this;
         }
 
-        public Builder setStorageAccountUrl(@Nullable Input<String> storageAccountUrl) {
+        public Builder storageAccountUrl(@Nullable Input<String> storageAccountUrl) {
             this.storageAccountUrl = storageAccountUrl;
             return this;
         }
 
-        public Builder setStorageAccountUrl(@Nullable String storageAccountUrl) {
+        public Builder storageAccountUrl(@Nullable String storageAccountUrl) {
             this.storageAccountUrl = Input.ofNullable(storageAccountUrl);
             return this;
         }

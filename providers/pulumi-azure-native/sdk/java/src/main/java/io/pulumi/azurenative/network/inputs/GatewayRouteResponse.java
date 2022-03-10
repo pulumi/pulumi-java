@@ -153,37 +153,37 @@ public final class GatewayRouteResponse extends io.pulumi.resources.InvokeArgs {
     	      this.weight = defaults.weight;
         }
 
-        public Builder setAsPath(String asPath) {
+        public Builder asPath(String asPath) {
             this.asPath = Objects.requireNonNull(asPath);
             return this;
         }
 
-        public Builder setLocalAddress(String localAddress) {
+        public Builder localAddress(String localAddress) {
             this.localAddress = Objects.requireNonNull(localAddress);
             return this;
         }
 
-        public Builder setNetwork(String network) {
+        public Builder network(String network) {
             this.network = Objects.requireNonNull(network);
             return this;
         }
 
-        public Builder setNextHop(String nextHop) {
+        public Builder nextHop(String nextHop) {
             this.nextHop = Objects.requireNonNull(nextHop);
             return this;
         }
 
-        public Builder setOrigin(String origin) {
+        public Builder origin(String origin) {
             this.origin = Objects.requireNonNull(origin);
             return this;
         }
 
-        public Builder setSourcePeer(String sourcePeer) {
+        public Builder sourcePeer(String sourcePeer) {
             this.sourcePeer = Objects.requireNonNull(sourcePeer);
             return this;
         }
 
-        public Builder setWeight(Integer weight) {
+        public Builder weight(Integer weight) {
             this.weight = Objects.requireNonNull(weight);
             return this;
         }

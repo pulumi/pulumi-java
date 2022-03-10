@@ -58,7 +58,7 @@ public final class ScaleInPolicyResponse extends io.pulumi.resources.InvokeArgs 
     	      this.rules = defaults.rules;
         }
 
-        public Builder setRules(@Nullable List<String> rules) {
+        public Builder rules(@Nullable List<String> rules) {
             this.rules = rules;
             return this;
         }

@@ -322,172 +322,172 @@ public final class SqlVirtualMachineArgs extends io.pulumi.resources.ResourceArg
     	      this.wsfcDomainCredentials = defaults.wsfcDomainCredentials;
         }
 
-        public Builder setAutoBackupSettings(@Nullable Input<AutoBackupSettingsArgs> autoBackupSettings) {
+        public Builder autoBackupSettings(@Nullable Input<AutoBackupSettingsArgs> autoBackupSettings) {
             this.autoBackupSettings = autoBackupSettings;
             return this;
         }
 
-        public Builder setAutoBackupSettings(@Nullable AutoBackupSettingsArgs autoBackupSettings) {
+        public Builder autoBackupSettings(@Nullable AutoBackupSettingsArgs autoBackupSettings) {
             this.autoBackupSettings = Input.ofNullable(autoBackupSettings);
             return this;
         }
 
-        public Builder setAutoPatchingSettings(@Nullable Input<AutoPatchingSettingsArgs> autoPatchingSettings) {
+        public Builder autoPatchingSettings(@Nullable Input<AutoPatchingSettingsArgs> autoPatchingSettings) {
             this.autoPatchingSettings = autoPatchingSettings;
             return this;
         }
 
-        public Builder setAutoPatchingSettings(@Nullable AutoPatchingSettingsArgs autoPatchingSettings) {
+        public Builder autoPatchingSettings(@Nullable AutoPatchingSettingsArgs autoPatchingSettings) {
             this.autoPatchingSettings = Input.ofNullable(autoPatchingSettings);
             return this;
         }
 
-        public Builder setIdentity(@Nullable Input<ResourceIdentityArgs> identity) {
+        public Builder identity(@Nullable Input<ResourceIdentityArgs> identity) {
             this.identity = identity;
             return this;
         }
 
-        public Builder setIdentity(@Nullable ResourceIdentityArgs identity) {
+        public Builder identity(@Nullable ResourceIdentityArgs identity) {
             this.identity = Input.ofNullable(identity);
             return this;
         }
 
-        public Builder setKeyVaultCredentialSettings(@Nullable Input<KeyVaultCredentialSettingsArgs> keyVaultCredentialSettings) {
+        public Builder keyVaultCredentialSettings(@Nullable Input<KeyVaultCredentialSettingsArgs> keyVaultCredentialSettings) {
             this.keyVaultCredentialSettings = keyVaultCredentialSettings;
             return this;
         }
 
-        public Builder setKeyVaultCredentialSettings(@Nullable KeyVaultCredentialSettingsArgs keyVaultCredentialSettings) {
+        public Builder keyVaultCredentialSettings(@Nullable KeyVaultCredentialSettingsArgs keyVaultCredentialSettings) {
             this.keyVaultCredentialSettings = Input.ofNullable(keyVaultCredentialSettings);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setServerConfigurationsManagementSettings(@Nullable Input<ServerConfigurationsManagementSettingsArgs> serverConfigurationsManagementSettings) {
+        public Builder serverConfigurationsManagementSettings(@Nullable Input<ServerConfigurationsManagementSettingsArgs> serverConfigurationsManagementSettings) {
             this.serverConfigurationsManagementSettings = serverConfigurationsManagementSettings;
             return this;
         }
 
-        public Builder setServerConfigurationsManagementSettings(@Nullable ServerConfigurationsManagementSettingsArgs serverConfigurationsManagementSettings) {
+        public Builder serverConfigurationsManagementSettings(@Nullable ServerConfigurationsManagementSettingsArgs serverConfigurationsManagementSettings) {
             this.serverConfigurationsManagementSettings = Input.ofNullable(serverConfigurationsManagementSettings);
             return this;
         }
 
-        public Builder setSqlImageOffer(@Nullable Input<String> sqlImageOffer) {
+        public Builder sqlImageOffer(@Nullable Input<String> sqlImageOffer) {
             this.sqlImageOffer = sqlImageOffer;
             return this;
         }
 
-        public Builder setSqlImageOffer(@Nullable String sqlImageOffer) {
+        public Builder sqlImageOffer(@Nullable String sqlImageOffer) {
             this.sqlImageOffer = Input.ofNullable(sqlImageOffer);
             return this;
         }
 
-        public Builder setSqlImageSku(@Nullable Input<Either<String,SqlImageSku>> sqlImageSku) {
+        public Builder sqlImageSku(@Nullable Input<Either<String,SqlImageSku>> sqlImageSku) {
             this.sqlImageSku = sqlImageSku;
             return this;
         }
 
-        public Builder setSqlImageSku(@Nullable Either<String,SqlImageSku> sqlImageSku) {
+        public Builder sqlImageSku(@Nullable Either<String,SqlImageSku> sqlImageSku) {
             this.sqlImageSku = Input.ofNullable(sqlImageSku);
             return this;
         }
 
-        public Builder setSqlManagement(@Nullable Input<Either<String,SqlManagementMode>> sqlManagement) {
+        public Builder sqlManagement(@Nullable Input<Either<String,SqlManagementMode>> sqlManagement) {
             this.sqlManagement = sqlManagement;
             return this;
         }
 
-        public Builder setSqlManagement(@Nullable Either<String,SqlManagementMode> sqlManagement) {
+        public Builder sqlManagement(@Nullable Either<String,SqlManagementMode> sqlManagement) {
             this.sqlManagement = Input.ofNullable(sqlManagement);
             return this;
         }
 
-        public Builder setSqlServerLicenseType(@Nullable Input<Either<String,SqlServerLicenseType>> sqlServerLicenseType) {
+        public Builder sqlServerLicenseType(@Nullable Input<Either<String,SqlServerLicenseType>> sqlServerLicenseType) {
             this.sqlServerLicenseType = sqlServerLicenseType;
             return this;
         }
 
-        public Builder setSqlServerLicenseType(@Nullable Either<String,SqlServerLicenseType> sqlServerLicenseType) {
+        public Builder sqlServerLicenseType(@Nullable Either<String,SqlServerLicenseType> sqlServerLicenseType) {
             this.sqlServerLicenseType = Input.ofNullable(sqlServerLicenseType);
             return this;
         }
 
-        public Builder setSqlVirtualMachineGroupResourceId(@Nullable Input<String> sqlVirtualMachineGroupResourceId) {
+        public Builder sqlVirtualMachineGroupResourceId(@Nullable Input<String> sqlVirtualMachineGroupResourceId) {
             this.sqlVirtualMachineGroupResourceId = sqlVirtualMachineGroupResourceId;
             return this;
         }
 
-        public Builder setSqlVirtualMachineGroupResourceId(@Nullable String sqlVirtualMachineGroupResourceId) {
+        public Builder sqlVirtualMachineGroupResourceId(@Nullable String sqlVirtualMachineGroupResourceId) {
             this.sqlVirtualMachineGroupResourceId = Input.ofNullable(sqlVirtualMachineGroupResourceId);
             return this;
         }
 
-        public Builder setSqlVirtualMachineName(@Nullable Input<String> sqlVirtualMachineName) {
+        public Builder sqlVirtualMachineName(@Nullable Input<String> sqlVirtualMachineName) {
             this.sqlVirtualMachineName = sqlVirtualMachineName;
             return this;
         }
 
-        public Builder setSqlVirtualMachineName(@Nullable String sqlVirtualMachineName) {
+        public Builder sqlVirtualMachineName(@Nullable String sqlVirtualMachineName) {
             this.sqlVirtualMachineName = Input.ofNullable(sqlVirtualMachineName);
             return this;
         }
 
-        public Builder setStorageConfigurationSettings(@Nullable Input<StorageConfigurationSettingsArgs> storageConfigurationSettings) {
+        public Builder storageConfigurationSettings(@Nullable Input<StorageConfigurationSettingsArgs> storageConfigurationSettings) {
             this.storageConfigurationSettings = storageConfigurationSettings;
             return this;
         }
 
-        public Builder setStorageConfigurationSettings(@Nullable StorageConfigurationSettingsArgs storageConfigurationSettings) {
+        public Builder storageConfigurationSettings(@Nullable StorageConfigurationSettingsArgs storageConfigurationSettings) {
             this.storageConfigurationSettings = Input.ofNullable(storageConfigurationSettings);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setVirtualMachineResourceId(@Nullable Input<String> virtualMachineResourceId) {
+        public Builder virtualMachineResourceId(@Nullable Input<String> virtualMachineResourceId) {
             this.virtualMachineResourceId = virtualMachineResourceId;
             return this;
         }
 
-        public Builder setVirtualMachineResourceId(@Nullable String virtualMachineResourceId) {
+        public Builder virtualMachineResourceId(@Nullable String virtualMachineResourceId) {
             this.virtualMachineResourceId = Input.ofNullable(virtualMachineResourceId);
             return this;
         }
 
-        public Builder setWsfcDomainCredentials(@Nullable Input<WsfcDomainCredentialsArgs> wsfcDomainCredentials) {
+        public Builder wsfcDomainCredentials(@Nullable Input<WsfcDomainCredentialsArgs> wsfcDomainCredentials) {
             this.wsfcDomainCredentials = wsfcDomainCredentials;
             return this;
         }
 
-        public Builder setWsfcDomainCredentials(@Nullable WsfcDomainCredentialsArgs wsfcDomainCredentials) {
+        public Builder wsfcDomainCredentials(@Nullable WsfcDomainCredentialsArgs wsfcDomainCredentials) {
             this.wsfcDomainCredentials = Input.ofNullable(wsfcDomainCredentials);
             return this;
         }

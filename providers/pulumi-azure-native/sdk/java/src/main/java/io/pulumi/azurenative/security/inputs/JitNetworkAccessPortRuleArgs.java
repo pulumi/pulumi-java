@@ -114,52 +114,52 @@ public final class JitNetworkAccessPortRuleArgs extends io.pulumi.resources.Reso
     	      this.protocol = defaults.protocol;
         }
 
-        public Builder setAllowedSourceAddressPrefix(@Nullable Input<String> allowedSourceAddressPrefix) {
+        public Builder allowedSourceAddressPrefix(@Nullable Input<String> allowedSourceAddressPrefix) {
             this.allowedSourceAddressPrefix = allowedSourceAddressPrefix;
             return this;
         }
 
-        public Builder setAllowedSourceAddressPrefix(@Nullable String allowedSourceAddressPrefix) {
+        public Builder allowedSourceAddressPrefix(@Nullable String allowedSourceAddressPrefix) {
             this.allowedSourceAddressPrefix = Input.ofNullable(allowedSourceAddressPrefix);
             return this;
         }
 
-        public Builder setAllowedSourceAddressPrefixes(@Nullable Input<List<String>> allowedSourceAddressPrefixes) {
+        public Builder allowedSourceAddressPrefixes(@Nullable Input<List<String>> allowedSourceAddressPrefixes) {
             this.allowedSourceAddressPrefixes = allowedSourceAddressPrefixes;
             return this;
         }
 
-        public Builder setAllowedSourceAddressPrefixes(@Nullable List<String> allowedSourceAddressPrefixes) {
+        public Builder allowedSourceAddressPrefixes(@Nullable List<String> allowedSourceAddressPrefixes) {
             this.allowedSourceAddressPrefixes = Input.ofNullable(allowedSourceAddressPrefixes);
             return this;
         }
 
-        public Builder setMaxRequestAccessDuration(Input<String> maxRequestAccessDuration) {
+        public Builder maxRequestAccessDuration(Input<String> maxRequestAccessDuration) {
             this.maxRequestAccessDuration = Objects.requireNonNull(maxRequestAccessDuration);
             return this;
         }
 
-        public Builder setMaxRequestAccessDuration(String maxRequestAccessDuration) {
+        public Builder maxRequestAccessDuration(String maxRequestAccessDuration) {
             this.maxRequestAccessDuration = Input.of(Objects.requireNonNull(maxRequestAccessDuration));
             return this;
         }
 
-        public Builder setNumber(Input<Integer> number) {
+        public Builder number(Input<Integer> number) {
             this.number = Objects.requireNonNull(number);
             return this;
         }
 
-        public Builder setNumber(Integer number) {
+        public Builder number(Integer number) {
             this.number = Input.of(Objects.requireNonNull(number));
             return this;
         }
 
-        public Builder setProtocol(Input<Either<String,Protocol>> protocol) {
+        public Builder protocol(Input<Either<String,Protocol>> protocol) {
             this.protocol = Objects.requireNonNull(protocol);
             return this;
         }
 
-        public Builder setProtocol(Either<String,Protocol> protocol) {
+        public Builder protocol(Either<String,Protocol> protocol) {
             this.protocol = Input.of(Objects.requireNonNull(protocol));
             return this;
         }

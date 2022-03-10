@@ -207,102 +207,102 @@ public final class ApplicationGatewayRedirectConfigurationArgs extends io.pulumi
     	      this.urlPathMaps = defaults.urlPathMaps;
         }
 
-        public Builder setId(@Nullable Input<String> id) {
+        public Builder id(@Nullable Input<String> id) {
             this.id = id;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = Input.ofNullable(id);
             return this;
         }
 
-        public Builder setIncludePath(@Nullable Input<Boolean> includePath) {
+        public Builder includePath(@Nullable Input<Boolean> includePath) {
             this.includePath = includePath;
             return this;
         }
 
-        public Builder setIncludePath(@Nullable Boolean includePath) {
+        public Builder includePath(@Nullable Boolean includePath) {
             this.includePath = Input.ofNullable(includePath);
             return this;
         }
 
-        public Builder setIncludeQueryString(@Nullable Input<Boolean> includeQueryString) {
+        public Builder includeQueryString(@Nullable Input<Boolean> includeQueryString) {
             this.includeQueryString = includeQueryString;
             return this;
         }
 
-        public Builder setIncludeQueryString(@Nullable Boolean includeQueryString) {
+        public Builder includeQueryString(@Nullable Boolean includeQueryString) {
             this.includeQueryString = Input.ofNullable(includeQueryString);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setPathRules(@Nullable Input<List<SubResourceArgs>> pathRules) {
+        public Builder pathRules(@Nullable Input<List<SubResourceArgs>> pathRules) {
             this.pathRules = pathRules;
             return this;
         }
 
-        public Builder setPathRules(@Nullable List<SubResourceArgs> pathRules) {
+        public Builder pathRules(@Nullable List<SubResourceArgs> pathRules) {
             this.pathRules = Input.ofNullable(pathRules);
             return this;
         }
 
-        public Builder setRedirectType(@Nullable Input<Either<String,ApplicationGatewayRedirectType>> redirectType) {
+        public Builder redirectType(@Nullable Input<Either<String,ApplicationGatewayRedirectType>> redirectType) {
             this.redirectType = redirectType;
             return this;
         }
 
-        public Builder setRedirectType(@Nullable Either<String,ApplicationGatewayRedirectType> redirectType) {
+        public Builder redirectType(@Nullable Either<String,ApplicationGatewayRedirectType> redirectType) {
             this.redirectType = Input.ofNullable(redirectType);
             return this;
         }
 
-        public Builder setRequestRoutingRules(@Nullable Input<List<SubResourceArgs>> requestRoutingRules) {
+        public Builder requestRoutingRules(@Nullable Input<List<SubResourceArgs>> requestRoutingRules) {
             this.requestRoutingRules = requestRoutingRules;
             return this;
         }
 
-        public Builder setRequestRoutingRules(@Nullable List<SubResourceArgs> requestRoutingRules) {
+        public Builder requestRoutingRules(@Nullable List<SubResourceArgs> requestRoutingRules) {
             this.requestRoutingRules = Input.ofNullable(requestRoutingRules);
             return this;
         }
 
-        public Builder setTargetListener(@Nullable Input<SubResourceArgs> targetListener) {
+        public Builder targetListener(@Nullable Input<SubResourceArgs> targetListener) {
             this.targetListener = targetListener;
             return this;
         }
 
-        public Builder setTargetListener(@Nullable SubResourceArgs targetListener) {
+        public Builder targetListener(@Nullable SubResourceArgs targetListener) {
             this.targetListener = Input.ofNullable(targetListener);
             return this;
         }
 
-        public Builder setTargetUrl(@Nullable Input<String> targetUrl) {
+        public Builder targetUrl(@Nullable Input<String> targetUrl) {
             this.targetUrl = targetUrl;
             return this;
         }
 
-        public Builder setTargetUrl(@Nullable String targetUrl) {
+        public Builder targetUrl(@Nullable String targetUrl) {
             this.targetUrl = Input.ofNullable(targetUrl);
             return this;
         }
 
-        public Builder setUrlPathMaps(@Nullable Input<List<SubResourceArgs>> urlPathMaps) {
+        public Builder urlPathMaps(@Nullable Input<List<SubResourceArgs>> urlPathMaps) {
             this.urlPathMaps = urlPathMaps;
             return this;
         }
 
-        public Builder setUrlPathMaps(@Nullable List<SubResourceArgs> urlPathMaps) {
+        public Builder urlPathMaps(@Nullable List<SubResourceArgs> urlPathMaps) {
             this.urlPathMaps = Input.ofNullable(urlPathMaps);
             return this;
         }

@@ -48,7 +48,7 @@ public final class ServerInfoResponse {
     	      this.serverId = defaults.serverId;
         }
 
-        public Builder setServerId(String serverId) {
+        public Builder serverId(String serverId) {
             this.serverId = Objects.requireNonNull(serverId);
             return this;
         }

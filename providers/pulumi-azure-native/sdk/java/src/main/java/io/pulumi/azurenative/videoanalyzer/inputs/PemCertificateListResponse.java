@@ -74,12 +74,12 @@ public final class PemCertificateListResponse extends io.pulumi.resources.Invoke
     	      this.type = defaults.type;
         }
 
-        public Builder setCertificates(List<String> certificates) {
+        public Builder certificates(List<String> certificates) {
             this.certificates = Objects.requireNonNull(certificates);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

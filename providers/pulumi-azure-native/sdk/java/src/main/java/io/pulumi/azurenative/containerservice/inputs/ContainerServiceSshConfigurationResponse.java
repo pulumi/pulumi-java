@@ -56,7 +56,7 @@ public final class ContainerServiceSshConfigurationResponse extends io.pulumi.re
     	      this.publicKeys = defaults.publicKeys;
         }
 
-        public Builder setPublicKeys(List<ContainerServiceSshPublicKeyResponse> publicKeys) {
+        public Builder publicKeys(List<ContainerServiceSshPublicKeyResponse> publicKeys) {
             this.publicKeys = Objects.requireNonNull(publicKeys);
             return this;
         }

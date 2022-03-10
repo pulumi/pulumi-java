@@ -269,142 +269,142 @@ public final class WebTestArgs extends io.pulumi.resources.ResourceArgs {
     	      this.webTestName = defaults.webTestName;
         }
 
-        public Builder setConfiguration(@Nullable Input<WebTestPropertiesConfigurationArgs> configuration) {
+        public Builder configuration(@Nullable Input<WebTestPropertiesConfigurationArgs> configuration) {
             this.configuration = configuration;
             return this;
         }
 
-        public Builder setConfiguration(@Nullable WebTestPropertiesConfigurationArgs configuration) {
+        public Builder configuration(@Nullable WebTestPropertiesConfigurationArgs configuration) {
             this.configuration = Input.ofNullable(configuration);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setEnabled(@Nullable Input<Boolean> enabled) {
+        public Builder enabled(@Nullable Input<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
 
-        public Builder setEnabled(@Nullable Boolean enabled) {
+        public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Input.ofNullable(enabled);
             return this;
         }
 
-        public Builder setFrequency(@Nullable Input<Integer> frequency) {
+        public Builder frequency(@Nullable Input<Integer> frequency) {
             this.frequency = frequency;
             return this;
         }
 
-        public Builder setFrequency(@Nullable Integer frequency) {
+        public Builder frequency(@Nullable Integer frequency) {
             this.frequency = Input.ofNullable(frequency);
             return this;
         }
 
-        public Builder setKind(@Nullable Input<WebTestKind> kind) {
+        public Builder kind(@Nullable Input<WebTestKind> kind) {
             this.kind = kind;
             return this;
         }
 
-        public Builder setKind(@Nullable WebTestKind kind) {
+        public Builder kind(@Nullable WebTestKind kind) {
             this.kind = Input.ofNullable(kind);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setLocations(Input<List<WebTestGeolocationArgs>> locations) {
+        public Builder locations(Input<List<WebTestGeolocationArgs>> locations) {
             this.locations = Objects.requireNonNull(locations);
             return this;
         }
 
-        public Builder setLocations(List<WebTestGeolocationArgs> locations) {
+        public Builder locations(List<WebTestGeolocationArgs> locations) {
             this.locations = Input.of(Objects.requireNonNull(locations));
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setRetryEnabled(@Nullable Input<Boolean> retryEnabled) {
+        public Builder retryEnabled(@Nullable Input<Boolean> retryEnabled) {
             this.retryEnabled = retryEnabled;
             return this;
         }
 
-        public Builder setRetryEnabled(@Nullable Boolean retryEnabled) {
+        public Builder retryEnabled(@Nullable Boolean retryEnabled) {
             this.retryEnabled = Input.ofNullable(retryEnabled);
             return this;
         }
 
-        public Builder setSyntheticMonitorId(Input<String> syntheticMonitorId) {
+        public Builder syntheticMonitorId(Input<String> syntheticMonitorId) {
             this.syntheticMonitorId = Objects.requireNonNull(syntheticMonitorId);
             return this;
         }
 
-        public Builder setSyntheticMonitorId(String syntheticMonitorId) {
+        public Builder syntheticMonitorId(String syntheticMonitorId) {
             this.syntheticMonitorId = Input.of(Objects.requireNonNull(syntheticMonitorId));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTimeout(@Nullable Input<Integer> timeout) {
+        public Builder timeout(@Nullable Input<Integer> timeout) {
             this.timeout = timeout;
             return this;
         }
 
-        public Builder setTimeout(@Nullable Integer timeout) {
+        public Builder timeout(@Nullable Integer timeout) {
             this.timeout = Input.ofNullable(timeout);
             return this;
         }
 
-        public Builder setWebTestKind(Input<WebTestKind> webTestKind) {
+        public Builder webTestKind(Input<WebTestKind> webTestKind) {
             this.webTestKind = Objects.requireNonNull(webTestKind);
             return this;
         }
 
-        public Builder setWebTestKind(WebTestKind webTestKind) {
+        public Builder webTestKind(WebTestKind webTestKind) {
             this.webTestKind = Input.of(Objects.requireNonNull(webTestKind));
             return this;
         }
 
-        public Builder setWebTestName(@Nullable Input<String> webTestName) {
+        public Builder webTestName(@Nullable Input<String> webTestName) {
             this.webTestName = webTestName;
             return this;
         }
 
-        public Builder setWebTestName(@Nullable String webTestName) {
+        public Builder webTestName(@Nullable String webTestName) {
             this.webTestName = Input.ofNullable(webTestName);
             return this;
         }

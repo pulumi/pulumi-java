@@ -116,27 +116,27 @@ public final class RuntimeScriptActionResponse {
     	      this.uri = defaults.uri;
         }
 
-        public Builder setApplicationName(String applicationName) {
+        public Builder applicationName(String applicationName) {
             this.applicationName = Objects.requireNonNull(applicationName);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setParameters(@Nullable String parameters) {
+        public Builder parameters(@Nullable String parameters) {
             this.parameters = parameters;
             return this;
         }
 
-        public Builder setRoles(List<String> roles) {
+        public Builder roles(List<String> roles) {
             this.roles = Objects.requireNonNull(roles);
             return this;
         }
 
-        public Builder setUri(String uri) {
+        public Builder uri(String uri) {
             this.uri = Objects.requireNonNull(uri);
             return this;
         }

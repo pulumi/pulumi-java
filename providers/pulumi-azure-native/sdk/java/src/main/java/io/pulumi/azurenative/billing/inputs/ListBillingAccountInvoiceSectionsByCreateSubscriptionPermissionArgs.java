@@ -51,7 +51,7 @@ public final class ListBillingAccountInvoiceSectionsByCreateSubscriptionPermissi
     	      this.billingAccountName = defaults.billingAccountName;
         }
 
-        public Builder setBillingAccountName(String billingAccountName) {
+        public Builder billingAccountName(String billingAccountName) {
             this.billingAccountName = Objects.requireNonNull(billingAccountName);
             return this;
         }

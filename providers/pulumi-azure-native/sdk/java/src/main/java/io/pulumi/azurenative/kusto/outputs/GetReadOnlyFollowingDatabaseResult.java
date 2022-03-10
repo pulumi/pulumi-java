@@ -230,62 +230,62 @@ public final class GetReadOnlyFollowingDatabaseResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setAttachedDatabaseConfigurationName(String attachedDatabaseConfigurationName) {
+        public Builder attachedDatabaseConfigurationName(String attachedDatabaseConfigurationName) {
             this.attachedDatabaseConfigurationName = Objects.requireNonNull(attachedDatabaseConfigurationName);
             return this;
         }
 
-        public Builder setHotCachePeriod(@Nullable String hotCachePeriod) {
+        public Builder hotCachePeriod(@Nullable String hotCachePeriod) {
             this.hotCachePeriod = hotCachePeriod;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setLeaderClusterResourceId(String leaderClusterResourceId) {
+        public Builder leaderClusterResourceId(String leaderClusterResourceId) {
             this.leaderClusterResourceId = Objects.requireNonNull(leaderClusterResourceId);
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPrincipalsModificationKind(String principalsModificationKind) {
+        public Builder principalsModificationKind(String principalsModificationKind) {
             this.principalsModificationKind = Objects.requireNonNull(principalsModificationKind);
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setSoftDeletePeriod(String softDeletePeriod) {
+        public Builder softDeletePeriod(String softDeletePeriod) {
             this.softDeletePeriod = Objects.requireNonNull(softDeletePeriod);
             return this;
         }
 
-        public Builder setStatistics(DatabaseStatisticsResponse statistics) {
+        public Builder statistics(DatabaseStatisticsResponse statistics) {
             this.statistics = Objects.requireNonNull(statistics);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

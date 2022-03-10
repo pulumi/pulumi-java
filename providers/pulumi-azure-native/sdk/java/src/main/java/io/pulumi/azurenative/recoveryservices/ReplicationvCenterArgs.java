@@ -119,52 +119,52 @@ public final class ReplicationvCenterArgs extends io.pulumi.resources.ResourceAr
     	      this.vCenterName = defaults.vCenterName;
         }
 
-        public Builder setFabricName(Input<String> fabricName) {
+        public Builder fabricName(Input<String> fabricName) {
             this.fabricName = Objects.requireNonNull(fabricName);
             return this;
         }
 
-        public Builder setFabricName(String fabricName) {
+        public Builder fabricName(String fabricName) {
             this.fabricName = Input.of(Objects.requireNonNull(fabricName));
             return this;
         }
 
-        public Builder setProperties(@Nullable Input<AddVCenterRequestPropertiesArgs> properties) {
+        public Builder properties(@Nullable Input<AddVCenterRequestPropertiesArgs> properties) {
             this.properties = properties;
             return this;
         }
 
-        public Builder setProperties(@Nullable AddVCenterRequestPropertiesArgs properties) {
+        public Builder properties(@Nullable AddVCenterRequestPropertiesArgs properties) {
             this.properties = Input.ofNullable(properties);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setResourceName(Input<String> resourceName) {
+        public Builder resourceName(Input<String> resourceName) {
             this.resourceName = Objects.requireNonNull(resourceName);
             return this;
         }
 
-        public Builder setResourceName(String resourceName) {
+        public Builder resourceName(String resourceName) {
             this.resourceName = Input.of(Objects.requireNonNull(resourceName));
             return this;
         }
 
-        public Builder setVCenterName(@Nullable Input<String> vCenterName) {
+        public Builder vCenterName(@Nullable Input<String> vCenterName) {
             this.vCenterName = vCenterName;
             return this;
         }
 
-        public Builder setVCenterName(@Nullable String vCenterName) {
+        public Builder vCenterName(@Nullable String vCenterName) {
             this.vCenterName = Input.ofNullable(vCenterName);
             return this;
         }

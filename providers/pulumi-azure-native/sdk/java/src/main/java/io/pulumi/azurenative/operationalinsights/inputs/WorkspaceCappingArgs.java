@@ -57,12 +57,12 @@ public final class WorkspaceCappingArgs extends io.pulumi.resources.ResourceArgs
     	      this.dailyQuotaGb = defaults.dailyQuotaGb;
         }
 
-        public Builder setDailyQuotaGb(@Nullable Input<Double> dailyQuotaGb) {
+        public Builder dailyQuotaGb(@Nullable Input<Double> dailyQuotaGb) {
             this.dailyQuotaGb = dailyQuotaGb;
             return this;
         }
 
-        public Builder setDailyQuotaGb(@Nullable Double dailyQuotaGb) {
+        public Builder dailyQuotaGb(@Nullable Double dailyQuotaGb) {
             this.dailyQuotaGb = Input.ofNullable(dailyQuotaGb);
             return this;
         }

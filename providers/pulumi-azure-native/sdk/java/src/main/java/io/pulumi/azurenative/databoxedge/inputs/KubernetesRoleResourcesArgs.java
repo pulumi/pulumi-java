@@ -75,22 +75,22 @@ public final class KubernetesRoleResourcesArgs extends io.pulumi.resources.Resou
     	      this.storage = defaults.storage;
         }
 
-        public Builder setCompute(Input<KubernetesRoleComputeArgs> compute) {
+        public Builder compute(Input<KubernetesRoleComputeArgs> compute) {
             this.compute = Objects.requireNonNull(compute);
             return this;
         }
 
-        public Builder setCompute(KubernetesRoleComputeArgs compute) {
+        public Builder compute(KubernetesRoleComputeArgs compute) {
             this.compute = Input.of(Objects.requireNonNull(compute));
             return this;
         }
 
-        public Builder setStorage(@Nullable Input<KubernetesRoleStorageArgs> storage) {
+        public Builder storage(@Nullable Input<KubernetesRoleStorageArgs> storage) {
             this.storage = storage;
             return this;
         }
 
-        public Builder setStorage(@Nullable KubernetesRoleStorageArgs storage) {
+        public Builder storage(@Nullable KubernetesRoleStorageArgs storage) {
             this.storage = Input.ofNullable(storage);
             return this;
         }

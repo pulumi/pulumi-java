@@ -76,22 +76,22 @@ public final class MigrationRequestPropertiesArgs extends io.pulumi.resources.Re
     	      this.operation = defaults.operation;
         }
 
-        public Builder setMigrationPath(@Nullable Input<String> migrationPath) {
+        public Builder migrationPath(@Nullable Input<String> migrationPath) {
             this.migrationPath = migrationPath;
             return this;
         }
 
-        public Builder setMigrationPath(@Nullable String migrationPath) {
+        public Builder migrationPath(@Nullable String migrationPath) {
             this.migrationPath = Input.ofNullable(migrationPath);
             return this;
         }
 
-        public Builder setOperation(@Nullable Input<Either<String,Operation>> operation) {
+        public Builder operation(@Nullable Input<Either<String,Operation>> operation) {
             this.operation = operation;
             return this;
         }
 
-        public Builder setOperation(@Nullable Either<String,Operation> operation) {
+        public Builder operation(@Nullable Either<String,Operation> operation) {
             this.operation = Input.ofNullable(operation);
             return this;
         }

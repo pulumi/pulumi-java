@@ -120,52 +120,52 @@ public final class RestorePointArgs extends io.pulumi.resources.ResourceArgs {
     	      this.timeCreated = defaults.timeCreated;
         }
 
-        public Builder setExcludeDisks(@Nullable Input<List<ApiEntityReferenceArgs>> excludeDisks) {
+        public Builder excludeDisks(@Nullable Input<List<ApiEntityReferenceArgs>> excludeDisks) {
             this.excludeDisks = excludeDisks;
             return this;
         }
 
-        public Builder setExcludeDisks(@Nullable List<ApiEntityReferenceArgs> excludeDisks) {
+        public Builder excludeDisks(@Nullable List<ApiEntityReferenceArgs> excludeDisks) {
             this.excludeDisks = Input.ofNullable(excludeDisks);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setRestorePointCollectionName(Input<String> restorePointCollectionName) {
+        public Builder restorePointCollectionName(Input<String> restorePointCollectionName) {
             this.restorePointCollectionName = Objects.requireNonNull(restorePointCollectionName);
             return this;
         }
 
-        public Builder setRestorePointCollectionName(String restorePointCollectionName) {
+        public Builder restorePointCollectionName(String restorePointCollectionName) {
             this.restorePointCollectionName = Input.of(Objects.requireNonNull(restorePointCollectionName));
             return this;
         }
 
-        public Builder setRestorePointName(@Nullable Input<String> restorePointName) {
+        public Builder restorePointName(@Nullable Input<String> restorePointName) {
             this.restorePointName = restorePointName;
             return this;
         }
 
-        public Builder setRestorePointName(@Nullable String restorePointName) {
+        public Builder restorePointName(@Nullable String restorePointName) {
             this.restorePointName = Input.ofNullable(restorePointName);
             return this;
         }
 
-        public Builder setTimeCreated(@Nullable Input<String> timeCreated) {
+        public Builder timeCreated(@Nullable Input<String> timeCreated) {
             this.timeCreated = timeCreated;
             return this;
         }
 
-        public Builder setTimeCreated(@Nullable String timeCreated) {
+        public Builder timeCreated(@Nullable String timeCreated) {
             this.timeCreated = Input.ofNullable(timeCreated);
             return this;
         }

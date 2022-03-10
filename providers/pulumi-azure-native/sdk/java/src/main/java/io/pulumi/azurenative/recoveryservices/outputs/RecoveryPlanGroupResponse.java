@@ -101,22 +101,22 @@ public final class RecoveryPlanGroupResponse {
     	      this.startGroupActions = defaults.startGroupActions;
         }
 
-        public Builder setEndGroupActions(@Nullable List<RecoveryPlanActionResponse> endGroupActions) {
+        public Builder endGroupActions(@Nullable List<RecoveryPlanActionResponse> endGroupActions) {
             this.endGroupActions = endGroupActions;
             return this;
         }
 
-        public Builder setGroupType(String groupType) {
+        public Builder groupType(String groupType) {
             this.groupType = Objects.requireNonNull(groupType);
             return this;
         }
 
-        public Builder setReplicationProtectedItems(@Nullable List<RecoveryPlanProtectedItemResponse> replicationProtectedItems) {
+        public Builder replicationProtectedItems(@Nullable List<RecoveryPlanProtectedItemResponse> replicationProtectedItems) {
             this.replicationProtectedItems = replicationProtectedItems;
             return this;
         }
 
-        public Builder setStartGroupActions(@Nullable List<RecoveryPlanActionResponse> startGroupActions) {
+        public Builder startGroupActions(@Nullable List<RecoveryPlanActionResponse> startGroupActions) {
             this.startGroupActions = startGroupActions;
             return this;
         }

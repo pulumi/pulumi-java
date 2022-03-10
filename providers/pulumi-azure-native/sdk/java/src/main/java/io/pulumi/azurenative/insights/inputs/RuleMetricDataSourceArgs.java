@@ -139,62 +139,62 @@ public final class RuleMetricDataSourceArgs extends io.pulumi.resources.Resource
     	      this.resourceUri = defaults.resourceUri;
         }
 
-        public Builder setLegacyResourceId(@Nullable Input<String> legacyResourceId) {
+        public Builder legacyResourceId(@Nullable Input<String> legacyResourceId) {
             this.legacyResourceId = legacyResourceId;
             return this;
         }
 
-        public Builder setLegacyResourceId(@Nullable String legacyResourceId) {
+        public Builder legacyResourceId(@Nullable String legacyResourceId) {
             this.legacyResourceId = Input.ofNullable(legacyResourceId);
             return this;
         }
 
-        public Builder setMetricName(@Nullable Input<String> metricName) {
+        public Builder metricName(@Nullable Input<String> metricName) {
             this.metricName = metricName;
             return this;
         }
 
-        public Builder setMetricName(@Nullable String metricName) {
+        public Builder metricName(@Nullable String metricName) {
             this.metricName = Input.ofNullable(metricName);
             return this;
         }
 
-        public Builder setMetricNamespace(@Nullable Input<String> metricNamespace) {
+        public Builder metricNamespace(@Nullable Input<String> metricNamespace) {
             this.metricNamespace = metricNamespace;
             return this;
         }
 
-        public Builder setMetricNamespace(@Nullable String metricNamespace) {
+        public Builder metricNamespace(@Nullable String metricNamespace) {
             this.metricNamespace = Input.ofNullable(metricNamespace);
             return this;
         }
 
-        public Builder setOdataType(Input<String> odataType) {
+        public Builder odataType(Input<String> odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
 
-        public Builder setOdataType(String odataType) {
+        public Builder odataType(String odataType) {
             this.odataType = Input.of(Objects.requireNonNull(odataType));
             return this;
         }
 
-        public Builder setResourceLocation(@Nullable Input<String> resourceLocation) {
+        public Builder resourceLocation(@Nullable Input<String> resourceLocation) {
             this.resourceLocation = resourceLocation;
             return this;
         }
 
-        public Builder setResourceLocation(@Nullable String resourceLocation) {
+        public Builder resourceLocation(@Nullable String resourceLocation) {
             this.resourceLocation = Input.ofNullable(resourceLocation);
             return this;
         }
 
-        public Builder setResourceUri(@Nullable Input<String> resourceUri) {
+        public Builder resourceUri(@Nullable Input<String> resourceUri) {
             this.resourceUri = resourceUri;
             return this;
         }
 
-        public Builder setResourceUri(@Nullable String resourceUri) {
+        public Builder resourceUri(@Nullable String resourceUri) {
             this.resourceUri = Input.ofNullable(resourceUri);
             return this;
         }

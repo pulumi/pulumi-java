@@ -67,12 +67,12 @@ public final class BlobLocationResponse {
     	      this.uri = defaults.uri;
         }
 
-        public Builder setCredentials(@Nullable String credentials) {
+        public Builder credentials(@Nullable String credentials) {
             this.credentials = credentials;
             return this;
         }
 
-        public Builder setUri(String uri) {
+        public Builder uri(String uri) {
             this.uri = Objects.requireNonNull(uri);
             return this;
         }

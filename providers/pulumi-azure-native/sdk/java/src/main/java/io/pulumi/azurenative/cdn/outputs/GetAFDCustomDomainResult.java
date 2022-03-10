@@ -207,57 +207,57 @@ public final class GetAFDCustomDomainResult {
     	      this.validationProperties = defaults.validationProperties;
         }
 
-        public Builder setAzureDnsZone(@Nullable ResourceReferenceResponse azureDnsZone) {
+        public Builder azureDnsZone(@Nullable ResourceReferenceResponse azureDnsZone) {
             this.azureDnsZone = azureDnsZone;
             return this;
         }
 
-        public Builder setDeploymentStatus(String deploymentStatus) {
+        public Builder deploymentStatus(String deploymentStatus) {
             this.deploymentStatus = Objects.requireNonNull(deploymentStatus);
             return this;
         }
 
-        public Builder setDomainValidationState(String domainValidationState) {
+        public Builder domainValidationState(String domainValidationState) {
             this.domainValidationState = Objects.requireNonNull(domainValidationState);
             return this;
         }
 
-        public Builder setHostName(String hostName) {
+        public Builder hostName(String hostName) {
             this.hostName = Objects.requireNonNull(hostName);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setSystemData(SystemDataResponse systemData) {
+        public Builder systemData(SystemDataResponse systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
 
-        public Builder setTlsSettings(@Nullable AFDDomainHttpsParametersResponse tlsSettings) {
+        public Builder tlsSettings(@Nullable AFDDomainHttpsParametersResponse tlsSettings) {
             this.tlsSettings = tlsSettings;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setValidationProperties(DomainValidationPropertiesResponse validationProperties) {
+        public Builder validationProperties(DomainValidationPropertiesResponse validationProperties) {
             this.validationProperties = Objects.requireNonNull(validationProperties);
             return this;
         }

@@ -153,37 +153,37 @@ public final class JobActionResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setErrorAction(@Nullable JobErrorActionResponse errorAction) {
+        public Builder errorAction(@Nullable JobErrorActionResponse errorAction) {
             this.errorAction = errorAction;
             return this;
         }
 
-        public Builder setQueueMessage(@Nullable StorageQueueMessageResponse queueMessage) {
+        public Builder queueMessage(@Nullable StorageQueueMessageResponse queueMessage) {
             this.queueMessage = queueMessage;
             return this;
         }
 
-        public Builder setRequest(@Nullable HttpRequestResponse request) {
+        public Builder request(@Nullable HttpRequestResponse request) {
             this.request = request;
             return this;
         }
 
-        public Builder setRetryPolicy(@Nullable RetryPolicyResponse retryPolicy) {
+        public Builder retryPolicy(@Nullable RetryPolicyResponse retryPolicy) {
             this.retryPolicy = retryPolicy;
             return this;
         }
 
-        public Builder setServiceBusQueueMessage(@Nullable ServiceBusQueueMessageResponse serviceBusQueueMessage) {
+        public Builder serviceBusQueueMessage(@Nullable ServiceBusQueueMessageResponse serviceBusQueueMessage) {
             this.serviceBusQueueMessage = serviceBusQueueMessage;
             return this;
         }
 
-        public Builder setServiceBusTopicMessage(@Nullable ServiceBusTopicMessageResponse serviceBusTopicMessage) {
+        public Builder serviceBusTopicMessage(@Nullable ServiceBusTopicMessageResponse serviceBusTopicMessage) {
             this.serviceBusTopicMessage = serviceBusTopicMessage;
             return this;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = type;
             return this;
         }

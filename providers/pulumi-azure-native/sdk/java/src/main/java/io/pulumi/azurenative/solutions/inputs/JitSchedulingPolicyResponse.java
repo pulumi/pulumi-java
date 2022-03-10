@@ -84,17 +84,17 @@ public final class JitSchedulingPolicyResponse extends io.pulumi.resources.Invok
     	      this.type = defaults.type;
         }
 
-        public Builder setDuration(String duration) {
+        public Builder duration(String duration) {
             this.duration = Objects.requireNonNull(duration);
             return this;
         }
 
-        public Builder setStartTime(String startTime) {
+        public Builder startTime(String startTime) {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

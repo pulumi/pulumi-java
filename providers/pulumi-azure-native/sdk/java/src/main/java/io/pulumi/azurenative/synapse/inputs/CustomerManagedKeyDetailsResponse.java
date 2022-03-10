@@ -75,12 +75,12 @@ public final class CustomerManagedKeyDetailsResponse extends io.pulumi.resources
     	      this.status = defaults.status;
         }
 
-        public Builder setKey(@Nullable WorkspaceKeyDetailsResponse key) {
+        public Builder key(@Nullable WorkspaceKeyDetailsResponse key) {
             this.key = key;
             return this;
         }
 
-        public Builder setStatus(String status) {
+        public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }

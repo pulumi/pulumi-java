@@ -56,12 +56,12 @@ public final class DatabaseInfoArgs extends io.pulumi.resources.ResourceArgs {
     	      this.sourceDatabaseName = defaults.sourceDatabaseName;
         }
 
-        public Builder setSourceDatabaseName(Input<String> sourceDatabaseName) {
+        public Builder sourceDatabaseName(Input<String> sourceDatabaseName) {
             this.sourceDatabaseName = Objects.requireNonNull(sourceDatabaseName);
             return this;
         }
 
-        public Builder setSourceDatabaseName(String sourceDatabaseName) {
+        public Builder sourceDatabaseName(String sourceDatabaseName) {
             this.sourceDatabaseName = Input.of(Objects.requireNonNull(sourceDatabaseName));
             return this;
         }

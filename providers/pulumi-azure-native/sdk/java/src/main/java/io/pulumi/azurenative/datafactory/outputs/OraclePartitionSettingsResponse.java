@@ -100,22 +100,22 @@ public final class OraclePartitionSettingsResponse {
     	      this.partitionUpperBound = defaults.partitionUpperBound;
         }
 
-        public Builder setPartitionColumnName(@Nullable Object partitionColumnName) {
+        public Builder partitionColumnName(@Nullable Object partitionColumnName) {
             this.partitionColumnName = partitionColumnName;
             return this;
         }
 
-        public Builder setPartitionLowerBound(@Nullable Object partitionLowerBound) {
+        public Builder partitionLowerBound(@Nullable Object partitionLowerBound) {
             this.partitionLowerBound = partitionLowerBound;
             return this;
         }
 
-        public Builder setPartitionNames(@Nullable List<Object> partitionNames) {
+        public Builder partitionNames(@Nullable List<Object> partitionNames) {
             this.partitionNames = partitionNames;
             return this;
         }
 
-        public Builder setPartitionUpperBound(@Nullable Object partitionUpperBound) {
+        public Builder partitionUpperBound(@Nullable Object partitionUpperBound) {
             this.partitionUpperBound = partitionUpperBound;
             return this;
         }

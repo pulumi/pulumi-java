@@ -72,12 +72,12 @@ public final class AttributesResponse extends io.pulumi.resources.InvokeArgs {
     	      this.prodModeWriteProtect = defaults.prodModeWriteProtect;
         }
 
-        public Builder setAuthentication(Boolean authentication) {
+        public Builder authentication(Boolean authentication) {
             this.authentication = Objects.requireNonNull(authentication);
             return this;
         }
 
-        public Builder setProdModeWriteProtect(Boolean prodModeWriteProtect) {
+        public Builder prodModeWriteProtect(Boolean prodModeWriteProtect) {
             this.prodModeWriteProtect = Objects.requireNonNull(prodModeWriteProtect);
             return this;
         }

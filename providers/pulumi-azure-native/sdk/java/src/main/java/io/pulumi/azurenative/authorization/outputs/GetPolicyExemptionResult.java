@@ -214,57 +214,57 @@ public final class GetPolicyExemptionResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDisplayName(@Nullable String displayName) {
+        public Builder displayName(@Nullable String displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setExemptionCategory(String exemptionCategory) {
+        public Builder exemptionCategory(String exemptionCategory) {
             this.exemptionCategory = Objects.requireNonNull(exemptionCategory);
             return this;
         }
 
-        public Builder setExpiresOn(@Nullable String expiresOn) {
+        public Builder expiresOn(@Nullable String expiresOn) {
             this.expiresOn = expiresOn;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setMetadata(@Nullable Object metadata) {
+        public Builder metadata(@Nullable Object metadata) {
             this.metadata = metadata;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPolicyAssignmentId(String policyAssignmentId) {
+        public Builder policyAssignmentId(String policyAssignmentId) {
             this.policyAssignmentId = Objects.requireNonNull(policyAssignmentId);
             return this;
         }
 
-        public Builder setPolicyDefinitionReferenceIds(@Nullable List<String> policyDefinitionReferenceIds) {
+        public Builder policyDefinitionReferenceIds(@Nullable List<String> policyDefinitionReferenceIds) {
             this.policyDefinitionReferenceIds = policyDefinitionReferenceIds;
             return this;
         }
 
-        public Builder setSystemData(SystemDataResponse systemData) {
+        public Builder systemData(SystemDataResponse systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

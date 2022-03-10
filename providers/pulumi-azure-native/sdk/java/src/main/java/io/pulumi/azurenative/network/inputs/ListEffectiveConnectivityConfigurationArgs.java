@@ -86,17 +86,17 @@ public final class ListEffectiveConnectivityConfigurationArgs extends io.pulumi.
     	      this.virtualNetworkName = defaults.virtualNetworkName;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setSkipToken(@Nullable String skipToken) {
+        public Builder skipToken(@Nullable String skipToken) {
             this.skipToken = skipToken;
             return this;
         }
 
-        public Builder setVirtualNetworkName(String virtualNetworkName) {
+        public Builder virtualNetworkName(String virtualNetworkName) {
             this.virtualNetworkName = Objects.requireNonNull(virtualNetworkName);
             return this;
         }

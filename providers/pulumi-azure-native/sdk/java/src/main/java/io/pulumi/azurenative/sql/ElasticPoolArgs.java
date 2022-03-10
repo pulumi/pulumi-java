@@ -223,112 +223,112 @@ public final class ElasticPoolArgs extends io.pulumi.resources.ResourceArgs {
     	      this.zoneRedundant = defaults.zoneRedundant;
         }
 
-        public Builder setElasticPoolName(@Nullable Input<String> elasticPoolName) {
+        public Builder elasticPoolName(@Nullable Input<String> elasticPoolName) {
             this.elasticPoolName = elasticPoolName;
             return this;
         }
 
-        public Builder setElasticPoolName(@Nullable String elasticPoolName) {
+        public Builder elasticPoolName(@Nullable String elasticPoolName) {
             this.elasticPoolName = Input.ofNullable(elasticPoolName);
             return this;
         }
 
-        public Builder setLicenseType(@Nullable Input<Either<String,ElasticPoolLicenseType>> licenseType) {
+        public Builder licenseType(@Nullable Input<Either<String,ElasticPoolLicenseType>> licenseType) {
             this.licenseType = licenseType;
             return this;
         }
 
-        public Builder setLicenseType(@Nullable Either<String,ElasticPoolLicenseType> licenseType) {
+        public Builder licenseType(@Nullable Either<String,ElasticPoolLicenseType> licenseType) {
             this.licenseType = Input.ofNullable(licenseType);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setMaintenanceConfigurationId(@Nullable Input<String> maintenanceConfigurationId) {
+        public Builder maintenanceConfigurationId(@Nullable Input<String> maintenanceConfigurationId) {
             this.maintenanceConfigurationId = maintenanceConfigurationId;
             return this;
         }
 
-        public Builder setMaintenanceConfigurationId(@Nullable String maintenanceConfigurationId) {
+        public Builder maintenanceConfigurationId(@Nullable String maintenanceConfigurationId) {
             this.maintenanceConfigurationId = Input.ofNullable(maintenanceConfigurationId);
             return this;
         }
 
-        public Builder setMaxSizeBytes(@Nullable Input<Double> maxSizeBytes) {
+        public Builder maxSizeBytes(@Nullable Input<Double> maxSizeBytes) {
             this.maxSizeBytes = maxSizeBytes;
             return this;
         }
 
-        public Builder setMaxSizeBytes(@Nullable Double maxSizeBytes) {
+        public Builder maxSizeBytes(@Nullable Double maxSizeBytes) {
             this.maxSizeBytes = Input.ofNullable(maxSizeBytes);
             return this;
         }
 
-        public Builder setPerDatabaseSettings(@Nullable Input<ElasticPoolPerDatabaseSettingsArgs> perDatabaseSettings) {
+        public Builder perDatabaseSettings(@Nullable Input<ElasticPoolPerDatabaseSettingsArgs> perDatabaseSettings) {
             this.perDatabaseSettings = perDatabaseSettings;
             return this;
         }
 
-        public Builder setPerDatabaseSettings(@Nullable ElasticPoolPerDatabaseSettingsArgs perDatabaseSettings) {
+        public Builder perDatabaseSettings(@Nullable ElasticPoolPerDatabaseSettingsArgs perDatabaseSettings) {
             this.perDatabaseSettings = Input.ofNullable(perDatabaseSettings);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setServerName(Input<String> serverName) {
+        public Builder serverName(Input<String> serverName) {
             this.serverName = Objects.requireNonNull(serverName);
             return this;
         }
 
-        public Builder setServerName(String serverName) {
+        public Builder serverName(String serverName) {
             this.serverName = Input.of(Objects.requireNonNull(serverName));
             return this;
         }
 
-        public Builder setSku(@Nullable Input<SkuArgs> sku) {
+        public Builder sku(@Nullable Input<SkuArgs> sku) {
             this.sku = sku;
             return this;
         }
 
-        public Builder setSku(@Nullable SkuArgs sku) {
+        public Builder sku(@Nullable SkuArgs sku) {
             this.sku = Input.ofNullable(sku);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setZoneRedundant(@Nullable Input<Boolean> zoneRedundant) {
+        public Builder zoneRedundant(@Nullable Input<Boolean> zoneRedundant) {
             this.zoneRedundant = zoneRedundant;
             return this;
         }
 
-        public Builder setZoneRedundant(@Nullable Boolean zoneRedundant) {
+        public Builder zoneRedundant(@Nullable Boolean zoneRedundant) {
             this.zoneRedundant = Input.ofNullable(zoneRedundant);
             return this;
         }

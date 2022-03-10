@@ -99,22 +99,22 @@ public final class MountTargetPropertiesResponse {
     	      this.smbServerFqdn = defaults.smbServerFqdn;
         }
 
-        public Builder setFileSystemId(String fileSystemId) {
+        public Builder fileSystemId(String fileSystemId) {
             this.fileSystemId = Objects.requireNonNull(fileSystemId);
             return this;
         }
 
-        public Builder setIpAddress(String ipAddress) {
+        public Builder ipAddress(String ipAddress) {
             this.ipAddress = Objects.requireNonNull(ipAddress);
             return this;
         }
 
-        public Builder setMountTargetId(String mountTargetId) {
+        public Builder mountTargetId(String mountTargetId) {
             this.mountTargetId = Objects.requireNonNull(mountTargetId);
             return this;
         }
 
-        public Builder setSmbServerFqdn(@Nullable String smbServerFqdn) {
+        public Builder smbServerFqdn(@Nullable String smbServerFqdn) {
             this.smbServerFqdn = smbServerFqdn;
             return this;
         }

@@ -92,32 +92,32 @@ public final class GenericContainerExtendedInfoArgs extends io.pulumi.resources.
     	      this.serviceEndpoints = defaults.serviceEndpoints;
         }
 
-        public Builder setContainerIdentityInfo(@Nullable Input<ContainerIdentityInfoArgs> containerIdentityInfo) {
+        public Builder containerIdentityInfo(@Nullable Input<ContainerIdentityInfoArgs> containerIdentityInfo) {
             this.containerIdentityInfo = containerIdentityInfo;
             return this;
         }
 
-        public Builder setContainerIdentityInfo(@Nullable ContainerIdentityInfoArgs containerIdentityInfo) {
+        public Builder containerIdentityInfo(@Nullable ContainerIdentityInfoArgs containerIdentityInfo) {
             this.containerIdentityInfo = Input.ofNullable(containerIdentityInfo);
             return this;
         }
 
-        public Builder setRawCertData(@Nullable Input<String> rawCertData) {
+        public Builder rawCertData(@Nullable Input<String> rawCertData) {
             this.rawCertData = rawCertData;
             return this;
         }
 
-        public Builder setRawCertData(@Nullable String rawCertData) {
+        public Builder rawCertData(@Nullable String rawCertData) {
             this.rawCertData = Input.ofNullable(rawCertData);
             return this;
         }
 
-        public Builder setServiceEndpoints(@Nullable Input<Map<String,String>> serviceEndpoints) {
+        public Builder serviceEndpoints(@Nullable Input<Map<String,String>> serviceEndpoints) {
             this.serviceEndpoints = serviceEndpoints;
             return this;
         }
 
-        public Builder setServiceEndpoints(@Nullable Map<String,String> serviceEndpoints) {
+        public Builder serviceEndpoints(@Nullable Map<String,String> serviceEndpoints) {
             this.serviceEndpoints = Input.ofNullable(serviceEndpoints);
             return this;
         }

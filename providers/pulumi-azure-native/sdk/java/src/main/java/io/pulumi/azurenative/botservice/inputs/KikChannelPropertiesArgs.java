@@ -107,42 +107,42 @@ public final class KikChannelPropertiesArgs extends io.pulumi.resources.Resource
     	      this.userName = defaults.userName;
         }
 
-        public Builder setApiKey(@Nullable Input<String> apiKey) {
+        public Builder apiKey(@Nullable Input<String> apiKey) {
             this.apiKey = apiKey;
             return this;
         }
 
-        public Builder setApiKey(@Nullable String apiKey) {
+        public Builder apiKey(@Nullable String apiKey) {
             this.apiKey = Input.ofNullable(apiKey);
             return this;
         }
 
-        public Builder setIsEnabled(Input<Boolean> isEnabled) {
+        public Builder isEnabled(Input<Boolean> isEnabled) {
             this.isEnabled = Objects.requireNonNull(isEnabled);
             return this;
         }
 
-        public Builder setIsEnabled(Boolean isEnabled) {
+        public Builder isEnabled(Boolean isEnabled) {
             this.isEnabled = Input.of(Objects.requireNonNull(isEnabled));
             return this;
         }
 
-        public Builder setIsValidated(@Nullable Input<Boolean> isValidated) {
+        public Builder isValidated(@Nullable Input<Boolean> isValidated) {
             this.isValidated = isValidated;
             return this;
         }
 
-        public Builder setIsValidated(@Nullable Boolean isValidated) {
+        public Builder isValidated(@Nullable Boolean isValidated) {
             this.isValidated = Input.ofNullable(isValidated);
             return this;
         }
 
-        public Builder setUserName(Input<String> userName) {
+        public Builder userName(Input<String> userName) {
             this.userName = Objects.requireNonNull(userName);
             return this;
         }
 
-        public Builder setUserName(String userName) {
+        public Builder userName(String userName) {
             this.userName = Input.of(Objects.requireNonNull(userName));
             return this;
         }

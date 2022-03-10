@@ -141,62 +141,62 @@ public final class DetectorArgs extends io.pulumi.resources.ResourceArgs {
     	      this.supportedResourceTypes = defaults.supportedResourceTypes;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setId(Input<String> id) {
+        public Builder id(Input<String> id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Input.of(Objects.requireNonNull(id));
             return this;
         }
 
-        public Builder setImagePaths(@Nullable Input<List<String>> imagePaths) {
+        public Builder imagePaths(@Nullable Input<List<String>> imagePaths) {
             this.imagePaths = imagePaths;
             return this;
         }
 
-        public Builder setImagePaths(@Nullable List<String> imagePaths) {
+        public Builder imagePaths(@Nullable List<String> imagePaths) {
             this.imagePaths = Input.ofNullable(imagePaths);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setParameters(@Nullable Input<Map<String,Object>> parameters) {
+        public Builder parameters(@Nullable Input<Map<String,Object>> parameters) {
             this.parameters = parameters;
             return this;
         }
 
-        public Builder setParameters(@Nullable Map<String,Object> parameters) {
+        public Builder parameters(@Nullable Map<String,Object> parameters) {
             this.parameters = Input.ofNullable(parameters);
             return this;
         }
 
-        public Builder setSupportedResourceTypes(@Nullable Input<List<String>> supportedResourceTypes) {
+        public Builder supportedResourceTypes(@Nullable Input<List<String>> supportedResourceTypes) {
             this.supportedResourceTypes = supportedResourceTypes;
             return this;
         }
 
-        public Builder setSupportedResourceTypes(@Nullable List<String> supportedResourceTypes) {
+        public Builder supportedResourceTypes(@Nullable List<String> supportedResourceTypes) {
             this.supportedResourceTypes = Input.ofNullable(supportedResourceTypes);
             return this;
         }

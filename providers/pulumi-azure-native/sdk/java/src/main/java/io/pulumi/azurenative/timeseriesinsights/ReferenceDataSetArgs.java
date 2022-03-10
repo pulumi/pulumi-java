@@ -155,72 +155,72 @@ public final class ReferenceDataSetArgs extends io.pulumi.resources.ResourceArgs
     	      this.tags = defaults.tags;
         }
 
-        public Builder setDataStringComparisonBehavior(@Nullable Input<Either<String,DataStringComparisonBehavior>> dataStringComparisonBehavior) {
+        public Builder dataStringComparisonBehavior(@Nullable Input<Either<String,DataStringComparisonBehavior>> dataStringComparisonBehavior) {
             this.dataStringComparisonBehavior = dataStringComparisonBehavior;
             return this;
         }
 
-        public Builder setDataStringComparisonBehavior(@Nullable Either<String,DataStringComparisonBehavior> dataStringComparisonBehavior) {
+        public Builder dataStringComparisonBehavior(@Nullable Either<String,DataStringComparisonBehavior> dataStringComparisonBehavior) {
             this.dataStringComparisonBehavior = Input.ofNullable(dataStringComparisonBehavior);
             return this;
         }
 
-        public Builder setEnvironmentName(Input<String> environmentName) {
+        public Builder environmentName(Input<String> environmentName) {
             this.environmentName = Objects.requireNonNull(environmentName);
             return this;
         }
 
-        public Builder setEnvironmentName(String environmentName) {
+        public Builder environmentName(String environmentName) {
             this.environmentName = Input.of(Objects.requireNonNull(environmentName));
             return this;
         }
 
-        public Builder setKeyProperties(Input<List<ReferenceDataSetKeyPropertyArgs>> keyProperties) {
+        public Builder keyProperties(Input<List<ReferenceDataSetKeyPropertyArgs>> keyProperties) {
             this.keyProperties = Objects.requireNonNull(keyProperties);
             return this;
         }
 
-        public Builder setKeyProperties(List<ReferenceDataSetKeyPropertyArgs> keyProperties) {
+        public Builder keyProperties(List<ReferenceDataSetKeyPropertyArgs> keyProperties) {
             this.keyProperties = Input.of(Objects.requireNonNull(keyProperties));
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setReferenceDataSetName(@Nullable Input<String> referenceDataSetName) {
+        public Builder referenceDataSetName(@Nullable Input<String> referenceDataSetName) {
             this.referenceDataSetName = referenceDataSetName;
             return this;
         }
 
-        public Builder setReferenceDataSetName(@Nullable String referenceDataSetName) {
+        public Builder referenceDataSetName(@Nullable String referenceDataSetName) {
             this.referenceDataSetName = Input.ofNullable(referenceDataSetName);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

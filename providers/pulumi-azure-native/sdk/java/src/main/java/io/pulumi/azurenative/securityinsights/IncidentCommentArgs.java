@@ -134,62 +134,62 @@ public final class IncidentCommentArgs extends io.pulumi.resources.ResourceArgs 
     	      this.workspaceName = defaults.workspaceName;
         }
 
-        public Builder setIncidentCommentId(@Nullable Input<String> incidentCommentId) {
+        public Builder incidentCommentId(@Nullable Input<String> incidentCommentId) {
             this.incidentCommentId = incidentCommentId;
             return this;
         }
 
-        public Builder setIncidentCommentId(@Nullable String incidentCommentId) {
+        public Builder incidentCommentId(@Nullable String incidentCommentId) {
             this.incidentCommentId = Input.ofNullable(incidentCommentId);
             return this;
         }
 
-        public Builder setIncidentId(Input<String> incidentId) {
+        public Builder incidentId(Input<String> incidentId) {
             this.incidentId = Objects.requireNonNull(incidentId);
             return this;
         }
 
-        public Builder setIncidentId(String incidentId) {
+        public Builder incidentId(String incidentId) {
             this.incidentId = Input.of(Objects.requireNonNull(incidentId));
             return this;
         }
 
-        public Builder setMessage(Input<String> message) {
+        public Builder message(Input<String> message) {
             this.message = Objects.requireNonNull(message);
             return this;
         }
 
-        public Builder setMessage(String message) {
+        public Builder message(String message) {
             this.message = Input.of(Objects.requireNonNull(message));
             return this;
         }
 
-        public Builder setOperationalInsightsResourceProvider(Input<String> operationalInsightsResourceProvider) {
+        public Builder operationalInsightsResourceProvider(Input<String> operationalInsightsResourceProvider) {
             this.operationalInsightsResourceProvider = Objects.requireNonNull(operationalInsightsResourceProvider);
             return this;
         }
 
-        public Builder setOperationalInsightsResourceProvider(String operationalInsightsResourceProvider) {
+        public Builder operationalInsightsResourceProvider(String operationalInsightsResourceProvider) {
             this.operationalInsightsResourceProvider = Input.of(Objects.requireNonNull(operationalInsightsResourceProvider));
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setWorkspaceName(Input<String> workspaceName) {
+        public Builder workspaceName(Input<String> workspaceName) {
             this.workspaceName = Objects.requireNonNull(workspaceName);
             return this;
         }
 
-        public Builder setWorkspaceName(String workspaceName) {
+        public Builder workspaceName(String workspaceName) {
             this.workspaceName = Input.of(Objects.requireNonNull(workspaceName));
             return this;
         }

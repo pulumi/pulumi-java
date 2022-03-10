@@ -167,7 +167,7 @@ public class AATPDataConnector extends io.pulumi.resources.CustomResource {
     private static AATPDataConnectorArgs makeArgs(AATPDataConnectorArgs args) {
         var builder = args == null ? AATPDataConnectorArgs.builder() : AATPDataConnectorArgs.builder(args);
         return builder
-            .setKind("AzureAdvancedThreatProtection")
+            .kind("AzureAdvancedThreatProtection")
             .build();
     }
 

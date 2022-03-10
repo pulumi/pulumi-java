@@ -107,22 +107,22 @@ public final class ManagementPolicyBaseBlobResponse extends io.pulumi.resources.
     	      this.tierToCool = defaults.tierToCool;
         }
 
-        public Builder setDelete(@Nullable DateAfterModificationResponse delete) {
+        public Builder delete(@Nullable DateAfterModificationResponse delete) {
             this.delete = delete;
             return this;
         }
 
-        public Builder setEnableAutoTierToHotFromCool(@Nullable Boolean enableAutoTierToHotFromCool) {
+        public Builder enableAutoTierToHotFromCool(@Nullable Boolean enableAutoTierToHotFromCool) {
             this.enableAutoTierToHotFromCool = enableAutoTierToHotFromCool;
             return this;
         }
 
-        public Builder setTierToArchive(@Nullable DateAfterModificationResponse tierToArchive) {
+        public Builder tierToArchive(@Nullable DateAfterModificationResponse tierToArchive) {
             this.tierToArchive = tierToArchive;
             return this;
         }
 
-        public Builder setTierToCool(@Nullable DateAfterModificationResponse tierToCool) {
+        public Builder tierToCool(@Nullable DateAfterModificationResponse tierToCool) {
             this.tierToCool = tierToCool;
             return this;
         }

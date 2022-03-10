@@ -100,22 +100,22 @@ public final class ComputeDataDiskResponse {
     	      this.name = defaults.name;
         }
 
-        public Builder setDiskSizeGiB(@Nullable Integer diskSizeGiB) {
+        public Builder diskSizeGiB(@Nullable Integer diskSizeGiB) {
             this.diskSizeGiB = diskSizeGiB;
             return this;
         }
 
-        public Builder setDiskUri(@Nullable String diskUri) {
+        public Builder diskUri(@Nullable String diskUri) {
             this.diskUri = diskUri;
             return this;
         }
 
-        public Builder setManagedDiskId(@Nullable String managedDiskId) {
+        public Builder managedDiskId(@Nullable String managedDiskId) {
             this.managedDiskId = managedDiskId;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }

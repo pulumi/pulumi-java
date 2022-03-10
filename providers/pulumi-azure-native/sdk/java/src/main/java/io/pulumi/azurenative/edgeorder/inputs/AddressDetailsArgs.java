@@ -56,12 +56,12 @@ public final class AddressDetailsArgs extends io.pulumi.resources.ResourceArgs {
     	      this.forwardAddress = defaults.forwardAddress;
         }
 
-        public Builder setForwardAddress(Input<AddressPropertiesArgs> forwardAddress) {
+        public Builder forwardAddress(Input<AddressPropertiesArgs> forwardAddress) {
             this.forwardAddress = Objects.requireNonNull(forwardAddress);
             return this;
         }
 
-        public Builder setForwardAddress(AddressPropertiesArgs forwardAddress) {
+        public Builder forwardAddress(AddressPropertiesArgs forwardAddress) {
             this.forwardAddress = Input.of(Objects.requireNonNull(forwardAddress));
             return this;
         }

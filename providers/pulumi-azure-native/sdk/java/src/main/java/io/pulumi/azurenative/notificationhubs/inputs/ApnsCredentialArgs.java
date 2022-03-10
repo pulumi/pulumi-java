@@ -170,82 +170,82 @@ public final class ApnsCredentialArgs extends io.pulumi.resources.ResourceArgs {
     	      this.token = defaults.token;
         }
 
-        public Builder setApnsCertificate(@Nullable Input<String> apnsCertificate) {
+        public Builder apnsCertificate(@Nullable Input<String> apnsCertificate) {
             this.apnsCertificate = apnsCertificate;
             return this;
         }
 
-        public Builder setApnsCertificate(@Nullable String apnsCertificate) {
+        public Builder apnsCertificate(@Nullable String apnsCertificate) {
             this.apnsCertificate = Input.ofNullable(apnsCertificate);
             return this;
         }
 
-        public Builder setAppId(@Nullable Input<String> appId) {
+        public Builder appId(@Nullable Input<String> appId) {
             this.appId = appId;
             return this;
         }
 
-        public Builder setAppId(@Nullable String appId) {
+        public Builder appId(@Nullable String appId) {
             this.appId = Input.ofNullable(appId);
             return this;
         }
 
-        public Builder setAppName(@Nullable Input<String> appName) {
+        public Builder appName(@Nullable Input<String> appName) {
             this.appName = appName;
             return this;
         }
 
-        public Builder setAppName(@Nullable String appName) {
+        public Builder appName(@Nullable String appName) {
             this.appName = Input.ofNullable(appName);
             return this;
         }
 
-        public Builder setCertificateKey(@Nullable Input<String> certificateKey) {
+        public Builder certificateKey(@Nullable Input<String> certificateKey) {
             this.certificateKey = certificateKey;
             return this;
         }
 
-        public Builder setCertificateKey(@Nullable String certificateKey) {
+        public Builder certificateKey(@Nullable String certificateKey) {
             this.certificateKey = Input.ofNullable(certificateKey);
             return this;
         }
 
-        public Builder setEndpoint(@Nullable Input<String> endpoint) {
+        public Builder endpoint(@Nullable Input<String> endpoint) {
             this.endpoint = endpoint;
             return this;
         }
 
-        public Builder setEndpoint(@Nullable String endpoint) {
+        public Builder endpoint(@Nullable String endpoint) {
             this.endpoint = Input.ofNullable(endpoint);
             return this;
         }
 
-        public Builder setKeyId(@Nullable Input<String> keyId) {
+        public Builder keyId(@Nullable Input<String> keyId) {
             this.keyId = keyId;
             return this;
         }
 
-        public Builder setKeyId(@Nullable String keyId) {
+        public Builder keyId(@Nullable String keyId) {
             this.keyId = Input.ofNullable(keyId);
             return this;
         }
 
-        public Builder setThumbprint(@Nullable Input<String> thumbprint) {
+        public Builder thumbprint(@Nullable Input<String> thumbprint) {
             this.thumbprint = thumbprint;
             return this;
         }
 
-        public Builder setThumbprint(@Nullable String thumbprint) {
+        public Builder thumbprint(@Nullable String thumbprint) {
             this.thumbprint = Input.ofNullable(thumbprint);
             return this;
         }
 
-        public Builder setToken(@Nullable Input<String> token) {
+        public Builder token(@Nullable Input<String> token) {
             this.token = token;
             return this;
         }
 
-        public Builder setToken(@Nullable String token) {
+        public Builder token(@Nullable String token) {
             this.token = Input.ofNullable(token);
             return this;
         }

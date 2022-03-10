@@ -120,22 +120,22 @@ public final class ApplicationMetricDescriptionResponse {
     	      this.totalApplicationCapacity = defaults.totalApplicationCapacity;
         }
 
-        public Builder setMaximumCapacity(@Nullable Double maximumCapacity) {
+        public Builder maximumCapacity(@Nullable Double maximumCapacity) {
             this.maximumCapacity = maximumCapacity;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setReservationCapacity(@Nullable Double reservationCapacity) {
+        public Builder reservationCapacity(@Nullable Double reservationCapacity) {
             this.reservationCapacity = reservationCapacity;
             return this;
         }
 
-        public Builder setTotalApplicationCapacity(@Nullable Double totalApplicationCapacity) {
+        public Builder totalApplicationCapacity(@Nullable Double totalApplicationCapacity) {
             this.totalApplicationCapacity = totalApplicationCapacity;
             return this;
         }

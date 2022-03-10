@@ -106,42 +106,42 @@ public final class SAPSystemIDArgs extends io.pulumi.resources.ResourceArgs {
     	      this.username = defaults.username;
         }
 
-        public Builder setGid(@Nullable Input<String> gid) {
+        public Builder gid(@Nullable Input<String> gid) {
             this.gid = gid;
             return this;
         }
 
-        public Builder setGid(@Nullable String gid) {
+        public Builder gid(@Nullable String gid) {
             this.gid = Input.ofNullable(gid);
             return this;
         }
 
-        public Builder setSid(@Nullable Input<String> sid) {
+        public Builder sid(@Nullable Input<String> sid) {
             this.sid = sid;
             return this;
         }
 
-        public Builder setSid(@Nullable String sid) {
+        public Builder sid(@Nullable String sid) {
             this.sid = Input.ofNullable(sid);
             return this;
         }
 
-        public Builder setUid(@Nullable Input<String> uid) {
+        public Builder uid(@Nullable Input<String> uid) {
             this.uid = uid;
             return this;
         }
 
-        public Builder setUid(@Nullable String uid) {
+        public Builder uid(@Nullable String uid) {
             this.uid = Input.ofNullable(uid);
             return this;
         }
 
-        public Builder setUsername(@Nullable Input<String> username) {
+        public Builder username(@Nullable Input<String> username) {
             this.username = username;
             return this;
         }
 
-        public Builder setUsername(@Nullable String username) {
+        public Builder username(@Nullable String username) {
             this.username = Input.ofNullable(username);
             return this;
         }

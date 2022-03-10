@@ -104,22 +104,22 @@ public final class DataboxJobSecretsResponse {
     	      this.podSecrets = defaults.podSecrets;
         }
 
-        public Builder setDcAccessSecurityCode(DcAccessSecurityCodeResponse dcAccessSecurityCode) {
+        public Builder dcAccessSecurityCode(DcAccessSecurityCodeResponse dcAccessSecurityCode) {
             this.dcAccessSecurityCode = Objects.requireNonNull(dcAccessSecurityCode);
             return this;
         }
 
-        public Builder setError(CloudErrorResponse error) {
+        public Builder error(CloudErrorResponse error) {
             this.error = Objects.requireNonNull(error);
             return this;
         }
 
-        public Builder setJobSecretsType(String jobSecretsType) {
+        public Builder jobSecretsType(String jobSecretsType) {
             this.jobSecretsType = Objects.requireNonNull(jobSecretsType);
             return this;
         }
 
-        public Builder setPodSecrets(@Nullable List<DataBoxSecretResponse> podSecrets) {
+        public Builder podSecrets(@Nullable List<DataBoxSecretResponse> podSecrets) {
             this.podSecrets = podSecrets;
             return this;
         }

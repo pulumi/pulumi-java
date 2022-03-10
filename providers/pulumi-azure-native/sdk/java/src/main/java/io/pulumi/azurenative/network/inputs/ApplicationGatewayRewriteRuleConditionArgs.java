@@ -107,42 +107,42 @@ public final class ApplicationGatewayRewriteRuleConditionArgs extends io.pulumi.
     	      this.variable = defaults.variable;
         }
 
-        public Builder setIgnoreCase(@Nullable Input<Boolean> ignoreCase) {
+        public Builder ignoreCase(@Nullable Input<Boolean> ignoreCase) {
             this.ignoreCase = ignoreCase;
             return this;
         }
 
-        public Builder setIgnoreCase(@Nullable Boolean ignoreCase) {
+        public Builder ignoreCase(@Nullable Boolean ignoreCase) {
             this.ignoreCase = Input.ofNullable(ignoreCase);
             return this;
         }
 
-        public Builder setNegate(@Nullable Input<Boolean> negate) {
+        public Builder negate(@Nullable Input<Boolean> negate) {
             this.negate = negate;
             return this;
         }
 
-        public Builder setNegate(@Nullable Boolean negate) {
+        public Builder negate(@Nullable Boolean negate) {
             this.negate = Input.ofNullable(negate);
             return this;
         }
 
-        public Builder setPattern(@Nullable Input<String> pattern) {
+        public Builder pattern(@Nullable Input<String> pattern) {
             this.pattern = pattern;
             return this;
         }
 
-        public Builder setPattern(@Nullable String pattern) {
+        public Builder pattern(@Nullable String pattern) {
             this.pattern = Input.ofNullable(pattern);
             return this;
         }
 
-        public Builder setVariable(@Nullable Input<String> variable) {
+        public Builder variable(@Nullable Input<String> variable) {
             this.variable = variable;
             return this;
         }
 
-        public Builder setVariable(@Nullable String variable) {
+        public Builder variable(@Nullable String variable) {
             this.variable = Input.ofNullable(variable);
             return this;
         }

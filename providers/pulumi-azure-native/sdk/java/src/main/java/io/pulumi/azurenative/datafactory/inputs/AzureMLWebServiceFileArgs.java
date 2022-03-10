@@ -74,22 +74,22 @@ public final class AzureMLWebServiceFileArgs extends io.pulumi.resources.Resourc
     	      this.linkedServiceName = defaults.linkedServiceName;
         }
 
-        public Builder setFilePath(Input<Object> filePath) {
+        public Builder filePath(Input<Object> filePath) {
             this.filePath = Objects.requireNonNull(filePath);
             return this;
         }
 
-        public Builder setFilePath(Object filePath) {
+        public Builder filePath(Object filePath) {
             this.filePath = Input.of(Objects.requireNonNull(filePath));
             return this;
         }
 
-        public Builder setLinkedServiceName(Input<LinkedServiceReferenceArgs> linkedServiceName) {
+        public Builder linkedServiceName(Input<LinkedServiceReferenceArgs> linkedServiceName) {
             this.linkedServiceName = Objects.requireNonNull(linkedServiceName);
             return this;
         }
 
-        public Builder setLinkedServiceName(LinkedServiceReferenceArgs linkedServiceName) {
+        public Builder linkedServiceName(LinkedServiceReferenceArgs linkedServiceName) {
             this.linkedServiceName = Input.of(Objects.requireNonNull(linkedServiceName));
             return this;
         }

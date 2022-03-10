@@ -288,152 +288,152 @@ public final class ConnectionMonitorArgs extends io.pulumi.resources.ResourceArg
     	      this.testGroups = defaults.testGroups;
         }
 
-        public Builder setAutoStart(@Nullable Input<Boolean> autoStart) {
+        public Builder autoStart(@Nullable Input<Boolean> autoStart) {
             this.autoStart = autoStart;
             return this;
         }
 
-        public Builder setAutoStart(@Nullable Boolean autoStart) {
+        public Builder autoStart(@Nullable Boolean autoStart) {
             this.autoStart = Input.ofNullable(autoStart);
             return this;
         }
 
-        public Builder setConnectionMonitorName(@Nullable Input<String> connectionMonitorName) {
+        public Builder connectionMonitorName(@Nullable Input<String> connectionMonitorName) {
             this.connectionMonitorName = connectionMonitorName;
             return this;
         }
 
-        public Builder setConnectionMonitorName(@Nullable String connectionMonitorName) {
+        public Builder connectionMonitorName(@Nullable String connectionMonitorName) {
             this.connectionMonitorName = Input.ofNullable(connectionMonitorName);
             return this;
         }
 
-        public Builder setDestination(@Nullable Input<ConnectionMonitorDestinationArgs> destination) {
+        public Builder destination(@Nullable Input<ConnectionMonitorDestinationArgs> destination) {
             this.destination = destination;
             return this;
         }
 
-        public Builder setDestination(@Nullable ConnectionMonitorDestinationArgs destination) {
+        public Builder destination(@Nullable ConnectionMonitorDestinationArgs destination) {
             this.destination = Input.ofNullable(destination);
             return this;
         }
 
-        public Builder setEndpoints(@Nullable Input<List<ConnectionMonitorEndpointArgs>> endpoints) {
+        public Builder endpoints(@Nullable Input<List<ConnectionMonitorEndpointArgs>> endpoints) {
             this.endpoints = endpoints;
             return this;
         }
 
-        public Builder setEndpoints(@Nullable List<ConnectionMonitorEndpointArgs> endpoints) {
+        public Builder endpoints(@Nullable List<ConnectionMonitorEndpointArgs> endpoints) {
             this.endpoints = Input.ofNullable(endpoints);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setMigrate(@Nullable Input<String> migrate) {
+        public Builder migrate(@Nullable Input<String> migrate) {
             this.migrate = migrate;
             return this;
         }
 
-        public Builder setMigrate(@Nullable String migrate) {
+        public Builder migrate(@Nullable String migrate) {
             this.migrate = Input.ofNullable(migrate);
             return this;
         }
 
-        public Builder setMonitoringIntervalInSeconds(@Nullable Input<Integer> monitoringIntervalInSeconds) {
+        public Builder monitoringIntervalInSeconds(@Nullable Input<Integer> monitoringIntervalInSeconds) {
             this.monitoringIntervalInSeconds = monitoringIntervalInSeconds;
             return this;
         }
 
-        public Builder setMonitoringIntervalInSeconds(@Nullable Integer monitoringIntervalInSeconds) {
+        public Builder monitoringIntervalInSeconds(@Nullable Integer monitoringIntervalInSeconds) {
             this.monitoringIntervalInSeconds = Input.ofNullable(monitoringIntervalInSeconds);
             return this;
         }
 
-        public Builder setNetworkWatcherName(Input<String> networkWatcherName) {
+        public Builder networkWatcherName(Input<String> networkWatcherName) {
             this.networkWatcherName = Objects.requireNonNull(networkWatcherName);
             return this;
         }
 
-        public Builder setNetworkWatcherName(String networkWatcherName) {
+        public Builder networkWatcherName(String networkWatcherName) {
             this.networkWatcherName = Input.of(Objects.requireNonNull(networkWatcherName));
             return this;
         }
 
-        public Builder setNotes(@Nullable Input<String> notes) {
+        public Builder notes(@Nullable Input<String> notes) {
             this.notes = notes;
             return this;
         }
 
-        public Builder setNotes(@Nullable String notes) {
+        public Builder notes(@Nullable String notes) {
             this.notes = Input.ofNullable(notes);
             return this;
         }
 
-        public Builder setOutputs(@Nullable Input<List<ConnectionMonitorOutputArgs>> outputs) {
+        public Builder outputs(@Nullable Input<List<ConnectionMonitorOutputArgs>> outputs) {
             this.outputs = outputs;
             return this;
         }
 
-        public Builder setOutputs(@Nullable List<ConnectionMonitorOutputArgs> outputs) {
+        public Builder outputs(@Nullable List<ConnectionMonitorOutputArgs> outputs) {
             this.outputs = Input.ofNullable(outputs);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setSource(@Nullable Input<ConnectionMonitorSourceArgs> source) {
+        public Builder source(@Nullable Input<ConnectionMonitorSourceArgs> source) {
             this.source = source;
             return this;
         }
 
-        public Builder setSource(@Nullable ConnectionMonitorSourceArgs source) {
+        public Builder source(@Nullable ConnectionMonitorSourceArgs source) {
             this.source = Input.ofNullable(source);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTestConfigurations(@Nullable Input<List<ConnectionMonitorTestConfigurationArgs>> testConfigurations) {
+        public Builder testConfigurations(@Nullable Input<List<ConnectionMonitorTestConfigurationArgs>> testConfigurations) {
             this.testConfigurations = testConfigurations;
             return this;
         }
 
-        public Builder setTestConfigurations(@Nullable List<ConnectionMonitorTestConfigurationArgs> testConfigurations) {
+        public Builder testConfigurations(@Nullable List<ConnectionMonitorTestConfigurationArgs> testConfigurations) {
             this.testConfigurations = Input.ofNullable(testConfigurations);
             return this;
         }
 
-        public Builder setTestGroups(@Nullable Input<List<ConnectionMonitorTestGroupArgs>> testGroups) {
+        public Builder testGroups(@Nullable Input<List<ConnectionMonitorTestGroupArgs>> testGroups) {
             this.testGroups = testGroups;
             return this;
         }
 
-        public Builder setTestGroups(@Nullable List<ConnectionMonitorTestGroupArgs> testGroups) {
+        public Builder testGroups(@Nullable List<ConnectionMonitorTestGroupArgs> testGroups) {
             this.testGroups = Input.ofNullable(testGroups);
             return this;
         }

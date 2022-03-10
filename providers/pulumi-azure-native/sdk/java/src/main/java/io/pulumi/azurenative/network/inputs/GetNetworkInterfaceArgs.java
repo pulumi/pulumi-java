@@ -86,17 +86,17 @@ public final class GetNetworkInterfaceArgs extends io.pulumi.resources.InvokeArg
     	      this.resourceGroupName = defaults.resourceGroupName;
         }
 
-        public Builder setExpand(@Nullable String expand) {
+        public Builder expand(@Nullable String expand) {
             this.expand = expand;
             return this;
         }
 
-        public Builder setNetworkInterfaceName(String networkInterfaceName) {
+        public Builder networkInterfaceName(String networkInterfaceName) {
             this.networkInterfaceName = Objects.requireNonNull(networkInterfaceName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }

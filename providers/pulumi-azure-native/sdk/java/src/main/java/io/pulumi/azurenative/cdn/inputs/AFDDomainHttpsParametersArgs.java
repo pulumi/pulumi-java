@@ -94,32 +94,32 @@ public final class AFDDomainHttpsParametersArgs extends io.pulumi.resources.Reso
     	      this.secret = defaults.secret;
         }
 
-        public Builder setCertificateType(Input<Either<String,AfdCertificateType>> certificateType) {
+        public Builder certificateType(Input<Either<String,AfdCertificateType>> certificateType) {
             this.certificateType = Objects.requireNonNull(certificateType);
             return this;
         }
 
-        public Builder setCertificateType(Either<String,AfdCertificateType> certificateType) {
+        public Builder certificateType(Either<String,AfdCertificateType> certificateType) {
             this.certificateType = Input.of(Objects.requireNonNull(certificateType));
             return this;
         }
 
-        public Builder setMinimumTlsVersion(@Nullable Input<AfdMinimumTlsVersion> minimumTlsVersion) {
+        public Builder minimumTlsVersion(@Nullable Input<AfdMinimumTlsVersion> minimumTlsVersion) {
             this.minimumTlsVersion = minimumTlsVersion;
             return this;
         }
 
-        public Builder setMinimumTlsVersion(@Nullable AfdMinimumTlsVersion minimumTlsVersion) {
+        public Builder minimumTlsVersion(@Nullable AfdMinimumTlsVersion minimumTlsVersion) {
             this.minimumTlsVersion = Input.ofNullable(minimumTlsVersion);
             return this;
         }
 
-        public Builder setSecret(@Nullable Input<ResourceReferenceArgs> secret) {
+        public Builder secret(@Nullable Input<ResourceReferenceArgs> secret) {
             this.secret = secret;
             return this;
         }
 
-        public Builder setSecret(@Nullable ResourceReferenceArgs secret) {
+        public Builder secret(@Nullable ResourceReferenceArgs secret) {
             this.secret = Input.ofNullable(secret);
             return this;
         }

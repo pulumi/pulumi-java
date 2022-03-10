@@ -191,92 +191,92 @@ public final class SqlConnectionInfoArgs extends io.pulumi.resources.ResourceArg
     	      this.userName = defaults.userName;
         }
 
-        public Builder setAdditionalSettings(@Nullable Input<String> additionalSettings) {
+        public Builder additionalSettings(@Nullable Input<String> additionalSettings) {
             this.additionalSettings = additionalSettings;
             return this;
         }
 
-        public Builder setAdditionalSettings(@Nullable String additionalSettings) {
+        public Builder additionalSettings(@Nullable String additionalSettings) {
             this.additionalSettings = Input.ofNullable(additionalSettings);
             return this;
         }
 
-        public Builder setAuthentication(@Nullable Input<Either<String,AuthenticationType>> authentication) {
+        public Builder authentication(@Nullable Input<Either<String,AuthenticationType>> authentication) {
             this.authentication = authentication;
             return this;
         }
 
-        public Builder setAuthentication(@Nullable Either<String,AuthenticationType> authentication) {
+        public Builder authentication(@Nullable Either<String,AuthenticationType> authentication) {
             this.authentication = Input.ofNullable(authentication);
             return this;
         }
 
-        public Builder setDataSource(Input<String> dataSource) {
+        public Builder dataSource(Input<String> dataSource) {
             this.dataSource = Objects.requireNonNull(dataSource);
             return this;
         }
 
-        public Builder setDataSource(String dataSource) {
+        public Builder dataSource(String dataSource) {
             this.dataSource = Input.of(Objects.requireNonNull(dataSource));
             return this;
         }
 
-        public Builder setEncryptConnection(@Nullable Input<Boolean> encryptConnection) {
+        public Builder encryptConnection(@Nullable Input<Boolean> encryptConnection) {
             this.encryptConnection = encryptConnection;
             return this;
         }
 
-        public Builder setEncryptConnection(@Nullable Boolean encryptConnection) {
+        public Builder encryptConnection(@Nullable Boolean encryptConnection) {
             this.encryptConnection = Input.ofNullable(encryptConnection);
             return this;
         }
 
-        public Builder setPassword(@Nullable Input<String> password) {
+        public Builder password(@Nullable Input<String> password) {
             this.password = password;
             return this;
         }
 
-        public Builder setPassword(@Nullable String password) {
+        public Builder password(@Nullable String password) {
             this.password = Input.ofNullable(password);
             return this;
         }
 
-        public Builder setPlatform(@Nullable Input<Either<String,SqlSourcePlatform>> platform) {
+        public Builder platform(@Nullable Input<Either<String,SqlSourcePlatform>> platform) {
             this.platform = platform;
             return this;
         }
 
-        public Builder setPlatform(@Nullable Either<String,SqlSourcePlatform> platform) {
+        public Builder platform(@Nullable Either<String,SqlSourcePlatform> platform) {
             this.platform = Input.ofNullable(platform);
             return this;
         }
 
-        public Builder setTrustServerCertificate(@Nullable Input<Boolean> trustServerCertificate) {
+        public Builder trustServerCertificate(@Nullable Input<Boolean> trustServerCertificate) {
             this.trustServerCertificate = trustServerCertificate;
             return this;
         }
 
-        public Builder setTrustServerCertificate(@Nullable Boolean trustServerCertificate) {
+        public Builder trustServerCertificate(@Nullable Boolean trustServerCertificate) {
             this.trustServerCertificate = Input.ofNullable(trustServerCertificate);
             return this;
         }
 
-        public Builder setType(Input<String> type) {
+        public Builder type(Input<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }
 
-        public Builder setUserName(@Nullable Input<String> userName) {
+        public Builder userName(@Nullable Input<String> userName) {
             this.userName = userName;
             return this;
         }
 
-        public Builder setUserName(@Nullable String userName) {
+        public Builder userName(@Nullable String userName) {
             this.userName = Input.ofNullable(userName);
             return this;
         }

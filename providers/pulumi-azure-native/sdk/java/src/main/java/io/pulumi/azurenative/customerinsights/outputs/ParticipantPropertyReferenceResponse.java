@@ -65,12 +65,12 @@ public final class ParticipantPropertyReferenceResponse {
     	      this.targetPropertyName = defaults.targetPropertyName;
         }
 
-        public Builder setSourcePropertyName(String sourcePropertyName) {
+        public Builder sourcePropertyName(String sourcePropertyName) {
             this.sourcePropertyName = Objects.requireNonNull(sourcePropertyName);
             return this;
         }
 
-        public Builder setTargetPropertyName(String targetPropertyName) {
+        public Builder targetPropertyName(String targetPropertyName) {
             this.targetPropertyName = Objects.requireNonNull(targetPropertyName);
             return this;
         }

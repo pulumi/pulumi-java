@@ -49,7 +49,7 @@ public final class ResourceProviderManifestPropertiesResponseRequestHeaderOption
     	      this.optInHeaders = defaults.optInHeaders;
         }
 
-        public Builder setOptInHeaders(@Nullable String optInHeaders) {
+        public Builder optInHeaders(@Nullable String optInHeaders) {
             this.optInHeaders = optInHeaders;
             return this;
         }

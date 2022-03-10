@@ -84,17 +84,17 @@ public final class LoadBalancerFrontendIPConfigurationPropertiesResponse {
     	      this.subnet = defaults.subnet;
         }
 
-        public Builder setPrivateIPAddress(@Nullable String privateIPAddress) {
+        public Builder privateIPAddress(@Nullable String privateIPAddress) {
             this.privateIPAddress = privateIPAddress;
             return this;
         }
 
-        public Builder setPublicIPAddress(@Nullable SubResourceResponse publicIPAddress) {
+        public Builder publicIPAddress(@Nullable SubResourceResponse publicIPAddress) {
             this.publicIPAddress = publicIPAddress;
             return this;
         }
 
-        public Builder setSubnet(@Nullable SubResourceResponse subnet) {
+        public Builder subnet(@Nullable SubResourceResponse subnet) {
             this.subnet = subnet;
             return this;
         }

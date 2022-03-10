@@ -218,112 +218,112 @@ public final class SourceControlArgs extends io.pulumi.resources.ResourceArgs {
     	      this.sourceType = defaults.sourceType;
         }
 
-        public Builder setAutoSync(@Nullable Input<Boolean> autoSync) {
+        public Builder autoSync(@Nullable Input<Boolean> autoSync) {
             this.autoSync = autoSync;
             return this;
         }
 
-        public Builder setAutoSync(@Nullable Boolean autoSync) {
+        public Builder autoSync(@Nullable Boolean autoSync) {
             this.autoSync = Input.ofNullable(autoSync);
             return this;
         }
 
-        public Builder setAutomationAccountName(Input<String> automationAccountName) {
+        public Builder automationAccountName(Input<String> automationAccountName) {
             this.automationAccountName = Objects.requireNonNull(automationAccountName);
             return this;
         }
 
-        public Builder setAutomationAccountName(String automationAccountName) {
+        public Builder automationAccountName(String automationAccountName) {
             this.automationAccountName = Input.of(Objects.requireNonNull(automationAccountName));
             return this;
         }
 
-        public Builder setBranch(@Nullable Input<String> branch) {
+        public Builder branch(@Nullable Input<String> branch) {
             this.branch = branch;
             return this;
         }
 
-        public Builder setBranch(@Nullable String branch) {
+        public Builder branch(@Nullable String branch) {
             this.branch = Input.ofNullable(branch);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setFolderPath(@Nullable Input<String> folderPath) {
+        public Builder folderPath(@Nullable Input<String> folderPath) {
             this.folderPath = folderPath;
             return this;
         }
 
-        public Builder setFolderPath(@Nullable String folderPath) {
+        public Builder folderPath(@Nullable String folderPath) {
             this.folderPath = Input.ofNullable(folderPath);
             return this;
         }
 
-        public Builder setPublishRunbook(@Nullable Input<Boolean> publishRunbook) {
+        public Builder publishRunbook(@Nullable Input<Boolean> publishRunbook) {
             this.publishRunbook = publishRunbook;
             return this;
         }
 
-        public Builder setPublishRunbook(@Nullable Boolean publishRunbook) {
+        public Builder publishRunbook(@Nullable Boolean publishRunbook) {
             this.publishRunbook = Input.ofNullable(publishRunbook);
             return this;
         }
 
-        public Builder setRepoUrl(@Nullable Input<String> repoUrl) {
+        public Builder repoUrl(@Nullable Input<String> repoUrl) {
             this.repoUrl = repoUrl;
             return this;
         }
 
-        public Builder setRepoUrl(@Nullable String repoUrl) {
+        public Builder repoUrl(@Nullable String repoUrl) {
             this.repoUrl = Input.ofNullable(repoUrl);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setSecurityToken(@Nullable Input<SourceControlSecurityTokenPropertiesArgs> securityToken) {
+        public Builder securityToken(@Nullable Input<SourceControlSecurityTokenPropertiesArgs> securityToken) {
             this.securityToken = securityToken;
             return this;
         }
 
-        public Builder setSecurityToken(@Nullable SourceControlSecurityTokenPropertiesArgs securityToken) {
+        public Builder securityToken(@Nullable SourceControlSecurityTokenPropertiesArgs securityToken) {
             this.securityToken = Input.ofNullable(securityToken);
             return this;
         }
 
-        public Builder setSourceControlName(@Nullable Input<String> sourceControlName) {
+        public Builder sourceControlName(@Nullable Input<String> sourceControlName) {
             this.sourceControlName = sourceControlName;
             return this;
         }
 
-        public Builder setSourceControlName(@Nullable String sourceControlName) {
+        public Builder sourceControlName(@Nullable String sourceControlName) {
             this.sourceControlName = Input.ofNullable(sourceControlName);
             return this;
         }
 
-        public Builder setSourceType(@Nullable Input<Either<String,SourceType>> sourceType) {
+        public Builder sourceType(@Nullable Input<Either<String,SourceType>> sourceType) {
             this.sourceType = sourceType;
             return this;
         }
 
-        public Builder setSourceType(@Nullable Either<String,SourceType> sourceType) {
+        public Builder sourceType(@Nullable Either<String,SourceType> sourceType) {
             this.sourceType = Input.ofNullable(sourceType);
             return this;
         }

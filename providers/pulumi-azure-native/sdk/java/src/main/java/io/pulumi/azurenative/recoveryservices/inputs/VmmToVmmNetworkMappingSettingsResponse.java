@@ -56,7 +56,7 @@ public final class VmmToVmmNetworkMappingSettingsResponse extends io.pulumi.reso
     	      this.instanceType = defaults.instanceType;
         }
 
-        public Builder setInstanceType(String instanceType) {
+        public Builder instanceType(String instanceType) {
             this.instanceType = Objects.requireNonNull(instanceType);
             return this;
         }

@@ -134,62 +134,62 @@ public final class SettingsPropertiesCacheArgs extends io.pulumi.resources.Resou
     	      this.subchannel = defaults.subchannel;
         }
 
-        public Builder setChannel(Input<String> channel) {
+        public Builder channel(Input<String> channel) {
             this.channel = Objects.requireNonNull(channel);
             return this;
         }
 
-        public Builder setChannel(String channel) {
+        public Builder channel(String channel) {
             this.channel = Input.of(Objects.requireNonNull(channel));
             return this;
         }
 
-        public Builder setId(Input<String> id) {
+        public Builder id(Input<String> id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Input.of(Objects.requireNonNull(id));
             return this;
         }
 
-        public Builder setName(Input<String> name) {
+        public Builder name(Input<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder setParent(@Nullable Input<String> parent) {
+        public Builder parent(@Nullable Input<String> parent) {
             this.parent = parent;
             return this;
         }
 
-        public Builder setParent(@Nullable String parent) {
+        public Builder parent(@Nullable String parent) {
             this.parent = Input.ofNullable(parent);
             return this;
         }
 
-        public Builder setStatus(@Nullable Input<String> status) {
+        public Builder status(@Nullable Input<String> status) {
             this.status = status;
             return this;
         }
 
-        public Builder setStatus(@Nullable String status) {
+        public Builder status(@Nullable String status) {
             this.status = Input.ofNullable(status);
             return this;
         }
 
-        public Builder setSubchannel(Input<String> subchannel) {
+        public Builder subchannel(Input<String> subchannel) {
             this.subchannel = Objects.requireNonNull(subchannel);
             return this;
         }
 
-        public Builder setSubchannel(String subchannel) {
+        public Builder subchannel(String subchannel) {
             this.subchannel = Input.of(Objects.requireNonNull(subchannel));
             return this;
         }

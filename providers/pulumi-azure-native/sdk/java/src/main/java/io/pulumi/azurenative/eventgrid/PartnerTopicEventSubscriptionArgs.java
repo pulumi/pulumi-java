@@ -250,122 +250,122 @@ public final class PartnerTopicEventSubscriptionArgs extends io.pulumi.resources
     	      this.retryPolicy = defaults.retryPolicy;
         }
 
-        public Builder setDeadLetterDestination(@Nullable Input<StorageBlobDeadLetterDestinationArgs> deadLetterDestination) {
+        public Builder deadLetterDestination(@Nullable Input<StorageBlobDeadLetterDestinationArgs> deadLetterDestination) {
             this.deadLetterDestination = deadLetterDestination;
             return this;
         }
 
-        public Builder setDeadLetterDestination(@Nullable StorageBlobDeadLetterDestinationArgs deadLetterDestination) {
+        public Builder deadLetterDestination(@Nullable StorageBlobDeadLetterDestinationArgs deadLetterDestination) {
             this.deadLetterDestination = Input.ofNullable(deadLetterDestination);
             return this;
         }
 
-        public Builder setDeadLetterWithResourceIdentity(@Nullable Input<DeadLetterWithResourceIdentityArgs> deadLetterWithResourceIdentity) {
+        public Builder deadLetterWithResourceIdentity(@Nullable Input<DeadLetterWithResourceIdentityArgs> deadLetterWithResourceIdentity) {
             this.deadLetterWithResourceIdentity = deadLetterWithResourceIdentity;
             return this;
         }
 
-        public Builder setDeadLetterWithResourceIdentity(@Nullable DeadLetterWithResourceIdentityArgs deadLetterWithResourceIdentity) {
+        public Builder deadLetterWithResourceIdentity(@Nullable DeadLetterWithResourceIdentityArgs deadLetterWithResourceIdentity) {
             this.deadLetterWithResourceIdentity = Input.ofNullable(deadLetterWithResourceIdentity);
             return this;
         }
 
-        public Builder setDeliveryWithResourceIdentity(@Nullable Input<DeliveryWithResourceIdentityArgs> deliveryWithResourceIdentity) {
+        public Builder deliveryWithResourceIdentity(@Nullable Input<DeliveryWithResourceIdentityArgs> deliveryWithResourceIdentity) {
             this.deliveryWithResourceIdentity = deliveryWithResourceIdentity;
             return this;
         }
 
-        public Builder setDeliveryWithResourceIdentity(@Nullable DeliveryWithResourceIdentityArgs deliveryWithResourceIdentity) {
+        public Builder deliveryWithResourceIdentity(@Nullable DeliveryWithResourceIdentityArgs deliveryWithResourceIdentity) {
             this.deliveryWithResourceIdentity = Input.ofNullable(deliveryWithResourceIdentity);
             return this;
         }
 
-        public Builder setDestination(@Nullable Input<Object> destination) {
+        public Builder destination(@Nullable Input<Object> destination) {
             this.destination = destination;
             return this;
         }
 
-        public Builder setDestination(@Nullable Object destination) {
+        public Builder destination(@Nullable Object destination) {
             this.destination = Input.ofNullable(destination);
             return this;
         }
 
-        public Builder setEventDeliverySchema(@Nullable Input<Either<String,EventDeliverySchema>> eventDeliverySchema) {
+        public Builder eventDeliverySchema(@Nullable Input<Either<String,EventDeliverySchema>> eventDeliverySchema) {
             this.eventDeliverySchema = eventDeliverySchema;
             return this;
         }
 
-        public Builder setEventDeliverySchema(@Nullable Either<String,EventDeliverySchema> eventDeliverySchema) {
+        public Builder eventDeliverySchema(@Nullable Either<String,EventDeliverySchema> eventDeliverySchema) {
             this.eventDeliverySchema = Input.ofNullable(eventDeliverySchema);
             return this;
         }
 
-        public Builder setEventSubscriptionName(@Nullable Input<String> eventSubscriptionName) {
+        public Builder eventSubscriptionName(@Nullable Input<String> eventSubscriptionName) {
             this.eventSubscriptionName = eventSubscriptionName;
             return this;
         }
 
-        public Builder setEventSubscriptionName(@Nullable String eventSubscriptionName) {
+        public Builder eventSubscriptionName(@Nullable String eventSubscriptionName) {
             this.eventSubscriptionName = Input.ofNullable(eventSubscriptionName);
             return this;
         }
 
-        public Builder setExpirationTimeUtc(@Nullable Input<String> expirationTimeUtc) {
+        public Builder expirationTimeUtc(@Nullable Input<String> expirationTimeUtc) {
             this.expirationTimeUtc = expirationTimeUtc;
             return this;
         }
 
-        public Builder setExpirationTimeUtc(@Nullable String expirationTimeUtc) {
+        public Builder expirationTimeUtc(@Nullable String expirationTimeUtc) {
             this.expirationTimeUtc = Input.ofNullable(expirationTimeUtc);
             return this;
         }
 
-        public Builder setFilter(@Nullable Input<EventSubscriptionFilterArgs> filter) {
+        public Builder filter(@Nullable Input<EventSubscriptionFilterArgs> filter) {
             this.filter = filter;
             return this;
         }
 
-        public Builder setFilter(@Nullable EventSubscriptionFilterArgs filter) {
+        public Builder filter(@Nullable EventSubscriptionFilterArgs filter) {
             this.filter = Input.ofNullable(filter);
             return this;
         }
 
-        public Builder setLabels(@Nullable Input<List<String>> labels) {
+        public Builder labels(@Nullable Input<List<String>> labels) {
             this.labels = labels;
             return this;
         }
 
-        public Builder setLabels(@Nullable List<String> labels) {
+        public Builder labels(@Nullable List<String> labels) {
             this.labels = Input.ofNullable(labels);
             return this;
         }
 
-        public Builder setPartnerTopicName(Input<String> partnerTopicName) {
+        public Builder partnerTopicName(Input<String> partnerTopicName) {
             this.partnerTopicName = Objects.requireNonNull(partnerTopicName);
             return this;
         }
 
-        public Builder setPartnerTopicName(String partnerTopicName) {
+        public Builder partnerTopicName(String partnerTopicName) {
             this.partnerTopicName = Input.of(Objects.requireNonNull(partnerTopicName));
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setRetryPolicy(@Nullable Input<RetryPolicyArgs> retryPolicy) {
+        public Builder retryPolicy(@Nullable Input<RetryPolicyArgs> retryPolicy) {
             this.retryPolicy = retryPolicy;
             return this;
         }
 
-        public Builder setRetryPolicy(@Nullable RetryPolicyArgs retryPolicy) {
+        public Builder retryPolicy(@Nullable RetryPolicyArgs retryPolicy) {
             this.retryPolicy = Input.ofNullable(retryPolicy);
             return this;
         }

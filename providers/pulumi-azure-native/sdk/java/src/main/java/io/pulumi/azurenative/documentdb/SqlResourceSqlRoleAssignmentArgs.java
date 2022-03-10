@@ -134,62 +134,62 @@ public final class SqlResourceSqlRoleAssignmentArgs extends io.pulumi.resources.
     	      this.scope = defaults.scope;
         }
 
-        public Builder setAccountName(Input<String> accountName) {
+        public Builder accountName(Input<String> accountName) {
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
 
-        public Builder setAccountName(String accountName) {
+        public Builder accountName(String accountName) {
             this.accountName = Input.of(Objects.requireNonNull(accountName));
             return this;
         }
 
-        public Builder setPrincipalId(@Nullable Input<String> principalId) {
+        public Builder principalId(@Nullable Input<String> principalId) {
             this.principalId = principalId;
             return this;
         }
 
-        public Builder setPrincipalId(@Nullable String principalId) {
+        public Builder principalId(@Nullable String principalId) {
             this.principalId = Input.ofNullable(principalId);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setRoleAssignmentId(@Nullable Input<String> roleAssignmentId) {
+        public Builder roleAssignmentId(@Nullable Input<String> roleAssignmentId) {
             this.roleAssignmentId = roleAssignmentId;
             return this;
         }
 
-        public Builder setRoleAssignmentId(@Nullable String roleAssignmentId) {
+        public Builder roleAssignmentId(@Nullable String roleAssignmentId) {
             this.roleAssignmentId = Input.ofNullable(roleAssignmentId);
             return this;
         }
 
-        public Builder setRoleDefinitionId(@Nullable Input<String> roleDefinitionId) {
+        public Builder roleDefinitionId(@Nullable Input<String> roleDefinitionId) {
             this.roleDefinitionId = roleDefinitionId;
             return this;
         }
 
-        public Builder setRoleDefinitionId(@Nullable String roleDefinitionId) {
+        public Builder roleDefinitionId(@Nullable String roleDefinitionId) {
             this.roleDefinitionId = Input.ofNullable(roleDefinitionId);
             return this;
         }
 
-        public Builder setScope(@Nullable Input<String> scope) {
+        public Builder scope(@Nullable Input<String> scope) {
             this.scope = scope;
             return this;
         }
 
-        public Builder setScope(@Nullable String scope) {
+        public Builder scope(@Nullable String scope) {
             this.scope = Input.ofNullable(scope);
             return this;
         }

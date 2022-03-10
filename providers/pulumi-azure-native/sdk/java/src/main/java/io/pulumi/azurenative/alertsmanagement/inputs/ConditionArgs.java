@@ -77,22 +77,22 @@ public final class ConditionArgs extends io.pulumi.resources.ResourceArgs {
     	      this.values = defaults.values;
         }
 
-        public Builder setOperator(@Nullable Input<Either<String,Operator>> operator) {
+        public Builder operator(@Nullable Input<Either<String,Operator>> operator) {
             this.operator = operator;
             return this;
         }
 
-        public Builder setOperator(@Nullable Either<String,Operator> operator) {
+        public Builder operator(@Nullable Either<String,Operator> operator) {
             this.operator = Input.ofNullable(operator);
             return this;
         }
 
-        public Builder setValues(@Nullable Input<List<String>> values) {
+        public Builder values(@Nullable Input<List<String>> values) {
             this.values = values;
             return this;
         }
 
-        public Builder setValues(@Nullable List<String> values) {
+        public Builder values(@Nullable List<String> values) {
             this.values = Input.ofNullable(values);
             return this;
         }

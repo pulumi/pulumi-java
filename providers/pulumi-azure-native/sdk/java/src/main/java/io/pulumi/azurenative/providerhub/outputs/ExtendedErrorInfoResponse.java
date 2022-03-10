@@ -77,27 +77,27 @@ public final class ExtendedErrorInfoResponse {
     	      this.target = defaults.target;
         }
 
-        public Builder setAdditionalInfo(@Nullable List<TypedErrorInfoResponse> additionalInfo) {
+        public Builder additionalInfo(@Nullable List<TypedErrorInfoResponse> additionalInfo) {
             this.additionalInfo = additionalInfo;
             return this;
         }
 
-        public Builder setCode(@Nullable String code) {
+        public Builder code(@Nullable String code) {
             this.code = code;
             return this;
         }
 
-        public Builder setDetails(@Nullable List<ExtendedErrorInfoResponse> details) {
+        public Builder details(@Nullable List<ExtendedErrorInfoResponse> details) {
             this.details = details;
             return this;
         }
 
-        public Builder setMessage(@Nullable String message) {
+        public Builder message(@Nullable String message) {
             this.message = message;
             return this;
         }
 
-        public Builder setTarget(@Nullable String target) {
+        public Builder target(@Nullable String target) {
             this.target = target;
             return this;
         }

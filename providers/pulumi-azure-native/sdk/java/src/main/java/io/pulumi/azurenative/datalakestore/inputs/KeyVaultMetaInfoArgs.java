@@ -89,32 +89,32 @@ public final class KeyVaultMetaInfoArgs extends io.pulumi.resources.ResourceArgs
     	      this.keyVaultResourceId = defaults.keyVaultResourceId;
         }
 
-        public Builder setEncryptionKeyName(Input<String> encryptionKeyName) {
+        public Builder encryptionKeyName(Input<String> encryptionKeyName) {
             this.encryptionKeyName = Objects.requireNonNull(encryptionKeyName);
             return this;
         }
 
-        public Builder setEncryptionKeyName(String encryptionKeyName) {
+        public Builder encryptionKeyName(String encryptionKeyName) {
             this.encryptionKeyName = Input.of(Objects.requireNonNull(encryptionKeyName));
             return this;
         }
 
-        public Builder setEncryptionKeyVersion(Input<String> encryptionKeyVersion) {
+        public Builder encryptionKeyVersion(Input<String> encryptionKeyVersion) {
             this.encryptionKeyVersion = Objects.requireNonNull(encryptionKeyVersion);
             return this;
         }
 
-        public Builder setEncryptionKeyVersion(String encryptionKeyVersion) {
+        public Builder encryptionKeyVersion(String encryptionKeyVersion) {
             this.encryptionKeyVersion = Input.of(Objects.requireNonNull(encryptionKeyVersion));
             return this;
         }
 
-        public Builder setKeyVaultResourceId(Input<String> keyVaultResourceId) {
+        public Builder keyVaultResourceId(Input<String> keyVaultResourceId) {
             this.keyVaultResourceId = Objects.requireNonNull(keyVaultResourceId);
             return this;
         }
 
-        public Builder setKeyVaultResourceId(String keyVaultResourceId) {
+        public Builder keyVaultResourceId(String keyVaultResourceId) {
             this.keyVaultResourceId = Input.of(Objects.requireNonNull(keyVaultResourceId));
             return this;
         }

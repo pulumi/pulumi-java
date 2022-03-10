@@ -225,57 +225,57 @@ public final class AzureFunctionActivityResponse extends io.pulumi.resources.Inv
     	      this.userProperties = defaults.userProperties;
         }
 
-        public Builder setBody(@Nullable Object body) {
+        public Builder body(@Nullable Object body) {
             this.body = body;
             return this;
         }
 
-        public Builder setDependsOn(@Nullable List<ActivityDependencyResponse> dependsOn) {
+        public Builder dependsOn(@Nullable List<ActivityDependencyResponse> dependsOn) {
             this.dependsOn = dependsOn;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setFunctionName(Object functionName) {
+        public Builder functionName(Object functionName) {
             this.functionName = Objects.requireNonNull(functionName);
             return this;
         }
 
-        public Builder setHeaders(@Nullable Object headers) {
+        public Builder headers(@Nullable Object headers) {
             this.headers = headers;
             return this;
         }
 
-        public Builder setLinkedServiceName(@Nullable LinkedServiceReferenceResponse linkedServiceName) {
+        public Builder linkedServiceName(@Nullable LinkedServiceReferenceResponse linkedServiceName) {
             this.linkedServiceName = linkedServiceName;
             return this;
         }
 
-        public Builder setMethod(String method) {
+        public Builder method(String method) {
             this.method = Objects.requireNonNull(method);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPolicy(@Nullable ActivityPolicyResponse policy) {
+        public Builder policy(@Nullable ActivityPolicyResponse policy) {
             this.policy = policy;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setUserProperties(@Nullable List<UserPropertyResponse> userProperties) {
+        public Builder userProperties(@Nullable List<UserPropertyResponse> userProperties) {
             this.userProperties = userProperties;
             return this;
         }

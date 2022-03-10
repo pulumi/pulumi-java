@@ -67,12 +67,12 @@ public final class EntityReferenceResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setReferenceName(@Nullable String referenceName) {
+        public Builder referenceName(@Nullable String referenceName) {
             this.referenceName = referenceName;
             return this;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = type;
             return this;
         }

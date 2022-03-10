@@ -84,17 +84,17 @@ public final class PredictionResponseGrades {
     	      this.minScoreThreshold = defaults.minScoreThreshold;
         }
 
-        public Builder setGradeName(@Nullable String gradeName) {
+        public Builder gradeName(@Nullable String gradeName) {
             this.gradeName = gradeName;
             return this;
         }
 
-        public Builder setMaxScoreThreshold(@Nullable Integer maxScoreThreshold) {
+        public Builder maxScoreThreshold(@Nullable Integer maxScoreThreshold) {
             this.maxScoreThreshold = maxScoreThreshold;
             return this;
         }
 
-        public Builder setMinScoreThreshold(@Nullable Integer minScoreThreshold) {
+        public Builder minScoreThreshold(@Nullable Integer minScoreThreshold) {
             this.minScoreThreshold = minScoreThreshold;
             return this;
         }

@@ -155,37 +155,37 @@ public final class MaintenanceRedeployStatusResponse extends io.pulumi.resources
     	      this.preMaintenanceWindowStartTime = defaults.preMaintenanceWindowStartTime;
         }
 
-        public Builder setIsCustomerInitiatedMaintenanceAllowed(@Nullable Boolean isCustomerInitiatedMaintenanceAllowed) {
+        public Builder isCustomerInitiatedMaintenanceAllowed(@Nullable Boolean isCustomerInitiatedMaintenanceAllowed) {
             this.isCustomerInitiatedMaintenanceAllowed = isCustomerInitiatedMaintenanceAllowed;
             return this;
         }
 
-        public Builder setLastOperationMessage(@Nullable String lastOperationMessage) {
+        public Builder lastOperationMessage(@Nullable String lastOperationMessage) {
             this.lastOperationMessage = lastOperationMessage;
             return this;
         }
 
-        public Builder setLastOperationResultCode(@Nullable String lastOperationResultCode) {
+        public Builder lastOperationResultCode(@Nullable String lastOperationResultCode) {
             this.lastOperationResultCode = lastOperationResultCode;
             return this;
         }
 
-        public Builder setMaintenanceWindowEndTime(@Nullable String maintenanceWindowEndTime) {
+        public Builder maintenanceWindowEndTime(@Nullable String maintenanceWindowEndTime) {
             this.maintenanceWindowEndTime = maintenanceWindowEndTime;
             return this;
         }
 
-        public Builder setMaintenanceWindowStartTime(@Nullable String maintenanceWindowStartTime) {
+        public Builder maintenanceWindowStartTime(@Nullable String maintenanceWindowStartTime) {
             this.maintenanceWindowStartTime = maintenanceWindowStartTime;
             return this;
         }
 
-        public Builder setPreMaintenanceWindowEndTime(@Nullable String preMaintenanceWindowEndTime) {
+        public Builder preMaintenanceWindowEndTime(@Nullable String preMaintenanceWindowEndTime) {
             this.preMaintenanceWindowEndTime = preMaintenanceWindowEndTime;
             return this;
         }
 
-        public Builder setPreMaintenanceWindowStartTime(@Nullable String preMaintenanceWindowStartTime) {
+        public Builder preMaintenanceWindowStartTime(@Nullable String preMaintenanceWindowStartTime) {
             this.preMaintenanceWindowStartTime = preMaintenanceWindowStartTime;
             return this;
         }

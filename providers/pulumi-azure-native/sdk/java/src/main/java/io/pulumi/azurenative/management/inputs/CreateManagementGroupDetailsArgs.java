@@ -57,12 +57,12 @@ public final class CreateManagementGroupDetailsArgs extends io.pulumi.resources.
     	      this.parent = defaults.parent;
         }
 
-        public Builder setParent(@Nullable Input<CreateParentGroupInfoArgs> parent) {
+        public Builder parent(@Nullable Input<CreateParentGroupInfoArgs> parent) {
             this.parent = parent;
             return this;
         }
 
-        public Builder setParent(@Nullable CreateParentGroupInfoArgs parent) {
+        public Builder parent(@Nullable CreateParentGroupInfoArgs parent) {
             this.parent = Input.ofNullable(parent);
             return this;
         }

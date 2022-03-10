@@ -57,12 +57,12 @@ public final class EncryptionIdentityArgs extends io.pulumi.resources.ResourceAr
     	      this.encryptionUserAssignedIdentity = defaults.encryptionUserAssignedIdentity;
         }
 
-        public Builder setEncryptionUserAssignedIdentity(@Nullable Input<String> encryptionUserAssignedIdentity) {
+        public Builder encryptionUserAssignedIdentity(@Nullable Input<String> encryptionUserAssignedIdentity) {
             this.encryptionUserAssignedIdentity = encryptionUserAssignedIdentity;
             return this;
         }
 
-        public Builder setEncryptionUserAssignedIdentity(@Nullable String encryptionUserAssignedIdentity) {
+        public Builder encryptionUserAssignedIdentity(@Nullable String encryptionUserAssignedIdentity) {
             this.encryptionUserAssignedIdentity = Input.ofNullable(encryptionUserAssignedIdentity);
             return this;
         }

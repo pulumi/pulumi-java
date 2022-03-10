@@ -68,12 +68,12 @@ public final class ElasticPropertiesResponse {
     	      this.elasticCloudUser = defaults.elasticCloudUser;
         }
 
-        public Builder setElasticCloudDeployment(@Nullable ElasticCloudDeploymentResponse elasticCloudDeployment) {
+        public Builder elasticCloudDeployment(@Nullable ElasticCloudDeploymentResponse elasticCloudDeployment) {
             this.elasticCloudDeployment = elasticCloudDeployment;
             return this;
         }
 
-        public Builder setElasticCloudUser(@Nullable ElasticCloudUserResponse elasticCloudUser) {
+        public Builder elasticCloudUser(@Nullable ElasticCloudUserResponse elasticCloudUser) {
             this.elasticCloudUser = elasticCloudUser;
             return this;
         }

@@ -152,37 +152,37 @@ public final class AKSResponseProperties {
     	      this.systemServices = defaults.systemServices;
         }
 
-        public Builder setAgentCount(@Nullable Integer agentCount) {
+        public Builder agentCount(@Nullable Integer agentCount) {
             this.agentCount = agentCount;
             return this;
         }
 
-        public Builder setAgentVmSize(@Nullable String agentVmSize) {
+        public Builder agentVmSize(@Nullable String agentVmSize) {
             this.agentVmSize = agentVmSize;
             return this;
         }
 
-        public Builder setAksNetworkingConfiguration(@Nullable AksNetworkingConfigurationResponse aksNetworkingConfiguration) {
+        public Builder aksNetworkingConfiguration(@Nullable AksNetworkingConfigurationResponse aksNetworkingConfiguration) {
             this.aksNetworkingConfiguration = aksNetworkingConfiguration;
             return this;
         }
 
-        public Builder setClusterFqdn(@Nullable String clusterFqdn) {
+        public Builder clusterFqdn(@Nullable String clusterFqdn) {
             this.clusterFqdn = clusterFqdn;
             return this;
         }
 
-        public Builder setClusterPurpose(@Nullable String clusterPurpose) {
+        public Builder clusterPurpose(@Nullable String clusterPurpose) {
             this.clusterPurpose = clusterPurpose;
             return this;
         }
 
-        public Builder setSslConfiguration(@Nullable SslConfigurationResponse sslConfiguration) {
+        public Builder sslConfiguration(@Nullable SslConfigurationResponse sslConfiguration) {
             this.sslConfiguration = sslConfiguration;
             return this;
         }
 
-        public Builder setSystemServices(List<SystemServiceResponse> systemServices) {
+        public Builder systemServices(List<SystemServiceResponse> systemServices) {
             this.systemServices = Objects.requireNonNull(systemServices);
             return this;
         }

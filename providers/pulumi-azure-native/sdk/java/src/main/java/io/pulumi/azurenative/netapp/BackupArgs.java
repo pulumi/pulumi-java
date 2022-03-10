@@ -150,72 +150,72 @@ public final class BackupArgs extends io.pulumi.resources.ResourceArgs {
     	      this.volumeName = defaults.volumeName;
         }
 
-        public Builder setAccountName(Input<String> accountName) {
+        public Builder accountName(Input<String> accountName) {
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
 
-        public Builder setAccountName(String accountName) {
+        public Builder accountName(String accountName) {
             this.accountName = Input.of(Objects.requireNonNull(accountName));
             return this;
         }
 
-        public Builder setBackupName(@Nullable Input<String> backupName) {
+        public Builder backupName(@Nullable Input<String> backupName) {
             this.backupName = backupName;
             return this;
         }
 
-        public Builder setBackupName(@Nullable String backupName) {
+        public Builder backupName(@Nullable String backupName) {
             this.backupName = Input.ofNullable(backupName);
             return this;
         }
 
-        public Builder setLabel(@Nullable Input<String> label) {
+        public Builder label(@Nullable Input<String> label) {
             this.label = label;
             return this;
         }
 
-        public Builder setLabel(@Nullable String label) {
+        public Builder label(@Nullable String label) {
             this.label = Input.ofNullable(label);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setPoolName(Input<String> poolName) {
+        public Builder poolName(Input<String> poolName) {
             this.poolName = Objects.requireNonNull(poolName);
             return this;
         }
 
-        public Builder setPoolName(String poolName) {
+        public Builder poolName(String poolName) {
             this.poolName = Input.of(Objects.requireNonNull(poolName));
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setVolumeName(Input<String> volumeName) {
+        public Builder volumeName(Input<String> volumeName) {
             this.volumeName = Objects.requireNonNull(volumeName);
             return this;
         }
 
-        public Builder setVolumeName(String volumeName) {
+        public Builder volumeName(String volumeName) {
             this.volumeName = Input.of(Objects.requireNonNull(volumeName));
             return this;
         }

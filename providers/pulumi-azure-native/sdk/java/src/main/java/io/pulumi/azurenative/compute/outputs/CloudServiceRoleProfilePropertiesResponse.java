@@ -68,12 +68,12 @@ public final class CloudServiceRoleProfilePropertiesResponse {
     	      this.sku = defaults.sku;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setSku(@Nullable CloudServiceRoleSkuResponse sku) {
+        public Builder sku(@Nullable CloudServiceRoleSkuResponse sku) {
             this.sku = sku;
             return this;
         }

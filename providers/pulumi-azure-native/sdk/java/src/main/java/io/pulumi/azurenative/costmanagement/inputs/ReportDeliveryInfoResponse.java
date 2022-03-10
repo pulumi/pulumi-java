@@ -55,7 +55,7 @@ public final class ReportDeliveryInfoResponse extends io.pulumi.resources.Invoke
     	      this.destination = defaults.destination;
         }
 
-        public Builder setDestination(ReportDeliveryDestinationResponse destination) {
+        public Builder destination(ReportDeliveryDestinationResponse destination) {
             this.destination = Objects.requireNonNull(destination);
             return this;
         }

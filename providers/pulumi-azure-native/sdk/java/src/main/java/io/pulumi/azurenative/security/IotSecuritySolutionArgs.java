@@ -272,142 +272,142 @@ public final class IotSecuritySolutionArgs extends io.pulumi.resources.ResourceA
     	      this.workspace = defaults.workspace;
         }
 
-        public Builder setAdditionalWorkspaces(@Nullable Input<List<AdditionalWorkspacesPropertiesArgs>> additionalWorkspaces) {
+        public Builder additionalWorkspaces(@Nullable Input<List<AdditionalWorkspacesPropertiesArgs>> additionalWorkspaces) {
             this.additionalWorkspaces = additionalWorkspaces;
             return this;
         }
 
-        public Builder setAdditionalWorkspaces(@Nullable List<AdditionalWorkspacesPropertiesArgs> additionalWorkspaces) {
+        public Builder additionalWorkspaces(@Nullable List<AdditionalWorkspacesPropertiesArgs> additionalWorkspaces) {
             this.additionalWorkspaces = Input.ofNullable(additionalWorkspaces);
             return this;
         }
 
-        public Builder setDisabledDataSources(@Nullable Input<List<Either<String,DataSource>>> disabledDataSources) {
+        public Builder disabledDataSources(@Nullable Input<List<Either<String,DataSource>>> disabledDataSources) {
             this.disabledDataSources = disabledDataSources;
             return this;
         }
 
-        public Builder setDisabledDataSources(@Nullable List<Either<String,DataSource>> disabledDataSources) {
+        public Builder disabledDataSources(@Nullable List<Either<String,DataSource>> disabledDataSources) {
             this.disabledDataSources = Input.ofNullable(disabledDataSources);
             return this;
         }
 
-        public Builder setDisplayName(Input<String> displayName) {
+        public Builder displayName(Input<String> displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Input.of(Objects.requireNonNull(displayName));
             return this;
         }
 
-        public Builder setExport(@Nullable Input<List<Either<String,ExportData>>> export) {
+        public Builder export(@Nullable Input<List<Either<String,ExportData>>> export) {
             this.export = export;
             return this;
         }
 
-        public Builder setExport(@Nullable List<Either<String,ExportData>> export) {
+        public Builder export(@Nullable List<Either<String,ExportData>> export) {
             this.export = Input.ofNullable(export);
             return this;
         }
 
-        public Builder setIotHubs(Input<List<String>> iotHubs) {
+        public Builder iotHubs(Input<List<String>> iotHubs) {
             this.iotHubs = Objects.requireNonNull(iotHubs);
             return this;
         }
 
-        public Builder setIotHubs(List<String> iotHubs) {
+        public Builder iotHubs(List<String> iotHubs) {
             this.iotHubs = Input.of(Objects.requireNonNull(iotHubs));
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setRecommendationsConfiguration(@Nullable Input<List<RecommendationConfigurationPropertiesArgs>> recommendationsConfiguration) {
+        public Builder recommendationsConfiguration(@Nullable Input<List<RecommendationConfigurationPropertiesArgs>> recommendationsConfiguration) {
             this.recommendationsConfiguration = recommendationsConfiguration;
             return this;
         }
 
-        public Builder setRecommendationsConfiguration(@Nullable List<RecommendationConfigurationPropertiesArgs> recommendationsConfiguration) {
+        public Builder recommendationsConfiguration(@Nullable List<RecommendationConfigurationPropertiesArgs> recommendationsConfiguration) {
             this.recommendationsConfiguration = Input.ofNullable(recommendationsConfiguration);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setSolutionName(@Nullable Input<String> solutionName) {
+        public Builder solutionName(@Nullable Input<String> solutionName) {
             this.solutionName = solutionName;
             return this;
         }
 
-        public Builder setSolutionName(@Nullable String solutionName) {
+        public Builder solutionName(@Nullable String solutionName) {
             this.solutionName = Input.ofNullable(solutionName);
             return this;
         }
 
-        public Builder setStatus(@Nullable Input<Either<String,SecuritySolutionStatus>> status) {
+        public Builder status(@Nullable Input<Either<String,SecuritySolutionStatus>> status) {
             this.status = status;
             return this;
         }
 
-        public Builder setStatus(@Nullable Either<String,SecuritySolutionStatus> status) {
+        public Builder status(@Nullable Either<String,SecuritySolutionStatus> status) {
             this.status = Input.ofNullable(status);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setUnmaskedIpLoggingStatus(@Nullable Input<Either<String,UnmaskedIpLoggingStatus>> unmaskedIpLoggingStatus) {
+        public Builder unmaskedIpLoggingStatus(@Nullable Input<Either<String,UnmaskedIpLoggingStatus>> unmaskedIpLoggingStatus) {
             this.unmaskedIpLoggingStatus = unmaskedIpLoggingStatus;
             return this;
         }
 
-        public Builder setUnmaskedIpLoggingStatus(@Nullable Either<String,UnmaskedIpLoggingStatus> unmaskedIpLoggingStatus) {
+        public Builder unmaskedIpLoggingStatus(@Nullable Either<String,UnmaskedIpLoggingStatus> unmaskedIpLoggingStatus) {
             this.unmaskedIpLoggingStatus = Input.ofNullable(unmaskedIpLoggingStatus);
             return this;
         }
 
-        public Builder setUserDefinedResources(@Nullable Input<UserDefinedResourcesPropertiesArgs> userDefinedResources) {
+        public Builder userDefinedResources(@Nullable Input<UserDefinedResourcesPropertiesArgs> userDefinedResources) {
             this.userDefinedResources = userDefinedResources;
             return this;
         }
 
-        public Builder setUserDefinedResources(@Nullable UserDefinedResourcesPropertiesArgs userDefinedResources) {
+        public Builder userDefinedResources(@Nullable UserDefinedResourcesPropertiesArgs userDefinedResources) {
             this.userDefinedResources = Input.ofNullable(userDefinedResources);
             return this;
         }
 
-        public Builder setWorkspace(@Nullable Input<String> workspace) {
+        public Builder workspace(@Nullable Input<String> workspace) {
             this.workspace = workspace;
             return this;
         }
 
-        public Builder setWorkspace(@Nullable String workspace) {
+        public Builder workspace(@Nullable String workspace) {
             this.workspace = Input.ofNullable(workspace);
             return this;
         }

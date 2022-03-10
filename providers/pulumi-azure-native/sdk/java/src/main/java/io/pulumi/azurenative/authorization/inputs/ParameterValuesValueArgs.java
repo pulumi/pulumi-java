@@ -57,12 +57,12 @@ public final class ParameterValuesValueArgs extends io.pulumi.resources.Resource
     	      this.value = defaults.value;
         }
 
-        public Builder setValue(@Nullable Input<Object> value) {
+        public Builder value(@Nullable Input<Object> value) {
             this.value = value;
             return this;
         }
 
-        public Builder setValue(@Nullable Object value) {
+        public Builder value(@Nullable Object value) {
             this.value = Input.ofNullable(value);
             return this;
         }

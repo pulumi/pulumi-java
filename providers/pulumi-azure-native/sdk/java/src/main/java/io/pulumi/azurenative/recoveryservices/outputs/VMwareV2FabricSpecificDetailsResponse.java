@@ -115,27 +115,27 @@ public final class VMwareV2FabricSpecificDetailsResponse {
     	      this.vmwareSiteId = defaults.vmwareSiteId;
         }
 
-        public Builder setInstanceType(String instanceType) {
+        public Builder instanceType(String instanceType) {
             this.instanceType = Objects.requireNonNull(instanceType);
             return this;
         }
 
-        public Builder setMigrationSolutionId(String migrationSolutionId) {
+        public Builder migrationSolutionId(String migrationSolutionId) {
             this.migrationSolutionId = Objects.requireNonNull(migrationSolutionId);
             return this;
         }
 
-        public Builder setServiceEndpoint(String serviceEndpoint) {
+        public Builder serviceEndpoint(String serviceEndpoint) {
             this.serviceEndpoint = Objects.requireNonNull(serviceEndpoint);
             return this;
         }
 
-        public Builder setServiceResourceId(String serviceResourceId) {
+        public Builder serviceResourceId(String serviceResourceId) {
             this.serviceResourceId = Objects.requireNonNull(serviceResourceId);
             return this;
         }
 
-        public Builder setVmwareSiteId(String vmwareSiteId) {
+        public Builder vmwareSiteId(String vmwareSiteId) {
             this.vmwareSiteId = Objects.requireNonNull(vmwareSiteId);
             return this;
         }

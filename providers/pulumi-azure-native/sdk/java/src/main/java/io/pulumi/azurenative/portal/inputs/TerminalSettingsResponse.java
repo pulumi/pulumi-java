@@ -74,12 +74,12 @@ public final class TerminalSettingsResponse extends io.pulumi.resources.InvokeAr
     	      this.fontStyle = defaults.fontStyle;
         }
 
-        public Builder setFontSize(@Nullable String fontSize) {
+        public Builder fontSize(@Nullable String fontSize) {
             this.fontSize = fontSize;
             return this;
         }
 
-        public Builder setFontStyle(@Nullable String fontStyle) {
+        public Builder fontStyle(@Nullable String fontStyle) {
             this.fontStyle = fontStyle;
             return this;
         }

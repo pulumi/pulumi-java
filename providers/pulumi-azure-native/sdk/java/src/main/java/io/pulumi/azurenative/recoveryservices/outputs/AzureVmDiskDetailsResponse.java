@@ -179,47 +179,47 @@ public final class AzureVmDiskDetailsResponse {
     	      this.vhdType = defaults.vhdType;
         }
 
-        public Builder setDiskEncryptionSetId(@Nullable String diskEncryptionSetId) {
+        public Builder diskEncryptionSetId(@Nullable String diskEncryptionSetId) {
             this.diskEncryptionSetId = diskEncryptionSetId;
             return this;
         }
 
-        public Builder setDiskId(@Nullable String diskId) {
+        public Builder diskId(@Nullable String diskId) {
             this.diskId = diskId;
             return this;
         }
 
-        public Builder setLunId(@Nullable String lunId) {
+        public Builder lunId(@Nullable String lunId) {
             this.lunId = lunId;
             return this;
         }
 
-        public Builder setMaxSizeMB(@Nullable String maxSizeMB) {
+        public Builder maxSizeMB(@Nullable String maxSizeMB) {
             this.maxSizeMB = maxSizeMB;
             return this;
         }
 
-        public Builder setTargetDiskLocation(@Nullable String targetDiskLocation) {
+        public Builder targetDiskLocation(@Nullable String targetDiskLocation) {
             this.targetDiskLocation = targetDiskLocation;
             return this;
         }
 
-        public Builder setTargetDiskName(@Nullable String targetDiskName) {
+        public Builder targetDiskName(@Nullable String targetDiskName) {
             this.targetDiskName = targetDiskName;
             return this;
         }
 
-        public Builder setVhdId(@Nullable String vhdId) {
+        public Builder vhdId(@Nullable String vhdId) {
             this.vhdId = vhdId;
             return this;
         }
 
-        public Builder setVhdName(@Nullable String vhdName) {
+        public Builder vhdName(@Nullable String vhdName) {
             this.vhdName = vhdName;
             return this;
         }
 
-        public Builder setVhdType(@Nullable String vhdType) {
+        public Builder vhdType(@Nullable String vhdType) {
             this.vhdType = vhdType;
             return this;
         }

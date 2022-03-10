@@ -95,32 +95,32 @@ public final class TestArgs extends io.pulumi.resources.ResourceArgs {
     	      this.testType = defaults.testType;
         }
 
-        public Builder setCommands(Input<List<CommandArgs>> commands) {
+        public Builder commands(Input<List<CommandArgs>> commands) {
             this.commands = Objects.requireNonNull(commands);
             return this;
         }
 
-        public Builder setCommands(List<CommandArgs> commands) {
+        public Builder commands(List<CommandArgs> commands) {
             this.commands = Input.of(Objects.requireNonNull(commands));
             return this;
         }
 
-        public Builder setIsActive(@Nullable Input<Boolean> isActive) {
+        public Builder isActive(@Nullable Input<Boolean> isActive) {
             this.isActive = isActive;
             return this;
         }
 
-        public Builder setIsActive(@Nullable Boolean isActive) {
+        public Builder isActive(@Nullable Boolean isActive) {
             this.isActive = Input.ofNullable(isActive);
             return this;
         }
 
-        public Builder setTestType(Input<Either<String,TestType>> testType) {
+        public Builder testType(Input<Either<String,TestType>> testType) {
             this.testType = Objects.requireNonNull(testType);
             return this;
         }
 
-        public Builder setTestType(Either<String,TestType> testType) {
+        public Builder testType(Either<String,TestType> testType) {
             this.testType = Input.of(Objects.requireNonNull(testType));
             return this;
         }

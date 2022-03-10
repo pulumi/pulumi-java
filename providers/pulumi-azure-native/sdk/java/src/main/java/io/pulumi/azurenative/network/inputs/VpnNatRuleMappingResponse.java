@@ -57,7 +57,7 @@ public final class VpnNatRuleMappingResponse extends io.pulumi.resources.InvokeA
     	      this.addressSpace = defaults.addressSpace;
         }
 
-        public Builder setAddressSpace(@Nullable String addressSpace) {
+        public Builder addressSpace(@Nullable String addressSpace) {
             this.addressSpace = addressSpace;
             return this;
         }

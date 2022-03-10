@@ -57,12 +57,12 @@ public final class IntegrationAccountMapPropertiesParametersSchemaArgs extends i
     	      this.ref = defaults.ref;
         }
 
-        public Builder setRef(@Nullable Input<String> ref) {
+        public Builder ref(@Nullable Input<String> ref) {
             this.ref = ref;
             return this;
         }
 
-        public Builder setRef(@Nullable String ref) {
+        public Builder ref(@Nullable String ref) {
             this.ref = Input.ofNullable(ref);
             return this;
         }

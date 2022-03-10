@@ -386,112 +386,112 @@ public final class GetDomainResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setAuthCode(@Nullable String authCode) {
+        public Builder authCode(@Nullable String authCode) {
             this.authCode = authCode;
             return this;
         }
 
-        public Builder setAutoRenew(@Nullable Boolean autoRenew) {
+        public Builder autoRenew(@Nullable Boolean autoRenew) {
             this.autoRenew = autoRenew;
             return this;
         }
 
-        public Builder setCreatedTime(String createdTime) {
+        public Builder createdTime(String createdTime) {
             this.createdTime = Objects.requireNonNull(createdTime);
             return this;
         }
 
-        public Builder setDnsType(@Nullable String dnsType) {
+        public Builder dnsType(@Nullable String dnsType) {
             this.dnsType = dnsType;
             return this;
         }
 
-        public Builder setDnsZoneId(@Nullable String dnsZoneId) {
+        public Builder dnsZoneId(@Nullable String dnsZoneId) {
             this.dnsZoneId = dnsZoneId;
             return this;
         }
 
-        public Builder setDomainNotRenewableReasons(List<String> domainNotRenewableReasons) {
+        public Builder domainNotRenewableReasons(List<String> domainNotRenewableReasons) {
             this.domainNotRenewableReasons = Objects.requireNonNull(domainNotRenewableReasons);
             return this;
         }
 
-        public Builder setExpirationTime(String expirationTime) {
+        public Builder expirationTime(String expirationTime) {
             this.expirationTime = Objects.requireNonNull(expirationTime);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setKind(@Nullable String kind) {
+        public Builder kind(@Nullable String kind) {
             this.kind = kind;
             return this;
         }
 
-        public Builder setLastRenewedTime(String lastRenewedTime) {
+        public Builder lastRenewedTime(String lastRenewedTime) {
             this.lastRenewedTime = Objects.requireNonNull(lastRenewedTime);
             return this;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setManagedHostNames(List<HostNameResponse> managedHostNames) {
+        public Builder managedHostNames(List<HostNameResponse> managedHostNames) {
             this.managedHostNames = Objects.requireNonNull(managedHostNames);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setNameServers(List<String> nameServers) {
+        public Builder nameServers(List<String> nameServers) {
             this.nameServers = Objects.requireNonNull(nameServers);
             return this;
         }
 
-        public Builder setPrivacy(@Nullable Boolean privacy) {
+        public Builder privacy(@Nullable Boolean privacy) {
             this.privacy = privacy;
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setReadyForDnsRecordManagement(Boolean readyForDnsRecordManagement) {
+        public Builder readyForDnsRecordManagement(Boolean readyForDnsRecordManagement) {
             this.readyForDnsRecordManagement = Objects.requireNonNull(readyForDnsRecordManagement);
             return this;
         }
 
-        public Builder setRegistrationStatus(String registrationStatus) {
+        public Builder registrationStatus(String registrationStatus) {
             this.registrationStatus = Objects.requireNonNull(registrationStatus);
             return this;
         }
 
-        public Builder setSystemData(SystemDataResponse systemData) {
+        public Builder systemData(SystemDataResponse systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTargetDnsType(@Nullable String targetDnsType) {
+        public Builder targetDnsType(@Nullable String targetDnsType) {
             this.targetDnsType = targetDnsType;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

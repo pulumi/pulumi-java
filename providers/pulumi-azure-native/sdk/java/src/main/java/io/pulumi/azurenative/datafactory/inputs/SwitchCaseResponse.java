@@ -114,12 +114,12 @@ public final class SwitchCaseResponse extends io.pulumi.resources.InvokeArgs {
     	      this.value = defaults.value;
         }
 
-        public Builder setActivities(@Nullable List<Object> activities) {
+        public Builder activities(@Nullable List<Object> activities) {
             this.activities = activities;
             return this;
         }
 
-        public Builder setValue(@Nullable String value) {
+        public Builder value(@Nullable String value) {
             this.value = value;
             return this;
         }

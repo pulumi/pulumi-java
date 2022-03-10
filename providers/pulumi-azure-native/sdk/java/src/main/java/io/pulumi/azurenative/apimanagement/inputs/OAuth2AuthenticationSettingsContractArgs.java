@@ -74,22 +74,22 @@ public final class OAuth2AuthenticationSettingsContractArgs extends io.pulumi.re
     	      this.scope = defaults.scope;
         }
 
-        public Builder setAuthorizationServerId(@Nullable Input<String> authorizationServerId) {
+        public Builder authorizationServerId(@Nullable Input<String> authorizationServerId) {
             this.authorizationServerId = authorizationServerId;
             return this;
         }
 
-        public Builder setAuthorizationServerId(@Nullable String authorizationServerId) {
+        public Builder authorizationServerId(@Nullable String authorizationServerId) {
             this.authorizationServerId = Input.ofNullable(authorizationServerId);
             return this;
         }
 
-        public Builder setScope(@Nullable Input<String> scope) {
+        public Builder scope(@Nullable Input<String> scope) {
             this.scope = scope;
             return this;
         }
 
-        public Builder setScope(@Nullable String scope) {
+        public Builder scope(@Nullable String scope) {
             this.scope = Input.ofNullable(scope);
             return this;
         }

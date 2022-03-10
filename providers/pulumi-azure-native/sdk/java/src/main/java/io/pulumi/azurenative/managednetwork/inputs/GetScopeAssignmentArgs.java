@@ -68,12 +68,12 @@ public final class GetScopeAssignmentArgs extends io.pulumi.resources.InvokeArgs
     	      this.scopeAssignmentName = defaults.scopeAssignmentName;
         }
 
-        public Builder setScope(String scope) {
+        public Builder scope(String scope) {
             this.scope = Objects.requireNonNull(scope);
             return this;
         }
 
-        public Builder setScopeAssignmentName(String scopeAssignmentName) {
+        public Builder scopeAssignmentName(String scopeAssignmentName) {
             this.scopeAssignmentName = Objects.requireNonNull(scopeAssignmentName);
             return this;
         }

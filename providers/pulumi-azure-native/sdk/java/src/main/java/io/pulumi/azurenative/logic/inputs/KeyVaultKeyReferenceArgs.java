@@ -91,32 +91,32 @@ public final class KeyVaultKeyReferenceArgs extends io.pulumi.resources.Resource
     	      this.keyVersion = defaults.keyVersion;
         }
 
-        public Builder setKeyName(Input<String> keyName) {
+        public Builder keyName(Input<String> keyName) {
             this.keyName = Objects.requireNonNull(keyName);
             return this;
         }
 
-        public Builder setKeyName(String keyName) {
+        public Builder keyName(String keyName) {
             this.keyName = Input.of(Objects.requireNonNull(keyName));
             return this;
         }
 
-        public Builder setKeyVault(Input<KeyVaultKeyReferenceKeyVaultArgs> keyVault) {
+        public Builder keyVault(Input<KeyVaultKeyReferenceKeyVaultArgs> keyVault) {
             this.keyVault = Objects.requireNonNull(keyVault);
             return this;
         }
 
-        public Builder setKeyVault(KeyVaultKeyReferenceKeyVaultArgs keyVault) {
+        public Builder keyVault(KeyVaultKeyReferenceKeyVaultArgs keyVault) {
             this.keyVault = Input.of(Objects.requireNonNull(keyVault));
             return this;
         }
 
-        public Builder setKeyVersion(@Nullable Input<String> keyVersion) {
+        public Builder keyVersion(@Nullable Input<String> keyVersion) {
             this.keyVersion = keyVersion;
             return this;
         }
 
-        public Builder setKeyVersion(@Nullable String keyVersion) {
+        public Builder keyVersion(@Nullable String keyVersion) {
             this.keyVersion = Input.ofNullable(keyVersion);
             return this;
         }

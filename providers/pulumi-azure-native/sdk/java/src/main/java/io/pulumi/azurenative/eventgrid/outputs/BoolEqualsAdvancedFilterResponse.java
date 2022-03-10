@@ -86,17 +86,17 @@ public final class BoolEqualsAdvancedFilterResponse {
     	      this.value = defaults.value;
         }
 
-        public Builder setKey(@Nullable String key) {
+        public Builder key(@Nullable String key) {
             this.key = key;
             return this;
         }
 
-        public Builder setOperatorType(String operatorType) {
+        public Builder operatorType(String operatorType) {
             this.operatorType = Objects.requireNonNull(operatorType);
             return this;
         }
 
-        public Builder setValue(@Nullable Boolean value) {
+        public Builder value(@Nullable Boolean value) {
             this.value = value;
             return this;
         }

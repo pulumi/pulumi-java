@@ -158,72 +158,72 @@ public final class ApiOAuthSettingsArgs extends io.pulumi.resources.ResourceArgs
     	      this.scopes = defaults.scopes;
         }
 
-        public Builder setClientId(@Nullable Input<String> clientId) {
+        public Builder clientId(@Nullable Input<String> clientId) {
             this.clientId = clientId;
             return this;
         }
 
-        public Builder setClientId(@Nullable String clientId) {
+        public Builder clientId(@Nullable String clientId) {
             this.clientId = Input.ofNullable(clientId);
             return this;
         }
 
-        public Builder setClientSecret(@Nullable Input<String> clientSecret) {
+        public Builder clientSecret(@Nullable Input<String> clientSecret) {
             this.clientSecret = clientSecret;
             return this;
         }
 
-        public Builder setClientSecret(@Nullable String clientSecret) {
+        public Builder clientSecret(@Nullable String clientSecret) {
             this.clientSecret = Input.ofNullable(clientSecret);
             return this;
         }
 
-        public Builder setCustomParameters(@Nullable Input<Map<String,ApiOAuthSettingsParameterArgs>> customParameters) {
+        public Builder customParameters(@Nullable Input<Map<String,ApiOAuthSettingsParameterArgs>> customParameters) {
             this.customParameters = customParameters;
             return this;
         }
 
-        public Builder setCustomParameters(@Nullable Map<String,ApiOAuthSettingsParameterArgs> customParameters) {
+        public Builder customParameters(@Nullable Map<String,ApiOAuthSettingsParameterArgs> customParameters) {
             this.customParameters = Input.ofNullable(customParameters);
             return this;
         }
 
-        public Builder setIdentityProvider(@Nullable Input<String> identityProvider) {
+        public Builder identityProvider(@Nullable Input<String> identityProvider) {
             this.identityProvider = identityProvider;
             return this;
         }
 
-        public Builder setIdentityProvider(@Nullable String identityProvider) {
+        public Builder identityProvider(@Nullable String identityProvider) {
             this.identityProvider = Input.ofNullable(identityProvider);
             return this;
         }
 
-        public Builder setProperties(@Nullable Input<Object> properties) {
+        public Builder properties(@Nullable Input<Object> properties) {
             this.properties = properties;
             return this;
         }
 
-        public Builder setProperties(@Nullable Object properties) {
+        public Builder properties(@Nullable Object properties) {
             this.properties = Input.ofNullable(properties);
             return this;
         }
 
-        public Builder setRedirectUrl(@Nullable Input<String> redirectUrl) {
+        public Builder redirectUrl(@Nullable Input<String> redirectUrl) {
             this.redirectUrl = redirectUrl;
             return this;
         }
 
-        public Builder setRedirectUrl(@Nullable String redirectUrl) {
+        public Builder redirectUrl(@Nullable String redirectUrl) {
             this.redirectUrl = Input.ofNullable(redirectUrl);
             return this;
         }
 
-        public Builder setScopes(@Nullable Input<List<String>> scopes) {
+        public Builder scopes(@Nullable Input<List<String>> scopes) {
             this.scopes = scopes;
             return this;
         }
 
-        public Builder setScopes(@Nullable List<String> scopes) {
+        public Builder scopes(@Nullable List<String> scopes) {
             this.scopes = Input.ofNullable(scopes);
             return this;
         }

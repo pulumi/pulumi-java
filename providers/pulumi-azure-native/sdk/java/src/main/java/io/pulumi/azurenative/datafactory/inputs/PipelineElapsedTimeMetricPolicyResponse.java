@@ -57,7 +57,7 @@ public final class PipelineElapsedTimeMetricPolicyResponse extends io.pulumi.res
     	      this.duration = defaults.duration;
         }
 
-        public Builder setDuration(@Nullable Object duration) {
+        public Builder duration(@Nullable Object duration) {
             this.duration = duration;
             return this;
         }

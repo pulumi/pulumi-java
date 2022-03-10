@@ -70,12 +70,12 @@ public final class ZipDeflateReadSettingsResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setPreserveZipFileNameAsFolder(@Nullable Object preserveZipFileNameAsFolder) {
+        public Builder preserveZipFileNameAsFolder(@Nullable Object preserveZipFileNameAsFolder) {
             this.preserveZipFileNameAsFolder = preserveZipFileNameAsFolder;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

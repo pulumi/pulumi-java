@@ -167,82 +167,82 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
     	      this.thumbprint = defaults.thumbprint;
         }
 
-        public Builder setAutomationAccountName(Input<String> automationAccountName) {
+        public Builder automationAccountName(Input<String> automationAccountName) {
             this.automationAccountName = Objects.requireNonNull(automationAccountName);
             return this;
         }
 
-        public Builder setAutomationAccountName(String automationAccountName) {
+        public Builder automationAccountName(String automationAccountName) {
             this.automationAccountName = Input.of(Objects.requireNonNull(automationAccountName));
             return this;
         }
 
-        public Builder setBase64Value(Input<String> base64Value) {
+        public Builder base64Value(Input<String> base64Value) {
             this.base64Value = Objects.requireNonNull(base64Value);
             return this;
         }
 
-        public Builder setBase64Value(String base64Value) {
+        public Builder base64Value(String base64Value) {
             this.base64Value = Input.of(Objects.requireNonNull(base64Value));
             return this;
         }
 
-        public Builder setCertificateName(@Nullable Input<String> certificateName) {
+        public Builder certificateName(@Nullable Input<String> certificateName) {
             this.certificateName = certificateName;
             return this;
         }
 
-        public Builder setCertificateName(@Nullable String certificateName) {
+        public Builder certificateName(@Nullable String certificateName) {
             this.certificateName = Input.ofNullable(certificateName);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setIsExportable(@Nullable Input<Boolean> isExportable) {
+        public Builder isExportable(@Nullable Input<Boolean> isExportable) {
             this.isExportable = isExportable;
             return this;
         }
 
-        public Builder setIsExportable(@Nullable Boolean isExportable) {
+        public Builder isExportable(@Nullable Boolean isExportable) {
             this.isExportable = Input.ofNullable(isExportable);
             return this;
         }
 
-        public Builder setName(Input<String> name) {
+        public Builder name(Input<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setThumbprint(@Nullable Input<String> thumbprint) {
+        public Builder thumbprint(@Nullable Input<String> thumbprint) {
             this.thumbprint = thumbprint;
             return this;
         }
 
-        public Builder setThumbprint(@Nullable String thumbprint) {
+        public Builder thumbprint(@Nullable String thumbprint) {
             this.thumbprint = Input.ofNullable(thumbprint);
             return this;
         }

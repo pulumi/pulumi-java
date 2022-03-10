@@ -123,52 +123,52 @@ public final class ContactDetailsArgs extends io.pulumi.resources.ResourceArgs {
     	      this.phoneExtension = defaults.phoneExtension;
         }
 
-        public Builder setContactName(Input<String> contactName) {
+        public Builder contactName(Input<String> contactName) {
             this.contactName = Objects.requireNonNull(contactName);
             return this;
         }
 
-        public Builder setContactName(String contactName) {
+        public Builder contactName(String contactName) {
             this.contactName = Input.of(Objects.requireNonNull(contactName));
             return this;
         }
 
-        public Builder setEmailList(Input<List<String>> emailList) {
+        public Builder emailList(Input<List<String>> emailList) {
             this.emailList = Objects.requireNonNull(emailList);
             return this;
         }
 
-        public Builder setEmailList(List<String> emailList) {
+        public Builder emailList(List<String> emailList) {
             this.emailList = Input.of(Objects.requireNonNull(emailList));
             return this;
         }
 
-        public Builder setMobile(@Nullable Input<String> mobile) {
+        public Builder mobile(@Nullable Input<String> mobile) {
             this.mobile = mobile;
             return this;
         }
 
-        public Builder setMobile(@Nullable String mobile) {
+        public Builder mobile(@Nullable String mobile) {
             this.mobile = Input.ofNullable(mobile);
             return this;
         }
 
-        public Builder setPhone(Input<String> phone) {
+        public Builder phone(Input<String> phone) {
             this.phone = Objects.requireNonNull(phone);
             return this;
         }
 
-        public Builder setPhone(String phone) {
+        public Builder phone(String phone) {
             this.phone = Input.of(Objects.requireNonNull(phone));
             return this;
         }
 
-        public Builder setPhoneExtension(@Nullable Input<String> phoneExtension) {
+        public Builder phoneExtension(@Nullable Input<String> phoneExtension) {
             this.phoneExtension = phoneExtension;
             return this;
         }
 
-        public Builder setPhoneExtension(@Nullable String phoneExtension) {
+        public Builder phoneExtension(@Nullable String phoneExtension) {
             this.phoneExtension = Input.ofNullable(phoneExtension);
             return this;
         }

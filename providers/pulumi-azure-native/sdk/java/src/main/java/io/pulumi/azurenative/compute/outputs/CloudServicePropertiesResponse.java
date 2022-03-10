@@ -244,62 +244,62 @@ public final class CloudServicePropertiesResponse {
     	      this.upgradeMode = defaults.upgradeMode;
         }
 
-        public Builder setAllowModelOverride(@Nullable Boolean allowModelOverride) {
+        public Builder allowModelOverride(@Nullable Boolean allowModelOverride) {
             this.allowModelOverride = allowModelOverride;
             return this;
         }
 
-        public Builder setConfiguration(@Nullable String configuration) {
+        public Builder configuration(@Nullable String configuration) {
             this.configuration = configuration;
             return this;
         }
 
-        public Builder setConfigurationUrl(@Nullable String configurationUrl) {
+        public Builder configurationUrl(@Nullable String configurationUrl) {
             this.configurationUrl = configurationUrl;
             return this;
         }
 
-        public Builder setExtensionProfile(@Nullable CloudServiceExtensionProfileResponse extensionProfile) {
+        public Builder extensionProfile(@Nullable CloudServiceExtensionProfileResponse extensionProfile) {
             this.extensionProfile = extensionProfile;
             return this;
         }
 
-        public Builder setNetworkProfile(@Nullable CloudServiceNetworkProfileResponse networkProfile) {
+        public Builder networkProfile(@Nullable CloudServiceNetworkProfileResponse networkProfile) {
             this.networkProfile = networkProfile;
             return this;
         }
 
-        public Builder setOsProfile(@Nullable CloudServiceOsProfileResponse osProfile) {
+        public Builder osProfile(@Nullable CloudServiceOsProfileResponse osProfile) {
             this.osProfile = osProfile;
             return this;
         }
 
-        public Builder setPackageUrl(@Nullable String packageUrl) {
+        public Builder packageUrl(@Nullable String packageUrl) {
             this.packageUrl = packageUrl;
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setRoleProfile(@Nullable CloudServiceRoleProfileResponse roleProfile) {
+        public Builder roleProfile(@Nullable CloudServiceRoleProfileResponse roleProfile) {
             this.roleProfile = roleProfile;
             return this;
         }
 
-        public Builder setStartCloudService(@Nullable Boolean startCloudService) {
+        public Builder startCloudService(@Nullable Boolean startCloudService) {
             this.startCloudService = startCloudService;
             return this;
         }
 
-        public Builder setUniqueId(String uniqueId) {
+        public Builder uniqueId(String uniqueId) {
             this.uniqueId = Objects.requireNonNull(uniqueId);
             return this;
         }
 
-        public Builder setUpgradeMode(@Nullable String upgradeMode) {
+        public Builder upgradeMode(@Nullable String upgradeMode) {
             this.upgradeMode = upgradeMode;
             return this;
         }

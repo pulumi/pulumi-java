@@ -68,12 +68,12 @@ public final class GetDedicatedCloudServiceArgs extends io.pulumi.resources.Invo
     	      this.resourceGroupName = defaults.resourceGroupName;
         }
 
-        public Builder setDedicatedCloudServiceName(String dedicatedCloudServiceName) {
+        public Builder dedicatedCloudServiceName(String dedicatedCloudServiceName) {
             this.dedicatedCloudServiceName = Objects.requireNonNull(dedicatedCloudServiceName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }

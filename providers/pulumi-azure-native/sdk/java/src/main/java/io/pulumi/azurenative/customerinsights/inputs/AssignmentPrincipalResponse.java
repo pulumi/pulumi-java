@@ -91,17 +91,17 @@ public final class AssignmentPrincipalResponse extends io.pulumi.resources.Invok
     	      this.principalType = defaults.principalType;
         }
 
-        public Builder setPrincipalId(String principalId) {
+        public Builder principalId(String principalId) {
             this.principalId = Objects.requireNonNull(principalId);
             return this;
         }
 
-        public Builder setPrincipalMetadata(@Nullable Map<String,String> principalMetadata) {
+        public Builder principalMetadata(@Nullable Map<String,String> principalMetadata) {
             this.principalMetadata = principalMetadata;
             return this;
         }
 
-        public Builder setPrincipalType(String principalType) {
+        public Builder principalType(String principalType) {
             this.principalType = Objects.requireNonNull(principalType);
             return this;
         }

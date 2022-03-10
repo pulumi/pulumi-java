@@ -65,12 +65,12 @@ public final class ServiceAuthConfigurationResponse {
     	      this.secondaryAuthKeyHash = defaults.secondaryAuthKeyHash;
         }
 
-        public Builder setPrimaryAuthKeyHash(String primaryAuthKeyHash) {
+        public Builder primaryAuthKeyHash(String primaryAuthKeyHash) {
             this.primaryAuthKeyHash = Objects.requireNonNull(primaryAuthKeyHash);
             return this;
         }
 
-        public Builder setSecondaryAuthKeyHash(String secondaryAuthKeyHash) {
+        public Builder secondaryAuthKeyHash(String secondaryAuthKeyHash) {
             this.secondaryAuthKeyHash = Objects.requireNonNull(secondaryAuthKeyHash);
             return this;
         }

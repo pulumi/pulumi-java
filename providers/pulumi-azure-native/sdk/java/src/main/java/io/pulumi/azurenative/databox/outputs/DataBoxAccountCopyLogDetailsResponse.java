@@ -99,22 +99,22 @@ public final class DataBoxAccountCopyLogDetailsResponse {
     	      this.copyVerboseLogLink = defaults.copyVerboseLogLink;
         }
 
-        public Builder setAccountName(String accountName) {
+        public Builder accountName(String accountName) {
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
 
-        public Builder setCopyLogDetailsType(String copyLogDetailsType) {
+        public Builder copyLogDetailsType(String copyLogDetailsType) {
             this.copyLogDetailsType = Objects.requireNonNull(copyLogDetailsType);
             return this;
         }
 
-        public Builder setCopyLogLink(String copyLogLink) {
+        public Builder copyLogLink(String copyLogLink) {
             this.copyLogLink = Objects.requireNonNull(copyLogLink);
             return this;
         }
 
-        public Builder setCopyVerboseLogLink(String copyVerboseLogLink) {
+        public Builder copyVerboseLogLink(String copyVerboseLogLink) {
             this.copyVerboseLogLink = Objects.requireNonNull(copyVerboseLogLink);
             return this;
         }

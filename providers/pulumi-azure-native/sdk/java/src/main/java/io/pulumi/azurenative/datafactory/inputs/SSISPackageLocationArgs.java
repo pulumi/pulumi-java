@@ -210,102 +210,102 @@ public final class SSISPackageLocationArgs extends io.pulumi.resources.ResourceA
     	      this.type = defaults.type;
         }
 
-        public Builder setAccessCredential(@Nullable Input<SSISAccessCredentialArgs> accessCredential) {
+        public Builder accessCredential(@Nullable Input<SSISAccessCredentialArgs> accessCredential) {
             this.accessCredential = accessCredential;
             return this;
         }
 
-        public Builder setAccessCredential(@Nullable SSISAccessCredentialArgs accessCredential) {
+        public Builder accessCredential(@Nullable SSISAccessCredentialArgs accessCredential) {
             this.accessCredential = Input.ofNullable(accessCredential);
             return this;
         }
 
-        public Builder setChildPackages(@Nullable Input<List<SSISChildPackageArgs>> childPackages) {
+        public Builder childPackages(@Nullable Input<List<SSISChildPackageArgs>> childPackages) {
             this.childPackages = childPackages;
             return this;
         }
 
-        public Builder setChildPackages(@Nullable List<SSISChildPackageArgs> childPackages) {
+        public Builder childPackages(@Nullable List<SSISChildPackageArgs> childPackages) {
             this.childPackages = Input.ofNullable(childPackages);
             return this;
         }
 
-        public Builder setConfigurationAccessCredential(@Nullable Input<SSISAccessCredentialArgs> configurationAccessCredential) {
+        public Builder configurationAccessCredential(@Nullable Input<SSISAccessCredentialArgs> configurationAccessCredential) {
             this.configurationAccessCredential = configurationAccessCredential;
             return this;
         }
 
-        public Builder setConfigurationAccessCredential(@Nullable SSISAccessCredentialArgs configurationAccessCredential) {
+        public Builder configurationAccessCredential(@Nullable SSISAccessCredentialArgs configurationAccessCredential) {
             this.configurationAccessCredential = Input.ofNullable(configurationAccessCredential);
             return this;
         }
 
-        public Builder setConfigurationPath(@Nullable Input<Object> configurationPath) {
+        public Builder configurationPath(@Nullable Input<Object> configurationPath) {
             this.configurationPath = configurationPath;
             return this;
         }
 
-        public Builder setConfigurationPath(@Nullable Object configurationPath) {
+        public Builder configurationPath(@Nullable Object configurationPath) {
             this.configurationPath = Input.ofNullable(configurationPath);
             return this;
         }
 
-        public Builder setPackageContent(@Nullable Input<Object> packageContent) {
+        public Builder packageContent(@Nullable Input<Object> packageContent) {
             this.packageContent = packageContent;
             return this;
         }
 
-        public Builder setPackageContent(@Nullable Object packageContent) {
+        public Builder packageContent(@Nullable Object packageContent) {
             this.packageContent = Input.ofNullable(packageContent);
             return this;
         }
 
-        public Builder setPackageLastModifiedDate(@Nullable Input<String> packageLastModifiedDate) {
+        public Builder packageLastModifiedDate(@Nullable Input<String> packageLastModifiedDate) {
             this.packageLastModifiedDate = packageLastModifiedDate;
             return this;
         }
 
-        public Builder setPackageLastModifiedDate(@Nullable String packageLastModifiedDate) {
+        public Builder packageLastModifiedDate(@Nullable String packageLastModifiedDate) {
             this.packageLastModifiedDate = Input.ofNullable(packageLastModifiedDate);
             return this;
         }
 
-        public Builder setPackageName(@Nullable Input<String> packageName) {
+        public Builder packageName(@Nullable Input<String> packageName) {
             this.packageName = packageName;
             return this;
         }
 
-        public Builder setPackageName(@Nullable String packageName) {
+        public Builder packageName(@Nullable String packageName) {
             this.packageName = Input.ofNullable(packageName);
             return this;
         }
 
-        public Builder setPackagePassword(@Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> packagePassword) {
+        public Builder packagePassword(@Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> packagePassword) {
             this.packagePassword = packagePassword;
             return this;
         }
 
-        public Builder setPackagePassword(@Nullable Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> packagePassword) {
+        public Builder packagePassword(@Nullable Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> packagePassword) {
             this.packagePassword = Input.ofNullable(packagePassword);
             return this;
         }
 
-        public Builder setPackagePath(@Nullable Input<Object> packagePath) {
+        public Builder packagePath(@Nullable Input<Object> packagePath) {
             this.packagePath = packagePath;
             return this;
         }
 
-        public Builder setPackagePath(@Nullable Object packagePath) {
+        public Builder packagePath(@Nullable Object packagePath) {
             this.packagePath = Input.ofNullable(packagePath);
             return this;
         }
 
-        public Builder setType(@Nullable Input<Either<String,SsisPackageLocationType>> type) {
+        public Builder type(@Nullable Input<Either<String,SsisPackageLocationType>> type) {
             this.type = type;
             return this;
         }
 
-        public Builder setType(@Nullable Either<String,SsisPackageLocationType> type) {
+        public Builder type(@Nullable Either<String,SsisPackageLocationType> type) {
             this.type = Input.ofNullable(type);
             return this;
         }

@@ -50,7 +50,7 @@ public final class UserObjectReceiverValueResponse {
     	      this.userObjectIds = defaults.userObjectIds;
         }
 
-        public Builder setUserObjectIds(@Nullable List<String> userObjectIds) {
+        public Builder userObjectIds(@Nullable List<String> userObjectIds) {
             this.userObjectIds = userObjectIds;
             return this;
         }

@@ -329,172 +329,172 @@ public final class ContainerGroupArgs extends io.pulumi.resources.ResourceArgs {
     	      this.volumes = defaults.volumes;
         }
 
-        public Builder setContainerGroupName(@Nullable Input<String> containerGroupName) {
+        public Builder containerGroupName(@Nullable Input<String> containerGroupName) {
             this.containerGroupName = containerGroupName;
             return this;
         }
 
-        public Builder setContainerGroupName(@Nullable String containerGroupName) {
+        public Builder containerGroupName(@Nullable String containerGroupName) {
             this.containerGroupName = Input.ofNullable(containerGroupName);
             return this;
         }
 
-        public Builder setContainers(Input<List<ContainerArgs>> containers) {
+        public Builder containers(Input<List<ContainerArgs>> containers) {
             this.containers = Objects.requireNonNull(containers);
             return this;
         }
 
-        public Builder setContainers(List<ContainerArgs> containers) {
+        public Builder containers(List<ContainerArgs> containers) {
             this.containers = Input.of(Objects.requireNonNull(containers));
             return this;
         }
 
-        public Builder setDiagnostics(@Nullable Input<ContainerGroupDiagnosticsArgs> diagnostics) {
+        public Builder diagnostics(@Nullable Input<ContainerGroupDiagnosticsArgs> diagnostics) {
             this.diagnostics = diagnostics;
             return this;
         }
 
-        public Builder setDiagnostics(@Nullable ContainerGroupDiagnosticsArgs diagnostics) {
+        public Builder diagnostics(@Nullable ContainerGroupDiagnosticsArgs diagnostics) {
             this.diagnostics = Input.ofNullable(diagnostics);
             return this;
         }
 
-        public Builder setDnsConfig(@Nullable Input<DnsConfigurationArgs> dnsConfig) {
+        public Builder dnsConfig(@Nullable Input<DnsConfigurationArgs> dnsConfig) {
             this.dnsConfig = dnsConfig;
             return this;
         }
 
-        public Builder setDnsConfig(@Nullable DnsConfigurationArgs dnsConfig) {
+        public Builder dnsConfig(@Nullable DnsConfigurationArgs dnsConfig) {
             this.dnsConfig = Input.ofNullable(dnsConfig);
             return this;
         }
 
-        public Builder setEncryptionProperties(@Nullable Input<EncryptionPropertiesArgs> encryptionProperties) {
+        public Builder encryptionProperties(@Nullable Input<EncryptionPropertiesArgs> encryptionProperties) {
             this.encryptionProperties = encryptionProperties;
             return this;
         }
 
-        public Builder setEncryptionProperties(@Nullable EncryptionPropertiesArgs encryptionProperties) {
+        public Builder encryptionProperties(@Nullable EncryptionPropertiesArgs encryptionProperties) {
             this.encryptionProperties = Input.ofNullable(encryptionProperties);
             return this;
         }
 
-        public Builder setIdentity(@Nullable Input<ContainerGroupIdentityArgs> identity) {
+        public Builder identity(@Nullable Input<ContainerGroupIdentityArgs> identity) {
             this.identity = identity;
             return this;
         }
 
-        public Builder setIdentity(@Nullable ContainerGroupIdentityArgs identity) {
+        public Builder identity(@Nullable ContainerGroupIdentityArgs identity) {
             this.identity = Input.ofNullable(identity);
             return this;
         }
 
-        public Builder setImageRegistryCredentials(@Nullable Input<List<ImageRegistryCredentialArgs>> imageRegistryCredentials) {
+        public Builder imageRegistryCredentials(@Nullable Input<List<ImageRegistryCredentialArgs>> imageRegistryCredentials) {
             this.imageRegistryCredentials = imageRegistryCredentials;
             return this;
         }
 
-        public Builder setImageRegistryCredentials(@Nullable List<ImageRegistryCredentialArgs> imageRegistryCredentials) {
+        public Builder imageRegistryCredentials(@Nullable List<ImageRegistryCredentialArgs> imageRegistryCredentials) {
             this.imageRegistryCredentials = Input.ofNullable(imageRegistryCredentials);
             return this;
         }
 
-        public Builder setInitContainers(@Nullable Input<List<InitContainerDefinitionArgs>> initContainers) {
+        public Builder initContainers(@Nullable Input<List<InitContainerDefinitionArgs>> initContainers) {
             this.initContainers = initContainers;
             return this;
         }
 
-        public Builder setInitContainers(@Nullable List<InitContainerDefinitionArgs> initContainers) {
+        public Builder initContainers(@Nullable List<InitContainerDefinitionArgs> initContainers) {
             this.initContainers = Input.ofNullable(initContainers);
             return this;
         }
 
-        public Builder setIpAddress(@Nullable Input<IpAddressArgs> ipAddress) {
+        public Builder ipAddress(@Nullable Input<IpAddressArgs> ipAddress) {
             this.ipAddress = ipAddress;
             return this;
         }
 
-        public Builder setIpAddress(@Nullable IpAddressArgs ipAddress) {
+        public Builder ipAddress(@Nullable IpAddressArgs ipAddress) {
             this.ipAddress = Input.ofNullable(ipAddress);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setNetworkProfile(@Nullable Input<ContainerGroupNetworkProfileArgs> networkProfile) {
+        public Builder networkProfile(@Nullable Input<ContainerGroupNetworkProfileArgs> networkProfile) {
             this.networkProfile = networkProfile;
             return this;
         }
 
-        public Builder setNetworkProfile(@Nullable ContainerGroupNetworkProfileArgs networkProfile) {
+        public Builder networkProfile(@Nullable ContainerGroupNetworkProfileArgs networkProfile) {
             this.networkProfile = Input.ofNullable(networkProfile);
             return this;
         }
 
-        public Builder setOsType(Input<Either<String,OperatingSystemTypes>> osType) {
+        public Builder osType(Input<Either<String,OperatingSystemTypes>> osType) {
             this.osType = Objects.requireNonNull(osType);
             return this;
         }
 
-        public Builder setOsType(Either<String,OperatingSystemTypes> osType) {
+        public Builder osType(Either<String,OperatingSystemTypes> osType) {
             this.osType = Input.of(Objects.requireNonNull(osType));
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setRestartPolicy(@Nullable Input<Either<String,ContainerGroupRestartPolicy>> restartPolicy) {
+        public Builder restartPolicy(@Nullable Input<Either<String,ContainerGroupRestartPolicy>> restartPolicy) {
             this.restartPolicy = restartPolicy;
             return this;
         }
 
-        public Builder setRestartPolicy(@Nullable Either<String,ContainerGroupRestartPolicy> restartPolicy) {
+        public Builder restartPolicy(@Nullable Either<String,ContainerGroupRestartPolicy> restartPolicy) {
             this.restartPolicy = Input.ofNullable(restartPolicy);
             return this;
         }
 
-        public Builder setSku(@Nullable Input<Either<String,ContainerGroupSku>> sku) {
+        public Builder sku(@Nullable Input<Either<String,ContainerGroupSku>> sku) {
             this.sku = sku;
             return this;
         }
 
-        public Builder setSku(@Nullable Either<String,ContainerGroupSku> sku) {
+        public Builder sku(@Nullable Either<String,ContainerGroupSku> sku) {
             this.sku = Input.ofNullable(sku);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setVolumes(@Nullable Input<List<VolumeArgs>> volumes) {
+        public Builder volumes(@Nullable Input<List<VolumeArgs>> volumes) {
             this.volumes = volumes;
             return this;
         }
 
-        public Builder setVolumes(@Nullable List<VolumeArgs> volumes) {
+        public Builder volumes(@Nullable List<VolumeArgs> volumes) {
             this.volumes = Input.ofNullable(volumes);
             return this;
         }

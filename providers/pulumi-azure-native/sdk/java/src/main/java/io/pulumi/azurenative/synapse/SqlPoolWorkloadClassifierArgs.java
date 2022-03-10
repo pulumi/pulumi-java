@@ -214,112 +214,112 @@ public final class SqlPoolWorkloadClassifierArgs extends io.pulumi.resources.Res
     	      this.workspaceName = defaults.workspaceName;
         }
 
-        public Builder setContext(@Nullable Input<String> context) {
+        public Builder context(@Nullable Input<String> context) {
             this.context = context;
             return this;
         }
 
-        public Builder setContext(@Nullable String context) {
+        public Builder context(@Nullable String context) {
             this.context = Input.ofNullable(context);
             return this;
         }
 
-        public Builder setEndTime(@Nullable Input<String> endTime) {
+        public Builder endTime(@Nullable Input<String> endTime) {
             this.endTime = endTime;
             return this;
         }
 
-        public Builder setEndTime(@Nullable String endTime) {
+        public Builder endTime(@Nullable String endTime) {
             this.endTime = Input.ofNullable(endTime);
             return this;
         }
 
-        public Builder setImportance(@Nullable Input<String> importance) {
+        public Builder importance(@Nullable Input<String> importance) {
             this.importance = importance;
             return this;
         }
 
-        public Builder setImportance(@Nullable String importance) {
+        public Builder importance(@Nullable String importance) {
             this.importance = Input.ofNullable(importance);
             return this;
         }
 
-        public Builder setLabel(@Nullable Input<String> label) {
+        public Builder label(@Nullable Input<String> label) {
             this.label = label;
             return this;
         }
 
-        public Builder setLabel(@Nullable String label) {
+        public Builder label(@Nullable String label) {
             this.label = Input.ofNullable(label);
             return this;
         }
 
-        public Builder setMemberName(Input<String> memberName) {
+        public Builder memberName(Input<String> memberName) {
             this.memberName = Objects.requireNonNull(memberName);
             return this;
         }
 
-        public Builder setMemberName(String memberName) {
+        public Builder memberName(String memberName) {
             this.memberName = Input.of(Objects.requireNonNull(memberName));
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setSqlPoolName(Input<String> sqlPoolName) {
+        public Builder sqlPoolName(Input<String> sqlPoolName) {
             this.sqlPoolName = Objects.requireNonNull(sqlPoolName);
             return this;
         }
 
-        public Builder setSqlPoolName(String sqlPoolName) {
+        public Builder sqlPoolName(String sqlPoolName) {
             this.sqlPoolName = Input.of(Objects.requireNonNull(sqlPoolName));
             return this;
         }
 
-        public Builder setStartTime(@Nullable Input<String> startTime) {
+        public Builder startTime(@Nullable Input<String> startTime) {
             this.startTime = startTime;
             return this;
         }
 
-        public Builder setStartTime(@Nullable String startTime) {
+        public Builder startTime(@Nullable String startTime) {
             this.startTime = Input.ofNullable(startTime);
             return this;
         }
 
-        public Builder setWorkloadClassifierName(@Nullable Input<String> workloadClassifierName) {
+        public Builder workloadClassifierName(@Nullable Input<String> workloadClassifierName) {
             this.workloadClassifierName = workloadClassifierName;
             return this;
         }
 
-        public Builder setWorkloadClassifierName(@Nullable String workloadClassifierName) {
+        public Builder workloadClassifierName(@Nullable String workloadClassifierName) {
             this.workloadClassifierName = Input.ofNullable(workloadClassifierName);
             return this;
         }
 
-        public Builder setWorkloadGroupName(Input<String> workloadGroupName) {
+        public Builder workloadGroupName(Input<String> workloadGroupName) {
             this.workloadGroupName = Objects.requireNonNull(workloadGroupName);
             return this;
         }
 
-        public Builder setWorkloadGroupName(String workloadGroupName) {
+        public Builder workloadGroupName(String workloadGroupName) {
             this.workloadGroupName = Input.of(Objects.requireNonNull(workloadGroupName));
             return this;
         }
 
-        public Builder setWorkspaceName(Input<String> workspaceName) {
+        public Builder workspaceName(Input<String> workspaceName) {
             this.workspaceName = Objects.requireNonNull(workspaceName);
             return this;
         }
 
-        public Builder setWorkspaceName(String workspaceName) {
+        public Builder workspaceName(String workspaceName) {
             this.workspaceName = Input.of(Objects.requireNonNull(workspaceName));
             return this;
         }

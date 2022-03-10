@@ -84,17 +84,17 @@ public final class GetGraphResourceGraphArgs extends io.pulumi.resources.InvokeA
     	      this.resourceGroupName = defaults.resourceGroupName;
         }
 
-        public Builder setAccountName(String accountName) {
+        public Builder accountName(String accountName) {
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
 
-        public Builder setGraphName(String graphName) {
+        public Builder graphName(String graphName) {
             this.graphName = Objects.requireNonNull(graphName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }

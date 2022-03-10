@@ -335,182 +335,182 @@ public final class AzurePowerShellScriptArgs extends io.pulumi.resources.Resourc
     	      this.timeout = defaults.timeout;
         }
 
-        public Builder setArguments(@Nullable Input<String> arguments) {
+        public Builder arguments(@Nullable Input<String> arguments) {
             this.arguments = arguments;
             return this;
         }
 
-        public Builder setArguments(@Nullable String arguments) {
+        public Builder arguments(@Nullable String arguments) {
             this.arguments = Input.ofNullable(arguments);
             return this;
         }
 
-        public Builder setAzPowerShellVersion(Input<String> azPowerShellVersion) {
+        public Builder azPowerShellVersion(Input<String> azPowerShellVersion) {
             this.azPowerShellVersion = Objects.requireNonNull(azPowerShellVersion);
             return this;
         }
 
-        public Builder setAzPowerShellVersion(String azPowerShellVersion) {
+        public Builder azPowerShellVersion(String azPowerShellVersion) {
             this.azPowerShellVersion = Input.of(Objects.requireNonNull(azPowerShellVersion));
             return this;
         }
 
-        public Builder setCleanupPreference(@Nullable Input<Either<String,CleanupOptions>> cleanupPreference) {
+        public Builder cleanupPreference(@Nullable Input<Either<String,CleanupOptions>> cleanupPreference) {
             this.cleanupPreference = cleanupPreference;
             return this;
         }
 
-        public Builder setCleanupPreference(@Nullable Either<String,CleanupOptions> cleanupPreference) {
+        public Builder cleanupPreference(@Nullable Either<String,CleanupOptions> cleanupPreference) {
             this.cleanupPreference = Input.ofNullable(cleanupPreference);
             return this;
         }
 
-        public Builder setContainerSettings(@Nullable Input<ContainerConfigurationArgs> containerSettings) {
+        public Builder containerSettings(@Nullable Input<ContainerConfigurationArgs> containerSettings) {
             this.containerSettings = containerSettings;
             return this;
         }
 
-        public Builder setContainerSettings(@Nullable ContainerConfigurationArgs containerSettings) {
+        public Builder containerSettings(@Nullable ContainerConfigurationArgs containerSettings) {
             this.containerSettings = Input.ofNullable(containerSettings);
             return this;
         }
 
-        public Builder setEnvironmentVariables(@Nullable Input<List<EnvironmentVariableArgs>> environmentVariables) {
+        public Builder environmentVariables(@Nullable Input<List<EnvironmentVariableArgs>> environmentVariables) {
             this.environmentVariables = environmentVariables;
             return this;
         }
 
-        public Builder setEnvironmentVariables(@Nullable List<EnvironmentVariableArgs> environmentVariables) {
+        public Builder environmentVariables(@Nullable List<EnvironmentVariableArgs> environmentVariables) {
             this.environmentVariables = Input.ofNullable(environmentVariables);
             return this;
         }
 
-        public Builder setForceUpdateTag(@Nullable Input<String> forceUpdateTag) {
+        public Builder forceUpdateTag(@Nullable Input<String> forceUpdateTag) {
             this.forceUpdateTag = forceUpdateTag;
             return this;
         }
 
-        public Builder setForceUpdateTag(@Nullable String forceUpdateTag) {
+        public Builder forceUpdateTag(@Nullable String forceUpdateTag) {
             this.forceUpdateTag = Input.ofNullable(forceUpdateTag);
             return this;
         }
 
-        public Builder setIdentity(@Nullable Input<ManagedServiceIdentityArgs> identity) {
+        public Builder identity(@Nullable Input<ManagedServiceIdentityArgs> identity) {
             this.identity = identity;
             return this;
         }
 
-        public Builder setIdentity(@Nullable ManagedServiceIdentityArgs identity) {
+        public Builder identity(@Nullable ManagedServiceIdentityArgs identity) {
             this.identity = Input.ofNullable(identity);
             return this;
         }
 
-        public Builder setKind(Input<String> kind) {
+        public Builder kind(Input<String> kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Input.of(Objects.requireNonNull(kind));
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setPrimaryScriptUri(@Nullable Input<String> primaryScriptUri) {
+        public Builder primaryScriptUri(@Nullable Input<String> primaryScriptUri) {
             this.primaryScriptUri = primaryScriptUri;
             return this;
         }
 
-        public Builder setPrimaryScriptUri(@Nullable String primaryScriptUri) {
+        public Builder primaryScriptUri(@Nullable String primaryScriptUri) {
             this.primaryScriptUri = Input.ofNullable(primaryScriptUri);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setRetentionInterval(Input<String> retentionInterval) {
+        public Builder retentionInterval(Input<String> retentionInterval) {
             this.retentionInterval = Objects.requireNonNull(retentionInterval);
             return this;
         }
 
-        public Builder setRetentionInterval(String retentionInterval) {
+        public Builder retentionInterval(String retentionInterval) {
             this.retentionInterval = Input.of(Objects.requireNonNull(retentionInterval));
             return this;
         }
 
-        public Builder setScriptContent(@Nullable Input<String> scriptContent) {
+        public Builder scriptContent(@Nullable Input<String> scriptContent) {
             this.scriptContent = scriptContent;
             return this;
         }
 
-        public Builder setScriptContent(@Nullable String scriptContent) {
+        public Builder scriptContent(@Nullable String scriptContent) {
             this.scriptContent = Input.ofNullable(scriptContent);
             return this;
         }
 
-        public Builder setScriptName(@Nullable Input<String> scriptName) {
+        public Builder scriptName(@Nullable Input<String> scriptName) {
             this.scriptName = scriptName;
             return this;
         }
 
-        public Builder setScriptName(@Nullable String scriptName) {
+        public Builder scriptName(@Nullable String scriptName) {
             this.scriptName = Input.ofNullable(scriptName);
             return this;
         }
 
-        public Builder setStorageAccountSettings(@Nullable Input<StorageAccountConfigurationArgs> storageAccountSettings) {
+        public Builder storageAccountSettings(@Nullable Input<StorageAccountConfigurationArgs> storageAccountSettings) {
             this.storageAccountSettings = storageAccountSettings;
             return this;
         }
 
-        public Builder setStorageAccountSettings(@Nullable StorageAccountConfigurationArgs storageAccountSettings) {
+        public Builder storageAccountSettings(@Nullable StorageAccountConfigurationArgs storageAccountSettings) {
             this.storageAccountSettings = Input.ofNullable(storageAccountSettings);
             return this;
         }
 
-        public Builder setSupportingScriptUris(@Nullable Input<List<String>> supportingScriptUris) {
+        public Builder supportingScriptUris(@Nullable Input<List<String>> supportingScriptUris) {
             this.supportingScriptUris = supportingScriptUris;
             return this;
         }
 
-        public Builder setSupportingScriptUris(@Nullable List<String> supportingScriptUris) {
+        public Builder supportingScriptUris(@Nullable List<String> supportingScriptUris) {
             this.supportingScriptUris = Input.ofNullable(supportingScriptUris);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTimeout(@Nullable Input<String> timeout) {
+        public Builder timeout(@Nullable Input<String> timeout) {
             this.timeout = timeout;
             return this;
         }
 
-        public Builder setTimeout(@Nullable String timeout) {
+        public Builder timeout(@Nullable String timeout) {
             this.timeout = Input.ofNullable(timeout);
             return this;
         }

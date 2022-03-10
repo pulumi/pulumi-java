@@ -94,32 +94,32 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
     	      this.provisioningState = defaults.provisioningState;
         }
 
-        public Builder setPrivateEndpoint(@Nullable Input<PrivateEndpointArgs> privateEndpoint) {
+        public Builder privateEndpoint(@Nullable Input<PrivateEndpointArgs> privateEndpoint) {
             this.privateEndpoint = privateEndpoint;
             return this;
         }
 
-        public Builder setPrivateEndpoint(@Nullable PrivateEndpointArgs privateEndpoint) {
+        public Builder privateEndpoint(@Nullable PrivateEndpointArgs privateEndpoint) {
             this.privateEndpoint = Input.ofNullable(privateEndpoint);
             return this;
         }
 
-        public Builder setPrivateLinkServiceConnectionState(@Nullable Input<PrivateLinkServiceConnectionStateArgs> privateLinkServiceConnectionState) {
+        public Builder privateLinkServiceConnectionState(@Nullable Input<PrivateLinkServiceConnectionStateArgs> privateLinkServiceConnectionState) {
             this.privateLinkServiceConnectionState = privateLinkServiceConnectionState;
             return this;
         }
 
-        public Builder setPrivateLinkServiceConnectionState(@Nullable PrivateLinkServiceConnectionStateArgs privateLinkServiceConnectionState) {
+        public Builder privateLinkServiceConnectionState(@Nullable PrivateLinkServiceConnectionStateArgs privateLinkServiceConnectionState) {
             this.privateLinkServiceConnectionState = Input.ofNullable(privateLinkServiceConnectionState);
             return this;
         }
 
-        public Builder setProvisioningState(@Nullable Input<Either<String,ProvisioningState>> provisioningState) {
+        public Builder provisioningState(@Nullable Input<Either<String,ProvisioningState>> provisioningState) {
             this.provisioningState = provisioningState;
             return this;
         }
 
-        public Builder setProvisioningState(@Nullable Either<String,ProvisioningState> provisioningState) {
+        public Builder provisioningState(@Nullable Either<String,ProvisioningState> provisioningState) {
             this.provisioningState = Input.ofNullable(provisioningState);
             return this;
         }

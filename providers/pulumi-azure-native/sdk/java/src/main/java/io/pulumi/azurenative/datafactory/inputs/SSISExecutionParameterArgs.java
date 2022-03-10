@@ -56,12 +56,12 @@ public final class SSISExecutionParameterArgs extends io.pulumi.resources.Resour
     	      this.value = defaults.value;
         }
 
-        public Builder setValue(Input<Object> value) {
+        public Builder value(Input<Object> value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }
 
-        public Builder setValue(Object value) {
+        public Builder value(Object value) {
             this.value = Input.of(Objects.requireNonNull(value));
             return this;
         }

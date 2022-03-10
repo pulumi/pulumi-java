@@ -166,82 +166,82 @@ public final class OpenIdConnectProviderArgs extends io.pulumi.resources.Resourc
     	      this.serviceName = defaults.serviceName;
         }
 
-        public Builder setClientId(Input<String> clientId) {
+        public Builder clientId(Input<String> clientId) {
             this.clientId = Objects.requireNonNull(clientId);
             return this;
         }
 
-        public Builder setClientId(String clientId) {
+        public Builder clientId(String clientId) {
             this.clientId = Input.of(Objects.requireNonNull(clientId));
             return this;
         }
 
-        public Builder setClientSecret(@Nullable Input<String> clientSecret) {
+        public Builder clientSecret(@Nullable Input<String> clientSecret) {
             this.clientSecret = clientSecret;
             return this;
         }
 
-        public Builder setClientSecret(@Nullable String clientSecret) {
+        public Builder clientSecret(@Nullable String clientSecret) {
             this.clientSecret = Input.ofNullable(clientSecret);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setDisplayName(Input<String> displayName) {
+        public Builder displayName(Input<String> displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Input.of(Objects.requireNonNull(displayName));
             return this;
         }
 
-        public Builder setMetadataEndpoint(Input<String> metadataEndpoint) {
+        public Builder metadataEndpoint(Input<String> metadataEndpoint) {
             this.metadataEndpoint = Objects.requireNonNull(metadataEndpoint);
             return this;
         }
 
-        public Builder setMetadataEndpoint(String metadataEndpoint) {
+        public Builder metadataEndpoint(String metadataEndpoint) {
             this.metadataEndpoint = Input.of(Objects.requireNonNull(metadataEndpoint));
             return this;
         }
 
-        public Builder setOpid(@Nullable Input<String> opid) {
+        public Builder opid(@Nullable Input<String> opid) {
             this.opid = opid;
             return this;
         }
 
-        public Builder setOpid(@Nullable String opid) {
+        public Builder opid(@Nullable String opid) {
             this.opid = Input.ofNullable(opid);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setServiceName(Input<String> serviceName) {
+        public Builder serviceName(Input<String> serviceName) {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
         }
 
-        public Builder setServiceName(String serviceName) {
+        public Builder serviceName(String serviceName) {
             this.serviceName = Input.of(Objects.requireNonNull(serviceName));
             return this;
         }

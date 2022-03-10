@@ -107,22 +107,22 @@ public final class StorageProfileResponse extends io.pulumi.resources.InvokeArgs
     	      this.storageMB = defaults.storageMB;
         }
 
-        public Builder setBackupRetentionDays(@Nullable Integer backupRetentionDays) {
+        public Builder backupRetentionDays(@Nullable Integer backupRetentionDays) {
             this.backupRetentionDays = backupRetentionDays;
             return this;
         }
 
-        public Builder setGeoRedundantBackup(@Nullable String geoRedundantBackup) {
+        public Builder geoRedundantBackup(@Nullable String geoRedundantBackup) {
             this.geoRedundantBackup = geoRedundantBackup;
             return this;
         }
 
-        public Builder setStorageAutogrow(@Nullable String storageAutogrow) {
+        public Builder storageAutogrow(@Nullable String storageAutogrow) {
             this.storageAutogrow = storageAutogrow;
             return this;
         }
 
-        public Builder setStorageMB(@Nullable Integer storageMB) {
+        public Builder storageMB(@Nullable Integer storageMB) {
             this.storageMB = storageMB;
             return this;
         }

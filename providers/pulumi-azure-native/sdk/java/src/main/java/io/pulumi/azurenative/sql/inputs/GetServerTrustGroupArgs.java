@@ -84,17 +84,17 @@ public final class GetServerTrustGroupArgs extends io.pulumi.resources.InvokeArg
     	      this.serverTrustGroupName = defaults.serverTrustGroupName;
         }
 
-        public Builder setLocationName(String locationName) {
+        public Builder locationName(String locationName) {
             this.locationName = Objects.requireNonNull(locationName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setServerTrustGroupName(String serverTrustGroupName) {
+        public Builder serverTrustGroupName(String serverTrustGroupName) {
             this.serverTrustGroupName = Objects.requireNonNull(serverTrustGroupName);
             return this;
         }

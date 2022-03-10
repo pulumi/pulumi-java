@@ -74,22 +74,22 @@ public final class IdAssetReferenceArgs extends io.pulumi.resources.ResourceArgs
     	      this.referenceType = defaults.referenceType;
         }
 
-        public Builder setAssetId(Input<String> assetId) {
+        public Builder assetId(Input<String> assetId) {
             this.assetId = Objects.requireNonNull(assetId);
             return this;
         }
 
-        public Builder setAssetId(String assetId) {
+        public Builder assetId(String assetId) {
             this.assetId = Input.of(Objects.requireNonNull(assetId));
             return this;
         }
 
-        public Builder setReferenceType(Input<String> referenceType) {
+        public Builder referenceType(Input<String> referenceType) {
             this.referenceType = Objects.requireNonNull(referenceType);
             return this;
         }
 
-        public Builder setReferenceType(String referenceType) {
+        public Builder referenceType(String referenceType) {
             this.referenceType = Input.of(Objects.requireNonNull(referenceType));
             return this;
         }

@@ -48,7 +48,7 @@ public final class IdentityForCmkResponse {
     	      this.userAssignedIdentity = defaults.userAssignedIdentity;
         }
 
-        public Builder setUserAssignedIdentity(String userAssignedIdentity) {
+        public Builder userAssignedIdentity(String userAssignedIdentity) {
             this.userAssignedIdentity = Objects.requireNonNull(userAssignedIdentity);
             return this;
         }

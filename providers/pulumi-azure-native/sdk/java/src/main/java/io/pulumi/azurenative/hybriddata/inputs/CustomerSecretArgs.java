@@ -90,32 +90,32 @@ public final class CustomerSecretArgs extends io.pulumi.resources.ResourceArgs {
     	      this.keyValue = defaults.keyValue;
         }
 
-        public Builder setAlgorithm(Input<SupportedAlgorithm> algorithm) {
+        public Builder algorithm(Input<SupportedAlgorithm> algorithm) {
             this.algorithm = Objects.requireNonNull(algorithm);
             return this;
         }
 
-        public Builder setAlgorithm(SupportedAlgorithm algorithm) {
+        public Builder algorithm(SupportedAlgorithm algorithm) {
             this.algorithm = Input.of(Objects.requireNonNull(algorithm));
             return this;
         }
 
-        public Builder setKeyIdentifier(Input<String> keyIdentifier) {
+        public Builder keyIdentifier(Input<String> keyIdentifier) {
             this.keyIdentifier = Objects.requireNonNull(keyIdentifier);
             return this;
         }
 
-        public Builder setKeyIdentifier(String keyIdentifier) {
+        public Builder keyIdentifier(String keyIdentifier) {
             this.keyIdentifier = Input.of(Objects.requireNonNull(keyIdentifier));
             return this;
         }
 
-        public Builder setKeyValue(Input<String> keyValue) {
+        public Builder keyValue(Input<String> keyValue) {
             this.keyValue = Objects.requireNonNull(keyValue);
             return this;
         }
 
-        public Builder setKeyValue(String keyValue) {
+        public Builder keyValue(String keyValue) {
             this.keyValue = Input.of(Objects.requireNonNull(keyValue));
             return this;
         }

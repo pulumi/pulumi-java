@@ -48,7 +48,7 @@ public final class ShareInfoElementResponse {
     	      this.vmUri = defaults.vmUri;
         }
 
-        public Builder setVmUri(String vmUri) {
+        public Builder vmUri(String vmUri) {
             this.vmUri = Objects.requireNonNull(vmUri);
             return this;
         }

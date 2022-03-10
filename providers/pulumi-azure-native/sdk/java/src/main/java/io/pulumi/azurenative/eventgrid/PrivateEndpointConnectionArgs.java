@@ -171,82 +171,82 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
     	      this.resourceGroupName = defaults.resourceGroupName;
         }
 
-        public Builder setGroupIds(@Nullable Input<List<String>> groupIds) {
+        public Builder groupIds(@Nullable Input<List<String>> groupIds) {
             this.groupIds = groupIds;
             return this;
         }
 
-        public Builder setGroupIds(@Nullable List<String> groupIds) {
+        public Builder groupIds(@Nullable List<String> groupIds) {
             this.groupIds = Input.ofNullable(groupIds);
             return this;
         }
 
-        public Builder setParentName(Input<String> parentName) {
+        public Builder parentName(Input<String> parentName) {
             this.parentName = Objects.requireNonNull(parentName);
             return this;
         }
 
-        public Builder setParentName(String parentName) {
+        public Builder parentName(String parentName) {
             this.parentName = Input.of(Objects.requireNonNull(parentName));
             return this;
         }
 
-        public Builder setParentType(Input<String> parentType) {
+        public Builder parentType(Input<String> parentType) {
             this.parentType = Objects.requireNonNull(parentType);
             return this;
         }
 
-        public Builder setParentType(String parentType) {
+        public Builder parentType(String parentType) {
             this.parentType = Input.of(Objects.requireNonNull(parentType));
             return this;
         }
 
-        public Builder setPrivateEndpoint(@Nullable Input<PrivateEndpointArgs> privateEndpoint) {
+        public Builder privateEndpoint(@Nullable Input<PrivateEndpointArgs> privateEndpoint) {
             this.privateEndpoint = privateEndpoint;
             return this;
         }
 
-        public Builder setPrivateEndpoint(@Nullable PrivateEndpointArgs privateEndpoint) {
+        public Builder privateEndpoint(@Nullable PrivateEndpointArgs privateEndpoint) {
             this.privateEndpoint = Input.ofNullable(privateEndpoint);
             return this;
         }
 
-        public Builder setPrivateEndpointConnectionName(@Nullable Input<String> privateEndpointConnectionName) {
+        public Builder privateEndpointConnectionName(@Nullable Input<String> privateEndpointConnectionName) {
             this.privateEndpointConnectionName = privateEndpointConnectionName;
             return this;
         }
 
-        public Builder setPrivateEndpointConnectionName(@Nullable String privateEndpointConnectionName) {
+        public Builder privateEndpointConnectionName(@Nullable String privateEndpointConnectionName) {
             this.privateEndpointConnectionName = Input.ofNullable(privateEndpointConnectionName);
             return this;
         }
 
-        public Builder setPrivateLinkServiceConnectionState(@Nullable Input<ConnectionStateArgs> privateLinkServiceConnectionState) {
+        public Builder privateLinkServiceConnectionState(@Nullable Input<ConnectionStateArgs> privateLinkServiceConnectionState) {
             this.privateLinkServiceConnectionState = privateLinkServiceConnectionState;
             return this;
         }
 
-        public Builder setPrivateLinkServiceConnectionState(@Nullable ConnectionStateArgs privateLinkServiceConnectionState) {
+        public Builder privateLinkServiceConnectionState(@Nullable ConnectionStateArgs privateLinkServiceConnectionState) {
             this.privateLinkServiceConnectionState = Input.ofNullable(privateLinkServiceConnectionState);
             return this;
         }
 
-        public Builder setProvisioningState(@Nullable Input<Either<String,ResourceProvisioningState>> provisioningState) {
+        public Builder provisioningState(@Nullable Input<Either<String,ResourceProvisioningState>> provisioningState) {
             this.provisioningState = provisioningState;
             return this;
         }
 
-        public Builder setProvisioningState(@Nullable Either<String,ResourceProvisioningState> provisioningState) {
+        public Builder provisioningState(@Nullable Either<String,ResourceProvisioningState> provisioningState) {
             this.provisioningState = Input.ofNullable(provisioningState);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }

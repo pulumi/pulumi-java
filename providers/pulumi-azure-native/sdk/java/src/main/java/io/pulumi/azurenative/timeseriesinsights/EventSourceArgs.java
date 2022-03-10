@@ -154,72 +154,72 @@ public final class EventSourceArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setEnvironmentName(Input<String> environmentName) {
+        public Builder environmentName(Input<String> environmentName) {
             this.environmentName = Objects.requireNonNull(environmentName);
             return this;
         }
 
-        public Builder setEnvironmentName(String environmentName) {
+        public Builder environmentName(String environmentName) {
             this.environmentName = Input.of(Objects.requireNonNull(environmentName));
             return this;
         }
 
-        public Builder setEventSourceName(@Nullable Input<String> eventSourceName) {
+        public Builder eventSourceName(@Nullable Input<String> eventSourceName) {
             this.eventSourceName = eventSourceName;
             return this;
         }
 
-        public Builder setEventSourceName(@Nullable String eventSourceName) {
+        public Builder eventSourceName(@Nullable String eventSourceName) {
             this.eventSourceName = Input.ofNullable(eventSourceName);
             return this;
         }
 
-        public Builder setKind(Input<Either<String,EventSourceKind>> kind) {
+        public Builder kind(Input<Either<String,EventSourceKind>> kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setKind(Either<String,EventSourceKind> kind) {
+        public Builder kind(Either<String,EventSourceKind> kind) {
             this.kind = Input.of(Objects.requireNonNull(kind));
             return this;
         }
 
-        public Builder setLocalTimestamp(@Nullable Input<LocalTimestampArgs> localTimestamp) {
+        public Builder localTimestamp(@Nullable Input<LocalTimestampArgs> localTimestamp) {
             this.localTimestamp = localTimestamp;
             return this;
         }
 
-        public Builder setLocalTimestamp(@Nullable LocalTimestampArgs localTimestamp) {
+        public Builder localTimestamp(@Nullable LocalTimestampArgs localTimestamp) {
             this.localTimestamp = Input.ofNullable(localTimestamp);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

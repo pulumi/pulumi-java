@@ -58,7 +58,7 @@ public final class CloudServiceRoleProfileResponse extends io.pulumi.resources.I
     	      this.roles = defaults.roles;
         }
 
-        public Builder setRoles(@Nullable List<CloudServiceRoleProfilePropertiesResponse> roles) {
+        public Builder roles(@Nullable List<CloudServiceRoleProfilePropertiesResponse> roles) {
             this.roles = roles;
             return this;
         }

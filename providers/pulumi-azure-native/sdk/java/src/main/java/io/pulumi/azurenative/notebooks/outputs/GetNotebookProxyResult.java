@@ -196,52 +196,52 @@ public final class GetNotebookProxyResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setHostname(@Nullable String hostname) {
+        public Builder hostname(@Nullable String hostname) {
             this.hostname = hostname;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPublicDns(@Nullable String publicDns) {
+        public Builder publicDns(@Nullable String publicDns) {
             this.publicDns = publicDns;
             return this;
         }
 
-        public Builder setPublicNetworkAccess(@Nullable String publicNetworkAccess) {
+        public Builder publicNetworkAccess(@Nullable String publicNetworkAccess) {
             this.publicNetworkAccess = publicNetworkAccess;
             return this;
         }
 
-        public Builder setRegion(@Nullable String region) {
+        public Builder region(@Nullable String region) {
             this.region = region;
             return this;
         }
 
-        public Builder setResourceId(String resourceId) {
+        public Builder resourceId(String resourceId) {
             this.resourceId = Objects.requireNonNull(resourceId);
             return this;
         }
 
-        public Builder setSecondaryAppId(@Nullable String secondaryAppId) {
+        public Builder secondaryAppId(@Nullable String secondaryAppId) {
             this.secondaryAppId = secondaryAppId;
             return this;
         }
 
-        public Builder setSystemData(@Nullable NotebookResourceSystemDataResponse systemData) {
+        public Builder systemData(@Nullable NotebookResourceSystemDataResponse systemData) {
             this.systemData = systemData;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

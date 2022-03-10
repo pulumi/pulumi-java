@@ -91,32 +91,32 @@ public final class AzNsActionGroupArgs extends io.pulumi.resources.ResourceArgs 
     	      this.emailSubject = defaults.emailSubject;
         }
 
-        public Builder setActionGroup(@Nullable Input<List<String>> actionGroup) {
+        public Builder actionGroup(@Nullable Input<List<String>> actionGroup) {
             this.actionGroup = actionGroup;
             return this;
         }
 
-        public Builder setActionGroup(@Nullable List<String> actionGroup) {
+        public Builder actionGroup(@Nullable List<String> actionGroup) {
             this.actionGroup = Input.ofNullable(actionGroup);
             return this;
         }
 
-        public Builder setCustomWebhookPayload(@Nullable Input<String> customWebhookPayload) {
+        public Builder customWebhookPayload(@Nullable Input<String> customWebhookPayload) {
             this.customWebhookPayload = customWebhookPayload;
             return this;
         }
 
-        public Builder setCustomWebhookPayload(@Nullable String customWebhookPayload) {
+        public Builder customWebhookPayload(@Nullable String customWebhookPayload) {
             this.customWebhookPayload = Input.ofNullable(customWebhookPayload);
             return this;
         }
 
-        public Builder setEmailSubject(@Nullable Input<String> emailSubject) {
+        public Builder emailSubject(@Nullable Input<String> emailSubject) {
             this.emailSubject = emailSubject;
             return this;
         }
 
-        public Builder setEmailSubject(@Nullable String emailSubject) {
+        public Builder emailSubject(@Nullable String emailSubject) {
             this.emailSubject = Input.ofNullable(emailSubject);
             return this;
         }

@@ -58,12 +58,12 @@ public final class AppSkuInfoArgs extends io.pulumi.resources.ResourceArgs {
     	      this.name = defaults.name;
         }
 
-        public Builder setName(Input<Either<String,AppSku>> name) {
+        public Builder name(Input<Either<String,AppSku>> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setName(Either<String,AppSku> name) {
+        public Builder name(Either<String,AppSku> name) {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }

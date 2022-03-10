@@ -112,27 +112,27 @@ public final class UserAccountResponse extends io.pulumi.resources.InvokeArgs {
     	      this.windowsUserConfiguration = defaults.windowsUserConfiguration;
         }
 
-        public Builder setElevationLevel(@Nullable String elevationLevel) {
+        public Builder elevationLevel(@Nullable String elevationLevel) {
             this.elevationLevel = elevationLevel;
             return this;
         }
 
-        public Builder setLinuxUserConfiguration(@Nullable LinuxUserConfigurationResponse linuxUserConfiguration) {
+        public Builder linuxUserConfiguration(@Nullable LinuxUserConfigurationResponse linuxUserConfiguration) {
             this.linuxUserConfiguration = linuxUserConfiguration;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPassword(String password) {
+        public Builder password(String password) {
             this.password = Objects.requireNonNull(password);
             return this;
         }
 
-        public Builder setWindowsUserConfiguration(@Nullable WindowsUserConfigurationResponse windowsUserConfiguration) {
+        public Builder windowsUserConfiguration(@Nullable WindowsUserConfigurationResponse windowsUserConfiguration) {
             this.windowsUserConfiguration = windowsUserConfiguration;
             return this;
         }

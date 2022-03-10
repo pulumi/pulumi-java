@@ -150,37 +150,37 @@ public final class ConnectToSourceSqlServerTaskOutputDatabaseLevelResponse {
     	      this.sizeMB = defaults.sizeMB;
         }
 
-        public Builder setCompatibilityLevel(String compatibilityLevel) {
+        public Builder compatibilityLevel(String compatibilityLevel) {
             this.compatibilityLevel = Objects.requireNonNull(compatibilityLevel);
             return this;
         }
 
-        public Builder setDatabaseFiles(List<DatabaseFileInfoResponse> databaseFiles) {
+        public Builder databaseFiles(List<DatabaseFileInfoResponse> databaseFiles) {
             this.databaseFiles = Objects.requireNonNull(databaseFiles);
             return this;
         }
 
-        public Builder setDatabaseState(String databaseState) {
+        public Builder databaseState(String databaseState) {
             this.databaseState = Objects.requireNonNull(databaseState);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setResultType(String resultType) {
+        public Builder resultType(String resultType) {
             this.resultType = Objects.requireNonNull(resultType);
             return this;
         }
 
-        public Builder setSizeMB(Double sizeMB) {
+        public Builder sizeMB(Double sizeMB) {
             this.sizeMB = Objects.requireNonNull(sizeMB);
             return this;
         }

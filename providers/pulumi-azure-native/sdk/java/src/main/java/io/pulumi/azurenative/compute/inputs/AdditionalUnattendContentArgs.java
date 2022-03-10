@@ -109,42 +109,42 @@ public final class AdditionalUnattendContentArgs extends io.pulumi.resources.Res
     	      this.settingName = defaults.settingName;
         }
 
-        public Builder setComponentName(@Nullable Input<ComponentNames> componentName) {
+        public Builder componentName(@Nullable Input<ComponentNames> componentName) {
             this.componentName = componentName;
             return this;
         }
 
-        public Builder setComponentName(@Nullable ComponentNames componentName) {
+        public Builder componentName(@Nullable ComponentNames componentName) {
             this.componentName = Input.ofNullable(componentName);
             return this;
         }
 
-        public Builder setContent(@Nullable Input<String> content) {
+        public Builder content(@Nullable Input<String> content) {
             this.content = content;
             return this;
         }
 
-        public Builder setContent(@Nullable String content) {
+        public Builder content(@Nullable String content) {
             this.content = Input.ofNullable(content);
             return this;
         }
 
-        public Builder setPassName(@Nullable Input<PassNames> passName) {
+        public Builder passName(@Nullable Input<PassNames> passName) {
             this.passName = passName;
             return this;
         }
 
-        public Builder setPassName(@Nullable PassNames passName) {
+        public Builder passName(@Nullable PassNames passName) {
             this.passName = Input.ofNullable(passName);
             return this;
         }
 
-        public Builder setSettingName(@Nullable Input<SettingNames> settingName) {
+        public Builder settingName(@Nullable Input<SettingNames> settingName) {
             this.settingName = settingName;
             return this;
         }
 
-        public Builder setSettingName(@Nullable SettingNames settingName) {
+        public Builder settingName(@Nullable SettingNames settingName) {
             this.settingName = Input.ofNullable(settingName);
             return this;
         }

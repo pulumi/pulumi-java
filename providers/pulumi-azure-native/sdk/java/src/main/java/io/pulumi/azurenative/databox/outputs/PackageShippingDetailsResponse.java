@@ -81,17 +81,17 @@ public final class PackageShippingDetailsResponse {
     	      this.trackingUrl = defaults.trackingUrl;
         }
 
-        public Builder setCarrierName(String carrierName) {
+        public Builder carrierName(String carrierName) {
             this.carrierName = Objects.requireNonNull(carrierName);
             return this;
         }
 
-        public Builder setTrackingId(String trackingId) {
+        public Builder trackingId(String trackingId) {
             this.trackingId = Objects.requireNonNull(trackingId);
             return this;
         }
 
-        public Builder setTrackingUrl(String trackingUrl) {
+        public Builder trackingUrl(String trackingUrl) {
             this.trackingUrl = Objects.requireNonNull(trackingUrl);
             return this;
         }

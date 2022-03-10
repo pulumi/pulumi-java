@@ -84,17 +84,17 @@ public final class GetProtectionPolicyArgs extends io.pulumi.resources.InvokeArg
     	      this.vaultName = defaults.vaultName;
         }
 
-        public Builder setPolicyName(String policyName) {
+        public Builder policyName(String policyName) {
             this.policyName = Objects.requireNonNull(policyName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setVaultName(String vaultName) {
+        public Builder vaultName(String vaultName) {
             this.vaultName = Objects.requireNonNull(vaultName);
             return this;
         }

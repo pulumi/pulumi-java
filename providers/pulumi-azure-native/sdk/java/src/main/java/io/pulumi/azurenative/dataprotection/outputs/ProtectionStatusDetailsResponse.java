@@ -68,12 +68,12 @@ public final class ProtectionStatusDetailsResponse {
     	      this.status = defaults.status;
         }
 
-        public Builder setErrorDetails(@Nullable UserFacingErrorResponse errorDetails) {
+        public Builder errorDetails(@Nullable UserFacingErrorResponse errorDetails) {
             this.errorDetails = errorDetails;
             return this;
         }
 
-        public Builder setStatus(@Nullable String status) {
+        public Builder status(@Nullable String status) {
             this.status = status;
             return this;
         }

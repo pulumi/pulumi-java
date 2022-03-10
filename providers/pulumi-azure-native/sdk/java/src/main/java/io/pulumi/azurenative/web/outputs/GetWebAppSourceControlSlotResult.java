@@ -213,57 +213,57 @@ public final class GetWebAppSourceControlSlotResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setBranch(@Nullable String branch) {
+        public Builder branch(@Nullable String branch) {
             this.branch = branch;
             return this;
         }
 
-        public Builder setDeploymentRollbackEnabled(@Nullable Boolean deploymentRollbackEnabled) {
+        public Builder deploymentRollbackEnabled(@Nullable Boolean deploymentRollbackEnabled) {
             this.deploymentRollbackEnabled = deploymentRollbackEnabled;
             return this;
         }
 
-        public Builder setGitHubActionConfiguration(@Nullable GitHubActionConfigurationResponse gitHubActionConfiguration) {
+        public Builder gitHubActionConfiguration(@Nullable GitHubActionConfigurationResponse gitHubActionConfiguration) {
             this.gitHubActionConfiguration = gitHubActionConfiguration;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setIsGitHubAction(@Nullable Boolean isGitHubAction) {
+        public Builder isGitHubAction(@Nullable Boolean isGitHubAction) {
             this.isGitHubAction = isGitHubAction;
             return this;
         }
 
-        public Builder setIsManualIntegration(@Nullable Boolean isManualIntegration) {
+        public Builder isManualIntegration(@Nullable Boolean isManualIntegration) {
             this.isManualIntegration = isManualIntegration;
             return this;
         }
 
-        public Builder setIsMercurial(@Nullable Boolean isMercurial) {
+        public Builder isMercurial(@Nullable Boolean isMercurial) {
             this.isMercurial = isMercurial;
             return this;
         }
 
-        public Builder setKind(@Nullable String kind) {
+        public Builder kind(@Nullable String kind) {
             this.kind = kind;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setRepoUrl(@Nullable String repoUrl) {
+        public Builder repoUrl(@Nullable String repoUrl) {
             this.repoUrl = repoUrl;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

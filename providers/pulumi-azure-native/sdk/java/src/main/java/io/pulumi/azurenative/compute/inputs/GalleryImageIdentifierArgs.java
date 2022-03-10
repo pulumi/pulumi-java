@@ -89,32 +89,32 @@ public final class GalleryImageIdentifierArgs extends io.pulumi.resources.Resour
     	      this.sku = defaults.sku;
         }
 
-        public Builder setOffer(Input<String> offer) {
+        public Builder offer(Input<String> offer) {
             this.offer = Objects.requireNonNull(offer);
             return this;
         }
 
-        public Builder setOffer(String offer) {
+        public Builder offer(String offer) {
             this.offer = Input.of(Objects.requireNonNull(offer));
             return this;
         }
 
-        public Builder setPublisher(Input<String> publisher) {
+        public Builder publisher(Input<String> publisher) {
             this.publisher = Objects.requireNonNull(publisher);
             return this;
         }
 
-        public Builder setPublisher(String publisher) {
+        public Builder publisher(String publisher) {
             this.publisher = Input.of(Objects.requireNonNull(publisher));
             return this;
         }
 
-        public Builder setSku(Input<String> sku) {
+        public Builder sku(Input<String> sku) {
             this.sku = Objects.requireNonNull(sku);
             return this;
         }
 
-        public Builder setSku(String sku) {
+        public Builder sku(String sku) {
             this.sku = Input.of(Objects.requireNonNull(sku));
             return this;
         }

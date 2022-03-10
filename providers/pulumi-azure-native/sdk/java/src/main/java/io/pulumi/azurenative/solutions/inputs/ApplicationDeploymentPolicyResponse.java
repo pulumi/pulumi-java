@@ -55,7 +55,7 @@ public final class ApplicationDeploymentPolicyResponse extends io.pulumi.resourc
     	      this.deploymentMode = defaults.deploymentMode;
         }
 
-        public Builder setDeploymentMode(String deploymentMode) {
+        public Builder deploymentMode(String deploymentMode) {
             this.deploymentMode = Objects.requireNonNull(deploymentMode);
             return this;
         }

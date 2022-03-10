@@ -50,7 +50,7 @@ public final class StreamingPolicyWidevineConfigurationResponse {
     	      this.customLicenseAcquisitionUrlTemplate = defaults.customLicenseAcquisitionUrlTemplate;
         }
 
-        public Builder setCustomLicenseAcquisitionUrlTemplate(@Nullable String customLicenseAcquisitionUrlTemplate) {
+        public Builder customLicenseAcquisitionUrlTemplate(@Nullable String customLicenseAcquisitionUrlTemplate) {
             this.customLicenseAcquisitionUrlTemplate = customLicenseAcquisitionUrlTemplate;
             return this;
         }

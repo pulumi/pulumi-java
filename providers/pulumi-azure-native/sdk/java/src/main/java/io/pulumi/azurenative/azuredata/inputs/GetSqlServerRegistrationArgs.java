@@ -68,12 +68,12 @@ public final class GetSqlServerRegistrationArgs extends io.pulumi.resources.Invo
     	      this.sqlServerRegistrationName = defaults.sqlServerRegistrationName;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setSqlServerRegistrationName(String sqlServerRegistrationName) {
+        public Builder sqlServerRegistrationName(String sqlServerRegistrationName) {
             this.sqlServerRegistrationName = Objects.requireNonNull(sqlServerRegistrationName);
             return this;
         }

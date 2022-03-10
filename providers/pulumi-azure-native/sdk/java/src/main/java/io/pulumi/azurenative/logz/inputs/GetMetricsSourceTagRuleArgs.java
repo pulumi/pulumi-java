@@ -96,22 +96,22 @@ public final class GetMetricsSourceTagRuleArgs extends io.pulumi.resources.Invok
     	      this.ruleSetName = defaults.ruleSetName;
         }
 
-        public Builder setMetricsSourceName(String metricsSourceName) {
+        public Builder metricsSourceName(String metricsSourceName) {
             this.metricsSourceName = Objects.requireNonNull(metricsSourceName);
             return this;
         }
 
-        public Builder setMonitorName(String monitorName) {
+        public Builder monitorName(String monitorName) {
             this.monitorName = Objects.requireNonNull(monitorName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setRuleSetName(String ruleSetName) {
+        public Builder ruleSetName(String ruleSetName) {
             this.ruleSetName = Objects.requireNonNull(ruleSetName);
             return this;
         }

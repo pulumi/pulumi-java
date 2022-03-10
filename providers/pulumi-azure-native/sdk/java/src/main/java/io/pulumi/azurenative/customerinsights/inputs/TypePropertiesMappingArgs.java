@@ -91,32 +91,32 @@ public final class TypePropertiesMappingArgs extends io.pulumi.resources.Resourc
     	      this.targetPropertyName = defaults.targetPropertyName;
         }
 
-        public Builder setLinkType(@Nullable Input<LinkTypes> linkType) {
+        public Builder linkType(@Nullable Input<LinkTypes> linkType) {
             this.linkType = linkType;
             return this;
         }
 
-        public Builder setLinkType(@Nullable LinkTypes linkType) {
+        public Builder linkType(@Nullable LinkTypes linkType) {
             this.linkType = Input.ofNullable(linkType);
             return this;
         }
 
-        public Builder setSourcePropertyName(Input<String> sourcePropertyName) {
+        public Builder sourcePropertyName(Input<String> sourcePropertyName) {
             this.sourcePropertyName = Objects.requireNonNull(sourcePropertyName);
             return this;
         }
 
-        public Builder setSourcePropertyName(String sourcePropertyName) {
+        public Builder sourcePropertyName(String sourcePropertyName) {
             this.sourcePropertyName = Input.of(Objects.requireNonNull(sourcePropertyName));
             return this;
         }
 
-        public Builder setTargetPropertyName(Input<String> targetPropertyName) {
+        public Builder targetPropertyName(Input<String> targetPropertyName) {
             this.targetPropertyName = Objects.requireNonNull(targetPropertyName);
             return this;
         }
 
-        public Builder setTargetPropertyName(String targetPropertyName) {
+        public Builder targetPropertyName(String targetPropertyName) {
             this.targetPropertyName = Input.of(Objects.requireNonNull(targetPropertyName));
             return this;
         }

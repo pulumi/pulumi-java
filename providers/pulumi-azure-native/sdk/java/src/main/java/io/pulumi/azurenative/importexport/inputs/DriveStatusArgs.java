@@ -238,122 +238,122 @@ public final class DriveStatusArgs extends io.pulumi.resources.ResourceArgs {
     	      this.verboseLogUri = defaults.verboseLogUri;
         }
 
-        public Builder setBitLockerKey(@Nullable Input<String> bitLockerKey) {
+        public Builder bitLockerKey(@Nullable Input<String> bitLockerKey) {
             this.bitLockerKey = bitLockerKey;
             return this;
         }
 
-        public Builder setBitLockerKey(@Nullable String bitLockerKey) {
+        public Builder bitLockerKey(@Nullable String bitLockerKey) {
             this.bitLockerKey = Input.ofNullable(bitLockerKey);
             return this;
         }
 
-        public Builder setBytesSucceeded(@Nullable Input<Double> bytesSucceeded) {
+        public Builder bytesSucceeded(@Nullable Input<Double> bytesSucceeded) {
             this.bytesSucceeded = bytesSucceeded;
             return this;
         }
 
-        public Builder setBytesSucceeded(@Nullable Double bytesSucceeded) {
+        public Builder bytesSucceeded(@Nullable Double bytesSucceeded) {
             this.bytesSucceeded = Input.ofNullable(bytesSucceeded);
             return this;
         }
 
-        public Builder setCopyStatus(@Nullable Input<String> copyStatus) {
+        public Builder copyStatus(@Nullable Input<String> copyStatus) {
             this.copyStatus = copyStatus;
             return this;
         }
 
-        public Builder setCopyStatus(@Nullable String copyStatus) {
+        public Builder copyStatus(@Nullable String copyStatus) {
             this.copyStatus = Input.ofNullable(copyStatus);
             return this;
         }
 
-        public Builder setDriveHeaderHash(@Nullable Input<String> driveHeaderHash) {
+        public Builder driveHeaderHash(@Nullable Input<String> driveHeaderHash) {
             this.driveHeaderHash = driveHeaderHash;
             return this;
         }
 
-        public Builder setDriveHeaderHash(@Nullable String driveHeaderHash) {
+        public Builder driveHeaderHash(@Nullable String driveHeaderHash) {
             this.driveHeaderHash = Input.ofNullable(driveHeaderHash);
             return this;
         }
 
-        public Builder setDriveId(@Nullable Input<String> driveId) {
+        public Builder driveId(@Nullable Input<String> driveId) {
             this.driveId = driveId;
             return this;
         }
 
-        public Builder setDriveId(@Nullable String driveId) {
+        public Builder driveId(@Nullable String driveId) {
             this.driveId = Input.ofNullable(driveId);
             return this;
         }
 
-        public Builder setErrorLogUri(@Nullable Input<String> errorLogUri) {
+        public Builder errorLogUri(@Nullable Input<String> errorLogUri) {
             this.errorLogUri = errorLogUri;
             return this;
         }
 
-        public Builder setErrorLogUri(@Nullable String errorLogUri) {
+        public Builder errorLogUri(@Nullable String errorLogUri) {
             this.errorLogUri = Input.ofNullable(errorLogUri);
             return this;
         }
 
-        public Builder setManifestFile(@Nullable Input<String> manifestFile) {
+        public Builder manifestFile(@Nullable Input<String> manifestFile) {
             this.manifestFile = manifestFile;
             return this;
         }
 
-        public Builder setManifestFile(@Nullable String manifestFile) {
+        public Builder manifestFile(@Nullable String manifestFile) {
             this.manifestFile = Input.ofNullable(manifestFile);
             return this;
         }
 
-        public Builder setManifestHash(@Nullable Input<String> manifestHash) {
+        public Builder manifestHash(@Nullable Input<String> manifestHash) {
             this.manifestHash = manifestHash;
             return this;
         }
 
-        public Builder setManifestHash(@Nullable String manifestHash) {
+        public Builder manifestHash(@Nullable String manifestHash) {
             this.manifestHash = Input.ofNullable(manifestHash);
             return this;
         }
 
-        public Builder setManifestUri(@Nullable Input<String> manifestUri) {
+        public Builder manifestUri(@Nullable Input<String> manifestUri) {
             this.manifestUri = manifestUri;
             return this;
         }
 
-        public Builder setManifestUri(@Nullable String manifestUri) {
+        public Builder manifestUri(@Nullable String manifestUri) {
             this.manifestUri = Input.ofNullable(manifestUri);
             return this;
         }
 
-        public Builder setPercentComplete(@Nullable Input<Integer> percentComplete) {
+        public Builder percentComplete(@Nullable Input<Integer> percentComplete) {
             this.percentComplete = percentComplete;
             return this;
         }
 
-        public Builder setPercentComplete(@Nullable Integer percentComplete) {
+        public Builder percentComplete(@Nullable Integer percentComplete) {
             this.percentComplete = Input.ofNullable(percentComplete);
             return this;
         }
 
-        public Builder setState(@Nullable Input<Either<String,DriveState>> state) {
+        public Builder state(@Nullable Input<Either<String,DriveState>> state) {
             this.state = state;
             return this;
         }
 
-        public Builder setState(@Nullable Either<String,DriveState> state) {
+        public Builder state(@Nullable Either<String,DriveState> state) {
             this.state = Input.ofNullable(state);
             return this;
         }
 
-        public Builder setVerboseLogUri(@Nullable Input<String> verboseLogUri) {
+        public Builder verboseLogUri(@Nullable Input<String> verboseLogUri) {
             this.verboseLogUri = verboseLogUri;
             return this;
         }
 
-        public Builder setVerboseLogUri(@Nullable String verboseLogUri) {
+        public Builder verboseLogUri(@Nullable String verboseLogUri) {
             this.verboseLogUri = Input.ofNullable(verboseLogUri);
             return this;
         }

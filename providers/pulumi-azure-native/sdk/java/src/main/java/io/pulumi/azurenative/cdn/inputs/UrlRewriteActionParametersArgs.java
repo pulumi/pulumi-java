@@ -103,42 +103,42 @@ public final class UrlRewriteActionParametersArgs extends io.pulumi.resources.Re
     	      this.sourcePattern = defaults.sourcePattern;
         }
 
-        public Builder setDestination(Input<String> destination) {
+        public Builder destination(Input<String> destination) {
             this.destination = Objects.requireNonNull(destination);
             return this;
         }
 
-        public Builder setDestination(String destination) {
+        public Builder destination(String destination) {
             this.destination = Input.of(Objects.requireNonNull(destination));
             return this;
         }
 
-        public Builder setOdataType(Input<String> odataType) {
+        public Builder odataType(Input<String> odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
 
-        public Builder setOdataType(String odataType) {
+        public Builder odataType(String odataType) {
             this.odataType = Input.of(Objects.requireNonNull(odataType));
             return this;
         }
 
-        public Builder setPreserveUnmatchedPath(@Nullable Input<Boolean> preserveUnmatchedPath) {
+        public Builder preserveUnmatchedPath(@Nullable Input<Boolean> preserveUnmatchedPath) {
             this.preserveUnmatchedPath = preserveUnmatchedPath;
             return this;
         }
 
-        public Builder setPreserveUnmatchedPath(@Nullable Boolean preserveUnmatchedPath) {
+        public Builder preserveUnmatchedPath(@Nullable Boolean preserveUnmatchedPath) {
             this.preserveUnmatchedPath = Input.ofNullable(preserveUnmatchedPath);
             return this;
         }
 
-        public Builder setSourcePattern(Input<String> sourcePattern) {
+        public Builder sourcePattern(Input<String> sourcePattern) {
             this.sourcePattern = Objects.requireNonNull(sourcePattern);
             return this;
         }
 
-        public Builder setSourcePattern(String sourcePattern) {
+        public Builder sourcePattern(String sourcePattern) {
             this.sourcePattern = Input.of(Objects.requireNonNull(sourcePattern));
             return this;
         }

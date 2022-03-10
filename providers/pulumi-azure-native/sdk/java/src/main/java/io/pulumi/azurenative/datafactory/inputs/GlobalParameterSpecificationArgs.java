@@ -76,22 +76,22 @@ public final class GlobalParameterSpecificationArgs extends io.pulumi.resources.
     	      this.value = defaults.value;
         }
 
-        public Builder setType(Input<Either<String,GlobalParameterType>> type) {
+        public Builder type(Input<Either<String,GlobalParameterType>> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setType(Either<String,GlobalParameterType> type) {
+        public Builder type(Either<String,GlobalParameterType> type) {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }
 
-        public Builder setValue(Input<Object> value) {
+        public Builder value(Input<Object> value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }
 
-        public Builder setValue(Object value) {
+        public Builder value(Object value) {
             this.value = Input.of(Objects.requireNonNull(value));
             return this;
         }

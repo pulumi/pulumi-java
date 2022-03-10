@@ -266,142 +266,142 @@ public final class MSIXPackageArgs extends io.pulumi.resources.ResourceArgs {
     	      this.version = defaults.version;
         }
 
-        public Builder setDisplayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Input<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setDisplayName(@Nullable String displayName) {
+        public Builder displayName(@Nullable String displayName) {
             this.displayName = Input.ofNullable(displayName);
             return this;
         }
 
-        public Builder setHostPoolName(Input<String> hostPoolName) {
+        public Builder hostPoolName(Input<String> hostPoolName) {
             this.hostPoolName = Objects.requireNonNull(hostPoolName);
             return this;
         }
 
-        public Builder setHostPoolName(String hostPoolName) {
+        public Builder hostPoolName(String hostPoolName) {
             this.hostPoolName = Input.of(Objects.requireNonNull(hostPoolName));
             return this;
         }
 
-        public Builder setImagePath(@Nullable Input<String> imagePath) {
+        public Builder imagePath(@Nullable Input<String> imagePath) {
             this.imagePath = imagePath;
             return this;
         }
 
-        public Builder setImagePath(@Nullable String imagePath) {
+        public Builder imagePath(@Nullable String imagePath) {
             this.imagePath = Input.ofNullable(imagePath);
             return this;
         }
 
-        public Builder setIsActive(@Nullable Input<Boolean> isActive) {
+        public Builder isActive(@Nullable Input<Boolean> isActive) {
             this.isActive = isActive;
             return this;
         }
 
-        public Builder setIsActive(@Nullable Boolean isActive) {
+        public Builder isActive(@Nullable Boolean isActive) {
             this.isActive = Input.ofNullable(isActive);
             return this;
         }
 
-        public Builder setIsRegularRegistration(@Nullable Input<Boolean> isRegularRegistration) {
+        public Builder isRegularRegistration(@Nullable Input<Boolean> isRegularRegistration) {
             this.isRegularRegistration = isRegularRegistration;
             return this;
         }
 
-        public Builder setIsRegularRegistration(@Nullable Boolean isRegularRegistration) {
+        public Builder isRegularRegistration(@Nullable Boolean isRegularRegistration) {
             this.isRegularRegistration = Input.ofNullable(isRegularRegistration);
             return this;
         }
 
-        public Builder setLastUpdated(@Nullable Input<String> lastUpdated) {
+        public Builder lastUpdated(@Nullable Input<String> lastUpdated) {
             this.lastUpdated = lastUpdated;
             return this;
         }
 
-        public Builder setLastUpdated(@Nullable String lastUpdated) {
+        public Builder lastUpdated(@Nullable String lastUpdated) {
             this.lastUpdated = Input.ofNullable(lastUpdated);
             return this;
         }
 
-        public Builder setMsixPackageFullName(@Nullable Input<String> msixPackageFullName) {
+        public Builder msixPackageFullName(@Nullable Input<String> msixPackageFullName) {
             this.msixPackageFullName = msixPackageFullName;
             return this;
         }
 
-        public Builder setMsixPackageFullName(@Nullable String msixPackageFullName) {
+        public Builder msixPackageFullName(@Nullable String msixPackageFullName) {
             this.msixPackageFullName = Input.ofNullable(msixPackageFullName);
             return this;
         }
 
-        public Builder setPackageApplications(@Nullable Input<List<MsixPackageApplicationsArgs>> packageApplications) {
+        public Builder packageApplications(@Nullable Input<List<MsixPackageApplicationsArgs>> packageApplications) {
             this.packageApplications = packageApplications;
             return this;
         }
 
-        public Builder setPackageApplications(@Nullable List<MsixPackageApplicationsArgs> packageApplications) {
+        public Builder packageApplications(@Nullable List<MsixPackageApplicationsArgs> packageApplications) {
             this.packageApplications = Input.ofNullable(packageApplications);
             return this;
         }
 
-        public Builder setPackageDependencies(@Nullable Input<List<MsixPackageDependenciesArgs>> packageDependencies) {
+        public Builder packageDependencies(@Nullable Input<List<MsixPackageDependenciesArgs>> packageDependencies) {
             this.packageDependencies = packageDependencies;
             return this;
         }
 
-        public Builder setPackageDependencies(@Nullable List<MsixPackageDependenciesArgs> packageDependencies) {
+        public Builder packageDependencies(@Nullable List<MsixPackageDependenciesArgs> packageDependencies) {
             this.packageDependencies = Input.ofNullable(packageDependencies);
             return this;
         }
 
-        public Builder setPackageFamilyName(@Nullable Input<String> packageFamilyName) {
+        public Builder packageFamilyName(@Nullable Input<String> packageFamilyName) {
             this.packageFamilyName = packageFamilyName;
             return this;
         }
 
-        public Builder setPackageFamilyName(@Nullable String packageFamilyName) {
+        public Builder packageFamilyName(@Nullable String packageFamilyName) {
             this.packageFamilyName = Input.ofNullable(packageFamilyName);
             return this;
         }
 
-        public Builder setPackageName(@Nullable Input<String> packageName) {
+        public Builder packageName(@Nullable Input<String> packageName) {
             this.packageName = packageName;
             return this;
         }
 
-        public Builder setPackageName(@Nullable String packageName) {
+        public Builder packageName(@Nullable String packageName) {
             this.packageName = Input.ofNullable(packageName);
             return this;
         }
 
-        public Builder setPackageRelativePath(@Nullable Input<String> packageRelativePath) {
+        public Builder packageRelativePath(@Nullable Input<String> packageRelativePath) {
             this.packageRelativePath = packageRelativePath;
             return this;
         }
 
-        public Builder setPackageRelativePath(@Nullable String packageRelativePath) {
+        public Builder packageRelativePath(@Nullable String packageRelativePath) {
             this.packageRelativePath = Input.ofNullable(packageRelativePath);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setVersion(@Nullable Input<String> version) {
+        public Builder version(@Nullable Input<String> version) {
             this.version = version;
             return this;
         }
 
-        public Builder setVersion(@Nullable String version) {
+        public Builder version(@Nullable String version) {
             this.version = Input.ofNullable(version);
             return this;
         }

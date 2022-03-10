@@ -110,42 +110,42 @@ public final class BgpSettingsArgs extends io.pulumi.resources.ResourceArgs {
     	      this.peerWeight = defaults.peerWeight;
         }
 
-        public Builder setAsn(@Nullable Input<Double> asn) {
+        public Builder asn(@Nullable Input<Double> asn) {
             this.asn = asn;
             return this;
         }
 
-        public Builder setAsn(@Nullable Double asn) {
+        public Builder asn(@Nullable Double asn) {
             this.asn = Input.ofNullable(asn);
             return this;
         }
 
-        public Builder setBgpPeeringAddress(@Nullable Input<String> bgpPeeringAddress) {
+        public Builder bgpPeeringAddress(@Nullable Input<String> bgpPeeringAddress) {
             this.bgpPeeringAddress = bgpPeeringAddress;
             return this;
         }
 
-        public Builder setBgpPeeringAddress(@Nullable String bgpPeeringAddress) {
+        public Builder bgpPeeringAddress(@Nullable String bgpPeeringAddress) {
             this.bgpPeeringAddress = Input.ofNullable(bgpPeeringAddress);
             return this;
         }
 
-        public Builder setBgpPeeringAddresses(@Nullable Input<List<IPConfigurationBgpPeeringAddressArgs>> bgpPeeringAddresses) {
+        public Builder bgpPeeringAddresses(@Nullable Input<List<IPConfigurationBgpPeeringAddressArgs>> bgpPeeringAddresses) {
             this.bgpPeeringAddresses = bgpPeeringAddresses;
             return this;
         }
 
-        public Builder setBgpPeeringAddresses(@Nullable List<IPConfigurationBgpPeeringAddressArgs> bgpPeeringAddresses) {
+        public Builder bgpPeeringAddresses(@Nullable List<IPConfigurationBgpPeeringAddressArgs> bgpPeeringAddresses) {
             this.bgpPeeringAddresses = Input.ofNullable(bgpPeeringAddresses);
             return this;
         }
 
-        public Builder setPeerWeight(@Nullable Input<Integer> peerWeight) {
+        public Builder peerWeight(@Nullable Input<Integer> peerWeight) {
             this.peerWeight = peerWeight;
             return this;
         }
 
-        public Builder setPeerWeight(@Nullable Integer peerWeight) {
+        public Builder peerWeight(@Nullable Integer peerWeight) {
             this.peerWeight = Input.ofNullable(peerWeight);
             return this;
         }

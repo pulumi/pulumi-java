@@ -89,32 +89,32 @@ public final class CreateFirewallRuleWithAccountParametersArgs extends io.pulumi
     	      this.startIpAddress = defaults.startIpAddress;
         }
 
-        public Builder setEndIpAddress(Input<String> endIpAddress) {
+        public Builder endIpAddress(Input<String> endIpAddress) {
             this.endIpAddress = Objects.requireNonNull(endIpAddress);
             return this;
         }
 
-        public Builder setEndIpAddress(String endIpAddress) {
+        public Builder endIpAddress(String endIpAddress) {
             this.endIpAddress = Input.of(Objects.requireNonNull(endIpAddress));
             return this;
         }
 
-        public Builder setName(Input<String> name) {
+        public Builder name(Input<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder setStartIpAddress(Input<String> startIpAddress) {
+        public Builder startIpAddress(Input<String> startIpAddress) {
             this.startIpAddress = Objects.requireNonNull(startIpAddress);
             return this;
         }
 
-        public Builder setStartIpAddress(String startIpAddress) {
+        public Builder startIpAddress(String startIpAddress) {
             this.startIpAddress = Input.of(Objects.requireNonNull(startIpAddress));
             return this;
         }

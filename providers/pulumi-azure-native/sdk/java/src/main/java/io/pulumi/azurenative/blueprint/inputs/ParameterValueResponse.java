@@ -75,12 +75,12 @@ public final class ParameterValueResponse extends io.pulumi.resources.InvokeArgs
     	      this.value = defaults.value;
         }
 
-        public Builder setReference(@Nullable SecretValueReferenceResponse reference) {
+        public Builder reference(@Nullable SecretValueReferenceResponse reference) {
             this.reference = reference;
             return this;
         }
 
-        public Builder setValue(@Nullable Object value) {
+        public Builder value(@Nullable Object value) {
             this.value = value;
             return this;
         }

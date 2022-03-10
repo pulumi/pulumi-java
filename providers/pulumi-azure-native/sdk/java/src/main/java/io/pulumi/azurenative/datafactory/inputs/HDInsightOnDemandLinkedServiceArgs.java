@@ -678,392 +678,392 @@ public final class HDInsightOnDemandLinkedServiceArgs extends io.pulumi.resource
     	      this.zookeeperNodeSize = defaults.zookeeperNodeSize;
         }
 
-        public Builder setAdditionalLinkedServiceNames(@Nullable Input<List<LinkedServiceReferenceArgs>> additionalLinkedServiceNames) {
+        public Builder additionalLinkedServiceNames(@Nullable Input<List<LinkedServiceReferenceArgs>> additionalLinkedServiceNames) {
             this.additionalLinkedServiceNames = additionalLinkedServiceNames;
             return this;
         }
 
-        public Builder setAdditionalLinkedServiceNames(@Nullable List<LinkedServiceReferenceArgs> additionalLinkedServiceNames) {
+        public Builder additionalLinkedServiceNames(@Nullable List<LinkedServiceReferenceArgs> additionalLinkedServiceNames) {
             this.additionalLinkedServiceNames = Input.ofNullable(additionalLinkedServiceNames);
             return this;
         }
 
-        public Builder setAnnotations(@Nullable Input<List<Object>> annotations) {
+        public Builder annotations(@Nullable Input<List<Object>> annotations) {
             this.annotations = annotations;
             return this;
         }
 
-        public Builder setAnnotations(@Nullable List<Object> annotations) {
+        public Builder annotations(@Nullable List<Object> annotations) {
             this.annotations = Input.ofNullable(annotations);
             return this;
         }
 
-        public Builder setClusterNamePrefix(@Nullable Input<Object> clusterNamePrefix) {
+        public Builder clusterNamePrefix(@Nullable Input<Object> clusterNamePrefix) {
             this.clusterNamePrefix = clusterNamePrefix;
             return this;
         }
 
-        public Builder setClusterNamePrefix(@Nullable Object clusterNamePrefix) {
+        public Builder clusterNamePrefix(@Nullable Object clusterNamePrefix) {
             this.clusterNamePrefix = Input.ofNullable(clusterNamePrefix);
             return this;
         }
 
-        public Builder setClusterPassword(@Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> clusterPassword) {
+        public Builder clusterPassword(@Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> clusterPassword) {
             this.clusterPassword = clusterPassword;
             return this;
         }
 
-        public Builder setClusterPassword(@Nullable Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> clusterPassword) {
+        public Builder clusterPassword(@Nullable Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> clusterPassword) {
             this.clusterPassword = Input.ofNullable(clusterPassword);
             return this;
         }
 
-        public Builder setClusterResourceGroup(Input<Object> clusterResourceGroup) {
+        public Builder clusterResourceGroup(Input<Object> clusterResourceGroup) {
             this.clusterResourceGroup = Objects.requireNonNull(clusterResourceGroup);
             return this;
         }
 
-        public Builder setClusterResourceGroup(Object clusterResourceGroup) {
+        public Builder clusterResourceGroup(Object clusterResourceGroup) {
             this.clusterResourceGroup = Input.of(Objects.requireNonNull(clusterResourceGroup));
             return this;
         }
 
-        public Builder setClusterSize(Input<Object> clusterSize) {
+        public Builder clusterSize(Input<Object> clusterSize) {
             this.clusterSize = Objects.requireNonNull(clusterSize);
             return this;
         }
 
-        public Builder setClusterSize(Object clusterSize) {
+        public Builder clusterSize(Object clusterSize) {
             this.clusterSize = Input.of(Objects.requireNonNull(clusterSize));
             return this;
         }
 
-        public Builder setClusterSshPassword(@Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> clusterSshPassword) {
+        public Builder clusterSshPassword(@Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> clusterSshPassword) {
             this.clusterSshPassword = clusterSshPassword;
             return this;
         }
 
-        public Builder setClusterSshPassword(@Nullable Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> clusterSshPassword) {
+        public Builder clusterSshPassword(@Nullable Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> clusterSshPassword) {
             this.clusterSshPassword = Input.ofNullable(clusterSshPassword);
             return this;
         }
 
-        public Builder setClusterSshUserName(@Nullable Input<Object> clusterSshUserName) {
+        public Builder clusterSshUserName(@Nullable Input<Object> clusterSshUserName) {
             this.clusterSshUserName = clusterSshUserName;
             return this;
         }
 
-        public Builder setClusterSshUserName(@Nullable Object clusterSshUserName) {
+        public Builder clusterSshUserName(@Nullable Object clusterSshUserName) {
             this.clusterSshUserName = Input.ofNullable(clusterSshUserName);
             return this;
         }
 
-        public Builder setClusterType(@Nullable Input<Object> clusterType) {
+        public Builder clusterType(@Nullable Input<Object> clusterType) {
             this.clusterType = clusterType;
             return this;
         }
 
-        public Builder setClusterType(@Nullable Object clusterType) {
+        public Builder clusterType(@Nullable Object clusterType) {
             this.clusterType = Input.ofNullable(clusterType);
             return this;
         }
 
-        public Builder setClusterUserName(@Nullable Input<Object> clusterUserName) {
+        public Builder clusterUserName(@Nullable Input<Object> clusterUserName) {
             this.clusterUserName = clusterUserName;
             return this;
         }
 
-        public Builder setClusterUserName(@Nullable Object clusterUserName) {
+        public Builder clusterUserName(@Nullable Object clusterUserName) {
             this.clusterUserName = Input.ofNullable(clusterUserName);
             return this;
         }
 
-        public Builder setConnectVia(@Nullable Input<IntegrationRuntimeReferenceArgs> connectVia) {
+        public Builder connectVia(@Nullable Input<IntegrationRuntimeReferenceArgs> connectVia) {
             this.connectVia = connectVia;
             return this;
         }
 
-        public Builder setConnectVia(@Nullable IntegrationRuntimeReferenceArgs connectVia) {
+        public Builder connectVia(@Nullable IntegrationRuntimeReferenceArgs connectVia) {
             this.connectVia = Input.ofNullable(connectVia);
             return this;
         }
 
-        public Builder setCoreConfiguration(@Nullable Input<Object> coreConfiguration) {
+        public Builder coreConfiguration(@Nullable Input<Object> coreConfiguration) {
             this.coreConfiguration = coreConfiguration;
             return this;
         }
 
-        public Builder setCoreConfiguration(@Nullable Object coreConfiguration) {
+        public Builder coreConfiguration(@Nullable Object coreConfiguration) {
             this.coreConfiguration = Input.ofNullable(coreConfiguration);
             return this;
         }
 
-        public Builder setCredential(@Nullable Input<CredentialReferenceArgs> credential) {
+        public Builder credential(@Nullable Input<CredentialReferenceArgs> credential) {
             this.credential = credential;
             return this;
         }
 
-        public Builder setCredential(@Nullable CredentialReferenceArgs credential) {
+        public Builder credential(@Nullable CredentialReferenceArgs credential) {
             this.credential = Input.ofNullable(credential);
             return this;
         }
 
-        public Builder setDataNodeSize(@Nullable Input<Object> dataNodeSize) {
+        public Builder dataNodeSize(@Nullable Input<Object> dataNodeSize) {
             this.dataNodeSize = dataNodeSize;
             return this;
         }
 
-        public Builder setDataNodeSize(@Nullable Object dataNodeSize) {
+        public Builder dataNodeSize(@Nullable Object dataNodeSize) {
             this.dataNodeSize = Input.ofNullable(dataNodeSize);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setEncryptedCredential(@Nullable Input<Object> encryptedCredential) {
+        public Builder encryptedCredential(@Nullable Input<Object> encryptedCredential) {
             this.encryptedCredential = encryptedCredential;
             return this;
         }
 
-        public Builder setEncryptedCredential(@Nullable Object encryptedCredential) {
+        public Builder encryptedCredential(@Nullable Object encryptedCredential) {
             this.encryptedCredential = Input.ofNullable(encryptedCredential);
             return this;
         }
 
-        public Builder setHBaseConfiguration(@Nullable Input<Object> hBaseConfiguration) {
+        public Builder hBaseConfiguration(@Nullable Input<Object> hBaseConfiguration) {
             this.hBaseConfiguration = hBaseConfiguration;
             return this;
         }
 
-        public Builder setHBaseConfiguration(@Nullable Object hBaseConfiguration) {
+        public Builder hBaseConfiguration(@Nullable Object hBaseConfiguration) {
             this.hBaseConfiguration = Input.ofNullable(hBaseConfiguration);
             return this;
         }
 
-        public Builder setHcatalogLinkedServiceName(@Nullable Input<LinkedServiceReferenceArgs> hcatalogLinkedServiceName) {
+        public Builder hcatalogLinkedServiceName(@Nullable Input<LinkedServiceReferenceArgs> hcatalogLinkedServiceName) {
             this.hcatalogLinkedServiceName = hcatalogLinkedServiceName;
             return this;
         }
 
-        public Builder setHcatalogLinkedServiceName(@Nullable LinkedServiceReferenceArgs hcatalogLinkedServiceName) {
+        public Builder hcatalogLinkedServiceName(@Nullable LinkedServiceReferenceArgs hcatalogLinkedServiceName) {
             this.hcatalogLinkedServiceName = Input.ofNullable(hcatalogLinkedServiceName);
             return this;
         }
 
-        public Builder setHdfsConfiguration(@Nullable Input<Object> hdfsConfiguration) {
+        public Builder hdfsConfiguration(@Nullable Input<Object> hdfsConfiguration) {
             this.hdfsConfiguration = hdfsConfiguration;
             return this;
         }
 
-        public Builder setHdfsConfiguration(@Nullable Object hdfsConfiguration) {
+        public Builder hdfsConfiguration(@Nullable Object hdfsConfiguration) {
             this.hdfsConfiguration = Input.ofNullable(hdfsConfiguration);
             return this;
         }
 
-        public Builder setHeadNodeSize(@Nullable Input<Object> headNodeSize) {
+        public Builder headNodeSize(@Nullable Input<Object> headNodeSize) {
             this.headNodeSize = headNodeSize;
             return this;
         }
 
-        public Builder setHeadNodeSize(@Nullable Object headNodeSize) {
+        public Builder headNodeSize(@Nullable Object headNodeSize) {
             this.headNodeSize = Input.ofNullable(headNodeSize);
             return this;
         }
 
-        public Builder setHiveConfiguration(@Nullable Input<Object> hiveConfiguration) {
+        public Builder hiveConfiguration(@Nullable Input<Object> hiveConfiguration) {
             this.hiveConfiguration = hiveConfiguration;
             return this;
         }
 
-        public Builder setHiveConfiguration(@Nullable Object hiveConfiguration) {
+        public Builder hiveConfiguration(@Nullable Object hiveConfiguration) {
             this.hiveConfiguration = Input.ofNullable(hiveConfiguration);
             return this;
         }
 
-        public Builder setHostSubscriptionId(Input<Object> hostSubscriptionId) {
+        public Builder hostSubscriptionId(Input<Object> hostSubscriptionId) {
             this.hostSubscriptionId = Objects.requireNonNull(hostSubscriptionId);
             return this;
         }
 
-        public Builder setHostSubscriptionId(Object hostSubscriptionId) {
+        public Builder hostSubscriptionId(Object hostSubscriptionId) {
             this.hostSubscriptionId = Input.of(Objects.requireNonNull(hostSubscriptionId));
             return this;
         }
 
-        public Builder setLinkedServiceName(Input<LinkedServiceReferenceArgs> linkedServiceName) {
+        public Builder linkedServiceName(Input<LinkedServiceReferenceArgs> linkedServiceName) {
             this.linkedServiceName = Objects.requireNonNull(linkedServiceName);
             return this;
         }
 
-        public Builder setLinkedServiceName(LinkedServiceReferenceArgs linkedServiceName) {
+        public Builder linkedServiceName(LinkedServiceReferenceArgs linkedServiceName) {
             this.linkedServiceName = Input.of(Objects.requireNonNull(linkedServiceName));
             return this;
         }
 
-        public Builder setMapReduceConfiguration(@Nullable Input<Object> mapReduceConfiguration) {
+        public Builder mapReduceConfiguration(@Nullable Input<Object> mapReduceConfiguration) {
             this.mapReduceConfiguration = mapReduceConfiguration;
             return this;
         }
 
-        public Builder setMapReduceConfiguration(@Nullable Object mapReduceConfiguration) {
+        public Builder mapReduceConfiguration(@Nullable Object mapReduceConfiguration) {
             this.mapReduceConfiguration = Input.ofNullable(mapReduceConfiguration);
             return this;
         }
 
-        public Builder setOozieConfiguration(@Nullable Input<Object> oozieConfiguration) {
+        public Builder oozieConfiguration(@Nullable Input<Object> oozieConfiguration) {
             this.oozieConfiguration = oozieConfiguration;
             return this;
         }
 
-        public Builder setOozieConfiguration(@Nullable Object oozieConfiguration) {
+        public Builder oozieConfiguration(@Nullable Object oozieConfiguration) {
             this.oozieConfiguration = Input.ofNullable(oozieConfiguration);
             return this;
         }
 
-        public Builder setParameters(@Nullable Input<Map<String,ParameterSpecificationArgs>> parameters) {
+        public Builder parameters(@Nullable Input<Map<String,ParameterSpecificationArgs>> parameters) {
             this.parameters = parameters;
             return this;
         }
 
-        public Builder setParameters(@Nullable Map<String,ParameterSpecificationArgs> parameters) {
+        public Builder parameters(@Nullable Map<String,ParameterSpecificationArgs> parameters) {
             this.parameters = Input.ofNullable(parameters);
             return this;
         }
 
-        public Builder setScriptActions(@Nullable Input<List<ScriptActionArgs>> scriptActions) {
+        public Builder scriptActions(@Nullable Input<List<ScriptActionArgs>> scriptActions) {
             this.scriptActions = scriptActions;
             return this;
         }
 
-        public Builder setScriptActions(@Nullable List<ScriptActionArgs> scriptActions) {
+        public Builder scriptActions(@Nullable List<ScriptActionArgs> scriptActions) {
             this.scriptActions = Input.ofNullable(scriptActions);
             return this;
         }
 
-        public Builder setServicePrincipalId(@Nullable Input<Object> servicePrincipalId) {
+        public Builder servicePrincipalId(@Nullable Input<Object> servicePrincipalId) {
             this.servicePrincipalId = servicePrincipalId;
             return this;
         }
 
-        public Builder setServicePrincipalId(@Nullable Object servicePrincipalId) {
+        public Builder servicePrincipalId(@Nullable Object servicePrincipalId) {
             this.servicePrincipalId = Input.ofNullable(servicePrincipalId);
             return this;
         }
 
-        public Builder setServicePrincipalKey(@Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> servicePrincipalKey) {
+        public Builder servicePrincipalKey(@Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> servicePrincipalKey) {
             this.servicePrincipalKey = servicePrincipalKey;
             return this;
         }
 
-        public Builder setServicePrincipalKey(@Nullable Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> servicePrincipalKey) {
+        public Builder servicePrincipalKey(@Nullable Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> servicePrincipalKey) {
             this.servicePrincipalKey = Input.ofNullable(servicePrincipalKey);
             return this;
         }
 
-        public Builder setSparkVersion(@Nullable Input<Object> sparkVersion) {
+        public Builder sparkVersion(@Nullable Input<Object> sparkVersion) {
             this.sparkVersion = sparkVersion;
             return this;
         }
 
-        public Builder setSparkVersion(@Nullable Object sparkVersion) {
+        public Builder sparkVersion(@Nullable Object sparkVersion) {
             this.sparkVersion = Input.ofNullable(sparkVersion);
             return this;
         }
 
-        public Builder setStormConfiguration(@Nullable Input<Object> stormConfiguration) {
+        public Builder stormConfiguration(@Nullable Input<Object> stormConfiguration) {
             this.stormConfiguration = stormConfiguration;
             return this;
         }
 
-        public Builder setStormConfiguration(@Nullable Object stormConfiguration) {
+        public Builder stormConfiguration(@Nullable Object stormConfiguration) {
             this.stormConfiguration = Input.ofNullable(stormConfiguration);
             return this;
         }
 
-        public Builder setSubnetName(@Nullable Input<Object> subnetName) {
+        public Builder subnetName(@Nullable Input<Object> subnetName) {
             this.subnetName = subnetName;
             return this;
         }
 
-        public Builder setSubnetName(@Nullable Object subnetName) {
+        public Builder subnetName(@Nullable Object subnetName) {
             this.subnetName = Input.ofNullable(subnetName);
             return this;
         }
 
-        public Builder setTenant(Input<Object> tenant) {
+        public Builder tenant(Input<Object> tenant) {
             this.tenant = Objects.requireNonNull(tenant);
             return this;
         }
 
-        public Builder setTenant(Object tenant) {
+        public Builder tenant(Object tenant) {
             this.tenant = Input.of(Objects.requireNonNull(tenant));
             return this;
         }
 
-        public Builder setTimeToLive(Input<Object> timeToLive) {
+        public Builder timeToLive(Input<Object> timeToLive) {
             this.timeToLive = Objects.requireNonNull(timeToLive);
             return this;
         }
 
-        public Builder setTimeToLive(Object timeToLive) {
+        public Builder timeToLive(Object timeToLive) {
             this.timeToLive = Input.of(Objects.requireNonNull(timeToLive));
             return this;
         }
 
-        public Builder setType(Input<String> type) {
+        public Builder type(Input<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }
 
-        public Builder setVersion(Input<Object> version) {
+        public Builder version(Input<Object> version) {
             this.version = Objects.requireNonNull(version);
             return this;
         }
 
-        public Builder setVersion(Object version) {
+        public Builder version(Object version) {
             this.version = Input.of(Objects.requireNonNull(version));
             return this;
         }
 
-        public Builder setVirtualNetworkId(@Nullable Input<Object> virtualNetworkId) {
+        public Builder virtualNetworkId(@Nullable Input<Object> virtualNetworkId) {
             this.virtualNetworkId = virtualNetworkId;
             return this;
         }
 
-        public Builder setVirtualNetworkId(@Nullable Object virtualNetworkId) {
+        public Builder virtualNetworkId(@Nullable Object virtualNetworkId) {
             this.virtualNetworkId = Input.ofNullable(virtualNetworkId);
             return this;
         }
 
-        public Builder setYarnConfiguration(@Nullable Input<Object> yarnConfiguration) {
+        public Builder yarnConfiguration(@Nullable Input<Object> yarnConfiguration) {
             this.yarnConfiguration = yarnConfiguration;
             return this;
         }
 
-        public Builder setYarnConfiguration(@Nullable Object yarnConfiguration) {
+        public Builder yarnConfiguration(@Nullable Object yarnConfiguration) {
             this.yarnConfiguration = Input.ofNullable(yarnConfiguration);
             return this;
         }
 
-        public Builder setZookeeperNodeSize(@Nullable Input<Object> zookeeperNodeSize) {
+        public Builder zookeeperNodeSize(@Nullable Input<Object> zookeeperNodeSize) {
             this.zookeeperNodeSize = zookeeperNodeSize;
             return this;
         }
 
-        public Builder setZookeeperNodeSize(@Nullable Object zookeeperNodeSize) {
+        public Builder zookeeperNodeSize(@Nullable Object zookeeperNodeSize) {
             this.zookeeperNodeSize = Input.ofNullable(zookeeperNodeSize);
             return this;
         }

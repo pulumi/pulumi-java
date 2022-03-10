@@ -225,112 +225,112 @@ public final class CloningInfoArgs extends io.pulumi.resources.ResourceArgs {
     	      this.trafficManagerProfileName = defaults.trafficManagerProfileName;
         }
 
-        public Builder setAppSettingsOverrides(@Nullable Input<Map<String,String>> appSettingsOverrides) {
+        public Builder appSettingsOverrides(@Nullable Input<Map<String,String>> appSettingsOverrides) {
             this.appSettingsOverrides = appSettingsOverrides;
             return this;
         }
 
-        public Builder setAppSettingsOverrides(@Nullable Map<String,String> appSettingsOverrides) {
+        public Builder appSettingsOverrides(@Nullable Map<String,String> appSettingsOverrides) {
             this.appSettingsOverrides = Input.ofNullable(appSettingsOverrides);
             return this;
         }
 
-        public Builder setCloneCustomHostNames(@Nullable Input<Boolean> cloneCustomHostNames) {
+        public Builder cloneCustomHostNames(@Nullable Input<Boolean> cloneCustomHostNames) {
             this.cloneCustomHostNames = cloneCustomHostNames;
             return this;
         }
 
-        public Builder setCloneCustomHostNames(@Nullable Boolean cloneCustomHostNames) {
+        public Builder cloneCustomHostNames(@Nullable Boolean cloneCustomHostNames) {
             this.cloneCustomHostNames = Input.ofNullable(cloneCustomHostNames);
             return this;
         }
 
-        public Builder setCloneSourceControl(@Nullable Input<Boolean> cloneSourceControl) {
+        public Builder cloneSourceControl(@Nullable Input<Boolean> cloneSourceControl) {
             this.cloneSourceControl = cloneSourceControl;
             return this;
         }
 
-        public Builder setCloneSourceControl(@Nullable Boolean cloneSourceControl) {
+        public Builder cloneSourceControl(@Nullable Boolean cloneSourceControl) {
             this.cloneSourceControl = Input.ofNullable(cloneSourceControl);
             return this;
         }
 
-        public Builder setConfigureLoadBalancing(@Nullable Input<Boolean> configureLoadBalancing) {
+        public Builder configureLoadBalancing(@Nullable Input<Boolean> configureLoadBalancing) {
             this.configureLoadBalancing = configureLoadBalancing;
             return this;
         }
 
-        public Builder setConfigureLoadBalancing(@Nullable Boolean configureLoadBalancing) {
+        public Builder configureLoadBalancing(@Nullable Boolean configureLoadBalancing) {
             this.configureLoadBalancing = Input.ofNullable(configureLoadBalancing);
             return this;
         }
 
-        public Builder setCorrelationId(@Nullable Input<String> correlationId) {
+        public Builder correlationId(@Nullable Input<String> correlationId) {
             this.correlationId = correlationId;
             return this;
         }
 
-        public Builder setCorrelationId(@Nullable String correlationId) {
+        public Builder correlationId(@Nullable String correlationId) {
             this.correlationId = Input.ofNullable(correlationId);
             return this;
         }
 
-        public Builder setHostingEnvironment(@Nullable Input<String> hostingEnvironment) {
+        public Builder hostingEnvironment(@Nullable Input<String> hostingEnvironment) {
             this.hostingEnvironment = hostingEnvironment;
             return this;
         }
 
-        public Builder setHostingEnvironment(@Nullable String hostingEnvironment) {
+        public Builder hostingEnvironment(@Nullable String hostingEnvironment) {
             this.hostingEnvironment = Input.ofNullable(hostingEnvironment);
             return this;
         }
 
-        public Builder setOverwrite(@Nullable Input<Boolean> overwrite) {
+        public Builder overwrite(@Nullable Input<Boolean> overwrite) {
             this.overwrite = overwrite;
             return this;
         }
 
-        public Builder setOverwrite(@Nullable Boolean overwrite) {
+        public Builder overwrite(@Nullable Boolean overwrite) {
             this.overwrite = Input.ofNullable(overwrite);
             return this;
         }
 
-        public Builder setSourceWebAppId(Input<String> sourceWebAppId) {
+        public Builder sourceWebAppId(Input<String> sourceWebAppId) {
             this.sourceWebAppId = Objects.requireNonNull(sourceWebAppId);
             return this;
         }
 
-        public Builder setSourceWebAppId(String sourceWebAppId) {
+        public Builder sourceWebAppId(String sourceWebAppId) {
             this.sourceWebAppId = Input.of(Objects.requireNonNull(sourceWebAppId));
             return this;
         }
 
-        public Builder setSourceWebAppLocation(@Nullable Input<String> sourceWebAppLocation) {
+        public Builder sourceWebAppLocation(@Nullable Input<String> sourceWebAppLocation) {
             this.sourceWebAppLocation = sourceWebAppLocation;
             return this;
         }
 
-        public Builder setSourceWebAppLocation(@Nullable String sourceWebAppLocation) {
+        public Builder sourceWebAppLocation(@Nullable String sourceWebAppLocation) {
             this.sourceWebAppLocation = Input.ofNullable(sourceWebAppLocation);
             return this;
         }
 
-        public Builder setTrafficManagerProfileId(@Nullable Input<String> trafficManagerProfileId) {
+        public Builder trafficManagerProfileId(@Nullable Input<String> trafficManagerProfileId) {
             this.trafficManagerProfileId = trafficManagerProfileId;
             return this;
         }
 
-        public Builder setTrafficManagerProfileId(@Nullable String trafficManagerProfileId) {
+        public Builder trafficManagerProfileId(@Nullable String trafficManagerProfileId) {
             this.trafficManagerProfileId = Input.ofNullable(trafficManagerProfileId);
             return this;
         }
 
-        public Builder setTrafficManagerProfileName(@Nullable Input<String> trafficManagerProfileName) {
+        public Builder trafficManagerProfileName(@Nullable Input<String> trafficManagerProfileName) {
             this.trafficManagerProfileName = trafficManagerProfileName;
             return this;
         }
 
-        public Builder setTrafficManagerProfileName(@Nullable String trafficManagerProfileName) {
+        public Builder trafficManagerProfileName(@Nullable String trafficManagerProfileName) {
             this.trafficManagerProfileName = Input.ofNullable(trafficManagerProfileName);
             return this;
         }

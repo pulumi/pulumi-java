@@ -107,42 +107,42 @@ public final class VirtualHubRouteV2Args extends io.pulumi.resources.ResourceArg
     	      this.nextHops = defaults.nextHops;
         }
 
-        public Builder setDestinationType(@Nullable Input<String> destinationType) {
+        public Builder destinationType(@Nullable Input<String> destinationType) {
             this.destinationType = destinationType;
             return this;
         }
 
-        public Builder setDestinationType(@Nullable String destinationType) {
+        public Builder destinationType(@Nullable String destinationType) {
             this.destinationType = Input.ofNullable(destinationType);
             return this;
         }
 
-        public Builder setDestinations(@Nullable Input<List<String>> destinations) {
+        public Builder destinations(@Nullable Input<List<String>> destinations) {
             this.destinations = destinations;
             return this;
         }
 
-        public Builder setDestinations(@Nullable List<String> destinations) {
+        public Builder destinations(@Nullable List<String> destinations) {
             this.destinations = Input.ofNullable(destinations);
             return this;
         }
 
-        public Builder setNextHopType(@Nullable Input<String> nextHopType) {
+        public Builder nextHopType(@Nullable Input<String> nextHopType) {
             this.nextHopType = nextHopType;
             return this;
         }
 
-        public Builder setNextHopType(@Nullable String nextHopType) {
+        public Builder nextHopType(@Nullable String nextHopType) {
             this.nextHopType = Input.ofNullable(nextHopType);
             return this;
         }
 
-        public Builder setNextHops(@Nullable Input<List<String>> nextHops) {
+        public Builder nextHops(@Nullable Input<List<String>> nextHops) {
             this.nextHops = nextHops;
             return this;
         }
 
-        public Builder setNextHops(@Nullable List<String> nextHops) {
+        public Builder nextHops(@Nullable List<String> nextHops) {
             this.nextHops = Input.ofNullable(nextHops);
             return this;
         }

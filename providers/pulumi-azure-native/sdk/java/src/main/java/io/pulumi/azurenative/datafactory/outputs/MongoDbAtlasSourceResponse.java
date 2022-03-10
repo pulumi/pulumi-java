@@ -199,52 +199,52 @@ public final class MongoDbAtlasSourceResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setAdditionalColumns(@Nullable Object additionalColumns) {
+        public Builder additionalColumns(@Nullable Object additionalColumns) {
             this.additionalColumns = additionalColumns;
             return this;
         }
 
-        public Builder setBatchSize(@Nullable Object batchSize) {
+        public Builder batchSize(@Nullable Object batchSize) {
             this.batchSize = batchSize;
             return this;
         }
 
-        public Builder setCursorMethods(@Nullable MongoDbCursorMethodsPropertiesResponse cursorMethods) {
+        public Builder cursorMethods(@Nullable MongoDbCursorMethodsPropertiesResponse cursorMethods) {
             this.cursorMethods = cursorMethods;
             return this;
         }
 
-        public Builder setDisableMetricsCollection(@Nullable Object disableMetricsCollection) {
+        public Builder disableMetricsCollection(@Nullable Object disableMetricsCollection) {
             this.disableMetricsCollection = disableMetricsCollection;
             return this;
         }
 
-        public Builder setFilter(@Nullable Object filter) {
+        public Builder filter(@Nullable Object filter) {
             this.filter = filter;
             return this;
         }
 
-        public Builder setMaxConcurrentConnections(@Nullable Object maxConcurrentConnections) {
+        public Builder maxConcurrentConnections(@Nullable Object maxConcurrentConnections) {
             this.maxConcurrentConnections = maxConcurrentConnections;
             return this;
         }
 
-        public Builder setQueryTimeout(@Nullable Object queryTimeout) {
+        public Builder queryTimeout(@Nullable Object queryTimeout) {
             this.queryTimeout = queryTimeout;
             return this;
         }
 
-        public Builder setSourceRetryCount(@Nullable Object sourceRetryCount) {
+        public Builder sourceRetryCount(@Nullable Object sourceRetryCount) {
             this.sourceRetryCount = sourceRetryCount;
             return this;
         }
 
-        public Builder setSourceRetryWait(@Nullable Object sourceRetryWait) {
+        public Builder sourceRetryWait(@Nullable Object sourceRetryWait) {
             this.sourceRetryWait = sourceRetryWait;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

@@ -67,12 +67,12 @@ public final class AzurePlanResponse {
     	      this.skuId = defaults.skuId;
         }
 
-        public Builder setSkuDescription(String skuDescription) {
+        public Builder skuDescription(String skuDescription) {
             this.skuDescription = Objects.requireNonNull(skuDescription);
             return this;
         }
 
-        public Builder setSkuId(@Nullable String skuId) {
+        public Builder skuId(@Nullable String skuId) {
             this.skuId = skuId;
             return this;
         }

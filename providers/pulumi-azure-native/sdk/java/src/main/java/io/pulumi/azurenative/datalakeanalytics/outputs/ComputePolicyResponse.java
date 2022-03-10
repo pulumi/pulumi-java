@@ -146,37 +146,37 @@ public final class ComputePolicyResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setMaxDegreeOfParallelismPerJob(Integer maxDegreeOfParallelismPerJob) {
+        public Builder maxDegreeOfParallelismPerJob(Integer maxDegreeOfParallelismPerJob) {
             this.maxDegreeOfParallelismPerJob = Objects.requireNonNull(maxDegreeOfParallelismPerJob);
             return this;
         }
 
-        public Builder setMinPriorityPerJob(Integer minPriorityPerJob) {
+        public Builder minPriorityPerJob(Integer minPriorityPerJob) {
             this.minPriorityPerJob = Objects.requireNonNull(minPriorityPerJob);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setObjectId(String objectId) {
+        public Builder objectId(String objectId) {
             this.objectId = Objects.requireNonNull(objectId);
             return this;
         }
 
-        public Builder setObjectType(String objectType) {
+        public Builder objectType(String objectType) {
             this.objectType = Objects.requireNonNull(objectType);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

@@ -123,27 +123,27 @@ public final class VirtualMachineResourceSettingsResponse extends io.pulumi.reso
     	      this.targetVmSize = defaults.targetVmSize;
         }
 
-        public Builder setResourceType(String resourceType) {
+        public Builder resourceType(String resourceType) {
             this.resourceType = Objects.requireNonNull(resourceType);
             return this;
         }
 
-        public Builder setTargetAvailabilitySetId(@Nullable String targetAvailabilitySetId) {
+        public Builder targetAvailabilitySetId(@Nullable String targetAvailabilitySetId) {
             this.targetAvailabilitySetId = targetAvailabilitySetId;
             return this;
         }
 
-        public Builder setTargetAvailabilityZone(@Nullable String targetAvailabilityZone) {
+        public Builder targetAvailabilityZone(@Nullable String targetAvailabilityZone) {
             this.targetAvailabilityZone = targetAvailabilityZone;
             return this;
         }
 
-        public Builder setTargetResourceName(String targetResourceName) {
+        public Builder targetResourceName(String targetResourceName) {
             this.targetResourceName = Objects.requireNonNull(targetResourceName);
             return this;
         }
 
-        public Builder setTargetVmSize(@Nullable String targetVmSize) {
+        public Builder targetVmSize(@Nullable String targetVmSize) {
             this.targetVmSize = targetVmSize;
             return this;
         }

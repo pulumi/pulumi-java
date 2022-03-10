@@ -338,182 +338,182 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
     	      this.workspaceRepositoryConfiguration = defaults.workspaceRepositoryConfiguration;
         }
 
-        public Builder setConnectivityEndpoints(@Nullable Input<Map<String,String>> connectivityEndpoints) {
+        public Builder connectivityEndpoints(@Nullable Input<Map<String,String>> connectivityEndpoints) {
             this.connectivityEndpoints = connectivityEndpoints;
             return this;
         }
 
-        public Builder setConnectivityEndpoints(@Nullable Map<String,String> connectivityEndpoints) {
+        public Builder connectivityEndpoints(@Nullable Map<String,String> connectivityEndpoints) {
             this.connectivityEndpoints = Input.ofNullable(connectivityEndpoints);
             return this;
         }
 
-        public Builder setDefaultDataLakeStorage(@Nullable Input<DataLakeStorageAccountDetailsArgs> defaultDataLakeStorage) {
+        public Builder defaultDataLakeStorage(@Nullable Input<DataLakeStorageAccountDetailsArgs> defaultDataLakeStorage) {
             this.defaultDataLakeStorage = defaultDataLakeStorage;
             return this;
         }
 
-        public Builder setDefaultDataLakeStorage(@Nullable DataLakeStorageAccountDetailsArgs defaultDataLakeStorage) {
+        public Builder defaultDataLakeStorage(@Nullable DataLakeStorageAccountDetailsArgs defaultDataLakeStorage) {
             this.defaultDataLakeStorage = Input.ofNullable(defaultDataLakeStorage);
             return this;
         }
 
-        public Builder setEncryption(@Nullable Input<EncryptionDetailsArgs> encryption) {
+        public Builder encryption(@Nullable Input<EncryptionDetailsArgs> encryption) {
             this.encryption = encryption;
             return this;
         }
 
-        public Builder setEncryption(@Nullable EncryptionDetailsArgs encryption) {
+        public Builder encryption(@Nullable EncryptionDetailsArgs encryption) {
             this.encryption = Input.ofNullable(encryption);
             return this;
         }
 
-        public Builder setIdentity(@Nullable Input<ManagedIdentityArgs> identity) {
+        public Builder identity(@Nullable Input<ManagedIdentityArgs> identity) {
             this.identity = identity;
             return this;
         }
 
-        public Builder setIdentity(@Nullable ManagedIdentityArgs identity) {
+        public Builder identity(@Nullable ManagedIdentityArgs identity) {
             this.identity = Input.ofNullable(identity);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setManagedResourceGroupName(@Nullable Input<String> managedResourceGroupName) {
+        public Builder managedResourceGroupName(@Nullable Input<String> managedResourceGroupName) {
             this.managedResourceGroupName = managedResourceGroupName;
             return this;
         }
 
-        public Builder setManagedResourceGroupName(@Nullable String managedResourceGroupName) {
+        public Builder managedResourceGroupName(@Nullable String managedResourceGroupName) {
             this.managedResourceGroupName = Input.ofNullable(managedResourceGroupName);
             return this;
         }
 
-        public Builder setManagedVirtualNetwork(@Nullable Input<String> managedVirtualNetwork) {
+        public Builder managedVirtualNetwork(@Nullable Input<String> managedVirtualNetwork) {
             this.managedVirtualNetwork = managedVirtualNetwork;
             return this;
         }
 
-        public Builder setManagedVirtualNetwork(@Nullable String managedVirtualNetwork) {
+        public Builder managedVirtualNetwork(@Nullable String managedVirtualNetwork) {
             this.managedVirtualNetwork = Input.ofNullable(managedVirtualNetwork);
             return this;
         }
 
-        public Builder setManagedVirtualNetworkSettings(@Nullable Input<ManagedVirtualNetworkSettingsArgs> managedVirtualNetworkSettings) {
+        public Builder managedVirtualNetworkSettings(@Nullable Input<ManagedVirtualNetworkSettingsArgs> managedVirtualNetworkSettings) {
             this.managedVirtualNetworkSettings = managedVirtualNetworkSettings;
             return this;
         }
 
-        public Builder setManagedVirtualNetworkSettings(@Nullable ManagedVirtualNetworkSettingsArgs managedVirtualNetworkSettings) {
+        public Builder managedVirtualNetworkSettings(@Nullable ManagedVirtualNetworkSettingsArgs managedVirtualNetworkSettings) {
             this.managedVirtualNetworkSettings = Input.ofNullable(managedVirtualNetworkSettings);
             return this;
         }
 
-        public Builder setPrivateEndpointConnections(@Nullable Input<List<PrivateEndpointConnectionArgs>> privateEndpointConnections) {
+        public Builder privateEndpointConnections(@Nullable Input<List<PrivateEndpointConnectionArgs>> privateEndpointConnections) {
             this.privateEndpointConnections = privateEndpointConnections;
             return this;
         }
 
-        public Builder setPrivateEndpointConnections(@Nullable List<PrivateEndpointConnectionArgs> privateEndpointConnections) {
+        public Builder privateEndpointConnections(@Nullable List<PrivateEndpointConnectionArgs> privateEndpointConnections) {
             this.privateEndpointConnections = Input.ofNullable(privateEndpointConnections);
             return this;
         }
 
-        public Builder setPublicNetworkAccess(@Nullable Input<Either<String,WorkspacePublicNetworkAccess>> publicNetworkAccess) {
+        public Builder publicNetworkAccess(@Nullable Input<Either<String,WorkspacePublicNetworkAccess>> publicNetworkAccess) {
             this.publicNetworkAccess = publicNetworkAccess;
             return this;
         }
 
-        public Builder setPublicNetworkAccess(@Nullable Either<String,WorkspacePublicNetworkAccess> publicNetworkAccess) {
+        public Builder publicNetworkAccess(@Nullable Either<String,WorkspacePublicNetworkAccess> publicNetworkAccess) {
             this.publicNetworkAccess = Input.ofNullable(publicNetworkAccess);
             return this;
         }
 
-        public Builder setPurviewConfiguration(@Nullable Input<PurviewConfigurationArgs> purviewConfiguration) {
+        public Builder purviewConfiguration(@Nullable Input<PurviewConfigurationArgs> purviewConfiguration) {
             this.purviewConfiguration = purviewConfiguration;
             return this;
         }
 
-        public Builder setPurviewConfiguration(@Nullable PurviewConfigurationArgs purviewConfiguration) {
+        public Builder purviewConfiguration(@Nullable PurviewConfigurationArgs purviewConfiguration) {
             this.purviewConfiguration = Input.ofNullable(purviewConfiguration);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setSqlAdministratorLogin(@Nullable Input<String> sqlAdministratorLogin) {
+        public Builder sqlAdministratorLogin(@Nullable Input<String> sqlAdministratorLogin) {
             this.sqlAdministratorLogin = sqlAdministratorLogin;
             return this;
         }
 
-        public Builder setSqlAdministratorLogin(@Nullable String sqlAdministratorLogin) {
+        public Builder sqlAdministratorLogin(@Nullable String sqlAdministratorLogin) {
             this.sqlAdministratorLogin = Input.ofNullable(sqlAdministratorLogin);
             return this;
         }
 
-        public Builder setSqlAdministratorLoginPassword(@Nullable Input<String> sqlAdministratorLoginPassword) {
+        public Builder sqlAdministratorLoginPassword(@Nullable Input<String> sqlAdministratorLoginPassword) {
             this.sqlAdministratorLoginPassword = sqlAdministratorLoginPassword;
             return this;
         }
 
-        public Builder setSqlAdministratorLoginPassword(@Nullable String sqlAdministratorLoginPassword) {
+        public Builder sqlAdministratorLoginPassword(@Nullable String sqlAdministratorLoginPassword) {
             this.sqlAdministratorLoginPassword = Input.ofNullable(sqlAdministratorLoginPassword);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setVirtualNetworkProfile(@Nullable Input<VirtualNetworkProfileArgs> virtualNetworkProfile) {
+        public Builder virtualNetworkProfile(@Nullable Input<VirtualNetworkProfileArgs> virtualNetworkProfile) {
             this.virtualNetworkProfile = virtualNetworkProfile;
             return this;
         }
 
-        public Builder setVirtualNetworkProfile(@Nullable VirtualNetworkProfileArgs virtualNetworkProfile) {
+        public Builder virtualNetworkProfile(@Nullable VirtualNetworkProfileArgs virtualNetworkProfile) {
             this.virtualNetworkProfile = Input.ofNullable(virtualNetworkProfile);
             return this;
         }
 
-        public Builder setWorkspaceName(@Nullable Input<String> workspaceName) {
+        public Builder workspaceName(@Nullable Input<String> workspaceName) {
             this.workspaceName = workspaceName;
             return this;
         }
 
-        public Builder setWorkspaceName(@Nullable String workspaceName) {
+        public Builder workspaceName(@Nullable String workspaceName) {
             this.workspaceName = Input.ofNullable(workspaceName);
             return this;
         }
 
-        public Builder setWorkspaceRepositoryConfiguration(@Nullable Input<WorkspaceRepositoryConfigurationArgs> workspaceRepositoryConfiguration) {
+        public Builder workspaceRepositoryConfiguration(@Nullable Input<WorkspaceRepositoryConfigurationArgs> workspaceRepositoryConfiguration) {
             this.workspaceRepositoryConfiguration = workspaceRepositoryConfiguration;
             return this;
         }
 
-        public Builder setWorkspaceRepositoryConfiguration(@Nullable WorkspaceRepositoryConfigurationArgs workspaceRepositoryConfiguration) {
+        public Builder workspaceRepositoryConfiguration(@Nullable WorkspaceRepositoryConfigurationArgs workspaceRepositoryConfiguration) {
             this.workspaceRepositoryConfiguration = Input.ofNullable(workspaceRepositoryConfiguration);
             return this;
         }

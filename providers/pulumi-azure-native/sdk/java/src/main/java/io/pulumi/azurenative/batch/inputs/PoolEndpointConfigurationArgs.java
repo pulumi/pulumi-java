@@ -53,12 +53,12 @@ public final class PoolEndpointConfigurationArgs extends io.pulumi.resources.Res
     	      this.inboundNatPools = defaults.inboundNatPools;
         }
 
-        public Builder setInboundNatPools(Input<List<InboundNatPoolArgs>> inboundNatPools) {
+        public Builder inboundNatPools(Input<List<InboundNatPoolArgs>> inboundNatPools) {
             this.inboundNatPools = Objects.requireNonNull(inboundNatPools);
             return this;
         }
 
-        public Builder setInboundNatPools(List<InboundNatPoolArgs> inboundNatPools) {
+        public Builder inboundNatPools(List<InboundNatPoolArgs> inboundNatPools) {
             this.inboundNatPools = Input.of(Objects.requireNonNull(inboundNatPools));
             return this;
         }

@@ -343,97 +343,97 @@ public final class AzurePostgreSqlSectionResponse extends io.pulumi.resources.In
     	      this.userPassword = defaults.userPassword;
         }
 
-        public Builder setAuthorityUrl(@Nullable String authorityUrl) {
+        public Builder authorityUrl(@Nullable String authorityUrl) {
             this.authorityUrl = authorityUrl;
             return this;
         }
 
-        public Builder setCertificate(@Nullable String certificate) {
+        public Builder certificate(@Nullable String certificate) {
             this.certificate = certificate;
             return this;
         }
 
-        public Builder setClientId(@Nullable String clientId) {
+        public Builder clientId(@Nullable String clientId) {
             this.clientId = clientId;
             return this;
         }
 
-        public Builder setClientSecret(@Nullable String clientSecret) {
+        public Builder clientSecret(@Nullable String clientSecret) {
             this.clientSecret = clientSecret;
             return this;
         }
 
-        public Builder setCredentialType(@Nullable String credentialType) {
+        public Builder credentialType(@Nullable String credentialType) {
             this.credentialType = credentialType;
             return this;
         }
 
-        public Builder setDatabaseName(@Nullable String databaseName) {
+        public Builder databaseName(@Nullable String databaseName) {
             this.databaseName = databaseName;
             return this;
         }
 
-        public Builder setEnableSsl(@Nullable Boolean enableSsl) {
+        public Builder enableSsl(@Nullable Boolean enableSsl) {
             this.enableSsl = enableSsl;
             return this;
         }
 
-        public Builder setEndpoint(@Nullable String endpoint) {
+        public Builder endpoint(@Nullable String endpoint) {
             this.endpoint = endpoint;
             return this;
         }
 
-        public Builder setIsCertAuth(@Nullable Boolean isCertAuth) {
+        public Builder isCertAuth(@Nullable Boolean isCertAuth) {
             this.isCertAuth = isCertAuth;
             return this;
         }
 
-        public Builder setPortNumber(@Nullable String portNumber) {
+        public Builder portNumber(@Nullable String portNumber) {
             this.portNumber = portNumber;
             return this;
         }
 
-        public Builder setResourceGroup(@Nullable String resourceGroup) {
+        public Builder resourceGroup(@Nullable String resourceGroup) {
             this.resourceGroup = resourceGroup;
             return this;
         }
 
-        public Builder setResourceUri(@Nullable String resourceUri) {
+        public Builder resourceUri(@Nullable String resourceUri) {
             this.resourceUri = resourceUri;
             return this;
         }
 
-        public Builder setServerName(@Nullable String serverName) {
+        public Builder serverName(@Nullable String serverName) {
             this.serverName = serverName;
             return this;
         }
 
-        public Builder setServiceDataAccessAuthIdentity(@Nullable String serviceDataAccessAuthIdentity) {
+        public Builder serviceDataAccessAuthIdentity(@Nullable String serviceDataAccessAuthIdentity) {
             this.serviceDataAccessAuthIdentity = serviceDataAccessAuthIdentity;
             return this;
         }
 
-        public Builder setSubscriptionId(@Nullable String subscriptionId) {
+        public Builder subscriptionId(@Nullable String subscriptionId) {
             this.subscriptionId = subscriptionId;
             return this;
         }
 
-        public Builder setTenantId(@Nullable String tenantId) {
+        public Builder tenantId(@Nullable String tenantId) {
             this.tenantId = tenantId;
             return this;
         }
 
-        public Builder setThumbprint(@Nullable String thumbprint) {
+        public Builder thumbprint(@Nullable String thumbprint) {
             this.thumbprint = thumbprint;
             return this;
         }
 
-        public Builder setUserId(@Nullable String userId) {
+        public Builder userId(@Nullable String userId) {
             this.userId = userId;
             return this;
         }
 
-        public Builder setUserPassword(@Nullable String userPassword) {
+        public Builder userPassword(@Nullable String userPassword) {
             this.userPassword = userPassword;
             return this;
         }

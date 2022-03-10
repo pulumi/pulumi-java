@@ -171,82 +171,82 @@ public final class PowerBIOutputDataSourceArgs extends io.pulumi.resources.Resou
     	      this.type = defaults.type;
         }
 
-        public Builder setDataset(@Nullable Input<String> dataset) {
+        public Builder dataset(@Nullable Input<String> dataset) {
             this.dataset = dataset;
             return this;
         }
 
-        public Builder setDataset(@Nullable String dataset) {
+        public Builder dataset(@Nullable String dataset) {
             this.dataset = Input.ofNullable(dataset);
             return this;
         }
 
-        public Builder setGroupId(@Nullable Input<String> groupId) {
+        public Builder groupId(@Nullable Input<String> groupId) {
             this.groupId = groupId;
             return this;
         }
 
-        public Builder setGroupId(@Nullable String groupId) {
+        public Builder groupId(@Nullable String groupId) {
             this.groupId = Input.ofNullable(groupId);
             return this;
         }
 
-        public Builder setGroupName(@Nullable Input<String> groupName) {
+        public Builder groupName(@Nullable Input<String> groupName) {
             this.groupName = groupName;
             return this;
         }
 
-        public Builder setGroupName(@Nullable String groupName) {
+        public Builder groupName(@Nullable String groupName) {
             this.groupName = Input.ofNullable(groupName);
             return this;
         }
 
-        public Builder setRefreshToken(@Nullable Input<String> refreshToken) {
+        public Builder refreshToken(@Nullable Input<String> refreshToken) {
             this.refreshToken = refreshToken;
             return this;
         }
 
-        public Builder setRefreshToken(@Nullable String refreshToken) {
+        public Builder refreshToken(@Nullable String refreshToken) {
             this.refreshToken = Input.ofNullable(refreshToken);
             return this;
         }
 
-        public Builder setTable(@Nullable Input<String> table) {
+        public Builder table(@Nullable Input<String> table) {
             this.table = table;
             return this;
         }
 
-        public Builder setTable(@Nullable String table) {
+        public Builder table(@Nullable String table) {
             this.table = Input.ofNullable(table);
             return this;
         }
 
-        public Builder setTokenUserDisplayName(@Nullable Input<String> tokenUserDisplayName) {
+        public Builder tokenUserDisplayName(@Nullable Input<String> tokenUserDisplayName) {
             this.tokenUserDisplayName = tokenUserDisplayName;
             return this;
         }
 
-        public Builder setTokenUserDisplayName(@Nullable String tokenUserDisplayName) {
+        public Builder tokenUserDisplayName(@Nullable String tokenUserDisplayName) {
             this.tokenUserDisplayName = Input.ofNullable(tokenUserDisplayName);
             return this;
         }
 
-        public Builder setTokenUserPrincipalName(@Nullable Input<String> tokenUserPrincipalName) {
+        public Builder tokenUserPrincipalName(@Nullable Input<String> tokenUserPrincipalName) {
             this.tokenUserPrincipalName = tokenUserPrincipalName;
             return this;
         }
 
-        public Builder setTokenUserPrincipalName(@Nullable String tokenUserPrincipalName) {
+        public Builder tokenUserPrincipalName(@Nullable String tokenUserPrincipalName) {
             this.tokenUserPrincipalName = Input.ofNullable(tokenUserPrincipalName);
             return this;
         }
 
-        public Builder setType(Input<String> type) {
+        public Builder type(Input<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }

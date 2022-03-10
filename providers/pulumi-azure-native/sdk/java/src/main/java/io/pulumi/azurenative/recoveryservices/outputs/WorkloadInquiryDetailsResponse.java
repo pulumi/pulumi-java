@@ -85,17 +85,17 @@ public final class WorkloadInquiryDetailsResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setInquiryValidation(@Nullable InquiryValidationResponse inquiryValidation) {
+        public Builder inquiryValidation(@Nullable InquiryValidationResponse inquiryValidation) {
             this.inquiryValidation = inquiryValidation;
             return this;
         }
 
-        public Builder setItemCount(@Nullable Double itemCount) {
+        public Builder itemCount(@Nullable Double itemCount) {
             this.itemCount = itemCount;
             return this;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = type;
             return this;
         }

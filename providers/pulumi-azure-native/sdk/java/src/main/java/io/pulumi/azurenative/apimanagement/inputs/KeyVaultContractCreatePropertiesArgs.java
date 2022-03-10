@@ -74,22 +74,22 @@ public final class KeyVaultContractCreatePropertiesArgs extends io.pulumi.resour
     	      this.secretIdentifier = defaults.secretIdentifier;
         }
 
-        public Builder setIdentityClientId(@Nullable Input<String> identityClientId) {
+        public Builder identityClientId(@Nullable Input<String> identityClientId) {
             this.identityClientId = identityClientId;
             return this;
         }
 
-        public Builder setIdentityClientId(@Nullable String identityClientId) {
+        public Builder identityClientId(@Nullable String identityClientId) {
             this.identityClientId = Input.ofNullable(identityClientId);
             return this;
         }
 
-        public Builder setSecretIdentifier(@Nullable Input<String> secretIdentifier) {
+        public Builder secretIdentifier(@Nullable Input<String> secretIdentifier) {
             this.secretIdentifier = secretIdentifier;
             return this;
         }
 
-        public Builder setSecretIdentifier(@Nullable String secretIdentifier) {
+        public Builder secretIdentifier(@Nullable String secretIdentifier) {
             this.secretIdentifier = Input.ofNullable(secretIdentifier);
             return this;
         }

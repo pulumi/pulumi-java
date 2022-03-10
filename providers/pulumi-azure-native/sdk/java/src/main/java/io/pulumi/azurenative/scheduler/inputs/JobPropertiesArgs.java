@@ -105,42 +105,42 @@ public final class JobPropertiesArgs extends io.pulumi.resources.ResourceArgs {
     	      this.state = defaults.state;
         }
 
-        public Builder setAction(@Nullable Input<JobActionArgs> action) {
+        public Builder action(@Nullable Input<JobActionArgs> action) {
             this.action = action;
             return this;
         }
 
-        public Builder setAction(@Nullable JobActionArgs action) {
+        public Builder action(@Nullable JobActionArgs action) {
             this.action = Input.ofNullable(action);
             return this;
         }
 
-        public Builder setRecurrence(@Nullable Input<JobRecurrenceArgs> recurrence) {
+        public Builder recurrence(@Nullable Input<JobRecurrenceArgs> recurrence) {
             this.recurrence = recurrence;
             return this;
         }
 
-        public Builder setRecurrence(@Nullable JobRecurrenceArgs recurrence) {
+        public Builder recurrence(@Nullable JobRecurrenceArgs recurrence) {
             this.recurrence = Input.ofNullable(recurrence);
             return this;
         }
 
-        public Builder setStartTime(@Nullable Input<String> startTime) {
+        public Builder startTime(@Nullable Input<String> startTime) {
             this.startTime = startTime;
             return this;
         }
 
-        public Builder setStartTime(@Nullable String startTime) {
+        public Builder startTime(@Nullable String startTime) {
             this.startTime = Input.ofNullable(startTime);
             return this;
         }
 
-        public Builder setState(@Nullable Input<JobState> state) {
+        public Builder state(@Nullable Input<JobState> state) {
             this.state = state;
             return this;
         }
 
-        public Builder setState(@Nullable JobState state) {
+        public Builder state(@Nullable JobState state) {
             this.state = Input.ofNullable(state);
             return this;
         }

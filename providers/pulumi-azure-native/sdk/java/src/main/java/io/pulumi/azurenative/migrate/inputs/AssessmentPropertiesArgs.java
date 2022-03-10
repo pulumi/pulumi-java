@@ -314,162 +314,162 @@ public final class AssessmentPropertiesArgs extends io.pulumi.resources.Resource
     	      this.vmUptime = defaults.vmUptime;
         }
 
-        public Builder setAzureDiskType(Input<Either<String,AzureDiskType>> azureDiskType) {
+        public Builder azureDiskType(Input<Either<String,AzureDiskType>> azureDiskType) {
             this.azureDiskType = Objects.requireNonNull(azureDiskType);
             return this;
         }
 
-        public Builder setAzureDiskType(Either<String,AzureDiskType> azureDiskType) {
+        public Builder azureDiskType(Either<String,AzureDiskType> azureDiskType) {
             this.azureDiskType = Input.of(Objects.requireNonNull(azureDiskType));
             return this;
         }
 
-        public Builder setAzureHybridUseBenefit(Input<Either<String,AzureHybridUseBenefit>> azureHybridUseBenefit) {
+        public Builder azureHybridUseBenefit(Input<Either<String,AzureHybridUseBenefit>> azureHybridUseBenefit) {
             this.azureHybridUseBenefit = Objects.requireNonNull(azureHybridUseBenefit);
             return this;
         }
 
-        public Builder setAzureHybridUseBenefit(Either<String,AzureHybridUseBenefit> azureHybridUseBenefit) {
+        public Builder azureHybridUseBenefit(Either<String,AzureHybridUseBenefit> azureHybridUseBenefit) {
             this.azureHybridUseBenefit = Input.of(Objects.requireNonNull(azureHybridUseBenefit));
             return this;
         }
 
-        public Builder setAzureLocation(Input<Either<String,AzureLocation>> azureLocation) {
+        public Builder azureLocation(Input<Either<String,AzureLocation>> azureLocation) {
             this.azureLocation = Objects.requireNonNull(azureLocation);
             return this;
         }
 
-        public Builder setAzureLocation(Either<String,AzureLocation> azureLocation) {
+        public Builder azureLocation(Either<String,AzureLocation> azureLocation) {
             this.azureLocation = Input.of(Objects.requireNonNull(azureLocation));
             return this;
         }
 
-        public Builder setAzureOfferCode(Input<Either<String,AzureOfferCode>> azureOfferCode) {
+        public Builder azureOfferCode(Input<Either<String,AzureOfferCode>> azureOfferCode) {
             this.azureOfferCode = Objects.requireNonNull(azureOfferCode);
             return this;
         }
 
-        public Builder setAzureOfferCode(Either<String,AzureOfferCode> azureOfferCode) {
+        public Builder azureOfferCode(Either<String,AzureOfferCode> azureOfferCode) {
             this.azureOfferCode = Input.of(Objects.requireNonNull(azureOfferCode));
             return this;
         }
 
-        public Builder setAzurePricingTier(Input<Either<String,AzurePricingTier>> azurePricingTier) {
+        public Builder azurePricingTier(Input<Either<String,AzurePricingTier>> azurePricingTier) {
             this.azurePricingTier = Objects.requireNonNull(azurePricingTier);
             return this;
         }
 
-        public Builder setAzurePricingTier(Either<String,AzurePricingTier> azurePricingTier) {
+        public Builder azurePricingTier(Either<String,AzurePricingTier> azurePricingTier) {
             this.azurePricingTier = Input.of(Objects.requireNonNull(azurePricingTier));
             return this;
         }
 
-        public Builder setAzureStorageRedundancy(Input<Either<String,AzureStorageRedundancy>> azureStorageRedundancy) {
+        public Builder azureStorageRedundancy(Input<Either<String,AzureStorageRedundancy>> azureStorageRedundancy) {
             this.azureStorageRedundancy = Objects.requireNonNull(azureStorageRedundancy);
             return this;
         }
 
-        public Builder setAzureStorageRedundancy(Either<String,AzureStorageRedundancy> azureStorageRedundancy) {
+        public Builder azureStorageRedundancy(Either<String,AzureStorageRedundancy> azureStorageRedundancy) {
             this.azureStorageRedundancy = Input.of(Objects.requireNonNull(azureStorageRedundancy));
             return this;
         }
 
-        public Builder setAzureVmFamilies(Input<List<Either<String,AzureVmFamily>>> azureVmFamilies) {
+        public Builder azureVmFamilies(Input<List<Either<String,AzureVmFamily>>> azureVmFamilies) {
             this.azureVmFamilies = Objects.requireNonNull(azureVmFamilies);
             return this;
         }
 
-        public Builder setAzureVmFamilies(List<Either<String,AzureVmFamily>> azureVmFamilies) {
+        public Builder azureVmFamilies(List<Either<String,AzureVmFamily>> azureVmFamilies) {
             this.azureVmFamilies = Input.of(Objects.requireNonNull(azureVmFamilies));
             return this;
         }
 
-        public Builder setCurrency(Input<Either<String,Currency>> currency) {
+        public Builder currency(Input<Either<String,Currency>> currency) {
             this.currency = Objects.requireNonNull(currency);
             return this;
         }
 
-        public Builder setCurrency(Either<String,Currency> currency) {
+        public Builder currency(Either<String,Currency> currency) {
             this.currency = Input.of(Objects.requireNonNull(currency));
             return this;
         }
 
-        public Builder setDiscountPercentage(Input<Double> discountPercentage) {
+        public Builder discountPercentage(Input<Double> discountPercentage) {
             this.discountPercentage = Objects.requireNonNull(discountPercentage);
             return this;
         }
 
-        public Builder setDiscountPercentage(Double discountPercentage) {
+        public Builder discountPercentage(Double discountPercentage) {
             this.discountPercentage = Input.of(Objects.requireNonNull(discountPercentage));
             return this;
         }
 
-        public Builder setPercentile(Input<Either<String,Percentile>> percentile) {
+        public Builder percentile(Input<Either<String,Percentile>> percentile) {
             this.percentile = Objects.requireNonNull(percentile);
             return this;
         }
 
-        public Builder setPercentile(Either<String,Percentile> percentile) {
+        public Builder percentile(Either<String,Percentile> percentile) {
             this.percentile = Input.of(Objects.requireNonNull(percentile));
             return this;
         }
 
-        public Builder setReservedInstance(Input<Either<String,ReservedInstance>> reservedInstance) {
+        public Builder reservedInstance(Input<Either<String,ReservedInstance>> reservedInstance) {
             this.reservedInstance = Objects.requireNonNull(reservedInstance);
             return this;
         }
 
-        public Builder setReservedInstance(Either<String,ReservedInstance> reservedInstance) {
+        public Builder reservedInstance(Either<String,ReservedInstance> reservedInstance) {
             this.reservedInstance = Input.of(Objects.requireNonNull(reservedInstance));
             return this;
         }
 
-        public Builder setScalingFactor(Input<Double> scalingFactor) {
+        public Builder scalingFactor(Input<Double> scalingFactor) {
             this.scalingFactor = Objects.requireNonNull(scalingFactor);
             return this;
         }
 
-        public Builder setScalingFactor(Double scalingFactor) {
+        public Builder scalingFactor(Double scalingFactor) {
             this.scalingFactor = Input.of(Objects.requireNonNull(scalingFactor));
             return this;
         }
 
-        public Builder setSizingCriterion(Input<Either<String,AssessmentSizingCriterion>> sizingCriterion) {
+        public Builder sizingCriterion(Input<Either<String,AssessmentSizingCriterion>> sizingCriterion) {
             this.sizingCriterion = Objects.requireNonNull(sizingCriterion);
             return this;
         }
 
-        public Builder setSizingCriterion(Either<String,AssessmentSizingCriterion> sizingCriterion) {
+        public Builder sizingCriterion(Either<String,AssessmentSizingCriterion> sizingCriterion) {
             this.sizingCriterion = Input.of(Objects.requireNonNull(sizingCriterion));
             return this;
         }
 
-        public Builder setStage(Input<Either<String,AssessmentStage>> stage) {
+        public Builder stage(Input<Either<String,AssessmentStage>> stage) {
             this.stage = Objects.requireNonNull(stage);
             return this;
         }
 
-        public Builder setStage(Either<String,AssessmentStage> stage) {
+        public Builder stage(Either<String,AssessmentStage> stage) {
             this.stage = Input.of(Objects.requireNonNull(stage));
             return this;
         }
 
-        public Builder setTimeRange(Input<Either<String,TimeRange>> timeRange) {
+        public Builder timeRange(Input<Either<String,TimeRange>> timeRange) {
             this.timeRange = Objects.requireNonNull(timeRange);
             return this;
         }
 
-        public Builder setTimeRange(Either<String,TimeRange> timeRange) {
+        public Builder timeRange(Either<String,TimeRange> timeRange) {
             this.timeRange = Input.of(Objects.requireNonNull(timeRange));
             return this;
         }
 
-        public Builder setVmUptime(Input<VmUptimeArgs> vmUptime) {
+        public Builder vmUptime(Input<VmUptimeArgs> vmUptime) {
             this.vmUptime = Objects.requireNonNull(vmUptime);
             return this;
         }
 
-        public Builder setVmUptime(VmUptimeArgs vmUptime) {
+        public Builder vmUptime(VmUptimeArgs vmUptime) {
             this.vmUptime = Input.of(Objects.requireNonNull(vmUptime));
             return this;
         }

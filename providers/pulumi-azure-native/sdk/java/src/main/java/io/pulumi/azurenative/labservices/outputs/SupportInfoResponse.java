@@ -99,22 +99,22 @@ public final class SupportInfoResponse {
     	      this.url = defaults.url;
         }
 
-        public Builder setEmail(@Nullable String email) {
+        public Builder email(@Nullable String email) {
             this.email = email;
             return this;
         }
 
-        public Builder setInstructions(@Nullable String instructions) {
+        public Builder instructions(@Nullable String instructions) {
             this.instructions = instructions;
             return this;
         }
 
-        public Builder setPhone(@Nullable String phone) {
+        public Builder phone(@Nullable String phone) {
             this.phone = phone;
             return this;
         }
 
-        public Builder setUrl(@Nullable String url) {
+        public Builder url(@Nullable String url) {
             this.url = url;
             return this;
         }

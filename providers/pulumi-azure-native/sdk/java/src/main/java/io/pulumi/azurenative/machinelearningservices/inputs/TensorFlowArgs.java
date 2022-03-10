@@ -92,32 +92,32 @@ public final class TensorFlowArgs extends io.pulumi.resources.ResourceArgs {
     	      this.workerCount = defaults.workerCount;
         }
 
-        public Builder setDistributionType(Input<String> distributionType) {
+        public Builder distributionType(Input<String> distributionType) {
             this.distributionType = Objects.requireNonNull(distributionType);
             return this;
         }
 
-        public Builder setDistributionType(String distributionType) {
+        public Builder distributionType(String distributionType) {
             this.distributionType = Input.of(Objects.requireNonNull(distributionType));
             return this;
         }
 
-        public Builder setParameterServerCount(@Nullable Input<Integer> parameterServerCount) {
+        public Builder parameterServerCount(@Nullable Input<Integer> parameterServerCount) {
             this.parameterServerCount = parameterServerCount;
             return this;
         }
 
-        public Builder setParameterServerCount(@Nullable Integer parameterServerCount) {
+        public Builder parameterServerCount(@Nullable Integer parameterServerCount) {
             this.parameterServerCount = Input.ofNullable(parameterServerCount);
             return this;
         }
 
-        public Builder setWorkerCount(@Nullable Input<Integer> workerCount) {
+        public Builder workerCount(@Nullable Input<Integer> workerCount) {
             this.workerCount = workerCount;
             return this;
         }
 
-        public Builder setWorkerCount(@Nullable Integer workerCount) {
+        public Builder workerCount(@Nullable Integer workerCount) {
             this.workerCount = Input.ofNullable(workerCount);
             return this;
         }

@@ -75,22 +75,22 @@ public final class WebhookNotificationArgs extends io.pulumi.resources.ResourceA
     	      this.serviceUri = defaults.serviceUri;
         }
 
-        public Builder setProperties(@Nullable Input<Map<String,String>> properties) {
+        public Builder properties(@Nullable Input<Map<String,String>> properties) {
             this.properties = properties;
             return this;
         }
 
-        public Builder setProperties(@Nullable Map<String,String> properties) {
+        public Builder properties(@Nullable Map<String,String> properties) {
             this.properties = Input.ofNullable(properties);
             return this;
         }
 
-        public Builder setServiceUri(@Nullable Input<String> serviceUri) {
+        public Builder serviceUri(@Nullable Input<String> serviceUri) {
             this.serviceUri = serviceUri;
             return this;
         }
 
-        public Builder setServiceUri(@Nullable String serviceUri) {
+        public Builder serviceUri(@Nullable String serviceUri) {
             this.serviceUri = Input.ofNullable(serviceUri);
             return this;
         }

@@ -68,12 +68,12 @@ public final class ScopeResponse {
     	      this.namespace = defaults.namespace;
         }
 
-        public Builder setCluster(@Nullable ScopeClusterResponse cluster) {
+        public Builder cluster(@Nullable ScopeClusterResponse cluster) {
             this.cluster = cluster;
             return this;
         }
 
-        public Builder setNamespace(@Nullable ScopeNamespaceResponse namespace) {
+        public Builder namespace(@Nullable ScopeNamespaceResponse namespace) {
             this.namespace = namespace;
             return this;
         }

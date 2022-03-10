@@ -231,62 +231,62 @@ public final class MetricTriggerResponse {
     	      this.timeWindow = defaults.timeWindow;
         }
 
-        public Builder setDimensions(@Nullable List<ScaleRuleMetricDimensionResponse> dimensions) {
+        public Builder dimensions(@Nullable List<ScaleRuleMetricDimensionResponse> dimensions) {
             this.dimensions = dimensions;
             return this;
         }
 
-        public Builder setDividePerInstance(@Nullable Boolean dividePerInstance) {
+        public Builder dividePerInstance(@Nullable Boolean dividePerInstance) {
             this.dividePerInstance = dividePerInstance;
             return this;
         }
 
-        public Builder setMetricName(String metricName) {
+        public Builder metricName(String metricName) {
             this.metricName = Objects.requireNonNull(metricName);
             return this;
         }
 
-        public Builder setMetricNamespace(@Nullable String metricNamespace) {
+        public Builder metricNamespace(@Nullable String metricNamespace) {
             this.metricNamespace = metricNamespace;
             return this;
         }
 
-        public Builder setMetricResourceLocation(@Nullable String metricResourceLocation) {
+        public Builder metricResourceLocation(@Nullable String metricResourceLocation) {
             this.metricResourceLocation = metricResourceLocation;
             return this;
         }
 
-        public Builder setMetricResourceUri(String metricResourceUri) {
+        public Builder metricResourceUri(String metricResourceUri) {
             this.metricResourceUri = Objects.requireNonNull(metricResourceUri);
             return this;
         }
 
-        public Builder setOperator(String operator) {
+        public Builder operator(String operator) {
             this.operator = Objects.requireNonNull(operator);
             return this;
         }
 
-        public Builder setStatistic(String statistic) {
+        public Builder statistic(String statistic) {
             this.statistic = Objects.requireNonNull(statistic);
             return this;
         }
 
-        public Builder setThreshold(Double threshold) {
+        public Builder threshold(Double threshold) {
             this.threshold = Objects.requireNonNull(threshold);
             return this;
         }
 
-        public Builder setTimeAggregation(String timeAggregation) {
+        public Builder timeAggregation(String timeAggregation) {
             this.timeAggregation = Objects.requireNonNull(timeAggregation);
             return this;
         }
 
-        public Builder setTimeGrain(String timeGrain) {
+        public Builder timeGrain(String timeGrain) {
             this.timeGrain = Objects.requireNonNull(timeGrain);
             return this;
         }
 
-        public Builder setTimeWindow(String timeWindow) {
+        public Builder timeWindow(String timeWindow) {
             this.timeWindow = Objects.requireNonNull(timeWindow);
             return this;
         }

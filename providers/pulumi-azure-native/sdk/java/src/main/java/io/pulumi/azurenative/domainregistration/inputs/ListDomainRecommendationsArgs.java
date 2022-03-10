@@ -71,12 +71,12 @@ public final class ListDomainRecommendationsArgs extends io.pulumi.resources.Inv
     	      this.maxDomainRecommendations = defaults.maxDomainRecommendations;
         }
 
-        public Builder setKeywords(@Nullable String keywords) {
+        public Builder keywords(@Nullable String keywords) {
             this.keywords = keywords;
             return this;
         }
 
-        public Builder setMaxDomainRecommendations(@Nullable Integer maxDomainRecommendations) {
+        public Builder maxDomainRecommendations(@Nullable Integer maxDomainRecommendations) {
             this.maxDomainRecommendations = maxDomainRecommendations;
             return this;
         }

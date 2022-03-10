@@ -82,17 +82,17 @@ public final class CloudTieringVolumeFreeSpacePolicyStatusResponse {
     	      this.lastUpdatedTimestamp = defaults.lastUpdatedTimestamp;
         }
 
-        public Builder setCurrentVolumeFreeSpacePercent(Integer currentVolumeFreeSpacePercent) {
+        public Builder currentVolumeFreeSpacePercent(Integer currentVolumeFreeSpacePercent) {
             this.currentVolumeFreeSpacePercent = Objects.requireNonNull(currentVolumeFreeSpacePercent);
             return this;
         }
 
-        public Builder setEffectiveVolumeFreeSpacePolicy(Integer effectiveVolumeFreeSpacePolicy) {
+        public Builder effectiveVolumeFreeSpacePolicy(Integer effectiveVolumeFreeSpacePolicy) {
             this.effectiveVolumeFreeSpacePolicy = Objects.requireNonNull(effectiveVolumeFreeSpacePolicy);
             return this;
         }
 
-        public Builder setLastUpdatedTimestamp(String lastUpdatedTimestamp) {
+        public Builder lastUpdatedTimestamp(String lastUpdatedTimestamp) {
             this.lastUpdatedTimestamp = Objects.requireNonNull(lastUpdatedTimestamp);
             return this;
         }

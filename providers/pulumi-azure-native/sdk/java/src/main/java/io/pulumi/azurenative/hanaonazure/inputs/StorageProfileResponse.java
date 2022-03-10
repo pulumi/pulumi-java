@@ -93,17 +93,17 @@ public final class StorageProfileResponse extends io.pulumi.resources.InvokeArgs
     	      this.osDisks = defaults.osDisks;
         }
 
-        public Builder setHanaSids(@Nullable List<SAPSystemIDResponse> hanaSids) {
+        public Builder hanaSids(@Nullable List<SAPSystemIDResponse> hanaSids) {
             this.hanaSids = hanaSids;
             return this;
         }
 
-        public Builder setNfsIpAddress(String nfsIpAddress) {
+        public Builder nfsIpAddress(String nfsIpAddress) {
             this.nfsIpAddress = Objects.requireNonNull(nfsIpAddress);
             return this;
         }
 
-        public Builder setOsDisks(@Nullable List<DiskResponse> osDisks) {
+        public Builder osDisks(@Nullable List<DiskResponse> osDisks) {
             this.osDisks = osDisks;
             return this;
         }

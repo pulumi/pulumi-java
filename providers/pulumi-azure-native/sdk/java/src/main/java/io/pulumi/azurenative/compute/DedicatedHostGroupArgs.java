@@ -154,72 +154,72 @@ public final class DedicatedHostGroupArgs extends io.pulumi.resources.ResourceAr
     	      this.zones = defaults.zones;
         }
 
-        public Builder setHostGroupName(@Nullable Input<String> hostGroupName) {
+        public Builder hostGroupName(@Nullable Input<String> hostGroupName) {
             this.hostGroupName = hostGroupName;
             return this;
         }
 
-        public Builder setHostGroupName(@Nullable String hostGroupName) {
+        public Builder hostGroupName(@Nullable String hostGroupName) {
             this.hostGroupName = Input.ofNullable(hostGroupName);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setPlatformFaultDomainCount(Input<Integer> platformFaultDomainCount) {
+        public Builder platformFaultDomainCount(Input<Integer> platformFaultDomainCount) {
             this.platformFaultDomainCount = Objects.requireNonNull(platformFaultDomainCount);
             return this;
         }
 
-        public Builder setPlatformFaultDomainCount(Integer platformFaultDomainCount) {
+        public Builder platformFaultDomainCount(Integer platformFaultDomainCount) {
             this.platformFaultDomainCount = Input.of(Objects.requireNonNull(platformFaultDomainCount));
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setSupportAutomaticPlacement(@Nullable Input<Boolean> supportAutomaticPlacement) {
+        public Builder supportAutomaticPlacement(@Nullable Input<Boolean> supportAutomaticPlacement) {
             this.supportAutomaticPlacement = supportAutomaticPlacement;
             return this;
         }
 
-        public Builder setSupportAutomaticPlacement(@Nullable Boolean supportAutomaticPlacement) {
+        public Builder supportAutomaticPlacement(@Nullable Boolean supportAutomaticPlacement) {
             this.supportAutomaticPlacement = Input.ofNullable(supportAutomaticPlacement);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setZones(@Nullable Input<List<String>> zones) {
+        public Builder zones(@Nullable Input<List<String>> zones) {
             this.zones = zones;
             return this;
         }
 
-        public Builder setZones(@Nullable List<String> zones) {
+        public Builder zones(@Nullable List<String> zones) {
             this.zones = Input.ofNullable(zones);
             return this;
         }

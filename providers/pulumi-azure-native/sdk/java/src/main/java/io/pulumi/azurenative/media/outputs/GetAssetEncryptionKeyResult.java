@@ -69,12 +69,12 @@ public final class GetAssetEncryptionKeyResult {
     	      this.key = defaults.key;
         }
 
-        public Builder setAssetFileEncryptionMetadata(@Nullable List<AssetFileEncryptionMetadataResponse> assetFileEncryptionMetadata) {
+        public Builder assetFileEncryptionMetadata(@Nullable List<AssetFileEncryptionMetadataResponse> assetFileEncryptionMetadata) {
             this.assetFileEncryptionMetadata = assetFileEncryptionMetadata;
             return this;
         }
 
-        public Builder setKey(@Nullable String key) {
+        public Builder key(@Nullable String key) {
             this.key = key;
             return this;
         }

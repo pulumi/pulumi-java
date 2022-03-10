@@ -50,7 +50,7 @@ public final class GetSolutionConfigResult {
     	      this.publisherSasUri = defaults.publisherSasUri;
         }
 
-        public Builder setPublisherSasUri(@Nullable String publisherSasUri) {
+        public Builder publisherSasUri(@Nullable String publisherSasUri) {
             this.publisherSasUri = publisherSasUri;
             return this;
         }

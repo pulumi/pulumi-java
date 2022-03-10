@@ -174,42 +174,42 @@ public final class ContainerNetworkInterfaceResponse extends io.pulumi.resources
     	      this.type = defaults.type;
         }
 
-        public Builder setContainer(@Nullable ContainerResponse container) {
+        public Builder container(@Nullable ContainerResponse container) {
             this.container = container;
             return this;
         }
 
-        public Builder setContainerNetworkInterfaceConfiguration(ContainerNetworkInterfaceConfigurationResponse containerNetworkInterfaceConfiguration) {
+        public Builder containerNetworkInterfaceConfiguration(ContainerNetworkInterfaceConfigurationResponse containerNetworkInterfaceConfiguration) {
             this.containerNetworkInterfaceConfiguration = Objects.requireNonNull(containerNetworkInterfaceConfiguration);
             return this;
         }
 
-        public Builder setEtag(String etag) {
+        public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setIpConfigurations(List<ContainerNetworkInterfaceIpConfigurationResponse> ipConfigurations) {
+        public Builder ipConfigurations(List<ContainerNetworkInterfaceIpConfigurationResponse> ipConfigurations) {
             this.ipConfigurations = Objects.requireNonNull(ipConfigurations);
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

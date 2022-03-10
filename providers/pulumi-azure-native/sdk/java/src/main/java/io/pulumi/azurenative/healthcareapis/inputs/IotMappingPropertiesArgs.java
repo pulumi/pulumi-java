@@ -57,12 +57,12 @@ public final class IotMappingPropertiesArgs extends io.pulumi.resources.Resource
     	      this.content = defaults.content;
         }
 
-        public Builder setContent(@Nullable Input<Object> content) {
+        public Builder content(@Nullable Input<Object> content) {
             this.content = content;
             return this;
         }
 
-        public Builder setContent(@Nullable Object content) {
+        public Builder content(@Nullable Object content) {
             this.content = Input.ofNullable(content);
             return this;
         }

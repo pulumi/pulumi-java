@@ -58,12 +58,12 @@ public final class AllowedAudiencesValidationArgs extends io.pulumi.resources.Re
     	      this.allowedAudiences = defaults.allowedAudiences;
         }
 
-        public Builder setAllowedAudiences(@Nullable Input<List<String>> allowedAudiences) {
+        public Builder allowedAudiences(@Nullable Input<List<String>> allowedAudiences) {
             this.allowedAudiences = allowedAudiences;
             return this;
         }
 
-        public Builder setAllowedAudiences(@Nullable List<String> allowedAudiences) {
+        public Builder allowedAudiences(@Nullable List<String> allowedAudiences) {
             this.allowedAudiences = Input.ofNullable(allowedAudiences);
             return this;
         }

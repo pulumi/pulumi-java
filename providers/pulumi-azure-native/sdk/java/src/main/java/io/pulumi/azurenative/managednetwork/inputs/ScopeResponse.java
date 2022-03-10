@@ -107,22 +107,22 @@ public final class ScopeResponse extends io.pulumi.resources.InvokeArgs {
     	      this.virtualNetworks = defaults.virtualNetworks;
         }
 
-        public Builder setManagementGroups(@Nullable List<ResourceIdResponse> managementGroups) {
+        public Builder managementGroups(@Nullable List<ResourceIdResponse> managementGroups) {
             this.managementGroups = managementGroups;
             return this;
         }
 
-        public Builder setSubnets(@Nullable List<ResourceIdResponse> subnets) {
+        public Builder subnets(@Nullable List<ResourceIdResponse> subnets) {
             this.subnets = subnets;
             return this;
         }
 
-        public Builder setSubscriptions(@Nullable List<ResourceIdResponse> subscriptions) {
+        public Builder subscriptions(@Nullable List<ResourceIdResponse> subscriptions) {
             this.subscriptions = subscriptions;
             return this;
         }
 
-        public Builder setVirtualNetworks(@Nullable List<ResourceIdResponse> virtualNetworks) {
+        public Builder virtualNetworks(@Nullable List<ResourceIdResponse> virtualNetworks) {
             this.virtualNetworks = virtualNetworks;
             return this;
         }

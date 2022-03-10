@@ -68,12 +68,12 @@ public final class ScheduleResponse {
     	      this.policyList = defaults.policyList;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setPolicyList(@Nullable List<String> policyList) {
+        public Builder policyList(@Nullable List<String> policyList) {
             this.policyList = policyList;
             return this;
         }

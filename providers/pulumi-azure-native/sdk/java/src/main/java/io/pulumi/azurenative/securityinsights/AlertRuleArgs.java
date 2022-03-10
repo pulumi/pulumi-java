@@ -104,42 +104,42 @@ public final class AlertRuleArgs extends io.pulumi.resources.ResourceArgs {
     	      this.workspaceName = defaults.workspaceName;
         }
 
-        public Builder setKind(Input<Either<String,AlertRuleKind>> kind) {
+        public Builder kind(Input<Either<String,AlertRuleKind>> kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setKind(Either<String,AlertRuleKind> kind) {
+        public Builder kind(Either<String,AlertRuleKind> kind) {
             this.kind = Input.of(Objects.requireNonNull(kind));
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setRuleId(@Nullable Input<String> ruleId) {
+        public Builder ruleId(@Nullable Input<String> ruleId) {
             this.ruleId = ruleId;
             return this;
         }
 
-        public Builder setRuleId(@Nullable String ruleId) {
+        public Builder ruleId(@Nullable String ruleId) {
             this.ruleId = Input.ofNullable(ruleId);
             return this;
         }
 
-        public Builder setWorkspaceName(Input<String> workspaceName) {
+        public Builder workspaceName(Input<String> workspaceName) {
             this.workspaceName = Objects.requireNonNull(workspaceName);
             return this;
         }
 
-        public Builder setWorkspaceName(String workspaceName) {
+        public Builder workspaceName(String workspaceName) {
             this.workspaceName = Input.of(Objects.requireNonNull(workspaceName));
             return this;
         }

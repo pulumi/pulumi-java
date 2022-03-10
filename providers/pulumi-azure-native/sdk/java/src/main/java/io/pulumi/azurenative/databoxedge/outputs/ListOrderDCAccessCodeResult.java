@@ -50,7 +50,7 @@ public final class ListOrderDCAccessCodeResult {
     	      this.authCode = defaults.authCode;
         }
 
-        public Builder setAuthCode(@Nullable String authCode) {
+        public Builder authCode(@Nullable String authCode) {
             this.authCode = authCode;
             return this;
         }

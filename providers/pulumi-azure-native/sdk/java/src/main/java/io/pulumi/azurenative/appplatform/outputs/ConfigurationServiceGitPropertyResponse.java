@@ -50,7 +50,7 @@ public final class ConfigurationServiceGitPropertyResponse {
     	      this.repositories = defaults.repositories;
         }
 
-        public Builder setRepositories(@Nullable List<ConfigurationServiceGitRepositoryResponse> repositories) {
+        public Builder repositories(@Nullable List<ConfigurationServiceGitRepositoryResponse> repositories) {
             this.repositories = repositories;
             return this;
         }

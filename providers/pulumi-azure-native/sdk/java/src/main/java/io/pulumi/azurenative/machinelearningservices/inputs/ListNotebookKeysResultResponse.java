@@ -60,12 +60,12 @@ public final class ListNotebookKeysResultResponse extends io.pulumi.resources.In
     	      this.secondaryAccessKey = defaults.secondaryAccessKey;
         }
 
-        public Builder setPrimaryAccessKey(String primaryAccessKey) {
+        public Builder primaryAccessKey(String primaryAccessKey) {
             this.primaryAccessKey = Objects.requireNonNull(primaryAccessKey);
             return this;
         }
 
-        public Builder setSecondaryAccessKey(String secondaryAccessKey) {
+        public Builder secondaryAccessKey(String secondaryAccessKey) {
             this.secondaryAccessKey = Objects.requireNonNull(secondaryAccessKey);
             return this;
         }

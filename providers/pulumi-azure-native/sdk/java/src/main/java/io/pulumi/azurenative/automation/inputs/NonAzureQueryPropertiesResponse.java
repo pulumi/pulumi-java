@@ -74,12 +74,12 @@ public final class NonAzureQueryPropertiesResponse extends io.pulumi.resources.I
     	      this.workspaceId = defaults.workspaceId;
         }
 
-        public Builder setFunctionAlias(@Nullable String functionAlias) {
+        public Builder functionAlias(@Nullable String functionAlias) {
             this.functionAlias = functionAlias;
             return this;
         }
 
-        public Builder setWorkspaceId(@Nullable String workspaceId) {
+        public Builder workspaceId(@Nullable String workspaceId) {
             this.workspaceId = workspaceId;
             return this;
         }

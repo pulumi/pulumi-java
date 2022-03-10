@@ -99,22 +99,22 @@ public final class IncidentOwnerInfoResponse {
     	      this.userPrincipalName = defaults.userPrincipalName;
         }
 
-        public Builder setAssignedTo(@Nullable String assignedTo) {
+        public Builder assignedTo(@Nullable String assignedTo) {
             this.assignedTo = assignedTo;
             return this;
         }
 
-        public Builder setEmail(@Nullable String email) {
+        public Builder email(@Nullable String email) {
             this.email = email;
             return this;
         }
 
-        public Builder setObjectId(@Nullable String objectId) {
+        public Builder objectId(@Nullable String objectId) {
             this.objectId = objectId;
             return this;
         }
 
-        public Builder setUserPrincipalName(@Nullable String userPrincipalName) {
+        public Builder userPrincipalName(@Nullable String userPrincipalName) {
             this.userPrincipalName = userPrincipalName;
             return this;
         }

@@ -190,92 +190,92 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
     	      this.resourceGroupName = defaults.resourceGroupName;
         }
 
-        public Builder setClientProtocol(@Nullable Input<Either<String,Protocol>> clientProtocol) {
+        public Builder clientProtocol(@Nullable Input<Either<String,Protocol>> clientProtocol) {
             this.clientProtocol = clientProtocol;
             return this;
         }
 
-        public Builder setClientProtocol(@Nullable Either<String,Protocol> clientProtocol) {
+        public Builder clientProtocol(@Nullable Either<String,Protocol> clientProtocol) {
             this.clientProtocol = Input.ofNullable(clientProtocol);
             return this;
         }
 
-        public Builder setClusterName(Input<String> clusterName) {
+        public Builder clusterName(Input<String> clusterName) {
             this.clusterName = Objects.requireNonNull(clusterName);
             return this;
         }
 
-        public Builder setClusterName(String clusterName) {
+        public Builder clusterName(String clusterName) {
             this.clusterName = Input.of(Objects.requireNonNull(clusterName));
             return this;
         }
 
-        public Builder setClusteringPolicy(@Nullable Input<Either<String,ClusteringPolicy>> clusteringPolicy) {
+        public Builder clusteringPolicy(@Nullable Input<Either<String,ClusteringPolicy>> clusteringPolicy) {
             this.clusteringPolicy = clusteringPolicy;
             return this;
         }
 
-        public Builder setClusteringPolicy(@Nullable Either<String,ClusteringPolicy> clusteringPolicy) {
+        public Builder clusteringPolicy(@Nullable Either<String,ClusteringPolicy> clusteringPolicy) {
             this.clusteringPolicy = Input.ofNullable(clusteringPolicy);
             return this;
         }
 
-        public Builder setDatabaseName(@Nullable Input<String> databaseName) {
+        public Builder databaseName(@Nullable Input<String> databaseName) {
             this.databaseName = databaseName;
             return this;
         }
 
-        public Builder setDatabaseName(@Nullable String databaseName) {
+        public Builder databaseName(@Nullable String databaseName) {
             this.databaseName = Input.ofNullable(databaseName);
             return this;
         }
 
-        public Builder setEvictionPolicy(@Nullable Input<Either<String,EvictionPolicy>> evictionPolicy) {
+        public Builder evictionPolicy(@Nullable Input<Either<String,EvictionPolicy>> evictionPolicy) {
             this.evictionPolicy = evictionPolicy;
             return this;
         }
 
-        public Builder setEvictionPolicy(@Nullable Either<String,EvictionPolicy> evictionPolicy) {
+        public Builder evictionPolicy(@Nullable Either<String,EvictionPolicy> evictionPolicy) {
             this.evictionPolicy = Input.ofNullable(evictionPolicy);
             return this;
         }
 
-        public Builder setModules(@Nullable Input<List<ModuleArgs>> modules) {
+        public Builder modules(@Nullable Input<List<ModuleArgs>> modules) {
             this.modules = modules;
             return this;
         }
 
-        public Builder setModules(@Nullable List<ModuleArgs> modules) {
+        public Builder modules(@Nullable List<ModuleArgs> modules) {
             this.modules = Input.ofNullable(modules);
             return this;
         }
 
-        public Builder setPersistence(@Nullable Input<PersistenceArgs> persistence) {
+        public Builder persistence(@Nullable Input<PersistenceArgs> persistence) {
             this.persistence = persistence;
             return this;
         }
 
-        public Builder setPersistence(@Nullable PersistenceArgs persistence) {
+        public Builder persistence(@Nullable PersistenceArgs persistence) {
             this.persistence = Input.ofNullable(persistence);
             return this;
         }
 
-        public Builder setPort(@Nullable Input<Integer> port) {
+        public Builder port(@Nullable Input<Integer> port) {
             this.port = port;
             return this;
         }
 
-        public Builder setPort(@Nullable Integer port) {
+        public Builder port(@Nullable Integer port) {
             this.port = Input.ofNullable(port);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }

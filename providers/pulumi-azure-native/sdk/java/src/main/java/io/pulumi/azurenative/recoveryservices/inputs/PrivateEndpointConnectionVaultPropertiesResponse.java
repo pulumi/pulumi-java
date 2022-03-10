@@ -73,12 +73,12 @@ public final class PrivateEndpointConnectionVaultPropertiesResponse extends io.p
     	      this.properties = defaults.properties;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setProperties(VaultPrivateEndpointConnectionResponse properties) {
+        public Builder properties(VaultPrivateEndpointConnectionResponse properties) {
             this.properties = Objects.requireNonNull(properties);
             return this;
         }

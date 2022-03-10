@@ -84,17 +84,17 @@ public final class GetIscsiTargetArgs extends io.pulumi.resources.InvokeArgs {
     	      this.resourceGroupName = defaults.resourceGroupName;
         }
 
-        public Builder setDiskPoolName(String diskPoolName) {
+        public Builder diskPoolName(String diskPoolName) {
             this.diskPoolName = Objects.requireNonNull(diskPoolName);
             return this;
         }
 
-        public Builder setIscsiTargetName(String iscsiTargetName) {
+        public Builder iscsiTargetName(String iscsiTargetName) {
             this.iscsiTargetName = Objects.requireNonNull(iscsiTargetName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }

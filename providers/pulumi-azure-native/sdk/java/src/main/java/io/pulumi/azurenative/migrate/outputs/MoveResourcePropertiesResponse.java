@@ -231,57 +231,57 @@ public final class MoveResourcePropertiesResponse {
     	      this.targetId = defaults.targetId;
         }
 
-        public Builder setDependsOn(List<MoveResourceDependencyResponse> dependsOn) {
+        public Builder dependsOn(List<MoveResourceDependencyResponse> dependsOn) {
             this.dependsOn = Objects.requireNonNull(dependsOn);
             return this;
         }
 
-        public Builder setDependsOnOverrides(@Nullable List<MoveResourceDependencyOverrideResponse> dependsOnOverrides) {
+        public Builder dependsOnOverrides(@Nullable List<MoveResourceDependencyOverrideResponse> dependsOnOverrides) {
             this.dependsOnOverrides = dependsOnOverrides;
             return this;
         }
 
-        public Builder setErrors(MoveResourcePropertiesResponseErrors errors) {
+        public Builder errors(MoveResourcePropertiesResponseErrors errors) {
             this.errors = Objects.requireNonNull(errors);
             return this;
         }
 
-        public Builder setExistingTargetId(@Nullable String existingTargetId) {
+        public Builder existingTargetId(@Nullable String existingTargetId) {
             this.existingTargetId = existingTargetId;
             return this;
         }
 
-        public Builder setIsResolveRequired(Boolean isResolveRequired) {
+        public Builder isResolveRequired(Boolean isResolveRequired) {
             this.isResolveRequired = Objects.requireNonNull(isResolveRequired);
             return this;
         }
 
-        public Builder setMoveStatus(MoveResourcePropertiesResponseMoveStatus moveStatus) {
+        public Builder moveStatus(MoveResourcePropertiesResponseMoveStatus moveStatus) {
             this.moveStatus = Objects.requireNonNull(moveStatus);
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setResourceSettings(@Nullable Object resourceSettings) {
+        public Builder resourceSettings(@Nullable Object resourceSettings) {
             this.resourceSettings = resourceSettings;
             return this;
         }
 
-        public Builder setSourceId(String sourceId) {
+        public Builder sourceId(String sourceId) {
             this.sourceId = Objects.requireNonNull(sourceId);
             return this;
         }
 
-        public Builder setSourceResourceSettings(Object sourceResourceSettings) {
+        public Builder sourceResourceSettings(Object sourceResourceSettings) {
             this.sourceResourceSettings = Objects.requireNonNull(sourceResourceSettings);
             return this;
         }
 
-        public Builder setTargetId(String targetId) {
+        public Builder targetId(String targetId) {
             this.targetId = Objects.requireNonNull(targetId);
             return this;
         }

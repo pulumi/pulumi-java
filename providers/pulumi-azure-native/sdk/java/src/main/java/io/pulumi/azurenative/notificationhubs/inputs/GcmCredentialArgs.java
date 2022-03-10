@@ -74,22 +74,22 @@ public final class GcmCredentialArgs extends io.pulumi.resources.ResourceArgs {
     	      this.googleApiKey = defaults.googleApiKey;
         }
 
-        public Builder setGcmEndpoint(@Nullable Input<String> gcmEndpoint) {
+        public Builder gcmEndpoint(@Nullable Input<String> gcmEndpoint) {
             this.gcmEndpoint = gcmEndpoint;
             return this;
         }
 
-        public Builder setGcmEndpoint(@Nullable String gcmEndpoint) {
+        public Builder gcmEndpoint(@Nullable String gcmEndpoint) {
             this.gcmEndpoint = Input.ofNullable(gcmEndpoint);
             return this;
         }
 
-        public Builder setGoogleApiKey(@Nullable Input<String> googleApiKey) {
+        public Builder googleApiKey(@Nullable Input<String> googleApiKey) {
             this.googleApiKey = googleApiKey;
             return this;
         }
 
-        public Builder setGoogleApiKey(@Nullable String googleApiKey) {
+        public Builder googleApiKey(@Nullable String googleApiKey) {
             this.googleApiKey = Input.ofNullable(googleApiKey);
             return this;
         }

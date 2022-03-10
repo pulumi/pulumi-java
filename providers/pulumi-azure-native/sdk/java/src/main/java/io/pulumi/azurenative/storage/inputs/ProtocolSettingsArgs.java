@@ -57,12 +57,12 @@ public final class ProtocolSettingsArgs extends io.pulumi.resources.ResourceArgs
     	      this.smb = defaults.smb;
         }
 
-        public Builder setSmb(@Nullable Input<SmbSettingArgs> smb) {
+        public Builder smb(@Nullable Input<SmbSettingArgs> smb) {
             this.smb = smb;
             return this;
         }
 
-        public Builder setSmb(@Nullable SmbSettingArgs smb) {
+        public Builder smb(@Nullable SmbSettingArgs smb) {
             this.smb = Input.ofNullable(smb);
             return this;
         }

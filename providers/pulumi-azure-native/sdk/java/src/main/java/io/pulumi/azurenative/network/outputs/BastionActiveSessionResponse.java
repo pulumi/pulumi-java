@@ -211,57 +211,57 @@ public final class BastionActiveSessionResponse {
     	      this.userName = defaults.userName;
         }
 
-        public Builder setProtocol(String protocol) {
+        public Builder protocol(String protocol) {
             this.protocol = Objects.requireNonNull(protocol);
             return this;
         }
 
-        public Builder setResourceType(String resourceType) {
+        public Builder resourceType(String resourceType) {
             this.resourceType = Objects.requireNonNull(resourceType);
             return this;
         }
 
-        public Builder setSessionDurationInMins(Double sessionDurationInMins) {
+        public Builder sessionDurationInMins(Double sessionDurationInMins) {
             this.sessionDurationInMins = Objects.requireNonNull(sessionDurationInMins);
             return this;
         }
 
-        public Builder setSessionId(String sessionId) {
+        public Builder sessionId(String sessionId) {
             this.sessionId = Objects.requireNonNull(sessionId);
             return this;
         }
 
-        public Builder setStartTime(Object startTime) {
+        public Builder startTime(Object startTime) {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }
 
-        public Builder setTargetHostName(String targetHostName) {
+        public Builder targetHostName(String targetHostName) {
             this.targetHostName = Objects.requireNonNull(targetHostName);
             return this;
         }
 
-        public Builder setTargetIpAddress(String targetIpAddress) {
+        public Builder targetIpAddress(String targetIpAddress) {
             this.targetIpAddress = Objects.requireNonNull(targetIpAddress);
             return this;
         }
 
-        public Builder setTargetResourceGroup(String targetResourceGroup) {
+        public Builder targetResourceGroup(String targetResourceGroup) {
             this.targetResourceGroup = Objects.requireNonNull(targetResourceGroup);
             return this;
         }
 
-        public Builder setTargetResourceId(String targetResourceId) {
+        public Builder targetResourceId(String targetResourceId) {
             this.targetResourceId = Objects.requireNonNull(targetResourceId);
             return this;
         }
 
-        public Builder setTargetSubscriptionId(String targetSubscriptionId) {
+        public Builder targetSubscriptionId(String targetSubscriptionId) {
             this.targetSubscriptionId = Objects.requireNonNull(targetSubscriptionId);
             return this;
         }
 
-        public Builder setUserName(String userName) {
+        public Builder userName(String userName) {
             this.userName = Objects.requireNonNull(userName);
             return this;
         }

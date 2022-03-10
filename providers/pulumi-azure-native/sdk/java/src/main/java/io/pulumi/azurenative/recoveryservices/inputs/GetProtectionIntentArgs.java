@@ -100,22 +100,22 @@ public final class GetProtectionIntentArgs extends io.pulumi.resources.InvokeArg
     	      this.vaultName = defaults.vaultName;
         }
 
-        public Builder setFabricName(String fabricName) {
+        public Builder fabricName(String fabricName) {
             this.fabricName = Objects.requireNonNull(fabricName);
             return this;
         }
 
-        public Builder setIntentObjectName(String intentObjectName) {
+        public Builder intentObjectName(String intentObjectName) {
             this.intentObjectName = Objects.requireNonNull(intentObjectName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setVaultName(String vaultName) {
+        public Builder vaultName(String vaultName) {
             this.vaultName = Objects.requireNonNull(vaultName);
             return this;
         }

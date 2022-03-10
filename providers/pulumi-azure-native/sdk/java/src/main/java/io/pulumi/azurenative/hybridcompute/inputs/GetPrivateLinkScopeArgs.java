@@ -68,12 +68,12 @@ public final class GetPrivateLinkScopeArgs extends io.pulumi.resources.InvokeArg
     	      this.scopeName = defaults.scopeName;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setScopeName(String scopeName) {
+        public Builder scopeName(String scopeName) {
             this.scopeName = Objects.requireNonNull(scopeName);
             return this;
         }

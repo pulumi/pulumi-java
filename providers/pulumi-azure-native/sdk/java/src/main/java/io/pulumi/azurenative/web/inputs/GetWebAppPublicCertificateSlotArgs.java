@@ -100,22 +100,22 @@ public final class GetWebAppPublicCertificateSlotArgs extends io.pulumi.resource
     	      this.slot = defaults.slot;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPublicCertificateName(String publicCertificateName) {
+        public Builder publicCertificateName(String publicCertificateName) {
             this.publicCertificateName = Objects.requireNonNull(publicCertificateName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setSlot(String slot) {
+        public Builder slot(String slot) {
             this.slot = Objects.requireNonNull(slot);
             return this;
         }

@@ -257,132 +257,132 @@ public final class ViewArgs extends io.pulumi.resources.ResourceArgs {
     	      this.viewName = defaults.viewName;
         }
 
-        public Builder setAccumulated(@Nullable Input<Either<String,AccumulatedType>> accumulated) {
+        public Builder accumulated(@Nullable Input<Either<String,AccumulatedType>> accumulated) {
             this.accumulated = accumulated;
             return this;
         }
 
-        public Builder setAccumulated(@Nullable Either<String,AccumulatedType> accumulated) {
+        public Builder accumulated(@Nullable Either<String,AccumulatedType> accumulated) {
             this.accumulated = Input.ofNullable(accumulated);
             return this;
         }
 
-        public Builder setChart(@Nullable Input<Either<String,ChartType>> chart) {
+        public Builder chart(@Nullable Input<Either<String,ChartType>> chart) {
             this.chart = chart;
             return this;
         }
 
-        public Builder setChart(@Nullable Either<String,ChartType> chart) {
+        public Builder chart(@Nullable Either<String,ChartType> chart) {
             this.chart = Input.ofNullable(chart);
             return this;
         }
 
-        public Builder setDataSet(@Nullable Input<ReportConfigDatasetArgs> dataSet) {
+        public Builder dataSet(@Nullable Input<ReportConfigDatasetArgs> dataSet) {
             this.dataSet = dataSet;
             return this;
         }
 
-        public Builder setDataSet(@Nullable ReportConfigDatasetArgs dataSet) {
+        public Builder dataSet(@Nullable ReportConfigDatasetArgs dataSet) {
             this.dataSet = Input.ofNullable(dataSet);
             return this;
         }
 
-        public Builder setDisplayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Input<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setDisplayName(@Nullable String displayName) {
+        public Builder displayName(@Nullable String displayName) {
             this.displayName = Input.ofNullable(displayName);
             return this;
         }
 
-        public Builder setETag(@Nullable Input<String> eTag) {
+        public Builder eTag(@Nullable Input<String> eTag) {
             this.eTag = eTag;
             return this;
         }
 
-        public Builder setETag(@Nullable String eTag) {
+        public Builder eTag(@Nullable String eTag) {
             this.eTag = Input.ofNullable(eTag);
             return this;
         }
 
-        public Builder setKpis(@Nullable Input<List<KpiPropertiesArgs>> kpis) {
+        public Builder kpis(@Nullable Input<List<KpiPropertiesArgs>> kpis) {
             this.kpis = kpis;
             return this;
         }
 
-        public Builder setKpis(@Nullable List<KpiPropertiesArgs> kpis) {
+        public Builder kpis(@Nullable List<KpiPropertiesArgs> kpis) {
             this.kpis = Input.ofNullable(kpis);
             return this;
         }
 
-        public Builder setMetric(@Nullable Input<Either<String,MetricType>> metric) {
+        public Builder metric(@Nullable Input<Either<String,MetricType>> metric) {
             this.metric = metric;
             return this;
         }
 
-        public Builder setMetric(@Nullable Either<String,MetricType> metric) {
+        public Builder metric(@Nullable Either<String,MetricType> metric) {
             this.metric = Input.ofNullable(metric);
             return this;
         }
 
-        public Builder setPivots(@Nullable Input<List<PivotPropertiesArgs>> pivots) {
+        public Builder pivots(@Nullable Input<List<PivotPropertiesArgs>> pivots) {
             this.pivots = pivots;
             return this;
         }
 
-        public Builder setPivots(@Nullable List<PivotPropertiesArgs> pivots) {
+        public Builder pivots(@Nullable List<PivotPropertiesArgs> pivots) {
             this.pivots = Input.ofNullable(pivots);
             return this;
         }
 
-        public Builder setScope(@Nullable Input<String> scope) {
+        public Builder scope(@Nullable Input<String> scope) {
             this.scope = scope;
             return this;
         }
 
-        public Builder setScope(@Nullable String scope) {
+        public Builder scope(@Nullable String scope) {
             this.scope = Input.ofNullable(scope);
             return this;
         }
 
-        public Builder setTimePeriod(@Nullable Input<ReportConfigTimePeriodArgs> timePeriod) {
+        public Builder timePeriod(@Nullable Input<ReportConfigTimePeriodArgs> timePeriod) {
             this.timePeriod = timePeriod;
             return this;
         }
 
-        public Builder setTimePeriod(@Nullable ReportConfigTimePeriodArgs timePeriod) {
+        public Builder timePeriod(@Nullable ReportConfigTimePeriodArgs timePeriod) {
             this.timePeriod = Input.ofNullable(timePeriod);
             return this;
         }
 
-        public Builder setTimeframe(Input<Either<String,ReportTimeframeType>> timeframe) {
+        public Builder timeframe(Input<Either<String,ReportTimeframeType>> timeframe) {
             this.timeframe = Objects.requireNonNull(timeframe);
             return this;
         }
 
-        public Builder setTimeframe(Either<String,ReportTimeframeType> timeframe) {
+        public Builder timeframe(Either<String,ReportTimeframeType> timeframe) {
             this.timeframe = Input.of(Objects.requireNonNull(timeframe));
             return this;
         }
 
-        public Builder setType(Input<Either<String,ReportType>> type) {
+        public Builder type(Input<Either<String,ReportType>> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setType(Either<String,ReportType> type) {
+        public Builder type(Either<String,ReportType> type) {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }
 
-        public Builder setViewName(@Nullable Input<String> viewName) {
+        public Builder viewName(@Nullable Input<String> viewName) {
             this.viewName = viewName;
             return this;
         }
 
-        public Builder setViewName(@Nullable String viewName) {
+        public Builder viewName(@Nullable String viewName) {
             this.viewName = Input.ofNullable(viewName);
             return this;
         }

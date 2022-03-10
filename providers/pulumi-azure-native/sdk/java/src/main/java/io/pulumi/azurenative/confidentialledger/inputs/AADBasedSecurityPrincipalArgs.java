@@ -92,32 +92,32 @@ public final class AADBasedSecurityPrincipalArgs extends io.pulumi.resources.Res
     	      this.tenantId = defaults.tenantId;
         }
 
-        public Builder setLedgerRoleName(@Nullable Input<Either<String,LedgerRoleName>> ledgerRoleName) {
+        public Builder ledgerRoleName(@Nullable Input<Either<String,LedgerRoleName>> ledgerRoleName) {
             this.ledgerRoleName = ledgerRoleName;
             return this;
         }
 
-        public Builder setLedgerRoleName(@Nullable Either<String,LedgerRoleName> ledgerRoleName) {
+        public Builder ledgerRoleName(@Nullable Either<String,LedgerRoleName> ledgerRoleName) {
             this.ledgerRoleName = Input.ofNullable(ledgerRoleName);
             return this;
         }
 
-        public Builder setPrincipalId(@Nullable Input<String> principalId) {
+        public Builder principalId(@Nullable Input<String> principalId) {
             this.principalId = principalId;
             return this;
         }
 
-        public Builder setPrincipalId(@Nullable String principalId) {
+        public Builder principalId(@Nullable String principalId) {
             this.principalId = Input.ofNullable(principalId);
             return this;
         }
 
-        public Builder setTenantId(@Nullable Input<String> tenantId) {
+        public Builder tenantId(@Nullable Input<String> tenantId) {
             this.tenantId = tenantId;
             return this;
         }
 
-        public Builder setTenantId(@Nullable String tenantId) {
+        public Builder tenantId(@Nullable String tenantId) {
             this.tenantId = Input.ofNullable(tenantId);
             return this;
         }

@@ -124,52 +124,52 @@ public final class RepresentationContractArgs extends io.pulumi.resources.Resour
     	      this.typeName = defaults.typeName;
         }
 
-        public Builder setContentType(Input<String> contentType) {
+        public Builder contentType(Input<String> contentType) {
             this.contentType = Objects.requireNonNull(contentType);
             return this;
         }
 
-        public Builder setContentType(String contentType) {
+        public Builder contentType(String contentType) {
             this.contentType = Input.of(Objects.requireNonNull(contentType));
             return this;
         }
 
-        public Builder setFormParameters(@Nullable Input<List<ParameterContractArgs>> formParameters) {
+        public Builder formParameters(@Nullable Input<List<ParameterContractArgs>> formParameters) {
             this.formParameters = formParameters;
             return this;
         }
 
-        public Builder setFormParameters(@Nullable List<ParameterContractArgs> formParameters) {
+        public Builder formParameters(@Nullable List<ParameterContractArgs> formParameters) {
             this.formParameters = Input.ofNullable(formParameters);
             return this;
         }
 
-        public Builder setSample(@Nullable Input<String> sample) {
+        public Builder sample(@Nullable Input<String> sample) {
             this.sample = sample;
             return this;
         }
 
-        public Builder setSample(@Nullable String sample) {
+        public Builder sample(@Nullable String sample) {
             this.sample = Input.ofNullable(sample);
             return this;
         }
 
-        public Builder setSchemaId(@Nullable Input<String> schemaId) {
+        public Builder schemaId(@Nullable Input<String> schemaId) {
             this.schemaId = schemaId;
             return this;
         }
 
-        public Builder setSchemaId(@Nullable String schemaId) {
+        public Builder schemaId(@Nullable String schemaId) {
             this.schemaId = Input.ofNullable(schemaId);
             return this;
         }
 
-        public Builder setTypeName(@Nullable Input<String> typeName) {
+        public Builder typeName(@Nullable Input<String> typeName) {
             this.typeName = typeName;
             return this;
         }
 
-        public Builder setTypeName(@Nullable String typeName) {
+        public Builder typeName(@Nullable String typeName) {
             this.typeName = Input.ofNullable(typeName);
             return this;
         }

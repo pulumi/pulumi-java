@@ -74,22 +74,22 @@ public final class GitHubClientSecretArgs extends io.pulumi.resources.ResourceAr
     	      this.byoaSecretName = defaults.byoaSecretName;
         }
 
-        public Builder setByoaSecretAkvUrl(@Nullable Input<String> byoaSecretAkvUrl) {
+        public Builder byoaSecretAkvUrl(@Nullable Input<String> byoaSecretAkvUrl) {
             this.byoaSecretAkvUrl = byoaSecretAkvUrl;
             return this;
         }
 
-        public Builder setByoaSecretAkvUrl(@Nullable String byoaSecretAkvUrl) {
+        public Builder byoaSecretAkvUrl(@Nullable String byoaSecretAkvUrl) {
             this.byoaSecretAkvUrl = Input.ofNullable(byoaSecretAkvUrl);
             return this;
         }
 
-        public Builder setByoaSecretName(@Nullable Input<String> byoaSecretName) {
+        public Builder byoaSecretName(@Nullable Input<String> byoaSecretName) {
             this.byoaSecretName = byoaSecretName;
             return this;
         }
 
-        public Builder setByoaSecretName(@Nullable String byoaSecretName) {
+        public Builder byoaSecretName(@Nullable String byoaSecretName) {
             this.byoaSecretName = Input.ofNullable(byoaSecretName);
             return this;
         }

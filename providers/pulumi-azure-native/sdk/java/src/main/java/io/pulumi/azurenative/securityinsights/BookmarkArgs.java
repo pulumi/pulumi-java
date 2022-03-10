@@ -297,162 +297,162 @@ public final class BookmarkArgs extends io.pulumi.resources.ResourceArgs {
     	      this.workspaceName = defaults.workspaceName;
         }
 
-        public Builder setBookmarkId(@Nullable Input<String> bookmarkId) {
+        public Builder bookmarkId(@Nullable Input<String> bookmarkId) {
             this.bookmarkId = bookmarkId;
             return this;
         }
 
-        public Builder setBookmarkId(@Nullable String bookmarkId) {
+        public Builder bookmarkId(@Nullable String bookmarkId) {
             this.bookmarkId = Input.ofNullable(bookmarkId);
             return this;
         }
 
-        public Builder setCreated(@Nullable Input<String> created) {
+        public Builder created(@Nullable Input<String> created) {
             this.created = created;
             return this;
         }
 
-        public Builder setCreated(@Nullable String created) {
+        public Builder created(@Nullable String created) {
             this.created = Input.ofNullable(created);
             return this;
         }
 
-        public Builder setCreatedBy(@Nullable Input<UserInfoArgs> createdBy) {
+        public Builder createdBy(@Nullable Input<UserInfoArgs> createdBy) {
             this.createdBy = createdBy;
             return this;
         }
 
-        public Builder setCreatedBy(@Nullable UserInfoArgs createdBy) {
+        public Builder createdBy(@Nullable UserInfoArgs createdBy) {
             this.createdBy = Input.ofNullable(createdBy);
             return this;
         }
 
-        public Builder setDisplayName(Input<String> displayName) {
+        public Builder displayName(Input<String> displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Input.of(Objects.requireNonNull(displayName));
             return this;
         }
 
-        public Builder setEventTime(@Nullable Input<String> eventTime) {
+        public Builder eventTime(@Nullable Input<String> eventTime) {
             this.eventTime = eventTime;
             return this;
         }
 
-        public Builder setEventTime(@Nullable String eventTime) {
+        public Builder eventTime(@Nullable String eventTime) {
             this.eventTime = Input.ofNullable(eventTime);
             return this;
         }
 
-        public Builder setIncidentInfo(@Nullable Input<IncidentInfoArgs> incidentInfo) {
+        public Builder incidentInfo(@Nullable Input<IncidentInfoArgs> incidentInfo) {
             this.incidentInfo = incidentInfo;
             return this;
         }
 
-        public Builder setIncidentInfo(@Nullable IncidentInfoArgs incidentInfo) {
+        public Builder incidentInfo(@Nullable IncidentInfoArgs incidentInfo) {
             this.incidentInfo = Input.ofNullable(incidentInfo);
             return this;
         }
 
-        public Builder setLabels(@Nullable Input<List<String>> labels) {
+        public Builder labels(@Nullable Input<List<String>> labels) {
             this.labels = labels;
             return this;
         }
 
-        public Builder setLabels(@Nullable List<String> labels) {
+        public Builder labels(@Nullable List<String> labels) {
             this.labels = Input.ofNullable(labels);
             return this;
         }
 
-        public Builder setNotes(@Nullable Input<String> notes) {
+        public Builder notes(@Nullable Input<String> notes) {
             this.notes = notes;
             return this;
         }
 
-        public Builder setNotes(@Nullable String notes) {
+        public Builder notes(@Nullable String notes) {
             this.notes = Input.ofNullable(notes);
             return this;
         }
 
-        public Builder setQuery(Input<String> query) {
+        public Builder query(Input<String> query) {
             this.query = Objects.requireNonNull(query);
             return this;
         }
 
-        public Builder setQuery(String query) {
+        public Builder query(String query) {
             this.query = Input.of(Objects.requireNonNull(query));
             return this;
         }
 
-        public Builder setQueryEndTime(@Nullable Input<String> queryEndTime) {
+        public Builder queryEndTime(@Nullable Input<String> queryEndTime) {
             this.queryEndTime = queryEndTime;
             return this;
         }
 
-        public Builder setQueryEndTime(@Nullable String queryEndTime) {
+        public Builder queryEndTime(@Nullable String queryEndTime) {
             this.queryEndTime = Input.ofNullable(queryEndTime);
             return this;
         }
 
-        public Builder setQueryResult(@Nullable Input<String> queryResult) {
+        public Builder queryResult(@Nullable Input<String> queryResult) {
             this.queryResult = queryResult;
             return this;
         }
 
-        public Builder setQueryResult(@Nullable String queryResult) {
+        public Builder queryResult(@Nullable String queryResult) {
             this.queryResult = Input.ofNullable(queryResult);
             return this;
         }
 
-        public Builder setQueryStartTime(@Nullable Input<String> queryStartTime) {
+        public Builder queryStartTime(@Nullable Input<String> queryStartTime) {
             this.queryStartTime = queryStartTime;
             return this;
         }
 
-        public Builder setQueryStartTime(@Nullable String queryStartTime) {
+        public Builder queryStartTime(@Nullable String queryStartTime) {
             this.queryStartTime = Input.ofNullable(queryStartTime);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setUpdated(@Nullable Input<String> updated) {
+        public Builder updated(@Nullable Input<String> updated) {
             this.updated = updated;
             return this;
         }
 
-        public Builder setUpdated(@Nullable String updated) {
+        public Builder updated(@Nullable String updated) {
             this.updated = Input.ofNullable(updated);
             return this;
         }
 
-        public Builder setUpdatedBy(@Nullable Input<UserInfoArgs> updatedBy) {
+        public Builder updatedBy(@Nullable Input<UserInfoArgs> updatedBy) {
             this.updatedBy = updatedBy;
             return this;
         }
 
-        public Builder setUpdatedBy(@Nullable UserInfoArgs updatedBy) {
+        public Builder updatedBy(@Nullable UserInfoArgs updatedBy) {
             this.updatedBy = Input.ofNullable(updatedBy);
             return this;
         }
 
-        public Builder setWorkspaceName(Input<String> workspaceName) {
+        public Builder workspaceName(Input<String> workspaceName) {
             this.workspaceName = Objects.requireNonNull(workspaceName);
             return this;
         }
 
-        public Builder setWorkspaceName(String workspaceName) {
+        public Builder workspaceName(String workspaceName) {
             this.workspaceName = Input.of(Objects.requireNonNull(workspaceName));
             return this;
         }

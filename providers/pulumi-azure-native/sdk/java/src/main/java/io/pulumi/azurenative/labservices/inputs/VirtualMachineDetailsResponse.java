@@ -136,32 +136,32 @@ public final class VirtualMachineDetailsResponse extends io.pulumi.resources.Inv
     	      this.userName = defaults.userName;
         }
 
-        public Builder setLastKnownPowerState(String lastKnownPowerState) {
+        public Builder lastKnownPowerState(String lastKnownPowerState) {
             this.lastKnownPowerState = Objects.requireNonNull(lastKnownPowerState);
             return this;
         }
 
-        public Builder setPrivateIpAddress(String privateIpAddress) {
+        public Builder privateIpAddress(String privateIpAddress) {
             this.privateIpAddress = Objects.requireNonNull(privateIpAddress);
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setRdpAuthority(String rdpAuthority) {
+        public Builder rdpAuthority(String rdpAuthority) {
             this.rdpAuthority = Objects.requireNonNull(rdpAuthority);
             return this;
         }
 
-        public Builder setSshAuthority(String sshAuthority) {
+        public Builder sshAuthority(String sshAuthority) {
             this.sshAuthority = Objects.requireNonNull(sshAuthority);
             return this;
         }
 
-        public Builder setUserName(String userName) {
+        public Builder userName(String userName) {
             this.userName = Objects.requireNonNull(userName);
             return this;
         }

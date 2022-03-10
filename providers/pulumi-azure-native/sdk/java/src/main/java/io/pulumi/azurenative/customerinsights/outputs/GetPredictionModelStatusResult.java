@@ -210,57 +210,57 @@ public final class GetPredictionModelStatusResult {
     	      this.validationSetCount = defaults.validationSetCount;
         }
 
-        public Builder setMessage(String message) {
+        public Builder message(String message) {
             this.message = Objects.requireNonNull(message);
             return this;
         }
 
-        public Builder setModelVersion(String modelVersion) {
+        public Builder modelVersion(String modelVersion) {
             this.modelVersion = Objects.requireNonNull(modelVersion);
             return this;
         }
 
-        public Builder setPredictionGuidId(String predictionGuidId) {
+        public Builder predictionGuidId(String predictionGuidId) {
             this.predictionGuidId = Objects.requireNonNull(predictionGuidId);
             return this;
         }
 
-        public Builder setPredictionName(String predictionName) {
+        public Builder predictionName(String predictionName) {
             this.predictionName = Objects.requireNonNull(predictionName);
             return this;
         }
 
-        public Builder setSignalsUsed(Integer signalsUsed) {
+        public Builder signalsUsed(Integer signalsUsed) {
             this.signalsUsed = Objects.requireNonNull(signalsUsed);
             return this;
         }
 
-        public Builder setStatus(String status) {
+        public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
 
-        public Builder setTenantId(String tenantId) {
+        public Builder tenantId(String tenantId) {
             this.tenantId = Objects.requireNonNull(tenantId);
             return this;
         }
 
-        public Builder setTestSetCount(Integer testSetCount) {
+        public Builder testSetCount(Integer testSetCount) {
             this.testSetCount = Objects.requireNonNull(testSetCount);
             return this;
         }
 
-        public Builder setTrainingAccuracy(Integer trainingAccuracy) {
+        public Builder trainingAccuracy(Integer trainingAccuracy) {
             this.trainingAccuracy = Objects.requireNonNull(trainingAccuracy);
             return this;
         }
 
-        public Builder setTrainingSetCount(Integer trainingSetCount) {
+        public Builder trainingSetCount(Integer trainingSetCount) {
             this.trainingSetCount = Objects.requireNonNull(trainingSetCount);
             return this;
         }
 
-        public Builder setValidationSetCount(Integer validationSetCount) {
+        public Builder validationSetCount(Integer validationSetCount) {
             this.validationSetCount = Objects.requireNonNull(validationSetCount);
             return this;
         }

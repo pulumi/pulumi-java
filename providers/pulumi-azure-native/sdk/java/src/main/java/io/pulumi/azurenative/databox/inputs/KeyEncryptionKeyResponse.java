@@ -107,22 +107,22 @@ public final class KeyEncryptionKeyResponse extends io.pulumi.resources.InvokeAr
     	      this.kekVaultResourceID = defaults.kekVaultResourceID;
         }
 
-        public Builder setIdentityProperties(@Nullable IdentityPropertiesResponse identityProperties) {
+        public Builder identityProperties(@Nullable IdentityPropertiesResponse identityProperties) {
             this.identityProperties = identityProperties;
             return this;
         }
 
-        public Builder setKekType(String kekType) {
+        public Builder kekType(String kekType) {
             this.kekType = Objects.requireNonNull(kekType);
             return this;
         }
 
-        public Builder setKekUrl(@Nullable String kekUrl) {
+        public Builder kekUrl(@Nullable String kekUrl) {
             this.kekUrl = kekUrl;
             return this;
         }
 
-        public Builder setKekVaultResourceID(@Nullable String kekVaultResourceID) {
+        public Builder kekVaultResourceID(@Nullable String kekVaultResourceID) {
             this.kekVaultResourceID = kekVaultResourceID;
             return this;
         }

@@ -77,22 +77,22 @@ public final class MetricAlertSingleResourceMultipleMetricCriteriaArgs extends i
     	      this.odataType = defaults.odataType;
         }
 
-        public Builder setAllOf(@Nullable Input<List<MetricCriteriaArgs>> allOf) {
+        public Builder allOf(@Nullable Input<List<MetricCriteriaArgs>> allOf) {
             this.allOf = allOf;
             return this;
         }
 
-        public Builder setAllOf(@Nullable List<MetricCriteriaArgs> allOf) {
+        public Builder allOf(@Nullable List<MetricCriteriaArgs> allOf) {
             this.allOf = Input.ofNullable(allOf);
             return this;
         }
 
-        public Builder setOdataType(Input<String> odataType) {
+        public Builder odataType(Input<String> odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
 
-        public Builder setOdataType(String odataType) {
+        public Builder odataType(String odataType) {
             this.odataType = Input.of(Objects.requireNonNull(odataType));
             return this;
         }

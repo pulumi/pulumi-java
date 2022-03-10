@@ -73,12 +73,12 @@ public final class TargetOSInfoResponse extends io.pulumi.resources.InvokeArgs {
     	      this.targetOSs = defaults.targetOSs;
         }
 
-        public Builder setOsUpdateType(String osUpdateType) {
+        public Builder osUpdateType(String osUpdateType) {
             this.osUpdateType = Objects.requireNonNull(osUpdateType);
             return this;
         }
 
-        public Builder setTargetOSs(List<String> targetOSs) {
+        public Builder targetOSs(List<String> targetOSs) {
             this.targetOSs = Objects.requireNonNull(targetOSs);
             return this;
         }

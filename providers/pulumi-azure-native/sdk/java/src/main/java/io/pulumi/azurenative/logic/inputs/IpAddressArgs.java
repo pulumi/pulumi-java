@@ -57,12 +57,12 @@ public final class IpAddressArgs extends io.pulumi.resources.ResourceArgs {
     	      this.address = defaults.address;
         }
 
-        public Builder setAddress(@Nullable Input<String> address) {
+        public Builder address(@Nullable Input<String> address) {
             this.address = address;
             return this;
         }
 
-        public Builder setAddress(@Nullable String address) {
+        public Builder address(@Nullable String address) {
             this.address = Input.ofNullable(address);
             return this;
         }

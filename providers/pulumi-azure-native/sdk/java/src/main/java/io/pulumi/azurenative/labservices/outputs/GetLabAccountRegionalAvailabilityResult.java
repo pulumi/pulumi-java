@@ -50,7 +50,7 @@ public final class GetLabAccountRegionalAvailabilityResult {
     	      this.regionalAvailability = defaults.regionalAvailability;
         }
 
-        public Builder setRegionalAvailability(@Nullable List<RegionalAvailabilityResponse> regionalAvailability) {
+        public Builder regionalAvailability(@Nullable List<RegionalAvailabilityResponse> regionalAvailability) {
             this.regionalAvailability = regionalAvailability;
             return this;
         }

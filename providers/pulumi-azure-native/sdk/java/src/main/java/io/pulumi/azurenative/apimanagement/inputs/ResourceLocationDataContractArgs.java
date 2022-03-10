@@ -106,42 +106,42 @@ public final class ResourceLocationDataContractArgs extends io.pulumi.resources.
     	      this.name = defaults.name;
         }
 
-        public Builder setCity(@Nullable Input<String> city) {
+        public Builder city(@Nullable Input<String> city) {
             this.city = city;
             return this;
         }
 
-        public Builder setCity(@Nullable String city) {
+        public Builder city(@Nullable String city) {
             this.city = Input.ofNullable(city);
             return this;
         }
 
-        public Builder setCountryOrRegion(@Nullable Input<String> countryOrRegion) {
+        public Builder countryOrRegion(@Nullable Input<String> countryOrRegion) {
             this.countryOrRegion = countryOrRegion;
             return this;
         }
 
-        public Builder setCountryOrRegion(@Nullable String countryOrRegion) {
+        public Builder countryOrRegion(@Nullable String countryOrRegion) {
             this.countryOrRegion = Input.ofNullable(countryOrRegion);
             return this;
         }
 
-        public Builder setDistrict(@Nullable Input<String> district) {
+        public Builder district(@Nullable Input<String> district) {
             this.district = district;
             return this;
         }
 
-        public Builder setDistrict(@Nullable String district) {
+        public Builder district(@Nullable String district) {
             this.district = Input.ofNullable(district);
             return this;
         }
 
-        public Builder setName(Input<String> name) {
+        public Builder name(Input<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }

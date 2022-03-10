@@ -102,42 +102,42 @@ public final class NamespaceVirtualNetworkRuleArgs extends io.pulumi.resources.R
     	      this.virtualNetworkSubnetId = defaults.virtualNetworkSubnetId;
         }
 
-        public Builder setNamespaceName(Input<String> namespaceName) {
+        public Builder namespaceName(Input<String> namespaceName) {
             this.namespaceName = Objects.requireNonNull(namespaceName);
             return this;
         }
 
-        public Builder setNamespaceName(String namespaceName) {
+        public Builder namespaceName(String namespaceName) {
             this.namespaceName = Input.of(Objects.requireNonNull(namespaceName));
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setVirtualNetworkRuleName(@Nullable Input<String> virtualNetworkRuleName) {
+        public Builder virtualNetworkRuleName(@Nullable Input<String> virtualNetworkRuleName) {
             this.virtualNetworkRuleName = virtualNetworkRuleName;
             return this;
         }
 
-        public Builder setVirtualNetworkRuleName(@Nullable String virtualNetworkRuleName) {
+        public Builder virtualNetworkRuleName(@Nullable String virtualNetworkRuleName) {
             this.virtualNetworkRuleName = Input.ofNullable(virtualNetworkRuleName);
             return this;
         }
 
-        public Builder setVirtualNetworkSubnetId(@Nullable Input<String> virtualNetworkSubnetId) {
+        public Builder virtualNetworkSubnetId(@Nullable Input<String> virtualNetworkSubnetId) {
             this.virtualNetworkSubnetId = virtualNetworkSubnetId;
             return this;
         }
 
-        public Builder setVirtualNetworkSubnetId(@Nullable String virtualNetworkSubnetId) {
+        public Builder virtualNetworkSubnetId(@Nullable String virtualNetworkSubnetId) {
             this.virtualNetworkSubnetId = Input.ofNullable(virtualNetworkSubnetId);
             return this;
         }

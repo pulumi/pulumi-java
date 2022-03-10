@@ -57,7 +57,7 @@ public final class MoveCollectionPropertiesResponseErrors extends io.pulumi.reso
     	      this.properties = defaults.properties;
         }
 
-        public Builder setProperties(@Nullable MoveResourceErrorBodyResponse properties) {
+        public Builder properties(@Nullable MoveResourceErrorBodyResponse properties) {
             this.properties = properties;
             return this;
         }

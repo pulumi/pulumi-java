@@ -124,52 +124,52 @@ public final class TrafficAnalyticsConfigurationPropertiesArgs extends io.pulumi
     	      this.workspaceResourceId = defaults.workspaceResourceId;
         }
 
-        public Builder setEnabled(@Nullable Input<Boolean> enabled) {
+        public Builder enabled(@Nullable Input<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
 
-        public Builder setEnabled(@Nullable Boolean enabled) {
+        public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Input.ofNullable(enabled);
             return this;
         }
 
-        public Builder setTrafficAnalyticsInterval(@Nullable Input<Integer> trafficAnalyticsInterval) {
+        public Builder trafficAnalyticsInterval(@Nullable Input<Integer> trafficAnalyticsInterval) {
             this.trafficAnalyticsInterval = trafficAnalyticsInterval;
             return this;
         }
 
-        public Builder setTrafficAnalyticsInterval(@Nullable Integer trafficAnalyticsInterval) {
+        public Builder trafficAnalyticsInterval(@Nullable Integer trafficAnalyticsInterval) {
             this.trafficAnalyticsInterval = Input.ofNullable(trafficAnalyticsInterval);
             return this;
         }
 
-        public Builder setWorkspaceId(@Nullable Input<String> workspaceId) {
+        public Builder workspaceId(@Nullable Input<String> workspaceId) {
             this.workspaceId = workspaceId;
             return this;
         }
 
-        public Builder setWorkspaceId(@Nullable String workspaceId) {
+        public Builder workspaceId(@Nullable String workspaceId) {
             this.workspaceId = Input.ofNullable(workspaceId);
             return this;
         }
 
-        public Builder setWorkspaceRegion(@Nullable Input<String> workspaceRegion) {
+        public Builder workspaceRegion(@Nullable Input<String> workspaceRegion) {
             this.workspaceRegion = workspaceRegion;
             return this;
         }
 
-        public Builder setWorkspaceRegion(@Nullable String workspaceRegion) {
+        public Builder workspaceRegion(@Nullable String workspaceRegion) {
             this.workspaceRegion = Input.ofNullable(workspaceRegion);
             return this;
         }
 
-        public Builder setWorkspaceResourceId(@Nullable Input<String> workspaceResourceId) {
+        public Builder workspaceResourceId(@Nullable Input<String> workspaceResourceId) {
             this.workspaceResourceId = workspaceResourceId;
             return this;
         }
 
-        public Builder setWorkspaceResourceId(@Nullable String workspaceResourceId) {
+        public Builder workspaceResourceId(@Nullable String workspaceResourceId) {
             this.workspaceResourceId = Input.ofNullable(workspaceResourceId);
             return this;
         }

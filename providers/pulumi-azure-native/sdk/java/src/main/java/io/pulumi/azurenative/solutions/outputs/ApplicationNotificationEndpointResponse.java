@@ -48,7 +48,7 @@ public final class ApplicationNotificationEndpointResponse {
     	      this.uri = defaults.uri;
         }
 
-        public Builder setUri(String uri) {
+        public Builder uri(String uri) {
             this.uri = Objects.requireNonNull(uri);
             return this;
         }

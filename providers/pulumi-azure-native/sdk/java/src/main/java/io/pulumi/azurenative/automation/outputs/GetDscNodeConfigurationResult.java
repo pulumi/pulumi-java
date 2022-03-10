@@ -182,47 +182,47 @@ public final class GetDscNodeConfigurationResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setConfiguration(@Nullable DscConfigurationAssociationPropertyResponse configuration) {
+        public Builder configuration(@Nullable DscConfigurationAssociationPropertyResponse configuration) {
             this.configuration = configuration;
             return this;
         }
 
-        public Builder setCreationTime(@Nullable String creationTime) {
+        public Builder creationTime(@Nullable String creationTime) {
             this.creationTime = creationTime;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setIncrementNodeConfigurationBuild(@Nullable Boolean incrementNodeConfigurationBuild) {
+        public Builder incrementNodeConfigurationBuild(@Nullable Boolean incrementNodeConfigurationBuild) {
             this.incrementNodeConfigurationBuild = incrementNodeConfigurationBuild;
             return this;
         }
 
-        public Builder setLastModifiedTime(@Nullable String lastModifiedTime) {
+        public Builder lastModifiedTime(@Nullable String lastModifiedTime) {
             this.lastModifiedTime = lastModifiedTime;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setNodeCount(@Nullable Double nodeCount) {
+        public Builder nodeCount(@Nullable Double nodeCount) {
             this.nodeCount = nodeCount;
             return this;
         }
 
-        public Builder setSource(@Nullable String source) {
+        public Builder source(@Nullable String source) {
             this.source = source;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

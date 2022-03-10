@@ -115,27 +115,27 @@ public final class GalleryImageReferenceResponse {
     	      this.version = defaults.version;
         }
 
-        public Builder setOffer(@Nullable String offer) {
+        public Builder offer(@Nullable String offer) {
             this.offer = offer;
             return this;
         }
 
-        public Builder setOsType(@Nullable String osType) {
+        public Builder osType(@Nullable String osType) {
             this.osType = osType;
             return this;
         }
 
-        public Builder setPublisher(@Nullable String publisher) {
+        public Builder publisher(@Nullable String publisher) {
             this.publisher = publisher;
             return this;
         }
 
-        public Builder setSku(@Nullable String sku) {
+        public Builder sku(@Nullable String sku) {
             this.sku = sku;
             return this;
         }
 
-        public Builder setVersion(@Nullable String version) {
+        public Builder version(@Nullable String version) {
             this.version = version;
             return this;
         }

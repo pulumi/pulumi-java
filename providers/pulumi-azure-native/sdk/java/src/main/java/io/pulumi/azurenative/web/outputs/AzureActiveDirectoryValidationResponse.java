@@ -69,12 +69,12 @@ public final class AzureActiveDirectoryValidationResponse {
     	      this.jwtClaimChecks = defaults.jwtClaimChecks;
         }
 
-        public Builder setAllowedAudiences(@Nullable List<String> allowedAudiences) {
+        public Builder allowedAudiences(@Nullable List<String> allowedAudiences) {
             this.allowedAudiences = allowedAudiences;
             return this;
         }
 
-        public Builder setJwtClaimChecks(@Nullable JwtClaimChecksResponse jwtClaimChecks) {
+        public Builder jwtClaimChecks(@Nullable JwtClaimChecksResponse jwtClaimChecks) {
             this.jwtClaimChecks = jwtClaimChecks;
             return this;
         }

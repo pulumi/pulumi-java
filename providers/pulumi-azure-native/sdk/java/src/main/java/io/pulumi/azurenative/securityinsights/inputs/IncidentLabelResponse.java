@@ -72,12 +72,12 @@ public final class IncidentLabelResponse extends io.pulumi.resources.InvokeArgs 
     	      this.labelType = defaults.labelType;
         }
 
-        public Builder setLabelName(String labelName) {
+        public Builder labelName(String labelName) {
             this.labelName = Objects.requireNonNull(labelName);
             return this;
         }
 
-        public Builder setLabelType(String labelType) {
+        public Builder labelType(String labelType) {
             this.labelType = Objects.requireNonNull(labelType);
             return this;
         }

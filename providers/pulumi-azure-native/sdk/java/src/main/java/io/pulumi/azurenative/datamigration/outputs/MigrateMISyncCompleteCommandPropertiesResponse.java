@@ -121,27 +121,27 @@ public final class MigrateMISyncCompleteCommandPropertiesResponse {
     	      this.state = defaults.state;
         }
 
-        public Builder setCommandType(String commandType) {
+        public Builder commandType(String commandType) {
             this.commandType = Objects.requireNonNull(commandType);
             return this;
         }
 
-        public Builder setErrors(List<ODataErrorResponse> errors) {
+        public Builder errors(List<ODataErrorResponse> errors) {
             this.errors = Objects.requireNonNull(errors);
             return this;
         }
 
-        public Builder setInput(@Nullable MigrateMISyncCompleteCommandInputResponse input) {
+        public Builder input(@Nullable MigrateMISyncCompleteCommandInputResponse input) {
             this.input = input;
             return this;
         }
 
-        public Builder setOutput(MigrateMISyncCompleteCommandOutputResponse output) {
+        public Builder output(MigrateMISyncCompleteCommandOutputResponse output) {
             this.output = Objects.requireNonNull(output);
             return this;
         }
 
-        public Builder setState(String state) {
+        public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }

@@ -120,27 +120,27 @@ public final class AuthorizationProfileResponse extends io.pulumi.resources.Invo
     	      this.requesterObjectId = defaults.requesterObjectId;
         }
 
-        public Builder setApprovedTime(String approvedTime) {
+        public Builder approvedTime(String approvedTime) {
             this.approvedTime = Objects.requireNonNull(approvedTime);
             return this;
         }
 
-        public Builder setApprover(String approver) {
+        public Builder approver(String approver) {
             this.approver = Objects.requireNonNull(approver);
             return this;
         }
 
-        public Builder setRequestedTime(String requestedTime) {
+        public Builder requestedTime(String requestedTime) {
             this.requestedTime = Objects.requireNonNull(requestedTime);
             return this;
         }
 
-        public Builder setRequester(String requester) {
+        public Builder requester(String requester) {
             this.requester = Objects.requireNonNull(requester);
             return this;
         }
 
-        public Builder setRequesterObjectId(String requesterObjectId) {
+        public Builder requesterObjectId(String requesterObjectId) {
             this.requesterObjectId = Objects.requireNonNull(requesterObjectId);
             return this;
         }

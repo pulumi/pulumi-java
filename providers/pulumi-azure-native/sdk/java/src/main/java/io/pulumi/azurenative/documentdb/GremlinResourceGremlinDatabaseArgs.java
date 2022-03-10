@@ -153,72 +153,72 @@ public final class GremlinResourceGremlinDatabaseArgs extends io.pulumi.resource
     	      this.tags = defaults.tags;
         }
 
-        public Builder setAccountName(Input<String> accountName) {
+        public Builder accountName(Input<String> accountName) {
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
 
-        public Builder setAccountName(String accountName) {
+        public Builder accountName(String accountName) {
             this.accountName = Input.of(Objects.requireNonNull(accountName));
             return this;
         }
 
-        public Builder setDatabaseName(@Nullable Input<String> databaseName) {
+        public Builder databaseName(@Nullable Input<String> databaseName) {
             this.databaseName = databaseName;
             return this;
         }
 
-        public Builder setDatabaseName(@Nullable String databaseName) {
+        public Builder databaseName(@Nullable String databaseName) {
             this.databaseName = Input.ofNullable(databaseName);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setOptions(@Nullable Input<CreateUpdateOptionsArgs> options) {
+        public Builder options(@Nullable Input<CreateUpdateOptionsArgs> options) {
             this.options = options;
             return this;
         }
 
-        public Builder setOptions(@Nullable CreateUpdateOptionsArgs options) {
+        public Builder options(@Nullable CreateUpdateOptionsArgs options) {
             this.options = Input.ofNullable(options);
             return this;
         }
 
-        public Builder setResource(Input<GremlinDatabaseResourceArgs> resource) {
+        public Builder resource(Input<GremlinDatabaseResourceArgs> resource) {
             this.resource = Objects.requireNonNull(resource);
             return this;
         }
 
-        public Builder setResource(GremlinDatabaseResourceArgs resource) {
+        public Builder resource(GremlinDatabaseResourceArgs resource) {
             this.resource = Input.of(Objects.requireNonNull(resource));
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

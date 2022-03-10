@@ -57,12 +57,12 @@ public final class VirtualNetworkProfileArgs extends io.pulumi.resources.Resourc
     	      this.computeSubnetId = defaults.computeSubnetId;
         }
 
-        public Builder setComputeSubnetId(@Nullable Input<String> computeSubnetId) {
+        public Builder computeSubnetId(@Nullable Input<String> computeSubnetId) {
             this.computeSubnetId = computeSubnetId;
             return this;
         }
 
-        public Builder setComputeSubnetId(@Nullable String computeSubnetId) {
+        public Builder computeSubnetId(@Nullable String computeSubnetId) {
             this.computeSubnetId = Input.ofNullable(computeSubnetId);
             return this;
         }

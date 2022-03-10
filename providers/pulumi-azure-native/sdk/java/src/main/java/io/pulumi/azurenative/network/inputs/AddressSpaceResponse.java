@@ -58,7 +58,7 @@ public final class AddressSpaceResponse extends io.pulumi.resources.InvokeArgs {
     	      this.addressPrefixes = defaults.addressPrefixes;
         }
 
-        public Builder setAddressPrefixes(@Nullable List<String> addressPrefixes) {
+        public Builder addressPrefixes(@Nullable List<String> addressPrefixes) {
             this.addressPrefixes = addressPrefixes;
             return this;
         }

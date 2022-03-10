@@ -76,22 +76,22 @@ public final class CustomRPValidationsArgs extends io.pulumi.resources.ResourceA
     	      this.validationType = defaults.validationType;
         }
 
-        public Builder setSpecification(Input<String> specification) {
+        public Builder specification(Input<String> specification) {
             this.specification = Objects.requireNonNull(specification);
             return this;
         }
 
-        public Builder setSpecification(String specification) {
+        public Builder specification(String specification) {
             this.specification = Input.of(Objects.requireNonNull(specification));
             return this;
         }
 
-        public Builder setValidationType(@Nullable Input<Either<String,ValidationType>> validationType) {
+        public Builder validationType(@Nullable Input<Either<String,ValidationType>> validationType) {
             this.validationType = validationType;
             return this;
         }
 
-        public Builder setValidationType(@Nullable Either<String,ValidationType> validationType) {
+        public Builder validationType(@Nullable Either<String,ValidationType> validationType) {
             this.validationType = Input.ofNullable(validationType);
             return this;
         }

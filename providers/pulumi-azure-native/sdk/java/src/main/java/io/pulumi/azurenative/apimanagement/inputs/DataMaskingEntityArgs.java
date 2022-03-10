@@ -72,22 +72,22 @@ public final class DataMaskingEntityArgs extends io.pulumi.resources.ResourceArg
     	      this.value = defaults.value;
         }
 
-        public Builder setMode(@Nullable Input<Either<String,DataMaskingMode>> mode) {
+        public Builder mode(@Nullable Input<Either<String,DataMaskingMode>> mode) {
             this.mode = mode;
             return this;
         }
 
-        public Builder setMode(@Nullable Either<String,DataMaskingMode> mode) {
+        public Builder mode(@Nullable Either<String,DataMaskingMode> mode) {
             this.mode = Input.ofNullable(mode);
             return this;
         }
 
-        public Builder setValue(@Nullable Input<String> value) {
+        public Builder value(@Nullable Input<String> value) {
             this.value = value;
             return this;
         }
 
-        public Builder setValue(@Nullable String value) {
+        public Builder value(@Nullable String value) {
             this.value = Input.ofNullable(value);
             return this;
         }

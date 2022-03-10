@@ -134,32 +134,32 @@ public final class GetNamespaceNetworkRuleSetResult {
     	      this.virtualNetworkRules = defaults.virtualNetworkRules;
         }
 
-        public Builder setDefaultAction(@Nullable String defaultAction) {
+        public Builder defaultAction(@Nullable String defaultAction) {
             this.defaultAction = defaultAction;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setIpRules(@Nullable List<NWRuleSetIpRulesResponse> ipRules) {
+        public Builder ipRules(@Nullable List<NWRuleSetIpRulesResponse> ipRules) {
             this.ipRules = ipRules;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setVirtualNetworkRules(@Nullable List<NWRuleSetVirtualNetworkRulesResponse> virtualNetworkRules) {
+        public Builder virtualNetworkRules(@Nullable List<NWRuleSetVirtualNetworkRulesResponse> virtualNetworkRules) {
             this.virtualNetworkRules = virtualNetworkRules;
             return this;
         }

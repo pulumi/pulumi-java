@@ -349,97 +349,97 @@ public final class GetConnectionMonitorResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setAutoStart(@Nullable Boolean autoStart) {
+        public Builder autoStart(@Nullable Boolean autoStart) {
             this.autoStart = autoStart;
             return this;
         }
 
-        public Builder setConnectionMonitorType(String connectionMonitorType) {
+        public Builder connectionMonitorType(String connectionMonitorType) {
             this.connectionMonitorType = Objects.requireNonNull(connectionMonitorType);
             return this;
         }
 
-        public Builder setDestination(@Nullable ConnectionMonitorDestinationResponse destination) {
+        public Builder destination(@Nullable ConnectionMonitorDestinationResponse destination) {
             this.destination = destination;
             return this;
         }
 
-        public Builder setEndpoints(@Nullable List<ConnectionMonitorEndpointResponse> endpoints) {
+        public Builder endpoints(@Nullable List<ConnectionMonitorEndpointResponse> endpoints) {
             this.endpoints = endpoints;
             return this;
         }
 
-        public Builder setEtag(String etag) {
+        public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
 
-        public Builder setMonitoringIntervalInSeconds(@Nullable Integer monitoringIntervalInSeconds) {
+        public Builder monitoringIntervalInSeconds(@Nullable Integer monitoringIntervalInSeconds) {
             this.monitoringIntervalInSeconds = monitoringIntervalInSeconds;
             return this;
         }
 
-        public Builder setMonitoringStatus(String monitoringStatus) {
+        public Builder monitoringStatus(String monitoringStatus) {
             this.monitoringStatus = Objects.requireNonNull(monitoringStatus);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setNotes(@Nullable String notes) {
+        public Builder notes(@Nullable String notes) {
             this.notes = notes;
             return this;
         }
 
-        public Builder setOutputs(@Nullable List<ConnectionMonitorOutputResponse> outputs) {
+        public Builder outputs(@Nullable List<ConnectionMonitorOutputResponse> outputs) {
             this.outputs = outputs;
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setSource(@Nullable ConnectionMonitorSourceResponse source) {
+        public Builder source(@Nullable ConnectionMonitorSourceResponse source) {
             this.source = source;
             return this;
         }
 
-        public Builder setStartTime(String startTime) {
+        public Builder startTime(String startTime) {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTestConfigurations(@Nullable List<ConnectionMonitorTestConfigurationResponse> testConfigurations) {
+        public Builder testConfigurations(@Nullable List<ConnectionMonitorTestConfigurationResponse> testConfigurations) {
             this.testConfigurations = testConfigurations;
             return this;
         }
 
-        public Builder setTestGroups(@Nullable List<ConnectionMonitorTestGroupResponse> testGroups) {
+        public Builder testGroups(@Nullable List<ConnectionMonitorTestGroupResponse> testGroups) {
             this.testGroups = testGroups;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

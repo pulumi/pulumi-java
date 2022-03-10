@@ -241,67 +241,67 @@ public final class InMageRcmNicDetailsResponse {
     	      this.testSubnetName = defaults.testSubnetName;
         }
 
-        public Builder setIsPrimaryNic(String isPrimaryNic) {
+        public Builder isPrimaryNic(String isPrimaryNic) {
             this.isPrimaryNic = Objects.requireNonNull(isPrimaryNic);
             return this;
         }
 
-        public Builder setIsSelectedForFailover(String isSelectedForFailover) {
+        public Builder isSelectedForFailover(String isSelectedForFailover) {
             this.isSelectedForFailover = Objects.requireNonNull(isSelectedForFailover);
             return this;
         }
 
-        public Builder setNicId(String nicId) {
+        public Builder nicId(String nicId) {
             this.nicId = Objects.requireNonNull(nicId);
             return this;
         }
 
-        public Builder setSourceIPAddress(String sourceIPAddress) {
+        public Builder sourceIPAddress(String sourceIPAddress) {
             this.sourceIPAddress = Objects.requireNonNull(sourceIPAddress);
             return this;
         }
 
-        public Builder setSourceIPAddressType(String sourceIPAddressType) {
+        public Builder sourceIPAddressType(String sourceIPAddressType) {
             this.sourceIPAddressType = Objects.requireNonNull(sourceIPAddressType);
             return this;
         }
 
-        public Builder setSourceNetworkId(String sourceNetworkId) {
+        public Builder sourceNetworkId(String sourceNetworkId) {
             this.sourceNetworkId = Objects.requireNonNull(sourceNetworkId);
             return this;
         }
 
-        public Builder setSourceSubnetName(String sourceSubnetName) {
+        public Builder sourceSubnetName(String sourceSubnetName) {
             this.sourceSubnetName = Objects.requireNonNull(sourceSubnetName);
             return this;
         }
 
-        public Builder setTargetIPAddress(String targetIPAddress) {
+        public Builder targetIPAddress(String targetIPAddress) {
             this.targetIPAddress = Objects.requireNonNull(targetIPAddress);
             return this;
         }
 
-        public Builder setTargetIPAddressType(String targetIPAddressType) {
+        public Builder targetIPAddressType(String targetIPAddressType) {
             this.targetIPAddressType = Objects.requireNonNull(targetIPAddressType);
             return this;
         }
 
-        public Builder setTargetSubnetName(String targetSubnetName) {
+        public Builder targetSubnetName(String targetSubnetName) {
             this.targetSubnetName = Objects.requireNonNull(targetSubnetName);
             return this;
         }
 
-        public Builder setTestIPAddress(String testIPAddress) {
+        public Builder testIPAddress(String testIPAddress) {
             this.testIPAddress = Objects.requireNonNull(testIPAddress);
             return this;
         }
 
-        public Builder setTestIPAddressType(String testIPAddressType) {
+        public Builder testIPAddressType(String testIPAddressType) {
             this.testIPAddressType = Objects.requireNonNull(testIPAddressType);
             return this;
         }
 
-        public Builder setTestSubnetName(String testSubnetName) {
+        public Builder testSubnetName(String testSubnetName) {
             this.testSubnetName = Objects.requireNonNull(testSubnetName);
             return this;
         }

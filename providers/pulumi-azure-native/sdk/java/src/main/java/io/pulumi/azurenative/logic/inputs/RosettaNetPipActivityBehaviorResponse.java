@@ -170,42 +170,42 @@ public final class RosettaNetPipActivityBehaviorResponse extends io.pulumi.resou
     	      this.timeToPerformInSeconds = defaults.timeToPerformInSeconds;
         }
 
-        public Builder setActionType(String actionType) {
+        public Builder actionType(String actionType) {
             this.actionType = Objects.requireNonNull(actionType);
             return this;
         }
 
-        public Builder setIsAuthorizationRequired(Boolean isAuthorizationRequired) {
+        public Builder isAuthorizationRequired(Boolean isAuthorizationRequired) {
             this.isAuthorizationRequired = Objects.requireNonNull(isAuthorizationRequired);
             return this;
         }
 
-        public Builder setIsSecuredTransportRequired(Boolean isSecuredTransportRequired) {
+        public Builder isSecuredTransportRequired(Boolean isSecuredTransportRequired) {
             this.isSecuredTransportRequired = Objects.requireNonNull(isSecuredTransportRequired);
             return this;
         }
 
-        public Builder setNonRepudiationOfOriginAndContent(Boolean nonRepudiationOfOriginAndContent) {
+        public Builder nonRepudiationOfOriginAndContent(Boolean nonRepudiationOfOriginAndContent) {
             this.nonRepudiationOfOriginAndContent = Objects.requireNonNull(nonRepudiationOfOriginAndContent);
             return this;
         }
 
-        public Builder setPersistentConfidentialityScope(String persistentConfidentialityScope) {
+        public Builder persistentConfidentialityScope(String persistentConfidentialityScope) {
             this.persistentConfidentialityScope = Objects.requireNonNull(persistentConfidentialityScope);
             return this;
         }
 
-        public Builder setResponseType(String responseType) {
+        public Builder responseType(String responseType) {
             this.responseType = Objects.requireNonNull(responseType);
             return this;
         }
 
-        public Builder setRetryCount(Integer retryCount) {
+        public Builder retryCount(Integer retryCount) {
             this.retryCount = Objects.requireNonNull(retryCount);
             return this;
         }
 
-        public Builder setTimeToPerformInSeconds(Integer timeToPerformInSeconds) {
+        public Builder timeToPerformInSeconds(Integer timeToPerformInSeconds) {
             this.timeToPerformInSeconds = Objects.requireNonNull(timeToPerformInSeconds);
             return this;
         }

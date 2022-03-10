@@ -219,112 +219,112 @@ public final class KubeEnvironmentArgs extends io.pulumi.resources.ResourceArgs 
     	      this.tags = defaults.tags;
         }
 
-        public Builder setAksResourceID(@Nullable Input<String> aksResourceID) {
+        public Builder aksResourceID(@Nullable Input<String> aksResourceID) {
             this.aksResourceID = aksResourceID;
             return this;
         }
 
-        public Builder setAksResourceID(@Nullable String aksResourceID) {
+        public Builder aksResourceID(@Nullable String aksResourceID) {
             this.aksResourceID = Input.ofNullable(aksResourceID);
             return this;
         }
 
-        public Builder setAppLogsConfiguration(@Nullable Input<AppLogsConfigurationArgs> appLogsConfiguration) {
+        public Builder appLogsConfiguration(@Nullable Input<AppLogsConfigurationArgs> appLogsConfiguration) {
             this.appLogsConfiguration = appLogsConfiguration;
             return this;
         }
 
-        public Builder setAppLogsConfiguration(@Nullable AppLogsConfigurationArgs appLogsConfiguration) {
+        public Builder appLogsConfiguration(@Nullable AppLogsConfigurationArgs appLogsConfiguration) {
             this.appLogsConfiguration = Input.ofNullable(appLogsConfiguration);
             return this;
         }
 
-        public Builder setArcConfiguration(@Nullable Input<ArcConfigurationArgs> arcConfiguration) {
+        public Builder arcConfiguration(@Nullable Input<ArcConfigurationArgs> arcConfiguration) {
             this.arcConfiguration = arcConfiguration;
             return this;
         }
 
-        public Builder setArcConfiguration(@Nullable ArcConfigurationArgs arcConfiguration) {
+        public Builder arcConfiguration(@Nullable ArcConfigurationArgs arcConfiguration) {
             this.arcConfiguration = Input.ofNullable(arcConfiguration);
             return this;
         }
 
-        public Builder setExtendedLocation(@Nullable Input<ExtendedLocationArgs> extendedLocation) {
+        public Builder extendedLocation(@Nullable Input<ExtendedLocationArgs> extendedLocation) {
             this.extendedLocation = extendedLocation;
             return this;
         }
 
-        public Builder setExtendedLocation(@Nullable ExtendedLocationArgs extendedLocation) {
+        public Builder extendedLocation(@Nullable ExtendedLocationArgs extendedLocation) {
             this.extendedLocation = Input.ofNullable(extendedLocation);
             return this;
         }
 
-        public Builder setInternalLoadBalancerEnabled(@Nullable Input<Boolean> internalLoadBalancerEnabled) {
+        public Builder internalLoadBalancerEnabled(@Nullable Input<Boolean> internalLoadBalancerEnabled) {
             this.internalLoadBalancerEnabled = internalLoadBalancerEnabled;
             return this;
         }
 
-        public Builder setInternalLoadBalancerEnabled(@Nullable Boolean internalLoadBalancerEnabled) {
+        public Builder internalLoadBalancerEnabled(@Nullable Boolean internalLoadBalancerEnabled) {
             this.internalLoadBalancerEnabled = Input.ofNullable(internalLoadBalancerEnabled);
             return this;
         }
 
-        public Builder setKind(@Nullable Input<String> kind) {
+        public Builder kind(@Nullable Input<String> kind) {
             this.kind = kind;
             return this;
         }
 
-        public Builder setKind(@Nullable String kind) {
+        public Builder kind(@Nullable String kind) {
             this.kind = Input.ofNullable(kind);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setStaticIp(@Nullable Input<String> staticIp) {
+        public Builder staticIp(@Nullable Input<String> staticIp) {
             this.staticIp = staticIp;
             return this;
         }
 
-        public Builder setStaticIp(@Nullable String staticIp) {
+        public Builder staticIp(@Nullable String staticIp) {
             this.staticIp = Input.ofNullable(staticIp);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

@@ -108,42 +108,42 @@ public final class MigrateSqlServerSqlDbDatabaseInputArgs extends io.pulumi.reso
     	      this.targetDatabaseName = defaults.targetDatabaseName;
         }
 
-        public Builder setMakeSourceDbReadOnly(@Nullable Input<Boolean> makeSourceDbReadOnly) {
+        public Builder makeSourceDbReadOnly(@Nullable Input<Boolean> makeSourceDbReadOnly) {
             this.makeSourceDbReadOnly = makeSourceDbReadOnly;
             return this;
         }
 
-        public Builder setMakeSourceDbReadOnly(@Nullable Boolean makeSourceDbReadOnly) {
+        public Builder makeSourceDbReadOnly(@Nullable Boolean makeSourceDbReadOnly) {
             this.makeSourceDbReadOnly = Input.ofNullable(makeSourceDbReadOnly);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setTableMap(@Nullable Input<Map<String,String>> tableMap) {
+        public Builder tableMap(@Nullable Input<Map<String,String>> tableMap) {
             this.tableMap = tableMap;
             return this;
         }
 
-        public Builder setTableMap(@Nullable Map<String,String> tableMap) {
+        public Builder tableMap(@Nullable Map<String,String> tableMap) {
             this.tableMap = Input.ofNullable(tableMap);
             return this;
         }
 
-        public Builder setTargetDatabaseName(@Nullable Input<String> targetDatabaseName) {
+        public Builder targetDatabaseName(@Nullable Input<String> targetDatabaseName) {
             this.targetDatabaseName = targetDatabaseName;
             return this;
         }
 
-        public Builder setTargetDatabaseName(@Nullable String targetDatabaseName) {
+        public Builder targetDatabaseName(@Nullable String targetDatabaseName) {
             this.targetDatabaseName = Input.ofNullable(targetDatabaseName);
             return this;
         }

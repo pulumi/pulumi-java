@@ -50,7 +50,7 @@ public final class FhirServiceExportConfigurationResponse {
     	      this.storageAccountName = defaults.storageAccountName;
         }
 
-        public Builder setStorageAccountName(@Nullable String storageAccountName) {
+        public Builder storageAccountName(@Nullable String storageAccountName) {
             this.storageAccountName = storageAccountName;
             return this;
         }

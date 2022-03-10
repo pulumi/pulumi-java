@@ -70,12 +70,12 @@ public final class GetCloudConnectorArgs extends io.pulumi.resources.InvokeArgs 
     	      this.expand = defaults.expand;
         }
 
-        public Builder setConnectorName(String connectorName) {
+        public Builder connectorName(String connectorName) {
             this.connectorName = Objects.requireNonNull(connectorName);
             return this;
         }
 
-        public Builder setExpand(@Nullable String expand) {
+        public Builder expand(@Nullable String expand) {
             this.expand = expand;
             return this;
         }

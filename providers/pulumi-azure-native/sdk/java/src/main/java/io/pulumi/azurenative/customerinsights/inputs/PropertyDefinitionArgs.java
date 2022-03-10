@@ -286,152 +286,152 @@ public final class PropertyDefinitionArgs extends io.pulumi.resources.ResourceAr
     	      this.schemaItemPropLink = defaults.schemaItemPropLink;
         }
 
-        public Builder setArrayValueSeparator(@Nullable Input<String> arrayValueSeparator) {
+        public Builder arrayValueSeparator(@Nullable Input<String> arrayValueSeparator) {
             this.arrayValueSeparator = arrayValueSeparator;
             return this;
         }
 
-        public Builder setArrayValueSeparator(@Nullable String arrayValueSeparator) {
+        public Builder arrayValueSeparator(@Nullable String arrayValueSeparator) {
             this.arrayValueSeparator = Input.ofNullable(arrayValueSeparator);
             return this;
         }
 
-        public Builder setEnumValidValues(@Nullable Input<List<ProfileEnumValidValuesFormatArgs>> enumValidValues) {
+        public Builder enumValidValues(@Nullable Input<List<ProfileEnumValidValuesFormatArgs>> enumValidValues) {
             this.enumValidValues = enumValidValues;
             return this;
         }
 
-        public Builder setEnumValidValues(@Nullable List<ProfileEnumValidValuesFormatArgs> enumValidValues) {
+        public Builder enumValidValues(@Nullable List<ProfileEnumValidValuesFormatArgs> enumValidValues) {
             this.enumValidValues = Input.ofNullable(enumValidValues);
             return this;
         }
 
-        public Builder setFieldName(Input<String> fieldName) {
+        public Builder fieldName(Input<String> fieldName) {
             this.fieldName = Objects.requireNonNull(fieldName);
             return this;
         }
 
-        public Builder setFieldName(String fieldName) {
+        public Builder fieldName(String fieldName) {
             this.fieldName = Input.of(Objects.requireNonNull(fieldName));
             return this;
         }
 
-        public Builder setFieldType(Input<String> fieldType) {
+        public Builder fieldType(Input<String> fieldType) {
             this.fieldType = Objects.requireNonNull(fieldType);
             return this;
         }
 
-        public Builder setFieldType(String fieldType) {
+        public Builder fieldType(String fieldType) {
             this.fieldType = Input.of(Objects.requireNonNull(fieldType));
             return this;
         }
 
-        public Builder setIsArray(@Nullable Input<Boolean> isArray) {
+        public Builder isArray(@Nullable Input<Boolean> isArray) {
             this.isArray = isArray;
             return this;
         }
 
-        public Builder setIsArray(@Nullable Boolean isArray) {
+        public Builder isArray(@Nullable Boolean isArray) {
             this.isArray = Input.ofNullable(isArray);
             return this;
         }
 
-        public Builder setIsAvailableInGraph(@Nullable Input<Boolean> isAvailableInGraph) {
+        public Builder isAvailableInGraph(@Nullable Input<Boolean> isAvailableInGraph) {
             this.isAvailableInGraph = isAvailableInGraph;
             return this;
         }
 
-        public Builder setIsAvailableInGraph(@Nullable Boolean isAvailableInGraph) {
+        public Builder isAvailableInGraph(@Nullable Boolean isAvailableInGraph) {
             this.isAvailableInGraph = Input.ofNullable(isAvailableInGraph);
             return this;
         }
 
-        public Builder setIsEnum(@Nullable Input<Boolean> isEnum) {
+        public Builder isEnum(@Nullable Input<Boolean> isEnum) {
             this.isEnum = isEnum;
             return this;
         }
 
-        public Builder setIsEnum(@Nullable Boolean isEnum) {
+        public Builder isEnum(@Nullable Boolean isEnum) {
             this.isEnum = Input.ofNullable(isEnum);
             return this;
         }
 
-        public Builder setIsFlagEnum(@Nullable Input<Boolean> isFlagEnum) {
+        public Builder isFlagEnum(@Nullable Input<Boolean> isFlagEnum) {
             this.isFlagEnum = isFlagEnum;
             return this;
         }
 
-        public Builder setIsFlagEnum(@Nullable Boolean isFlagEnum) {
+        public Builder isFlagEnum(@Nullable Boolean isFlagEnum) {
             this.isFlagEnum = Input.ofNullable(isFlagEnum);
             return this;
         }
 
-        public Builder setIsImage(@Nullable Input<Boolean> isImage) {
+        public Builder isImage(@Nullable Input<Boolean> isImage) {
             this.isImage = isImage;
             return this;
         }
 
-        public Builder setIsImage(@Nullable Boolean isImage) {
+        public Builder isImage(@Nullable Boolean isImage) {
             this.isImage = Input.ofNullable(isImage);
             return this;
         }
 
-        public Builder setIsLocalizedString(@Nullable Input<Boolean> isLocalizedString) {
+        public Builder isLocalizedString(@Nullable Input<Boolean> isLocalizedString) {
             this.isLocalizedString = isLocalizedString;
             return this;
         }
 
-        public Builder setIsLocalizedString(@Nullable Boolean isLocalizedString) {
+        public Builder isLocalizedString(@Nullable Boolean isLocalizedString) {
             this.isLocalizedString = Input.ofNullable(isLocalizedString);
             return this;
         }
 
-        public Builder setIsName(@Nullable Input<Boolean> isName) {
+        public Builder isName(@Nullable Input<Boolean> isName) {
             this.isName = isName;
             return this;
         }
 
-        public Builder setIsName(@Nullable Boolean isName) {
+        public Builder isName(@Nullable Boolean isName) {
             this.isName = Input.ofNullable(isName);
             return this;
         }
 
-        public Builder setIsRequired(@Nullable Input<Boolean> isRequired) {
+        public Builder isRequired(@Nullable Input<Boolean> isRequired) {
             this.isRequired = isRequired;
             return this;
         }
 
-        public Builder setIsRequired(@Nullable Boolean isRequired) {
+        public Builder isRequired(@Nullable Boolean isRequired) {
             this.isRequired = Input.ofNullable(isRequired);
             return this;
         }
 
-        public Builder setMaxLength(@Nullable Input<Integer> maxLength) {
+        public Builder maxLength(@Nullable Input<Integer> maxLength) {
             this.maxLength = maxLength;
             return this;
         }
 
-        public Builder setMaxLength(@Nullable Integer maxLength) {
+        public Builder maxLength(@Nullable Integer maxLength) {
             this.maxLength = Input.ofNullable(maxLength);
             return this;
         }
 
-        public Builder setPropertyId(@Nullable Input<String> propertyId) {
+        public Builder propertyId(@Nullable Input<String> propertyId) {
             this.propertyId = propertyId;
             return this;
         }
 
-        public Builder setPropertyId(@Nullable String propertyId) {
+        public Builder propertyId(@Nullable String propertyId) {
             this.propertyId = Input.ofNullable(propertyId);
             return this;
         }
 
-        public Builder setSchemaItemPropLink(@Nullable Input<String> schemaItemPropLink) {
+        public Builder schemaItemPropLink(@Nullable Input<String> schemaItemPropLink) {
             this.schemaItemPropLink = schemaItemPropLink;
             return this;
         }
 
-        public Builder setSchemaItemPropLink(@Nullable String schemaItemPropLink) {
+        public Builder schemaItemPropLink(@Nullable String schemaItemPropLink) {
             this.schemaItemPropLink = Input.ofNullable(schemaItemPropLink);
             return this;
         }

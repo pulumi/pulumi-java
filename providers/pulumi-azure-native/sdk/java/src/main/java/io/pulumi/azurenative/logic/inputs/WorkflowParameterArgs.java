@@ -109,42 +109,42 @@ public final class WorkflowParameterArgs extends io.pulumi.resources.ResourceArg
     	      this.value = defaults.value;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setMetadata(@Nullable Input<Object> metadata) {
+        public Builder metadata(@Nullable Input<Object> metadata) {
             this.metadata = metadata;
             return this;
         }
 
-        public Builder setMetadata(@Nullable Object metadata) {
+        public Builder metadata(@Nullable Object metadata) {
             this.metadata = Input.ofNullable(metadata);
             return this;
         }
 
-        public Builder setType(@Nullable Input<Either<String,ParameterType>> type) {
+        public Builder type(@Nullable Input<Either<String,ParameterType>> type) {
             this.type = type;
             return this;
         }
 
-        public Builder setType(@Nullable Either<String,ParameterType> type) {
+        public Builder type(@Nullable Either<String,ParameterType> type) {
             this.type = Input.ofNullable(type);
             return this;
         }
 
-        public Builder setValue(@Nullable Input<Object> value) {
+        public Builder value(@Nullable Input<Object> value) {
             this.value = value;
             return this;
         }
 
-        public Builder setValue(@Nullable Object value) {
+        public Builder value(@Nullable Object value) {
             this.value = Input.ofNullable(value);
             return this;
         }

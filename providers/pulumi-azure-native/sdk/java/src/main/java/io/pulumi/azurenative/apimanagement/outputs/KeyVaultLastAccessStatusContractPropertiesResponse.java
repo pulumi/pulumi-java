@@ -83,17 +83,17 @@ public final class KeyVaultLastAccessStatusContractPropertiesResponse {
     	      this.timeStampUtc = defaults.timeStampUtc;
         }
 
-        public Builder setCode(@Nullable String code) {
+        public Builder code(@Nullable String code) {
             this.code = code;
             return this;
         }
 
-        public Builder setMessage(@Nullable String message) {
+        public Builder message(@Nullable String message) {
             this.message = message;
             return this;
         }
 
-        public Builder setTimeStampUtc(@Nullable String timeStampUtc) {
+        public Builder timeStampUtc(@Nullable String timeStampUtc) {
             this.timeStampUtc = timeStampUtc;
             return this;
         }

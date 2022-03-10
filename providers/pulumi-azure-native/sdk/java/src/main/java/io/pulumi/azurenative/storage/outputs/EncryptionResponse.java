@@ -119,27 +119,27 @@ public final class EncryptionResponse {
     	      this.services = defaults.services;
         }
 
-        public Builder setEncryptionIdentity(@Nullable EncryptionIdentityResponse encryptionIdentity) {
+        public Builder encryptionIdentity(@Nullable EncryptionIdentityResponse encryptionIdentity) {
             this.encryptionIdentity = encryptionIdentity;
             return this;
         }
 
-        public Builder setKeySource(String keySource) {
+        public Builder keySource(String keySource) {
             this.keySource = Objects.requireNonNull(keySource);
             return this;
         }
 
-        public Builder setKeyVaultProperties(@Nullable KeyVaultPropertiesResponse keyVaultProperties) {
+        public Builder keyVaultProperties(@Nullable KeyVaultPropertiesResponse keyVaultProperties) {
             this.keyVaultProperties = keyVaultProperties;
             return this;
         }
 
-        public Builder setRequireInfrastructureEncryption(@Nullable Boolean requireInfrastructureEncryption) {
+        public Builder requireInfrastructureEncryption(@Nullable Boolean requireInfrastructureEncryption) {
             this.requireInfrastructureEncryption = requireInfrastructureEncryption;
             return this;
         }
 
-        public Builder setServices(@Nullable EncryptionServicesResponse services) {
+        public Builder services(@Nullable EncryptionServicesResponse services) {
             this.services = services;
             return this;
         }

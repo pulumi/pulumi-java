@@ -127,52 +127,52 @@ public final class VideoAnalyzerPresetArgs extends io.pulumi.resources.ResourceA
     	      this.odataType = defaults.odataType;
         }
 
-        public Builder setAudioLanguage(@Nullable Input<String> audioLanguage) {
+        public Builder audioLanguage(@Nullable Input<String> audioLanguage) {
             this.audioLanguage = audioLanguage;
             return this;
         }
 
-        public Builder setAudioLanguage(@Nullable String audioLanguage) {
+        public Builder audioLanguage(@Nullable String audioLanguage) {
             this.audioLanguage = Input.ofNullable(audioLanguage);
             return this;
         }
 
-        public Builder setExperimentalOptions(@Nullable Input<Map<String,String>> experimentalOptions) {
+        public Builder experimentalOptions(@Nullable Input<Map<String,String>> experimentalOptions) {
             this.experimentalOptions = experimentalOptions;
             return this;
         }
 
-        public Builder setExperimentalOptions(@Nullable Map<String,String> experimentalOptions) {
+        public Builder experimentalOptions(@Nullable Map<String,String> experimentalOptions) {
             this.experimentalOptions = Input.ofNullable(experimentalOptions);
             return this;
         }
 
-        public Builder setInsightsToExtract(@Nullable Input<Either<String,InsightsType>> insightsToExtract) {
+        public Builder insightsToExtract(@Nullable Input<Either<String,InsightsType>> insightsToExtract) {
             this.insightsToExtract = insightsToExtract;
             return this;
         }
 
-        public Builder setInsightsToExtract(@Nullable Either<String,InsightsType> insightsToExtract) {
+        public Builder insightsToExtract(@Nullable Either<String,InsightsType> insightsToExtract) {
             this.insightsToExtract = Input.ofNullable(insightsToExtract);
             return this;
         }
 
-        public Builder setMode(@Nullable Input<Either<String,AudioAnalysisMode>> mode) {
+        public Builder mode(@Nullable Input<Either<String,AudioAnalysisMode>> mode) {
             this.mode = mode;
             return this;
         }
 
-        public Builder setMode(@Nullable Either<String,AudioAnalysisMode> mode) {
+        public Builder mode(@Nullable Either<String,AudioAnalysisMode> mode) {
             this.mode = Input.ofNullable(mode);
             return this;
         }
 
-        public Builder setOdataType(Input<String> odataType) {
+        public Builder odataType(Input<String> odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
 
-        public Builder setOdataType(String odataType) {
+        public Builder odataType(String odataType) {
             this.odataType = Input.of(Objects.requireNonNull(odataType));
             return this;
         }

@@ -84,17 +84,17 @@ public final class FailoverPolicyResponse {
     	      this.locationName = defaults.locationName;
         }
 
-        public Builder setFailoverPriority(@Nullable Integer failoverPriority) {
+        public Builder failoverPriority(@Nullable Integer failoverPriority) {
             this.failoverPriority = failoverPriority;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setLocationName(@Nullable String locationName) {
+        public Builder locationName(@Nullable String locationName) {
             this.locationName = locationName;
             return this;
         }

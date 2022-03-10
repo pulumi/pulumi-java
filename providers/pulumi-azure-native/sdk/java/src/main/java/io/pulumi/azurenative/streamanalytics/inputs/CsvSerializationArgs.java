@@ -93,32 +93,32 @@ public final class CsvSerializationArgs extends io.pulumi.resources.ResourceArgs
     	      this.type = defaults.type;
         }
 
-        public Builder setEncoding(@Nullable Input<Either<String,Encoding>> encoding) {
+        public Builder encoding(@Nullable Input<Either<String,Encoding>> encoding) {
             this.encoding = encoding;
             return this;
         }
 
-        public Builder setEncoding(@Nullable Either<String,Encoding> encoding) {
+        public Builder encoding(@Nullable Either<String,Encoding> encoding) {
             this.encoding = Input.ofNullable(encoding);
             return this;
         }
 
-        public Builder setFieldDelimiter(@Nullable Input<String> fieldDelimiter) {
+        public Builder fieldDelimiter(@Nullable Input<String> fieldDelimiter) {
             this.fieldDelimiter = fieldDelimiter;
             return this;
         }
 
-        public Builder setFieldDelimiter(@Nullable String fieldDelimiter) {
+        public Builder fieldDelimiter(@Nullable String fieldDelimiter) {
             this.fieldDelimiter = Input.ofNullable(fieldDelimiter);
             return this;
         }
 
-        public Builder setType(Input<String> type) {
+        public Builder type(Input<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }

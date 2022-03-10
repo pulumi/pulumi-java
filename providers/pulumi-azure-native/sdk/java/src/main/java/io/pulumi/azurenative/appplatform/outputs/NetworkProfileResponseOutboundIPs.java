@@ -49,7 +49,7 @@ public final class NetworkProfileResponseOutboundIPs {
     	      this.publicIPs = defaults.publicIPs;
         }
 
-        public Builder setPublicIPs(List<String> publicIPs) {
+        public Builder publicIPs(List<String> publicIPs) {
             this.publicIPs = Objects.requireNonNull(publicIPs);
             return this;
         }

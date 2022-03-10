@@ -122,52 +122,52 @@ public final class PolicyDefinitionGroupArgs extends io.pulumi.resources.Resourc
     	      this.name = defaults.name;
         }
 
-        public Builder setAdditionalMetadataId(@Nullable Input<String> additionalMetadataId) {
+        public Builder additionalMetadataId(@Nullable Input<String> additionalMetadataId) {
             this.additionalMetadataId = additionalMetadataId;
             return this;
         }
 
-        public Builder setAdditionalMetadataId(@Nullable String additionalMetadataId) {
+        public Builder additionalMetadataId(@Nullable String additionalMetadataId) {
             this.additionalMetadataId = Input.ofNullable(additionalMetadataId);
             return this;
         }
 
-        public Builder setCategory(@Nullable Input<String> category) {
+        public Builder category(@Nullable Input<String> category) {
             this.category = category;
             return this;
         }
 
-        public Builder setCategory(@Nullable String category) {
+        public Builder category(@Nullable String category) {
             this.category = Input.ofNullable(category);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setDisplayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Input<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setDisplayName(@Nullable String displayName) {
+        public Builder displayName(@Nullable String displayName) {
             this.displayName = Input.ofNullable(displayName);
             return this;
         }
 
-        public Builder setName(Input<String> name) {
+        public Builder name(Input<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }

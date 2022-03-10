@@ -245,67 +245,67 @@ public final class GetPartnerNamespaceResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setDisableLocalAuth(@Nullable Boolean disableLocalAuth) {
+        public Builder disableLocalAuth(@Nullable Boolean disableLocalAuth) {
             this.disableLocalAuth = disableLocalAuth;
             return this;
         }
 
-        public Builder setEndpoint(String endpoint) {
+        public Builder endpoint(String endpoint) {
             this.endpoint = Objects.requireNonNull(endpoint);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setInboundIpRules(@Nullable List<InboundIpRuleResponse> inboundIpRules) {
+        public Builder inboundIpRules(@Nullable List<InboundIpRuleResponse> inboundIpRules) {
             this.inboundIpRules = inboundIpRules;
             return this;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPartnerRegistrationFullyQualifiedId(@Nullable String partnerRegistrationFullyQualifiedId) {
+        public Builder partnerRegistrationFullyQualifiedId(@Nullable String partnerRegistrationFullyQualifiedId) {
             this.partnerRegistrationFullyQualifiedId = partnerRegistrationFullyQualifiedId;
             return this;
         }
 
-        public Builder setPrivateEndpointConnections(List<PrivateEndpointConnectionResponse> privateEndpointConnections) {
+        public Builder privateEndpointConnections(List<PrivateEndpointConnectionResponse> privateEndpointConnections) {
             this.privateEndpointConnections = Objects.requireNonNull(privateEndpointConnections);
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setPublicNetworkAccess(@Nullable String publicNetworkAccess) {
+        public Builder publicNetworkAccess(@Nullable String publicNetworkAccess) {
             this.publicNetworkAccess = publicNetworkAccess;
             return this;
         }
 
-        public Builder setSystemData(SystemDataResponse systemData) {
+        public Builder systemData(SystemDataResponse systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

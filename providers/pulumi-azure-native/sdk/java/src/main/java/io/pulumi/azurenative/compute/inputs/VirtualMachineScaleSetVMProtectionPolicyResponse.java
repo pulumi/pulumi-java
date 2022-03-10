@@ -74,12 +74,12 @@ public final class VirtualMachineScaleSetVMProtectionPolicyResponse extends io.p
     	      this.protectFromScaleSetActions = defaults.protectFromScaleSetActions;
         }
 
-        public Builder setProtectFromScaleIn(@Nullable Boolean protectFromScaleIn) {
+        public Builder protectFromScaleIn(@Nullable Boolean protectFromScaleIn) {
             this.protectFromScaleIn = protectFromScaleIn;
             return this;
         }
 
-        public Builder setProtectFromScaleSetActions(@Nullable Boolean protectFromScaleSetActions) {
+        public Builder protectFromScaleSetActions(@Nullable Boolean protectFromScaleSetActions) {
             this.protectFromScaleSetActions = protectFromScaleSetActions;
             return this;
         }

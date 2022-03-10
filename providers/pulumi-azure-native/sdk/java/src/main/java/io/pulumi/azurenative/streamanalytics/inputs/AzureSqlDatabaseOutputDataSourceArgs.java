@@ -139,62 +139,62 @@ public final class AzureSqlDatabaseOutputDataSourceArgs extends io.pulumi.resour
     	      this.user = defaults.user;
         }
 
-        public Builder setDatabase(@Nullable Input<String> database) {
+        public Builder database(@Nullable Input<String> database) {
             this.database = database;
             return this;
         }
 
-        public Builder setDatabase(@Nullable String database) {
+        public Builder database(@Nullable String database) {
             this.database = Input.ofNullable(database);
             return this;
         }
 
-        public Builder setPassword(@Nullable Input<String> password) {
+        public Builder password(@Nullable Input<String> password) {
             this.password = password;
             return this;
         }
 
-        public Builder setPassword(@Nullable String password) {
+        public Builder password(@Nullable String password) {
             this.password = Input.ofNullable(password);
             return this;
         }
 
-        public Builder setServer(@Nullable Input<String> server) {
+        public Builder server(@Nullable Input<String> server) {
             this.server = server;
             return this;
         }
 
-        public Builder setServer(@Nullable String server) {
+        public Builder server(@Nullable String server) {
             this.server = Input.ofNullable(server);
             return this;
         }
 
-        public Builder setTable(@Nullable Input<String> table) {
+        public Builder table(@Nullable Input<String> table) {
             this.table = table;
             return this;
         }
 
-        public Builder setTable(@Nullable String table) {
+        public Builder table(@Nullable String table) {
             this.table = Input.ofNullable(table);
             return this;
         }
 
-        public Builder setType(Input<String> type) {
+        public Builder type(Input<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }
 
-        public Builder setUser(@Nullable Input<String> user) {
+        public Builder user(@Nullable Input<String> user) {
             this.user = user;
             return this;
         }
 
-        public Builder setUser(@Nullable String user) {
+        public Builder user(@Nullable String user) {
             this.user = Input.ofNullable(user);
             return this;
         }

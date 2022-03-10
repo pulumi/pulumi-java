@@ -203,102 +203,102 @@ public final class IntegrationAccountMapArgs extends io.pulumi.resources.Resourc
     	      this.tags = defaults.tags;
         }
 
-        public Builder setContent(@Nullable Input<String> content) {
+        public Builder content(@Nullable Input<String> content) {
             this.content = content;
             return this;
         }
 
-        public Builder setContent(@Nullable String content) {
+        public Builder content(@Nullable String content) {
             this.content = Input.ofNullable(content);
             return this;
         }
 
-        public Builder setContentType(@Nullable Input<String> contentType) {
+        public Builder contentType(@Nullable Input<String> contentType) {
             this.contentType = contentType;
             return this;
         }
 
-        public Builder setContentType(@Nullable String contentType) {
+        public Builder contentType(@Nullable String contentType) {
             this.contentType = Input.ofNullable(contentType);
             return this;
         }
 
-        public Builder setIntegrationAccountName(Input<String> integrationAccountName) {
+        public Builder integrationAccountName(Input<String> integrationAccountName) {
             this.integrationAccountName = Objects.requireNonNull(integrationAccountName);
             return this;
         }
 
-        public Builder setIntegrationAccountName(String integrationAccountName) {
+        public Builder integrationAccountName(String integrationAccountName) {
             this.integrationAccountName = Input.of(Objects.requireNonNull(integrationAccountName));
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setMapName(@Nullable Input<String> mapName) {
+        public Builder mapName(@Nullable Input<String> mapName) {
             this.mapName = mapName;
             return this;
         }
 
-        public Builder setMapName(@Nullable String mapName) {
+        public Builder mapName(@Nullable String mapName) {
             this.mapName = Input.ofNullable(mapName);
             return this;
         }
 
-        public Builder setMapType(Input<Either<String,MapType>> mapType) {
+        public Builder mapType(Input<Either<String,MapType>> mapType) {
             this.mapType = Objects.requireNonNull(mapType);
             return this;
         }
 
-        public Builder setMapType(Either<String,MapType> mapType) {
+        public Builder mapType(Either<String,MapType> mapType) {
             this.mapType = Input.of(Objects.requireNonNull(mapType));
             return this;
         }
 
-        public Builder setMetadata(@Nullable Input<Object> metadata) {
+        public Builder metadata(@Nullable Input<Object> metadata) {
             this.metadata = metadata;
             return this;
         }
 
-        public Builder setMetadata(@Nullable Object metadata) {
+        public Builder metadata(@Nullable Object metadata) {
             this.metadata = Input.ofNullable(metadata);
             return this;
         }
 
-        public Builder setParametersSchema(@Nullable Input<IntegrationAccountMapPropertiesParametersSchemaArgs> parametersSchema) {
+        public Builder parametersSchema(@Nullable Input<IntegrationAccountMapPropertiesParametersSchemaArgs> parametersSchema) {
             this.parametersSchema = parametersSchema;
             return this;
         }
 
-        public Builder setParametersSchema(@Nullable IntegrationAccountMapPropertiesParametersSchemaArgs parametersSchema) {
+        public Builder parametersSchema(@Nullable IntegrationAccountMapPropertiesParametersSchemaArgs parametersSchema) {
             this.parametersSchema = Input.ofNullable(parametersSchema);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

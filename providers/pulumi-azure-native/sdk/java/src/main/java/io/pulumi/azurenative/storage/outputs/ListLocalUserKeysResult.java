@@ -68,12 +68,12 @@ public final class ListLocalUserKeysResult {
     	      this.sshAuthorizedKeys = defaults.sshAuthorizedKeys;
         }
 
-        public Builder setSharedKey(String sharedKey) {
+        public Builder sharedKey(String sharedKey) {
             this.sharedKey = Objects.requireNonNull(sharedKey);
             return this;
         }
 
-        public Builder setSshAuthorizedKeys(@Nullable List<SshPublicKeyResponse> sshAuthorizedKeys) {
+        public Builder sshAuthorizedKeys(@Nullable List<SshPublicKeyResponse> sshAuthorizedKeys) {
             this.sshAuthorizedKeys = sshAuthorizedKeys;
             return this;
         }

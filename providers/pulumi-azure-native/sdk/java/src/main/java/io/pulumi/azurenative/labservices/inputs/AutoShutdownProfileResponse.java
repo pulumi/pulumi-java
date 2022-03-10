@@ -138,32 +138,32 @@ public final class AutoShutdownProfileResponse extends io.pulumi.resources.Invok
     	      this.shutdownWhenNotConnected = defaults.shutdownWhenNotConnected;
         }
 
-        public Builder setDisconnectDelay(@Nullable String disconnectDelay) {
+        public Builder disconnectDelay(@Nullable String disconnectDelay) {
             this.disconnectDelay = disconnectDelay;
             return this;
         }
 
-        public Builder setIdleDelay(@Nullable String idleDelay) {
+        public Builder idleDelay(@Nullable String idleDelay) {
             this.idleDelay = idleDelay;
             return this;
         }
 
-        public Builder setNoConnectDelay(@Nullable String noConnectDelay) {
+        public Builder noConnectDelay(@Nullable String noConnectDelay) {
             this.noConnectDelay = noConnectDelay;
             return this;
         }
 
-        public Builder setShutdownOnDisconnect(@Nullable String shutdownOnDisconnect) {
+        public Builder shutdownOnDisconnect(@Nullable String shutdownOnDisconnect) {
             this.shutdownOnDisconnect = shutdownOnDisconnect;
             return this;
         }
 
-        public Builder setShutdownOnIdle(@Nullable String shutdownOnIdle) {
+        public Builder shutdownOnIdle(@Nullable String shutdownOnIdle) {
             this.shutdownOnIdle = shutdownOnIdle;
             return this;
         }
 
-        public Builder setShutdownWhenNotConnected(@Nullable String shutdownWhenNotConnected) {
+        public Builder shutdownWhenNotConnected(@Nullable String shutdownWhenNotConnected) {
             this.shutdownWhenNotConnected = shutdownWhenNotConnected;
             return this;
         }

@@ -167,82 +167,82 @@ public final class ServiceEndpointPolicyDefinitionArgs extends io.pulumi.resourc
     	      this.serviceResources = defaults.serviceResources;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setId(@Nullable Input<String> id) {
+        public Builder id(@Nullable Input<String> id) {
             this.id = id;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = Input.ofNullable(id);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setService(@Nullable Input<String> service) {
+        public Builder service(@Nullable Input<String> service) {
             this.service = service;
             return this;
         }
 
-        public Builder setService(@Nullable String service) {
+        public Builder service(@Nullable String service) {
             this.service = Input.ofNullable(service);
             return this;
         }
 
-        public Builder setServiceEndpointPolicyDefinitionName(@Nullable Input<String> serviceEndpointPolicyDefinitionName) {
+        public Builder serviceEndpointPolicyDefinitionName(@Nullable Input<String> serviceEndpointPolicyDefinitionName) {
             this.serviceEndpointPolicyDefinitionName = serviceEndpointPolicyDefinitionName;
             return this;
         }
 
-        public Builder setServiceEndpointPolicyDefinitionName(@Nullable String serviceEndpointPolicyDefinitionName) {
+        public Builder serviceEndpointPolicyDefinitionName(@Nullable String serviceEndpointPolicyDefinitionName) {
             this.serviceEndpointPolicyDefinitionName = Input.ofNullable(serviceEndpointPolicyDefinitionName);
             return this;
         }
 
-        public Builder setServiceEndpointPolicyName(Input<String> serviceEndpointPolicyName) {
+        public Builder serviceEndpointPolicyName(Input<String> serviceEndpointPolicyName) {
             this.serviceEndpointPolicyName = Objects.requireNonNull(serviceEndpointPolicyName);
             return this;
         }
 
-        public Builder setServiceEndpointPolicyName(String serviceEndpointPolicyName) {
+        public Builder serviceEndpointPolicyName(String serviceEndpointPolicyName) {
             this.serviceEndpointPolicyName = Input.of(Objects.requireNonNull(serviceEndpointPolicyName));
             return this;
         }
 
-        public Builder setServiceResources(@Nullable Input<List<String>> serviceResources) {
+        public Builder serviceResources(@Nullable Input<List<String>> serviceResources) {
             this.serviceResources = serviceResources;
             return this;
         }
 
-        public Builder setServiceResources(@Nullable List<String> serviceResources) {
+        public Builder serviceResources(@Nullable List<String> serviceResources) {
             this.serviceResources = Input.ofNullable(serviceResources);
             return this;
         }

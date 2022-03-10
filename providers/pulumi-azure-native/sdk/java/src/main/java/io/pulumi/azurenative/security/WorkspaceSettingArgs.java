@@ -86,32 +86,32 @@ public final class WorkspaceSettingArgs extends io.pulumi.resources.ResourceArgs
     	      this.workspaceSettingName = defaults.workspaceSettingName;
         }
 
-        public Builder setScope(Input<String> scope) {
+        public Builder scope(Input<String> scope) {
             this.scope = Objects.requireNonNull(scope);
             return this;
         }
 
-        public Builder setScope(String scope) {
+        public Builder scope(String scope) {
             this.scope = Input.of(Objects.requireNonNull(scope));
             return this;
         }
 
-        public Builder setWorkspaceId(Input<String> workspaceId) {
+        public Builder workspaceId(Input<String> workspaceId) {
             this.workspaceId = Objects.requireNonNull(workspaceId);
             return this;
         }
 
-        public Builder setWorkspaceId(String workspaceId) {
+        public Builder workspaceId(String workspaceId) {
             this.workspaceId = Input.of(Objects.requireNonNull(workspaceId));
             return this;
         }
 
-        public Builder setWorkspaceSettingName(@Nullable Input<String> workspaceSettingName) {
+        public Builder workspaceSettingName(@Nullable Input<String> workspaceSettingName) {
             this.workspaceSettingName = workspaceSettingName;
             return this;
         }
 
-        public Builder setWorkspaceSettingName(@Nullable String workspaceSettingName) {
+        public Builder workspaceSettingName(@Nullable String workspaceSettingName) {
             this.workspaceSettingName = Input.ofNullable(workspaceSettingName);
             return this;
         }

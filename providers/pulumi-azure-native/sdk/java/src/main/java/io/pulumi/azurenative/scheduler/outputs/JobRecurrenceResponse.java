@@ -109,27 +109,27 @@ public final class JobRecurrenceResponse {
     	      this.schedule = defaults.schedule;
         }
 
-        public Builder setCount(@Nullable Integer count) {
+        public Builder count(@Nullable Integer count) {
             this.count = count;
             return this;
         }
 
-        public Builder setEndTime(@Nullable String endTime) {
+        public Builder endTime(@Nullable String endTime) {
             this.endTime = endTime;
             return this;
         }
 
-        public Builder setFrequency(@Nullable String frequency) {
+        public Builder frequency(@Nullable String frequency) {
             this.frequency = frequency;
             return this;
         }
 
-        public Builder setInterval(@Nullable Integer interval) {
+        public Builder interval(@Nullable Integer interval) {
             this.interval = interval;
             return this;
         }
 
-        public Builder setSchedule(@Nullable JobRecurrenceScheduleResponse schedule) {
+        public Builder schedule(@Nullable JobRecurrenceScheduleResponse schedule) {
             this.schedule = schedule;
             return this;
         }

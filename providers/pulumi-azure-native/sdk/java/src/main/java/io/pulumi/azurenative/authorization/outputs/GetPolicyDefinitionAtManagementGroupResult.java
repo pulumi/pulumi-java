@@ -198,52 +198,52 @@ public final class GetPolicyDefinitionAtManagementGroupResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDisplayName(@Nullable String displayName) {
+        public Builder displayName(@Nullable String displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setMetadata(@Nullable Object metadata) {
+        public Builder metadata(@Nullable Object metadata) {
             this.metadata = metadata;
             return this;
         }
 
-        public Builder setMode(@Nullable String mode) {
+        public Builder mode(@Nullable String mode) {
             this.mode = mode;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setParameters(@Nullable Map<String,ParameterDefinitionsValueResponse> parameters) {
+        public Builder parameters(@Nullable Map<String,ParameterDefinitionsValueResponse> parameters) {
             this.parameters = parameters;
             return this;
         }
 
-        public Builder setPolicyRule(@Nullable Object policyRule) {
+        public Builder policyRule(@Nullable Object policyRule) {
             this.policyRule = policyRule;
             return this;
         }
 
-        public Builder setPolicyType(@Nullable String policyType) {
+        public Builder policyType(@Nullable String policyType) {
             this.policyType = policyType;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

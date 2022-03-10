@@ -75,12 +75,12 @@ public final class AuthorizationResponse extends io.pulumi.resources.InvokeArgs 
     	      this.parameters = defaults.parameters;
         }
 
-        public Builder setAuthorizationType(String authorizationType) {
+        public Builder authorizationType(String authorizationType) {
             this.authorizationType = Objects.requireNonNull(authorizationType);
             return this;
         }
 
-        public Builder setParameters(@Nullable Map<String,String> parameters) {
+        public Builder parameters(@Nullable Map<String,String> parameters) {
             this.parameters = parameters;
             return this;
         }

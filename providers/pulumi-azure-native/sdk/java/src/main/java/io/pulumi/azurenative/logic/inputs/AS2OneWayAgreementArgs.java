@@ -90,32 +90,32 @@ public final class AS2OneWayAgreementArgs extends io.pulumi.resources.ResourceAr
     	      this.senderBusinessIdentity = defaults.senderBusinessIdentity;
         }
 
-        public Builder setProtocolSettings(Input<AS2ProtocolSettingsArgs> protocolSettings) {
+        public Builder protocolSettings(Input<AS2ProtocolSettingsArgs> protocolSettings) {
             this.protocolSettings = Objects.requireNonNull(protocolSettings);
             return this;
         }
 
-        public Builder setProtocolSettings(AS2ProtocolSettingsArgs protocolSettings) {
+        public Builder protocolSettings(AS2ProtocolSettingsArgs protocolSettings) {
             this.protocolSettings = Input.of(Objects.requireNonNull(protocolSettings));
             return this;
         }
 
-        public Builder setReceiverBusinessIdentity(Input<BusinessIdentityArgs> receiverBusinessIdentity) {
+        public Builder receiverBusinessIdentity(Input<BusinessIdentityArgs> receiverBusinessIdentity) {
             this.receiverBusinessIdentity = Objects.requireNonNull(receiverBusinessIdentity);
             return this;
         }
 
-        public Builder setReceiverBusinessIdentity(BusinessIdentityArgs receiverBusinessIdentity) {
+        public Builder receiverBusinessIdentity(BusinessIdentityArgs receiverBusinessIdentity) {
             this.receiverBusinessIdentity = Input.of(Objects.requireNonNull(receiverBusinessIdentity));
             return this;
         }
 
-        public Builder setSenderBusinessIdentity(Input<BusinessIdentityArgs> senderBusinessIdentity) {
+        public Builder senderBusinessIdentity(Input<BusinessIdentityArgs> senderBusinessIdentity) {
             this.senderBusinessIdentity = Objects.requireNonNull(senderBusinessIdentity);
             return this;
         }
 
-        public Builder setSenderBusinessIdentity(BusinessIdentityArgs senderBusinessIdentity) {
+        public Builder senderBusinessIdentity(BusinessIdentityArgs senderBusinessIdentity) {
             this.senderBusinessIdentity = Input.of(Objects.requireNonNull(senderBusinessIdentity));
             return this;
         }

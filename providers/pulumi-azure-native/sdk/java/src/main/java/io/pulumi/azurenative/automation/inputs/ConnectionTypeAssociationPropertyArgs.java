@@ -57,12 +57,12 @@ public final class ConnectionTypeAssociationPropertyArgs extends io.pulumi.resou
     	      this.name = defaults.name;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }

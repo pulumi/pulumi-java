@@ -90,32 +90,32 @@ public final class CustomImagePropertiesFromPlanArgs extends io.pulumi.resources
     	      this.publisher = defaults.publisher;
         }
 
-        public Builder setId(@Nullable Input<String> id) {
+        public Builder id(@Nullable Input<String> id) {
             this.id = id;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = Input.ofNullable(id);
             return this;
         }
 
-        public Builder setOffer(@Nullable Input<String> offer) {
+        public Builder offer(@Nullable Input<String> offer) {
             this.offer = offer;
             return this;
         }
 
-        public Builder setOffer(@Nullable String offer) {
+        public Builder offer(@Nullable String offer) {
             this.offer = Input.ofNullable(offer);
             return this;
         }
 
-        public Builder setPublisher(@Nullable Input<String> publisher) {
+        public Builder publisher(@Nullable Input<String> publisher) {
             this.publisher = publisher;
             return this;
         }
 
-        public Builder setPublisher(@Nullable String publisher) {
+        public Builder publisher(@Nullable String publisher) {
             this.publisher = Input.ofNullable(publisher);
             return this;
         }

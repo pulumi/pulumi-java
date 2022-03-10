@@ -109,42 +109,42 @@ public final class AutomationTriggeringRuleArgs extends io.pulumi.resources.Reso
     	      this.propertyType = defaults.propertyType;
         }
 
-        public Builder setExpectedValue(@Nullable Input<String> expectedValue) {
+        public Builder expectedValue(@Nullable Input<String> expectedValue) {
             this.expectedValue = expectedValue;
             return this;
         }
 
-        public Builder setExpectedValue(@Nullable String expectedValue) {
+        public Builder expectedValue(@Nullable String expectedValue) {
             this.expectedValue = Input.ofNullable(expectedValue);
             return this;
         }
 
-        public Builder setOperator(@Nullable Input<Either<String,Operator>> operator) {
+        public Builder operator(@Nullable Input<Either<String,Operator>> operator) {
             this.operator = operator;
             return this;
         }
 
-        public Builder setOperator(@Nullable Either<String,Operator> operator) {
+        public Builder operator(@Nullable Either<String,Operator> operator) {
             this.operator = Input.ofNullable(operator);
             return this;
         }
 
-        public Builder setPropertyJPath(@Nullable Input<String> propertyJPath) {
+        public Builder propertyJPath(@Nullable Input<String> propertyJPath) {
             this.propertyJPath = propertyJPath;
             return this;
         }
 
-        public Builder setPropertyJPath(@Nullable String propertyJPath) {
+        public Builder propertyJPath(@Nullable String propertyJPath) {
             this.propertyJPath = Input.ofNullable(propertyJPath);
             return this;
         }
 
-        public Builder setPropertyType(@Nullable Input<Either<String,PropertyType>> propertyType) {
+        public Builder propertyType(@Nullable Input<Either<String,PropertyType>> propertyType) {
             this.propertyType = propertyType;
             return this;
         }
 
-        public Builder setPropertyType(@Nullable Either<String,PropertyType> propertyType) {
+        public Builder propertyType(@Nullable Either<String,PropertyType> propertyType) {
             this.propertyType = Input.ofNullable(propertyType);
             return this;
         }

@@ -332,92 +332,92 @@ public final class GetFrontDoorResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setBackendPools(@Nullable List<BackendPoolResponse> backendPools) {
+        public Builder backendPools(@Nullable List<BackendPoolResponse> backendPools) {
             this.backendPools = backendPools;
             return this;
         }
 
-        public Builder setBackendPoolsSettings(@Nullable BackendPoolsSettingsResponse backendPoolsSettings) {
+        public Builder backendPoolsSettings(@Nullable BackendPoolsSettingsResponse backendPoolsSettings) {
             this.backendPoolsSettings = backendPoolsSettings;
             return this;
         }
 
-        public Builder setCname(String cname) {
+        public Builder cname(String cname) {
             this.cname = Objects.requireNonNull(cname);
             return this;
         }
 
-        public Builder setEnabledState(@Nullable String enabledState) {
+        public Builder enabledState(@Nullable String enabledState) {
             this.enabledState = enabledState;
             return this;
         }
 
-        public Builder setFriendlyName(@Nullable String friendlyName) {
+        public Builder friendlyName(@Nullable String friendlyName) {
             this.friendlyName = friendlyName;
             return this;
         }
 
-        public Builder setFrontdoorId(String frontdoorId) {
+        public Builder frontdoorId(String frontdoorId) {
             this.frontdoorId = Objects.requireNonNull(frontdoorId);
             return this;
         }
 
-        public Builder setFrontendEndpoints(@Nullable List<FrontendEndpointResponse> frontendEndpoints) {
+        public Builder frontendEndpoints(@Nullable List<FrontendEndpointResponse> frontendEndpoints) {
             this.frontendEndpoints = frontendEndpoints;
             return this;
         }
 
-        public Builder setHealthProbeSettings(@Nullable List<HealthProbeSettingsModelResponse> healthProbeSettings) {
+        public Builder healthProbeSettings(@Nullable List<HealthProbeSettingsModelResponse> healthProbeSettings) {
             this.healthProbeSettings = healthProbeSettings;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setLoadBalancingSettings(@Nullable List<LoadBalancingSettingsModelResponse> loadBalancingSettings) {
+        public Builder loadBalancingSettings(@Nullable List<LoadBalancingSettingsModelResponse> loadBalancingSettings) {
             this.loadBalancingSettings = loadBalancingSettings;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setResourceState(String resourceState) {
+        public Builder resourceState(String resourceState) {
             this.resourceState = Objects.requireNonNull(resourceState);
             return this;
         }
 
-        public Builder setRoutingRules(@Nullable List<RoutingRuleResponse> routingRules) {
+        public Builder routingRules(@Nullable List<RoutingRuleResponse> routingRules) {
             this.routingRules = routingRules;
             return this;
         }
 
-        public Builder setRulesEngines(List<RulesEngineResponse> rulesEngines) {
+        public Builder rulesEngines(List<RulesEngineResponse> rulesEngines) {
             this.rulesEngines = Objects.requireNonNull(rulesEngines);
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

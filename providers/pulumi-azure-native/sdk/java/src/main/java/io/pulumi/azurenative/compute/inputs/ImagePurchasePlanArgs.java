@@ -90,32 +90,32 @@ public final class ImagePurchasePlanArgs extends io.pulumi.resources.ResourceArg
     	      this.publisher = defaults.publisher;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setProduct(@Nullable Input<String> product) {
+        public Builder product(@Nullable Input<String> product) {
             this.product = product;
             return this;
         }
 
-        public Builder setProduct(@Nullable String product) {
+        public Builder product(@Nullable String product) {
             this.product = Input.ofNullable(product);
             return this;
         }
 
-        public Builder setPublisher(@Nullable Input<String> publisher) {
+        public Builder publisher(@Nullable Input<String> publisher) {
             this.publisher = publisher;
             return this;
         }
 
-        public Builder setPublisher(@Nullable String publisher) {
+        public Builder publisher(@Nullable String publisher) {
             this.publisher = Input.ofNullable(publisher);
             return this;
         }

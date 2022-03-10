@@ -201,102 +201,102 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
     	      this.type = defaults.type;
         }
 
-        public Builder setCreatedAt(@Nullable Input<String> createdAt) {
+        public Builder createdAt(@Nullable Input<String> createdAt) {
             this.createdAt = createdAt;
             return this;
         }
 
-        public Builder setCreatedAt(@Nullable String createdAt) {
+        public Builder createdAt(@Nullable String createdAt) {
             this.createdAt = Input.ofNullable(createdAt);
             return this;
         }
 
-        public Builder setCreatedBy(@Nullable Input<String> createdBy) {
+        public Builder createdBy(@Nullable Input<String> createdBy) {
             this.createdBy = createdBy;
             return this;
         }
 
-        public Builder setCreatedBy(@Nullable String createdBy) {
+        public Builder createdBy(@Nullable String createdBy) {
             this.createdBy = Input.ofNullable(createdBy);
             return this;
         }
 
-        public Builder setCreatedByType(@Nullable Input<Either<String,CreatedByType>> createdByType) {
+        public Builder createdByType(@Nullable Input<Either<String,CreatedByType>> createdByType) {
             this.createdByType = createdByType;
             return this;
         }
 
-        public Builder setCreatedByType(@Nullable Either<String,CreatedByType> createdByType) {
+        public Builder createdByType(@Nullable Either<String,CreatedByType> createdByType) {
             this.createdByType = Input.ofNullable(createdByType);
             return this;
         }
 
-        public Builder setEndpointName(@Nullable Input<String> endpointName) {
+        public Builder endpointName(@Nullable Input<String> endpointName) {
             this.endpointName = endpointName;
             return this;
         }
 
-        public Builder setEndpointName(@Nullable String endpointName) {
+        public Builder endpointName(@Nullable String endpointName) {
             this.endpointName = Input.ofNullable(endpointName);
             return this;
         }
 
-        public Builder setLastModifiedAt(@Nullable Input<String> lastModifiedAt) {
+        public Builder lastModifiedAt(@Nullable Input<String> lastModifiedAt) {
             this.lastModifiedAt = lastModifiedAt;
             return this;
         }
 
-        public Builder setLastModifiedAt(@Nullable String lastModifiedAt) {
+        public Builder lastModifiedAt(@Nullable String lastModifiedAt) {
             this.lastModifiedAt = Input.ofNullable(lastModifiedAt);
             return this;
         }
 
-        public Builder setLastModifiedBy(@Nullable Input<String> lastModifiedBy) {
+        public Builder lastModifiedBy(@Nullable Input<String> lastModifiedBy) {
             this.lastModifiedBy = lastModifiedBy;
             return this;
         }
 
-        public Builder setLastModifiedBy(@Nullable String lastModifiedBy) {
+        public Builder lastModifiedBy(@Nullable String lastModifiedBy) {
             this.lastModifiedBy = Input.ofNullable(lastModifiedBy);
             return this;
         }
 
-        public Builder setLastModifiedByType(@Nullable Input<Either<String,CreatedByType>> lastModifiedByType) {
+        public Builder lastModifiedByType(@Nullable Input<Either<String,CreatedByType>> lastModifiedByType) {
             this.lastModifiedByType = lastModifiedByType;
             return this;
         }
 
-        public Builder setLastModifiedByType(@Nullable Either<String,CreatedByType> lastModifiedByType) {
+        public Builder lastModifiedByType(@Nullable Either<String,CreatedByType> lastModifiedByType) {
             this.lastModifiedByType = Input.ofNullable(lastModifiedByType);
             return this;
         }
 
-        public Builder setResourceId(@Nullable Input<String> resourceId) {
+        public Builder resourceId(@Nullable Input<String> resourceId) {
             this.resourceId = resourceId;
             return this;
         }
 
-        public Builder setResourceId(@Nullable String resourceId) {
+        public Builder resourceId(@Nullable String resourceId) {
             this.resourceId = Input.ofNullable(resourceId);
             return this;
         }
 
-        public Builder setResourceUri(Input<String> resourceUri) {
+        public Builder resourceUri(Input<String> resourceUri) {
             this.resourceUri = Objects.requireNonNull(resourceUri);
             return this;
         }
 
-        public Builder setResourceUri(String resourceUri) {
+        public Builder resourceUri(String resourceUri) {
             this.resourceUri = Input.of(Objects.requireNonNull(resourceUri));
             return this;
         }
 
-        public Builder setType(Input<Either<String,Type>> type) {
+        public Builder type(Input<Either<String,Type>> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setType(Either<String,Type> type) {
+        public Builder type(Either<String,Type> type) {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }

@@ -136,62 +136,62 @@ public final class GalleryArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setGalleryName(@Nullable Input<String> galleryName) {
+        public Builder galleryName(@Nullable Input<String> galleryName) {
             this.galleryName = galleryName;
             return this;
         }
 
-        public Builder setGalleryName(@Nullable String galleryName) {
+        public Builder galleryName(@Nullable String galleryName) {
             this.galleryName = Input.ofNullable(galleryName);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setSharingProfile(@Nullable Input<SharingProfileArgs> sharingProfile) {
+        public Builder sharingProfile(@Nullable Input<SharingProfileArgs> sharingProfile) {
             this.sharingProfile = sharingProfile;
             return this;
         }
 
-        public Builder setSharingProfile(@Nullable SharingProfileArgs sharingProfile) {
+        public Builder sharingProfile(@Nullable SharingProfileArgs sharingProfile) {
             this.sharingProfile = Input.ofNullable(sharingProfile);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

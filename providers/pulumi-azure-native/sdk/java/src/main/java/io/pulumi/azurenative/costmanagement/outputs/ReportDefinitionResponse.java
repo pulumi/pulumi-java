@@ -101,22 +101,22 @@ public final class ReportDefinitionResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setDataset(@Nullable ReportDatasetResponse dataset) {
+        public Builder dataset(@Nullable ReportDatasetResponse dataset) {
             this.dataset = dataset;
             return this;
         }
 
-        public Builder setTimePeriod(@Nullable ReportTimePeriodResponse timePeriod) {
+        public Builder timePeriod(@Nullable ReportTimePeriodResponse timePeriod) {
             this.timePeriod = timePeriod;
             return this;
         }
 
-        public Builder setTimeframe(String timeframe) {
+        public Builder timeframe(String timeframe) {
             this.timeframe = Objects.requireNonNull(timeframe);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

@@ -108,42 +108,42 @@ public final class DiscreteActionArgs extends io.pulumi.resources.ResourceArgs {
     	      this.type = defaults.type;
         }
 
-        public Builder setName(Input<String> name) {
+        public Builder name(Input<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder setParameters(Input<List<KeyValuePairArgs>> parameters) {
+        public Builder parameters(Input<List<KeyValuePairArgs>> parameters) {
             this.parameters = Objects.requireNonNull(parameters);
             return this;
         }
 
-        public Builder setParameters(List<KeyValuePairArgs> parameters) {
+        public Builder parameters(List<KeyValuePairArgs> parameters) {
             this.parameters = Input.of(Objects.requireNonNull(parameters));
             return this;
         }
 
-        public Builder setSelectorId(Input<String> selectorId) {
+        public Builder selectorId(Input<String> selectorId) {
             this.selectorId = Objects.requireNonNull(selectorId);
             return this;
         }
 
-        public Builder setSelectorId(String selectorId) {
+        public Builder selectorId(String selectorId) {
             this.selectorId = Input.of(Objects.requireNonNull(selectorId));
             return this;
         }
 
-        public Builder setType(Input<String> type) {
+        public Builder type(Input<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }

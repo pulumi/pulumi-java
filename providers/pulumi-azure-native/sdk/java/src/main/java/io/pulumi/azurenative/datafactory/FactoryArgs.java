@@ -190,92 +190,92 @@ public final class FactoryArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setEncryption(@Nullable Input<EncryptionConfigurationArgs> encryption) {
+        public Builder encryption(@Nullable Input<EncryptionConfigurationArgs> encryption) {
             this.encryption = encryption;
             return this;
         }
 
-        public Builder setEncryption(@Nullable EncryptionConfigurationArgs encryption) {
+        public Builder encryption(@Nullable EncryptionConfigurationArgs encryption) {
             this.encryption = Input.ofNullable(encryption);
             return this;
         }
 
-        public Builder setFactoryName(@Nullable Input<String> factoryName) {
+        public Builder factoryName(@Nullable Input<String> factoryName) {
             this.factoryName = factoryName;
             return this;
         }
 
-        public Builder setFactoryName(@Nullable String factoryName) {
+        public Builder factoryName(@Nullable String factoryName) {
             this.factoryName = Input.ofNullable(factoryName);
             return this;
         }
 
-        public Builder setGlobalParameters(@Nullable Input<Map<String,GlobalParameterSpecificationArgs>> globalParameters) {
+        public Builder globalParameters(@Nullable Input<Map<String,GlobalParameterSpecificationArgs>> globalParameters) {
             this.globalParameters = globalParameters;
             return this;
         }
 
-        public Builder setGlobalParameters(@Nullable Map<String,GlobalParameterSpecificationArgs> globalParameters) {
+        public Builder globalParameters(@Nullable Map<String,GlobalParameterSpecificationArgs> globalParameters) {
             this.globalParameters = Input.ofNullable(globalParameters);
             return this;
         }
 
-        public Builder setIdentity(@Nullable Input<FactoryIdentityArgs> identity) {
+        public Builder identity(@Nullable Input<FactoryIdentityArgs> identity) {
             this.identity = identity;
             return this;
         }
 
-        public Builder setIdentity(@Nullable FactoryIdentityArgs identity) {
+        public Builder identity(@Nullable FactoryIdentityArgs identity) {
             this.identity = Input.ofNullable(identity);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setPublicNetworkAccess(@Nullable Input<Either<String,PublicNetworkAccess>> publicNetworkAccess) {
+        public Builder publicNetworkAccess(@Nullable Input<Either<String,PublicNetworkAccess>> publicNetworkAccess) {
             this.publicNetworkAccess = publicNetworkAccess;
             return this;
         }
 
-        public Builder setPublicNetworkAccess(@Nullable Either<String,PublicNetworkAccess> publicNetworkAccess) {
+        public Builder publicNetworkAccess(@Nullable Either<String,PublicNetworkAccess> publicNetworkAccess) {
             this.publicNetworkAccess = Input.ofNullable(publicNetworkAccess);
             return this;
         }
 
-        public Builder setRepoConfiguration(@Nullable Input<Either<FactoryGitHubConfigurationArgs,FactoryVSTSConfigurationArgs>> repoConfiguration) {
+        public Builder repoConfiguration(@Nullable Input<Either<FactoryGitHubConfigurationArgs,FactoryVSTSConfigurationArgs>> repoConfiguration) {
             this.repoConfiguration = repoConfiguration;
             return this;
         }
 
-        public Builder setRepoConfiguration(@Nullable Either<FactoryGitHubConfigurationArgs,FactoryVSTSConfigurationArgs> repoConfiguration) {
+        public Builder repoConfiguration(@Nullable Either<FactoryGitHubConfigurationArgs,FactoryVSTSConfigurationArgs> repoConfiguration) {
             this.repoConfiguration = Input.ofNullable(repoConfiguration);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

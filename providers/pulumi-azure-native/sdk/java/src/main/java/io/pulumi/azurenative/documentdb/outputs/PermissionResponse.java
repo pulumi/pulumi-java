@@ -67,12 +67,12 @@ public final class PermissionResponse {
     	      this.notDataActions = defaults.notDataActions;
         }
 
-        public Builder setDataActions(@Nullable List<String> dataActions) {
+        public Builder dataActions(@Nullable List<String> dataActions) {
             this.dataActions = dataActions;
             return this;
         }
 
-        public Builder setNotDataActions(@Nullable List<String> notDataActions) {
+        public Builder notDataActions(@Nullable List<String> notDataActions) {
             this.notDataActions = notDataActions;
             return this;
         }

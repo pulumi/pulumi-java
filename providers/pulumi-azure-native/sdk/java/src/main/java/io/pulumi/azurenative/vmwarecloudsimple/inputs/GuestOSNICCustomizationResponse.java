@@ -155,37 +155,37 @@ public final class GuestOSNICCustomizationResponse extends io.pulumi.resources.I
     	      this.secondaryWinsServer = defaults.secondaryWinsServer;
         }
 
-        public Builder setAllocation(@Nullable String allocation) {
+        public Builder allocation(@Nullable String allocation) {
             this.allocation = allocation;
             return this;
         }
 
-        public Builder setDnsServers(@Nullable List<String> dnsServers) {
+        public Builder dnsServers(@Nullable List<String> dnsServers) {
             this.dnsServers = dnsServers;
             return this;
         }
 
-        public Builder setGateway(@Nullable List<String> gateway) {
+        public Builder gateway(@Nullable List<String> gateway) {
             this.gateway = gateway;
             return this;
         }
 
-        public Builder setIpAddress(@Nullable String ipAddress) {
+        public Builder ipAddress(@Nullable String ipAddress) {
             this.ipAddress = ipAddress;
             return this;
         }
 
-        public Builder setMask(@Nullable String mask) {
+        public Builder mask(@Nullable String mask) {
             this.mask = mask;
             return this;
         }
 
-        public Builder setPrimaryWinsServer(@Nullable String primaryWinsServer) {
+        public Builder primaryWinsServer(@Nullable String primaryWinsServer) {
             this.primaryWinsServer = primaryWinsServer;
             return this;
         }
 
-        public Builder setSecondaryWinsServer(@Nullable String secondaryWinsServer) {
+        public Builder secondaryWinsServer(@Nullable String secondaryWinsServer) {
             this.secondaryWinsServer = secondaryWinsServer;
             return this;
         }

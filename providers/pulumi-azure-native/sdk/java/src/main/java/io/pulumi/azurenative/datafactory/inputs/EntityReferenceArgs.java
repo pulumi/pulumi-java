@@ -76,22 +76,22 @@ public final class EntityReferenceArgs extends io.pulumi.resources.ResourceArgs 
     	      this.type = defaults.type;
         }
 
-        public Builder setReferenceName(@Nullable Input<String> referenceName) {
+        public Builder referenceName(@Nullable Input<String> referenceName) {
             this.referenceName = referenceName;
             return this;
         }
 
-        public Builder setReferenceName(@Nullable String referenceName) {
+        public Builder referenceName(@Nullable String referenceName) {
             this.referenceName = Input.ofNullable(referenceName);
             return this;
         }
 
-        public Builder setType(@Nullable Input<Either<String,IntegrationRuntimeEntityReferenceType>> type) {
+        public Builder type(@Nullable Input<Either<String,IntegrationRuntimeEntityReferenceType>> type) {
             this.type = type;
             return this;
         }
 
-        public Builder setType(@Nullable Either<String,IntegrationRuntimeEntityReferenceType> type) {
+        public Builder type(@Nullable Either<String,IntegrationRuntimeEntityReferenceType> type) {
             this.type = Input.ofNullable(type);
             return this;
         }

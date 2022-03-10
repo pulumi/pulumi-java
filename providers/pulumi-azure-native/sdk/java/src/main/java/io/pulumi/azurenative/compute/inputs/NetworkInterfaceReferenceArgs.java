@@ -93,32 +93,32 @@ public final class NetworkInterfaceReferenceArgs extends io.pulumi.resources.Res
     	      this.primary = defaults.primary;
         }
 
-        public Builder setDeleteOption(@Nullable Input<Either<String,DeleteOptions>> deleteOption) {
+        public Builder deleteOption(@Nullable Input<Either<String,DeleteOptions>> deleteOption) {
             this.deleteOption = deleteOption;
             return this;
         }
 
-        public Builder setDeleteOption(@Nullable Either<String,DeleteOptions> deleteOption) {
+        public Builder deleteOption(@Nullable Either<String,DeleteOptions> deleteOption) {
             this.deleteOption = Input.ofNullable(deleteOption);
             return this;
         }
 
-        public Builder setId(@Nullable Input<String> id) {
+        public Builder id(@Nullable Input<String> id) {
             this.id = id;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = Input.ofNullable(id);
             return this;
         }
 
-        public Builder setPrimary(@Nullable Input<Boolean> primary) {
+        public Builder primary(@Nullable Input<Boolean> primary) {
             this.primary = primary;
             return this;
         }
 
-        public Builder setPrimary(@Nullable Boolean primary) {
+        public Builder primary(@Nullable Boolean primary) {
             this.primary = Input.ofNullable(primary);
             return this;
         }

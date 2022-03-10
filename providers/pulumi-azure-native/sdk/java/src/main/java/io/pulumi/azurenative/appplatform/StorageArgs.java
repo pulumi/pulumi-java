@@ -103,42 +103,42 @@ public final class StorageArgs extends io.pulumi.resources.ResourceArgs {
     	      this.storageName = defaults.storageName;
         }
 
-        public Builder setProperties(@Nullable Input<StorageAccountArgs> properties) {
+        public Builder properties(@Nullable Input<StorageAccountArgs> properties) {
             this.properties = properties;
             return this;
         }
 
-        public Builder setProperties(@Nullable StorageAccountArgs properties) {
+        public Builder properties(@Nullable StorageAccountArgs properties) {
             this.properties = Input.ofNullable(properties);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setServiceName(Input<String> serviceName) {
+        public Builder serviceName(Input<String> serviceName) {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
         }
 
-        public Builder setServiceName(String serviceName) {
+        public Builder serviceName(String serviceName) {
             this.serviceName = Input.of(Objects.requireNonNull(serviceName));
             return this;
         }
 
-        public Builder setStorageName(@Nullable Input<String> storageName) {
+        public Builder storageName(@Nullable Input<String> storageName) {
             this.storageName = storageName;
             return this;
         }
 
-        public Builder setStorageName(@Nullable String storageName) {
+        public Builder storageName(@Nullable String storageName) {
             this.storageName = Input.ofNullable(storageName);
             return this;
         }

@@ -113,27 +113,27 @@ public final class ItsmReceiverResponse {
     	      this.workspaceId = defaults.workspaceId;
         }
 
-        public Builder setConnectionId(String connectionId) {
+        public Builder connectionId(String connectionId) {
             this.connectionId = Objects.requireNonNull(connectionId);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setRegion(String region) {
+        public Builder region(String region) {
             this.region = Objects.requireNonNull(region);
             return this;
         }
 
-        public Builder setTicketConfiguration(String ticketConfiguration) {
+        public Builder ticketConfiguration(String ticketConfiguration) {
             this.ticketConfiguration = Objects.requireNonNull(ticketConfiguration);
             return this;
         }
 
-        public Builder setWorkspaceId(String workspaceId) {
+        public Builder workspaceId(String workspaceId) {
             this.workspaceId = Objects.requireNonNull(workspaceId);
             return this;
         }

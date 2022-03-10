@@ -76,12 +76,12 @@ public final class VolumeContainerFailoverMetadataResponse extends io.pulumi.res
     	      this.volumes = defaults.volumes;
         }
 
-        public Builder setVolumeContainerId(@Nullable String volumeContainerId) {
+        public Builder volumeContainerId(@Nullable String volumeContainerId) {
             this.volumeContainerId = volumeContainerId;
             return this;
         }
 
-        public Builder setVolumes(@Nullable List<VolumeFailoverMetadataResponse> volumes) {
+        public Builder volumes(@Nullable List<VolumeFailoverMetadataResponse> volumes) {
             this.volumes = volumes;
             return this;
         }

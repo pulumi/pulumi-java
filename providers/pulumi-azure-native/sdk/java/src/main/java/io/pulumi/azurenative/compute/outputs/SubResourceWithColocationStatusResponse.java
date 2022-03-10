@@ -68,12 +68,12 @@ public final class SubResourceWithColocationStatusResponse {
     	      this.id = defaults.id;
         }
 
-        public Builder setColocationStatus(@Nullable InstanceViewStatusResponse colocationStatus) {
+        public Builder colocationStatus(@Nullable InstanceViewStatusResponse colocationStatus) {
             this.colocationStatus = colocationStatus;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }

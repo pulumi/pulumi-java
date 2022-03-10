@@ -101,22 +101,22 @@ public final class AssignmentReportResourceResponse {
     	      this.resourceId = defaults.resourceId;
         }
 
-        public Builder setComplianceStatus(String complianceStatus) {
+        public Builder complianceStatus(String complianceStatus) {
             this.complianceStatus = Objects.requireNonNull(complianceStatus);
             return this;
         }
 
-        public Builder setProperties(Object properties) {
+        public Builder properties(Object properties) {
             this.properties = Objects.requireNonNull(properties);
             return this;
         }
 
-        public Builder setReasons(@Nullable List<AssignmentReportResourceComplianceReasonResponse> reasons) {
+        public Builder reasons(@Nullable List<AssignmentReportResourceComplianceReasonResponse> reasons) {
             this.reasons = reasons;
             return this;
         }
 
-        public Builder setResourceId(String resourceId) {
+        public Builder resourceId(String resourceId) {
             this.resourceId = Objects.requireNonNull(resourceId);
             return this;
         }

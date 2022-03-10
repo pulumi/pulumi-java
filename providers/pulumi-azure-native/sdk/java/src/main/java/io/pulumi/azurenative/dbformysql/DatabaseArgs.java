@@ -118,52 +118,52 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
     	      this.serverName = defaults.serverName;
         }
 
-        public Builder setCharset(@Nullable Input<String> charset) {
+        public Builder charset(@Nullable Input<String> charset) {
             this.charset = charset;
             return this;
         }
 
-        public Builder setCharset(@Nullable String charset) {
+        public Builder charset(@Nullable String charset) {
             this.charset = Input.ofNullable(charset);
             return this;
         }
 
-        public Builder setCollation(@Nullable Input<String> collation) {
+        public Builder collation(@Nullable Input<String> collation) {
             this.collation = collation;
             return this;
         }
 
-        public Builder setCollation(@Nullable String collation) {
+        public Builder collation(@Nullable String collation) {
             this.collation = Input.ofNullable(collation);
             return this;
         }
 
-        public Builder setDatabaseName(@Nullable Input<String> databaseName) {
+        public Builder databaseName(@Nullable Input<String> databaseName) {
             this.databaseName = databaseName;
             return this;
         }
 
-        public Builder setDatabaseName(@Nullable String databaseName) {
+        public Builder databaseName(@Nullable String databaseName) {
             this.databaseName = Input.ofNullable(databaseName);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setServerName(Input<String> serverName) {
+        public Builder serverName(Input<String> serverName) {
             this.serverName = Objects.requireNonNull(serverName);
             return this;
         }
 
-        public Builder setServerName(String serverName) {
+        public Builder serverName(String serverName) {
             this.serverName = Input.of(Objects.requireNonNull(serverName));
             return this;
         }

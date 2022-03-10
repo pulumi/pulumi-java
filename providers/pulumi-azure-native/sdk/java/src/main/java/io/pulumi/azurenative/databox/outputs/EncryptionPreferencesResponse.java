@@ -50,7 +50,7 @@ public final class EncryptionPreferencesResponse {
     	      this.doubleEncryption = defaults.doubleEncryption;
         }
 
-        public Builder setDoubleEncryption(@Nullable String doubleEncryption) {
+        public Builder doubleEncryption(@Nullable String doubleEncryption) {
             this.doubleEncryption = doubleEncryption;
             return this;
         }

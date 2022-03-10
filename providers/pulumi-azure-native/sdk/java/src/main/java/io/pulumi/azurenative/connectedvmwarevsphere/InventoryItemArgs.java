@@ -168,82 +168,82 @@ public final class InventoryItemArgs extends io.pulumi.resources.ResourceArgs {
     	      this.vcenterName = defaults.vcenterName;
         }
 
-        public Builder setInventoryItemName(@Nullable Input<String> inventoryItemName) {
+        public Builder inventoryItemName(@Nullable Input<String> inventoryItemName) {
             this.inventoryItemName = inventoryItemName;
             return this;
         }
 
-        public Builder setInventoryItemName(@Nullable String inventoryItemName) {
+        public Builder inventoryItemName(@Nullable String inventoryItemName) {
             this.inventoryItemName = Input.ofNullable(inventoryItemName);
             return this;
         }
 
-        public Builder setInventoryType(Input<Either<String,InventoryType>> inventoryType) {
+        public Builder inventoryType(Input<Either<String,InventoryType>> inventoryType) {
             this.inventoryType = Objects.requireNonNull(inventoryType);
             return this;
         }
 
-        public Builder setInventoryType(Either<String,InventoryType> inventoryType) {
+        public Builder inventoryType(Either<String,InventoryType> inventoryType) {
             this.inventoryType = Input.of(Objects.requireNonNull(inventoryType));
             return this;
         }
 
-        public Builder setKind(@Nullable Input<String> kind) {
+        public Builder kind(@Nullable Input<String> kind) {
             this.kind = kind;
             return this;
         }
 
-        public Builder setKind(@Nullable String kind) {
+        public Builder kind(@Nullable String kind) {
             this.kind = Input.ofNullable(kind);
             return this;
         }
 
-        public Builder setManagedResourceId(@Nullable Input<String> managedResourceId) {
+        public Builder managedResourceId(@Nullable Input<String> managedResourceId) {
             this.managedResourceId = managedResourceId;
             return this;
         }
 
-        public Builder setManagedResourceId(@Nullable String managedResourceId) {
+        public Builder managedResourceId(@Nullable String managedResourceId) {
             this.managedResourceId = Input.ofNullable(managedResourceId);
             return this;
         }
 
-        public Builder setMoName(@Nullable Input<String> moName) {
+        public Builder moName(@Nullable Input<String> moName) {
             this.moName = moName;
             return this;
         }
 
-        public Builder setMoName(@Nullable String moName) {
+        public Builder moName(@Nullable String moName) {
             this.moName = Input.ofNullable(moName);
             return this;
         }
 
-        public Builder setMoRefId(@Nullable Input<String> moRefId) {
+        public Builder moRefId(@Nullable Input<String> moRefId) {
             this.moRefId = moRefId;
             return this;
         }
 
-        public Builder setMoRefId(@Nullable String moRefId) {
+        public Builder moRefId(@Nullable String moRefId) {
             this.moRefId = Input.ofNullable(moRefId);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setVcenterName(Input<String> vcenterName) {
+        public Builder vcenterName(Input<String> vcenterName) {
             this.vcenterName = Objects.requireNonNull(vcenterName);
             return this;
         }
 
-        public Builder setVcenterName(String vcenterName) {
+        public Builder vcenterName(String vcenterName) {
             this.vcenterName = Input.of(Objects.requireNonNull(vcenterName));
             return this;
         }

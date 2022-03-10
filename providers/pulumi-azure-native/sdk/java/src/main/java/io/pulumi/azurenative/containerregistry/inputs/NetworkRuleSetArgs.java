@@ -95,32 +95,32 @@ public final class NetworkRuleSetArgs extends io.pulumi.resources.ResourceArgs {
     	      this.virtualNetworkRules = defaults.virtualNetworkRules;
         }
 
-        public Builder setDefaultAction(Input<Either<String,DefaultAction>> defaultAction) {
+        public Builder defaultAction(Input<Either<String,DefaultAction>> defaultAction) {
             this.defaultAction = Objects.requireNonNull(defaultAction);
             return this;
         }
 
-        public Builder setDefaultAction(Either<String,DefaultAction> defaultAction) {
+        public Builder defaultAction(Either<String,DefaultAction> defaultAction) {
             this.defaultAction = Input.of(Objects.requireNonNull(defaultAction));
             return this;
         }
 
-        public Builder setIpRules(@Nullable Input<List<IPRuleArgs>> ipRules) {
+        public Builder ipRules(@Nullable Input<List<IPRuleArgs>> ipRules) {
             this.ipRules = ipRules;
             return this;
         }
 
-        public Builder setIpRules(@Nullable List<IPRuleArgs> ipRules) {
+        public Builder ipRules(@Nullable List<IPRuleArgs> ipRules) {
             this.ipRules = Input.ofNullable(ipRules);
             return this;
         }
 
-        public Builder setVirtualNetworkRules(@Nullable Input<List<VirtualNetworkRuleArgs>> virtualNetworkRules) {
+        public Builder virtualNetworkRules(@Nullable Input<List<VirtualNetworkRuleArgs>> virtualNetworkRules) {
             this.virtualNetworkRules = virtualNetworkRules;
             return this;
         }
 
-        public Builder setVirtualNetworkRules(@Nullable List<VirtualNetworkRuleArgs> virtualNetworkRules) {
+        public Builder virtualNetworkRules(@Nullable List<VirtualNetworkRuleArgs> virtualNetworkRules) {
             this.virtualNetworkRules = Input.ofNullable(virtualNetworkRules);
             return this;
         }

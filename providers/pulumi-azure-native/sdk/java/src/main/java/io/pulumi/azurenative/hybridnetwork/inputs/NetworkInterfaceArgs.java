@@ -110,42 +110,42 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
     	      this.vmSwitchType = defaults.vmSwitchType;
         }
 
-        public Builder setIpConfigurations(@Nullable Input<List<NetworkInterfaceIPConfigurationArgs>> ipConfigurations) {
+        public Builder ipConfigurations(@Nullable Input<List<NetworkInterfaceIPConfigurationArgs>> ipConfigurations) {
             this.ipConfigurations = ipConfigurations;
             return this;
         }
 
-        public Builder setIpConfigurations(@Nullable List<NetworkInterfaceIPConfigurationArgs> ipConfigurations) {
+        public Builder ipConfigurations(@Nullable List<NetworkInterfaceIPConfigurationArgs> ipConfigurations) {
             this.ipConfigurations = Input.ofNullable(ipConfigurations);
             return this;
         }
 
-        public Builder setMacAddress(@Nullable Input<String> macAddress) {
+        public Builder macAddress(@Nullable Input<String> macAddress) {
             this.macAddress = macAddress;
             return this;
         }
 
-        public Builder setMacAddress(@Nullable String macAddress) {
+        public Builder macAddress(@Nullable String macAddress) {
             this.macAddress = Input.ofNullable(macAddress);
             return this;
         }
 
-        public Builder setNetworkInterfaceName(@Nullable Input<String> networkInterfaceName) {
+        public Builder networkInterfaceName(@Nullable Input<String> networkInterfaceName) {
             this.networkInterfaceName = networkInterfaceName;
             return this;
         }
 
-        public Builder setNetworkInterfaceName(@Nullable String networkInterfaceName) {
+        public Builder networkInterfaceName(@Nullable String networkInterfaceName) {
             this.networkInterfaceName = Input.ofNullable(networkInterfaceName);
             return this;
         }
 
-        public Builder setVmSwitchType(@Nullable Input<Either<String,VMSwitchType>> vmSwitchType) {
+        public Builder vmSwitchType(@Nullable Input<Either<String,VMSwitchType>> vmSwitchType) {
             this.vmSwitchType = vmSwitchType;
             return this;
         }
 
-        public Builder setVmSwitchType(@Nullable Either<String,VMSwitchType> vmSwitchType) {
+        public Builder vmSwitchType(@Nullable Either<String,VMSwitchType> vmSwitchType) {
             this.vmSwitchType = Input.ofNullable(vmSwitchType);
             return this;
         }

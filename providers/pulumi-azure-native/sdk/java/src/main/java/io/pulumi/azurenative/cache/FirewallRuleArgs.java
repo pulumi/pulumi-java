@@ -118,52 +118,52 @@ public final class FirewallRuleArgs extends io.pulumi.resources.ResourceArgs {
     	      this.startIP = defaults.startIP;
         }
 
-        public Builder setCacheName(Input<String> cacheName) {
+        public Builder cacheName(Input<String> cacheName) {
             this.cacheName = Objects.requireNonNull(cacheName);
             return this;
         }
 
-        public Builder setCacheName(String cacheName) {
+        public Builder cacheName(String cacheName) {
             this.cacheName = Input.of(Objects.requireNonNull(cacheName));
             return this;
         }
 
-        public Builder setEndIP(Input<String> endIP) {
+        public Builder endIP(Input<String> endIP) {
             this.endIP = Objects.requireNonNull(endIP);
             return this;
         }
 
-        public Builder setEndIP(String endIP) {
+        public Builder endIP(String endIP) {
             this.endIP = Input.of(Objects.requireNonNull(endIP));
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setRuleName(@Nullable Input<String> ruleName) {
+        public Builder ruleName(@Nullable Input<String> ruleName) {
             this.ruleName = ruleName;
             return this;
         }
 
-        public Builder setRuleName(@Nullable String ruleName) {
+        public Builder ruleName(@Nullable String ruleName) {
             this.ruleName = Input.ofNullable(ruleName);
             return this;
         }
 
-        public Builder setStartIP(Input<String> startIP) {
+        public Builder startIP(Input<String> startIP) {
             this.startIP = Objects.requireNonNull(startIP);
             return this;
         }
 
-        public Builder setStartIP(String startIP) {
+        public Builder startIP(String startIP) {
             this.startIP = Input.of(Objects.requireNonNull(startIP));
             return this;
         }

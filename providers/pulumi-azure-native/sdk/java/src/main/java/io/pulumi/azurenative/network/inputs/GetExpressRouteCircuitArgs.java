@@ -68,12 +68,12 @@ public final class GetExpressRouteCircuitArgs extends io.pulumi.resources.Invoke
     	      this.resourceGroupName = defaults.resourceGroupName;
         }
 
-        public Builder setCircuitName(String circuitName) {
+        public Builder circuitName(String circuitName) {
             this.circuitName = Objects.requireNonNull(circuitName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }

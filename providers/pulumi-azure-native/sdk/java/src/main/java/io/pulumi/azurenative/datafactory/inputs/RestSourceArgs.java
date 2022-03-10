@@ -236,122 +236,122 @@ public final class RestSourceArgs extends io.pulumi.resources.ResourceArgs {
     	      this.type = defaults.type;
         }
 
-        public Builder setAdditionalColumns(@Nullable Input<Object> additionalColumns) {
+        public Builder additionalColumns(@Nullable Input<Object> additionalColumns) {
             this.additionalColumns = additionalColumns;
             return this;
         }
 
-        public Builder setAdditionalColumns(@Nullable Object additionalColumns) {
+        public Builder additionalColumns(@Nullable Object additionalColumns) {
             this.additionalColumns = Input.ofNullable(additionalColumns);
             return this;
         }
 
-        public Builder setAdditionalHeaders(@Nullable Input<Object> additionalHeaders) {
+        public Builder additionalHeaders(@Nullable Input<Object> additionalHeaders) {
             this.additionalHeaders = additionalHeaders;
             return this;
         }
 
-        public Builder setAdditionalHeaders(@Nullable Object additionalHeaders) {
+        public Builder additionalHeaders(@Nullable Object additionalHeaders) {
             this.additionalHeaders = Input.ofNullable(additionalHeaders);
             return this;
         }
 
-        public Builder setDisableMetricsCollection(@Nullable Input<Object> disableMetricsCollection) {
+        public Builder disableMetricsCollection(@Nullable Input<Object> disableMetricsCollection) {
             this.disableMetricsCollection = disableMetricsCollection;
             return this;
         }
 
-        public Builder setDisableMetricsCollection(@Nullable Object disableMetricsCollection) {
+        public Builder disableMetricsCollection(@Nullable Object disableMetricsCollection) {
             this.disableMetricsCollection = Input.ofNullable(disableMetricsCollection);
             return this;
         }
 
-        public Builder setHttpRequestTimeout(@Nullable Input<Object> httpRequestTimeout) {
+        public Builder httpRequestTimeout(@Nullable Input<Object> httpRequestTimeout) {
             this.httpRequestTimeout = httpRequestTimeout;
             return this;
         }
 
-        public Builder setHttpRequestTimeout(@Nullable Object httpRequestTimeout) {
+        public Builder httpRequestTimeout(@Nullable Object httpRequestTimeout) {
             this.httpRequestTimeout = Input.ofNullable(httpRequestTimeout);
             return this;
         }
 
-        public Builder setMaxConcurrentConnections(@Nullable Input<Object> maxConcurrentConnections) {
+        public Builder maxConcurrentConnections(@Nullable Input<Object> maxConcurrentConnections) {
             this.maxConcurrentConnections = maxConcurrentConnections;
             return this;
         }
 
-        public Builder setMaxConcurrentConnections(@Nullable Object maxConcurrentConnections) {
+        public Builder maxConcurrentConnections(@Nullable Object maxConcurrentConnections) {
             this.maxConcurrentConnections = Input.ofNullable(maxConcurrentConnections);
             return this;
         }
 
-        public Builder setPaginationRules(@Nullable Input<Object> paginationRules) {
+        public Builder paginationRules(@Nullable Input<Object> paginationRules) {
             this.paginationRules = paginationRules;
             return this;
         }
 
-        public Builder setPaginationRules(@Nullable Object paginationRules) {
+        public Builder paginationRules(@Nullable Object paginationRules) {
             this.paginationRules = Input.ofNullable(paginationRules);
             return this;
         }
 
-        public Builder setRequestBody(@Nullable Input<Object> requestBody) {
+        public Builder requestBody(@Nullable Input<Object> requestBody) {
             this.requestBody = requestBody;
             return this;
         }
 
-        public Builder setRequestBody(@Nullable Object requestBody) {
+        public Builder requestBody(@Nullable Object requestBody) {
             this.requestBody = Input.ofNullable(requestBody);
             return this;
         }
 
-        public Builder setRequestInterval(@Nullable Input<Object> requestInterval) {
+        public Builder requestInterval(@Nullable Input<Object> requestInterval) {
             this.requestInterval = requestInterval;
             return this;
         }
 
-        public Builder setRequestInterval(@Nullable Object requestInterval) {
+        public Builder requestInterval(@Nullable Object requestInterval) {
             this.requestInterval = Input.ofNullable(requestInterval);
             return this;
         }
 
-        public Builder setRequestMethod(@Nullable Input<Object> requestMethod) {
+        public Builder requestMethod(@Nullable Input<Object> requestMethod) {
             this.requestMethod = requestMethod;
             return this;
         }
 
-        public Builder setRequestMethod(@Nullable Object requestMethod) {
+        public Builder requestMethod(@Nullable Object requestMethod) {
             this.requestMethod = Input.ofNullable(requestMethod);
             return this;
         }
 
-        public Builder setSourceRetryCount(@Nullable Input<Object> sourceRetryCount) {
+        public Builder sourceRetryCount(@Nullable Input<Object> sourceRetryCount) {
             this.sourceRetryCount = sourceRetryCount;
             return this;
         }
 
-        public Builder setSourceRetryCount(@Nullable Object sourceRetryCount) {
+        public Builder sourceRetryCount(@Nullable Object sourceRetryCount) {
             this.sourceRetryCount = Input.ofNullable(sourceRetryCount);
             return this;
         }
 
-        public Builder setSourceRetryWait(@Nullable Input<Object> sourceRetryWait) {
+        public Builder sourceRetryWait(@Nullable Input<Object> sourceRetryWait) {
             this.sourceRetryWait = sourceRetryWait;
             return this;
         }
 
-        public Builder setSourceRetryWait(@Nullable Object sourceRetryWait) {
+        public Builder sourceRetryWait(@Nullable Object sourceRetryWait) {
             this.sourceRetryWait = Input.ofNullable(sourceRetryWait);
             return this;
         }
 
-        public Builder setType(Input<String> type) {
+        public Builder type(Input<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }

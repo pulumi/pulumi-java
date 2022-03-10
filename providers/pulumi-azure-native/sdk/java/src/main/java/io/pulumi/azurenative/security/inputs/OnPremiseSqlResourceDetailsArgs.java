@@ -154,72 +154,72 @@ public final class OnPremiseSqlResourceDetailsArgs extends io.pulumi.resources.R
     	      this.workspaceId = defaults.workspaceId;
         }
 
-        public Builder setDatabaseName(Input<String> databaseName) {
+        public Builder databaseName(Input<String> databaseName) {
             this.databaseName = Objects.requireNonNull(databaseName);
             return this;
         }
 
-        public Builder setDatabaseName(String databaseName) {
+        public Builder databaseName(String databaseName) {
             this.databaseName = Input.of(Objects.requireNonNull(databaseName));
             return this;
         }
 
-        public Builder setMachineName(Input<String> machineName) {
+        public Builder machineName(Input<String> machineName) {
             this.machineName = Objects.requireNonNull(machineName);
             return this;
         }
 
-        public Builder setMachineName(String machineName) {
+        public Builder machineName(String machineName) {
             this.machineName = Input.of(Objects.requireNonNull(machineName));
             return this;
         }
 
-        public Builder setServerName(Input<String> serverName) {
+        public Builder serverName(Input<String> serverName) {
             this.serverName = Objects.requireNonNull(serverName);
             return this;
         }
 
-        public Builder setServerName(String serverName) {
+        public Builder serverName(String serverName) {
             this.serverName = Input.of(Objects.requireNonNull(serverName));
             return this;
         }
 
-        public Builder setSource(Input<String> source) {
+        public Builder source(Input<String> source) {
             this.source = Objects.requireNonNull(source);
             return this;
         }
 
-        public Builder setSource(String source) {
+        public Builder source(String source) {
             this.source = Input.of(Objects.requireNonNull(source));
             return this;
         }
 
-        public Builder setSourceComputerId(Input<String> sourceComputerId) {
+        public Builder sourceComputerId(Input<String> sourceComputerId) {
             this.sourceComputerId = Objects.requireNonNull(sourceComputerId);
             return this;
         }
 
-        public Builder setSourceComputerId(String sourceComputerId) {
+        public Builder sourceComputerId(String sourceComputerId) {
             this.sourceComputerId = Input.of(Objects.requireNonNull(sourceComputerId));
             return this;
         }
 
-        public Builder setVmuuid(Input<String> vmuuid) {
+        public Builder vmuuid(Input<String> vmuuid) {
             this.vmuuid = Objects.requireNonNull(vmuuid);
             return this;
         }
 
-        public Builder setVmuuid(String vmuuid) {
+        public Builder vmuuid(String vmuuid) {
             this.vmuuid = Input.of(Objects.requireNonNull(vmuuid));
             return this;
         }
 
-        public Builder setWorkspaceId(Input<String> workspaceId) {
+        public Builder workspaceId(Input<String> workspaceId) {
             this.workspaceId = Objects.requireNonNull(workspaceId);
             return this;
         }
 
-        public Builder setWorkspaceId(String workspaceId) {
+        public Builder workspaceId(String workspaceId) {
             this.workspaceId = Input.of(Objects.requireNonNull(workspaceId));
             return this;
         }

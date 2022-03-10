@@ -58,7 +58,7 @@ public final class SshConfigurationResponse extends io.pulumi.resources.InvokeAr
     	      this.publicKeys = defaults.publicKeys;
         }
 
-        public Builder setPublicKeys(@Nullable List<SshPublicKeyResponse> publicKeys) {
+        public Builder publicKeys(@Nullable List<SshPublicKeyResponse> publicKeys) {
             this.publicKeys = publicKeys;
             return this;
         }

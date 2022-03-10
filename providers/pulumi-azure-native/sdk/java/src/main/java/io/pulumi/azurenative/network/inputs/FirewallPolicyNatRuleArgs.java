@@ -161,72 +161,72 @@ public final class FirewallPolicyNatRuleArgs extends io.pulumi.resources.Resourc
     	      this.translatedPort = defaults.translatedPort;
         }
 
-        public Builder setAction(@Nullable Input<FirewallPolicyNatRuleActionArgs> action) {
+        public Builder action(@Nullable Input<FirewallPolicyNatRuleActionArgs> action) {
             this.action = action;
             return this;
         }
 
-        public Builder setAction(@Nullable FirewallPolicyNatRuleActionArgs action) {
+        public Builder action(@Nullable FirewallPolicyNatRuleActionArgs action) {
             this.action = Input.ofNullable(action);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setPriority(@Nullable Input<Integer> priority) {
+        public Builder priority(@Nullable Input<Integer> priority) {
             this.priority = priority;
             return this;
         }
 
-        public Builder setPriority(@Nullable Integer priority) {
+        public Builder priority(@Nullable Integer priority) {
             this.priority = Input.ofNullable(priority);
             return this;
         }
 
-        public Builder setRuleCondition(@Nullable Input<Object> ruleCondition) {
+        public Builder ruleCondition(@Nullable Input<Object> ruleCondition) {
             this.ruleCondition = ruleCondition;
             return this;
         }
 
-        public Builder setRuleCondition(@Nullable Object ruleCondition) {
+        public Builder ruleCondition(@Nullable Object ruleCondition) {
             this.ruleCondition = Input.ofNullable(ruleCondition);
             return this;
         }
 
-        public Builder setRuleType(Input<String> ruleType) {
+        public Builder ruleType(Input<String> ruleType) {
             this.ruleType = Objects.requireNonNull(ruleType);
             return this;
         }
 
-        public Builder setRuleType(String ruleType) {
+        public Builder ruleType(String ruleType) {
             this.ruleType = Input.of(Objects.requireNonNull(ruleType));
             return this;
         }
 
-        public Builder setTranslatedAddress(@Nullable Input<String> translatedAddress) {
+        public Builder translatedAddress(@Nullable Input<String> translatedAddress) {
             this.translatedAddress = translatedAddress;
             return this;
         }
 
-        public Builder setTranslatedAddress(@Nullable String translatedAddress) {
+        public Builder translatedAddress(@Nullable String translatedAddress) {
             this.translatedAddress = Input.ofNullable(translatedAddress);
             return this;
         }
 
-        public Builder setTranslatedPort(@Nullable Input<String> translatedPort) {
+        public Builder translatedPort(@Nullable Input<String> translatedPort) {
             this.translatedPort = translatedPort;
             return this;
         }
 
-        public Builder setTranslatedPort(@Nullable String translatedPort) {
+        public Builder translatedPort(@Nullable String translatedPort) {
             this.translatedPort = Input.ofNullable(translatedPort);
             return this;
         }

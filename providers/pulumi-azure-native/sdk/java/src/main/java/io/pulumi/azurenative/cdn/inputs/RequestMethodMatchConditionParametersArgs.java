@@ -106,42 +106,42 @@ public final class RequestMethodMatchConditionParametersArgs extends io.pulumi.r
     	      this.operator = defaults.operator;
         }
 
-        public Builder setMatchValues(@Nullable Input<List<String>> matchValues) {
+        public Builder matchValues(@Nullable Input<List<String>> matchValues) {
             this.matchValues = matchValues;
             return this;
         }
 
-        public Builder setMatchValues(@Nullable List<String> matchValues) {
+        public Builder matchValues(@Nullable List<String> matchValues) {
             this.matchValues = Input.ofNullable(matchValues);
             return this;
         }
 
-        public Builder setNegateCondition(@Nullable Input<Boolean> negateCondition) {
+        public Builder negateCondition(@Nullable Input<Boolean> negateCondition) {
             this.negateCondition = negateCondition;
             return this;
         }
 
-        public Builder setNegateCondition(@Nullable Boolean negateCondition) {
+        public Builder negateCondition(@Nullable Boolean negateCondition) {
             this.negateCondition = Input.ofNullable(negateCondition);
             return this;
         }
 
-        public Builder setOdataType(Input<String> odataType) {
+        public Builder odataType(Input<String> odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
 
-        public Builder setOdataType(String odataType) {
+        public Builder odataType(String odataType) {
             this.odataType = Input.of(Objects.requireNonNull(odataType));
             return this;
         }
 
-        public Builder setOperator(Input<Either<String,RequestMethodOperator>> operator) {
+        public Builder operator(Input<Either<String,RequestMethodOperator>> operator) {
             this.operator = Objects.requireNonNull(operator);
             return this;
         }
 
-        public Builder setOperator(Either<String,RequestMethodOperator> operator) {
+        public Builder operator(Either<String,RequestMethodOperator> operator) {
             this.operator = Input.of(Objects.requireNonNull(operator));
             return this;
         }

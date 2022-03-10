@@ -157,72 +157,72 @@ public final class LocalNetworkGatewayArgs extends io.pulumi.resources.ResourceA
     	      this.tags = defaults.tags;
         }
 
-        public Builder setBgpSettings(@Nullable Input<BgpSettingsArgs> bgpSettings) {
+        public Builder bgpSettings(@Nullable Input<BgpSettingsArgs> bgpSettings) {
             this.bgpSettings = bgpSettings;
             return this;
         }
 
-        public Builder setBgpSettings(@Nullable BgpSettingsArgs bgpSettings) {
+        public Builder bgpSettings(@Nullable BgpSettingsArgs bgpSettings) {
             this.bgpSettings = Input.ofNullable(bgpSettings);
             return this;
         }
 
-        public Builder setFqdn(@Nullable Input<String> fqdn) {
+        public Builder fqdn(@Nullable Input<String> fqdn) {
             this.fqdn = fqdn;
             return this;
         }
 
-        public Builder setFqdn(@Nullable String fqdn) {
+        public Builder fqdn(@Nullable String fqdn) {
             this.fqdn = Input.ofNullable(fqdn);
             return this;
         }
 
-        public Builder setGatewayIpAddress(@Nullable Input<String> gatewayIpAddress) {
+        public Builder gatewayIpAddress(@Nullable Input<String> gatewayIpAddress) {
             this.gatewayIpAddress = gatewayIpAddress;
             return this;
         }
 
-        public Builder setGatewayIpAddress(@Nullable String gatewayIpAddress) {
+        public Builder gatewayIpAddress(@Nullable String gatewayIpAddress) {
             this.gatewayIpAddress = Input.ofNullable(gatewayIpAddress);
             return this;
         }
 
-        public Builder setId(@Nullable Input<String> id) {
+        public Builder id(@Nullable Input<String> id) {
             this.id = id;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = Input.ofNullable(id);
             return this;
         }
 
-        public Builder setLocalNetworkAddressSpace(@Nullable Input<AddressSpaceArgs> localNetworkAddressSpace) {
+        public Builder localNetworkAddressSpace(@Nullable Input<AddressSpaceArgs> localNetworkAddressSpace) {
             this.localNetworkAddressSpace = localNetworkAddressSpace;
             return this;
         }
 
-        public Builder setLocalNetworkAddressSpace(@Nullable AddressSpaceArgs localNetworkAddressSpace) {
+        public Builder localNetworkAddressSpace(@Nullable AddressSpaceArgs localNetworkAddressSpace) {
             this.localNetworkAddressSpace = Input.ofNullable(localNetworkAddressSpace);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

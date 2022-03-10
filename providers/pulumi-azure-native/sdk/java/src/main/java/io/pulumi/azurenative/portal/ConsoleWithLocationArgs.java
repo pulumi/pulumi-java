@@ -70,22 +70,22 @@ public final class ConsoleWithLocationArgs extends io.pulumi.resources.ResourceA
     	      this.location = defaults.location;
         }
 
-        public Builder setConsoleName(@Nullable Input<String> consoleName) {
+        public Builder consoleName(@Nullable Input<String> consoleName) {
             this.consoleName = consoleName;
             return this;
         }
 
-        public Builder setConsoleName(@Nullable String consoleName) {
+        public Builder consoleName(@Nullable String consoleName) {
             this.consoleName = Input.ofNullable(consoleName);
             return this;
         }
 
-        public Builder setLocation(Input<String> location) {
+        public Builder location(Input<String> location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Input.of(Objects.requireNonNull(location));
             return this;
         }

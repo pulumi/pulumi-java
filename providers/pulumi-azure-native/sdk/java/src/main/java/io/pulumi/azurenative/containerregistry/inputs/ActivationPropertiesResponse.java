@@ -55,7 +55,7 @@ public final class ActivationPropertiesResponse extends io.pulumi.resources.Invo
     	      this.status = defaults.status;
         }
 
-        public Builder setStatus(String status) {
+        public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }

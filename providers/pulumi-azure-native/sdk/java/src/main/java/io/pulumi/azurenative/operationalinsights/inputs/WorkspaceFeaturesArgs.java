@@ -123,52 +123,52 @@ public final class WorkspaceFeaturesArgs extends io.pulumi.resources.ResourceArg
     	      this.immediatePurgeDataOn30Days = defaults.immediatePurgeDataOn30Days;
         }
 
-        public Builder setClusterResourceId(@Nullable Input<String> clusterResourceId) {
+        public Builder clusterResourceId(@Nullable Input<String> clusterResourceId) {
             this.clusterResourceId = clusterResourceId;
             return this;
         }
 
-        public Builder setClusterResourceId(@Nullable String clusterResourceId) {
+        public Builder clusterResourceId(@Nullable String clusterResourceId) {
             this.clusterResourceId = Input.ofNullable(clusterResourceId);
             return this;
         }
 
-        public Builder setDisableLocalAuth(@Nullable Input<Boolean> disableLocalAuth) {
+        public Builder disableLocalAuth(@Nullable Input<Boolean> disableLocalAuth) {
             this.disableLocalAuth = disableLocalAuth;
             return this;
         }
 
-        public Builder setDisableLocalAuth(@Nullable Boolean disableLocalAuth) {
+        public Builder disableLocalAuth(@Nullable Boolean disableLocalAuth) {
             this.disableLocalAuth = Input.ofNullable(disableLocalAuth);
             return this;
         }
 
-        public Builder setEnableDataExport(@Nullable Input<Boolean> enableDataExport) {
+        public Builder enableDataExport(@Nullable Input<Boolean> enableDataExport) {
             this.enableDataExport = enableDataExport;
             return this;
         }
 
-        public Builder setEnableDataExport(@Nullable Boolean enableDataExport) {
+        public Builder enableDataExport(@Nullable Boolean enableDataExport) {
             this.enableDataExport = Input.ofNullable(enableDataExport);
             return this;
         }
 
-        public Builder setEnableLogAccessUsingOnlyResourcePermissions(@Nullable Input<Boolean> enableLogAccessUsingOnlyResourcePermissions) {
+        public Builder enableLogAccessUsingOnlyResourcePermissions(@Nullable Input<Boolean> enableLogAccessUsingOnlyResourcePermissions) {
             this.enableLogAccessUsingOnlyResourcePermissions = enableLogAccessUsingOnlyResourcePermissions;
             return this;
         }
 
-        public Builder setEnableLogAccessUsingOnlyResourcePermissions(@Nullable Boolean enableLogAccessUsingOnlyResourcePermissions) {
+        public Builder enableLogAccessUsingOnlyResourcePermissions(@Nullable Boolean enableLogAccessUsingOnlyResourcePermissions) {
             this.enableLogAccessUsingOnlyResourcePermissions = Input.ofNullable(enableLogAccessUsingOnlyResourcePermissions);
             return this;
         }
 
-        public Builder setImmediatePurgeDataOn30Days(@Nullable Input<Boolean> immediatePurgeDataOn30Days) {
+        public Builder immediatePurgeDataOn30Days(@Nullable Input<Boolean> immediatePurgeDataOn30Days) {
             this.immediatePurgeDataOn30Days = immediatePurgeDataOn30Days;
             return this;
         }
 
-        public Builder setImmediatePurgeDataOn30Days(@Nullable Boolean immediatePurgeDataOn30Days) {
+        public Builder immediatePurgeDataOn30Days(@Nullable Boolean immediatePurgeDataOn30Days) {
             this.immediatePurgeDataOn30Days = Input.ofNullable(immediatePurgeDataOn30Days);
             return this;
         }

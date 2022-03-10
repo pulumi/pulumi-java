@@ -155,72 +155,72 @@ public final class FirewallPolicyRuleCollectionGroupArgs extends io.pulumi.resou
     	      this.ruleCollections = defaults.ruleCollections;
         }
 
-        public Builder setFirewallPolicyName(Input<String> firewallPolicyName) {
+        public Builder firewallPolicyName(Input<String> firewallPolicyName) {
             this.firewallPolicyName = Objects.requireNonNull(firewallPolicyName);
             return this;
         }
 
-        public Builder setFirewallPolicyName(String firewallPolicyName) {
+        public Builder firewallPolicyName(String firewallPolicyName) {
             this.firewallPolicyName = Input.of(Objects.requireNonNull(firewallPolicyName));
             return this;
         }
 
-        public Builder setId(@Nullable Input<String> id) {
+        public Builder id(@Nullable Input<String> id) {
             this.id = id;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = Input.ofNullable(id);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setPriority(@Nullable Input<Integer> priority) {
+        public Builder priority(@Nullable Input<Integer> priority) {
             this.priority = priority;
             return this;
         }
 
-        public Builder setPriority(@Nullable Integer priority) {
+        public Builder priority(@Nullable Integer priority) {
             this.priority = Input.ofNullable(priority);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setRuleCollectionGroupName(@Nullable Input<String> ruleCollectionGroupName) {
+        public Builder ruleCollectionGroupName(@Nullable Input<String> ruleCollectionGroupName) {
             this.ruleCollectionGroupName = ruleCollectionGroupName;
             return this;
         }
 
-        public Builder setRuleCollectionGroupName(@Nullable String ruleCollectionGroupName) {
+        public Builder ruleCollectionGroupName(@Nullable String ruleCollectionGroupName) {
             this.ruleCollectionGroupName = Input.ofNullable(ruleCollectionGroupName);
             return this;
         }
 
-        public Builder setRuleCollections(@Nullable Input<List<Either<FirewallPolicyFilterRuleCollectionArgs,FirewallPolicyNatRuleCollectionArgs>>> ruleCollections) {
+        public Builder ruleCollections(@Nullable Input<List<Either<FirewallPolicyFilterRuleCollectionArgs,FirewallPolicyNatRuleCollectionArgs>>> ruleCollections) {
             this.ruleCollections = ruleCollections;
             return this;
         }
 
-        public Builder setRuleCollections(@Nullable List<Either<FirewallPolicyFilterRuleCollectionArgs,FirewallPolicyNatRuleCollectionArgs>> ruleCollections) {
+        public Builder ruleCollections(@Nullable List<Either<FirewallPolicyFilterRuleCollectionArgs,FirewallPolicyNatRuleCollectionArgs>> ruleCollections) {
             this.ruleCollections = Input.ofNullable(ruleCollections);
             return this;
         }

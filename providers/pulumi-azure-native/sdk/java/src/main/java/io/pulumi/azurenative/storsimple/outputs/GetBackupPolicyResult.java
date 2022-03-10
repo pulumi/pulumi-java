@@ -213,57 +213,57 @@ public final class GetBackupPolicyResult {
     	      this.volumeIds = defaults.volumeIds;
         }
 
-        public Builder setBackupPolicyCreationType(String backupPolicyCreationType) {
+        public Builder backupPolicyCreationType(String backupPolicyCreationType) {
             this.backupPolicyCreationType = Objects.requireNonNull(backupPolicyCreationType);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setKind(@Nullable String kind) {
+        public Builder kind(@Nullable String kind) {
             this.kind = kind;
             return this;
         }
 
-        public Builder setLastBackupTime(String lastBackupTime) {
+        public Builder lastBackupTime(String lastBackupTime) {
             this.lastBackupTime = Objects.requireNonNull(lastBackupTime);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setNextBackupTime(String nextBackupTime) {
+        public Builder nextBackupTime(String nextBackupTime) {
             this.nextBackupTime = Objects.requireNonNull(nextBackupTime);
             return this;
         }
 
-        public Builder setScheduledBackupStatus(String scheduledBackupStatus) {
+        public Builder scheduledBackupStatus(String scheduledBackupStatus) {
             this.scheduledBackupStatus = Objects.requireNonNull(scheduledBackupStatus);
             return this;
         }
 
-        public Builder setSchedulesCount(Double schedulesCount) {
+        public Builder schedulesCount(Double schedulesCount) {
             this.schedulesCount = Objects.requireNonNull(schedulesCount);
             return this;
         }
 
-        public Builder setSsmHostName(String ssmHostName) {
+        public Builder ssmHostName(String ssmHostName) {
             this.ssmHostName = Objects.requireNonNull(ssmHostName);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setVolumeIds(List<String> volumeIds) {
+        public Builder volumeIds(List<String> volumeIds) {
             this.volumeIds = Objects.requireNonNull(volumeIds);
             return this;
         }

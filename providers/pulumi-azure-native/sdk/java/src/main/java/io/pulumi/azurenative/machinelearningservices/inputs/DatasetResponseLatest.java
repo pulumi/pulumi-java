@@ -336,92 +336,92 @@ public final class DatasetResponseLatest extends io.pulumi.resources.InvokeArgs 
     	      this.versionId = defaults.versionId;
         }
 
-        public Builder setCreatedBy(@Nullable UserInfoResponse createdBy) {
+        public Builder createdBy(@Nullable UserInfoResponse createdBy) {
             this.createdBy = createdBy;
             return this;
         }
 
-        public Builder setCreatedTime(String createdTime) {
+        public Builder createdTime(String createdTime) {
             this.createdTime = Objects.requireNonNull(createdTime);
             return this;
         }
 
-        public Builder setDataPath(@Nullable DatasetResponseDataPath dataPath) {
+        public Builder dataPath(@Nullable DatasetResponseDataPath dataPath) {
             this.dataPath = dataPath;
             return this;
         }
 
-        public Builder setDataflow(String dataflow) {
+        public Builder dataflow(String dataflow) {
             this.dataflow = Objects.requireNonNull(dataflow);
             return this;
         }
 
-        public Builder setDatasetDefinitionState(@Nullable DatasetStateResponse datasetDefinitionState) {
+        public Builder datasetDefinitionState(@Nullable DatasetStateResponse datasetDefinitionState) {
             this.datasetDefinitionState = datasetDefinitionState;
             return this;
         }
 
-        public Builder setDatasetId(String datasetId) {
+        public Builder datasetId(String datasetId) {
             this.datasetId = Objects.requireNonNull(datasetId);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setEtag(String etag) {
+        public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
 
-        public Builder setFileType(String fileType) {
+        public Builder fileType(String fileType) {
             this.fileType = Objects.requireNonNull(fileType);
             return this;
         }
 
-        public Builder setModifiedTime(String modifiedTime) {
+        public Builder modifiedTime(String modifiedTime) {
             this.modifiedTime = Objects.requireNonNull(modifiedTime);
             return this;
         }
 
-        public Builder setNotes(String notes) {
+        public Builder notes(String notes) {
             this.notes = Objects.requireNonNull(notes);
             return this;
         }
 
-        public Builder setPartitionFormatInPath(Boolean partitionFormatInPath) {
+        public Builder partitionFormatInPath(Boolean partitionFormatInPath) {
             this.partitionFormatInPath = Objects.requireNonNull(partitionFormatInPath);
             return this;
         }
 
-        public Builder setProperties(@Nullable Map<String,Object> properties) {
+        public Builder properties(@Nullable Map<String,Object> properties) {
             this.properties = properties;
             return this;
         }
 
-        public Builder setSavedDatasetId(String savedDatasetId) {
+        public Builder savedDatasetId(String savedDatasetId) {
             this.savedDatasetId = Objects.requireNonNull(savedDatasetId);
             return this;
         }
 
-        public Builder setTags(Map<String,String> tags) {
+        public Builder tags(Map<String,String> tags) {
             this.tags = Objects.requireNonNull(tags);
             return this;
         }
 
-        public Builder setTelemetryInfo(Map<String,String> telemetryInfo) {
+        public Builder telemetryInfo(Map<String,String> telemetryInfo) {
             this.telemetryInfo = Objects.requireNonNull(telemetryInfo);
             return this;
         }
 
-        public Builder setUseDescriptionTagsFromDefinition(Boolean useDescriptionTagsFromDefinition) {
+        public Builder useDescriptionTagsFromDefinition(Boolean useDescriptionTagsFromDefinition) {
             this.useDescriptionTagsFromDefinition = Objects.requireNonNull(useDescriptionTagsFromDefinition);
             return this;
         }
 
-        public Builder setVersionId(String versionId) {
+        public Builder versionId(String versionId) {
             this.versionId = Objects.requireNonNull(versionId);
             return this;
         }

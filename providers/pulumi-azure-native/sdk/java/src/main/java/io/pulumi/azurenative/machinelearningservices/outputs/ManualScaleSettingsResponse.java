@@ -100,22 +100,22 @@ public final class ManualScaleSettingsResponse {
     	      this.scaleType = defaults.scaleType;
         }
 
-        public Builder setInstanceCount(@Nullable Integer instanceCount) {
+        public Builder instanceCount(@Nullable Integer instanceCount) {
             this.instanceCount = instanceCount;
             return this;
         }
 
-        public Builder setMaxInstances(@Nullable Integer maxInstances) {
+        public Builder maxInstances(@Nullable Integer maxInstances) {
             this.maxInstances = maxInstances;
             return this;
         }
 
-        public Builder setMinInstances(@Nullable Integer minInstances) {
+        public Builder minInstances(@Nullable Integer minInstances) {
             this.minInstances = minInstances;
             return this;
         }
 
-        public Builder setScaleType(String scaleType) {
+        public Builder scaleType(String scaleType) {
             this.scaleType = Objects.requireNonNull(scaleType);
             return this;
         }

@@ -67,12 +67,12 @@ public final class VaultSecretGroupResponse {
     	      this.vaultCertificates = defaults.vaultCertificates;
         }
 
-        public Builder setSourceVault(SubResourceResponse sourceVault) {
+        public Builder sourceVault(SubResourceResponse sourceVault) {
             this.sourceVault = Objects.requireNonNull(sourceVault);
             return this;
         }
 
-        public Builder setVaultCertificates(List<VaultCertificateResponse> vaultCertificates) {
+        public Builder vaultCertificates(List<VaultCertificateResponse> vaultCertificates) {
             this.vaultCertificates = Objects.requireNonNull(vaultCertificates);
             return this;
         }

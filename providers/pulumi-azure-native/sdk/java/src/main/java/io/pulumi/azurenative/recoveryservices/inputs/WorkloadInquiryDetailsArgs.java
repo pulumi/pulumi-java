@@ -92,32 +92,32 @@ public final class WorkloadInquiryDetailsArgs extends io.pulumi.resources.Resour
     	      this.type = defaults.type;
         }
 
-        public Builder setInquiryValidation(@Nullable Input<InquiryValidationArgs> inquiryValidation) {
+        public Builder inquiryValidation(@Nullable Input<InquiryValidationArgs> inquiryValidation) {
             this.inquiryValidation = inquiryValidation;
             return this;
         }
 
-        public Builder setInquiryValidation(@Nullable InquiryValidationArgs inquiryValidation) {
+        public Builder inquiryValidation(@Nullable InquiryValidationArgs inquiryValidation) {
             this.inquiryValidation = Input.ofNullable(inquiryValidation);
             return this;
         }
 
-        public Builder setItemCount(@Nullable Input<Double> itemCount) {
+        public Builder itemCount(@Nullable Input<Double> itemCount) {
             this.itemCount = itemCount;
             return this;
         }
 
-        public Builder setItemCount(@Nullable Double itemCount) {
+        public Builder itemCount(@Nullable Double itemCount) {
             this.itemCount = Input.ofNullable(itemCount);
             return this;
         }
 
-        public Builder setType(@Nullable Input<String> type) {
+        public Builder type(@Nullable Input<String> type) {
             this.type = type;
             return this;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = Input.ofNullable(type);
             return this;
         }

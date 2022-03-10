@@ -65,12 +65,12 @@ public final class CloudTieringDatePolicyStatusResponse {
     	      this.tieredFilesMostRecentAccessTimestamp = defaults.tieredFilesMostRecentAccessTimestamp;
         }
 
-        public Builder setLastUpdatedTimestamp(String lastUpdatedTimestamp) {
+        public Builder lastUpdatedTimestamp(String lastUpdatedTimestamp) {
             this.lastUpdatedTimestamp = Objects.requireNonNull(lastUpdatedTimestamp);
             return this;
         }
 
-        public Builder setTieredFilesMostRecentAccessTimestamp(String tieredFilesMostRecentAccessTimestamp) {
+        public Builder tieredFilesMostRecentAccessTimestamp(String tieredFilesMostRecentAccessTimestamp) {
             this.tieredFilesMostRecentAccessTimestamp = Objects.requireNonNull(tieredFilesMostRecentAccessTimestamp);
             return this;
         }

@@ -58,12 +58,12 @@ public final class ReportDatasetConfigurationArgs extends io.pulumi.resources.Re
     	      this.columns = defaults.columns;
         }
 
-        public Builder setColumns(@Nullable Input<List<String>> columns) {
+        public Builder columns(@Nullable Input<List<String>> columns) {
             this.columns = columns;
             return this;
         }
 
-        public Builder setColumns(@Nullable List<String> columns) {
+        public Builder columns(@Nullable List<String> columns) {
             this.columns = Input.ofNullable(columns);
             return this;
         }

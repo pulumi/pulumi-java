@@ -110,42 +110,42 @@ public final class LogMetricTriggerArgs extends io.pulumi.resources.ResourceArgs
     	      this.thresholdOperator = defaults.thresholdOperator;
         }
 
-        public Builder setMetricColumn(@Nullable Input<String> metricColumn) {
+        public Builder metricColumn(@Nullable Input<String> metricColumn) {
             this.metricColumn = metricColumn;
             return this;
         }
 
-        public Builder setMetricColumn(@Nullable String metricColumn) {
+        public Builder metricColumn(@Nullable String metricColumn) {
             this.metricColumn = Input.ofNullable(metricColumn);
             return this;
         }
 
-        public Builder setMetricTriggerType(@Nullable Input<Either<String,MetricTriggerType>> metricTriggerType) {
+        public Builder metricTriggerType(@Nullable Input<Either<String,MetricTriggerType>> metricTriggerType) {
             this.metricTriggerType = metricTriggerType;
             return this;
         }
 
-        public Builder setMetricTriggerType(@Nullable Either<String,MetricTriggerType> metricTriggerType) {
+        public Builder metricTriggerType(@Nullable Either<String,MetricTriggerType> metricTriggerType) {
             this.metricTriggerType = Input.ofNullable(metricTriggerType);
             return this;
         }
 
-        public Builder setThreshold(@Nullable Input<Double> threshold) {
+        public Builder threshold(@Nullable Input<Double> threshold) {
             this.threshold = threshold;
             return this;
         }
 
-        public Builder setThreshold(@Nullable Double threshold) {
+        public Builder threshold(@Nullable Double threshold) {
             this.threshold = Input.ofNullable(threshold);
             return this;
         }
 
-        public Builder setThresholdOperator(@Nullable Input<Either<String,ConditionalOperator>> thresholdOperator) {
+        public Builder thresholdOperator(@Nullable Input<Either<String,ConditionalOperator>> thresholdOperator) {
             this.thresholdOperator = thresholdOperator;
             return this;
         }
 
-        public Builder setThresholdOperator(@Nullable Either<String,ConditionalOperator> thresholdOperator) {
+        public Builder thresholdOperator(@Nullable Either<String,ConditionalOperator> thresholdOperator) {
             this.thresholdOperator = Input.ofNullable(thresholdOperator);
             return this;
         }

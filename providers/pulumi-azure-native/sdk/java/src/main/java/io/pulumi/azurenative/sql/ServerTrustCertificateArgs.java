@@ -102,42 +102,42 @@ public final class ServerTrustCertificateArgs extends io.pulumi.resources.Resour
     	      this.resourceGroupName = defaults.resourceGroupName;
         }
 
-        public Builder setCertificateName(@Nullable Input<String> certificateName) {
+        public Builder certificateName(@Nullable Input<String> certificateName) {
             this.certificateName = certificateName;
             return this;
         }
 
-        public Builder setCertificateName(@Nullable String certificateName) {
+        public Builder certificateName(@Nullable String certificateName) {
             this.certificateName = Input.ofNullable(certificateName);
             return this;
         }
 
-        public Builder setManagedInstanceName(Input<String> managedInstanceName) {
+        public Builder managedInstanceName(Input<String> managedInstanceName) {
             this.managedInstanceName = Objects.requireNonNull(managedInstanceName);
             return this;
         }
 
-        public Builder setManagedInstanceName(String managedInstanceName) {
+        public Builder managedInstanceName(String managedInstanceName) {
             this.managedInstanceName = Input.of(Objects.requireNonNull(managedInstanceName));
             return this;
         }
 
-        public Builder setPublicBlob(@Nullable Input<String> publicBlob) {
+        public Builder publicBlob(@Nullable Input<String> publicBlob) {
             this.publicBlob = publicBlob;
             return this;
         }
 
-        public Builder setPublicBlob(@Nullable String publicBlob) {
+        public Builder publicBlob(@Nullable String publicBlob) {
             this.publicBlob = Input.ofNullable(publicBlob);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }

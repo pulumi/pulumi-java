@@ -67,12 +67,12 @@ public final class ListConnectedClusterUserCredentialResult {
     	      this.kubeconfigs = defaults.kubeconfigs;
         }
 
-        public Builder setHybridConnectionConfig(HybridConnectionConfigResponse hybridConnectionConfig) {
+        public Builder hybridConnectionConfig(HybridConnectionConfigResponse hybridConnectionConfig) {
             this.hybridConnectionConfig = Objects.requireNonNull(hybridConnectionConfig);
             return this;
         }
 
-        public Builder setKubeconfigs(List<CredentialResultResponse> kubeconfigs) {
+        public Builder kubeconfigs(List<CredentialResultResponse> kubeconfigs) {
             this.kubeconfigs = Objects.requireNonNull(kubeconfigs);
             return this;
         }

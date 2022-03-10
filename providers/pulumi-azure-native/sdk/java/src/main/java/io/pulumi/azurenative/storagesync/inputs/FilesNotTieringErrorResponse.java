@@ -73,12 +73,12 @@ public final class FilesNotTieringErrorResponse extends io.pulumi.resources.Invo
     	      this.fileCount = defaults.fileCount;
         }
 
-        public Builder setErrorCode(Integer errorCode) {
+        public Builder errorCode(Integer errorCode) {
             this.errorCode = Objects.requireNonNull(errorCode);
             return this;
         }
 
-        public Builder setFileCount(Double fileCount) {
+        public Builder fileCount(Double fileCount) {
             this.fileCount = Objects.requireNonNull(fileCount);
             return this;
         }

@@ -108,22 +108,22 @@ public final class CdnManagedHttpsParametersResponse extends io.pulumi.resources
     	      this.protocolType = defaults.protocolType;
         }
 
-        public Builder setCertificateSource(String certificateSource) {
+        public Builder certificateSource(String certificateSource) {
             this.certificateSource = Objects.requireNonNull(certificateSource);
             return this;
         }
 
-        public Builder setCertificateSourceParameters(CdnCertificateSourceParametersResponse certificateSourceParameters) {
+        public Builder certificateSourceParameters(CdnCertificateSourceParametersResponse certificateSourceParameters) {
             this.certificateSourceParameters = Objects.requireNonNull(certificateSourceParameters);
             return this;
         }
 
-        public Builder setMinimumTlsVersion(@Nullable String minimumTlsVersion) {
+        public Builder minimumTlsVersion(@Nullable String minimumTlsVersion) {
             this.minimumTlsVersion = minimumTlsVersion;
             return this;
         }
 
-        public Builder setProtocolType(String protocolType) {
+        public Builder protocolType(String protocolType) {
             this.protocolType = Objects.requireNonNull(protocolType);
             return this;
         }

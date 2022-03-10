@@ -106,42 +106,42 @@ public final class X12SchemaReferenceArgs extends io.pulumi.resources.ResourceAr
     	      this.senderApplicationId = defaults.senderApplicationId;
         }
 
-        public Builder setMessageId(Input<String> messageId) {
+        public Builder messageId(Input<String> messageId) {
             this.messageId = Objects.requireNonNull(messageId);
             return this;
         }
 
-        public Builder setMessageId(String messageId) {
+        public Builder messageId(String messageId) {
             this.messageId = Input.of(Objects.requireNonNull(messageId));
             return this;
         }
 
-        public Builder setSchemaName(Input<String> schemaName) {
+        public Builder schemaName(Input<String> schemaName) {
             this.schemaName = Objects.requireNonNull(schemaName);
             return this;
         }
 
-        public Builder setSchemaName(String schemaName) {
+        public Builder schemaName(String schemaName) {
             this.schemaName = Input.of(Objects.requireNonNull(schemaName));
             return this;
         }
 
-        public Builder setSchemaVersion(Input<String> schemaVersion) {
+        public Builder schemaVersion(Input<String> schemaVersion) {
             this.schemaVersion = Objects.requireNonNull(schemaVersion);
             return this;
         }
 
-        public Builder setSchemaVersion(String schemaVersion) {
+        public Builder schemaVersion(String schemaVersion) {
             this.schemaVersion = Input.of(Objects.requireNonNull(schemaVersion));
             return this;
         }
 
-        public Builder setSenderApplicationId(@Nullable Input<String> senderApplicationId) {
+        public Builder senderApplicationId(@Nullable Input<String> senderApplicationId) {
             this.senderApplicationId = senderApplicationId;
             return this;
         }
 
-        public Builder setSenderApplicationId(@Nullable String senderApplicationId) {
+        public Builder senderApplicationId(@Nullable String senderApplicationId) {
             this.senderApplicationId = Input.ofNullable(senderApplicationId);
             return this;
         }

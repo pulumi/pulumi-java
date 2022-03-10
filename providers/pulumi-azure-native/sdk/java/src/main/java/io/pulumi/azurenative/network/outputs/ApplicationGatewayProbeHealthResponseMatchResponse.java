@@ -68,12 +68,12 @@ public final class ApplicationGatewayProbeHealthResponseMatchResponse {
     	      this.statusCodes = defaults.statusCodes;
         }
 
-        public Builder setBody(@Nullable String body) {
+        public Builder body(@Nullable String body) {
             this.body = body;
             return this;
         }
 
-        public Builder setStatusCodes(@Nullable List<String> statusCodes) {
+        public Builder statusCodes(@Nullable List<String> statusCodes) {
             this.statusCodes = statusCodes;
             return this;
         }

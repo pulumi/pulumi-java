@@ -74,22 +74,22 @@ public final class IpTagArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tag = defaults.tag;
         }
 
-        public Builder setIpTagType(@Nullable Input<String> ipTagType) {
+        public Builder ipTagType(@Nullable Input<String> ipTagType) {
             this.ipTagType = ipTagType;
             return this;
         }
 
-        public Builder setIpTagType(@Nullable String ipTagType) {
+        public Builder ipTagType(@Nullable String ipTagType) {
             this.ipTagType = Input.ofNullable(ipTagType);
             return this;
         }
 
-        public Builder setTag(@Nullable Input<String> tag) {
+        public Builder tag(@Nullable Input<String> tag) {
             this.tag = tag;
             return this;
         }
 
-        public Builder setTag(@Nullable String tag) {
+        public Builder tag(@Nullable String tag) {
             this.tag = Input.ofNullable(tag);
             return this;
         }

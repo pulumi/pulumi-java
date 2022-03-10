@@ -90,17 +90,17 @@ public final class MHSMPrivateLinkServiceConnectionStateResponse extends io.pulu
     	      this.status = defaults.status;
         }
 
-        public Builder setActionsRequired(@Nullable String actionsRequired) {
+        public Builder actionsRequired(@Nullable String actionsRequired) {
             this.actionsRequired = actionsRequired;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setStatus(@Nullable String status) {
+        public Builder status(@Nullable String status) {
             this.status = status;
             return this;
         }

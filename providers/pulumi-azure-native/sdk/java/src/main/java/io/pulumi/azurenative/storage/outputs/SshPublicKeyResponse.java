@@ -67,12 +67,12 @@ public final class SshPublicKeyResponse {
     	      this.key = defaults.key;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setKey(@Nullable String key) {
+        public Builder key(@Nullable String key) {
             this.key = key;
             return this;
         }

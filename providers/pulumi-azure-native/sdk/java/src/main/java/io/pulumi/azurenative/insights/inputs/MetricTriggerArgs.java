@@ -241,122 +241,122 @@ public final class MetricTriggerArgs extends io.pulumi.resources.ResourceArgs {
     	      this.timeWindow = defaults.timeWindow;
         }
 
-        public Builder setDimensions(@Nullable Input<List<ScaleRuleMetricDimensionArgs>> dimensions) {
+        public Builder dimensions(@Nullable Input<List<ScaleRuleMetricDimensionArgs>> dimensions) {
             this.dimensions = dimensions;
             return this;
         }
 
-        public Builder setDimensions(@Nullable List<ScaleRuleMetricDimensionArgs> dimensions) {
+        public Builder dimensions(@Nullable List<ScaleRuleMetricDimensionArgs> dimensions) {
             this.dimensions = Input.ofNullable(dimensions);
             return this;
         }
 
-        public Builder setDividePerInstance(@Nullable Input<Boolean> dividePerInstance) {
+        public Builder dividePerInstance(@Nullable Input<Boolean> dividePerInstance) {
             this.dividePerInstance = dividePerInstance;
             return this;
         }
 
-        public Builder setDividePerInstance(@Nullable Boolean dividePerInstance) {
+        public Builder dividePerInstance(@Nullable Boolean dividePerInstance) {
             this.dividePerInstance = Input.ofNullable(dividePerInstance);
             return this;
         }
 
-        public Builder setMetricName(Input<String> metricName) {
+        public Builder metricName(Input<String> metricName) {
             this.metricName = Objects.requireNonNull(metricName);
             return this;
         }
 
-        public Builder setMetricName(String metricName) {
+        public Builder metricName(String metricName) {
             this.metricName = Input.of(Objects.requireNonNull(metricName));
             return this;
         }
 
-        public Builder setMetricNamespace(@Nullable Input<String> metricNamespace) {
+        public Builder metricNamespace(@Nullable Input<String> metricNamespace) {
             this.metricNamespace = metricNamespace;
             return this;
         }
 
-        public Builder setMetricNamespace(@Nullable String metricNamespace) {
+        public Builder metricNamespace(@Nullable String metricNamespace) {
             this.metricNamespace = Input.ofNullable(metricNamespace);
             return this;
         }
 
-        public Builder setMetricResourceLocation(@Nullable Input<String> metricResourceLocation) {
+        public Builder metricResourceLocation(@Nullable Input<String> metricResourceLocation) {
             this.metricResourceLocation = metricResourceLocation;
             return this;
         }
 
-        public Builder setMetricResourceLocation(@Nullable String metricResourceLocation) {
+        public Builder metricResourceLocation(@Nullable String metricResourceLocation) {
             this.metricResourceLocation = Input.ofNullable(metricResourceLocation);
             return this;
         }
 
-        public Builder setMetricResourceUri(Input<String> metricResourceUri) {
+        public Builder metricResourceUri(Input<String> metricResourceUri) {
             this.metricResourceUri = Objects.requireNonNull(metricResourceUri);
             return this;
         }
 
-        public Builder setMetricResourceUri(String metricResourceUri) {
+        public Builder metricResourceUri(String metricResourceUri) {
             this.metricResourceUri = Input.of(Objects.requireNonNull(metricResourceUri));
             return this;
         }
 
-        public Builder setOperator(Input<ComparisonOperationType> operator) {
+        public Builder operator(Input<ComparisonOperationType> operator) {
             this.operator = Objects.requireNonNull(operator);
             return this;
         }
 
-        public Builder setOperator(ComparisonOperationType operator) {
+        public Builder operator(ComparisonOperationType operator) {
             this.operator = Input.of(Objects.requireNonNull(operator));
             return this;
         }
 
-        public Builder setStatistic(Input<MetricStatisticType> statistic) {
+        public Builder statistic(Input<MetricStatisticType> statistic) {
             this.statistic = Objects.requireNonNull(statistic);
             return this;
         }
 
-        public Builder setStatistic(MetricStatisticType statistic) {
+        public Builder statistic(MetricStatisticType statistic) {
             this.statistic = Input.of(Objects.requireNonNull(statistic));
             return this;
         }
 
-        public Builder setThreshold(Input<Double> threshold) {
+        public Builder threshold(Input<Double> threshold) {
             this.threshold = Objects.requireNonNull(threshold);
             return this;
         }
 
-        public Builder setThreshold(Double threshold) {
+        public Builder threshold(Double threshold) {
             this.threshold = Input.of(Objects.requireNonNull(threshold));
             return this;
         }
 
-        public Builder setTimeAggregation(Input<TimeAggregationType> timeAggregation) {
+        public Builder timeAggregation(Input<TimeAggregationType> timeAggregation) {
             this.timeAggregation = Objects.requireNonNull(timeAggregation);
             return this;
         }
 
-        public Builder setTimeAggregation(TimeAggregationType timeAggregation) {
+        public Builder timeAggregation(TimeAggregationType timeAggregation) {
             this.timeAggregation = Input.of(Objects.requireNonNull(timeAggregation));
             return this;
         }
 
-        public Builder setTimeGrain(Input<String> timeGrain) {
+        public Builder timeGrain(Input<String> timeGrain) {
             this.timeGrain = Objects.requireNonNull(timeGrain);
             return this;
         }
 
-        public Builder setTimeGrain(String timeGrain) {
+        public Builder timeGrain(String timeGrain) {
             this.timeGrain = Input.of(Objects.requireNonNull(timeGrain));
             return this;
         }
 
-        public Builder setTimeWindow(Input<String> timeWindow) {
+        public Builder timeWindow(Input<String> timeWindow) {
             this.timeWindow = Objects.requireNonNull(timeWindow);
             return this;
         }
 
-        public Builder setTimeWindow(String timeWindow) {
+        public Builder timeWindow(String timeWindow) {
             this.timeWindow = Input.of(Objects.requireNonNull(timeWindow));
             return this;
         }

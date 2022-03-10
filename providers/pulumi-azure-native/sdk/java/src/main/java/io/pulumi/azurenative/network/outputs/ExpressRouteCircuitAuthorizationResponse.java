@@ -147,37 +147,37 @@ public final class ExpressRouteCircuitAuthorizationResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setAuthorizationKey(@Nullable String authorizationKey) {
+        public Builder authorizationKey(@Nullable String authorizationKey) {
             this.authorizationKey = authorizationKey;
             return this;
         }
 
-        public Builder setAuthorizationUseStatus(@Nullable String authorizationUseStatus) {
+        public Builder authorizationUseStatus(@Nullable String authorizationUseStatus) {
             this.authorizationUseStatus = authorizationUseStatus;
             return this;
         }
 
-        public Builder setEtag(String etag) {
+        public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

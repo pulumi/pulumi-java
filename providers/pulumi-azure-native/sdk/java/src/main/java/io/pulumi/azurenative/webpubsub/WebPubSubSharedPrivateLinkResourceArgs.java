@@ -134,62 +134,62 @@ public final class WebPubSubSharedPrivateLinkResourceArgs extends io.pulumi.reso
     	      this.sharedPrivateLinkResourceName = defaults.sharedPrivateLinkResourceName;
         }
 
-        public Builder setGroupId(Input<String> groupId) {
+        public Builder groupId(Input<String> groupId) {
             this.groupId = Objects.requireNonNull(groupId);
             return this;
         }
 
-        public Builder setGroupId(String groupId) {
+        public Builder groupId(String groupId) {
             this.groupId = Input.of(Objects.requireNonNull(groupId));
             return this;
         }
 
-        public Builder setPrivateLinkResourceId(Input<String> privateLinkResourceId) {
+        public Builder privateLinkResourceId(Input<String> privateLinkResourceId) {
             this.privateLinkResourceId = Objects.requireNonNull(privateLinkResourceId);
             return this;
         }
 
-        public Builder setPrivateLinkResourceId(String privateLinkResourceId) {
+        public Builder privateLinkResourceId(String privateLinkResourceId) {
             this.privateLinkResourceId = Input.of(Objects.requireNonNull(privateLinkResourceId));
             return this;
         }
 
-        public Builder setRequestMessage(@Nullable Input<String> requestMessage) {
+        public Builder requestMessage(@Nullable Input<String> requestMessage) {
             this.requestMessage = requestMessage;
             return this;
         }
 
-        public Builder setRequestMessage(@Nullable String requestMessage) {
+        public Builder requestMessage(@Nullable String requestMessage) {
             this.requestMessage = Input.ofNullable(requestMessage);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setResourceName(Input<String> resourceName) {
+        public Builder resourceName(Input<String> resourceName) {
             this.resourceName = Objects.requireNonNull(resourceName);
             return this;
         }
 
-        public Builder setResourceName(String resourceName) {
+        public Builder resourceName(String resourceName) {
             this.resourceName = Input.of(Objects.requireNonNull(resourceName));
             return this;
         }
 
-        public Builder setSharedPrivateLinkResourceName(@Nullable Input<String> sharedPrivateLinkResourceName) {
+        public Builder sharedPrivateLinkResourceName(@Nullable Input<String> sharedPrivateLinkResourceName) {
             this.sharedPrivateLinkResourceName = sharedPrivateLinkResourceName;
             return this;
         }
 
-        public Builder setSharedPrivateLinkResourceName(@Nullable String sharedPrivateLinkResourceName) {
+        public Builder sharedPrivateLinkResourceName(@Nullable String sharedPrivateLinkResourceName) {
             this.sharedPrivateLinkResourceName = Input.ofNullable(sharedPrivateLinkResourceName);
             return this;
         }

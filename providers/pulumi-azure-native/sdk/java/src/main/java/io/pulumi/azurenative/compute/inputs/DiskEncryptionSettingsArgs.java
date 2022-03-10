@@ -92,32 +92,32 @@ public final class DiskEncryptionSettingsArgs extends io.pulumi.resources.Resour
     	      this.keyEncryptionKey = defaults.keyEncryptionKey;
         }
 
-        public Builder setDiskEncryptionKey(@Nullable Input<KeyVaultSecretReferenceArgs> diskEncryptionKey) {
+        public Builder diskEncryptionKey(@Nullable Input<KeyVaultSecretReferenceArgs> diskEncryptionKey) {
             this.diskEncryptionKey = diskEncryptionKey;
             return this;
         }
 
-        public Builder setDiskEncryptionKey(@Nullable KeyVaultSecretReferenceArgs diskEncryptionKey) {
+        public Builder diskEncryptionKey(@Nullable KeyVaultSecretReferenceArgs diskEncryptionKey) {
             this.diskEncryptionKey = Input.ofNullable(diskEncryptionKey);
             return this;
         }
 
-        public Builder setEnabled(@Nullable Input<Boolean> enabled) {
+        public Builder enabled(@Nullable Input<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
 
-        public Builder setEnabled(@Nullable Boolean enabled) {
+        public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Input.ofNullable(enabled);
             return this;
         }
 
-        public Builder setKeyEncryptionKey(@Nullable Input<KeyVaultKeyReferenceArgs> keyEncryptionKey) {
+        public Builder keyEncryptionKey(@Nullable Input<KeyVaultKeyReferenceArgs> keyEncryptionKey) {
             this.keyEncryptionKey = keyEncryptionKey;
             return this;
         }
 
-        public Builder setKeyEncryptionKey(@Nullable KeyVaultKeyReferenceArgs keyEncryptionKey) {
+        public Builder keyEncryptionKey(@Nullable KeyVaultKeyReferenceArgs keyEncryptionKey) {
             this.keyEncryptionKey = Input.ofNullable(keyEncryptionKey);
             return this;
         }

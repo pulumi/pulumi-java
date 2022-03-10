@@ -143,62 +143,62 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
     	      this.powerOnBoot = defaults.powerOnBoot;
         }
 
-        public Builder setDeviceKey(@Nullable Input<Integer> deviceKey) {
+        public Builder deviceKey(@Nullable Input<Integer> deviceKey) {
             this.deviceKey = deviceKey;
             return this;
         }
 
-        public Builder setDeviceKey(@Nullable Integer deviceKey) {
+        public Builder deviceKey(@Nullable Integer deviceKey) {
             this.deviceKey = Input.ofNullable(deviceKey);
             return this;
         }
 
-        public Builder setIpSettings(@Nullable Input<NicIPSettingsArgs> ipSettings) {
+        public Builder ipSettings(@Nullable Input<NicIPSettingsArgs> ipSettings) {
             this.ipSettings = ipSettings;
             return this;
         }
 
-        public Builder setIpSettings(@Nullable NicIPSettingsArgs ipSettings) {
+        public Builder ipSettings(@Nullable NicIPSettingsArgs ipSettings) {
             this.ipSettings = Input.ofNullable(ipSettings);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setNetworkId(@Nullable Input<String> networkId) {
+        public Builder networkId(@Nullable Input<String> networkId) {
             this.networkId = networkId;
             return this;
         }
 
-        public Builder setNetworkId(@Nullable String networkId) {
+        public Builder networkId(@Nullable String networkId) {
             this.networkId = Input.ofNullable(networkId);
             return this;
         }
 
-        public Builder setNicType(@Nullable Input<Either<String,NICType>> nicType) {
+        public Builder nicType(@Nullable Input<Either<String,NICType>> nicType) {
             this.nicType = nicType;
             return this;
         }
 
-        public Builder setNicType(@Nullable Either<String,NICType> nicType) {
+        public Builder nicType(@Nullable Either<String,NICType> nicType) {
             this.nicType = Input.ofNullable(nicType);
             return this;
         }
 
-        public Builder setPowerOnBoot(@Nullable Input<Either<String,PowerOnBootOption>> powerOnBoot) {
+        public Builder powerOnBoot(@Nullable Input<Either<String,PowerOnBootOption>> powerOnBoot) {
             this.powerOnBoot = powerOnBoot;
             return this;
         }
 
-        public Builder setPowerOnBoot(@Nullable Either<String,PowerOnBootOption> powerOnBoot) {
+        public Builder powerOnBoot(@Nullable Either<String,PowerOnBootOption> powerOnBoot) {
             this.powerOnBoot = Input.ofNullable(powerOnBoot);
             return this;
         }

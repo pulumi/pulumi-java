@@ -108,22 +108,22 @@ public final class UrlSigningKeyParametersResponse extends io.pulumi.resources.I
     	      this.type = defaults.type;
         }
 
-        public Builder setKeyId(String keyId) {
+        public Builder keyId(String keyId) {
             this.keyId = Objects.requireNonNull(keyId);
             return this;
         }
 
-        public Builder setSecretSource(ResourceReferenceResponse secretSource) {
+        public Builder secretSource(ResourceReferenceResponse secretSource) {
             this.secretSource = Objects.requireNonNull(secretSource);
             return this;
         }
 
-        public Builder setSecretVersion(@Nullable String secretVersion) {
+        public Builder secretVersion(@Nullable String secretVersion) {
             this.secretVersion = secretVersion;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

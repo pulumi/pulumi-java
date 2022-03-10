@@ -68,12 +68,12 @@ public final class GetScalingPlanArgs extends io.pulumi.resources.InvokeArgs {
     	      this.scalingPlanName = defaults.scalingPlanName;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setScalingPlanName(String scalingPlanName) {
+        public Builder scalingPlanName(String scalingPlanName) {
             this.scalingPlanName = Objects.requireNonNull(scalingPlanName);
             return this;
         }

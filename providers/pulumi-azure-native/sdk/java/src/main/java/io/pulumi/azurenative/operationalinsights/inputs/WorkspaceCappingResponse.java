@@ -91,17 +91,17 @@ public final class WorkspaceCappingResponse extends io.pulumi.resources.InvokeAr
     	      this.quotaNextResetTime = defaults.quotaNextResetTime;
         }
 
-        public Builder setDailyQuotaGb(@Nullable Double dailyQuotaGb) {
+        public Builder dailyQuotaGb(@Nullable Double dailyQuotaGb) {
             this.dailyQuotaGb = dailyQuotaGb;
             return this;
         }
 
-        public Builder setDataIngestionStatus(String dataIngestionStatus) {
+        public Builder dataIngestionStatus(String dataIngestionStatus) {
             this.dataIngestionStatus = Objects.requireNonNull(dataIngestionStatus);
             return this;
         }
 
-        public Builder setQuotaNextResetTime(String quotaNextResetTime) {
+        public Builder quotaNextResetTime(String quotaNextResetTime) {
             this.quotaNextResetTime = Objects.requireNonNull(quotaNextResetTime);
             return this;
         }

@@ -100,22 +100,22 @@ public final class CertificateConfigurationResponse {
     	      this.storeName = defaults.storeName;
         }
 
-        public Builder setCertificate(@Nullable CertificateInformationResponse certificate) {
+        public Builder certificate(@Nullable CertificateInformationResponse certificate) {
             this.certificate = certificate;
             return this;
         }
 
-        public Builder setCertificatePassword(@Nullable String certificatePassword) {
+        public Builder certificatePassword(@Nullable String certificatePassword) {
             this.certificatePassword = certificatePassword;
             return this;
         }
 
-        public Builder setEncodedCertificate(@Nullable String encodedCertificate) {
+        public Builder encodedCertificate(@Nullable String encodedCertificate) {
             this.encodedCertificate = encodedCertificate;
             return this;
         }
 
-        public Builder setStoreName(String storeName) {
+        public Builder storeName(String storeName) {
             this.storeName = Objects.requireNonNull(storeName);
             return this;
         }

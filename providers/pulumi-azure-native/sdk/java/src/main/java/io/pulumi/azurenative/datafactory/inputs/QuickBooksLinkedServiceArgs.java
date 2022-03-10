@@ -275,142 +275,142 @@ public final class QuickBooksLinkedServiceArgs extends io.pulumi.resources.Resou
     	      this.useEncryptedEndpoints = defaults.useEncryptedEndpoints;
         }
 
-        public Builder setAccessToken(@Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> accessToken) {
+        public Builder accessToken(@Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> accessToken) {
             this.accessToken = accessToken;
             return this;
         }
 
-        public Builder setAccessToken(@Nullable Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> accessToken) {
+        public Builder accessToken(@Nullable Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> accessToken) {
             this.accessToken = Input.ofNullable(accessToken);
             return this;
         }
 
-        public Builder setAccessTokenSecret(@Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> accessTokenSecret) {
+        public Builder accessTokenSecret(@Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> accessTokenSecret) {
             this.accessTokenSecret = accessTokenSecret;
             return this;
         }
 
-        public Builder setAccessTokenSecret(@Nullable Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> accessTokenSecret) {
+        public Builder accessTokenSecret(@Nullable Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> accessTokenSecret) {
             this.accessTokenSecret = Input.ofNullable(accessTokenSecret);
             return this;
         }
 
-        public Builder setAnnotations(@Nullable Input<List<Object>> annotations) {
+        public Builder annotations(@Nullable Input<List<Object>> annotations) {
             this.annotations = annotations;
             return this;
         }
 
-        public Builder setAnnotations(@Nullable List<Object> annotations) {
+        public Builder annotations(@Nullable List<Object> annotations) {
             this.annotations = Input.ofNullable(annotations);
             return this;
         }
 
-        public Builder setCompanyId(@Nullable Input<Object> companyId) {
+        public Builder companyId(@Nullable Input<Object> companyId) {
             this.companyId = companyId;
             return this;
         }
 
-        public Builder setCompanyId(@Nullable Object companyId) {
+        public Builder companyId(@Nullable Object companyId) {
             this.companyId = Input.ofNullable(companyId);
             return this;
         }
 
-        public Builder setConnectVia(@Nullable Input<IntegrationRuntimeReferenceArgs> connectVia) {
+        public Builder connectVia(@Nullable Input<IntegrationRuntimeReferenceArgs> connectVia) {
             this.connectVia = connectVia;
             return this;
         }
 
-        public Builder setConnectVia(@Nullable IntegrationRuntimeReferenceArgs connectVia) {
+        public Builder connectVia(@Nullable IntegrationRuntimeReferenceArgs connectVia) {
             this.connectVia = Input.ofNullable(connectVia);
             return this;
         }
 
-        public Builder setConnectionProperties(@Nullable Input<Object> connectionProperties) {
+        public Builder connectionProperties(@Nullable Input<Object> connectionProperties) {
             this.connectionProperties = connectionProperties;
             return this;
         }
 
-        public Builder setConnectionProperties(@Nullable Object connectionProperties) {
+        public Builder connectionProperties(@Nullable Object connectionProperties) {
             this.connectionProperties = Input.ofNullable(connectionProperties);
             return this;
         }
 
-        public Builder setConsumerKey(@Nullable Input<Object> consumerKey) {
+        public Builder consumerKey(@Nullable Input<Object> consumerKey) {
             this.consumerKey = consumerKey;
             return this;
         }
 
-        public Builder setConsumerKey(@Nullable Object consumerKey) {
+        public Builder consumerKey(@Nullable Object consumerKey) {
             this.consumerKey = Input.ofNullable(consumerKey);
             return this;
         }
 
-        public Builder setConsumerSecret(@Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> consumerSecret) {
+        public Builder consumerSecret(@Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> consumerSecret) {
             this.consumerSecret = consumerSecret;
             return this;
         }
 
-        public Builder setConsumerSecret(@Nullable Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> consumerSecret) {
+        public Builder consumerSecret(@Nullable Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> consumerSecret) {
             this.consumerSecret = Input.ofNullable(consumerSecret);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setEncryptedCredential(@Nullable Input<Object> encryptedCredential) {
+        public Builder encryptedCredential(@Nullable Input<Object> encryptedCredential) {
             this.encryptedCredential = encryptedCredential;
             return this;
         }
 
-        public Builder setEncryptedCredential(@Nullable Object encryptedCredential) {
+        public Builder encryptedCredential(@Nullable Object encryptedCredential) {
             this.encryptedCredential = Input.ofNullable(encryptedCredential);
             return this;
         }
 
-        public Builder setEndpoint(@Nullable Input<Object> endpoint) {
+        public Builder endpoint(@Nullable Input<Object> endpoint) {
             this.endpoint = endpoint;
             return this;
         }
 
-        public Builder setEndpoint(@Nullable Object endpoint) {
+        public Builder endpoint(@Nullable Object endpoint) {
             this.endpoint = Input.ofNullable(endpoint);
             return this;
         }
 
-        public Builder setParameters(@Nullable Input<Map<String,ParameterSpecificationArgs>> parameters) {
+        public Builder parameters(@Nullable Input<Map<String,ParameterSpecificationArgs>> parameters) {
             this.parameters = parameters;
             return this;
         }
 
-        public Builder setParameters(@Nullable Map<String,ParameterSpecificationArgs> parameters) {
+        public Builder parameters(@Nullable Map<String,ParameterSpecificationArgs> parameters) {
             this.parameters = Input.ofNullable(parameters);
             return this;
         }
 
-        public Builder setType(Input<String> type) {
+        public Builder type(Input<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }
 
-        public Builder setUseEncryptedEndpoints(@Nullable Input<Object> useEncryptedEndpoints) {
+        public Builder useEncryptedEndpoints(@Nullable Input<Object> useEncryptedEndpoints) {
             this.useEncryptedEndpoints = useEncryptedEndpoints;
             return this;
         }
 
-        public Builder setUseEncryptedEndpoints(@Nullable Object useEncryptedEndpoints) {
+        public Builder useEncryptedEndpoints(@Nullable Object useEncryptedEndpoints) {
             this.useEncryptedEndpoints = Input.ofNullable(useEncryptedEndpoints);
             return this;
         }

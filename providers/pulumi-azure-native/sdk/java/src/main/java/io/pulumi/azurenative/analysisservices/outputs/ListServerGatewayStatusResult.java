@@ -50,7 +50,7 @@ public final class ListServerGatewayStatusResult {
     	      this.status = defaults.status;
         }
 
-        public Builder setStatus(@Nullable Integer status) {
+        public Builder status(@Nullable Integer status) {
             this.status = status;
             return this;
         }

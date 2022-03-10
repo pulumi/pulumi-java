@@ -147,37 +147,37 @@ public final class LdapsSettingsResponse {
     	      this.publicCertificate = defaults.publicCertificate;
         }
 
-        public Builder setCertificateNotAfter(String certificateNotAfter) {
+        public Builder certificateNotAfter(String certificateNotAfter) {
             this.certificateNotAfter = Objects.requireNonNull(certificateNotAfter);
             return this;
         }
 
-        public Builder setCertificateThumbprint(String certificateThumbprint) {
+        public Builder certificateThumbprint(String certificateThumbprint) {
             this.certificateThumbprint = Objects.requireNonNull(certificateThumbprint);
             return this;
         }
 
-        public Builder setExternalAccess(@Nullable String externalAccess) {
+        public Builder externalAccess(@Nullable String externalAccess) {
             this.externalAccess = externalAccess;
             return this;
         }
 
-        public Builder setLdaps(@Nullable String ldaps) {
+        public Builder ldaps(@Nullable String ldaps) {
             this.ldaps = ldaps;
             return this;
         }
 
-        public Builder setPfxCertificate(@Nullable String pfxCertificate) {
+        public Builder pfxCertificate(@Nullable String pfxCertificate) {
             this.pfxCertificate = pfxCertificate;
             return this;
         }
 
-        public Builder setPfxCertificatePassword(@Nullable String pfxCertificatePassword) {
+        public Builder pfxCertificatePassword(@Nullable String pfxCertificatePassword) {
             this.pfxCertificatePassword = pfxCertificatePassword;
             return this;
         }
 
-        public Builder setPublicCertificate(String publicCertificate) {
+        public Builder publicCertificate(String publicCertificate) {
             this.publicCertificate = Objects.requireNonNull(publicCertificate);
             return this;
         }

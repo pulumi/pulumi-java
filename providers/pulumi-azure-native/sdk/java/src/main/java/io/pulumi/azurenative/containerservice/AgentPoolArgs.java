@@ -616,352 +616,352 @@ public final class AgentPoolArgs extends io.pulumi.resources.ResourceArgs {
     	      this.vnetSubnetID = defaults.vnetSubnetID;
         }
 
-        public Builder setAgentPoolName(@Nullable Input<String> agentPoolName) {
+        public Builder agentPoolName(@Nullable Input<String> agentPoolName) {
             this.agentPoolName = agentPoolName;
             return this;
         }
 
-        public Builder setAgentPoolName(@Nullable String agentPoolName) {
+        public Builder agentPoolName(@Nullable String agentPoolName) {
             this.agentPoolName = Input.ofNullable(agentPoolName);
             return this;
         }
 
-        public Builder setAvailabilityZones(@Nullable Input<List<String>> availabilityZones) {
+        public Builder availabilityZones(@Nullable Input<List<String>> availabilityZones) {
             this.availabilityZones = availabilityZones;
             return this;
         }
 
-        public Builder setAvailabilityZones(@Nullable List<String> availabilityZones) {
+        public Builder availabilityZones(@Nullable List<String> availabilityZones) {
             this.availabilityZones = Input.ofNullable(availabilityZones);
             return this;
         }
 
-        public Builder setCount(@Nullable Input<Integer> count) {
+        public Builder count(@Nullable Input<Integer> count) {
             this.count = count;
             return this;
         }
 
-        public Builder setCount(@Nullable Integer count) {
+        public Builder count(@Nullable Integer count) {
             this.count = Input.ofNullable(count);
             return this;
         }
 
-        public Builder setEnableAutoScaling(@Nullable Input<Boolean> enableAutoScaling) {
+        public Builder enableAutoScaling(@Nullable Input<Boolean> enableAutoScaling) {
             this.enableAutoScaling = enableAutoScaling;
             return this;
         }
 
-        public Builder setEnableAutoScaling(@Nullable Boolean enableAutoScaling) {
+        public Builder enableAutoScaling(@Nullable Boolean enableAutoScaling) {
             this.enableAutoScaling = Input.ofNullable(enableAutoScaling);
             return this;
         }
 
-        public Builder setEnableEncryptionAtHost(@Nullable Input<Boolean> enableEncryptionAtHost) {
+        public Builder enableEncryptionAtHost(@Nullable Input<Boolean> enableEncryptionAtHost) {
             this.enableEncryptionAtHost = enableEncryptionAtHost;
             return this;
         }
 
-        public Builder setEnableEncryptionAtHost(@Nullable Boolean enableEncryptionAtHost) {
+        public Builder enableEncryptionAtHost(@Nullable Boolean enableEncryptionAtHost) {
             this.enableEncryptionAtHost = Input.ofNullable(enableEncryptionAtHost);
             return this;
         }
 
-        public Builder setEnableFIPS(@Nullable Input<Boolean> enableFIPS) {
+        public Builder enableFIPS(@Nullable Input<Boolean> enableFIPS) {
             this.enableFIPS = enableFIPS;
             return this;
         }
 
-        public Builder setEnableFIPS(@Nullable Boolean enableFIPS) {
+        public Builder enableFIPS(@Nullable Boolean enableFIPS) {
             this.enableFIPS = Input.ofNullable(enableFIPS);
             return this;
         }
 
-        public Builder setEnableNodePublicIP(@Nullable Input<Boolean> enableNodePublicIP) {
+        public Builder enableNodePublicIP(@Nullable Input<Boolean> enableNodePublicIP) {
             this.enableNodePublicIP = enableNodePublicIP;
             return this;
         }
 
-        public Builder setEnableNodePublicIP(@Nullable Boolean enableNodePublicIP) {
+        public Builder enableNodePublicIP(@Nullable Boolean enableNodePublicIP) {
             this.enableNodePublicIP = Input.ofNullable(enableNodePublicIP);
             return this;
         }
 
-        public Builder setGpuInstanceProfile(@Nullable Input<Either<String,GPUInstanceProfile>> gpuInstanceProfile) {
+        public Builder gpuInstanceProfile(@Nullable Input<Either<String,GPUInstanceProfile>> gpuInstanceProfile) {
             this.gpuInstanceProfile = gpuInstanceProfile;
             return this;
         }
 
-        public Builder setGpuInstanceProfile(@Nullable Either<String,GPUInstanceProfile> gpuInstanceProfile) {
+        public Builder gpuInstanceProfile(@Nullable Either<String,GPUInstanceProfile> gpuInstanceProfile) {
             this.gpuInstanceProfile = Input.ofNullable(gpuInstanceProfile);
             return this;
         }
 
-        public Builder setKubeletConfig(@Nullable Input<KubeletConfigArgs> kubeletConfig) {
+        public Builder kubeletConfig(@Nullable Input<KubeletConfigArgs> kubeletConfig) {
             this.kubeletConfig = kubeletConfig;
             return this;
         }
 
-        public Builder setKubeletConfig(@Nullable KubeletConfigArgs kubeletConfig) {
+        public Builder kubeletConfig(@Nullable KubeletConfigArgs kubeletConfig) {
             this.kubeletConfig = Input.ofNullable(kubeletConfig);
             return this;
         }
 
-        public Builder setKubeletDiskType(@Nullable Input<Either<String,KubeletDiskType>> kubeletDiskType) {
+        public Builder kubeletDiskType(@Nullable Input<Either<String,KubeletDiskType>> kubeletDiskType) {
             this.kubeletDiskType = kubeletDiskType;
             return this;
         }
 
-        public Builder setKubeletDiskType(@Nullable Either<String,KubeletDiskType> kubeletDiskType) {
+        public Builder kubeletDiskType(@Nullable Either<String,KubeletDiskType> kubeletDiskType) {
             this.kubeletDiskType = Input.ofNullable(kubeletDiskType);
             return this;
         }
 
-        public Builder setLinuxOSConfig(@Nullable Input<LinuxOSConfigArgs> linuxOSConfig) {
+        public Builder linuxOSConfig(@Nullable Input<LinuxOSConfigArgs> linuxOSConfig) {
             this.linuxOSConfig = linuxOSConfig;
             return this;
         }
 
-        public Builder setLinuxOSConfig(@Nullable LinuxOSConfigArgs linuxOSConfig) {
+        public Builder linuxOSConfig(@Nullable LinuxOSConfigArgs linuxOSConfig) {
             this.linuxOSConfig = Input.ofNullable(linuxOSConfig);
             return this;
         }
 
-        public Builder setMaxCount(@Nullable Input<Integer> maxCount) {
+        public Builder maxCount(@Nullable Input<Integer> maxCount) {
             this.maxCount = maxCount;
             return this;
         }
 
-        public Builder setMaxCount(@Nullable Integer maxCount) {
+        public Builder maxCount(@Nullable Integer maxCount) {
             this.maxCount = Input.ofNullable(maxCount);
             return this;
         }
 
-        public Builder setMaxPods(@Nullable Input<Integer> maxPods) {
+        public Builder maxPods(@Nullable Input<Integer> maxPods) {
             this.maxPods = maxPods;
             return this;
         }
 
-        public Builder setMaxPods(@Nullable Integer maxPods) {
+        public Builder maxPods(@Nullable Integer maxPods) {
             this.maxPods = Input.ofNullable(maxPods);
             return this;
         }
 
-        public Builder setMinCount(@Nullable Input<Integer> minCount) {
+        public Builder minCount(@Nullable Input<Integer> minCount) {
             this.minCount = minCount;
             return this;
         }
 
-        public Builder setMinCount(@Nullable Integer minCount) {
+        public Builder minCount(@Nullable Integer minCount) {
             this.minCount = Input.ofNullable(minCount);
             return this;
         }
 
-        public Builder setMode(@Nullable Input<Either<String,AgentPoolMode>> mode) {
+        public Builder mode(@Nullable Input<Either<String,AgentPoolMode>> mode) {
             this.mode = mode;
             return this;
         }
 
-        public Builder setMode(@Nullable Either<String,AgentPoolMode> mode) {
+        public Builder mode(@Nullable Either<String,AgentPoolMode> mode) {
             this.mode = Input.ofNullable(mode);
             return this;
         }
 
-        public Builder setNodeLabels(@Nullable Input<Map<String,String>> nodeLabels) {
+        public Builder nodeLabels(@Nullable Input<Map<String,String>> nodeLabels) {
             this.nodeLabels = nodeLabels;
             return this;
         }
 
-        public Builder setNodeLabels(@Nullable Map<String,String> nodeLabels) {
+        public Builder nodeLabels(@Nullable Map<String,String> nodeLabels) {
             this.nodeLabels = Input.ofNullable(nodeLabels);
             return this;
         }
 
-        public Builder setNodePublicIPPrefixID(@Nullable Input<String> nodePublicIPPrefixID) {
+        public Builder nodePublicIPPrefixID(@Nullable Input<String> nodePublicIPPrefixID) {
             this.nodePublicIPPrefixID = nodePublicIPPrefixID;
             return this;
         }
 
-        public Builder setNodePublicIPPrefixID(@Nullable String nodePublicIPPrefixID) {
+        public Builder nodePublicIPPrefixID(@Nullable String nodePublicIPPrefixID) {
             this.nodePublicIPPrefixID = Input.ofNullable(nodePublicIPPrefixID);
             return this;
         }
 
-        public Builder setNodeTaints(@Nullable Input<List<String>> nodeTaints) {
+        public Builder nodeTaints(@Nullable Input<List<String>> nodeTaints) {
             this.nodeTaints = nodeTaints;
             return this;
         }
 
-        public Builder setNodeTaints(@Nullable List<String> nodeTaints) {
+        public Builder nodeTaints(@Nullable List<String> nodeTaints) {
             this.nodeTaints = Input.ofNullable(nodeTaints);
             return this;
         }
 
-        public Builder setOrchestratorVersion(@Nullable Input<String> orchestratorVersion) {
+        public Builder orchestratorVersion(@Nullable Input<String> orchestratorVersion) {
             this.orchestratorVersion = orchestratorVersion;
             return this;
         }
 
-        public Builder setOrchestratorVersion(@Nullable String orchestratorVersion) {
+        public Builder orchestratorVersion(@Nullable String orchestratorVersion) {
             this.orchestratorVersion = Input.ofNullable(orchestratorVersion);
             return this;
         }
 
-        public Builder setOsDiskSizeGB(@Nullable Input<Integer> osDiskSizeGB) {
+        public Builder osDiskSizeGB(@Nullable Input<Integer> osDiskSizeGB) {
             this.osDiskSizeGB = osDiskSizeGB;
             return this;
         }
 
-        public Builder setOsDiskSizeGB(@Nullable Integer osDiskSizeGB) {
+        public Builder osDiskSizeGB(@Nullable Integer osDiskSizeGB) {
             this.osDiskSizeGB = Input.ofNullable(osDiskSizeGB);
             return this;
         }
 
-        public Builder setOsDiskType(@Nullable Input<Either<String,OSDiskType>> osDiskType) {
+        public Builder osDiskType(@Nullable Input<Either<String,OSDiskType>> osDiskType) {
             this.osDiskType = osDiskType;
             return this;
         }
 
-        public Builder setOsDiskType(@Nullable Either<String,OSDiskType> osDiskType) {
+        public Builder osDiskType(@Nullable Either<String,OSDiskType> osDiskType) {
             this.osDiskType = Input.ofNullable(osDiskType);
             return this;
         }
 
-        public Builder setOsSKU(@Nullable Input<Either<String,OSSKU>> osSKU) {
+        public Builder osSKU(@Nullable Input<Either<String,OSSKU>> osSKU) {
             this.osSKU = osSKU;
             return this;
         }
 
-        public Builder setOsSKU(@Nullable Either<String,OSSKU> osSKU) {
+        public Builder osSKU(@Nullable Either<String,OSSKU> osSKU) {
             this.osSKU = Input.ofNullable(osSKU);
             return this;
         }
 
-        public Builder setOsType(@Nullable Input<Either<String,OSType>> osType) {
+        public Builder osType(@Nullable Input<Either<String,OSType>> osType) {
             this.osType = osType;
             return this;
         }
 
-        public Builder setOsType(@Nullable Either<String,OSType> osType) {
+        public Builder osType(@Nullable Either<String,OSType> osType) {
             this.osType = Input.ofNullable(osType);
             return this;
         }
 
-        public Builder setPodSubnetID(@Nullable Input<String> podSubnetID) {
+        public Builder podSubnetID(@Nullable Input<String> podSubnetID) {
             this.podSubnetID = podSubnetID;
             return this;
         }
 
-        public Builder setPodSubnetID(@Nullable String podSubnetID) {
+        public Builder podSubnetID(@Nullable String podSubnetID) {
             this.podSubnetID = Input.ofNullable(podSubnetID);
             return this;
         }
 
-        public Builder setProximityPlacementGroupID(@Nullable Input<String> proximityPlacementGroupID) {
+        public Builder proximityPlacementGroupID(@Nullable Input<String> proximityPlacementGroupID) {
             this.proximityPlacementGroupID = proximityPlacementGroupID;
             return this;
         }
 
-        public Builder setProximityPlacementGroupID(@Nullable String proximityPlacementGroupID) {
+        public Builder proximityPlacementGroupID(@Nullable String proximityPlacementGroupID) {
             this.proximityPlacementGroupID = Input.ofNullable(proximityPlacementGroupID);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setResourceName(Input<String> resourceName) {
+        public Builder resourceName(Input<String> resourceName) {
             this.resourceName = Objects.requireNonNull(resourceName);
             return this;
         }
 
-        public Builder setResourceName(String resourceName) {
+        public Builder resourceName(String resourceName) {
             this.resourceName = Input.of(Objects.requireNonNull(resourceName));
             return this;
         }
 
-        public Builder setScaleSetEvictionPolicy(@Nullable Input<Either<String,ScaleSetEvictionPolicy>> scaleSetEvictionPolicy) {
+        public Builder scaleSetEvictionPolicy(@Nullable Input<Either<String,ScaleSetEvictionPolicy>> scaleSetEvictionPolicy) {
             this.scaleSetEvictionPolicy = scaleSetEvictionPolicy;
             return this;
         }
 
-        public Builder setScaleSetEvictionPolicy(@Nullable Either<String,ScaleSetEvictionPolicy> scaleSetEvictionPolicy) {
+        public Builder scaleSetEvictionPolicy(@Nullable Either<String,ScaleSetEvictionPolicy> scaleSetEvictionPolicy) {
             this.scaleSetEvictionPolicy = Input.ofNullable(scaleSetEvictionPolicy);
             return this;
         }
 
-        public Builder setScaleSetPriority(@Nullable Input<Either<String,ScaleSetPriority>> scaleSetPriority) {
+        public Builder scaleSetPriority(@Nullable Input<Either<String,ScaleSetPriority>> scaleSetPriority) {
             this.scaleSetPriority = scaleSetPriority;
             return this;
         }
 
-        public Builder setScaleSetPriority(@Nullable Either<String,ScaleSetPriority> scaleSetPriority) {
+        public Builder scaleSetPriority(@Nullable Either<String,ScaleSetPriority> scaleSetPriority) {
             this.scaleSetPriority = Input.ofNullable(scaleSetPriority);
             return this;
         }
 
-        public Builder setSpotMaxPrice(@Nullable Input<Double> spotMaxPrice) {
+        public Builder spotMaxPrice(@Nullable Input<Double> spotMaxPrice) {
             this.spotMaxPrice = spotMaxPrice;
             return this;
         }
 
-        public Builder setSpotMaxPrice(@Nullable Double spotMaxPrice) {
+        public Builder spotMaxPrice(@Nullable Double spotMaxPrice) {
             this.spotMaxPrice = Input.ofNullable(spotMaxPrice);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setType(@Nullable Input<Either<String,AgentPoolType>> type) {
+        public Builder type(@Nullable Input<Either<String,AgentPoolType>> type) {
             this.type = type;
             return this;
         }
 
-        public Builder setType(@Nullable Either<String,AgentPoolType> type) {
+        public Builder type(@Nullable Either<String,AgentPoolType> type) {
             this.type = Input.ofNullable(type);
             return this;
         }
 
-        public Builder setUpgradeSettings(@Nullable Input<AgentPoolUpgradeSettingsArgs> upgradeSettings) {
+        public Builder upgradeSettings(@Nullable Input<AgentPoolUpgradeSettingsArgs> upgradeSettings) {
             this.upgradeSettings = upgradeSettings;
             return this;
         }
 
-        public Builder setUpgradeSettings(@Nullable AgentPoolUpgradeSettingsArgs upgradeSettings) {
+        public Builder upgradeSettings(@Nullable AgentPoolUpgradeSettingsArgs upgradeSettings) {
             this.upgradeSettings = Input.ofNullable(upgradeSettings);
             return this;
         }
 
-        public Builder setVmSize(@Nullable Input<String> vmSize) {
+        public Builder vmSize(@Nullable Input<String> vmSize) {
             this.vmSize = vmSize;
             return this;
         }
 
-        public Builder setVmSize(@Nullable String vmSize) {
+        public Builder vmSize(@Nullable String vmSize) {
             this.vmSize = Input.ofNullable(vmSize);
             return this;
         }
 
-        public Builder setVnetSubnetID(@Nullable Input<String> vnetSubnetID) {
+        public Builder vnetSubnetID(@Nullable Input<String> vnetSubnetID) {
             this.vnetSubnetID = vnetSubnetID;
             return this;
         }
 
-        public Builder setVnetSubnetID(@Nullable String vnetSubnetID) {
+        public Builder vnetSubnetID(@Nullable String vnetSubnetID) {
             this.vnetSubnetID = Input.ofNullable(vnetSubnetID);
             return this;
         }

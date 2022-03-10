@@ -92,32 +92,32 @@ public final class CbcsDrmConfigurationArgs extends io.pulumi.resources.Resource
     	      this.widevine = defaults.widevine;
         }
 
-        public Builder setFairPlay(@Nullable Input<StreamingPolicyFairPlayConfigurationArgs> fairPlay) {
+        public Builder fairPlay(@Nullable Input<StreamingPolicyFairPlayConfigurationArgs> fairPlay) {
             this.fairPlay = fairPlay;
             return this;
         }
 
-        public Builder setFairPlay(@Nullable StreamingPolicyFairPlayConfigurationArgs fairPlay) {
+        public Builder fairPlay(@Nullable StreamingPolicyFairPlayConfigurationArgs fairPlay) {
             this.fairPlay = Input.ofNullable(fairPlay);
             return this;
         }
 
-        public Builder setPlayReady(@Nullable Input<StreamingPolicyPlayReadyConfigurationArgs> playReady) {
+        public Builder playReady(@Nullable Input<StreamingPolicyPlayReadyConfigurationArgs> playReady) {
             this.playReady = playReady;
             return this;
         }
 
-        public Builder setPlayReady(@Nullable StreamingPolicyPlayReadyConfigurationArgs playReady) {
+        public Builder playReady(@Nullable StreamingPolicyPlayReadyConfigurationArgs playReady) {
             this.playReady = Input.ofNullable(playReady);
             return this;
         }
 
-        public Builder setWidevine(@Nullable Input<StreamingPolicyWidevineConfigurationArgs> widevine) {
+        public Builder widevine(@Nullable Input<StreamingPolicyWidevineConfigurationArgs> widevine) {
             this.widevine = widevine;
             return this;
         }
 
-        public Builder setWidevine(@Nullable StreamingPolicyWidevineConfigurationArgs widevine) {
+        public Builder widevine(@Nullable StreamingPolicyWidevineConfigurationArgs widevine) {
             this.widevine = Input.ofNullable(widevine);
             return this;
         }

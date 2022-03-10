@@ -118,27 +118,27 @@ public final class AverageLoadScalingTriggerResponse {
     	      this.upperLoadThreshold = defaults.upperLoadThreshold;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setLowerLoadThreshold(Double lowerLoadThreshold) {
+        public Builder lowerLoadThreshold(Double lowerLoadThreshold) {
             this.lowerLoadThreshold = Objects.requireNonNull(lowerLoadThreshold);
             return this;
         }
 
-        public Builder setMetric(AutoScalingResourceMetricResponse metric) {
+        public Builder metric(AutoScalingResourceMetricResponse metric) {
             this.metric = Objects.requireNonNull(metric);
             return this;
         }
 
-        public Builder setScaleIntervalInSeconds(Integer scaleIntervalInSeconds) {
+        public Builder scaleIntervalInSeconds(Integer scaleIntervalInSeconds) {
             this.scaleIntervalInSeconds = Objects.requireNonNull(scaleIntervalInSeconds);
             return this;
         }
 
-        public Builder setUpperLoadThreshold(Double upperLoadThreshold) {
+        public Builder upperLoadThreshold(Double upperLoadThreshold) {
             this.upperLoadThreshold = Objects.requireNonNull(upperLoadThreshold);
             return this;
         }

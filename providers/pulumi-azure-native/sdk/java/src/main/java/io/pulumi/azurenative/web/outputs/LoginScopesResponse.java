@@ -50,7 +50,7 @@ public final class LoginScopesResponse {
     	      this.scopes = defaults.scopes;
         }
 
-        public Builder setScopes(@Nullable List<String> scopes) {
+        public Builder scopes(@Nullable List<String> scopes) {
             this.scopes = scopes;
             return this;
         }

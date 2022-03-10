@@ -76,12 +76,12 @@ public final class VirtualMachineScaleSetExtensionProfileResponse extends io.pul
     	      this.extensionsTimeBudget = defaults.extensionsTimeBudget;
         }
 
-        public Builder setExtensions(@Nullable List<VirtualMachineScaleSetExtensionResponse> extensions) {
+        public Builder extensions(@Nullable List<VirtualMachineScaleSetExtensionResponse> extensions) {
             this.extensions = extensions;
             return this;
         }
 
-        public Builder setExtensionsTimeBudget(@Nullable String extensionsTimeBudget) {
+        public Builder extensionsTimeBudget(@Nullable String extensionsTimeBudget) {
             this.extensionsTimeBudget = extensionsTimeBudget;
             return this;
         }

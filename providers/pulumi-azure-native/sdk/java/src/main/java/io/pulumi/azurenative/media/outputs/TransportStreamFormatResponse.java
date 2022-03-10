@@ -86,17 +86,17 @@ public final class TransportStreamFormatResponse {
     	      this.outputFiles = defaults.outputFiles;
         }
 
-        public Builder setFilenamePattern(String filenamePattern) {
+        public Builder filenamePattern(String filenamePattern) {
             this.filenamePattern = Objects.requireNonNull(filenamePattern);
             return this;
         }
 
-        public Builder setOdataType(String odataType) {
+        public Builder odataType(String odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
 
-        public Builder setOutputFiles(@Nullable List<OutputFileResponse> outputFiles) {
+        public Builder outputFiles(@Nullable List<OutputFileResponse> outputFiles) {
             this.outputFiles = outputFiles;
             return this;
         }

@@ -109,42 +109,42 @@ public final class UniformInt64RangePartitionSchemeDescriptionArgs extends io.pu
     	      this.partitionScheme = defaults.partitionScheme;
         }
 
-        public Builder setCount(Input<Integer> count) {
+        public Builder count(Input<Integer> count) {
             this.count = Objects.requireNonNull(count);
             return this;
         }
 
-        public Builder setCount(Integer count) {
+        public Builder count(Integer count) {
             this.count = Input.of(Objects.requireNonNull(count));
             return this;
         }
 
-        public Builder setHighKey(Input<String> highKey) {
+        public Builder highKey(Input<String> highKey) {
             this.highKey = Objects.requireNonNull(highKey);
             return this;
         }
 
-        public Builder setHighKey(String highKey) {
+        public Builder highKey(String highKey) {
             this.highKey = Input.of(Objects.requireNonNull(highKey));
             return this;
         }
 
-        public Builder setLowKey(Input<String> lowKey) {
+        public Builder lowKey(Input<String> lowKey) {
             this.lowKey = Objects.requireNonNull(lowKey);
             return this;
         }
 
-        public Builder setLowKey(String lowKey) {
+        public Builder lowKey(String lowKey) {
             this.lowKey = Input.of(Objects.requireNonNull(lowKey));
             return this;
         }
 
-        public Builder setPartitionScheme(Input<String> partitionScheme) {
+        public Builder partitionScheme(Input<String> partitionScheme) {
             this.partitionScheme = Objects.requireNonNull(partitionScheme);
             return this;
         }
 
-        public Builder setPartitionScheme(String partitionScheme) {
+        public Builder partitionScheme(String partitionScheme) {
             this.partitionScheme = Input.of(Objects.requireNonNull(partitionScheme));
             return this;
         }

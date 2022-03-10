@@ -71,22 +71,22 @@ public final class TenantConfigurationArgs extends io.pulumi.resources.ResourceA
     	      this.enforcePrivateMarkdownStorage = defaults.enforcePrivateMarkdownStorage;
         }
 
-        public Builder setConfigurationName(@Nullable Input<String> configurationName) {
+        public Builder configurationName(@Nullable Input<String> configurationName) {
             this.configurationName = configurationName;
             return this;
         }
 
-        public Builder setConfigurationName(@Nullable String configurationName) {
+        public Builder configurationName(@Nullable String configurationName) {
             this.configurationName = Input.ofNullable(configurationName);
             return this;
         }
 
-        public Builder setEnforcePrivateMarkdownStorage(@Nullable Input<Boolean> enforcePrivateMarkdownStorage) {
+        public Builder enforcePrivateMarkdownStorage(@Nullable Input<Boolean> enforcePrivateMarkdownStorage) {
             this.enforcePrivateMarkdownStorage = enforcePrivateMarkdownStorage;
             return this;
         }
 
-        public Builder setEnforcePrivateMarkdownStorage(@Nullable Boolean enforcePrivateMarkdownStorage) {
+        public Builder enforcePrivateMarkdownStorage(@Nullable Boolean enforcePrivateMarkdownStorage) {
             this.enforcePrivateMarkdownStorage = Input.ofNullable(enforcePrivateMarkdownStorage);
             return this;
         }

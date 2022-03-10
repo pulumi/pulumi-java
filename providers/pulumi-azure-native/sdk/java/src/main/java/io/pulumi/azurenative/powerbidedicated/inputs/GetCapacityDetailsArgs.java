@@ -68,12 +68,12 @@ public final class GetCapacityDetailsArgs extends io.pulumi.resources.InvokeArgs
     	      this.resourceGroupName = defaults.resourceGroupName;
         }
 
-        public Builder setDedicatedCapacityName(String dedicatedCapacityName) {
+        public Builder dedicatedCapacityName(String dedicatedCapacityName) {
             this.dedicatedCapacityName = Objects.requireNonNull(dedicatedCapacityName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }

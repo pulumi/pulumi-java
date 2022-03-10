@@ -110,42 +110,42 @@ public final class WebClientCertificateAuthenticationArgs extends io.pulumi.reso
     	      this.url = defaults.url;
         }
 
-        public Builder setAuthenticationType(Input<String> authenticationType) {
+        public Builder authenticationType(Input<String> authenticationType) {
             this.authenticationType = Objects.requireNonNull(authenticationType);
             return this;
         }
 
-        public Builder setAuthenticationType(String authenticationType) {
+        public Builder authenticationType(String authenticationType) {
             this.authenticationType = Input.of(Objects.requireNonNull(authenticationType));
             return this;
         }
 
-        public Builder setPassword(Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password) {
+        public Builder password(Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password) {
             this.password = Objects.requireNonNull(password);
             return this;
         }
 
-        public Builder setPassword(Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> password) {
+        public Builder password(Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> password) {
             this.password = Input.of(Objects.requireNonNull(password));
             return this;
         }
 
-        public Builder setPfx(Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> pfx) {
+        public Builder pfx(Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> pfx) {
             this.pfx = Objects.requireNonNull(pfx);
             return this;
         }
 
-        public Builder setPfx(Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> pfx) {
+        public Builder pfx(Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> pfx) {
             this.pfx = Input.of(Objects.requireNonNull(pfx));
             return this;
         }
 
-        public Builder setUrl(Input<Object> url) {
+        public Builder url(Input<Object> url) {
             this.url = Objects.requireNonNull(url);
             return this;
         }
 
-        public Builder setUrl(Object url) {
+        public Builder url(Object url) {
             this.url = Input.of(Objects.requireNonNull(url));
             return this;
         }

@@ -175,47 +175,47 @@ public final class UserFacingErrorResponse {
     	      this.target = defaults.target;
         }
 
-        public Builder setCode(@Nullable String code) {
+        public Builder code(@Nullable String code) {
             this.code = code;
             return this;
         }
 
-        public Builder setDetails(@Nullable List<UserFacingErrorResponse> details) {
+        public Builder details(@Nullable List<UserFacingErrorResponse> details) {
             this.details = details;
             return this;
         }
 
-        public Builder setInnerError(@Nullable InnerErrorResponse innerError) {
+        public Builder innerError(@Nullable InnerErrorResponse innerError) {
             this.innerError = innerError;
             return this;
         }
 
-        public Builder setIsRetryable(@Nullable Boolean isRetryable) {
+        public Builder isRetryable(@Nullable Boolean isRetryable) {
             this.isRetryable = isRetryable;
             return this;
         }
 
-        public Builder setIsUserError(@Nullable Boolean isUserError) {
+        public Builder isUserError(@Nullable Boolean isUserError) {
             this.isUserError = isUserError;
             return this;
         }
 
-        public Builder setMessage(@Nullable String message) {
+        public Builder message(@Nullable String message) {
             this.message = message;
             return this;
         }
 
-        public Builder setProperties(@Nullable Map<String,String> properties) {
+        public Builder properties(@Nullable Map<String,String> properties) {
             this.properties = properties;
             return this;
         }
 
-        public Builder setRecommendedAction(@Nullable List<String> recommendedAction) {
+        public Builder recommendedAction(@Nullable List<String> recommendedAction) {
             this.recommendedAction = recommendedAction;
             return this;
         }
 
-        public Builder setTarget(@Nullable String target) {
+        public Builder target(@Nullable String target) {
             this.target = target;
             return this;
         }

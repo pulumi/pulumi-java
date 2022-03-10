@@ -90,32 +90,32 @@ public final class ProjectFilePropertiesArgs extends io.pulumi.resources.Resourc
     	      this.mediaType = defaults.mediaType;
         }
 
-        public Builder setExtension(@Nullable Input<String> extension) {
+        public Builder extension(@Nullable Input<String> extension) {
             this.extension = extension;
             return this;
         }
 
-        public Builder setExtension(@Nullable String extension) {
+        public Builder extension(@Nullable String extension) {
             this.extension = Input.ofNullable(extension);
             return this;
         }
 
-        public Builder setFilePath(@Nullable Input<String> filePath) {
+        public Builder filePath(@Nullable Input<String> filePath) {
             this.filePath = filePath;
             return this;
         }
 
-        public Builder setFilePath(@Nullable String filePath) {
+        public Builder filePath(@Nullable String filePath) {
             this.filePath = Input.ofNullable(filePath);
             return this;
         }
 
-        public Builder setMediaType(@Nullable Input<String> mediaType) {
+        public Builder mediaType(@Nullable Input<String> mediaType) {
             this.mediaType = mediaType;
             return this;
         }
 
-        public Builder setMediaType(@Nullable String mediaType) {
+        public Builder mediaType(@Nullable String mediaType) {
             this.mediaType = Input.ofNullable(mediaType);
             return this;
         }

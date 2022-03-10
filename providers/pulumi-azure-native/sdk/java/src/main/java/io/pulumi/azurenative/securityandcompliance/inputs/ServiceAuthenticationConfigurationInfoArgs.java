@@ -91,32 +91,32 @@ public final class ServiceAuthenticationConfigurationInfoArgs extends io.pulumi.
     	      this.smartProxyEnabled = defaults.smartProxyEnabled;
         }
 
-        public Builder setAudience(@Nullable Input<String> audience) {
+        public Builder audience(@Nullable Input<String> audience) {
             this.audience = audience;
             return this;
         }
 
-        public Builder setAudience(@Nullable String audience) {
+        public Builder audience(@Nullable String audience) {
             this.audience = Input.ofNullable(audience);
             return this;
         }
 
-        public Builder setAuthority(@Nullable Input<String> authority) {
+        public Builder authority(@Nullable Input<String> authority) {
             this.authority = authority;
             return this;
         }
 
-        public Builder setAuthority(@Nullable String authority) {
+        public Builder authority(@Nullable String authority) {
             this.authority = Input.ofNullable(authority);
             return this;
         }
 
-        public Builder setSmartProxyEnabled(@Nullable Input<Boolean> smartProxyEnabled) {
+        public Builder smartProxyEnabled(@Nullable Input<Boolean> smartProxyEnabled) {
             this.smartProxyEnabled = smartProxyEnabled;
             return this;
         }
 
-        public Builder setSmartProxyEnabled(@Nullable Boolean smartProxyEnabled) {
+        public Builder smartProxyEnabled(@Nullable Boolean smartProxyEnabled) {
             this.smartProxyEnabled = Input.ofNullable(smartProxyEnabled);
             return this;
         }

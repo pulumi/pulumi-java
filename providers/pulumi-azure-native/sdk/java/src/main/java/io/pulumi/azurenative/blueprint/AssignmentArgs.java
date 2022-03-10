@@ -219,112 +219,112 @@ public final class AssignmentArgs extends io.pulumi.resources.ResourceArgs {
     	      this.scope = defaults.scope;
         }
 
-        public Builder setAssignmentName(@Nullable Input<String> assignmentName) {
+        public Builder assignmentName(@Nullable Input<String> assignmentName) {
             this.assignmentName = assignmentName;
             return this;
         }
 
-        public Builder setAssignmentName(@Nullable String assignmentName) {
+        public Builder assignmentName(@Nullable String assignmentName) {
             this.assignmentName = Input.ofNullable(assignmentName);
             return this;
         }
 
-        public Builder setBlueprintId(@Nullable Input<String> blueprintId) {
+        public Builder blueprintId(@Nullable Input<String> blueprintId) {
             this.blueprintId = blueprintId;
             return this;
         }
 
-        public Builder setBlueprintId(@Nullable String blueprintId) {
+        public Builder blueprintId(@Nullable String blueprintId) {
             this.blueprintId = Input.ofNullable(blueprintId);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setDisplayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Input<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setDisplayName(@Nullable String displayName) {
+        public Builder displayName(@Nullable String displayName) {
             this.displayName = Input.ofNullable(displayName);
             return this;
         }
 
-        public Builder setIdentity(Input<ManagedServiceIdentityArgs> identity) {
+        public Builder identity(Input<ManagedServiceIdentityArgs> identity) {
             this.identity = Objects.requireNonNull(identity);
             return this;
         }
 
-        public Builder setIdentity(ManagedServiceIdentityArgs identity) {
+        public Builder identity(ManagedServiceIdentityArgs identity) {
             this.identity = Input.of(Objects.requireNonNull(identity));
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setLocks(@Nullable Input<AssignmentLockSettingsArgs> locks) {
+        public Builder locks(@Nullable Input<AssignmentLockSettingsArgs> locks) {
             this.locks = locks;
             return this;
         }
 
-        public Builder setLocks(@Nullable AssignmentLockSettingsArgs locks) {
+        public Builder locks(@Nullable AssignmentLockSettingsArgs locks) {
             this.locks = Input.ofNullable(locks);
             return this;
         }
 
-        public Builder setParameters(Input<Map<String,ParameterValueArgs>> parameters) {
+        public Builder parameters(Input<Map<String,ParameterValueArgs>> parameters) {
             this.parameters = Objects.requireNonNull(parameters);
             return this;
         }
 
-        public Builder setParameters(Map<String,ParameterValueArgs> parameters) {
+        public Builder parameters(Map<String,ParameterValueArgs> parameters) {
             this.parameters = Input.of(Objects.requireNonNull(parameters));
             return this;
         }
 
-        public Builder setResourceGroups(Input<Map<String,ResourceGroupValueArgs>> resourceGroups) {
+        public Builder resourceGroups(Input<Map<String,ResourceGroupValueArgs>> resourceGroups) {
             this.resourceGroups = Objects.requireNonNull(resourceGroups);
             return this;
         }
 
-        public Builder setResourceGroups(Map<String,ResourceGroupValueArgs> resourceGroups) {
+        public Builder resourceGroups(Map<String,ResourceGroupValueArgs> resourceGroups) {
             this.resourceGroups = Input.of(Objects.requireNonNull(resourceGroups));
             return this;
         }
 
-        public Builder setResourceScope(Input<String> resourceScope) {
+        public Builder resourceScope(Input<String> resourceScope) {
             this.resourceScope = Objects.requireNonNull(resourceScope);
             return this;
         }
 
-        public Builder setResourceScope(String resourceScope) {
+        public Builder resourceScope(String resourceScope) {
             this.resourceScope = Input.of(Objects.requireNonNull(resourceScope));
             return this;
         }
 
-        public Builder setScope(@Nullable Input<String> scope) {
+        public Builder scope(@Nullable Input<String> scope) {
             this.scope = scope;
             return this;
         }
 
-        public Builder setScope(@Nullable String scope) {
+        public Builder scope(@Nullable String scope) {
             this.scope = Input.ofNullable(scope);
             return this;
         }

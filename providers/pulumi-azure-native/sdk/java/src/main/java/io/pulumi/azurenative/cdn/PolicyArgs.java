@@ -188,92 +188,92 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setCustomRules(@Nullable Input<CustomRuleListArgs> customRules) {
+        public Builder customRules(@Nullable Input<CustomRuleListArgs> customRules) {
             this.customRules = customRules;
             return this;
         }
 
-        public Builder setCustomRules(@Nullable CustomRuleListArgs customRules) {
+        public Builder customRules(@Nullable CustomRuleListArgs customRules) {
             this.customRules = Input.ofNullable(customRules);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setManagedRules(@Nullable Input<ManagedRuleSetListArgs> managedRules) {
+        public Builder managedRules(@Nullable Input<ManagedRuleSetListArgs> managedRules) {
             this.managedRules = managedRules;
             return this;
         }
 
-        public Builder setManagedRules(@Nullable ManagedRuleSetListArgs managedRules) {
+        public Builder managedRules(@Nullable ManagedRuleSetListArgs managedRules) {
             this.managedRules = Input.ofNullable(managedRules);
             return this;
         }
 
-        public Builder setPolicyName(@Nullable Input<String> policyName) {
+        public Builder policyName(@Nullable Input<String> policyName) {
             this.policyName = policyName;
             return this;
         }
 
-        public Builder setPolicyName(@Nullable String policyName) {
+        public Builder policyName(@Nullable String policyName) {
             this.policyName = Input.ofNullable(policyName);
             return this;
         }
 
-        public Builder setPolicySettings(@Nullable Input<PolicySettingsArgs> policySettings) {
+        public Builder policySettings(@Nullable Input<PolicySettingsArgs> policySettings) {
             this.policySettings = policySettings;
             return this;
         }
 
-        public Builder setPolicySettings(@Nullable PolicySettingsArgs policySettings) {
+        public Builder policySettings(@Nullable PolicySettingsArgs policySettings) {
             this.policySettings = Input.ofNullable(policySettings);
             return this;
         }
 
-        public Builder setRateLimitRules(@Nullable Input<RateLimitRuleListArgs> rateLimitRules) {
+        public Builder rateLimitRules(@Nullable Input<RateLimitRuleListArgs> rateLimitRules) {
             this.rateLimitRules = rateLimitRules;
             return this;
         }
 
-        public Builder setRateLimitRules(@Nullable RateLimitRuleListArgs rateLimitRules) {
+        public Builder rateLimitRules(@Nullable RateLimitRuleListArgs rateLimitRules) {
             this.rateLimitRules = Input.ofNullable(rateLimitRules);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setSku(Input<SkuArgs> sku) {
+        public Builder sku(Input<SkuArgs> sku) {
             this.sku = Objects.requireNonNull(sku);
             return this;
         }
 
-        public Builder setSku(SkuArgs sku) {
+        public Builder sku(SkuArgs sku) {
             this.sku = Input.of(Objects.requireNonNull(sku));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

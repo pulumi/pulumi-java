@@ -87,32 +87,32 @@ public final class HybridUseBenefitArgs extends io.pulumi.resources.ResourceArgs
     	      this.sku = defaults.sku;
         }
 
-        public Builder setPlanId(@Nullable Input<String> planId) {
+        public Builder planId(@Nullable Input<String> planId) {
             this.planId = planId;
             return this;
         }
 
-        public Builder setPlanId(@Nullable String planId) {
+        public Builder planId(@Nullable String planId) {
             this.planId = Input.ofNullable(planId);
             return this;
         }
 
-        public Builder setScope(Input<String> scope) {
+        public Builder scope(Input<String> scope) {
             this.scope = Objects.requireNonNull(scope);
             return this;
         }
 
-        public Builder setScope(String scope) {
+        public Builder scope(String scope) {
             this.scope = Input.of(Objects.requireNonNull(scope));
             return this;
         }
 
-        public Builder setSku(Input<SkuArgs> sku) {
+        public Builder sku(Input<SkuArgs> sku) {
             this.sku = Objects.requireNonNull(sku);
             return this;
         }
 
-        public Builder setSku(SkuArgs sku) {
+        public Builder sku(SkuArgs sku) {
             this.sku = Input.of(Objects.requireNonNull(sku));
             return this;
         }

@@ -68,22 +68,22 @@ public final class CollectorAgentPropertiesResponse {
     	      this.version = defaults.version;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setLastHeartbeatUtc(String lastHeartbeatUtc) {
+        public Builder lastHeartbeatUtc(String lastHeartbeatUtc) {
             this.lastHeartbeatUtc = Objects.requireNonNull(lastHeartbeatUtc);
             return this;
         }
 
-        public Builder setSpnDetails(@Nullable CollectorBodyAgentSpnPropertiesResponse spnDetails) {
+        public Builder spnDetails(@Nullable CollectorBodyAgentSpnPropertiesResponse spnDetails) {
             this.spnDetails = spnDetails;
             return this;
         }
 
-        public Builder setVersion(String version) {
+        public Builder version(String version) {
             this.version = Objects.requireNonNull(version);
             return this;
         }

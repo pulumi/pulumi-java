@@ -126,22 +126,22 @@ public final class StandardEncoderPresetResponse extends io.pulumi.resources.Inv
     	      this.odataType = defaults.odataType;
         }
 
-        public Builder setCodecs(List<Object> codecs) {
+        public Builder codecs(List<Object> codecs) {
             this.codecs = Objects.requireNonNull(codecs);
             return this;
         }
 
-        public Builder setFilters(@Nullable FiltersResponse filters) {
+        public Builder filters(@Nullable FiltersResponse filters) {
             this.filters = filters;
             return this;
         }
 
-        public Builder setFormats(List<Object> formats) {
+        public Builder formats(List<Object> formats) {
             this.formats = Objects.requireNonNull(formats);
             return this;
         }
 
-        public Builder setOdataType(String odataType) {
+        public Builder odataType(String odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }

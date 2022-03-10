@@ -139,32 +139,32 @@ public final class ReportableExceptionResponse extends io.pulumi.resources.Invok
     	      this.stackTrace = defaults.stackTrace;
         }
 
-        public Builder setActionableMessage(@Nullable String actionableMessage) {
+        public Builder actionableMessage(@Nullable String actionableMessage) {
             this.actionableMessage = actionableMessage;
             return this;
         }
 
-        public Builder setFilePath(String filePath) {
+        public Builder filePath(String filePath) {
             this.filePath = Objects.requireNonNull(filePath);
             return this;
         }
 
-        public Builder setHResult(Integer hResult) {
+        public Builder hResult(Integer hResult) {
             this.hResult = Objects.requireNonNull(hResult);
             return this;
         }
 
-        public Builder setLineNumber(String lineNumber) {
+        public Builder lineNumber(String lineNumber) {
             this.lineNumber = Objects.requireNonNull(lineNumber);
             return this;
         }
 
-        public Builder setMessage(String message) {
+        public Builder message(String message) {
             this.message = Objects.requireNonNull(message);
             return this;
         }
 
-        public Builder setStackTrace(String stackTrace) {
+        public Builder stackTrace(String stackTrace) {
             this.stackTrace = Objects.requireNonNull(stackTrace);
             return this;
         }

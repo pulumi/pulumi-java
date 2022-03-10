@@ -92,22 +92,22 @@ public final class NetworkSecurityGroupRuleResponse {
     	      this.sourcePortRanges = defaults.sourcePortRanges;
         }
 
-        public Builder setAccess(String access) {
+        public Builder access(String access) {
             this.access = Objects.requireNonNull(access);
             return this;
         }
 
-        public Builder setPriority(Integer priority) {
+        public Builder priority(Integer priority) {
             this.priority = Objects.requireNonNull(priority);
             return this;
         }
 
-        public Builder setSourceAddressPrefix(String sourceAddressPrefix) {
+        public Builder sourceAddressPrefix(String sourceAddressPrefix) {
             this.sourceAddressPrefix = Objects.requireNonNull(sourceAddressPrefix);
             return this;
         }
 
-        public Builder setSourcePortRanges(@Nullable List<String> sourcePortRanges) {
+        public Builder sourcePortRanges(@Nullable List<String> sourcePortRanges) {
             this.sourcePortRanges = sourcePortRanges;
             return this;
         }

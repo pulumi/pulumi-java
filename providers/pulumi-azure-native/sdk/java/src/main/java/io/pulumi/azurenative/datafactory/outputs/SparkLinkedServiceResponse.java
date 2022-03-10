@@ -349,97 +349,97 @@ public final class SparkLinkedServiceResponse {
     	      this.username = defaults.username;
         }
 
-        public Builder setAllowHostNameCNMismatch(@Nullable Object allowHostNameCNMismatch) {
+        public Builder allowHostNameCNMismatch(@Nullable Object allowHostNameCNMismatch) {
             this.allowHostNameCNMismatch = allowHostNameCNMismatch;
             return this;
         }
 
-        public Builder setAllowSelfSignedServerCert(@Nullable Object allowSelfSignedServerCert) {
+        public Builder allowSelfSignedServerCert(@Nullable Object allowSelfSignedServerCert) {
             this.allowSelfSignedServerCert = allowSelfSignedServerCert;
             return this;
         }
 
-        public Builder setAnnotations(@Nullable List<Object> annotations) {
+        public Builder annotations(@Nullable List<Object> annotations) {
             this.annotations = annotations;
             return this;
         }
 
-        public Builder setAuthenticationType(String authenticationType) {
+        public Builder authenticationType(String authenticationType) {
             this.authenticationType = Objects.requireNonNull(authenticationType);
             return this;
         }
 
-        public Builder setConnectVia(@Nullable IntegrationRuntimeReferenceResponse connectVia) {
+        public Builder connectVia(@Nullable IntegrationRuntimeReferenceResponse connectVia) {
             this.connectVia = connectVia;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setEnableSsl(@Nullable Object enableSsl) {
+        public Builder enableSsl(@Nullable Object enableSsl) {
             this.enableSsl = enableSsl;
             return this;
         }
 
-        public Builder setEncryptedCredential(@Nullable Object encryptedCredential) {
+        public Builder encryptedCredential(@Nullable Object encryptedCredential) {
             this.encryptedCredential = encryptedCredential;
             return this;
         }
 
-        public Builder setHost(Object host) {
+        public Builder host(Object host) {
             this.host = Objects.requireNonNull(host);
             return this;
         }
 
-        public Builder setHttpPath(@Nullable Object httpPath) {
+        public Builder httpPath(@Nullable Object httpPath) {
             this.httpPath = httpPath;
             return this;
         }
 
-        public Builder setParameters(@Nullable Map<String,ParameterSpecificationResponse> parameters) {
+        public Builder parameters(@Nullable Map<String,ParameterSpecificationResponse> parameters) {
             this.parameters = parameters;
             return this;
         }
 
-        public Builder setPassword(@Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password) {
+        public Builder password(@Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password) {
             this.password = password;
             return this;
         }
 
-        public Builder setPort(Object port) {
+        public Builder port(Object port) {
             this.port = Objects.requireNonNull(port);
             return this;
         }
 
-        public Builder setServerType(@Nullable String serverType) {
+        public Builder serverType(@Nullable String serverType) {
             this.serverType = serverType;
             return this;
         }
 
-        public Builder setThriftTransportProtocol(@Nullable String thriftTransportProtocol) {
+        public Builder thriftTransportProtocol(@Nullable String thriftTransportProtocol) {
             this.thriftTransportProtocol = thriftTransportProtocol;
             return this;
         }
 
-        public Builder setTrustedCertPath(@Nullable Object trustedCertPath) {
+        public Builder trustedCertPath(@Nullable Object trustedCertPath) {
             this.trustedCertPath = trustedCertPath;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setUseSystemTrustStore(@Nullable Object useSystemTrustStore) {
+        public Builder useSystemTrustStore(@Nullable Object useSystemTrustStore) {
             this.useSystemTrustStore = useSystemTrustStore;
             return this;
         }
 
-        public Builder setUsername(@Nullable Object username) {
+        public Builder username(@Nullable Object username) {
             this.username = username;
             return this;
         }

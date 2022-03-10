@@ -100,22 +100,22 @@ public final class ListBuildStepBuildArgumentsArgs extends io.pulumi.resources.I
     	      this.stepName = defaults.stepName;
         }
 
-        public Builder setBuildTaskName(String buildTaskName) {
+        public Builder buildTaskName(String buildTaskName) {
             this.buildTaskName = Objects.requireNonNull(buildTaskName);
             return this;
         }
 
-        public Builder setRegistryName(String registryName) {
+        public Builder registryName(String registryName) {
             this.registryName = Objects.requireNonNull(registryName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setStepName(String stepName) {
+        public Builder stepName(String stepName) {
             this.stepName = Objects.requireNonNull(stepName);
             return this;
         }

@@ -322,172 +322,172 @@ public final class AzureSqlProtectedItemArgs extends io.pulumi.resources.Resourc
     	      this.workloadType = defaults.workloadType;
         }
 
-        public Builder setBackupManagementType(@Nullable Input<Either<String,BackupManagementType>> backupManagementType) {
+        public Builder backupManagementType(@Nullable Input<Either<String,BackupManagementType>> backupManagementType) {
             this.backupManagementType = backupManagementType;
             return this;
         }
 
-        public Builder setBackupManagementType(@Nullable Either<String,BackupManagementType> backupManagementType) {
+        public Builder backupManagementType(@Nullable Either<String,BackupManagementType> backupManagementType) {
             this.backupManagementType = Input.ofNullable(backupManagementType);
             return this;
         }
 
-        public Builder setBackupSetName(@Nullable Input<String> backupSetName) {
+        public Builder backupSetName(@Nullable Input<String> backupSetName) {
             this.backupSetName = backupSetName;
             return this;
         }
 
-        public Builder setBackupSetName(@Nullable String backupSetName) {
+        public Builder backupSetName(@Nullable String backupSetName) {
             this.backupSetName = Input.ofNullable(backupSetName);
             return this;
         }
 
-        public Builder setContainerName(@Nullable Input<String> containerName) {
+        public Builder containerName(@Nullable Input<String> containerName) {
             this.containerName = containerName;
             return this;
         }
 
-        public Builder setContainerName(@Nullable String containerName) {
+        public Builder containerName(@Nullable String containerName) {
             this.containerName = Input.ofNullable(containerName);
             return this;
         }
 
-        public Builder setCreateMode(@Nullable Input<Either<String,CreateMode>> createMode) {
+        public Builder createMode(@Nullable Input<Either<String,CreateMode>> createMode) {
             this.createMode = createMode;
             return this;
         }
 
-        public Builder setCreateMode(@Nullable Either<String,CreateMode> createMode) {
+        public Builder createMode(@Nullable Either<String,CreateMode> createMode) {
             this.createMode = Input.ofNullable(createMode);
             return this;
         }
 
-        public Builder setDeferredDeleteTimeInUTC(@Nullable Input<String> deferredDeleteTimeInUTC) {
+        public Builder deferredDeleteTimeInUTC(@Nullable Input<String> deferredDeleteTimeInUTC) {
             this.deferredDeleteTimeInUTC = deferredDeleteTimeInUTC;
             return this;
         }
 
-        public Builder setDeferredDeleteTimeInUTC(@Nullable String deferredDeleteTimeInUTC) {
+        public Builder deferredDeleteTimeInUTC(@Nullable String deferredDeleteTimeInUTC) {
             this.deferredDeleteTimeInUTC = Input.ofNullable(deferredDeleteTimeInUTC);
             return this;
         }
 
-        public Builder setDeferredDeleteTimeRemaining(@Nullable Input<String> deferredDeleteTimeRemaining) {
+        public Builder deferredDeleteTimeRemaining(@Nullable Input<String> deferredDeleteTimeRemaining) {
             this.deferredDeleteTimeRemaining = deferredDeleteTimeRemaining;
             return this;
         }
 
-        public Builder setDeferredDeleteTimeRemaining(@Nullable String deferredDeleteTimeRemaining) {
+        public Builder deferredDeleteTimeRemaining(@Nullable String deferredDeleteTimeRemaining) {
             this.deferredDeleteTimeRemaining = Input.ofNullable(deferredDeleteTimeRemaining);
             return this;
         }
 
-        public Builder setExtendedInfo(@Nullable Input<AzureSqlProtectedItemExtendedInfoArgs> extendedInfo) {
+        public Builder extendedInfo(@Nullable Input<AzureSqlProtectedItemExtendedInfoArgs> extendedInfo) {
             this.extendedInfo = extendedInfo;
             return this;
         }
 
-        public Builder setExtendedInfo(@Nullable AzureSqlProtectedItemExtendedInfoArgs extendedInfo) {
+        public Builder extendedInfo(@Nullable AzureSqlProtectedItemExtendedInfoArgs extendedInfo) {
             this.extendedInfo = Input.ofNullable(extendedInfo);
             return this;
         }
 
-        public Builder setIsDeferredDeleteScheduleUpcoming(@Nullable Input<Boolean> isDeferredDeleteScheduleUpcoming) {
+        public Builder isDeferredDeleteScheduleUpcoming(@Nullable Input<Boolean> isDeferredDeleteScheduleUpcoming) {
             this.isDeferredDeleteScheduleUpcoming = isDeferredDeleteScheduleUpcoming;
             return this;
         }
 
-        public Builder setIsDeferredDeleteScheduleUpcoming(@Nullable Boolean isDeferredDeleteScheduleUpcoming) {
+        public Builder isDeferredDeleteScheduleUpcoming(@Nullable Boolean isDeferredDeleteScheduleUpcoming) {
             this.isDeferredDeleteScheduleUpcoming = Input.ofNullable(isDeferredDeleteScheduleUpcoming);
             return this;
         }
 
-        public Builder setIsRehydrate(@Nullable Input<Boolean> isRehydrate) {
+        public Builder isRehydrate(@Nullable Input<Boolean> isRehydrate) {
             this.isRehydrate = isRehydrate;
             return this;
         }
 
-        public Builder setIsRehydrate(@Nullable Boolean isRehydrate) {
+        public Builder isRehydrate(@Nullable Boolean isRehydrate) {
             this.isRehydrate = Input.ofNullable(isRehydrate);
             return this;
         }
 
-        public Builder setIsScheduledForDeferredDelete(@Nullable Input<Boolean> isScheduledForDeferredDelete) {
+        public Builder isScheduledForDeferredDelete(@Nullable Input<Boolean> isScheduledForDeferredDelete) {
             this.isScheduledForDeferredDelete = isScheduledForDeferredDelete;
             return this;
         }
 
-        public Builder setIsScheduledForDeferredDelete(@Nullable Boolean isScheduledForDeferredDelete) {
+        public Builder isScheduledForDeferredDelete(@Nullable Boolean isScheduledForDeferredDelete) {
             this.isScheduledForDeferredDelete = Input.ofNullable(isScheduledForDeferredDelete);
             return this;
         }
 
-        public Builder setLastRecoveryPoint(@Nullable Input<String> lastRecoveryPoint) {
+        public Builder lastRecoveryPoint(@Nullable Input<String> lastRecoveryPoint) {
             this.lastRecoveryPoint = lastRecoveryPoint;
             return this;
         }
 
-        public Builder setLastRecoveryPoint(@Nullable String lastRecoveryPoint) {
+        public Builder lastRecoveryPoint(@Nullable String lastRecoveryPoint) {
             this.lastRecoveryPoint = Input.ofNullable(lastRecoveryPoint);
             return this;
         }
 
-        public Builder setPolicyId(@Nullable Input<String> policyId) {
+        public Builder policyId(@Nullable Input<String> policyId) {
             this.policyId = policyId;
             return this;
         }
 
-        public Builder setPolicyId(@Nullable String policyId) {
+        public Builder policyId(@Nullable String policyId) {
             this.policyId = Input.ofNullable(policyId);
             return this;
         }
 
-        public Builder setProtectedItemDataId(@Nullable Input<String> protectedItemDataId) {
+        public Builder protectedItemDataId(@Nullable Input<String> protectedItemDataId) {
             this.protectedItemDataId = protectedItemDataId;
             return this;
         }
 
-        public Builder setProtectedItemDataId(@Nullable String protectedItemDataId) {
+        public Builder protectedItemDataId(@Nullable String protectedItemDataId) {
             this.protectedItemDataId = Input.ofNullable(protectedItemDataId);
             return this;
         }
 
-        public Builder setProtectedItemType(Input<String> protectedItemType) {
+        public Builder protectedItemType(Input<String> protectedItemType) {
             this.protectedItemType = Objects.requireNonNull(protectedItemType);
             return this;
         }
 
-        public Builder setProtectedItemType(String protectedItemType) {
+        public Builder protectedItemType(String protectedItemType) {
             this.protectedItemType = Input.of(Objects.requireNonNull(protectedItemType));
             return this;
         }
 
-        public Builder setProtectionState(@Nullable Input<Either<String,ProtectedItemState>> protectionState) {
+        public Builder protectionState(@Nullable Input<Either<String,ProtectedItemState>> protectionState) {
             this.protectionState = protectionState;
             return this;
         }
 
-        public Builder setProtectionState(@Nullable Either<String,ProtectedItemState> protectionState) {
+        public Builder protectionState(@Nullable Either<String,ProtectedItemState> protectionState) {
             this.protectionState = Input.ofNullable(protectionState);
             return this;
         }
 
-        public Builder setSourceResourceId(@Nullable Input<String> sourceResourceId) {
+        public Builder sourceResourceId(@Nullable Input<String> sourceResourceId) {
             this.sourceResourceId = sourceResourceId;
             return this;
         }
 
-        public Builder setSourceResourceId(@Nullable String sourceResourceId) {
+        public Builder sourceResourceId(@Nullable String sourceResourceId) {
             this.sourceResourceId = Input.ofNullable(sourceResourceId);
             return this;
         }
 
-        public Builder setWorkloadType(@Nullable Input<Either<String,DataSourceType>> workloadType) {
+        public Builder workloadType(@Nullable Input<Either<String,DataSourceType>> workloadType) {
             this.workloadType = workloadType;
             return this;
         }
 
-        public Builder setWorkloadType(@Nullable Either<String,DataSourceType> workloadType) {
+        public Builder workloadType(@Nullable Either<String,DataSourceType> workloadType) {
             this.workloadType = Input.ofNullable(workloadType);
             return this;
         }

@@ -76,22 +76,22 @@ public final class ModeValueInfoArgs extends io.pulumi.resources.ResourceArgs {
     	      this.parameters = defaults.parameters;
         }
 
-        public Builder setInterfaceString(@Nullable Input<String> interfaceString) {
+        public Builder interfaceString(@Nullable Input<String> interfaceString) {
             this.interfaceString = interfaceString;
             return this;
         }
 
-        public Builder setInterfaceString(@Nullable String interfaceString) {
+        public Builder interfaceString(@Nullable String interfaceString) {
             this.interfaceString = Input.ofNullable(interfaceString);
             return this;
         }
 
-        public Builder setParameters(@Nullable Input<List<ModuleAssetParameterArgs>> parameters) {
+        public Builder parameters(@Nullable Input<List<ModuleAssetParameterArgs>> parameters) {
             this.parameters = parameters;
             return this;
         }
 
-        public Builder setParameters(@Nullable List<ModuleAssetParameterArgs> parameters) {
+        public Builder parameters(@Nullable List<ModuleAssetParameterArgs> parameters) {
             this.parameters = Input.ofNullable(parameters);
             return this;
         }

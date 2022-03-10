@@ -124,27 +124,27 @@ public final class FaceDetectorPresetResponse extends io.pulumi.resources.Invoke
     	      this.resolution = defaults.resolution;
         }
 
-        public Builder setBlurType(@Nullable String blurType) {
+        public Builder blurType(@Nullable String blurType) {
             this.blurType = blurType;
             return this;
         }
 
-        public Builder setExperimentalOptions(@Nullable Map<String,String> experimentalOptions) {
+        public Builder experimentalOptions(@Nullable Map<String,String> experimentalOptions) {
             this.experimentalOptions = experimentalOptions;
             return this;
         }
 
-        public Builder setMode(@Nullable String mode) {
+        public Builder mode(@Nullable String mode) {
             this.mode = mode;
             return this;
         }
 
-        public Builder setOdataType(String odataType) {
+        public Builder odataType(String odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
 
-        public Builder setResolution(@Nullable String resolution) {
+        public Builder resolution(@Nullable String resolution) {
             this.resolution = resolution;
             return this;
         }

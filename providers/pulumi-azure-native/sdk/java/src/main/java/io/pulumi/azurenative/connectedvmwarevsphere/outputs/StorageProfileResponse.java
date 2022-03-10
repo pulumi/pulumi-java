@@ -68,12 +68,12 @@ public final class StorageProfileResponse {
     	      this.scsiControllers = defaults.scsiControllers;
         }
 
-        public Builder setDisks(@Nullable List<VirtualDiskResponse> disks) {
+        public Builder disks(@Nullable List<VirtualDiskResponse> disks) {
             this.disks = disks;
             return this;
         }
 
-        public Builder setScsiControllers(List<VirtualSCSIControllerResponse> scsiControllers) {
+        public Builder scsiControllers(List<VirtualSCSIControllerResponse> scsiControllers) {
             this.scsiControllers = Objects.requireNonNull(scsiControllers);
             return this;
         }

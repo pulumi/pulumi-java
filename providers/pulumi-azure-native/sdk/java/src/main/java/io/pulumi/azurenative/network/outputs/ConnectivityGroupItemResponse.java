@@ -99,22 +99,22 @@ public final class ConnectivityGroupItemResponse {
     	      this.useHubGateway = defaults.useHubGateway;
         }
 
-        public Builder setGroupConnectivity(@Nullable String groupConnectivity) {
+        public Builder groupConnectivity(@Nullable String groupConnectivity) {
             this.groupConnectivity = groupConnectivity;
             return this;
         }
 
-        public Builder setIsGlobal(@Nullable String isGlobal) {
+        public Builder isGlobal(@Nullable String isGlobal) {
             this.isGlobal = isGlobal;
             return this;
         }
 
-        public Builder setNetworkGroupId(@Nullable String networkGroupId) {
+        public Builder networkGroupId(@Nullable String networkGroupId) {
             this.networkGroupId = networkGroupId;
             return this;
         }
 
-        public Builder setUseHubGateway(@Nullable String useHubGateway) {
+        public Builder useHubGateway(@Nullable String useHubGateway) {
             this.useHubGateway = useHubGateway;
             return this;
         }

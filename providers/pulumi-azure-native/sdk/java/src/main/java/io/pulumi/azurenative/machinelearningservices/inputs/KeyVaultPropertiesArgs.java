@@ -86,32 +86,32 @@ public final class KeyVaultPropertiesArgs extends io.pulumi.resources.ResourceAr
     	      this.keyVaultArmId = defaults.keyVaultArmId;
         }
 
-        public Builder setIdentityClientId(@Nullable Input<String> identityClientId) {
+        public Builder identityClientId(@Nullable Input<String> identityClientId) {
             this.identityClientId = identityClientId;
             return this;
         }
 
-        public Builder setIdentityClientId(@Nullable String identityClientId) {
+        public Builder identityClientId(@Nullable String identityClientId) {
             this.identityClientId = Input.ofNullable(identityClientId);
             return this;
         }
 
-        public Builder setKeyIdentifier(Input<String> keyIdentifier) {
+        public Builder keyIdentifier(Input<String> keyIdentifier) {
             this.keyIdentifier = Objects.requireNonNull(keyIdentifier);
             return this;
         }
 
-        public Builder setKeyIdentifier(String keyIdentifier) {
+        public Builder keyIdentifier(String keyIdentifier) {
             this.keyIdentifier = Input.of(Objects.requireNonNull(keyIdentifier));
             return this;
         }
 
-        public Builder setKeyVaultArmId(Input<String> keyVaultArmId) {
+        public Builder keyVaultArmId(Input<String> keyVaultArmId) {
             this.keyVaultArmId = Objects.requireNonNull(keyVaultArmId);
             return this;
         }
 
-        public Builder setKeyVaultArmId(String keyVaultArmId) {
+        public Builder keyVaultArmId(String keyVaultArmId) {
             this.keyVaultArmId = Input.of(Objects.requireNonNull(keyVaultArmId));
             return this;
         }

@@ -97,32 +97,32 @@ public final class EnableProtectionInputPropertiesArgs extends io.pulumi.resourc
     	      this.providerSpecificDetails = defaults.providerSpecificDetails;
         }
 
-        public Builder setPolicyId(@Nullable Input<String> policyId) {
+        public Builder policyId(@Nullable Input<String> policyId) {
             this.policyId = policyId;
             return this;
         }
 
-        public Builder setPolicyId(@Nullable String policyId) {
+        public Builder policyId(@Nullable String policyId) {
             this.policyId = Input.ofNullable(policyId);
             return this;
         }
 
-        public Builder setProtectableItemId(@Nullable Input<String> protectableItemId) {
+        public Builder protectableItemId(@Nullable Input<String> protectableItemId) {
             this.protectableItemId = protectableItemId;
             return this;
         }
 
-        public Builder setProtectableItemId(@Nullable String protectableItemId) {
+        public Builder protectableItemId(@Nullable String protectableItemId) {
             this.protectableItemId = Input.ofNullable(protectableItemId);
             return this;
         }
 
-        public Builder setProviderSpecificDetails(@Nullable Input<Object> providerSpecificDetails) {
+        public Builder providerSpecificDetails(@Nullable Input<Object> providerSpecificDetails) {
             this.providerSpecificDetails = providerSpecificDetails;
             return this;
         }
 
-        public Builder setProviderSpecificDetails(@Nullable Object providerSpecificDetails) {
+        public Builder providerSpecificDetails(@Nullable Object providerSpecificDetails) {
             this.providerSpecificDetails = Input.ofNullable(providerSpecificDetails);
             return this;
         }

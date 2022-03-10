@@ -70,12 +70,12 @@ public final class GetManagementGroupSubscriptionArgs extends io.pulumi.resource
     	      this.subscriptionId = defaults.subscriptionId;
         }
 
-        public Builder setGroupId(String groupId) {
+        public Builder groupId(String groupId) {
             this.groupId = Objects.requireNonNull(groupId);
             return this;
         }
 
-        public Builder setSubscriptionId(@Nullable String subscriptionId) {
+        public Builder subscriptionId(@Nullable String subscriptionId) {
             this.subscriptionId = subscriptionId;
             return this;
         }

@@ -186,92 +186,92 @@ public final class LocalUserArgs extends io.pulumi.resources.ResourceArgs {
     	      this.username = defaults.username;
         }
 
-        public Builder setAccountName(Input<String> accountName) {
+        public Builder accountName(Input<String> accountName) {
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
 
-        public Builder setAccountName(String accountName) {
+        public Builder accountName(String accountName) {
             this.accountName = Input.of(Objects.requireNonNull(accountName));
             return this;
         }
 
-        public Builder setHasSharedKey(@Nullable Input<Boolean> hasSharedKey) {
+        public Builder hasSharedKey(@Nullable Input<Boolean> hasSharedKey) {
             this.hasSharedKey = hasSharedKey;
             return this;
         }
 
-        public Builder setHasSharedKey(@Nullable Boolean hasSharedKey) {
+        public Builder hasSharedKey(@Nullable Boolean hasSharedKey) {
             this.hasSharedKey = Input.ofNullable(hasSharedKey);
             return this;
         }
 
-        public Builder setHasSshKey(@Nullable Input<Boolean> hasSshKey) {
+        public Builder hasSshKey(@Nullable Input<Boolean> hasSshKey) {
             this.hasSshKey = hasSshKey;
             return this;
         }
 
-        public Builder setHasSshKey(@Nullable Boolean hasSshKey) {
+        public Builder hasSshKey(@Nullable Boolean hasSshKey) {
             this.hasSshKey = Input.ofNullable(hasSshKey);
             return this;
         }
 
-        public Builder setHasSshPassword(@Nullable Input<Boolean> hasSshPassword) {
+        public Builder hasSshPassword(@Nullable Input<Boolean> hasSshPassword) {
             this.hasSshPassword = hasSshPassword;
             return this;
         }
 
-        public Builder setHasSshPassword(@Nullable Boolean hasSshPassword) {
+        public Builder hasSshPassword(@Nullable Boolean hasSshPassword) {
             this.hasSshPassword = Input.ofNullable(hasSshPassword);
             return this;
         }
 
-        public Builder setHomeDirectory(@Nullable Input<String> homeDirectory) {
+        public Builder homeDirectory(@Nullable Input<String> homeDirectory) {
             this.homeDirectory = homeDirectory;
             return this;
         }
 
-        public Builder setHomeDirectory(@Nullable String homeDirectory) {
+        public Builder homeDirectory(@Nullable String homeDirectory) {
             this.homeDirectory = Input.ofNullable(homeDirectory);
             return this;
         }
 
-        public Builder setPermissionScopes(@Nullable Input<List<PermissionScopeArgs>> permissionScopes) {
+        public Builder permissionScopes(@Nullable Input<List<PermissionScopeArgs>> permissionScopes) {
             this.permissionScopes = permissionScopes;
             return this;
         }
 
-        public Builder setPermissionScopes(@Nullable List<PermissionScopeArgs> permissionScopes) {
+        public Builder permissionScopes(@Nullable List<PermissionScopeArgs> permissionScopes) {
             this.permissionScopes = Input.ofNullable(permissionScopes);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setSshAuthorizedKeys(@Nullable Input<List<SshPublicKeyArgs>> sshAuthorizedKeys) {
+        public Builder sshAuthorizedKeys(@Nullable Input<List<SshPublicKeyArgs>> sshAuthorizedKeys) {
             this.sshAuthorizedKeys = sshAuthorizedKeys;
             return this;
         }
 
-        public Builder setSshAuthorizedKeys(@Nullable List<SshPublicKeyArgs> sshAuthorizedKeys) {
+        public Builder sshAuthorizedKeys(@Nullable List<SshPublicKeyArgs> sshAuthorizedKeys) {
             this.sshAuthorizedKeys = Input.ofNullable(sshAuthorizedKeys);
             return this;
         }
 
-        public Builder setUsername(@Nullable Input<String> username) {
+        public Builder username(@Nullable Input<String> username) {
             this.username = username;
             return this;
         }
 
-        public Builder setUsername(@Nullable String username) {
+        public Builder username(@Nullable String username) {
             this.username = Input.ofNullable(username);
             return this;
         }

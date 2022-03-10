@@ -122,52 +122,52 @@ public final class OpenIdConnectConfigArgs extends io.pulumi.resources.ResourceA
     	      this.wellKnownOpenIdConfiguration = defaults.wellKnownOpenIdConfiguration;
         }
 
-        public Builder setAuthorizationEndpoint(@Nullable Input<String> authorizationEndpoint) {
+        public Builder authorizationEndpoint(@Nullable Input<String> authorizationEndpoint) {
             this.authorizationEndpoint = authorizationEndpoint;
             return this;
         }
 
-        public Builder setAuthorizationEndpoint(@Nullable String authorizationEndpoint) {
+        public Builder authorizationEndpoint(@Nullable String authorizationEndpoint) {
             this.authorizationEndpoint = Input.ofNullable(authorizationEndpoint);
             return this;
         }
 
-        public Builder setCertificationUri(@Nullable Input<String> certificationUri) {
+        public Builder certificationUri(@Nullable Input<String> certificationUri) {
             this.certificationUri = certificationUri;
             return this;
         }
 
-        public Builder setCertificationUri(@Nullable String certificationUri) {
+        public Builder certificationUri(@Nullable String certificationUri) {
             this.certificationUri = Input.ofNullable(certificationUri);
             return this;
         }
 
-        public Builder setIssuer(@Nullable Input<String> issuer) {
+        public Builder issuer(@Nullable Input<String> issuer) {
             this.issuer = issuer;
             return this;
         }
 
-        public Builder setIssuer(@Nullable String issuer) {
+        public Builder issuer(@Nullable String issuer) {
             this.issuer = Input.ofNullable(issuer);
             return this;
         }
 
-        public Builder setTokenEndpoint(@Nullable Input<String> tokenEndpoint) {
+        public Builder tokenEndpoint(@Nullable Input<String> tokenEndpoint) {
             this.tokenEndpoint = tokenEndpoint;
             return this;
         }
 
-        public Builder setTokenEndpoint(@Nullable String tokenEndpoint) {
+        public Builder tokenEndpoint(@Nullable String tokenEndpoint) {
             this.tokenEndpoint = Input.ofNullable(tokenEndpoint);
             return this;
         }
 
-        public Builder setWellKnownOpenIdConfiguration(@Nullable Input<String> wellKnownOpenIdConfiguration) {
+        public Builder wellKnownOpenIdConfiguration(@Nullable Input<String> wellKnownOpenIdConfiguration) {
             this.wellKnownOpenIdConfiguration = wellKnownOpenIdConfiguration;
             return this;
         }
 
-        public Builder setWellKnownOpenIdConfiguration(@Nullable String wellKnownOpenIdConfiguration) {
+        public Builder wellKnownOpenIdConfiguration(@Nullable String wellKnownOpenIdConfiguration) {
             this.wellKnownOpenIdConfiguration = Input.ofNullable(wellKnownOpenIdConfiguration);
             return this;
         }

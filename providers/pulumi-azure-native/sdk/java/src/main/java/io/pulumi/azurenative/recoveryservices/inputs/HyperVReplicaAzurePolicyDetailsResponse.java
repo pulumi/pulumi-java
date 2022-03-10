@@ -156,37 +156,37 @@ public final class HyperVReplicaAzurePolicyDetailsResponse extends io.pulumi.res
     	      this.replicationInterval = defaults.replicationInterval;
         }
 
-        public Builder setActiveStorageAccountId(@Nullable String activeStorageAccountId) {
+        public Builder activeStorageAccountId(@Nullable String activeStorageAccountId) {
             this.activeStorageAccountId = activeStorageAccountId;
             return this;
         }
 
-        public Builder setApplicationConsistentSnapshotFrequencyInHours(@Nullable Integer applicationConsistentSnapshotFrequencyInHours) {
+        public Builder applicationConsistentSnapshotFrequencyInHours(@Nullable Integer applicationConsistentSnapshotFrequencyInHours) {
             this.applicationConsistentSnapshotFrequencyInHours = applicationConsistentSnapshotFrequencyInHours;
             return this;
         }
 
-        public Builder setEncryption(@Nullable String encryption) {
+        public Builder encryption(@Nullable String encryption) {
             this.encryption = encryption;
             return this;
         }
 
-        public Builder setInstanceType(String instanceType) {
+        public Builder instanceType(String instanceType) {
             this.instanceType = Objects.requireNonNull(instanceType);
             return this;
         }
 
-        public Builder setOnlineReplicationStartTime(@Nullable String onlineReplicationStartTime) {
+        public Builder onlineReplicationStartTime(@Nullable String onlineReplicationStartTime) {
             this.onlineReplicationStartTime = onlineReplicationStartTime;
             return this;
         }
 
-        public Builder setRecoveryPointHistoryDurationInHours(@Nullable Integer recoveryPointHistoryDurationInHours) {
+        public Builder recoveryPointHistoryDurationInHours(@Nullable Integer recoveryPointHistoryDurationInHours) {
             this.recoveryPointHistoryDurationInHours = recoveryPointHistoryDurationInHours;
             return this;
         }
 
-        public Builder setReplicationInterval(@Nullable Integer replicationInterval) {
+        public Builder replicationInterval(@Nullable Integer replicationInterval) {
             this.replicationInterval = replicationInterval;
             return this;
         }

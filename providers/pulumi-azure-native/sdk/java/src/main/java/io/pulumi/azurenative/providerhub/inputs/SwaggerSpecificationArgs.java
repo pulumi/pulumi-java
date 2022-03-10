@@ -63,22 +63,22 @@ public final class SwaggerSpecificationArgs extends io.pulumi.resources.Resource
     	      this.swaggerSpecFolderUri = defaults.swaggerSpecFolderUri;
         }
 
-        public Builder setApiVersions(@Nullable Input<List<String>> apiVersions) {
+        public Builder apiVersions(@Nullable Input<List<String>> apiVersions) {
             this.apiVersions = apiVersions;
             return this;
         }
 
-        public Builder setApiVersions(@Nullable List<String> apiVersions) {
+        public Builder apiVersions(@Nullable List<String> apiVersions) {
             this.apiVersions = Input.ofNullable(apiVersions);
             return this;
         }
 
-        public Builder setSwaggerSpecFolderUri(@Nullable Input<String> swaggerSpecFolderUri) {
+        public Builder swaggerSpecFolderUri(@Nullable Input<String> swaggerSpecFolderUri) {
             this.swaggerSpecFolderUri = swaggerSpecFolderUri;
             return this;
         }
 
-        public Builder setSwaggerSpecFolderUri(@Nullable String swaggerSpecFolderUri) {
+        public Builder swaggerSpecFolderUri(@Nullable String swaggerSpecFolderUri) {
             this.swaggerSpecFolderUri = Input.ofNullable(swaggerSpecFolderUri);
             return this;
         }

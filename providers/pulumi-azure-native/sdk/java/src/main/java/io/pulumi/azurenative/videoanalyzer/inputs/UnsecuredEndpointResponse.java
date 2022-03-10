@@ -109,22 +109,22 @@ public final class UnsecuredEndpointResponse extends io.pulumi.resources.InvokeA
     	      this.url = defaults.url;
         }
 
-        public Builder setCredentials(UsernamePasswordCredentialsResponse credentials) {
+        public Builder credentials(UsernamePasswordCredentialsResponse credentials) {
             this.credentials = Objects.requireNonNull(credentials);
             return this;
         }
 
-        public Builder setTunnel(@Nullable SecureIotDeviceRemoteTunnelResponse tunnel) {
+        public Builder tunnel(@Nullable SecureIotDeviceRemoteTunnelResponse tunnel) {
             this.tunnel = tunnel;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setUrl(String url) {
+        public Builder url(String url) {
             this.url = Objects.requireNonNull(url);
             return this;
         }

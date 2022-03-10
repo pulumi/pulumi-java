@@ -161,72 +161,72 @@ public final class AzureKeyVaultLinkedServiceArgs extends io.pulumi.resources.Re
     	      this.type = defaults.type;
         }
 
-        public Builder setAnnotations(@Nullable Input<List<Object>> annotations) {
+        public Builder annotations(@Nullable Input<List<Object>> annotations) {
             this.annotations = annotations;
             return this;
         }
 
-        public Builder setAnnotations(@Nullable List<Object> annotations) {
+        public Builder annotations(@Nullable List<Object> annotations) {
             this.annotations = Input.ofNullable(annotations);
             return this;
         }
 
-        public Builder setBaseUrl(Input<Object> baseUrl) {
+        public Builder baseUrl(Input<Object> baseUrl) {
             this.baseUrl = Objects.requireNonNull(baseUrl);
             return this;
         }
 
-        public Builder setBaseUrl(Object baseUrl) {
+        public Builder baseUrl(Object baseUrl) {
             this.baseUrl = Input.of(Objects.requireNonNull(baseUrl));
             return this;
         }
 
-        public Builder setConnectVia(@Nullable Input<IntegrationRuntimeReferenceArgs> connectVia) {
+        public Builder connectVia(@Nullable Input<IntegrationRuntimeReferenceArgs> connectVia) {
             this.connectVia = connectVia;
             return this;
         }
 
-        public Builder setConnectVia(@Nullable IntegrationRuntimeReferenceArgs connectVia) {
+        public Builder connectVia(@Nullable IntegrationRuntimeReferenceArgs connectVia) {
             this.connectVia = Input.ofNullable(connectVia);
             return this;
         }
 
-        public Builder setCredential(@Nullable Input<CredentialReferenceArgs> credential) {
+        public Builder credential(@Nullable Input<CredentialReferenceArgs> credential) {
             this.credential = credential;
             return this;
         }
 
-        public Builder setCredential(@Nullable CredentialReferenceArgs credential) {
+        public Builder credential(@Nullable CredentialReferenceArgs credential) {
             this.credential = Input.ofNullable(credential);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setParameters(@Nullable Input<Map<String,ParameterSpecificationArgs>> parameters) {
+        public Builder parameters(@Nullable Input<Map<String,ParameterSpecificationArgs>> parameters) {
             this.parameters = parameters;
             return this;
         }
 
-        public Builder setParameters(@Nullable Map<String,ParameterSpecificationArgs> parameters) {
+        public Builder parameters(@Nullable Map<String,ParameterSpecificationArgs> parameters) {
             this.parameters = Input.ofNullable(parameters);
             return this;
         }
 
-        public Builder setType(Input<String> type) {
+        public Builder type(Input<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }

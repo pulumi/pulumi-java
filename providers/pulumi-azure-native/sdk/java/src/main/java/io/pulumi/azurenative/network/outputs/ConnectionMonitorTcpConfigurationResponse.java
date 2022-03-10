@@ -85,17 +85,17 @@ public final class ConnectionMonitorTcpConfigurationResponse {
     	      this.port = defaults.port;
         }
 
-        public Builder setDestinationPortBehavior(@Nullable String destinationPortBehavior) {
+        public Builder destinationPortBehavior(@Nullable String destinationPortBehavior) {
             this.destinationPortBehavior = destinationPortBehavior;
             return this;
         }
 
-        public Builder setDisableTraceRoute(@Nullable Boolean disableTraceRoute) {
+        public Builder disableTraceRoute(@Nullable Boolean disableTraceRoute) {
             this.disableTraceRoute = disableTraceRoute;
             return this;
         }
 
-        public Builder setPort(@Nullable Integer port) {
+        public Builder port(@Nullable Integer port) {
             this.port = port;
             return this;
         }

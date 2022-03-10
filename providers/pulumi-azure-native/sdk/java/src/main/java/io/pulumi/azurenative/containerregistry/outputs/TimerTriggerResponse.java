@@ -83,17 +83,17 @@ public final class TimerTriggerResponse {
     	      this.status = defaults.status;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setSchedule(String schedule) {
+        public Builder schedule(String schedule) {
             this.schedule = Objects.requireNonNull(schedule);
             return this;
         }
 
-        public Builder setStatus(@Nullable String status) {
+        public Builder status(@Nullable String status) {
             this.status = status;
             return this;
         }

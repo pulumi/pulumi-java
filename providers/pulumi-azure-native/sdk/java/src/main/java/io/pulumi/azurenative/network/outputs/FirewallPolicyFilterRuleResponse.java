@@ -124,27 +124,27 @@ public final class FirewallPolicyFilterRuleResponse {
     	      this.ruleType = defaults.ruleType;
         }
 
-        public Builder setAction(@Nullable FirewallPolicyFilterRuleActionResponse action) {
+        public Builder action(@Nullable FirewallPolicyFilterRuleActionResponse action) {
             this.action = action;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setPriority(@Nullable Integer priority) {
+        public Builder priority(@Nullable Integer priority) {
             this.priority = priority;
             return this;
         }
 
-        public Builder setRuleConditions(@Nullable List<Object> ruleConditions) {
+        public Builder ruleConditions(@Nullable List<Object> ruleConditions) {
             this.ruleConditions = ruleConditions;
             return this;
         }
 
-        public Builder setRuleType(String ruleType) {
+        public Builder ruleType(String ruleType) {
             this.ruleType = Objects.requireNonNull(ruleType);
             return this;
         }

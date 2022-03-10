@@ -48,7 +48,7 @@ public final class BlobInventoryPolicyDefinitionResponse {
     	      this.filters = defaults.filters;
         }
 
-        public Builder setFilters(BlobInventoryPolicyFilterResponse filters) {
+        public Builder filters(BlobInventoryPolicyFilterResponse filters) {
             this.filters = Objects.requireNonNull(filters);
             return this;
         }

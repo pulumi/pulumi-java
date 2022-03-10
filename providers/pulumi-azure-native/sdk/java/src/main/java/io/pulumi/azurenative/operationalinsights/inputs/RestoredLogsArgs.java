@@ -74,22 +74,22 @@ public final class RestoredLogsArgs extends io.pulumi.resources.ResourceArgs {
     	      this.startRestoreTime = defaults.startRestoreTime;
         }
 
-        public Builder setEndRestoreTime(@Nullable Input<String> endRestoreTime) {
+        public Builder endRestoreTime(@Nullable Input<String> endRestoreTime) {
             this.endRestoreTime = endRestoreTime;
             return this;
         }
 
-        public Builder setEndRestoreTime(@Nullable String endRestoreTime) {
+        public Builder endRestoreTime(@Nullable String endRestoreTime) {
             this.endRestoreTime = Input.ofNullable(endRestoreTime);
             return this;
         }
 
-        public Builder setStartRestoreTime(@Nullable Input<String> startRestoreTime) {
+        public Builder startRestoreTime(@Nullable Input<String> startRestoreTime) {
             this.startRestoreTime = startRestoreTime;
             return this;
         }
 
-        public Builder setStartRestoreTime(@Nullable String startRestoreTime) {
+        public Builder startRestoreTime(@Nullable String startRestoreTime) {
             this.startRestoreTime = Input.ofNullable(startRestoreTime);
             return this;
         }

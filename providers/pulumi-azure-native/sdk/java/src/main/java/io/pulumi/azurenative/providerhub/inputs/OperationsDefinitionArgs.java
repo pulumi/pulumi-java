@@ -129,62 +129,62 @@ public final class OperationsDefinitionArgs extends io.pulumi.resources.Resource
     	      this.properties = defaults.properties;
         }
 
-        public Builder setActionType(@Nullable Input<String> actionType) {
+        public Builder actionType(@Nullable Input<String> actionType) {
             this.actionType = actionType;
             return this;
         }
 
-        public Builder setActionType(@Nullable String actionType) {
+        public Builder actionType(@Nullable String actionType) {
             this.actionType = Input.ofNullable(actionType);
             return this;
         }
 
-        public Builder setDisplay(Input<OperationsDefinitionDisplayArgs> display) {
+        public Builder display(Input<OperationsDefinitionDisplayArgs> display) {
             this.display = Objects.requireNonNull(display);
             return this;
         }
 
-        public Builder setDisplay(OperationsDefinitionDisplayArgs display) {
+        public Builder display(OperationsDefinitionDisplayArgs display) {
             this.display = Input.of(Objects.requireNonNull(display));
             return this;
         }
 
-        public Builder setIsDataAction(@Nullable Input<Boolean> isDataAction) {
+        public Builder isDataAction(@Nullable Input<Boolean> isDataAction) {
             this.isDataAction = isDataAction;
             return this;
         }
 
-        public Builder setIsDataAction(@Nullable Boolean isDataAction) {
+        public Builder isDataAction(@Nullable Boolean isDataAction) {
             this.isDataAction = Input.ofNullable(isDataAction);
             return this;
         }
 
-        public Builder setName(Input<String> name) {
+        public Builder name(Input<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder setOrigin(@Nullable Input<String> origin) {
+        public Builder origin(@Nullable Input<String> origin) {
             this.origin = origin;
             return this;
         }
 
-        public Builder setOrigin(@Nullable String origin) {
+        public Builder origin(@Nullable String origin) {
             this.origin = Input.ofNullable(origin);
             return this;
         }
 
-        public Builder setProperties(@Nullable Input<Object> properties) {
+        public Builder properties(@Nullable Input<Object> properties) {
             this.properties = properties;
             return this;
         }
 
-        public Builder setProperties(@Nullable Object properties) {
+        public Builder properties(@Nullable Object properties) {
             this.properties = Input.ofNullable(properties);
             return this;
         }

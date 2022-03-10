@@ -636,187 +636,187 @@ public final class GetAgentPoolResult {
     	      this.vnetSubnetID = defaults.vnetSubnetID;
         }
 
-        public Builder setAvailabilityZones(@Nullable List<String> availabilityZones) {
+        public Builder availabilityZones(@Nullable List<String> availabilityZones) {
             this.availabilityZones = availabilityZones;
             return this;
         }
 
-        public Builder setCount(@Nullable Integer count) {
+        public Builder count(@Nullable Integer count) {
             this.count = count;
             return this;
         }
 
-        public Builder setEnableAutoScaling(@Nullable Boolean enableAutoScaling) {
+        public Builder enableAutoScaling(@Nullable Boolean enableAutoScaling) {
             this.enableAutoScaling = enableAutoScaling;
             return this;
         }
 
-        public Builder setEnableEncryptionAtHost(@Nullable Boolean enableEncryptionAtHost) {
+        public Builder enableEncryptionAtHost(@Nullable Boolean enableEncryptionAtHost) {
             this.enableEncryptionAtHost = enableEncryptionAtHost;
             return this;
         }
 
-        public Builder setEnableFIPS(@Nullable Boolean enableFIPS) {
+        public Builder enableFIPS(@Nullable Boolean enableFIPS) {
             this.enableFIPS = enableFIPS;
             return this;
         }
 
-        public Builder setEnableNodePublicIP(@Nullable Boolean enableNodePublicIP) {
+        public Builder enableNodePublicIP(@Nullable Boolean enableNodePublicIP) {
             this.enableNodePublicIP = enableNodePublicIP;
             return this;
         }
 
-        public Builder setGpuInstanceProfile(@Nullable String gpuInstanceProfile) {
+        public Builder gpuInstanceProfile(@Nullable String gpuInstanceProfile) {
             this.gpuInstanceProfile = gpuInstanceProfile;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setKubeletConfig(@Nullable KubeletConfigResponse kubeletConfig) {
+        public Builder kubeletConfig(@Nullable KubeletConfigResponse kubeletConfig) {
             this.kubeletConfig = kubeletConfig;
             return this;
         }
 
-        public Builder setKubeletDiskType(@Nullable String kubeletDiskType) {
+        public Builder kubeletDiskType(@Nullable String kubeletDiskType) {
             this.kubeletDiskType = kubeletDiskType;
             return this;
         }
 
-        public Builder setLinuxOSConfig(@Nullable LinuxOSConfigResponse linuxOSConfig) {
+        public Builder linuxOSConfig(@Nullable LinuxOSConfigResponse linuxOSConfig) {
             this.linuxOSConfig = linuxOSConfig;
             return this;
         }
 
-        public Builder setMaxCount(@Nullable Integer maxCount) {
+        public Builder maxCount(@Nullable Integer maxCount) {
             this.maxCount = maxCount;
             return this;
         }
 
-        public Builder setMaxPods(@Nullable Integer maxPods) {
+        public Builder maxPods(@Nullable Integer maxPods) {
             this.maxPods = maxPods;
             return this;
         }
 
-        public Builder setMinCount(@Nullable Integer minCount) {
+        public Builder minCount(@Nullable Integer minCount) {
             this.minCount = minCount;
             return this;
         }
 
-        public Builder setMode(@Nullable String mode) {
+        public Builder mode(@Nullable String mode) {
             this.mode = mode;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setNodeImageVersion(String nodeImageVersion) {
+        public Builder nodeImageVersion(String nodeImageVersion) {
             this.nodeImageVersion = Objects.requireNonNull(nodeImageVersion);
             return this;
         }
 
-        public Builder setNodeLabels(@Nullable Map<String,String> nodeLabels) {
+        public Builder nodeLabels(@Nullable Map<String,String> nodeLabels) {
             this.nodeLabels = nodeLabels;
             return this;
         }
 
-        public Builder setNodePublicIPPrefixID(@Nullable String nodePublicIPPrefixID) {
+        public Builder nodePublicIPPrefixID(@Nullable String nodePublicIPPrefixID) {
             this.nodePublicIPPrefixID = nodePublicIPPrefixID;
             return this;
         }
 
-        public Builder setNodeTaints(@Nullable List<String> nodeTaints) {
+        public Builder nodeTaints(@Nullable List<String> nodeTaints) {
             this.nodeTaints = nodeTaints;
             return this;
         }
 
-        public Builder setOrchestratorVersion(@Nullable String orchestratorVersion) {
+        public Builder orchestratorVersion(@Nullable String orchestratorVersion) {
             this.orchestratorVersion = orchestratorVersion;
             return this;
         }
 
-        public Builder setOsDiskSizeGB(@Nullable Integer osDiskSizeGB) {
+        public Builder osDiskSizeGB(@Nullable Integer osDiskSizeGB) {
             this.osDiskSizeGB = osDiskSizeGB;
             return this;
         }
 
-        public Builder setOsDiskType(@Nullable String osDiskType) {
+        public Builder osDiskType(@Nullable String osDiskType) {
             this.osDiskType = osDiskType;
             return this;
         }
 
-        public Builder setOsSKU(@Nullable String osSKU) {
+        public Builder osSKU(@Nullable String osSKU) {
             this.osSKU = osSKU;
             return this;
         }
 
-        public Builder setOsType(@Nullable String osType) {
+        public Builder osType(@Nullable String osType) {
             this.osType = osType;
             return this;
         }
 
-        public Builder setPodSubnetID(@Nullable String podSubnetID) {
+        public Builder podSubnetID(@Nullable String podSubnetID) {
             this.podSubnetID = podSubnetID;
             return this;
         }
 
-        public Builder setPowerState(PowerStateResponse powerState) {
+        public Builder powerState(PowerStateResponse powerState) {
             this.powerState = Objects.requireNonNull(powerState);
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setProximityPlacementGroupID(@Nullable String proximityPlacementGroupID) {
+        public Builder proximityPlacementGroupID(@Nullable String proximityPlacementGroupID) {
             this.proximityPlacementGroupID = proximityPlacementGroupID;
             return this;
         }
 
-        public Builder setScaleSetEvictionPolicy(@Nullable String scaleSetEvictionPolicy) {
+        public Builder scaleSetEvictionPolicy(@Nullable String scaleSetEvictionPolicy) {
             this.scaleSetEvictionPolicy = scaleSetEvictionPolicy;
             return this;
         }
 
-        public Builder setScaleSetPriority(@Nullable String scaleSetPriority) {
+        public Builder scaleSetPriority(@Nullable String scaleSetPriority) {
             this.scaleSetPriority = scaleSetPriority;
             return this;
         }
 
-        public Builder setSpotMaxPrice(@Nullable Double spotMaxPrice) {
+        public Builder spotMaxPrice(@Nullable Double spotMaxPrice) {
             this.spotMaxPrice = spotMaxPrice;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setUpgradeSettings(@Nullable AgentPoolUpgradeSettingsResponse upgradeSettings) {
+        public Builder upgradeSettings(@Nullable AgentPoolUpgradeSettingsResponse upgradeSettings) {
             this.upgradeSettings = upgradeSettings;
             return this;
         }
 
-        public Builder setVmSize(@Nullable String vmSize) {
+        public Builder vmSize(@Nullable String vmSize) {
             this.vmSize = vmSize;
             return this;
         }
 
-        public Builder setVnetSubnetID(@Nullable String vnetSubnetID) {
+        public Builder vnetSubnetID(@Nullable String vnetSubnetID) {
             this.vnetSubnetID = vnetSubnetID;
             return this;
         }

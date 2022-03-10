@@ -57,12 +57,12 @@ public final class AgentPropertiesArgs extends io.pulumi.resources.ResourceArgs 
     	      this.cpu = defaults.cpu;
         }
 
-        public Builder setCpu(@Nullable Input<Integer> cpu) {
+        public Builder cpu(@Nullable Input<Integer> cpu) {
             this.cpu = cpu;
             return this;
         }
 
-        public Builder setCpu(@Nullable Integer cpu) {
+        public Builder cpu(@Nullable Integer cpu) {
             this.cpu = Input.ofNullable(cpu);
             return this;
         }

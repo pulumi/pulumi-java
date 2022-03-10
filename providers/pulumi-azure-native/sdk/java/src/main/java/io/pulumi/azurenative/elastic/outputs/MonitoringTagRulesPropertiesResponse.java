@@ -68,12 +68,12 @@ public final class MonitoringTagRulesPropertiesResponse {
     	      this.provisioningState = defaults.provisioningState;
         }
 
-        public Builder setLogRules(@Nullable LogRulesResponse logRules) {
+        public Builder logRules(@Nullable LogRulesResponse logRules) {
             this.logRules = logRules;
             return this;
         }
 
-        public Builder setProvisioningState(@Nullable String provisioningState) {
+        public Builder provisioningState(@Nullable String provisioningState) {
             this.provisioningState = provisioningState;
             return this;
         }

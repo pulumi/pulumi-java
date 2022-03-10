@@ -118,27 +118,27 @@ public final class LBFrontendIPConfigurationResourceSettingsResponse {
     	      this.zones = defaults.zones;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setPrivateIpAddress(@Nullable String privateIpAddress) {
+        public Builder privateIpAddress(@Nullable String privateIpAddress) {
             this.privateIpAddress = privateIpAddress;
             return this;
         }
 
-        public Builder setPrivateIpAllocationMethod(@Nullable String privateIpAllocationMethod) {
+        public Builder privateIpAllocationMethod(@Nullable String privateIpAllocationMethod) {
             this.privateIpAllocationMethod = privateIpAllocationMethod;
             return this;
         }
 
-        public Builder setSubnet(@Nullable SubnetReferenceResponse subnet) {
+        public Builder subnet(@Nullable SubnetReferenceResponse subnet) {
             this.subnet = subnet;
             return this;
         }
 
-        public Builder setZones(@Nullable String zones) {
+        public Builder zones(@Nullable String zones) {
             this.zones = zones;
             return this;
         }

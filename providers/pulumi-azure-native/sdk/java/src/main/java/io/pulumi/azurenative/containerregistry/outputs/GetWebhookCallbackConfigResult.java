@@ -67,12 +67,12 @@ public final class GetWebhookCallbackConfigResult {
     	      this.serviceUri = defaults.serviceUri;
         }
 
-        public Builder setCustomHeaders(@Nullable Map<String,String> customHeaders) {
+        public Builder customHeaders(@Nullable Map<String,String> customHeaders) {
             this.customHeaders = customHeaders;
             return this;
         }
 
-        public Builder setServiceUri(String serviceUri) {
+        public Builder serviceUri(String serviceUri) {
             this.serviceUri = Objects.requireNonNull(serviceUri);
             return this;
         }

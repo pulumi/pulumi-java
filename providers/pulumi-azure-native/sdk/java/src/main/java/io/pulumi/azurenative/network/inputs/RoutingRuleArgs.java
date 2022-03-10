@@ -194,92 +194,92 @@ public final class RoutingRuleArgs extends io.pulumi.resources.ResourceArgs {
     	      this.webApplicationFirewallPolicyLink = defaults.webApplicationFirewallPolicyLink;
         }
 
-        public Builder setAcceptedProtocols(@Nullable Input<List<Either<String,FrontDoorProtocol>>> acceptedProtocols) {
+        public Builder acceptedProtocols(@Nullable Input<List<Either<String,FrontDoorProtocol>>> acceptedProtocols) {
             this.acceptedProtocols = acceptedProtocols;
             return this;
         }
 
-        public Builder setAcceptedProtocols(@Nullable List<Either<String,FrontDoorProtocol>> acceptedProtocols) {
+        public Builder acceptedProtocols(@Nullable List<Either<String,FrontDoorProtocol>> acceptedProtocols) {
             this.acceptedProtocols = Input.ofNullable(acceptedProtocols);
             return this;
         }
 
-        public Builder setEnabledState(@Nullable Input<Either<String,RoutingRuleEnabledState>> enabledState) {
+        public Builder enabledState(@Nullable Input<Either<String,RoutingRuleEnabledState>> enabledState) {
             this.enabledState = enabledState;
             return this;
         }
 
-        public Builder setEnabledState(@Nullable Either<String,RoutingRuleEnabledState> enabledState) {
+        public Builder enabledState(@Nullable Either<String,RoutingRuleEnabledState> enabledState) {
             this.enabledState = Input.ofNullable(enabledState);
             return this;
         }
 
-        public Builder setFrontendEndpoints(@Nullable Input<List<SubResourceArgs>> frontendEndpoints) {
+        public Builder frontendEndpoints(@Nullable Input<List<SubResourceArgs>> frontendEndpoints) {
             this.frontendEndpoints = frontendEndpoints;
             return this;
         }
 
-        public Builder setFrontendEndpoints(@Nullable List<SubResourceArgs> frontendEndpoints) {
+        public Builder frontendEndpoints(@Nullable List<SubResourceArgs> frontendEndpoints) {
             this.frontendEndpoints = Input.ofNullable(frontendEndpoints);
             return this;
         }
 
-        public Builder setId(@Nullable Input<String> id) {
+        public Builder id(@Nullable Input<String> id) {
             this.id = id;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = Input.ofNullable(id);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setPatternsToMatch(@Nullable Input<List<String>> patternsToMatch) {
+        public Builder patternsToMatch(@Nullable Input<List<String>> patternsToMatch) {
             this.patternsToMatch = patternsToMatch;
             return this;
         }
 
-        public Builder setPatternsToMatch(@Nullable List<String> patternsToMatch) {
+        public Builder patternsToMatch(@Nullable List<String> patternsToMatch) {
             this.patternsToMatch = Input.ofNullable(patternsToMatch);
             return this;
         }
 
-        public Builder setRouteConfiguration(@Nullable Input<Either<ForwardingConfigurationArgs,RedirectConfigurationArgs>> routeConfiguration) {
+        public Builder routeConfiguration(@Nullable Input<Either<ForwardingConfigurationArgs,RedirectConfigurationArgs>> routeConfiguration) {
             this.routeConfiguration = routeConfiguration;
             return this;
         }
 
-        public Builder setRouteConfiguration(@Nullable Either<ForwardingConfigurationArgs,RedirectConfigurationArgs> routeConfiguration) {
+        public Builder routeConfiguration(@Nullable Either<ForwardingConfigurationArgs,RedirectConfigurationArgs> routeConfiguration) {
             this.routeConfiguration = Input.ofNullable(routeConfiguration);
             return this;
         }
 
-        public Builder setRulesEngine(@Nullable Input<SubResourceArgs> rulesEngine) {
+        public Builder rulesEngine(@Nullable Input<SubResourceArgs> rulesEngine) {
             this.rulesEngine = rulesEngine;
             return this;
         }
 
-        public Builder setRulesEngine(@Nullable SubResourceArgs rulesEngine) {
+        public Builder rulesEngine(@Nullable SubResourceArgs rulesEngine) {
             this.rulesEngine = Input.ofNullable(rulesEngine);
             return this;
         }
 
-        public Builder setWebApplicationFirewallPolicyLink(@Nullable Input<RoutingRuleUpdateParametersWebApplicationFirewallPolicyLinkArgs> webApplicationFirewallPolicyLink) {
+        public Builder webApplicationFirewallPolicyLink(@Nullable Input<RoutingRuleUpdateParametersWebApplicationFirewallPolicyLinkArgs> webApplicationFirewallPolicyLink) {
             this.webApplicationFirewallPolicyLink = webApplicationFirewallPolicyLink;
             return this;
         }
 
-        public Builder setWebApplicationFirewallPolicyLink(@Nullable RoutingRuleUpdateParametersWebApplicationFirewallPolicyLinkArgs webApplicationFirewallPolicyLink) {
+        public Builder webApplicationFirewallPolicyLink(@Nullable RoutingRuleUpdateParametersWebApplicationFirewallPolicyLinkArgs webApplicationFirewallPolicyLink) {
             this.webApplicationFirewallPolicyLink = Input.ofNullable(webApplicationFirewallPolicyLink);
             return this;
         }

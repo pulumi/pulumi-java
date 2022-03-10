@@ -75,22 +75,22 @@ public final class ScaleSettingsArgs extends io.pulumi.resources.ResourceArgs {
     	      this.fixedScale = defaults.fixedScale;
         }
 
-        public Builder setAutoScale(@Nullable Input<AutoScaleSettingsArgs> autoScale) {
+        public Builder autoScale(@Nullable Input<AutoScaleSettingsArgs> autoScale) {
             this.autoScale = autoScale;
             return this;
         }
 
-        public Builder setAutoScale(@Nullable AutoScaleSettingsArgs autoScale) {
+        public Builder autoScale(@Nullable AutoScaleSettingsArgs autoScale) {
             this.autoScale = Input.ofNullable(autoScale);
             return this;
         }
 
-        public Builder setFixedScale(@Nullable Input<FixedScaleSettingsArgs> fixedScale) {
+        public Builder fixedScale(@Nullable Input<FixedScaleSettingsArgs> fixedScale) {
             this.fixedScale = fixedScale;
             return this;
         }
 
-        public Builder setFixedScale(@Nullable FixedScaleSettingsArgs fixedScale) {
+        public Builder fixedScale(@Nullable FixedScaleSettingsArgs fixedScale) {
             this.fixedScale = Input.ofNullable(fixedScale);
             return this;
         }

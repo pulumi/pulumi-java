@@ -68,12 +68,12 @@ public final class VideoAnalyzerIdentityResponse {
     	      this.userAssignedIdentities = defaults.userAssignedIdentities;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setUserAssignedIdentities(@Nullable Map<String,UserAssignedManagedIdentityResponse> userAssignedIdentities) {
+        public Builder userAssignedIdentities(@Nullable Map<String,UserAssignedManagedIdentityResponse> userAssignedIdentities) {
             this.userAssignedIdentities = userAssignedIdentities;
             return this;
         }

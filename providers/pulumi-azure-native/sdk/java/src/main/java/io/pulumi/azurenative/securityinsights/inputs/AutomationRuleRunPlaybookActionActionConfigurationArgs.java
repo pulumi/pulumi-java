@@ -74,22 +74,22 @@ public final class AutomationRuleRunPlaybookActionActionConfigurationArgs extend
     	      this.tenantId = defaults.tenantId;
         }
 
-        public Builder setLogicAppResourceId(@Nullable Input<String> logicAppResourceId) {
+        public Builder logicAppResourceId(@Nullable Input<String> logicAppResourceId) {
             this.logicAppResourceId = logicAppResourceId;
             return this;
         }
 
-        public Builder setLogicAppResourceId(@Nullable String logicAppResourceId) {
+        public Builder logicAppResourceId(@Nullable String logicAppResourceId) {
             this.logicAppResourceId = Input.ofNullable(logicAppResourceId);
             return this;
         }
 
-        public Builder setTenantId(@Nullable Input<String> tenantId) {
+        public Builder tenantId(@Nullable Input<String> tenantId) {
             this.tenantId = tenantId;
             return this;
         }
 
-        public Builder setTenantId(@Nullable String tenantId) {
+        public Builder tenantId(@Nullable String tenantId) {
             this.tenantId = Input.ofNullable(tenantId);
             return this;
         }

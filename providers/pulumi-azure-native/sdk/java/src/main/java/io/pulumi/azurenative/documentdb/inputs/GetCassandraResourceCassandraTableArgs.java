@@ -100,22 +100,22 @@ public final class GetCassandraResourceCassandraTableArgs extends io.pulumi.reso
     	      this.tableName = defaults.tableName;
         }
 
-        public Builder setAccountName(String accountName) {
+        public Builder accountName(String accountName) {
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
 
-        public Builder setKeyspaceName(String keyspaceName) {
+        public Builder keyspaceName(String keyspaceName) {
             this.keyspaceName = Objects.requireNonNull(keyspaceName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setTableName(String tableName) {
+        public Builder tableName(String tableName) {
             this.tableName = Objects.requireNonNull(tableName);
             return this;
         }

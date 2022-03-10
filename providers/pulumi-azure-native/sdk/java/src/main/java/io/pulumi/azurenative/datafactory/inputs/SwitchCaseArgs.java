@@ -114,22 +114,22 @@ public final class SwitchCaseArgs extends io.pulumi.resources.ResourceArgs {
     	      this.value = defaults.value;
         }
 
-        public Builder setActivities(@Nullable Input<List<Object>> activities) {
+        public Builder activities(@Nullable Input<List<Object>> activities) {
             this.activities = activities;
             return this;
         }
 
-        public Builder setActivities(@Nullable List<Object> activities) {
+        public Builder activities(@Nullable List<Object> activities) {
             this.activities = Input.ofNullable(activities);
             return this;
         }
 
-        public Builder setValue(@Nullable Input<String> value) {
+        public Builder value(@Nullable Input<String> value) {
             this.value = value;
             return this;
         }
 
-        public Builder setValue(@Nullable String value) {
+        public Builder value(@Nullable String value) {
             this.value = Input.ofNullable(value);
             return this;
         }

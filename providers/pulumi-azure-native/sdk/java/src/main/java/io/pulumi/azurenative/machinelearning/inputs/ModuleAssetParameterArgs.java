@@ -92,32 +92,32 @@ public final class ModuleAssetParameterArgs extends io.pulumi.resources.Resource
     	      this.parameterType = defaults.parameterType;
         }
 
-        public Builder setModeValuesInfo(@Nullable Input<Map<String,ModeValueInfoArgs>> modeValuesInfo) {
+        public Builder modeValuesInfo(@Nullable Input<Map<String,ModeValueInfoArgs>> modeValuesInfo) {
             this.modeValuesInfo = modeValuesInfo;
             return this;
         }
 
-        public Builder setModeValuesInfo(@Nullable Map<String,ModeValueInfoArgs> modeValuesInfo) {
+        public Builder modeValuesInfo(@Nullable Map<String,ModeValueInfoArgs> modeValuesInfo) {
             this.modeValuesInfo = Input.ofNullable(modeValuesInfo);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setParameterType(@Nullable Input<String> parameterType) {
+        public Builder parameterType(@Nullable Input<String> parameterType) {
             this.parameterType = parameterType;
             return this;
         }
 
-        public Builder setParameterType(@Nullable String parameterType) {
+        public Builder parameterType(@Nullable String parameterType) {
             this.parameterType = Input.ofNullable(parameterType);
             return this;
         }

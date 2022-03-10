@@ -448,127 +448,127 @@ public final class ACIServiceResponseResponse {
     	      this.vnetConfiguration = defaults.vnetConfiguration;
         }
 
-        public Builder setAppInsightsEnabled(@Nullable Boolean appInsightsEnabled) {
+        public Builder appInsightsEnabled(@Nullable Boolean appInsightsEnabled) {
             this.appInsightsEnabled = appInsightsEnabled;
             return this;
         }
 
-        public Builder setAuthEnabled(@Nullable Boolean authEnabled) {
+        public Builder authEnabled(@Nullable Boolean authEnabled) {
             this.authEnabled = authEnabled;
             return this;
         }
 
-        public Builder setCname(@Nullable String cname) {
+        public Builder cname(@Nullable String cname) {
             this.cname = cname;
             return this;
         }
 
-        public Builder setComputeType(String computeType) {
+        public Builder computeType(String computeType) {
             this.computeType = Objects.requireNonNull(computeType);
             return this;
         }
 
-        public Builder setContainerResourceRequirements(@Nullable ContainerResourceRequirementsResponse containerResourceRequirements) {
+        public Builder containerResourceRequirements(@Nullable ContainerResourceRequirementsResponse containerResourceRequirements) {
             this.containerResourceRequirements = containerResourceRequirements;
             return this;
         }
 
-        public Builder setDataCollection(@Nullable ACIServiceResponseResponseDataCollection dataCollection) {
+        public Builder dataCollection(@Nullable ACIServiceResponseResponseDataCollection dataCollection) {
             this.dataCollection = dataCollection;
             return this;
         }
 
-        public Builder setDeploymentType(@Nullable String deploymentType) {
+        public Builder deploymentType(@Nullable String deploymentType) {
             this.deploymentType = deploymentType;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setEncryptionProperties(@Nullable ACIServiceResponseResponseEncryptionProperties encryptionProperties) {
+        public Builder encryptionProperties(@Nullable ACIServiceResponseResponseEncryptionProperties encryptionProperties) {
             this.encryptionProperties = encryptionProperties;
             return this;
         }
 
-        public Builder setEnvironmentImageRequest(@Nullable ACIServiceResponseResponseEnvironmentImageRequest environmentImageRequest) {
+        public Builder environmentImageRequest(@Nullable ACIServiceResponseResponseEnvironmentImageRequest environmentImageRequest) {
             this.environmentImageRequest = environmentImageRequest;
             return this;
         }
 
-        public Builder setError(ServiceResponseBaseResponseError error) {
+        public Builder error(ServiceResponseBaseResponseError error) {
             this.error = Objects.requireNonNull(error);
             return this;
         }
 
-        public Builder setKvTags(@Nullable Map<String,String> kvTags) {
+        public Builder kvTags(@Nullable Map<String,String> kvTags) {
             this.kvTags = kvTags;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
 
-        public Builder setModelConfigMap(Map<String,Object> modelConfigMap) {
+        public Builder modelConfigMap(Map<String,Object> modelConfigMap) {
             this.modelConfigMap = Objects.requireNonNull(modelConfigMap);
             return this;
         }
 
-        public Builder setModels(@Nullable List<ModelResponse> models) {
+        public Builder models(@Nullable List<ModelResponse> models) {
             this.models = models;
             return this;
         }
 
-        public Builder setProperties(@Nullable Map<String,String> properties) {
+        public Builder properties(@Nullable Map<String,String> properties) {
             this.properties = properties;
             return this;
         }
 
-        public Builder setPublicFqdn(@Nullable String publicFqdn) {
+        public Builder publicFqdn(@Nullable String publicFqdn) {
             this.publicFqdn = publicFqdn;
             return this;
         }
 
-        public Builder setPublicIp(@Nullable String publicIp) {
+        public Builder publicIp(@Nullable String publicIp) {
             this.publicIp = publicIp;
             return this;
         }
 
-        public Builder setScoringUri(String scoringUri) {
+        public Builder scoringUri(String scoringUri) {
             this.scoringUri = Objects.requireNonNull(scoringUri);
             return this;
         }
 
-        public Builder setSslCertificate(@Nullable String sslCertificate) {
+        public Builder sslCertificate(@Nullable String sslCertificate) {
             this.sslCertificate = sslCertificate;
             return this;
         }
 
-        public Builder setSslEnabled(@Nullable Boolean sslEnabled) {
+        public Builder sslEnabled(@Nullable Boolean sslEnabled) {
             this.sslEnabled = sslEnabled;
             return this;
         }
 
-        public Builder setSslKey(@Nullable String sslKey) {
+        public Builder sslKey(@Nullable String sslKey) {
             this.sslKey = sslKey;
             return this;
         }
 
-        public Builder setState(String state) {
+        public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
 
-        public Builder setSwaggerUri(String swaggerUri) {
+        public Builder swaggerUri(String swaggerUri) {
             this.swaggerUri = Objects.requireNonNull(swaggerUri);
             return this;
         }
 
-        public Builder setVnetConfiguration(@Nullable ACIServiceResponseResponseVnetConfiguration vnetConfiguration) {
+        public Builder vnetConfiguration(@Nullable ACIServiceResponseResponseVnetConfiguration vnetConfiguration) {
             this.vnetConfiguration = vnetConfiguration;
             return this;
         }

@@ -250,132 +250,132 @@ public final class SqlServerInstancePropertiesArgs extends io.pulumi.resources.R
     	      this.version = defaults.version;
         }
 
-        public Builder setCollation(@Nullable Input<String> collation) {
+        public Builder collation(@Nullable Input<String> collation) {
             this.collation = collation;
             return this;
         }
 
-        public Builder setCollation(@Nullable String collation) {
+        public Builder collation(@Nullable String collation) {
             this.collation = Input.ofNullable(collation);
             return this;
         }
 
-        public Builder setContainerResourceId(Input<String> containerResourceId) {
+        public Builder containerResourceId(Input<String> containerResourceId) {
             this.containerResourceId = Objects.requireNonNull(containerResourceId);
             return this;
         }
 
-        public Builder setContainerResourceId(String containerResourceId) {
+        public Builder containerResourceId(String containerResourceId) {
             this.containerResourceId = Input.of(Objects.requireNonNull(containerResourceId));
             return this;
         }
 
-        public Builder setCurrentVersion(@Nullable Input<String> currentVersion) {
+        public Builder currentVersion(@Nullable Input<String> currentVersion) {
             this.currentVersion = currentVersion;
             return this;
         }
 
-        public Builder setCurrentVersion(@Nullable String currentVersion) {
+        public Builder currentVersion(@Nullable String currentVersion) {
             this.currentVersion = Input.ofNullable(currentVersion);
             return this;
         }
 
-        public Builder setEdition(@Nullable Input<String> edition) {
+        public Builder edition(@Nullable Input<String> edition) {
             this.edition = edition;
             return this;
         }
 
-        public Builder setEdition(@Nullable String edition) {
+        public Builder edition(@Nullable String edition) {
             this.edition = Input.ofNullable(edition);
             return this;
         }
 
-        public Builder setInstanceName(@Nullable Input<String> instanceName) {
+        public Builder instanceName(@Nullable Input<String> instanceName) {
             this.instanceName = instanceName;
             return this;
         }
 
-        public Builder setInstanceName(@Nullable String instanceName) {
+        public Builder instanceName(@Nullable String instanceName) {
             this.instanceName = Input.ofNullable(instanceName);
             return this;
         }
 
-        public Builder setLicenseType(@Nullable Input<String> licenseType) {
+        public Builder licenseType(@Nullable Input<String> licenseType) {
             this.licenseType = licenseType;
             return this;
         }
 
-        public Builder setLicenseType(@Nullable String licenseType) {
+        public Builder licenseType(@Nullable String licenseType) {
             this.licenseType = Input.ofNullable(licenseType);
             return this;
         }
 
-        public Builder setPatchLevel(@Nullable Input<String> patchLevel) {
+        public Builder patchLevel(@Nullable Input<String> patchLevel) {
             this.patchLevel = patchLevel;
             return this;
         }
 
-        public Builder setPatchLevel(@Nullable String patchLevel) {
+        public Builder patchLevel(@Nullable String patchLevel) {
             this.patchLevel = Input.ofNullable(patchLevel);
             return this;
         }
 
-        public Builder setProductId(@Nullable Input<String> productId) {
+        public Builder productId(@Nullable Input<String> productId) {
             this.productId = productId;
             return this;
         }
 
-        public Builder setProductId(@Nullable String productId) {
+        public Builder productId(@Nullable String productId) {
             this.productId = Input.ofNullable(productId);
             return this;
         }
 
-        public Builder setStatus(Input<String> status) {
+        public Builder status(Input<String> status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
 
-        public Builder setStatus(String status) {
+        public Builder status(String status) {
             this.status = Input.of(Objects.requireNonNull(status));
             return this;
         }
 
-        public Builder setTcpDynamicPorts(@Nullable Input<String> tcpDynamicPorts) {
+        public Builder tcpDynamicPorts(@Nullable Input<String> tcpDynamicPorts) {
             this.tcpDynamicPorts = tcpDynamicPorts;
             return this;
         }
 
-        public Builder setTcpDynamicPorts(@Nullable String tcpDynamicPorts) {
+        public Builder tcpDynamicPorts(@Nullable String tcpDynamicPorts) {
             this.tcpDynamicPorts = Input.ofNullable(tcpDynamicPorts);
             return this;
         }
 
-        public Builder setTcpStaticPorts(@Nullable Input<String> tcpStaticPorts) {
+        public Builder tcpStaticPorts(@Nullable Input<String> tcpStaticPorts) {
             this.tcpStaticPorts = tcpStaticPorts;
             return this;
         }
 
-        public Builder setTcpStaticPorts(@Nullable String tcpStaticPorts) {
+        public Builder tcpStaticPorts(@Nullable String tcpStaticPorts) {
             this.tcpStaticPorts = Input.ofNullable(tcpStaticPorts);
             return this;
         }
 
-        public Builder setVCore(@Nullable Input<String> vCore) {
+        public Builder vCore(@Nullable Input<String> vCore) {
             this.vCore = vCore;
             return this;
         }
 
-        public Builder setVCore(@Nullable String vCore) {
+        public Builder vCore(@Nullable String vCore) {
             this.vCore = Input.ofNullable(vCore);
             return this;
         }
 
-        public Builder setVersion(@Nullable Input<String> version) {
+        public Builder version(@Nullable Input<String> version) {
             this.version = version;
             return this;
         }
 
-        public Builder setVersion(@Nullable String version) {
+        public Builder version(@Nullable String version) {
             this.version = Input.ofNullable(version);
             return this;
         }

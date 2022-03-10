@@ -122,42 +122,42 @@ public final class MoveResourcePropertiesArgs extends io.pulumi.resources.Resour
     	      this.sourceId = defaults.sourceId;
         }
 
-        public Builder setDependsOnOverrides(@Nullable Input<List<MoveResourceDependencyOverrideArgs>> dependsOnOverrides) {
+        public Builder dependsOnOverrides(@Nullable Input<List<MoveResourceDependencyOverrideArgs>> dependsOnOverrides) {
             this.dependsOnOverrides = dependsOnOverrides;
             return this;
         }
 
-        public Builder setDependsOnOverrides(@Nullable List<MoveResourceDependencyOverrideArgs> dependsOnOverrides) {
+        public Builder dependsOnOverrides(@Nullable List<MoveResourceDependencyOverrideArgs> dependsOnOverrides) {
             this.dependsOnOverrides = Input.ofNullable(dependsOnOverrides);
             return this;
         }
 
-        public Builder setExistingTargetId(@Nullable Input<String> existingTargetId) {
+        public Builder existingTargetId(@Nullable Input<String> existingTargetId) {
             this.existingTargetId = existingTargetId;
             return this;
         }
 
-        public Builder setExistingTargetId(@Nullable String existingTargetId) {
+        public Builder existingTargetId(@Nullable String existingTargetId) {
             this.existingTargetId = Input.ofNullable(existingTargetId);
             return this;
         }
 
-        public Builder setResourceSettings(@Nullable Input<Object> resourceSettings) {
+        public Builder resourceSettings(@Nullable Input<Object> resourceSettings) {
             this.resourceSettings = resourceSettings;
             return this;
         }
 
-        public Builder setResourceSettings(@Nullable Object resourceSettings) {
+        public Builder resourceSettings(@Nullable Object resourceSettings) {
             this.resourceSettings = Input.ofNullable(resourceSettings);
             return this;
         }
 
-        public Builder setSourceId(Input<String> sourceId) {
+        public Builder sourceId(Input<String> sourceId) {
             this.sourceId = Objects.requireNonNull(sourceId);
             return this;
         }
 
-        public Builder setSourceId(String sourceId) {
+        public Builder sourceId(String sourceId) {
             this.sourceId = Input.of(Objects.requireNonNull(sourceId));
             return this;
         }

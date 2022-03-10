@@ -92,32 +92,32 @@ public final class HttpConfigArgs extends io.pulumi.resources.ResourceArgs {
     	      this.port = defaults.port;
         }
 
-        public Builder setHosts(Input<List<HttpHostConfigArgs>> hosts) {
+        public Builder hosts(Input<List<HttpHostConfigArgs>> hosts) {
             this.hosts = Objects.requireNonNull(hosts);
             return this;
         }
 
-        public Builder setHosts(List<HttpHostConfigArgs> hosts) {
+        public Builder hosts(List<HttpHostConfigArgs> hosts) {
             this.hosts = Input.of(Objects.requireNonNull(hosts));
             return this;
         }
 
-        public Builder setName(Input<String> name) {
+        public Builder name(Input<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder setPort(Input<Integer> port) {
+        public Builder port(Input<Integer> port) {
             this.port = Objects.requireNonNull(port);
             return this;
         }
 
-        public Builder setPort(Integer port) {
+        public Builder port(Integer port) {
             this.port = Input.of(Objects.requireNonNull(port));
             return this;
         }

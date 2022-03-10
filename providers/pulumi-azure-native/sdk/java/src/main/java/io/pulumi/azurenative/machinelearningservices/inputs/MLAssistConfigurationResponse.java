@@ -125,27 +125,27 @@ public final class MLAssistConfigurationResponse extends io.pulumi.resources.Inv
     	      this.trainingComputeBinding = defaults.trainingComputeBinding;
         }
 
-        public Builder setInferencingComputeBinding(ComputeBindingResponse inferencingComputeBinding) {
+        public Builder inferencingComputeBinding(ComputeBindingResponse inferencingComputeBinding) {
             this.inferencingComputeBinding = Objects.requireNonNull(inferencingComputeBinding);
             return this;
         }
 
-        public Builder setMlAssistEnabled(@Nullable Boolean mlAssistEnabled) {
+        public Builder mlAssistEnabled(@Nullable Boolean mlAssistEnabled) {
             this.mlAssistEnabled = mlAssistEnabled;
             return this;
         }
 
-        public Builder setModelNamePrefix(String modelNamePrefix) {
+        public Builder modelNamePrefix(String modelNamePrefix) {
             this.modelNamePrefix = Objects.requireNonNull(modelNamePrefix);
             return this;
         }
 
-        public Builder setPrelabelAccuracyThreshold(@Nullable Double prelabelAccuracyThreshold) {
+        public Builder prelabelAccuracyThreshold(@Nullable Double prelabelAccuracyThreshold) {
             this.prelabelAccuracyThreshold = prelabelAccuracyThreshold;
             return this;
         }
 
-        public Builder setTrainingComputeBinding(ComputeBindingResponse trainingComputeBinding) {
+        public Builder trainingComputeBinding(ComputeBindingResponse trainingComputeBinding) {
             this.trainingComputeBinding = Objects.requireNonNull(trainingComputeBinding);
             return this;
         }

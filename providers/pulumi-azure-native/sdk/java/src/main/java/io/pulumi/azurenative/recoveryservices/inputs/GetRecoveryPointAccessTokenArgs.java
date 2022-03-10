@@ -200,52 +200,52 @@ public final class GetRecoveryPointAccessTokenArgs extends io.pulumi.resources.I
     	      this.vaultName = defaults.vaultName;
         }
 
-        public Builder setContainerName(String containerName) {
+        public Builder containerName(String containerName) {
             this.containerName = Objects.requireNonNull(containerName);
             return this;
         }
 
-        public Builder setETag(@Nullable String eTag) {
+        public Builder eTag(@Nullable String eTag) {
             this.eTag = eTag;
             return this;
         }
 
-        public Builder setFabricName(String fabricName) {
+        public Builder fabricName(String fabricName) {
             this.fabricName = Objects.requireNonNull(fabricName);
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
 
-        public Builder setProperties(@Nullable AADProperties properties) {
+        public Builder properties(@Nullable AADProperties properties) {
             this.properties = properties;
             return this;
         }
 
-        public Builder setProtectedItemName(String protectedItemName) {
+        public Builder protectedItemName(String protectedItemName) {
             this.protectedItemName = Objects.requireNonNull(protectedItemName);
             return this;
         }
 
-        public Builder setRecoveryPointId(String recoveryPointId) {
+        public Builder recoveryPointId(String recoveryPointId) {
             this.recoveryPointId = Objects.requireNonNull(recoveryPointId);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setVaultName(String vaultName) {
+        public Builder vaultName(String vaultName) {
             this.vaultName = Objects.requireNonNull(vaultName);
             return this;
         }

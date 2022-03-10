@@ -110,42 +110,42 @@ public final class StorageProfileArgs extends io.pulumi.resources.ResourceArgs {
     	      this.storageMB = defaults.storageMB;
         }
 
-        public Builder setBackupRetentionDays(@Nullable Input<Integer> backupRetentionDays) {
+        public Builder backupRetentionDays(@Nullable Input<Integer> backupRetentionDays) {
             this.backupRetentionDays = backupRetentionDays;
             return this;
         }
 
-        public Builder setBackupRetentionDays(@Nullable Integer backupRetentionDays) {
+        public Builder backupRetentionDays(@Nullable Integer backupRetentionDays) {
             this.backupRetentionDays = Input.ofNullable(backupRetentionDays);
             return this;
         }
 
-        public Builder setGeoRedundantBackup(@Nullable Input<Either<String,GeoRedundantBackup>> geoRedundantBackup) {
+        public Builder geoRedundantBackup(@Nullable Input<Either<String,GeoRedundantBackup>> geoRedundantBackup) {
             this.geoRedundantBackup = geoRedundantBackup;
             return this;
         }
 
-        public Builder setGeoRedundantBackup(@Nullable Either<String,GeoRedundantBackup> geoRedundantBackup) {
+        public Builder geoRedundantBackup(@Nullable Either<String,GeoRedundantBackup> geoRedundantBackup) {
             this.geoRedundantBackup = Input.ofNullable(geoRedundantBackup);
             return this;
         }
 
-        public Builder setStorageAutogrow(@Nullable Input<Either<String,StorageAutogrow>> storageAutogrow) {
+        public Builder storageAutogrow(@Nullable Input<Either<String,StorageAutogrow>> storageAutogrow) {
             this.storageAutogrow = storageAutogrow;
             return this;
         }
 
-        public Builder setStorageAutogrow(@Nullable Either<String,StorageAutogrow> storageAutogrow) {
+        public Builder storageAutogrow(@Nullable Either<String,StorageAutogrow> storageAutogrow) {
             this.storageAutogrow = Input.ofNullable(storageAutogrow);
             return this;
         }
 
-        public Builder setStorageMB(@Nullable Input<Integer> storageMB) {
+        public Builder storageMB(@Nullable Input<Integer> storageMB) {
             this.storageMB = storageMB;
             return this;
         }
 
-        public Builder setStorageMB(@Nullable Integer storageMB) {
+        public Builder storageMB(@Nullable Integer storageMB) {
             this.storageMB = Input.ofNullable(storageMB);
             return this;
         }

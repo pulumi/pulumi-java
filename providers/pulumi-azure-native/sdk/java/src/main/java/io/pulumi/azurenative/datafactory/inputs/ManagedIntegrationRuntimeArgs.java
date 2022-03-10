@@ -143,62 +143,62 @@ public final class ManagedIntegrationRuntimeArgs extends io.pulumi.resources.Res
     	      this.type = defaults.type;
         }
 
-        public Builder setComputeProperties(@Nullable Input<IntegrationRuntimeComputePropertiesArgs> computeProperties) {
+        public Builder computeProperties(@Nullable Input<IntegrationRuntimeComputePropertiesArgs> computeProperties) {
             this.computeProperties = computeProperties;
             return this;
         }
 
-        public Builder setComputeProperties(@Nullable IntegrationRuntimeComputePropertiesArgs computeProperties) {
+        public Builder computeProperties(@Nullable IntegrationRuntimeComputePropertiesArgs computeProperties) {
             this.computeProperties = Input.ofNullable(computeProperties);
             return this;
         }
 
-        public Builder setCustomerVirtualNetwork(@Nullable Input<IntegrationRuntimeCustomerVirtualNetworkArgs> customerVirtualNetwork) {
+        public Builder customerVirtualNetwork(@Nullable Input<IntegrationRuntimeCustomerVirtualNetworkArgs> customerVirtualNetwork) {
             this.customerVirtualNetwork = customerVirtualNetwork;
             return this;
         }
 
-        public Builder setCustomerVirtualNetwork(@Nullable IntegrationRuntimeCustomerVirtualNetworkArgs customerVirtualNetwork) {
+        public Builder customerVirtualNetwork(@Nullable IntegrationRuntimeCustomerVirtualNetworkArgs customerVirtualNetwork) {
             this.customerVirtualNetwork = Input.ofNullable(customerVirtualNetwork);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setManagedVirtualNetwork(@Nullable Input<ManagedVirtualNetworkReferenceArgs> managedVirtualNetwork) {
+        public Builder managedVirtualNetwork(@Nullable Input<ManagedVirtualNetworkReferenceArgs> managedVirtualNetwork) {
             this.managedVirtualNetwork = managedVirtualNetwork;
             return this;
         }
 
-        public Builder setManagedVirtualNetwork(@Nullable ManagedVirtualNetworkReferenceArgs managedVirtualNetwork) {
+        public Builder managedVirtualNetwork(@Nullable ManagedVirtualNetworkReferenceArgs managedVirtualNetwork) {
             this.managedVirtualNetwork = Input.ofNullable(managedVirtualNetwork);
             return this;
         }
 
-        public Builder setSsisProperties(@Nullable Input<IntegrationRuntimeSsisPropertiesArgs> ssisProperties) {
+        public Builder ssisProperties(@Nullable Input<IntegrationRuntimeSsisPropertiesArgs> ssisProperties) {
             this.ssisProperties = ssisProperties;
             return this;
         }
 
-        public Builder setSsisProperties(@Nullable IntegrationRuntimeSsisPropertiesArgs ssisProperties) {
+        public Builder ssisProperties(@Nullable IntegrationRuntimeSsisPropertiesArgs ssisProperties) {
             this.ssisProperties = Input.ofNullable(ssisProperties);
             return this;
         }
 
-        public Builder setType(Input<String> type) {
+        public Builder type(Input<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }

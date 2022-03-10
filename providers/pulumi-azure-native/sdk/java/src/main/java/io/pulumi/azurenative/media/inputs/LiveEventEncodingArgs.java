@@ -109,42 +109,42 @@ public final class LiveEventEncodingArgs extends io.pulumi.resources.ResourceArg
     	      this.stretchMode = defaults.stretchMode;
         }
 
-        public Builder setEncodingType(@Nullable Input<Either<String,LiveEventEncodingType>> encodingType) {
+        public Builder encodingType(@Nullable Input<Either<String,LiveEventEncodingType>> encodingType) {
             this.encodingType = encodingType;
             return this;
         }
 
-        public Builder setEncodingType(@Nullable Either<String,LiveEventEncodingType> encodingType) {
+        public Builder encodingType(@Nullable Either<String,LiveEventEncodingType> encodingType) {
             this.encodingType = Input.ofNullable(encodingType);
             return this;
         }
 
-        public Builder setKeyFrameInterval(@Nullable Input<String> keyFrameInterval) {
+        public Builder keyFrameInterval(@Nullable Input<String> keyFrameInterval) {
             this.keyFrameInterval = keyFrameInterval;
             return this;
         }
 
-        public Builder setKeyFrameInterval(@Nullable String keyFrameInterval) {
+        public Builder keyFrameInterval(@Nullable String keyFrameInterval) {
             this.keyFrameInterval = Input.ofNullable(keyFrameInterval);
             return this;
         }
 
-        public Builder setPresetName(@Nullable Input<String> presetName) {
+        public Builder presetName(@Nullable Input<String> presetName) {
             this.presetName = presetName;
             return this;
         }
 
-        public Builder setPresetName(@Nullable String presetName) {
+        public Builder presetName(@Nullable String presetName) {
             this.presetName = Input.ofNullable(presetName);
             return this;
         }
 
-        public Builder setStretchMode(@Nullable Input<Either<String,StretchMode>> stretchMode) {
+        public Builder stretchMode(@Nullable Input<Either<String,StretchMode>> stretchMode) {
             this.stretchMode = stretchMode;
             return this;
         }
 
-        public Builder setStretchMode(@Nullable Either<String,StretchMode> stretchMode) {
+        public Builder stretchMode(@Nullable Either<String,StretchMode> stretchMode) {
             this.stretchMode = Input.ofNullable(stretchMode);
             return this;
         }

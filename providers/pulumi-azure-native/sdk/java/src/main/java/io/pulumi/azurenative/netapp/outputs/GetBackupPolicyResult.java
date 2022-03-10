@@ -248,67 +248,67 @@ public final class GetBackupPolicyResult {
     	      this.yearlyBackupsToKeep = defaults.yearlyBackupsToKeep;
         }
 
-        public Builder setDailyBackupsToKeep(@Nullable Integer dailyBackupsToKeep) {
+        public Builder dailyBackupsToKeep(@Nullable Integer dailyBackupsToKeep) {
             this.dailyBackupsToKeep = dailyBackupsToKeep;
             return this;
         }
 
-        public Builder setEnabled(@Nullable Boolean enabled) {
+        public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = enabled;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setMonthlyBackupsToKeep(@Nullable Integer monthlyBackupsToKeep) {
+        public Builder monthlyBackupsToKeep(@Nullable Integer monthlyBackupsToKeep) {
             this.monthlyBackupsToKeep = monthlyBackupsToKeep;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setVolumeBackups(@Nullable List<VolumeBackupsResponse> volumeBackups) {
+        public Builder volumeBackups(@Nullable List<VolumeBackupsResponse> volumeBackups) {
             this.volumeBackups = volumeBackups;
             return this;
         }
 
-        public Builder setVolumesAssigned(@Nullable Integer volumesAssigned) {
+        public Builder volumesAssigned(@Nullable Integer volumesAssigned) {
             this.volumesAssigned = volumesAssigned;
             return this;
         }
 
-        public Builder setWeeklyBackupsToKeep(@Nullable Integer weeklyBackupsToKeep) {
+        public Builder weeklyBackupsToKeep(@Nullable Integer weeklyBackupsToKeep) {
             this.weeklyBackupsToKeep = weeklyBackupsToKeep;
             return this;
         }
 
-        public Builder setYearlyBackupsToKeep(@Nullable Integer yearlyBackupsToKeep) {
+        public Builder yearlyBackupsToKeep(@Nullable Integer yearlyBackupsToKeep) {
             this.yearlyBackupsToKeep = yearlyBackupsToKeep;
             return this;
         }

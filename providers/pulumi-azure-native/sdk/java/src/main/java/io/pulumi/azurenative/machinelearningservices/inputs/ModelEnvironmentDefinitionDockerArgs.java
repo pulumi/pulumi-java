@@ -91,32 +91,32 @@ public final class ModelEnvironmentDefinitionDockerArgs extends io.pulumi.resour
     	      this.baseImageRegistry = defaults.baseImageRegistry;
         }
 
-        public Builder setBaseDockerfile(@Nullable Input<String> baseDockerfile) {
+        public Builder baseDockerfile(@Nullable Input<String> baseDockerfile) {
             this.baseDockerfile = baseDockerfile;
             return this;
         }
 
-        public Builder setBaseDockerfile(@Nullable String baseDockerfile) {
+        public Builder baseDockerfile(@Nullable String baseDockerfile) {
             this.baseDockerfile = Input.ofNullable(baseDockerfile);
             return this;
         }
 
-        public Builder setBaseImage(@Nullable Input<String> baseImage) {
+        public Builder baseImage(@Nullable Input<String> baseImage) {
             this.baseImage = baseImage;
             return this;
         }
 
-        public Builder setBaseImage(@Nullable String baseImage) {
+        public Builder baseImage(@Nullable String baseImage) {
             this.baseImage = Input.ofNullable(baseImage);
             return this;
         }
 
-        public Builder setBaseImageRegistry(@Nullable Input<ModelDockerSectionBaseImageRegistryArgs> baseImageRegistry) {
+        public Builder baseImageRegistry(@Nullable Input<ModelDockerSectionBaseImageRegistryArgs> baseImageRegistry) {
             this.baseImageRegistry = baseImageRegistry;
             return this;
         }
 
-        public Builder setBaseImageRegistry(@Nullable ModelDockerSectionBaseImageRegistryArgs baseImageRegistry) {
+        public Builder baseImageRegistry(@Nullable ModelDockerSectionBaseImageRegistryArgs baseImageRegistry) {
             this.baseImageRegistry = Input.ofNullable(baseImageRegistry);
             return this;
         }

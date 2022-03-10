@@ -65,12 +65,12 @@ public final class AS2AgreementContentResponse {
     	      this.sendAgreement = defaults.sendAgreement;
         }
 
-        public Builder setReceiveAgreement(AS2OneWayAgreementResponse receiveAgreement) {
+        public Builder receiveAgreement(AS2OneWayAgreementResponse receiveAgreement) {
             this.receiveAgreement = Objects.requireNonNull(receiveAgreement);
             return this;
         }
 
-        public Builder setSendAgreement(AS2OneWayAgreementResponse sendAgreement) {
+        public Builder sendAgreement(AS2OneWayAgreementResponse sendAgreement) {
             this.sendAgreement = Objects.requireNonNull(sendAgreement);
             return this;
         }

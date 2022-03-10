@@ -67,12 +67,12 @@ public final class QosPortRangeResponse {
     	      this.start = defaults.start;
         }
 
-        public Builder setEnd(@Nullable Integer end) {
+        public Builder end(@Nullable Integer end) {
             this.end = end;
             return this;
         }
 
-        public Builder setStart(@Nullable Integer start) {
+        public Builder start(@Nullable Integer start) {
             this.start = start;
             return this;
         }

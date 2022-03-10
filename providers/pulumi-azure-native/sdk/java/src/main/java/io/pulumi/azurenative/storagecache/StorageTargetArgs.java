@@ -207,102 +207,102 @@ public final class StorageTargetArgs extends io.pulumi.resources.ResourceArgs {
     	      this.unknown = defaults.unknown;
         }
 
-        public Builder setBlobNfs(@Nullable Input<BlobNfsTargetArgs> blobNfs) {
+        public Builder blobNfs(@Nullable Input<BlobNfsTargetArgs> blobNfs) {
             this.blobNfs = blobNfs;
             return this;
         }
 
-        public Builder setBlobNfs(@Nullable BlobNfsTargetArgs blobNfs) {
+        public Builder blobNfs(@Nullable BlobNfsTargetArgs blobNfs) {
             this.blobNfs = Input.ofNullable(blobNfs);
             return this;
         }
 
-        public Builder setCacheName(Input<String> cacheName) {
+        public Builder cacheName(Input<String> cacheName) {
             this.cacheName = Objects.requireNonNull(cacheName);
             return this;
         }
 
-        public Builder setCacheName(String cacheName) {
+        public Builder cacheName(String cacheName) {
             this.cacheName = Input.of(Objects.requireNonNull(cacheName));
             return this;
         }
 
-        public Builder setClfs(@Nullable Input<ClfsTargetArgs> clfs) {
+        public Builder clfs(@Nullable Input<ClfsTargetArgs> clfs) {
             this.clfs = clfs;
             return this;
         }
 
-        public Builder setClfs(@Nullable ClfsTargetArgs clfs) {
+        public Builder clfs(@Nullable ClfsTargetArgs clfs) {
             this.clfs = Input.ofNullable(clfs);
             return this;
         }
 
-        public Builder setJunctions(@Nullable Input<List<NamespaceJunctionArgs>> junctions) {
+        public Builder junctions(@Nullable Input<List<NamespaceJunctionArgs>> junctions) {
             this.junctions = junctions;
             return this;
         }
 
-        public Builder setJunctions(@Nullable List<NamespaceJunctionArgs> junctions) {
+        public Builder junctions(@Nullable List<NamespaceJunctionArgs> junctions) {
             this.junctions = Input.ofNullable(junctions);
             return this;
         }
 
-        public Builder setNfs3(@Nullable Input<Nfs3TargetArgs> nfs3) {
+        public Builder nfs3(@Nullable Input<Nfs3TargetArgs> nfs3) {
             this.nfs3 = nfs3;
             return this;
         }
 
-        public Builder setNfs3(@Nullable Nfs3TargetArgs nfs3) {
+        public Builder nfs3(@Nullable Nfs3TargetArgs nfs3) {
             this.nfs3 = Input.ofNullable(nfs3);
             return this;
         }
 
-        public Builder setProvisioningState(@Nullable Input<Either<String,ProvisioningStateType>> provisioningState) {
+        public Builder provisioningState(@Nullable Input<Either<String,ProvisioningStateType>> provisioningState) {
             this.provisioningState = provisioningState;
             return this;
         }
 
-        public Builder setProvisioningState(@Nullable Either<String,ProvisioningStateType> provisioningState) {
+        public Builder provisioningState(@Nullable Either<String,ProvisioningStateType> provisioningState) {
             this.provisioningState = Input.ofNullable(provisioningState);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setStorageTargetName(@Nullable Input<String> storageTargetName) {
+        public Builder storageTargetName(@Nullable Input<String> storageTargetName) {
             this.storageTargetName = storageTargetName;
             return this;
         }
 
-        public Builder setStorageTargetName(@Nullable String storageTargetName) {
+        public Builder storageTargetName(@Nullable String storageTargetName) {
             this.storageTargetName = Input.ofNullable(storageTargetName);
             return this;
         }
 
-        public Builder setTargetType(Input<Either<String,StorageTargetType>> targetType) {
+        public Builder targetType(Input<Either<String,StorageTargetType>> targetType) {
             this.targetType = Objects.requireNonNull(targetType);
             return this;
         }
 
-        public Builder setTargetType(Either<String,StorageTargetType> targetType) {
+        public Builder targetType(Either<String,StorageTargetType> targetType) {
             this.targetType = Input.of(Objects.requireNonNull(targetType));
             return this;
         }
 
-        public Builder setUnknown(@Nullable Input<UnknownTargetArgs> unknown) {
+        public Builder unknown(@Nullable Input<UnknownTargetArgs> unknown) {
             this.unknown = unknown;
             return this;
         }
 
-        public Builder setUnknown(@Nullable UnknownTargetArgs unknown) {
+        public Builder unknown(@Nullable UnknownTargetArgs unknown) {
             this.unknown = Input.ofNullable(unknown);
             return this;
         }

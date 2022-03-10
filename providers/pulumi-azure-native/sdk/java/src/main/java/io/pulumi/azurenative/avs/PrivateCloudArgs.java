@@ -221,112 +221,112 @@ public final class PrivateCloudArgs extends io.pulumi.resources.ResourceArgs {
     	      this.vcenterPassword = defaults.vcenterPassword;
         }
 
-        public Builder setIdentitySources(@Nullable Input<List<IdentitySourceArgs>> identitySources) {
+        public Builder identitySources(@Nullable Input<List<IdentitySourceArgs>> identitySources) {
             this.identitySources = identitySources;
             return this;
         }
 
-        public Builder setIdentitySources(@Nullable List<IdentitySourceArgs> identitySources) {
+        public Builder identitySources(@Nullable List<IdentitySourceArgs> identitySources) {
             this.identitySources = Input.ofNullable(identitySources);
             return this;
         }
 
-        public Builder setInternet(@Nullable Input<Either<String,InternetEnum>> internet) {
+        public Builder internet(@Nullable Input<Either<String,InternetEnum>> internet) {
             this.internet = internet;
             return this;
         }
 
-        public Builder setInternet(@Nullable Either<String,InternetEnum> internet) {
+        public Builder internet(@Nullable Either<String,InternetEnum> internet) {
             this.internet = Input.ofNullable(internet);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setManagementCluster(Input<ManagementClusterArgs> managementCluster) {
+        public Builder managementCluster(Input<ManagementClusterArgs> managementCluster) {
             this.managementCluster = Objects.requireNonNull(managementCluster);
             return this;
         }
 
-        public Builder setManagementCluster(ManagementClusterArgs managementCluster) {
+        public Builder managementCluster(ManagementClusterArgs managementCluster) {
             this.managementCluster = Input.of(Objects.requireNonNull(managementCluster));
             return this;
         }
 
-        public Builder setNetworkBlock(Input<String> networkBlock) {
+        public Builder networkBlock(Input<String> networkBlock) {
             this.networkBlock = Objects.requireNonNull(networkBlock);
             return this;
         }
 
-        public Builder setNetworkBlock(String networkBlock) {
+        public Builder networkBlock(String networkBlock) {
             this.networkBlock = Input.of(Objects.requireNonNull(networkBlock));
             return this;
         }
 
-        public Builder setNsxtPassword(@Nullable Input<String> nsxtPassword) {
+        public Builder nsxtPassword(@Nullable Input<String> nsxtPassword) {
             this.nsxtPassword = nsxtPassword;
             return this;
         }
 
-        public Builder setNsxtPassword(@Nullable String nsxtPassword) {
+        public Builder nsxtPassword(@Nullable String nsxtPassword) {
             this.nsxtPassword = Input.ofNullable(nsxtPassword);
             return this;
         }
 
-        public Builder setPrivateCloudName(@Nullable Input<String> privateCloudName) {
+        public Builder privateCloudName(@Nullable Input<String> privateCloudName) {
             this.privateCloudName = privateCloudName;
             return this;
         }
 
-        public Builder setPrivateCloudName(@Nullable String privateCloudName) {
+        public Builder privateCloudName(@Nullable String privateCloudName) {
             this.privateCloudName = Input.ofNullable(privateCloudName);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setSku(Input<SkuArgs> sku) {
+        public Builder sku(Input<SkuArgs> sku) {
             this.sku = Objects.requireNonNull(sku);
             return this;
         }
 
-        public Builder setSku(SkuArgs sku) {
+        public Builder sku(SkuArgs sku) {
             this.sku = Input.of(Objects.requireNonNull(sku));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setVcenterPassword(@Nullable Input<String> vcenterPassword) {
+        public Builder vcenterPassword(@Nullable Input<String> vcenterPassword) {
             this.vcenterPassword = vcenterPassword;
             return this;
         }
 
-        public Builder setVcenterPassword(@Nullable String vcenterPassword) {
+        public Builder vcenterPassword(@Nullable String vcenterPassword) {
             this.vcenterPassword = Input.ofNullable(vcenterPassword);
             return this;
         }

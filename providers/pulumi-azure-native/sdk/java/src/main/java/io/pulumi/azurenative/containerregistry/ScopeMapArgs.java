@@ -121,52 +121,52 @@ public final class ScopeMapArgs extends io.pulumi.resources.ResourceArgs {
     	      this.scopeMapName = defaults.scopeMapName;
         }
 
-        public Builder setActions(Input<List<String>> actions) {
+        public Builder actions(Input<List<String>> actions) {
             this.actions = Objects.requireNonNull(actions);
             return this;
         }
 
-        public Builder setActions(List<String> actions) {
+        public Builder actions(List<String> actions) {
             this.actions = Input.of(Objects.requireNonNull(actions));
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setRegistryName(Input<String> registryName) {
+        public Builder registryName(Input<String> registryName) {
             this.registryName = Objects.requireNonNull(registryName);
             return this;
         }
 
-        public Builder setRegistryName(String registryName) {
+        public Builder registryName(String registryName) {
             this.registryName = Input.of(Objects.requireNonNull(registryName));
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setScopeMapName(@Nullable Input<String> scopeMapName) {
+        public Builder scopeMapName(@Nullable Input<String> scopeMapName) {
             this.scopeMapName = scopeMapName;
             return this;
         }
 
-        public Builder setScopeMapName(@Nullable String scopeMapName) {
+        public Builder scopeMapName(@Nullable String scopeMapName) {
             this.scopeMapName = Input.ofNullable(scopeMapName);
             return this;
         }

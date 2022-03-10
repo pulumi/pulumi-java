@@ -188,92 +188,92 @@ public final class ConnectionSettingPropertiesArgs extends io.pulumi.resources.R
     	      this.serviceProviderId = defaults.serviceProviderId;
         }
 
-        public Builder setClientId(@Nullable Input<String> clientId) {
+        public Builder clientId(@Nullable Input<String> clientId) {
             this.clientId = clientId;
             return this;
         }
 
-        public Builder setClientId(@Nullable String clientId) {
+        public Builder clientId(@Nullable String clientId) {
             this.clientId = Input.ofNullable(clientId);
             return this;
         }
 
-        public Builder setClientSecret(@Nullable Input<String> clientSecret) {
+        public Builder clientSecret(@Nullable Input<String> clientSecret) {
             this.clientSecret = clientSecret;
             return this;
         }
 
-        public Builder setClientSecret(@Nullable String clientSecret) {
+        public Builder clientSecret(@Nullable String clientSecret) {
             this.clientSecret = Input.ofNullable(clientSecret);
             return this;
         }
 
-        public Builder setId(@Nullable Input<String> id) {
+        public Builder id(@Nullable Input<String> id) {
             this.id = id;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = Input.ofNullable(id);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setParameters(@Nullable Input<List<ConnectionSettingParameterArgs>> parameters) {
+        public Builder parameters(@Nullable Input<List<ConnectionSettingParameterArgs>> parameters) {
             this.parameters = parameters;
             return this;
         }
 
-        public Builder setParameters(@Nullable List<ConnectionSettingParameterArgs> parameters) {
+        public Builder parameters(@Nullable List<ConnectionSettingParameterArgs> parameters) {
             this.parameters = Input.ofNullable(parameters);
             return this;
         }
 
-        public Builder setProvisioningState(@Nullable Input<String> provisioningState) {
+        public Builder provisioningState(@Nullable Input<String> provisioningState) {
             this.provisioningState = provisioningState;
             return this;
         }
 
-        public Builder setProvisioningState(@Nullable String provisioningState) {
+        public Builder provisioningState(@Nullable String provisioningState) {
             this.provisioningState = Input.ofNullable(provisioningState);
             return this;
         }
 
-        public Builder setScopes(@Nullable Input<String> scopes) {
+        public Builder scopes(@Nullable Input<String> scopes) {
             this.scopes = scopes;
             return this;
         }
 
-        public Builder setScopes(@Nullable String scopes) {
+        public Builder scopes(@Nullable String scopes) {
             this.scopes = Input.ofNullable(scopes);
             return this;
         }
 
-        public Builder setServiceProviderDisplayName(@Nullable Input<String> serviceProviderDisplayName) {
+        public Builder serviceProviderDisplayName(@Nullable Input<String> serviceProviderDisplayName) {
             this.serviceProviderDisplayName = serviceProviderDisplayName;
             return this;
         }
 
-        public Builder setServiceProviderDisplayName(@Nullable String serviceProviderDisplayName) {
+        public Builder serviceProviderDisplayName(@Nullable String serviceProviderDisplayName) {
             this.serviceProviderDisplayName = Input.ofNullable(serviceProviderDisplayName);
             return this;
         }
 
-        public Builder setServiceProviderId(@Nullable Input<String> serviceProviderId) {
+        public Builder serviceProviderId(@Nullable Input<String> serviceProviderId) {
             this.serviceProviderId = serviceProviderId;
             return this;
         }
 
-        public Builder setServiceProviderId(@Nullable String serviceProviderId) {
+        public Builder serviceProviderId(@Nullable String serviceProviderId) {
             this.serviceProviderId = Input.ofNullable(serviceProviderId);
             return this;
         }

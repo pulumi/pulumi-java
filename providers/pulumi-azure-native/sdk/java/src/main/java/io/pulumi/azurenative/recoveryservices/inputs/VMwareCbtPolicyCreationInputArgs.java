@@ -108,42 +108,42 @@ public final class VMwareCbtPolicyCreationInputArgs extends io.pulumi.resources.
     	      this.recoveryPointHistoryInMinutes = defaults.recoveryPointHistoryInMinutes;
         }
 
-        public Builder setAppConsistentFrequencyInMinutes(@Nullable Input<Integer> appConsistentFrequencyInMinutes) {
+        public Builder appConsistentFrequencyInMinutes(@Nullable Input<Integer> appConsistentFrequencyInMinutes) {
             this.appConsistentFrequencyInMinutes = appConsistentFrequencyInMinutes;
             return this;
         }
 
-        public Builder setAppConsistentFrequencyInMinutes(@Nullable Integer appConsistentFrequencyInMinutes) {
+        public Builder appConsistentFrequencyInMinutes(@Nullable Integer appConsistentFrequencyInMinutes) {
             this.appConsistentFrequencyInMinutes = Input.ofNullable(appConsistentFrequencyInMinutes);
             return this;
         }
 
-        public Builder setCrashConsistentFrequencyInMinutes(@Nullable Input<Integer> crashConsistentFrequencyInMinutes) {
+        public Builder crashConsistentFrequencyInMinutes(@Nullable Input<Integer> crashConsistentFrequencyInMinutes) {
             this.crashConsistentFrequencyInMinutes = crashConsistentFrequencyInMinutes;
             return this;
         }
 
-        public Builder setCrashConsistentFrequencyInMinutes(@Nullable Integer crashConsistentFrequencyInMinutes) {
+        public Builder crashConsistentFrequencyInMinutes(@Nullable Integer crashConsistentFrequencyInMinutes) {
             this.crashConsistentFrequencyInMinutes = Input.ofNullable(crashConsistentFrequencyInMinutes);
             return this;
         }
 
-        public Builder setInstanceType(@Nullable Input<String> instanceType) {
+        public Builder instanceType(@Nullable Input<String> instanceType) {
             this.instanceType = instanceType;
             return this;
         }
 
-        public Builder setInstanceType(@Nullable String instanceType) {
+        public Builder instanceType(@Nullable String instanceType) {
             this.instanceType = Input.ofNullable(instanceType);
             return this;
         }
 
-        public Builder setRecoveryPointHistoryInMinutes(@Nullable Input<Integer> recoveryPointHistoryInMinutes) {
+        public Builder recoveryPointHistoryInMinutes(@Nullable Input<Integer> recoveryPointHistoryInMinutes) {
             this.recoveryPointHistoryInMinutes = recoveryPointHistoryInMinutes;
             return this;
         }
 
-        public Builder setRecoveryPointHistoryInMinutes(@Nullable Integer recoveryPointHistoryInMinutes) {
+        public Builder recoveryPointHistoryInMinutes(@Nullable Integer recoveryPointHistoryInMinutes) {
             this.recoveryPointHistoryInMinutes = Input.ofNullable(recoveryPointHistoryInMinutes);
             return this;
         }

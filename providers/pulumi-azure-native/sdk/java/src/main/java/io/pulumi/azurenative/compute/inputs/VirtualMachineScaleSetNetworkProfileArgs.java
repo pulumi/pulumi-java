@@ -95,32 +95,32 @@ public final class VirtualMachineScaleSetNetworkProfileArgs extends io.pulumi.re
     	      this.networkInterfaceConfigurations = defaults.networkInterfaceConfigurations;
         }
 
-        public Builder setHealthProbe(@Nullable Input<ApiEntityReferenceArgs> healthProbe) {
+        public Builder healthProbe(@Nullable Input<ApiEntityReferenceArgs> healthProbe) {
             this.healthProbe = healthProbe;
             return this;
         }
 
-        public Builder setHealthProbe(@Nullable ApiEntityReferenceArgs healthProbe) {
+        public Builder healthProbe(@Nullable ApiEntityReferenceArgs healthProbe) {
             this.healthProbe = Input.ofNullable(healthProbe);
             return this;
         }
 
-        public Builder setNetworkApiVersion(@Nullable Input<Either<String,NetworkApiVersion>> networkApiVersion) {
+        public Builder networkApiVersion(@Nullable Input<Either<String,NetworkApiVersion>> networkApiVersion) {
             this.networkApiVersion = networkApiVersion;
             return this;
         }
 
-        public Builder setNetworkApiVersion(@Nullable Either<String,NetworkApiVersion> networkApiVersion) {
+        public Builder networkApiVersion(@Nullable Either<String,NetworkApiVersion> networkApiVersion) {
             this.networkApiVersion = Input.ofNullable(networkApiVersion);
             return this;
         }
 
-        public Builder setNetworkInterfaceConfigurations(@Nullable Input<List<VirtualMachineScaleSetNetworkConfigurationArgs>> networkInterfaceConfigurations) {
+        public Builder networkInterfaceConfigurations(@Nullable Input<List<VirtualMachineScaleSetNetworkConfigurationArgs>> networkInterfaceConfigurations) {
             this.networkInterfaceConfigurations = networkInterfaceConfigurations;
             return this;
         }
 
-        public Builder setNetworkInterfaceConfigurations(@Nullable List<VirtualMachineScaleSetNetworkConfigurationArgs> networkInterfaceConfigurations) {
+        public Builder networkInterfaceConfigurations(@Nullable List<VirtualMachineScaleSetNetworkConfigurationArgs> networkInterfaceConfigurations) {
             this.networkInterfaceConfigurations = Input.ofNullable(networkInterfaceConfigurations);
             return this;
         }

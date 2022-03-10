@@ -72,12 +72,12 @@ public final class JobOutputResponse extends io.pulumi.resources.InvokeArgs {
     	      this.path = defaults.path;
         }
 
-        public Builder setDatastoreId(String datastoreId) {
+        public Builder datastoreId(String datastoreId) {
             this.datastoreId = Objects.requireNonNull(datastoreId);
             return this;
         }
 
-        public Builder setPath(String path) {
+        public Builder path(String path) {
             this.path = Objects.requireNonNull(path);
             return this;
         }

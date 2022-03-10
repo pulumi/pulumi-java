@@ -91,17 +91,17 @@ public final class RoutingPreferenceResponse extends io.pulumi.resources.InvokeA
     	      this.routingChoice = defaults.routingChoice;
         }
 
-        public Builder setPublishInternetEndpoints(@Nullable Boolean publishInternetEndpoints) {
+        public Builder publishInternetEndpoints(@Nullable Boolean publishInternetEndpoints) {
             this.publishInternetEndpoints = publishInternetEndpoints;
             return this;
         }
 
-        public Builder setPublishMicrosoftEndpoints(@Nullable Boolean publishMicrosoftEndpoints) {
+        public Builder publishMicrosoftEndpoints(@Nullable Boolean publishMicrosoftEndpoints) {
             this.publishMicrosoftEndpoints = publishMicrosoftEndpoints;
             return this;
         }
 
-        public Builder setRoutingChoice(@Nullable String routingChoice) {
+        public Builder routingChoice(@Nullable String routingChoice) {
             this.routingChoice = routingChoice;
             return this;
         }

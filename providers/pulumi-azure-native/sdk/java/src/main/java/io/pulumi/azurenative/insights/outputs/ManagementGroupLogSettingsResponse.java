@@ -66,12 +66,12 @@ public final class ManagementGroupLogSettingsResponse {
     	      this.enabled = defaults.enabled;
         }
 
-        public Builder setCategory(String category) {
+        public Builder category(String category) {
             this.category = Objects.requireNonNull(category);
             return this;
         }
 
-        public Builder setEnabled(Boolean enabled) {
+        public Builder enabled(Boolean enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }

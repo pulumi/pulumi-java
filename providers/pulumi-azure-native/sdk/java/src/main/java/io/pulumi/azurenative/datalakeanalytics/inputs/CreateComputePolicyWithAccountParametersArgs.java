@@ -125,52 +125,52 @@ public final class CreateComputePolicyWithAccountParametersArgs extends io.pulum
     	      this.objectType = defaults.objectType;
         }
 
-        public Builder setMaxDegreeOfParallelismPerJob(@Nullable Input<Integer> maxDegreeOfParallelismPerJob) {
+        public Builder maxDegreeOfParallelismPerJob(@Nullable Input<Integer> maxDegreeOfParallelismPerJob) {
             this.maxDegreeOfParallelismPerJob = maxDegreeOfParallelismPerJob;
             return this;
         }
 
-        public Builder setMaxDegreeOfParallelismPerJob(@Nullable Integer maxDegreeOfParallelismPerJob) {
+        public Builder maxDegreeOfParallelismPerJob(@Nullable Integer maxDegreeOfParallelismPerJob) {
             this.maxDegreeOfParallelismPerJob = Input.ofNullable(maxDegreeOfParallelismPerJob);
             return this;
         }
 
-        public Builder setMinPriorityPerJob(@Nullable Input<Integer> minPriorityPerJob) {
+        public Builder minPriorityPerJob(@Nullable Input<Integer> minPriorityPerJob) {
             this.minPriorityPerJob = minPriorityPerJob;
             return this;
         }
 
-        public Builder setMinPriorityPerJob(@Nullable Integer minPriorityPerJob) {
+        public Builder minPriorityPerJob(@Nullable Integer minPriorityPerJob) {
             this.minPriorityPerJob = Input.ofNullable(minPriorityPerJob);
             return this;
         }
 
-        public Builder setName(Input<String> name) {
+        public Builder name(Input<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder setObjectId(Input<String> objectId) {
+        public Builder objectId(Input<String> objectId) {
             this.objectId = Objects.requireNonNull(objectId);
             return this;
         }
 
-        public Builder setObjectId(String objectId) {
+        public Builder objectId(String objectId) {
             this.objectId = Input.of(Objects.requireNonNull(objectId));
             return this;
         }
 
-        public Builder setObjectType(Input<Either<String,AADObjectType>> objectType) {
+        public Builder objectType(Input<Either<String,AADObjectType>> objectType) {
             this.objectType = Objects.requireNonNull(objectType);
             return this;
         }
 
-        public Builder setObjectType(Either<String,AADObjectType> objectType) {
+        public Builder objectType(Either<String,AADObjectType> objectType) {
             this.objectType = Input.of(Objects.requireNonNull(objectType));
             return this;
         }

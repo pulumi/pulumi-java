@@ -124,27 +124,27 @@ public final class JpgLayerResponse extends io.pulumi.resources.InvokeArgs {
     	      this.width = defaults.width;
         }
 
-        public Builder setHeight(@Nullable String height) {
+        public Builder height(@Nullable String height) {
             this.height = height;
             return this;
         }
 
-        public Builder setLabel(@Nullable String label) {
+        public Builder label(@Nullable String label) {
             this.label = label;
             return this;
         }
 
-        public Builder setOdataType(String odataType) {
+        public Builder odataType(String odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
 
-        public Builder setQuality(@Nullable Integer quality) {
+        public Builder quality(@Nullable Integer quality) {
             this.quality = quality;
             return this;
         }
 
-        public Builder setWidth(@Nullable String width) {
+        public Builder width(@Nullable String width) {
             this.width = width;
             return this;
         }

@@ -215,57 +215,57 @@ public final class GetHealthAlertResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setActions(@Nullable List<HealthAlertActionResponse> actions) {
+        public Builder actions(@Nullable List<HealthAlertActionResponse> actions) {
             this.actions = actions;
             return this;
         }
 
-        public Builder setCriteria(HealthAlertCriteriaResponse criteria) {
+        public Builder criteria(HealthAlertCriteriaResponse criteria) {
             this.criteria = Objects.requireNonNull(criteria);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setEnabled(Boolean enabled) {
+        public Builder enabled(Boolean enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setLastUpdatedTime(String lastUpdatedTime) {
+        public Builder lastUpdatedTime(String lastUpdatedTime) {
             this.lastUpdatedTime = Objects.requireNonNull(lastUpdatedTime);
             return this;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setScopes(@Nullable List<String> scopes) {
+        public Builder scopes(@Nullable List<String> scopes) {
             this.scopes = scopes;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

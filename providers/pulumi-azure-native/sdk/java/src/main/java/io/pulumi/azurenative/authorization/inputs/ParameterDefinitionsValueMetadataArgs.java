@@ -107,42 +107,42 @@ public final class ParameterDefinitionsValueMetadataArgs extends io.pulumi.resou
     	      this.strongType = defaults.strongType;
         }
 
-        public Builder setAssignPermissions(@Nullable Input<Boolean> assignPermissions) {
+        public Builder assignPermissions(@Nullable Input<Boolean> assignPermissions) {
             this.assignPermissions = assignPermissions;
             return this;
         }
 
-        public Builder setAssignPermissions(@Nullable Boolean assignPermissions) {
+        public Builder assignPermissions(@Nullable Boolean assignPermissions) {
             this.assignPermissions = Input.ofNullable(assignPermissions);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setDisplayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Input<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setDisplayName(@Nullable String displayName) {
+        public Builder displayName(@Nullable String displayName) {
             this.displayName = Input.ofNullable(displayName);
             return this;
         }
 
-        public Builder setStrongType(@Nullable Input<String> strongType) {
+        public Builder strongType(@Nullable Input<String> strongType) {
             this.strongType = strongType;
             return this;
         }
 
-        public Builder setStrongType(@Nullable String strongType) {
+        public Builder strongType(@Nullable String strongType) {
             this.strongType = Input.ofNullable(strongType);
             return this;
         }

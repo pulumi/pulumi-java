@@ -106,42 +106,42 @@ public final class AclArgs extends io.pulumi.resources.ResourceArgs {
     	      this.username = defaults.username;
         }
 
-        public Builder setInitiatorIqn(Input<String> initiatorIqn) {
+        public Builder initiatorIqn(Input<String> initiatorIqn) {
             this.initiatorIqn = Objects.requireNonNull(initiatorIqn);
             return this;
         }
 
-        public Builder setInitiatorIqn(String initiatorIqn) {
+        public Builder initiatorIqn(String initiatorIqn) {
             this.initiatorIqn = Input.of(Objects.requireNonNull(initiatorIqn));
             return this;
         }
 
-        public Builder setMappedLuns(Input<List<String>> mappedLuns) {
+        public Builder mappedLuns(Input<List<String>> mappedLuns) {
             this.mappedLuns = Objects.requireNonNull(mappedLuns);
             return this;
         }
 
-        public Builder setMappedLuns(List<String> mappedLuns) {
+        public Builder mappedLuns(List<String> mappedLuns) {
             this.mappedLuns = Input.of(Objects.requireNonNull(mappedLuns));
             return this;
         }
 
-        public Builder setPassword(Input<String> password) {
+        public Builder password(Input<String> password) {
             this.password = Objects.requireNonNull(password);
             return this;
         }
 
-        public Builder setPassword(String password) {
+        public Builder password(String password) {
             this.password = Input.of(Objects.requireNonNull(password));
             return this;
         }
 
-        public Builder setUsername(Input<String> username) {
+        public Builder username(Input<String> username) {
             this.username = Objects.requireNonNull(username);
             return this;
         }
 
-        public Builder setUsername(String username) {
+        public Builder username(String username) {
             this.username = Input.of(Objects.requireNonNull(username));
             return this;
         }

@@ -91,32 +91,32 @@ public final class LinuxOperatingSystemProfileArgs extends io.pulumi.resources.R
     	      this.username = defaults.username;
         }
 
-        public Builder setPassword(@Nullable Input<String> password) {
+        public Builder password(@Nullable Input<String> password) {
             this.password = password;
             return this;
         }
 
-        public Builder setPassword(@Nullable String password) {
+        public Builder password(@Nullable String password) {
             this.password = Input.ofNullable(password);
             return this;
         }
 
-        public Builder setSshProfile(@Nullable Input<SshProfileArgs> sshProfile) {
+        public Builder sshProfile(@Nullable Input<SshProfileArgs> sshProfile) {
             this.sshProfile = sshProfile;
             return this;
         }
 
-        public Builder setSshProfile(@Nullable SshProfileArgs sshProfile) {
+        public Builder sshProfile(@Nullable SshProfileArgs sshProfile) {
             this.sshProfile = Input.ofNullable(sshProfile);
             return this;
         }
 
-        public Builder setUsername(@Nullable Input<String> username) {
+        public Builder username(@Nullable Input<String> username) {
             this.username = username;
             return this;
         }
 
-        public Builder setUsername(@Nullable String username) {
+        public Builder username(@Nullable String username) {
             this.username = Input.ofNullable(username);
             return this;
         }

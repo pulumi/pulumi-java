@@ -84,17 +84,17 @@ public final class GetFavoriteArgs extends io.pulumi.resources.InvokeArgs {
     	      this.resourceName = defaults.resourceName;
         }
 
-        public Builder setFavoriteId(String favoriteId) {
+        public Builder favoriteId(String favoriteId) {
             this.favoriteId = Objects.requireNonNull(favoriteId);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceName(String resourceName) {
+        public Builder resourceName(String resourceName) {
             this.resourceName = Objects.requireNonNull(resourceName);
             return this;
         }

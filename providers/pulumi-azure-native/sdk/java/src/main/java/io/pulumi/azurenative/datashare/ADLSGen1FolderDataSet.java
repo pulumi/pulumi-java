@@ -209,7 +209,7 @@ public class ADLSGen1FolderDataSet extends io.pulumi.resources.CustomResource {
     private static ADLSGen1FolderDataSetArgs makeArgs(ADLSGen1FolderDataSetArgs args) {
         var builder = args == null ? ADLSGen1FolderDataSetArgs.builder() : ADLSGen1FolderDataSetArgs.builder(args);
         return builder
-            .setKind("AdlsGen1Folder")
+            .kind("AdlsGen1Folder")
             .build();
     }
 

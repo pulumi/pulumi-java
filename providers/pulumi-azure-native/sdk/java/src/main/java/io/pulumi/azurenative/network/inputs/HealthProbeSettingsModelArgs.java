@@ -159,72 +159,72 @@ public final class HealthProbeSettingsModelArgs extends io.pulumi.resources.Reso
     	      this.protocol = defaults.protocol;
         }
 
-        public Builder setEnabledState(@Nullable Input<Either<String,HealthProbeEnabled>> enabledState) {
+        public Builder enabledState(@Nullable Input<Either<String,HealthProbeEnabled>> enabledState) {
             this.enabledState = enabledState;
             return this;
         }
 
-        public Builder setEnabledState(@Nullable Either<String,HealthProbeEnabled> enabledState) {
+        public Builder enabledState(@Nullable Either<String,HealthProbeEnabled> enabledState) {
             this.enabledState = Input.ofNullable(enabledState);
             return this;
         }
 
-        public Builder setHealthProbeMethod(@Nullable Input<Either<String,FrontDoorHealthProbeMethod>> healthProbeMethod) {
+        public Builder healthProbeMethod(@Nullable Input<Either<String,FrontDoorHealthProbeMethod>> healthProbeMethod) {
             this.healthProbeMethod = healthProbeMethod;
             return this;
         }
 
-        public Builder setHealthProbeMethod(@Nullable Either<String,FrontDoorHealthProbeMethod> healthProbeMethod) {
+        public Builder healthProbeMethod(@Nullable Either<String,FrontDoorHealthProbeMethod> healthProbeMethod) {
             this.healthProbeMethod = Input.ofNullable(healthProbeMethod);
             return this;
         }
 
-        public Builder setId(@Nullable Input<String> id) {
+        public Builder id(@Nullable Input<String> id) {
             this.id = id;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = Input.ofNullable(id);
             return this;
         }
 
-        public Builder setIntervalInSeconds(@Nullable Input<Integer> intervalInSeconds) {
+        public Builder intervalInSeconds(@Nullable Input<Integer> intervalInSeconds) {
             this.intervalInSeconds = intervalInSeconds;
             return this;
         }
 
-        public Builder setIntervalInSeconds(@Nullable Integer intervalInSeconds) {
+        public Builder intervalInSeconds(@Nullable Integer intervalInSeconds) {
             this.intervalInSeconds = Input.ofNullable(intervalInSeconds);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setPath(@Nullable Input<String> path) {
+        public Builder path(@Nullable Input<String> path) {
             this.path = path;
             return this;
         }
 
-        public Builder setPath(@Nullable String path) {
+        public Builder path(@Nullable String path) {
             this.path = Input.ofNullable(path);
             return this;
         }
 
-        public Builder setProtocol(@Nullable Input<Either<String,FrontDoorProtocol>> protocol) {
+        public Builder protocol(@Nullable Input<Either<String,FrontDoorProtocol>> protocol) {
             this.protocol = protocol;
             return this;
         }
 
-        public Builder setProtocol(@Nullable Either<String,FrontDoorProtocol> protocol) {
+        public Builder protocol(@Nullable Either<String,FrontDoorProtocol> protocol) {
             this.protocol = Input.ofNullable(protocol);
             return this;
         }

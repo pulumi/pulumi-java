@@ -50,7 +50,7 @@ public final class FirewallPolicyTransportSecurityResponse {
     	      this.certificateAuthority = defaults.certificateAuthority;
         }
 
-        public Builder setCertificateAuthority(@Nullable FirewallPolicyCertificateAuthorityResponse certificateAuthority) {
+        public Builder certificateAuthority(@Nullable FirewallPolicyCertificateAuthorityResponse certificateAuthority) {
             this.certificateAuthority = certificateAuthority;
             return this;
         }

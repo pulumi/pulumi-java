@@ -74,22 +74,22 @@ public final class AccessReviewInstanceArgs extends io.pulumi.resources.Resource
     	      this.startDateTime = defaults.startDateTime;
         }
 
-        public Builder setEndDateTime(@Nullable Input<String> endDateTime) {
+        public Builder endDateTime(@Nullable Input<String> endDateTime) {
             this.endDateTime = endDateTime;
             return this;
         }
 
-        public Builder setEndDateTime(@Nullable String endDateTime) {
+        public Builder endDateTime(@Nullable String endDateTime) {
             this.endDateTime = Input.ofNullable(endDateTime);
             return this;
         }
 
-        public Builder setStartDateTime(@Nullable Input<String> startDateTime) {
+        public Builder startDateTime(@Nullable Input<String> startDateTime) {
             this.startDateTime = startDateTime;
             return this;
         }
 
-        public Builder setStartDateTime(@Nullable String startDateTime) {
+        public Builder startDateTime(@Nullable String startDateTime) {
             this.startDateTime = Input.ofNullable(startDateTime);
             return this;
         }

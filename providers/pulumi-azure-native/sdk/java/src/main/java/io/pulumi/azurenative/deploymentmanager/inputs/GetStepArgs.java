@@ -68,12 +68,12 @@ public final class GetStepArgs extends io.pulumi.resources.InvokeArgs {
     	      this.stepName = defaults.stepName;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setStepName(String stepName) {
+        public Builder stepName(String stepName) {
             this.stepName = Objects.requireNonNull(stepName);
             return this;
         }

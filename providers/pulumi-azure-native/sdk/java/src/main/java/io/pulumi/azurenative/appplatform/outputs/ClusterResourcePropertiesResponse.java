@@ -101,22 +101,22 @@ public final class ClusterResourcePropertiesResponse {
     	      this.version = defaults.version;
         }
 
-        public Builder setNetworkProfile(@Nullable NetworkProfileResponse networkProfile) {
+        public Builder networkProfile(@Nullable NetworkProfileResponse networkProfile) {
             this.networkProfile = networkProfile;
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setServiceId(String serviceId) {
+        public Builder serviceId(String serviceId) {
             this.serviceId = Objects.requireNonNull(serviceId);
             return this;
         }
 
-        public Builder setVersion(Integer version) {
+        public Builder version(Integer version) {
             this.version = Objects.requireNonNull(version);
             return this;
         }

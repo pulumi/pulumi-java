@@ -111,22 +111,22 @@ public final class SqlAlwaysEncryptedPropertiesResponse extends io.pulumi.resour
     	      this.servicePrincipalKey = defaults.servicePrincipalKey;
         }
 
-        public Builder setAlwaysEncryptedAkvAuthType(String alwaysEncryptedAkvAuthType) {
+        public Builder alwaysEncryptedAkvAuthType(String alwaysEncryptedAkvAuthType) {
             this.alwaysEncryptedAkvAuthType = Objects.requireNonNull(alwaysEncryptedAkvAuthType);
             return this;
         }
 
-        public Builder setCredential(@Nullable CredentialReferenceResponse credential) {
+        public Builder credential(@Nullable CredentialReferenceResponse credential) {
             this.credential = credential;
             return this;
         }
 
-        public Builder setServicePrincipalId(@Nullable Object servicePrincipalId) {
+        public Builder servicePrincipalId(@Nullable Object servicePrincipalId) {
             this.servicePrincipalId = servicePrincipalId;
             return this;
         }
 
-        public Builder setServicePrincipalKey(@Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalKey) {
+        public Builder servicePrincipalKey(@Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalKey) {
             this.servicePrincipalKey = servicePrincipalKey;
             return this;
         }

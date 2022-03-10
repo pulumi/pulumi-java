@@ -186,92 +186,92 @@ public final class WorkloadNetworkDnsServiceArgs extends io.pulumi.resources.Res
     	      this.revision = defaults.revision;
         }
 
-        public Builder setDefaultDnsZone(@Nullable Input<String> defaultDnsZone) {
+        public Builder defaultDnsZone(@Nullable Input<String> defaultDnsZone) {
             this.defaultDnsZone = defaultDnsZone;
             return this;
         }
 
-        public Builder setDefaultDnsZone(@Nullable String defaultDnsZone) {
+        public Builder defaultDnsZone(@Nullable String defaultDnsZone) {
             this.defaultDnsZone = Input.ofNullable(defaultDnsZone);
             return this;
         }
 
-        public Builder setDisplayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Input<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setDisplayName(@Nullable String displayName) {
+        public Builder displayName(@Nullable String displayName) {
             this.displayName = Input.ofNullable(displayName);
             return this;
         }
 
-        public Builder setDnsServiceId(@Nullable Input<String> dnsServiceId) {
+        public Builder dnsServiceId(@Nullable Input<String> dnsServiceId) {
             this.dnsServiceId = dnsServiceId;
             return this;
         }
 
-        public Builder setDnsServiceId(@Nullable String dnsServiceId) {
+        public Builder dnsServiceId(@Nullable String dnsServiceId) {
             this.dnsServiceId = Input.ofNullable(dnsServiceId);
             return this;
         }
 
-        public Builder setDnsServiceIp(@Nullable Input<String> dnsServiceIp) {
+        public Builder dnsServiceIp(@Nullable Input<String> dnsServiceIp) {
             this.dnsServiceIp = dnsServiceIp;
             return this;
         }
 
-        public Builder setDnsServiceIp(@Nullable String dnsServiceIp) {
+        public Builder dnsServiceIp(@Nullable String dnsServiceIp) {
             this.dnsServiceIp = Input.ofNullable(dnsServiceIp);
             return this;
         }
 
-        public Builder setFqdnZones(@Nullable Input<List<String>> fqdnZones) {
+        public Builder fqdnZones(@Nullable Input<List<String>> fqdnZones) {
             this.fqdnZones = fqdnZones;
             return this;
         }
 
-        public Builder setFqdnZones(@Nullable List<String> fqdnZones) {
+        public Builder fqdnZones(@Nullable List<String> fqdnZones) {
             this.fqdnZones = Input.ofNullable(fqdnZones);
             return this;
         }
 
-        public Builder setLogLevel(@Nullable Input<Either<String,DnsServiceLogLevelEnum>> logLevel) {
+        public Builder logLevel(@Nullable Input<Either<String,DnsServiceLogLevelEnum>> logLevel) {
             this.logLevel = logLevel;
             return this;
         }
 
-        public Builder setLogLevel(@Nullable Either<String,DnsServiceLogLevelEnum> logLevel) {
+        public Builder logLevel(@Nullable Either<String,DnsServiceLogLevelEnum> logLevel) {
             this.logLevel = Input.ofNullable(logLevel);
             return this;
         }
 
-        public Builder setPrivateCloudName(Input<String> privateCloudName) {
+        public Builder privateCloudName(Input<String> privateCloudName) {
             this.privateCloudName = Objects.requireNonNull(privateCloudName);
             return this;
         }
 
-        public Builder setPrivateCloudName(String privateCloudName) {
+        public Builder privateCloudName(String privateCloudName) {
             this.privateCloudName = Input.of(Objects.requireNonNull(privateCloudName));
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setRevision(@Nullable Input<Double> revision) {
+        public Builder revision(@Nullable Input<Double> revision) {
             this.revision = revision;
             return this;
         }
 
-        public Builder setRevision(@Nullable Double revision) {
+        public Builder revision(@Nullable Double revision) {
             this.revision = Input.ofNullable(revision);
             return this;
         }

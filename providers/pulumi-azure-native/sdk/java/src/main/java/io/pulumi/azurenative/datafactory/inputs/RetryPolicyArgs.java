@@ -75,22 +75,22 @@ public final class RetryPolicyArgs extends io.pulumi.resources.ResourceArgs {
     	      this.intervalInSeconds = defaults.intervalInSeconds;
         }
 
-        public Builder setCount(@Nullable Input<Object> count) {
+        public Builder count(@Nullable Input<Object> count) {
             this.count = count;
             return this;
         }
 
-        public Builder setCount(@Nullable Object count) {
+        public Builder count(@Nullable Object count) {
             this.count = Input.ofNullable(count);
             return this;
         }
 
-        public Builder setIntervalInSeconds(@Nullable Input<Integer> intervalInSeconds) {
+        public Builder intervalInSeconds(@Nullable Input<Integer> intervalInSeconds) {
             this.intervalInSeconds = intervalInSeconds;
             return this;
         }
 
-        public Builder setIntervalInSeconds(@Nullable Integer intervalInSeconds) {
+        public Builder intervalInSeconds(@Nullable Integer intervalInSeconds) {
             this.intervalInSeconds = Input.ofNullable(intervalInSeconds);
             return this;
         }

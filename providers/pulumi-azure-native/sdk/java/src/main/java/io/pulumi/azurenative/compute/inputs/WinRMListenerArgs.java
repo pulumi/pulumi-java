@@ -75,22 +75,22 @@ public final class WinRMListenerArgs extends io.pulumi.resources.ResourceArgs {
     	      this.protocol = defaults.protocol;
         }
 
-        public Builder setCertificateUrl(@Nullable Input<String> certificateUrl) {
+        public Builder certificateUrl(@Nullable Input<String> certificateUrl) {
             this.certificateUrl = certificateUrl;
             return this;
         }
 
-        public Builder setCertificateUrl(@Nullable String certificateUrl) {
+        public Builder certificateUrl(@Nullable String certificateUrl) {
             this.certificateUrl = Input.ofNullable(certificateUrl);
             return this;
         }
 
-        public Builder setProtocol(@Nullable Input<ProtocolTypes> protocol) {
+        public Builder protocol(@Nullable Input<ProtocolTypes> protocol) {
             this.protocol = protocol;
             return this;
         }
 
-        public Builder setProtocol(@Nullable ProtocolTypes protocol) {
+        public Builder protocol(@Nullable ProtocolTypes protocol) {
             this.protocol = Input.ofNullable(protocol);
             return this;
         }

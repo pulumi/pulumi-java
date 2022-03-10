@@ -275,142 +275,142 @@ public final class VaultPropertiesArgs extends io.pulumi.resources.ResourceArgs 
     	      this.vaultUri = defaults.vaultUri;
         }
 
-        public Builder setAccessPolicies(@Nullable Input<List<AccessPolicyEntryArgs>> accessPolicies) {
+        public Builder accessPolicies(@Nullable Input<List<AccessPolicyEntryArgs>> accessPolicies) {
             this.accessPolicies = accessPolicies;
             return this;
         }
 
-        public Builder setAccessPolicies(@Nullable List<AccessPolicyEntryArgs> accessPolicies) {
+        public Builder accessPolicies(@Nullable List<AccessPolicyEntryArgs> accessPolicies) {
             this.accessPolicies = Input.ofNullable(accessPolicies);
             return this;
         }
 
-        public Builder setCreateMode(@Nullable Input<CreateMode> createMode) {
+        public Builder createMode(@Nullable Input<CreateMode> createMode) {
             this.createMode = createMode;
             return this;
         }
 
-        public Builder setCreateMode(@Nullable CreateMode createMode) {
+        public Builder createMode(@Nullable CreateMode createMode) {
             this.createMode = Input.ofNullable(createMode);
             return this;
         }
 
-        public Builder setEnablePurgeProtection(@Nullable Input<Boolean> enablePurgeProtection) {
+        public Builder enablePurgeProtection(@Nullable Input<Boolean> enablePurgeProtection) {
             this.enablePurgeProtection = enablePurgeProtection;
             return this;
         }
 
-        public Builder setEnablePurgeProtection(@Nullable Boolean enablePurgeProtection) {
+        public Builder enablePurgeProtection(@Nullable Boolean enablePurgeProtection) {
             this.enablePurgeProtection = Input.ofNullable(enablePurgeProtection);
             return this;
         }
 
-        public Builder setEnableRbacAuthorization(@Nullable Input<Boolean> enableRbacAuthorization) {
+        public Builder enableRbacAuthorization(@Nullable Input<Boolean> enableRbacAuthorization) {
             this.enableRbacAuthorization = enableRbacAuthorization;
             return this;
         }
 
-        public Builder setEnableRbacAuthorization(@Nullable Boolean enableRbacAuthorization) {
+        public Builder enableRbacAuthorization(@Nullable Boolean enableRbacAuthorization) {
             this.enableRbacAuthorization = Input.ofNullable(enableRbacAuthorization);
             return this;
         }
 
-        public Builder setEnableSoftDelete(@Nullable Input<Boolean> enableSoftDelete) {
+        public Builder enableSoftDelete(@Nullable Input<Boolean> enableSoftDelete) {
             this.enableSoftDelete = enableSoftDelete;
             return this;
         }
 
-        public Builder setEnableSoftDelete(@Nullable Boolean enableSoftDelete) {
+        public Builder enableSoftDelete(@Nullable Boolean enableSoftDelete) {
             this.enableSoftDelete = Input.ofNullable(enableSoftDelete);
             return this;
         }
 
-        public Builder setEnabledForDeployment(@Nullable Input<Boolean> enabledForDeployment) {
+        public Builder enabledForDeployment(@Nullable Input<Boolean> enabledForDeployment) {
             this.enabledForDeployment = enabledForDeployment;
             return this;
         }
 
-        public Builder setEnabledForDeployment(@Nullable Boolean enabledForDeployment) {
+        public Builder enabledForDeployment(@Nullable Boolean enabledForDeployment) {
             this.enabledForDeployment = Input.ofNullable(enabledForDeployment);
             return this;
         }
 
-        public Builder setEnabledForDiskEncryption(@Nullable Input<Boolean> enabledForDiskEncryption) {
+        public Builder enabledForDiskEncryption(@Nullable Input<Boolean> enabledForDiskEncryption) {
             this.enabledForDiskEncryption = enabledForDiskEncryption;
             return this;
         }
 
-        public Builder setEnabledForDiskEncryption(@Nullable Boolean enabledForDiskEncryption) {
+        public Builder enabledForDiskEncryption(@Nullable Boolean enabledForDiskEncryption) {
             this.enabledForDiskEncryption = Input.ofNullable(enabledForDiskEncryption);
             return this;
         }
 
-        public Builder setEnabledForTemplateDeployment(@Nullable Input<Boolean> enabledForTemplateDeployment) {
+        public Builder enabledForTemplateDeployment(@Nullable Input<Boolean> enabledForTemplateDeployment) {
             this.enabledForTemplateDeployment = enabledForTemplateDeployment;
             return this;
         }
 
-        public Builder setEnabledForTemplateDeployment(@Nullable Boolean enabledForTemplateDeployment) {
+        public Builder enabledForTemplateDeployment(@Nullable Boolean enabledForTemplateDeployment) {
             this.enabledForTemplateDeployment = Input.ofNullable(enabledForTemplateDeployment);
             return this;
         }
 
-        public Builder setNetworkAcls(@Nullable Input<NetworkRuleSetArgs> networkAcls) {
+        public Builder networkAcls(@Nullable Input<NetworkRuleSetArgs> networkAcls) {
             this.networkAcls = networkAcls;
             return this;
         }
 
-        public Builder setNetworkAcls(@Nullable NetworkRuleSetArgs networkAcls) {
+        public Builder networkAcls(@Nullable NetworkRuleSetArgs networkAcls) {
             this.networkAcls = Input.ofNullable(networkAcls);
             return this;
         }
 
-        public Builder setProvisioningState(@Nullable Input<Either<String,VaultProvisioningState>> provisioningState) {
+        public Builder provisioningState(@Nullable Input<Either<String,VaultProvisioningState>> provisioningState) {
             this.provisioningState = provisioningState;
             return this;
         }
 
-        public Builder setProvisioningState(@Nullable Either<String,VaultProvisioningState> provisioningState) {
+        public Builder provisioningState(@Nullable Either<String,VaultProvisioningState> provisioningState) {
             this.provisioningState = Input.ofNullable(provisioningState);
             return this;
         }
 
-        public Builder setSku(Input<SkuArgs> sku) {
+        public Builder sku(Input<SkuArgs> sku) {
             this.sku = Objects.requireNonNull(sku);
             return this;
         }
 
-        public Builder setSku(SkuArgs sku) {
+        public Builder sku(SkuArgs sku) {
             this.sku = Input.of(Objects.requireNonNull(sku));
             return this;
         }
 
-        public Builder setSoftDeleteRetentionInDays(@Nullable Input<Integer> softDeleteRetentionInDays) {
+        public Builder softDeleteRetentionInDays(@Nullable Input<Integer> softDeleteRetentionInDays) {
             this.softDeleteRetentionInDays = softDeleteRetentionInDays;
             return this;
         }
 
-        public Builder setSoftDeleteRetentionInDays(@Nullable Integer softDeleteRetentionInDays) {
+        public Builder softDeleteRetentionInDays(@Nullable Integer softDeleteRetentionInDays) {
             this.softDeleteRetentionInDays = Input.ofNullable(softDeleteRetentionInDays);
             return this;
         }
 
-        public Builder setTenantId(Input<String> tenantId) {
+        public Builder tenantId(Input<String> tenantId) {
             this.tenantId = Objects.requireNonNull(tenantId);
             return this;
         }
 
-        public Builder setTenantId(String tenantId) {
+        public Builder tenantId(String tenantId) {
             this.tenantId = Input.of(Objects.requireNonNull(tenantId));
             return this;
         }
 
-        public Builder setVaultUri(@Nullable Input<String> vaultUri) {
+        public Builder vaultUri(@Nullable Input<String> vaultUri) {
             this.vaultUri = vaultUri;
             return this;
         }
 
-        public Builder setVaultUri(@Nullable String vaultUri) {
+        public Builder vaultUri(@Nullable String vaultUri) {
             this.vaultUri = Input.ofNullable(vaultUri);
             return this;
         }

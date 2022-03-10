@@ -138,37 +138,37 @@ public final class StartTaskResponse {
     	      this.waitForSuccess = defaults.waitForSuccess;
         }
 
-        public Builder setCommandLine(@Nullable String commandLine) {
+        public Builder commandLine(@Nullable String commandLine) {
             this.commandLine = commandLine;
             return this;
         }
 
-        public Builder setContainerSettings(@Nullable TaskContainerSettingsResponse containerSettings) {
+        public Builder containerSettings(@Nullable TaskContainerSettingsResponse containerSettings) {
             this.containerSettings = containerSettings;
             return this;
         }
 
-        public Builder setEnvironmentSettings(@Nullable List<EnvironmentSettingResponse> environmentSettings) {
+        public Builder environmentSettings(@Nullable List<EnvironmentSettingResponse> environmentSettings) {
             this.environmentSettings = environmentSettings;
             return this;
         }
 
-        public Builder setMaxTaskRetryCount(@Nullable Integer maxTaskRetryCount) {
+        public Builder maxTaskRetryCount(@Nullable Integer maxTaskRetryCount) {
             this.maxTaskRetryCount = maxTaskRetryCount;
             return this;
         }
 
-        public Builder setResourceFiles(@Nullable List<ResourceFileResponse> resourceFiles) {
+        public Builder resourceFiles(@Nullable List<ResourceFileResponse> resourceFiles) {
             this.resourceFiles = resourceFiles;
             return this;
         }
 
-        public Builder setUserIdentity(@Nullable UserIdentityResponse userIdentity) {
+        public Builder userIdentity(@Nullable UserIdentityResponse userIdentity) {
             this.userIdentity = userIdentity;
             return this;
         }
 
-        public Builder setWaitForSuccess(@Nullable Boolean waitForSuccess) {
+        public Builder waitForSuccess(@Nullable Boolean waitForSuccess) {
             this.waitForSuccess = waitForSuccess;
             return this;
         }

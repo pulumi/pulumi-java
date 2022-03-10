@@ -172,82 +172,82 @@ public final class VendorSkusArgs extends io.pulumi.resources.ResourceArgs {
     	      this.vendorName = defaults.vendorName;
         }
 
-        public Builder setDeploymentMode(@Nullable Input<Either<String,SkuDeploymentMode>> deploymentMode) {
+        public Builder deploymentMode(@Nullable Input<Either<String,SkuDeploymentMode>> deploymentMode) {
             this.deploymentMode = deploymentMode;
             return this;
         }
 
-        public Builder setDeploymentMode(@Nullable Either<String,SkuDeploymentMode> deploymentMode) {
+        public Builder deploymentMode(@Nullable Either<String,SkuDeploymentMode> deploymentMode) {
             this.deploymentMode = Input.ofNullable(deploymentMode);
             return this;
         }
 
-        public Builder setManagedApplicationParameters(@Nullable Input<Object> managedApplicationParameters) {
+        public Builder managedApplicationParameters(@Nullable Input<Object> managedApplicationParameters) {
             this.managedApplicationParameters = managedApplicationParameters;
             return this;
         }
 
-        public Builder setManagedApplicationParameters(@Nullable Object managedApplicationParameters) {
+        public Builder managedApplicationParameters(@Nullable Object managedApplicationParameters) {
             this.managedApplicationParameters = Input.ofNullable(managedApplicationParameters);
             return this;
         }
 
-        public Builder setManagedApplicationTemplate(@Nullable Input<Object> managedApplicationTemplate) {
+        public Builder managedApplicationTemplate(@Nullable Input<Object> managedApplicationTemplate) {
             this.managedApplicationTemplate = managedApplicationTemplate;
             return this;
         }
 
-        public Builder setManagedApplicationTemplate(@Nullable Object managedApplicationTemplate) {
+        public Builder managedApplicationTemplate(@Nullable Object managedApplicationTemplate) {
             this.managedApplicationTemplate = Input.ofNullable(managedApplicationTemplate);
             return this;
         }
 
-        public Builder setNetworkFunctionTemplate(@Nullable Input<NetworkFunctionTemplateArgs> networkFunctionTemplate) {
+        public Builder networkFunctionTemplate(@Nullable Input<NetworkFunctionTemplateArgs> networkFunctionTemplate) {
             this.networkFunctionTemplate = networkFunctionTemplate;
             return this;
         }
 
-        public Builder setNetworkFunctionTemplate(@Nullable NetworkFunctionTemplateArgs networkFunctionTemplate) {
+        public Builder networkFunctionTemplate(@Nullable NetworkFunctionTemplateArgs networkFunctionTemplate) {
             this.networkFunctionTemplate = Input.ofNullable(networkFunctionTemplate);
             return this;
         }
 
-        public Builder setPreview(@Nullable Input<Boolean> preview) {
+        public Builder preview(@Nullable Input<Boolean> preview) {
             this.preview = preview;
             return this;
         }
 
-        public Builder setPreview(@Nullable Boolean preview) {
+        public Builder preview(@Nullable Boolean preview) {
             this.preview = Input.ofNullable(preview);
             return this;
         }
 
-        public Builder setSkuName(@Nullable Input<String> skuName) {
+        public Builder skuName(@Nullable Input<String> skuName) {
             this.skuName = skuName;
             return this;
         }
 
-        public Builder setSkuName(@Nullable String skuName) {
+        public Builder skuName(@Nullable String skuName) {
             this.skuName = Input.ofNullable(skuName);
             return this;
         }
 
-        public Builder setSkuType(@Nullable Input<Either<String,SkuType>> skuType) {
+        public Builder skuType(@Nullable Input<Either<String,SkuType>> skuType) {
             this.skuType = skuType;
             return this;
         }
 
-        public Builder setSkuType(@Nullable Either<String,SkuType> skuType) {
+        public Builder skuType(@Nullable Either<String,SkuType> skuType) {
             this.skuType = Input.ofNullable(skuType);
             return this;
         }
 
-        public Builder setVendorName(Input<String> vendorName) {
+        public Builder vendorName(Input<String> vendorName) {
             this.vendorName = Objects.requireNonNull(vendorName);
             return this;
         }
 
-        public Builder setVendorName(String vendorName) {
+        public Builder vendorName(String vendorName) {
             this.vendorName = Input.of(Objects.requireNonNull(vendorName));
             return this;
         }

@@ -58,7 +58,7 @@ public final class PrivateLinkServicePropertiesResponseAutoApproval extends io.p
     	      this.subscriptions = defaults.subscriptions;
         }
 
-        public Builder setSubscriptions(@Nullable List<String> subscriptions) {
+        public Builder subscriptions(@Nullable List<String> subscriptions) {
             this.subscriptions = subscriptions;
             return this;
         }

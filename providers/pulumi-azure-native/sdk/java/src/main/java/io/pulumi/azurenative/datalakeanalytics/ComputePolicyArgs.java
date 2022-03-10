@@ -153,72 +153,72 @@ public final class ComputePolicyArgs extends io.pulumi.resources.ResourceArgs {
     	      this.resourceGroupName = defaults.resourceGroupName;
         }
 
-        public Builder setAccountName(Input<String> accountName) {
+        public Builder accountName(Input<String> accountName) {
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
 
-        public Builder setAccountName(String accountName) {
+        public Builder accountName(String accountName) {
             this.accountName = Input.of(Objects.requireNonNull(accountName));
             return this;
         }
 
-        public Builder setComputePolicyName(@Nullable Input<String> computePolicyName) {
+        public Builder computePolicyName(@Nullable Input<String> computePolicyName) {
             this.computePolicyName = computePolicyName;
             return this;
         }
 
-        public Builder setComputePolicyName(@Nullable String computePolicyName) {
+        public Builder computePolicyName(@Nullable String computePolicyName) {
             this.computePolicyName = Input.ofNullable(computePolicyName);
             return this;
         }
 
-        public Builder setMaxDegreeOfParallelismPerJob(@Nullable Input<Integer> maxDegreeOfParallelismPerJob) {
+        public Builder maxDegreeOfParallelismPerJob(@Nullable Input<Integer> maxDegreeOfParallelismPerJob) {
             this.maxDegreeOfParallelismPerJob = maxDegreeOfParallelismPerJob;
             return this;
         }
 
-        public Builder setMaxDegreeOfParallelismPerJob(@Nullable Integer maxDegreeOfParallelismPerJob) {
+        public Builder maxDegreeOfParallelismPerJob(@Nullable Integer maxDegreeOfParallelismPerJob) {
             this.maxDegreeOfParallelismPerJob = Input.ofNullable(maxDegreeOfParallelismPerJob);
             return this;
         }
 
-        public Builder setMinPriorityPerJob(@Nullable Input<Integer> minPriorityPerJob) {
+        public Builder minPriorityPerJob(@Nullable Input<Integer> minPriorityPerJob) {
             this.minPriorityPerJob = minPriorityPerJob;
             return this;
         }
 
-        public Builder setMinPriorityPerJob(@Nullable Integer minPriorityPerJob) {
+        public Builder minPriorityPerJob(@Nullable Integer minPriorityPerJob) {
             this.minPriorityPerJob = Input.ofNullable(minPriorityPerJob);
             return this;
         }
 
-        public Builder setObjectId(Input<String> objectId) {
+        public Builder objectId(Input<String> objectId) {
             this.objectId = Objects.requireNonNull(objectId);
             return this;
         }
 
-        public Builder setObjectId(String objectId) {
+        public Builder objectId(String objectId) {
             this.objectId = Input.of(Objects.requireNonNull(objectId));
             return this;
         }
 
-        public Builder setObjectType(Input<Either<String,AADObjectType>> objectType) {
+        public Builder objectType(Input<Either<String,AADObjectType>> objectType) {
             this.objectType = Objects.requireNonNull(objectType);
             return this;
         }
 
-        public Builder setObjectType(Either<String,AADObjectType> objectType) {
+        public Builder objectType(Either<String,AADObjectType> objectType) {
             this.objectType = Input.of(Objects.requireNonNull(objectType));
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }

@@ -382,212 +382,212 @@ public final class AccessReviewScheduleDefinitionByIdArgs extends io.pulumi.reso
     	      this.type = defaults.type;
         }
 
-        public Builder setAutoApplyDecisionsEnabled(@Nullable Input<Boolean> autoApplyDecisionsEnabled) {
+        public Builder autoApplyDecisionsEnabled(@Nullable Input<Boolean> autoApplyDecisionsEnabled) {
             this.autoApplyDecisionsEnabled = autoApplyDecisionsEnabled;
             return this;
         }
 
-        public Builder setAutoApplyDecisionsEnabled(@Nullable Boolean autoApplyDecisionsEnabled) {
+        public Builder autoApplyDecisionsEnabled(@Nullable Boolean autoApplyDecisionsEnabled) {
             this.autoApplyDecisionsEnabled = Input.ofNullable(autoApplyDecisionsEnabled);
             return this;
         }
 
-        public Builder setBackupReviewers(@Nullable Input<List<AccessReviewReviewerArgs>> backupReviewers) {
+        public Builder backupReviewers(@Nullable Input<List<AccessReviewReviewerArgs>> backupReviewers) {
             this.backupReviewers = backupReviewers;
             return this;
         }
 
-        public Builder setBackupReviewers(@Nullable List<AccessReviewReviewerArgs> backupReviewers) {
+        public Builder backupReviewers(@Nullable List<AccessReviewReviewerArgs> backupReviewers) {
             this.backupReviewers = Input.ofNullable(backupReviewers);
             return this;
         }
 
-        public Builder setDefaultDecision(@Nullable Input<Either<String,DefaultDecisionType>> defaultDecision) {
+        public Builder defaultDecision(@Nullable Input<Either<String,DefaultDecisionType>> defaultDecision) {
             this.defaultDecision = defaultDecision;
             return this;
         }
 
-        public Builder setDefaultDecision(@Nullable Either<String,DefaultDecisionType> defaultDecision) {
+        public Builder defaultDecision(@Nullable Either<String,DefaultDecisionType> defaultDecision) {
             this.defaultDecision = Input.ofNullable(defaultDecision);
             return this;
         }
 
-        public Builder setDefaultDecisionEnabled(@Nullable Input<Boolean> defaultDecisionEnabled) {
+        public Builder defaultDecisionEnabled(@Nullable Input<Boolean> defaultDecisionEnabled) {
             this.defaultDecisionEnabled = defaultDecisionEnabled;
             return this;
         }
 
-        public Builder setDefaultDecisionEnabled(@Nullable Boolean defaultDecisionEnabled) {
+        public Builder defaultDecisionEnabled(@Nullable Boolean defaultDecisionEnabled) {
             this.defaultDecisionEnabled = Input.ofNullable(defaultDecisionEnabled);
             return this;
         }
 
-        public Builder setDescriptionForAdmins(@Nullable Input<String> descriptionForAdmins) {
+        public Builder descriptionForAdmins(@Nullable Input<String> descriptionForAdmins) {
             this.descriptionForAdmins = descriptionForAdmins;
             return this;
         }
 
-        public Builder setDescriptionForAdmins(@Nullable String descriptionForAdmins) {
+        public Builder descriptionForAdmins(@Nullable String descriptionForAdmins) {
             this.descriptionForAdmins = Input.ofNullable(descriptionForAdmins);
             return this;
         }
 
-        public Builder setDescriptionForReviewers(@Nullable Input<String> descriptionForReviewers) {
+        public Builder descriptionForReviewers(@Nullable Input<String> descriptionForReviewers) {
             this.descriptionForReviewers = descriptionForReviewers;
             return this;
         }
 
-        public Builder setDescriptionForReviewers(@Nullable String descriptionForReviewers) {
+        public Builder descriptionForReviewers(@Nullable String descriptionForReviewers) {
             this.descriptionForReviewers = Input.ofNullable(descriptionForReviewers);
             return this;
         }
 
-        public Builder setDisplayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Input<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setDisplayName(@Nullable String displayName) {
+        public Builder displayName(@Nullable String displayName) {
             this.displayName = Input.ofNullable(displayName);
             return this;
         }
 
-        public Builder setEndDate(@Nullable Input<String> endDate) {
+        public Builder endDate(@Nullable Input<String> endDate) {
             this.endDate = endDate;
             return this;
         }
 
-        public Builder setEndDate(@Nullable String endDate) {
+        public Builder endDate(@Nullable String endDate) {
             this.endDate = Input.ofNullable(endDate);
             return this;
         }
 
-        public Builder setInactiveDuration(@Nullable Input<String> inactiveDuration) {
+        public Builder inactiveDuration(@Nullable Input<String> inactiveDuration) {
             this.inactiveDuration = inactiveDuration;
             return this;
         }
 
-        public Builder setInactiveDuration(@Nullable String inactiveDuration) {
+        public Builder inactiveDuration(@Nullable String inactiveDuration) {
             this.inactiveDuration = Input.ofNullable(inactiveDuration);
             return this;
         }
 
-        public Builder setInstanceDurationInDays(@Nullable Input<Integer> instanceDurationInDays) {
+        public Builder instanceDurationInDays(@Nullable Input<Integer> instanceDurationInDays) {
             this.instanceDurationInDays = instanceDurationInDays;
             return this;
         }
 
-        public Builder setInstanceDurationInDays(@Nullable Integer instanceDurationInDays) {
+        public Builder instanceDurationInDays(@Nullable Integer instanceDurationInDays) {
             this.instanceDurationInDays = Input.ofNullable(instanceDurationInDays);
             return this;
         }
 
-        public Builder setInstances(@Nullable Input<List<AccessReviewInstanceArgs>> instances) {
+        public Builder instances(@Nullable Input<List<AccessReviewInstanceArgs>> instances) {
             this.instances = instances;
             return this;
         }
 
-        public Builder setInstances(@Nullable List<AccessReviewInstanceArgs> instances) {
+        public Builder instances(@Nullable List<AccessReviewInstanceArgs> instances) {
             this.instances = Input.ofNullable(instances);
             return this;
         }
 
-        public Builder setInterval(@Nullable Input<Integer> interval) {
+        public Builder interval(@Nullable Input<Integer> interval) {
             this.interval = interval;
             return this;
         }
 
-        public Builder setInterval(@Nullable Integer interval) {
+        public Builder interval(@Nullable Integer interval) {
             this.interval = Input.ofNullable(interval);
             return this;
         }
 
-        public Builder setJustificationRequiredOnApproval(@Nullable Input<Boolean> justificationRequiredOnApproval) {
+        public Builder justificationRequiredOnApproval(@Nullable Input<Boolean> justificationRequiredOnApproval) {
             this.justificationRequiredOnApproval = justificationRequiredOnApproval;
             return this;
         }
 
-        public Builder setJustificationRequiredOnApproval(@Nullable Boolean justificationRequiredOnApproval) {
+        public Builder justificationRequiredOnApproval(@Nullable Boolean justificationRequiredOnApproval) {
             this.justificationRequiredOnApproval = Input.ofNullable(justificationRequiredOnApproval);
             return this;
         }
 
-        public Builder setMailNotificationsEnabled(@Nullable Input<Boolean> mailNotificationsEnabled) {
+        public Builder mailNotificationsEnabled(@Nullable Input<Boolean> mailNotificationsEnabled) {
             this.mailNotificationsEnabled = mailNotificationsEnabled;
             return this;
         }
 
-        public Builder setMailNotificationsEnabled(@Nullable Boolean mailNotificationsEnabled) {
+        public Builder mailNotificationsEnabled(@Nullable Boolean mailNotificationsEnabled) {
             this.mailNotificationsEnabled = Input.ofNullable(mailNotificationsEnabled);
             return this;
         }
 
-        public Builder setNumberOfOccurrences(@Nullable Input<Integer> numberOfOccurrences) {
+        public Builder numberOfOccurrences(@Nullable Input<Integer> numberOfOccurrences) {
             this.numberOfOccurrences = numberOfOccurrences;
             return this;
         }
 
-        public Builder setNumberOfOccurrences(@Nullable Integer numberOfOccurrences) {
+        public Builder numberOfOccurrences(@Nullable Integer numberOfOccurrences) {
             this.numberOfOccurrences = Input.ofNullable(numberOfOccurrences);
             return this;
         }
 
-        public Builder setRecommendationsEnabled(@Nullable Input<Boolean> recommendationsEnabled) {
+        public Builder recommendationsEnabled(@Nullable Input<Boolean> recommendationsEnabled) {
             this.recommendationsEnabled = recommendationsEnabled;
             return this;
         }
 
-        public Builder setRecommendationsEnabled(@Nullable Boolean recommendationsEnabled) {
+        public Builder recommendationsEnabled(@Nullable Boolean recommendationsEnabled) {
             this.recommendationsEnabled = Input.ofNullable(recommendationsEnabled);
             return this;
         }
 
-        public Builder setReminderNotificationsEnabled(@Nullable Input<Boolean> reminderNotificationsEnabled) {
+        public Builder reminderNotificationsEnabled(@Nullable Input<Boolean> reminderNotificationsEnabled) {
             this.reminderNotificationsEnabled = reminderNotificationsEnabled;
             return this;
         }
 
-        public Builder setReminderNotificationsEnabled(@Nullable Boolean reminderNotificationsEnabled) {
+        public Builder reminderNotificationsEnabled(@Nullable Boolean reminderNotificationsEnabled) {
             this.reminderNotificationsEnabled = Input.ofNullable(reminderNotificationsEnabled);
             return this;
         }
 
-        public Builder setReviewers(@Nullable Input<List<AccessReviewReviewerArgs>> reviewers) {
+        public Builder reviewers(@Nullable Input<List<AccessReviewReviewerArgs>> reviewers) {
             this.reviewers = reviewers;
             return this;
         }
 
-        public Builder setReviewers(@Nullable List<AccessReviewReviewerArgs> reviewers) {
+        public Builder reviewers(@Nullable List<AccessReviewReviewerArgs> reviewers) {
             this.reviewers = Input.ofNullable(reviewers);
             return this;
         }
 
-        public Builder setScheduleDefinitionId(@Nullable Input<String> scheduleDefinitionId) {
+        public Builder scheduleDefinitionId(@Nullable Input<String> scheduleDefinitionId) {
             this.scheduleDefinitionId = scheduleDefinitionId;
             return this;
         }
 
-        public Builder setScheduleDefinitionId(@Nullable String scheduleDefinitionId) {
+        public Builder scheduleDefinitionId(@Nullable String scheduleDefinitionId) {
             this.scheduleDefinitionId = Input.ofNullable(scheduleDefinitionId);
             return this;
         }
 
-        public Builder setStartDate(@Nullable Input<String> startDate) {
+        public Builder startDate(@Nullable Input<String> startDate) {
             this.startDate = startDate;
             return this;
         }
 
-        public Builder setStartDate(@Nullable String startDate) {
+        public Builder startDate(@Nullable String startDate) {
             this.startDate = Input.ofNullable(startDate);
             return this;
         }
 
-        public Builder setType(@Nullable Input<Either<String,AccessReviewRecurrenceRangeType>> type) {
+        public Builder type(@Nullable Input<Either<String,AccessReviewRecurrenceRangeType>> type) {
             this.type = type;
             return this;
         }
 
-        public Builder setType(@Nullable Either<String,AccessReviewRecurrenceRangeType> type) {
+        public Builder type(@Nullable Either<String,AccessReviewRecurrenceRangeType> type) {
             this.type = Input.ofNullable(type);
             return this;
         }

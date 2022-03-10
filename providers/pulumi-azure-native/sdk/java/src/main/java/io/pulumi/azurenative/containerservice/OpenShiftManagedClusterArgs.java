@@ -222,112 +222,112 @@ public final class OpenShiftManagedClusterArgs extends io.pulumi.resources.Resou
     	      this.tags = defaults.tags;
         }
 
-        public Builder setAgentPoolProfiles(@Nullable Input<List<OpenShiftManagedClusterAgentPoolProfileArgs>> agentPoolProfiles) {
+        public Builder agentPoolProfiles(@Nullable Input<List<OpenShiftManagedClusterAgentPoolProfileArgs>> agentPoolProfiles) {
             this.agentPoolProfiles = agentPoolProfiles;
             return this;
         }
 
-        public Builder setAgentPoolProfiles(@Nullable List<OpenShiftManagedClusterAgentPoolProfileArgs> agentPoolProfiles) {
+        public Builder agentPoolProfiles(@Nullable List<OpenShiftManagedClusterAgentPoolProfileArgs> agentPoolProfiles) {
             this.agentPoolProfiles = Input.ofNullable(agentPoolProfiles);
             return this;
         }
 
-        public Builder setAuthProfile(@Nullable Input<OpenShiftManagedClusterAuthProfileArgs> authProfile) {
+        public Builder authProfile(@Nullable Input<OpenShiftManagedClusterAuthProfileArgs> authProfile) {
             this.authProfile = authProfile;
             return this;
         }
 
-        public Builder setAuthProfile(@Nullable OpenShiftManagedClusterAuthProfileArgs authProfile) {
+        public Builder authProfile(@Nullable OpenShiftManagedClusterAuthProfileArgs authProfile) {
             this.authProfile = Input.ofNullable(authProfile);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setMasterPoolProfile(@Nullable Input<OpenShiftManagedClusterMasterPoolProfileArgs> masterPoolProfile) {
+        public Builder masterPoolProfile(@Nullable Input<OpenShiftManagedClusterMasterPoolProfileArgs> masterPoolProfile) {
             this.masterPoolProfile = masterPoolProfile;
             return this;
         }
 
-        public Builder setMasterPoolProfile(@Nullable OpenShiftManagedClusterMasterPoolProfileArgs masterPoolProfile) {
+        public Builder masterPoolProfile(@Nullable OpenShiftManagedClusterMasterPoolProfileArgs masterPoolProfile) {
             this.masterPoolProfile = Input.ofNullable(masterPoolProfile);
             return this;
         }
 
-        public Builder setNetworkProfile(@Nullable Input<NetworkProfileArgs> networkProfile) {
+        public Builder networkProfile(@Nullable Input<NetworkProfileArgs> networkProfile) {
             this.networkProfile = networkProfile;
             return this;
         }
 
-        public Builder setNetworkProfile(@Nullable NetworkProfileArgs networkProfile) {
+        public Builder networkProfile(@Nullable NetworkProfileArgs networkProfile) {
             this.networkProfile = Input.ofNullable(networkProfile);
             return this;
         }
 
-        public Builder setOpenShiftVersion(Input<String> openShiftVersion) {
+        public Builder openShiftVersion(Input<String> openShiftVersion) {
             this.openShiftVersion = Objects.requireNonNull(openShiftVersion);
             return this;
         }
 
-        public Builder setOpenShiftVersion(String openShiftVersion) {
+        public Builder openShiftVersion(String openShiftVersion) {
             this.openShiftVersion = Input.of(Objects.requireNonNull(openShiftVersion));
             return this;
         }
 
-        public Builder setPlan(@Nullable Input<PurchasePlanArgs> plan) {
+        public Builder plan(@Nullable Input<PurchasePlanArgs> plan) {
             this.plan = plan;
             return this;
         }
 
-        public Builder setPlan(@Nullable PurchasePlanArgs plan) {
+        public Builder plan(@Nullable PurchasePlanArgs plan) {
             this.plan = Input.ofNullable(plan);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setResourceName(@Nullable Input<String> resourceName) {
+        public Builder resourceName(@Nullable Input<String> resourceName) {
             this.resourceName = resourceName;
             return this;
         }
 
-        public Builder setResourceName(@Nullable String resourceName) {
+        public Builder resourceName(@Nullable String resourceName) {
             this.resourceName = Input.ofNullable(resourceName);
             return this;
         }
 
-        public Builder setRouterProfiles(@Nullable Input<List<OpenShiftRouterProfileArgs>> routerProfiles) {
+        public Builder routerProfiles(@Nullable Input<List<OpenShiftRouterProfileArgs>> routerProfiles) {
             this.routerProfiles = routerProfiles;
             return this;
         }
 
-        public Builder setRouterProfiles(@Nullable List<OpenShiftRouterProfileArgs> routerProfiles) {
+        public Builder routerProfiles(@Nullable List<OpenShiftRouterProfileArgs> routerProfiles) {
             this.routerProfiles = Input.ofNullable(routerProfiles);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

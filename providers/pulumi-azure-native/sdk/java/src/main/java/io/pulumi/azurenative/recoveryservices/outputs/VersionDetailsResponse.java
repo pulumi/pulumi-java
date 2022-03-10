@@ -83,17 +83,17 @@ public final class VersionDetailsResponse {
     	      this.version = defaults.version;
         }
 
-        public Builder setExpiryDate(@Nullable String expiryDate) {
+        public Builder expiryDate(@Nullable String expiryDate) {
             this.expiryDate = expiryDate;
             return this;
         }
 
-        public Builder setStatus(@Nullable String status) {
+        public Builder status(@Nullable String status) {
             this.status = status;
             return this;
         }
 
-        public Builder setVersion(@Nullable String version) {
+        public Builder version(@Nullable String version) {
             this.version = version;
             return this;
         }

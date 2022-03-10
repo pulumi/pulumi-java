@@ -202,102 +202,102 @@ public final class LabArgs extends io.pulumi.resources.ResourceArgs {
     	      this.userAccessMode = defaults.userAccessMode;
         }
 
-        public Builder setLabAccountName(Input<String> labAccountName) {
+        public Builder labAccountName(Input<String> labAccountName) {
             this.labAccountName = Objects.requireNonNull(labAccountName);
             return this;
         }
 
-        public Builder setLabAccountName(String labAccountName) {
+        public Builder labAccountName(String labAccountName) {
             this.labAccountName = Input.of(Objects.requireNonNull(labAccountName));
             return this;
         }
 
-        public Builder setLabName(@Nullable Input<String> labName) {
+        public Builder labName(@Nullable Input<String> labName) {
             this.labName = labName;
             return this;
         }
 
-        public Builder setLabName(@Nullable String labName) {
+        public Builder labName(@Nullable String labName) {
             this.labName = Input.ofNullable(labName);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setMaxUsersInLab(@Nullable Input<Integer> maxUsersInLab) {
+        public Builder maxUsersInLab(@Nullable Input<Integer> maxUsersInLab) {
             this.maxUsersInLab = maxUsersInLab;
             return this;
         }
 
-        public Builder setMaxUsersInLab(@Nullable Integer maxUsersInLab) {
+        public Builder maxUsersInLab(@Nullable Integer maxUsersInLab) {
             this.maxUsersInLab = Input.ofNullable(maxUsersInLab);
             return this;
         }
 
-        public Builder setProvisioningState(@Nullable Input<String> provisioningState) {
+        public Builder provisioningState(@Nullable Input<String> provisioningState) {
             this.provisioningState = provisioningState;
             return this;
         }
 
-        public Builder setProvisioningState(@Nullable String provisioningState) {
+        public Builder provisioningState(@Nullable String provisioningState) {
             this.provisioningState = Input.ofNullable(provisioningState);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setUniqueIdentifier(@Nullable Input<String> uniqueIdentifier) {
+        public Builder uniqueIdentifier(@Nullable Input<String> uniqueIdentifier) {
             this.uniqueIdentifier = uniqueIdentifier;
             return this;
         }
 
-        public Builder setUniqueIdentifier(@Nullable String uniqueIdentifier) {
+        public Builder uniqueIdentifier(@Nullable String uniqueIdentifier) {
             this.uniqueIdentifier = Input.ofNullable(uniqueIdentifier);
             return this;
         }
 
-        public Builder setUsageQuota(@Nullable Input<String> usageQuota) {
+        public Builder usageQuota(@Nullable Input<String> usageQuota) {
             this.usageQuota = usageQuota;
             return this;
         }
 
-        public Builder setUsageQuota(@Nullable String usageQuota) {
+        public Builder usageQuota(@Nullable String usageQuota) {
             this.usageQuota = Input.ofNullable(usageQuota);
             return this;
         }
 
-        public Builder setUserAccessMode(@Nullable Input<Either<String,LabUserAccessMode>> userAccessMode) {
+        public Builder userAccessMode(@Nullable Input<Either<String,LabUserAccessMode>> userAccessMode) {
             this.userAccessMode = userAccessMode;
             return this;
         }
 
-        public Builder setUserAccessMode(@Nullable Either<String,LabUserAccessMode> userAccessMode) {
+        public Builder userAccessMode(@Nullable Either<String,LabUserAccessMode> userAccessMode) {
             this.userAccessMode = Input.ofNullable(userAccessMode);
             return this;
         }

@@ -184,47 +184,47 @@ public final class GetPostgresInstanceResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setExtendedLocation(@Nullable ExtendedLocationResponse extendedLocation) {
+        public Builder extendedLocation(@Nullable ExtendedLocationResponse extendedLocation) {
             this.extendedLocation = extendedLocation;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setProperties(PostgresInstancePropertiesResponse properties) {
+        public Builder properties(PostgresInstancePropertiesResponse properties) {
             this.properties = Objects.requireNonNull(properties);
             return this;
         }
 
-        public Builder setSku(@Nullable PostgresInstanceSkuResponse sku) {
+        public Builder sku(@Nullable PostgresInstanceSkuResponse sku) {
             this.sku = sku;
             return this;
         }
 
-        public Builder setSystemData(SystemDataResponse systemData) {
+        public Builder systemData(SystemDataResponse systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

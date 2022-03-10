@@ -137,32 +137,32 @@ public final class ManagedIntegrationRuntimeOperationResultResponse extends io.p
     	      this.type = defaults.type;
         }
 
-        public Builder setActivityId(String activityId) {
+        public Builder activityId(String activityId) {
             this.activityId = Objects.requireNonNull(activityId);
             return this;
         }
 
-        public Builder setErrorCode(String errorCode) {
+        public Builder errorCode(String errorCode) {
             this.errorCode = Objects.requireNonNull(errorCode);
             return this;
         }
 
-        public Builder setParameters(List<String> parameters) {
+        public Builder parameters(List<String> parameters) {
             this.parameters = Objects.requireNonNull(parameters);
             return this;
         }
 
-        public Builder setResult(String result) {
+        public Builder result(String result) {
             this.result = Objects.requireNonNull(result);
             return this;
         }
 
-        public Builder setStartTime(String startTime) {
+        public Builder startTime(String startTime) {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

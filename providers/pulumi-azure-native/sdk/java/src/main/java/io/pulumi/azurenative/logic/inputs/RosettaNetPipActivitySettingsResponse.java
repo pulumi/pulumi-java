@@ -90,17 +90,17 @@ public final class RosettaNetPipActivitySettingsResponse extends io.pulumi.resou
     	      this.activityType = defaults.activityType;
         }
 
-        public Builder setAcknowledgmentOfReceiptSettings(RosettaNetPipAcknowledgmentOfReceiptSettingsResponse acknowledgmentOfReceiptSettings) {
+        public Builder acknowledgmentOfReceiptSettings(RosettaNetPipAcknowledgmentOfReceiptSettingsResponse acknowledgmentOfReceiptSettings) {
             this.acknowledgmentOfReceiptSettings = Objects.requireNonNull(acknowledgmentOfReceiptSettings);
             return this;
         }
 
-        public Builder setActivityBehavior(RosettaNetPipActivityBehaviorResponse activityBehavior) {
+        public Builder activityBehavior(RosettaNetPipActivityBehaviorResponse activityBehavior) {
             this.activityBehavior = Objects.requireNonNull(activityBehavior);
             return this;
         }
 
-        public Builder setActivityType(String activityType) {
+        public Builder activityType(String activityType) {
             this.activityType = Objects.requireNonNull(activityType);
             return this;
         }

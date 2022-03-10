@@ -122,52 +122,52 @@ public final class ManagementLockByScopeArgs extends io.pulumi.resources.Resourc
     	      this.scope = defaults.scope;
         }
 
-        public Builder setLevel(Input<Either<String,LockLevel>> level) {
+        public Builder level(Input<Either<String,LockLevel>> level) {
             this.level = Objects.requireNonNull(level);
             return this;
         }
 
-        public Builder setLevel(Either<String,LockLevel> level) {
+        public Builder level(Either<String,LockLevel> level) {
             this.level = Input.of(Objects.requireNonNull(level));
             return this;
         }
 
-        public Builder setLockName(@Nullable Input<String> lockName) {
+        public Builder lockName(@Nullable Input<String> lockName) {
             this.lockName = lockName;
             return this;
         }
 
-        public Builder setLockName(@Nullable String lockName) {
+        public Builder lockName(@Nullable String lockName) {
             this.lockName = Input.ofNullable(lockName);
             return this;
         }
 
-        public Builder setNotes(@Nullable Input<String> notes) {
+        public Builder notes(@Nullable Input<String> notes) {
             this.notes = notes;
             return this;
         }
 
-        public Builder setNotes(@Nullable String notes) {
+        public Builder notes(@Nullable String notes) {
             this.notes = Input.ofNullable(notes);
             return this;
         }
 
-        public Builder setOwners(@Nullable Input<List<ManagementLockOwnerArgs>> owners) {
+        public Builder owners(@Nullable Input<List<ManagementLockOwnerArgs>> owners) {
             this.owners = owners;
             return this;
         }
 
-        public Builder setOwners(@Nullable List<ManagementLockOwnerArgs> owners) {
+        public Builder owners(@Nullable List<ManagementLockOwnerArgs> owners) {
             this.owners = Input.ofNullable(owners);
             return this;
         }
 
-        public Builder setScope(Input<String> scope) {
+        public Builder scope(Input<String> scope) {
             this.scope = Objects.requireNonNull(scope);
             return this;
         }
 
-        public Builder setScope(String scope) {
+        public Builder scope(String scope) {
             this.scope = Input.of(Objects.requireNonNull(scope));
             return this;
         }

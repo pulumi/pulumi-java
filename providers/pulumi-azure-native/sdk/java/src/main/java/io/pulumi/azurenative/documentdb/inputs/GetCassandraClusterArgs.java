@@ -68,12 +68,12 @@ public final class GetCassandraClusterArgs extends io.pulumi.resources.InvokeArg
     	      this.resourceGroupName = defaults.resourceGroupName;
         }
 
-        public Builder setClusterName(String clusterName) {
+        public Builder clusterName(String clusterName) {
             this.clusterName = Objects.requireNonNull(clusterName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }

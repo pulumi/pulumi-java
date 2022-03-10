@@ -84,17 +84,17 @@ public final class GetLinkedServerArgs extends io.pulumi.resources.InvokeArgs {
     	      this.resourceGroupName = defaults.resourceGroupName;
         }
 
-        public Builder setLinkedServerName(String linkedServerName) {
+        public Builder linkedServerName(String linkedServerName) {
             this.linkedServerName = Objects.requireNonNull(linkedServerName);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }

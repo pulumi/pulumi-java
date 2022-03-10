@@ -90,17 +90,17 @@ public final class FirewallRuleResponse extends io.pulumi.resources.InvokeArgs {
     	      this.startIpAddress = defaults.startIpAddress;
         }
 
-        public Builder setEndIpAddress(@Nullable String endIpAddress) {
+        public Builder endIpAddress(@Nullable String endIpAddress) {
             this.endIpAddress = endIpAddress;
             return this;
         }
 
-        public Builder setRuleName(@Nullable String ruleName) {
+        public Builder ruleName(@Nullable String ruleName) {
             this.ruleName = ruleName;
             return this;
         }
 
-        public Builder setStartIpAddress(@Nullable String startIpAddress) {
+        public Builder startIpAddress(@Nullable String startIpAddress) {
             this.startIpAddress = startIpAddress;
             return this;
         }

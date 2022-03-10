@@ -202,102 +202,102 @@ public final class BlobArgs extends io.pulumi.resources.ResourceArgs {
     	      this.type = defaults.type;
         }
 
-        public Builder setAccessTier(@Nullable Input<BlobAccessTier> accessTier) {
+        public Builder accessTier(@Nullable Input<BlobAccessTier> accessTier) {
             this.accessTier = accessTier;
             return this;
         }
 
-        public Builder setAccessTier(@Nullable BlobAccessTier accessTier) {
+        public Builder accessTier(@Nullable BlobAccessTier accessTier) {
             this.accessTier = Input.ofNullable(accessTier);
             return this;
         }
 
-        public Builder setAccountName(Input<String> accountName) {
+        public Builder accountName(Input<String> accountName) {
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
 
-        public Builder setAccountName(String accountName) {
+        public Builder accountName(String accountName) {
             this.accountName = Input.of(Objects.requireNonNull(accountName));
             return this;
         }
 
-        public Builder setBlobName(@Nullable Input<String> blobName) {
+        public Builder blobName(@Nullable Input<String> blobName) {
             this.blobName = blobName;
             return this;
         }
 
-        public Builder setBlobName(@Nullable String blobName) {
+        public Builder blobName(@Nullable String blobName) {
             this.blobName = Input.ofNullable(blobName);
             return this;
         }
 
-        public Builder setContainerName(Input<String> containerName) {
+        public Builder containerName(Input<String> containerName) {
             this.containerName = Objects.requireNonNull(containerName);
             return this;
         }
 
-        public Builder setContainerName(String containerName) {
+        public Builder containerName(String containerName) {
             this.containerName = Input.of(Objects.requireNonNull(containerName));
             return this;
         }
 
-        public Builder setContentMd5(@Nullable Input<String> contentMd5) {
+        public Builder contentMd5(@Nullable Input<String> contentMd5) {
             this.contentMd5 = contentMd5;
             return this;
         }
 
-        public Builder setContentMd5(@Nullable String contentMd5) {
+        public Builder contentMd5(@Nullable String contentMd5) {
             this.contentMd5 = Input.ofNullable(contentMd5);
             return this;
         }
 
-        public Builder setContentType(@Nullable Input<String> contentType) {
+        public Builder contentType(@Nullable Input<String> contentType) {
             this.contentType = contentType;
             return this;
         }
 
-        public Builder setContentType(@Nullable String contentType) {
+        public Builder contentType(@Nullable String contentType) {
             this.contentType = Input.ofNullable(contentType);
             return this;
         }
 
-        public Builder setMetadata(@Nullable Input<Map<String,String>> metadata) {
+        public Builder metadata(@Nullable Input<Map<String,String>> metadata) {
             this.metadata = metadata;
             return this;
         }
 
-        public Builder setMetadata(@Nullable Map<String,String> metadata) {
+        public Builder metadata(@Nullable Map<String,String> metadata) {
             this.metadata = Input.ofNullable(metadata);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setSource(@Nullable Input<AssetOrArchive> source) {
+        public Builder source(@Nullable Input<AssetOrArchive> source) {
             this.source = source;
             return this;
         }
 
-        public Builder setSource(@Nullable AssetOrArchive source) {
+        public Builder source(@Nullable AssetOrArchive source) {
             this.source = Input.ofNullable(source);
             return this;
         }
 
-        public Builder setType(@Nullable Input<BlobType> type) {
+        public Builder type(@Nullable Input<BlobType> type) {
             this.type = type;
             return this;
         }
 
-        public Builder setType(@Nullable BlobType type) {
+        public Builder type(@Nullable BlobType type) {
             this.type = Input.ofNullable(type);
             return this;
         }

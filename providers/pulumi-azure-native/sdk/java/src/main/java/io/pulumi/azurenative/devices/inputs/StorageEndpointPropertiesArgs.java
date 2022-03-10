@@ -108,42 +108,42 @@ public final class StorageEndpointPropertiesArgs extends io.pulumi.resources.Res
     	      this.sasTtlAsIso8601 = defaults.sasTtlAsIso8601;
         }
 
-        public Builder setAuthenticationType(@Nullable Input<Either<String,AuthenticationType>> authenticationType) {
+        public Builder authenticationType(@Nullable Input<Either<String,AuthenticationType>> authenticationType) {
             this.authenticationType = authenticationType;
             return this;
         }
 
-        public Builder setAuthenticationType(@Nullable Either<String,AuthenticationType> authenticationType) {
+        public Builder authenticationType(@Nullable Either<String,AuthenticationType> authenticationType) {
             this.authenticationType = Input.ofNullable(authenticationType);
             return this;
         }
 
-        public Builder setConnectionString(Input<String> connectionString) {
+        public Builder connectionString(Input<String> connectionString) {
             this.connectionString = Objects.requireNonNull(connectionString);
             return this;
         }
 
-        public Builder setConnectionString(String connectionString) {
+        public Builder connectionString(String connectionString) {
             this.connectionString = Input.of(Objects.requireNonNull(connectionString));
             return this;
         }
 
-        public Builder setContainerName(Input<String> containerName) {
+        public Builder containerName(Input<String> containerName) {
             this.containerName = Objects.requireNonNull(containerName);
             return this;
         }
 
-        public Builder setContainerName(String containerName) {
+        public Builder containerName(String containerName) {
             this.containerName = Input.of(Objects.requireNonNull(containerName));
             return this;
         }
 
-        public Builder setSasTtlAsIso8601(@Nullable Input<String> sasTtlAsIso8601) {
+        public Builder sasTtlAsIso8601(@Nullable Input<String> sasTtlAsIso8601) {
             this.sasTtlAsIso8601 = sasTtlAsIso8601;
             return this;
         }
 
-        public Builder setSasTtlAsIso8601(@Nullable String sasTtlAsIso8601) {
+        public Builder sasTtlAsIso8601(@Nullable String sasTtlAsIso8601) {
             this.sasTtlAsIso8601 = Input.ofNullable(sasTtlAsIso8601);
             return this;
         }

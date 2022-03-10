@@ -135,62 +135,62 @@ public final class GuestConfigurationAssignmentArgs extends io.pulumi.resources.
     	      this.vmName = defaults.vmName;
         }
 
-        public Builder setGuestConfigurationAssignmentName(@Nullable Input<String> guestConfigurationAssignmentName) {
+        public Builder guestConfigurationAssignmentName(@Nullable Input<String> guestConfigurationAssignmentName) {
             this.guestConfigurationAssignmentName = guestConfigurationAssignmentName;
             return this;
         }
 
-        public Builder setGuestConfigurationAssignmentName(@Nullable String guestConfigurationAssignmentName) {
+        public Builder guestConfigurationAssignmentName(@Nullable String guestConfigurationAssignmentName) {
             this.guestConfigurationAssignmentName = Input.ofNullable(guestConfigurationAssignmentName);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setProperties(@Nullable Input<GuestConfigurationAssignmentPropertiesArgs> properties) {
+        public Builder properties(@Nullable Input<GuestConfigurationAssignmentPropertiesArgs> properties) {
             this.properties = properties;
             return this;
         }
 
-        public Builder setProperties(@Nullable GuestConfigurationAssignmentPropertiesArgs properties) {
+        public Builder properties(@Nullable GuestConfigurationAssignmentPropertiesArgs properties) {
             this.properties = Input.ofNullable(properties);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setVmName(Input<String> vmName) {
+        public Builder vmName(Input<String> vmName) {
             this.vmName = Objects.requireNonNull(vmName);
             return this;
         }
 
-        public Builder setVmName(String vmName) {
+        public Builder vmName(String vmName) {
             this.vmName = Input.of(Objects.requireNonNull(vmName));
             return this;
         }

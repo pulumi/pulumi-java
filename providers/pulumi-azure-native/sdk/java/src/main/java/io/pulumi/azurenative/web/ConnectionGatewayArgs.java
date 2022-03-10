@@ -132,62 +132,62 @@ public final class ConnectionGatewayArgs extends io.pulumi.resources.ResourceArg
     	      this.tags = defaults.tags;
         }
 
-        public Builder setConnectionGatewayName(@Nullable Input<String> connectionGatewayName) {
+        public Builder connectionGatewayName(@Nullable Input<String> connectionGatewayName) {
             this.connectionGatewayName = connectionGatewayName;
             return this;
         }
 
-        public Builder setConnectionGatewayName(@Nullable String connectionGatewayName) {
+        public Builder connectionGatewayName(@Nullable String connectionGatewayName) {
             this.connectionGatewayName = Input.ofNullable(connectionGatewayName);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setProperties(@Nullable Input<ConnectionGatewayDefinitionPropertiesArgs> properties) {
+        public Builder properties(@Nullable Input<ConnectionGatewayDefinitionPropertiesArgs> properties) {
             this.properties = properties;
             return this;
         }
 
-        public Builder setProperties(@Nullable ConnectionGatewayDefinitionPropertiesArgs properties) {
+        public Builder properties(@Nullable ConnectionGatewayDefinitionPropertiesArgs properties) {
             this.properties = Input.ofNullable(properties);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setSubscriptionId(@Nullable Input<String> subscriptionId) {
+        public Builder subscriptionId(@Nullable Input<String> subscriptionId) {
             this.subscriptionId = subscriptionId;
             return this;
         }
 
-        public Builder setSubscriptionId(@Nullable String subscriptionId) {
+        public Builder subscriptionId(@Nullable String subscriptionId) {
             this.subscriptionId = Input.ofNullable(subscriptionId);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

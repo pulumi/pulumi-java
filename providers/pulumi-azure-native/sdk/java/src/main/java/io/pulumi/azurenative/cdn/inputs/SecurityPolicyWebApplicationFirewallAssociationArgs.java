@@ -76,22 +76,22 @@ public final class SecurityPolicyWebApplicationFirewallAssociationArgs extends i
     	      this.patternsToMatch = defaults.patternsToMatch;
         }
 
-        public Builder setDomains(@Nullable Input<List<ResourceReferenceArgs>> domains) {
+        public Builder domains(@Nullable Input<List<ResourceReferenceArgs>> domains) {
             this.domains = domains;
             return this;
         }
 
-        public Builder setDomains(@Nullable List<ResourceReferenceArgs> domains) {
+        public Builder domains(@Nullable List<ResourceReferenceArgs> domains) {
             this.domains = Input.ofNullable(domains);
             return this;
         }
 
-        public Builder setPatternsToMatch(@Nullable Input<List<String>> patternsToMatch) {
+        public Builder patternsToMatch(@Nullable Input<List<String>> patternsToMatch) {
             this.patternsToMatch = patternsToMatch;
             return this;
         }
 
-        public Builder setPatternsToMatch(@Nullable List<String> patternsToMatch) {
+        public Builder patternsToMatch(@Nullable List<String> patternsToMatch) {
             this.patternsToMatch = Input.ofNullable(patternsToMatch);
             return this;
         }

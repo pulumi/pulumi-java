@@ -136,62 +136,62 @@ public final class BackupPolicyArgs extends io.pulumi.resources.ResourceArgs {
     	      this.volumeIds = defaults.volumeIds;
         }
 
-        public Builder setBackupPolicyName(@Nullable Input<String> backupPolicyName) {
+        public Builder backupPolicyName(@Nullable Input<String> backupPolicyName) {
             this.backupPolicyName = backupPolicyName;
             return this;
         }
 
-        public Builder setBackupPolicyName(@Nullable String backupPolicyName) {
+        public Builder backupPolicyName(@Nullable String backupPolicyName) {
             this.backupPolicyName = Input.ofNullable(backupPolicyName);
             return this;
         }
 
-        public Builder setDeviceName(Input<String> deviceName) {
+        public Builder deviceName(Input<String> deviceName) {
             this.deviceName = Objects.requireNonNull(deviceName);
             return this;
         }
 
-        public Builder setDeviceName(String deviceName) {
+        public Builder deviceName(String deviceName) {
             this.deviceName = Input.of(Objects.requireNonNull(deviceName));
             return this;
         }
 
-        public Builder setKind(@Nullable Input<Kind> kind) {
+        public Builder kind(@Nullable Input<Kind> kind) {
             this.kind = kind;
             return this;
         }
 
-        public Builder setKind(@Nullable Kind kind) {
+        public Builder kind(@Nullable Kind kind) {
             this.kind = Input.ofNullable(kind);
             return this;
         }
 
-        public Builder setManagerName(Input<String> managerName) {
+        public Builder managerName(Input<String> managerName) {
             this.managerName = Objects.requireNonNull(managerName);
             return this;
         }
 
-        public Builder setManagerName(String managerName) {
+        public Builder managerName(String managerName) {
             this.managerName = Input.of(Objects.requireNonNull(managerName));
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setVolumeIds(Input<List<String>> volumeIds) {
+        public Builder volumeIds(Input<List<String>> volumeIds) {
             this.volumeIds = Objects.requireNonNull(volumeIds);
             return this;
         }
 
-        public Builder setVolumeIds(List<String> volumeIds) {
+        public Builder volumeIds(List<String> volumeIds) {
             this.volumeIds = Input.of(Objects.requireNonNull(volumeIds));
             return this;
         }

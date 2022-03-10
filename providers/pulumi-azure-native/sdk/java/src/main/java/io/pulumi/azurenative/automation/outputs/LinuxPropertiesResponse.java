@@ -100,22 +100,22 @@ public final class LinuxPropertiesResponse {
     	      this.rebootSetting = defaults.rebootSetting;
         }
 
-        public Builder setExcludedPackageNameMasks(@Nullable List<String> excludedPackageNameMasks) {
+        public Builder excludedPackageNameMasks(@Nullable List<String> excludedPackageNameMasks) {
             this.excludedPackageNameMasks = excludedPackageNameMasks;
             return this;
         }
 
-        public Builder setIncludedPackageClassifications(@Nullable String includedPackageClassifications) {
+        public Builder includedPackageClassifications(@Nullable String includedPackageClassifications) {
             this.includedPackageClassifications = includedPackageClassifications;
             return this;
         }
 
-        public Builder setIncludedPackageNameMasks(@Nullable List<String> includedPackageNameMasks) {
+        public Builder includedPackageNameMasks(@Nullable List<String> includedPackageNameMasks) {
             this.includedPackageNameMasks = includedPackageNameMasks;
             return this;
         }
 
-        public Builder setRebootSetting(@Nullable String rebootSetting) {
+        public Builder rebootSetting(@Nullable String rebootSetting) {
             this.rebootSetting = rebootSetting;
             return this;
         }

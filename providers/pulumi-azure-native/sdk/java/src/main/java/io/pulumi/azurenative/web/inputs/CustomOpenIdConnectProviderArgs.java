@@ -92,32 +92,32 @@ public final class CustomOpenIdConnectProviderArgs extends io.pulumi.resources.R
     	      this.registration = defaults.registration;
         }
 
-        public Builder setEnabled(@Nullable Input<Boolean> enabled) {
+        public Builder enabled(@Nullable Input<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
 
-        public Builder setEnabled(@Nullable Boolean enabled) {
+        public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Input.ofNullable(enabled);
             return this;
         }
 
-        public Builder setLogin(@Nullable Input<OpenIdConnectLoginArgs> login) {
+        public Builder login(@Nullable Input<OpenIdConnectLoginArgs> login) {
             this.login = login;
             return this;
         }
 
-        public Builder setLogin(@Nullable OpenIdConnectLoginArgs login) {
+        public Builder login(@Nullable OpenIdConnectLoginArgs login) {
             this.login = Input.ofNullable(login);
             return this;
         }
 
-        public Builder setRegistration(@Nullable Input<OpenIdConnectRegistrationArgs> registration) {
+        public Builder registration(@Nullable Input<OpenIdConnectRegistrationArgs> registration) {
             this.registration = registration;
             return this;
         }
 
-        public Builder setRegistration(@Nullable OpenIdConnectRegistrationArgs registration) {
+        public Builder registration(@Nullable OpenIdConnectRegistrationArgs registration) {
             this.registration = Input.ofNullable(registration);
             return this;
         }

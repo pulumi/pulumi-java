@@ -264,72 +264,72 @@ public final class GetInvitationResult {
     	      this.userName = defaults.userName;
         }
 
-        public Builder setExpirationDate(@Nullable String expirationDate) {
+        public Builder expirationDate(@Nullable String expirationDate) {
             this.expirationDate = expirationDate;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setInvitationId(String invitationId) {
+        public Builder invitationId(String invitationId) {
             this.invitationId = Objects.requireNonNull(invitationId);
             return this;
         }
 
-        public Builder setInvitationStatus(String invitationStatus) {
+        public Builder invitationStatus(String invitationStatus) {
             this.invitationStatus = Objects.requireNonNull(invitationStatus);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setRespondedAt(String respondedAt) {
+        public Builder respondedAt(String respondedAt) {
             this.respondedAt = Objects.requireNonNull(respondedAt);
             return this;
         }
 
-        public Builder setSentAt(String sentAt) {
+        public Builder sentAt(String sentAt) {
             this.sentAt = Objects.requireNonNull(sentAt);
             return this;
         }
 
-        public Builder setSystemData(SystemDataResponse systemData) {
+        public Builder systemData(SystemDataResponse systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
 
-        public Builder setTargetActiveDirectoryId(@Nullable String targetActiveDirectoryId) {
+        public Builder targetActiveDirectoryId(@Nullable String targetActiveDirectoryId) {
             this.targetActiveDirectoryId = targetActiveDirectoryId;
             return this;
         }
 
-        public Builder setTargetEmail(@Nullable String targetEmail) {
+        public Builder targetEmail(@Nullable String targetEmail) {
             this.targetEmail = targetEmail;
             return this;
         }
 
-        public Builder setTargetObjectId(@Nullable String targetObjectId) {
+        public Builder targetObjectId(@Nullable String targetObjectId) {
             this.targetObjectId = targetObjectId;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setUserEmail(String userEmail) {
+        public Builder userEmail(String userEmail) {
             this.userEmail = Objects.requireNonNull(userEmail);
             return this;
         }
 
-        public Builder setUserName(String userName) {
+        public Builder userName(String userName) {
             this.userName = Objects.requireNonNull(userName);
             return this;
         }

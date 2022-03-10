@@ -57,12 +57,12 @@ public final class TransferConfigurationTransferFilterDetailsArgs extends io.pul
     	      this.include = defaults.include;
         }
 
-        public Builder setInclude(@Nullable Input<TransferFilterDetailsArgs> include) {
+        public Builder include(@Nullable Input<TransferFilterDetailsArgs> include) {
             this.include = include;
             return this;
         }
 
-        public Builder setInclude(@Nullable TransferFilterDetailsArgs include) {
+        public Builder include(@Nullable TransferFilterDetailsArgs include) {
             this.include = Input.ofNullable(include);
             return this;
         }

@@ -148,37 +148,37 @@ public final class CacheActiveDirectorySettingsResponse {
     	      this.secondaryDnsIpAddress = defaults.secondaryDnsIpAddress;
         }
 
-        public Builder setCacheNetBiosName(String cacheNetBiosName) {
+        public Builder cacheNetBiosName(String cacheNetBiosName) {
             this.cacheNetBiosName = Objects.requireNonNull(cacheNetBiosName);
             return this;
         }
 
-        public Builder setCredentials(@Nullable CacheActiveDirectorySettingsResponseCredentials credentials) {
+        public Builder credentials(@Nullable CacheActiveDirectorySettingsResponseCredentials credentials) {
             this.credentials = credentials;
             return this;
         }
 
-        public Builder setDomainJoined(String domainJoined) {
+        public Builder domainJoined(String domainJoined) {
             this.domainJoined = Objects.requireNonNull(domainJoined);
             return this;
         }
 
-        public Builder setDomainName(String domainName) {
+        public Builder domainName(String domainName) {
             this.domainName = Objects.requireNonNull(domainName);
             return this;
         }
 
-        public Builder setDomainNetBiosName(String domainNetBiosName) {
+        public Builder domainNetBiosName(String domainNetBiosName) {
             this.domainNetBiosName = Objects.requireNonNull(domainNetBiosName);
             return this;
         }
 
-        public Builder setPrimaryDnsIpAddress(String primaryDnsIpAddress) {
+        public Builder primaryDnsIpAddress(String primaryDnsIpAddress) {
             this.primaryDnsIpAddress = Objects.requireNonNull(primaryDnsIpAddress);
             return this;
         }
 
-        public Builder setSecondaryDnsIpAddress(@Nullable String secondaryDnsIpAddress) {
+        public Builder secondaryDnsIpAddress(@Nullable String secondaryDnsIpAddress) {
             this.secondaryDnsIpAddress = secondaryDnsIpAddress;
             return this;
         }

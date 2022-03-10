@@ -82,17 +82,17 @@ public final class RoutingPolicyResponse {
     	      this.nextHop = defaults.nextHop;
         }
 
-        public Builder setDestinations(List<String> destinations) {
+        public Builder destinations(List<String> destinations) {
             this.destinations = Objects.requireNonNull(destinations);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setNextHop(String nextHop) {
+        public Builder nextHop(String nextHop) {
             this.nextHop = Objects.requireNonNull(nextHop);
             return this;
         }

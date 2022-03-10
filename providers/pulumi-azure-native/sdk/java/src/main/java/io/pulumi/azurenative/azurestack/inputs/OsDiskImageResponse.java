@@ -72,12 +72,12 @@ public final class OsDiskImageResponse extends io.pulumi.resources.InvokeArgs {
     	      this.sourceBlobSasUri = defaults.sourceBlobSasUri;
         }
 
-        public Builder setOperatingSystem(String operatingSystem) {
+        public Builder operatingSystem(String operatingSystem) {
             this.operatingSystem = Objects.requireNonNull(operatingSystem);
             return this;
         }
 
-        public Builder setSourceBlobSasUri(String sourceBlobSasUri) {
+        public Builder sourceBlobSasUri(String sourceBlobSasUri) {
             this.sourceBlobSasUri = Objects.requireNonNull(sourceBlobSasUri);
             return this;
         }

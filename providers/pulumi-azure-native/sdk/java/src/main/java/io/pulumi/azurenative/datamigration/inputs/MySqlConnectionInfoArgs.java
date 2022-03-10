@@ -124,52 +124,52 @@ public final class MySqlConnectionInfoArgs extends io.pulumi.resources.ResourceA
     	      this.userName = defaults.userName;
         }
 
-        public Builder setPassword(@Nullable Input<String> password) {
+        public Builder password(@Nullable Input<String> password) {
             this.password = password;
             return this;
         }
 
-        public Builder setPassword(@Nullable String password) {
+        public Builder password(@Nullable String password) {
             this.password = Input.ofNullable(password);
             return this;
         }
 
-        public Builder setPort(Input<Integer> port) {
+        public Builder port(Input<Integer> port) {
             this.port = Objects.requireNonNull(port);
             return this;
         }
 
-        public Builder setPort(Integer port) {
+        public Builder port(Integer port) {
             this.port = Input.of(Objects.requireNonNull(port));
             return this;
         }
 
-        public Builder setServerName(Input<String> serverName) {
+        public Builder serverName(Input<String> serverName) {
             this.serverName = Objects.requireNonNull(serverName);
             return this;
         }
 
-        public Builder setServerName(String serverName) {
+        public Builder serverName(String serverName) {
             this.serverName = Input.of(Objects.requireNonNull(serverName));
             return this;
         }
 
-        public Builder setType(Input<String> type) {
+        public Builder type(Input<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }
 
-        public Builder setUserName(@Nullable Input<String> userName) {
+        public Builder userName(@Nullable Input<String> userName) {
             this.userName = userName;
             return this;
         }
 
-        public Builder setUserName(@Nullable String userName) {
+        public Builder userName(@Nullable String userName) {
             this.userName = Input.ofNullable(userName);
             return this;
         }

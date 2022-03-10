@@ -111,42 +111,42 @@ public final class SourceTriggerArgs extends io.pulumi.resources.ResourceArgs {
     	      this.status = defaults.status;
         }
 
-        public Builder setName(Input<String> name) {
+        public Builder name(Input<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder setSourceRepository(Input<SourcePropertiesArgs> sourceRepository) {
+        public Builder sourceRepository(Input<SourcePropertiesArgs> sourceRepository) {
             this.sourceRepository = Objects.requireNonNull(sourceRepository);
             return this;
         }
 
-        public Builder setSourceRepository(SourcePropertiesArgs sourceRepository) {
+        public Builder sourceRepository(SourcePropertiesArgs sourceRepository) {
             this.sourceRepository = Input.of(Objects.requireNonNull(sourceRepository));
             return this;
         }
 
-        public Builder setSourceTriggerEvents(Input<List<Either<String,SourceTriggerEvent>>> sourceTriggerEvents) {
+        public Builder sourceTriggerEvents(Input<List<Either<String,SourceTriggerEvent>>> sourceTriggerEvents) {
             this.sourceTriggerEvents = Objects.requireNonNull(sourceTriggerEvents);
             return this;
         }
 
-        public Builder setSourceTriggerEvents(List<Either<String,SourceTriggerEvent>> sourceTriggerEvents) {
+        public Builder sourceTriggerEvents(List<Either<String,SourceTriggerEvent>> sourceTriggerEvents) {
             this.sourceTriggerEvents = Input.of(Objects.requireNonNull(sourceTriggerEvents));
             return this;
         }
 
-        public Builder setStatus(@Nullable Input<Either<String,TriggerStatus>> status) {
+        public Builder status(@Nullable Input<Either<String,TriggerStatus>> status) {
             this.status = status;
             return this;
         }
 
-        public Builder setStatus(@Nullable Either<String,TriggerStatus> status) {
+        public Builder status(@Nullable Either<String,TriggerStatus> status) {
             this.status = Input.ofNullable(status);
             return this;
         }

@@ -104,42 +104,42 @@ public final class FixedScaleSettingsArgs extends io.pulumi.resources.ResourceAr
     	      this.targetLowPriorityNodes = defaults.targetLowPriorityNodes;
         }
 
-        public Builder setNodeDeallocationOption(@Nullable Input<ComputeNodeDeallocationOption> nodeDeallocationOption) {
+        public Builder nodeDeallocationOption(@Nullable Input<ComputeNodeDeallocationOption> nodeDeallocationOption) {
             this.nodeDeallocationOption = nodeDeallocationOption;
             return this;
         }
 
-        public Builder setNodeDeallocationOption(@Nullable ComputeNodeDeallocationOption nodeDeallocationOption) {
+        public Builder nodeDeallocationOption(@Nullable ComputeNodeDeallocationOption nodeDeallocationOption) {
             this.nodeDeallocationOption = Input.ofNullable(nodeDeallocationOption);
             return this;
         }
 
-        public Builder setResizeTimeout(@Nullable Input<String> resizeTimeout) {
+        public Builder resizeTimeout(@Nullable Input<String> resizeTimeout) {
             this.resizeTimeout = resizeTimeout;
             return this;
         }
 
-        public Builder setResizeTimeout(@Nullable String resizeTimeout) {
+        public Builder resizeTimeout(@Nullable String resizeTimeout) {
             this.resizeTimeout = Input.ofNullable(resizeTimeout);
             return this;
         }
 
-        public Builder setTargetDedicatedNodes(@Nullable Input<Integer> targetDedicatedNodes) {
+        public Builder targetDedicatedNodes(@Nullable Input<Integer> targetDedicatedNodes) {
             this.targetDedicatedNodes = targetDedicatedNodes;
             return this;
         }
 
-        public Builder setTargetDedicatedNodes(@Nullable Integer targetDedicatedNodes) {
+        public Builder targetDedicatedNodes(@Nullable Integer targetDedicatedNodes) {
             this.targetDedicatedNodes = Input.ofNullable(targetDedicatedNodes);
             return this;
         }
 
-        public Builder setTargetLowPriorityNodes(@Nullable Input<Integer> targetLowPriorityNodes) {
+        public Builder targetLowPriorityNodes(@Nullable Input<Integer> targetLowPriorityNodes) {
             this.targetLowPriorityNodes = targetLowPriorityNodes;
             return this;
         }
 
-        public Builder setTargetLowPriorityNodes(@Nullable Integer targetLowPriorityNodes) {
+        public Builder targetLowPriorityNodes(@Nullable Integer targetLowPriorityNodes) {
             this.targetLowPriorityNodes = Input.ofNullable(targetLowPriorityNodes);
             return this;
         }

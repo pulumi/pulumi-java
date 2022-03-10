@@ -139,32 +139,32 @@ public final class PrivateLinkResourceResponse extends io.pulumi.resources.Invok
     	      this.type = defaults.type;
         }
 
-        public Builder setGroupId(@Nullable String groupId) {
+        public Builder groupId(@Nullable String groupId) {
             this.groupId = groupId;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setPrivateLinkServiceID(String privateLinkServiceID) {
+        public Builder privateLinkServiceID(String privateLinkServiceID) {
             this.privateLinkServiceID = Objects.requireNonNull(privateLinkServiceID);
             return this;
         }
 
-        public Builder setRequiredMembers(@Nullable List<String> requiredMembers) {
+        public Builder requiredMembers(@Nullable List<String> requiredMembers) {
             this.requiredMembers = requiredMembers;
             return this;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = type;
             return this;
         }

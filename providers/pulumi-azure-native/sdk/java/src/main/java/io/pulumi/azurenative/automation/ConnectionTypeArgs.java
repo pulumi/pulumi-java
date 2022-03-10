@@ -137,62 +137,62 @@ public final class ConnectionTypeArgs extends io.pulumi.resources.ResourceArgs {
     	      this.resourceGroupName = defaults.resourceGroupName;
         }
 
-        public Builder setAutomationAccountName(Input<String> automationAccountName) {
+        public Builder automationAccountName(Input<String> automationAccountName) {
             this.automationAccountName = Objects.requireNonNull(automationAccountName);
             return this;
         }
 
-        public Builder setAutomationAccountName(String automationAccountName) {
+        public Builder automationAccountName(String automationAccountName) {
             this.automationAccountName = Input.of(Objects.requireNonNull(automationAccountName));
             return this;
         }
 
-        public Builder setConnectionTypeName(@Nullable Input<String> connectionTypeName) {
+        public Builder connectionTypeName(@Nullable Input<String> connectionTypeName) {
             this.connectionTypeName = connectionTypeName;
             return this;
         }
 
-        public Builder setConnectionTypeName(@Nullable String connectionTypeName) {
+        public Builder connectionTypeName(@Nullable String connectionTypeName) {
             this.connectionTypeName = Input.ofNullable(connectionTypeName);
             return this;
         }
 
-        public Builder setFieldDefinitions(Input<Map<String,FieldDefinitionArgs>> fieldDefinitions) {
+        public Builder fieldDefinitions(Input<Map<String,FieldDefinitionArgs>> fieldDefinitions) {
             this.fieldDefinitions = Objects.requireNonNull(fieldDefinitions);
             return this;
         }
 
-        public Builder setFieldDefinitions(Map<String,FieldDefinitionArgs> fieldDefinitions) {
+        public Builder fieldDefinitions(Map<String,FieldDefinitionArgs> fieldDefinitions) {
             this.fieldDefinitions = Input.of(Objects.requireNonNull(fieldDefinitions));
             return this;
         }
 
-        public Builder setIsGlobal(@Nullable Input<Boolean> isGlobal) {
+        public Builder isGlobal(@Nullable Input<Boolean> isGlobal) {
             this.isGlobal = isGlobal;
             return this;
         }
 
-        public Builder setIsGlobal(@Nullable Boolean isGlobal) {
+        public Builder isGlobal(@Nullable Boolean isGlobal) {
             this.isGlobal = Input.ofNullable(isGlobal);
             return this;
         }
 
-        public Builder setName(Input<String> name) {
+        public Builder name(Input<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }

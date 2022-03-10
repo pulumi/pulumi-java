@@ -101,22 +101,22 @@ public final class IntegrationRuntimeDataFlowPropertiesResponse {
     	      this.timeToLive = defaults.timeToLive;
         }
 
-        public Builder setCleanup(@Nullable Boolean cleanup) {
+        public Builder cleanup(@Nullable Boolean cleanup) {
             this.cleanup = cleanup;
             return this;
         }
 
-        public Builder setComputeType(@Nullable String computeType) {
+        public Builder computeType(@Nullable String computeType) {
             this.computeType = computeType;
             return this;
         }
 
-        public Builder setCoreCount(@Nullable Integer coreCount) {
+        public Builder coreCount(@Nullable Integer coreCount) {
             this.coreCount = coreCount;
             return this;
         }
 
-        public Builder setTimeToLive(@Nullable Integer timeToLive) {
+        public Builder timeToLive(@Nullable Integer timeToLive) {
             this.timeToLive = timeToLive;
             return this;
         }

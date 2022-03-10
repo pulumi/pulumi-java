@@ -62,12 +62,12 @@ public final class SubscriptionRegisteredFeaturesResponse extends io.pulumi.reso
     	      this.state = defaults.state;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setState(@Nullable String state) {
+        public Builder state(@Nullable String state) {
             this.state = state;
             return this;
         }

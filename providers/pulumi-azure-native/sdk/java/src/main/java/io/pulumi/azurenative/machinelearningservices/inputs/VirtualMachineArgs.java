@@ -120,52 +120,52 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
     	      this.resourceId = defaults.resourceId;
         }
 
-        public Builder setComputeLocation(@Nullable Input<String> computeLocation) {
+        public Builder computeLocation(@Nullable Input<String> computeLocation) {
             this.computeLocation = computeLocation;
             return this;
         }
 
-        public Builder setComputeLocation(@Nullable String computeLocation) {
+        public Builder computeLocation(@Nullable String computeLocation) {
             this.computeLocation = Input.ofNullable(computeLocation);
             return this;
         }
 
-        public Builder setComputeType(Input<String> computeType) {
+        public Builder computeType(Input<String> computeType) {
             this.computeType = Objects.requireNonNull(computeType);
             return this;
         }
 
-        public Builder setComputeType(String computeType) {
+        public Builder computeType(String computeType) {
             this.computeType = Input.of(Objects.requireNonNull(computeType));
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setProperties(@Nullable Input<VirtualMachinePropertiesArgs> properties) {
+        public Builder properties(@Nullable Input<VirtualMachinePropertiesArgs> properties) {
             this.properties = properties;
             return this;
         }
 
-        public Builder setProperties(@Nullable VirtualMachinePropertiesArgs properties) {
+        public Builder properties(@Nullable VirtualMachinePropertiesArgs properties) {
             this.properties = Input.ofNullable(properties);
             return this;
         }
 
-        public Builder setResourceId(@Nullable Input<String> resourceId) {
+        public Builder resourceId(@Nullable Input<String> resourceId) {
             this.resourceId = resourceId;
             return this;
         }
 
-        public Builder setResourceId(@Nullable String resourceId) {
+        public Builder resourceId(@Nullable String resourceId) {
             this.resourceId = Input.ofNullable(resourceId);
             return this;
         }

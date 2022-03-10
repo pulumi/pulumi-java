@@ -67,12 +67,12 @@ public final class BudgetFilterPropertiesResponse {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setDimensions(@Nullable BudgetComparisonExpressionResponse dimensions) {
+        public Builder dimensions(@Nullable BudgetComparisonExpressionResponse dimensions) {
             this.dimensions = dimensions;
             return this;
         }
 
-        public Builder setTags(@Nullable BudgetComparisonExpressionResponse tags) {
+        public Builder tags(@Nullable BudgetComparisonExpressionResponse tags) {
             this.tags = tags;
             return this;
         }

@@ -57,12 +57,12 @@ public final class PropertiesNetworkInjectionArgs extends io.pulumi.resources.Re
     	      this.virtualNetworks = defaults.virtualNetworks;
         }
 
-        public Builder setVirtualNetworks(@Nullable Input<VirtualNetworkPropertiesListArgs> virtualNetworks) {
+        public Builder virtualNetworks(@Nullable Input<VirtualNetworkPropertiesListArgs> virtualNetworks) {
             this.virtualNetworks = virtualNetworks;
             return this;
         }
 
-        public Builder setVirtualNetworks(@Nullable VirtualNetworkPropertiesListArgs virtualNetworks) {
+        public Builder virtualNetworks(@Nullable VirtualNetworkPropertiesListArgs virtualNetworks) {
             this.virtualNetworks = Input.ofNullable(virtualNetworks);
             return this;
         }

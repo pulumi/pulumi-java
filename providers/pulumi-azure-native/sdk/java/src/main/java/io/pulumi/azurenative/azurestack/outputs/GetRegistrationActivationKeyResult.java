@@ -50,7 +50,7 @@ public final class GetRegistrationActivationKeyResult {
     	      this.activationKey = defaults.activationKey;
         }
 
-        public Builder setActivationKey(@Nullable String activationKey) {
+        public Builder activationKey(@Nullable String activationKey) {
             this.activationKey = activationKey;
             return this;
         }

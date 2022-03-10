@@ -166,82 +166,82 @@ public final class ConfigurationAssignmentArgs extends io.pulumi.resources.Resou
     	      this.resourceType = defaults.resourceType;
         }
 
-        public Builder setConfigurationAssignmentName(@Nullable Input<String> configurationAssignmentName) {
+        public Builder configurationAssignmentName(@Nullable Input<String> configurationAssignmentName) {
             this.configurationAssignmentName = configurationAssignmentName;
             return this;
         }
 
-        public Builder setConfigurationAssignmentName(@Nullable String configurationAssignmentName) {
+        public Builder configurationAssignmentName(@Nullable String configurationAssignmentName) {
             this.configurationAssignmentName = Input.ofNullable(configurationAssignmentName);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setMaintenanceConfigurationId(@Nullable Input<String> maintenanceConfigurationId) {
+        public Builder maintenanceConfigurationId(@Nullable Input<String> maintenanceConfigurationId) {
             this.maintenanceConfigurationId = maintenanceConfigurationId;
             return this;
         }
 
-        public Builder setMaintenanceConfigurationId(@Nullable String maintenanceConfigurationId) {
+        public Builder maintenanceConfigurationId(@Nullable String maintenanceConfigurationId) {
             this.maintenanceConfigurationId = Input.ofNullable(maintenanceConfigurationId);
             return this;
         }
 
-        public Builder setProviderName(Input<String> providerName) {
+        public Builder providerName(Input<String> providerName) {
             this.providerName = Objects.requireNonNull(providerName);
             return this;
         }
 
-        public Builder setProviderName(String providerName) {
+        public Builder providerName(String providerName) {
             this.providerName = Input.of(Objects.requireNonNull(providerName));
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setResourceId(@Nullable Input<String> resourceId) {
+        public Builder resourceId(@Nullable Input<String> resourceId) {
             this.resourceId = resourceId;
             return this;
         }
 
-        public Builder setResourceId(@Nullable String resourceId) {
+        public Builder resourceId(@Nullable String resourceId) {
             this.resourceId = Input.ofNullable(resourceId);
             return this;
         }
 
-        public Builder setResourceName(Input<String> resourceName) {
+        public Builder resourceName(Input<String> resourceName) {
             this.resourceName = Objects.requireNonNull(resourceName);
             return this;
         }
 
-        public Builder setResourceName(String resourceName) {
+        public Builder resourceName(String resourceName) {
             this.resourceName = Input.of(Objects.requireNonNull(resourceName));
             return this;
         }
 
-        public Builder setResourceType(Input<String> resourceType) {
+        public Builder resourceType(Input<String> resourceType) {
             this.resourceType = Objects.requireNonNull(resourceType);
             return this;
         }
 
-        public Builder setResourceType(String resourceType) {
+        public Builder resourceType(String resourceType) {
             this.resourceType = Input.of(Objects.requireNonNull(resourceType));
             return this;
         }

@@ -68,12 +68,12 @@ public final class ListSpacecraftAvailableContactsResult {
     	      this.value = defaults.value;
         }
 
-        public Builder setNextLink(String nextLink) {
+        public Builder nextLink(String nextLink) {
             this.nextLink = Objects.requireNonNull(nextLink);
             return this;
         }
 
-        public Builder setValue(@Nullable List<AvailableContactsResponse> value) {
+        public Builder value(@Nullable List<AvailableContactsResponse> value) {
             this.value = value;
             return this;
         }

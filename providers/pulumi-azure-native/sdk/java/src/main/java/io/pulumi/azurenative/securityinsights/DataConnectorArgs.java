@@ -104,42 +104,42 @@ public final class DataConnectorArgs extends io.pulumi.resources.ResourceArgs {
     	      this.workspaceName = defaults.workspaceName;
         }
 
-        public Builder setDataConnectorId(@Nullable Input<String> dataConnectorId) {
+        public Builder dataConnectorId(@Nullable Input<String> dataConnectorId) {
             this.dataConnectorId = dataConnectorId;
             return this;
         }
 
-        public Builder setDataConnectorId(@Nullable String dataConnectorId) {
+        public Builder dataConnectorId(@Nullable String dataConnectorId) {
             this.dataConnectorId = Input.ofNullable(dataConnectorId);
             return this;
         }
 
-        public Builder setKind(Input<Either<String,DataConnectorKind>> kind) {
+        public Builder kind(Input<Either<String,DataConnectorKind>> kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setKind(Either<String,DataConnectorKind> kind) {
+        public Builder kind(Either<String,DataConnectorKind> kind) {
             this.kind = Input.of(Objects.requireNonNull(kind));
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setWorkspaceName(Input<String> workspaceName) {
+        public Builder workspaceName(Input<String> workspaceName) {
             this.workspaceName = Objects.requireNonNull(workspaceName);
             return this;
         }
 
-        public Builder setWorkspaceName(String workspaceName) {
+        public Builder workspaceName(String workspaceName) {
             this.workspaceName = Input.of(Objects.requireNonNull(workspaceName));
             return this;
         }

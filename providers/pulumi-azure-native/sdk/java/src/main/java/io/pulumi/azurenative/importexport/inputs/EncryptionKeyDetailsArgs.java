@@ -92,32 +92,32 @@ public final class EncryptionKeyDetailsArgs extends io.pulumi.resources.Resource
     	      this.kekVaultResourceID = defaults.kekVaultResourceID;
         }
 
-        public Builder setKekType(@Nullable Input<Either<String,EncryptionKekType>> kekType) {
+        public Builder kekType(@Nullable Input<Either<String,EncryptionKekType>> kekType) {
             this.kekType = kekType;
             return this;
         }
 
-        public Builder setKekType(@Nullable Either<String,EncryptionKekType> kekType) {
+        public Builder kekType(@Nullable Either<String,EncryptionKekType> kekType) {
             this.kekType = Input.ofNullable(kekType);
             return this;
         }
 
-        public Builder setKekUrl(@Nullable Input<String> kekUrl) {
+        public Builder kekUrl(@Nullable Input<String> kekUrl) {
             this.kekUrl = kekUrl;
             return this;
         }
 
-        public Builder setKekUrl(@Nullable String kekUrl) {
+        public Builder kekUrl(@Nullable String kekUrl) {
             this.kekUrl = Input.ofNullable(kekUrl);
             return this;
         }
 
-        public Builder setKekVaultResourceID(@Nullable Input<String> kekVaultResourceID) {
+        public Builder kekVaultResourceID(@Nullable Input<String> kekVaultResourceID) {
             this.kekVaultResourceID = kekVaultResourceID;
             return this;
         }
 
-        public Builder setKekVaultResourceID(@Nullable String kekVaultResourceID) {
+        public Builder kekVaultResourceID(@Nullable String kekVaultResourceID) {
             this.kekVaultResourceID = Input.ofNullable(kekVaultResourceID);
             return this;
         }

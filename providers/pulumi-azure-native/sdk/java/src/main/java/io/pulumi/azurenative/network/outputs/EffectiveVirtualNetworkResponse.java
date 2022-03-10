@@ -83,17 +83,17 @@ public final class EffectiveVirtualNetworkResponse {
     	      this.membershipType = defaults.membershipType;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
 
-        public Builder setMembershipType(@Nullable String membershipType) {
+        public Builder membershipType(@Nullable String membershipType) {
             this.membershipType = membershipType;
             return this;
         }

@@ -110,42 +110,42 @@ public final class MediaGraphRtspSourceArgs extends io.pulumi.resources.Resource
     	      this.transport = defaults.transport;
         }
 
-        public Builder setEndpoint(Input<Either<MediaGraphClearEndpointArgs,MediaGraphTlsEndpointArgs>> endpoint) {
+        public Builder endpoint(Input<Either<MediaGraphClearEndpointArgs,MediaGraphTlsEndpointArgs>> endpoint) {
             this.endpoint = Objects.requireNonNull(endpoint);
             return this;
         }
 
-        public Builder setEndpoint(Either<MediaGraphClearEndpointArgs,MediaGraphTlsEndpointArgs> endpoint) {
+        public Builder endpoint(Either<MediaGraphClearEndpointArgs,MediaGraphTlsEndpointArgs> endpoint) {
             this.endpoint = Input.of(Objects.requireNonNull(endpoint));
             return this;
         }
 
-        public Builder setName(Input<String> name) {
+        public Builder name(Input<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder setOdataType(Input<String> odataType) {
+        public Builder odataType(Input<String> odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
 
-        public Builder setOdataType(String odataType) {
+        public Builder odataType(String odataType) {
             this.odataType = Input.of(Objects.requireNonNull(odataType));
             return this;
         }
 
-        public Builder setTransport(Input<Either<String,MediaGraphRtspTransport>> transport) {
+        public Builder transport(Input<Either<String,MediaGraphRtspTransport>> transport) {
             this.transport = Objects.requireNonNull(transport);
             return this;
         }
 
-        public Builder setTransport(Either<String,MediaGraphRtspTransport> transport) {
+        public Builder transport(Either<String,MediaGraphRtspTransport> transport) {
             this.transport = Input.of(Objects.requireNonNull(transport));
             return this;
         }

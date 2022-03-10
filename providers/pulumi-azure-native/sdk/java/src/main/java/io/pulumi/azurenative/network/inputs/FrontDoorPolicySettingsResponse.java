@@ -139,32 +139,32 @@ public final class FrontDoorPolicySettingsResponse extends io.pulumi.resources.I
     	      this.requestBodyCheck = defaults.requestBodyCheck;
         }
 
-        public Builder setCustomBlockResponseBody(@Nullable String customBlockResponseBody) {
+        public Builder customBlockResponseBody(@Nullable String customBlockResponseBody) {
             this.customBlockResponseBody = customBlockResponseBody;
             return this;
         }
 
-        public Builder setCustomBlockResponseStatusCode(@Nullable Integer customBlockResponseStatusCode) {
+        public Builder customBlockResponseStatusCode(@Nullable Integer customBlockResponseStatusCode) {
             this.customBlockResponseStatusCode = customBlockResponseStatusCode;
             return this;
         }
 
-        public Builder setEnabledState(@Nullable String enabledState) {
+        public Builder enabledState(@Nullable String enabledState) {
             this.enabledState = enabledState;
             return this;
         }
 
-        public Builder setMode(@Nullable String mode) {
+        public Builder mode(@Nullable String mode) {
             this.mode = mode;
             return this;
         }
 
-        public Builder setRedirectUrl(@Nullable String redirectUrl) {
+        public Builder redirectUrl(@Nullable String redirectUrl) {
             this.redirectUrl = redirectUrl;
             return this;
         }
 
-        public Builder setRequestBodyCheck(@Nullable String requestBodyCheck) {
+        public Builder requestBodyCheck(@Nullable String requestBodyCheck) {
             this.requestBodyCheck = requestBodyCheck;
             return this;
         }

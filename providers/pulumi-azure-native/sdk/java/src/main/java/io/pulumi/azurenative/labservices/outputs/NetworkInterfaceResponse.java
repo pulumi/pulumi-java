@@ -97,22 +97,22 @@ public final class NetworkInterfaceResponse {
     	      this.username = defaults.username;
         }
 
-        public Builder setPrivateIpAddress(String privateIpAddress) {
+        public Builder privateIpAddress(String privateIpAddress) {
             this.privateIpAddress = Objects.requireNonNull(privateIpAddress);
             return this;
         }
 
-        public Builder setRdpAuthority(String rdpAuthority) {
+        public Builder rdpAuthority(String rdpAuthority) {
             this.rdpAuthority = Objects.requireNonNull(rdpAuthority);
             return this;
         }
 
-        public Builder setSshAuthority(String sshAuthority) {
+        public Builder sshAuthority(String sshAuthority) {
             this.sshAuthority = Objects.requireNonNull(sshAuthority);
             return this;
         }
 
-        public Builder setUsername(String username) {
+        public Builder username(String username) {
             this.username = Objects.requireNonNull(username);
             return this;
         }

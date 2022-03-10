@@ -93,32 +93,32 @@ public final class RuleEmailActionArgs extends io.pulumi.resources.ResourceArgs 
     	      this.sendToServiceOwners = defaults.sendToServiceOwners;
         }
 
-        public Builder setCustomEmails(@Nullable Input<List<String>> customEmails) {
+        public Builder customEmails(@Nullable Input<List<String>> customEmails) {
             this.customEmails = customEmails;
             return this;
         }
 
-        public Builder setCustomEmails(@Nullable List<String> customEmails) {
+        public Builder customEmails(@Nullable List<String> customEmails) {
             this.customEmails = Input.ofNullable(customEmails);
             return this;
         }
 
-        public Builder setOdataType(Input<String> odataType) {
+        public Builder odataType(Input<String> odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
 
-        public Builder setOdataType(String odataType) {
+        public Builder odataType(String odataType) {
             this.odataType = Input.of(Objects.requireNonNull(odataType));
             return this;
         }
 
-        public Builder setSendToServiceOwners(@Nullable Input<Boolean> sendToServiceOwners) {
+        public Builder sendToServiceOwners(@Nullable Input<Boolean> sendToServiceOwners) {
             this.sendToServiceOwners = sendToServiceOwners;
             return this;
         }
 
-        public Builder setSendToServiceOwners(@Nullable Boolean sendToServiceOwners) {
+        public Builder sendToServiceOwners(@Nullable Boolean sendToServiceOwners) {
             this.sendToServiceOwners = Input.ofNullable(sendToServiceOwners);
             return this;
         }

@@ -318,87 +318,87 @@ public final class AzureBlobStorageLinkedServiceResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setAccountKey(@Nullable AzureKeyVaultSecretReferenceResponse accountKey) {
+        public Builder accountKey(@Nullable AzureKeyVaultSecretReferenceResponse accountKey) {
             this.accountKey = accountKey;
             return this;
         }
 
-        public Builder setAccountKind(@Nullable String accountKind) {
+        public Builder accountKind(@Nullable String accountKind) {
             this.accountKind = accountKind;
             return this;
         }
 
-        public Builder setAnnotations(@Nullable List<Object> annotations) {
+        public Builder annotations(@Nullable List<Object> annotations) {
             this.annotations = annotations;
             return this;
         }
 
-        public Builder setAzureCloudType(@Nullable Object azureCloudType) {
+        public Builder azureCloudType(@Nullable Object azureCloudType) {
             this.azureCloudType = azureCloudType;
             return this;
         }
 
-        public Builder setConnectVia(@Nullable IntegrationRuntimeReferenceResponse connectVia) {
+        public Builder connectVia(@Nullable IntegrationRuntimeReferenceResponse connectVia) {
             this.connectVia = connectVia;
             return this;
         }
 
-        public Builder setConnectionString(@Nullable Object connectionString) {
+        public Builder connectionString(@Nullable Object connectionString) {
             this.connectionString = connectionString;
             return this;
         }
 
-        public Builder setCredential(@Nullable CredentialReferenceResponse credential) {
+        public Builder credential(@Nullable CredentialReferenceResponse credential) {
             this.credential = credential;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setEncryptedCredential(@Nullable String encryptedCredential) {
+        public Builder encryptedCredential(@Nullable String encryptedCredential) {
             this.encryptedCredential = encryptedCredential;
             return this;
         }
 
-        public Builder setParameters(@Nullable Map<String,ParameterSpecificationResponse> parameters) {
+        public Builder parameters(@Nullable Map<String,ParameterSpecificationResponse> parameters) {
             this.parameters = parameters;
             return this;
         }
 
-        public Builder setSasToken(@Nullable AzureKeyVaultSecretReferenceResponse sasToken) {
+        public Builder sasToken(@Nullable AzureKeyVaultSecretReferenceResponse sasToken) {
             this.sasToken = sasToken;
             return this;
         }
 
-        public Builder setSasUri(@Nullable Object sasUri) {
+        public Builder sasUri(@Nullable Object sasUri) {
             this.sasUri = sasUri;
             return this;
         }
 
-        public Builder setServiceEndpoint(@Nullable String serviceEndpoint) {
+        public Builder serviceEndpoint(@Nullable String serviceEndpoint) {
             this.serviceEndpoint = serviceEndpoint;
             return this;
         }
 
-        public Builder setServicePrincipalId(@Nullable Object servicePrincipalId) {
+        public Builder servicePrincipalId(@Nullable Object servicePrincipalId) {
             this.servicePrincipalId = servicePrincipalId;
             return this;
         }
 
-        public Builder setServicePrincipalKey(@Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalKey) {
+        public Builder servicePrincipalKey(@Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalKey) {
             this.servicePrincipalKey = servicePrincipalKey;
             return this;
         }
 
-        public Builder setTenant(@Nullable Object tenant) {
+        public Builder tenant(@Nullable Object tenant) {
             this.tenant = tenant;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

@@ -86,17 +86,17 @@ public final class KeyVaultPropertiesResponse extends io.pulumi.resources.Invoke
     	      this.keyVaultArmId = defaults.keyVaultArmId;
         }
 
-        public Builder setIdentityClientId(@Nullable String identityClientId) {
+        public Builder identityClientId(@Nullable String identityClientId) {
             this.identityClientId = identityClientId;
             return this;
         }
 
-        public Builder setKeyIdentifier(String keyIdentifier) {
+        public Builder keyIdentifier(String keyIdentifier) {
             this.keyIdentifier = Objects.requireNonNull(keyIdentifier);
             return this;
         }
 
-        public Builder setKeyVaultArmId(String keyVaultArmId) {
+        public Builder keyVaultArmId(String keyVaultArmId) {
             this.keyVaultArmId = Objects.requireNonNull(keyVaultArmId);
             return this;
         }

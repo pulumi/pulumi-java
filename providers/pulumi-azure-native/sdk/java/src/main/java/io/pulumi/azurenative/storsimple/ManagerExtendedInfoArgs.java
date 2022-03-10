@@ -183,92 +183,92 @@ public final class ManagerExtendedInfoArgs extends io.pulumi.resources.ResourceA
     	      this.version = defaults.version;
         }
 
-        public Builder setAlgorithm(Input<String> algorithm) {
+        public Builder algorithm(Input<String> algorithm) {
             this.algorithm = Objects.requireNonNull(algorithm);
             return this;
         }
 
-        public Builder setAlgorithm(String algorithm) {
+        public Builder algorithm(String algorithm) {
             this.algorithm = Input.of(Objects.requireNonNull(algorithm));
             return this;
         }
 
-        public Builder setEncryptionKey(@Nullable Input<String> encryptionKey) {
+        public Builder encryptionKey(@Nullable Input<String> encryptionKey) {
             this.encryptionKey = encryptionKey;
             return this;
         }
 
-        public Builder setEncryptionKey(@Nullable String encryptionKey) {
+        public Builder encryptionKey(@Nullable String encryptionKey) {
             this.encryptionKey = Input.ofNullable(encryptionKey);
             return this;
         }
 
-        public Builder setEncryptionKeyThumbprint(@Nullable Input<String> encryptionKeyThumbprint) {
+        public Builder encryptionKeyThumbprint(@Nullable Input<String> encryptionKeyThumbprint) {
             this.encryptionKeyThumbprint = encryptionKeyThumbprint;
             return this;
         }
 
-        public Builder setEncryptionKeyThumbprint(@Nullable String encryptionKeyThumbprint) {
+        public Builder encryptionKeyThumbprint(@Nullable String encryptionKeyThumbprint) {
             this.encryptionKeyThumbprint = Input.ofNullable(encryptionKeyThumbprint);
             return this;
         }
 
-        public Builder setIntegrityKey(Input<String> integrityKey) {
+        public Builder integrityKey(Input<String> integrityKey) {
             this.integrityKey = Objects.requireNonNull(integrityKey);
             return this;
         }
 
-        public Builder setIntegrityKey(String integrityKey) {
+        public Builder integrityKey(String integrityKey) {
             this.integrityKey = Input.of(Objects.requireNonNull(integrityKey));
             return this;
         }
 
-        public Builder setKind(@Nullable Input<Kind> kind) {
+        public Builder kind(@Nullable Input<Kind> kind) {
             this.kind = kind;
             return this;
         }
 
-        public Builder setKind(@Nullable Kind kind) {
+        public Builder kind(@Nullable Kind kind) {
             this.kind = Input.ofNullable(kind);
             return this;
         }
 
-        public Builder setManagerName(Input<String> managerName) {
+        public Builder managerName(Input<String> managerName) {
             this.managerName = Objects.requireNonNull(managerName);
             return this;
         }
 
-        public Builder setManagerName(String managerName) {
+        public Builder managerName(String managerName) {
             this.managerName = Input.of(Objects.requireNonNull(managerName));
             return this;
         }
 
-        public Builder setPortalCertificateThumbprint(@Nullable Input<String> portalCertificateThumbprint) {
+        public Builder portalCertificateThumbprint(@Nullable Input<String> portalCertificateThumbprint) {
             this.portalCertificateThumbprint = portalCertificateThumbprint;
             return this;
         }
 
-        public Builder setPortalCertificateThumbprint(@Nullable String portalCertificateThumbprint) {
+        public Builder portalCertificateThumbprint(@Nullable String portalCertificateThumbprint) {
             this.portalCertificateThumbprint = Input.ofNullable(portalCertificateThumbprint);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setVersion(@Nullable Input<String> version) {
+        public Builder version(@Nullable Input<String> version) {
             this.version = version;
             return this;
         }
 
-        public Builder setVersion(@Nullable String version) {
+        public Builder version(@Nullable String version) {
             this.version = Input.ofNullable(version);
             return this;
         }

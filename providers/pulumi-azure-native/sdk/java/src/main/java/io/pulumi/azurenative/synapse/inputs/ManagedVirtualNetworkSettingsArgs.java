@@ -92,32 +92,32 @@ public final class ManagedVirtualNetworkSettingsArgs extends io.pulumi.resources
     	      this.preventDataExfiltration = defaults.preventDataExfiltration;
         }
 
-        public Builder setAllowedAadTenantIdsForLinking(@Nullable Input<List<String>> allowedAadTenantIdsForLinking) {
+        public Builder allowedAadTenantIdsForLinking(@Nullable Input<List<String>> allowedAadTenantIdsForLinking) {
             this.allowedAadTenantIdsForLinking = allowedAadTenantIdsForLinking;
             return this;
         }
 
-        public Builder setAllowedAadTenantIdsForLinking(@Nullable List<String> allowedAadTenantIdsForLinking) {
+        public Builder allowedAadTenantIdsForLinking(@Nullable List<String> allowedAadTenantIdsForLinking) {
             this.allowedAadTenantIdsForLinking = Input.ofNullable(allowedAadTenantIdsForLinking);
             return this;
         }
 
-        public Builder setLinkedAccessCheckOnTargetResource(@Nullable Input<Boolean> linkedAccessCheckOnTargetResource) {
+        public Builder linkedAccessCheckOnTargetResource(@Nullable Input<Boolean> linkedAccessCheckOnTargetResource) {
             this.linkedAccessCheckOnTargetResource = linkedAccessCheckOnTargetResource;
             return this;
         }
 
-        public Builder setLinkedAccessCheckOnTargetResource(@Nullable Boolean linkedAccessCheckOnTargetResource) {
+        public Builder linkedAccessCheckOnTargetResource(@Nullable Boolean linkedAccessCheckOnTargetResource) {
             this.linkedAccessCheckOnTargetResource = Input.ofNullable(linkedAccessCheckOnTargetResource);
             return this;
         }
 
-        public Builder setPreventDataExfiltration(@Nullable Input<Boolean> preventDataExfiltration) {
+        public Builder preventDataExfiltration(@Nullable Input<Boolean> preventDataExfiltration) {
             this.preventDataExfiltration = preventDataExfiltration;
             return this;
         }
 
-        public Builder setPreventDataExfiltration(@Nullable Boolean preventDataExfiltration) {
+        public Builder preventDataExfiltration(@Nullable Boolean preventDataExfiltration) {
             this.preventDataExfiltration = Input.ofNullable(preventDataExfiltration);
             return this;
         }

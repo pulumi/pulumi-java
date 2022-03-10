@@ -200,52 +200,52 @@ public final class GetPolicyAssignmentArtifactResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setDependsOn(@Nullable List<String> dependsOn) {
+        public Builder dependsOn(@Nullable List<String> dependsOn) {
             this.dependsOn = dependsOn;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDisplayName(@Nullable String displayName) {
+        public Builder displayName(@Nullable String displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setParameters(Map<String,ParameterValueResponse> parameters) {
+        public Builder parameters(Map<String,ParameterValueResponse> parameters) {
             this.parameters = Objects.requireNonNull(parameters);
             return this;
         }
 
-        public Builder setPolicyDefinitionId(String policyDefinitionId) {
+        public Builder policyDefinitionId(String policyDefinitionId) {
             this.policyDefinitionId = Objects.requireNonNull(policyDefinitionId);
             return this;
         }
 
-        public Builder setResourceGroup(@Nullable String resourceGroup) {
+        public Builder resourceGroup(@Nullable String resourceGroup) {
             this.resourceGroup = resourceGroup;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

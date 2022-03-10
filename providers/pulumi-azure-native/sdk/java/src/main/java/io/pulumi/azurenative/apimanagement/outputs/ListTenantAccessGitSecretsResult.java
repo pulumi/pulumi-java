@@ -100,22 +100,22 @@ public final class ListTenantAccessGitSecretsResult {
     	      this.secondaryKey = defaults.secondaryKey;
         }
 
-        public Builder setEnabled(@Nullable Boolean enabled) {
+        public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = enabled;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setPrimaryKey(@Nullable String primaryKey) {
+        public Builder primaryKey(@Nullable String primaryKey) {
             this.primaryKey = primaryKey;
             return this;
         }
 
-        public Builder setSecondaryKey(@Nullable String secondaryKey) {
+        public Builder secondaryKey(@Nullable String secondaryKey) {
             this.secondaryKey = secondaryKey;
             return this;
         }

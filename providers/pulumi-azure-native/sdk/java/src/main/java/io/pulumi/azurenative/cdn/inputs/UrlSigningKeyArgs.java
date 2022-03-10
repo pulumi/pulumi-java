@@ -74,22 +74,22 @@ public final class UrlSigningKeyArgs extends io.pulumi.resources.ResourceArgs {
     	      this.keySourceParameters = defaults.keySourceParameters;
         }
 
-        public Builder setKeyId(Input<String> keyId) {
+        public Builder keyId(Input<String> keyId) {
             this.keyId = Objects.requireNonNull(keyId);
             return this;
         }
 
-        public Builder setKeyId(String keyId) {
+        public Builder keyId(String keyId) {
             this.keyId = Input.of(Objects.requireNonNull(keyId));
             return this;
         }
 
-        public Builder setKeySourceParameters(Input<KeyVaultSigningKeyParametersArgs> keySourceParameters) {
+        public Builder keySourceParameters(Input<KeyVaultSigningKeyParametersArgs> keySourceParameters) {
             this.keySourceParameters = Objects.requireNonNull(keySourceParameters);
             return this;
         }
 
-        public Builder setKeySourceParameters(KeyVaultSigningKeyParametersArgs keySourceParameters) {
+        public Builder keySourceParameters(KeyVaultSigningKeyParametersArgs keySourceParameters) {
             this.keySourceParameters = Input.of(Objects.requireNonNull(keySourceParameters));
             return this;
         }

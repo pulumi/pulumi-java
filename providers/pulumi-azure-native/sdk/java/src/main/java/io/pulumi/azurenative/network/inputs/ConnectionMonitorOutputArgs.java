@@ -77,22 +77,22 @@ public final class ConnectionMonitorOutputArgs extends io.pulumi.resources.Resou
     	      this.workspaceSettings = defaults.workspaceSettings;
         }
 
-        public Builder setType(@Nullable Input<Either<String,OutputType>> type) {
+        public Builder type(@Nullable Input<Either<String,OutputType>> type) {
             this.type = type;
             return this;
         }
 
-        public Builder setType(@Nullable Either<String,OutputType> type) {
+        public Builder type(@Nullable Either<String,OutputType> type) {
             this.type = Input.ofNullable(type);
             return this;
         }
 
-        public Builder setWorkspaceSettings(@Nullable Input<ConnectionMonitorWorkspaceSettingsArgs> workspaceSettings) {
+        public Builder workspaceSettings(@Nullable Input<ConnectionMonitorWorkspaceSettingsArgs> workspaceSettings) {
             this.workspaceSettings = workspaceSettings;
             return this;
         }
 
-        public Builder setWorkspaceSettings(@Nullable ConnectionMonitorWorkspaceSettingsArgs workspaceSettings) {
+        public Builder workspaceSettings(@Nullable ConnectionMonitorWorkspaceSettingsArgs workspaceSettings) {
             this.workspaceSettings = Input.ofNullable(workspaceSettings);
             return this;
         }

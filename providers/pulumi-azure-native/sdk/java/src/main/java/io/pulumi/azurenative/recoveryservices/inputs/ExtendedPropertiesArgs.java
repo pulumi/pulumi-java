@@ -57,12 +57,12 @@ public final class ExtendedPropertiesArgs extends io.pulumi.resources.ResourceAr
     	      this.diskExclusionProperties = defaults.diskExclusionProperties;
         }
 
-        public Builder setDiskExclusionProperties(@Nullable Input<DiskExclusionPropertiesArgs> diskExclusionProperties) {
+        public Builder diskExclusionProperties(@Nullable Input<DiskExclusionPropertiesArgs> diskExclusionProperties) {
             this.diskExclusionProperties = diskExclusionProperties;
             return this;
         }
 
-        public Builder setDiskExclusionProperties(@Nullable DiskExclusionPropertiesArgs diskExclusionProperties) {
+        public Builder diskExclusionProperties(@Nullable DiskExclusionPropertiesArgs diskExclusionProperties) {
             this.diskExclusionProperties = Input.ofNullable(diskExclusionProperties);
             return this;
         }

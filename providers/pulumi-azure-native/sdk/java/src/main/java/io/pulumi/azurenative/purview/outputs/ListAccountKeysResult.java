@@ -67,12 +67,12 @@ public final class ListAccountKeysResult {
     	      this.atlasKafkaSecondaryEndpoint = defaults.atlasKafkaSecondaryEndpoint;
         }
 
-        public Builder setAtlasKafkaPrimaryEndpoint(@Nullable String atlasKafkaPrimaryEndpoint) {
+        public Builder atlasKafkaPrimaryEndpoint(@Nullable String atlasKafkaPrimaryEndpoint) {
             this.atlasKafkaPrimaryEndpoint = atlasKafkaPrimaryEndpoint;
             return this;
         }
 
-        public Builder setAtlasKafkaSecondaryEndpoint(@Nullable String atlasKafkaSecondaryEndpoint) {
+        public Builder atlasKafkaSecondaryEndpoint(@Nullable String atlasKafkaSecondaryEndpoint) {
             this.atlasKafkaSecondaryEndpoint = atlasKafkaSecondaryEndpoint;
             return this;
         }

@@ -92,32 +92,32 @@ public final class ExchangeConnectionArgs extends io.pulumi.resources.ResourceAr
     	      this.peeringDBFacilityId = defaults.peeringDBFacilityId;
         }
 
-        public Builder setBgpSession(@Nullable Input<BgpSessionArgs> bgpSession) {
+        public Builder bgpSession(@Nullable Input<BgpSessionArgs> bgpSession) {
             this.bgpSession = bgpSession;
             return this;
         }
 
-        public Builder setBgpSession(@Nullable BgpSessionArgs bgpSession) {
+        public Builder bgpSession(@Nullable BgpSessionArgs bgpSession) {
             this.bgpSession = Input.ofNullable(bgpSession);
             return this;
         }
 
-        public Builder setConnectionIdentifier(@Nullable Input<String> connectionIdentifier) {
+        public Builder connectionIdentifier(@Nullable Input<String> connectionIdentifier) {
             this.connectionIdentifier = connectionIdentifier;
             return this;
         }
 
-        public Builder setConnectionIdentifier(@Nullable String connectionIdentifier) {
+        public Builder connectionIdentifier(@Nullable String connectionIdentifier) {
             this.connectionIdentifier = Input.ofNullable(connectionIdentifier);
             return this;
         }
 
-        public Builder setPeeringDBFacilityId(@Nullable Input<Integer> peeringDBFacilityId) {
+        public Builder peeringDBFacilityId(@Nullable Input<Integer> peeringDBFacilityId) {
             this.peeringDBFacilityId = peeringDBFacilityId;
             return this;
         }
 
-        public Builder setPeeringDBFacilityId(@Nullable Integer peeringDBFacilityId) {
+        public Builder peeringDBFacilityId(@Nullable Integer peeringDBFacilityId) {
             this.peeringDBFacilityId = Input.ofNullable(peeringDBFacilityId);
             return this;
         }

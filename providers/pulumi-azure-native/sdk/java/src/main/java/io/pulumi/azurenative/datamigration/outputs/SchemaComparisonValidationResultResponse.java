@@ -102,22 +102,22 @@ public final class SchemaComparisonValidationResultResponse {
     	      this.validationErrors = defaults.validationErrors;
         }
 
-        public Builder setSchemaDifferences(SchemaComparisonValidationResultTypeResponse schemaDifferences) {
+        public Builder schemaDifferences(SchemaComparisonValidationResultTypeResponse schemaDifferences) {
             this.schemaDifferences = Objects.requireNonNull(schemaDifferences);
             return this;
         }
 
-        public Builder setSourceDatabaseObjectCount(@Nullable Map<String,Double> sourceDatabaseObjectCount) {
+        public Builder sourceDatabaseObjectCount(@Nullable Map<String,Double> sourceDatabaseObjectCount) {
             this.sourceDatabaseObjectCount = sourceDatabaseObjectCount;
             return this;
         }
 
-        public Builder setTargetDatabaseObjectCount(@Nullable Map<String,Double> targetDatabaseObjectCount) {
+        public Builder targetDatabaseObjectCount(@Nullable Map<String,Double> targetDatabaseObjectCount) {
             this.targetDatabaseObjectCount = targetDatabaseObjectCount;
             return this;
         }
 
-        public Builder setValidationErrors(ValidationErrorResponse validationErrors) {
+        public Builder validationErrors(ValidationErrorResponse validationErrors) {
             this.validationErrors = Objects.requireNonNull(validationErrors);
             return this;
         }

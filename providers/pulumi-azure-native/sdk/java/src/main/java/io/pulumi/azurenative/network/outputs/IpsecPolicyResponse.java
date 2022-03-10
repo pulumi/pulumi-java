@@ -162,42 +162,42 @@ public final class IpsecPolicyResponse {
     	      this.saLifeTimeSeconds = defaults.saLifeTimeSeconds;
         }
 
-        public Builder setDhGroup(String dhGroup) {
+        public Builder dhGroup(String dhGroup) {
             this.dhGroup = Objects.requireNonNull(dhGroup);
             return this;
         }
 
-        public Builder setIkeEncryption(String ikeEncryption) {
+        public Builder ikeEncryption(String ikeEncryption) {
             this.ikeEncryption = Objects.requireNonNull(ikeEncryption);
             return this;
         }
 
-        public Builder setIkeIntegrity(String ikeIntegrity) {
+        public Builder ikeIntegrity(String ikeIntegrity) {
             this.ikeIntegrity = Objects.requireNonNull(ikeIntegrity);
             return this;
         }
 
-        public Builder setIpsecEncryption(String ipsecEncryption) {
+        public Builder ipsecEncryption(String ipsecEncryption) {
             this.ipsecEncryption = Objects.requireNonNull(ipsecEncryption);
             return this;
         }
 
-        public Builder setIpsecIntegrity(String ipsecIntegrity) {
+        public Builder ipsecIntegrity(String ipsecIntegrity) {
             this.ipsecIntegrity = Objects.requireNonNull(ipsecIntegrity);
             return this;
         }
 
-        public Builder setPfsGroup(String pfsGroup) {
+        public Builder pfsGroup(String pfsGroup) {
             this.pfsGroup = Objects.requireNonNull(pfsGroup);
             return this;
         }
 
-        public Builder setSaDataSizeKilobytes(Integer saDataSizeKilobytes) {
+        public Builder saDataSizeKilobytes(Integer saDataSizeKilobytes) {
             this.saDataSizeKilobytes = Objects.requireNonNull(saDataSizeKilobytes);
             return this;
         }
 
-        public Builder setSaLifeTimeSeconds(Integer saLifeTimeSeconds) {
+        public Builder saLifeTimeSeconds(Integer saLifeTimeSeconds) {
             this.saLifeTimeSeconds = Objects.requireNonNull(saLifeTimeSeconds);
             return this;
         }

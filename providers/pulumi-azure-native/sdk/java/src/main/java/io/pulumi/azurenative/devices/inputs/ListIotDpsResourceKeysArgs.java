@@ -68,12 +68,12 @@ public final class ListIotDpsResourceKeysArgs extends io.pulumi.resources.Invoke
     	      this.resourceGroupName = defaults.resourceGroupName;
         }
 
-        public Builder setProvisioningServiceName(String provisioningServiceName) {
+        public Builder provisioningServiceName(String provisioningServiceName) {
             this.provisioningServiceName = Objects.requireNonNull(provisioningServiceName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }

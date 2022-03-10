@@ -93,17 +93,17 @@ public final class NetworkRuleSetPropertiesResponse extends io.pulumi.resources.
     	      this.ipRules = defaults.ipRules;
         }
 
-        public Builder setApplyToBuiltInEventHubEndpoint(Boolean applyToBuiltInEventHubEndpoint) {
+        public Builder applyToBuiltInEventHubEndpoint(Boolean applyToBuiltInEventHubEndpoint) {
             this.applyToBuiltInEventHubEndpoint = Objects.requireNonNull(applyToBuiltInEventHubEndpoint);
             return this;
         }
 
-        public Builder setDefaultAction(@Nullable String defaultAction) {
+        public Builder defaultAction(@Nullable String defaultAction) {
             this.defaultAction = defaultAction;
             return this;
         }
 
-        public Builder setIpRules(List<NetworkRuleSetIpRuleResponse> ipRules) {
+        public Builder ipRules(List<NetworkRuleSetIpRuleResponse> ipRules) {
             this.ipRules = Objects.requireNonNull(ipRules);
             return this;
         }

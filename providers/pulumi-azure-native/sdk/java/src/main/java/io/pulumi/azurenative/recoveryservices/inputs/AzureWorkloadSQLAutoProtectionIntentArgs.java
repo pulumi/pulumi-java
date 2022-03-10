@@ -159,72 +159,72 @@ public final class AzureWorkloadSQLAutoProtectionIntentArgs extends io.pulumi.re
     	      this.workloadItemType = defaults.workloadItemType;
         }
 
-        public Builder setBackupManagementType(@Nullable Input<Either<String,BackupManagementType>> backupManagementType) {
+        public Builder backupManagementType(@Nullable Input<Either<String,BackupManagementType>> backupManagementType) {
             this.backupManagementType = backupManagementType;
             return this;
         }
 
-        public Builder setBackupManagementType(@Nullable Either<String,BackupManagementType> backupManagementType) {
+        public Builder backupManagementType(@Nullable Either<String,BackupManagementType> backupManagementType) {
             this.backupManagementType = Input.ofNullable(backupManagementType);
             return this;
         }
 
-        public Builder setItemId(@Nullable Input<String> itemId) {
+        public Builder itemId(@Nullable Input<String> itemId) {
             this.itemId = itemId;
             return this;
         }
 
-        public Builder setItemId(@Nullable String itemId) {
+        public Builder itemId(@Nullable String itemId) {
             this.itemId = Input.ofNullable(itemId);
             return this;
         }
 
-        public Builder setPolicyId(@Nullable Input<String> policyId) {
+        public Builder policyId(@Nullable Input<String> policyId) {
             this.policyId = policyId;
             return this;
         }
 
-        public Builder setPolicyId(@Nullable String policyId) {
+        public Builder policyId(@Nullable String policyId) {
             this.policyId = Input.ofNullable(policyId);
             return this;
         }
 
-        public Builder setProtectionIntentItemType(Input<String> protectionIntentItemType) {
+        public Builder protectionIntentItemType(Input<String> protectionIntentItemType) {
             this.protectionIntentItemType = Objects.requireNonNull(protectionIntentItemType);
             return this;
         }
 
-        public Builder setProtectionIntentItemType(String protectionIntentItemType) {
+        public Builder protectionIntentItemType(String protectionIntentItemType) {
             this.protectionIntentItemType = Input.of(Objects.requireNonNull(protectionIntentItemType));
             return this;
         }
 
-        public Builder setProtectionState(@Nullable Input<Either<String,ProtectionStatus>> protectionState) {
+        public Builder protectionState(@Nullable Input<Either<String,ProtectionStatus>> protectionState) {
             this.protectionState = protectionState;
             return this;
         }
 
-        public Builder setProtectionState(@Nullable Either<String,ProtectionStatus> protectionState) {
+        public Builder protectionState(@Nullable Either<String,ProtectionStatus> protectionState) {
             this.protectionState = Input.ofNullable(protectionState);
             return this;
         }
 
-        public Builder setSourceResourceId(@Nullable Input<String> sourceResourceId) {
+        public Builder sourceResourceId(@Nullable Input<String> sourceResourceId) {
             this.sourceResourceId = sourceResourceId;
             return this;
         }
 
-        public Builder setSourceResourceId(@Nullable String sourceResourceId) {
+        public Builder sourceResourceId(@Nullable String sourceResourceId) {
             this.sourceResourceId = Input.ofNullable(sourceResourceId);
             return this;
         }
 
-        public Builder setWorkloadItemType(@Nullable Input<Either<String,WorkloadItemType>> workloadItemType) {
+        public Builder workloadItemType(@Nullable Input<Either<String,WorkloadItemType>> workloadItemType) {
             this.workloadItemType = workloadItemType;
             return this;
         }
 
-        public Builder setWorkloadItemType(@Nullable Either<String,WorkloadItemType> workloadItemType) {
+        public Builder workloadItemType(@Nullable Either<String,WorkloadItemType> workloadItemType) {
             this.workloadItemType = Input.ofNullable(workloadItemType);
             return this;
         }

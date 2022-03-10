@@ -262,72 +262,72 @@ public final class RuleManagementEventDataSourceResponse {
     	      this.subStatus = defaults.subStatus;
         }
 
-        public Builder setClaims(@Nullable RuleManagementEventClaimsDataSourceResponse claims) {
+        public Builder claims(@Nullable RuleManagementEventClaimsDataSourceResponse claims) {
             this.claims = claims;
             return this;
         }
 
-        public Builder setEventName(@Nullable String eventName) {
+        public Builder eventName(@Nullable String eventName) {
             this.eventName = eventName;
             return this;
         }
 
-        public Builder setEventSource(@Nullable String eventSource) {
+        public Builder eventSource(@Nullable String eventSource) {
             this.eventSource = eventSource;
             return this;
         }
 
-        public Builder setLegacyResourceId(@Nullable String legacyResourceId) {
+        public Builder legacyResourceId(@Nullable String legacyResourceId) {
             this.legacyResourceId = legacyResourceId;
             return this;
         }
 
-        public Builder setLevel(@Nullable String level) {
+        public Builder level(@Nullable String level) {
             this.level = level;
             return this;
         }
 
-        public Builder setMetricNamespace(@Nullable String metricNamespace) {
+        public Builder metricNamespace(@Nullable String metricNamespace) {
             this.metricNamespace = metricNamespace;
             return this;
         }
 
-        public Builder setOdataType(String odataType) {
+        public Builder odataType(String odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
 
-        public Builder setOperationName(@Nullable String operationName) {
+        public Builder operationName(@Nullable String operationName) {
             this.operationName = operationName;
             return this;
         }
 
-        public Builder setResourceGroupName(@Nullable String resourceGroupName) {
+        public Builder resourceGroupName(@Nullable String resourceGroupName) {
             this.resourceGroupName = resourceGroupName;
             return this;
         }
 
-        public Builder setResourceLocation(@Nullable String resourceLocation) {
+        public Builder resourceLocation(@Nullable String resourceLocation) {
             this.resourceLocation = resourceLocation;
             return this;
         }
 
-        public Builder setResourceProviderName(@Nullable String resourceProviderName) {
+        public Builder resourceProviderName(@Nullable String resourceProviderName) {
             this.resourceProviderName = resourceProviderName;
             return this;
         }
 
-        public Builder setResourceUri(@Nullable String resourceUri) {
+        public Builder resourceUri(@Nullable String resourceUri) {
             this.resourceUri = resourceUri;
             return this;
         }
 
-        public Builder setStatus(@Nullable String status) {
+        public Builder status(@Nullable String status) {
             this.status = status;
             return this;
         }
 
-        public Builder setSubStatus(@Nullable String subStatus) {
+        public Builder subStatus(@Nullable String subStatus) {
             this.subStatus = subStatus;
             return this;
         }

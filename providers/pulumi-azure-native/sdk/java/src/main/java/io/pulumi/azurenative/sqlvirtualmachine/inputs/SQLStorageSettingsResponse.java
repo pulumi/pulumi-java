@@ -76,12 +76,12 @@ public final class SQLStorageSettingsResponse extends io.pulumi.resources.Invoke
     	      this.luns = defaults.luns;
         }
 
-        public Builder setDefaultFilePath(@Nullable String defaultFilePath) {
+        public Builder defaultFilePath(@Nullable String defaultFilePath) {
             this.defaultFilePath = defaultFilePath;
             return this;
         }
 
-        public Builder setLuns(@Nullable List<Integer> luns) {
+        public Builder luns(@Nullable List<Integer> luns) {
             this.luns = luns;
             return this;
         }

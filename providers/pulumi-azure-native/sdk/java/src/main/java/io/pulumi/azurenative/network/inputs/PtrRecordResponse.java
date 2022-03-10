@@ -57,7 +57,7 @@ public final class PtrRecordResponse extends io.pulumi.resources.InvokeArgs {
     	      this.ptrdname = defaults.ptrdname;
         }
 
-        public Builder setPtrdname(@Nullable String ptrdname) {
+        public Builder ptrdname(@Nullable String ptrdname) {
             this.ptrdname = ptrdname;
             return this;
         }

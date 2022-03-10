@@ -171,42 +171,42 @@ public final class HDInsightResponse extends io.pulumi.resources.InvokeArgs {
     	      this.resourceId = defaults.resourceId;
         }
 
-        public Builder setComputeLocation(@Nullable String computeLocation) {
+        public Builder computeLocation(@Nullable String computeLocation) {
             this.computeLocation = computeLocation;
             return this;
         }
 
-        public Builder setComputeType(String computeType) {
+        public Builder computeType(String computeType) {
             this.computeType = Objects.requireNonNull(computeType);
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setIsAttachedCompute(Boolean isAttachedCompute) {
+        public Builder isAttachedCompute(Boolean isAttachedCompute) {
             this.isAttachedCompute = Objects.requireNonNull(isAttachedCompute);
             return this;
         }
 
-        public Builder setProperties(@Nullable HDInsightResponseProperties properties) {
+        public Builder properties(@Nullable HDInsightResponseProperties properties) {
             this.properties = properties;
             return this;
         }
 
-        public Builder setProvisioningErrors(List<MachineLearningServiceErrorResponse> provisioningErrors) {
+        public Builder provisioningErrors(List<MachineLearningServiceErrorResponse> provisioningErrors) {
             this.provisioningErrors = Objects.requireNonNull(provisioningErrors);
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setResourceId(@Nullable String resourceId) {
+        public Builder resourceId(@Nullable String resourceId) {
             this.resourceId = resourceId;
             return this;
         }

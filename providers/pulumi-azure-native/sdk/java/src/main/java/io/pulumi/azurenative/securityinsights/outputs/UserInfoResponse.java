@@ -83,17 +83,17 @@ public final class UserInfoResponse {
     	      this.objectId = defaults.objectId;
         }
 
-        public Builder setEmail(String email) {
+        public Builder email(String email) {
             this.email = Objects.requireNonNull(email);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setObjectId(@Nullable String objectId) {
+        public Builder objectId(@Nullable String objectId) {
             this.objectId = objectId;
             return this;
         }

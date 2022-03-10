@@ -115,27 +115,27 @@ public final class CorsRuleResponse {
     	      this.maxAgeInSeconds = defaults.maxAgeInSeconds;
         }
 
-        public Builder setAllowedHeaders(List<String> allowedHeaders) {
+        public Builder allowedHeaders(List<String> allowedHeaders) {
             this.allowedHeaders = Objects.requireNonNull(allowedHeaders);
             return this;
         }
 
-        public Builder setAllowedMethods(List<String> allowedMethods) {
+        public Builder allowedMethods(List<String> allowedMethods) {
             this.allowedMethods = Objects.requireNonNull(allowedMethods);
             return this;
         }
 
-        public Builder setAllowedOrigins(List<String> allowedOrigins) {
+        public Builder allowedOrigins(List<String> allowedOrigins) {
             this.allowedOrigins = Objects.requireNonNull(allowedOrigins);
             return this;
         }
 
-        public Builder setExposedHeaders(List<String> exposedHeaders) {
+        public Builder exposedHeaders(List<String> exposedHeaders) {
             this.exposedHeaders = Objects.requireNonNull(exposedHeaders);
             return this;
         }
 
-        public Builder setMaxAgeInSeconds(Integer maxAgeInSeconds) {
+        public Builder maxAgeInSeconds(Integer maxAgeInSeconds) {
             this.maxAgeInSeconds = Objects.requireNonNull(maxAgeInSeconds);
             return this;
         }

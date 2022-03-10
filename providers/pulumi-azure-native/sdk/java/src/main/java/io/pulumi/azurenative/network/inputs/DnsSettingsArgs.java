@@ -92,32 +92,32 @@ public final class DnsSettingsArgs extends io.pulumi.resources.ResourceArgs {
     	      this.servers = defaults.servers;
         }
 
-        public Builder setEnableProxy(@Nullable Input<Boolean> enableProxy) {
+        public Builder enableProxy(@Nullable Input<Boolean> enableProxy) {
             this.enableProxy = enableProxy;
             return this;
         }
 
-        public Builder setEnableProxy(@Nullable Boolean enableProxy) {
+        public Builder enableProxy(@Nullable Boolean enableProxy) {
             this.enableProxy = Input.ofNullable(enableProxy);
             return this;
         }
 
-        public Builder setRequireProxyForNetworkRules(@Nullable Input<Boolean> requireProxyForNetworkRules) {
+        public Builder requireProxyForNetworkRules(@Nullable Input<Boolean> requireProxyForNetworkRules) {
             this.requireProxyForNetworkRules = requireProxyForNetworkRules;
             return this;
         }
 
-        public Builder setRequireProxyForNetworkRules(@Nullable Boolean requireProxyForNetworkRules) {
+        public Builder requireProxyForNetworkRules(@Nullable Boolean requireProxyForNetworkRules) {
             this.requireProxyForNetworkRules = Input.ofNullable(requireProxyForNetworkRules);
             return this;
         }
 
-        public Builder setServers(@Nullable Input<List<String>> servers) {
+        public Builder servers(@Nullable Input<List<String>> servers) {
             this.servers = servers;
             return this;
         }
 
-        public Builder setServers(@Nullable List<String> servers) {
+        public Builder servers(@Nullable List<String> servers) {
             this.servers = Input.ofNullable(servers);
             return this;
         }

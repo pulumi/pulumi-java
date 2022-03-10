@@ -193,92 +193,92 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
     	      this.transformName = defaults.transformName;
         }
 
-        public Builder setAccountName(Input<String> accountName) {
+        public Builder accountName(Input<String> accountName) {
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
 
-        public Builder setAccountName(String accountName) {
+        public Builder accountName(String accountName) {
             this.accountName = Input.of(Objects.requireNonNull(accountName));
             return this;
         }
 
-        public Builder setCorrelationData(@Nullable Input<Map<String,String>> correlationData) {
+        public Builder correlationData(@Nullable Input<Map<String,String>> correlationData) {
             this.correlationData = correlationData;
             return this;
         }
 
-        public Builder setCorrelationData(@Nullable Map<String,String> correlationData) {
+        public Builder correlationData(@Nullable Map<String,String> correlationData) {
             this.correlationData = Input.ofNullable(correlationData);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setInput(Input<Object> input) {
+        public Builder input(Input<Object> input) {
             this.input = Objects.requireNonNull(input);
             return this;
         }
 
-        public Builder setInput(Object input) {
+        public Builder input(Object input) {
             this.input = Input.of(Objects.requireNonNull(input));
             return this;
         }
 
-        public Builder setJobName(@Nullable Input<String> jobName) {
+        public Builder jobName(@Nullable Input<String> jobName) {
             this.jobName = jobName;
             return this;
         }
 
-        public Builder setJobName(@Nullable String jobName) {
+        public Builder jobName(@Nullable String jobName) {
             this.jobName = Input.ofNullable(jobName);
             return this;
         }
 
-        public Builder setOutputs(Input<List<JobOutputAssetArgs>> outputs) {
+        public Builder outputs(Input<List<JobOutputAssetArgs>> outputs) {
             this.outputs = Objects.requireNonNull(outputs);
             return this;
         }
 
-        public Builder setOutputs(List<JobOutputAssetArgs> outputs) {
+        public Builder outputs(List<JobOutputAssetArgs> outputs) {
             this.outputs = Input.of(Objects.requireNonNull(outputs));
             return this;
         }
 
-        public Builder setPriority(@Nullable Input<Either<String,Priority>> priority) {
+        public Builder priority(@Nullable Input<Either<String,Priority>> priority) {
             this.priority = priority;
             return this;
         }
 
-        public Builder setPriority(@Nullable Either<String,Priority> priority) {
+        public Builder priority(@Nullable Either<String,Priority> priority) {
             this.priority = Input.ofNullable(priority);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setTransformName(Input<String> transformName) {
+        public Builder transformName(Input<String> transformName) {
             this.transformName = Objects.requireNonNull(transformName);
             return this;
         }
 
-        public Builder setTransformName(String transformName) {
+        public Builder transformName(String transformName) {
             this.transformName = Input.of(Objects.requireNonNull(transformName));
             return this;
         }

@@ -302,162 +302,162 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
     	      this.virtualMachineName = defaults.virtualMachineName;
         }
 
-        public Builder setAmountOfRam(Input<Integer> amountOfRam) {
+        public Builder amountOfRam(Input<Integer> amountOfRam) {
             this.amountOfRam = Objects.requireNonNull(amountOfRam);
             return this;
         }
 
-        public Builder setAmountOfRam(Integer amountOfRam) {
+        public Builder amountOfRam(Integer amountOfRam) {
             this.amountOfRam = Input.of(Objects.requireNonNull(amountOfRam));
             return this;
         }
 
-        public Builder setCustomization(@Nullable Input<GuestOSCustomizationArgs> customization) {
+        public Builder customization(@Nullable Input<GuestOSCustomizationArgs> customization) {
             this.customization = customization;
             return this;
         }
 
-        public Builder setCustomization(@Nullable GuestOSCustomizationArgs customization) {
+        public Builder customization(@Nullable GuestOSCustomizationArgs customization) {
             this.customization = Input.ofNullable(customization);
             return this;
         }
 
-        public Builder setDisks(@Nullable Input<List<VirtualDiskArgs>> disks) {
+        public Builder disks(@Nullable Input<List<VirtualDiskArgs>> disks) {
             this.disks = disks;
             return this;
         }
 
-        public Builder setDisks(@Nullable List<VirtualDiskArgs> disks) {
+        public Builder disks(@Nullable List<VirtualDiskArgs> disks) {
             this.disks = Input.ofNullable(disks);
             return this;
         }
 
-        public Builder setExposeToGuestVM(@Nullable Input<Boolean> exposeToGuestVM) {
+        public Builder exposeToGuestVM(@Nullable Input<Boolean> exposeToGuestVM) {
             this.exposeToGuestVM = exposeToGuestVM;
             return this;
         }
 
-        public Builder setExposeToGuestVM(@Nullable Boolean exposeToGuestVM) {
+        public Builder exposeToGuestVM(@Nullable Boolean exposeToGuestVM) {
             this.exposeToGuestVM = Input.ofNullable(exposeToGuestVM);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setNics(@Nullable Input<List<VirtualNicArgs>> nics) {
+        public Builder nics(@Nullable Input<List<VirtualNicArgs>> nics) {
             this.nics = nics;
             return this;
         }
 
-        public Builder setNics(@Nullable List<VirtualNicArgs> nics) {
+        public Builder nics(@Nullable List<VirtualNicArgs> nics) {
             this.nics = Input.ofNullable(nics);
             return this;
         }
 
-        public Builder setNumberOfCores(Input<Integer> numberOfCores) {
+        public Builder numberOfCores(Input<Integer> numberOfCores) {
             this.numberOfCores = Objects.requireNonNull(numberOfCores);
             return this;
         }
 
-        public Builder setNumberOfCores(Integer numberOfCores) {
+        public Builder numberOfCores(Integer numberOfCores) {
             this.numberOfCores = Input.of(Objects.requireNonNull(numberOfCores));
             return this;
         }
 
-        public Builder setPassword(@Nullable Input<String> password) {
+        public Builder password(@Nullable Input<String> password) {
             this.password = password;
             return this;
         }
 
-        public Builder setPassword(@Nullable String password) {
+        public Builder password(@Nullable String password) {
             this.password = Input.ofNullable(password);
             return this;
         }
 
-        public Builder setPrivateCloudId(Input<String> privateCloudId) {
+        public Builder privateCloudId(Input<String> privateCloudId) {
             this.privateCloudId = Objects.requireNonNull(privateCloudId);
             return this;
         }
 
-        public Builder setPrivateCloudId(String privateCloudId) {
+        public Builder privateCloudId(String privateCloudId) {
             this.privateCloudId = Input.of(Objects.requireNonNull(privateCloudId));
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setResourcePool(@Nullable Input<ResourcePoolArgs> resourcePool) {
+        public Builder resourcePool(@Nullable Input<ResourcePoolArgs> resourcePool) {
             this.resourcePool = resourcePool;
             return this;
         }
 
-        public Builder setResourcePool(@Nullable ResourcePoolArgs resourcePool) {
+        public Builder resourcePool(@Nullable ResourcePoolArgs resourcePool) {
             this.resourcePool = Input.ofNullable(resourcePool);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTemplateId(@Nullable Input<String> templateId) {
+        public Builder templateId(@Nullable Input<String> templateId) {
             this.templateId = templateId;
             return this;
         }
 
-        public Builder setTemplateId(@Nullable String templateId) {
+        public Builder templateId(@Nullable String templateId) {
             this.templateId = Input.ofNullable(templateId);
             return this;
         }
 
-        public Builder setUsername(@Nullable Input<String> username) {
+        public Builder username(@Nullable Input<String> username) {
             this.username = username;
             return this;
         }
 
-        public Builder setUsername(@Nullable String username) {
+        public Builder username(@Nullable String username) {
             this.username = Input.ofNullable(username);
             return this;
         }
 
-        public Builder setVSphereNetworks(@Nullable Input<List<String>> vSphereNetworks) {
+        public Builder vSphereNetworks(@Nullable Input<List<String>> vSphereNetworks) {
             this.vSphereNetworks = vSphereNetworks;
             return this;
         }
 
-        public Builder setVSphereNetworks(@Nullable List<String> vSphereNetworks) {
+        public Builder vSphereNetworks(@Nullable List<String> vSphereNetworks) {
             this.vSphereNetworks = Input.ofNullable(vSphereNetworks);
             return this;
         }
 
-        public Builder setVirtualMachineName(@Nullable Input<String> virtualMachineName) {
+        public Builder virtualMachineName(@Nullable Input<String> virtualMachineName) {
             this.virtualMachineName = virtualMachineName;
             return this;
         }
 
-        public Builder setVirtualMachineName(@Nullable String virtualMachineName) {
+        public Builder virtualMachineName(@Nullable String virtualMachineName) {
             this.virtualMachineName = Input.ofNullable(virtualMachineName);
             return this;
         }

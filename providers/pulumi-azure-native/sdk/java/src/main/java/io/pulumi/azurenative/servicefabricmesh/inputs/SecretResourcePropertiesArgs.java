@@ -91,32 +91,32 @@ public final class SecretResourcePropertiesArgs extends io.pulumi.resources.Reso
     	      this.kind = defaults.kind;
         }
 
-        public Builder setContentType(@Nullable Input<String> contentType) {
+        public Builder contentType(@Nullable Input<String> contentType) {
             this.contentType = contentType;
             return this;
         }
 
-        public Builder setContentType(@Nullable String contentType) {
+        public Builder contentType(@Nullable String contentType) {
             this.contentType = Input.ofNullable(contentType);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setKind(Input<String> kind) {
+        public Builder kind(Input<String> kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Input.of(Objects.requireNonNull(kind));
             return this;
         }

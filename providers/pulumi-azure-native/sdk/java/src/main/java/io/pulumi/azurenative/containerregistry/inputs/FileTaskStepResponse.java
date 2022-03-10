@@ -158,37 +158,37 @@ public final class FileTaskStepResponse extends io.pulumi.resources.InvokeArgs {
     	      this.valuesFilePath = defaults.valuesFilePath;
         }
 
-        public Builder setBaseImageDependencies(List<BaseImageDependencyResponse> baseImageDependencies) {
+        public Builder baseImageDependencies(List<BaseImageDependencyResponse> baseImageDependencies) {
             this.baseImageDependencies = Objects.requireNonNull(baseImageDependencies);
             return this;
         }
 
-        public Builder setContextAccessToken(@Nullable String contextAccessToken) {
+        public Builder contextAccessToken(@Nullable String contextAccessToken) {
             this.contextAccessToken = contextAccessToken;
             return this;
         }
 
-        public Builder setContextPath(@Nullable String contextPath) {
+        public Builder contextPath(@Nullable String contextPath) {
             this.contextPath = contextPath;
             return this;
         }
 
-        public Builder setTaskFilePath(String taskFilePath) {
+        public Builder taskFilePath(String taskFilePath) {
             this.taskFilePath = Objects.requireNonNull(taskFilePath);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setValues(@Nullable List<SetValueResponse> values) {
+        public Builder values(@Nullable List<SetValueResponse> values) {
             this.values = values;
             return this;
         }
 
-        public Builder setValuesFilePath(@Nullable String valuesFilePath) {
+        public Builder valuesFilePath(@Nullable String valuesFilePath) {
             this.valuesFilePath = valuesFilePath;
             return this;
         }

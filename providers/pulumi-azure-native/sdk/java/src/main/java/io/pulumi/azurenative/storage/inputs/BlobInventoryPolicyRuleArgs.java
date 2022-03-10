@@ -91,32 +91,32 @@ public final class BlobInventoryPolicyRuleArgs extends io.pulumi.resources.Resou
     	      this.name = defaults.name;
         }
 
-        public Builder setDefinition(Input<BlobInventoryPolicyDefinitionArgs> definition) {
+        public Builder definition(Input<BlobInventoryPolicyDefinitionArgs> definition) {
             this.definition = Objects.requireNonNull(definition);
             return this;
         }
 
-        public Builder setDefinition(BlobInventoryPolicyDefinitionArgs definition) {
+        public Builder definition(BlobInventoryPolicyDefinitionArgs definition) {
             this.definition = Input.of(Objects.requireNonNull(definition));
             return this;
         }
 
-        public Builder setEnabled(Input<Boolean> enabled) {
+        public Builder enabled(Input<Boolean> enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
 
-        public Builder setEnabled(Boolean enabled) {
+        public Builder enabled(Boolean enabled) {
             this.enabled = Input.of(Objects.requireNonNull(enabled));
             return this;
         }
 
-        public Builder setName(Input<String> name) {
+        public Builder name(Input<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }

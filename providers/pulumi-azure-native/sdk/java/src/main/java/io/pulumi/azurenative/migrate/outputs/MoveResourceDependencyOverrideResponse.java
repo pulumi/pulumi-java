@@ -69,12 +69,12 @@ public final class MoveResourceDependencyOverrideResponse {
     	      this.targetId = defaults.targetId;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setTargetId(@Nullable String targetId) {
+        public Builder targetId(@Nullable String targetId) {
             this.targetId = targetId;
             return this;
         }

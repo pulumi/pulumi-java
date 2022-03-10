@@ -56,7 +56,7 @@ public final class OutputFileResponse extends io.pulumi.resources.InvokeArgs {
     	      this.labels = defaults.labels;
         }
 
-        public Builder setLabels(List<String> labels) {
+        public Builder labels(List<String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }

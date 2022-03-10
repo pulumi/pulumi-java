@@ -57,12 +57,12 @@ public final class ConnectionMonitorWorkspaceSettingsArgs extends io.pulumi.reso
     	      this.workspaceResourceId = defaults.workspaceResourceId;
         }
 
-        public Builder setWorkspaceResourceId(@Nullable Input<String> workspaceResourceId) {
+        public Builder workspaceResourceId(@Nullable Input<String> workspaceResourceId) {
             this.workspaceResourceId = workspaceResourceId;
             return this;
         }
 
-        public Builder setWorkspaceResourceId(@Nullable String workspaceResourceId) {
+        public Builder workspaceResourceId(@Nullable String workspaceResourceId) {
             this.workspaceResourceId = Input.ofNullable(workspaceResourceId);
             return this;
         }

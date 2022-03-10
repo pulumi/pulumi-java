@@ -203,52 +203,52 @@ public final class VirtualDiskResponse extends io.pulumi.resources.InvokeArgs {
     	      this.unitNumber = defaults.unitNumber;
         }
 
-        public Builder setControllerKey(@Nullable Integer controllerKey) {
+        public Builder controllerKey(@Nullable Integer controllerKey) {
             this.controllerKey = controllerKey;
             return this;
         }
 
-        public Builder setDeviceKey(@Nullable Integer deviceKey) {
+        public Builder deviceKey(@Nullable Integer deviceKey) {
             this.deviceKey = deviceKey;
             return this;
         }
 
-        public Builder setDeviceName(@Nullable String deviceName) {
+        public Builder deviceName(@Nullable String deviceName) {
             this.deviceName = deviceName;
             return this;
         }
 
-        public Builder setDiskMode(@Nullable String diskMode) {
+        public Builder diskMode(@Nullable String diskMode) {
             this.diskMode = diskMode;
             return this;
         }
 
-        public Builder setDiskObjectId(String diskObjectId) {
+        public Builder diskObjectId(String diskObjectId) {
             this.diskObjectId = Objects.requireNonNull(diskObjectId);
             return this;
         }
 
-        public Builder setDiskSizeGB(@Nullable Integer diskSizeGB) {
+        public Builder diskSizeGB(@Nullable Integer diskSizeGB) {
             this.diskSizeGB = diskSizeGB;
             return this;
         }
 
-        public Builder setDiskType(@Nullable String diskType) {
+        public Builder diskType(@Nullable String diskType) {
             this.diskType = diskType;
             return this;
         }
 
-        public Builder setLabel(String label) {
+        public Builder label(String label) {
             this.label = Objects.requireNonNull(label);
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setUnitNumber(@Nullable Integer unitNumber) {
+        public Builder unitNumber(@Nullable Integer unitNumber) {
             this.unitNumber = unitNumber;
             return this;
         }

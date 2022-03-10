@@ -84,17 +84,17 @@ public final class ContentLinkResponse {
     	      this.version = defaults.version;
         }
 
-        public Builder setContentHash(@Nullable ContentHashResponse contentHash) {
+        public Builder contentHash(@Nullable ContentHashResponse contentHash) {
             this.contentHash = contentHash;
             return this;
         }
 
-        public Builder setUri(@Nullable String uri) {
+        public Builder uri(@Nullable String uri) {
             this.uri = uri;
             return this;
         }
 
-        public Builder setVersion(@Nullable String version) {
+        public Builder version(@Nullable String version) {
             this.version = version;
             return this;
         }

@@ -99,22 +99,22 @@ public final class LiveEventEncodingResponse {
     	      this.stretchMode = defaults.stretchMode;
         }
 
-        public Builder setEncodingType(@Nullable String encodingType) {
+        public Builder encodingType(@Nullable String encodingType) {
             this.encodingType = encodingType;
             return this;
         }
 
-        public Builder setKeyFrameInterval(@Nullable String keyFrameInterval) {
+        public Builder keyFrameInterval(@Nullable String keyFrameInterval) {
             this.keyFrameInterval = keyFrameInterval;
             return this;
         }
 
-        public Builder setPresetName(@Nullable String presetName) {
+        public Builder presetName(@Nullable String presetName) {
             this.presetName = presetName;
             return this;
         }
 
-        public Builder setStretchMode(@Nullable String stretchMode) {
+        public Builder stretchMode(@Nullable String stretchMode) {
             this.stretchMode = stretchMode;
             return this;
         }

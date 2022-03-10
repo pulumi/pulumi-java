@@ -93,17 +93,17 @@ public final class ModelEnvironmentDefinitionResponseResponseSpark extends io.pu
     	      this.repositories = defaults.repositories;
         }
 
-        public Builder setPackages(@Nullable List<SparkMavenPackageResponse> packages) {
+        public Builder packages(@Nullable List<SparkMavenPackageResponse> packages) {
             this.packages = packages;
             return this;
         }
 
-        public Builder setPrecachePackages(@Nullable Boolean precachePackages) {
+        public Builder precachePackages(@Nullable Boolean precachePackages) {
             this.precachePackages = precachePackages;
             return this;
         }
 
-        public Builder setRepositories(@Nullable List<String> repositories) {
+        public Builder repositories(@Nullable List<String> repositories) {
             this.repositories = repositories;
             return this;
         }

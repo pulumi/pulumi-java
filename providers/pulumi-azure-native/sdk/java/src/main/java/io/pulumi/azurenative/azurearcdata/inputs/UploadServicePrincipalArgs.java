@@ -106,42 +106,42 @@ public final class UploadServicePrincipalArgs extends io.pulumi.resources.Resour
     	      this.tenantId = defaults.tenantId;
         }
 
-        public Builder setAuthority(@Nullable Input<String> authority) {
+        public Builder authority(@Nullable Input<String> authority) {
             this.authority = authority;
             return this;
         }
 
-        public Builder setAuthority(@Nullable String authority) {
+        public Builder authority(@Nullable String authority) {
             this.authority = Input.ofNullable(authority);
             return this;
         }
 
-        public Builder setClientId(@Nullable Input<String> clientId) {
+        public Builder clientId(@Nullable Input<String> clientId) {
             this.clientId = clientId;
             return this;
         }
 
-        public Builder setClientId(@Nullable String clientId) {
+        public Builder clientId(@Nullable String clientId) {
             this.clientId = Input.ofNullable(clientId);
             return this;
         }
 
-        public Builder setClientSecret(@Nullable Input<String> clientSecret) {
+        public Builder clientSecret(@Nullable Input<String> clientSecret) {
             this.clientSecret = clientSecret;
             return this;
         }
 
-        public Builder setClientSecret(@Nullable String clientSecret) {
+        public Builder clientSecret(@Nullable String clientSecret) {
             this.clientSecret = Input.ofNullable(clientSecret);
             return this;
         }
 
-        public Builder setTenantId(@Nullable Input<String> tenantId) {
+        public Builder tenantId(@Nullable Input<String> tenantId) {
             this.tenantId = tenantId;
             return this;
         }
 
-        public Builder setTenantId(@Nullable String tenantId) {
+        public Builder tenantId(@Nullable String tenantId) {
             this.tenantId = Input.ofNullable(tenantId);
             return this;
         }

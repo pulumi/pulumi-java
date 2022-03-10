@@ -59,17 +59,17 @@ public final class ResourceProviderCapabilitiesResponse {
     	      this.requiredFeatures = defaults.requiredFeatures;
         }
 
-        public Builder setEffect(String effect) {
+        public Builder effect(String effect) {
             this.effect = Objects.requireNonNull(effect);
             return this;
         }
 
-        public Builder setQuotaId(String quotaId) {
+        public Builder quotaId(String quotaId) {
             this.quotaId = Objects.requireNonNull(quotaId);
             return this;
         }
 
-        public Builder setRequiredFeatures(@Nullable List<String> requiredFeatures) {
+        public Builder requiredFeatures(@Nullable List<String> requiredFeatures) {
             this.requiredFeatures = requiredFeatures;
             return this;
         }

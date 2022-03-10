@@ -247,122 +247,122 @@ public final class AzureDataLakeStoreDatasetArgs extends io.pulumi.resources.Res
     	      this.type = defaults.type;
         }
 
-        public Builder setAnnotations(@Nullable Input<List<Object>> annotations) {
+        public Builder annotations(@Nullable Input<List<Object>> annotations) {
             this.annotations = annotations;
             return this;
         }
 
-        public Builder setAnnotations(@Nullable List<Object> annotations) {
+        public Builder annotations(@Nullable List<Object> annotations) {
             this.annotations = Input.ofNullable(annotations);
             return this;
         }
 
-        public Builder setCompression(@Nullable Input<DatasetCompressionArgs> compression) {
+        public Builder compression(@Nullable Input<DatasetCompressionArgs> compression) {
             this.compression = compression;
             return this;
         }
 
-        public Builder setCompression(@Nullable DatasetCompressionArgs compression) {
+        public Builder compression(@Nullable DatasetCompressionArgs compression) {
             this.compression = Input.ofNullable(compression);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setFileName(@Nullable Input<Object> fileName) {
+        public Builder fileName(@Nullable Input<Object> fileName) {
             this.fileName = fileName;
             return this;
         }
 
-        public Builder setFileName(@Nullable Object fileName) {
+        public Builder fileName(@Nullable Object fileName) {
             this.fileName = Input.ofNullable(fileName);
             return this;
         }
 
-        public Builder setFolder(@Nullable Input<DatasetFolderArgs> folder) {
+        public Builder folder(@Nullable Input<DatasetFolderArgs> folder) {
             this.folder = folder;
             return this;
         }
 
-        public Builder setFolder(@Nullable DatasetFolderArgs folder) {
+        public Builder folder(@Nullable DatasetFolderArgs folder) {
             this.folder = Input.ofNullable(folder);
             return this;
         }
 
-        public Builder setFolderPath(@Nullable Input<Object> folderPath) {
+        public Builder folderPath(@Nullable Input<Object> folderPath) {
             this.folderPath = folderPath;
             return this;
         }
 
-        public Builder setFolderPath(@Nullable Object folderPath) {
+        public Builder folderPath(@Nullable Object folderPath) {
             this.folderPath = Input.ofNullable(folderPath);
             return this;
         }
 
-        public Builder setFormat(@Nullable Input<Object> format) {
+        public Builder format(@Nullable Input<Object> format) {
             this.format = format;
             return this;
         }
 
-        public Builder setFormat(@Nullable Object format) {
+        public Builder format(@Nullable Object format) {
             this.format = Input.ofNullable(format);
             return this;
         }
 
-        public Builder setLinkedServiceName(Input<LinkedServiceReferenceArgs> linkedServiceName) {
+        public Builder linkedServiceName(Input<LinkedServiceReferenceArgs> linkedServiceName) {
             this.linkedServiceName = Objects.requireNonNull(linkedServiceName);
             return this;
         }
 
-        public Builder setLinkedServiceName(LinkedServiceReferenceArgs linkedServiceName) {
+        public Builder linkedServiceName(LinkedServiceReferenceArgs linkedServiceName) {
             this.linkedServiceName = Input.of(Objects.requireNonNull(linkedServiceName));
             return this;
         }
 
-        public Builder setParameters(@Nullable Input<Map<String,ParameterSpecificationArgs>> parameters) {
+        public Builder parameters(@Nullable Input<Map<String,ParameterSpecificationArgs>> parameters) {
             this.parameters = parameters;
             return this;
         }
 
-        public Builder setParameters(@Nullable Map<String,ParameterSpecificationArgs> parameters) {
+        public Builder parameters(@Nullable Map<String,ParameterSpecificationArgs> parameters) {
             this.parameters = Input.ofNullable(parameters);
             return this;
         }
 
-        public Builder setSchema(@Nullable Input<Object> schema) {
+        public Builder schema(@Nullable Input<Object> schema) {
             this.schema = schema;
             return this;
         }
 
-        public Builder setSchema(@Nullable Object schema) {
+        public Builder schema(@Nullable Object schema) {
             this.schema = Input.ofNullable(schema);
             return this;
         }
 
-        public Builder setStructure(@Nullable Input<Object> structure) {
+        public Builder structure(@Nullable Input<Object> structure) {
             this.structure = structure;
             return this;
         }
 
-        public Builder setStructure(@Nullable Object structure) {
+        public Builder structure(@Nullable Object structure) {
             this.structure = Input.ofNullable(structure);
             return this;
         }
 
-        public Builder setType(Input<String> type) {
+        public Builder type(Input<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }

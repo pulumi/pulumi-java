@@ -58,7 +58,7 @@ public final class DestinationsSpecResponseAzureMonitorMetrics extends io.pulumi
     	      this.name = defaults.name;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }

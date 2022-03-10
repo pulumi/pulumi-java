@@ -73,12 +73,12 @@ public final class UrlSigningKeyResponse extends io.pulumi.resources.InvokeArgs 
     	      this.keySourceParameters = defaults.keySourceParameters;
         }
 
-        public Builder setKeyId(String keyId) {
+        public Builder keyId(String keyId) {
             this.keyId = Objects.requireNonNull(keyId);
             return this;
         }
 
-        public Builder setKeySourceParameters(KeyVaultSigningKeyParametersResponse keySourceParameters) {
+        public Builder keySourceParameters(KeyVaultSigningKeyParametersResponse keySourceParameters) {
             this.keySourceParameters = Objects.requireNonNull(keySourceParameters);
             return this;
         }

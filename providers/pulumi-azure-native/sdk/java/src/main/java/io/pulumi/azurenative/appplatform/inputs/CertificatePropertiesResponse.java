@@ -203,52 +203,52 @@ public final class CertificatePropertiesResponse extends io.pulumi.resources.Inv
     	      this.vaultUri = defaults.vaultUri;
         }
 
-        public Builder setActivateDate(String activateDate) {
+        public Builder activateDate(String activateDate) {
             this.activateDate = Objects.requireNonNull(activateDate);
             return this;
         }
 
-        public Builder setCertVersion(@Nullable String certVersion) {
+        public Builder certVersion(@Nullable String certVersion) {
             this.certVersion = certVersion;
             return this;
         }
 
-        public Builder setDnsNames(List<String> dnsNames) {
+        public Builder dnsNames(List<String> dnsNames) {
             this.dnsNames = Objects.requireNonNull(dnsNames);
             return this;
         }
 
-        public Builder setExpirationDate(String expirationDate) {
+        public Builder expirationDate(String expirationDate) {
             this.expirationDate = Objects.requireNonNull(expirationDate);
             return this;
         }
 
-        public Builder setIssuedDate(String issuedDate) {
+        public Builder issuedDate(String issuedDate) {
             this.issuedDate = Objects.requireNonNull(issuedDate);
             return this;
         }
 
-        public Builder setIssuer(String issuer) {
+        public Builder issuer(String issuer) {
             this.issuer = Objects.requireNonNull(issuer);
             return this;
         }
 
-        public Builder setKeyVaultCertName(String keyVaultCertName) {
+        public Builder keyVaultCertName(String keyVaultCertName) {
             this.keyVaultCertName = Objects.requireNonNull(keyVaultCertName);
             return this;
         }
 
-        public Builder setSubjectName(String subjectName) {
+        public Builder subjectName(String subjectName) {
             this.subjectName = Objects.requireNonNull(subjectName);
             return this;
         }
 
-        public Builder setThumbprint(String thumbprint) {
+        public Builder thumbprint(String thumbprint) {
             this.thumbprint = Objects.requireNonNull(thumbprint);
             return this;
         }
 
-        public Builder setVaultUri(String vaultUri) {
+        public Builder vaultUri(String vaultUri) {
             this.vaultUri = Objects.requireNonNull(vaultUri);
             return this;
         }

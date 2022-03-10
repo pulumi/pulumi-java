@@ -91,17 +91,17 @@ public final class KeyVaultContractPropertiesResponse extends io.pulumi.resource
     	      this.secretIdentifier = defaults.secretIdentifier;
         }
 
-        public Builder setIdentityClientId(@Nullable String identityClientId) {
+        public Builder identityClientId(@Nullable String identityClientId) {
             this.identityClientId = identityClientId;
             return this;
         }
 
-        public Builder setLastStatus(@Nullable KeyVaultLastAccessStatusContractPropertiesResponse lastStatus) {
+        public Builder lastStatus(@Nullable KeyVaultLastAccessStatusContractPropertiesResponse lastStatus) {
             this.lastStatus = lastStatus;
             return this;
         }
 
-        public Builder setSecretIdentifier(@Nullable String secretIdentifier) {
+        public Builder secretIdentifier(@Nullable String secretIdentifier) {
             this.secretIdentifier = secretIdentifier;
             return this;
         }

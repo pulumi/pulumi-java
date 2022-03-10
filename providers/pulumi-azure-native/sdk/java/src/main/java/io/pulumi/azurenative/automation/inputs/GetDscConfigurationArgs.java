@@ -84,17 +84,17 @@ public final class GetDscConfigurationArgs extends io.pulumi.resources.InvokeArg
     	      this.resourceGroupName = defaults.resourceGroupName;
         }
 
-        public Builder setAutomationAccountName(String automationAccountName) {
+        public Builder automationAccountName(String automationAccountName) {
             this.automationAccountName = Objects.requireNonNull(automationAccountName);
             return this;
         }
 
-        public Builder setConfigurationName(String configurationName) {
+        public Builder configurationName(String configurationName) {
             this.configurationName = Objects.requireNonNull(configurationName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }

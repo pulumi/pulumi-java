@@ -100,22 +100,22 @@ public final class WorkflowParameterResponse {
     	      this.value = defaults.value;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setMetadata(@Nullable Object metadata) {
+        public Builder metadata(@Nullable Object metadata) {
             this.metadata = metadata;
             return this;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = type;
             return this;
         }
 
-        public Builder setValue(@Nullable Object value) {
+        public Builder value(@Nullable Object value) {
             this.value = value;
             return this;
         }

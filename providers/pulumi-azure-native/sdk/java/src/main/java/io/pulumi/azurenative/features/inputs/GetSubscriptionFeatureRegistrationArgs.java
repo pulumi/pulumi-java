@@ -68,12 +68,12 @@ public final class GetSubscriptionFeatureRegistrationArgs extends io.pulumi.reso
     	      this.providerNamespace = defaults.providerNamespace;
         }
 
-        public Builder setFeatureName(String featureName) {
+        public Builder featureName(String featureName) {
             this.featureName = Objects.requireNonNull(featureName);
             return this;
         }
 
-        public Builder setProviderNamespace(String providerNamespace) {
+        public Builder providerNamespace(String providerNamespace) {
             this.providerNamespace = Objects.requireNonNull(providerNamespace);
             return this;
         }

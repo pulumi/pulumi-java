@@ -155,37 +155,37 @@ public final class VolumeFailoverMetadataResponse extends io.pulumi.resources.In
     	      this.volumeType = defaults.volumeType;
         }
 
-        public Builder setBackupCreatedDate(@Nullable String backupCreatedDate) {
+        public Builder backupCreatedDate(@Nullable String backupCreatedDate) {
             this.backupCreatedDate = backupCreatedDate;
             return this;
         }
 
-        public Builder setBackupElementId(@Nullable String backupElementId) {
+        public Builder backupElementId(@Nullable String backupElementId) {
             this.backupElementId = backupElementId;
             return this;
         }
 
-        public Builder setBackupId(@Nullable String backupId) {
+        public Builder backupId(@Nullable String backupId) {
             this.backupId = backupId;
             return this;
         }
 
-        public Builder setBackupPolicyId(@Nullable String backupPolicyId) {
+        public Builder backupPolicyId(@Nullable String backupPolicyId) {
             this.backupPolicyId = backupPolicyId;
             return this;
         }
 
-        public Builder setSizeInBytes(@Nullable Double sizeInBytes) {
+        public Builder sizeInBytes(@Nullable Double sizeInBytes) {
             this.sizeInBytes = sizeInBytes;
             return this;
         }
 
-        public Builder setVolumeId(@Nullable String volumeId) {
+        public Builder volumeId(@Nullable String volumeId) {
             this.volumeId = volumeId;
             return this;
         }
 
-        public Builder setVolumeType(@Nullable String volumeType) {
+        public Builder volumeType(@Nullable String volumeType) {
             this.volumeType = volumeType;
             return this;
         }

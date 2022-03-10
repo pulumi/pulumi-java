@@ -91,17 +91,17 @@ public final class BuildpackBindingPropertiesResponse extends io.pulumi.resource
     	      this.provisioningState = defaults.provisioningState;
         }
 
-        public Builder setBindingType(@Nullable String bindingType) {
+        public Builder bindingType(@Nullable String bindingType) {
             this.bindingType = bindingType;
             return this;
         }
 
-        public Builder setLaunchProperties(@Nullable BuildpackBindingLaunchPropertiesResponse launchProperties) {
+        public Builder launchProperties(@Nullable BuildpackBindingLaunchPropertiesResponse launchProperties) {
             this.launchProperties = launchProperties;
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }

@@ -108,22 +108,22 @@ public final class RecurrencePatternResponse extends io.pulumi.resources.InvokeA
     	      this.weekDays = defaults.weekDays;
         }
 
-        public Builder setExpirationDate(String expirationDate) {
+        public Builder expirationDate(String expirationDate) {
             this.expirationDate = Objects.requireNonNull(expirationDate);
             return this;
         }
 
-        public Builder setFrequency(String frequency) {
+        public Builder frequency(String frequency) {
             this.frequency = Objects.requireNonNull(frequency);
             return this;
         }
 
-        public Builder setInterval(@Nullable Integer interval) {
+        public Builder interval(@Nullable Integer interval) {
             this.interval = interval;
             return this;
         }
 
-        public Builder setWeekDays(@Nullable List<String> weekDays) {
+        public Builder weekDays(@Nullable List<String> weekDays) {
             this.weekDays = weekDays;
             return this;
         }

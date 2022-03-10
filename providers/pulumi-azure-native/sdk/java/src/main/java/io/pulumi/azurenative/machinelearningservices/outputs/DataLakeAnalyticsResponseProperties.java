@@ -50,7 +50,7 @@ public final class DataLakeAnalyticsResponseProperties {
     	      this.dataLakeStoreAccountName = defaults.dataLakeStoreAccountName;
         }
 
-        public Builder setDataLakeStoreAccountName(@Nullable String dataLakeStoreAccountName) {
+        public Builder dataLakeStoreAccountName(@Nullable String dataLakeStoreAccountName) {
             this.dataLakeStoreAccountName = dataLakeStoreAccountName;
             return this;
         }

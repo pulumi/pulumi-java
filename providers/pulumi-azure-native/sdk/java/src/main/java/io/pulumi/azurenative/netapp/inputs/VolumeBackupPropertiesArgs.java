@@ -107,42 +107,42 @@ public final class VolumeBackupPropertiesArgs extends io.pulumi.resources.Resour
     	      this.vaultId = defaults.vaultId;
         }
 
-        public Builder setBackupEnabled(@Nullable Input<Boolean> backupEnabled) {
+        public Builder backupEnabled(@Nullable Input<Boolean> backupEnabled) {
             this.backupEnabled = backupEnabled;
             return this;
         }
 
-        public Builder setBackupEnabled(@Nullable Boolean backupEnabled) {
+        public Builder backupEnabled(@Nullable Boolean backupEnabled) {
             this.backupEnabled = Input.ofNullable(backupEnabled);
             return this;
         }
 
-        public Builder setBackupPolicyId(@Nullable Input<String> backupPolicyId) {
+        public Builder backupPolicyId(@Nullable Input<String> backupPolicyId) {
             this.backupPolicyId = backupPolicyId;
             return this;
         }
 
-        public Builder setBackupPolicyId(@Nullable String backupPolicyId) {
+        public Builder backupPolicyId(@Nullable String backupPolicyId) {
             this.backupPolicyId = Input.ofNullable(backupPolicyId);
             return this;
         }
 
-        public Builder setPolicyEnforced(@Nullable Input<Boolean> policyEnforced) {
+        public Builder policyEnforced(@Nullable Input<Boolean> policyEnforced) {
             this.policyEnforced = policyEnforced;
             return this;
         }
 
-        public Builder setPolicyEnforced(@Nullable Boolean policyEnforced) {
+        public Builder policyEnforced(@Nullable Boolean policyEnforced) {
             this.policyEnforced = Input.ofNullable(policyEnforced);
             return this;
         }
 
-        public Builder setVaultId(@Nullable Input<String> vaultId) {
+        public Builder vaultId(@Nullable Input<String> vaultId) {
             this.vaultId = vaultId;
             return this;
         }
 
-        public Builder setVaultId(@Nullable String vaultId) {
+        public Builder vaultId(@Nullable String vaultId) {
             this.vaultId = Input.ofNullable(vaultId);
             return this;
         }

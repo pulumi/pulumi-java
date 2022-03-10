@@ -83,17 +83,17 @@ public final class InMageAzureV2ManagedDiskDetailsResponse {
     	      this.seedManagedDiskId = defaults.seedManagedDiskId;
         }
 
-        public Builder setDiskId(@Nullable String diskId) {
+        public Builder diskId(@Nullable String diskId) {
             this.diskId = diskId;
             return this;
         }
 
-        public Builder setReplicaDiskType(@Nullable String replicaDiskType) {
+        public Builder replicaDiskType(@Nullable String replicaDiskType) {
             this.replicaDiskType = replicaDiskType;
             return this;
         }
 
-        public Builder setSeedManagedDiskId(@Nullable String seedManagedDiskId) {
+        public Builder seedManagedDiskId(@Nullable String seedManagedDiskId) {
             this.seedManagedDiskId = seedManagedDiskId;
             return this;
         }

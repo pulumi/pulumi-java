@@ -91,17 +91,17 @@ public final class MabFileFolderProtectedItemExtendedInfoResponse extends io.pul
     	      this.recoveryPointCount = defaults.recoveryPointCount;
         }
 
-        public Builder setLastRefreshedAt(@Nullable String lastRefreshedAt) {
+        public Builder lastRefreshedAt(@Nullable String lastRefreshedAt) {
             this.lastRefreshedAt = lastRefreshedAt;
             return this;
         }
 
-        public Builder setOldestRecoveryPoint(@Nullable String oldestRecoveryPoint) {
+        public Builder oldestRecoveryPoint(@Nullable String oldestRecoveryPoint) {
             this.oldestRecoveryPoint = oldestRecoveryPoint;
             return this;
         }
 
-        public Builder setRecoveryPointCount(@Nullable Integer recoveryPointCount) {
+        public Builder recoveryPointCount(@Nullable Integer recoveryPointCount) {
             this.recoveryPointCount = recoveryPointCount;
             return this;
         }

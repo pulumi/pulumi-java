@@ -75,27 +75,27 @@ public final class LinkedAccessCheckResponse {
     	      this.linkedType = defaults.linkedType;
         }
 
-        public Builder setActionName(@Nullable String actionName) {
+        public Builder actionName(@Nullable String actionName) {
             this.actionName = actionName;
             return this;
         }
 
-        public Builder setLinkedAction(@Nullable String linkedAction) {
+        public Builder linkedAction(@Nullable String linkedAction) {
             this.linkedAction = linkedAction;
             return this;
         }
 
-        public Builder setLinkedActionVerb(@Nullable String linkedActionVerb) {
+        public Builder linkedActionVerb(@Nullable String linkedActionVerb) {
             this.linkedActionVerb = linkedActionVerb;
             return this;
         }
 
-        public Builder setLinkedProperty(@Nullable String linkedProperty) {
+        public Builder linkedProperty(@Nullable String linkedProperty) {
             this.linkedProperty = linkedProperty;
             return this;
         }
 
-        public Builder setLinkedType(@Nullable String linkedType) {
+        public Builder linkedType(@Nullable String linkedType) {
             this.linkedType = linkedType;
             return this;
         }

@@ -68,12 +68,12 @@ public final class ConnectionParameterResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setOAuthSettings(@Nullable ApiOAuthSettingsResponse oAuthSettings) {
+        public Builder oAuthSettings(@Nullable ApiOAuthSettingsResponse oAuthSettings) {
             this.oAuthSettings = oAuthSettings;
             return this;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = type;
             return this;
         }

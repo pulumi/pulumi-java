@@ -90,17 +90,17 @@ public final class HttpRouteMatchHeaderResponse extends io.pulumi.resources.Invo
     	      this.value = defaults.value;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = type;
             return this;
         }
 
-        public Builder setValue(@Nullable String value) {
+        public Builder value(@Nullable String value) {
             this.value = value;
             return this;
         }

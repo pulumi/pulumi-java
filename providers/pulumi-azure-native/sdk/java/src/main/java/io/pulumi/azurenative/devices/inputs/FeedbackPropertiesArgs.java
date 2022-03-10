@@ -91,32 +91,32 @@ public final class FeedbackPropertiesArgs extends io.pulumi.resources.ResourceAr
     	      this.ttlAsIso8601 = defaults.ttlAsIso8601;
         }
 
-        public Builder setLockDurationAsIso8601(@Nullable Input<String> lockDurationAsIso8601) {
+        public Builder lockDurationAsIso8601(@Nullable Input<String> lockDurationAsIso8601) {
             this.lockDurationAsIso8601 = lockDurationAsIso8601;
             return this;
         }
 
-        public Builder setLockDurationAsIso8601(@Nullable String lockDurationAsIso8601) {
+        public Builder lockDurationAsIso8601(@Nullable String lockDurationAsIso8601) {
             this.lockDurationAsIso8601 = Input.ofNullable(lockDurationAsIso8601);
             return this;
         }
 
-        public Builder setMaxDeliveryCount(@Nullable Input<Integer> maxDeliveryCount) {
+        public Builder maxDeliveryCount(@Nullable Input<Integer> maxDeliveryCount) {
             this.maxDeliveryCount = maxDeliveryCount;
             return this;
         }
 
-        public Builder setMaxDeliveryCount(@Nullable Integer maxDeliveryCount) {
+        public Builder maxDeliveryCount(@Nullable Integer maxDeliveryCount) {
             this.maxDeliveryCount = Input.ofNullable(maxDeliveryCount);
             return this;
         }
 
-        public Builder setTtlAsIso8601(@Nullable Input<String> ttlAsIso8601) {
+        public Builder ttlAsIso8601(@Nullable Input<String> ttlAsIso8601) {
             this.ttlAsIso8601 = ttlAsIso8601;
             return this;
         }
 
-        public Builder setTtlAsIso8601(@Nullable String ttlAsIso8601) {
+        public Builder ttlAsIso8601(@Nullable String ttlAsIso8601) {
             this.ttlAsIso8601 = Input.ofNullable(ttlAsIso8601);
             return this;
         }

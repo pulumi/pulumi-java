@@ -140,32 +140,32 @@ public final class ServiceBusTopicOutputDataSourceResponse extends io.pulumi.res
     	      this.type = defaults.type;
         }
 
-        public Builder setPropertyColumns(@Nullable List<String> propertyColumns) {
+        public Builder propertyColumns(@Nullable List<String> propertyColumns) {
             this.propertyColumns = propertyColumns;
             return this;
         }
 
-        public Builder setServiceBusNamespace(@Nullable String serviceBusNamespace) {
+        public Builder serviceBusNamespace(@Nullable String serviceBusNamespace) {
             this.serviceBusNamespace = serviceBusNamespace;
             return this;
         }
 
-        public Builder setSharedAccessPolicyKey(@Nullable String sharedAccessPolicyKey) {
+        public Builder sharedAccessPolicyKey(@Nullable String sharedAccessPolicyKey) {
             this.sharedAccessPolicyKey = sharedAccessPolicyKey;
             return this;
         }
 
-        public Builder setSharedAccessPolicyName(@Nullable String sharedAccessPolicyName) {
+        public Builder sharedAccessPolicyName(@Nullable String sharedAccessPolicyName) {
             this.sharedAccessPolicyName = sharedAccessPolicyName;
             return this;
         }
 
-        public Builder setTopicName(@Nullable String topicName) {
+        public Builder topicName(@Nullable String topicName) {
             this.topicName = topicName;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

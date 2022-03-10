@@ -298,82 +298,82 @@ public final class GetVirtualMachineRunCommandByVirtualMachineResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setAsyncExecution(@Nullable Boolean asyncExecution) {
+        public Builder asyncExecution(@Nullable Boolean asyncExecution) {
             this.asyncExecution = asyncExecution;
             return this;
         }
 
-        public Builder setErrorBlobUri(@Nullable String errorBlobUri) {
+        public Builder errorBlobUri(@Nullable String errorBlobUri) {
             this.errorBlobUri = errorBlobUri;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setInstanceView(VirtualMachineRunCommandInstanceViewResponse instanceView) {
+        public Builder instanceView(VirtualMachineRunCommandInstanceViewResponse instanceView) {
             this.instanceView = Objects.requireNonNull(instanceView);
             return this;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setOutputBlobUri(@Nullable String outputBlobUri) {
+        public Builder outputBlobUri(@Nullable String outputBlobUri) {
             this.outputBlobUri = outputBlobUri;
             return this;
         }
 
-        public Builder setParameters(@Nullable List<RunCommandInputParameterResponse> parameters) {
+        public Builder parameters(@Nullable List<RunCommandInputParameterResponse> parameters) {
             this.parameters = parameters;
             return this;
         }
 
-        public Builder setProtectedParameters(@Nullable List<RunCommandInputParameterResponse> protectedParameters) {
+        public Builder protectedParameters(@Nullable List<RunCommandInputParameterResponse> protectedParameters) {
             this.protectedParameters = protectedParameters;
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setRunAsPassword(@Nullable String runAsPassword) {
+        public Builder runAsPassword(@Nullable String runAsPassword) {
             this.runAsPassword = runAsPassword;
             return this;
         }
 
-        public Builder setRunAsUser(@Nullable String runAsUser) {
+        public Builder runAsUser(@Nullable String runAsUser) {
             this.runAsUser = runAsUser;
             return this;
         }
 
-        public Builder setSource(@Nullable VirtualMachineRunCommandScriptSourceResponse source) {
+        public Builder source(@Nullable VirtualMachineRunCommandScriptSourceResponse source) {
             this.source = source;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTimeoutInSeconds(@Nullable Integer timeoutInSeconds) {
+        public Builder timeoutInSeconds(@Nullable Integer timeoutInSeconds) {
             this.timeoutInSeconds = timeoutInSeconds;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

@@ -108,22 +108,22 @@ public final class RestorePolicyPropertiesResponse extends io.pulumi.resources.I
     	      this.minRestoreTime = defaults.minRestoreTime;
         }
 
-        public Builder setDays(@Nullable Integer days) {
+        public Builder days(@Nullable Integer days) {
             this.days = days;
             return this;
         }
 
-        public Builder setEnabled(Boolean enabled) {
+        public Builder enabled(Boolean enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
 
-        public Builder setLastEnabledTime(String lastEnabledTime) {
+        public Builder lastEnabledTime(String lastEnabledTime) {
             this.lastEnabledTime = Objects.requireNonNull(lastEnabledTime);
             return this;
         }
 
-        public Builder setMinRestoreTime(String minRestoreTime) {
+        public Builder minRestoreTime(String minRestoreTime) {
             this.minRestoreTime = Objects.requireNonNull(minRestoreTime);
             return this;
         }

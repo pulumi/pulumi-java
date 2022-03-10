@@ -102,22 +102,22 @@ public final class StorageQueueMessageResponse extends io.pulumi.resources.Invok
     	      this.storageAccount = defaults.storageAccount;
         }
 
-        public Builder setMessage(@Nullable String message) {
+        public Builder message(@Nullable String message) {
             this.message = message;
             return this;
         }
 
-        public Builder setQueueName(@Nullable String queueName) {
+        public Builder queueName(@Nullable String queueName) {
             this.queueName = queueName;
             return this;
         }
 
-        public Builder setSasToken(@Nullable String sasToken) {
+        public Builder sasToken(@Nullable String sasToken) {
             this.sasToken = sasToken;
             return this;
         }
 
-        public Builder setStorageAccount(@Nullable String storageAccount) {
+        public Builder storageAccount(@Nullable String storageAccount) {
             this.storageAccount = storageAccount;
             return this;
         }

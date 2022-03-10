@@ -84,17 +84,17 @@ public final class ExportScheduleResponse {
     	      this.status = defaults.status;
         }
 
-        public Builder setRecurrence(@Nullable String recurrence) {
+        public Builder recurrence(@Nullable String recurrence) {
             this.recurrence = recurrence;
             return this;
         }
 
-        public Builder setRecurrencePeriod(@Nullable ExportRecurrencePeriodResponse recurrencePeriod) {
+        public Builder recurrencePeriod(@Nullable ExportRecurrencePeriodResponse recurrencePeriod) {
             this.recurrencePeriod = recurrencePeriod;
             return this;
         }
 
-        public Builder setStatus(@Nullable String status) {
+        public Builder status(@Nullable String status) {
             this.status = status;
             return this;
         }

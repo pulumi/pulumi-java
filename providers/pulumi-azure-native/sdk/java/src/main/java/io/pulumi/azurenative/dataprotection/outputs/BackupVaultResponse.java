@@ -67,12 +67,12 @@ public final class BackupVaultResponse {
     	      this.storageSettings = defaults.storageSettings;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setStorageSettings(List<StorageSettingResponse> storageSettings) {
+        public Builder storageSettings(List<StorageSettingResponse> storageSettings) {
             this.storageSettings = Objects.requireNonNull(storageSettings);
             return this;
         }

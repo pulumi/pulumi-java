@@ -59,12 +59,12 @@ public final class FirewallPolicySkuArgs extends io.pulumi.resources.ResourceArg
     	      this.tier = defaults.tier;
         }
 
-        public Builder setTier(@Nullable Input<Either<String,FirewallPolicySkuTier>> tier) {
+        public Builder tier(@Nullable Input<Either<String,FirewallPolicySkuTier>> tier) {
             this.tier = tier;
             return this;
         }
 
-        public Builder setTier(@Nullable Either<String,FirewallPolicySkuTier> tier) {
+        public Builder tier(@Nullable Either<String,FirewallPolicySkuTier> tier) {
             this.tier = Input.ofNullable(tier);
             return this;
         }

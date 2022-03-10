@@ -127,27 +127,27 @@ public final class MigrateProjectPropertiesResponse extends io.pulumi.resources.
     	      this.summary = defaults.summary;
         }
 
-        public Builder setLastSummaryRefreshedTime(String lastSummaryRefreshedTime) {
+        public Builder lastSummaryRefreshedTime(String lastSummaryRefreshedTime) {
             this.lastSummaryRefreshedTime = Objects.requireNonNull(lastSummaryRefreshedTime);
             return this;
         }
 
-        public Builder setProvisioningState(@Nullable String provisioningState) {
+        public Builder provisioningState(@Nullable String provisioningState) {
             this.provisioningState = provisioningState;
             return this;
         }
 
-        public Builder setRefreshSummaryState(String refreshSummaryState) {
+        public Builder refreshSummaryState(String refreshSummaryState) {
             this.refreshSummaryState = Objects.requireNonNull(refreshSummaryState);
             return this;
         }
 
-        public Builder setRegisteredTools(@Nullable List<String> registeredTools) {
+        public Builder registeredTools(@Nullable List<String> registeredTools) {
             this.registeredTools = registeredTools;
             return this;
         }
 
-        public Builder setSummary(Map<String,Either<DatabaseProjectSummaryResponse,ServersProjectSummaryResponse>> summary) {
+        public Builder summary(Map<String,Either<DatabaseProjectSummaryResponse,ServersProjectSummaryResponse>> summary) {
             this.summary = Objects.requireNonNull(summary);
             return this;
         }

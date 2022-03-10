@@ -72,12 +72,12 @@ public final class DiskSecretResponse extends io.pulumi.resources.InvokeArgs {
     	      this.diskSerialNumber = defaults.diskSerialNumber;
         }
 
-        public Builder setBitLockerKey(String bitLockerKey) {
+        public Builder bitLockerKey(String bitLockerKey) {
             this.bitLockerKey = Objects.requireNonNull(bitLockerKey);
             return this;
         }
 
-        public Builder setDiskSerialNumber(String diskSerialNumber) {
+        public Builder diskSerialNumber(String diskSerialNumber) {
             this.diskSerialNumber = Objects.requireNonNull(diskSerialNumber);
             return this;
         }

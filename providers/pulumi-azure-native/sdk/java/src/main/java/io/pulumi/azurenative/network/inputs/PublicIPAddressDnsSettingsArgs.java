@@ -90,32 +90,32 @@ public final class PublicIPAddressDnsSettingsArgs extends io.pulumi.resources.Re
     	      this.reverseFqdn = defaults.reverseFqdn;
         }
 
-        public Builder setDomainNameLabel(@Nullable Input<String> domainNameLabel) {
+        public Builder domainNameLabel(@Nullable Input<String> domainNameLabel) {
             this.domainNameLabel = domainNameLabel;
             return this;
         }
 
-        public Builder setDomainNameLabel(@Nullable String domainNameLabel) {
+        public Builder domainNameLabel(@Nullable String domainNameLabel) {
             this.domainNameLabel = Input.ofNullable(domainNameLabel);
             return this;
         }
 
-        public Builder setFqdn(@Nullable Input<String> fqdn) {
+        public Builder fqdn(@Nullable Input<String> fqdn) {
             this.fqdn = fqdn;
             return this;
         }
 
-        public Builder setFqdn(@Nullable String fqdn) {
+        public Builder fqdn(@Nullable String fqdn) {
             this.fqdn = Input.ofNullable(fqdn);
             return this;
         }
 
-        public Builder setReverseFqdn(@Nullable Input<String> reverseFqdn) {
+        public Builder reverseFqdn(@Nullable Input<String> reverseFqdn) {
             this.reverseFqdn = reverseFqdn;
             return this;
         }
 
-        public Builder setReverseFqdn(@Nullable String reverseFqdn) {
+        public Builder reverseFqdn(@Nullable String reverseFqdn) {
             this.reverseFqdn = Input.ofNullable(reverseFqdn);
             return this;
         }

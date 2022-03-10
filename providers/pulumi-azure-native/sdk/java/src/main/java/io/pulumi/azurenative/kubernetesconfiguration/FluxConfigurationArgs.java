@@ -237,122 +237,122 @@ public final class FluxConfigurationArgs extends io.pulumi.resources.ResourceArg
     	      this.suspend = defaults.suspend;
         }
 
-        public Builder setClusterName(Input<String> clusterName) {
+        public Builder clusterName(Input<String> clusterName) {
             this.clusterName = Objects.requireNonNull(clusterName);
             return this;
         }
 
-        public Builder setClusterName(String clusterName) {
+        public Builder clusterName(String clusterName) {
             this.clusterName = Input.of(Objects.requireNonNull(clusterName));
             return this;
         }
 
-        public Builder setClusterResourceName(Input<String> clusterResourceName) {
+        public Builder clusterResourceName(Input<String> clusterResourceName) {
             this.clusterResourceName = Objects.requireNonNull(clusterResourceName);
             return this;
         }
 
-        public Builder setClusterResourceName(String clusterResourceName) {
+        public Builder clusterResourceName(String clusterResourceName) {
             this.clusterResourceName = Input.of(Objects.requireNonNull(clusterResourceName));
             return this;
         }
 
-        public Builder setClusterRp(Input<String> clusterRp) {
+        public Builder clusterRp(Input<String> clusterRp) {
             this.clusterRp = Objects.requireNonNull(clusterRp);
             return this;
         }
 
-        public Builder setClusterRp(String clusterRp) {
+        public Builder clusterRp(String clusterRp) {
             this.clusterRp = Input.of(Objects.requireNonNull(clusterRp));
             return this;
         }
 
-        public Builder setConfigurationProtectedSettings(@Nullable Input<Map<String,String>> configurationProtectedSettings) {
+        public Builder configurationProtectedSettings(@Nullable Input<Map<String,String>> configurationProtectedSettings) {
             this.configurationProtectedSettings = configurationProtectedSettings;
             return this;
         }
 
-        public Builder setConfigurationProtectedSettings(@Nullable Map<String,String> configurationProtectedSettings) {
+        public Builder configurationProtectedSettings(@Nullable Map<String,String> configurationProtectedSettings) {
             this.configurationProtectedSettings = Input.ofNullable(configurationProtectedSettings);
             return this;
         }
 
-        public Builder setFluxConfigurationName(@Nullable Input<String> fluxConfigurationName) {
+        public Builder fluxConfigurationName(@Nullable Input<String> fluxConfigurationName) {
             this.fluxConfigurationName = fluxConfigurationName;
             return this;
         }
 
-        public Builder setFluxConfigurationName(@Nullable String fluxConfigurationName) {
+        public Builder fluxConfigurationName(@Nullable String fluxConfigurationName) {
             this.fluxConfigurationName = Input.ofNullable(fluxConfigurationName);
             return this;
         }
 
-        public Builder setGitRepository(@Nullable Input<GitRepositoryDefinitionArgs> gitRepository) {
+        public Builder gitRepository(@Nullable Input<GitRepositoryDefinitionArgs> gitRepository) {
             this.gitRepository = gitRepository;
             return this;
         }
 
-        public Builder setGitRepository(@Nullable GitRepositoryDefinitionArgs gitRepository) {
+        public Builder gitRepository(@Nullable GitRepositoryDefinitionArgs gitRepository) {
             this.gitRepository = Input.ofNullable(gitRepository);
             return this;
         }
 
-        public Builder setKustomizations(@Nullable Input<Map<String,KustomizationDefinitionArgs>> kustomizations) {
+        public Builder kustomizations(@Nullable Input<Map<String,KustomizationDefinitionArgs>> kustomizations) {
             this.kustomizations = kustomizations;
             return this;
         }
 
-        public Builder setKustomizations(@Nullable Map<String,KustomizationDefinitionArgs> kustomizations) {
+        public Builder kustomizations(@Nullable Map<String,KustomizationDefinitionArgs> kustomizations) {
             this.kustomizations = Input.ofNullable(kustomizations);
             return this;
         }
 
-        public Builder setNamespace(@Nullable Input<String> namespace) {
+        public Builder namespace(@Nullable Input<String> namespace) {
             this.namespace = namespace;
             return this;
         }
 
-        public Builder setNamespace(@Nullable String namespace) {
+        public Builder namespace(@Nullable String namespace) {
             this.namespace = Input.ofNullable(namespace);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setScope(@Nullable Input<Either<String,ScopeType>> scope) {
+        public Builder scope(@Nullable Input<Either<String,ScopeType>> scope) {
             this.scope = scope;
             return this;
         }
 
-        public Builder setScope(@Nullable Either<String,ScopeType> scope) {
+        public Builder scope(@Nullable Either<String,ScopeType> scope) {
             this.scope = Input.ofNullable(scope);
             return this;
         }
 
-        public Builder setSourceKind(@Nullable Input<Either<String,SourceKindType>> sourceKind) {
+        public Builder sourceKind(@Nullable Input<Either<String,SourceKindType>> sourceKind) {
             this.sourceKind = sourceKind;
             return this;
         }
 
-        public Builder setSourceKind(@Nullable Either<String,SourceKindType> sourceKind) {
+        public Builder sourceKind(@Nullable Either<String,SourceKindType> sourceKind) {
             this.sourceKind = Input.ofNullable(sourceKind);
             return this;
         }
 
-        public Builder setSuspend(@Nullable Input<Boolean> suspend) {
+        public Builder suspend(@Nullable Input<Boolean> suspend) {
             this.suspend = suspend;
             return this;
         }
 
-        public Builder setSuspend(@Nullable Boolean suspend) {
+        public Builder suspend(@Nullable Boolean suspend) {
             this.suspend = Input.ofNullable(suspend);
             return this;
         }

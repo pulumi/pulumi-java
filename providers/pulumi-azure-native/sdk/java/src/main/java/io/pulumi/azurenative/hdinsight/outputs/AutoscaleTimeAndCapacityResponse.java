@@ -84,17 +84,17 @@ public final class AutoscaleTimeAndCapacityResponse {
     	      this.time = defaults.time;
         }
 
-        public Builder setMaxInstanceCount(@Nullable Integer maxInstanceCount) {
+        public Builder maxInstanceCount(@Nullable Integer maxInstanceCount) {
             this.maxInstanceCount = maxInstanceCount;
             return this;
         }
 
-        public Builder setMinInstanceCount(@Nullable Integer minInstanceCount) {
+        public Builder minInstanceCount(@Nullable Integer minInstanceCount) {
             this.minInstanceCount = minInstanceCount;
             return this;
         }
 
-        public Builder setTime(@Nullable String time) {
+        public Builder time(@Nullable String time) {
             this.time = time;
             return this;
         }

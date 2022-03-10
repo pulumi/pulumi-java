@@ -90,17 +90,17 @@ public final class MobilityServiceUpdateResponse extends io.pulumi.resources.Inv
     	      this.version = defaults.version;
         }
 
-        public Builder setOsType(@Nullable String osType) {
+        public Builder osType(@Nullable String osType) {
             this.osType = osType;
             return this;
         }
 
-        public Builder setRebootStatus(@Nullable String rebootStatus) {
+        public Builder rebootStatus(@Nullable String rebootStatus) {
             this.rebootStatus = rebootStatus;
             return this;
         }
 
-        public Builder setVersion(@Nullable String version) {
+        public Builder version(@Nullable String version) {
             this.version = version;
             return this;
         }

@@ -123,52 +123,52 @@ public final class ReportArgs extends io.pulumi.resources.ResourceArgs {
     	      this.schedule = defaults.schedule;
         }
 
-        public Builder setDefinition(Input<ReportDefinitionArgs> definition) {
+        public Builder definition(Input<ReportDefinitionArgs> definition) {
             this.definition = Objects.requireNonNull(definition);
             return this;
         }
 
-        public Builder setDefinition(ReportDefinitionArgs definition) {
+        public Builder definition(ReportDefinitionArgs definition) {
             this.definition = Input.of(Objects.requireNonNull(definition));
             return this;
         }
 
-        public Builder setDeliveryInfo(Input<ReportDeliveryInfoArgs> deliveryInfo) {
+        public Builder deliveryInfo(Input<ReportDeliveryInfoArgs> deliveryInfo) {
             this.deliveryInfo = Objects.requireNonNull(deliveryInfo);
             return this;
         }
 
-        public Builder setDeliveryInfo(ReportDeliveryInfoArgs deliveryInfo) {
+        public Builder deliveryInfo(ReportDeliveryInfoArgs deliveryInfo) {
             this.deliveryInfo = Input.of(Objects.requireNonNull(deliveryInfo));
             return this;
         }
 
-        public Builder setFormat(@Nullable Input<Either<String,FormatType>> format) {
+        public Builder format(@Nullable Input<Either<String,FormatType>> format) {
             this.format = format;
             return this;
         }
 
-        public Builder setFormat(@Nullable Either<String,FormatType> format) {
+        public Builder format(@Nullable Either<String,FormatType> format) {
             this.format = Input.ofNullable(format);
             return this;
         }
 
-        public Builder setReportName(@Nullable Input<String> reportName) {
+        public Builder reportName(@Nullable Input<String> reportName) {
             this.reportName = reportName;
             return this;
         }
 
-        public Builder setReportName(@Nullable String reportName) {
+        public Builder reportName(@Nullable String reportName) {
             this.reportName = Input.ofNullable(reportName);
             return this;
         }
 
-        public Builder setSchedule(@Nullable Input<ReportScheduleArgs> schedule) {
+        public Builder schedule(@Nullable Input<ReportScheduleArgs> schedule) {
             this.schedule = schedule;
             return this;
         }
 
-        public Builder setSchedule(@Nullable ReportScheduleArgs schedule) {
+        public Builder schedule(@Nullable ReportScheduleArgs schedule) {
             this.schedule = Input.ofNullable(schedule);
             return this;
         }

@@ -288,152 +288,152 @@ public final class LiveEventArgs extends io.pulumi.resources.ResourceArgs {
     	      this.useStaticHostname = defaults.useStaticHostname;
         }
 
-        public Builder setAccountName(Input<String> accountName) {
+        public Builder accountName(Input<String> accountName) {
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
 
-        public Builder setAccountName(String accountName) {
+        public Builder accountName(String accountName) {
             this.accountName = Input.of(Objects.requireNonNull(accountName));
             return this;
         }
 
-        public Builder setAutoStart(@Nullable Input<Boolean> autoStart) {
+        public Builder autoStart(@Nullable Input<Boolean> autoStart) {
             this.autoStart = autoStart;
             return this;
         }
 
-        public Builder setAutoStart(@Nullable Boolean autoStart) {
+        public Builder autoStart(@Nullable Boolean autoStart) {
             this.autoStart = Input.ofNullable(autoStart);
             return this;
         }
 
-        public Builder setCrossSiteAccessPolicies(@Nullable Input<CrossSiteAccessPoliciesArgs> crossSiteAccessPolicies) {
+        public Builder crossSiteAccessPolicies(@Nullable Input<CrossSiteAccessPoliciesArgs> crossSiteAccessPolicies) {
             this.crossSiteAccessPolicies = crossSiteAccessPolicies;
             return this;
         }
 
-        public Builder setCrossSiteAccessPolicies(@Nullable CrossSiteAccessPoliciesArgs crossSiteAccessPolicies) {
+        public Builder crossSiteAccessPolicies(@Nullable CrossSiteAccessPoliciesArgs crossSiteAccessPolicies) {
             this.crossSiteAccessPolicies = Input.ofNullable(crossSiteAccessPolicies);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setEncoding(@Nullable Input<LiveEventEncodingArgs> encoding) {
+        public Builder encoding(@Nullable Input<LiveEventEncodingArgs> encoding) {
             this.encoding = encoding;
             return this;
         }
 
-        public Builder setEncoding(@Nullable LiveEventEncodingArgs encoding) {
+        public Builder encoding(@Nullable LiveEventEncodingArgs encoding) {
             this.encoding = Input.ofNullable(encoding);
             return this;
         }
 
-        public Builder setHostnamePrefix(@Nullable Input<String> hostnamePrefix) {
+        public Builder hostnamePrefix(@Nullable Input<String> hostnamePrefix) {
             this.hostnamePrefix = hostnamePrefix;
             return this;
         }
 
-        public Builder setHostnamePrefix(@Nullable String hostnamePrefix) {
+        public Builder hostnamePrefix(@Nullable String hostnamePrefix) {
             this.hostnamePrefix = Input.ofNullable(hostnamePrefix);
             return this;
         }
 
-        public Builder setInput(Input<LiveEventInputArgs> input) {
+        public Builder input(Input<LiveEventInputArgs> input) {
             this.input = Objects.requireNonNull(input);
             return this;
         }
 
-        public Builder setInput(LiveEventInputArgs input) {
+        public Builder input(LiveEventInputArgs input) {
             this.input = Input.of(Objects.requireNonNull(input));
             return this;
         }
 
-        public Builder setLiveEventName(@Nullable Input<String> liveEventName) {
+        public Builder liveEventName(@Nullable Input<String> liveEventName) {
             this.liveEventName = liveEventName;
             return this;
         }
 
-        public Builder setLiveEventName(@Nullable String liveEventName) {
+        public Builder liveEventName(@Nullable String liveEventName) {
             this.liveEventName = Input.ofNullable(liveEventName);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setPreview(@Nullable Input<LiveEventPreviewArgs> preview) {
+        public Builder preview(@Nullable Input<LiveEventPreviewArgs> preview) {
             this.preview = preview;
             return this;
         }
 
-        public Builder setPreview(@Nullable LiveEventPreviewArgs preview) {
+        public Builder preview(@Nullable LiveEventPreviewArgs preview) {
             this.preview = Input.ofNullable(preview);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setStreamOptions(@Nullable Input<List<Either<String,StreamOptionsFlag>>> streamOptions) {
+        public Builder streamOptions(@Nullable Input<List<Either<String,StreamOptionsFlag>>> streamOptions) {
             this.streamOptions = streamOptions;
             return this;
         }
 
-        public Builder setStreamOptions(@Nullable List<Either<String,StreamOptionsFlag>> streamOptions) {
+        public Builder streamOptions(@Nullable List<Either<String,StreamOptionsFlag>> streamOptions) {
             this.streamOptions = Input.ofNullable(streamOptions);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTranscriptions(@Nullable Input<List<LiveEventTranscriptionArgs>> transcriptions) {
+        public Builder transcriptions(@Nullable Input<List<LiveEventTranscriptionArgs>> transcriptions) {
             this.transcriptions = transcriptions;
             return this;
         }
 
-        public Builder setTranscriptions(@Nullable List<LiveEventTranscriptionArgs> transcriptions) {
+        public Builder transcriptions(@Nullable List<LiveEventTranscriptionArgs> transcriptions) {
             this.transcriptions = Input.ofNullable(transcriptions);
             return this;
         }
 
-        public Builder setUseStaticHostname(@Nullable Input<Boolean> useStaticHostname) {
+        public Builder useStaticHostname(@Nullable Input<Boolean> useStaticHostname) {
             this.useStaticHostname = useStaticHostname;
             return this;
         }
 
-        public Builder setUseStaticHostname(@Nullable Boolean useStaticHostname) {
+        public Builder useStaticHostname(@Nullable Boolean useStaticHostname) {
             this.useStaticHostname = Input.ofNullable(useStaticHostname);
             return this;
         }

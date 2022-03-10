@@ -50,7 +50,7 @@ public final class LiveEventInputAccessControlResponse {
     	      this.ip = defaults.ip;
         }
 
-        public Builder setIp(@Nullable IPAccessControlResponse ip) {
+        public Builder ip(@Nullable IPAccessControlResponse ip) {
             this.ip = ip;
             return this;
         }

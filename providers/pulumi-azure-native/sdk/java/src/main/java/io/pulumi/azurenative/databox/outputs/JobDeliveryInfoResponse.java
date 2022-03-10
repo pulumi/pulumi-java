@@ -50,7 +50,7 @@ public final class JobDeliveryInfoResponse {
     	      this.scheduledDateTime = defaults.scheduledDateTime;
         }
 
-        public Builder setScheduledDateTime(@Nullable String scheduledDateTime) {
+        public Builder scheduledDateTime(@Nullable String scheduledDateTime) {
             this.scheduledDateTime = scheduledDateTime;
             return this;
         }

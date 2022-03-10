@@ -75,12 +75,12 @@ public final class IntegrationRuntimeCustomSetupScriptPropertiesResponse extends
     	      this.sasToken = defaults.sasToken;
         }
 
-        public Builder setBlobContainerUri(@Nullable String blobContainerUri) {
+        public Builder blobContainerUri(@Nullable String blobContainerUri) {
             this.blobContainerUri = blobContainerUri;
             return this;
         }
 
-        public Builder setSasToken(@Nullable SecureStringResponse sasToken) {
+        public Builder sasToken(@Nullable SecureStringResponse sasToken) {
             this.sasToken = sasToken;
             return this;
         }

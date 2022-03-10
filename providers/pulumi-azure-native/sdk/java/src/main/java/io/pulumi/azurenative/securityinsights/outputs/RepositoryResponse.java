@@ -117,27 +117,27 @@ public final class RepositoryResponse {
     	      this.url = defaults.url;
         }
 
-        public Builder setBranch(@Nullable String branch) {
+        public Builder branch(@Nullable String branch) {
             this.branch = branch;
             return this;
         }
 
-        public Builder setDeploymentLogsUrl(@Nullable String deploymentLogsUrl) {
+        public Builder deploymentLogsUrl(@Nullable String deploymentLogsUrl) {
             this.deploymentLogsUrl = deploymentLogsUrl;
             return this;
         }
 
-        public Builder setDisplayUrl(@Nullable String displayUrl) {
+        public Builder displayUrl(@Nullable String displayUrl) {
             this.displayUrl = displayUrl;
             return this;
         }
 
-        public Builder setPathMapping(@Nullable List<ContentPathMapResponse> pathMapping) {
+        public Builder pathMapping(@Nullable List<ContentPathMapResponse> pathMapping) {
             this.pathMapping = pathMapping;
             return this;
         }
 
-        public Builder setUrl(@Nullable String url) {
+        public Builder url(@Nullable String url) {
             this.url = url;
             return this;
         }

@@ -74,22 +74,22 @@ public final class QosPortRangeArgs extends io.pulumi.resources.ResourceArgs {
     	      this.start = defaults.start;
         }
 
-        public Builder setEnd(@Nullable Input<Integer> end) {
+        public Builder end(@Nullable Input<Integer> end) {
             this.end = end;
             return this;
         }
 
-        public Builder setEnd(@Nullable Integer end) {
+        public Builder end(@Nullable Integer end) {
             this.end = Input.ofNullable(end);
             return this;
         }
 
-        public Builder setStart(@Nullable Input<Integer> start) {
+        public Builder start(@Nullable Input<Integer> start) {
             this.start = start;
             return this;
         }
 
-        public Builder setStart(@Nullable Integer start) {
+        public Builder start(@Nullable Integer start) {
             this.start = Input.ofNullable(start);
             return this;
         }

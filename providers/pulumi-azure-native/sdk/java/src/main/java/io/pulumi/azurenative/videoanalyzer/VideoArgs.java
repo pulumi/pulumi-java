@@ -118,52 +118,52 @@ public final class VideoArgs extends io.pulumi.resources.ResourceArgs {
     	      this.videoName = defaults.videoName;
         }
 
-        public Builder setAccountName(Input<String> accountName) {
+        public Builder accountName(Input<String> accountName) {
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
 
-        public Builder setAccountName(String accountName) {
+        public Builder accountName(String accountName) {
             this.accountName = Input.of(Objects.requireNonNull(accountName));
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setTitle(@Nullable Input<String> title) {
+        public Builder title(@Nullable Input<String> title) {
             this.title = title;
             return this;
         }
 
-        public Builder setTitle(@Nullable String title) {
+        public Builder title(@Nullable String title) {
             this.title = Input.ofNullable(title);
             return this;
         }
 
-        public Builder setVideoName(@Nullable Input<String> videoName) {
+        public Builder videoName(@Nullable Input<String> videoName) {
             this.videoName = videoName;
             return this;
         }
 
-        public Builder setVideoName(@Nullable String videoName) {
+        public Builder videoName(@Nullable String videoName) {
             this.videoName = Input.ofNullable(videoName);
             return this;
         }

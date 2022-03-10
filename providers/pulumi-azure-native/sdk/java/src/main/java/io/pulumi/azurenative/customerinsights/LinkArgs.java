@@ -253,132 +253,132 @@ public final class LinkArgs extends io.pulumi.resources.ResourceArgs {
     	      this.targetEntityTypeName = defaults.targetEntityTypeName;
         }
 
-        public Builder setDescription(@Nullable Input<Map<String,String>> description) {
+        public Builder description(@Nullable Input<Map<String,String>> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable Map<String,String> description) {
+        public Builder description(@Nullable Map<String,String> description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setDisplayName(@Nullable Input<Map<String,String>> displayName) {
+        public Builder displayName(@Nullable Input<Map<String,String>> displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setDisplayName(@Nullable Map<String,String> displayName) {
+        public Builder displayName(@Nullable Map<String,String> displayName) {
             this.displayName = Input.ofNullable(displayName);
             return this;
         }
 
-        public Builder setHubName(Input<String> hubName) {
+        public Builder hubName(Input<String> hubName) {
             this.hubName = Objects.requireNonNull(hubName);
             return this;
         }
 
-        public Builder setHubName(String hubName) {
+        public Builder hubName(String hubName) {
             this.hubName = Input.of(Objects.requireNonNull(hubName));
             return this;
         }
 
-        public Builder setLinkName(@Nullable Input<String> linkName) {
+        public Builder linkName(@Nullable Input<String> linkName) {
             this.linkName = linkName;
             return this;
         }
 
-        public Builder setLinkName(@Nullable String linkName) {
+        public Builder linkName(@Nullable String linkName) {
             this.linkName = Input.ofNullable(linkName);
             return this;
         }
 
-        public Builder setMappings(@Nullable Input<List<TypePropertiesMappingArgs>> mappings) {
+        public Builder mappings(@Nullable Input<List<TypePropertiesMappingArgs>> mappings) {
             this.mappings = mappings;
             return this;
         }
 
-        public Builder setMappings(@Nullable List<TypePropertiesMappingArgs> mappings) {
+        public Builder mappings(@Nullable List<TypePropertiesMappingArgs> mappings) {
             this.mappings = Input.ofNullable(mappings);
             return this;
         }
 
-        public Builder setOperationType(@Nullable Input<InstanceOperationType> operationType) {
+        public Builder operationType(@Nullable Input<InstanceOperationType> operationType) {
             this.operationType = operationType;
             return this;
         }
 
-        public Builder setOperationType(@Nullable InstanceOperationType operationType) {
+        public Builder operationType(@Nullable InstanceOperationType operationType) {
             this.operationType = Input.ofNullable(operationType);
             return this;
         }
 
-        public Builder setParticipantPropertyReferences(Input<List<ParticipantPropertyReferenceArgs>> participantPropertyReferences) {
+        public Builder participantPropertyReferences(Input<List<ParticipantPropertyReferenceArgs>> participantPropertyReferences) {
             this.participantPropertyReferences = Objects.requireNonNull(participantPropertyReferences);
             return this;
         }
 
-        public Builder setParticipantPropertyReferences(List<ParticipantPropertyReferenceArgs> participantPropertyReferences) {
+        public Builder participantPropertyReferences(List<ParticipantPropertyReferenceArgs> participantPropertyReferences) {
             this.participantPropertyReferences = Input.of(Objects.requireNonNull(participantPropertyReferences));
             return this;
         }
 
-        public Builder setReferenceOnly(@Nullable Input<Boolean> referenceOnly) {
+        public Builder referenceOnly(@Nullable Input<Boolean> referenceOnly) {
             this.referenceOnly = referenceOnly;
             return this;
         }
 
-        public Builder setReferenceOnly(@Nullable Boolean referenceOnly) {
+        public Builder referenceOnly(@Nullable Boolean referenceOnly) {
             this.referenceOnly = Input.ofNullable(referenceOnly);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setSourceEntityType(Input<EntityType> sourceEntityType) {
+        public Builder sourceEntityType(Input<EntityType> sourceEntityType) {
             this.sourceEntityType = Objects.requireNonNull(sourceEntityType);
             return this;
         }
 
-        public Builder setSourceEntityType(EntityType sourceEntityType) {
+        public Builder sourceEntityType(EntityType sourceEntityType) {
             this.sourceEntityType = Input.of(Objects.requireNonNull(sourceEntityType));
             return this;
         }
 
-        public Builder setSourceEntityTypeName(Input<String> sourceEntityTypeName) {
+        public Builder sourceEntityTypeName(Input<String> sourceEntityTypeName) {
             this.sourceEntityTypeName = Objects.requireNonNull(sourceEntityTypeName);
             return this;
         }
 
-        public Builder setSourceEntityTypeName(String sourceEntityTypeName) {
+        public Builder sourceEntityTypeName(String sourceEntityTypeName) {
             this.sourceEntityTypeName = Input.of(Objects.requireNonNull(sourceEntityTypeName));
             return this;
         }
 
-        public Builder setTargetEntityType(Input<EntityType> targetEntityType) {
+        public Builder targetEntityType(Input<EntityType> targetEntityType) {
             this.targetEntityType = Objects.requireNonNull(targetEntityType);
             return this;
         }
 
-        public Builder setTargetEntityType(EntityType targetEntityType) {
+        public Builder targetEntityType(EntityType targetEntityType) {
             this.targetEntityType = Input.of(Objects.requireNonNull(targetEntityType));
             return this;
         }
 
-        public Builder setTargetEntityTypeName(Input<String> targetEntityTypeName) {
+        public Builder targetEntityTypeName(Input<String> targetEntityTypeName) {
             this.targetEntityTypeName = Objects.requireNonNull(targetEntityTypeName);
             return this;
         }
 
-        public Builder setTargetEntityTypeName(String targetEntityTypeName) {
+        public Builder targetEntityTypeName(String targetEntityTypeName) {
             this.targetEntityTypeName = Input.of(Objects.requireNonNull(targetEntityTypeName));
             return this;
         }

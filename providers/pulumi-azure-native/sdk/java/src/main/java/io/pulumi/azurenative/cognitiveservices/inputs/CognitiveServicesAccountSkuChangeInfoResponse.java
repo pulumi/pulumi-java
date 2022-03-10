@@ -89,17 +89,17 @@ public final class CognitiveServicesAccountSkuChangeInfoResponse extends io.pulu
     	      this.lastChangeDate = defaults.lastChangeDate;
         }
 
-        public Builder setCountOfDowngrades(Double countOfDowngrades) {
+        public Builder countOfDowngrades(Double countOfDowngrades) {
             this.countOfDowngrades = Objects.requireNonNull(countOfDowngrades);
             return this;
         }
 
-        public Builder setCountOfUpgradesAfterDowngrades(Double countOfUpgradesAfterDowngrades) {
+        public Builder countOfUpgradesAfterDowngrades(Double countOfUpgradesAfterDowngrades) {
             this.countOfUpgradesAfterDowngrades = Objects.requireNonNull(countOfUpgradesAfterDowngrades);
             return this;
         }
 
-        public Builder setLastChangeDate(String lastChangeDate) {
+        public Builder lastChangeDate(String lastChangeDate) {
             this.lastChangeDate = Objects.requireNonNull(lastChangeDate);
             return this;
         }

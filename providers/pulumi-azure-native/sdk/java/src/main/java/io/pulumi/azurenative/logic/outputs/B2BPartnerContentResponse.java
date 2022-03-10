@@ -50,7 +50,7 @@ public final class B2BPartnerContentResponse {
     	      this.businessIdentities = defaults.businessIdentities;
         }
 
-        public Builder setBusinessIdentities(@Nullable List<BusinessIdentityResponse> businessIdentities) {
+        public Builder businessIdentities(@Nullable List<BusinessIdentityResponse> businessIdentities) {
             this.businessIdentities = businessIdentities;
             return this;
         }

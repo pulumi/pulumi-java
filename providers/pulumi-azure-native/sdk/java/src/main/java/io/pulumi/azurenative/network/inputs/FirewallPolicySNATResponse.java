@@ -58,7 +58,7 @@ public final class FirewallPolicySNATResponse extends io.pulumi.resources.Invoke
     	      this.privateRanges = defaults.privateRanges;
         }
 
-        public Builder setPrivateRanges(@Nullable List<String> privateRanges) {
+        public Builder privateRanges(@Nullable List<String> privateRanges) {
             this.privateRanges = privateRanges;
             return this;
         }

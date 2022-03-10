@@ -113,42 +113,42 @@ public final class DataDiskArgs extends io.pulumi.resources.ResourceArgs {
     	      this.storageAccountType = defaults.storageAccountType;
         }
 
-        public Builder setCaching(@Nullable Input<CachingType> caching) {
+        public Builder caching(@Nullable Input<CachingType> caching) {
             this.caching = caching;
             return this;
         }
 
-        public Builder setCaching(@Nullable CachingType caching) {
+        public Builder caching(@Nullable CachingType caching) {
             this.caching = Input.ofNullable(caching);
             return this;
         }
 
-        public Builder setDiskSizeGB(Input<Integer> diskSizeGB) {
+        public Builder diskSizeGB(Input<Integer> diskSizeGB) {
             this.diskSizeGB = Objects.requireNonNull(diskSizeGB);
             return this;
         }
 
-        public Builder setDiskSizeGB(Integer diskSizeGB) {
+        public Builder diskSizeGB(Integer diskSizeGB) {
             this.diskSizeGB = Input.of(Objects.requireNonNull(diskSizeGB));
             return this;
         }
 
-        public Builder setLun(Input<Integer> lun) {
+        public Builder lun(Input<Integer> lun) {
             this.lun = Objects.requireNonNull(lun);
             return this;
         }
 
-        public Builder setLun(Integer lun) {
+        public Builder lun(Integer lun) {
             this.lun = Input.of(Objects.requireNonNull(lun));
             return this;
         }
 
-        public Builder setStorageAccountType(@Nullable Input<StorageAccountType> storageAccountType) {
+        public Builder storageAccountType(@Nullable Input<StorageAccountType> storageAccountType) {
             this.storageAccountType = storageAccountType;
             return this;
         }
 
-        public Builder setStorageAccountType(@Nullable StorageAccountType storageAccountType) {
+        public Builder storageAccountType(@Nullable StorageAccountType storageAccountType) {
             this.storageAccountType = Input.ofNullable(storageAccountType);
             return this;
         }

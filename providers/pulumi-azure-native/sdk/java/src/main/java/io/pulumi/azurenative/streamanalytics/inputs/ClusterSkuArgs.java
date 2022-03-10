@@ -77,22 +77,22 @@ public final class ClusterSkuArgs extends io.pulumi.resources.ResourceArgs {
     	      this.name = defaults.name;
         }
 
-        public Builder setCapacity(@Nullable Input<Integer> capacity) {
+        public Builder capacity(@Nullable Input<Integer> capacity) {
             this.capacity = capacity;
             return this;
         }
 
-        public Builder setCapacity(@Nullable Integer capacity) {
+        public Builder capacity(@Nullable Integer capacity) {
             this.capacity = Input.ofNullable(capacity);
             return this;
         }
 
-        public Builder setName(@Nullable Input<Either<String,ClusterSkuName>> name) {
+        public Builder name(@Nullable Input<Either<String,ClusterSkuName>> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable Either<String,ClusterSkuName> name) {
+        public Builder name(@Nullable Either<String,ClusterSkuName> name) {
             this.name = Input.ofNullable(name);
             return this;
         }

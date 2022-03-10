@@ -195,52 +195,52 @@ public final class X12EnvelopeOverrideResponse {
     	      this.timeFormat = defaults.timeFormat;
         }
 
-        public Builder setDateFormat(String dateFormat) {
+        public Builder dateFormat(String dateFormat) {
             this.dateFormat = Objects.requireNonNull(dateFormat);
             return this;
         }
 
-        public Builder setFunctionalIdentifierCode(@Nullable String functionalIdentifierCode) {
+        public Builder functionalIdentifierCode(@Nullable String functionalIdentifierCode) {
             this.functionalIdentifierCode = functionalIdentifierCode;
             return this;
         }
 
-        public Builder setHeaderVersion(String headerVersion) {
+        public Builder headerVersion(String headerVersion) {
             this.headerVersion = Objects.requireNonNull(headerVersion);
             return this;
         }
 
-        public Builder setMessageId(String messageId) {
+        public Builder messageId(String messageId) {
             this.messageId = Objects.requireNonNull(messageId);
             return this;
         }
 
-        public Builder setProtocolVersion(String protocolVersion) {
+        public Builder protocolVersion(String protocolVersion) {
             this.protocolVersion = Objects.requireNonNull(protocolVersion);
             return this;
         }
 
-        public Builder setReceiverApplicationId(String receiverApplicationId) {
+        public Builder receiverApplicationId(String receiverApplicationId) {
             this.receiverApplicationId = Objects.requireNonNull(receiverApplicationId);
             return this;
         }
 
-        public Builder setResponsibleAgencyCode(String responsibleAgencyCode) {
+        public Builder responsibleAgencyCode(String responsibleAgencyCode) {
             this.responsibleAgencyCode = Objects.requireNonNull(responsibleAgencyCode);
             return this;
         }
 
-        public Builder setSenderApplicationId(String senderApplicationId) {
+        public Builder senderApplicationId(String senderApplicationId) {
             this.senderApplicationId = Objects.requireNonNull(senderApplicationId);
             return this;
         }
 
-        public Builder setTargetNamespace(String targetNamespace) {
+        public Builder targetNamespace(String targetNamespace) {
             this.targetNamespace = Objects.requireNonNull(targetNamespace);
             return this;
         }
 
-        public Builder setTimeFormat(String timeFormat) {
+        public Builder timeFormat(String timeFormat) {
             this.timeFormat = Objects.requireNonNull(timeFormat);
             return this;
         }

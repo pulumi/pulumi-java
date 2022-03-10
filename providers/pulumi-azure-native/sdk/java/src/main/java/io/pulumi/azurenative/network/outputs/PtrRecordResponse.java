@@ -50,7 +50,7 @@ public final class PtrRecordResponse {
     	      this.ptrdname = defaults.ptrdname;
         }
 
-        public Builder setPtrdname(@Nullable String ptrdname) {
+        public Builder ptrdname(@Nullable String ptrdname) {
             this.ptrdname = ptrdname;
             return this;
         }

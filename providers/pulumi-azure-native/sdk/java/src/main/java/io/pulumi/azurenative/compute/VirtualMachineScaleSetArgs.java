@@ -406,222 +406,222 @@ public final class VirtualMachineScaleSetArgs extends io.pulumi.resources.Resour
     	      this.zones = defaults.zones;
         }
 
-        public Builder setAdditionalCapabilities(@Nullable Input<AdditionalCapabilitiesArgs> additionalCapabilities) {
+        public Builder additionalCapabilities(@Nullable Input<AdditionalCapabilitiesArgs> additionalCapabilities) {
             this.additionalCapabilities = additionalCapabilities;
             return this;
         }
 
-        public Builder setAdditionalCapabilities(@Nullable AdditionalCapabilitiesArgs additionalCapabilities) {
+        public Builder additionalCapabilities(@Nullable AdditionalCapabilitiesArgs additionalCapabilities) {
             this.additionalCapabilities = Input.ofNullable(additionalCapabilities);
             return this;
         }
 
-        public Builder setAutomaticRepairsPolicy(@Nullable Input<AutomaticRepairsPolicyArgs> automaticRepairsPolicy) {
+        public Builder automaticRepairsPolicy(@Nullable Input<AutomaticRepairsPolicyArgs> automaticRepairsPolicy) {
             this.automaticRepairsPolicy = automaticRepairsPolicy;
             return this;
         }
 
-        public Builder setAutomaticRepairsPolicy(@Nullable AutomaticRepairsPolicyArgs automaticRepairsPolicy) {
+        public Builder automaticRepairsPolicy(@Nullable AutomaticRepairsPolicyArgs automaticRepairsPolicy) {
             this.automaticRepairsPolicy = Input.ofNullable(automaticRepairsPolicy);
             return this;
         }
 
-        public Builder setDoNotRunExtensionsOnOverprovisionedVMs(@Nullable Input<Boolean> doNotRunExtensionsOnOverprovisionedVMs) {
+        public Builder doNotRunExtensionsOnOverprovisionedVMs(@Nullable Input<Boolean> doNotRunExtensionsOnOverprovisionedVMs) {
             this.doNotRunExtensionsOnOverprovisionedVMs = doNotRunExtensionsOnOverprovisionedVMs;
             return this;
         }
 
-        public Builder setDoNotRunExtensionsOnOverprovisionedVMs(@Nullable Boolean doNotRunExtensionsOnOverprovisionedVMs) {
+        public Builder doNotRunExtensionsOnOverprovisionedVMs(@Nullable Boolean doNotRunExtensionsOnOverprovisionedVMs) {
             this.doNotRunExtensionsOnOverprovisionedVMs = Input.ofNullable(doNotRunExtensionsOnOverprovisionedVMs);
             return this;
         }
 
-        public Builder setExtendedLocation(@Nullable Input<ExtendedLocationArgs> extendedLocation) {
+        public Builder extendedLocation(@Nullable Input<ExtendedLocationArgs> extendedLocation) {
             this.extendedLocation = extendedLocation;
             return this;
         }
 
-        public Builder setExtendedLocation(@Nullable ExtendedLocationArgs extendedLocation) {
+        public Builder extendedLocation(@Nullable ExtendedLocationArgs extendedLocation) {
             this.extendedLocation = Input.ofNullable(extendedLocation);
             return this;
         }
 
-        public Builder setHostGroup(@Nullable Input<SubResourceArgs> hostGroup) {
+        public Builder hostGroup(@Nullable Input<SubResourceArgs> hostGroup) {
             this.hostGroup = hostGroup;
             return this;
         }
 
-        public Builder setHostGroup(@Nullable SubResourceArgs hostGroup) {
+        public Builder hostGroup(@Nullable SubResourceArgs hostGroup) {
             this.hostGroup = Input.ofNullable(hostGroup);
             return this;
         }
 
-        public Builder setIdentity(@Nullable Input<VirtualMachineScaleSetIdentityArgs> identity) {
+        public Builder identity(@Nullable Input<VirtualMachineScaleSetIdentityArgs> identity) {
             this.identity = identity;
             return this;
         }
 
-        public Builder setIdentity(@Nullable VirtualMachineScaleSetIdentityArgs identity) {
+        public Builder identity(@Nullable VirtualMachineScaleSetIdentityArgs identity) {
             this.identity = Input.ofNullable(identity);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setOrchestrationMode(@Nullable Input<Either<String,OrchestrationMode>> orchestrationMode) {
+        public Builder orchestrationMode(@Nullable Input<Either<String,OrchestrationMode>> orchestrationMode) {
             this.orchestrationMode = orchestrationMode;
             return this;
         }
 
-        public Builder setOrchestrationMode(@Nullable Either<String,OrchestrationMode> orchestrationMode) {
+        public Builder orchestrationMode(@Nullable Either<String,OrchestrationMode> orchestrationMode) {
             this.orchestrationMode = Input.ofNullable(orchestrationMode);
             return this;
         }
 
-        public Builder setOverprovision(@Nullable Input<Boolean> overprovision) {
+        public Builder overprovision(@Nullable Input<Boolean> overprovision) {
             this.overprovision = overprovision;
             return this;
         }
 
-        public Builder setOverprovision(@Nullable Boolean overprovision) {
+        public Builder overprovision(@Nullable Boolean overprovision) {
             this.overprovision = Input.ofNullable(overprovision);
             return this;
         }
 
-        public Builder setPlan(@Nullable Input<PlanArgs> plan) {
+        public Builder plan(@Nullable Input<PlanArgs> plan) {
             this.plan = plan;
             return this;
         }
 
-        public Builder setPlan(@Nullable PlanArgs plan) {
+        public Builder plan(@Nullable PlanArgs plan) {
             this.plan = Input.ofNullable(plan);
             return this;
         }
 
-        public Builder setPlatformFaultDomainCount(@Nullable Input<Integer> platformFaultDomainCount) {
+        public Builder platformFaultDomainCount(@Nullable Input<Integer> platformFaultDomainCount) {
             this.platformFaultDomainCount = platformFaultDomainCount;
             return this;
         }
 
-        public Builder setPlatformFaultDomainCount(@Nullable Integer platformFaultDomainCount) {
+        public Builder platformFaultDomainCount(@Nullable Integer platformFaultDomainCount) {
             this.platformFaultDomainCount = Input.ofNullable(platformFaultDomainCount);
             return this;
         }
 
-        public Builder setProximityPlacementGroup(@Nullable Input<SubResourceArgs> proximityPlacementGroup) {
+        public Builder proximityPlacementGroup(@Nullable Input<SubResourceArgs> proximityPlacementGroup) {
             this.proximityPlacementGroup = proximityPlacementGroup;
             return this;
         }
 
-        public Builder setProximityPlacementGroup(@Nullable SubResourceArgs proximityPlacementGroup) {
+        public Builder proximityPlacementGroup(@Nullable SubResourceArgs proximityPlacementGroup) {
             this.proximityPlacementGroup = Input.ofNullable(proximityPlacementGroup);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setScaleInPolicy(@Nullable Input<ScaleInPolicyArgs> scaleInPolicy) {
+        public Builder scaleInPolicy(@Nullable Input<ScaleInPolicyArgs> scaleInPolicy) {
             this.scaleInPolicy = scaleInPolicy;
             return this;
         }
 
-        public Builder setScaleInPolicy(@Nullable ScaleInPolicyArgs scaleInPolicy) {
+        public Builder scaleInPolicy(@Nullable ScaleInPolicyArgs scaleInPolicy) {
             this.scaleInPolicy = Input.ofNullable(scaleInPolicy);
             return this;
         }
 
-        public Builder setSinglePlacementGroup(@Nullable Input<Boolean> singlePlacementGroup) {
+        public Builder singlePlacementGroup(@Nullable Input<Boolean> singlePlacementGroup) {
             this.singlePlacementGroup = singlePlacementGroup;
             return this;
         }
 
-        public Builder setSinglePlacementGroup(@Nullable Boolean singlePlacementGroup) {
+        public Builder singlePlacementGroup(@Nullable Boolean singlePlacementGroup) {
             this.singlePlacementGroup = Input.ofNullable(singlePlacementGroup);
             return this;
         }
 
-        public Builder setSku(@Nullable Input<SkuArgs> sku) {
+        public Builder sku(@Nullable Input<SkuArgs> sku) {
             this.sku = sku;
             return this;
         }
 
-        public Builder setSku(@Nullable SkuArgs sku) {
+        public Builder sku(@Nullable SkuArgs sku) {
             this.sku = Input.ofNullable(sku);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setUpgradePolicy(@Nullable Input<UpgradePolicyArgs> upgradePolicy) {
+        public Builder upgradePolicy(@Nullable Input<UpgradePolicyArgs> upgradePolicy) {
             this.upgradePolicy = upgradePolicy;
             return this;
         }
 
-        public Builder setUpgradePolicy(@Nullable UpgradePolicyArgs upgradePolicy) {
+        public Builder upgradePolicy(@Nullable UpgradePolicyArgs upgradePolicy) {
             this.upgradePolicy = Input.ofNullable(upgradePolicy);
             return this;
         }
 
-        public Builder setVirtualMachineProfile(@Nullable Input<VirtualMachineScaleSetVMProfileArgs> virtualMachineProfile) {
+        public Builder virtualMachineProfile(@Nullable Input<VirtualMachineScaleSetVMProfileArgs> virtualMachineProfile) {
             this.virtualMachineProfile = virtualMachineProfile;
             return this;
         }
 
-        public Builder setVirtualMachineProfile(@Nullable VirtualMachineScaleSetVMProfileArgs virtualMachineProfile) {
+        public Builder virtualMachineProfile(@Nullable VirtualMachineScaleSetVMProfileArgs virtualMachineProfile) {
             this.virtualMachineProfile = Input.ofNullable(virtualMachineProfile);
             return this;
         }
 
-        public Builder setVmScaleSetName(@Nullable Input<String> vmScaleSetName) {
+        public Builder vmScaleSetName(@Nullable Input<String> vmScaleSetName) {
             this.vmScaleSetName = vmScaleSetName;
             return this;
         }
 
-        public Builder setVmScaleSetName(@Nullable String vmScaleSetName) {
+        public Builder vmScaleSetName(@Nullable String vmScaleSetName) {
             this.vmScaleSetName = Input.ofNullable(vmScaleSetName);
             return this;
         }
 
-        public Builder setZoneBalance(@Nullable Input<Boolean> zoneBalance) {
+        public Builder zoneBalance(@Nullable Input<Boolean> zoneBalance) {
             this.zoneBalance = zoneBalance;
             return this;
         }
 
-        public Builder setZoneBalance(@Nullable Boolean zoneBalance) {
+        public Builder zoneBalance(@Nullable Boolean zoneBalance) {
             this.zoneBalance = Input.ofNullable(zoneBalance);
             return this;
         }
 
-        public Builder setZones(@Nullable Input<List<String>> zones) {
+        public Builder zones(@Nullable Input<List<String>> zones) {
             this.zones = zones;
             return this;
         }
 
-        public Builder setZones(@Nullable List<String> zones) {
+        public Builder zones(@Nullable List<String> zones) {
             this.zones = Input.ofNullable(zones);
             return this;
         }

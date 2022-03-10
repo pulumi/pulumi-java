@@ -119,52 +119,52 @@ public final class IotHubResourceEventHubConsumerGroupArgs extends io.pulumi.res
     	      this.resourceName = defaults.resourceName;
         }
 
-        public Builder setEventHubEndpointName(Input<String> eventHubEndpointName) {
+        public Builder eventHubEndpointName(Input<String> eventHubEndpointName) {
             this.eventHubEndpointName = Objects.requireNonNull(eventHubEndpointName);
             return this;
         }
 
-        public Builder setEventHubEndpointName(String eventHubEndpointName) {
+        public Builder eventHubEndpointName(String eventHubEndpointName) {
             this.eventHubEndpointName = Input.of(Objects.requireNonNull(eventHubEndpointName));
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setProperties(@Nullable Input<EventHubConsumerGroupNameArgs> properties) {
+        public Builder properties(@Nullable Input<EventHubConsumerGroupNameArgs> properties) {
             this.properties = properties;
             return this;
         }
 
-        public Builder setProperties(@Nullable EventHubConsumerGroupNameArgs properties) {
+        public Builder properties(@Nullable EventHubConsumerGroupNameArgs properties) {
             this.properties = Input.ofNullable(properties);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setResourceName(Input<String> resourceName) {
+        public Builder resourceName(Input<String> resourceName) {
             this.resourceName = Objects.requireNonNull(resourceName);
             return this;
         }
 
-        public Builder setResourceName(String resourceName) {
+        public Builder resourceName(String resourceName) {
             this.resourceName = Input.of(Objects.requireNonNull(resourceName));
             return this;
         }

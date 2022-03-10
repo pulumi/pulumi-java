@@ -151,72 +151,72 @@ public final class StaticSiteUserProvidedFunctionAppForStaticSiteArgs extends io
     	      this.resourceGroupName = defaults.resourceGroupName;
         }
 
-        public Builder setFunctionAppName(@Nullable Input<String> functionAppName) {
+        public Builder functionAppName(@Nullable Input<String> functionAppName) {
             this.functionAppName = functionAppName;
             return this;
         }
 
-        public Builder setFunctionAppName(@Nullable String functionAppName) {
+        public Builder functionAppName(@Nullable String functionAppName) {
             this.functionAppName = Input.ofNullable(functionAppName);
             return this;
         }
 
-        public Builder setFunctionAppRegion(@Nullable Input<String> functionAppRegion) {
+        public Builder functionAppRegion(@Nullable Input<String> functionAppRegion) {
             this.functionAppRegion = functionAppRegion;
             return this;
         }
 
-        public Builder setFunctionAppRegion(@Nullable String functionAppRegion) {
+        public Builder functionAppRegion(@Nullable String functionAppRegion) {
             this.functionAppRegion = Input.ofNullable(functionAppRegion);
             return this;
         }
 
-        public Builder setFunctionAppResourceId(@Nullable Input<String> functionAppResourceId) {
+        public Builder functionAppResourceId(@Nullable Input<String> functionAppResourceId) {
             this.functionAppResourceId = functionAppResourceId;
             return this;
         }
 
-        public Builder setFunctionAppResourceId(@Nullable String functionAppResourceId) {
+        public Builder functionAppResourceId(@Nullable String functionAppResourceId) {
             this.functionAppResourceId = Input.ofNullable(functionAppResourceId);
             return this;
         }
 
-        public Builder setIsForced(@Nullable Input<Boolean> isForced) {
+        public Builder isForced(@Nullable Input<Boolean> isForced) {
             this.isForced = isForced;
             return this;
         }
 
-        public Builder setIsForced(@Nullable Boolean isForced) {
+        public Builder isForced(@Nullable Boolean isForced) {
             this.isForced = Input.ofNullable(isForced);
             return this;
         }
 
-        public Builder setKind(@Nullable Input<String> kind) {
+        public Builder kind(@Nullable Input<String> kind) {
             this.kind = kind;
             return this;
         }
 
-        public Builder setKind(@Nullable String kind) {
+        public Builder kind(@Nullable String kind) {
             this.kind = Input.ofNullable(kind);
             return this;
         }
 
-        public Builder setName(Input<String> name) {
+        public Builder name(Input<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }

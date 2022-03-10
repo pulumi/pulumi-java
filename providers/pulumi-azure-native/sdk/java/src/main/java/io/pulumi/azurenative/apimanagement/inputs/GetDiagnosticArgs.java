@@ -84,17 +84,17 @@ public final class GetDiagnosticArgs extends io.pulumi.resources.InvokeArgs {
     	      this.serviceName = defaults.serviceName;
         }
 
-        public Builder setDiagnosticId(String diagnosticId) {
+        public Builder diagnosticId(String diagnosticId) {
             this.diagnosticId = Objects.requireNonNull(diagnosticId);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setServiceName(String serviceName) {
+        public Builder serviceName(String serviceName) {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
         }

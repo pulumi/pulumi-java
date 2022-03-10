@@ -107,42 +107,42 @@ public final class AccessPolicyEntryArgs extends io.pulumi.resources.ResourceArg
     	      this.tenantId = defaults.tenantId;
         }
 
-        public Builder setApplicationId(@Nullable Input<String> applicationId) {
+        public Builder applicationId(@Nullable Input<String> applicationId) {
             this.applicationId = applicationId;
             return this;
         }
 
-        public Builder setApplicationId(@Nullable String applicationId) {
+        public Builder applicationId(@Nullable String applicationId) {
             this.applicationId = Input.ofNullable(applicationId);
             return this;
         }
 
-        public Builder setObjectId(Input<String> objectId) {
+        public Builder objectId(Input<String> objectId) {
             this.objectId = Objects.requireNonNull(objectId);
             return this;
         }
 
-        public Builder setObjectId(String objectId) {
+        public Builder objectId(String objectId) {
             this.objectId = Input.of(Objects.requireNonNull(objectId));
             return this;
         }
 
-        public Builder setPermissions(Input<PermissionsArgs> permissions) {
+        public Builder permissions(Input<PermissionsArgs> permissions) {
             this.permissions = Objects.requireNonNull(permissions);
             return this;
         }
 
-        public Builder setPermissions(PermissionsArgs permissions) {
+        public Builder permissions(PermissionsArgs permissions) {
             this.permissions = Input.of(Objects.requireNonNull(permissions));
             return this;
         }
 
-        public Builder setTenantId(Input<String> tenantId) {
+        public Builder tenantId(Input<String> tenantId) {
             this.tenantId = Objects.requireNonNull(tenantId);
             return this;
         }
 
-        public Builder setTenantId(String tenantId) {
+        public Builder tenantId(String tenantId) {
             this.tenantId = Input.of(Objects.requireNonNull(tenantId));
             return this;
         }

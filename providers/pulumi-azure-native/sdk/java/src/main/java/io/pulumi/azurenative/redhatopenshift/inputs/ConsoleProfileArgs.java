@@ -57,12 +57,12 @@ public final class ConsoleProfileArgs extends io.pulumi.resources.ResourceArgs {
     	      this.url = defaults.url;
         }
 
-        public Builder setUrl(@Nullable Input<String> url) {
+        public Builder url(@Nullable Input<String> url) {
             this.url = url;
             return this;
         }
 
-        public Builder setUrl(@Nullable String url) {
+        public Builder url(@Nullable String url) {
             this.url = Input.ofNullable(url);
             return this;
         }

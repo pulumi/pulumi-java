@@ -56,12 +56,12 @@ public final class NsgReferenceArgs extends io.pulumi.resources.ResourceArgs {
     	      this.sourceArmResourceId = defaults.sourceArmResourceId;
         }
 
-        public Builder setSourceArmResourceId(Input<String> sourceArmResourceId) {
+        public Builder sourceArmResourceId(Input<String> sourceArmResourceId) {
             this.sourceArmResourceId = Objects.requireNonNull(sourceArmResourceId);
             return this;
         }
 
-        public Builder setSourceArmResourceId(String sourceArmResourceId) {
+        public Builder sourceArmResourceId(String sourceArmResourceId) {
             this.sourceArmResourceId = Input.of(Objects.requireNonNull(sourceArmResourceId));
             return this;
         }

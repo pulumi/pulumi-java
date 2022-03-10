@@ -58,12 +58,12 @@ public final class UniqueKeyArgs extends io.pulumi.resources.ResourceArgs {
     	      this.paths = defaults.paths;
         }
 
-        public Builder setPaths(@Nullable Input<List<String>> paths) {
+        public Builder paths(@Nullable Input<List<String>> paths) {
             this.paths = paths;
             return this;
         }
 
-        public Builder setPaths(@Nullable List<String> paths) {
+        public Builder paths(@Nullable List<String> paths) {
             this.paths = Input.ofNullable(paths);
             return this;
         }

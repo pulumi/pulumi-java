@@ -92,17 +92,17 @@ public final class PoliciesResponse extends io.pulumi.resources.InvokeArgs {
     	      this.trustPolicy = defaults.trustPolicy;
         }
 
-        public Builder setQuarantinePolicy(@Nullable QuarantinePolicyResponse quarantinePolicy) {
+        public Builder quarantinePolicy(@Nullable QuarantinePolicyResponse quarantinePolicy) {
             this.quarantinePolicy = quarantinePolicy;
             return this;
         }
 
-        public Builder setRetentionPolicy(@Nullable RetentionPolicyResponse retentionPolicy) {
+        public Builder retentionPolicy(@Nullable RetentionPolicyResponse retentionPolicy) {
             this.retentionPolicy = retentionPolicy;
             return this;
         }
 
-        public Builder setTrustPolicy(@Nullable TrustPolicyResponse trustPolicy) {
+        public Builder trustPolicy(@Nullable TrustPolicyResponse trustPolicy) {
             this.trustPolicy = trustPolicy;
             return this;
         }

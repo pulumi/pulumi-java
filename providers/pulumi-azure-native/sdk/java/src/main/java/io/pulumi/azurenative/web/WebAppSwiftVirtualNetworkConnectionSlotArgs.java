@@ -135,62 +135,62 @@ public final class WebAppSwiftVirtualNetworkConnectionSlotArgs extends io.pulumi
     	      this.swiftSupported = defaults.swiftSupported;
         }
 
-        public Builder setKind(@Nullable Input<String> kind) {
+        public Builder kind(@Nullable Input<String> kind) {
             this.kind = kind;
             return this;
         }
 
-        public Builder setKind(@Nullable String kind) {
+        public Builder kind(@Nullable String kind) {
             this.kind = Input.ofNullable(kind);
             return this;
         }
 
-        public Builder setName(Input<String> name) {
+        public Builder name(Input<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setSlot(Input<String> slot) {
+        public Builder slot(Input<String> slot) {
             this.slot = Objects.requireNonNull(slot);
             return this;
         }
 
-        public Builder setSlot(String slot) {
+        public Builder slot(String slot) {
             this.slot = Input.of(Objects.requireNonNull(slot));
             return this;
         }
 
-        public Builder setSubnetResourceId(@Nullable Input<String> subnetResourceId) {
+        public Builder subnetResourceId(@Nullable Input<String> subnetResourceId) {
             this.subnetResourceId = subnetResourceId;
             return this;
         }
 
-        public Builder setSubnetResourceId(@Nullable String subnetResourceId) {
+        public Builder subnetResourceId(@Nullable String subnetResourceId) {
             this.subnetResourceId = Input.ofNullable(subnetResourceId);
             return this;
         }
 
-        public Builder setSwiftSupported(@Nullable Input<Boolean> swiftSupported) {
+        public Builder swiftSupported(@Nullable Input<Boolean> swiftSupported) {
             this.swiftSupported = swiftSupported;
             return this;
         }
 
-        public Builder setSwiftSupported(@Nullable Boolean swiftSupported) {
+        public Builder swiftSupported(@Nullable Boolean swiftSupported) {
             this.swiftSupported = Input.ofNullable(swiftSupported);
             return this;
         }

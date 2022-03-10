@@ -90,32 +90,32 @@ public final class ManagementPolicySnapShotArgs extends io.pulumi.resources.Reso
     	      this.tierToCool = defaults.tierToCool;
         }
 
-        public Builder setDelete(@Nullable Input<DateAfterCreationArgs> delete) {
+        public Builder delete(@Nullable Input<DateAfterCreationArgs> delete) {
             this.delete = delete;
             return this;
         }
 
-        public Builder setDelete(@Nullable DateAfterCreationArgs delete) {
+        public Builder delete(@Nullable DateAfterCreationArgs delete) {
             this.delete = Input.ofNullable(delete);
             return this;
         }
 
-        public Builder setTierToArchive(@Nullable Input<DateAfterCreationArgs> tierToArchive) {
+        public Builder tierToArchive(@Nullable Input<DateAfterCreationArgs> tierToArchive) {
             this.tierToArchive = tierToArchive;
             return this;
         }
 
-        public Builder setTierToArchive(@Nullable DateAfterCreationArgs tierToArchive) {
+        public Builder tierToArchive(@Nullable DateAfterCreationArgs tierToArchive) {
             this.tierToArchive = Input.ofNullable(tierToArchive);
             return this;
         }
 
-        public Builder setTierToCool(@Nullable Input<DateAfterCreationArgs> tierToCool) {
+        public Builder tierToCool(@Nullable Input<DateAfterCreationArgs> tierToCool) {
             this.tierToCool = tierToCool;
             return this;
         }
 
-        public Builder setTierToCool(@Nullable DateAfterCreationArgs tierToCool) {
+        public Builder tierToCool(@Nullable DateAfterCreationArgs tierToCool) {
             this.tierToCool = Input.ofNullable(tierToCool);
             return this;
         }

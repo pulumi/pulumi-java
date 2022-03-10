@@ -232,62 +232,62 @@ public final class GetWorkspaceResult {
     	      this.usable = defaults.usable;
         }
 
-        public Builder setEndpointUri(String endpointUri) {
+        public Builder endpointUri(String endpointUri) {
             this.endpointUri = Objects.requireNonNull(endpointUri);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setIdentity(@Nullable QuantumWorkspaceResponseIdentity identity) {
+        public Builder identity(@Nullable QuantumWorkspaceResponseIdentity identity) {
             this.identity = identity;
             return this;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setProviders(@Nullable List<ProviderResponse> providers) {
+        public Builder providers(@Nullable List<ProviderResponse> providers) {
             this.providers = providers;
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setStorageAccount(@Nullable String storageAccount) {
+        public Builder storageAccount(@Nullable String storageAccount) {
             this.storageAccount = storageAccount;
             return this;
         }
 
-        public Builder setSystemData(SystemDataResponse systemData) {
+        public Builder systemData(SystemDataResponse systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setUsable(String usable) {
+        public Builder usable(String usable) {
             this.usable = Objects.requireNonNull(usable);
             return this;
         }

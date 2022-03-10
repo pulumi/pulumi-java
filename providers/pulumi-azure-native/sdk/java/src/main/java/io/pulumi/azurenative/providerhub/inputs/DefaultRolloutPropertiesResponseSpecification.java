@@ -142,42 +142,42 @@ public final class DefaultRolloutPropertiesResponseSpecification extends io.pulu
     	      this.restOfTheWorldGroupTwo = defaults.restOfTheWorldGroupTwo;
         }
 
-        public Builder setCanary(@Nullable DefaultRolloutSpecificationResponseCanary canary) {
+        public Builder canary(@Nullable DefaultRolloutSpecificationResponseCanary canary) {
             this.canary = canary;
             return this;
         }
 
-        public Builder setHighTraffic(@Nullable DefaultRolloutSpecificationResponseHighTraffic highTraffic) {
+        public Builder highTraffic(@Nullable DefaultRolloutSpecificationResponseHighTraffic highTraffic) {
             this.highTraffic = highTraffic;
             return this;
         }
 
-        public Builder setLowTraffic(@Nullable DefaultRolloutSpecificationResponseLowTraffic lowTraffic) {
+        public Builder lowTraffic(@Nullable DefaultRolloutSpecificationResponseLowTraffic lowTraffic) {
             this.lowTraffic = lowTraffic;
             return this;
         }
 
-        public Builder setMediumTraffic(@Nullable DefaultRolloutSpecificationResponseMediumTraffic mediumTraffic) {
+        public Builder mediumTraffic(@Nullable DefaultRolloutSpecificationResponseMediumTraffic mediumTraffic) {
             this.mediumTraffic = mediumTraffic;
             return this;
         }
 
-        public Builder setProviderRegistration(@Nullable DefaultRolloutSpecificationResponseProviderRegistration providerRegistration) {
+        public Builder providerRegistration(@Nullable DefaultRolloutSpecificationResponseProviderRegistration providerRegistration) {
             this.providerRegistration = providerRegistration;
             return this;
         }
 
-        public Builder setResourceTypeRegistrations(@Nullable List<ResourceTypeRegistrationResponse> resourceTypeRegistrations) {
+        public Builder resourceTypeRegistrations(@Nullable List<ResourceTypeRegistrationResponse> resourceTypeRegistrations) {
             this.resourceTypeRegistrations = resourceTypeRegistrations;
             return this;
         }
 
-        public Builder setRestOfTheWorldGroupOne(@Nullable DefaultRolloutSpecificationResponseRestOfTheWorldGroupOne restOfTheWorldGroupOne) {
+        public Builder restOfTheWorldGroupOne(@Nullable DefaultRolloutSpecificationResponseRestOfTheWorldGroupOne restOfTheWorldGroupOne) {
             this.restOfTheWorldGroupOne = restOfTheWorldGroupOne;
             return this;
         }
 
-        public Builder setRestOfTheWorldGroupTwo(@Nullable DefaultRolloutSpecificationResponseRestOfTheWorldGroupTwo restOfTheWorldGroupTwo) {
+        public Builder restOfTheWorldGroupTwo(@Nullable DefaultRolloutSpecificationResponseRestOfTheWorldGroupTwo restOfTheWorldGroupTwo) {
             this.restOfTheWorldGroupTwo = restOfTheWorldGroupTwo;
             return this;
         }

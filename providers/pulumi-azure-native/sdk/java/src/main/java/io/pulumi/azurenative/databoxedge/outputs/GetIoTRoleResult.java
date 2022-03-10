@@ -251,67 +251,67 @@ public final class GetIoTRoleResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setComputeResource(@Nullable ComputeResourceResponse computeResource) {
+        public Builder computeResource(@Nullable ComputeResourceResponse computeResource) {
             this.computeResource = computeResource;
             return this;
         }
 
-        public Builder setHostPlatform(String hostPlatform) {
+        public Builder hostPlatform(String hostPlatform) {
             this.hostPlatform = Objects.requireNonNull(hostPlatform);
             return this;
         }
 
-        public Builder setHostPlatformType(String hostPlatformType) {
+        public Builder hostPlatformType(String hostPlatformType) {
             this.hostPlatformType = Objects.requireNonNull(hostPlatformType);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setIoTDeviceDetails(IoTDeviceInfoResponse ioTDeviceDetails) {
+        public Builder ioTDeviceDetails(IoTDeviceInfoResponse ioTDeviceDetails) {
             this.ioTDeviceDetails = Objects.requireNonNull(ioTDeviceDetails);
             return this;
         }
 
-        public Builder setIoTEdgeAgentInfo(@Nullable IoTEdgeAgentInfoResponse ioTEdgeAgentInfo) {
+        public Builder ioTEdgeAgentInfo(@Nullable IoTEdgeAgentInfoResponse ioTEdgeAgentInfo) {
             this.ioTEdgeAgentInfo = ioTEdgeAgentInfo;
             return this;
         }
 
-        public Builder setIoTEdgeDeviceDetails(IoTDeviceInfoResponse ioTEdgeDeviceDetails) {
+        public Builder ioTEdgeDeviceDetails(IoTDeviceInfoResponse ioTEdgeDeviceDetails) {
             this.ioTEdgeDeviceDetails = Objects.requireNonNull(ioTEdgeDeviceDetails);
             return this;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setRoleStatus(String roleStatus) {
+        public Builder roleStatus(String roleStatus) {
             this.roleStatus = Objects.requireNonNull(roleStatus);
             return this;
         }
 
-        public Builder setShareMappings(@Nullable List<MountPointMapResponse> shareMappings) {
+        public Builder shareMappings(@Nullable List<MountPointMapResponse> shareMappings) {
             this.shareMappings = shareMappings;
             return this;
         }
 
-        public Builder setSystemData(SystemDataResponse systemData) {
+        public Builder systemData(SystemDataResponse systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

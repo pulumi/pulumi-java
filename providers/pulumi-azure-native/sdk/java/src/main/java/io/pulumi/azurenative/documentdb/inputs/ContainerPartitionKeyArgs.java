@@ -94,32 +94,32 @@ public final class ContainerPartitionKeyArgs extends io.pulumi.resources.Resourc
     	      this.version = defaults.version;
         }
 
-        public Builder setKind(@Nullable Input<Either<String,PartitionKind>> kind) {
+        public Builder kind(@Nullable Input<Either<String,PartitionKind>> kind) {
             this.kind = kind;
             return this;
         }
 
-        public Builder setKind(@Nullable Either<String,PartitionKind> kind) {
+        public Builder kind(@Nullable Either<String,PartitionKind> kind) {
             this.kind = Input.ofNullable(kind);
             return this;
         }
 
-        public Builder setPaths(@Nullable Input<List<String>> paths) {
+        public Builder paths(@Nullable Input<List<String>> paths) {
             this.paths = paths;
             return this;
         }
 
-        public Builder setPaths(@Nullable List<String> paths) {
+        public Builder paths(@Nullable List<String> paths) {
             this.paths = Input.ofNullable(paths);
             return this;
         }
 
-        public Builder setVersion(@Nullable Input<Integer> version) {
+        public Builder version(@Nullable Input<Integer> version) {
             this.version = version;
             return this;
         }
 
-        public Builder setVersion(@Nullable Integer version) {
+        public Builder version(@Nullable Integer version) {
             this.version = Input.ofNullable(version);
             return this;
         }

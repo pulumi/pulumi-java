@@ -81,17 +81,17 @@ public final class PredictionResponseMappings {
     	      this.score = defaults.score;
         }
 
-        public Builder setGrade(String grade) {
+        public Builder grade(String grade) {
             this.grade = Objects.requireNonNull(grade);
             return this;
         }
 
-        public Builder setReason(String reason) {
+        public Builder reason(String reason) {
             this.reason = Objects.requireNonNull(reason);
             return this;
         }
 
-        public Builder setScore(String score) {
+        public Builder score(String score) {
             this.score = Objects.requireNonNull(score);
             return this;
         }

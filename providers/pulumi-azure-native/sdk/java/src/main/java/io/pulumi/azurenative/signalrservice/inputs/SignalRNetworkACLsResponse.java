@@ -93,17 +93,17 @@ public final class SignalRNetworkACLsResponse extends io.pulumi.resources.Invoke
     	      this.publicNetwork = defaults.publicNetwork;
         }
 
-        public Builder setDefaultAction(@Nullable String defaultAction) {
+        public Builder defaultAction(@Nullable String defaultAction) {
             this.defaultAction = defaultAction;
             return this;
         }
 
-        public Builder setPrivateEndpoints(@Nullable List<PrivateEndpointACLResponse> privateEndpoints) {
+        public Builder privateEndpoints(@Nullable List<PrivateEndpointACLResponse> privateEndpoints) {
             this.privateEndpoints = privateEndpoints;
             return this;
         }
 
-        public Builder setPublicNetwork(@Nullable NetworkACLResponse publicNetwork) {
+        public Builder publicNetwork(@Nullable NetworkACLResponse publicNetwork) {
             this.publicNetwork = publicNetwork;
             return this;
         }

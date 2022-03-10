@@ -75,12 +75,12 @@ public final class OpenShiftManagedClusterIdentityProviderResponse extends io.pu
     	      this.provider = defaults.provider;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setProvider(@Nullable OpenShiftManagedClusterAADIdentityProviderResponse provider) {
+        public Builder provider(@Nullable OpenShiftManagedClusterAADIdentityProviderResponse provider) {
             this.provider = provider;
             return this;
         }

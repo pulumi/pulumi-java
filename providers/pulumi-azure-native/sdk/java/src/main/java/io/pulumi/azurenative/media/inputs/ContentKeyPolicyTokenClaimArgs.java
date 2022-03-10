@@ -74,22 +74,22 @@ public final class ContentKeyPolicyTokenClaimArgs extends io.pulumi.resources.Re
     	      this.claimValue = defaults.claimValue;
         }
 
-        public Builder setClaimType(@Nullable Input<String> claimType) {
+        public Builder claimType(@Nullable Input<String> claimType) {
             this.claimType = claimType;
             return this;
         }
 
-        public Builder setClaimType(@Nullable String claimType) {
+        public Builder claimType(@Nullable String claimType) {
             this.claimType = Input.ofNullable(claimType);
             return this;
         }
 
-        public Builder setClaimValue(@Nullable Input<String> claimValue) {
+        public Builder claimValue(@Nullable Input<String> claimValue) {
             this.claimValue = claimValue;
             return this;
         }
 
-        public Builder setClaimValue(@Nullable String claimValue) {
+        public Builder claimValue(@Nullable String claimValue) {
             this.claimValue = Input.ofNullable(claimValue);
             return this;
         }

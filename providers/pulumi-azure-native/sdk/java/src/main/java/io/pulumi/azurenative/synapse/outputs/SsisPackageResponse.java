@@ -168,42 +168,42 @@ public final class SsisPackageResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setFolderId(@Nullable Double folderId) {
+        public Builder folderId(@Nullable Double folderId) {
             this.folderId = folderId;
             return this;
         }
 
-        public Builder setId(@Nullable Double id) {
+        public Builder id(@Nullable Double id) {
             this.id = id;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setParameters(@Nullable List<SsisParameterResponse> parameters) {
+        public Builder parameters(@Nullable List<SsisParameterResponse> parameters) {
             this.parameters = parameters;
             return this;
         }
 
-        public Builder setProjectId(@Nullable Double projectId) {
+        public Builder projectId(@Nullable Double projectId) {
             this.projectId = projectId;
             return this;
         }
 
-        public Builder setProjectVersion(@Nullable Double projectVersion) {
+        public Builder projectVersion(@Nullable Double projectVersion) {
             this.projectVersion = projectVersion;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

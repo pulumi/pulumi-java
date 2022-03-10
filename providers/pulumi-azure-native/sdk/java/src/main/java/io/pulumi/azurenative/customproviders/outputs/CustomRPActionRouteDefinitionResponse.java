@@ -83,17 +83,17 @@ public final class CustomRPActionRouteDefinitionResponse {
     	      this.routingType = defaults.routingType;
         }
 
-        public Builder setEndpoint(String endpoint) {
+        public Builder endpoint(String endpoint) {
             this.endpoint = Objects.requireNonNull(endpoint);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setRoutingType(@Nullable String routingType) {
+        public Builder routingType(@Nullable String routingType) {
             this.routingType = routingType;
             return this;
         }

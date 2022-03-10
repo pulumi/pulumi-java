@@ -76,12 +76,12 @@ public final class AzureMachineLearningWebServiceInputsResponse extends io.pulum
     	      this.name = defaults.name;
         }
 
-        public Builder setColumnNames(@Nullable List<AzureMachineLearningWebServiceInputColumnResponse> columnNames) {
+        public Builder columnNames(@Nullable List<AzureMachineLearningWebServiceInputColumnResponse> columnNames) {
             this.columnNames = columnNames;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }

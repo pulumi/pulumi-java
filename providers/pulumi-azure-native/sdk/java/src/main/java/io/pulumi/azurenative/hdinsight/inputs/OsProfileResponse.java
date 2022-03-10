@@ -57,7 +57,7 @@ public final class OsProfileResponse extends io.pulumi.resources.InvokeArgs {
     	      this.linuxOperatingSystemProfile = defaults.linuxOperatingSystemProfile;
         }
 
-        public Builder setLinuxOperatingSystemProfile(@Nullable LinuxOperatingSystemProfileResponse linuxOperatingSystemProfile) {
+        public Builder linuxOperatingSystemProfile(@Nullable LinuxOperatingSystemProfileResponse linuxOperatingSystemProfile) {
             this.linuxOperatingSystemProfile = linuxOperatingSystemProfile;
             return this;
         }

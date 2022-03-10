@@ -84,17 +84,17 @@ public final class DataDisksGroupsResponse {
     	      this.storageAccountType = defaults.storageAccountType;
         }
 
-        public Builder setDiskSizeGB(Integer diskSizeGB) {
+        public Builder diskSizeGB(Integer diskSizeGB) {
             this.diskSizeGB = Objects.requireNonNull(diskSizeGB);
             return this;
         }
 
-        public Builder setDisksPerNode(@Nullable Integer disksPerNode) {
+        public Builder disksPerNode(@Nullable Integer disksPerNode) {
             this.disksPerNode = disksPerNode;
             return this;
         }
 
-        public Builder setStorageAccountType(String storageAccountType) {
+        public Builder storageAccountType(String storageAccountType) {
             this.storageAccountType = Objects.requireNonNull(storageAccountType);
             return this;
         }

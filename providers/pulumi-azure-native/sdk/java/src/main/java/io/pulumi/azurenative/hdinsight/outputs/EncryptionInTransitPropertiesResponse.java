@@ -50,7 +50,7 @@ public final class EncryptionInTransitPropertiesResponse {
     	      this.isEncryptionInTransitEnabled = defaults.isEncryptionInTransitEnabled;
         }
 
-        public Builder setIsEncryptionInTransitEnabled(@Nullable Boolean isEncryptionInTransitEnabled) {
+        public Builder isEncryptionInTransitEnabled(@Nullable Boolean isEncryptionInTransitEnabled) {
             this.isEncryptionInTransitEnabled = isEncryptionInTransitEnabled;
             return this;
         }

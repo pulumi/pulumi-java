@@ -164,42 +164,42 @@ public final class GetSqlServerResult {
     	      this.version = defaults.version;
         }
 
-        public Builder setCores(@Nullable Integer cores) {
+        public Builder cores(@Nullable Integer cores) {
             this.cores = cores;
             return this;
         }
 
-        public Builder setEdition(@Nullable String edition) {
+        public Builder edition(@Nullable String edition) {
             this.edition = edition;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPropertyBag(@Nullable String propertyBag) {
+        public Builder propertyBag(@Nullable String propertyBag) {
             this.propertyBag = propertyBag;
             return this;
         }
 
-        public Builder setRegistrationID(@Nullable String registrationID) {
+        public Builder registrationID(@Nullable String registrationID) {
             this.registrationID = registrationID;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setVersion(@Nullable String version) {
+        public Builder version(@Nullable String version) {
             this.version = version;
             return this;
         }

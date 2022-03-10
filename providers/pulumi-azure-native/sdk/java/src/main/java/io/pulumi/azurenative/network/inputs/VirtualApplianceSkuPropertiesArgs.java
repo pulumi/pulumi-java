@@ -90,32 +90,32 @@ public final class VirtualApplianceSkuPropertiesArgs extends io.pulumi.resources
     	      this.vendor = defaults.vendor;
         }
 
-        public Builder setBundledScaleUnit(@Nullable Input<String> bundledScaleUnit) {
+        public Builder bundledScaleUnit(@Nullable Input<String> bundledScaleUnit) {
             this.bundledScaleUnit = bundledScaleUnit;
             return this;
         }
 
-        public Builder setBundledScaleUnit(@Nullable String bundledScaleUnit) {
+        public Builder bundledScaleUnit(@Nullable String bundledScaleUnit) {
             this.bundledScaleUnit = Input.ofNullable(bundledScaleUnit);
             return this;
         }
 
-        public Builder setMarketPlaceVersion(@Nullable Input<String> marketPlaceVersion) {
+        public Builder marketPlaceVersion(@Nullable Input<String> marketPlaceVersion) {
             this.marketPlaceVersion = marketPlaceVersion;
             return this;
         }
 
-        public Builder setMarketPlaceVersion(@Nullable String marketPlaceVersion) {
+        public Builder marketPlaceVersion(@Nullable String marketPlaceVersion) {
             this.marketPlaceVersion = Input.ofNullable(marketPlaceVersion);
             return this;
         }
 
-        public Builder setVendor(@Nullable Input<String> vendor) {
+        public Builder vendor(@Nullable Input<String> vendor) {
             this.vendor = vendor;
             return this;
         }
 
-        public Builder setVendor(@Nullable String vendor) {
+        public Builder vendor(@Nullable String vendor) {
             this.vendor = Input.ofNullable(vendor);
             return this;
         }

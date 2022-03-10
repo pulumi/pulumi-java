@@ -123,27 +123,27 @@ public final class SourceControlAuthInfoResponse extends io.pulumi.resources.Inv
     	      this.tokenType = defaults.tokenType;
         }
 
-        public Builder setExpiresIn(@Nullable Integer expiresIn) {
+        public Builder expiresIn(@Nullable Integer expiresIn) {
             this.expiresIn = expiresIn;
             return this;
         }
 
-        public Builder setRefreshToken(@Nullable String refreshToken) {
+        public Builder refreshToken(@Nullable String refreshToken) {
             this.refreshToken = refreshToken;
             return this;
         }
 
-        public Builder setScope(@Nullable String scope) {
+        public Builder scope(@Nullable String scope) {
             this.scope = scope;
             return this;
         }
 
-        public Builder setToken(String token) {
+        public Builder token(String token) {
             this.token = Objects.requireNonNull(token);
             return this;
         }
 
-        public Builder setTokenType(@Nullable String tokenType) {
+        public Builder tokenType(@Nullable String tokenType) {
             this.tokenType = tokenType;
             return this;
         }

@@ -109,22 +109,22 @@ public final class ContainerPartitionKeyResponse extends io.pulumi.resources.Inv
     	      this.version = defaults.version;
         }
 
-        public Builder setKind(@Nullable String kind) {
+        public Builder kind(@Nullable String kind) {
             this.kind = kind;
             return this;
         }
 
-        public Builder setPaths(@Nullable List<String> paths) {
+        public Builder paths(@Nullable List<String> paths) {
             this.paths = paths;
             return this;
         }
 
-        public Builder setSystemKey(Boolean systemKey) {
+        public Builder systemKey(Boolean systemKey) {
             this.systemKey = Objects.requireNonNull(systemKey);
             return this;
         }
 
-        public Builder setVersion(@Nullable Integer version) {
+        public Builder version(@Nullable Integer version) {
             this.version = version;
             return this;
         }

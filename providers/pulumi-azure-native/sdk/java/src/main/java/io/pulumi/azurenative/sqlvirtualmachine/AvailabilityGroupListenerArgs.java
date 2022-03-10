@@ -154,72 +154,72 @@ public final class AvailabilityGroupListenerArgs extends io.pulumi.resources.Res
     	      this.sqlVirtualMachineGroupName = defaults.sqlVirtualMachineGroupName;
         }
 
-        public Builder setAvailabilityGroupListenerName(@Nullable Input<String> availabilityGroupListenerName) {
+        public Builder availabilityGroupListenerName(@Nullable Input<String> availabilityGroupListenerName) {
             this.availabilityGroupListenerName = availabilityGroupListenerName;
             return this;
         }
 
-        public Builder setAvailabilityGroupListenerName(@Nullable String availabilityGroupListenerName) {
+        public Builder availabilityGroupListenerName(@Nullable String availabilityGroupListenerName) {
             this.availabilityGroupListenerName = Input.ofNullable(availabilityGroupListenerName);
             return this;
         }
 
-        public Builder setAvailabilityGroupName(@Nullable Input<String> availabilityGroupName) {
+        public Builder availabilityGroupName(@Nullable Input<String> availabilityGroupName) {
             this.availabilityGroupName = availabilityGroupName;
             return this;
         }
 
-        public Builder setAvailabilityGroupName(@Nullable String availabilityGroupName) {
+        public Builder availabilityGroupName(@Nullable String availabilityGroupName) {
             this.availabilityGroupName = Input.ofNullable(availabilityGroupName);
             return this;
         }
 
-        public Builder setCreateDefaultAvailabilityGroupIfNotExist(@Nullable Input<Boolean> createDefaultAvailabilityGroupIfNotExist) {
+        public Builder createDefaultAvailabilityGroupIfNotExist(@Nullable Input<Boolean> createDefaultAvailabilityGroupIfNotExist) {
             this.createDefaultAvailabilityGroupIfNotExist = createDefaultAvailabilityGroupIfNotExist;
             return this;
         }
 
-        public Builder setCreateDefaultAvailabilityGroupIfNotExist(@Nullable Boolean createDefaultAvailabilityGroupIfNotExist) {
+        public Builder createDefaultAvailabilityGroupIfNotExist(@Nullable Boolean createDefaultAvailabilityGroupIfNotExist) {
             this.createDefaultAvailabilityGroupIfNotExist = Input.ofNullable(createDefaultAvailabilityGroupIfNotExist);
             return this;
         }
 
-        public Builder setLoadBalancerConfigurations(@Nullable Input<List<LoadBalancerConfigurationArgs>> loadBalancerConfigurations) {
+        public Builder loadBalancerConfigurations(@Nullable Input<List<LoadBalancerConfigurationArgs>> loadBalancerConfigurations) {
             this.loadBalancerConfigurations = loadBalancerConfigurations;
             return this;
         }
 
-        public Builder setLoadBalancerConfigurations(@Nullable List<LoadBalancerConfigurationArgs> loadBalancerConfigurations) {
+        public Builder loadBalancerConfigurations(@Nullable List<LoadBalancerConfigurationArgs> loadBalancerConfigurations) {
             this.loadBalancerConfigurations = Input.ofNullable(loadBalancerConfigurations);
             return this;
         }
 
-        public Builder setPort(@Nullable Input<Integer> port) {
+        public Builder port(@Nullable Input<Integer> port) {
             this.port = port;
             return this;
         }
 
-        public Builder setPort(@Nullable Integer port) {
+        public Builder port(@Nullable Integer port) {
             this.port = Input.ofNullable(port);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setSqlVirtualMachineGroupName(Input<String> sqlVirtualMachineGroupName) {
+        public Builder sqlVirtualMachineGroupName(Input<String> sqlVirtualMachineGroupName) {
             this.sqlVirtualMachineGroupName = Objects.requireNonNull(sqlVirtualMachineGroupName);
             return this;
         }
 
-        public Builder setSqlVirtualMachineGroupName(String sqlVirtualMachineGroupName) {
+        public Builder sqlVirtualMachineGroupName(String sqlVirtualMachineGroupName) {
             this.sqlVirtualMachineGroupName = Input.of(Objects.requireNonNull(sqlVirtualMachineGroupName));
             return this;
         }

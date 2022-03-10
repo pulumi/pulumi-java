@@ -91,17 +91,17 @@ public final class IPRangeResponse extends io.pulumi.resources.InvokeArgs {
     	      this.subnetPrefixLength = defaults.subnetPrefixLength;
         }
 
-        public Builder setAddress(@Nullable String address) {
+        public Builder address(@Nullable String address) {
             this.address = address;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setSubnetPrefixLength(@Nullable Integer subnetPrefixLength) {
+        public Builder subnetPrefixLength(@Nullable Integer subnetPrefixLength) {
             this.subnetPrefixLength = subnetPrefixLength;
             return this;
         }

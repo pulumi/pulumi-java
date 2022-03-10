@@ -141,72 +141,72 @@ public final class SubAccountArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setIdentity(@Nullable Input<IdentityPropertiesArgs> identity) {
+        public Builder identity(@Nullable Input<IdentityPropertiesArgs> identity) {
             this.identity = identity;
             return this;
         }
 
-        public Builder setIdentity(@Nullable IdentityPropertiesArgs identity) {
+        public Builder identity(@Nullable IdentityPropertiesArgs identity) {
             this.identity = Input.ofNullable(identity);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setMonitorName(Input<String> monitorName) {
+        public Builder monitorName(Input<String> monitorName) {
             this.monitorName = Objects.requireNonNull(monitorName);
             return this;
         }
 
-        public Builder setMonitorName(String monitorName) {
+        public Builder monitorName(String monitorName) {
             this.monitorName = Input.of(Objects.requireNonNull(monitorName));
             return this;
         }
 
-        public Builder setProperties(@Nullable Input<MonitorPropertiesArgs> properties) {
+        public Builder properties(@Nullable Input<MonitorPropertiesArgs> properties) {
             this.properties = properties;
             return this;
         }
 
-        public Builder setProperties(@Nullable MonitorPropertiesArgs properties) {
+        public Builder properties(@Nullable MonitorPropertiesArgs properties) {
             this.properties = Input.ofNullable(properties);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setSubAccountName(@Nullable Input<String> subAccountName) {
+        public Builder subAccountName(@Nullable Input<String> subAccountName) {
             this.subAccountName = subAccountName;
             return this;
         }
 
-        public Builder setSubAccountName(@Nullable String subAccountName) {
+        public Builder subAccountName(@Nullable String subAccountName) {
             this.subAccountName = Input.ofNullable(subAccountName);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

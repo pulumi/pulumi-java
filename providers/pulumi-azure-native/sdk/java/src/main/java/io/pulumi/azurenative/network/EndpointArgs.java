@@ -365,202 +365,202 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
     	      this.weight = defaults.weight;
         }
 
-        public Builder setCustomHeaders(@Nullable Input<List<EndpointPropertiesCustomHeadersArgs>> customHeaders) {
+        public Builder customHeaders(@Nullable Input<List<EndpointPropertiesCustomHeadersArgs>> customHeaders) {
             this.customHeaders = customHeaders;
             return this;
         }
 
-        public Builder setCustomHeaders(@Nullable List<EndpointPropertiesCustomHeadersArgs> customHeaders) {
+        public Builder customHeaders(@Nullable List<EndpointPropertiesCustomHeadersArgs> customHeaders) {
             this.customHeaders = Input.ofNullable(customHeaders);
             return this;
         }
 
-        public Builder setEndpointLocation(@Nullable Input<String> endpointLocation) {
+        public Builder endpointLocation(@Nullable Input<String> endpointLocation) {
             this.endpointLocation = endpointLocation;
             return this;
         }
 
-        public Builder setEndpointLocation(@Nullable String endpointLocation) {
+        public Builder endpointLocation(@Nullable String endpointLocation) {
             this.endpointLocation = Input.ofNullable(endpointLocation);
             return this;
         }
 
-        public Builder setEndpointMonitorStatus(@Nullable Input<Either<String,EndpointMonitorStatus>> endpointMonitorStatus) {
+        public Builder endpointMonitorStatus(@Nullable Input<Either<String,EndpointMonitorStatus>> endpointMonitorStatus) {
             this.endpointMonitorStatus = endpointMonitorStatus;
             return this;
         }
 
-        public Builder setEndpointMonitorStatus(@Nullable Either<String,EndpointMonitorStatus> endpointMonitorStatus) {
+        public Builder endpointMonitorStatus(@Nullable Either<String,EndpointMonitorStatus> endpointMonitorStatus) {
             this.endpointMonitorStatus = Input.ofNullable(endpointMonitorStatus);
             return this;
         }
 
-        public Builder setEndpointName(@Nullable Input<String> endpointName) {
+        public Builder endpointName(@Nullable Input<String> endpointName) {
             this.endpointName = endpointName;
             return this;
         }
 
-        public Builder setEndpointName(@Nullable String endpointName) {
+        public Builder endpointName(@Nullable String endpointName) {
             this.endpointName = Input.ofNullable(endpointName);
             return this;
         }
 
-        public Builder setEndpointStatus(@Nullable Input<Either<String,EndpointStatus>> endpointStatus) {
+        public Builder endpointStatus(@Nullable Input<Either<String,EndpointStatus>> endpointStatus) {
             this.endpointStatus = endpointStatus;
             return this;
         }
 
-        public Builder setEndpointStatus(@Nullable Either<String,EndpointStatus> endpointStatus) {
+        public Builder endpointStatus(@Nullable Either<String,EndpointStatus> endpointStatus) {
             this.endpointStatus = Input.ofNullable(endpointStatus);
             return this;
         }
 
-        public Builder setEndpointType(Input<String> endpointType) {
+        public Builder endpointType(Input<String> endpointType) {
             this.endpointType = Objects.requireNonNull(endpointType);
             return this;
         }
 
-        public Builder setEndpointType(String endpointType) {
+        public Builder endpointType(String endpointType) {
             this.endpointType = Input.of(Objects.requireNonNull(endpointType));
             return this;
         }
 
-        public Builder setGeoMapping(@Nullable Input<List<String>> geoMapping) {
+        public Builder geoMapping(@Nullable Input<List<String>> geoMapping) {
             this.geoMapping = geoMapping;
             return this;
         }
 
-        public Builder setGeoMapping(@Nullable List<String> geoMapping) {
+        public Builder geoMapping(@Nullable List<String> geoMapping) {
             this.geoMapping = Input.ofNullable(geoMapping);
             return this;
         }
 
-        public Builder setId(@Nullable Input<String> id) {
+        public Builder id(@Nullable Input<String> id) {
             this.id = id;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = Input.ofNullable(id);
             return this;
         }
 
-        public Builder setMinChildEndpoints(@Nullable Input<Double> minChildEndpoints) {
+        public Builder minChildEndpoints(@Nullable Input<Double> minChildEndpoints) {
             this.minChildEndpoints = minChildEndpoints;
             return this;
         }
 
-        public Builder setMinChildEndpoints(@Nullable Double minChildEndpoints) {
+        public Builder minChildEndpoints(@Nullable Double minChildEndpoints) {
             this.minChildEndpoints = Input.ofNullable(minChildEndpoints);
             return this;
         }
 
-        public Builder setMinChildEndpointsIPv4(@Nullable Input<Double> minChildEndpointsIPv4) {
+        public Builder minChildEndpointsIPv4(@Nullable Input<Double> minChildEndpointsIPv4) {
             this.minChildEndpointsIPv4 = minChildEndpointsIPv4;
             return this;
         }
 
-        public Builder setMinChildEndpointsIPv4(@Nullable Double minChildEndpointsIPv4) {
+        public Builder minChildEndpointsIPv4(@Nullable Double minChildEndpointsIPv4) {
             this.minChildEndpointsIPv4 = Input.ofNullable(minChildEndpointsIPv4);
             return this;
         }
 
-        public Builder setMinChildEndpointsIPv6(@Nullable Input<Double> minChildEndpointsIPv6) {
+        public Builder minChildEndpointsIPv6(@Nullable Input<Double> minChildEndpointsIPv6) {
             this.minChildEndpointsIPv6 = minChildEndpointsIPv6;
             return this;
         }
 
-        public Builder setMinChildEndpointsIPv6(@Nullable Double minChildEndpointsIPv6) {
+        public Builder minChildEndpointsIPv6(@Nullable Double minChildEndpointsIPv6) {
             this.minChildEndpointsIPv6 = Input.ofNullable(minChildEndpointsIPv6);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setPriority(@Nullable Input<Double> priority) {
+        public Builder priority(@Nullable Input<Double> priority) {
             this.priority = priority;
             return this;
         }
 
-        public Builder setPriority(@Nullable Double priority) {
+        public Builder priority(@Nullable Double priority) {
             this.priority = Input.ofNullable(priority);
             return this;
         }
 
-        public Builder setProfileName(Input<String> profileName) {
+        public Builder profileName(Input<String> profileName) {
             this.profileName = Objects.requireNonNull(profileName);
             return this;
         }
 
-        public Builder setProfileName(String profileName) {
+        public Builder profileName(String profileName) {
             this.profileName = Input.of(Objects.requireNonNull(profileName));
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setSubnets(@Nullable Input<List<EndpointPropertiesSubnetsArgs>> subnets) {
+        public Builder subnets(@Nullable Input<List<EndpointPropertiesSubnetsArgs>> subnets) {
             this.subnets = subnets;
             return this;
         }
 
-        public Builder setSubnets(@Nullable List<EndpointPropertiesSubnetsArgs> subnets) {
+        public Builder subnets(@Nullable List<EndpointPropertiesSubnetsArgs> subnets) {
             this.subnets = Input.ofNullable(subnets);
             return this;
         }
 
-        public Builder setTarget(@Nullable Input<String> target) {
+        public Builder target(@Nullable Input<String> target) {
             this.target = target;
             return this;
         }
 
-        public Builder setTarget(@Nullable String target) {
+        public Builder target(@Nullable String target) {
             this.target = Input.ofNullable(target);
             return this;
         }
 
-        public Builder setTargetResourceId(@Nullable Input<String> targetResourceId) {
+        public Builder targetResourceId(@Nullable Input<String> targetResourceId) {
             this.targetResourceId = targetResourceId;
             return this;
         }
 
-        public Builder setTargetResourceId(@Nullable String targetResourceId) {
+        public Builder targetResourceId(@Nullable String targetResourceId) {
             this.targetResourceId = Input.ofNullable(targetResourceId);
             return this;
         }
 
-        public Builder setType(@Nullable Input<String> type) {
+        public Builder type(@Nullable Input<String> type) {
             this.type = type;
             return this;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = Input.ofNullable(type);
             return this;
         }
 
-        public Builder setWeight(@Nullable Input<Double> weight) {
+        public Builder weight(@Nullable Input<Double> weight) {
             this.weight = weight;
             return this;
         }
 
-        public Builder setWeight(@Nullable Double weight) {
+        public Builder weight(@Nullable Double weight) {
             this.weight = Input.ofNullable(weight);
             return this;
         }

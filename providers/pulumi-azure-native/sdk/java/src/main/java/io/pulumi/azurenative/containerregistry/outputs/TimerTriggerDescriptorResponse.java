@@ -67,12 +67,12 @@ public final class TimerTriggerDescriptorResponse {
     	      this.timerTriggerName = defaults.timerTriggerName;
         }
 
-        public Builder setScheduleOccurrence(@Nullable String scheduleOccurrence) {
+        public Builder scheduleOccurrence(@Nullable String scheduleOccurrence) {
             this.scheduleOccurrence = scheduleOccurrence;
             return this;
         }
 
-        public Builder setTimerTriggerName(@Nullable String timerTriggerName) {
+        public Builder timerTriggerName(@Nullable String timerTriggerName) {
             this.timerTriggerName = timerTriggerName;
             return this;
         }

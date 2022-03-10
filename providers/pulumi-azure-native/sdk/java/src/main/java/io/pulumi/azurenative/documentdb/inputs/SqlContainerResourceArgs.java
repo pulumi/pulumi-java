@@ -160,72 +160,72 @@ public final class SqlContainerResourceArgs extends io.pulumi.resources.Resource
     	      this.uniqueKeyPolicy = defaults.uniqueKeyPolicy;
         }
 
-        public Builder setAnalyticalStorageTtl(@Nullable Input<Double> analyticalStorageTtl) {
+        public Builder analyticalStorageTtl(@Nullable Input<Double> analyticalStorageTtl) {
             this.analyticalStorageTtl = analyticalStorageTtl;
             return this;
         }
 
-        public Builder setAnalyticalStorageTtl(@Nullable Double analyticalStorageTtl) {
+        public Builder analyticalStorageTtl(@Nullable Double analyticalStorageTtl) {
             this.analyticalStorageTtl = Input.ofNullable(analyticalStorageTtl);
             return this;
         }
 
-        public Builder setConflictResolutionPolicy(@Nullable Input<ConflictResolutionPolicyArgs> conflictResolutionPolicy) {
+        public Builder conflictResolutionPolicy(@Nullable Input<ConflictResolutionPolicyArgs> conflictResolutionPolicy) {
             this.conflictResolutionPolicy = conflictResolutionPolicy;
             return this;
         }
 
-        public Builder setConflictResolutionPolicy(@Nullable ConflictResolutionPolicyArgs conflictResolutionPolicy) {
+        public Builder conflictResolutionPolicy(@Nullable ConflictResolutionPolicyArgs conflictResolutionPolicy) {
             this.conflictResolutionPolicy = Input.ofNullable(conflictResolutionPolicy);
             return this;
         }
 
-        public Builder setDefaultTtl(@Nullable Input<Integer> defaultTtl) {
+        public Builder defaultTtl(@Nullable Input<Integer> defaultTtl) {
             this.defaultTtl = defaultTtl;
             return this;
         }
 
-        public Builder setDefaultTtl(@Nullable Integer defaultTtl) {
+        public Builder defaultTtl(@Nullable Integer defaultTtl) {
             this.defaultTtl = Input.ofNullable(defaultTtl);
             return this;
         }
 
-        public Builder setId(Input<String> id) {
+        public Builder id(Input<String> id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Input.of(Objects.requireNonNull(id));
             return this;
         }
 
-        public Builder setIndexingPolicy(@Nullable Input<IndexingPolicyArgs> indexingPolicy) {
+        public Builder indexingPolicy(@Nullable Input<IndexingPolicyArgs> indexingPolicy) {
             this.indexingPolicy = indexingPolicy;
             return this;
         }
 
-        public Builder setIndexingPolicy(@Nullable IndexingPolicyArgs indexingPolicy) {
+        public Builder indexingPolicy(@Nullable IndexingPolicyArgs indexingPolicy) {
             this.indexingPolicy = Input.ofNullable(indexingPolicy);
             return this;
         }
 
-        public Builder setPartitionKey(@Nullable Input<ContainerPartitionKeyArgs> partitionKey) {
+        public Builder partitionKey(@Nullable Input<ContainerPartitionKeyArgs> partitionKey) {
             this.partitionKey = partitionKey;
             return this;
         }
 
-        public Builder setPartitionKey(@Nullable ContainerPartitionKeyArgs partitionKey) {
+        public Builder partitionKey(@Nullable ContainerPartitionKeyArgs partitionKey) {
             this.partitionKey = Input.ofNullable(partitionKey);
             return this;
         }
 
-        public Builder setUniqueKeyPolicy(@Nullable Input<UniqueKeyPolicyArgs> uniqueKeyPolicy) {
+        public Builder uniqueKeyPolicy(@Nullable Input<UniqueKeyPolicyArgs> uniqueKeyPolicy) {
             this.uniqueKeyPolicy = uniqueKeyPolicy;
             return this;
         }
 
-        public Builder setUniqueKeyPolicy(@Nullable UniqueKeyPolicyArgs uniqueKeyPolicy) {
+        public Builder uniqueKeyPolicy(@Nullable UniqueKeyPolicyArgs uniqueKeyPolicy) {
             this.uniqueKeyPolicy = Input.ofNullable(uniqueKeyPolicy);
             return this;
         }

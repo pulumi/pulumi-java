@@ -111,52 +111,52 @@ public final class ImportCollectorArgs extends io.pulumi.resources.ResourceArgs 
     	      this.resourceGroupName = defaults.resourceGroupName;
         }
 
-        public Builder setETag(@Nullable Input<String> eTag) {
+        public Builder eTag(@Nullable Input<String> eTag) {
             this.eTag = eTag;
             return this;
         }
 
-        public Builder setETag(@Nullable String eTag) {
+        public Builder eTag(@Nullable String eTag) {
             this.eTag = Input.ofNullable(eTag);
             return this;
         }
 
-        public Builder setImportCollectorName(@Nullable Input<String> importCollectorName) {
+        public Builder importCollectorName(@Nullable Input<String> importCollectorName) {
             this.importCollectorName = importCollectorName;
             return this;
         }
 
-        public Builder setImportCollectorName(@Nullable String importCollectorName) {
+        public Builder importCollectorName(@Nullable String importCollectorName) {
             this.importCollectorName = Input.ofNullable(importCollectorName);
             return this;
         }
 
-        public Builder setProjectName(Input<String> projectName) {
+        public Builder projectName(Input<String> projectName) {
             this.projectName = Objects.requireNonNull(projectName);
             return this;
         }
 
-        public Builder setProjectName(String projectName) {
+        public Builder projectName(String projectName) {
             this.projectName = Input.of(Objects.requireNonNull(projectName));
             return this;
         }
 
-        public Builder setProperties(@Nullable Input<ImportCollectorPropertiesArgs> properties) {
+        public Builder properties(@Nullable Input<ImportCollectorPropertiesArgs> properties) {
             this.properties = properties;
             return this;
         }
 
-        public Builder setProperties(@Nullable ImportCollectorPropertiesArgs properties) {
+        public Builder properties(@Nullable ImportCollectorPropertiesArgs properties) {
             this.properties = Input.ofNullable(properties);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }

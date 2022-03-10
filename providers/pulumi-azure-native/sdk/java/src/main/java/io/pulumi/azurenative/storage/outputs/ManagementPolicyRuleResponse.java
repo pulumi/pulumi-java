@@ -101,22 +101,22 @@ public final class ManagementPolicyRuleResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setDefinition(ManagementPolicyDefinitionResponse definition) {
+        public Builder definition(ManagementPolicyDefinitionResponse definition) {
             this.definition = Objects.requireNonNull(definition);
             return this;
         }
 
-        public Builder setEnabled(@Nullable Boolean enabled) {
+        public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = enabled;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

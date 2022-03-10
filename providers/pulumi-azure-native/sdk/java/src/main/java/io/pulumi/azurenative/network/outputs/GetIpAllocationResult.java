@@ -246,67 +246,67 @@ public final class GetIpAllocationResult {
     	      this.virtualNetwork = defaults.virtualNetwork;
         }
 
-        public Builder setAllocationTags(@Nullable Map<String,String> allocationTags) {
+        public Builder allocationTags(@Nullable Map<String,String> allocationTags) {
             this.allocationTags = allocationTags;
             return this;
         }
 
-        public Builder setEtag(String etag) {
+        public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setIpamAllocationId(@Nullable String ipamAllocationId) {
+        public Builder ipamAllocationId(@Nullable String ipamAllocationId) {
             this.ipamAllocationId = ipamAllocationId;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPrefix(@Nullable String prefix) {
+        public Builder prefix(@Nullable String prefix) {
             this.prefix = prefix;
             return this;
         }
 
-        public Builder setPrefixLength(@Nullable Integer prefixLength) {
+        public Builder prefixLength(@Nullable Integer prefixLength) {
             this.prefixLength = prefixLength;
             return this;
         }
 
-        public Builder setPrefixType(@Nullable String prefixType) {
+        public Builder prefixType(@Nullable String prefixType) {
             this.prefixType = prefixType;
             return this;
         }
 
-        public Builder setSubnet(SubResourceResponse subnet) {
+        public Builder subnet(SubResourceResponse subnet) {
             this.subnet = Objects.requireNonNull(subnet);
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setVirtualNetwork(SubResourceResponse virtualNetwork) {
+        public Builder virtualNetwork(SubResourceResponse virtualNetwork) {
             this.virtualNetwork = Objects.requireNonNull(virtualNetwork);
             return this;
         }

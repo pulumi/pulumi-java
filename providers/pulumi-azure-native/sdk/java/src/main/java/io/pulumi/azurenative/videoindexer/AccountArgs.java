@@ -153,72 +153,72 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setAccountId(@Nullable Input<String> accountId) {
+        public Builder accountId(@Nullable Input<String> accountId) {
             this.accountId = accountId;
             return this;
         }
 
-        public Builder setAccountId(@Nullable String accountId) {
+        public Builder accountId(@Nullable String accountId) {
             this.accountId = Input.ofNullable(accountId);
             return this;
         }
 
-        public Builder setAccountName(@Nullable Input<String> accountName) {
+        public Builder accountName(@Nullable Input<String> accountName) {
             this.accountName = accountName;
             return this;
         }
 
-        public Builder setAccountName(@Nullable String accountName) {
+        public Builder accountName(@Nullable String accountName) {
             this.accountName = Input.ofNullable(accountName);
             return this;
         }
 
-        public Builder setIdentity(@Nullable Input<ManagedServiceIdentityArgs> identity) {
+        public Builder identity(@Nullable Input<ManagedServiceIdentityArgs> identity) {
             this.identity = identity;
             return this;
         }
 
-        public Builder setIdentity(@Nullable ManagedServiceIdentityArgs identity) {
+        public Builder identity(@Nullable ManagedServiceIdentityArgs identity) {
             this.identity = Input.ofNullable(identity);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setMediaServices(@Nullable Input<MediaServicesForPutRequestArgs> mediaServices) {
+        public Builder mediaServices(@Nullable Input<MediaServicesForPutRequestArgs> mediaServices) {
             this.mediaServices = mediaServices;
             return this;
         }
 
-        public Builder setMediaServices(@Nullable MediaServicesForPutRequestArgs mediaServices) {
+        public Builder mediaServices(@Nullable MediaServicesForPutRequestArgs mediaServices) {
             this.mediaServices = Input.ofNullable(mediaServices);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

@@ -50,7 +50,7 @@ public final class GetApiManagementServiceSsoTokenResult {
     	      this.redirectUri = defaults.redirectUri;
         }
 
-        public Builder setRedirectUri(@Nullable String redirectUri) {
+        public Builder redirectUri(@Nullable String redirectUri) {
             this.redirectUri = redirectUri;
             return this;
         }

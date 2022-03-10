@@ -83,22 +83,22 @@ public final class FromEachInputFileArgs extends io.pulumi.resources.ResourceArg
     	      this.odataType = defaults.odataType;
         }
 
-        public Builder setIncludedTracks(@Nullable Input<List<Object>> includedTracks) {
+        public Builder includedTracks(@Nullable Input<List<Object>> includedTracks) {
             this.includedTracks = includedTracks;
             return this;
         }
 
-        public Builder setIncludedTracks(@Nullable List<Object> includedTracks) {
+        public Builder includedTracks(@Nullable List<Object> includedTracks) {
             this.includedTracks = Input.ofNullable(includedTracks);
             return this;
         }
 
-        public Builder setOdataType(Input<String> odataType) {
+        public Builder odataType(Input<String> odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
 
-        public Builder setOdataType(String odataType) {
+        public Builder odataType(String odataType) {
             this.odataType = Input.of(Objects.requireNonNull(odataType));
             return this;
         }

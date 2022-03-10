@@ -73,22 +73,22 @@ public final class ConnectToTargetAzureDbForPostgreSqlSyncTaskInputArgs extends 
     	      this.targetConnectionInfo = defaults.targetConnectionInfo;
         }
 
-        public Builder setSourceConnectionInfo(Input<PostgreSqlConnectionInfoArgs> sourceConnectionInfo) {
+        public Builder sourceConnectionInfo(Input<PostgreSqlConnectionInfoArgs> sourceConnectionInfo) {
             this.sourceConnectionInfo = Objects.requireNonNull(sourceConnectionInfo);
             return this;
         }
 
-        public Builder setSourceConnectionInfo(PostgreSqlConnectionInfoArgs sourceConnectionInfo) {
+        public Builder sourceConnectionInfo(PostgreSqlConnectionInfoArgs sourceConnectionInfo) {
             this.sourceConnectionInfo = Input.of(Objects.requireNonNull(sourceConnectionInfo));
             return this;
         }
 
-        public Builder setTargetConnectionInfo(Input<PostgreSqlConnectionInfoArgs> targetConnectionInfo) {
+        public Builder targetConnectionInfo(Input<PostgreSqlConnectionInfoArgs> targetConnectionInfo) {
             this.targetConnectionInfo = Objects.requireNonNull(targetConnectionInfo);
             return this;
         }
 
-        public Builder setTargetConnectionInfo(PostgreSqlConnectionInfoArgs targetConnectionInfo) {
+        public Builder targetConnectionInfo(PostgreSqlConnectionInfoArgs targetConnectionInfo) {
             this.targetConnectionInfo = Input.of(Objects.requireNonNull(targetConnectionInfo));
             return this;
         }

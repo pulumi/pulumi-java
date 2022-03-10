@@ -104,42 +104,42 @@ public final class PatchScheduleArgs extends io.pulumi.resources.ResourceArgs {
     	      this.scheduleEntries = defaults.scheduleEntries;
         }
 
-        public Builder set$default(@Nullable Input<String> $default) {
+        public Builder $default(@Nullable Input<String> $default) {
             this.$default = $default;
             return this;
         }
 
-        public Builder set$default(@Nullable String $default) {
+        public Builder $default(@Nullable String $default) {
             this.$default = Input.ofNullable($default);
             return this;
         }
 
-        public Builder setName(Input<String> name) {
+        public Builder name(Input<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setScheduleEntries(Input<List<ScheduleEntryArgs>> scheduleEntries) {
+        public Builder scheduleEntries(Input<List<ScheduleEntryArgs>> scheduleEntries) {
             this.scheduleEntries = Objects.requireNonNull(scheduleEntries);
             return this;
         }
 
-        public Builder setScheduleEntries(List<ScheduleEntryArgs> scheduleEntries) {
+        public Builder scheduleEntries(List<ScheduleEntryArgs> scheduleEntries) {
             this.scheduleEntries = Input.of(Objects.requireNonNull(scheduleEntries));
             return this;
         }

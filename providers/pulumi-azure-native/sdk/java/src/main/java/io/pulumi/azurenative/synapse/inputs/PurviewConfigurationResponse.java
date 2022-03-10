@@ -57,7 +57,7 @@ public final class PurviewConfigurationResponse extends io.pulumi.resources.Invo
     	      this.purviewResourceId = defaults.purviewResourceId;
         }
 
-        public Builder setPurviewResourceId(@Nullable String purviewResourceId) {
+        public Builder purviewResourceId(@Nullable String purviewResourceId) {
             this.purviewResourceId = purviewResourceId;
             return this;
         }

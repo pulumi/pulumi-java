@@ -84,17 +84,17 @@ public final class GetSqlResourceSqlRoleDefinitionArgs extends io.pulumi.resourc
     	      this.roleDefinitionId = defaults.roleDefinitionId;
         }
 
-        public Builder setAccountName(String accountName) {
+        public Builder accountName(String accountName) {
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setRoleDefinitionId(String roleDefinitionId) {
+        public Builder roleDefinitionId(String roleDefinitionId) {
             this.roleDefinitionId = Objects.requireNonNull(roleDefinitionId);
             return this;
         }

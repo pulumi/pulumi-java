@@ -67,22 +67,22 @@ public final class CollectorPropertiesArgs extends io.pulumi.resources.ResourceA
     	      this.discoverySiteId = defaults.discoverySiteId;
         }
 
-        public Builder setAgentProperties(@Nullable Input<CollectorAgentPropertiesArgs> agentProperties) {
+        public Builder agentProperties(@Nullable Input<CollectorAgentPropertiesArgs> agentProperties) {
             this.agentProperties = agentProperties;
             return this;
         }
 
-        public Builder setAgentProperties(@Nullable CollectorAgentPropertiesArgs agentProperties) {
+        public Builder agentProperties(@Nullable CollectorAgentPropertiesArgs agentProperties) {
             this.agentProperties = Input.ofNullable(agentProperties);
             return this;
         }
 
-        public Builder setDiscoverySiteId(@Nullable Input<String> discoverySiteId) {
+        public Builder discoverySiteId(@Nullable Input<String> discoverySiteId) {
             this.discoverySiteId = discoverySiteId;
             return this;
         }
 
-        public Builder setDiscoverySiteId(@Nullable String discoverySiteId) {
+        public Builder discoverySiteId(@Nullable String discoverySiteId) {
             this.discoverySiteId = Input.ofNullable(discoverySiteId);
             return this;
         }

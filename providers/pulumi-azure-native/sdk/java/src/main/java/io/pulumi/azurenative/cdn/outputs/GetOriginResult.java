@@ -326,92 +326,92 @@ public final class GetOriginResult {
     	      this.weight = defaults.weight;
         }
 
-        public Builder setEnabled(@Nullable Boolean enabled) {
+        public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = enabled;
             return this;
         }
 
-        public Builder setHostName(String hostName) {
+        public Builder hostName(String hostName) {
             this.hostName = Objects.requireNonNull(hostName);
             return this;
         }
 
-        public Builder setHttpPort(@Nullable Integer httpPort) {
+        public Builder httpPort(@Nullable Integer httpPort) {
             this.httpPort = httpPort;
             return this;
         }
 
-        public Builder setHttpsPort(@Nullable Integer httpsPort) {
+        public Builder httpsPort(@Nullable Integer httpsPort) {
             this.httpsPort = httpsPort;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setOriginHostHeader(@Nullable String originHostHeader) {
+        public Builder originHostHeader(@Nullable String originHostHeader) {
             this.originHostHeader = originHostHeader;
             return this;
         }
 
-        public Builder setPriority(@Nullable Integer priority) {
+        public Builder priority(@Nullable Integer priority) {
             this.priority = priority;
             return this;
         }
 
-        public Builder setPrivateEndpointStatus(String privateEndpointStatus) {
+        public Builder privateEndpointStatus(String privateEndpointStatus) {
             this.privateEndpointStatus = Objects.requireNonNull(privateEndpointStatus);
             return this;
         }
 
-        public Builder setPrivateLinkAlias(@Nullable String privateLinkAlias) {
+        public Builder privateLinkAlias(@Nullable String privateLinkAlias) {
             this.privateLinkAlias = privateLinkAlias;
             return this;
         }
 
-        public Builder setPrivateLinkApprovalMessage(@Nullable String privateLinkApprovalMessage) {
+        public Builder privateLinkApprovalMessage(@Nullable String privateLinkApprovalMessage) {
             this.privateLinkApprovalMessage = privateLinkApprovalMessage;
             return this;
         }
 
-        public Builder setPrivateLinkLocation(@Nullable String privateLinkLocation) {
+        public Builder privateLinkLocation(@Nullable String privateLinkLocation) {
             this.privateLinkLocation = privateLinkLocation;
             return this;
         }
 
-        public Builder setPrivateLinkResourceId(@Nullable String privateLinkResourceId) {
+        public Builder privateLinkResourceId(@Nullable String privateLinkResourceId) {
             this.privateLinkResourceId = privateLinkResourceId;
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setResourceState(String resourceState) {
+        public Builder resourceState(String resourceState) {
             this.resourceState = Objects.requireNonNull(resourceState);
             return this;
         }
 
-        public Builder setSystemData(SystemDataResponse systemData) {
+        public Builder systemData(SystemDataResponse systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setWeight(@Nullable Integer weight) {
+        public Builder weight(@Nullable Integer weight) {
             this.weight = weight;
             return this;
         }

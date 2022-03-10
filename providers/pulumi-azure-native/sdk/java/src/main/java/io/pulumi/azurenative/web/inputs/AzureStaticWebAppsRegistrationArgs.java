@@ -57,12 +57,12 @@ public final class AzureStaticWebAppsRegistrationArgs extends io.pulumi.resource
     	      this.clientId = defaults.clientId;
         }
 
-        public Builder setClientId(@Nullable Input<String> clientId) {
+        public Builder clientId(@Nullable Input<String> clientId) {
             this.clientId = clientId;
             return this;
         }
 
-        public Builder setClientId(@Nullable String clientId) {
+        public Builder clientId(@Nullable String clientId) {
             this.clientId = Input.ofNullable(clientId);
             return this;
         }

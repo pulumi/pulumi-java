@@ -285,77 +285,77 @@ public final class ApplicationGatewayProbeResponse extends io.pulumi.resources.I
     	      this.unhealthyThreshold = defaults.unhealthyThreshold;
         }
 
-        public Builder setEtag(String etag) {
+        public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
 
-        public Builder setHost(@Nullable String host) {
+        public Builder host(@Nullable String host) {
             this.host = host;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setInterval(@Nullable Integer interval) {
+        public Builder interval(@Nullable Integer interval) {
             this.interval = interval;
             return this;
         }
 
-        public Builder setMatch(@Nullable ApplicationGatewayProbeHealthResponseMatchResponse match) {
+        public Builder match(@Nullable ApplicationGatewayProbeHealthResponseMatchResponse match) {
             this.match = match;
             return this;
         }
 
-        public Builder setMinServers(@Nullable Integer minServers) {
+        public Builder minServers(@Nullable Integer minServers) {
             this.minServers = minServers;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setPath(@Nullable String path) {
+        public Builder path(@Nullable String path) {
             this.path = path;
             return this;
         }
 
-        public Builder setPickHostNameFromBackendHttpSettings(@Nullable Boolean pickHostNameFromBackendHttpSettings) {
+        public Builder pickHostNameFromBackendHttpSettings(@Nullable Boolean pickHostNameFromBackendHttpSettings) {
             this.pickHostNameFromBackendHttpSettings = pickHostNameFromBackendHttpSettings;
             return this;
         }
 
-        public Builder setPort(@Nullable Integer port) {
+        public Builder port(@Nullable Integer port) {
             this.port = port;
             return this;
         }
 
-        public Builder setProtocol(@Nullable String protocol) {
+        public Builder protocol(@Nullable String protocol) {
             this.protocol = protocol;
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setTimeout(@Nullable Integer timeout) {
+        public Builder timeout(@Nullable Integer timeout) {
             this.timeout = timeout;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setUnhealthyThreshold(@Nullable Integer unhealthyThreshold) {
+        public Builder unhealthyThreshold(@Nullable Integer unhealthyThreshold) {
             this.unhealthyThreshold = unhealthyThreshold;
             return this;
         }

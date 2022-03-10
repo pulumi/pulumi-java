@@ -181,47 +181,47 @@ public final class GetEncryptionScopeResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setCreationTime(String creationTime) {
+        public Builder creationTime(String creationTime) {
             this.creationTime = Objects.requireNonNull(creationTime);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setKeyVaultProperties(@Nullable EncryptionScopeKeyVaultPropertiesResponse keyVaultProperties) {
+        public Builder keyVaultProperties(@Nullable EncryptionScopeKeyVaultPropertiesResponse keyVaultProperties) {
             this.keyVaultProperties = keyVaultProperties;
             return this;
         }
 
-        public Builder setLastModifiedTime(String lastModifiedTime) {
+        public Builder lastModifiedTime(String lastModifiedTime) {
             this.lastModifiedTime = Objects.requireNonNull(lastModifiedTime);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setRequireInfrastructureEncryption(@Nullable Boolean requireInfrastructureEncryption) {
+        public Builder requireInfrastructureEncryption(@Nullable Boolean requireInfrastructureEncryption) {
             this.requireInfrastructureEncryption = requireInfrastructureEncryption;
             return this;
         }
 
-        public Builder setSource(@Nullable String source) {
+        public Builder source(@Nullable String source) {
             this.source = source;
             return this;
         }
 
-        public Builder setState(@Nullable String state) {
+        public Builder state(@Nullable String state) {
             this.state = state;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

@@ -299,82 +299,82 @@ public final class GetOperationalizationClusterResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setAppInsights(@Nullable AppInsightsPropertiesResponse appInsights) {
+        public Builder appInsights(@Nullable AppInsightsPropertiesResponse appInsights) {
             this.appInsights = appInsights;
             return this;
         }
 
-        public Builder setClusterType(String clusterType) {
+        public Builder clusterType(String clusterType) {
             this.clusterType = Objects.requireNonNull(clusterType);
             return this;
         }
 
-        public Builder setContainerRegistry(@Nullable ContainerRegistryPropertiesResponse containerRegistry) {
+        public Builder containerRegistry(@Nullable ContainerRegistryPropertiesResponse containerRegistry) {
             this.containerRegistry = containerRegistry;
             return this;
         }
 
-        public Builder setContainerService(@Nullable AcsClusterPropertiesResponse containerService) {
+        public Builder containerService(@Nullable AcsClusterPropertiesResponse containerService) {
             this.containerService = containerService;
             return this;
         }
 
-        public Builder setCreatedOn(String createdOn) {
+        public Builder createdOn(String createdOn) {
             this.createdOn = Objects.requireNonNull(createdOn);
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setGlobalServiceConfiguration(@Nullable GlobalServiceConfigurationResponse globalServiceConfiguration) {
+        public Builder globalServiceConfiguration(@Nullable GlobalServiceConfigurationResponse globalServiceConfiguration) {
             this.globalServiceConfiguration = globalServiceConfiguration;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setModifiedOn(String modifiedOn) {
+        public Builder modifiedOn(String modifiedOn) {
             this.modifiedOn = Objects.requireNonNull(modifiedOn);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setProvisioningErrors(List<ErrorResponseWrapperResponse> provisioningErrors) {
+        public Builder provisioningErrors(List<ErrorResponseWrapperResponse> provisioningErrors) {
             this.provisioningErrors = Objects.requireNonNull(provisioningErrors);
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setStorageAccount(@Nullable StorageAccountPropertiesResponse storageAccount) {
+        public Builder storageAccount(@Nullable StorageAccountPropertiesResponse storageAccount) {
             this.storageAccount = storageAccount;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

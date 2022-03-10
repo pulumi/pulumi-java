@@ -92,32 +92,32 @@ public final class HttpRouteMatchHeaderArgs extends io.pulumi.resources.Resource
     	      this.value = defaults.value;
         }
 
-        public Builder setName(Input<String> name) {
+        public Builder name(Input<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder setType(@Nullable Input<Either<String,HeaderMatchType>> type) {
+        public Builder type(@Nullable Input<Either<String,HeaderMatchType>> type) {
             this.type = type;
             return this;
         }
 
-        public Builder setType(@Nullable Either<String,HeaderMatchType> type) {
+        public Builder type(@Nullable Either<String,HeaderMatchType> type) {
             this.type = Input.ofNullable(type);
             return this;
         }
 
-        public Builder setValue(@Nullable Input<String> value) {
+        public Builder value(@Nullable Input<String> value) {
             this.value = value;
             return this;
         }
 
-        public Builder setValue(@Nullable String value) {
+        public Builder value(@Nullable String value) {
             this.value = Input.ofNullable(value);
             return this;
         }

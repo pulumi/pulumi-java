@@ -106,42 +106,42 @@ public final class GraphEdgeArgs extends io.pulumi.resources.ResourceArgs {
     	      this.targetPortId = defaults.targetPortId;
         }
 
-        public Builder setSourceNodeId(@Nullable Input<String> sourceNodeId) {
+        public Builder sourceNodeId(@Nullable Input<String> sourceNodeId) {
             this.sourceNodeId = sourceNodeId;
             return this;
         }
 
-        public Builder setSourceNodeId(@Nullable String sourceNodeId) {
+        public Builder sourceNodeId(@Nullable String sourceNodeId) {
             this.sourceNodeId = Input.ofNullable(sourceNodeId);
             return this;
         }
 
-        public Builder setSourcePortId(@Nullable Input<String> sourcePortId) {
+        public Builder sourcePortId(@Nullable Input<String> sourcePortId) {
             this.sourcePortId = sourcePortId;
             return this;
         }
 
-        public Builder setSourcePortId(@Nullable String sourcePortId) {
+        public Builder sourcePortId(@Nullable String sourcePortId) {
             this.sourcePortId = Input.ofNullable(sourcePortId);
             return this;
         }
 
-        public Builder setTargetNodeId(@Nullable Input<String> targetNodeId) {
+        public Builder targetNodeId(@Nullable Input<String> targetNodeId) {
             this.targetNodeId = targetNodeId;
             return this;
         }
 
-        public Builder setTargetNodeId(@Nullable String targetNodeId) {
+        public Builder targetNodeId(@Nullable String targetNodeId) {
             this.targetNodeId = Input.ofNullable(targetNodeId);
             return this;
         }
 
-        public Builder setTargetPortId(@Nullable Input<String> targetPortId) {
+        public Builder targetPortId(@Nullable Input<String> targetPortId) {
             this.targetPortId = targetPortId;
             return this;
         }
 
-        public Builder setTargetPortId(@Nullable String targetPortId) {
+        public Builder targetPortId(@Nullable String targetPortId) {
             this.targetPortId = Input.ofNullable(targetPortId);
             return this;
         }

@@ -57,7 +57,7 @@ public final class NetworkManagerSecurityGroupItemResponse extends io.pulumi.res
     	      this.networkGroupId = defaults.networkGroupId;
         }
 
-        public Builder setNetworkGroupId(@Nullable String networkGroupId) {
+        public Builder networkGroupId(@Nullable String networkGroupId) {
             this.networkGroupId = networkGroupId;
             return this;
         }

@@ -279,77 +279,77 @@ public final class GetSyncGroupResult {
     	      this.usePrivateLinkConnection = defaults.usePrivateLinkConnection;
         }
 
-        public Builder setConflictLoggingRetentionInDays(@Nullable Integer conflictLoggingRetentionInDays) {
+        public Builder conflictLoggingRetentionInDays(@Nullable Integer conflictLoggingRetentionInDays) {
             this.conflictLoggingRetentionInDays = conflictLoggingRetentionInDays;
             return this;
         }
 
-        public Builder setConflictResolutionPolicy(@Nullable String conflictResolutionPolicy) {
+        public Builder conflictResolutionPolicy(@Nullable String conflictResolutionPolicy) {
             this.conflictResolutionPolicy = conflictResolutionPolicy;
             return this;
         }
 
-        public Builder setEnableConflictLogging(@Nullable Boolean enableConflictLogging) {
+        public Builder enableConflictLogging(@Nullable Boolean enableConflictLogging) {
             this.enableConflictLogging = enableConflictLogging;
             return this;
         }
 
-        public Builder setHubDatabaseUserName(@Nullable String hubDatabaseUserName) {
+        public Builder hubDatabaseUserName(@Nullable String hubDatabaseUserName) {
             this.hubDatabaseUserName = hubDatabaseUserName;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setInterval(@Nullable Integer interval) {
+        public Builder interval(@Nullable Integer interval) {
             this.interval = interval;
             return this;
         }
 
-        public Builder setLastSyncTime(String lastSyncTime) {
+        public Builder lastSyncTime(String lastSyncTime) {
             this.lastSyncTime = Objects.requireNonNull(lastSyncTime);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPrivateEndpointName(String privateEndpointName) {
+        public Builder privateEndpointName(String privateEndpointName) {
             this.privateEndpointName = Objects.requireNonNull(privateEndpointName);
             return this;
         }
 
-        public Builder setSchema(@Nullable SyncGroupSchemaResponse schema) {
+        public Builder schema(@Nullable SyncGroupSchemaResponse schema) {
             this.schema = schema;
             return this;
         }
 
-        public Builder setSku(@Nullable SkuResponse sku) {
+        public Builder sku(@Nullable SkuResponse sku) {
             this.sku = sku;
             return this;
         }
 
-        public Builder setSyncDatabaseId(@Nullable String syncDatabaseId) {
+        public Builder syncDatabaseId(@Nullable String syncDatabaseId) {
             this.syncDatabaseId = syncDatabaseId;
             return this;
         }
 
-        public Builder setSyncState(String syncState) {
+        public Builder syncState(String syncState) {
             this.syncState = Objects.requireNonNull(syncState);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setUsePrivateLinkConnection(@Nullable Boolean usePrivateLinkConnection) {
+        public Builder usePrivateLinkConnection(@Nullable Boolean usePrivateLinkConnection) {
             this.usePrivateLinkConnection = usePrivateLinkConnection;
             return this;
         }

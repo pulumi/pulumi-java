@@ -125,52 +125,52 @@ public final class ApplicationGetHttpsEndpointArgs extends io.pulumi.resources.R
     	      this.subDomainSuffix = defaults.subDomainSuffix;
         }
 
-        public Builder setAccessModes(@Nullable Input<List<String>> accessModes) {
+        public Builder accessModes(@Nullable Input<List<String>> accessModes) {
             this.accessModes = accessModes;
             return this;
         }
 
-        public Builder setAccessModes(@Nullable List<String> accessModes) {
+        public Builder accessModes(@Nullable List<String> accessModes) {
             this.accessModes = Input.ofNullable(accessModes);
             return this;
         }
 
-        public Builder setDestinationPort(@Nullable Input<Integer> destinationPort) {
+        public Builder destinationPort(@Nullable Input<Integer> destinationPort) {
             this.destinationPort = destinationPort;
             return this;
         }
 
-        public Builder setDestinationPort(@Nullable Integer destinationPort) {
+        public Builder destinationPort(@Nullable Integer destinationPort) {
             this.destinationPort = Input.ofNullable(destinationPort);
             return this;
         }
 
-        public Builder setDisableGatewayAuth(@Nullable Input<Boolean> disableGatewayAuth) {
+        public Builder disableGatewayAuth(@Nullable Input<Boolean> disableGatewayAuth) {
             this.disableGatewayAuth = disableGatewayAuth;
             return this;
         }
 
-        public Builder setDisableGatewayAuth(@Nullable Boolean disableGatewayAuth) {
+        public Builder disableGatewayAuth(@Nullable Boolean disableGatewayAuth) {
             this.disableGatewayAuth = Input.ofNullable(disableGatewayAuth);
             return this;
         }
 
-        public Builder setPrivateIPAddress(@Nullable Input<String> privateIPAddress) {
+        public Builder privateIPAddress(@Nullable Input<String> privateIPAddress) {
             this.privateIPAddress = privateIPAddress;
             return this;
         }
 
-        public Builder setPrivateIPAddress(@Nullable String privateIPAddress) {
+        public Builder privateIPAddress(@Nullable String privateIPAddress) {
             this.privateIPAddress = Input.ofNullable(privateIPAddress);
             return this;
         }
 
-        public Builder setSubDomainSuffix(@Nullable Input<String> subDomainSuffix) {
+        public Builder subDomainSuffix(@Nullable Input<String> subDomainSuffix) {
             this.subDomainSuffix = subDomainSuffix;
             return this;
         }
 
-        public Builder setSubDomainSuffix(@Nullable String subDomainSuffix) {
+        public Builder subDomainSuffix(@Nullable String subDomainSuffix) {
             this.subDomainSuffix = Input.ofNullable(subDomainSuffix);
             return this;
         }

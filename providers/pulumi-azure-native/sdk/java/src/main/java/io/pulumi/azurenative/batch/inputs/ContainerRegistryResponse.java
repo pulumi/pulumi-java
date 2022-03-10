@@ -78,17 +78,17 @@ public final class ContainerRegistryResponse extends io.pulumi.resources.InvokeA
     	      this.userName = defaults.userName;
         }
 
-        public Builder setPassword(String password) {
+        public Builder password(String password) {
             this.password = Objects.requireNonNull(password);
             return this;
         }
 
-        public Builder setRegistryServer(@Nullable String registryServer) {
+        public Builder registryServer(@Nullable String registryServer) {
             this.registryServer = registryServer;
             return this;
         }
 
-        public Builder setUserName(String userName) {
+        public Builder userName(String userName) {
             this.userName = Objects.requireNonNull(userName);
             return this;
         }

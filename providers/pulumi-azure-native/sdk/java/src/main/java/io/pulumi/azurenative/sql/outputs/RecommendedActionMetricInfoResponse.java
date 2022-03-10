@@ -114,27 +114,27 @@ public final class RecommendedActionMetricInfoResponse {
     	      this.value = defaults.value;
         }
 
-        public Builder setMetricName(String metricName) {
+        public Builder metricName(String metricName) {
             this.metricName = Objects.requireNonNull(metricName);
             return this;
         }
 
-        public Builder setStartTime(String startTime) {
+        public Builder startTime(String startTime) {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }
 
-        public Builder setTimeGrain(String timeGrain) {
+        public Builder timeGrain(String timeGrain) {
             this.timeGrain = Objects.requireNonNull(timeGrain);
             return this;
         }
 
-        public Builder setUnit(String unit) {
+        public Builder unit(String unit) {
             this.unit = Objects.requireNonNull(unit);
             return this;
         }
 
-        public Builder setValue(Double value) {
+        public Builder value(Double value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }

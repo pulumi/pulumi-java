@@ -92,32 +92,32 @@ public final class TimerTriggerArgs extends io.pulumi.resources.ResourceArgs {
     	      this.status = defaults.status;
         }
 
-        public Builder setName(Input<String> name) {
+        public Builder name(Input<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder setSchedule(Input<String> schedule) {
+        public Builder schedule(Input<String> schedule) {
             this.schedule = Objects.requireNonNull(schedule);
             return this;
         }
 
-        public Builder setSchedule(String schedule) {
+        public Builder schedule(String schedule) {
             this.schedule = Input.of(Objects.requireNonNull(schedule));
             return this;
         }
 
-        public Builder setStatus(@Nullable Input<Either<String,TriggerStatus>> status) {
+        public Builder status(@Nullable Input<Either<String,TriggerStatus>> status) {
             this.status = status;
             return this;
         }
 
-        public Builder setStatus(@Nullable Either<String,TriggerStatus> status) {
+        public Builder status(@Nullable Either<String,TriggerStatus> status) {
             this.status = Input.ofNullable(status);
             return this;
         }

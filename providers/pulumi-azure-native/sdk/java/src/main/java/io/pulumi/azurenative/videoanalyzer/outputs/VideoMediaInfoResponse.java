@@ -48,7 +48,7 @@ public final class VideoMediaInfoResponse {
     	      this.segmentLength = defaults.segmentLength;
         }
 
-        public Builder setSegmentLength(String segmentLength) {
+        public Builder segmentLength(String segmentLength) {
             this.segmentLength = Objects.requireNonNull(segmentLength);
             return this;
         }

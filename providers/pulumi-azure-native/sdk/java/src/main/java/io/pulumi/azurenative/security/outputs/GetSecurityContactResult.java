@@ -149,37 +149,37 @@ public final class GetSecurityContactResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setAlertNotifications(@Nullable SecurityContactPropertiesResponseAlertNotifications alertNotifications) {
+        public Builder alertNotifications(@Nullable SecurityContactPropertiesResponseAlertNotifications alertNotifications) {
             this.alertNotifications = alertNotifications;
             return this;
         }
 
-        public Builder setEmails(@Nullable String emails) {
+        public Builder emails(@Nullable String emails) {
             this.emails = emails;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setNotificationsByRole(@Nullable SecurityContactPropertiesResponseNotificationsByRole notificationsByRole) {
+        public Builder notificationsByRole(@Nullable SecurityContactPropertiesResponseNotificationsByRole notificationsByRole) {
             this.notificationsByRole = notificationsByRole;
             return this;
         }
 
-        public Builder setPhone(@Nullable String phone) {
+        public Builder phone(@Nullable String phone) {
             this.phone = phone;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

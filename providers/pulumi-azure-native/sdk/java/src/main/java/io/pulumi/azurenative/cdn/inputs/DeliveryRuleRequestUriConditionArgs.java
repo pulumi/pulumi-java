@@ -75,22 +75,22 @@ public final class DeliveryRuleRequestUriConditionArgs extends io.pulumi.resourc
     	      this.parameters = defaults.parameters;
         }
 
-        public Builder setName(Input<String> name) {
+        public Builder name(Input<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder setParameters(Input<RequestUriMatchConditionParametersArgs> parameters) {
+        public Builder parameters(Input<RequestUriMatchConditionParametersArgs> parameters) {
             this.parameters = Objects.requireNonNull(parameters);
             return this;
         }
 
-        public Builder setParameters(RequestUriMatchConditionParametersArgs parameters) {
+        public Builder parameters(RequestUriMatchConditionParametersArgs parameters) {
             this.parameters = Input.of(Objects.requireNonNull(parameters));
             return this;
         }

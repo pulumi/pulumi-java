@@ -109,42 +109,42 @@ public final class ScaleRuleArgs extends io.pulumi.resources.ResourceArgs {
     	      this.name = defaults.name;
         }
 
-        public Builder setAzureQueue(@Nullable Input<QueueScaleRuleArgs> azureQueue) {
+        public Builder azureQueue(@Nullable Input<QueueScaleRuleArgs> azureQueue) {
             this.azureQueue = azureQueue;
             return this;
         }
 
-        public Builder setAzureQueue(@Nullable QueueScaleRuleArgs azureQueue) {
+        public Builder azureQueue(@Nullable QueueScaleRuleArgs azureQueue) {
             this.azureQueue = Input.ofNullable(azureQueue);
             return this;
         }
 
-        public Builder setCustom(@Nullable Input<CustomScaleRuleArgs> custom) {
+        public Builder custom(@Nullable Input<CustomScaleRuleArgs> custom) {
             this.custom = custom;
             return this;
         }
 
-        public Builder setCustom(@Nullable CustomScaleRuleArgs custom) {
+        public Builder custom(@Nullable CustomScaleRuleArgs custom) {
             this.custom = Input.ofNullable(custom);
             return this;
         }
 
-        public Builder setHttp(@Nullable Input<HttpScaleRuleArgs> http) {
+        public Builder http(@Nullable Input<HttpScaleRuleArgs> http) {
             this.http = http;
             return this;
         }
 
-        public Builder setHttp(@Nullable HttpScaleRuleArgs http) {
+        public Builder http(@Nullable HttpScaleRuleArgs http) {
             this.http = Input.ofNullable(http);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }

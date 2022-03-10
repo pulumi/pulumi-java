@@ -255,132 +255,132 @@ public final class SUCSchedulePropertiesArgs extends io.pulumi.resources.Resourc
     	      this.timeZone = defaults.timeZone;
         }
 
-        public Builder setAdvancedSchedule(@Nullable Input<AdvancedScheduleArgs> advancedSchedule) {
+        public Builder advancedSchedule(@Nullable Input<AdvancedScheduleArgs> advancedSchedule) {
             this.advancedSchedule = advancedSchedule;
             return this;
         }
 
-        public Builder setAdvancedSchedule(@Nullable AdvancedScheduleArgs advancedSchedule) {
+        public Builder advancedSchedule(@Nullable AdvancedScheduleArgs advancedSchedule) {
             this.advancedSchedule = Input.ofNullable(advancedSchedule);
             return this;
         }
 
-        public Builder setCreationTime(@Nullable Input<String> creationTime) {
+        public Builder creationTime(@Nullable Input<String> creationTime) {
             this.creationTime = creationTime;
             return this;
         }
 
-        public Builder setCreationTime(@Nullable String creationTime) {
+        public Builder creationTime(@Nullable String creationTime) {
             this.creationTime = Input.ofNullable(creationTime);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setExpiryTime(@Nullable Input<String> expiryTime) {
+        public Builder expiryTime(@Nullable Input<String> expiryTime) {
             this.expiryTime = expiryTime;
             return this;
         }
 
-        public Builder setExpiryTime(@Nullable String expiryTime) {
+        public Builder expiryTime(@Nullable String expiryTime) {
             this.expiryTime = Input.ofNullable(expiryTime);
             return this;
         }
 
-        public Builder setExpiryTimeOffsetMinutes(@Nullable Input<Double> expiryTimeOffsetMinutes) {
+        public Builder expiryTimeOffsetMinutes(@Nullable Input<Double> expiryTimeOffsetMinutes) {
             this.expiryTimeOffsetMinutes = expiryTimeOffsetMinutes;
             return this;
         }
 
-        public Builder setExpiryTimeOffsetMinutes(@Nullable Double expiryTimeOffsetMinutes) {
+        public Builder expiryTimeOffsetMinutes(@Nullable Double expiryTimeOffsetMinutes) {
             this.expiryTimeOffsetMinutes = Input.ofNullable(expiryTimeOffsetMinutes);
             return this;
         }
 
-        public Builder setFrequency(@Nullable Input<Either<String,ScheduleFrequency>> frequency) {
+        public Builder frequency(@Nullable Input<Either<String,ScheduleFrequency>> frequency) {
             this.frequency = frequency;
             return this;
         }
 
-        public Builder setFrequency(@Nullable Either<String,ScheduleFrequency> frequency) {
+        public Builder frequency(@Nullable Either<String,ScheduleFrequency> frequency) {
             this.frequency = Input.ofNullable(frequency);
             return this;
         }
 
-        public Builder setInterval(@Nullable Input<Double> interval) {
+        public Builder interval(@Nullable Input<Double> interval) {
             this.interval = interval;
             return this;
         }
 
-        public Builder setInterval(@Nullable Double interval) {
+        public Builder interval(@Nullable Double interval) {
             this.interval = Input.ofNullable(interval);
             return this;
         }
 
-        public Builder setIsEnabled(@Nullable Input<Boolean> isEnabled) {
+        public Builder isEnabled(@Nullable Input<Boolean> isEnabled) {
             this.isEnabled = isEnabled;
             return this;
         }
 
-        public Builder setIsEnabled(@Nullable Boolean isEnabled) {
+        public Builder isEnabled(@Nullable Boolean isEnabled) {
             this.isEnabled = Input.ofNullable(isEnabled);
             return this;
         }
 
-        public Builder setLastModifiedTime(@Nullable Input<String> lastModifiedTime) {
+        public Builder lastModifiedTime(@Nullable Input<String> lastModifiedTime) {
             this.lastModifiedTime = lastModifiedTime;
             return this;
         }
 
-        public Builder setLastModifiedTime(@Nullable String lastModifiedTime) {
+        public Builder lastModifiedTime(@Nullable String lastModifiedTime) {
             this.lastModifiedTime = Input.ofNullable(lastModifiedTime);
             return this;
         }
 
-        public Builder setNextRun(@Nullable Input<String> nextRun) {
+        public Builder nextRun(@Nullable Input<String> nextRun) {
             this.nextRun = nextRun;
             return this;
         }
 
-        public Builder setNextRun(@Nullable String nextRun) {
+        public Builder nextRun(@Nullable String nextRun) {
             this.nextRun = Input.ofNullable(nextRun);
             return this;
         }
 
-        public Builder setNextRunOffsetMinutes(@Nullable Input<Double> nextRunOffsetMinutes) {
+        public Builder nextRunOffsetMinutes(@Nullable Input<Double> nextRunOffsetMinutes) {
             this.nextRunOffsetMinutes = nextRunOffsetMinutes;
             return this;
         }
 
-        public Builder setNextRunOffsetMinutes(@Nullable Double nextRunOffsetMinutes) {
+        public Builder nextRunOffsetMinutes(@Nullable Double nextRunOffsetMinutes) {
             this.nextRunOffsetMinutes = Input.ofNullable(nextRunOffsetMinutes);
             return this;
         }
 
-        public Builder setStartTime(@Nullable Input<String> startTime) {
+        public Builder startTime(@Nullable Input<String> startTime) {
             this.startTime = startTime;
             return this;
         }
 
-        public Builder setStartTime(@Nullable String startTime) {
+        public Builder startTime(@Nullable String startTime) {
             this.startTime = Input.ofNullable(startTime);
             return this;
         }
 
-        public Builder setTimeZone(@Nullable Input<String> timeZone) {
+        public Builder timeZone(@Nullable Input<String> timeZone) {
             this.timeZone = timeZone;
             return this;
         }
 
-        public Builder setTimeZone(@Nullable String timeZone) {
+        public Builder timeZone(@Nullable String timeZone) {
             this.timeZone = Input.ofNullable(timeZone);
             return this;
         }

@@ -90,17 +90,17 @@ public final class NetworkRuleSetIpRuleResponse extends io.pulumi.resources.Invo
     	      this.ipMask = defaults.ipMask;
         }
 
-        public Builder setAction(@Nullable String action) {
+        public Builder action(@Nullable String action) {
             this.action = action;
             return this;
         }
 
-        public Builder setFilterName(String filterName) {
+        public Builder filterName(String filterName) {
             this.filterName = Objects.requireNonNull(filterName);
             return this;
         }
 
-        public Builder setIpMask(String ipMask) {
+        public Builder ipMask(String ipMask) {
             this.ipMask = Objects.requireNonNull(ipMask);
             return this;
         }

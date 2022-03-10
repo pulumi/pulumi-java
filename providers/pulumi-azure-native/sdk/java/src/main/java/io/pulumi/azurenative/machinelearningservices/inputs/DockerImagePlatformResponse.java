@@ -53,7 +53,7 @@ public final class DockerImagePlatformResponse extends io.pulumi.resources.Invok
     	      this.operatingSystemType = defaults.operatingSystemType;
         }
 
-        public Builder setOperatingSystemType(@Nullable String operatingSystemType) {
+        public Builder operatingSystemType(@Nullable String operatingSystemType) {
             this.operatingSystemType = operatingSystemType;
             return this;
         }

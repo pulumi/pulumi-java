@@ -100,22 +100,22 @@ public final class GetApiTagDescriptionArgs extends io.pulumi.resources.InvokeAr
     	      this.tagDescriptionId = defaults.tagDescriptionId;
         }
 
-        public Builder setApiId(String apiId) {
+        public Builder apiId(String apiId) {
             this.apiId = Objects.requireNonNull(apiId);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setServiceName(String serviceName) {
+        public Builder serviceName(String serviceName) {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
         }
 
-        public Builder setTagDescriptionId(String tagDescriptionId) {
+        public Builder tagDescriptionId(String tagDescriptionId) {
             this.tagDescriptionId = Objects.requireNonNull(tagDescriptionId);
             return this;
         }

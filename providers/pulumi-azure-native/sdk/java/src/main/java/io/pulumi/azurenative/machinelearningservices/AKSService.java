@@ -200,7 +200,7 @@ public class AKSService extends io.pulumi.resources.CustomResource {
     private static AKSServiceArgs makeArgs(AKSServiceArgs args) {
         var builder = args == null ? AKSServiceArgs.builder() : AKSServiceArgs.builder(args);
         return builder
-            .setComputeType("AKS")
+            .computeType("AKS")
             .build();
     }
 

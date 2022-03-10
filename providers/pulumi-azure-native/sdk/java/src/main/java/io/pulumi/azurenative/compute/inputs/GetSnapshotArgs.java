@@ -68,12 +68,12 @@ public final class GetSnapshotArgs extends io.pulumi.resources.InvokeArgs {
     	      this.snapshotName = defaults.snapshotName;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setSnapshotName(String snapshotName) {
+        public Builder snapshotName(String snapshotName) {
             this.snapshotName = Objects.requireNonNull(snapshotName);
             return this;
         }

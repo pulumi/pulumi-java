@@ -812,237 +812,237 @@ public final class GetWebAppSlotResult {
     	      this.virtualNetworkSubnetId = defaults.virtualNetworkSubnetId;
         }
 
-        public Builder setAvailabilityState(String availabilityState) {
+        public Builder availabilityState(String availabilityState) {
             this.availabilityState = Objects.requireNonNull(availabilityState);
             return this;
         }
 
-        public Builder setClientAffinityEnabled(@Nullable Boolean clientAffinityEnabled) {
+        public Builder clientAffinityEnabled(@Nullable Boolean clientAffinityEnabled) {
             this.clientAffinityEnabled = clientAffinityEnabled;
             return this;
         }
 
-        public Builder setClientCertEnabled(@Nullable Boolean clientCertEnabled) {
+        public Builder clientCertEnabled(@Nullable Boolean clientCertEnabled) {
             this.clientCertEnabled = clientCertEnabled;
             return this;
         }
 
-        public Builder setClientCertExclusionPaths(@Nullable String clientCertExclusionPaths) {
+        public Builder clientCertExclusionPaths(@Nullable String clientCertExclusionPaths) {
             this.clientCertExclusionPaths = clientCertExclusionPaths;
             return this;
         }
 
-        public Builder setClientCertMode(@Nullable String clientCertMode) {
+        public Builder clientCertMode(@Nullable String clientCertMode) {
             this.clientCertMode = clientCertMode;
             return this;
         }
 
-        public Builder setContainerSize(@Nullable Integer containerSize) {
+        public Builder containerSize(@Nullable Integer containerSize) {
             this.containerSize = containerSize;
             return this;
         }
 
-        public Builder setCustomDomainVerificationId(@Nullable String customDomainVerificationId) {
+        public Builder customDomainVerificationId(@Nullable String customDomainVerificationId) {
             this.customDomainVerificationId = customDomainVerificationId;
             return this;
         }
 
-        public Builder setDailyMemoryTimeQuota(@Nullable Integer dailyMemoryTimeQuota) {
+        public Builder dailyMemoryTimeQuota(@Nullable Integer dailyMemoryTimeQuota) {
             this.dailyMemoryTimeQuota = dailyMemoryTimeQuota;
             return this;
         }
 
-        public Builder setDefaultHostName(String defaultHostName) {
+        public Builder defaultHostName(String defaultHostName) {
             this.defaultHostName = Objects.requireNonNull(defaultHostName);
             return this;
         }
 
-        public Builder setEnabled(@Nullable Boolean enabled) {
+        public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = enabled;
             return this;
         }
 
-        public Builder setEnabledHostNames(List<String> enabledHostNames) {
+        public Builder enabledHostNames(List<String> enabledHostNames) {
             this.enabledHostNames = Objects.requireNonNull(enabledHostNames);
             return this;
         }
 
-        public Builder setHostNameSslStates(@Nullable List<HostNameSslStateResponse> hostNameSslStates) {
+        public Builder hostNameSslStates(@Nullable List<HostNameSslStateResponse> hostNameSslStates) {
             this.hostNameSslStates = hostNameSslStates;
             return this;
         }
 
-        public Builder setHostNames(List<String> hostNames) {
+        public Builder hostNames(List<String> hostNames) {
             this.hostNames = Objects.requireNonNull(hostNames);
             return this;
         }
 
-        public Builder setHostNamesDisabled(@Nullable Boolean hostNamesDisabled) {
+        public Builder hostNamesDisabled(@Nullable Boolean hostNamesDisabled) {
             this.hostNamesDisabled = hostNamesDisabled;
             return this;
         }
 
-        public Builder setHostingEnvironmentProfile(@Nullable HostingEnvironmentProfileResponse hostingEnvironmentProfile) {
+        public Builder hostingEnvironmentProfile(@Nullable HostingEnvironmentProfileResponse hostingEnvironmentProfile) {
             this.hostingEnvironmentProfile = hostingEnvironmentProfile;
             return this;
         }
 
-        public Builder setHttpsOnly(@Nullable Boolean httpsOnly) {
+        public Builder httpsOnly(@Nullable Boolean httpsOnly) {
             this.httpsOnly = httpsOnly;
             return this;
         }
 
-        public Builder setHyperV(@Nullable Boolean hyperV) {
+        public Builder hyperV(@Nullable Boolean hyperV) {
             this.hyperV = hyperV;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setIdentity(@Nullable ManagedServiceIdentityResponse identity) {
+        public Builder identity(@Nullable ManagedServiceIdentityResponse identity) {
             this.identity = identity;
             return this;
         }
 
-        public Builder setInProgressOperationId(String inProgressOperationId) {
+        public Builder inProgressOperationId(String inProgressOperationId) {
             this.inProgressOperationId = Objects.requireNonNull(inProgressOperationId);
             return this;
         }
 
-        public Builder setIsDefaultContainer(Boolean isDefaultContainer) {
+        public Builder isDefaultContainer(Boolean isDefaultContainer) {
             this.isDefaultContainer = Objects.requireNonNull(isDefaultContainer);
             return this;
         }
 
-        public Builder setIsXenon(@Nullable Boolean isXenon) {
+        public Builder isXenon(@Nullable Boolean isXenon) {
             this.isXenon = isXenon;
             return this;
         }
 
-        public Builder setKeyVaultReferenceIdentity(@Nullable String keyVaultReferenceIdentity) {
+        public Builder keyVaultReferenceIdentity(@Nullable String keyVaultReferenceIdentity) {
             this.keyVaultReferenceIdentity = keyVaultReferenceIdentity;
             return this;
         }
 
-        public Builder setKind(@Nullable String kind) {
+        public Builder kind(@Nullable String kind) {
             this.kind = kind;
             return this;
         }
 
-        public Builder setLastModifiedTimeUtc(String lastModifiedTimeUtc) {
+        public Builder lastModifiedTimeUtc(String lastModifiedTimeUtc) {
             this.lastModifiedTimeUtc = Objects.requireNonNull(lastModifiedTimeUtc);
             return this;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setMaxNumberOfWorkers(Integer maxNumberOfWorkers) {
+        public Builder maxNumberOfWorkers(Integer maxNumberOfWorkers) {
             this.maxNumberOfWorkers = Objects.requireNonNull(maxNumberOfWorkers);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setOutboundIpAddresses(String outboundIpAddresses) {
+        public Builder outboundIpAddresses(String outboundIpAddresses) {
             this.outboundIpAddresses = Objects.requireNonNull(outboundIpAddresses);
             return this;
         }
 
-        public Builder setPossibleOutboundIpAddresses(String possibleOutboundIpAddresses) {
+        public Builder possibleOutboundIpAddresses(String possibleOutboundIpAddresses) {
             this.possibleOutboundIpAddresses = Objects.requireNonNull(possibleOutboundIpAddresses);
             return this;
         }
 
-        public Builder setRedundancyMode(@Nullable String redundancyMode) {
+        public Builder redundancyMode(@Nullable String redundancyMode) {
             this.redundancyMode = redundancyMode;
             return this;
         }
 
-        public Builder setRepositorySiteName(String repositorySiteName) {
+        public Builder repositorySiteName(String repositorySiteName) {
             this.repositorySiteName = Objects.requireNonNull(repositorySiteName);
             return this;
         }
 
-        public Builder setReserved(@Nullable Boolean reserved) {
+        public Builder reserved(@Nullable Boolean reserved) {
             this.reserved = reserved;
             return this;
         }
 
-        public Builder setResourceGroup(String resourceGroup) {
+        public Builder resourceGroup(String resourceGroup) {
             this.resourceGroup = Objects.requireNonNull(resourceGroup);
             return this;
         }
 
-        public Builder setScmSiteAlsoStopped(@Nullable Boolean scmSiteAlsoStopped) {
+        public Builder scmSiteAlsoStopped(@Nullable Boolean scmSiteAlsoStopped) {
             this.scmSiteAlsoStopped = scmSiteAlsoStopped;
             return this;
         }
 
-        public Builder setServerFarmId(@Nullable String serverFarmId) {
+        public Builder serverFarmId(@Nullable String serverFarmId) {
             this.serverFarmId = serverFarmId;
             return this;
         }
 
-        public Builder setSiteConfig(@Nullable SiteConfigResponse siteConfig) {
+        public Builder siteConfig(@Nullable SiteConfigResponse siteConfig) {
             this.siteConfig = siteConfig;
             return this;
         }
 
-        public Builder setSlotSwapStatus(SlotSwapStatusResponse slotSwapStatus) {
+        public Builder slotSwapStatus(SlotSwapStatusResponse slotSwapStatus) {
             this.slotSwapStatus = Objects.requireNonNull(slotSwapStatus);
             return this;
         }
 
-        public Builder setState(String state) {
+        public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
 
-        public Builder setStorageAccountRequired(@Nullable Boolean storageAccountRequired) {
+        public Builder storageAccountRequired(@Nullable Boolean storageAccountRequired) {
             this.storageAccountRequired = storageAccountRequired;
             return this;
         }
 
-        public Builder setSuspendedTill(String suspendedTill) {
+        public Builder suspendedTill(String suspendedTill) {
             this.suspendedTill = Objects.requireNonNull(suspendedTill);
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTargetSwapSlot(String targetSwapSlot) {
+        public Builder targetSwapSlot(String targetSwapSlot) {
             this.targetSwapSlot = Objects.requireNonNull(targetSwapSlot);
             return this;
         }
 
-        public Builder setTrafficManagerHostNames(List<String> trafficManagerHostNames) {
+        public Builder trafficManagerHostNames(List<String> trafficManagerHostNames) {
             this.trafficManagerHostNames = Objects.requireNonNull(trafficManagerHostNames);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setUsageState(String usageState) {
+        public Builder usageState(String usageState) {
             this.usageState = Objects.requireNonNull(usageState);
             return this;
         }
 
-        public Builder setVirtualNetworkSubnetId(@Nullable String virtualNetworkSubnetId) {
+        public Builder virtualNetworkSubnetId(@Nullable String virtualNetworkSubnetId) {
             this.virtualNetworkSubnetId = virtualNetworkSubnetId;
             return this;
         }

@@ -414,117 +414,117 @@ public final class GetWorkspaceResult {
     	      this.workspaceUID = defaults.workspaceUID;
         }
 
-        public Builder setAdlaResourceId(String adlaResourceId) {
+        public Builder adlaResourceId(String adlaResourceId) {
             this.adlaResourceId = Objects.requireNonNull(adlaResourceId);
             return this;
         }
 
-        public Builder setConnectivityEndpoints(@Nullable Map<String,String> connectivityEndpoints) {
+        public Builder connectivityEndpoints(@Nullable Map<String,String> connectivityEndpoints) {
             this.connectivityEndpoints = connectivityEndpoints;
             return this;
         }
 
-        public Builder setDefaultDataLakeStorage(@Nullable DataLakeStorageAccountDetailsResponse defaultDataLakeStorage) {
+        public Builder defaultDataLakeStorage(@Nullable DataLakeStorageAccountDetailsResponse defaultDataLakeStorage) {
             this.defaultDataLakeStorage = defaultDataLakeStorage;
             return this;
         }
 
-        public Builder setEncryption(@Nullable EncryptionDetailsResponse encryption) {
+        public Builder encryption(@Nullable EncryptionDetailsResponse encryption) {
             this.encryption = encryption;
             return this;
         }
 
-        public Builder setExtraProperties(Map<String,Object> extraProperties) {
+        public Builder extraProperties(Map<String,Object> extraProperties) {
             this.extraProperties = Objects.requireNonNull(extraProperties);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setIdentity(@Nullable ManagedIdentityResponse identity) {
+        public Builder identity(@Nullable ManagedIdentityResponse identity) {
             this.identity = identity;
             return this;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setManagedResourceGroupName(@Nullable String managedResourceGroupName) {
+        public Builder managedResourceGroupName(@Nullable String managedResourceGroupName) {
             this.managedResourceGroupName = managedResourceGroupName;
             return this;
         }
 
-        public Builder setManagedVirtualNetwork(@Nullable String managedVirtualNetwork) {
+        public Builder managedVirtualNetwork(@Nullable String managedVirtualNetwork) {
             this.managedVirtualNetwork = managedVirtualNetwork;
             return this;
         }
 
-        public Builder setManagedVirtualNetworkSettings(@Nullable ManagedVirtualNetworkSettingsResponse managedVirtualNetworkSettings) {
+        public Builder managedVirtualNetworkSettings(@Nullable ManagedVirtualNetworkSettingsResponse managedVirtualNetworkSettings) {
             this.managedVirtualNetworkSettings = managedVirtualNetworkSettings;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPrivateEndpointConnections(@Nullable List<PrivateEndpointConnectionResponse> privateEndpointConnections) {
+        public Builder privateEndpointConnections(@Nullable List<PrivateEndpointConnectionResponse> privateEndpointConnections) {
             this.privateEndpointConnections = privateEndpointConnections;
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setPublicNetworkAccess(@Nullable String publicNetworkAccess) {
+        public Builder publicNetworkAccess(@Nullable String publicNetworkAccess) {
             this.publicNetworkAccess = publicNetworkAccess;
             return this;
         }
 
-        public Builder setPurviewConfiguration(@Nullable PurviewConfigurationResponse purviewConfiguration) {
+        public Builder purviewConfiguration(@Nullable PurviewConfigurationResponse purviewConfiguration) {
             this.purviewConfiguration = purviewConfiguration;
             return this;
         }
 
-        public Builder setSqlAdministratorLogin(@Nullable String sqlAdministratorLogin) {
+        public Builder sqlAdministratorLogin(@Nullable String sqlAdministratorLogin) {
             this.sqlAdministratorLogin = sqlAdministratorLogin;
             return this;
         }
 
-        public Builder setSqlAdministratorLoginPassword(@Nullable String sqlAdministratorLoginPassword) {
+        public Builder sqlAdministratorLoginPassword(@Nullable String sqlAdministratorLoginPassword) {
             this.sqlAdministratorLoginPassword = sqlAdministratorLoginPassword;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setVirtualNetworkProfile(@Nullable VirtualNetworkProfileResponse virtualNetworkProfile) {
+        public Builder virtualNetworkProfile(@Nullable VirtualNetworkProfileResponse virtualNetworkProfile) {
             this.virtualNetworkProfile = virtualNetworkProfile;
             return this;
         }
 
-        public Builder setWorkspaceRepositoryConfiguration(@Nullable WorkspaceRepositoryConfigurationResponse workspaceRepositoryConfiguration) {
+        public Builder workspaceRepositoryConfiguration(@Nullable WorkspaceRepositoryConfigurationResponse workspaceRepositoryConfiguration) {
             this.workspaceRepositoryConfiguration = workspaceRepositoryConfiguration;
             return this;
         }
 
-        public Builder setWorkspaceUID(String workspaceUID) {
+        public Builder workspaceUID(String workspaceUID) {
             this.workspaceUID = Objects.requireNonNull(workspaceUID);
             return this;
         }

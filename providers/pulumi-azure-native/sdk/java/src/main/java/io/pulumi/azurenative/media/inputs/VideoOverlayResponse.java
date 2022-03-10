@@ -205,52 +205,52 @@ public final class VideoOverlayResponse extends io.pulumi.resources.InvokeArgs {
     	      this.start = defaults.start;
         }
 
-        public Builder setAudioGainLevel(@Nullable Double audioGainLevel) {
+        public Builder audioGainLevel(@Nullable Double audioGainLevel) {
             this.audioGainLevel = audioGainLevel;
             return this;
         }
 
-        public Builder setCropRectangle(@Nullable RectangleResponse cropRectangle) {
+        public Builder cropRectangle(@Nullable RectangleResponse cropRectangle) {
             this.cropRectangle = cropRectangle;
             return this;
         }
 
-        public Builder setEnd(@Nullable String end) {
+        public Builder end(@Nullable String end) {
             this.end = end;
             return this;
         }
 
-        public Builder setFadeInDuration(@Nullable String fadeInDuration) {
+        public Builder fadeInDuration(@Nullable String fadeInDuration) {
             this.fadeInDuration = fadeInDuration;
             return this;
         }
 
-        public Builder setFadeOutDuration(@Nullable String fadeOutDuration) {
+        public Builder fadeOutDuration(@Nullable String fadeOutDuration) {
             this.fadeOutDuration = fadeOutDuration;
             return this;
         }
 
-        public Builder setInputLabel(String inputLabel) {
+        public Builder inputLabel(String inputLabel) {
             this.inputLabel = Objects.requireNonNull(inputLabel);
             return this;
         }
 
-        public Builder setOdataType(String odataType) {
+        public Builder odataType(String odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
 
-        public Builder setOpacity(@Nullable Double opacity) {
+        public Builder opacity(@Nullable Double opacity) {
             this.opacity = opacity;
             return this;
         }
 
-        public Builder setPosition(@Nullable RectangleResponse position) {
+        public Builder position(@Nullable RectangleResponse position) {
             this.position = position;
             return this;
         }
 
-        public Builder setStart(@Nullable String start) {
+        public Builder start(@Nullable String start) {
             this.start = start;
             return this;
         }

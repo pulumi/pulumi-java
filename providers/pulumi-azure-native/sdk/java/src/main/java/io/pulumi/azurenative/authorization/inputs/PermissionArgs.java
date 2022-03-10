@@ -107,42 +107,42 @@ public final class PermissionArgs extends io.pulumi.resources.ResourceArgs {
     	      this.notDataActions = defaults.notDataActions;
         }
 
-        public Builder setActions(@Nullable Input<List<String>> actions) {
+        public Builder actions(@Nullable Input<List<String>> actions) {
             this.actions = actions;
             return this;
         }
 
-        public Builder setActions(@Nullable List<String> actions) {
+        public Builder actions(@Nullable List<String> actions) {
             this.actions = Input.ofNullable(actions);
             return this;
         }
 
-        public Builder setDataActions(@Nullable Input<List<String>> dataActions) {
+        public Builder dataActions(@Nullable Input<List<String>> dataActions) {
             this.dataActions = dataActions;
             return this;
         }
 
-        public Builder setDataActions(@Nullable List<String> dataActions) {
+        public Builder dataActions(@Nullable List<String> dataActions) {
             this.dataActions = Input.ofNullable(dataActions);
             return this;
         }
 
-        public Builder setNotActions(@Nullable Input<List<String>> notActions) {
+        public Builder notActions(@Nullable Input<List<String>> notActions) {
             this.notActions = notActions;
             return this;
         }
 
-        public Builder setNotActions(@Nullable List<String> notActions) {
+        public Builder notActions(@Nullable List<String> notActions) {
             this.notActions = Input.ofNullable(notActions);
             return this;
         }
 
-        public Builder setNotDataActions(@Nullable Input<List<String>> notDataActions) {
+        public Builder notDataActions(@Nullable Input<List<String>> notDataActions) {
             this.notDataActions = notDataActions;
             return this;
         }
 
-        public Builder setNotDataActions(@Nullable List<String> notDataActions) {
+        public Builder notDataActions(@Nullable List<String> notDataActions) {
             this.notDataActions = Input.ofNullable(notDataActions);
             return this;
         }

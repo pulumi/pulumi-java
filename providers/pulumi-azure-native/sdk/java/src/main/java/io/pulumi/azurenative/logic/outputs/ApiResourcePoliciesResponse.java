@@ -67,12 +67,12 @@ public final class ApiResourcePoliciesResponse {
     	      this.contentLink = defaults.contentLink;
         }
 
-        public Builder setContent(@Nullable String content) {
+        public Builder content(@Nullable String content) {
             this.content = content;
             return this;
         }
 
-        public Builder setContentLink(@Nullable String contentLink) {
+        public Builder contentLink(@Nullable String contentLink) {
             this.contentLink = contentLink;
             return this;
         }

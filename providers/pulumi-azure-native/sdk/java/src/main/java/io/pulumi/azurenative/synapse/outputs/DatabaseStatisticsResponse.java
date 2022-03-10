@@ -50,7 +50,7 @@ public final class DatabaseStatisticsResponse {
     	      this.size = defaults.size;
         }
 
-        public Builder setSize(@Nullable Double size) {
+        public Builder size(@Nullable Double size) {
             this.size = size;
             return this;
         }

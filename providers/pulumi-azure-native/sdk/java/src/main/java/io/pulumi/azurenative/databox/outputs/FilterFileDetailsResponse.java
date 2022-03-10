@@ -65,12 +65,12 @@ public final class FilterFileDetailsResponse {
     	      this.filterFileType = defaults.filterFileType;
         }
 
-        public Builder setFilterFilePath(String filterFilePath) {
+        public Builder filterFilePath(String filterFilePath) {
             this.filterFilePath = Objects.requireNonNull(filterFilePath);
             return this;
         }
 
-        public Builder setFilterFileType(String filterFileType) {
+        public Builder filterFileType(String filterFileType) {
             this.filterFileType = Objects.requireNonNull(filterFileType);
             return this;
         }

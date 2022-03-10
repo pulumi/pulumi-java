@@ -155,37 +155,37 @@ public final class WebhookReceiverResponse extends io.pulumi.resources.InvokeArg
     	      this.useCommonAlertSchema = defaults.useCommonAlertSchema;
         }
 
-        public Builder setIdentifierUri(@Nullable String identifierUri) {
+        public Builder identifierUri(@Nullable String identifierUri) {
             this.identifierUri = identifierUri;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setObjectId(@Nullable String objectId) {
+        public Builder objectId(@Nullable String objectId) {
             this.objectId = objectId;
             return this;
         }
 
-        public Builder setServiceUri(String serviceUri) {
+        public Builder serviceUri(String serviceUri) {
             this.serviceUri = Objects.requireNonNull(serviceUri);
             return this;
         }
 
-        public Builder setTenantId(@Nullable String tenantId) {
+        public Builder tenantId(@Nullable String tenantId) {
             this.tenantId = tenantId;
             return this;
         }
 
-        public Builder setUseAadAuth(@Nullable Boolean useAadAuth) {
+        public Builder useAadAuth(@Nullable Boolean useAadAuth) {
             this.useAadAuth = useAadAuth;
             return this;
         }
 
-        public Builder setUseCommonAlertSchema(@Nullable Boolean useCommonAlertSchema) {
+        public Builder useCommonAlertSchema(@Nullable Boolean useCommonAlertSchema) {
             this.useCommonAlertSchema = useCommonAlertSchema;
             return this;
         }

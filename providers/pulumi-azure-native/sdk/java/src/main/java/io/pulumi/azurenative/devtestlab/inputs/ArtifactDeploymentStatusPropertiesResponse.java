@@ -91,17 +91,17 @@ public final class ArtifactDeploymentStatusPropertiesResponse extends io.pulumi.
     	      this.totalArtifacts = defaults.totalArtifacts;
         }
 
-        public Builder setArtifactsApplied(@Nullable Integer artifactsApplied) {
+        public Builder artifactsApplied(@Nullable Integer artifactsApplied) {
             this.artifactsApplied = artifactsApplied;
             return this;
         }
 
-        public Builder setDeploymentStatus(@Nullable String deploymentStatus) {
+        public Builder deploymentStatus(@Nullable String deploymentStatus) {
             this.deploymentStatus = deploymentStatus;
             return this;
         }
 
-        public Builder setTotalArtifacts(@Nullable Integer totalArtifacts) {
+        public Builder totalArtifacts(@Nullable Integer totalArtifacts) {
             this.totalArtifacts = totalArtifacts;
             return this;
         }

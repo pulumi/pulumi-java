@@ -241,112 +241,112 @@ public final class IpSecurityRestrictionArgs extends io.pulumi.resources.Resourc
     	      this.vnetTrafficTag = defaults.vnetTrafficTag;
         }
 
-        public Builder setAction(@Nullable Input<String> action) {
+        public Builder action(@Nullable Input<String> action) {
             this.action = action;
             return this;
         }
 
-        public Builder setAction(@Nullable String action) {
+        public Builder action(@Nullable String action) {
             this.action = Input.ofNullable(action);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setHeaders(@Nullable Input<Map<String,List<String>>> headers) {
+        public Builder headers(@Nullable Input<Map<String,List<String>>> headers) {
             this.headers = headers;
             return this;
         }
 
-        public Builder setHeaders(@Nullable Map<String,List<String>> headers) {
+        public Builder headers(@Nullable Map<String,List<String>> headers) {
             this.headers = Input.ofNullable(headers);
             return this;
         }
 
-        public Builder setIpAddress(@Nullable Input<String> ipAddress) {
+        public Builder ipAddress(@Nullable Input<String> ipAddress) {
             this.ipAddress = ipAddress;
             return this;
         }
 
-        public Builder setIpAddress(@Nullable String ipAddress) {
+        public Builder ipAddress(@Nullable String ipAddress) {
             this.ipAddress = Input.ofNullable(ipAddress);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setPriority(@Nullable Input<Integer> priority) {
+        public Builder priority(@Nullable Input<Integer> priority) {
             this.priority = priority;
             return this;
         }
 
-        public Builder setPriority(@Nullable Integer priority) {
+        public Builder priority(@Nullable Integer priority) {
             this.priority = Input.ofNullable(priority);
             return this;
         }
 
-        public Builder setSubnetMask(@Nullable Input<String> subnetMask) {
+        public Builder subnetMask(@Nullable Input<String> subnetMask) {
             this.subnetMask = subnetMask;
             return this;
         }
 
-        public Builder setSubnetMask(@Nullable String subnetMask) {
+        public Builder subnetMask(@Nullable String subnetMask) {
             this.subnetMask = Input.ofNullable(subnetMask);
             return this;
         }
 
-        public Builder setSubnetTrafficTag(@Nullable Input<Integer> subnetTrafficTag) {
+        public Builder subnetTrafficTag(@Nullable Input<Integer> subnetTrafficTag) {
             this.subnetTrafficTag = subnetTrafficTag;
             return this;
         }
 
-        public Builder setSubnetTrafficTag(@Nullable Integer subnetTrafficTag) {
+        public Builder subnetTrafficTag(@Nullable Integer subnetTrafficTag) {
             this.subnetTrafficTag = Input.ofNullable(subnetTrafficTag);
             return this;
         }
 
-        public Builder setTag(@Nullable Input<Either<String,IpFilterTag>> tag) {
+        public Builder tag(@Nullable Input<Either<String,IpFilterTag>> tag) {
             this.tag = tag;
             return this;
         }
 
-        public Builder setTag(@Nullable Either<String,IpFilterTag> tag) {
+        public Builder tag(@Nullable Either<String,IpFilterTag> tag) {
             this.tag = Input.ofNullable(tag);
             return this;
         }
 
-        public Builder setVnetSubnetResourceId(@Nullable Input<String> vnetSubnetResourceId) {
+        public Builder vnetSubnetResourceId(@Nullable Input<String> vnetSubnetResourceId) {
             this.vnetSubnetResourceId = vnetSubnetResourceId;
             return this;
         }
 
-        public Builder setVnetSubnetResourceId(@Nullable String vnetSubnetResourceId) {
+        public Builder vnetSubnetResourceId(@Nullable String vnetSubnetResourceId) {
             this.vnetSubnetResourceId = Input.ofNullable(vnetSubnetResourceId);
             return this;
         }
 
-        public Builder setVnetTrafficTag(@Nullable Input<Integer> vnetTrafficTag) {
+        public Builder vnetTrafficTag(@Nullable Input<Integer> vnetTrafficTag) {
             this.vnetTrafficTag = vnetTrafficTag;
             return this;
         }
 
-        public Builder setVnetTrafficTag(@Nullable Integer vnetTrafficTag) {
+        public Builder vnetTrafficTag(@Nullable Integer vnetTrafficTag) {
             this.vnetTrafficTag = Input.ofNullable(vnetTrafficTag);
             return this;
         }

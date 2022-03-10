@@ -95,32 +95,32 @@ public final class DataExportDetailsArgs extends io.pulumi.resources.ResourceArg
     	      this.transferConfiguration = defaults.transferConfiguration;
         }
 
-        public Builder setAccountDetails(Input<Either<ManagedDiskDetailsArgs,StorageAccountDetailsArgs>> accountDetails) {
+        public Builder accountDetails(Input<Either<ManagedDiskDetailsArgs,StorageAccountDetailsArgs>> accountDetails) {
             this.accountDetails = Objects.requireNonNull(accountDetails);
             return this;
         }
 
-        public Builder setAccountDetails(Either<ManagedDiskDetailsArgs,StorageAccountDetailsArgs> accountDetails) {
+        public Builder accountDetails(Either<ManagedDiskDetailsArgs,StorageAccountDetailsArgs> accountDetails) {
             this.accountDetails = Input.of(Objects.requireNonNull(accountDetails));
             return this;
         }
 
-        public Builder setLogCollectionLevel(@Nullable Input<Either<String,LogCollectionLevel>> logCollectionLevel) {
+        public Builder logCollectionLevel(@Nullable Input<Either<String,LogCollectionLevel>> logCollectionLevel) {
             this.logCollectionLevel = logCollectionLevel;
             return this;
         }
 
-        public Builder setLogCollectionLevel(@Nullable Either<String,LogCollectionLevel> logCollectionLevel) {
+        public Builder logCollectionLevel(@Nullable Either<String,LogCollectionLevel> logCollectionLevel) {
             this.logCollectionLevel = Input.ofNullable(logCollectionLevel);
             return this;
         }
 
-        public Builder setTransferConfiguration(Input<TransferConfigurationArgs> transferConfiguration) {
+        public Builder transferConfiguration(Input<TransferConfigurationArgs> transferConfiguration) {
             this.transferConfiguration = Objects.requireNonNull(transferConfiguration);
             return this;
         }
 
-        public Builder setTransferConfiguration(TransferConfigurationArgs transferConfiguration) {
+        public Builder transferConfiguration(TransferConfigurationArgs transferConfiguration) {
             this.transferConfiguration = Input.of(Objects.requireNonNull(transferConfiguration));
             return this;
         }

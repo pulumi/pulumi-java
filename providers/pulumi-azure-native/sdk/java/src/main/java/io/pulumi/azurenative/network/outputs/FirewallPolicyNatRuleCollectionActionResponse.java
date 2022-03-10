@@ -50,7 +50,7 @@ public final class FirewallPolicyNatRuleCollectionActionResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = type;
             return this;
         }

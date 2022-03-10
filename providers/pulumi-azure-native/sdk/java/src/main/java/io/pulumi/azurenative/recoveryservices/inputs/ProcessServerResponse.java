@@ -624,182 +624,182 @@ public final class ProcessServerResponse extends io.pulumi.resources.InvokeArgs 
     	      this.versionStatus = defaults.versionStatus;
         }
 
-        public Builder setAgentExpiryDate(@Nullable String agentExpiryDate) {
+        public Builder agentExpiryDate(@Nullable String agentExpiryDate) {
             this.agentExpiryDate = agentExpiryDate;
             return this;
         }
 
-        public Builder setAgentVersion(@Nullable String agentVersion) {
+        public Builder agentVersion(@Nullable String agentVersion) {
             this.agentVersion = agentVersion;
             return this;
         }
 
-        public Builder setAgentVersionDetails(@Nullable VersionDetailsResponse agentVersionDetails) {
+        public Builder agentVersionDetails(@Nullable VersionDetailsResponse agentVersionDetails) {
             this.agentVersionDetails = agentVersionDetails;
             return this;
         }
 
-        public Builder setAvailableMemoryInBytes(@Nullable Double availableMemoryInBytes) {
+        public Builder availableMemoryInBytes(@Nullable Double availableMemoryInBytes) {
             this.availableMemoryInBytes = availableMemoryInBytes;
             return this;
         }
 
-        public Builder setAvailableSpaceInBytes(@Nullable Double availableSpaceInBytes) {
+        public Builder availableSpaceInBytes(@Nullable Double availableSpaceInBytes) {
             this.availableSpaceInBytes = availableSpaceInBytes;
             return this;
         }
 
-        public Builder setCpuLoad(@Nullable String cpuLoad) {
+        public Builder cpuLoad(@Nullable String cpuLoad) {
             this.cpuLoad = cpuLoad;
             return this;
         }
 
-        public Builder setCpuLoadStatus(@Nullable String cpuLoadStatus) {
+        public Builder cpuLoadStatus(@Nullable String cpuLoadStatus) {
             this.cpuLoadStatus = cpuLoadStatus;
             return this;
         }
 
-        public Builder setFriendlyName(@Nullable String friendlyName) {
+        public Builder friendlyName(@Nullable String friendlyName) {
             this.friendlyName = friendlyName;
             return this;
         }
 
-        public Builder setHealth(String health) {
+        public Builder health(String health) {
             this.health = Objects.requireNonNull(health);
             return this;
         }
 
-        public Builder setHealthErrors(@Nullable List<HealthErrorResponse> healthErrors) {
+        public Builder healthErrors(@Nullable List<HealthErrorResponse> healthErrors) {
             this.healthErrors = healthErrors;
             return this;
         }
 
-        public Builder setHostId(@Nullable String hostId) {
+        public Builder hostId(@Nullable String hostId) {
             this.hostId = hostId;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setIpAddress(@Nullable String ipAddress) {
+        public Builder ipAddress(@Nullable String ipAddress) {
             this.ipAddress = ipAddress;
             return this;
         }
 
-        public Builder setLastHeartbeat(@Nullable String lastHeartbeat) {
+        public Builder lastHeartbeat(@Nullable String lastHeartbeat) {
             this.lastHeartbeat = lastHeartbeat;
             return this;
         }
 
-        public Builder setMachineCount(@Nullable String machineCount) {
+        public Builder machineCount(@Nullable String machineCount) {
             this.machineCount = machineCount;
             return this;
         }
 
-        public Builder setMarsCommunicationStatus(String marsCommunicationStatus) {
+        public Builder marsCommunicationStatus(String marsCommunicationStatus) {
             this.marsCommunicationStatus = Objects.requireNonNull(marsCommunicationStatus);
             return this;
         }
 
-        public Builder setMarsRegistrationStatus(String marsRegistrationStatus) {
+        public Builder marsRegistrationStatus(String marsRegistrationStatus) {
             this.marsRegistrationStatus = Objects.requireNonNull(marsRegistrationStatus);
             return this;
         }
 
-        public Builder setMemoryUsageStatus(@Nullable String memoryUsageStatus) {
+        public Builder memoryUsageStatus(@Nullable String memoryUsageStatus) {
             this.memoryUsageStatus = memoryUsageStatus;
             return this;
         }
 
-        public Builder setMobilityServiceUpdates(@Nullable List<MobilityServiceUpdateResponse> mobilityServiceUpdates) {
+        public Builder mobilityServiceUpdates(@Nullable List<MobilityServiceUpdateResponse> mobilityServiceUpdates) {
             this.mobilityServiceUpdates = mobilityServiceUpdates;
             return this;
         }
 
-        public Builder setOsType(@Nullable String osType) {
+        public Builder osType(@Nullable String osType) {
             this.osType = osType;
             return this;
         }
 
-        public Builder setOsVersion(@Nullable String osVersion) {
+        public Builder osVersion(@Nullable String osVersion) {
             this.osVersion = osVersion;
             return this;
         }
 
-        public Builder setPsServiceStatus(@Nullable String psServiceStatus) {
+        public Builder psServiceStatus(@Nullable String psServiceStatus) {
             this.psServiceStatus = psServiceStatus;
             return this;
         }
 
-        public Builder setPsStatsRefreshTime(String psStatsRefreshTime) {
+        public Builder psStatsRefreshTime(String psStatsRefreshTime) {
             this.psStatsRefreshTime = Objects.requireNonNull(psStatsRefreshTime);
             return this;
         }
 
-        public Builder setReplicationPairCount(@Nullable String replicationPairCount) {
+        public Builder replicationPairCount(@Nullable String replicationPairCount) {
             this.replicationPairCount = replicationPairCount;
             return this;
         }
 
-        public Builder setSpaceUsageStatus(@Nullable String spaceUsageStatus) {
+        public Builder spaceUsageStatus(@Nullable String spaceUsageStatus) {
             this.spaceUsageStatus = spaceUsageStatus;
             return this;
         }
 
-        public Builder setSslCertExpiryDate(@Nullable String sslCertExpiryDate) {
+        public Builder sslCertExpiryDate(@Nullable String sslCertExpiryDate) {
             this.sslCertExpiryDate = sslCertExpiryDate;
             return this;
         }
 
-        public Builder setSslCertExpiryRemainingDays(@Nullable Integer sslCertExpiryRemainingDays) {
+        public Builder sslCertExpiryRemainingDays(@Nullable Integer sslCertExpiryRemainingDays) {
             this.sslCertExpiryRemainingDays = sslCertExpiryRemainingDays;
             return this;
         }
 
-        public Builder setSystemLoad(@Nullable String systemLoad) {
+        public Builder systemLoad(@Nullable String systemLoad) {
             this.systemLoad = systemLoad;
             return this;
         }
 
-        public Builder setSystemLoadStatus(@Nullable String systemLoadStatus) {
+        public Builder systemLoadStatus(@Nullable String systemLoadStatus) {
             this.systemLoadStatus = systemLoadStatus;
             return this;
         }
 
-        public Builder setThroughputInBytes(Double throughputInBytes) {
+        public Builder throughputInBytes(Double throughputInBytes) {
             this.throughputInBytes = Objects.requireNonNull(throughputInBytes);
             return this;
         }
 
-        public Builder setThroughputInMBps(Double throughputInMBps) {
+        public Builder throughputInMBps(Double throughputInMBps) {
             this.throughputInMBps = Objects.requireNonNull(throughputInMBps);
             return this;
         }
 
-        public Builder setThroughputStatus(String throughputStatus) {
+        public Builder throughputStatus(String throughputStatus) {
             this.throughputStatus = Objects.requireNonNull(throughputStatus);
             return this;
         }
 
-        public Builder setThroughputUploadPendingDataInBytes(Double throughputUploadPendingDataInBytes) {
+        public Builder throughputUploadPendingDataInBytes(Double throughputUploadPendingDataInBytes) {
             this.throughputUploadPendingDataInBytes = Objects.requireNonNull(throughputUploadPendingDataInBytes);
             return this;
         }
 
-        public Builder setTotalMemoryInBytes(@Nullable Double totalMemoryInBytes) {
+        public Builder totalMemoryInBytes(@Nullable Double totalMemoryInBytes) {
             this.totalMemoryInBytes = totalMemoryInBytes;
             return this;
         }
 
-        public Builder setTotalSpaceInBytes(@Nullable Double totalSpaceInBytes) {
+        public Builder totalSpaceInBytes(@Nullable Double totalSpaceInBytes) {
             this.totalSpaceInBytes = totalSpaceInBytes;
             return this;
         }
 
-        public Builder setVersionStatus(@Nullable String versionStatus) {
+        public Builder versionStatus(@Nullable String versionStatus) {
             this.versionStatus = versionStatus;
             return this;
         }

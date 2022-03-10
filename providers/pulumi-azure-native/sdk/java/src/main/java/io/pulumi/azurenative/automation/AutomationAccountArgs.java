@@ -203,102 +203,102 @@ public final class AutomationAccountArgs extends io.pulumi.resources.ResourceArg
     	      this.tags = defaults.tags;
         }
 
-        public Builder setAutomationAccountName(@Nullable Input<String> automationAccountName) {
+        public Builder automationAccountName(@Nullable Input<String> automationAccountName) {
             this.automationAccountName = automationAccountName;
             return this;
         }
 
-        public Builder setAutomationAccountName(@Nullable String automationAccountName) {
+        public Builder automationAccountName(@Nullable String automationAccountName) {
             this.automationAccountName = Input.ofNullable(automationAccountName);
             return this;
         }
 
-        public Builder setDisableLocalAuth(@Nullable Input<Boolean> disableLocalAuth) {
+        public Builder disableLocalAuth(@Nullable Input<Boolean> disableLocalAuth) {
             this.disableLocalAuth = disableLocalAuth;
             return this;
         }
 
-        public Builder setDisableLocalAuth(@Nullable Boolean disableLocalAuth) {
+        public Builder disableLocalAuth(@Nullable Boolean disableLocalAuth) {
             this.disableLocalAuth = Input.ofNullable(disableLocalAuth);
             return this;
         }
 
-        public Builder setEncryption(@Nullable Input<EncryptionPropertiesArgs> encryption) {
+        public Builder encryption(@Nullable Input<EncryptionPropertiesArgs> encryption) {
             this.encryption = encryption;
             return this;
         }
 
-        public Builder setEncryption(@Nullable EncryptionPropertiesArgs encryption) {
+        public Builder encryption(@Nullable EncryptionPropertiesArgs encryption) {
             this.encryption = Input.ofNullable(encryption);
             return this;
         }
 
-        public Builder setIdentity(@Nullable Input<IdentityArgs> identity) {
+        public Builder identity(@Nullable Input<IdentityArgs> identity) {
             this.identity = identity;
             return this;
         }
 
-        public Builder setIdentity(@Nullable IdentityArgs identity) {
+        public Builder identity(@Nullable IdentityArgs identity) {
             this.identity = Input.ofNullable(identity);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setPublicNetworkAccess(@Nullable Input<Boolean> publicNetworkAccess) {
+        public Builder publicNetworkAccess(@Nullable Input<Boolean> publicNetworkAccess) {
             this.publicNetworkAccess = publicNetworkAccess;
             return this;
         }
 
-        public Builder setPublicNetworkAccess(@Nullable Boolean publicNetworkAccess) {
+        public Builder publicNetworkAccess(@Nullable Boolean publicNetworkAccess) {
             this.publicNetworkAccess = Input.ofNullable(publicNetworkAccess);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setSku(@Nullable Input<SkuArgs> sku) {
+        public Builder sku(@Nullable Input<SkuArgs> sku) {
             this.sku = sku;
             return this;
         }
 
-        public Builder setSku(@Nullable SkuArgs sku) {
+        public Builder sku(@Nullable SkuArgs sku) {
             this.sku = Input.ofNullable(sku);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

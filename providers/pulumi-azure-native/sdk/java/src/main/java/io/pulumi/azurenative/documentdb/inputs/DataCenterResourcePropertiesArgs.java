@@ -125,52 +125,52 @@ public final class DataCenterResourcePropertiesArgs extends io.pulumi.resources.
     	      this.provisioningState = defaults.provisioningState;
         }
 
-        public Builder setBase64EncodedCassandraYamlFragment(@Nullable Input<String> base64EncodedCassandraYamlFragment) {
+        public Builder base64EncodedCassandraYamlFragment(@Nullable Input<String> base64EncodedCassandraYamlFragment) {
             this.base64EncodedCassandraYamlFragment = base64EncodedCassandraYamlFragment;
             return this;
         }
 
-        public Builder setBase64EncodedCassandraYamlFragment(@Nullable String base64EncodedCassandraYamlFragment) {
+        public Builder base64EncodedCassandraYamlFragment(@Nullable String base64EncodedCassandraYamlFragment) {
             this.base64EncodedCassandraYamlFragment = Input.ofNullable(base64EncodedCassandraYamlFragment);
             return this;
         }
 
-        public Builder setDataCenterLocation(@Nullable Input<String> dataCenterLocation) {
+        public Builder dataCenterLocation(@Nullable Input<String> dataCenterLocation) {
             this.dataCenterLocation = dataCenterLocation;
             return this;
         }
 
-        public Builder setDataCenterLocation(@Nullable String dataCenterLocation) {
+        public Builder dataCenterLocation(@Nullable String dataCenterLocation) {
             this.dataCenterLocation = Input.ofNullable(dataCenterLocation);
             return this;
         }
 
-        public Builder setDelegatedSubnetId(@Nullable Input<String> delegatedSubnetId) {
+        public Builder delegatedSubnetId(@Nullable Input<String> delegatedSubnetId) {
             this.delegatedSubnetId = delegatedSubnetId;
             return this;
         }
 
-        public Builder setDelegatedSubnetId(@Nullable String delegatedSubnetId) {
+        public Builder delegatedSubnetId(@Nullable String delegatedSubnetId) {
             this.delegatedSubnetId = Input.ofNullable(delegatedSubnetId);
             return this;
         }
 
-        public Builder setNodeCount(@Nullable Input<Integer> nodeCount) {
+        public Builder nodeCount(@Nullable Input<Integer> nodeCount) {
             this.nodeCount = nodeCount;
             return this;
         }
 
-        public Builder setNodeCount(@Nullable Integer nodeCount) {
+        public Builder nodeCount(@Nullable Integer nodeCount) {
             this.nodeCount = Input.ofNullable(nodeCount);
             return this;
         }
 
-        public Builder setProvisioningState(@Nullable Input<Either<String,ManagedCassandraProvisioningState>> provisioningState) {
+        public Builder provisioningState(@Nullable Input<Either<String,ManagedCassandraProvisioningState>> provisioningState) {
             this.provisioningState = provisioningState;
             return this;
         }
 
-        public Builder setProvisioningState(@Nullable Either<String,ManagedCassandraProvisioningState> provisioningState) {
+        public Builder provisioningState(@Nullable Either<String,ManagedCassandraProvisioningState> provisioningState) {
             this.provisioningState = Input.ofNullable(provisioningState);
             return this;
         }

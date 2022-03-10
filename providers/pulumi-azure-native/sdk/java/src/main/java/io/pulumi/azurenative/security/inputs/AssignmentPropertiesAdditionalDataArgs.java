@@ -57,12 +57,12 @@ public final class AssignmentPropertiesAdditionalDataArgs extends io.pulumi.reso
     	      this.exemptionCategory = defaults.exemptionCategory;
         }
 
-        public Builder setExemptionCategory(@Nullable Input<String> exemptionCategory) {
+        public Builder exemptionCategory(@Nullable Input<String> exemptionCategory) {
             this.exemptionCategory = exemptionCategory;
             return this;
         }
 
-        public Builder setExemptionCategory(@Nullable String exemptionCategory) {
+        public Builder exemptionCategory(@Nullable String exemptionCategory) {
             this.exemptionCategory = Input.ofNullable(exemptionCategory);
             return this;
         }

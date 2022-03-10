@@ -106,22 +106,22 @@ public final class RefreshDetailsResponse extends io.pulumi.resources.InvokeArgs
     	      this.lastJob = defaults.lastJob;
         }
 
-        public Builder setErrorManifestFile(@Nullable String errorManifestFile) {
+        public Builder errorManifestFile(@Nullable String errorManifestFile) {
             this.errorManifestFile = errorManifestFile;
             return this;
         }
 
-        public Builder setInProgressRefreshJobId(@Nullable String inProgressRefreshJobId) {
+        public Builder inProgressRefreshJobId(@Nullable String inProgressRefreshJobId) {
             this.inProgressRefreshJobId = inProgressRefreshJobId;
             return this;
         }
 
-        public Builder setLastCompletedRefreshJobTimeInUTC(@Nullable String lastCompletedRefreshJobTimeInUTC) {
+        public Builder lastCompletedRefreshJobTimeInUTC(@Nullable String lastCompletedRefreshJobTimeInUTC) {
             this.lastCompletedRefreshJobTimeInUTC = lastCompletedRefreshJobTimeInUTC;
             return this;
         }
 
-        public Builder setLastJob(@Nullable String lastJob) {
+        public Builder lastJob(@Nullable String lastJob) {
             this.lastJob = lastJob;
             return this;
         }

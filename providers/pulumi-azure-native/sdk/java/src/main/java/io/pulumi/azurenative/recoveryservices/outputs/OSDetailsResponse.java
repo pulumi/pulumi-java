@@ -131,32 +131,32 @@ public final class OSDetailsResponse {
     	      this.productType = defaults.productType;
         }
 
-        public Builder setOSMajorVersion(@Nullable String oSMajorVersion) {
+        public Builder oSMajorVersion(@Nullable String oSMajorVersion) {
             this.oSMajorVersion = oSMajorVersion;
             return this;
         }
 
-        public Builder setOSMinorVersion(@Nullable String oSMinorVersion) {
+        public Builder oSMinorVersion(@Nullable String oSMinorVersion) {
             this.oSMinorVersion = oSMinorVersion;
             return this;
         }
 
-        public Builder setOSVersion(@Nullable String oSVersion) {
+        public Builder oSVersion(@Nullable String oSVersion) {
             this.oSVersion = oSVersion;
             return this;
         }
 
-        public Builder setOsEdition(@Nullable String osEdition) {
+        public Builder osEdition(@Nullable String osEdition) {
             this.osEdition = osEdition;
             return this;
         }
 
-        public Builder setOsType(@Nullable String osType) {
+        public Builder osType(@Nullable String osType) {
             this.osType = osType;
             return this;
         }
 
-        public Builder setProductType(@Nullable String productType) {
+        public Builder productType(@Nullable String productType) {
             this.productType = productType;
             return this;
         }

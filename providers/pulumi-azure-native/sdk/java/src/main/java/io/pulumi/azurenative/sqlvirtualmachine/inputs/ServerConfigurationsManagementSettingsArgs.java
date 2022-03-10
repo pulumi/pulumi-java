@@ -109,42 +109,42 @@ public final class ServerConfigurationsManagementSettingsArgs extends io.pulumi.
     	      this.sqlWorkloadTypeUpdateSettings = defaults.sqlWorkloadTypeUpdateSettings;
         }
 
-        public Builder setAdditionalFeaturesServerConfigurations(@Nullable Input<AdditionalFeaturesServerConfigurationsArgs> additionalFeaturesServerConfigurations) {
+        public Builder additionalFeaturesServerConfigurations(@Nullable Input<AdditionalFeaturesServerConfigurationsArgs> additionalFeaturesServerConfigurations) {
             this.additionalFeaturesServerConfigurations = additionalFeaturesServerConfigurations;
             return this;
         }
 
-        public Builder setAdditionalFeaturesServerConfigurations(@Nullable AdditionalFeaturesServerConfigurationsArgs additionalFeaturesServerConfigurations) {
+        public Builder additionalFeaturesServerConfigurations(@Nullable AdditionalFeaturesServerConfigurationsArgs additionalFeaturesServerConfigurations) {
             this.additionalFeaturesServerConfigurations = Input.ofNullable(additionalFeaturesServerConfigurations);
             return this;
         }
 
-        public Builder setSqlConnectivityUpdateSettings(@Nullable Input<SqlConnectivityUpdateSettingsArgs> sqlConnectivityUpdateSettings) {
+        public Builder sqlConnectivityUpdateSettings(@Nullable Input<SqlConnectivityUpdateSettingsArgs> sqlConnectivityUpdateSettings) {
             this.sqlConnectivityUpdateSettings = sqlConnectivityUpdateSettings;
             return this;
         }
 
-        public Builder setSqlConnectivityUpdateSettings(@Nullable SqlConnectivityUpdateSettingsArgs sqlConnectivityUpdateSettings) {
+        public Builder sqlConnectivityUpdateSettings(@Nullable SqlConnectivityUpdateSettingsArgs sqlConnectivityUpdateSettings) {
             this.sqlConnectivityUpdateSettings = Input.ofNullable(sqlConnectivityUpdateSettings);
             return this;
         }
 
-        public Builder setSqlStorageUpdateSettings(@Nullable Input<SqlStorageUpdateSettingsArgs> sqlStorageUpdateSettings) {
+        public Builder sqlStorageUpdateSettings(@Nullable Input<SqlStorageUpdateSettingsArgs> sqlStorageUpdateSettings) {
             this.sqlStorageUpdateSettings = sqlStorageUpdateSettings;
             return this;
         }
 
-        public Builder setSqlStorageUpdateSettings(@Nullable SqlStorageUpdateSettingsArgs sqlStorageUpdateSettings) {
+        public Builder sqlStorageUpdateSettings(@Nullable SqlStorageUpdateSettingsArgs sqlStorageUpdateSettings) {
             this.sqlStorageUpdateSettings = Input.ofNullable(sqlStorageUpdateSettings);
             return this;
         }
 
-        public Builder setSqlWorkloadTypeUpdateSettings(@Nullable Input<SqlWorkloadTypeUpdateSettingsArgs> sqlWorkloadTypeUpdateSettings) {
+        public Builder sqlWorkloadTypeUpdateSettings(@Nullable Input<SqlWorkloadTypeUpdateSettingsArgs> sqlWorkloadTypeUpdateSettings) {
             this.sqlWorkloadTypeUpdateSettings = sqlWorkloadTypeUpdateSettings;
             return this;
         }
 
-        public Builder setSqlWorkloadTypeUpdateSettings(@Nullable SqlWorkloadTypeUpdateSettingsArgs sqlWorkloadTypeUpdateSettings) {
+        public Builder sqlWorkloadTypeUpdateSettings(@Nullable SqlWorkloadTypeUpdateSettingsArgs sqlWorkloadTypeUpdateSettings) {
             this.sqlWorkloadTypeUpdateSettings = Input.ofNullable(sqlWorkloadTypeUpdateSettings);
             return this;
         }

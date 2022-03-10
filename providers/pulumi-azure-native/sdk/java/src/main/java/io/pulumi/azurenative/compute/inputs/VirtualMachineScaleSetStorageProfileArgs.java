@@ -93,32 +93,32 @@ public final class VirtualMachineScaleSetStorageProfileArgs extends io.pulumi.re
     	      this.osDisk = defaults.osDisk;
         }
 
-        public Builder setDataDisks(@Nullable Input<List<VirtualMachineScaleSetDataDiskArgs>> dataDisks) {
+        public Builder dataDisks(@Nullable Input<List<VirtualMachineScaleSetDataDiskArgs>> dataDisks) {
             this.dataDisks = dataDisks;
             return this;
         }
 
-        public Builder setDataDisks(@Nullable List<VirtualMachineScaleSetDataDiskArgs> dataDisks) {
+        public Builder dataDisks(@Nullable List<VirtualMachineScaleSetDataDiskArgs> dataDisks) {
             this.dataDisks = Input.ofNullable(dataDisks);
             return this;
         }
 
-        public Builder setImageReference(@Nullable Input<ImageReferenceArgs> imageReference) {
+        public Builder imageReference(@Nullable Input<ImageReferenceArgs> imageReference) {
             this.imageReference = imageReference;
             return this;
         }
 
-        public Builder setImageReference(@Nullable ImageReferenceArgs imageReference) {
+        public Builder imageReference(@Nullable ImageReferenceArgs imageReference) {
             this.imageReference = Input.ofNullable(imageReference);
             return this;
         }
 
-        public Builder setOsDisk(@Nullable Input<VirtualMachineScaleSetOSDiskArgs> osDisk) {
+        public Builder osDisk(@Nullable Input<VirtualMachineScaleSetOSDiskArgs> osDisk) {
             this.osDisk = osDisk;
             return this;
         }
 
-        public Builder setOsDisk(@Nullable VirtualMachineScaleSetOSDiskArgs osDisk) {
+        public Builder osDisk(@Nullable VirtualMachineScaleSetOSDiskArgs osDisk) {
             this.osDisk = Input.ofNullable(osDisk);
             return this;
         }

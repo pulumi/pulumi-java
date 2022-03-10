@@ -50,7 +50,7 @@ public final class ListAccountChannelTypesResult {
     	      this.value = defaults.value;
         }
 
-        public Builder setValue(@Nullable List<ChannelTypeDescriptionResponse> value) {
+        public Builder value(@Nullable List<ChannelTypeDescriptionResponse> value) {
             this.value = value;
             return this;
         }

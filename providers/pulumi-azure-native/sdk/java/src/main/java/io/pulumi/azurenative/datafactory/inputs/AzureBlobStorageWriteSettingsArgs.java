@@ -124,52 +124,52 @@ public final class AzureBlobStorageWriteSettingsArgs extends io.pulumi.resources
     	      this.type = defaults.type;
         }
 
-        public Builder setBlockSizeInMB(@Nullable Input<Object> blockSizeInMB) {
+        public Builder blockSizeInMB(@Nullable Input<Object> blockSizeInMB) {
             this.blockSizeInMB = blockSizeInMB;
             return this;
         }
 
-        public Builder setBlockSizeInMB(@Nullable Object blockSizeInMB) {
+        public Builder blockSizeInMB(@Nullable Object blockSizeInMB) {
             this.blockSizeInMB = Input.ofNullable(blockSizeInMB);
             return this;
         }
 
-        public Builder setCopyBehavior(@Nullable Input<Object> copyBehavior) {
+        public Builder copyBehavior(@Nullable Input<Object> copyBehavior) {
             this.copyBehavior = copyBehavior;
             return this;
         }
 
-        public Builder setCopyBehavior(@Nullable Object copyBehavior) {
+        public Builder copyBehavior(@Nullable Object copyBehavior) {
             this.copyBehavior = Input.ofNullable(copyBehavior);
             return this;
         }
 
-        public Builder setDisableMetricsCollection(@Nullable Input<Object> disableMetricsCollection) {
+        public Builder disableMetricsCollection(@Nullable Input<Object> disableMetricsCollection) {
             this.disableMetricsCollection = disableMetricsCollection;
             return this;
         }
 
-        public Builder setDisableMetricsCollection(@Nullable Object disableMetricsCollection) {
+        public Builder disableMetricsCollection(@Nullable Object disableMetricsCollection) {
             this.disableMetricsCollection = Input.ofNullable(disableMetricsCollection);
             return this;
         }
 
-        public Builder setMaxConcurrentConnections(@Nullable Input<Object> maxConcurrentConnections) {
+        public Builder maxConcurrentConnections(@Nullable Input<Object> maxConcurrentConnections) {
             this.maxConcurrentConnections = maxConcurrentConnections;
             return this;
         }
 
-        public Builder setMaxConcurrentConnections(@Nullable Object maxConcurrentConnections) {
+        public Builder maxConcurrentConnections(@Nullable Object maxConcurrentConnections) {
             this.maxConcurrentConnections = Input.ofNullable(maxConcurrentConnections);
             return this;
         }
 
-        public Builder setType(Input<String> type) {
+        public Builder type(Input<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }

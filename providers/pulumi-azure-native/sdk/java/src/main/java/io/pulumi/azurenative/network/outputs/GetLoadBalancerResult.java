@@ -318,87 +318,87 @@ public final class GetLoadBalancerResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setBackendAddressPools(@Nullable List<BackendAddressPoolResponse> backendAddressPools) {
+        public Builder backendAddressPools(@Nullable List<BackendAddressPoolResponse> backendAddressPools) {
             this.backendAddressPools = backendAddressPools;
             return this;
         }
 
-        public Builder setEtag(String etag) {
+        public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
 
-        public Builder setExtendedLocation(@Nullable ExtendedLocationResponse extendedLocation) {
+        public Builder extendedLocation(@Nullable ExtendedLocationResponse extendedLocation) {
             this.extendedLocation = extendedLocation;
             return this;
         }
 
-        public Builder setFrontendIPConfigurations(@Nullable List<FrontendIPConfigurationResponse> frontendIPConfigurations) {
+        public Builder frontendIPConfigurations(@Nullable List<FrontendIPConfigurationResponse> frontendIPConfigurations) {
             this.frontendIPConfigurations = frontendIPConfigurations;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setInboundNatPools(@Nullable List<InboundNatPoolResponse> inboundNatPools) {
+        public Builder inboundNatPools(@Nullable List<InboundNatPoolResponse> inboundNatPools) {
             this.inboundNatPools = inboundNatPools;
             return this;
         }
 
-        public Builder setInboundNatRules(@Nullable List<InboundNatRuleResponse> inboundNatRules) {
+        public Builder inboundNatRules(@Nullable List<InboundNatRuleResponse> inboundNatRules) {
             this.inboundNatRules = inboundNatRules;
             return this;
         }
 
-        public Builder setLoadBalancingRules(@Nullable List<LoadBalancingRuleResponse> loadBalancingRules) {
+        public Builder loadBalancingRules(@Nullable List<LoadBalancingRuleResponse> loadBalancingRules) {
             this.loadBalancingRules = loadBalancingRules;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setOutboundRules(@Nullable List<OutboundRuleResponse> outboundRules) {
+        public Builder outboundRules(@Nullable List<OutboundRuleResponse> outboundRules) {
             this.outboundRules = outboundRules;
             return this;
         }
 
-        public Builder setProbes(@Nullable List<ProbeResponse> probes) {
+        public Builder probes(@Nullable List<ProbeResponse> probes) {
             this.probes = probes;
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setResourceGuid(String resourceGuid) {
+        public Builder resourceGuid(String resourceGuid) {
             this.resourceGuid = Objects.requireNonNull(resourceGuid);
             return this;
         }
 
-        public Builder setSku(@Nullable LoadBalancerSkuResponse sku) {
+        public Builder sku(@Nullable LoadBalancerSkuResponse sku) {
             this.sku = sku;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

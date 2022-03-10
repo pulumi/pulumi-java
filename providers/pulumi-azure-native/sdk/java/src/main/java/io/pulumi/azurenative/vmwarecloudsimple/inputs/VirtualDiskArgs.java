@@ -108,42 +108,42 @@ public final class VirtualDiskArgs extends io.pulumi.resources.ResourceArgs {
     	      this.virtualDiskId = defaults.virtualDiskId;
         }
 
-        public Builder setControllerId(Input<String> controllerId) {
+        public Builder controllerId(Input<String> controllerId) {
             this.controllerId = Objects.requireNonNull(controllerId);
             return this;
         }
 
-        public Builder setControllerId(String controllerId) {
+        public Builder controllerId(String controllerId) {
             this.controllerId = Input.of(Objects.requireNonNull(controllerId));
             return this;
         }
 
-        public Builder setIndependenceMode(Input<DiskIndependenceMode> independenceMode) {
+        public Builder independenceMode(Input<DiskIndependenceMode> independenceMode) {
             this.independenceMode = Objects.requireNonNull(independenceMode);
             return this;
         }
 
-        public Builder setIndependenceMode(DiskIndependenceMode independenceMode) {
+        public Builder independenceMode(DiskIndependenceMode independenceMode) {
             this.independenceMode = Input.of(Objects.requireNonNull(independenceMode));
             return this;
         }
 
-        public Builder setTotalSize(Input<Integer> totalSize) {
+        public Builder totalSize(Input<Integer> totalSize) {
             this.totalSize = Objects.requireNonNull(totalSize);
             return this;
         }
 
-        public Builder setTotalSize(Integer totalSize) {
+        public Builder totalSize(Integer totalSize) {
             this.totalSize = Input.of(Objects.requireNonNull(totalSize));
             return this;
         }
 
-        public Builder setVirtualDiskId(@Nullable Input<String> virtualDiskId) {
+        public Builder virtualDiskId(@Nullable Input<String> virtualDiskId) {
             this.virtualDiskId = virtualDiskId;
             return this;
         }
 
-        public Builder setVirtualDiskId(@Nullable String virtualDiskId) {
+        public Builder virtualDiskId(@Nullable String virtualDiskId) {
             this.virtualDiskId = Input.ofNullable(virtualDiskId);
             return this;
         }

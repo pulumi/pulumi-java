@@ -55,12 +55,12 @@ public final class DockerImagePlatformArgs extends io.pulumi.resources.ResourceA
     	      this.operatingSystemType = defaults.operatingSystemType;
         }
 
-        public Builder setOperatingSystemType(@Nullable Input<Either<String,OperatingSystemType>> operatingSystemType) {
+        public Builder operatingSystemType(@Nullable Input<Either<String,OperatingSystemType>> operatingSystemType) {
             this.operatingSystemType = operatingSystemType;
             return this;
         }
 
-        public Builder setOperatingSystemType(@Nullable Either<String,OperatingSystemType> operatingSystemType) {
+        public Builder operatingSystemType(@Nullable Either<String,OperatingSystemType> operatingSystemType) {
             this.operatingSystemType = Input.ofNullable(operatingSystemType);
             return this;
         }

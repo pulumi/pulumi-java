@@ -55,7 +55,7 @@ public final class WarmStoreConfigurationPropertiesResponse extends io.pulumi.re
     	      this.dataRetention = defaults.dataRetention;
         }
 
-        public Builder setDataRetention(String dataRetention) {
+        public Builder dataRetention(String dataRetention) {
             this.dataRetention = Objects.requireNonNull(dataRetention);
             return this;
         }

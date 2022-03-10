@@ -75,12 +75,12 @@ public final class FilterItems extends io.pulumi.resources.InvokeArgs {
     	      this.values = defaults.values;
         }
 
-        public Builder setField(@Nullable String field) {
+        public Builder field(@Nullable String field) {
             this.field = field;
             return this;
         }
 
-        public Builder setValues(@Nullable List<String> values) {
+        public Builder values(@Nullable List<String> values) {
             this.values = values;
             return this;
         }

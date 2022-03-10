@@ -167,7 +167,7 @@ public class ASCDataConnector extends io.pulumi.resources.CustomResource {
     private static ASCDataConnectorArgs makeArgs(ASCDataConnectorArgs args) {
         var builder = args == null ? ASCDataConnectorArgs.builder() : ASCDataConnectorArgs.builder(args);
         return builder
-            .setKind("AzureSecurityCenter")
+            .kind("AzureSecurityCenter")
             .build();
     }
 

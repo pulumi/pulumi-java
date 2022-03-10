@@ -50,7 +50,7 @@ public final class SizeConfigurationPropertiesResponse {
     	      this.environmentSizes = defaults.environmentSizes;
         }
 
-        public Builder setEnvironmentSizes(@Nullable List<EnvironmentSizeResponse> environmentSizes) {
+        public Builder environmentSizes(@Nullable List<EnvironmentSizeResponse> environmentSizes) {
             this.environmentSizes = environmentSizes;
             return this;
         }

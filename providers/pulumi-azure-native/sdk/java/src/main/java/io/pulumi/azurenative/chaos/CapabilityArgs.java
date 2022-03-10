@@ -134,62 +134,62 @@ public final class CapabilityArgs extends io.pulumi.resources.ResourceArgs {
     	      this.targetName = defaults.targetName;
         }
 
-        public Builder setCapabilityName(@Nullable Input<String> capabilityName) {
+        public Builder capabilityName(@Nullable Input<String> capabilityName) {
             this.capabilityName = capabilityName;
             return this;
         }
 
-        public Builder setCapabilityName(@Nullable String capabilityName) {
+        public Builder capabilityName(@Nullable String capabilityName) {
             this.capabilityName = Input.ofNullable(capabilityName);
             return this;
         }
 
-        public Builder setParentProviderNamespace(Input<String> parentProviderNamespace) {
+        public Builder parentProviderNamespace(Input<String> parentProviderNamespace) {
             this.parentProviderNamespace = Objects.requireNonNull(parentProviderNamespace);
             return this;
         }
 
-        public Builder setParentProviderNamespace(String parentProviderNamespace) {
+        public Builder parentProviderNamespace(String parentProviderNamespace) {
             this.parentProviderNamespace = Input.of(Objects.requireNonNull(parentProviderNamespace));
             return this;
         }
 
-        public Builder setParentResourceName(Input<String> parentResourceName) {
+        public Builder parentResourceName(Input<String> parentResourceName) {
             this.parentResourceName = Objects.requireNonNull(parentResourceName);
             return this;
         }
 
-        public Builder setParentResourceName(String parentResourceName) {
+        public Builder parentResourceName(String parentResourceName) {
             this.parentResourceName = Input.of(Objects.requireNonNull(parentResourceName));
             return this;
         }
 
-        public Builder setParentResourceType(Input<String> parentResourceType) {
+        public Builder parentResourceType(Input<String> parentResourceType) {
             this.parentResourceType = Objects.requireNonNull(parentResourceType);
             return this;
         }
 
-        public Builder setParentResourceType(String parentResourceType) {
+        public Builder parentResourceType(String parentResourceType) {
             this.parentResourceType = Input.of(Objects.requireNonNull(parentResourceType));
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setTargetName(Input<String> targetName) {
+        public Builder targetName(Input<String> targetName) {
             this.targetName = Objects.requireNonNull(targetName);
             return this;
         }
 
-        public Builder setTargetName(String targetName) {
+        public Builder targetName(String targetName) {
             this.targetName = Input.of(Objects.requireNonNull(targetName));
             return this;
         }

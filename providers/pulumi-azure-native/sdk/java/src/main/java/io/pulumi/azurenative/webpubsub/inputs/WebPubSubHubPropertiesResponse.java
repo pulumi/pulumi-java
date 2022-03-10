@@ -76,12 +76,12 @@ public final class WebPubSubHubPropertiesResponse extends io.pulumi.resources.In
     	      this.eventHandlers = defaults.eventHandlers;
         }
 
-        public Builder setAnonymousConnectPolicy(@Nullable String anonymousConnectPolicy) {
+        public Builder anonymousConnectPolicy(@Nullable String anonymousConnectPolicy) {
             this.anonymousConnectPolicy = anonymousConnectPolicy;
             return this;
         }
 
-        public Builder setEventHandlers(@Nullable List<EventHandlerResponse> eventHandlers) {
+        public Builder eventHandlers(@Nullable List<EventHandlerResponse> eventHandlers) {
             this.eventHandlers = eventHandlers;
             return this;
         }

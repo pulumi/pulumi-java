@@ -68,12 +68,12 @@ public final class DeliveryRuleCacheKeyQueryStringActionResponse {
     	      this.parameters = defaults.parameters;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setParameters(CacheKeyQueryStringActionParametersResponse parameters) {
+        public Builder parameters(CacheKeyQueryStringActionParametersResponse parameters) {
             this.parameters = Objects.requireNonNull(parameters);
             return this;
         }

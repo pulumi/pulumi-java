@@ -48,7 +48,7 @@ public final class ManagementAssociationPropertiesResponse {
     	      this.applicationId = defaults.applicationId;
         }
 
-        public Builder setApplicationId(String applicationId) {
+        public Builder applicationId(String applicationId) {
             this.applicationId = Objects.requireNonNull(applicationId);
             return this;
         }

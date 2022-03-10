@@ -83,17 +83,17 @@ public final class KeyVaultPropertiesResponse {
     	      this.keyvaultUri = defaults.keyvaultUri;
         }
 
-        public Builder setKeyName(@Nullable String keyName) {
+        public Builder keyName(@Nullable String keyName) {
             this.keyName = keyName;
             return this;
         }
 
-        public Builder setKeyVersion(@Nullable String keyVersion) {
+        public Builder keyVersion(@Nullable String keyVersion) {
             this.keyVersion = keyVersion;
             return this;
         }
 
-        public Builder setKeyvaultUri(@Nullable String keyvaultUri) {
+        public Builder keyvaultUri(@Nullable String keyvaultUri) {
             this.keyvaultUri = keyvaultUri;
             return this;
         }

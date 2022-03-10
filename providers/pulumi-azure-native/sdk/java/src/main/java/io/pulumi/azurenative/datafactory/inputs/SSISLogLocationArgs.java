@@ -110,42 +110,42 @@ public final class SSISLogLocationArgs extends io.pulumi.resources.ResourceArgs 
     	      this.type = defaults.type;
         }
 
-        public Builder setAccessCredential(@Nullable Input<SSISAccessCredentialArgs> accessCredential) {
+        public Builder accessCredential(@Nullable Input<SSISAccessCredentialArgs> accessCredential) {
             this.accessCredential = accessCredential;
             return this;
         }
 
-        public Builder setAccessCredential(@Nullable SSISAccessCredentialArgs accessCredential) {
+        public Builder accessCredential(@Nullable SSISAccessCredentialArgs accessCredential) {
             this.accessCredential = Input.ofNullable(accessCredential);
             return this;
         }
 
-        public Builder setLogPath(Input<Object> logPath) {
+        public Builder logPath(Input<Object> logPath) {
             this.logPath = Objects.requireNonNull(logPath);
             return this;
         }
 
-        public Builder setLogPath(Object logPath) {
+        public Builder logPath(Object logPath) {
             this.logPath = Input.of(Objects.requireNonNull(logPath));
             return this;
         }
 
-        public Builder setLogRefreshInterval(@Nullable Input<Object> logRefreshInterval) {
+        public Builder logRefreshInterval(@Nullable Input<Object> logRefreshInterval) {
             this.logRefreshInterval = logRefreshInterval;
             return this;
         }
 
-        public Builder setLogRefreshInterval(@Nullable Object logRefreshInterval) {
+        public Builder logRefreshInterval(@Nullable Object logRefreshInterval) {
             this.logRefreshInterval = Input.ofNullable(logRefreshInterval);
             return this;
         }
 
-        public Builder setType(Input<Either<String,SsisLogLocationType>> type) {
+        public Builder type(Input<Either<String,SsisLogLocationType>> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setType(Either<String,SsisLogLocationType> type) {
+        public Builder type(Either<String,SsisLogLocationType> type) {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }

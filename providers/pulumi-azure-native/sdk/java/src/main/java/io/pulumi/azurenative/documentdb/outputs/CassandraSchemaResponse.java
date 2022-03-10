@@ -85,17 +85,17 @@ public final class CassandraSchemaResponse {
     	      this.partitionKeys = defaults.partitionKeys;
         }
 
-        public Builder setClusterKeys(@Nullable List<ClusterKeyResponse> clusterKeys) {
+        public Builder clusterKeys(@Nullable List<ClusterKeyResponse> clusterKeys) {
             this.clusterKeys = clusterKeys;
             return this;
         }
 
-        public Builder setColumns(@Nullable List<ColumnResponse> columns) {
+        public Builder columns(@Nullable List<ColumnResponse> columns) {
             this.columns = columns;
             return this;
         }
 
-        public Builder setPartitionKeys(@Nullable List<CassandraPartitionKeyResponse> partitionKeys) {
+        public Builder partitionKeys(@Nullable List<CassandraPartitionKeyResponse> partitionKeys) {
             this.partitionKeys = partitionKeys;
             return this;
         }

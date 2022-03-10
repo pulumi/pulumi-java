@@ -103,22 +103,22 @@ public final class GetP2sVpnGatewayP2sVpnConnectionHealthDetailedArgs extends io
     	      this.vpnUserNamesFilter = defaults.vpnUserNamesFilter;
         }
 
-        public Builder setGatewayName(String gatewayName) {
+        public Builder gatewayName(String gatewayName) {
             this.gatewayName = Objects.requireNonNull(gatewayName);
             return this;
         }
 
-        public Builder setOutputBlobSasUrl(@Nullable String outputBlobSasUrl) {
+        public Builder outputBlobSasUrl(@Nullable String outputBlobSasUrl) {
             this.outputBlobSasUrl = outputBlobSasUrl;
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setVpnUserNamesFilter(@Nullable List<String> vpnUserNamesFilter) {
+        public Builder vpnUserNamesFilter(@Nullable List<String> vpnUserNamesFilter) {
             this.vpnUserNamesFilter = vpnUserNamesFilter;
             return this;
         }

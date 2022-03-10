@@ -91,32 +91,32 @@ public final class AutoScalePropertiesArgs extends io.pulumi.resources.ResourceA
     	      this.minNodeCount = defaults.minNodeCount;
         }
 
-        public Builder setEnabled(@Nullable Input<Boolean> enabled) {
+        public Builder enabled(@Nullable Input<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
 
-        public Builder setEnabled(@Nullable Boolean enabled) {
+        public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Input.ofNullable(enabled);
             return this;
         }
 
-        public Builder setMaxNodeCount(@Nullable Input<Integer> maxNodeCount) {
+        public Builder maxNodeCount(@Nullable Input<Integer> maxNodeCount) {
             this.maxNodeCount = maxNodeCount;
             return this;
         }
 
-        public Builder setMaxNodeCount(@Nullable Integer maxNodeCount) {
+        public Builder maxNodeCount(@Nullable Integer maxNodeCount) {
             this.maxNodeCount = Input.ofNullable(maxNodeCount);
             return this;
         }
 
-        public Builder setMinNodeCount(@Nullable Input<Integer> minNodeCount) {
+        public Builder minNodeCount(@Nullable Input<Integer> minNodeCount) {
             this.minNodeCount = minNodeCount;
             return this;
         }
 
-        public Builder setMinNodeCount(@Nullable Integer minNodeCount) {
+        public Builder minNodeCount(@Nullable Integer minNodeCount) {
             this.minNodeCount = Input.ofNullable(minNodeCount);
             return this;
         }

@@ -495,142 +495,142 @@ public final class GetWorkspaceResult {
     	      this.workspaceId = defaults.workspaceId;
         }
 
-        public Builder setAllowPublicAccessWhenBehindVnet(@Nullable Boolean allowPublicAccessWhenBehindVnet) {
+        public Builder allowPublicAccessWhenBehindVnet(@Nullable Boolean allowPublicAccessWhenBehindVnet) {
             this.allowPublicAccessWhenBehindVnet = allowPublicAccessWhenBehindVnet;
             return this;
         }
 
-        public Builder setApplicationInsights(@Nullable String applicationInsights) {
+        public Builder applicationInsights(@Nullable String applicationInsights) {
             this.applicationInsights = applicationInsights;
             return this;
         }
 
-        public Builder setContainerRegistry(@Nullable String containerRegistry) {
+        public Builder containerRegistry(@Nullable String containerRegistry) {
             this.containerRegistry = containerRegistry;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDiscoveryUrl(@Nullable String discoveryUrl) {
+        public Builder discoveryUrl(@Nullable String discoveryUrl) {
             this.discoveryUrl = discoveryUrl;
             return this;
         }
 
-        public Builder setEncryption(@Nullable EncryptionPropertyResponse encryption) {
+        public Builder encryption(@Nullable EncryptionPropertyResponse encryption) {
             this.encryption = encryption;
             return this;
         }
 
-        public Builder setFriendlyName(@Nullable String friendlyName) {
+        public Builder friendlyName(@Nullable String friendlyName) {
             this.friendlyName = friendlyName;
             return this;
         }
 
-        public Builder setHbiWorkspace(@Nullable Boolean hbiWorkspace) {
+        public Builder hbiWorkspace(@Nullable Boolean hbiWorkspace) {
             this.hbiWorkspace = hbiWorkspace;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setIdentity(@Nullable IdentityResponse identity) {
+        public Builder identity(@Nullable IdentityResponse identity) {
             this.identity = identity;
             return this;
         }
 
-        public Builder setImageBuildCompute(@Nullable String imageBuildCompute) {
+        public Builder imageBuildCompute(@Nullable String imageBuildCompute) {
             this.imageBuildCompute = imageBuildCompute;
             return this;
         }
 
-        public Builder setKeyVault(@Nullable String keyVault) {
+        public Builder keyVault(@Nullable String keyVault) {
             this.keyVault = keyVault;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setNotebookInfo(NotebookResourceInfoResponse notebookInfo) {
+        public Builder notebookInfo(NotebookResourceInfoResponse notebookInfo) {
             this.notebookInfo = Objects.requireNonNull(notebookInfo);
             return this;
         }
 
-        public Builder setPrimaryUserAssignedIdentity(@Nullable String primaryUserAssignedIdentity) {
+        public Builder primaryUserAssignedIdentity(@Nullable String primaryUserAssignedIdentity) {
             this.primaryUserAssignedIdentity = primaryUserAssignedIdentity;
             return this;
         }
 
-        public Builder setPrivateEndpointConnections(List<PrivateEndpointConnectionResponse> privateEndpointConnections) {
+        public Builder privateEndpointConnections(List<PrivateEndpointConnectionResponse> privateEndpointConnections) {
             this.privateEndpointConnections = Objects.requireNonNull(privateEndpointConnections);
             return this;
         }
 
-        public Builder setPrivateLinkCount(Integer privateLinkCount) {
+        public Builder privateLinkCount(Integer privateLinkCount) {
             this.privateLinkCount = Objects.requireNonNull(privateLinkCount);
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setServiceManagedResourcesSettings(@Nullable ServiceManagedResourcesSettingsResponse serviceManagedResourcesSettings) {
+        public Builder serviceManagedResourcesSettings(@Nullable ServiceManagedResourcesSettingsResponse serviceManagedResourcesSettings) {
             this.serviceManagedResourcesSettings = serviceManagedResourcesSettings;
             return this;
         }
 
-        public Builder setServiceProvisionedResourceGroup(String serviceProvisionedResourceGroup) {
+        public Builder serviceProvisionedResourceGroup(String serviceProvisionedResourceGroup) {
             this.serviceProvisionedResourceGroup = Objects.requireNonNull(serviceProvisionedResourceGroup);
             return this;
         }
 
-        public Builder setSharedPrivateLinkResources(@Nullable List<SharedPrivateLinkResourceResponse> sharedPrivateLinkResources) {
+        public Builder sharedPrivateLinkResources(@Nullable List<SharedPrivateLinkResourceResponse> sharedPrivateLinkResources) {
             this.sharedPrivateLinkResources = sharedPrivateLinkResources;
             return this;
         }
 
-        public Builder setSku(@Nullable SkuResponse sku) {
+        public Builder sku(@Nullable SkuResponse sku) {
             this.sku = sku;
             return this;
         }
 
-        public Builder setStorageAccount(@Nullable String storageAccount) {
+        public Builder storageAccount(@Nullable String storageAccount) {
             this.storageAccount = storageAccount;
             return this;
         }
 
-        public Builder setSystemData(SystemDataResponse systemData) {
+        public Builder systemData(SystemDataResponse systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setWorkspaceId(String workspaceId) {
+        public Builder workspaceId(String workspaceId) {
             this.workspaceId = Objects.requireNonNull(workspaceId);
             return this;
         }

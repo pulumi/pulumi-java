@@ -92,17 +92,17 @@ public final class AzureQueryPropertiesResponse extends io.pulumi.resources.Invo
     	      this.tagSettings = defaults.tagSettings;
         }
 
-        public Builder setLocations(@Nullable List<String> locations) {
+        public Builder locations(@Nullable List<String> locations) {
             this.locations = locations;
             return this;
         }
 
-        public Builder setScope(@Nullable List<String> scope) {
+        public Builder scope(@Nullable List<String> scope) {
             this.scope = scope;
             return this;
         }
 
-        public Builder setTagSettings(@Nullable TagSettingsPropertiesResponse tagSettings) {
+        public Builder tagSettings(@Nullable TagSettingsPropertiesResponse tagSettings) {
             this.tagSettings = tagSettings;
             return this;
         }

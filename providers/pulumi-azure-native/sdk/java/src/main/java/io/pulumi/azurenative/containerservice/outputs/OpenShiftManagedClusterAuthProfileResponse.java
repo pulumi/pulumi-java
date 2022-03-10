@@ -50,7 +50,7 @@ public final class OpenShiftManagedClusterAuthProfileResponse {
     	      this.identityProviders = defaults.identityProviders;
         }
 
-        public Builder setIdentityProviders(@Nullable List<OpenShiftManagedClusterIdentityProviderResponse> identityProviders) {
+        public Builder identityProviders(@Nullable List<OpenShiftManagedClusterIdentityProviderResponse> identityProviders) {
             this.identityProviders = identityProviders;
             return this;
         }

@@ -58,7 +58,7 @@ public final class UnknownTargetResponse extends io.pulumi.resources.InvokeArgs 
     	      this.attributes = defaults.attributes;
         }
 
-        public Builder setAttributes(@Nullable Map<String,String> attributes) {
+        public Builder attributes(@Nullable Map<String,String> attributes) {
             this.attributes = attributes;
             return this;
         }

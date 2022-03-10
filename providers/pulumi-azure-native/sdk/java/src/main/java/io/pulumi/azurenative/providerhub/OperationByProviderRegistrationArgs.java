@@ -67,22 +67,22 @@ public final class OperationByProviderRegistrationArgs extends io.pulumi.resourc
     	      this.providerNamespace = defaults.providerNamespace;
         }
 
-        public Builder setContents(Input<List<OperationsDefinitionArgs>> contents) {
+        public Builder contents(Input<List<OperationsDefinitionArgs>> contents) {
             this.contents = Objects.requireNonNull(contents);
             return this;
         }
 
-        public Builder setContents(List<OperationsDefinitionArgs> contents) {
+        public Builder contents(List<OperationsDefinitionArgs> contents) {
             this.contents = Input.of(Objects.requireNonNull(contents));
             return this;
         }
 
-        public Builder setProviderNamespace(Input<String> providerNamespace) {
+        public Builder providerNamespace(Input<String> providerNamespace) {
             this.providerNamespace = Objects.requireNonNull(providerNamespace);
             return this;
         }
 
-        public Builder setProviderNamespace(String providerNamespace) {
+        public Builder providerNamespace(String providerNamespace) {
             this.providerNamespace = Input.of(Objects.requireNonNull(providerNamespace));
             return this;
         }

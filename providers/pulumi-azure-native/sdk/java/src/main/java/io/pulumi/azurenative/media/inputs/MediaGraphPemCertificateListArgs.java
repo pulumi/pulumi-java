@@ -75,22 +75,22 @@ public final class MediaGraphPemCertificateListArgs extends io.pulumi.resources.
     	      this.odataType = defaults.odataType;
         }
 
-        public Builder setCertificates(Input<List<String>> certificates) {
+        public Builder certificates(Input<List<String>> certificates) {
             this.certificates = Objects.requireNonNull(certificates);
             return this;
         }
 
-        public Builder setCertificates(List<String> certificates) {
+        public Builder certificates(List<String> certificates) {
             this.certificates = Input.of(Objects.requireNonNull(certificates));
             return this;
         }
 
-        public Builder setOdataType(Input<String> odataType) {
+        public Builder odataType(Input<String> odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
 
-        public Builder setOdataType(String odataType) {
+        public Builder odataType(String odataType) {
             this.odataType = Input.of(Objects.requireNonNull(odataType));
             return this;
         }

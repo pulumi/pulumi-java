@@ -103,42 +103,42 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
     	      this.searchServiceName = defaults.searchServiceName;
         }
 
-        public Builder setPrivateEndpointConnectionName(@Nullable Input<String> privateEndpointConnectionName) {
+        public Builder privateEndpointConnectionName(@Nullable Input<String> privateEndpointConnectionName) {
             this.privateEndpointConnectionName = privateEndpointConnectionName;
             return this;
         }
 
-        public Builder setPrivateEndpointConnectionName(@Nullable String privateEndpointConnectionName) {
+        public Builder privateEndpointConnectionName(@Nullable String privateEndpointConnectionName) {
             this.privateEndpointConnectionName = Input.ofNullable(privateEndpointConnectionName);
             return this;
         }
 
-        public Builder setProperties(@Nullable Input<PrivateEndpointConnectionPropertiesArgs> properties) {
+        public Builder properties(@Nullable Input<PrivateEndpointConnectionPropertiesArgs> properties) {
             this.properties = properties;
             return this;
         }
 
-        public Builder setProperties(@Nullable PrivateEndpointConnectionPropertiesArgs properties) {
+        public Builder properties(@Nullable PrivateEndpointConnectionPropertiesArgs properties) {
             this.properties = Input.ofNullable(properties);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setSearchServiceName(Input<String> searchServiceName) {
+        public Builder searchServiceName(Input<String> searchServiceName) {
             this.searchServiceName = Objects.requireNonNull(searchServiceName);
             return this;
         }
 
-        public Builder setSearchServiceName(String searchServiceName) {
+        public Builder searchServiceName(String searchServiceName) {
             this.searchServiceName = Input.of(Objects.requireNonNull(searchServiceName));
             return this;
         }

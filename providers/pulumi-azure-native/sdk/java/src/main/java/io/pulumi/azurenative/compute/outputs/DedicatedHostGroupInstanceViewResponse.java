@@ -50,7 +50,7 @@ public final class DedicatedHostGroupInstanceViewResponse {
     	      this.hosts = defaults.hosts;
         }
 
-        public Builder setHosts(@Nullable List<DedicatedHostInstanceViewWithNameResponse> hosts) {
+        public Builder hosts(@Nullable List<DedicatedHostInstanceViewWithNameResponse> hosts) {
             this.hosts = hosts;
             return this;
         }

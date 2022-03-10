@@ -120,52 +120,52 @@ public final class ApiPortalArgs extends io.pulumi.resources.ResourceArgs {
     	      this.sku = defaults.sku;
         }
 
-        public Builder setApiPortalName(@Nullable Input<String> apiPortalName) {
+        public Builder apiPortalName(@Nullable Input<String> apiPortalName) {
             this.apiPortalName = apiPortalName;
             return this;
         }
 
-        public Builder setApiPortalName(@Nullable String apiPortalName) {
+        public Builder apiPortalName(@Nullable String apiPortalName) {
             this.apiPortalName = Input.ofNullable(apiPortalName);
             return this;
         }
 
-        public Builder setProperties(@Nullable Input<ApiPortalPropertiesArgs> properties) {
+        public Builder properties(@Nullable Input<ApiPortalPropertiesArgs> properties) {
             this.properties = properties;
             return this;
         }
 
-        public Builder setProperties(@Nullable ApiPortalPropertiesArgs properties) {
+        public Builder properties(@Nullable ApiPortalPropertiesArgs properties) {
             this.properties = Input.ofNullable(properties);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setServiceName(Input<String> serviceName) {
+        public Builder serviceName(Input<String> serviceName) {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
         }
 
-        public Builder setServiceName(String serviceName) {
+        public Builder serviceName(String serviceName) {
             this.serviceName = Input.of(Objects.requireNonNull(serviceName));
             return this;
         }
 
-        public Builder setSku(@Nullable Input<SkuArgs> sku) {
+        public Builder sku(@Nullable Input<SkuArgs> sku) {
             this.sku = sku;
             return this;
         }
 
-        public Builder setSku(@Nullable SkuArgs sku) {
+        public Builder sku(@Nullable SkuArgs sku) {
             this.sku = Input.ofNullable(sku);
             return this;
         }

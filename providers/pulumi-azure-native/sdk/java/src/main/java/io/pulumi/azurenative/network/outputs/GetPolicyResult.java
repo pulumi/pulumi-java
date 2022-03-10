@@ -276,77 +276,77 @@ public final class GetPolicyResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setCustomRules(@Nullable CustomRuleListResponse customRules) {
+        public Builder customRules(@Nullable CustomRuleListResponse customRules) {
             this.customRules = customRules;
             return this;
         }
 
-        public Builder setEtag(@Nullable String etag) {
+        public Builder etag(@Nullable String etag) {
             this.etag = etag;
             return this;
         }
 
-        public Builder setFrontendEndpointLinks(List<FrontendEndpointLinkResponse> frontendEndpointLinks) {
+        public Builder frontendEndpointLinks(List<FrontendEndpointLinkResponse> frontendEndpointLinks) {
             this.frontendEndpointLinks = Objects.requireNonNull(frontendEndpointLinks);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
 
-        public Builder setManagedRules(@Nullable ManagedRuleSetListResponse managedRules) {
+        public Builder managedRules(@Nullable ManagedRuleSetListResponse managedRules) {
             this.managedRules = managedRules;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPolicySettings(@Nullable FrontDoorPolicySettingsResponse policySettings) {
+        public Builder policySettings(@Nullable FrontDoorPolicySettingsResponse policySettings) {
             this.policySettings = policySettings;
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setResourceState(String resourceState) {
+        public Builder resourceState(String resourceState) {
             this.resourceState = Objects.requireNonNull(resourceState);
             return this;
         }
 
-        public Builder setRoutingRuleLinks(List<RoutingRuleLinkResponse> routingRuleLinks) {
+        public Builder routingRuleLinks(List<RoutingRuleLinkResponse> routingRuleLinks) {
             this.routingRuleLinks = Objects.requireNonNull(routingRuleLinks);
             return this;
         }
 
-        public Builder setSecurityPolicyLinks(List<SecurityPolicyLinkResponse> securityPolicyLinks) {
+        public Builder securityPolicyLinks(List<SecurityPolicyLinkResponse> securityPolicyLinks) {
             this.securityPolicyLinks = Objects.requireNonNull(securityPolicyLinks);
             return this;
         }
 
-        public Builder setSku(@Nullable SkuResponse sku) {
+        public Builder sku(@Nullable SkuResponse sku) {
             this.sku = sku;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

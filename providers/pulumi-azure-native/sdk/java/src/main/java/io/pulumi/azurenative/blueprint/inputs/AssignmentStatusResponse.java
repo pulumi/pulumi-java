@@ -89,17 +89,17 @@ public final class AssignmentStatusResponse extends io.pulumi.resources.InvokeAr
     	      this.timeCreated = defaults.timeCreated;
         }
 
-        public Builder setLastModified(String lastModified) {
+        public Builder lastModified(String lastModified) {
             this.lastModified = Objects.requireNonNull(lastModified);
             return this;
         }
 
-        public Builder setManagedResources(List<String> managedResources) {
+        public Builder managedResources(List<String> managedResources) {
             this.managedResources = Objects.requireNonNull(managedResources);
             return this;
         }
 
-        public Builder setTimeCreated(String timeCreated) {
+        public Builder timeCreated(String timeCreated) {
             this.timeCreated = Objects.requireNonNull(timeCreated);
             return this;
         }
