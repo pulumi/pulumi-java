@@ -18,12 +18,12 @@ public final class Container {
     private final @Nullable String material;
     private final ContainerSize size;
 
-    @OutputCustomType.Constructor({"brightness","color","material","size"})
+    @OutputCustomType.Constructor
     private Container(
-        @Nullable ContainerBrightness brightness,
-        @Nullable String color,
-        @Nullable String material,
-        ContainerSize size) {
+        @OutputCustomType.Parameter("brightness") @Nullable ContainerBrightness brightness,
+        @OutputCustomType.Parameter("color") @Nullable String color,
+        @OutputCustomType.Parameter("material") @Nullable String material,
+        @OutputCustomType.Parameter("size") ContainerSize size) {
         this.brightness = brightness;
         this.color = color;
         this.material = material;

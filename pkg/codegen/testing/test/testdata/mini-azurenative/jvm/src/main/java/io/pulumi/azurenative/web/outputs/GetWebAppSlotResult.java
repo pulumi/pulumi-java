@@ -17,8 +17,8 @@ public final class GetWebAppSlotResult {
      */
     private final @Nullable SiteConfigResponse siteConfig;
 
-    @OutputCustomType.Constructor({"siteConfig"})
-    private GetWebAppSlotResult(@Nullable SiteConfigResponse siteConfig) {
+    @OutputCustomType.Constructor
+    private GetWebAppSlotResult(@OutputCustomType.Parameter("siteConfig") @Nullable SiteConfigResponse siteConfig) {
         this.siteConfig = siteConfig;
     }
 

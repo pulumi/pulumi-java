@@ -13,8 +13,8 @@ import javax.annotation.Nullable;
 public final class ArgFunctionResult {
     private final @Nullable Resource result;
 
-    @OutputCustomType.Constructor({"result"})
-    private ArgFunctionResult(@Nullable Resource result) {
+    @OutputCustomType.Constructor
+    private ArgFunctionResult(@OutputCustomType.Parameter("result") @Nullable Resource result) {
         this.result = result;
     }
 

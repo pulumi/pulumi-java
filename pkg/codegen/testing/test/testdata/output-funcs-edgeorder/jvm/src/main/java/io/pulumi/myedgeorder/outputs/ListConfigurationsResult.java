@@ -24,10 +24,10 @@ public final class ListConfigurationsResult {
      */
     private final List<ConfigurationResponse> value;
 
-    @OutputCustomType.Constructor({"nextLink","value"})
+    @OutputCustomType.Constructor
     private ListConfigurationsResult(
-        @Nullable String nextLink,
-        List<ConfigurationResponse> value) {
+        @OutputCustomType.Parameter("nextLink") @Nullable String nextLink,
+        @OutputCustomType.Parameter("value") List<ConfigurationResponse> value) {
         this.nextLink = nextLink;
         this.value = value;
     }

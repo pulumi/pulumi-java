@@ -30,13 +30,13 @@ public final class Object {
      */
     private final @Nullable Map<String,List<SomeOtherObject>> stillOthers;
 
-    @OutputCustomType.Constructor({"bar","configs","foo","others","stillOthers"})
+    @OutputCustomType.Constructor
     private Object(
-        @Nullable String bar,
-        @Nullable List<ConfigMap> configs,
-        @Nullable Resource foo,
-        @Nullable List<List<SomeOtherObject>> others,
-        @Nullable Map<String,List<SomeOtherObject>> stillOthers) {
+        @OutputCustomType.Parameter("bar") @Nullable String bar,
+        @OutputCustomType.Parameter("configs") @Nullable List<ConfigMap> configs,
+        @OutputCustomType.Parameter("foo") @Nullable Resource foo,
+        @OutputCustomType.Parameter("others") @Nullable List<List<SomeOtherObject>> others,
+        @OutputCustomType.Parameter("stillOthers") @Nullable Map<String,List<SomeOtherObject>> stillOthers) {
         this.bar = bar;
         this.configs = configs;
         this.foo = foo;

@@ -42,14 +42,14 @@ public final class DescriptionResponse {
      */
     private final String shortDescription;
 
-    @OutputCustomType.Constructor({"attributes","descriptionType","keywords","links","longDescription","shortDescription"})
+    @OutputCustomType.Constructor
     private DescriptionResponse(
-        List<String> attributes,
-        String descriptionType,
-        List<String> keywords,
-        List<LinkResponse> links,
-        String longDescription,
-        String shortDescription) {
+        @OutputCustomType.Parameter("attributes") List<String> attributes,
+        @OutputCustomType.Parameter("descriptionType") String descriptionType,
+        @OutputCustomType.Parameter("keywords") List<String> keywords,
+        @OutputCustomType.Parameter("links") List<LinkResponse> links,
+        @OutputCustomType.Parameter("longDescription") String longDescription,
+        @OutputCustomType.Parameter("shortDescription") String shortDescription) {
         this.attributes = attributes;
         this.descriptionType = descriptionType;
         this.keywords = keywords;

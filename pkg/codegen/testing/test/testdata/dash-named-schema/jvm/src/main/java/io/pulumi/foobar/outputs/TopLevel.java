@@ -13,8 +13,8 @@ import javax.annotation.Nullable;
 public final class TopLevel {
     private final @Nullable String buzz;
 
-    @OutputCustomType.Constructor({"buzz"})
-    private TopLevel(@Nullable String buzz) {
+    @OutputCustomType.Constructor
+    private TopLevel(@OutputCustomType.Parameter("buzz") @Nullable String buzz) {
         this.buzz = buzz;
     }
 
