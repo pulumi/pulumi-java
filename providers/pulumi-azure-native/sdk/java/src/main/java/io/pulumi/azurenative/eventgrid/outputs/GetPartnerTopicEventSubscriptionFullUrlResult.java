@@ -17,8 +17,8 @@ public final class GetPartnerTopicEventSubscriptionFullUrlResult {
      */
     private final @Nullable String endpointUrl;
 
-    @OutputCustomType.Constructor({"endpointUrl"})
-    private GetPartnerTopicEventSubscriptionFullUrlResult(@Nullable String endpointUrl) {
+    @OutputCustomType.Constructor
+    private GetPartnerTopicEventSubscriptionFullUrlResult(@OutputCustomType.Parameter("endpointUrl") @Nullable String endpointUrl) {
         this.endpointUrl = endpointUrl;
     }
 

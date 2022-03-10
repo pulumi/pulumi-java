@@ -84,22 +84,22 @@ public final class GetPrivateZoneResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"etag","id","internalId","location","maxNumberOfRecordSets","maxNumberOfVirtualNetworkLinks","maxNumberOfVirtualNetworkLinksWithRegistration","name","numberOfRecordSets","numberOfVirtualNetworkLinks","numberOfVirtualNetworkLinksWithRegistration","provisioningState","tags","type"})
+    @OutputCustomType.Constructor
     private GetPrivateZoneResult(
-        @Nullable String etag,
-        String id,
-        String internalId,
-        @Nullable String location,
-        Double maxNumberOfRecordSets,
-        Double maxNumberOfVirtualNetworkLinks,
-        Double maxNumberOfVirtualNetworkLinksWithRegistration,
-        String name,
-        Double numberOfRecordSets,
-        Double numberOfVirtualNetworkLinks,
-        Double numberOfVirtualNetworkLinksWithRegistration,
-        String provisioningState,
-        @Nullable Map<String,String> tags,
-        String type) {
+        @OutputCustomType.Parameter("etag") @Nullable String etag,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("internalId") String internalId,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("maxNumberOfRecordSets") Double maxNumberOfRecordSets,
+        @OutputCustomType.Parameter("maxNumberOfVirtualNetworkLinks") Double maxNumberOfVirtualNetworkLinks,
+        @OutputCustomType.Parameter("maxNumberOfVirtualNetworkLinksWithRegistration") Double maxNumberOfVirtualNetworkLinksWithRegistration,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("numberOfRecordSets") Double numberOfRecordSets,
+        @OutputCustomType.Parameter("numberOfVirtualNetworkLinks") Double numberOfVirtualNetworkLinks,
+        @OutputCustomType.Parameter("numberOfVirtualNetworkLinksWithRegistration") Double numberOfVirtualNetworkLinksWithRegistration,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type) {
         this.etag = etag;
         this.id = id;
         this.internalId = internalId;

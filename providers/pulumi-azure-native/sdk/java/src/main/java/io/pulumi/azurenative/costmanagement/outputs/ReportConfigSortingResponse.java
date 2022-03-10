@@ -22,10 +22,10 @@ public final class ReportConfigSortingResponse {
      */
     private final String name;
 
-    @OutputCustomType.Constructor({"direction","name"})
+    @OutputCustomType.Constructor
     private ReportConfigSortingResponse(
-        @Nullable String direction,
-        String name) {
+        @OutputCustomType.Parameter("direction") @Nullable String direction,
+        @OutputCustomType.Parameter("name") String name) {
         this.direction = direction;
         this.name = name;
     }

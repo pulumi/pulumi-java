@@ -37,13 +37,13 @@ public final class GetProductPolicyResult {
      */
     private final String value;
 
-    @OutputCustomType.Constructor({"format","id","name","type","value"})
+    @OutputCustomType.Constructor
     private GetProductPolicyResult(
-        @Nullable String format,
-        String id,
-        String name,
-        String type,
-        String value) {
+        @OutputCustomType.Parameter("format") @Nullable String format,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("value") String value) {
         this.format = format;
         this.id = id;
         this.name = name;

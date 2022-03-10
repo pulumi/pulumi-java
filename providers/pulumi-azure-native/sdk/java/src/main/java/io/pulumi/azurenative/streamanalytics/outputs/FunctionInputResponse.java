@@ -23,10 +23,10 @@ public final class FunctionInputResponse {
      */
     private final @Nullable Boolean isConfigurationParameter;
 
-    @OutputCustomType.Constructor({"dataType","isConfigurationParameter"})
+    @OutputCustomType.Constructor
     private FunctionInputResponse(
-        @Nullable String dataType,
-        @Nullable Boolean isConfigurationParameter) {
+        @OutputCustomType.Parameter("dataType") @Nullable String dataType,
+        @OutputCustomType.Parameter("isConfigurationParameter") @Nullable Boolean isConfigurationParameter) {
         this.dataType = dataType;
         this.isConfigurationParameter = isConfigurationParameter;
     }

@@ -29,11 +29,11 @@ public final class JitNetworkAccessPolicyVirtualMachineResponse {
      */
     private final @Nullable String publicIpAddress;
 
-    @OutputCustomType.Constructor({"id","ports","publicIpAddress"})
+    @OutputCustomType.Constructor
     private JitNetworkAccessPolicyVirtualMachineResponse(
-        String id,
-        List<JitNetworkAccessPortRuleResponse> ports,
-        @Nullable String publicIpAddress) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("ports") List<JitNetworkAccessPortRuleResponse> ports,
+        @OutputCustomType.Parameter("publicIpAddress") @Nullable String publicIpAddress) {
         this.id = id;
         this.ports = ports;
         this.publicIpAddress = publicIpAddress;

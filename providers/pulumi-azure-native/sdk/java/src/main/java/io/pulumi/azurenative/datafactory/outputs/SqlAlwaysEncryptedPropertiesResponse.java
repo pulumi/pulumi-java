@@ -37,12 +37,12 @@ public final class SqlAlwaysEncryptedPropertiesResponse {
      */
     private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalKey;
 
-    @OutputCustomType.Constructor({"alwaysEncryptedAkvAuthType","credential","servicePrincipalId","servicePrincipalKey"})
+    @OutputCustomType.Constructor
     private SqlAlwaysEncryptedPropertiesResponse(
-        String alwaysEncryptedAkvAuthType,
-        @Nullable CredentialReferenceResponse credential,
-        @Nullable Object servicePrincipalId,
-        @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalKey) {
+        @OutputCustomType.Parameter("alwaysEncryptedAkvAuthType") String alwaysEncryptedAkvAuthType,
+        @OutputCustomType.Parameter("credential") @Nullable CredentialReferenceResponse credential,
+        @OutputCustomType.Parameter("servicePrincipalId") @Nullable Object servicePrincipalId,
+        @OutputCustomType.Parameter("servicePrincipalKey") @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalKey) {
         this.alwaysEncryptedAkvAuthType = alwaysEncryptedAkvAuthType;
         this.credential = credential;
         this.servicePrincipalId = servicePrincipalId;

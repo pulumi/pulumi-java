@@ -26,10 +26,10 @@ public final class ListActiveSecurityUserRuleResult {
      */
     private final @Nullable List<Either<ActiveDefaultSecurityUserRuleResponse,ActiveSecurityUserRuleResponse>> value;
 
-    @OutputCustomType.Constructor({"skipToken","value"})
+    @OutputCustomType.Constructor
     private ListActiveSecurityUserRuleResult(
-        @Nullable String skipToken,
-        @Nullable List<Either<ActiveDefaultSecurityUserRuleResponse,ActiveSecurityUserRuleResponse>> value) {
+        @OutputCustomType.Parameter("skipToken") @Nullable String skipToken,
+        @OutputCustomType.Parameter("value") @Nullable List<Either<ActiveDefaultSecurityUserRuleResponse,ActiveSecurityUserRuleResponse>> value) {
         this.skipToken = skipToken;
         this.value = value;
     }

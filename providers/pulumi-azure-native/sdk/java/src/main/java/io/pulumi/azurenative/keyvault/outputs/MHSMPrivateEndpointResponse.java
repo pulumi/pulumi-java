@@ -15,8 +15,8 @@ public final class MHSMPrivateEndpointResponse {
      */
     private final String id;
 
-    @OutputCustomType.Constructor({"id"})
-    private MHSMPrivateEndpointResponse(String id) {
+    @OutputCustomType.Constructor
+    private MHSMPrivateEndpointResponse(@OutputCustomType.Parameter("id") String id) {
         this.id = id;
     }
 

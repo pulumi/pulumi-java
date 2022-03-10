@@ -47,15 +47,15 @@ public final class DatabasePrincipalResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"appId","email","fqn","name","role","tenantName","type"})
+    @OutputCustomType.Constructor
     private DatabasePrincipalResponse(
-        @Nullable String appId,
-        @Nullable String email,
-        @Nullable String fqn,
-        String name,
-        String role,
-        String tenantName,
-        String type) {
+        @OutputCustomType.Parameter("appId") @Nullable String appId,
+        @OutputCustomType.Parameter("email") @Nullable String email,
+        @OutputCustomType.Parameter("fqn") @Nullable String fqn,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("role") String role,
+        @OutputCustomType.Parameter("tenantName") String tenantName,
+        @OutputCustomType.Parameter("type") String type) {
         this.appId = appId;
         this.email = email;
         this.fqn = fqn;

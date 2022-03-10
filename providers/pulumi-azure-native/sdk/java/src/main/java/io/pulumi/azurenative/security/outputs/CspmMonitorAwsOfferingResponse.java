@@ -29,11 +29,11 @@ public final class CspmMonitorAwsOfferingResponse {
      */
     private final String offeringType;
 
-    @OutputCustomType.Constructor({"description","nativeCloudConnection","offeringType"})
+    @OutputCustomType.Constructor
     private CspmMonitorAwsOfferingResponse(
-        String description,
-        @Nullable CspmMonitorAwsOfferingResponseNativeCloudConnection nativeCloudConnection,
-        String offeringType) {
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("nativeCloudConnection") @Nullable CspmMonitorAwsOfferingResponseNativeCloudConnection nativeCloudConnection,
+        @OutputCustomType.Parameter("offeringType") String offeringType) {
         this.description = description;
         this.nativeCloudConnection = nativeCloudConnection;
         this.offeringType = offeringType;

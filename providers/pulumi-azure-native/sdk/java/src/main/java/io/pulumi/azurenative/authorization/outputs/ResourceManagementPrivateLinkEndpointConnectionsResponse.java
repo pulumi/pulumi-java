@@ -17,8 +17,8 @@ public final class ResourceManagementPrivateLinkEndpointConnectionsResponse {
      */
     private final @Nullable List<String> privateEndpointConnections;
 
-    @OutputCustomType.Constructor({"privateEndpointConnections"})
-    private ResourceManagementPrivateLinkEndpointConnectionsResponse(@Nullable List<String> privateEndpointConnections) {
+    @OutputCustomType.Constructor
+    private ResourceManagementPrivateLinkEndpointConnectionsResponse(@OutputCustomType.Parameter("privateEndpointConnections") @Nullable List<String> privateEndpointConnections) {
         this.privateEndpointConnections = privateEndpointConnections;
     }
 

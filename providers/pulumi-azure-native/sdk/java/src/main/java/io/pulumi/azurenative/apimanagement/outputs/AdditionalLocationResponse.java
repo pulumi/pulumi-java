@@ -56,16 +56,16 @@ public final class AdditionalLocationResponse {
      */
     private final @Nullable List<String> zones;
 
-    @OutputCustomType.Constructor({"disableGateway","gatewayRegionalUrl","location","privateIPAddresses","publicIPAddresses","sku","virtualNetworkConfiguration","zones"})
+    @OutputCustomType.Constructor
     private AdditionalLocationResponse(
-        @Nullable Boolean disableGateway,
-        String gatewayRegionalUrl,
-        String location,
-        List<String> privateIPAddresses,
-        List<String> publicIPAddresses,
-        ApiManagementServiceSkuPropertiesResponse sku,
-        @Nullable VirtualNetworkConfigurationResponse virtualNetworkConfiguration,
-        @Nullable List<String> zones) {
+        @OutputCustomType.Parameter("disableGateway") @Nullable Boolean disableGateway,
+        @OutputCustomType.Parameter("gatewayRegionalUrl") String gatewayRegionalUrl,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("privateIPAddresses") List<String> privateIPAddresses,
+        @OutputCustomType.Parameter("publicIPAddresses") List<String> publicIPAddresses,
+        @OutputCustomType.Parameter("sku") ApiManagementServiceSkuPropertiesResponse sku,
+        @OutputCustomType.Parameter("virtualNetworkConfiguration") @Nullable VirtualNetworkConfigurationResponse virtualNetworkConfiguration,
+        @OutputCustomType.Parameter("zones") @Nullable List<String> zones) {
         this.disableGateway = disableGateway;
         this.gatewayRegionalUrl = gatewayRegionalUrl;
         this.location = location;

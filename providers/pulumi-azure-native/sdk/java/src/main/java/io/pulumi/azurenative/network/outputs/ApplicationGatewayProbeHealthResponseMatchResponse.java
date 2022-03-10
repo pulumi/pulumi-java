@@ -23,10 +23,10 @@ public final class ApplicationGatewayProbeHealthResponseMatchResponse {
      */
     private final @Nullable List<String> statusCodes;
 
-    @OutputCustomType.Constructor({"body","statusCodes"})
+    @OutputCustomType.Constructor
     private ApplicationGatewayProbeHealthResponseMatchResponse(
-        @Nullable String body,
-        @Nullable List<String> statusCodes) {
+        @OutputCustomType.Parameter("body") @Nullable String body,
+        @OutputCustomType.Parameter("statusCodes") @Nullable List<String> statusCodes) {
         this.body = body;
         this.statusCodes = statusCodes;
     }

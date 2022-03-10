@@ -51,16 +51,16 @@ public final class IpsecPolicyResponse {
      */
     private final Integer saLifeTimeSeconds;
 
-    @OutputCustomType.Constructor({"dhGroup","ikeEncryption","ikeIntegrity","ipsecEncryption","ipsecIntegrity","pfsGroup","saDataSizeKilobytes","saLifeTimeSeconds"})
+    @OutputCustomType.Constructor
     private IpsecPolicyResponse(
-        String dhGroup,
-        String ikeEncryption,
-        String ikeIntegrity,
-        String ipsecEncryption,
-        String ipsecIntegrity,
-        String pfsGroup,
-        Integer saDataSizeKilobytes,
-        Integer saLifeTimeSeconds) {
+        @OutputCustomType.Parameter("dhGroup") String dhGroup,
+        @OutputCustomType.Parameter("ikeEncryption") String ikeEncryption,
+        @OutputCustomType.Parameter("ikeIntegrity") String ikeIntegrity,
+        @OutputCustomType.Parameter("ipsecEncryption") String ipsecEncryption,
+        @OutputCustomType.Parameter("ipsecIntegrity") String ipsecIntegrity,
+        @OutputCustomType.Parameter("pfsGroup") String pfsGroup,
+        @OutputCustomType.Parameter("saDataSizeKilobytes") Integer saDataSizeKilobytes,
+        @OutputCustomType.Parameter("saLifeTimeSeconds") Integer saLifeTimeSeconds) {
         this.dhGroup = dhGroup;
         this.ikeEncryption = ikeEncryption;
         this.ikeIntegrity = ikeIntegrity;

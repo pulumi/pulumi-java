@@ -39,13 +39,13 @@ public final class RepresentationContractResponse {
      */
     private final @Nullable String typeName;
 
-    @OutputCustomType.Constructor({"contentType","formParameters","sample","schemaId","typeName"})
+    @OutputCustomType.Constructor
     private RepresentationContractResponse(
-        String contentType,
-        @Nullable List<ParameterContractResponse> formParameters,
-        @Nullable String sample,
-        @Nullable String schemaId,
-        @Nullable String typeName) {
+        @OutputCustomType.Parameter("contentType") String contentType,
+        @OutputCustomType.Parameter("formParameters") @Nullable List<ParameterContractResponse> formParameters,
+        @OutputCustomType.Parameter("sample") @Nullable String sample,
+        @OutputCustomType.Parameter("schemaId") @Nullable String schemaId,
+        @OutputCustomType.Parameter("typeName") @Nullable String typeName) {
         this.contentType = contentType;
         this.formParameters = formParameters;
         this.sample = sample;

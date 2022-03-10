@@ -21,10 +21,10 @@ public final class ScaleRuleResponse {
      */
     private final ScaleActionResponse scaleAction;
 
-    @OutputCustomType.Constructor({"metricTrigger","scaleAction"})
+    @OutputCustomType.Constructor
     private ScaleRuleResponse(
-        MetricTriggerResponse metricTrigger,
-        ScaleActionResponse scaleAction) {
+        @OutputCustomType.Parameter("metricTrigger") MetricTriggerResponse metricTrigger,
+        @OutputCustomType.Parameter("scaleAction") ScaleActionResponse scaleAction) {
         this.metricTrigger = metricTrigger;
         this.scaleAction = scaleAction;
     }

@@ -55,16 +55,16 @@ public final class GetPipelineRunResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"forceUpdateTag","id","name","provisioningState","request","response","systemData","type"})
+    @OutputCustomType.Constructor
     private GetPipelineRunResult(
-        @Nullable String forceUpdateTag,
-        String id,
-        String name,
-        String provisioningState,
-        @Nullable PipelineRunRequestResponse request,
-        PipelineRunResponseResponse response,
-        SystemDataResponse systemData,
-        String type) {
+        @OutputCustomType.Parameter("forceUpdateTag") @Nullable String forceUpdateTag,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("request") @Nullable PipelineRunRequestResponse request,
+        @OutputCustomType.Parameter("response") PipelineRunResponseResponse response,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("type") String type) {
         this.forceUpdateTag = forceUpdateTag;
         this.id = id;
         this.name = name;

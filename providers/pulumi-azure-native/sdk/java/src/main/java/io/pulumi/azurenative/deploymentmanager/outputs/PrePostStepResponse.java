@@ -15,8 +15,8 @@ public final class PrePostStepResponse {
      */
     private final String stepId;
 
-    @OutputCustomType.Constructor({"stepId"})
-    private PrePostStepResponse(String stepId) {
+    @OutputCustomType.Constructor
+    private PrePostStepResponse(@OutputCustomType.Parameter("stepId") String stepId) {
         this.stepId = stepId;
     }
 

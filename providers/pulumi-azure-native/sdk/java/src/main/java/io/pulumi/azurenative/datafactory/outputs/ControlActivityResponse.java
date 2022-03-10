@@ -41,13 +41,13 @@ public final class ControlActivityResponse {
      */
     private final @Nullable List<UserPropertyResponse> userProperties;
 
-    @OutputCustomType.Constructor({"dependsOn","description","name","type","userProperties"})
+    @OutputCustomType.Constructor
     private ControlActivityResponse(
-        @Nullable List<ActivityDependencyResponse> dependsOn,
-        @Nullable String description,
-        String name,
-        String type,
-        @Nullable List<UserPropertyResponse> userProperties) {
+        @OutputCustomType.Parameter("dependsOn") @Nullable List<ActivityDependencyResponse> dependsOn,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("userProperties") @Nullable List<UserPropertyResponse> userProperties) {
         this.dependsOn = dependsOn;
         this.description = description;
         this.name = name;

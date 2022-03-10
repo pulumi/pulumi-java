@@ -32,12 +32,12 @@ public final class PermissionsResponse {
      */
     private final @Nullable List<String> storage;
 
-    @OutputCustomType.Constructor({"certificates","keys","secrets","storage"})
+    @OutputCustomType.Constructor
     private PermissionsResponse(
-        @Nullable List<String> certificates,
-        @Nullable List<String> keys,
-        @Nullable List<String> secrets,
-        @Nullable List<String> storage) {
+        @OutputCustomType.Parameter("certificates") @Nullable List<String> certificates,
+        @OutputCustomType.Parameter("keys") @Nullable List<String> keys,
+        @OutputCustomType.Parameter("secrets") @Nullable List<String> secrets,
+        @OutputCustomType.Parameter("storage") @Nullable List<String> storage) {
         this.certificates = certificates;
         this.keys = keys;
         this.secrets = secrets;

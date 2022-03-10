@@ -43,14 +43,14 @@ public final class ReportableExceptionResponse {
      */
     private final String stackTrace;
 
-    @OutputCustomType.Constructor({"actionableMessage","filePath","hResult","lineNumber","message","stackTrace"})
+    @OutputCustomType.Constructor
     private ReportableExceptionResponse(
-        @Nullable String actionableMessage,
-        String filePath,
-        Integer hResult,
-        String lineNumber,
-        String message,
-        String stackTrace) {
+        @OutputCustomType.Parameter("actionableMessage") @Nullable String actionableMessage,
+        @OutputCustomType.Parameter("filePath") String filePath,
+        @OutputCustomType.Parameter("hResult") Integer hResult,
+        @OutputCustomType.Parameter("lineNumber") String lineNumber,
+        @OutputCustomType.Parameter("message") String message,
+        @OutputCustomType.Parameter("stackTrace") String stackTrace) {
         this.actionableMessage = actionableMessage;
         this.filePath = filePath;
         this.hResult = hResult;

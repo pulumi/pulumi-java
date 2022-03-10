@@ -38,13 +38,13 @@ public final class SelectAudioTrackByAttributeResponse {
      */
     private final String odataType;
 
-    @OutputCustomType.Constructor({"attribute","channelMapping","filter","filterValue","odataType"})
+    @OutputCustomType.Constructor
     private SelectAudioTrackByAttributeResponse(
-        String attribute,
-        @Nullable String channelMapping,
-        String filter,
-        @Nullable String filterValue,
-        String odataType) {
+        @OutputCustomType.Parameter("attribute") String attribute,
+        @OutputCustomType.Parameter("channelMapping") @Nullable String channelMapping,
+        @OutputCustomType.Parameter("filter") String filter,
+        @OutputCustomType.Parameter("filterValue") @Nullable String filterValue,
+        @OutputCustomType.Parameter("odataType") String odataType) {
         this.attribute = attribute;
         this.channelMapping = channelMapping;
         this.filter = filter;

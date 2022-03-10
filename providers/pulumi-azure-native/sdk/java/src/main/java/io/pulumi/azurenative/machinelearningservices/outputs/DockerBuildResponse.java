@@ -37,12 +37,12 @@ public final class DockerBuildResponse {
      */
     private final @Nullable DockerImagePlatformResponse platform;
 
-    @OutputCustomType.Constructor({"context","dockerSpecificationType","dockerfile","platform"})
+    @OutputCustomType.Constructor
     private DockerBuildResponse(
-        @Nullable String context,
-        String dockerSpecificationType,
-        String dockerfile,
-        @Nullable DockerImagePlatformResponse platform) {
+        @OutputCustomType.Parameter("context") @Nullable String context,
+        @OutputCustomType.Parameter("dockerSpecificationType") String dockerSpecificationType,
+        @OutputCustomType.Parameter("dockerfile") String dockerfile,
+        @OutputCustomType.Parameter("platform") @Nullable DockerImagePlatformResponse platform) {
         this.context = context;
         this.dockerSpecificationType = dockerSpecificationType;
         this.dockerfile = dockerfile;

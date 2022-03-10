@@ -25,11 +25,11 @@ public final class MediaServiceIdentityResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"principalId","tenantId","type"})
+    @OutputCustomType.Constructor
     private MediaServiceIdentityResponse(
-        String principalId,
-        String tenantId,
-        String type) {
+        @OutputCustomType.Parameter("principalId") String principalId,
+        @OutputCustomType.Parameter("tenantId") String tenantId,
+        @OutputCustomType.Parameter("type") String type) {
         this.principalId = principalId;
         this.tenantId = tenantId;
         this.type = type;

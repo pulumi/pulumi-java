@@ -36,12 +36,12 @@ public final class ResponseContractResponse {
      */
     private final Integer statusCode;
 
-    @OutputCustomType.Constructor({"description","headers","representations","statusCode"})
+    @OutputCustomType.Constructor
     private ResponseContractResponse(
-        @Nullable String description,
-        @Nullable List<ParameterContractResponse> headers,
-        @Nullable List<RepresentationContractResponse> representations,
-        Integer statusCode) {
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("headers") @Nullable List<ParameterContractResponse> headers,
+        @OutputCustomType.Parameter("representations") @Nullable List<RepresentationContractResponse> representations,
+        @OutputCustomType.Parameter("statusCode") Integer statusCode) {
         this.description = description;
         this.headers = headers;
         this.representations = representations;

@@ -27,11 +27,11 @@ public final class ReportDeliveryDestinationResponse {
      */
     private final @Nullable String rootFolderPath;
 
-    @OutputCustomType.Constructor({"container","resourceId","rootFolderPath"})
+    @OutputCustomType.Constructor
     private ReportDeliveryDestinationResponse(
-        String container,
-        String resourceId,
-        @Nullable String rootFolderPath) {
+        @OutputCustomType.Parameter("container") String container,
+        @OutputCustomType.Parameter("resourceId") String resourceId,
+        @OutputCustomType.Parameter("rootFolderPath") @Nullable String rootFolderPath) {
         this.container = container;
         this.resourceId = resourceId;
         this.rootFolderPath = rootFolderPath;

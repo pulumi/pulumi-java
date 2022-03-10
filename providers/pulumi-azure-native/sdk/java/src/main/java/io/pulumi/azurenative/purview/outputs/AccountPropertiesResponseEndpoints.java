@@ -25,11 +25,11 @@ public final class AccountPropertiesResponseEndpoints {
      */
     private final String scan;
 
-    @OutputCustomType.Constructor({"catalog","guardian","scan"})
+    @OutputCustomType.Constructor
     private AccountPropertiesResponseEndpoints(
-        String catalog,
-        String guardian,
-        String scan) {
+        @OutputCustomType.Parameter("catalog") String catalog,
+        @OutputCustomType.Parameter("guardian") String guardian,
+        @OutputCustomType.Parameter("scan") String scan) {
         this.catalog = catalog;
         this.guardian = guardian;
         this.scan = scan;

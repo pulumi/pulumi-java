@@ -50,15 +50,15 @@ public final class ContainerNetworkInterfaceConfigurationResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"containerNetworkInterfaces","etag","id","ipConfigurations","name","provisioningState","type"})
+    @OutputCustomType.Constructor
     private ContainerNetworkInterfaceConfigurationResponse(
-        @Nullable List<SubResourceResponse> containerNetworkInterfaces,
-        String etag,
-        @Nullable String id,
-        @Nullable List<IPConfigurationProfileResponse> ipConfigurations,
-        @Nullable String name,
-        String provisioningState,
-        String type) {
+        @OutputCustomType.Parameter("containerNetworkInterfaces") @Nullable List<SubResourceResponse> containerNetworkInterfaces,
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("ipConfigurations") @Nullable List<IPConfigurationProfileResponse> ipConfigurations,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("type") String type) {
         this.containerNetworkInterfaces = containerNetworkInterfaces;
         this.etag = etag;
         this.id = id;

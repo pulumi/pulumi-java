@@ -26,11 +26,11 @@ public final class ManagedClusterPodIdentityExceptionResponse {
      */
     private final Map<String,String> podLabels;
 
-    @OutputCustomType.Constructor({"name","namespace","podLabels"})
+    @OutputCustomType.Constructor
     private ManagedClusterPodIdentityExceptionResponse(
-        String name,
-        String namespace,
-        Map<String,String> podLabels) {
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("namespace") String namespace,
+        @OutputCustomType.Parameter("podLabels") Map<String,String> podLabels) {
         this.name = name;
         this.namespace = namespace;
         this.podLabels = podLabels;

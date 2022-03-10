@@ -124,29 +124,29 @@ public final class GetAppServiceEnvironmentResult {
      */
     private final VirtualNetworkProfileResponse virtualNetwork;
 
-    @OutputCustomType.Constructor({"clusterSettings","dedicatedHostCount","dnsSuffix","frontEndScaleFactor","hasLinuxWorkers","id","internalLoadBalancingMode","ipsslAddressCount","kind","location","maximumNumberOfMachines","multiRoleCount","multiSize","name","provisioningState","status","suspended","tags","type","userWhitelistedIpRanges","virtualNetwork"})
+    @OutputCustomType.Constructor
     private GetAppServiceEnvironmentResult(
-        @Nullable List<NameValuePairResponse> clusterSettings,
-        Integer dedicatedHostCount,
-        @Nullable String dnsSuffix,
-        @Nullable Integer frontEndScaleFactor,
-        Boolean hasLinuxWorkers,
-        String id,
-        @Nullable String internalLoadBalancingMode,
-        @Nullable Integer ipsslAddressCount,
-        @Nullable String kind,
-        String location,
-        Integer maximumNumberOfMachines,
-        Integer multiRoleCount,
-        @Nullable String multiSize,
-        String name,
-        String provisioningState,
-        String status,
-        Boolean suspended,
-        @Nullable Map<String,String> tags,
-        String type,
-        @Nullable List<String> userWhitelistedIpRanges,
-        VirtualNetworkProfileResponse virtualNetwork) {
+        @OutputCustomType.Parameter("clusterSettings") @Nullable List<NameValuePairResponse> clusterSettings,
+        @OutputCustomType.Parameter("dedicatedHostCount") Integer dedicatedHostCount,
+        @OutputCustomType.Parameter("dnsSuffix") @Nullable String dnsSuffix,
+        @OutputCustomType.Parameter("frontEndScaleFactor") @Nullable Integer frontEndScaleFactor,
+        @OutputCustomType.Parameter("hasLinuxWorkers") Boolean hasLinuxWorkers,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("internalLoadBalancingMode") @Nullable String internalLoadBalancingMode,
+        @OutputCustomType.Parameter("ipsslAddressCount") @Nullable Integer ipsslAddressCount,
+        @OutputCustomType.Parameter("kind") @Nullable String kind,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("maximumNumberOfMachines") Integer maximumNumberOfMachines,
+        @OutputCustomType.Parameter("multiRoleCount") Integer multiRoleCount,
+        @OutputCustomType.Parameter("multiSize") @Nullable String multiSize,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("status") String status,
+        @OutputCustomType.Parameter("suspended") Boolean suspended,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("userWhitelistedIpRanges") @Nullable List<String> userWhitelistedIpRanges,
+        @OutputCustomType.Parameter("virtualNetwork") VirtualNetworkProfileResponse virtualNetwork) {
         this.clusterSettings = clusterSettings;
         this.dedicatedHostCount = dedicatedHostCount;
         this.dnsSuffix = dnsSuffix;

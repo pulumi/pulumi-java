@@ -35,12 +35,12 @@ public final class GlobalServiceConfigurationResponse {
      */
     private final @Nullable SslConfigurationResponse ssl;
 
-    @OutputCustomType.Constructor({"autoScale","etag","serviceAuth","ssl"})
+    @OutputCustomType.Constructor
     private GlobalServiceConfigurationResponse(
-        @Nullable AutoScaleConfigurationResponse autoScale,
-        @Nullable String etag,
-        @Nullable ServiceAuthConfigurationResponse serviceAuth,
-        @Nullable SslConfigurationResponse ssl) {
+        @OutputCustomType.Parameter("autoScale") @Nullable AutoScaleConfigurationResponse autoScale,
+        @OutputCustomType.Parameter("etag") @Nullable String etag,
+        @OutputCustomType.Parameter("serviceAuth") @Nullable ServiceAuthConfigurationResponse serviceAuth,
+        @OutputCustomType.Parameter("ssl") @Nullable SslConfigurationResponse ssl) {
         this.autoScale = autoScale;
         this.etag = etag;
         this.serviceAuth = serviceAuth;

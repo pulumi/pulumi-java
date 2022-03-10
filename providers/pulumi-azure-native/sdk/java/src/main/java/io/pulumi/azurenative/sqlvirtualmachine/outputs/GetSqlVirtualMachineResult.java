@@ -115,27 +115,27 @@ public final class GetSqlVirtualMachineResult {
      */
     private final @Nullable WsfcDomainCredentialsResponse wsfcDomainCredentials;
 
-    @OutputCustomType.Constructor({"autoBackupSettings","autoPatchingSettings","id","identity","keyVaultCredentialSettings","location","name","provisioningState","serverConfigurationsManagementSettings","sqlImageOffer","sqlImageSku","sqlManagement","sqlServerLicenseType","sqlVirtualMachineGroupResourceId","storageConfigurationSettings","tags","type","virtualMachineResourceId","wsfcDomainCredentials"})
+    @OutputCustomType.Constructor
     private GetSqlVirtualMachineResult(
-        @Nullable AutoBackupSettingsResponse autoBackupSettings,
-        @Nullable AutoPatchingSettingsResponse autoPatchingSettings,
-        String id,
-        @Nullable ResourceIdentityResponse identity,
-        @Nullable KeyVaultCredentialSettingsResponse keyVaultCredentialSettings,
-        String location,
-        String name,
-        String provisioningState,
-        @Nullable ServerConfigurationsManagementSettingsResponse serverConfigurationsManagementSettings,
-        @Nullable String sqlImageOffer,
-        @Nullable String sqlImageSku,
-        @Nullable String sqlManagement,
-        @Nullable String sqlServerLicenseType,
-        @Nullable String sqlVirtualMachineGroupResourceId,
-        @Nullable StorageConfigurationSettingsResponse storageConfigurationSettings,
-        @Nullable Map<String,String> tags,
-        String type,
-        @Nullable String virtualMachineResourceId,
-        @Nullable WsfcDomainCredentialsResponse wsfcDomainCredentials) {
+        @OutputCustomType.Parameter("autoBackupSettings") @Nullable AutoBackupSettingsResponse autoBackupSettings,
+        @OutputCustomType.Parameter("autoPatchingSettings") @Nullable AutoPatchingSettingsResponse autoPatchingSettings,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("identity") @Nullable ResourceIdentityResponse identity,
+        @OutputCustomType.Parameter("keyVaultCredentialSettings") @Nullable KeyVaultCredentialSettingsResponse keyVaultCredentialSettings,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("serverConfigurationsManagementSettings") @Nullable ServerConfigurationsManagementSettingsResponse serverConfigurationsManagementSettings,
+        @OutputCustomType.Parameter("sqlImageOffer") @Nullable String sqlImageOffer,
+        @OutputCustomType.Parameter("sqlImageSku") @Nullable String sqlImageSku,
+        @OutputCustomType.Parameter("sqlManagement") @Nullable String sqlManagement,
+        @OutputCustomType.Parameter("sqlServerLicenseType") @Nullable String sqlServerLicenseType,
+        @OutputCustomType.Parameter("sqlVirtualMachineGroupResourceId") @Nullable String sqlVirtualMachineGroupResourceId,
+        @OutputCustomType.Parameter("storageConfigurationSettings") @Nullable StorageConfigurationSettingsResponse storageConfigurationSettings,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("virtualMachineResourceId") @Nullable String virtualMachineResourceId,
+        @OutputCustomType.Parameter("wsfcDomainCredentials") @Nullable WsfcDomainCredentialsResponse wsfcDomainCredentials) {
         this.autoBackupSettings = autoBackupSettings;
         this.autoPatchingSettings = autoPatchingSettings;
         this.id = id;

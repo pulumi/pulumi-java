@@ -33,12 +33,12 @@ public final class AmazonRdsForOraclePartitionSettingsResponse {
      */
     private final @Nullable Object partitionUpperBound;
 
-    @OutputCustomType.Constructor({"partitionColumnName","partitionLowerBound","partitionNames","partitionUpperBound"})
+    @OutputCustomType.Constructor
     private AmazonRdsForOraclePartitionSettingsResponse(
-        @Nullable Object partitionColumnName,
-        @Nullable Object partitionLowerBound,
-        @Nullable List<Object> partitionNames,
-        @Nullable Object partitionUpperBound) {
+        @OutputCustomType.Parameter("partitionColumnName") @Nullable Object partitionColumnName,
+        @OutputCustomType.Parameter("partitionLowerBound") @Nullable Object partitionLowerBound,
+        @OutputCustomType.Parameter("partitionNames") @Nullable List<Object> partitionNames,
+        @OutputCustomType.Parameter("partitionUpperBound") @Nullable Object partitionUpperBound) {
         this.partitionColumnName = partitionColumnName;
         this.partitionLowerBound = partitionLowerBound;
         this.partitionNames = partitionNames;

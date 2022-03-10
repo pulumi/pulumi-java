@@ -43,14 +43,14 @@ public final class GetDomainOwnershipIdentifierResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"id","kind","name","ownershipId","systemData","type"})
+    @OutputCustomType.Constructor
     private GetDomainOwnershipIdentifierResult(
-        String id,
-        @Nullable String kind,
-        String name,
-        @Nullable String ownershipId,
-        SystemDataResponse systemData,
-        String type) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("kind") @Nullable String kind,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("ownershipId") @Nullable String ownershipId,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("type") String type) {
         this.id = id;
         this.kind = kind;
         this.name = name;

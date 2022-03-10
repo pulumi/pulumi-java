@@ -21,10 +21,10 @@ public final class RecurrenceResponse {
      */
     private final RecurrentScheduleResponse schedule;
 
-    @OutputCustomType.Constructor({"frequency","schedule"})
+    @OutputCustomType.Constructor
     private RecurrenceResponse(
-        String frequency,
-        RecurrentScheduleResponse schedule) {
+        @OutputCustomType.Parameter("frequency") String frequency,
+        @OutputCustomType.Parameter("schedule") RecurrentScheduleResponse schedule) {
         this.frequency = frequency;
         this.schedule = schedule;
     }

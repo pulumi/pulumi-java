@@ -35,12 +35,12 @@ public final class MigrateSqlServerSqlDbSyncTaskInputResponse {
      */
     private final @Nullable MigrationValidationOptionsResponse validationOptions;
 
-    @OutputCustomType.Constructor({"selectedDatabases","sourceConnectionInfo","targetConnectionInfo","validationOptions"})
+    @OutputCustomType.Constructor
     private MigrateSqlServerSqlDbSyncTaskInputResponse(
-        List<MigrateSqlServerSqlDbSyncDatabaseInputResponse> selectedDatabases,
-        SqlConnectionInfoResponse sourceConnectionInfo,
-        SqlConnectionInfoResponse targetConnectionInfo,
-        @Nullable MigrationValidationOptionsResponse validationOptions) {
+        @OutputCustomType.Parameter("selectedDatabases") List<MigrateSqlServerSqlDbSyncDatabaseInputResponse> selectedDatabases,
+        @OutputCustomType.Parameter("sourceConnectionInfo") SqlConnectionInfoResponse sourceConnectionInfo,
+        @OutputCustomType.Parameter("targetConnectionInfo") SqlConnectionInfoResponse targetConnectionInfo,
+        @OutputCustomType.Parameter("validationOptions") @Nullable MigrationValidationOptionsResponse validationOptions) {
         this.selectedDatabases = selectedDatabases;
         this.sourceConnectionInfo = sourceConnectionInfo;
         this.targetConnectionInfo = targetConnectionInfo;

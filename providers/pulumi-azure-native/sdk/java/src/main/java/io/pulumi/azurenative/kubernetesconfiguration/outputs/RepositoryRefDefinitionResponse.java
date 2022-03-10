@@ -32,12 +32,12 @@ public final class RepositoryRefDefinitionResponse {
      */
     private final @Nullable String tag;
 
-    @OutputCustomType.Constructor({"branch","commit","semver","tag"})
+    @OutputCustomType.Constructor
     private RepositoryRefDefinitionResponse(
-        @Nullable String branch,
-        @Nullable String commit,
-        @Nullable String semver,
-        @Nullable String tag) {
+        @OutputCustomType.Parameter("branch") @Nullable String branch,
+        @OutputCustomType.Parameter("commit") @Nullable String commit,
+        @OutputCustomType.Parameter("semver") @Nullable String semver,
+        @OutputCustomType.Parameter("tag") @Nullable String tag) {
         this.branch = branch;
         this.commit = commit;
         this.semver = semver;

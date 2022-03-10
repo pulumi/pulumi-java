@@ -27,11 +27,11 @@ public final class CustomImagePropertiesFromPlanResponse {
      */
     private final @Nullable String publisher;
 
-    @OutputCustomType.Constructor({"id","offer","publisher"})
+    @OutputCustomType.Constructor
     private CustomImagePropertiesFromPlanResponse(
-        @Nullable String id,
-        @Nullable String offer,
-        @Nullable String publisher) {
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("offer") @Nullable String offer,
+        @OutputCustomType.Parameter("publisher") @Nullable String publisher) {
         this.id = id;
         this.offer = offer;
         this.publisher = publisher;

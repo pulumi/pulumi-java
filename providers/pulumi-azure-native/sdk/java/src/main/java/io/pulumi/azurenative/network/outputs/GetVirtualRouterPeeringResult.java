@@ -48,15 +48,15 @@ public final class GetVirtualRouterPeeringResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"etag","id","name","peerAsn","peerIp","provisioningState","type"})
+    @OutputCustomType.Constructor
     private GetVirtualRouterPeeringResult(
-        String etag,
-        @Nullable String id,
-        @Nullable String name,
-        @Nullable Double peerAsn,
-        @Nullable String peerIp,
-        String provisioningState,
-        String type) {
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("peerAsn") @Nullable Double peerAsn,
+        @OutputCustomType.Parameter("peerIp") @Nullable String peerIp,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("type") String type) {
         this.etag = etag;
         this.id = id;
         this.name = name;

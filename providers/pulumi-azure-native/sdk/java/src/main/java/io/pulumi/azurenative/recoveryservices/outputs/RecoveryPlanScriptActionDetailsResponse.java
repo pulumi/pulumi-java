@@ -33,12 +33,12 @@ public final class RecoveryPlanScriptActionDetailsResponse {
      */
     private final @Nullable String timeout;
 
-    @OutputCustomType.Constructor({"fabricLocation","instanceType","path","timeout"})
+    @OutputCustomType.Constructor
     private RecoveryPlanScriptActionDetailsResponse(
-        String fabricLocation,
-        String instanceType,
-        String path,
-        @Nullable String timeout) {
+        @OutputCustomType.Parameter("fabricLocation") String fabricLocation,
+        @OutputCustomType.Parameter("instanceType") String instanceType,
+        @OutputCustomType.Parameter("path") String path,
+        @OutputCustomType.Parameter("timeout") @Nullable String timeout) {
         this.fabricLocation = fabricLocation;
         this.instanceType = instanceType;
         this.path = path;

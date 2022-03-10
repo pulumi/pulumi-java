@@ -143,32 +143,32 @@ public final class NetworkInterfaceResponse {
      */
     private final SubResourceResponse virtualMachine;
 
-    @OutputCustomType.Constructor({"dnsSettings","dscpConfiguration","enableAcceleratedNetworking","enableIPForwarding","etag","extendedLocation","hostedWorkloads","id","ipConfigurations","location","macAddress","migrationPhase","name","networkSecurityGroup","nicType","primary","privateEndpoint","privateLinkService","provisioningState","resourceGuid","tags","tapConfigurations","type","virtualMachine"})
+    @OutputCustomType.Constructor
     private NetworkInterfaceResponse(
-        @Nullable NetworkInterfaceDnsSettingsResponse dnsSettings,
-        SubResourceResponse dscpConfiguration,
-        @Nullable Boolean enableAcceleratedNetworking,
-        @Nullable Boolean enableIPForwarding,
-        String etag,
-        @Nullable ExtendedLocationResponse extendedLocation,
-        List<String> hostedWorkloads,
-        @Nullable String id,
-        @Nullable List<NetworkInterfaceIPConfigurationResponse> ipConfigurations,
-        @Nullable String location,
-        String macAddress,
-        @Nullable String migrationPhase,
-        String name,
-        @Nullable NetworkSecurityGroupResponse networkSecurityGroup,
-        @Nullable String nicType,
-        Boolean primary,
-        PrivateEndpointResponse privateEndpoint,
-        @Nullable PrivateLinkServiceResponse privateLinkService,
-        String provisioningState,
-        String resourceGuid,
-        @Nullable Map<String,String> tags,
-        List<NetworkInterfaceTapConfigurationResponse> tapConfigurations,
-        String type,
-        SubResourceResponse virtualMachine) {
+        @OutputCustomType.Parameter("dnsSettings") @Nullable NetworkInterfaceDnsSettingsResponse dnsSettings,
+        @OutputCustomType.Parameter("dscpConfiguration") SubResourceResponse dscpConfiguration,
+        @OutputCustomType.Parameter("enableAcceleratedNetworking") @Nullable Boolean enableAcceleratedNetworking,
+        @OutputCustomType.Parameter("enableIPForwarding") @Nullable Boolean enableIPForwarding,
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("extendedLocation") @Nullable ExtendedLocationResponse extendedLocation,
+        @OutputCustomType.Parameter("hostedWorkloads") List<String> hostedWorkloads,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("ipConfigurations") @Nullable List<NetworkInterfaceIPConfigurationResponse> ipConfigurations,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("macAddress") String macAddress,
+        @OutputCustomType.Parameter("migrationPhase") @Nullable String migrationPhase,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("networkSecurityGroup") @Nullable NetworkSecurityGroupResponse networkSecurityGroup,
+        @OutputCustomType.Parameter("nicType") @Nullable String nicType,
+        @OutputCustomType.Parameter("primary") Boolean primary,
+        @OutputCustomType.Parameter("privateEndpoint") PrivateEndpointResponse privateEndpoint,
+        @OutputCustomType.Parameter("privateLinkService") @Nullable PrivateLinkServiceResponse privateLinkService,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("resourceGuid") String resourceGuid,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("tapConfigurations") List<NetworkInterfaceTapConfigurationResponse> tapConfigurations,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("virtualMachine") SubResourceResponse virtualMachine) {
         this.dnsSettings = dnsSettings;
         this.dscpConfiguration = dscpConfiguration;
         this.enableAcceleratedNetworking = enableAcceleratedNetworking;

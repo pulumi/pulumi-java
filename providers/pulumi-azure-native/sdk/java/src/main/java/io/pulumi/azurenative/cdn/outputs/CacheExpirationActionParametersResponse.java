@@ -28,12 +28,12 @@ public final class CacheExpirationActionParametersResponse {
     private final String cacheType;
     private final String odataType;
 
-    @OutputCustomType.Constructor({"cacheBehavior","cacheDuration","cacheType","odataType"})
+    @OutputCustomType.Constructor
     private CacheExpirationActionParametersResponse(
-        String cacheBehavior,
-        @Nullable String cacheDuration,
-        String cacheType,
-        String odataType) {
+        @OutputCustomType.Parameter("cacheBehavior") String cacheBehavior,
+        @OutputCustomType.Parameter("cacheDuration") @Nullable String cacheDuration,
+        @OutputCustomType.Parameter("cacheType") String cacheType,
+        @OutputCustomType.Parameter("odataType") String odataType) {
         this.cacheBehavior = cacheBehavior;
         this.cacheDuration = cacheDuration;
         this.cacheType = cacheType;

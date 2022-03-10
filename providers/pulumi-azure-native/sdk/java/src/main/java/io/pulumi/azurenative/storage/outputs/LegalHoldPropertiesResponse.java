@@ -23,10 +23,10 @@ public final class LegalHoldPropertiesResponse {
      */
     private final @Nullable List<TagPropertyResponse> tags;
 
-    @OutputCustomType.Constructor({"hasLegalHold","tags"})
+    @OutputCustomType.Constructor
     private LegalHoldPropertiesResponse(
-        Boolean hasLegalHold,
-        @Nullable List<TagPropertyResponse> tags) {
+        @OutputCustomType.Parameter("hasLegalHold") Boolean hasLegalHold,
+        @OutputCustomType.Parameter("tags") @Nullable List<TagPropertyResponse> tags) {
         this.hasLegalHold = hasLegalHold;
         this.tags = tags;
     }

@@ -20,11 +20,11 @@ public final class DataSourceResponse {
     private final String kind;
     private final List<SinkConfigurationResponse> sinks;
 
-    @OutputCustomType.Constructor({"configuration","kind","sinks"})
+    @OutputCustomType.Constructor
     private DataSourceResponse(
-        DataSourceConfigurationResponse configuration,
-        String kind,
-        List<SinkConfigurationResponse> sinks) {
+        @OutputCustomType.Parameter("configuration") DataSourceConfigurationResponse configuration,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("sinks") List<SinkConfigurationResponse> sinks) {
         this.configuration = configuration;
         this.kind = kind;
         this.sinks = sinks;

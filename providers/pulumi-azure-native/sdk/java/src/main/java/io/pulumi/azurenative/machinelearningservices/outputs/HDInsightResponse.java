@@ -53,16 +53,16 @@ public final class HDInsightResponse {
      */
     private final @Nullable String resourceId;
 
-    @OutputCustomType.Constructor({"computeLocation","computeType","description","isAttachedCompute","properties","provisioningErrors","provisioningState","resourceId"})
+    @OutputCustomType.Constructor
     private HDInsightResponse(
-        @Nullable String computeLocation,
-        String computeType,
-        @Nullable String description,
-        Boolean isAttachedCompute,
-        @Nullable HDInsightResponseProperties properties,
-        List<MachineLearningServiceErrorResponse> provisioningErrors,
-        String provisioningState,
-        @Nullable String resourceId) {
+        @OutputCustomType.Parameter("computeLocation") @Nullable String computeLocation,
+        @OutputCustomType.Parameter("computeType") String computeType,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("isAttachedCompute") Boolean isAttachedCompute,
+        @OutputCustomType.Parameter("properties") @Nullable HDInsightResponseProperties properties,
+        @OutputCustomType.Parameter("provisioningErrors") List<MachineLearningServiceErrorResponse> provisioningErrors,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("resourceId") @Nullable String resourceId) {
         this.computeLocation = computeLocation;
         this.computeType = computeType;
         this.description = description;

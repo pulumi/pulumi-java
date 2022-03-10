@@ -26,11 +26,11 @@ public final class AS2OneWayAgreementResponse {
      */
     private final BusinessIdentityResponse senderBusinessIdentity;
 
-    @OutputCustomType.Constructor({"protocolSettings","receiverBusinessIdentity","senderBusinessIdentity"})
+    @OutputCustomType.Constructor
     private AS2OneWayAgreementResponse(
-        AS2ProtocolSettingsResponse protocolSettings,
-        BusinessIdentityResponse receiverBusinessIdentity,
-        BusinessIdentityResponse senderBusinessIdentity) {
+        @OutputCustomType.Parameter("protocolSettings") AS2ProtocolSettingsResponse protocolSettings,
+        @OutputCustomType.Parameter("receiverBusinessIdentity") BusinessIdentityResponse receiverBusinessIdentity,
+        @OutputCustomType.Parameter("senderBusinessIdentity") BusinessIdentityResponse senderBusinessIdentity) {
         this.protocolSettings = protocolSettings;
         this.receiverBusinessIdentity = receiverBusinessIdentity;
         this.senderBusinessIdentity = senderBusinessIdentity;

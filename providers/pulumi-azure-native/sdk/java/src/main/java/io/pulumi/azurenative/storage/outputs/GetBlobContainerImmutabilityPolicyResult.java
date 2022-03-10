@@ -49,15 +49,15 @@ public final class GetBlobContainerImmutabilityPolicyResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"allowProtectedAppendWrites","etag","id","immutabilityPeriodSinceCreationInDays","name","state","type"})
+    @OutputCustomType.Constructor
     private GetBlobContainerImmutabilityPolicyResult(
-        @Nullable Boolean allowProtectedAppendWrites,
-        String etag,
-        String id,
-        @Nullable Integer immutabilityPeriodSinceCreationInDays,
-        String name,
-        String state,
-        String type) {
+        @OutputCustomType.Parameter("allowProtectedAppendWrites") @Nullable Boolean allowProtectedAppendWrites,
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("immutabilityPeriodSinceCreationInDays") @Nullable Integer immutabilityPeriodSinceCreationInDays,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("state") String state,
+        @OutputCustomType.Parameter("type") String type) {
         this.allowProtectedAppendWrites = allowProtectedAppendWrites;
         this.etag = etag;
         this.id = id;

@@ -25,11 +25,11 @@ public final class GatewayDestinationResponse {
      */
     private final String serviceName;
 
-    @OutputCustomType.Constructor({"applicationName","endpointName","serviceName"})
+    @OutputCustomType.Constructor
     private GatewayDestinationResponse(
-        String applicationName,
-        String endpointName,
-        String serviceName) {
+        @OutputCustomType.Parameter("applicationName") String applicationName,
+        @OutputCustomType.Parameter("endpointName") String endpointName,
+        @OutputCustomType.Parameter("serviceName") String serviceName) {
         this.applicationName = applicationName;
         this.endpointName = endpointName;
         this.serviceName = serviceName;

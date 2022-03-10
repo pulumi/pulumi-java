@@ -27,11 +27,11 @@ public final class RegistrationInfoResponse {
      */
     private final @Nullable String token;
 
-    @OutputCustomType.Constructor({"expirationTime","registrationTokenOperation","token"})
+    @OutputCustomType.Constructor
     private RegistrationInfoResponse(
-        @Nullable String expirationTime,
-        @Nullable String registrationTokenOperation,
-        @Nullable String token) {
+        @OutputCustomType.Parameter("expirationTime") @Nullable String expirationTime,
+        @OutputCustomType.Parameter("registrationTokenOperation") @Nullable String registrationTokenOperation,
+        @OutputCustomType.Parameter("token") @Nullable String token) {
         this.expirationTime = expirationTime;
         this.registrationTokenOperation = registrationTokenOperation;
         this.token = token;

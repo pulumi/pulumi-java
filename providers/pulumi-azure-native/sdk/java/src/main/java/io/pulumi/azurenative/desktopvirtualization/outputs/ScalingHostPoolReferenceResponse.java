@@ -23,10 +23,10 @@ public final class ScalingHostPoolReferenceResponse {
      */
     private final @Nullable Boolean scalingPlanEnabled;
 
-    @OutputCustomType.Constructor({"hostPoolArmPath","scalingPlanEnabled"})
+    @OutputCustomType.Constructor
     private ScalingHostPoolReferenceResponse(
-        @Nullable String hostPoolArmPath,
-        @Nullable Boolean scalingPlanEnabled) {
+        @OutputCustomType.Parameter("hostPoolArmPath") @Nullable String hostPoolArmPath,
+        @OutputCustomType.Parameter("scalingPlanEnabled") @Nullable Boolean scalingPlanEnabled) {
         this.hostPoolArmPath = hostPoolArmPath;
         this.scalingPlanEnabled = scalingPlanEnabled;
     }

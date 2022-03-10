@@ -27,11 +27,11 @@ public final class UserAccountCredentialsResponse {
      */
     private final @Nullable String adminUserSshPublicKey;
 
-    @OutputCustomType.Constructor({"adminUserName","adminUserPassword","adminUserSshPublicKey"})
+    @OutputCustomType.Constructor
     private UserAccountCredentialsResponse(
-        String adminUserName,
-        @Nullable String adminUserPassword,
-        @Nullable String adminUserSshPublicKey) {
+        @OutputCustomType.Parameter("adminUserName") String adminUserName,
+        @OutputCustomType.Parameter("adminUserPassword") @Nullable String adminUserPassword,
+        @OutputCustomType.Parameter("adminUserSshPublicKey") @Nullable String adminUserSshPublicKey) {
         this.adminUserName = adminUserName;
         this.adminUserPassword = adminUserPassword;
         this.adminUserSshPublicKey = adminUserSshPublicKey;

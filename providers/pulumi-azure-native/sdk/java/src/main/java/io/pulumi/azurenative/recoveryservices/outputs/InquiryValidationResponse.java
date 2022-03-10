@@ -28,11 +28,11 @@ public final class InquiryValidationResponse {
      */
     private final @Nullable String status;
 
-    @OutputCustomType.Constructor({"additionalDetail","errorDetail","status"})
+    @OutputCustomType.Constructor
     private InquiryValidationResponse(
-        String additionalDetail,
-        @Nullable ErrorDetailResponse errorDetail,
-        @Nullable String status) {
+        @OutputCustomType.Parameter("additionalDetail") String additionalDetail,
+        @OutputCustomType.Parameter("errorDetail") @Nullable ErrorDetailResponse errorDetail,
+        @OutputCustomType.Parameter("status") @Nullable String status) {
         this.additionalDetail = additionalDetail;
         this.errorDetail = errorDetail;
         this.status = status;

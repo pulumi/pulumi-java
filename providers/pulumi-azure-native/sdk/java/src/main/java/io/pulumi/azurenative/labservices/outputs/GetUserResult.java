@@ -79,21 +79,21 @@ public final class GetUserResult {
      */
     private final @Nullable String uniqueIdentifier;
 
-    @OutputCustomType.Constructor({"email","familyName","givenName","id","latestOperationResult","location","name","provisioningState","tags","tenantId","totalUsage","type","uniqueIdentifier"})
+    @OutputCustomType.Constructor
     private GetUserResult(
-        String email,
-        String familyName,
-        String givenName,
-        String id,
-        LatestOperationResultResponse latestOperationResult,
-        @Nullable String location,
-        String name,
-        @Nullable String provisioningState,
-        @Nullable Map<String,String> tags,
-        String tenantId,
-        String totalUsage,
-        String type,
-        @Nullable String uniqueIdentifier) {
+        @OutputCustomType.Parameter("email") String email,
+        @OutputCustomType.Parameter("familyName") String familyName,
+        @OutputCustomType.Parameter("givenName") String givenName,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("latestOperationResult") LatestOperationResultResponse latestOperationResult,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("provisioningState") @Nullable String provisioningState,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("tenantId") String tenantId,
+        @OutputCustomType.Parameter("totalUsage") String totalUsage,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("uniqueIdentifier") @Nullable String uniqueIdentifier) {
         this.email = email;
         this.familyName = familyName;
         this.givenName = givenName;

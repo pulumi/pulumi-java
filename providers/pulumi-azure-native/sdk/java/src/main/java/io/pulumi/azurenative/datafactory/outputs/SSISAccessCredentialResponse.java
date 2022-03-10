@@ -28,11 +28,11 @@ public final class SSISAccessCredentialResponse {
      */
     private final Object userName;
 
-    @OutputCustomType.Constructor({"domain","password","userName"})
+    @OutputCustomType.Constructor
     private SSISAccessCredentialResponse(
-        Object domain,
-        Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password,
-        Object userName) {
+        @OutputCustomType.Parameter("domain") Object domain,
+        @OutputCustomType.Parameter("password") Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password,
+        @OutputCustomType.Parameter("userName") Object userName) {
         this.domain = domain;
         this.password = password;
         this.userName = userName;

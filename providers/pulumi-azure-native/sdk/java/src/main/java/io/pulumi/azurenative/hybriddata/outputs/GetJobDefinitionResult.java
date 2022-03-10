@@ -76,20 +76,20 @@ public final class GetJobDefinitionResult {
      */
     private final @Nullable String userConfirmation;
 
-    @OutputCustomType.Constructor({"customerSecrets","dataServiceInput","dataSinkId","dataSourceId","id","lastModifiedTime","name","runLocation","schedules","state","type","userConfirmation"})
+    @OutputCustomType.Constructor
     private GetJobDefinitionResult(
-        @Nullable List<CustomerSecretResponse> customerSecrets,
-        @Nullable Object dataServiceInput,
-        String dataSinkId,
-        String dataSourceId,
-        String id,
-        @Nullable String lastModifiedTime,
-        String name,
-        @Nullable String runLocation,
-        @Nullable List<ScheduleResponse> schedules,
-        String state,
-        String type,
-        @Nullable String userConfirmation) {
+        @OutputCustomType.Parameter("customerSecrets") @Nullable List<CustomerSecretResponse> customerSecrets,
+        @OutputCustomType.Parameter("dataServiceInput") @Nullable Object dataServiceInput,
+        @OutputCustomType.Parameter("dataSinkId") String dataSinkId,
+        @OutputCustomType.Parameter("dataSourceId") String dataSourceId,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("lastModifiedTime") @Nullable String lastModifiedTime,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("runLocation") @Nullable String runLocation,
+        @OutputCustomType.Parameter("schedules") @Nullable List<ScheduleResponse> schedules,
+        @OutputCustomType.Parameter("state") String state,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("userConfirmation") @Nullable String userConfirmation) {
         this.customerSecrets = customerSecrets;
         this.dataServiceInput = dataServiceInput;
         this.dataSinkId = dataSinkId;

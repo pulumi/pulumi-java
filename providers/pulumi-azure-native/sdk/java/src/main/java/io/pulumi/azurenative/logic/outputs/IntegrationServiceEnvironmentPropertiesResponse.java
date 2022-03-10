@@ -45,14 +45,14 @@ public final class IntegrationServiceEnvironmentPropertiesResponse {
      */
     private final @Nullable String state;
 
-    @OutputCustomType.Constructor({"encryptionConfiguration","endpointsConfiguration","integrationServiceEnvironmentId","networkConfiguration","provisioningState","state"})
+    @OutputCustomType.Constructor
     private IntegrationServiceEnvironmentPropertiesResponse(
-        @Nullable IntegrationServiceEnvironmenEncryptionConfigurationResponse encryptionConfiguration,
-        @Nullable FlowEndpointsConfigurationResponse endpointsConfiguration,
-        @Nullable String integrationServiceEnvironmentId,
-        @Nullable NetworkConfigurationResponse networkConfiguration,
-        @Nullable String provisioningState,
-        @Nullable String state) {
+        @OutputCustomType.Parameter("encryptionConfiguration") @Nullable IntegrationServiceEnvironmenEncryptionConfigurationResponse encryptionConfiguration,
+        @OutputCustomType.Parameter("endpointsConfiguration") @Nullable FlowEndpointsConfigurationResponse endpointsConfiguration,
+        @OutputCustomType.Parameter("integrationServiceEnvironmentId") @Nullable String integrationServiceEnvironmentId,
+        @OutputCustomType.Parameter("networkConfiguration") @Nullable NetworkConfigurationResponse networkConfiguration,
+        @OutputCustomType.Parameter("provisioningState") @Nullable String provisioningState,
+        @OutputCustomType.Parameter("state") @Nullable String state) {
         this.encryptionConfiguration = encryptionConfiguration;
         this.endpointsConfiguration = endpointsConfiguration;
         this.integrationServiceEnvironmentId = integrationServiceEnvironmentId;

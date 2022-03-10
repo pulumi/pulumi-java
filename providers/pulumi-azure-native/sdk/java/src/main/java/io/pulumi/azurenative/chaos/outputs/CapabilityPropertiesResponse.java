@@ -35,13 +35,13 @@ public final class CapabilityPropertiesResponse {
      */
     private final String urn;
 
-    @OutputCustomType.Constructor({"description","parametersSchema","publisher","targetType","urn"})
+    @OutputCustomType.Constructor
     private CapabilityPropertiesResponse(
-        String description,
-        String parametersSchema,
-        String publisher,
-        String targetType,
-        String urn) {
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("parametersSchema") String parametersSchema,
+        @OutputCustomType.Parameter("publisher") String publisher,
+        @OutputCustomType.Parameter("targetType") String targetType,
+        @OutputCustomType.Parameter("urn") String urn) {
         this.description = description;
         this.parametersSchema = parametersSchema;
         this.publisher = publisher;

@@ -60,17 +60,17 @@ public final class GetDdosProtectionPlanResult {
      */
     private final List<SubResourceResponse> virtualNetworks;
 
-    @OutputCustomType.Constructor({"etag","id","location","name","provisioningState","resourceGuid","tags","type","virtualNetworks"})
+    @OutputCustomType.Constructor
     private GetDdosProtectionPlanResult(
-        String etag,
-        String id,
-        @Nullable String location,
-        String name,
-        String provisioningState,
-        String resourceGuid,
-        @Nullable Map<String,String> tags,
-        String type,
-        List<SubResourceResponse> virtualNetworks) {
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("resourceGuid") String resourceGuid,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("virtualNetworks") List<SubResourceResponse> virtualNetworks) {
         this.etag = etag;
         this.id = id;
         this.location = location;

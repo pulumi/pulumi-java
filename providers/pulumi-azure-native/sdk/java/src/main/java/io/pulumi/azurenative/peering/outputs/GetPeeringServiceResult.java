@@ -69,19 +69,19 @@ public final class GetPeeringServiceResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"id","location","name","peeringServiceLocation","peeringServiceProvider","providerBackupPeeringLocation","providerPrimaryPeeringLocation","provisioningState","sku","tags","type"})
+    @OutputCustomType.Constructor
     private GetPeeringServiceResult(
-        String id,
-        String location,
-        String name,
-        @Nullable String peeringServiceLocation,
-        @Nullable String peeringServiceProvider,
-        @Nullable String providerBackupPeeringLocation,
-        @Nullable String providerPrimaryPeeringLocation,
-        String provisioningState,
-        @Nullable PeeringServiceSkuResponse sku,
-        @Nullable Map<String,String> tags,
-        String type) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("peeringServiceLocation") @Nullable String peeringServiceLocation,
+        @OutputCustomType.Parameter("peeringServiceProvider") @Nullable String peeringServiceProvider,
+        @OutputCustomType.Parameter("providerBackupPeeringLocation") @Nullable String providerBackupPeeringLocation,
+        @OutputCustomType.Parameter("providerPrimaryPeeringLocation") @Nullable String providerPrimaryPeeringLocation,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("sku") @Nullable PeeringServiceSkuResponse sku,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type) {
         this.id = id;
         this.location = location;
         this.name = name;

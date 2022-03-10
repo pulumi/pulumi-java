@@ -27,11 +27,11 @@ public final class APIServerProfileResponse {
      */
     private final @Nullable String visibility;
 
-    @OutputCustomType.Constructor({"ip","url","visibility"})
+    @OutputCustomType.Constructor
     private APIServerProfileResponse(
-        @Nullable String ip,
-        @Nullable String url,
-        @Nullable String visibility) {
+        @OutputCustomType.Parameter("ip") @Nullable String ip,
+        @OutputCustomType.Parameter("url") @Nullable String url,
+        @OutputCustomType.Parameter("visibility") @Nullable String visibility) {
         this.ip = ip;
         this.url = url;
         this.visibility = visibility;

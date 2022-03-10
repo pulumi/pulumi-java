@@ -114,26 +114,26 @@ public final class GetCacheResult {
      */
     private final @Nullable CacheUpgradeStatusResponse upgradeStatus;
 
-    @OutputCustomType.Constructor({"cacheSizeGB","directoryServicesSettings","encryptionSettings","health","id","identity","location","mountAddresses","name","networkSettings","provisioningState","securitySettings","sku","subnet","systemData","tags","type","upgradeStatus"})
+    @OutputCustomType.Constructor
     private GetCacheResult(
-        @Nullable Integer cacheSizeGB,
-        @Nullable CacheDirectorySettingsResponse directoryServicesSettings,
-        @Nullable CacheEncryptionSettingsResponse encryptionSettings,
-        CacheHealthResponse health,
-        String id,
-        @Nullable CacheIdentityResponse identity,
-        @Nullable String location,
-        List<String> mountAddresses,
-        String name,
-        @Nullable CacheNetworkSettingsResponse networkSettings,
-        @Nullable String provisioningState,
-        @Nullable CacheSecuritySettingsResponse securitySettings,
-        @Nullable CacheResponseSku sku,
-        @Nullable String subnet,
-        SystemDataResponse systemData,
-        @Nullable Map<String,String> tags,
-        String type,
-        @Nullable CacheUpgradeStatusResponse upgradeStatus) {
+        @OutputCustomType.Parameter("cacheSizeGB") @Nullable Integer cacheSizeGB,
+        @OutputCustomType.Parameter("directoryServicesSettings") @Nullable CacheDirectorySettingsResponse directoryServicesSettings,
+        @OutputCustomType.Parameter("encryptionSettings") @Nullable CacheEncryptionSettingsResponse encryptionSettings,
+        @OutputCustomType.Parameter("health") CacheHealthResponse health,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("identity") @Nullable CacheIdentityResponse identity,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("mountAddresses") List<String> mountAddresses,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("networkSettings") @Nullable CacheNetworkSettingsResponse networkSettings,
+        @OutputCustomType.Parameter("provisioningState") @Nullable String provisioningState,
+        @OutputCustomType.Parameter("securitySettings") @Nullable CacheSecuritySettingsResponse securitySettings,
+        @OutputCustomType.Parameter("sku") @Nullable CacheResponseSku sku,
+        @OutputCustomType.Parameter("subnet") @Nullable String subnet,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("upgradeStatus") @Nullable CacheUpgradeStatusResponse upgradeStatus) {
         this.cacheSizeGB = cacheSizeGB;
         this.directoryServicesSettings = directoryServicesSettings;
         this.encryptionSettings = encryptionSettings;

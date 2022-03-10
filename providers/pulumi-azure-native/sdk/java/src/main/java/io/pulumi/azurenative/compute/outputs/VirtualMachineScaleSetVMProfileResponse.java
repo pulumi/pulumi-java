@@ -80,20 +80,20 @@ public final class VirtualMachineScaleSetVMProfileResponse {
      */
     private final @Nullable String userData;
 
-    @OutputCustomType.Constructor({"billingProfile","diagnosticsProfile","evictionPolicy","extensionProfile","licenseType","networkProfile","osProfile","priority","scheduledEventsProfile","securityProfile","storageProfile","userData"})
+    @OutputCustomType.Constructor
     private VirtualMachineScaleSetVMProfileResponse(
-        @Nullable BillingProfileResponse billingProfile,
-        @Nullable DiagnosticsProfileResponse diagnosticsProfile,
-        @Nullable String evictionPolicy,
-        @Nullable VirtualMachineScaleSetExtensionProfileResponse extensionProfile,
-        @Nullable String licenseType,
-        @Nullable VirtualMachineScaleSetNetworkProfileResponse networkProfile,
-        @Nullable VirtualMachineScaleSetOSProfileResponse osProfile,
-        @Nullable String priority,
-        @Nullable ScheduledEventsProfileResponse scheduledEventsProfile,
-        @Nullable SecurityProfileResponse securityProfile,
-        @Nullable VirtualMachineScaleSetStorageProfileResponse storageProfile,
-        @Nullable String userData) {
+        @OutputCustomType.Parameter("billingProfile") @Nullable BillingProfileResponse billingProfile,
+        @OutputCustomType.Parameter("diagnosticsProfile") @Nullable DiagnosticsProfileResponse diagnosticsProfile,
+        @OutputCustomType.Parameter("evictionPolicy") @Nullable String evictionPolicy,
+        @OutputCustomType.Parameter("extensionProfile") @Nullable VirtualMachineScaleSetExtensionProfileResponse extensionProfile,
+        @OutputCustomType.Parameter("licenseType") @Nullable String licenseType,
+        @OutputCustomType.Parameter("networkProfile") @Nullable VirtualMachineScaleSetNetworkProfileResponse networkProfile,
+        @OutputCustomType.Parameter("osProfile") @Nullable VirtualMachineScaleSetOSProfileResponse osProfile,
+        @OutputCustomType.Parameter("priority") @Nullable String priority,
+        @OutputCustomType.Parameter("scheduledEventsProfile") @Nullable ScheduledEventsProfileResponse scheduledEventsProfile,
+        @OutputCustomType.Parameter("securityProfile") @Nullable SecurityProfileResponse securityProfile,
+        @OutputCustomType.Parameter("storageProfile") @Nullable VirtualMachineScaleSetStorageProfileResponse storageProfile,
+        @OutputCustomType.Parameter("userData") @Nullable String userData) {
         this.billingProfile = billingProfile;
         this.diagnosticsProfile = diagnosticsProfile;
         this.evictionPolicy = evictionPolicy;

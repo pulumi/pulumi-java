@@ -62,17 +62,17 @@ public final class GetPostgresInstanceResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"extendedLocation","id","location","name","properties","sku","systemData","tags","type"})
+    @OutputCustomType.Constructor
     private GetPostgresInstanceResult(
-        @Nullable ExtendedLocationResponse extendedLocation,
-        String id,
-        String location,
-        String name,
-        PostgresInstancePropertiesResponse properties,
-        @Nullable PostgresInstanceSkuResponse sku,
-        SystemDataResponse systemData,
-        @Nullable Map<String,String> tags,
-        String type) {
+        @OutputCustomType.Parameter("extendedLocation") @Nullable ExtendedLocationResponse extendedLocation,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("properties") PostgresInstancePropertiesResponse properties,
+        @OutputCustomType.Parameter("sku") @Nullable PostgresInstanceSkuResponse sku,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type) {
         this.extendedLocation = extendedLocation;
         this.id = id;
         this.location = location;

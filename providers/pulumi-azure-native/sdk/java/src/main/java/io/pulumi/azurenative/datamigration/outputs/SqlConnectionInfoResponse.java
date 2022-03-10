@@ -59,17 +59,17 @@ public final class SqlConnectionInfoResponse {
      */
     private final @Nullable String userName;
 
-    @OutputCustomType.Constructor({"additionalSettings","authentication","dataSource","encryptConnection","password","platform","trustServerCertificate","type","userName"})
+    @OutputCustomType.Constructor
     private SqlConnectionInfoResponse(
-        @Nullable String additionalSettings,
-        @Nullable String authentication,
-        String dataSource,
-        @Nullable Boolean encryptConnection,
-        @Nullable String password,
-        @Nullable String platform,
-        @Nullable Boolean trustServerCertificate,
-        String type,
-        @Nullable String userName) {
+        @OutputCustomType.Parameter("additionalSettings") @Nullable String additionalSettings,
+        @OutputCustomType.Parameter("authentication") @Nullable String authentication,
+        @OutputCustomType.Parameter("dataSource") String dataSource,
+        @OutputCustomType.Parameter("encryptConnection") @Nullable Boolean encryptConnection,
+        @OutputCustomType.Parameter("password") @Nullable String password,
+        @OutputCustomType.Parameter("platform") @Nullable String platform,
+        @OutputCustomType.Parameter("trustServerCertificate") @Nullable Boolean trustServerCertificate,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("userName") @Nullable String userName) {
         this.additionalSettings = additionalSettings;
         this.authentication = authentication;
         this.dataSource = dataSource;

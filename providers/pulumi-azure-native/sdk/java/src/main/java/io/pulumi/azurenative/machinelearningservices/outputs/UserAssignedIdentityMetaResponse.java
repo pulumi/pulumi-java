@@ -22,10 +22,10 @@ public final class UserAssignedIdentityMetaResponse {
      */
     private final @Nullable String principalId;
 
-    @OutputCustomType.Constructor({"clientId","principalId"})
+    @OutputCustomType.Constructor
     private UserAssignedIdentityMetaResponse(
-        @Nullable String clientId,
-        @Nullable String principalId) {
+        @OutputCustomType.Parameter("clientId") @Nullable String clientId,
+        @OutputCustomType.Parameter("principalId") @Nullable String principalId) {
         this.clientId = clientId;
         this.principalId = principalId;
     }

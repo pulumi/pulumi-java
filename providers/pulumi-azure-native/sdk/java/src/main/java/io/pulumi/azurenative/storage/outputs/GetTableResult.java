@@ -30,12 +30,12 @@ public final class GetTableResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"id","name","tableName","type"})
+    @OutputCustomType.Constructor
     private GetTableResult(
-        String id,
-        String name,
-        String tableName,
-        String type) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("tableName") String tableName,
+        @OutputCustomType.Parameter("type") String type) {
         this.id = id;
         this.name = name;
         this.tableName = tableName;

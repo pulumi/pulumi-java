@@ -91,22 +91,22 @@ public final class SquareLinkedServiceResponse {
      */
     private final @Nullable Object usePeerVerification;
 
-    @OutputCustomType.Constructor({"annotations","clientId","clientSecret","connectVia","connectionProperties","description","encryptedCredential","host","parameters","redirectUri","type","useEncryptedEndpoints","useHostVerification","usePeerVerification"})
+    @OutputCustomType.Constructor
     private SquareLinkedServiceResponse(
-        @Nullable List<Object> annotations,
-        @Nullable Object clientId,
-        @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> clientSecret,
-        @Nullable IntegrationRuntimeReferenceResponse connectVia,
-        @Nullable Object connectionProperties,
-        @Nullable String description,
-        @Nullable Object encryptedCredential,
-        @Nullable Object host,
-        @Nullable Map<String,ParameterSpecificationResponse> parameters,
-        @Nullable Object redirectUri,
-        String type,
-        @Nullable Object useEncryptedEndpoints,
-        @Nullable Object useHostVerification,
-        @Nullable Object usePeerVerification) {
+        @OutputCustomType.Parameter("annotations") @Nullable List<Object> annotations,
+        @OutputCustomType.Parameter("clientId") @Nullable Object clientId,
+        @OutputCustomType.Parameter("clientSecret") @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> clientSecret,
+        @OutputCustomType.Parameter("connectVia") @Nullable IntegrationRuntimeReferenceResponse connectVia,
+        @OutputCustomType.Parameter("connectionProperties") @Nullable Object connectionProperties,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("encryptedCredential") @Nullable Object encryptedCredential,
+        @OutputCustomType.Parameter("host") @Nullable Object host,
+        @OutputCustomType.Parameter("parameters") @Nullable Map<String,ParameterSpecificationResponse> parameters,
+        @OutputCustomType.Parameter("redirectUri") @Nullable Object redirectUri,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("useEncryptedEndpoints") @Nullable Object useEncryptedEndpoints,
+        @OutputCustomType.Parameter("useHostVerification") @Nullable Object useHostVerification,
+        @OutputCustomType.Parameter("usePeerVerification") @Nullable Object usePeerVerification) {
         this.annotations = annotations;
         this.clientId = clientId;
         this.clientSecret = clientSecret;

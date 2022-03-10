@@ -28,11 +28,11 @@ public final class LinuxUserConfigurationResponse {
      */
     private final @Nullable Integer uid;
 
-    @OutputCustomType.Constructor({"gid","sshPrivateKey","uid"})
+    @OutputCustomType.Constructor
     private LinuxUserConfigurationResponse(
-        @Nullable Integer gid,
-        @Nullable String sshPrivateKey,
-        @Nullable Integer uid) {
+        @OutputCustomType.Parameter("gid") @Nullable Integer gid,
+        @OutputCustomType.Parameter("sshPrivateKey") @Nullable String sshPrivateKey,
+        @OutputCustomType.Parameter("uid") @Nullable Integer uid) {
         this.gid = gid;
         this.sshPrivateKey = sshPrivateKey;
         this.uid = uid;

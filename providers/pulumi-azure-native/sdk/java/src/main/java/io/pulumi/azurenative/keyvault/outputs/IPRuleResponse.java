@@ -15,8 +15,8 @@ public final class IPRuleResponse {
      */
     private final String value;
 
-    @OutputCustomType.Constructor({"value"})
-    private IPRuleResponse(String value) {
+    @OutputCustomType.Constructor
+    private IPRuleResponse(@OutputCustomType.Parameter("value") String value) {
         this.value = value;
     }
 

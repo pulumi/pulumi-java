@@ -55,14 +55,14 @@ public final class MigratePostgreSqlAzureDbForPostgreSqlSyncTaskPropertiesRespon
      */
     private final String taskType;
 
-    @OutputCustomType.Constructor({"commands","errors","input","output","state","taskType"})
+    @OutputCustomType.Constructor
     private MigratePostgreSqlAzureDbForPostgreSqlSyncTaskPropertiesResponse(
-        List<Either<MigrateMISyncCompleteCommandPropertiesResponse,MigrateSyncCompleteCommandPropertiesResponse>> commands,
-        List<ODataErrorResponse> errors,
-        @Nullable MigratePostgreSqlAzureDbForPostgreSqlSyncTaskInputResponse input,
-        List<Object> output,
-        String state,
-        String taskType) {
+        @OutputCustomType.Parameter("commands") List<Either<MigrateMISyncCompleteCommandPropertiesResponse,MigrateSyncCompleteCommandPropertiesResponse>> commands,
+        @OutputCustomType.Parameter("errors") List<ODataErrorResponse> errors,
+        @OutputCustomType.Parameter("input") @Nullable MigratePostgreSqlAzureDbForPostgreSqlSyncTaskInputResponse input,
+        @OutputCustomType.Parameter("output") List<Object> output,
+        @OutputCustomType.Parameter("state") String state,
+        @OutputCustomType.Parameter("taskType") String taskType) {
         this.commands = commands;
         this.errors = errors;
         this.input = input;

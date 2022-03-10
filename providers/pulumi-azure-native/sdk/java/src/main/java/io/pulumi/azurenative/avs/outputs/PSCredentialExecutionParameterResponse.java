@@ -33,12 +33,12 @@ public final class PSCredentialExecutionParameterResponse {
      */
     private final @Nullable String username;
 
-    @OutputCustomType.Constructor({"name","password","type","username"})
+    @OutputCustomType.Constructor
     private PSCredentialExecutionParameterResponse(
-        String name,
-        @Nullable String password,
-        String type,
-        @Nullable String username) {
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("password") @Nullable String password,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("username") @Nullable String username) {
         this.name = name;
         this.password = password;
         this.type = type;

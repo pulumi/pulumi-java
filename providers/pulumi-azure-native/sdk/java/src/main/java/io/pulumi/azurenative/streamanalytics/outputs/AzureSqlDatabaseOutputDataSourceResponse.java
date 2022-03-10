@@ -43,14 +43,14 @@ public final class AzureSqlDatabaseOutputDataSourceResponse {
      */
     private final @Nullable String user;
 
-    @OutputCustomType.Constructor({"database","password","server","table","type","user"})
+    @OutputCustomType.Constructor
     private AzureSqlDatabaseOutputDataSourceResponse(
-        @Nullable String database,
-        @Nullable String password,
-        @Nullable String server,
-        @Nullable String table,
-        String type,
-        @Nullable String user) {
+        @OutputCustomType.Parameter("database") @Nullable String database,
+        @OutputCustomType.Parameter("password") @Nullable String password,
+        @OutputCustomType.Parameter("server") @Nullable String server,
+        @OutputCustomType.Parameter("table") @Nullable String table,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("user") @Nullable String user) {
         this.database = database;
         this.password = password;
         this.server = server;

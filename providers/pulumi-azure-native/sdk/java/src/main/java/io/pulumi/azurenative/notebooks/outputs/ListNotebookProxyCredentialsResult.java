@@ -32,12 +32,12 @@ public final class ListNotebookProxyCredentialsResult {
      */
     private final @Nullable String secondaryAccessKey;
 
-    @OutputCustomType.Constructor({"hostname","primaryAccessKey","resourceId","secondaryAccessKey"})
+    @OutputCustomType.Constructor
     private ListNotebookProxyCredentialsResult(
-        @Nullable String hostname,
-        @Nullable String primaryAccessKey,
-        @Nullable String resourceId,
-        @Nullable String secondaryAccessKey) {
+        @OutputCustomType.Parameter("hostname") @Nullable String hostname,
+        @OutputCustomType.Parameter("primaryAccessKey") @Nullable String primaryAccessKey,
+        @OutputCustomType.Parameter("resourceId") @Nullable String resourceId,
+        @OutputCustomType.Parameter("secondaryAccessKey") @Nullable String secondaryAccessKey) {
         this.hostname = hostname;
         this.primaryAccessKey = primaryAccessKey;
         this.resourceId = resourceId;

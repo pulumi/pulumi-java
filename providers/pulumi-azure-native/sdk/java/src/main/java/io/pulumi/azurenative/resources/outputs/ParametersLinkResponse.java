@@ -22,10 +22,10 @@ public final class ParametersLinkResponse {
      */
     private final String uri;
 
-    @OutputCustomType.Constructor({"contentVersion","uri"})
+    @OutputCustomType.Constructor
     private ParametersLinkResponse(
-        @Nullable String contentVersion,
-        String uri) {
+        @OutputCustomType.Parameter("contentVersion") @Nullable String contentVersion,
+        @OutputCustomType.Parameter("uri") String uri) {
         this.contentVersion = contentVersion;
         this.uri = uri;
     }

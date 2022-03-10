@@ -17,8 +17,8 @@ public final class ARecordResponse {
      */
     private final @Nullable String ipv4Address;
 
-    @OutputCustomType.Constructor({"ipv4Address"})
-    private ARecordResponse(@Nullable String ipv4Address) {
+    @OutputCustomType.Constructor
+    private ARecordResponse(@OutputCustomType.Parameter("ipv4Address") @Nullable String ipv4Address) {
         this.ipv4Address = ipv4Address;
     }
 

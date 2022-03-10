@@ -26,10 +26,10 @@ public final class ListNetworkManagerEffectiveSecurityAdminRuleResult {
      */
     private final @Nullable List<Either<EffectiveDefaultSecurityAdminRuleResponse,EffectiveSecurityAdminRuleResponse>> value;
 
-    @OutputCustomType.Constructor({"skipToken","value"})
+    @OutputCustomType.Constructor
     private ListNetworkManagerEffectiveSecurityAdminRuleResult(
-        @Nullable String skipToken,
-        @Nullable List<Either<EffectiveDefaultSecurityAdminRuleResponse,EffectiveSecurityAdminRuleResponse>> value) {
+        @OutputCustomType.Parameter("skipToken") @Nullable String skipToken,
+        @OutputCustomType.Parameter("value") @Nullable List<Either<EffectiveDefaultSecurityAdminRuleResponse,EffectiveSecurityAdminRuleResponse>> value) {
         this.skipToken = skipToken;
         this.value = value;
     }

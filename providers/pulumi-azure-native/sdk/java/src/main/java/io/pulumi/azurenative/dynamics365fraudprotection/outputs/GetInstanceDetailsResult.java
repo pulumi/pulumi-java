@@ -55,16 +55,16 @@ public final class GetInstanceDetailsResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"administration","id","location","name","provisioningState","systemData","tags","type"})
+    @OutputCustomType.Constructor
     private GetInstanceDetailsResult(
-        @Nullable DFPInstanceAdministratorsResponse administration,
-        String id,
-        String location,
-        String name,
-        String provisioningState,
-        SystemDataResponse systemData,
-        @Nullable Map<String,String> tags,
-        String type) {
+        @OutputCustomType.Parameter("administration") @Nullable DFPInstanceAdministratorsResponse administration,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type) {
         this.administration = administration;
         this.id = id;
         this.location = location;

@@ -22,10 +22,10 @@ public final class AKSServiceResponseResponseDataCollection {
      */
     private final @Nullable Boolean storageEnabled;
 
-    @OutputCustomType.Constructor({"eventHubEnabled","storageEnabled"})
+    @OutputCustomType.Constructor
     private AKSServiceResponseResponseDataCollection(
-        @Nullable Boolean eventHubEnabled,
-        @Nullable Boolean storageEnabled) {
+        @OutputCustomType.Parameter("eventHubEnabled") @Nullable Boolean eventHubEnabled,
+        @OutputCustomType.Parameter("storageEnabled") @Nullable Boolean storageEnabled) {
         this.eventHubEnabled = eventHubEnabled;
         this.storageEnabled = storageEnabled;
     }

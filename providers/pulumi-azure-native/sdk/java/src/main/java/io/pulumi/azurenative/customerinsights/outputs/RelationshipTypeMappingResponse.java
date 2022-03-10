@@ -16,8 +16,8 @@ public final class RelationshipTypeMappingResponse {
      */
     private final List<RelationshipTypeFieldMappingResponse> fieldMappings;
 
-    @OutputCustomType.Constructor({"fieldMappings"})
-    private RelationshipTypeMappingResponse(List<RelationshipTypeFieldMappingResponse> fieldMappings) {
+    @OutputCustomType.Constructor
+    private RelationshipTypeMappingResponse(@OutputCustomType.Parameter("fieldMappings") List<RelationshipTypeFieldMappingResponse> fieldMappings) {
         this.fieldMappings = fieldMappings;
     }
 

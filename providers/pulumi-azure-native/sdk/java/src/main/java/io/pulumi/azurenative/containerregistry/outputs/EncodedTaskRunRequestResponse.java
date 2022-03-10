@@ -81,20 +81,20 @@ public final class EncodedTaskRunRequestResponse {
      */
     private final @Nullable List<SetValueResponse> values;
 
-    @OutputCustomType.Constructor({"agentConfiguration","agentPoolName","credentials","encodedTaskContent","encodedValuesContent","isArchiveEnabled","logTemplate","platform","sourceLocation","timeout","type","values"})
+    @OutputCustomType.Constructor
     private EncodedTaskRunRequestResponse(
-        @Nullable AgentPropertiesResponse agentConfiguration,
-        @Nullable String agentPoolName,
-        @Nullable CredentialsResponse credentials,
-        String encodedTaskContent,
-        @Nullable String encodedValuesContent,
-        @Nullable Boolean isArchiveEnabled,
-        @Nullable String logTemplate,
-        PlatformPropertiesResponse platform,
-        @Nullable String sourceLocation,
-        @Nullable Integer timeout,
-        String type,
-        @Nullable List<SetValueResponse> values) {
+        @OutputCustomType.Parameter("agentConfiguration") @Nullable AgentPropertiesResponse agentConfiguration,
+        @OutputCustomType.Parameter("agentPoolName") @Nullable String agentPoolName,
+        @OutputCustomType.Parameter("credentials") @Nullable CredentialsResponse credentials,
+        @OutputCustomType.Parameter("encodedTaskContent") String encodedTaskContent,
+        @OutputCustomType.Parameter("encodedValuesContent") @Nullable String encodedValuesContent,
+        @OutputCustomType.Parameter("isArchiveEnabled") @Nullable Boolean isArchiveEnabled,
+        @OutputCustomType.Parameter("logTemplate") @Nullable String logTemplate,
+        @OutputCustomType.Parameter("platform") PlatformPropertiesResponse platform,
+        @OutputCustomType.Parameter("sourceLocation") @Nullable String sourceLocation,
+        @OutputCustomType.Parameter("timeout") @Nullable Integer timeout,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("values") @Nullable List<SetValueResponse> values) {
         this.agentConfiguration = agentConfiguration;
         this.agentPoolName = agentPoolName;
         this.credentials = credentials;

@@ -25,11 +25,11 @@ public final class PackageShippingDetailsResponse {
      */
     private final String trackingUrl;
 
-    @OutputCustomType.Constructor({"carrierName","trackingId","trackingUrl"})
+    @OutputCustomType.Constructor
     private PackageShippingDetailsResponse(
-        String carrierName,
-        String trackingId,
-        String trackingUrl) {
+        @OutputCustomType.Parameter("carrierName") String carrierName,
+        @OutputCustomType.Parameter("trackingId") String trackingId,
+        @OutputCustomType.Parameter("trackingUrl") String trackingUrl) {
         this.carrierName = carrierName;
         this.trackingId = trackingId;
         this.trackingUrl = trackingUrl;

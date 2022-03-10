@@ -32,12 +32,12 @@ public final class IncidentInfoResponse {
      */
     private final @Nullable String title;
 
-    @OutputCustomType.Constructor({"incidentId","relationName","severity","title"})
+    @OutputCustomType.Constructor
     private IncidentInfoResponse(
-        @Nullable String incidentId,
-        @Nullable String relationName,
-        @Nullable String severity,
-        @Nullable String title) {
+        @OutputCustomType.Parameter("incidentId") @Nullable String incidentId,
+        @OutputCustomType.Parameter("relationName") @Nullable String relationName,
+        @OutputCustomType.Parameter("severity") @Nullable String severity,
+        @OutputCustomType.Parameter("title") @Nullable String title) {
         this.incidentId = incidentId;
         this.relationName = relationName;
         this.severity = severity;

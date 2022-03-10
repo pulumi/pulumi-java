@@ -97,24 +97,24 @@ public final class GetDscConfigurationResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"creationTime","description","etag","id","jobCount","lastModifiedTime","location","logVerbose","name","nodeConfigurationCount","parameters","provisioningState","source","state","tags","type"})
+    @OutputCustomType.Constructor
     private GetDscConfigurationResult(
-        @Nullable String creationTime,
-        @Nullable String description,
-        @Nullable String etag,
-        String id,
-        @Nullable Integer jobCount,
-        @Nullable String lastModifiedTime,
-        @Nullable String location,
-        @Nullable Boolean logVerbose,
-        String name,
-        @Nullable Integer nodeConfigurationCount,
-        @Nullable Map<String,DscConfigurationParameterResponse> parameters,
-        @Nullable String provisioningState,
-        @Nullable ContentSourceResponse source,
-        @Nullable String state,
-        @Nullable Map<String,String> tags,
-        String type) {
+        @OutputCustomType.Parameter("creationTime") @Nullable String creationTime,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("etag") @Nullable String etag,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("jobCount") @Nullable Integer jobCount,
+        @OutputCustomType.Parameter("lastModifiedTime") @Nullable String lastModifiedTime,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("logVerbose") @Nullable Boolean logVerbose,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("nodeConfigurationCount") @Nullable Integer nodeConfigurationCount,
+        @OutputCustomType.Parameter("parameters") @Nullable Map<String,DscConfigurationParameterResponse> parameters,
+        @OutputCustomType.Parameter("provisioningState") @Nullable String provisioningState,
+        @OutputCustomType.Parameter("source") @Nullable ContentSourceResponse source,
+        @OutputCustomType.Parameter("state") @Nullable String state,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type) {
         this.creationTime = creationTime;
         this.description = description;
         this.etag = etag;

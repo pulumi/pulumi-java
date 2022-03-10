@@ -16,8 +16,8 @@ public final class AvroSerializationResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"type"})
-    private AvroSerializationResponse(String type) {
+    @OutputCustomType.Constructor
+    private AvroSerializationResponse(@OutputCustomType.Parameter("type") String type) {
         this.type = type;
     }
 

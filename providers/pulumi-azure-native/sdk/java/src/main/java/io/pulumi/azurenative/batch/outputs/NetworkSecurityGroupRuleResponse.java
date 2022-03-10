@@ -29,12 +29,12 @@ public final class NetworkSecurityGroupRuleResponse {
      */
     private final @Nullable List<String> sourcePortRanges;
 
-    @OutputCustomType.Constructor({"access","priority","sourceAddressPrefix","sourcePortRanges"})
+    @OutputCustomType.Constructor
     private NetworkSecurityGroupRuleResponse(
-        String access,
-        Integer priority,
-        String sourceAddressPrefix,
-        @Nullable List<String> sourcePortRanges) {
+        @OutputCustomType.Parameter("access") String access,
+        @OutputCustomType.Parameter("priority") Integer priority,
+        @OutputCustomType.Parameter("sourceAddressPrefix") String sourceAddressPrefix,
+        @OutputCustomType.Parameter("sourcePortRanges") @Nullable List<String> sourcePortRanges) {
         this.access = access;
         this.priority = priority;
         this.sourceAddressPrefix = sourceAddressPrefix;

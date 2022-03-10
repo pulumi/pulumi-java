@@ -28,11 +28,11 @@ public final class KubernetesClusterInfoResponse {
      */
     private final String version;
 
-    @OutputCustomType.Constructor({"etcdInfo","nodes","version"})
+    @OutputCustomType.Constructor
     private KubernetesClusterInfoResponse(
-        EtcdInfoResponse etcdInfo,
-        List<NodeInfoResponse> nodes,
-        String version) {
+        @OutputCustomType.Parameter("etcdInfo") EtcdInfoResponse etcdInfo,
+        @OutputCustomType.Parameter("nodes") List<NodeInfoResponse> nodes,
+        @OutputCustomType.Parameter("version") String version) {
         this.etcdInfo = etcdInfo;
         this.nodes = nodes;
         this.version = version;

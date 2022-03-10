@@ -117,28 +117,28 @@ public final class GetBlockchainMemberResult {
      */
     private final @Nullable BlockchainMemberNodesSkuResponse validatorNodesSku;
 
-    @OutputCustomType.Constructor({"consortium","consortiumManagementAccountAddress","consortiumManagementAccountPassword","consortiumMemberDisplayName","consortiumRole","dns","firewallRules","id","location","name","password","protocol","provisioningState","publicKey","rootContractAddress","sku","tags","type","userName","validatorNodesSku"})
+    @OutputCustomType.Constructor
     private GetBlockchainMemberResult(
-        @Nullable String consortium,
-        String consortiumManagementAccountAddress,
-        @Nullable String consortiumManagementAccountPassword,
-        @Nullable String consortiumMemberDisplayName,
-        @Nullable String consortiumRole,
-        String dns,
-        @Nullable List<FirewallRuleResponse> firewallRules,
-        String id,
-        @Nullable String location,
-        String name,
-        @Nullable String password,
-        @Nullable String protocol,
-        String provisioningState,
-        String publicKey,
-        String rootContractAddress,
-        @Nullable SkuResponse sku,
-        @Nullable Map<String,String> tags,
-        String type,
-        String userName,
-        @Nullable BlockchainMemberNodesSkuResponse validatorNodesSku) {
+        @OutputCustomType.Parameter("consortium") @Nullable String consortium,
+        @OutputCustomType.Parameter("consortiumManagementAccountAddress") String consortiumManagementAccountAddress,
+        @OutputCustomType.Parameter("consortiumManagementAccountPassword") @Nullable String consortiumManagementAccountPassword,
+        @OutputCustomType.Parameter("consortiumMemberDisplayName") @Nullable String consortiumMemberDisplayName,
+        @OutputCustomType.Parameter("consortiumRole") @Nullable String consortiumRole,
+        @OutputCustomType.Parameter("dns") String dns,
+        @OutputCustomType.Parameter("firewallRules") @Nullable List<FirewallRuleResponse> firewallRules,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("password") @Nullable String password,
+        @OutputCustomType.Parameter("protocol") @Nullable String protocol,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("publicKey") String publicKey,
+        @OutputCustomType.Parameter("rootContractAddress") String rootContractAddress,
+        @OutputCustomType.Parameter("sku") @Nullable SkuResponse sku,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("userName") String userName,
+        @OutputCustomType.Parameter("validatorNodesSku") @Nullable BlockchainMemberNodesSkuResponse validatorNodesSku) {
         this.consortium = consortium;
         this.consortiumManagementAccountAddress = consortiumManagementAccountAddress;
         this.consortiumManagementAccountPassword = consortiumManagementAccountPassword;

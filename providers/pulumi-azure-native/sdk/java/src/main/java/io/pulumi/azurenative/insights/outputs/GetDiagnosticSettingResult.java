@@ -70,19 +70,19 @@ public final class GetDiagnosticSettingResult {
      */
     private final @Nullable String workspaceId;
 
-    @OutputCustomType.Constructor({"eventHubAuthorizationRuleId","eventHubName","id","logAnalyticsDestinationType","logs","metrics","name","serviceBusRuleId","storageAccountId","type","workspaceId"})
+    @OutputCustomType.Constructor
     private GetDiagnosticSettingResult(
-        @Nullable String eventHubAuthorizationRuleId,
-        @Nullable String eventHubName,
-        String id,
-        @Nullable String logAnalyticsDestinationType,
-        @Nullable List<LogSettingsResponse> logs,
-        @Nullable List<MetricSettingsResponse> metrics,
-        String name,
-        @Nullable String serviceBusRuleId,
-        @Nullable String storageAccountId,
-        String type,
-        @Nullable String workspaceId) {
+        @OutputCustomType.Parameter("eventHubAuthorizationRuleId") @Nullable String eventHubAuthorizationRuleId,
+        @OutputCustomType.Parameter("eventHubName") @Nullable String eventHubName,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("logAnalyticsDestinationType") @Nullable String logAnalyticsDestinationType,
+        @OutputCustomType.Parameter("logs") @Nullable List<LogSettingsResponse> logs,
+        @OutputCustomType.Parameter("metrics") @Nullable List<MetricSettingsResponse> metrics,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("serviceBusRuleId") @Nullable String serviceBusRuleId,
+        @OutputCustomType.Parameter("storageAccountId") @Nullable String storageAccountId,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("workspaceId") @Nullable String workspaceId) {
         this.eventHubAuthorizationRuleId = eventHubAuthorizationRuleId;
         this.eventHubName = eventHubName;
         this.id = id;

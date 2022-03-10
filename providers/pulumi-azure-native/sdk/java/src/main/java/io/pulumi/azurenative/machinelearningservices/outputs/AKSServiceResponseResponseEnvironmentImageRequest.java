@@ -47,14 +47,14 @@ public final class AKSServiceResponseResponseEnvironmentImageRequest {
      */
     private final @Nullable List<ModelResponse> models;
 
-    @OutputCustomType.Constructor({"assets","driverProgram","environment","environmentReference","modelIds","models"})
+    @OutputCustomType.Constructor
     private AKSServiceResponseResponseEnvironmentImageRequest(
-        @Nullable List<ImageAssetResponse> assets,
-        @Nullable String driverProgram,
-        @Nullable EnvironmentImageResponseResponseEnvironment environment,
-        @Nullable EnvironmentImageResponseResponseEnvironmentReference environmentReference,
-        @Nullable List<String> modelIds,
-        @Nullable List<ModelResponse> models) {
+        @OutputCustomType.Parameter("assets") @Nullable List<ImageAssetResponse> assets,
+        @OutputCustomType.Parameter("driverProgram") @Nullable String driverProgram,
+        @OutputCustomType.Parameter("environment") @Nullable EnvironmentImageResponseResponseEnvironment environment,
+        @OutputCustomType.Parameter("environmentReference") @Nullable EnvironmentImageResponseResponseEnvironmentReference environmentReference,
+        @OutputCustomType.Parameter("modelIds") @Nullable List<String> modelIds,
+        @OutputCustomType.Parameter("models") @Nullable List<ModelResponse> models) {
         this.assets = assets;
         this.driverProgram = driverProgram;
         this.environment = environment;

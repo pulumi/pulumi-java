@@ -28,11 +28,11 @@ public final class WarmStorageEnvironmentStatusResponse {
      */
     private final @Nullable String state;
 
-    @OutputCustomType.Constructor({"currentCount","maxCount","state"})
+    @OutputCustomType.Constructor
     private WarmStorageEnvironmentStatusResponse(
-        @Nullable Integer currentCount,
-        @Nullable Integer maxCount,
-        @Nullable String state) {
+        @OutputCustomType.Parameter("currentCount") @Nullable Integer currentCount,
+        @OutputCustomType.Parameter("maxCount") @Nullable Integer maxCount,
+        @OutputCustomType.Parameter("state") @Nullable String state) {
         this.currentCount = currentCount;
         this.maxCount = maxCount;
         this.state = state;

@@ -17,8 +17,8 @@ public final class ApiResourceBackendServiceResponse {
      */
     private final @Nullable String serviceUrl;
 
-    @OutputCustomType.Constructor({"serviceUrl"})
-    private ApiResourceBackendServiceResponse(@Nullable String serviceUrl) {
+    @OutputCustomType.Constructor
+    private ApiResourceBackendServiceResponse(@OutputCustomType.Parameter("serviceUrl") @Nullable String serviceUrl) {
         this.serviceUrl = serviceUrl;
     }
 

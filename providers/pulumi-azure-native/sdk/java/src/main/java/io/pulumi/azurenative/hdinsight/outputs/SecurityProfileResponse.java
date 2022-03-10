@@ -58,17 +58,17 @@ public final class SecurityProfileResponse {
      */
     private final @Nullable String organizationalUnitDN;
 
-    @OutputCustomType.Constructor({"aaddsResourceId","clusterUsersGroupDNs","directoryType","domain","domainUserPassword","domainUsername","ldapsUrls","msiResourceId","organizationalUnitDN"})
+    @OutputCustomType.Constructor
     private SecurityProfileResponse(
-        @Nullable String aaddsResourceId,
-        @Nullable List<String> clusterUsersGroupDNs,
-        @Nullable String directoryType,
-        @Nullable String domain,
-        @Nullable String domainUserPassword,
-        @Nullable String domainUsername,
-        @Nullable List<String> ldapsUrls,
-        @Nullable String msiResourceId,
-        @Nullable String organizationalUnitDN) {
+        @OutputCustomType.Parameter("aaddsResourceId") @Nullable String aaddsResourceId,
+        @OutputCustomType.Parameter("clusterUsersGroupDNs") @Nullable List<String> clusterUsersGroupDNs,
+        @OutputCustomType.Parameter("directoryType") @Nullable String directoryType,
+        @OutputCustomType.Parameter("domain") @Nullable String domain,
+        @OutputCustomType.Parameter("domainUserPassword") @Nullable String domainUserPassword,
+        @OutputCustomType.Parameter("domainUsername") @Nullable String domainUsername,
+        @OutputCustomType.Parameter("ldapsUrls") @Nullable List<String> ldapsUrls,
+        @OutputCustomType.Parameter("msiResourceId") @Nullable String msiResourceId,
+        @OutputCustomType.Parameter("organizationalUnitDN") @Nullable String organizationalUnitDN) {
         this.aaddsResourceId = aaddsResourceId;
         this.clusterUsersGroupDNs = clusterUsersGroupDNs;
         this.directoryType = directoryType;

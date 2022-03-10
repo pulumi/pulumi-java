@@ -33,12 +33,12 @@ public final class IntegrationRuntimeSsisCatalogInfoResponse {
      */
     private final @Nullable String catalogServerEndpoint;
 
-    @OutputCustomType.Constructor({"catalogAdminPassword","catalogAdminUserName","catalogPricingTier","catalogServerEndpoint"})
+    @OutputCustomType.Constructor
     private IntegrationRuntimeSsisCatalogInfoResponse(
-        @Nullable SecureStringResponse catalogAdminPassword,
-        @Nullable String catalogAdminUserName,
-        @Nullable String catalogPricingTier,
-        @Nullable String catalogServerEndpoint) {
+        @OutputCustomType.Parameter("catalogAdminPassword") @Nullable SecureStringResponse catalogAdminPassword,
+        @OutputCustomType.Parameter("catalogAdminUserName") @Nullable String catalogAdminUserName,
+        @OutputCustomType.Parameter("catalogPricingTier") @Nullable String catalogPricingTier,
+        @OutputCustomType.Parameter("catalogServerEndpoint") @Nullable String catalogServerEndpoint) {
         this.catalogAdminPassword = catalogAdminPassword;
         this.catalogAdminUserName = catalogAdminUserName;
         this.catalogPricingTier = catalogPricingTier;

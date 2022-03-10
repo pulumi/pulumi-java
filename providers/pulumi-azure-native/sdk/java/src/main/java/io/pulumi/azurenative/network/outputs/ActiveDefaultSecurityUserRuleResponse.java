@@ -117,28 +117,28 @@ public final class ActiveDefaultSecurityUserRuleResponse {
      */
     private final List<AddressPrefixItemResponse> sources;
 
-    @OutputCustomType.Constructor({"commitTime","configurationDescription","configurationDisplayName","description","destinationPortRanges","destinations","direction","displayName","flag","id","kind","protocol","provisioningState","region","ruleCollectionAppliesToGroups","ruleCollectionDescription","ruleCollectionDisplayName","ruleGroups","sourcePortRanges","sources"})
+    @OutputCustomType.Constructor
     private ActiveDefaultSecurityUserRuleResponse(
-        @Nullable String commitTime,
-        @Nullable String configurationDescription,
-        @Nullable String configurationDisplayName,
-        String description,
-        List<String> destinationPortRanges,
-        List<AddressPrefixItemResponse> destinations,
-        String direction,
-        String displayName,
-        @Nullable String flag,
-        @Nullable String id,
-        String kind,
-        String protocol,
-        String provisioningState,
-        @Nullable String region,
-        @Nullable List<NetworkManagerSecurityGroupItemResponse> ruleCollectionAppliesToGroups,
-        @Nullable String ruleCollectionDescription,
-        @Nullable String ruleCollectionDisplayName,
-        @Nullable List<ConfigurationGroupResponse> ruleGroups,
-        List<String> sourcePortRanges,
-        List<AddressPrefixItemResponse> sources) {
+        @OutputCustomType.Parameter("commitTime") @Nullable String commitTime,
+        @OutputCustomType.Parameter("configurationDescription") @Nullable String configurationDescription,
+        @OutputCustomType.Parameter("configurationDisplayName") @Nullable String configurationDisplayName,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("destinationPortRanges") List<String> destinationPortRanges,
+        @OutputCustomType.Parameter("destinations") List<AddressPrefixItemResponse> destinations,
+        @OutputCustomType.Parameter("direction") String direction,
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("flag") @Nullable String flag,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("protocol") String protocol,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("region") @Nullable String region,
+        @OutputCustomType.Parameter("ruleCollectionAppliesToGroups") @Nullable List<NetworkManagerSecurityGroupItemResponse> ruleCollectionAppliesToGroups,
+        @OutputCustomType.Parameter("ruleCollectionDescription") @Nullable String ruleCollectionDescription,
+        @OutputCustomType.Parameter("ruleCollectionDisplayName") @Nullable String ruleCollectionDisplayName,
+        @OutputCustomType.Parameter("ruleGroups") @Nullable List<ConfigurationGroupResponse> ruleGroups,
+        @OutputCustomType.Parameter("sourcePortRanges") List<String> sourcePortRanges,
+        @OutputCustomType.Parameter("sources") List<AddressPrefixItemResponse> sources) {
         this.commitTime = commitTime;
         this.configurationDescription = configurationDescription;
         this.configurationDisplayName = configurationDisplayName;

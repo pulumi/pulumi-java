@@ -38,13 +38,13 @@ public final class ReportFilterResponse {
      */
     private final @Nullable ReportComparisonExpressionResponse tag;
 
-    @OutputCustomType.Constructor({"and","dimension","not","or","tag"})
+    @OutputCustomType.Constructor
     private ReportFilterResponse(
-        @Nullable List<ReportFilterResponse> and,
-        @Nullable ReportComparisonExpressionResponse dimension,
-        @Nullable ReportFilterResponse not,
-        @Nullable List<ReportFilterResponse> or,
-        @Nullable ReportComparisonExpressionResponse tag) {
+        @OutputCustomType.Parameter("and") @Nullable List<ReportFilterResponse> and,
+        @OutputCustomType.Parameter("dimension") @Nullable ReportComparisonExpressionResponse dimension,
+        @OutputCustomType.Parameter("not") @Nullable ReportFilterResponse not,
+        @OutputCustomType.Parameter("or") @Nullable List<ReportFilterResponse> or,
+        @OutputCustomType.Parameter("tag") @Nullable ReportComparisonExpressionResponse tag) {
         this.and = and;
         this.dimension = dimension;
         this.not = not;

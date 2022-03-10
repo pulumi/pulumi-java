@@ -15,8 +15,8 @@ public final class ResourceGroupPropertiesResponse {
      */
     private final String provisioningState;
 
-    @OutputCustomType.Constructor({"provisioningState"})
-    private ResourceGroupPropertiesResponse(String provisioningState) {
+    @OutputCustomType.Constructor
+    private ResourceGroupPropertiesResponse(@OutputCustomType.Parameter("provisioningState") String provisioningState) {
         this.provisioningState = provisioningState;
     }
 

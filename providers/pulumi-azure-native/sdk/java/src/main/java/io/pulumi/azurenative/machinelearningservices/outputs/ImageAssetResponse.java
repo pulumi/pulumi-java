@@ -33,12 +33,12 @@ public final class ImageAssetResponse {
      */
     private final @Nullable String url;
 
-    @OutputCustomType.Constructor({"id","mimeType","unpack","url"})
+    @OutputCustomType.Constructor
     private ImageAssetResponse(
-        @Nullable String id,
-        @Nullable String mimeType,
-        @Nullable Boolean unpack,
-        @Nullable String url) {
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("mimeType") @Nullable String mimeType,
+        @OutputCustomType.Parameter("unpack") @Nullable Boolean unpack,
+        @OutputCustomType.Parameter("url") @Nullable String url) {
         this.id = id;
         this.mimeType = mimeType;
         this.unpack = unpack;

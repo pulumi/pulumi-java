@@ -21,10 +21,10 @@ public final class ResultStatisticsResponse {
      */
     private final Double progress;
 
-    @OutputCustomType.Constructor({"ingestedRecords","progress"})
+    @OutputCustomType.Constructor
     private ResultStatisticsResponse(
-        Integer ingestedRecords,
-        Double progress) {
+        @OutputCustomType.Parameter("ingestedRecords") Integer ingestedRecords,
+        @OutputCustomType.Parameter("progress") Double progress) {
         this.ingestedRecords = ingestedRecords;
         this.progress = progress;
     }

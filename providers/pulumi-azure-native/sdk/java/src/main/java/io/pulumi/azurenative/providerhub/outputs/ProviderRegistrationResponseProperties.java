@@ -38,23 +38,23 @@ public final class ProviderRegistrationResponseProperties {
     private final @Nullable ProviderRegistrationPropertiesResponseSubscriptionLifecycleNotificationSpecifications subscriptionLifecycleNotificationSpecifications;
     private final @Nullable ResourceProviderManifestPropertiesResponseTemplateDeploymentOptions templateDeploymentOptions;
 
-    @OutputCustomType.Constructor({"capabilities","featuresRule","management","metadata","namespace","providerAuthentication","providerAuthorizations","providerHubMetadata","providerType","providerVersion","provisioningState","requestHeaderOptions","requiredFeatures","subscriptionLifecycleNotificationSpecifications","templateDeploymentOptions"})
+    @OutputCustomType.Constructor
     private ProviderRegistrationResponseProperties(
-        @Nullable List<ResourceProviderCapabilitiesResponse> capabilities,
-        @Nullable ResourceProviderManifestPropertiesResponseFeaturesRule featuresRule,
-        @Nullable ResourceProviderManifestPropertiesResponseManagement management,
-        @Nullable Object metadata,
-        @Nullable String namespace,
-        @Nullable ResourceProviderManifestPropertiesResponseProviderAuthentication providerAuthentication,
-        @Nullable List<ResourceProviderAuthorizationResponse> providerAuthorizations,
-        @Nullable ProviderRegistrationPropertiesResponseProviderHubMetadata providerHubMetadata,
-        @Nullable String providerType,
-        @Nullable String providerVersion,
-        @Nullable String provisioningState,
-        @Nullable ResourceProviderManifestPropertiesResponseRequestHeaderOptions requestHeaderOptions,
-        @Nullable List<String> requiredFeatures,
-        @Nullable ProviderRegistrationPropertiesResponseSubscriptionLifecycleNotificationSpecifications subscriptionLifecycleNotificationSpecifications,
-        @Nullable ResourceProviderManifestPropertiesResponseTemplateDeploymentOptions templateDeploymentOptions) {
+        @OutputCustomType.Parameter("capabilities") @Nullable List<ResourceProviderCapabilitiesResponse> capabilities,
+        @OutputCustomType.Parameter("featuresRule") @Nullable ResourceProviderManifestPropertiesResponseFeaturesRule featuresRule,
+        @OutputCustomType.Parameter("management") @Nullable ResourceProviderManifestPropertiesResponseManagement management,
+        @OutputCustomType.Parameter("metadata") @Nullable Object metadata,
+        @OutputCustomType.Parameter("namespace") @Nullable String namespace,
+        @OutputCustomType.Parameter("providerAuthentication") @Nullable ResourceProviderManifestPropertiesResponseProviderAuthentication providerAuthentication,
+        @OutputCustomType.Parameter("providerAuthorizations") @Nullable List<ResourceProviderAuthorizationResponse> providerAuthorizations,
+        @OutputCustomType.Parameter("providerHubMetadata") @Nullable ProviderRegistrationPropertiesResponseProviderHubMetadata providerHubMetadata,
+        @OutputCustomType.Parameter("providerType") @Nullable String providerType,
+        @OutputCustomType.Parameter("providerVersion") @Nullable String providerVersion,
+        @OutputCustomType.Parameter("provisioningState") @Nullable String provisioningState,
+        @OutputCustomType.Parameter("requestHeaderOptions") @Nullable ResourceProviderManifestPropertiesResponseRequestHeaderOptions requestHeaderOptions,
+        @OutputCustomType.Parameter("requiredFeatures") @Nullable List<String> requiredFeatures,
+        @OutputCustomType.Parameter("subscriptionLifecycleNotificationSpecifications") @Nullable ProviderRegistrationPropertiesResponseSubscriptionLifecycleNotificationSpecifications subscriptionLifecycleNotificationSpecifications,
+        @OutputCustomType.Parameter("templateDeploymentOptions") @Nullable ResourceProviderManifestPropertiesResponseTemplateDeploymentOptions templateDeploymentOptions) {
         this.capabilities = capabilities;
         this.featuresRule = featuresRule;
         this.management = management;

@@ -15,8 +15,8 @@ public final class TransportPreferencesResponse {
      */
     private final String preferredShipmentType;
 
-    @OutputCustomType.Constructor({"preferredShipmentType"})
-    private TransportPreferencesResponse(String preferredShipmentType) {
+    @OutputCustomType.Constructor
+    private TransportPreferencesResponse(@OutputCustomType.Parameter("preferredShipmentType") String preferredShipmentType) {
         this.preferredShipmentType = preferredShipmentType;
     }
 

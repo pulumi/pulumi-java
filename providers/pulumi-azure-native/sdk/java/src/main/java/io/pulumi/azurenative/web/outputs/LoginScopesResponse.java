@@ -17,8 +17,8 @@ public final class LoginScopesResponse {
      */
     private final @Nullable List<String> scopes;
 
-    @OutputCustomType.Constructor({"scopes"})
-    private LoginScopesResponse(@Nullable List<String> scopes) {
+    @OutputCustomType.Constructor
+    private LoginScopesResponse(@OutputCustomType.Parameter("scopes") @Nullable List<String> scopes) {
         this.scopes = scopes;
     }
 

@@ -151,34 +151,34 @@ public final class RunResponse {
      */
     private final @Nullable String updateTriggerToken;
 
-    @OutputCustomType.Constructor({"agentConfiguration","agentPoolName","createTime","customRegistries","finishTime","id","imageUpdateTrigger","isArchiveEnabled","lastUpdatedTime","logArtifact","name","outputImages","platform","provisioningState","runErrorMessage","runId","runType","sourceRegistryAuth","sourceTrigger","startTime","status","systemData","task","timerTrigger","type","updateTriggerToken"})
+    @OutputCustomType.Constructor
     private RunResponse(
-        @Nullable AgentPropertiesResponse agentConfiguration,
-        @Nullable String agentPoolName,
-        @Nullable String createTime,
-        @Nullable List<String> customRegistries,
-        @Nullable String finishTime,
-        String id,
-        @Nullable ImageUpdateTriggerResponse imageUpdateTrigger,
-        @Nullable Boolean isArchiveEnabled,
-        @Nullable String lastUpdatedTime,
-        ImageDescriptorResponse logArtifact,
-        String name,
-        @Nullable List<ImageDescriptorResponse> outputImages,
-        @Nullable PlatformPropertiesResponse platform,
-        @Nullable String provisioningState,
-        String runErrorMessage,
-        @Nullable String runId,
-        @Nullable String runType,
-        @Nullable String sourceRegistryAuth,
-        @Nullable SourceTriggerDescriptorResponse sourceTrigger,
-        @Nullable String startTime,
-        @Nullable String status,
-        SystemDataResponse systemData,
-        @Nullable String task,
-        @Nullable TimerTriggerDescriptorResponse timerTrigger,
-        String type,
-        @Nullable String updateTriggerToken) {
+        @OutputCustomType.Parameter("agentConfiguration") @Nullable AgentPropertiesResponse agentConfiguration,
+        @OutputCustomType.Parameter("agentPoolName") @Nullable String agentPoolName,
+        @OutputCustomType.Parameter("createTime") @Nullable String createTime,
+        @OutputCustomType.Parameter("customRegistries") @Nullable List<String> customRegistries,
+        @OutputCustomType.Parameter("finishTime") @Nullable String finishTime,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("imageUpdateTrigger") @Nullable ImageUpdateTriggerResponse imageUpdateTrigger,
+        @OutputCustomType.Parameter("isArchiveEnabled") @Nullable Boolean isArchiveEnabled,
+        @OutputCustomType.Parameter("lastUpdatedTime") @Nullable String lastUpdatedTime,
+        @OutputCustomType.Parameter("logArtifact") ImageDescriptorResponse logArtifact,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("outputImages") @Nullable List<ImageDescriptorResponse> outputImages,
+        @OutputCustomType.Parameter("platform") @Nullable PlatformPropertiesResponse platform,
+        @OutputCustomType.Parameter("provisioningState") @Nullable String provisioningState,
+        @OutputCustomType.Parameter("runErrorMessage") String runErrorMessage,
+        @OutputCustomType.Parameter("runId") @Nullable String runId,
+        @OutputCustomType.Parameter("runType") @Nullable String runType,
+        @OutputCustomType.Parameter("sourceRegistryAuth") @Nullable String sourceRegistryAuth,
+        @OutputCustomType.Parameter("sourceTrigger") @Nullable SourceTriggerDescriptorResponse sourceTrigger,
+        @OutputCustomType.Parameter("startTime") @Nullable String startTime,
+        @OutputCustomType.Parameter("status") @Nullable String status,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("task") @Nullable String task,
+        @OutputCustomType.Parameter("timerTrigger") @Nullable TimerTriggerDescriptorResponse timerTrigger,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("updateTriggerToken") @Nullable String updateTriggerToken) {
         this.agentConfiguration = agentConfiguration;
         this.agentPoolName = agentPoolName;
         this.createTime = createTime;

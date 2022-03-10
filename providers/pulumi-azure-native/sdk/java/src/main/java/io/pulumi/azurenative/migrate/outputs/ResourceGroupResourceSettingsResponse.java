@@ -21,10 +21,10 @@ public final class ResourceGroupResourceSettingsResponse {
      */
     private final String targetResourceName;
 
-    @OutputCustomType.Constructor({"resourceType","targetResourceName"})
+    @OutputCustomType.Constructor
     private ResourceGroupResourceSettingsResponse(
-        String resourceType,
-        String targetResourceName) {
+        @OutputCustomType.Parameter("resourceType") String resourceType,
+        @OutputCustomType.Parameter("targetResourceName") String targetResourceName) {
         this.resourceType = resourceType;
         this.targetResourceName = targetResourceName;
     }

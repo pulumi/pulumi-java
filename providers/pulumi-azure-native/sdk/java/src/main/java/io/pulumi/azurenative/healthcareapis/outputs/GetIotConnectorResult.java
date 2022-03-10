@@ -72,19 +72,19 @@ public final class GetIotConnectorResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"deviceMapping","etag","id","identity","ingestionEndpointConfiguration","location","name","provisioningState","systemData","tags","type"})
+    @OutputCustomType.Constructor
     private GetIotConnectorResult(
-        @Nullable IotMappingPropertiesResponse deviceMapping,
-        @Nullable String etag,
-        String id,
-        @Nullable ServiceManagedIdentityResponseIdentity identity,
-        @Nullable IotEventHubIngestionEndpointConfigurationResponse ingestionEndpointConfiguration,
-        @Nullable String location,
-        String name,
-        String provisioningState,
-        SystemDataResponse systemData,
-        @Nullable Map<String,String> tags,
-        String type) {
+        @OutputCustomType.Parameter("deviceMapping") @Nullable IotMappingPropertiesResponse deviceMapping,
+        @OutputCustomType.Parameter("etag") @Nullable String etag,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("identity") @Nullable ServiceManagedIdentityResponseIdentity identity,
+        @OutputCustomType.Parameter("ingestionEndpointConfiguration") @Nullable IotEventHubIngestionEndpointConfigurationResponse ingestionEndpointConfiguration,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type) {
         this.deviceMapping = deviceMapping;
         this.etag = etag;
         this.id = id;

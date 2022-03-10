@@ -32,12 +32,12 @@ public final class GetSupportPlanTypeResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"id","name","provisioningState","type"})
+    @OutputCustomType.Constructor
     private GetSupportPlanTypeResult(
-        String id,
-        String name,
-        @Nullable String provisioningState,
-        String type) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("provisioningState") @Nullable String provisioningState,
+        @OutputCustomType.Parameter("type") String type) {
         this.id = id;
         this.name = name;
         this.provisioningState = provisioningState;

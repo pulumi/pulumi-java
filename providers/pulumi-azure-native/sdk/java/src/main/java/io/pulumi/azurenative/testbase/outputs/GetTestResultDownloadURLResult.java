@@ -20,10 +20,10 @@ public final class GetTestResultDownloadURLResult {
      */
     private final String expirationTime;
 
-    @OutputCustomType.Constructor({"downloadUrl","expirationTime"})
+    @OutputCustomType.Constructor
     private GetTestResultDownloadURLResult(
-        String downloadUrl,
-        String expirationTime) {
+        @OutputCustomType.Parameter("downloadUrl") String downloadUrl,
+        @OutputCustomType.Parameter("expirationTime") String expirationTime) {
         this.downloadUrl = downloadUrl;
         this.expirationTime = expirationTime;
     }

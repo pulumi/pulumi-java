@@ -97,24 +97,24 @@ public final class GetNetworkFunctionResult {
      */
     private final String vendorProvisioningState;
 
-    @OutputCustomType.Constructor({"device","etag","id","location","managedApplication","managedApplicationParameters","name","networkFunctionUserConfigurations","provisioningState","serviceKey","skuName","skuType","tags","type","vendorName","vendorProvisioningState"})
+    @OutputCustomType.Constructor
     private GetNetworkFunctionResult(
-        @Nullable SubResourceResponse device,
-        @Nullable String etag,
-        String id,
-        String location,
-        SubResourceResponse managedApplication,
-        @Nullable Object managedApplicationParameters,
-        String name,
-        @Nullable List<NetworkFunctionUserConfigurationResponse> networkFunctionUserConfigurations,
-        String provisioningState,
-        String serviceKey,
-        @Nullable String skuName,
-        String skuType,
-        @Nullable Map<String,String> tags,
-        String type,
-        @Nullable String vendorName,
-        String vendorProvisioningState) {
+        @OutputCustomType.Parameter("device") @Nullable SubResourceResponse device,
+        @OutputCustomType.Parameter("etag") @Nullable String etag,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("managedApplication") SubResourceResponse managedApplication,
+        @OutputCustomType.Parameter("managedApplicationParameters") @Nullable Object managedApplicationParameters,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("networkFunctionUserConfigurations") @Nullable List<NetworkFunctionUserConfigurationResponse> networkFunctionUserConfigurations,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("serviceKey") String serviceKey,
+        @OutputCustomType.Parameter("skuName") @Nullable String skuName,
+        @OutputCustomType.Parameter("skuType") String skuType,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("vendorName") @Nullable String vendorName,
+        @OutputCustomType.Parameter("vendorProvisioningState") String vendorProvisioningState) {
         this.device = device;
         this.etag = etag;
         this.id = id;

@@ -17,8 +17,8 @@ public final class BuildpackPropertiesResponse {
      */
     private final @Nullable String id;
 
-    @OutputCustomType.Constructor({"id"})
-    private BuildpackPropertiesResponse(@Nullable String id) {
+    @OutputCustomType.Constructor
+    private BuildpackPropertiesResponse(@OutputCustomType.Parameter("id") @Nullable String id) {
         this.id = id;
     }
 

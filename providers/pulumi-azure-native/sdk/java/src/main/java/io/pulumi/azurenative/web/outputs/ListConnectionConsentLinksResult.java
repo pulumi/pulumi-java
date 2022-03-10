@@ -17,8 +17,8 @@ public final class ListConnectionConsentLinksResult {
      */
     private final @Nullable List<ConsentLinkDefinitionResponse> value;
 
-    @OutputCustomType.Constructor({"value"})
-    private ListConnectionConsentLinksResult(@Nullable List<ConsentLinkDefinitionResponse> value) {
+    @OutputCustomType.Constructor
+    private ListConnectionConsentLinksResult(@OutputCustomType.Parameter("value") @Nullable List<ConsentLinkDefinitionResponse> value) {
         this.value = value;
     }
 

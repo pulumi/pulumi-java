@@ -43,14 +43,14 @@ public final class GetCustomerEventResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"eventName","id","name","receivers","systemData","type"})
+    @OutputCustomType.Constructor
     private GetCustomerEventResult(
-        String eventName,
-        String id,
-        String name,
-        List<NotificationEventReceiverResponse> receivers,
-        SystemDataResponse systemData,
-        String type) {
+        @OutputCustomType.Parameter("eventName") String eventName,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("receivers") List<NotificationEventReceiverResponse> receivers,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("type") String type) {
         this.eventName = eventName;
         this.id = id;
         this.name = name;

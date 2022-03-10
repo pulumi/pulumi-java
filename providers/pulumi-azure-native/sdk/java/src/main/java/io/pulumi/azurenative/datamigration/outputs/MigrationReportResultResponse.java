@@ -20,10 +20,10 @@ public final class MigrationReportResultResponse {
      */
     private final String reportUrl;
 
-    @OutputCustomType.Constructor({"id","reportUrl"})
+    @OutputCustomType.Constructor
     private MigrationReportResultResponse(
-        String id,
-        String reportUrl) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("reportUrl") String reportUrl) {
         this.id = id;
         this.reportUrl = reportUrl;
     }

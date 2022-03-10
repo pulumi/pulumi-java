@@ -17,8 +17,8 @@ public final class DedicatedCapacityAdministratorsResponse {
      */
     private final @Nullable List<String> members;
 
-    @OutputCustomType.Constructor({"members"})
-    private DedicatedCapacityAdministratorsResponse(@Nullable List<String> members) {
+    @OutputCustomType.Constructor
+    private DedicatedCapacityAdministratorsResponse(@OutputCustomType.Parameter("members") @Nullable List<String> members) {
         this.members = members;
     }
 

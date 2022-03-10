@@ -39,13 +39,13 @@ public final class Ipv6ExpressRouteCircuitPeeringConfigResponse {
      */
     private final @Nullable String state;
 
-    @OutputCustomType.Constructor({"microsoftPeeringConfig","primaryPeerAddressPrefix","routeFilter","secondaryPeerAddressPrefix","state"})
+    @OutputCustomType.Constructor
     private Ipv6ExpressRouteCircuitPeeringConfigResponse(
-        @Nullable ExpressRouteCircuitPeeringConfigResponse microsoftPeeringConfig,
-        @Nullable String primaryPeerAddressPrefix,
-        @Nullable SubResourceResponse routeFilter,
-        @Nullable String secondaryPeerAddressPrefix,
-        @Nullable String state) {
+        @OutputCustomType.Parameter("microsoftPeeringConfig") @Nullable ExpressRouteCircuitPeeringConfigResponse microsoftPeeringConfig,
+        @OutputCustomType.Parameter("primaryPeerAddressPrefix") @Nullable String primaryPeerAddressPrefix,
+        @OutputCustomType.Parameter("routeFilter") @Nullable SubResourceResponse routeFilter,
+        @OutputCustomType.Parameter("secondaryPeerAddressPrefix") @Nullable String secondaryPeerAddressPrefix,
+        @OutputCustomType.Parameter("state") @Nullable String state) {
         this.microsoftPeeringConfig = microsoftPeeringConfig;
         this.primaryPeerAddressPrefix = primaryPeerAddressPrefix;
         this.routeFilter = routeFilter;

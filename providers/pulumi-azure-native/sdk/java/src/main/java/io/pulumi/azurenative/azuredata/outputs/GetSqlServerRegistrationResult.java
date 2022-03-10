@@ -59,17 +59,17 @@ public final class GetSqlServerRegistrationResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"id","location","name","propertyBag","resourceGroup","subscriptionId","systemData","tags","type"})
+    @OutputCustomType.Constructor
     private GetSqlServerRegistrationResult(
-        String id,
-        String location,
-        String name,
-        @Nullable String propertyBag,
-        @Nullable String resourceGroup,
-        @Nullable String subscriptionId,
-        SystemDataResponse systemData,
-        @Nullable Map<String,String> tags,
-        String type) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("propertyBag") @Nullable String propertyBag,
+        @OutputCustomType.Parameter("resourceGroup") @Nullable String resourceGroup,
+        @OutputCustomType.Parameter("subscriptionId") @Nullable String subscriptionId,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type) {
         this.id = id;
         this.location = location;
         this.name = name;

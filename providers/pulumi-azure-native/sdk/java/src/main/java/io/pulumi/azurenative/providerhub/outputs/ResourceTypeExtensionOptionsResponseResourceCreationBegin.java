@@ -14,10 +14,10 @@ public final class ResourceTypeExtensionOptionsResponseResourceCreationBegin {
     private final @Nullable List<String> request;
     private final @Nullable List<String> response;
 
-    @OutputCustomType.Constructor({"request","response"})
+    @OutputCustomType.Constructor
     private ResourceTypeExtensionOptionsResponseResourceCreationBegin(
-        @Nullable List<String> request,
-        @Nullable List<String> response) {
+        @OutputCustomType.Parameter("request") @Nullable List<String> request,
+        @OutputCustomType.Parameter("response") @Nullable List<String> response) {
         this.request = request;
         this.response = response;
     }

@@ -30,11 +30,11 @@ public final class SignalRNetworkACLsResponse {
      */
     private final @Nullable NetworkACLResponse publicNetwork;
 
-    @OutputCustomType.Constructor({"defaultAction","privateEndpoints","publicNetwork"})
+    @OutputCustomType.Constructor
     private SignalRNetworkACLsResponse(
-        @Nullable String defaultAction,
-        @Nullable List<PrivateEndpointACLResponse> privateEndpoints,
-        @Nullable NetworkACLResponse publicNetwork) {
+        @OutputCustomType.Parameter("defaultAction") @Nullable String defaultAction,
+        @OutputCustomType.Parameter("privateEndpoints") @Nullable List<PrivateEndpointACLResponse> privateEndpoints,
+        @OutputCustomType.Parameter("publicNetwork") @Nullable NetworkACLResponse publicNetwork) {
         this.defaultAction = defaultAction;
         this.privateEndpoints = privateEndpoints;
         this.publicNetwork = publicNetwork;

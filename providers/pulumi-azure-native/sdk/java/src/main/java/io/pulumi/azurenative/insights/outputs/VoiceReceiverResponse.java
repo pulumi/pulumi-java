@@ -25,11 +25,11 @@ public final class VoiceReceiverResponse {
      */
     private final String phoneNumber;
 
-    @OutputCustomType.Constructor({"countryCode","name","phoneNumber"})
+    @OutputCustomType.Constructor
     private VoiceReceiverResponse(
-        String countryCode,
-        String name,
-        String phoneNumber) {
+        @OutputCustomType.Parameter("countryCode") String countryCode,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("phoneNumber") String phoneNumber) {
         this.countryCode = countryCode;
         this.name = name;
         this.phoneNumber = phoneNumber;

@@ -34,12 +34,12 @@ public final class AccountEncryptionResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"identity","keyVaultProperties","status","type"})
+    @OutputCustomType.Constructor
     private AccountEncryptionResponse(
-        @Nullable ResourceIdentityResponse identity,
-        @Nullable KeyVaultPropertiesResponse keyVaultProperties,
-        String status,
-        String type) {
+        @OutputCustomType.Parameter("identity") @Nullable ResourceIdentityResponse identity,
+        @OutputCustomType.Parameter("keyVaultProperties") @Nullable KeyVaultPropertiesResponse keyVaultProperties,
+        @OutputCustomType.Parameter("status") String status,
+        @OutputCustomType.Parameter("type") String type) {
         this.identity = identity;
         this.keyVaultProperties = keyVaultProperties;
         this.status = status;

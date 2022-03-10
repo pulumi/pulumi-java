@@ -15,8 +15,8 @@ public final class ServiceAccessPolicyEntryResponse {
      */
     private final String objectId;
 
-    @OutputCustomType.Constructor({"objectId"})
-    private ServiceAccessPolicyEntryResponse(String objectId) {
+    @OutputCustomType.Constructor
+    private ServiceAccessPolicyEntryResponse(@OutputCustomType.Parameter("objectId") String objectId) {
         this.objectId = objectId;
     }
 

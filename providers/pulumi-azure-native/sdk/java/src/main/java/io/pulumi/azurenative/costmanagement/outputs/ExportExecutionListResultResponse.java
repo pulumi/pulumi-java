@@ -16,8 +16,8 @@ public final class ExportExecutionListResultResponse {
      */
     private final List<ExportExecutionResponse> value;
 
-    @OutputCustomType.Constructor({"value"})
-    private ExportExecutionListResultResponse(List<ExportExecutionResponse> value) {
+    @OutputCustomType.Constructor
+    private ExportExecutionListResultResponse(@OutputCustomType.Parameter("value") List<ExportExecutionResponse> value) {
         this.value = value;
     }
 

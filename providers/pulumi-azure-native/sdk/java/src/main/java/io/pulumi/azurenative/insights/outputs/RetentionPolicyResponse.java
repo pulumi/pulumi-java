@@ -21,10 +21,10 @@ public final class RetentionPolicyResponse {
      */
     private final Boolean enabled;
 
-    @OutputCustomType.Constructor({"days","enabled"})
+    @OutputCustomType.Constructor
     private RetentionPolicyResponse(
-        Integer days,
-        Boolean enabled) {
+        @OutputCustomType.Parameter("days") Integer days,
+        @OutputCustomType.Parameter("enabled") Boolean enabled) {
         this.days = days;
         this.enabled = enabled;
     }

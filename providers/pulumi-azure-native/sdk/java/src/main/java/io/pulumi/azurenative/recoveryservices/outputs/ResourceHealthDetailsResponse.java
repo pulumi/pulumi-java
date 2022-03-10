@@ -32,12 +32,12 @@ public final class ResourceHealthDetailsResponse {
      */
     private final String title;
 
-    @OutputCustomType.Constructor({"code","message","recommendations","title"})
+    @OutputCustomType.Constructor
     private ResourceHealthDetailsResponse(
-        Integer code,
-        String message,
-        List<String> recommendations,
-        String title) {
+        @OutputCustomType.Parameter("code") Integer code,
+        @OutputCustomType.Parameter("message") String message,
+        @OutputCustomType.Parameter("recommendations") List<String> recommendations,
+        @OutputCustomType.Parameter("title") String title) {
         this.code = code;
         this.message = message;
         this.recommendations = recommendations;

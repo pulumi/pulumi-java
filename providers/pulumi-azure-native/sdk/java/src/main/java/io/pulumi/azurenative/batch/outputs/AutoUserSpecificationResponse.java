@@ -22,10 +22,10 @@ public final class AutoUserSpecificationResponse {
      */
     private final @Nullable String scope;
 
-    @OutputCustomType.Constructor({"elevationLevel","scope"})
+    @OutputCustomType.Constructor
     private AutoUserSpecificationResponse(
-        @Nullable String elevationLevel,
-        @Nullable String scope) {
+        @OutputCustomType.Parameter("elevationLevel") @Nullable String elevationLevel,
+        @OutputCustomType.Parameter("scope") @Nullable String scope) {
         this.elevationLevel = elevationLevel;
         this.scope = scope;
     }

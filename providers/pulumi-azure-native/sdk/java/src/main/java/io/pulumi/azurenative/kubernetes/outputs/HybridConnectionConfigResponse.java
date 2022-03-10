@@ -31,12 +31,12 @@ public final class HybridConnectionConfigResponse {
      */
     private final String token;
 
-    @OutputCustomType.Constructor({"expirationTime","hybridConnectionName","relay","token"})
+    @OutputCustomType.Constructor
     private HybridConnectionConfigResponse(
-        Double expirationTime,
-        String hybridConnectionName,
-        String relay,
-        String token) {
+        @OutputCustomType.Parameter("expirationTime") Double expirationTime,
+        @OutputCustomType.Parameter("hybridConnectionName") String hybridConnectionName,
+        @OutputCustomType.Parameter("relay") String relay,
+        @OutputCustomType.Parameter("token") String token) {
         this.expirationTime = expirationTime;
         this.hybridConnectionName = hybridConnectionName;
         this.relay = relay;

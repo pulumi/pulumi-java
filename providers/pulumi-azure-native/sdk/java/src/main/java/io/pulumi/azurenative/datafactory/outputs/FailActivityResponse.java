@@ -52,15 +52,15 @@ public final class FailActivityResponse {
      */
     private final @Nullable List<UserPropertyResponse> userProperties;
 
-    @OutputCustomType.Constructor({"dependsOn","description","errorCode","message","name","type","userProperties"})
+    @OutputCustomType.Constructor
     private FailActivityResponse(
-        @Nullable List<ActivityDependencyResponse> dependsOn,
-        @Nullable String description,
-        Object errorCode,
-        Object message,
-        String name,
-        String type,
-        @Nullable List<UserPropertyResponse> userProperties) {
+        @OutputCustomType.Parameter("dependsOn") @Nullable List<ActivityDependencyResponse> dependsOn,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("errorCode") Object errorCode,
+        @OutputCustomType.Parameter("message") Object message,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("userProperties") @Nullable List<UserPropertyResponse> userProperties) {
         this.dependsOn = dependsOn;
         this.description = description;
         this.errorCode = errorCode;

@@ -35,12 +35,12 @@ public final class ContainerPartitionKeyResponse {
      */
     private final @Nullable Integer version;
 
-    @OutputCustomType.Constructor({"kind","paths","systemKey","version"})
+    @OutputCustomType.Constructor
     private ContainerPartitionKeyResponse(
-        @Nullable String kind,
-        @Nullable List<String> paths,
-        Boolean systemKey,
-        @Nullable Integer version) {
+        @OutputCustomType.Parameter("kind") @Nullable String kind,
+        @OutputCustomType.Parameter("paths") @Nullable List<String> paths,
+        @OutputCustomType.Parameter("systemKey") Boolean systemKey,
+        @OutputCustomType.Parameter("version") @Nullable Integer version) {
         this.kind = kind;
         this.paths = paths;
         this.systemKey = systemKey;

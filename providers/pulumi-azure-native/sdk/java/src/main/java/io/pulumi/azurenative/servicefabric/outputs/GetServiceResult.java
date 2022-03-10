@@ -106,25 +106,25 @@ public final class GetServiceResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"correlationScheme","defaultMoveCost","etag","id","location","name","partitionDescription","placementConstraints","provisioningState","serviceDnsName","serviceKind","serviceLoadMetrics","servicePackageActivationMode","servicePlacementPolicies","serviceTypeName","tags","type"})
+    @OutputCustomType.Constructor
     private GetServiceResult(
-        @Nullable List<ServiceCorrelationDescriptionResponse> correlationScheme,
-        @Nullable String defaultMoveCost,
-        String etag,
-        String id,
-        @Nullable String location,
-        String name,
-        @Nullable Object partitionDescription,
-        @Nullable String placementConstraints,
-        String provisioningState,
-        @Nullable String serviceDnsName,
-        String serviceKind,
-        @Nullable List<ServiceLoadMetricDescriptionResponse> serviceLoadMetrics,
-        @Nullable String servicePackageActivationMode,
-        @Nullable List<ServicePlacementPolicyDescriptionResponse> servicePlacementPolicies,
-        @Nullable String serviceTypeName,
-        @Nullable Map<String,String> tags,
-        String type) {
+        @OutputCustomType.Parameter("correlationScheme") @Nullable List<ServiceCorrelationDescriptionResponse> correlationScheme,
+        @OutputCustomType.Parameter("defaultMoveCost") @Nullable String defaultMoveCost,
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("partitionDescription") @Nullable Object partitionDescription,
+        @OutputCustomType.Parameter("placementConstraints") @Nullable String placementConstraints,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("serviceDnsName") @Nullable String serviceDnsName,
+        @OutputCustomType.Parameter("serviceKind") String serviceKind,
+        @OutputCustomType.Parameter("serviceLoadMetrics") @Nullable List<ServiceLoadMetricDescriptionResponse> serviceLoadMetrics,
+        @OutputCustomType.Parameter("servicePackageActivationMode") @Nullable String servicePackageActivationMode,
+        @OutputCustomType.Parameter("servicePlacementPolicies") @Nullable List<ServicePlacementPolicyDescriptionResponse> servicePlacementPolicies,
+        @OutputCustomType.Parameter("serviceTypeName") @Nullable String serviceTypeName,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type) {
         this.correlationScheme = correlationScheme;
         this.defaultMoveCost = defaultMoveCost;
         this.etag = etag;

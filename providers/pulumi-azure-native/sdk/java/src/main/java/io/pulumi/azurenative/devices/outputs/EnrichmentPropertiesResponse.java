@@ -26,11 +26,11 @@ public final class EnrichmentPropertiesResponse {
      */
     private final String value;
 
-    @OutputCustomType.Constructor({"endpointNames","key","value"})
+    @OutputCustomType.Constructor
     private EnrichmentPropertiesResponse(
-        List<String> endpointNames,
-        String key,
-        String value) {
+        @OutputCustomType.Parameter("endpointNames") List<String> endpointNames,
+        @OutputCustomType.Parameter("key") String key,
+        @OutputCustomType.Parameter("value") String value) {
         this.endpointNames = endpointNames;
         this.key = key;
         this.value = value;

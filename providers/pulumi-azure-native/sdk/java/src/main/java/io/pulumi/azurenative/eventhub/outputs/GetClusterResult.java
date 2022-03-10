@@ -64,18 +64,18 @@ public final class GetClusterResult {
      */
     private final String updatedAt;
 
-    @OutputCustomType.Constructor({"createdAt","id","location","metricId","name","sku","status","tags","type","updatedAt"})
+    @OutputCustomType.Constructor
     private GetClusterResult(
-        String createdAt,
-        String id,
-        @Nullable String location,
-        String metricId,
-        String name,
-        @Nullable ClusterSkuResponse sku,
-        String status,
-        @Nullable Map<String,String> tags,
-        String type,
-        String updatedAt) {
+        @OutputCustomType.Parameter("createdAt") String createdAt,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("metricId") String metricId,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("sku") @Nullable ClusterSkuResponse sku,
+        @OutputCustomType.Parameter("status") String status,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("updatedAt") String updatedAt) {
         this.createdAt = createdAt;
         this.id = id;
         this.location = location;

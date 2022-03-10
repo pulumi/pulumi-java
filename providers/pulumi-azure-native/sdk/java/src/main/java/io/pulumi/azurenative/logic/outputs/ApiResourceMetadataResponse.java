@@ -65,18 +65,18 @@ public final class ApiResourceMetadataResponse {
      */
     private final @Nullable WsdlServiceResponse wsdlService;
 
-    @OutputCustomType.Constructor({"apiType","brandColor","connectionType","deploymentParameters","hideKey","provisioningState","source","tags","wsdlImportMethod","wsdlService"})
+    @OutputCustomType.Constructor
     private ApiResourceMetadataResponse(
-        @Nullable String apiType,
-        @Nullable String brandColor,
-        @Nullable String connectionType,
-        @Nullable ApiDeploymentParameterMetadataSetResponse deploymentParameters,
-        @Nullable String hideKey,
-        @Nullable String provisioningState,
-        @Nullable String source,
-        @Nullable Map<String,String> tags,
-        @Nullable String wsdlImportMethod,
-        @Nullable WsdlServiceResponse wsdlService) {
+        @OutputCustomType.Parameter("apiType") @Nullable String apiType,
+        @OutputCustomType.Parameter("brandColor") @Nullable String brandColor,
+        @OutputCustomType.Parameter("connectionType") @Nullable String connectionType,
+        @OutputCustomType.Parameter("deploymentParameters") @Nullable ApiDeploymentParameterMetadataSetResponse deploymentParameters,
+        @OutputCustomType.Parameter("hideKey") @Nullable String hideKey,
+        @OutputCustomType.Parameter("provisioningState") @Nullable String provisioningState,
+        @OutputCustomType.Parameter("source") @Nullable String source,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("wsdlImportMethod") @Nullable String wsdlImportMethod,
+        @OutputCustomType.Parameter("wsdlService") @Nullable WsdlServiceResponse wsdlService) {
         this.apiType = apiType;
         this.brandColor = brandColor;
         this.connectionType = connectionType;

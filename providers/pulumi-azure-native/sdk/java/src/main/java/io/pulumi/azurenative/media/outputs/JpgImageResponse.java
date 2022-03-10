@@ -66,18 +66,18 @@ public final class JpgImageResponse {
      */
     private final @Nullable String syncMode;
 
-    @OutputCustomType.Constructor({"keyFrameInterval","label","layers","odataType","range","spriteColumn","start","step","stretchMode","syncMode"})
+    @OutputCustomType.Constructor
     private JpgImageResponse(
-        @Nullable String keyFrameInterval,
-        @Nullable String label,
-        @Nullable List<JpgLayerResponse> layers,
-        String odataType,
-        @Nullable String range,
-        @Nullable Integer spriteColumn,
-        String start,
-        @Nullable String step,
-        @Nullable String stretchMode,
-        @Nullable String syncMode) {
+        @OutputCustomType.Parameter("keyFrameInterval") @Nullable String keyFrameInterval,
+        @OutputCustomType.Parameter("label") @Nullable String label,
+        @OutputCustomType.Parameter("layers") @Nullable List<JpgLayerResponse> layers,
+        @OutputCustomType.Parameter("odataType") String odataType,
+        @OutputCustomType.Parameter("range") @Nullable String range,
+        @OutputCustomType.Parameter("spriteColumn") @Nullable Integer spriteColumn,
+        @OutputCustomType.Parameter("start") String start,
+        @OutputCustomType.Parameter("step") @Nullable String step,
+        @OutputCustomType.Parameter("stretchMode") @Nullable String stretchMode,
+        @OutputCustomType.Parameter("syncMode") @Nullable String syncMode) {
         this.keyFrameInterval = keyFrameInterval;
         this.label = label;
         this.layers = layers;

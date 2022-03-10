@@ -69,18 +69,18 @@ public final class SSISPackageLocationResponse {
      */
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor({"accessCredential","childPackages","configurationAccessCredential","configurationPath","packageContent","packageLastModifiedDate","packageName","packagePassword","packagePath","type"})
+    @OutputCustomType.Constructor
     private SSISPackageLocationResponse(
-        @Nullable SSISAccessCredentialResponse accessCredential,
-        @Nullable List<SSISChildPackageResponse> childPackages,
-        @Nullable SSISAccessCredentialResponse configurationAccessCredential,
-        @Nullable Object configurationPath,
-        @Nullable Object packageContent,
-        @Nullable String packageLastModifiedDate,
-        @Nullable String packageName,
-        @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> packagePassword,
-        @Nullable Object packagePath,
-        @Nullable String type) {
+        @OutputCustomType.Parameter("accessCredential") @Nullable SSISAccessCredentialResponse accessCredential,
+        @OutputCustomType.Parameter("childPackages") @Nullable List<SSISChildPackageResponse> childPackages,
+        @OutputCustomType.Parameter("configurationAccessCredential") @Nullable SSISAccessCredentialResponse configurationAccessCredential,
+        @OutputCustomType.Parameter("configurationPath") @Nullable Object configurationPath,
+        @OutputCustomType.Parameter("packageContent") @Nullable Object packageContent,
+        @OutputCustomType.Parameter("packageLastModifiedDate") @Nullable String packageLastModifiedDate,
+        @OutputCustomType.Parameter("packageName") @Nullable String packageName,
+        @OutputCustomType.Parameter("packagePassword") @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> packagePassword,
+        @OutputCustomType.Parameter("packagePath") @Nullable Object packagePath,
+        @OutputCustomType.Parameter("type") @Nullable String type) {
         this.accessCredential = accessCredential;
         this.childPackages = childPackages;
         this.configurationAccessCredential = configurationAccessCredential;

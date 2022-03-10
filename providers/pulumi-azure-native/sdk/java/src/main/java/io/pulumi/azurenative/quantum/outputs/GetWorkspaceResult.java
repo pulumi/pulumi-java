@@ -77,20 +77,20 @@ public final class GetWorkspaceResult {
      */
     private final String usable;
 
-    @OutputCustomType.Constructor({"endpointUri","id","identity","location","name","providers","provisioningState","storageAccount","systemData","tags","type","usable"})
+    @OutputCustomType.Constructor
     private GetWorkspaceResult(
-        String endpointUri,
-        String id,
-        @Nullable QuantumWorkspaceResponseIdentity identity,
-        String location,
-        String name,
-        @Nullable List<ProviderResponse> providers,
-        String provisioningState,
-        @Nullable String storageAccount,
-        SystemDataResponse systemData,
-        @Nullable Map<String,String> tags,
-        String type,
-        String usable) {
+        @OutputCustomType.Parameter("endpointUri") String endpointUri,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("identity") @Nullable QuantumWorkspaceResponseIdentity identity,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("providers") @Nullable List<ProviderResponse> providers,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("storageAccount") @Nullable String storageAccount,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("usable") String usable) {
         this.endpointUri = endpointUri;
         this.id = id;
         this.identity = identity;

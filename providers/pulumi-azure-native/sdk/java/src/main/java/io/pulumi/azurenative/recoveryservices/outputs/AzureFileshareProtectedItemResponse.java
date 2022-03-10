@@ -122,29 +122,29 @@ public final class AzureFileshareProtectedItemResponse {
      */
     private final @Nullable String workloadType;
 
-    @OutputCustomType.Constructor({"backupManagementType","backupSetName","containerName","createMode","deferredDeleteTimeInUTC","deferredDeleteTimeRemaining","extendedInfo","friendlyName","isDeferredDeleteScheduleUpcoming","isRehydrate","isScheduledForDeferredDelete","kpisHealths","lastBackupStatus","lastBackupTime","lastRecoveryPoint","policyId","protectedItemType","protectionState","protectionStatus","sourceResourceId","workloadType"})
+    @OutputCustomType.Constructor
     private AzureFileshareProtectedItemResponse(
-        @Nullable String backupManagementType,
-        @Nullable String backupSetName,
-        @Nullable String containerName,
-        @Nullable String createMode,
-        @Nullable String deferredDeleteTimeInUTC,
-        @Nullable String deferredDeleteTimeRemaining,
-        @Nullable AzureFileshareProtectedItemExtendedInfoResponse extendedInfo,
-        @Nullable String friendlyName,
-        @Nullable Boolean isDeferredDeleteScheduleUpcoming,
-        @Nullable Boolean isRehydrate,
-        @Nullable Boolean isScheduledForDeferredDelete,
-        @Nullable Map<String,KPIResourceHealthDetailsResponse> kpisHealths,
-        @Nullable String lastBackupStatus,
-        @Nullable String lastBackupTime,
-        @Nullable String lastRecoveryPoint,
-        @Nullable String policyId,
-        String protectedItemType,
-        @Nullable String protectionState,
-        @Nullable String protectionStatus,
-        @Nullable String sourceResourceId,
-        @Nullable String workloadType) {
+        @OutputCustomType.Parameter("backupManagementType") @Nullable String backupManagementType,
+        @OutputCustomType.Parameter("backupSetName") @Nullable String backupSetName,
+        @OutputCustomType.Parameter("containerName") @Nullable String containerName,
+        @OutputCustomType.Parameter("createMode") @Nullable String createMode,
+        @OutputCustomType.Parameter("deferredDeleteTimeInUTC") @Nullable String deferredDeleteTimeInUTC,
+        @OutputCustomType.Parameter("deferredDeleteTimeRemaining") @Nullable String deferredDeleteTimeRemaining,
+        @OutputCustomType.Parameter("extendedInfo") @Nullable AzureFileshareProtectedItemExtendedInfoResponse extendedInfo,
+        @OutputCustomType.Parameter("friendlyName") @Nullable String friendlyName,
+        @OutputCustomType.Parameter("isDeferredDeleteScheduleUpcoming") @Nullable Boolean isDeferredDeleteScheduleUpcoming,
+        @OutputCustomType.Parameter("isRehydrate") @Nullable Boolean isRehydrate,
+        @OutputCustomType.Parameter("isScheduledForDeferredDelete") @Nullable Boolean isScheduledForDeferredDelete,
+        @OutputCustomType.Parameter("kpisHealths") @Nullable Map<String,KPIResourceHealthDetailsResponse> kpisHealths,
+        @OutputCustomType.Parameter("lastBackupStatus") @Nullable String lastBackupStatus,
+        @OutputCustomType.Parameter("lastBackupTime") @Nullable String lastBackupTime,
+        @OutputCustomType.Parameter("lastRecoveryPoint") @Nullable String lastRecoveryPoint,
+        @OutputCustomType.Parameter("policyId") @Nullable String policyId,
+        @OutputCustomType.Parameter("protectedItemType") String protectedItemType,
+        @OutputCustomType.Parameter("protectionState") @Nullable String protectionState,
+        @OutputCustomType.Parameter("protectionStatus") @Nullable String protectionStatus,
+        @OutputCustomType.Parameter("sourceResourceId") @Nullable String sourceResourceId,
+        @OutputCustomType.Parameter("workloadType") @Nullable String workloadType) {
         this.backupManagementType = backupManagementType;
         this.backupSetName = backupSetName;
         this.containerName = containerName;

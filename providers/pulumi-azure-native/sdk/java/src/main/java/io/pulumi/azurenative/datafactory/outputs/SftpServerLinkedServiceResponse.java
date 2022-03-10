@@ -101,24 +101,24 @@ public final class SftpServerLinkedServiceResponse {
      */
     private final @Nullable Object userName;
 
-    @OutputCustomType.Constructor({"annotations","authenticationType","connectVia","description","encryptedCredential","host","hostKeyFingerprint","parameters","passPhrase","password","port","privateKeyContent","privateKeyPath","skipHostKeyValidation","type","userName"})
+    @OutputCustomType.Constructor
     private SftpServerLinkedServiceResponse(
-        @Nullable List<Object> annotations,
-        @Nullable String authenticationType,
-        @Nullable IntegrationRuntimeReferenceResponse connectVia,
-        @Nullable String description,
-        @Nullable Object encryptedCredential,
-        Object host,
-        @Nullable Object hostKeyFingerprint,
-        @Nullable Map<String,ParameterSpecificationResponse> parameters,
-        @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> passPhrase,
-        @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password,
-        @Nullable Object port,
-        @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> privateKeyContent,
-        @Nullable Object privateKeyPath,
-        @Nullable Object skipHostKeyValidation,
-        String type,
-        @Nullable Object userName) {
+        @OutputCustomType.Parameter("annotations") @Nullable List<Object> annotations,
+        @OutputCustomType.Parameter("authenticationType") @Nullable String authenticationType,
+        @OutputCustomType.Parameter("connectVia") @Nullable IntegrationRuntimeReferenceResponse connectVia,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("encryptedCredential") @Nullable Object encryptedCredential,
+        @OutputCustomType.Parameter("host") Object host,
+        @OutputCustomType.Parameter("hostKeyFingerprint") @Nullable Object hostKeyFingerprint,
+        @OutputCustomType.Parameter("parameters") @Nullable Map<String,ParameterSpecificationResponse> parameters,
+        @OutputCustomType.Parameter("passPhrase") @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> passPhrase,
+        @OutputCustomType.Parameter("password") @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password,
+        @OutputCustomType.Parameter("port") @Nullable Object port,
+        @OutputCustomType.Parameter("privateKeyContent") @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> privateKeyContent,
+        @OutputCustomType.Parameter("privateKeyPath") @Nullable Object privateKeyPath,
+        @OutputCustomType.Parameter("skipHostKeyValidation") @Nullable Object skipHostKeyValidation,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("userName") @Nullable Object userName) {
         this.annotations = annotations;
         this.authenticationType = authenticationType;
         this.connectVia = connectVia;

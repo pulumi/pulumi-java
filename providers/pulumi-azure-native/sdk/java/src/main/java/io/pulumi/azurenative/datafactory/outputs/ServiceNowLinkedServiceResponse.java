@@ -96,23 +96,23 @@ public final class ServiceNowLinkedServiceResponse {
      */
     private final @Nullable Object username;
 
-    @OutputCustomType.Constructor({"annotations","authenticationType","clientId","clientSecret","connectVia","description","encryptedCredential","endpoint","parameters","password","type","useEncryptedEndpoints","useHostVerification","usePeerVerification","username"})
+    @OutputCustomType.Constructor
     private ServiceNowLinkedServiceResponse(
-        @Nullable List<Object> annotations,
-        String authenticationType,
-        @Nullable Object clientId,
-        @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> clientSecret,
-        @Nullable IntegrationRuntimeReferenceResponse connectVia,
-        @Nullable String description,
-        @Nullable Object encryptedCredential,
-        Object endpoint,
-        @Nullable Map<String,ParameterSpecificationResponse> parameters,
-        @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password,
-        String type,
-        @Nullable Object useEncryptedEndpoints,
-        @Nullable Object useHostVerification,
-        @Nullable Object usePeerVerification,
-        @Nullable Object username) {
+        @OutputCustomType.Parameter("annotations") @Nullable List<Object> annotations,
+        @OutputCustomType.Parameter("authenticationType") String authenticationType,
+        @OutputCustomType.Parameter("clientId") @Nullable Object clientId,
+        @OutputCustomType.Parameter("clientSecret") @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> clientSecret,
+        @OutputCustomType.Parameter("connectVia") @Nullable IntegrationRuntimeReferenceResponse connectVia,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("encryptedCredential") @Nullable Object encryptedCredential,
+        @OutputCustomType.Parameter("endpoint") Object endpoint,
+        @OutputCustomType.Parameter("parameters") @Nullable Map<String,ParameterSpecificationResponse> parameters,
+        @OutputCustomType.Parameter("password") @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("useEncryptedEndpoints") @Nullable Object useEncryptedEndpoints,
+        @OutputCustomType.Parameter("useHostVerification") @Nullable Object useHostVerification,
+        @OutputCustomType.Parameter("usePeerVerification") @Nullable Object usePeerVerification,
+        @OutputCustomType.Parameter("username") @Nullable Object username) {
         this.annotations = annotations;
         this.authenticationType = authenticationType;
         this.clientId = clientId;

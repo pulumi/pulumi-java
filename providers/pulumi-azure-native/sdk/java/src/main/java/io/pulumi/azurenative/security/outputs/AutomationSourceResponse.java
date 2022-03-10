@@ -24,10 +24,10 @@ public final class AutomationSourceResponse {
      */
     private final @Nullable List<AutomationRuleSetResponse> ruleSets;
 
-    @OutputCustomType.Constructor({"eventSource","ruleSets"})
+    @OutputCustomType.Constructor
     private AutomationSourceResponse(
-        @Nullable String eventSource,
-        @Nullable List<AutomationRuleSetResponse> ruleSets) {
+        @OutputCustomType.Parameter("eventSource") @Nullable String eventSource,
+        @OutputCustomType.Parameter("ruleSets") @Nullable List<AutomationRuleSetResponse> ruleSets) {
         this.eventSource = eventSource;
         this.ruleSets = ruleSets;
     }

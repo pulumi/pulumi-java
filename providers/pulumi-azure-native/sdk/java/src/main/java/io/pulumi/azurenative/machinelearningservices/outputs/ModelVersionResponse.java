@@ -50,15 +50,15 @@ public final class ModelVersionResponse {
      */
     private final @Nullable Map<String,String> tags;
 
-    @OutputCustomType.Constructor({"datastoreId","description","flavors","isAnonymous","path","properties","tags"})
+    @OutputCustomType.Constructor
     private ModelVersionResponse(
-        @Nullable String datastoreId,
-        @Nullable String description,
-        @Nullable Map<String,FlavorDataResponse> flavors,
-        @Nullable Boolean isAnonymous,
-        String path,
-        @Nullable Map<String,String> properties,
-        @Nullable Map<String,String> tags) {
+        @OutputCustomType.Parameter("datastoreId") @Nullable String datastoreId,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("flavors") @Nullable Map<String,FlavorDataResponse> flavors,
+        @OutputCustomType.Parameter("isAnonymous") @Nullable Boolean isAnonymous,
+        @OutputCustomType.Parameter("path") String path,
+        @OutputCustomType.Parameter("properties") @Nullable Map<String,String> properties,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags) {
         this.datastoreId = datastoreId;
         this.description = description;
         this.flavors = flavors;

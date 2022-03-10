@@ -30,12 +30,12 @@ public final class GetTagResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"displayName","id","name","type"})
+    @OutputCustomType.Constructor
     private GetTagResult(
-        String displayName,
-        String id,
-        String name,
-        String type) {
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("type") String type) {
         this.displayName = displayName;
         this.id = id;
         this.name = name;

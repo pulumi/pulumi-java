@@ -52,16 +52,16 @@ public final class GetContainerResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"containerStatus","createdDateTime","dataFormat","id","name","refreshDetails","systemData","type"})
+    @OutputCustomType.Constructor
     private GetContainerResult(
-        String containerStatus,
-        String createdDateTime,
-        String dataFormat,
-        String id,
-        String name,
-        RefreshDetailsResponse refreshDetails,
-        SystemDataResponse systemData,
-        String type) {
+        @OutputCustomType.Parameter("containerStatus") String containerStatus,
+        @OutputCustomType.Parameter("createdDateTime") String createdDateTime,
+        @OutputCustomType.Parameter("dataFormat") String dataFormat,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("refreshDetails") RefreshDetailsResponse refreshDetails,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("type") String type) {
         this.containerStatus = containerStatus;
         this.createdDateTime = createdDateTime;
         this.dataFormat = dataFormat;

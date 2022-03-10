@@ -15,8 +15,8 @@ public final class DiskResponse {
      */
     private final String id;
 
-    @OutputCustomType.Constructor({"id"})
-    private DiskResponse(String id) {
+    @OutputCustomType.Constructor
+    private DiskResponse(@OutputCustomType.Parameter("id") String id) {
         this.id = id;
     }
 

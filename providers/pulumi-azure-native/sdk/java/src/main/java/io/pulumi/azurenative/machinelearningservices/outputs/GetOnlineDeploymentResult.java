@@ -63,17 +63,17 @@ public final class GetOnlineDeploymentResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"id","identity","kind","location","name","properties","systemData","tags","type"})
+    @OutputCustomType.Constructor
     private GetOnlineDeploymentResult(
-        String id,
-        @Nullable ResourceIdentityResponse identity,
-        @Nullable String kind,
-        String location,
-        String name,
-        Either<K8sOnlineDeploymentResponse,ManagedOnlineDeploymentResponse> properties,
-        SystemDataResponse systemData,
-        @Nullable Map<String,String> tags,
-        String type) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("identity") @Nullable ResourceIdentityResponse identity,
+        @OutputCustomType.Parameter("kind") @Nullable String kind,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("properties") Either<K8sOnlineDeploymentResponse,ManagedOnlineDeploymentResponse> properties,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type) {
         this.id = id;
         this.identity = identity;
         this.kind = kind;

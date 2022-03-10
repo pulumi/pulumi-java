@@ -120,27 +120,27 @@ public final class ListTaskDetailsResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"agentConfiguration","agentPoolName","creationDate","credentials","id","identity","isSystemTask","location","logTemplate","name","platform","provisioningState","status","step","systemData","tags","timeout","trigger","type"})
+    @OutputCustomType.Constructor
     private ListTaskDetailsResult(
-        @Nullable AgentPropertiesResponse agentConfiguration,
-        @Nullable String agentPoolName,
-        String creationDate,
-        @Nullable CredentialsResponse credentials,
-        String id,
-        @Nullable IdentityPropertiesResponse identity,
-        @Nullable Boolean isSystemTask,
-        String location,
-        @Nullable String logTemplate,
-        String name,
-        @Nullable PlatformPropertiesResponse platform,
-        String provisioningState,
-        @Nullable String status,
-        @Nullable Object step,
-        SystemDataResponse systemData,
-        @Nullable Map<String,String> tags,
-        @Nullable Integer timeout,
-        @Nullable TriggerPropertiesResponse trigger,
-        String type) {
+        @OutputCustomType.Parameter("agentConfiguration") @Nullable AgentPropertiesResponse agentConfiguration,
+        @OutputCustomType.Parameter("agentPoolName") @Nullable String agentPoolName,
+        @OutputCustomType.Parameter("creationDate") String creationDate,
+        @OutputCustomType.Parameter("credentials") @Nullable CredentialsResponse credentials,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("identity") @Nullable IdentityPropertiesResponse identity,
+        @OutputCustomType.Parameter("isSystemTask") @Nullable Boolean isSystemTask,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("logTemplate") @Nullable String logTemplate,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("platform") @Nullable PlatformPropertiesResponse platform,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("status") @Nullable String status,
+        @OutputCustomType.Parameter("step") @Nullable Object step,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("timeout") @Nullable Integer timeout,
+        @OutputCustomType.Parameter("trigger") @Nullable TriggerPropertiesResponse trigger,
+        @OutputCustomType.Parameter("type") String type) {
         this.agentConfiguration = agentConfiguration;
         this.agentPoolName = agentPoolName;
         this.creationDate = creationDate;

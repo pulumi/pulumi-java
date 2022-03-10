@@ -33,12 +33,12 @@ public final class ConnectorMappingStructureResponse {
      */
     private final String propertyName;
 
-    @OutputCustomType.Constructor({"columnName","customFormatSpecifier","isEncrypted","propertyName"})
+    @OutputCustomType.Constructor
     private ConnectorMappingStructureResponse(
-        String columnName,
-        @Nullable String customFormatSpecifier,
-        @Nullable Boolean isEncrypted,
-        String propertyName) {
+        @OutputCustomType.Parameter("columnName") String columnName,
+        @OutputCustomType.Parameter("customFormatSpecifier") @Nullable String customFormatSpecifier,
+        @OutputCustomType.Parameter("isEncrypted") @Nullable Boolean isEncrypted,
+        @OutputCustomType.Parameter("propertyName") String propertyName) {
         this.columnName = columnName;
         this.customFormatSpecifier = customFormatSpecifier;
         this.isEncrypted = isEncrypted;

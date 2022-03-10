@@ -31,11 +31,11 @@ public final class DataExportDetailsResponse {
      */
     private final TransferConfigurationResponse transferConfiguration;
 
-    @OutputCustomType.Constructor({"accountDetails","logCollectionLevel","transferConfiguration"})
+    @OutputCustomType.Constructor
     private DataExportDetailsResponse(
-        Either<ManagedDiskDetailsResponse,StorageAccountDetailsResponse> accountDetails,
-        @Nullable String logCollectionLevel,
-        TransferConfigurationResponse transferConfiguration) {
+        @OutputCustomType.Parameter("accountDetails") Either<ManagedDiskDetailsResponse,StorageAccountDetailsResponse> accountDetails,
+        @OutputCustomType.Parameter("logCollectionLevel") @Nullable String logCollectionLevel,
+        @OutputCustomType.Parameter("transferConfiguration") TransferConfigurationResponse transferConfiguration) {
         this.accountDetails = accountDetails;
         this.logCollectionLevel = logCollectionLevel;
         this.transferConfiguration = transferConfiguration;

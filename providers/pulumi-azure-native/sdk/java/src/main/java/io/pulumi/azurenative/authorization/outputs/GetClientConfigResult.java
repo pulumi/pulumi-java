@@ -30,12 +30,12 @@ public final class GetClientConfigResult {
      */
     private final String tenantId;
 
-    @OutputCustomType.Constructor({"clientId","objectId","subscriptionId","tenantId"})
+    @OutputCustomType.Constructor
     private GetClientConfigResult(
-        String clientId,
-        String objectId,
-        String subscriptionId,
-        String tenantId) {
+        @OutputCustomType.Parameter("clientId") String clientId,
+        @OutputCustomType.Parameter("objectId") String objectId,
+        @OutputCustomType.Parameter("subscriptionId") String subscriptionId,
+        @OutputCustomType.Parameter("tenantId") String tenantId) {
         this.clientId = clientId;
         this.objectId = objectId;
         this.subscriptionId = subscriptionId;

@@ -20,10 +20,10 @@ public final class ShareAccessRightResponse {
      */
     private final String shareId;
 
-    @OutputCustomType.Constructor({"accessType","shareId"})
+    @OutputCustomType.Constructor
     private ShareAccessRightResponse(
-        String accessType,
-        String shareId) {
+        @OutputCustomType.Parameter("accessType") String accessType,
+        @OutputCustomType.Parameter("shareId") String shareId) {
         this.accessType = accessType;
         this.shareId = shareId;
     }

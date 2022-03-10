@@ -21,10 +21,10 @@ public final class LinkedIntegrationRuntimeRbacAuthorizationResponse {
      */
     private final String resourceId;
 
-    @OutputCustomType.Constructor({"authorizationType","resourceId"})
+    @OutputCustomType.Constructor
     private LinkedIntegrationRuntimeRbacAuthorizationResponse(
-        String authorizationType,
-        String resourceId) {
+        @OutputCustomType.Parameter("authorizationType") String authorizationType,
+        @OutputCustomType.Parameter("resourceId") String resourceId) {
         this.authorizationType = authorizationType;
         this.resourceId = resourceId;
     }

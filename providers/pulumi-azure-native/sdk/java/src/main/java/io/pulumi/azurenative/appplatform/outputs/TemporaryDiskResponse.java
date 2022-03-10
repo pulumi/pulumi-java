@@ -23,10 +23,10 @@ public final class TemporaryDiskResponse {
      */
     private final @Nullable Integer sizeInGB;
 
-    @OutputCustomType.Constructor({"mountPath","sizeInGB"})
+    @OutputCustomType.Constructor
     private TemporaryDiskResponse(
-        @Nullable String mountPath,
-        @Nullable Integer sizeInGB) {
+        @OutputCustomType.Parameter("mountPath") @Nullable String mountPath,
+        @OutputCustomType.Parameter("sizeInGB") @Nullable Integer sizeInGB) {
         this.mountPath = mountPath;
         this.sizeInGB = sizeInGB;
     }

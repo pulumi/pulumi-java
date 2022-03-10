@@ -77,20 +77,20 @@ public final class GetADCCatalogResult {
      */
     private final @Nullable List<PrincipalsResponse> users;
 
-    @OutputCustomType.Constructor({"admins","enableAutomaticUnitAdjustment","etag","id","location","name","sku","successfullyProvisioned","tags","type","units","users"})
+    @OutputCustomType.Constructor
     private GetADCCatalogResult(
-        @Nullable List<PrincipalsResponse> admins,
-        @Nullable Boolean enableAutomaticUnitAdjustment,
-        @Nullable String etag,
-        String id,
-        @Nullable String location,
-        String name,
-        @Nullable String sku,
-        @Nullable Boolean successfullyProvisioned,
-        @Nullable Map<String,String> tags,
-        String type,
-        @Nullable Integer units,
-        @Nullable List<PrincipalsResponse> users) {
+        @OutputCustomType.Parameter("admins") @Nullable List<PrincipalsResponse> admins,
+        @OutputCustomType.Parameter("enableAutomaticUnitAdjustment") @Nullable Boolean enableAutomaticUnitAdjustment,
+        @OutputCustomType.Parameter("etag") @Nullable String etag,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("sku") @Nullable String sku,
+        @OutputCustomType.Parameter("successfullyProvisioned") @Nullable Boolean successfullyProvisioned,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("units") @Nullable Integer units,
+        @OutputCustomType.Parameter("users") @Nullable List<PrincipalsResponse> users) {
         this.admins = admins;
         this.enableAutomaticUnitAdjustment = enableAutomaticUnitAdjustment;
         this.etag = etag;

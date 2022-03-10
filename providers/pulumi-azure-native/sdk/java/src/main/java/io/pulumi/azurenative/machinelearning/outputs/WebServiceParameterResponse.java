@@ -23,10 +23,10 @@ public final class WebServiceParameterResponse {
      */
     private final @Nullable Object value;
 
-    @OutputCustomType.Constructor({"certificateThumbprint","value"})
+    @OutputCustomType.Constructor
     private WebServiceParameterResponse(
-        @Nullable String certificateThumbprint,
-        @Nullable Object value) {
+        @OutputCustomType.Parameter("certificateThumbprint") @Nullable String certificateThumbprint,
+        @OutputCustomType.Parameter("value") @Nullable Object value) {
         this.certificateThumbprint = certificateThumbprint;
         this.value = value;
     }

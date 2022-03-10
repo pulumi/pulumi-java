@@ -31,12 +31,12 @@ public final class OptimizedAutoscaleResponse {
      */
     private final Integer version;
 
-    @OutputCustomType.Constructor({"isEnabled","maximum","minimum","version"})
+    @OutputCustomType.Constructor
     private OptimizedAutoscaleResponse(
-        Boolean isEnabled,
-        Integer maximum,
-        Integer minimum,
-        Integer version) {
+        @OutputCustomType.Parameter("isEnabled") Boolean isEnabled,
+        @OutputCustomType.Parameter("maximum") Integer maximum,
+        @OutputCustomType.Parameter("minimum") Integer minimum,
+        @OutputCustomType.Parameter("version") Integer version) {
         this.isEnabled = isEnabled;
         this.maximum = maximum;
         this.minimum = minimum;

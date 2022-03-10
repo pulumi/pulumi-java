@@ -55,16 +55,16 @@ public final class CustomRuleResponse {
      */
     private final String ruleType;
 
-    @OutputCustomType.Constructor({"action","enabledState","matchConditions","name","priority","rateLimitDurationInMinutes","rateLimitThreshold","ruleType"})
+    @OutputCustomType.Constructor
     private CustomRuleResponse(
-        String action,
-        @Nullable String enabledState,
-        List<FrontDoorMatchConditionResponse> matchConditions,
-        @Nullable String name,
-        Integer priority,
-        @Nullable Integer rateLimitDurationInMinutes,
-        @Nullable Integer rateLimitThreshold,
-        String ruleType) {
+        @OutputCustomType.Parameter("action") String action,
+        @OutputCustomType.Parameter("enabledState") @Nullable String enabledState,
+        @OutputCustomType.Parameter("matchConditions") List<FrontDoorMatchConditionResponse> matchConditions,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("priority") Integer priority,
+        @OutputCustomType.Parameter("rateLimitDurationInMinutes") @Nullable Integer rateLimitDurationInMinutes,
+        @OutputCustomType.Parameter("rateLimitThreshold") @Nullable Integer rateLimitThreshold,
+        @OutputCustomType.Parameter("ruleType") String ruleType) {
         this.action = action;
         this.enabledState = enabledState;
         this.matchConditions = matchConditions;

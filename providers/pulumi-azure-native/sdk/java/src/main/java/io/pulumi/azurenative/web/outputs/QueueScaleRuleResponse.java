@@ -30,11 +30,11 @@ public final class QueueScaleRuleResponse {
      */
     private final @Nullable String queueName;
 
-    @OutputCustomType.Constructor({"auth","queueLength","queueName"})
+    @OutputCustomType.Constructor
     private QueueScaleRuleResponse(
-        @Nullable List<ScaleRuleAuthResponse> auth,
-        @Nullable Integer queueLength,
-        @Nullable String queueName) {
+        @OutputCustomType.Parameter("auth") @Nullable List<ScaleRuleAuthResponse> auth,
+        @OutputCustomType.Parameter("queueLength") @Nullable Integer queueLength,
+        @OutputCustomType.Parameter("queueName") @Nullable String queueName) {
         this.auth = auth;
         this.queueLength = queueLength;
         this.queueName = queueName;

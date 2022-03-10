@@ -17,8 +17,8 @@ public final class GetOnlineDeploymentLogsResult {
      */
     private final @Nullable String content;
 
-    @OutputCustomType.Constructor({"content"})
-    private GetOnlineDeploymentLogsResult(@Nullable String content) {
+    @OutputCustomType.Constructor
+    private GetOnlineDeploymentLogsResult(@OutputCustomType.Parameter("content") @Nullable String content) {
         this.content = content;
     }
 

@@ -23,10 +23,10 @@ public final class MoveResourceDependencyOverrideResponse {
      */
     private final @Nullable String targetId;
 
-    @OutputCustomType.Constructor({"id","targetId"})
+    @OutputCustomType.Constructor
     private MoveResourceDependencyOverrideResponse(
-        @Nullable String id,
-        @Nullable String targetId) {
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("targetId") @Nullable String targetId) {
         this.id = id;
         this.targetId = targetId;
     }

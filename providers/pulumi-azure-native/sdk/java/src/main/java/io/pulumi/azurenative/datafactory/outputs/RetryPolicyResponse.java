@@ -23,10 +23,10 @@ public final class RetryPolicyResponse {
      */
     private final @Nullable Integer intervalInSeconds;
 
-    @OutputCustomType.Constructor({"count","intervalInSeconds"})
+    @OutputCustomType.Constructor
     private RetryPolicyResponse(
-        @Nullable Object count,
-        @Nullable Integer intervalInSeconds) {
+        @OutputCustomType.Parameter("count") @Nullable Object count,
+        @OutputCustomType.Parameter("intervalInSeconds") @Nullable Integer intervalInSeconds) {
         this.count = count;
         this.intervalInSeconds = intervalInSeconds;
     }

@@ -25,11 +25,11 @@ public final class ListBatchAccountKeysResult {
      */
     private final String secondary;
 
-    @OutputCustomType.Constructor({"accountName","primary","secondary"})
+    @OutputCustomType.Constructor
     private ListBatchAccountKeysResult(
-        String accountName,
-        String primary,
-        String secondary) {
+        @OutputCustomType.Parameter("accountName") String accountName,
+        @OutputCustomType.Parameter("primary") String primary,
+        @OutputCustomType.Parameter("secondary") String secondary) {
         this.accountName = accountName;
         this.primary = primary;
         this.secondary = secondary;

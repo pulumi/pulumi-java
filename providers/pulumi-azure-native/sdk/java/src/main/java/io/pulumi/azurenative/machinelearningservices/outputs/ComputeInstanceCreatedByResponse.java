@@ -25,11 +25,11 @@ public final class ComputeInstanceCreatedByResponse {
      */
     private final String userOrgId;
 
-    @OutputCustomType.Constructor({"userId","userName","userOrgId"})
+    @OutputCustomType.Constructor
     private ComputeInstanceCreatedByResponse(
-        String userId,
-        String userName,
-        String userOrgId) {
+        @OutputCustomType.Parameter("userId") String userId,
+        @OutputCustomType.Parameter("userName") String userName,
+        @OutputCustomType.Parameter("userOrgId") String userOrgId) {
         this.userId = userId;
         this.userName = userName;
         this.userOrgId = userOrgId;

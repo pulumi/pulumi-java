@@ -16,8 +16,8 @@ public final class ManagedCertificateParametersResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"type"})
-    private ManagedCertificateParametersResponse(String type) {
+    @OutputCustomType.Constructor
+    private ManagedCertificateParametersResponse(@OutputCustomType.Parameter("type") String type) {
         this.type = type;
     }
 

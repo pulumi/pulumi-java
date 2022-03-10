@@ -24,10 +24,10 @@ public final class ApplicationDeltaHealthPolicyResponse {
      */
     private final @Nullable Map<String,ServiceTypeDeltaHealthPolicyResponse> serviceTypeDeltaHealthPolicies;
 
-    @OutputCustomType.Constructor({"defaultServiceTypeDeltaHealthPolicy","serviceTypeDeltaHealthPolicies"})
+    @OutputCustomType.Constructor
     private ApplicationDeltaHealthPolicyResponse(
-        @Nullable ServiceTypeDeltaHealthPolicyResponse defaultServiceTypeDeltaHealthPolicy,
-        @Nullable Map<String,ServiceTypeDeltaHealthPolicyResponse> serviceTypeDeltaHealthPolicies) {
+        @OutputCustomType.Parameter("defaultServiceTypeDeltaHealthPolicy") @Nullable ServiceTypeDeltaHealthPolicyResponse defaultServiceTypeDeltaHealthPolicy,
+        @OutputCustomType.Parameter("serviceTypeDeltaHealthPolicies") @Nullable Map<String,ServiceTypeDeltaHealthPolicyResponse> serviceTypeDeltaHealthPolicies) {
         this.defaultServiceTypeDeltaHealthPolicy = defaultServiceTypeDeltaHealthPolicy;
         this.serviceTypeDeltaHealthPolicies = serviceTypeDeltaHealthPolicies;
     }

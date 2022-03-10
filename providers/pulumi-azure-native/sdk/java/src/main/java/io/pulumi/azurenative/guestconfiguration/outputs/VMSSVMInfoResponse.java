@@ -35,13 +35,13 @@ public final class VMSSVMInfoResponse {
      */
     private final String vmResourceId;
 
-    @OutputCustomType.Constructor({"complianceStatus","lastComplianceChecked","latestReportId","vmId","vmResourceId"})
+    @OutputCustomType.Constructor
     private VMSSVMInfoResponse(
-        String complianceStatus,
-        String lastComplianceChecked,
-        String latestReportId,
-        String vmId,
-        String vmResourceId) {
+        @OutputCustomType.Parameter("complianceStatus") String complianceStatus,
+        @OutputCustomType.Parameter("lastComplianceChecked") String lastComplianceChecked,
+        @OutputCustomType.Parameter("latestReportId") String latestReportId,
+        @OutputCustomType.Parameter("vmId") String vmId,
+        @OutputCustomType.Parameter("vmResourceId") String vmResourceId) {
         this.complianceStatus = complianceStatus;
         this.lastComplianceChecked = lastComplianceChecked;
         this.latestReportId = latestReportId;

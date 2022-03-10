@@ -69,19 +69,19 @@ public final class AvailableContactsResponse {
      */
     private final String txStartTime;
 
-    @OutputCustomType.Constructor({"endAzimuthDegrees","endElevationDegrees","groundStationName","maximumElevationDegrees","rxEndTime","rxStartTime","spacecraft","startAzimuthDegrees","startElevationDegrees","txEndTime","txStartTime"})
+    @OutputCustomType.Constructor
     private AvailableContactsResponse(
-        Double endAzimuthDegrees,
-        Double endElevationDegrees,
-        String groundStationName,
-        Double maximumElevationDegrees,
-        String rxEndTime,
-        String rxStartTime,
-        @Nullable ResourceReferenceResponse spacecraft,
-        Double startAzimuthDegrees,
-        Double startElevationDegrees,
-        String txEndTime,
-        String txStartTime) {
+        @OutputCustomType.Parameter("endAzimuthDegrees") Double endAzimuthDegrees,
+        @OutputCustomType.Parameter("endElevationDegrees") Double endElevationDegrees,
+        @OutputCustomType.Parameter("groundStationName") String groundStationName,
+        @OutputCustomType.Parameter("maximumElevationDegrees") Double maximumElevationDegrees,
+        @OutputCustomType.Parameter("rxEndTime") String rxEndTime,
+        @OutputCustomType.Parameter("rxStartTime") String rxStartTime,
+        @OutputCustomType.Parameter("spacecraft") @Nullable ResourceReferenceResponse spacecraft,
+        @OutputCustomType.Parameter("startAzimuthDegrees") Double startAzimuthDegrees,
+        @OutputCustomType.Parameter("startElevationDegrees") Double startElevationDegrees,
+        @OutputCustomType.Parameter("txEndTime") String txEndTime,
+        @OutputCustomType.Parameter("txStartTime") String txStartTime) {
         this.endAzimuthDegrees = endAzimuthDegrees;
         this.endElevationDegrees = endElevationDegrees;
         this.groundStationName = groundStationName;

@@ -17,8 +17,8 @@ public final class IntegrationRuntimeCustomerVirtualNetworkResponse {
      */
     private final @Nullable String subnetId;
 
-    @OutputCustomType.Constructor({"subnetId"})
-    private IntegrationRuntimeCustomerVirtualNetworkResponse(@Nullable String subnetId) {
+    @OutputCustomType.Constructor
+    private IntegrationRuntimeCustomerVirtualNetworkResponse(@OutputCustomType.Parameter("subnetId") @Nullable String subnetId) {
         this.subnetId = subnetId;
     }
 

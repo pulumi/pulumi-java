@@ -24,10 +24,10 @@ public final class ListListTenantConfigurationViolationResult {
      */
     private final @Nullable List<ViolationResponse> value;
 
-    @OutputCustomType.Constructor({"nextLink","value"})
+    @OutputCustomType.Constructor
     private ListListTenantConfigurationViolationResult(
-        @Nullable String nextLink,
-        @Nullable List<ViolationResponse> value) {
+        @OutputCustomType.Parameter("nextLink") @Nullable String nextLink,
+        @OutputCustomType.Parameter("value") @Nullable List<ViolationResponse> value) {
         this.nextLink = nextLink;
         this.value = value;
     }

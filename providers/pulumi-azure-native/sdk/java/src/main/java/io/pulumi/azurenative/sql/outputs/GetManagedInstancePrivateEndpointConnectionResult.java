@@ -44,14 +44,14 @@ public final class GetManagedInstancePrivateEndpointConnectionResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"id","name","privateEndpoint","privateLinkServiceConnectionState","provisioningState","type"})
+    @OutputCustomType.Constructor
     private GetManagedInstancePrivateEndpointConnectionResult(
-        String id,
-        String name,
-        @Nullable ManagedInstancePrivateEndpointPropertyResponse privateEndpoint,
-        @Nullable ManagedInstancePrivateLinkServiceConnectionStatePropertyResponse privateLinkServiceConnectionState,
-        String provisioningState,
-        String type) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("privateEndpoint") @Nullable ManagedInstancePrivateEndpointPropertyResponse privateEndpoint,
+        @OutputCustomType.Parameter("privateLinkServiceConnectionState") @Nullable ManagedInstancePrivateLinkServiceConnectionStatePropertyResponse privateLinkServiceConnectionState,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("type") String type) {
         this.id = id;
         this.name = name;
         this.privateEndpoint = privateEndpoint;

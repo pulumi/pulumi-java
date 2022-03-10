@@ -27,11 +27,11 @@ public final class ComputeInstanceLastOperationResponse {
      */
     private final @Nullable String operationTime;
 
-    @OutputCustomType.Constructor({"operationName","operationStatus","operationTime"})
+    @OutputCustomType.Constructor
     private ComputeInstanceLastOperationResponse(
-        @Nullable String operationName,
-        @Nullable String operationStatus,
-        @Nullable String operationTime) {
+        @OutputCustomType.Parameter("operationName") @Nullable String operationName,
+        @OutputCustomType.Parameter("operationStatus") @Nullable String operationStatus,
+        @OutputCustomType.Parameter("operationTime") @Nullable String operationTime) {
         this.operationName = operationName;
         this.operationStatus = operationStatus;
         this.operationTime = operationTime;

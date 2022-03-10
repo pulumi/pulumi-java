@@ -30,12 +30,12 @@ public final class HttpVersionMatchConditionParametersResponse {
      */
     private final String operator;
 
-    @OutputCustomType.Constructor({"matchValues","negateCondition","odataType","operator"})
+    @OutputCustomType.Constructor
     private HttpVersionMatchConditionParametersResponse(
-        @Nullable List<String> matchValues,
-        @Nullable Boolean negateCondition,
-        String odataType,
-        String operator) {
+        @OutputCustomType.Parameter("matchValues") @Nullable List<String> matchValues,
+        @OutputCustomType.Parameter("negateCondition") @Nullable Boolean negateCondition,
+        @OutputCustomType.Parameter("odataType") String odataType,
+        @OutputCustomType.Parameter("operator") String operator) {
         this.matchValues = matchValues;
         this.negateCondition = negateCondition;
         this.odataType = odataType;

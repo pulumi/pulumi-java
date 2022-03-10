@@ -22,10 +22,10 @@ public final class BuildpackBindingLaunchPropertiesResponse {
      */
     private final @Nullable Map<String,String> secrets;
 
-    @OutputCustomType.Constructor({"properties","secrets"})
+    @OutputCustomType.Constructor
     private BuildpackBindingLaunchPropertiesResponse(
-        @Nullable Map<String,String> properties,
-        @Nullable Map<String,String> secrets) {
+        @OutputCustomType.Parameter("properties") @Nullable Map<String,String> properties,
+        @OutputCustomType.Parameter("secrets") @Nullable Map<String,String> secrets) {
         this.properties = properties;
         this.secrets = secrets;
     }

@@ -35,13 +35,13 @@ public final class MountPointMapResponse {
      */
     private final String shareId;
 
-    @OutputCustomType.Constructor({"mountPoint","mountType","roleId","roleType","shareId"})
+    @OutputCustomType.Constructor
     private MountPointMapResponse(
-        String mountPoint,
-        String mountType,
-        String roleId,
-        String roleType,
-        String shareId) {
+        @OutputCustomType.Parameter("mountPoint") String mountPoint,
+        @OutputCustomType.Parameter("mountType") String mountType,
+        @OutputCustomType.Parameter("roleId") String roleId,
+        @OutputCustomType.Parameter("roleType") String roleType,
+        @OutputCustomType.Parameter("shareId") String shareId) {
         this.mountPoint = mountPoint;
         this.mountType = mountType;
         this.roleId = roleId;

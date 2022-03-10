@@ -97,24 +97,24 @@ public final class GetLinkResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"description","displayName","id","linkName","mappings","name","operationType","participantPropertyReferences","provisioningState","referenceOnly","sourceEntityType","sourceEntityTypeName","targetEntityType","targetEntityTypeName","tenantId","type"})
+    @OutputCustomType.Constructor
     private GetLinkResult(
-        @Nullable Map<String,String> description,
-        @Nullable Map<String,String> displayName,
-        String id,
-        String linkName,
-        @Nullable List<TypePropertiesMappingResponse> mappings,
-        String name,
-        @Nullable String operationType,
-        List<ParticipantPropertyReferenceResponse> participantPropertyReferences,
-        String provisioningState,
-        @Nullable Boolean referenceOnly,
-        String sourceEntityType,
-        String sourceEntityTypeName,
-        String targetEntityType,
-        String targetEntityTypeName,
-        String tenantId,
-        String type) {
+        @OutputCustomType.Parameter("description") @Nullable Map<String,String> description,
+        @OutputCustomType.Parameter("displayName") @Nullable Map<String,String> displayName,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("linkName") String linkName,
+        @OutputCustomType.Parameter("mappings") @Nullable List<TypePropertiesMappingResponse> mappings,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("operationType") @Nullable String operationType,
+        @OutputCustomType.Parameter("participantPropertyReferences") List<ParticipantPropertyReferenceResponse> participantPropertyReferences,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("referenceOnly") @Nullable Boolean referenceOnly,
+        @OutputCustomType.Parameter("sourceEntityType") String sourceEntityType,
+        @OutputCustomType.Parameter("sourceEntityTypeName") String sourceEntityTypeName,
+        @OutputCustomType.Parameter("targetEntityType") String targetEntityType,
+        @OutputCustomType.Parameter("targetEntityTypeName") String targetEntityTypeName,
+        @OutputCustomType.Parameter("tenantId") String tenantId,
+        @OutputCustomType.Parameter("type") String type) {
         this.description = description;
         this.displayName = displayName;
         this.id = id;

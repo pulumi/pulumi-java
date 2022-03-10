@@ -28,11 +28,11 @@ public final class AzureToAzureNetworkMappingSettingsResponse {
      */
     private final @Nullable String recoveryFabricLocation;
 
-    @OutputCustomType.Constructor({"instanceType","primaryFabricLocation","recoveryFabricLocation"})
+    @OutputCustomType.Constructor
     private AzureToAzureNetworkMappingSettingsResponse(
-        String instanceType,
-        @Nullable String primaryFabricLocation,
-        @Nullable String recoveryFabricLocation) {
+        @OutputCustomType.Parameter("instanceType") String instanceType,
+        @OutputCustomType.Parameter("primaryFabricLocation") @Nullable String primaryFabricLocation,
+        @OutputCustomType.Parameter("recoveryFabricLocation") @Nullable String recoveryFabricLocation) {
         this.instanceType = instanceType;
         this.primaryFabricLocation = primaryFabricLocation;
         this.recoveryFabricLocation = recoveryFabricLocation;

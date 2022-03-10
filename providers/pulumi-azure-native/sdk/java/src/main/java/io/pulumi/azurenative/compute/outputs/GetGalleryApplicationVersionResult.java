@@ -54,16 +54,16 @@ public final class GetGalleryApplicationVersionResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"id","location","name","provisioningState","publishingProfile","replicationStatus","tags","type"})
+    @OutputCustomType.Constructor
     private GetGalleryApplicationVersionResult(
-        String id,
-        String location,
-        String name,
-        String provisioningState,
-        GalleryApplicationVersionPublishingProfileResponse publishingProfile,
-        ReplicationStatusResponse replicationStatus,
-        @Nullable Map<String,String> tags,
-        String type) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("publishingProfile") GalleryApplicationVersionPublishingProfileResponse publishingProfile,
+        @OutputCustomType.Parameter("replicationStatus") ReplicationStatusResponse replicationStatus,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type) {
         this.id = id;
         this.location = location;
         this.name = name;

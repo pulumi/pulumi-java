@@ -49,15 +49,15 @@ public final class ConfigurationGroupResponse {
      */
     private final String provisioningState;
 
-    @OutputCustomType.Constructor({"conditionalMembership","description","displayName","groupMembers","id","memberType","provisioningState"})
+    @OutputCustomType.Constructor
     private ConfigurationGroupResponse(
-        @Nullable String conditionalMembership,
-        @Nullable String description,
-        @Nullable String displayName,
-        @Nullable List<GroupMembersItemResponse> groupMembers,
-        @Nullable String id,
-        @Nullable String memberType,
-        String provisioningState) {
+        @OutputCustomType.Parameter("conditionalMembership") @Nullable String conditionalMembership,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("displayName") @Nullable String displayName,
+        @OutputCustomType.Parameter("groupMembers") @Nullable List<GroupMembersItemResponse> groupMembers,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("memberType") @Nullable String memberType,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState) {
         this.conditionalMembership = conditionalMembership;
         this.description = description;
         this.displayName = displayName;

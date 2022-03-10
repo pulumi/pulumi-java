@@ -73,20 +73,20 @@ public final class GetBackupResult {
      */
     private final String volumeName;
 
-    @OutputCustomType.Constructor({"backupId","backupType","creationDate","failureReason","id","label","location","name","provisioningState","size","type","volumeName"})
+    @OutputCustomType.Constructor
     private GetBackupResult(
-        String backupId,
-        String backupType,
-        String creationDate,
-        String failureReason,
-        String id,
-        @Nullable String label,
-        String location,
-        String name,
-        String provisioningState,
-        Double size,
-        String type,
-        String volumeName) {
+        @OutputCustomType.Parameter("backupId") String backupId,
+        @OutputCustomType.Parameter("backupType") String backupType,
+        @OutputCustomType.Parameter("creationDate") String creationDate,
+        @OutputCustomType.Parameter("failureReason") String failureReason,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("label") @Nullable String label,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("size") Double size,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("volumeName") String volumeName) {
         this.backupId = backupId;
         this.backupType = backupType;
         this.creationDate = creationDate;

@@ -28,11 +28,11 @@ public final class DiskResponse {
      */
     private final @Nullable String name;
 
-    @OutputCustomType.Constructor({"diskSizeGB","lun","name"})
+    @OutputCustomType.Constructor
     private DiskResponse(
-        @Nullable Integer diskSizeGB,
-        Integer lun,
-        @Nullable String name) {
+        @OutputCustomType.Parameter("diskSizeGB") @Nullable Integer diskSizeGB,
+        @OutputCustomType.Parameter("lun") Integer lun,
+        @OutputCustomType.Parameter("name") @Nullable String name) {
         this.diskSizeGB = diskSizeGB;
         this.lun = lun;
         this.name = name;

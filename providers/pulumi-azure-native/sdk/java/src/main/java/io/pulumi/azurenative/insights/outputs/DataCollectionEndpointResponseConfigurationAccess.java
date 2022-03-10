@@ -15,8 +15,8 @@ public final class DataCollectionEndpointResponseConfigurationAccess {
      */
     private final String endpoint;
 
-    @OutputCustomType.Constructor({"endpoint"})
-    private DataCollectionEndpointResponseConfigurationAccess(String endpoint) {
+    @OutputCustomType.Constructor
+    private DataCollectionEndpointResponseConfigurationAccess(@OutputCustomType.Parameter("endpoint") String endpoint) {
         this.endpoint = endpoint;
     }
 

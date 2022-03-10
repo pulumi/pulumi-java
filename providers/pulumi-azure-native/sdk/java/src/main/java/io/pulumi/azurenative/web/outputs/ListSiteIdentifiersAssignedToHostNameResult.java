@@ -22,10 +22,10 @@ public final class ListSiteIdentifiersAssignedToHostNameResult {
      */
     private final List<IdentifierResponse> value;
 
-    @OutputCustomType.Constructor({"nextLink","value"})
+    @OutputCustomType.Constructor
     private ListSiteIdentifiersAssignedToHostNameResult(
-        String nextLink,
-        List<IdentifierResponse> value) {
+        @OutputCustomType.Parameter("nextLink") String nextLink,
+        @OutputCustomType.Parameter("value") List<IdentifierResponse> value) {
         this.nextLink = nextLink;
         this.value = value;
     }

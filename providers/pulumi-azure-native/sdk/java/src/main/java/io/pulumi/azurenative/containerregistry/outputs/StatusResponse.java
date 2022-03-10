@@ -25,11 +25,11 @@ public final class StatusResponse {
      */
     private final String timestamp;
 
-    @OutputCustomType.Constructor({"displayStatus","message","timestamp"})
+    @OutputCustomType.Constructor
     private StatusResponse(
-        String displayStatus,
-        String message,
-        String timestamp) {
+        @OutputCustomType.Parameter("displayStatus") String displayStatus,
+        @OutputCustomType.Parameter("message") String message,
+        @OutputCustomType.Parameter("timestamp") String timestamp) {
         this.displayStatus = displayStatus;
         this.message = message;
         this.timestamp = timestamp;

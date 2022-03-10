@@ -58,17 +58,17 @@ public final class AzureDataLakeStoreOutputDataSourceResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"accountName","dateFormat","filePathPrefix","refreshToken","tenantId","timeFormat","tokenUserDisplayName","tokenUserPrincipalName","type"})
+    @OutputCustomType.Constructor
     private AzureDataLakeStoreOutputDataSourceResponse(
-        @Nullable String accountName,
-        @Nullable String dateFormat,
-        @Nullable String filePathPrefix,
-        @Nullable String refreshToken,
-        @Nullable String tenantId,
-        @Nullable String timeFormat,
-        @Nullable String tokenUserDisplayName,
-        @Nullable String tokenUserPrincipalName,
-        String type) {
+        @OutputCustomType.Parameter("accountName") @Nullable String accountName,
+        @OutputCustomType.Parameter("dateFormat") @Nullable String dateFormat,
+        @OutputCustomType.Parameter("filePathPrefix") @Nullable String filePathPrefix,
+        @OutputCustomType.Parameter("refreshToken") @Nullable String refreshToken,
+        @OutputCustomType.Parameter("tenantId") @Nullable String tenantId,
+        @OutputCustomType.Parameter("timeFormat") @Nullable String timeFormat,
+        @OutputCustomType.Parameter("tokenUserDisplayName") @Nullable String tokenUserDisplayName,
+        @OutputCustomType.Parameter("tokenUserPrincipalName") @Nullable String tokenUserPrincipalName,
+        @OutputCustomType.Parameter("type") String type) {
         this.accountName = accountName;
         this.dateFormat = dateFormat;
         this.filePathPrefix = filePathPrefix;

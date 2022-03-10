@@ -39,13 +39,13 @@ public final class AudioResponse {
      */
     private final @Nullable Integer samplingRate;
 
-    @OutputCustomType.Constructor({"bitrate","channels","label","odataType","samplingRate"})
+    @OutputCustomType.Constructor
     private AudioResponse(
-        @Nullable Integer bitrate,
-        @Nullable Integer channels,
-        @Nullable String label,
-        String odataType,
-        @Nullable Integer samplingRate) {
+        @OutputCustomType.Parameter("bitrate") @Nullable Integer bitrate,
+        @OutputCustomType.Parameter("channels") @Nullable Integer channels,
+        @OutputCustomType.Parameter("label") @Nullable String label,
+        @OutputCustomType.Parameter("odataType") String odataType,
+        @OutputCustomType.Parameter("samplingRate") @Nullable Integer samplingRate) {
         this.bitrate = bitrate;
         this.channels = channels;
         this.label = label;

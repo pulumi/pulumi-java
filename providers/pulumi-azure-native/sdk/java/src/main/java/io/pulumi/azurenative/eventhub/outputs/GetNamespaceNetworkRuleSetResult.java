@@ -45,14 +45,14 @@ public final class GetNamespaceNetworkRuleSetResult {
      */
     private final @Nullable List<NWRuleSetVirtualNetworkRulesResponse> virtualNetworkRules;
 
-    @OutputCustomType.Constructor({"defaultAction","id","ipRules","name","type","virtualNetworkRules"})
+    @OutputCustomType.Constructor
     private GetNamespaceNetworkRuleSetResult(
-        @Nullable String defaultAction,
-        String id,
-        @Nullable List<NWRuleSetIpRulesResponse> ipRules,
-        String name,
-        String type,
-        @Nullable List<NWRuleSetVirtualNetworkRulesResponse> virtualNetworkRules) {
+        @OutputCustomType.Parameter("defaultAction") @Nullable String defaultAction,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("ipRules") @Nullable List<NWRuleSetIpRulesResponse> ipRules,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("virtualNetworkRules") @Nullable List<NWRuleSetVirtualNetworkRulesResponse> virtualNetworkRules) {
         this.defaultAction = defaultAction;
         this.id = id;
         this.ipRules = ipRules;

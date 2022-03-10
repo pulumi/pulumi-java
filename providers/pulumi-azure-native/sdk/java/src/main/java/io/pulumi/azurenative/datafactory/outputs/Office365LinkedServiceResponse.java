@@ -71,18 +71,18 @@ public final class Office365LinkedServiceResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"annotations","connectVia","description","encryptedCredential","office365TenantId","parameters","servicePrincipalId","servicePrincipalKey","servicePrincipalTenantId","type"})
+    @OutputCustomType.Constructor
     private Office365LinkedServiceResponse(
-        @Nullable List<Object> annotations,
-        @Nullable IntegrationRuntimeReferenceResponse connectVia,
-        @Nullable String description,
-        @Nullable Object encryptedCredential,
-        Object office365TenantId,
-        @Nullable Map<String,ParameterSpecificationResponse> parameters,
-        Object servicePrincipalId,
-        Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalKey,
-        Object servicePrincipalTenantId,
-        String type) {
+        @OutputCustomType.Parameter("annotations") @Nullable List<Object> annotations,
+        @OutputCustomType.Parameter("connectVia") @Nullable IntegrationRuntimeReferenceResponse connectVia,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("encryptedCredential") @Nullable Object encryptedCredential,
+        @OutputCustomType.Parameter("office365TenantId") Object office365TenantId,
+        @OutputCustomType.Parameter("parameters") @Nullable Map<String,ParameterSpecificationResponse> parameters,
+        @OutputCustomType.Parameter("servicePrincipalId") Object servicePrincipalId,
+        @OutputCustomType.Parameter("servicePrincipalKey") Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalKey,
+        @OutputCustomType.Parameter("servicePrincipalTenantId") Object servicePrincipalTenantId,
+        @OutputCustomType.Parameter("type") String type) {
         this.annotations = annotations;
         this.connectVia = connectVia;
         this.description = description;

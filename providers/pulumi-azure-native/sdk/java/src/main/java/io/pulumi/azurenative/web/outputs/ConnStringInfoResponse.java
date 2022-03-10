@@ -27,11 +27,11 @@ public final class ConnStringInfoResponse {
      */
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor({"connectionString","name","type"})
+    @OutputCustomType.Constructor
     private ConnStringInfoResponse(
-        @Nullable String connectionString,
-        @Nullable String name,
-        @Nullable String type) {
+        @OutputCustomType.Parameter("connectionString") @Nullable String connectionString,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("type") @Nullable String type) {
         this.connectionString = connectionString;
         this.name = name;
         this.type = type;

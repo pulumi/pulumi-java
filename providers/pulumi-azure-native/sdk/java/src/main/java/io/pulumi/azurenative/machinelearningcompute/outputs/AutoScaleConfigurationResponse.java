@@ -39,13 +39,13 @@ public final class AutoScaleConfigurationResponse {
      */
     private final @Nullable Double targetUtilization;
 
-    @OutputCustomType.Constructor({"maxReplicas","minReplicas","refreshPeriodInSeconds","status","targetUtilization"})
+    @OutputCustomType.Constructor
     private AutoScaleConfigurationResponse(
-        @Nullable Integer maxReplicas,
-        @Nullable Integer minReplicas,
-        @Nullable Integer refreshPeriodInSeconds,
-        @Nullable String status,
-        @Nullable Double targetUtilization) {
+        @OutputCustomType.Parameter("maxReplicas") @Nullable Integer maxReplicas,
+        @OutputCustomType.Parameter("minReplicas") @Nullable Integer minReplicas,
+        @OutputCustomType.Parameter("refreshPeriodInSeconds") @Nullable Integer refreshPeriodInSeconds,
+        @OutputCustomType.Parameter("status") @Nullable String status,
+        @OutputCustomType.Parameter("targetUtilization") @Nullable Double targetUtilization) {
         this.maxReplicas = maxReplicas;
         this.minReplicas = minReplicas;
         this.refreshPeriodInSeconds = refreshPeriodInSeconds;

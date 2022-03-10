@@ -48,16 +48,16 @@ public final class GetGraphResourceGraphResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"id","identity","location","name","options","resource","tags","type"})
+    @OutputCustomType.Constructor
     private GetGraphResourceGraphResult(
-        String id,
-        @Nullable ManagedServiceIdentityResponse identity,
-        @Nullable String location,
-        String name,
-        @Nullable GraphResourceGetPropertiesResponseOptions options,
-        @Nullable GraphResourceGetPropertiesResponseResource resource,
-        @Nullable Map<String,String> tags,
-        String type) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("identity") @Nullable ManagedServiceIdentityResponse identity,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("options") @Nullable GraphResourceGetPropertiesResponseOptions options,
+        @OutputCustomType.Parameter("resource") @Nullable GraphResourceGetPropertiesResponseResource resource,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type) {
         this.id = id;
         this.identity = identity;
         this.location = location;

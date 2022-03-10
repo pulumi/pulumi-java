@@ -15,8 +15,8 @@ public final class ActivationPropertiesResponse {
      */
     private final String status;
 
-    @OutputCustomType.Constructor({"status"})
-    private ActivationPropertiesResponse(String status) {
+    @OutputCustomType.Constructor
+    private ActivationPropertiesResponse(@OutputCustomType.Parameter("status") String status) {
         this.status = status;
     }
 

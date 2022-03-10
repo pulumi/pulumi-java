@@ -33,12 +33,12 @@ public final class ErrorDetailResponse {
      */
     private final @Nullable String target;
 
-    @OutputCustomType.Constructor({"code","details","message","target"})
+    @OutputCustomType.Constructor
     private ErrorDetailResponse(
-        String code,
-        @Nullable List<ErrorDetailResponse> details,
-        String message,
-        @Nullable String target) {
+        @OutputCustomType.Parameter("code") String code,
+        @OutputCustomType.Parameter("details") @Nullable List<ErrorDetailResponse> details,
+        @OutputCustomType.Parameter("message") String message,
+        @OutputCustomType.Parameter("target") @Nullable String target) {
         this.code = code;
         this.details = details;
         this.message = message;

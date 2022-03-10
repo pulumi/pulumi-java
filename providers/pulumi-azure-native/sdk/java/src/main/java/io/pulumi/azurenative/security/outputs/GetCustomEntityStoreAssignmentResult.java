@@ -43,14 +43,14 @@ public final class GetCustomEntityStoreAssignmentResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"entityStoreDatabaseLink","id","name","principal","systemData","type"})
+    @OutputCustomType.Constructor
     private GetCustomEntityStoreAssignmentResult(
-        @Nullable String entityStoreDatabaseLink,
-        String id,
-        String name,
-        @Nullable String principal,
-        SystemDataResponse systemData,
-        String type) {
+        @OutputCustomType.Parameter("entityStoreDatabaseLink") @Nullable String entityStoreDatabaseLink,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("principal") @Nullable String principal,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("type") String type) {
         this.entityStoreDatabaseLink = entityStoreDatabaseLink;
         this.id = id;
         this.name = name;

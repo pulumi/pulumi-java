@@ -32,12 +32,12 @@ public final class TokenPasswordResponse {
      */
     private final String value;
 
-    @OutputCustomType.Constructor({"creationTime","expiry","name","value"})
+    @OutputCustomType.Constructor
     private TokenPasswordResponse(
-        @Nullable String creationTime,
-        @Nullable String expiry,
-        @Nullable String name,
-        String value) {
+        @OutputCustomType.Parameter("creationTime") @Nullable String creationTime,
+        @OutputCustomType.Parameter("expiry") @Nullable String expiry,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("value") String value) {
         this.creationTime = creationTime;
         this.expiry = expiry;
         this.name = name;

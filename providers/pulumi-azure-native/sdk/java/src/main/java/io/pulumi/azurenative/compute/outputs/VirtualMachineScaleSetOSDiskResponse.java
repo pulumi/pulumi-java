@@ -68,18 +68,18 @@ public final class VirtualMachineScaleSetOSDiskResponse {
      */
     private final @Nullable Boolean writeAcceleratorEnabled;
 
-    @OutputCustomType.Constructor({"caching","createOption","diffDiskSettings","diskSizeGB","image","managedDisk","name","osType","vhdContainers","writeAcceleratorEnabled"})
+    @OutputCustomType.Constructor
     private VirtualMachineScaleSetOSDiskResponse(
-        @Nullable String caching,
-        String createOption,
-        @Nullable DiffDiskSettingsResponse diffDiskSettings,
-        @Nullable Integer diskSizeGB,
-        @Nullable VirtualHardDiskResponse image,
-        @Nullable VirtualMachineScaleSetManagedDiskParametersResponse managedDisk,
-        @Nullable String name,
-        @Nullable String osType,
-        @Nullable List<String> vhdContainers,
-        @Nullable Boolean writeAcceleratorEnabled) {
+        @OutputCustomType.Parameter("caching") @Nullable String caching,
+        @OutputCustomType.Parameter("createOption") String createOption,
+        @OutputCustomType.Parameter("diffDiskSettings") @Nullable DiffDiskSettingsResponse diffDiskSettings,
+        @OutputCustomType.Parameter("diskSizeGB") @Nullable Integer diskSizeGB,
+        @OutputCustomType.Parameter("image") @Nullable VirtualHardDiskResponse image,
+        @OutputCustomType.Parameter("managedDisk") @Nullable VirtualMachineScaleSetManagedDiskParametersResponse managedDisk,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("osType") @Nullable String osType,
+        @OutputCustomType.Parameter("vhdContainers") @Nullable List<String> vhdContainers,
+        @OutputCustomType.Parameter("writeAcceleratorEnabled") @Nullable Boolean writeAcceleratorEnabled) {
         this.caching = caching;
         this.createOption = createOption;
         this.diffDiskSettings = diffDiskSettings;

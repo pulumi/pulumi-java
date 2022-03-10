@@ -51,15 +51,15 @@ public final class GetFileServicePropertiesResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"cors","id","name","protocolSettings","shareDeleteRetentionPolicy","sku","type"})
+    @OutputCustomType.Constructor
     private GetFileServicePropertiesResult(
-        @Nullable CorsRulesResponse cors,
-        String id,
-        String name,
-        @Nullable ProtocolSettingsResponse protocolSettings,
-        @Nullable DeleteRetentionPolicyResponse shareDeleteRetentionPolicy,
-        SkuResponse sku,
-        String type) {
+        @OutputCustomType.Parameter("cors") @Nullable CorsRulesResponse cors,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("protocolSettings") @Nullable ProtocolSettingsResponse protocolSettings,
+        @OutputCustomType.Parameter("shareDeleteRetentionPolicy") @Nullable DeleteRetentionPolicyResponse shareDeleteRetentionPolicy,
+        @OutputCustomType.Parameter("sku") SkuResponse sku,
+        @OutputCustomType.Parameter("type") String type) {
         this.cors = cors;
         this.id = id;
         this.name = name;

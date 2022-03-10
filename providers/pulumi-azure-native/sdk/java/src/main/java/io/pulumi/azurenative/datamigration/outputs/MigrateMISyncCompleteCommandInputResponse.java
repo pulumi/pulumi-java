@@ -15,8 +15,8 @@ public final class MigrateMISyncCompleteCommandInputResponse {
      */
     private final String sourceDatabaseName;
 
-    @OutputCustomType.Constructor({"sourceDatabaseName"})
-    private MigrateMISyncCompleteCommandInputResponse(String sourceDatabaseName) {
+    @OutputCustomType.Constructor
+    private MigrateMISyncCompleteCommandInputResponse(@OutputCustomType.Parameter("sourceDatabaseName") String sourceDatabaseName) {
         this.sourceDatabaseName = sourceDatabaseName;
     }
 

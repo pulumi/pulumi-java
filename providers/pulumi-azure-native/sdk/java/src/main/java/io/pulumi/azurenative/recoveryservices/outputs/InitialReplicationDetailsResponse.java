@@ -22,10 +22,10 @@ public final class InitialReplicationDetailsResponse {
      */
     private final @Nullable String initialReplicationType;
 
-    @OutputCustomType.Constructor({"initialReplicationProgressPercentage","initialReplicationType"})
+    @OutputCustomType.Constructor
     private InitialReplicationDetailsResponse(
-        @Nullable String initialReplicationProgressPercentage,
-        @Nullable String initialReplicationType) {
+        @OutputCustomType.Parameter("initialReplicationProgressPercentage") @Nullable String initialReplicationProgressPercentage,
+        @OutputCustomType.Parameter("initialReplicationType") @Nullable String initialReplicationType) {
         this.initialReplicationProgressPercentage = initialReplicationProgressPercentage;
         this.initialReplicationType = initialReplicationType;
     }

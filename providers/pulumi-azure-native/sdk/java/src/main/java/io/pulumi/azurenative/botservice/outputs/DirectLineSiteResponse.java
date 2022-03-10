@@ -64,18 +64,18 @@ public final class DirectLineSiteResponse {
      */
     private final @Nullable List<String> trustedOrigins;
 
-    @OutputCustomType.Constructor({"isBlockUserUploadEnabled","isEnabled","isSecureSiteEnabled","isV1Enabled","isV3Enabled","key","key2","siteId","siteName","trustedOrigins"})
+    @OutputCustomType.Constructor
     private DirectLineSiteResponse(
-        @Nullable Boolean isBlockUserUploadEnabled,
-        Boolean isEnabled,
-        @Nullable Boolean isSecureSiteEnabled,
-        Boolean isV1Enabled,
-        Boolean isV3Enabled,
-        String key,
-        String key2,
-        String siteId,
-        String siteName,
-        @Nullable List<String> trustedOrigins) {
+        @OutputCustomType.Parameter("isBlockUserUploadEnabled") @Nullable Boolean isBlockUserUploadEnabled,
+        @OutputCustomType.Parameter("isEnabled") Boolean isEnabled,
+        @OutputCustomType.Parameter("isSecureSiteEnabled") @Nullable Boolean isSecureSiteEnabled,
+        @OutputCustomType.Parameter("isV1Enabled") Boolean isV1Enabled,
+        @OutputCustomType.Parameter("isV3Enabled") Boolean isV3Enabled,
+        @OutputCustomType.Parameter("key") String key,
+        @OutputCustomType.Parameter("key2") String key2,
+        @OutputCustomType.Parameter("siteId") String siteId,
+        @OutputCustomType.Parameter("siteName") String siteName,
+        @OutputCustomType.Parameter("trustedOrigins") @Nullable List<String> trustedOrigins) {
         this.isBlockUserUploadEnabled = isBlockUserUploadEnabled;
         this.isEnabled = isEnabled;
         this.isSecureSiteEnabled = isSecureSiteEnabled;

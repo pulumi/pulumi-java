@@ -44,14 +44,14 @@ public final class PostgreSqlConnectionInfoResponse {
      */
     private final @Nullable String userName;
 
-    @OutputCustomType.Constructor({"databaseName","password","port","serverName","type","userName"})
+    @OutputCustomType.Constructor
     private PostgreSqlConnectionInfoResponse(
-        @Nullable String databaseName,
-        @Nullable String password,
-        Integer port,
-        String serverName,
-        String type,
-        @Nullable String userName) {
+        @OutputCustomType.Parameter("databaseName") @Nullable String databaseName,
+        @OutputCustomType.Parameter("password") @Nullable String password,
+        @OutputCustomType.Parameter("port") Integer port,
+        @OutputCustomType.Parameter("serverName") String serverName,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("userName") @Nullable String userName) {
         this.databaseName = databaseName;
         this.password = password;
         this.port = port;

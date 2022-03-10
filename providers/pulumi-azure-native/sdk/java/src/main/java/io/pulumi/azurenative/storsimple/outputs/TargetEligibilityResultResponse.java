@@ -24,10 +24,10 @@ public final class TargetEligibilityResultResponse {
      */
     private final @Nullable List<TargetEligibilityErrorMessageResponse> messages;
 
-    @OutputCustomType.Constructor({"eligibilityStatus","messages"})
+    @OutputCustomType.Constructor
     private TargetEligibilityResultResponse(
-        @Nullable String eligibilityStatus,
-        @Nullable List<TargetEligibilityErrorMessageResponse> messages) {
+        @OutputCustomType.Parameter("eligibilityStatus") @Nullable String eligibilityStatus,
+        @OutputCustomType.Parameter("messages") @Nullable List<TargetEligibilityErrorMessageResponse> messages) {
         this.eligibilityStatus = eligibilityStatus;
         this.messages = messages;
     }

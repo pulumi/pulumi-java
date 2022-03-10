@@ -20,10 +20,10 @@ public final class ErrorDetailResponse {
      */
     private final String message;
 
-    @OutputCustomType.Constructor({"code","message"})
+    @OutputCustomType.Constructor
     private ErrorDetailResponse(
-        String code,
-        String message) {
+        @OutputCustomType.Parameter("code") String code,
+        @OutputCustomType.Parameter("message") String message) {
         this.code = code;
         this.message = message;
     }

@@ -36,12 +36,12 @@ public final class PrivateLinkServiceProxyResponse {
      */
     private final @Nullable PrivateLinkServiceConnectionStateResponse remotePrivateLinkServiceConnectionState;
 
-    @OutputCustomType.Constructor({"groupConnectivityInformation","id","remotePrivateEndpointConnection","remotePrivateLinkServiceConnectionState"})
+    @OutputCustomType.Constructor
     private PrivateLinkServiceProxyResponse(
-        @Nullable List<GroupConnectivityInformationResponse> groupConnectivityInformation,
-        @Nullable String id,
-        @Nullable PrivateLinkServiceProxyResponseRemotePrivateEndpointConnection remotePrivateEndpointConnection,
-        @Nullable PrivateLinkServiceConnectionStateResponse remotePrivateLinkServiceConnectionState) {
+        @OutputCustomType.Parameter("groupConnectivityInformation") @Nullable List<GroupConnectivityInformationResponse> groupConnectivityInformation,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("remotePrivateEndpointConnection") @Nullable PrivateLinkServiceProxyResponseRemotePrivateEndpointConnection remotePrivateEndpointConnection,
+        @OutputCustomType.Parameter("remotePrivateLinkServiceConnectionState") @Nullable PrivateLinkServiceConnectionStateResponse remotePrivateLinkServiceConnectionState) {
         this.groupConnectivityInformation = groupConnectivityInformation;
         this.id = id;
         this.remotePrivateEndpointConnection = remotePrivateEndpointConnection;

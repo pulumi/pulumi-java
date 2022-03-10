@@ -110,27 +110,27 @@ public final class GetDedicatedCloudNodeResult {
      */
     private final String vmwareClusterName;
 
-    @OutputCustomType.Constructor({"availabilityZoneId","availabilityZoneName","cloudRackName","created","id","location","name","nodesCount","placementGroupId","placementGroupName","privateCloudId","privateCloudName","provisioningState","purchaseId","sku","status","tags","type","vmwareClusterName"})
+    @OutputCustomType.Constructor
     private GetDedicatedCloudNodeResult(
-        String availabilityZoneId,
-        String availabilityZoneName,
-        String cloudRackName,
-        String created,
-        String id,
-        String location,
-        String name,
-        Integer nodesCount,
-        String placementGroupId,
-        String placementGroupName,
-        String privateCloudId,
-        String privateCloudName,
-        String provisioningState,
-        String purchaseId,
-        @Nullable SkuResponse sku,
-        String status,
-        @Nullable Map<String,String> tags,
-        String type,
-        String vmwareClusterName) {
+        @OutputCustomType.Parameter("availabilityZoneId") String availabilityZoneId,
+        @OutputCustomType.Parameter("availabilityZoneName") String availabilityZoneName,
+        @OutputCustomType.Parameter("cloudRackName") String cloudRackName,
+        @OutputCustomType.Parameter("created") String created,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("nodesCount") Integer nodesCount,
+        @OutputCustomType.Parameter("placementGroupId") String placementGroupId,
+        @OutputCustomType.Parameter("placementGroupName") String placementGroupName,
+        @OutputCustomType.Parameter("privateCloudId") String privateCloudId,
+        @OutputCustomType.Parameter("privateCloudName") String privateCloudName,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("purchaseId") String purchaseId,
+        @OutputCustomType.Parameter("sku") @Nullable SkuResponse sku,
+        @OutputCustomType.Parameter("status") String status,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("vmwareClusterName") String vmwareClusterName) {
         this.availabilityZoneId = availabilityZoneId;
         this.availabilityZoneName = availabilityZoneName;
         this.cloudRackName = cloudRackName;

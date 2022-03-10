@@ -23,10 +23,10 @@ public final class PropagatedRouteTableResponse {
      */
     private final @Nullable List<String> labels;
 
-    @OutputCustomType.Constructor({"ids","labels"})
+    @OutputCustomType.Constructor
     private PropagatedRouteTableResponse(
-        @Nullable List<SubResourceResponse> ids,
-        @Nullable List<String> labels) {
+        @OutputCustomType.Parameter("ids") @Nullable List<SubResourceResponse> ids,
+        @OutputCustomType.Parameter("labels") @Nullable List<String> labels) {
         this.ids = ids;
         this.labels = labels;
     }

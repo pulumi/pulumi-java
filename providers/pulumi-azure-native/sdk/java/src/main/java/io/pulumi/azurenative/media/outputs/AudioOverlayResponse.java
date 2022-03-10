@@ -49,15 +49,15 @@ public final class AudioOverlayResponse {
      */
     private final @Nullable String start;
 
-    @OutputCustomType.Constructor({"audioGainLevel","end","fadeInDuration","fadeOutDuration","inputLabel","odataType","start"})
+    @OutputCustomType.Constructor
     private AudioOverlayResponse(
-        @Nullable Double audioGainLevel,
-        @Nullable String end,
-        @Nullable String fadeInDuration,
-        @Nullable String fadeOutDuration,
-        String inputLabel,
-        String odataType,
-        @Nullable String start) {
+        @OutputCustomType.Parameter("audioGainLevel") @Nullable Double audioGainLevel,
+        @OutputCustomType.Parameter("end") @Nullable String end,
+        @OutputCustomType.Parameter("fadeInDuration") @Nullable String fadeInDuration,
+        @OutputCustomType.Parameter("fadeOutDuration") @Nullable String fadeOutDuration,
+        @OutputCustomType.Parameter("inputLabel") String inputLabel,
+        @OutputCustomType.Parameter("odataType") String odataType,
+        @OutputCustomType.Parameter("start") @Nullable String start) {
         this.audioGainLevel = audioGainLevel;
         this.end = end;
         this.fadeInDuration = fadeInDuration;

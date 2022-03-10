@@ -37,13 +37,13 @@ public final class GetAssociationResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"id","name","provisioningState","targetResourceId","type"})
+    @OutputCustomType.Constructor
     private GetAssociationResult(
-        String id,
-        String name,
-        String provisioningState,
-        @Nullable String targetResourceId,
-        String type) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("targetResourceId") @Nullable String targetResourceId,
+        @OutputCustomType.Parameter("type") String type) {
         this.id = id;
         this.name = name;
         this.provisioningState = provisioningState;

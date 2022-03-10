@@ -53,16 +53,16 @@ public final class GetVariableResult {
      */
     private final @Nullable String value;
 
-    @OutputCustomType.Constructor({"creationTime","description","id","isEncrypted","lastModifiedTime","name","type","value"})
+    @OutputCustomType.Constructor
     private GetVariableResult(
-        @Nullable String creationTime,
-        @Nullable String description,
-        String id,
-        @Nullable Boolean isEncrypted,
-        @Nullable String lastModifiedTime,
-        String name,
-        String type,
-        @Nullable String value) {
+        @OutputCustomType.Parameter("creationTime") @Nullable String creationTime,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("isEncrypted") @Nullable Boolean isEncrypted,
+        @OutputCustomType.Parameter("lastModifiedTime") @Nullable String lastModifiedTime,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("value") @Nullable String value) {
         this.creationTime = creationTime;
         this.description = description;
         this.id = id;

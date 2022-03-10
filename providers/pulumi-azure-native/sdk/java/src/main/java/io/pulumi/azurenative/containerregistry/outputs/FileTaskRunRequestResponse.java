@@ -81,20 +81,20 @@ public final class FileTaskRunRequestResponse {
      */
     private final @Nullable String valuesFilePath;
 
-    @OutputCustomType.Constructor({"agentConfiguration","agentPoolName","credentials","isArchiveEnabled","logTemplate","platform","sourceLocation","taskFilePath","timeout","type","values","valuesFilePath"})
+    @OutputCustomType.Constructor
     private FileTaskRunRequestResponse(
-        @Nullable AgentPropertiesResponse agentConfiguration,
-        @Nullable String agentPoolName,
-        @Nullable CredentialsResponse credentials,
-        @Nullable Boolean isArchiveEnabled,
-        @Nullable String logTemplate,
-        PlatformPropertiesResponse platform,
-        @Nullable String sourceLocation,
-        String taskFilePath,
-        @Nullable Integer timeout,
-        String type,
-        @Nullable List<SetValueResponse> values,
-        @Nullable String valuesFilePath) {
+        @OutputCustomType.Parameter("agentConfiguration") @Nullable AgentPropertiesResponse agentConfiguration,
+        @OutputCustomType.Parameter("agentPoolName") @Nullable String agentPoolName,
+        @OutputCustomType.Parameter("credentials") @Nullable CredentialsResponse credentials,
+        @OutputCustomType.Parameter("isArchiveEnabled") @Nullable Boolean isArchiveEnabled,
+        @OutputCustomType.Parameter("logTemplate") @Nullable String logTemplate,
+        @OutputCustomType.Parameter("platform") PlatformPropertiesResponse platform,
+        @OutputCustomType.Parameter("sourceLocation") @Nullable String sourceLocation,
+        @OutputCustomType.Parameter("taskFilePath") String taskFilePath,
+        @OutputCustomType.Parameter("timeout") @Nullable Integer timeout,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("values") @Nullable List<SetValueResponse> values,
+        @OutputCustomType.Parameter("valuesFilePath") @Nullable String valuesFilePath) {
         this.agentConfiguration = agentConfiguration;
         this.agentPoolName = agentPoolName;
         this.credentials = credentials;

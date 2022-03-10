@@ -25,11 +25,11 @@ public final class ManagedRuleExclusionResponse {
      */
     private final String selectorMatchOperator;
 
-    @OutputCustomType.Constructor({"matchVariable","selector","selectorMatchOperator"})
+    @OutputCustomType.Constructor
     private ManagedRuleExclusionResponse(
-        String matchVariable,
-        String selector,
-        String selectorMatchOperator) {
+        @OutputCustomType.Parameter("matchVariable") String matchVariable,
+        @OutputCustomType.Parameter("selector") String selector,
+        @OutputCustomType.Parameter("selectorMatchOperator") String selectorMatchOperator) {
         this.matchVariable = matchVariable;
         this.selector = selector;
         this.selectorMatchOperator = selectorMatchOperator;

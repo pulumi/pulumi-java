@@ -40,13 +40,13 @@ public final class ServiceCorsConfigurationInfoResponse {
      */
     private final @Nullable List<String> origins;
 
-    @OutputCustomType.Constructor({"allowCredentials","headers","maxAge","methods","origins"})
+    @OutputCustomType.Constructor
     private ServiceCorsConfigurationInfoResponse(
-        @Nullable Boolean allowCredentials,
-        @Nullable List<String> headers,
-        @Nullable Integer maxAge,
-        @Nullable List<String> methods,
-        @Nullable List<String> origins) {
+        @OutputCustomType.Parameter("allowCredentials") @Nullable Boolean allowCredentials,
+        @OutputCustomType.Parameter("headers") @Nullable List<String> headers,
+        @OutputCustomType.Parameter("maxAge") @Nullable Integer maxAge,
+        @OutputCustomType.Parameter("methods") @Nullable List<String> methods,
+        @OutputCustomType.Parameter("origins") @Nullable List<String> origins) {
         this.allowCredentials = allowCredentials;
         this.headers = headers;
         this.maxAge = maxAge;

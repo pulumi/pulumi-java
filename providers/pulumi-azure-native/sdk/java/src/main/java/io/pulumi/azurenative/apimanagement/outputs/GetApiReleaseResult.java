@@ -47,15 +47,15 @@ public final class GetApiReleaseResult {
      */
     private final String updatedDateTime;
 
-    @OutputCustomType.Constructor({"apiId","createdDateTime","id","name","notes","type","updatedDateTime"})
+    @OutputCustomType.Constructor
     private GetApiReleaseResult(
-        @Nullable String apiId,
-        String createdDateTime,
-        String id,
-        String name,
-        @Nullable String notes,
-        String type,
-        String updatedDateTime) {
+        @OutputCustomType.Parameter("apiId") @Nullable String apiId,
+        @OutputCustomType.Parameter("createdDateTime") String createdDateTime,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("notes") @Nullable String notes,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("updatedDateTime") String updatedDateTime) {
         this.apiId = apiId;
         this.createdDateTime = createdDateTime;
         this.id = id;

@@ -16,8 +16,8 @@ public final class ListContainerAppSecretsResult {
      */
     private final List<ContainerAppSecretResponse> value;
 
-    @OutputCustomType.Constructor({"value"})
-    private ListContainerAppSecretsResult(List<ContainerAppSecretResponse> value) {
+    @OutputCustomType.Constructor
+    private ListContainerAppSecretsResult(@OutputCustomType.Parameter("value") List<ContainerAppSecretResponse> value) {
         this.value = value;
     }
 

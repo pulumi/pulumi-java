@@ -29,11 +29,11 @@ public final class RoutingConfigurationResponse {
      */
     private final @Nullable VnetRouteResponse vnetRoutes;
 
-    @OutputCustomType.Constructor({"associatedRouteTable","propagatedRouteTables","vnetRoutes"})
+    @OutputCustomType.Constructor
     private RoutingConfigurationResponse(
-        @Nullable SubResourceResponse associatedRouteTable,
-        @Nullable PropagatedRouteTableResponse propagatedRouteTables,
-        @Nullable VnetRouteResponse vnetRoutes) {
+        @OutputCustomType.Parameter("associatedRouteTable") @Nullable SubResourceResponse associatedRouteTable,
+        @OutputCustomType.Parameter("propagatedRouteTables") @Nullable PropagatedRouteTableResponse propagatedRouteTables,
+        @OutputCustomType.Parameter("vnetRoutes") @Nullable VnetRouteResponse vnetRoutes) {
         this.associatedRouteTable = associatedRouteTable;
         this.propagatedRouteTables = propagatedRouteTables;
         this.vnetRoutes = vnetRoutes;

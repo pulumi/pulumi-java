@@ -86,22 +86,22 @@ public final class VirtualMachineExtensionResponse {
      */
     private final @Nullable String typeHandlerVersion;
 
-    @OutputCustomType.Constructor({"autoUpgradeMinorVersion","enableAutomaticUpgrade","forceUpdateTag","id","instanceView","location","name","protectedSettings","provisioningState","publisher","settings","tags","type","typeHandlerVersion"})
+    @OutputCustomType.Constructor
     private VirtualMachineExtensionResponse(
-        @Nullable Boolean autoUpgradeMinorVersion,
-        @Nullable Boolean enableAutomaticUpgrade,
-        @Nullable String forceUpdateTag,
-        String id,
-        @Nullable VirtualMachineExtensionInstanceViewResponse instanceView,
-        String location,
-        String name,
-        @Nullable Object protectedSettings,
-        String provisioningState,
-        @Nullable String publisher,
-        @Nullable Object settings,
-        @Nullable Map<String,String> tags,
-        String type,
-        @Nullable String typeHandlerVersion) {
+        @OutputCustomType.Parameter("autoUpgradeMinorVersion") @Nullable Boolean autoUpgradeMinorVersion,
+        @OutputCustomType.Parameter("enableAutomaticUpgrade") @Nullable Boolean enableAutomaticUpgrade,
+        @OutputCustomType.Parameter("forceUpdateTag") @Nullable String forceUpdateTag,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("instanceView") @Nullable VirtualMachineExtensionInstanceViewResponse instanceView,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("protectedSettings") @Nullable Object protectedSettings,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("publisher") @Nullable String publisher,
+        @OutputCustomType.Parameter("settings") @Nullable Object settings,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("typeHandlerVersion") @Nullable String typeHandlerVersion) {
         this.autoUpgradeMinorVersion = autoUpgradeMinorVersion;
         this.enableAutomaticUpgrade = enableAutomaticUpgrade;
         this.forceUpdateTag = forceUpdateTag;

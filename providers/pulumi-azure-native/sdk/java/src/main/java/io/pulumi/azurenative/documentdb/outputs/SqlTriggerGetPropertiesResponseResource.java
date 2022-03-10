@@ -48,15 +48,15 @@ public final class SqlTriggerGetPropertiesResponseResource {
      */
     private final Double ts;
 
-    @OutputCustomType.Constructor({"body","etag","id","rid","triggerOperation","triggerType","ts"})
+    @OutputCustomType.Constructor
     private SqlTriggerGetPropertiesResponseResource(
-        @Nullable String body,
-        String etag,
-        String id,
-        String rid,
-        @Nullable String triggerOperation,
-        @Nullable String triggerType,
-        Double ts) {
+        @OutputCustomType.Parameter("body") @Nullable String body,
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("rid") String rid,
+        @OutputCustomType.Parameter("triggerOperation") @Nullable String triggerOperation,
+        @OutputCustomType.Parameter("triggerType") @Nullable String triggerType,
+        @OutputCustomType.Parameter("ts") Double ts) {
         this.body = body;
         this.etag = etag;
         this.id = id;

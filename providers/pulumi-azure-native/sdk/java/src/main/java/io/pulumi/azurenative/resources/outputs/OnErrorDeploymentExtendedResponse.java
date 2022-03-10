@@ -27,11 +27,11 @@ public final class OnErrorDeploymentExtendedResponse {
      */
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor({"deploymentName","provisioningState","type"})
+    @OutputCustomType.Constructor
     private OnErrorDeploymentExtendedResponse(
-        @Nullable String deploymentName,
-        String provisioningState,
-        @Nullable String type) {
+        @OutputCustomType.Parameter("deploymentName") @Nullable String deploymentName,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("type") @Nullable String type) {
         this.deploymentName = deploymentName;
         this.provisioningState = provisioningState;
         this.type = type;

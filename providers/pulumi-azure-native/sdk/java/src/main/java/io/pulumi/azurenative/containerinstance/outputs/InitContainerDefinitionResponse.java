@@ -46,14 +46,14 @@ public final class InitContainerDefinitionResponse {
      */
     private final @Nullable List<VolumeMountResponse> volumeMounts;
 
-    @OutputCustomType.Constructor({"command","environmentVariables","image","instanceView","name","volumeMounts"})
+    @OutputCustomType.Constructor
     private InitContainerDefinitionResponse(
-        @Nullable List<String> command,
-        @Nullable List<EnvironmentVariableResponse> environmentVariables,
-        @Nullable String image,
-        InitContainerPropertiesDefinitionResponseInstanceView instanceView,
-        String name,
-        @Nullable List<VolumeMountResponse> volumeMounts) {
+        @OutputCustomType.Parameter("command") @Nullable List<String> command,
+        @OutputCustomType.Parameter("environmentVariables") @Nullable List<EnvironmentVariableResponse> environmentVariables,
+        @OutputCustomType.Parameter("image") @Nullable String image,
+        @OutputCustomType.Parameter("instanceView") InitContainerPropertiesDefinitionResponseInstanceView instanceView,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("volumeMounts") @Nullable List<VolumeMountResponse> volumeMounts) {
         this.command = command;
         this.environmentVariables = environmentVariables;
         this.image = image;

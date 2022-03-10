@@ -68,19 +68,19 @@ public final class ClientCredentialsResponse {
      */
     private final @Nullable String thumbprint;
 
-    @OutputCustomType.Constructor({"authorityUrl","certificate","clientId","clientSecret","isCertAuth","resourceGroup","resourceUri","serviceDataAccessAuthIdentity","subscriptionId","tenantId","thumbprint"})
+    @OutputCustomType.Constructor
     private ClientCredentialsResponse(
-        @Nullable String authorityUrl,
-        @Nullable String certificate,
-        @Nullable String clientId,
-        @Nullable String clientSecret,
-        @Nullable Boolean isCertAuth,
-        @Nullable String resourceGroup,
-        @Nullable String resourceUri,
-        @Nullable String serviceDataAccessAuthIdentity,
-        @Nullable String subscriptionId,
-        @Nullable String tenantId,
-        @Nullable String thumbprint) {
+        @OutputCustomType.Parameter("authorityUrl") @Nullable String authorityUrl,
+        @OutputCustomType.Parameter("certificate") @Nullable String certificate,
+        @OutputCustomType.Parameter("clientId") @Nullable String clientId,
+        @OutputCustomType.Parameter("clientSecret") @Nullable String clientSecret,
+        @OutputCustomType.Parameter("isCertAuth") @Nullable Boolean isCertAuth,
+        @OutputCustomType.Parameter("resourceGroup") @Nullable String resourceGroup,
+        @OutputCustomType.Parameter("resourceUri") @Nullable String resourceUri,
+        @OutputCustomType.Parameter("serviceDataAccessAuthIdentity") @Nullable String serviceDataAccessAuthIdentity,
+        @OutputCustomType.Parameter("subscriptionId") @Nullable String subscriptionId,
+        @OutputCustomType.Parameter("tenantId") @Nullable String tenantId,
+        @OutputCustomType.Parameter("thumbprint") @Nullable String thumbprint) {
         this.authorityUrl = authorityUrl;
         this.certificate = certificate;
         this.clientId = clientId;

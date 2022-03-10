@@ -43,14 +43,14 @@ public final class GetGuestUsageResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"id","location","name","tags","tenantId","type"})
+    @OutputCustomType.Constructor
     private GetGuestUsageResult(
-        String id,
-        @Nullable String location,
-        String name,
-        @Nullable Map<String,String> tags,
-        @Nullable String tenantId,
-        String type) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("tenantId") @Nullable String tenantId,
+        @OutputCustomType.Parameter("type") String type) {
         this.id = id;
         this.location = location;
         this.name = name;

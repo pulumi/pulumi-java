@@ -51,14 +51,14 @@ public final class AzureActiveDirectoryRegistrationResponse {
      */
     private final @Nullable String openIdIssuer;
 
-    @OutputCustomType.Constructor({"clientId","clientSecretCertificateIssuer","clientSecretCertificateSubjectAlternativeName","clientSecretCertificateThumbprint","clientSecretSettingName","openIdIssuer"})
+    @OutputCustomType.Constructor
     private AzureActiveDirectoryRegistrationResponse(
-        @Nullable String clientId,
-        @Nullable String clientSecretCertificateIssuer,
-        @Nullable String clientSecretCertificateSubjectAlternativeName,
-        @Nullable String clientSecretCertificateThumbprint,
-        @Nullable String clientSecretSettingName,
-        @Nullable String openIdIssuer) {
+        @OutputCustomType.Parameter("clientId") @Nullable String clientId,
+        @OutputCustomType.Parameter("clientSecretCertificateIssuer") @Nullable String clientSecretCertificateIssuer,
+        @OutputCustomType.Parameter("clientSecretCertificateSubjectAlternativeName") @Nullable String clientSecretCertificateSubjectAlternativeName,
+        @OutputCustomType.Parameter("clientSecretCertificateThumbprint") @Nullable String clientSecretCertificateThumbprint,
+        @OutputCustomType.Parameter("clientSecretSettingName") @Nullable String clientSecretSettingName,
+        @OutputCustomType.Parameter("openIdIssuer") @Nullable String openIdIssuer) {
         this.clientId = clientId;
         this.clientSecretCertificateIssuer = clientSecretCertificateIssuer;
         this.clientSecretCertificateSubjectAlternativeName = clientSecretCertificateSubjectAlternativeName;

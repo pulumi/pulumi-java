@@ -21,10 +21,10 @@ public final class LinkedTemplateArtifactResponse {
      */
     private final Object template;
 
-    @OutputCustomType.Constructor({"path","template"})
+    @OutputCustomType.Constructor
     private LinkedTemplateArtifactResponse(
-        String path,
-        Object template) {
+        @OutputCustomType.Parameter("path") String path,
+        @OutputCustomType.Parameter("template") Object template) {
         this.path = path;
         this.template = template;
     }

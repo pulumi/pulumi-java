@@ -21,10 +21,10 @@ public final class ImageTemplateSharedImageVersionSourceResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"imageVersionId","type"})
+    @OutputCustomType.Constructor
     private ImageTemplateSharedImageVersionSourceResponse(
-        String imageVersionId,
-        String type) {
+        @OutputCustomType.Parameter("imageVersionId") String imageVersionId,
+        @OutputCustomType.Parameter("type") String type) {
         this.imageVersionId = imageVersionId;
         this.type = type;
     }

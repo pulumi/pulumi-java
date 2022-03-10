@@ -35,12 +35,12 @@ public final class CmdkeySetupResponse {
      */
     private final Object userName;
 
-    @OutputCustomType.Constructor({"password","targetName","type","userName"})
+    @OutputCustomType.Constructor
     private CmdkeySetupResponse(
-        Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password,
-        Object targetName,
-        String type,
-        Object userName) {
+        @OutputCustomType.Parameter("password") Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password,
+        @OutputCustomType.Parameter("targetName") Object targetName,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("userName") Object userName) {
         this.password = password;
         this.targetName = targetName;
         this.type = type;

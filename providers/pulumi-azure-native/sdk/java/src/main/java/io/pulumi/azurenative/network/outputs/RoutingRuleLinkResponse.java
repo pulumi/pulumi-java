@@ -17,8 +17,8 @@ public final class RoutingRuleLinkResponse {
      */
     private final @Nullable String id;
 
-    @OutputCustomType.Constructor({"id"})
-    private RoutingRuleLinkResponse(@Nullable String id) {
+    @OutputCustomType.Constructor
+    private RoutingRuleLinkResponse(@OutputCustomType.Parameter("id") @Nullable String id) {
         this.id = id;
     }
 

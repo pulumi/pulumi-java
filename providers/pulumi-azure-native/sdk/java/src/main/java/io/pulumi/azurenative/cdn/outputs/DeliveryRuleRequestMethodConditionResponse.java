@@ -22,10 +22,10 @@ public final class DeliveryRuleRequestMethodConditionResponse {
      */
     private final RequestMethodMatchConditionParametersResponse parameters;
 
-    @OutputCustomType.Constructor({"name","parameters"})
+    @OutputCustomType.Constructor
     private DeliveryRuleRequestMethodConditionResponse(
-        String name,
-        RequestMethodMatchConditionParametersResponse parameters) {
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("parameters") RequestMethodMatchConditionParametersResponse parameters) {
         this.name = name;
         this.parameters = parameters;
     }

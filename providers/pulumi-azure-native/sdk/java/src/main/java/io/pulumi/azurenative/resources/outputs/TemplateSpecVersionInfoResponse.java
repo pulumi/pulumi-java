@@ -25,11 +25,11 @@ public final class TemplateSpecVersionInfoResponse {
      */
     private final String timeModified;
 
-    @OutputCustomType.Constructor({"description","timeCreated","timeModified"})
+    @OutputCustomType.Constructor
     private TemplateSpecVersionInfoResponse(
-        String description,
-        String timeCreated,
-        String timeModified) {
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("timeCreated") String timeCreated,
+        @OutputCustomType.Parameter("timeModified") String timeModified) {
         this.description = description;
         this.timeCreated = timeCreated;
         this.timeModified = timeModified;

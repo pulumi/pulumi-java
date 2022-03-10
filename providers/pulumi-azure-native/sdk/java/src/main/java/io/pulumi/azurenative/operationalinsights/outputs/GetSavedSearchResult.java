@@ -70,19 +70,19 @@ public final class GetSavedSearchResult {
      */
     private final @Nullable Double version;
 
-    @OutputCustomType.Constructor({"category","displayName","etag","functionAlias","functionParameters","id","name","query","tags","type","version"})
+    @OutputCustomType.Constructor
     private GetSavedSearchResult(
-        String category,
-        String displayName,
-        @Nullable String etag,
-        @Nullable String functionAlias,
-        @Nullable String functionParameters,
-        String id,
-        String name,
-        String query,
-        @Nullable List<TagResponse> tags,
-        String type,
-        @Nullable Double version) {
+        @OutputCustomType.Parameter("category") String category,
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("etag") @Nullable String etag,
+        @OutputCustomType.Parameter("functionAlias") @Nullable String functionAlias,
+        @OutputCustomType.Parameter("functionParameters") @Nullable String functionParameters,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("query") String query,
+        @OutputCustomType.Parameter("tags") @Nullable List<TagResponse> tags,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("version") @Nullable Double version) {
         this.category = category;
         this.displayName = displayName;
         this.etag = etag;

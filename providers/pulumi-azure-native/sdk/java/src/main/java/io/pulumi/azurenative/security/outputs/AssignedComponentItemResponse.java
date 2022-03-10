@@ -17,8 +17,8 @@ public final class AssignedComponentItemResponse {
      */
     private final @Nullable String key;
 
-    @OutputCustomType.Constructor({"key"})
-    private AssignedComponentItemResponse(@Nullable String key) {
+    @OutputCustomType.Constructor
+    private AssignedComponentItemResponse(@OutputCustomType.Parameter("key") @Nullable String key) {
         this.key = key;
     }
 

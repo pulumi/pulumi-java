@@ -21,10 +21,10 @@ public final class RedshiftUnloadSettingsResponse {
      */
     private final LinkedServiceReferenceResponse s3LinkedServiceName;
 
-    @OutputCustomType.Constructor({"bucketName","s3LinkedServiceName"})
+    @OutputCustomType.Constructor
     private RedshiftUnloadSettingsResponse(
-        Object bucketName,
-        LinkedServiceReferenceResponse s3LinkedServiceName) {
+        @OutputCustomType.Parameter("bucketName") Object bucketName,
+        @OutputCustomType.Parameter("s3LinkedServiceName") LinkedServiceReferenceResponse s3LinkedServiceName) {
         this.bucketName = bucketName;
         this.s3LinkedServiceName = s3LinkedServiceName;
     }

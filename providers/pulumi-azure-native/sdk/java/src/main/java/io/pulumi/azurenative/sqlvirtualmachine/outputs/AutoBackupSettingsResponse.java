@@ -64,18 +64,18 @@ public final class AutoBackupSettingsResponse {
      */
     private final @Nullable String storageAccountUrl;
 
-    @OutputCustomType.Constructor({"backupScheduleType","backupSystemDbs","enable","enableEncryption","fullBackupFrequency","fullBackupStartTime","fullBackupWindowHours","logBackupFrequency","retentionPeriod","storageAccountUrl"})
+    @OutputCustomType.Constructor
     private AutoBackupSettingsResponse(
-        @Nullable String backupScheduleType,
-        @Nullable Boolean backupSystemDbs,
-        @Nullable Boolean enable,
-        @Nullable Boolean enableEncryption,
-        @Nullable String fullBackupFrequency,
-        @Nullable Integer fullBackupStartTime,
-        @Nullable Integer fullBackupWindowHours,
-        @Nullable Integer logBackupFrequency,
-        @Nullable Integer retentionPeriod,
-        @Nullable String storageAccountUrl) {
+        @OutputCustomType.Parameter("backupScheduleType") @Nullable String backupScheduleType,
+        @OutputCustomType.Parameter("backupSystemDbs") @Nullable Boolean backupSystemDbs,
+        @OutputCustomType.Parameter("enable") @Nullable Boolean enable,
+        @OutputCustomType.Parameter("enableEncryption") @Nullable Boolean enableEncryption,
+        @OutputCustomType.Parameter("fullBackupFrequency") @Nullable String fullBackupFrequency,
+        @OutputCustomType.Parameter("fullBackupStartTime") @Nullable Integer fullBackupStartTime,
+        @OutputCustomType.Parameter("fullBackupWindowHours") @Nullable Integer fullBackupWindowHours,
+        @OutputCustomType.Parameter("logBackupFrequency") @Nullable Integer logBackupFrequency,
+        @OutputCustomType.Parameter("retentionPeriod") @Nullable Integer retentionPeriod,
+        @OutputCustomType.Parameter("storageAccountUrl") @Nullable String storageAccountUrl) {
         this.backupScheduleType = backupScheduleType;
         this.backupSystemDbs = backupSystemDbs;
         this.enable = enable;

@@ -56,16 +56,16 @@ public final class KustomizationDefinitionResponse {
      */
     private final @Nullable String validation;
 
-    @OutputCustomType.Constructor({"dependsOn","force","path","prune","retryIntervalInSeconds","syncIntervalInSeconds","timeoutInSeconds","validation"})
+    @OutputCustomType.Constructor
     private KustomizationDefinitionResponse(
-        @Nullable List<DependsOnDefinitionResponse> dependsOn,
-        @Nullable Boolean force,
-        @Nullable String path,
-        @Nullable Boolean prune,
-        @Nullable Double retryIntervalInSeconds,
-        @Nullable Double syncIntervalInSeconds,
-        @Nullable Double timeoutInSeconds,
-        @Nullable String validation) {
+        @OutputCustomType.Parameter("dependsOn") @Nullable List<DependsOnDefinitionResponse> dependsOn,
+        @OutputCustomType.Parameter("force") @Nullable Boolean force,
+        @OutputCustomType.Parameter("path") @Nullable String path,
+        @OutputCustomType.Parameter("prune") @Nullable Boolean prune,
+        @OutputCustomType.Parameter("retryIntervalInSeconds") @Nullable Double retryIntervalInSeconds,
+        @OutputCustomType.Parameter("syncIntervalInSeconds") @Nullable Double syncIntervalInSeconds,
+        @OutputCustomType.Parameter("timeoutInSeconds") @Nullable Double timeoutInSeconds,
+        @OutputCustomType.Parameter("validation") @Nullable String validation) {
         this.dependsOn = dependsOn;
         this.force = force;
         this.path = path;

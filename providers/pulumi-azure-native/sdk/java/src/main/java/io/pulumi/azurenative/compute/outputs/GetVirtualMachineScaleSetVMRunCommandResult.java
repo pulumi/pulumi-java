@@ -99,24 +99,24 @@ public final class GetVirtualMachineScaleSetVMRunCommandResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"asyncExecution","errorBlobUri","id","instanceView","location","name","outputBlobUri","parameters","protectedParameters","provisioningState","runAsPassword","runAsUser","source","tags","timeoutInSeconds","type"})
+    @OutputCustomType.Constructor
     private GetVirtualMachineScaleSetVMRunCommandResult(
-        @Nullable Boolean asyncExecution,
-        @Nullable String errorBlobUri,
-        String id,
-        VirtualMachineRunCommandInstanceViewResponse instanceView,
-        String location,
-        String name,
-        @Nullable String outputBlobUri,
-        @Nullable List<RunCommandInputParameterResponse> parameters,
-        @Nullable List<RunCommandInputParameterResponse> protectedParameters,
-        String provisioningState,
-        @Nullable String runAsPassword,
-        @Nullable String runAsUser,
-        @Nullable VirtualMachineRunCommandScriptSourceResponse source,
-        @Nullable Map<String,String> tags,
-        @Nullable Integer timeoutInSeconds,
-        String type) {
+        @OutputCustomType.Parameter("asyncExecution") @Nullable Boolean asyncExecution,
+        @OutputCustomType.Parameter("errorBlobUri") @Nullable String errorBlobUri,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("instanceView") VirtualMachineRunCommandInstanceViewResponse instanceView,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("outputBlobUri") @Nullable String outputBlobUri,
+        @OutputCustomType.Parameter("parameters") @Nullable List<RunCommandInputParameterResponse> parameters,
+        @OutputCustomType.Parameter("protectedParameters") @Nullable List<RunCommandInputParameterResponse> protectedParameters,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("runAsPassword") @Nullable String runAsPassword,
+        @OutputCustomType.Parameter("runAsUser") @Nullable String runAsUser,
+        @OutputCustomType.Parameter("source") @Nullable VirtualMachineRunCommandScriptSourceResponse source,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("timeoutInSeconds") @Nullable Integer timeoutInSeconds,
+        @OutputCustomType.Parameter("type") String type) {
         this.asyncExecution = asyncExecution;
         this.errorBlobUri = errorBlobUri;
         this.id = id;

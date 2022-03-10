@@ -29,11 +29,11 @@ public final class SettingsResponse {
      */
     private final @Nullable String timeZone;
 
-    @OutputCustomType.Constructor({"isCompression","issqlcompression","timeZone"})
+    @OutputCustomType.Constructor
     private SettingsResponse(
-        @Nullable Boolean isCompression,
-        @Nullable Boolean issqlcompression,
-        @Nullable String timeZone) {
+        @OutputCustomType.Parameter("isCompression") @Nullable Boolean isCompression,
+        @OutputCustomType.Parameter("issqlcompression") @Nullable Boolean issqlcompression,
+        @OutputCustomType.Parameter("timeZone") @Nullable String timeZone) {
         this.isCompression = isCompression;
         this.issqlcompression = issqlcompression;
         this.timeZone = timeZone;

@@ -53,15 +53,15 @@ public final class AzureIaaSVMProtectionPolicyResponse {
      */
     private final @Nullable String timeZone;
 
-    @OutputCustomType.Constructor({"backupManagementType","instantRPDetails","instantRpRetentionRangeInDays","protectedItemsCount","retentionPolicy","schedulePolicy","timeZone"})
+    @OutputCustomType.Constructor
     private AzureIaaSVMProtectionPolicyResponse(
-        String backupManagementType,
-        @Nullable InstantRPAdditionalDetailsResponse instantRPDetails,
-        @Nullable Integer instantRpRetentionRangeInDays,
-        @Nullable Integer protectedItemsCount,
-        @Nullable Either<LongTermRetentionPolicyResponse,SimpleRetentionPolicyResponse> retentionPolicy,
-        @Nullable Object schedulePolicy,
-        @Nullable String timeZone) {
+        @OutputCustomType.Parameter("backupManagementType") String backupManagementType,
+        @OutputCustomType.Parameter("instantRPDetails") @Nullable InstantRPAdditionalDetailsResponse instantRPDetails,
+        @OutputCustomType.Parameter("instantRpRetentionRangeInDays") @Nullable Integer instantRpRetentionRangeInDays,
+        @OutputCustomType.Parameter("protectedItemsCount") @Nullable Integer protectedItemsCount,
+        @OutputCustomType.Parameter("retentionPolicy") @Nullable Either<LongTermRetentionPolicyResponse,SimpleRetentionPolicyResponse> retentionPolicy,
+        @OutputCustomType.Parameter("schedulePolicy") @Nullable Object schedulePolicy,
+        @OutputCustomType.Parameter("timeZone") @Nullable String timeZone) {
         this.backupManagementType = backupManagementType;
         this.instantRPDetails = instantRPDetails;
         this.instantRpRetentionRangeInDays = instantRpRetentionRangeInDays;

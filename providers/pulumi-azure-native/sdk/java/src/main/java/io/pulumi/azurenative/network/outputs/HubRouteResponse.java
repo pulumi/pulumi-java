@@ -36,13 +36,13 @@ public final class HubRouteResponse {
      */
     private final String nextHopType;
 
-    @OutputCustomType.Constructor({"destinationType","destinations","name","nextHop","nextHopType"})
+    @OutputCustomType.Constructor
     private HubRouteResponse(
-        String destinationType,
-        List<String> destinations,
-        String name,
-        String nextHop,
-        String nextHopType) {
+        @OutputCustomType.Parameter("destinationType") String destinationType,
+        @OutputCustomType.Parameter("destinations") List<String> destinations,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("nextHop") String nextHop,
+        @OutputCustomType.Parameter("nextHopType") String nextHopType) {
         this.destinationType = destinationType;
         this.destinations = destinations;
         this.name = name;

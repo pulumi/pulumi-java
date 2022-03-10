@@ -24,10 +24,10 @@ public final class HttpScaleRuleResponse {
      */
     private final @Nullable Map<String,String> metadata;
 
-    @OutputCustomType.Constructor({"auth","metadata"})
+    @OutputCustomType.Constructor
     private HttpScaleRuleResponse(
-        @Nullable List<ScaleRuleAuthResponse> auth,
-        @Nullable Map<String,String> metadata) {
+        @OutputCustomType.Parameter("auth") @Nullable List<ScaleRuleAuthResponse> auth,
+        @OutputCustomType.Parameter("metadata") @Nullable Map<String,String> metadata) {
         this.auth = auth;
         this.metadata = metadata;
     }

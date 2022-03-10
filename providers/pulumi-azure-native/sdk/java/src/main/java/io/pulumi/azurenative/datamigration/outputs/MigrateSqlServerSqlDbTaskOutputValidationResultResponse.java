@@ -39,13 +39,13 @@ public final class MigrateSqlServerSqlDbTaskOutputValidationResultResponse {
      */
     private final @Nullable Map<String,MigrationValidationDatabaseSummaryResultResponse> summaryResults;
 
-    @OutputCustomType.Constructor({"id","migrationId","resultType","status","summaryResults"})
+    @OutputCustomType.Constructor
     private MigrateSqlServerSqlDbTaskOutputValidationResultResponse(
-        String id,
-        String migrationId,
-        String resultType,
-        String status,
-        @Nullable Map<String,MigrationValidationDatabaseSummaryResultResponse> summaryResults) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("migrationId") String migrationId,
+        @OutputCustomType.Parameter("resultType") String resultType,
+        @OutputCustomType.Parameter("status") String status,
+        @OutputCustomType.Parameter("summaryResults") @Nullable Map<String,MigrationValidationDatabaseSummaryResultResponse> summaryResults) {
         this.id = id;
         this.migrationId = migrationId;
         this.resultType = resultType;

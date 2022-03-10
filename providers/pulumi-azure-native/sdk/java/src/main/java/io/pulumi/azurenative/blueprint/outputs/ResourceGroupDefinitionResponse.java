@@ -49,15 +49,15 @@ public final class ResourceGroupDefinitionResponse {
      */
     private final @Nullable Map<String,String> tags;
 
-    @OutputCustomType.Constructor({"dependsOn","description","displayName","location","name","strongType","tags"})
+    @OutputCustomType.Constructor
     private ResourceGroupDefinitionResponse(
-        @Nullable List<String> dependsOn,
-        @Nullable String description,
-        @Nullable String displayName,
-        @Nullable String location,
-        @Nullable String name,
-        @Nullable String strongType,
-        @Nullable Map<String,String> tags) {
+        @OutputCustomType.Parameter("dependsOn") @Nullable List<String> dependsOn,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("displayName") @Nullable String displayName,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("strongType") @Nullable String strongType,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags) {
         this.dependsOn = dependsOn;
         this.description = description;
         this.displayName = displayName;

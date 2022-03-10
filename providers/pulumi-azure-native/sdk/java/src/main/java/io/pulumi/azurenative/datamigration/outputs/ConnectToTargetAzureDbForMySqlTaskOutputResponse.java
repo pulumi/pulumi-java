@@ -37,13 +37,13 @@ public final class ConnectToTargetAzureDbForMySqlTaskOutputResponse {
      */
     private final List<ReportableExceptionResponse> validationErrors;
 
-    @OutputCustomType.Constructor({"databases","id","serverVersion","targetServerBrandVersion","validationErrors"})
+    @OutputCustomType.Constructor
     private ConnectToTargetAzureDbForMySqlTaskOutputResponse(
-        List<String> databases,
-        String id,
-        String serverVersion,
-        String targetServerBrandVersion,
-        List<ReportableExceptionResponse> validationErrors) {
+        @OutputCustomType.Parameter("databases") List<String> databases,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("serverVersion") String serverVersion,
+        @OutputCustomType.Parameter("targetServerBrandVersion") String targetServerBrandVersion,
+        @OutputCustomType.Parameter("validationErrors") List<ReportableExceptionResponse> validationErrors) {
         this.databases = databases;
         this.id = id;
         this.serverVersion = serverVersion;

@@ -35,13 +35,13 @@ public final class LinkedIntegrationRuntimeResponse {
      */
     private final String subscriptionId;
 
-    @OutputCustomType.Constructor({"createTime","dataFactoryLocation","dataFactoryName","name","subscriptionId"})
+    @OutputCustomType.Constructor
     private LinkedIntegrationRuntimeResponse(
-        String createTime,
-        String dataFactoryLocation,
-        String dataFactoryName,
-        String name,
-        String subscriptionId) {
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("dataFactoryLocation") String dataFactoryLocation,
+        @OutputCustomType.Parameter("dataFactoryName") String dataFactoryName,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("subscriptionId") String subscriptionId) {
         this.createTime = createTime;
         this.dataFactoryLocation = dataFactoryLocation;
         this.dataFactoryName = dataFactoryName;

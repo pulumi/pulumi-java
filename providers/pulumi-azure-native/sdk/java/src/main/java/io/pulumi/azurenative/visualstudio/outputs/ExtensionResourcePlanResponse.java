@@ -37,13 +37,13 @@ public final class ExtensionResourcePlanResponse {
      */
     private final @Nullable String version;
 
-    @OutputCustomType.Constructor({"name","product","promotionCode","publisher","version"})
+    @OutputCustomType.Constructor
     private ExtensionResourcePlanResponse(
-        @Nullable String name,
-        @Nullable String product,
-        @Nullable String promotionCode,
-        @Nullable String publisher,
-        @Nullable String version) {
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("product") @Nullable String product,
+        @OutputCustomType.Parameter("promotionCode") @Nullable String promotionCode,
+        @OutputCustomType.Parameter("publisher") @Nullable String publisher,
+        @OutputCustomType.Parameter("version") @Nullable String version) {
         this.name = name;
         this.product = product;
         this.promotionCode = promotionCode;

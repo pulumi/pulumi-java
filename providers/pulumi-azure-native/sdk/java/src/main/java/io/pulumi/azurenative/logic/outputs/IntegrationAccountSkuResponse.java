@@ -15,8 +15,8 @@ public final class IntegrationAccountSkuResponse {
      */
     private final String name;
 
-    @OutputCustomType.Constructor({"name"})
-    private IntegrationAccountSkuResponse(String name) {
+    @OutputCustomType.Constructor
+    private IntegrationAccountSkuResponse(@OutputCustomType.Parameter("name") String name) {
         this.name = name;
     }
 

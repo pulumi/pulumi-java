@@ -27,11 +27,11 @@ public final class ForwardProxyResponse {
      */
     private final @Nullable String customProtoHeaderName;
 
-    @OutputCustomType.Constructor({"convention","customHostHeaderName","customProtoHeaderName"})
+    @OutputCustomType.Constructor
     private ForwardProxyResponse(
-        @Nullable String convention,
-        @Nullable String customHostHeaderName,
-        @Nullable String customProtoHeaderName) {
+        @OutputCustomType.Parameter("convention") @Nullable String convention,
+        @OutputCustomType.Parameter("customHostHeaderName") @Nullable String customHostHeaderName,
+        @OutputCustomType.Parameter("customProtoHeaderName") @Nullable String customProtoHeaderName) {
         this.convention = convention;
         this.customHostHeaderName = customHostHeaderName;
         this.customProtoHeaderName = customProtoHeaderName;

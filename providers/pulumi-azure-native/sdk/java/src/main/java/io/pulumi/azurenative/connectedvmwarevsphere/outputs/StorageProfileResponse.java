@@ -23,10 +23,10 @@ public final class StorageProfileResponse {
      */
     private final List<VirtualSCSIControllerResponse> scsiControllers;
 
-    @OutputCustomType.Constructor({"disks","scsiControllers"})
+    @OutputCustomType.Constructor
     private StorageProfileResponse(
-        @Nullable List<VirtualDiskResponse> disks,
-        List<VirtualSCSIControllerResponse> scsiControllers) {
+        @OutputCustomType.Parameter("disks") @Nullable List<VirtualDiskResponse> disks,
+        @OutputCustomType.Parameter("scsiControllers") List<VirtualSCSIControllerResponse> scsiControllers) {
         this.disks = disks;
         this.scsiControllers = scsiControllers;
     }

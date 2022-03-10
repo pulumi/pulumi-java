@@ -29,11 +29,11 @@ public final class AddressPropertiesResponse {
      */
     private final @Nullable ShippingAddressResponse shippingAddress;
 
-    @OutputCustomType.Constructor({"addressValidationStatus","contactDetails","shippingAddress"})
+    @OutputCustomType.Constructor
     private AddressPropertiesResponse(
-        String addressValidationStatus,
-        ContactDetailsResponse contactDetails,
-        @Nullable ShippingAddressResponse shippingAddress) {
+        @OutputCustomType.Parameter("addressValidationStatus") String addressValidationStatus,
+        @OutputCustomType.Parameter("contactDetails") ContactDetailsResponse contactDetails,
+        @OutputCustomType.Parameter("shippingAddress") @Nullable ShippingAddressResponse shippingAddress) {
         this.addressValidationStatus = addressValidationStatus;
         this.contactDetails = contactDetails;
         this.shippingAddress = shippingAddress;

@@ -22,10 +22,10 @@ public final class OpenIdConnectClientCredentialResponse {
      */
     private final @Nullable String method;
 
-    @OutputCustomType.Constructor({"clientSecretSettingName","method"})
+    @OutputCustomType.Constructor
     private OpenIdConnectClientCredentialResponse(
-        @Nullable String clientSecretSettingName,
-        @Nullable String method) {
+        @OutputCustomType.Parameter("clientSecretSettingName") @Nullable String clientSecretSettingName,
+        @OutputCustomType.Parameter("method") @Nullable String method) {
         this.clientSecretSettingName = clientSecretSettingName;
         this.method = method;
     }

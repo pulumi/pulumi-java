@@ -47,15 +47,15 @@ public final class UserInfoResponse {
      */
     private final @Nullable String userTenantId;
 
-    @OutputCustomType.Constructor({"userAltSecId","userIdp","userIss","userName","userObjectId","userPuId","userTenantId"})
+    @OutputCustomType.Constructor
     private UserInfoResponse(
-        @Nullable String userAltSecId,
-        @Nullable String userIdp,
-        @Nullable String userIss,
-        @Nullable String userName,
-        @Nullable String userObjectId,
-        @Nullable String userPuId,
-        @Nullable String userTenantId) {
+        @OutputCustomType.Parameter("userAltSecId") @Nullable String userAltSecId,
+        @OutputCustomType.Parameter("userIdp") @Nullable String userIdp,
+        @OutputCustomType.Parameter("userIss") @Nullable String userIss,
+        @OutputCustomType.Parameter("userName") @Nullable String userName,
+        @OutputCustomType.Parameter("userObjectId") @Nullable String userObjectId,
+        @OutputCustomType.Parameter("userPuId") @Nullable String userPuId,
+        @OutputCustomType.Parameter("userTenantId") @Nullable String userTenantId) {
         this.userAltSecId = userAltSecId;
         this.userIdp = userIdp;
         this.userIss = userIss;

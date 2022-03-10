@@ -15,8 +15,8 @@ public final class ServicePlacementPolicyDescriptionResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"type"})
-    private ServicePlacementPolicyDescriptionResponse(String type) {
+    @OutputCustomType.Constructor
+    private ServicePlacementPolicyDescriptionResponse(@OutputCustomType.Parameter("type") String type) {
         this.type = type;
     }
 

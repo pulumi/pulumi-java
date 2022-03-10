@@ -27,11 +27,11 @@ public final class TcpConfigResponse {
      */
     private final Integer port;
 
-    @OutputCustomType.Constructor({"destination","name","port"})
+    @OutputCustomType.Constructor
     private TcpConfigResponse(
-        GatewayDestinationResponse destination,
-        String name,
-        Integer port) {
+        @OutputCustomType.Parameter("destination") GatewayDestinationResponse destination,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("port") Integer port) {
         this.destination = destination;
         this.name = name;
         this.port = port;

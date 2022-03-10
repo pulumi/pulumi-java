@@ -35,16 +35,16 @@ public final class VMExtensionResponse {
     private final String type;
     private final @Nullable String typeHandlerVersion;
 
-    @OutputCustomType.Constructor({"autoUpgradeMinorVersion","name","protectedSettings","provisionAfterExtensions","publisher","settings","type","typeHandlerVersion"})
+    @OutputCustomType.Constructor
     private VMExtensionResponse(
-        @Nullable Boolean autoUpgradeMinorVersion,
-        String name,
-        @Nullable Object protectedSettings,
-        @Nullable List<String> provisionAfterExtensions,
-        String publisher,
-        @Nullable Object settings,
-        String type,
-        @Nullable String typeHandlerVersion) {
+        @OutputCustomType.Parameter("autoUpgradeMinorVersion") @Nullable Boolean autoUpgradeMinorVersion,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("protectedSettings") @Nullable Object protectedSettings,
+        @OutputCustomType.Parameter("provisionAfterExtensions") @Nullable List<String> provisionAfterExtensions,
+        @OutputCustomType.Parameter("publisher") String publisher,
+        @OutputCustomType.Parameter("settings") @Nullable Object settings,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("typeHandlerVersion") @Nullable String typeHandlerVersion) {
         this.autoUpgradeMinorVersion = autoUpgradeMinorVersion;
         this.name = name;
         this.protectedSettings = protectedSettings;

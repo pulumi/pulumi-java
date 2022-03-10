@@ -27,11 +27,11 @@ public final class ValidateMigrationInputSqlServerSqlMISyncTaskOutputResponse {
      */
     private final List<ReportableExceptionResponse> validationErrors;
 
-    @OutputCustomType.Constructor({"id","name","validationErrors"})
+    @OutputCustomType.Constructor
     private ValidateMigrationInputSqlServerSqlMISyncTaskOutputResponse(
-        String id,
-        String name,
-        List<ReportableExceptionResponse> validationErrors) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("validationErrors") List<ReportableExceptionResponse> validationErrors) {
         this.id = id;
         this.name = name;
         this.validationErrors = validationErrors;

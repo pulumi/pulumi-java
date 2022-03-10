@@ -39,13 +39,13 @@ public final class AverageLoadScalingTriggerResponse {
      */
     private final Double upperLoadThreshold;
 
-    @OutputCustomType.Constructor({"kind","lowerLoadThreshold","metric","scaleIntervalInSeconds","upperLoadThreshold"})
+    @OutputCustomType.Constructor
     private AverageLoadScalingTriggerResponse(
-        String kind,
-        Double lowerLoadThreshold,
-        AutoScalingResourceMetricResponse metric,
-        Integer scaleIntervalInSeconds,
-        Double upperLoadThreshold) {
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("lowerLoadThreshold") Double lowerLoadThreshold,
+        @OutputCustomType.Parameter("metric") AutoScalingResourceMetricResponse metric,
+        @OutputCustomType.Parameter("scaleIntervalInSeconds") Integer scaleIntervalInSeconds,
+        @OutputCustomType.Parameter("upperLoadThreshold") Double upperLoadThreshold) {
         this.kind = kind;
         this.lowerLoadThreshold = lowerLoadThreshold;
         this.metric = metric;

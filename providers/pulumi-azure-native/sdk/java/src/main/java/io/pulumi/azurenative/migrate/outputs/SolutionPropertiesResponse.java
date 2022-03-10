@@ -51,15 +51,15 @@ public final class SolutionPropertiesResponse {
      */
     private final @Nullable String tool;
 
-    @OutputCustomType.Constructor({"cleanupState","details","goal","purpose","status","summary","tool"})
+    @OutputCustomType.Constructor
     private SolutionPropertiesResponse(
-        @Nullable String cleanupState,
-        @Nullable SolutionDetailsResponse details,
-        @Nullable String goal,
-        @Nullable String purpose,
-        @Nullable String status,
-        @Nullable Either<DatabasesSolutionSummaryResponse,ServersSolutionSummaryResponse> summary,
-        @Nullable String tool) {
+        @OutputCustomType.Parameter("cleanupState") @Nullable String cleanupState,
+        @OutputCustomType.Parameter("details") @Nullable SolutionDetailsResponse details,
+        @OutputCustomType.Parameter("goal") @Nullable String goal,
+        @OutputCustomType.Parameter("purpose") @Nullable String purpose,
+        @OutputCustomType.Parameter("status") @Nullable String status,
+        @OutputCustomType.Parameter("summary") @Nullable Either<DatabasesSolutionSummaryResponse,ServersSolutionSummaryResponse> summary,
+        @OutputCustomType.Parameter("tool") @Nullable String tool) {
         this.cleanupState = cleanupState;
         this.details = details;
         this.goal = goal;

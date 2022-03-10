@@ -38,13 +38,13 @@ public final class OpenShiftManagedClusterAADIdentityProviderResponse {
      */
     private final @Nullable String tenantId;
 
-    @OutputCustomType.Constructor({"clientId","customerAdminGroupId","kind","secret","tenantId"})
+    @OutputCustomType.Constructor
     private OpenShiftManagedClusterAADIdentityProviderResponse(
-        @Nullable String clientId,
-        @Nullable String customerAdminGroupId,
-        String kind,
-        @Nullable String secret,
-        @Nullable String tenantId) {
+        @OutputCustomType.Parameter("clientId") @Nullable String clientId,
+        @OutputCustomType.Parameter("customerAdminGroupId") @Nullable String customerAdminGroupId,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("secret") @Nullable String secret,
+        @OutputCustomType.Parameter("tenantId") @Nullable String tenantId) {
         this.clientId = clientId;
         this.customerAdminGroupId = customerAdminGroupId;
         this.kind = kind;

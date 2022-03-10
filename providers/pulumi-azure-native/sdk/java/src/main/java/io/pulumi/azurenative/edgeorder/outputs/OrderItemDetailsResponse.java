@@ -100,24 +100,24 @@ public final class OrderItemDetailsResponse {
      */
     private final ReverseShippingDetailsResponse reverseShippingDetails;
 
-    @OutputCustomType.Constructor({"cancellationReason","cancellationStatus","currentStage","deletionStatus","error","forwardShippingDetails","managementRpDetails","managementRpDetailsList","notificationEmailList","orderItemStageHistory","orderItemType","preferences","productDetails","returnReason","returnStatus","reverseShippingDetails"})
+    @OutputCustomType.Constructor
     private OrderItemDetailsResponse(
-        String cancellationReason,
-        String cancellationStatus,
-        StageDetailsResponse currentStage,
-        String deletionStatus,
-        ErrorDetailResponse error,
-        ForwardShippingDetailsResponse forwardShippingDetails,
-        ResourceProviderDetailsResponse managementRpDetails,
-        List<ResourceProviderDetailsResponse> managementRpDetailsList,
-        @Nullable List<String> notificationEmailList,
-        List<StageDetailsResponse> orderItemStageHistory,
-        String orderItemType,
-        @Nullable PreferencesResponse preferences,
-        ProductDetailsResponse productDetails,
-        String returnReason,
-        String returnStatus,
-        ReverseShippingDetailsResponse reverseShippingDetails) {
+        @OutputCustomType.Parameter("cancellationReason") String cancellationReason,
+        @OutputCustomType.Parameter("cancellationStatus") String cancellationStatus,
+        @OutputCustomType.Parameter("currentStage") StageDetailsResponse currentStage,
+        @OutputCustomType.Parameter("deletionStatus") String deletionStatus,
+        @OutputCustomType.Parameter("error") ErrorDetailResponse error,
+        @OutputCustomType.Parameter("forwardShippingDetails") ForwardShippingDetailsResponse forwardShippingDetails,
+        @OutputCustomType.Parameter("managementRpDetails") ResourceProviderDetailsResponse managementRpDetails,
+        @OutputCustomType.Parameter("managementRpDetailsList") List<ResourceProviderDetailsResponse> managementRpDetailsList,
+        @OutputCustomType.Parameter("notificationEmailList") @Nullable List<String> notificationEmailList,
+        @OutputCustomType.Parameter("orderItemStageHistory") List<StageDetailsResponse> orderItemStageHistory,
+        @OutputCustomType.Parameter("orderItemType") String orderItemType,
+        @OutputCustomType.Parameter("preferences") @Nullable PreferencesResponse preferences,
+        @OutputCustomType.Parameter("productDetails") ProductDetailsResponse productDetails,
+        @OutputCustomType.Parameter("returnReason") String returnReason,
+        @OutputCustomType.Parameter("returnStatus") String returnStatus,
+        @OutputCustomType.Parameter("reverseShippingDetails") ReverseShippingDetailsResponse reverseShippingDetails) {
         this.cancellationReason = cancellationReason;
         this.cancellationStatus = cancellationStatus;
         this.currentStage = currentStage;

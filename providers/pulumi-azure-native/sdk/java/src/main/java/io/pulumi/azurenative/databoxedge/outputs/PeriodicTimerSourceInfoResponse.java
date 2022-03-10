@@ -27,11 +27,11 @@ public final class PeriodicTimerSourceInfoResponse {
      */
     private final @Nullable String topic;
 
-    @OutputCustomType.Constructor({"schedule","startTime","topic"})
+    @OutputCustomType.Constructor
     private PeriodicTimerSourceInfoResponse(
-        String schedule,
-        String startTime,
-        @Nullable String topic) {
+        @OutputCustomType.Parameter("schedule") String schedule,
+        @OutputCustomType.Parameter("startTime") String startTime,
+        @OutputCustomType.Parameter("topic") @Nullable String topic) {
         this.schedule = schedule;
         this.startTime = startTime;
         this.topic = topic;

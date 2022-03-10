@@ -15,8 +15,8 @@ public final class ApplicationTypeVersionsCleanupPolicyResponse {
      */
     private final Double maxUnusedVersionsToKeep;
 
-    @OutputCustomType.Constructor({"maxUnusedVersionsToKeep"})
-    private ApplicationTypeVersionsCleanupPolicyResponse(Double maxUnusedVersionsToKeep) {
+    @OutputCustomType.Constructor
+    private ApplicationTypeVersionsCleanupPolicyResponse(@OutputCustomType.Parameter("maxUnusedVersionsToKeep") Double maxUnusedVersionsToKeep) {
         this.maxUnusedVersionsToKeep = maxUnusedVersionsToKeep;
     }
 

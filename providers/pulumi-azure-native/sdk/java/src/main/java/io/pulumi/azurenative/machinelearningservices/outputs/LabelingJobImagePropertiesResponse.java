@@ -22,10 +22,10 @@ public final class LabelingJobImagePropertiesResponse {
      */
     private final String mediaType;
 
-    @OutputCustomType.Constructor({"annotationType","mediaType"})
+    @OutputCustomType.Constructor
     private LabelingJobImagePropertiesResponse(
-        @Nullable String annotationType,
-        String mediaType) {
+        @OutputCustomType.Parameter("annotationType") @Nullable String annotationType,
+        @OutputCustomType.Parameter("mediaType") String mediaType) {
         this.annotationType = annotationType;
         this.mediaType = mediaType;
     }

@@ -39,13 +39,13 @@ public final class LineChannelResponse {
      */
     private final String provisioningState;
 
-    @OutputCustomType.Constructor({"channelName","etag","location","properties","provisioningState"})
+    @OutputCustomType.Constructor
     private LineChannelResponse(
-        String channelName,
-        @Nullable String etag,
-        @Nullable String location,
-        @Nullable LineChannelPropertiesResponse properties,
-        String provisioningState) {
+        @OutputCustomType.Parameter("channelName") String channelName,
+        @OutputCustomType.Parameter("etag") @Nullable String etag,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("properties") @Nullable LineChannelPropertiesResponse properties,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState) {
         this.channelName = channelName;
         this.etag = etag;
         this.location = location;

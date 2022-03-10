@@ -29,11 +29,11 @@ public final class DataSourceConfigurationResponse {
      */
     private final @Nullable List<EtwProviderConfigurationResponse> providers;
 
-    @OutputCustomType.Constructor({"eventLogs","perfCounters","providers"})
+    @OutputCustomType.Constructor
     private DataSourceConfigurationResponse(
-        @Nullable List<EventLogConfigurationResponse> eventLogs,
-        @Nullable List<PerformanceCounterConfigurationResponse> perfCounters,
-        @Nullable List<EtwProviderConfigurationResponse> providers) {
+        @OutputCustomType.Parameter("eventLogs") @Nullable List<EventLogConfigurationResponse> eventLogs,
+        @OutputCustomType.Parameter("perfCounters") @Nullable List<PerformanceCounterConfigurationResponse> perfCounters,
+        @OutputCustomType.Parameter("providers") @Nullable List<EtwProviderConfigurationResponse> providers) {
         this.eventLogs = eventLogs;
         this.perfCounters = perfCounters;
         this.providers = providers;

@@ -39,12 +39,12 @@ public final class EventHandlerResponse {
      */
     private final @Nullable String userEventPattern;
 
-    @OutputCustomType.Constructor({"auth","systemEvents","urlTemplate","userEventPattern"})
+    @OutputCustomType.Constructor
     private EventHandlerResponse(
-        @Nullable UpstreamAuthSettingsResponse auth,
-        @Nullable List<String> systemEvents,
-        String urlTemplate,
-        @Nullable String userEventPattern) {
+        @OutputCustomType.Parameter("auth") @Nullable UpstreamAuthSettingsResponse auth,
+        @OutputCustomType.Parameter("systemEvents") @Nullable List<String> systemEvents,
+        @OutputCustomType.Parameter("urlTemplate") String urlTemplate,
+        @OutputCustomType.Parameter("userEventPattern") @Nullable String userEventPattern) {
         this.auth = auth;
         this.systemEvents = systemEvents;
         this.urlTemplate = urlTemplate;

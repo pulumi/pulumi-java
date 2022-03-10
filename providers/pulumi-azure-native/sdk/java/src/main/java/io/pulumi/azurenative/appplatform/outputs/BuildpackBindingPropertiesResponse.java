@@ -28,11 +28,11 @@ public final class BuildpackBindingPropertiesResponse {
      */
     private final String provisioningState;
 
-    @OutputCustomType.Constructor({"bindingType","launchProperties","provisioningState"})
+    @OutputCustomType.Constructor
     private BuildpackBindingPropertiesResponse(
-        @Nullable String bindingType,
-        @Nullable BuildpackBindingLaunchPropertiesResponse launchProperties,
-        String provisioningState) {
+        @OutputCustomType.Parameter("bindingType") @Nullable String bindingType,
+        @OutputCustomType.Parameter("launchProperties") @Nullable BuildpackBindingLaunchPropertiesResponse launchProperties,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState) {
         this.bindingType = bindingType;
         this.launchProperties = launchProperties;
         this.provisioningState = provisioningState;

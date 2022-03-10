@@ -88,19 +88,19 @@ public final class IpSecurityRestrictionResponse {
      */
     private final @Nullable Integer vnetTrafficTag;
 
-    @OutputCustomType.Constructor({"action","description","headers","ipAddress","name","priority","subnetMask","subnetTrafficTag","tag","vnetSubnetResourceId","vnetTrafficTag"})
+    @OutputCustomType.Constructor
     private IpSecurityRestrictionResponse(
-        @Nullable String action,
-        @Nullable String description,
-        @Nullable Map<String,List<String>> headers,
-        @Nullable String ipAddress,
-        @Nullable String name,
-        @Nullable Integer priority,
-        @Nullable String subnetMask,
-        @Nullable Integer subnetTrafficTag,
-        @Nullable String tag,
-        @Nullable String vnetSubnetResourceId,
-        @Nullable Integer vnetTrafficTag) {
+        @OutputCustomType.Parameter("action") @Nullable String action,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("headers") @Nullable Map<String,List<String>> headers,
+        @OutputCustomType.Parameter("ipAddress") @Nullable String ipAddress,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("priority") @Nullable Integer priority,
+        @OutputCustomType.Parameter("subnetMask") @Nullable String subnetMask,
+        @OutputCustomType.Parameter("subnetTrafficTag") @Nullable Integer subnetTrafficTag,
+        @OutputCustomType.Parameter("tag") @Nullable String tag,
+        @OutputCustomType.Parameter("vnetSubnetResourceId") @Nullable String vnetSubnetResourceId,
+        @OutputCustomType.Parameter("vnetTrafficTag") @Nullable Integer vnetTrafficTag) {
         this.action = action;
         this.description = description;
         this.headers = headers;

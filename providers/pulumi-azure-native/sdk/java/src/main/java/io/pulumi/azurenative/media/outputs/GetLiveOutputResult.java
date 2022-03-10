@@ -79,21 +79,21 @@ public final class GetLiveOutputResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"archiveWindowLength","assetName","created","description","hls","id","lastModified","manifestName","name","outputSnapTime","provisioningState","resourceState","type"})
+    @OutputCustomType.Constructor
     private GetLiveOutputResult(
-        String archiveWindowLength,
-        String assetName,
-        String created,
-        @Nullable String description,
-        @Nullable HlsResponse hls,
-        String id,
-        String lastModified,
-        @Nullable String manifestName,
-        String name,
-        @Nullable Double outputSnapTime,
-        String provisioningState,
-        String resourceState,
-        String type) {
+        @OutputCustomType.Parameter("archiveWindowLength") String archiveWindowLength,
+        @OutputCustomType.Parameter("assetName") String assetName,
+        @OutputCustomType.Parameter("created") String created,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("hls") @Nullable HlsResponse hls,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("lastModified") String lastModified,
+        @OutputCustomType.Parameter("manifestName") @Nullable String manifestName,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("outputSnapTime") @Nullable Double outputSnapTime,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("resourceState") String resourceState,
+        @OutputCustomType.Parameter("type") String type) {
         this.archiveWindowLength = archiveWindowLength;
         this.assetName = assetName;
         this.created = created;

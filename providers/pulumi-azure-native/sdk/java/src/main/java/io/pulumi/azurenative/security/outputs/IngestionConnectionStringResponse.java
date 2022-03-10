@@ -20,10 +20,10 @@ public final class IngestionConnectionStringResponse {
      */
     private final String value;
 
-    @OutputCustomType.Constructor({"location","value"})
+    @OutputCustomType.Constructor
     private IngestionConnectionStringResponse(
-        String location,
-        String value) {
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("value") String value) {
         this.location = location;
         this.value = value;
     }

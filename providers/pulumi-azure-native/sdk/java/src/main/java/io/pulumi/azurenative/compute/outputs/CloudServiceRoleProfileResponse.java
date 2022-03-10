@@ -17,8 +17,8 @@ public final class CloudServiceRoleProfileResponse {
      */
     private final @Nullable List<CloudServiceRoleProfilePropertiesResponse> roles;
 
-    @OutputCustomType.Constructor({"roles"})
-    private CloudServiceRoleProfileResponse(@Nullable List<CloudServiceRoleProfilePropertiesResponse> roles) {
+    @OutputCustomType.Constructor
+    private CloudServiceRoleProfileResponse(@OutputCustomType.Parameter("roles") @Nullable List<CloudServiceRoleProfilePropertiesResponse> roles) {
         this.roles = roles;
     }
 

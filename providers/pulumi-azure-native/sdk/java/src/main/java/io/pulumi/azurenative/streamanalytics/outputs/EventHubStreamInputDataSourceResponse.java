@@ -43,14 +43,14 @@ public final class EventHubStreamInputDataSourceResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"consumerGroupName","eventHubName","serviceBusNamespace","sharedAccessPolicyKey","sharedAccessPolicyName","type"})
+    @OutputCustomType.Constructor
     private EventHubStreamInputDataSourceResponse(
-        @Nullable String consumerGroupName,
-        @Nullable String eventHubName,
-        @Nullable String serviceBusNamespace,
-        @Nullable String sharedAccessPolicyKey,
-        @Nullable String sharedAccessPolicyName,
-        String type) {
+        @OutputCustomType.Parameter("consumerGroupName") @Nullable String consumerGroupName,
+        @OutputCustomType.Parameter("eventHubName") @Nullable String eventHubName,
+        @OutputCustomType.Parameter("serviceBusNamespace") @Nullable String serviceBusNamespace,
+        @OutputCustomType.Parameter("sharedAccessPolicyKey") @Nullable String sharedAccessPolicyKey,
+        @OutputCustomType.Parameter("sharedAccessPolicyName") @Nullable String sharedAccessPolicyName,
+        @OutputCustomType.Parameter("type") String type) {
         this.consumerGroupName = consumerGroupName;
         this.eventHubName = eventHubName;
         this.serviceBusNamespace = serviceBusNamespace;

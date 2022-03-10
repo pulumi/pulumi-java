@@ -30,12 +30,12 @@ public final class DatadogHostResponse {
      */
     private final @Nullable String name;
 
-    @OutputCustomType.Constructor({"aliases","apps","meta","name"})
+    @OutputCustomType.Constructor
     private DatadogHostResponse(
-        @Nullable List<String> aliases,
-        @Nullable List<String> apps,
-        @Nullable DatadogHostMetadataResponse meta,
-        @Nullable String name) {
+        @OutputCustomType.Parameter("aliases") @Nullable List<String> aliases,
+        @OutputCustomType.Parameter("apps") @Nullable List<String> apps,
+        @OutputCustomType.Parameter("meta") @Nullable DatadogHostMetadataResponse meta,
+        @OutputCustomType.Parameter("name") @Nullable String name) {
         this.aliases = aliases;
         this.apps = apps;
         this.meta = meta;

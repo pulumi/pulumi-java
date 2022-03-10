@@ -29,11 +29,11 @@ public final class StringBeginsWithAdvancedFilterResponse {
      */
     private final @Nullable List<String> values;
 
-    @OutputCustomType.Constructor({"key","operatorType","values"})
+    @OutputCustomType.Constructor
     private StringBeginsWithAdvancedFilterResponse(
-        @Nullable String key,
-        String operatorType,
-        @Nullable List<String> values) {
+        @OutputCustomType.Parameter("key") @Nullable String key,
+        @OutputCustomType.Parameter("operatorType") String operatorType,
+        @OutputCustomType.Parameter("values") @Nullable List<String> values) {
         this.key = key;
         this.operatorType = operatorType;
         this.values = values;

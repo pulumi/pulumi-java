@@ -113,27 +113,27 @@ public final class GetViewByScopeResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"accumulated","chart","createdOn","currency","dataSet","dateRange","displayName","eTag","id","includeMonetaryCommitment","kpis","metric","modifiedOn","name","pivots","scope","timePeriod","timeframe","type"})
+    @OutputCustomType.Constructor
     private GetViewByScopeResult(
-        @Nullable String accumulated,
-        @Nullable String chart,
-        String createdOn,
-        String currency,
-        @Nullable ReportConfigDatasetResponse dataSet,
-        String dateRange,
-        @Nullable String displayName,
-        @Nullable String eTag,
-        String id,
-        Boolean includeMonetaryCommitment,
-        @Nullable List<KpiPropertiesResponse> kpis,
-        @Nullable String metric,
-        String modifiedOn,
-        String name,
-        @Nullable List<PivotPropertiesResponse> pivots,
-        @Nullable String scope,
-        @Nullable ReportConfigTimePeriodResponse timePeriod,
-        String timeframe,
-        String type) {
+        @OutputCustomType.Parameter("accumulated") @Nullable String accumulated,
+        @OutputCustomType.Parameter("chart") @Nullable String chart,
+        @OutputCustomType.Parameter("createdOn") String createdOn,
+        @OutputCustomType.Parameter("currency") String currency,
+        @OutputCustomType.Parameter("dataSet") @Nullable ReportConfigDatasetResponse dataSet,
+        @OutputCustomType.Parameter("dateRange") String dateRange,
+        @OutputCustomType.Parameter("displayName") @Nullable String displayName,
+        @OutputCustomType.Parameter("eTag") @Nullable String eTag,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("includeMonetaryCommitment") Boolean includeMonetaryCommitment,
+        @OutputCustomType.Parameter("kpis") @Nullable List<KpiPropertiesResponse> kpis,
+        @OutputCustomType.Parameter("metric") @Nullable String metric,
+        @OutputCustomType.Parameter("modifiedOn") String modifiedOn,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("pivots") @Nullable List<PivotPropertiesResponse> pivots,
+        @OutputCustomType.Parameter("scope") @Nullable String scope,
+        @OutputCustomType.Parameter("timePeriod") @Nullable ReportConfigTimePeriodResponse timePeriod,
+        @OutputCustomType.Parameter("timeframe") String timeframe,
+        @OutputCustomType.Parameter("type") String type) {
         this.accumulated = accumulated;
         this.chart = chart;
         this.createdOn = createdOn;

@@ -36,12 +36,12 @@ public final class TemplateResponse {
      */
     private final @Nullable ScaleResponse scale;
 
-    @OutputCustomType.Constructor({"containers","dapr","revisionSuffix","scale"})
+    @OutputCustomType.Constructor
     private TemplateResponse(
-        @Nullable List<ContainerResponse> containers,
-        @Nullable DaprResponse dapr,
-        @Nullable String revisionSuffix,
-        @Nullable ScaleResponse scale) {
+        @OutputCustomType.Parameter("containers") @Nullable List<ContainerResponse> containers,
+        @OutputCustomType.Parameter("dapr") @Nullable DaprResponse dapr,
+        @OutputCustomType.Parameter("revisionSuffix") @Nullable String revisionSuffix,
+        @OutputCustomType.Parameter("scale") @Nullable ScaleResponse scale) {
         this.containers = containers;
         this.dapr = dapr;
         this.revisionSuffix = revisionSuffix;

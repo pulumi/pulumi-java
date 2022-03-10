@@ -74,20 +74,20 @@ public final class GetWebAppHybridConnectionResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"hostname","id","kind","name","port","relayArmUri","relayName","sendKeyName","sendKeyValue","serviceBusNamespace","serviceBusSuffix","type"})
+    @OutputCustomType.Constructor
     private GetWebAppHybridConnectionResult(
-        @Nullable String hostname,
-        String id,
-        @Nullable String kind,
-        String name,
-        @Nullable Integer port,
-        @Nullable String relayArmUri,
-        @Nullable String relayName,
-        @Nullable String sendKeyName,
-        @Nullable String sendKeyValue,
-        @Nullable String serviceBusNamespace,
-        @Nullable String serviceBusSuffix,
-        String type) {
+        @OutputCustomType.Parameter("hostname") @Nullable String hostname,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("kind") @Nullable String kind,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("port") @Nullable Integer port,
+        @OutputCustomType.Parameter("relayArmUri") @Nullable String relayArmUri,
+        @OutputCustomType.Parameter("relayName") @Nullable String relayName,
+        @OutputCustomType.Parameter("sendKeyName") @Nullable String sendKeyName,
+        @OutputCustomType.Parameter("sendKeyValue") @Nullable String sendKeyValue,
+        @OutputCustomType.Parameter("serviceBusNamespace") @Nullable String serviceBusNamespace,
+        @OutputCustomType.Parameter("serviceBusSuffix") @Nullable String serviceBusSuffix,
+        @OutputCustomType.Parameter("type") String type) {
         this.hostname = hostname;
         this.id = id;
         this.kind = kind;

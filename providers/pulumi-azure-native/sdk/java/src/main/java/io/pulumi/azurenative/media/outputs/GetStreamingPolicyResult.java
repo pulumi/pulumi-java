@@ -67,18 +67,18 @@ public final class GetStreamingPolicyResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"commonEncryptionCbcs","commonEncryptionCenc","created","defaultContentKeyPolicyName","envelopeEncryption","id","name","noEncryption","systemData","type"})
+    @OutputCustomType.Constructor
     private GetStreamingPolicyResult(
-        @Nullable CommonEncryptionCbcsResponse commonEncryptionCbcs,
-        @Nullable CommonEncryptionCencResponse commonEncryptionCenc,
-        String created,
-        @Nullable String defaultContentKeyPolicyName,
-        @Nullable EnvelopeEncryptionResponse envelopeEncryption,
-        String id,
-        String name,
-        @Nullable NoEncryptionResponse noEncryption,
-        SystemDataResponse systemData,
-        String type) {
+        @OutputCustomType.Parameter("commonEncryptionCbcs") @Nullable CommonEncryptionCbcsResponse commonEncryptionCbcs,
+        @OutputCustomType.Parameter("commonEncryptionCenc") @Nullable CommonEncryptionCencResponse commonEncryptionCenc,
+        @OutputCustomType.Parameter("created") String created,
+        @OutputCustomType.Parameter("defaultContentKeyPolicyName") @Nullable String defaultContentKeyPolicyName,
+        @OutputCustomType.Parameter("envelopeEncryption") @Nullable EnvelopeEncryptionResponse envelopeEncryption,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("noEncryption") @Nullable NoEncryptionResponse noEncryption,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("type") String type) {
         this.commonEncryptionCbcs = commonEncryptionCbcs;
         this.commonEncryptionCenc = commonEncryptionCenc;
         this.created = created;

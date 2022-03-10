@@ -39,13 +39,13 @@ public final class ListWebAppAzureStorageAccountsSlotResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"id","kind","name","properties","type"})
+    @OutputCustomType.Constructor
     private ListWebAppAzureStorageAccountsSlotResult(
-        String id,
-        @Nullable String kind,
-        String name,
-        Map<String,AzureStorageInfoValueResponse> properties,
-        String type) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("kind") @Nullable String kind,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("properties") Map<String,AzureStorageInfoValueResponse> properties,
+        @OutputCustomType.Parameter("type") String type) {
         this.id = id;
         this.kind = kind;
         this.name = name;

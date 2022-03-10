@@ -23,10 +23,10 @@ public final class EncryptionConfigResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"keyVaultMetaInfo","type"})
+    @OutputCustomType.Constructor
     private EncryptionConfigResponse(
-        @Nullable KeyVaultMetaInfoResponse keyVaultMetaInfo,
-        String type) {
+        @OutputCustomType.Parameter("keyVaultMetaInfo") @Nullable KeyVaultMetaInfoResponse keyVaultMetaInfo,
+        @OutputCustomType.Parameter("type") String type) {
         this.keyVaultMetaInfo = keyVaultMetaInfo;
         this.type = type;
     }

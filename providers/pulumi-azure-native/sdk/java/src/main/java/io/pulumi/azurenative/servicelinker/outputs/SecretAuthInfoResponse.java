@@ -28,11 +28,11 @@ public final class SecretAuthInfoResponse {
      */
     private final @Nullable String secret;
 
-    @OutputCustomType.Constructor({"authType","name","secret"})
+    @OutputCustomType.Constructor
     private SecretAuthInfoResponse(
-        String authType,
-        @Nullable String name,
-        @Nullable String secret) {
+        @OutputCustomType.Parameter("authType") String authType,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("secret") @Nullable String secret) {
         this.authType = authType;
         this.name = name;
         this.secret = secret;

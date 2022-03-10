@@ -27,11 +27,11 @@ public final class ApplicationClientDetailsResponse {
      */
     private final @Nullable String puid;
 
-    @OutputCustomType.Constructor({"applicationId","oid","puid"})
+    @OutputCustomType.Constructor
     private ApplicationClientDetailsResponse(
-        @Nullable String applicationId,
-        @Nullable String oid,
-        @Nullable String puid) {
+        @OutputCustomType.Parameter("applicationId") @Nullable String applicationId,
+        @OutputCustomType.Parameter("oid") @Nullable String oid,
+        @OutputCustomType.Parameter("puid") @Nullable String puid) {
         this.applicationId = applicationId;
         this.oid = oid;
         this.puid = puid;

@@ -39,13 +39,13 @@ public final class GetPrivateDnsZoneGroupResult {
      */
     private final String provisioningState;
 
-    @OutputCustomType.Constructor({"etag","id","name","privateDnsZoneConfigs","provisioningState"})
+    @OutputCustomType.Constructor
     private GetPrivateDnsZoneGroupResult(
-        String etag,
-        @Nullable String id,
-        @Nullable String name,
-        @Nullable List<PrivateDnsZoneConfigResponse> privateDnsZoneConfigs,
-        String provisioningState) {
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("privateDnsZoneConfigs") @Nullable List<PrivateDnsZoneConfigResponse> privateDnsZoneConfigs,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState) {
         this.etag = etag;
         this.id = id;
         this.name = name;

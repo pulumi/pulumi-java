@@ -85,20 +85,20 @@ public final class AzureDataLakeStoreDatasetResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"annotations","compression","description","fileName","folder","folderPath","format","linkedServiceName","parameters","schema","structure","type"})
+    @OutputCustomType.Constructor
     private AzureDataLakeStoreDatasetResponse(
-        @Nullable List<Object> annotations,
-        @Nullable DatasetCompressionResponse compression,
-        @Nullable String description,
-        @Nullable Object fileName,
-        @Nullable DatasetResponseFolder folder,
-        @Nullable Object folderPath,
-        @Nullable Object format,
-        LinkedServiceReferenceResponse linkedServiceName,
-        @Nullable Map<String,ParameterSpecificationResponse> parameters,
-        @Nullable Object schema,
-        @Nullable Object structure,
-        String type) {
+        @OutputCustomType.Parameter("annotations") @Nullable List<Object> annotations,
+        @OutputCustomType.Parameter("compression") @Nullable DatasetCompressionResponse compression,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("fileName") @Nullable Object fileName,
+        @OutputCustomType.Parameter("folder") @Nullable DatasetResponseFolder folder,
+        @OutputCustomType.Parameter("folderPath") @Nullable Object folderPath,
+        @OutputCustomType.Parameter("format") @Nullable Object format,
+        @OutputCustomType.Parameter("linkedServiceName") LinkedServiceReferenceResponse linkedServiceName,
+        @OutputCustomType.Parameter("parameters") @Nullable Map<String,ParameterSpecificationResponse> parameters,
+        @OutputCustomType.Parameter("schema") @Nullable Object schema,
+        @OutputCustomType.Parameter("structure") @Nullable Object structure,
+        @OutputCustomType.Parameter("type") String type) {
         this.annotations = annotations;
         this.compression = compression;
         this.description = description;

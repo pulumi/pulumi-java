@@ -84,22 +84,22 @@ public final class GetSensorResult {
      */
     private final @Nullable String zone;
 
-    @OutputCustomType.Constructor({"connectivityTime","dynamicLearning","id","learningMode","name","sensorStatus","sensorType","sensorVersion","systemData","tiAutomaticUpdates","tiStatus","tiVersion","type","zone"})
+    @OutputCustomType.Constructor
     private GetSensorResult(
-        String connectivityTime,
-        Boolean dynamicLearning,
-        String id,
-        Boolean learningMode,
-        String name,
-        String sensorStatus,
-        @Nullable String sensorType,
-        String sensorVersion,
-        SystemDataResponse systemData,
-        @Nullable Boolean tiAutomaticUpdates,
-        String tiStatus,
-        String tiVersion,
-        String type,
-        @Nullable String zone) {
+        @OutputCustomType.Parameter("connectivityTime") String connectivityTime,
+        @OutputCustomType.Parameter("dynamicLearning") Boolean dynamicLearning,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("learningMode") Boolean learningMode,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("sensorStatus") String sensorStatus,
+        @OutputCustomType.Parameter("sensorType") @Nullable String sensorType,
+        @OutputCustomType.Parameter("sensorVersion") String sensorVersion,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("tiAutomaticUpdates") @Nullable Boolean tiAutomaticUpdates,
+        @OutputCustomType.Parameter("tiStatus") String tiStatus,
+        @OutputCustomType.Parameter("tiVersion") String tiVersion,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("zone") @Nullable String zone) {
         this.connectivityTime = connectivityTime;
         this.dynamicLearning = dynamicLearning;
         this.id = id;

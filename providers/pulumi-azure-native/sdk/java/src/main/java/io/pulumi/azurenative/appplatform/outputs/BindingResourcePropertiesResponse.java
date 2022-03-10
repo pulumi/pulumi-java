@@ -54,16 +54,16 @@ public final class BindingResourcePropertiesResponse {
      */
     private final String updatedAt;
 
-    @OutputCustomType.Constructor({"bindingParameters","createdAt","generatedProperties","key","resourceId","resourceName","resourceType","updatedAt"})
+    @OutputCustomType.Constructor
     private BindingResourcePropertiesResponse(
-        @Nullable Map<String,Object> bindingParameters,
-        String createdAt,
-        String generatedProperties,
-        @Nullable String key,
-        @Nullable String resourceId,
-        String resourceName,
-        String resourceType,
-        String updatedAt) {
+        @OutputCustomType.Parameter("bindingParameters") @Nullable Map<String,Object> bindingParameters,
+        @OutputCustomType.Parameter("createdAt") String createdAt,
+        @OutputCustomType.Parameter("generatedProperties") String generatedProperties,
+        @OutputCustomType.Parameter("key") @Nullable String key,
+        @OutputCustomType.Parameter("resourceId") @Nullable String resourceId,
+        @OutputCustomType.Parameter("resourceName") String resourceName,
+        @OutputCustomType.Parameter("resourceType") String resourceType,
+        @OutputCustomType.Parameter("updatedAt") String updatedAt) {
         this.bindingParameters = bindingParameters;
         this.createdAt = createdAt;
         this.generatedProperties = generatedProperties;

@@ -37,13 +37,13 @@ public final class KeyVaultPropertiesResponse {
      */
     private final String lastKeyRotationTimestamp;
 
-    @OutputCustomType.Constructor({"currentVersionedKeyIdentifier","keyName","keyVaultUri","keyVersion","lastKeyRotationTimestamp"})
+    @OutputCustomType.Constructor
     private KeyVaultPropertiesResponse(
-        String currentVersionedKeyIdentifier,
-        @Nullable String keyName,
-        @Nullable String keyVaultUri,
-        @Nullable String keyVersion,
-        String lastKeyRotationTimestamp) {
+        @OutputCustomType.Parameter("currentVersionedKeyIdentifier") String currentVersionedKeyIdentifier,
+        @OutputCustomType.Parameter("keyName") @Nullable String keyName,
+        @OutputCustomType.Parameter("keyVaultUri") @Nullable String keyVaultUri,
+        @OutputCustomType.Parameter("keyVersion") @Nullable String keyVersion,
+        @OutputCustomType.Parameter("lastKeyRotationTimestamp") String lastKeyRotationTimestamp) {
         this.currentVersionedKeyIdentifier = currentVersionedKeyIdentifier;
         this.keyName = keyName;
         this.keyVaultUri = keyVaultUri;

@@ -33,12 +33,12 @@ public final class SecurityConnectorPropertiesResponseOrganizationalData {
      */
     private final @Nullable String stacksetName;
 
-    @OutputCustomType.Constructor({"excludedAccountIds","organizationMembershipType","parentHierarchyId","stacksetName"})
+    @OutputCustomType.Constructor
     private SecurityConnectorPropertiesResponseOrganizationalData(
-        @Nullable List<String> excludedAccountIds,
-        @Nullable String organizationMembershipType,
-        @Nullable String parentHierarchyId,
-        @Nullable String stacksetName) {
+        @OutputCustomType.Parameter("excludedAccountIds") @Nullable List<String> excludedAccountIds,
+        @OutputCustomType.Parameter("organizationMembershipType") @Nullable String organizationMembershipType,
+        @OutputCustomType.Parameter("parentHierarchyId") @Nullable String parentHierarchyId,
+        @OutputCustomType.Parameter("stacksetName") @Nullable String stacksetName) {
         this.excludedAccountIds = excludedAccountIds;
         this.organizationMembershipType = organizationMembershipType;
         this.parentHierarchyId = parentHierarchyId;

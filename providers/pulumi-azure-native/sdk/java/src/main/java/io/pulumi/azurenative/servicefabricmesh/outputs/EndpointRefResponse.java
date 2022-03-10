@@ -17,8 +17,8 @@ public final class EndpointRefResponse {
      */
     private final @Nullable String name;
 
-    @OutputCustomType.Constructor({"name"})
-    private EndpointRefResponse(@Nullable String name) {
+    @OutputCustomType.Constructor
+    private EndpointRefResponse(@OutputCustomType.Parameter("name") @Nullable String name) {
         this.name = name;
     }
 

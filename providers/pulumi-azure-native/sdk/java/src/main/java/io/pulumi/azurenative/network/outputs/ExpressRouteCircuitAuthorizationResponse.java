@@ -47,15 +47,15 @@ public final class ExpressRouteCircuitAuthorizationResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"authorizationKey","authorizationUseStatus","etag","id","name","provisioningState","type"})
+    @OutputCustomType.Constructor
     private ExpressRouteCircuitAuthorizationResponse(
-        @Nullable String authorizationKey,
-        @Nullable String authorizationUseStatus,
-        String etag,
-        @Nullable String id,
-        @Nullable String name,
-        String provisioningState,
-        String type) {
+        @OutputCustomType.Parameter("authorizationKey") @Nullable String authorizationKey,
+        @OutputCustomType.Parameter("authorizationUseStatus") @Nullable String authorizationUseStatus,
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("type") String type) {
         this.authorizationKey = authorizationKey;
         this.authorizationUseStatus = authorizationUseStatus;
         this.etag = etag;

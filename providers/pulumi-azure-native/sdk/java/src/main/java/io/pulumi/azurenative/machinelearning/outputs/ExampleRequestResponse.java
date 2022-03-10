@@ -24,10 +24,10 @@ public final class ExampleRequestResponse {
      */
     private final @Nullable Map<String,List<List<Object>>> inputs;
 
-    @OutputCustomType.Constructor({"globalParameters","inputs"})
+    @OutputCustomType.Constructor
     private ExampleRequestResponse(
-        @Nullable Map<String,Object> globalParameters,
-        @Nullable Map<String,List<List<Object>>> inputs) {
+        @OutputCustomType.Parameter("globalParameters") @Nullable Map<String,Object> globalParameters,
+        @OutputCustomType.Parameter("inputs") @Nullable Map<String,List<List<Object>>> inputs) {
         this.globalParameters = globalParameters;
         this.inputs = inputs;
     }

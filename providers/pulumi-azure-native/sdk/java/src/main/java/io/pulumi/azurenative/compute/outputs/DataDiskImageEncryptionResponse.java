@@ -23,10 +23,10 @@ public final class DataDiskImageEncryptionResponse {
      */
     private final Integer lun;
 
-    @OutputCustomType.Constructor({"diskEncryptionSetId","lun"})
+    @OutputCustomType.Constructor
     private DataDiskImageEncryptionResponse(
-        @Nullable String diskEncryptionSetId,
-        Integer lun) {
+        @OutputCustomType.Parameter("diskEncryptionSetId") @Nullable String diskEncryptionSetId,
+        @OutputCustomType.Parameter("lun") Integer lun) {
         this.diskEncryptionSetId = diskEncryptionSetId;
         this.lun = lun;
     }

@@ -24,10 +24,10 @@ public final class ResourceForestSettingsResponse {
      */
     private final @Nullable List<ForestTrustResponse> settings;
 
-    @OutputCustomType.Constructor({"resourceForest","settings"})
+    @OutputCustomType.Constructor
     private ResourceForestSettingsResponse(
-        @Nullable String resourceForest,
-        @Nullable List<ForestTrustResponse> settings) {
+        @OutputCustomType.Parameter("resourceForest") @Nullable String resourceForest,
+        @OutputCustomType.Parameter("settings") @Nullable List<ForestTrustResponse> settings) {
         this.resourceForest = resourceForest;
         this.settings = settings;
     }

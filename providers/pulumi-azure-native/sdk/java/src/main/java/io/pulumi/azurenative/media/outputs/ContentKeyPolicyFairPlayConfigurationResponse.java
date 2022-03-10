@@ -50,15 +50,15 @@ public final class ContentKeyPolicyFairPlayConfigurationResponse {
      */
     private final Double rentalDuration;
 
-    @OutputCustomType.Constructor({"ask","fairPlayPfx","fairPlayPfxPassword","odataType","offlineRentalConfiguration","rentalAndLeaseKeyType","rentalDuration"})
+    @OutputCustomType.Constructor
     private ContentKeyPolicyFairPlayConfigurationResponse(
-        String ask,
-        String fairPlayPfx,
-        String fairPlayPfxPassword,
-        String odataType,
-        @Nullable ContentKeyPolicyFairPlayOfflineRentalConfigurationResponse offlineRentalConfiguration,
-        String rentalAndLeaseKeyType,
-        Double rentalDuration) {
+        @OutputCustomType.Parameter("ask") String ask,
+        @OutputCustomType.Parameter("fairPlayPfx") String fairPlayPfx,
+        @OutputCustomType.Parameter("fairPlayPfxPassword") String fairPlayPfxPassword,
+        @OutputCustomType.Parameter("odataType") String odataType,
+        @OutputCustomType.Parameter("offlineRentalConfiguration") @Nullable ContentKeyPolicyFairPlayOfflineRentalConfigurationResponse offlineRentalConfiguration,
+        @OutputCustomType.Parameter("rentalAndLeaseKeyType") String rentalAndLeaseKeyType,
+        @OutputCustomType.Parameter("rentalDuration") Double rentalDuration) {
         this.ask = ask;
         this.fairPlayPfx = fairPlayPfx;
         this.fairPlayPfxPassword = fairPlayPfxPassword;

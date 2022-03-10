@@ -20,10 +20,10 @@ public final class AttributesResponse {
      */
     private final Boolean prodModeWriteProtect;
 
-    @OutputCustomType.Constructor({"authentication","prodModeWriteProtect"})
+    @OutputCustomType.Constructor
     private AttributesResponse(
-        Boolean authentication,
-        Boolean prodModeWriteProtect) {
+        @OutputCustomType.Parameter("authentication") Boolean authentication,
+        @OutputCustomType.Parameter("prodModeWriteProtect") Boolean prodModeWriteProtect) {
         this.authentication = authentication;
         this.prodModeWriteProtect = prodModeWriteProtect;
     }

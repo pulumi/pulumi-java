@@ -80,21 +80,21 @@ public final class GetDiskPoolResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"additionalCapabilities","availabilityZones","disks","id","location","name","provisioningState","status","subnetId","systemData","tags","tier","type"})
+    @OutputCustomType.Constructor
     private GetDiskPoolResult(
-        @Nullable List<String> additionalCapabilities,
-        List<String> availabilityZones,
-        @Nullable List<DiskResponse> disks,
-        String id,
-        String location,
-        String name,
-        String provisioningState,
-        String status,
-        String subnetId,
-        SystemMetadataResponse systemData,
-        @Nullable Map<String,String> tags,
-        String tier,
-        String type) {
+        @OutputCustomType.Parameter("additionalCapabilities") @Nullable List<String> additionalCapabilities,
+        @OutputCustomType.Parameter("availabilityZones") List<String> availabilityZones,
+        @OutputCustomType.Parameter("disks") @Nullable List<DiskResponse> disks,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("status") String status,
+        @OutputCustomType.Parameter("subnetId") String subnetId,
+        @OutputCustomType.Parameter("systemData") SystemMetadataResponse systemData,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("tier") String tier,
+        @OutputCustomType.Parameter("type") String type) {
         this.additionalCapabilities = additionalCapabilities;
         this.availabilityZones = availabilityZones;
         this.disks = disks;

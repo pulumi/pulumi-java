@@ -37,13 +37,13 @@ public final class SiteAgentPropertiesResponse {
      */
     private final String version;
 
-    @OutputCustomType.Constructor({"id","keyVaultId","keyVaultUri","lastHeartBeatUtc","version"})
+    @OutputCustomType.Constructor
     private SiteAgentPropertiesResponse(
-        String id,
-        @Nullable String keyVaultId,
-        @Nullable String keyVaultUri,
-        String lastHeartBeatUtc,
-        String version) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("keyVaultId") @Nullable String keyVaultId,
+        @OutputCustomType.Parameter("keyVaultUri") @Nullable String keyVaultUri,
+        @OutputCustomType.Parameter("lastHeartBeatUtc") String lastHeartBeatUtc,
+        @OutputCustomType.Parameter("version") String version) {
         this.id = id;
         this.keyVaultId = keyVaultId;
         this.keyVaultUri = keyVaultUri;

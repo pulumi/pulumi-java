@@ -22,10 +22,10 @@ public final class BlobLocationResponse {
      */
     private final String uri;
 
-    @OutputCustomType.Constructor({"credentials","uri"})
+    @OutputCustomType.Constructor
     private BlobLocationResponse(
-        @Nullable String credentials,
-        String uri) {
+        @OutputCustomType.Parameter("credentials") @Nullable String credentials,
+        @OutputCustomType.Parameter("uri") String uri) {
         this.credentials = credentials;
         this.uri = uri;
     }

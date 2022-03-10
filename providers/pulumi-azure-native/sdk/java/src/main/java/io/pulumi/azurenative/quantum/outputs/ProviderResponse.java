@@ -42,14 +42,14 @@ public final class ProviderResponse {
      */
     private final @Nullable String resourceUsageId;
 
-    @OutputCustomType.Constructor({"applicationName","instanceUri","providerId","providerSku","provisioningState","resourceUsageId"})
+    @OutputCustomType.Constructor
     private ProviderResponse(
-        @Nullable String applicationName,
-        @Nullable String instanceUri,
-        @Nullable String providerId,
-        @Nullable String providerSku,
-        @Nullable String provisioningState,
-        @Nullable String resourceUsageId) {
+        @OutputCustomType.Parameter("applicationName") @Nullable String applicationName,
+        @OutputCustomType.Parameter("instanceUri") @Nullable String instanceUri,
+        @OutputCustomType.Parameter("providerId") @Nullable String providerId,
+        @OutputCustomType.Parameter("providerSku") @Nullable String providerSku,
+        @OutputCustomType.Parameter("provisioningState") @Nullable String provisioningState,
+        @OutputCustomType.Parameter("resourceUsageId") @Nullable String resourceUsageId) {
         this.applicationName = applicationName;
         this.instanceUri = instanceUri;
         this.providerId = providerId;

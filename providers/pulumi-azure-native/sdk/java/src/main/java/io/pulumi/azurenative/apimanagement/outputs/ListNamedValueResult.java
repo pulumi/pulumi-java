@@ -17,8 +17,8 @@ public final class ListNamedValueResult {
      */
     private final @Nullable String value;
 
-    @OutputCustomType.Constructor({"value"})
-    private ListNamedValueResult(@Nullable String value) {
+    @OutputCustomType.Constructor
+    private ListNamedValueResult(@OutputCustomType.Parameter("value") @Nullable String value) {
         this.value = value;
     }
 

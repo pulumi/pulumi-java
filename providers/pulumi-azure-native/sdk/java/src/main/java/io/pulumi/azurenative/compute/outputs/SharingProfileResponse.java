@@ -24,10 +24,10 @@ public final class SharingProfileResponse {
      */
     private final @Nullable String permissions;
 
-    @OutputCustomType.Constructor({"groups","permissions"})
+    @OutputCustomType.Constructor
     private SharingProfileResponse(
-        List<SharingProfileGroupResponse> groups,
-        @Nullable String permissions) {
+        @OutputCustomType.Parameter("groups") List<SharingProfileGroupResponse> groups,
+        @OutputCustomType.Parameter("permissions") @Nullable String permissions) {
         this.groups = groups;
         this.permissions = permissions;
     }

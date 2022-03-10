@@ -87,22 +87,22 @@ public final class DataDiskResponse {
      */
     private final @Nullable Boolean writeAcceleratorEnabled;
 
-    @OutputCustomType.Constructor({"caching","createOption","deleteOption","detachOption","diskIOPSReadWrite","diskMBpsReadWrite","diskSizeGB","image","lun","managedDisk","name","toBeDetached","vhd","writeAcceleratorEnabled"})
+    @OutputCustomType.Constructor
     private DataDiskResponse(
-        @Nullable String caching,
-        String createOption,
-        @Nullable String deleteOption,
-        @Nullable String detachOption,
-        Double diskIOPSReadWrite,
-        Double diskMBpsReadWrite,
-        @Nullable Integer diskSizeGB,
-        @Nullable VirtualHardDiskResponse image,
-        Integer lun,
-        @Nullable ManagedDiskParametersResponse managedDisk,
-        @Nullable String name,
-        @Nullable Boolean toBeDetached,
-        @Nullable VirtualHardDiskResponse vhd,
-        @Nullable Boolean writeAcceleratorEnabled) {
+        @OutputCustomType.Parameter("caching") @Nullable String caching,
+        @OutputCustomType.Parameter("createOption") String createOption,
+        @OutputCustomType.Parameter("deleteOption") @Nullable String deleteOption,
+        @OutputCustomType.Parameter("detachOption") @Nullable String detachOption,
+        @OutputCustomType.Parameter("diskIOPSReadWrite") Double diskIOPSReadWrite,
+        @OutputCustomType.Parameter("diskMBpsReadWrite") Double diskMBpsReadWrite,
+        @OutputCustomType.Parameter("diskSizeGB") @Nullable Integer diskSizeGB,
+        @OutputCustomType.Parameter("image") @Nullable VirtualHardDiskResponse image,
+        @OutputCustomType.Parameter("lun") Integer lun,
+        @OutputCustomType.Parameter("managedDisk") @Nullable ManagedDiskParametersResponse managedDisk,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("toBeDetached") @Nullable Boolean toBeDetached,
+        @OutputCustomType.Parameter("vhd") @Nullable VirtualHardDiskResponse vhd,
+        @OutputCustomType.Parameter("writeAcceleratorEnabled") @Nullable Boolean writeAcceleratorEnabled) {
         this.caching = caching;
         this.createOption = createOption;
         this.deleteOption = deleteOption;

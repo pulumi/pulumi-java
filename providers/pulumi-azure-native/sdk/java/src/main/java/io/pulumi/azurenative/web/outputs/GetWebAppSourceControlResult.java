@@ -69,19 +69,19 @@ public final class GetWebAppSourceControlResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"branch","deploymentRollbackEnabled","gitHubActionConfiguration","id","isGitHubAction","isManualIntegration","isMercurial","kind","name","repoUrl","type"})
+    @OutputCustomType.Constructor
     private GetWebAppSourceControlResult(
-        @Nullable String branch,
-        @Nullable Boolean deploymentRollbackEnabled,
-        @Nullable GitHubActionConfigurationResponse gitHubActionConfiguration,
-        String id,
-        @Nullable Boolean isGitHubAction,
-        @Nullable Boolean isManualIntegration,
-        @Nullable Boolean isMercurial,
-        @Nullable String kind,
-        String name,
-        @Nullable String repoUrl,
-        String type) {
+        @OutputCustomType.Parameter("branch") @Nullable String branch,
+        @OutputCustomType.Parameter("deploymentRollbackEnabled") @Nullable Boolean deploymentRollbackEnabled,
+        @OutputCustomType.Parameter("gitHubActionConfiguration") @Nullable GitHubActionConfigurationResponse gitHubActionConfiguration,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("isGitHubAction") @Nullable Boolean isGitHubAction,
+        @OutputCustomType.Parameter("isManualIntegration") @Nullable Boolean isManualIntegration,
+        @OutputCustomType.Parameter("isMercurial") @Nullable Boolean isMercurial,
+        @OutputCustomType.Parameter("kind") @Nullable String kind,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("repoUrl") @Nullable String repoUrl,
+        @OutputCustomType.Parameter("type") String type) {
         this.branch = branch;
         this.deploymentRollbackEnabled = deploymentRollbackEnabled;
         this.gitHubActionConfiguration = gitHubActionConfiguration;

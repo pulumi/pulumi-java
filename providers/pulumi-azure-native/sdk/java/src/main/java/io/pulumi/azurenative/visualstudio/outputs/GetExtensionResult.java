@@ -49,15 +49,15 @@ public final class GetExtensionResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"id","location","name","plan","properties","tags","type"})
+    @OutputCustomType.Constructor
     private GetExtensionResult(
-        String id,
-        @Nullable String location,
-        String name,
-        @Nullable ExtensionResourcePlanResponse plan,
-        Map<String,String> properties,
-        @Nullable Map<String,String> tags,
-        String type) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("plan") @Nullable ExtensionResourcePlanResponse plan,
+        @OutputCustomType.Parameter("properties") Map<String,String> properties,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type) {
         this.id = id;
         this.location = location;
         this.name = name;

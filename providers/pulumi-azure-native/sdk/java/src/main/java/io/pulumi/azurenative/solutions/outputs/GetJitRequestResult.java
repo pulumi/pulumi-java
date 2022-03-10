@@ -82,21 +82,21 @@ public final class GetJitRequestResult {
      */
     private final ApplicationClientDetailsResponse updatedBy;
 
-    @OutputCustomType.Constructor({"applicationResourceId","createdBy","id","jitAuthorizationPolicies","jitRequestState","jitSchedulingPolicy","location","name","provisioningState","publisherTenantId","tags","type","updatedBy"})
+    @OutputCustomType.Constructor
     private GetJitRequestResult(
-        String applicationResourceId,
-        ApplicationClientDetailsResponse createdBy,
-        String id,
-        List<JitAuthorizationPoliciesResponse> jitAuthorizationPolicies,
-        String jitRequestState,
-        JitSchedulingPolicyResponse jitSchedulingPolicy,
-        @Nullable String location,
-        String name,
-        String provisioningState,
-        String publisherTenantId,
-        @Nullable Map<String,String> tags,
-        String type,
-        ApplicationClientDetailsResponse updatedBy) {
+        @OutputCustomType.Parameter("applicationResourceId") String applicationResourceId,
+        @OutputCustomType.Parameter("createdBy") ApplicationClientDetailsResponse createdBy,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("jitAuthorizationPolicies") List<JitAuthorizationPoliciesResponse> jitAuthorizationPolicies,
+        @OutputCustomType.Parameter("jitRequestState") String jitRequestState,
+        @OutputCustomType.Parameter("jitSchedulingPolicy") JitSchedulingPolicyResponse jitSchedulingPolicy,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("publisherTenantId") String publisherTenantId,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("updatedBy") ApplicationClientDetailsResponse updatedBy) {
         this.applicationResourceId = applicationResourceId;
         this.createdBy = createdBy;
         this.id = id;

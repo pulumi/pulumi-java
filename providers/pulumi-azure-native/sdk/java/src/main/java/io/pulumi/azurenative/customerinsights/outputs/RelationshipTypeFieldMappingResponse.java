@@ -20,10 +20,10 @@ public final class RelationshipTypeFieldMappingResponse {
      */
     private final String relatedProfileKeyProperty;
 
-    @OutputCustomType.Constructor({"profileFieldName","relatedProfileKeyProperty"})
+    @OutputCustomType.Constructor
     private RelationshipTypeFieldMappingResponse(
-        String profileFieldName,
-        String relatedProfileKeyProperty) {
+        @OutputCustomType.Parameter("profileFieldName") String profileFieldName,
+        @OutputCustomType.Parameter("relatedProfileKeyProperty") String relatedProfileKeyProperty) {
         this.profileFieldName = profileFieldName;
         this.relatedProfileKeyProperty = relatedProfileKeyProperty;
     }

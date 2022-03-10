@@ -17,8 +17,8 @@ public final class ListIntegrationAccountCallbackUrlResult {
      */
     private final @Nullable String value;
 
-    @OutputCustomType.Constructor({"value"})
-    private ListIntegrationAccountCallbackUrlResult(@Nullable String value) {
+    @OutputCustomType.Constructor
+    private ListIntegrationAccountCallbackUrlResult(@OutputCustomType.Parameter("value") @Nullable String value) {
         this.value = value;
     }
 

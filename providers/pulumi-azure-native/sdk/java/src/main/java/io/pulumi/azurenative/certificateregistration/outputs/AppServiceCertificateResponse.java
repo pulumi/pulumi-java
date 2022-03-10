@@ -27,11 +27,11 @@ public final class AppServiceCertificateResponse {
      */
     private final String provisioningState;
 
-    @OutputCustomType.Constructor({"keyVaultId","keyVaultSecretName","provisioningState"})
+    @OutputCustomType.Constructor
     private AppServiceCertificateResponse(
-        @Nullable String keyVaultId,
-        @Nullable String keyVaultSecretName,
-        String provisioningState) {
+        @OutputCustomType.Parameter("keyVaultId") @Nullable String keyVaultId,
+        @OutputCustomType.Parameter("keyVaultSecretName") @Nullable String keyVaultSecretName,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState) {
         this.keyVaultId = keyVaultId;
         this.keyVaultSecretName = keyVaultSecretName;
         this.provisioningState = provisioningState;

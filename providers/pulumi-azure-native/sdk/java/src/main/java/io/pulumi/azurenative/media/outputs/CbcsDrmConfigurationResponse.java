@@ -29,11 +29,11 @@ public final class CbcsDrmConfigurationResponse {
      */
     private final @Nullable StreamingPolicyWidevineConfigurationResponse widevine;
 
-    @OutputCustomType.Constructor({"fairPlay","playReady","widevine"})
+    @OutputCustomType.Constructor
     private CbcsDrmConfigurationResponse(
-        @Nullable StreamingPolicyFairPlayConfigurationResponse fairPlay,
-        @Nullable StreamingPolicyPlayReadyConfigurationResponse playReady,
-        @Nullable StreamingPolicyWidevineConfigurationResponse widevine) {
+        @OutputCustomType.Parameter("fairPlay") @Nullable StreamingPolicyFairPlayConfigurationResponse fairPlay,
+        @OutputCustomType.Parameter("playReady") @Nullable StreamingPolicyPlayReadyConfigurationResponse playReady,
+        @OutputCustomType.Parameter("widevine") @Nullable StreamingPolicyWidevineConfigurationResponse widevine) {
         this.fairPlay = fairPlay;
         this.playReady = playReady;
         this.widevine = widevine;

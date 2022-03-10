@@ -60,17 +60,17 @@ public final class GetReferenceDataSetResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"creationTime","dataStringComparisonBehavior","id","keyProperties","location","name","provisioningState","tags","type"})
+    @OutputCustomType.Constructor
     private GetReferenceDataSetResult(
-        String creationTime,
-        @Nullable String dataStringComparisonBehavior,
-        String id,
-        List<ReferenceDataSetKeyPropertyResponse> keyProperties,
-        String location,
-        String name,
-        String provisioningState,
-        @Nullable Map<String,String> tags,
-        String type) {
+        @OutputCustomType.Parameter("creationTime") String creationTime,
+        @OutputCustomType.Parameter("dataStringComparisonBehavior") @Nullable String dataStringComparisonBehavior,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("keyProperties") List<ReferenceDataSetKeyPropertyResponse> keyProperties,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type) {
         this.creationTime = creationTime;
         this.dataStringComparisonBehavior = dataStringComparisonBehavior;
         this.id = id;

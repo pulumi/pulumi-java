@@ -29,12 +29,12 @@ public final class StatusCodesRangeBasedTriggerResponse {
      */
     private final @Nullable String timeInterval;
 
-    @OutputCustomType.Constructor({"count","path","statusCodes","timeInterval"})
+    @OutputCustomType.Constructor
     private StatusCodesRangeBasedTriggerResponse(
-        @Nullable Integer count,
-        @Nullable String path,
-        @Nullable String statusCodes,
-        @Nullable String timeInterval) {
+        @OutputCustomType.Parameter("count") @Nullable Integer count,
+        @OutputCustomType.Parameter("path") @Nullable String path,
+        @OutputCustomType.Parameter("statusCodes") @Nullable String statusCodes,
+        @OutputCustomType.Parameter("timeInterval") @Nullable String timeInterval) {
         this.count = count;
         this.path = path;
         this.statusCodes = statusCodes;

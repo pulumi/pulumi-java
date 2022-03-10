@@ -115,26 +115,26 @@ public final class IotHubPropertiesResponse {
      */
     private final @Nullable Map<String,StorageEndpointPropertiesResponse> storageEndpoints;
 
-    @OutputCustomType.Constructor({"authorizationPolicies","cloudToDevice","comments","enableFileUploadNotifications","eventHubEndpoints","features","hostName","ipFilterRules","locations","messagingEndpoints","minTlsVersion","networkRuleSets","privateEndpointConnections","provisioningState","publicNetworkAccess","routing","state","storageEndpoints"})
+    @OutputCustomType.Constructor
     private IotHubPropertiesResponse(
-        @Nullable List<SharedAccessSignatureAuthorizationRuleResponse> authorizationPolicies,
-        @Nullable CloudToDevicePropertiesResponse cloudToDevice,
-        @Nullable String comments,
-        @Nullable Boolean enableFileUploadNotifications,
-        @Nullable Map<String,EventHubPropertiesResponse> eventHubEndpoints,
-        @Nullable String features,
-        String hostName,
-        @Nullable List<IpFilterRuleResponse> ipFilterRules,
-        List<IotHubLocationDescriptionResponse> locations,
-        @Nullable Map<String,MessagingEndpointPropertiesResponse> messagingEndpoints,
-        @Nullable String minTlsVersion,
-        @Nullable NetworkRuleSetPropertiesResponse networkRuleSets,
-        @Nullable List<PrivateEndpointConnectionResponse> privateEndpointConnections,
-        String provisioningState,
-        @Nullable String publicNetworkAccess,
-        @Nullable RoutingPropertiesResponse routing,
-        String state,
-        @Nullable Map<String,StorageEndpointPropertiesResponse> storageEndpoints) {
+        @OutputCustomType.Parameter("authorizationPolicies") @Nullable List<SharedAccessSignatureAuthorizationRuleResponse> authorizationPolicies,
+        @OutputCustomType.Parameter("cloudToDevice") @Nullable CloudToDevicePropertiesResponse cloudToDevice,
+        @OutputCustomType.Parameter("comments") @Nullable String comments,
+        @OutputCustomType.Parameter("enableFileUploadNotifications") @Nullable Boolean enableFileUploadNotifications,
+        @OutputCustomType.Parameter("eventHubEndpoints") @Nullable Map<String,EventHubPropertiesResponse> eventHubEndpoints,
+        @OutputCustomType.Parameter("features") @Nullable String features,
+        @OutputCustomType.Parameter("hostName") String hostName,
+        @OutputCustomType.Parameter("ipFilterRules") @Nullable List<IpFilterRuleResponse> ipFilterRules,
+        @OutputCustomType.Parameter("locations") List<IotHubLocationDescriptionResponse> locations,
+        @OutputCustomType.Parameter("messagingEndpoints") @Nullable Map<String,MessagingEndpointPropertiesResponse> messagingEndpoints,
+        @OutputCustomType.Parameter("minTlsVersion") @Nullable String minTlsVersion,
+        @OutputCustomType.Parameter("networkRuleSets") @Nullable NetworkRuleSetPropertiesResponse networkRuleSets,
+        @OutputCustomType.Parameter("privateEndpointConnections") @Nullable List<PrivateEndpointConnectionResponse> privateEndpointConnections,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("publicNetworkAccess") @Nullable String publicNetworkAccess,
+        @OutputCustomType.Parameter("routing") @Nullable RoutingPropertiesResponse routing,
+        @OutputCustomType.Parameter("state") String state,
+        @OutputCustomType.Parameter("storageEndpoints") @Nullable Map<String,StorageEndpointPropertiesResponse> storageEndpoints) {
         this.authorizationPolicies = authorizationPolicies;
         this.cloudToDevice = cloudToDevice;
         this.comments = comments;

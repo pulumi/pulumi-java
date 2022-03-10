@@ -22,10 +22,10 @@ public final class GitHubClientSecretResponse {
      */
     private final @Nullable String byoaSecretName;
 
-    @OutputCustomType.Constructor({"byoaSecretAkvUrl","byoaSecretName"})
+    @OutputCustomType.Constructor
     private GitHubClientSecretResponse(
-        @Nullable String byoaSecretAkvUrl,
-        @Nullable String byoaSecretName) {
+        @OutputCustomType.Parameter("byoaSecretAkvUrl") @Nullable String byoaSecretAkvUrl,
+        @OutputCustomType.Parameter("byoaSecretName") @Nullable String byoaSecretName) {
         this.byoaSecretAkvUrl = byoaSecretAkvUrl;
         this.byoaSecretName = byoaSecretName;
     }

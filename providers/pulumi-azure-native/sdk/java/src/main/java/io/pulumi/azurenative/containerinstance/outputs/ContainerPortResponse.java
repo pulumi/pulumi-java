@@ -23,10 +23,10 @@ public final class ContainerPortResponse {
      */
     private final @Nullable String protocol;
 
-    @OutputCustomType.Constructor({"port","protocol"})
+    @OutputCustomType.Constructor
     private ContainerPortResponse(
-        Integer port,
-        @Nullable String protocol) {
+        @OutputCustomType.Parameter("port") Integer port,
+        @OutputCustomType.Parameter("protocol") @Nullable String protocol) {
         this.port = port;
         this.protocol = protocol;
     }

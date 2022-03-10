@@ -58,17 +58,17 @@ public final class AS2MdnSettingsResponse {
      */
     private final Boolean signOutboundMDNIfOptional;
 
-    @OutputCustomType.Constructor({"dispositionNotificationTo","mdnText","micHashingAlgorithm","needMDN","receiptDeliveryUrl","sendInboundMDNToMessageBox","sendMDNAsynchronously","signMDN","signOutboundMDNIfOptional"})
+    @OutputCustomType.Constructor
     private AS2MdnSettingsResponse(
-        @Nullable String dispositionNotificationTo,
-        @Nullable String mdnText,
-        String micHashingAlgorithm,
-        Boolean needMDN,
-        @Nullable String receiptDeliveryUrl,
-        Boolean sendInboundMDNToMessageBox,
-        Boolean sendMDNAsynchronously,
-        Boolean signMDN,
-        Boolean signOutboundMDNIfOptional) {
+        @OutputCustomType.Parameter("dispositionNotificationTo") @Nullable String dispositionNotificationTo,
+        @OutputCustomType.Parameter("mdnText") @Nullable String mdnText,
+        @OutputCustomType.Parameter("micHashingAlgorithm") String micHashingAlgorithm,
+        @OutputCustomType.Parameter("needMDN") Boolean needMDN,
+        @OutputCustomType.Parameter("receiptDeliveryUrl") @Nullable String receiptDeliveryUrl,
+        @OutputCustomType.Parameter("sendInboundMDNToMessageBox") Boolean sendInboundMDNToMessageBox,
+        @OutputCustomType.Parameter("sendMDNAsynchronously") Boolean sendMDNAsynchronously,
+        @OutputCustomType.Parameter("signMDN") Boolean signMDN,
+        @OutputCustomType.Parameter("signOutboundMDNIfOptional") Boolean signOutboundMDNIfOptional) {
         this.dispositionNotificationTo = dispositionNotificationTo;
         this.mdnText = mdnText;
         this.micHashingAlgorithm = micHashingAlgorithm;

@@ -17,8 +17,8 @@ public final class ListDatabaseAccountConnectionStringsResult {
      */
     private final @Nullable List<DatabaseAccountConnectionStringResponse> connectionStrings;
 
-    @OutputCustomType.Constructor({"connectionStrings"})
-    private ListDatabaseAccountConnectionStringsResult(@Nullable List<DatabaseAccountConnectionStringResponse> connectionStrings) {
+    @OutputCustomType.Constructor
+    private ListDatabaseAccountConnectionStringsResult(@OutputCustomType.Parameter("connectionStrings") @Nullable List<DatabaseAccountConnectionStringResponse> connectionStrings) {
         this.connectionStrings = connectionStrings;
     }
 

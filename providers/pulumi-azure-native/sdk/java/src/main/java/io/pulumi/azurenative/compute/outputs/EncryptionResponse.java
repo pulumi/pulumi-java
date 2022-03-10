@@ -22,10 +22,10 @@ public final class EncryptionResponse {
      */
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor({"diskEncryptionSetId","type"})
+    @OutputCustomType.Constructor
     private EncryptionResponse(
-        @Nullable String diskEncryptionSetId,
-        @Nullable String type) {
+        @OutputCustomType.Parameter("diskEncryptionSetId") @Nullable String diskEncryptionSetId,
+        @OutputCustomType.Parameter("type") @Nullable String type) {
         this.diskEncryptionSetId = diskEncryptionSetId;
         this.type = type;
     }

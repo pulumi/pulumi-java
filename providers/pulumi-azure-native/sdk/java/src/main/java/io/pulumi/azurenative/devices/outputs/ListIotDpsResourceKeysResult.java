@@ -23,10 +23,10 @@ public final class ListIotDpsResourceKeysResult {
      */
     private final @Nullable List<SharedAccessSignatureAuthorizationRuleAccessRightsDescriptionResponse> value;
 
-    @OutputCustomType.Constructor({"nextLink","value"})
+    @OutputCustomType.Constructor
     private ListIotDpsResourceKeysResult(
-        String nextLink,
-        @Nullable List<SharedAccessSignatureAuthorizationRuleAccessRightsDescriptionResponse> value) {
+        @OutputCustomType.Parameter("nextLink") String nextLink,
+        @OutputCustomType.Parameter("value") @Nullable List<SharedAccessSignatureAuthorizationRuleAccessRightsDescriptionResponse> value) {
         this.nextLink = nextLink;
         this.value = value;
     }

@@ -18,14 +18,14 @@ public final class NotebookResourceSystemDataResponse {
     private final @Nullable String lastModifiedBy;
     private final @Nullable String lastModifiedByType;
 
-    @OutputCustomType.Constructor({"createdAt","createdBy","createdByType","lastModifiedAt","lastModifiedBy","lastModifiedByType"})
+    @OutputCustomType.Constructor
     private NotebookResourceSystemDataResponse(
-        @Nullable String createdAt,
-        @Nullable String createdBy,
-        @Nullable String createdByType,
-        @Nullable String lastModifiedAt,
-        @Nullable String lastModifiedBy,
-        @Nullable String lastModifiedByType) {
+        @OutputCustomType.Parameter("createdAt") @Nullable String createdAt,
+        @OutputCustomType.Parameter("createdBy") @Nullable String createdBy,
+        @OutputCustomType.Parameter("createdByType") @Nullable String createdByType,
+        @OutputCustomType.Parameter("lastModifiedAt") @Nullable String lastModifiedAt,
+        @OutputCustomType.Parameter("lastModifiedBy") @Nullable String lastModifiedBy,
+        @OutputCustomType.Parameter("lastModifiedByType") @Nullable String lastModifiedByType) {
         this.createdAt = createdAt;
         this.createdBy = createdBy;
         this.createdByType = createdByType;

@@ -47,15 +47,15 @@ public final class LdapsSettingsResponse {
      */
     private final String publicCertificate;
 
-    @OutputCustomType.Constructor({"certificateNotAfter","certificateThumbprint","externalAccess","ldaps","pfxCertificate","pfxCertificatePassword","publicCertificate"})
+    @OutputCustomType.Constructor
     private LdapsSettingsResponse(
-        String certificateNotAfter,
-        String certificateThumbprint,
-        @Nullable String externalAccess,
-        @Nullable String ldaps,
-        @Nullable String pfxCertificate,
-        @Nullable String pfxCertificatePassword,
-        String publicCertificate) {
+        @OutputCustomType.Parameter("certificateNotAfter") String certificateNotAfter,
+        @OutputCustomType.Parameter("certificateThumbprint") String certificateThumbprint,
+        @OutputCustomType.Parameter("externalAccess") @Nullable String externalAccess,
+        @OutputCustomType.Parameter("ldaps") @Nullable String ldaps,
+        @OutputCustomType.Parameter("pfxCertificate") @Nullable String pfxCertificate,
+        @OutputCustomType.Parameter("pfxCertificatePassword") @Nullable String pfxCertificatePassword,
+        @OutputCustomType.Parameter("publicCertificate") String publicCertificate) {
         this.certificateNotAfter = certificateNotAfter;
         this.certificateThumbprint = certificateThumbprint;
         this.externalAccess = externalAccess;

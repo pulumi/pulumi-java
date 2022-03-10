@@ -36,12 +36,12 @@ public final class BgpSettingsResponse {
      */
     private final @Nullable Integer peerWeight;
 
-    @OutputCustomType.Constructor({"asn","bgpPeeringAddress","bgpPeeringAddresses","peerWeight"})
+    @OutputCustomType.Constructor
     private BgpSettingsResponse(
-        @Nullable Double asn,
-        @Nullable String bgpPeeringAddress,
-        @Nullable List<IPConfigurationBgpPeeringAddressResponse> bgpPeeringAddresses,
-        @Nullable Integer peerWeight) {
+        @OutputCustomType.Parameter("asn") @Nullable Double asn,
+        @OutputCustomType.Parameter("bgpPeeringAddress") @Nullable String bgpPeeringAddress,
+        @OutputCustomType.Parameter("bgpPeeringAddresses") @Nullable List<IPConfigurationBgpPeeringAddressResponse> bgpPeeringAddresses,
+        @OutputCustomType.Parameter("peerWeight") @Nullable Integer peerWeight) {
         this.asn = asn;
         this.bgpPeeringAddress = bgpPeeringAddress;
         this.bgpPeeringAddresses = bgpPeeringAddresses;

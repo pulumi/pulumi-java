@@ -52,15 +52,15 @@ public final class GenericContainerResponse {
      */
     private final @Nullable String registrationStatus;
 
-    @OutputCustomType.Constructor({"backupManagementType","containerType","extendedInformation","fabricName","friendlyName","healthStatus","registrationStatus"})
+    @OutputCustomType.Constructor
     private GenericContainerResponse(
-        @Nullable String backupManagementType,
-        String containerType,
-        @Nullable GenericContainerExtendedInfoResponse extendedInformation,
-        @Nullable String fabricName,
-        @Nullable String friendlyName,
-        @Nullable String healthStatus,
-        @Nullable String registrationStatus) {
+        @OutputCustomType.Parameter("backupManagementType") @Nullable String backupManagementType,
+        @OutputCustomType.Parameter("containerType") String containerType,
+        @OutputCustomType.Parameter("extendedInformation") @Nullable GenericContainerExtendedInfoResponse extendedInformation,
+        @OutputCustomType.Parameter("fabricName") @Nullable String fabricName,
+        @OutputCustomType.Parameter("friendlyName") @Nullable String friendlyName,
+        @OutputCustomType.Parameter("healthStatus") @Nullable String healthStatus,
+        @OutputCustomType.Parameter("registrationStatus") @Nullable String registrationStatus) {
         this.backupManagementType = backupManagementType;
         this.containerType = containerType;
         this.extendedInformation = extendedInformation;

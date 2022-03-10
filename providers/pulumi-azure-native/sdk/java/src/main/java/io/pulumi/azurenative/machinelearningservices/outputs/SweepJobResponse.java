@@ -130,28 +130,28 @@ public final class SweepJobResponse {
      */
     private final @Nullable TrialComponentResponse trial;
 
-    @OutputCustomType.Constructor({"algorithm","compute","description","earlyTermination","experimentName","identity","interactionEndpoints","jobType","maxConcurrentTrials","maxTotalTrials","objective","output","priority","properties","provisioningState","searchSpace","status","tags","timeout","trial"})
+    @OutputCustomType.Constructor
     private SweepJobResponse(
-        String algorithm,
-        ComputeConfigurationResponse compute,
-        @Nullable String description,
-        @Nullable Object earlyTermination,
-        @Nullable String experimentName,
-        @Nullable Either<AmlTokenResponse,ManagedIdentityResponse> identity,
-        Map<String,JobEndpointResponse> interactionEndpoints,
-        String jobType,
-        @Nullable Integer maxConcurrentTrials,
-        @Nullable Integer maxTotalTrials,
-        ObjectiveResponse objective,
-        JobOutputResponse output,
-        @Nullable Integer priority,
-        @Nullable Map<String,String> properties,
-        String provisioningState,
-        Map<String,Object> searchSpace,
-        String status,
-        @Nullable Map<String,String> tags,
-        @Nullable String timeout,
-        @Nullable TrialComponentResponse trial) {
+        @OutputCustomType.Parameter("algorithm") String algorithm,
+        @OutputCustomType.Parameter("compute") ComputeConfigurationResponse compute,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("earlyTermination") @Nullable Object earlyTermination,
+        @OutputCustomType.Parameter("experimentName") @Nullable String experimentName,
+        @OutputCustomType.Parameter("identity") @Nullable Either<AmlTokenResponse,ManagedIdentityResponse> identity,
+        @OutputCustomType.Parameter("interactionEndpoints") Map<String,JobEndpointResponse> interactionEndpoints,
+        @OutputCustomType.Parameter("jobType") String jobType,
+        @OutputCustomType.Parameter("maxConcurrentTrials") @Nullable Integer maxConcurrentTrials,
+        @OutputCustomType.Parameter("maxTotalTrials") @Nullable Integer maxTotalTrials,
+        @OutputCustomType.Parameter("objective") ObjectiveResponse objective,
+        @OutputCustomType.Parameter("output") JobOutputResponse output,
+        @OutputCustomType.Parameter("priority") @Nullable Integer priority,
+        @OutputCustomType.Parameter("properties") @Nullable Map<String,String> properties,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("searchSpace") Map<String,Object> searchSpace,
+        @OutputCustomType.Parameter("status") String status,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("timeout") @Nullable String timeout,
+        @OutputCustomType.Parameter("trial") @Nullable TrialComponentResponse trial) {
         this.algorithm = algorithm;
         this.compute = compute;
         this.description = description;

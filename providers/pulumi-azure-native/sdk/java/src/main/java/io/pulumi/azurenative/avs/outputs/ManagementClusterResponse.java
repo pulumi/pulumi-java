@@ -32,12 +32,12 @@ public final class ManagementClusterResponse {
      */
     private final String provisioningState;
 
-    @OutputCustomType.Constructor({"clusterId","clusterSize","hosts","provisioningState"})
+    @OutputCustomType.Constructor
     private ManagementClusterResponse(
-        Integer clusterId,
-        Integer clusterSize,
-        List<String> hosts,
-        String provisioningState) {
+        @OutputCustomType.Parameter("clusterId") Integer clusterId,
+        @OutputCustomType.Parameter("clusterSize") Integer clusterSize,
+        @OutputCustomType.Parameter("hosts") List<String> hosts,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState) {
         this.clusterId = clusterId;
         this.clusterSize = clusterSize;
         this.hosts = hosts;

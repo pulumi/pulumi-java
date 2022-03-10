@@ -66,18 +66,18 @@ public final class EffectiveConnectivityConfigurationResponse {
      */
     private final String provisioningState;
 
-    @OutputCustomType.Constructor({"appliesToGroups","configurationGroups","connectivityTopology","deleteExistingPeering","description","displayName","hubs","id","isGlobal","provisioningState"})
+    @OutputCustomType.Constructor
     private EffectiveConnectivityConfigurationResponse(
-        @Nullable List<ConnectivityGroupItemResponse> appliesToGroups,
-        @Nullable List<ConfigurationGroupResponse> configurationGroups,
-        String connectivityTopology,
-        @Nullable String deleteExistingPeering,
-        @Nullable String description,
-        @Nullable String displayName,
-        @Nullable List<HubResponse> hubs,
-        @Nullable String id,
-        @Nullable String isGlobal,
-        String provisioningState) {
+        @OutputCustomType.Parameter("appliesToGroups") @Nullable List<ConnectivityGroupItemResponse> appliesToGroups,
+        @OutputCustomType.Parameter("configurationGroups") @Nullable List<ConfigurationGroupResponse> configurationGroups,
+        @OutputCustomType.Parameter("connectivityTopology") String connectivityTopology,
+        @OutputCustomType.Parameter("deleteExistingPeering") @Nullable String deleteExistingPeering,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("displayName") @Nullable String displayName,
+        @OutputCustomType.Parameter("hubs") @Nullable List<HubResponse> hubs,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("isGlobal") @Nullable String isGlobal,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState) {
         this.appliesToGroups = appliesToGroups;
         this.configurationGroups = configurationGroups;
         this.connectivityTopology = connectivityTopology;

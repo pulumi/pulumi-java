@@ -110,26 +110,26 @@ public final class GetWorkspaceResult {
      */
     private final @Nullable WorkspaceCappingResponse workspaceCapping;
 
-    @OutputCustomType.Constructor({"createdDate","customerId","eTag","features","forceCmkForQuery","id","location","modifiedDate","name","privateLinkScopedResources","provisioningState","publicNetworkAccessForIngestion","publicNetworkAccessForQuery","retentionInDays","sku","tags","type","workspaceCapping"})
+    @OutputCustomType.Constructor
     private GetWorkspaceResult(
-        String createdDate,
-        String customerId,
-        @Nullable String eTag,
-        @Nullable WorkspaceFeaturesResponse features,
-        @Nullable Boolean forceCmkForQuery,
-        String id,
-        String location,
-        String modifiedDate,
-        String name,
-        List<PrivateLinkScopedResourceResponse> privateLinkScopedResources,
-        @Nullable String provisioningState,
-        @Nullable String publicNetworkAccessForIngestion,
-        @Nullable String publicNetworkAccessForQuery,
-        @Nullable Integer retentionInDays,
-        @Nullable WorkspaceSkuResponse sku,
-        @Nullable Map<String,String> tags,
-        String type,
-        @Nullable WorkspaceCappingResponse workspaceCapping) {
+        @OutputCustomType.Parameter("createdDate") String createdDate,
+        @OutputCustomType.Parameter("customerId") String customerId,
+        @OutputCustomType.Parameter("eTag") @Nullable String eTag,
+        @OutputCustomType.Parameter("features") @Nullable WorkspaceFeaturesResponse features,
+        @OutputCustomType.Parameter("forceCmkForQuery") @Nullable Boolean forceCmkForQuery,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("modifiedDate") String modifiedDate,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("privateLinkScopedResources") List<PrivateLinkScopedResourceResponse> privateLinkScopedResources,
+        @OutputCustomType.Parameter("provisioningState") @Nullable String provisioningState,
+        @OutputCustomType.Parameter("publicNetworkAccessForIngestion") @Nullable String publicNetworkAccessForIngestion,
+        @OutputCustomType.Parameter("publicNetworkAccessForQuery") @Nullable String publicNetworkAccessForQuery,
+        @OutputCustomType.Parameter("retentionInDays") @Nullable Integer retentionInDays,
+        @OutputCustomType.Parameter("sku") @Nullable WorkspaceSkuResponse sku,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("workspaceCapping") @Nullable WorkspaceCappingResponse workspaceCapping) {
         this.createdDate = createdDate;
         this.customerId = customerId;
         this.eTag = eTag;

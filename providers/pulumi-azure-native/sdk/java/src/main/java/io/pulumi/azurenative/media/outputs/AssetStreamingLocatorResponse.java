@@ -50,16 +50,16 @@ public final class AssetStreamingLocatorResponse {
      */
     private final String streamingPolicyName;
 
-    @OutputCustomType.Constructor({"assetName","created","defaultContentKeyPolicyName","endTime","name","startTime","streamingLocatorId","streamingPolicyName"})
+    @OutputCustomType.Constructor
     private AssetStreamingLocatorResponse(
-        String assetName,
-        String created,
-        String defaultContentKeyPolicyName,
-        String endTime,
-        String name,
-        String startTime,
-        String streamingLocatorId,
-        String streamingPolicyName) {
+        @OutputCustomType.Parameter("assetName") String assetName,
+        @OutputCustomType.Parameter("created") String created,
+        @OutputCustomType.Parameter("defaultContentKeyPolicyName") String defaultContentKeyPolicyName,
+        @OutputCustomType.Parameter("endTime") String endTime,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("startTime") String startTime,
+        @OutputCustomType.Parameter("streamingLocatorId") String streamingLocatorId,
+        @OutputCustomType.Parameter("streamingPolicyName") String streamingPolicyName) {
         this.assetName = assetName;
         this.created = created;
         this.defaultContentKeyPolicyName = defaultContentKeyPolicyName;

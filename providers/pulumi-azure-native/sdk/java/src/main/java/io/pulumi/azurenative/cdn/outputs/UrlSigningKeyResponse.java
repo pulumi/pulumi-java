@@ -21,10 +21,10 @@ public final class UrlSigningKeyResponse {
      */
     private final KeyVaultSigningKeyParametersResponse keySourceParameters;
 
-    @OutputCustomType.Constructor({"keyId","keySourceParameters"})
+    @OutputCustomType.Constructor
     private UrlSigningKeyResponse(
-        String keyId,
-        KeyVaultSigningKeyParametersResponse keySourceParameters) {
+        @OutputCustomType.Parameter("keyId") String keyId,
+        @OutputCustomType.Parameter("keySourceParameters") KeyVaultSigningKeyParametersResponse keySourceParameters) {
         this.keyId = keyId;
         this.keySourceParameters = keySourceParameters;
     }

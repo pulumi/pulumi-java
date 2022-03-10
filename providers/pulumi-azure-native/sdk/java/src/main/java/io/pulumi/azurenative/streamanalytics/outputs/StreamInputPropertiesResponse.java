@@ -46,13 +46,13 @@ public final class StreamInputPropertiesResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"datasource","diagnostics","etag","serialization","type"})
+    @OutputCustomType.Constructor
     private StreamInputPropertiesResponse(
-        @Nullable Object datasource,
-        DiagnosticsResponse diagnostics,
-        String etag,
-        @Nullable Object serialization,
-        String type) {
+        @OutputCustomType.Parameter("datasource") @Nullable Object datasource,
+        @OutputCustomType.Parameter("diagnostics") DiagnosticsResponse diagnostics,
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("serialization") @Nullable Object serialization,
+        @OutputCustomType.Parameter("type") String type) {
         this.datasource = datasource;
         this.diagnostics = diagnostics;
         this.etag = etag;

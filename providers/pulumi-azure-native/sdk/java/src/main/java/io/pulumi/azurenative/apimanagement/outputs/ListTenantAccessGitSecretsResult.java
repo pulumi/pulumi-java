@@ -33,12 +33,12 @@ public final class ListTenantAccessGitSecretsResult {
      */
     private final @Nullable String secondaryKey;
 
-    @OutputCustomType.Constructor({"enabled","id","primaryKey","secondaryKey"})
+    @OutputCustomType.Constructor
     private ListTenantAccessGitSecretsResult(
-        @Nullable Boolean enabled,
-        @Nullable String id,
-        @Nullable String primaryKey,
-        @Nullable String secondaryKey) {
+        @OutputCustomType.Parameter("enabled") @Nullable Boolean enabled,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("primaryKey") @Nullable String primaryKey,
+        @OutputCustomType.Parameter("secondaryKey") @Nullable String secondaryKey) {
         this.enabled = enabled;
         this.id = id;
         this.primaryKey = primaryKey;

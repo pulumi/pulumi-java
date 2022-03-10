@@ -39,13 +39,13 @@ public final class ApplicationGatewayRewriteRuleSetResponse {
      */
     private final @Nullable List<ApplicationGatewayRewriteRuleResponse> rewriteRules;
 
-    @OutputCustomType.Constructor({"etag","id","name","provisioningState","rewriteRules"})
+    @OutputCustomType.Constructor
     private ApplicationGatewayRewriteRuleSetResponse(
-        String etag,
-        @Nullable String id,
-        @Nullable String name,
-        String provisioningState,
-        @Nullable List<ApplicationGatewayRewriteRuleResponse> rewriteRules) {
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("rewriteRules") @Nullable List<ApplicationGatewayRewriteRuleResponse> rewriteRules) {
         this.etag = etag;
         this.id = id;
         this.name = name;

@@ -34,12 +34,12 @@ public final class ClusterIdentityResponse {
      */
     private final @Nullable Map<String,ClusterIdentityResponseUserAssignedIdentities> userAssignedIdentities;
 
-    @OutputCustomType.Constructor({"principalId","tenantId","type","userAssignedIdentities"})
+    @OutputCustomType.Constructor
     private ClusterIdentityResponse(
-        String principalId,
-        String tenantId,
-        @Nullable String type,
-        @Nullable Map<String,ClusterIdentityResponseUserAssignedIdentities> userAssignedIdentities) {
+        @OutputCustomType.Parameter("principalId") String principalId,
+        @OutputCustomType.Parameter("tenantId") String tenantId,
+        @OutputCustomType.Parameter("type") @Nullable String type,
+        @OutputCustomType.Parameter("userAssignedIdentities") @Nullable Map<String,ClusterIdentityResponseUserAssignedIdentities> userAssignedIdentities) {
         this.principalId = principalId;
         this.tenantId = tenantId;
         this.type = type;

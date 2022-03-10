@@ -29,11 +29,11 @@ public final class TensorFlowResponse {
      */
     private final @Nullable Integer workerCount;
 
-    @OutputCustomType.Constructor({"distributionType","parameterServerCount","workerCount"})
+    @OutputCustomType.Constructor
     private TensorFlowResponse(
-        String distributionType,
-        @Nullable Integer parameterServerCount,
-        @Nullable Integer workerCount) {
+        @OutputCustomType.Parameter("distributionType") String distributionType,
+        @OutputCustomType.Parameter("parameterServerCount") @Nullable Integer parameterServerCount,
+        @OutputCustomType.Parameter("workerCount") @Nullable Integer workerCount) {
         this.distributionType = distributionType;
         this.parameterServerCount = parameterServerCount;
         this.workerCount = workerCount;

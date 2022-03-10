@@ -15,10 +15,10 @@ public final class SkuZoneDetailResponse {
     private final @Nullable List<SkuCapabilityResponse> capabilities;
     private final @Nullable List<String> name;
 
-    @OutputCustomType.Constructor({"capabilities","name"})
+    @OutputCustomType.Constructor
     private SkuZoneDetailResponse(
-        @Nullable List<SkuCapabilityResponse> capabilities,
-        @Nullable List<String> name) {
+        @OutputCustomType.Parameter("capabilities") @Nullable List<SkuCapabilityResponse> capabilities,
+        @OutputCustomType.Parameter("name") @Nullable List<String> name) {
         this.capabilities = capabilities;
         this.name = name;
     }

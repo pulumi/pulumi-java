@@ -31,12 +31,12 @@ public final class ServicePrincipalSecretAuthInfoResponse {
      */
     private final String secret;
 
-    @OutputCustomType.Constructor({"authType","clientId","principalId","secret"})
+    @OutputCustomType.Constructor
     private ServicePrincipalSecretAuthInfoResponse(
-        String authType,
-        String clientId,
-        String principalId,
-        String secret) {
+        @OutputCustomType.Parameter("authType") String authType,
+        @OutputCustomType.Parameter("clientId") String clientId,
+        @OutputCustomType.Parameter("principalId") String principalId,
+        @OutputCustomType.Parameter("secret") String secret) {
         this.authType = authType;
         this.clientId = clientId;
         this.principalId = principalId;

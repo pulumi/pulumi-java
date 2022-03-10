@@ -63,18 +63,18 @@ public final class ContainerServiceNetworkProfileResponse {
      */
     private final @Nullable String serviceCidr;
 
-    @OutputCustomType.Constructor({"dnsServiceIP","dockerBridgeCidr","loadBalancerProfile","loadBalancerSku","networkMode","networkPlugin","networkPolicy","outboundType","podCidr","serviceCidr"})
+    @OutputCustomType.Constructor
     private ContainerServiceNetworkProfileResponse(
-        @Nullable String dnsServiceIP,
-        @Nullable String dockerBridgeCidr,
-        @Nullable ManagedClusterLoadBalancerProfileResponse loadBalancerProfile,
-        @Nullable String loadBalancerSku,
-        @Nullable String networkMode,
-        @Nullable String networkPlugin,
-        @Nullable String networkPolicy,
-        @Nullable String outboundType,
-        @Nullable String podCidr,
-        @Nullable String serviceCidr) {
+        @OutputCustomType.Parameter("dnsServiceIP") @Nullable String dnsServiceIP,
+        @OutputCustomType.Parameter("dockerBridgeCidr") @Nullable String dockerBridgeCidr,
+        @OutputCustomType.Parameter("loadBalancerProfile") @Nullable ManagedClusterLoadBalancerProfileResponse loadBalancerProfile,
+        @OutputCustomType.Parameter("loadBalancerSku") @Nullable String loadBalancerSku,
+        @OutputCustomType.Parameter("networkMode") @Nullable String networkMode,
+        @OutputCustomType.Parameter("networkPlugin") @Nullable String networkPlugin,
+        @OutputCustomType.Parameter("networkPolicy") @Nullable String networkPolicy,
+        @OutputCustomType.Parameter("outboundType") @Nullable String outboundType,
+        @OutputCustomType.Parameter("podCidr") @Nullable String podCidr,
+        @OutputCustomType.Parameter("serviceCidr") @Nullable String serviceCidr) {
         this.dnsServiceIP = dnsServiceIP;
         this.dockerBridgeCidr = dockerBridgeCidr;
         this.loadBalancerProfile = loadBalancerProfile;

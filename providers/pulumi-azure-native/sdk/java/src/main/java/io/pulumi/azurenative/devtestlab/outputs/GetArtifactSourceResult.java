@@ -93,24 +93,24 @@ public final class GetArtifactSourceResult {
      */
     private final @Nullable String uri;
 
-    @OutputCustomType.Constructor({"armTemplateFolderPath","branchRef","createdDate","displayName","folderPath","id","location","name","provisioningState","securityToken","sourceType","status","tags","type","uniqueIdentifier","uri"})
+    @OutputCustomType.Constructor
     private GetArtifactSourceResult(
-        @Nullable String armTemplateFolderPath,
-        @Nullable String branchRef,
-        String createdDate,
-        @Nullable String displayName,
-        @Nullable String folderPath,
-        String id,
-        @Nullable String location,
-        String name,
-        String provisioningState,
-        @Nullable String securityToken,
-        @Nullable String sourceType,
-        @Nullable String status,
-        @Nullable Map<String,String> tags,
-        String type,
-        String uniqueIdentifier,
-        @Nullable String uri) {
+        @OutputCustomType.Parameter("armTemplateFolderPath") @Nullable String armTemplateFolderPath,
+        @OutputCustomType.Parameter("branchRef") @Nullable String branchRef,
+        @OutputCustomType.Parameter("createdDate") String createdDate,
+        @OutputCustomType.Parameter("displayName") @Nullable String displayName,
+        @OutputCustomType.Parameter("folderPath") @Nullable String folderPath,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("securityToken") @Nullable String securityToken,
+        @OutputCustomType.Parameter("sourceType") @Nullable String sourceType,
+        @OutputCustomType.Parameter("status") @Nullable String status,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("uniqueIdentifier") String uniqueIdentifier,
+        @OutputCustomType.Parameter("uri") @Nullable String uri) {
         this.armTemplateFolderPath = armTemplateFolderPath;
         this.branchRef = branchRef;
         this.createdDate = createdDate;

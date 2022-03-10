@@ -44,14 +44,14 @@ public final class ImageTemplatePlatformImageSourceResponse {
      */
     private final @Nullable String version;
 
-    @OutputCustomType.Constructor({"offer","planInfo","publisher","sku","type","version"})
+    @OutputCustomType.Constructor
     private ImageTemplatePlatformImageSourceResponse(
-        @Nullable String offer,
-        @Nullable PlatformImagePurchasePlanResponse planInfo,
-        @Nullable String publisher,
-        @Nullable String sku,
-        String type,
-        @Nullable String version) {
+        @OutputCustomType.Parameter("offer") @Nullable String offer,
+        @OutputCustomType.Parameter("planInfo") @Nullable PlatformImagePurchasePlanResponse planInfo,
+        @OutputCustomType.Parameter("publisher") @Nullable String publisher,
+        @OutputCustomType.Parameter("sku") @Nullable String sku,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("version") @Nullable String version) {
         this.offer = offer;
         this.planInfo = planInfo;
         this.publisher = publisher;

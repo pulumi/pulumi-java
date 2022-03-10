@@ -27,11 +27,11 @@ public final class HttpRouteMatchHeaderResponse {
      */
     private final @Nullable String value;
 
-    @OutputCustomType.Constructor({"name","type","value"})
+    @OutputCustomType.Constructor
     private HttpRouteMatchHeaderResponse(
-        String name,
-        @Nullable String type,
-        @Nullable String value) {
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("type") @Nullable String type,
+        @OutputCustomType.Parameter("value") @Nullable String value) {
         this.name = name;
         this.type = type;
         this.value = value;

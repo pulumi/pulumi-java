@@ -20,10 +20,10 @@ public final class ImageInformationResponse {
      */
     private final String imageUrl;
 
-    @OutputCustomType.Constructor({"imageType","imageUrl"})
+    @OutputCustomType.Constructor
     private ImageInformationResponse(
-        String imageType,
-        String imageUrl) {
+        @OutputCustomType.Parameter("imageType") String imageType,
+        @OutputCustomType.Parameter("imageUrl") String imageUrl) {
         this.imageType = imageType;
         this.imageUrl = imageUrl;
     }

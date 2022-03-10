@@ -17,8 +17,8 @@ public final class AkamaiAccessControlResponse {
      */
     private final @Nullable List<AkamaiSignatureHeaderAuthenticationKeyResponse> akamaiSignatureHeaderAuthenticationKeyList;
 
-    @OutputCustomType.Constructor({"akamaiSignatureHeaderAuthenticationKeyList"})
-    private AkamaiAccessControlResponse(@Nullable List<AkamaiSignatureHeaderAuthenticationKeyResponse> akamaiSignatureHeaderAuthenticationKeyList) {
+    @OutputCustomType.Constructor
+    private AkamaiAccessControlResponse(@OutputCustomType.Parameter("akamaiSignatureHeaderAuthenticationKeyList") @Nullable List<AkamaiSignatureHeaderAuthenticationKeyResponse> akamaiSignatureHeaderAuthenticationKeyList) {
         this.akamaiSignatureHeaderAuthenticationKeyList = akamaiSignatureHeaderAuthenticationKeyList;
     }
 

@@ -32,12 +32,12 @@ public final class ComplianceStatusResponse {
      */
     private final @Nullable String messageLevel;
 
-    @OutputCustomType.Constructor({"complianceState","lastConfigApplied","message","messageLevel"})
+    @OutputCustomType.Constructor
     private ComplianceStatusResponse(
-        String complianceState,
-        @Nullable String lastConfigApplied,
-        @Nullable String message,
-        @Nullable String messageLevel) {
+        @OutputCustomType.Parameter("complianceState") String complianceState,
+        @OutputCustomType.Parameter("lastConfigApplied") @Nullable String lastConfigApplied,
+        @OutputCustomType.Parameter("message") @Nullable String message,
+        @OutputCustomType.Parameter("messageLevel") @Nullable String messageLevel) {
         this.complianceState = complianceState;
         this.lastConfigApplied = lastConfigApplied;
         this.message = message;

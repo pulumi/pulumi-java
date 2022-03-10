@@ -27,11 +27,11 @@ public final class SqlUpsertSettingsResponse {
      */
     private final @Nullable Object useTempDB;
 
-    @OutputCustomType.Constructor({"interimSchemaName","keys","useTempDB"})
+    @OutputCustomType.Constructor
     private SqlUpsertSettingsResponse(
-        @Nullable Object interimSchemaName,
-        @Nullable Object keys,
-        @Nullable Object useTempDB) {
+        @OutputCustomType.Parameter("interimSchemaName") @Nullable Object interimSchemaName,
+        @OutputCustomType.Parameter("keys") @Nullable Object keys,
+        @OutputCustomType.Parameter("useTempDB") @Nullable Object useTempDB) {
         this.interimSchemaName = interimSchemaName;
         this.keys = keys;
         this.useTempDB = useTempDB;

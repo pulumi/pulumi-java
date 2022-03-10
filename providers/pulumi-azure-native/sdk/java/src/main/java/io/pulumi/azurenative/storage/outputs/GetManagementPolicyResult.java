@@ -36,13 +36,13 @@ public final class GetManagementPolicyResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"id","lastModifiedTime","name","policy","type"})
+    @OutputCustomType.Constructor
     private GetManagementPolicyResult(
-        String id,
-        String lastModifiedTime,
-        String name,
-        ManagementPolicySchemaResponse policy,
-        String type) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("lastModifiedTime") String lastModifiedTime,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("policy") ManagementPolicySchemaResponse policy,
+        @OutputCustomType.Parameter("type") String type) {
         this.id = id;
         this.lastModifiedTime = lastModifiedTime;
         this.name = name;

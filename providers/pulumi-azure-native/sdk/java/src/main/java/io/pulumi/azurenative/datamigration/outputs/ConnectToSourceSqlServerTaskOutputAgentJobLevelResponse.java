@@ -53,16 +53,16 @@ public final class ConnectToSourceSqlServerTaskOutputAgentJobLevelResponse {
      */
     private final String resultType;
 
-    @OutputCustomType.Constructor({"id","isEnabled","jobCategory","jobOwner","lastExecutedOn","migrationEligibility","name","resultType"})
+    @OutputCustomType.Constructor
     private ConnectToSourceSqlServerTaskOutputAgentJobLevelResponse(
-        String id,
-        Boolean isEnabled,
-        String jobCategory,
-        String jobOwner,
-        String lastExecutedOn,
-        MigrationEligibilityInfoResponse migrationEligibility,
-        String name,
-        String resultType) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("isEnabled") Boolean isEnabled,
+        @OutputCustomType.Parameter("jobCategory") String jobCategory,
+        @OutputCustomType.Parameter("jobOwner") String jobOwner,
+        @OutputCustomType.Parameter("lastExecutedOn") String lastExecutedOn,
+        @OutputCustomType.Parameter("migrationEligibility") MigrationEligibilityInfoResponse migrationEligibility,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("resultType") String resultType) {
         this.id = id;
         this.isEnabled = isEnabled;
         this.jobCategory = jobCategory;

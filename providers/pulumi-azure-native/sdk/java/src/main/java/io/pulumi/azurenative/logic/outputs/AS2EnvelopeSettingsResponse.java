@@ -36,13 +36,13 @@ public final class AS2EnvelopeSettingsResponse {
      */
     private final Boolean transmitFileNameInMimeHeader;
 
-    @OutputCustomType.Constructor({"autogenerateFileName","fileNameTemplate","messageContentType","suspendMessageOnFileNameGenerationError","transmitFileNameInMimeHeader"})
+    @OutputCustomType.Constructor
     private AS2EnvelopeSettingsResponse(
-        Boolean autogenerateFileName,
-        String fileNameTemplate,
-        String messageContentType,
-        Boolean suspendMessageOnFileNameGenerationError,
-        Boolean transmitFileNameInMimeHeader) {
+        @OutputCustomType.Parameter("autogenerateFileName") Boolean autogenerateFileName,
+        @OutputCustomType.Parameter("fileNameTemplate") String fileNameTemplate,
+        @OutputCustomType.Parameter("messageContentType") String messageContentType,
+        @OutputCustomType.Parameter("suspendMessageOnFileNameGenerationError") Boolean suspendMessageOnFileNameGenerationError,
+        @OutputCustomType.Parameter("transmitFileNameInMimeHeader") Boolean transmitFileNameInMimeHeader) {
         this.autogenerateFileName = autogenerateFileName;
         this.fileNameTemplate = fileNameTemplate;
         this.messageContentType = messageContentType;

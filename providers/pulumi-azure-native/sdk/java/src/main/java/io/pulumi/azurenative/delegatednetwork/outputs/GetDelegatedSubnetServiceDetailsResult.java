@@ -60,17 +60,17 @@ public final class GetDelegatedSubnetServiceDetailsResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"controllerDetails","id","location","name","provisioningState","resourceGuid","subnetDetails","tags","type"})
+    @OutputCustomType.Constructor
     private GetDelegatedSubnetServiceDetailsResult(
-        @Nullable ControllerDetailsResponse controllerDetails,
-        String id,
-        @Nullable String location,
-        String name,
-        String provisioningState,
-        String resourceGuid,
-        @Nullable SubnetDetailsResponse subnetDetails,
-        @Nullable Map<String,String> tags,
-        String type) {
+        @OutputCustomType.Parameter("controllerDetails") @Nullable ControllerDetailsResponse controllerDetails,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("resourceGuid") String resourceGuid,
+        @OutputCustomType.Parameter("subnetDetails") @Nullable SubnetDetailsResponse subnetDetails,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type) {
         this.controllerDetails = controllerDetails;
         this.id = id;
         this.location = location;

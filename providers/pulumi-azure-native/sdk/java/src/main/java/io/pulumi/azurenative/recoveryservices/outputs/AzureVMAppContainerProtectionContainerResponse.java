@@ -67,18 +67,18 @@ public final class AzureVMAppContainerProtectionContainerResponse {
      */
     private final @Nullable String workloadType;
 
-    @OutputCustomType.Constructor({"backupManagementType","containerType","extendedInfo","friendlyName","healthStatus","lastUpdatedTime","operationType","registrationStatus","sourceResourceId","workloadType"})
+    @OutputCustomType.Constructor
     private AzureVMAppContainerProtectionContainerResponse(
-        @Nullable String backupManagementType,
-        String containerType,
-        @Nullable AzureWorkloadContainerExtendedInfoResponse extendedInfo,
-        @Nullable String friendlyName,
-        @Nullable String healthStatus,
-        @Nullable String lastUpdatedTime,
-        @Nullable String operationType,
-        @Nullable String registrationStatus,
-        @Nullable String sourceResourceId,
-        @Nullable String workloadType) {
+        @OutputCustomType.Parameter("backupManagementType") @Nullable String backupManagementType,
+        @OutputCustomType.Parameter("containerType") String containerType,
+        @OutputCustomType.Parameter("extendedInfo") @Nullable AzureWorkloadContainerExtendedInfoResponse extendedInfo,
+        @OutputCustomType.Parameter("friendlyName") @Nullable String friendlyName,
+        @OutputCustomType.Parameter("healthStatus") @Nullable String healthStatus,
+        @OutputCustomType.Parameter("lastUpdatedTime") @Nullable String lastUpdatedTime,
+        @OutputCustomType.Parameter("operationType") @Nullable String operationType,
+        @OutputCustomType.Parameter("registrationStatus") @Nullable String registrationStatus,
+        @OutputCustomType.Parameter("sourceResourceId") @Nullable String sourceResourceId,
+        @OutputCustomType.Parameter("workloadType") @Nullable String workloadType) {
         this.backupManagementType = backupManagementType;
         this.containerType = containerType;
         this.extendedInfo = extendedInfo;

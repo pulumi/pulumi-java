@@ -77,21 +77,21 @@ public final class GetArcAddonResult {
      */
     private final String version;
 
-    @OutputCustomType.Constructor({"hostPlatform","hostPlatformType","id","kind","name","provisioningState","resourceGroupName","resourceLocation","resourceName","subscriptionId","systemData","type","version"})
+    @OutputCustomType.Constructor
     private GetArcAddonResult(
-        String hostPlatform,
-        String hostPlatformType,
-        String id,
-        String kind,
-        String name,
-        String provisioningState,
-        String resourceGroupName,
-        String resourceLocation,
-        String resourceName,
-        String subscriptionId,
-        SystemDataResponse systemData,
-        String type,
-        String version) {
+        @OutputCustomType.Parameter("hostPlatform") String hostPlatform,
+        @OutputCustomType.Parameter("hostPlatformType") String hostPlatformType,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("resourceGroupName") String resourceGroupName,
+        @OutputCustomType.Parameter("resourceLocation") String resourceLocation,
+        @OutputCustomType.Parameter("resourceName") String resourceName,
+        @OutputCustomType.Parameter("subscriptionId") String subscriptionId,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("version") String version) {
         this.hostPlatform = hostPlatform;
         this.hostPlatformType = hostPlatformType;
         this.id = id;

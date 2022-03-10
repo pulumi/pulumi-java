@@ -29,11 +29,11 @@ public final class ManagedClusterAPIServerAccessProfileResponse {
      */
     private final @Nullable String privateDNSZone;
 
-    @OutputCustomType.Constructor({"authorizedIPRanges","enablePrivateCluster","privateDNSZone"})
+    @OutputCustomType.Constructor
     private ManagedClusterAPIServerAccessProfileResponse(
-        @Nullable List<String> authorizedIPRanges,
-        @Nullable Boolean enablePrivateCluster,
-        @Nullable String privateDNSZone) {
+        @OutputCustomType.Parameter("authorizedIPRanges") @Nullable List<String> authorizedIPRanges,
+        @OutputCustomType.Parameter("enablePrivateCluster") @Nullable Boolean enablePrivateCluster,
+        @OutputCustomType.Parameter("privateDNSZone") @Nullable String privateDNSZone) {
         this.authorizedIPRanges = authorizedIPRanges;
         this.enablePrivateCluster = enablePrivateCluster;
         this.privateDNSZone = privateDNSZone;

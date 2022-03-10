@@ -22,10 +22,10 @@ public final class StorageInsightStatusResponse {
      */
     private final String state;
 
-    @OutputCustomType.Constructor({"description","state"})
+    @OutputCustomType.Constructor
     private StorageInsightStatusResponse(
-        @Nullable String description,
-        String state) {
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("state") String state) {
         this.description = description;
         this.state = state;
     }

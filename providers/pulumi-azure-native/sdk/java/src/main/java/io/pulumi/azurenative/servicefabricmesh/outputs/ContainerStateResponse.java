@@ -37,13 +37,13 @@ public final class ContainerStateResponse {
      */
     private final @Nullable String state;
 
-    @OutputCustomType.Constructor({"detailStatus","exitCode","finishTime","startTime","state"})
+    @OutputCustomType.Constructor
     private ContainerStateResponse(
-        @Nullable String detailStatus,
-        @Nullable String exitCode,
-        @Nullable String finishTime,
-        @Nullable String startTime,
-        @Nullable String state) {
+        @OutputCustomType.Parameter("detailStatus") @Nullable String detailStatus,
+        @OutputCustomType.Parameter("exitCode") @Nullable String exitCode,
+        @OutputCustomType.Parameter("finishTime") @Nullable String finishTime,
+        @OutputCustomType.Parameter("startTime") @Nullable String startTime,
+        @OutputCustomType.Parameter("state") @Nullable String state) {
         this.detailStatus = detailStatus;
         this.exitCode = exitCode;
         this.finishTime = finishTime;

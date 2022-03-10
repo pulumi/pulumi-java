@@ -15,8 +15,8 @@ public final class ListDatastoreSecretsResult {
      */
     private final String secretsType;
 
-    @OutputCustomType.Constructor({"secretsType"})
-    private ListDatastoreSecretsResult(String secretsType) {
+    @OutputCustomType.Constructor
+    private ListDatastoreSecretsResult(@OutputCustomType.Parameter("secretsType") String secretsType) {
         this.secretsType = secretsType;
     }
 

@@ -15,8 +15,8 @@ public final class KeyPolicyResponse {
      */
     private final Integer keyExpirationPeriodInDays;
 
-    @OutputCustomType.Constructor({"keyExpirationPeriodInDays"})
-    private KeyPolicyResponse(Integer keyExpirationPeriodInDays) {
+    @OutputCustomType.Constructor
+    private KeyPolicyResponse(@OutputCustomType.Parameter("keyExpirationPeriodInDays") Integer keyExpirationPeriodInDays) {
         this.keyExpirationPeriodInDays = keyExpirationPeriodInDays;
     }
 

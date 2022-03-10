@@ -50,15 +50,15 @@ public final class BackendPoolResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"backends","healthProbeSettings","id","loadBalancingSettings","name","resourceState","type"})
+    @OutputCustomType.Constructor
     private BackendPoolResponse(
-        @Nullable List<BackendResponse> backends,
-        @Nullable SubResourceResponse healthProbeSettings,
-        @Nullable String id,
-        @Nullable SubResourceResponse loadBalancingSettings,
-        @Nullable String name,
-        String resourceState,
-        String type) {
+        @OutputCustomType.Parameter("backends") @Nullable List<BackendResponse> backends,
+        @OutputCustomType.Parameter("healthProbeSettings") @Nullable SubResourceResponse healthProbeSettings,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("loadBalancingSettings") @Nullable SubResourceResponse loadBalancingSettings,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("resourceState") String resourceState,
+        @OutputCustomType.Parameter("type") String type) {
         this.backends = backends;
         this.healthProbeSettings = healthProbeSettings;
         this.id = id;

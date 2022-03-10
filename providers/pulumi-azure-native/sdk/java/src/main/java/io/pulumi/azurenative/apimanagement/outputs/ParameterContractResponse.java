@@ -44,14 +44,14 @@ public final class ParameterContractResponse {
      */
     private final @Nullable List<String> values;
 
-    @OutputCustomType.Constructor({"defaultValue","description","name","required","type","values"})
+    @OutputCustomType.Constructor
     private ParameterContractResponse(
-        @Nullable String defaultValue,
-        @Nullable String description,
-        String name,
-        @Nullable Boolean required,
-        String type,
-        @Nullable List<String> values) {
+        @OutputCustomType.Parameter("defaultValue") @Nullable String defaultValue,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("required") @Nullable Boolean required,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("values") @Nullable List<String> values) {
         this.defaultValue = defaultValue;
         this.description = description;
         this.name = name;

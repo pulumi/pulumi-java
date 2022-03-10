@@ -81,20 +81,20 @@ public final class OracleServiceCloudLinkedServiceResponse {
      */
     private final Object username;
 
-    @OutputCustomType.Constructor({"annotations","connectVia","description","encryptedCredential","host","parameters","password","type","useEncryptedEndpoints","useHostVerification","usePeerVerification","username"})
+    @OutputCustomType.Constructor
     private OracleServiceCloudLinkedServiceResponse(
-        @Nullable List<Object> annotations,
-        @Nullable IntegrationRuntimeReferenceResponse connectVia,
-        @Nullable String description,
-        @Nullable Object encryptedCredential,
-        Object host,
-        @Nullable Map<String,ParameterSpecificationResponse> parameters,
-        Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password,
-        String type,
-        @Nullable Object useEncryptedEndpoints,
-        @Nullable Object useHostVerification,
-        @Nullable Object usePeerVerification,
-        Object username) {
+        @OutputCustomType.Parameter("annotations") @Nullable List<Object> annotations,
+        @OutputCustomType.Parameter("connectVia") @Nullable IntegrationRuntimeReferenceResponse connectVia,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("encryptedCredential") @Nullable Object encryptedCredential,
+        @OutputCustomType.Parameter("host") Object host,
+        @OutputCustomType.Parameter("parameters") @Nullable Map<String,ParameterSpecificationResponse> parameters,
+        @OutputCustomType.Parameter("password") Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("useEncryptedEndpoints") @Nullable Object useEncryptedEndpoints,
+        @OutputCustomType.Parameter("useHostVerification") @Nullable Object useHostVerification,
+        @OutputCustomType.Parameter("usePeerVerification") @Nullable Object usePeerVerification,
+        @OutputCustomType.Parameter("username") Object username) {
         this.annotations = annotations;
         this.connectVia = connectVia;
         this.description = description;

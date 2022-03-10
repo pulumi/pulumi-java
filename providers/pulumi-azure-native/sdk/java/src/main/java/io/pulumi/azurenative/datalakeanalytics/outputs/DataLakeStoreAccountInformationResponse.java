@@ -30,12 +30,12 @@ public final class DataLakeStoreAccountInformationResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"id","name","suffix","type"})
+    @OutputCustomType.Constructor
     private DataLakeStoreAccountInformationResponse(
-        String id,
-        String name,
-        String suffix,
-        String type) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("suffix") String suffix,
+        @OutputCustomType.Parameter("type") String type) {
         this.id = id;
         this.name = name;
         this.suffix = suffix;

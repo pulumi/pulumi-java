@@ -67,19 +67,19 @@ public final class AccessReviewHistoryInstanceResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"displayName","downloadUri","expiration","fulfilledDateTime","id","name","reviewHistoryPeriodEndDateTime","reviewHistoryPeriodStartDateTime","runDateTime","status","type"})
+    @OutputCustomType.Constructor
     private AccessReviewHistoryInstanceResponse(
-        @Nullable String displayName,
-        String downloadUri,
-        @Nullable String expiration,
-        @Nullable String fulfilledDateTime,
-        String id,
-        String name,
-        @Nullable String reviewHistoryPeriodEndDateTime,
-        @Nullable String reviewHistoryPeriodStartDateTime,
-        @Nullable String runDateTime,
-        String status,
-        String type) {
+        @OutputCustomType.Parameter("displayName") @Nullable String displayName,
+        @OutputCustomType.Parameter("downloadUri") String downloadUri,
+        @OutputCustomType.Parameter("expiration") @Nullable String expiration,
+        @OutputCustomType.Parameter("fulfilledDateTime") @Nullable String fulfilledDateTime,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("reviewHistoryPeriodEndDateTime") @Nullable String reviewHistoryPeriodEndDateTime,
+        @OutputCustomType.Parameter("reviewHistoryPeriodStartDateTime") @Nullable String reviewHistoryPeriodStartDateTime,
+        @OutputCustomType.Parameter("runDateTime") @Nullable String runDateTime,
+        @OutputCustomType.Parameter("status") String status,
+        @OutputCustomType.Parameter("type") String type) {
         this.displayName = displayName;
         this.downloadUri = downloadUri;
         this.expiration = expiration;

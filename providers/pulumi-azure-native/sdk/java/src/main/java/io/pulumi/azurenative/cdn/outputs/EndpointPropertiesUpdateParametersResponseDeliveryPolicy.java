@@ -24,10 +24,10 @@ public final class EndpointPropertiesUpdateParametersResponseDeliveryPolicy {
      */
     private final List<DeliveryRuleResponse> rules;
 
-    @OutputCustomType.Constructor({"description","rules"})
+    @OutputCustomType.Constructor
     private EndpointPropertiesUpdateParametersResponseDeliveryPolicy(
-        @Nullable String description,
-        List<DeliveryRuleResponse> rules) {
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("rules") List<DeliveryRuleResponse> rules) {
         this.description = description;
         this.rules = rules;
     }

@@ -17,11 +17,11 @@ public final class ResourceGuardProxyBaseResponse {
     private final @Nullable List<ResourceGuardOperationDetailResponse> resourceGuardOperationDetails;
     private final @Nullable String resourceGuardResourceId;
 
-    @OutputCustomType.Constructor({"lastUpdatedTime","resourceGuardOperationDetails","resourceGuardResourceId"})
+    @OutputCustomType.Constructor
     private ResourceGuardProxyBaseResponse(
-        @Nullable String lastUpdatedTime,
-        @Nullable List<ResourceGuardOperationDetailResponse> resourceGuardOperationDetails,
-        @Nullable String resourceGuardResourceId) {
+        @OutputCustomType.Parameter("lastUpdatedTime") @Nullable String lastUpdatedTime,
+        @OutputCustomType.Parameter("resourceGuardOperationDetails") @Nullable List<ResourceGuardOperationDetailResponse> resourceGuardOperationDetails,
+        @OutputCustomType.Parameter("resourceGuardResourceId") @Nullable String resourceGuardResourceId) {
         this.lastUpdatedTime = lastUpdatedTime;
         this.resourceGuardOperationDetails = resourceGuardOperationDetails;
         this.resourceGuardResourceId = resourceGuardResourceId;

@@ -69,19 +69,19 @@ public final class GetMediaServiceResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"encryption","id","identity","location","mediaServiceId","name","storageAccounts","storageAuthentication","systemData","tags","type"})
+    @OutputCustomType.Constructor
     private GetMediaServiceResult(
-        @Nullable AccountEncryptionResponse encryption,
-        String id,
-        @Nullable MediaServiceIdentityResponse identity,
-        String location,
-        String mediaServiceId,
-        String name,
-        @Nullable List<StorageAccountResponse> storageAccounts,
-        @Nullable String storageAuthentication,
-        SystemDataResponse systemData,
-        @Nullable Map<String,String> tags,
-        String type) {
+        @OutputCustomType.Parameter("encryption") @Nullable AccountEncryptionResponse encryption,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("identity") @Nullable MediaServiceIdentityResponse identity,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("mediaServiceId") String mediaServiceId,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("storageAccounts") @Nullable List<StorageAccountResponse> storageAccounts,
+        @OutputCustomType.Parameter("storageAuthentication") @Nullable String storageAuthentication,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type) {
         this.encryption = encryption;
         this.id = id;
         this.identity = identity;

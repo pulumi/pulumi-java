@@ -54,16 +54,16 @@ public final class EndpointsResponse {
      */
     private final String web;
 
-    @OutputCustomType.Constructor({"blob","dfs","file","internetEndpoints","microsoftEndpoints","queue","table","web"})
+    @OutputCustomType.Constructor
     private EndpointsResponse(
-        String blob,
-        String dfs,
-        String file,
-        @Nullable StorageAccountInternetEndpointsResponse internetEndpoints,
-        @Nullable StorageAccountMicrosoftEndpointsResponse microsoftEndpoints,
-        String queue,
-        String table,
-        String web) {
+        @OutputCustomType.Parameter("blob") String blob,
+        @OutputCustomType.Parameter("dfs") String dfs,
+        @OutputCustomType.Parameter("file") String file,
+        @OutputCustomType.Parameter("internetEndpoints") @Nullable StorageAccountInternetEndpointsResponse internetEndpoints,
+        @OutputCustomType.Parameter("microsoftEndpoints") @Nullable StorageAccountMicrosoftEndpointsResponse microsoftEndpoints,
+        @OutputCustomType.Parameter("queue") String queue,
+        @OutputCustomType.Parameter("table") String table,
+        @OutputCustomType.Parameter("web") String web) {
         this.blob = blob;
         this.dfs = dfs;
         this.file = file;

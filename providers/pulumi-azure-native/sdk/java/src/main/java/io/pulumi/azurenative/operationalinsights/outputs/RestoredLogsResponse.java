@@ -27,11 +27,11 @@ public final class RestoredLogsResponse {
      */
     private final @Nullable String startRestoreTime;
 
-    @OutputCustomType.Constructor({"endRestoreTime","sourceTable","startRestoreTime"})
+    @OutputCustomType.Constructor
     private RestoredLogsResponse(
-        @Nullable String endRestoreTime,
-        String sourceTable,
-        @Nullable String startRestoreTime) {
+        @OutputCustomType.Parameter("endRestoreTime") @Nullable String endRestoreTime,
+        @OutputCustomType.Parameter("sourceTable") String sourceTable,
+        @OutputCustomType.Parameter("startRestoreTime") @Nullable String startRestoreTime) {
         this.endRestoreTime = endRestoreTime;
         this.sourceTable = sourceTable;
         this.startRestoreTime = startRestoreTime;

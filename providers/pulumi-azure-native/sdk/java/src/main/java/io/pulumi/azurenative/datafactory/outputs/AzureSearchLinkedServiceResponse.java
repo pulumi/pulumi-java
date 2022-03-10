@@ -61,16 +61,16 @@ public final class AzureSearchLinkedServiceResponse {
      */
     private final Object url;
 
-    @OutputCustomType.Constructor({"annotations","connectVia","description","encryptedCredential","key","parameters","type","url"})
+    @OutputCustomType.Constructor
     private AzureSearchLinkedServiceResponse(
-        @Nullable List<Object> annotations,
-        @Nullable IntegrationRuntimeReferenceResponse connectVia,
-        @Nullable String description,
-        @Nullable Object encryptedCredential,
-        @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> key,
-        @Nullable Map<String,ParameterSpecificationResponse> parameters,
-        String type,
-        Object url) {
+        @OutputCustomType.Parameter("annotations") @Nullable List<Object> annotations,
+        @OutputCustomType.Parameter("connectVia") @Nullable IntegrationRuntimeReferenceResponse connectVia,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("encryptedCredential") @Nullable Object encryptedCredential,
+        @OutputCustomType.Parameter("key") @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> key,
+        @OutputCustomType.Parameter("parameters") @Nullable Map<String,ParameterSpecificationResponse> parameters,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("url") Object url) {
         this.annotations = annotations;
         this.connectVia = connectVia;
         this.description = description;

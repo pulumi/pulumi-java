@@ -38,13 +38,13 @@ public final class SmsChannelPropertiesResponse {
      */
     private final String phone;
 
-    @OutputCustomType.Constructor({"accountSID","authToken","isEnabled","isValidated","phone"})
+    @OutputCustomType.Constructor
     private SmsChannelPropertiesResponse(
-        String accountSID,
-        @Nullable String authToken,
-        Boolean isEnabled,
-        @Nullable Boolean isValidated,
-        String phone) {
+        @OutputCustomType.Parameter("accountSID") String accountSID,
+        @OutputCustomType.Parameter("authToken") @Nullable String authToken,
+        @OutputCustomType.Parameter("isEnabled") Boolean isEnabled,
+        @OutputCustomType.Parameter("isValidated") @Nullable Boolean isValidated,
+        @OutputCustomType.Parameter("phone") String phone) {
         this.accountSID = accountSID;
         this.authToken = authToken;
         this.isEnabled = isEnabled;

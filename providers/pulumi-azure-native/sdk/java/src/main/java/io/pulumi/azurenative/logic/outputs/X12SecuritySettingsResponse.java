@@ -32,12 +32,12 @@ public final class X12SecuritySettingsResponse {
      */
     private final String securityQualifier;
 
-    @OutputCustomType.Constructor({"authorizationQualifier","authorizationValue","passwordValue","securityQualifier"})
+    @OutputCustomType.Constructor
     private X12SecuritySettingsResponse(
-        String authorizationQualifier,
-        @Nullable String authorizationValue,
-        @Nullable String passwordValue,
-        String securityQualifier) {
+        @OutputCustomType.Parameter("authorizationQualifier") String authorizationQualifier,
+        @OutputCustomType.Parameter("authorizationValue") @Nullable String authorizationValue,
+        @OutputCustomType.Parameter("passwordValue") @Nullable String passwordValue,
+        @OutputCustomType.Parameter("securityQualifier") String securityQualifier) {
         this.authorizationQualifier = authorizationQualifier;
         this.authorizationValue = authorizationValue;
         this.passwordValue = passwordValue;

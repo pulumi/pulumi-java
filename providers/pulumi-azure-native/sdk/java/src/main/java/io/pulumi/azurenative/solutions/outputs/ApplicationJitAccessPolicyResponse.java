@@ -35,12 +35,12 @@ public final class ApplicationJitAccessPolicyResponse {
      */
     private final @Nullable String maximumJitAccessDuration;
 
-    @OutputCustomType.Constructor({"jitAccessEnabled","jitApprovalMode","jitApprovers","maximumJitAccessDuration"})
+    @OutputCustomType.Constructor
     private ApplicationJitAccessPolicyResponse(
-        Boolean jitAccessEnabled,
-        @Nullable String jitApprovalMode,
-        @Nullable List<JitApproverDefinitionResponse> jitApprovers,
-        @Nullable String maximumJitAccessDuration) {
+        @OutputCustomType.Parameter("jitAccessEnabled") Boolean jitAccessEnabled,
+        @OutputCustomType.Parameter("jitApprovalMode") @Nullable String jitApprovalMode,
+        @OutputCustomType.Parameter("jitApprovers") @Nullable List<JitApproverDefinitionResponse> jitApprovers,
+        @OutputCustomType.Parameter("maximumJitAccessDuration") @Nullable String maximumJitAccessDuration) {
         this.jitAccessEnabled = jitAccessEnabled;
         this.jitApprovalMode = jitApprovalMode;
         this.jitApprovers = jitApprovers;

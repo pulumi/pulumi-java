@@ -26,11 +26,11 @@ public final class BudgetComparisonExpressionResponse {
      */
     private final List<String> values;
 
-    @OutputCustomType.Constructor({"name","operator","values"})
+    @OutputCustomType.Constructor
     private BudgetComparisonExpressionResponse(
-        String name,
-        String operator,
-        List<String> values) {
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("operator") String operator,
+        @OutputCustomType.Parameter("values") List<String> values) {
         this.name = name;
         this.operator = operator;
         this.values = values;

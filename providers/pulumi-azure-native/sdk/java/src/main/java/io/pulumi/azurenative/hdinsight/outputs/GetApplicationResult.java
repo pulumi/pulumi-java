@@ -44,14 +44,14 @@ public final class GetApplicationResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"etag","id","name","properties","tags","type"})
+    @OutputCustomType.Constructor
     private GetApplicationResult(
-        @Nullable String etag,
-        String id,
-        String name,
-        ApplicationPropertiesResponse properties,
-        @Nullable Map<String,String> tags,
-        String type) {
+        @OutputCustomType.Parameter("etag") @Nullable String etag,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("properties") ApplicationPropertiesResponse properties,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type) {
         this.etag = etag;
         this.id = id;
         this.name = name;

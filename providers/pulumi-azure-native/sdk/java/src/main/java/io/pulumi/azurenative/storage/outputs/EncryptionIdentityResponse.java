@@ -17,8 +17,8 @@ public final class EncryptionIdentityResponse {
      */
     private final @Nullable String encryptionUserAssignedIdentity;
 
-    @OutputCustomType.Constructor({"encryptionUserAssignedIdentity"})
-    private EncryptionIdentityResponse(@Nullable String encryptionUserAssignedIdentity) {
+    @OutputCustomType.Constructor
+    private EncryptionIdentityResponse(@OutputCustomType.Parameter("encryptionUserAssignedIdentity") @Nullable String encryptionUserAssignedIdentity) {
         this.encryptionUserAssignedIdentity = encryptionUserAssignedIdentity;
     }
 

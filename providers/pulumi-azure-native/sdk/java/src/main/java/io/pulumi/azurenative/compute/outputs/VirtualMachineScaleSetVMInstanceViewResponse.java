@@ -81,20 +81,20 @@ public final class VirtualMachineScaleSetVMInstanceViewResponse {
      */
     private final VirtualMachineHealthStatusResponse vmHealth;
 
-    @OutputCustomType.Constructor({"assignedHost","bootDiagnostics","disks","extensions","maintenanceRedeployStatus","placementGroupId","platformFaultDomain","platformUpdateDomain","rdpThumbPrint","statuses","vmAgent","vmHealth"})
+    @OutputCustomType.Constructor
     private VirtualMachineScaleSetVMInstanceViewResponse(
-        String assignedHost,
-        @Nullable BootDiagnosticsInstanceViewResponse bootDiagnostics,
-        @Nullable List<DiskInstanceViewResponse> disks,
-        @Nullable List<VirtualMachineExtensionInstanceViewResponse> extensions,
-        @Nullable MaintenanceRedeployStatusResponse maintenanceRedeployStatus,
-        @Nullable String placementGroupId,
-        @Nullable Integer platformFaultDomain,
-        @Nullable Integer platformUpdateDomain,
-        @Nullable String rdpThumbPrint,
-        @Nullable List<InstanceViewStatusResponse> statuses,
-        @Nullable VirtualMachineAgentInstanceViewResponse vmAgent,
-        VirtualMachineHealthStatusResponse vmHealth) {
+        @OutputCustomType.Parameter("assignedHost") String assignedHost,
+        @OutputCustomType.Parameter("bootDiagnostics") @Nullable BootDiagnosticsInstanceViewResponse bootDiagnostics,
+        @OutputCustomType.Parameter("disks") @Nullable List<DiskInstanceViewResponse> disks,
+        @OutputCustomType.Parameter("extensions") @Nullable List<VirtualMachineExtensionInstanceViewResponse> extensions,
+        @OutputCustomType.Parameter("maintenanceRedeployStatus") @Nullable MaintenanceRedeployStatusResponse maintenanceRedeployStatus,
+        @OutputCustomType.Parameter("placementGroupId") @Nullable String placementGroupId,
+        @OutputCustomType.Parameter("platformFaultDomain") @Nullable Integer platformFaultDomain,
+        @OutputCustomType.Parameter("platformUpdateDomain") @Nullable Integer platformUpdateDomain,
+        @OutputCustomType.Parameter("rdpThumbPrint") @Nullable String rdpThumbPrint,
+        @OutputCustomType.Parameter("statuses") @Nullable List<InstanceViewStatusResponse> statuses,
+        @OutputCustomType.Parameter("vmAgent") @Nullable VirtualMachineAgentInstanceViewResponse vmAgent,
+        @OutputCustomType.Parameter("vmHealth") VirtualMachineHealthStatusResponse vmHealth) {
         this.assignedHost = assignedHost;
         this.bootDiagnostics = bootDiagnostics;
         this.disks = disks;

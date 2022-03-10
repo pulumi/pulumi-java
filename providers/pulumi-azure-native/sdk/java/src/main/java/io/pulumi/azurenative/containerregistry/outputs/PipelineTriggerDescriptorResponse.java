@@ -17,8 +17,8 @@ public final class PipelineTriggerDescriptorResponse {
      */
     private final @Nullable PipelineSourceTriggerDescriptorResponse sourceTrigger;
 
-    @OutputCustomType.Constructor({"sourceTrigger"})
-    private PipelineTriggerDescriptorResponse(@Nullable PipelineSourceTriggerDescriptorResponse sourceTrigger) {
+    @OutputCustomType.Constructor
+    private PipelineTriggerDescriptorResponse(@OutputCustomType.Parameter("sourceTrigger") @Nullable PipelineSourceTriggerDescriptorResponse sourceTrigger) {
         this.sourceTrigger = sourceTrigger;
     }
 

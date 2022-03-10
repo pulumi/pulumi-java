@@ -29,11 +29,11 @@ public final class TransferConfigurationResponse {
      */
     private final @Nullable TransferConfigurationResponseTransferFilterDetails transferFilterDetails;
 
-    @OutputCustomType.Constructor({"transferAllDetails","transferConfigurationType","transferFilterDetails"})
+    @OutputCustomType.Constructor
     private TransferConfigurationResponse(
-        @Nullable TransferConfigurationResponseTransferAllDetails transferAllDetails,
-        String transferConfigurationType,
-        @Nullable TransferConfigurationResponseTransferFilterDetails transferFilterDetails) {
+        @OutputCustomType.Parameter("transferAllDetails") @Nullable TransferConfigurationResponseTransferAllDetails transferAllDetails,
+        @OutputCustomType.Parameter("transferConfigurationType") String transferConfigurationType,
+        @OutputCustomType.Parameter("transferFilterDetails") @Nullable TransferConfigurationResponseTransferFilterDetails transferFilterDetails) {
         this.transferAllDetails = transferAllDetails;
         this.transferConfigurationType = transferConfigurationType;
         this.transferFilterDetails = transferFilterDetails;

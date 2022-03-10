@@ -81,20 +81,20 @@ public final class ResponseMessageEnvelopeRemotePrivateEndpointConnectionRespons
      */
     private final @Nullable List<String> zones;
 
-    @OutputCustomType.Constructor({"error","id","identity","location","name","plan","properties","sku","status","tags","type","zones"})
+    @OutputCustomType.Constructor
     private ResponseMessageEnvelopeRemotePrivateEndpointConnectionResponse(
-        @Nullable ErrorEntityResponse error,
-        @Nullable String id,
-        @Nullable ManagedServiceIdentityResponse identity,
-        @Nullable String location,
-        @Nullable String name,
-        @Nullable ArmPlanResponse plan,
-        @Nullable RemotePrivateEndpointConnectionResponse properties,
-        @Nullable SkuDescriptionResponse sku,
-        @Nullable String status,
-        @Nullable Map<String,String> tags,
-        @Nullable String type,
-        @Nullable List<String> zones) {
+        @OutputCustomType.Parameter("error") @Nullable ErrorEntityResponse error,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("identity") @Nullable ManagedServiceIdentityResponse identity,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("plan") @Nullable ArmPlanResponse plan,
+        @OutputCustomType.Parameter("properties") @Nullable RemotePrivateEndpointConnectionResponse properties,
+        @OutputCustomType.Parameter("sku") @Nullable SkuDescriptionResponse sku,
+        @OutputCustomType.Parameter("status") @Nullable String status,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") @Nullable String type,
+        @OutputCustomType.Parameter("zones") @Nullable List<String> zones) {
         this.error = error;
         this.id = id;
         this.identity = identity;

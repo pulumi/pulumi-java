@@ -29,11 +29,11 @@ public final class NumberLessThanOrEqualsAdvancedFilterResponse {
      */
     private final @Nullable Double value;
 
-    @OutputCustomType.Constructor({"key","operatorType","value"})
+    @OutputCustomType.Constructor
     private NumberLessThanOrEqualsAdvancedFilterResponse(
-        @Nullable String key,
-        String operatorType,
-        @Nullable Double value) {
+        @OutputCustomType.Parameter("key") @Nullable String key,
+        @OutputCustomType.Parameter("operatorType") String operatorType,
+        @OutputCustomType.Parameter("value") @Nullable Double value) {
         this.key = key;
         this.operatorType = operatorType;
         this.value = value;

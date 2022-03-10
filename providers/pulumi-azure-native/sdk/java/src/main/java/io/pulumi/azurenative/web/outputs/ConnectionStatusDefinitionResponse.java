@@ -28,11 +28,11 @@ public final class ConnectionStatusDefinitionResponse {
      */
     private final @Nullable String target;
 
-    @OutputCustomType.Constructor({"error","status","target"})
+    @OutputCustomType.Constructor
     private ConnectionStatusDefinitionResponse(
-        @Nullable ConnectionErrorResponse error,
-        @Nullable String status,
-        @Nullable String target) {
+        @OutputCustomType.Parameter("error") @Nullable ConnectionErrorResponse error,
+        @OutputCustomType.Parameter("status") @Nullable String status,
+        @OutputCustomType.Parameter("target") @Nullable String target) {
         this.error = error;
         this.status = status;
         this.target = target;

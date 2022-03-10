@@ -32,12 +32,12 @@ public final class GetTrafficManagerUserMetricsKeyResult {
      */
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor({"id","key","name","type"})
+    @OutputCustomType.Constructor
     private GetTrafficManagerUserMetricsKeyResult(
-        @Nullable String id,
-        @Nullable String key,
-        @Nullable String name,
-        @Nullable String type) {
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("key") @Nullable String key,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("type") @Nullable String type) {
         this.id = id;
         this.key = key;
         this.name = name;

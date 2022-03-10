@@ -62,18 +62,18 @@ public final class GetADLSGen2FileSystemDataSetResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"dataSetId","fileSystem","id","kind","name","resourceGroup","storageAccountName","subscriptionId","systemData","type"})
+    @OutputCustomType.Constructor
     private GetADLSGen2FileSystemDataSetResult(
-        String dataSetId,
-        String fileSystem,
-        String id,
-        String kind,
-        String name,
-        String resourceGroup,
-        String storageAccountName,
-        String subscriptionId,
-        SystemDataResponse systemData,
-        String type) {
+        @OutputCustomType.Parameter("dataSetId") String dataSetId,
+        @OutputCustomType.Parameter("fileSystem") String fileSystem,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("resourceGroup") String resourceGroup,
+        @OutputCustomType.Parameter("storageAccountName") String storageAccountName,
+        @OutputCustomType.Parameter("subscriptionId") String subscriptionId,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("type") String type) {
         this.dataSetId = dataSetId;
         this.fileSystem = fileSystem;
         this.id = id;

@@ -127,29 +127,29 @@ public final class GetExpressRouteCircuitResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"allowClassicOperations","authorizations","bandwidthInGbps","circuitProvisioningState","etag","expressRoutePort","gatewayManagerEtag","globalReachEnabled","id","location","name","peerings","provisioningState","serviceKey","serviceProviderNotes","serviceProviderProperties","serviceProviderProvisioningState","sku","stag","tags","type"})
+    @OutputCustomType.Constructor
     private GetExpressRouteCircuitResult(
-        @Nullable Boolean allowClassicOperations,
-        @Nullable List<ExpressRouteCircuitAuthorizationResponse> authorizations,
-        @Nullable Double bandwidthInGbps,
-        @Nullable String circuitProvisioningState,
-        String etag,
-        @Nullable SubResourceResponse expressRoutePort,
-        @Nullable String gatewayManagerEtag,
-        @Nullable Boolean globalReachEnabled,
-        @Nullable String id,
-        @Nullable String location,
-        String name,
-        @Nullable List<ExpressRouteCircuitPeeringResponse> peerings,
-        String provisioningState,
-        @Nullable String serviceKey,
-        @Nullable String serviceProviderNotes,
-        @Nullable ExpressRouteCircuitServiceProviderPropertiesResponse serviceProviderProperties,
-        @Nullable String serviceProviderProvisioningState,
-        @Nullable ExpressRouteCircuitSkuResponse sku,
-        Integer stag,
-        @Nullable Map<String,String> tags,
-        String type) {
+        @OutputCustomType.Parameter("allowClassicOperations") @Nullable Boolean allowClassicOperations,
+        @OutputCustomType.Parameter("authorizations") @Nullable List<ExpressRouteCircuitAuthorizationResponse> authorizations,
+        @OutputCustomType.Parameter("bandwidthInGbps") @Nullable Double bandwidthInGbps,
+        @OutputCustomType.Parameter("circuitProvisioningState") @Nullable String circuitProvisioningState,
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("expressRoutePort") @Nullable SubResourceResponse expressRoutePort,
+        @OutputCustomType.Parameter("gatewayManagerEtag") @Nullable String gatewayManagerEtag,
+        @OutputCustomType.Parameter("globalReachEnabled") @Nullable Boolean globalReachEnabled,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("peerings") @Nullable List<ExpressRouteCircuitPeeringResponse> peerings,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("serviceKey") @Nullable String serviceKey,
+        @OutputCustomType.Parameter("serviceProviderNotes") @Nullable String serviceProviderNotes,
+        @OutputCustomType.Parameter("serviceProviderProperties") @Nullable ExpressRouteCircuitServiceProviderPropertiesResponse serviceProviderProperties,
+        @OutputCustomType.Parameter("serviceProviderProvisioningState") @Nullable String serviceProviderProvisioningState,
+        @OutputCustomType.Parameter("sku") @Nullable ExpressRouteCircuitSkuResponse sku,
+        @OutputCustomType.Parameter("stag") Integer stag,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type) {
         this.allowClassicOperations = allowClassicOperations;
         this.authorizations = authorizations;
         this.bandwidthInGbps = bandwidthInGbps;

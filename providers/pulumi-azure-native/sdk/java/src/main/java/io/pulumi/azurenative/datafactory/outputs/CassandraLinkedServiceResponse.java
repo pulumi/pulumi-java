@@ -76,19 +76,19 @@ public final class CassandraLinkedServiceResponse {
      */
     private final @Nullable Object username;
 
-    @OutputCustomType.Constructor({"annotations","authenticationType","connectVia","description","encryptedCredential","host","parameters","password","port","type","username"})
+    @OutputCustomType.Constructor
     private CassandraLinkedServiceResponse(
-        @Nullable List<Object> annotations,
-        @Nullable Object authenticationType,
-        @Nullable IntegrationRuntimeReferenceResponse connectVia,
-        @Nullable String description,
-        @Nullable Object encryptedCredential,
-        Object host,
-        @Nullable Map<String,ParameterSpecificationResponse> parameters,
-        @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password,
-        @Nullable Object port,
-        String type,
-        @Nullable Object username) {
+        @OutputCustomType.Parameter("annotations") @Nullable List<Object> annotations,
+        @OutputCustomType.Parameter("authenticationType") @Nullable Object authenticationType,
+        @OutputCustomType.Parameter("connectVia") @Nullable IntegrationRuntimeReferenceResponse connectVia,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("encryptedCredential") @Nullable Object encryptedCredential,
+        @OutputCustomType.Parameter("host") Object host,
+        @OutputCustomType.Parameter("parameters") @Nullable Map<String,ParameterSpecificationResponse> parameters,
+        @OutputCustomType.Parameter("password") @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password,
+        @OutputCustomType.Parameter("port") @Nullable Object port,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("username") @Nullable Object username) {
         this.annotations = annotations;
         this.authenticationType = authenticationType;
         this.connectVia = connectVia;

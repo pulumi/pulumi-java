@@ -62,18 +62,18 @@ public final class X12EnvelopeOverrideResponse {
      */
     private final String timeFormat;
 
-    @OutputCustomType.Constructor({"dateFormat","functionalIdentifierCode","headerVersion","messageId","protocolVersion","receiverApplicationId","responsibleAgencyCode","senderApplicationId","targetNamespace","timeFormat"})
+    @OutputCustomType.Constructor
     private X12EnvelopeOverrideResponse(
-        String dateFormat,
-        @Nullable String functionalIdentifierCode,
-        String headerVersion,
-        String messageId,
-        String protocolVersion,
-        String receiverApplicationId,
-        String responsibleAgencyCode,
-        String senderApplicationId,
-        String targetNamespace,
-        String timeFormat) {
+        @OutputCustomType.Parameter("dateFormat") String dateFormat,
+        @OutputCustomType.Parameter("functionalIdentifierCode") @Nullable String functionalIdentifierCode,
+        @OutputCustomType.Parameter("headerVersion") String headerVersion,
+        @OutputCustomType.Parameter("messageId") String messageId,
+        @OutputCustomType.Parameter("protocolVersion") String protocolVersion,
+        @OutputCustomType.Parameter("receiverApplicationId") String receiverApplicationId,
+        @OutputCustomType.Parameter("responsibleAgencyCode") String responsibleAgencyCode,
+        @OutputCustomType.Parameter("senderApplicationId") String senderApplicationId,
+        @OutputCustomType.Parameter("targetNamespace") String targetNamespace,
+        @OutputCustomType.Parameter("timeFormat") String timeFormat) {
         this.dateFormat = dateFormat;
         this.functionalIdentifierCode = functionalIdentifierCode;
         this.headerVersion = headerVersion;

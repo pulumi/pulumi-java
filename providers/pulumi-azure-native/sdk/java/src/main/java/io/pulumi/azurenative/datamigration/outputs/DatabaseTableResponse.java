@@ -21,10 +21,10 @@ public final class DatabaseTableResponse {
      */
     private final String name;
 
-    @OutputCustomType.Constructor({"hasRows","name"})
+    @OutputCustomType.Constructor
     private DatabaseTableResponse(
-        Boolean hasRows,
-        String name) {
+        @OutputCustomType.Parameter("hasRows") Boolean hasRows,
+        @OutputCustomType.Parameter("name") String name) {
         this.hasRows = hasRows;
         this.name = name;
     }

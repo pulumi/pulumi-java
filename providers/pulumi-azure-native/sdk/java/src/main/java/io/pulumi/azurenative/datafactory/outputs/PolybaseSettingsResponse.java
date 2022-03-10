@@ -33,12 +33,12 @@ public final class PolybaseSettingsResponse {
      */
     private final @Nullable Object useTypeDefault;
 
-    @OutputCustomType.Constructor({"rejectSampleValue","rejectType","rejectValue","useTypeDefault"})
+    @OutputCustomType.Constructor
     private PolybaseSettingsResponse(
-        @Nullable Object rejectSampleValue,
-        @Nullable String rejectType,
-        @Nullable Object rejectValue,
-        @Nullable Object useTypeDefault) {
+        @OutputCustomType.Parameter("rejectSampleValue") @Nullable Object rejectSampleValue,
+        @OutputCustomType.Parameter("rejectType") @Nullable String rejectType,
+        @OutputCustomType.Parameter("rejectValue") @Nullable Object rejectValue,
+        @OutputCustomType.Parameter("useTypeDefault") @Nullable Object useTypeDefault) {
         this.rejectSampleValue = rejectSampleValue;
         this.rejectType = rejectType;
         this.rejectValue = rejectValue;

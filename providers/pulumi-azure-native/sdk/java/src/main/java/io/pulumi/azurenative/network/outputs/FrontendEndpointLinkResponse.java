@@ -17,8 +17,8 @@ public final class FrontendEndpointLinkResponse {
      */
     private final @Nullable String id;
 
-    @OutputCustomType.Constructor({"id"})
-    private FrontendEndpointLinkResponse(@Nullable String id) {
+    @OutputCustomType.Constructor
+    private FrontendEndpointLinkResponse(@OutputCustomType.Parameter("id") @Nullable String id) {
         this.id = id;
     }
 

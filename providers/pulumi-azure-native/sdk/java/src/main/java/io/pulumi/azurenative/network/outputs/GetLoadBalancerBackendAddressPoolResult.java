@@ -71,19 +71,19 @@ public final class GetLoadBalancerBackendAddressPoolResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"backendIPConfigurations","etag","id","loadBalancerBackendAddresses","loadBalancingRules","location","name","outboundRule","outboundRules","provisioningState","type"})
+    @OutputCustomType.Constructor
     private GetLoadBalancerBackendAddressPoolResult(
-        List<NetworkInterfaceIPConfigurationResponse> backendIPConfigurations,
-        String etag,
-        @Nullable String id,
-        @Nullable List<LoadBalancerBackendAddressResponse> loadBalancerBackendAddresses,
-        List<SubResourceResponse> loadBalancingRules,
-        @Nullable String location,
-        @Nullable String name,
-        SubResourceResponse outboundRule,
-        List<SubResourceResponse> outboundRules,
-        String provisioningState,
-        String type) {
+        @OutputCustomType.Parameter("backendIPConfigurations") List<NetworkInterfaceIPConfigurationResponse> backendIPConfigurations,
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("loadBalancerBackendAddresses") @Nullable List<LoadBalancerBackendAddressResponse> loadBalancerBackendAddresses,
+        @OutputCustomType.Parameter("loadBalancingRules") List<SubResourceResponse> loadBalancingRules,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("outboundRule") SubResourceResponse outboundRule,
+        @OutputCustomType.Parameter("outboundRules") List<SubResourceResponse> outboundRules,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("type") String type) {
         this.backendIPConfigurations = backendIPConfigurations;
         this.etag = etag;
         this.id = id;

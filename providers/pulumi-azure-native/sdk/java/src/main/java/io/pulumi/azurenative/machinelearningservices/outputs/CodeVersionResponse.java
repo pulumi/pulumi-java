@@ -44,14 +44,14 @@ public final class CodeVersionResponse {
      */
     private final @Nullable Map<String,String> tags;
 
-    @OutputCustomType.Constructor({"datastoreId","description","isAnonymous","path","properties","tags"})
+    @OutputCustomType.Constructor
     private CodeVersionResponse(
-        @Nullable String datastoreId,
-        @Nullable String description,
-        @Nullable Boolean isAnonymous,
-        String path,
-        @Nullable Map<String,String> properties,
-        @Nullable Map<String,String> tags) {
+        @OutputCustomType.Parameter("datastoreId") @Nullable String datastoreId,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("isAnonymous") @Nullable Boolean isAnonymous,
+        @OutputCustomType.Parameter("path") String path,
+        @OutputCustomType.Parameter("properties") @Nullable Map<String,String> properties,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags) {
         this.datastoreId = datastoreId;
         this.description = description;
         this.isAnonymous = isAnonymous;

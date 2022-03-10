@@ -23,10 +23,10 @@ public final class IntegrationServiceEnvironmentSkuResponse {
      */
     private final @Nullable String name;
 
-    @OutputCustomType.Constructor({"capacity","name"})
+    @OutputCustomType.Constructor
     private IntegrationServiceEnvironmentSkuResponse(
-        @Nullable Integer capacity,
-        @Nullable String name) {
+        @OutputCustomType.Parameter("capacity") @Nullable Integer capacity,
+        @OutputCustomType.Parameter("name") @Nullable String name) {
         this.capacity = capacity;
         this.name = name;
     }

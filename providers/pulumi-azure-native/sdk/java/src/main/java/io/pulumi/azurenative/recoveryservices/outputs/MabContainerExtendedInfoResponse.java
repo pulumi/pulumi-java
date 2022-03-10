@@ -38,13 +38,13 @@ public final class MabContainerExtendedInfoResponse {
      */
     private final @Nullable String policyName;
 
-    @OutputCustomType.Constructor({"backupItemType","backupItems","lastBackupStatus","lastRefreshedAt","policyName"})
+    @OutputCustomType.Constructor
     private MabContainerExtendedInfoResponse(
-        @Nullable String backupItemType,
-        @Nullable List<String> backupItems,
-        @Nullable String lastBackupStatus,
-        @Nullable String lastRefreshedAt,
-        @Nullable String policyName) {
+        @OutputCustomType.Parameter("backupItemType") @Nullable String backupItemType,
+        @OutputCustomType.Parameter("backupItems") @Nullable List<String> backupItems,
+        @OutputCustomType.Parameter("lastBackupStatus") @Nullable String lastBackupStatus,
+        @OutputCustomType.Parameter("lastRefreshedAt") @Nullable String lastRefreshedAt,
+        @OutputCustomType.Parameter("policyName") @Nullable String policyName) {
         this.backupItemType = backupItemType;
         this.backupItems = backupItems;
         this.lastBackupStatus = lastBackupStatus;

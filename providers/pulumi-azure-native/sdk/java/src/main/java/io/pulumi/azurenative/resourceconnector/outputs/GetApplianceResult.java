@@ -81,21 +81,21 @@ public final class GetApplianceResult {
      */
     private final String version;
 
-    @OutputCustomType.Constructor({"distro","id","identity","infrastructureConfig","location","name","provisioningState","publicKey","status","systemData","tags","type","version"})
+    @OutputCustomType.Constructor
     private GetApplianceResult(
-        @Nullable String distro,
-        String id,
-        @Nullable IdentityResponse identity,
-        @Nullable AppliancePropertiesResponseInfrastructureConfig infrastructureConfig,
-        String location,
-        String name,
-        String provisioningState,
-        @Nullable String publicKey,
-        String status,
-        SystemDataResponse systemData,
-        @Nullable Map<String,String> tags,
-        String type,
-        String version) {
+        @OutputCustomType.Parameter("distro") @Nullable String distro,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("identity") @Nullable IdentityResponse identity,
+        @OutputCustomType.Parameter("infrastructureConfig") @Nullable AppliancePropertiesResponseInfrastructureConfig infrastructureConfig,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("publicKey") @Nullable String publicKey,
+        @OutputCustomType.Parameter("status") String status,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("version") String version) {
         this.distro = distro;
         this.id = id;
         this.identity = identity;

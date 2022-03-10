@@ -22,10 +22,10 @@ public final class GetRegistryCredentialsResult {
      */
     private final @Nullable String username;
 
-    @OutputCustomType.Constructor({"password","username"})
+    @OutputCustomType.Constructor
     private GetRegistryCredentialsResult(
-        @Nullable String password,
-        @Nullable String username) {
+        @OutputCustomType.Parameter("password") @Nullable String password,
+        @OutputCustomType.Parameter("username") @Nullable String username) {
         this.password = password;
         this.username = username;
     }

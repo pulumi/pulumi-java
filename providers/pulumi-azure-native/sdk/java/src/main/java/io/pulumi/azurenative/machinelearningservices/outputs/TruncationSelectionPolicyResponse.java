@@ -33,12 +33,12 @@ public final class TruncationSelectionPolicyResponse {
      */
     private final @Nullable Integer truncationPercentage;
 
-    @OutputCustomType.Constructor({"delayEvaluation","evaluationInterval","policyType","truncationPercentage"})
+    @OutputCustomType.Constructor
     private TruncationSelectionPolicyResponse(
-        @Nullable Integer delayEvaluation,
-        @Nullable Integer evaluationInterval,
-        String policyType,
-        @Nullable Integer truncationPercentage) {
+        @OutputCustomType.Parameter("delayEvaluation") @Nullable Integer delayEvaluation,
+        @OutputCustomType.Parameter("evaluationInterval") @Nullable Integer evaluationInterval,
+        @OutputCustomType.Parameter("policyType") String policyType,
+        @OutputCustomType.Parameter("truncationPercentage") @Nullable Integer truncationPercentage) {
         this.delayEvaluation = delayEvaluation;
         this.evaluationInterval = evaluationInterval;
         this.policyType = policyType;

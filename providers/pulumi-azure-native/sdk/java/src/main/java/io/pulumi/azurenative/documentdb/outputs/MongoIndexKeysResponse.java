@@ -17,8 +17,8 @@ public final class MongoIndexKeysResponse {
      */
     private final @Nullable List<String> keys;
 
-    @OutputCustomType.Constructor({"keys"})
-    private MongoIndexKeysResponse(@Nullable List<String> keys) {
+    @OutputCustomType.Constructor
+    private MongoIndexKeysResponse(@OutputCustomType.Parameter("keys") @Nullable List<String> keys) {
         this.keys = keys;
     }
 

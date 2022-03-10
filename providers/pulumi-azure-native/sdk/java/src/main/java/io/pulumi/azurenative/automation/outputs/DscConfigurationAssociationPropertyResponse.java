@@ -17,8 +17,8 @@ public final class DscConfigurationAssociationPropertyResponse {
      */
     private final @Nullable String name;
 
-    @OutputCustomType.Constructor({"name"})
-    private DscConfigurationAssociationPropertyResponse(@Nullable String name) {
+    @OutputCustomType.Constructor
+    private DscConfigurationAssociationPropertyResponse(@OutputCustomType.Parameter("name") @Nullable String name) {
         this.name = name;
     }
 

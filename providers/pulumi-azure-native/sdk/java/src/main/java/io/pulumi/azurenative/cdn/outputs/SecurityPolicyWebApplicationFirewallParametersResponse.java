@@ -31,11 +31,11 @@ public final class SecurityPolicyWebApplicationFirewallParametersResponse {
      */
     private final @Nullable ResourceReferenceResponse wafPolicy;
 
-    @OutputCustomType.Constructor({"associations","type","wafPolicy"})
+    @OutputCustomType.Constructor
     private SecurityPolicyWebApplicationFirewallParametersResponse(
-        @Nullable List<SecurityPolicyWebApplicationFirewallAssociationResponse> associations,
-        String type,
-        @Nullable ResourceReferenceResponse wafPolicy) {
+        @OutputCustomType.Parameter("associations") @Nullable List<SecurityPolicyWebApplicationFirewallAssociationResponse> associations,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("wafPolicy") @Nullable ResourceReferenceResponse wafPolicy) {
         this.associations = associations;
         this.type = type;
         this.wafPolicy = wafPolicy;

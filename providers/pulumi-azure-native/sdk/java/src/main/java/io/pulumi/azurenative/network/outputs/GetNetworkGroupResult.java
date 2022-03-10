@@ -70,19 +70,19 @@ public final class GetNetworkGroupResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"conditionalMembership","description","displayName","etag","groupMembers","id","memberType","name","provisioningState","systemData","type"})
+    @OutputCustomType.Constructor
     private GetNetworkGroupResult(
-        @Nullable String conditionalMembership,
-        @Nullable String description,
-        @Nullable String displayName,
-        String etag,
-        @Nullable List<GroupMembersItemResponse> groupMembers,
-        String id,
-        @Nullable String memberType,
-        String name,
-        String provisioningState,
-        SystemDataResponse systemData,
-        String type) {
+        @OutputCustomType.Parameter("conditionalMembership") @Nullable String conditionalMembership,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("displayName") @Nullable String displayName,
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("groupMembers") @Nullable List<GroupMembersItemResponse> groupMembers,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("memberType") @Nullable String memberType,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("type") String type) {
         this.conditionalMembership = conditionalMembership;
         this.description = description;
         this.displayName = displayName;

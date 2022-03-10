@@ -64,18 +64,18 @@ public final class AzureDataExplorerSinkResponse {
      */
     private final @Nullable Object writeBatchTimeout;
 
-    @OutputCustomType.Constructor({"disableMetricsCollection","flushImmediately","ingestionMappingAsJson","ingestionMappingName","maxConcurrentConnections","sinkRetryCount","sinkRetryWait","type","writeBatchSize","writeBatchTimeout"})
+    @OutputCustomType.Constructor
     private AzureDataExplorerSinkResponse(
-        @Nullable Object disableMetricsCollection,
-        @Nullable Object flushImmediately,
-        @Nullable Object ingestionMappingAsJson,
-        @Nullable Object ingestionMappingName,
-        @Nullable Object maxConcurrentConnections,
-        @Nullable Object sinkRetryCount,
-        @Nullable Object sinkRetryWait,
-        String type,
-        @Nullable Object writeBatchSize,
-        @Nullable Object writeBatchTimeout) {
+        @OutputCustomType.Parameter("disableMetricsCollection") @Nullable Object disableMetricsCollection,
+        @OutputCustomType.Parameter("flushImmediately") @Nullable Object flushImmediately,
+        @OutputCustomType.Parameter("ingestionMappingAsJson") @Nullable Object ingestionMappingAsJson,
+        @OutputCustomType.Parameter("ingestionMappingName") @Nullable Object ingestionMappingName,
+        @OutputCustomType.Parameter("maxConcurrentConnections") @Nullable Object maxConcurrentConnections,
+        @OutputCustomType.Parameter("sinkRetryCount") @Nullable Object sinkRetryCount,
+        @OutputCustomType.Parameter("sinkRetryWait") @Nullable Object sinkRetryWait,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("writeBatchSize") @Nullable Object writeBatchSize,
+        @OutputCustomType.Parameter("writeBatchTimeout") @Nullable Object writeBatchTimeout) {
         this.disableMetricsCollection = disableMetricsCollection;
         this.flushImmediately = flushImmediately;
         this.ingestionMappingAsJson = ingestionMappingAsJson;

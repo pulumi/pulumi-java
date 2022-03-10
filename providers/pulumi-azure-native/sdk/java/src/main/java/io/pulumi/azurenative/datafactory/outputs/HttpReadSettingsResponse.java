@@ -60,17 +60,17 @@ public final class HttpReadSettingsResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"additionalHeaders","disableMetricsCollection","enablePartitionDiscovery","maxConcurrentConnections","partitionRootPath","requestBody","requestMethod","requestTimeout","type"})
+    @OutputCustomType.Constructor
     private HttpReadSettingsResponse(
-        @Nullable Object additionalHeaders,
-        @Nullable Object disableMetricsCollection,
-        @Nullable Boolean enablePartitionDiscovery,
-        @Nullable Object maxConcurrentConnections,
-        @Nullable Object partitionRootPath,
-        @Nullable Object requestBody,
-        @Nullable Object requestMethod,
-        @Nullable Object requestTimeout,
-        String type) {
+        @OutputCustomType.Parameter("additionalHeaders") @Nullable Object additionalHeaders,
+        @OutputCustomType.Parameter("disableMetricsCollection") @Nullable Object disableMetricsCollection,
+        @OutputCustomType.Parameter("enablePartitionDiscovery") @Nullable Boolean enablePartitionDiscovery,
+        @OutputCustomType.Parameter("maxConcurrentConnections") @Nullable Object maxConcurrentConnections,
+        @OutputCustomType.Parameter("partitionRootPath") @Nullable Object partitionRootPath,
+        @OutputCustomType.Parameter("requestBody") @Nullable Object requestBody,
+        @OutputCustomType.Parameter("requestMethod") @Nullable Object requestMethod,
+        @OutputCustomType.Parameter("requestTimeout") @Nullable Object requestTimeout,
+        @OutputCustomType.Parameter("type") String type) {
         this.additionalHeaders = additionalHeaders;
         this.disableMetricsCollection = disableMetricsCollection;
         this.enablePartitionDiscovery = enablePartitionDiscovery;

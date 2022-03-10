@@ -68,19 +68,19 @@ public final class GetCustomAssessmentAutomationResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"assessmentKey","compressedQuery","description","displayName","id","name","remediationDescription","severity","supportedCloud","systemData","type"})
+    @OutputCustomType.Constructor
     private GetCustomAssessmentAutomationResult(
-        @Nullable String assessmentKey,
-        @Nullable String compressedQuery,
-        @Nullable String description,
-        @Nullable String displayName,
-        String id,
-        String name,
-        @Nullable String remediationDescription,
-        @Nullable String severity,
-        @Nullable String supportedCloud,
-        SystemDataResponse systemData,
-        String type) {
+        @OutputCustomType.Parameter("assessmentKey") @Nullable String assessmentKey,
+        @OutputCustomType.Parameter("compressedQuery") @Nullable String compressedQuery,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("displayName") @Nullable String displayName,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("remediationDescription") @Nullable String remediationDescription,
+        @OutputCustomType.Parameter("severity") @Nullable String severity,
+        @OutputCustomType.Parameter("supportedCloud") @Nullable String supportedCloud,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("type") String type) {
         this.assessmentKey = assessmentKey;
         this.compressedQuery = compressedQuery;
         this.description = description;

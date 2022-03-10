@@ -28,11 +28,11 @@ public final class HubBillingInfoFormatResponse {
      */
     private final @Nullable String skuName;
 
-    @OutputCustomType.Constructor({"maxUnits","minUnits","skuName"})
+    @OutputCustomType.Constructor
     private HubBillingInfoFormatResponse(
-        @Nullable Integer maxUnits,
-        @Nullable Integer minUnits,
-        @Nullable String skuName) {
+        @OutputCustomType.Parameter("maxUnits") @Nullable Integer maxUnits,
+        @OutputCustomType.Parameter("minUnits") @Nullable Integer minUnits,
+        @OutputCustomType.Parameter("skuName") @Nullable String skuName) {
         this.maxUnits = maxUnits;
         this.minUnits = minUnits;
         this.skuName = skuName;

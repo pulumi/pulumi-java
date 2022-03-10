@@ -19,16 +19,16 @@ public final class ListWorkspaceNotebookAccessTokenResult {
     private final String scope;
     private final String tokenType;
 
-    @OutputCustomType.Constructor({"accessToken","expiresIn","hostName","notebookResourceId","publicDns","refreshToken","scope","tokenType"})
+    @OutputCustomType.Constructor
     private ListWorkspaceNotebookAccessTokenResult(
-        String accessToken,
-        Integer expiresIn,
-        String hostName,
-        String notebookResourceId,
-        String publicDns,
-        String refreshToken,
-        String scope,
-        String tokenType) {
+        @OutputCustomType.Parameter("accessToken") String accessToken,
+        @OutputCustomType.Parameter("expiresIn") Integer expiresIn,
+        @OutputCustomType.Parameter("hostName") String hostName,
+        @OutputCustomType.Parameter("notebookResourceId") String notebookResourceId,
+        @OutputCustomType.Parameter("publicDns") String publicDns,
+        @OutputCustomType.Parameter("refreshToken") String refreshToken,
+        @OutputCustomType.Parameter("scope") String scope,
+        @OutputCustomType.Parameter("tokenType") String tokenType) {
         this.accessToken = accessToken;
         this.expiresIn = expiresIn;
         this.hostName = hostName;

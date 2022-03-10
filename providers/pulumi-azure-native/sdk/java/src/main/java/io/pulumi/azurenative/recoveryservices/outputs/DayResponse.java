@@ -23,10 +23,10 @@ public final class DayResponse {
      */
     private final @Nullable Boolean isLast;
 
-    @OutputCustomType.Constructor({"date","isLast"})
+    @OutputCustomType.Constructor
     private DayResponse(
-        @Nullable Integer date,
-        @Nullable Boolean isLast) {
+        @OutputCustomType.Parameter("date") @Nullable Integer date,
+        @OutputCustomType.Parameter("isLast") @Nullable Boolean isLast) {
         this.date = date;
         this.isLast = isLast;
     }

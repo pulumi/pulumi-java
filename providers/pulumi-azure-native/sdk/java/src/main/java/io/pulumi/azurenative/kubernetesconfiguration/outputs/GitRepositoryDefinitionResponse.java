@@ -54,16 +54,16 @@ public final class GitRepositoryDefinitionResponse {
      */
     private final @Nullable String url;
 
-    @OutputCustomType.Constructor({"httpsCAFile","httpsUser","localAuthRef","repositoryRef","sshKnownHosts","syncIntervalInSeconds","timeoutInSeconds","url"})
+    @OutputCustomType.Constructor
     private GitRepositoryDefinitionResponse(
-        @Nullable String httpsCAFile,
-        @Nullable String httpsUser,
-        @Nullable String localAuthRef,
-        @Nullable RepositoryRefDefinitionResponse repositoryRef,
-        @Nullable String sshKnownHosts,
-        @Nullable Double syncIntervalInSeconds,
-        @Nullable Double timeoutInSeconds,
-        @Nullable String url) {
+        @OutputCustomType.Parameter("httpsCAFile") @Nullable String httpsCAFile,
+        @OutputCustomType.Parameter("httpsUser") @Nullable String httpsUser,
+        @OutputCustomType.Parameter("localAuthRef") @Nullable String localAuthRef,
+        @OutputCustomType.Parameter("repositoryRef") @Nullable RepositoryRefDefinitionResponse repositoryRef,
+        @OutputCustomType.Parameter("sshKnownHosts") @Nullable String sshKnownHosts,
+        @OutputCustomType.Parameter("syncIntervalInSeconds") @Nullable Double syncIntervalInSeconds,
+        @OutputCustomType.Parameter("timeoutInSeconds") @Nullable Double timeoutInSeconds,
+        @OutputCustomType.Parameter("url") @Nullable String url) {
         this.httpsCAFile = httpsCAFile;
         this.httpsUser = httpsUser;
         this.localAuthRef = localAuthRef;

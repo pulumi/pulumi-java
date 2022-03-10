@@ -70,19 +70,19 @@ public final class ProbeResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"etag","id","intervalInSeconds","loadBalancingRules","name","numberOfProbes","port","protocol","provisioningState","requestPath","type"})
+    @OutputCustomType.Constructor
     private ProbeResponse(
-        String etag,
-        @Nullable String id,
-        @Nullable Integer intervalInSeconds,
-        List<SubResourceResponse> loadBalancingRules,
-        @Nullable String name,
-        @Nullable Integer numberOfProbes,
-        Integer port,
-        String protocol,
-        String provisioningState,
-        @Nullable String requestPath,
-        String type) {
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("intervalInSeconds") @Nullable Integer intervalInSeconds,
+        @OutputCustomType.Parameter("loadBalancingRules") List<SubResourceResponse> loadBalancingRules,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("numberOfProbes") @Nullable Integer numberOfProbes,
+        @OutputCustomType.Parameter("port") Integer port,
+        @OutputCustomType.Parameter("protocol") String protocol,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("requestPath") @Nullable String requestPath,
+        @OutputCustomType.Parameter("type") String type) {
         this.etag = etag;
         this.id = id;
         this.intervalInSeconds = intervalInSeconds;

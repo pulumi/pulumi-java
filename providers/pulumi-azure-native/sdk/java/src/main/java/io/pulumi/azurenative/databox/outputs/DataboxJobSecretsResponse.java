@@ -36,12 +36,12 @@ public final class DataboxJobSecretsResponse {
      */
     private final @Nullable List<DataBoxSecretResponse> podSecrets;
 
-    @OutputCustomType.Constructor({"dcAccessSecurityCode","error","jobSecretsType","podSecrets"})
+    @OutputCustomType.Constructor
     private DataboxJobSecretsResponse(
-        DcAccessSecurityCodeResponse dcAccessSecurityCode,
-        CloudErrorResponse error,
-        String jobSecretsType,
-        @Nullable List<DataBoxSecretResponse> podSecrets) {
+        @OutputCustomType.Parameter("dcAccessSecurityCode") DcAccessSecurityCodeResponse dcAccessSecurityCode,
+        @OutputCustomType.Parameter("error") CloudErrorResponse error,
+        @OutputCustomType.Parameter("jobSecretsType") String jobSecretsType,
+        @OutputCustomType.Parameter("podSecrets") @Nullable List<DataBoxSecretResponse> podSecrets) {
         this.dcAccessSecurityCode = dcAccessSecurityCode;
         this.error = error;
         this.jobSecretsType = jobSecretsType;

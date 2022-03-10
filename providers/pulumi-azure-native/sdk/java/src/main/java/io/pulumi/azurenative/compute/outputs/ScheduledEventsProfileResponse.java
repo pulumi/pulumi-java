@@ -17,8 +17,8 @@ public final class ScheduledEventsProfileResponse {
      */
     private final @Nullable TerminateNotificationProfileResponse terminateNotificationProfile;
 
-    @OutputCustomType.Constructor({"terminateNotificationProfile"})
-    private ScheduledEventsProfileResponse(@Nullable TerminateNotificationProfileResponse terminateNotificationProfile) {
+    @OutputCustomType.Constructor
+    private ScheduledEventsProfileResponse(@OutputCustomType.Parameter("terminateNotificationProfile") @Nullable TerminateNotificationProfileResponse terminateNotificationProfile) {
         this.terminateNotificationProfile = terminateNotificationProfile;
     }
 

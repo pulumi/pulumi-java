@@ -25,11 +25,11 @@ public final class PermissionScopeResponse {
      */
     private final String service;
 
-    @OutputCustomType.Constructor({"permissions","resourceName","service"})
+    @OutputCustomType.Constructor
     private PermissionScopeResponse(
-        String permissions,
-        String resourceName,
-        String service) {
+        @OutputCustomType.Parameter("permissions") String permissions,
+        @OutputCustomType.Parameter("resourceName") String resourceName,
+        @OutputCustomType.Parameter("service") String service) {
         this.permissions = permissions;
         this.resourceName = resourceName;
         this.service = service;

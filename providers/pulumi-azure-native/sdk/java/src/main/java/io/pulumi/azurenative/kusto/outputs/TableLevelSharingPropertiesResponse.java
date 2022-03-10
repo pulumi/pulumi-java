@@ -42,14 +42,14 @@ public final class TableLevelSharingPropertiesResponse {
      */
     private final @Nullable List<String> tablesToInclude;
 
-    @OutputCustomType.Constructor({"externalTablesToExclude","externalTablesToInclude","materializedViewsToExclude","materializedViewsToInclude","tablesToExclude","tablesToInclude"})
+    @OutputCustomType.Constructor
     private TableLevelSharingPropertiesResponse(
-        @Nullable List<String> externalTablesToExclude,
-        @Nullable List<String> externalTablesToInclude,
-        @Nullable List<String> materializedViewsToExclude,
-        @Nullable List<String> materializedViewsToInclude,
-        @Nullable List<String> tablesToExclude,
-        @Nullable List<String> tablesToInclude) {
+        @OutputCustomType.Parameter("externalTablesToExclude") @Nullable List<String> externalTablesToExclude,
+        @OutputCustomType.Parameter("externalTablesToInclude") @Nullable List<String> externalTablesToInclude,
+        @OutputCustomType.Parameter("materializedViewsToExclude") @Nullable List<String> materializedViewsToExclude,
+        @OutputCustomType.Parameter("materializedViewsToInclude") @Nullable List<String> materializedViewsToInclude,
+        @OutputCustomType.Parameter("tablesToExclude") @Nullable List<String> tablesToExclude,
+        @OutputCustomType.Parameter("tablesToInclude") @Nullable List<String> tablesToInclude) {
         this.externalTablesToExclude = externalTablesToExclude;
         this.externalTablesToInclude = externalTablesToInclude;
         this.materializedViewsToExclude = materializedViewsToExclude;

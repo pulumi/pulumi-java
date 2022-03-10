@@ -24,10 +24,10 @@ public final class ConnectionMonitorEndpointFilterResponse {
      */
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor({"items","type"})
+    @OutputCustomType.Constructor
     private ConnectionMonitorEndpointFilterResponse(
-        @Nullable List<ConnectionMonitorEndpointFilterItemResponse> items,
-        @Nullable String type) {
+        @OutputCustomType.Parameter("items") @Nullable List<ConnectionMonitorEndpointFilterItemResponse> items,
+        @OutputCustomType.Parameter("type") @Nullable String type) {
         this.items = items;
         this.type = type;
     }

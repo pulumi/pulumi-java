@@ -17,8 +17,8 @@ public final class DiskSecurityProfileResponse {
      */
     private final @Nullable String securityType;
 
-    @OutputCustomType.Constructor({"securityType"})
-    private DiskSecurityProfileResponse(@Nullable String securityType) {
+    @OutputCustomType.Constructor
+    private DiskSecurityProfileResponse(@OutputCustomType.Parameter("securityType") @Nullable String securityType) {
         this.securityType = securityType;
     }
 

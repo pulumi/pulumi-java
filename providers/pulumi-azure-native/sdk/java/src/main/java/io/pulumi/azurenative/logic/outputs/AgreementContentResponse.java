@@ -29,11 +29,11 @@ public final class AgreementContentResponse {
      */
     private final @Nullable X12AgreementContentResponse x12;
 
-    @OutputCustomType.Constructor({"aS2","edifact","x12"})
+    @OutputCustomType.Constructor
     private AgreementContentResponse(
-        @Nullable AS2AgreementContentResponse aS2,
-        @Nullable EdifactAgreementContentResponse edifact,
-        @Nullable X12AgreementContentResponse x12) {
+        @OutputCustomType.Parameter("aS2") @Nullable AS2AgreementContentResponse aS2,
+        @OutputCustomType.Parameter("edifact") @Nullable EdifactAgreementContentResponse edifact,
+        @OutputCustomType.Parameter("x12") @Nullable X12AgreementContentResponse x12) {
         this.aS2 = aS2;
         this.edifact = edifact;
         this.x12 = x12;

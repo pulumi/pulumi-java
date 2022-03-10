@@ -117,27 +117,27 @@ public final class GetAccountResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"cloudConnectors","createdAt","createdBy","createdByObjectId","endpoints","friendlyName","id","identity","location","managedResourceGroupName","managedResources","name","privateEndpointConnections","provisioningState","publicNetworkAccess","sku","systemData","tags","type"})
+    @OutputCustomType.Constructor
     private GetAccountResult(
-        @Nullable CloudConnectorsResponse cloudConnectors,
-        String createdAt,
-        String createdBy,
-        String createdByObjectId,
-        AccountPropertiesResponseEndpoints endpoints,
-        String friendlyName,
-        String id,
-        @Nullable IdentityResponse identity,
-        @Nullable String location,
-        @Nullable String managedResourceGroupName,
-        AccountPropertiesResponseManagedResources managedResources,
-        String name,
-        List<PrivateEndpointConnectionResponse> privateEndpointConnections,
-        String provisioningState,
-        @Nullable String publicNetworkAccess,
-        AccountResponseSku sku,
-        AccountPropertiesResponseSystemData systemData,
-        @Nullable Map<String,String> tags,
-        String type) {
+        @OutputCustomType.Parameter("cloudConnectors") @Nullable CloudConnectorsResponse cloudConnectors,
+        @OutputCustomType.Parameter("createdAt") String createdAt,
+        @OutputCustomType.Parameter("createdBy") String createdBy,
+        @OutputCustomType.Parameter("createdByObjectId") String createdByObjectId,
+        @OutputCustomType.Parameter("endpoints") AccountPropertiesResponseEndpoints endpoints,
+        @OutputCustomType.Parameter("friendlyName") String friendlyName,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("identity") @Nullable IdentityResponse identity,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("managedResourceGroupName") @Nullable String managedResourceGroupName,
+        @OutputCustomType.Parameter("managedResources") AccountPropertiesResponseManagedResources managedResources,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("privateEndpointConnections") List<PrivateEndpointConnectionResponse> privateEndpointConnections,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("publicNetworkAccess") @Nullable String publicNetworkAccess,
+        @OutputCustomType.Parameter("sku") AccountResponseSku sku,
+        @OutputCustomType.Parameter("systemData") AccountPropertiesResponseSystemData systemData,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type) {
         this.cloudConnectors = cloudConnectors;
         this.createdAt = createdAt;
         this.createdBy = createdBy;

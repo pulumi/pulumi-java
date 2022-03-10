@@ -37,13 +37,13 @@ public final class JobErrorResponse {
      */
     private final String retry;
 
-    @OutputCustomType.Constructor({"category","code","details","message","retry"})
+    @OutputCustomType.Constructor
     private JobErrorResponse(
-        String category,
-        String code,
-        List<JobErrorDetailResponse> details,
-        String message,
-        String retry) {
+        @OutputCustomType.Parameter("category") String category,
+        @OutputCustomType.Parameter("code") String code,
+        @OutputCustomType.Parameter("details") List<JobErrorDetailResponse> details,
+        @OutputCustomType.Parameter("message") String message,
+        @OutputCustomType.Parameter("retry") String retry) {
         this.category = category;
         this.code = code;
         this.details = details;

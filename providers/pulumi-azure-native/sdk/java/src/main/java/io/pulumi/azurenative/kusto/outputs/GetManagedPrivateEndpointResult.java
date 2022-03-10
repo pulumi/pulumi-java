@@ -58,17 +58,17 @@ public final class GetManagedPrivateEndpointResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"groupId","id","name","privateLinkResourceId","privateLinkResourceRegion","provisioningState","requestMessage","systemData","type"})
+    @OutputCustomType.Constructor
     private GetManagedPrivateEndpointResult(
-        String groupId,
-        String id,
-        String name,
-        String privateLinkResourceId,
-        @Nullable String privateLinkResourceRegion,
-        String provisioningState,
-        @Nullable String requestMessage,
-        SystemDataResponse systemData,
-        String type) {
+        @OutputCustomType.Parameter("groupId") String groupId,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("privateLinkResourceId") String privateLinkResourceId,
+        @OutputCustomType.Parameter("privateLinkResourceRegion") @Nullable String privateLinkResourceRegion,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("requestMessage") @Nullable String requestMessage,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("type") String type) {
         this.groupId = groupId;
         this.id = id;
         this.name = name;

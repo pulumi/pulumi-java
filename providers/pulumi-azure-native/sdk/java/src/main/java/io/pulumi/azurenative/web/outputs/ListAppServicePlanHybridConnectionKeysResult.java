@@ -42,14 +42,14 @@ public final class ListAppServicePlanHybridConnectionKeysResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"id","kind","name","sendKeyName","sendKeyValue","type"})
+    @OutputCustomType.Constructor
     private ListAppServicePlanHybridConnectionKeysResult(
-        String id,
-        @Nullable String kind,
-        String name,
-        String sendKeyName,
-        String sendKeyValue,
-        String type) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("kind") @Nullable String kind,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("sendKeyName") String sendKeyName,
+        @OutputCustomType.Parameter("sendKeyValue") String sendKeyValue,
+        @OutputCustomType.Parameter("type") String type) {
         this.id = id;
         this.kind = kind;
         this.name = name;

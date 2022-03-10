@@ -73,20 +73,20 @@ public final class GetManagedDatabaseResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"catalogCollation","collation","creationDate","defaultSecondaryLocation","earliestRestorePoint","failoverGroupId","id","location","name","status","tags","type"})
+    @OutputCustomType.Constructor
     private GetManagedDatabaseResult(
-        @Nullable String catalogCollation,
-        @Nullable String collation,
-        String creationDate,
-        String defaultSecondaryLocation,
-        String earliestRestorePoint,
-        String failoverGroupId,
-        String id,
-        String location,
-        String name,
-        String status,
-        @Nullable Map<String,String> tags,
-        String type) {
+        @OutputCustomType.Parameter("catalogCollation") @Nullable String catalogCollation,
+        @OutputCustomType.Parameter("collation") @Nullable String collation,
+        @OutputCustomType.Parameter("creationDate") String creationDate,
+        @OutputCustomType.Parameter("defaultSecondaryLocation") String defaultSecondaryLocation,
+        @OutputCustomType.Parameter("earliestRestorePoint") String earliestRestorePoint,
+        @OutputCustomType.Parameter("failoverGroupId") String failoverGroupId,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("status") String status,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type) {
         this.catalogCollation = catalogCollation;
         this.collation = collation;
         this.creationDate = creationDate;

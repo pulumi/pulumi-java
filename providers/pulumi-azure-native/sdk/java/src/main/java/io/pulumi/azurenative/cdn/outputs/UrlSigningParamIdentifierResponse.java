@@ -20,10 +20,10 @@ public final class UrlSigningParamIdentifierResponse {
      */
     private final String paramName;
 
-    @OutputCustomType.Constructor({"paramIndicator","paramName"})
+    @OutputCustomType.Constructor
     private UrlSigningParamIdentifierResponse(
-        String paramIndicator,
-        String paramName) {
+        @OutputCustomType.Parameter("paramIndicator") String paramIndicator,
+        @OutputCustomType.Parameter("paramName") String paramName) {
         this.paramIndicator = paramIndicator;
         this.paramName = paramName;
     }

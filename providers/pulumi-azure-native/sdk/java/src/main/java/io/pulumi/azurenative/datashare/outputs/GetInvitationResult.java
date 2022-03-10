@@ -85,22 +85,22 @@ public final class GetInvitationResult {
      */
     private final String userName;
 
-    @OutputCustomType.Constructor({"expirationDate","id","invitationId","invitationStatus","name","respondedAt","sentAt","systemData","targetActiveDirectoryId","targetEmail","targetObjectId","type","userEmail","userName"})
+    @OutputCustomType.Constructor
     private GetInvitationResult(
-        @Nullable String expirationDate,
-        String id,
-        String invitationId,
-        String invitationStatus,
-        String name,
-        String respondedAt,
-        String sentAt,
-        SystemDataResponse systemData,
-        @Nullable String targetActiveDirectoryId,
-        @Nullable String targetEmail,
-        @Nullable String targetObjectId,
-        String type,
-        String userEmail,
-        String userName) {
+        @OutputCustomType.Parameter("expirationDate") @Nullable String expirationDate,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("invitationId") String invitationId,
+        @OutputCustomType.Parameter("invitationStatus") String invitationStatus,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("respondedAt") String respondedAt,
+        @OutputCustomType.Parameter("sentAt") String sentAt,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("targetActiveDirectoryId") @Nullable String targetActiveDirectoryId,
+        @OutputCustomType.Parameter("targetEmail") @Nullable String targetEmail,
+        @OutputCustomType.Parameter("targetObjectId") @Nullable String targetObjectId,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("userEmail") String userEmail,
+        @OutputCustomType.Parameter("userName") String userName) {
         this.expirationDate = expirationDate;
         this.id = id;
         this.invitationId = invitationId;

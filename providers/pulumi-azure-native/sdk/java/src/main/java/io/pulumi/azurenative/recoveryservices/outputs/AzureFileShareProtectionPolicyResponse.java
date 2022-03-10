@@ -51,14 +51,14 @@ public final class AzureFileShareProtectionPolicyResponse {
      */
     private final @Nullable String workLoadType;
 
-    @OutputCustomType.Constructor({"backupManagementType","protectedItemsCount","retentionPolicy","schedulePolicy","timeZone","workLoadType"})
+    @OutputCustomType.Constructor
     private AzureFileShareProtectionPolicyResponse(
-        String backupManagementType,
-        @Nullable Integer protectedItemsCount,
-        @Nullable Either<LongTermRetentionPolicyResponse,SimpleRetentionPolicyResponse> retentionPolicy,
-        @Nullable Object schedulePolicy,
-        @Nullable String timeZone,
-        @Nullable String workLoadType) {
+        @OutputCustomType.Parameter("backupManagementType") String backupManagementType,
+        @OutputCustomType.Parameter("protectedItemsCount") @Nullable Integer protectedItemsCount,
+        @OutputCustomType.Parameter("retentionPolicy") @Nullable Either<LongTermRetentionPolicyResponse,SimpleRetentionPolicyResponse> retentionPolicy,
+        @OutputCustomType.Parameter("schedulePolicy") @Nullable Object schedulePolicy,
+        @OutputCustomType.Parameter("timeZone") @Nullable String timeZone,
+        @OutputCustomType.Parameter("workLoadType") @Nullable String workLoadType) {
         this.backupManagementType = backupManagementType;
         this.protectedItemsCount = protectedItemsCount;
         this.retentionPolicy = retentionPolicy;

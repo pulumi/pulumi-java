@@ -76,20 +76,20 @@ public final class DatasetResponse {
      */
     private final Map<String,String> tags;
 
-    @OutputCustomType.Constructor({"createdTime","datasetId","datasetState","datasetType","defaultCompute","description","etag","isVisible","latest","modifiedTime","name","tags"})
+    @OutputCustomType.Constructor
     private DatasetResponse(
-        String createdTime,
-        String datasetId,
-        @Nullable DatasetStateResponse datasetState,
-        String datasetType,
-        String defaultCompute,
-        String description,
-        String etag,
-        Boolean isVisible,
-        @Nullable DatasetResponseLatest latest,
-        String modifiedTime,
-        String name,
-        Map<String,String> tags) {
+        @OutputCustomType.Parameter("createdTime") String createdTime,
+        @OutputCustomType.Parameter("datasetId") String datasetId,
+        @OutputCustomType.Parameter("datasetState") @Nullable DatasetStateResponse datasetState,
+        @OutputCustomType.Parameter("datasetType") String datasetType,
+        @OutputCustomType.Parameter("defaultCompute") String defaultCompute,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("isVisible") Boolean isVisible,
+        @OutputCustomType.Parameter("latest") @Nullable DatasetResponseLatest latest,
+        @OutputCustomType.Parameter("modifiedTime") String modifiedTime,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("tags") Map<String,String> tags) {
         this.createdTime = createdTime;
         this.datasetId = datasetId;
         this.datasetState = datasetState;

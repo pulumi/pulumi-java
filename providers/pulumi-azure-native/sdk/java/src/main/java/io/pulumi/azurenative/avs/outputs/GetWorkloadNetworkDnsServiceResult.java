@@ -69,19 +69,19 @@ public final class GetWorkloadNetworkDnsServiceResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"defaultDnsZone","displayName","dnsServiceIp","fqdnZones","id","logLevel","name","provisioningState","revision","status","type"})
+    @OutputCustomType.Constructor
     private GetWorkloadNetworkDnsServiceResult(
-        @Nullable String defaultDnsZone,
-        @Nullable String displayName,
-        @Nullable String dnsServiceIp,
-        @Nullable List<String> fqdnZones,
-        String id,
-        @Nullable String logLevel,
-        String name,
-        String provisioningState,
-        @Nullable Double revision,
-        String status,
-        String type) {
+        @OutputCustomType.Parameter("defaultDnsZone") @Nullable String defaultDnsZone,
+        @OutputCustomType.Parameter("displayName") @Nullable String displayName,
+        @OutputCustomType.Parameter("dnsServiceIp") @Nullable String dnsServiceIp,
+        @OutputCustomType.Parameter("fqdnZones") @Nullable List<String> fqdnZones,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("logLevel") @Nullable String logLevel,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("revision") @Nullable Double revision,
+        @OutputCustomType.Parameter("status") String status,
+        @OutputCustomType.Parameter("type") String type) {
         this.defaultDnsZone = defaultDnsZone;
         this.displayName = displayName;
         this.dnsServiceIp = dnsServiceIp;

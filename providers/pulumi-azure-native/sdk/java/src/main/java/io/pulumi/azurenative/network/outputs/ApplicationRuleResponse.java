@@ -76,20 +76,20 @@ public final class ApplicationRuleResponse {
      */
     private final @Nullable List<String> webCategories;
 
-    @OutputCustomType.Constructor({"description","destinationAddresses","fqdnTags","name","protocols","ruleType","sourceAddresses","sourceIpGroups","targetFqdns","targetUrls","terminateTLS","webCategories"})
+    @OutputCustomType.Constructor
     private ApplicationRuleResponse(
-        @Nullable String description,
-        @Nullable List<String> destinationAddresses,
-        @Nullable List<String> fqdnTags,
-        @Nullable String name,
-        @Nullable List<FirewallPolicyRuleApplicationProtocolResponse> protocols,
-        String ruleType,
-        @Nullable List<String> sourceAddresses,
-        @Nullable List<String> sourceIpGroups,
-        @Nullable List<String> targetFqdns,
-        @Nullable List<String> targetUrls,
-        @Nullable Boolean terminateTLS,
-        @Nullable List<String> webCategories) {
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("destinationAddresses") @Nullable List<String> destinationAddresses,
+        @OutputCustomType.Parameter("fqdnTags") @Nullable List<String> fqdnTags,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("protocols") @Nullable List<FirewallPolicyRuleApplicationProtocolResponse> protocols,
+        @OutputCustomType.Parameter("ruleType") String ruleType,
+        @OutputCustomType.Parameter("sourceAddresses") @Nullable List<String> sourceAddresses,
+        @OutputCustomType.Parameter("sourceIpGroups") @Nullable List<String> sourceIpGroups,
+        @OutputCustomType.Parameter("targetFqdns") @Nullable List<String> targetFqdns,
+        @OutputCustomType.Parameter("targetUrls") @Nullable List<String> targetUrls,
+        @OutputCustomType.Parameter("terminateTLS") @Nullable Boolean terminateTLS,
+        @OutputCustomType.Parameter("webCategories") @Nullable List<String> webCategories) {
         this.description = description;
         this.destinationAddresses = destinationAddresses;
         this.fqdnTags = fqdnTags;

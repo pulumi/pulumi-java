@@ -33,12 +33,12 @@ public final class SSISChildPackageResponse {
      */
     private final Object packagePath;
 
-    @OutputCustomType.Constructor({"packageContent","packageLastModifiedDate","packageName","packagePath"})
+    @OutputCustomType.Constructor
     private SSISChildPackageResponse(
-        Object packageContent,
-        @Nullable String packageLastModifiedDate,
-        @Nullable String packageName,
-        Object packagePath) {
+        @OutputCustomType.Parameter("packageContent") Object packageContent,
+        @OutputCustomType.Parameter("packageLastModifiedDate") @Nullable String packageLastModifiedDate,
+        @OutputCustomType.Parameter("packageName") @Nullable String packageName,
+        @OutputCustomType.Parameter("packagePath") Object packagePath) {
         this.packageContent = packageContent;
         this.packageLastModifiedDate = packageLastModifiedDate;
         this.packageName = packageName;

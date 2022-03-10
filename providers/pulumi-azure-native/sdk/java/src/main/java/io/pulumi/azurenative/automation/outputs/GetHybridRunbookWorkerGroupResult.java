@@ -51,15 +51,15 @@ public final class GetHybridRunbookWorkerGroupResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"credential","groupType","hybridRunbookWorkers","id","name","systemData","type"})
+    @OutputCustomType.Constructor
     private GetHybridRunbookWorkerGroupResult(
-        @Nullable RunAsCredentialAssociationPropertyResponse credential,
-        @Nullable String groupType,
-        @Nullable List<HybridRunbookWorkerLegacyResponse> hybridRunbookWorkers,
-        @Nullable String id,
-        @Nullable String name,
-        SystemDataResponse systemData,
-        String type) {
+        @OutputCustomType.Parameter("credential") @Nullable RunAsCredentialAssociationPropertyResponse credential,
+        @OutputCustomType.Parameter("groupType") @Nullable String groupType,
+        @OutputCustomType.Parameter("hybridRunbookWorkers") @Nullable List<HybridRunbookWorkerLegacyResponse> hybridRunbookWorkers,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("type") String type) {
         this.credential = credential;
         this.groupType = groupType;
         this.hybridRunbookWorkers = hybridRunbookWorkers;

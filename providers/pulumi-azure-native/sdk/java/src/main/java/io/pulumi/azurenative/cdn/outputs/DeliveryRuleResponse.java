@@ -57,12 +57,12 @@ public final class DeliveryRuleResponse {
      */
     private final Integer order;
 
-    @OutputCustomType.Constructor({"actions","conditions","name","order"})
+    @OutputCustomType.Constructor
     private DeliveryRuleResponse(
-        List<Object> actions,
-        @Nullable List<Object> conditions,
-        @Nullable String name,
-        Integer order) {
+        @OutputCustomType.Parameter("actions") List<Object> actions,
+        @OutputCustomType.Parameter("conditions") @Nullable List<Object> conditions,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("order") Integer order) {
         this.actions = actions;
         this.conditions = conditions;
         this.name = name;

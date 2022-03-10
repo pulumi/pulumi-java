@@ -76,19 +76,19 @@ public final class DynamicsAXLinkedServiceResponse {
      */
     private final Object url;
 
-    @OutputCustomType.Constructor({"aadResourceId","annotations","connectVia","description","encryptedCredential","parameters","servicePrincipalId","servicePrincipalKey","tenant","type","url"})
+    @OutputCustomType.Constructor
     private DynamicsAXLinkedServiceResponse(
-        Object aadResourceId,
-        @Nullable List<Object> annotations,
-        @Nullable IntegrationRuntimeReferenceResponse connectVia,
-        @Nullable String description,
-        @Nullable Object encryptedCredential,
-        @Nullable Map<String,ParameterSpecificationResponse> parameters,
-        Object servicePrincipalId,
-        Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalKey,
-        Object tenant,
-        String type,
-        Object url) {
+        @OutputCustomType.Parameter("aadResourceId") Object aadResourceId,
+        @OutputCustomType.Parameter("annotations") @Nullable List<Object> annotations,
+        @OutputCustomType.Parameter("connectVia") @Nullable IntegrationRuntimeReferenceResponse connectVia,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("encryptedCredential") @Nullable Object encryptedCredential,
+        @OutputCustomType.Parameter("parameters") @Nullable Map<String,ParameterSpecificationResponse> parameters,
+        @OutputCustomType.Parameter("servicePrincipalId") Object servicePrincipalId,
+        @OutputCustomType.Parameter("servicePrincipalKey") Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalKey,
+        @OutputCustomType.Parameter("tenant") Object tenant,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("url") Object url) {
         this.aadResourceId = aadResourceId;
         this.annotations = annotations;
         this.connectVia = connectVia;

@@ -17,8 +17,8 @@ public final class ProductPropertiesResponse {
      */
     private final @Nullable String version;
 
-    @OutputCustomType.Constructor({"version"})
-    private ProductPropertiesResponse(@Nullable String version) {
+    @OutputCustomType.Constructor
+    private ProductPropertiesResponse(@OutputCustomType.Parameter("version") @Nullable String version) {
         this.version = version;
     }
 

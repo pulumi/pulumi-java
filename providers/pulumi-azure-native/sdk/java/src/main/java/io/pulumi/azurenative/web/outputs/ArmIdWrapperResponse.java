@@ -11,8 +11,8 @@ import java.util.Objects;
 public final class ArmIdWrapperResponse {
     private final String id;
 
-    @OutputCustomType.Constructor({"id"})
-    private ArmIdWrapperResponse(String id) {
+    @OutputCustomType.Constructor
+    private ArmIdWrapperResponse(@OutputCustomType.Parameter("id") String id) {
         this.id = id;
     }
 

@@ -20,10 +20,10 @@ public final class KeyVaultReferenceResponse {
      */
     private final String url;
 
-    @OutputCustomType.Constructor({"id","url"})
+    @OutputCustomType.Constructor
     private KeyVaultReferenceResponse(
-        String id,
-        String url) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("url") String url) {
         this.id = id;
         this.url = url;
     }

@@ -22,10 +22,10 @@ public final class RoleResponse {
      */
     private final @Nullable String role;
 
-    @OutputCustomType.Constructor({"db","role"})
+    @OutputCustomType.Constructor
     private RoleResponse(
-        @Nullable String db,
-        @Nullable String role) {
+        @OutputCustomType.Parameter("db") @Nullable String db,
+        @OutputCustomType.Parameter("role") @Nullable String role) {
         this.db = db;
         this.role = role;
     }

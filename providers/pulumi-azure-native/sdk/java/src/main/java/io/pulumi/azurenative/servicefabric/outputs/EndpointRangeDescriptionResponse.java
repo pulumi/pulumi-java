@@ -20,10 +20,10 @@ public final class EndpointRangeDescriptionResponse {
      */
     private final Integer startPort;
 
-    @OutputCustomType.Constructor({"endPort","startPort"})
+    @OutputCustomType.Constructor
     private EndpointRangeDescriptionResponse(
-        Integer endPort,
-        Integer startPort) {
+        @OutputCustomType.Parameter("endPort") Integer endPort,
+        @OutputCustomType.Parameter("startPort") Integer startPort) {
         this.endPort = endPort;
         this.startPort = startPort;
     }

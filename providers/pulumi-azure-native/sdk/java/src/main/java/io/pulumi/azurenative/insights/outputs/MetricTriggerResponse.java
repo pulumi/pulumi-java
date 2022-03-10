@@ -76,20 +76,20 @@ public final class MetricTriggerResponse {
      */
     private final String timeWindow;
 
-    @OutputCustomType.Constructor({"dimensions","dividePerInstance","metricName","metricNamespace","metricResourceLocation","metricResourceUri","operator","statistic","threshold","timeAggregation","timeGrain","timeWindow"})
+    @OutputCustomType.Constructor
     private MetricTriggerResponse(
-        @Nullable List<ScaleRuleMetricDimensionResponse> dimensions,
-        @Nullable Boolean dividePerInstance,
-        String metricName,
-        @Nullable String metricNamespace,
-        @Nullable String metricResourceLocation,
-        String metricResourceUri,
-        String operator,
-        String statistic,
-        Double threshold,
-        String timeAggregation,
-        String timeGrain,
-        String timeWindow) {
+        @OutputCustomType.Parameter("dimensions") @Nullable List<ScaleRuleMetricDimensionResponse> dimensions,
+        @OutputCustomType.Parameter("dividePerInstance") @Nullable Boolean dividePerInstance,
+        @OutputCustomType.Parameter("metricName") String metricName,
+        @OutputCustomType.Parameter("metricNamespace") @Nullable String metricNamespace,
+        @OutputCustomType.Parameter("metricResourceLocation") @Nullable String metricResourceLocation,
+        @OutputCustomType.Parameter("metricResourceUri") String metricResourceUri,
+        @OutputCustomType.Parameter("operator") String operator,
+        @OutputCustomType.Parameter("statistic") String statistic,
+        @OutputCustomType.Parameter("threshold") Double threshold,
+        @OutputCustomType.Parameter("timeAggregation") String timeAggregation,
+        @OutputCustomType.Parameter("timeGrain") String timeGrain,
+        @OutputCustomType.Parameter("timeWindow") String timeWindow) {
         this.dimensions = dimensions;
         this.dividePerInstance = dividePerInstance;
         this.metricName = metricName;

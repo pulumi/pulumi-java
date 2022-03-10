@@ -37,13 +37,13 @@ public final class BaseImageDependencyResponse {
      */
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor({"digest","registry","repository","tag","type"})
+    @OutputCustomType.Constructor
     private BaseImageDependencyResponse(
-        @Nullable String digest,
-        @Nullable String registry,
-        @Nullable String repository,
-        @Nullable String tag,
-        @Nullable String type) {
+        @OutputCustomType.Parameter("digest") @Nullable String digest,
+        @OutputCustomType.Parameter("registry") @Nullable String registry,
+        @OutputCustomType.Parameter("repository") @Nullable String repository,
+        @OutputCustomType.Parameter("tag") @Nullable String tag,
+        @OutputCustomType.Parameter("type") @Nullable String type) {
         this.digest = digest;
         this.registry = registry;
         this.repository = repository;

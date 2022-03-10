@@ -69,19 +69,19 @@ public final class GetServiceResult {
      */
     private final String virtualSubnetId;
 
-    @OutputCustomType.Constructor({"etag","id","kind","location","name","provisioningState","publicKey","sku","tags","type","virtualSubnetId"})
+    @OutputCustomType.Constructor
     private GetServiceResult(
-        @Nullable String etag,
-        String id,
-        @Nullable String kind,
-        String location,
-        String name,
-        String provisioningState,
-        @Nullable String publicKey,
-        @Nullable ServiceSkuResponse sku,
-        @Nullable Map<String,String> tags,
-        String type,
-        String virtualSubnetId) {
+        @OutputCustomType.Parameter("etag") @Nullable String etag,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("kind") @Nullable String kind,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("publicKey") @Nullable String publicKey,
+        @OutputCustomType.Parameter("sku") @Nullable ServiceSkuResponse sku,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("virtualSubnetId") String virtualSubnetId) {
         this.etag = etag;
         this.id = id;
         this.kind = kind;

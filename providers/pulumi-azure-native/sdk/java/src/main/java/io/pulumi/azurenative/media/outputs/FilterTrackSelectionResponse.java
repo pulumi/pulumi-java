@@ -16,8 +16,8 @@ public final class FilterTrackSelectionResponse {
      */
     private final List<FilterTrackPropertyConditionResponse> trackSelections;
 
-    @OutputCustomType.Constructor({"trackSelections"})
-    private FilterTrackSelectionResponse(List<FilterTrackPropertyConditionResponse> trackSelections) {
+    @OutputCustomType.Constructor
+    private FilterTrackSelectionResponse(@OutputCustomType.Parameter("trackSelections") List<FilterTrackPropertyConditionResponse> trackSelections) {
         this.trackSelections = trackSelections;
     }
 

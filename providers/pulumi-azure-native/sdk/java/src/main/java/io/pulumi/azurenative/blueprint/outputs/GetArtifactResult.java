@@ -30,12 +30,12 @@ public final class GetArtifactResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"id","kind","name","type"})
+    @OutputCustomType.Constructor
     private GetArtifactResult(
-        String id,
-        String kind,
-        String name,
-        String type) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("type") String type) {
         this.id = id;
         this.kind = kind;
         this.name = name;

@@ -22,10 +22,10 @@ public final class UserArtifactSourceResponse {
      */
     private final String mediaLink;
 
-    @OutputCustomType.Constructor({"defaultConfigurationLink","mediaLink"})
+    @OutputCustomType.Constructor
     private UserArtifactSourceResponse(
-        @Nullable String defaultConfigurationLink,
-        String mediaLink) {
+        @OutputCustomType.Parameter("defaultConfigurationLink") @Nullable String defaultConfigurationLink,
+        @OutputCustomType.Parameter("mediaLink") String mediaLink) {
         this.defaultConfigurationLink = defaultConfigurationLink;
         this.mediaLink = mediaLink;
     }

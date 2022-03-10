@@ -23,10 +23,10 @@ public final class CustomActivityReferenceObjectResponse {
      */
     private final @Nullable List<LinkedServiceReferenceResponse> linkedServices;
 
-    @OutputCustomType.Constructor({"datasets","linkedServices"})
+    @OutputCustomType.Constructor
     private CustomActivityReferenceObjectResponse(
-        @Nullable List<DatasetReferenceResponse> datasets,
-        @Nullable List<LinkedServiceReferenceResponse> linkedServices) {
+        @OutputCustomType.Parameter("datasets") @Nullable List<DatasetReferenceResponse> datasets,
+        @OutputCustomType.Parameter("linkedServices") @Nullable List<LinkedServiceReferenceResponse> linkedServices) {
         this.datasets = datasets;
         this.linkedServices = linkedServices;
     }

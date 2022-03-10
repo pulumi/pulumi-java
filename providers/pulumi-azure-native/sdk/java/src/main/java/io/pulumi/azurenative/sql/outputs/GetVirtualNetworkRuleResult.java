@@ -43,14 +43,14 @@ public final class GetVirtualNetworkRuleResult {
      */
     private final String virtualNetworkSubnetId;
 
-    @OutputCustomType.Constructor({"id","ignoreMissingVnetServiceEndpoint","name","state","type","virtualNetworkSubnetId"})
+    @OutputCustomType.Constructor
     private GetVirtualNetworkRuleResult(
-        String id,
-        @Nullable Boolean ignoreMissingVnetServiceEndpoint,
-        String name,
-        String state,
-        String type,
-        String virtualNetworkSubnetId) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("ignoreMissingVnetServiceEndpoint") @Nullable Boolean ignoreMissingVnetServiceEndpoint,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("state") String state,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("virtualNetworkSubnetId") String virtualNetworkSubnetId) {
         this.id = id;
         this.ignoreMissingVnetServiceEndpoint = ignoreMissingVnetServiceEndpoint;
         this.name = name;

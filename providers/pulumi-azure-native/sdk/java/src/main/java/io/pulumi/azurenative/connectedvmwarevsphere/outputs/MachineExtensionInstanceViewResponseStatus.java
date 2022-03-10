@@ -35,13 +35,13 @@ public final class MachineExtensionInstanceViewResponseStatus {
      */
     private final String time;
 
-    @OutputCustomType.Constructor({"code","displayStatus","level","message","time"})
+    @OutputCustomType.Constructor
     private MachineExtensionInstanceViewResponseStatus(
-        String code,
-        String displayStatus,
-        String level,
-        String message,
-        String time) {
+        @OutputCustomType.Parameter("code") String code,
+        @OutputCustomType.Parameter("displayStatus") String displayStatus,
+        @OutputCustomType.Parameter("level") String level,
+        @OutputCustomType.Parameter("message") String message,
+        @OutputCustomType.Parameter("time") String time) {
         this.code = code;
         this.displayStatus = displayStatus;
         this.level = level;

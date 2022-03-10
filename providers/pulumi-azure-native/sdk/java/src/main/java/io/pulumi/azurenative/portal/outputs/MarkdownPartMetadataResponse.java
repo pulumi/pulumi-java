@@ -31,11 +31,11 @@ public final class MarkdownPartMetadataResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"inputs","settings","type"})
+    @OutputCustomType.Constructor
     private MarkdownPartMetadataResponse(
-        @Nullable List<Object> inputs,
-        @Nullable MarkdownPartMetadataResponseSettings settings,
-        String type) {
+        @OutputCustomType.Parameter("inputs") @Nullable List<Object> inputs,
+        @OutputCustomType.Parameter("settings") @Nullable MarkdownPartMetadataResponseSettings settings,
+        @OutputCustomType.Parameter("type") String type) {
         this.inputs = inputs;
         this.settings = settings;
         this.type = type;

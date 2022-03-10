@@ -27,11 +27,11 @@ public final class HostingEnvironmentProfileResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"id","name","type"})
+    @OutputCustomType.Constructor
     private HostingEnvironmentProfileResponse(
-        @Nullable String id,
-        String name,
-        String type) {
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("type") String type) {
         this.id = id;
         this.name = name;
         this.type = type;

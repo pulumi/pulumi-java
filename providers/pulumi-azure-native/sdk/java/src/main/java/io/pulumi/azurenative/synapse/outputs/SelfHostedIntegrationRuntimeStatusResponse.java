@@ -116,28 +116,28 @@ public final class SelfHostedIntegrationRuntimeStatusResponse {
      */
     private final String versionStatus;
 
-    @OutputCustomType.Constructor({"autoUpdate","autoUpdateETA","capabilities","createTime","dataFactoryName","internalChannelEncryption","latestVersion","links","localTimeZoneOffset","nodeCommunicationChannelEncryptionMode","nodes","pushedVersion","scheduledUpdateDate","serviceUrls","state","taskQueueId","type","updateDelayOffset","version","versionStatus"})
+    @OutputCustomType.Constructor
     private SelfHostedIntegrationRuntimeStatusResponse(
-        String autoUpdate,
-        String autoUpdateETA,
-        Map<String,String> capabilities,
-        String createTime,
-        String dataFactoryName,
-        String internalChannelEncryption,
-        String latestVersion,
-        @Nullable List<LinkedIntegrationRuntimeResponse> links,
-        String localTimeZoneOffset,
-        String nodeCommunicationChannelEncryptionMode,
-        @Nullable List<SelfHostedIntegrationRuntimeNodeResponse> nodes,
-        String pushedVersion,
-        String scheduledUpdateDate,
-        List<String> serviceUrls,
-        String state,
-        String taskQueueId,
-        String type,
-        String updateDelayOffset,
-        String version,
-        String versionStatus) {
+        @OutputCustomType.Parameter("autoUpdate") String autoUpdate,
+        @OutputCustomType.Parameter("autoUpdateETA") String autoUpdateETA,
+        @OutputCustomType.Parameter("capabilities") Map<String,String> capabilities,
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("dataFactoryName") String dataFactoryName,
+        @OutputCustomType.Parameter("internalChannelEncryption") String internalChannelEncryption,
+        @OutputCustomType.Parameter("latestVersion") String latestVersion,
+        @OutputCustomType.Parameter("links") @Nullable List<LinkedIntegrationRuntimeResponse> links,
+        @OutputCustomType.Parameter("localTimeZoneOffset") String localTimeZoneOffset,
+        @OutputCustomType.Parameter("nodeCommunicationChannelEncryptionMode") String nodeCommunicationChannelEncryptionMode,
+        @OutputCustomType.Parameter("nodes") @Nullable List<SelfHostedIntegrationRuntimeNodeResponse> nodes,
+        @OutputCustomType.Parameter("pushedVersion") String pushedVersion,
+        @OutputCustomType.Parameter("scheduledUpdateDate") String scheduledUpdateDate,
+        @OutputCustomType.Parameter("serviceUrls") List<String> serviceUrls,
+        @OutputCustomType.Parameter("state") String state,
+        @OutputCustomType.Parameter("taskQueueId") String taskQueueId,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("updateDelayOffset") String updateDelayOffset,
+        @OutputCustomType.Parameter("version") String version,
+        @OutputCustomType.Parameter("versionStatus") String versionStatus) {
         this.autoUpdate = autoUpdate;
         this.autoUpdateETA = autoUpdateETA;
         this.capabilities = capabilities;

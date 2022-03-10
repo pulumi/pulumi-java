@@ -78,20 +78,20 @@ public final class OSDiskResponse {
      */
     private final @Nullable Boolean writeAcceleratorEnabled;
 
-    @OutputCustomType.Constructor({"caching","createOption","deleteOption","diffDiskSettings","diskSizeGB","encryptionSettings","image","managedDisk","name","osType","vhd","writeAcceleratorEnabled"})
+    @OutputCustomType.Constructor
     private OSDiskResponse(
-        @Nullable String caching,
-        String createOption,
-        @Nullable String deleteOption,
-        @Nullable DiffDiskSettingsResponse diffDiskSettings,
-        @Nullable Integer diskSizeGB,
-        @Nullable DiskEncryptionSettingsResponse encryptionSettings,
-        @Nullable VirtualHardDiskResponse image,
-        @Nullable ManagedDiskParametersResponse managedDisk,
-        @Nullable String name,
-        @Nullable String osType,
-        @Nullable VirtualHardDiskResponse vhd,
-        @Nullable Boolean writeAcceleratorEnabled) {
+        @OutputCustomType.Parameter("caching") @Nullable String caching,
+        @OutputCustomType.Parameter("createOption") String createOption,
+        @OutputCustomType.Parameter("deleteOption") @Nullable String deleteOption,
+        @OutputCustomType.Parameter("diffDiskSettings") @Nullable DiffDiskSettingsResponse diffDiskSettings,
+        @OutputCustomType.Parameter("diskSizeGB") @Nullable Integer diskSizeGB,
+        @OutputCustomType.Parameter("encryptionSettings") @Nullable DiskEncryptionSettingsResponse encryptionSettings,
+        @OutputCustomType.Parameter("image") @Nullable VirtualHardDiskResponse image,
+        @OutputCustomType.Parameter("managedDisk") @Nullable ManagedDiskParametersResponse managedDisk,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("osType") @Nullable String osType,
+        @OutputCustomType.Parameter("vhd") @Nullable VirtualHardDiskResponse vhd,
+        @OutputCustomType.Parameter("writeAcceleratorEnabled") @Nullable Boolean writeAcceleratorEnabled) {
         this.caching = caching;
         this.createOption = createOption;
         this.deleteOption = deleteOption;

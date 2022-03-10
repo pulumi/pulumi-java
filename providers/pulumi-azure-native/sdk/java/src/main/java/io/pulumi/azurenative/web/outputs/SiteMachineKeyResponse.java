@@ -32,12 +32,12 @@ public final class SiteMachineKeyResponse {
      */
     private final @Nullable String validationKey;
 
-    @OutputCustomType.Constructor({"decryption","decryptionKey","validation","validationKey"})
+    @OutputCustomType.Constructor
     private SiteMachineKeyResponse(
-        @Nullable String decryption,
-        @Nullable String decryptionKey,
-        @Nullable String validation,
-        @Nullable String validationKey) {
+        @OutputCustomType.Parameter("decryption") @Nullable String decryption,
+        @OutputCustomType.Parameter("decryptionKey") @Nullable String decryptionKey,
+        @OutputCustomType.Parameter("validation") @Nullable String validation,
+        @OutputCustomType.Parameter("validationKey") @Nullable String validationKey) {
         this.decryption = decryption;
         this.decryptionKey = decryptionKey;
         this.validation = validation;

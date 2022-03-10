@@ -83,22 +83,22 @@ public final class GetSyncMemberResult {
      */
     private final @Nullable String userName;
 
-    @OutputCustomType.Constructor({"databaseName","databaseType","id","name","privateEndpointName","serverName","sqlServerDatabaseId","syncAgentId","syncDirection","syncMemberAzureDatabaseResourceId","syncState","type","usePrivateLinkConnection","userName"})
+    @OutputCustomType.Constructor
     private GetSyncMemberResult(
-        @Nullable String databaseName,
-        @Nullable String databaseType,
-        String id,
-        String name,
-        String privateEndpointName,
-        @Nullable String serverName,
-        @Nullable String sqlServerDatabaseId,
-        @Nullable String syncAgentId,
-        @Nullable String syncDirection,
-        @Nullable String syncMemberAzureDatabaseResourceId,
-        String syncState,
-        String type,
-        @Nullable Boolean usePrivateLinkConnection,
-        @Nullable String userName) {
+        @OutputCustomType.Parameter("databaseName") @Nullable String databaseName,
+        @OutputCustomType.Parameter("databaseType") @Nullable String databaseType,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("privateEndpointName") String privateEndpointName,
+        @OutputCustomType.Parameter("serverName") @Nullable String serverName,
+        @OutputCustomType.Parameter("sqlServerDatabaseId") @Nullable String sqlServerDatabaseId,
+        @OutputCustomType.Parameter("syncAgentId") @Nullable String syncAgentId,
+        @OutputCustomType.Parameter("syncDirection") @Nullable String syncDirection,
+        @OutputCustomType.Parameter("syncMemberAzureDatabaseResourceId") @Nullable String syncMemberAzureDatabaseResourceId,
+        @OutputCustomType.Parameter("syncState") String syncState,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("usePrivateLinkConnection") @Nullable Boolean usePrivateLinkConnection,
+        @OutputCustomType.Parameter("userName") @Nullable String userName) {
         this.databaseName = databaseName;
         this.databaseType = databaseType;
         this.id = id;

@@ -48,15 +48,15 @@ public final class DatabaseFileInfoResponse {
      */
     private final @Nullable Double sizeMB;
 
-    @OutputCustomType.Constructor({"databaseName","fileType","id","logicalName","physicalFullName","restoreFullName","sizeMB"})
+    @OutputCustomType.Constructor
     private DatabaseFileInfoResponse(
-        @Nullable String databaseName,
-        @Nullable String fileType,
-        @Nullable String id,
-        @Nullable String logicalName,
-        @Nullable String physicalFullName,
-        @Nullable String restoreFullName,
-        @Nullable Double sizeMB) {
+        @OutputCustomType.Parameter("databaseName") @Nullable String databaseName,
+        @OutputCustomType.Parameter("fileType") @Nullable String fileType,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("logicalName") @Nullable String logicalName,
+        @OutputCustomType.Parameter("physicalFullName") @Nullable String physicalFullName,
+        @OutputCustomType.Parameter("restoreFullName") @Nullable String restoreFullName,
+        @OutputCustomType.Parameter("sizeMB") @Nullable Double sizeMB) {
         this.databaseName = databaseName;
         this.fileType = fileType;
         this.id = id;

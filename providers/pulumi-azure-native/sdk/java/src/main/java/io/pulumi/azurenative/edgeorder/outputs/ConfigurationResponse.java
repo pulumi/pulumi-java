@@ -64,17 +64,17 @@ public final class ConfigurationResponse {
      */
     private final List<SpecificationResponse> specifications;
 
-    @OutputCustomType.Constructor({"availabilityInformation","costInformation","description","dimensions","displayName","filterableProperties","hierarchyInformation","imageInformation","specifications"})
+    @OutputCustomType.Constructor
     private ConfigurationResponse(
-        AvailabilityInformationResponse availabilityInformation,
-        CostInformationResponse costInformation,
-        DescriptionResponse description,
-        DimensionsResponse dimensions,
-        String displayName,
-        List<FilterablePropertyResponse> filterableProperties,
-        HierarchyInformationResponse hierarchyInformation,
-        List<ImageInformationResponse> imageInformation,
-        List<SpecificationResponse> specifications) {
+        @OutputCustomType.Parameter("availabilityInformation") AvailabilityInformationResponse availabilityInformation,
+        @OutputCustomType.Parameter("costInformation") CostInformationResponse costInformation,
+        @OutputCustomType.Parameter("description") DescriptionResponse description,
+        @OutputCustomType.Parameter("dimensions") DimensionsResponse dimensions,
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("filterableProperties") List<FilterablePropertyResponse> filterableProperties,
+        @OutputCustomType.Parameter("hierarchyInformation") HierarchyInformationResponse hierarchyInformation,
+        @OutputCustomType.Parameter("imageInformation") List<ImageInformationResponse> imageInformation,
+        @OutputCustomType.Parameter("specifications") List<SpecificationResponse> specifications) {
         this.availabilityInformation = availabilityInformation;
         this.costInformation = costInformation;
         this.description = description;

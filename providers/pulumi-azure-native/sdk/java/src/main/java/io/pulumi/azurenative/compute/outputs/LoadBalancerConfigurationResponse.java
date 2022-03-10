@@ -28,11 +28,11 @@ public final class LoadBalancerConfigurationResponse {
      */
     private final LoadBalancerConfigurationPropertiesResponse properties;
 
-    @OutputCustomType.Constructor({"id","name","properties"})
+    @OutputCustomType.Constructor
     private LoadBalancerConfigurationResponse(
-        @Nullable String id,
-        String name,
-        LoadBalancerConfigurationPropertiesResponse properties) {
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("properties") LoadBalancerConfigurationPropertiesResponse properties) {
         this.id = id;
         this.name = name;
         this.properties = properties;

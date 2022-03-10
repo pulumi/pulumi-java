@@ -38,12 +38,12 @@ public final class FiltersResponse {
      */
     private final @Nullable String rotation;
 
-    @OutputCustomType.Constructor({"crop","deinterlace","overlays","rotation"})
+    @OutputCustomType.Constructor
     private FiltersResponse(
-        @Nullable RectangleResponse crop,
-        @Nullable DeinterlaceResponse deinterlace,
-        @Nullable List<Either<AudioOverlayResponse,VideoOverlayResponse>> overlays,
-        @Nullable String rotation) {
+        @OutputCustomType.Parameter("crop") @Nullable RectangleResponse crop,
+        @OutputCustomType.Parameter("deinterlace") @Nullable DeinterlaceResponse deinterlace,
+        @OutputCustomType.Parameter("overlays") @Nullable List<Either<AudioOverlayResponse,VideoOverlayResponse>> overlays,
+        @OutputCustomType.Parameter("rotation") @Nullable String rotation) {
         this.crop = crop;
         this.deinterlace = deinterlace;
         this.overlays = overlays;

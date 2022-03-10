@@ -28,11 +28,11 @@ public final class RoutingPreferenceResponse {
      */
     private final @Nullable String routingChoice;
 
-    @OutputCustomType.Constructor({"publishInternetEndpoints","publishMicrosoftEndpoints","routingChoice"})
+    @OutputCustomType.Constructor
     private RoutingPreferenceResponse(
-        @Nullable Boolean publishInternetEndpoints,
-        @Nullable Boolean publishMicrosoftEndpoints,
-        @Nullable String routingChoice) {
+        @OutputCustomType.Parameter("publishInternetEndpoints") @Nullable Boolean publishInternetEndpoints,
+        @OutputCustomType.Parameter("publishMicrosoftEndpoints") @Nullable Boolean publishMicrosoftEndpoints,
+        @OutputCustomType.Parameter("routingChoice") @Nullable String routingChoice) {
         this.publishInternetEndpoints = publishInternetEndpoints;
         this.publishMicrosoftEndpoints = publishMicrosoftEndpoints;
         this.routingChoice = routingChoice;

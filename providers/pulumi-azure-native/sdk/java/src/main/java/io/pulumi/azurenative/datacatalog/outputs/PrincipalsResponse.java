@@ -22,10 +22,10 @@ public final class PrincipalsResponse {
      */
     private final @Nullable String upn;
 
-    @OutputCustomType.Constructor({"objectId","upn"})
+    @OutputCustomType.Constructor
     private PrincipalsResponse(
-        @Nullable String objectId,
-        @Nullable String upn) {
+        @OutputCustomType.Parameter("objectId") @Nullable String objectId,
+        @OutputCustomType.Parameter("upn") @Nullable String upn) {
         this.objectId = objectId;
         this.upn = upn;
     }

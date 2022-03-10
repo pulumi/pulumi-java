@@ -17,8 +17,8 @@ public final class IpRuleResponse {
      */
     private final @Nullable String value;
 
-    @OutputCustomType.Constructor({"value"})
-    private IpRuleResponse(@Nullable String value) {
+    @OutputCustomType.Constructor
+    private IpRuleResponse(@OutputCustomType.Parameter("value") @Nullable String value) {
         this.value = value;
     }
 

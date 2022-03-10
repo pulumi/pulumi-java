@@ -23,10 +23,10 @@ public final class TargetPropertiesResponse {
      */
     private final @Nullable List<NonAzureQueryPropertiesResponse> nonAzureQueries;
 
-    @OutputCustomType.Constructor({"azureQueries","nonAzureQueries"})
+    @OutputCustomType.Constructor
     private TargetPropertiesResponse(
-        @Nullable List<AzureQueryPropertiesResponse> azureQueries,
-        @Nullable List<NonAzureQueryPropertiesResponse> nonAzureQueries) {
+        @OutputCustomType.Parameter("azureQueries") @Nullable List<AzureQueryPropertiesResponse> azureQueries,
+        @OutputCustomType.Parameter("nonAzureQueries") @Nullable List<NonAzureQueryPropertiesResponse> nonAzureQueries) {
         this.azureQueries = azureQueries;
         this.nonAzureQueries = nonAzureQueries;
     }

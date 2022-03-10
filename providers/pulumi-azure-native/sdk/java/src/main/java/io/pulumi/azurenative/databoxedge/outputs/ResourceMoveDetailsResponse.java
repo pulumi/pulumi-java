@@ -22,10 +22,10 @@ public final class ResourceMoveDetailsResponse {
      */
     private final @Nullable String operationInProgressLockTimeoutInUTC;
 
-    @OutputCustomType.Constructor({"operationInProgress","operationInProgressLockTimeoutInUTC"})
+    @OutputCustomType.Constructor
     private ResourceMoveDetailsResponse(
-        @Nullable String operationInProgress,
-        @Nullable String operationInProgressLockTimeoutInUTC) {
+        @OutputCustomType.Parameter("operationInProgress") @Nullable String operationInProgress,
+        @OutputCustomType.Parameter("operationInProgressLockTimeoutInUTC") @Nullable String operationInProgressLockTimeoutInUTC) {
         this.operationInProgress = operationInProgress;
         this.operationInProgressLockTimeoutInUTC = operationInProgressLockTimeoutInUTC;
     }

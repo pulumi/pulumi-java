@@ -28,11 +28,11 @@ public final class DnsConfigResponse {
      */
     private final @Nullable Double ttl;
 
-    @OutputCustomType.Constructor({"fqdn","relativeName","ttl"})
+    @OutputCustomType.Constructor
     private DnsConfigResponse(
-        String fqdn,
-        @Nullable String relativeName,
-        @Nullable Double ttl) {
+        @OutputCustomType.Parameter("fqdn") String fqdn,
+        @OutputCustomType.Parameter("relativeName") @Nullable String relativeName,
+        @OutputCustomType.Parameter("ttl") @Nullable Double ttl) {
         this.fqdn = fqdn;
         this.relativeName = relativeName;
         this.ttl = ttl;

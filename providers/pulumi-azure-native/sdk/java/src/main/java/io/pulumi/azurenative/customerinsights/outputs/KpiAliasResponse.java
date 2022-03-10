@@ -20,10 +20,10 @@ public final class KpiAliasResponse {
      */
     private final String expression;
 
-    @OutputCustomType.Constructor({"aliasName","expression"})
+    @OutputCustomType.Constructor
     private KpiAliasResponse(
-        String aliasName,
-        String expression) {
+        @OutputCustomType.Parameter("aliasName") String aliasName,
+        @OutputCustomType.Parameter("expression") String expression) {
         this.aliasName = aliasName;
         this.expression = expression;
     }

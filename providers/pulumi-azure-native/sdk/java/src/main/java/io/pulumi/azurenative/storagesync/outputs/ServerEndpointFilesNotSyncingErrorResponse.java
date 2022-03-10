@@ -26,11 +26,11 @@ public final class ServerEndpointFilesNotSyncingErrorResponse {
      */
     private final Double transientCount;
 
-    @OutputCustomType.Constructor({"errorCode","persistentCount","transientCount"})
+    @OutputCustomType.Constructor
     private ServerEndpointFilesNotSyncingErrorResponse(
-        Integer errorCode,
-        Double persistentCount,
-        Double transientCount) {
+        @OutputCustomType.Parameter("errorCode") Integer errorCode,
+        @OutputCustomType.Parameter("persistentCount") Double persistentCount,
+        @OutputCustomType.Parameter("transientCount") Double transientCount) {
         this.errorCode = errorCode;
         this.persistentCount = persistentCount;
         this.transientCount = transientCount;

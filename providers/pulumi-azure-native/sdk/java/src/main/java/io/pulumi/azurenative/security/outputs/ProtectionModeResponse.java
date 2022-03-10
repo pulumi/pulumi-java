@@ -32,12 +32,12 @@ public final class ProtectionModeResponse {
      */
     private final @Nullable String script;
 
-    @OutputCustomType.Constructor({"exe","executable","msi","script"})
+    @OutputCustomType.Constructor
     private ProtectionModeResponse(
-        @Nullable String exe,
-        @Nullable String executable,
-        @Nullable String msi,
-        @Nullable String script) {
+        @OutputCustomType.Parameter("exe") @Nullable String exe,
+        @OutputCustomType.Parameter("executable") @Nullable String executable,
+        @OutputCustomType.Parameter("msi") @Nullable String msi,
+        @OutputCustomType.Parameter("script") @Nullable String script) {
         this.exe = exe;
         this.executable = executable;
         this.msi = msi;

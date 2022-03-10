@@ -39,13 +39,13 @@ public final class AzureBlobStorageWriteSettingsResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"blockSizeInMB","copyBehavior","disableMetricsCollection","maxConcurrentConnections","type"})
+    @OutputCustomType.Constructor
     private AzureBlobStorageWriteSettingsResponse(
-        @Nullable Object blockSizeInMB,
-        @Nullable Object copyBehavior,
-        @Nullable Object disableMetricsCollection,
-        @Nullable Object maxConcurrentConnections,
-        String type) {
+        @OutputCustomType.Parameter("blockSizeInMB") @Nullable Object blockSizeInMB,
+        @OutputCustomType.Parameter("copyBehavior") @Nullable Object copyBehavior,
+        @OutputCustomType.Parameter("disableMetricsCollection") @Nullable Object disableMetricsCollection,
+        @OutputCustomType.Parameter("maxConcurrentConnections") @Nullable Object maxConcurrentConnections,
+        @OutputCustomType.Parameter("type") String type) {
         this.blockSizeInMB = blockSizeInMB;
         this.copyBehavior = copyBehavior;
         this.disableMetricsCollection = disableMetricsCollection;

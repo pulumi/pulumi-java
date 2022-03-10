@@ -15,8 +15,8 @@ public final class ContainerServiceSshPublicKeyResponse {
      */
     private final String keyData;
 
-    @OutputCustomType.Constructor({"keyData"})
-    private ContainerServiceSshPublicKeyResponse(String keyData) {
+    @OutputCustomType.Constructor
+    private ContainerServiceSshPublicKeyResponse(@OutputCustomType.Parameter("keyData") String keyData) {
         this.keyData = keyData;
     }
 

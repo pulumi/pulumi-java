@@ -39,13 +39,13 @@ public final class BanditPolicyResponse {
      */
     private final @Nullable Double slackFactor;
 
-    @OutputCustomType.Constructor({"delayEvaluation","evaluationInterval","policyType","slackAmount","slackFactor"})
+    @OutputCustomType.Constructor
     private BanditPolicyResponse(
-        @Nullable Integer delayEvaluation,
-        @Nullable Integer evaluationInterval,
-        String policyType,
-        @Nullable Double slackAmount,
-        @Nullable Double slackFactor) {
+        @OutputCustomType.Parameter("delayEvaluation") @Nullable Integer delayEvaluation,
+        @OutputCustomType.Parameter("evaluationInterval") @Nullable Integer evaluationInterval,
+        @OutputCustomType.Parameter("policyType") String policyType,
+        @OutputCustomType.Parameter("slackAmount") @Nullable Double slackAmount,
+        @OutputCustomType.Parameter("slackFactor") @Nullable Double slackFactor) {
         this.delayEvaluation = delayEvaluation;
         this.evaluationInterval = evaluationInterval;
         this.policyType = policyType;

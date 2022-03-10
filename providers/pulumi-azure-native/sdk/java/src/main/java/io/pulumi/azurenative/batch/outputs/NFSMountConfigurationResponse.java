@@ -23,11 +23,11 @@ public final class NFSMountConfigurationResponse {
     private final String relativeMountPath;
     private final String source;
 
-    @OutputCustomType.Constructor({"mountOptions","relativeMountPath","source"})
+    @OutputCustomType.Constructor
     private NFSMountConfigurationResponse(
-        @Nullable String mountOptions,
-        String relativeMountPath,
-        String source) {
+        @OutputCustomType.Parameter("mountOptions") @Nullable String mountOptions,
+        @OutputCustomType.Parameter("relativeMountPath") String relativeMountPath,
+        @OutputCustomType.Parameter("source") String source) {
         this.mountOptions = mountOptions;
         this.relativeMountPath = relativeMountPath;
         this.source = source;

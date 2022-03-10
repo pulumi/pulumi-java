@@ -50,14 +50,14 @@ public final class ValidateMigrationInputSqlServerSqlDbSyncTaskPropertiesRespons
      */
     private final String taskType;
 
-    @OutputCustomType.Constructor({"commands","errors","input","output","state","taskType"})
+    @OutputCustomType.Constructor
     private ValidateMigrationInputSqlServerSqlDbSyncTaskPropertiesResponse(
-        List<Either<MigrateMISyncCompleteCommandPropertiesResponse,MigrateSyncCompleteCommandPropertiesResponse>> commands,
-        List<ODataErrorResponse> errors,
-        @Nullable ValidateSyncMigrationInputSqlServerTaskInputResponse input,
-        List<ValidateSyncMigrationInputSqlServerTaskOutputResponse> output,
-        String state,
-        String taskType) {
+        @OutputCustomType.Parameter("commands") List<Either<MigrateMISyncCompleteCommandPropertiesResponse,MigrateSyncCompleteCommandPropertiesResponse>> commands,
+        @OutputCustomType.Parameter("errors") List<ODataErrorResponse> errors,
+        @OutputCustomType.Parameter("input") @Nullable ValidateSyncMigrationInputSqlServerTaskInputResponse input,
+        @OutputCustomType.Parameter("output") List<ValidateSyncMigrationInputSqlServerTaskOutputResponse> output,
+        @OutputCustomType.Parameter("state") String state,
+        @OutputCustomType.Parameter("taskType") String taskType) {
         this.commands = commands;
         this.errors = errors;
         this.input = input;

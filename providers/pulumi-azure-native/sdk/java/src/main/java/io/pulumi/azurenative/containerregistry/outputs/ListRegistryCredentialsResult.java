@@ -24,10 +24,10 @@ public final class ListRegistryCredentialsResult {
      */
     private final @Nullable String username;
 
-    @OutputCustomType.Constructor({"passwords","username"})
+    @OutputCustomType.Constructor
     private ListRegistryCredentialsResult(
-        @Nullable List<RegistryPasswordResponse> passwords,
-        @Nullable String username) {
+        @OutputCustomType.Parameter("passwords") @Nullable List<RegistryPasswordResponse> passwords,
+        @OutputCustomType.Parameter("username") @Nullable String username) {
         this.passwords = passwords;
         this.username = username;
     }

@@ -28,11 +28,11 @@ public final class GetTdeCertificatesSqlTaskInputResponse {
      */
     private final List<SelectedCertificateInputResponse> selectedCertificates;
 
-    @OutputCustomType.Constructor({"backupFileShare","connectionInfo","selectedCertificates"})
+    @OutputCustomType.Constructor
     private GetTdeCertificatesSqlTaskInputResponse(
-        FileShareResponse backupFileShare,
-        SqlConnectionInfoResponse connectionInfo,
-        List<SelectedCertificateInputResponse> selectedCertificates) {
+        @OutputCustomType.Parameter("backupFileShare") FileShareResponse backupFileShare,
+        @OutputCustomType.Parameter("connectionInfo") SqlConnectionInfoResponse connectionInfo,
+        @OutputCustomType.Parameter("selectedCertificates") List<SelectedCertificateInputResponse> selectedCertificates) {
         this.backupFileShare = backupFileShare;
         this.connectionInfo = connectionInfo;
         this.selectedCertificates = selectedCertificates;

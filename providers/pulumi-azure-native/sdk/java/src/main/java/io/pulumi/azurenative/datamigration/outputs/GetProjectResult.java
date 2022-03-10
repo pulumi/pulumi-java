@@ -80,20 +80,20 @@ public final class GetProjectResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"creationTime","databasesInfo","id","location","name","provisioningState","sourceConnectionInfo","sourcePlatform","tags","targetConnectionInfo","targetPlatform","type"})
+    @OutputCustomType.Constructor
     private GetProjectResult(
-        String creationTime,
-        @Nullable List<DatabaseInfoResponse> databasesInfo,
-        String id,
-        String location,
-        String name,
-        String provisioningState,
-        @Nullable Object sourceConnectionInfo,
-        String sourcePlatform,
-        @Nullable Map<String,String> tags,
-        @Nullable Object targetConnectionInfo,
-        String targetPlatform,
-        String type) {
+        @OutputCustomType.Parameter("creationTime") String creationTime,
+        @OutputCustomType.Parameter("databasesInfo") @Nullable List<DatabaseInfoResponse> databasesInfo,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("sourceConnectionInfo") @Nullable Object sourceConnectionInfo,
+        @OutputCustomType.Parameter("sourcePlatform") String sourcePlatform,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("targetConnectionInfo") @Nullable Object targetConnectionInfo,
+        @OutputCustomType.Parameter("targetPlatform") String targetPlatform,
+        @OutputCustomType.Parameter("type") String type) {
         this.creationTime = creationTime;
         this.databasesInfo = databasesInfo;
         this.id = id;

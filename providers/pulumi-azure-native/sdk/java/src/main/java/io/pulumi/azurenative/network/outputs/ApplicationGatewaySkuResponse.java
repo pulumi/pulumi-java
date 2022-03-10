@@ -28,11 +28,11 @@ public final class ApplicationGatewaySkuResponse {
      */
     private final @Nullable String tier;
 
-    @OutputCustomType.Constructor({"capacity","name","tier"})
+    @OutputCustomType.Constructor
     private ApplicationGatewaySkuResponse(
-        @Nullable Integer capacity,
-        @Nullable String name,
-        @Nullable String tier) {
+        @OutputCustomType.Parameter("capacity") @Nullable Integer capacity,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("tier") @Nullable String tier) {
         this.capacity = capacity;
         this.name = name;
         this.tier = tier;

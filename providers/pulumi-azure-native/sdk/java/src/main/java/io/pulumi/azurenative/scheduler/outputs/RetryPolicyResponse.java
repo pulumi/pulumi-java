@@ -28,11 +28,11 @@ public final class RetryPolicyResponse {
      */
     private final @Nullable String retryType;
 
-    @OutputCustomType.Constructor({"retryCount","retryInterval","retryType"})
+    @OutputCustomType.Constructor
     private RetryPolicyResponse(
-        @Nullable Integer retryCount,
-        @Nullable String retryInterval,
-        @Nullable String retryType) {
+        @OutputCustomType.Parameter("retryCount") @Nullable Integer retryCount,
+        @OutputCustomType.Parameter("retryInterval") @Nullable String retryInterval,
+        @OutputCustomType.Parameter("retryType") @Nullable String retryType) {
         this.retryCount = retryCount;
         this.retryInterval = retryInterval;
         this.retryType = retryType;

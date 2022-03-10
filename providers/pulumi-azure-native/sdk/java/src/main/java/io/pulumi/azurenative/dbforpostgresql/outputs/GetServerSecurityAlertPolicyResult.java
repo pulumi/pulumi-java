@@ -65,18 +65,18 @@ public final class GetServerSecurityAlertPolicyResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"disabledAlerts","emailAccountAdmins","emailAddresses","id","name","retentionDays","state","storageAccountAccessKey","storageEndpoint","type"})
+    @OutputCustomType.Constructor
     private GetServerSecurityAlertPolicyResult(
-        @Nullable List<String> disabledAlerts,
-        @Nullable Boolean emailAccountAdmins,
-        @Nullable List<String> emailAddresses,
-        String id,
-        String name,
-        @Nullable Integer retentionDays,
-        String state,
-        @Nullable String storageAccountAccessKey,
-        @Nullable String storageEndpoint,
-        String type) {
+        @OutputCustomType.Parameter("disabledAlerts") @Nullable List<String> disabledAlerts,
+        @OutputCustomType.Parameter("emailAccountAdmins") @Nullable Boolean emailAccountAdmins,
+        @OutputCustomType.Parameter("emailAddresses") @Nullable List<String> emailAddresses,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("retentionDays") @Nullable Integer retentionDays,
+        @OutputCustomType.Parameter("state") String state,
+        @OutputCustomType.Parameter("storageAccountAccessKey") @Nullable String storageAccountAccessKey,
+        @OutputCustomType.Parameter("storageEndpoint") @Nullable String storageEndpoint,
+        @OutputCustomType.Parameter("type") String type) {
         this.disabledAlerts = disabledAlerts;
         this.emailAccountAdmins = emailAccountAdmins;
         this.emailAddresses = emailAddresses;

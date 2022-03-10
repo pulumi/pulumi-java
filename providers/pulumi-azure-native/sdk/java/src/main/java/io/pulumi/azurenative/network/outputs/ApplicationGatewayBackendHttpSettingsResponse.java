@@ -107,26 +107,26 @@ public final class ApplicationGatewayBackendHttpSettingsResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"affinityCookieName","authenticationCertificates","connectionDraining","cookieBasedAffinity","etag","hostName","id","name","path","pickHostNameFromBackendAddress","port","probe","probeEnabled","protocol","provisioningState","requestTimeout","trustedRootCertificates","type"})
+    @OutputCustomType.Constructor
     private ApplicationGatewayBackendHttpSettingsResponse(
-        @Nullable String affinityCookieName,
-        @Nullable List<SubResourceResponse> authenticationCertificates,
-        @Nullable ApplicationGatewayConnectionDrainingResponse connectionDraining,
-        @Nullable String cookieBasedAffinity,
-        String etag,
-        @Nullable String hostName,
-        @Nullable String id,
-        @Nullable String name,
-        @Nullable String path,
-        @Nullable Boolean pickHostNameFromBackendAddress,
-        @Nullable Integer port,
-        @Nullable SubResourceResponse probe,
-        @Nullable Boolean probeEnabled,
-        @Nullable String protocol,
-        String provisioningState,
-        @Nullable Integer requestTimeout,
-        @Nullable List<SubResourceResponse> trustedRootCertificates,
-        String type) {
+        @OutputCustomType.Parameter("affinityCookieName") @Nullable String affinityCookieName,
+        @OutputCustomType.Parameter("authenticationCertificates") @Nullable List<SubResourceResponse> authenticationCertificates,
+        @OutputCustomType.Parameter("connectionDraining") @Nullable ApplicationGatewayConnectionDrainingResponse connectionDraining,
+        @OutputCustomType.Parameter("cookieBasedAffinity") @Nullable String cookieBasedAffinity,
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("hostName") @Nullable String hostName,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("path") @Nullable String path,
+        @OutputCustomType.Parameter("pickHostNameFromBackendAddress") @Nullable Boolean pickHostNameFromBackendAddress,
+        @OutputCustomType.Parameter("port") @Nullable Integer port,
+        @OutputCustomType.Parameter("probe") @Nullable SubResourceResponse probe,
+        @OutputCustomType.Parameter("probeEnabled") @Nullable Boolean probeEnabled,
+        @OutputCustomType.Parameter("protocol") @Nullable String protocol,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("requestTimeout") @Nullable Integer requestTimeout,
+        @OutputCustomType.Parameter("trustedRootCertificates") @Nullable List<SubResourceResponse> trustedRootCertificates,
+        @OutputCustomType.Parameter("type") String type) {
         this.affinityCookieName = affinityCookieName;
         this.authenticationCertificates = authenticationCertificates;
         this.connectionDraining = connectionDraining;

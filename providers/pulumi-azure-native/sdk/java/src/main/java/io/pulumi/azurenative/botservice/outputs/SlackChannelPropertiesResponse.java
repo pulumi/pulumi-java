@@ -63,18 +63,18 @@ public final class SlackChannelPropertiesResponse {
      */
     private final @Nullable String verificationToken;
 
-    @OutputCustomType.Constructor({"clientId","clientSecret","isEnabled","isValidated","landingPageUrl","lastSubmissionId","redirectAction","registerBeforeOAuthFlow","signingSecret","verificationToken"})
+    @OutputCustomType.Constructor
     private SlackChannelPropertiesResponse(
-        @Nullable String clientId,
-        @Nullable String clientSecret,
-        Boolean isEnabled,
-        Boolean isValidated,
-        @Nullable String landingPageUrl,
-        String lastSubmissionId,
-        String redirectAction,
-        Boolean registerBeforeOAuthFlow,
-        @Nullable String signingSecret,
-        @Nullable String verificationToken) {
+        @OutputCustomType.Parameter("clientId") @Nullable String clientId,
+        @OutputCustomType.Parameter("clientSecret") @Nullable String clientSecret,
+        @OutputCustomType.Parameter("isEnabled") Boolean isEnabled,
+        @OutputCustomType.Parameter("isValidated") Boolean isValidated,
+        @OutputCustomType.Parameter("landingPageUrl") @Nullable String landingPageUrl,
+        @OutputCustomType.Parameter("lastSubmissionId") String lastSubmissionId,
+        @OutputCustomType.Parameter("redirectAction") String redirectAction,
+        @OutputCustomType.Parameter("registerBeforeOAuthFlow") Boolean registerBeforeOAuthFlow,
+        @OutputCustomType.Parameter("signingSecret") @Nullable String signingSecret,
+        @OutputCustomType.Parameter("verificationToken") @Nullable String verificationToken) {
         this.clientId = clientId;
         this.clientSecret = clientSecret;
         this.isEnabled = isEnabled;

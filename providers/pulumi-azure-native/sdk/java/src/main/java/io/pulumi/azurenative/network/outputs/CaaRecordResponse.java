@@ -28,11 +28,11 @@ public final class CaaRecordResponse {
      */
     private final @Nullable String value;
 
-    @OutputCustomType.Constructor({"flags","tag","value"})
+    @OutputCustomType.Constructor
     private CaaRecordResponse(
-        @Nullable Integer flags,
-        @Nullable String tag,
-        @Nullable String value) {
+        @OutputCustomType.Parameter("flags") @Nullable Integer flags,
+        @OutputCustomType.Parameter("tag") @Nullable String tag,
+        @OutputCustomType.Parameter("value") @Nullable String value) {
         this.flags = flags;
         this.tag = tag;
         this.value = value;

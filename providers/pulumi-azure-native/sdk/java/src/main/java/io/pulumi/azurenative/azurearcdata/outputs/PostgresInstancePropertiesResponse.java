@@ -40,14 +40,14 @@ public final class PostgresInstancePropertiesResponse {
     private final @Nullable String lastUploadedDate;
     private final String provisioningState;
 
-    @OutputCustomType.Constructor({"admin","basicLoginInformation","dataControllerId","k8sRaw","lastUploadedDate","provisioningState"})
+    @OutputCustomType.Constructor
     private PostgresInstancePropertiesResponse(
-        @Nullable String admin,
-        @Nullable BasicLoginInformationResponse basicLoginInformation,
-        @Nullable String dataControllerId,
-        @Nullable Object k8sRaw,
-        @Nullable String lastUploadedDate,
-        String provisioningState) {
+        @OutputCustomType.Parameter("admin") @Nullable String admin,
+        @OutputCustomType.Parameter("basicLoginInformation") @Nullable BasicLoginInformationResponse basicLoginInformation,
+        @OutputCustomType.Parameter("dataControllerId") @Nullable String dataControllerId,
+        @OutputCustomType.Parameter("k8sRaw") @Nullable Object k8sRaw,
+        @OutputCustomType.Parameter("lastUploadedDate") @Nullable String lastUploadedDate,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState) {
         this.admin = admin;
         this.basicLoginInformation = basicLoginInformation;
         this.dataControllerId = dataControllerId;

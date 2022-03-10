@@ -42,14 +42,14 @@ public final class PurchaseMeterDetailsResponse {
      */
     private final String termId;
 
-    @OutputCustomType.Constructor({"billingType","chargingType","multiplier","productId","skuId","termId"})
+    @OutputCustomType.Constructor
     private PurchaseMeterDetailsResponse(
-        String billingType,
-        String chargingType,
-        Double multiplier,
-        String productId,
-        String skuId,
-        String termId) {
+        @OutputCustomType.Parameter("billingType") String billingType,
+        @OutputCustomType.Parameter("chargingType") String chargingType,
+        @OutputCustomType.Parameter("multiplier") Double multiplier,
+        @OutputCustomType.Parameter("productId") String productId,
+        @OutputCustomType.Parameter("skuId") String skuId,
+        @OutputCustomType.Parameter("termId") String termId) {
         this.billingType = billingType;
         this.chargingType = chargingType;
         this.multiplier = multiplier;

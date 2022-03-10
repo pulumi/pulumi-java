@@ -30,11 +30,11 @@ public final class EncryptionSettingsCollectionResponse {
      */
     private final @Nullable String encryptionSettingsVersion;
 
-    @OutputCustomType.Constructor({"enabled","encryptionSettings","encryptionSettingsVersion"})
+    @OutputCustomType.Constructor
     private EncryptionSettingsCollectionResponse(
-        Boolean enabled,
-        @Nullable List<EncryptionSettingsElementResponse> encryptionSettings,
-        @Nullable String encryptionSettingsVersion) {
+        @OutputCustomType.Parameter("enabled") Boolean enabled,
+        @OutputCustomType.Parameter("encryptionSettings") @Nullable List<EncryptionSettingsElementResponse> encryptionSettings,
+        @OutputCustomType.Parameter("encryptionSettingsVersion") @Nullable String encryptionSettingsVersion) {
         this.enabled = enabled;
         this.encryptionSettings = encryptionSettings;
         this.encryptionSettingsVersion = encryptionSettingsVersion;

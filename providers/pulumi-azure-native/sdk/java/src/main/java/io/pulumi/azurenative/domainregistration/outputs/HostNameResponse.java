@@ -43,14 +43,14 @@ public final class HostNameResponse {
      */
     private final @Nullable List<String> siteNames;
 
-    @OutputCustomType.Constructor({"azureResourceName","azureResourceType","customHostNameDnsRecordType","hostNameType","name","siteNames"})
+    @OutputCustomType.Constructor
     private HostNameResponse(
-        @Nullable String azureResourceName,
-        @Nullable String azureResourceType,
-        @Nullable String customHostNameDnsRecordType,
-        @Nullable String hostNameType,
-        @Nullable String name,
-        @Nullable List<String> siteNames) {
+        @OutputCustomType.Parameter("azureResourceName") @Nullable String azureResourceName,
+        @OutputCustomType.Parameter("azureResourceType") @Nullable String azureResourceType,
+        @OutputCustomType.Parameter("customHostNameDnsRecordType") @Nullable String customHostNameDnsRecordType,
+        @OutputCustomType.Parameter("hostNameType") @Nullable String hostNameType,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("siteNames") @Nullable List<String> siteNames) {
         this.azureResourceName = azureResourceName;
         this.azureResourceType = azureResourceType;
         this.customHostNameDnsRecordType = customHostNameDnsRecordType;

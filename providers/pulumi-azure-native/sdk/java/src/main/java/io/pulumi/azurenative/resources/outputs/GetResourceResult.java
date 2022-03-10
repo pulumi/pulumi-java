@@ -72,19 +72,19 @@ public final class GetResourceResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"id","identity","kind","location","managedBy","name","plan","properties","sku","tags","type"})
+    @OutputCustomType.Constructor
     private GetResourceResult(
-        String id,
-        @Nullable IdentityResponse identity,
-        @Nullable String kind,
-        @Nullable String location,
-        @Nullable String managedBy,
-        String name,
-        @Nullable PlanResponse plan,
-        Object properties,
-        @Nullable SkuResponse sku,
-        @Nullable Map<String,String> tags,
-        String type) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("identity") @Nullable IdentityResponse identity,
+        @OutputCustomType.Parameter("kind") @Nullable String kind,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("managedBy") @Nullable String managedBy,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("plan") @Nullable PlanResponse plan,
+        @OutputCustomType.Parameter("properties") Object properties,
+        @OutputCustomType.Parameter("sku") @Nullable SkuResponse sku,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type) {
         this.id = id;
         this.identity = identity;
         this.kind = kind;

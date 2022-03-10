@@ -37,13 +37,13 @@ public final class ConnectToTargetAzureDbForPostgreSqlSyncTaskOutputResponse {
      */
     private final List<ReportableExceptionResponse> validationErrors;
 
-    @OutputCustomType.Constructor({"databases","id","targetServerBrandVersion","targetServerVersion","validationErrors"})
+    @OutputCustomType.Constructor
     private ConnectToTargetAzureDbForPostgreSqlSyncTaskOutputResponse(
-        List<String> databases,
-        String id,
-        String targetServerBrandVersion,
-        String targetServerVersion,
-        List<ReportableExceptionResponse> validationErrors) {
+        @OutputCustomType.Parameter("databases") List<String> databases,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("targetServerBrandVersion") String targetServerBrandVersion,
+        @OutputCustomType.Parameter("targetServerVersion") String targetServerVersion,
+        @OutputCustomType.Parameter("validationErrors") List<ReportableExceptionResponse> validationErrors) {
         this.databases = databases;
         this.id = id;
         this.targetServerBrandVersion = targetServerBrandVersion;

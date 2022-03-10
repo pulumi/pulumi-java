@@ -13,8 +13,8 @@ import javax.annotation.Nullable;
 public final class ResourceTypeRegistrationPropertiesResponseExtensionOptions {
     private final @Nullable ResourceTypeExtensionOptionsResponseResourceCreationBegin resourceCreationBegin;
 
-    @OutputCustomType.Constructor({"resourceCreationBegin"})
-    private ResourceTypeRegistrationPropertiesResponseExtensionOptions(@Nullable ResourceTypeExtensionOptionsResponseResourceCreationBegin resourceCreationBegin) {
+    @OutputCustomType.Constructor
+    private ResourceTypeRegistrationPropertiesResponseExtensionOptions(@OutputCustomType.Parameter("resourceCreationBegin") @Nullable ResourceTypeExtensionOptionsResponseResourceCreationBegin resourceCreationBegin) {
         this.resourceCreationBegin = resourceCreationBegin;
     }
 

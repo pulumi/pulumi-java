@@ -27,11 +27,11 @@ public final class IngressProfileResponse {
      */
     private final @Nullable String visibility;
 
-    @OutputCustomType.Constructor({"ip","name","visibility"})
+    @OutputCustomType.Constructor
     private IngressProfileResponse(
-        @Nullable String ip,
-        @Nullable String name,
-        @Nullable String visibility) {
+        @OutputCustomType.Parameter("ip") @Nullable String ip,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("visibility") @Nullable String visibility) {
         this.ip = ip;
         this.name = name;
         this.visibility = visibility;

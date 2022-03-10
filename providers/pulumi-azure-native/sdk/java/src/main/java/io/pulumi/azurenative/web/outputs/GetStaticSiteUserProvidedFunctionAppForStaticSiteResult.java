@@ -47,15 +47,15 @@ public final class GetStaticSiteUserProvidedFunctionAppForStaticSiteResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"createdOn","functionAppRegion","functionAppResourceId","id","kind","name","type"})
+    @OutputCustomType.Constructor
     private GetStaticSiteUserProvidedFunctionAppForStaticSiteResult(
-        String createdOn,
-        @Nullable String functionAppRegion,
-        @Nullable String functionAppResourceId,
-        String id,
-        @Nullable String kind,
-        String name,
-        String type) {
+        @OutputCustomType.Parameter("createdOn") String createdOn,
+        @OutputCustomType.Parameter("functionAppRegion") @Nullable String functionAppRegion,
+        @OutputCustomType.Parameter("functionAppResourceId") @Nullable String functionAppResourceId,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("kind") @Nullable String kind,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("type") String type) {
         this.createdOn = createdOn;
         this.functionAppRegion = functionAppRegion;
         this.functionAppResourceId = functionAppResourceId;

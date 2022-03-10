@@ -108,26 +108,26 @@ public final class GetScriptExecutionLogsResult {
      */
     private final List<String> warnings;
 
-    @OutputCustomType.Constructor({"errors","failureReason","finishedAt","hiddenParameters","id","information","name","namedOutputs","output","parameters","provisioningState","retention","scriptCmdletId","startedAt","submittedAt","timeout","type","warnings"})
+    @OutputCustomType.Constructor
     private GetScriptExecutionLogsResult(
-        List<String> errors,
-        @Nullable String failureReason,
-        String finishedAt,
-        @Nullable List<Object> hiddenParameters,
-        String id,
-        List<String> information,
-        String name,
-        @Nullable Map<String,Object> namedOutputs,
-        @Nullable List<String> output,
-        @Nullable List<Object> parameters,
-        String provisioningState,
-        @Nullable String retention,
-        @Nullable String scriptCmdletId,
-        String startedAt,
-        String submittedAt,
-        String timeout,
-        String type,
-        List<String> warnings) {
+        @OutputCustomType.Parameter("errors") List<String> errors,
+        @OutputCustomType.Parameter("failureReason") @Nullable String failureReason,
+        @OutputCustomType.Parameter("finishedAt") String finishedAt,
+        @OutputCustomType.Parameter("hiddenParameters") @Nullable List<Object> hiddenParameters,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("information") List<String> information,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("namedOutputs") @Nullable Map<String,Object> namedOutputs,
+        @OutputCustomType.Parameter("output") @Nullable List<String> output,
+        @OutputCustomType.Parameter("parameters") @Nullable List<Object> parameters,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("retention") @Nullable String retention,
+        @OutputCustomType.Parameter("scriptCmdletId") @Nullable String scriptCmdletId,
+        @OutputCustomType.Parameter("startedAt") String startedAt,
+        @OutputCustomType.Parameter("submittedAt") String submittedAt,
+        @OutputCustomType.Parameter("timeout") String timeout,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("warnings") List<String> warnings) {
         this.errors = errors;
         this.failureReason = failureReason;
         this.finishedAt = finishedAt;

@@ -68,18 +68,18 @@ public final class ValidationActivityResponse {
      */
     private final @Nullable List<UserPropertyResponse> userProperties;
 
-    @OutputCustomType.Constructor({"childItems","dataset","dependsOn","description","minimumSize","name","sleep","timeout","type","userProperties"})
+    @OutputCustomType.Constructor
     private ValidationActivityResponse(
-        @Nullable Object childItems,
-        DatasetReferenceResponse dataset,
-        @Nullable List<ActivityDependencyResponse> dependsOn,
-        @Nullable String description,
-        @Nullable Object minimumSize,
-        String name,
-        @Nullable Object sleep,
-        @Nullable Object timeout,
-        String type,
-        @Nullable List<UserPropertyResponse> userProperties) {
+        @OutputCustomType.Parameter("childItems") @Nullable Object childItems,
+        @OutputCustomType.Parameter("dataset") DatasetReferenceResponse dataset,
+        @OutputCustomType.Parameter("dependsOn") @Nullable List<ActivityDependencyResponse> dependsOn,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("minimumSize") @Nullable Object minimumSize,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("sleep") @Nullable Object sleep,
+        @OutputCustomType.Parameter("timeout") @Nullable Object timeout,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("userProperties") @Nullable List<UserPropertyResponse> userProperties) {
         this.childItems = childItems;
         this.dataset = dataset;
         this.dependsOn = dependsOn;

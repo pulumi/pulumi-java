@@ -52,15 +52,15 @@ public final class GetAssetFilterResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"firstQuality","id","name","presentationTimeRange","systemData","tracks","type"})
+    @OutputCustomType.Constructor
     private GetAssetFilterResult(
-        @Nullable FirstQualityResponse firstQuality,
-        String id,
-        String name,
-        @Nullable PresentationTimeRangeResponse presentationTimeRange,
-        SystemDataResponse systemData,
-        @Nullable List<FilterTrackSelectionResponse> tracks,
-        String type) {
+        @OutputCustomType.Parameter("firstQuality") @Nullable FirstQualityResponse firstQuality,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("presentationTimeRange") @Nullable PresentationTimeRangeResponse presentationTimeRange,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("tracks") @Nullable List<FilterTrackSelectionResponse> tracks,
+        @OutputCustomType.Parameter("type") String type) {
         this.firstQuality = firstQuality;
         this.id = id;
         this.name = name;

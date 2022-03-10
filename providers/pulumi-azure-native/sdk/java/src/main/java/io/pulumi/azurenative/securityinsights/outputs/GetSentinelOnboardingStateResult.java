@@ -44,14 +44,14 @@ public final class GetSentinelOnboardingStateResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"customerManagedKey","etag","id","name","systemData","type"})
+    @OutputCustomType.Constructor
     private GetSentinelOnboardingStateResult(
-        @Nullable Boolean customerManagedKey,
-        @Nullable String etag,
-        String id,
-        String name,
-        SystemDataResponse systemData,
-        String type) {
+        @OutputCustomType.Parameter("customerManagedKey") @Nullable Boolean customerManagedKey,
+        @OutputCustomType.Parameter("etag") @Nullable String etag,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("type") String type) {
         this.customerManagedKey = customerManagedKey;
         this.etag = etag;
         this.id = id;

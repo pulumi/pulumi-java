@@ -39,13 +39,13 @@ public final class ImageTemplateShellCustomizerResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"inline","name","scriptUri","sha256Checksum","type"})
+    @OutputCustomType.Constructor
     private ImageTemplateShellCustomizerResponse(
-        @Nullable List<String> inline,
-        @Nullable String name,
-        @Nullable String scriptUri,
-        @Nullable String sha256Checksum,
-        String type) {
+        @OutputCustomType.Parameter("inline") @Nullable List<String> inline,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("scriptUri") @Nullable String scriptUri,
+        @OutputCustomType.Parameter("sha256Checksum") @Nullable String sha256Checksum,
+        @OutputCustomType.Parameter("type") String type) {
         this.inline = inline;
         this.name = name;
         this.scriptUri = scriptUri;

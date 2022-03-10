@@ -41,13 +41,13 @@ public final class EnvironmentSizeResponse {
      */
     private final @Nullable List<SizeInfoResponse> vmSizes;
 
-    @OutputCustomType.Constructor({"maxPrice","minMemory","minNumberOfCores","name","vmSizes"})
+    @OutputCustomType.Constructor
     private EnvironmentSizeResponse(
-        Double maxPrice,
-        Double minMemory,
-        Integer minNumberOfCores,
-        @Nullable String name,
-        @Nullable List<SizeInfoResponse> vmSizes) {
+        @OutputCustomType.Parameter("maxPrice") Double maxPrice,
+        @OutputCustomType.Parameter("minMemory") Double minMemory,
+        @OutputCustomType.Parameter("minNumberOfCores") Integer minNumberOfCores,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("vmSizes") @Nullable List<SizeInfoResponse> vmSizes) {
         this.maxPrice = maxPrice;
         this.minMemory = minMemory;
         this.minNumberOfCores = minNumberOfCores;

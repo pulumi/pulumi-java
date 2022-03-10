@@ -43,14 +43,14 @@ public final class GetApiSchemaResult {
      */
     private final @Nullable String value;
 
-    @OutputCustomType.Constructor({"contentType","definitions","id","name","type","value"})
+    @OutputCustomType.Constructor
     private GetApiSchemaResult(
-        String contentType,
-        @Nullable Object definitions,
-        String id,
-        String name,
-        String type,
-        @Nullable String value) {
+        @OutputCustomType.Parameter("contentType") String contentType,
+        @OutputCustomType.Parameter("definitions") @Nullable Object definitions,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("value") @Nullable String value) {
         this.contentType = contentType;
         this.definitions = definitions;
         this.id = id;

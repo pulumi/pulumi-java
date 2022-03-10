@@ -22,10 +22,10 @@ public final class ListStorageAccountSasTokensResult {
      */
     private final List<SasTokenInformationResponse> value;
 
-    @OutputCustomType.Constructor({"nextLink","value"})
+    @OutputCustomType.Constructor
     private ListStorageAccountSasTokensResult(
-        String nextLink,
-        List<SasTokenInformationResponse> value) {
+        @OutputCustomType.Parameter("nextLink") String nextLink,
+        @OutputCustomType.Parameter("value") List<SasTokenInformationResponse> value) {
         this.nextLink = nextLink;
         this.value = value;
     }

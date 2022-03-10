@@ -33,12 +33,12 @@ public final class ReferenceVmResponse {
      */
     private final VmStateDetailsResponse vmStateDetails;
 
-    @OutputCustomType.Constructor({"password","userName","vmResourceId","vmStateDetails"})
+    @OutputCustomType.Constructor
     private ReferenceVmResponse(
-        @Nullable String password,
-        String userName,
-        String vmResourceId,
-        VmStateDetailsResponse vmStateDetails) {
+        @OutputCustomType.Parameter("password") @Nullable String password,
+        @OutputCustomType.Parameter("userName") String userName,
+        @OutputCustomType.Parameter("vmResourceId") String vmResourceId,
+        @OutputCustomType.Parameter("vmStateDetails") VmStateDetailsResponse vmStateDetails) {
         this.password = password;
         this.userName = userName;
         this.vmResourceId = vmResourceId;

@@ -45,15 +45,15 @@ public final class HealthAlertResponse {
      */
     private final String severity;
 
-    @OutputCustomType.Constructor({"id","issue","lastDetected","name","raised","resolutionUri","severity"})
+    @OutputCustomType.Constructor
     private HealthAlertResponse(
-        String id,
-        String issue,
-        String lastDetected,
-        String name,
-        String raised,
-        String resolutionUri,
-        String severity) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("issue") String issue,
+        @OutputCustomType.Parameter("lastDetected") String lastDetected,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("raised") String raised,
+        @OutputCustomType.Parameter("resolutionUri") String resolutionUri,
+        @OutputCustomType.Parameter("severity") String severity) {
         this.id = id;
         this.issue = issue;
         this.lastDetected = lastDetected;

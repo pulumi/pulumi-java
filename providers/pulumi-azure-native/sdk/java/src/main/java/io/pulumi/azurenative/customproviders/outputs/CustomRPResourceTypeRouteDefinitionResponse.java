@@ -27,11 +27,11 @@ public final class CustomRPResourceTypeRouteDefinitionResponse {
      */
     private final @Nullable String routingType;
 
-    @OutputCustomType.Constructor({"endpoint","name","routingType"})
+    @OutputCustomType.Constructor
     private CustomRPResourceTypeRouteDefinitionResponse(
-        String endpoint,
-        String name,
-        @Nullable String routingType) {
+        @OutputCustomType.Parameter("endpoint") String endpoint,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("routingType") @Nullable String routingType) {
         this.endpoint = endpoint;
         this.name = name;
         this.routingType = routingType;

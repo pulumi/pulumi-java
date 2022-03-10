@@ -63,17 +63,17 @@ public final class VirtualMachinePublicIPAddressConfigurationResponse {
      */
     private final @Nullable PublicIPAddressSkuResponse sku;
 
-    @OutputCustomType.Constructor({"deleteOption","dnsSettings","idleTimeoutInMinutes","ipTags","name","publicIPAddressVersion","publicIPAllocationMethod","publicIPPrefix","sku"})
+    @OutputCustomType.Constructor
     private VirtualMachinePublicIPAddressConfigurationResponse(
-        @Nullable String deleteOption,
-        @Nullable VirtualMachinePublicIPAddressDnsSettingsConfigurationResponse dnsSettings,
-        @Nullable Integer idleTimeoutInMinutes,
-        @Nullable List<VirtualMachineIpTagResponse> ipTags,
-        String name,
-        @Nullable String publicIPAddressVersion,
-        @Nullable String publicIPAllocationMethod,
-        @Nullable SubResourceResponse publicIPPrefix,
-        @Nullable PublicIPAddressSkuResponse sku) {
+        @OutputCustomType.Parameter("deleteOption") @Nullable String deleteOption,
+        @OutputCustomType.Parameter("dnsSettings") @Nullable VirtualMachinePublicIPAddressDnsSettingsConfigurationResponse dnsSettings,
+        @OutputCustomType.Parameter("idleTimeoutInMinutes") @Nullable Integer idleTimeoutInMinutes,
+        @OutputCustomType.Parameter("ipTags") @Nullable List<VirtualMachineIpTagResponse> ipTags,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("publicIPAddressVersion") @Nullable String publicIPAddressVersion,
+        @OutputCustomType.Parameter("publicIPAllocationMethod") @Nullable String publicIPAllocationMethod,
+        @OutputCustomType.Parameter("publicIPPrefix") @Nullable SubResourceResponse publicIPPrefix,
+        @OutputCustomType.Parameter("sku") @Nullable PublicIPAddressSkuResponse sku) {
         this.deleteOption = deleteOption;
         this.dnsSettings = dnsSettings;
         this.idleTimeoutInMinutes = idleTimeoutInMinutes;

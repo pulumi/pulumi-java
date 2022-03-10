@@ -22,10 +22,10 @@ public final class ResourceSetDescriptionResponse {
      */
     private final @Nullable List<String> exceptions;
 
-    @OutputCustomType.Constructor({"elements","exceptions"})
+    @OutputCustomType.Constructor
     private ResourceSetDescriptionResponse(
-        @Nullable List<String> elements,
-        @Nullable List<String> exceptions) {
+        @OutputCustomType.Parameter("elements") @Nullable List<String> elements,
+        @OutputCustomType.Parameter("exceptions") @Nullable List<String> exceptions) {
         this.elements = elements;
         this.exceptions = exceptions;
     }

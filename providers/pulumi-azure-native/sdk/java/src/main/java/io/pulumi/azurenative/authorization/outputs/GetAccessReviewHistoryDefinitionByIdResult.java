@@ -111,27 +111,27 @@ public final class GetAccessReviewHistoryDefinitionByIdResult {
      */
     private final String userPrincipalName;
 
-    @OutputCustomType.Constructor({"createdDateTime","decisions","displayName","endDate","id","instances","interval","name","numberOfOccurrences","principalId","principalName","principalType","reviewHistoryPeriodEndDateTime","reviewHistoryPeriodStartDateTime","scopes","startDate","status","type","userPrincipalName"})
+    @OutputCustomType.Constructor
     private GetAccessReviewHistoryDefinitionByIdResult(
-        String createdDateTime,
-        @Nullable List<String> decisions,
-        @Nullable String displayName,
-        @Nullable String endDate,
-        String id,
-        @Nullable List<AccessReviewHistoryInstanceResponse> instances,
-        @Nullable Integer interval,
-        String name,
-        @Nullable Integer numberOfOccurrences,
-        String principalId,
-        String principalName,
-        String principalType,
-        String reviewHistoryPeriodEndDateTime,
-        String reviewHistoryPeriodStartDateTime,
-        @Nullable List<AccessReviewScopeResponse> scopes,
-        @Nullable String startDate,
-        String status,
-        String type,
-        String userPrincipalName) {
+        @OutputCustomType.Parameter("createdDateTime") String createdDateTime,
+        @OutputCustomType.Parameter("decisions") @Nullable List<String> decisions,
+        @OutputCustomType.Parameter("displayName") @Nullable String displayName,
+        @OutputCustomType.Parameter("endDate") @Nullable String endDate,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("instances") @Nullable List<AccessReviewHistoryInstanceResponse> instances,
+        @OutputCustomType.Parameter("interval") @Nullable Integer interval,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("numberOfOccurrences") @Nullable Integer numberOfOccurrences,
+        @OutputCustomType.Parameter("principalId") String principalId,
+        @OutputCustomType.Parameter("principalName") String principalName,
+        @OutputCustomType.Parameter("principalType") String principalType,
+        @OutputCustomType.Parameter("reviewHistoryPeriodEndDateTime") String reviewHistoryPeriodEndDateTime,
+        @OutputCustomType.Parameter("reviewHistoryPeriodStartDateTime") String reviewHistoryPeriodStartDateTime,
+        @OutputCustomType.Parameter("scopes") @Nullable List<AccessReviewScopeResponse> scopes,
+        @OutputCustomType.Parameter("startDate") @Nullable String startDate,
+        @OutputCustomType.Parameter("status") String status,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("userPrincipalName") String userPrincipalName) {
         this.createdDateTime = createdDateTime;
         this.decisions = decisions;
         this.displayName = displayName;

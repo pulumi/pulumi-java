@@ -27,11 +27,11 @@ public final class AsymmetricEncryptedSecretResponse {
      */
     private final String value;
 
-    @OutputCustomType.Constructor({"encryptionAlgorithm","encryptionCertThumbprint","value"})
+    @OutputCustomType.Constructor
     private AsymmetricEncryptedSecretResponse(
-        String encryptionAlgorithm,
-        @Nullable String encryptionCertThumbprint,
-        String value) {
+        @OutputCustomType.Parameter("encryptionAlgorithm") String encryptionAlgorithm,
+        @OutputCustomType.Parameter("encryptionCertThumbprint") @Nullable String encryptionCertThumbprint,
+        @OutputCustomType.Parameter("value") String value) {
         this.encryptionAlgorithm = encryptionAlgorithm;
         this.encryptionCertThumbprint = encryptionCertThumbprint;
         this.value = value;

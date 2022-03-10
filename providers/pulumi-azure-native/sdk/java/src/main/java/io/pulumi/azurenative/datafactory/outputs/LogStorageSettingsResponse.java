@@ -33,12 +33,12 @@ public final class LogStorageSettingsResponse {
      */
     private final @Nullable Object path;
 
-    @OutputCustomType.Constructor({"enableReliableLogging","linkedServiceName","logLevel","path"})
+    @OutputCustomType.Constructor
     private LogStorageSettingsResponse(
-        @Nullable Object enableReliableLogging,
-        LinkedServiceReferenceResponse linkedServiceName,
-        @Nullable Object logLevel,
-        @Nullable Object path) {
+        @OutputCustomType.Parameter("enableReliableLogging") @Nullable Object enableReliableLogging,
+        @OutputCustomType.Parameter("linkedServiceName") LinkedServiceReferenceResponse linkedServiceName,
+        @OutputCustomType.Parameter("logLevel") @Nullable Object logLevel,
+        @OutputCustomType.Parameter("path") @Nullable Object path) {
         this.enableReliableLogging = enableReliableLogging;
         this.linkedServiceName = linkedServiceName;
         this.logLevel = logLevel;

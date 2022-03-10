@@ -136,32 +136,32 @@ public final class GetQueueResult {
      */
     private final String updatedAt;
 
-    @OutputCustomType.Constructor({"accessedAt","autoDeleteOnIdle","countDetails","createdAt","deadLetteringOnMessageExpiration","defaultMessageTimeToLive","duplicateDetectionHistoryTimeWindow","enableBatchedOperations","enableExpress","enablePartitioning","forwardDeadLetteredMessagesTo","forwardTo","id","lockDuration","maxDeliveryCount","maxSizeInMegabytes","messageCount","name","requiresDuplicateDetection","requiresSession","sizeInBytes","status","type","updatedAt"})
+    @OutputCustomType.Constructor
     private GetQueueResult(
-        String accessedAt,
-        @Nullable String autoDeleteOnIdle,
-        MessageCountDetailsResponse countDetails,
-        String createdAt,
-        @Nullable Boolean deadLetteringOnMessageExpiration,
-        @Nullable String defaultMessageTimeToLive,
-        @Nullable String duplicateDetectionHistoryTimeWindow,
-        @Nullable Boolean enableBatchedOperations,
-        @Nullable Boolean enableExpress,
-        @Nullable Boolean enablePartitioning,
-        @Nullable String forwardDeadLetteredMessagesTo,
-        @Nullable String forwardTo,
-        String id,
-        @Nullable String lockDuration,
-        @Nullable Integer maxDeliveryCount,
-        @Nullable Integer maxSizeInMegabytes,
-        Double messageCount,
-        String name,
-        @Nullable Boolean requiresDuplicateDetection,
-        @Nullable Boolean requiresSession,
-        Double sizeInBytes,
-        @Nullable String status,
-        String type,
-        String updatedAt) {
+        @OutputCustomType.Parameter("accessedAt") String accessedAt,
+        @OutputCustomType.Parameter("autoDeleteOnIdle") @Nullable String autoDeleteOnIdle,
+        @OutputCustomType.Parameter("countDetails") MessageCountDetailsResponse countDetails,
+        @OutputCustomType.Parameter("createdAt") String createdAt,
+        @OutputCustomType.Parameter("deadLetteringOnMessageExpiration") @Nullable Boolean deadLetteringOnMessageExpiration,
+        @OutputCustomType.Parameter("defaultMessageTimeToLive") @Nullable String defaultMessageTimeToLive,
+        @OutputCustomType.Parameter("duplicateDetectionHistoryTimeWindow") @Nullable String duplicateDetectionHistoryTimeWindow,
+        @OutputCustomType.Parameter("enableBatchedOperations") @Nullable Boolean enableBatchedOperations,
+        @OutputCustomType.Parameter("enableExpress") @Nullable Boolean enableExpress,
+        @OutputCustomType.Parameter("enablePartitioning") @Nullable Boolean enablePartitioning,
+        @OutputCustomType.Parameter("forwardDeadLetteredMessagesTo") @Nullable String forwardDeadLetteredMessagesTo,
+        @OutputCustomType.Parameter("forwardTo") @Nullable String forwardTo,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("lockDuration") @Nullable String lockDuration,
+        @OutputCustomType.Parameter("maxDeliveryCount") @Nullable Integer maxDeliveryCount,
+        @OutputCustomType.Parameter("maxSizeInMegabytes") @Nullable Integer maxSizeInMegabytes,
+        @OutputCustomType.Parameter("messageCount") Double messageCount,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("requiresDuplicateDetection") @Nullable Boolean requiresDuplicateDetection,
+        @OutputCustomType.Parameter("requiresSession") @Nullable Boolean requiresSession,
+        @OutputCustomType.Parameter("sizeInBytes") Double sizeInBytes,
+        @OutputCustomType.Parameter("status") @Nullable String status,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("updatedAt") String updatedAt) {
         this.accessedAt = accessedAt;
         this.autoDeleteOnIdle = autoDeleteOnIdle;
         this.countDetails = countDetails;

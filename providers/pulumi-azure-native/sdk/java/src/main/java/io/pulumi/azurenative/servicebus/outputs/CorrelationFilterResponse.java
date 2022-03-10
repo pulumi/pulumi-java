@@ -64,18 +64,18 @@ public final class CorrelationFilterResponse {
      */
     private final @Nullable String to;
 
-    @OutputCustomType.Constructor({"contentType","correlationId","label","messageId","properties","replyTo","replyToSessionId","requiresPreprocessing","sessionId","to"})
+    @OutputCustomType.Constructor
     private CorrelationFilterResponse(
-        @Nullable String contentType,
-        @Nullable String correlationId,
-        @Nullable String label,
-        @Nullable String messageId,
-        @Nullable Map<String,String> properties,
-        @Nullable String replyTo,
-        @Nullable String replyToSessionId,
-        @Nullable Boolean requiresPreprocessing,
-        @Nullable String sessionId,
-        @Nullable String to) {
+        @OutputCustomType.Parameter("contentType") @Nullable String contentType,
+        @OutputCustomType.Parameter("correlationId") @Nullable String correlationId,
+        @OutputCustomType.Parameter("label") @Nullable String label,
+        @OutputCustomType.Parameter("messageId") @Nullable String messageId,
+        @OutputCustomType.Parameter("properties") @Nullable Map<String,String> properties,
+        @OutputCustomType.Parameter("replyTo") @Nullable String replyTo,
+        @OutputCustomType.Parameter("replyToSessionId") @Nullable String replyToSessionId,
+        @OutputCustomType.Parameter("requiresPreprocessing") @Nullable Boolean requiresPreprocessing,
+        @OutputCustomType.Parameter("sessionId") @Nullable String sessionId,
+        @OutputCustomType.Parameter("to") @Nullable String to) {
         this.contentType = contentType;
         this.correlationId = correlationId;
         this.label = label;

@@ -15,8 +15,8 @@ public final class LiveEventOutputTranscriptionTrackResponse {
      */
     private final String trackName;
 
-    @OutputCustomType.Constructor({"trackName"})
-    private LiveEventOutputTranscriptionTrackResponse(String trackName) {
+    @OutputCustomType.Constructor
+    private LiveEventOutputTranscriptionTrackResponse(@OutputCustomType.Parameter("trackName") String trackName) {
         this.trackName = trackName;
     }
 

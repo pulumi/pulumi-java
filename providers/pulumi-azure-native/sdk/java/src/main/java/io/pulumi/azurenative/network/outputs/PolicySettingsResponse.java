@@ -39,13 +39,13 @@ public final class PolicySettingsResponse {
      */
     private final @Nullable String state;
 
-    @OutputCustomType.Constructor({"fileUploadLimitInMb","maxRequestBodySizeInKb","mode","requestBodyCheck","state"})
+    @OutputCustomType.Constructor
     private PolicySettingsResponse(
-        @Nullable Integer fileUploadLimitInMb,
-        @Nullable Integer maxRequestBodySizeInKb,
-        @Nullable String mode,
-        @Nullable Boolean requestBodyCheck,
-        @Nullable String state) {
+        @OutputCustomType.Parameter("fileUploadLimitInMb") @Nullable Integer fileUploadLimitInMb,
+        @OutputCustomType.Parameter("maxRequestBodySizeInKb") @Nullable Integer maxRequestBodySizeInKb,
+        @OutputCustomType.Parameter("mode") @Nullable String mode,
+        @OutputCustomType.Parameter("requestBodyCheck") @Nullable Boolean requestBodyCheck,
+        @OutputCustomType.Parameter("state") @Nullable String state) {
         this.fileUploadLimitInMb = fileUploadLimitInMb;
         this.maxRequestBodySizeInKb = maxRequestBodySizeInKb;
         this.mode = mode;

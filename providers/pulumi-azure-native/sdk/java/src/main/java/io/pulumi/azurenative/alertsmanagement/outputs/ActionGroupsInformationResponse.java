@@ -28,11 +28,11 @@ public final class ActionGroupsInformationResponse {
      */
     private final List<String> groupIds;
 
-    @OutputCustomType.Constructor({"customEmailSubject","customWebhookPayload","groupIds"})
+    @OutputCustomType.Constructor
     private ActionGroupsInformationResponse(
-        @Nullable String customEmailSubject,
-        @Nullable String customWebhookPayload,
-        List<String> groupIds) {
+        @OutputCustomType.Parameter("customEmailSubject") @Nullable String customEmailSubject,
+        @OutputCustomType.Parameter("customWebhookPayload") @Nullable String customWebhookPayload,
+        @OutputCustomType.Parameter("groupIds") List<String> groupIds) {
         this.customEmailSubject = customEmailSubject;
         this.customWebhookPayload = customWebhookPayload;
         this.groupIds = groupIds;

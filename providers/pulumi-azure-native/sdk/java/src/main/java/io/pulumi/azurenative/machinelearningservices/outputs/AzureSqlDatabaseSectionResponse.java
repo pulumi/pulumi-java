@@ -103,26 +103,26 @@ public final class AzureSqlDatabaseSectionResponse {
      */
     private final @Nullable String userPassword;
 
-    @OutputCustomType.Constructor({"authorityUrl","certificate","clientId","clientSecret","credentialType","databaseName","endpoint","isCertAuth","portNumber","resourceGroup","resourceUri","serverName","serviceDataAccessAuthIdentity","subscriptionId","tenantId","thumbprint","userId","userPassword"})
+    @OutputCustomType.Constructor
     private AzureSqlDatabaseSectionResponse(
-        @Nullable String authorityUrl,
-        @Nullable String certificate,
-        @Nullable String clientId,
-        @Nullable String clientSecret,
-        @Nullable String credentialType,
-        @Nullable String databaseName,
-        @Nullable String endpoint,
-        @Nullable Boolean isCertAuth,
-        @Nullable String portNumber,
-        @Nullable String resourceGroup,
-        @Nullable String resourceUri,
-        @Nullable String serverName,
-        @Nullable String serviceDataAccessAuthIdentity,
-        @Nullable String subscriptionId,
-        @Nullable String tenantId,
-        @Nullable String thumbprint,
-        @Nullable String userId,
-        @Nullable String userPassword) {
+        @OutputCustomType.Parameter("authorityUrl") @Nullable String authorityUrl,
+        @OutputCustomType.Parameter("certificate") @Nullable String certificate,
+        @OutputCustomType.Parameter("clientId") @Nullable String clientId,
+        @OutputCustomType.Parameter("clientSecret") @Nullable String clientSecret,
+        @OutputCustomType.Parameter("credentialType") @Nullable String credentialType,
+        @OutputCustomType.Parameter("databaseName") @Nullable String databaseName,
+        @OutputCustomType.Parameter("endpoint") @Nullable String endpoint,
+        @OutputCustomType.Parameter("isCertAuth") @Nullable Boolean isCertAuth,
+        @OutputCustomType.Parameter("portNumber") @Nullable String portNumber,
+        @OutputCustomType.Parameter("resourceGroup") @Nullable String resourceGroup,
+        @OutputCustomType.Parameter("resourceUri") @Nullable String resourceUri,
+        @OutputCustomType.Parameter("serverName") @Nullable String serverName,
+        @OutputCustomType.Parameter("serviceDataAccessAuthIdentity") @Nullable String serviceDataAccessAuthIdentity,
+        @OutputCustomType.Parameter("subscriptionId") @Nullable String subscriptionId,
+        @OutputCustomType.Parameter("tenantId") @Nullable String tenantId,
+        @OutputCustomType.Parameter("thumbprint") @Nullable String thumbprint,
+        @OutputCustomType.Parameter("userId") @Nullable String userId,
+        @OutputCustomType.Parameter("userPassword") @Nullable String userPassword) {
         this.authorityUrl = authorityUrl;
         this.certificate = certificate;
         this.clientId = clientId;

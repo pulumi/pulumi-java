@@ -21,10 +21,10 @@ public final class ContentKeyPolicySymmetricTokenKeyResponse {
      */
     private final String odataType;
 
-    @OutputCustomType.Constructor({"keyValue","odataType"})
+    @OutputCustomType.Constructor
     private ContentKeyPolicySymmetricTokenKeyResponse(
-        String keyValue,
-        String odataType) {
+        @OutputCustomType.Parameter("keyValue") String keyValue,
+        @OutputCustomType.Parameter("odataType") String odataType) {
         this.keyValue = keyValue;
         this.odataType = odataType;
     }

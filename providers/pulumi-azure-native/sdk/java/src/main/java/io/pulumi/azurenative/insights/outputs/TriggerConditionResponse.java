@@ -29,11 +29,11 @@ public final class TriggerConditionResponse {
      */
     private final String thresholdOperator;
 
-    @OutputCustomType.Constructor({"metricTrigger","threshold","thresholdOperator"})
+    @OutputCustomType.Constructor
     private TriggerConditionResponse(
-        @Nullable LogMetricTriggerResponse metricTrigger,
-        Double threshold,
-        String thresholdOperator) {
+        @OutputCustomType.Parameter("metricTrigger") @Nullable LogMetricTriggerResponse metricTrigger,
+        @OutputCustomType.Parameter("threshold") Double threshold,
+        @OutputCustomType.Parameter("thresholdOperator") String thresholdOperator) {
         this.metricTrigger = metricTrigger;
         this.threshold = threshold;
         this.thresholdOperator = thresholdOperator;

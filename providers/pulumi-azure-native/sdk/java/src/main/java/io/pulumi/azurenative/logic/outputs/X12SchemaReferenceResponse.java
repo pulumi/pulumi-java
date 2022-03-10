@@ -32,12 +32,12 @@ public final class X12SchemaReferenceResponse {
      */
     private final @Nullable String senderApplicationId;
 
-    @OutputCustomType.Constructor({"messageId","schemaName","schemaVersion","senderApplicationId"})
+    @OutputCustomType.Constructor
     private X12SchemaReferenceResponse(
-        String messageId,
-        String schemaName,
-        String schemaVersion,
-        @Nullable String senderApplicationId) {
+        @OutputCustomType.Parameter("messageId") String messageId,
+        @OutputCustomType.Parameter("schemaName") String schemaName,
+        @OutputCustomType.Parameter("schemaVersion") String schemaVersion,
+        @OutputCustomType.Parameter("senderApplicationId") @Nullable String senderApplicationId) {
         this.messageId = messageId;
         this.schemaName = schemaName;
         this.schemaVersion = schemaVersion;

@@ -23,10 +23,10 @@ public final class ProtectionStatusDetailsResponse {
      */
     private final @Nullable String status;
 
-    @OutputCustomType.Constructor({"errorDetails","status"})
+    @OutputCustomType.Constructor
     private ProtectionStatusDetailsResponse(
-        @Nullable UserFacingErrorResponse errorDetails,
-        @Nullable String status) {
+        @OutputCustomType.Parameter("errorDetails") @Nullable UserFacingErrorResponse errorDetails,
+        @OutputCustomType.Parameter("status") @Nullable String status) {
         this.errorDetails = errorDetails;
         this.status = status;
     }

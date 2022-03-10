@@ -40,14 +40,14 @@ public final class GetAuthorizationResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"expressRouteAuthorizationId","expressRouteAuthorizationKey","id","name","provisioningState","type"})
+    @OutputCustomType.Constructor
     private GetAuthorizationResult(
-        String expressRouteAuthorizationId,
-        String expressRouteAuthorizationKey,
-        String id,
-        String name,
-        String provisioningState,
-        String type) {
+        @OutputCustomType.Parameter("expressRouteAuthorizationId") String expressRouteAuthorizationId,
+        @OutputCustomType.Parameter("expressRouteAuthorizationKey") String expressRouteAuthorizationKey,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("type") String type) {
         this.expressRouteAuthorizationId = expressRouteAuthorizationId;
         this.expressRouteAuthorizationKey = expressRouteAuthorizationKey;
         this.id = id;

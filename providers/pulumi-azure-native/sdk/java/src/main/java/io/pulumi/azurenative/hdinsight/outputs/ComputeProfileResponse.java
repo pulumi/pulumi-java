@@ -17,8 +17,8 @@ public final class ComputeProfileResponse {
      */
     private final @Nullable List<RoleResponse> roles;
 
-    @OutputCustomType.Constructor({"roles"})
-    private ComputeProfileResponse(@Nullable List<RoleResponse> roles) {
+    @OutputCustomType.Constructor
+    private ComputeProfileResponse(@OutputCustomType.Parameter("roles") @Nullable List<RoleResponse> roles) {
         this.roles = roles;
     }
 

@@ -53,16 +53,16 @@ public final class GetFarmBeatsModelResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"id","instanceUri","location","name","provisioningState","systemData","tags","type"})
+    @OutputCustomType.Constructor
     private GetFarmBeatsModelResult(
-        String id,
-        String instanceUri,
-        String location,
-        String name,
-        String provisioningState,
-        SystemDataResponse systemData,
-        @Nullable Map<String,String> tags,
-        String type) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("instanceUri") String instanceUri,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type) {
         this.id = id;
         this.instanceUri = instanceUri;
         this.location = location;

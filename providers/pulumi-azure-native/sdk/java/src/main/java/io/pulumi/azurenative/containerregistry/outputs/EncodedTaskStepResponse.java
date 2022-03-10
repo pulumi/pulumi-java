@@ -51,15 +51,15 @@ public final class EncodedTaskStepResponse {
      */
     private final @Nullable List<SetValueResponse> values;
 
-    @OutputCustomType.Constructor({"baseImageDependencies","contextAccessToken","contextPath","encodedTaskContent","encodedValuesContent","type","values"})
+    @OutputCustomType.Constructor
     private EncodedTaskStepResponse(
-        List<BaseImageDependencyResponse> baseImageDependencies,
-        @Nullable String contextAccessToken,
-        @Nullable String contextPath,
-        String encodedTaskContent,
-        @Nullable String encodedValuesContent,
-        String type,
-        @Nullable List<SetValueResponse> values) {
+        @OutputCustomType.Parameter("baseImageDependencies") List<BaseImageDependencyResponse> baseImageDependencies,
+        @OutputCustomType.Parameter("contextAccessToken") @Nullable String contextAccessToken,
+        @OutputCustomType.Parameter("contextPath") @Nullable String contextPath,
+        @OutputCustomType.Parameter("encodedTaskContent") String encodedTaskContent,
+        @OutputCustomType.Parameter("encodedValuesContent") @Nullable String encodedValuesContent,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("values") @Nullable List<SetValueResponse> values) {
         this.baseImageDependencies = baseImageDependencies;
         this.contextAccessToken = contextAccessToken;
         this.contextPath = contextPath;

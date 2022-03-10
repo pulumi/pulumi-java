@@ -32,12 +32,12 @@ public final class SolutionPropertiesResponse {
      */
     private final String workspaceResourceId;
 
-    @OutputCustomType.Constructor({"containedResources","provisioningState","referencedResources","workspaceResourceId"})
+    @OutputCustomType.Constructor
     private SolutionPropertiesResponse(
-        @Nullable List<String> containedResources,
-        String provisioningState,
-        @Nullable List<String> referencedResources,
-        String workspaceResourceId) {
+        @OutputCustomType.Parameter("containedResources") @Nullable List<String> containedResources,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("referencedResources") @Nullable List<String> referencedResources,
+        @OutputCustomType.Parameter("workspaceResourceId") String workspaceResourceId) {
         this.containedResources = containedResources;
         this.provisioningState = provisioningState;
         this.referencedResources = referencedResources;

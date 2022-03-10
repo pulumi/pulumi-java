@@ -24,11 +24,11 @@ public final class NotebookResourceInfoResponse {
      */
     private final @Nullable String resourceId;
 
-    @OutputCustomType.Constructor({"fqdn","notebookPreparationError","resourceId"})
+    @OutputCustomType.Constructor
     private NotebookResourceInfoResponse(
-        @Nullable String fqdn,
-        @Nullable NotebookPreparationErrorResponse notebookPreparationError,
-        @Nullable String resourceId) {
+        @OutputCustomType.Parameter("fqdn") @Nullable String fqdn,
+        @OutputCustomType.Parameter("notebookPreparationError") @Nullable NotebookPreparationErrorResponse notebookPreparationError,
+        @OutputCustomType.Parameter("resourceId") @Nullable String resourceId) {
         this.fqdn = fqdn;
         this.notebookPreparationError = notebookPreparationError;
         this.resourceId = resourceId;

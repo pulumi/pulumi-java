@@ -17,8 +17,8 @@ public final class DescendantParentGroupInfoResponse {
      */
     private final @Nullable String id;
 
-    @OutputCustomType.Constructor({"id"})
-    private DescendantParentGroupInfoResponse(@Nullable String id) {
+    @OutputCustomType.Constructor
+    private DescendantParentGroupInfoResponse(@OutputCustomType.Parameter("id") @Nullable String id) {
         this.id = id;
     }
 

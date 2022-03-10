@@ -42,14 +42,14 @@ public final class SyncPropertiesResponse {
      */
     private final String tokenId;
 
-    @OutputCustomType.Constructor({"gatewayEndpoint","lastSyncTime","messageTtl","schedule","syncWindow","tokenId"})
+    @OutputCustomType.Constructor
     private SyncPropertiesResponse(
-        String gatewayEndpoint,
-        String lastSyncTime,
-        String messageTtl,
-        @Nullable String schedule,
-        @Nullable String syncWindow,
-        String tokenId) {
+        @OutputCustomType.Parameter("gatewayEndpoint") String gatewayEndpoint,
+        @OutputCustomType.Parameter("lastSyncTime") String lastSyncTime,
+        @OutputCustomType.Parameter("messageTtl") String messageTtl,
+        @OutputCustomType.Parameter("schedule") @Nullable String schedule,
+        @OutputCustomType.Parameter("syncWindow") @Nullable String syncWindow,
+        @OutputCustomType.Parameter("tokenId") String tokenId) {
         this.gatewayEndpoint = gatewayEndpoint;
         this.lastSyncTime = lastSyncTime;
         this.messageTtl = messageTtl;

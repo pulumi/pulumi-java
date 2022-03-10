@@ -55,16 +55,16 @@ public final class GetLoggerResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"credentials","description","id","isBuffered","loggerType","name","resourceId","type"})
+    @OutputCustomType.Constructor
     private GetLoggerResult(
-        @Nullable Map<String,String> credentials,
-        @Nullable String description,
-        String id,
-        @Nullable Boolean isBuffered,
-        String loggerType,
-        String name,
-        @Nullable String resourceId,
-        String type) {
+        @OutputCustomType.Parameter("credentials") @Nullable Map<String,String> credentials,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("isBuffered") @Nullable Boolean isBuffered,
+        @OutputCustomType.Parameter("loggerType") String loggerType,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("resourceId") @Nullable String resourceId,
+        @OutputCustomType.Parameter("type") String type) {
         this.credentials = credentials;
         this.description = description;
         this.id = id;

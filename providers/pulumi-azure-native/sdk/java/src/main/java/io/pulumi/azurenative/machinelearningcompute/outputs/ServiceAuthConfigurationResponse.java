@@ -20,10 +20,10 @@ public final class ServiceAuthConfigurationResponse {
      */
     private final String secondaryAuthKeyHash;
 
-    @OutputCustomType.Constructor({"primaryAuthKeyHash","secondaryAuthKeyHash"})
+    @OutputCustomType.Constructor
     private ServiceAuthConfigurationResponse(
-        String primaryAuthKeyHash,
-        String secondaryAuthKeyHash) {
+        @OutputCustomType.Parameter("primaryAuthKeyHash") String primaryAuthKeyHash,
+        @OutputCustomType.Parameter("secondaryAuthKeyHash") String secondaryAuthKeyHash) {
         this.primaryAuthKeyHash = primaryAuthKeyHash;
         this.secondaryAuthKeyHash = secondaryAuthKeyHash;
     }

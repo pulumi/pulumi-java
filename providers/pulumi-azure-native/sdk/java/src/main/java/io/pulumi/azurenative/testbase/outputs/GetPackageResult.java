@@ -113,27 +113,27 @@ public final class GetPackageResult {
      */
     private final String version;
 
-    @OutputCustomType.Constructor({"applicationName","blobPath","etag","flightingRing","id","isEnabled","lastModifiedTime","location","name","packageStatus","provisioningState","systemData","tags","targetOSList","testTypes","tests","type","validationResults","version"})
+    @OutputCustomType.Constructor
     private GetPackageResult(
-        String applicationName,
-        String blobPath,
-        String etag,
-        String flightingRing,
-        String id,
-        Boolean isEnabled,
-        String lastModifiedTime,
-        String location,
-        String name,
-        String packageStatus,
-        String provisioningState,
-        SystemDataResponse systemData,
-        @Nullable Map<String,String> tags,
-        List<TargetOSInfoResponse> targetOSList,
-        List<String> testTypes,
-        List<TestResponse> tests,
-        String type,
-        List<PackageValidationResultResponse> validationResults,
-        String version) {
+        @OutputCustomType.Parameter("applicationName") String applicationName,
+        @OutputCustomType.Parameter("blobPath") String blobPath,
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("flightingRing") String flightingRing,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("isEnabled") Boolean isEnabled,
+        @OutputCustomType.Parameter("lastModifiedTime") String lastModifiedTime,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("packageStatus") String packageStatus,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("targetOSList") List<TargetOSInfoResponse> targetOSList,
+        @OutputCustomType.Parameter("testTypes") List<String> testTypes,
+        @OutputCustomType.Parameter("tests") List<TestResponse> tests,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("validationResults") List<PackageValidationResultResponse> validationResults,
+        @OutputCustomType.Parameter("version") String version) {
         this.applicationName = applicationName;
         this.blobPath = blobPath;
         this.etag = etag;

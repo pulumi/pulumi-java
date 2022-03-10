@@ -35,12 +35,12 @@ public final class MountConfigurationResponse {
      */
     private final @Nullable NFSMountConfigurationResponse nfsMountConfiguration;
 
-    @OutputCustomType.Constructor({"azureBlobFileSystemConfiguration","azureFileShareConfiguration","cifsMountConfiguration","nfsMountConfiguration"})
+    @OutputCustomType.Constructor
     private MountConfigurationResponse(
-        @Nullable AzureBlobFileSystemConfigurationResponse azureBlobFileSystemConfiguration,
-        @Nullable AzureFileShareConfigurationResponse azureFileShareConfiguration,
-        @Nullable CIFSMountConfigurationResponse cifsMountConfiguration,
-        @Nullable NFSMountConfigurationResponse nfsMountConfiguration) {
+        @OutputCustomType.Parameter("azureBlobFileSystemConfiguration") @Nullable AzureBlobFileSystemConfigurationResponse azureBlobFileSystemConfiguration,
+        @OutputCustomType.Parameter("azureFileShareConfiguration") @Nullable AzureFileShareConfigurationResponse azureFileShareConfiguration,
+        @OutputCustomType.Parameter("cifsMountConfiguration") @Nullable CIFSMountConfigurationResponse cifsMountConfiguration,
+        @OutputCustomType.Parameter("nfsMountConfiguration") @Nullable NFSMountConfigurationResponse nfsMountConfiguration) {
         this.azureBlobFileSystemConfiguration = azureBlobFileSystemConfiguration;
         this.azureFileShareConfiguration = azureFileShareConfiguration;
         this.cifsMountConfiguration = cifsMountConfiguration;

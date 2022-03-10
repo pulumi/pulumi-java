@@ -49,15 +49,15 @@ public final class GetCustomApiResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"etag","id","location","name","properties","tags","type"})
+    @OutputCustomType.Constructor
     private GetCustomApiResult(
-        @Nullable String etag,
-        String id,
-        @Nullable String location,
-        String name,
-        CustomApiPropertiesDefinitionResponse properties,
-        @Nullable Map<String,String> tags,
-        String type) {
+        @OutputCustomType.Parameter("etag") @Nullable String etag,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("properties") CustomApiPropertiesDefinitionResponse properties,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type) {
         this.etag = etag;
         this.id = id;
         this.location = location;

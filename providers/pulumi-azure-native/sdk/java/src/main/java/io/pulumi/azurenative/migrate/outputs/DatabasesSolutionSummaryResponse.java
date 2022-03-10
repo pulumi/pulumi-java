@@ -34,12 +34,12 @@ public final class DatabasesSolutionSummaryResponse {
      */
     private final @Nullable Integer migrationReadyCount;
 
-    @OutputCustomType.Constructor({"databaseInstancesAssessedCount","databasesAssessedCount","instanceType","migrationReadyCount"})
+    @OutputCustomType.Constructor
     private DatabasesSolutionSummaryResponse(
-        @Nullable Integer databaseInstancesAssessedCount,
-        @Nullable Integer databasesAssessedCount,
-        String instanceType,
-        @Nullable Integer migrationReadyCount) {
+        @OutputCustomType.Parameter("databaseInstancesAssessedCount") @Nullable Integer databaseInstancesAssessedCount,
+        @OutputCustomType.Parameter("databasesAssessedCount") @Nullable Integer databasesAssessedCount,
+        @OutputCustomType.Parameter("instanceType") String instanceType,
+        @OutputCustomType.Parameter("migrationReadyCount") @Nullable Integer migrationReadyCount) {
         this.databaseInstancesAssessedCount = databaseInstancesAssessedCount;
         this.databasesAssessedCount = databasesAssessedCount;
         this.instanceType = instanceType;

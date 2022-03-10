@@ -19,14 +19,14 @@ public final class ArcConfigurationResponse {
     private final @Nullable String artifactsStorageType;
     private final @Nullable FrontEndConfigurationResponse frontEndServiceConfiguration;
 
-    @OutputCustomType.Constructor({"artifactStorageAccessMode","artifactStorageClassName","artifactStorageMountPath","artifactStorageNodeName","artifactsStorageType","frontEndServiceConfiguration"})
+    @OutputCustomType.Constructor
     private ArcConfigurationResponse(
-        @Nullable String artifactStorageAccessMode,
-        @Nullable String artifactStorageClassName,
-        @Nullable String artifactStorageMountPath,
-        @Nullable String artifactStorageNodeName,
-        @Nullable String artifactsStorageType,
-        @Nullable FrontEndConfigurationResponse frontEndServiceConfiguration) {
+        @OutputCustomType.Parameter("artifactStorageAccessMode") @Nullable String artifactStorageAccessMode,
+        @OutputCustomType.Parameter("artifactStorageClassName") @Nullable String artifactStorageClassName,
+        @OutputCustomType.Parameter("artifactStorageMountPath") @Nullable String artifactStorageMountPath,
+        @OutputCustomType.Parameter("artifactStorageNodeName") @Nullable String artifactStorageNodeName,
+        @OutputCustomType.Parameter("artifactsStorageType") @Nullable String artifactsStorageType,
+        @OutputCustomType.Parameter("frontEndServiceConfiguration") @Nullable FrontEndConfigurationResponse frontEndServiceConfiguration) {
         this.artifactStorageAccessMode = artifactStorageAccessMode;
         this.artifactStorageClassName = artifactStorageClassName;
         this.artifactStorageMountPath = artifactStorageMountPath;

@@ -17,8 +17,8 @@ public final class NameIdentifierResponse {
      */
     private final @Nullable String name;
 
-    @OutputCustomType.Constructor({"name"})
-    private NameIdentifierResponse(@Nullable String name) {
+    @OutputCustomType.Constructor
+    private NameIdentifierResponse(@OutputCustomType.Parameter("name") @Nullable String name) {
         this.name = name;
     }
 

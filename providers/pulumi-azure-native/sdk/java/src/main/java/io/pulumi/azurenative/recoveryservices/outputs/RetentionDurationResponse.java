@@ -24,10 +24,10 @@ public final class RetentionDurationResponse {
      */
     private final @Nullable String durationType;
 
-    @OutputCustomType.Constructor({"count","durationType"})
+    @OutputCustomType.Constructor
     private RetentionDurationResponse(
-        @Nullable Integer count,
-        @Nullable String durationType) {
+        @OutputCustomType.Parameter("count") @Nullable Integer count,
+        @OutputCustomType.Parameter("durationType") @Nullable String durationType) {
         this.count = count;
         this.durationType = durationType;
     }

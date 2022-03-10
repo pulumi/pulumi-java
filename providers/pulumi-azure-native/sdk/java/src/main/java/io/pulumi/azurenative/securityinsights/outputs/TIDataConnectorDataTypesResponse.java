@@ -17,8 +17,8 @@ public final class TIDataConnectorDataTypesResponse {
      */
     private final @Nullable TIDataConnectorDataTypesResponseIndicators indicators;
 
-    @OutputCustomType.Constructor({"indicators"})
-    private TIDataConnectorDataTypesResponse(@Nullable TIDataConnectorDataTypesResponseIndicators indicators) {
+    @OutputCustomType.Constructor
+    private TIDataConnectorDataTypesResponse(@OutputCustomType.Parameter("indicators") @Nullable TIDataConnectorDataTypesResponseIndicators indicators) {
         this.indicators = indicators;
     }
 

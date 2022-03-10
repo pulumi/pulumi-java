@@ -25,11 +25,11 @@ public final class SystemServiceResponse {
      */
     private final String version;
 
-    @OutputCustomType.Constructor({"publicIpAddress","systemServiceType","version"})
+    @OutputCustomType.Constructor
     private SystemServiceResponse(
-        String publicIpAddress,
-        String systemServiceType,
-        String version) {
+        @OutputCustomType.Parameter("publicIpAddress") String publicIpAddress,
+        @OutputCustomType.Parameter("systemServiceType") String systemServiceType,
+        @OutputCustomType.Parameter("version") String version) {
         this.publicIpAddress = publicIpAddress;
         this.systemServiceType = systemServiceType;
         this.version = version;

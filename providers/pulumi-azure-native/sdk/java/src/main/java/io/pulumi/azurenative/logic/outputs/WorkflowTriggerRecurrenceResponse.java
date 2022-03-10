@@ -44,14 +44,14 @@ public final class WorkflowTriggerRecurrenceResponse {
      */
     private final @Nullable String timeZone;
 
-    @OutputCustomType.Constructor({"endTime","frequency","interval","schedule","startTime","timeZone"})
+    @OutputCustomType.Constructor
     private WorkflowTriggerRecurrenceResponse(
-        @Nullable String endTime,
-        @Nullable String frequency,
-        @Nullable Integer interval,
-        @Nullable RecurrenceScheduleResponse schedule,
-        @Nullable String startTime,
-        @Nullable String timeZone) {
+        @OutputCustomType.Parameter("endTime") @Nullable String endTime,
+        @OutputCustomType.Parameter("frequency") @Nullable String frequency,
+        @OutputCustomType.Parameter("interval") @Nullable Integer interval,
+        @OutputCustomType.Parameter("schedule") @Nullable RecurrenceScheduleResponse schedule,
+        @OutputCustomType.Parameter("startTime") @Nullable String startTime,
+        @OutputCustomType.Parameter("timeZone") @Nullable String timeZone) {
         this.endTime = endTime;
         this.frequency = frequency;
         this.interval = interval;

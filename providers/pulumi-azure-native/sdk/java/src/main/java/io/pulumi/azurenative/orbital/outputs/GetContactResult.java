@@ -113,28 +113,28 @@ public final class GetContactResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"contactProfile","endAzimuthDegrees","endElevationDegrees","errorMessage","etag","groundStationName","id","maximumElevationDegrees","name","reservationEndTime","reservationStartTime","rxEndTime","rxStartTime","startAzimuthDegrees","startElevationDegrees","status","systemData","txEndTime","txStartTime","type"})
+    @OutputCustomType.Constructor
     private GetContactResult(
-        ResourceReferenceResponse contactProfile,
-        Double endAzimuthDegrees,
-        Double endElevationDegrees,
-        String errorMessage,
-        String etag,
-        String groundStationName,
-        String id,
-        Double maximumElevationDegrees,
-        String name,
-        String reservationEndTime,
-        String reservationStartTime,
-        String rxEndTime,
-        String rxStartTime,
-        Double startAzimuthDegrees,
-        Double startElevationDegrees,
-        String status,
-        SystemDataResponse systemData,
-        String txEndTime,
-        String txStartTime,
-        String type) {
+        @OutputCustomType.Parameter("contactProfile") ResourceReferenceResponse contactProfile,
+        @OutputCustomType.Parameter("endAzimuthDegrees") Double endAzimuthDegrees,
+        @OutputCustomType.Parameter("endElevationDegrees") Double endElevationDegrees,
+        @OutputCustomType.Parameter("errorMessage") String errorMessage,
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("groundStationName") String groundStationName,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("maximumElevationDegrees") Double maximumElevationDegrees,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("reservationEndTime") String reservationEndTime,
+        @OutputCustomType.Parameter("reservationStartTime") String reservationStartTime,
+        @OutputCustomType.Parameter("rxEndTime") String rxEndTime,
+        @OutputCustomType.Parameter("rxStartTime") String rxStartTime,
+        @OutputCustomType.Parameter("startAzimuthDegrees") Double startAzimuthDegrees,
+        @OutputCustomType.Parameter("startElevationDegrees") Double startElevationDegrees,
+        @OutputCustomType.Parameter("status") String status,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("txEndTime") String txEndTime,
+        @OutputCustomType.Parameter("txStartTime") String txStartTime,
+        @OutputCustomType.Parameter("type") String type) {
         this.contactProfile = contactProfile;
         this.endAzimuthDegrees = endAzimuthDegrees;
         this.endElevationDegrees = endElevationDegrees;

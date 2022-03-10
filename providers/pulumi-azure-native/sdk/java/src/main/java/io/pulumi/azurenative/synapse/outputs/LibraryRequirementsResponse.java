@@ -27,11 +27,11 @@ public final class LibraryRequirementsResponse {
      */
     private final String time;
 
-    @OutputCustomType.Constructor({"content","filename","time"})
+    @OutputCustomType.Constructor
     private LibraryRequirementsResponse(
-        @Nullable String content,
-        @Nullable String filename,
-        String time) {
+        @OutputCustomType.Parameter("content") @Nullable String content,
+        @OutputCustomType.Parameter("filename") @Nullable String filename,
+        @OutputCustomType.Parameter("time") String time) {
         this.content = content;
         this.filename = filename;
         this.time = time;

@@ -64,18 +64,18 @@ public final class GetAppServiceCertificateOrderCertificateResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"id","keyVaultId","keyVaultSecretName","kind","location","name","provisioningState","systemData","tags","type"})
+    @OutputCustomType.Constructor
     private GetAppServiceCertificateOrderCertificateResult(
-        String id,
-        @Nullable String keyVaultId,
-        @Nullable String keyVaultSecretName,
-        @Nullable String kind,
-        String location,
-        String name,
-        String provisioningState,
-        SystemDataResponse systemData,
-        @Nullable Map<String,String> tags,
-        String type) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("keyVaultId") @Nullable String keyVaultId,
+        @OutputCustomType.Parameter("keyVaultSecretName") @Nullable String keyVaultSecretName,
+        @OutputCustomType.Parameter("kind") @Nullable String kind,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type) {
         this.id = id;
         this.keyVaultId = keyVaultId;
         this.keyVaultSecretName = keyVaultSecretName;

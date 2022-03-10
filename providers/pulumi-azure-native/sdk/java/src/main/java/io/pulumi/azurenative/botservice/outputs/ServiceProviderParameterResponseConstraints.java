@@ -17,8 +17,8 @@ public final class ServiceProviderParameterResponseConstraints {
      */
     private final @Nullable Boolean required;
 
-    @OutputCustomType.Constructor({"required"})
-    private ServiceProviderParameterResponseConstraints(@Nullable Boolean required) {
+    @OutputCustomType.Constructor
+    private ServiceProviderParameterResponseConstraints(@OutputCustomType.Parameter("required") @Nullable Boolean required) {
         this.required = required;
     }
 

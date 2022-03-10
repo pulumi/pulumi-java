@@ -52,16 +52,16 @@ public final class StaticSiteUserARMResourceResponse {
      */
     private final String userId;
 
-    @OutputCustomType.Constructor({"displayName","id","kind","name","provider","roles","type","userId"})
+    @OutputCustomType.Constructor
     private StaticSiteUserARMResourceResponse(
-        String displayName,
-        String id,
-        @Nullable String kind,
-        String name,
-        String provider,
-        @Nullable String roles,
-        String type,
-        String userId) {
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("kind") @Nullable String kind,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("provider") String provider,
+        @OutputCustomType.Parameter("roles") @Nullable String roles,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("userId") String userId) {
         this.displayName = displayName;
         this.id = id;
         this.kind = kind;

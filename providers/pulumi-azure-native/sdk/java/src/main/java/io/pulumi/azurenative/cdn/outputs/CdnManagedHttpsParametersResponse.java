@@ -34,12 +34,12 @@ public final class CdnManagedHttpsParametersResponse {
      */
     private final String protocolType;
 
-    @OutputCustomType.Constructor({"certificateSource","certificateSourceParameters","minimumTlsVersion","protocolType"})
+    @OutputCustomType.Constructor
     private CdnManagedHttpsParametersResponse(
-        String certificateSource,
-        CdnCertificateSourceParametersResponse certificateSourceParameters,
-        @Nullable String minimumTlsVersion,
-        String protocolType) {
+        @OutputCustomType.Parameter("certificateSource") String certificateSource,
+        @OutputCustomType.Parameter("certificateSourceParameters") CdnCertificateSourceParametersResponse certificateSourceParameters,
+        @OutputCustomType.Parameter("minimumTlsVersion") @Nullable String minimumTlsVersion,
+        @OutputCustomType.Parameter("protocolType") String protocolType) {
         this.certificateSource = certificateSource;
         this.certificateSourceParameters = certificateSourceParameters;
         this.minimumTlsVersion = minimumTlsVersion;

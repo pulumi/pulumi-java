@@ -22,10 +22,10 @@ public final class DatabricksResponseProperties {
      */
     private final @Nullable String workspaceUrl;
 
-    @OutputCustomType.Constructor({"databricksAccessToken","workspaceUrl"})
+    @OutputCustomType.Constructor
     private DatabricksResponseProperties(
-        @Nullable String databricksAccessToken,
-        @Nullable String workspaceUrl) {
+        @OutputCustomType.Parameter("databricksAccessToken") @Nullable String databricksAccessToken,
+        @OutputCustomType.Parameter("workspaceUrl") @Nullable String workspaceUrl) {
         this.databricksAccessToken = databricksAccessToken;
         this.workspaceUrl = workspaceUrl;
     }

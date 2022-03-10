@@ -56,16 +56,16 @@ public final class GetDataControllerResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"extendedLocation","id","location","name","properties","systemData","tags","type"})
+    @OutputCustomType.Constructor
     private GetDataControllerResult(
-        @Nullable ExtendedLocationResponse extendedLocation,
-        String id,
-        String location,
-        String name,
-        DataControllerPropertiesResponse properties,
-        SystemDataResponse systemData,
-        @Nullable Map<String,String> tags,
-        String type) {
+        @OutputCustomType.Parameter("extendedLocation") @Nullable ExtendedLocationResponse extendedLocation,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("properties") DataControllerPropertiesResponse properties,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type) {
         this.extendedLocation = extendedLocation;
         this.id = id;
         this.location = location;

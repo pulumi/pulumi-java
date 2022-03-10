@@ -40,14 +40,14 @@ public final class VirtualMachineDetailsResponse {
      */
     private final String userName;
 
-    @OutputCustomType.Constructor({"lastKnownPowerState","privateIpAddress","provisioningState","rdpAuthority","sshAuthority","userName"})
+    @OutputCustomType.Constructor
     private VirtualMachineDetailsResponse(
-        String lastKnownPowerState,
-        String privateIpAddress,
-        String provisioningState,
-        String rdpAuthority,
-        String sshAuthority,
-        String userName) {
+        @OutputCustomType.Parameter("lastKnownPowerState") String lastKnownPowerState,
+        @OutputCustomType.Parameter("privateIpAddress") String privateIpAddress,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("rdpAuthority") String rdpAuthority,
+        @OutputCustomType.Parameter("sshAuthority") String sshAuthority,
+        @OutputCustomType.Parameter("userName") String userName) {
         this.lastKnownPowerState = lastKnownPowerState;
         this.privateIpAddress = privateIpAddress;
         this.provisioningState = provisioningState;

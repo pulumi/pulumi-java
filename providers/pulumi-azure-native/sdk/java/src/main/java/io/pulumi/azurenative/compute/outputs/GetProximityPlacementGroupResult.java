@@ -66,18 +66,18 @@ public final class GetProximityPlacementGroupResult {
      */
     private final List<SubResourceWithColocationStatusResponse> virtualMachines;
 
-    @OutputCustomType.Constructor({"availabilitySets","colocationStatus","id","location","name","proximityPlacementGroupType","tags","type","virtualMachineScaleSets","virtualMachines"})
+    @OutputCustomType.Constructor
     private GetProximityPlacementGroupResult(
-        List<SubResourceWithColocationStatusResponse> availabilitySets,
-        @Nullable InstanceViewStatusResponse colocationStatus,
-        String id,
-        String location,
-        String name,
-        @Nullable String proximityPlacementGroupType,
-        @Nullable Map<String,String> tags,
-        String type,
-        List<SubResourceWithColocationStatusResponse> virtualMachineScaleSets,
-        List<SubResourceWithColocationStatusResponse> virtualMachines) {
+        @OutputCustomType.Parameter("availabilitySets") List<SubResourceWithColocationStatusResponse> availabilitySets,
+        @OutputCustomType.Parameter("colocationStatus") @Nullable InstanceViewStatusResponse colocationStatus,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("proximityPlacementGroupType") @Nullable String proximityPlacementGroupType,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("virtualMachineScaleSets") List<SubResourceWithColocationStatusResponse> virtualMachineScaleSets,
+        @OutputCustomType.Parameter("virtualMachines") List<SubResourceWithColocationStatusResponse> virtualMachines) {
         this.availabilitySets = availabilitySets;
         this.colocationStatus = colocationStatus;
         this.id = id;

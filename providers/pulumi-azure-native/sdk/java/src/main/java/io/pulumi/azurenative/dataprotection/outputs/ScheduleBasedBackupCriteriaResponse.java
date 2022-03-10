@@ -50,15 +50,15 @@ public final class ScheduleBasedBackupCriteriaResponse {
      */
     private final @Nullable List<String> weeksOfTheMonth;
 
-    @OutputCustomType.Constructor({"absoluteCriteria","daysOfMonth","daysOfTheWeek","monthsOfYear","objectType","scheduleTimes","weeksOfTheMonth"})
+    @OutputCustomType.Constructor
     private ScheduleBasedBackupCriteriaResponse(
-        @Nullable List<String> absoluteCriteria,
-        @Nullable List<DayResponse> daysOfMonth,
-        @Nullable List<String> daysOfTheWeek,
-        @Nullable List<String> monthsOfYear,
-        String objectType,
-        @Nullable List<String> scheduleTimes,
-        @Nullable List<String> weeksOfTheMonth) {
+        @OutputCustomType.Parameter("absoluteCriteria") @Nullable List<String> absoluteCriteria,
+        @OutputCustomType.Parameter("daysOfMonth") @Nullable List<DayResponse> daysOfMonth,
+        @OutputCustomType.Parameter("daysOfTheWeek") @Nullable List<String> daysOfTheWeek,
+        @OutputCustomType.Parameter("monthsOfYear") @Nullable List<String> monthsOfYear,
+        @OutputCustomType.Parameter("objectType") String objectType,
+        @OutputCustomType.Parameter("scheduleTimes") @Nullable List<String> scheduleTimes,
+        @OutputCustomType.Parameter("weeksOfTheMonth") @Nullable List<String> weeksOfTheMonth) {
         this.absoluteCriteria = absoluteCriteria;
         this.daysOfMonth = daysOfMonth;
         this.daysOfTheWeek = daysOfTheWeek;

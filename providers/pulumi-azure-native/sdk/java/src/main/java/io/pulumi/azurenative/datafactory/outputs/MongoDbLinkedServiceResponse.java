@@ -96,23 +96,23 @@ public final class MongoDbLinkedServiceResponse {
      */
     private final @Nullable Object username;
 
-    @OutputCustomType.Constructor({"allowSelfSignedServerCert","annotations","authSource","authenticationType","connectVia","databaseName","description","enableSsl","encryptedCredential","parameters","password","port","server","type","username"})
+    @OutputCustomType.Constructor
     private MongoDbLinkedServiceResponse(
-        @Nullable Object allowSelfSignedServerCert,
-        @Nullable List<Object> annotations,
-        @Nullable Object authSource,
-        @Nullable String authenticationType,
-        @Nullable IntegrationRuntimeReferenceResponse connectVia,
-        Object databaseName,
-        @Nullable String description,
-        @Nullable Object enableSsl,
-        @Nullable Object encryptedCredential,
-        @Nullable Map<String,ParameterSpecificationResponse> parameters,
-        @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password,
-        @Nullable Object port,
-        Object server,
-        String type,
-        @Nullable Object username) {
+        @OutputCustomType.Parameter("allowSelfSignedServerCert") @Nullable Object allowSelfSignedServerCert,
+        @OutputCustomType.Parameter("annotations") @Nullable List<Object> annotations,
+        @OutputCustomType.Parameter("authSource") @Nullable Object authSource,
+        @OutputCustomType.Parameter("authenticationType") @Nullable String authenticationType,
+        @OutputCustomType.Parameter("connectVia") @Nullable IntegrationRuntimeReferenceResponse connectVia,
+        @OutputCustomType.Parameter("databaseName") Object databaseName,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("enableSsl") @Nullable Object enableSsl,
+        @OutputCustomType.Parameter("encryptedCredential") @Nullable Object encryptedCredential,
+        @OutputCustomType.Parameter("parameters") @Nullable Map<String,ParameterSpecificationResponse> parameters,
+        @OutputCustomType.Parameter("password") @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password,
+        @OutputCustomType.Parameter("port") @Nullable Object port,
+        @OutputCustomType.Parameter("server") Object server,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("username") @Nullable Object username) {
         this.allowSelfSignedServerCert = allowSelfSignedServerCert;
         this.annotations = annotations;
         this.authSource = authSource;

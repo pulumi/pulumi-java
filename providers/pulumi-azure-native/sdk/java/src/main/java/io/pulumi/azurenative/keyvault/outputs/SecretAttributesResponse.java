@@ -38,13 +38,13 @@ public final class SecretAttributesResponse {
      */
     private final Integer updated;
 
-    @OutputCustomType.Constructor({"created","enabled","expires","notBefore","updated"})
+    @OutputCustomType.Constructor
     private SecretAttributesResponse(
-        Integer created,
-        @Nullable Boolean enabled,
-        @Nullable Integer expires,
-        @Nullable Integer notBefore,
-        Integer updated) {
+        @OutputCustomType.Parameter("created") Integer created,
+        @OutputCustomType.Parameter("enabled") @Nullable Boolean enabled,
+        @OutputCustomType.Parameter("expires") @Nullable Integer expires,
+        @OutputCustomType.Parameter("notBefore") @Nullable Integer notBefore,
+        @OutputCustomType.Parameter("updated") Integer updated) {
         this.created = created;
         this.enabled = enabled;
         this.expires = expires;

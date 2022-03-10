@@ -47,15 +47,15 @@ public final class DomainSecuritySettingsResponse {
      */
     private final @Nullable String tlsV1;
 
-    @OutputCustomType.Constructor({"kerberosArmoring","kerberosRc4Encryption","ntlmV1","syncKerberosPasswords","syncNtlmPasswords","syncOnPremPasswords","tlsV1"})
+    @OutputCustomType.Constructor
     private DomainSecuritySettingsResponse(
-        @Nullable String kerberosArmoring,
-        @Nullable String kerberosRc4Encryption,
-        @Nullable String ntlmV1,
-        @Nullable String syncKerberosPasswords,
-        @Nullable String syncNtlmPasswords,
-        @Nullable String syncOnPremPasswords,
-        @Nullable String tlsV1) {
+        @OutputCustomType.Parameter("kerberosArmoring") @Nullable String kerberosArmoring,
+        @OutputCustomType.Parameter("kerberosRc4Encryption") @Nullable String kerberosRc4Encryption,
+        @OutputCustomType.Parameter("ntlmV1") @Nullable String ntlmV1,
+        @OutputCustomType.Parameter("syncKerberosPasswords") @Nullable String syncKerberosPasswords,
+        @OutputCustomType.Parameter("syncNtlmPasswords") @Nullable String syncNtlmPasswords,
+        @OutputCustomType.Parameter("syncOnPremPasswords") @Nullable String syncOnPremPasswords,
+        @OutputCustomType.Parameter("tlsV1") @Nullable String tlsV1) {
         this.kerberosArmoring = kerberosArmoring;
         this.kerberosRc4Encryption = kerberosRc4Encryption;
         this.ntlmV1 = ntlmV1;

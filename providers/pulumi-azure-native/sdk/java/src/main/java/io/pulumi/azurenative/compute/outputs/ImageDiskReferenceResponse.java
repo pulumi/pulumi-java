@@ -23,10 +23,10 @@ public final class ImageDiskReferenceResponse {
      */
     private final @Nullable Integer lun;
 
-    @OutputCustomType.Constructor({"id","lun"})
+    @OutputCustomType.Constructor
     private ImageDiskReferenceResponse(
-        String id,
-        @Nullable Integer lun) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("lun") @Nullable Integer lun) {
         this.id = id;
         this.lun = lun;
     }

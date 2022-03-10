@@ -23,10 +23,10 @@ public final class AssignmentInfoResponse {
      */
     private final String name;
 
-    @OutputCustomType.Constructor({"configuration","name"})
+    @OutputCustomType.Constructor
     private AssignmentInfoResponse(
-        @Nullable ConfigurationInfoResponse configuration,
-        String name) {
+        @OutputCustomType.Parameter("configuration") @Nullable ConfigurationInfoResponse configuration,
+        @OutputCustomType.Parameter("name") String name) {
         this.configuration = configuration;
         this.name = name;
     }

@@ -15,8 +15,8 @@ public final class ExpressRouteConnectionIdResponse {
      */
     private final String id;
 
-    @OutputCustomType.Constructor({"id"})
-    private ExpressRouteConnectionIdResponse(String id) {
+    @OutputCustomType.Constructor
+    private ExpressRouteConnectionIdResponse(@OutputCustomType.Parameter("id") String id) {
         this.id = id;
     }
 

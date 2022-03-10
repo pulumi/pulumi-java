@@ -55,16 +55,16 @@ public final class GetTransformResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"created","description","id","lastModified","name","outputs","systemData","type"})
+    @OutputCustomType.Constructor
     private GetTransformResult(
-        String created,
-        @Nullable String description,
-        String id,
-        String lastModified,
-        String name,
-        List<TransformOutputResponse> outputs,
-        SystemDataResponse systemData,
-        String type) {
+        @OutputCustomType.Parameter("created") String created,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("lastModified") String lastModified,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("outputs") List<TransformOutputResponse> outputs,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("type") String type) {
         this.created = created;
         this.description = description;
         this.id = id;

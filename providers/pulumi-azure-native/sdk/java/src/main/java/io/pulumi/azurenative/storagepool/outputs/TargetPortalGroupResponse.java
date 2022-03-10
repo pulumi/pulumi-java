@@ -45,14 +45,14 @@ public final class TargetPortalGroupResponse {
      */
     private final Integer tag;
 
-    @OutputCustomType.Constructor({"acls","attributes","endpoints","luns","port","tag"})
+    @OutputCustomType.Constructor
     private TargetPortalGroupResponse(
-        List<AclResponse> acls,
-        AttributesResponse attributes,
-        List<String> endpoints,
-        List<IscsiLunResponse> luns,
-        Integer port,
-        Integer tag) {
+        @OutputCustomType.Parameter("acls") List<AclResponse> acls,
+        @OutputCustomType.Parameter("attributes") AttributesResponse attributes,
+        @OutputCustomType.Parameter("endpoints") List<String> endpoints,
+        @OutputCustomType.Parameter("luns") List<IscsiLunResponse> luns,
+        @OutputCustomType.Parameter("port") Integer port,
+        @OutputCustomType.Parameter("tag") Integer tag) {
         this.acls = acls;
         this.attributes = attributes;
         this.endpoints = endpoints;

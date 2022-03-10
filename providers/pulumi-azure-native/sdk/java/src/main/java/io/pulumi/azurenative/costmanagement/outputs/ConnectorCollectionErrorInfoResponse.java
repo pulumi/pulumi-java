@@ -30,12 +30,12 @@ public final class ConnectorCollectionErrorInfoResponse {
      */
     private final String errorStartTime;
 
-    @OutputCustomType.Constructor({"errorCode","errorInnerMessage","errorMessage","errorStartTime"})
+    @OutputCustomType.Constructor
     private ConnectorCollectionErrorInfoResponse(
-        String errorCode,
-        String errorInnerMessage,
-        String errorMessage,
-        String errorStartTime) {
+        @OutputCustomType.Parameter("errorCode") String errorCode,
+        @OutputCustomType.Parameter("errorInnerMessage") String errorInnerMessage,
+        @OutputCustomType.Parameter("errorMessage") String errorMessage,
+        @OutputCustomType.Parameter("errorStartTime") String errorStartTime) {
         this.errorCode = errorCode;
         this.errorInnerMessage = errorInnerMessage;
         this.errorMessage = errorMessage;

@@ -38,13 +38,13 @@ public final class AzureBackupRuleResponse {
      */
     private final Either<AdhocBasedTriggerContextResponse,ScheduleBasedTriggerContextResponse> trigger;
 
-    @OutputCustomType.Constructor({"backupParameters","dataStore","name","objectType","trigger"})
+    @OutputCustomType.Constructor
     private AzureBackupRuleResponse(
-        @Nullable AzureBackupParamsResponse backupParameters,
-        DataStoreInfoBaseResponse dataStore,
-        String name,
-        String objectType,
-        Either<AdhocBasedTriggerContextResponse,ScheduleBasedTriggerContextResponse> trigger) {
+        @OutputCustomType.Parameter("backupParameters") @Nullable AzureBackupParamsResponse backupParameters,
+        @OutputCustomType.Parameter("dataStore") DataStoreInfoBaseResponse dataStore,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("objectType") String objectType,
+        @OutputCustomType.Parameter("trigger") Either<AdhocBasedTriggerContextResponse,ScheduleBasedTriggerContextResponse> trigger) {
         this.backupParameters = backupParameters;
         this.dataStore = dataStore;
         this.name = name;

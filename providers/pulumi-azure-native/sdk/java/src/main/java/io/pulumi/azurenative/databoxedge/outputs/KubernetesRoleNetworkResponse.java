@@ -21,10 +21,10 @@ public final class KubernetesRoleNetworkResponse {
      */
     private final LoadBalancerConfigResponse loadBalancerConfig;
 
-    @OutputCustomType.Constructor({"cniConfig","loadBalancerConfig"})
+    @OutputCustomType.Constructor
     private KubernetesRoleNetworkResponse(
-        CniConfigResponse cniConfig,
-        LoadBalancerConfigResponse loadBalancerConfig) {
+        @OutputCustomType.Parameter("cniConfig") CniConfigResponse cniConfig,
+        @OutputCustomType.Parameter("loadBalancerConfig") LoadBalancerConfigResponse loadBalancerConfig) {
         this.cniConfig = cniConfig;
         this.loadBalancerConfig = loadBalancerConfig;
     }

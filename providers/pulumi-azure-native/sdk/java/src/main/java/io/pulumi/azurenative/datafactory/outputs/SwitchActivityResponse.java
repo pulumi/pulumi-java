@@ -96,16 +96,16 @@ public final class SwitchActivityResponse {
      */
     private final @Nullable List<UserPropertyResponse> userProperties;
 
-    @OutputCustomType.Constructor({"cases","defaultActivities","dependsOn","description","name","on","type","userProperties"})
+    @OutputCustomType.Constructor
     private SwitchActivityResponse(
-        @Nullable List<SwitchCaseResponse> cases,
-        @Nullable List<Object> defaultActivities,
-        @Nullable List<ActivityDependencyResponse> dependsOn,
-        @Nullable String description,
-        String name,
-        ExpressionResponse on,
-        String type,
-        @Nullable List<UserPropertyResponse> userProperties) {
+        @OutputCustomType.Parameter("cases") @Nullable List<SwitchCaseResponse> cases,
+        @OutputCustomType.Parameter("defaultActivities") @Nullable List<Object> defaultActivities,
+        @OutputCustomType.Parameter("dependsOn") @Nullable List<ActivityDependencyResponse> dependsOn,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("on") ExpressionResponse on,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("userProperties") @Nullable List<UserPropertyResponse> userProperties) {
         this.cases = cases;
         this.defaultActivities = defaultActivities;
         this.dependsOn = dependsOn;

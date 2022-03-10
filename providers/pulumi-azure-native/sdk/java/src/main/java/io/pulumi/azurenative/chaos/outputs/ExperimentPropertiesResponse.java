@@ -30,11 +30,11 @@ public final class ExperimentPropertiesResponse {
      */
     private final List<StepResponse> steps;
 
-    @OutputCustomType.Constructor({"selectors","startOnCreation","steps"})
+    @OutputCustomType.Constructor
     private ExperimentPropertiesResponse(
-        List<SelectorResponse> selectors,
-        @Nullable Boolean startOnCreation,
-        List<StepResponse> steps) {
+        @OutputCustomType.Parameter("selectors") List<SelectorResponse> selectors,
+        @OutputCustomType.Parameter("startOnCreation") @Nullable Boolean startOnCreation,
+        @OutputCustomType.Parameter("steps") List<StepResponse> steps) {
         this.selectors = selectors;
         this.startOnCreation = startOnCreation;
         this.steps = steps;

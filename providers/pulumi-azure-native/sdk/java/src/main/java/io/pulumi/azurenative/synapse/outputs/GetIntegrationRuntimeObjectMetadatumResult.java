@@ -28,10 +28,10 @@ public final class GetIntegrationRuntimeObjectMetadatumResult {
      */
     private final @Nullable List<Object> value;
 
-    @OutputCustomType.Constructor({"nextLink","value"})
+    @OutputCustomType.Constructor
     private GetIntegrationRuntimeObjectMetadatumResult(
-        @Nullable String nextLink,
-        @Nullable List<Object> value) {
+        @OutputCustomType.Parameter("nextLink") @Nullable String nextLink,
+        @OutputCustomType.Parameter("value") @Nullable List<Object> value) {
         this.nextLink = nextLink;
         this.value = value;
     }

@@ -40,13 +40,13 @@ public final class AutomationRuleTriggeringLogicResponse {
      */
     private final String triggersWhen;
 
-    @OutputCustomType.Constructor({"conditions","expirationTimeUtc","isEnabled","triggersOn","triggersWhen"})
+    @OutputCustomType.Constructor
     private AutomationRuleTriggeringLogicResponse(
-        @Nullable List<AutomationRulePropertyValuesConditionResponse> conditions,
-        @Nullable String expirationTimeUtc,
-        Boolean isEnabled,
-        String triggersOn,
-        String triggersWhen) {
+        @OutputCustomType.Parameter("conditions") @Nullable List<AutomationRulePropertyValuesConditionResponse> conditions,
+        @OutputCustomType.Parameter("expirationTimeUtc") @Nullable String expirationTimeUtc,
+        @OutputCustomType.Parameter("isEnabled") Boolean isEnabled,
+        @OutputCustomType.Parameter("triggersOn") String triggersOn,
+        @OutputCustomType.Parameter("triggersWhen") String triggersWhen) {
         this.conditions = conditions;
         this.expirationTimeUtc = expirationTimeUtc;
         this.isEnabled = isEnabled;

@@ -22,10 +22,10 @@ public final class DeliveryRuleIsDeviceConditionResponse {
      */
     private final IsDeviceMatchConditionParametersResponse parameters;
 
-    @OutputCustomType.Constructor({"name","parameters"})
+    @OutputCustomType.Constructor
     private DeliveryRuleIsDeviceConditionResponse(
-        String name,
-        IsDeviceMatchConditionParametersResponse parameters) {
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("parameters") IsDeviceMatchConditionParametersResponse parameters) {
         this.name = name;
         this.parameters = parameters;
     }

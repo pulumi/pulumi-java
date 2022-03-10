@@ -56,16 +56,16 @@ public final class ListConfigurationStoreKeyValueResult {
      */
     private final String value;
 
-    @OutputCustomType.Constructor({"contentType","eTag","key","label","lastModified","locked","tags","value"})
+    @OutputCustomType.Constructor
     private ListConfigurationStoreKeyValueResult(
-        String contentType,
-        String eTag,
-        String key,
-        String label,
-        String lastModified,
-        Boolean locked,
-        Map<String,String> tags,
-        String value) {
+        @OutputCustomType.Parameter("contentType") String contentType,
+        @OutputCustomType.Parameter("eTag") String eTag,
+        @OutputCustomType.Parameter("key") String key,
+        @OutputCustomType.Parameter("label") String label,
+        @OutputCustomType.Parameter("lastModified") String lastModified,
+        @OutputCustomType.Parameter("locked") Boolean locked,
+        @OutputCustomType.Parameter("tags") Map<String,String> tags,
+        @OutputCustomType.Parameter("value") String value) {
         this.contentType = contentType;
         this.eTag = eTag;
         this.key = key;

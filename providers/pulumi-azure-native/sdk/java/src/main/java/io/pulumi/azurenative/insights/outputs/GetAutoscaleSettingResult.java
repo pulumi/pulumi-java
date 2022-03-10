@@ -67,18 +67,18 @@ public final class GetAutoscaleSettingResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"enabled","id","location","name","notifications","profiles","tags","targetResourceLocation","targetResourceUri","type"})
+    @OutputCustomType.Constructor
     private GetAutoscaleSettingResult(
-        @Nullable Boolean enabled,
-        String id,
-        String location,
-        String name,
-        @Nullable List<AutoscaleNotificationResponse> notifications,
-        List<AutoscaleProfileResponse> profiles,
-        @Nullable Map<String,String> tags,
-        @Nullable String targetResourceLocation,
-        @Nullable String targetResourceUri,
-        String type) {
+        @OutputCustomType.Parameter("enabled") @Nullable Boolean enabled,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("notifications") @Nullable List<AutoscaleNotificationResponse> notifications,
+        @OutputCustomType.Parameter("profiles") List<AutoscaleProfileResponse> profiles,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("targetResourceLocation") @Nullable String targetResourceLocation,
+        @OutputCustomType.Parameter("targetResourceUri") @Nullable String targetResourceUri,
+        @OutputCustomType.Parameter("type") String type) {
         this.enabled = enabled;
         this.id = id;
         this.location = location;

@@ -17,8 +17,8 @@ public final class BulkCreationParametersResponse {
      */
     private final @Nullable Integer instanceCount;
 
-    @OutputCustomType.Constructor({"instanceCount"})
-    private BulkCreationParametersResponse(@Nullable Integer instanceCount) {
+    @OutputCustomType.Constructor
+    private BulkCreationParametersResponse(@OutputCustomType.Parameter("instanceCount") @Nullable Integer instanceCount) {
         this.instanceCount = instanceCount;
     }
 

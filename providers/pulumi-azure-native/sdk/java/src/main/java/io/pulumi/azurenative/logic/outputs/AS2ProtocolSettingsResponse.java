@@ -51,15 +51,15 @@ public final class AS2ProtocolSettingsResponse {
      */
     private final AS2ValidationSettingsResponse validationSettings;
 
-    @OutputCustomType.Constructor({"acknowledgementConnectionSettings","envelopeSettings","errorSettings","mdnSettings","messageConnectionSettings","securitySettings","validationSettings"})
+    @OutputCustomType.Constructor
     private AS2ProtocolSettingsResponse(
-        AS2AcknowledgementConnectionSettingsResponse acknowledgementConnectionSettings,
-        AS2EnvelopeSettingsResponse envelopeSettings,
-        AS2ErrorSettingsResponse errorSettings,
-        AS2MdnSettingsResponse mdnSettings,
-        AS2MessageConnectionSettingsResponse messageConnectionSettings,
-        AS2SecuritySettingsResponse securitySettings,
-        AS2ValidationSettingsResponse validationSettings) {
+        @OutputCustomType.Parameter("acknowledgementConnectionSettings") AS2AcknowledgementConnectionSettingsResponse acknowledgementConnectionSettings,
+        @OutputCustomType.Parameter("envelopeSettings") AS2EnvelopeSettingsResponse envelopeSettings,
+        @OutputCustomType.Parameter("errorSettings") AS2ErrorSettingsResponse errorSettings,
+        @OutputCustomType.Parameter("mdnSettings") AS2MdnSettingsResponse mdnSettings,
+        @OutputCustomType.Parameter("messageConnectionSettings") AS2MessageConnectionSettingsResponse messageConnectionSettings,
+        @OutputCustomType.Parameter("securitySettings") AS2SecuritySettingsResponse securitySettings,
+        @OutputCustomType.Parameter("validationSettings") AS2ValidationSettingsResponse validationSettings) {
         this.acknowledgementConnectionSettings = acknowledgementConnectionSettings;
         this.envelopeSettings = envelopeSettings;
         this.errorSettings = errorSettings;

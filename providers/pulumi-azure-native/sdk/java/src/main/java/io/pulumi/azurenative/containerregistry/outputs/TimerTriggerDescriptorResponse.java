@@ -22,10 +22,10 @@ public final class TimerTriggerDescriptorResponse {
      */
     private final @Nullable String timerTriggerName;
 
-    @OutputCustomType.Constructor({"scheduleOccurrence","timerTriggerName"})
+    @OutputCustomType.Constructor
     private TimerTriggerDescriptorResponse(
-        @Nullable String scheduleOccurrence,
-        @Nullable String timerTriggerName) {
+        @OutputCustomType.Parameter("scheduleOccurrence") @Nullable String scheduleOccurrence,
+        @OutputCustomType.Parameter("timerTriggerName") @Nullable String timerTriggerName) {
         this.scheduleOccurrence = scheduleOccurrence;
         this.timerTriggerName = timerTriggerName;
     }

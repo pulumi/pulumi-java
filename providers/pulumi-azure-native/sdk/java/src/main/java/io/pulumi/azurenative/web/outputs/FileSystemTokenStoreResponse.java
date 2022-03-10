@@ -17,8 +17,8 @@ public final class FileSystemTokenStoreResponse {
      */
     private final @Nullable String directory;
 
-    @OutputCustomType.Constructor({"directory"})
-    private FileSystemTokenStoreResponse(@Nullable String directory) {
+    @OutputCustomType.Constructor
+    private FileSystemTokenStoreResponse(@OutputCustomType.Parameter("directory") @Nullable String directory) {
         this.directory = directory;
     }
 

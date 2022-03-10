@@ -101,27 +101,27 @@ public final class GetApplicationGroupResult {
      */
     private final String workspaceArmPath;
 
-    @OutputCustomType.Constructor({"applicationGroupType","cloudPcResource","description","etag","friendlyName","hostPoolArmPath","id","identity","kind","location","managedBy","migrationRequest","name","objectId","plan","sku","tags","type","workspaceArmPath"})
+    @OutputCustomType.Constructor
     private GetApplicationGroupResult(
-        String applicationGroupType,
-        Boolean cloudPcResource,
-        @Nullable String description,
-        String etag,
-        @Nullable String friendlyName,
-        String hostPoolArmPath,
-        String id,
-        @Nullable ResourceModelWithAllowedPropertySetResponseIdentity identity,
-        @Nullable String kind,
-        @Nullable String location,
-        @Nullable String managedBy,
-        @Nullable MigrationRequestPropertiesResponse migrationRequest,
-        String name,
-        String objectId,
-        @Nullable ResourceModelWithAllowedPropertySetResponsePlan plan,
-        @Nullable ResourceModelWithAllowedPropertySetResponseSku sku,
-        @Nullable Map<String,String> tags,
-        String type,
-        String workspaceArmPath) {
+        @OutputCustomType.Parameter("applicationGroupType") String applicationGroupType,
+        @OutputCustomType.Parameter("cloudPcResource") Boolean cloudPcResource,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("friendlyName") @Nullable String friendlyName,
+        @OutputCustomType.Parameter("hostPoolArmPath") String hostPoolArmPath,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("identity") @Nullable ResourceModelWithAllowedPropertySetResponseIdentity identity,
+        @OutputCustomType.Parameter("kind") @Nullable String kind,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("managedBy") @Nullable String managedBy,
+        @OutputCustomType.Parameter("migrationRequest") @Nullable MigrationRequestPropertiesResponse migrationRequest,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("objectId") String objectId,
+        @OutputCustomType.Parameter("plan") @Nullable ResourceModelWithAllowedPropertySetResponsePlan plan,
+        @OutputCustomType.Parameter("sku") @Nullable ResourceModelWithAllowedPropertySetResponseSku sku,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("workspaceArmPath") String workspaceArmPath) {
         this.applicationGroupType = applicationGroupType;
         this.cloudPcResource = cloudPcResource;
         this.description = description;

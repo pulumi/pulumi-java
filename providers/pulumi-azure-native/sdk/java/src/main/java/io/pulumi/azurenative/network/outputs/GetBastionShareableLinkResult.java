@@ -24,10 +24,10 @@ public final class GetBastionShareableLinkResult {
      */
     private final @Nullable List<BastionShareableLinkResponse> value;
 
-    @OutputCustomType.Constructor({"nextLink","value"})
+    @OutputCustomType.Constructor
     private GetBastionShareableLinkResult(
-        @Nullable String nextLink,
-        @Nullable List<BastionShareableLinkResponse> value) {
+        @OutputCustomType.Parameter("nextLink") @Nullable String nextLink,
+        @OutputCustomType.Parameter("value") @Nullable List<BastionShareableLinkResponse> value) {
         this.nextLink = nextLink;
         this.value = value;
     }

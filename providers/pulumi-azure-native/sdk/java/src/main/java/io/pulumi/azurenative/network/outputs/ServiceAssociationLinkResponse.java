@@ -59,17 +59,17 @@ public final class ServiceAssociationLinkResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"allowDelete","etag","id","link","linkedResourceType","locations","name","provisioningState","type"})
+    @OutputCustomType.Constructor
     private ServiceAssociationLinkResponse(
-        @Nullable Boolean allowDelete,
-        String etag,
-        @Nullable String id,
-        @Nullable String link,
-        @Nullable String linkedResourceType,
-        @Nullable List<String> locations,
-        @Nullable String name,
-        String provisioningState,
-        String type) {
+        @OutputCustomType.Parameter("allowDelete") @Nullable Boolean allowDelete,
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("link") @Nullable String link,
+        @OutputCustomType.Parameter("linkedResourceType") @Nullable String linkedResourceType,
+        @OutputCustomType.Parameter("locations") @Nullable List<String> locations,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("type") String type) {
         this.allowDelete = allowDelete;
         this.etag = etag;
         this.id = id;

@@ -38,13 +38,13 @@ public final class NetworkInterfaceDnsSettingsResponse {
      */
     private final String internalFqdn;
 
-    @OutputCustomType.Constructor({"appliedDnsServers","dnsServers","internalDnsNameLabel","internalDomainNameSuffix","internalFqdn"})
+    @OutputCustomType.Constructor
     private NetworkInterfaceDnsSettingsResponse(
-        List<String> appliedDnsServers,
-        @Nullable List<String> dnsServers,
-        @Nullable String internalDnsNameLabel,
-        String internalDomainNameSuffix,
-        String internalFqdn) {
+        @OutputCustomType.Parameter("appliedDnsServers") List<String> appliedDnsServers,
+        @OutputCustomType.Parameter("dnsServers") @Nullable List<String> dnsServers,
+        @OutputCustomType.Parameter("internalDnsNameLabel") @Nullable String internalDnsNameLabel,
+        @OutputCustomType.Parameter("internalDomainNameSuffix") String internalDomainNameSuffix,
+        @OutputCustomType.Parameter("internalFqdn") String internalFqdn) {
         this.appliedDnsServers = appliedDnsServers;
         this.dnsServers = dnsServers;
         this.internalDnsNameLabel = internalDnsNameLabel;

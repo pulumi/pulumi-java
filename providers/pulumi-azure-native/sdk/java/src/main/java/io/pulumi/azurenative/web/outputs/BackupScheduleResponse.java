@@ -44,14 +44,14 @@ public final class BackupScheduleResponse {
      */
     private final @Nullable String startTime;
 
-    @OutputCustomType.Constructor({"frequencyInterval","frequencyUnit","keepAtLeastOneBackup","lastExecutionTime","retentionPeriodInDays","startTime"})
+    @OutputCustomType.Constructor
     private BackupScheduleResponse(
-        Integer frequencyInterval,
-        String frequencyUnit,
-        Boolean keepAtLeastOneBackup,
-        String lastExecutionTime,
-        Integer retentionPeriodInDays,
-        @Nullable String startTime) {
+        @OutputCustomType.Parameter("frequencyInterval") Integer frequencyInterval,
+        @OutputCustomType.Parameter("frequencyUnit") String frequencyUnit,
+        @OutputCustomType.Parameter("keepAtLeastOneBackup") Boolean keepAtLeastOneBackup,
+        @OutputCustomType.Parameter("lastExecutionTime") String lastExecutionTime,
+        @OutputCustomType.Parameter("retentionPeriodInDays") Integer retentionPeriodInDays,
+        @OutputCustomType.Parameter("startTime") @Nullable String startTime) {
         this.frequencyInterval = frequencyInterval;
         this.frequencyUnit = frequencyUnit;
         this.keepAtLeastOneBackup = keepAtLeastOneBackup;

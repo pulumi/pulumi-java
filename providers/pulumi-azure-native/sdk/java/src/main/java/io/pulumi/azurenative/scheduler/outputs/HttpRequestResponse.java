@@ -42,13 +42,13 @@ public final class HttpRequestResponse {
      */
     private final @Nullable String uri;
 
-    @OutputCustomType.Constructor({"authentication","body","headers","method","uri"})
+    @OutputCustomType.Constructor
     private HttpRequestResponse(
-        @Nullable Object authentication,
-        @Nullable String body,
-        @Nullable Map<String,String> headers,
-        @Nullable String method,
-        @Nullable String uri) {
+        @OutputCustomType.Parameter("authentication") @Nullable Object authentication,
+        @OutputCustomType.Parameter("body") @Nullable String body,
+        @OutputCustomType.Parameter("headers") @Nullable Map<String,String> headers,
+        @OutputCustomType.Parameter("method") @Nullable String method,
+        @OutputCustomType.Parameter("uri") @Nullable String uri) {
         this.authentication = authentication;
         this.body = body;
         this.headers = headers;

@@ -16,11 +16,11 @@ public final class ThrottlingRuleResponse {
     private final List<ThrottlingMetricResponse> metrics;
     private final @Nullable List<String> requiredFeatures;
 
-    @OutputCustomType.Constructor({"action","metrics","requiredFeatures"})
+    @OutputCustomType.Constructor
     private ThrottlingRuleResponse(
-        String action,
-        List<ThrottlingMetricResponse> metrics,
-        @Nullable List<String> requiredFeatures) {
+        @OutputCustomType.Parameter("action") String action,
+        @OutputCustomType.Parameter("metrics") List<ThrottlingMetricResponse> metrics,
+        @OutputCustomType.Parameter("requiredFeatures") @Nullable List<String> requiredFeatures) {
         this.action = action;
         this.metrics = metrics;
         this.requiredFeatures = requiredFeatures;

@@ -68,19 +68,19 @@ public final class ServerEndpointSyncStatusResponse {
      */
     private final ServerEndpointSyncSessionStatusResponse uploadStatus;
 
-    @OutputCustomType.Constructor({"combinedHealth","downloadActivity","downloadHealth","downloadStatus","lastUpdatedTimestamp","offlineDataTransferStatus","syncActivity","totalPersistentFilesNotSyncingCount","uploadActivity","uploadHealth","uploadStatus"})
+    @OutputCustomType.Constructor
     private ServerEndpointSyncStatusResponse(
-        String combinedHealth,
-        ServerEndpointSyncActivityStatusResponse downloadActivity,
-        String downloadHealth,
-        ServerEndpointSyncSessionStatusResponse downloadStatus,
-        String lastUpdatedTimestamp,
-        String offlineDataTransferStatus,
-        String syncActivity,
-        Double totalPersistentFilesNotSyncingCount,
-        ServerEndpointSyncActivityStatusResponse uploadActivity,
-        String uploadHealth,
-        ServerEndpointSyncSessionStatusResponse uploadStatus) {
+        @OutputCustomType.Parameter("combinedHealth") String combinedHealth,
+        @OutputCustomType.Parameter("downloadActivity") ServerEndpointSyncActivityStatusResponse downloadActivity,
+        @OutputCustomType.Parameter("downloadHealth") String downloadHealth,
+        @OutputCustomType.Parameter("downloadStatus") ServerEndpointSyncSessionStatusResponse downloadStatus,
+        @OutputCustomType.Parameter("lastUpdatedTimestamp") String lastUpdatedTimestamp,
+        @OutputCustomType.Parameter("offlineDataTransferStatus") String offlineDataTransferStatus,
+        @OutputCustomType.Parameter("syncActivity") String syncActivity,
+        @OutputCustomType.Parameter("totalPersistentFilesNotSyncingCount") Double totalPersistentFilesNotSyncingCount,
+        @OutputCustomType.Parameter("uploadActivity") ServerEndpointSyncActivityStatusResponse uploadActivity,
+        @OutputCustomType.Parameter("uploadHealth") String uploadHealth,
+        @OutputCustomType.Parameter("uploadStatus") ServerEndpointSyncSessionStatusResponse uploadStatus) {
         this.combinedHealth = combinedHealth;
         this.downloadActivity = downloadActivity;
         this.downloadHealth = downloadHealth;

@@ -69,19 +69,19 @@ public final class ConfigurationServiceGitRepositoryResponse {
      */
     private final @Nullable String username;
 
-    @OutputCustomType.Constructor({"hostKey","hostKeyAlgorithm","label","name","password","patterns","privateKey","searchPaths","strictHostKeyChecking","uri","username"})
+    @OutputCustomType.Constructor
     private ConfigurationServiceGitRepositoryResponse(
-        @Nullable String hostKey,
-        @Nullable String hostKeyAlgorithm,
-        String label,
-        String name,
-        @Nullable String password,
-        List<String> patterns,
-        @Nullable String privateKey,
-        @Nullable List<String> searchPaths,
-        @Nullable Boolean strictHostKeyChecking,
-        String uri,
-        @Nullable String username) {
+        @OutputCustomType.Parameter("hostKey") @Nullable String hostKey,
+        @OutputCustomType.Parameter("hostKeyAlgorithm") @Nullable String hostKeyAlgorithm,
+        @OutputCustomType.Parameter("label") String label,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("password") @Nullable String password,
+        @OutputCustomType.Parameter("patterns") List<String> patterns,
+        @OutputCustomType.Parameter("privateKey") @Nullable String privateKey,
+        @OutputCustomType.Parameter("searchPaths") @Nullable List<String> searchPaths,
+        @OutputCustomType.Parameter("strictHostKeyChecking") @Nullable Boolean strictHostKeyChecking,
+        @OutputCustomType.Parameter("uri") String uri,
+        @OutputCustomType.Parameter("username") @Nullable String username) {
         this.hostKey = hostKey;
         this.hostKeyAlgorithm = hostKeyAlgorithm;
         this.label = label;

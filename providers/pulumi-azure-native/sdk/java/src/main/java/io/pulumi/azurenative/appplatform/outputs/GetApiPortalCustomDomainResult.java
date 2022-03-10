@@ -37,13 +37,13 @@ public final class GetApiPortalCustomDomainResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"id","name","properties","systemData","type"})
+    @OutputCustomType.Constructor
     private GetApiPortalCustomDomainResult(
-        String id,
-        String name,
-        ApiPortalCustomDomainPropertiesResponse properties,
-        SystemDataResponse systemData,
-        String type) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("properties") ApiPortalCustomDomainPropertiesResponse properties,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("type") String type) {
         this.id = id;
         this.name = name;
         this.properties = properties;

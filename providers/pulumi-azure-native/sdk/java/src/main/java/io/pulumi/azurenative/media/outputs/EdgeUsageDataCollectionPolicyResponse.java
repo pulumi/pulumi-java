@@ -33,12 +33,12 @@ public final class EdgeUsageDataCollectionPolicyResponse {
      */
     private final @Nullable String maxAllowedUnreportedUsageDuration;
 
-    @OutputCustomType.Constructor({"dataCollectionFrequency","dataReportingFrequency","eventHubDetails","maxAllowedUnreportedUsageDuration"})
+    @OutputCustomType.Constructor
     private EdgeUsageDataCollectionPolicyResponse(
-        @Nullable String dataCollectionFrequency,
-        @Nullable String dataReportingFrequency,
-        @Nullable EdgeUsageDataEventHubResponse eventHubDetails,
-        @Nullable String maxAllowedUnreportedUsageDuration) {
+        @OutputCustomType.Parameter("dataCollectionFrequency") @Nullable String dataCollectionFrequency,
+        @OutputCustomType.Parameter("dataReportingFrequency") @Nullable String dataReportingFrequency,
+        @OutputCustomType.Parameter("eventHubDetails") @Nullable EdgeUsageDataEventHubResponse eventHubDetails,
+        @OutputCustomType.Parameter("maxAllowedUnreportedUsageDuration") @Nullable String maxAllowedUnreportedUsageDuration) {
         this.dataCollectionFrequency = dataCollectionFrequency;
         this.dataReportingFrequency = dataReportingFrequency;
         this.eventHubDetails = eventHubDetails;

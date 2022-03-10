@@ -37,13 +37,13 @@ public final class SkuResponse {
      */
     private final @Nullable String tier;
 
-    @OutputCustomType.Constructor({"capacity","description","family","name","tier"})
+    @OutputCustomType.Constructor
     private SkuResponse(
-        @Nullable String capacity,
-        @Nullable String description,
-        @Nullable String family,
-        String name,
-        @Nullable String tier) {
+        @OutputCustomType.Parameter("capacity") @Nullable String capacity,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("family") @Nullable String family,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("tier") @Nullable String tier) {
         this.capacity = capacity;
         this.description = description;
         this.family = family;

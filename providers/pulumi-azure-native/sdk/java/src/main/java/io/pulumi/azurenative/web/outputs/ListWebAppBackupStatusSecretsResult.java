@@ -102,25 +102,25 @@ public final class ListWebAppBackupStatusSecretsResult {
      */
     private final Double websiteSizeInBytes;
 
-    @OutputCustomType.Constructor({"backupId","blobName","correlationId","created","databases","finishedTimeStamp","id","kind","lastRestoreTimeStamp","log","name","scheduled","sizeInBytes","status","storageAccountUrl","type","websiteSizeInBytes"})
+    @OutputCustomType.Constructor
     private ListWebAppBackupStatusSecretsResult(
-        Integer backupId,
-        String blobName,
-        String correlationId,
-        String created,
-        List<DatabaseBackupSettingResponse> databases,
-        String finishedTimeStamp,
-        String id,
-        @Nullable String kind,
-        String lastRestoreTimeStamp,
-        String log,
-        String name,
-        Boolean scheduled,
-        Double sizeInBytes,
-        String status,
-        String storageAccountUrl,
-        String type,
-        Double websiteSizeInBytes) {
+        @OutputCustomType.Parameter("backupId") Integer backupId,
+        @OutputCustomType.Parameter("blobName") String blobName,
+        @OutputCustomType.Parameter("correlationId") String correlationId,
+        @OutputCustomType.Parameter("created") String created,
+        @OutputCustomType.Parameter("databases") List<DatabaseBackupSettingResponse> databases,
+        @OutputCustomType.Parameter("finishedTimeStamp") String finishedTimeStamp,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("kind") @Nullable String kind,
+        @OutputCustomType.Parameter("lastRestoreTimeStamp") String lastRestoreTimeStamp,
+        @OutputCustomType.Parameter("log") String log,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("scheduled") Boolean scheduled,
+        @OutputCustomType.Parameter("sizeInBytes") Double sizeInBytes,
+        @OutputCustomType.Parameter("status") String status,
+        @OutputCustomType.Parameter("storageAccountUrl") String storageAccountUrl,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("websiteSizeInBytes") Double websiteSizeInBytes) {
         this.backupId = backupId;
         this.blobName = blobName;
         this.correlationId = correlationId;

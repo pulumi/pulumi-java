@@ -27,11 +27,11 @@ public final class AdmCredentialResponse {
      */
     private final @Nullable String clientSecret;
 
-    @OutputCustomType.Constructor({"authTokenUrl","clientId","clientSecret"})
+    @OutputCustomType.Constructor
     private AdmCredentialResponse(
-        @Nullable String authTokenUrl,
-        @Nullable String clientId,
-        @Nullable String clientSecret) {
+        @OutputCustomType.Parameter("authTokenUrl") @Nullable String authTokenUrl,
+        @OutputCustomType.Parameter("clientId") @Nullable String clientId,
+        @OutputCustomType.Parameter("clientSecret") @Nullable String clientSecret) {
         this.authTokenUrl = authTokenUrl;
         this.clientId = clientId;
         this.clientSecret = clientSecret;

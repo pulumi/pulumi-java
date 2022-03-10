@@ -29,11 +29,11 @@ public final class UpgradePolicyResponse {
      */
     private final @Nullable RollingUpgradePolicyResponse rollingUpgradePolicy;
 
-    @OutputCustomType.Constructor({"automaticOSUpgradePolicy","mode","rollingUpgradePolicy"})
+    @OutputCustomType.Constructor
     private UpgradePolicyResponse(
-        @Nullable AutomaticOSUpgradePolicyResponse automaticOSUpgradePolicy,
-        @Nullable String mode,
-        @Nullable RollingUpgradePolicyResponse rollingUpgradePolicy) {
+        @OutputCustomType.Parameter("automaticOSUpgradePolicy") @Nullable AutomaticOSUpgradePolicyResponse automaticOSUpgradePolicy,
+        @OutputCustomType.Parameter("mode") @Nullable String mode,
+        @OutputCustomType.Parameter("rollingUpgradePolicy") @Nullable RollingUpgradePolicyResponse rollingUpgradePolicy) {
         this.automaticOSUpgradePolicy = automaticOSUpgradePolicy;
         this.mode = mode;
         this.rollingUpgradePolicy = rollingUpgradePolicy;

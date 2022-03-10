@@ -17,8 +17,8 @@ public final class VirtualHubIdResponse {
      */
     private final @Nullable String id;
 
-    @OutputCustomType.Constructor({"id"})
-    private VirtualHubIdResponse(@Nullable String id) {
+    @OutputCustomType.Constructor
+    private VirtualHubIdResponse(@OutputCustomType.Parameter("id") @Nullable String id) {
         this.id = id;
     }
 

@@ -17,8 +17,8 @@ public final class AssignedStandardItemResponse {
      */
     private final @Nullable String id;
 
-    @OutputCustomType.Constructor({"id"})
-    private AssignedStandardItemResponse(@Nullable String id) {
+    @OutputCustomType.Constructor
+    private AssignedStandardItemResponse(@OutputCustomType.Parameter("id") @Nullable String id) {
         this.id = id;
     }
 

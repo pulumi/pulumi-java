@@ -37,13 +37,13 @@ public final class IdentityProviderDetailsResponse {
      */
     private final @Nullable String tenantId;
 
-    @OutputCustomType.Constructor({"aadAuthority","applicationId","audience","objectId","tenantId"})
+    @OutputCustomType.Constructor
     private IdentityProviderDetailsResponse(
-        @Nullable String aadAuthority,
-        @Nullable String applicationId,
-        @Nullable String audience,
-        @Nullable String objectId,
-        @Nullable String tenantId) {
+        @OutputCustomType.Parameter("aadAuthority") @Nullable String aadAuthority,
+        @OutputCustomType.Parameter("applicationId") @Nullable String applicationId,
+        @OutputCustomType.Parameter("audience") @Nullable String audience,
+        @OutputCustomType.Parameter("objectId") @Nullable String objectId,
+        @OutputCustomType.Parameter("tenantId") @Nullable String tenantId) {
         this.aadAuthority = aadAuthority;
         this.applicationId = applicationId;
         this.audience = audience;

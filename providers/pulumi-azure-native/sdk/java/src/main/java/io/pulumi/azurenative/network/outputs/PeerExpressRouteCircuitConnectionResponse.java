@@ -68,19 +68,19 @@ public final class PeerExpressRouteCircuitConnectionResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"addressPrefix","authResourceGuid","circuitConnectionStatus","connectionName","etag","expressRouteCircuitPeering","id","name","peerExpressRouteCircuitPeering","provisioningState","type"})
+    @OutputCustomType.Constructor
     private PeerExpressRouteCircuitConnectionResponse(
-        @Nullable String addressPrefix,
-        @Nullable String authResourceGuid,
-        String circuitConnectionStatus,
-        @Nullable String connectionName,
-        String etag,
-        @Nullable SubResourceResponse expressRouteCircuitPeering,
-        @Nullable String id,
-        @Nullable String name,
-        @Nullable SubResourceResponse peerExpressRouteCircuitPeering,
-        String provisioningState,
-        String type) {
+        @OutputCustomType.Parameter("addressPrefix") @Nullable String addressPrefix,
+        @OutputCustomType.Parameter("authResourceGuid") @Nullable String authResourceGuid,
+        @OutputCustomType.Parameter("circuitConnectionStatus") String circuitConnectionStatus,
+        @OutputCustomType.Parameter("connectionName") @Nullable String connectionName,
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("expressRouteCircuitPeering") @Nullable SubResourceResponse expressRouteCircuitPeering,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("peerExpressRouteCircuitPeering") @Nullable SubResourceResponse peerExpressRouteCircuitPeering,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("type") String type) {
         this.addressPrefix = addressPrefix;
         this.authResourceGuid = authResourceGuid;
         this.circuitConnectionStatus = circuitConnectionStatus;

@@ -13,8 +13,8 @@ import javax.annotation.Nullable;
 public final class FrontEndConfigurationResponse {
     private final @Nullable String kind;
 
-    @OutputCustomType.Constructor({"kind"})
-    private FrontEndConfigurationResponse(@Nullable String kind) {
+    @OutputCustomType.Constructor
+    private FrontEndConfigurationResponse(@OutputCustomType.Parameter("kind") @Nullable String kind) {
         this.kind = kind;
     }
 

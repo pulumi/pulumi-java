@@ -25,10 +25,10 @@ public final class TwitterRegistrationResponse {
      */
     private final @Nullable String consumerSecretSettingName;
 
-    @OutputCustomType.Constructor({"consumerKey","consumerSecretSettingName"})
+    @OutputCustomType.Constructor
     private TwitterRegistrationResponse(
-        @Nullable String consumerKey,
-        @Nullable String consumerSecretSettingName) {
+        @OutputCustomType.Parameter("consumerKey") @Nullable String consumerKey,
+        @OutputCustomType.Parameter("consumerSecretSettingName") @Nullable String consumerSecretSettingName) {
         this.consumerKey = consumerKey;
         this.consumerSecretSettingName = consumerSecretSettingName;
     }

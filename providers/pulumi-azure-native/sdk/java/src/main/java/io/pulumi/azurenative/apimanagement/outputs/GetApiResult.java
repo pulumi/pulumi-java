@@ -122,29 +122,29 @@ public final class GetApiResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"apiRevision","apiRevisionDescription","apiType","apiVersion","apiVersionDescription","apiVersionSet","apiVersionSetId","authenticationSettings","description","displayName","id","isCurrent","isOnline","name","path","protocols","serviceUrl","sourceApiId","subscriptionKeyParameterNames","subscriptionRequired","type"})
+    @OutputCustomType.Constructor
     private GetApiResult(
-        @Nullable String apiRevision,
-        @Nullable String apiRevisionDescription,
-        @Nullable String apiType,
-        @Nullable String apiVersion,
-        @Nullable String apiVersionDescription,
-        @Nullable ApiVersionSetContractDetailsResponse apiVersionSet,
-        @Nullable String apiVersionSetId,
-        @Nullable AuthenticationSettingsContractResponse authenticationSettings,
-        @Nullable String description,
-        @Nullable String displayName,
-        String id,
-        @Nullable Boolean isCurrent,
-        Boolean isOnline,
-        String name,
-        String path,
-        @Nullable List<String> protocols,
-        @Nullable String serviceUrl,
-        @Nullable String sourceApiId,
-        @Nullable SubscriptionKeyParameterNamesContractResponse subscriptionKeyParameterNames,
-        @Nullable Boolean subscriptionRequired,
-        String type) {
+        @OutputCustomType.Parameter("apiRevision") @Nullable String apiRevision,
+        @OutputCustomType.Parameter("apiRevisionDescription") @Nullable String apiRevisionDescription,
+        @OutputCustomType.Parameter("apiType") @Nullable String apiType,
+        @OutputCustomType.Parameter("apiVersion") @Nullable String apiVersion,
+        @OutputCustomType.Parameter("apiVersionDescription") @Nullable String apiVersionDescription,
+        @OutputCustomType.Parameter("apiVersionSet") @Nullable ApiVersionSetContractDetailsResponse apiVersionSet,
+        @OutputCustomType.Parameter("apiVersionSetId") @Nullable String apiVersionSetId,
+        @OutputCustomType.Parameter("authenticationSettings") @Nullable AuthenticationSettingsContractResponse authenticationSettings,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("displayName") @Nullable String displayName,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("isCurrent") @Nullable Boolean isCurrent,
+        @OutputCustomType.Parameter("isOnline") Boolean isOnline,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("path") String path,
+        @OutputCustomType.Parameter("protocols") @Nullable List<String> protocols,
+        @OutputCustomType.Parameter("serviceUrl") @Nullable String serviceUrl,
+        @OutputCustomType.Parameter("sourceApiId") @Nullable String sourceApiId,
+        @OutputCustomType.Parameter("subscriptionKeyParameterNames") @Nullable SubscriptionKeyParameterNamesContractResponse subscriptionKeyParameterNames,
+        @OutputCustomType.Parameter("subscriptionRequired") @Nullable Boolean subscriptionRequired,
+        @OutputCustomType.Parameter("type") String type) {
         this.apiRevision = apiRevision;
         this.apiRevisionDescription = apiRevisionDescription;
         this.apiType = apiType;

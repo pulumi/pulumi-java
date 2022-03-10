@@ -63,18 +63,18 @@ public final class GetWorkloadNetworkPortMirroringResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"destination","direction","displayName","id","name","provisioningState","revision","source","status","type"})
+    @OutputCustomType.Constructor
     private GetWorkloadNetworkPortMirroringResult(
-        @Nullable String destination,
-        @Nullable String direction,
-        @Nullable String displayName,
-        String id,
-        String name,
-        String provisioningState,
-        @Nullable Double revision,
-        @Nullable String source,
-        String status,
-        String type) {
+        @OutputCustomType.Parameter("destination") @Nullable String destination,
+        @OutputCustomType.Parameter("direction") @Nullable String direction,
+        @OutputCustomType.Parameter("displayName") @Nullable String displayName,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("revision") @Nullable Double revision,
+        @OutputCustomType.Parameter("source") @Nullable String source,
+        @OutputCustomType.Parameter("status") String status,
+        @OutputCustomType.Parameter("type") String type) {
         this.destination = destination;
         this.direction = direction;
         this.displayName = displayName;

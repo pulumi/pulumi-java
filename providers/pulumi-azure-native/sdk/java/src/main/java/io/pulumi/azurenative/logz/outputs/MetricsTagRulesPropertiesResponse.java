@@ -32,12 +32,12 @@ public final class MetricsTagRulesPropertiesResponse {
      */
     private final SystemDataResponse systemData;
 
-    @OutputCustomType.Constructor({"metricRules","provisioningState","sendMetrics","systemData"})
+    @OutputCustomType.Constructor
     private MetricsTagRulesPropertiesResponse(
-        @Nullable List<MetricRulesResponse> metricRules,
-        String provisioningState,
-        @Nullable Boolean sendMetrics,
-        SystemDataResponse systemData) {
+        @OutputCustomType.Parameter("metricRules") @Nullable List<MetricRulesResponse> metricRules,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("sendMetrics") @Nullable Boolean sendMetrics,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData) {
         this.metricRules = metricRules;
         this.provisioningState = provisioningState;
         this.sendMetrics = sendMetrics;

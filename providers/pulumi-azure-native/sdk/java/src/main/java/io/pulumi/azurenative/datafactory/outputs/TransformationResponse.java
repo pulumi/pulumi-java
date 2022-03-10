@@ -40,13 +40,13 @@ public final class TransformationResponse {
      */
     private final String name;
 
-    @OutputCustomType.Constructor({"dataset","description","flowlet","linkedService","name"})
+    @OutputCustomType.Constructor
     private TransformationResponse(
-        @Nullable DatasetReferenceResponse dataset,
-        @Nullable String description,
-        @Nullable DataFlowReferenceResponse flowlet,
-        @Nullable LinkedServiceReferenceResponse linkedService,
-        String name) {
+        @OutputCustomType.Parameter("dataset") @Nullable DatasetReferenceResponse dataset,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("flowlet") @Nullable DataFlowReferenceResponse flowlet,
+        @OutputCustomType.Parameter("linkedService") @Nullable LinkedServiceReferenceResponse linkedService,
+        @OutputCustomType.Parameter("name") String name) {
         this.dataset = dataset;
         this.description = description;
         this.flowlet = flowlet;

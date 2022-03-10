@@ -48,14 +48,14 @@ public final class IndexingPolicyResponse {
      */
     private final @Nullable List<SpatialSpecResponse> spatialIndexes;
 
-    @OutputCustomType.Constructor({"automatic","compositeIndexes","excludedPaths","includedPaths","indexingMode","spatialIndexes"})
+    @OutputCustomType.Constructor
     private IndexingPolicyResponse(
-        @Nullable Boolean automatic,
-        @Nullable List<List<CompositePathResponse>> compositeIndexes,
-        @Nullable List<ExcludedPathResponse> excludedPaths,
-        @Nullable List<IncludedPathResponse> includedPaths,
-        @Nullable String indexingMode,
-        @Nullable List<SpatialSpecResponse> spatialIndexes) {
+        @OutputCustomType.Parameter("automatic") @Nullable Boolean automatic,
+        @OutputCustomType.Parameter("compositeIndexes") @Nullable List<List<CompositePathResponse>> compositeIndexes,
+        @OutputCustomType.Parameter("excludedPaths") @Nullable List<ExcludedPathResponse> excludedPaths,
+        @OutputCustomType.Parameter("includedPaths") @Nullable List<IncludedPathResponse> includedPaths,
+        @OutputCustomType.Parameter("indexingMode") @Nullable String indexingMode,
+        @OutputCustomType.Parameter("spatialIndexes") @Nullable List<SpatialSpecResponse> spatialIndexes) {
         this.automatic = automatic;
         this.compositeIndexes = compositeIndexes;
         this.excludedPaths = excludedPaths;

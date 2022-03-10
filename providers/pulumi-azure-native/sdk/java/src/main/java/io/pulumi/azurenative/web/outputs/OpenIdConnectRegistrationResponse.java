@@ -29,11 +29,11 @@ public final class OpenIdConnectRegistrationResponse {
      */
     private final @Nullable OpenIdConnectConfigResponse openIdConnectConfiguration;
 
-    @OutputCustomType.Constructor({"clientCredential","clientId","openIdConnectConfiguration"})
+    @OutputCustomType.Constructor
     private OpenIdConnectRegistrationResponse(
-        @Nullable OpenIdConnectClientCredentialResponse clientCredential,
-        @Nullable String clientId,
-        @Nullable OpenIdConnectConfigResponse openIdConnectConfiguration) {
+        @OutputCustomType.Parameter("clientCredential") @Nullable OpenIdConnectClientCredentialResponse clientCredential,
+        @OutputCustomType.Parameter("clientId") @Nullable String clientId,
+        @OutputCustomType.Parameter("openIdConnectConfiguration") @Nullable OpenIdConnectConfigResponse openIdConnectConfiguration) {
         this.clientCredential = clientCredential;
         this.clientId = clientId;
         this.openIdConnectConfiguration = openIdConnectConfiguration;

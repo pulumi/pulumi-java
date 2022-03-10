@@ -28,11 +28,11 @@ public final class SetValueResponse {
      */
     private final String value;
 
-    @OutputCustomType.Constructor({"isSecret","name","value"})
+    @OutputCustomType.Constructor
     private SetValueResponse(
-        @Nullable Boolean isSecret,
-        String name,
-        String value) {
+        @OutputCustomType.Parameter("isSecret") @Nullable Boolean isSecret,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("value") String value) {
         this.isSecret = isSecret;
         this.name = name;
         this.value = value;

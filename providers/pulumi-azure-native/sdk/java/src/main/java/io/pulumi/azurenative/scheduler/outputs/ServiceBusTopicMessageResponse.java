@@ -50,15 +50,15 @@ public final class ServiceBusTopicMessageResponse {
      */
     private final @Nullable String transportType;
 
-    @OutputCustomType.Constructor({"authentication","brokeredMessageProperties","customMessageProperties","message","namespace","topicPath","transportType"})
+    @OutputCustomType.Constructor
     private ServiceBusTopicMessageResponse(
-        @Nullable ServiceBusAuthenticationResponse authentication,
-        @Nullable ServiceBusBrokeredMessagePropertiesResponse brokeredMessageProperties,
-        @Nullable Map<String,String> customMessageProperties,
-        @Nullable String message,
-        @Nullable String namespace,
-        @Nullable String topicPath,
-        @Nullable String transportType) {
+        @OutputCustomType.Parameter("authentication") @Nullable ServiceBusAuthenticationResponse authentication,
+        @OutputCustomType.Parameter("brokeredMessageProperties") @Nullable ServiceBusBrokeredMessagePropertiesResponse brokeredMessageProperties,
+        @OutputCustomType.Parameter("customMessageProperties") @Nullable Map<String,String> customMessageProperties,
+        @OutputCustomType.Parameter("message") @Nullable String message,
+        @OutputCustomType.Parameter("namespace") @Nullable String namespace,
+        @OutputCustomType.Parameter("topicPath") @Nullable String topicPath,
+        @OutputCustomType.Parameter("transportType") @Nullable String transportType) {
         this.authentication = authentication;
         this.brokeredMessageProperties = brokeredMessageProperties;
         this.customMessageProperties = customMessageProperties;

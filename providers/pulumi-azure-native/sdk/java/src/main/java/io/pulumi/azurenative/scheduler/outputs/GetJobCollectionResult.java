@@ -44,14 +44,14 @@ public final class GetJobCollectionResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"id","location","name","properties","tags","type"})
+    @OutputCustomType.Constructor
     private GetJobCollectionResult(
-        String id,
-        @Nullable String location,
-        @Nullable String name,
-        JobCollectionPropertiesResponse properties,
-        @Nullable Map<String,String> tags,
-        String type) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("properties") JobCollectionPropertiesResponse properties,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type) {
         this.id = id;
         this.location = location;
         this.name = name;

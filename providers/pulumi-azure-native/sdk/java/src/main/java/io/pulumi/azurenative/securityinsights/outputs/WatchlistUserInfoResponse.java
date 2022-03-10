@@ -27,11 +27,11 @@ public final class WatchlistUserInfoResponse {
      */
     private final @Nullable String objectId;
 
-    @OutputCustomType.Constructor({"email","name","objectId"})
+    @OutputCustomType.Constructor
     private WatchlistUserInfoResponse(
-        String email,
-        String name,
-        @Nullable String objectId) {
+        @OutputCustomType.Parameter("email") String email,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("objectId") @Nullable String objectId) {
         this.email = email;
         this.name = name;
         this.objectId = objectId;

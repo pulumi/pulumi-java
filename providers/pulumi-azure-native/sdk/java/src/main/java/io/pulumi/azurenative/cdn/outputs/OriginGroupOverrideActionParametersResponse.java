@@ -17,10 +17,10 @@ public final class OriginGroupOverrideActionParametersResponse {
      */
     private final ResourceReferenceResponse originGroup;
 
-    @OutputCustomType.Constructor({"odataType","originGroup"})
+    @OutputCustomType.Constructor
     private OriginGroupOverrideActionParametersResponse(
-        String odataType,
-        ResourceReferenceResponse originGroup) {
+        @OutputCustomType.Parameter("odataType") String odataType,
+        @OutputCustomType.Parameter("originGroup") ResourceReferenceResponse originGroup) {
         this.odataType = odataType;
         this.originGroup = originGroup;
     }

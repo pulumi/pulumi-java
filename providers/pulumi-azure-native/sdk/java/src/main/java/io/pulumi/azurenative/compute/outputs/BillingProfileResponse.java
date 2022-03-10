@@ -17,8 +17,8 @@ public final class BillingProfileResponse {
      */
     private final @Nullable Double maxPrice;
 
-    @OutputCustomType.Constructor({"maxPrice"})
-    private BillingProfileResponse(@Nullable Double maxPrice) {
+    @OutputCustomType.Constructor
+    private BillingProfileResponse(@OutputCustomType.Parameter("maxPrice") @Nullable Double maxPrice) {
         this.maxPrice = maxPrice;
     }
 

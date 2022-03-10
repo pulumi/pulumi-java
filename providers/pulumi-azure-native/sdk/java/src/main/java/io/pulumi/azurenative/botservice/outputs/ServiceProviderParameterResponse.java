@@ -46,15 +46,15 @@ public final class ServiceProviderParameterResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"$default","description","displayName","helpUrl","metadata","name","type"})
+    @OutputCustomType.Constructor
     private ServiceProviderParameterResponse(
-        String $default,
-        String description,
-        String displayName,
-        String helpUrl,
-        ServiceProviderParameterResponseMetadata metadata,
-        String name,
-        String type) {
+        @OutputCustomType.Parameter("default") String $default,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("helpUrl") String helpUrl,
+        @OutputCustomType.Parameter("metadata") ServiceProviderParameterResponseMetadata metadata,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("type") String type) {
         this.$default = $default;
         this.description = description;
         this.displayName = displayName;

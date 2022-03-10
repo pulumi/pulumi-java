@@ -31,12 +31,12 @@ public final class GetIotDpsResourcePrivateEndpointConnectionResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"id","name","properties","type"})
+    @OutputCustomType.Constructor
     private GetIotDpsResourcePrivateEndpointConnectionResult(
-        String id,
-        String name,
-        PrivateEndpointConnectionPropertiesResponse properties,
-        String type) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("properties") PrivateEndpointConnectionPropertiesResponse properties,
+        @OutputCustomType.Parameter("type") String type) {
         this.id = id;
         this.name = name;
         this.properties = properties;

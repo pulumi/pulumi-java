@@ -25,11 +25,11 @@ public final class RemediationDeploymentSummaryResponse {
      */
     private final Integer totalDeployments;
 
-    @OutputCustomType.Constructor({"failedDeployments","successfulDeployments","totalDeployments"})
+    @OutputCustomType.Constructor
     private RemediationDeploymentSummaryResponse(
-        Integer failedDeployments,
-        Integer successfulDeployments,
-        Integer totalDeployments) {
+        @OutputCustomType.Parameter("failedDeployments") Integer failedDeployments,
+        @OutputCustomType.Parameter("successfulDeployments") Integer successfulDeployments,
+        @OutputCustomType.Parameter("totalDeployments") Integer totalDeployments) {
         this.failedDeployments = failedDeployments;
         this.successfulDeployments = successfulDeployments;
         this.totalDeployments = totalDeployments;

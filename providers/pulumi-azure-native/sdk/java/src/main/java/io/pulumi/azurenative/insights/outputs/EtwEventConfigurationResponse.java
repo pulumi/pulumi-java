@@ -16,11 +16,11 @@ public final class EtwEventConfigurationResponse {
     private final Integer id;
     private final String name;
 
-    @OutputCustomType.Constructor({"filter","id","name"})
+    @OutputCustomType.Constructor
     private EtwEventConfigurationResponse(
-        @Nullable String filter,
-        Integer id,
-        String name) {
+        @OutputCustomType.Parameter("filter") @Nullable String filter,
+        @OutputCustomType.Parameter("id") Integer id,
+        @OutputCustomType.Parameter("name") String name) {
         this.filter = filter;
         this.id = id;
         this.name = name;

@@ -30,12 +30,12 @@ public final class ModelEnvironmentDefinitionResponseResponsePython {
      */
     private final @Nullable Boolean userManagedDependencies;
 
-    @OutputCustomType.Constructor({"baseCondaEnvironment","condaDependencies","interpreterPath","userManagedDependencies"})
+    @OutputCustomType.Constructor
     private ModelEnvironmentDefinitionResponseResponsePython(
-        @Nullable String baseCondaEnvironment,
-        @Nullable Object condaDependencies,
-        @Nullable String interpreterPath,
-        @Nullable Boolean userManagedDependencies) {
+        @OutputCustomType.Parameter("baseCondaEnvironment") @Nullable String baseCondaEnvironment,
+        @OutputCustomType.Parameter("condaDependencies") @Nullable Object condaDependencies,
+        @OutputCustomType.Parameter("interpreterPath") @Nullable String interpreterPath,
+        @OutputCustomType.Parameter("userManagedDependencies") @Nullable Boolean userManagedDependencies) {
         this.baseCondaEnvironment = baseCondaEnvironment;
         this.condaDependencies = condaDependencies;
         this.interpreterPath = interpreterPath;

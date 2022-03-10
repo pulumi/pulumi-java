@@ -35,12 +35,12 @@ public final class NetworkRuleSetResponse {
      */
     private final @Nullable List<VirtualNetworkRuleResponse> virtualNetworkRules;
 
-    @OutputCustomType.Constructor({"bypass","defaultAction","ipRules","virtualNetworkRules"})
+    @OutputCustomType.Constructor
     private NetworkRuleSetResponse(
-        @Nullable String bypass,
-        @Nullable String defaultAction,
-        @Nullable List<IPRuleResponse> ipRules,
-        @Nullable List<VirtualNetworkRuleResponse> virtualNetworkRules) {
+        @OutputCustomType.Parameter("bypass") @Nullable String bypass,
+        @OutputCustomType.Parameter("defaultAction") @Nullable String defaultAction,
+        @OutputCustomType.Parameter("ipRules") @Nullable List<IPRuleResponse> ipRules,
+        @OutputCustomType.Parameter("virtualNetworkRules") @Nullable List<VirtualNetworkRuleResponse> virtualNetworkRules) {
         this.bypass = bypass;
         this.defaultAction = defaultAction;
         this.ipRules = ipRules;

@@ -23,10 +23,10 @@ public final class HealthAlertActionResponse {
      */
     private final @Nullable Map<String,String> webHookProperties;
 
-    @OutputCustomType.Constructor({"actionGroupId","webHookProperties"})
+    @OutputCustomType.Constructor
     private HealthAlertActionResponse(
-        @Nullable String actionGroupId,
-        @Nullable Map<String,String> webHookProperties) {
+        @OutputCustomType.Parameter("actionGroupId") @Nullable String actionGroupId,
+        @OutputCustomType.Parameter("webHookProperties") @Nullable Map<String,String> webHookProperties) {
         this.actionGroupId = actionGroupId;
         this.webHookProperties = webHookProperties;
     }

@@ -27,11 +27,11 @@ public final class InputDataBindingResponse {
      */
     private final @Nullable String pathOnCompute;
 
-    @OutputCustomType.Constructor({"dataId","mode","pathOnCompute"})
+    @OutputCustomType.Constructor
     private InputDataBindingResponse(
-        @Nullable String dataId,
-        @Nullable String mode,
-        @Nullable String pathOnCompute) {
+        @OutputCustomType.Parameter("dataId") @Nullable String dataId,
+        @OutputCustomType.Parameter("mode") @Nullable String mode,
+        @OutputCustomType.Parameter("pathOnCompute") @Nullable String pathOnCompute) {
         this.dataId = dataId;
         this.mode = mode;
         this.pathOnCompute = pathOnCompute;

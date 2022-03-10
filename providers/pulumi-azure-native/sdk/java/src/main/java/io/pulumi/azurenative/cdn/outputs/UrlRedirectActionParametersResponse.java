@@ -43,15 +43,15 @@ public final class UrlRedirectActionParametersResponse {
      */
     private final String redirectType;
 
-    @OutputCustomType.Constructor({"customFragment","customHostname","customPath","customQueryString","destinationProtocol","odataType","redirectType"})
+    @OutputCustomType.Constructor
     private UrlRedirectActionParametersResponse(
-        @Nullable String customFragment,
-        @Nullable String customHostname,
-        @Nullable String customPath,
-        @Nullable String customQueryString,
-        @Nullable String destinationProtocol,
-        String odataType,
-        String redirectType) {
+        @OutputCustomType.Parameter("customFragment") @Nullable String customFragment,
+        @OutputCustomType.Parameter("customHostname") @Nullable String customHostname,
+        @OutputCustomType.Parameter("customPath") @Nullable String customPath,
+        @OutputCustomType.Parameter("customQueryString") @Nullable String customQueryString,
+        @OutputCustomType.Parameter("destinationProtocol") @Nullable String destinationProtocol,
+        @OutputCustomType.Parameter("odataType") String odataType,
+        @OutputCustomType.Parameter("redirectType") String redirectType) {
         this.customFragment = customFragment;
         this.customHostname = customHostname;
         this.customPath = customPath;

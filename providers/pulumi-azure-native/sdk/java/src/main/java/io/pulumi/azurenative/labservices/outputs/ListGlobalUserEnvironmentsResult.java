@@ -17,8 +17,8 @@ public final class ListGlobalUserEnvironmentsResult {
      */
     private final @Nullable List<EnvironmentDetailsResponse> environments;
 
-    @OutputCustomType.Constructor({"environments"})
-    private ListGlobalUserEnvironmentsResult(@Nullable List<EnvironmentDetailsResponse> environments) {
+    @OutputCustomType.Constructor
+    private ListGlobalUserEnvironmentsResult(@OutputCustomType.Parameter("environments") @Nullable List<EnvironmentDetailsResponse> environments) {
         this.environments = environments;
     }
 

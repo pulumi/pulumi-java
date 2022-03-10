@@ -41,14 +41,14 @@ public final class GetIntegrationRuntimeConnectionInfoResult {
      */
     private final String version;
 
-    @OutputCustomType.Constructor({"hostServiceUri","identityCertThumbprint","isIdentityCertExprired","publicKey","serviceToken","version"})
+    @OutputCustomType.Constructor
     private GetIntegrationRuntimeConnectionInfoResult(
-        String hostServiceUri,
-        String identityCertThumbprint,
-        Boolean isIdentityCertExprired,
-        String publicKey,
-        String serviceToken,
-        String version) {
+        @OutputCustomType.Parameter("hostServiceUri") String hostServiceUri,
+        @OutputCustomType.Parameter("identityCertThumbprint") String identityCertThumbprint,
+        @OutputCustomType.Parameter("isIdentityCertExprired") Boolean isIdentityCertExprired,
+        @OutputCustomType.Parameter("publicKey") String publicKey,
+        @OutputCustomType.Parameter("serviceToken") String serviceToken,
+        @OutputCustomType.Parameter("version") String version) {
         this.hostServiceUri = hostServiceUri;
         this.identityCertThumbprint = identityCertThumbprint;
         this.isIdentityCertExprired = isIdentityCertExprired;

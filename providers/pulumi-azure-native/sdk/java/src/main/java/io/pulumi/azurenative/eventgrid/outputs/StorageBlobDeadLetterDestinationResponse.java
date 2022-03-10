@@ -28,11 +28,11 @@ public final class StorageBlobDeadLetterDestinationResponse {
      */
     private final @Nullable String resourceId;
 
-    @OutputCustomType.Constructor({"blobContainerName","endpointType","resourceId"})
+    @OutputCustomType.Constructor
     private StorageBlobDeadLetterDestinationResponse(
-        @Nullable String blobContainerName,
-        String endpointType,
-        @Nullable String resourceId) {
+        @OutputCustomType.Parameter("blobContainerName") @Nullable String blobContainerName,
+        @OutputCustomType.Parameter("endpointType") String endpointType,
+        @OutputCustomType.Parameter("resourceId") @Nullable String resourceId) {
         this.blobContainerName = blobContainerName;
         this.endpointType = endpointType;
         this.resourceId = resourceId;

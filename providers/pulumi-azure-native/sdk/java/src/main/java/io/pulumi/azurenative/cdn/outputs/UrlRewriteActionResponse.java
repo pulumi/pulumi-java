@@ -22,10 +22,10 @@ public final class UrlRewriteActionResponse {
      */
     private final UrlRewriteActionParametersResponse parameters;
 
-    @OutputCustomType.Constructor({"name","parameters"})
+    @OutputCustomType.Constructor
     private UrlRewriteActionResponse(
-        String name,
-        UrlRewriteActionParametersResponse parameters) {
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("parameters") UrlRewriteActionParametersResponse parameters) {
         this.name = name;
         this.parameters = parameters;
     }

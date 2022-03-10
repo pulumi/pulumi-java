@@ -57,17 +57,17 @@ public final class GetDataMaskingPolicyResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"applicationPrincipals","dataMaskingState","exemptPrincipals","id","kind","location","maskingLevel","name","type"})
+    @OutputCustomType.Constructor
     private GetDataMaskingPolicyResult(
-        String applicationPrincipals,
-        String dataMaskingState,
-        @Nullable String exemptPrincipals,
-        String id,
-        String kind,
-        String location,
-        String maskingLevel,
-        String name,
-        String type) {
+        @OutputCustomType.Parameter("applicationPrincipals") String applicationPrincipals,
+        @OutputCustomType.Parameter("dataMaskingState") String dataMaskingState,
+        @OutputCustomType.Parameter("exemptPrincipals") @Nullable String exemptPrincipals,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("maskingLevel") String maskingLevel,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("type") String type) {
         this.applicationPrincipals = applicationPrincipals;
         this.dataMaskingState = dataMaskingState;
         this.exemptPrincipals = exemptPrincipals;

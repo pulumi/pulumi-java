@@ -30,11 +30,11 @@ public final class AzureWorkloadContainerExtendedInfoResponse {
      */
     private final @Nullable List<DistributedNodesInfoResponse> nodesList;
 
-    @OutputCustomType.Constructor({"hostServerName","inquiryInfo","nodesList"})
+    @OutputCustomType.Constructor
     private AzureWorkloadContainerExtendedInfoResponse(
-        @Nullable String hostServerName,
-        @Nullable InquiryInfoResponse inquiryInfo,
-        @Nullable List<DistributedNodesInfoResponse> nodesList) {
+        @OutputCustomType.Parameter("hostServerName") @Nullable String hostServerName,
+        @OutputCustomType.Parameter("inquiryInfo") @Nullable InquiryInfoResponse inquiryInfo,
+        @OutputCustomType.Parameter("nodesList") @Nullable List<DistributedNodesInfoResponse> nodesList) {
         this.hostServerName = hostServerName;
         this.inquiryInfo = inquiryInfo;
         this.nodesList = nodesList;

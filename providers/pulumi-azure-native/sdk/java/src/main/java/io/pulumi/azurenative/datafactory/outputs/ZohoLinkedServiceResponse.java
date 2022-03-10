@@ -81,20 +81,20 @@ public final class ZohoLinkedServiceResponse {
      */
     private final @Nullable Object usePeerVerification;
 
-    @OutputCustomType.Constructor({"accessToken","annotations","connectVia","connectionProperties","description","encryptedCredential","endpoint","parameters","type","useEncryptedEndpoints","useHostVerification","usePeerVerification"})
+    @OutputCustomType.Constructor
     private ZohoLinkedServiceResponse(
-        @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> accessToken,
-        @Nullable List<Object> annotations,
-        @Nullable IntegrationRuntimeReferenceResponse connectVia,
-        @Nullable Object connectionProperties,
-        @Nullable String description,
-        @Nullable Object encryptedCredential,
-        @Nullable Object endpoint,
-        @Nullable Map<String,ParameterSpecificationResponse> parameters,
-        String type,
-        @Nullable Object useEncryptedEndpoints,
-        @Nullable Object useHostVerification,
-        @Nullable Object usePeerVerification) {
+        @OutputCustomType.Parameter("accessToken") @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> accessToken,
+        @OutputCustomType.Parameter("annotations") @Nullable List<Object> annotations,
+        @OutputCustomType.Parameter("connectVia") @Nullable IntegrationRuntimeReferenceResponse connectVia,
+        @OutputCustomType.Parameter("connectionProperties") @Nullable Object connectionProperties,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("encryptedCredential") @Nullable Object encryptedCredential,
+        @OutputCustomType.Parameter("endpoint") @Nullable Object endpoint,
+        @OutputCustomType.Parameter("parameters") @Nullable Map<String,ParameterSpecificationResponse> parameters,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("useEncryptedEndpoints") @Nullable Object useEncryptedEndpoints,
+        @OutputCustomType.Parameter("useHostVerification") @Nullable Object useHostVerification,
+        @OutputCustomType.Parameter("usePeerVerification") @Nullable Object usePeerVerification) {
         this.accessToken = accessToken;
         this.annotations = annotations;
         this.connectVia = connectVia;

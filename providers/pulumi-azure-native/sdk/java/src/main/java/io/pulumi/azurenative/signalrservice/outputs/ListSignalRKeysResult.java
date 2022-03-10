@@ -32,12 +32,12 @@ public final class ListSignalRKeysResult {
      */
     private final @Nullable String secondaryKey;
 
-    @OutputCustomType.Constructor({"primaryConnectionString","primaryKey","secondaryConnectionString","secondaryKey"})
+    @OutputCustomType.Constructor
     private ListSignalRKeysResult(
-        @Nullable String primaryConnectionString,
-        @Nullable String primaryKey,
-        @Nullable String secondaryConnectionString,
-        @Nullable String secondaryKey) {
+        @OutputCustomType.Parameter("primaryConnectionString") @Nullable String primaryConnectionString,
+        @OutputCustomType.Parameter("primaryKey") @Nullable String primaryKey,
+        @OutputCustomType.Parameter("secondaryConnectionString") @Nullable String secondaryConnectionString,
+        @OutputCustomType.Parameter("secondaryKey") @Nullable String secondaryKey) {
         this.primaryConnectionString = primaryConnectionString;
         this.primaryKey = primaryKey;
         this.secondaryConnectionString = secondaryConnectionString;

@@ -30,11 +30,11 @@ public final class VirtualMachineScaleSetStorageProfileResponse {
      */
     private final @Nullable VirtualMachineScaleSetOSDiskResponse osDisk;
 
-    @OutputCustomType.Constructor({"dataDisks","imageReference","osDisk"})
+    @OutputCustomType.Constructor
     private VirtualMachineScaleSetStorageProfileResponse(
-        @Nullable List<VirtualMachineScaleSetDataDiskResponse> dataDisks,
-        @Nullable ImageReferenceResponse imageReference,
-        @Nullable VirtualMachineScaleSetOSDiskResponse osDisk) {
+        @OutputCustomType.Parameter("dataDisks") @Nullable List<VirtualMachineScaleSetDataDiskResponse> dataDisks,
+        @OutputCustomType.Parameter("imageReference") @Nullable ImageReferenceResponse imageReference,
+        @OutputCustomType.Parameter("osDisk") @Nullable VirtualMachineScaleSetOSDiskResponse osDisk) {
         this.dataDisks = dataDisks;
         this.imageReference = imageReference;
         this.osDisk = osDisk;

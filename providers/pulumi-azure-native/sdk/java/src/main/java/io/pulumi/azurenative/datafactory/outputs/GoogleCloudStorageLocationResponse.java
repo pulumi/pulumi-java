@@ -39,13 +39,13 @@ public final class GoogleCloudStorageLocationResponse {
      */
     private final @Nullable Object version;
 
-    @OutputCustomType.Constructor({"bucketName","fileName","folderPath","type","version"})
+    @OutputCustomType.Constructor
     private GoogleCloudStorageLocationResponse(
-        @Nullable Object bucketName,
-        @Nullable Object fileName,
-        @Nullable Object folderPath,
-        String type,
-        @Nullable Object version) {
+        @OutputCustomType.Parameter("bucketName") @Nullable Object bucketName,
+        @OutputCustomType.Parameter("fileName") @Nullable Object fileName,
+        @OutputCustomType.Parameter("folderPath") @Nullable Object folderPath,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("version") @Nullable Object version) {
         this.bucketName = bucketName;
         this.fileName = fileName;
         this.folderPath = folderPath;

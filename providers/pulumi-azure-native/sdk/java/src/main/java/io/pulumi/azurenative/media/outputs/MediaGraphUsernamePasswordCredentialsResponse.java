@@ -26,11 +26,11 @@ public final class MediaGraphUsernamePasswordCredentialsResponse {
      */
     private final String username;
 
-    @OutputCustomType.Constructor({"odataType","password","username"})
+    @OutputCustomType.Constructor
     private MediaGraphUsernamePasswordCredentialsResponse(
-        String odataType,
-        String password,
-        String username) {
+        @OutputCustomType.Parameter("odataType") String odataType,
+        @OutputCustomType.Parameter("password") String password,
+        @OutputCustomType.Parameter("username") String username) {
         this.odataType = odataType;
         this.password = password;
         this.username = username;

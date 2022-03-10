@@ -27,11 +27,11 @@ public final class ListManagerPublicEncryptionKeyResult {
      */
     private final @Nullable String valueCertificateThumbprint;
 
-    @OutputCustomType.Constructor({"encryptionAlgorithm","value","valueCertificateThumbprint"})
+    @OutputCustomType.Constructor
     private ListManagerPublicEncryptionKeyResult(
-        String encryptionAlgorithm,
-        String value,
-        @Nullable String valueCertificateThumbprint) {
+        @OutputCustomType.Parameter("encryptionAlgorithm") String encryptionAlgorithm,
+        @OutputCustomType.Parameter("value") String value,
+        @OutputCustomType.Parameter("valueCertificateThumbprint") @Nullable String valueCertificateThumbprint) {
         this.encryptionAlgorithm = encryptionAlgorithm;
         this.value = value;
         this.valueCertificateThumbprint = valueCertificateThumbprint;

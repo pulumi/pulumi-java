@@ -63,18 +63,18 @@ public final class ApplicationGatewayFrontendIPConfigurationResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"etag","id","name","privateIPAddress","privateIPAllocationMethod","privateLinkConfiguration","provisioningState","publicIPAddress","subnet","type"})
+    @OutputCustomType.Constructor
     private ApplicationGatewayFrontendIPConfigurationResponse(
-        String etag,
-        @Nullable String id,
-        @Nullable String name,
-        @Nullable String privateIPAddress,
-        @Nullable String privateIPAllocationMethod,
-        @Nullable SubResourceResponse privateLinkConfiguration,
-        String provisioningState,
-        @Nullable SubResourceResponse publicIPAddress,
-        @Nullable SubResourceResponse subnet,
-        String type) {
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("privateIPAddress") @Nullable String privateIPAddress,
+        @OutputCustomType.Parameter("privateIPAllocationMethod") @Nullable String privateIPAllocationMethod,
+        @OutputCustomType.Parameter("privateLinkConfiguration") @Nullable SubResourceResponse privateLinkConfiguration,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("publicIPAddress") @Nullable SubResourceResponse publicIPAddress,
+        @OutputCustomType.Parameter("subnet") @Nullable SubResourceResponse subnet,
+        @OutputCustomType.Parameter("type") String type) {
         this.etag = etag;
         this.id = id;
         this.name = name;

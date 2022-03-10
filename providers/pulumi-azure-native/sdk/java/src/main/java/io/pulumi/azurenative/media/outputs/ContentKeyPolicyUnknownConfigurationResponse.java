@@ -16,8 +16,8 @@ public final class ContentKeyPolicyUnknownConfigurationResponse {
      */
     private final String odataType;
 
-    @OutputCustomType.Constructor({"odataType"})
-    private ContentKeyPolicyUnknownConfigurationResponse(String odataType) {
+    @OutputCustomType.Constructor
+    private ContentKeyPolicyUnknownConfigurationResponse(@OutputCustomType.Parameter("odataType") String odataType) {
         this.odataType = odataType;
     }
 

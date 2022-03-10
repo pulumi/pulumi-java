@@ -15,10 +15,10 @@ public final class NotebookPreparationErrorResponse {
     private final @Nullable String errorMessage;
     private final @Nullable Integer statusCode;
 
-    @OutputCustomType.Constructor({"errorMessage","statusCode"})
+    @OutputCustomType.Constructor
     private NotebookPreparationErrorResponse(
-        @Nullable String errorMessage,
-        @Nullable Integer statusCode) {
+        @OutputCustomType.Parameter("errorMessage") @Nullable String errorMessage,
+        @OutputCustomType.Parameter("statusCode") @Nullable Integer statusCode) {
         this.errorMessage = errorMessage;
         this.statusCode = statusCode;
     }

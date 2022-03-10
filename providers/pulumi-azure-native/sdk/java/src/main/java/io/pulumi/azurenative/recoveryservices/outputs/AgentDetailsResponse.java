@@ -37,13 +37,13 @@ public final class AgentDetailsResponse {
      */
     private final String machineId;
 
-    @OutputCustomType.Constructor({"agentId","biosId","disks","fqdn","machineId"})
+    @OutputCustomType.Constructor
     private AgentDetailsResponse(
-        String agentId,
-        String biosId,
-        List<AgentDiskDetailsResponse> disks,
-        String fqdn,
-        String machineId) {
+        @OutputCustomType.Parameter("agentId") String agentId,
+        @OutputCustomType.Parameter("biosId") String biosId,
+        @OutputCustomType.Parameter("disks") List<AgentDiskDetailsResponse> disks,
+        @OutputCustomType.Parameter("fqdn") String fqdn,
+        @OutputCustomType.Parameter("machineId") String machineId) {
         this.agentId = agentId;
         this.biosId = biosId;
         this.disks = disks;

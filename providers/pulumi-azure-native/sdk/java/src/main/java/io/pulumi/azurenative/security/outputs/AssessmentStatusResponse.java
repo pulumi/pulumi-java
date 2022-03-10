@@ -27,11 +27,11 @@ public final class AssessmentStatusResponse {
      */
     private final @Nullable String description;
 
-    @OutputCustomType.Constructor({"cause","code","description"})
+    @OutputCustomType.Constructor
     private AssessmentStatusResponse(
-        @Nullable String cause,
-        String code,
-        @Nullable String description) {
+        @OutputCustomType.Parameter("cause") @Nullable String cause,
+        @OutputCustomType.Parameter("code") String code,
+        @OutputCustomType.Parameter("description") @Nullable String description) {
         this.cause = cause;
         this.code = code;
         this.description = description;

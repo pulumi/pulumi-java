@@ -21,10 +21,10 @@ public final class AzureResourceDetailsResponse {
      */
     private final String source;
 
-    @OutputCustomType.Constructor({"id","source"})
+    @OutputCustomType.Constructor
     private AzureResourceDetailsResponse(
-        String id,
-        String source) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("source") String source) {
         this.id = id;
         this.source = source;
     }

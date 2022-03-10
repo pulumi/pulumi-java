@@ -26,11 +26,11 @@ public final class ClientCertificateCommonNameResponse {
      */
     private final Boolean isAdmin;
 
-    @OutputCustomType.Constructor({"certificateCommonName","certificateIssuerThumbprint","isAdmin"})
+    @OutputCustomType.Constructor
     private ClientCertificateCommonNameResponse(
-        String certificateCommonName,
-        String certificateIssuerThumbprint,
-        Boolean isAdmin) {
+        @OutputCustomType.Parameter("certificateCommonName") String certificateCommonName,
+        @OutputCustomType.Parameter("certificateIssuerThumbprint") String certificateIssuerThumbprint,
+        @OutputCustomType.Parameter("isAdmin") Boolean isAdmin) {
         this.certificateCommonName = certificateCommonName;
         this.certificateIssuerThumbprint = certificateIssuerThumbprint;
         this.isAdmin = isAdmin;

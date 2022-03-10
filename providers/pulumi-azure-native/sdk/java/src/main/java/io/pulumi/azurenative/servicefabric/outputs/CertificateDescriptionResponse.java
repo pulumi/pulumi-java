@@ -27,11 +27,11 @@ public final class CertificateDescriptionResponse {
      */
     private final @Nullable String x509StoreName;
 
-    @OutputCustomType.Constructor({"thumbprint","thumbprintSecondary","x509StoreName"})
+    @OutputCustomType.Constructor
     private CertificateDescriptionResponse(
-        String thumbprint,
-        @Nullable String thumbprintSecondary,
-        @Nullable String x509StoreName) {
+        @OutputCustomType.Parameter("thumbprint") String thumbprint,
+        @OutputCustomType.Parameter("thumbprintSecondary") @Nullable String thumbprintSecondary,
+        @OutputCustomType.Parameter("x509StoreName") @Nullable String x509StoreName) {
         this.thumbprint = thumbprint;
         this.thumbprintSecondary = thumbprintSecondary;
         this.x509StoreName = x509StoreName;

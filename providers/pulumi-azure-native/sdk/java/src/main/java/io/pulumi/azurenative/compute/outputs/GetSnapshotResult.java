@@ -142,32 +142,32 @@ public final class GetSnapshotResult {
      */
     private final String uniqueId;
 
-    @OutputCustomType.Constructor({"creationData","diskAccessId","diskSizeBytes","diskSizeGB","diskState","encryption","encryptionSettingsCollection","extendedLocation","hyperVGeneration","id","incremental","location","managedBy","name","networkAccessPolicy","osType","provisioningState","purchasePlan","sku","supportsHibernation","tags","timeCreated","type","uniqueId"})
+    @OutputCustomType.Constructor
     private GetSnapshotResult(
-        CreationDataResponse creationData,
-        @Nullable String diskAccessId,
-        Double diskSizeBytes,
-        @Nullable Integer diskSizeGB,
-        String diskState,
-        @Nullable EncryptionResponse encryption,
-        @Nullable EncryptionSettingsCollectionResponse encryptionSettingsCollection,
-        @Nullable ExtendedLocationResponse extendedLocation,
-        @Nullable String hyperVGeneration,
-        String id,
-        @Nullable Boolean incremental,
-        String location,
-        String managedBy,
-        String name,
-        @Nullable String networkAccessPolicy,
-        @Nullable String osType,
-        String provisioningState,
-        @Nullable PurchasePlanResponse purchasePlan,
-        @Nullable SnapshotSkuResponse sku,
-        @Nullable Boolean supportsHibernation,
-        @Nullable Map<String,String> tags,
-        String timeCreated,
-        String type,
-        String uniqueId) {
+        @OutputCustomType.Parameter("creationData") CreationDataResponse creationData,
+        @OutputCustomType.Parameter("diskAccessId") @Nullable String diskAccessId,
+        @OutputCustomType.Parameter("diskSizeBytes") Double diskSizeBytes,
+        @OutputCustomType.Parameter("diskSizeGB") @Nullable Integer diskSizeGB,
+        @OutputCustomType.Parameter("diskState") String diskState,
+        @OutputCustomType.Parameter("encryption") @Nullable EncryptionResponse encryption,
+        @OutputCustomType.Parameter("encryptionSettingsCollection") @Nullable EncryptionSettingsCollectionResponse encryptionSettingsCollection,
+        @OutputCustomType.Parameter("extendedLocation") @Nullable ExtendedLocationResponse extendedLocation,
+        @OutputCustomType.Parameter("hyperVGeneration") @Nullable String hyperVGeneration,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("incremental") @Nullable Boolean incremental,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("managedBy") String managedBy,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("networkAccessPolicy") @Nullable String networkAccessPolicy,
+        @OutputCustomType.Parameter("osType") @Nullable String osType,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("purchasePlan") @Nullable PurchasePlanResponse purchasePlan,
+        @OutputCustomType.Parameter("sku") @Nullable SnapshotSkuResponse sku,
+        @OutputCustomType.Parameter("supportsHibernation") @Nullable Boolean supportsHibernation,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("timeCreated") String timeCreated,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("uniqueId") String uniqueId) {
         this.creationData = creationData;
         this.diskAccessId = diskAccessId;
         this.diskSizeBytes = diskSizeBytes;

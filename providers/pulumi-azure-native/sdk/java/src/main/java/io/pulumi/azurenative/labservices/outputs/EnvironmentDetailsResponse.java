@@ -57,17 +57,17 @@ public final class EnvironmentDetailsResponse {
      */
     private final VirtualMachineDetailsResponse virtualMachineDetails;
 
-    @OutputCustomType.Constructor({"description","environmentState","id","latestOperationResult","name","passwordLastReset","provisioningState","totalUsage","virtualMachineDetails"})
+    @OutputCustomType.Constructor
     private EnvironmentDetailsResponse(
-        String description,
-        String environmentState,
-        String id,
-        LatestOperationResultResponse latestOperationResult,
-        String name,
-        String passwordLastReset,
-        String provisioningState,
-        String totalUsage,
-        VirtualMachineDetailsResponse virtualMachineDetails) {
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("environmentState") String environmentState,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("latestOperationResult") LatestOperationResultResponse latestOperationResult,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("passwordLastReset") String passwordLastReset,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("totalUsage") String totalUsage,
+        @OutputCustomType.Parameter("virtualMachineDetails") VirtualMachineDetailsResponse virtualMachineDetails) {
         this.description = description;
         this.environmentState = environmentState;
         this.id = id;

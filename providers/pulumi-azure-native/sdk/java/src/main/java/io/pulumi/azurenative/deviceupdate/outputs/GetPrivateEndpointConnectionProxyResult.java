@@ -54,16 +54,16 @@ public final class GetPrivateEndpointConnectionProxyResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"eTag","id","name","provisioningState","remotePrivateEndpoint","status","systemData","type"})
+    @OutputCustomType.Constructor
     private GetPrivateEndpointConnectionProxyResult(
-        String eTag,
-        String id,
-        String name,
-        String provisioningState,
-        @Nullable RemotePrivateEndpointResponse remotePrivateEndpoint,
-        @Nullable String status,
-        SystemDataResponse systemData,
-        String type) {
+        @OutputCustomType.Parameter("eTag") String eTag,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("remotePrivateEndpoint") @Nullable RemotePrivateEndpointResponse remotePrivateEndpoint,
+        @OutputCustomType.Parameter("status") @Nullable String status,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("type") String type) {
         this.eTag = eTag;
         this.id = id;
         this.name = name;

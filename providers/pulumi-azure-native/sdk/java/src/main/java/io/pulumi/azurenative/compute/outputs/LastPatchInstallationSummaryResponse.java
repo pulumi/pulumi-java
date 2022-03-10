@@ -68,19 +68,19 @@ public final class LastPatchInstallationSummaryResponse {
      */
     private final String status;
 
-    @OutputCustomType.Constructor({"error","excludedPatchCount","failedPatchCount","installationActivityId","installedPatchCount","lastModifiedTime","maintenanceWindowExceeded","notSelectedPatchCount","pendingPatchCount","startTime","status"})
+    @OutputCustomType.Constructor
     private LastPatchInstallationSummaryResponse(
-        ApiErrorResponse error,
-        Integer excludedPatchCount,
-        Integer failedPatchCount,
-        String installationActivityId,
-        Integer installedPatchCount,
-        String lastModifiedTime,
-        Boolean maintenanceWindowExceeded,
-        Integer notSelectedPatchCount,
-        Integer pendingPatchCount,
-        String startTime,
-        String status) {
+        @OutputCustomType.Parameter("error") ApiErrorResponse error,
+        @OutputCustomType.Parameter("excludedPatchCount") Integer excludedPatchCount,
+        @OutputCustomType.Parameter("failedPatchCount") Integer failedPatchCount,
+        @OutputCustomType.Parameter("installationActivityId") String installationActivityId,
+        @OutputCustomType.Parameter("installedPatchCount") Integer installedPatchCount,
+        @OutputCustomType.Parameter("lastModifiedTime") String lastModifiedTime,
+        @OutputCustomType.Parameter("maintenanceWindowExceeded") Boolean maintenanceWindowExceeded,
+        @OutputCustomType.Parameter("notSelectedPatchCount") Integer notSelectedPatchCount,
+        @OutputCustomType.Parameter("pendingPatchCount") Integer pendingPatchCount,
+        @OutputCustomType.Parameter("startTime") String startTime,
+        @OutputCustomType.Parameter("status") String status) {
         this.error = error;
         this.excludedPatchCount = excludedPatchCount;
         this.failedPatchCount = failedPatchCount;

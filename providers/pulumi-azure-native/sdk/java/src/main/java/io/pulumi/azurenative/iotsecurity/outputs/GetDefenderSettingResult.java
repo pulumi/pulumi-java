@@ -53,16 +53,16 @@ public final class GetDefenderSettingResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"deviceQuota","evaluationEndTime","id","mdeIntegration","name","onboardingKind","sentinelWorkspaceResourceIds","type"})
+    @OutputCustomType.Constructor
     private GetDefenderSettingResult(
-        Integer deviceQuota,
-        String evaluationEndTime,
-        String id,
-        DefenderSettingsPropertiesResponseMdeIntegration mdeIntegration,
-        String name,
-        String onboardingKind,
-        List<String> sentinelWorkspaceResourceIds,
-        String type) {
+        @OutputCustomType.Parameter("deviceQuota") Integer deviceQuota,
+        @OutputCustomType.Parameter("evaluationEndTime") String evaluationEndTime,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("mdeIntegration") DefenderSettingsPropertiesResponseMdeIntegration mdeIntegration,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("onboardingKind") String onboardingKind,
+        @OutputCustomType.Parameter("sentinelWorkspaceResourceIds") List<String> sentinelWorkspaceResourceIds,
+        @OutputCustomType.Parameter("type") String type) {
         this.deviceQuota = deviceQuota;
         this.evaluationEndTime = evaluationEndTime;
         this.id = id;

@@ -42,14 +42,14 @@ public final class GetAddonResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"addonType","id","licenseKey","name","provisioningState","type"})
+    @OutputCustomType.Constructor
     private GetAddonResult(
-        @Nullable String addonType,
-        String id,
-        @Nullable String licenseKey,
-        String name,
-        String provisioningState,
-        String type) {
+        @OutputCustomType.Parameter("addonType") @Nullable String addonType,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("licenseKey") @Nullable String licenseKey,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("type") String type) {
         this.addonType = addonType;
         this.id = id;
         this.licenseKey = licenseKey;

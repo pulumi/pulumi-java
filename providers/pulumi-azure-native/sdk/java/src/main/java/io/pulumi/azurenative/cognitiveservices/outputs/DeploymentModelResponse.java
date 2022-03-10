@@ -27,11 +27,11 @@ public final class DeploymentModelResponse {
      */
     private final @Nullable String version;
 
-    @OutputCustomType.Constructor({"format","name","version"})
+    @OutputCustomType.Constructor
     private DeploymentModelResponse(
-        @Nullable String format,
-        @Nullable String name,
-        @Nullable String version) {
+        @OutputCustomType.Parameter("format") @Nullable String format,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("version") @Nullable String version) {
         this.format = format;
         this.name = name;
         this.version = version;

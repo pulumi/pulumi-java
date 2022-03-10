@@ -35,13 +35,13 @@ public final class DeploymentInstanceResponse {
      */
     private final String status;
 
-    @OutputCustomType.Constructor({"discoveryStatus","name","reason","startTime","status"})
+    @OutputCustomType.Constructor
     private DeploymentInstanceResponse(
-        String discoveryStatus,
-        String name,
-        String reason,
-        String startTime,
-        String status) {
+        @OutputCustomType.Parameter("discoveryStatus") String discoveryStatus,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("reason") String reason,
+        @OutputCustomType.Parameter("startTime") String startTime,
+        @OutputCustomType.Parameter("status") String status) {
         this.discoveryStatus = discoveryStatus;
         this.name = name;
         this.reason = reason;

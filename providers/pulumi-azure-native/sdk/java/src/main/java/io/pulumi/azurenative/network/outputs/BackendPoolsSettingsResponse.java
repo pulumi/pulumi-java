@@ -23,10 +23,10 @@ public final class BackendPoolsSettingsResponse {
      */
     private final @Nullable Integer sendRecvTimeoutSeconds;
 
-    @OutputCustomType.Constructor({"enforceCertificateNameCheck","sendRecvTimeoutSeconds"})
+    @OutputCustomType.Constructor
     private BackendPoolsSettingsResponse(
-        @Nullable String enforceCertificateNameCheck,
-        @Nullable Integer sendRecvTimeoutSeconds) {
+        @OutputCustomType.Parameter("enforceCertificateNameCheck") @Nullable String enforceCertificateNameCheck,
+        @OutputCustomType.Parameter("sendRecvTimeoutSeconds") @Nullable Integer sendRecvTimeoutSeconds) {
         this.enforceCertificateNameCheck = enforceCertificateNameCheck;
         this.sendRecvTimeoutSeconds = sendRecvTimeoutSeconds;
     }

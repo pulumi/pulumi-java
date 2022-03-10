@@ -67,18 +67,18 @@ public final class VirtualMachineScaleSetIPConfigurationResponse {
      */
     private final @Nullable ApiEntityReferenceResponse subnet;
 
-    @OutputCustomType.Constructor({"applicationGatewayBackendAddressPools","applicationSecurityGroups","id","loadBalancerBackendAddressPools","loadBalancerInboundNatPools","name","primary","privateIPAddressVersion","publicIPAddressConfiguration","subnet"})
+    @OutputCustomType.Constructor
     private VirtualMachineScaleSetIPConfigurationResponse(
-        @Nullable List<SubResourceResponse> applicationGatewayBackendAddressPools,
-        @Nullable List<SubResourceResponse> applicationSecurityGroups,
-        @Nullable String id,
-        @Nullable List<SubResourceResponse> loadBalancerBackendAddressPools,
-        @Nullable List<SubResourceResponse> loadBalancerInboundNatPools,
-        String name,
-        @Nullable Boolean primary,
-        @Nullable String privateIPAddressVersion,
-        @Nullable VirtualMachineScaleSetPublicIPAddressConfigurationResponse publicIPAddressConfiguration,
-        @Nullable ApiEntityReferenceResponse subnet) {
+        @OutputCustomType.Parameter("applicationGatewayBackendAddressPools") @Nullable List<SubResourceResponse> applicationGatewayBackendAddressPools,
+        @OutputCustomType.Parameter("applicationSecurityGroups") @Nullable List<SubResourceResponse> applicationSecurityGroups,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("loadBalancerBackendAddressPools") @Nullable List<SubResourceResponse> loadBalancerBackendAddressPools,
+        @OutputCustomType.Parameter("loadBalancerInboundNatPools") @Nullable List<SubResourceResponse> loadBalancerInboundNatPools,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("primary") @Nullable Boolean primary,
+        @OutputCustomType.Parameter("privateIPAddressVersion") @Nullable String privateIPAddressVersion,
+        @OutputCustomType.Parameter("publicIPAddressConfiguration") @Nullable VirtualMachineScaleSetPublicIPAddressConfigurationResponse publicIPAddressConfiguration,
+        @OutputCustomType.Parameter("subnet") @Nullable ApiEntityReferenceResponse subnet) {
         this.applicationGatewayBackendAddressPools = applicationGatewayBackendAddressPools;
         this.applicationSecurityGroups = applicationSecurityGroups;
         this.id = id;

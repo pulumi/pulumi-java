@@ -30,12 +30,12 @@ public final class ListDeploymentInfoResult {
      */
     private final String version;
 
-    @OutputCustomType.Constructor({"diskCapacity","memoryCapacity","status","version"})
+    @OutputCustomType.Constructor
     private ListDeploymentInfoResult(
-        String diskCapacity,
-        String memoryCapacity,
-        String status,
-        String version) {
+        @OutputCustomType.Parameter("diskCapacity") String diskCapacity,
+        @OutputCustomType.Parameter("memoryCapacity") String memoryCapacity,
+        @OutputCustomType.Parameter("status") String status,
+        @OutputCustomType.Parameter("version") String version) {
         this.diskCapacity = diskCapacity;
         this.memoryCapacity = memoryCapacity;
         this.status = status;

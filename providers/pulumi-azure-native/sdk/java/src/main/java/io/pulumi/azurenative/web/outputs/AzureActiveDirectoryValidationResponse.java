@@ -24,10 +24,10 @@ public final class AzureActiveDirectoryValidationResponse {
      */
     private final @Nullable JwtClaimChecksResponse jwtClaimChecks;
 
-    @OutputCustomType.Constructor({"allowedAudiences","jwtClaimChecks"})
+    @OutputCustomType.Constructor
     private AzureActiveDirectoryValidationResponse(
-        @Nullable List<String> allowedAudiences,
-        @Nullable JwtClaimChecksResponse jwtClaimChecks) {
+        @OutputCustomType.Parameter("allowedAudiences") @Nullable List<String> allowedAudiences,
+        @OutputCustomType.Parameter("jwtClaimChecks") @Nullable JwtClaimChecksResponse jwtClaimChecks) {
         this.allowedAudiences = allowedAudiences;
         this.jwtClaimChecks = jwtClaimChecks;
     }

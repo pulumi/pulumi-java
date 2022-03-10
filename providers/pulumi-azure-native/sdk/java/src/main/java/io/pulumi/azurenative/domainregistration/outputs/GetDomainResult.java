@@ -124,30 +124,30 @@ public final class GetDomainResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"authCode","autoRenew","createdTime","dnsType","dnsZoneId","domainNotRenewableReasons","expirationTime","id","kind","lastRenewedTime","location","managedHostNames","name","nameServers","privacy","provisioningState","readyForDnsRecordManagement","registrationStatus","systemData","tags","targetDnsType","type"})
+    @OutputCustomType.Constructor
     private GetDomainResult(
-        @Nullable String authCode,
-        @Nullable Boolean autoRenew,
-        String createdTime,
-        @Nullable String dnsType,
-        @Nullable String dnsZoneId,
-        List<String> domainNotRenewableReasons,
-        String expirationTime,
-        String id,
-        @Nullable String kind,
-        String lastRenewedTime,
-        String location,
-        List<HostNameResponse> managedHostNames,
-        String name,
-        List<String> nameServers,
-        @Nullable Boolean privacy,
-        String provisioningState,
-        Boolean readyForDnsRecordManagement,
-        String registrationStatus,
-        SystemDataResponse systemData,
-        @Nullable Map<String,String> tags,
-        @Nullable String targetDnsType,
-        String type) {
+        @OutputCustomType.Parameter("authCode") @Nullable String authCode,
+        @OutputCustomType.Parameter("autoRenew") @Nullable Boolean autoRenew,
+        @OutputCustomType.Parameter("createdTime") String createdTime,
+        @OutputCustomType.Parameter("dnsType") @Nullable String dnsType,
+        @OutputCustomType.Parameter("dnsZoneId") @Nullable String dnsZoneId,
+        @OutputCustomType.Parameter("domainNotRenewableReasons") List<String> domainNotRenewableReasons,
+        @OutputCustomType.Parameter("expirationTime") String expirationTime,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("kind") @Nullable String kind,
+        @OutputCustomType.Parameter("lastRenewedTime") String lastRenewedTime,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("managedHostNames") List<HostNameResponse> managedHostNames,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("nameServers") List<String> nameServers,
+        @OutputCustomType.Parameter("privacy") @Nullable Boolean privacy,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("readyForDnsRecordManagement") Boolean readyForDnsRecordManagement,
+        @OutputCustomType.Parameter("registrationStatus") String registrationStatus,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("targetDnsType") @Nullable String targetDnsType,
+        @OutputCustomType.Parameter("type") String type) {
         this.authCode = authCode;
         this.autoRenew = autoRenew;
         this.createdTime = createdTime;

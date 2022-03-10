@@ -22,10 +22,10 @@ public final class CopyActivityLogSettingsResponse {
      */
     private final @Nullable Object logLevel;
 
-    @OutputCustomType.Constructor({"enableReliableLogging","logLevel"})
+    @OutputCustomType.Constructor
     private CopyActivityLogSettingsResponse(
-        @Nullable Object enableReliableLogging,
-        @Nullable Object logLevel) {
+        @OutputCustomType.Parameter("enableReliableLogging") @Nullable Object enableReliableLogging,
+        @OutputCustomType.Parameter("logLevel") @Nullable Object logLevel) {
         this.enableReliableLogging = enableReliableLogging;
         this.logLevel = logLevel;
     }

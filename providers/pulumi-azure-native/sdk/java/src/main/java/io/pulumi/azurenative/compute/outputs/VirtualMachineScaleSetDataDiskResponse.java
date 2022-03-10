@@ -61,17 +61,17 @@ public final class VirtualMachineScaleSetDataDiskResponse {
      */
     private final @Nullable Boolean writeAcceleratorEnabled;
 
-    @OutputCustomType.Constructor({"caching","createOption","diskIOPSReadWrite","diskMBpsReadWrite","diskSizeGB","lun","managedDisk","name","writeAcceleratorEnabled"})
+    @OutputCustomType.Constructor
     private VirtualMachineScaleSetDataDiskResponse(
-        @Nullable String caching,
-        String createOption,
-        @Nullable Double diskIOPSReadWrite,
-        @Nullable Double diskMBpsReadWrite,
-        @Nullable Integer diskSizeGB,
-        Integer lun,
-        @Nullable VirtualMachineScaleSetManagedDiskParametersResponse managedDisk,
-        @Nullable String name,
-        @Nullable Boolean writeAcceleratorEnabled) {
+        @OutputCustomType.Parameter("caching") @Nullable String caching,
+        @OutputCustomType.Parameter("createOption") String createOption,
+        @OutputCustomType.Parameter("diskIOPSReadWrite") @Nullable Double diskIOPSReadWrite,
+        @OutputCustomType.Parameter("diskMBpsReadWrite") @Nullable Double diskMBpsReadWrite,
+        @OutputCustomType.Parameter("diskSizeGB") @Nullable Integer diskSizeGB,
+        @OutputCustomType.Parameter("lun") Integer lun,
+        @OutputCustomType.Parameter("managedDisk") @Nullable VirtualMachineScaleSetManagedDiskParametersResponse managedDisk,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("writeAcceleratorEnabled") @Nullable Boolean writeAcceleratorEnabled) {
         this.caching = caching;
         this.createOption = createOption;
         this.diskIOPSReadWrite = diskIOPSReadWrite;

@@ -38,13 +38,13 @@ public final class SkuCapacityResponse {
      */
     private final @Nullable String scaleType;
 
-    @OutputCustomType.Constructor({"$default","elasticMaximum","maximum","minimum","scaleType"})
+    @OutputCustomType.Constructor
     private SkuCapacityResponse(
-        @Nullable Integer $default,
-        @Nullable Integer elasticMaximum,
-        @Nullable Integer maximum,
-        @Nullable Integer minimum,
-        @Nullable String scaleType) {
+        @OutputCustomType.Parameter("default") @Nullable Integer $default,
+        @OutputCustomType.Parameter("elasticMaximum") @Nullable Integer elasticMaximum,
+        @OutputCustomType.Parameter("maximum") @Nullable Integer maximum,
+        @OutputCustomType.Parameter("minimum") @Nullable Integer minimum,
+        @OutputCustomType.Parameter("scaleType") @Nullable String scaleType) {
         this.$default = $default;
         this.elasticMaximum = elasticMaximum;
         this.maximum = maximum;

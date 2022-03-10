@@ -62,18 +62,18 @@ public final class GetSqlDWTableDataSetResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"dataSetId","dataWarehouseName","id","kind","name","schemaName","sqlServerResourceId","systemData","tableName","type"})
+    @OutputCustomType.Constructor
     private GetSqlDWTableDataSetResult(
-        String dataSetId,
-        String dataWarehouseName,
-        String id,
-        String kind,
-        String name,
-        String schemaName,
-        String sqlServerResourceId,
-        SystemDataResponse systemData,
-        String tableName,
-        String type) {
+        @OutputCustomType.Parameter("dataSetId") String dataSetId,
+        @OutputCustomType.Parameter("dataWarehouseName") String dataWarehouseName,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("schemaName") String schemaName,
+        @OutputCustomType.Parameter("sqlServerResourceId") String sqlServerResourceId,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("tableName") String tableName,
+        @OutputCustomType.Parameter("type") String type) {
         this.dataSetId = dataSetId;
         this.dataWarehouseName = dataWarehouseName;
         this.id = id;

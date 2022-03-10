@@ -25,11 +25,11 @@ public final class ScriptActionResponse {
      */
     private final String uri;
 
-    @OutputCustomType.Constructor({"name","parameters","uri"})
+    @OutputCustomType.Constructor
     private ScriptActionResponse(
-        String name,
-        String parameters,
-        String uri) {
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("parameters") String parameters,
+        @OutputCustomType.Parameter("uri") String uri) {
         this.name = name;
         this.parameters = parameters;
         this.uri = uri;

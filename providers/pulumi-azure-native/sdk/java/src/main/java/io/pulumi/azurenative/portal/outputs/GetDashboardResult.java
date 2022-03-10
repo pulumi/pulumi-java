@@ -50,15 +50,15 @@ public final class GetDashboardResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"id","lenses","location","metadata","name","tags","type"})
+    @OutputCustomType.Constructor
     private GetDashboardResult(
-        String id,
-        @Nullable List<DashboardLensResponse> lenses,
-        String location,
-        @Nullable Map<String,Object> metadata,
-        String name,
-        @Nullable Map<String,String> tags,
-        String type) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("lenses") @Nullable List<DashboardLensResponse> lenses,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("metadata") @Nullable Map<String,Object> metadata,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type) {
         this.id = id;
         this.lenses = lenses;
         this.location = location;

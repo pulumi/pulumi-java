@@ -23,10 +23,10 @@ public final class MongoDBDatabaseGetPropertiesResponseOptions {
      */
     private final @Nullable Integer throughput;
 
-    @OutputCustomType.Constructor({"autoscaleSettings","throughput"})
+    @OutputCustomType.Constructor
     private MongoDBDatabaseGetPropertiesResponseOptions(
-        @Nullable AutoscaleSettingsResponse autoscaleSettings,
-        @Nullable Integer throughput) {
+        @OutputCustomType.Parameter("autoscaleSettings") @Nullable AutoscaleSettingsResponse autoscaleSettings,
+        @OutputCustomType.Parameter("throughput") @Nullable Integer throughput) {
         this.autoscaleSettings = autoscaleSettings;
         this.throughput = throughput;
     }

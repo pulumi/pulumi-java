@@ -70,18 +70,18 @@ public final class DatabricksNotebookActivityResponse {
      */
     private final @Nullable List<UserPropertyResponse> userProperties;
 
-    @OutputCustomType.Constructor({"baseParameters","dependsOn","description","libraries","linkedServiceName","name","notebookPath","policy","type","userProperties"})
+    @OutputCustomType.Constructor
     private DatabricksNotebookActivityResponse(
-        @Nullable Map<String,Object> baseParameters,
-        @Nullable List<ActivityDependencyResponse> dependsOn,
-        @Nullable String description,
-        @Nullable List<Map<String,Object>> libraries,
-        @Nullable LinkedServiceReferenceResponse linkedServiceName,
-        String name,
-        Object notebookPath,
-        @Nullable ActivityPolicyResponse policy,
-        String type,
-        @Nullable List<UserPropertyResponse> userProperties) {
+        @OutputCustomType.Parameter("baseParameters") @Nullable Map<String,Object> baseParameters,
+        @OutputCustomType.Parameter("dependsOn") @Nullable List<ActivityDependencyResponse> dependsOn,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("libraries") @Nullable List<Map<String,Object>> libraries,
+        @OutputCustomType.Parameter("linkedServiceName") @Nullable LinkedServiceReferenceResponse linkedServiceName,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("notebookPath") Object notebookPath,
+        @OutputCustomType.Parameter("policy") @Nullable ActivityPolicyResponse policy,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("userProperties") @Nullable List<UserPropertyResponse> userProperties) {
         this.baseParameters = baseParameters;
         this.dependsOn = dependsOn;
         this.description = description;

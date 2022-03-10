@@ -85,22 +85,22 @@ public final class GetMicrosoftSecurityIncidentCreationAlertRuleResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"alertRuleTemplateName","description","displayName","displayNamesExcludeFilter","displayNamesFilter","enabled","etag","id","kind","lastModifiedUtc","name","productFilter","severitiesFilter","type"})
+    @OutputCustomType.Constructor
     private GetMicrosoftSecurityIncidentCreationAlertRuleResult(
-        @Nullable String alertRuleTemplateName,
-        @Nullable String description,
-        String displayName,
-        @Nullable List<String> displayNamesExcludeFilter,
-        @Nullable List<String> displayNamesFilter,
-        Boolean enabled,
-        @Nullable String etag,
-        String id,
-        String kind,
-        String lastModifiedUtc,
-        String name,
-        String productFilter,
-        @Nullable List<String> severitiesFilter,
-        String type) {
+        @OutputCustomType.Parameter("alertRuleTemplateName") @Nullable String alertRuleTemplateName,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("displayNamesExcludeFilter") @Nullable List<String> displayNamesExcludeFilter,
+        @OutputCustomType.Parameter("displayNamesFilter") @Nullable List<String> displayNamesFilter,
+        @OutputCustomType.Parameter("enabled") Boolean enabled,
+        @OutputCustomType.Parameter("etag") @Nullable String etag,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("lastModifiedUtc") String lastModifiedUtc,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("productFilter") String productFilter,
+        @OutputCustomType.Parameter("severitiesFilter") @Nullable List<String> severitiesFilter,
+        @OutputCustomType.Parameter("type") String type) {
         this.alertRuleTemplateName = alertRuleTemplateName;
         this.description = description;
         this.displayName = displayName;

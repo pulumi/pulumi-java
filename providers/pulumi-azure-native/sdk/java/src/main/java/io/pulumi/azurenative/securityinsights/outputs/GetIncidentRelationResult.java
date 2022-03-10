@@ -58,17 +58,17 @@ public final class GetIncidentRelationResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"etag","id","name","relatedResourceId","relatedResourceKind","relatedResourceName","relatedResourceType","systemData","type"})
+    @OutputCustomType.Constructor
     private GetIncidentRelationResult(
-        @Nullable String etag,
-        String id,
-        String name,
-        String relatedResourceId,
-        String relatedResourceKind,
-        String relatedResourceName,
-        String relatedResourceType,
-        SystemDataResponse systemData,
-        String type) {
+        @OutputCustomType.Parameter("etag") @Nullable String etag,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("relatedResourceId") String relatedResourceId,
+        @OutputCustomType.Parameter("relatedResourceKind") String relatedResourceKind,
+        @OutputCustomType.Parameter("relatedResourceName") String relatedResourceName,
+        @OutputCustomType.Parameter("relatedResourceType") String relatedResourceType,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("type") String type) {
         this.etag = etag;
         this.id = id;
         this.name = name;

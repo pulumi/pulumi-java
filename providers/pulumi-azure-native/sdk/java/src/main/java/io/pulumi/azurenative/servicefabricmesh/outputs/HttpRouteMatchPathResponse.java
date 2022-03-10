@@ -27,11 +27,11 @@ public final class HttpRouteMatchPathResponse {
      */
     private final String value;
 
-    @OutputCustomType.Constructor({"rewrite","type","value"})
+    @OutputCustomType.Constructor
     private HttpRouteMatchPathResponse(
-        @Nullable String rewrite,
-        String type,
-        String value) {
+        @OutputCustomType.Parameter("rewrite") @Nullable String rewrite,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("value") String value) {
         this.rewrite = rewrite;
         this.type = type;
         this.value = value;

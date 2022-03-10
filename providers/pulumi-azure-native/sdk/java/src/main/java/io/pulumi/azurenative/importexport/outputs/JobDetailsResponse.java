@@ -113,26 +113,26 @@ public final class JobDetailsResponse {
      */
     private final @Nullable String storageAccountId;
 
-    @OutputCustomType.Constructor({"backupDriveManifest","cancelRequested","deliveryPackage","diagnosticsPath","driveList","encryptionKey","export","incompleteBlobListUri","jobType","logLevel","percentComplete","provisioningState","returnAddress","returnPackage","returnShipping","shippingInformation","state","storageAccountId"})
+    @OutputCustomType.Constructor
     private JobDetailsResponse(
-        @Nullable Boolean backupDriveManifest,
-        @Nullable Boolean cancelRequested,
-        @Nullable DeliveryPackageInformationResponse deliveryPackage,
-        @Nullable String diagnosticsPath,
-        @Nullable List<DriveStatusResponse> driveList,
-        @Nullable EncryptionKeyDetailsResponse encryptionKey,
-        @Nullable ExportResponse export,
-        @Nullable String incompleteBlobListUri,
-        @Nullable String jobType,
-        @Nullable String logLevel,
-        @Nullable Integer percentComplete,
-        @Nullable String provisioningState,
-        @Nullable ReturnAddressResponse returnAddress,
-        @Nullable PackageInformationResponse returnPackage,
-        @Nullable ReturnShippingResponse returnShipping,
-        @Nullable ShippingInformationResponse shippingInformation,
-        @Nullable String state,
-        @Nullable String storageAccountId) {
+        @OutputCustomType.Parameter("backupDriveManifest") @Nullable Boolean backupDriveManifest,
+        @OutputCustomType.Parameter("cancelRequested") @Nullable Boolean cancelRequested,
+        @OutputCustomType.Parameter("deliveryPackage") @Nullable DeliveryPackageInformationResponse deliveryPackage,
+        @OutputCustomType.Parameter("diagnosticsPath") @Nullable String diagnosticsPath,
+        @OutputCustomType.Parameter("driveList") @Nullable List<DriveStatusResponse> driveList,
+        @OutputCustomType.Parameter("encryptionKey") @Nullable EncryptionKeyDetailsResponse encryptionKey,
+        @OutputCustomType.Parameter("export") @Nullable ExportResponse export,
+        @OutputCustomType.Parameter("incompleteBlobListUri") @Nullable String incompleteBlobListUri,
+        @OutputCustomType.Parameter("jobType") @Nullable String jobType,
+        @OutputCustomType.Parameter("logLevel") @Nullable String logLevel,
+        @OutputCustomType.Parameter("percentComplete") @Nullable Integer percentComplete,
+        @OutputCustomType.Parameter("provisioningState") @Nullable String provisioningState,
+        @OutputCustomType.Parameter("returnAddress") @Nullable ReturnAddressResponse returnAddress,
+        @OutputCustomType.Parameter("returnPackage") @Nullable PackageInformationResponse returnPackage,
+        @OutputCustomType.Parameter("returnShipping") @Nullable ReturnShippingResponse returnShipping,
+        @OutputCustomType.Parameter("shippingInformation") @Nullable ShippingInformationResponse shippingInformation,
+        @OutputCustomType.Parameter("state") @Nullable String state,
+        @OutputCustomType.Parameter("storageAccountId") @Nullable String storageAccountId) {
         this.backupDriveManifest = backupDriveManifest;
         this.cancelRequested = cancelRequested;
         this.deliveryPackage = deliveryPackage;

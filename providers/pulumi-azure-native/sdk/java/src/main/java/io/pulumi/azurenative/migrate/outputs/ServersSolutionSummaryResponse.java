@@ -44,14 +44,14 @@ public final class ServersSolutionSummaryResponse {
      */
     private final @Nullable Integer testMigratedCount;
 
-    @OutputCustomType.Constructor({"assessedCount","discoveredCount","instanceType","migratedCount","replicatingCount","testMigratedCount"})
+    @OutputCustomType.Constructor
     private ServersSolutionSummaryResponse(
-        @Nullable Integer assessedCount,
-        @Nullable Integer discoveredCount,
-        String instanceType,
-        @Nullable Integer migratedCount,
-        @Nullable Integer replicatingCount,
-        @Nullable Integer testMigratedCount) {
+        @OutputCustomType.Parameter("assessedCount") @Nullable Integer assessedCount,
+        @OutputCustomType.Parameter("discoveredCount") @Nullable Integer discoveredCount,
+        @OutputCustomType.Parameter("instanceType") String instanceType,
+        @OutputCustomType.Parameter("migratedCount") @Nullable Integer migratedCount,
+        @OutputCustomType.Parameter("replicatingCount") @Nullable Integer replicatingCount,
+        @OutputCustomType.Parameter("testMigratedCount") @Nullable Integer testMigratedCount) {
         this.assessedCount = assessedCount;
         this.discoveredCount = discoveredCount;
         this.instanceType = instanceType;

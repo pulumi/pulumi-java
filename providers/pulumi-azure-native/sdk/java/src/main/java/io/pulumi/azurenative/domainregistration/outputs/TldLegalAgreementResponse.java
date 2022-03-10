@@ -32,12 +32,12 @@ public final class TldLegalAgreementResponse {
      */
     private final @Nullable String url;
 
-    @OutputCustomType.Constructor({"agreementKey","content","title","url"})
+    @OutputCustomType.Constructor
     private TldLegalAgreementResponse(
-        String agreementKey,
-        String content,
-        String title,
-        @Nullable String url) {
+        @OutputCustomType.Parameter("agreementKey") String agreementKey,
+        @OutputCustomType.Parameter("content") String content,
+        @OutputCustomType.Parameter("title") String title,
+        @OutputCustomType.Parameter("url") @Nullable String url) {
         this.agreementKey = agreementKey;
         this.content = content;
         this.title = title;

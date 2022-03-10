@@ -34,12 +34,12 @@ public final class AssignmentReportResourceResponse {
      */
     private final String resourceId;
 
-    @OutputCustomType.Constructor({"complianceStatus","properties","reasons","resourceId"})
+    @OutputCustomType.Constructor
     private AssignmentReportResourceResponse(
-        String complianceStatus,
-        Object properties,
-        @Nullable List<AssignmentReportResourceComplianceReasonResponse> reasons,
-        String resourceId) {
+        @OutputCustomType.Parameter("complianceStatus") String complianceStatus,
+        @OutputCustomType.Parameter("properties") Object properties,
+        @OutputCustomType.Parameter("reasons") @Nullable List<AssignmentReportResourceComplianceReasonResponse> reasons,
+        @OutputCustomType.Parameter("resourceId") String resourceId) {
         this.complianceStatus = complianceStatus;
         this.properties = properties;
         this.reasons = reasons;

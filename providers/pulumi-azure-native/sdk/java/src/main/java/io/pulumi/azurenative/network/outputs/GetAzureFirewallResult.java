@@ -122,28 +122,28 @@ public final class GetAzureFirewallResult {
      */
     private final @Nullable List<String> zones;
 
-    @OutputCustomType.Constructor({"additionalProperties","applicationRuleCollections","etag","firewallPolicy","hubIPAddresses","id","ipConfigurations","ipGroups","location","managementIpConfiguration","name","natRuleCollections","networkRuleCollections","provisioningState","sku","tags","threatIntelMode","type","virtualHub","zones"})
+    @OutputCustomType.Constructor
     private GetAzureFirewallResult(
-        @Nullable Map<String,String> additionalProperties,
-        @Nullable List<AzureFirewallApplicationRuleCollectionResponse> applicationRuleCollections,
-        String etag,
-        @Nullable SubResourceResponse firewallPolicy,
-        @Nullable HubIPAddressesResponse hubIPAddresses,
-        @Nullable String id,
-        @Nullable List<AzureFirewallIPConfigurationResponse> ipConfigurations,
-        List<AzureFirewallIpGroupsResponse> ipGroups,
-        @Nullable String location,
-        @Nullable AzureFirewallIPConfigurationResponse managementIpConfiguration,
-        String name,
-        @Nullable List<AzureFirewallNatRuleCollectionResponse> natRuleCollections,
-        @Nullable List<AzureFirewallNetworkRuleCollectionResponse> networkRuleCollections,
-        String provisioningState,
-        @Nullable AzureFirewallSkuResponse sku,
-        @Nullable Map<String,String> tags,
-        @Nullable String threatIntelMode,
-        String type,
-        @Nullable SubResourceResponse virtualHub,
-        @Nullable List<String> zones) {
+        @OutputCustomType.Parameter("additionalProperties") @Nullable Map<String,String> additionalProperties,
+        @OutputCustomType.Parameter("applicationRuleCollections") @Nullable List<AzureFirewallApplicationRuleCollectionResponse> applicationRuleCollections,
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("firewallPolicy") @Nullable SubResourceResponse firewallPolicy,
+        @OutputCustomType.Parameter("hubIPAddresses") @Nullable HubIPAddressesResponse hubIPAddresses,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("ipConfigurations") @Nullable List<AzureFirewallIPConfigurationResponse> ipConfigurations,
+        @OutputCustomType.Parameter("ipGroups") List<AzureFirewallIpGroupsResponse> ipGroups,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("managementIpConfiguration") @Nullable AzureFirewallIPConfigurationResponse managementIpConfiguration,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("natRuleCollections") @Nullable List<AzureFirewallNatRuleCollectionResponse> natRuleCollections,
+        @OutputCustomType.Parameter("networkRuleCollections") @Nullable List<AzureFirewallNetworkRuleCollectionResponse> networkRuleCollections,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("sku") @Nullable AzureFirewallSkuResponse sku,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("threatIntelMode") @Nullable String threatIntelMode,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("virtualHub") @Nullable SubResourceResponse virtualHub,
+        @OutputCustomType.Parameter("zones") @Nullable List<String> zones) {
         this.additionalProperties = additionalProperties;
         this.applicationRuleCollections = applicationRuleCollections;
         this.etag = etag;

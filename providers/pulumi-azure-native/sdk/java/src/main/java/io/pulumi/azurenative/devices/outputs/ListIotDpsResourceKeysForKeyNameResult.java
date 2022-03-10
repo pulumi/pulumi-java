@@ -32,12 +32,12 @@ public final class ListIotDpsResourceKeysForKeyNameResult {
      */
     private final @Nullable String secondaryKey;
 
-    @OutputCustomType.Constructor({"keyName","primaryKey","rights","secondaryKey"})
+    @OutputCustomType.Constructor
     private ListIotDpsResourceKeysForKeyNameResult(
-        String keyName,
-        @Nullable String primaryKey,
-        String rights,
-        @Nullable String secondaryKey) {
+        @OutputCustomType.Parameter("keyName") String keyName,
+        @OutputCustomType.Parameter("primaryKey") @Nullable String primaryKey,
+        @OutputCustomType.Parameter("rights") String rights,
+        @OutputCustomType.Parameter("secondaryKey") @Nullable String secondaryKey) {
         this.keyName = keyName;
         this.primaryKey = primaryKey;
         this.rights = rights;

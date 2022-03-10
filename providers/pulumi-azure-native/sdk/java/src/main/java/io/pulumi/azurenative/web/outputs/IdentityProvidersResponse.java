@@ -68,17 +68,17 @@ public final class IdentityProvidersResponse {
      */
     private final @Nullable TwitterResponse twitter;
 
-    @OutputCustomType.Constructor({"apple","azureActiveDirectory","azureStaticWebApps","customOpenIdConnectProviders","facebook","gitHub","google","legacyMicrosoftAccount","twitter"})
+    @OutputCustomType.Constructor
     private IdentityProvidersResponse(
-        @Nullable AppleResponse apple,
-        @Nullable AzureActiveDirectoryResponse azureActiveDirectory,
-        @Nullable AzureStaticWebAppsResponse azureStaticWebApps,
-        @Nullable Map<String,CustomOpenIdConnectProviderResponse> customOpenIdConnectProviders,
-        @Nullable FacebookResponse facebook,
-        @Nullable GitHubResponse gitHub,
-        @Nullable GoogleResponse google,
-        @Nullable LegacyMicrosoftAccountResponse legacyMicrosoftAccount,
-        @Nullable TwitterResponse twitter) {
+        @OutputCustomType.Parameter("apple") @Nullable AppleResponse apple,
+        @OutputCustomType.Parameter("azureActiveDirectory") @Nullable AzureActiveDirectoryResponse azureActiveDirectory,
+        @OutputCustomType.Parameter("azureStaticWebApps") @Nullable AzureStaticWebAppsResponse azureStaticWebApps,
+        @OutputCustomType.Parameter("customOpenIdConnectProviders") @Nullable Map<String,CustomOpenIdConnectProviderResponse> customOpenIdConnectProviders,
+        @OutputCustomType.Parameter("facebook") @Nullable FacebookResponse facebook,
+        @OutputCustomType.Parameter("gitHub") @Nullable GitHubResponse gitHub,
+        @OutputCustomType.Parameter("google") @Nullable GoogleResponse google,
+        @OutputCustomType.Parameter("legacyMicrosoftAccount") @Nullable LegacyMicrosoftAccountResponse legacyMicrosoftAccount,
+        @OutputCustomType.Parameter("twitter") @Nullable TwitterResponse twitter) {
         this.apple = apple;
         this.azureActiveDirectory = azureActiveDirectory;
         this.azureStaticWebApps = azureStaticWebApps;

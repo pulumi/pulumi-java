@@ -115,28 +115,28 @@ public final class GetSecurityRuleResult {
      */
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor({"access","description","destinationAddressPrefix","destinationAddressPrefixes","destinationApplicationSecurityGroups","destinationPortRange","destinationPortRanges","direction","etag","id","name","priority","protocol","provisioningState","sourceAddressPrefix","sourceAddressPrefixes","sourceApplicationSecurityGroups","sourcePortRange","sourcePortRanges","type"})
+    @OutputCustomType.Constructor
     private GetSecurityRuleResult(
-        String access,
-        @Nullable String description,
-        @Nullable String destinationAddressPrefix,
-        @Nullable List<String> destinationAddressPrefixes,
-        @Nullable List<ApplicationSecurityGroupResponse> destinationApplicationSecurityGroups,
-        @Nullable String destinationPortRange,
-        @Nullable List<String> destinationPortRanges,
-        String direction,
-        String etag,
-        @Nullable String id,
-        @Nullable String name,
-        @Nullable Integer priority,
-        String protocol,
-        String provisioningState,
-        @Nullable String sourceAddressPrefix,
-        @Nullable List<String> sourceAddressPrefixes,
-        @Nullable List<ApplicationSecurityGroupResponse> sourceApplicationSecurityGroups,
-        @Nullable String sourcePortRange,
-        @Nullable List<String> sourcePortRanges,
-        @Nullable String type) {
+        @OutputCustomType.Parameter("access") String access,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("destinationAddressPrefix") @Nullable String destinationAddressPrefix,
+        @OutputCustomType.Parameter("destinationAddressPrefixes") @Nullable List<String> destinationAddressPrefixes,
+        @OutputCustomType.Parameter("destinationApplicationSecurityGroups") @Nullable List<ApplicationSecurityGroupResponse> destinationApplicationSecurityGroups,
+        @OutputCustomType.Parameter("destinationPortRange") @Nullable String destinationPortRange,
+        @OutputCustomType.Parameter("destinationPortRanges") @Nullable List<String> destinationPortRanges,
+        @OutputCustomType.Parameter("direction") String direction,
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("priority") @Nullable Integer priority,
+        @OutputCustomType.Parameter("protocol") String protocol,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("sourceAddressPrefix") @Nullable String sourceAddressPrefix,
+        @OutputCustomType.Parameter("sourceAddressPrefixes") @Nullable List<String> sourceAddressPrefixes,
+        @OutputCustomType.Parameter("sourceApplicationSecurityGroups") @Nullable List<ApplicationSecurityGroupResponse> sourceApplicationSecurityGroups,
+        @OutputCustomType.Parameter("sourcePortRange") @Nullable String sourcePortRange,
+        @OutputCustomType.Parameter("sourcePortRanges") @Nullable List<String> sourcePortRanges,
+        @OutputCustomType.Parameter("type") @Nullable String type) {
         this.access = access;
         this.description = description;
         this.destinationAddressPrefix = destinationAddressPrefix;

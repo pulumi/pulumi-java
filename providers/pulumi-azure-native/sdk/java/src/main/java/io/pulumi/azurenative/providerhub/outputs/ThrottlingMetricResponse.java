@@ -16,11 +16,11 @@ public final class ThrottlingMetricResponse {
     private final Double limit;
     private final String type;
 
-    @OutputCustomType.Constructor({"interval","limit","type"})
+    @OutputCustomType.Constructor
     private ThrottlingMetricResponse(
-        @Nullable String interval,
-        Double limit,
-        String type) {
+        @OutputCustomType.Parameter("interval") @Nullable String interval,
+        @OutputCustomType.Parameter("limit") Double limit,
+        @OutputCustomType.Parameter("type") String type) {
         this.interval = interval;
         this.limit = limit;
         this.type = type;

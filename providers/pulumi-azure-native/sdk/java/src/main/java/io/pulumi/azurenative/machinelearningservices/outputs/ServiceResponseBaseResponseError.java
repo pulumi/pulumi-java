@@ -15,8 +15,8 @@ public final class ServiceResponseBaseResponseError {
      */
     private final ErrorResponseResponse error;
 
-    @OutputCustomType.Constructor({"error"})
-    private ServiceResponseBaseResponseError(ErrorResponseResponse error) {
+    @OutputCustomType.Constructor
+    private ServiceResponseBaseResponseError(@OutputCustomType.Parameter("error") ErrorResponseResponse error) {
         this.error = error;
     }
 

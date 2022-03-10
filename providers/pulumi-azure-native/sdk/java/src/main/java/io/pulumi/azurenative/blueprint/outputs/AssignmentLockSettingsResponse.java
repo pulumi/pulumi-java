@@ -28,11 +28,11 @@ public final class AssignmentLockSettingsResponse {
      */
     private final @Nullable String mode;
 
-    @OutputCustomType.Constructor({"excludedActions","excludedPrincipals","mode"})
+    @OutputCustomType.Constructor
     private AssignmentLockSettingsResponse(
-        @Nullable List<String> excludedActions,
-        @Nullable List<String> excludedPrincipals,
-        @Nullable String mode) {
+        @OutputCustomType.Parameter("excludedActions") @Nullable List<String> excludedActions,
+        @OutputCustomType.Parameter("excludedPrincipals") @Nullable List<String> excludedPrincipals,
+        @OutputCustomType.Parameter("mode") @Nullable String mode) {
         this.excludedActions = excludedActions;
         this.excludedPrincipals = excludedPrincipals;
         this.mode = mode;

@@ -29,11 +29,11 @@ public final class ImportPipelineSourcePropertiesResponse {
      */
     private final @Nullable String uri;
 
-    @OutputCustomType.Constructor({"keyVaultUri","type","uri"})
+    @OutputCustomType.Constructor
     private ImportPipelineSourcePropertiesResponse(
-        String keyVaultUri,
-        @Nullable String type,
-        @Nullable String uri) {
+        @OutputCustomType.Parameter("keyVaultUri") String keyVaultUri,
+        @OutputCustomType.Parameter("type") @Nullable String type,
+        @OutputCustomType.Parameter("uri") @Nullable String uri) {
         this.keyVaultUri = keyVaultUri;
         this.type = type;
         this.uri = uri;

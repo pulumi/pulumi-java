@@ -29,11 +29,11 @@ public final class SelectAudioTrackByIdResponse {
      */
     private final Double trackId;
 
-    @OutputCustomType.Constructor({"channelMapping","odataType","trackId"})
+    @OutputCustomType.Constructor
     private SelectAudioTrackByIdResponse(
-        @Nullable String channelMapping,
-        String odataType,
-        Double trackId) {
+        @OutputCustomType.Parameter("channelMapping") @Nullable String channelMapping,
+        @OutputCustomType.Parameter("odataType") String odataType,
+        @OutputCustomType.Parameter("trackId") Double trackId) {
         this.channelMapping = channelMapping;
         this.odataType = odataType;
         this.trackId = trackId;

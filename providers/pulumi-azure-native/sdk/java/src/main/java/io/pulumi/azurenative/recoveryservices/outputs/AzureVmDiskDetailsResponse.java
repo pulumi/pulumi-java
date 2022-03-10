@@ -57,17 +57,17 @@ public final class AzureVmDiskDetailsResponse {
      */
     private final @Nullable String vhdType;
 
-    @OutputCustomType.Constructor({"diskEncryptionSetId","diskId","lunId","maxSizeMB","targetDiskLocation","targetDiskName","vhdId","vhdName","vhdType"})
+    @OutputCustomType.Constructor
     private AzureVmDiskDetailsResponse(
-        @Nullable String diskEncryptionSetId,
-        @Nullable String diskId,
-        @Nullable String lunId,
-        @Nullable String maxSizeMB,
-        @Nullable String targetDiskLocation,
-        @Nullable String targetDiskName,
-        @Nullable String vhdId,
-        @Nullable String vhdName,
-        @Nullable String vhdType) {
+        @OutputCustomType.Parameter("diskEncryptionSetId") @Nullable String diskEncryptionSetId,
+        @OutputCustomType.Parameter("diskId") @Nullable String diskId,
+        @OutputCustomType.Parameter("lunId") @Nullable String lunId,
+        @OutputCustomType.Parameter("maxSizeMB") @Nullable String maxSizeMB,
+        @OutputCustomType.Parameter("targetDiskLocation") @Nullable String targetDiskLocation,
+        @OutputCustomType.Parameter("targetDiskName") @Nullable String targetDiskName,
+        @OutputCustomType.Parameter("vhdId") @Nullable String vhdId,
+        @OutputCustomType.Parameter("vhdName") @Nullable String vhdName,
+        @OutputCustomType.Parameter("vhdType") @Nullable String vhdType) {
         this.diskEncryptionSetId = diskEncryptionSetId;
         this.diskId = diskId;
         this.lunId = lunId;

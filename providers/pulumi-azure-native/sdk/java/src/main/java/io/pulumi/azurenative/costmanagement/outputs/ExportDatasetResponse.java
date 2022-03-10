@@ -23,10 +23,10 @@ public final class ExportDatasetResponse {
      */
     private final @Nullable String granularity;
 
-    @OutputCustomType.Constructor({"configuration","granularity"})
+    @OutputCustomType.Constructor
     private ExportDatasetResponse(
-        @Nullable ExportDatasetConfigurationResponse configuration,
-        @Nullable String granularity) {
+        @OutputCustomType.Parameter("configuration") @Nullable ExportDatasetConfigurationResponse configuration,
+        @OutputCustomType.Parameter("granularity") @Nullable String granularity) {
         this.configuration = configuration;
         this.granularity = granularity;
     }

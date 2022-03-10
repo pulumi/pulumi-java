@@ -27,11 +27,11 @@ public final class ContactDetailResponse {
      */
     private final @Nullable String role;
 
-    @OutputCustomType.Constructor({"email","phone","role"})
+    @OutputCustomType.Constructor
     private ContactDetailResponse(
-        @Nullable String email,
-        @Nullable String phone,
-        @Nullable String role) {
+        @OutputCustomType.Parameter("email") @Nullable String email,
+        @OutputCustomType.Parameter("phone") @Nullable String phone,
+        @OutputCustomType.Parameter("role") @Nullable String role) {
         this.email = email;
         this.phone = phone;
         this.role = role;

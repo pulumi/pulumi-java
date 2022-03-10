@@ -65,18 +65,18 @@ public final class DirectConnectionResponse {
      */
     private final @Nullable Boolean useForPeeringService;
 
-    @OutputCustomType.Constructor({"bandwidthInMbps","bgpSession","connectionIdentifier","connectionState","errorMessage","microsoftTrackingId","peeringDBFacilityId","provisionedBandwidthInMbps","sessionAddressProvider","useForPeeringService"})
+    @OutputCustomType.Constructor
     private DirectConnectionResponse(
-        @Nullable Integer bandwidthInMbps,
-        @Nullable BgpSessionResponse bgpSession,
-        @Nullable String connectionIdentifier,
-        String connectionState,
-        String errorMessage,
-        String microsoftTrackingId,
-        @Nullable Integer peeringDBFacilityId,
-        Integer provisionedBandwidthInMbps,
-        @Nullable String sessionAddressProvider,
-        @Nullable Boolean useForPeeringService) {
+        @OutputCustomType.Parameter("bandwidthInMbps") @Nullable Integer bandwidthInMbps,
+        @OutputCustomType.Parameter("bgpSession") @Nullable BgpSessionResponse bgpSession,
+        @OutputCustomType.Parameter("connectionIdentifier") @Nullable String connectionIdentifier,
+        @OutputCustomType.Parameter("connectionState") String connectionState,
+        @OutputCustomType.Parameter("errorMessage") String errorMessage,
+        @OutputCustomType.Parameter("microsoftTrackingId") String microsoftTrackingId,
+        @OutputCustomType.Parameter("peeringDBFacilityId") @Nullable Integer peeringDBFacilityId,
+        @OutputCustomType.Parameter("provisionedBandwidthInMbps") Integer provisionedBandwidthInMbps,
+        @OutputCustomType.Parameter("sessionAddressProvider") @Nullable String sessionAddressProvider,
+        @OutputCustomType.Parameter("useForPeeringService") @Nullable Boolean useForPeeringService) {
         this.bandwidthInMbps = bandwidthInMbps;
         this.bgpSession = bgpSession;
         this.connectionIdentifier = connectionIdentifier;

@@ -69,19 +69,19 @@ public final class GetEnvironmentResult {
      */
     private final String uniqueIdentifier;
 
-    @OutputCustomType.Constructor({"armTemplateDisplayName","createdByUser","deploymentProperties","id","location","name","provisioningState","resourceGroupId","tags","type","uniqueIdentifier"})
+    @OutputCustomType.Constructor
     private GetEnvironmentResult(
-        @Nullable String armTemplateDisplayName,
-        String createdByUser,
-        @Nullable EnvironmentDeploymentPropertiesResponse deploymentProperties,
-        String id,
-        @Nullable String location,
-        String name,
-        String provisioningState,
-        String resourceGroupId,
-        @Nullable Map<String,String> tags,
-        String type,
-        String uniqueIdentifier) {
+        @OutputCustomType.Parameter("armTemplateDisplayName") @Nullable String armTemplateDisplayName,
+        @OutputCustomType.Parameter("createdByUser") String createdByUser,
+        @OutputCustomType.Parameter("deploymentProperties") @Nullable EnvironmentDeploymentPropertiesResponse deploymentProperties,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("resourceGroupId") String resourceGroupId,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("uniqueIdentifier") String uniqueIdentifier) {
         this.armTemplateDisplayName = armTemplateDisplayName;
         this.createdByUser = createdByUser;
         this.deploymentProperties = deploymentProperties;

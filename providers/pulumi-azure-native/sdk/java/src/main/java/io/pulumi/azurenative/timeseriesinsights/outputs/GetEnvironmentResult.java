@@ -48,15 +48,15 @@ public final class GetEnvironmentResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"id","kind","location","name","sku","tags","type"})
+    @OutputCustomType.Constructor
     private GetEnvironmentResult(
-        String id,
-        String kind,
-        String location,
-        String name,
-        SkuResponse sku,
-        @Nullable Map<String,String> tags,
-        String type) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("sku") SkuResponse sku,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type) {
         this.id = id;
         this.kind = kind;
         this.location = location;

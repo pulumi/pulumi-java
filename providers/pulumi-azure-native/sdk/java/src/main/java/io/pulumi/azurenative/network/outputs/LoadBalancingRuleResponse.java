@@ -95,24 +95,24 @@ public final class LoadBalancingRuleResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"backendAddressPool","backendPort","disableOutboundSnat","enableFloatingIP","enableTcpReset","etag","frontendIPConfiguration","frontendPort","id","idleTimeoutInMinutes","loadDistribution","name","probe","protocol","provisioningState","type"})
+    @OutputCustomType.Constructor
     private LoadBalancingRuleResponse(
-        @Nullable SubResourceResponse backendAddressPool,
-        @Nullable Integer backendPort,
-        @Nullable Boolean disableOutboundSnat,
-        @Nullable Boolean enableFloatingIP,
-        @Nullable Boolean enableTcpReset,
-        String etag,
-        @Nullable SubResourceResponse frontendIPConfiguration,
-        Integer frontendPort,
-        @Nullable String id,
-        @Nullable Integer idleTimeoutInMinutes,
-        @Nullable String loadDistribution,
-        @Nullable String name,
-        @Nullable SubResourceResponse probe,
-        String protocol,
-        String provisioningState,
-        String type) {
+        @OutputCustomType.Parameter("backendAddressPool") @Nullable SubResourceResponse backendAddressPool,
+        @OutputCustomType.Parameter("backendPort") @Nullable Integer backendPort,
+        @OutputCustomType.Parameter("disableOutboundSnat") @Nullable Boolean disableOutboundSnat,
+        @OutputCustomType.Parameter("enableFloatingIP") @Nullable Boolean enableFloatingIP,
+        @OutputCustomType.Parameter("enableTcpReset") @Nullable Boolean enableTcpReset,
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("frontendIPConfiguration") @Nullable SubResourceResponse frontendIPConfiguration,
+        @OutputCustomType.Parameter("frontendPort") Integer frontendPort,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("idleTimeoutInMinutes") @Nullable Integer idleTimeoutInMinutes,
+        @OutputCustomType.Parameter("loadDistribution") @Nullable String loadDistribution,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("probe") @Nullable SubResourceResponse probe,
+        @OutputCustomType.Parameter("protocol") String protocol,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("type") String type) {
         this.backendAddressPool = backendAddressPool;
         this.backendPort = backendPort;
         this.disableOutboundSnat = disableOutboundSnat;

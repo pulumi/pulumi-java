@@ -103,24 +103,24 @@ public final class GetSqlPoolResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"collation","createMode","creationDate","id","location","maxSizeBytes","name","provisioningState","recoverableDatabaseId","restorePointInTime","sku","sourceDatabaseId","status","storageAccountType","tags","type"})
+    @OutputCustomType.Constructor
     private GetSqlPoolResult(
-        @Nullable String collation,
-        @Nullable String createMode,
-        @Nullable String creationDate,
-        String id,
-        String location,
-        @Nullable Double maxSizeBytes,
-        String name,
-        @Nullable String provisioningState,
-        @Nullable String recoverableDatabaseId,
-        @Nullable String restorePointInTime,
-        @Nullable SkuResponse sku,
-        @Nullable String sourceDatabaseId,
-        @Nullable String status,
-        @Nullable String storageAccountType,
-        @Nullable Map<String,String> tags,
-        String type) {
+        @OutputCustomType.Parameter("collation") @Nullable String collation,
+        @OutputCustomType.Parameter("createMode") @Nullable String createMode,
+        @OutputCustomType.Parameter("creationDate") @Nullable String creationDate,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("maxSizeBytes") @Nullable Double maxSizeBytes,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("provisioningState") @Nullable String provisioningState,
+        @OutputCustomType.Parameter("recoverableDatabaseId") @Nullable String recoverableDatabaseId,
+        @OutputCustomType.Parameter("restorePointInTime") @Nullable String restorePointInTime,
+        @OutputCustomType.Parameter("sku") @Nullable SkuResponse sku,
+        @OutputCustomType.Parameter("sourceDatabaseId") @Nullable String sourceDatabaseId,
+        @OutputCustomType.Parameter("status") @Nullable String status,
+        @OutputCustomType.Parameter("storageAccountType") @Nullable String storageAccountType,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type) {
         this.collation = collation;
         this.createMode = createMode;
         this.creationDate = creationDate;

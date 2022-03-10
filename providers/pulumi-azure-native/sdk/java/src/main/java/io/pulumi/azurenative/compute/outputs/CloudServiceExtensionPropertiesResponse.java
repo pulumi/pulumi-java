@@ -65,18 +65,18 @@ public final class CloudServiceExtensionPropertiesResponse {
      */
     private final @Nullable String typeHandlerVersion;
 
-    @OutputCustomType.Constructor({"autoUpgradeMinorVersion","forceUpdateTag","protectedSettings","protectedSettingsFromKeyVault","provisioningState","publisher","rolesAppliedTo","settings","type","typeHandlerVersion"})
+    @OutputCustomType.Constructor
     private CloudServiceExtensionPropertiesResponse(
-        @Nullable Boolean autoUpgradeMinorVersion,
-        @Nullable String forceUpdateTag,
-        @Nullable String protectedSettings,
-        @Nullable CloudServiceVaultAndSecretReferenceResponse protectedSettingsFromKeyVault,
-        String provisioningState,
-        @Nullable String publisher,
-        @Nullable List<String> rolesAppliedTo,
-        @Nullable String settings,
-        @Nullable String type,
-        @Nullable String typeHandlerVersion) {
+        @OutputCustomType.Parameter("autoUpgradeMinorVersion") @Nullable Boolean autoUpgradeMinorVersion,
+        @OutputCustomType.Parameter("forceUpdateTag") @Nullable String forceUpdateTag,
+        @OutputCustomType.Parameter("protectedSettings") @Nullable String protectedSettings,
+        @OutputCustomType.Parameter("protectedSettingsFromKeyVault") @Nullable CloudServiceVaultAndSecretReferenceResponse protectedSettingsFromKeyVault,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("publisher") @Nullable String publisher,
+        @OutputCustomType.Parameter("rolesAppliedTo") @Nullable List<String> rolesAppliedTo,
+        @OutputCustomType.Parameter("settings") @Nullable String settings,
+        @OutputCustomType.Parameter("type") @Nullable String type,
+        @OutputCustomType.Parameter("typeHandlerVersion") @Nullable String typeHandlerVersion) {
         this.autoUpgradeMinorVersion = autoUpgradeMinorVersion;
         this.forceUpdateTag = forceUpdateTag;
         this.protectedSettings = protectedSettings;

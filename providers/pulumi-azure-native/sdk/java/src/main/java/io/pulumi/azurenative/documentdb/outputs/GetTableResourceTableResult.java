@@ -42,15 +42,15 @@ public final class GetTableResourceTableResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"id","location","name","options","resource","tags","type"})
+    @OutputCustomType.Constructor
     private GetTableResourceTableResult(
-        String id,
-        @Nullable String location,
-        String name,
-        @Nullable TableGetPropertiesResponseOptions options,
-        @Nullable TableGetPropertiesResponseResource resource,
-        @Nullable Map<String,String> tags,
-        String type) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("options") @Nullable TableGetPropertiesResponseOptions options,
+        @OutputCustomType.Parameter("resource") @Nullable TableGetPropertiesResponseResource resource,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type) {
         this.id = id;
         this.location = location;
         this.name = name;

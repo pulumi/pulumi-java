@@ -33,12 +33,12 @@ public final class VirtualHubRouteV2Response {
      */
     private final @Nullable List<String> nextHops;
 
-    @OutputCustomType.Constructor({"destinationType","destinations","nextHopType","nextHops"})
+    @OutputCustomType.Constructor
     private VirtualHubRouteV2Response(
-        @Nullable String destinationType,
-        @Nullable List<String> destinations,
-        @Nullable String nextHopType,
-        @Nullable List<String> nextHops) {
+        @OutputCustomType.Parameter("destinationType") @Nullable String destinationType,
+        @OutputCustomType.Parameter("destinations") @Nullable List<String> destinations,
+        @OutputCustomType.Parameter("nextHopType") @Nullable String nextHopType,
+        @OutputCustomType.Parameter("nextHops") @Nullable List<String> nextHops) {
         this.destinationType = destinationType;
         this.destinations = destinations;
         this.nextHopType = nextHopType;

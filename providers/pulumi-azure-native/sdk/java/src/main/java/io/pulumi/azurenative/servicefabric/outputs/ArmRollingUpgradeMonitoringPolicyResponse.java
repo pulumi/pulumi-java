@@ -42,14 +42,14 @@ public final class ArmRollingUpgradeMonitoringPolicyResponse {
      */
     private final @Nullable String upgradeTimeout;
 
-    @OutputCustomType.Constructor({"failureAction","healthCheckRetryTimeout","healthCheckStableDuration","healthCheckWaitDuration","upgradeDomainTimeout","upgradeTimeout"})
+    @OutputCustomType.Constructor
     private ArmRollingUpgradeMonitoringPolicyResponse(
-        @Nullable String failureAction,
-        @Nullable String healthCheckRetryTimeout,
-        @Nullable String healthCheckStableDuration,
-        @Nullable String healthCheckWaitDuration,
-        @Nullable String upgradeDomainTimeout,
-        @Nullable String upgradeTimeout) {
+        @OutputCustomType.Parameter("failureAction") @Nullable String failureAction,
+        @OutputCustomType.Parameter("healthCheckRetryTimeout") @Nullable String healthCheckRetryTimeout,
+        @OutputCustomType.Parameter("healthCheckStableDuration") @Nullable String healthCheckStableDuration,
+        @OutputCustomType.Parameter("healthCheckWaitDuration") @Nullable String healthCheckWaitDuration,
+        @OutputCustomType.Parameter("upgradeDomainTimeout") @Nullable String upgradeDomainTimeout,
+        @OutputCustomType.Parameter("upgradeTimeout") @Nullable String upgradeTimeout) {
         this.failureAction = failureAction;
         this.healthCheckRetryTimeout = healthCheckRetryTimeout;
         this.healthCheckStableDuration = healthCheckStableDuration;

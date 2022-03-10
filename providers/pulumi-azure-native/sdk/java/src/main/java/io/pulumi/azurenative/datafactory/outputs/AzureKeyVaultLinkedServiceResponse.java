@@ -54,15 +54,15 @@ public final class AzureKeyVaultLinkedServiceResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"annotations","baseUrl","connectVia","credential","description","parameters","type"})
+    @OutputCustomType.Constructor
     private AzureKeyVaultLinkedServiceResponse(
-        @Nullable List<Object> annotations,
-        Object baseUrl,
-        @Nullable IntegrationRuntimeReferenceResponse connectVia,
-        @Nullable CredentialReferenceResponse credential,
-        @Nullable String description,
-        @Nullable Map<String,ParameterSpecificationResponse> parameters,
-        String type) {
+        @OutputCustomType.Parameter("annotations") @Nullable List<Object> annotations,
+        @OutputCustomType.Parameter("baseUrl") Object baseUrl,
+        @OutputCustomType.Parameter("connectVia") @Nullable IntegrationRuntimeReferenceResponse connectVia,
+        @OutputCustomType.Parameter("credential") @Nullable CredentialReferenceResponse credential,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("parameters") @Nullable Map<String,ParameterSpecificationResponse> parameters,
+        @OutputCustomType.Parameter("type") String type) {
         this.annotations = annotations;
         this.baseUrl = baseUrl;
         this.connectVia = connectVia;

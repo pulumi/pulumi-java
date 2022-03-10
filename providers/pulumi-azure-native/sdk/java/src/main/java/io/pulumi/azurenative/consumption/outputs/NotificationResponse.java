@@ -55,16 +55,16 @@ public final class NotificationResponse {
      */
     private final @Nullable String thresholdType;
 
-    @OutputCustomType.Constructor({"contactEmails","contactGroups","contactRoles","enabled","locale","operator","threshold","thresholdType"})
+    @OutputCustomType.Constructor
     private NotificationResponse(
-        List<String> contactEmails,
-        @Nullable List<String> contactGroups,
-        @Nullable List<String> contactRoles,
-        Boolean enabled,
-        @Nullable String locale,
-        String operator,
-        Double threshold,
-        @Nullable String thresholdType) {
+        @OutputCustomType.Parameter("contactEmails") List<String> contactEmails,
+        @OutputCustomType.Parameter("contactGroups") @Nullable List<String> contactGroups,
+        @OutputCustomType.Parameter("contactRoles") @Nullable List<String> contactRoles,
+        @OutputCustomType.Parameter("enabled") Boolean enabled,
+        @OutputCustomType.Parameter("locale") @Nullable String locale,
+        @OutputCustomType.Parameter("operator") String operator,
+        @OutputCustomType.Parameter("threshold") Double threshold,
+        @OutputCustomType.Parameter("thresholdType") @Nullable String thresholdType) {
         this.contactEmails = contactEmails;
         this.contactGroups = contactGroups;
         this.contactRoles = contactRoles;

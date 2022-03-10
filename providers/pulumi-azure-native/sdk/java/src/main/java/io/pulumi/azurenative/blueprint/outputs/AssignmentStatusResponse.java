@@ -26,11 +26,11 @@ public final class AssignmentStatusResponse {
      */
     private final String timeCreated;
 
-    @OutputCustomType.Constructor({"lastModified","managedResources","timeCreated"})
+    @OutputCustomType.Constructor
     private AssignmentStatusResponse(
-        String lastModified,
-        List<String> managedResources,
-        String timeCreated) {
+        @OutputCustomType.Parameter("lastModified") String lastModified,
+        @OutputCustomType.Parameter("managedResources") List<String> managedResources,
+        @OutputCustomType.Parameter("timeCreated") String timeCreated) {
         this.lastModified = lastModified;
         this.managedResources = managedResources;
         this.timeCreated = timeCreated;

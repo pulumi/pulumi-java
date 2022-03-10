@@ -75,21 +75,21 @@ public final class InMageRcmNicDetailsResponse {
      */
     private final String testSubnetName;
 
-    @OutputCustomType.Constructor({"isPrimaryNic","isSelectedForFailover","nicId","sourceIPAddress","sourceIPAddressType","sourceNetworkId","sourceSubnetName","targetIPAddress","targetIPAddressType","targetSubnetName","testIPAddress","testIPAddressType","testSubnetName"})
+    @OutputCustomType.Constructor
     private InMageRcmNicDetailsResponse(
-        String isPrimaryNic,
-        String isSelectedForFailover,
-        String nicId,
-        String sourceIPAddress,
-        String sourceIPAddressType,
-        String sourceNetworkId,
-        String sourceSubnetName,
-        String targetIPAddress,
-        String targetIPAddressType,
-        String targetSubnetName,
-        String testIPAddress,
-        String testIPAddressType,
-        String testSubnetName) {
+        @OutputCustomType.Parameter("isPrimaryNic") String isPrimaryNic,
+        @OutputCustomType.Parameter("isSelectedForFailover") String isSelectedForFailover,
+        @OutputCustomType.Parameter("nicId") String nicId,
+        @OutputCustomType.Parameter("sourceIPAddress") String sourceIPAddress,
+        @OutputCustomType.Parameter("sourceIPAddressType") String sourceIPAddressType,
+        @OutputCustomType.Parameter("sourceNetworkId") String sourceNetworkId,
+        @OutputCustomType.Parameter("sourceSubnetName") String sourceSubnetName,
+        @OutputCustomType.Parameter("targetIPAddress") String targetIPAddress,
+        @OutputCustomType.Parameter("targetIPAddressType") String targetIPAddressType,
+        @OutputCustomType.Parameter("targetSubnetName") String targetSubnetName,
+        @OutputCustomType.Parameter("testIPAddress") String testIPAddress,
+        @OutputCustomType.Parameter("testIPAddressType") String testIPAddressType,
+        @OutputCustomType.Parameter("testSubnetName") String testSubnetName) {
         this.isPrimaryNic = isPrimaryNic;
         this.isSelectedForFailover = isSelectedForFailover;
         this.nicId = nicId;

@@ -25,11 +25,11 @@ public final class CustomerSecretResponse {
      */
     private final String keyValue;
 
-    @OutputCustomType.Constructor({"algorithm","keyIdentifier","keyValue"})
+    @OutputCustomType.Constructor
     private CustomerSecretResponse(
-        String algorithm,
-        String keyIdentifier,
-        String keyValue) {
+        @OutputCustomType.Parameter("algorithm") String algorithm,
+        @OutputCustomType.Parameter("keyIdentifier") String keyIdentifier,
+        @OutputCustomType.Parameter("keyValue") String keyValue) {
         this.algorithm = algorithm;
         this.keyIdentifier = keyIdentifier;
         this.keyValue = keyValue;

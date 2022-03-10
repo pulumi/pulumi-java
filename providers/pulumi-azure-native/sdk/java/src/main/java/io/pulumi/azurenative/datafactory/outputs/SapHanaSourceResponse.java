@@ -70,19 +70,19 @@ public final class SapHanaSourceResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"additionalColumns","disableMetricsCollection","maxConcurrentConnections","packetSize","partitionOption","partitionSettings","query","queryTimeout","sourceRetryCount","sourceRetryWait","type"})
+    @OutputCustomType.Constructor
     private SapHanaSourceResponse(
-        @Nullable Object additionalColumns,
-        @Nullable Object disableMetricsCollection,
-        @Nullable Object maxConcurrentConnections,
-        @Nullable Object packetSize,
-        @Nullable Object partitionOption,
-        @Nullable SapHanaPartitionSettingsResponse partitionSettings,
-        @Nullable Object query,
-        @Nullable Object queryTimeout,
-        @Nullable Object sourceRetryCount,
-        @Nullable Object sourceRetryWait,
-        String type) {
+        @OutputCustomType.Parameter("additionalColumns") @Nullable Object additionalColumns,
+        @OutputCustomType.Parameter("disableMetricsCollection") @Nullable Object disableMetricsCollection,
+        @OutputCustomType.Parameter("maxConcurrentConnections") @Nullable Object maxConcurrentConnections,
+        @OutputCustomType.Parameter("packetSize") @Nullable Object packetSize,
+        @OutputCustomType.Parameter("partitionOption") @Nullable Object partitionOption,
+        @OutputCustomType.Parameter("partitionSettings") @Nullable SapHanaPartitionSettingsResponse partitionSettings,
+        @OutputCustomType.Parameter("query") @Nullable Object query,
+        @OutputCustomType.Parameter("queryTimeout") @Nullable Object queryTimeout,
+        @OutputCustomType.Parameter("sourceRetryCount") @Nullable Object sourceRetryCount,
+        @OutputCustomType.Parameter("sourceRetryWait") @Nullable Object sourceRetryWait,
+        @OutputCustomType.Parameter("type") String type) {
         this.additionalColumns = additionalColumns;
         this.disableMetricsCollection = disableMetricsCollection;
         this.maxConcurrentConnections = maxConcurrentConnections;

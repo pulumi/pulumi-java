@@ -21,10 +21,10 @@ public final class ClientCertificateThumbprintResponse {
      */
     private final Boolean isAdmin;
 
-    @OutputCustomType.Constructor({"certificateThumbprint","isAdmin"})
+    @OutputCustomType.Constructor
     private ClientCertificateThumbprintResponse(
-        String certificateThumbprint,
-        Boolean isAdmin) {
+        @OutputCustomType.Parameter("certificateThumbprint") String certificateThumbprint,
+        @OutputCustomType.Parameter("isAdmin") Boolean isAdmin) {
         this.certificateThumbprint = certificateThumbprint;
         this.isAdmin = isAdmin;
     }

@@ -22,10 +22,10 @@ public final class StreamingPolicyPlayReadyConfigurationResponse {
      */
     private final @Nullable String playReadyCustomAttributes;
 
-    @OutputCustomType.Constructor({"customLicenseAcquisitionUrlTemplate","playReadyCustomAttributes"})
+    @OutputCustomType.Constructor
     private StreamingPolicyPlayReadyConfigurationResponse(
-        @Nullable String customLicenseAcquisitionUrlTemplate,
-        @Nullable String playReadyCustomAttributes) {
+        @OutputCustomType.Parameter("customLicenseAcquisitionUrlTemplate") @Nullable String customLicenseAcquisitionUrlTemplate,
+        @OutputCustomType.Parameter("playReadyCustomAttributes") @Nullable String playReadyCustomAttributes) {
         this.customLicenseAcquisitionUrlTemplate = customLicenseAcquisitionUrlTemplate;
         this.playReadyCustomAttributes = playReadyCustomAttributes;
     }

@@ -48,15 +48,15 @@ public final class AzureWorkloadSQLAutoProtectionIntentResponse {
      */
     private final @Nullable String workloadItemType;
 
-    @OutputCustomType.Constructor({"backupManagementType","itemId","policyId","protectionIntentItemType","protectionState","sourceResourceId","workloadItemType"})
+    @OutputCustomType.Constructor
     private AzureWorkloadSQLAutoProtectionIntentResponse(
-        @Nullable String backupManagementType,
-        @Nullable String itemId,
-        @Nullable String policyId,
-        String protectionIntentItemType,
-        @Nullable String protectionState,
-        @Nullable String sourceResourceId,
-        @Nullable String workloadItemType) {
+        @OutputCustomType.Parameter("backupManagementType") @Nullable String backupManagementType,
+        @OutputCustomType.Parameter("itemId") @Nullable String itemId,
+        @OutputCustomType.Parameter("policyId") @Nullable String policyId,
+        @OutputCustomType.Parameter("protectionIntentItemType") String protectionIntentItemType,
+        @OutputCustomType.Parameter("protectionState") @Nullable String protectionState,
+        @OutputCustomType.Parameter("sourceResourceId") @Nullable String sourceResourceId,
+        @OutputCustomType.Parameter("workloadItemType") @Nullable String workloadItemType) {
         this.backupManagementType = backupManagementType;
         this.itemId = itemId;
         this.policyId = policyId;

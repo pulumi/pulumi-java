@@ -29,11 +29,11 @@ public final class DeploymentPropertiesResponse {
      */
     private final @Nullable DeploymentScaleSettingsResponse scaleSettings;
 
-    @OutputCustomType.Constructor({"model","provisioningState","scaleSettings"})
+    @OutputCustomType.Constructor
     private DeploymentPropertiesResponse(
-        @Nullable DeploymentModelResponse model,
-        String provisioningState,
-        @Nullable DeploymentScaleSettingsResponse scaleSettings) {
+        @OutputCustomType.Parameter("model") @Nullable DeploymentModelResponse model,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("scaleSettings") @Nullable DeploymentScaleSettingsResponse scaleSettings) {
         this.model = model;
         this.provisioningState = provisioningState;
         this.scaleSettings = scaleSettings;

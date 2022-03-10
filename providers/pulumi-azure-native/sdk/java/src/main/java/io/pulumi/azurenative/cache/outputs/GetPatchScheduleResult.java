@@ -32,12 +32,12 @@ public final class GetPatchScheduleResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"id","name","scheduleEntries","type"})
+    @OutputCustomType.Constructor
     private GetPatchScheduleResult(
-        String id,
-        String name,
-        List<ScheduleEntryResponse> scheduleEntries,
-        String type) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("scheduleEntries") List<ScheduleEntryResponse> scheduleEntries,
+        @OutputCustomType.Parameter("type") String type) {
         this.id = id;
         this.name = name;
         this.scheduleEntries = scheduleEntries;

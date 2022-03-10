@@ -49,15 +49,15 @@ public final class GetPrivateLinkScopeResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"id","location","name","properties","systemData","tags","type"})
+    @OutputCustomType.Constructor
     private GetPrivateLinkScopeResult(
-        String id,
-        String location,
-        String name,
-        HybridComputePrivateLinkScopePropertiesResponse properties,
-        SystemDataResponse systemData,
-        @Nullable Map<String,String> tags,
-        String type) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("properties") HybridComputePrivateLinkScopePropertiesResponse properties,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type) {
         this.id = id;
         this.location = location;
         this.name = name;

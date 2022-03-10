@@ -23,16 +23,16 @@ public final class ResourceProviderManifestPropertiesResponseManagement {
     private final @Nullable List<String> schemaOwners;
     private final @Nullable List<ServiceTreeInfoResponse> serviceTreeInfos;
 
-    @OutputCustomType.Constructor({"incidentContactEmail","incidentRoutingService","incidentRoutingTeam","manifestOwners","resourceAccessPolicy","resourceAccessRoles","schemaOwners","serviceTreeInfos"})
+    @OutputCustomType.Constructor
     private ResourceProviderManifestPropertiesResponseManagement(
-        @Nullable String incidentContactEmail,
-        @Nullable String incidentRoutingService,
-        @Nullable String incidentRoutingTeam,
-        @Nullable List<String> manifestOwners,
-        @Nullable String resourceAccessPolicy,
-        @Nullable List<Object> resourceAccessRoles,
-        @Nullable List<String> schemaOwners,
-        @Nullable List<ServiceTreeInfoResponse> serviceTreeInfos) {
+        @OutputCustomType.Parameter("incidentContactEmail") @Nullable String incidentContactEmail,
+        @OutputCustomType.Parameter("incidentRoutingService") @Nullable String incidentRoutingService,
+        @OutputCustomType.Parameter("incidentRoutingTeam") @Nullable String incidentRoutingTeam,
+        @OutputCustomType.Parameter("manifestOwners") @Nullable List<String> manifestOwners,
+        @OutputCustomType.Parameter("resourceAccessPolicy") @Nullable String resourceAccessPolicy,
+        @OutputCustomType.Parameter("resourceAccessRoles") @Nullable List<Object> resourceAccessRoles,
+        @OutputCustomType.Parameter("schemaOwners") @Nullable List<String> schemaOwners,
+        @OutputCustomType.Parameter("serviceTreeInfos") @Nullable List<ServiceTreeInfoResponse> serviceTreeInfos) {
         this.incidentContactEmail = incidentContactEmail;
         this.incidentRoutingService = incidentRoutingService;
         this.incidentRoutingTeam = incidentRoutingTeam;

@@ -64,18 +64,18 @@ public final class MigrateSqlServerSqlMITaskOutputDatabaseLevelResponse {
      */
     private final String state;
 
-    @OutputCustomType.Constructor({"databaseName","endedOn","exceptionsAndWarnings","id","message","resultType","sizeMB","stage","startedOn","state"})
+    @OutputCustomType.Constructor
     private MigrateSqlServerSqlMITaskOutputDatabaseLevelResponse(
-        String databaseName,
-        String endedOn,
-        List<ReportableExceptionResponse> exceptionsAndWarnings,
-        String id,
-        String message,
-        String resultType,
-        Double sizeMB,
-        String stage,
-        String startedOn,
-        String state) {
+        @OutputCustomType.Parameter("databaseName") String databaseName,
+        @OutputCustomType.Parameter("endedOn") String endedOn,
+        @OutputCustomType.Parameter("exceptionsAndWarnings") List<ReportableExceptionResponse> exceptionsAndWarnings,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("message") String message,
+        @OutputCustomType.Parameter("resultType") String resultType,
+        @OutputCustomType.Parameter("sizeMB") Double sizeMB,
+        @OutputCustomType.Parameter("stage") String stage,
+        @OutputCustomType.Parameter("startedOn") String startedOn,
+        @OutputCustomType.Parameter("state") String state) {
         this.databaseName = databaseName;
         this.endedOn = endedOn;
         this.exceptionsAndWarnings = exceptionsAndWarnings;

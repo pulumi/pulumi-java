@@ -60,17 +60,17 @@ public final class GetAdminRuleCollectionResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"appliesToGroups","description","displayName","etag","id","name","provisioningState","systemData","type"})
+    @OutputCustomType.Constructor
     private GetAdminRuleCollectionResult(
-        @Nullable List<NetworkManagerSecurityGroupItemResponse> appliesToGroups,
-        @Nullable String description,
-        @Nullable String displayName,
-        String etag,
-        String id,
-        String name,
-        String provisioningState,
-        SystemDataResponse systemData,
-        String type) {
+        @OutputCustomType.Parameter("appliesToGroups") @Nullable List<NetworkManagerSecurityGroupItemResponse> appliesToGroups,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("displayName") @Nullable String displayName,
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("type") String type) {
         this.appliesToGroups = appliesToGroups;
         this.description = description;
         this.displayName = displayName;

@@ -76,20 +76,20 @@ public final class BlobSinkResponse {
      */
     private final @Nullable Object writeBatchTimeout;
 
-    @OutputCustomType.Constructor({"blobWriterAddHeader","blobWriterDateTimeFormat","blobWriterOverwriteFiles","copyBehavior","disableMetricsCollection","maxConcurrentConnections","metadata","sinkRetryCount","sinkRetryWait","type","writeBatchSize","writeBatchTimeout"})
+    @OutputCustomType.Constructor
     private BlobSinkResponse(
-        @Nullable Object blobWriterAddHeader,
-        @Nullable Object blobWriterDateTimeFormat,
-        @Nullable Object blobWriterOverwriteFiles,
-        @Nullable Object copyBehavior,
-        @Nullable Object disableMetricsCollection,
-        @Nullable Object maxConcurrentConnections,
-        @Nullable List<MetadataItemResponse> metadata,
-        @Nullable Object sinkRetryCount,
-        @Nullable Object sinkRetryWait,
-        String type,
-        @Nullable Object writeBatchSize,
-        @Nullable Object writeBatchTimeout) {
+        @OutputCustomType.Parameter("blobWriterAddHeader") @Nullable Object blobWriterAddHeader,
+        @OutputCustomType.Parameter("blobWriterDateTimeFormat") @Nullable Object blobWriterDateTimeFormat,
+        @OutputCustomType.Parameter("blobWriterOverwriteFiles") @Nullable Object blobWriterOverwriteFiles,
+        @OutputCustomType.Parameter("copyBehavior") @Nullable Object copyBehavior,
+        @OutputCustomType.Parameter("disableMetricsCollection") @Nullable Object disableMetricsCollection,
+        @OutputCustomType.Parameter("maxConcurrentConnections") @Nullable Object maxConcurrentConnections,
+        @OutputCustomType.Parameter("metadata") @Nullable List<MetadataItemResponse> metadata,
+        @OutputCustomType.Parameter("sinkRetryCount") @Nullable Object sinkRetryCount,
+        @OutputCustomType.Parameter("sinkRetryWait") @Nullable Object sinkRetryWait,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("writeBatchSize") @Nullable Object writeBatchSize,
+        @OutputCustomType.Parameter("writeBatchTimeout") @Nullable Object writeBatchTimeout) {
         this.blobWriterAddHeader = blobWriterAddHeader;
         this.blobWriterDateTimeFormat = blobWriterDateTimeFormat;
         this.blobWriterOverwriteFiles = blobWriterOverwriteFiles;

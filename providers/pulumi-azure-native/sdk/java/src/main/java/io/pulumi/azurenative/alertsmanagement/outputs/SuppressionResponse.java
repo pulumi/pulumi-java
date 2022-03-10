@@ -66,18 +66,18 @@ public final class SuppressionResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"conditions","createdAt","createdBy","description","lastModifiedAt","lastModifiedBy","scope","status","suppressionConfig","type"})
+    @OutputCustomType.Constructor
     private SuppressionResponse(
-        @Nullable ConditionsResponse conditions,
-        String createdAt,
-        String createdBy,
-        @Nullable String description,
-        String lastModifiedAt,
-        String lastModifiedBy,
-        @Nullable ScopeResponse scope,
-        @Nullable String status,
-        SuppressionConfigResponse suppressionConfig,
-        String type) {
+        @OutputCustomType.Parameter("conditions") @Nullable ConditionsResponse conditions,
+        @OutputCustomType.Parameter("createdAt") String createdAt,
+        @OutputCustomType.Parameter("createdBy") String createdBy,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("lastModifiedAt") String lastModifiedAt,
+        @OutputCustomType.Parameter("lastModifiedBy") String lastModifiedBy,
+        @OutputCustomType.Parameter("scope") @Nullable ScopeResponse scope,
+        @OutputCustomType.Parameter("status") @Nullable String status,
+        @OutputCustomType.Parameter("suppressionConfig") SuppressionConfigResponse suppressionConfig,
+        @OutputCustomType.Parameter("type") String type) {
         this.conditions = conditions;
         this.createdAt = createdAt;
         this.createdBy = createdBy;

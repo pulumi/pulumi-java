@@ -28,11 +28,11 @@ public final class ImageTemplateVhdDistributorResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"artifactTags","runOutputName","type"})
+    @OutputCustomType.Constructor
     private ImageTemplateVhdDistributorResponse(
-        @Nullable Map<String,String> artifactTags,
-        String runOutputName,
-        String type) {
+        @OutputCustomType.Parameter("artifactTags") @Nullable Map<String,String> artifactTags,
+        @OutputCustomType.Parameter("runOutputName") String runOutputName,
+        @OutputCustomType.Parameter("type") String type) {
         this.artifactTags = artifactTags;
         this.runOutputName = runOutputName;
         this.type = type;

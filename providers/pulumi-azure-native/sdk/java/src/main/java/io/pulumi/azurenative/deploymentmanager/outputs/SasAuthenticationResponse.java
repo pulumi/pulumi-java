@@ -21,10 +21,10 @@ public final class SasAuthenticationResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"sasUri","type"})
+    @OutputCustomType.Constructor
     private SasAuthenticationResponse(
-        String sasUri,
-        String type) {
+        @OutputCustomType.Parameter("sasUri") String sasUri,
+        @OutputCustomType.Parameter("type") String type) {
         this.sasUri = sasUri;
         this.type = type;
     }

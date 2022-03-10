@@ -25,11 +25,11 @@ public final class FollowerDatabaseDefinitionResponse {
      */
     private final String kustoPoolResourceId;
 
-    @OutputCustomType.Constructor({"attachedDatabaseConfigurationName","databaseName","kustoPoolResourceId"})
+    @OutputCustomType.Constructor
     private FollowerDatabaseDefinitionResponse(
-        String attachedDatabaseConfigurationName,
-        String databaseName,
-        String kustoPoolResourceId) {
+        @OutputCustomType.Parameter("attachedDatabaseConfigurationName") String attachedDatabaseConfigurationName,
+        @OutputCustomType.Parameter("databaseName") String databaseName,
+        @OutputCustomType.Parameter("kustoPoolResourceId") String kustoPoolResourceId) {
         this.attachedDatabaseConfigurationName = attachedDatabaseConfigurationName;
         this.databaseName = databaseName;
         this.kustoPoolResourceId = kustoPoolResourceId;

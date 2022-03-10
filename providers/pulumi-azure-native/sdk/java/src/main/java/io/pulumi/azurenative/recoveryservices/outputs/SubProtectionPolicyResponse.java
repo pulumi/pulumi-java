@@ -34,11 +34,11 @@ public final class SubProtectionPolicyResponse {
      */
     private final @Nullable Object schedulePolicy;
 
-    @OutputCustomType.Constructor({"policyType","retentionPolicy","schedulePolicy"})
+    @OutputCustomType.Constructor
     private SubProtectionPolicyResponse(
-        @Nullable String policyType,
-        @Nullable Either<LongTermRetentionPolicyResponse,SimpleRetentionPolicyResponse> retentionPolicy,
-        @Nullable Object schedulePolicy) {
+        @OutputCustomType.Parameter("policyType") @Nullable String policyType,
+        @OutputCustomType.Parameter("retentionPolicy") @Nullable Either<LongTermRetentionPolicyResponse,SimpleRetentionPolicyResponse> retentionPolicy,
+        @OutputCustomType.Parameter("schedulePolicy") @Nullable Object schedulePolicy) {
         this.policyType = policyType;
         this.retentionPolicy = retentionPolicy;
         this.schedulePolicy = schedulePolicy;

@@ -90,23 +90,23 @@ public final class GetEnvironmentSettingResult {
      */
     private final @Nullable String uniqueIdentifier;
 
-    @OutputCustomType.Constructor({"configurationState","description","id","lastChanged","lastPublished","latestOperationResult","location","name","provisioningState","publishingState","resourceSettings","tags","title","type","uniqueIdentifier"})
+    @OutputCustomType.Constructor
     private GetEnvironmentSettingResult(
-        @Nullable String configurationState,
-        @Nullable String description,
-        String id,
-        String lastChanged,
-        String lastPublished,
-        LatestOperationResultResponse latestOperationResult,
-        @Nullable String location,
-        String name,
-        @Nullable String provisioningState,
-        String publishingState,
-        ResourceSettingsResponse resourceSettings,
-        @Nullable Map<String,String> tags,
-        @Nullable String title,
-        String type,
-        @Nullable String uniqueIdentifier) {
+        @OutputCustomType.Parameter("configurationState") @Nullable String configurationState,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("lastChanged") String lastChanged,
+        @OutputCustomType.Parameter("lastPublished") String lastPublished,
+        @OutputCustomType.Parameter("latestOperationResult") LatestOperationResultResponse latestOperationResult,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("provisioningState") @Nullable String provisioningState,
+        @OutputCustomType.Parameter("publishingState") String publishingState,
+        @OutputCustomType.Parameter("resourceSettings") ResourceSettingsResponse resourceSettings,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("title") @Nullable String title,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("uniqueIdentifier") @Nullable String uniqueIdentifier) {
         this.configurationState = configurationState;
         this.description = description;
         this.id = id;

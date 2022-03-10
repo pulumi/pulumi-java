@@ -48,15 +48,15 @@ public final class VolumeFailoverMetadataResponse {
      */
     private final @Nullable String volumeType;
 
-    @OutputCustomType.Constructor({"backupCreatedDate","backupElementId","backupId","backupPolicyId","sizeInBytes","volumeId","volumeType"})
+    @OutputCustomType.Constructor
     private VolumeFailoverMetadataResponse(
-        @Nullable String backupCreatedDate,
-        @Nullable String backupElementId,
-        @Nullable String backupId,
-        @Nullable String backupPolicyId,
-        @Nullable Double sizeInBytes,
-        @Nullable String volumeId,
-        @Nullable String volumeType) {
+        @OutputCustomType.Parameter("backupCreatedDate") @Nullable String backupCreatedDate,
+        @OutputCustomType.Parameter("backupElementId") @Nullable String backupElementId,
+        @OutputCustomType.Parameter("backupId") @Nullable String backupId,
+        @OutputCustomType.Parameter("backupPolicyId") @Nullable String backupPolicyId,
+        @OutputCustomType.Parameter("sizeInBytes") @Nullable Double sizeInBytes,
+        @OutputCustomType.Parameter("volumeId") @Nullable String volumeId,
+        @OutputCustomType.Parameter("volumeType") @Nullable String volumeType) {
         this.backupCreatedDate = backupCreatedDate;
         this.backupElementId = backupElementId;
         this.backupId = backupId;

@@ -15,8 +15,8 @@ public final class ManagementAssociationPropertiesResponse {
      */
     private final String applicationId;
 
-    @OutputCustomType.Constructor({"applicationId"})
-    private ManagementAssociationPropertiesResponse(String applicationId) {
+    @OutputCustomType.Constructor
+    private ManagementAssociationPropertiesResponse(@OutputCustomType.Parameter("applicationId") String applicationId) {
         this.applicationId = applicationId;
     }
 

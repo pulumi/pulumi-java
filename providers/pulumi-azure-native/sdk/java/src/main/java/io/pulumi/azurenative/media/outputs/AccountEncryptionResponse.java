@@ -23,10 +23,10 @@ public final class AccountEncryptionResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"keyVaultProperties","type"})
+    @OutputCustomType.Constructor
     private AccountEncryptionResponse(
-        @Nullable KeyVaultPropertiesResponse keyVaultProperties,
-        String type) {
+        @OutputCustomType.Parameter("keyVaultProperties") @Nullable KeyVaultPropertiesResponse keyVaultProperties,
+        @OutputCustomType.Parameter("type") String type) {
         this.keyVaultProperties = keyVaultProperties;
         this.type = type;
     }

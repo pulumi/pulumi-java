@@ -17,8 +17,8 @@ public final class HealthAlertCriteriaResponse {
      */
     private final @Nullable List<VmGuestHealthAlertCriterionResponse> allOf;
 
-    @OutputCustomType.Constructor({"allOf"})
-    private HealthAlertCriteriaResponse(@Nullable List<VmGuestHealthAlertCriterionResponse> allOf) {
+    @OutputCustomType.Constructor
+    private HealthAlertCriteriaResponse(@OutputCustomType.Parameter("allOf") @Nullable List<VmGuestHealthAlertCriterionResponse> allOf) {
         this.allOf = allOf;
     }
 

@@ -62,17 +62,17 @@ public final class GetAccountResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"activeDirectories","encryption","id","location","name","provisioningState","systemData","tags","type"})
+    @OutputCustomType.Constructor
     private GetAccountResult(
-        @Nullable List<ActiveDirectoryResponse> activeDirectories,
-        @Nullable AccountEncryptionResponse encryption,
-        String id,
-        String location,
-        String name,
-        String provisioningState,
-        SystemDataResponse systemData,
-        @Nullable Map<String,String> tags,
-        String type) {
+        @OutputCustomType.Parameter("activeDirectories") @Nullable List<ActiveDirectoryResponse> activeDirectories,
+        @OutputCustomType.Parameter("encryption") @Nullable AccountEncryptionResponse encryption,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type) {
         this.activeDirectories = activeDirectories;
         this.encryption = encryption;
         this.id = id;

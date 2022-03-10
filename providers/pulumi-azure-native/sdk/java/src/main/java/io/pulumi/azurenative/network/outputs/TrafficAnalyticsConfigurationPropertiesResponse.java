@@ -39,13 +39,13 @@ public final class TrafficAnalyticsConfigurationPropertiesResponse {
      */
     private final @Nullable String workspaceResourceId;
 
-    @OutputCustomType.Constructor({"enabled","trafficAnalyticsInterval","workspaceId","workspaceRegion","workspaceResourceId"})
+    @OutputCustomType.Constructor
     private TrafficAnalyticsConfigurationPropertiesResponse(
-        @Nullable Boolean enabled,
-        @Nullable Integer trafficAnalyticsInterval,
-        @Nullable String workspaceId,
-        @Nullable String workspaceRegion,
-        @Nullable String workspaceResourceId) {
+        @OutputCustomType.Parameter("enabled") @Nullable Boolean enabled,
+        @OutputCustomType.Parameter("trafficAnalyticsInterval") @Nullable Integer trafficAnalyticsInterval,
+        @OutputCustomType.Parameter("workspaceId") @Nullable String workspaceId,
+        @OutputCustomType.Parameter("workspaceRegion") @Nullable String workspaceRegion,
+        @OutputCustomType.Parameter("workspaceResourceId") @Nullable String workspaceResourceId) {
         this.enabled = enabled;
         this.trafficAnalyticsInterval = trafficAnalyticsInterval;
         this.workspaceId = workspaceId;

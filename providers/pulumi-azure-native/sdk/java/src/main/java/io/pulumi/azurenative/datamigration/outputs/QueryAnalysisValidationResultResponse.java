@@ -21,10 +21,10 @@ public final class QueryAnalysisValidationResultResponse {
      */
     private final ValidationErrorResponse validationErrors;
 
-    @OutputCustomType.Constructor({"queryResults","validationErrors"})
+    @OutputCustomType.Constructor
     private QueryAnalysisValidationResultResponse(
-        QueryExecutionResultResponse queryResults,
-        ValidationErrorResponse validationErrors) {
+        @OutputCustomType.Parameter("queryResults") QueryExecutionResultResponse queryResults,
+        @OutputCustomType.Parameter("validationErrors") ValidationErrorResponse validationErrors) {
         this.queryResults = queryResults;
         this.validationErrors = validationErrors;
     }

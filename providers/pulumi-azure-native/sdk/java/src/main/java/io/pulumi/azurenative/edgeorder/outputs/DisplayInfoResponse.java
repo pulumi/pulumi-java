@@ -20,10 +20,10 @@ public final class DisplayInfoResponse {
      */
     private final String productFamilyDisplayName;
 
-    @OutputCustomType.Constructor({"configurationDisplayName","productFamilyDisplayName"})
+    @OutputCustomType.Constructor
     private DisplayInfoResponse(
-        String configurationDisplayName,
-        String productFamilyDisplayName) {
+        @OutputCustomType.Parameter("configurationDisplayName") String configurationDisplayName,
+        @OutputCustomType.Parameter("productFamilyDisplayName") String productFamilyDisplayName) {
         this.configurationDisplayName = configurationDisplayName;
         this.productFamilyDisplayName = productFamilyDisplayName;
     }

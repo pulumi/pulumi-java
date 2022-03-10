@@ -100,25 +100,25 @@ public final class GetWebAppInstanceFunctionSlotResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"config","configHref","files","functionAppId","href","id","invokeUrlTemplate","isDisabled","kind","language","name","scriptHref","scriptRootPathHref","secretsFileHref","testData","testDataHref","type"})
+    @OutputCustomType.Constructor
     private GetWebAppInstanceFunctionSlotResult(
-        @Nullable Object config,
-        @Nullable String configHref,
-        @Nullable Map<String,String> files,
-        @Nullable String functionAppId,
-        @Nullable String href,
-        String id,
-        @Nullable String invokeUrlTemplate,
-        @Nullable Boolean isDisabled,
-        @Nullable String kind,
-        @Nullable String language,
-        String name,
-        @Nullable String scriptHref,
-        @Nullable String scriptRootPathHref,
-        @Nullable String secretsFileHref,
-        @Nullable String testData,
-        @Nullable String testDataHref,
-        String type) {
+        @OutputCustomType.Parameter("config") @Nullable Object config,
+        @OutputCustomType.Parameter("configHref") @Nullable String configHref,
+        @OutputCustomType.Parameter("files") @Nullable Map<String,String> files,
+        @OutputCustomType.Parameter("functionAppId") @Nullable String functionAppId,
+        @OutputCustomType.Parameter("href") @Nullable String href,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("invokeUrlTemplate") @Nullable String invokeUrlTemplate,
+        @OutputCustomType.Parameter("isDisabled") @Nullable Boolean isDisabled,
+        @OutputCustomType.Parameter("kind") @Nullable String kind,
+        @OutputCustomType.Parameter("language") @Nullable String language,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("scriptHref") @Nullable String scriptHref,
+        @OutputCustomType.Parameter("scriptRootPathHref") @Nullable String scriptRootPathHref,
+        @OutputCustomType.Parameter("secretsFileHref") @Nullable String secretsFileHref,
+        @OutputCustomType.Parameter("testData") @Nullable String testData,
+        @OutputCustomType.Parameter("testDataHref") @Nullable String testDataHref,
+        @OutputCustomType.Parameter("type") String type) {
         this.config = config;
         this.configHref = configHref;
         this.files = files;

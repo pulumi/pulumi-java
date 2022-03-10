@@ -59,16 +59,16 @@ public final class ConnectorMappingPropertiesResponse {
      */
     private final List<ConnectorMappingStructureResponse> structure;
 
-    @OutputCustomType.Constructor({"availability","completeOperation","errorManagement","fileFilter","folderPath","format","hasHeader","structure"})
+    @OutputCustomType.Constructor
     private ConnectorMappingPropertiesResponse(
-        ConnectorMappingAvailabilityResponse availability,
-        ConnectorMappingCompleteOperationResponse completeOperation,
-        ConnectorMappingErrorManagementResponse errorManagement,
-        @Nullable String fileFilter,
-        @Nullable String folderPath,
-        ConnectorMappingFormatResponse format,
-        @Nullable Boolean hasHeader,
-        List<ConnectorMappingStructureResponse> structure) {
+        @OutputCustomType.Parameter("availability") ConnectorMappingAvailabilityResponse availability,
+        @OutputCustomType.Parameter("completeOperation") ConnectorMappingCompleteOperationResponse completeOperation,
+        @OutputCustomType.Parameter("errorManagement") ConnectorMappingErrorManagementResponse errorManagement,
+        @OutputCustomType.Parameter("fileFilter") @Nullable String fileFilter,
+        @OutputCustomType.Parameter("folderPath") @Nullable String folderPath,
+        @OutputCustomType.Parameter("format") ConnectorMappingFormatResponse format,
+        @OutputCustomType.Parameter("hasHeader") @Nullable Boolean hasHeader,
+        @OutputCustomType.Parameter("structure") List<ConnectorMappingStructureResponse> structure) {
         this.availability = availability;
         this.completeOperation = completeOperation;
         this.errorManagement = errorManagement;

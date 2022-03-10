@@ -29,11 +29,11 @@ public final class HttpSettingsResponse {
      */
     private final @Nullable HttpSettingsRoutesResponse routes;
 
-    @OutputCustomType.Constructor({"forwardProxy","requireHttps","routes"})
+    @OutputCustomType.Constructor
     private HttpSettingsResponse(
-        @Nullable ForwardProxyResponse forwardProxy,
-        @Nullable Boolean requireHttps,
-        @Nullable HttpSettingsRoutesResponse routes) {
+        @OutputCustomType.Parameter("forwardProxy") @Nullable ForwardProxyResponse forwardProxy,
+        @OutputCustomType.Parameter("requireHttps") @Nullable Boolean requireHttps,
+        @OutputCustomType.Parameter("routes") @Nullable HttpSettingsRoutesResponse routes) {
         this.forwardProxy = forwardProxy;
         this.requireHttps = requireHttps;
         this.routes = routes;

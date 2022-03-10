@@ -76,20 +76,20 @@ public final class GetCapacityReservationResult {
      */
     private final @Nullable List<String> zones;
 
-    @OutputCustomType.Constructor({"id","instanceView","location","name","provisioningState","provisioningTime","reservationId","sku","tags","type","virtualMachinesAssociated","zones"})
+    @OutputCustomType.Constructor
     private GetCapacityReservationResult(
-        String id,
-        CapacityReservationInstanceViewResponse instanceView,
-        String location,
-        String name,
-        String provisioningState,
-        String provisioningTime,
-        String reservationId,
-        SkuResponse sku,
-        @Nullable Map<String,String> tags,
-        String type,
-        List<SubResourceReadOnlyResponse> virtualMachinesAssociated,
-        @Nullable List<String> zones) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("instanceView") CapacityReservationInstanceViewResponse instanceView,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("provisioningTime") String provisioningTime,
+        @OutputCustomType.Parameter("reservationId") String reservationId,
+        @OutputCustomType.Parameter("sku") SkuResponse sku,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("virtualMachinesAssociated") List<SubResourceReadOnlyResponse> virtualMachinesAssociated,
+        @OutputCustomType.Parameter("zones") @Nullable List<String> zones) {
         this.id = id;
         this.instanceView = instanceView;
         this.location = location;

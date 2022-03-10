@@ -44,14 +44,14 @@ public final class ConfigurationSettingResponse {
      */
     private final @Nullable Double refreshFrequencyMins;
 
-    @OutputCustomType.Constructor({"actionAfterReboot","allowModuleOverwrite","configurationMode","configurationModeFrequencyMins","rebootIfNeeded","refreshFrequencyMins"})
+    @OutputCustomType.Constructor
     private ConfigurationSettingResponse(
-        @Nullable String actionAfterReboot,
-        @Nullable Boolean allowModuleOverwrite,
-        @Nullable String configurationMode,
-        @Nullable Double configurationModeFrequencyMins,
-        @Nullable Boolean rebootIfNeeded,
-        @Nullable Double refreshFrequencyMins) {
+        @OutputCustomType.Parameter("actionAfterReboot") @Nullable String actionAfterReboot,
+        @OutputCustomType.Parameter("allowModuleOverwrite") @Nullable Boolean allowModuleOverwrite,
+        @OutputCustomType.Parameter("configurationMode") @Nullable String configurationMode,
+        @OutputCustomType.Parameter("configurationModeFrequencyMins") @Nullable Double configurationModeFrequencyMins,
+        @OutputCustomType.Parameter("rebootIfNeeded") @Nullable Boolean rebootIfNeeded,
+        @OutputCustomType.Parameter("refreshFrequencyMins") @Nullable Double refreshFrequencyMins) {
         this.actionAfterReboot = actionAfterReboot;
         this.allowModuleOverwrite = allowModuleOverwrite;
         this.configurationMode = configurationMode;

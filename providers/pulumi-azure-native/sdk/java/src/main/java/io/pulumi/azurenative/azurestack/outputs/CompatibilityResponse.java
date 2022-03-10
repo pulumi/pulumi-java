@@ -34,12 +34,12 @@ public final class CompatibilityResponse {
      */
     private final @Nullable String message;
 
-    @OutputCustomType.Constructor({"description","isCompatible","issues","message"})
+    @OutputCustomType.Constructor
     private CompatibilityResponse(
-        @Nullable String description,
-        @Nullable Boolean isCompatible,
-        @Nullable List<String> issues,
-        @Nullable String message) {
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("isCompatible") @Nullable Boolean isCompatible,
+        @OutputCustomType.Parameter("issues") @Nullable List<String> issues,
+        @OutputCustomType.Parameter("message") @Nullable String message) {
         this.description = description;
         this.isCompatible = isCompatible;
         this.issues = issues;

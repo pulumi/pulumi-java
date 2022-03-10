@@ -47,15 +47,15 @@ public final class RedirectConfigurationResponse {
      */
     private final @Nullable String redirectType;
 
-    @OutputCustomType.Constructor({"customFragment","customHost","customPath","customQueryString","odataType","redirectProtocol","redirectType"})
+    @OutputCustomType.Constructor
     private RedirectConfigurationResponse(
-        @Nullable String customFragment,
-        @Nullable String customHost,
-        @Nullable String customPath,
-        @Nullable String customQueryString,
-        String odataType,
-        @Nullable String redirectProtocol,
-        @Nullable String redirectType) {
+        @OutputCustomType.Parameter("customFragment") @Nullable String customFragment,
+        @OutputCustomType.Parameter("customHost") @Nullable String customHost,
+        @OutputCustomType.Parameter("customPath") @Nullable String customPath,
+        @OutputCustomType.Parameter("customQueryString") @Nullable String customQueryString,
+        @OutputCustomType.Parameter("odataType") String odataType,
+        @OutputCustomType.Parameter("redirectProtocol") @Nullable String redirectProtocol,
+        @OutputCustomType.Parameter("redirectType") @Nullable String redirectType) {
         this.customFragment = customFragment;
         this.customHost = customHost;
         this.customPath = customPath;

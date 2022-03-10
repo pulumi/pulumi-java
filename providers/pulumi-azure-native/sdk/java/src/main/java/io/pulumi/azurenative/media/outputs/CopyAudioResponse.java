@@ -23,10 +23,10 @@ public final class CopyAudioResponse {
      */
     private final String odataType;
 
-    @OutputCustomType.Constructor({"label","odataType"})
+    @OutputCustomType.Constructor
     private CopyAudioResponse(
-        @Nullable String label,
-        String odataType) {
+        @OutputCustomType.Parameter("label") @Nullable String label,
+        @OutputCustomType.Parameter("odataType") String odataType) {
         this.label = label;
         this.odataType = odataType;
     }

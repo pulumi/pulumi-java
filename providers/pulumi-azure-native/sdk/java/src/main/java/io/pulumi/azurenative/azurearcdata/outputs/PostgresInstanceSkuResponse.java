@@ -44,14 +44,14 @@ public final class PostgresInstanceSkuResponse {
      */
     private final @Nullable String tier;
 
-    @OutputCustomType.Constructor({"capacity","dev","family","name","size","tier"})
+    @OutputCustomType.Constructor
     private PostgresInstanceSkuResponse(
-        @Nullable Integer capacity,
-        @Nullable Boolean dev,
-        @Nullable String family,
-        String name,
-        @Nullable String size,
-        @Nullable String tier) {
+        @OutputCustomType.Parameter("capacity") @Nullable Integer capacity,
+        @OutputCustomType.Parameter("dev") @Nullable Boolean dev,
+        @OutputCustomType.Parameter("family") @Nullable String family,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("size") @Nullable String size,
+        @OutputCustomType.Parameter("tier") @Nullable String tier) {
         this.capacity = capacity;
         this.dev = dev;
         this.family = family;

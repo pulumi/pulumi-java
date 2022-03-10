@@ -20,10 +20,10 @@ public final class DataStoreInfoBaseResponse {
      */
     private final String objectType;
 
-    @OutputCustomType.Constructor({"dataStoreType","objectType"})
+    @OutputCustomType.Constructor
     private DataStoreInfoBaseResponse(
-        String dataStoreType,
-        String objectType) {
+        @OutputCustomType.Parameter("dataStoreType") String dataStoreType,
+        @OutputCustomType.Parameter("objectType") String objectType) {
         this.dataStoreType = dataStoreType;
         this.objectType = objectType;
     }

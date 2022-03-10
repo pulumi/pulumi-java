@@ -89,22 +89,22 @@ public final class P2SVpnGatewayResponse {
      */
     private final @Nullable SubResourceResponse vpnServerConfiguration;
 
-    @OutputCustomType.Constructor({"customDnsServers","etag","id","isRoutingPreferenceInternet","location","name","p2SConnectionConfigurations","provisioningState","tags","type","virtualHub","vpnClientConnectionHealth","vpnGatewayScaleUnit","vpnServerConfiguration"})
+    @OutputCustomType.Constructor
     private P2SVpnGatewayResponse(
-        @Nullable List<String> customDnsServers,
-        String etag,
-        @Nullable String id,
-        @Nullable Boolean isRoutingPreferenceInternet,
-        String location,
-        String name,
-        @Nullable List<P2SConnectionConfigurationResponse> p2SConnectionConfigurations,
-        String provisioningState,
-        @Nullable Map<String,String> tags,
-        String type,
-        @Nullable SubResourceResponse virtualHub,
-        VpnClientConnectionHealthResponse vpnClientConnectionHealth,
-        @Nullable Integer vpnGatewayScaleUnit,
-        @Nullable SubResourceResponse vpnServerConfiguration) {
+        @OutputCustomType.Parameter("customDnsServers") @Nullable List<String> customDnsServers,
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("isRoutingPreferenceInternet") @Nullable Boolean isRoutingPreferenceInternet,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("p2SConnectionConfigurations") @Nullable List<P2SConnectionConfigurationResponse> p2SConnectionConfigurations,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("virtualHub") @Nullable SubResourceResponse virtualHub,
+        @OutputCustomType.Parameter("vpnClientConnectionHealth") VpnClientConnectionHealthResponse vpnClientConnectionHealth,
+        @OutputCustomType.Parameter("vpnGatewayScaleUnit") @Nullable Integer vpnGatewayScaleUnit,
+        @OutputCustomType.Parameter("vpnServerConfiguration") @Nullable SubResourceResponse vpnServerConfiguration) {
         this.customDnsServers = customDnsServers;
         this.etag = etag;
         this.id = id;

@@ -86,24 +86,24 @@ public final class GetWorkspaceResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"applicationGroupReferences","cloudPcResource","description","etag","friendlyName","id","identity","kind","location","managedBy","name","objectId","plan","sku","tags","type"})
+    @OutputCustomType.Constructor
     private GetWorkspaceResult(
-        @Nullable List<String> applicationGroupReferences,
-        Boolean cloudPcResource,
-        @Nullable String description,
-        String etag,
-        @Nullable String friendlyName,
-        String id,
-        @Nullable ResourceModelWithAllowedPropertySetResponseIdentity identity,
-        @Nullable String kind,
-        @Nullable String location,
-        @Nullable String managedBy,
-        String name,
-        String objectId,
-        @Nullable ResourceModelWithAllowedPropertySetResponsePlan plan,
-        @Nullable ResourceModelWithAllowedPropertySetResponseSku sku,
-        @Nullable Map<String,String> tags,
-        String type) {
+        @OutputCustomType.Parameter("applicationGroupReferences") @Nullable List<String> applicationGroupReferences,
+        @OutputCustomType.Parameter("cloudPcResource") Boolean cloudPcResource,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("friendlyName") @Nullable String friendlyName,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("identity") @Nullable ResourceModelWithAllowedPropertySetResponseIdentity identity,
+        @OutputCustomType.Parameter("kind") @Nullable String kind,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("managedBy") @Nullable String managedBy,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("objectId") String objectId,
+        @OutputCustomType.Parameter("plan") @Nullable ResourceModelWithAllowedPropertySetResponsePlan plan,
+        @OutputCustomType.Parameter("sku") @Nullable ResourceModelWithAllowedPropertySetResponseSku sku,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type) {
         this.applicationGroupReferences = applicationGroupReferences;
         this.cloudPcResource = cloudPcResource;
         this.description = description;

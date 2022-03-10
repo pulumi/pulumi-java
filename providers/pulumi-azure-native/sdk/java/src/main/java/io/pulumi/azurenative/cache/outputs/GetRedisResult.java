@@ -147,33 +147,33 @@ public final class GetRedisResult {
      */
     private final @Nullable List<String> zones;
 
-    @OutputCustomType.Constructor({"accessKeys","enableNonSslPort","hostName","id","instances","linkedServers","location","minimumTlsVersion","name","port","privateEndpointConnections","provisioningState","publicNetworkAccess","redisConfiguration","redisVersion","replicasPerMaster","shardCount","sku","sslPort","staticIP","subnetId","tags","tenantSettings","type","zones"})
+    @OutputCustomType.Constructor
     private GetRedisResult(
-        RedisAccessKeysResponse accessKeys,
-        @Nullable Boolean enableNonSslPort,
-        String hostName,
-        String id,
-        List<RedisInstanceDetailsResponse> instances,
-        List<RedisLinkedServerResponse> linkedServers,
-        String location,
-        @Nullable String minimumTlsVersion,
-        String name,
-        Integer port,
-        List<PrivateEndpointConnectionResponse> privateEndpointConnections,
-        String provisioningState,
-        @Nullable String publicNetworkAccess,
-        @Nullable RedisCommonPropertiesResponseRedisConfiguration redisConfiguration,
-        String redisVersion,
-        @Nullable Integer replicasPerMaster,
-        @Nullable Integer shardCount,
-        SkuResponse sku,
-        Integer sslPort,
-        @Nullable String staticIP,
-        @Nullable String subnetId,
-        @Nullable Map<String,String> tags,
-        @Nullable Map<String,String> tenantSettings,
-        String type,
-        @Nullable List<String> zones) {
+        @OutputCustomType.Parameter("accessKeys") RedisAccessKeysResponse accessKeys,
+        @OutputCustomType.Parameter("enableNonSslPort") @Nullable Boolean enableNonSslPort,
+        @OutputCustomType.Parameter("hostName") String hostName,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("instances") List<RedisInstanceDetailsResponse> instances,
+        @OutputCustomType.Parameter("linkedServers") List<RedisLinkedServerResponse> linkedServers,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("minimumTlsVersion") @Nullable String minimumTlsVersion,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("port") Integer port,
+        @OutputCustomType.Parameter("privateEndpointConnections") List<PrivateEndpointConnectionResponse> privateEndpointConnections,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("publicNetworkAccess") @Nullable String publicNetworkAccess,
+        @OutputCustomType.Parameter("redisConfiguration") @Nullable RedisCommonPropertiesResponseRedisConfiguration redisConfiguration,
+        @OutputCustomType.Parameter("redisVersion") String redisVersion,
+        @OutputCustomType.Parameter("replicasPerMaster") @Nullable Integer replicasPerMaster,
+        @OutputCustomType.Parameter("shardCount") @Nullable Integer shardCount,
+        @OutputCustomType.Parameter("sku") SkuResponse sku,
+        @OutputCustomType.Parameter("sslPort") Integer sslPort,
+        @OutputCustomType.Parameter("staticIP") @Nullable String staticIP,
+        @OutputCustomType.Parameter("subnetId") @Nullable String subnetId,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("tenantSettings") @Nullable Map<String,String> tenantSettings,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("zones") @Nullable List<String> zones) {
         this.accessKeys = accessKeys;
         this.enableNonSslPort = enableNonSslPort;
         this.hostName = hostName;

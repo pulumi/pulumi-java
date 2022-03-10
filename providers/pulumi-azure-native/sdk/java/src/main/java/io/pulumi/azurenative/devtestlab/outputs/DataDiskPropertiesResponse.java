@@ -28,11 +28,11 @@ public final class DataDiskPropertiesResponse {
      */
     private final @Nullable String hostCaching;
 
-    @OutputCustomType.Constructor({"attachNewDataDiskOptions","existingLabDiskId","hostCaching"})
+    @OutputCustomType.Constructor
     private DataDiskPropertiesResponse(
-        @Nullable AttachNewDataDiskOptionsResponse attachNewDataDiskOptions,
-        @Nullable String existingLabDiskId,
-        @Nullable String hostCaching) {
+        @OutputCustomType.Parameter("attachNewDataDiskOptions") @Nullable AttachNewDataDiskOptionsResponse attachNewDataDiskOptions,
+        @OutputCustomType.Parameter("existingLabDiskId") @Nullable String existingLabDiskId,
+        @OutputCustomType.Parameter("hostCaching") @Nullable String hostCaching) {
         this.attachNewDataDiskOptions = attachNewDataDiskOptions;
         this.existingLabDiskId = existingLabDiskId;
         this.hostCaching = hostCaching;

@@ -17,8 +17,8 @@ public final class LinuxOsInfoResponse {
      */
     private final @Nullable String linuxOsState;
 
-    @OutputCustomType.Constructor({"linuxOsState"})
-    private LinuxOsInfoResponse(@Nullable String linuxOsState) {
+    @OutputCustomType.Constructor
+    private LinuxOsInfoResponse(@OutputCustomType.Parameter("linuxOsState") @Nullable String linuxOsState) {
         this.linuxOsState = linuxOsState;
     }
 

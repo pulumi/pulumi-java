@@ -46,14 +46,14 @@ public final class ConnectionMonitorHttpConfigurationResponse {
      */
     private final @Nullable List<String> validStatusCodeRanges;
 
-    @OutputCustomType.Constructor({"method","path","port","preferHTTPS","requestHeaders","validStatusCodeRanges"})
+    @OutputCustomType.Constructor
     private ConnectionMonitorHttpConfigurationResponse(
-        @Nullable String method,
-        @Nullable String path,
-        @Nullable Integer port,
-        @Nullable Boolean preferHTTPS,
-        @Nullable List<HTTPHeaderResponse> requestHeaders,
-        @Nullable List<String> validStatusCodeRanges) {
+        @OutputCustomType.Parameter("method") @Nullable String method,
+        @OutputCustomType.Parameter("path") @Nullable String path,
+        @OutputCustomType.Parameter("port") @Nullable Integer port,
+        @OutputCustomType.Parameter("preferHTTPS") @Nullable Boolean preferHTTPS,
+        @OutputCustomType.Parameter("requestHeaders") @Nullable List<HTTPHeaderResponse> requestHeaders,
+        @OutputCustomType.Parameter("validStatusCodeRanges") @Nullable List<String> validStatusCodeRanges) {
         this.method = method;
         this.path = path;
         this.port = port;

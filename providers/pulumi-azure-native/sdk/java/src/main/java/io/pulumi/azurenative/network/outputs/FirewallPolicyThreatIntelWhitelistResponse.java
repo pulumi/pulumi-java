@@ -22,10 +22,10 @@ public final class FirewallPolicyThreatIntelWhitelistResponse {
      */
     private final @Nullable List<String> ipAddresses;
 
-    @OutputCustomType.Constructor({"fqdns","ipAddresses"})
+    @OutputCustomType.Constructor
     private FirewallPolicyThreatIntelWhitelistResponse(
-        @Nullable List<String> fqdns,
-        @Nullable List<String> ipAddresses) {
+        @OutputCustomType.Parameter("fqdns") @Nullable List<String> fqdns,
+        @OutputCustomType.Parameter("ipAddresses") @Nullable List<String> ipAddresses) {
         this.fqdns = fqdns;
         this.ipAddresses = ipAddresses;
     }

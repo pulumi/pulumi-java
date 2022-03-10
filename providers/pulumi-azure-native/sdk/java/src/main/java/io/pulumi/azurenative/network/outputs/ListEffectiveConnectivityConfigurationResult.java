@@ -24,10 +24,10 @@ public final class ListEffectiveConnectivityConfigurationResult {
      */
     private final @Nullable List<EffectiveConnectivityConfigurationResponse> value;
 
-    @OutputCustomType.Constructor({"skipToken","value"})
+    @OutputCustomType.Constructor
     private ListEffectiveConnectivityConfigurationResult(
-        @Nullable String skipToken,
-        @Nullable List<EffectiveConnectivityConfigurationResponse> value) {
+        @OutputCustomType.Parameter("skipToken") @Nullable String skipToken,
+        @OutputCustomType.Parameter("value") @Nullable List<EffectiveConnectivityConfigurationResponse> value) {
         this.skipToken = skipToken;
         this.value = value;
     }

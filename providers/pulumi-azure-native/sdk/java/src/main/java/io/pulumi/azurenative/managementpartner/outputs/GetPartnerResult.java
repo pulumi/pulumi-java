@@ -68,19 +68,19 @@ public final class GetPartnerResult {
      */
     private final @Nullable Integer version;
 
-    @OutputCustomType.Constructor({"createdTime","etag","id","name","objectId","partnerId","partnerName","tenantId","type","updatedTime","version"})
+    @OutputCustomType.Constructor
     private GetPartnerResult(
-        @Nullable String createdTime,
-        @Nullable Integer etag,
-        String id,
-        String name,
-        @Nullable String objectId,
-        @Nullable String partnerId,
-        @Nullable String partnerName,
-        @Nullable String tenantId,
-        String type,
-        @Nullable String updatedTime,
-        @Nullable Integer version) {
+        @OutputCustomType.Parameter("createdTime") @Nullable String createdTime,
+        @OutputCustomType.Parameter("etag") @Nullable Integer etag,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("objectId") @Nullable String objectId,
+        @OutputCustomType.Parameter("partnerId") @Nullable String partnerId,
+        @OutputCustomType.Parameter("partnerName") @Nullable String partnerName,
+        @OutputCustomType.Parameter("tenantId") @Nullable String tenantId,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("updatedTime") @Nullable String updatedTime,
+        @OutputCustomType.Parameter("version") @Nullable Integer version) {
         this.createdTime = createdTime;
         this.etag = etag;
         this.id = id;

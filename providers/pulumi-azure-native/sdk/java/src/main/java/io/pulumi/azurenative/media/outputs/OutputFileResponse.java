@@ -16,8 +16,8 @@ public final class OutputFileResponse {
      */
     private final List<String> labels;
 
-    @OutputCustomType.Constructor({"labels"})
-    private OutputFileResponse(List<String> labels) {
+    @OutputCustomType.Constructor
+    private OutputFileResponse(@OutputCustomType.Parameter("labels") List<String> labels) {
         this.labels = labels;
     }
 

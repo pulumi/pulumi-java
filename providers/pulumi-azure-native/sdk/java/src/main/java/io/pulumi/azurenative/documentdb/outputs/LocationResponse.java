@@ -44,14 +44,14 @@ public final class LocationResponse {
      */
     private final String provisioningState;
 
-    @OutputCustomType.Constructor({"documentEndpoint","failoverPriority","id","isZoneRedundant","locationName","provisioningState"})
+    @OutputCustomType.Constructor
     private LocationResponse(
-        String documentEndpoint,
-        @Nullable Integer failoverPriority,
-        String id,
-        @Nullable Boolean isZoneRedundant,
-        @Nullable String locationName,
-        String provisioningState) {
+        @OutputCustomType.Parameter("documentEndpoint") String documentEndpoint,
+        @OutputCustomType.Parameter("failoverPriority") @Nullable Integer failoverPriority,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("isZoneRedundant") @Nullable Boolean isZoneRedundant,
+        @OutputCustomType.Parameter("locationName") @Nullable String locationName,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState) {
         this.documentEndpoint = documentEndpoint;
         this.failoverPriority = failoverPriority;
         this.id = id;

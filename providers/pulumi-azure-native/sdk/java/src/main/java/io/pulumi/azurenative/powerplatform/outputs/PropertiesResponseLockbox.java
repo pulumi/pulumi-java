@@ -17,8 +17,8 @@ public final class PropertiesResponseLockbox {
      */
     private final @Nullable String state;
 
-    @OutputCustomType.Constructor({"state"})
-    private PropertiesResponseLockbox(@Nullable String state) {
+    @OutputCustomType.Constructor
+    private PropertiesResponseLockbox(@OutputCustomType.Parameter("state") @Nullable String state) {
         this.state = state;
     }
 

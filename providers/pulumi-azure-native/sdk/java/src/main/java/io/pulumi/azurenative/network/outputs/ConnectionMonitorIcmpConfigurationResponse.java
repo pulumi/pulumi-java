@@ -17,8 +17,8 @@ public final class ConnectionMonitorIcmpConfigurationResponse {
      */
     private final @Nullable Boolean disableTraceRoute;
 
-    @OutputCustomType.Constructor({"disableTraceRoute"})
-    private ConnectionMonitorIcmpConfigurationResponse(@Nullable Boolean disableTraceRoute) {
+    @OutputCustomType.Constructor
+    private ConnectionMonitorIcmpConfigurationResponse(@OutputCustomType.Parameter("disableTraceRoute") @Nullable Boolean disableTraceRoute) {
         this.disableTraceRoute = disableTraceRoute;
     }
 

@@ -44,14 +44,14 @@ public final class MatchConditionResponse {
      */
     private final @Nullable List<String> transforms;
 
-    @OutputCustomType.Constructor({"matchValue","matchVariable","negateCondition","operator","selector","transforms"})
+    @OutputCustomType.Constructor
     private MatchConditionResponse(
-        List<String> matchValue,
-        String matchVariable,
-        @Nullable Boolean negateCondition,
-        String operator,
-        @Nullable String selector,
-        @Nullable List<String> transforms) {
+        @OutputCustomType.Parameter("matchValue") List<String> matchValue,
+        @OutputCustomType.Parameter("matchVariable") String matchVariable,
+        @OutputCustomType.Parameter("negateCondition") @Nullable Boolean negateCondition,
+        @OutputCustomType.Parameter("operator") String operator,
+        @OutputCustomType.Parameter("selector") @Nullable String selector,
+        @OutputCustomType.Parameter("transforms") @Nullable List<String> transforms) {
         this.matchValue = matchValue;
         this.matchVariable = matchVariable;
         this.negateCondition = negateCondition;

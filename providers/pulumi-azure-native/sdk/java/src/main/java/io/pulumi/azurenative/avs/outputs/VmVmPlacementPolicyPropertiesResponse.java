@@ -44,14 +44,14 @@ public final class VmVmPlacementPolicyPropertiesResponse {
      */
     private final List<String> vmMembers;
 
-    @OutputCustomType.Constructor({"affinityType","displayName","provisioningState","state","type","vmMembers"})
+    @OutputCustomType.Constructor
     private VmVmPlacementPolicyPropertiesResponse(
-        String affinityType,
-        @Nullable String displayName,
-        String provisioningState,
-        @Nullable String state,
-        String type,
-        List<String> vmMembers) {
+        @OutputCustomType.Parameter("affinityType") String affinityType,
+        @OutputCustomType.Parameter("displayName") @Nullable String displayName,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("state") @Nullable String state,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("vmMembers") List<String> vmMembers) {
         this.affinityType = affinityType;
         this.displayName = displayName;
         this.provisioningState = provisioningState;

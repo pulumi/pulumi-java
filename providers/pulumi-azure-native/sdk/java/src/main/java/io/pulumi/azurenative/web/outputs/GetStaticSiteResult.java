@@ -131,30 +131,30 @@ public final class GetStaticSiteResult {
      */
     private final List<StaticSiteUserProvidedFunctionAppResponse> userProvidedFunctionApps;
 
-    @OutputCustomType.Constructor({"allowConfigFileUpdates","branch","buildProperties","contentDistributionEndpoint","customDomains","defaultHostname","id","identity","keyVaultReferenceIdentity","kind","location","name","privateEndpointConnections","provider","repositoryToken","repositoryUrl","sku","stagingEnvironmentPolicy","tags","templateProperties","type","userProvidedFunctionApps"})
+    @OutputCustomType.Constructor
     private GetStaticSiteResult(
-        @Nullable Boolean allowConfigFileUpdates,
-        @Nullable String branch,
-        @Nullable StaticSiteBuildPropertiesResponse buildProperties,
-        String contentDistributionEndpoint,
-        List<String> customDomains,
-        String defaultHostname,
-        String id,
-        @Nullable ManagedServiceIdentityResponse identity,
-        String keyVaultReferenceIdentity,
-        @Nullable String kind,
-        String location,
-        String name,
-        List<ResponseMessageEnvelopeRemotePrivateEndpointConnectionResponse> privateEndpointConnections,
-        String provider,
-        @Nullable String repositoryToken,
-        @Nullable String repositoryUrl,
-        @Nullable SkuDescriptionResponse sku,
-        @Nullable String stagingEnvironmentPolicy,
-        @Nullable Map<String,String> tags,
-        @Nullable StaticSiteTemplateOptionsResponse templateProperties,
-        String type,
-        List<StaticSiteUserProvidedFunctionAppResponse> userProvidedFunctionApps) {
+        @OutputCustomType.Parameter("allowConfigFileUpdates") @Nullable Boolean allowConfigFileUpdates,
+        @OutputCustomType.Parameter("branch") @Nullable String branch,
+        @OutputCustomType.Parameter("buildProperties") @Nullable StaticSiteBuildPropertiesResponse buildProperties,
+        @OutputCustomType.Parameter("contentDistributionEndpoint") String contentDistributionEndpoint,
+        @OutputCustomType.Parameter("customDomains") List<String> customDomains,
+        @OutputCustomType.Parameter("defaultHostname") String defaultHostname,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("identity") @Nullable ManagedServiceIdentityResponse identity,
+        @OutputCustomType.Parameter("keyVaultReferenceIdentity") String keyVaultReferenceIdentity,
+        @OutputCustomType.Parameter("kind") @Nullable String kind,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("privateEndpointConnections") List<ResponseMessageEnvelopeRemotePrivateEndpointConnectionResponse> privateEndpointConnections,
+        @OutputCustomType.Parameter("provider") String provider,
+        @OutputCustomType.Parameter("repositoryToken") @Nullable String repositoryToken,
+        @OutputCustomType.Parameter("repositoryUrl") @Nullable String repositoryUrl,
+        @OutputCustomType.Parameter("sku") @Nullable SkuDescriptionResponse sku,
+        @OutputCustomType.Parameter("stagingEnvironmentPolicy") @Nullable String stagingEnvironmentPolicy,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("templateProperties") @Nullable StaticSiteTemplateOptionsResponse templateProperties,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("userProvidedFunctionApps") List<StaticSiteUserProvidedFunctionAppResponse> userProvidedFunctionApps) {
         this.allowConfigFileUpdates = allowConfigFileUpdates;
         this.branch = branch;
         this.buildProperties = buildProperties;

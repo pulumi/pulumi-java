@@ -93,22 +93,22 @@ public final class AzureSqlMILinkedServiceResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"alwaysEncryptedSettings","annotations","azureCloudType","connectVia","connectionString","credential","description","encryptedCredential","parameters","password","servicePrincipalId","servicePrincipalKey","tenant","type"})
+    @OutputCustomType.Constructor
     private AzureSqlMILinkedServiceResponse(
-        @Nullable SqlAlwaysEncryptedPropertiesResponse alwaysEncryptedSettings,
-        @Nullable List<Object> annotations,
-        @Nullable Object azureCloudType,
-        @Nullable IntegrationRuntimeReferenceResponse connectVia,
-        Object connectionString,
-        @Nullable CredentialReferenceResponse credential,
-        @Nullable String description,
-        @Nullable Object encryptedCredential,
-        @Nullable Map<String,ParameterSpecificationResponse> parameters,
-        @Nullable AzureKeyVaultSecretReferenceResponse password,
-        @Nullable Object servicePrincipalId,
-        @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalKey,
-        @Nullable Object tenant,
-        String type) {
+        @OutputCustomType.Parameter("alwaysEncryptedSettings") @Nullable SqlAlwaysEncryptedPropertiesResponse alwaysEncryptedSettings,
+        @OutputCustomType.Parameter("annotations") @Nullable List<Object> annotations,
+        @OutputCustomType.Parameter("azureCloudType") @Nullable Object azureCloudType,
+        @OutputCustomType.Parameter("connectVia") @Nullable IntegrationRuntimeReferenceResponse connectVia,
+        @OutputCustomType.Parameter("connectionString") Object connectionString,
+        @OutputCustomType.Parameter("credential") @Nullable CredentialReferenceResponse credential,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("encryptedCredential") @Nullable Object encryptedCredential,
+        @OutputCustomType.Parameter("parameters") @Nullable Map<String,ParameterSpecificationResponse> parameters,
+        @OutputCustomType.Parameter("password") @Nullable AzureKeyVaultSecretReferenceResponse password,
+        @OutputCustomType.Parameter("servicePrincipalId") @Nullable Object servicePrincipalId,
+        @OutputCustomType.Parameter("servicePrincipalKey") @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalKey,
+        @OutputCustomType.Parameter("tenant") @Nullable Object tenant,
+        @OutputCustomType.Parameter("type") String type) {
         this.alwaysEncryptedSettings = alwaysEncryptedSettings;
         this.annotations = annotations;
         this.azureCloudType = azureCloudType;

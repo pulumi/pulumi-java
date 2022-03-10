@@ -18,10 +18,10 @@ public final class AutoScaleSettingsResponse {
     private final @Nullable String evaluationInterval;
     private final String formula;
 
-    @OutputCustomType.Constructor({"evaluationInterval","formula"})
+    @OutputCustomType.Constructor
     private AutoScaleSettingsResponse(
-        @Nullable String evaluationInterval,
-        String formula) {
+        @OutputCustomType.Parameter("evaluationInterval") @Nullable String evaluationInterval,
+        @OutputCustomType.Parameter("formula") String formula) {
         this.evaluationInterval = evaluationInterval;
         this.formula = formula;
     }

@@ -44,14 +44,14 @@ public final class ParameterDefinitionResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"allowedValues","defaultValue","description","displayName","strongType","type"})
+    @OutputCustomType.Constructor
     private ParameterDefinitionResponse(
-        @Nullable List<Object> allowedValues,
-        @Nullable Object defaultValue,
-        @Nullable String description,
-        @Nullable String displayName,
-        @Nullable String strongType,
-        String type) {
+        @OutputCustomType.Parameter("allowedValues") @Nullable List<Object> allowedValues,
+        @OutputCustomType.Parameter("defaultValue") @Nullable Object defaultValue,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("displayName") @Nullable String displayName,
+        @OutputCustomType.Parameter("strongType") @Nullable String strongType,
+        @OutputCustomType.Parameter("type") String type) {
         this.allowedValues = allowedValues;
         this.defaultValue = defaultValue;
         this.description = description;

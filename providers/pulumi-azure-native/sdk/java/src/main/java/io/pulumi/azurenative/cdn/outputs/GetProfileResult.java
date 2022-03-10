@@ -64,18 +64,18 @@ public final class GetProfileResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"frontdoorId","id","location","name","provisioningState","resourceState","sku","systemData","tags","type"})
+    @OutputCustomType.Constructor
     private GetProfileResult(
-        String frontdoorId,
-        String id,
-        String location,
-        String name,
-        String provisioningState,
-        String resourceState,
-        SkuResponse sku,
-        SystemDataResponse systemData,
-        @Nullable Map<String,String> tags,
-        String type) {
+        @OutputCustomType.Parameter("frontdoorId") String frontdoorId,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("resourceState") String resourceState,
+        @OutputCustomType.Parameter("sku") SkuResponse sku,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type) {
         this.frontdoorId = frontdoorId;
         this.id = id;
         this.location = location;

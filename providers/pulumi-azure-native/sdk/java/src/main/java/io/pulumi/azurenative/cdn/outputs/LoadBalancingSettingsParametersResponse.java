@@ -27,11 +27,11 @@ public final class LoadBalancingSettingsParametersResponse {
      */
     private final @Nullable Integer successfulSamplesRequired;
 
-    @OutputCustomType.Constructor({"additionalLatencyInMilliseconds","sampleSize","successfulSamplesRequired"})
+    @OutputCustomType.Constructor
     private LoadBalancingSettingsParametersResponse(
-        @Nullable Integer additionalLatencyInMilliseconds,
-        @Nullable Integer sampleSize,
-        @Nullable Integer successfulSamplesRequired) {
+        @OutputCustomType.Parameter("additionalLatencyInMilliseconds") @Nullable Integer additionalLatencyInMilliseconds,
+        @OutputCustomType.Parameter("sampleSize") @Nullable Integer sampleSize,
+        @OutputCustomType.Parameter("successfulSamplesRequired") @Nullable Integer successfulSamplesRequired) {
         this.additionalLatencyInMilliseconds = additionalLatencyInMilliseconds;
         this.sampleSize = sampleSize;
         this.successfulSamplesRequired = successfulSamplesRequired;

@@ -31,12 +31,12 @@ public final class AclResponse {
      */
     private final String username;
 
-    @OutputCustomType.Constructor({"initiatorIqn","mappedLuns","password","username"})
+    @OutputCustomType.Constructor
     private AclResponse(
-        String initiatorIqn,
-        List<String> mappedLuns,
-        String password,
-        String username) {
+        @OutputCustomType.Parameter("initiatorIqn") String initiatorIqn,
+        @OutputCustomType.Parameter("mappedLuns") List<String> mappedLuns,
+        @OutputCustomType.Parameter("password") String password,
+        @OutputCustomType.Parameter("username") String username) {
         this.initiatorIqn = initiatorIqn;
         this.mappedLuns = mappedLuns;
         this.password = password;

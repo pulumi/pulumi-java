@@ -56,16 +56,16 @@ public final class ListWebAppSitePushSettingsResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"dynamicTagsJson","id","isPushEnabled","kind","name","tagWhitelistJson","tagsRequiringAuth","type"})
+    @OutputCustomType.Constructor
     private ListWebAppSitePushSettingsResult(
-        @Nullable String dynamicTagsJson,
-        String id,
-        Boolean isPushEnabled,
-        @Nullable String kind,
-        String name,
-        @Nullable String tagWhitelistJson,
-        @Nullable String tagsRequiringAuth,
-        String type) {
+        @OutputCustomType.Parameter("dynamicTagsJson") @Nullable String dynamicTagsJson,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("isPushEnabled") Boolean isPushEnabled,
+        @OutputCustomType.Parameter("kind") @Nullable String kind,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("tagWhitelistJson") @Nullable String tagWhitelistJson,
+        @OutputCustomType.Parameter("tagsRequiringAuth") @Nullable String tagsRequiringAuth,
+        @OutputCustomType.Parameter("type") String type) {
         this.dynamicTagsJson = dynamicTagsJson;
         this.id = id;
         this.isPushEnabled = isPushEnabled;

@@ -39,13 +39,13 @@ public final class TableSpecificationResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"description","format","properties","title","type"})
+    @OutputCustomType.Constructor
     private TableSpecificationResponse(
-        @Nullable String description,
-        @Nullable String format,
-        @Nullable Map<String,ColumnSpecificationResponse> properties,
-        @Nullable String title,
-        String type) {
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("format") @Nullable String format,
+        @OutputCustomType.Parameter("properties") @Nullable Map<String,ColumnSpecificationResponse> properties,
+        @OutputCustomType.Parameter("title") @Nullable String title,
+        @OutputCustomType.Parameter("type") String type) {
         this.description = description;
         this.format = format;
         this.properties = properties;

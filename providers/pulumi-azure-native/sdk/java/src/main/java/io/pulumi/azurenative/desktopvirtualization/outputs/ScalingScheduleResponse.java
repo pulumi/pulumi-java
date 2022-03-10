@@ -105,26 +105,26 @@ public final class ScalingScheduleResponse {
      */
     private final @Nullable String rampUpStartTime;
 
-    @OutputCustomType.Constructor({"daysOfWeek","name","offPeakLoadBalancingAlgorithm","offPeakStartTime","peakLoadBalancingAlgorithm","peakStartTime","rampDownCapacityThresholdPct","rampDownForceLogoffUsers","rampDownLoadBalancingAlgorithm","rampDownMinimumHostsPct","rampDownNotificationMessage","rampDownStartTime","rampDownStopHostsWhen","rampDownWaitTimeMinutes","rampUpCapacityThresholdPct","rampUpLoadBalancingAlgorithm","rampUpMinimumHostsPct","rampUpStartTime"})
+    @OutputCustomType.Constructor
     private ScalingScheduleResponse(
-        @Nullable List<String> daysOfWeek,
-        @Nullable String name,
-        @Nullable String offPeakLoadBalancingAlgorithm,
-        @Nullable String offPeakStartTime,
-        @Nullable String peakLoadBalancingAlgorithm,
-        @Nullable String peakStartTime,
-        @Nullable Integer rampDownCapacityThresholdPct,
-        @Nullable Boolean rampDownForceLogoffUsers,
-        @Nullable String rampDownLoadBalancingAlgorithm,
-        @Nullable Integer rampDownMinimumHostsPct,
-        @Nullable String rampDownNotificationMessage,
-        @Nullable String rampDownStartTime,
-        @Nullable String rampDownStopHostsWhen,
-        @Nullable Integer rampDownWaitTimeMinutes,
-        @Nullable Integer rampUpCapacityThresholdPct,
-        @Nullable String rampUpLoadBalancingAlgorithm,
-        @Nullable Integer rampUpMinimumHostsPct,
-        @Nullable String rampUpStartTime) {
+        @OutputCustomType.Parameter("daysOfWeek") @Nullable List<String> daysOfWeek,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("offPeakLoadBalancingAlgorithm") @Nullable String offPeakLoadBalancingAlgorithm,
+        @OutputCustomType.Parameter("offPeakStartTime") @Nullable String offPeakStartTime,
+        @OutputCustomType.Parameter("peakLoadBalancingAlgorithm") @Nullable String peakLoadBalancingAlgorithm,
+        @OutputCustomType.Parameter("peakStartTime") @Nullable String peakStartTime,
+        @OutputCustomType.Parameter("rampDownCapacityThresholdPct") @Nullable Integer rampDownCapacityThresholdPct,
+        @OutputCustomType.Parameter("rampDownForceLogoffUsers") @Nullable Boolean rampDownForceLogoffUsers,
+        @OutputCustomType.Parameter("rampDownLoadBalancingAlgorithm") @Nullable String rampDownLoadBalancingAlgorithm,
+        @OutputCustomType.Parameter("rampDownMinimumHostsPct") @Nullable Integer rampDownMinimumHostsPct,
+        @OutputCustomType.Parameter("rampDownNotificationMessage") @Nullable String rampDownNotificationMessage,
+        @OutputCustomType.Parameter("rampDownStartTime") @Nullable String rampDownStartTime,
+        @OutputCustomType.Parameter("rampDownStopHostsWhen") @Nullable String rampDownStopHostsWhen,
+        @OutputCustomType.Parameter("rampDownWaitTimeMinutes") @Nullable Integer rampDownWaitTimeMinutes,
+        @OutputCustomType.Parameter("rampUpCapacityThresholdPct") @Nullable Integer rampUpCapacityThresholdPct,
+        @OutputCustomType.Parameter("rampUpLoadBalancingAlgorithm") @Nullable String rampUpLoadBalancingAlgorithm,
+        @OutputCustomType.Parameter("rampUpMinimumHostsPct") @Nullable Integer rampUpMinimumHostsPct,
+        @OutputCustomType.Parameter("rampUpStartTime") @Nullable String rampUpStartTime) {
         this.daysOfWeek = daysOfWeek;
         this.name = name;
         this.offPeakLoadBalancingAlgorithm = offPeakLoadBalancingAlgorithm;

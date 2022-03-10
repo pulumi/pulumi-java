@@ -24,10 +24,10 @@ public final class SyncGroupSchemaResponse {
      */
     private final @Nullable List<SyncGroupSchemaTableResponse> tables;
 
-    @OutputCustomType.Constructor({"masterSyncMemberName","tables"})
+    @OutputCustomType.Constructor
     private SyncGroupSchemaResponse(
-        @Nullable String masterSyncMemberName,
-        @Nullable List<SyncGroupSchemaTableResponse> tables) {
+        @OutputCustomType.Parameter("masterSyncMemberName") @Nullable String masterSyncMemberName,
+        @OutputCustomType.Parameter("tables") @Nullable List<SyncGroupSchemaTableResponse> tables) {
         this.masterSyncMemberName = masterSyncMemberName;
         this.tables = tables;
     }

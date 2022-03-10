@@ -42,14 +42,14 @@ public final class GetEventSourceResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"id","kind","location","name","tags","type"})
+    @OutputCustomType.Constructor
     private GetEventSourceResult(
-        String id,
-        String kind,
-        String location,
-        String name,
-        @Nullable Map<String,String> tags,
-        String type) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type) {
         this.id = id;
         this.kind = kind;
         this.location = location;

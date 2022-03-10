@@ -22,10 +22,10 @@ public final class QosPortRangeResponse {
      */
     private final @Nullable Integer start;
 
-    @OutputCustomType.Constructor({"end","start"})
+    @OutputCustomType.Constructor
     private QosPortRangeResponse(
-        @Nullable Integer end,
-        @Nullable Integer start) {
+        @OutputCustomType.Parameter("end") @Nullable Integer end,
+        @OutputCustomType.Parameter("start") @Nullable Integer start) {
         this.end = end;
         this.start = start;
     }

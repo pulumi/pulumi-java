@@ -19,8 +19,8 @@ public final class ServiceTypeDeltaHealthPolicyResponse {
      */
     private final @Nullable Integer maxPercentDeltaUnhealthyServices;
 
-    @OutputCustomType.Constructor({"maxPercentDeltaUnhealthyServices"})
-    private ServiceTypeDeltaHealthPolicyResponse(@Nullable Integer maxPercentDeltaUnhealthyServices) {
+    @OutputCustomType.Constructor
+    private ServiceTypeDeltaHealthPolicyResponse(@OutputCustomType.Parameter("maxPercentDeltaUnhealthyServices") @Nullable Integer maxPercentDeltaUnhealthyServices) {
         this.maxPercentDeltaUnhealthyServices = maxPercentDeltaUnhealthyServices;
     }
 

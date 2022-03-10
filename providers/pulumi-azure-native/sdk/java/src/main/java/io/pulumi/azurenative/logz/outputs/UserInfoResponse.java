@@ -32,12 +32,12 @@ public final class UserInfoResponse {
      */
     private final @Nullable String phoneNumber;
 
-    @OutputCustomType.Constructor({"emailAddress","firstName","lastName","phoneNumber"})
+    @OutputCustomType.Constructor
     private UserInfoResponse(
-        @Nullable String emailAddress,
-        @Nullable String firstName,
-        @Nullable String lastName,
-        @Nullable String phoneNumber) {
+        @OutputCustomType.Parameter("emailAddress") @Nullable String emailAddress,
+        @OutputCustomType.Parameter("firstName") @Nullable String firstName,
+        @OutputCustomType.Parameter("lastName") @Nullable String lastName,
+        @OutputCustomType.Parameter("phoneNumber") @Nullable String phoneNumber) {
         this.emailAddress = emailAddress;
         this.firstName = firstName;
         this.lastName = lastName;

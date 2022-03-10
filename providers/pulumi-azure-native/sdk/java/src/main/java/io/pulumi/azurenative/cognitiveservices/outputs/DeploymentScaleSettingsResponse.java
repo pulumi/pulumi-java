@@ -23,10 +23,10 @@ public final class DeploymentScaleSettingsResponse {
      */
     private final @Nullable String scaleType;
 
-    @OutputCustomType.Constructor({"capacity","scaleType"})
+    @OutputCustomType.Constructor
     private DeploymentScaleSettingsResponse(
-        @Nullable Integer capacity,
-        @Nullable String scaleType) {
+        @OutputCustomType.Parameter("capacity") @Nullable Integer capacity,
+        @OutputCustomType.Parameter("scaleType") @Nullable String scaleType) {
         this.capacity = capacity;
         this.scaleType = scaleType;
     }

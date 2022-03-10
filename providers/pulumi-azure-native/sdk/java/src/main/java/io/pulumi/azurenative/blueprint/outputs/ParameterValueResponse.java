@@ -23,10 +23,10 @@ public final class ParameterValueResponse {
      */
     private final @Nullable Object value;
 
-    @OutputCustomType.Constructor({"reference","value"})
+    @OutputCustomType.Constructor
     private ParameterValueResponse(
-        @Nullable SecretValueReferenceResponse reference,
-        @Nullable Object value) {
+        @OutputCustomType.Parameter("reference") @Nullable SecretValueReferenceResponse reference,
+        @OutputCustomType.Parameter("value") @Nullable Object value) {
         this.reference = reference;
         this.value = value;
     }

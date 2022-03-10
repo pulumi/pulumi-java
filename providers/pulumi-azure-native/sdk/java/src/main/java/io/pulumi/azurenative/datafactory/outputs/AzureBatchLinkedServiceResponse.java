@@ -83,20 +83,20 @@ public final class AzureBatchLinkedServiceResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"accessKey","accountName","annotations","batchUri","connectVia","credential","description","encryptedCredential","linkedServiceName","parameters","poolName","type"})
+    @OutputCustomType.Constructor
     private AzureBatchLinkedServiceResponse(
-        @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> accessKey,
-        Object accountName,
-        @Nullable List<Object> annotations,
-        Object batchUri,
-        @Nullable IntegrationRuntimeReferenceResponse connectVia,
-        @Nullable CredentialReferenceResponse credential,
-        @Nullable String description,
-        @Nullable Object encryptedCredential,
-        LinkedServiceReferenceResponse linkedServiceName,
-        @Nullable Map<String,ParameterSpecificationResponse> parameters,
-        Object poolName,
-        String type) {
+        @OutputCustomType.Parameter("accessKey") @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> accessKey,
+        @OutputCustomType.Parameter("accountName") Object accountName,
+        @OutputCustomType.Parameter("annotations") @Nullable List<Object> annotations,
+        @OutputCustomType.Parameter("batchUri") Object batchUri,
+        @OutputCustomType.Parameter("connectVia") @Nullable IntegrationRuntimeReferenceResponse connectVia,
+        @OutputCustomType.Parameter("credential") @Nullable CredentialReferenceResponse credential,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("encryptedCredential") @Nullable Object encryptedCredential,
+        @OutputCustomType.Parameter("linkedServiceName") LinkedServiceReferenceResponse linkedServiceName,
+        @OutputCustomType.Parameter("parameters") @Nullable Map<String,ParameterSpecificationResponse> parameters,
+        @OutputCustomType.Parameter("poolName") Object poolName,
+        @OutputCustomType.Parameter("type") String type) {
         this.accessKey = accessKey;
         this.accountName = accountName;
         this.annotations = annotations;

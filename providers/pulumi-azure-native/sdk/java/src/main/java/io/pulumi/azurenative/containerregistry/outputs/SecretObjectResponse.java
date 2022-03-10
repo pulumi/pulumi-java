@@ -25,10 +25,10 @@ public final class SecretObjectResponse {
      */
     private final @Nullable String value;
 
-    @OutputCustomType.Constructor({"type","value"})
+    @OutputCustomType.Constructor
     private SecretObjectResponse(
-        @Nullable String type,
-        @Nullable String value) {
+        @OutputCustomType.Parameter("type") @Nullable String type,
+        @OutputCustomType.Parameter("value") @Nullable String value) {
         this.type = type;
         this.value = value;
     }

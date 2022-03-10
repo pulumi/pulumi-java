@@ -74,20 +74,20 @@ public final class GetCommunicationServiceResult {
      */
     private final String version;
 
-    @OutputCustomType.Constructor({"dataLocation","hostName","id","immutableResourceId","location","name","notificationHubId","provisioningState","systemData","tags","type","version"})
+    @OutputCustomType.Constructor
     private GetCommunicationServiceResult(
-        String dataLocation,
-        String hostName,
-        String id,
-        String immutableResourceId,
-        @Nullable String location,
-        String name,
-        String notificationHubId,
-        String provisioningState,
-        SystemDataResponse systemData,
-        @Nullable Map<String,String> tags,
-        String type,
-        String version) {
+        @OutputCustomType.Parameter("dataLocation") String dataLocation,
+        @OutputCustomType.Parameter("hostName") String hostName,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("immutableResourceId") String immutableResourceId,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("notificationHubId") String notificationHubId,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("version") String version) {
         this.dataLocation = dataLocation;
         this.hostName = hostName;
         this.id = id;

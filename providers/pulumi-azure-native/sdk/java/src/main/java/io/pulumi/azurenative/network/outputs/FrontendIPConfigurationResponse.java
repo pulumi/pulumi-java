@@ -96,24 +96,24 @@ public final class FrontendIPConfigurationResponse {
      */
     private final @Nullable List<String> zones;
 
-    @OutputCustomType.Constructor({"etag","id","inboundNatPools","inboundNatRules","loadBalancingRules","name","outboundRules","privateIPAddress","privateIPAddressVersion","privateIPAllocationMethod","provisioningState","publicIPAddress","publicIPPrefix","subnet","type","zones"})
+    @OutputCustomType.Constructor
     private FrontendIPConfigurationResponse(
-        String etag,
-        @Nullable String id,
-        List<SubResourceResponse> inboundNatPools,
-        List<SubResourceResponse> inboundNatRules,
-        List<SubResourceResponse> loadBalancingRules,
-        @Nullable String name,
-        List<SubResourceResponse> outboundRules,
-        @Nullable String privateIPAddress,
-        @Nullable String privateIPAddressVersion,
-        @Nullable String privateIPAllocationMethod,
-        String provisioningState,
-        @Nullable PublicIPAddressResponse publicIPAddress,
-        @Nullable SubResourceResponse publicIPPrefix,
-        @Nullable SubnetResponse subnet,
-        String type,
-        @Nullable List<String> zones) {
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("inboundNatPools") List<SubResourceResponse> inboundNatPools,
+        @OutputCustomType.Parameter("inboundNatRules") List<SubResourceResponse> inboundNatRules,
+        @OutputCustomType.Parameter("loadBalancingRules") List<SubResourceResponse> loadBalancingRules,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("outboundRules") List<SubResourceResponse> outboundRules,
+        @OutputCustomType.Parameter("privateIPAddress") @Nullable String privateIPAddress,
+        @OutputCustomType.Parameter("privateIPAddressVersion") @Nullable String privateIPAddressVersion,
+        @OutputCustomType.Parameter("privateIPAllocationMethod") @Nullable String privateIPAllocationMethod,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("publicIPAddress") @Nullable PublicIPAddressResponse publicIPAddress,
+        @OutputCustomType.Parameter("publicIPPrefix") @Nullable SubResourceResponse publicIPPrefix,
+        @OutputCustomType.Parameter("subnet") @Nullable SubnetResponse subnet,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("zones") @Nullable List<String> zones) {
         this.etag = etag;
         this.id = id;
         this.inboundNatPools = inboundNatPools;

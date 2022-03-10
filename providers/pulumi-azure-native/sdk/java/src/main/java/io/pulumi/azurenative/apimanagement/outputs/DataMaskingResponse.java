@@ -22,10 +22,10 @@ public final class DataMaskingResponse {
      */
     private final @Nullable List<DataMaskingEntityResponse> queryParams;
 
-    @OutputCustomType.Constructor({"headers","queryParams"})
+    @OutputCustomType.Constructor
     private DataMaskingResponse(
-        @Nullable List<DataMaskingEntityResponse> headers,
-        @Nullable List<DataMaskingEntityResponse> queryParams) {
+        @OutputCustomType.Parameter("headers") @Nullable List<DataMaskingEntityResponse> headers,
+        @OutputCustomType.Parameter("queryParams") @Nullable List<DataMaskingEntityResponse> queryParams) {
         this.headers = headers;
         this.queryParams = queryParams;
     }

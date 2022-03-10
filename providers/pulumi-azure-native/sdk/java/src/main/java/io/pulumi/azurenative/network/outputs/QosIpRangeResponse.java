@@ -22,10 +22,10 @@ public final class QosIpRangeResponse {
      */
     private final @Nullable String startIP;
 
-    @OutputCustomType.Constructor({"endIP","startIP"})
+    @OutputCustomType.Constructor
     private QosIpRangeResponse(
-        @Nullable String endIP,
-        @Nullable String startIP) {
+        @OutputCustomType.Parameter("endIP") @Nullable String endIP,
+        @OutputCustomType.Parameter("startIP") @Nullable String startIP) {
         this.endIP = endIP;
         this.startIP = startIP;
     }

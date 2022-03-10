@@ -32,12 +32,12 @@ public final class SapTablePartitionSettingsResponse {
      */
     private final @Nullable Object partitionUpperBound;
 
-    @OutputCustomType.Constructor({"maxPartitionsNumber","partitionColumnName","partitionLowerBound","partitionUpperBound"})
+    @OutputCustomType.Constructor
     private SapTablePartitionSettingsResponse(
-        @Nullable Object maxPartitionsNumber,
-        @Nullable Object partitionColumnName,
-        @Nullable Object partitionLowerBound,
-        @Nullable Object partitionUpperBound) {
+        @OutputCustomType.Parameter("maxPartitionsNumber") @Nullable Object maxPartitionsNumber,
+        @OutputCustomType.Parameter("partitionColumnName") @Nullable Object partitionColumnName,
+        @OutputCustomType.Parameter("partitionLowerBound") @Nullable Object partitionLowerBound,
+        @OutputCustomType.Parameter("partitionUpperBound") @Nullable Object partitionUpperBound) {
         this.maxPartitionsNumber = maxPartitionsNumber;
         this.partitionColumnName = partitionColumnName;
         this.partitionLowerBound = partitionLowerBound;

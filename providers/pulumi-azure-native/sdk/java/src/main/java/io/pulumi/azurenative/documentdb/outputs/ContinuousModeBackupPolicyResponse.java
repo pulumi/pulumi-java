@@ -16,8 +16,8 @@ public final class ContinuousModeBackupPolicyResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"type"})
-    private ContinuousModeBackupPolicyResponse(String type) {
+    @OutputCustomType.Constructor
+    private ContinuousModeBackupPolicyResponse(@OutputCustomType.Parameter("type") String type) {
         this.type = type;
     }
 

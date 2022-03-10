@@ -24,10 +24,10 @@ public final class ListMonitoredResourceResult {
      */
     private final @Nullable List<MonitoredResourceResponse> value;
 
-    @OutputCustomType.Constructor({"nextLink","value"})
+    @OutputCustomType.Constructor
     private ListMonitoredResourceResult(
-        @Nullable String nextLink,
-        @Nullable List<MonitoredResourceResponse> value) {
+        @OutputCustomType.Parameter("nextLink") @Nullable String nextLink,
+        @OutputCustomType.Parameter("value") @Nullable List<MonitoredResourceResponse> value) {
         this.nextLink = nextLink;
         this.value = value;
     }

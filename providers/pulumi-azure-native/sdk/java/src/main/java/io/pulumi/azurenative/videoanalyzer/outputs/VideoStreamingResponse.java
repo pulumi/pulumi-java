@@ -23,8 +23,8 @@ public final class VideoStreamingResponse {
      */
     private final @Nullable String archiveBaseUrl;
 
-    @OutputCustomType.Constructor({"archiveBaseUrl"})
-    private VideoStreamingResponse(@Nullable String archiveBaseUrl) {
+    @OutputCustomType.Constructor
+    private VideoStreamingResponse(@OutputCustomType.Parameter("archiveBaseUrl") @Nullable String archiveBaseUrl) {
         this.archiveBaseUrl = archiveBaseUrl;
     }
 

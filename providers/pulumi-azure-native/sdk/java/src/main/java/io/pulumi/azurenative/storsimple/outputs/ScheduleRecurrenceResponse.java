@@ -28,11 +28,11 @@ public final class ScheduleRecurrenceResponse {
      */
     private final @Nullable List<String> weeklyDaysList;
 
-    @OutputCustomType.Constructor({"recurrenceType","recurrenceValue","weeklyDaysList"})
+    @OutputCustomType.Constructor
     private ScheduleRecurrenceResponse(
-        String recurrenceType,
-        Integer recurrenceValue,
-        @Nullable List<String> weeklyDaysList) {
+        @OutputCustomType.Parameter("recurrenceType") String recurrenceType,
+        @OutputCustomType.Parameter("recurrenceValue") Integer recurrenceValue,
+        @OutputCustomType.Parameter("weeklyDaysList") @Nullable List<String> weeklyDaysList) {
         this.recurrenceType = recurrenceType;
         this.recurrenceValue = recurrenceValue;
         this.weeklyDaysList = weeklyDaysList;

@@ -52,15 +52,15 @@ public final class GetDataManagerResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"etag","id","location","name","sku","tags","type"})
+    @OutputCustomType.Constructor
     private GetDataManagerResult(
-        @Nullable String etag,
-        String id,
-        String location,
-        String name,
-        @Nullable SkuResponse sku,
-        @Nullable Map<String,String> tags,
-        String type) {
+        @OutputCustomType.Parameter("etag") @Nullable String etag,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("sku") @Nullable SkuResponse sku,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type) {
         this.etag = etag;
         this.id = id;
         this.location = location;

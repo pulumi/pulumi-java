@@ -41,13 +41,13 @@ public final class GenericProtectionPolicyResponse {
      */
     private final @Nullable String timeZone;
 
-    @OutputCustomType.Constructor({"backupManagementType","fabricName","protectedItemsCount","subProtectionPolicy","timeZone"})
+    @OutputCustomType.Constructor
     private GenericProtectionPolicyResponse(
-        String backupManagementType,
-        @Nullable String fabricName,
-        @Nullable Integer protectedItemsCount,
-        @Nullable List<SubProtectionPolicyResponse> subProtectionPolicy,
-        @Nullable String timeZone) {
+        @OutputCustomType.Parameter("backupManagementType") String backupManagementType,
+        @OutputCustomType.Parameter("fabricName") @Nullable String fabricName,
+        @OutputCustomType.Parameter("protectedItemsCount") @Nullable Integer protectedItemsCount,
+        @OutputCustomType.Parameter("subProtectionPolicy") @Nullable List<SubProtectionPolicyResponse> subProtectionPolicy,
+        @OutputCustomType.Parameter("timeZone") @Nullable String timeZone) {
         this.backupManagementType = backupManagementType;
         this.fabricName = fabricName;
         this.protectedItemsCount = protectedItemsCount;

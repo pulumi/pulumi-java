@@ -46,15 +46,15 @@ public final class VMwareCbtProtectionContainerMappingDetailsResponse {
      */
     private final String targetLocation;
 
-    @OutputCustomType.Constructor({"instanceType","keyVaultId","keyVaultUri","serviceBusConnectionStringSecretName","storageAccountId","storageAccountSasSecretName","targetLocation"})
+    @OutputCustomType.Constructor
     private VMwareCbtProtectionContainerMappingDetailsResponse(
-        String instanceType,
-        String keyVaultId,
-        String keyVaultUri,
-        String serviceBusConnectionStringSecretName,
-        String storageAccountId,
-        String storageAccountSasSecretName,
-        String targetLocation) {
+        @OutputCustomType.Parameter("instanceType") String instanceType,
+        @OutputCustomType.Parameter("keyVaultId") String keyVaultId,
+        @OutputCustomType.Parameter("keyVaultUri") String keyVaultUri,
+        @OutputCustomType.Parameter("serviceBusConnectionStringSecretName") String serviceBusConnectionStringSecretName,
+        @OutputCustomType.Parameter("storageAccountId") String storageAccountId,
+        @OutputCustomType.Parameter("storageAccountSasSecretName") String storageAccountSasSecretName,
+        @OutputCustomType.Parameter("targetLocation") String targetLocation) {
         this.instanceType = instanceType;
         this.keyVaultId = keyVaultId;
         this.keyVaultUri = keyVaultUri;

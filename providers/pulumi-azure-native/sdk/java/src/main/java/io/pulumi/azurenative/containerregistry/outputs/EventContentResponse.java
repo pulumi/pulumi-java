@@ -51,15 +51,15 @@ public final class EventContentResponse {
      */
     private final @Nullable String timestamp;
 
-    @OutputCustomType.Constructor({"action","actor","id","request","source","target","timestamp"})
+    @OutputCustomType.Constructor
     private EventContentResponse(
-        @Nullable String action,
-        @Nullable ActorResponse actor,
-        @Nullable String id,
-        @Nullable RequestResponse request,
-        @Nullable SourceResponse source,
-        @Nullable TargetResponse target,
-        @Nullable String timestamp) {
+        @OutputCustomType.Parameter("action") @Nullable String action,
+        @OutputCustomType.Parameter("actor") @Nullable ActorResponse actor,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("request") @Nullable RequestResponse request,
+        @OutputCustomType.Parameter("source") @Nullable SourceResponse source,
+        @OutputCustomType.Parameter("target") @Nullable TargetResponse target,
+        @OutputCustomType.Parameter("timestamp") @Nullable String timestamp) {
         this.action = action;
         this.actor = actor;
         this.id = id;

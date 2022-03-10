@@ -27,11 +27,11 @@ public final class HandlerMappingResponse {
      */
     private final @Nullable String scriptProcessor;
 
-    @OutputCustomType.Constructor({"arguments","extension","scriptProcessor"})
+    @OutputCustomType.Constructor
     private HandlerMappingResponse(
-        @Nullable String arguments,
-        @Nullable String extension,
-        @Nullable String scriptProcessor) {
+        @OutputCustomType.Parameter("arguments") @Nullable String arguments,
+        @OutputCustomType.Parameter("extension") @Nullable String extension,
+        @OutputCustomType.Parameter("scriptProcessor") @Nullable String scriptProcessor) {
         this.arguments = arguments;
         this.extension = extension;
         this.scriptProcessor = scriptProcessor;

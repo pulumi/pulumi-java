@@ -42,14 +42,14 @@ public final class PlanResponse {
      */
     private final String stackType;
 
-    @OutputCustomType.Constructor({"accessibility","altStackReference","planDisplayName","planId","skuId","stackType"})
+    @OutputCustomType.Constructor
     private PlanResponse(
-        @Nullable String accessibility,
-        String altStackReference,
-        String planDisplayName,
-        String planId,
-        String skuId,
-        String stackType) {
+        @OutputCustomType.Parameter("accessibility") @Nullable String accessibility,
+        @OutputCustomType.Parameter("altStackReference") String altStackReference,
+        @OutputCustomType.Parameter("planDisplayName") String planDisplayName,
+        @OutputCustomType.Parameter("planId") String planId,
+        @OutputCustomType.Parameter("skuId") String skuId,
+        @OutputCustomType.Parameter("stackType") String stackType) {
         this.accessibility = accessibility;
         this.altStackReference = altStackReference;
         this.planDisplayName = planDisplayName;

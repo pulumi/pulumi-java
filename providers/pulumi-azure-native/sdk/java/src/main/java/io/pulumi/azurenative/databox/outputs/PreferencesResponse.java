@@ -30,11 +30,11 @@ public final class PreferencesResponse {
      */
     private final @Nullable TransportPreferencesResponse transportPreferences;
 
-    @OutputCustomType.Constructor({"encryptionPreferences","preferredDataCenterRegion","transportPreferences"})
+    @OutputCustomType.Constructor
     private PreferencesResponse(
-        @Nullable EncryptionPreferencesResponse encryptionPreferences,
-        @Nullable List<String> preferredDataCenterRegion,
-        @Nullable TransportPreferencesResponse transportPreferences) {
+        @OutputCustomType.Parameter("encryptionPreferences") @Nullable EncryptionPreferencesResponse encryptionPreferences,
+        @OutputCustomType.Parameter("preferredDataCenterRegion") @Nullable List<String> preferredDataCenterRegion,
+        @OutputCustomType.Parameter("transportPreferences") @Nullable TransportPreferencesResponse transportPreferences) {
         this.encryptionPreferences = encryptionPreferences;
         this.preferredDataCenterRegion = preferredDataCenterRegion;
         this.transportPreferences = transportPreferences;

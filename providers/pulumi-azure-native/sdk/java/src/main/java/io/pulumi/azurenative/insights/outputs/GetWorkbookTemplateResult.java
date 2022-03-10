@@ -68,18 +68,18 @@ public final class GetWorkbookTemplateResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"author","galleries","id","localized","location","name","priority","tags","templateData","type"})
+    @OutputCustomType.Constructor
     private GetWorkbookTemplateResult(
-        @Nullable String author,
-        List<WorkbookTemplateGalleryResponse> galleries,
-        String id,
-        @Nullable Map<String,List<WorkbookTemplateLocalizedGalleryResponse>> localized,
-        String location,
-        String name,
-        @Nullable Integer priority,
-        @Nullable Map<String,String> tags,
-        Object templateData,
-        String type) {
+        @OutputCustomType.Parameter("author") @Nullable String author,
+        @OutputCustomType.Parameter("galleries") List<WorkbookTemplateGalleryResponse> galleries,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("localized") @Nullable Map<String,List<WorkbookTemplateLocalizedGalleryResponse>> localized,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("priority") @Nullable Integer priority,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("templateData") Object templateData,
+        @OutputCustomType.Parameter("type") String type) {
         this.author = author;
         this.galleries = galleries;
         this.id = id;

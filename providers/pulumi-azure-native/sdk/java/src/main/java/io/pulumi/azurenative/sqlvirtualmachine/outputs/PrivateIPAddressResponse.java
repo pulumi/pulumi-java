@@ -22,10 +22,10 @@ public final class PrivateIPAddressResponse {
      */
     private final @Nullable String subnetResourceId;
 
-    @OutputCustomType.Constructor({"ipAddress","subnetResourceId"})
+    @OutputCustomType.Constructor
     private PrivateIPAddressResponse(
-        @Nullable String ipAddress,
-        @Nullable String subnetResourceId) {
+        @OutputCustomType.Parameter("ipAddress") @Nullable String ipAddress,
+        @OutputCustomType.Parameter("subnetResourceId") @Nullable String subnetResourceId) {
         this.ipAddress = ipAddress;
         this.subnetResourceId = subnetResourceId;
     }

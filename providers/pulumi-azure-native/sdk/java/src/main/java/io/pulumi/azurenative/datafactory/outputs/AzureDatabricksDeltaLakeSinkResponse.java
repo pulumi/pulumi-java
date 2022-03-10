@@ -60,17 +60,17 @@ public final class AzureDatabricksDeltaLakeSinkResponse {
      */
     private final @Nullable Object writeBatchTimeout;
 
-    @OutputCustomType.Constructor({"disableMetricsCollection","importSettings","maxConcurrentConnections","preCopyScript","sinkRetryCount","sinkRetryWait","type","writeBatchSize","writeBatchTimeout"})
+    @OutputCustomType.Constructor
     private AzureDatabricksDeltaLakeSinkResponse(
-        @Nullable Object disableMetricsCollection,
-        @Nullable AzureDatabricksDeltaLakeImportCommandResponse importSettings,
-        @Nullable Object maxConcurrentConnections,
-        @Nullable Object preCopyScript,
-        @Nullable Object sinkRetryCount,
-        @Nullable Object sinkRetryWait,
-        String type,
-        @Nullable Object writeBatchSize,
-        @Nullable Object writeBatchTimeout) {
+        @OutputCustomType.Parameter("disableMetricsCollection") @Nullable Object disableMetricsCollection,
+        @OutputCustomType.Parameter("importSettings") @Nullable AzureDatabricksDeltaLakeImportCommandResponse importSettings,
+        @OutputCustomType.Parameter("maxConcurrentConnections") @Nullable Object maxConcurrentConnections,
+        @OutputCustomType.Parameter("preCopyScript") @Nullable Object preCopyScript,
+        @OutputCustomType.Parameter("sinkRetryCount") @Nullable Object sinkRetryCount,
+        @OutputCustomType.Parameter("sinkRetryWait") @Nullable Object sinkRetryWait,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("writeBatchSize") @Nullable Object writeBatchSize,
+        @OutputCustomType.Parameter("writeBatchTimeout") @Nullable Object writeBatchTimeout) {
         this.disableMetricsCollection = disableMetricsCollection;
         this.importSettings = importSettings;
         this.maxConcurrentConnections = maxConcurrentConnections;

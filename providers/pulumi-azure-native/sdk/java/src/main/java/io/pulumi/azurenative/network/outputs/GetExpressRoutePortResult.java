@@ -109,26 +109,26 @@ public final class GetExpressRoutePortResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"allocationDate","bandwidthInGbps","circuits","encapsulation","etag","etherType","id","identity","links","location","mtu","name","peeringLocation","provisionedBandwidthInGbps","provisioningState","resourceGuid","tags","type"})
+    @OutputCustomType.Constructor
     private GetExpressRoutePortResult(
-        String allocationDate,
-        @Nullable Integer bandwidthInGbps,
-        List<SubResourceResponse> circuits,
-        @Nullable String encapsulation,
-        String etag,
-        String etherType,
-        @Nullable String id,
-        @Nullable ManagedServiceIdentityResponse identity,
-        @Nullable List<ExpressRouteLinkResponse> links,
-        @Nullable String location,
-        String mtu,
-        String name,
-        @Nullable String peeringLocation,
-        Double provisionedBandwidthInGbps,
-        String provisioningState,
-        String resourceGuid,
-        @Nullable Map<String,String> tags,
-        String type) {
+        @OutputCustomType.Parameter("allocationDate") String allocationDate,
+        @OutputCustomType.Parameter("bandwidthInGbps") @Nullable Integer bandwidthInGbps,
+        @OutputCustomType.Parameter("circuits") List<SubResourceResponse> circuits,
+        @OutputCustomType.Parameter("encapsulation") @Nullable String encapsulation,
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("etherType") String etherType,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("identity") @Nullable ManagedServiceIdentityResponse identity,
+        @OutputCustomType.Parameter("links") @Nullable List<ExpressRouteLinkResponse> links,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("mtu") String mtu,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("peeringLocation") @Nullable String peeringLocation,
+        @OutputCustomType.Parameter("provisionedBandwidthInGbps") Double provisionedBandwidthInGbps,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("resourceGuid") String resourceGuid,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type) {
         this.allocationDate = allocationDate;
         this.bandwidthInGbps = bandwidthInGbps;
         this.circuits = circuits;

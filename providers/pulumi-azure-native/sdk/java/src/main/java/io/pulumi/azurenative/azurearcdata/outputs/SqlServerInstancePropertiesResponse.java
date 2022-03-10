@@ -83,23 +83,23 @@ public final class SqlServerInstancePropertiesResponse {
      */
     private final @Nullable String version;
 
-    @OutputCustomType.Constructor({"collation","containerResourceId","createTime","currentVersion","edition","instanceName","licenseType","patchLevel","productId","provisioningState","status","tcpDynamicPorts","tcpStaticPorts","vCore","version"})
+    @OutputCustomType.Constructor
     private SqlServerInstancePropertiesResponse(
-        @Nullable String collation,
-        String containerResourceId,
-        String createTime,
-        @Nullable String currentVersion,
-        @Nullable String edition,
-        @Nullable String instanceName,
-        @Nullable String licenseType,
-        @Nullable String patchLevel,
-        @Nullable String productId,
-        String provisioningState,
-        String status,
-        @Nullable String tcpDynamicPorts,
-        @Nullable String tcpStaticPorts,
-        @Nullable String vCore,
-        @Nullable String version) {
+        @OutputCustomType.Parameter("collation") @Nullable String collation,
+        @OutputCustomType.Parameter("containerResourceId") String containerResourceId,
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("currentVersion") @Nullable String currentVersion,
+        @OutputCustomType.Parameter("edition") @Nullable String edition,
+        @OutputCustomType.Parameter("instanceName") @Nullable String instanceName,
+        @OutputCustomType.Parameter("licenseType") @Nullable String licenseType,
+        @OutputCustomType.Parameter("patchLevel") @Nullable String patchLevel,
+        @OutputCustomType.Parameter("productId") @Nullable String productId,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("status") String status,
+        @OutputCustomType.Parameter("tcpDynamicPorts") @Nullable String tcpDynamicPorts,
+        @OutputCustomType.Parameter("tcpStaticPorts") @Nullable String tcpStaticPorts,
+        @OutputCustomType.Parameter("vCore") @Nullable String vCore,
+        @OutputCustomType.Parameter("version") @Nullable String version) {
         this.collation = collation;
         this.containerResourceId = containerResourceId;
         this.createTime = createTime;

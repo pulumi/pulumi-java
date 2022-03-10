@@ -24,10 +24,10 @@ public final class DataCollectionRuleResponseDestinations {
      */
     private final @Nullable List<LogAnalyticsDestinationResponse> logAnalytics;
 
-    @OutputCustomType.Constructor({"azureMonitorMetrics","logAnalytics"})
+    @OutputCustomType.Constructor
     private DataCollectionRuleResponseDestinations(
-        @Nullable DestinationsSpecResponseAzureMonitorMetrics azureMonitorMetrics,
-        @Nullable List<LogAnalyticsDestinationResponse> logAnalytics) {
+        @OutputCustomType.Parameter("azureMonitorMetrics") @Nullable DestinationsSpecResponseAzureMonitorMetrics azureMonitorMetrics,
+        @OutputCustomType.Parameter("logAnalytics") @Nullable List<LogAnalyticsDestinationResponse> logAnalytics) {
         this.azureMonitorMetrics = azureMonitorMetrics;
         this.logAnalytics = logAnalytics;
     }

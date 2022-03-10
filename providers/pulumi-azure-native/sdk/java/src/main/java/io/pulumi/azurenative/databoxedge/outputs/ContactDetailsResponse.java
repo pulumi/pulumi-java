@@ -31,12 +31,12 @@ public final class ContactDetailsResponse {
      */
     private final String phone;
 
-    @OutputCustomType.Constructor({"companyName","contactPerson","emailList","phone"})
+    @OutputCustomType.Constructor
     private ContactDetailsResponse(
-        String companyName,
-        String contactPerson,
-        List<String> emailList,
-        String phone) {
+        @OutputCustomType.Parameter("companyName") String companyName,
+        @OutputCustomType.Parameter("contactPerson") String contactPerson,
+        @OutputCustomType.Parameter("emailList") List<String> emailList,
+        @OutputCustomType.Parameter("phone") String phone) {
         this.companyName = companyName;
         this.contactPerson = contactPerson;
         this.emailList = emailList;

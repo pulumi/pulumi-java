@@ -29,11 +29,11 @@ public final class FtpServerLocationResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"fileName","folderPath","type"})
+    @OutputCustomType.Constructor
     private FtpServerLocationResponse(
-        @Nullable Object fileName,
-        @Nullable Object folderPath,
-        String type) {
+        @OutputCustomType.Parameter("fileName") @Nullable Object fileName,
+        @OutputCustomType.Parameter("folderPath") @Nullable Object folderPath,
+        @OutputCustomType.Parameter("type") String type) {
         this.fileName = fileName;
         this.folderPath = folderPath;
         this.type = type;

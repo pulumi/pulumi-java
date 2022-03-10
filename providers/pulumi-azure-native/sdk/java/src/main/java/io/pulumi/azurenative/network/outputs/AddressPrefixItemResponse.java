@@ -22,10 +22,10 @@ public final class AddressPrefixItemResponse {
      */
     private final @Nullable String addressPrefixType;
 
-    @OutputCustomType.Constructor({"addressPrefix","addressPrefixType"})
+    @OutputCustomType.Constructor
     private AddressPrefixItemResponse(
-        @Nullable String addressPrefix,
-        @Nullable String addressPrefixType) {
+        @OutputCustomType.Parameter("addressPrefix") @Nullable String addressPrefix,
+        @OutputCustomType.Parameter("addressPrefixType") @Nullable String addressPrefixType) {
         this.addressPrefix = addressPrefix;
         this.addressPrefixType = addressPrefixType;
     }

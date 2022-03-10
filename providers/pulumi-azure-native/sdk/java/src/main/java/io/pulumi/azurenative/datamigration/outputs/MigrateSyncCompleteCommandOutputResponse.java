@@ -22,10 +22,10 @@ public final class MigrateSyncCompleteCommandOutputResponse {
      */
     private final String id;
 
-    @OutputCustomType.Constructor({"errors","id"})
+    @OutputCustomType.Constructor
     private MigrateSyncCompleteCommandOutputResponse(
-        List<ReportableExceptionResponse> errors,
-        String id) {
+        @OutputCustomType.Parameter("errors") List<ReportableExceptionResponse> errors,
+        @OutputCustomType.Parameter("id") String id) {
         this.errors = errors;
         this.id = id;
     }

@@ -34,12 +34,12 @@ public final class AvailabilitySetResourceSettingsResponse {
      */
     private final @Nullable Integer updateDomain;
 
-    @OutputCustomType.Constructor({"faultDomain","resourceType","targetResourceName","updateDomain"})
+    @OutputCustomType.Constructor
     private AvailabilitySetResourceSettingsResponse(
-        @Nullable Integer faultDomain,
-        String resourceType,
-        String targetResourceName,
-        @Nullable Integer updateDomain) {
+        @OutputCustomType.Parameter("faultDomain") @Nullable Integer faultDomain,
+        @OutputCustomType.Parameter("resourceType") String resourceType,
+        @OutputCustomType.Parameter("targetResourceName") String targetResourceName,
+        @OutputCustomType.Parameter("updateDomain") @Nullable Integer updateDomain) {
         this.faultDomain = faultDomain;
         this.resourceType = resourceType;
         this.targetResourceName = targetResourceName;

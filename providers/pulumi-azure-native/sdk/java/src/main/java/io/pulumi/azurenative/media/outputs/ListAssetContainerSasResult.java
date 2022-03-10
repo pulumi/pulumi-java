@@ -17,8 +17,8 @@ public final class ListAssetContainerSasResult {
      */
     private final @Nullable List<String> assetContainerSasUrls;
 
-    @OutputCustomType.Constructor({"assetContainerSasUrls"})
-    private ListAssetContainerSasResult(@Nullable List<String> assetContainerSasUrls) {
+    @OutputCustomType.Constructor
+    private ListAssetContainerSasResult(@OutputCustomType.Parameter("assetContainerSasUrls") @Nullable List<String> assetContainerSasUrls) {
         this.assetContainerSasUrls = assetContainerSasUrls;
     }
 

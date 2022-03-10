@@ -77,21 +77,21 @@ public final class GetBlobFolderDataSetMappingResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"containerName","dataSetId","dataSetMappingStatus","id","kind","name","prefix","provisioningState","resourceGroup","storageAccountName","subscriptionId","systemData","type"})
+    @OutputCustomType.Constructor
     private GetBlobFolderDataSetMappingResult(
-        String containerName,
-        String dataSetId,
-        String dataSetMappingStatus,
-        String id,
-        String kind,
-        String name,
-        String prefix,
-        String provisioningState,
-        String resourceGroup,
-        String storageAccountName,
-        String subscriptionId,
-        SystemDataResponse systemData,
-        String type) {
+        @OutputCustomType.Parameter("containerName") String containerName,
+        @OutputCustomType.Parameter("dataSetId") String dataSetId,
+        @OutputCustomType.Parameter("dataSetMappingStatus") String dataSetMappingStatus,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("prefix") String prefix,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("resourceGroup") String resourceGroup,
+        @OutputCustomType.Parameter("storageAccountName") String storageAccountName,
+        @OutputCustomType.Parameter("subscriptionId") String subscriptionId,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("type") String type) {
         this.containerName = containerName;
         this.dataSetId = dataSetId;
         this.dataSetMappingStatus = dataSetMappingStatus;

@@ -17,8 +17,8 @@ public final class ScopeNamespaceResponse {
      */
     private final @Nullable String targetNamespace;
 
-    @OutputCustomType.Constructor({"targetNamespace"})
-    private ScopeNamespaceResponse(@Nullable String targetNamespace) {
+    @OutputCustomType.Constructor
+    private ScopeNamespaceResponse(@OutputCustomType.Parameter("targetNamespace") @Nullable String targetNamespace) {
         this.targetNamespace = targetNamespace;
     }
 

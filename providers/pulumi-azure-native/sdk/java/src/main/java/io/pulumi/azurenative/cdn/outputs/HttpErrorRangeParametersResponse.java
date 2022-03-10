@@ -22,10 +22,10 @@ public final class HttpErrorRangeParametersResponse {
      */
     private final @Nullable Integer end;
 
-    @OutputCustomType.Constructor({"begin","end"})
+    @OutputCustomType.Constructor
     private HttpErrorRangeParametersResponse(
-        @Nullable Integer begin,
-        @Nullable Integer end) {
+        @OutputCustomType.Parameter("begin") @Nullable Integer begin,
+        @OutputCustomType.Parameter("end") @Nullable Integer end) {
         this.begin = begin;
         this.end = end;
     }

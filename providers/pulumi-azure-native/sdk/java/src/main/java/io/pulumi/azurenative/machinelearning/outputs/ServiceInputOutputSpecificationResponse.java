@@ -34,12 +34,12 @@ public final class ServiceInputOutputSpecificationResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"description","properties","title","type"})
+    @OutputCustomType.Constructor
     private ServiceInputOutputSpecificationResponse(
-        @Nullable String description,
-        Map<String,TableSpecificationResponse> properties,
-        @Nullable String title,
-        String type) {
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("properties") Map<String,TableSpecificationResponse> properties,
+        @OutputCustomType.Parameter("title") @Nullable String title,
+        @OutputCustomType.Parameter("type") String type) {
         this.description = description;
         this.properties = properties;
         this.title = title;

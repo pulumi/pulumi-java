@@ -17,8 +17,8 @@ public final class CreatorPropertiesResponse {
      */
     private final @Nullable String provisioningState;
 
-    @OutputCustomType.Constructor({"provisioningState"})
-    private CreatorPropertiesResponse(@Nullable String provisioningState) {
+    @OutputCustomType.Constructor
+    private CreatorPropertiesResponse(@OutputCustomType.Parameter("provisioningState") @Nullable String provisioningState) {
         this.provisioningState = provisioningState;
     }
 

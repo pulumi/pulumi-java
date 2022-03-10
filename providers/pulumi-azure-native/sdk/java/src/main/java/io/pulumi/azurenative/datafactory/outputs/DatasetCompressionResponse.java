@@ -22,10 +22,10 @@ public final class DatasetCompressionResponse {
      */
     private final Object type;
 
-    @OutputCustomType.Constructor({"level","type"})
+    @OutputCustomType.Constructor
     private DatasetCompressionResponse(
-        @Nullable Object level,
-        Object type) {
+        @OutputCustomType.Parameter("level") @Nullable Object level,
+        @OutputCustomType.Parameter("type") Object type) {
         this.level = level;
         this.type = type;
     }

@@ -76,20 +76,20 @@ public final class GetNetworkManagerResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"description","displayName","etag","id","location","name","networkManagerScopeAccesses","networkManagerScopes","provisioningState","systemData","tags","type"})
+    @OutputCustomType.Constructor
     private GetNetworkManagerResult(
-        @Nullable String description,
-        @Nullable String displayName,
-        String etag,
-        @Nullable String id,
-        @Nullable String location,
-        String name,
-        @Nullable List<String> networkManagerScopeAccesses,
-        @Nullable NetworkManagerPropertiesResponseNetworkManagerScopes networkManagerScopes,
-        String provisioningState,
-        SystemDataResponse systemData,
-        @Nullable Map<String,String> tags,
-        String type) {
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("displayName") @Nullable String displayName,
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("networkManagerScopeAccesses") @Nullable List<String> networkManagerScopeAccesses,
+        @OutputCustomType.Parameter("networkManagerScopes") @Nullable NetworkManagerPropertiesResponseNetworkManagerScopes networkManagerScopes,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type) {
         this.description = description;
         this.displayName = displayName;
         this.etag = etag;

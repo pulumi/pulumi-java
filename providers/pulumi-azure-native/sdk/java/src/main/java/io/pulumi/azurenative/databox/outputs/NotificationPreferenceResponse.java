@@ -21,10 +21,10 @@ public final class NotificationPreferenceResponse {
      */
     private final String stageName;
 
-    @OutputCustomType.Constructor({"sendNotification","stageName"})
+    @OutputCustomType.Constructor
     private NotificationPreferenceResponse(
-        Boolean sendNotification,
-        String stageName) {
+        @OutputCustomType.Parameter("sendNotification") Boolean sendNotification,
+        @OutputCustomType.Parameter("stageName") String stageName) {
         this.sendNotification = sendNotification;
         this.stageName = stageName;
     }

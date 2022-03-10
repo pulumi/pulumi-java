@@ -38,13 +38,13 @@ public final class NotificationSettingsResponse {
      */
     private final @Nullable String webhookUrl;
 
-    @OutputCustomType.Constructor({"emailRecipient","notificationLocale","status","timeInMinutes","webhookUrl"})
+    @OutputCustomType.Constructor
     private NotificationSettingsResponse(
-        @Nullable String emailRecipient,
-        @Nullable String notificationLocale,
-        @Nullable String status,
-        @Nullable Integer timeInMinutes,
-        @Nullable String webhookUrl) {
+        @OutputCustomType.Parameter("emailRecipient") @Nullable String emailRecipient,
+        @OutputCustomType.Parameter("notificationLocale") @Nullable String notificationLocale,
+        @OutputCustomType.Parameter("status") @Nullable String status,
+        @OutputCustomType.Parameter("timeInMinutes") @Nullable Integer timeInMinutes,
+        @OutputCustomType.Parameter("webhookUrl") @Nullable String webhookUrl) {
         this.emailRecipient = emailRecipient;
         this.notificationLocale = notificationLocale;
         this.status = status;

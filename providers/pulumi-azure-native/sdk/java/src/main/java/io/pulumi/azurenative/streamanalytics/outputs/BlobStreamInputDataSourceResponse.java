@@ -51,15 +51,15 @@ public final class BlobStreamInputDataSourceResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"container","dateFormat","pathPattern","sourcePartitionCount","storageAccounts","timeFormat","type"})
+    @OutputCustomType.Constructor
     private BlobStreamInputDataSourceResponse(
-        @Nullable String container,
-        @Nullable String dateFormat,
-        @Nullable String pathPattern,
-        @Nullable Integer sourcePartitionCount,
-        @Nullable List<StorageAccountResponse> storageAccounts,
-        @Nullable String timeFormat,
-        String type) {
+        @OutputCustomType.Parameter("container") @Nullable String container,
+        @OutputCustomType.Parameter("dateFormat") @Nullable String dateFormat,
+        @OutputCustomType.Parameter("pathPattern") @Nullable String pathPattern,
+        @OutputCustomType.Parameter("sourcePartitionCount") @Nullable Integer sourcePartitionCount,
+        @OutputCustomType.Parameter("storageAccounts") @Nullable List<StorageAccountResponse> storageAccounts,
+        @OutputCustomType.Parameter("timeFormat") @Nullable String timeFormat,
+        @OutputCustomType.Parameter("type") String type) {
         this.container = container;
         this.dateFormat = dateFormat;
         this.pathPattern = pathPattern;

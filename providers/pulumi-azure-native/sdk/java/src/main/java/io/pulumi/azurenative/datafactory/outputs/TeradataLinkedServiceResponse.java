@@ -76,19 +76,19 @@ public final class TeradataLinkedServiceResponse {
      */
     private final @Nullable Object username;
 
-    @OutputCustomType.Constructor({"annotations","authenticationType","connectVia","connectionString","description","encryptedCredential","parameters","password","server","type","username"})
+    @OutputCustomType.Constructor
     private TeradataLinkedServiceResponse(
-        @Nullable List<Object> annotations,
-        @Nullable String authenticationType,
-        @Nullable IntegrationRuntimeReferenceResponse connectVia,
-        @Nullable Object connectionString,
-        @Nullable String description,
-        @Nullable Object encryptedCredential,
-        @Nullable Map<String,ParameterSpecificationResponse> parameters,
-        @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password,
-        @Nullable Object server,
-        String type,
-        @Nullable Object username) {
+        @OutputCustomType.Parameter("annotations") @Nullable List<Object> annotations,
+        @OutputCustomType.Parameter("authenticationType") @Nullable String authenticationType,
+        @OutputCustomType.Parameter("connectVia") @Nullable IntegrationRuntimeReferenceResponse connectVia,
+        @OutputCustomType.Parameter("connectionString") @Nullable Object connectionString,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("encryptedCredential") @Nullable Object encryptedCredential,
+        @OutputCustomType.Parameter("parameters") @Nullable Map<String,ParameterSpecificationResponse> parameters,
+        @OutputCustomType.Parameter("password") @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password,
+        @OutputCustomType.Parameter("server") @Nullable Object server,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("username") @Nullable Object username) {
         this.annotations = annotations;
         this.authenticationType = authenticationType;
         this.connectVia = connectVia;

@@ -42,15 +42,15 @@ public final class GetMongoDBResourceMongoDBDatabaseResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"id","location","name","options","resource","tags","type"})
+    @OutputCustomType.Constructor
     private GetMongoDBResourceMongoDBDatabaseResult(
-        String id,
-        @Nullable String location,
-        String name,
-        @Nullable MongoDBDatabaseGetPropertiesResponseOptions options,
-        @Nullable MongoDBDatabaseGetPropertiesResponseResource resource,
-        @Nullable Map<String,String> tags,
-        String type) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("options") @Nullable MongoDBDatabaseGetPropertiesResponseOptions options,
+        @OutputCustomType.Parameter("resource") @Nullable MongoDBDatabaseGetPropertiesResponseResource resource,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type) {
         this.id = id;
         this.location = location;
         this.name = name;

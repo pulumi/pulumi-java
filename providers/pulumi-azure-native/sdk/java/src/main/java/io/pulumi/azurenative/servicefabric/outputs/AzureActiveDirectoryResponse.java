@@ -27,11 +27,11 @@ public final class AzureActiveDirectoryResponse {
      */
     private final @Nullable String tenantId;
 
-    @OutputCustomType.Constructor({"clientApplication","clusterApplication","tenantId"})
+    @OutputCustomType.Constructor
     private AzureActiveDirectoryResponse(
-        @Nullable String clientApplication,
-        @Nullable String clusterApplication,
-        @Nullable String tenantId) {
+        @OutputCustomType.Parameter("clientApplication") @Nullable String clientApplication,
+        @OutputCustomType.Parameter("clusterApplication") @Nullable String clusterApplication,
+        @OutputCustomType.Parameter("tenantId") @Nullable String tenantId) {
         this.clientApplication = clientApplication;
         this.clusterApplication = clusterApplication;
         this.tenantId = tenantId;

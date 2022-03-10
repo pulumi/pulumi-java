@@ -22,10 +22,10 @@ public final class ApplicationPackageSupportUrlsResponse {
      */
     private final @Nullable String publicAzure;
 
-    @OutputCustomType.Constructor({"governmentCloud","publicAzure"})
+    @OutputCustomType.Constructor
     private ApplicationPackageSupportUrlsResponse(
-        @Nullable String governmentCloud,
-        @Nullable String publicAzure) {
+        @OutputCustomType.Parameter("governmentCloud") @Nullable String governmentCloud,
+        @OutputCustomType.Parameter("publicAzure") @Nullable String publicAzure) {
         this.governmentCloud = governmentCloud;
         this.publicAzure = publicAzure;
     }

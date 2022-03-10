@@ -31,12 +31,12 @@ public final class ManagedIntegrationRuntimeErrorResponse {
      */
     private final String time;
 
-    @OutputCustomType.Constructor({"code","message","parameters","time"})
+    @OutputCustomType.Constructor
     private ManagedIntegrationRuntimeErrorResponse(
-        String code,
-        String message,
-        List<String> parameters,
-        String time) {
+        @OutputCustomType.Parameter("code") String code,
+        @OutputCustomType.Parameter("message") String message,
+        @OutputCustomType.Parameter("parameters") List<String> parameters,
+        @OutputCustomType.Parameter("time") String time) {
         this.code = code;
         this.message = message;
         this.parameters = parameters;

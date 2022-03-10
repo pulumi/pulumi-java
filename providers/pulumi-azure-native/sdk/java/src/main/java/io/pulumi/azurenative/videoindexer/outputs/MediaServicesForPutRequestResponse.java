@@ -22,10 +22,10 @@ public final class MediaServicesForPutRequestResponse {
      */
     private final @Nullable String userAssignedIdentity;
 
-    @OutputCustomType.Constructor({"resourceId","userAssignedIdentity"})
+    @OutputCustomType.Constructor
     private MediaServicesForPutRequestResponse(
-        @Nullable String resourceId,
-        @Nullable String userAssignedIdentity) {
+        @OutputCustomType.Parameter("resourceId") @Nullable String resourceId,
+        @OutputCustomType.Parameter("userAssignedIdentity") @Nullable String userAssignedIdentity) {
         this.resourceId = resourceId;
         this.userAssignedIdentity = userAssignedIdentity;
     }

@@ -17,8 +17,8 @@ public final class WinRMConfigurationResponse {
      */
     private final @Nullable List<WinRMListenerResponse> listeners;
 
-    @OutputCustomType.Constructor({"listeners"})
-    private WinRMConfigurationResponse(@Nullable List<WinRMListenerResponse> listeners) {
+    @OutputCustomType.Constructor
+    private WinRMConfigurationResponse(@OutputCustomType.Parameter("listeners") @Nullable List<WinRMListenerResponse> listeners) {
         this.listeners = listeners;
     }
 

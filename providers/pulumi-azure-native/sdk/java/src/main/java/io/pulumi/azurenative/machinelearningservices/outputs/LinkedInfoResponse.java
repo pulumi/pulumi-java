@@ -27,11 +27,11 @@ public final class LinkedInfoResponse {
      */
     private final @Nullable String origin;
 
-    @OutputCustomType.Constructor({"linkedId","linkedResourceName","origin"})
+    @OutputCustomType.Constructor
     private LinkedInfoResponse(
-        @Nullable String linkedId,
-        @Nullable String linkedResourceName,
-        @Nullable String origin) {
+        @OutputCustomType.Parameter("linkedId") @Nullable String linkedId,
+        @OutputCustomType.Parameter("linkedResourceName") @Nullable String linkedResourceName,
+        @OutputCustomType.Parameter("origin") @Nullable String origin) {
         this.linkedId = linkedId;
         this.linkedResourceName = linkedResourceName;
         this.origin = origin;

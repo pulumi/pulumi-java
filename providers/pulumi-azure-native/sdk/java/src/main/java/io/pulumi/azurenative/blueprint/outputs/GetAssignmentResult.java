@@ -88,22 +88,22 @@ public final class GetAssignmentResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"blueprintId","description","displayName","id","identity","location","locks","name","parameters","provisioningState","resourceGroups","scope","status","type"})
+    @OutputCustomType.Constructor
     private GetAssignmentResult(
-        @Nullable String blueprintId,
-        @Nullable String description,
-        @Nullable String displayName,
-        String id,
-        ManagedServiceIdentityResponse identity,
-        String location,
-        @Nullable AssignmentLockSettingsResponse locks,
-        String name,
-        Map<String,ParameterValueResponse> parameters,
-        String provisioningState,
-        Map<String,ResourceGroupValueResponse> resourceGroups,
-        @Nullable String scope,
-        AssignmentStatusResponse status,
-        String type) {
+        @OutputCustomType.Parameter("blueprintId") @Nullable String blueprintId,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("displayName") @Nullable String displayName,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("identity") ManagedServiceIdentityResponse identity,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("locks") @Nullable AssignmentLockSettingsResponse locks,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("parameters") Map<String,ParameterValueResponse> parameters,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("resourceGroups") Map<String,ResourceGroupValueResponse> resourceGroups,
+        @OutputCustomType.Parameter("scope") @Nullable String scope,
+        @OutputCustomType.Parameter("status") AssignmentStatusResponse status,
+        @OutputCustomType.Parameter("type") String type) {
         this.blueprintId = blueprintId;
         this.description = description;
         this.displayName = displayName;

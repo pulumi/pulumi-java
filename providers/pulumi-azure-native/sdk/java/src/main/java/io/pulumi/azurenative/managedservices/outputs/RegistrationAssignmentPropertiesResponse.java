@@ -26,11 +26,11 @@ public final class RegistrationAssignmentPropertiesResponse {
      */
     private final String registrationDefinitionId;
 
-    @OutputCustomType.Constructor({"provisioningState","registrationDefinition","registrationDefinitionId"})
+    @OutputCustomType.Constructor
     private RegistrationAssignmentPropertiesResponse(
-        String provisioningState,
-        RegistrationAssignmentPropertiesResponseRegistrationDefinition registrationDefinition,
-        String registrationDefinitionId) {
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("registrationDefinition") RegistrationAssignmentPropertiesResponseRegistrationDefinition registrationDefinition,
+        @OutputCustomType.Parameter("registrationDefinitionId") String registrationDefinitionId) {
         this.provisioningState = provisioningState;
         this.registrationDefinition = registrationDefinition;
         this.registrationDefinitionId = registrationDefinitionId;

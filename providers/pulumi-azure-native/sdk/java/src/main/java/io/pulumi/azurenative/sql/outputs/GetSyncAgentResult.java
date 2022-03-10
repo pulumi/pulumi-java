@@ -58,17 +58,17 @@ public final class GetSyncAgentResult {
      */
     private final String version;
 
-    @OutputCustomType.Constructor({"expiryTime","id","isUpToDate","lastAliveTime","name","state","syncDatabaseId","type","version"})
+    @OutputCustomType.Constructor
     private GetSyncAgentResult(
-        String expiryTime,
-        String id,
-        Boolean isUpToDate,
-        String lastAliveTime,
-        String name,
-        String state,
-        @Nullable String syncDatabaseId,
-        String type,
-        String version) {
+        @OutputCustomType.Parameter("expiryTime") String expiryTime,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("isUpToDate") Boolean isUpToDate,
+        @OutputCustomType.Parameter("lastAliveTime") String lastAliveTime,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("state") String state,
+        @OutputCustomType.Parameter("syncDatabaseId") @Nullable String syncDatabaseId,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("version") String version) {
         this.expiryTime = expiryTime;
         this.id = id;
         this.isUpToDate = isUpToDate;

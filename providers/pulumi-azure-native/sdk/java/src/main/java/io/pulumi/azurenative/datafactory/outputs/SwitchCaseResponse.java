@@ -62,10 +62,10 @@ public final class SwitchCaseResponse {
      */
     private final @Nullable String value;
 
-    @OutputCustomType.Constructor({"activities","value"})
+    @OutputCustomType.Constructor
     private SwitchCaseResponse(
-        @Nullable List<Object> activities,
-        @Nullable String value) {
+        @OutputCustomType.Parameter("activities") @Nullable List<Object> activities,
+        @OutputCustomType.Parameter("value") @Nullable String value) {
         this.activities = activities;
         this.value = value;
     }

@@ -57,17 +57,17 @@ public final class GetWorkloadClassifierResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"context","endTime","id","importance","label","memberName","name","startTime","type"})
+    @OutputCustomType.Constructor
     private GetWorkloadClassifierResult(
-        @Nullable String context,
-        @Nullable String endTime,
-        String id,
-        @Nullable String importance,
-        @Nullable String label,
-        String memberName,
-        String name,
-        @Nullable String startTime,
-        String type) {
+        @OutputCustomType.Parameter("context") @Nullable String context,
+        @OutputCustomType.Parameter("endTime") @Nullable String endTime,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("importance") @Nullable String importance,
+        @OutputCustomType.Parameter("label") @Nullable String label,
+        @OutputCustomType.Parameter("memberName") String memberName,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("startTime") @Nullable String startTime,
+        @OutputCustomType.Parameter("type") String type) {
         this.context = context;
         this.endTime = endTime;
         this.id = id;

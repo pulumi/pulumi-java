@@ -47,15 +47,15 @@ public final class GetCredentialResult {
      */
     private final String userName;
 
-    @OutputCustomType.Constructor({"creationTime","description","id","lastModifiedTime","name","type","userName"})
+    @OutputCustomType.Constructor
     private GetCredentialResult(
-        String creationTime,
-        @Nullable String description,
-        String id,
-        String lastModifiedTime,
-        String name,
-        String type,
-        String userName) {
+        @OutputCustomType.Parameter("creationTime") String creationTime,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("lastModifiedTime") String lastModifiedTime,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("userName") String userName) {
         this.creationTime = creationTime;
         this.description = description;
         this.id = id;

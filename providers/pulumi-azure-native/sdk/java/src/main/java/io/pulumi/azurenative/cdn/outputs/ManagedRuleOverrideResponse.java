@@ -27,11 +27,11 @@ public final class ManagedRuleOverrideResponse {
      */
     private final String ruleId;
 
-    @OutputCustomType.Constructor({"action","enabledState","ruleId"})
+    @OutputCustomType.Constructor
     private ManagedRuleOverrideResponse(
-        @Nullable String action,
-        @Nullable String enabledState,
-        String ruleId) {
+        @OutputCustomType.Parameter("action") @Nullable String action,
+        @OutputCustomType.Parameter("enabledState") @Nullable String enabledState,
+        @OutputCustomType.Parameter("ruleId") String ruleId) {
         this.action = action;
         this.enabledState = enabledState;
         this.ruleId = ruleId;

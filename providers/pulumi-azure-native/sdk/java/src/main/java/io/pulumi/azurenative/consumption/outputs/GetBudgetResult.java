@@ -79,20 +79,20 @@ public final class GetBudgetResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"amount","category","currentSpend","eTag","filter","forecastSpend","id","name","notifications","timeGrain","timePeriod","type"})
+    @OutputCustomType.Constructor
     private GetBudgetResult(
-        Double amount,
-        String category,
-        CurrentSpendResponse currentSpend,
-        @Nullable String eTag,
-        @Nullable BudgetFilterResponse filter,
-        ForecastSpendResponse forecastSpend,
-        String id,
-        String name,
-        @Nullable Map<String,NotificationResponse> notifications,
-        String timeGrain,
-        BudgetTimePeriodResponse timePeriod,
-        String type) {
+        @OutputCustomType.Parameter("amount") Double amount,
+        @OutputCustomType.Parameter("category") String category,
+        @OutputCustomType.Parameter("currentSpend") CurrentSpendResponse currentSpend,
+        @OutputCustomType.Parameter("eTag") @Nullable String eTag,
+        @OutputCustomType.Parameter("filter") @Nullable BudgetFilterResponse filter,
+        @OutputCustomType.Parameter("forecastSpend") ForecastSpendResponse forecastSpend,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("notifications") @Nullable Map<String,NotificationResponse> notifications,
+        @OutputCustomType.Parameter("timeGrain") String timeGrain,
+        @OutputCustomType.Parameter("timePeriod") BudgetTimePeriodResponse timePeriod,
+        @OutputCustomType.Parameter("type") String type) {
         this.amount = amount;
         this.category = category;
         this.currentSpend = currentSpend;

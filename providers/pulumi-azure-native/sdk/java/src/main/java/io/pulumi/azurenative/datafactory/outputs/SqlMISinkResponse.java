@@ -97,24 +97,24 @@ public final class SqlMISinkResponse {
      */
     private final @Nullable Object writeBehavior;
 
-    @OutputCustomType.Constructor({"disableMetricsCollection","maxConcurrentConnections","preCopyScript","sinkRetryCount","sinkRetryWait","sqlWriterStoredProcedureName","sqlWriterTableType","sqlWriterUseTableLock","storedProcedureParameters","storedProcedureTableTypeParameterName","tableOption","type","upsertSettings","writeBatchSize","writeBatchTimeout","writeBehavior"})
+    @OutputCustomType.Constructor
     private SqlMISinkResponse(
-        @Nullable Object disableMetricsCollection,
-        @Nullable Object maxConcurrentConnections,
-        @Nullable Object preCopyScript,
-        @Nullable Object sinkRetryCount,
-        @Nullable Object sinkRetryWait,
-        @Nullable Object sqlWriterStoredProcedureName,
-        @Nullable Object sqlWriterTableType,
-        @Nullable Object sqlWriterUseTableLock,
-        @Nullable Map<String,StoredProcedureParameterResponse> storedProcedureParameters,
-        @Nullable Object storedProcedureTableTypeParameterName,
-        @Nullable Object tableOption,
-        String type,
-        @Nullable SqlUpsertSettingsResponse upsertSettings,
-        @Nullable Object writeBatchSize,
-        @Nullable Object writeBatchTimeout,
-        @Nullable Object writeBehavior) {
+        @OutputCustomType.Parameter("disableMetricsCollection") @Nullable Object disableMetricsCollection,
+        @OutputCustomType.Parameter("maxConcurrentConnections") @Nullable Object maxConcurrentConnections,
+        @OutputCustomType.Parameter("preCopyScript") @Nullable Object preCopyScript,
+        @OutputCustomType.Parameter("sinkRetryCount") @Nullable Object sinkRetryCount,
+        @OutputCustomType.Parameter("sinkRetryWait") @Nullable Object sinkRetryWait,
+        @OutputCustomType.Parameter("sqlWriterStoredProcedureName") @Nullable Object sqlWriterStoredProcedureName,
+        @OutputCustomType.Parameter("sqlWriterTableType") @Nullable Object sqlWriterTableType,
+        @OutputCustomType.Parameter("sqlWriterUseTableLock") @Nullable Object sqlWriterUseTableLock,
+        @OutputCustomType.Parameter("storedProcedureParameters") @Nullable Map<String,StoredProcedureParameterResponse> storedProcedureParameters,
+        @OutputCustomType.Parameter("storedProcedureTableTypeParameterName") @Nullable Object storedProcedureTableTypeParameterName,
+        @OutputCustomType.Parameter("tableOption") @Nullable Object tableOption,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("upsertSettings") @Nullable SqlUpsertSettingsResponse upsertSettings,
+        @OutputCustomType.Parameter("writeBatchSize") @Nullable Object writeBatchSize,
+        @OutputCustomType.Parameter("writeBatchTimeout") @Nullable Object writeBatchTimeout,
+        @OutputCustomType.Parameter("writeBehavior") @Nullable Object writeBehavior) {
         this.disableMetricsCollection = disableMetricsCollection;
         this.maxConcurrentConnections = maxConcurrentConnections;
         this.preCopyScript = preCopyScript;

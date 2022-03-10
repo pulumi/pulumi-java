@@ -17,8 +17,8 @@ public final class IPAccessControlResponse {
      */
     private final @Nullable List<IPRangeResponse> allow;
 
-    @OutputCustomType.Constructor({"allow"})
-    private IPAccessControlResponse(@Nullable List<IPRangeResponse> allow) {
+    @OutputCustomType.Constructor
+    private IPAccessControlResponse(@OutputCustomType.Parameter("allow") @Nullable List<IPRangeResponse> allow) {
         this.allow = allow;
     }
 

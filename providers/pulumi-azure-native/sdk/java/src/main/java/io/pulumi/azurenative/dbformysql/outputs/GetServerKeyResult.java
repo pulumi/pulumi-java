@@ -47,15 +47,15 @@ public final class GetServerKeyResult {
      */
     private final @Nullable String uri;
 
-    @OutputCustomType.Constructor({"creationDate","id","kind","name","serverKeyType","type","uri"})
+    @OutputCustomType.Constructor
     private GetServerKeyResult(
-        String creationDate,
-        String id,
-        String kind,
-        String name,
-        String serverKeyType,
-        String type,
-        @Nullable String uri) {
+        @OutputCustomType.Parameter("creationDate") String creationDate,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("serverKeyType") String serverKeyType,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("uri") @Nullable String uri) {
         this.creationDate = creationDate;
         this.id = id;
         this.kind = kind;

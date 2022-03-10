@@ -79,21 +79,21 @@ public final class ExportExecutionResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"eTag","error","executionType","fileName","id","name","processingEndTime","processingStartTime","runSettings","status","submittedBy","submittedTime","type"})
+    @OutputCustomType.Constructor
     private ExportExecutionResponse(
-        @Nullable String eTag,
-        @Nullable ErrorDetailsResponse error,
-        @Nullable String executionType,
-        @Nullable String fileName,
-        String id,
-        String name,
-        @Nullable String processingEndTime,
-        @Nullable String processingStartTime,
-        @Nullable CommonExportPropertiesResponse runSettings,
-        @Nullable String status,
-        @Nullable String submittedBy,
-        @Nullable String submittedTime,
-        String type) {
+        @OutputCustomType.Parameter("eTag") @Nullable String eTag,
+        @OutputCustomType.Parameter("error") @Nullable ErrorDetailsResponse error,
+        @OutputCustomType.Parameter("executionType") @Nullable String executionType,
+        @OutputCustomType.Parameter("fileName") @Nullable String fileName,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("processingEndTime") @Nullable String processingEndTime,
+        @OutputCustomType.Parameter("processingStartTime") @Nullable String processingStartTime,
+        @OutputCustomType.Parameter("runSettings") @Nullable CommonExportPropertiesResponse runSettings,
+        @OutputCustomType.Parameter("status") @Nullable String status,
+        @OutputCustomType.Parameter("submittedBy") @Nullable String submittedBy,
+        @OutputCustomType.Parameter("submittedTime") @Nullable String submittedTime,
+        @OutputCustomType.Parameter("type") String type) {
         this.eTag = eTag;
         this.error = error;
         this.executionType = executionType;

@@ -44,14 +44,14 @@ public final class InMageAzureV2PolicyDetailsResponse {
      */
     private final @Nullable Integer recoveryPointThresholdInMinutes;
 
-    @OutputCustomType.Constructor({"appConsistentFrequencyInMinutes","crashConsistentFrequencyInMinutes","instanceType","multiVmSyncStatus","recoveryPointHistory","recoveryPointThresholdInMinutes"})
+    @OutputCustomType.Constructor
     private InMageAzureV2PolicyDetailsResponse(
-        @Nullable Integer appConsistentFrequencyInMinutes,
-        @Nullable Integer crashConsistentFrequencyInMinutes,
-        String instanceType,
-        @Nullable String multiVmSyncStatus,
-        @Nullable Integer recoveryPointHistory,
-        @Nullable Integer recoveryPointThresholdInMinutes) {
+        @OutputCustomType.Parameter("appConsistentFrequencyInMinutes") @Nullable Integer appConsistentFrequencyInMinutes,
+        @OutputCustomType.Parameter("crashConsistentFrequencyInMinutes") @Nullable Integer crashConsistentFrequencyInMinutes,
+        @OutputCustomType.Parameter("instanceType") String instanceType,
+        @OutputCustomType.Parameter("multiVmSyncStatus") @Nullable String multiVmSyncStatus,
+        @OutputCustomType.Parameter("recoveryPointHistory") @Nullable Integer recoveryPointHistory,
+        @OutputCustomType.Parameter("recoveryPointThresholdInMinutes") @Nullable Integer recoveryPointThresholdInMinutes) {
         this.appConsistentFrequencyInMinutes = appConsistentFrequencyInMinutes;
         this.crashConsistentFrequencyInMinutes = crashConsistentFrequencyInMinutes;
         this.instanceType = instanceType;

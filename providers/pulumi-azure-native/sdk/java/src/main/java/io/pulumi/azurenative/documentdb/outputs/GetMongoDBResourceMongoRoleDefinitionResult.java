@@ -50,15 +50,15 @@ public final class GetMongoDBResourceMongoRoleDefinitionResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"databaseName","id","name","privileges","roleName","roles","type"})
+    @OutputCustomType.Constructor
     private GetMongoDBResourceMongoRoleDefinitionResult(
-        @Nullable String databaseName,
-        String id,
-        String name,
-        @Nullable List<PrivilegeResponse> privileges,
-        @Nullable String roleName,
-        @Nullable List<RoleResponse> roles,
-        String type) {
+        @OutputCustomType.Parameter("databaseName") @Nullable String databaseName,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("privileges") @Nullable List<PrivilegeResponse> privileges,
+        @OutputCustomType.Parameter("roleName") @Nullable String roleName,
+        @OutputCustomType.Parameter("roles") @Nullable List<RoleResponse> roles,
+        @OutputCustomType.Parameter("type") String type) {
         this.databaseName = databaseName;
         this.id = id;
         this.name = name;

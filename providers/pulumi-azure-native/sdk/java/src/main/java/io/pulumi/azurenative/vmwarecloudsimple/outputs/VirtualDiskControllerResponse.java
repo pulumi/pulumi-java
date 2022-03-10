@@ -30,12 +30,12 @@ public final class VirtualDiskControllerResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"id","name","subType","type"})
+    @OutputCustomType.Constructor
     private VirtualDiskControllerResponse(
-        String id,
-        String name,
-        String subType,
-        String type) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("subType") String subType,
+        @OutputCustomType.Parameter("type") String type) {
         this.id = id;
         this.name = name;
         this.subType = subType;

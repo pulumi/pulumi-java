@@ -54,16 +54,16 @@ public final class GetServiceUnitResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"artifacts","deploymentMode","id","location","name","tags","targetResourceGroup","type"})
+    @OutputCustomType.Constructor
     private GetServiceUnitResult(
-        @Nullable ServiceUnitArtifactsResponse artifacts,
-        String deploymentMode,
-        String id,
-        String location,
-        String name,
-        @Nullable Map<String,String> tags,
-        String targetResourceGroup,
-        String type) {
+        @OutputCustomType.Parameter("artifacts") @Nullable ServiceUnitArtifactsResponse artifacts,
+        @OutputCustomType.Parameter("deploymentMode") String deploymentMode,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("targetResourceGroup") String targetResourceGroup,
+        @OutputCustomType.Parameter("type") String type) {
         this.artifacts = artifacts;
         this.deploymentMode = deploymentMode;
         this.id = id;

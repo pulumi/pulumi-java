@@ -17,8 +17,8 @@ public final class ServiceProviderParameterResponseMetadata {
      */
     private final @Nullable ServiceProviderParameterResponseConstraints constraints;
 
-    @OutputCustomType.Constructor({"constraints"})
-    private ServiceProviderParameterResponseMetadata(@Nullable ServiceProviderParameterResponseConstraints constraints) {
+    @OutputCustomType.Constructor
+    private ServiceProviderParameterResponseMetadata(@OutputCustomType.Parameter("constraints") @Nullable ServiceProviderParameterResponseConstraints constraints) {
         this.constraints = constraints;
     }
 

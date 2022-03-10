@@ -62,17 +62,17 @@ public final class GetInstanceFailoverGroupResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"id","managedInstancePairs","name","partnerRegions","readOnlyEndpoint","readWriteEndpoint","replicationRole","replicationState","type"})
+    @OutputCustomType.Constructor
     private GetInstanceFailoverGroupResult(
-        String id,
-        List<ManagedInstancePairInfoResponse> managedInstancePairs,
-        String name,
-        List<PartnerRegionInfoResponse> partnerRegions,
-        @Nullable InstanceFailoverGroupReadOnlyEndpointResponse readOnlyEndpoint,
-        InstanceFailoverGroupReadWriteEndpointResponse readWriteEndpoint,
-        String replicationRole,
-        String replicationState,
-        String type) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("managedInstancePairs") List<ManagedInstancePairInfoResponse> managedInstancePairs,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("partnerRegions") List<PartnerRegionInfoResponse> partnerRegions,
+        @OutputCustomType.Parameter("readOnlyEndpoint") @Nullable InstanceFailoverGroupReadOnlyEndpointResponse readOnlyEndpoint,
+        @OutputCustomType.Parameter("readWriteEndpoint") InstanceFailoverGroupReadWriteEndpointResponse readWriteEndpoint,
+        @OutputCustomType.Parameter("replicationRole") String replicationRole,
+        @OutputCustomType.Parameter("replicationState") String replicationState,
+        @OutputCustomType.Parameter("type") String type) {
         this.id = id;
         this.managedInstancePairs = managedInstancePairs;
         this.name = name;

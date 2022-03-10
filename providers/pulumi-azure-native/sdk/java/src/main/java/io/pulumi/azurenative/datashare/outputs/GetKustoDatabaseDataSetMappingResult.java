@@ -62,18 +62,18 @@ public final class GetKustoDatabaseDataSetMappingResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"dataSetId","dataSetMappingStatus","id","kind","kustoClusterResourceId","location","name","provisioningState","systemData","type"})
+    @OutputCustomType.Constructor
     private GetKustoDatabaseDataSetMappingResult(
-        String dataSetId,
-        String dataSetMappingStatus,
-        String id,
-        String kind,
-        String kustoClusterResourceId,
-        String location,
-        String name,
-        String provisioningState,
-        SystemDataResponse systemData,
-        String type) {
+        @OutputCustomType.Parameter("dataSetId") String dataSetId,
+        @OutputCustomType.Parameter("dataSetMappingStatus") String dataSetMappingStatus,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("kustoClusterResourceId") String kustoClusterResourceId,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("type") String type) {
         this.dataSetId = dataSetId;
         this.dataSetMappingStatus = dataSetMappingStatus;
         this.id = id;

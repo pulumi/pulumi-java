@@ -53,16 +53,16 @@ public final class VirtualNetworkGatewayIPConfigurationResponse {
      */
     private final @Nullable SubResourceResponse subnet;
 
-    @OutputCustomType.Constructor({"etag","id","name","privateIPAddress","privateIPAllocationMethod","provisioningState","publicIPAddress","subnet"})
+    @OutputCustomType.Constructor
     private VirtualNetworkGatewayIPConfigurationResponse(
-        String etag,
-        @Nullable String id,
-        @Nullable String name,
-        String privateIPAddress,
-        @Nullable String privateIPAllocationMethod,
-        String provisioningState,
-        @Nullable SubResourceResponse publicIPAddress,
-        @Nullable SubResourceResponse subnet) {
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("privateIPAddress") String privateIPAddress,
+        @OutputCustomType.Parameter("privateIPAllocationMethod") @Nullable String privateIPAllocationMethod,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("publicIPAddress") @Nullable SubResourceResponse publicIPAddress,
+        @OutputCustomType.Parameter("subnet") @Nullable SubResourceResponse subnet) {
         this.etag = etag;
         this.id = id;
         this.name = name;

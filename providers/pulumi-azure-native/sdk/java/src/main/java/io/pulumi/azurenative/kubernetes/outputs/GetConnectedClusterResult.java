@@ -111,27 +111,27 @@ public final class GetConnectedClusterResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"agentPublicKeyCertificate","agentVersion","connectivityStatus","distribution","id","identity","infrastructure","kubernetesVersion","lastConnectivityTime","location","managedIdentityCertificateExpirationTime","name","offering","provisioningState","systemData","tags","totalCoreCount","totalNodeCount","type"})
+    @OutputCustomType.Constructor
     private GetConnectedClusterResult(
-        String agentPublicKeyCertificate,
-        String agentVersion,
-        String connectivityStatus,
-        @Nullable String distribution,
-        String id,
-        ConnectedClusterIdentityResponse identity,
-        @Nullable String infrastructure,
-        String kubernetesVersion,
-        String lastConnectivityTime,
-        String location,
-        String managedIdentityCertificateExpirationTime,
-        String name,
-        String offering,
-        @Nullable String provisioningState,
-        SystemDataResponse systemData,
-        @Nullable Map<String,String> tags,
-        Integer totalCoreCount,
-        Integer totalNodeCount,
-        String type) {
+        @OutputCustomType.Parameter("agentPublicKeyCertificate") String agentPublicKeyCertificate,
+        @OutputCustomType.Parameter("agentVersion") String agentVersion,
+        @OutputCustomType.Parameter("connectivityStatus") String connectivityStatus,
+        @OutputCustomType.Parameter("distribution") @Nullable String distribution,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("identity") ConnectedClusterIdentityResponse identity,
+        @OutputCustomType.Parameter("infrastructure") @Nullable String infrastructure,
+        @OutputCustomType.Parameter("kubernetesVersion") String kubernetesVersion,
+        @OutputCustomType.Parameter("lastConnectivityTime") String lastConnectivityTime,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("managedIdentityCertificateExpirationTime") String managedIdentityCertificateExpirationTime,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("offering") String offering,
+        @OutputCustomType.Parameter("provisioningState") @Nullable String provisioningState,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("totalCoreCount") Integer totalCoreCount,
+        @OutputCustomType.Parameter("totalNodeCount") Integer totalNodeCount,
+        @OutputCustomType.Parameter("type") String type) {
         this.agentPublicKeyCertificate = agentPublicKeyCertificate;
         this.agentVersion = agentVersion;
         this.connectivityStatus = connectivityStatus;

@@ -129,29 +129,29 @@ public final class GetApplicationDefinitionResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"artifacts","authorizations","createUiDefinition","deploymentPolicy","description","displayName","id","isEnabled","location","lockLevel","lockingPolicy","mainTemplate","managedBy","managementPolicy","name","notificationPolicy","packageFileUri","policies","sku","tags","type"})
+    @OutputCustomType.Constructor
     private GetApplicationDefinitionResult(
-        @Nullable List<ApplicationDefinitionArtifactResponse> artifacts,
-        @Nullable List<ApplicationAuthorizationResponse> authorizations,
-        @Nullable Object createUiDefinition,
-        @Nullable ApplicationDeploymentPolicyResponse deploymentPolicy,
-        @Nullable String description,
-        @Nullable String displayName,
-        String id,
-        @Nullable Boolean isEnabled,
-        @Nullable String location,
-        String lockLevel,
-        @Nullable ApplicationPackageLockingPolicyDefinitionResponse lockingPolicy,
-        @Nullable Object mainTemplate,
-        @Nullable String managedBy,
-        @Nullable ApplicationManagementPolicyResponse managementPolicy,
-        String name,
-        @Nullable ApplicationNotificationPolicyResponse notificationPolicy,
-        @Nullable String packageFileUri,
-        @Nullable List<ApplicationPolicyResponse> policies,
-        @Nullable SkuResponse sku,
-        @Nullable Map<String,String> tags,
-        String type) {
+        @OutputCustomType.Parameter("artifacts") @Nullable List<ApplicationDefinitionArtifactResponse> artifacts,
+        @OutputCustomType.Parameter("authorizations") @Nullable List<ApplicationAuthorizationResponse> authorizations,
+        @OutputCustomType.Parameter("createUiDefinition") @Nullable Object createUiDefinition,
+        @OutputCustomType.Parameter("deploymentPolicy") @Nullable ApplicationDeploymentPolicyResponse deploymentPolicy,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("displayName") @Nullable String displayName,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("isEnabled") @Nullable Boolean isEnabled,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("lockLevel") String lockLevel,
+        @OutputCustomType.Parameter("lockingPolicy") @Nullable ApplicationPackageLockingPolicyDefinitionResponse lockingPolicy,
+        @OutputCustomType.Parameter("mainTemplate") @Nullable Object mainTemplate,
+        @OutputCustomType.Parameter("managedBy") @Nullable String managedBy,
+        @OutputCustomType.Parameter("managementPolicy") @Nullable ApplicationManagementPolicyResponse managementPolicy,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("notificationPolicy") @Nullable ApplicationNotificationPolicyResponse notificationPolicy,
+        @OutputCustomType.Parameter("packageFileUri") @Nullable String packageFileUri,
+        @OutputCustomType.Parameter("policies") @Nullable List<ApplicationPolicyResponse> policies,
+        @OutputCustomType.Parameter("sku") @Nullable SkuResponse sku,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type) {
         this.artifacts = artifacts;
         this.authorizations = authorizations;
         this.createUiDefinition = createUiDefinition;

@@ -93,20 +93,20 @@ public final class XmlDatasetResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"annotations","compression","description","encodingName","folder","linkedServiceName","location","nullValue","parameters","schema","structure","type"})
+    @OutputCustomType.Constructor
     private XmlDatasetResponse(
-        @Nullable List<Object> annotations,
-        @Nullable DatasetCompressionResponse compression,
-        @Nullable String description,
-        @Nullable Object encodingName,
-        @Nullable DatasetResponseFolder folder,
-        LinkedServiceReferenceResponse linkedServiceName,
-        Object location,
-        @Nullable Object nullValue,
-        @Nullable Map<String,ParameterSpecificationResponse> parameters,
-        @Nullable Object schema,
-        @Nullable Object structure,
-        String type) {
+        @OutputCustomType.Parameter("annotations") @Nullable List<Object> annotations,
+        @OutputCustomType.Parameter("compression") @Nullable DatasetCompressionResponse compression,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("encodingName") @Nullable Object encodingName,
+        @OutputCustomType.Parameter("folder") @Nullable DatasetResponseFolder folder,
+        @OutputCustomType.Parameter("linkedServiceName") LinkedServiceReferenceResponse linkedServiceName,
+        @OutputCustomType.Parameter("location") Object location,
+        @OutputCustomType.Parameter("nullValue") @Nullable Object nullValue,
+        @OutputCustomType.Parameter("parameters") @Nullable Map<String,ParameterSpecificationResponse> parameters,
+        @OutputCustomType.Parameter("schema") @Nullable Object schema,
+        @OutputCustomType.Parameter("structure") @Nullable Object structure,
+        @OutputCustomType.Parameter("type") String type) {
         this.annotations = annotations;
         this.compression = compression;
         this.description = description;

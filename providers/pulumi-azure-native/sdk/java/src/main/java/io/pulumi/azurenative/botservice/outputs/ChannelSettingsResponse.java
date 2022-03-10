@@ -60,17 +60,17 @@ public final class ChannelSettingsResponse {
      */
     private final @Nullable List<SiteResponse> sites;
 
-    @OutputCustomType.Constructor({"botIconUrl","botId","channelDisplayName","channelId","disableLocalAuth","extensionKey1","extensionKey2","isEnabled","sites"})
+    @OutputCustomType.Constructor
     private ChannelSettingsResponse(
-        @Nullable String botIconUrl,
-        @Nullable String botId,
-        @Nullable String channelDisplayName,
-        @Nullable String channelId,
-        @Nullable Boolean disableLocalAuth,
-        @Nullable String extensionKey1,
-        @Nullable String extensionKey2,
-        @Nullable Boolean isEnabled,
-        @Nullable List<SiteResponse> sites) {
+        @OutputCustomType.Parameter("botIconUrl") @Nullable String botIconUrl,
+        @OutputCustomType.Parameter("botId") @Nullable String botId,
+        @OutputCustomType.Parameter("channelDisplayName") @Nullable String channelDisplayName,
+        @OutputCustomType.Parameter("channelId") @Nullable String channelId,
+        @OutputCustomType.Parameter("disableLocalAuth") @Nullable Boolean disableLocalAuth,
+        @OutputCustomType.Parameter("extensionKey1") @Nullable String extensionKey1,
+        @OutputCustomType.Parameter("extensionKey2") @Nullable String extensionKey2,
+        @OutputCustomType.Parameter("isEnabled") @Nullable Boolean isEnabled,
+        @OutputCustomType.Parameter("sites") @Nullable List<SiteResponse> sites) {
         this.botIconUrl = botIconUrl;
         this.botId = botId;
         this.channelDisplayName = channelDisplayName;

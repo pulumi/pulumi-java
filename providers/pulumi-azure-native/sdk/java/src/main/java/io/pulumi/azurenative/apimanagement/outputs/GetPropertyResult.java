@@ -49,15 +49,15 @@ public final class GetPropertyResult {
      */
     private final String value;
 
-    @OutputCustomType.Constructor({"displayName","id","name","secret","tags","type","value"})
+    @OutputCustomType.Constructor
     private GetPropertyResult(
-        String displayName,
-        String id,
-        String name,
-        @Nullable Boolean secret,
-        @Nullable List<String> tags,
-        String type,
-        String value) {
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("secret") @Nullable Boolean secret,
+        @OutputCustomType.Parameter("tags") @Nullable List<String> tags,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("value") String value) {
         this.displayName = displayName;
         this.id = id;
         this.name = name;

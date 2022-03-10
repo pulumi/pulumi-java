@@ -22,10 +22,10 @@ public final class VirtualDirectoryResponse {
      */
     private final @Nullable String virtualPath;
 
-    @OutputCustomType.Constructor({"physicalPath","virtualPath"})
+    @OutputCustomType.Constructor
     private VirtualDirectoryResponse(
-        @Nullable String physicalPath,
-        @Nullable String virtualPath) {
+        @OutputCustomType.Parameter("physicalPath") @Nullable String physicalPath,
+        @OutputCustomType.Parameter("virtualPath") @Nullable String virtualPath) {
         this.physicalPath = physicalPath;
         this.virtualPath = virtualPath;
     }

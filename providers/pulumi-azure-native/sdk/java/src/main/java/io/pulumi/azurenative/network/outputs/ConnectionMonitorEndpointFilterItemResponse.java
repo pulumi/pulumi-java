@@ -22,10 +22,10 @@ public final class ConnectionMonitorEndpointFilterItemResponse {
      */
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor({"address","type"})
+    @OutputCustomType.Constructor
     private ConnectionMonitorEndpointFilterItemResponse(
-        @Nullable String address,
-        @Nullable String type) {
+        @OutputCustomType.Parameter("address") @Nullable String address,
+        @OutputCustomType.Parameter("type") @Nullable String type) {
         this.address = address;
         this.type = type;
     }

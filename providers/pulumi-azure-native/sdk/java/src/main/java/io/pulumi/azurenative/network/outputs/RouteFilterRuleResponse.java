@@ -53,16 +53,16 @@ public final class RouteFilterRuleResponse {
      */
     private final String routeFilterRuleType;
 
-    @OutputCustomType.Constructor({"access","communities","etag","id","location","name","provisioningState","routeFilterRuleType"})
+    @OutputCustomType.Constructor
     private RouteFilterRuleResponse(
-        String access,
-        List<String> communities,
-        String etag,
-        @Nullable String id,
-        @Nullable String location,
-        @Nullable String name,
-        String provisioningState,
-        String routeFilterRuleType) {
+        @OutputCustomType.Parameter("access") String access,
+        @OutputCustomType.Parameter("communities") List<String> communities,
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("routeFilterRuleType") String routeFilterRuleType) {
         this.access = access;
         this.communities = communities;
         this.etag = etag;

@@ -29,11 +29,11 @@ public final class PrivateEndpointConnectionPropertiesResponse {
      */
     private final String provisioningState;
 
-    @OutputCustomType.Constructor({"privateEndpoint","privateLinkServiceConnectionState","provisioningState"})
+    @OutputCustomType.Constructor
     private PrivateEndpointConnectionPropertiesResponse(
-        @Nullable PrivateEndpointPropertyResponse privateEndpoint,
-        @Nullable PrivateLinkServiceConnectionStatePropertyResponse privateLinkServiceConnectionState,
-        String provisioningState) {
+        @OutputCustomType.Parameter("privateEndpoint") @Nullable PrivateEndpointPropertyResponse privateEndpoint,
+        @OutputCustomType.Parameter("privateLinkServiceConnectionState") @Nullable PrivateLinkServiceConnectionStatePropertyResponse privateLinkServiceConnectionState,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState) {
         this.privateEndpoint = privateEndpoint;
         this.privateLinkServiceConnectionState = privateLinkServiceConnectionState;
         this.provisioningState = provisioningState;

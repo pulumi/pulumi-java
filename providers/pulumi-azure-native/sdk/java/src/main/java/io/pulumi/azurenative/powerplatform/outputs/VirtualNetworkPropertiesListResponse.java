@@ -24,10 +24,10 @@ public final class VirtualNetworkPropertiesListResponse {
      */
     private final @Nullable List<VirtualNetworkPropertiesResponse> value;
 
-    @OutputCustomType.Constructor({"nextLink","value"})
+    @OutputCustomType.Constructor
     private VirtualNetworkPropertiesListResponse(
-        @Nullable String nextLink,
-        @Nullable List<VirtualNetworkPropertiesResponse> value) {
+        @OutputCustomType.Parameter("nextLink") @Nullable String nextLink,
+        @OutputCustomType.Parameter("value") @Nullable List<VirtualNetworkPropertiesResponse> value) {
         this.nextLink = nextLink;
         this.value = value;
     }

@@ -35,12 +35,12 @@ public final class EntityInsightItemResponse {
      */
     private final @Nullable InsightsTableResultResponse tableQueryResults;
 
-    @OutputCustomType.Constructor({"chartQueryResults","queryId","queryTimeInterval","tableQueryResults"})
+    @OutputCustomType.Constructor
     private EntityInsightItemResponse(
-        @Nullable List<InsightsTableResultResponse> chartQueryResults,
-        @Nullable String queryId,
-        @Nullable EntityInsightItemResponseQueryTimeInterval queryTimeInterval,
-        @Nullable InsightsTableResultResponse tableQueryResults) {
+        @OutputCustomType.Parameter("chartQueryResults") @Nullable List<InsightsTableResultResponse> chartQueryResults,
+        @OutputCustomType.Parameter("queryId") @Nullable String queryId,
+        @OutputCustomType.Parameter("queryTimeInterval") @Nullable EntityInsightItemResponseQueryTimeInterval queryTimeInterval,
+        @OutputCustomType.Parameter("tableQueryResults") @Nullable InsightsTableResultResponse tableQueryResults) {
         this.chartQueryResults = chartQueryResults;
         this.queryId = queryId;
         this.queryTimeInterval = queryTimeInterval;

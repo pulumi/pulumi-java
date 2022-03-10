@@ -22,10 +22,10 @@ public final class ApplicationGatewayCustomErrorResponse {
      */
     private final @Nullable String statusCode;
 
-    @OutputCustomType.Constructor({"customErrorPageUrl","statusCode"})
+    @OutputCustomType.Constructor
     private ApplicationGatewayCustomErrorResponse(
-        @Nullable String customErrorPageUrl,
-        @Nullable String statusCode) {
+        @OutputCustomType.Parameter("customErrorPageUrl") @Nullable String customErrorPageUrl,
+        @OutputCustomType.Parameter("statusCode") @Nullable String statusCode) {
         this.customErrorPageUrl = customErrorPageUrl;
         this.statusCode = statusCode;
     }

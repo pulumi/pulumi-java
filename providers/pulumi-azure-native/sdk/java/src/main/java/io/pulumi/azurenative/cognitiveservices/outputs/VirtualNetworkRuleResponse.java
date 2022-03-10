@@ -28,11 +28,11 @@ public final class VirtualNetworkRuleResponse {
      */
     private final @Nullable String state;
 
-    @OutputCustomType.Constructor({"id","ignoreMissingVnetServiceEndpoint","state"})
+    @OutputCustomType.Constructor
     private VirtualNetworkRuleResponse(
-        String id,
-        @Nullable Boolean ignoreMissingVnetServiceEndpoint,
-        @Nullable String state) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("ignoreMissingVnetServiceEndpoint") @Nullable Boolean ignoreMissingVnetServiceEndpoint,
+        @OutputCustomType.Parameter("state") @Nullable String state) {
         this.id = id;
         this.ignoreMissingVnetServiceEndpoint = ignoreMissingVnetServiceEndpoint;
         this.state = state;

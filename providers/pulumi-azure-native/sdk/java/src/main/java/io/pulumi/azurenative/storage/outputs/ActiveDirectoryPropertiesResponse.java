@@ -40,14 +40,14 @@ public final class ActiveDirectoryPropertiesResponse {
      */
     private final String netBiosDomainName;
 
-    @OutputCustomType.Constructor({"azureStorageSid","domainGuid","domainName","domainSid","forestName","netBiosDomainName"})
+    @OutputCustomType.Constructor
     private ActiveDirectoryPropertiesResponse(
-        String azureStorageSid,
-        String domainGuid,
-        String domainName,
-        String domainSid,
-        String forestName,
-        String netBiosDomainName) {
+        @OutputCustomType.Parameter("azureStorageSid") String azureStorageSid,
+        @OutputCustomType.Parameter("domainGuid") String domainGuid,
+        @OutputCustomType.Parameter("domainName") String domainName,
+        @OutputCustomType.Parameter("domainSid") String domainSid,
+        @OutputCustomType.Parameter("forestName") String forestName,
+        @OutputCustomType.Parameter("netBiosDomainName") String netBiosDomainName) {
         this.azureStorageSid = azureStorageSid;
         this.domainGuid = domainGuid;
         this.domainName = domainName;

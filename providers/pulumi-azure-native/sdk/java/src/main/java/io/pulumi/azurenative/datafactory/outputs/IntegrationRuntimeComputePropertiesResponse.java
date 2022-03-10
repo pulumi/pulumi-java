@@ -45,14 +45,14 @@ public final class IntegrationRuntimeComputePropertiesResponse {
      */
     private final @Nullable IntegrationRuntimeVNetPropertiesResponse vNetProperties;
 
-    @OutputCustomType.Constructor({"dataFlowProperties","location","maxParallelExecutionsPerNode","nodeSize","numberOfNodes","vNetProperties"})
+    @OutputCustomType.Constructor
     private IntegrationRuntimeComputePropertiesResponse(
-        @Nullable IntegrationRuntimeDataFlowPropertiesResponse dataFlowProperties,
-        @Nullable String location,
-        @Nullable Integer maxParallelExecutionsPerNode,
-        @Nullable String nodeSize,
-        @Nullable Integer numberOfNodes,
-        @Nullable IntegrationRuntimeVNetPropertiesResponse vNetProperties) {
+        @OutputCustomType.Parameter("dataFlowProperties") @Nullable IntegrationRuntimeDataFlowPropertiesResponse dataFlowProperties,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("maxParallelExecutionsPerNode") @Nullable Integer maxParallelExecutionsPerNode,
+        @OutputCustomType.Parameter("nodeSize") @Nullable String nodeSize,
+        @OutputCustomType.Parameter("numberOfNodes") @Nullable Integer numberOfNodes,
+        @OutputCustomType.Parameter("vNetProperties") @Nullable IntegrationRuntimeVNetPropertiesResponse vNetProperties) {
         this.dataFlowProperties = dataFlowProperties;
         this.location = location;
         this.maxParallelExecutionsPerNode = maxParallelExecutionsPerNode;

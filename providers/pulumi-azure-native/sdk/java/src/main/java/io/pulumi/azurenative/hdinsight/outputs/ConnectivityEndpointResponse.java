@@ -38,13 +38,13 @@ public final class ConnectivityEndpointResponse {
      */
     private final @Nullable String protocol;
 
-    @OutputCustomType.Constructor({"location","name","port","privateIPAddress","protocol"})
+    @OutputCustomType.Constructor
     private ConnectivityEndpointResponse(
-        @Nullable String location,
-        @Nullable String name,
-        @Nullable Integer port,
-        @Nullable String privateIPAddress,
-        @Nullable String protocol) {
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("port") @Nullable Integer port,
+        @OutputCustomType.Parameter("privateIPAddress") @Nullable String privateIPAddress,
+        @OutputCustomType.Parameter("protocol") @Nullable String protocol) {
         this.location = location;
         this.name = name;
         this.port = port;

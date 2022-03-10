@@ -45,15 +45,15 @@ public final class ElasticCloudDeploymentResponse {
      */
     private final String name;
 
-    @OutputCustomType.Constructor({"azureSubscriptionId","deploymentId","elasticsearchRegion","elasticsearchServiceUrl","kibanaServiceUrl","kibanaSsoUrl","name"})
+    @OutputCustomType.Constructor
     private ElasticCloudDeploymentResponse(
-        String azureSubscriptionId,
-        String deploymentId,
-        String elasticsearchRegion,
-        String elasticsearchServiceUrl,
-        String kibanaServiceUrl,
-        String kibanaSsoUrl,
-        String name) {
+        @OutputCustomType.Parameter("azureSubscriptionId") String azureSubscriptionId,
+        @OutputCustomType.Parameter("deploymentId") String deploymentId,
+        @OutputCustomType.Parameter("elasticsearchRegion") String elasticsearchRegion,
+        @OutputCustomType.Parameter("elasticsearchServiceUrl") String elasticsearchServiceUrl,
+        @OutputCustomType.Parameter("kibanaServiceUrl") String kibanaServiceUrl,
+        @OutputCustomType.Parameter("kibanaSsoUrl") String kibanaSsoUrl,
+        @OutputCustomType.Parameter("name") String name) {
         this.azureSubscriptionId = azureSubscriptionId;
         this.deploymentId = deploymentId;
         this.elasticsearchRegion = elasticsearchRegion;

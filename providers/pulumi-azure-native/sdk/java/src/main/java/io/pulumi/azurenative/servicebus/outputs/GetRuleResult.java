@@ -50,15 +50,15 @@ public final class GetRuleResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"action","correlationFilter","filterType","id","name","sqlFilter","type"})
+    @OutputCustomType.Constructor
     private GetRuleResult(
-        @Nullable ActionResponse action,
-        @Nullable CorrelationFilterResponse correlationFilter,
-        @Nullable String filterType,
-        String id,
-        String name,
-        @Nullable SqlFilterResponse sqlFilter,
-        String type) {
+        @OutputCustomType.Parameter("action") @Nullable ActionResponse action,
+        @OutputCustomType.Parameter("correlationFilter") @Nullable CorrelationFilterResponse correlationFilter,
+        @OutputCustomType.Parameter("filterType") @Nullable String filterType,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("sqlFilter") @Nullable SqlFilterResponse sqlFilter,
+        @OutputCustomType.Parameter("type") String type) {
         this.action = action;
         this.correlationFilter = correlationFilter;
         this.filterType = filterType;

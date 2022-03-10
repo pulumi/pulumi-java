@@ -22,10 +22,10 @@ public final class ElasticPoolPerDatabaseSettingsResponse {
      */
     private final @Nullable Double minCapacity;
 
-    @OutputCustomType.Constructor({"maxCapacity","minCapacity"})
+    @OutputCustomType.Constructor
     private ElasticPoolPerDatabaseSettingsResponse(
-        @Nullable Double maxCapacity,
-        @Nullable Double minCapacity) {
+        @OutputCustomType.Parameter("maxCapacity") @Nullable Double maxCapacity,
+        @OutputCustomType.Parameter("minCapacity") @Nullable Double minCapacity) {
         this.maxCapacity = maxCapacity;
         this.minCapacity = minCapacity;
     }

@@ -92,22 +92,22 @@ public final class GetNotificationHubResult {
      */
     private final @Nullable WnsCredentialResponse wnsCredential;
 
-    @OutputCustomType.Constructor({"admCredential","apnsCredential","authorizationRules","baiduCredential","gcmCredential","id","location","mpnsCredential","name","registrationTtl","sku","tags","type","wnsCredential"})
+    @OutputCustomType.Constructor
     private GetNotificationHubResult(
-        @Nullable AdmCredentialResponse admCredential,
-        @Nullable ApnsCredentialResponse apnsCredential,
-        @Nullable List<SharedAccessAuthorizationRulePropertiesResponse> authorizationRules,
-        @Nullable BaiduCredentialResponse baiduCredential,
-        @Nullable GcmCredentialResponse gcmCredential,
-        String id,
-        @Nullable String location,
-        @Nullable MpnsCredentialResponse mpnsCredential,
-        String name,
-        @Nullable String registrationTtl,
-        @Nullable SkuResponse sku,
-        @Nullable Map<String,String> tags,
-        String type,
-        @Nullable WnsCredentialResponse wnsCredential) {
+        @OutputCustomType.Parameter("admCredential") @Nullable AdmCredentialResponse admCredential,
+        @OutputCustomType.Parameter("apnsCredential") @Nullable ApnsCredentialResponse apnsCredential,
+        @OutputCustomType.Parameter("authorizationRules") @Nullable List<SharedAccessAuthorizationRulePropertiesResponse> authorizationRules,
+        @OutputCustomType.Parameter("baiduCredential") @Nullable BaiduCredentialResponse baiduCredential,
+        @OutputCustomType.Parameter("gcmCredential") @Nullable GcmCredentialResponse gcmCredential,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("mpnsCredential") @Nullable MpnsCredentialResponse mpnsCredential,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("registrationTtl") @Nullable String registrationTtl,
+        @OutputCustomType.Parameter("sku") @Nullable SkuResponse sku,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("wnsCredential") @Nullable WnsCredentialResponse wnsCredential) {
         this.admCredential = admCredential;
         this.apnsCredential = apnsCredential;
         this.authorizationRules = authorizationRules;

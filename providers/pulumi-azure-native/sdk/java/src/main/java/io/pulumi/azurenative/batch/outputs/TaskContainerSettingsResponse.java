@@ -29,12 +29,12 @@ public final class TaskContainerSettingsResponse {
     private final @Nullable ContainerRegistryResponse registry;
     private final @Nullable String workingDirectory;
 
-    @OutputCustomType.Constructor({"containerRunOptions","imageName","registry","workingDirectory"})
+    @OutputCustomType.Constructor
     private TaskContainerSettingsResponse(
-        @Nullable String containerRunOptions,
-        String imageName,
-        @Nullable ContainerRegistryResponse registry,
-        @Nullable String workingDirectory) {
+        @OutputCustomType.Parameter("containerRunOptions") @Nullable String containerRunOptions,
+        @OutputCustomType.Parameter("imageName") String imageName,
+        @OutputCustomType.Parameter("registry") @Nullable ContainerRegistryResponse registry,
+        @OutputCustomType.Parameter("workingDirectory") @Nullable String workingDirectory) {
         this.containerRunOptions = containerRunOptions;
         this.imageName = imageName;
         this.registry = registry;

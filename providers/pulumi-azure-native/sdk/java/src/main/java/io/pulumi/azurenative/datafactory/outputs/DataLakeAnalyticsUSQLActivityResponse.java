@@ -90,22 +90,22 @@ public final class DataLakeAnalyticsUSQLActivityResponse {
      */
     private final @Nullable List<UserPropertyResponse> userProperties;
 
-    @OutputCustomType.Constructor({"compilationMode","degreeOfParallelism","dependsOn","description","linkedServiceName","name","parameters","policy","priority","runtimeVersion","scriptLinkedService","scriptPath","type","userProperties"})
+    @OutputCustomType.Constructor
     private DataLakeAnalyticsUSQLActivityResponse(
-        @Nullable Object compilationMode,
-        @Nullable Object degreeOfParallelism,
-        @Nullable List<ActivityDependencyResponse> dependsOn,
-        @Nullable String description,
-        @Nullable LinkedServiceReferenceResponse linkedServiceName,
-        String name,
-        @Nullable Map<String,Object> parameters,
-        @Nullable ActivityPolicyResponse policy,
-        @Nullable Object priority,
-        @Nullable Object runtimeVersion,
-        LinkedServiceReferenceResponse scriptLinkedService,
-        Object scriptPath,
-        String type,
-        @Nullable List<UserPropertyResponse> userProperties) {
+        @OutputCustomType.Parameter("compilationMode") @Nullable Object compilationMode,
+        @OutputCustomType.Parameter("degreeOfParallelism") @Nullable Object degreeOfParallelism,
+        @OutputCustomType.Parameter("dependsOn") @Nullable List<ActivityDependencyResponse> dependsOn,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("linkedServiceName") @Nullable LinkedServiceReferenceResponse linkedServiceName,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("parameters") @Nullable Map<String,Object> parameters,
+        @OutputCustomType.Parameter("policy") @Nullable ActivityPolicyResponse policy,
+        @OutputCustomType.Parameter("priority") @Nullable Object priority,
+        @OutputCustomType.Parameter("runtimeVersion") @Nullable Object runtimeVersion,
+        @OutputCustomType.Parameter("scriptLinkedService") LinkedServiceReferenceResponse scriptLinkedService,
+        @OutputCustomType.Parameter("scriptPath") Object scriptPath,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("userProperties") @Nullable List<UserPropertyResponse> userProperties) {
         this.compilationMode = compilationMode;
         this.degreeOfParallelism = degreeOfParallelism;
         this.dependsOn = dependsOn;

@@ -29,11 +29,11 @@ public final class AzureFabricSpecificDetailsResponse {
      */
     private final @Nullable String location;
 
-    @OutputCustomType.Constructor({"containerIds","instanceType","location"})
+    @OutputCustomType.Constructor
     private AzureFabricSpecificDetailsResponse(
-        @Nullable List<String> containerIds,
-        String instanceType,
-        @Nullable String location) {
+        @OutputCustomType.Parameter("containerIds") @Nullable List<String> containerIds,
+        @OutputCustomType.Parameter("instanceType") String instanceType,
+        @OutputCustomType.Parameter("location") @Nullable String location) {
         this.containerIds = containerIds;
         this.instanceType = instanceType;
         this.location = location;

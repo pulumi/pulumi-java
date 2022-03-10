@@ -29,11 +29,11 @@ public final class HDInsightResponseProperties {
      */
     private final @Nullable Integer sshPort;
 
-    @OutputCustomType.Constructor({"address","administratorAccount","sshPort"})
+    @OutputCustomType.Constructor
     private HDInsightResponseProperties(
-        @Nullable String address,
-        @Nullable VirtualMachineSshCredentialsResponse administratorAccount,
-        @Nullable Integer sshPort) {
+        @OutputCustomType.Parameter("address") @Nullable String address,
+        @OutputCustomType.Parameter("administratorAccount") @Nullable VirtualMachineSshCredentialsResponse administratorAccount,
+        @OutputCustomType.Parameter("sshPort") @Nullable Integer sshPort) {
         this.address = address;
         this.administratorAccount = administratorAccount;
         this.sshPort = sshPort;

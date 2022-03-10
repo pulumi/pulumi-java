@@ -28,11 +28,11 @@ public final class RestRequestResponse {
      */
     private final String uri;
 
-    @OutputCustomType.Constructor({"authentication","method","uri"})
+    @OutputCustomType.Constructor
     private RestRequestResponse(
-        Either<ApiKeyAuthenticationResponse,RolloutIdentityAuthenticationResponse> authentication,
-        String method,
-        String uri) {
+        @OutputCustomType.Parameter("authentication") Either<ApiKeyAuthenticationResponse,RolloutIdentityAuthenticationResponse> authentication,
+        @OutputCustomType.Parameter("method") String method,
+        @OutputCustomType.Parameter("uri") String uri) {
         this.authentication = authentication;
         this.method = method;
         this.uri = uri;

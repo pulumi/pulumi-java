@@ -61,17 +61,17 @@ public final class GetBackupVaultResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"eTag","id","identity","location","name","properties","systemData","tags","type"})
+    @OutputCustomType.Constructor
     private GetBackupVaultResult(
-        @Nullable String eTag,
-        String id,
-        @Nullable DppIdentityDetailsResponse identity,
-        String location,
-        String name,
-        BackupVaultResponse properties,
-        SystemDataResponse systemData,
-        @Nullable Map<String,String> tags,
-        String type) {
+        @OutputCustomType.Parameter("eTag") @Nullable String eTag,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("identity") @Nullable DppIdentityDetailsResponse identity,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("properties") BackupVaultResponse properties,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type) {
         this.eTag = eTag;
         this.id = id;
         this.identity = identity;

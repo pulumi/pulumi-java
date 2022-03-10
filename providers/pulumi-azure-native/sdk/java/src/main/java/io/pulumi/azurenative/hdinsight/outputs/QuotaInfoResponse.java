@@ -17,8 +17,8 @@ public final class QuotaInfoResponse {
      */
     private final @Nullable Integer coresUsed;
 
-    @OutputCustomType.Constructor({"coresUsed"})
-    private QuotaInfoResponse(@Nullable Integer coresUsed) {
+    @OutputCustomType.Constructor
+    private QuotaInfoResponse(@OutputCustomType.Parameter("coresUsed") @Nullable Integer coresUsed) {
         this.coresUsed = coresUsed;
     }
 

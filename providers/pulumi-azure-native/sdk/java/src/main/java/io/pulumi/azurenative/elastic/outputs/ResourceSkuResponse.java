@@ -15,8 +15,8 @@ public final class ResourceSkuResponse {
      */
     private final String name;
 
-    @OutputCustomType.Constructor({"name"})
-    private ResourceSkuResponse(String name) {
+    @OutputCustomType.Constructor
+    private ResourceSkuResponse(@OutputCustomType.Parameter("name") String name) {
         this.name = name;
     }
 

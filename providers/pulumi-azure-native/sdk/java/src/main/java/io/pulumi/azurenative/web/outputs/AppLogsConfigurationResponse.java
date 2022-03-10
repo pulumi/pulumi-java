@@ -15,10 +15,10 @@ public final class AppLogsConfigurationResponse {
     private final @Nullable String destination;
     private final @Nullable LogAnalyticsConfigurationResponse logAnalyticsConfiguration;
 
-    @OutputCustomType.Constructor({"destination","logAnalyticsConfiguration"})
+    @OutputCustomType.Constructor
     private AppLogsConfigurationResponse(
-        @Nullable String destination,
-        @Nullable LogAnalyticsConfigurationResponse logAnalyticsConfiguration) {
+        @OutputCustomType.Parameter("destination") @Nullable String destination,
+        @OutputCustomType.Parameter("logAnalyticsConfiguration") @Nullable LogAnalyticsConfigurationResponse logAnalyticsConfiguration) {
         this.destination = destination;
         this.logAnalyticsConfiguration = logAnalyticsConfiguration;
     }

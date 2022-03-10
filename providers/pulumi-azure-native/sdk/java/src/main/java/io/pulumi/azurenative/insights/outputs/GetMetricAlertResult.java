@@ -111,26 +111,26 @@ public final class GetMetricAlertResult {
      */
     private final String windowSize;
 
-    @OutputCustomType.Constructor({"actions","autoMitigate","criteria","description","enabled","evaluationFrequency","id","isMigrated","lastUpdatedTime","location","name","scopes","severity","tags","targetResourceRegion","targetResourceType","type","windowSize"})
+    @OutputCustomType.Constructor
     private GetMetricAlertResult(
-        @Nullable List<MetricAlertActionResponse> actions,
-        @Nullable Boolean autoMitigate,
-        Object criteria,
-        @Nullable String description,
-        Boolean enabled,
-        String evaluationFrequency,
-        String id,
-        Boolean isMigrated,
-        String lastUpdatedTime,
-        String location,
-        String name,
-        List<String> scopes,
-        Integer severity,
-        @Nullable Map<String,String> tags,
-        @Nullable String targetResourceRegion,
-        @Nullable String targetResourceType,
-        String type,
-        String windowSize) {
+        @OutputCustomType.Parameter("actions") @Nullable List<MetricAlertActionResponse> actions,
+        @OutputCustomType.Parameter("autoMitigate") @Nullable Boolean autoMitigate,
+        @OutputCustomType.Parameter("criteria") Object criteria,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("enabled") Boolean enabled,
+        @OutputCustomType.Parameter("evaluationFrequency") String evaluationFrequency,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("isMigrated") Boolean isMigrated,
+        @OutputCustomType.Parameter("lastUpdatedTime") String lastUpdatedTime,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("scopes") List<String> scopes,
+        @OutputCustomType.Parameter("severity") Integer severity,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("targetResourceRegion") @Nullable String targetResourceRegion,
+        @OutputCustomType.Parameter("targetResourceType") @Nullable String targetResourceType,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("windowSize") String windowSize) {
         this.actions = actions;
         this.autoMitigate = autoMitigate;
         this.criteria = criteria;

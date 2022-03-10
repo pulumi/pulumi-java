@@ -53,16 +53,16 @@ public final class GetServerAzureADAdministratorResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"administratorType","azureADOnlyAuthentication","id","login","name","sid","tenantId","type"})
+    @OutputCustomType.Constructor
     private GetServerAzureADAdministratorResult(
-        String administratorType,
-        Boolean azureADOnlyAuthentication,
-        String id,
-        String login,
-        String name,
-        String sid,
-        @Nullable String tenantId,
-        String type) {
+        @OutputCustomType.Parameter("administratorType") String administratorType,
+        @OutputCustomType.Parameter("azureADOnlyAuthentication") Boolean azureADOnlyAuthentication,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("login") String login,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("sid") String sid,
+        @OutputCustomType.Parameter("tenantId") @Nullable String tenantId,
+        @OutputCustomType.Parameter("type") String type) {
         this.administratorType = administratorType;
         this.azureADOnlyAuthentication = azureADOnlyAuthentication;
         this.id = id;

@@ -22,10 +22,10 @@ public final class FacebookPageResponse {
      */
     private final String id;
 
-    @OutputCustomType.Constructor({"accessToken","id"})
+    @OutputCustomType.Constructor
     private FacebookPageResponse(
-        @Nullable String accessToken,
-        String id) {
+        @OutputCustomType.Parameter("accessToken") @Nullable String accessToken,
+        @OutputCustomType.Parameter("id") String id) {
         this.accessToken = accessToken;
         this.id = id;
     }

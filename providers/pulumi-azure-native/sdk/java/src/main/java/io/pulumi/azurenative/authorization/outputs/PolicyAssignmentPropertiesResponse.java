@@ -29,11 +29,11 @@ public final class PolicyAssignmentPropertiesResponse {
      */
     private final @Nullable PolicyAssignmentPropertiesResponseScope scope;
 
-    @OutputCustomType.Constructor({"policy","roleDefinition","scope"})
+    @OutputCustomType.Constructor
     private PolicyAssignmentPropertiesResponse(
-        @Nullable PolicyAssignmentPropertiesResponsePolicy policy,
-        @Nullable PolicyAssignmentPropertiesResponseRoleDefinition roleDefinition,
-        @Nullable PolicyAssignmentPropertiesResponseScope scope) {
+        @OutputCustomType.Parameter("policy") @Nullable PolicyAssignmentPropertiesResponsePolicy policy,
+        @OutputCustomType.Parameter("roleDefinition") @Nullable PolicyAssignmentPropertiesResponseRoleDefinition roleDefinition,
+        @OutputCustomType.Parameter("scope") @Nullable PolicyAssignmentPropertiesResponseScope scope) {
         this.policy = policy;
         this.roleDefinition = roleDefinition;
         this.scope = scope;

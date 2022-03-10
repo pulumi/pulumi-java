@@ -15,8 +15,8 @@ public final class LogAnalyticsOutputResponse {
      */
     private final String output;
 
-    @OutputCustomType.Constructor({"output"})
-    private LogAnalyticsOutputResponse(String output) {
+    @OutputCustomType.Constructor
+    private LogAnalyticsOutputResponse(@OutputCustomType.Parameter("output") String output) {
         this.output = output;
     }
 

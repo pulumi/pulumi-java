@@ -44,14 +44,14 @@ public final class GetAppResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"id","identity","location","name","properties","type"})
+    @OutputCustomType.Constructor
     private GetAppResult(
-        String id,
-        @Nullable ManagedIdentityPropertiesResponse identity,
-        @Nullable String location,
-        String name,
-        AppResourcePropertiesResponse properties,
-        String type) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("identity") @Nullable ManagedIdentityPropertiesResponse identity,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("properties") AppResourcePropertiesResponse properties,
+        @OutputCustomType.Parameter("type") String type) {
         this.id = id;
         this.identity = identity;
         this.location = location;

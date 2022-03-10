@@ -35,13 +35,13 @@ public final class TagPropertyResponse {
      */
     private final String upn;
 
-    @OutputCustomType.Constructor({"objectIdentifier","tag","tenantId","timestamp","upn"})
+    @OutputCustomType.Constructor
     private TagPropertyResponse(
-        String objectIdentifier,
-        String tag,
-        String tenantId,
-        String timestamp,
-        String upn) {
+        @OutputCustomType.Parameter("objectIdentifier") String objectIdentifier,
+        @OutputCustomType.Parameter("tag") String tag,
+        @OutputCustomType.Parameter("tenantId") String tenantId,
+        @OutputCustomType.Parameter("timestamp") String timestamp,
+        @OutputCustomType.Parameter("upn") String upn) {
         this.objectIdentifier = objectIdentifier;
         this.tag = tag;
         this.tenantId = tenantId;

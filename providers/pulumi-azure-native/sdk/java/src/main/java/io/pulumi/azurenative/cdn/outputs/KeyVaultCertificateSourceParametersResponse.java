@@ -48,16 +48,16 @@ public final class KeyVaultCertificateSourceParametersResponse {
      */
     private final String vaultName;
 
-    @OutputCustomType.Constructor({"deleteRule","odataType","resourceGroupName","secretName","secretVersion","subscriptionId","updateRule","vaultName"})
+    @OutputCustomType.Constructor
     private KeyVaultCertificateSourceParametersResponse(
-        String deleteRule,
-        String odataType,
-        String resourceGroupName,
-        String secretName,
-        @Nullable String secretVersion,
-        String subscriptionId,
-        String updateRule,
-        String vaultName) {
+        @OutputCustomType.Parameter("deleteRule") String deleteRule,
+        @OutputCustomType.Parameter("odataType") String odataType,
+        @OutputCustomType.Parameter("resourceGroupName") String resourceGroupName,
+        @OutputCustomType.Parameter("secretName") String secretName,
+        @OutputCustomType.Parameter("secretVersion") @Nullable String secretVersion,
+        @OutputCustomType.Parameter("subscriptionId") String subscriptionId,
+        @OutputCustomType.Parameter("updateRule") String updateRule,
+        @OutputCustomType.Parameter("vaultName") String vaultName) {
         this.deleteRule = deleteRule;
         this.odataType = odataType;
         this.resourceGroupName = resourceGroupName;

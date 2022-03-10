@@ -45,15 +45,15 @@ public final class GetSiteResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"eTag","id","location","name","properties","tags","type"})
+    @OutputCustomType.Constructor
     private GetSiteResult(
-        @Nullable String eTag,
-        String id,
-        @Nullable String location,
-        @Nullable String name,
-        SitePropertiesResponse properties,
-        @Nullable Map<String,String> tags,
-        String type) {
+        @OutputCustomType.Parameter("eTag") @Nullable String eTag,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("properties") SitePropertiesResponse properties,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type) {
         this.eTag = eTag;
         this.id = id;
         this.location = location;

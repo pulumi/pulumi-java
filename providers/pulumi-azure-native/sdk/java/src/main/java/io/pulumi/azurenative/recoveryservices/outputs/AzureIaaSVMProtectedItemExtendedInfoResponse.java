@@ -29,11 +29,11 @@ public final class AzureIaaSVMProtectedItemExtendedInfoResponse {
      */
     private final @Nullable Integer recoveryPointCount;
 
-    @OutputCustomType.Constructor({"oldestRecoveryPoint","policyInconsistent","recoveryPointCount"})
+    @OutputCustomType.Constructor
     private AzureIaaSVMProtectedItemExtendedInfoResponse(
-        @Nullable String oldestRecoveryPoint,
-        @Nullable Boolean policyInconsistent,
-        @Nullable Integer recoveryPointCount) {
+        @OutputCustomType.Parameter("oldestRecoveryPoint") @Nullable String oldestRecoveryPoint,
+        @OutputCustomType.Parameter("policyInconsistent") @Nullable Boolean policyInconsistent,
+        @OutputCustomType.Parameter("recoveryPointCount") @Nullable Integer recoveryPointCount) {
         this.oldestRecoveryPoint = oldestRecoveryPoint;
         this.policyInconsistent = policyInconsistent;
         this.recoveryPointCount = recoveryPointCount;

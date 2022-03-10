@@ -24,10 +24,10 @@ public final class MpiResponse {
      */
     private final @Nullable Integer processCountPerInstance;
 
-    @OutputCustomType.Constructor({"distributionType","processCountPerInstance"})
+    @OutputCustomType.Constructor
     private MpiResponse(
-        String distributionType,
-        @Nullable Integer processCountPerInstance) {
+        @OutputCustomType.Parameter("distributionType") String distributionType,
+        @OutputCustomType.Parameter("processCountPerInstance") @Nullable Integer processCountPerInstance) {
         this.distributionType = distributionType;
         this.processCountPerInstance = processCountPerInstance;
     }

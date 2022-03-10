@@ -45,15 +45,15 @@ public final class GetGeoBackupPolicyResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"id","kind","location","name","state","storageType","type"})
+    @OutputCustomType.Constructor
     private GetGeoBackupPolicyResult(
-        String id,
-        String kind,
-        String location,
-        String name,
-        String state,
-        String storageType,
-        String type) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("state") String state,
+        @OutputCustomType.Parameter("storageType") String storageType,
+        @OutputCustomType.Parameter("type") String type) {
         this.id = id;
         this.kind = kind;
         this.location = location;

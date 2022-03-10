@@ -22,10 +22,10 @@ public final class ListGatewayKeysResult {
      */
     private final @Nullable String secondary;
 
-    @OutputCustomType.Constructor({"primary","secondary"})
+    @OutputCustomType.Constructor
     private ListGatewayKeysResult(
-        @Nullable String primary,
-        @Nullable String secondary) {
+        @OutputCustomType.Parameter("primary") @Nullable String primary,
+        @OutputCustomType.Parameter("secondary") @Nullable String secondary) {
         this.primary = primary;
         this.secondary = secondary;
     }

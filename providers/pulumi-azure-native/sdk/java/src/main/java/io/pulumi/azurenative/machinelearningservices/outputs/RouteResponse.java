@@ -21,10 +21,10 @@ public final class RouteResponse {
      */
     private final Integer port;
 
-    @OutputCustomType.Constructor({"path","port"})
+    @OutputCustomType.Constructor
     private RouteResponse(
-        String path,
-        Integer port) {
+        @OutputCustomType.Parameter("path") String path,
+        @OutputCustomType.Parameter("port") Integer port) {
         this.path = path;
         this.port = port;
     }

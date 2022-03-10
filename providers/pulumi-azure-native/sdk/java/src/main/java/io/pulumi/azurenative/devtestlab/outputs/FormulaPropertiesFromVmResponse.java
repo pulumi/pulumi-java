@@ -17,8 +17,8 @@ public final class FormulaPropertiesFromVmResponse {
      */
     private final @Nullable String labVmId;
 
-    @OutputCustomType.Constructor({"labVmId"})
-    private FormulaPropertiesFromVmResponse(@Nullable String labVmId) {
+    @OutputCustomType.Constructor
+    private FormulaPropertiesFromVmResponse(@OutputCustomType.Parameter("labVmId") @Nullable String labVmId) {
         this.labVmId = labVmId;
     }
 

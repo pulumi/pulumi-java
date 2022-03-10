@@ -39,13 +39,13 @@ public final class RegistrationAssignmentPropertiesResponseRegistrationDefinitio
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"id","name","plan","properties","type"})
+    @OutputCustomType.Constructor
     private RegistrationAssignmentPropertiesResponseRegistrationDefinition(
-        String id,
-        String name,
-        @Nullable PlanResponse plan,
-        @Nullable RegistrationAssignmentPropertiesResponseProperties properties,
-        String type) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("plan") @Nullable PlanResponse plan,
+        @OutputCustomType.Parameter("properties") @Nullable RegistrationAssignmentPropertiesResponseProperties properties,
+        @OutputCustomType.Parameter("type") String type) {
         this.id = id;
         this.name = name;
         this.plan = plan;

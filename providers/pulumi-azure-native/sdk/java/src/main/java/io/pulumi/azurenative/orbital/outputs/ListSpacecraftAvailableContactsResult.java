@@ -23,10 +23,10 @@ public final class ListSpacecraftAvailableContactsResult {
      */
     private final @Nullable List<AvailableContactsResponse> value;
 
-    @OutputCustomType.Constructor({"nextLink","value"})
+    @OutputCustomType.Constructor
     private ListSpacecraftAvailableContactsResult(
-        String nextLink,
-        @Nullable List<AvailableContactsResponse> value) {
+        @OutputCustomType.Parameter("nextLink") String nextLink,
+        @OutputCustomType.Parameter("value") @Nullable List<AvailableContactsResponse> value) {
         this.nextLink = nextLink;
         this.value = value;
     }

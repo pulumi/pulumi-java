@@ -23,10 +23,10 @@ public final class IsNotNullAdvancedFilterResponse {
      */
     private final String operatorType;
 
-    @OutputCustomType.Constructor({"key","operatorType"})
+    @OutputCustomType.Constructor
     private IsNotNullAdvancedFilterResponse(
-        @Nullable String key,
-        String operatorType) {
+        @OutputCustomType.Parameter("key") @Nullable String key,
+        @OutputCustomType.Parameter("operatorType") String operatorType) {
         this.key = key;
         this.operatorType = operatorType;
     }

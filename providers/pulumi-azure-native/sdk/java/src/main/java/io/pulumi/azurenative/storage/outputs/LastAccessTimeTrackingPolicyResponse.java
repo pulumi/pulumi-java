@@ -35,12 +35,12 @@ public final class LastAccessTimeTrackingPolicyResponse {
      */
     private final @Nullable Integer trackingGranularityInDays;
 
-    @OutputCustomType.Constructor({"blobType","enable","name","trackingGranularityInDays"})
+    @OutputCustomType.Constructor
     private LastAccessTimeTrackingPolicyResponse(
-        @Nullable List<String> blobType,
-        Boolean enable,
-        @Nullable String name,
-        @Nullable Integer trackingGranularityInDays) {
+        @OutputCustomType.Parameter("blobType") @Nullable List<String> blobType,
+        @OutputCustomType.Parameter("enable") Boolean enable,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("trackingGranularityInDays") @Nullable Integer trackingGranularityInDays) {
         this.blobType = blobType;
         this.enable = enable;
         this.name = name;

@@ -40,13 +40,13 @@ public final class FrontDoorManagedRuleSetResponse {
      */
     private final String ruleSetVersion;
 
-    @OutputCustomType.Constructor({"exclusions","ruleGroupOverrides","ruleSetAction","ruleSetType","ruleSetVersion"})
+    @OutputCustomType.Constructor
     private FrontDoorManagedRuleSetResponse(
-        @Nullable List<ManagedRuleExclusionResponse> exclusions,
-        @Nullable List<FrontDoorManagedRuleGroupOverrideResponse> ruleGroupOverrides,
-        @Nullable String ruleSetAction,
-        String ruleSetType,
-        String ruleSetVersion) {
+        @OutputCustomType.Parameter("exclusions") @Nullable List<ManagedRuleExclusionResponse> exclusions,
+        @OutputCustomType.Parameter("ruleGroupOverrides") @Nullable List<FrontDoorManagedRuleGroupOverrideResponse> ruleGroupOverrides,
+        @OutputCustomType.Parameter("ruleSetAction") @Nullable String ruleSetAction,
+        @OutputCustomType.Parameter("ruleSetType") String ruleSetType,
+        @OutputCustomType.Parameter("ruleSetVersion") String ruleSetVersion) {
         this.exclusions = exclusions;
         this.ruleGroupOverrides = ruleGroupOverrides;
         this.ruleSetAction = ruleSetAction;

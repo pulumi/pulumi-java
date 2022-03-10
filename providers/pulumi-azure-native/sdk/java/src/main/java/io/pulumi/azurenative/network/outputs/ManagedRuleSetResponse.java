@@ -28,11 +28,11 @@ public final class ManagedRuleSetResponse {
      */
     private final String ruleSetVersion;
 
-    @OutputCustomType.Constructor({"ruleGroupOverrides","ruleSetType","ruleSetVersion"})
+    @OutputCustomType.Constructor
     private ManagedRuleSetResponse(
-        @Nullable List<ManagedRuleGroupOverrideResponse> ruleGroupOverrides,
-        String ruleSetType,
-        String ruleSetVersion) {
+        @OutputCustomType.Parameter("ruleGroupOverrides") @Nullable List<ManagedRuleGroupOverrideResponse> ruleGroupOverrides,
+        @OutputCustomType.Parameter("ruleSetType") String ruleSetType,
+        @OutputCustomType.Parameter("ruleSetVersion") String ruleSetVersion) {
         this.ruleGroupOverrides = ruleGroupOverrides;
         this.ruleSetType = ruleSetType;
         this.ruleSetVersion = ruleSetVersion;

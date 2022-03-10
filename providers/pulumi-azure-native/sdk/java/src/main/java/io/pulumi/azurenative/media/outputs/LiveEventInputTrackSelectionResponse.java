@@ -27,11 +27,11 @@ public final class LiveEventInputTrackSelectionResponse {
      */
     private final @Nullable String value;
 
-    @OutputCustomType.Constructor({"operation","property","value"})
+    @OutputCustomType.Constructor
     private LiveEventInputTrackSelectionResponse(
-        @Nullable String operation,
-        @Nullable String property,
-        @Nullable String value) {
+        @OutputCustomType.Parameter("operation") @Nullable String operation,
+        @OutputCustomType.Parameter("property") @Nullable String property,
+        @OutputCustomType.Parameter("value") @Nullable String value) {
         this.operation = operation;
         this.property = property;
         this.value = value;

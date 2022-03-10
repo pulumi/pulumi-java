@@ -68,19 +68,19 @@ public final class GetAFDOriginGroupResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"deploymentStatus","healthProbeSettings","id","loadBalancingSettings","name","provisioningState","responseBasedAfdOriginErrorDetectionSettings","sessionAffinityState","systemData","trafficRestorationTimeToHealedOrNewEndpointsInMinutes","type"})
+    @OutputCustomType.Constructor
     private GetAFDOriginGroupResult(
-        String deploymentStatus,
-        @Nullable HealthProbeParametersResponse healthProbeSettings,
-        String id,
-        @Nullable LoadBalancingSettingsParametersResponse loadBalancingSettings,
-        String name,
-        String provisioningState,
-        @Nullable ResponseBasedOriginErrorDetectionParametersResponse responseBasedAfdOriginErrorDetectionSettings,
-        @Nullable String sessionAffinityState,
-        SystemDataResponse systemData,
-        @Nullable Integer trafficRestorationTimeToHealedOrNewEndpointsInMinutes,
-        String type) {
+        @OutputCustomType.Parameter("deploymentStatus") String deploymentStatus,
+        @OutputCustomType.Parameter("healthProbeSettings") @Nullable HealthProbeParametersResponse healthProbeSettings,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("loadBalancingSettings") @Nullable LoadBalancingSettingsParametersResponse loadBalancingSettings,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("responseBasedAfdOriginErrorDetectionSettings") @Nullable ResponseBasedOriginErrorDetectionParametersResponse responseBasedAfdOriginErrorDetectionSettings,
+        @OutputCustomType.Parameter("sessionAffinityState") @Nullable String sessionAffinityState,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("trafficRestorationTimeToHealedOrNewEndpointsInMinutes") @Nullable Integer trafficRestorationTimeToHealedOrNewEndpointsInMinutes,
+        @OutputCustomType.Parameter("type") String type) {
         this.deploymentStatus = deploymentStatus;
         this.healthProbeSettings = healthProbeSettings;
         this.id = id;

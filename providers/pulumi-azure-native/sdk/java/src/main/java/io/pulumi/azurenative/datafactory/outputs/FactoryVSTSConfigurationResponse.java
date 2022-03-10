@@ -53,16 +53,16 @@ public final class FactoryVSTSConfigurationResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"accountName","collaborationBranch","lastCommitId","projectName","repositoryName","rootFolder","tenantId","type"})
+    @OutputCustomType.Constructor
     private FactoryVSTSConfigurationResponse(
-        String accountName,
-        String collaborationBranch,
-        @Nullable String lastCommitId,
-        String projectName,
-        String repositoryName,
-        String rootFolder,
-        @Nullable String tenantId,
-        String type) {
+        @OutputCustomType.Parameter("accountName") String accountName,
+        @OutputCustomType.Parameter("collaborationBranch") String collaborationBranch,
+        @OutputCustomType.Parameter("lastCommitId") @Nullable String lastCommitId,
+        @OutputCustomType.Parameter("projectName") String projectName,
+        @OutputCustomType.Parameter("repositoryName") String repositoryName,
+        @OutputCustomType.Parameter("rootFolder") String rootFolder,
+        @OutputCustomType.Parameter("tenantId") @Nullable String tenantId,
+        @OutputCustomType.Parameter("type") String type) {
         this.accountName = accountName;
         this.collaborationBranch = collaborationBranch;
         this.lastCommitId = lastCommitId;

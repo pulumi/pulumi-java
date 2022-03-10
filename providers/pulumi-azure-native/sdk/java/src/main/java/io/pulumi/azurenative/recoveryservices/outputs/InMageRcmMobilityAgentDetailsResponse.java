@@ -56,17 +56,17 @@ public final class InMageRcmMobilityAgentDetailsResponse {
      */
     private final String version;
 
-    @OutputCustomType.Constructor({"agentVersionExpiryDate","driverVersion","driverVersionExpiryDate","isUpgradeable","lastHeartbeatUtc","latestUpgradableVersionWithoutReboot","latestVersion","reasonsBlockingUpgrade","version"})
+    @OutputCustomType.Constructor
     private InMageRcmMobilityAgentDetailsResponse(
-        String agentVersionExpiryDate,
-        String driverVersion,
-        String driverVersionExpiryDate,
-        String isUpgradeable,
-        String lastHeartbeatUtc,
-        String latestUpgradableVersionWithoutReboot,
-        String latestVersion,
-        List<String> reasonsBlockingUpgrade,
-        String version) {
+        @OutputCustomType.Parameter("agentVersionExpiryDate") String agentVersionExpiryDate,
+        @OutputCustomType.Parameter("driverVersion") String driverVersion,
+        @OutputCustomType.Parameter("driverVersionExpiryDate") String driverVersionExpiryDate,
+        @OutputCustomType.Parameter("isUpgradeable") String isUpgradeable,
+        @OutputCustomType.Parameter("lastHeartbeatUtc") String lastHeartbeatUtc,
+        @OutputCustomType.Parameter("latestUpgradableVersionWithoutReboot") String latestUpgradableVersionWithoutReboot,
+        @OutputCustomType.Parameter("latestVersion") String latestVersion,
+        @OutputCustomType.Parameter("reasonsBlockingUpgrade") List<String> reasonsBlockingUpgrade,
+        @OutputCustomType.Parameter("version") String version) {
         this.agentVersionExpiryDate = agentVersionExpiryDate;
         this.driverVersion = driverVersion;
         this.driverVersionExpiryDate = driverVersionExpiryDate;

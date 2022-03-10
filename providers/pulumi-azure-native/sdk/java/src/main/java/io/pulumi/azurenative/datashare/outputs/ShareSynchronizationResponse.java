@@ -63,18 +63,18 @@ public final class ShareSynchronizationResponse {
      */
     private final String synchronizationMode;
 
-    @OutputCustomType.Constructor({"consumerEmail","consumerName","consumerTenantName","durationMs","endTime","message","startTime","status","synchronizationId","synchronizationMode"})
+    @OutputCustomType.Constructor
     private ShareSynchronizationResponse(
-        @Nullable String consumerEmail,
-        @Nullable String consumerName,
-        @Nullable String consumerTenantName,
-        @Nullable Integer durationMs,
-        @Nullable String endTime,
-        @Nullable String message,
-        @Nullable String startTime,
-        @Nullable String status,
-        @Nullable String synchronizationId,
-        String synchronizationMode) {
+        @OutputCustomType.Parameter("consumerEmail") @Nullable String consumerEmail,
+        @OutputCustomType.Parameter("consumerName") @Nullable String consumerName,
+        @OutputCustomType.Parameter("consumerTenantName") @Nullable String consumerTenantName,
+        @OutputCustomType.Parameter("durationMs") @Nullable Integer durationMs,
+        @OutputCustomType.Parameter("endTime") @Nullable String endTime,
+        @OutputCustomType.Parameter("message") @Nullable String message,
+        @OutputCustomType.Parameter("startTime") @Nullable String startTime,
+        @OutputCustomType.Parameter("status") @Nullable String status,
+        @OutputCustomType.Parameter("synchronizationId") @Nullable String synchronizationId,
+        @OutputCustomType.Parameter("synchronizationMode") String synchronizationMode) {
         this.consumerEmail = consumerEmail;
         this.consumerName = consumerName;
         this.consumerTenantName = consumerTenantName;

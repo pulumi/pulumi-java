@@ -17,8 +17,8 @@ public final class GetFactoryGitHubAccessTokenResult {
      */
     private final @Nullable String gitHubAccessToken;
 
-    @OutputCustomType.Constructor({"gitHubAccessToken"})
-    private GetFactoryGitHubAccessTokenResult(@Nullable String gitHubAccessToken) {
+    @OutputCustomType.Constructor
+    private GetFactoryGitHubAccessTokenResult(@OutputCustomType.Parameter("gitHubAccessToken") @Nullable String gitHubAccessToken) {
         this.gitHubAccessToken = gitHubAccessToken;
     }
 

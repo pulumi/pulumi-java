@@ -39,13 +39,13 @@ public final class ProviderResponse {
      */
     private final List<ProviderResourceTypeResponse> resourceTypes;
 
-    @OutputCustomType.Constructor({"id","namespace","registrationPolicy","registrationState","resourceTypes"})
+    @OutputCustomType.Constructor
     private ProviderResponse(
-        String id,
-        @Nullable String namespace,
-        String registrationPolicy,
-        String registrationState,
-        List<ProviderResourceTypeResponse> resourceTypes) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("namespace") @Nullable String namespace,
+        @OutputCustomType.Parameter("registrationPolicy") String registrationPolicy,
+        @OutputCustomType.Parameter("registrationState") String registrationState,
+        @OutputCustomType.Parameter("resourceTypes") List<ProviderResourceTypeResponse> resourceTypes) {
         this.id = id;
         this.namespace = namespace;
         this.registrationPolicy = registrationPolicy;

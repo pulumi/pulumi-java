@@ -22,10 +22,10 @@ public final class ContainerGroupResponseInstanceView {
      */
     private final String state;
 
-    @OutputCustomType.Constructor({"events","state"})
+    @OutputCustomType.Constructor
     private ContainerGroupResponseInstanceView(
-        List<EventResponse> events,
-        String state) {
+        @OutputCustomType.Parameter("events") List<EventResponse> events,
+        @OutputCustomType.Parameter("state") String state) {
         this.events = events;
         this.state = state;
     }

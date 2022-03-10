@@ -30,11 +30,11 @@ public final class LabelCategoryResponse {
      */
     private final @Nullable String displayName;
 
-    @OutputCustomType.Constructor({"allowMultiSelect","classes","displayName"})
+    @OutputCustomType.Constructor
     private LabelCategoryResponse(
-        @Nullable Boolean allowMultiSelect,
-        Map<String,LabelClassResponse> classes,
-        @Nullable String displayName) {
+        @OutputCustomType.Parameter("allowMultiSelect") @Nullable Boolean allowMultiSelect,
+        @OutputCustomType.Parameter("classes") Map<String,LabelClassResponse> classes,
+        @OutputCustomType.Parameter("displayName") @Nullable String displayName) {
         this.allowMultiSelect = allowMultiSelect;
         this.classes = classes;
         this.displayName = displayName;

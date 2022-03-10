@@ -34,12 +34,12 @@ public final class SsisFolderResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"description","id","name","type"})
+    @OutputCustomType.Constructor
     private SsisFolderResponse(
-        @Nullable String description,
-        @Nullable Double id,
-        @Nullable String name,
-        String type) {
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("id") @Nullable Double id,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("type") String type) {
         this.description = description;
         this.id = id;
         this.name = name;

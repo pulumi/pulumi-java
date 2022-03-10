@@ -28,11 +28,11 @@ public final class SqlElasticPoolResourceSettingsResponse {
      */
     private final @Nullable String zoneRedundant;
 
-    @OutputCustomType.Constructor({"resourceType","targetResourceName","zoneRedundant"})
+    @OutputCustomType.Constructor
     private SqlElasticPoolResourceSettingsResponse(
-        String resourceType,
-        String targetResourceName,
-        @Nullable String zoneRedundant) {
+        @OutputCustomType.Parameter("resourceType") String resourceType,
+        @OutputCustomType.Parameter("targetResourceName") String targetResourceName,
+        @OutputCustomType.Parameter("zoneRedundant") @Nullable String zoneRedundant) {
         this.resourceType = resourceType;
         this.targetResourceName = targetResourceName;
         this.zoneRedundant = zoneRedundant;

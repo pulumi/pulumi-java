@@ -73,19 +73,19 @@ public final class ApplicationPropertiesResponse {
      */
     private final @Nullable List<RuntimeScriptActionResponse> uninstallScriptActions;
 
-    @OutputCustomType.Constructor({"applicationState","applicationType","computeProfile","createdDate","errors","httpsEndpoints","installScriptActions","marketplaceIdentifier","provisioningState","sshEndpoints","uninstallScriptActions"})
+    @OutputCustomType.Constructor
     private ApplicationPropertiesResponse(
-        String applicationState,
-        @Nullable String applicationType,
-        @Nullable ComputeProfileResponse computeProfile,
-        String createdDate,
-        @Nullable List<ErrorsResponse> errors,
-        @Nullable List<ApplicationGetHttpsEndpointResponse> httpsEndpoints,
-        @Nullable List<RuntimeScriptActionResponse> installScriptActions,
-        String marketplaceIdentifier,
-        String provisioningState,
-        @Nullable List<ApplicationGetEndpointResponse> sshEndpoints,
-        @Nullable List<RuntimeScriptActionResponse> uninstallScriptActions) {
+        @OutputCustomType.Parameter("applicationState") String applicationState,
+        @OutputCustomType.Parameter("applicationType") @Nullable String applicationType,
+        @OutputCustomType.Parameter("computeProfile") @Nullable ComputeProfileResponse computeProfile,
+        @OutputCustomType.Parameter("createdDate") String createdDate,
+        @OutputCustomType.Parameter("errors") @Nullable List<ErrorsResponse> errors,
+        @OutputCustomType.Parameter("httpsEndpoints") @Nullable List<ApplicationGetHttpsEndpointResponse> httpsEndpoints,
+        @OutputCustomType.Parameter("installScriptActions") @Nullable List<RuntimeScriptActionResponse> installScriptActions,
+        @OutputCustomType.Parameter("marketplaceIdentifier") String marketplaceIdentifier,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("sshEndpoints") @Nullable List<ApplicationGetEndpointResponse> sshEndpoints,
+        @OutputCustomType.Parameter("uninstallScriptActions") @Nullable List<RuntimeScriptActionResponse> uninstallScriptActions) {
         this.applicationState = applicationState;
         this.applicationType = applicationType;
         this.computeProfile = computeProfile;

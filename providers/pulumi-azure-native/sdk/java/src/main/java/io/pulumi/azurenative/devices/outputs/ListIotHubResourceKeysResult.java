@@ -23,10 +23,10 @@ public final class ListIotHubResourceKeysResult {
      */
     private final @Nullable List<SharedAccessSignatureAuthorizationRuleResponse> value;
 
-    @OutputCustomType.Constructor({"nextLink","value"})
+    @OutputCustomType.Constructor
     private ListIotHubResourceKeysResult(
-        String nextLink,
-        @Nullable List<SharedAccessSignatureAuthorizationRuleResponse> value) {
+        @OutputCustomType.Parameter("nextLink") String nextLink,
+        @OutputCustomType.Parameter("value") @Nullable List<SharedAccessSignatureAuthorizationRuleResponse> value) {
         this.nextLink = nextLink;
         this.value = value;
     }

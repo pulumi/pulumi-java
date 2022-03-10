@@ -30,11 +30,11 @@ public final class EncoderCustomPresetResponse {
      */
     private final @Nullable VideoEncoderH264Response videoEncoder;
 
-    @OutputCustomType.Constructor({"audioEncoder","type","videoEncoder"})
+    @OutputCustomType.Constructor
     private EncoderCustomPresetResponse(
-        @Nullable AudioEncoderAacResponse audioEncoder,
-        String type,
-        @Nullable VideoEncoderH264Response videoEncoder) {
+        @OutputCustomType.Parameter("audioEncoder") @Nullable AudioEncoderAacResponse audioEncoder,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("videoEncoder") @Nullable VideoEncoderH264Response videoEncoder) {
         this.audioEncoder = audioEncoder;
         this.type = type;
         this.videoEncoder = videoEncoder;

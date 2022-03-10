@@ -21,10 +21,10 @@ public final class HealthStateResponse {
      */
     private final Double severity;
 
-    @OutputCustomType.Constructor({"healthStateName","severity"})
+    @OutputCustomType.Constructor
     private HealthStateResponse(
-        String healthStateName,
-        Double severity) {
+        @OutputCustomType.Parameter("healthStateName") String healthStateName,
+        @OutputCustomType.Parameter("severity") Double severity) {
         this.healthStateName = healthStateName;
         this.severity = severity;
     }

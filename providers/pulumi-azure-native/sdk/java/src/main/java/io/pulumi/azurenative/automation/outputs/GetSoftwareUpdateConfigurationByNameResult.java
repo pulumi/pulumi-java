@@ -76,20 +76,20 @@ public final class GetSoftwareUpdateConfigurationByNameResult {
      */
     private final UpdateConfigurationResponse updateConfiguration;
 
-    @OutputCustomType.Constructor({"createdBy","creationTime","error","id","lastModifiedBy","lastModifiedTime","name","provisioningState","scheduleInfo","tasks","type","updateConfiguration"})
+    @OutputCustomType.Constructor
     private GetSoftwareUpdateConfigurationByNameResult(
-        String createdBy,
-        String creationTime,
-        @Nullable ErrorResponseResponse error,
-        String id,
-        String lastModifiedBy,
-        String lastModifiedTime,
-        String name,
-        String provisioningState,
-        SUCSchedulePropertiesResponse scheduleInfo,
-        @Nullable SoftwareUpdateConfigurationTasksResponse tasks,
-        String type,
-        UpdateConfigurationResponse updateConfiguration) {
+        @OutputCustomType.Parameter("createdBy") String createdBy,
+        @OutputCustomType.Parameter("creationTime") String creationTime,
+        @OutputCustomType.Parameter("error") @Nullable ErrorResponseResponse error,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("lastModifiedBy") String lastModifiedBy,
+        @OutputCustomType.Parameter("lastModifiedTime") String lastModifiedTime,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("scheduleInfo") SUCSchedulePropertiesResponse scheduleInfo,
+        @OutputCustomType.Parameter("tasks") @Nullable SoftwareUpdateConfigurationTasksResponse tasks,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("updateConfiguration") UpdateConfigurationResponse updateConfiguration) {
         this.createdBy = createdBy;
         this.creationTime = creationTime;
         this.error = error;

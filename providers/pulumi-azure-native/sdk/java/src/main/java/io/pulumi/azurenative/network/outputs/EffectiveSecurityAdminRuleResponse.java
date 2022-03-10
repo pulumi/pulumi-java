@@ -113,27 +113,27 @@ public final class EffectiveSecurityAdminRuleResponse {
      */
     private final @Nullable List<AddressPrefixItemResponse> sources;
 
-    @OutputCustomType.Constructor({"access","configurationDescription","configurationDisplayName","description","destinationPortRanges","destinations","direction","displayName","id","kind","priority","protocol","provisioningState","ruleCollectionAppliesToGroups","ruleCollectionDescription","ruleCollectionDisplayName","ruleGroups","sourcePortRanges","sources"})
+    @OutputCustomType.Constructor
     private EffectiveSecurityAdminRuleResponse(
-        String access,
-        @Nullable String configurationDescription,
-        @Nullable String configurationDisplayName,
-        @Nullable String description,
-        @Nullable List<String> destinationPortRanges,
-        @Nullable List<AddressPrefixItemResponse> destinations,
-        String direction,
-        @Nullable String displayName,
-        @Nullable String id,
-        String kind,
-        @Nullable Integer priority,
-        String protocol,
-        String provisioningState,
-        @Nullable List<NetworkManagerSecurityGroupItemResponse> ruleCollectionAppliesToGroups,
-        @Nullable String ruleCollectionDescription,
-        @Nullable String ruleCollectionDisplayName,
-        @Nullable List<ConfigurationGroupResponse> ruleGroups,
-        @Nullable List<String> sourcePortRanges,
-        @Nullable List<AddressPrefixItemResponse> sources) {
+        @OutputCustomType.Parameter("access") String access,
+        @OutputCustomType.Parameter("configurationDescription") @Nullable String configurationDescription,
+        @OutputCustomType.Parameter("configurationDisplayName") @Nullable String configurationDisplayName,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("destinationPortRanges") @Nullable List<String> destinationPortRanges,
+        @OutputCustomType.Parameter("destinations") @Nullable List<AddressPrefixItemResponse> destinations,
+        @OutputCustomType.Parameter("direction") String direction,
+        @OutputCustomType.Parameter("displayName") @Nullable String displayName,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("priority") @Nullable Integer priority,
+        @OutputCustomType.Parameter("protocol") String protocol,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("ruleCollectionAppliesToGroups") @Nullable List<NetworkManagerSecurityGroupItemResponse> ruleCollectionAppliesToGroups,
+        @OutputCustomType.Parameter("ruleCollectionDescription") @Nullable String ruleCollectionDescription,
+        @OutputCustomType.Parameter("ruleCollectionDisplayName") @Nullable String ruleCollectionDisplayName,
+        @OutputCustomType.Parameter("ruleGroups") @Nullable List<ConfigurationGroupResponse> ruleGroups,
+        @OutputCustomType.Parameter("sourcePortRanges") @Nullable List<String> sourcePortRanges,
+        @OutputCustomType.Parameter("sources") @Nullable List<AddressPrefixItemResponse> sources) {
         this.access = access;
         this.configurationDescription = configurationDescription;
         this.configurationDisplayName = configurationDisplayName;

@@ -65,18 +65,18 @@ public final class GetLogProfileResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"categories","id","location","locations","name","retentionPolicy","serviceBusRuleId","storageAccountId","tags","type"})
+    @OutputCustomType.Constructor
     private GetLogProfileResult(
-        List<String> categories,
-        String id,
-        String location,
-        List<String> locations,
-        String name,
-        RetentionPolicyResponse retentionPolicy,
-        @Nullable String serviceBusRuleId,
-        @Nullable String storageAccountId,
-        @Nullable Map<String,String> tags,
-        String type) {
+        @OutputCustomType.Parameter("categories") List<String> categories,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("locations") List<String> locations,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("retentionPolicy") RetentionPolicyResponse retentionPolicy,
+        @OutputCustomType.Parameter("serviceBusRuleId") @Nullable String serviceBusRuleId,
+        @OutputCustomType.Parameter("storageAccountId") @Nullable String storageAccountId,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type) {
         this.categories = categories;
         this.id = id;
         this.location = location;

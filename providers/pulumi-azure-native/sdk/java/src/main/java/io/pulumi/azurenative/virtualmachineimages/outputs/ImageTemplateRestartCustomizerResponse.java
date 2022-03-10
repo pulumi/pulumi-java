@@ -38,13 +38,13 @@ public final class ImageTemplateRestartCustomizerResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"name","restartCheckCommand","restartCommand","restartTimeout","type"})
+    @OutputCustomType.Constructor
     private ImageTemplateRestartCustomizerResponse(
-        @Nullable String name,
-        @Nullable String restartCheckCommand,
-        @Nullable String restartCommand,
-        @Nullable String restartTimeout,
-        String type) {
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("restartCheckCommand") @Nullable String restartCheckCommand,
+        @OutputCustomType.Parameter("restartCommand") @Nullable String restartCommand,
+        @OutputCustomType.Parameter("restartTimeout") @Nullable String restartTimeout,
+        @OutputCustomType.Parameter("type") String type) {
         this.name = name;
         this.restartCheckCommand = restartCheckCommand;
         this.restartCommand = restartCommand;

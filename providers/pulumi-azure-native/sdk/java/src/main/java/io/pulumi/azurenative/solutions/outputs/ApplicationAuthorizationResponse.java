@@ -20,10 +20,10 @@ public final class ApplicationAuthorizationResponse {
      */
     private final String roleDefinitionId;
 
-    @OutputCustomType.Constructor({"principalId","roleDefinitionId"})
+    @OutputCustomType.Constructor
     private ApplicationAuthorizationResponse(
-        String principalId,
-        String roleDefinitionId) {
+        @OutputCustomType.Parameter("principalId") String principalId,
+        @OutputCustomType.Parameter("roleDefinitionId") String roleDefinitionId) {
         this.principalId = principalId;
         this.roleDefinitionId = roleDefinitionId;
     }

@@ -48,15 +48,15 @@ public final class AzureResourceProtectionIntentResponse {
      */
     private final @Nullable String sourceResourceId;
 
-    @OutputCustomType.Constructor({"backupManagementType","friendlyName","itemId","policyId","protectionIntentItemType","protectionState","sourceResourceId"})
+    @OutputCustomType.Constructor
     private AzureResourceProtectionIntentResponse(
-        @Nullable String backupManagementType,
-        @Nullable String friendlyName,
-        @Nullable String itemId,
-        @Nullable String policyId,
-        String protectionIntentItemType,
-        @Nullable String protectionState,
-        @Nullable String sourceResourceId) {
+        @OutputCustomType.Parameter("backupManagementType") @Nullable String backupManagementType,
+        @OutputCustomType.Parameter("friendlyName") @Nullable String friendlyName,
+        @OutputCustomType.Parameter("itemId") @Nullable String itemId,
+        @OutputCustomType.Parameter("policyId") @Nullable String policyId,
+        @OutputCustomType.Parameter("protectionIntentItemType") String protectionIntentItemType,
+        @OutputCustomType.Parameter("protectionState") @Nullable String protectionState,
+        @OutputCustomType.Parameter("sourceResourceId") @Nullable String sourceResourceId) {
         this.backupManagementType = backupManagementType;
         this.friendlyName = friendlyName;
         this.itemId = itemId;

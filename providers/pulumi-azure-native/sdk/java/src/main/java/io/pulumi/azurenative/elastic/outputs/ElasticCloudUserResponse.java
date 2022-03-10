@@ -25,11 +25,11 @@ public final class ElasticCloudUserResponse {
      */
     private final String id;
 
-    @OutputCustomType.Constructor({"elasticCloudSsoDefaultUrl","emailAddress","id"})
+    @OutputCustomType.Constructor
     private ElasticCloudUserResponse(
-        String elasticCloudSsoDefaultUrl,
-        String emailAddress,
-        String id) {
+        @OutputCustomType.Parameter("elasticCloudSsoDefaultUrl") String elasticCloudSsoDefaultUrl,
+        @OutputCustomType.Parameter("emailAddress") String emailAddress,
+        @OutputCustomType.Parameter("id") String id) {
         this.elasticCloudSsoDefaultUrl = elasticCloudSsoDefaultUrl;
         this.emailAddress = emailAddress;
         this.id = id;

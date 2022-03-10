@@ -23,10 +23,10 @@ public final class VirtualHubRouteResponse {
      */
     private final @Nullable String nextHopIpAddress;
 
-    @OutputCustomType.Constructor({"addressPrefixes","nextHopIpAddress"})
+    @OutputCustomType.Constructor
     private VirtualHubRouteResponse(
-        @Nullable List<String> addressPrefixes,
-        @Nullable String nextHopIpAddress) {
+        @OutputCustomType.Parameter("addressPrefixes") @Nullable List<String> addressPrefixes,
+        @OutputCustomType.Parameter("nextHopIpAddress") @Nullable String nextHopIpAddress) {
         this.addressPrefixes = addressPrefixes;
         this.nextHopIpAddress = nextHopIpAddress;
     }

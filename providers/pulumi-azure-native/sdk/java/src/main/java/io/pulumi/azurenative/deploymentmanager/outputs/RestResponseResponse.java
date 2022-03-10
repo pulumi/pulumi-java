@@ -24,10 +24,10 @@ public final class RestResponseResponse {
      */
     private final @Nullable List<String> successStatusCodes;
 
-    @OutputCustomType.Constructor({"regex","successStatusCodes"})
+    @OutputCustomType.Constructor
     private RestResponseResponse(
-        @Nullable RestResponseResponseRegex regex,
-        @Nullable List<String> successStatusCodes) {
+        @OutputCustomType.Parameter("regex") @Nullable RestResponseResponseRegex regex,
+        @OutputCustomType.Parameter("successStatusCodes") @Nullable List<String> successStatusCodes) {
         this.regex = regex;
         this.successStatusCodes = successStatusCodes;
     }

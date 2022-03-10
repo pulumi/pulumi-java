@@ -91,22 +91,22 @@ public final class CognitiveServicesAccountPropertiesResponse {
      */
     private final @Nullable List<UserOwnedStorageResponse> userOwnedStorage;
 
-    @OutputCustomType.Constructor({"apiProperties","capabilities","customSubDomainName","dateCreated","encryption","endpoint","internalId","isMigrated","networkAcls","privateEndpointConnections","provisioningState","publicNetworkAccess","skuChangeInfo","userOwnedStorage"})
+    @OutputCustomType.Constructor
     private CognitiveServicesAccountPropertiesResponse(
-        @Nullable CognitiveServicesAccountApiPropertiesResponse apiProperties,
-        List<SkuCapabilityResponse> capabilities,
-        @Nullable String customSubDomainName,
-        String dateCreated,
-        @Nullable EncryptionResponse encryption,
-        String endpoint,
-        String internalId,
-        Boolean isMigrated,
-        @Nullable NetworkRuleSetResponse networkAcls,
-        @Nullable List<PrivateEndpointConnectionResponse> privateEndpointConnections,
-        String provisioningState,
-        @Nullable String publicNetworkAccess,
-        CognitiveServicesAccountSkuChangeInfoResponse skuChangeInfo,
-        @Nullable List<UserOwnedStorageResponse> userOwnedStorage) {
+        @OutputCustomType.Parameter("apiProperties") @Nullable CognitiveServicesAccountApiPropertiesResponse apiProperties,
+        @OutputCustomType.Parameter("capabilities") List<SkuCapabilityResponse> capabilities,
+        @OutputCustomType.Parameter("customSubDomainName") @Nullable String customSubDomainName,
+        @OutputCustomType.Parameter("dateCreated") String dateCreated,
+        @OutputCustomType.Parameter("encryption") @Nullable EncryptionResponse encryption,
+        @OutputCustomType.Parameter("endpoint") String endpoint,
+        @OutputCustomType.Parameter("internalId") String internalId,
+        @OutputCustomType.Parameter("isMigrated") Boolean isMigrated,
+        @OutputCustomType.Parameter("networkAcls") @Nullable NetworkRuleSetResponse networkAcls,
+        @OutputCustomType.Parameter("privateEndpointConnections") @Nullable List<PrivateEndpointConnectionResponse> privateEndpointConnections,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("publicNetworkAccess") @Nullable String publicNetworkAccess,
+        @OutputCustomType.Parameter("skuChangeInfo") CognitiveServicesAccountSkuChangeInfoResponse skuChangeInfo,
+        @OutputCustomType.Parameter("userOwnedStorage") @Nullable List<UserOwnedStorageResponse> userOwnedStorage) {
         this.apiProperties = apiProperties;
         this.capabilities = capabilities;
         this.customSubDomainName = customSubDomainName;

@@ -87,23 +87,23 @@ public final class SynchronizationDetailsResponse {
      */
     private final Double vCore;
 
-    @OutputCustomType.Constructor({"dataSetId","dataSetType","durationMs","endTime","filesRead","filesWritten","message","name","rowsCopied","rowsRead","sizeRead","sizeWritten","startTime","status","vCore"})
+    @OutputCustomType.Constructor
     private SynchronizationDetailsResponse(
-        String dataSetId,
-        String dataSetType,
-        Integer durationMs,
-        String endTime,
-        Double filesRead,
-        Double filesWritten,
-        String message,
-        String name,
-        Double rowsCopied,
-        Double rowsRead,
-        Double sizeRead,
-        Double sizeWritten,
-        String startTime,
-        String status,
-        Double vCore) {
+        @OutputCustomType.Parameter("dataSetId") String dataSetId,
+        @OutputCustomType.Parameter("dataSetType") String dataSetType,
+        @OutputCustomType.Parameter("durationMs") Integer durationMs,
+        @OutputCustomType.Parameter("endTime") String endTime,
+        @OutputCustomType.Parameter("filesRead") Double filesRead,
+        @OutputCustomType.Parameter("filesWritten") Double filesWritten,
+        @OutputCustomType.Parameter("message") String message,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("rowsCopied") Double rowsCopied,
+        @OutputCustomType.Parameter("rowsRead") Double rowsRead,
+        @OutputCustomType.Parameter("sizeRead") Double sizeRead,
+        @OutputCustomType.Parameter("sizeWritten") Double sizeWritten,
+        @OutputCustomType.Parameter("startTime") String startTime,
+        @OutputCustomType.Parameter("status") String status,
+        @OutputCustomType.Parameter("vCore") Double vCore) {
         this.dataSetId = dataSetId;
         this.dataSetType = dataSetType;
         this.durationMs = durationMs;

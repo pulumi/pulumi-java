@@ -43,13 +43,13 @@ public final class PipelineRunRequestResponse {
      */
     private final @Nullable PipelineRunTargetPropertiesResponse target;
 
-    @OutputCustomType.Constructor({"artifacts","catalogDigest","pipelineResourceId","source","target"})
+    @OutputCustomType.Constructor
     private PipelineRunRequestResponse(
-        @Nullable List<String> artifacts,
-        @Nullable String catalogDigest,
-        @Nullable String pipelineResourceId,
-        @Nullable PipelineRunSourcePropertiesResponse source,
-        @Nullable PipelineRunTargetPropertiesResponse target) {
+        @OutputCustomType.Parameter("artifacts") @Nullable List<String> artifacts,
+        @OutputCustomType.Parameter("catalogDigest") @Nullable String catalogDigest,
+        @OutputCustomType.Parameter("pipelineResourceId") @Nullable String pipelineResourceId,
+        @OutputCustomType.Parameter("source") @Nullable PipelineRunSourcePropertiesResponse source,
+        @OutputCustomType.Parameter("target") @Nullable PipelineRunTargetPropertiesResponse target) {
         this.artifacts = artifacts;
         this.catalogDigest = catalogDigest;
         this.pipelineResourceId = pipelineResourceId;

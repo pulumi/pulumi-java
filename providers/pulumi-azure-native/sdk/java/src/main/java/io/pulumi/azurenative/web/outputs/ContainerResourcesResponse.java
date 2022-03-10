@@ -23,10 +23,10 @@ public final class ContainerResourcesResponse {
      */
     private final @Nullable String memory;
 
-    @OutputCustomType.Constructor({"cpu","memory"})
+    @OutputCustomType.Constructor
     private ContainerResourcesResponse(
-        @Nullable Double cpu,
-        @Nullable String memory) {
+        @OutputCustomType.Parameter("cpu") @Nullable Double cpu,
+        @OutputCustomType.Parameter("memory") @Nullable String memory) {
         this.cpu = cpu;
         this.memory = memory;
     }

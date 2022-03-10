@@ -36,13 +36,13 @@ public final class GetDomainTopicResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"id","name","provisioningState","systemData","type"})
+    @OutputCustomType.Constructor
     private GetDomainTopicResult(
-        String id,
-        String name,
-        String provisioningState,
-        SystemDataResponse systemData,
-        String type) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("type") String type) {
         this.id = id;
         this.name = name;
         this.provisioningState = provisioningState;

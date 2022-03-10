@@ -23,10 +23,10 @@ public final class KubernetesRoleStorageResponse {
      */
     private final List<KubernetesRoleStorageClassInfoResponse> storageClasses;
 
-    @OutputCustomType.Constructor({"endpoints","storageClasses"})
+    @OutputCustomType.Constructor
     private KubernetesRoleStorageResponse(
-        @Nullable List<MountPointMapResponse> endpoints,
-        List<KubernetesRoleStorageClassInfoResponse> storageClasses) {
+        @OutputCustomType.Parameter("endpoints") @Nullable List<MountPointMapResponse> endpoints,
+        @OutputCustomType.Parameter("storageClasses") List<KubernetesRoleStorageClassInfoResponse> storageClasses) {
         this.endpoints = endpoints;
         this.storageClasses = storageClasses;
     }

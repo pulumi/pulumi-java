@@ -26,11 +26,11 @@ public final class RoutingPolicyResponse {
      */
     private final String nextHop;
 
-    @OutputCustomType.Constructor({"destinations","name","nextHop"})
+    @OutputCustomType.Constructor
     private RoutingPolicyResponse(
-        List<String> destinations,
-        String name,
-        String nextHop) {
+        @OutputCustomType.Parameter("destinations") List<String> destinations,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("nextHop") String nextHop) {
         this.destinations = destinations;
         this.name = name;
         this.nextHop = nextHop;

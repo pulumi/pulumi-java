@@ -23,10 +23,10 @@ public final class InsightsTableResultResponse {
      */
     private final @Nullable List<List<String>> rows;
 
-    @OutputCustomType.Constructor({"columns","rows"})
+    @OutputCustomType.Constructor
     private InsightsTableResultResponse(
-        @Nullable List<InsightsTableResultResponseColumns> columns,
-        @Nullable List<List<String>> rows) {
+        @OutputCustomType.Parameter("columns") @Nullable List<InsightsTableResultResponseColumns> columns,
+        @OutputCustomType.Parameter("rows") @Nullable List<List<String>> rows) {
         this.columns = columns;
         this.rows = rows;
     }

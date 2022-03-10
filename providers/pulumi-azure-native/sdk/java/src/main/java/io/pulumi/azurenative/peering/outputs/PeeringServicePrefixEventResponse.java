@@ -35,13 +35,13 @@ public final class PeeringServicePrefixEventResponse {
      */
     private final String eventType;
 
-    @OutputCustomType.Constructor({"eventDescription","eventLevel","eventSummary","eventTimestamp","eventType"})
+    @OutputCustomType.Constructor
     private PeeringServicePrefixEventResponse(
-        String eventDescription,
-        String eventLevel,
-        String eventSummary,
-        String eventTimestamp,
-        String eventType) {
+        @OutputCustomType.Parameter("eventDescription") String eventDescription,
+        @OutputCustomType.Parameter("eventLevel") String eventLevel,
+        @OutputCustomType.Parameter("eventSummary") String eventSummary,
+        @OutputCustomType.Parameter("eventTimestamp") String eventTimestamp,
+        @OutputCustomType.Parameter("eventType") String eventType) {
         this.eventDescription = eventDescription;
         this.eventLevel = eventLevel;
         this.eventSummary = eventSummary;

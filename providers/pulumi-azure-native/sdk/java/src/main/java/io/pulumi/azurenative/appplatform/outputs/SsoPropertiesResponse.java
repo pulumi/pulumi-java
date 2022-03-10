@@ -33,12 +33,12 @@ public final class SsoPropertiesResponse {
      */
     private final @Nullable List<String> scope;
 
-    @OutputCustomType.Constructor({"clientId","clientSecret","issuerUri","scope"})
+    @OutputCustomType.Constructor
     private SsoPropertiesResponse(
-        @Nullable String clientId,
-        @Nullable String clientSecret,
-        @Nullable String issuerUri,
-        @Nullable List<String> scope) {
+        @OutputCustomType.Parameter("clientId") @Nullable String clientId,
+        @OutputCustomType.Parameter("clientSecret") @Nullable String clientSecret,
+        @OutputCustomType.Parameter("issuerUri") @Nullable String issuerUri,
+        @OutputCustomType.Parameter("scope") @Nullable List<String> scope) {
         this.clientId = clientId;
         this.clientSecret = clientSecret;
         this.issuerUri = issuerUri;

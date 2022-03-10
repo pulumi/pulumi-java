@@ -28,11 +28,11 @@ public final class JobCollectionQuotaResponse {
      */
     private final @Nullable JobMaxRecurrenceResponse maxRecurrence;
 
-    @OutputCustomType.Constructor({"maxJobCount","maxJobOccurrence","maxRecurrence"})
+    @OutputCustomType.Constructor
     private JobCollectionQuotaResponse(
-        @Nullable Integer maxJobCount,
-        @Nullable Integer maxJobOccurrence,
-        @Nullable JobMaxRecurrenceResponse maxRecurrence) {
+        @OutputCustomType.Parameter("maxJobCount") @Nullable Integer maxJobCount,
+        @OutputCustomType.Parameter("maxJobOccurrence") @Nullable Integer maxJobOccurrence,
+        @OutputCustomType.Parameter("maxRecurrence") @Nullable JobMaxRecurrenceResponse maxRecurrence) {
         this.maxJobCount = maxJobCount;
         this.maxJobOccurrence = maxJobOccurrence;
         this.maxRecurrence = maxRecurrence;

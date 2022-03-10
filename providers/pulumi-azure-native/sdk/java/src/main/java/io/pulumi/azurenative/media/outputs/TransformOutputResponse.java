@@ -33,11 +33,11 @@ public final class TransformOutputResponse {
      */
     private final @Nullable String relativePriority;
 
-    @OutputCustomType.Constructor({"onError","preset","relativePriority"})
+    @OutputCustomType.Constructor
     private TransformOutputResponse(
-        @Nullable String onError,
-        Object preset,
-        @Nullable String relativePriority) {
+        @OutputCustomType.Parameter("onError") @Nullable String onError,
+        @OutputCustomType.Parameter("preset") Object preset,
+        @OutputCustomType.Parameter("relativePriority") @Nullable String relativePriority) {
         this.onError = onError;
         this.preset = preset;
         this.relativePriority = relativePriority;

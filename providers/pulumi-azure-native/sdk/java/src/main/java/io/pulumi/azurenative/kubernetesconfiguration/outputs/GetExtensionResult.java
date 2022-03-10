@@ -110,26 +110,26 @@ public final class GetExtensionResult {
      */
     private final @Nullable String version;
 
-    @OutputCustomType.Constructor({"autoUpgradeMinorVersion","configurationProtectedSettings","configurationSettings","creationTime","errorInfo","extensionType","id","identity","installState","lastModifiedTime","lastStatusTime","name","releaseTrain","scope","statuses","systemData","type","version"})
+    @OutputCustomType.Constructor
     private GetExtensionResult(
-        @Nullable Boolean autoUpgradeMinorVersion,
-        @Nullable Map<String,String> configurationProtectedSettings,
-        @Nullable Map<String,String> configurationSettings,
-        String creationTime,
-        ErrorDefinitionResponse errorInfo,
-        @Nullable String extensionType,
-        String id,
-        @Nullable ConfigurationIdentityResponse identity,
-        String installState,
-        String lastModifiedTime,
-        String lastStatusTime,
-        String name,
-        @Nullable String releaseTrain,
-        @Nullable ScopeResponse scope,
-        @Nullable List<ExtensionStatusResponse> statuses,
-        @Nullable SystemDataResponse systemData,
-        String type,
-        @Nullable String version) {
+        @OutputCustomType.Parameter("autoUpgradeMinorVersion") @Nullable Boolean autoUpgradeMinorVersion,
+        @OutputCustomType.Parameter("configurationProtectedSettings") @Nullable Map<String,String> configurationProtectedSettings,
+        @OutputCustomType.Parameter("configurationSettings") @Nullable Map<String,String> configurationSettings,
+        @OutputCustomType.Parameter("creationTime") String creationTime,
+        @OutputCustomType.Parameter("errorInfo") ErrorDefinitionResponse errorInfo,
+        @OutputCustomType.Parameter("extensionType") @Nullable String extensionType,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("identity") @Nullable ConfigurationIdentityResponse identity,
+        @OutputCustomType.Parameter("installState") String installState,
+        @OutputCustomType.Parameter("lastModifiedTime") String lastModifiedTime,
+        @OutputCustomType.Parameter("lastStatusTime") String lastStatusTime,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("releaseTrain") @Nullable String releaseTrain,
+        @OutputCustomType.Parameter("scope") @Nullable ScopeResponse scope,
+        @OutputCustomType.Parameter("statuses") @Nullable List<ExtensionStatusResponse> statuses,
+        @OutputCustomType.Parameter("systemData") @Nullable SystemDataResponse systemData,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("version") @Nullable String version) {
         this.autoUpgradeMinorVersion = autoUpgradeMinorVersion;
         this.configurationProtectedSettings = configurationProtectedSettings;
         this.configurationSettings = configurationSettings;

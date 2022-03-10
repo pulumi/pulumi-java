@@ -32,12 +32,12 @@ public final class AutomationTriggeringRuleResponse {
      */
     private final @Nullable String propertyType;
 
-    @OutputCustomType.Constructor({"expectedValue","operator","propertyJPath","propertyType"})
+    @OutputCustomType.Constructor
     private AutomationTriggeringRuleResponse(
-        @Nullable String expectedValue,
-        @Nullable String operator,
-        @Nullable String propertyJPath,
-        @Nullable String propertyType) {
+        @OutputCustomType.Parameter("expectedValue") @Nullable String expectedValue,
+        @OutputCustomType.Parameter("operator") @Nullable String operator,
+        @OutputCustomType.Parameter("propertyJPath") @Nullable String propertyJPath,
+        @OutputCustomType.Parameter("propertyType") @Nullable String propertyType) {
         this.expectedValue = expectedValue;
         this.operator = operator;
         this.propertyJPath = propertyJPath;

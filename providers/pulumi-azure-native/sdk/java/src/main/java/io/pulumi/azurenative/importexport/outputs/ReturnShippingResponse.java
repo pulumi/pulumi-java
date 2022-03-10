@@ -20,10 +20,10 @@ public final class ReturnShippingResponse {
      */
     private final String carrierName;
 
-    @OutputCustomType.Constructor({"carrierAccountNumber","carrierName"})
+    @OutputCustomType.Constructor
     private ReturnShippingResponse(
-        String carrierAccountNumber,
-        String carrierName) {
+        @OutputCustomType.Parameter("carrierAccountNumber") String carrierAccountNumber,
+        @OutputCustomType.Parameter("carrierName") String carrierName) {
         this.carrierAccountNumber = carrierAccountNumber;
         this.carrierName = carrierName;
     }

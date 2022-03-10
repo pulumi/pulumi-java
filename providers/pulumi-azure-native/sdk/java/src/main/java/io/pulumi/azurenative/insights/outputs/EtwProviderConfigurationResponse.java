@@ -14,10 +14,10 @@ public final class EtwProviderConfigurationResponse {
     private final List<EtwEventConfigurationResponse> events;
     private final String id;
 
-    @OutputCustomType.Constructor({"events","id"})
+    @OutputCustomType.Constructor
     private EtwProviderConfigurationResponse(
-        List<EtwEventConfigurationResponse> events,
-        String id) {
+        @OutputCustomType.Parameter("events") List<EtwEventConfigurationResponse> events,
+        @OutputCustomType.Parameter("id") String id) {
         this.events = events;
         this.id = id;
     }

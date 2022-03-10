@@ -38,13 +38,13 @@ public final class ImageTemplateFileCustomizerResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"destination","name","sha256Checksum","sourceUri","type"})
+    @OutputCustomType.Constructor
     private ImageTemplateFileCustomizerResponse(
-        @Nullable String destination,
-        @Nullable String name,
-        @Nullable String sha256Checksum,
-        @Nullable String sourceUri,
-        String type) {
+        @OutputCustomType.Parameter("destination") @Nullable String destination,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("sha256Checksum") @Nullable String sha256Checksum,
+        @OutputCustomType.Parameter("sourceUri") @Nullable String sourceUri,
+        @OutputCustomType.Parameter("type") String type) {
         this.destination = destination;
         this.name = name;
         this.sha256Checksum = sha256Checksum;

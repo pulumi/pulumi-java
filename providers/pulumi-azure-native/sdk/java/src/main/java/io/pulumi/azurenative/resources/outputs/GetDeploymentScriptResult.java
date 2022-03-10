@@ -55,16 +55,16 @@ public final class GetDeploymentScriptResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"id","identity","kind","location","name","systemData","tags","type"})
+    @OutputCustomType.Constructor
     private GetDeploymentScriptResult(
-        String id,
-        @Nullable ManagedServiceIdentityResponse identity,
-        String kind,
-        String location,
-        String name,
-        SystemDataResponse systemData,
-        @Nullable Map<String,String> tags,
-        String type) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("identity") @Nullable ManagedServiceIdentityResponse identity,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type) {
         this.id = id;
         this.identity = identity;
         this.kind = kind;

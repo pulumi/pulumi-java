@@ -29,11 +29,11 @@ public final class KubernetesRoleResourcesResponse {
      */
     private final @Nullable KubernetesRoleStorageResponse storage;
 
-    @OutputCustomType.Constructor({"compute","network","storage"})
+    @OutputCustomType.Constructor
     private KubernetesRoleResourcesResponse(
-        KubernetesRoleComputeResponse compute,
-        KubernetesRoleNetworkResponse network,
-        @Nullable KubernetesRoleStorageResponse storage) {
+        @OutputCustomType.Parameter("compute") KubernetesRoleComputeResponse compute,
+        @OutputCustomType.Parameter("network") KubernetesRoleNetworkResponse network,
+        @OutputCustomType.Parameter("storage") @Nullable KubernetesRoleStorageResponse storage) {
         this.compute = compute;
         this.network = network;
         this.storage = storage;

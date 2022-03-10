@@ -15,8 +15,8 @@ public final class FhirServiceAccessPolicyEntryResponse {
      */
     private final String objectId;
 
-    @OutputCustomType.Constructor({"objectId"})
-    private FhirServiceAccessPolicyEntryResponse(String objectId) {
+    @OutputCustomType.Constructor
+    private FhirServiceAccessPolicyEntryResponse(@OutputCustomType.Parameter("objectId") String objectId) {
         this.objectId = objectId;
     }
 

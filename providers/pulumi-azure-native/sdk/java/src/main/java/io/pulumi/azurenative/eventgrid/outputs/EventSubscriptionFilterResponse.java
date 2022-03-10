@@ -56,13 +56,13 @@ public final class EventSubscriptionFilterResponse {
      */
     private final @Nullable String subjectEndsWith;
 
-    @OutputCustomType.Constructor({"advancedFilters","includedEventTypes","isSubjectCaseSensitive","subjectBeginsWith","subjectEndsWith"})
+    @OutputCustomType.Constructor
     private EventSubscriptionFilterResponse(
-        @Nullable List<Object> advancedFilters,
-        @Nullable List<String> includedEventTypes,
-        @Nullable Boolean isSubjectCaseSensitive,
-        @Nullable String subjectBeginsWith,
-        @Nullable String subjectEndsWith) {
+        @OutputCustomType.Parameter("advancedFilters") @Nullable List<Object> advancedFilters,
+        @OutputCustomType.Parameter("includedEventTypes") @Nullable List<String> includedEventTypes,
+        @OutputCustomType.Parameter("isSubjectCaseSensitive") @Nullable Boolean isSubjectCaseSensitive,
+        @OutputCustomType.Parameter("subjectBeginsWith") @Nullable String subjectBeginsWith,
+        @OutputCustomType.Parameter("subjectEndsWith") @Nullable String subjectEndsWith) {
         this.advancedFilters = advancedFilters;
         this.includedEventTypes = includedEventTypes;
         this.isSubjectCaseSensitive = isSubjectCaseSensitive;

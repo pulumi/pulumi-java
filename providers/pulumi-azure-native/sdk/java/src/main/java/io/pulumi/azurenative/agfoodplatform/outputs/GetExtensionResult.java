@@ -61,18 +61,18 @@ public final class GetExtensionResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"eTag","extensionApiDocsLink","extensionAuthLink","extensionCategory","extensionId","id","installedExtensionVersion","name","systemData","type"})
+    @OutputCustomType.Constructor
     private GetExtensionResult(
-        String eTag,
-        String extensionApiDocsLink,
-        String extensionAuthLink,
-        String extensionCategory,
-        String extensionId,
-        String id,
-        String installedExtensionVersion,
-        String name,
-        SystemDataResponse systemData,
-        String type) {
+        @OutputCustomType.Parameter("eTag") String eTag,
+        @OutputCustomType.Parameter("extensionApiDocsLink") String extensionApiDocsLink,
+        @OutputCustomType.Parameter("extensionAuthLink") String extensionAuthLink,
+        @OutputCustomType.Parameter("extensionCategory") String extensionCategory,
+        @OutputCustomType.Parameter("extensionId") String extensionId,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("installedExtensionVersion") String installedExtensionVersion,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("type") String type) {
         this.eTag = eTag;
         this.extensionApiDocsLink = extensionApiDocsLink;
         this.extensionAuthLink = extensionAuthLink;

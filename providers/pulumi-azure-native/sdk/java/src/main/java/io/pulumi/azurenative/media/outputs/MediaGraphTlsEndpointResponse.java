@@ -41,13 +41,13 @@ public final class MediaGraphTlsEndpointResponse {
      */
     private final @Nullable MediaGraphTlsValidationOptionsResponse validationOptions;
 
-    @OutputCustomType.Constructor({"credentials","odataType","trustedCertificates","url","validationOptions"})
+    @OutputCustomType.Constructor
     private MediaGraphTlsEndpointResponse(
-        @Nullable MediaGraphUsernamePasswordCredentialsResponse credentials,
-        String odataType,
-        @Nullable MediaGraphPemCertificateListResponse trustedCertificates,
-        String url,
-        @Nullable MediaGraphTlsValidationOptionsResponse validationOptions) {
+        @OutputCustomType.Parameter("credentials") @Nullable MediaGraphUsernamePasswordCredentialsResponse credentials,
+        @OutputCustomType.Parameter("odataType") String odataType,
+        @OutputCustomType.Parameter("trustedCertificates") @Nullable MediaGraphPemCertificateListResponse trustedCertificates,
+        @OutputCustomType.Parameter("url") String url,
+        @OutputCustomType.Parameter("validationOptions") @Nullable MediaGraphTlsValidationOptionsResponse validationOptions) {
         this.credentials = credentials;
         this.odataType = odataType;
         this.trustedCertificates = trustedCertificates;

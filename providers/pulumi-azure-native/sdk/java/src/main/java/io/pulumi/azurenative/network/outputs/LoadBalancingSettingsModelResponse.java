@@ -48,15 +48,15 @@ public final class LoadBalancingSettingsModelResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"additionalLatencyMilliseconds","id","name","resourceState","sampleSize","successfulSamplesRequired","type"})
+    @OutputCustomType.Constructor
     private LoadBalancingSettingsModelResponse(
-        @Nullable Integer additionalLatencyMilliseconds,
-        @Nullable String id,
-        @Nullable String name,
-        String resourceState,
-        @Nullable Integer sampleSize,
-        @Nullable Integer successfulSamplesRequired,
-        String type) {
+        @OutputCustomType.Parameter("additionalLatencyMilliseconds") @Nullable Integer additionalLatencyMilliseconds,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("resourceState") String resourceState,
+        @OutputCustomType.Parameter("sampleSize") @Nullable Integer sampleSize,
+        @OutputCustomType.Parameter("successfulSamplesRequired") @Nullable Integer successfulSamplesRequired,
+        @OutputCustomType.Parameter("type") String type) {
         this.additionalLatencyMilliseconds = additionalLatencyMilliseconds;
         this.id = id;
         this.name = name;

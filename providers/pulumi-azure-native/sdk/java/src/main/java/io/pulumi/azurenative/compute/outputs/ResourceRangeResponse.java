@@ -22,10 +22,10 @@ public final class ResourceRangeResponse {
      */
     private final @Nullable Integer min;
 
-    @OutputCustomType.Constructor({"max","min"})
+    @OutputCustomType.Constructor
     private ResourceRangeResponse(
-        @Nullable Integer max,
-        @Nullable Integer min) {
+        @OutputCustomType.Parameter("max") @Nullable Integer max,
+        @OutputCustomType.Parameter("min") @Nullable Integer min) {
         this.max = max;
         this.min = min;
     }

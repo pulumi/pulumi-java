@@ -15,8 +15,8 @@ public final class GetLiveTokenResult {
      */
     private final String liveToken;
 
-    @OutputCustomType.Constructor({"liveToken"})
-    private GetLiveTokenResult(String liveToken) {
+    @OutputCustomType.Constructor
+    private GetLiveTokenResult(@OutputCustomType.Parameter("liveToken") String liveToken) {
         this.liveToken = liveToken;
     }
 

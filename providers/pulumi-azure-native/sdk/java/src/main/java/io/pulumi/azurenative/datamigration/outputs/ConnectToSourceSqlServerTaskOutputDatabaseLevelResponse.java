@@ -49,15 +49,15 @@ public final class ConnectToSourceSqlServerTaskOutputDatabaseLevelResponse {
      */
     private final Double sizeMB;
 
-    @OutputCustomType.Constructor({"compatibilityLevel","databaseFiles","databaseState","id","name","resultType","sizeMB"})
+    @OutputCustomType.Constructor
     private ConnectToSourceSqlServerTaskOutputDatabaseLevelResponse(
-        String compatibilityLevel,
-        List<DatabaseFileInfoResponse> databaseFiles,
-        String databaseState,
-        String id,
-        String name,
-        String resultType,
-        Double sizeMB) {
+        @OutputCustomType.Parameter("compatibilityLevel") String compatibilityLevel,
+        @OutputCustomType.Parameter("databaseFiles") List<DatabaseFileInfoResponse> databaseFiles,
+        @OutputCustomType.Parameter("databaseState") String databaseState,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("resultType") String resultType,
+        @OutputCustomType.Parameter("sizeMB") Double sizeMB) {
         this.compatibilityLevel = compatibilityLevel;
         this.databaseFiles = databaseFiles;
         this.databaseState = databaseState;

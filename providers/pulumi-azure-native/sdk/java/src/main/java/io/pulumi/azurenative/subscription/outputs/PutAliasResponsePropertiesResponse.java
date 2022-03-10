@@ -22,10 +22,10 @@ public final class PutAliasResponsePropertiesResponse {
      */
     private final String subscriptionId;
 
-    @OutputCustomType.Constructor({"provisioningState","subscriptionId"})
+    @OutputCustomType.Constructor
     private PutAliasResponsePropertiesResponse(
-        @Nullable String provisioningState,
-        String subscriptionId) {
+        @OutputCustomType.Parameter("provisioningState") @Nullable String provisioningState,
+        @OutputCustomType.Parameter("subscriptionId") String subscriptionId) {
         this.provisioningState = provisioningState;
         this.subscriptionId = subscriptionId;
     }

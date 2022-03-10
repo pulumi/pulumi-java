@@ -27,11 +27,11 @@ public final class PacketCaptureStorageLocationResponse {
      */
     private final @Nullable String storagePath;
 
-    @OutputCustomType.Constructor({"filePath","storageId","storagePath"})
+    @OutputCustomType.Constructor
     private PacketCaptureStorageLocationResponse(
-        @Nullable String filePath,
-        @Nullable String storageId,
-        @Nullable String storagePath) {
+        @OutputCustomType.Parameter("filePath") @Nullable String filePath,
+        @OutputCustomType.Parameter("storageId") @Nullable String storageId,
+        @OutputCustomType.Parameter("storagePath") @Nullable String storagePath) {
         this.filePath = filePath;
         this.storageId = storageId;
         this.storagePath = storagePath;

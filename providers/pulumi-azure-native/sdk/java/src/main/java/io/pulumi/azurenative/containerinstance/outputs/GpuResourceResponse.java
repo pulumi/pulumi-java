@@ -21,10 +21,10 @@ public final class GpuResourceResponse {
      */
     private final String sku;
 
-    @OutputCustomType.Constructor({"count","sku"})
+    @OutputCustomType.Constructor
     private GpuResourceResponse(
-        Integer count,
-        String sku) {
+        @OutputCustomType.Parameter("count") Integer count,
+        @OutputCustomType.Parameter("sku") String sku) {
         this.count = count;
         this.sku = sku;
     }

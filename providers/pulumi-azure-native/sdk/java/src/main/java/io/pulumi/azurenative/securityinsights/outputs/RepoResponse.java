@@ -28,11 +28,11 @@ public final class RepoResponse {
      */
     private final @Nullable String url;
 
-    @OutputCustomType.Constructor({"branches","fullName","url"})
+    @OutputCustomType.Constructor
     private RepoResponse(
-        @Nullable List<String> branches,
-        @Nullable String fullName,
-        @Nullable String url) {
+        @OutputCustomType.Parameter("branches") @Nullable List<String> branches,
+        @OutputCustomType.Parameter("fullName") @Nullable String fullName,
+        @OutputCustomType.Parameter("url") @Nullable String url) {
         this.branches = branches;
         this.fullName = fullName;
         this.url = url;

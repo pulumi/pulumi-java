@@ -29,11 +29,11 @@ public final class SolutionDetailsResponse {
      */
     private final @Nullable Integer groupCount;
 
-    @OutputCustomType.Constructor({"assessmentCount","extendedDetails","groupCount"})
+    @OutputCustomType.Constructor
     private SolutionDetailsResponse(
-        @Nullable Integer assessmentCount,
-        @Nullable Map<String,String> extendedDetails,
-        @Nullable Integer groupCount) {
+        @OutputCustomType.Parameter("assessmentCount") @Nullable Integer assessmentCount,
+        @OutputCustomType.Parameter("extendedDetails") @Nullable Map<String,String> extendedDetails,
+        @OutputCustomType.Parameter("groupCount") @Nullable Integer groupCount) {
         this.assessmentCount = assessmentCount;
         this.extendedDetails = extendedDetails;
         this.groupCount = groupCount;

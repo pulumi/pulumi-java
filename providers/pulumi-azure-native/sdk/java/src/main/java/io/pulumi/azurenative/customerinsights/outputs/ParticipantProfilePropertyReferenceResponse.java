@@ -20,10 +20,10 @@ public final class ParticipantProfilePropertyReferenceResponse {
      */
     private final String profilePropertyName;
 
-    @OutputCustomType.Constructor({"interactionPropertyName","profilePropertyName"})
+    @OutputCustomType.Constructor
     private ParticipantProfilePropertyReferenceResponse(
-        String interactionPropertyName,
-        String profilePropertyName) {
+        @OutputCustomType.Parameter("interactionPropertyName") String interactionPropertyName,
+        @OutputCustomType.Parameter("profilePropertyName") String profilePropertyName) {
         this.interactionPropertyName = interactionPropertyName;
         this.profilePropertyName = profilePropertyName;
     }

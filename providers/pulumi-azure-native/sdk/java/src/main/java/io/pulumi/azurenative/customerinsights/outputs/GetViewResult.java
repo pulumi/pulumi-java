@@ -63,18 +63,18 @@ public final class GetViewResult {
      */
     private final String viewName;
 
-    @OutputCustomType.Constructor({"changed","created","definition","displayName","id","name","tenantId","type","userId","viewName"})
+    @OutputCustomType.Constructor
     private GetViewResult(
-        String changed,
-        String created,
-        String definition,
-        @Nullable Map<String,String> displayName,
-        String id,
-        String name,
-        String tenantId,
-        String type,
-        @Nullable String userId,
-        String viewName) {
+        @OutputCustomType.Parameter("changed") String changed,
+        @OutputCustomType.Parameter("created") String created,
+        @OutputCustomType.Parameter("definition") String definition,
+        @OutputCustomType.Parameter("displayName") @Nullable Map<String,String> displayName,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("tenantId") String tenantId,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("userId") @Nullable String userId,
+        @OutputCustomType.Parameter("viewName") String viewName) {
         this.changed = changed;
         this.created = created;
         this.definition = definition;

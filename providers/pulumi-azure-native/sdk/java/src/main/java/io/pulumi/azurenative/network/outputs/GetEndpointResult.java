@@ -96,24 +96,24 @@ public final class GetEndpointResult {
      */
     private final @Nullable Double weight;
 
-    @OutputCustomType.Constructor({"customHeaders","endpointLocation","endpointMonitorStatus","endpointStatus","geoMapping","id","minChildEndpoints","minChildEndpointsIPv4","minChildEndpointsIPv6","name","priority","subnets","target","targetResourceId","type","weight"})
+    @OutputCustomType.Constructor
     private GetEndpointResult(
-        @Nullable List<EndpointPropertiesResponseCustomHeaders> customHeaders,
-        @Nullable String endpointLocation,
-        @Nullable String endpointMonitorStatus,
-        @Nullable String endpointStatus,
-        @Nullable List<String> geoMapping,
-        @Nullable String id,
-        @Nullable Double minChildEndpoints,
-        @Nullable Double minChildEndpointsIPv4,
-        @Nullable Double minChildEndpointsIPv6,
-        @Nullable String name,
-        @Nullable Double priority,
-        @Nullable List<EndpointPropertiesResponseSubnets> subnets,
-        @Nullable String target,
-        @Nullable String targetResourceId,
-        @Nullable String type,
-        @Nullable Double weight) {
+        @OutputCustomType.Parameter("customHeaders") @Nullable List<EndpointPropertiesResponseCustomHeaders> customHeaders,
+        @OutputCustomType.Parameter("endpointLocation") @Nullable String endpointLocation,
+        @OutputCustomType.Parameter("endpointMonitorStatus") @Nullable String endpointMonitorStatus,
+        @OutputCustomType.Parameter("endpointStatus") @Nullable String endpointStatus,
+        @OutputCustomType.Parameter("geoMapping") @Nullable List<String> geoMapping,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("minChildEndpoints") @Nullable Double minChildEndpoints,
+        @OutputCustomType.Parameter("minChildEndpointsIPv4") @Nullable Double minChildEndpointsIPv4,
+        @OutputCustomType.Parameter("minChildEndpointsIPv6") @Nullable Double minChildEndpointsIPv6,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("priority") @Nullable Double priority,
+        @OutputCustomType.Parameter("subnets") @Nullable List<EndpointPropertiesResponseSubnets> subnets,
+        @OutputCustomType.Parameter("target") @Nullable String target,
+        @OutputCustomType.Parameter("targetResourceId") @Nullable String targetResourceId,
+        @OutputCustomType.Parameter("type") @Nullable String type,
+        @OutputCustomType.Parameter("weight") @Nullable Double weight) {
         this.customHeaders = customHeaders;
         this.endpointLocation = endpointLocation;
         this.endpointMonitorStatus = endpointMonitorStatus;

@@ -42,14 +42,14 @@ public final class ResourceFileResponse {
      */
     private final @Nullable String storageContainerUrl;
 
-    @OutputCustomType.Constructor({"autoStorageContainerName","blobPrefix","fileMode","filePath","httpUrl","storageContainerUrl"})
+    @OutputCustomType.Constructor
     private ResourceFileResponse(
-        @Nullable String autoStorageContainerName,
-        @Nullable String blobPrefix,
-        @Nullable String fileMode,
-        @Nullable String filePath,
-        @Nullable String httpUrl,
-        @Nullable String storageContainerUrl) {
+        @OutputCustomType.Parameter("autoStorageContainerName") @Nullable String autoStorageContainerName,
+        @OutputCustomType.Parameter("blobPrefix") @Nullable String blobPrefix,
+        @OutputCustomType.Parameter("fileMode") @Nullable String fileMode,
+        @OutputCustomType.Parameter("filePath") @Nullable String filePath,
+        @OutputCustomType.Parameter("httpUrl") @Nullable String httpUrl,
+        @OutputCustomType.Parameter("storageContainerUrl") @Nullable String storageContainerUrl) {
         this.autoStorageContainerName = autoStorageContainerName;
         this.blobPrefix = blobPrefix;
         this.fileMode = fileMode;

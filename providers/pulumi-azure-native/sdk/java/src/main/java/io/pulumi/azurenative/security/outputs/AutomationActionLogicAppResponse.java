@@ -28,11 +28,11 @@ public final class AutomationActionLogicAppResponse {
      */
     private final @Nullable String uri;
 
-    @OutputCustomType.Constructor({"actionType","logicAppResourceId","uri"})
+    @OutputCustomType.Constructor
     private AutomationActionLogicAppResponse(
-        String actionType,
-        @Nullable String logicAppResourceId,
-        @Nullable String uri) {
+        @OutputCustomType.Parameter("actionType") String actionType,
+        @OutputCustomType.Parameter("logicAppResourceId") @Nullable String logicAppResourceId,
+        @OutputCustomType.Parameter("uri") @Nullable String uri) {
         this.actionType = actionType;
         this.logicAppResourceId = logicAppResourceId;
         this.uri = uri;

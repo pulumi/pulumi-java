@@ -22,10 +22,10 @@ public final class CertBasedSecurityPrincipalResponse {
      */
     private final @Nullable String ledgerRoleName;
 
-    @OutputCustomType.Constructor({"cert","ledgerRoleName"})
+    @OutputCustomType.Constructor
     private CertBasedSecurityPrincipalResponse(
-        @Nullable String cert,
-        @Nullable String ledgerRoleName) {
+        @OutputCustomType.Parameter("cert") @Nullable String cert,
+        @OutputCustomType.Parameter("ledgerRoleName") @Nullable String ledgerRoleName) {
         this.cert = cert;
         this.ledgerRoleName = ledgerRoleName;
     }

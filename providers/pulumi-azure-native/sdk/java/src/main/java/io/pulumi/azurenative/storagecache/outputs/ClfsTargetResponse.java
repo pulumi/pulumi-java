@@ -17,8 +17,8 @@ public final class ClfsTargetResponse {
      */
     private final @Nullable String target;
 
-    @OutputCustomType.Constructor({"target"})
-    private ClfsTargetResponse(@Nullable String target) {
+    @OutputCustomType.Constructor
+    private ClfsTargetResponse(@OutputCustomType.Parameter("target") @Nullable String target) {
         this.target = target;
     }
 

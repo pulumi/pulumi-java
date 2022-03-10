@@ -66,18 +66,18 @@ public final class ServerEndpointCloudTieringStatusResponse {
      */
     private final CloudTieringVolumeFreeSpacePolicyStatusResponse volumeFreeSpacePolicyStatus;
 
-    @OutputCustomType.Constructor({"cachePerformance","datePolicyStatus","filesNotTiering","health","healthLastUpdatedTimestamp","lastCloudTieringResult","lastSuccessTimestamp","lastUpdatedTimestamp","spaceSavings","volumeFreeSpacePolicyStatus"})
+    @OutputCustomType.Constructor
     private ServerEndpointCloudTieringStatusResponse(
-        CloudTieringCachePerformanceResponse cachePerformance,
-        CloudTieringDatePolicyStatusResponse datePolicyStatus,
-        CloudTieringFilesNotTieringResponse filesNotTiering,
-        String health,
-        String healthLastUpdatedTimestamp,
-        Integer lastCloudTieringResult,
-        String lastSuccessTimestamp,
-        String lastUpdatedTimestamp,
-        CloudTieringSpaceSavingsResponse spaceSavings,
-        CloudTieringVolumeFreeSpacePolicyStatusResponse volumeFreeSpacePolicyStatus) {
+        @OutputCustomType.Parameter("cachePerformance") CloudTieringCachePerformanceResponse cachePerformance,
+        @OutputCustomType.Parameter("datePolicyStatus") CloudTieringDatePolicyStatusResponse datePolicyStatus,
+        @OutputCustomType.Parameter("filesNotTiering") CloudTieringFilesNotTieringResponse filesNotTiering,
+        @OutputCustomType.Parameter("health") String health,
+        @OutputCustomType.Parameter("healthLastUpdatedTimestamp") String healthLastUpdatedTimestamp,
+        @OutputCustomType.Parameter("lastCloudTieringResult") Integer lastCloudTieringResult,
+        @OutputCustomType.Parameter("lastSuccessTimestamp") String lastSuccessTimestamp,
+        @OutputCustomType.Parameter("lastUpdatedTimestamp") String lastUpdatedTimestamp,
+        @OutputCustomType.Parameter("spaceSavings") CloudTieringSpaceSavingsResponse spaceSavings,
+        @OutputCustomType.Parameter("volumeFreeSpacePolicyStatus") CloudTieringVolumeFreeSpacePolicyStatusResponse volumeFreeSpacePolicyStatus) {
         this.cachePerformance = cachePerformance;
         this.datePolicyStatus = datePolicyStatus;
         this.filesNotTiering = filesNotTiering;

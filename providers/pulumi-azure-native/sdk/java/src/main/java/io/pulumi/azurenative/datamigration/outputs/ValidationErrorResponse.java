@@ -20,10 +20,10 @@ public final class ValidationErrorResponse {
      */
     private final String text;
 
-    @OutputCustomType.Constructor({"severity","text"})
+    @OutputCustomType.Constructor
     private ValidationErrorResponse(
-        String severity,
-        String text) {
+        @OutputCustomType.Parameter("severity") String severity,
+        @OutputCustomType.Parameter("text") String text) {
         this.severity = severity;
         this.text = text;
     }

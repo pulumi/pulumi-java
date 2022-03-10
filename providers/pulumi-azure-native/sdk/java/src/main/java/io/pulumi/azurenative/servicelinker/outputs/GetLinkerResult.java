@@ -59,16 +59,16 @@ public final class GetLinkerResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"authInfo","clientType","id","name","provisioningState","systemData","targetId","type"})
+    @OutputCustomType.Constructor
     private GetLinkerResult(
-        @Nullable Object authInfo,
-        @Nullable String clientType,
-        String id,
-        String name,
-        String provisioningState,
-        SystemDataResponse systemData,
-        @Nullable String targetId,
-        String type) {
+        @OutputCustomType.Parameter("authInfo") @Nullable Object authInfo,
+        @OutputCustomType.Parameter("clientType") @Nullable String clientType,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("targetId") @Nullable String targetId,
+        @OutputCustomType.Parameter("type") String type) {
         this.authInfo = authInfo;
         this.clientType = clientType;
         this.id = id;

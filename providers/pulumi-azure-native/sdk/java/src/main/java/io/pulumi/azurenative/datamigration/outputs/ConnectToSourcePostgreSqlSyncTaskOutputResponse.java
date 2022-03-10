@@ -37,13 +37,13 @@ public final class ConnectToSourcePostgreSqlSyncTaskOutputResponse {
      */
     private final List<ReportableExceptionResponse> validationErrors;
 
-    @OutputCustomType.Constructor({"databases","id","sourceServerBrandVersion","sourceServerVersion","validationErrors"})
+    @OutputCustomType.Constructor
     private ConnectToSourcePostgreSqlSyncTaskOutputResponse(
-        List<String> databases,
-        String id,
-        String sourceServerBrandVersion,
-        String sourceServerVersion,
-        List<ReportableExceptionResponse> validationErrors) {
+        @OutputCustomType.Parameter("databases") List<String> databases,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("sourceServerBrandVersion") String sourceServerBrandVersion,
+        @OutputCustomType.Parameter("sourceServerVersion") String sourceServerVersion,
+        @OutputCustomType.Parameter("validationErrors") List<ReportableExceptionResponse> validationErrors) {
         this.databases = databases;
         this.id = id;
         this.sourceServerBrandVersion = sourceServerBrandVersion;

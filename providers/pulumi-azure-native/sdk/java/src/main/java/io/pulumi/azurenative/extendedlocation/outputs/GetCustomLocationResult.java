@@ -81,21 +81,21 @@ public final class GetCustomLocationResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"authentication","clusterExtensionIds","displayName","hostResourceId","hostType","id","location","name","namespace","provisioningState","systemData","tags","type"})
+    @OutputCustomType.Constructor
     private GetCustomLocationResult(
-        @Nullable CustomLocationPropertiesResponseAuthentication authentication,
-        @Nullable List<String> clusterExtensionIds,
-        @Nullable String displayName,
-        @Nullable String hostResourceId,
-        @Nullable String hostType,
-        String id,
-        String location,
-        String name,
-        @Nullable String namespace,
-        @Nullable String provisioningState,
-        SystemDataResponse systemData,
-        @Nullable Map<String,String> tags,
-        String type) {
+        @OutputCustomType.Parameter("authentication") @Nullable CustomLocationPropertiesResponseAuthentication authentication,
+        @OutputCustomType.Parameter("clusterExtensionIds") @Nullable List<String> clusterExtensionIds,
+        @OutputCustomType.Parameter("displayName") @Nullable String displayName,
+        @OutputCustomType.Parameter("hostResourceId") @Nullable String hostResourceId,
+        @OutputCustomType.Parameter("hostType") @Nullable String hostType,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("namespace") @Nullable String namespace,
+        @OutputCustomType.Parameter("provisioningState") @Nullable String provisioningState,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type) {
         this.authentication = authentication;
         this.clusterExtensionIds = clusterExtensionIds;
         this.displayName = displayName;

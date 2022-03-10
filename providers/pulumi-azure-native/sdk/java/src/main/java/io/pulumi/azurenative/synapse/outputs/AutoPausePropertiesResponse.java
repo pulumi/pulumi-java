@@ -23,10 +23,10 @@ public final class AutoPausePropertiesResponse {
      */
     private final @Nullable Boolean enabled;
 
-    @OutputCustomType.Constructor({"delayInMinutes","enabled"})
+    @OutputCustomType.Constructor
     private AutoPausePropertiesResponse(
-        @Nullable Integer delayInMinutes,
-        @Nullable Boolean enabled) {
+        @OutputCustomType.Parameter("delayInMinutes") @Nullable Integer delayInMinutes,
+        @OutputCustomType.Parameter("enabled") @Nullable Boolean enabled) {
         this.delayInMinutes = delayInMinutes;
         this.enabled = enabled;
     }

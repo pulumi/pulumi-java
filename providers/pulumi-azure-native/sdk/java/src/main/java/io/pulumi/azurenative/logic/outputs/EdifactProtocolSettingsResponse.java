@@ -77,19 +77,19 @@ public final class EdifactProtocolSettingsResponse {
      */
     private final EdifactValidationSettingsResponse validationSettings;
 
-    @OutputCustomType.Constructor({"acknowledgementSettings","edifactDelimiterOverrides","envelopeOverrides","envelopeSettings","framingSettings","messageFilter","messageFilterList","processingSettings","schemaReferences","validationOverrides","validationSettings"})
+    @OutputCustomType.Constructor
     private EdifactProtocolSettingsResponse(
-        EdifactAcknowledgementSettingsResponse acknowledgementSettings,
-        @Nullable List<EdifactDelimiterOverrideResponse> edifactDelimiterOverrides,
-        @Nullable List<EdifactEnvelopeOverrideResponse> envelopeOverrides,
-        EdifactEnvelopeSettingsResponse envelopeSettings,
-        EdifactFramingSettingsResponse framingSettings,
-        EdifactMessageFilterResponse messageFilter,
-        @Nullable List<EdifactMessageIdentifierResponse> messageFilterList,
-        EdifactProcessingSettingsResponse processingSettings,
-        List<EdifactSchemaReferenceResponse> schemaReferences,
-        @Nullable List<EdifactValidationOverrideResponse> validationOverrides,
-        EdifactValidationSettingsResponse validationSettings) {
+        @OutputCustomType.Parameter("acknowledgementSettings") EdifactAcknowledgementSettingsResponse acknowledgementSettings,
+        @OutputCustomType.Parameter("edifactDelimiterOverrides") @Nullable List<EdifactDelimiterOverrideResponse> edifactDelimiterOverrides,
+        @OutputCustomType.Parameter("envelopeOverrides") @Nullable List<EdifactEnvelopeOverrideResponse> envelopeOverrides,
+        @OutputCustomType.Parameter("envelopeSettings") EdifactEnvelopeSettingsResponse envelopeSettings,
+        @OutputCustomType.Parameter("framingSettings") EdifactFramingSettingsResponse framingSettings,
+        @OutputCustomType.Parameter("messageFilter") EdifactMessageFilterResponse messageFilter,
+        @OutputCustomType.Parameter("messageFilterList") @Nullable List<EdifactMessageIdentifierResponse> messageFilterList,
+        @OutputCustomType.Parameter("processingSettings") EdifactProcessingSettingsResponse processingSettings,
+        @OutputCustomType.Parameter("schemaReferences") List<EdifactSchemaReferenceResponse> schemaReferences,
+        @OutputCustomType.Parameter("validationOverrides") @Nullable List<EdifactValidationOverrideResponse> validationOverrides,
+        @OutputCustomType.Parameter("validationSettings") EdifactValidationSettingsResponse validationSettings) {
         this.acknowledgementSettings = acknowledgementSettings;
         this.edifactDelimiterOverrides = edifactDelimiterOverrides;
         this.envelopeOverrides = envelopeOverrides;

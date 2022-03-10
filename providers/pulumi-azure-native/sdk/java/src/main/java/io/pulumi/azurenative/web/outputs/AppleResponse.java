@@ -29,11 +29,11 @@ public final class AppleResponse {
      */
     private final @Nullable AppleRegistrationResponse registration;
 
-    @OutputCustomType.Constructor({"enabled","login","registration"})
+    @OutputCustomType.Constructor
     private AppleResponse(
-        @Nullable Boolean enabled,
-        @Nullable LoginScopesResponse login,
-        @Nullable AppleRegistrationResponse registration) {
+        @OutputCustomType.Parameter("enabled") @Nullable Boolean enabled,
+        @OutputCustomType.Parameter("login") @Nullable LoginScopesResponse login,
+        @OutputCustomType.Parameter("registration") @Nullable AppleRegistrationResponse registration) {
         this.enabled = enabled;
         this.login = login;
         this.registration = registration;

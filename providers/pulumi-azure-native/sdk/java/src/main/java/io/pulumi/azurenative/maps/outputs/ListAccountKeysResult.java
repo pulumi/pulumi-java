@@ -25,11 +25,11 @@ public final class ListAccountKeysResult {
      */
     private final String secondaryKey;
 
-    @OutputCustomType.Constructor({"id","primaryKey","secondaryKey"})
+    @OutputCustomType.Constructor
     private ListAccountKeysResult(
-        String id,
-        String primaryKey,
-        String secondaryKey) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("primaryKey") String primaryKey,
+        @OutputCustomType.Parameter("secondaryKey") String secondaryKey) {
         this.id = id;
         this.primaryKey = primaryKey;
         this.secondaryKey = secondaryKey;

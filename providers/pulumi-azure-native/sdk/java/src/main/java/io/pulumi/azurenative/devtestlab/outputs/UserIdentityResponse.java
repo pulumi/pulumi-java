@@ -37,13 +37,13 @@ public final class UserIdentityResponse {
      */
     private final @Nullable String tenantId;
 
-    @OutputCustomType.Constructor({"appId","objectId","principalId","principalName","tenantId"})
+    @OutputCustomType.Constructor
     private UserIdentityResponse(
-        @Nullable String appId,
-        @Nullable String objectId,
-        @Nullable String principalId,
-        @Nullable String principalName,
-        @Nullable String tenantId) {
+        @OutputCustomType.Parameter("appId") @Nullable String appId,
+        @OutputCustomType.Parameter("objectId") @Nullable String objectId,
+        @OutputCustomType.Parameter("principalId") @Nullable String principalId,
+        @OutputCustomType.Parameter("principalName") @Nullable String principalName,
+        @OutputCustomType.Parameter("tenantId") @Nullable String tenantId) {
         this.appId = appId;
         this.objectId = objectId;
         this.principalId = principalId;

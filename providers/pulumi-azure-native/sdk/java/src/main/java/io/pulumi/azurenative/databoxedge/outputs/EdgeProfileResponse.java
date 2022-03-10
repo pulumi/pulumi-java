@@ -17,8 +17,8 @@ public final class EdgeProfileResponse {
      */
     private final @Nullable EdgeProfileSubscriptionResponse subscription;
 
-    @OutputCustomType.Constructor({"subscription"})
-    private EdgeProfileResponse(@Nullable EdgeProfileSubscriptionResponse subscription) {
+    @OutputCustomType.Constructor
+    private EdgeProfileResponse(@OutputCustomType.Parameter("subscription") @Nullable EdgeProfileSubscriptionResponse subscription) {
         this.subscription = subscription;
     }
 

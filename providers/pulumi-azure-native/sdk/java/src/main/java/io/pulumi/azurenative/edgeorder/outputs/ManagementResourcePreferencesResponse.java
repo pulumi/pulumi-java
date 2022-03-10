@@ -17,8 +17,8 @@ public final class ManagementResourcePreferencesResponse {
      */
     private final @Nullable String preferredManagementResourceId;
 
-    @OutputCustomType.Constructor({"preferredManagementResourceId"})
-    private ManagementResourcePreferencesResponse(@Nullable String preferredManagementResourceId) {
+    @OutputCustomType.Constructor
+    private ManagementResourcePreferencesResponse(@OutputCustomType.Parameter("preferredManagementResourceId") @Nullable String preferredManagementResourceId) {
         this.preferredManagementResourceId = preferredManagementResourceId;
     }
 

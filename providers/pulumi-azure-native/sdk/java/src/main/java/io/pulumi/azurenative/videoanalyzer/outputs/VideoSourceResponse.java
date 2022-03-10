@@ -32,12 +32,12 @@ public final class VideoSourceResponse {
      */
     private final String videoName;
 
-    @OutputCustomType.Constructor({"name","timeSequences","type","videoName"})
+    @OutputCustomType.Constructor
     private VideoSourceResponse(
-        String name,
-        VideoSequenceAbsoluteTimeMarkersResponse timeSequences,
-        String type,
-        String videoName) {
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("timeSequences") VideoSequenceAbsoluteTimeMarkersResponse timeSequences,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("videoName") String videoName) {
         this.name = name;
         this.timeSequences = timeSequences;
         this.type = type;

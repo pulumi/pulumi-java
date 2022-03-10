@@ -29,11 +29,11 @@ public final class SignalRFeatureResponse {
      */
     private final String value;
 
-    @OutputCustomType.Constructor({"flag","properties","value"})
+    @OutputCustomType.Constructor
     private SignalRFeatureResponse(
-        String flag,
-        @Nullable Map<String,String> properties,
-        String value) {
+        @OutputCustomType.Parameter("flag") String flag,
+        @OutputCustomType.Parameter("properties") @Nullable Map<String,String> properties,
+        @OutputCustomType.Parameter("value") String value) {
         this.flag = flag;
         this.properties = properties;
         this.value = value;

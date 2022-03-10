@@ -54,16 +54,16 @@ public final class IPConfigurationResponse {
      */
     private final @Nullable SubnetResponse subnet;
 
-    @OutputCustomType.Constructor({"etag","id","name","privateIPAddress","privateIPAllocationMethod","provisioningState","publicIPAddress","subnet"})
+    @OutputCustomType.Constructor
     private IPConfigurationResponse(
-        String etag,
-        @Nullable String id,
-        @Nullable String name,
-        @Nullable String privateIPAddress,
-        @Nullable String privateIPAllocationMethod,
-        String provisioningState,
-        @Nullable PublicIPAddressResponse publicIPAddress,
-        @Nullable SubnetResponse subnet) {
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("privateIPAddress") @Nullable String privateIPAddress,
+        @OutputCustomType.Parameter("privateIPAllocationMethod") @Nullable String privateIPAllocationMethod,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("publicIPAddress") @Nullable PublicIPAddressResponse publicIPAddress,
+        @OutputCustomType.Parameter("subnet") @Nullable SubnetResponse subnet) {
         this.etag = etag;
         this.id = id;
         this.name = name;

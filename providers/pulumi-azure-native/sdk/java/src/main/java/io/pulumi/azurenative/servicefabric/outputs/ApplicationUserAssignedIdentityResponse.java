@@ -20,10 +20,10 @@ public final class ApplicationUserAssignedIdentityResponse {
      */
     private final String principalId;
 
-    @OutputCustomType.Constructor({"name","principalId"})
+    @OutputCustomType.Constructor
     private ApplicationUserAssignedIdentityResponse(
-        String name,
-        String principalId) {
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("principalId") String principalId) {
         this.name = name;
         this.principalId = principalId;
     }

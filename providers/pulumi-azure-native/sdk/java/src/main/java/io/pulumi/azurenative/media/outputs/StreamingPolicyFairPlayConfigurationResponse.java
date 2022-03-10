@@ -23,10 +23,10 @@ public final class StreamingPolicyFairPlayConfigurationResponse {
      */
     private final @Nullable String customLicenseAcquisitionUrlTemplate;
 
-    @OutputCustomType.Constructor({"allowPersistentLicense","customLicenseAcquisitionUrlTemplate"})
+    @OutputCustomType.Constructor
     private StreamingPolicyFairPlayConfigurationResponse(
-        Boolean allowPersistentLicense,
-        @Nullable String customLicenseAcquisitionUrlTemplate) {
+        @OutputCustomType.Parameter("allowPersistentLicense") Boolean allowPersistentLicense,
+        @OutputCustomType.Parameter("customLicenseAcquisitionUrlTemplate") @Nullable String customLicenseAcquisitionUrlTemplate) {
         this.allowPersistentLicense = allowPersistentLicense;
         this.customLicenseAcquisitionUrlTemplate = customLicenseAcquisitionUrlTemplate;
     }

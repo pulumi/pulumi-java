@@ -22,10 +22,10 @@ public final class DeliveryRuleUrlPathConditionResponse {
      */
     private final UrlPathMatchConditionParametersResponse parameters;
 
-    @OutputCustomType.Constructor({"name","parameters"})
+    @OutputCustomType.Constructor
     private DeliveryRuleUrlPathConditionResponse(
-        String name,
-        UrlPathMatchConditionParametersResponse parameters) {
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("parameters") UrlPathMatchConditionParametersResponse parameters) {
         this.name = name;
         this.parameters = parameters;
     }

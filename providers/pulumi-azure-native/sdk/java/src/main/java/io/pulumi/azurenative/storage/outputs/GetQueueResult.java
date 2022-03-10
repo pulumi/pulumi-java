@@ -38,13 +38,13 @@ public final class GetQueueResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"approximateMessageCount","id","metadata","name","type"})
+    @OutputCustomType.Constructor
     private GetQueueResult(
-        Integer approximateMessageCount,
-        String id,
-        @Nullable Map<String,String> metadata,
-        String name,
-        String type) {
+        @OutputCustomType.Parameter("approximateMessageCount") Integer approximateMessageCount,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("metadata") @Nullable Map<String,String> metadata,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("type") String type) {
         this.approximateMessageCount = approximateMessageCount;
         this.id = id;
         this.metadata = metadata;

@@ -34,12 +34,12 @@ public final class RecoveryPlanGroupResponse {
      */
     private final @Nullable List<RecoveryPlanActionResponse> startGroupActions;
 
-    @OutputCustomType.Constructor({"endGroupActions","groupType","replicationProtectedItems","startGroupActions"})
+    @OutputCustomType.Constructor
     private RecoveryPlanGroupResponse(
-        @Nullable List<RecoveryPlanActionResponse> endGroupActions,
-        String groupType,
-        @Nullable List<RecoveryPlanProtectedItemResponse> replicationProtectedItems,
-        @Nullable List<RecoveryPlanActionResponse> startGroupActions) {
+        @OutputCustomType.Parameter("endGroupActions") @Nullable List<RecoveryPlanActionResponse> endGroupActions,
+        @OutputCustomType.Parameter("groupType") String groupType,
+        @OutputCustomType.Parameter("replicationProtectedItems") @Nullable List<RecoveryPlanProtectedItemResponse> replicationProtectedItems,
+        @OutputCustomType.Parameter("startGroupActions") @Nullable List<RecoveryPlanActionResponse> startGroupActions) {
         this.endGroupActions = endGroupActions;
         this.groupType = groupType;
         this.replicationProtectedItems = replicationProtectedItems;

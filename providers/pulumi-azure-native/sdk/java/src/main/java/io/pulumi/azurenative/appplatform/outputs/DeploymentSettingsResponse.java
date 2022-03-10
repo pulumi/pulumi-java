@@ -44,14 +44,14 @@ public final class DeploymentSettingsResponse {
      */
     private final @Nullable String runtimeVersion;
 
-    @OutputCustomType.Constructor({"cpu","environmentVariables","jvmOptions","memoryInGB","netCoreMainEntryPath","runtimeVersion"})
+    @OutputCustomType.Constructor
     private DeploymentSettingsResponse(
-        @Nullable Integer cpu,
-        @Nullable Map<String,String> environmentVariables,
-        @Nullable String jvmOptions,
-        @Nullable Integer memoryInGB,
-        @Nullable String netCoreMainEntryPath,
-        @Nullable String runtimeVersion) {
+        @OutputCustomType.Parameter("cpu") @Nullable Integer cpu,
+        @OutputCustomType.Parameter("environmentVariables") @Nullable Map<String,String> environmentVariables,
+        @OutputCustomType.Parameter("jvmOptions") @Nullable String jvmOptions,
+        @OutputCustomType.Parameter("memoryInGB") @Nullable Integer memoryInGB,
+        @OutputCustomType.Parameter("netCoreMainEntryPath") @Nullable String netCoreMainEntryPath,
+        @OutputCustomType.Parameter("runtimeVersion") @Nullable String runtimeVersion) {
         this.cpu = cpu;
         this.environmentVariables = environmentVariables;
         this.jvmOptions = jvmOptions;

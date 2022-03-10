@@ -37,13 +37,13 @@ public final class GetWorkflowAccessKeyResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"id","name","notAfter","notBefore","type"})
+    @OutputCustomType.Constructor
     private GetWorkflowAccessKeyResult(
-        @Nullable String id,
-        String name,
-        @Nullable String notAfter,
-        @Nullable String notBefore,
-        String type) {
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("notAfter") @Nullable String notAfter,
+        @OutputCustomType.Parameter("notBefore") @Nullable String notBefore,
+        @OutputCustomType.Parameter("type") String type) {
         this.id = id;
         this.name = name;
         this.notAfter = notAfter;

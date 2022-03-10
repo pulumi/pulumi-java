@@ -21,10 +21,10 @@ public final class AzPowerShellSetupResponse {
      */
     private final String version;
 
-    @OutputCustomType.Constructor({"type","version"})
+    @OutputCustomType.Constructor
     private AzPowerShellSetupResponse(
-        String type,
-        String version) {
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("version") String version) {
         this.type = type;
         this.version = version;
     }

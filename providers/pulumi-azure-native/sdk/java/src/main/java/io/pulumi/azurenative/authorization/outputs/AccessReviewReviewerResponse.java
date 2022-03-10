@@ -22,10 +22,10 @@ public final class AccessReviewReviewerResponse {
      */
     private final String principalType;
 
-    @OutputCustomType.Constructor({"principalId","principalType"})
+    @OutputCustomType.Constructor
     private AccessReviewReviewerResponse(
-        @Nullable String principalId,
-        String principalType) {
+        @OutputCustomType.Parameter("principalId") @Nullable String principalId,
+        @OutputCustomType.Parameter("principalType") String principalType) {
         this.principalId = principalId;
         this.principalType = principalType;
     }

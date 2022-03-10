@@ -36,13 +36,13 @@ public final class JobStatusResponse {
      */
     private final String nextExecutionTime;
 
-    @OutputCustomType.Constructor({"executionCount","failureCount","faultedCount","lastExecutionTime","nextExecutionTime"})
+    @OutputCustomType.Constructor
     private JobStatusResponse(
-        Integer executionCount,
-        Integer failureCount,
-        Integer faultedCount,
-        String lastExecutionTime,
-        String nextExecutionTime) {
+        @OutputCustomType.Parameter("executionCount") Integer executionCount,
+        @OutputCustomType.Parameter("failureCount") Integer failureCount,
+        @OutputCustomType.Parameter("faultedCount") Integer faultedCount,
+        @OutputCustomType.Parameter("lastExecutionTime") String lastExecutionTime,
+        @OutputCustomType.Parameter("nextExecutionTime") String nextExecutionTime) {
         this.executionCount = executionCount;
         this.failureCount = failureCount;
         this.faultedCount = faultedCount;

@@ -83,22 +83,22 @@ public final class GetPolicyResult {
      */
     private final String uniqueIdentifier;
 
-    @OutputCustomType.Constructor({"createdDate","description","evaluatorType","factData","factName","id","location","name","provisioningState","status","tags","threshold","type","uniqueIdentifier"})
+    @OutputCustomType.Constructor
     private GetPolicyResult(
-        String createdDate,
-        @Nullable String description,
-        @Nullable String evaluatorType,
-        @Nullable String factData,
-        @Nullable String factName,
-        String id,
-        @Nullable String location,
-        String name,
-        String provisioningState,
-        @Nullable String status,
-        @Nullable Map<String,String> tags,
-        @Nullable String threshold,
-        String type,
-        String uniqueIdentifier) {
+        @OutputCustomType.Parameter("createdDate") String createdDate,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("evaluatorType") @Nullable String evaluatorType,
+        @OutputCustomType.Parameter("factData") @Nullable String factData,
+        @OutputCustomType.Parameter("factName") @Nullable String factName,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("status") @Nullable String status,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("threshold") @Nullable String threshold,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("uniqueIdentifier") String uniqueIdentifier) {
         this.createdDate = createdDate;
         this.description = description;
         this.evaluatorType = evaluatorType;

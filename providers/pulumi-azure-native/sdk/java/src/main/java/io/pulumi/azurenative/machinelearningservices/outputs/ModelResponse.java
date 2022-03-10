@@ -123,29 +123,29 @@ public final class ModelResponse {
      */
     private final @Nullable Double version;
 
-    @OutputCustomType.Constructor({"createdTime","datasets","derivedModelIds","description","experimentName","framework","frameworkVersion","id","kvTags","mimeType","modifiedTime","name","parentModelId","properties","resourceRequirements","runId","sampleInputData","sampleOutputData","unpack","url","version"})
+    @OutputCustomType.Constructor
     private ModelResponse(
-        @Nullable String createdTime,
-        @Nullable List<DatasetReferenceResponse> datasets,
-        @Nullable List<String> derivedModelIds,
-        @Nullable String description,
-        @Nullable String experimentName,
-        @Nullable String framework,
-        @Nullable String frameworkVersion,
-        @Nullable String id,
-        @Nullable Map<String,String> kvTags,
-        String mimeType,
-        @Nullable String modifiedTime,
-        String name,
-        @Nullable String parentModelId,
-        @Nullable Map<String,String> properties,
-        @Nullable ContainerResourceRequirementsResponse resourceRequirements,
-        @Nullable String runId,
-        @Nullable String sampleInputData,
-        @Nullable String sampleOutputData,
-        @Nullable Boolean unpack,
-        String url,
-        @Nullable Double version) {
+        @OutputCustomType.Parameter("createdTime") @Nullable String createdTime,
+        @OutputCustomType.Parameter("datasets") @Nullable List<DatasetReferenceResponse> datasets,
+        @OutputCustomType.Parameter("derivedModelIds") @Nullable List<String> derivedModelIds,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("experimentName") @Nullable String experimentName,
+        @OutputCustomType.Parameter("framework") @Nullable String framework,
+        @OutputCustomType.Parameter("frameworkVersion") @Nullable String frameworkVersion,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("kvTags") @Nullable Map<String,String> kvTags,
+        @OutputCustomType.Parameter("mimeType") String mimeType,
+        @OutputCustomType.Parameter("modifiedTime") @Nullable String modifiedTime,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("parentModelId") @Nullable String parentModelId,
+        @OutputCustomType.Parameter("properties") @Nullable Map<String,String> properties,
+        @OutputCustomType.Parameter("resourceRequirements") @Nullable ContainerResourceRequirementsResponse resourceRequirements,
+        @OutputCustomType.Parameter("runId") @Nullable String runId,
+        @OutputCustomType.Parameter("sampleInputData") @Nullable String sampleInputData,
+        @OutputCustomType.Parameter("sampleOutputData") @Nullable String sampleOutputData,
+        @OutputCustomType.Parameter("unpack") @Nullable Boolean unpack,
+        @OutputCustomType.Parameter("url") String url,
+        @OutputCustomType.Parameter("version") @Nullable Double version) {
         this.createdTime = createdTime;
         this.datasets = datasets;
         this.derivedModelIds = derivedModelIds;

@@ -97,23 +97,23 @@ public final class AzureDataLakeStoreLinkedServiceResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"accountName","annotations","azureCloudType","connectVia","credential","dataLakeStoreUri","description","encryptedCredential","parameters","resourceGroupName","servicePrincipalId","servicePrincipalKey","subscriptionId","tenant","type"})
+    @OutputCustomType.Constructor
     private AzureDataLakeStoreLinkedServiceResponse(
-        @Nullable Object accountName,
-        @Nullable List<Object> annotations,
-        @Nullable Object azureCloudType,
-        @Nullable IntegrationRuntimeReferenceResponse connectVia,
-        @Nullable CredentialReferenceResponse credential,
-        Object dataLakeStoreUri,
-        @Nullable String description,
-        @Nullable Object encryptedCredential,
-        @Nullable Map<String,ParameterSpecificationResponse> parameters,
-        @Nullable Object resourceGroupName,
-        @Nullable Object servicePrincipalId,
-        @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalKey,
-        @Nullable Object subscriptionId,
-        @Nullable Object tenant,
-        String type) {
+        @OutputCustomType.Parameter("accountName") @Nullable Object accountName,
+        @OutputCustomType.Parameter("annotations") @Nullable List<Object> annotations,
+        @OutputCustomType.Parameter("azureCloudType") @Nullable Object azureCloudType,
+        @OutputCustomType.Parameter("connectVia") @Nullable IntegrationRuntimeReferenceResponse connectVia,
+        @OutputCustomType.Parameter("credential") @Nullable CredentialReferenceResponse credential,
+        @OutputCustomType.Parameter("dataLakeStoreUri") Object dataLakeStoreUri,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("encryptedCredential") @Nullable Object encryptedCredential,
+        @OutputCustomType.Parameter("parameters") @Nullable Map<String,ParameterSpecificationResponse> parameters,
+        @OutputCustomType.Parameter("resourceGroupName") @Nullable Object resourceGroupName,
+        @OutputCustomType.Parameter("servicePrincipalId") @Nullable Object servicePrincipalId,
+        @OutputCustomType.Parameter("servicePrincipalKey") @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalKey,
+        @OutputCustomType.Parameter("subscriptionId") @Nullable Object subscriptionId,
+        @OutputCustomType.Parameter("tenant") @Nullable Object tenant,
+        @OutputCustomType.Parameter("type") String type) {
         this.accountName = accountName;
         this.annotations = annotations;
         this.azureCloudType = azureCloudType;

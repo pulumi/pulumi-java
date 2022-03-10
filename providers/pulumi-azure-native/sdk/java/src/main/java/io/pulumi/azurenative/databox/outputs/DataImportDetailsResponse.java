@@ -17,8 +17,8 @@ public final class DataImportDetailsResponse {
      */
     private final Either<ManagedDiskDetailsResponse,StorageAccountDetailsResponse> accountDetails;
 
-    @OutputCustomType.Constructor({"accountDetails"})
-    private DataImportDetailsResponse(Either<ManagedDiskDetailsResponse,StorageAccountDetailsResponse> accountDetails) {
+    @OutputCustomType.Constructor
+    private DataImportDetailsResponse(@OutputCustomType.Parameter("accountDetails") Either<ManagedDiskDetailsResponse,StorageAccountDetailsResponse> accountDetails) {
         this.accountDetails = accountDetails;
     }
 

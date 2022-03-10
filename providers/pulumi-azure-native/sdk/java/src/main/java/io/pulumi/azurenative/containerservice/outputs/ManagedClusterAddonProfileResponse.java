@@ -29,11 +29,11 @@ public final class ManagedClusterAddonProfileResponse {
      */
     private final ManagedClusterAddonProfileResponseIdentity identity;
 
-    @OutputCustomType.Constructor({"config","enabled","identity"})
+    @OutputCustomType.Constructor
     private ManagedClusterAddonProfileResponse(
-        @Nullable Map<String,String> config,
-        Boolean enabled,
-        ManagedClusterAddonProfileResponseIdentity identity) {
+        @OutputCustomType.Parameter("config") @Nullable Map<String,String> config,
+        @OutputCustomType.Parameter("enabled") Boolean enabled,
+        @OutputCustomType.Parameter("identity") ManagedClusterAddonProfileResponseIdentity identity) {
         this.config = config;
         this.enabled = enabled;
         this.identity = identity;

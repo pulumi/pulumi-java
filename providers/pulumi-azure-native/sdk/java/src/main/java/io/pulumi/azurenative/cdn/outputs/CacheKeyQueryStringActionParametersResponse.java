@@ -23,11 +23,11 @@ public final class CacheKeyQueryStringActionParametersResponse {
      */
     private final String queryStringBehavior;
 
-    @OutputCustomType.Constructor({"odataType","queryParameters","queryStringBehavior"})
+    @OutputCustomType.Constructor
     private CacheKeyQueryStringActionParametersResponse(
-        String odataType,
-        @Nullable String queryParameters,
-        String queryStringBehavior) {
+        @OutputCustomType.Parameter("odataType") String odataType,
+        @OutputCustomType.Parameter("queryParameters") @Nullable String queryParameters,
+        @OutputCustomType.Parameter("queryStringBehavior") String queryStringBehavior) {
         this.odataType = odataType;
         this.queryParameters = queryParameters;
         this.queryStringBehavior = queryStringBehavior;

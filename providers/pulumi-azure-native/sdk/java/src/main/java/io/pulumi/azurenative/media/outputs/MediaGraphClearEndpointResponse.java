@@ -29,11 +29,11 @@ public final class MediaGraphClearEndpointResponse {
      */
     private final String url;
 
-    @OutputCustomType.Constructor({"credentials","odataType","url"})
+    @OutputCustomType.Constructor
     private MediaGraphClearEndpointResponse(
-        @Nullable MediaGraphUsernamePasswordCredentialsResponse credentials,
-        String odataType,
-        String url) {
+        @OutputCustomType.Parameter("credentials") @Nullable MediaGraphUsernamePasswordCredentialsResponse credentials,
+        @OutputCustomType.Parameter("odataType") String odataType,
+        @OutputCustomType.Parameter("url") String url) {
         this.credentials = credentials;
         this.odataType = odataType;
         this.url = url;

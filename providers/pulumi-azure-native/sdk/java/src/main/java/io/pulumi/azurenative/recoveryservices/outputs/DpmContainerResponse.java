@@ -85,21 +85,21 @@ public final class DpmContainerResponse {
      */
     private final @Nullable Boolean upgradeAvailable;
 
-    @OutputCustomType.Constructor({"backupManagementType","canReRegister","containerId","containerType","dpmAgentVersion","dpmServers","extendedInfo","friendlyName","healthStatus","protectedItemCount","protectionStatus","registrationStatus","upgradeAvailable"})
+    @OutputCustomType.Constructor
     private DpmContainerResponse(
-        @Nullable String backupManagementType,
-        @Nullable Boolean canReRegister,
-        @Nullable String containerId,
-        String containerType,
-        @Nullable String dpmAgentVersion,
-        @Nullable List<String> dpmServers,
-        @Nullable DPMContainerExtendedInfoResponse extendedInfo,
-        @Nullable String friendlyName,
-        @Nullable String healthStatus,
-        @Nullable Double protectedItemCount,
-        @Nullable String protectionStatus,
-        @Nullable String registrationStatus,
-        @Nullable Boolean upgradeAvailable) {
+        @OutputCustomType.Parameter("backupManagementType") @Nullable String backupManagementType,
+        @OutputCustomType.Parameter("canReRegister") @Nullable Boolean canReRegister,
+        @OutputCustomType.Parameter("containerId") @Nullable String containerId,
+        @OutputCustomType.Parameter("containerType") String containerType,
+        @OutputCustomType.Parameter("dpmAgentVersion") @Nullable String dpmAgentVersion,
+        @OutputCustomType.Parameter("dpmServers") @Nullable List<String> dpmServers,
+        @OutputCustomType.Parameter("extendedInfo") @Nullable DPMContainerExtendedInfoResponse extendedInfo,
+        @OutputCustomType.Parameter("friendlyName") @Nullable String friendlyName,
+        @OutputCustomType.Parameter("healthStatus") @Nullable String healthStatus,
+        @OutputCustomType.Parameter("protectedItemCount") @Nullable Double protectedItemCount,
+        @OutputCustomType.Parameter("protectionStatus") @Nullable String protectionStatus,
+        @OutputCustomType.Parameter("registrationStatus") @Nullable String registrationStatus,
+        @OutputCustomType.Parameter("upgradeAvailable") @Nullable Boolean upgradeAvailable) {
         this.backupManagementType = backupManagementType;
         this.canReRegister = canReRegister;
         this.containerId = containerId;

@@ -69,18 +69,18 @@ public final class AzureTableStorageLinkedServiceResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"accountKey","annotations","connectVia","connectionString","description","encryptedCredential","parameters","sasToken","sasUri","type"})
+    @OutputCustomType.Constructor
     private AzureTableStorageLinkedServiceResponse(
-        @Nullable AzureKeyVaultSecretReferenceResponse accountKey,
-        @Nullable List<Object> annotations,
-        @Nullable IntegrationRuntimeReferenceResponse connectVia,
-        @Nullable Object connectionString,
-        @Nullable String description,
-        @Nullable String encryptedCredential,
-        @Nullable Map<String,ParameterSpecificationResponse> parameters,
-        @Nullable AzureKeyVaultSecretReferenceResponse sasToken,
-        @Nullable Object sasUri,
-        String type) {
+        @OutputCustomType.Parameter("accountKey") @Nullable AzureKeyVaultSecretReferenceResponse accountKey,
+        @OutputCustomType.Parameter("annotations") @Nullable List<Object> annotations,
+        @OutputCustomType.Parameter("connectVia") @Nullable IntegrationRuntimeReferenceResponse connectVia,
+        @OutputCustomType.Parameter("connectionString") @Nullable Object connectionString,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("encryptedCredential") @Nullable String encryptedCredential,
+        @OutputCustomType.Parameter("parameters") @Nullable Map<String,ParameterSpecificationResponse> parameters,
+        @OutputCustomType.Parameter("sasToken") @Nullable AzureKeyVaultSecretReferenceResponse sasToken,
+        @OutputCustomType.Parameter("sasUri") @Nullable Object sasUri,
+        @OutputCustomType.Parameter("type") String type) {
         this.accountKey = accountKey;
         this.annotations = annotations;
         this.connectVia = connectVia;

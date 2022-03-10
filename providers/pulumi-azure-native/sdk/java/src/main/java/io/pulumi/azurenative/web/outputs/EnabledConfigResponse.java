@@ -17,8 +17,8 @@ public final class EnabledConfigResponse {
      */
     private final @Nullable Boolean enabled;
 
-    @OutputCustomType.Constructor({"enabled"})
-    private EnabledConfigResponse(@Nullable Boolean enabled) {
+    @OutputCustomType.Constructor
+    private EnabledConfigResponse(@OutputCustomType.Parameter("enabled") @Nullable Boolean enabled) {
         this.enabled = enabled;
     }
 

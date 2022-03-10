@@ -17,8 +17,8 @@ public final class ApplicationBillingDetailsDefinitionResponse {
      */
     private final @Nullable String resourceUsageId;
 
-    @OutputCustomType.Constructor({"resourceUsageId"})
-    private ApplicationBillingDetailsDefinitionResponse(@Nullable String resourceUsageId) {
+    @OutputCustomType.Constructor
+    private ApplicationBillingDetailsDefinitionResponse(@OutputCustomType.Parameter("resourceUsageId") @Nullable String resourceUsageId) {
         this.resourceUsageId = resourceUsageId;
     }
 

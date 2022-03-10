@@ -17,8 +17,8 @@ public final class GetDnsResourceReferenceByTarResourcesResult {
      */
     private final @Nullable List<DnsResourceReferenceResponse> dnsResourceReferences;
 
-    @OutputCustomType.Constructor({"dnsResourceReferences"})
-    private GetDnsResourceReferenceByTarResourcesResult(@Nullable List<DnsResourceReferenceResponse> dnsResourceReferences) {
+    @OutputCustomType.Constructor
+    private GetDnsResourceReferenceByTarResourcesResult(@OutputCustomType.Parameter("dnsResourceReferences") @Nullable List<DnsResourceReferenceResponse> dnsResourceReferences) {
         this.dnsResourceReferences = dnsResourceReferences;
     }
 

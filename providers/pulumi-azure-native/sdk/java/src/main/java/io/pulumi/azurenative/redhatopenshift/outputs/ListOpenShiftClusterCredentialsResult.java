@@ -22,10 +22,10 @@ public final class ListOpenShiftClusterCredentialsResult {
      */
     private final @Nullable String kubeadminUsername;
 
-    @OutputCustomType.Constructor({"kubeadminPassword","kubeadminUsername"})
+    @OutputCustomType.Constructor
     private ListOpenShiftClusterCredentialsResult(
-        @Nullable String kubeadminPassword,
-        @Nullable String kubeadminUsername) {
+        @OutputCustomType.Parameter("kubeadminPassword") @Nullable String kubeadminPassword,
+        @OutputCustomType.Parameter("kubeadminUsername") @Nullable String kubeadminUsername) {
         this.kubeadminPassword = kubeadminPassword;
         this.kubeadminUsername = kubeadminUsername;
     }

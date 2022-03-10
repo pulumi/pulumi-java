@@ -40,13 +40,13 @@ public final class ContentLinkResponse {
      */
     private final @Nullable String uri;
 
-    @OutputCustomType.Constructor({"contentHash","contentSize","contentVersion","metadata","uri"})
+    @OutputCustomType.Constructor
     private ContentLinkResponse(
-        ContentHashResponse contentHash,
-        Double contentSize,
-        String contentVersion,
-        Object metadata,
-        @Nullable String uri) {
+        @OutputCustomType.Parameter("contentHash") ContentHashResponse contentHash,
+        @OutputCustomType.Parameter("contentSize") Double contentSize,
+        @OutputCustomType.Parameter("contentVersion") String contentVersion,
+        @OutputCustomType.Parameter("metadata") Object metadata,
+        @OutputCustomType.Parameter("uri") @Nullable String uri) {
         this.contentHash = contentHash;
         this.contentSize = contentSize;
         this.contentVersion = contentVersion;

@@ -23,10 +23,10 @@ public final class GetApplicationGatewayBackendHealthOnDemandResult {
      */
     private final @Nullable ApplicationGatewayBackendHealthHttpSettingsResponse backendHealthHttpSettings;
 
-    @OutputCustomType.Constructor({"backendAddressPool","backendHealthHttpSettings"})
+    @OutputCustomType.Constructor
     private GetApplicationGatewayBackendHealthOnDemandResult(
-        @Nullable ApplicationGatewayBackendAddressPoolResponse backendAddressPool,
-        @Nullable ApplicationGatewayBackendHealthHttpSettingsResponse backendHealthHttpSettings) {
+        @OutputCustomType.Parameter("backendAddressPool") @Nullable ApplicationGatewayBackendAddressPoolResponse backendAddressPool,
+        @OutputCustomType.Parameter("backendHealthHttpSettings") @Nullable ApplicationGatewayBackendHealthHttpSettingsResponse backendHealthHttpSettings) {
         this.backendAddressPool = backendAddressPool;
         this.backendHealthHttpSettings = backendHealthHttpSettings;
     }

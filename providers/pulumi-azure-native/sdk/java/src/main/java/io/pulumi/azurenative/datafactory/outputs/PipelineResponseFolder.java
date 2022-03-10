@@ -17,8 +17,8 @@ public final class PipelineResponseFolder {
      */
     private final @Nullable String name;
 
-    @OutputCustomType.Constructor({"name"})
-    private PipelineResponseFolder(@Nullable String name) {
+    @OutputCustomType.Constructor
+    private PipelineResponseFolder(@OutputCustomType.Parameter("name") @Nullable String name) {
         this.name = name;
     }
 

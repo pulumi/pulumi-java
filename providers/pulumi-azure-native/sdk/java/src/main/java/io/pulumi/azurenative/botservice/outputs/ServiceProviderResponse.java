@@ -17,8 +17,8 @@ public final class ServiceProviderResponse {
      */
     private final @Nullable ServiceProviderPropertiesResponse properties;
 
-    @OutputCustomType.Constructor({"properties"})
-    private ServiceProviderResponse(@Nullable ServiceProviderPropertiesResponse properties) {
+    @OutputCustomType.Constructor
+    private ServiceProviderResponse(@OutputCustomType.Parameter("properties") @Nullable ServiceProviderPropertiesResponse properties) {
         this.properties = properties;
     }
 

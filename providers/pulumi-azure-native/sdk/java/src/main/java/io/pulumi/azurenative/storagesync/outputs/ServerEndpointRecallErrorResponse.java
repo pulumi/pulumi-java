@@ -21,10 +21,10 @@ public final class ServerEndpointRecallErrorResponse {
      */
     private final Integer errorCode;
 
-    @OutputCustomType.Constructor({"count","errorCode"})
+    @OutputCustomType.Constructor
     private ServerEndpointRecallErrorResponse(
-        Double count,
-        Integer errorCode) {
+        @OutputCustomType.Parameter("count") Double count,
+        @OutputCustomType.Parameter("errorCode") Integer errorCode) {
         this.count = count;
         this.errorCode = errorCode;
     }

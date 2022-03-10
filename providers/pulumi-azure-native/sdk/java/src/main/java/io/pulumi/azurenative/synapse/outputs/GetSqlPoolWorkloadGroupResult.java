@@ -59,17 +59,17 @@ public final class GetSqlPoolWorkloadGroupResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"id","importance","maxResourcePercent","maxResourcePercentPerRequest","minResourcePercent","minResourcePercentPerRequest","name","queryExecutionTimeout","type"})
+    @OutputCustomType.Constructor
     private GetSqlPoolWorkloadGroupResult(
-        String id,
-        @Nullable String importance,
-        Integer maxResourcePercent,
-        @Nullable Double maxResourcePercentPerRequest,
-        Integer minResourcePercent,
-        Double minResourcePercentPerRequest,
-        String name,
-        @Nullable Integer queryExecutionTimeout,
-        String type) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("importance") @Nullable String importance,
+        @OutputCustomType.Parameter("maxResourcePercent") Integer maxResourcePercent,
+        @OutputCustomType.Parameter("maxResourcePercentPerRequest") @Nullable Double maxResourcePercentPerRequest,
+        @OutputCustomType.Parameter("minResourcePercent") Integer minResourcePercent,
+        @OutputCustomType.Parameter("minResourcePercentPerRequest") Double minResourcePercentPerRequest,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("queryExecutionTimeout") @Nullable Integer queryExecutionTimeout,
+        @OutputCustomType.Parameter("type") String type) {
         this.id = id;
         this.importance = importance;
         this.maxResourcePercent = maxResourcePercent;

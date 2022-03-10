@@ -103,25 +103,25 @@ public final class GetIotSecuritySolutionResult {
      */
     private final @Nullable String workspace;
 
-    @OutputCustomType.Constructor({"additionalWorkspaces","autoDiscoveredResources","disabledDataSources","displayName","export","id","iotHubs","location","name","recommendationsConfiguration","status","systemData","tags","type","unmaskedIpLoggingStatus","userDefinedResources","workspace"})
+    @OutputCustomType.Constructor
     private GetIotSecuritySolutionResult(
-        @Nullable List<AdditionalWorkspacesPropertiesResponse> additionalWorkspaces,
-        List<String> autoDiscoveredResources,
-        @Nullable List<String> disabledDataSources,
-        String displayName,
-        @Nullable List<String> export,
-        String id,
-        List<String> iotHubs,
-        @Nullable String location,
-        String name,
-        @Nullable List<RecommendationConfigurationPropertiesResponse> recommendationsConfiguration,
-        @Nullable String status,
-        SystemDataResponse systemData,
-        @Nullable Map<String,String> tags,
-        String type,
-        @Nullable String unmaskedIpLoggingStatus,
-        @Nullable UserDefinedResourcesPropertiesResponse userDefinedResources,
-        @Nullable String workspace) {
+        @OutputCustomType.Parameter("additionalWorkspaces") @Nullable List<AdditionalWorkspacesPropertiesResponse> additionalWorkspaces,
+        @OutputCustomType.Parameter("autoDiscoveredResources") List<String> autoDiscoveredResources,
+        @OutputCustomType.Parameter("disabledDataSources") @Nullable List<String> disabledDataSources,
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("export") @Nullable List<String> export,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("iotHubs") List<String> iotHubs,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("recommendationsConfiguration") @Nullable List<RecommendationConfigurationPropertiesResponse> recommendationsConfiguration,
+        @OutputCustomType.Parameter("status") @Nullable String status,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("unmaskedIpLoggingStatus") @Nullable String unmaskedIpLoggingStatus,
+        @OutputCustomType.Parameter("userDefinedResources") @Nullable UserDefinedResourcesPropertiesResponse userDefinedResources,
+        @OutputCustomType.Parameter("workspace") @Nullable String workspace) {
         this.additionalWorkspaces = additionalWorkspaces;
         this.autoDiscoveredResources = autoDiscoveredResources;
         this.disabledDataSources = disabledDataSources;

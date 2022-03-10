@@ -34,12 +34,12 @@ public final class RestorePolicyPropertiesResponse {
      */
     private final String minRestoreTime;
 
-    @OutputCustomType.Constructor({"days","enabled","lastEnabledTime","minRestoreTime"})
+    @OutputCustomType.Constructor
     private RestorePolicyPropertiesResponse(
-        @Nullable Integer days,
-        Boolean enabled,
-        String lastEnabledTime,
-        String minRestoreTime) {
+        @OutputCustomType.Parameter("days") @Nullable Integer days,
+        @OutputCustomType.Parameter("enabled") Boolean enabled,
+        @OutputCustomType.Parameter("lastEnabledTime") String lastEnabledTime,
+        @OutputCustomType.Parameter("minRestoreTime") String minRestoreTime) {
         this.days = days;
         this.enabled = enabled;
         this.lastEnabledTime = lastEnabledTime;

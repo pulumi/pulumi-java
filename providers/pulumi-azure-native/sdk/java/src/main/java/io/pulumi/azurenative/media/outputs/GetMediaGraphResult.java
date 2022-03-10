@@ -60,17 +60,17 @@ public final class GetMediaGraphResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"created","description","id","lastModified","name","sinks","sources","state","type"})
+    @OutputCustomType.Constructor
     private GetMediaGraphResult(
-        String created,
-        @Nullable String description,
-        String id,
-        String lastModified,
-        String name,
-        List<MediaGraphAssetSinkResponse> sinks,
-        List<MediaGraphRtspSourceResponse> sources,
-        String state,
-        String type) {
+        @OutputCustomType.Parameter("created") String created,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("lastModified") String lastModified,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("sinks") List<MediaGraphAssetSinkResponse> sinks,
+        @OutputCustomType.Parameter("sources") List<MediaGraphRtspSourceResponse> sources,
+        @OutputCustomType.Parameter("state") String state,
+        @OutputCustomType.Parameter("type") String type) {
         this.created = created;
         this.description = description;
         this.id = id;

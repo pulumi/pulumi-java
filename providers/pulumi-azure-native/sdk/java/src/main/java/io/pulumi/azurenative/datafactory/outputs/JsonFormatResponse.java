@@ -54,16 +54,16 @@ public final class JsonFormatResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"deserializer","encodingName","filePattern","jsonNodeReference","jsonPathDefinition","nestingSeparator","serializer","type"})
+    @OutputCustomType.Constructor
     private JsonFormatResponse(
-        @Nullable Object deserializer,
-        @Nullable Object encodingName,
-        @Nullable Object filePattern,
-        @Nullable Object jsonNodeReference,
-        @Nullable Object jsonPathDefinition,
-        @Nullable Object nestingSeparator,
-        @Nullable Object serializer,
-        String type) {
+        @OutputCustomType.Parameter("deserializer") @Nullable Object deserializer,
+        @OutputCustomType.Parameter("encodingName") @Nullable Object encodingName,
+        @OutputCustomType.Parameter("filePattern") @Nullable Object filePattern,
+        @OutputCustomType.Parameter("jsonNodeReference") @Nullable Object jsonNodeReference,
+        @OutputCustomType.Parameter("jsonPathDefinition") @Nullable Object jsonPathDefinition,
+        @OutputCustomType.Parameter("nestingSeparator") @Nullable Object nestingSeparator,
+        @OutputCustomType.Parameter("serializer") @Nullable Object serializer,
+        @OutputCustomType.Parameter("type") String type) {
         this.deserializer = deserializer;
         this.encodingName = encodingName;
         this.filePattern = filePattern;

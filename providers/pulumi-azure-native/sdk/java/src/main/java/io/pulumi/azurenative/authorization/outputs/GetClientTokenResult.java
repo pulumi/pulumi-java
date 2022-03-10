@@ -15,8 +15,8 @@ public final class GetClientTokenResult {
      */
     private final String token;
 
-    @OutputCustomType.Constructor({"token"})
-    private GetClientTokenResult(String token) {
+    @OutputCustomType.Constructor
+    private GetClientTokenResult(@OutputCustomType.Parameter("token") String token) {
         this.token = token;
     }
 

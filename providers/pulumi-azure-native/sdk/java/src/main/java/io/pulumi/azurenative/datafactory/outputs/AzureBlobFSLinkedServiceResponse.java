@@ -97,23 +97,23 @@ public final class AzureBlobFSLinkedServiceResponse {
      */
     private final Object url;
 
-    @OutputCustomType.Constructor({"accountKey","annotations","azureCloudType","connectVia","credential","description","encryptedCredential","parameters","servicePrincipalCredential","servicePrincipalCredentialType","servicePrincipalId","servicePrincipalKey","tenant","type","url"})
+    @OutputCustomType.Constructor
     private AzureBlobFSLinkedServiceResponse(
-        @Nullable Object accountKey,
-        @Nullable List<Object> annotations,
-        @Nullable Object azureCloudType,
-        @Nullable IntegrationRuntimeReferenceResponse connectVia,
-        @Nullable CredentialReferenceResponse credential,
-        @Nullable String description,
-        @Nullable Object encryptedCredential,
-        @Nullable Map<String,ParameterSpecificationResponse> parameters,
-        @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalCredential,
-        @Nullable Object servicePrincipalCredentialType,
-        @Nullable Object servicePrincipalId,
-        @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalKey,
-        @Nullable Object tenant,
-        String type,
-        Object url) {
+        @OutputCustomType.Parameter("accountKey") @Nullable Object accountKey,
+        @OutputCustomType.Parameter("annotations") @Nullable List<Object> annotations,
+        @OutputCustomType.Parameter("azureCloudType") @Nullable Object azureCloudType,
+        @OutputCustomType.Parameter("connectVia") @Nullable IntegrationRuntimeReferenceResponse connectVia,
+        @OutputCustomType.Parameter("credential") @Nullable CredentialReferenceResponse credential,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("encryptedCredential") @Nullable Object encryptedCredential,
+        @OutputCustomType.Parameter("parameters") @Nullable Map<String,ParameterSpecificationResponse> parameters,
+        @OutputCustomType.Parameter("servicePrincipalCredential") @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalCredential,
+        @OutputCustomType.Parameter("servicePrincipalCredentialType") @Nullable Object servicePrincipalCredentialType,
+        @OutputCustomType.Parameter("servicePrincipalId") @Nullable Object servicePrincipalId,
+        @OutputCustomType.Parameter("servicePrincipalKey") @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalKey,
+        @OutputCustomType.Parameter("tenant") @Nullable Object tenant,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("url") Object url) {
         this.accountKey = accountKey;
         this.annotations = annotations;
         this.azureCloudType = azureCloudType;

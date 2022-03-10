@@ -37,13 +37,13 @@ public final class IconUrisResponse {
      */
     private final @Nullable String wide;
 
-    @OutputCustomType.Constructor({"hero","large","medium","small","wide"})
+    @OutputCustomType.Constructor
     private IconUrisResponse(
-        @Nullable String hero,
-        @Nullable String large,
-        @Nullable String medium,
-        @Nullable String small,
-        @Nullable String wide) {
+        @OutputCustomType.Parameter("hero") @Nullable String hero,
+        @OutputCustomType.Parameter("large") @Nullable String large,
+        @OutputCustomType.Parameter("medium") @Nullable String medium,
+        @OutputCustomType.Parameter("small") @Nullable String small,
+        @OutputCustomType.Parameter("wide") @Nullable String wide) {
         this.hero = hero;
         this.large = large;
         this.medium = medium;

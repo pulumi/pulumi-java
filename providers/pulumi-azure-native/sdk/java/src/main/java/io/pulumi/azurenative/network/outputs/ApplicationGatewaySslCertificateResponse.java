@@ -57,17 +57,17 @@ public final class ApplicationGatewaySslCertificateResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"data","etag","id","keyVaultSecretId","name","password","provisioningState","publicCertData","type"})
+    @OutputCustomType.Constructor
     private ApplicationGatewaySslCertificateResponse(
-        @Nullable String data,
-        String etag,
-        @Nullable String id,
-        @Nullable String keyVaultSecretId,
-        @Nullable String name,
-        @Nullable String password,
-        String provisioningState,
-        String publicCertData,
-        String type) {
+        @OutputCustomType.Parameter("data") @Nullable String data,
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("keyVaultSecretId") @Nullable String keyVaultSecretId,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("password") @Nullable String password,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("publicCertData") String publicCertData,
+        @OutputCustomType.Parameter("type") String type) {
         this.data = data;
         this.etag = etag;
         this.id = id;

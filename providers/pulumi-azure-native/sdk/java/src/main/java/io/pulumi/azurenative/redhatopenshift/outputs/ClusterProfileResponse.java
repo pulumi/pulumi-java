@@ -32,12 +32,12 @@ public final class ClusterProfileResponse {
      */
     private final @Nullable String version;
 
-    @OutputCustomType.Constructor({"domain","pullSecret","resourceGroupId","version"})
+    @OutputCustomType.Constructor
     private ClusterProfileResponse(
-        @Nullable String domain,
-        @Nullable String pullSecret,
-        @Nullable String resourceGroupId,
-        @Nullable String version) {
+        @OutputCustomType.Parameter("domain") @Nullable String domain,
+        @OutputCustomType.Parameter("pullSecret") @Nullable String pullSecret,
+        @OutputCustomType.Parameter("resourceGroupId") @Nullable String resourceGroupId,
+        @OutputCustomType.Parameter("version") @Nullable String version) {
         this.domain = domain;
         this.pullSecret = pullSecret;
         this.resourceGroupId = resourceGroupId;

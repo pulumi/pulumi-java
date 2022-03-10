@@ -20,10 +20,10 @@ public final class JobStatusResponse {
      */
     private final String jobProgress;
 
-    @OutputCustomType.Constructor({"jobName","jobProgress"})
+    @OutputCustomType.Constructor
     private JobStatusResponse(
-        String jobName,
-        String jobProgress) {
+        @OutputCustomType.Parameter("jobName") String jobName,
+        @OutputCustomType.Parameter("jobProgress") String jobProgress) {
         this.jobName = jobName;
         this.jobProgress = jobProgress;
     }

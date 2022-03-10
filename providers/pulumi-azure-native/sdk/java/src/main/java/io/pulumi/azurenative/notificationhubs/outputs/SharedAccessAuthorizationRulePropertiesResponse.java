@@ -58,17 +58,17 @@ public final class SharedAccessAuthorizationRulePropertiesResponse {
      */
     private final String secondaryKey;
 
-    @OutputCustomType.Constructor({"claimType","claimValue","createdTime","keyName","modifiedTime","primaryKey","revision","rights","secondaryKey"})
+    @OutputCustomType.Constructor
     private SharedAccessAuthorizationRulePropertiesResponse(
-        String claimType,
-        String claimValue,
-        String createdTime,
-        String keyName,
-        String modifiedTime,
-        String primaryKey,
-        Integer revision,
-        @Nullable List<String> rights,
-        String secondaryKey) {
+        @OutputCustomType.Parameter("claimType") String claimType,
+        @OutputCustomType.Parameter("claimValue") String claimValue,
+        @OutputCustomType.Parameter("createdTime") String createdTime,
+        @OutputCustomType.Parameter("keyName") String keyName,
+        @OutputCustomType.Parameter("modifiedTime") String modifiedTime,
+        @OutputCustomType.Parameter("primaryKey") String primaryKey,
+        @OutputCustomType.Parameter("revision") Integer revision,
+        @OutputCustomType.Parameter("rights") @Nullable List<String> rights,
+        @OutputCustomType.Parameter("secondaryKey") String secondaryKey) {
         this.claimType = claimType;
         this.claimValue = claimValue;
         this.createdTime = createdTime;

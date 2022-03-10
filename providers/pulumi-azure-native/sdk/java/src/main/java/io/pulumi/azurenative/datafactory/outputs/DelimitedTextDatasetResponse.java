@@ -122,26 +122,26 @@ public final class DelimitedTextDatasetResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"annotations","columnDelimiter","compressionCodec","compressionLevel","description","encodingName","escapeChar","firstRowAsHeader","folder","linkedServiceName","location","nullValue","parameters","quoteChar","rowDelimiter","schema","structure","type"})
+    @OutputCustomType.Constructor
     private DelimitedTextDatasetResponse(
-        @Nullable List<Object> annotations,
-        @Nullable Object columnDelimiter,
-        @Nullable Object compressionCodec,
-        @Nullable Object compressionLevel,
-        @Nullable String description,
-        @Nullable Object encodingName,
-        @Nullable Object escapeChar,
-        @Nullable Object firstRowAsHeader,
-        @Nullable DatasetResponseFolder folder,
-        LinkedServiceReferenceResponse linkedServiceName,
-        Object location,
-        @Nullable Object nullValue,
-        @Nullable Map<String,ParameterSpecificationResponse> parameters,
-        @Nullable Object quoteChar,
-        @Nullable Object rowDelimiter,
-        @Nullable Object schema,
-        @Nullable Object structure,
-        String type) {
+        @OutputCustomType.Parameter("annotations") @Nullable List<Object> annotations,
+        @OutputCustomType.Parameter("columnDelimiter") @Nullable Object columnDelimiter,
+        @OutputCustomType.Parameter("compressionCodec") @Nullable Object compressionCodec,
+        @OutputCustomType.Parameter("compressionLevel") @Nullable Object compressionLevel,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("encodingName") @Nullable Object encodingName,
+        @OutputCustomType.Parameter("escapeChar") @Nullable Object escapeChar,
+        @OutputCustomType.Parameter("firstRowAsHeader") @Nullable Object firstRowAsHeader,
+        @OutputCustomType.Parameter("folder") @Nullable DatasetResponseFolder folder,
+        @OutputCustomType.Parameter("linkedServiceName") LinkedServiceReferenceResponse linkedServiceName,
+        @OutputCustomType.Parameter("location") Object location,
+        @OutputCustomType.Parameter("nullValue") @Nullable Object nullValue,
+        @OutputCustomType.Parameter("parameters") @Nullable Map<String,ParameterSpecificationResponse> parameters,
+        @OutputCustomType.Parameter("quoteChar") @Nullable Object quoteChar,
+        @OutputCustomType.Parameter("rowDelimiter") @Nullable Object rowDelimiter,
+        @OutputCustomType.Parameter("schema") @Nullable Object schema,
+        @OutputCustomType.Parameter("structure") @Nullable Object structure,
+        @OutputCustomType.Parameter("type") String type) {
         this.annotations = annotations;
         this.columnDelimiter = columnDelimiter;
         this.compressionCodec = compressionCodec;

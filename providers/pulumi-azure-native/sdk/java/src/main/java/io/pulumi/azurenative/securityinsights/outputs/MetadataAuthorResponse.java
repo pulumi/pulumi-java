@@ -27,11 +27,11 @@ public final class MetadataAuthorResponse {
      */
     private final @Nullable String name;
 
-    @OutputCustomType.Constructor({"email","link","name"})
+    @OutputCustomType.Constructor
     private MetadataAuthorResponse(
-        @Nullable String email,
-        @Nullable String link,
-        @Nullable String name) {
+        @OutputCustomType.Parameter("email") @Nullable String email,
+        @OutputCustomType.Parameter("link") @Nullable String link,
+        @OutputCustomType.Parameter("name") @Nullable String name) {
         this.email = email;
         this.link = link;
         this.name = name;

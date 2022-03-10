@@ -40,13 +40,13 @@ public final class ImageTemplateWindowsUpdateCustomizerResponse {
      */
     private final @Nullable Integer updateLimit;
 
-    @OutputCustomType.Constructor({"filters","name","searchCriteria","type","updateLimit"})
+    @OutputCustomType.Constructor
     private ImageTemplateWindowsUpdateCustomizerResponse(
-        @Nullable List<String> filters,
-        @Nullable String name,
-        @Nullable String searchCriteria,
-        String type,
-        @Nullable Integer updateLimit) {
+        @OutputCustomType.Parameter("filters") @Nullable List<String> filters,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("searchCriteria") @Nullable String searchCriteria,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("updateLimit") @Nullable Integer updateLimit) {
         this.filters = filters;
         this.name = name;
         this.searchCriteria = searchCriteria;

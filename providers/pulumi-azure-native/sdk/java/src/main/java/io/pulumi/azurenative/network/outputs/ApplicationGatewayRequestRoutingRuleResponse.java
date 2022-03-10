@@ -79,21 +79,21 @@ public final class ApplicationGatewayRequestRoutingRuleResponse {
      */
     private final @Nullable SubResourceResponse urlPathMap;
 
-    @OutputCustomType.Constructor({"backendAddressPool","backendHttpSettings","etag","httpListener","id","name","priority","provisioningState","redirectConfiguration","rewriteRuleSet","ruleType","type","urlPathMap"})
+    @OutputCustomType.Constructor
     private ApplicationGatewayRequestRoutingRuleResponse(
-        @Nullable SubResourceResponse backendAddressPool,
-        @Nullable SubResourceResponse backendHttpSettings,
-        String etag,
-        @Nullable SubResourceResponse httpListener,
-        @Nullable String id,
-        @Nullable String name,
-        @Nullable Integer priority,
-        String provisioningState,
-        @Nullable SubResourceResponse redirectConfiguration,
-        @Nullable SubResourceResponse rewriteRuleSet,
-        @Nullable String ruleType,
-        String type,
-        @Nullable SubResourceResponse urlPathMap) {
+        @OutputCustomType.Parameter("backendAddressPool") @Nullable SubResourceResponse backendAddressPool,
+        @OutputCustomType.Parameter("backendHttpSettings") @Nullable SubResourceResponse backendHttpSettings,
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("httpListener") @Nullable SubResourceResponse httpListener,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("priority") @Nullable Integer priority,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("redirectConfiguration") @Nullable SubResourceResponse redirectConfiguration,
+        @OutputCustomType.Parameter("rewriteRuleSet") @Nullable SubResourceResponse rewriteRuleSet,
+        @OutputCustomType.Parameter("ruleType") @Nullable String ruleType,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("urlPathMap") @Nullable SubResourceResponse urlPathMap) {
         this.backendAddressPool = backendAddressPool;
         this.backendHttpSettings = backendHttpSettings;
         this.etag = etag;

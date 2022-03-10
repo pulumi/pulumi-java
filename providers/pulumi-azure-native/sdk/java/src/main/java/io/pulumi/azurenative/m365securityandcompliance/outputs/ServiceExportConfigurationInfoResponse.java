@@ -17,8 +17,8 @@ public final class ServiceExportConfigurationInfoResponse {
      */
     private final @Nullable String storageAccountName;
 
-    @OutputCustomType.Constructor({"storageAccountName"})
-    private ServiceExportConfigurationInfoResponse(@Nullable String storageAccountName) {
+    @OutputCustomType.Constructor
+    private ServiceExportConfigurationInfoResponse(@OutputCustomType.Parameter("storageAccountName") @Nullable String storageAccountName) {
         this.storageAccountName = storageAccountName;
     }
 

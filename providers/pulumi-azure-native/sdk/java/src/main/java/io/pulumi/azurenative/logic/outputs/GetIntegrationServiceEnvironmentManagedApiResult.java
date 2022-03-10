@@ -112,26 +112,26 @@ public final class GetIntegrationServiceEnvironmentManagedApiResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"apiDefinitionUrl","apiDefinitions","backendService","capabilities","category","connectionParameters","deploymentParameters","generalInformation","id","integrationServiceEnvironment","location","metadata","name","policies","provisioningState","runtimeUrls","tags","type"})
+    @OutputCustomType.Constructor
     private GetIntegrationServiceEnvironmentManagedApiResult(
-        String apiDefinitionUrl,
-        ApiResourceDefinitionsResponse apiDefinitions,
-        ApiResourceBackendServiceResponse backendService,
-        List<String> capabilities,
-        String category,
-        Map<String,Object> connectionParameters,
-        @Nullable IntegrationServiceEnvironmentManagedApiDeploymentParametersResponse deploymentParameters,
-        ApiResourceGeneralInformationResponse generalInformation,
-        String id,
-        @Nullable ResourceReferenceResponse integrationServiceEnvironment,
-        @Nullable String location,
-        ApiResourceMetadataResponse metadata,
-        String name,
-        ApiResourcePoliciesResponse policies,
-        String provisioningState,
-        List<String> runtimeUrls,
-        @Nullable Map<String,String> tags,
-        String type) {
+        @OutputCustomType.Parameter("apiDefinitionUrl") String apiDefinitionUrl,
+        @OutputCustomType.Parameter("apiDefinitions") ApiResourceDefinitionsResponse apiDefinitions,
+        @OutputCustomType.Parameter("backendService") ApiResourceBackendServiceResponse backendService,
+        @OutputCustomType.Parameter("capabilities") List<String> capabilities,
+        @OutputCustomType.Parameter("category") String category,
+        @OutputCustomType.Parameter("connectionParameters") Map<String,Object> connectionParameters,
+        @OutputCustomType.Parameter("deploymentParameters") @Nullable IntegrationServiceEnvironmentManagedApiDeploymentParametersResponse deploymentParameters,
+        @OutputCustomType.Parameter("generalInformation") ApiResourceGeneralInformationResponse generalInformation,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("integrationServiceEnvironment") @Nullable ResourceReferenceResponse integrationServiceEnvironment,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("metadata") ApiResourceMetadataResponse metadata,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("policies") ApiResourcePoliciesResponse policies,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("runtimeUrls") List<String> runtimeUrls,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type) {
         this.apiDefinitionUrl = apiDefinitionUrl;
         this.apiDefinitions = apiDefinitions;
         this.backendService = backendService;

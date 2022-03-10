@@ -47,14 +47,14 @@ public final class WaitActivityResponse {
      */
     private final Object waitTimeInSeconds;
 
-    @OutputCustomType.Constructor({"dependsOn","description","name","type","userProperties","waitTimeInSeconds"})
+    @OutputCustomType.Constructor
     private WaitActivityResponse(
-        @Nullable List<ActivityDependencyResponse> dependsOn,
-        @Nullable String description,
-        String name,
-        String type,
-        @Nullable List<UserPropertyResponse> userProperties,
-        Object waitTimeInSeconds) {
+        @OutputCustomType.Parameter("dependsOn") @Nullable List<ActivityDependencyResponse> dependsOn,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("userProperties") @Nullable List<UserPropertyResponse> userProperties,
+        @OutputCustomType.Parameter("waitTimeInSeconds") Object waitTimeInSeconds) {
         this.dependsOn = dependsOn;
         this.description = description;
         this.name = name;

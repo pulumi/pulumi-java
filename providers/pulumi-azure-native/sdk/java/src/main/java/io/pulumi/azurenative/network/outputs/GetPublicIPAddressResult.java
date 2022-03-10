@@ -144,32 +144,32 @@ public final class GetPublicIPAddressResult {
      */
     private final @Nullable List<String> zones;
 
-    @OutputCustomType.Constructor({"ddosSettings","dnsSettings","etag","extendedLocation","id","idleTimeoutInMinutes","ipAddress","ipConfiguration","ipTags","linkedPublicIPAddress","location","migrationPhase","name","natGateway","provisioningState","publicIPAddressVersion","publicIPAllocationMethod","publicIPPrefix","resourceGuid","servicePublicIPAddress","sku","tags","type","zones"})
+    @OutputCustomType.Constructor
     private GetPublicIPAddressResult(
-        @Nullable DdosSettingsResponse ddosSettings,
-        @Nullable PublicIPAddressDnsSettingsResponse dnsSettings,
-        String etag,
-        @Nullable ExtendedLocationResponse extendedLocation,
-        @Nullable String id,
-        @Nullable Integer idleTimeoutInMinutes,
-        @Nullable String ipAddress,
-        IPConfigurationResponse ipConfiguration,
-        @Nullable List<IpTagResponse> ipTags,
-        @Nullable PublicIPAddressResponse linkedPublicIPAddress,
-        @Nullable String location,
-        @Nullable String migrationPhase,
-        String name,
-        @Nullable NatGatewayResponse natGateway,
-        String provisioningState,
-        @Nullable String publicIPAddressVersion,
-        @Nullable String publicIPAllocationMethod,
-        @Nullable SubResourceResponse publicIPPrefix,
-        String resourceGuid,
-        @Nullable PublicIPAddressResponse servicePublicIPAddress,
-        @Nullable PublicIPAddressSkuResponse sku,
-        @Nullable Map<String,String> tags,
-        String type,
-        @Nullable List<String> zones) {
+        @OutputCustomType.Parameter("ddosSettings") @Nullable DdosSettingsResponse ddosSettings,
+        @OutputCustomType.Parameter("dnsSettings") @Nullable PublicIPAddressDnsSettingsResponse dnsSettings,
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("extendedLocation") @Nullable ExtendedLocationResponse extendedLocation,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("idleTimeoutInMinutes") @Nullable Integer idleTimeoutInMinutes,
+        @OutputCustomType.Parameter("ipAddress") @Nullable String ipAddress,
+        @OutputCustomType.Parameter("ipConfiguration") IPConfigurationResponse ipConfiguration,
+        @OutputCustomType.Parameter("ipTags") @Nullable List<IpTagResponse> ipTags,
+        @OutputCustomType.Parameter("linkedPublicIPAddress") @Nullable PublicIPAddressResponse linkedPublicIPAddress,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("migrationPhase") @Nullable String migrationPhase,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("natGateway") @Nullable NatGatewayResponse natGateway,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("publicIPAddressVersion") @Nullable String publicIPAddressVersion,
+        @OutputCustomType.Parameter("publicIPAllocationMethod") @Nullable String publicIPAllocationMethod,
+        @OutputCustomType.Parameter("publicIPPrefix") @Nullable SubResourceResponse publicIPPrefix,
+        @OutputCustomType.Parameter("resourceGuid") String resourceGuid,
+        @OutputCustomType.Parameter("servicePublicIPAddress") @Nullable PublicIPAddressResponse servicePublicIPAddress,
+        @OutputCustomType.Parameter("sku") @Nullable PublicIPAddressSkuResponse sku,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("zones") @Nullable List<String> zones) {
         this.ddosSettings = ddosSettings;
         this.dnsSettings = dnsSettings;
         this.etag = etag;

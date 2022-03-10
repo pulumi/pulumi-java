@@ -40,14 +40,14 @@ public final class ManagedClusterPodIdentityResponse {
      */
     private final String provisioningState;
 
-    @OutputCustomType.Constructor({"bindingSelector","identity","name","namespace","provisioningInfo","provisioningState"})
+    @OutputCustomType.Constructor
     private ManagedClusterPodIdentityResponse(
-        @Nullable String bindingSelector,
-        UserAssignedIdentityResponse identity,
-        String name,
-        String namespace,
-        ManagedClusterPodIdentityResponseProvisioningInfo provisioningInfo,
-        String provisioningState) {
+        @OutputCustomType.Parameter("bindingSelector") @Nullable String bindingSelector,
+        @OutputCustomType.Parameter("identity") UserAssignedIdentityResponse identity,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("namespace") String namespace,
+        @OutputCustomType.Parameter("provisioningInfo") ManagedClusterPodIdentityResponseProvisioningInfo provisioningInfo,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState) {
         this.bindingSelector = bindingSelector;
         this.identity = identity;
         this.name = name;

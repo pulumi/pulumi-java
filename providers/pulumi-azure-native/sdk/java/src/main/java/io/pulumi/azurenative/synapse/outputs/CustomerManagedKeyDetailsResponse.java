@@ -23,10 +23,10 @@ public final class CustomerManagedKeyDetailsResponse {
      */
     private final String status;
 
-    @OutputCustomType.Constructor({"key","status"})
+    @OutputCustomType.Constructor
     private CustomerManagedKeyDetailsResponse(
-        @Nullable WorkspaceKeyDetailsResponse key,
-        String status) {
+        @OutputCustomType.Parameter("key") @Nullable WorkspaceKeyDetailsResponse key,
+        @OutputCustomType.Parameter("status") String status) {
         this.key = key;
         this.status = status;
     }

@@ -21,10 +21,10 @@ public final class EncoderSystemPresetResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"name","type"})
+    @OutputCustomType.Constructor
     private EncoderSystemPresetResponse(
-        String name,
-        String type) {
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("type") String type) {
         this.name = name;
         this.type = type;
     }

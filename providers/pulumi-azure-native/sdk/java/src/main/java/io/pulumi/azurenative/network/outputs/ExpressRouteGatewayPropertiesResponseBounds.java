@@ -22,10 +22,10 @@ public final class ExpressRouteGatewayPropertiesResponseBounds {
      */
     private final @Nullable Integer min;
 
-    @OutputCustomType.Constructor({"max","min"})
+    @OutputCustomType.Constructor
     private ExpressRouteGatewayPropertiesResponseBounds(
-        @Nullable Integer max,
-        @Nullable Integer min) {
+        @OutputCustomType.Parameter("max") @Nullable Integer max,
+        @OutputCustomType.Parameter("min") @Nullable Integer min) {
         this.max = max;
         this.min = min;
     }

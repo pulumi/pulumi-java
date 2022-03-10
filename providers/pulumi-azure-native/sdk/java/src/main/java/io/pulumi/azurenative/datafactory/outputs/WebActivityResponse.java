@@ -97,23 +97,23 @@ public final class WebActivityResponse {
      */
     private final @Nullable List<UserPropertyResponse> userProperties;
 
-    @OutputCustomType.Constructor({"authentication","body","connectVia","datasets","dependsOn","description","headers","linkedServiceName","linkedServices","method","name","policy","type","url","userProperties"})
+    @OutputCustomType.Constructor
     private WebActivityResponse(
-        @Nullable WebActivityAuthenticationResponse authentication,
-        @Nullable Object body,
-        @Nullable IntegrationRuntimeReferenceResponse connectVia,
-        @Nullable List<DatasetReferenceResponse> datasets,
-        @Nullable List<ActivityDependencyResponse> dependsOn,
-        @Nullable String description,
-        @Nullable Object headers,
-        @Nullable LinkedServiceReferenceResponse linkedServiceName,
-        @Nullable List<LinkedServiceReferenceResponse> linkedServices,
-        String method,
-        String name,
-        @Nullable ActivityPolicyResponse policy,
-        String type,
-        Object url,
-        @Nullable List<UserPropertyResponse> userProperties) {
+        @OutputCustomType.Parameter("authentication") @Nullable WebActivityAuthenticationResponse authentication,
+        @OutputCustomType.Parameter("body") @Nullable Object body,
+        @OutputCustomType.Parameter("connectVia") @Nullable IntegrationRuntimeReferenceResponse connectVia,
+        @OutputCustomType.Parameter("datasets") @Nullable List<DatasetReferenceResponse> datasets,
+        @OutputCustomType.Parameter("dependsOn") @Nullable List<ActivityDependencyResponse> dependsOn,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("headers") @Nullable Object headers,
+        @OutputCustomType.Parameter("linkedServiceName") @Nullable LinkedServiceReferenceResponse linkedServiceName,
+        @OutputCustomType.Parameter("linkedServices") @Nullable List<LinkedServiceReferenceResponse> linkedServices,
+        @OutputCustomType.Parameter("method") String method,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("policy") @Nullable ActivityPolicyResponse policy,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("url") Object url,
+        @OutputCustomType.Parameter("userProperties") @Nullable List<UserPropertyResponse> userProperties) {
         this.authentication = authentication;
         this.body = body;
         this.connectVia = connectVia;

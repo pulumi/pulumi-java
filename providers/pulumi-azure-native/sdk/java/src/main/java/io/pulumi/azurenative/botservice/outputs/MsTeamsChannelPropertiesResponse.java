@@ -43,14 +43,14 @@ public final class MsTeamsChannelPropertiesResponse {
      */
     private final Boolean isEnabled;
 
-    @OutputCustomType.Constructor({"acceptedTerms","callingWebHook","deploymentEnvironment","enableCalling","incomingCallRoute","isEnabled"})
+    @OutputCustomType.Constructor
     private MsTeamsChannelPropertiesResponse(
-        @Nullable Boolean acceptedTerms,
-        @Nullable String callingWebHook,
-        @Nullable String deploymentEnvironment,
-        @Nullable Boolean enableCalling,
-        @Nullable String incomingCallRoute,
-        Boolean isEnabled) {
+        @OutputCustomType.Parameter("acceptedTerms") @Nullable Boolean acceptedTerms,
+        @OutputCustomType.Parameter("callingWebHook") @Nullable String callingWebHook,
+        @OutputCustomType.Parameter("deploymentEnvironment") @Nullable String deploymentEnvironment,
+        @OutputCustomType.Parameter("enableCalling") @Nullable Boolean enableCalling,
+        @OutputCustomType.Parameter("incomingCallRoute") @Nullable String incomingCallRoute,
+        @OutputCustomType.Parameter("isEnabled") Boolean isEnabled) {
         this.acceptedTerms = acceptedTerms;
         this.callingWebHook = callingWebHook;
         this.deploymentEnvironment = deploymentEnvironment;

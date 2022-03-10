@@ -22,10 +22,10 @@ public final class GcmCredentialResponse {
      */
     private final @Nullable String googleApiKey;
 
-    @OutputCustomType.Constructor({"gcmEndpoint","googleApiKey"})
+    @OutputCustomType.Constructor
     private GcmCredentialResponse(
-        @Nullable String gcmEndpoint,
-        @Nullable String googleApiKey) {
+        @OutputCustomType.Parameter("gcmEndpoint") @Nullable String gcmEndpoint,
+        @OutputCustomType.Parameter("googleApiKey") @Nullable String googleApiKey) {
         this.gcmEndpoint = gcmEndpoint;
         this.googleApiKey = googleApiKey;
     }

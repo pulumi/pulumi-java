@@ -21,10 +21,10 @@ public final class PackageStoreResponse {
      */
     private final EntityReferenceResponse packageStoreLinkedService;
 
-    @OutputCustomType.Constructor({"name","packageStoreLinkedService"})
+    @OutputCustomType.Constructor
     private PackageStoreResponse(
-        String name,
-        EntityReferenceResponse packageStoreLinkedService) {
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("packageStoreLinkedService") EntityReferenceResponse packageStoreLinkedService) {
         this.name = name;
         this.packageStoreLinkedService = packageStoreLinkedService;
     }

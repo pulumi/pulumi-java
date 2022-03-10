@@ -21,10 +21,10 @@ public final class FluidRelayEndpointsResponse {
      */
     private final List<String> storageEndpoints;
 
-    @OutputCustomType.Constructor({"ordererEndpoints","storageEndpoints"})
+    @OutputCustomType.Constructor
     private FluidRelayEndpointsResponse(
-        List<String> ordererEndpoints,
-        List<String> storageEndpoints) {
+        @OutputCustomType.Parameter("ordererEndpoints") List<String> ordererEndpoints,
+        @OutputCustomType.Parameter("storageEndpoints") List<String> storageEndpoints) {
         this.ordererEndpoints = ordererEndpoints;
         this.storageEndpoints = storageEndpoints;
     }

@@ -30,12 +30,12 @@ public final class AS2MessageConnectionSettingsResponse {
      */
     private final Boolean unfoldHttpHeaders;
 
-    @OutputCustomType.Constructor({"ignoreCertificateNameMismatch","keepHttpConnectionAlive","supportHttpStatusCodeContinue","unfoldHttpHeaders"})
+    @OutputCustomType.Constructor
     private AS2MessageConnectionSettingsResponse(
-        Boolean ignoreCertificateNameMismatch,
-        Boolean keepHttpConnectionAlive,
-        Boolean supportHttpStatusCodeContinue,
-        Boolean unfoldHttpHeaders) {
+        @OutputCustomType.Parameter("ignoreCertificateNameMismatch") Boolean ignoreCertificateNameMismatch,
+        @OutputCustomType.Parameter("keepHttpConnectionAlive") Boolean keepHttpConnectionAlive,
+        @OutputCustomType.Parameter("supportHttpStatusCodeContinue") Boolean supportHttpStatusCodeContinue,
+        @OutputCustomType.Parameter("unfoldHttpHeaders") Boolean unfoldHttpHeaders) {
         this.ignoreCertificateNameMismatch = ignoreCertificateNameMismatch;
         this.keepHttpConnectionAlive = keepHttpConnectionAlive;
         this.supportHttpStatusCodeContinue = supportHttpStatusCodeContinue;

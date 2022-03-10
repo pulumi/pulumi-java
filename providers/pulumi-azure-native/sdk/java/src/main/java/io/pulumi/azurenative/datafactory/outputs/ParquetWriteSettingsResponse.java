@@ -29,11 +29,11 @@ public final class ParquetWriteSettingsResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"fileNamePrefix","maxRowsPerFile","type"})
+    @OutputCustomType.Constructor
     private ParquetWriteSettingsResponse(
-        @Nullable Object fileNamePrefix,
-        @Nullable Object maxRowsPerFile,
-        String type) {
+        @OutputCustomType.Parameter("fileNamePrefix") @Nullable Object fileNamePrefix,
+        @OutputCustomType.Parameter("maxRowsPerFile") @Nullable Object maxRowsPerFile,
+        @OutputCustomType.Parameter("type") String type) {
         this.fileNamePrefix = fileNamePrefix;
         this.maxRowsPerFile = maxRowsPerFile;
         this.type = type;

@@ -29,11 +29,11 @@ public final class DistributedNodesInfoResponse {
      */
     private final @Nullable String status;
 
-    @OutputCustomType.Constructor({"errorDetail","nodeName","status"})
+    @OutputCustomType.Constructor
     private DistributedNodesInfoResponse(
-        @Nullable ErrorDetailResponse errorDetail,
-        @Nullable String nodeName,
-        @Nullable String status) {
+        @OutputCustomType.Parameter("errorDetail") @Nullable ErrorDetailResponse errorDetail,
+        @OutputCustomType.Parameter("nodeName") @Nullable String nodeName,
+        @OutputCustomType.Parameter("status") @Nullable String status) {
         this.errorDetail = errorDetail;
         this.nodeName = nodeName;
         this.status = status;

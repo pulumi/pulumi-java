@@ -37,13 +37,13 @@ public final class GetWebPubSubHubResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"id","name","properties","systemData","type"})
+    @OutputCustomType.Constructor
     private GetWebPubSubHubResult(
-        String id,
-        String name,
-        WebPubSubHubPropertiesResponse properties,
-        SystemDataResponse systemData,
-        String type) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("properties") WebPubSubHubPropertiesResponse properties,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("type") String type) {
         this.id = id;
         this.name = name;
         this.properties = properties;

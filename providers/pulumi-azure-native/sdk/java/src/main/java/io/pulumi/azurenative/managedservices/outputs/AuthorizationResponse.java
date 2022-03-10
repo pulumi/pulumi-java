@@ -33,12 +33,12 @@ public final class AuthorizationResponse {
      */
     private final String roleDefinitionId;
 
-    @OutputCustomType.Constructor({"delegatedRoleDefinitionIds","principalId","principalIdDisplayName","roleDefinitionId"})
+    @OutputCustomType.Constructor
     private AuthorizationResponse(
-        @Nullable List<String> delegatedRoleDefinitionIds,
-        String principalId,
-        @Nullable String principalIdDisplayName,
-        String roleDefinitionId) {
+        @OutputCustomType.Parameter("delegatedRoleDefinitionIds") @Nullable List<String> delegatedRoleDefinitionIds,
+        @OutputCustomType.Parameter("principalId") String principalId,
+        @OutputCustomType.Parameter("principalIdDisplayName") @Nullable String principalIdDisplayName,
+        @OutputCustomType.Parameter("roleDefinitionId") String roleDefinitionId) {
         this.delegatedRoleDefinitionIds = delegatedRoleDefinitionIds;
         this.principalId = principalId;
         this.principalIdDisplayName = principalIdDisplayName;

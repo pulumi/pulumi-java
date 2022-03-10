@@ -37,13 +37,13 @@ public final class ListMediaServiceKeysResult {
      */
     private final @Nullable String secondaryKey;
 
-    @OutputCustomType.Constructor({"primaryAuthEndpoint","primaryKey","scope","secondaryAuthEndpoint","secondaryKey"})
+    @OutputCustomType.Constructor
     private ListMediaServiceKeysResult(
-        @Nullable String primaryAuthEndpoint,
-        @Nullable String primaryKey,
-        @Nullable String scope,
-        @Nullable String secondaryAuthEndpoint,
-        @Nullable String secondaryKey) {
+        @OutputCustomType.Parameter("primaryAuthEndpoint") @Nullable String primaryAuthEndpoint,
+        @OutputCustomType.Parameter("primaryKey") @Nullable String primaryKey,
+        @OutputCustomType.Parameter("scope") @Nullable String scope,
+        @OutputCustomType.Parameter("secondaryAuthEndpoint") @Nullable String secondaryAuthEndpoint,
+        @OutputCustomType.Parameter("secondaryKey") @Nullable String secondaryKey) {
         this.primaryAuthEndpoint = primaryAuthEndpoint;
         this.primaryKey = primaryKey;
         this.scope = scope;

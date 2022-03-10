@@ -44,14 +44,14 @@ public final class ListWorkflowTriggerCallbackUrlResult {
      */
     private final String value;
 
-    @OutputCustomType.Constructor({"basePath","method","queries","relativePath","relativePathParameters","value"})
+    @OutputCustomType.Constructor
     private ListWorkflowTriggerCallbackUrlResult(
-        String basePath,
-        String method,
-        @Nullable WorkflowTriggerListCallbackUrlQueriesResponse queries,
-        String relativePath,
-        @Nullable List<String> relativePathParameters,
-        String value) {
+        @OutputCustomType.Parameter("basePath") String basePath,
+        @OutputCustomType.Parameter("method") String method,
+        @OutputCustomType.Parameter("queries") @Nullable WorkflowTriggerListCallbackUrlQueriesResponse queries,
+        @OutputCustomType.Parameter("relativePath") String relativePath,
+        @OutputCustomType.Parameter("relativePathParameters") @Nullable List<String> relativePathParameters,
+        @OutputCustomType.Parameter("value") String value) {
         this.basePath = basePath;
         this.method = method;
         this.queries = queries;

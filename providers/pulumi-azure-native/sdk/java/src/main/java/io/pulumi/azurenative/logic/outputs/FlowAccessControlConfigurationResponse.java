@@ -32,12 +32,12 @@ public final class FlowAccessControlConfigurationResponse {
      */
     private final @Nullable FlowAccessControlConfigurationPolicyResponse workflowManagement;
 
-    @OutputCustomType.Constructor({"actions","contents","triggers","workflowManagement"})
+    @OutputCustomType.Constructor
     private FlowAccessControlConfigurationResponse(
-        @Nullable FlowAccessControlConfigurationPolicyResponse actions,
-        @Nullable FlowAccessControlConfigurationPolicyResponse contents,
-        @Nullable FlowAccessControlConfigurationPolicyResponse triggers,
-        @Nullable FlowAccessControlConfigurationPolicyResponse workflowManagement) {
+        @OutputCustomType.Parameter("actions") @Nullable FlowAccessControlConfigurationPolicyResponse actions,
+        @OutputCustomType.Parameter("contents") @Nullable FlowAccessControlConfigurationPolicyResponse contents,
+        @OutputCustomType.Parameter("triggers") @Nullable FlowAccessControlConfigurationPolicyResponse triggers,
+        @OutputCustomType.Parameter("workflowManagement") @Nullable FlowAccessControlConfigurationPolicyResponse workflowManagement) {
         this.actions = actions;
         this.contents = contents;
         this.triggers = triggers;

@@ -89,23 +89,23 @@ public final class HealthErrorResponse {
      */
     private final @Nullable String summaryMessage;
 
-    @OutputCustomType.Constructor({"creationTimeUtc","customerResolvability","entityId","errorCategory","errorCode","errorId","errorLevel","errorMessage","errorSource","errorType","innerHealthErrors","possibleCauses","recommendedAction","recoveryProviderErrorMessage","summaryMessage"})
+    @OutputCustomType.Constructor
     private HealthErrorResponse(
-        @Nullable String creationTimeUtc,
-        @Nullable String customerResolvability,
-        @Nullable String entityId,
-        @Nullable String errorCategory,
-        @Nullable String errorCode,
-        @Nullable String errorId,
-        @Nullable String errorLevel,
-        @Nullable String errorMessage,
-        @Nullable String errorSource,
-        @Nullable String errorType,
-        @Nullable List<InnerHealthErrorResponse> innerHealthErrors,
-        @Nullable String possibleCauses,
-        @Nullable String recommendedAction,
-        @Nullable String recoveryProviderErrorMessage,
-        @Nullable String summaryMessage) {
+        @OutputCustomType.Parameter("creationTimeUtc") @Nullable String creationTimeUtc,
+        @OutputCustomType.Parameter("customerResolvability") @Nullable String customerResolvability,
+        @OutputCustomType.Parameter("entityId") @Nullable String entityId,
+        @OutputCustomType.Parameter("errorCategory") @Nullable String errorCategory,
+        @OutputCustomType.Parameter("errorCode") @Nullable String errorCode,
+        @OutputCustomType.Parameter("errorId") @Nullable String errorId,
+        @OutputCustomType.Parameter("errorLevel") @Nullable String errorLevel,
+        @OutputCustomType.Parameter("errorMessage") @Nullable String errorMessage,
+        @OutputCustomType.Parameter("errorSource") @Nullable String errorSource,
+        @OutputCustomType.Parameter("errorType") @Nullable String errorType,
+        @OutputCustomType.Parameter("innerHealthErrors") @Nullable List<InnerHealthErrorResponse> innerHealthErrors,
+        @OutputCustomType.Parameter("possibleCauses") @Nullable String possibleCauses,
+        @OutputCustomType.Parameter("recommendedAction") @Nullable String recommendedAction,
+        @OutputCustomType.Parameter("recoveryProviderErrorMessage") @Nullable String recoveryProviderErrorMessage,
+        @OutputCustomType.Parameter("summaryMessage") @Nullable String summaryMessage) {
         this.creationTimeUtc = creationTimeUtc;
         this.customerResolvability = customerResolvability;
         this.entityId = entityId;

@@ -22,10 +22,10 @@ public final class AutoHealCustomActionResponse {
      */
     private final @Nullable String parameters;
 
-    @OutputCustomType.Constructor({"exe","parameters"})
+    @OutputCustomType.Constructor
     private AutoHealCustomActionResponse(
-        @Nullable String exe,
-        @Nullable String parameters) {
+        @OutputCustomType.Parameter("exe") @Nullable String exe,
+        @OutputCustomType.Parameter("parameters") @Nullable String parameters) {
         this.exe = exe;
         this.parameters = parameters;
     }

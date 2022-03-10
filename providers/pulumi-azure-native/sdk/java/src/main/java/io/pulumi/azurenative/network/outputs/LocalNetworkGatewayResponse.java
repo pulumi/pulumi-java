@@ -75,20 +75,20 @@ public final class LocalNetworkGatewayResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"bgpSettings","etag","fqdn","gatewayIpAddress","id","localNetworkAddressSpace","location","name","provisioningState","resourceGuid","tags","type"})
+    @OutputCustomType.Constructor
     private LocalNetworkGatewayResponse(
-        @Nullable BgpSettingsResponse bgpSettings,
-        String etag,
-        @Nullable String fqdn,
-        @Nullable String gatewayIpAddress,
-        @Nullable String id,
-        @Nullable AddressSpaceResponse localNetworkAddressSpace,
-        @Nullable String location,
-        String name,
-        String provisioningState,
-        String resourceGuid,
-        @Nullable Map<String,String> tags,
-        String type) {
+        @OutputCustomType.Parameter("bgpSettings") @Nullable BgpSettingsResponse bgpSettings,
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("fqdn") @Nullable String fqdn,
+        @OutputCustomType.Parameter("gatewayIpAddress") @Nullable String gatewayIpAddress,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("localNetworkAddressSpace") @Nullable AddressSpaceResponse localNetworkAddressSpace,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("resourceGuid") String resourceGuid,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type) {
         this.bgpSettings = bgpSettings;
         this.etag = etag;
         this.fqdn = fqdn;

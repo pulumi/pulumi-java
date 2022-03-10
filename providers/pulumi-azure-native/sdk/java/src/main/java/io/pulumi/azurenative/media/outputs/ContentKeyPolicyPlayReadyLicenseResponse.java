@@ -67,18 +67,18 @@ public final class ContentKeyPolicyPlayReadyLicenseResponse {
      */
     private final @Nullable String relativeExpirationDate;
 
-    @OutputCustomType.Constructor({"allowTestDevices","beginDate","contentKeyLocation","contentType","expirationDate","gracePeriod","licenseType","playRight","relativeBeginDate","relativeExpirationDate"})
+    @OutputCustomType.Constructor
     private ContentKeyPolicyPlayReadyLicenseResponse(
-        Boolean allowTestDevices,
-        @Nullable String beginDate,
-        Either<ContentKeyPolicyPlayReadyContentEncryptionKeyFromHeaderResponse,ContentKeyPolicyPlayReadyContentEncryptionKeyFromKeyIdentifierResponse> contentKeyLocation,
-        String contentType,
-        @Nullable String expirationDate,
-        @Nullable String gracePeriod,
-        String licenseType,
-        @Nullable ContentKeyPolicyPlayReadyPlayRightResponse playRight,
-        @Nullable String relativeBeginDate,
-        @Nullable String relativeExpirationDate) {
+        @OutputCustomType.Parameter("allowTestDevices") Boolean allowTestDevices,
+        @OutputCustomType.Parameter("beginDate") @Nullable String beginDate,
+        @OutputCustomType.Parameter("contentKeyLocation") Either<ContentKeyPolicyPlayReadyContentEncryptionKeyFromHeaderResponse,ContentKeyPolicyPlayReadyContentEncryptionKeyFromKeyIdentifierResponse> contentKeyLocation,
+        @OutputCustomType.Parameter("contentType") String contentType,
+        @OutputCustomType.Parameter("expirationDate") @Nullable String expirationDate,
+        @OutputCustomType.Parameter("gracePeriod") @Nullable String gracePeriod,
+        @OutputCustomType.Parameter("licenseType") String licenseType,
+        @OutputCustomType.Parameter("playRight") @Nullable ContentKeyPolicyPlayReadyPlayRightResponse playRight,
+        @OutputCustomType.Parameter("relativeBeginDate") @Nullable String relativeBeginDate,
+        @OutputCustomType.Parameter("relativeExpirationDate") @Nullable String relativeExpirationDate) {
         this.allowTestDevices = allowTestDevices;
         this.beginDate = beginDate;
         this.contentKeyLocation = contentKeyLocation;

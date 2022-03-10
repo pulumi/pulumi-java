@@ -22,10 +22,10 @@ public final class ReferenceDataSetKeyPropertyResponse {
      */
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor({"name","type"})
+    @OutputCustomType.Constructor
     private ReferenceDataSetKeyPropertyResponse(
-        @Nullable String name,
-        @Nullable String type) {
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("type") @Nullable String type) {
         this.name = name;
         this.type = type;
     }

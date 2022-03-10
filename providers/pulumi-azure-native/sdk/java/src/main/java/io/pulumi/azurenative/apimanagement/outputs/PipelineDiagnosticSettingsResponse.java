@@ -22,10 +22,10 @@ public final class PipelineDiagnosticSettingsResponse {
      */
     private final @Nullable HttpMessageDiagnosticResponse response;
 
-    @OutputCustomType.Constructor({"request","response"})
+    @OutputCustomType.Constructor
     private PipelineDiagnosticSettingsResponse(
-        @Nullable HttpMessageDiagnosticResponse request,
-        @Nullable HttpMessageDiagnosticResponse response) {
+        @OutputCustomType.Parameter("request") @Nullable HttpMessageDiagnosticResponse request,
+        @OutputCustomType.Parameter("response") @Nullable HttpMessageDiagnosticResponse response) {
         this.request = request;
         this.response = response;
     }

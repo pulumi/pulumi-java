@@ -52,16 +52,16 @@ public final class RosettaNetPipActivityBehaviorResponse {
      */
     private final Integer timeToPerformInSeconds;
 
-    @OutputCustomType.Constructor({"actionType","isAuthorizationRequired","isSecuredTransportRequired","nonRepudiationOfOriginAndContent","persistentConfidentialityScope","responseType","retryCount","timeToPerformInSeconds"})
+    @OutputCustomType.Constructor
     private RosettaNetPipActivityBehaviorResponse(
-        String actionType,
-        Boolean isAuthorizationRequired,
-        Boolean isSecuredTransportRequired,
-        Boolean nonRepudiationOfOriginAndContent,
-        String persistentConfidentialityScope,
-        String responseType,
-        Integer retryCount,
-        Integer timeToPerformInSeconds) {
+        @OutputCustomType.Parameter("actionType") String actionType,
+        @OutputCustomType.Parameter("isAuthorizationRequired") Boolean isAuthorizationRequired,
+        @OutputCustomType.Parameter("isSecuredTransportRequired") Boolean isSecuredTransportRequired,
+        @OutputCustomType.Parameter("nonRepudiationOfOriginAndContent") Boolean nonRepudiationOfOriginAndContent,
+        @OutputCustomType.Parameter("persistentConfidentialityScope") String persistentConfidentialityScope,
+        @OutputCustomType.Parameter("responseType") String responseType,
+        @OutputCustomType.Parameter("retryCount") Integer retryCount,
+        @OutputCustomType.Parameter("timeToPerformInSeconds") Integer timeToPerformInSeconds) {
         this.actionType = actionType;
         this.isAuthorizationRequired = isAuthorizationRequired;
         this.isSecuredTransportRequired = isSecuredTransportRequired;

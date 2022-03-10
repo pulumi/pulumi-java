@@ -43,14 +43,14 @@ public final class GetSiteResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"displayName","id","name","systemData","tags","type"})
+    @OutputCustomType.Constructor
     private GetSiteResult(
-        String displayName,
-        String id,
-        String name,
-        SystemDataResponse systemData,
-        @Nullable Map<String,String> tags,
-        String type) {
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type) {
         this.displayName = displayName;
         this.id = id;
         this.name = name;

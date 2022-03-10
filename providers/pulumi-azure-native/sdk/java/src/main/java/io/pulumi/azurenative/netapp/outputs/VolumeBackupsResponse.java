@@ -29,11 +29,11 @@ public final class VolumeBackupsResponse {
      */
     private final @Nullable String volumeName;
 
-    @OutputCustomType.Constructor({"backupsCount","policyEnabled","volumeName"})
+    @OutputCustomType.Constructor
     private VolumeBackupsResponse(
-        @Nullable Integer backupsCount,
-        @Nullable Boolean policyEnabled,
-        @Nullable String volumeName) {
+        @OutputCustomType.Parameter("backupsCount") @Nullable Integer backupsCount,
+        @OutputCustomType.Parameter("policyEnabled") @Nullable Boolean policyEnabled,
+        @OutputCustomType.Parameter("volumeName") @Nullable String volumeName) {
         this.backupsCount = backupsCount;
         this.policyEnabled = policyEnabled;
         this.volumeName = volumeName;

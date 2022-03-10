@@ -32,12 +32,12 @@ public final class ConnectivityGroupItemResponse {
      */
     private final @Nullable String useHubGateway;
 
-    @OutputCustomType.Constructor({"groupConnectivity","isGlobal","networkGroupId","useHubGateway"})
+    @OutputCustomType.Constructor
     private ConnectivityGroupItemResponse(
-        @Nullable String groupConnectivity,
-        @Nullable String isGlobal,
-        @Nullable String networkGroupId,
-        @Nullable String useHubGateway) {
+        @OutputCustomType.Parameter("groupConnectivity") @Nullable String groupConnectivity,
+        @OutputCustomType.Parameter("isGlobal") @Nullable String isGlobal,
+        @OutputCustomType.Parameter("networkGroupId") @Nullable String networkGroupId,
+        @OutputCustomType.Parameter("useHubGateway") @Nullable String useHubGateway) {
         this.groupConnectivity = groupConnectivity;
         this.isGlobal = isGlobal;
         this.networkGroupId = networkGroupId;

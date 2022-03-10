@@ -27,11 +27,11 @@ public final class PrivateLinkConnectionStateResponse {
      */
     private final @Nullable String status;
 
-    @OutputCustomType.Constructor({"actionsRequired","description","status"})
+    @OutputCustomType.Constructor
     private PrivateLinkConnectionStateResponse(
-        @Nullable String actionsRequired,
-        @Nullable String description,
-        @Nullable String status) {
+        @OutputCustomType.Parameter("actionsRequired") @Nullable String actionsRequired,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("status") @Nullable String status) {
         this.actionsRequired = actionsRequired;
         this.description = description;
         this.status = status;

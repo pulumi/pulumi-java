@@ -27,11 +27,11 @@ public final class ImageRegistryCredentialResponse {
      */
     private final String username;
 
-    @OutputCustomType.Constructor({"password","server","username"})
+    @OutputCustomType.Constructor
     private ImageRegistryCredentialResponse(
-        @Nullable String password,
-        String server,
-        String username) {
+        @OutputCustomType.Parameter("password") @Nullable String password,
+        @OutputCustomType.Parameter("server") String server,
+        @OutputCustomType.Parameter("username") String username) {
         this.password = password;
         this.server = server;
         this.username = username;

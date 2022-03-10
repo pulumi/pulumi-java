@@ -107,27 +107,27 @@ public final class GetExportConfigurationResult {
      */
     private final String subscriptionId;
 
-    @OutputCustomType.Constructor({"applicationName","containerName","destinationAccountId","destinationStorageLocationId","destinationStorageSubscriptionId","destinationType","exportId","exportStatus","instrumentationKey","isUserEnabled","lastGapTime","lastSuccessTime","lastUserUpdate","notificationQueueEnabled","permanentErrorReason","recordTypes","resourceGroup","storageName","subscriptionId"})
+    @OutputCustomType.Constructor
     private GetExportConfigurationResult(
-        String applicationName,
-        String containerName,
-        String destinationAccountId,
-        String destinationStorageLocationId,
-        String destinationStorageSubscriptionId,
-        String destinationType,
-        String exportId,
-        String exportStatus,
-        String instrumentationKey,
-        String isUserEnabled,
-        String lastGapTime,
-        String lastSuccessTime,
-        String lastUserUpdate,
-        @Nullable String notificationQueueEnabled,
-        String permanentErrorReason,
-        @Nullable String recordTypes,
-        String resourceGroup,
-        String storageName,
-        String subscriptionId) {
+        @OutputCustomType.Parameter("applicationName") String applicationName,
+        @OutputCustomType.Parameter("containerName") String containerName,
+        @OutputCustomType.Parameter("destinationAccountId") String destinationAccountId,
+        @OutputCustomType.Parameter("destinationStorageLocationId") String destinationStorageLocationId,
+        @OutputCustomType.Parameter("destinationStorageSubscriptionId") String destinationStorageSubscriptionId,
+        @OutputCustomType.Parameter("destinationType") String destinationType,
+        @OutputCustomType.Parameter("exportId") String exportId,
+        @OutputCustomType.Parameter("exportStatus") String exportStatus,
+        @OutputCustomType.Parameter("instrumentationKey") String instrumentationKey,
+        @OutputCustomType.Parameter("isUserEnabled") String isUserEnabled,
+        @OutputCustomType.Parameter("lastGapTime") String lastGapTime,
+        @OutputCustomType.Parameter("lastSuccessTime") String lastSuccessTime,
+        @OutputCustomType.Parameter("lastUserUpdate") String lastUserUpdate,
+        @OutputCustomType.Parameter("notificationQueueEnabled") @Nullable String notificationQueueEnabled,
+        @OutputCustomType.Parameter("permanentErrorReason") String permanentErrorReason,
+        @OutputCustomType.Parameter("recordTypes") @Nullable String recordTypes,
+        @OutputCustomType.Parameter("resourceGroup") String resourceGroup,
+        @OutputCustomType.Parameter("storageName") String storageName,
+        @OutputCustomType.Parameter("subscriptionId") String subscriptionId) {
         this.applicationName = applicationName;
         this.containerName = containerName;
         this.destinationAccountId = destinationAccountId;

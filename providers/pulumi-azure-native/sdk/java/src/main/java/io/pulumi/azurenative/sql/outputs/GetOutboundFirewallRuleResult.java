@@ -30,12 +30,12 @@ public final class GetOutboundFirewallRuleResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"id","name","provisioningState","type"})
+    @OutputCustomType.Constructor
     private GetOutboundFirewallRuleResult(
-        String id,
-        String name,
-        String provisioningState,
-        String type) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("type") String type) {
         this.id = id;
         this.name = name;
         this.provisioningState = provisioningState;

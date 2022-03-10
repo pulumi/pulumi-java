@@ -44,14 +44,14 @@ public final class ExpressRouteCircuitPeeringConfigResponse {
      */
     private final @Nullable String routingRegistryName;
 
-    @OutputCustomType.Constructor({"advertisedCommunities","advertisedPublicPrefixes","advertisedPublicPrefixesState","customerASN","legacyMode","routingRegistryName"})
+    @OutputCustomType.Constructor
     private ExpressRouteCircuitPeeringConfigResponse(
-        @Nullable List<String> advertisedCommunities,
-        @Nullable List<String> advertisedPublicPrefixes,
-        String advertisedPublicPrefixesState,
-        @Nullable Integer customerASN,
-        @Nullable Integer legacyMode,
-        @Nullable String routingRegistryName) {
+        @OutputCustomType.Parameter("advertisedCommunities") @Nullable List<String> advertisedCommunities,
+        @OutputCustomType.Parameter("advertisedPublicPrefixes") @Nullable List<String> advertisedPublicPrefixes,
+        @OutputCustomType.Parameter("advertisedPublicPrefixesState") String advertisedPublicPrefixesState,
+        @OutputCustomType.Parameter("customerASN") @Nullable Integer customerASN,
+        @OutputCustomType.Parameter("legacyMode") @Nullable Integer legacyMode,
+        @OutputCustomType.Parameter("routingRegistryName") @Nullable String routingRegistryName) {
         this.advertisedCommunities = advertisedCommunities;
         this.advertisedPublicPrefixes = advertisedPublicPrefixes;
         this.advertisedPublicPrefixesState = advertisedPublicPrefixesState;

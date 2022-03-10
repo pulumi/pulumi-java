@@ -52,15 +52,15 @@ public final class GetFirewallPolicyRuleCollectionGroupResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"etag","id","name","priority","provisioningState","ruleCollections","type"})
+    @OutputCustomType.Constructor
     private GetFirewallPolicyRuleCollectionGroupResult(
-        String etag,
-        @Nullable String id,
-        @Nullable String name,
-        @Nullable Integer priority,
-        String provisioningState,
-        @Nullable List<Either<FirewallPolicyFilterRuleCollectionResponse,FirewallPolicyNatRuleCollectionResponse>> ruleCollections,
-        String type) {
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("priority") @Nullable Integer priority,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("ruleCollections") @Nullable List<Either<FirewallPolicyFilterRuleCollectionResponse,FirewallPolicyNatRuleCollectionResponse>> ruleCollections,
+        @OutputCustomType.Parameter("type") String type) {
         this.etag = etag;
         this.id = id;
         this.name = name;

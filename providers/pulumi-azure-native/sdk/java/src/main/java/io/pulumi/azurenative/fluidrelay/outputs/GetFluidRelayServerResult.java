@@ -60,17 +60,17 @@ public final class GetFluidRelayServerResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"fluidRelayEndpoints","frsTenantId","id","location","name","provisioningState","systemData","tags","type"})
+    @OutputCustomType.Constructor
     private GetFluidRelayServerResult(
-        FluidRelayEndpointsResponse fluidRelayEndpoints,
-        String frsTenantId,
-        String id,
-        String location,
-        String name,
-        @Nullable String provisioningState,
-        SystemDataResponse systemData,
-        @Nullable Map<String,String> tags,
-        String type) {
+        @OutputCustomType.Parameter("fluidRelayEndpoints") FluidRelayEndpointsResponse fluidRelayEndpoints,
+        @OutputCustomType.Parameter("frsTenantId") String frsTenantId,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("provisioningState") @Nullable String provisioningState,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type) {
         this.fluidRelayEndpoints = fluidRelayEndpoints;
         this.frsTenantId = frsTenantId;
         this.id = id;

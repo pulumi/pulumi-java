@@ -37,13 +37,13 @@ public final class GetCustomerSubscriptionResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"etag","id","name","tenantId","type"})
+    @OutputCustomType.Constructor
     private GetCustomerSubscriptionResult(
-        @Nullable String etag,
-        String id,
-        String name,
-        @Nullable String tenantId,
-        String type) {
+        @OutputCustomType.Parameter("etag") @Nullable String etag,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("tenantId") @Nullable String tenantId,
+        @OutputCustomType.Parameter("type") String type) {
         this.etag = etag;
         this.id = id;
         this.name = name;

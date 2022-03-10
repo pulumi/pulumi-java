@@ -16,8 +16,8 @@ public final class DiagnosticsResponse {
      */
     private final List<DiagnosticConditionResponse> conditions;
 
-    @OutputCustomType.Constructor({"conditions"})
-    private DiagnosticsResponse(List<DiagnosticConditionResponse> conditions) {
+    @OutputCustomType.Constructor
+    private DiagnosticsResponse(@OutputCustomType.Parameter("conditions") List<DiagnosticConditionResponse> conditions) {
         this.conditions = conditions;
     }
 

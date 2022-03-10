@@ -27,11 +27,11 @@ public final class IotHubSettingsResponse {
      */
     private final String resourceId;
 
-    @OutputCustomType.Constructor({"eventHubConnectionString","ioTHubConnectionString","resourceId"})
+    @OutputCustomType.Constructor
     private IotHubSettingsResponse(
-        @Nullable String eventHubConnectionString,
-        @Nullable String ioTHubConnectionString,
-        String resourceId) {
+        @OutputCustomType.Parameter("eventHubConnectionString") @Nullable String eventHubConnectionString,
+        @OutputCustomType.Parameter("ioTHubConnectionString") @Nullable String ioTHubConnectionString,
+        @OutputCustomType.Parameter("resourceId") String resourceId) {
         this.eventHubConnectionString = eventHubConnectionString;
         this.ioTHubConnectionString = ioTHubConnectionString;
         this.resourceId = resourceId;

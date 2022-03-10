@@ -27,11 +27,11 @@ public final class AzureMonitorWorkspacePropertiesResponse {
      */
     private final @Nullable String workspaceResourceId;
 
-    @OutputCustomType.Constructor({"includeChangeDetails","workspaceId","workspaceResourceId"})
+    @OutputCustomType.Constructor
     private AzureMonitorWorkspacePropertiesResponse(
-        @Nullable String includeChangeDetails,
-        @Nullable String workspaceId,
-        @Nullable String workspaceResourceId) {
+        @OutputCustomType.Parameter("includeChangeDetails") @Nullable String includeChangeDetails,
+        @OutputCustomType.Parameter("workspaceId") @Nullable String workspaceId,
+        @OutputCustomType.Parameter("workspaceResourceId") @Nullable String workspaceResourceId) {
         this.includeChangeDetails = includeChangeDetails;
         this.workspaceId = workspaceId;
         this.workspaceResourceId = workspaceResourceId;

@@ -105,23 +105,23 @@ public final class ListChannelWithKeysResult {
      */
     private final List<String> zones;
 
-    @OutputCustomType.Constructor({"changedTime","entityTag","etag","id","kind","location","name","properties","provisioningState","resource","setting","sku","tags","type","zones"})
+    @OutputCustomType.Constructor
     private ListChannelWithKeysResult(
-        @Nullable String changedTime,
-        @Nullable String entityTag,
-        @Nullable String etag,
-        String id,
-        @Nullable String kind,
-        @Nullable String location,
-        String name,
-        Object properties,
-        @Nullable String provisioningState,
-        @Nullable Object resource,
-        @Nullable ChannelSettingsResponse setting,
-        @Nullable SkuResponse sku,
-        @Nullable Map<String,String> tags,
-        String type,
-        List<String> zones) {
+        @OutputCustomType.Parameter("changedTime") @Nullable String changedTime,
+        @OutputCustomType.Parameter("entityTag") @Nullable String entityTag,
+        @OutputCustomType.Parameter("etag") @Nullable String etag,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("kind") @Nullable String kind,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("properties") Object properties,
+        @OutputCustomType.Parameter("provisioningState") @Nullable String provisioningState,
+        @OutputCustomType.Parameter("resource") @Nullable Object resource,
+        @OutputCustomType.Parameter("setting") @Nullable ChannelSettingsResponse setting,
+        @OutputCustomType.Parameter("sku") @Nullable SkuResponse sku,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("zones") List<String> zones) {
         this.changedTime = changedTime;
         this.entityTag = entityTag;
         this.etag = etag;

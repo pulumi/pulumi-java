@@ -35,12 +35,12 @@ public final class ServerConfigurationsManagementSettingsResponse {
      */
     private final @Nullable SqlWorkloadTypeUpdateSettingsResponse sqlWorkloadTypeUpdateSettings;
 
-    @OutputCustomType.Constructor({"additionalFeaturesServerConfigurations","sqlConnectivityUpdateSettings","sqlStorageUpdateSettings","sqlWorkloadTypeUpdateSettings"})
+    @OutputCustomType.Constructor
     private ServerConfigurationsManagementSettingsResponse(
-        @Nullable AdditionalFeaturesServerConfigurationsResponse additionalFeaturesServerConfigurations,
-        @Nullable SqlConnectivityUpdateSettingsResponse sqlConnectivityUpdateSettings,
-        @Nullable SqlStorageUpdateSettingsResponse sqlStorageUpdateSettings,
-        @Nullable SqlWorkloadTypeUpdateSettingsResponse sqlWorkloadTypeUpdateSettings) {
+        @OutputCustomType.Parameter("additionalFeaturesServerConfigurations") @Nullable AdditionalFeaturesServerConfigurationsResponse additionalFeaturesServerConfigurations,
+        @OutputCustomType.Parameter("sqlConnectivityUpdateSettings") @Nullable SqlConnectivityUpdateSettingsResponse sqlConnectivityUpdateSettings,
+        @OutputCustomType.Parameter("sqlStorageUpdateSettings") @Nullable SqlStorageUpdateSettingsResponse sqlStorageUpdateSettings,
+        @OutputCustomType.Parameter("sqlWorkloadTypeUpdateSettings") @Nullable SqlWorkloadTypeUpdateSettingsResponse sqlWorkloadTypeUpdateSettings) {
         this.additionalFeaturesServerConfigurations = additionalFeaturesServerConfigurations;
         this.sqlConnectivityUpdateSettings = sqlConnectivityUpdateSettings;
         this.sqlStorageUpdateSettings = sqlStorageUpdateSettings;

@@ -15,8 +15,8 @@ public final class SSISExecutionParameterResponse {
      */
     private final Object value;
 
-    @OutputCustomType.Constructor({"value"})
-    private SSISExecutionParameterResponse(Object value) {
+    @OutputCustomType.Constructor
+    private SSISExecutionParameterResponse(@OutputCustomType.Parameter("value") Object value) {
         this.value = value;
     }
 

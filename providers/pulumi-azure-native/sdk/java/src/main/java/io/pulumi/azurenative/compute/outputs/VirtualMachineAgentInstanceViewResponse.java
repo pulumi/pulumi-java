@@ -30,11 +30,11 @@ public final class VirtualMachineAgentInstanceViewResponse {
      */
     private final @Nullable String vmAgentVersion;
 
-    @OutputCustomType.Constructor({"extensionHandlers","statuses","vmAgentVersion"})
+    @OutputCustomType.Constructor
     private VirtualMachineAgentInstanceViewResponse(
-        @Nullable List<VirtualMachineExtensionHandlerInstanceViewResponse> extensionHandlers,
-        @Nullable List<InstanceViewStatusResponse> statuses,
-        @Nullable String vmAgentVersion) {
+        @OutputCustomType.Parameter("extensionHandlers") @Nullable List<VirtualMachineExtensionHandlerInstanceViewResponse> extensionHandlers,
+        @OutputCustomType.Parameter("statuses") @Nullable List<InstanceViewStatusResponse> statuses,
+        @OutputCustomType.Parameter("vmAgentVersion") @Nullable String vmAgentVersion) {
         this.extensionHandlers = extensionHandlers;
         this.statuses = statuses;
         this.vmAgentVersion = vmAgentVersion;

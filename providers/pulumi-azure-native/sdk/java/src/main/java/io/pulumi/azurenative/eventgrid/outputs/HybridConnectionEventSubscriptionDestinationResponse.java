@@ -23,10 +23,10 @@ public final class HybridConnectionEventSubscriptionDestinationResponse {
      */
     private final @Nullable String resourceId;
 
-    @OutputCustomType.Constructor({"endpointType","resourceId"})
+    @OutputCustomType.Constructor
     private HybridConnectionEventSubscriptionDestinationResponse(
-        String endpointType,
-        @Nullable String resourceId) {
+        @OutputCustomType.Parameter("endpointType") String endpointType,
+        @OutputCustomType.Parameter("resourceId") @Nullable String resourceId) {
         this.endpointType = endpointType;
         this.resourceId = resourceId;
     }

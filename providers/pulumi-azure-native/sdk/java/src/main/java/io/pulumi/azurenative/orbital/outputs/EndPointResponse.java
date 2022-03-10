@@ -30,12 +30,12 @@ public final class EndPointResponse {
      */
     private final String protocol;
 
-    @OutputCustomType.Constructor({"endPointName","ipAddress","port","protocol"})
+    @OutputCustomType.Constructor
     private EndPointResponse(
-        String endPointName,
-        String ipAddress,
-        String port,
-        String protocol) {
+        @OutputCustomType.Parameter("endPointName") String endPointName,
+        @OutputCustomType.Parameter("ipAddress") String ipAddress,
+        @OutputCustomType.Parameter("port") String port,
+        @OutputCustomType.Parameter("protocol") String protocol) {
         this.endPointName = endPointName;
         this.ipAddress = ipAddress;
         this.port = port;

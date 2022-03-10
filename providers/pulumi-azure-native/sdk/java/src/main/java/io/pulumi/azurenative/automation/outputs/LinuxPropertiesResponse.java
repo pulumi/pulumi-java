@@ -33,12 +33,12 @@ public final class LinuxPropertiesResponse {
      */
     private final @Nullable String rebootSetting;
 
-    @OutputCustomType.Constructor({"excludedPackageNameMasks","includedPackageClassifications","includedPackageNameMasks","rebootSetting"})
+    @OutputCustomType.Constructor
     private LinuxPropertiesResponse(
-        @Nullable List<String> excludedPackageNameMasks,
-        @Nullable String includedPackageClassifications,
-        @Nullable List<String> includedPackageNameMasks,
-        @Nullable String rebootSetting) {
+        @OutputCustomType.Parameter("excludedPackageNameMasks") @Nullable List<String> excludedPackageNameMasks,
+        @OutputCustomType.Parameter("includedPackageClassifications") @Nullable String includedPackageClassifications,
+        @OutputCustomType.Parameter("includedPackageNameMasks") @Nullable List<String> includedPackageNameMasks,
+        @OutputCustomType.Parameter("rebootSetting") @Nullable String rebootSetting) {
         this.excludedPackageNameMasks = excludedPackageNameMasks;
         this.includedPackageClassifications = includedPackageClassifications;
         this.includedPackageNameMasks = includedPackageNameMasks;

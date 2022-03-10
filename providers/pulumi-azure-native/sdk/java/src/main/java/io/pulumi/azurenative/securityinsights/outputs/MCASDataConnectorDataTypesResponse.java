@@ -22,10 +22,10 @@ public final class MCASDataConnectorDataTypesResponse {
      */
     private final @Nullable DataConnectorDataTypeCommonResponse discoveryLogs;
 
-    @OutputCustomType.Constructor({"alerts","discoveryLogs"})
+    @OutputCustomType.Constructor
     private MCASDataConnectorDataTypesResponse(
-        @Nullable DataConnectorDataTypeCommonResponse alerts,
-        @Nullable DataConnectorDataTypeCommonResponse discoveryLogs) {
+        @OutputCustomType.Parameter("alerts") @Nullable DataConnectorDataTypeCommonResponse alerts,
+        @OutputCustomType.Parameter("discoveryLogs") @Nullable DataConnectorDataTypeCommonResponse discoveryLogs) {
         this.alerts = alerts;
         this.discoveryLogs = discoveryLogs;
     }

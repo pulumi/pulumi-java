@@ -34,12 +34,12 @@ public final class VmwareCbtPolicyDetailsResponse {
      */
     private final @Nullable Integer recoveryPointHistoryInMinutes;
 
-    @OutputCustomType.Constructor({"appConsistentFrequencyInMinutes","crashConsistentFrequencyInMinutes","instanceType","recoveryPointHistoryInMinutes"})
+    @OutputCustomType.Constructor
     private VmwareCbtPolicyDetailsResponse(
-        @Nullable Integer appConsistentFrequencyInMinutes,
-        @Nullable Integer crashConsistentFrequencyInMinutes,
-        String instanceType,
-        @Nullable Integer recoveryPointHistoryInMinutes) {
+        @OutputCustomType.Parameter("appConsistentFrequencyInMinutes") @Nullable Integer appConsistentFrequencyInMinutes,
+        @OutputCustomType.Parameter("crashConsistentFrequencyInMinutes") @Nullable Integer crashConsistentFrequencyInMinutes,
+        @OutputCustomType.Parameter("instanceType") String instanceType,
+        @OutputCustomType.Parameter("recoveryPointHistoryInMinutes") @Nullable Integer recoveryPointHistoryInMinutes) {
         this.appConsistentFrequencyInMinutes = appConsistentFrequencyInMinutes;
         this.crashConsistentFrequencyInMinutes = crashConsistentFrequencyInMinutes;
         this.instanceType = instanceType;

@@ -21,10 +21,10 @@ public final class StorageAccountDetailsResponse {
      */
     private final String storageAccountId;
 
-    @OutputCustomType.Constructor({"dataAccountType","storageAccountId"})
+    @OutputCustomType.Constructor
     private StorageAccountDetailsResponse(
-        String dataAccountType,
-        String storageAccountId) {
+        @OutputCustomType.Parameter("dataAccountType") String dataAccountType,
+        @OutputCustomType.Parameter("storageAccountId") String storageAccountId) {
         this.dataAccountType = dataAccountType;
         this.storageAccountId = storageAccountId;
     }

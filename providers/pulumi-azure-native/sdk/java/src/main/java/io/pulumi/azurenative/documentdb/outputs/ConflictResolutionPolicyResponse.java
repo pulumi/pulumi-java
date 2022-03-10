@@ -27,11 +27,11 @@ public final class ConflictResolutionPolicyResponse {
      */
     private final @Nullable String mode;
 
-    @OutputCustomType.Constructor({"conflictResolutionPath","conflictResolutionProcedure","mode"})
+    @OutputCustomType.Constructor
     private ConflictResolutionPolicyResponse(
-        @Nullable String conflictResolutionPath,
-        @Nullable String conflictResolutionProcedure,
-        @Nullable String mode) {
+        @OutputCustomType.Parameter("conflictResolutionPath") @Nullable String conflictResolutionPath,
+        @OutputCustomType.Parameter("conflictResolutionProcedure") @Nullable String conflictResolutionProcedure,
+        @OutputCustomType.Parameter("mode") @Nullable String mode) {
         this.conflictResolutionPath = conflictResolutionPath;
         this.conflictResolutionProcedure = conflictResolutionProcedure;
         this.mode = mode;

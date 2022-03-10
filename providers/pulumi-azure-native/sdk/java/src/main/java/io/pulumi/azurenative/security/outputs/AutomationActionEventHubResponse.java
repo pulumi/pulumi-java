@@ -33,12 +33,12 @@ public final class AutomationActionEventHubResponse {
      */
     private final String sasPolicyName;
 
-    @OutputCustomType.Constructor({"actionType","connectionString","eventHubResourceId","sasPolicyName"})
+    @OutputCustomType.Constructor
     private AutomationActionEventHubResponse(
-        String actionType,
-        @Nullable String connectionString,
-        @Nullable String eventHubResourceId,
-        String sasPolicyName) {
+        @OutputCustomType.Parameter("actionType") String actionType,
+        @OutputCustomType.Parameter("connectionString") @Nullable String connectionString,
+        @OutputCustomType.Parameter("eventHubResourceId") @Nullable String eventHubResourceId,
+        @OutputCustomType.Parameter("sasPolicyName") String sasPolicyName) {
         this.actionType = actionType;
         this.connectionString = connectionString;
         this.eventHubResourceId = eventHubResourceId;

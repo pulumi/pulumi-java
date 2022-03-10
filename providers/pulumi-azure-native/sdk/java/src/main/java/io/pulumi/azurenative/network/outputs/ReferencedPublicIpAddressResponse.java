@@ -17,8 +17,8 @@ public final class ReferencedPublicIpAddressResponse {
      */
     private final @Nullable String id;
 
-    @OutputCustomType.Constructor({"id"})
-    private ReferencedPublicIpAddressResponse(@Nullable String id) {
+    @OutputCustomType.Constructor
+    private ReferencedPublicIpAddressResponse(@OutputCustomType.Parameter("id") @Nullable String id) {
         this.id = id;
     }
 

@@ -56,16 +56,16 @@ public final class ImageTemplatePowerShellCustomizerResponse {
      */
     private final @Nullable List<Integer> validExitCodes;
 
-    @OutputCustomType.Constructor({"inline","name","runAsSystem","runElevated","scriptUri","sha256Checksum","type","validExitCodes"})
+    @OutputCustomType.Constructor
     private ImageTemplatePowerShellCustomizerResponse(
-        @Nullable List<String> inline,
-        @Nullable String name,
-        @Nullable Boolean runAsSystem,
-        @Nullable Boolean runElevated,
-        @Nullable String scriptUri,
-        @Nullable String sha256Checksum,
-        String type,
-        @Nullable List<Integer> validExitCodes) {
+        @OutputCustomType.Parameter("inline") @Nullable List<String> inline,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("runAsSystem") @Nullable Boolean runAsSystem,
+        @OutputCustomType.Parameter("runElevated") @Nullable Boolean runElevated,
+        @OutputCustomType.Parameter("scriptUri") @Nullable String scriptUri,
+        @OutputCustomType.Parameter("sha256Checksum") @Nullable String sha256Checksum,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("validExitCodes") @Nullable List<Integer> validExitCodes) {
         this.inline = inline;
         this.name = name;
         this.runAsSystem = runAsSystem;

@@ -30,11 +30,11 @@ public final class NumberNotInAdvancedFilterResponse {
      */
     private final @Nullable List<Double> values;
 
-    @OutputCustomType.Constructor({"key","operatorType","values"})
+    @OutputCustomType.Constructor
     private NumberNotInAdvancedFilterResponse(
-        @Nullable String key,
-        String operatorType,
-        @Nullable List<Double> values) {
+        @OutputCustomType.Parameter("key") @Nullable String key,
+        @OutputCustomType.Parameter("operatorType") String operatorType,
+        @OutputCustomType.Parameter("values") @Nullable List<Double> values) {
         this.key = key;
         this.operatorType = operatorType;
         this.values = values;

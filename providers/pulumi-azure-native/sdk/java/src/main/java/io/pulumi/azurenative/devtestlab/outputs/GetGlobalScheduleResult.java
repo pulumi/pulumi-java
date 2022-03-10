@@ -97,24 +97,24 @@ public final class GetGlobalScheduleResult {
      */
     private final @Nullable WeekDetailsResponse weeklyRecurrence;
 
-    @OutputCustomType.Constructor({"createdDate","dailyRecurrence","hourlyRecurrence","id","location","name","notificationSettings","provisioningState","status","tags","targetResourceId","taskType","timeZoneId","type","uniqueIdentifier","weeklyRecurrence"})
+    @OutputCustomType.Constructor
     private GetGlobalScheduleResult(
-        String createdDate,
-        @Nullable DayDetailsResponse dailyRecurrence,
-        @Nullable HourDetailsResponse hourlyRecurrence,
-        String id,
-        @Nullable String location,
-        String name,
-        @Nullable NotificationSettingsResponse notificationSettings,
-        String provisioningState,
-        @Nullable String status,
-        @Nullable Map<String,String> tags,
-        @Nullable String targetResourceId,
-        @Nullable String taskType,
-        @Nullable String timeZoneId,
-        String type,
-        String uniqueIdentifier,
-        @Nullable WeekDetailsResponse weeklyRecurrence) {
+        @OutputCustomType.Parameter("createdDate") String createdDate,
+        @OutputCustomType.Parameter("dailyRecurrence") @Nullable DayDetailsResponse dailyRecurrence,
+        @OutputCustomType.Parameter("hourlyRecurrence") @Nullable HourDetailsResponse hourlyRecurrence,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("notificationSettings") @Nullable NotificationSettingsResponse notificationSettings,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("status") @Nullable String status,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("targetResourceId") @Nullable String targetResourceId,
+        @OutputCustomType.Parameter("taskType") @Nullable String taskType,
+        @OutputCustomType.Parameter("timeZoneId") @Nullable String timeZoneId,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("uniqueIdentifier") String uniqueIdentifier,
+        @OutputCustomType.Parameter("weeklyRecurrence") @Nullable WeekDetailsResponse weeklyRecurrence) {
         this.createdDate = createdDate;
         this.dailyRecurrence = dailyRecurrence;
         this.hourlyRecurrence = hourlyRecurrence;

@@ -49,15 +49,15 @@ public final class GetMigrateProjectResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"eTag","id","location","name","properties","tags","type"})
+    @OutputCustomType.Constructor
     private GetMigrateProjectResult(
-        @Nullable String eTag,
-        String id,
-        @Nullable String location,
-        String name,
-        MigrateProjectPropertiesResponse properties,
-        @Nullable MigrateProjectResponseTags tags,
-        String type) {
+        @OutputCustomType.Parameter("eTag") @Nullable String eTag,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("properties") MigrateProjectPropertiesResponse properties,
+        @OutputCustomType.Parameter("tags") @Nullable MigrateProjectResponseTags tags,
+        @OutputCustomType.Parameter("type") String type) {
         this.eTag = eTag;
         this.id = id;
         this.location = location;

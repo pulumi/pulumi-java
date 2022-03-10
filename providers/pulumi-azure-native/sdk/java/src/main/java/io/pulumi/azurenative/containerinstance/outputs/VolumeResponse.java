@@ -41,13 +41,13 @@ public final class VolumeResponse {
      */
     private final @Nullable Map<String,String> secret;
 
-    @OutputCustomType.Constructor({"azureFile","emptyDir","gitRepo","name","secret"})
+    @OutputCustomType.Constructor
     private VolumeResponse(
-        @Nullable AzureFileVolumeResponse azureFile,
-        @Nullable Object emptyDir,
-        @Nullable GitRepoVolumeResponse gitRepo,
-        String name,
-        @Nullable Map<String,String> secret) {
+        @OutputCustomType.Parameter("azureFile") @Nullable AzureFileVolumeResponse azureFile,
+        @OutputCustomType.Parameter("emptyDir") @Nullable Object emptyDir,
+        @OutputCustomType.Parameter("gitRepo") @Nullable GitRepoVolumeResponse gitRepo,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("secret") @Nullable Map<String,String> secret) {
         this.azureFile = azureFile;
         this.emptyDir = emptyDir;
         this.gitRepo = gitRepo;

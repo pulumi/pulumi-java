@@ -51,15 +51,15 @@ public final class ObjectStatusDefinitionResponse {
      */
     private final @Nullable List<ObjectStatusConditionDefinitionResponse> statusConditions;
 
-    @OutputCustomType.Constructor({"appliedBy","complianceState","helmReleaseProperties","kind","name","namespace","statusConditions"})
+    @OutputCustomType.Constructor
     private ObjectStatusDefinitionResponse(
-        @Nullable ObjectReferenceDefinitionResponse appliedBy,
-        @Nullable String complianceState,
-        @Nullable HelmReleasePropertiesDefinitionResponse helmReleaseProperties,
-        @Nullable String kind,
-        @Nullable String name,
-        @Nullable String namespace,
-        @Nullable List<ObjectStatusConditionDefinitionResponse> statusConditions) {
+        @OutputCustomType.Parameter("appliedBy") @Nullable ObjectReferenceDefinitionResponse appliedBy,
+        @OutputCustomType.Parameter("complianceState") @Nullable String complianceState,
+        @OutputCustomType.Parameter("helmReleaseProperties") @Nullable HelmReleasePropertiesDefinitionResponse helmReleaseProperties,
+        @OutputCustomType.Parameter("kind") @Nullable String kind,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("namespace") @Nullable String namespace,
+        @OutputCustomType.Parameter("statusConditions") @Nullable List<ObjectStatusConditionDefinitionResponse> statusConditions) {
         this.appliedBy = appliedBy;
         this.complianceState = complianceState;
         this.helmReleaseProperties = helmReleaseProperties;

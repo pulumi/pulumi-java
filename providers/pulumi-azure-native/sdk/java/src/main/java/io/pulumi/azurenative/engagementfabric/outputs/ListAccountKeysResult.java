@@ -16,8 +16,8 @@ public final class ListAccountKeysResult {
      */
     private final List<KeyDescriptionResponse> value;
 
-    @OutputCustomType.Constructor({"value"})
-    private ListAccountKeysResult(List<KeyDescriptionResponse> value) {
+    @OutputCustomType.Constructor
+    private ListAccountKeysResult(@OutputCustomType.Parameter("value") List<KeyDescriptionResponse> value) {
         this.value = value;
     }
 

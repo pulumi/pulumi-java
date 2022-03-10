@@ -27,12 +27,12 @@ public final class GetProviderRegistrationResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"id","name","properties","type"})
+    @OutputCustomType.Constructor
     private GetProviderRegistrationResult(
-        String id,
-        String name,
-        ProviderRegistrationResponseProperties properties,
-        String type) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("properties") ProviderRegistrationResponseProperties properties,
+        @OutputCustomType.Parameter("type") String type) {
         this.id = id;
         this.name = name;
         this.properties = properties;

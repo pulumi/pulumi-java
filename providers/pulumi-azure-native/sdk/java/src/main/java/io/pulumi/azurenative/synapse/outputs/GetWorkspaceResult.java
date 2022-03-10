@@ -138,31 +138,31 @@ public final class GetWorkspaceResult {
      */
     private final String workspaceUID;
 
-    @OutputCustomType.Constructor({"adlaResourceId","connectivityEndpoints","defaultDataLakeStorage","encryption","extraProperties","id","identity","location","managedResourceGroupName","managedVirtualNetwork","managedVirtualNetworkSettings","name","privateEndpointConnections","provisioningState","publicNetworkAccess","purviewConfiguration","sqlAdministratorLogin","sqlAdministratorLoginPassword","tags","type","virtualNetworkProfile","workspaceRepositoryConfiguration","workspaceUID"})
+    @OutputCustomType.Constructor
     private GetWorkspaceResult(
-        String adlaResourceId,
-        @Nullable Map<String,String> connectivityEndpoints,
-        @Nullable DataLakeStorageAccountDetailsResponse defaultDataLakeStorage,
-        @Nullable EncryptionDetailsResponse encryption,
-        Map<String,Object> extraProperties,
-        String id,
-        @Nullable ManagedIdentityResponse identity,
-        String location,
-        @Nullable String managedResourceGroupName,
-        @Nullable String managedVirtualNetwork,
-        @Nullable ManagedVirtualNetworkSettingsResponse managedVirtualNetworkSettings,
-        String name,
-        @Nullable List<PrivateEndpointConnectionResponse> privateEndpointConnections,
-        String provisioningState,
-        @Nullable String publicNetworkAccess,
-        @Nullable PurviewConfigurationResponse purviewConfiguration,
-        @Nullable String sqlAdministratorLogin,
-        @Nullable String sqlAdministratorLoginPassword,
-        @Nullable Map<String,String> tags,
-        String type,
-        @Nullable VirtualNetworkProfileResponse virtualNetworkProfile,
-        @Nullable WorkspaceRepositoryConfigurationResponse workspaceRepositoryConfiguration,
-        String workspaceUID) {
+        @OutputCustomType.Parameter("adlaResourceId") String adlaResourceId,
+        @OutputCustomType.Parameter("connectivityEndpoints") @Nullable Map<String,String> connectivityEndpoints,
+        @OutputCustomType.Parameter("defaultDataLakeStorage") @Nullable DataLakeStorageAccountDetailsResponse defaultDataLakeStorage,
+        @OutputCustomType.Parameter("encryption") @Nullable EncryptionDetailsResponse encryption,
+        @OutputCustomType.Parameter("extraProperties") Map<String,Object> extraProperties,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("identity") @Nullable ManagedIdentityResponse identity,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("managedResourceGroupName") @Nullable String managedResourceGroupName,
+        @OutputCustomType.Parameter("managedVirtualNetwork") @Nullable String managedVirtualNetwork,
+        @OutputCustomType.Parameter("managedVirtualNetworkSettings") @Nullable ManagedVirtualNetworkSettingsResponse managedVirtualNetworkSettings,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("privateEndpointConnections") @Nullable List<PrivateEndpointConnectionResponse> privateEndpointConnections,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("publicNetworkAccess") @Nullable String publicNetworkAccess,
+        @OutputCustomType.Parameter("purviewConfiguration") @Nullable PurviewConfigurationResponse purviewConfiguration,
+        @OutputCustomType.Parameter("sqlAdministratorLogin") @Nullable String sqlAdministratorLogin,
+        @OutputCustomType.Parameter("sqlAdministratorLoginPassword") @Nullable String sqlAdministratorLoginPassword,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("virtualNetworkProfile") @Nullable VirtualNetworkProfileResponse virtualNetworkProfile,
+        @OutputCustomType.Parameter("workspaceRepositoryConfiguration") @Nullable WorkspaceRepositoryConfigurationResponse workspaceRepositoryConfiguration,
+        @OutputCustomType.Parameter("workspaceUID") String workspaceUID) {
         this.adlaResourceId = adlaResourceId;
         this.connectivityEndpoints = connectivityEndpoints;
         this.defaultDataLakeStorage = defaultDataLakeStorage;

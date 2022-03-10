@@ -48,15 +48,15 @@ public final class SoaRecordResponse {
      */
     private final @Nullable Double serialNumber;
 
-    @OutputCustomType.Constructor({"email","expireTime","host","minimumTtl","refreshTime","retryTime","serialNumber"})
+    @OutputCustomType.Constructor
     private SoaRecordResponse(
-        @Nullable String email,
-        @Nullable Double expireTime,
-        @Nullable String host,
-        @Nullable Double minimumTtl,
-        @Nullable Double refreshTime,
-        @Nullable Double retryTime,
-        @Nullable Double serialNumber) {
+        @OutputCustomType.Parameter("email") @Nullable String email,
+        @OutputCustomType.Parameter("expireTime") @Nullable Double expireTime,
+        @OutputCustomType.Parameter("host") @Nullable String host,
+        @OutputCustomType.Parameter("minimumTtl") @Nullable Double minimumTtl,
+        @OutputCustomType.Parameter("refreshTime") @Nullable Double refreshTime,
+        @OutputCustomType.Parameter("retryTime") @Nullable Double retryTime,
+        @OutputCustomType.Parameter("serialNumber") @Nullable Double serialNumber) {
         this.email = email;
         this.expireTime = expireTime;
         this.host = host;

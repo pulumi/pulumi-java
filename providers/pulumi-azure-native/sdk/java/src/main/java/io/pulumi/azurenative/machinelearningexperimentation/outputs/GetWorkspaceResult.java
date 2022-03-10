@@ -68,19 +68,19 @@ public final class GetWorkspaceResult {
      */
     private final String workspaceId;
 
-    @OutputCustomType.Constructor({"accountId","creationDate","description","friendlyName","id","location","name","provisioningState","tags","type","workspaceId"})
+    @OutputCustomType.Constructor
     private GetWorkspaceResult(
-        String accountId,
-        String creationDate,
-        @Nullable String description,
-        String friendlyName,
-        String id,
-        String location,
-        String name,
-        String provisioningState,
-        @Nullable Map<String,String> tags,
-        String type,
-        String workspaceId) {
+        @OutputCustomType.Parameter("accountId") String accountId,
+        @OutputCustomType.Parameter("creationDate") String creationDate,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("friendlyName") String friendlyName,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("workspaceId") String workspaceId) {
         this.accountId = accountId;
         this.creationDate = creationDate;
         this.description = description;

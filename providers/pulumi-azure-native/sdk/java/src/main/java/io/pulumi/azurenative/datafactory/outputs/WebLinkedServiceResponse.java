@@ -51,14 +51,14 @@ public final class WebLinkedServiceResponse {
      */
     private final Object typeProperties;
 
-    @OutputCustomType.Constructor({"annotations","connectVia","description","parameters","type","typeProperties"})
+    @OutputCustomType.Constructor
     private WebLinkedServiceResponse(
-        @Nullable List<Object> annotations,
-        @Nullable IntegrationRuntimeReferenceResponse connectVia,
-        @Nullable String description,
-        @Nullable Map<String,ParameterSpecificationResponse> parameters,
-        String type,
-        Object typeProperties) {
+        @OutputCustomType.Parameter("annotations") @Nullable List<Object> annotations,
+        @OutputCustomType.Parameter("connectVia") @Nullable IntegrationRuntimeReferenceResponse connectVia,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("parameters") @Nullable Map<String,ParameterSpecificationResponse> parameters,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("typeProperties") Object typeProperties) {
         this.annotations = annotations;
         this.connectVia = connectVia;
         this.description = description;

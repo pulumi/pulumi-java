@@ -22,10 +22,10 @@ public final class UserIdentityContractResponse {
      */
     private final @Nullable String provider;
 
-    @OutputCustomType.Constructor({"id","provider"})
+    @OutputCustomType.Constructor
     private UserIdentityContractResponse(
-        @Nullable String id,
-        @Nullable String provider) {
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("provider") @Nullable String provider) {
         this.id = id;
         this.provider = provider;
     }

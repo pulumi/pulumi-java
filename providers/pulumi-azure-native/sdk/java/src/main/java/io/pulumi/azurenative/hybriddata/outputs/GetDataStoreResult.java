@@ -55,16 +55,16 @@ public final class GetDataStoreResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"customerSecrets","dataStoreTypeId","extendedProperties","id","name","repositoryId","state","type"})
+    @OutputCustomType.Constructor
     private GetDataStoreResult(
-        @Nullable List<CustomerSecretResponse> customerSecrets,
-        String dataStoreTypeId,
-        @Nullable Object extendedProperties,
-        String id,
-        String name,
-        @Nullable String repositoryId,
-        String state,
-        String type) {
+        @OutputCustomType.Parameter("customerSecrets") @Nullable List<CustomerSecretResponse> customerSecrets,
+        @OutputCustomType.Parameter("dataStoreTypeId") String dataStoreTypeId,
+        @OutputCustomType.Parameter("extendedProperties") @Nullable Object extendedProperties,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("repositoryId") @Nullable String repositoryId,
+        @OutputCustomType.Parameter("state") String state,
+        @OutputCustomType.Parameter("type") String type) {
         this.customerSecrets = customerSecrets;
         this.dataStoreTypeId = dataStoreTypeId;
         this.extendedProperties = extendedProperties;

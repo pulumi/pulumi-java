@@ -56,17 +56,17 @@ public final class ClusterNodeResponse {
      */
     private final String serialNumber;
 
-    @OutputCustomType.Constructor({"coreCount","id","manufacturer","memoryInGiB","model","name","osName","osVersion","serialNumber"})
+    @OutputCustomType.Constructor
     private ClusterNodeResponse(
-        Double coreCount,
-        Double id,
-        String manufacturer,
-        Double memoryInGiB,
-        String model,
-        String name,
-        String osName,
-        String osVersion,
-        String serialNumber) {
+        @OutputCustomType.Parameter("coreCount") Double coreCount,
+        @OutputCustomType.Parameter("id") Double id,
+        @OutputCustomType.Parameter("manufacturer") String manufacturer,
+        @OutputCustomType.Parameter("memoryInGiB") Double memoryInGiB,
+        @OutputCustomType.Parameter("model") String model,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("osName") String osName,
+        @OutputCustomType.Parameter("osVersion") String osVersion,
+        @OutputCustomType.Parameter("serialNumber") String serialNumber) {
         this.coreCount = coreCount;
         this.id = id;
         this.manufacturer = manufacturer;

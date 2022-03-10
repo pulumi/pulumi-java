@@ -28,11 +28,11 @@ public final class AzureVmWorkloadProtectedItemExtendedInfoResponse {
      */
     private final @Nullable Integer recoveryPointCount;
 
-    @OutputCustomType.Constructor({"oldestRecoveryPoint","policyState","recoveryPointCount"})
+    @OutputCustomType.Constructor
     private AzureVmWorkloadProtectedItemExtendedInfoResponse(
-        @Nullable String oldestRecoveryPoint,
-        @Nullable String policyState,
-        @Nullable Integer recoveryPointCount) {
+        @OutputCustomType.Parameter("oldestRecoveryPoint") @Nullable String oldestRecoveryPoint,
+        @OutputCustomType.Parameter("policyState") @Nullable String policyState,
+        @OutputCustomType.Parameter("recoveryPointCount") @Nullable Integer recoveryPointCount) {
         this.oldestRecoveryPoint = oldestRecoveryPoint;
         this.policyState = policyState;
         this.recoveryPointCount = recoveryPointCount;

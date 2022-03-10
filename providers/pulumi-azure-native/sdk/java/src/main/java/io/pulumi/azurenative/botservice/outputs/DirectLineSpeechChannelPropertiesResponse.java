@@ -43,14 +43,14 @@ public final class DirectLineSpeechChannelPropertiesResponse {
      */
     private final @Nullable Boolean isEnabled;
 
-    @OutputCustomType.Constructor({"cognitiveServiceRegion","cognitiveServiceSubscriptionKey","customSpeechModelId","customVoiceDeploymentId","isDefaultBotForCogSvcAccount","isEnabled"})
+    @OutputCustomType.Constructor
     private DirectLineSpeechChannelPropertiesResponse(
-        String cognitiveServiceRegion,
-        String cognitiveServiceSubscriptionKey,
-        @Nullable String customSpeechModelId,
-        @Nullable String customVoiceDeploymentId,
-        @Nullable Boolean isDefaultBotForCogSvcAccount,
-        @Nullable Boolean isEnabled) {
+        @OutputCustomType.Parameter("cognitiveServiceRegion") String cognitiveServiceRegion,
+        @OutputCustomType.Parameter("cognitiveServiceSubscriptionKey") String cognitiveServiceSubscriptionKey,
+        @OutputCustomType.Parameter("customSpeechModelId") @Nullable String customSpeechModelId,
+        @OutputCustomType.Parameter("customVoiceDeploymentId") @Nullable String customVoiceDeploymentId,
+        @OutputCustomType.Parameter("isDefaultBotForCogSvcAccount") @Nullable Boolean isDefaultBotForCogSvcAccount,
+        @OutputCustomType.Parameter("isEnabled") @Nullable Boolean isEnabled) {
         this.cognitiveServiceRegion = cognitiveServiceRegion;
         this.cognitiveServiceSubscriptionKey = cognitiveServiceSubscriptionKey;
         this.customSpeechModelId = customSpeechModelId;

@@ -30,11 +30,11 @@ public final class NetworkProfileResponse {
      */
     private final @Nullable List<NetworkInterfaceReferenceResponse> networkInterfaces;
 
-    @OutputCustomType.Constructor({"networkApiVersion","networkInterfaceConfigurations","networkInterfaces"})
+    @OutputCustomType.Constructor
     private NetworkProfileResponse(
-        @Nullable String networkApiVersion,
-        @Nullable List<VirtualMachineNetworkInterfaceConfigurationResponse> networkInterfaceConfigurations,
-        @Nullable List<NetworkInterfaceReferenceResponse> networkInterfaces) {
+        @OutputCustomType.Parameter("networkApiVersion") @Nullable String networkApiVersion,
+        @OutputCustomType.Parameter("networkInterfaceConfigurations") @Nullable List<VirtualMachineNetworkInterfaceConfigurationResponse> networkInterfaceConfigurations,
+        @OutputCustomType.Parameter("networkInterfaces") @Nullable List<NetworkInterfaceReferenceResponse> networkInterfaces) {
         this.networkApiVersion = networkApiVersion;
         this.networkInterfaceConfigurations = networkInterfaceConfigurations;
         this.networkInterfaces = networkInterfaces;

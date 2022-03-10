@@ -64,18 +64,18 @@ public final class GetAppResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"applicationId","displayName","id","location","name","sku","subdomain","tags","template","type"})
+    @OutputCustomType.Constructor
     private GetAppResult(
-        String applicationId,
-        @Nullable String displayName,
-        String id,
-        String location,
-        String name,
-        AppSkuInfoResponse sku,
-        @Nullable String subdomain,
-        @Nullable Map<String,String> tags,
-        @Nullable String template,
-        String type) {
+        @OutputCustomType.Parameter("applicationId") String applicationId,
+        @OutputCustomType.Parameter("displayName") @Nullable String displayName,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("sku") AppSkuInfoResponse sku,
+        @OutputCustomType.Parameter("subdomain") @Nullable String subdomain,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("template") @Nullable String template,
+        @OutputCustomType.Parameter("type") String type) {
         this.applicationId = applicationId;
         this.displayName = displayName;
         this.id = id;

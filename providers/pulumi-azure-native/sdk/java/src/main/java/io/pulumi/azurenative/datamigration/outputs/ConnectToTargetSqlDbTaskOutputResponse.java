@@ -31,12 +31,12 @@ public final class ConnectToTargetSqlDbTaskOutputResponse {
      */
     private final String targetServerVersion;
 
-    @OutputCustomType.Constructor({"databases","id","targetServerBrandVersion","targetServerVersion"})
+    @OutputCustomType.Constructor
     private ConnectToTargetSqlDbTaskOutputResponse(
-        Map<String,String> databases,
-        String id,
-        String targetServerBrandVersion,
-        String targetServerVersion) {
+        @OutputCustomType.Parameter("databases") Map<String,String> databases,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("targetServerBrandVersion") String targetServerBrandVersion,
+        @OutputCustomType.Parameter("targetServerVersion") String targetServerVersion) {
         this.databases = databases;
         this.id = id;
         this.targetServerBrandVersion = targetServerBrandVersion;

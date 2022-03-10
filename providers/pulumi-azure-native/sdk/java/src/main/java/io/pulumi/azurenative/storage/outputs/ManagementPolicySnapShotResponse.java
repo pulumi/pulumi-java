@@ -27,11 +27,11 @@ public final class ManagementPolicySnapShotResponse {
      */
     private final @Nullable DateAfterCreationResponse tierToCool;
 
-    @OutputCustomType.Constructor({"delete","tierToArchive","tierToCool"})
+    @OutputCustomType.Constructor
     private ManagementPolicySnapShotResponse(
-        @Nullable DateAfterCreationResponse delete,
-        @Nullable DateAfterCreationResponse tierToArchive,
-        @Nullable DateAfterCreationResponse tierToCool) {
+        @OutputCustomType.Parameter("delete") @Nullable DateAfterCreationResponse delete,
+        @OutputCustomType.Parameter("tierToArchive") @Nullable DateAfterCreationResponse tierToArchive,
+        @OutputCustomType.Parameter("tierToCool") @Nullable DateAfterCreationResponse tierToCool) {
         this.delete = delete;
         this.tierToArchive = tierToArchive;
         this.tierToCool = tierToCool;

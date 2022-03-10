@@ -98,24 +98,24 @@ public final class GetServerDetailsResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"asAdministrators","backupBlobContainerUri","gatewayDetails","id","ipV4FirewallSettings","location","managedMode","name","provisioningState","querypoolConnectionMode","serverFullName","serverMonitorMode","sku","state","tags","type"})
+    @OutputCustomType.Constructor
     private GetServerDetailsResult(
-        @Nullable ServerAdministratorsResponse asAdministrators,
-        @Nullable String backupBlobContainerUri,
-        @Nullable GatewayDetailsResponse gatewayDetails,
-        String id,
-        @Nullable IPv4FirewallSettingsResponse ipV4FirewallSettings,
-        String location,
-        @Nullable Integer managedMode,
-        String name,
-        String provisioningState,
-        @Nullable String querypoolConnectionMode,
-        String serverFullName,
-        @Nullable Integer serverMonitorMode,
-        ResourceSkuResponse sku,
-        String state,
-        @Nullable Map<String,String> tags,
-        String type) {
+        @OutputCustomType.Parameter("asAdministrators") @Nullable ServerAdministratorsResponse asAdministrators,
+        @OutputCustomType.Parameter("backupBlobContainerUri") @Nullable String backupBlobContainerUri,
+        @OutputCustomType.Parameter("gatewayDetails") @Nullable GatewayDetailsResponse gatewayDetails,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("ipV4FirewallSettings") @Nullable IPv4FirewallSettingsResponse ipV4FirewallSettings,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("managedMode") @Nullable Integer managedMode,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("querypoolConnectionMode") @Nullable String querypoolConnectionMode,
+        @OutputCustomType.Parameter("serverFullName") String serverFullName,
+        @OutputCustomType.Parameter("serverMonitorMode") @Nullable Integer serverMonitorMode,
+        @OutputCustomType.Parameter("sku") ResourceSkuResponse sku,
+        @OutputCustomType.Parameter("state") String state,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type) {
         this.asAdministrators = asAdministrators;
         this.backupBlobContainerUri = backupBlobContainerUri;
         this.gatewayDetails = gatewayDetails;

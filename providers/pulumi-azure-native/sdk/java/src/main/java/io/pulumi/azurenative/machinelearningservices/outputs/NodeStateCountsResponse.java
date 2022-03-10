@@ -40,14 +40,14 @@ public final class NodeStateCountsResponse {
      */
     private final Integer unusableNodeCount;
 
-    @OutputCustomType.Constructor({"idleNodeCount","leavingNodeCount","preemptedNodeCount","preparingNodeCount","runningNodeCount","unusableNodeCount"})
+    @OutputCustomType.Constructor
     private NodeStateCountsResponse(
-        Integer idleNodeCount,
-        Integer leavingNodeCount,
-        Integer preemptedNodeCount,
-        Integer preparingNodeCount,
-        Integer runningNodeCount,
-        Integer unusableNodeCount) {
+        @OutputCustomType.Parameter("idleNodeCount") Integer idleNodeCount,
+        @OutputCustomType.Parameter("leavingNodeCount") Integer leavingNodeCount,
+        @OutputCustomType.Parameter("preemptedNodeCount") Integer preemptedNodeCount,
+        @OutputCustomType.Parameter("preparingNodeCount") Integer preparingNodeCount,
+        @OutputCustomType.Parameter("runningNodeCount") Integer runningNodeCount,
+        @OutputCustomType.Parameter("unusableNodeCount") Integer unusableNodeCount) {
         this.idleNodeCount = idleNodeCount;
         this.leavingNodeCount = leavingNodeCount;
         this.preemptedNodeCount = preemptedNodeCount;

@@ -81,21 +81,21 @@ public final class GetPartnerNamespaceResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"disableLocalAuth","endpoint","id","inboundIpRules","location","name","partnerRegistrationFullyQualifiedId","privateEndpointConnections","provisioningState","publicNetworkAccess","systemData","tags","type"})
+    @OutputCustomType.Constructor
     private GetPartnerNamespaceResult(
-        @Nullable Boolean disableLocalAuth,
-        String endpoint,
-        String id,
-        @Nullable List<InboundIpRuleResponse> inboundIpRules,
-        String location,
-        String name,
-        @Nullable String partnerRegistrationFullyQualifiedId,
-        List<PrivateEndpointConnectionResponse> privateEndpointConnections,
-        String provisioningState,
-        @Nullable String publicNetworkAccess,
-        SystemDataResponse systemData,
-        @Nullable Map<String,String> tags,
-        String type) {
+        @OutputCustomType.Parameter("disableLocalAuth") @Nullable Boolean disableLocalAuth,
+        @OutputCustomType.Parameter("endpoint") String endpoint,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("inboundIpRules") @Nullable List<InboundIpRuleResponse> inboundIpRules,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("partnerRegistrationFullyQualifiedId") @Nullable String partnerRegistrationFullyQualifiedId,
+        @OutputCustomType.Parameter("privateEndpointConnections") List<PrivateEndpointConnectionResponse> privateEndpointConnections,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("publicNetworkAccess") @Nullable String publicNetworkAccess,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type) {
         this.disableLocalAuth = disableLocalAuth;
         this.endpoint = endpoint;
         this.id = id;

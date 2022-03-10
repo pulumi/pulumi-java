@@ -24,10 +24,10 @@ public final class ListSubAccountVMHostsResult {
      */
     private final @Nullable List<VMResourcesResponse> value;
 
-    @OutputCustomType.Constructor({"nextLink","value"})
+    @OutputCustomType.Constructor
     private ListSubAccountVMHostsResult(
-        @Nullable String nextLink,
-        @Nullable List<VMResourcesResponse> value) {
+        @OutputCustomType.Parameter("nextLink") @Nullable String nextLink,
+        @OutputCustomType.Parameter("value") @Nullable List<VMResourcesResponse> value) {
         this.nextLink = nextLink;
         this.value = value;
     }

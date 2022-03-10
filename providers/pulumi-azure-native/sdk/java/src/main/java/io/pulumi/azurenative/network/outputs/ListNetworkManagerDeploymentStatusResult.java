@@ -24,10 +24,10 @@ public final class ListNetworkManagerDeploymentStatusResult {
      */
     private final @Nullable List<NetworkManagerDeploymentStatusResponse> value;
 
-    @OutputCustomType.Constructor({"skipToken","value"})
+    @OutputCustomType.Constructor
     private ListNetworkManagerDeploymentStatusResult(
-        @Nullable String skipToken,
-        @Nullable List<NetworkManagerDeploymentStatusResponse> value) {
+        @OutputCustomType.Parameter("skipToken") @Nullable String skipToken,
+        @OutputCustomType.Parameter("value") @Nullable List<NetworkManagerDeploymentStatusResponse> value) {
         this.skipToken = skipToken;
         this.value = value;
     }

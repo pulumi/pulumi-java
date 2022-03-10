@@ -123,28 +123,28 @@ public final class GetFirewallPolicyResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"basePolicy","childPolicies","dnsSettings","etag","firewalls","id","identity","insights","intrusionDetection","location","name","provisioningState","ruleCollectionGroups","sku","snat","tags","threatIntelMode","threatIntelWhitelist","transportSecurity","type"})
+    @OutputCustomType.Constructor
     private GetFirewallPolicyResult(
-        @Nullable SubResourceResponse basePolicy,
-        List<SubResourceResponse> childPolicies,
-        @Nullable DnsSettingsResponse dnsSettings,
-        String etag,
-        List<SubResourceResponse> firewalls,
-        @Nullable String id,
-        @Nullable ManagedServiceIdentityResponse identity,
-        @Nullable FirewallPolicyInsightsResponse insights,
-        @Nullable FirewallPolicyIntrusionDetectionResponse intrusionDetection,
-        @Nullable String location,
-        String name,
-        String provisioningState,
-        List<SubResourceResponse> ruleCollectionGroups,
-        @Nullable FirewallPolicySkuResponse sku,
-        @Nullable FirewallPolicySNATResponse snat,
-        @Nullable Map<String,String> tags,
-        @Nullable String threatIntelMode,
-        @Nullable FirewallPolicyThreatIntelWhitelistResponse threatIntelWhitelist,
-        @Nullable FirewallPolicyTransportSecurityResponse transportSecurity,
-        String type) {
+        @OutputCustomType.Parameter("basePolicy") @Nullable SubResourceResponse basePolicy,
+        @OutputCustomType.Parameter("childPolicies") List<SubResourceResponse> childPolicies,
+        @OutputCustomType.Parameter("dnsSettings") @Nullable DnsSettingsResponse dnsSettings,
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("firewalls") List<SubResourceResponse> firewalls,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("identity") @Nullable ManagedServiceIdentityResponse identity,
+        @OutputCustomType.Parameter("insights") @Nullable FirewallPolicyInsightsResponse insights,
+        @OutputCustomType.Parameter("intrusionDetection") @Nullable FirewallPolicyIntrusionDetectionResponse intrusionDetection,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("ruleCollectionGroups") List<SubResourceResponse> ruleCollectionGroups,
+        @OutputCustomType.Parameter("sku") @Nullable FirewallPolicySkuResponse sku,
+        @OutputCustomType.Parameter("snat") @Nullable FirewallPolicySNATResponse snat,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("threatIntelMode") @Nullable String threatIntelMode,
+        @OutputCustomType.Parameter("threatIntelWhitelist") @Nullable FirewallPolicyThreatIntelWhitelistResponse threatIntelWhitelist,
+        @OutputCustomType.Parameter("transportSecurity") @Nullable FirewallPolicyTransportSecurityResponse transportSecurity,
+        @OutputCustomType.Parameter("type") String type) {
         this.basePolicy = basePolicy;
         this.childPolicies = childPolicies;
         this.dnsSettings = dnsSettings;

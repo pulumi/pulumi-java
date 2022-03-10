@@ -31,12 +31,12 @@ public final class MoveCollectionPropertiesResponse {
      */
     private final String targetRegion;
 
-    @OutputCustomType.Constructor({"errors","provisioningState","sourceRegion","targetRegion"})
+    @OutputCustomType.Constructor
     private MoveCollectionPropertiesResponse(
-        MoveCollectionPropertiesResponseErrors errors,
-        String provisioningState,
-        String sourceRegion,
-        String targetRegion) {
+        @OutputCustomType.Parameter("errors") MoveCollectionPropertiesResponseErrors errors,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("sourceRegion") String sourceRegion,
+        @OutputCustomType.Parameter("targetRegion") String targetRegion) {
         this.errors = errors;
         this.provisioningState = provisioningState;
         this.sourceRegion = sourceRegion;

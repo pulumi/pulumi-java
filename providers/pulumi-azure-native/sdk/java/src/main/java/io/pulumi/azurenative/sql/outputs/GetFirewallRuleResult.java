@@ -37,13 +37,13 @@ public final class GetFirewallRuleResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"endIpAddress","id","name","startIpAddress","type"})
+    @OutputCustomType.Constructor
     private GetFirewallRuleResult(
-        @Nullable String endIpAddress,
-        String id,
-        @Nullable String name,
-        @Nullable String startIpAddress,
-        String type) {
+        @OutputCustomType.Parameter("endIpAddress") @Nullable String endIpAddress,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("startIpAddress") @Nullable String startIpAddress,
+        @OutputCustomType.Parameter("type") String type) {
         this.endIpAddress = endIpAddress;
         this.id = id;
         this.name = name;

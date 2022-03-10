@@ -15,8 +15,8 @@ public final class WaitStepAttributesResponse {
      */
     private final String duration;
 
-    @OutputCustomType.Constructor({"duration"})
-    private WaitStepAttributesResponse(String duration) {
+    @OutputCustomType.Constructor
+    private WaitStepAttributesResponse(@OutputCustomType.Parameter("duration") String duration) {
         this.duration = duration;
     }
 

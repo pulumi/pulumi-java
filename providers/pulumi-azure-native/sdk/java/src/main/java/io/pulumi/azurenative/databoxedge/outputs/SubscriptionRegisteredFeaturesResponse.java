@@ -14,10 +14,10 @@ public final class SubscriptionRegisteredFeaturesResponse {
     private final @Nullable String name;
     private final @Nullable String state;
 
-    @OutputCustomType.Constructor({"name","state"})
+    @OutputCustomType.Constructor
     private SubscriptionRegisteredFeaturesResponse(
-        @Nullable String name,
-        @Nullable String state) {
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("state") @Nullable String state) {
         this.name = name;
         this.state = state;
     }

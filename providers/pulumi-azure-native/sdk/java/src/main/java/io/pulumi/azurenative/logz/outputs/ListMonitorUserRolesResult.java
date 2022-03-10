@@ -24,10 +24,10 @@ public final class ListMonitorUserRolesResult {
      */
     private final @Nullable List<UserRoleResponseResponse> value;
 
-    @OutputCustomType.Constructor({"nextLink","value"})
+    @OutputCustomType.Constructor
     private ListMonitorUserRolesResult(
-        @Nullable String nextLink,
-        @Nullable List<UserRoleResponseResponse> value) {
+        @OutputCustomType.Parameter("nextLink") @Nullable String nextLink,
+        @OutputCustomType.Parameter("value") @Nullable List<UserRoleResponseResponse> value) {
         this.nextLink = nextLink;
         this.value = value;
     }

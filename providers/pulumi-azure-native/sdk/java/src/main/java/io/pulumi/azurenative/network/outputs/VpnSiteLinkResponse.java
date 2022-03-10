@@ -59,17 +59,17 @@ public final class VpnSiteLinkResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"bgpProperties","etag","fqdn","id","ipAddress","linkProperties","name","provisioningState","type"})
+    @OutputCustomType.Constructor
     private VpnSiteLinkResponse(
-        @Nullable VpnLinkBgpSettingsResponse bgpProperties,
-        String etag,
-        @Nullable String fqdn,
-        @Nullable String id,
-        @Nullable String ipAddress,
-        @Nullable VpnLinkProviderPropertiesResponse linkProperties,
-        @Nullable String name,
-        String provisioningState,
-        String type) {
+        @OutputCustomType.Parameter("bgpProperties") @Nullable VpnLinkBgpSettingsResponse bgpProperties,
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("fqdn") @Nullable String fqdn,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("ipAddress") @Nullable String ipAddress,
+        @OutputCustomType.Parameter("linkProperties") @Nullable VpnLinkProviderPropertiesResponse linkProperties,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("type") String type) {
         this.bgpProperties = bgpProperties;
         this.etag = etag;
         this.fqdn = fqdn;

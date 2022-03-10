@@ -22,10 +22,10 @@ public final class IPRuleResponse {
      */
     private final String iPAddressOrRange;
 
-    @OutputCustomType.Constructor({"action","iPAddressOrRange"})
+    @OutputCustomType.Constructor
     private IPRuleResponse(
-        @Nullable String action,
-        String iPAddressOrRange) {
+        @OutputCustomType.Parameter("action") @Nullable String action,
+        @OutputCustomType.Parameter("iPAddressOrRange") String iPAddressOrRange) {
         this.action = action;
         this.iPAddressOrRange = iPAddressOrRange;
     }

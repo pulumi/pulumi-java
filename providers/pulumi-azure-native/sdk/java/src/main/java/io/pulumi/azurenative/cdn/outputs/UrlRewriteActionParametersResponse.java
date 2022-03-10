@@ -29,12 +29,12 @@ public final class UrlRewriteActionParametersResponse {
      */
     private final String sourcePattern;
 
-    @OutputCustomType.Constructor({"destination","odataType","preserveUnmatchedPath","sourcePattern"})
+    @OutputCustomType.Constructor
     private UrlRewriteActionParametersResponse(
-        String destination,
-        String odataType,
-        @Nullable Boolean preserveUnmatchedPath,
-        String sourcePattern) {
+        @OutputCustomType.Parameter("destination") String destination,
+        @OutputCustomType.Parameter("odataType") String odataType,
+        @OutputCustomType.Parameter("preserveUnmatchedPath") @Nullable Boolean preserveUnmatchedPath,
+        @OutputCustomType.Parameter("sourcePattern") String sourcePattern) {
         this.destination = destination;
         this.odataType = odataType;
         this.preserveUnmatchedPath = preserveUnmatchedPath;

@@ -25,11 +25,11 @@ public final class RecommendedActionStateInfoResponse {
      */
     private final String lastModified;
 
-    @OutputCustomType.Constructor({"actionInitiatedBy","currentValue","lastModified"})
+    @OutputCustomType.Constructor
     private RecommendedActionStateInfoResponse(
-        String actionInitiatedBy,
-        String currentValue,
-        String lastModified) {
+        @OutputCustomType.Parameter("actionInitiatedBy") String actionInitiatedBy,
+        @OutputCustomType.Parameter("currentValue") String currentValue,
+        @OutputCustomType.Parameter("lastModified") String lastModified) {
         this.actionInitiatedBy = actionInitiatedBy;
         this.currentValue = currentValue;
         this.lastModified = lastModified;

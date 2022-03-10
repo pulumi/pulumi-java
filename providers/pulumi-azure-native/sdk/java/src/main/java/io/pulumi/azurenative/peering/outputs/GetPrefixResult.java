@@ -64,18 +64,18 @@ public final class GetPrefixResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"errorMessage","events","id","learnedType","name","peeringServicePrefixKey","prefix","prefixValidationState","provisioningState","type"})
+    @OutputCustomType.Constructor
     private GetPrefixResult(
-        String errorMessage,
-        List<PeeringServicePrefixEventResponse> events,
-        String id,
-        String learnedType,
-        String name,
-        @Nullable String peeringServicePrefixKey,
-        @Nullable String prefix,
-        String prefixValidationState,
-        String provisioningState,
-        String type) {
+        @OutputCustomType.Parameter("errorMessage") String errorMessage,
+        @OutputCustomType.Parameter("events") List<PeeringServicePrefixEventResponse> events,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("learnedType") String learnedType,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("peeringServicePrefixKey") @Nullable String peeringServicePrefixKey,
+        @OutputCustomType.Parameter("prefix") @Nullable String prefix,
+        @OutputCustomType.Parameter("prefixValidationState") String prefixValidationState,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("type") String type) {
         this.errorMessage = errorMessage;
         this.events = events;
         this.id = id;

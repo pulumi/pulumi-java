@@ -24,10 +24,10 @@ public final class RestorePointSourceVMStorageProfileResponse {
      */
     private final @Nullable RestorePointSourceVMOSDiskResponse osDisk;
 
-    @OutputCustomType.Constructor({"dataDisks","osDisk"})
+    @OutputCustomType.Constructor
     private RestorePointSourceVMStorageProfileResponse(
-        @Nullable List<RestorePointSourceVMDataDiskResponse> dataDisks,
-        @Nullable RestorePointSourceVMOSDiskResponse osDisk) {
+        @OutputCustomType.Parameter("dataDisks") @Nullable List<RestorePointSourceVMDataDiskResponse> dataDisks,
+        @OutputCustomType.Parameter("osDisk") @Nullable RestorePointSourceVMOSDiskResponse osDisk) {
         this.dataDisks = dataDisks;
         this.osDisk = osDisk;
     }

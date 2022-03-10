@@ -23,10 +23,10 @@ public final class RequestsBasedTriggerResponse {
      */
     private final @Nullable String timeInterval;
 
-    @OutputCustomType.Constructor({"count","timeInterval"})
+    @OutputCustomType.Constructor
     private RequestsBasedTriggerResponse(
-        @Nullable Integer count,
-        @Nullable String timeInterval) {
+        @OutputCustomType.Parameter("count") @Nullable Integer count,
+        @OutputCustomType.Parameter("timeInterval") @Nullable String timeInterval) {
         this.count = count;
         this.timeInterval = timeInterval;
     }

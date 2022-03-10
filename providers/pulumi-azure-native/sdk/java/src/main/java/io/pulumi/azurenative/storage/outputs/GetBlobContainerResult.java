@@ -117,28 +117,28 @@ public final class GetBlobContainerResult {
      */
     private final String version;
 
-    @OutputCustomType.Constructor({"defaultEncryptionScope","deleted","deletedTime","denyEncryptionScopeOverride","etag","hasImmutabilityPolicy","hasLegalHold","id","immutabilityPolicy","lastModifiedTime","leaseDuration","leaseState","leaseStatus","legalHold","metadata","name","publicAccess","remainingRetentionDays","type","version"})
+    @OutputCustomType.Constructor
     private GetBlobContainerResult(
-        @Nullable String defaultEncryptionScope,
-        Boolean deleted,
-        String deletedTime,
-        @Nullable Boolean denyEncryptionScopeOverride,
-        String etag,
-        Boolean hasImmutabilityPolicy,
-        Boolean hasLegalHold,
-        String id,
-        ImmutabilityPolicyPropertiesResponse immutabilityPolicy,
-        String lastModifiedTime,
-        String leaseDuration,
-        String leaseState,
-        String leaseStatus,
-        LegalHoldPropertiesResponse legalHold,
-        @Nullable Map<String,String> metadata,
-        String name,
-        @Nullable String publicAccess,
-        Integer remainingRetentionDays,
-        String type,
-        String version) {
+        @OutputCustomType.Parameter("defaultEncryptionScope") @Nullable String defaultEncryptionScope,
+        @OutputCustomType.Parameter("deleted") Boolean deleted,
+        @OutputCustomType.Parameter("deletedTime") String deletedTime,
+        @OutputCustomType.Parameter("denyEncryptionScopeOverride") @Nullable Boolean denyEncryptionScopeOverride,
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("hasImmutabilityPolicy") Boolean hasImmutabilityPolicy,
+        @OutputCustomType.Parameter("hasLegalHold") Boolean hasLegalHold,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("immutabilityPolicy") ImmutabilityPolicyPropertiesResponse immutabilityPolicy,
+        @OutputCustomType.Parameter("lastModifiedTime") String lastModifiedTime,
+        @OutputCustomType.Parameter("leaseDuration") String leaseDuration,
+        @OutputCustomType.Parameter("leaseState") String leaseState,
+        @OutputCustomType.Parameter("leaseStatus") String leaseStatus,
+        @OutputCustomType.Parameter("legalHold") LegalHoldPropertiesResponse legalHold,
+        @OutputCustomType.Parameter("metadata") @Nullable Map<String,String> metadata,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("publicAccess") @Nullable String publicAccess,
+        @OutputCustomType.Parameter("remainingRetentionDays") Integer remainingRetentionDays,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("version") String version) {
         this.defaultEncryptionScope = defaultEncryptionScope;
         this.deleted = deleted;
         this.deletedTime = deletedTime;

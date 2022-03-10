@@ -28,11 +28,11 @@ public final class AttachNewDataDiskOptionsResponse {
      */
     private final @Nullable String diskType;
 
-    @OutputCustomType.Constructor({"diskName","diskSizeGiB","diskType"})
+    @OutputCustomType.Constructor
     private AttachNewDataDiskOptionsResponse(
-        @Nullable String diskName,
-        @Nullable Integer diskSizeGiB,
-        @Nullable String diskType) {
+        @OutputCustomType.Parameter("diskName") @Nullable String diskName,
+        @OutputCustomType.Parameter("diskSizeGiB") @Nullable Integer diskSizeGiB,
+        @OutputCustomType.Parameter("diskType") @Nullable String diskType) {
         this.diskName = diskName;
         this.diskSizeGiB = diskSizeGiB;
         this.diskType = diskType;

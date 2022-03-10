@@ -30,12 +30,12 @@ public final class StatusMessageResponse {
      */
     private final String message;
 
-    @OutputCustomType.Constructor({"code","createdTimeUtc","level","message"})
+    @OutputCustomType.Constructor
     private StatusMessageResponse(
-        String code,
-        String createdTimeUtc,
-        String level,
-        String message) {
+        @OutputCustomType.Parameter("code") String code,
+        @OutputCustomType.Parameter("createdTimeUtc") String createdTimeUtc,
+        @OutputCustomType.Parameter("level") String level,
+        @OutputCustomType.Parameter("message") String message) {
         this.code = code;
         this.createdTimeUtc = createdTimeUtc;
         this.level = level;

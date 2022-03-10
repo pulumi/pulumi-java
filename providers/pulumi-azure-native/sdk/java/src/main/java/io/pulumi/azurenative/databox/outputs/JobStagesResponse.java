@@ -36,13 +36,13 @@ public final class JobStagesResponse {
      */
     private final String stageTime;
 
-    @OutputCustomType.Constructor({"displayName","jobStageDetails","stageName","stageStatus","stageTime"})
+    @OutputCustomType.Constructor
     private JobStagesResponse(
-        String displayName,
-        Object jobStageDetails,
-        String stageName,
-        String stageStatus,
-        String stageTime) {
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("jobStageDetails") Object jobStageDetails,
+        @OutputCustomType.Parameter("stageName") String stageName,
+        @OutputCustomType.Parameter("stageStatus") String stageStatus,
+        @OutputCustomType.Parameter("stageTime") String stageTime) {
         this.displayName = displayName;
         this.jobStageDetails = jobStageDetails;
         this.stageName = stageName;

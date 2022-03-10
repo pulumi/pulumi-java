@@ -66,17 +66,17 @@ public final class SapEccLinkedServiceResponse {
      */
     private final @Nullable String username;
 
-    @OutputCustomType.Constructor({"annotations","connectVia","description","encryptedCredential","parameters","password","type","url","username"})
+    @OutputCustomType.Constructor
     private SapEccLinkedServiceResponse(
-        @Nullable List<Object> annotations,
-        @Nullable IntegrationRuntimeReferenceResponse connectVia,
-        @Nullable String description,
-        @Nullable String encryptedCredential,
-        @Nullable Map<String,ParameterSpecificationResponse> parameters,
-        @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password,
-        String type,
-        String url,
-        @Nullable String username) {
+        @OutputCustomType.Parameter("annotations") @Nullable List<Object> annotations,
+        @OutputCustomType.Parameter("connectVia") @Nullable IntegrationRuntimeReferenceResponse connectVia,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("encryptedCredential") @Nullable String encryptedCredential,
+        @OutputCustomType.Parameter("parameters") @Nullable Map<String,ParameterSpecificationResponse> parameters,
+        @OutputCustomType.Parameter("password") @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("url") String url,
+        @OutputCustomType.Parameter("username") @Nullable String username) {
         this.annotations = annotations;
         this.connectVia = connectVia;
         this.description = description;

@@ -29,11 +29,11 @@ public final class StreamingPolicyContentKeyResponse {
      */
     private final @Nullable List<TrackSelectionResponse> tracks;
 
-    @OutputCustomType.Constructor({"label","policyName","tracks"})
+    @OutputCustomType.Constructor
     private StreamingPolicyContentKeyResponse(
-        @Nullable String label,
-        @Nullable String policyName,
-        @Nullable List<TrackSelectionResponse> tracks) {
+        @OutputCustomType.Parameter("label") @Nullable String label,
+        @OutputCustomType.Parameter("policyName") @Nullable String policyName,
+        @OutputCustomType.Parameter("tracks") @Nullable List<TrackSelectionResponse> tracks) {
         this.label = label;
         this.policyName = policyName;
         this.tracks = tracks;

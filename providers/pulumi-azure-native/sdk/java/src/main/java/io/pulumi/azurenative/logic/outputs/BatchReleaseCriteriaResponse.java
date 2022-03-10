@@ -28,11 +28,11 @@ public final class BatchReleaseCriteriaResponse {
      */
     private final @Nullable WorkflowTriggerRecurrenceResponse recurrence;
 
-    @OutputCustomType.Constructor({"batchSize","messageCount","recurrence"})
+    @OutputCustomType.Constructor
     private BatchReleaseCriteriaResponse(
-        @Nullable Integer batchSize,
-        @Nullable Integer messageCount,
-        @Nullable WorkflowTriggerRecurrenceResponse recurrence) {
+        @OutputCustomType.Parameter("batchSize") @Nullable Integer batchSize,
+        @OutputCustomType.Parameter("messageCount") @Nullable Integer messageCount,
+        @OutputCustomType.Parameter("recurrence") @Nullable WorkflowTriggerRecurrenceResponse recurrence) {
         this.batchSize = batchSize;
         this.messageCount = messageCount;
         this.recurrence = recurrence;

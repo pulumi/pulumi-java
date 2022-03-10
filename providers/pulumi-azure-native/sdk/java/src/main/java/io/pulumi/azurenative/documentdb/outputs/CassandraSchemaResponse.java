@@ -29,11 +29,11 @@ public final class CassandraSchemaResponse {
      */
     private final @Nullable List<CassandraPartitionKeyResponse> partitionKeys;
 
-    @OutputCustomType.Constructor({"clusterKeys","columns","partitionKeys"})
+    @OutputCustomType.Constructor
     private CassandraSchemaResponse(
-        @Nullable List<ClusterKeyResponse> clusterKeys,
-        @Nullable List<ColumnResponse> columns,
-        @Nullable List<CassandraPartitionKeyResponse> partitionKeys) {
+        @OutputCustomType.Parameter("clusterKeys") @Nullable List<ClusterKeyResponse> clusterKeys,
+        @OutputCustomType.Parameter("columns") @Nullable List<ColumnResponse> columns,
+        @OutputCustomType.Parameter("partitionKeys") @Nullable List<CassandraPartitionKeyResponse> partitionKeys) {
         this.clusterKeys = clusterKeys;
         this.columns = columns;
         this.partitionKeys = partitionKeys;

@@ -21,10 +21,10 @@ public final class SqlServerResourceSettingsResponse {
      */
     private final String targetResourceName;
 
-    @OutputCustomType.Constructor({"resourceType","targetResourceName"})
+    @OutputCustomType.Constructor
     private SqlServerResourceSettingsResponse(
-        String resourceType,
-        String targetResourceName) {
+        @OutputCustomType.Parameter("resourceType") String resourceType,
+        @OutputCustomType.Parameter("targetResourceName") String targetResourceName) {
         this.resourceType = resourceType;
         this.targetResourceName = targetResourceName;
     }

@@ -27,11 +27,11 @@ public final class AssetFileEncryptionMetadataResponse {
      */
     private final @Nullable String initializationVector;
 
-    @OutputCustomType.Constructor({"assetFileId","assetFileName","initializationVector"})
+    @OutputCustomType.Constructor
     private AssetFileEncryptionMetadataResponse(
-        String assetFileId,
-        @Nullable String assetFileName,
-        @Nullable String initializationVector) {
+        @OutputCustomType.Parameter("assetFileId") String assetFileId,
+        @OutputCustomType.Parameter("assetFileName") @Nullable String assetFileName,
+        @OutputCustomType.Parameter("initializationVector") @Nullable String initializationVector) {
         this.assetFileId = assetFileId;
         this.assetFileName = assetFileName;
         this.initializationVector = initializationVector;

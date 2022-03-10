@@ -20,10 +20,10 @@ public final class ApiPortalResourceRequestsResponse {
      */
     private final String memory;
 
-    @OutputCustomType.Constructor({"cpu","memory"})
+    @OutputCustomType.Constructor
     private ApiPortalResourceRequestsResponse(
-        String cpu,
-        String memory) {
+        @OutputCustomType.Parameter("cpu") String cpu,
+        @OutputCustomType.Parameter("memory") String memory) {
         this.cpu = cpu;
         this.memory = memory;
     }

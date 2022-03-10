@@ -55,16 +55,16 @@ public final class GetSnapshotResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"creationData","id","location","name","snapshotType","systemData","tags","type"})
+    @OutputCustomType.Constructor
     private GetSnapshotResult(
-        @Nullable CreationDataResponse creationData,
-        String id,
-        String location,
-        String name,
-        @Nullable String snapshotType,
-        SystemDataResponse systemData,
-        @Nullable Map<String,String> tags,
-        String type) {
+        @OutputCustomType.Parameter("creationData") @Nullable CreationDataResponse creationData,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("snapshotType") @Nullable String snapshotType,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type) {
         this.creationData = creationData;
         this.id = id;
         this.location = location;

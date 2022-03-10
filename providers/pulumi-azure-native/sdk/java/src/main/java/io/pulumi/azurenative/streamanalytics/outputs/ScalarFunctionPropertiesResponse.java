@@ -44,13 +44,13 @@ public final class ScalarFunctionPropertiesResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"binding","etag","inputs","output","type"})
+    @OutputCustomType.Constructor
     private ScalarFunctionPropertiesResponse(
-        @Nullable Either<AzureMachineLearningWebServiceFunctionBindingResponse,JavaScriptFunctionBindingResponse> binding,
-        String etag,
-        @Nullable List<FunctionInputResponse> inputs,
-        @Nullable FunctionOutputResponse output,
-        String type) {
+        @OutputCustomType.Parameter("binding") @Nullable Either<AzureMachineLearningWebServiceFunctionBindingResponse,JavaScriptFunctionBindingResponse> binding,
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("inputs") @Nullable List<FunctionInputResponse> inputs,
+        @OutputCustomType.Parameter("output") @Nullable FunctionOutputResponse output,
+        @OutputCustomType.Parameter("type") String type) {
         this.binding = binding;
         this.etag = etag;
         this.inputs = inputs;

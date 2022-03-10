@@ -53,16 +53,16 @@ public final class GetCloudEdgeManagementRoleResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"edgeProfile","id","kind","localManagementStatus","name","roleStatus","systemData","type"})
+    @OutputCustomType.Constructor
     private GetCloudEdgeManagementRoleResult(
-        EdgeProfileResponse edgeProfile,
-        String id,
-        String kind,
-        String localManagementStatus,
-        String name,
-        String roleStatus,
-        SystemDataResponse systemData,
-        String type) {
+        @OutputCustomType.Parameter("edgeProfile") EdgeProfileResponse edgeProfile,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("localManagementStatus") String localManagementStatus,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("roleStatus") String roleStatus,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("type") String type) {
         this.edgeProfile = edgeProfile;
         this.id = id;
         this.kind = kind;

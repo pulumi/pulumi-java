@@ -14,10 +14,10 @@ public final class LoggingRuleResponseHiddenPropertyPaths {
     private final @Nullable List<String> hiddenPathsOnRequest;
     private final @Nullable List<String> hiddenPathsOnResponse;
 
-    @OutputCustomType.Constructor({"hiddenPathsOnRequest","hiddenPathsOnResponse"})
+    @OutputCustomType.Constructor
     private LoggingRuleResponseHiddenPropertyPaths(
-        @Nullable List<String> hiddenPathsOnRequest,
-        @Nullable List<String> hiddenPathsOnResponse) {
+        @OutputCustomType.Parameter("hiddenPathsOnRequest") @Nullable List<String> hiddenPathsOnRequest,
+        @OutputCustomType.Parameter("hiddenPathsOnResponse") @Nullable List<String> hiddenPathsOnResponse) {
         this.hiddenPathsOnRequest = hiddenPathsOnRequest;
         this.hiddenPathsOnResponse = hiddenPathsOnResponse;
     }

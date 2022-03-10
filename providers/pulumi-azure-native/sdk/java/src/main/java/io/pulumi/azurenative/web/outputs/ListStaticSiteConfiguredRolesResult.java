@@ -38,13 +38,13 @@ public final class ListStaticSiteConfiguredRolesResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"id","kind","name","properties","type"})
+    @OutputCustomType.Constructor
     private ListStaticSiteConfiguredRolesResult(
-        String id,
-        @Nullable String kind,
-        String name,
-        List<String> properties,
-        String type) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("kind") @Nullable String kind,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("properties") List<String> properties,
+        @OutputCustomType.Parameter("type") String type) {
         this.id = id;
         this.kind = kind;
         this.name = name;

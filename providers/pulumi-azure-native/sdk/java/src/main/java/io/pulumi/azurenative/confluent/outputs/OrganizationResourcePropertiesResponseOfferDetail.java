@@ -42,14 +42,14 @@ public final class OrganizationResourcePropertiesResponseOfferDetail {
      */
     private final @Nullable String termUnit;
 
-    @OutputCustomType.Constructor({"id","planId","planName","publisherId","status","termUnit"})
+    @OutputCustomType.Constructor
     private OrganizationResourcePropertiesResponseOfferDetail(
-        @Nullable String id,
-        @Nullable String planId,
-        @Nullable String planName,
-        @Nullable String publisherId,
-        String status,
-        @Nullable String termUnit) {
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("planId") @Nullable String planId,
+        @OutputCustomType.Parameter("planName") @Nullable String planName,
+        @OutputCustomType.Parameter("publisherId") @Nullable String publisherId,
+        @OutputCustomType.Parameter("status") String status,
+        @OutputCustomType.Parameter("termUnit") @Nullable String termUnit) {
         this.id = id;
         this.planId = planId;
         this.planName = planName;

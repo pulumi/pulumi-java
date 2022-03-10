@@ -89,22 +89,22 @@ public final class GetDedicatedHostResult {
      */
     private final List<SubResourceReadOnlyResponse> virtualMachines;
 
-    @OutputCustomType.Constructor({"autoReplaceOnFailure","hostId","id","instanceView","licenseType","location","name","platformFaultDomain","provisioningState","provisioningTime","sku","tags","type","virtualMachines"})
+    @OutputCustomType.Constructor
     private GetDedicatedHostResult(
-        @Nullable Boolean autoReplaceOnFailure,
-        String hostId,
-        String id,
-        DedicatedHostInstanceViewResponse instanceView,
-        @Nullable String licenseType,
-        String location,
-        String name,
-        @Nullable Integer platformFaultDomain,
-        String provisioningState,
-        String provisioningTime,
-        SkuResponse sku,
-        @Nullable Map<String,String> tags,
-        String type,
-        List<SubResourceReadOnlyResponse> virtualMachines) {
+        @OutputCustomType.Parameter("autoReplaceOnFailure") @Nullable Boolean autoReplaceOnFailure,
+        @OutputCustomType.Parameter("hostId") String hostId,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("instanceView") DedicatedHostInstanceViewResponse instanceView,
+        @OutputCustomType.Parameter("licenseType") @Nullable String licenseType,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("platformFaultDomain") @Nullable Integer platformFaultDomain,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("provisioningTime") String provisioningTime,
+        @OutputCustomType.Parameter("sku") SkuResponse sku,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("virtualMachines") List<SubResourceReadOnlyResponse> virtualMachines) {
         this.autoReplaceOnFailure = autoReplaceOnFailure;
         this.hostId = hostId;
         this.id = id;

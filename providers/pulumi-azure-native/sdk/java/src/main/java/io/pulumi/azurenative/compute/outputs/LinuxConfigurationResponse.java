@@ -34,12 +34,12 @@ public final class LinuxConfigurationResponse {
      */
     private final @Nullable SshConfigurationResponse ssh;
 
-    @OutputCustomType.Constructor({"disablePasswordAuthentication","patchSettings","provisionVMAgent","ssh"})
+    @OutputCustomType.Constructor
     private LinuxConfigurationResponse(
-        @Nullable Boolean disablePasswordAuthentication,
-        @Nullable LinuxPatchSettingsResponse patchSettings,
-        @Nullable Boolean provisionVMAgent,
-        @Nullable SshConfigurationResponse ssh) {
+        @OutputCustomType.Parameter("disablePasswordAuthentication") @Nullable Boolean disablePasswordAuthentication,
+        @OutputCustomType.Parameter("patchSettings") @Nullable LinuxPatchSettingsResponse patchSettings,
+        @OutputCustomType.Parameter("provisionVMAgent") @Nullable Boolean provisionVMAgent,
+        @OutputCustomType.Parameter("ssh") @Nullable SshConfigurationResponse ssh) {
         this.disablePasswordAuthentication = disablePasswordAuthentication;
         this.patchSettings = patchSettings;
         this.provisionVMAgent = provisionVMAgent;

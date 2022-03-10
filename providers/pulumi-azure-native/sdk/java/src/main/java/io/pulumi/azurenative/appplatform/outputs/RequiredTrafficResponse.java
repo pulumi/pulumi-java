@@ -37,13 +37,13 @@ public final class RequiredTrafficResponse {
      */
     private final String protocol;
 
-    @OutputCustomType.Constructor({"direction","fqdns","ips","port","protocol"})
+    @OutputCustomType.Constructor
     private RequiredTrafficResponse(
-        String direction,
-        List<String> fqdns,
-        List<String> ips,
-        Integer port,
-        String protocol) {
+        @OutputCustomType.Parameter("direction") String direction,
+        @OutputCustomType.Parameter("fqdns") List<String> fqdns,
+        @OutputCustomType.Parameter("ips") List<String> ips,
+        @OutputCustomType.Parameter("port") Integer port,
+        @OutputCustomType.Parameter("protocol") String protocol) {
         this.direction = direction;
         this.fqdns = fqdns;
         this.ips = ips;

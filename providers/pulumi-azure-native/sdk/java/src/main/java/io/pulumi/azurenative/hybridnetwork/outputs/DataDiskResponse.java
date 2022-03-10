@@ -28,11 +28,11 @@ public final class DataDiskResponse {
      */
     private final @Nullable String name;
 
-    @OutputCustomType.Constructor({"createOption","diskSizeGB","name"})
+    @OutputCustomType.Constructor
     private DataDiskResponse(
-        @Nullable String createOption,
-        @Nullable Integer diskSizeGB,
-        @Nullable String name) {
+        @OutputCustomType.Parameter("createOption") @Nullable String createOption,
+        @OutputCustomType.Parameter("diskSizeGB") @Nullable Integer diskSizeGB,
+        @OutputCustomType.Parameter("name") @Nullable String name) {
         this.createOption = createOption;
         this.diskSizeGB = diskSizeGB;
         this.name = name;

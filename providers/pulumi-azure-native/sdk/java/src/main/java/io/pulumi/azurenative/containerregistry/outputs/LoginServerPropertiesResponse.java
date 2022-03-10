@@ -21,10 +21,10 @@ public final class LoginServerPropertiesResponse {
      */
     private final TlsPropertiesResponse tls;
 
-    @OutputCustomType.Constructor({"host","tls"})
+    @OutputCustomType.Constructor
     private LoginServerPropertiesResponse(
-        String host,
-        TlsPropertiesResponse tls) {
+        @OutputCustomType.Parameter("host") String host,
+        @OutputCustomType.Parameter("tls") TlsPropertiesResponse tls) {
         this.host = host;
         this.tls = tls;
     }

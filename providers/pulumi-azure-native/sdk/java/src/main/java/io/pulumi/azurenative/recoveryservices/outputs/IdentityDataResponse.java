@@ -33,12 +33,12 @@ public final class IdentityDataResponse {
      */
     private final @Nullable Map<String,UserIdentityResponse> userAssignedIdentities;
 
-    @OutputCustomType.Constructor({"principalId","tenantId","type","userAssignedIdentities"})
+    @OutputCustomType.Constructor
     private IdentityDataResponse(
-        String principalId,
-        String tenantId,
-        String type,
-        @Nullable Map<String,UserIdentityResponse> userAssignedIdentities) {
+        @OutputCustomType.Parameter("principalId") String principalId,
+        @OutputCustomType.Parameter("tenantId") String tenantId,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("userAssignedIdentities") @Nullable Map<String,UserIdentityResponse> userAssignedIdentities) {
         this.principalId = principalId;
         this.tenantId = tenantId;
         this.type = type;

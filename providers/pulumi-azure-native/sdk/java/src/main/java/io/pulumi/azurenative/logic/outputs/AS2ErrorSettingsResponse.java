@@ -20,10 +20,10 @@ public final class AS2ErrorSettingsResponse {
      */
     private final Boolean suspendDuplicateMessage;
 
-    @OutputCustomType.Constructor({"resendIfMDNNotReceived","suspendDuplicateMessage"})
+    @OutputCustomType.Constructor
     private AS2ErrorSettingsResponse(
-        Boolean resendIfMDNNotReceived,
-        Boolean suspendDuplicateMessage) {
+        @OutputCustomType.Parameter("resendIfMDNNotReceived") Boolean resendIfMDNNotReceived,
+        @OutputCustomType.Parameter("suspendDuplicateMessage") Boolean suspendDuplicateMessage) {
         this.resendIfMDNNotReceived = resendIfMDNNotReceived;
         this.suspendDuplicateMessage = suspendDuplicateMessage;
     }

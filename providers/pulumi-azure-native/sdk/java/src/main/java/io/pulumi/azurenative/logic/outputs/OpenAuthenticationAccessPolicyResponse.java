@@ -24,10 +24,10 @@ public final class OpenAuthenticationAccessPolicyResponse {
      */
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor({"claims","type"})
+    @OutputCustomType.Constructor
     private OpenAuthenticationAccessPolicyResponse(
-        @Nullable List<OpenAuthenticationPolicyClaimResponse> claims,
-        @Nullable String type) {
+        @OutputCustomType.Parameter("claims") @Nullable List<OpenAuthenticationPolicyClaimResponse> claims,
+        @OutputCustomType.Parameter("type") @Nullable String type) {
         this.claims = claims;
         this.type = type;
     }

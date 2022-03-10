@@ -38,13 +38,13 @@ public final class AKSServiceResponseResponseAutoScaler {
      */
     private final @Nullable Integer targetUtilization;
 
-    @OutputCustomType.Constructor({"autoscaleEnabled","maxReplicas","minReplicas","refreshPeriodInSeconds","targetUtilization"})
+    @OutputCustomType.Constructor
     private AKSServiceResponseResponseAutoScaler(
-        @Nullable Boolean autoscaleEnabled,
-        @Nullable Integer maxReplicas,
-        @Nullable Integer minReplicas,
-        @Nullable Integer refreshPeriodInSeconds,
-        @Nullable Integer targetUtilization) {
+        @OutputCustomType.Parameter("autoscaleEnabled") @Nullable Boolean autoscaleEnabled,
+        @OutputCustomType.Parameter("maxReplicas") @Nullable Integer maxReplicas,
+        @OutputCustomType.Parameter("minReplicas") @Nullable Integer minReplicas,
+        @OutputCustomType.Parameter("refreshPeriodInSeconds") @Nullable Integer refreshPeriodInSeconds,
+        @OutputCustomType.Parameter("targetUtilization") @Nullable Integer targetUtilization) {
         this.autoscaleEnabled = autoscaleEnabled;
         this.maxReplicas = maxReplicas;
         this.minReplicas = minReplicas;

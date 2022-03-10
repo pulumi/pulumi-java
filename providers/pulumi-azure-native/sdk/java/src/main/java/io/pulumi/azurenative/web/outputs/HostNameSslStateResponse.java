@@ -43,14 +43,14 @@ public final class HostNameSslStateResponse {
      */
     private final @Nullable String virtualIP;
 
-    @OutputCustomType.Constructor({"hostType","name","sslState","thumbprint","toUpdate","virtualIP"})
+    @OutputCustomType.Constructor
     private HostNameSslStateResponse(
-        @Nullable String hostType,
-        @Nullable String name,
-        @Nullable String sslState,
-        @Nullable String thumbprint,
-        @Nullable Boolean toUpdate,
-        @Nullable String virtualIP) {
+        @OutputCustomType.Parameter("hostType") @Nullable String hostType,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("sslState") @Nullable String sslState,
+        @OutputCustomType.Parameter("thumbprint") @Nullable String thumbprint,
+        @OutputCustomType.Parameter("toUpdate") @Nullable Boolean toUpdate,
+        @OutputCustomType.Parameter("virtualIP") @Nullable String virtualIP) {
         this.hostType = hostType;
         this.name = name;
         this.sslState = sslState;

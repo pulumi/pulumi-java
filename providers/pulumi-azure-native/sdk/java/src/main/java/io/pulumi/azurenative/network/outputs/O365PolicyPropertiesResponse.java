@@ -17,8 +17,8 @@ public final class O365PolicyPropertiesResponse {
      */
     private final @Nullable O365BreakOutCategoryPoliciesResponse breakOutCategories;
 
-    @OutputCustomType.Constructor({"breakOutCategories"})
-    private O365PolicyPropertiesResponse(@Nullable O365BreakOutCategoryPoliciesResponse breakOutCategories) {
+    @OutputCustomType.Constructor
+    private O365PolicyPropertiesResponse(@OutputCustomType.Parameter("breakOutCategories") @Nullable O365BreakOutCategoryPoliciesResponse breakOutCategories) {
         this.breakOutCategories = breakOutCategories;
     }
 

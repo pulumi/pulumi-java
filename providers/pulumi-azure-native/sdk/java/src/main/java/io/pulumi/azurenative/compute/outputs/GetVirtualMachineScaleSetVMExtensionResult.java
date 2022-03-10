@@ -75,20 +75,20 @@ public final class GetVirtualMachineScaleSetVMExtensionResult {
      */
     private final @Nullable String typeHandlerVersion;
 
-    @OutputCustomType.Constructor({"autoUpgradeMinorVersion","enableAutomaticUpgrade","forceUpdateTag","id","instanceView","name","protectedSettings","provisioningState","publisher","settings","type","typeHandlerVersion"})
+    @OutputCustomType.Constructor
     private GetVirtualMachineScaleSetVMExtensionResult(
-        @Nullable Boolean autoUpgradeMinorVersion,
-        @Nullable Boolean enableAutomaticUpgrade,
-        @Nullable String forceUpdateTag,
-        String id,
-        @Nullable VirtualMachineExtensionInstanceViewResponse instanceView,
-        String name,
-        @Nullable Object protectedSettings,
-        String provisioningState,
-        @Nullable String publisher,
-        @Nullable Object settings,
-        String type,
-        @Nullable String typeHandlerVersion) {
+        @OutputCustomType.Parameter("autoUpgradeMinorVersion") @Nullable Boolean autoUpgradeMinorVersion,
+        @OutputCustomType.Parameter("enableAutomaticUpgrade") @Nullable Boolean enableAutomaticUpgrade,
+        @OutputCustomType.Parameter("forceUpdateTag") @Nullable String forceUpdateTag,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("instanceView") @Nullable VirtualMachineExtensionInstanceViewResponse instanceView,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("protectedSettings") @Nullable Object protectedSettings,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("publisher") @Nullable String publisher,
+        @OutputCustomType.Parameter("settings") @Nullable Object settings,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("typeHandlerVersion") @Nullable String typeHandlerVersion) {
         this.autoUpgradeMinorVersion = autoUpgradeMinorVersion;
         this.enableAutomaticUpgrade = enableAutomaticUpgrade;
         this.forceUpdateTag = forceUpdateTag;

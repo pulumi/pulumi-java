@@ -27,11 +27,11 @@ public final class PublicIPAddressDnsSettingsResponse {
      */
     private final @Nullable String reverseFqdn;
 
-    @OutputCustomType.Constructor({"domainNameLabel","fqdn","reverseFqdn"})
+    @OutputCustomType.Constructor
     private PublicIPAddressDnsSettingsResponse(
-        @Nullable String domainNameLabel,
-        @Nullable String fqdn,
-        @Nullable String reverseFqdn) {
+        @OutputCustomType.Parameter("domainNameLabel") @Nullable String domainNameLabel,
+        @OutputCustomType.Parameter("fqdn") @Nullable String fqdn,
+        @OutputCustomType.Parameter("reverseFqdn") @Nullable String reverseFqdn) {
         this.domainNameLabel = domainNameLabel;
         this.fqdn = fqdn;
         this.reverseFqdn = reverseFqdn;

@@ -69,19 +69,19 @@ public final class GetRemediationAtResourceResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"createdOn","deploymentStatus","filters","id","lastUpdatedOn","name","policyAssignmentId","policyDefinitionReferenceId","provisioningState","resourceDiscoveryMode","type"})
+    @OutputCustomType.Constructor
     private GetRemediationAtResourceResult(
-        String createdOn,
-        RemediationDeploymentSummaryResponse deploymentStatus,
-        @Nullable RemediationFiltersResponse filters,
-        String id,
-        String lastUpdatedOn,
-        String name,
-        @Nullable String policyAssignmentId,
-        @Nullable String policyDefinitionReferenceId,
-        String provisioningState,
-        @Nullable String resourceDiscoveryMode,
-        String type) {
+        @OutputCustomType.Parameter("createdOn") String createdOn,
+        @OutputCustomType.Parameter("deploymentStatus") RemediationDeploymentSummaryResponse deploymentStatus,
+        @OutputCustomType.Parameter("filters") @Nullable RemediationFiltersResponse filters,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("lastUpdatedOn") String lastUpdatedOn,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("policyAssignmentId") @Nullable String policyAssignmentId,
+        @OutputCustomType.Parameter("policyDefinitionReferenceId") @Nullable String policyDefinitionReferenceId,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("resourceDiscoveryMode") @Nullable String resourceDiscoveryMode,
+        @OutputCustomType.Parameter("type") String type) {
         this.createdOn = createdOn;
         this.deploymentStatus = deploymentStatus;
         this.filters = filters;

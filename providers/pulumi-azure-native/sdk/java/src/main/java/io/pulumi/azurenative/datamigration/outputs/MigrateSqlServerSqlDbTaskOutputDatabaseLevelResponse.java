@@ -96,24 +96,24 @@ public final class MigrateSqlServerSqlDbTaskOutputDatabaseLevelResponse {
      */
     private final String statusMessage;
 
-    @OutputCustomType.Constructor({"databaseName","endedOn","errorCount","errorPrefix","exceptionsAndWarnings","id","message","numberOfObjects","numberOfObjectsCompleted","objectSummary","resultPrefix","resultType","stage","startedOn","state","statusMessage"})
+    @OutputCustomType.Constructor
     private MigrateSqlServerSqlDbTaskOutputDatabaseLevelResponse(
-        String databaseName,
-        String endedOn,
-        Double errorCount,
-        String errorPrefix,
-        List<ReportableExceptionResponse> exceptionsAndWarnings,
-        String id,
-        String message,
-        Double numberOfObjects,
-        Double numberOfObjectsCompleted,
-        Map<String,DataItemMigrationSummaryResultResponse> objectSummary,
-        String resultPrefix,
-        String resultType,
-        String stage,
-        String startedOn,
-        String state,
-        String statusMessage) {
+        @OutputCustomType.Parameter("databaseName") String databaseName,
+        @OutputCustomType.Parameter("endedOn") String endedOn,
+        @OutputCustomType.Parameter("errorCount") Double errorCount,
+        @OutputCustomType.Parameter("errorPrefix") String errorPrefix,
+        @OutputCustomType.Parameter("exceptionsAndWarnings") List<ReportableExceptionResponse> exceptionsAndWarnings,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("message") String message,
+        @OutputCustomType.Parameter("numberOfObjects") Double numberOfObjects,
+        @OutputCustomType.Parameter("numberOfObjectsCompleted") Double numberOfObjectsCompleted,
+        @OutputCustomType.Parameter("objectSummary") Map<String,DataItemMigrationSummaryResultResponse> objectSummary,
+        @OutputCustomType.Parameter("resultPrefix") String resultPrefix,
+        @OutputCustomType.Parameter("resultType") String resultType,
+        @OutputCustomType.Parameter("stage") String stage,
+        @OutputCustomType.Parameter("startedOn") String startedOn,
+        @OutputCustomType.Parameter("state") String state,
+        @OutputCustomType.Parameter("statusMessage") String statusMessage) {
         this.databaseName = databaseName;
         this.endedOn = endedOn;
         this.errorCount = errorCount;

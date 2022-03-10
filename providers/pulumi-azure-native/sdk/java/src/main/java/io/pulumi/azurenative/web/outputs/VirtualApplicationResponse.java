@@ -35,12 +35,12 @@ public final class VirtualApplicationResponse {
      */
     private final @Nullable String virtualPath;
 
-    @OutputCustomType.Constructor({"physicalPath","preloadEnabled","virtualDirectories","virtualPath"})
+    @OutputCustomType.Constructor
     private VirtualApplicationResponse(
-        @Nullable String physicalPath,
-        @Nullable Boolean preloadEnabled,
-        @Nullable List<VirtualDirectoryResponse> virtualDirectories,
-        @Nullable String virtualPath) {
+        @OutputCustomType.Parameter("physicalPath") @Nullable String physicalPath,
+        @OutputCustomType.Parameter("preloadEnabled") @Nullable Boolean preloadEnabled,
+        @OutputCustomType.Parameter("virtualDirectories") @Nullable List<VirtualDirectoryResponse> virtualDirectories,
+        @OutputCustomType.Parameter("virtualPath") @Nullable String virtualPath) {
         this.physicalPath = physicalPath;
         this.preloadEnabled = preloadEnabled;
         this.virtualDirectories = virtualDirectories;

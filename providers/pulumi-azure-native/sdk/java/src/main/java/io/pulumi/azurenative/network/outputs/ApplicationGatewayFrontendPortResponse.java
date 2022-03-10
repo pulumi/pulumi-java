@@ -43,14 +43,14 @@ public final class ApplicationGatewayFrontendPortResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"etag","id","name","port","provisioningState","type"})
+    @OutputCustomType.Constructor
     private ApplicationGatewayFrontendPortResponse(
-        String etag,
-        @Nullable String id,
-        @Nullable String name,
-        @Nullable Integer port,
-        String provisioningState,
-        String type) {
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("port") @Nullable Integer port,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("type") String type) {
         this.etag = etag;
         this.id = id;
         this.name = name;

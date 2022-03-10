@@ -18,13 +18,13 @@ public final class GetImportCollectorResult {
     private final ImportCollectorPropertiesResponse properties;
     private final String type;
 
-    @OutputCustomType.Constructor({"eTag","id","name","properties","type"})
+    @OutputCustomType.Constructor
     private GetImportCollectorResult(
-        @Nullable String eTag,
-        String id,
-        String name,
-        ImportCollectorPropertiesResponse properties,
-        String type) {
+        @OutputCustomType.Parameter("eTag") @Nullable String eTag,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("properties") ImportCollectorPropertiesResponse properties,
+        @OutputCustomType.Parameter("type") String type) {
         this.eTag = eTag;
         this.id = id;
         this.name = name;

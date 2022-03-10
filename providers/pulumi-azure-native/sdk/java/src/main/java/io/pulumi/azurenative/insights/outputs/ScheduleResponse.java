@@ -20,10 +20,10 @@ public final class ScheduleResponse {
      */
     private final Integer timeWindowInMinutes;
 
-    @OutputCustomType.Constructor({"frequencyInMinutes","timeWindowInMinutes"})
+    @OutputCustomType.Constructor
     private ScheduleResponse(
-        Integer frequencyInMinutes,
-        Integer timeWindowInMinutes) {
+        @OutputCustomType.Parameter("frequencyInMinutes") Integer frequencyInMinutes,
+        @OutputCustomType.Parameter("timeWindowInMinutes") Integer timeWindowInMinutes) {
         this.frequencyInMinutes = frequencyInMinutes;
         this.timeWindowInMinutes = timeWindowInMinutes;
     }

@@ -28,11 +28,11 @@ public final class ScheduledSourceSynchronizationSettingResponse {
      */
     private final @Nullable String synchronizationTime;
 
-    @OutputCustomType.Constructor({"kind","recurrenceInterval","synchronizationTime"})
+    @OutputCustomType.Constructor
     private ScheduledSourceSynchronizationSettingResponse(
-        String kind,
-        @Nullable String recurrenceInterval,
-        @Nullable String synchronizationTime) {
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("recurrenceInterval") @Nullable String recurrenceInterval,
+        @OutputCustomType.Parameter("synchronizationTime") @Nullable String synchronizationTime) {
         this.kind = kind;
         this.recurrenceInterval = recurrenceInterval;
         this.synchronizationTime = synchronizationTime;

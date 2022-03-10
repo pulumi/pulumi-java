@@ -81,21 +81,21 @@ public final class SchemaResponse {
      */
     private final String tableType;
 
-    @OutputCustomType.Constructor({"categories","columns","description","displayName","labels","name","restoredLogs","searchResults","solutions","source","standardColumns","tableSubType","tableType"})
+    @OutputCustomType.Constructor
     private SchemaResponse(
-        List<String> categories,
-        @Nullable List<ColumnResponse> columns,
-        @Nullable String description,
-        @Nullable String displayName,
-        List<String> labels,
-        @Nullable String name,
-        RestoredLogsResponse restoredLogs,
-        SearchResultsResponse searchResults,
-        List<String> solutions,
-        String source,
-        List<ColumnResponse> standardColumns,
-        String tableSubType,
-        String tableType) {
+        @OutputCustomType.Parameter("categories") List<String> categories,
+        @OutputCustomType.Parameter("columns") @Nullable List<ColumnResponse> columns,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("displayName") @Nullable String displayName,
+        @OutputCustomType.Parameter("labels") List<String> labels,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("restoredLogs") RestoredLogsResponse restoredLogs,
+        @OutputCustomType.Parameter("searchResults") SearchResultsResponse searchResults,
+        @OutputCustomType.Parameter("solutions") List<String> solutions,
+        @OutputCustomType.Parameter("source") String source,
+        @OutputCustomType.Parameter("standardColumns") List<ColumnResponse> standardColumns,
+        @OutputCustomType.Parameter("tableSubType") String tableSubType,
+        @OutputCustomType.Parameter("tableType") String tableType) {
         this.categories = categories;
         this.columns = columns;
         this.description = description;

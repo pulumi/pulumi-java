@@ -23,10 +23,10 @@ public final class PortResponse {
      */
     private final @Nullable String transportProtocol;
 
-    @OutputCustomType.Constructor({"backendPort","transportProtocol"})
+    @OutputCustomType.Constructor
     private PortResponse(
-        @Nullable Integer backendPort,
-        @Nullable String transportProtocol) {
+        @OutputCustomType.Parameter("backendPort") @Nullable Integer backendPort,
+        @OutputCustomType.Parameter("transportProtocol") @Nullable String transportProtocol) {
         this.backendPort = backendPort;
         this.transportProtocol = transportProtocol;
     }

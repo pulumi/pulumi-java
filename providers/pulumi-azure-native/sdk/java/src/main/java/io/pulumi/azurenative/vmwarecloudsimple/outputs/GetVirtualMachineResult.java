@@ -156,35 +156,35 @@ public final class GetVirtualMachineResult {
      */
     private final String vmwaretools;
 
-    @OutputCustomType.Constructor({"amountOfRam","controllers","customization","disks","dnsname","exposeToGuestVM","folder","guestOS","guestOSType","id","location","name","nics","numberOfCores","password","privateCloudId","provisioningState","publicIP","resourcePool","status","tags","templateId","type","username","vSphereNetworks","vmId","vmwaretools"})
+    @OutputCustomType.Constructor
     private GetVirtualMachineResult(
-        Integer amountOfRam,
-        List<VirtualDiskControllerResponse> controllers,
-        @Nullable GuestOSCustomizationResponse customization,
-        @Nullable List<VirtualDiskResponse> disks,
-        String dnsname,
-        @Nullable Boolean exposeToGuestVM,
-        String folder,
-        String guestOS,
-        String guestOSType,
-        String id,
-        String location,
-        String name,
-        @Nullable List<VirtualNicResponse> nics,
-        Integer numberOfCores,
-        @Nullable String password,
-        String privateCloudId,
-        String provisioningState,
-        String publicIP,
-        @Nullable ResourcePoolResponse resourcePool,
-        String status,
-        @Nullable Map<String,String> tags,
-        @Nullable String templateId,
-        String type,
-        @Nullable String username,
-        @Nullable List<String> vSphereNetworks,
-        String vmId,
-        String vmwaretools) {
+        @OutputCustomType.Parameter("amountOfRam") Integer amountOfRam,
+        @OutputCustomType.Parameter("controllers") List<VirtualDiskControllerResponse> controllers,
+        @OutputCustomType.Parameter("customization") @Nullable GuestOSCustomizationResponse customization,
+        @OutputCustomType.Parameter("disks") @Nullable List<VirtualDiskResponse> disks,
+        @OutputCustomType.Parameter("dnsname") String dnsname,
+        @OutputCustomType.Parameter("exposeToGuestVM") @Nullable Boolean exposeToGuestVM,
+        @OutputCustomType.Parameter("folder") String folder,
+        @OutputCustomType.Parameter("guestOS") String guestOS,
+        @OutputCustomType.Parameter("guestOSType") String guestOSType,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("nics") @Nullable List<VirtualNicResponse> nics,
+        @OutputCustomType.Parameter("numberOfCores") Integer numberOfCores,
+        @OutputCustomType.Parameter("password") @Nullable String password,
+        @OutputCustomType.Parameter("privateCloudId") String privateCloudId,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("publicIP") String publicIP,
+        @OutputCustomType.Parameter("resourcePool") @Nullable ResourcePoolResponse resourcePool,
+        @OutputCustomType.Parameter("status") String status,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("templateId") @Nullable String templateId,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("username") @Nullable String username,
+        @OutputCustomType.Parameter("vSphereNetworks") @Nullable List<String> vSphereNetworks,
+        @OutputCustomType.Parameter("vmId") String vmId,
+        @OutputCustomType.Parameter("vmwaretools") String vmwaretools) {
         this.amountOfRam = amountOfRam;
         this.controllers = controllers;
         this.customization = customization;

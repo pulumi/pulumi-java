@@ -28,11 +28,11 @@ public final class RadiusServerResponse {
      */
     private final @Nullable String radiusServerSecret;
 
-    @OutputCustomType.Constructor({"radiusServerAddress","radiusServerScore","radiusServerSecret"})
+    @OutputCustomType.Constructor
     private RadiusServerResponse(
-        String radiusServerAddress,
-        @Nullable Double radiusServerScore,
-        @Nullable String radiusServerSecret) {
+        @OutputCustomType.Parameter("radiusServerAddress") String radiusServerAddress,
+        @OutputCustomType.Parameter("radiusServerScore") @Nullable Double radiusServerScore,
+        @OutputCustomType.Parameter("radiusServerSecret") @Nullable String radiusServerSecret) {
         this.radiusServerAddress = radiusServerAddress;
         this.radiusServerScore = radiusServerScore;
         this.radiusServerSecret = radiusServerSecret;

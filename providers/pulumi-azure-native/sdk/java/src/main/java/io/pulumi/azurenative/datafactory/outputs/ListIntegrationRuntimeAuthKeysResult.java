@@ -22,10 +22,10 @@ public final class ListIntegrationRuntimeAuthKeysResult {
      */
     private final @Nullable String authKey2;
 
-    @OutputCustomType.Constructor({"authKey1","authKey2"})
+    @OutputCustomType.Constructor
     private ListIntegrationRuntimeAuthKeysResult(
-        @Nullable String authKey1,
-        @Nullable String authKey2) {
+        @OutputCustomType.Parameter("authKey1") @Nullable String authKey1,
+        @OutputCustomType.Parameter("authKey2") @Nullable String authKey2) {
         this.authKey1 = authKey1;
         this.authKey2 = authKey2;
     }

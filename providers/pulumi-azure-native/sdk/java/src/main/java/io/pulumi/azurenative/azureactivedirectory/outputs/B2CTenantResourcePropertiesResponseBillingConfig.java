@@ -22,10 +22,10 @@ public final class B2CTenantResourcePropertiesResponseBillingConfig {
      */
     private final String effectiveStartDateUtc;
 
-    @OutputCustomType.Constructor({"billingType","effectiveStartDateUtc"})
+    @OutputCustomType.Constructor
     private B2CTenantResourcePropertiesResponseBillingConfig(
-        @Nullable String billingType,
-        String effectiveStartDateUtc) {
+        @OutputCustomType.Parameter("billingType") @Nullable String billingType,
+        @OutputCustomType.Parameter("effectiveStartDateUtc") String effectiveStartDateUtc) {
         this.billingType = billingType;
         this.effectiveStartDateUtc = effectiveStartDateUtc;
     }

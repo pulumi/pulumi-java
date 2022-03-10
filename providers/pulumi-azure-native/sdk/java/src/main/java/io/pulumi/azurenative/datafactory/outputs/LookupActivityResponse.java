@@ -165,18 +165,18 @@ public final class LookupActivityResponse {
      */
     private final @Nullable List<UserPropertyResponse> userProperties;
 
-    @OutputCustomType.Constructor({"dataset","dependsOn","description","firstRowOnly","linkedServiceName","name","policy","source","type","userProperties"})
+    @OutputCustomType.Constructor
     private LookupActivityResponse(
-        DatasetReferenceResponse dataset,
-        @Nullable List<ActivityDependencyResponse> dependsOn,
-        @Nullable String description,
-        @Nullable Object firstRowOnly,
-        @Nullable LinkedServiceReferenceResponse linkedServiceName,
-        String name,
-        @Nullable ActivityPolicyResponse policy,
-        Object source,
-        String type,
-        @Nullable List<UserPropertyResponse> userProperties) {
+        @OutputCustomType.Parameter("dataset") DatasetReferenceResponse dataset,
+        @OutputCustomType.Parameter("dependsOn") @Nullable List<ActivityDependencyResponse> dependsOn,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("firstRowOnly") @Nullable Object firstRowOnly,
+        @OutputCustomType.Parameter("linkedServiceName") @Nullable LinkedServiceReferenceResponse linkedServiceName,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("policy") @Nullable ActivityPolicyResponse policy,
+        @OutputCustomType.Parameter("source") Object source,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("userProperties") @Nullable List<UserPropertyResponse> userProperties) {
         this.dataset = dataset;
         this.dependsOn = dependsOn;
         this.description = description;

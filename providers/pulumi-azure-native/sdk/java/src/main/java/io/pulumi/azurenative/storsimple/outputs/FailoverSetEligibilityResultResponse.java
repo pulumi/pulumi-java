@@ -23,10 +23,10 @@ public final class FailoverSetEligibilityResultResponse {
      */
     private final @Nullable Boolean isEligibleForFailover;
 
-    @OutputCustomType.Constructor({"errorMessage","isEligibleForFailover"})
+    @OutputCustomType.Constructor
     private FailoverSetEligibilityResultResponse(
-        @Nullable String errorMessage,
-        @Nullable Boolean isEligibleForFailover) {
+        @OutputCustomType.Parameter("errorMessage") @Nullable String errorMessage,
+        @OutputCustomType.Parameter("isEligibleForFailover") @Nullable Boolean isEligibleForFailover) {
         this.errorMessage = errorMessage;
         this.isEligibleForFailover = isEligibleForFailover;
     }

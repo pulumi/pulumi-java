@@ -38,13 +38,13 @@ public final class HelmReleasePropertiesDefinitionResponse {
      */
     private final @Nullable Double upgradeFailureCount;
 
-    @OutputCustomType.Constructor({"failureCount","helmChartRef","installFailureCount","lastRevisionApplied","upgradeFailureCount"})
+    @OutputCustomType.Constructor
     private HelmReleasePropertiesDefinitionResponse(
-        @Nullable Double failureCount,
-        @Nullable ObjectReferenceDefinitionResponse helmChartRef,
-        @Nullable Double installFailureCount,
-        @Nullable Double lastRevisionApplied,
-        @Nullable Double upgradeFailureCount) {
+        @OutputCustomType.Parameter("failureCount") @Nullable Double failureCount,
+        @OutputCustomType.Parameter("helmChartRef") @Nullable ObjectReferenceDefinitionResponse helmChartRef,
+        @OutputCustomType.Parameter("installFailureCount") @Nullable Double installFailureCount,
+        @OutputCustomType.Parameter("lastRevisionApplied") @Nullable Double lastRevisionApplied,
+        @OutputCustomType.Parameter("upgradeFailureCount") @Nullable Double upgradeFailureCount) {
         this.failureCount = failureCount;
         this.helmChartRef = helmChartRef;
         this.installFailureCount = installFailureCount;

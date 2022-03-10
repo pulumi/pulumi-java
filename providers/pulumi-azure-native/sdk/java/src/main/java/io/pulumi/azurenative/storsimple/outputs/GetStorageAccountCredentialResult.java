@@ -54,16 +54,16 @@ public final class GetStorageAccountCredentialResult {
      */
     private final Integer volumesCount;
 
-    @OutputCustomType.Constructor({"accessKey","endPoint","id","kind","name","sslStatus","type","volumesCount"})
+    @OutputCustomType.Constructor
     private GetStorageAccountCredentialResult(
-        @Nullable AsymmetricEncryptedSecretResponse accessKey,
-        String endPoint,
-        String id,
-        @Nullable String kind,
-        String name,
-        String sslStatus,
-        String type,
-        Integer volumesCount) {
+        @OutputCustomType.Parameter("accessKey") @Nullable AsymmetricEncryptedSecretResponse accessKey,
+        @OutputCustomType.Parameter("endPoint") String endPoint,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("kind") @Nullable String kind,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("sslStatus") String sslStatus,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("volumesCount") Integer volumesCount) {
         this.accessKey = accessKey;
         this.endPoint = endPoint;
         this.id = id;

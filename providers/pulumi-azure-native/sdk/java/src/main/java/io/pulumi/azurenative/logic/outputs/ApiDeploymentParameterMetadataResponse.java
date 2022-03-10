@@ -38,13 +38,13 @@ public final class ApiDeploymentParameterMetadataResponse {
      */
     private final @Nullable String visibility;
 
-    @OutputCustomType.Constructor({"description","displayName","isRequired","type","visibility"})
+    @OutputCustomType.Constructor
     private ApiDeploymentParameterMetadataResponse(
-        @Nullable String description,
-        @Nullable String displayName,
-        @Nullable Boolean isRequired,
-        @Nullable String type,
-        @Nullable String visibility) {
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("displayName") @Nullable String displayName,
+        @OutputCustomType.Parameter("isRequired") @Nullable Boolean isRequired,
+        @OutputCustomType.Parameter("type") @Nullable String type,
+        @OutputCustomType.Parameter("visibility") @Nullable String visibility) {
         this.description = description;
         this.displayName = displayName;
         this.isRequired = isRequired;

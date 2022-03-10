@@ -65,18 +65,18 @@ public final class GetUserResult {
      */
     private final String uniqueIdentifier;
 
-    @OutputCustomType.Constructor({"createdDate","id","identity","location","name","provisioningState","secretStore","tags","type","uniqueIdentifier"})
+    @OutputCustomType.Constructor
     private GetUserResult(
-        String createdDate,
-        String id,
-        @Nullable UserIdentityResponse identity,
-        @Nullable String location,
-        String name,
-        String provisioningState,
-        @Nullable UserSecretStoreResponse secretStore,
-        @Nullable Map<String,String> tags,
-        String type,
-        String uniqueIdentifier) {
+        @OutputCustomType.Parameter("createdDate") String createdDate,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("identity") @Nullable UserIdentityResponse identity,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("secretStore") @Nullable UserSecretStoreResponse secretStore,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("uniqueIdentifier") String uniqueIdentifier) {
         this.createdDate = createdDate;
         this.id = id;
         this.identity = identity;

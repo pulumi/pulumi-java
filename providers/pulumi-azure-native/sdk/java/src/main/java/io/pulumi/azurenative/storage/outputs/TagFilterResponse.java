@@ -25,11 +25,11 @@ public final class TagFilterResponse {
      */
     private final String value;
 
-    @OutputCustomType.Constructor({"name","op","value"})
+    @OutputCustomType.Constructor
     private TagFilterResponse(
-        String name,
-        String op,
-        String value) {
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("op") String op,
+        @OutputCustomType.Parameter("value") String value) {
         this.name = name;
         this.op = op;
         this.value = value;

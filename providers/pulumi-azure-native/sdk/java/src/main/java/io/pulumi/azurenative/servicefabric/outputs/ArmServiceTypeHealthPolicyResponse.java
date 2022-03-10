@@ -27,11 +27,11 @@ public final class ArmServiceTypeHealthPolicyResponse {
      */
     private final @Nullable Integer maxPercentUnhealthyServices;
 
-    @OutputCustomType.Constructor({"maxPercentUnhealthyPartitionsPerService","maxPercentUnhealthyReplicasPerPartition","maxPercentUnhealthyServices"})
+    @OutputCustomType.Constructor
     private ArmServiceTypeHealthPolicyResponse(
-        @Nullable Integer maxPercentUnhealthyPartitionsPerService,
-        @Nullable Integer maxPercentUnhealthyReplicasPerPartition,
-        @Nullable Integer maxPercentUnhealthyServices) {
+        @OutputCustomType.Parameter("maxPercentUnhealthyPartitionsPerService") @Nullable Integer maxPercentUnhealthyPartitionsPerService,
+        @OutputCustomType.Parameter("maxPercentUnhealthyReplicasPerPartition") @Nullable Integer maxPercentUnhealthyReplicasPerPartition,
+        @OutputCustomType.Parameter("maxPercentUnhealthyServices") @Nullable Integer maxPercentUnhealthyServices) {
         this.maxPercentUnhealthyPartitionsPerService = maxPercentUnhealthyPartitionsPerService;
         this.maxPercentUnhealthyReplicasPerPartition = maxPercentUnhealthyReplicasPerPartition;
         this.maxPercentUnhealthyServices = maxPercentUnhealthyServices;

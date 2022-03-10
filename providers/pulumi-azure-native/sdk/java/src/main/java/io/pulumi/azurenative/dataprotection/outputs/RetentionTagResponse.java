@@ -25,11 +25,11 @@ public final class RetentionTagResponse {
      */
     private final String tagName;
 
-    @OutputCustomType.Constructor({"eTag","id","tagName"})
+    @OutputCustomType.Constructor
     private RetentionTagResponse(
-        String eTag,
-        String id,
-        String tagName) {
+        @OutputCustomType.Parameter("eTag") String eTag,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("tagName") String tagName) {
         this.eTag = eTag;
         this.id = id;
         this.tagName = tagName;

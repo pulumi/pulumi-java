@@ -35,13 +35,13 @@ public final class ItsmReceiverResponse {
      */
     private final String workspaceId;
 
-    @OutputCustomType.Constructor({"connectionId","name","region","ticketConfiguration","workspaceId"})
+    @OutputCustomType.Constructor
     private ItsmReceiverResponse(
-        String connectionId,
-        String name,
-        String region,
-        String ticketConfiguration,
-        String workspaceId) {
+        @OutputCustomType.Parameter("connectionId") String connectionId,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("region") String region,
+        @OutputCustomType.Parameter("ticketConfiguration") String ticketConfiguration,
+        @OutputCustomType.Parameter("workspaceId") String workspaceId) {
         this.connectionId = connectionId;
         this.name = name;
         this.region = region;

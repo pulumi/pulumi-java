@@ -22,10 +22,10 @@ public final class ACIServiceResponseResponseDataCollection {
      */
     private final @Nullable Boolean storageEnabled;
 
-    @OutputCustomType.Constructor({"eventHubEnabled","storageEnabled"})
+    @OutputCustomType.Constructor
     private ACIServiceResponseResponseDataCollection(
-        @Nullable Boolean eventHubEnabled,
-        @Nullable Boolean storageEnabled) {
+        @OutputCustomType.Parameter("eventHubEnabled") @Nullable Boolean eventHubEnabled,
+        @OutputCustomType.Parameter("storageEnabled") @Nullable Boolean storageEnabled) {
         this.eventHubEnabled = eventHubEnabled;
         this.storageEnabled = storageEnabled;
     }

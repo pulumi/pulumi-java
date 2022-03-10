@@ -25,11 +25,11 @@ public final class ConsolePropertiesResponse {
      */
     private final String uri;
 
-    @OutputCustomType.Constructor({"osType","provisioningState","uri"})
+    @OutputCustomType.Constructor
     private ConsolePropertiesResponse(
-        String osType,
-        String provisioningState,
-        String uri) {
+        @OutputCustomType.Parameter("osType") String osType,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("uri") String uri) {
         this.osType = osType;
         this.provisioningState = provisioningState;
         this.uri = uri;

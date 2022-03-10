@@ -24,10 +24,10 @@ public final class ListWebhookEventsResult {
      */
     private final @Nullable List<EventResponse> value;
 
-    @OutputCustomType.Constructor({"nextLink","value"})
+    @OutputCustomType.Constructor
     private ListWebhookEventsResult(
-        @Nullable String nextLink,
-        @Nullable List<EventResponse> value) {
+        @OutputCustomType.Parameter("nextLink") @Nullable String nextLink,
+        @OutputCustomType.Parameter("value") @Nullable List<EventResponse> value) {
         this.nextLink = nextLink;
         this.value = value;
     }

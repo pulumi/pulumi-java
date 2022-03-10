@@ -43,14 +43,14 @@ public final class TransformationResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"etag","id","name","query","streamingUnits","type"})
+    @OutputCustomType.Constructor
     private TransformationResponse(
-        String etag,
-        String id,
-        @Nullable String name,
-        @Nullable String query,
-        @Nullable Integer streamingUnits,
-        String type) {
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("query") @Nullable String query,
+        @OutputCustomType.Parameter("streamingUnits") @Nullable Integer streamingUnits,
+        @OutputCustomType.Parameter("type") String type) {
         this.etag = etag;
         this.id = id;
         this.name = name;

@@ -29,11 +29,11 @@ public final class EncryptionPropertyResponse {
      */
     private final String status;
 
-    @OutputCustomType.Constructor({"identity","keyVaultProperties","status"})
+    @OutputCustomType.Constructor
     private EncryptionPropertyResponse(
-        @Nullable IdentityForCmkResponse identity,
-        KeyVaultPropertiesResponse keyVaultProperties,
-        String status) {
+        @OutputCustomType.Parameter("identity") @Nullable IdentityForCmkResponse identity,
+        @OutputCustomType.Parameter("keyVaultProperties") KeyVaultPropertiesResponse keyVaultProperties,
+        @OutputCustomType.Parameter("status") String status) {
         this.identity = identity;
         this.keyVaultProperties = keyVaultProperties;
         this.status = status;

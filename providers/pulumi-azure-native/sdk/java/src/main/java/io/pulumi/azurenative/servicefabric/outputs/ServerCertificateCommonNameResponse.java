@@ -20,10 +20,10 @@ public final class ServerCertificateCommonNameResponse {
      */
     private final String certificateIssuerThumbprint;
 
-    @OutputCustomType.Constructor({"certificateCommonName","certificateIssuerThumbprint"})
+    @OutputCustomType.Constructor
     private ServerCertificateCommonNameResponse(
-        String certificateCommonName,
-        String certificateIssuerThumbprint) {
+        @OutputCustomType.Parameter("certificateCommonName") String certificateCommonName,
+        @OutputCustomType.Parameter("certificateIssuerThumbprint") String certificateIssuerThumbprint) {
         this.certificateCommonName = certificateCommonName;
         this.certificateIssuerThumbprint = certificateIssuerThumbprint;
     }

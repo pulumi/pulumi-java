@@ -23,10 +23,10 @@ public final class NWRuleSetVirtualNetworkRulesResponse {
      */
     private final @Nullable SubnetResponse subnet;
 
-    @OutputCustomType.Constructor({"ignoreMissingVnetServiceEndpoint","subnet"})
+    @OutputCustomType.Constructor
     private NWRuleSetVirtualNetworkRulesResponse(
-        @Nullable Boolean ignoreMissingVnetServiceEndpoint,
-        @Nullable SubnetResponse subnet) {
+        @OutputCustomType.Parameter("ignoreMissingVnetServiceEndpoint") @Nullable Boolean ignoreMissingVnetServiceEndpoint,
+        @OutputCustomType.Parameter("subnet") @Nullable SubnetResponse subnet) {
         this.ignoreMissingVnetServiceEndpoint = ignoreMissingVnetServiceEndpoint;
         this.subnet = subnet;
     }

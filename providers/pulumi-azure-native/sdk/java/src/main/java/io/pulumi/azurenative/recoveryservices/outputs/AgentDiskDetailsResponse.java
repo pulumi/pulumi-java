@@ -37,13 +37,13 @@ public final class AgentDiskDetailsResponse {
      */
     private final Integer lunId;
 
-    @OutputCustomType.Constructor({"capacityInBytes","diskId","diskName","isOSDisk","lunId"})
+    @OutputCustomType.Constructor
     private AgentDiskDetailsResponse(
-        Double capacityInBytes,
-        String diskId,
-        String diskName,
-        String isOSDisk,
-        Integer lunId) {
+        @OutputCustomType.Parameter("capacityInBytes") Double capacityInBytes,
+        @OutputCustomType.Parameter("diskId") String diskId,
+        @OutputCustomType.Parameter("diskName") String diskName,
+        @OutputCustomType.Parameter("isOSDisk") String isOSDisk,
+        @OutputCustomType.Parameter("lunId") Integer lunId) {
         this.capacityInBytes = capacityInBytes;
         this.diskId = diskId;
         this.diskName = diskName;

@@ -17,8 +17,8 @@ public final class FirewallPolicySNATResponse {
      */
     private final @Nullable List<String> privateRanges;
 
-    @OutputCustomType.Constructor({"privateRanges"})
-    private FirewallPolicySNATResponse(@Nullable List<String> privateRanges) {
+    @OutputCustomType.Constructor
+    private FirewallPolicySNATResponse(@OutputCustomType.Parameter("privateRanges") @Nullable List<String> privateRanges) {
         this.privateRanges = privateRanges;
     }
 

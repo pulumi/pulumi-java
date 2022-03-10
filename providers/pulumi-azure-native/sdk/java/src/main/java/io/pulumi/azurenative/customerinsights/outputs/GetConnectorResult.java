@@ -86,22 +86,22 @@ public final class GetConnectorResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"connectorId","connectorName","connectorProperties","connectorType","created","description","displayName","id","isInternal","lastModified","name","state","tenantId","type"})
+    @OutputCustomType.Constructor
     private GetConnectorResult(
-        Integer connectorId,
-        @Nullable String connectorName,
-        Map<String,Object> connectorProperties,
-        String connectorType,
-        String created,
-        @Nullable String description,
-        @Nullable String displayName,
-        String id,
-        @Nullable Boolean isInternal,
-        String lastModified,
-        String name,
-        String state,
-        String tenantId,
-        String type) {
+        @OutputCustomType.Parameter("connectorId") Integer connectorId,
+        @OutputCustomType.Parameter("connectorName") @Nullable String connectorName,
+        @OutputCustomType.Parameter("connectorProperties") Map<String,Object> connectorProperties,
+        @OutputCustomType.Parameter("connectorType") String connectorType,
+        @OutputCustomType.Parameter("created") String created,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("displayName") @Nullable String displayName,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("isInternal") @Nullable Boolean isInternal,
+        @OutputCustomType.Parameter("lastModified") String lastModified,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("state") String state,
+        @OutputCustomType.Parameter("tenantId") String tenantId,
+        @OutputCustomType.Parameter("type") String type) {
         this.connectorId = connectorId;
         this.connectorName = connectorName;
         this.connectorProperties = connectorProperties;

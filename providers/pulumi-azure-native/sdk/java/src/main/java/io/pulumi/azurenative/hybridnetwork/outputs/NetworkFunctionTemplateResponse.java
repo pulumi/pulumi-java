@@ -17,8 +17,8 @@ public final class NetworkFunctionTemplateResponse {
      */
     private final @Nullable List<NetworkFunctionRoleConfigurationResponse> networkFunctionRoleConfigurations;
 
-    @OutputCustomType.Constructor({"networkFunctionRoleConfigurations"})
-    private NetworkFunctionTemplateResponse(@Nullable List<NetworkFunctionRoleConfigurationResponse> networkFunctionRoleConfigurations) {
+    @OutputCustomType.Constructor
+    private NetworkFunctionTemplateResponse(@OutputCustomType.Parameter("networkFunctionRoleConfigurations") @Nullable List<NetworkFunctionRoleConfigurationResponse> networkFunctionRoleConfigurations) {
         this.networkFunctionRoleConfigurations = networkFunctionRoleConfigurations;
     }
 

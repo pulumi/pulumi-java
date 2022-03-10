@@ -22,10 +22,10 @@ public final class ExportRecurrencePeriodResponse {
      */
     private final @Nullable String to;
 
-    @OutputCustomType.Constructor({"from","to"})
+    @OutputCustomType.Constructor
     private ExportRecurrencePeriodResponse(
-        String from,
-        @Nullable String to) {
+        @OutputCustomType.Parameter("from") String from,
+        @OutputCustomType.Parameter("to") @Nullable String to) {
         this.from = from;
         this.to = to;
     }

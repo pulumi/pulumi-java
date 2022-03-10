@@ -22,10 +22,10 @@ public final class SshPublicKeyResponse {
      */
     private final @Nullable String key;
 
-    @OutputCustomType.Constructor({"description","key"})
+    @OutputCustomType.Constructor
     private SshPublicKeyResponse(
-        @Nullable String description,
-        @Nullable String key) {
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("key") @Nullable String key) {
         this.description = description;
         this.key = key;
     }

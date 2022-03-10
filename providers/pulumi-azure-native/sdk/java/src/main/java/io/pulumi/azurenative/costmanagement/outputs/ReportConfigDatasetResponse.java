@@ -49,14 +49,14 @@ public final class ReportConfigDatasetResponse {
      */
     private final @Nullable List<ReportConfigSortingResponse> sorting;
 
-    @OutputCustomType.Constructor({"aggregation","configuration","filter","granularity","grouping","sorting"})
+    @OutputCustomType.Constructor
     private ReportConfigDatasetResponse(
-        @Nullable Map<String,ReportConfigAggregationResponse> aggregation,
-        @Nullable ReportConfigDatasetConfigurationResponse configuration,
-        @Nullable ReportConfigFilterResponse filter,
-        @Nullable String granularity,
-        @Nullable List<ReportConfigGroupingResponse> grouping,
-        @Nullable List<ReportConfigSortingResponse> sorting) {
+        @OutputCustomType.Parameter("aggregation") @Nullable Map<String,ReportConfigAggregationResponse> aggregation,
+        @OutputCustomType.Parameter("configuration") @Nullable ReportConfigDatasetConfigurationResponse configuration,
+        @OutputCustomType.Parameter("filter") @Nullable ReportConfigFilterResponse filter,
+        @OutputCustomType.Parameter("granularity") @Nullable String granularity,
+        @OutputCustomType.Parameter("grouping") @Nullable List<ReportConfigGroupingResponse> grouping,
+        @OutputCustomType.Parameter("sorting") @Nullable List<ReportConfigSortingResponse> sorting) {
         this.aggregation = aggregation;
         this.configuration = configuration;
         this.filter = filter;

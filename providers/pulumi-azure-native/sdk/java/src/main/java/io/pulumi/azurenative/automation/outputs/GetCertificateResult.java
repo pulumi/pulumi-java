@@ -58,17 +58,17 @@ public final class GetCertificateResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"creationTime","description","expiryTime","id","isExportable","lastModifiedTime","name","thumbprint","type"})
+    @OutputCustomType.Constructor
     private GetCertificateResult(
-        String creationTime,
-        @Nullable String description,
-        String expiryTime,
-        String id,
-        Boolean isExportable,
-        String lastModifiedTime,
-        String name,
-        String thumbprint,
-        String type) {
+        @OutputCustomType.Parameter("creationTime") String creationTime,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("expiryTime") String expiryTime,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("isExportable") Boolean isExportable,
+        @OutputCustomType.Parameter("lastModifiedTime") String lastModifiedTime,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("thumbprint") String thumbprint,
+        @OutputCustomType.Parameter("type") String type) {
         this.creationTime = creationTime;
         this.description = description;
         this.expiryTime = expiryTime;

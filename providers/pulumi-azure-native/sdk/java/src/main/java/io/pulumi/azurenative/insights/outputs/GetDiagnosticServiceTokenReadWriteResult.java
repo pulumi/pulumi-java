@@ -17,8 +17,8 @@ public final class GetDiagnosticServiceTokenReadWriteResult {
      */
     private final @Nullable String token;
 
-    @OutputCustomType.Constructor({"token"})
-    private GetDiagnosticServiceTokenReadWriteResult(@Nullable String token) {
+    @OutputCustomType.Constructor
+    private GetDiagnosticServiceTokenReadWriteResult(@OutputCustomType.Parameter("token") @Nullable String token) {
         this.token = token;
     }
 

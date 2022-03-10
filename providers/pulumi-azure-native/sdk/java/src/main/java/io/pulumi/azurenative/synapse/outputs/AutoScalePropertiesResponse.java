@@ -28,11 +28,11 @@ public final class AutoScalePropertiesResponse {
      */
     private final @Nullable Integer minNodeCount;
 
-    @OutputCustomType.Constructor({"enabled","maxNodeCount","minNodeCount"})
+    @OutputCustomType.Constructor
     private AutoScalePropertiesResponse(
-        @Nullable Boolean enabled,
-        @Nullable Integer maxNodeCount,
-        @Nullable Integer minNodeCount) {
+        @OutputCustomType.Parameter("enabled") @Nullable Boolean enabled,
+        @OutputCustomType.Parameter("maxNodeCount") @Nullable Integer maxNodeCount,
+        @OutputCustomType.Parameter("minNodeCount") @Nullable Integer minNodeCount) {
         this.enabled = enabled;
         this.maxNodeCount = maxNodeCount;
         this.minNodeCount = minNodeCount;

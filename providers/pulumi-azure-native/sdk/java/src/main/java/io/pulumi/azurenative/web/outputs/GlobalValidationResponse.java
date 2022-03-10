@@ -36,12 +36,12 @@ public final class GlobalValidationResponse {
      */
     private final @Nullable String unauthenticatedClientAction;
 
-    @OutputCustomType.Constructor({"excludedPaths","redirectToProvider","requireAuthentication","unauthenticatedClientAction"})
+    @OutputCustomType.Constructor
     private GlobalValidationResponse(
-        @Nullable List<String> excludedPaths,
-        @Nullable String redirectToProvider,
-        @Nullable Boolean requireAuthentication,
-        @Nullable String unauthenticatedClientAction) {
+        @OutputCustomType.Parameter("excludedPaths") @Nullable List<String> excludedPaths,
+        @OutputCustomType.Parameter("redirectToProvider") @Nullable String redirectToProvider,
+        @OutputCustomType.Parameter("requireAuthentication") @Nullable Boolean requireAuthentication,
+        @OutputCustomType.Parameter("unauthenticatedClientAction") @Nullable String unauthenticatedClientAction) {
         this.excludedPaths = excludedPaths;
         this.redirectToProvider = redirectToProvider;
         this.requireAuthentication = requireAuthentication;

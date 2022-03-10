@@ -29,11 +29,11 @@ public final class DdosSettingsResponse {
      */
     private final @Nullable String protectionCoverage;
 
-    @OutputCustomType.Constructor({"ddosCustomPolicy","protectedIP","protectionCoverage"})
+    @OutputCustomType.Constructor
     private DdosSettingsResponse(
-        @Nullable SubResourceResponse ddosCustomPolicy,
-        @Nullable Boolean protectedIP,
-        @Nullable String protectionCoverage) {
+        @OutputCustomType.Parameter("ddosCustomPolicy") @Nullable SubResourceResponse ddosCustomPolicy,
+        @OutputCustomType.Parameter("protectedIP") @Nullable Boolean protectedIP,
+        @OutputCustomType.Parameter("protectionCoverage") @Nullable String protectionCoverage) {
         this.ddosCustomPolicy = ddosCustomPolicy;
         this.protectedIP = protectedIP;
         this.protectionCoverage = protectionCoverage;

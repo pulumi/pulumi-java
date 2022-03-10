@@ -17,8 +17,8 @@ public final class LabVhdResponse {
      */
     private final @Nullable String id;
 
-    @OutputCustomType.Constructor({"id"})
-    private LabVhdResponse(@Nullable String id) {
+    @OutputCustomType.Constructor
+    private LabVhdResponse(@OutputCustomType.Parameter("id") @Nullable String id) {
         this.id = id;
     }
 

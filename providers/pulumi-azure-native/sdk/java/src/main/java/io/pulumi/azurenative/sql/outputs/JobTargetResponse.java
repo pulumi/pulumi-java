@@ -47,15 +47,15 @@ public final class JobTargetResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"databaseName","elasticPoolName","membershipType","refreshCredential","serverName","shardMapName","type"})
+    @OutputCustomType.Constructor
     private JobTargetResponse(
-        @Nullable String databaseName,
-        @Nullable String elasticPoolName,
-        @Nullable String membershipType,
-        @Nullable String refreshCredential,
-        @Nullable String serverName,
-        @Nullable String shardMapName,
-        String type) {
+        @OutputCustomType.Parameter("databaseName") @Nullable String databaseName,
+        @OutputCustomType.Parameter("elasticPoolName") @Nullable String elasticPoolName,
+        @OutputCustomType.Parameter("membershipType") @Nullable String membershipType,
+        @OutputCustomType.Parameter("refreshCredential") @Nullable String refreshCredential,
+        @OutputCustomType.Parameter("serverName") @Nullable String serverName,
+        @OutputCustomType.Parameter("shardMapName") @Nullable String shardMapName,
+        @OutputCustomType.Parameter("type") String type) {
         this.databaseName = databaseName;
         this.elasticPoolName = elasticPoolName;
         this.membershipType = membershipType;

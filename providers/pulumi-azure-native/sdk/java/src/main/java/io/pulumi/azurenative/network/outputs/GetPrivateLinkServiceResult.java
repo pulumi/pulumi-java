@@ -107,25 +107,25 @@ public final class GetPrivateLinkServiceResult {
      */
     private final @Nullable PrivateLinkServicePropertiesResponseVisibility visibility;
 
-    @OutputCustomType.Constructor({"alias","autoApproval","enableProxyProtocol","etag","extendedLocation","fqdns","id","ipConfigurations","loadBalancerFrontendIpConfigurations","location","name","networkInterfaces","privateEndpointConnections","provisioningState","tags","type","visibility"})
+    @OutputCustomType.Constructor
     private GetPrivateLinkServiceResult(
-        String alias,
-        @Nullable PrivateLinkServicePropertiesResponseAutoApproval autoApproval,
-        @Nullable Boolean enableProxyProtocol,
-        String etag,
-        @Nullable ExtendedLocationResponse extendedLocation,
-        @Nullable List<String> fqdns,
-        @Nullable String id,
-        @Nullable List<PrivateLinkServiceIpConfigurationResponse> ipConfigurations,
-        @Nullable List<FrontendIPConfigurationResponse> loadBalancerFrontendIpConfigurations,
-        @Nullable String location,
-        String name,
-        List<NetworkInterfaceResponse> networkInterfaces,
-        List<PrivateEndpointConnectionResponse> privateEndpointConnections,
-        String provisioningState,
-        @Nullable Map<String,String> tags,
-        String type,
-        @Nullable PrivateLinkServicePropertiesResponseVisibility visibility) {
+        @OutputCustomType.Parameter("alias") String alias,
+        @OutputCustomType.Parameter("autoApproval") @Nullable PrivateLinkServicePropertiesResponseAutoApproval autoApproval,
+        @OutputCustomType.Parameter("enableProxyProtocol") @Nullable Boolean enableProxyProtocol,
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("extendedLocation") @Nullable ExtendedLocationResponse extendedLocation,
+        @OutputCustomType.Parameter("fqdns") @Nullable List<String> fqdns,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("ipConfigurations") @Nullable List<PrivateLinkServiceIpConfigurationResponse> ipConfigurations,
+        @OutputCustomType.Parameter("loadBalancerFrontendIpConfigurations") @Nullable List<FrontendIPConfigurationResponse> loadBalancerFrontendIpConfigurations,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("networkInterfaces") List<NetworkInterfaceResponse> networkInterfaces,
+        @OutputCustomType.Parameter("privateEndpointConnections") List<PrivateEndpointConnectionResponse> privateEndpointConnections,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("visibility") @Nullable PrivateLinkServicePropertiesResponseVisibility visibility) {
         this.alias = alias;
         this.autoApproval = autoApproval;
         this.enableProxyProtocol = enableProxyProtocol;

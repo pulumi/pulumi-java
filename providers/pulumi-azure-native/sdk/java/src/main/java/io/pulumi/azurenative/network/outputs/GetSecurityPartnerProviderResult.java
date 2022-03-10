@@ -64,18 +64,18 @@ public final class GetSecurityPartnerProviderResult {
      */
     private final @Nullable SubResourceResponse virtualHub;
 
-    @OutputCustomType.Constructor({"connectionStatus","etag","id","location","name","provisioningState","securityProviderName","tags","type","virtualHub"})
+    @OutputCustomType.Constructor
     private GetSecurityPartnerProviderResult(
-        String connectionStatus,
-        String etag,
-        @Nullable String id,
-        @Nullable String location,
-        String name,
-        String provisioningState,
-        @Nullable String securityProviderName,
-        @Nullable Map<String,String> tags,
-        String type,
-        @Nullable SubResourceResponse virtualHub) {
+        @OutputCustomType.Parameter("connectionStatus") String connectionStatus,
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("securityProviderName") @Nullable String securityProviderName,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("virtualHub") @Nullable SubResourceResponse virtualHub) {
         this.connectionStatus = connectionStatus;
         this.etag = etag;
         this.id = id;

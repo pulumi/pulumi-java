@@ -35,13 +35,13 @@ public final class GetHcxEnterpriseSiteResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"activationKey","id","name","status","type"})
+    @OutputCustomType.Constructor
     private GetHcxEnterpriseSiteResult(
-        String activationKey,
-        String id,
-        String name,
-        String status,
-        String type) {
+        @OutputCustomType.Parameter("activationKey") String activationKey,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("status") String status,
+        @OutputCustomType.Parameter("type") String type) {
         this.activationKey = activationKey;
         this.id = id;
         this.name = name;

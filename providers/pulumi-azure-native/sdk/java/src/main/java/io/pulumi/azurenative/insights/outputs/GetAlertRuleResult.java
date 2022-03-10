@@ -82,20 +82,20 @@ public final class GetAlertRuleResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"action","actions","condition","description","id","isEnabled","lastUpdatedTime","location","name","provisioningState","tags","type"})
+    @OutputCustomType.Constructor
     private GetAlertRuleResult(
-        @Nullable Either<RuleEmailActionResponse,RuleWebhookActionResponse> action,
-        @Nullable List<Either<RuleEmailActionResponse,RuleWebhookActionResponse>> actions,
-        Object condition,
-        @Nullable String description,
-        String id,
-        Boolean isEnabled,
-        String lastUpdatedTime,
-        String location,
-        String name,
-        @Nullable String provisioningState,
-        @Nullable Map<String,String> tags,
-        String type) {
+        @OutputCustomType.Parameter("action") @Nullable Either<RuleEmailActionResponse,RuleWebhookActionResponse> action,
+        @OutputCustomType.Parameter("actions") @Nullable List<Either<RuleEmailActionResponse,RuleWebhookActionResponse>> actions,
+        @OutputCustomType.Parameter("condition") Object condition,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("isEnabled") Boolean isEnabled,
+        @OutputCustomType.Parameter("lastUpdatedTime") String lastUpdatedTime,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("provisioningState") @Nullable String provisioningState,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type) {
         this.action = action;
         this.actions = actions;
         this.condition = condition;

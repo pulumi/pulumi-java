@@ -17,8 +17,8 @@ public final class ConnectionMonitorEndpointScopeItemResponse {
      */
     private final @Nullable String address;
 
-    @OutputCustomType.Constructor({"address"})
-    private ConnectionMonitorEndpointScopeItemResponse(@Nullable String address) {
+    @OutputCustomType.Constructor
+    private ConnectionMonitorEndpointScopeItemResponse(@OutputCustomType.Parameter("address") @Nullable String address) {
         this.address = address;
     }
 

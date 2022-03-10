@@ -46,15 +46,15 @@ public final class GetComputePolicyResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"id","maxDegreeOfParallelismPerJob","minPriorityPerJob","name","objectId","objectType","type"})
+    @OutputCustomType.Constructor
     private GetComputePolicyResult(
-        String id,
-        Integer maxDegreeOfParallelismPerJob,
-        Integer minPriorityPerJob,
-        String name,
-        String objectId,
-        String objectType,
-        String type) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("maxDegreeOfParallelismPerJob") Integer maxDegreeOfParallelismPerJob,
+        @OutputCustomType.Parameter("minPriorityPerJob") Integer minPriorityPerJob,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("objectId") String objectId,
+        @OutputCustomType.Parameter("objectType") String objectType,
+        @OutputCustomType.Parameter("type") String type) {
         this.id = id;
         this.maxDegreeOfParallelismPerJob = maxDegreeOfParallelismPerJob;
         this.minPriorityPerJob = minPriorityPerJob;

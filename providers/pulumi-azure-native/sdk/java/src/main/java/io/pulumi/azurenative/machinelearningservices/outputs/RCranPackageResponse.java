@@ -22,10 +22,10 @@ public final class RCranPackageResponse {
      */
     private final @Nullable String repository;
 
-    @OutputCustomType.Constructor({"name","repository"})
+    @OutputCustomType.Constructor
     private RCranPackageResponse(
-        @Nullable String name,
-        @Nullable String repository) {
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("repository") @Nullable String repository) {
         this.name = name;
         this.repository = repository;
     }

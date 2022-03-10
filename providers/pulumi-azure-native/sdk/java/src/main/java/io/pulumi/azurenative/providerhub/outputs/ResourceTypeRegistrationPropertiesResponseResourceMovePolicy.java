@@ -15,11 +15,11 @@ public final class ResourceTypeRegistrationPropertiesResponseResourceMovePolicy 
     private final @Nullable Boolean crossSubscriptionMoveEnabled;
     private final @Nullable Boolean validationRequired;
 
-    @OutputCustomType.Constructor({"crossResourceGroupMoveEnabled","crossSubscriptionMoveEnabled","validationRequired"})
+    @OutputCustomType.Constructor
     private ResourceTypeRegistrationPropertiesResponseResourceMovePolicy(
-        @Nullable Boolean crossResourceGroupMoveEnabled,
-        @Nullable Boolean crossSubscriptionMoveEnabled,
-        @Nullable Boolean validationRequired) {
+        @OutputCustomType.Parameter("crossResourceGroupMoveEnabled") @Nullable Boolean crossResourceGroupMoveEnabled,
+        @OutputCustomType.Parameter("crossSubscriptionMoveEnabled") @Nullable Boolean crossSubscriptionMoveEnabled,
+        @OutputCustomType.Parameter("validationRequired") @Nullable Boolean validationRequired) {
         this.crossResourceGroupMoveEnabled = crossResourceGroupMoveEnabled;
         this.crossSubscriptionMoveEnabled = crossSubscriptionMoveEnabled;
         this.validationRequired = validationRequired;

@@ -41,12 +41,12 @@ public final class MabProtectionPolicyResponse {
      */
     private final @Nullable Object schedulePolicy;
 
-    @OutputCustomType.Constructor({"backupManagementType","protectedItemsCount","retentionPolicy","schedulePolicy"})
+    @OutputCustomType.Constructor
     private MabProtectionPolicyResponse(
-        String backupManagementType,
-        @Nullable Integer protectedItemsCount,
-        @Nullable Either<LongTermRetentionPolicyResponse,SimpleRetentionPolicyResponse> retentionPolicy,
-        @Nullable Object schedulePolicy) {
+        @OutputCustomType.Parameter("backupManagementType") String backupManagementType,
+        @OutputCustomType.Parameter("protectedItemsCount") @Nullable Integer protectedItemsCount,
+        @OutputCustomType.Parameter("retentionPolicy") @Nullable Either<LongTermRetentionPolicyResponse,SimpleRetentionPolicyResponse> retentionPolicy,
+        @OutputCustomType.Parameter("schedulePolicy") @Nullable Object schedulePolicy) {
         this.backupManagementType = backupManagementType;
         this.protectedItemsCount = protectedItemsCount;
         this.retentionPolicy = retentionPolicy;

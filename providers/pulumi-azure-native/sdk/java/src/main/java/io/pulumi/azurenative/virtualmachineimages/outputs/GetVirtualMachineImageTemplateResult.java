@@ -101,22 +101,22 @@ public final class GetVirtualMachineImageTemplateResult {
      */
     private final @Nullable ImageTemplateVmProfileResponse vmProfile;
 
-    @OutputCustomType.Constructor({"buildTimeoutInMinutes","customize","distribute","id","identity","lastRunStatus","location","name","provisioningError","provisioningState","source","tags","type","vmProfile"})
+    @OutputCustomType.Constructor
     private GetVirtualMachineImageTemplateResult(
-        @Nullable Integer buildTimeoutInMinutes,
-        @Nullable List<Object> customize,
-        List<Object> distribute,
-        String id,
-        ImageTemplateIdentityResponse identity,
-        ImageTemplateLastRunStatusResponse lastRunStatus,
-        String location,
-        String name,
-        ProvisioningErrorResponse provisioningError,
-        String provisioningState,
-        Object source,
-        @Nullable Map<String,String> tags,
-        String type,
-        @Nullable ImageTemplateVmProfileResponse vmProfile) {
+        @OutputCustomType.Parameter("buildTimeoutInMinutes") @Nullable Integer buildTimeoutInMinutes,
+        @OutputCustomType.Parameter("customize") @Nullable List<Object> customize,
+        @OutputCustomType.Parameter("distribute") List<Object> distribute,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("identity") ImageTemplateIdentityResponse identity,
+        @OutputCustomType.Parameter("lastRunStatus") ImageTemplateLastRunStatusResponse lastRunStatus,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("provisioningError") ProvisioningErrorResponse provisioningError,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("source") Object source,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("vmProfile") @Nullable ImageTemplateVmProfileResponse vmProfile) {
         this.buildTimeoutInMinutes = buildTimeoutInMinutes;
         this.customize = customize;
         this.distribute = distribute;

@@ -66,17 +66,17 @@ public final class JsonSinkResponse {
      */
     private final @Nullable Object writeBatchTimeout;
 
-    @OutputCustomType.Constructor({"disableMetricsCollection","formatSettings","maxConcurrentConnections","sinkRetryCount","sinkRetryWait","storeSettings","type","writeBatchSize","writeBatchTimeout"})
+    @OutputCustomType.Constructor
     private JsonSinkResponse(
-        @Nullable Object disableMetricsCollection,
-        @Nullable JsonWriteSettingsResponse formatSettings,
-        @Nullable Object maxConcurrentConnections,
-        @Nullable Object sinkRetryCount,
-        @Nullable Object sinkRetryWait,
-        @Nullable Object storeSettings,
-        String type,
-        @Nullable Object writeBatchSize,
-        @Nullable Object writeBatchTimeout) {
+        @OutputCustomType.Parameter("disableMetricsCollection") @Nullable Object disableMetricsCollection,
+        @OutputCustomType.Parameter("formatSettings") @Nullable JsonWriteSettingsResponse formatSettings,
+        @OutputCustomType.Parameter("maxConcurrentConnections") @Nullable Object maxConcurrentConnections,
+        @OutputCustomType.Parameter("sinkRetryCount") @Nullable Object sinkRetryCount,
+        @OutputCustomType.Parameter("sinkRetryWait") @Nullable Object sinkRetryWait,
+        @OutputCustomType.Parameter("storeSettings") @Nullable Object storeSettings,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("writeBatchSize") @Nullable Object writeBatchSize,
+        @OutputCustomType.Parameter("writeBatchTimeout") @Nullable Object writeBatchTimeout) {
         this.disableMetricsCollection = disableMetricsCollection;
         this.formatSettings = formatSettings;
         this.maxConcurrentConnections = maxConcurrentConnections;

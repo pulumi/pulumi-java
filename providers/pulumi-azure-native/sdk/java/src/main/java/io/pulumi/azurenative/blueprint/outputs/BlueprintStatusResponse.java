@@ -20,10 +20,10 @@ public final class BlueprintStatusResponse {
      */
     private final String timeCreated;
 
-    @OutputCustomType.Constructor({"lastModified","timeCreated"})
+    @OutputCustomType.Constructor
     private BlueprintStatusResponse(
-        String lastModified,
-        String timeCreated) {
+        @OutputCustomType.Parameter("lastModified") String lastModified,
+        @OutputCustomType.Parameter("timeCreated") String timeCreated) {
         this.lastModified = lastModified;
         this.timeCreated = timeCreated;
     }

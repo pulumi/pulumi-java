@@ -23,10 +23,10 @@ public final class IdentityPropertiesResponse {
      */
     private final @Nullable UserAssignedPropertiesResponse userAssigned;
 
-    @OutputCustomType.Constructor({"type","userAssigned"})
+    @OutputCustomType.Constructor
     private IdentityPropertiesResponse(
-        @Nullable String type,
-        @Nullable UserAssignedPropertiesResponse userAssigned) {
+        @OutputCustomType.Parameter("type") @Nullable String type,
+        @OutputCustomType.Parameter("userAssigned") @Nullable UserAssignedPropertiesResponse userAssigned) {
         this.type = type;
         this.userAssigned = userAssigned;
     }

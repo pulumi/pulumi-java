@@ -39,13 +39,13 @@ public final class GetDeploymentResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"id","name","properties","sku","type"})
+    @OutputCustomType.Constructor
     private GetDeploymentResult(
-        String id,
-        String name,
-        DeploymentResourcePropertiesResponse properties,
-        @Nullable SkuResponse sku,
-        String type) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("properties") DeploymentResourcePropertiesResponse properties,
+        @OutputCustomType.Parameter("sku") @Nullable SkuResponse sku,
+        @OutputCustomType.Parameter("type") String type) {
         this.id = id;
         this.name = name;
         this.properties = properties;

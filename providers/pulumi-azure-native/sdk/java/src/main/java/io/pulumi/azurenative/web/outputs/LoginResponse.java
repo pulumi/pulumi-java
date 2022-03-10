@@ -50,14 +50,14 @@ public final class LoginResponse {
      */
     private final @Nullable TokenStoreResponse tokenStore;
 
-    @OutputCustomType.Constructor({"allowedExternalRedirectUrls","cookieExpiration","nonce","preserveUrlFragmentsForLogins","routes","tokenStore"})
+    @OutputCustomType.Constructor
     private LoginResponse(
-        @Nullable List<String> allowedExternalRedirectUrls,
-        @Nullable CookieExpirationResponse cookieExpiration,
-        @Nullable NonceResponse nonce,
-        @Nullable Boolean preserveUrlFragmentsForLogins,
-        @Nullable LoginRoutesResponse routes,
-        @Nullable TokenStoreResponse tokenStore) {
+        @OutputCustomType.Parameter("allowedExternalRedirectUrls") @Nullable List<String> allowedExternalRedirectUrls,
+        @OutputCustomType.Parameter("cookieExpiration") @Nullable CookieExpirationResponse cookieExpiration,
+        @OutputCustomType.Parameter("nonce") @Nullable NonceResponse nonce,
+        @OutputCustomType.Parameter("preserveUrlFragmentsForLogins") @Nullable Boolean preserveUrlFragmentsForLogins,
+        @OutputCustomType.Parameter("routes") @Nullable LoginRoutesResponse routes,
+        @OutputCustomType.Parameter("tokenStore") @Nullable TokenStoreResponse tokenStore) {
         this.allowedExternalRedirectUrls = allowedExternalRedirectUrls;
         this.cookieExpiration = cookieExpiration;
         this.nonce = nonce;

@@ -17,8 +17,8 @@ public final class SubnetPropertiesResponse {
      */
     private final @Nullable String name;
 
-    @OutputCustomType.Constructor({"name"})
-    private SubnetPropertiesResponse(@Nullable String name) {
+    @OutputCustomType.Constructor
+    private SubnetPropertiesResponse(@OutputCustomType.Parameter("name") @Nullable String name) {
         this.name = name;
     }
 

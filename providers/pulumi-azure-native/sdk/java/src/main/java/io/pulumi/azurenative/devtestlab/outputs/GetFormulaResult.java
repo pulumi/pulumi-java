@@ -80,21 +80,21 @@ public final class GetFormulaResult {
      */
     private final @Nullable FormulaPropertiesFromVmResponse vm;
 
-    @OutputCustomType.Constructor({"author","creationDate","description","formulaContent","id","location","name","osType","provisioningState","tags","type","uniqueIdentifier","vm"})
+    @OutputCustomType.Constructor
     private GetFormulaResult(
-        String author,
-        String creationDate,
-        @Nullable String description,
-        @Nullable LabVirtualMachineCreationParameterResponse formulaContent,
-        String id,
-        @Nullable String location,
-        String name,
-        @Nullable String osType,
-        String provisioningState,
-        @Nullable Map<String,String> tags,
-        String type,
-        String uniqueIdentifier,
-        @Nullable FormulaPropertiesFromVmResponse vm) {
+        @OutputCustomType.Parameter("author") String author,
+        @OutputCustomType.Parameter("creationDate") String creationDate,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("formulaContent") @Nullable LabVirtualMachineCreationParameterResponse formulaContent,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("osType") @Nullable String osType,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("uniqueIdentifier") String uniqueIdentifier,
+        @OutputCustomType.Parameter("vm") @Nullable FormulaPropertiesFromVmResponse vm) {
         this.author = author;
         this.creationDate = creationDate;
         this.description = description;

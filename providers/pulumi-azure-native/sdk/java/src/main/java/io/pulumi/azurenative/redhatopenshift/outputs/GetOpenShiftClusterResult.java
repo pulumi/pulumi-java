@@ -92,22 +92,22 @@ public final class GetOpenShiftClusterResult {
      */
     private final @Nullable List<WorkerProfileResponse> workerProfiles;
 
-    @OutputCustomType.Constructor({"apiserverProfile","clusterProfile","consoleProfile","id","ingressProfiles","location","masterProfile","name","networkProfile","provisioningState","servicePrincipalProfile","tags","type","workerProfiles"})
+    @OutputCustomType.Constructor
     private GetOpenShiftClusterResult(
-        @Nullable APIServerProfileResponse apiserverProfile,
-        @Nullable ClusterProfileResponse clusterProfile,
-        @Nullable ConsoleProfileResponse consoleProfile,
-        String id,
-        @Nullable List<IngressProfileResponse> ingressProfiles,
-        String location,
-        @Nullable MasterProfileResponse masterProfile,
-        String name,
-        @Nullable NetworkProfileResponse networkProfile,
-        @Nullable String provisioningState,
-        @Nullable ServicePrincipalProfileResponse servicePrincipalProfile,
-        @Nullable Map<String,String> tags,
-        String type,
-        @Nullable List<WorkerProfileResponse> workerProfiles) {
+        @OutputCustomType.Parameter("apiserverProfile") @Nullable APIServerProfileResponse apiserverProfile,
+        @OutputCustomType.Parameter("clusterProfile") @Nullable ClusterProfileResponse clusterProfile,
+        @OutputCustomType.Parameter("consoleProfile") @Nullable ConsoleProfileResponse consoleProfile,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("ingressProfiles") @Nullable List<IngressProfileResponse> ingressProfiles,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("masterProfile") @Nullable MasterProfileResponse masterProfile,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("networkProfile") @Nullable NetworkProfileResponse networkProfile,
+        @OutputCustomType.Parameter("provisioningState") @Nullable String provisioningState,
+        @OutputCustomType.Parameter("servicePrincipalProfile") @Nullable ServicePrincipalProfileResponse servicePrincipalProfile,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("workerProfiles") @Nullable List<WorkerProfileResponse> workerProfiles) {
         this.apiserverProfile = apiserverProfile;
         this.clusterProfile = clusterProfile;
         this.consoleProfile = consoleProfile;

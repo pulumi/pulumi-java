@@ -31,12 +31,12 @@ public final class GetCassandraDataCenterResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"id","name","properties","type"})
+    @OutputCustomType.Constructor
     private GetCassandraDataCenterResult(
-        String id,
-        String name,
-        DataCenterResourceResponseProperties properties,
-        String type) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("properties") DataCenterResourceResponseProperties properties,
+        @OutputCustomType.Parameter("type") String type) {
         this.id = id;
         this.name = name;
         this.properties = properties;

@@ -37,12 +37,12 @@ public final class TokenStoreResponse {
      */
     private final @Nullable Double tokenRefreshExtensionHours;
 
-    @OutputCustomType.Constructor({"azureBlobStorage","enabled","fileSystem","tokenRefreshExtensionHours"})
+    @OutputCustomType.Constructor
     private TokenStoreResponse(
-        @Nullable BlobStorageTokenStoreResponse azureBlobStorage,
-        @Nullable Boolean enabled,
-        @Nullable FileSystemTokenStoreResponse fileSystem,
-        @Nullable Double tokenRefreshExtensionHours) {
+        @OutputCustomType.Parameter("azureBlobStorage") @Nullable BlobStorageTokenStoreResponse azureBlobStorage,
+        @OutputCustomType.Parameter("enabled") @Nullable Boolean enabled,
+        @OutputCustomType.Parameter("fileSystem") @Nullable FileSystemTokenStoreResponse fileSystem,
+        @OutputCustomType.Parameter("tokenRefreshExtensionHours") @Nullable Double tokenRefreshExtensionHours) {
         this.azureBlobStorage = azureBlobStorage;
         this.enabled = enabled;
         this.fileSystem = fileSystem;

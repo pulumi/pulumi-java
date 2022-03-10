@@ -26,11 +26,11 @@ public final class ScaleRuleMetricDimensionResponse {
      */
     private final List<String> values;
 
-    @OutputCustomType.Constructor({"dimensionName","operator","values"})
+    @OutputCustomType.Constructor
     private ScaleRuleMetricDimensionResponse(
-        String dimensionName,
-        String operator,
-        List<String> values) {
+        @OutputCustomType.Parameter("dimensionName") String dimensionName,
+        @OutputCustomType.Parameter("operator") String operator,
+        @OutputCustomType.Parameter("values") List<String> values) {
         this.dimensionName = dimensionName;
         this.operator = operator;
         this.values = values;

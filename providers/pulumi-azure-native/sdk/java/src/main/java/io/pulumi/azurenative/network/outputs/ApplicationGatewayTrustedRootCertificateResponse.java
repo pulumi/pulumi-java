@@ -47,15 +47,15 @@ public final class ApplicationGatewayTrustedRootCertificateResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"data","etag","id","keyVaultSecretId","name","provisioningState","type"})
+    @OutputCustomType.Constructor
     private ApplicationGatewayTrustedRootCertificateResponse(
-        @Nullable String data,
-        String etag,
-        @Nullable String id,
-        @Nullable String keyVaultSecretId,
-        @Nullable String name,
-        String provisioningState,
-        String type) {
+        @OutputCustomType.Parameter("data") @Nullable String data,
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("keyVaultSecretId") @Nullable String keyVaultSecretId,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("type") String type) {
         this.data = data;
         this.etag = etag;
         this.id = id;

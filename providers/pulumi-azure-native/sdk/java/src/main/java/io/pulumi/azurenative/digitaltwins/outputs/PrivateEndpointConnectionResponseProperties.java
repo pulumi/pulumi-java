@@ -27,12 +27,12 @@ public final class PrivateEndpointConnectionResponseProperties {
      */
     private final String provisioningState;
 
-    @OutputCustomType.Constructor({"groupIds","privateEndpoint","privateLinkServiceConnectionState","provisioningState"})
+    @OutputCustomType.Constructor
     private PrivateEndpointConnectionResponseProperties(
-        @Nullable List<String> groupIds,
-        @Nullable ConnectionPropertiesResponsePrivateEndpoint privateEndpoint,
-        @Nullable ConnectionPropertiesResponsePrivateLinkServiceConnectionState privateLinkServiceConnectionState,
-        String provisioningState) {
+        @OutputCustomType.Parameter("groupIds") @Nullable List<String> groupIds,
+        @OutputCustomType.Parameter("privateEndpoint") @Nullable ConnectionPropertiesResponsePrivateEndpoint privateEndpoint,
+        @OutputCustomType.Parameter("privateLinkServiceConnectionState") @Nullable ConnectionPropertiesResponsePrivateLinkServiceConnectionState privateLinkServiceConnectionState,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState) {
         this.groupIds = groupIds;
         this.privateEndpoint = privateEndpoint;
         this.privateLinkServiceConnectionState = privateLinkServiceConnectionState;

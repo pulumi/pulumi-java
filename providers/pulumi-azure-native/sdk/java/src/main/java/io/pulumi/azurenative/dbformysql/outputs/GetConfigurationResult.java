@@ -57,17 +57,17 @@ public final class GetConfigurationResult {
      */
     private final @Nullable String value;
 
-    @OutputCustomType.Constructor({"allowedValues","dataType","defaultValue","description","id","name","source","type","value"})
+    @OutputCustomType.Constructor
     private GetConfigurationResult(
-        String allowedValues,
-        String dataType,
-        String defaultValue,
-        String description,
-        String id,
-        String name,
-        @Nullable String source,
-        String type,
-        @Nullable String value) {
+        @OutputCustomType.Parameter("allowedValues") String allowedValues,
+        @OutputCustomType.Parameter("dataType") String dataType,
+        @OutputCustomType.Parameter("defaultValue") String defaultValue,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("source") @Nullable String source,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("value") @Nullable String value) {
         this.allowedValues = allowedValues;
         this.dataType = dataType;
         this.defaultValue = defaultValue;

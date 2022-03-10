@@ -23,10 +23,10 @@ public final class ConnectorMappingAvailabilityResponse {
      */
     private final Integer interval;
 
-    @OutputCustomType.Constructor({"frequency","interval"})
+    @OutputCustomType.Constructor
     private ConnectorMappingAvailabilityResponse(
-        @Nullable String frequency,
-        Integer interval) {
+        @OutputCustomType.Parameter("frequency") @Nullable String frequency,
+        @OutputCustomType.Parameter("interval") Integer interval) {
         this.frequency = frequency;
         this.interval = interval;
     }

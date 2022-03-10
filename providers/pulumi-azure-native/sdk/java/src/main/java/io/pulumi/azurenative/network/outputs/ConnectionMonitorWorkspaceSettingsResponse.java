@@ -17,8 +17,8 @@ public final class ConnectionMonitorWorkspaceSettingsResponse {
      */
     private final @Nullable String workspaceResourceId;
 
-    @OutputCustomType.Constructor({"workspaceResourceId"})
-    private ConnectionMonitorWorkspaceSettingsResponse(@Nullable String workspaceResourceId) {
+    @OutputCustomType.Constructor
+    private ConnectionMonitorWorkspaceSettingsResponse(@OutputCustomType.Parameter("workspaceResourceId") @Nullable String workspaceResourceId) {
         this.workspaceResourceId = workspaceResourceId;
     }
 

@@ -53,16 +53,16 @@ public final class AzureFirewallIPConfigurationResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"etag","id","name","privateIPAddress","provisioningState","publicIPAddress","subnet","type"})
+    @OutputCustomType.Constructor
     private AzureFirewallIPConfigurationResponse(
-        String etag,
-        @Nullable String id,
-        @Nullable String name,
-        String privateIPAddress,
-        String provisioningState,
-        @Nullable SubResourceResponse publicIPAddress,
-        @Nullable SubResourceResponse subnet,
-        String type) {
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("privateIPAddress") String privateIPAddress,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("publicIPAddress") @Nullable SubResourceResponse publicIPAddress,
+        @OutputCustomType.Parameter("subnet") @Nullable SubResourceResponse subnet,
+        @OutputCustomType.Parameter("type") String type) {
         this.etag = etag;
         this.id = id;
         this.name = name;

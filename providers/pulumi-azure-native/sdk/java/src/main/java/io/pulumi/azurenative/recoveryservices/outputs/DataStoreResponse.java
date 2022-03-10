@@ -37,13 +37,13 @@ public final class DataStoreResponse {
      */
     private final @Nullable String uuid;
 
-    @OutputCustomType.Constructor({"capacity","freeSpace","symbolicName","type","uuid"})
+    @OutputCustomType.Constructor
     private DataStoreResponse(
-        @Nullable String capacity,
-        @Nullable String freeSpace,
-        @Nullable String symbolicName,
-        @Nullable String type,
-        @Nullable String uuid) {
+        @OutputCustomType.Parameter("capacity") @Nullable String capacity,
+        @OutputCustomType.Parameter("freeSpace") @Nullable String freeSpace,
+        @OutputCustomType.Parameter("symbolicName") @Nullable String symbolicName,
+        @OutputCustomType.Parameter("type") @Nullable String type,
+        @OutputCustomType.Parameter("uuid") @Nullable String uuid) {
         this.capacity = capacity;
         this.freeSpace = freeSpace;
         this.symbolicName = symbolicName;

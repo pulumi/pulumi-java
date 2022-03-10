@@ -83,21 +83,21 @@ public final class GetProfileResult {
      */
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor({"allowedEndpointRecordTypes","dnsConfig","endpoints","id","location","maxReturn","monitorConfig","name","profileStatus","tags","trafficRoutingMethod","trafficViewEnrollmentStatus","type"})
+    @OutputCustomType.Constructor
     private GetProfileResult(
-        @Nullable List<String> allowedEndpointRecordTypes,
-        @Nullable DnsConfigResponse dnsConfig,
-        @Nullable List<EndpointResponse> endpoints,
-        @Nullable String id,
-        @Nullable String location,
-        @Nullable Double maxReturn,
-        @Nullable MonitorConfigResponse monitorConfig,
-        @Nullable String name,
-        @Nullable String profileStatus,
-        @Nullable Map<String,String> tags,
-        @Nullable String trafficRoutingMethod,
-        @Nullable String trafficViewEnrollmentStatus,
-        @Nullable String type) {
+        @OutputCustomType.Parameter("allowedEndpointRecordTypes") @Nullable List<String> allowedEndpointRecordTypes,
+        @OutputCustomType.Parameter("dnsConfig") @Nullable DnsConfigResponse dnsConfig,
+        @OutputCustomType.Parameter("endpoints") @Nullable List<EndpointResponse> endpoints,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("maxReturn") @Nullable Double maxReturn,
+        @OutputCustomType.Parameter("monitorConfig") @Nullable MonitorConfigResponse monitorConfig,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("profileStatus") @Nullable String profileStatus,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("trafficRoutingMethod") @Nullable String trafficRoutingMethod,
+        @OutputCustomType.Parameter("trafficViewEnrollmentStatus") @Nullable String trafficViewEnrollmentStatus,
+        @OutputCustomType.Parameter("type") @Nullable String type) {
         this.allowedEndpointRecordTypes = allowedEndpointRecordTypes;
         this.dnsConfig = dnsConfig;
         this.endpoints = endpoints;

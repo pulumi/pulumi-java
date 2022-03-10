@@ -56,16 +56,16 @@ public final class GetAvailabilityGroupListenerResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"availabilityGroupName","createDefaultAvailabilityGroupIfNotExist","id","loadBalancerConfigurations","name","port","provisioningState","type"})
+    @OutputCustomType.Constructor
     private GetAvailabilityGroupListenerResult(
-        @Nullable String availabilityGroupName,
-        @Nullable Boolean createDefaultAvailabilityGroupIfNotExist,
-        String id,
-        @Nullable List<LoadBalancerConfigurationResponse> loadBalancerConfigurations,
-        String name,
-        @Nullable Integer port,
-        String provisioningState,
-        String type) {
+        @OutputCustomType.Parameter("availabilityGroupName") @Nullable String availabilityGroupName,
+        @OutputCustomType.Parameter("createDefaultAvailabilityGroupIfNotExist") @Nullable Boolean createDefaultAvailabilityGroupIfNotExist,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("loadBalancerConfigurations") @Nullable List<LoadBalancerConfigurationResponse> loadBalancerConfigurations,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("port") @Nullable Integer port,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("type") String type) {
         this.availabilityGroupName = availabilityGroupName;
         this.createDefaultAvailabilityGroupIfNotExist = createDefaultAvailabilityGroupIfNotExist;
         this.id = id;

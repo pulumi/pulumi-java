@@ -72,19 +72,19 @@ public final class DynamicMetricCriteriaResponse {
      */
     private final String timeAggregation;
 
-    @OutputCustomType.Constructor({"alertSensitivity","criterionType","dimensions","failingPeriods","ignoreDataBefore","metricName","metricNamespace","name","operator","skipMetricValidation","timeAggregation"})
+    @OutputCustomType.Constructor
     private DynamicMetricCriteriaResponse(
-        String alertSensitivity,
-        String criterionType,
-        @Nullable List<MetricDimensionResponse> dimensions,
-        DynamicThresholdFailingPeriodsResponse failingPeriods,
-        @Nullable String ignoreDataBefore,
-        String metricName,
-        @Nullable String metricNamespace,
-        String name,
-        String operator,
-        @Nullable Boolean skipMetricValidation,
-        String timeAggregation) {
+        @OutputCustomType.Parameter("alertSensitivity") String alertSensitivity,
+        @OutputCustomType.Parameter("criterionType") String criterionType,
+        @OutputCustomType.Parameter("dimensions") @Nullable List<MetricDimensionResponse> dimensions,
+        @OutputCustomType.Parameter("failingPeriods") DynamicThresholdFailingPeriodsResponse failingPeriods,
+        @OutputCustomType.Parameter("ignoreDataBefore") @Nullable String ignoreDataBefore,
+        @OutputCustomType.Parameter("metricName") String metricName,
+        @OutputCustomType.Parameter("metricNamespace") @Nullable String metricNamespace,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("operator") String operator,
+        @OutputCustomType.Parameter("skipMetricValidation") @Nullable Boolean skipMetricValidation,
+        @OutputCustomType.Parameter("timeAggregation") String timeAggregation) {
         this.alertSensitivity = alertSensitivity;
         this.criterionType = criterionType;
         this.dimensions = dimensions;

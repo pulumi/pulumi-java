@@ -33,12 +33,12 @@ public final class GetBackupShortTermRetentionPolicyResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"id","name","retentionDays","type"})
+    @OutputCustomType.Constructor
     private GetBackupShortTermRetentionPolicyResult(
-        String id,
-        String name,
-        @Nullable Integer retentionDays,
-        String type) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("retentionDays") @Nullable Integer retentionDays,
+        @OutputCustomType.Parameter("type") String type) {
         this.id = id;
         this.name = name;
         this.retentionDays = retentionDays;

@@ -17,8 +17,8 @@ public final class FileSystemApplicationLogsConfigResponse {
      */
     private final @Nullable String level;
 
-    @OutputCustomType.Constructor({"level"})
-    private FileSystemApplicationLogsConfigResponse(@Nullable String level) {
+    @OutputCustomType.Constructor
+    private FileSystemApplicationLogsConfigResponse(@OutputCustomType.Parameter("level") @Nullable String level) {
         this.level = level;
     }
 

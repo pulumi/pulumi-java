@@ -39,13 +39,13 @@ public final class AvroWriteSettingsResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"fileNamePrefix","maxRowsPerFile","recordName","recordNamespace","type"})
+    @OutputCustomType.Constructor
     private AvroWriteSettingsResponse(
-        @Nullable Object fileNamePrefix,
-        @Nullable Object maxRowsPerFile,
-        @Nullable String recordName,
-        @Nullable String recordNamespace,
-        String type) {
+        @OutputCustomType.Parameter("fileNamePrefix") @Nullable Object fileNamePrefix,
+        @OutputCustomType.Parameter("maxRowsPerFile") @Nullable Object maxRowsPerFile,
+        @OutputCustomType.Parameter("recordName") @Nullable String recordName,
+        @OutputCustomType.Parameter("recordNamespace") @Nullable String recordNamespace,
+        @OutputCustomType.Parameter("type") String type) {
         this.fileNamePrefix = fileNamePrefix;
         this.maxRowsPerFile = maxRowsPerFile;
         this.recordName = recordName;

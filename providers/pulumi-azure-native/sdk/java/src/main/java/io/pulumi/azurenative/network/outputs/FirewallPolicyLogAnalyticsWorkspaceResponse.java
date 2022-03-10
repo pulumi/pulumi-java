@@ -23,10 +23,10 @@ public final class FirewallPolicyLogAnalyticsWorkspaceResponse {
      */
     private final @Nullable SubResourceResponse workspaceId;
 
-    @OutputCustomType.Constructor({"region","workspaceId"})
+    @OutputCustomType.Constructor
     private FirewallPolicyLogAnalyticsWorkspaceResponse(
-        @Nullable String region,
-        @Nullable SubResourceResponse workspaceId) {
+        @OutputCustomType.Parameter("region") @Nullable String region,
+        @OutputCustomType.Parameter("workspaceId") @Nullable SubResourceResponse workspaceId) {
         this.region = region;
         this.workspaceId = workspaceId;
     }

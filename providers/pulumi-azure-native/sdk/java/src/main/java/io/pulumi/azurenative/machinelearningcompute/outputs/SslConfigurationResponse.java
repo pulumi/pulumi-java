@@ -32,12 +32,12 @@ public final class SslConfigurationResponse {
      */
     private final @Nullable String status;
 
-    @OutputCustomType.Constructor({"cert","cname","key","status"})
+    @OutputCustomType.Constructor
     private SslConfigurationResponse(
-        @Nullable String cert,
-        @Nullable String cname,
-        @Nullable String key,
-        @Nullable String status) {
+        @OutputCustomType.Parameter("cert") @Nullable String cert,
+        @OutputCustomType.Parameter("cname") @Nullable String cname,
+        @OutputCustomType.Parameter("key") @Nullable String key,
+        @OutputCustomType.Parameter("status") @Nullable String status) {
         this.cert = cert;
         this.cname = cname;
         this.key = key;

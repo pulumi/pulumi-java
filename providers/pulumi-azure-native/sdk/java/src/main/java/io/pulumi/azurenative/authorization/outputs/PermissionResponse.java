@@ -32,12 +32,12 @@ public final class PermissionResponse {
      */
     private final @Nullable List<String> notDataActions;
 
-    @OutputCustomType.Constructor({"actions","dataActions","notActions","notDataActions"})
+    @OutputCustomType.Constructor
     private PermissionResponse(
-        @Nullable List<String> actions,
-        @Nullable List<String> dataActions,
-        @Nullable List<String> notActions,
-        @Nullable List<String> notDataActions) {
+        @OutputCustomType.Parameter("actions") @Nullable List<String> actions,
+        @OutputCustomType.Parameter("dataActions") @Nullable List<String> dataActions,
+        @OutputCustomType.Parameter("notActions") @Nullable List<String> notActions,
+        @OutputCustomType.Parameter("notDataActions") @Nullable List<String> notDataActions) {
         this.actions = actions;
         this.dataActions = dataActions;
         this.notActions = notActions;

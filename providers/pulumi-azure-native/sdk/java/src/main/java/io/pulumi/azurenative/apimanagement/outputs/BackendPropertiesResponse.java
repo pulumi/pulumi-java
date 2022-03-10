@@ -17,8 +17,8 @@ public final class BackendPropertiesResponse {
      */
     private final @Nullable BackendServiceFabricClusterPropertiesResponse serviceFabricCluster;
 
-    @OutputCustomType.Constructor({"serviceFabricCluster"})
-    private BackendPropertiesResponse(@Nullable BackendServiceFabricClusterPropertiesResponse serviceFabricCluster) {
+    @OutputCustomType.Constructor
+    private BackendPropertiesResponse(@OutputCustomType.Parameter("serviceFabricCluster") @Nullable BackendServiceFabricClusterPropertiesResponse serviceFabricCluster) {
         this.serviceFabricCluster = serviceFabricCluster;
     }
 

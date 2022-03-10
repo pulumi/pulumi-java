@@ -22,10 +22,10 @@ public final class ConnectorMappingCompleteOperationResponse {
      */
     private final @Nullable String destinationFolder;
 
-    @OutputCustomType.Constructor({"completionOperationType","destinationFolder"})
+    @OutputCustomType.Constructor
     private ConnectorMappingCompleteOperationResponse(
-        @Nullable String completionOperationType,
-        @Nullable String destinationFolder) {
+        @OutputCustomType.Parameter("completionOperationType") @Nullable String completionOperationType,
+        @OutputCustomType.Parameter("destinationFolder") @Nullable String destinationFolder) {
         this.completionOperationType = completionOperationType;
         this.destinationFolder = destinationFolder;
     }

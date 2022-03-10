@@ -56,17 +56,17 @@ public final class InMageRcmProtectedDiskDetailsResponse {
      */
     private final String targetManagedDiskId;
 
-    @OutputCustomType.Constructor({"capacityInBytes","diskEncryptionSetId","diskId","diskName","diskType","isOSDisk","logStorageAccountId","seedManagedDiskId","targetManagedDiskId"})
+    @OutputCustomType.Constructor
     private InMageRcmProtectedDiskDetailsResponse(
-        Double capacityInBytes,
-        String diskEncryptionSetId,
-        String diskId,
-        String diskName,
-        String diskType,
-        String isOSDisk,
-        String logStorageAccountId,
-        String seedManagedDiskId,
-        String targetManagedDiskId) {
+        @OutputCustomType.Parameter("capacityInBytes") Double capacityInBytes,
+        @OutputCustomType.Parameter("diskEncryptionSetId") String diskEncryptionSetId,
+        @OutputCustomType.Parameter("diskId") String diskId,
+        @OutputCustomType.Parameter("diskName") String diskName,
+        @OutputCustomType.Parameter("diskType") String diskType,
+        @OutputCustomType.Parameter("isOSDisk") String isOSDisk,
+        @OutputCustomType.Parameter("logStorageAccountId") String logStorageAccountId,
+        @OutputCustomType.Parameter("seedManagedDiskId") String seedManagedDiskId,
+        @OutputCustomType.Parameter("targetManagedDiskId") String targetManagedDiskId) {
         this.capacityInBytes = capacityInBytes;
         this.diskEncryptionSetId = diskEncryptionSetId;
         this.diskId = diskId;

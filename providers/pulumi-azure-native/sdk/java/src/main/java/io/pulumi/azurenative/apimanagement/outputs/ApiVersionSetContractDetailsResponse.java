@@ -42,14 +42,14 @@ public final class ApiVersionSetContractDetailsResponse {
      */
     private final @Nullable String versioningScheme;
 
-    @OutputCustomType.Constructor({"description","id","name","versionHeaderName","versionQueryName","versioningScheme"})
+    @OutputCustomType.Constructor
     private ApiVersionSetContractDetailsResponse(
-        @Nullable String description,
-        @Nullable String id,
-        @Nullable String name,
-        @Nullable String versionHeaderName,
-        @Nullable String versionQueryName,
-        @Nullable String versioningScheme) {
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("versionHeaderName") @Nullable String versionHeaderName,
+        @OutputCustomType.Parameter("versionQueryName") @Nullable String versionQueryName,
+        @OutputCustomType.Parameter("versioningScheme") @Nullable String versioningScheme) {
         this.description = description;
         this.id = id;
         this.name = name;

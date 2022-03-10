@@ -81,21 +81,21 @@ public final class GetVirtualWanResult {
      */
     private final List<SubResourceResponse> vpnSites;
 
-    @OutputCustomType.Constructor({"allowBranchToBranchTraffic","allowVnetToVnetTraffic","disableVpnEncryption","etag","id","location","name","office365LocalBreakoutCategory","provisioningState","tags","type","virtualHubs","vpnSites"})
+    @OutputCustomType.Constructor
     private GetVirtualWanResult(
-        @Nullable Boolean allowBranchToBranchTraffic,
-        @Nullable Boolean allowVnetToVnetTraffic,
-        @Nullable Boolean disableVpnEncryption,
-        String etag,
-        @Nullable String id,
-        String location,
-        String name,
-        String office365LocalBreakoutCategory,
-        String provisioningState,
-        @Nullable Map<String,String> tags,
-        String type,
-        List<SubResourceResponse> virtualHubs,
-        List<SubResourceResponse> vpnSites) {
+        @OutputCustomType.Parameter("allowBranchToBranchTraffic") @Nullable Boolean allowBranchToBranchTraffic,
+        @OutputCustomType.Parameter("allowVnetToVnetTraffic") @Nullable Boolean allowVnetToVnetTraffic,
+        @OutputCustomType.Parameter("disableVpnEncryption") @Nullable Boolean disableVpnEncryption,
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("office365LocalBreakoutCategory") String office365LocalBreakoutCategory,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("virtualHubs") List<SubResourceResponse> virtualHubs,
+        @OutputCustomType.Parameter("vpnSites") List<SubResourceResponse> vpnSites) {
         this.allowBranchToBranchTraffic = allowBranchToBranchTraffic;
         this.allowVnetToVnetTraffic = allowVnetToVnetTraffic;
         this.disableVpnEncryption = disableVpnEncryption;

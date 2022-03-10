@@ -71,19 +71,19 @@ public final class OutboundRuleResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"allocatedOutboundPorts","backendAddressPool","enableTcpReset","etag","frontendIPConfigurations","id","idleTimeoutInMinutes","name","protocol","provisioningState","type"})
+    @OutputCustomType.Constructor
     private OutboundRuleResponse(
-        @Nullable Integer allocatedOutboundPorts,
-        SubResourceResponse backendAddressPool,
-        @Nullable Boolean enableTcpReset,
-        String etag,
-        List<SubResourceResponse> frontendIPConfigurations,
-        @Nullable String id,
-        @Nullable Integer idleTimeoutInMinutes,
-        @Nullable String name,
-        String protocol,
-        String provisioningState,
-        String type) {
+        @OutputCustomType.Parameter("allocatedOutboundPorts") @Nullable Integer allocatedOutboundPorts,
+        @OutputCustomType.Parameter("backendAddressPool") SubResourceResponse backendAddressPool,
+        @OutputCustomType.Parameter("enableTcpReset") @Nullable Boolean enableTcpReset,
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("frontendIPConfigurations") List<SubResourceResponse> frontendIPConfigurations,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("idleTimeoutInMinutes") @Nullable Integer idleTimeoutInMinutes,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("protocol") String protocol,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("type") String type) {
         this.allocatedOutboundPorts = allocatedOutboundPorts;
         this.backendAddressPool = backendAddressPool;
         this.enableTcpReset = enableTcpReset;

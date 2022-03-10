@@ -82,21 +82,21 @@ public final class ManagedHsmPropertiesResponse {
      */
     private final @Nullable String tenantId;
 
-    @OutputCustomType.Constructor({"createMode","enablePurgeProtection","enableSoftDelete","hsmUri","initialAdminObjectIds","networkAcls","privateEndpointConnections","provisioningState","publicNetworkAccess","scheduledPurgeDate","softDeleteRetentionInDays","statusMessage","tenantId"})
+    @OutputCustomType.Constructor
     private ManagedHsmPropertiesResponse(
-        @Nullable String createMode,
-        @Nullable Boolean enablePurgeProtection,
-        @Nullable Boolean enableSoftDelete,
-        String hsmUri,
-        @Nullable List<String> initialAdminObjectIds,
-        @Nullable MHSMNetworkRuleSetResponse networkAcls,
-        List<MHSMPrivateEndpointConnectionItemResponse> privateEndpointConnections,
-        String provisioningState,
-        @Nullable String publicNetworkAccess,
-        String scheduledPurgeDate,
-        @Nullable Integer softDeleteRetentionInDays,
-        String statusMessage,
-        @Nullable String tenantId) {
+        @OutputCustomType.Parameter("createMode") @Nullable String createMode,
+        @OutputCustomType.Parameter("enablePurgeProtection") @Nullable Boolean enablePurgeProtection,
+        @OutputCustomType.Parameter("enableSoftDelete") @Nullable Boolean enableSoftDelete,
+        @OutputCustomType.Parameter("hsmUri") String hsmUri,
+        @OutputCustomType.Parameter("initialAdminObjectIds") @Nullable List<String> initialAdminObjectIds,
+        @OutputCustomType.Parameter("networkAcls") @Nullable MHSMNetworkRuleSetResponse networkAcls,
+        @OutputCustomType.Parameter("privateEndpointConnections") List<MHSMPrivateEndpointConnectionItemResponse> privateEndpointConnections,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("publicNetworkAccess") @Nullable String publicNetworkAccess,
+        @OutputCustomType.Parameter("scheduledPurgeDate") String scheduledPurgeDate,
+        @OutputCustomType.Parameter("softDeleteRetentionInDays") @Nullable Integer softDeleteRetentionInDays,
+        @OutputCustomType.Parameter("statusMessage") String statusMessage,
+        @OutputCustomType.Parameter("tenantId") @Nullable String tenantId) {
         this.createMode = createMode;
         this.enablePurgeProtection = enablePurgeProtection;
         this.enableSoftDelete = enableSoftDelete;

@@ -60,17 +60,17 @@ public final class GetContentKeyPolicyResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"created","description","id","lastModified","name","options","policyId","systemData","type"})
+    @OutputCustomType.Constructor
     private GetContentKeyPolicyResult(
-        String created,
-        @Nullable String description,
-        String id,
-        String lastModified,
-        String name,
-        List<ContentKeyPolicyOptionResponse> options,
-        String policyId,
-        SystemDataResponse systemData,
-        String type) {
+        @OutputCustomType.Parameter("created") String created,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("lastModified") String lastModified,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("options") List<ContentKeyPolicyOptionResponse> options,
+        @OutputCustomType.Parameter("policyId") String policyId,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("type") String type) {
         this.created = created;
         this.description = description;
         this.id = id;

@@ -53,16 +53,16 @@ public final class NfsAccessRuleResponse {
      */
     private final @Nullable Boolean suid;
 
-    @OutputCustomType.Constructor({"access","anonymousGID","anonymousUID","filter","rootSquash","scope","submountAccess","suid"})
+    @OutputCustomType.Constructor
     private NfsAccessRuleResponse(
-        String access,
-        @Nullable String anonymousGID,
-        @Nullable String anonymousUID,
-        @Nullable String filter,
-        @Nullable Boolean rootSquash,
-        String scope,
-        @Nullable Boolean submountAccess,
-        @Nullable Boolean suid) {
+        @OutputCustomType.Parameter("access") String access,
+        @OutputCustomType.Parameter("anonymousGID") @Nullable String anonymousGID,
+        @OutputCustomType.Parameter("anonymousUID") @Nullable String anonymousUID,
+        @OutputCustomType.Parameter("filter") @Nullable String filter,
+        @OutputCustomType.Parameter("rootSquash") @Nullable Boolean rootSquash,
+        @OutputCustomType.Parameter("scope") String scope,
+        @OutputCustomType.Parameter("submountAccess") @Nullable Boolean submountAccess,
+        @OutputCustomType.Parameter("suid") @Nullable Boolean suid) {
         this.access = access;
         this.anonymousGID = anonymousGID;
         this.anonymousUID = anonymousUID;

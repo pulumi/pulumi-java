@@ -39,13 +39,13 @@ public final class IotHubDefinitionDescriptionResponse {
      */
     private final String name;
 
-    @OutputCustomType.Constructor({"allocationWeight","applyAllocationPolicy","connectionString","location","name"})
+    @OutputCustomType.Constructor
     private IotHubDefinitionDescriptionResponse(
-        @Nullable Integer allocationWeight,
-        @Nullable Boolean applyAllocationPolicy,
-        String connectionString,
-        String location,
-        String name) {
+        @OutputCustomType.Parameter("allocationWeight") @Nullable Integer allocationWeight,
+        @OutputCustomType.Parameter("applyAllocationPolicy") @Nullable Boolean applyAllocationPolicy,
+        @OutputCustomType.Parameter("connectionString") String connectionString,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("name") String name) {
         this.allocationWeight = allocationWeight;
         this.applyAllocationPolicy = applyAllocationPolicy;
         this.connectionString = connectionString;

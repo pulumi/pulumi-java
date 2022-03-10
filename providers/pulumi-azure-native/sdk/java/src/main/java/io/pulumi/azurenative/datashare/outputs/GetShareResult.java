@@ -68,19 +68,19 @@ public final class GetShareResult {
      */
     private final String userName;
 
-    @OutputCustomType.Constructor({"createdAt","description","id","name","provisioningState","shareKind","systemData","terms","type","userEmail","userName"})
+    @OutputCustomType.Constructor
     private GetShareResult(
-        String createdAt,
-        @Nullable String description,
-        String id,
-        String name,
-        String provisioningState,
-        @Nullable String shareKind,
-        SystemDataResponse systemData,
-        @Nullable String terms,
-        String type,
-        String userEmail,
-        String userName) {
+        @OutputCustomType.Parameter("createdAt") String createdAt,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("shareKind") @Nullable String shareKind,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("terms") @Nullable String terms,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("userEmail") String userEmail,
+        @OutputCustomType.Parameter("userName") String userName) {
         this.createdAt = createdAt;
         this.description = description;
         this.id = id;

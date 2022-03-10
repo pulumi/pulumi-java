@@ -94,24 +94,24 @@ public final class GetDiskResult {
      */
     private final String uniqueIdentifier;
 
-    @OutputCustomType.Constructor({"createdDate","diskBlobName","diskSizeGiB","diskType","diskUri","hostCaching","id","leasedByLabVmId","location","managedDiskId","name","provisioningState","storageAccountId","tags","type","uniqueIdentifier"})
+    @OutputCustomType.Constructor
     private GetDiskResult(
-        String createdDate,
-        @Nullable String diskBlobName,
-        @Nullable Integer diskSizeGiB,
-        @Nullable String diskType,
-        @Nullable String diskUri,
-        @Nullable String hostCaching,
-        String id,
-        @Nullable String leasedByLabVmId,
-        @Nullable String location,
-        @Nullable String managedDiskId,
-        String name,
-        String provisioningState,
-        @Nullable String storageAccountId,
-        @Nullable Map<String,String> tags,
-        String type,
-        String uniqueIdentifier) {
+        @OutputCustomType.Parameter("createdDate") String createdDate,
+        @OutputCustomType.Parameter("diskBlobName") @Nullable String diskBlobName,
+        @OutputCustomType.Parameter("diskSizeGiB") @Nullable Integer diskSizeGiB,
+        @OutputCustomType.Parameter("diskType") @Nullable String diskType,
+        @OutputCustomType.Parameter("diskUri") @Nullable String diskUri,
+        @OutputCustomType.Parameter("hostCaching") @Nullable String hostCaching,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("leasedByLabVmId") @Nullable String leasedByLabVmId,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("managedDiskId") @Nullable String managedDiskId,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("storageAccountId") @Nullable String storageAccountId,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("uniqueIdentifier") String uniqueIdentifier) {
         this.createdDate = createdDate;
         this.diskBlobName = diskBlobName;
         this.diskSizeGiB = diskSizeGiB;

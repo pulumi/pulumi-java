@@ -57,17 +57,17 @@ public final class GetEventHubConnectionResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"consumerGroup","dataFormat","eventHubResourceId","id","location","mappingRuleName","name","tableName","type"})
+    @OutputCustomType.Constructor
     private GetEventHubConnectionResult(
-        String consumerGroup,
-        @Nullable String dataFormat,
-        String eventHubResourceId,
-        String id,
-        @Nullable String location,
-        @Nullable String mappingRuleName,
-        String name,
-        @Nullable String tableName,
-        String type) {
+        @OutputCustomType.Parameter("consumerGroup") String consumerGroup,
+        @OutputCustomType.Parameter("dataFormat") @Nullable String dataFormat,
+        @OutputCustomType.Parameter("eventHubResourceId") String eventHubResourceId,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("mappingRuleName") @Nullable String mappingRuleName,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("tableName") @Nullable String tableName,
+        @OutputCustomType.Parameter("type") String type) {
         this.consumerGroup = consumerGroup;
         this.dataFormat = dataFormat;
         this.eventHubResourceId = eventHubResourceId;

@@ -38,13 +38,13 @@ public final class OpenShiftManagedClusterMasterPoolProfileResponse {
      */
     private final String vmSize;
 
-    @OutputCustomType.Constructor({"count","name","osType","subnetCidr","vmSize"})
+    @OutputCustomType.Constructor
     private OpenShiftManagedClusterMasterPoolProfileResponse(
-        Integer count,
-        @Nullable String name,
-        @Nullable String osType,
-        @Nullable String subnetCidr,
-        String vmSize) {
+        @OutputCustomType.Parameter("count") Integer count,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("osType") @Nullable String osType,
+        @OutputCustomType.Parameter("subnetCidr") @Nullable String subnetCidr,
+        @OutputCustomType.Parameter("vmSize") String vmSize) {
         this.count = count;
         this.name = name;
         this.osType = osType;

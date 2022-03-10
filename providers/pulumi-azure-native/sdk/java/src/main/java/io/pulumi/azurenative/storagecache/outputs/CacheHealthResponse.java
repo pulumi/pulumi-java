@@ -29,11 +29,11 @@ public final class CacheHealthResponse {
      */
     private final @Nullable String statusDescription;
 
-    @OutputCustomType.Constructor({"conditions","state","statusDescription"})
+    @OutputCustomType.Constructor
     private CacheHealthResponse(
-        List<ConditionResponse> conditions,
-        @Nullable String state,
-        @Nullable String statusDescription) {
+        @OutputCustomType.Parameter("conditions") List<ConditionResponse> conditions,
+        @OutputCustomType.Parameter("state") @Nullable String state,
+        @OutputCustomType.Parameter("statusDescription") @Nullable String statusDescription) {
         this.conditions = conditions;
         this.state = state;
         this.statusDescription = statusDescription;

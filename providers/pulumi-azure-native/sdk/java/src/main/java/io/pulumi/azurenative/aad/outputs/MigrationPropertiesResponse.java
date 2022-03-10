@@ -26,11 +26,11 @@ public final class MigrationPropertiesResponse {
      */
     private final String oldVnetSiteId;
 
-    @OutputCustomType.Constructor({"migrationProgress","oldSubnetId","oldVnetSiteId"})
+    @OutputCustomType.Constructor
     private MigrationPropertiesResponse(
-        MigrationProgressResponse migrationProgress,
-        String oldSubnetId,
-        String oldVnetSiteId) {
+        @OutputCustomType.Parameter("migrationProgress") MigrationProgressResponse migrationProgress,
+        @OutputCustomType.Parameter("oldSubnetId") String oldSubnetId,
+        @OutputCustomType.Parameter("oldVnetSiteId") String oldVnetSiteId) {
         this.migrationProgress = migrationProgress;
         this.oldSubnetId = oldSubnetId;
         this.oldVnetSiteId = oldVnetSiteId;

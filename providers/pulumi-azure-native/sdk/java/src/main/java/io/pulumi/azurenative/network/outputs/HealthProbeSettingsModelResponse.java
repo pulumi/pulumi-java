@@ -58,17 +58,17 @@ public final class HealthProbeSettingsModelResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"enabledState","healthProbeMethod","id","intervalInSeconds","name","path","protocol","resourceState","type"})
+    @OutputCustomType.Constructor
     private HealthProbeSettingsModelResponse(
-        @Nullable String enabledState,
-        @Nullable String healthProbeMethod,
-        @Nullable String id,
-        @Nullable Integer intervalInSeconds,
-        @Nullable String name,
-        @Nullable String path,
-        @Nullable String protocol,
-        String resourceState,
-        String type) {
+        @OutputCustomType.Parameter("enabledState") @Nullable String enabledState,
+        @OutputCustomType.Parameter("healthProbeMethod") @Nullable String healthProbeMethod,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("intervalInSeconds") @Nullable Integer intervalInSeconds,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("path") @Nullable String path,
+        @OutputCustomType.Parameter("protocol") @Nullable String protocol,
+        @OutputCustomType.Parameter("resourceState") String resourceState,
+        @OutputCustomType.Parameter("type") String type) {
         this.enabledState = enabledState;
         this.healthProbeMethod = healthProbeMethod;
         this.id = id;

@@ -59,17 +59,17 @@ public final class GetTokenResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"creationDate","credentials","id","name","provisioningState","scopeMapId","status","systemData","type"})
+    @OutputCustomType.Constructor
     private GetTokenResult(
-        String creationDate,
-        @Nullable TokenCredentialsPropertiesResponse credentials,
-        String id,
-        String name,
-        String provisioningState,
-        @Nullable String scopeMapId,
-        @Nullable String status,
-        SystemDataResponse systemData,
-        String type) {
+        @OutputCustomType.Parameter("creationDate") String creationDate,
+        @OutputCustomType.Parameter("credentials") @Nullable TokenCredentialsPropertiesResponse credentials,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("scopeMapId") @Nullable String scopeMapId,
+        @OutputCustomType.Parameter("status") @Nullable String status,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("type") String type) {
         this.creationDate = creationDate;
         this.credentials = credentials;
         this.id = id;

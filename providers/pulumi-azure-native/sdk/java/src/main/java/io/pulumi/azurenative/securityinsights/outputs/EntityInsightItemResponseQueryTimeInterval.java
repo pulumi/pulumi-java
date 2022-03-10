@@ -22,10 +22,10 @@ public final class EntityInsightItemResponseQueryTimeInterval {
      */
     private final @Nullable String startTime;
 
-    @OutputCustomType.Constructor({"endTime","startTime"})
+    @OutputCustomType.Constructor
     private EntityInsightItemResponseQueryTimeInterval(
-        @Nullable String endTime,
-        @Nullable String startTime) {
+        @OutputCustomType.Parameter("endTime") @Nullable String endTime,
+        @OutputCustomType.Parameter("startTime") @Nullable String startTime) {
         this.endTime = endTime;
         this.startTime = startTime;
     }

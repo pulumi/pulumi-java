@@ -38,13 +38,13 @@ public final class VirtualSCSIControllerResponse {
      */
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor({"busNumber","controllerKey","scsiCtlrUnitNumber","sharing","type"})
+    @OutputCustomType.Constructor
     private VirtualSCSIControllerResponse(
-        @Nullable Integer busNumber,
-        @Nullable Integer controllerKey,
-        @Nullable Integer scsiCtlrUnitNumber,
-        @Nullable String sharing,
-        @Nullable String type) {
+        @OutputCustomType.Parameter("busNumber") @Nullable Integer busNumber,
+        @OutputCustomType.Parameter("controllerKey") @Nullable Integer controllerKey,
+        @OutputCustomType.Parameter("scsiCtlrUnitNumber") @Nullable Integer scsiCtlrUnitNumber,
+        @OutputCustomType.Parameter("sharing") @Nullable String sharing,
+        @OutputCustomType.Parameter("type") @Nullable String type) {
         this.busNumber = busNumber;
         this.controllerKey = controllerKey;
         this.scsiCtlrUnitNumber = scsiCtlrUnitNumber;

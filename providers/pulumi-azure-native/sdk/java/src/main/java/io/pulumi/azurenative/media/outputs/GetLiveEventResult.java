@@ -116,27 +116,27 @@ public final class GetLiveEventResult {
      */
     private final @Nullable Boolean useStaticHostname;
 
-    @OutputCustomType.Constructor({"created","crossSiteAccessPolicies","description","encoding","hostnamePrefix","id","input","lastModified","location","name","preview","provisioningState","resourceState","streamOptions","systemData","tags","transcriptions","type","useStaticHostname"})
+    @OutputCustomType.Constructor
     private GetLiveEventResult(
-        String created,
-        @Nullable CrossSiteAccessPoliciesResponse crossSiteAccessPolicies,
-        @Nullable String description,
-        @Nullable LiveEventEncodingResponse encoding,
-        @Nullable String hostnamePrefix,
-        String id,
-        LiveEventInputResponse input,
-        String lastModified,
-        String location,
-        String name,
-        @Nullable LiveEventPreviewResponse preview,
-        String provisioningState,
-        String resourceState,
-        @Nullable List<String> streamOptions,
-        SystemDataResponse systemData,
-        @Nullable Map<String,String> tags,
-        @Nullable List<LiveEventTranscriptionResponse> transcriptions,
-        String type,
-        @Nullable Boolean useStaticHostname) {
+        @OutputCustomType.Parameter("created") String created,
+        @OutputCustomType.Parameter("crossSiteAccessPolicies") @Nullable CrossSiteAccessPoliciesResponse crossSiteAccessPolicies,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("encoding") @Nullable LiveEventEncodingResponse encoding,
+        @OutputCustomType.Parameter("hostnamePrefix") @Nullable String hostnamePrefix,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("input") LiveEventInputResponse input,
+        @OutputCustomType.Parameter("lastModified") String lastModified,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("preview") @Nullable LiveEventPreviewResponse preview,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("resourceState") String resourceState,
+        @OutputCustomType.Parameter("streamOptions") @Nullable List<String> streamOptions,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("transcriptions") @Nullable List<LiveEventTranscriptionResponse> transcriptions,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("useStaticHostname") @Nullable Boolean useStaticHostname) {
         this.created = created;
         this.crossSiteAccessPolicies = crossSiteAccessPolicies;
         this.description = description;

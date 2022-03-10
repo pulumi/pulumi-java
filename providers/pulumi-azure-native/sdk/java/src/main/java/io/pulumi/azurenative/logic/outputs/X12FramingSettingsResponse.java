@@ -47,15 +47,15 @@ public final class X12FramingSettingsResponse {
      */
     private final String segmentTerminatorSuffix;
 
-    @OutputCustomType.Constructor({"characterSet","componentSeparator","dataElementSeparator","replaceCharacter","replaceSeparatorsInPayload","segmentTerminator","segmentTerminatorSuffix"})
+    @OutputCustomType.Constructor
     private X12FramingSettingsResponse(
-        String characterSet,
-        Integer componentSeparator,
-        Integer dataElementSeparator,
-        Integer replaceCharacter,
-        Boolean replaceSeparatorsInPayload,
-        Integer segmentTerminator,
-        String segmentTerminatorSuffix) {
+        @OutputCustomType.Parameter("characterSet") String characterSet,
+        @OutputCustomType.Parameter("componentSeparator") Integer componentSeparator,
+        @OutputCustomType.Parameter("dataElementSeparator") Integer dataElementSeparator,
+        @OutputCustomType.Parameter("replaceCharacter") Integer replaceCharacter,
+        @OutputCustomType.Parameter("replaceSeparatorsInPayload") Boolean replaceSeparatorsInPayload,
+        @OutputCustomType.Parameter("segmentTerminator") Integer segmentTerminator,
+        @OutputCustomType.Parameter("segmentTerminatorSuffix") String segmentTerminatorSuffix) {
         this.characterSet = characterSet;
         this.componentSeparator = componentSeparator;
         this.dataElementSeparator = dataElementSeparator;

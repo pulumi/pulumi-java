@@ -94,24 +94,24 @@ public final class GetWorkbookResult {
      */
     private final @Nullable String version;
 
-    @OutputCustomType.Constructor({"category","displayName","etag","id","identity","kind","location","name","serializedData","sourceId","storageUri","tags","timeModified","type","userId","version"})
+    @OutputCustomType.Constructor
     private GetWorkbookResult(
-        String category,
-        String displayName,
-        @Nullable Map<String,String> etag,
-        @Nullable String id,
-        @Nullable WorkbookManagedIdentityResponse identity,
-        @Nullable String kind,
-        @Nullable String location,
-        @Nullable String name,
-        String serializedData,
-        @Nullable String sourceId,
-        @Nullable String storageUri,
-        @Nullable Map<String,String> tags,
-        String timeModified,
-        @Nullable String type,
-        String userId,
-        @Nullable String version) {
+        @OutputCustomType.Parameter("category") String category,
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("etag") @Nullable Map<String,String> etag,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("identity") @Nullable WorkbookManagedIdentityResponse identity,
+        @OutputCustomType.Parameter("kind") @Nullable String kind,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("serializedData") String serializedData,
+        @OutputCustomType.Parameter("sourceId") @Nullable String sourceId,
+        @OutputCustomType.Parameter("storageUri") @Nullable String storageUri,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("timeModified") String timeModified,
+        @OutputCustomType.Parameter("type") @Nullable String type,
+        @OutputCustomType.Parameter("userId") String userId,
+        @OutputCustomType.Parameter("version") @Nullable String version) {
         this.category = category;
         this.displayName = displayName;
         this.etag = etag;

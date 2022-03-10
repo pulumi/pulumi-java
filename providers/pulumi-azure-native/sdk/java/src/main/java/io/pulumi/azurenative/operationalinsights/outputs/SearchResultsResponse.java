@@ -43,14 +43,14 @@ public final class SearchResultsResponse {
      */
     private final @Nullable String startSearchTime;
 
-    @OutputCustomType.Constructor({"description","endSearchTime","limit","query","sourceTable","startSearchTime"})
+    @OutputCustomType.Constructor
     private SearchResultsResponse(
-        @Nullable String description,
-        @Nullable String endSearchTime,
-        @Nullable Integer limit,
-        @Nullable String query,
-        String sourceTable,
-        @Nullable String startSearchTime) {
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("endSearchTime") @Nullable String endSearchTime,
+        @OutputCustomType.Parameter("limit") @Nullable Integer limit,
+        @OutputCustomType.Parameter("query") @Nullable String query,
+        @OutputCustomType.Parameter("sourceTable") String sourceTable,
+        @OutputCustomType.Parameter("startSearchTime") @Nullable String startSearchTime) {
         this.description = description;
         this.endSearchTime = endSearchTime;
         this.limit = limit;

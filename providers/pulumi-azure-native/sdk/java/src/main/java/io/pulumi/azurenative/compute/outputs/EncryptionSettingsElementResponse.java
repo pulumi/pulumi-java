@@ -23,10 +23,10 @@ public final class EncryptionSettingsElementResponse {
      */
     private final @Nullable KeyVaultAndKeyReferenceResponse keyEncryptionKey;
 
-    @OutputCustomType.Constructor({"diskEncryptionKey","keyEncryptionKey"})
+    @OutputCustomType.Constructor
     private EncryptionSettingsElementResponse(
-        @Nullable KeyVaultAndSecretReferenceResponse diskEncryptionKey,
-        @Nullable KeyVaultAndKeyReferenceResponse keyEncryptionKey) {
+        @OutputCustomType.Parameter("diskEncryptionKey") @Nullable KeyVaultAndSecretReferenceResponse diskEncryptionKey,
+        @OutputCustomType.Parameter("keyEncryptionKey") @Nullable KeyVaultAndKeyReferenceResponse keyEncryptionKey) {
         this.diskEncryptionKey = diskEncryptionKey;
         this.keyEncryptionKey = keyEncryptionKey;
     }

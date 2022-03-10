@@ -78,20 +78,20 @@ public final class VirtualNetworkTapResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"destinationLoadBalancerFrontEndIPConfiguration","destinationNetworkInterfaceIPConfiguration","destinationPort","etag","id","location","name","networkInterfaceTapConfigurations","provisioningState","resourceGuid","tags","type"})
+    @OutputCustomType.Constructor
     private VirtualNetworkTapResponse(
-        @Nullable FrontendIPConfigurationResponse destinationLoadBalancerFrontEndIPConfiguration,
-        @Nullable NetworkInterfaceIPConfigurationResponse destinationNetworkInterfaceIPConfiguration,
-        @Nullable Integer destinationPort,
-        String etag,
-        @Nullable String id,
-        @Nullable String location,
-        String name,
-        List<NetworkInterfaceTapConfigurationResponse> networkInterfaceTapConfigurations,
-        String provisioningState,
-        String resourceGuid,
-        @Nullable Map<String,String> tags,
-        String type) {
+        @OutputCustomType.Parameter("destinationLoadBalancerFrontEndIPConfiguration") @Nullable FrontendIPConfigurationResponse destinationLoadBalancerFrontEndIPConfiguration,
+        @OutputCustomType.Parameter("destinationNetworkInterfaceIPConfiguration") @Nullable NetworkInterfaceIPConfigurationResponse destinationNetworkInterfaceIPConfiguration,
+        @OutputCustomType.Parameter("destinationPort") @Nullable Integer destinationPort,
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("networkInterfaceTapConfigurations") List<NetworkInterfaceTapConfigurationResponse> networkInterfaceTapConfigurations,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("resourceGuid") String resourceGuid,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type) {
         this.destinationLoadBalancerFrontEndIPConfiguration = destinationLoadBalancerFrontEndIPConfiguration;
         this.destinationNetworkInterfaceIPConfiguration = destinationNetworkInterfaceIPConfiguration;
         this.destinationPort = destinationPort;

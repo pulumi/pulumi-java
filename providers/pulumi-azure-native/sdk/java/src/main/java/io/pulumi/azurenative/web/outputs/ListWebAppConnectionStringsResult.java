@@ -39,13 +39,13 @@ public final class ListWebAppConnectionStringsResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"id","kind","name","properties","type"})
+    @OutputCustomType.Constructor
     private ListWebAppConnectionStringsResult(
-        String id,
-        @Nullable String kind,
-        String name,
-        Map<String,ConnStringValueTypePairResponse> properties,
-        String type) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("kind") @Nullable String kind,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("properties") Map<String,ConnStringValueTypePairResponse> properties,
+        @OutputCustomType.Parameter("type") String type) {
         this.id = id;
         this.kind = kind;
         this.name = name;

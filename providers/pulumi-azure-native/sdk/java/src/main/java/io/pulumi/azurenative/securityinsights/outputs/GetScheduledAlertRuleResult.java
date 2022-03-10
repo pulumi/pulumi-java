@@ -111,27 +111,27 @@ public final class GetScheduledAlertRuleResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"alertRuleTemplateName","description","displayName","enabled","etag","id","kind","lastModifiedUtc","name","query","queryFrequency","queryPeriod","severity","suppressionDuration","suppressionEnabled","tactics","triggerOperator","triggerThreshold","type"})
+    @OutputCustomType.Constructor
     private GetScheduledAlertRuleResult(
-        @Nullable String alertRuleTemplateName,
-        @Nullable String description,
-        String displayName,
-        Boolean enabled,
-        @Nullable String etag,
-        String id,
-        String kind,
-        String lastModifiedUtc,
-        String name,
-        String query,
-        String queryFrequency,
-        String queryPeriod,
-        String severity,
-        String suppressionDuration,
-        Boolean suppressionEnabled,
-        @Nullable List<String> tactics,
-        String triggerOperator,
-        Integer triggerThreshold,
-        String type) {
+        @OutputCustomType.Parameter("alertRuleTemplateName") @Nullable String alertRuleTemplateName,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("enabled") Boolean enabled,
+        @OutputCustomType.Parameter("etag") @Nullable String etag,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("lastModifiedUtc") String lastModifiedUtc,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("query") String query,
+        @OutputCustomType.Parameter("queryFrequency") String queryFrequency,
+        @OutputCustomType.Parameter("queryPeriod") String queryPeriod,
+        @OutputCustomType.Parameter("severity") String severity,
+        @OutputCustomType.Parameter("suppressionDuration") String suppressionDuration,
+        @OutputCustomType.Parameter("suppressionEnabled") Boolean suppressionEnabled,
+        @OutputCustomType.Parameter("tactics") @Nullable List<String> tactics,
+        @OutputCustomType.Parameter("triggerOperator") String triggerOperator,
+        @OutputCustomType.Parameter("triggerThreshold") Integer triggerThreshold,
+        @OutputCustomType.Parameter("type") String type) {
         this.alertRuleTemplateName = alertRuleTemplateName;
         this.description = description;
         this.displayName = displayName;

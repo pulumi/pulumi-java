@@ -22,10 +22,10 @@ public final class RunAsAccountResponse {
      */
     private final @Nullable String accountName;
 
-    @OutputCustomType.Constructor({"accountId","accountName"})
+    @OutputCustomType.Constructor
     private RunAsAccountResponse(
-        @Nullable String accountId,
-        @Nullable String accountName) {
+        @OutputCustomType.Parameter("accountId") @Nullable String accountId,
+        @OutputCustomType.Parameter("accountName") @Nullable String accountName) {
         this.accountId = accountId;
         this.accountName = accountName;
     }

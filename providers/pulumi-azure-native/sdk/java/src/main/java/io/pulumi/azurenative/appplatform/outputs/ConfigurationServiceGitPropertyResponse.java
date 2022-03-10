@@ -17,8 +17,8 @@ public final class ConfigurationServiceGitPropertyResponse {
      */
     private final @Nullable List<ConfigurationServiceGitRepositoryResponse> repositories;
 
-    @OutputCustomType.Constructor({"repositories"})
-    private ConfigurationServiceGitPropertyResponse(@Nullable List<ConfigurationServiceGitRepositoryResponse> repositories) {
+    @OutputCustomType.Constructor
+    private ConfigurationServiceGitPropertyResponse(@OutputCustomType.Parameter("repositories") @Nullable List<ConfigurationServiceGitRepositoryResponse> repositories) {
         this.repositories = repositories;
     }
 

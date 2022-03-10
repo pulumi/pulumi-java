@@ -29,11 +29,11 @@ public final class FirewallPolicyInsightsResponse {
      */
     private final @Nullable Integer retentionDays;
 
-    @OutputCustomType.Constructor({"isEnabled","logAnalyticsResources","retentionDays"})
+    @OutputCustomType.Constructor
     private FirewallPolicyInsightsResponse(
-        @Nullable Boolean isEnabled,
-        @Nullable FirewallPolicyLogAnalyticsResourcesResponse logAnalyticsResources,
-        @Nullable Integer retentionDays) {
+        @OutputCustomType.Parameter("isEnabled") @Nullable Boolean isEnabled,
+        @OutputCustomType.Parameter("logAnalyticsResources") @Nullable FirewallPolicyLogAnalyticsResourcesResponse logAnalyticsResources,
+        @OutputCustomType.Parameter("retentionDays") @Nullable Integer retentionDays) {
         this.isEnabled = isEnabled;
         this.logAnalyticsResources = logAnalyticsResources;
         this.retentionDays = retentionDays;

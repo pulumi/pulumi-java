@@ -48,15 +48,15 @@ public final class GetServiceEndpointPolicyDefinitionResult {
      */
     private final @Nullable List<String> serviceResources;
 
-    @OutputCustomType.Constructor({"description","etag","id","name","provisioningState","service","serviceResources"})
+    @OutputCustomType.Constructor
     private GetServiceEndpointPolicyDefinitionResult(
-        @Nullable String description,
-        String etag,
-        @Nullable String id,
-        @Nullable String name,
-        String provisioningState,
-        @Nullable String service,
-        @Nullable List<String> serviceResources) {
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("service") @Nullable String service,
+        @OutputCustomType.Parameter("serviceResources") @Nullable List<String> serviceResources) {
         this.description = description;
         this.etag = etag;
         this.id = id;

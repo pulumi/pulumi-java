@@ -75,20 +75,20 @@ public final class GetFusionAlertRuleResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"alertRuleTemplateName","description","displayName","enabled","etag","id","kind","lastModifiedUtc","name","severity","tactics","type"})
+    @OutputCustomType.Constructor
     private GetFusionAlertRuleResult(
-        String alertRuleTemplateName,
-        String description,
-        String displayName,
-        Boolean enabled,
-        @Nullable String etag,
-        String id,
-        String kind,
-        String lastModifiedUtc,
-        String name,
-        String severity,
-        List<String> tactics,
-        String type) {
+        @OutputCustomType.Parameter("alertRuleTemplateName") String alertRuleTemplateName,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("enabled") Boolean enabled,
+        @OutputCustomType.Parameter("etag") @Nullable String etag,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("lastModifiedUtc") String lastModifiedUtc,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("severity") String severity,
+        @OutputCustomType.Parameter("tactics") List<String> tactics,
+        @OutputCustomType.Parameter("type") String type) {
         this.alertRuleTemplateName = alertRuleTemplateName;
         this.description = description;
         this.displayName = displayName;

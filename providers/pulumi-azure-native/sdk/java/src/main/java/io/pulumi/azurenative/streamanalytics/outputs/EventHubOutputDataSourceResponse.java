@@ -43,14 +43,14 @@ public final class EventHubOutputDataSourceResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"eventHubName","partitionKey","serviceBusNamespace","sharedAccessPolicyKey","sharedAccessPolicyName","type"})
+    @OutputCustomType.Constructor
     private EventHubOutputDataSourceResponse(
-        @Nullable String eventHubName,
-        @Nullable String partitionKey,
-        @Nullable String serviceBusNamespace,
-        @Nullable String sharedAccessPolicyKey,
-        @Nullable String sharedAccessPolicyName,
-        String type) {
+        @OutputCustomType.Parameter("eventHubName") @Nullable String eventHubName,
+        @OutputCustomType.Parameter("partitionKey") @Nullable String partitionKey,
+        @OutputCustomType.Parameter("serviceBusNamespace") @Nullable String serviceBusNamespace,
+        @OutputCustomType.Parameter("sharedAccessPolicyKey") @Nullable String sharedAccessPolicyKey,
+        @OutputCustomType.Parameter("sharedAccessPolicyName") @Nullable String sharedAccessPolicyName,
+        @OutputCustomType.Parameter("type") String type) {
         this.eventHubName = eventHubName;
         this.partitionKey = partitionKey;
         this.serviceBusNamespace = serviceBusNamespace;

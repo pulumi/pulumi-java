@@ -37,13 +37,13 @@ public final class ImageTemplateLastRunStatusResponse {
      */
     private final @Nullable String startTime;
 
-    @OutputCustomType.Constructor({"endTime","message","runState","runSubState","startTime"})
+    @OutputCustomType.Constructor
     private ImageTemplateLastRunStatusResponse(
-        @Nullable String endTime,
-        @Nullable String message,
-        @Nullable String runState,
-        @Nullable String runSubState,
-        @Nullable String startTime) {
+        @OutputCustomType.Parameter("endTime") @Nullable String endTime,
+        @OutputCustomType.Parameter("message") @Nullable String message,
+        @OutputCustomType.Parameter("runState") @Nullable String runState,
+        @OutputCustomType.Parameter("runSubState") @Nullable String runSubState,
+        @OutputCustomType.Parameter("startTime") @Nullable String startTime) {
         this.endTime = endTime;
         this.message = message;
         this.runState = runState;

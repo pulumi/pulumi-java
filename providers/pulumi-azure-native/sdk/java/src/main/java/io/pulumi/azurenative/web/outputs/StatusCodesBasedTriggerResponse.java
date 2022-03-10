@@ -43,14 +43,14 @@ public final class StatusCodesBasedTriggerResponse {
      */
     private final @Nullable Integer win32Status;
 
-    @OutputCustomType.Constructor({"count","path","status","subStatus","timeInterval","win32Status"})
+    @OutputCustomType.Constructor
     private StatusCodesBasedTriggerResponse(
-        @Nullable Integer count,
-        @Nullable String path,
-        @Nullable Integer status,
-        @Nullable Integer subStatus,
-        @Nullable String timeInterval,
-        @Nullable Integer win32Status) {
+        @OutputCustomType.Parameter("count") @Nullable Integer count,
+        @OutputCustomType.Parameter("path") @Nullable String path,
+        @OutputCustomType.Parameter("status") @Nullable Integer status,
+        @OutputCustomType.Parameter("subStatus") @Nullable Integer subStatus,
+        @OutputCustomType.Parameter("timeInterval") @Nullable String timeInterval,
+        @OutputCustomType.Parameter("win32Status") @Nullable Integer win32Status) {
         this.count = count;
         this.path = path;
         this.status = status;

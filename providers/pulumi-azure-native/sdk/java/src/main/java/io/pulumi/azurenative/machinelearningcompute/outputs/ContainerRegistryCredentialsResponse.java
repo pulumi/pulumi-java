@@ -30,12 +30,12 @@ public final class ContainerRegistryCredentialsResponse {
      */
     private final String username;
 
-    @OutputCustomType.Constructor({"loginServer","password","password2","username"})
+    @OutputCustomType.Constructor
     private ContainerRegistryCredentialsResponse(
-        String loginServer,
-        String password,
-        String password2,
-        String username) {
+        @OutputCustomType.Parameter("loginServer") String loginServer,
+        @OutputCustomType.Parameter("password") String password,
+        @OutputCustomType.Parameter("password2") String password2,
+        @OutputCustomType.Parameter("username") String username) {
         this.loginServer = loginServer;
         this.password = password;
         this.password2 = password2;
