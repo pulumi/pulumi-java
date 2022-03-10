@@ -103,8 +103,8 @@ jobs:
           for provider in `ls tests/examples/*/ -d`; do
             bash -c  "cd  $provider && pulumi preview";
           done;
-      strategy:
-        fail-fast: true
+    strategy:
+      fail-fast: true
   go-lint:
     container: golangci/golangci-lint:latest
     name: Lint ${{ matrix.directory }}
