@@ -40,13 +40,13 @@ public final class GetServiceProfileResult {
      */
     private final @Nullable List<ServiceProfileTag> tags;
 
-    @OutputCustomType.Constructor({"arn","id","loRaWAN","name","tags"})
+    @OutputCustomType.Constructor
     private GetServiceProfileResult(
-        @Nullable String arn,
-        @Nullable String id,
-        @Nullable ServiceProfileLoRaWANServiceProfile loRaWAN,
-        @Nullable String name,
-        @Nullable List<ServiceProfileTag> tags) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("loRaWAN") @Nullable ServiceProfileLoRaWANServiceProfile loRaWAN,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("tags") @Nullable List<ServiceProfileTag> tags) {
         this.arn = arn;
         this.id = id;
         this.loRaWAN = loRaWAN;

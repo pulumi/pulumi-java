@@ -15,10 +15,10 @@ public final class InAppTemplateOverrideButtonConfiguration {
     private final @Nullable InAppTemplateButtonAction buttonAction;
     private final @Nullable String link;
 
-    @OutputCustomType.Constructor({"buttonAction","link"})
+    @OutputCustomType.Constructor
     private InAppTemplateOverrideButtonConfiguration(
-        @Nullable InAppTemplateButtonAction buttonAction,
-        @Nullable String link) {
+        @OutputCustomType.Parameter("buttonAction") @Nullable InAppTemplateButtonAction buttonAction,
+        @OutputCustomType.Parameter("link") @Nullable String link) {
         this.buttonAction = buttonAction;
         this.link = link;
     }

@@ -13,10 +13,10 @@ public final class CertificatePolicyQualifierInfo {
     private final String policyQualifierId;
     private final CertificateQualifier qualifier;
 
-    @OutputCustomType.Constructor({"policyQualifierId","qualifier"})
+    @OutputCustomType.Constructor
     private CertificatePolicyQualifierInfo(
-        String policyQualifierId,
-        CertificateQualifier qualifier) {
+        @OutputCustomType.Parameter("policyQualifierId") String policyQualifierId,
+        @OutputCustomType.Parameter("qualifier") CertificateQualifier qualifier) {
         this.policyQualifierId = policyQualifierId;
         this.qualifier = qualifier;
     }

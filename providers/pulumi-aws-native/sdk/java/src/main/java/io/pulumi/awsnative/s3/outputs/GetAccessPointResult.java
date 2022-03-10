@@ -36,13 +36,13 @@ public final class GetAccessPointResult {
     private final @Nullable Object policy;
     private final @Nullable PolicyStatusProperties policyStatus;
 
-    @OutputCustomType.Constructor({"alias","arn","networkOrigin","policy","policyStatus"})
+    @OutputCustomType.Constructor
     private GetAccessPointResult(
-        @Nullable String alias,
-        @Nullable String arn,
-        @Nullable AccessPointNetworkOrigin networkOrigin,
-        @Nullable Object policy,
-        @Nullable PolicyStatusProperties policyStatus) {
+        @OutputCustomType.Parameter("alias") @Nullable String alias,
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("networkOrigin") @Nullable AccessPointNetworkOrigin networkOrigin,
+        @OutputCustomType.Parameter("policy") @Nullable Object policy,
+        @OutputCustomType.Parameter("policyStatus") @Nullable PolicyStatusProperties policyStatus) {
         this.alias = alias;
         this.arn = arn;
         this.networkOrigin = networkOrigin;

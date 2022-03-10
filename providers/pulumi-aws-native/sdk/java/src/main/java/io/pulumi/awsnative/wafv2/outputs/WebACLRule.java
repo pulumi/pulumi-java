@@ -32,16 +32,16 @@ public final class WebACLRule {
     private final WebACLStatement statement;
     private final WebACLVisibilityConfig visibilityConfig;
 
-    @OutputCustomType.Constructor({"action","captchaConfig","name","overrideAction","priority","ruleLabels","statement","visibilityConfig"})
+    @OutputCustomType.Constructor
     private WebACLRule(
-        @Nullable WebACLRuleAction action,
-        @Nullable WebACLCaptchaConfig captchaConfig,
-        String name,
-        @Nullable WebACLOverrideAction overrideAction,
-        Integer priority,
-        @Nullable List<WebACLLabel> ruleLabels,
-        WebACLStatement statement,
-        WebACLVisibilityConfig visibilityConfig) {
+        @OutputCustomType.Parameter("action") @Nullable WebACLRuleAction action,
+        @OutputCustomType.Parameter("captchaConfig") @Nullable WebACLCaptchaConfig captchaConfig,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("overrideAction") @Nullable WebACLOverrideAction overrideAction,
+        @OutputCustomType.Parameter("priority") Integer priority,
+        @OutputCustomType.Parameter("ruleLabels") @Nullable List<WebACLLabel> ruleLabels,
+        @OutputCustomType.Parameter("statement") WebACLStatement statement,
+        @OutputCustomType.Parameter("visibilityConfig") WebACLVisibilityConfig visibilityConfig) {
         this.action = action;
         this.captchaConfig = captchaConfig;
         this.name = name;

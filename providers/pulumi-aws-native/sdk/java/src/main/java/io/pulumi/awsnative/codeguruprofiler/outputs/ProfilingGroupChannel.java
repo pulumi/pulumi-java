@@ -14,10 +14,10 @@ public final class ProfilingGroupChannel {
     private final @Nullable String channelId;
     private final String channelUri;
 
-    @OutputCustomType.Constructor({"channelId","channelUri"})
+    @OutputCustomType.Constructor
     private ProfilingGroupChannel(
-        @Nullable String channelId,
-        String channelUri) {
+        @OutputCustomType.Parameter("channelId") @Nullable String channelId,
+        @OutputCustomType.Parameter("channelUri") String channelUri) {
         this.channelId = channelId;
         this.channelUri = channelUri;
     }

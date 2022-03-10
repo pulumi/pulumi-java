@@ -13,10 +13,10 @@ public final class FilterStringFilter {
     private final FilterStringComparison comparison;
     private final String value;
 
-    @OutputCustomType.Constructor({"comparison","value"})
+    @OutputCustomType.Constructor
     private FilterStringFilter(
-        FilterStringComparison comparison,
-        String value) {
+        @OutputCustomType.Parameter("comparison") FilterStringComparison comparison,
+        @OutputCustomType.Parameter("value") String value) {
         this.comparison = comparison;
         this.value = value;
     }

@@ -14,10 +14,10 @@ public final class FilterNumberFilter {
     private final @Nullable Double lowerInclusive;
     private final @Nullable Double upperInclusive;
 
-    @OutputCustomType.Constructor({"lowerInclusive","upperInclusive"})
+    @OutputCustomType.Constructor
     private FilterNumberFilter(
-        @Nullable Double lowerInclusive,
-        @Nullable Double upperInclusive) {
+        @OutputCustomType.Parameter("lowerInclusive") @Nullable Double lowerInclusive,
+        @OutputCustomType.Parameter("upperInclusive") @Nullable Double upperInclusive) {
         this.lowerInclusive = lowerInclusive;
         this.upperInclusive = upperInclusive;
     }

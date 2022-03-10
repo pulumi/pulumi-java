@@ -24,15 +24,15 @@ public final class FirewallPolicy {
     private final List<String> statelessFragmentDefaultActions;
     private final @Nullable List<FirewallPolicyStatelessRuleGroupReference> statelessRuleGroupReferences;
 
-    @OutputCustomType.Constructor({"statefulDefaultActions","statefulEngineOptions","statefulRuleGroupReferences","statelessCustomActions","statelessDefaultActions","statelessFragmentDefaultActions","statelessRuleGroupReferences"})
+    @OutputCustomType.Constructor
     private FirewallPolicy(
-        @Nullable List<String> statefulDefaultActions,
-        @Nullable FirewallPolicyStatefulEngineOptions statefulEngineOptions,
-        @Nullable List<FirewallPolicyStatefulRuleGroupReference> statefulRuleGroupReferences,
-        @Nullable List<FirewallPolicyCustomAction> statelessCustomActions,
-        List<String> statelessDefaultActions,
-        List<String> statelessFragmentDefaultActions,
-        @Nullable List<FirewallPolicyStatelessRuleGroupReference> statelessRuleGroupReferences) {
+        @OutputCustomType.Parameter("statefulDefaultActions") @Nullable List<String> statefulDefaultActions,
+        @OutputCustomType.Parameter("statefulEngineOptions") @Nullable FirewallPolicyStatefulEngineOptions statefulEngineOptions,
+        @OutputCustomType.Parameter("statefulRuleGroupReferences") @Nullable List<FirewallPolicyStatefulRuleGroupReference> statefulRuleGroupReferences,
+        @OutputCustomType.Parameter("statelessCustomActions") @Nullable List<FirewallPolicyCustomAction> statelessCustomActions,
+        @OutputCustomType.Parameter("statelessDefaultActions") List<String> statelessDefaultActions,
+        @OutputCustomType.Parameter("statelessFragmentDefaultActions") List<String> statelessFragmentDefaultActions,
+        @OutputCustomType.Parameter("statelessRuleGroupReferences") @Nullable List<FirewallPolicyStatelessRuleGroupReference> statelessRuleGroupReferences) {
         this.statefulDefaultActions = statefulDefaultActions;
         this.statefulEngineOptions = statefulEngineOptions;
         this.statefulRuleGroupReferences = statefulRuleGroupReferences;

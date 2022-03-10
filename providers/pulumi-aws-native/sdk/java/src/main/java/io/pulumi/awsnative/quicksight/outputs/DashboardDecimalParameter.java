@@ -22,10 +22,10 @@ public final class DashboardDecimalParameter {
      */
     private final List<Double> values;
 
-    @OutputCustomType.Constructor({"name","values"})
+    @OutputCustomType.Constructor
     private DashboardDecimalParameter(
-        String name,
-        List<Double> values) {
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("values") List<Double> values) {
         this.name = name;
         this.values = values;
     }

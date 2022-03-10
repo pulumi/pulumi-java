@@ -22,10 +22,10 @@ public final class TrailDataResource {
      */
     private final @Nullable List<String> values;
 
-    @OutputCustomType.Constructor({"type","values"})
+    @OutputCustomType.Constructor
     private TrailDataResource(
-        String type,
-        @Nullable List<String> values) {
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("values") @Nullable List<String> values) {
         this.type = type;
         this.values = values;
     }

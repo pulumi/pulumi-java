@@ -13,10 +13,10 @@ public final class LaunchGroupToWeight {
     private final String groupName;
     private final Integer splitWeight;
 
-    @OutputCustomType.Constructor({"groupName","splitWeight"})
+    @OutputCustomType.Constructor
     private LaunchGroupToWeight(
-        String groupName,
-        Integer splitWeight) {
+        @OutputCustomType.Parameter("groupName") String groupName,
+        @OutputCustomType.Parameter("splitWeight") Integer splitWeight) {
         this.groupName = groupName;
         this.splitWeight = splitWeight;
     }

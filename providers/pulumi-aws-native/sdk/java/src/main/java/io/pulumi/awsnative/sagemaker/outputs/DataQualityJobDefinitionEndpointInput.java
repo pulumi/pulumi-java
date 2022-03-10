@@ -30,12 +30,12 @@ public final class DataQualityJobDefinitionEndpointInput {
      */
     private final @Nullable DataQualityJobDefinitionEndpointInputS3InputMode s3InputMode;
 
-    @OutputCustomType.Constructor({"endpointName","localPath","s3DataDistributionType","s3InputMode"})
+    @OutputCustomType.Constructor
     private DataQualityJobDefinitionEndpointInput(
-        String endpointName,
-        String localPath,
-        @Nullable DataQualityJobDefinitionEndpointInputS3DataDistributionType s3DataDistributionType,
-        @Nullable DataQualityJobDefinitionEndpointInputS3InputMode s3InputMode) {
+        @OutputCustomType.Parameter("endpointName") String endpointName,
+        @OutputCustomType.Parameter("localPath") String localPath,
+        @OutputCustomType.Parameter("s3DataDistributionType") @Nullable DataQualityJobDefinitionEndpointInputS3DataDistributionType s3DataDistributionType,
+        @OutputCustomType.Parameter("s3InputMode") @Nullable DataQualityJobDefinitionEndpointInputS3InputMode s3InputMode) {
         this.endpointName = endpointName;
         this.localPath = localPath;
         this.s3DataDistributionType = s3DataDistributionType;

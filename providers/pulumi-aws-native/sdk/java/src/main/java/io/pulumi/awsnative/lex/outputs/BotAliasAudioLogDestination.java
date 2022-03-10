@@ -13,8 +13,8 @@ import javax.annotation.Nullable;
 public final class BotAliasAudioLogDestination {
     private final @Nullable BotAliasS3BucketLogDestination s3Bucket;
 
-    @OutputCustomType.Constructor({"s3Bucket"})
-    private BotAliasAudioLogDestination(@Nullable BotAliasS3BucketLogDestination s3Bucket) {
+    @OutputCustomType.Constructor
+    private BotAliasAudioLogDestination(@OutputCustomType.Parameter("s3Bucket") @Nullable BotAliasS3BucketLogDestination s3Bucket) {
         this.s3Bucket = s3Bucket;
     }
 

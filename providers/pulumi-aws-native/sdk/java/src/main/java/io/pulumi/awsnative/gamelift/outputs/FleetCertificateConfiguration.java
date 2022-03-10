@@ -11,8 +11,8 @@ import java.util.Objects;
 public final class FleetCertificateConfiguration {
     private final FleetCertificateConfigurationCertificateType certificateType;
 
-    @OutputCustomType.Constructor({"certificateType"})
-    private FleetCertificateConfiguration(FleetCertificateConfigurationCertificateType certificateType) {
+    @OutputCustomType.Constructor
+    private FleetCertificateConfiguration(@OutputCustomType.Parameter("certificateType") FleetCertificateConfigurationCertificateType certificateType) {
         this.certificateType = certificateType;
     }
 

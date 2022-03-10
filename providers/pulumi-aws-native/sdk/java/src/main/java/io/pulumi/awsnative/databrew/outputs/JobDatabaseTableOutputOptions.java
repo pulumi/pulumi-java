@@ -15,10 +15,10 @@ public final class JobDatabaseTableOutputOptions {
     private final String tableName;
     private final @Nullable JobS3Location tempDirectory;
 
-    @OutputCustomType.Constructor({"tableName","tempDirectory"})
+    @OutputCustomType.Constructor
     private JobDatabaseTableOutputOptions(
-        String tableName,
-        @Nullable JobS3Location tempDirectory) {
+        @OutputCustomType.Parameter("tableName") String tableName,
+        @OutputCustomType.Parameter("tempDirectory") @Nullable JobS3Location tempDirectory) {
         this.tableName = tableName;
         this.tempDirectory = tempDirectory;
     }

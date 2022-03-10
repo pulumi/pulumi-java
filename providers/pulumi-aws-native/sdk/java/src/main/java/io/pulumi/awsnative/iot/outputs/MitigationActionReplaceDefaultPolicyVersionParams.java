@@ -11,8 +11,8 @@ import java.util.Objects;
 public final class MitigationActionReplaceDefaultPolicyVersionParams {
     private final MitigationActionReplaceDefaultPolicyVersionParamsTemplateName templateName;
 
-    @OutputCustomType.Constructor({"templateName"})
-    private MitigationActionReplaceDefaultPolicyVersionParams(MitigationActionReplaceDefaultPolicyVersionParamsTemplateName templateName) {
+    @OutputCustomType.Constructor
+    private MitigationActionReplaceDefaultPolicyVersionParams(@OutputCustomType.Parameter("templateName") MitigationActionReplaceDefaultPolicyVersionParamsTemplateName templateName) {
         this.templateName = templateName;
     }
 

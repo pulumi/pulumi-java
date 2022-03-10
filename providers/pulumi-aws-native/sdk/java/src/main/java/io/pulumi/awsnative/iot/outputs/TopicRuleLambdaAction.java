@@ -13,8 +13,8 @@ import javax.annotation.Nullable;
 public final class TopicRuleLambdaAction {
     private final @Nullable String functionArn;
 
-    @OutputCustomType.Constructor({"functionArn"})
-    private TopicRuleLambdaAction(@Nullable String functionArn) {
+    @OutputCustomType.Constructor
+    private TopicRuleLambdaAction(@OutputCustomType.Parameter("functionArn") @Nullable String functionArn) {
         this.functionArn = functionArn;
     }
 

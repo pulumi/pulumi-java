@@ -12,10 +12,10 @@ public final class CertificateAuthorityOtherName {
     private final String typeId;
     private final String value;
 
-    @OutputCustomType.Constructor({"typeId","value"})
+    @OutputCustomType.Constructor
     private CertificateAuthorityOtherName(
-        String typeId,
-        String value) {
+        @OutputCustomType.Parameter("typeId") String typeId,
+        @OutputCustomType.Parameter("value") String value) {
         this.typeId = typeId;
         this.value = value;
     }

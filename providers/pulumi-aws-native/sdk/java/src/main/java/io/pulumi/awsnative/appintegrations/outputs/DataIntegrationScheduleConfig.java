@@ -25,11 +25,11 @@ public final class DataIntegrationScheduleConfig {
      */
     private final String scheduleExpression;
 
-    @OutputCustomType.Constructor({"firstExecutionFrom","object","scheduleExpression"})
+    @OutputCustomType.Constructor
     private DataIntegrationScheduleConfig(
-        String firstExecutionFrom,
-        String object,
-        String scheduleExpression) {
+        @OutputCustomType.Parameter("firstExecutionFrom") String firstExecutionFrom,
+        @OutputCustomType.Parameter("object") String object,
+        @OutputCustomType.Parameter("scheduleExpression") String scheduleExpression) {
         this.firstExecutionFrom = firstExecutionFrom;
         this.object = object;
         this.scheduleExpression = scheduleExpression;

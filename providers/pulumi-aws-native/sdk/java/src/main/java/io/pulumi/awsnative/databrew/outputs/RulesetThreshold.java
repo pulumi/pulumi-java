@@ -17,11 +17,11 @@ public final class RulesetThreshold {
     private final @Nullable RulesetThresholdUnit unit;
     private final Double value;
 
-    @OutputCustomType.Constructor({"type","unit","value"})
+    @OutputCustomType.Constructor
     private RulesetThreshold(
-        @Nullable RulesetThresholdType type,
-        @Nullable RulesetThresholdUnit unit,
-        Double value) {
+        @OutputCustomType.Parameter("type") @Nullable RulesetThresholdType type,
+        @OutputCustomType.Parameter("unit") @Nullable RulesetThresholdUnit unit,
+        @OutputCustomType.Parameter("value") Double value) {
         this.type = type;
         this.unit = unit;
         this.value = value;

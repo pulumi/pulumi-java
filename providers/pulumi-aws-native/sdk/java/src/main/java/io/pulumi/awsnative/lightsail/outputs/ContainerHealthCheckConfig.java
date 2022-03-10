@@ -43,14 +43,14 @@ public final class ContainerHealthCheckConfig {
      */
     private final @Nullable Integer unhealthyThreshold;
 
-    @OutputCustomType.Constructor({"healthyThreshold","intervalSeconds","path","successCodes","timeoutSeconds","unhealthyThreshold"})
+    @OutputCustomType.Constructor
     private ContainerHealthCheckConfig(
-        @Nullable Integer healthyThreshold,
-        @Nullable Integer intervalSeconds,
-        @Nullable String path,
-        @Nullable String successCodes,
-        @Nullable Integer timeoutSeconds,
-        @Nullable Integer unhealthyThreshold) {
+        @OutputCustomType.Parameter("healthyThreshold") @Nullable Integer healthyThreshold,
+        @OutputCustomType.Parameter("intervalSeconds") @Nullable Integer intervalSeconds,
+        @OutputCustomType.Parameter("path") @Nullable String path,
+        @OutputCustomType.Parameter("successCodes") @Nullable String successCodes,
+        @OutputCustomType.Parameter("timeoutSeconds") @Nullable Integer timeoutSeconds,
+        @OutputCustomType.Parameter("unhealthyThreshold") @Nullable Integer unhealthyThreshold) {
         this.healthyThreshold = healthyThreshold;
         this.intervalSeconds = intervalSeconds;
         this.path = path;

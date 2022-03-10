@@ -53,16 +53,16 @@ public final class GetIPAMScopeResult {
      */
     private final @Nullable List<IPAMScopeTag> tags;
 
-    @OutputCustomType.Constructor({"arn","description","ipamArn","ipamScopeId","ipamScopeType","isDefault","poolCount","tags"})
+    @OutputCustomType.Constructor
     private GetIPAMScopeResult(
-        @Nullable String arn,
-        @Nullable String description,
-        @Nullable String ipamArn,
-        @Nullable String ipamScopeId,
-        @Nullable IPAMScopeIpamScopeType ipamScopeType,
-        @Nullable Boolean isDefault,
-        @Nullable Integer poolCount,
-        @Nullable List<IPAMScopeTag> tags) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("ipamArn") @Nullable String ipamArn,
+        @OutputCustomType.Parameter("ipamScopeId") @Nullable String ipamScopeId,
+        @OutputCustomType.Parameter("ipamScopeType") @Nullable IPAMScopeIpamScopeType ipamScopeType,
+        @OutputCustomType.Parameter("isDefault") @Nullable Boolean isDefault,
+        @OutputCustomType.Parameter("poolCount") @Nullable Integer poolCount,
+        @OutputCustomType.Parameter("tags") @Nullable List<IPAMScopeTag> tags) {
         this.arn = arn;
         this.description = description;
         this.ipamArn = ipamArn;

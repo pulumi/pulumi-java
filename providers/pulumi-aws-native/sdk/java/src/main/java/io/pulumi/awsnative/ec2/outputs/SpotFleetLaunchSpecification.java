@@ -41,26 +41,26 @@ public final class SpotFleetLaunchSpecification {
     private final @Nullable String userData;
     private final @Nullable Double weightedCapacity;
 
-    @OutputCustomType.Constructor({"blockDeviceMappings","ebsOptimized","iamInstanceProfile","imageId","instanceRequirements","instanceType","kernelId","keyName","monitoring","networkInterfaces","placement","ramdiskId","securityGroups","spotPrice","subnetId","tagSpecifications","userData","weightedCapacity"})
+    @OutputCustomType.Constructor
     private SpotFleetLaunchSpecification(
-        @Nullable List<SpotFleetBlockDeviceMapping> blockDeviceMappings,
-        @Nullable Boolean ebsOptimized,
-        @Nullable SpotFleetIamInstanceProfileSpecification iamInstanceProfile,
-        String imageId,
-        @Nullable SpotFleetInstanceRequirementsRequest instanceRequirements,
-        @Nullable String instanceType,
-        @Nullable String kernelId,
-        @Nullable String keyName,
-        @Nullable SpotFleetMonitoring monitoring,
-        @Nullable List<SpotFleetInstanceNetworkInterfaceSpecification> networkInterfaces,
-        @Nullable SpotFleetSpotPlacement placement,
-        @Nullable String ramdiskId,
-        @Nullable List<SpotFleetGroupIdentifier> securityGroups,
-        @Nullable String spotPrice,
-        @Nullable String subnetId,
-        @Nullable List<SpotFleetTagSpecification> tagSpecifications,
-        @Nullable String userData,
-        @Nullable Double weightedCapacity) {
+        @OutputCustomType.Parameter("blockDeviceMappings") @Nullable List<SpotFleetBlockDeviceMapping> blockDeviceMappings,
+        @OutputCustomType.Parameter("ebsOptimized") @Nullable Boolean ebsOptimized,
+        @OutputCustomType.Parameter("iamInstanceProfile") @Nullable SpotFleetIamInstanceProfileSpecification iamInstanceProfile,
+        @OutputCustomType.Parameter("imageId") String imageId,
+        @OutputCustomType.Parameter("instanceRequirements") @Nullable SpotFleetInstanceRequirementsRequest instanceRequirements,
+        @OutputCustomType.Parameter("instanceType") @Nullable String instanceType,
+        @OutputCustomType.Parameter("kernelId") @Nullable String kernelId,
+        @OutputCustomType.Parameter("keyName") @Nullable String keyName,
+        @OutputCustomType.Parameter("monitoring") @Nullable SpotFleetMonitoring monitoring,
+        @OutputCustomType.Parameter("networkInterfaces") @Nullable List<SpotFleetInstanceNetworkInterfaceSpecification> networkInterfaces,
+        @OutputCustomType.Parameter("placement") @Nullable SpotFleetSpotPlacement placement,
+        @OutputCustomType.Parameter("ramdiskId") @Nullable String ramdiskId,
+        @OutputCustomType.Parameter("securityGroups") @Nullable List<SpotFleetGroupIdentifier> securityGroups,
+        @OutputCustomType.Parameter("spotPrice") @Nullable String spotPrice,
+        @OutputCustomType.Parameter("subnetId") @Nullable String subnetId,
+        @OutputCustomType.Parameter("tagSpecifications") @Nullable List<SpotFleetTagSpecification> tagSpecifications,
+        @OutputCustomType.Parameter("userData") @Nullable String userData,
+        @OutputCustomType.Parameter("weightedCapacity") @Nullable Double weightedCapacity) {
         this.blockDeviceMappings = blockDeviceMappings;
         this.ebsOptimized = ebsOptimized;
         this.iamInstanceProfile = iamInstanceProfile;

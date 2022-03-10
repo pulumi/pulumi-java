@@ -13,8 +13,8 @@ import javax.annotation.Nullable;
 public final class DashboardSourceEntity {
     private final @Nullable DashboardSourceTemplate sourceTemplate;
 
-    @OutputCustomType.Constructor({"sourceTemplate"})
-    private DashboardSourceEntity(@Nullable DashboardSourceTemplate sourceTemplate) {
+    @OutputCustomType.Constructor
+    private DashboardSourceEntity(@OutputCustomType.Parameter("sourceTemplate") @Nullable DashboardSourceTemplate sourceTemplate) {
         this.sourceTemplate = sourceTemplate;
     }
 

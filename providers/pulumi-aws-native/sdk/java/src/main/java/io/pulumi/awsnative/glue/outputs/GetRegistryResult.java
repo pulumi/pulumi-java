@@ -29,11 +29,11 @@ public final class GetRegistryResult {
      */
     private final @Nullable List<RegistryTag> tags;
 
-    @OutputCustomType.Constructor({"arn","description","tags"})
+    @OutputCustomType.Constructor
     private GetRegistryResult(
-        @Nullable String arn,
-        @Nullable String description,
-        @Nullable List<RegistryTag> tags) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("tags") @Nullable List<RegistryTag> tags) {
         this.arn = arn;
         this.description = description;
         this.tags = tags;

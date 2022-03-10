@@ -19,12 +19,12 @@ public final class RuleGroupRateBasedStatement {
     private final Integer limit;
     private final @Nullable RuleGroupStatement scopeDownStatement;
 
-    @OutputCustomType.Constructor({"aggregateKeyType","forwardedIPConfig","limit","scopeDownStatement"})
+    @OutputCustomType.Constructor
     private RuleGroupRateBasedStatement(
-        RuleGroupRateBasedStatementAggregateKeyType aggregateKeyType,
-        @Nullable RuleGroupForwardedIPConfiguration forwardedIPConfig,
-        Integer limit,
-        @Nullable RuleGroupStatement scopeDownStatement) {
+        @OutputCustomType.Parameter("aggregateKeyType") RuleGroupRateBasedStatementAggregateKeyType aggregateKeyType,
+        @OutputCustomType.Parameter("forwardedIPConfig") @Nullable RuleGroupForwardedIPConfiguration forwardedIPConfig,
+        @OutputCustomType.Parameter("limit") Integer limit,
+        @OutputCustomType.Parameter("scopeDownStatement") @Nullable RuleGroupStatement scopeDownStatement) {
         this.aggregateKeyType = aggregateKeyType;
         this.forwardedIPConfig = forwardedIPConfig;
         this.limit = limit;

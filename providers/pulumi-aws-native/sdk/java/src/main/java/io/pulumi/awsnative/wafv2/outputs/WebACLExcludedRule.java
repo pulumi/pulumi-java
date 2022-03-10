@@ -11,8 +11,8 @@ import java.util.Objects;
 public final class WebACLExcludedRule {
     private final String name;
 
-    @OutputCustomType.Constructor({"name"})
-    private WebACLExcludedRule(String name) {
+    @OutputCustomType.Constructor
+    private WebACLExcludedRule(@OutputCustomType.Parameter("name") String name) {
         this.name = name;
     }
 

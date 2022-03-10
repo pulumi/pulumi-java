@@ -11,8 +11,8 @@ import java.util.Objects;
 public final class ScheduledQuerySnsConfiguration {
     private final String topicArn;
 
-    @OutputCustomType.Constructor({"topicArn"})
-    private ScheduledQuerySnsConfiguration(String topicArn) {
+    @OutputCustomType.Constructor
+    private ScheduledQuerySnsConfiguration(@OutputCustomType.Parameter("topicArn") String topicArn) {
         this.topicArn = topicArn;
     }
 

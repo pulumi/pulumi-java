@@ -18,10 +18,10 @@ public final class AnomalyDetectorTimestampColumn {
     private final @Nullable String columnFormat;
     private final @Nullable String columnName;
 
-    @OutputCustomType.Constructor({"columnFormat","columnName"})
+    @OutputCustomType.Constructor
     private AnomalyDetectorTimestampColumn(
-        @Nullable String columnFormat,
-        @Nullable String columnName) {
+        @OutputCustomType.Parameter("columnFormat") @Nullable String columnFormat,
+        @OutputCustomType.Parameter("columnName") @Nullable String columnName) {
         this.columnFormat = columnFormat;
         this.columnName = columnName;
     }

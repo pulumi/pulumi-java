@@ -23,10 +23,10 @@ public final class ReplicationConfigurationReplicationRule {
      */
     private final @Nullable List<ReplicationConfigurationRepositoryFilter> repositoryFilters;
 
-    @OutputCustomType.Constructor({"destinations","repositoryFilters"})
+    @OutputCustomType.Constructor
     private ReplicationConfigurationReplicationRule(
-        List<ReplicationConfigurationReplicationDestination> destinations,
-        @Nullable List<ReplicationConfigurationRepositoryFilter> repositoryFilters) {
+        @OutputCustomType.Parameter("destinations") List<ReplicationConfigurationReplicationDestination> destinations,
+        @OutputCustomType.Parameter("repositoryFilters") @Nullable List<ReplicationConfigurationRepositoryFilter> repositoryFilters) {
         this.destinations = destinations;
         this.repositoryFilters = repositoryFilters;
     }

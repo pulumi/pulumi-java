@@ -17,11 +17,11 @@ public final class DataQualityJobDefinitionDataQualityBaselineConfig {
     private final @Nullable DataQualityJobDefinitionConstraintsResource constraintsResource;
     private final @Nullable DataQualityJobDefinitionStatisticsResource statisticsResource;
 
-    @OutputCustomType.Constructor({"baseliningJobName","constraintsResource","statisticsResource"})
+    @OutputCustomType.Constructor
     private DataQualityJobDefinitionDataQualityBaselineConfig(
-        @Nullable String baseliningJobName,
-        @Nullable DataQualityJobDefinitionConstraintsResource constraintsResource,
-        @Nullable DataQualityJobDefinitionStatisticsResource statisticsResource) {
+        @OutputCustomType.Parameter("baseliningJobName") @Nullable String baseliningJobName,
+        @OutputCustomType.Parameter("constraintsResource") @Nullable DataQualityJobDefinitionConstraintsResource constraintsResource,
+        @OutputCustomType.Parameter("statisticsResource") @Nullable DataQualityJobDefinitionStatisticsResource statisticsResource) {
         this.baseliningJobName = baseliningJobName;
         this.constraintsResource = constraintsResource;
         this.statisticsResource = statisticsResource;

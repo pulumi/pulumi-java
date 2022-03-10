@@ -93,25 +93,25 @@ public final class GetJobResult {
      */
     private final @Nullable List<JobValidationConfiguration> validationConfigurations;
 
-    @OutputCustomType.Constructor({"dataCatalogOutputs","databaseOutputs","datasetName","encryptionKeyArn","encryptionMode","jobSample","logSubscription","maxCapacity","maxRetries","outputLocation","outputs","profileConfiguration","projectName","recipe","roleArn","timeout","validationConfigurations"})
+    @OutputCustomType.Constructor
     private GetJobResult(
-        @Nullable List<JobDataCatalogOutput> dataCatalogOutputs,
-        @Nullable List<JobDatabaseOutput> databaseOutputs,
-        @Nullable String datasetName,
-        @Nullable String encryptionKeyArn,
-        @Nullable JobEncryptionMode encryptionMode,
-        @Nullable JobSample jobSample,
-        @Nullable JobLogSubscription logSubscription,
-        @Nullable Integer maxCapacity,
-        @Nullable Integer maxRetries,
-        @Nullable JobOutputLocation outputLocation,
-        @Nullable List<JobOutput> outputs,
-        @Nullable JobProfileConfiguration profileConfiguration,
-        @Nullable String projectName,
-        @Nullable JobRecipe recipe,
-        @Nullable String roleArn,
-        @Nullable Integer timeout,
-        @Nullable List<JobValidationConfiguration> validationConfigurations) {
+        @OutputCustomType.Parameter("dataCatalogOutputs") @Nullable List<JobDataCatalogOutput> dataCatalogOutputs,
+        @OutputCustomType.Parameter("databaseOutputs") @Nullable List<JobDatabaseOutput> databaseOutputs,
+        @OutputCustomType.Parameter("datasetName") @Nullable String datasetName,
+        @OutputCustomType.Parameter("encryptionKeyArn") @Nullable String encryptionKeyArn,
+        @OutputCustomType.Parameter("encryptionMode") @Nullable JobEncryptionMode encryptionMode,
+        @OutputCustomType.Parameter("jobSample") @Nullable JobSample jobSample,
+        @OutputCustomType.Parameter("logSubscription") @Nullable JobLogSubscription logSubscription,
+        @OutputCustomType.Parameter("maxCapacity") @Nullable Integer maxCapacity,
+        @OutputCustomType.Parameter("maxRetries") @Nullable Integer maxRetries,
+        @OutputCustomType.Parameter("outputLocation") @Nullable JobOutputLocation outputLocation,
+        @OutputCustomType.Parameter("outputs") @Nullable List<JobOutput> outputs,
+        @OutputCustomType.Parameter("profileConfiguration") @Nullable JobProfileConfiguration profileConfiguration,
+        @OutputCustomType.Parameter("projectName") @Nullable String projectName,
+        @OutputCustomType.Parameter("recipe") @Nullable JobRecipe recipe,
+        @OutputCustomType.Parameter("roleArn") @Nullable String roleArn,
+        @OutputCustomType.Parameter("timeout") @Nullable Integer timeout,
+        @OutputCustomType.Parameter("validationConfigurations") @Nullable List<JobValidationConfiguration> validationConfigurations) {
         this.dataCatalogOutputs = dataCatalogOutputs;
         this.databaseOutputs = databaseOutputs;
         this.datasetName = datasetName;

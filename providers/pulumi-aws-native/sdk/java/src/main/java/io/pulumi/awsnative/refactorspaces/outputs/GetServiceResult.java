@@ -21,11 +21,11 @@ public final class GetServiceResult {
      */
     private final @Nullable List<ServiceTag> tags;
 
-    @OutputCustomType.Constructor({"arn","serviceIdentifier","tags"})
+    @OutputCustomType.Constructor
     private GetServiceResult(
-        @Nullable String arn,
-        @Nullable String serviceIdentifier,
-        @Nullable List<ServiceTag> tags) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("serviceIdentifier") @Nullable String serviceIdentifier,
+        @OutputCustomType.Parameter("tags") @Nullable List<ServiceTag> tags) {
         this.arn = arn;
         this.serviceIdentifier = serviceIdentifier;
         this.tags = tags;

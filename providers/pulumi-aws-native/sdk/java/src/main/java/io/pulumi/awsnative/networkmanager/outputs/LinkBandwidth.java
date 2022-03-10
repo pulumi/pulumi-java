@@ -22,10 +22,10 @@ public final class LinkBandwidth {
      */
     private final @Nullable Integer uploadSpeed;
 
-    @OutputCustomType.Constructor({"downloadSpeed","uploadSpeed"})
+    @OutputCustomType.Constructor
     private LinkBandwidth(
-        @Nullable Integer downloadSpeed,
-        @Nullable Integer uploadSpeed) {
+        @OutputCustomType.Parameter("downloadSpeed") @Nullable Integer downloadSpeed,
+        @OutputCustomType.Parameter("uploadSpeed") @Nullable Integer uploadSpeed) {
         this.downloadSpeed = downloadSpeed;
         this.uploadSpeed = uploadSpeed;
     }

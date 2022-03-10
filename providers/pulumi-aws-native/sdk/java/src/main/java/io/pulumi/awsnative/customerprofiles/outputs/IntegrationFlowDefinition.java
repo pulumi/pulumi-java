@@ -22,14 +22,14 @@ public final class IntegrationFlowDefinition {
     private final List<IntegrationTask> tasks;
     private final IntegrationTriggerConfig triggerConfig;
 
-    @OutputCustomType.Constructor({"description","flowName","kmsArn","sourceFlowConfig","tasks","triggerConfig"})
+    @OutputCustomType.Constructor
     private IntegrationFlowDefinition(
-        @Nullable String description,
-        String flowName,
-        String kmsArn,
-        IntegrationSourceFlowConfig sourceFlowConfig,
-        List<IntegrationTask> tasks,
-        IntegrationTriggerConfig triggerConfig) {
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("flowName") String flowName,
+        @OutputCustomType.Parameter("kmsArn") String kmsArn,
+        @OutputCustomType.Parameter("sourceFlowConfig") IntegrationSourceFlowConfig sourceFlowConfig,
+        @OutputCustomType.Parameter("tasks") List<IntegrationTask> tasks,
+        @OutputCustomType.Parameter("triggerConfig") IntegrationTriggerConfig triggerConfig) {
         this.description = description;
         this.flowName = flowName;
         this.kmsArn = kmsArn;

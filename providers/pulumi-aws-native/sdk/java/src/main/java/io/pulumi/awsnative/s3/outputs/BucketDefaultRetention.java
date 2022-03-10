@@ -16,11 +16,11 @@ public final class BucketDefaultRetention {
     private final @Nullable BucketDefaultRetentionMode mode;
     private final @Nullable Integer years;
 
-    @OutputCustomType.Constructor({"days","mode","years"})
+    @OutputCustomType.Constructor
     private BucketDefaultRetention(
-        @Nullable Integer days,
-        @Nullable BucketDefaultRetentionMode mode,
-        @Nullable Integer years) {
+        @OutputCustomType.Parameter("days") @Nullable Integer days,
+        @OutputCustomType.Parameter("mode") @Nullable BucketDefaultRetentionMode mode,
+        @OutputCustomType.Parameter("years") @Nullable Integer years) {
         this.days = days;
         this.mode = mode;
         this.years = years;

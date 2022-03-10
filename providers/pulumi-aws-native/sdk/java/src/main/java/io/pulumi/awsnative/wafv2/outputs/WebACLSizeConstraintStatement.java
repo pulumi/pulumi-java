@@ -18,12 +18,12 @@ public final class WebACLSizeConstraintStatement {
     private final Double size;
     private final List<WebACLTextTransformation> textTransformations;
 
-    @OutputCustomType.Constructor({"comparisonOperator","fieldToMatch","size","textTransformations"})
+    @OutputCustomType.Constructor
     private WebACLSizeConstraintStatement(
-        WebACLSizeConstraintStatementComparisonOperator comparisonOperator,
-        WebACLFieldToMatch fieldToMatch,
-        Double size,
-        List<WebACLTextTransformation> textTransformations) {
+        @OutputCustomType.Parameter("comparisonOperator") WebACLSizeConstraintStatementComparisonOperator comparisonOperator,
+        @OutputCustomType.Parameter("fieldToMatch") WebACLFieldToMatch fieldToMatch,
+        @OutputCustomType.Parameter("size") Double size,
+        @OutputCustomType.Parameter("textTransformations") List<WebACLTextTransformation> textTransformations) {
         this.comparisonOperator = comparisonOperator;
         this.fieldToMatch = fieldToMatch;
         this.size = size;

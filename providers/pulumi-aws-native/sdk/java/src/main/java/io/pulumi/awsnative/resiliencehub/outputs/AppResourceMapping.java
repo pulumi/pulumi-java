@@ -17,12 +17,12 @@ public final class AppResourceMapping {
     private final AppPhysicalResourceId physicalResourceId;
     private final @Nullable String resourceName;
 
-    @OutputCustomType.Constructor({"logicalStackName","mappingType","physicalResourceId","resourceName"})
+    @OutputCustomType.Constructor
     private AppResourceMapping(
-        @Nullable String logicalStackName,
-        String mappingType,
-        AppPhysicalResourceId physicalResourceId,
-        @Nullable String resourceName) {
+        @OutputCustomType.Parameter("logicalStackName") @Nullable String logicalStackName,
+        @OutputCustomType.Parameter("mappingType") String mappingType,
+        @OutputCustomType.Parameter("physicalResourceId") AppPhysicalResourceId physicalResourceId,
+        @OutputCustomType.Parameter("resourceName") @Nullable String resourceName) {
         this.logicalStackName = logicalStackName;
         this.mappingType = mappingType;
         this.physicalResourceId = physicalResourceId;

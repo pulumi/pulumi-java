@@ -23,14 +23,14 @@ public final class GetSamplingRuleResult {
     private final @Nullable SamplingRuleUpdate samplingRuleUpdate;
     private final @Nullable List<TagsItemProperties> tags;
 
-    @OutputCustomType.Constructor({"ruleARN","ruleName","samplingRule","samplingRuleRecord","samplingRuleUpdate","tags"})
+    @OutputCustomType.Constructor
     private GetSamplingRuleResult(
-        @Nullable String ruleARN,
-        @Nullable String ruleName,
-        @Nullable SamplingRule samplingRule,
-        @Nullable SamplingRuleRecord samplingRuleRecord,
-        @Nullable SamplingRuleUpdate samplingRuleUpdate,
-        @Nullable List<TagsItemProperties> tags) {
+        @OutputCustomType.Parameter("ruleARN") @Nullable String ruleARN,
+        @OutputCustomType.Parameter("ruleName") @Nullable String ruleName,
+        @OutputCustomType.Parameter("samplingRule") @Nullable SamplingRule samplingRule,
+        @OutputCustomType.Parameter("samplingRuleRecord") @Nullable SamplingRuleRecord samplingRuleRecord,
+        @OutputCustomType.Parameter("samplingRuleUpdate") @Nullable SamplingRuleUpdate samplingRuleUpdate,
+        @OutputCustomType.Parameter("tags") @Nullable List<TagsItemProperties> tags) {
         this.ruleARN = ruleARN;
         this.ruleName = ruleName;
         this.samplingRule = samplingRule;

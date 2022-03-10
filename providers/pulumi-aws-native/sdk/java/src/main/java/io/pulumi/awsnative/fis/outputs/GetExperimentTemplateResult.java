@@ -22,14 +22,14 @@ public final class GetExperimentTemplateResult {
     private final @Nullable List<ExperimentTemplateStopCondition> stopConditions;
     private final @Nullable ExperimentTemplateTargetMap targets;
 
-    @OutputCustomType.Constructor({"actions","description","id","roleArn","stopConditions","targets"})
+    @OutputCustomType.Constructor
     private GetExperimentTemplateResult(
-        @Nullable ExperimentTemplateActionMap actions,
-        @Nullable String description,
-        @Nullable String id,
-        @Nullable String roleArn,
-        @Nullable List<ExperimentTemplateStopCondition> stopConditions,
-        @Nullable ExperimentTemplateTargetMap targets) {
+        @OutputCustomType.Parameter("actions") @Nullable ExperimentTemplateActionMap actions,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("roleArn") @Nullable String roleArn,
+        @OutputCustomType.Parameter("stopConditions") @Nullable List<ExperimentTemplateStopCondition> stopConditions,
+        @OutputCustomType.Parameter("targets") @Nullable ExperimentTemplateTargetMap targets) {
         this.actions = actions;
         this.description = description;
         this.id = id;

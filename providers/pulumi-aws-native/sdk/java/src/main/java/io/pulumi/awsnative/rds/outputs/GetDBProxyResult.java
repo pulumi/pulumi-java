@@ -62,17 +62,17 @@ public final class GetDBProxyResult {
      */
     private final @Nullable List<String> vpcSecurityGroupIds;
 
-    @OutputCustomType.Constructor({"auth","dBProxyArn","debugLogging","endpoint","idleClientTimeout","requireTLS","roleArn","tags","vpcSecurityGroupIds"})
+    @OutputCustomType.Constructor
     private GetDBProxyResult(
-        @Nullable List<DBProxyAuthFormat> auth,
-        @Nullable String dBProxyArn,
-        @Nullable Boolean debugLogging,
-        @Nullable String endpoint,
-        @Nullable Integer idleClientTimeout,
-        @Nullable Boolean requireTLS,
-        @Nullable String roleArn,
-        @Nullable List<DBProxyTagFormat> tags,
-        @Nullable List<String> vpcSecurityGroupIds) {
+        @OutputCustomType.Parameter("auth") @Nullable List<DBProxyAuthFormat> auth,
+        @OutputCustomType.Parameter("dBProxyArn") @Nullable String dBProxyArn,
+        @OutputCustomType.Parameter("debugLogging") @Nullable Boolean debugLogging,
+        @OutputCustomType.Parameter("endpoint") @Nullable String endpoint,
+        @OutputCustomType.Parameter("idleClientTimeout") @Nullable Integer idleClientTimeout,
+        @OutputCustomType.Parameter("requireTLS") @Nullable Boolean requireTLS,
+        @OutputCustomType.Parameter("roleArn") @Nullable String roleArn,
+        @OutputCustomType.Parameter("tags") @Nullable List<DBProxyTagFormat> tags,
+        @OutputCustomType.Parameter("vpcSecurityGroupIds") @Nullable List<String> vpcSecurityGroupIds) {
         this.auth = auth;
         this.dBProxyArn = dBProxyArn;
         this.debugLogging = debugLogging;

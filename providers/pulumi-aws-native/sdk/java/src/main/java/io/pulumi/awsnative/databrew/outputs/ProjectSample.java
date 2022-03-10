@@ -23,10 +23,10 @@ public final class ProjectSample {
      */
     private final ProjectSampleType type;
 
-    @OutputCustomType.Constructor({"size","type"})
+    @OutputCustomType.Constructor
     private ProjectSample(
-        @Nullable Integer size,
-        ProjectSampleType type) {
+        @OutputCustomType.Parameter("size") @Nullable Integer size,
+        @OutputCustomType.Parameter("type") ProjectSampleType type) {
         this.size = size;
         this.type = type;
     }

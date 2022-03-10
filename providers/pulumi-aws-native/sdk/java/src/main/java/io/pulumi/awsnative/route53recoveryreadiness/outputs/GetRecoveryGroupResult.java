@@ -29,11 +29,11 @@ public final class GetRecoveryGroupResult {
      */
     private final @Nullable List<RecoveryGroupTag> tags;
 
-    @OutputCustomType.Constructor({"cells","recoveryGroupArn","tags"})
+    @OutputCustomType.Constructor
     private GetRecoveryGroupResult(
-        @Nullable List<String> cells,
-        @Nullable String recoveryGroupArn,
-        @Nullable List<RecoveryGroupTag> tags) {
+        @OutputCustomType.Parameter("cells") @Nullable List<String> cells,
+        @OutputCustomType.Parameter("recoveryGroupArn") @Nullable String recoveryGroupArn,
+        @OutputCustomType.Parameter("tags") @Nullable List<RecoveryGroupTag> tags) {
         this.cells = cells;
         this.recoveryGroupArn = recoveryGroupArn;
         this.tags = tags;

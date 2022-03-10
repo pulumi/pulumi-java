@@ -36,12 +36,12 @@ public final class GetDataCatalogResult {
      */
     private final @Nullable DataCatalogType type;
 
-    @OutputCustomType.Constructor({"description","parameters","tags","type"})
+    @OutputCustomType.Constructor
     private GetDataCatalogResult(
-        @Nullable String description,
-        @Nullable Object parameters,
-        @Nullable List<DataCatalogTag> tags,
-        @Nullable DataCatalogType type) {
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("parameters") @Nullable Object parameters,
+        @OutputCustomType.Parameter("tags") @Nullable List<DataCatalogTag> tags,
+        @OutputCustomType.Parameter("type") @Nullable DataCatalogType type) {
         this.description = description;
         this.parameters = parameters;
         this.tags = tags;

@@ -23,10 +23,10 @@ public final class CanaryVisualReference {
      */
     private final @Nullable List<CanaryBaseScreenshot> baseScreenshots;
 
-    @OutputCustomType.Constructor({"baseCanaryRunId","baseScreenshots"})
+    @OutputCustomType.Constructor
     private CanaryVisualReference(
-        String baseCanaryRunId,
-        @Nullable List<CanaryBaseScreenshot> baseScreenshots) {
+        @OutputCustomType.Parameter("baseCanaryRunId") String baseCanaryRunId,
+        @OutputCustomType.Parameter("baseScreenshots") @Nullable List<CanaryBaseScreenshot> baseScreenshots) {
         this.baseCanaryRunId = baseCanaryRunId;
         this.baseScreenshots = baseScreenshots;
     }

@@ -19,12 +19,12 @@ public final class ThemeConfiguration {
     private final @Nullable ThemeTypography typography;
     private final @Nullable ThemeUIColorPalette uIColorPalette;
 
-    @OutputCustomType.Constructor({"dataColorPalette","sheet","typography","uIColorPalette"})
+    @OutputCustomType.Constructor
     private ThemeConfiguration(
-        @Nullable ThemeDataColorPalette dataColorPalette,
-        @Nullable ThemeSheetStyle sheet,
-        @Nullable ThemeTypography typography,
-        @Nullable ThemeUIColorPalette uIColorPalette) {
+        @OutputCustomType.Parameter("dataColorPalette") @Nullable ThemeDataColorPalette dataColorPalette,
+        @OutputCustomType.Parameter("sheet") @Nullable ThemeSheetStyle sheet,
+        @OutputCustomType.Parameter("typography") @Nullable ThemeTypography typography,
+        @OutputCustomType.Parameter("uIColorPalette") @Nullable ThemeUIColorPalette uIColorPalette) {
         this.dataColorPalette = dataColorPalette;
         this.sheet = sheet;
         this.typography = typography;

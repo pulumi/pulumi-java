@@ -35,12 +35,12 @@ public final class AnalysisParameters {
      */
     private final @Nullable List<AnalysisStringParameter> stringParameters;
 
-    @OutputCustomType.Constructor({"dateTimeParameters","decimalParameters","integerParameters","stringParameters"})
+    @OutputCustomType.Constructor
     private AnalysisParameters(
-        @Nullable List<AnalysisDateTimeParameter> dateTimeParameters,
-        @Nullable List<AnalysisDecimalParameter> decimalParameters,
-        @Nullable List<AnalysisIntegerParameter> integerParameters,
-        @Nullable List<AnalysisStringParameter> stringParameters) {
+        @OutputCustomType.Parameter("dateTimeParameters") @Nullable List<AnalysisDateTimeParameter> dateTimeParameters,
+        @OutputCustomType.Parameter("decimalParameters") @Nullable List<AnalysisDecimalParameter> decimalParameters,
+        @OutputCustomType.Parameter("integerParameters") @Nullable List<AnalysisIntegerParameter> integerParameters,
+        @OutputCustomType.Parameter("stringParameters") @Nullable List<AnalysisStringParameter> stringParameters) {
         this.dateTimeParameters = dateTimeParameters;
         this.decimalParameters = decimalParameters;
         this.integerParameters = integerParameters;

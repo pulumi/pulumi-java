@@ -39,13 +39,13 @@ public final class GetChannelResult {
      */
     private final @Nullable ChannelLogConfiguration ingressAccessLogs;
 
-    @OutputCustomType.Constructor({"arn","description","egressAccessLogs","hlsIngest","ingressAccessLogs"})
+    @OutputCustomType.Constructor
     private GetChannelResult(
-        @Nullable String arn,
-        @Nullable String description,
-        @Nullable ChannelLogConfiguration egressAccessLogs,
-        @Nullable ChannelHlsIngest hlsIngest,
-        @Nullable ChannelLogConfiguration ingressAccessLogs) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("egressAccessLogs") @Nullable ChannelLogConfiguration egressAccessLogs,
+        @OutputCustomType.Parameter("hlsIngest") @Nullable ChannelHlsIngest hlsIngest,
+        @OutputCustomType.Parameter("ingressAccessLogs") @Nullable ChannelLogConfiguration ingressAccessLogs) {
         this.arn = arn;
         this.description = description;
         this.egressAccessLogs = egressAccessLogs;

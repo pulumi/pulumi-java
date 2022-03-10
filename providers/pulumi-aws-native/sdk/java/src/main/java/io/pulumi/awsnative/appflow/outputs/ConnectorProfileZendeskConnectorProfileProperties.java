@@ -15,8 +15,8 @@ public final class ConnectorProfileZendeskConnectorProfileProperties {
      */
     private final String instanceUrl;
 
-    @OutputCustomType.Constructor({"instanceUrl"})
-    private ConnectorProfileZendeskConnectorProfileProperties(String instanceUrl) {
+    @OutputCustomType.Constructor
+    private ConnectorProfileZendeskConnectorProfileProperties(@OutputCustomType.Parameter("instanceUrl") String instanceUrl) {
         this.instanceUrl = instanceUrl;
     }
 

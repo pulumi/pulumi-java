@@ -43,15 +43,15 @@ public final class GetResiliencyPolicyResult {
      */
     private final @Nullable ResiliencyPolicyTier tier;
 
-    @OutputCustomType.Constructor({"dataLocationConstraint","policy","policyArn","policyDescription","policyName","tags","tier"})
+    @OutputCustomType.Constructor
     private GetResiliencyPolicyResult(
-        @Nullable ResiliencyPolicyDataLocationConstraint dataLocationConstraint,
-        @Nullable ResiliencyPolicyPolicyMap policy,
-        @Nullable String policyArn,
-        @Nullable String policyDescription,
-        @Nullable String policyName,
-        @Nullable ResiliencyPolicyTagMap tags,
-        @Nullable ResiliencyPolicyTier tier) {
+        @OutputCustomType.Parameter("dataLocationConstraint") @Nullable ResiliencyPolicyDataLocationConstraint dataLocationConstraint,
+        @OutputCustomType.Parameter("policy") @Nullable ResiliencyPolicyPolicyMap policy,
+        @OutputCustomType.Parameter("policyArn") @Nullable String policyArn,
+        @OutputCustomType.Parameter("policyDescription") @Nullable String policyDescription,
+        @OutputCustomType.Parameter("policyName") @Nullable String policyName,
+        @OutputCustomType.Parameter("tags") @Nullable ResiliencyPolicyTagMap tags,
+        @OutputCustomType.Parameter("tier") @Nullable ResiliencyPolicyTier tier) {
         this.dataLocationConstraint = dataLocationConstraint;
         this.policy = policy;
         this.policyArn = policyArn;

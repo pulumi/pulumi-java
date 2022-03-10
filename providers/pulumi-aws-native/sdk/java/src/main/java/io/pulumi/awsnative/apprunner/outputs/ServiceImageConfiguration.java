@@ -25,11 +25,11 @@ public final class ServiceImageConfiguration {
      */
     private final @Nullable String startCommand;
 
-    @OutputCustomType.Constructor({"port","runtimeEnvironmentVariables","startCommand"})
+    @OutputCustomType.Constructor
     private ServiceImageConfiguration(
-        @Nullable String port,
-        @Nullable List<ServiceKeyValuePair> runtimeEnvironmentVariables,
-        @Nullable String startCommand) {
+        @OutputCustomType.Parameter("port") @Nullable String port,
+        @OutputCustomType.Parameter("runtimeEnvironmentVariables") @Nullable List<ServiceKeyValuePair> runtimeEnvironmentVariables,
+        @OutputCustomType.Parameter("startCommand") @Nullable String startCommand) {
         this.port = port;
         this.runtimeEnvironmentVariables = runtimeEnvironmentVariables;
         this.startCommand = startCommand;

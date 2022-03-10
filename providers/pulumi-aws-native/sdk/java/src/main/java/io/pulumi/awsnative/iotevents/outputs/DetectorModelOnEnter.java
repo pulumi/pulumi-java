@@ -17,8 +17,8 @@ public final class DetectorModelOnEnter {
      */
     private final @Nullable List<DetectorModelEvent> events;
 
-    @OutputCustomType.Constructor({"events"})
-    private DetectorModelOnEnter(@Nullable List<DetectorModelEvent> events) {
+    @OutputCustomType.Constructor
+    private DetectorModelOnEnter(@OutputCustomType.Parameter("events") @Nullable List<DetectorModelEvent> events) {
         this.events = events;
     }
 

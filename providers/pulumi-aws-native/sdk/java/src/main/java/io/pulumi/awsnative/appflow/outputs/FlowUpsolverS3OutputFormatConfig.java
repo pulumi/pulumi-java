@@ -17,11 +17,11 @@ public final class FlowUpsolverS3OutputFormatConfig {
     private final @Nullable FlowFileType fileType;
     private final FlowPrefixConfig prefixConfig;
 
-    @OutputCustomType.Constructor({"aggregationConfig","fileType","prefixConfig"})
+    @OutputCustomType.Constructor
     private FlowUpsolverS3OutputFormatConfig(
-        @Nullable FlowAggregationConfig aggregationConfig,
-        @Nullable FlowFileType fileType,
-        FlowPrefixConfig prefixConfig) {
+        @OutputCustomType.Parameter("aggregationConfig") @Nullable FlowAggregationConfig aggregationConfig,
+        @OutputCustomType.Parameter("fileType") @Nullable FlowFileType fileType,
+        @OutputCustomType.Parameter("prefixConfig") FlowPrefixConfig prefixConfig) {
         this.aggregationConfig = aggregationConfig;
         this.fileType = fileType;
         this.prefixConfig = prefixConfig;

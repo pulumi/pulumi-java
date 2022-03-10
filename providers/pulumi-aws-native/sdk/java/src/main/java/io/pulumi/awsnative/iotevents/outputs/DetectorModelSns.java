@@ -19,10 +19,10 @@ public final class DetectorModelSns {
      */
     private final String targetArn;
 
-    @OutputCustomType.Constructor({"payload","targetArn"})
+    @OutputCustomType.Constructor
     private DetectorModelSns(
-        @Nullable DetectorModelPayload payload,
-        String targetArn) {
+        @OutputCustomType.Parameter("payload") @Nullable DetectorModelPayload payload,
+        @OutputCustomType.Parameter("targetArn") String targetArn) {
         this.payload = payload;
         this.targetArn = targetArn;
     }

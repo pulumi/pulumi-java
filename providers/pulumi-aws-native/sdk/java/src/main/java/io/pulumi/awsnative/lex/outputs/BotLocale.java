@@ -31,14 +31,14 @@ public final class BotLocale {
     private final @Nullable List<BotSlotType> slotTypes;
     private final @Nullable BotVoiceSettings voiceSettings;
 
-    @OutputCustomType.Constructor({"description","intents","localeId","nluConfidenceThreshold","slotTypes","voiceSettings"})
+    @OutputCustomType.Constructor
     private BotLocale(
-        @Nullable String description,
-        @Nullable List<BotIntent> intents,
-        String localeId,
-        Double nluConfidenceThreshold,
-        @Nullable List<BotSlotType> slotTypes,
-        @Nullable BotVoiceSettings voiceSettings) {
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("intents") @Nullable List<BotIntent> intents,
+        @OutputCustomType.Parameter("localeId") String localeId,
+        @OutputCustomType.Parameter("nluConfidenceThreshold") Double nluConfidenceThreshold,
+        @OutputCustomType.Parameter("slotTypes") @Nullable List<BotSlotType> slotTypes,
+        @OutputCustomType.Parameter("voiceSettings") @Nullable BotVoiceSettings voiceSettings) {
         this.description = description;
         this.intents = intents;
         this.localeId = localeId;

@@ -28,11 +28,11 @@ public final class BucketNoncurrentVersionTransition {
      */
     private final Integer transitionInDays;
 
-    @OutputCustomType.Constructor({"newerNoncurrentVersions","storageClass","transitionInDays"})
+    @OutputCustomType.Constructor
     private BucketNoncurrentVersionTransition(
-        @Nullable Integer newerNoncurrentVersions,
-        BucketNoncurrentVersionTransitionStorageClass storageClass,
-        Integer transitionInDays) {
+        @OutputCustomType.Parameter("newerNoncurrentVersions") @Nullable Integer newerNoncurrentVersions,
+        @OutputCustomType.Parameter("storageClass") BucketNoncurrentVersionTransitionStorageClass storageClass,
+        @OutputCustomType.Parameter("transitionInDays") Integer transitionInDays) {
         this.newerNoncurrentVersions = newerNoncurrentVersions;
         this.storageClass = storageClass;
         this.transitionInDays = transitionInDays;

@@ -13,10 +13,10 @@ public final class ScheduledQueryDimensionMapping {
     private final ScheduledQueryDimensionValueType dimensionValueType;
     private final String name;
 
-    @OutputCustomType.Constructor({"dimensionValueType","name"})
+    @OutputCustomType.Constructor
     private ScheduledQueryDimensionMapping(
-        ScheduledQueryDimensionValueType dimensionValueType,
-        String name) {
+        @OutputCustomType.Parameter("dimensionValueType") ScheduledQueryDimensionValueType dimensionValueType,
+        @OutputCustomType.Parameter("name") String name) {
         this.dimensionValueType = dimensionValueType;
         this.name = name;
     }

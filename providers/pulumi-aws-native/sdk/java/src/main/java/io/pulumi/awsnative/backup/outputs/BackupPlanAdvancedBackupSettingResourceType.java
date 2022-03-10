@@ -13,10 +13,10 @@ public final class BackupPlanAdvancedBackupSettingResourceType {
     private final Object backupOptions;
     private final String resourceType;
 
-    @OutputCustomType.Constructor({"backupOptions","resourceType"})
+    @OutputCustomType.Constructor
     private BackupPlanAdvancedBackupSettingResourceType(
-        Object backupOptions,
-        String resourceType) {
+        @OutputCustomType.Parameter("backupOptions") Object backupOptions,
+        @OutputCustomType.Parameter("resourceType") String resourceType) {
         this.backupOptions = backupOptions;
         this.resourceType = resourceType;
     }

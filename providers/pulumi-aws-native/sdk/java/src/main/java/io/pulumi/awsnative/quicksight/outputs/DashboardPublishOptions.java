@@ -17,11 +17,11 @@ public final class DashboardPublishOptions {
     private final @Nullable DashboardExportToCSVOption exportToCSVOption;
     private final @Nullable DashboardSheetControlsOption sheetControlsOption;
 
-    @OutputCustomType.Constructor({"adHocFilteringOption","exportToCSVOption","sheetControlsOption"})
+    @OutputCustomType.Constructor
     private DashboardPublishOptions(
-        @Nullable DashboardAdHocFilteringOption adHocFilteringOption,
-        @Nullable DashboardExportToCSVOption exportToCSVOption,
-        @Nullable DashboardSheetControlsOption sheetControlsOption) {
+        @OutputCustomType.Parameter("adHocFilteringOption") @Nullable DashboardAdHocFilteringOption adHocFilteringOption,
+        @OutputCustomType.Parameter("exportToCSVOption") @Nullable DashboardExportToCSVOption exportToCSVOption,
+        @OutputCustomType.Parameter("sheetControlsOption") @Nullable DashboardSheetControlsOption sheetControlsOption) {
         this.adHocFilteringOption = adHocFilteringOption;
         this.exportToCSVOption = exportToCSVOption;
         this.sheetControlsOption = sheetControlsOption;

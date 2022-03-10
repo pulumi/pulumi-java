@@ -23,10 +23,10 @@ public final class GetMultiRegionAccessPointPolicyResult {
      */
     private final @Nullable PolicyStatusProperties policyStatus;
 
-    @OutputCustomType.Constructor({"policy","policyStatus"})
+    @OutputCustomType.Constructor
     private GetMultiRegionAccessPointPolicyResult(
-        @Nullable Object policy,
-        @Nullable PolicyStatusProperties policyStatus) {
+        @OutputCustomType.Parameter("policy") @Nullable Object policy,
+        @OutputCustomType.Parameter("policyStatus") @Nullable PolicyStatusProperties policyStatus) {
         this.policy = policy;
         this.policyStatus = policyStatus;
     }

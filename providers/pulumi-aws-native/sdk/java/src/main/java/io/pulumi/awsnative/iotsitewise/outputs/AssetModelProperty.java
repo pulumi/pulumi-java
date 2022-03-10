@@ -45,14 +45,14 @@ public final class AssetModelProperty {
      */
     private final @Nullable String unit;
 
-    @OutputCustomType.Constructor({"dataType","dataTypeSpec","logicalId","name","type","unit"})
+    @OutputCustomType.Constructor
     private AssetModelProperty(
-        AssetModelDataType dataType,
-        @Nullable AssetModelDataTypeSpec dataTypeSpec,
-        String logicalId,
-        String name,
-        AssetModelPropertyType type,
-        @Nullable String unit) {
+        @OutputCustomType.Parameter("dataType") AssetModelDataType dataType,
+        @OutputCustomType.Parameter("dataTypeSpec") @Nullable AssetModelDataTypeSpec dataTypeSpec,
+        @OutputCustomType.Parameter("logicalId") String logicalId,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("type") AssetModelPropertyType type,
+        @OutputCustomType.Parameter("unit") @Nullable String unit) {
         this.dataType = dataType;
         this.dataTypeSpec = dataTypeSpec;
         this.logicalId = logicalId;

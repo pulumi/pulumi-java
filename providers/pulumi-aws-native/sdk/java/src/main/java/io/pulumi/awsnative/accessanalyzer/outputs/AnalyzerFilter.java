@@ -19,13 +19,13 @@ public final class AnalyzerFilter {
     private final @Nullable List<String> neq;
     private final String property;
 
-    @OutputCustomType.Constructor({"contains","eq","exists","neq","property"})
+    @OutputCustomType.Constructor
     private AnalyzerFilter(
-        @Nullable List<String> contains,
-        @Nullable List<String> eq,
-        @Nullable Boolean exists,
-        @Nullable List<String> neq,
-        String property) {
+        @OutputCustomType.Parameter("contains") @Nullable List<String> contains,
+        @OutputCustomType.Parameter("eq") @Nullable List<String> eq,
+        @OutputCustomType.Parameter("exists") @Nullable Boolean exists,
+        @OutputCustomType.Parameter("neq") @Nullable List<String> neq,
+        @OutputCustomType.Parameter("property") String property) {
         this.contains = contains;
         this.eq = eq;
         this.exists = exists;

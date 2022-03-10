@@ -28,12 +28,12 @@ public final class ContactListTopic {
      */
     private final String topicName;
 
-    @OutputCustomType.Constructor({"defaultSubscriptionStatus","description","displayName","topicName"})
+    @OutputCustomType.Constructor
     private ContactListTopic(
-        String defaultSubscriptionStatus,
-        @Nullable String description,
-        String displayName,
-        String topicName) {
+        @OutputCustomType.Parameter("defaultSubscriptionStatus") String defaultSubscriptionStatus,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("topicName") String topicName) {
         this.defaultSubscriptionStatus = defaultSubscriptionStatus;
         this.description = description;
         this.displayName = displayName;

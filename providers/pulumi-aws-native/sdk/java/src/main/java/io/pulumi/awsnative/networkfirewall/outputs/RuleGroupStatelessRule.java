@@ -13,10 +13,10 @@ public final class RuleGroupStatelessRule {
     private final Integer priority;
     private final RuleGroupRuleDefinition ruleDefinition;
 
-    @OutputCustomType.Constructor({"priority","ruleDefinition"})
+    @OutputCustomType.Constructor
     private RuleGroupStatelessRule(
-        Integer priority,
-        RuleGroupRuleDefinition ruleDefinition) {
+        @OutputCustomType.Parameter("priority") Integer priority,
+        @OutputCustomType.Parameter("ruleDefinition") RuleGroupRuleDefinition ruleDefinition) {
         this.priority = priority;
         this.ruleDefinition = ruleDefinition;
     }

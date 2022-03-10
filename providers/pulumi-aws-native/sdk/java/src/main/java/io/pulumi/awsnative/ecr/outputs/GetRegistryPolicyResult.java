@@ -19,10 +19,10 @@ public final class GetRegistryPolicyResult {
     private final @Nullable Object policyText;
     private final @Nullable String registryId;
 
-    @OutputCustomType.Constructor({"policyText","registryId"})
+    @OutputCustomType.Constructor
     private GetRegistryPolicyResult(
-        @Nullable Object policyText,
-        @Nullable String registryId) {
+        @OutputCustomType.Parameter("policyText") @Nullable Object policyText,
+        @OutputCustomType.Parameter("registryId") @Nullable String registryId) {
         this.policyText = policyText;
         this.registryId = registryId;
     }

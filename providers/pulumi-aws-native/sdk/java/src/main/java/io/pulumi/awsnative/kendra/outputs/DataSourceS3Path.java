@@ -12,10 +12,10 @@ public final class DataSourceS3Path {
     private final String bucket;
     private final String key;
 
-    @OutputCustomType.Constructor({"bucket","key"})
+    @OutputCustomType.Constructor
     private DataSourceS3Path(
-        String bucket,
-        String key) {
+        @OutputCustomType.Parameter("bucket") String bucket,
+        @OutputCustomType.Parameter("key") String key) {
         this.bucket = bucket;
         this.key = key;
     }

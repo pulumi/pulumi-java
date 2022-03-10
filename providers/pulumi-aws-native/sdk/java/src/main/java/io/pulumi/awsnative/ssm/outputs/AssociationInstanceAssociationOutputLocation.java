@@ -13,8 +13,8 @@ import javax.annotation.Nullable;
 public final class AssociationInstanceAssociationOutputLocation {
     private final @Nullable AssociationS3OutputLocation s3Location;
 
-    @OutputCustomType.Constructor({"s3Location"})
-    private AssociationInstanceAssociationOutputLocation(@Nullable AssociationS3OutputLocation s3Location) {
+    @OutputCustomType.Constructor
+    private AssociationInstanceAssociationOutputLocation(@OutputCustomType.Parameter("s3Location") @Nullable AssociationS3OutputLocation s3Location) {
         this.s3Location = s3Location;
     }
 

@@ -15,11 +15,11 @@ public final class WebACLIPSetForwardedIPConfiguration {
     private final String headerName;
     private final WebACLIPSetForwardedIPConfigurationPosition position;
 
-    @OutputCustomType.Constructor({"fallbackBehavior","headerName","position"})
+    @OutputCustomType.Constructor
     private WebACLIPSetForwardedIPConfiguration(
-        WebACLIPSetForwardedIPConfigurationFallbackBehavior fallbackBehavior,
-        String headerName,
-        WebACLIPSetForwardedIPConfigurationPosition position) {
+        @OutputCustomType.Parameter("fallbackBehavior") WebACLIPSetForwardedIPConfigurationFallbackBehavior fallbackBehavior,
+        @OutputCustomType.Parameter("headerName") String headerName,
+        @OutputCustomType.Parameter("position") WebACLIPSetForwardedIPConfigurationPosition position) {
         this.fallbackBehavior = fallbackBehavior;
         this.headerName = headerName;
         this.position = position;

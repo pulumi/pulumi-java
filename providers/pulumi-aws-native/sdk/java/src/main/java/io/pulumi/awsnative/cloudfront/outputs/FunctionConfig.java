@@ -12,10 +12,10 @@ public final class FunctionConfig {
     private final String comment;
     private final String runtime;
 
-    @OutputCustomType.Constructor({"comment","runtime"})
+    @OutputCustomType.Constructor
     private FunctionConfig(
-        String comment,
-        String runtime) {
+        @OutputCustomType.Parameter("comment") String comment,
+        @OutputCustomType.Parameter("runtime") String runtime) {
         this.comment = comment;
         this.runtime = runtime;
     }

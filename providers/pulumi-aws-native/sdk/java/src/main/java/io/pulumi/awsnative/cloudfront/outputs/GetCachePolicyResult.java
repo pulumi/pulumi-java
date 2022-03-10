@@ -16,11 +16,11 @@ public final class GetCachePolicyResult {
     private final @Nullable String id;
     private final @Nullable String lastModifiedTime;
 
-    @OutputCustomType.Constructor({"cachePolicyConfig","id","lastModifiedTime"})
+    @OutputCustomType.Constructor
     private GetCachePolicyResult(
-        @Nullable CachePolicyConfig cachePolicyConfig,
-        @Nullable String id,
-        @Nullable String lastModifiedTime) {
+        @OutputCustomType.Parameter("cachePolicyConfig") @Nullable CachePolicyConfig cachePolicyConfig,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("lastModifiedTime") @Nullable String lastModifiedTime) {
         this.cachePolicyConfig = cachePolicyConfig;
         this.id = id;
         this.lastModifiedTime = lastModifiedTime;

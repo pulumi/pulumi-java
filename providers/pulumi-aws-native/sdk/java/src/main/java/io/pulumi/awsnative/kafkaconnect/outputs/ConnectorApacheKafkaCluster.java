@@ -17,10 +17,10 @@ public final class ConnectorApacheKafkaCluster {
     private final String bootstrapServers;
     private final ConnectorVpc vpc;
 
-    @OutputCustomType.Constructor({"bootstrapServers","vpc"})
+    @OutputCustomType.Constructor
     private ConnectorApacheKafkaCluster(
-        String bootstrapServers,
-        ConnectorVpc vpc) {
+        @OutputCustomType.Parameter("bootstrapServers") String bootstrapServers,
+        @OutputCustomType.Parameter("vpc") ConnectorVpc vpc) {
         this.bootstrapServers = bootstrapServers;
         this.vpc = vpc;
     }

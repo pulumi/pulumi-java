@@ -12,10 +12,10 @@ public final class EndpointGroupPortOverride {
     private final Integer endpointPort;
     private final Integer listenerPort;
 
-    @OutputCustomType.Constructor({"endpointPort","listenerPort"})
+    @OutputCustomType.Constructor
     private EndpointGroupPortOverride(
-        Integer endpointPort,
-        Integer listenerPort) {
+        @OutputCustomType.Parameter("endpointPort") Integer endpointPort,
+        @OutputCustomType.Parameter("listenerPort") Integer listenerPort) {
         this.endpointPort = endpointPort;
         this.listenerPort = listenerPort;
     }

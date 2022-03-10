@@ -15,10 +15,10 @@ public final class ThemeTileLayoutStyle {
     private final @Nullable ThemeGutterStyle gutter;
     private final @Nullable ThemeMarginStyle margin;
 
-    @OutputCustomType.Constructor({"gutter","margin"})
+    @OutputCustomType.Constructor
     private ThemeTileLayoutStyle(
-        @Nullable ThemeGutterStyle gutter,
-        @Nullable ThemeMarginStyle margin) {
+        @OutputCustomType.Parameter("gutter") @Nullable ThemeGutterStyle gutter,
+        @OutputCustomType.Parameter("margin") @Nullable ThemeMarginStyle margin) {
         this.gutter = gutter;
         this.margin = margin;
     }

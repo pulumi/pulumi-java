@@ -20,14 +20,14 @@ public final class FlowScheduledTriggerProperties {
     private final @Nullable Double scheduleStartTime;
     private final @Nullable String timeZone;
 
-    @OutputCustomType.Constructor({"dataPullMode","scheduleEndTime","scheduleExpression","scheduleOffset","scheduleStartTime","timeZone"})
+    @OutputCustomType.Constructor
     private FlowScheduledTriggerProperties(
-        @Nullable FlowScheduledTriggerPropertiesDataPullMode dataPullMode,
-        @Nullable Double scheduleEndTime,
-        String scheduleExpression,
-        @Nullable Double scheduleOffset,
-        @Nullable Double scheduleStartTime,
-        @Nullable String timeZone) {
+        @OutputCustomType.Parameter("dataPullMode") @Nullable FlowScheduledTriggerPropertiesDataPullMode dataPullMode,
+        @OutputCustomType.Parameter("scheduleEndTime") @Nullable Double scheduleEndTime,
+        @OutputCustomType.Parameter("scheduleExpression") String scheduleExpression,
+        @OutputCustomType.Parameter("scheduleOffset") @Nullable Double scheduleOffset,
+        @OutputCustomType.Parameter("scheduleStartTime") @Nullable Double scheduleStartTime,
+        @OutputCustomType.Parameter("timeZone") @Nullable String timeZone) {
         this.dataPullMode = dataPullMode;
         this.scheduleEndTime = scheduleEndTime;
         this.scheduleExpression = scheduleExpression;

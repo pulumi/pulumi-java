@@ -28,11 +28,11 @@ public final class GetInputResult {
      */
     private final @Nullable List<InputTag> tags;
 
-    @OutputCustomType.Constructor({"inputDefinition","inputDescription","tags"})
+    @OutputCustomType.Constructor
     private GetInputResult(
-        @Nullable InputDefinition inputDefinition,
-        @Nullable String inputDescription,
-        @Nullable List<InputTag> tags) {
+        @OutputCustomType.Parameter("inputDefinition") @Nullable InputDefinition inputDefinition,
+        @OutputCustomType.Parameter("inputDescription") @Nullable String inputDescription,
+        @OutputCustomType.Parameter("tags") @Nullable List<InputTag> tags) {
         this.inputDefinition = inputDefinition;
         this.inputDescription = inputDescription;
         this.tags = tags;

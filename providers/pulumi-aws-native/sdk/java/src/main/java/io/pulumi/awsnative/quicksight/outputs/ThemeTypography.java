@@ -13,8 +13,8 @@ import javax.annotation.Nullable;
 public final class ThemeTypography {
     private final @Nullable List<ThemeFont> fontFamilies;
 
-    @OutputCustomType.Constructor({"fontFamilies"})
-    private ThemeTypography(@Nullable List<ThemeFont> fontFamilies) {
+    @OutputCustomType.Constructor
+    private ThemeTypography(@OutputCustomType.Parameter("fontFamilies") @Nullable List<ThemeFont> fontFamilies) {
         this.fontFamilies = fontFamilies;
     }
 

@@ -22,11 +22,11 @@ public final class TestGridProjectVpcConfig {
     private final List<String> subnetIds;
     private final String vpcId;
 
-    @OutputCustomType.Constructor({"securityGroupIds","subnetIds","vpcId"})
+    @OutputCustomType.Constructor
     private TestGridProjectVpcConfig(
-        List<String> securityGroupIds,
-        List<String> subnetIds,
-        String vpcId) {
+        @OutputCustomType.Parameter("securityGroupIds") List<String> securityGroupIds,
+        @OutputCustomType.Parameter("subnetIds") List<String> subnetIds,
+        @OutputCustomType.Parameter("vpcId") String vpcId) {
         this.securityGroupIds = securityGroupIds;
         this.subnetIds = subnetIds;
         this.vpcId = vpcId;

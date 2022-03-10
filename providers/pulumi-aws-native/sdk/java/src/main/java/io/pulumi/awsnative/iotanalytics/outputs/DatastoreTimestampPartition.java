@@ -14,10 +14,10 @@ public final class DatastoreTimestampPartition {
     private final String attributeName;
     private final @Nullable String timestampFormat;
 
-    @OutputCustomType.Constructor({"attributeName","timestampFormat"})
+    @OutputCustomType.Constructor
     private DatastoreTimestampPartition(
-        String attributeName,
-        @Nullable String timestampFormat) {
+        @OutputCustomType.Parameter("attributeName") String attributeName,
+        @OutputCustomType.Parameter("timestampFormat") @Nullable String timestampFormat) {
         this.attributeName = attributeName;
         this.timestampFormat = timestampFormat;
     }

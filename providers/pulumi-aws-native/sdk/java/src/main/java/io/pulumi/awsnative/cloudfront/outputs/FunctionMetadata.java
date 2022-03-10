@@ -13,8 +13,8 @@ import javax.annotation.Nullable;
 public final class FunctionMetadata {
     private final @Nullable String functionARN;
 
-    @OutputCustomType.Constructor({"functionARN"})
-    private FunctionMetadata(@Nullable String functionARN) {
+    @OutputCustomType.Constructor
+    private FunctionMetadata(@OutputCustomType.Parameter("functionARN") @Nullable String functionARN) {
         this.functionARN = functionARN;
     }
 

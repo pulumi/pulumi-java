@@ -15,11 +15,11 @@ public final class UserIdentityInfo {
     private final @Nullable String firstName;
     private final @Nullable String lastName;
 
-    @OutputCustomType.Constructor({"email","firstName","lastName"})
+    @OutputCustomType.Constructor
     private UserIdentityInfo(
-        @Nullable String email,
-        @Nullable String firstName,
-        @Nullable String lastName) {
+        @OutputCustomType.Parameter("email") @Nullable String email,
+        @OutputCustomType.Parameter("firstName") @Nullable String firstName,
+        @OutputCustomType.Parameter("lastName") @Nullable String lastName) {
         this.email = email;
         this.firstName = firstName;
         this.lastName = lastName;

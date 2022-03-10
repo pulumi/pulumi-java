@@ -27,18 +27,18 @@ public final class AppAutoBranchCreationConfig {
     private final @Nullable String pullRequestEnvironmentName;
     private final @Nullable AppAutoBranchCreationConfigStage stage;
 
-    @OutputCustomType.Constructor({"autoBranchCreationPatterns","basicAuthConfig","buildSpec","enableAutoBranchCreation","enableAutoBuild","enablePerformanceMode","enablePullRequestPreview","environmentVariables","pullRequestEnvironmentName","stage"})
+    @OutputCustomType.Constructor
     private AppAutoBranchCreationConfig(
-        @Nullable List<String> autoBranchCreationPatterns,
-        @Nullable AppBasicAuthConfig basicAuthConfig,
-        @Nullable String buildSpec,
-        @Nullable Boolean enableAutoBranchCreation,
-        @Nullable Boolean enableAutoBuild,
-        @Nullable Boolean enablePerformanceMode,
-        @Nullable Boolean enablePullRequestPreview,
-        @Nullable List<AppEnvironmentVariable> environmentVariables,
-        @Nullable String pullRequestEnvironmentName,
-        @Nullable AppAutoBranchCreationConfigStage stage) {
+        @OutputCustomType.Parameter("autoBranchCreationPatterns") @Nullable List<String> autoBranchCreationPatterns,
+        @OutputCustomType.Parameter("basicAuthConfig") @Nullable AppBasicAuthConfig basicAuthConfig,
+        @OutputCustomType.Parameter("buildSpec") @Nullable String buildSpec,
+        @OutputCustomType.Parameter("enableAutoBranchCreation") @Nullable Boolean enableAutoBranchCreation,
+        @OutputCustomType.Parameter("enableAutoBuild") @Nullable Boolean enableAutoBuild,
+        @OutputCustomType.Parameter("enablePerformanceMode") @Nullable Boolean enablePerformanceMode,
+        @OutputCustomType.Parameter("enablePullRequestPreview") @Nullable Boolean enablePullRequestPreview,
+        @OutputCustomType.Parameter("environmentVariables") @Nullable List<AppEnvironmentVariable> environmentVariables,
+        @OutputCustomType.Parameter("pullRequestEnvironmentName") @Nullable String pullRequestEnvironmentName,
+        @OutputCustomType.Parameter("stage") @Nullable AppAutoBranchCreationConfigStage stage) {
         this.autoBranchCreationPatterns = autoBranchCreationPatterns;
         this.basicAuthConfig = basicAuthConfig;
         this.buildSpec = buildSpec;

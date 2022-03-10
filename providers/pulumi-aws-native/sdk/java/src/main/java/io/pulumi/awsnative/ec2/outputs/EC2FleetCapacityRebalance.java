@@ -15,10 +15,10 @@ public final class EC2FleetCapacityRebalance {
     private final @Nullable EC2FleetCapacityRebalanceReplacementStrategy replacementStrategy;
     private final @Nullable Integer terminationDelay;
 
-    @OutputCustomType.Constructor({"replacementStrategy","terminationDelay"})
+    @OutputCustomType.Constructor
     private EC2FleetCapacityRebalance(
-        @Nullable EC2FleetCapacityRebalanceReplacementStrategy replacementStrategy,
-        @Nullable Integer terminationDelay) {
+        @OutputCustomType.Parameter("replacementStrategy") @Nullable EC2FleetCapacityRebalanceReplacementStrategy replacementStrategy,
+        @OutputCustomType.Parameter("terminationDelay") @Nullable Integer terminationDelay) {
         this.replacementStrategy = replacementStrategy;
         this.terminationDelay = terminationDelay;
     }

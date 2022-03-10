@@ -17,8 +17,8 @@ public final class GetUsagePlanKeyResult {
      */
     private final @Nullable String id;
 
-    @OutputCustomType.Constructor({"id"})
-    private GetUsagePlanKeyResult(@Nullable String id) {
+    @OutputCustomType.Constructor
+    private GetUsagePlanKeyResult(@OutputCustomType.Parameter("id") @Nullable String id) {
         this.id = id;
     }
 

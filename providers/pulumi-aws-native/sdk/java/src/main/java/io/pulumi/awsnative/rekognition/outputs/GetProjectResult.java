@@ -13,8 +13,8 @@ import javax.annotation.Nullable;
 public final class GetProjectResult {
     private final @Nullable String arn;
 
-    @OutputCustomType.Constructor({"arn"})
-    private GetProjectResult(@Nullable String arn) {
+    @OutputCustomType.Constructor
+    private GetProjectResult(@OutputCustomType.Parameter("arn") @Nullable String arn) {
         this.arn = arn;
     }
 

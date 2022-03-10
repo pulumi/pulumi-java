@@ -78,21 +78,21 @@ public final class GetFleetMetricResult {
      */
     private final @Nullable Double version;
 
-    @OutputCustomType.Constructor({"aggregationField","aggregationType","creationDate","description","indexName","lastModifiedDate","metricArn","period","queryString","queryVersion","tags","unit","version"})
+    @OutputCustomType.Constructor
     private GetFleetMetricResult(
-        @Nullable String aggregationField,
-        @Nullable FleetMetricAggregationType aggregationType,
-        @Nullable Double creationDate,
-        @Nullable String description,
-        @Nullable String indexName,
-        @Nullable Double lastModifiedDate,
-        @Nullable String metricArn,
-        @Nullable Integer period,
-        @Nullable String queryString,
-        @Nullable String queryVersion,
-        @Nullable List<FleetMetricTag> tags,
-        @Nullable String unit,
-        @Nullable Double version) {
+        @OutputCustomType.Parameter("aggregationField") @Nullable String aggregationField,
+        @OutputCustomType.Parameter("aggregationType") @Nullable FleetMetricAggregationType aggregationType,
+        @OutputCustomType.Parameter("creationDate") @Nullable Double creationDate,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("indexName") @Nullable String indexName,
+        @OutputCustomType.Parameter("lastModifiedDate") @Nullable Double lastModifiedDate,
+        @OutputCustomType.Parameter("metricArn") @Nullable String metricArn,
+        @OutputCustomType.Parameter("period") @Nullable Integer period,
+        @OutputCustomType.Parameter("queryString") @Nullable String queryString,
+        @OutputCustomType.Parameter("queryVersion") @Nullable String queryVersion,
+        @OutputCustomType.Parameter("tags") @Nullable List<FleetMetricTag> tags,
+        @OutputCustomType.Parameter("unit") @Nullable String unit,
+        @OutputCustomType.Parameter("version") @Nullable Double version) {
         this.aggregationField = aggregationField;
         this.aggregationType = aggregationType;
         this.creationDate = creationDate;

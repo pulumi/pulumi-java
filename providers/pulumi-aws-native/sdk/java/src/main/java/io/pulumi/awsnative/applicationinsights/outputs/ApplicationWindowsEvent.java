@@ -34,12 +34,12 @@ public final class ApplicationWindowsEvent {
      */
     private final @Nullable String patternSet;
 
-    @OutputCustomType.Constructor({"eventLevels","eventName","logGroupName","patternSet"})
+    @OutputCustomType.Constructor
     private ApplicationWindowsEvent(
-        List<ApplicationEventLevel> eventLevels,
-        String eventName,
-        String logGroupName,
-        @Nullable String patternSet) {
+        @OutputCustomType.Parameter("eventLevels") List<ApplicationEventLevel> eventLevels,
+        @OutputCustomType.Parameter("eventName") String eventName,
+        @OutputCustomType.Parameter("logGroupName") String logGroupName,
+        @OutputCustomType.Parameter("patternSet") @Nullable String patternSet) {
         this.eventLevels = eventLevels;
         this.eventName = eventName;
         this.logGroupName = logGroupName;

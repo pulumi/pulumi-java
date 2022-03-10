@@ -19,12 +19,12 @@ public final class GetRealtimeLogConfigResult {
     private final @Nullable List<String> fields;
     private final @Nullable Double samplingRate;
 
-    @OutputCustomType.Constructor({"arn","endPoints","fields","samplingRate"})
+    @OutputCustomType.Constructor
     private GetRealtimeLogConfigResult(
-        @Nullable String arn,
-        @Nullable List<RealtimeLogConfigEndPoint> endPoints,
-        @Nullable List<String> fields,
-        @Nullable Double samplingRate) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("endPoints") @Nullable List<RealtimeLogConfigEndPoint> endPoints,
+        @OutputCustomType.Parameter("fields") @Nullable List<String> fields,
+        @OutputCustomType.Parameter("samplingRate") @Nullable Double samplingRate) {
         this.arn = arn;
         this.endPoints = endPoints;
         this.fields = fields;

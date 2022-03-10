@@ -13,8 +13,8 @@ import javax.annotation.Nullable;
 public final class ListenerRulePathPatternConfig {
     private final @Nullable List<String> values;
 
-    @OutputCustomType.Constructor({"values"})
-    private ListenerRulePathPatternConfig(@Nullable List<String> values) {
+    @OutputCustomType.Constructor
+    private ListenerRulePathPatternConfig(@OutputCustomType.Parameter("values") @Nullable List<String> values) {
         this.values = values;
     }
 

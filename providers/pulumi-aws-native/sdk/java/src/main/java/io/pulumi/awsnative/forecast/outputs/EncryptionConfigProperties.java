@@ -14,10 +14,10 @@ public final class EncryptionConfigProperties {
     private final @Nullable String kmsKeyArn;
     private final @Nullable String roleArn;
 
-    @OutputCustomType.Constructor({"kmsKeyArn","roleArn"})
+    @OutputCustomType.Constructor
     private EncryptionConfigProperties(
-        @Nullable String kmsKeyArn,
-        @Nullable String roleArn) {
+        @OutputCustomType.Parameter("kmsKeyArn") @Nullable String kmsKeyArn,
+        @OutputCustomType.Parameter("roleArn") @Nullable String roleArn) {
         this.kmsKeyArn = kmsKeyArn;
         this.roleArn = roleArn;
     }

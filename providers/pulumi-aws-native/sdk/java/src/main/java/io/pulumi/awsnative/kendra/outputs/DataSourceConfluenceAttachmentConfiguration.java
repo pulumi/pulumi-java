@@ -16,10 +16,10 @@ public final class DataSourceConfluenceAttachmentConfiguration {
     private final @Nullable List<DataSourceConfluenceAttachmentToIndexFieldMapping> attachmentFieldMappings;
     private final @Nullable Boolean crawlAttachments;
 
-    @OutputCustomType.Constructor({"attachmentFieldMappings","crawlAttachments"})
+    @OutputCustomType.Constructor
     private DataSourceConfluenceAttachmentConfiguration(
-        @Nullable List<DataSourceConfluenceAttachmentToIndexFieldMapping> attachmentFieldMappings,
-        @Nullable Boolean crawlAttachments) {
+        @OutputCustomType.Parameter("attachmentFieldMappings") @Nullable List<DataSourceConfluenceAttachmentToIndexFieldMapping> attachmentFieldMappings,
+        @OutputCustomType.Parameter("crawlAttachments") @Nullable Boolean crawlAttachments) {
         this.attachmentFieldMappings = attachmentFieldMappings;
         this.crawlAttachments = crawlAttachments;
     }

@@ -13,8 +13,8 @@ import javax.annotation.Nullable;
 public final class ListenerRuleHttpRequestMethodConfig {
     private final @Nullable List<String> values;
 
-    @OutputCustomType.Constructor({"values"})
-    private ListenerRuleHttpRequestMethodConfig(@Nullable List<String> values) {
+    @OutputCustomType.Constructor
+    private ListenerRuleHttpRequestMethodConfig(@OutputCustomType.Parameter("values") @Nullable List<String> values) {
         this.values = values;
     }
 

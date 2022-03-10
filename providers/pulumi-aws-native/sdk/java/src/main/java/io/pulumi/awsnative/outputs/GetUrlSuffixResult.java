@@ -11,8 +11,8 @@ import java.util.Objects;
 public final class GetUrlSuffixResult {
     private final String urlSuffix;
 
-    @OutputCustomType.Constructor({"urlSuffix"})
-    private GetUrlSuffixResult(String urlSuffix) {
+    @OutputCustomType.Constructor
+    private GetUrlSuffixResult(@OutputCustomType.Parameter("urlSuffix") String urlSuffix) {
         this.urlSuffix = urlSuffix;
     }
 

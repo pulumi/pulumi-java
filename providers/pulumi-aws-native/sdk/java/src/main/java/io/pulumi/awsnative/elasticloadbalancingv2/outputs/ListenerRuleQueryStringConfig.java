@@ -13,8 +13,8 @@ import javax.annotation.Nullable;
 public final class ListenerRuleQueryStringConfig {
     private final @Nullable List<ListenerRuleQueryStringKeyValue> values;
 
-    @OutputCustomType.Constructor({"values"})
-    private ListenerRuleQueryStringConfig(@Nullable List<ListenerRuleQueryStringKeyValue> values) {
+    @OutputCustomType.Constructor
+    private ListenerRuleQueryStringConfig(@OutputCustomType.Parameter("values") @Nullable List<ListenerRuleQueryStringKeyValue> values) {
         this.values = values;
     }
 

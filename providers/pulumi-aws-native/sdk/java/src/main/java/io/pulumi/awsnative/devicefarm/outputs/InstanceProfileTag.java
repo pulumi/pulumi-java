@@ -12,10 +12,10 @@ public final class InstanceProfileTag {
     private final String key;
     private final String value;
 
-    @OutputCustomType.Constructor({"key","value"})
+    @OutputCustomType.Constructor
     private InstanceProfileTag(
-        String key,
-        String value) {
+        @OutputCustomType.Parameter("key") String key,
+        @OutputCustomType.Parameter("value") String value) {
         this.key = key;
         this.value = value;
     }

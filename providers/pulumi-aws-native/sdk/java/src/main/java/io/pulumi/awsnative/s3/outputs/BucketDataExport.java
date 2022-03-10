@@ -17,10 +17,10 @@ public final class BucketDataExport {
      */
     private final String outputSchemaVersion;
 
-    @OutputCustomType.Constructor({"destination","outputSchemaVersion"})
+    @OutputCustomType.Constructor
     private BucketDataExport(
-        BucketDestination destination,
-        String outputSchemaVersion) {
+        @OutputCustomType.Parameter("destination") BucketDestination destination,
+        @OutputCustomType.Parameter("outputSchemaVersion") String outputSchemaVersion) {
         this.destination = destination;
         this.outputSchemaVersion = outputSchemaVersion;
     }

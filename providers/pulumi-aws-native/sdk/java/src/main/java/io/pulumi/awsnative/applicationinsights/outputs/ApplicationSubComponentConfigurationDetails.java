@@ -29,11 +29,11 @@ public final class ApplicationSubComponentConfigurationDetails {
      */
     private final @Nullable List<ApplicationWindowsEvent> windowsEvents;
 
-    @OutputCustomType.Constructor({"alarmMetrics","logs","windowsEvents"})
+    @OutputCustomType.Constructor
     private ApplicationSubComponentConfigurationDetails(
-        @Nullable List<ApplicationAlarmMetric> alarmMetrics,
-        @Nullable List<ApplicationLog> logs,
-        @Nullable List<ApplicationWindowsEvent> windowsEvents) {
+        @OutputCustomType.Parameter("alarmMetrics") @Nullable List<ApplicationAlarmMetric> alarmMetrics,
+        @OutputCustomType.Parameter("logs") @Nullable List<ApplicationLog> logs,
+        @OutputCustomType.Parameter("windowsEvents") @Nullable List<ApplicationWindowsEvent> windowsEvents) {
         this.alarmMetrics = alarmMetrics;
         this.logs = logs;
         this.windowsEvents = windowsEvents;

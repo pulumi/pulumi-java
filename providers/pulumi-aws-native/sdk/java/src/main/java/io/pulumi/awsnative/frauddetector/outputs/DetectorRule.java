@@ -43,19 +43,19 @@ public final class DetectorRule {
      */
     private final @Nullable List<DetectorTag> tags;
 
-    @OutputCustomType.Constructor({"arn","createdTime","description","detectorId","expression","language","lastUpdatedTime","outcomes","ruleId","ruleVersion","tags"})
+    @OutputCustomType.Constructor
     private DetectorRule(
-        @Nullable String arn,
-        @Nullable String createdTime,
-        @Nullable String description,
-        @Nullable String detectorId,
-        @Nullable String expression,
-        @Nullable DetectorRuleLanguage language,
-        @Nullable String lastUpdatedTime,
-        @Nullable List<DetectorOutcome> outcomes,
-        @Nullable String ruleId,
-        @Nullable String ruleVersion,
-        @Nullable List<DetectorTag> tags) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("createdTime") @Nullable String createdTime,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("detectorId") @Nullable String detectorId,
+        @OutputCustomType.Parameter("expression") @Nullable String expression,
+        @OutputCustomType.Parameter("language") @Nullable DetectorRuleLanguage language,
+        @OutputCustomType.Parameter("lastUpdatedTime") @Nullable String lastUpdatedTime,
+        @OutputCustomType.Parameter("outcomes") @Nullable List<DetectorOutcome> outcomes,
+        @OutputCustomType.Parameter("ruleId") @Nullable String ruleId,
+        @OutputCustomType.Parameter("ruleVersion") @Nullable String ruleVersion,
+        @OutputCustomType.Parameter("tags") @Nullable List<DetectorTag> tags) {
         this.arn = arn;
         this.createdTime = createdTime;
         this.description = description;

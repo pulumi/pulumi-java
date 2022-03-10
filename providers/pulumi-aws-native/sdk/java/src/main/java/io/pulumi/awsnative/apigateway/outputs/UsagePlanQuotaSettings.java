@@ -28,11 +28,11 @@ public final class UsagePlanQuotaSettings {
      */
     private final @Nullable String period;
 
-    @OutputCustomType.Constructor({"limit","offset","period"})
+    @OutputCustomType.Constructor
     private UsagePlanQuotaSettings(
-        @Nullable Integer limit,
-        @Nullable Integer offset,
-        @Nullable String period) {
+        @OutputCustomType.Parameter("limit") @Nullable Integer limit,
+        @OutputCustomType.Parameter("offset") @Nullable Integer offset,
+        @OutputCustomType.Parameter("period") @Nullable String period) {
         this.limit = limit;
         this.offset = offset;
         this.period = period;

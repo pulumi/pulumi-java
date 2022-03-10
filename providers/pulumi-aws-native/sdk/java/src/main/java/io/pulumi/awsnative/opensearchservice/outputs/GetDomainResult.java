@@ -47,27 +47,27 @@ public final class GetDomainResult {
     private final @Nullable List<DomainTag> tags;
     private final @Nullable DomainVPCOptions vPCOptions;
 
-    @OutputCustomType.Constructor({"accessPolicies","advancedOptions","arn","clusterConfig","cognitoOptions","domainArn","domainEndpoint","domainEndpointOptions","domainEndpoints","eBSOptions","encryptionAtRestOptions","engineVersion","id","logPublishingOptions","nodeToNodeEncryptionOptions","serviceSoftwareOptions","snapshotOptions","tags","vPCOptions"})
+    @OutputCustomType.Constructor
     private GetDomainResult(
-        @Nullable Object accessPolicies,
-        @Nullable Object advancedOptions,
-        @Nullable String arn,
-        @Nullable DomainClusterConfig clusterConfig,
-        @Nullable DomainCognitoOptions cognitoOptions,
-        @Nullable String domainArn,
-        @Nullable String domainEndpoint,
-        @Nullable DomainEndpointOptions domainEndpointOptions,
-        @Nullable Object domainEndpoints,
-        @Nullable DomainEBSOptions eBSOptions,
-        @Nullable DomainEncryptionAtRestOptions encryptionAtRestOptions,
-        @Nullable String engineVersion,
-        @Nullable String id,
-        @Nullable Object logPublishingOptions,
-        @Nullable DomainNodeToNodeEncryptionOptions nodeToNodeEncryptionOptions,
-        @Nullable DomainServiceSoftwareOptions serviceSoftwareOptions,
-        @Nullable DomainSnapshotOptions snapshotOptions,
-        @Nullable List<DomainTag> tags,
-        @Nullable DomainVPCOptions vPCOptions) {
+        @OutputCustomType.Parameter("accessPolicies") @Nullable Object accessPolicies,
+        @OutputCustomType.Parameter("advancedOptions") @Nullable Object advancedOptions,
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("clusterConfig") @Nullable DomainClusterConfig clusterConfig,
+        @OutputCustomType.Parameter("cognitoOptions") @Nullable DomainCognitoOptions cognitoOptions,
+        @OutputCustomType.Parameter("domainArn") @Nullable String domainArn,
+        @OutputCustomType.Parameter("domainEndpoint") @Nullable String domainEndpoint,
+        @OutputCustomType.Parameter("domainEndpointOptions") @Nullable DomainEndpointOptions domainEndpointOptions,
+        @OutputCustomType.Parameter("domainEndpoints") @Nullable Object domainEndpoints,
+        @OutputCustomType.Parameter("eBSOptions") @Nullable DomainEBSOptions eBSOptions,
+        @OutputCustomType.Parameter("encryptionAtRestOptions") @Nullable DomainEncryptionAtRestOptions encryptionAtRestOptions,
+        @OutputCustomType.Parameter("engineVersion") @Nullable String engineVersion,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("logPublishingOptions") @Nullable Object logPublishingOptions,
+        @OutputCustomType.Parameter("nodeToNodeEncryptionOptions") @Nullable DomainNodeToNodeEncryptionOptions nodeToNodeEncryptionOptions,
+        @OutputCustomType.Parameter("serviceSoftwareOptions") @Nullable DomainServiceSoftwareOptions serviceSoftwareOptions,
+        @OutputCustomType.Parameter("snapshotOptions") @Nullable DomainSnapshotOptions snapshotOptions,
+        @OutputCustomType.Parameter("tags") @Nullable List<DomainTag> tags,
+        @OutputCustomType.Parameter("vPCOptions") @Nullable DomainVPCOptions vPCOptions) {
         this.accessPolicies = accessPolicies;
         this.advancedOptions = advancedOptions;
         this.arn = arn;

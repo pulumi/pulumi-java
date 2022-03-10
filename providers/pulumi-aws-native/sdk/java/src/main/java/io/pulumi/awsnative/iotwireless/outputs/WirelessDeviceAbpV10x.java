@@ -13,10 +13,10 @@ public final class WirelessDeviceAbpV10x {
     private final String devAddr;
     private final WirelessDeviceSessionKeysAbpV10x sessionKeys;
 
-    @OutputCustomType.Constructor({"devAddr","sessionKeys"})
+    @OutputCustomType.Constructor
     private WirelessDeviceAbpV10x(
-        String devAddr,
-        WirelessDeviceSessionKeysAbpV10x sessionKeys) {
+        @OutputCustomType.Parameter("devAddr") String devAddr,
+        @OutputCustomType.Parameter("sessionKeys") WirelessDeviceSessionKeysAbpV10x sessionKeys) {
         this.devAddr = devAddr;
         this.sessionKeys = sessionKeys;
     }

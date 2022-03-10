@@ -18,12 +18,12 @@ public final class ComponentVersionLambdaVolumeMount {
     private final @Nullable ComponentVersionLambdaFilesystemPermission permission;
     private final @Nullable String sourcePath;
 
-    @OutputCustomType.Constructor({"addGroupOwner","destinationPath","permission","sourcePath"})
+    @OutputCustomType.Constructor
     private ComponentVersionLambdaVolumeMount(
-        @Nullable Boolean addGroupOwner,
-        @Nullable String destinationPath,
-        @Nullable ComponentVersionLambdaFilesystemPermission permission,
-        @Nullable String sourcePath) {
+        @OutputCustomType.Parameter("addGroupOwner") @Nullable Boolean addGroupOwner,
+        @OutputCustomType.Parameter("destinationPath") @Nullable String destinationPath,
+        @OutputCustomType.Parameter("permission") @Nullable ComponentVersionLambdaFilesystemPermission permission,
+        @OutputCustomType.Parameter("sourcePath") @Nullable String sourcePath) {
         this.addGroupOwner = addGroupOwner;
         this.destinationPath = destinationPath;
         this.permission = permission;

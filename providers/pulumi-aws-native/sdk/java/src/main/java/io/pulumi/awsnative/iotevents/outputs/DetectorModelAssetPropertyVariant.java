@@ -32,12 +32,12 @@ public final class DetectorModelAssetPropertyVariant {
      */
     private final @Nullable String stringValue;
 
-    @OutputCustomType.Constructor({"booleanValue","doubleValue","integerValue","stringValue"})
+    @OutputCustomType.Constructor
     private DetectorModelAssetPropertyVariant(
-        @Nullable String booleanValue,
-        @Nullable String doubleValue,
-        @Nullable String integerValue,
-        @Nullable String stringValue) {
+        @OutputCustomType.Parameter("booleanValue") @Nullable String booleanValue,
+        @OutputCustomType.Parameter("doubleValue") @Nullable String doubleValue,
+        @OutputCustomType.Parameter("integerValue") @Nullable String integerValue,
+        @OutputCustomType.Parameter("stringValue") @Nullable String stringValue) {
         this.booleanValue = booleanValue;
         this.doubleValue = doubleValue;
         this.integerValue = integerValue;

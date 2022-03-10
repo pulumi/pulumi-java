@@ -17,8 +17,8 @@ public final class ContainerRecipeComponentConfiguration {
      */
     private final @Nullable String componentArn;
 
-    @OutputCustomType.Constructor({"componentArn"})
-    private ContainerRecipeComponentConfiguration(@Nullable String componentArn) {
+    @OutputCustomType.Constructor
+    private ContainerRecipeComponentConfiguration(@OutputCustomType.Parameter("componentArn") @Nullable String componentArn) {
         this.componentArn = componentArn;
     }
 

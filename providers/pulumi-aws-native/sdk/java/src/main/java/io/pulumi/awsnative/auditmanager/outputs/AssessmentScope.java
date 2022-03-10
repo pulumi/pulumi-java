@@ -23,10 +23,10 @@ public final class AssessmentScope {
      */
     private final @Nullable List<AssessmentAWSService> awsServices;
 
-    @OutputCustomType.Constructor({"awsAccounts","awsServices"})
+    @OutputCustomType.Constructor
     private AssessmentScope(
-        @Nullable List<AssessmentAWSAccount> awsAccounts,
-        @Nullable List<AssessmentAWSService> awsServices) {
+        @OutputCustomType.Parameter("awsAccounts") @Nullable List<AssessmentAWSAccount> awsAccounts,
+        @OutputCustomType.Parameter("awsServices") @Nullable List<AssessmentAWSService> awsServices) {
         this.awsAccounts = awsAccounts;
         this.awsServices = awsServices;
     }

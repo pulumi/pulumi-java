@@ -30,20 +30,20 @@ public final class DataSourceSharePointConfiguration {
     private final @Nullable Boolean useChangeLog;
     private final @Nullable DataSourceVpcConfiguration vpcConfiguration;
 
-    @OutputCustomType.Constructor({"crawlAttachments","disableLocalGroups","documentTitleFieldName","exclusionPatterns","fieldMappings","inclusionPatterns","secretArn","sharePointVersion","sslCertificateS3Path","urls","useChangeLog","vpcConfiguration"})
+    @OutputCustomType.Constructor
     private DataSourceSharePointConfiguration(
-        @Nullable Boolean crawlAttachments,
-        @Nullable Boolean disableLocalGroups,
-        @Nullable String documentTitleFieldName,
-        @Nullable List<String> exclusionPatterns,
-        @Nullable List<DataSourceToIndexFieldMapping> fieldMappings,
-        @Nullable List<String> inclusionPatterns,
-        String secretArn,
-        DataSourceSharePointConfigurationSharePointVersion sharePointVersion,
-        @Nullable DataSourceS3Path sslCertificateS3Path,
-        List<String> urls,
-        @Nullable Boolean useChangeLog,
-        @Nullable DataSourceVpcConfiguration vpcConfiguration) {
+        @OutputCustomType.Parameter("crawlAttachments") @Nullable Boolean crawlAttachments,
+        @OutputCustomType.Parameter("disableLocalGroups") @Nullable Boolean disableLocalGroups,
+        @OutputCustomType.Parameter("documentTitleFieldName") @Nullable String documentTitleFieldName,
+        @OutputCustomType.Parameter("exclusionPatterns") @Nullable List<String> exclusionPatterns,
+        @OutputCustomType.Parameter("fieldMappings") @Nullable List<DataSourceToIndexFieldMapping> fieldMappings,
+        @OutputCustomType.Parameter("inclusionPatterns") @Nullable List<String> inclusionPatterns,
+        @OutputCustomType.Parameter("secretArn") String secretArn,
+        @OutputCustomType.Parameter("sharePointVersion") DataSourceSharePointConfigurationSharePointVersion sharePointVersion,
+        @OutputCustomType.Parameter("sslCertificateS3Path") @Nullable DataSourceS3Path sslCertificateS3Path,
+        @OutputCustomType.Parameter("urls") List<String> urls,
+        @OutputCustomType.Parameter("useChangeLog") @Nullable Boolean useChangeLog,
+        @OutputCustomType.Parameter("vpcConfiguration") @Nullable DataSourceVpcConfiguration vpcConfiguration) {
         this.crawlAttachments = crawlAttachments;
         this.disableLocalGroups = disableLocalGroups;
         this.documentTitleFieldName = documentTitleFieldName;

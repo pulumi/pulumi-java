@@ -22,10 +22,10 @@ public final class ApplicationLogPatternSet {
      */
     private final String patternSetName;
 
-    @OutputCustomType.Constructor({"logPatterns","patternSetName"})
+    @OutputCustomType.Constructor
     private ApplicationLogPatternSet(
-        List<ApplicationLogPattern> logPatterns,
-        String patternSetName) {
+        @OutputCustomType.Parameter("logPatterns") List<ApplicationLogPattern> logPatterns,
+        @OutputCustomType.Parameter("patternSetName") String patternSetName) {
         this.logPatterns = logPatterns;
         this.patternSetName = patternSetName;
     }

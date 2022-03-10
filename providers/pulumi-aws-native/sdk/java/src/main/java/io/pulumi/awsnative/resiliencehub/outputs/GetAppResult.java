@@ -41,14 +41,14 @@ public final class GetAppResult {
     private final @Nullable List<AppResourceMapping> resourceMappings;
     private final @Nullable AppTagMap tags;
 
-    @OutputCustomType.Constructor({"appArn","appTemplateBody","description","resiliencyPolicyArn","resourceMappings","tags"})
+    @OutputCustomType.Constructor
     private GetAppResult(
-        @Nullable String appArn,
-        @Nullable String appTemplateBody,
-        @Nullable String description,
-        @Nullable String resiliencyPolicyArn,
-        @Nullable List<AppResourceMapping> resourceMappings,
-        @Nullable AppTagMap tags) {
+        @OutputCustomType.Parameter("appArn") @Nullable String appArn,
+        @OutputCustomType.Parameter("appTemplateBody") @Nullable String appTemplateBody,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("resiliencyPolicyArn") @Nullable String resiliencyPolicyArn,
+        @OutputCustomType.Parameter("resourceMappings") @Nullable List<AppResourceMapping> resourceMappings,
+        @OutputCustomType.Parameter("tags") @Nullable AppTagMap tags) {
         this.appArn = appArn;
         this.appTemplateBody = appTemplateBody;
         this.description = description;

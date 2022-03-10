@@ -21,10 +21,10 @@ public final class MitigationActionEnableIoTLoggingParams {
      */
     private final String roleArnForLogging;
 
-    @OutputCustomType.Constructor({"logLevel","roleArnForLogging"})
+    @OutputCustomType.Constructor
     private MitigationActionEnableIoTLoggingParams(
-        MitigationActionEnableIoTLoggingParamsLogLevel logLevel,
-        String roleArnForLogging) {
+        @OutputCustomType.Parameter("logLevel") MitigationActionEnableIoTLoggingParamsLogLevel logLevel,
+        @OutputCustomType.Parameter("roleArnForLogging") String roleArnForLogging) {
         this.logLevel = logLevel;
         this.roleArnForLogging = roleArnForLogging;
     }

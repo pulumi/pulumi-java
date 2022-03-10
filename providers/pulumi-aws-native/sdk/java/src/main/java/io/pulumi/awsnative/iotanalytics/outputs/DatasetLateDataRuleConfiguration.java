@@ -13,8 +13,8 @@ import javax.annotation.Nullable;
 public final class DatasetLateDataRuleConfiguration {
     private final @Nullable DatasetDeltaTimeSessionWindowConfiguration deltaTimeSessionWindowConfiguration;
 
-    @OutputCustomType.Constructor({"deltaTimeSessionWindowConfiguration"})
-    private DatasetLateDataRuleConfiguration(@Nullable DatasetDeltaTimeSessionWindowConfiguration deltaTimeSessionWindowConfiguration) {
+    @OutputCustomType.Constructor
+    private DatasetLateDataRuleConfiguration(@OutputCustomType.Parameter("deltaTimeSessionWindowConfiguration") @Nullable DatasetDeltaTimeSessionWindowConfiguration deltaTimeSessionWindowConfiguration) {
         this.deltaTimeSessionWindowConfiguration = deltaTimeSessionWindowConfiguration;
     }
 

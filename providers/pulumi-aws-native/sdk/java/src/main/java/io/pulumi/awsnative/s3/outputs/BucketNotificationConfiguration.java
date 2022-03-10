@@ -20,12 +20,12 @@ public final class BucketNotificationConfiguration {
     private final @Nullable List<BucketQueueConfiguration> queueConfigurations;
     private final @Nullable List<BucketTopicConfiguration> topicConfigurations;
 
-    @OutputCustomType.Constructor({"eventBridgeConfiguration","lambdaConfigurations","queueConfigurations","topicConfigurations"})
+    @OutputCustomType.Constructor
     private BucketNotificationConfiguration(
-        @Nullable BucketEventBridgeConfiguration eventBridgeConfiguration,
-        @Nullable List<BucketLambdaConfiguration> lambdaConfigurations,
-        @Nullable List<BucketQueueConfiguration> queueConfigurations,
-        @Nullable List<BucketTopicConfiguration> topicConfigurations) {
+        @OutputCustomType.Parameter("eventBridgeConfiguration") @Nullable BucketEventBridgeConfiguration eventBridgeConfiguration,
+        @OutputCustomType.Parameter("lambdaConfigurations") @Nullable List<BucketLambdaConfiguration> lambdaConfigurations,
+        @OutputCustomType.Parameter("queueConfigurations") @Nullable List<BucketQueueConfiguration> queueConfigurations,
+        @OutputCustomType.Parameter("topicConfigurations") @Nullable List<BucketTopicConfiguration> topicConfigurations) {
         this.eventBridgeConfiguration = eventBridgeConfiguration;
         this.lambdaConfigurations = lambdaConfigurations;
         this.queueConfigurations = queueConfigurations;

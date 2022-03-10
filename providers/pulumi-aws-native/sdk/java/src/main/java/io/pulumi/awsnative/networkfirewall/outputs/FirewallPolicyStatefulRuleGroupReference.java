@@ -15,10 +15,10 @@ public final class FirewallPolicyStatefulRuleGroupReference {
     private final @Nullable Integer priority;
     private final String resourceArn;
 
-    @OutputCustomType.Constructor({"priority","resourceArn"})
+    @OutputCustomType.Constructor
     private FirewallPolicyStatefulRuleGroupReference(
-        @Nullable Integer priority,
-        String resourceArn) {
+        @OutputCustomType.Parameter("priority") @Nullable Integer priority,
+        @OutputCustomType.Parameter("resourceArn") String resourceArn) {
         this.priority = priority;
         this.resourceArn = resourceArn;
     }

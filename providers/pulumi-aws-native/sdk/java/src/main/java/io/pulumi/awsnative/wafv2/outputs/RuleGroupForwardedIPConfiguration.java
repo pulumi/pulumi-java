@@ -13,10 +13,10 @@ public final class RuleGroupForwardedIPConfiguration {
     private final RuleGroupForwardedIPConfigurationFallbackBehavior fallbackBehavior;
     private final String headerName;
 
-    @OutputCustomType.Constructor({"fallbackBehavior","headerName"})
+    @OutputCustomType.Constructor
     private RuleGroupForwardedIPConfiguration(
-        RuleGroupForwardedIPConfigurationFallbackBehavior fallbackBehavior,
-        String headerName) {
+        @OutputCustomType.Parameter("fallbackBehavior") RuleGroupForwardedIPConfigurationFallbackBehavior fallbackBehavior,
+        @OutputCustomType.Parameter("headerName") String headerName) {
         this.fallbackBehavior = fallbackBehavior;
         this.headerName = headerName;
     }

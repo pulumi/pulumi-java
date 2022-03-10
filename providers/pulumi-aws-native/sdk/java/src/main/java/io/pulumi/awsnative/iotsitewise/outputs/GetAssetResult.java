@@ -43,15 +43,15 @@ public final class GetAssetResult {
      */
     private final @Nullable List<AssetTag> tags;
 
-    @OutputCustomType.Constructor({"assetArn","assetHierarchies","assetId","assetModelId","assetName","assetProperties","tags"})
+    @OutputCustomType.Constructor
     private GetAssetResult(
-        @Nullable String assetArn,
-        @Nullable List<AssetHierarchy> assetHierarchies,
-        @Nullable String assetId,
-        @Nullable String assetModelId,
-        @Nullable String assetName,
-        @Nullable List<AssetProperty> assetProperties,
-        @Nullable List<AssetTag> tags) {
+        @OutputCustomType.Parameter("assetArn") @Nullable String assetArn,
+        @OutputCustomType.Parameter("assetHierarchies") @Nullable List<AssetHierarchy> assetHierarchies,
+        @OutputCustomType.Parameter("assetId") @Nullable String assetId,
+        @OutputCustomType.Parameter("assetModelId") @Nullable String assetModelId,
+        @OutputCustomType.Parameter("assetName") @Nullable String assetName,
+        @OutputCustomType.Parameter("assetProperties") @Nullable List<AssetProperty> assetProperties,
+        @OutputCustomType.Parameter("tags") @Nullable List<AssetTag> tags) {
         this.assetArn = assetArn;
         this.assetHierarchies = assetHierarchies;
         this.assetId = assetId;

@@ -14,10 +14,10 @@ public final class RuleGroupRuleDefinition {
     private final List<String> actions;
     private final RuleGroupMatchAttributes matchAttributes;
 
-    @OutputCustomType.Constructor({"actions","matchAttributes"})
+    @OutputCustomType.Constructor
     private RuleGroupRuleDefinition(
-        List<String> actions,
-        RuleGroupMatchAttributes matchAttributes) {
+        @OutputCustomType.Parameter("actions") List<String> actions,
+        @OutputCustomType.Parameter("matchAttributes") RuleGroupMatchAttributes matchAttributes) {
         this.actions = actions;
         this.matchAttributes = matchAttributes;
     }

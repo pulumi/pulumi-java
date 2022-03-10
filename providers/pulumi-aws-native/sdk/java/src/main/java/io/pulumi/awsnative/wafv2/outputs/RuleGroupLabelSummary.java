@@ -13,8 +13,8 @@ import javax.annotation.Nullable;
 public final class RuleGroupLabelSummary {
     private final @Nullable String name;
 
-    @OutputCustomType.Constructor({"name"})
-    private RuleGroupLabelSummary(@Nullable String name) {
+    @OutputCustomType.Constructor
+    private RuleGroupLabelSummary(@OutputCustomType.Parameter("name") @Nullable String name) {
         this.name = name;
     }
 

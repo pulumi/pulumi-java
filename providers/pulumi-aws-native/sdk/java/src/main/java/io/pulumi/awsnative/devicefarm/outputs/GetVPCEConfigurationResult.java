@@ -20,14 +20,14 @@ public final class GetVPCEConfigurationResult {
     private final @Nullable String vpceConfigurationName;
     private final @Nullable String vpceServiceName;
 
-    @OutputCustomType.Constructor({"arn","serviceDnsName","tags","vpceConfigurationDescription","vpceConfigurationName","vpceServiceName"})
+    @OutputCustomType.Constructor
     private GetVPCEConfigurationResult(
-        @Nullable String arn,
-        @Nullable String serviceDnsName,
-        @Nullable List<VPCEConfigurationTag> tags,
-        @Nullable String vpceConfigurationDescription,
-        @Nullable String vpceConfigurationName,
-        @Nullable String vpceServiceName) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("serviceDnsName") @Nullable String serviceDnsName,
+        @OutputCustomType.Parameter("tags") @Nullable List<VPCEConfigurationTag> tags,
+        @OutputCustomType.Parameter("vpceConfigurationDescription") @Nullable String vpceConfigurationDescription,
+        @OutputCustomType.Parameter("vpceConfigurationName") @Nullable String vpceConfigurationName,
+        @OutputCustomType.Parameter("vpceServiceName") @Nullable String vpceServiceName) {
         this.arn = arn;
         this.serviceDnsName = serviceDnsName;
         this.tags = tags;

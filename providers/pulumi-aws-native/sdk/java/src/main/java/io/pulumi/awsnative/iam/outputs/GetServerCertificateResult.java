@@ -21,11 +21,11 @@ public final class GetServerCertificateResult {
     private final @Nullable String path;
     private final @Nullable List<ServerCertificateTag> tags;
 
-    @OutputCustomType.Constructor({"arn","path","tags"})
+    @OutputCustomType.Constructor
     private GetServerCertificateResult(
-        @Nullable String arn,
-        @Nullable String path,
-        @Nullable List<ServerCertificateTag> tags) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("path") @Nullable String path,
+        @OutputCustomType.Parameter("tags") @Nullable List<ServerCertificateTag> tags) {
         this.arn = arn;
         this.path = path;
         this.tags = tags;

@@ -15,8 +15,8 @@ public final class BucketVersioningConfiguration {
      */
     private final BucketVersioningConfigurationStatus status;
 
-    @OutputCustomType.Constructor({"status"})
-    private BucketVersioningConfiguration(BucketVersioningConfigurationStatus status) {
+    @OutputCustomType.Constructor
+    private BucketVersioningConfiguration(@OutputCustomType.Parameter("status") BucketVersioningConfigurationStatus status) {
         this.status = status;
     }
 

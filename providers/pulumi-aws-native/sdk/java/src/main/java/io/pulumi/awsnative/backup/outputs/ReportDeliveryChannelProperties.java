@@ -28,11 +28,11 @@ public final class ReportDeliveryChannelProperties {
      */
     private final @Nullable String s3KeyPrefix;
 
-    @OutputCustomType.Constructor({"formats","s3BucketName","s3KeyPrefix"})
+    @OutputCustomType.Constructor
     private ReportDeliveryChannelProperties(
-        @Nullable List<String> formats,
-        String s3BucketName,
-        @Nullable String s3KeyPrefix) {
+        @OutputCustomType.Parameter("formats") @Nullable List<String> formats,
+        @OutputCustomType.Parameter("s3BucketName") String s3BucketName,
+        @OutputCustomType.Parameter("s3KeyPrefix") @Nullable String s3KeyPrefix) {
         this.formats = formats;
         this.s3BucketName = s3BucketName;
         this.s3KeyPrefix = s3KeyPrefix;

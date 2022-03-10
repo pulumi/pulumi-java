@@ -45,14 +45,14 @@ public final class GetDBProxyEndpointResult {
      */
     private final @Nullable List<String> vpcSecurityGroupIds;
 
-    @OutputCustomType.Constructor({"dBProxyEndpointArn","endpoint","isDefault","tags","vpcId","vpcSecurityGroupIds"})
+    @OutputCustomType.Constructor
     private GetDBProxyEndpointResult(
-        @Nullable String dBProxyEndpointArn,
-        @Nullable String endpoint,
-        @Nullable Boolean isDefault,
-        @Nullable List<DBProxyEndpointTagFormat> tags,
-        @Nullable String vpcId,
-        @Nullable List<String> vpcSecurityGroupIds) {
+        @OutputCustomType.Parameter("dBProxyEndpointArn") @Nullable String dBProxyEndpointArn,
+        @OutputCustomType.Parameter("endpoint") @Nullable String endpoint,
+        @OutputCustomType.Parameter("isDefault") @Nullable Boolean isDefault,
+        @OutputCustomType.Parameter("tags") @Nullable List<DBProxyEndpointTagFormat> tags,
+        @OutputCustomType.Parameter("vpcId") @Nullable String vpcId,
+        @OutputCustomType.Parameter("vpcSecurityGroupIds") @Nullable List<String> vpcSecurityGroupIds) {
         this.dBProxyEndpointArn = dBProxyEndpointArn;
         this.endpoint = endpoint;
         this.isDefault = isDefault;

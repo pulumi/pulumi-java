@@ -28,15 +28,15 @@ public final class GetFeatureResult {
     private final @Nullable List<FeatureTag> tags;
     private final @Nullable List<FeatureVariationObject> variations;
 
-    @OutputCustomType.Constructor({"arn","defaultVariation","description","entityOverrides","evaluationStrategy","tags","variations"})
+    @OutputCustomType.Constructor
     private GetFeatureResult(
-        @Nullable String arn,
-        @Nullable String defaultVariation,
-        @Nullable String description,
-        @Nullable List<FeatureEntityOverride> entityOverrides,
-        @Nullable FeatureEvaluationStrategy evaluationStrategy,
-        @Nullable List<FeatureTag> tags,
-        @Nullable List<FeatureVariationObject> variations) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("defaultVariation") @Nullable String defaultVariation,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("entityOverrides") @Nullable List<FeatureEntityOverride> entityOverrides,
+        @OutputCustomType.Parameter("evaluationStrategy") @Nullable FeatureEvaluationStrategy evaluationStrategy,
+        @OutputCustomType.Parameter("tags") @Nullable List<FeatureTag> tags,
+        @OutputCustomType.Parameter("variations") @Nullable List<FeatureVariationObject> variations) {
         this.arn = arn;
         this.defaultVariation = defaultVariation;
         this.description = description;

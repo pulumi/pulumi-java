@@ -20,10 +20,10 @@ public final class RulesetSubstitutionValue {
      */
     private final String valueReference;
 
-    @OutputCustomType.Constructor({"value","valueReference"})
+    @OutputCustomType.Constructor
     private RulesetSubstitutionValue(
-        String value,
-        String valueReference) {
+        @OutputCustomType.Parameter("value") String value,
+        @OutputCustomType.Parameter("valueReference") String valueReference) {
         this.value = value;
         this.valueReference = valueReference;
     }

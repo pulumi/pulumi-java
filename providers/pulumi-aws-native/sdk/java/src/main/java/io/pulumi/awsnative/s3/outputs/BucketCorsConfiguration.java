@@ -12,8 +12,8 @@ import java.util.Objects;
 public final class BucketCorsConfiguration {
     private final List<BucketCorsRule> corsRules;
 
-    @OutputCustomType.Constructor({"corsRules"})
-    private BucketCorsConfiguration(List<BucketCorsRule> corsRules) {
+    @OutputCustomType.Constructor
+    private BucketCorsConfiguration(@OutputCustomType.Parameter("corsRules") List<BucketCorsRule> corsRules) {
         this.corsRules = corsRules;
     }
 

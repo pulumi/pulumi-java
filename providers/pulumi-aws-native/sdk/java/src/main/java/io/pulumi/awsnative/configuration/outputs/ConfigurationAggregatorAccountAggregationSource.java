@@ -17,11 +17,11 @@ public final class ConfigurationAggregatorAccountAggregationSource {
     private final @Nullable Boolean allAwsRegions;
     private final @Nullable List<String> awsRegions;
 
-    @OutputCustomType.Constructor({"accountIds","allAwsRegions","awsRegions"})
+    @OutputCustomType.Constructor
     private ConfigurationAggregatorAccountAggregationSource(
-        List<String> accountIds,
-        @Nullable Boolean allAwsRegions,
-        @Nullable List<String> awsRegions) {
+        @OutputCustomType.Parameter("accountIds") List<String> accountIds,
+        @OutputCustomType.Parameter("allAwsRegions") @Nullable Boolean allAwsRegions,
+        @OutputCustomType.Parameter("awsRegions") @Nullable List<String> awsRegions) {
         this.accountIds = accountIds;
         this.allAwsRegions = allAwsRegions;
         this.awsRegions = awsRegions;

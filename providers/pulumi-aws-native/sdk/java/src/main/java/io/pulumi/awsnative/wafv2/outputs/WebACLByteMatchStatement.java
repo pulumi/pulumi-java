@@ -21,13 +21,13 @@ public final class WebACLByteMatchStatement {
     private final @Nullable String searchStringBase64;
     private final List<WebACLTextTransformation> textTransformations;
 
-    @OutputCustomType.Constructor({"fieldToMatch","positionalConstraint","searchString","searchStringBase64","textTransformations"})
+    @OutputCustomType.Constructor
     private WebACLByteMatchStatement(
-        WebACLFieldToMatch fieldToMatch,
-        WebACLPositionalConstraint positionalConstraint,
-        @Nullable String searchString,
-        @Nullable String searchStringBase64,
-        List<WebACLTextTransformation> textTransformations) {
+        @OutputCustomType.Parameter("fieldToMatch") WebACLFieldToMatch fieldToMatch,
+        @OutputCustomType.Parameter("positionalConstraint") WebACLPositionalConstraint positionalConstraint,
+        @OutputCustomType.Parameter("searchString") @Nullable String searchString,
+        @OutputCustomType.Parameter("searchStringBase64") @Nullable String searchStringBase64,
+        @OutputCustomType.Parameter("textTransformations") List<WebACLTextTransformation> textTransformations) {
         this.fieldToMatch = fieldToMatch;
         this.positionalConstraint = positionalConstraint;
         this.searchString = searchString;

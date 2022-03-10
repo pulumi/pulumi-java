@@ -22,11 +22,11 @@ public final class PackagingConfigurationMssPackage {
     private final List<PackagingConfigurationMssManifest> mssManifests;
     private final @Nullable Integer segmentDurationSeconds;
 
-    @OutputCustomType.Constructor({"encryption","mssManifests","segmentDurationSeconds"})
+    @OutputCustomType.Constructor
     private PackagingConfigurationMssPackage(
-        @Nullable PackagingConfigurationMssEncryption encryption,
-        List<PackagingConfigurationMssManifest> mssManifests,
-        @Nullable Integer segmentDurationSeconds) {
+        @OutputCustomType.Parameter("encryption") @Nullable PackagingConfigurationMssEncryption encryption,
+        @OutputCustomType.Parameter("mssManifests") List<PackagingConfigurationMssManifest> mssManifests,
+        @OutputCustomType.Parameter("segmentDurationSeconds") @Nullable Integer segmentDurationSeconds) {
         this.encryption = encryption;
         this.mssManifests = mssManifests;
         this.segmentDurationSeconds = segmentDurationSeconds;

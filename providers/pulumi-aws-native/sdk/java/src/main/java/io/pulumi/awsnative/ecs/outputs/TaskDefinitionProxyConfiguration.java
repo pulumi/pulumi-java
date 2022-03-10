@@ -17,11 +17,11 @@ public final class TaskDefinitionProxyConfiguration {
     private final @Nullable List<TaskDefinitionKeyValuePair> proxyConfigurationProperties;
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor({"containerName","proxyConfigurationProperties","type"})
+    @OutputCustomType.Constructor
     private TaskDefinitionProxyConfiguration(
-        String containerName,
-        @Nullable List<TaskDefinitionKeyValuePair> proxyConfigurationProperties,
-        @Nullable String type) {
+        @OutputCustomType.Parameter("containerName") String containerName,
+        @OutputCustomType.Parameter("proxyConfigurationProperties") @Nullable List<TaskDefinitionKeyValuePair> proxyConfigurationProperties,
+        @OutputCustomType.Parameter("type") @Nullable String type) {
         this.containerName = containerName;
         this.proxyConfigurationProperties = proxyConfigurationProperties;
         this.type = type;

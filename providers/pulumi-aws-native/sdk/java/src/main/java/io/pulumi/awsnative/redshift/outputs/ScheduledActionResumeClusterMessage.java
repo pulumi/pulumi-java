@@ -11,8 +11,8 @@ import java.util.Objects;
 public final class ScheduledActionResumeClusterMessage {
     private final String clusterIdentifier;
 
-    @OutputCustomType.Constructor({"clusterIdentifier"})
-    private ScheduledActionResumeClusterMessage(String clusterIdentifier) {
+    @OutputCustomType.Constructor
+    private ScheduledActionResumeClusterMessage(@OutputCustomType.Parameter("clusterIdentifier") String clusterIdentifier) {
         this.clusterIdentifier = clusterIdentifier;
     }
 

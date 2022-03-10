@@ -68,20 +68,20 @@ public final class GetDataSourceResult {
     private final @Nullable List<DataSourceTag> tags;
     private final @Nullable DataSourceVpcConnectionProperties vpcConnectionProperties;
 
-    @OutputCustomType.Constructor({"alternateDataSourceParameters","arn","createdTime","dataSourceParameters","errorInfo","lastUpdatedTime","name","permissions","sslProperties","status","tags","vpcConnectionProperties"})
+    @OutputCustomType.Constructor
     private GetDataSourceResult(
-        @Nullable List<DataSourceParameters> alternateDataSourceParameters,
-        @Nullable String arn,
-        @Nullable String createdTime,
-        @Nullable DataSourceParameters dataSourceParameters,
-        @Nullable DataSourceErrorInfo errorInfo,
-        @Nullable String lastUpdatedTime,
-        @Nullable String name,
-        @Nullable List<DataSourceResourcePermission> permissions,
-        @Nullable DataSourceSslProperties sslProperties,
-        @Nullable DataSourceResourceStatus status,
-        @Nullable List<DataSourceTag> tags,
-        @Nullable DataSourceVpcConnectionProperties vpcConnectionProperties) {
+        @OutputCustomType.Parameter("alternateDataSourceParameters") @Nullable List<DataSourceParameters> alternateDataSourceParameters,
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("createdTime") @Nullable String createdTime,
+        @OutputCustomType.Parameter("dataSourceParameters") @Nullable DataSourceParameters dataSourceParameters,
+        @OutputCustomType.Parameter("errorInfo") @Nullable DataSourceErrorInfo errorInfo,
+        @OutputCustomType.Parameter("lastUpdatedTime") @Nullable String lastUpdatedTime,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("permissions") @Nullable List<DataSourceResourcePermission> permissions,
+        @OutputCustomType.Parameter("sslProperties") @Nullable DataSourceSslProperties sslProperties,
+        @OutputCustomType.Parameter("status") @Nullable DataSourceResourceStatus status,
+        @OutputCustomType.Parameter("tags") @Nullable List<DataSourceTag> tags,
+        @OutputCustomType.Parameter("vpcConnectionProperties") @Nullable DataSourceVpcConnectionProperties vpcConnectionProperties) {
         this.alternateDataSourceParameters = alternateDataSourceParameters;
         this.arn = arn;
         this.createdTime = createdTime;

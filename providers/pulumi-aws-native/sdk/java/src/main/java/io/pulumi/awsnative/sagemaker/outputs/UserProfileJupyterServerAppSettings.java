@@ -13,8 +13,8 @@ import javax.annotation.Nullable;
 public final class UserProfileJupyterServerAppSettings {
     private final @Nullable UserProfileResourceSpec defaultResourceSpec;
 
-    @OutputCustomType.Constructor({"defaultResourceSpec"})
-    private UserProfileJupyterServerAppSettings(@Nullable UserProfileResourceSpec defaultResourceSpec) {
+    @OutputCustomType.Constructor
+    private UserProfileJupyterServerAppSettings(@OutputCustomType.Parameter("defaultResourceSpec") @Nullable UserProfileResourceSpec defaultResourceSpec) {
         this.defaultResourceSpec = defaultResourceSpec;
     }
 

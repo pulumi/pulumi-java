@@ -22,10 +22,10 @@ public final class GetDeploymentResult {
      */
     private final @Nullable String description;
 
-    @OutputCustomType.Constructor({"deploymentId","description"})
+    @OutputCustomType.Constructor
     private GetDeploymentResult(
-        @Nullable String deploymentId,
-        @Nullable String description) {
+        @OutputCustomType.Parameter("deploymentId") @Nullable String deploymentId,
+        @OutputCustomType.Parameter("description") @Nullable String description) {
         this.deploymentId = deploymentId;
         this.description = description;
     }

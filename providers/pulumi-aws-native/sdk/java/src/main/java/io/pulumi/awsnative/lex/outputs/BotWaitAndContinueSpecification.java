@@ -34,12 +34,12 @@ public final class BotWaitAndContinueSpecification {
      */
     private final BotResponseSpecification waitingResponse;
 
-    @OutputCustomType.Constructor({"continueResponse","isActive","stillWaitingResponse","waitingResponse"})
+    @OutputCustomType.Constructor
     private BotWaitAndContinueSpecification(
-        BotResponseSpecification continueResponse,
-        @Nullable Boolean isActive,
-        @Nullable BotStillWaitingResponseSpecification stillWaitingResponse,
-        BotResponseSpecification waitingResponse) {
+        @OutputCustomType.Parameter("continueResponse") BotResponseSpecification continueResponse,
+        @OutputCustomType.Parameter("isActive") @Nullable Boolean isActive,
+        @OutputCustomType.Parameter("stillWaitingResponse") @Nullable BotStillWaitingResponseSpecification stillWaitingResponse,
+        @OutputCustomType.Parameter("waitingResponse") BotResponseSpecification waitingResponse) {
         this.continueResponse = continueResponse;
         this.isActive = isActive;
         this.stillWaitingResponse = stillWaitingResponse;

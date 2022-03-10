@@ -20,10 +20,10 @@ public final class HoursOfOperationTimeSlice {
      */
     private final Integer minutes;
 
-    @OutputCustomType.Constructor({"hours","minutes"})
+    @OutputCustomType.Constructor
     private HoursOfOperationTimeSlice(
-        Integer hours,
-        Integer minutes) {
+        @OutputCustomType.Parameter("hours") Integer hours,
+        @OutputCustomType.Parameter("minutes") Integer minutes) {
         this.hours = hours;
         this.minutes = minutes;
     }

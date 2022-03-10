@@ -28,11 +28,11 @@ public final class AssetProperty {
      */
     private final @Nullable AssetPropertyNotificationState notificationState;
 
-    @OutputCustomType.Constructor({"alias","logicalId","notificationState"})
+    @OutputCustomType.Constructor
     private AssetProperty(
-        @Nullable String alias,
-        String logicalId,
-        @Nullable AssetPropertyNotificationState notificationState) {
+        @OutputCustomType.Parameter("alias") @Nullable String alias,
+        @OutputCustomType.Parameter("logicalId") String logicalId,
+        @OutputCustomType.Parameter("notificationState") @Nullable AssetPropertyNotificationState notificationState) {
         this.alias = alias;
         this.logicalId = logicalId;
         this.notificationState = notificationState;

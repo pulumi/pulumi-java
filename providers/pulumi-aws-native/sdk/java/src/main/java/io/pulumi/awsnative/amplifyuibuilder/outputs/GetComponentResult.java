@@ -33,22 +33,22 @@ public final class GetComponentResult {
     private final @Nullable String sourceId;
     private final @Nullable List<ComponentVariant> variants;
 
-    @OutputCustomType.Constructor({"appId","bindingProperties","children","collectionProperties","componentType","createdAt","environmentName","id","modifiedAt","name","overrides","properties","sourceId","variants"})
+    @OutputCustomType.Constructor
     private GetComponentResult(
-        @Nullable String appId,
-        @Nullable ComponentBindingProperties bindingProperties,
-        @Nullable List<ComponentChild> children,
-        @Nullable ComponentCollectionProperties collectionProperties,
-        @Nullable String componentType,
-        @Nullable String createdAt,
-        @Nullable String environmentName,
-        @Nullable String id,
-        @Nullable String modifiedAt,
-        @Nullable String name,
-        @Nullable ComponentOverrides overrides,
-        @Nullable ComponentProperties properties,
-        @Nullable String sourceId,
-        @Nullable List<ComponentVariant> variants) {
+        @OutputCustomType.Parameter("appId") @Nullable String appId,
+        @OutputCustomType.Parameter("bindingProperties") @Nullable ComponentBindingProperties bindingProperties,
+        @OutputCustomType.Parameter("children") @Nullable List<ComponentChild> children,
+        @OutputCustomType.Parameter("collectionProperties") @Nullable ComponentCollectionProperties collectionProperties,
+        @OutputCustomType.Parameter("componentType") @Nullable String componentType,
+        @OutputCustomType.Parameter("createdAt") @Nullable String createdAt,
+        @OutputCustomType.Parameter("environmentName") @Nullable String environmentName,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("modifiedAt") @Nullable String modifiedAt,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("overrides") @Nullable ComponentOverrides overrides,
+        @OutputCustomType.Parameter("properties") @Nullable ComponentProperties properties,
+        @OutputCustomType.Parameter("sourceId") @Nullable String sourceId,
+        @OutputCustomType.Parameter("variants") @Nullable List<ComponentVariant> variants) {
         this.appId = appId;
         this.bindingProperties = bindingProperties;
         this.children = children;

@@ -24,11 +24,11 @@ public final class MonitoringScheduleNetworkConfig {
     private final @Nullable Boolean enableNetworkIsolation;
     private final @Nullable MonitoringScheduleVpcConfig vpcConfig;
 
-    @OutputCustomType.Constructor({"enableInterContainerTrafficEncryption","enableNetworkIsolation","vpcConfig"})
+    @OutputCustomType.Constructor
     private MonitoringScheduleNetworkConfig(
-        @Nullable Boolean enableInterContainerTrafficEncryption,
-        @Nullable Boolean enableNetworkIsolation,
-        @Nullable MonitoringScheduleVpcConfig vpcConfig) {
+        @OutputCustomType.Parameter("enableInterContainerTrafficEncryption") @Nullable Boolean enableInterContainerTrafficEncryption,
+        @OutputCustomType.Parameter("enableNetworkIsolation") @Nullable Boolean enableNetworkIsolation,
+        @OutputCustomType.Parameter("vpcConfig") @Nullable MonitoringScheduleVpcConfig vpcConfig) {
         this.enableInterContainerTrafficEncryption = enableInterContainerTrafficEncryption;
         this.enableNetworkIsolation = enableNetworkIsolation;
         this.vpcConfig = vpcConfig;

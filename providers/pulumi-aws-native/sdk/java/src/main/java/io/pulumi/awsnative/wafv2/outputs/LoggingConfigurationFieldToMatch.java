@@ -39,13 +39,13 @@ public final class LoggingConfigurationFieldToMatch {
      */
     private final @Nullable Object uriPath;
 
-    @OutputCustomType.Constructor({"jsonBody","method","queryString","singleHeader","uriPath"})
+    @OutputCustomType.Constructor
     private LoggingConfigurationFieldToMatch(
-        @Nullable LoggingConfigurationFieldToMatchJsonBodyProperties jsonBody,
-        @Nullable Object method,
-        @Nullable Object queryString,
-        @Nullable LoggingConfigurationFieldToMatchSingleHeaderProperties singleHeader,
-        @Nullable Object uriPath) {
+        @OutputCustomType.Parameter("jsonBody") @Nullable LoggingConfigurationFieldToMatchJsonBodyProperties jsonBody,
+        @OutputCustomType.Parameter("method") @Nullable Object method,
+        @OutputCustomType.Parameter("queryString") @Nullable Object queryString,
+        @OutputCustomType.Parameter("singleHeader") @Nullable LoggingConfigurationFieldToMatchSingleHeaderProperties singleHeader,
+        @OutputCustomType.Parameter("uriPath") @Nullable Object uriPath) {
         this.jsonBody = jsonBody;
         this.method = method;
         this.queryString = queryString;

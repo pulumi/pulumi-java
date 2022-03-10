@@ -15,10 +15,10 @@ public final class WebACLRuleGroupReferenceStatement {
     private final String arn;
     private final @Nullable List<WebACLExcludedRule> excludedRules;
 
-    @OutputCustomType.Constructor({"arn","excludedRules"})
+    @OutputCustomType.Constructor
     private WebACLRuleGroupReferenceStatement(
-        String arn,
-        @Nullable List<WebACLExcludedRule> excludedRules) {
+        @OutputCustomType.Parameter("arn") String arn,
+        @OutputCustomType.Parameter("excludedRules") @Nullable List<WebACLExcludedRule> excludedRules) {
         this.arn = arn;
         this.excludedRules = excludedRules;
     }

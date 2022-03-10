@@ -21,11 +21,11 @@ public final class GetSAMLProviderResult {
     private final @Nullable String samlMetadataDocument;
     private final @Nullable List<SAMLProviderTag> tags;
 
-    @OutputCustomType.Constructor({"arn","samlMetadataDocument","tags"})
+    @OutputCustomType.Constructor
     private GetSAMLProviderResult(
-        @Nullable String arn,
-        @Nullable String samlMetadataDocument,
-        @Nullable List<SAMLProviderTag> tags) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("samlMetadataDocument") @Nullable String samlMetadataDocument,
+        @OutputCustomType.Parameter("tags") @Nullable List<SAMLProviderTag> tags) {
         this.arn = arn;
         this.samlMetadataDocument = samlMetadataDocument;
         this.tags = tags;

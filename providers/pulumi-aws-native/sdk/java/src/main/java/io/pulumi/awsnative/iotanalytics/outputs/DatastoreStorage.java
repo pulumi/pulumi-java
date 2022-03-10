@@ -17,11 +17,11 @@ public final class DatastoreStorage {
     private final @Nullable DatastoreIotSiteWiseMultiLayerStorage iotSiteWiseMultiLayerStorage;
     private final @Nullable DatastoreServiceManagedS3 serviceManagedS3;
 
-    @OutputCustomType.Constructor({"customerManagedS3","iotSiteWiseMultiLayerStorage","serviceManagedS3"})
+    @OutputCustomType.Constructor
     private DatastoreStorage(
-        @Nullable DatastoreCustomerManagedS3 customerManagedS3,
-        @Nullable DatastoreIotSiteWiseMultiLayerStorage iotSiteWiseMultiLayerStorage,
-        @Nullable DatastoreServiceManagedS3 serviceManagedS3) {
+        @OutputCustomType.Parameter("customerManagedS3") @Nullable DatastoreCustomerManagedS3 customerManagedS3,
+        @OutputCustomType.Parameter("iotSiteWiseMultiLayerStorage") @Nullable DatastoreIotSiteWiseMultiLayerStorage iotSiteWiseMultiLayerStorage,
+        @OutputCustomType.Parameter("serviceManagedS3") @Nullable DatastoreServiceManagedS3 serviceManagedS3) {
         this.customerManagedS3 = customerManagedS3;
         this.iotSiteWiseMultiLayerStorage = iotSiteWiseMultiLayerStorage;
         this.serviceManagedS3 = serviceManagedS3;

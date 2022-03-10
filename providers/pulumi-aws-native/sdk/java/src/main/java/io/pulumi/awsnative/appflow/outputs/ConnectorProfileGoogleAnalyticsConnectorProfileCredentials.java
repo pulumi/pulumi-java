@@ -38,13 +38,13 @@ public final class ConnectorProfileGoogleAnalyticsConnectorProfileCredentials {
      */
     private final @Nullable String refreshToken;
 
-    @OutputCustomType.Constructor({"accessToken","clientId","clientSecret","connectorOAuthRequest","refreshToken"})
+    @OutputCustomType.Constructor
     private ConnectorProfileGoogleAnalyticsConnectorProfileCredentials(
-        @Nullable String accessToken,
-        String clientId,
-        String clientSecret,
-        @Nullable ConnectorProfileConnectorOAuthRequest connectorOAuthRequest,
-        @Nullable String refreshToken) {
+        @OutputCustomType.Parameter("accessToken") @Nullable String accessToken,
+        @OutputCustomType.Parameter("clientId") String clientId,
+        @OutputCustomType.Parameter("clientSecret") String clientSecret,
+        @OutputCustomType.Parameter("connectorOAuthRequest") @Nullable ConnectorProfileConnectorOAuthRequest connectorOAuthRequest,
+        @OutputCustomType.Parameter("refreshToken") @Nullable String refreshToken) {
         this.accessToken = accessToken;
         this.clientId = clientId;
         this.clientSecret = clientSecret;

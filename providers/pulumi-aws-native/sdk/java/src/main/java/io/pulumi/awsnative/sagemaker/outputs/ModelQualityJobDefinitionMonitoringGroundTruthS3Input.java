@@ -15,8 +15,8 @@ public final class ModelQualityJobDefinitionMonitoringGroundTruthS3Input {
      */
     private final String s3Uri;
 
-    @OutputCustomType.Constructor({"s3Uri"})
-    private ModelQualityJobDefinitionMonitoringGroundTruthS3Input(String s3Uri) {
+    @OutputCustomType.Constructor
+    private ModelQualityJobDefinitionMonitoringGroundTruthS3Input(@OutputCustomType.Parameter("s3Uri") String s3Uri) {
         this.s3Uri = s3Uri;
     }
 

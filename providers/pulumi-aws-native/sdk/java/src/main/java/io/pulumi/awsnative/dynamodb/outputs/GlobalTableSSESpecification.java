@@ -15,10 +15,10 @@ public final class GlobalTableSSESpecification {
     private final Boolean sSEEnabled;
     private final @Nullable String sSEType;
 
-    @OutputCustomType.Constructor({"sSEEnabled","sSEType"})
+    @OutputCustomType.Constructor
     private GlobalTableSSESpecification(
-        Boolean sSEEnabled,
-        @Nullable String sSEType) {
+        @OutputCustomType.Parameter("sSEEnabled") Boolean sSEEnabled,
+        @OutputCustomType.Parameter("sSEType") @Nullable String sSEType) {
         this.sSEEnabled = sSEEnabled;
         this.sSEType = sSEType;
     }

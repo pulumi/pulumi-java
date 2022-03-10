@@ -15,11 +15,11 @@ public final class ConnectionHttpParameters {
     private final @Nullable List<ConnectionParameter> headerParameters;
     private final @Nullable List<ConnectionParameter> queryStringParameters;
 
-    @OutputCustomType.Constructor({"bodyParameters","headerParameters","queryStringParameters"})
+    @OutputCustomType.Constructor
     private ConnectionHttpParameters(
-        @Nullable List<ConnectionParameter> bodyParameters,
-        @Nullable List<ConnectionParameter> headerParameters,
-        @Nullable List<ConnectionParameter> queryStringParameters) {
+        @OutputCustomType.Parameter("bodyParameters") @Nullable List<ConnectionParameter> bodyParameters,
+        @OutputCustomType.Parameter("headerParameters") @Nullable List<ConnectionParameter> headerParameters,
+        @OutputCustomType.Parameter("queryStringParameters") @Nullable List<ConnectionParameter> queryStringParameters) {
         this.bodyParameters = bodyParameters;
         this.headerParameters = headerParameters;
         this.queryStringParameters = queryStringParameters;

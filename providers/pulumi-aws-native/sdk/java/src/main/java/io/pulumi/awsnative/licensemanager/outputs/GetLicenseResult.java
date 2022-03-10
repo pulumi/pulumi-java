@@ -58,20 +58,20 @@ public final class GetLicenseResult {
      */
     private final @Nullable String version;
 
-    @OutputCustomType.Constructor({"beneficiary","consumptionConfiguration","entitlements","homeRegion","issuer","licenseArn","licenseMetadata","licenseName","productName","productSKU","validity","version"})
+    @OutputCustomType.Constructor
     private GetLicenseResult(
-        @Nullable String beneficiary,
-        @Nullable LicenseConsumptionConfiguration consumptionConfiguration,
-        @Nullable List<LicenseEntitlement> entitlements,
-        @Nullable String homeRegion,
-        @Nullable LicenseIssuerData issuer,
-        @Nullable String licenseArn,
-        @Nullable List<LicenseMetadata> licenseMetadata,
-        @Nullable String licenseName,
-        @Nullable String productName,
-        @Nullable String productSKU,
-        @Nullable LicenseValidityDateFormat validity,
-        @Nullable String version) {
+        @OutputCustomType.Parameter("beneficiary") @Nullable String beneficiary,
+        @OutputCustomType.Parameter("consumptionConfiguration") @Nullable LicenseConsumptionConfiguration consumptionConfiguration,
+        @OutputCustomType.Parameter("entitlements") @Nullable List<LicenseEntitlement> entitlements,
+        @OutputCustomType.Parameter("homeRegion") @Nullable String homeRegion,
+        @OutputCustomType.Parameter("issuer") @Nullable LicenseIssuerData issuer,
+        @OutputCustomType.Parameter("licenseArn") @Nullable String licenseArn,
+        @OutputCustomType.Parameter("licenseMetadata") @Nullable List<LicenseMetadata> licenseMetadata,
+        @OutputCustomType.Parameter("licenseName") @Nullable String licenseName,
+        @OutputCustomType.Parameter("productName") @Nullable String productName,
+        @OutputCustomType.Parameter("productSKU") @Nullable String productSKU,
+        @OutputCustomType.Parameter("validity") @Nullable LicenseValidityDateFormat validity,
+        @OutputCustomType.Parameter("version") @Nullable String version) {
         this.beneficiary = beneficiary;
         this.consumptionConfiguration = consumptionConfiguration;
         this.entitlements = entitlements;

@@ -17,8 +17,8 @@ public final class InputAttribute {
      */
     private final String jsonPath;
 
-    @OutputCustomType.Constructor({"jsonPath"})
-    private InputAttribute(String jsonPath) {
+    @OutputCustomType.Constructor
+    private InputAttribute(@OutputCustomType.Parameter("jsonPath") String jsonPath) {
         this.jsonPath = jsonPath;
     }
 

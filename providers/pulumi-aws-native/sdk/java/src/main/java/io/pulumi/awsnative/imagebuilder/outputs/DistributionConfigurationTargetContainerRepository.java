@@ -23,10 +23,10 @@ public final class DistributionConfigurationTargetContainerRepository {
      */
     private final @Nullable DistributionConfigurationTargetContainerRepositoryService service;
 
-    @OutputCustomType.Constructor({"repositoryName","service"})
+    @OutputCustomType.Constructor
     private DistributionConfigurationTargetContainerRepository(
-        @Nullable String repositoryName,
-        @Nullable DistributionConfigurationTargetContainerRepositoryService service) {
+        @OutputCustomType.Parameter("repositoryName") @Nullable String repositoryName,
+        @OutputCustomType.Parameter("service") @Nullable DistributionConfigurationTargetContainerRepositoryService service) {
         this.repositoryName = repositoryName;
         this.service = service;
     }

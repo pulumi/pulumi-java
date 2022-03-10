@@ -15,10 +15,10 @@ public final class BotAliasConversationLogSettings {
     private final @Nullable List<BotAliasAudioLogSetting> audioLogSettings;
     private final @Nullable List<BotAliasTextLogSetting> textLogSettings;
 
-    @OutputCustomType.Constructor({"audioLogSettings","textLogSettings"})
+    @OutputCustomType.Constructor
     private BotAliasConversationLogSettings(
-        @Nullable List<BotAliasAudioLogSetting> audioLogSettings,
-        @Nullable List<BotAliasTextLogSetting> textLogSettings) {
+        @OutputCustomType.Parameter("audioLogSettings") @Nullable List<BotAliasAudioLogSetting> audioLogSettings,
+        @OutputCustomType.Parameter("textLogSettings") @Nullable List<BotAliasTextLogSetting> textLogSettings) {
         this.audioLogSettings = audioLogSettings;
         this.textLogSettings = textLogSettings;
     }

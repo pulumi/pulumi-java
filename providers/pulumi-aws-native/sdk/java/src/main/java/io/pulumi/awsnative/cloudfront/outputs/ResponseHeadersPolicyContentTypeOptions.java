@@ -11,8 +11,8 @@ import java.util.Objects;
 public final class ResponseHeadersPolicyContentTypeOptions {
     private final Boolean override;
 
-    @OutputCustomType.Constructor({"override"})
-    private ResponseHeadersPolicyContentTypeOptions(Boolean override) {
+    @OutputCustomType.Constructor
+    private ResponseHeadersPolicyContentTypeOptions(@OutputCustomType.Parameter("override") Boolean override) {
         this.override = override;
     }
 

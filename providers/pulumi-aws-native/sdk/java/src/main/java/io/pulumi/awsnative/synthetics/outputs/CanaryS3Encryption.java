@@ -22,10 +22,10 @@ public final class CanaryS3Encryption {
      */
     private final @Nullable String kmsKeyArn;
 
-    @OutputCustomType.Constructor({"encryptionMode","kmsKeyArn"})
+    @OutputCustomType.Constructor
     private CanaryS3Encryption(
-        @Nullable String encryptionMode,
-        @Nullable String kmsKeyArn) {
+        @OutputCustomType.Parameter("encryptionMode") @Nullable String encryptionMode,
+        @OutputCustomType.Parameter("kmsKeyArn") @Nullable String kmsKeyArn) {
         this.encryptionMode = encryptionMode;
         this.kmsKeyArn = kmsKeyArn;
     }

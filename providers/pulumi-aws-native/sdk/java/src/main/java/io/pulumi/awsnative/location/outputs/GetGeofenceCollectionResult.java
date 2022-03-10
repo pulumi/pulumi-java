@@ -17,13 +17,13 @@ public final class GetGeofenceCollectionResult {
     private final @Nullable String kmsKeyId;
     private final @Nullable String updateTime;
 
-    @OutputCustomType.Constructor({"arn","collectionArn","createTime","kmsKeyId","updateTime"})
+    @OutputCustomType.Constructor
     private GetGeofenceCollectionResult(
-        @Nullable String arn,
-        @Nullable String collectionArn,
-        @Nullable String createTime,
-        @Nullable String kmsKeyId,
-        @Nullable String updateTime) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("collectionArn") @Nullable String collectionArn,
+        @OutputCustomType.Parameter("createTime") @Nullable String createTime,
+        @OutputCustomType.Parameter("kmsKeyId") @Nullable String kmsKeyId,
+        @OutputCustomType.Parameter("updateTime") @Nullable String updateTime) {
         this.arn = arn;
         this.collectionArn = collectionArn;
         this.createTime = createTime;

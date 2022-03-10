@@ -35,12 +35,12 @@ public final class DashboardParameters {
      */
     private final @Nullable List<DashboardStringParameter> stringParameters;
 
-    @OutputCustomType.Constructor({"dateTimeParameters","decimalParameters","integerParameters","stringParameters"})
+    @OutputCustomType.Constructor
     private DashboardParameters(
-        @Nullable List<DashboardDateTimeParameter> dateTimeParameters,
-        @Nullable List<DashboardDecimalParameter> decimalParameters,
-        @Nullable List<DashboardIntegerParameter> integerParameters,
-        @Nullable List<DashboardStringParameter> stringParameters) {
+        @OutputCustomType.Parameter("dateTimeParameters") @Nullable List<DashboardDateTimeParameter> dateTimeParameters,
+        @OutputCustomType.Parameter("decimalParameters") @Nullable List<DashboardDecimalParameter> decimalParameters,
+        @OutputCustomType.Parameter("integerParameters") @Nullable List<DashboardIntegerParameter> integerParameters,
+        @OutputCustomType.Parameter("stringParameters") @Nullable List<DashboardStringParameter> stringParameters) {
         this.dateTimeParameters = dateTimeParameters;
         this.decimalParameters = decimalParameters;
         this.integerParameters = integerParameters;

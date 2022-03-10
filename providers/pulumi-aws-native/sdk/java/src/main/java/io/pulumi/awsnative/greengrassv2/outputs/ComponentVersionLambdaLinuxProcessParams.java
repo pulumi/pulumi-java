@@ -15,10 +15,10 @@ public final class ComponentVersionLambdaLinuxProcessParams {
     private final @Nullable ComponentVersionLambdaContainerParams containerParams;
     private final @Nullable ComponentVersionLambdaLinuxProcessParamsIsolationMode isolationMode;
 
-    @OutputCustomType.Constructor({"containerParams","isolationMode"})
+    @OutputCustomType.Constructor
     private ComponentVersionLambdaLinuxProcessParams(
-        @Nullable ComponentVersionLambdaContainerParams containerParams,
-        @Nullable ComponentVersionLambdaLinuxProcessParamsIsolationMode isolationMode) {
+        @OutputCustomType.Parameter("containerParams") @Nullable ComponentVersionLambdaContainerParams containerParams,
+        @OutputCustomType.Parameter("isolationMode") @Nullable ComponentVersionLambdaLinuxProcessParamsIsolationMode isolationMode) {
         this.containerParams = containerParams;
         this.isolationMode = isolationMode;
     }

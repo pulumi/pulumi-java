@@ -27,14 +27,14 @@ public final class GetClusterResult {
     private final @Nullable List<ClusterCapacityProviderStrategyItem> defaultCapacityProviderStrategy;
     private final @Nullable List<ClusterTag> tags;
 
-    @OutputCustomType.Constructor({"arn","capacityProviders","clusterSettings","configuration","defaultCapacityProviderStrategy","tags"})
+    @OutputCustomType.Constructor
     private GetClusterResult(
-        @Nullable String arn,
-        @Nullable List<String> capacityProviders,
-        @Nullable List<ClusterSettings> clusterSettings,
-        @Nullable ClusterConfiguration configuration,
-        @Nullable List<ClusterCapacityProviderStrategyItem> defaultCapacityProviderStrategy,
-        @Nullable List<ClusterTag> tags) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("capacityProviders") @Nullable List<String> capacityProviders,
+        @OutputCustomType.Parameter("clusterSettings") @Nullable List<ClusterSettings> clusterSettings,
+        @OutputCustomType.Parameter("configuration") @Nullable ClusterConfiguration configuration,
+        @OutputCustomType.Parameter("defaultCapacityProviderStrategy") @Nullable List<ClusterCapacityProviderStrategyItem> defaultCapacityProviderStrategy,
+        @OutputCustomType.Parameter("tags") @Nullable List<ClusterTag> tags) {
         this.arn = arn;
         this.capacityProviders = capacityProviders;
         this.clusterSettings = clusterSettings;

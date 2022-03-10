@@ -11,8 +11,8 @@ import java.util.Objects;
 public final class AnomalyDetectorCloudwatchConfig {
     private final String roleArn;
 
-    @OutputCustomType.Constructor({"roleArn"})
-    private AnomalyDetectorCloudwatchConfig(String roleArn) {
+    @OutputCustomType.Constructor
+    private AnomalyDetectorCloudwatchConfig(@OutputCustomType.Parameter("roleArn") String roleArn) {
         this.roleArn = roleArn;
     }
 

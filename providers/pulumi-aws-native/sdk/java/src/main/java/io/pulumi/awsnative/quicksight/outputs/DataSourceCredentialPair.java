@@ -36,11 +36,11 @@ public final class DataSourceCredentialPair {
      */
     private final String username;
 
-    @OutputCustomType.Constructor({"alternateDataSourceParameters","password","username"})
+    @OutputCustomType.Constructor
     private DataSourceCredentialPair(
-        @Nullable List<DataSourceParameters> alternateDataSourceParameters,
-        String password,
-        String username) {
+        @OutputCustomType.Parameter("alternateDataSourceParameters") @Nullable List<DataSourceParameters> alternateDataSourceParameters,
+        @OutputCustomType.Parameter("password") String password,
+        @OutputCustomType.Parameter("username") String username) {
         this.alternateDataSourceParameters = alternateDataSourceParameters;
         this.password = password;
         this.username = username;

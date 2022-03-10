@@ -11,8 +11,8 @@ import java.util.Objects;
 public final class ConnectorKafkaClusterClientAuthentication {
     private final ConnectorKafkaClusterClientAuthenticationType authenticationType;
 
-    @OutputCustomType.Constructor({"authenticationType"})
-    private ConnectorKafkaClusterClientAuthentication(ConnectorKafkaClusterClientAuthenticationType authenticationType) {
+    @OutputCustomType.Constructor
+    private ConnectorKafkaClusterClientAuthentication(@OutputCustomType.Parameter("authenticationType") ConnectorKafkaClusterClientAuthenticationType authenticationType) {
         this.authenticationType = authenticationType;
     }
 

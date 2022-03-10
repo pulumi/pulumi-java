@@ -17,8 +17,8 @@ public final class ChannelLogConfiguration {
      */
     private final @Nullable String logGroupName;
 
-    @OutputCustomType.Constructor({"logGroupName"})
-    private ChannelLogConfiguration(@Nullable String logGroupName) {
+    @OutputCustomType.Constructor
+    private ChannelLogConfiguration(@OutputCustomType.Parameter("logGroupName") @Nullable String logGroupName) {
         this.logGroupName = logGroupName;
     }
 

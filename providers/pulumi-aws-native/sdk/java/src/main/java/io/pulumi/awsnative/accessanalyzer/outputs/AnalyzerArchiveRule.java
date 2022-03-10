@@ -18,10 +18,10 @@ public final class AnalyzerArchiveRule {
      */
     private final String ruleName;
 
-    @OutputCustomType.Constructor({"filter","ruleName"})
+    @OutputCustomType.Constructor
     private AnalyzerArchiveRule(
-        List<AnalyzerFilter> filter,
-        String ruleName) {
+        @OutputCustomType.Parameter("filter") List<AnalyzerFilter> filter,
+        @OutputCustomType.Parameter("ruleName") String ruleName) {
         this.filter = filter;
         this.ruleName = ruleName;
     }

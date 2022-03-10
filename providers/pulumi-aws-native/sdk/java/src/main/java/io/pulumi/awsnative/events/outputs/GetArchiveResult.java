@@ -18,12 +18,12 @@ public final class GetArchiveResult {
     private final @Nullable Object eventPattern;
     private final @Nullable Integer retentionDays;
 
-    @OutputCustomType.Constructor({"arn","description","eventPattern","retentionDays"})
+    @OutputCustomType.Constructor
     private GetArchiveResult(
-        @Nullable String arn,
-        @Nullable String description,
-        @Nullable Object eventPattern,
-        @Nullable Integer retentionDays) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("eventPattern") @Nullable Object eventPattern,
+        @OutputCustomType.Parameter("retentionDays") @Nullable Integer retentionDays) {
         this.arn = arn;
         this.description = description;
         this.eventPattern = eventPattern;

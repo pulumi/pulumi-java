@@ -30,19 +30,19 @@ public final class GetNetworkInsightsAnalysisResult {
     private final @Nullable String statusMessage;
     private final @Nullable List<NetworkInsightsAnalysisTag> tags;
 
-    @OutputCustomType.Constructor({"alternatePathHints","explanations","forwardPathComponents","networkInsightsAnalysisArn","networkInsightsAnalysisId","networkPathFound","returnPathComponents","startDate","status","statusMessage","tags"})
+    @OutputCustomType.Constructor
     private GetNetworkInsightsAnalysisResult(
-        @Nullable List<NetworkInsightsAnalysisAlternatePathHint> alternatePathHints,
-        @Nullable List<NetworkInsightsAnalysisExplanation> explanations,
-        @Nullable List<NetworkInsightsAnalysisPathComponent> forwardPathComponents,
-        @Nullable String networkInsightsAnalysisArn,
-        @Nullable String networkInsightsAnalysisId,
-        @Nullable Boolean networkPathFound,
-        @Nullable List<NetworkInsightsAnalysisPathComponent> returnPathComponents,
-        @Nullable String startDate,
-        @Nullable NetworkInsightsAnalysisStatus status,
-        @Nullable String statusMessage,
-        @Nullable List<NetworkInsightsAnalysisTag> tags) {
+        @OutputCustomType.Parameter("alternatePathHints") @Nullable List<NetworkInsightsAnalysisAlternatePathHint> alternatePathHints,
+        @OutputCustomType.Parameter("explanations") @Nullable List<NetworkInsightsAnalysisExplanation> explanations,
+        @OutputCustomType.Parameter("forwardPathComponents") @Nullable List<NetworkInsightsAnalysisPathComponent> forwardPathComponents,
+        @OutputCustomType.Parameter("networkInsightsAnalysisArn") @Nullable String networkInsightsAnalysisArn,
+        @OutputCustomType.Parameter("networkInsightsAnalysisId") @Nullable String networkInsightsAnalysisId,
+        @OutputCustomType.Parameter("networkPathFound") @Nullable Boolean networkPathFound,
+        @OutputCustomType.Parameter("returnPathComponents") @Nullable List<NetworkInsightsAnalysisPathComponent> returnPathComponents,
+        @OutputCustomType.Parameter("startDate") @Nullable String startDate,
+        @OutputCustomType.Parameter("status") @Nullable NetworkInsightsAnalysisStatus status,
+        @OutputCustomType.Parameter("statusMessage") @Nullable String statusMessage,
+        @OutputCustomType.Parameter("tags") @Nullable List<NetworkInsightsAnalysisTag> tags) {
         this.alternatePathHints = alternatePathHints;
         this.explanations = explanations;
         this.forwardPathComponents = forwardPathComponents;

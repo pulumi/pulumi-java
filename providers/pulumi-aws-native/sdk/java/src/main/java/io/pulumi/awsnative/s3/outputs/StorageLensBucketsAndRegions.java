@@ -14,10 +14,10 @@ public final class StorageLensBucketsAndRegions {
     private final @Nullable List<String> buckets;
     private final @Nullable List<String> regions;
 
-    @OutputCustomType.Constructor({"buckets","regions"})
+    @OutputCustomType.Constructor
     private StorageLensBucketsAndRegions(
-        @Nullable List<String> buckets,
-        @Nullable List<String> regions) {
+        @OutputCustomType.Parameter("buckets") @Nullable List<String> buckets,
+        @OutputCustomType.Parameter("regions") @Nullable List<String> regions) {
         this.buckets = buckets;
         this.regions = regions;
     }

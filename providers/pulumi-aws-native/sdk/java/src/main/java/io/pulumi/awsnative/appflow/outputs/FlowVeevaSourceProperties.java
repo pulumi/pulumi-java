@@ -18,13 +18,13 @@ public final class FlowVeevaSourceProperties {
     private final @Nullable Boolean includeSourceFiles;
     private final String object;
 
-    @OutputCustomType.Constructor({"documentType","includeAllVersions","includeRenditions","includeSourceFiles","object"})
+    @OutputCustomType.Constructor
     private FlowVeevaSourceProperties(
-        @Nullable String documentType,
-        @Nullable Boolean includeAllVersions,
-        @Nullable Boolean includeRenditions,
-        @Nullable Boolean includeSourceFiles,
-        String object) {
+        @OutputCustomType.Parameter("documentType") @Nullable String documentType,
+        @OutputCustomType.Parameter("includeAllVersions") @Nullable Boolean includeAllVersions,
+        @OutputCustomType.Parameter("includeRenditions") @Nullable Boolean includeRenditions,
+        @OutputCustomType.Parameter("includeSourceFiles") @Nullable Boolean includeSourceFiles,
+        @OutputCustomType.Parameter("object") String object) {
         this.documentType = documentType;
         this.includeAllVersions = includeAllVersions;
         this.includeRenditions = includeRenditions;

@@ -34,12 +34,12 @@ public final class GetCellResult {
      */
     private final @Nullable List<CellTag> tags;
 
-    @OutputCustomType.Constructor({"cellArn","cells","parentReadinessScopes","tags"})
+    @OutputCustomType.Constructor
     private GetCellResult(
-        @Nullable String cellArn,
-        @Nullable List<String> cells,
-        @Nullable List<String> parentReadinessScopes,
-        @Nullable List<CellTag> tags) {
+        @OutputCustomType.Parameter("cellArn") @Nullable String cellArn,
+        @OutputCustomType.Parameter("cells") @Nullable List<String> cells,
+        @OutputCustomType.Parameter("parentReadinessScopes") @Nullable List<String> parentReadinessScopes,
+        @OutputCustomType.Parameter("tags") @Nullable List<CellTag> tags) {
         this.cellArn = cellArn;
         this.cells = cells;
         this.parentReadinessScopes = parentReadinessScopes;

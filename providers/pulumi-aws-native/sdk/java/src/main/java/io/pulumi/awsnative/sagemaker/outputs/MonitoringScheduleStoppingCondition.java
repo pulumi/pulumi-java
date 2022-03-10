@@ -15,8 +15,8 @@ public final class MonitoringScheduleStoppingCondition {
      */
     private final Integer maxRuntimeInSeconds;
 
-    @OutputCustomType.Constructor({"maxRuntimeInSeconds"})
-    private MonitoringScheduleStoppingCondition(Integer maxRuntimeInSeconds) {
+    @OutputCustomType.Constructor
+    private MonitoringScheduleStoppingCondition(@OutputCustomType.Parameter("maxRuntimeInSeconds") Integer maxRuntimeInSeconds) {
         this.maxRuntimeInSeconds = maxRuntimeInSeconds;
     }
 

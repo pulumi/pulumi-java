@@ -22,10 +22,10 @@ public final class GetContactResult {
      */
     private final @Nullable String displayName;
 
-    @OutputCustomType.Constructor({"arn","displayName"})
+    @OutputCustomType.Constructor
     private GetContactResult(
-        @Nullable String arn,
-        @Nullable String displayName) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("displayName") @Nullable String displayName) {
         this.arn = arn;
         this.displayName = displayName;
     }

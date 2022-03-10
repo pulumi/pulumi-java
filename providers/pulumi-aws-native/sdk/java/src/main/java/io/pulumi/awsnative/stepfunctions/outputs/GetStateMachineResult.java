@@ -25,16 +25,16 @@ public final class GetStateMachineResult {
     private final @Nullable List<StateMachineTagsEntry> tags;
     private final @Nullable StateMachineTracingConfiguration tracingConfiguration;
 
-    @OutputCustomType.Constructor({"arn","definitionString","loggingConfiguration","name","roleArn","stateMachineType","tags","tracingConfiguration"})
+    @OutputCustomType.Constructor
     private GetStateMachineResult(
-        @Nullable String arn,
-        @Nullable String definitionString,
-        @Nullable StateMachineLoggingConfiguration loggingConfiguration,
-        @Nullable String name,
-        @Nullable String roleArn,
-        @Nullable StateMachineType stateMachineType,
-        @Nullable List<StateMachineTagsEntry> tags,
-        @Nullable StateMachineTracingConfiguration tracingConfiguration) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("definitionString") @Nullable String definitionString,
+        @OutputCustomType.Parameter("loggingConfiguration") @Nullable StateMachineLoggingConfiguration loggingConfiguration,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("roleArn") @Nullable String roleArn,
+        @OutputCustomType.Parameter("stateMachineType") @Nullable StateMachineType stateMachineType,
+        @OutputCustomType.Parameter("tags") @Nullable List<StateMachineTagsEntry> tags,
+        @OutputCustomType.Parameter("tracingConfiguration") @Nullable StateMachineTracingConfiguration tracingConfiguration) {
         this.arn = arn;
         this.definitionString = definitionString;
         this.loggingConfiguration = loggingConfiguration;

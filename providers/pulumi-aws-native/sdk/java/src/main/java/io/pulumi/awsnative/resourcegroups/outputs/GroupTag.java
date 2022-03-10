@@ -14,10 +14,10 @@ public final class GroupTag {
     private final @Nullable String key;
     private final @Nullable String value;
 
-    @OutputCustomType.Constructor({"key","value"})
+    @OutputCustomType.Constructor
     private GroupTag(
-        @Nullable String key,
-        @Nullable String value) {
+        @OutputCustomType.Parameter("key") @Nullable String key,
+        @OutputCustomType.Parameter("value") @Nullable String value) {
         this.key = key;
         this.value = value;
     }

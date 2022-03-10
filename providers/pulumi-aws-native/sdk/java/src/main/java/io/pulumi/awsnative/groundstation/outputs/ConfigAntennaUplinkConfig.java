@@ -17,11 +17,11 @@ public final class ConfigAntennaUplinkConfig {
     private final @Nullable ConfigEirp targetEirp;
     private final @Nullable Boolean transmitDisabled;
 
-    @OutputCustomType.Constructor({"spectrumConfig","targetEirp","transmitDisabled"})
+    @OutputCustomType.Constructor
     private ConfigAntennaUplinkConfig(
-        @Nullable ConfigUplinkSpectrumConfig spectrumConfig,
-        @Nullable ConfigEirp targetEirp,
-        @Nullable Boolean transmitDisabled) {
+        @OutputCustomType.Parameter("spectrumConfig") @Nullable ConfigUplinkSpectrumConfig spectrumConfig,
+        @OutputCustomType.Parameter("targetEirp") @Nullable ConfigEirp targetEirp,
+        @OutputCustomType.Parameter("transmitDisabled") @Nullable Boolean transmitDisabled) {
         this.spectrumConfig = spectrumConfig;
         this.targetEirp = targetEirp;
         this.transmitDisabled = transmitDisabled;

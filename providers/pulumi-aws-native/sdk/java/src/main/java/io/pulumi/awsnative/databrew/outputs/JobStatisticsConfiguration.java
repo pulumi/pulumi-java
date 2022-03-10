@@ -15,10 +15,10 @@ public final class JobStatisticsConfiguration {
     private final @Nullable List<String> includedStatistics;
     private final @Nullable List<JobStatisticOverride> overrides;
 
-    @OutputCustomType.Constructor({"includedStatistics","overrides"})
+    @OutputCustomType.Constructor
     private JobStatisticsConfiguration(
-        @Nullable List<String> includedStatistics,
-        @Nullable List<JobStatisticOverride> overrides) {
+        @OutputCustomType.Parameter("includedStatistics") @Nullable List<String> includedStatistics,
+        @OutputCustomType.Parameter("overrides") @Nullable List<JobStatisticOverride> overrides) {
         this.includedStatistics = includedStatistics;
         this.overrides = overrides;
     }

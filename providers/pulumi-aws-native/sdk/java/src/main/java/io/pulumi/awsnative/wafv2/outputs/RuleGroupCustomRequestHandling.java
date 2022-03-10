@@ -16,8 +16,8 @@ public final class RuleGroupCustomRequestHandling {
      */
     private final List<RuleGroupCustomHTTPHeader> insertHeaders;
 
-    @OutputCustomType.Constructor({"insertHeaders"})
-    private RuleGroupCustomRequestHandling(List<RuleGroupCustomHTTPHeader> insertHeaders) {
+    @OutputCustomType.Constructor
+    private RuleGroupCustomRequestHandling(@OutputCustomType.Parameter("insertHeaders") List<RuleGroupCustomHTTPHeader> insertHeaders) {
         this.insertHeaders = insertHeaders;
     }
 

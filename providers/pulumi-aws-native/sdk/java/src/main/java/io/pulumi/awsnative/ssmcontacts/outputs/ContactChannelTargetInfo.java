@@ -21,10 +21,10 @@ public final class ContactChannelTargetInfo {
      */
     private final Integer retryIntervalInMinutes;
 
-    @OutputCustomType.Constructor({"channelId","retryIntervalInMinutes"})
+    @OutputCustomType.Constructor
     private ContactChannelTargetInfo(
-        String channelId,
-        Integer retryIntervalInMinutes) {
+        @OutputCustomType.Parameter("channelId") String channelId,
+        @OutputCustomType.Parameter("retryIntervalInMinutes") Integer retryIntervalInMinutes) {
         this.channelId = channelId;
         this.retryIntervalInMinutes = retryIntervalInMinutes;
     }

@@ -15,10 +15,10 @@ public final class DeliveryStreamProcessor {
     private final @Nullable List<DeliveryStreamProcessorParameter> parameters;
     private final DeliveryStreamProcessorType type;
 
-    @OutputCustomType.Constructor({"parameters","type"})
+    @OutputCustomType.Constructor
     private DeliveryStreamProcessor(
-        @Nullable List<DeliveryStreamProcessorParameter> parameters,
-        DeliveryStreamProcessorType type) {
+        @OutputCustomType.Parameter("parameters") @Nullable List<DeliveryStreamProcessorParameter> parameters,
+        @OutputCustomType.Parameter("type") DeliveryStreamProcessorType type) {
         this.parameters = parameters;
         this.type = type;
     }

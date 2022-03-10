@@ -32,13 +32,13 @@ public final class GetGroupResult {
     private final @Nullable GroupInsightsConfiguration insightsConfiguration;
     private final @Nullable List<TagsItemProperties> tags;
 
-    @OutputCustomType.Constructor({"filterExpression","groupARN","groupName","insightsConfiguration","tags"})
+    @OutputCustomType.Constructor
     private GetGroupResult(
-        @Nullable String filterExpression,
-        @Nullable String groupARN,
-        @Nullable String groupName,
-        @Nullable GroupInsightsConfiguration insightsConfiguration,
-        @Nullable List<TagsItemProperties> tags) {
+        @OutputCustomType.Parameter("filterExpression") @Nullable String filterExpression,
+        @OutputCustomType.Parameter("groupARN") @Nullable String groupARN,
+        @OutputCustomType.Parameter("groupName") @Nullable String groupName,
+        @OutputCustomType.Parameter("insightsConfiguration") @Nullable GroupInsightsConfiguration insightsConfiguration,
+        @OutputCustomType.Parameter("tags") @Nullable List<TagsItemProperties> tags) {
         this.filterExpression = filterExpression;
         this.groupARN = groupARN;
         this.groupName = groupName;

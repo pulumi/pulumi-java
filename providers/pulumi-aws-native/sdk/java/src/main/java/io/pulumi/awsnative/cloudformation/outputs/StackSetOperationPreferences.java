@@ -21,14 +21,14 @@ public final class StackSetOperationPreferences {
     private final @Nullable StackSetRegionConcurrencyType regionConcurrencyType;
     private final @Nullable List<String> regionOrder;
 
-    @OutputCustomType.Constructor({"failureToleranceCount","failureTolerancePercentage","maxConcurrentCount","maxConcurrentPercentage","regionConcurrencyType","regionOrder"})
+    @OutputCustomType.Constructor
     private StackSetOperationPreferences(
-        @Nullable Integer failureToleranceCount,
-        @Nullable Integer failureTolerancePercentage,
-        @Nullable Integer maxConcurrentCount,
-        @Nullable Integer maxConcurrentPercentage,
-        @Nullable StackSetRegionConcurrencyType regionConcurrencyType,
-        @Nullable List<String> regionOrder) {
+        @OutputCustomType.Parameter("failureToleranceCount") @Nullable Integer failureToleranceCount,
+        @OutputCustomType.Parameter("failureTolerancePercentage") @Nullable Integer failureTolerancePercentage,
+        @OutputCustomType.Parameter("maxConcurrentCount") @Nullable Integer maxConcurrentCount,
+        @OutputCustomType.Parameter("maxConcurrentPercentage") @Nullable Integer maxConcurrentPercentage,
+        @OutputCustomType.Parameter("regionConcurrencyType") @Nullable StackSetRegionConcurrencyType regionConcurrencyType,
+        @OutputCustomType.Parameter("regionOrder") @Nullable List<String> regionOrder) {
         this.failureToleranceCount = failureToleranceCount;
         this.failureTolerancePercentage = failureTolerancePercentage;
         this.maxConcurrentCount = maxConcurrentCount;

@@ -21,13 +21,13 @@ public final class IntegrationConnectorOperator {
     private final @Nullable IntegrationServiceNowConnectorOperator serviceNow;
     private final @Nullable IntegrationZendeskConnectorOperator zendesk;
 
-    @OutputCustomType.Constructor({"marketo","s3","salesforce","serviceNow","zendesk"})
+    @OutputCustomType.Constructor
     private IntegrationConnectorOperator(
-        @Nullable IntegrationMarketoConnectorOperator marketo,
-        @Nullable IntegrationS3ConnectorOperator s3,
-        @Nullable IntegrationSalesforceConnectorOperator salesforce,
-        @Nullable IntegrationServiceNowConnectorOperator serviceNow,
-        @Nullable IntegrationZendeskConnectorOperator zendesk) {
+        @OutputCustomType.Parameter("marketo") @Nullable IntegrationMarketoConnectorOperator marketo,
+        @OutputCustomType.Parameter("s3") @Nullable IntegrationS3ConnectorOperator s3,
+        @OutputCustomType.Parameter("salesforce") @Nullable IntegrationSalesforceConnectorOperator salesforce,
+        @OutputCustomType.Parameter("serviceNow") @Nullable IntegrationServiceNowConnectorOperator serviceNow,
+        @OutputCustomType.Parameter("zendesk") @Nullable IntegrationZendeskConnectorOperator zendesk) {
         this.marketo = marketo;
         this.s3 = s3;
         this.salesforce = salesforce;

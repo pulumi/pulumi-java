@@ -20,13 +20,13 @@ public final class OriginRequestPolicyConfig {
     private final String name;
     private final OriginRequestPolicyQueryStringsConfig queryStringsConfig;
 
-    @OutputCustomType.Constructor({"comment","cookiesConfig","headersConfig","name","queryStringsConfig"})
+    @OutputCustomType.Constructor
     private OriginRequestPolicyConfig(
-        @Nullable String comment,
-        OriginRequestPolicyCookiesConfig cookiesConfig,
-        OriginRequestPolicyHeadersConfig headersConfig,
-        String name,
-        OriginRequestPolicyQueryStringsConfig queryStringsConfig) {
+        @OutputCustomType.Parameter("comment") @Nullable String comment,
+        @OutputCustomType.Parameter("cookiesConfig") OriginRequestPolicyCookiesConfig cookiesConfig,
+        @OutputCustomType.Parameter("headersConfig") OriginRequestPolicyHeadersConfig headersConfig,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("queryStringsConfig") OriginRequestPolicyQueryStringsConfig queryStringsConfig) {
         this.comment = comment;
         this.cookiesConfig = cookiesConfig;
         this.headersConfig = headersConfig;

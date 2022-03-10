@@ -13,8 +13,8 @@ import javax.annotation.Nullable;
 public final class DetectorModel {
     private final @Nullable String arn;
 
-    @OutputCustomType.Constructor({"arn"})
-    private DetectorModel(@Nullable String arn) {
+    @OutputCustomType.Constructor
+    private DetectorModel(@OutputCustomType.Parameter("arn") @Nullable String arn) {
         this.arn = arn;
     }
 

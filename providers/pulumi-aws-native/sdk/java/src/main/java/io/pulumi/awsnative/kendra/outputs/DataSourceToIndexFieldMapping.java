@@ -15,11 +15,11 @@ public final class DataSourceToIndexFieldMapping {
     private final @Nullable String dateFieldFormat;
     private final String indexFieldName;
 
-    @OutputCustomType.Constructor({"dataSourceFieldName","dateFieldFormat","indexFieldName"})
+    @OutputCustomType.Constructor
     private DataSourceToIndexFieldMapping(
-        String dataSourceFieldName,
-        @Nullable String dateFieldFormat,
-        String indexFieldName) {
+        @OutputCustomType.Parameter("dataSourceFieldName") String dataSourceFieldName,
+        @OutputCustomType.Parameter("dateFieldFormat") @Nullable String dateFieldFormat,
+        @OutputCustomType.Parameter("indexFieldName") String indexFieldName) {
         this.dataSourceFieldName = dataSourceFieldName;
         this.dateFieldFormat = dateFieldFormat;
         this.indexFieldName = indexFieldName;

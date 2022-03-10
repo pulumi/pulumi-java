@@ -14,10 +14,10 @@ public final class TaskDefinitionRuntimePlatform {
     private final @Nullable String cpuArchitecture;
     private final @Nullable String operatingSystemFamily;
 
-    @OutputCustomType.Constructor({"cpuArchitecture","operatingSystemFamily"})
+    @OutputCustomType.Constructor
     private TaskDefinitionRuntimePlatform(
-        @Nullable String cpuArchitecture,
-        @Nullable String operatingSystemFamily) {
+        @OutputCustomType.Parameter("cpuArchitecture") @Nullable String cpuArchitecture,
+        @OutputCustomType.Parameter("operatingSystemFamily") @Nullable String operatingSystemFamily) {
         this.cpuArchitecture = cpuArchitecture;
         this.operatingSystemFamily = operatingSystemFamily;
     }

@@ -17,11 +17,11 @@ public final class WebACLJsonBody {
     private final WebACLJsonMatchPattern matchPattern;
     private final WebACLJsonMatchScope matchScope;
 
-    @OutputCustomType.Constructor({"invalidFallbackBehavior","matchPattern","matchScope"})
+    @OutputCustomType.Constructor
     private WebACLJsonBody(
-        @Nullable WebACLBodyParsingFallbackBehavior invalidFallbackBehavior,
-        WebACLJsonMatchPattern matchPattern,
-        WebACLJsonMatchScope matchScope) {
+        @OutputCustomType.Parameter("invalidFallbackBehavior") @Nullable WebACLBodyParsingFallbackBehavior invalidFallbackBehavior,
+        @OutputCustomType.Parameter("matchPattern") WebACLJsonMatchPattern matchPattern,
+        @OutputCustomType.Parameter("matchScope") WebACLJsonMatchScope matchScope) {
         this.invalidFallbackBehavior = invalidFallbackBehavior;
         this.matchPattern = matchPattern;
         this.matchScope = matchScope;

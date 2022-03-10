@@ -19,10 +19,10 @@ public final class GetReplicationConfigurationResult {
     private final @Nullable String registryId;
     private final @Nullable ReplicationConfiguration replicationConfiguration;
 
-    @OutputCustomType.Constructor({"registryId","replicationConfiguration"})
+    @OutputCustomType.Constructor
     private GetReplicationConfigurationResult(
-        @Nullable String registryId,
-        @Nullable ReplicationConfiguration replicationConfiguration) {
+        @OutputCustomType.Parameter("registryId") @Nullable String registryId,
+        @OutputCustomType.Parameter("replicationConfiguration") @Nullable ReplicationConfiguration replicationConfiguration) {
         this.registryId = registryId;
         this.replicationConfiguration = replicationConfiguration;
     }

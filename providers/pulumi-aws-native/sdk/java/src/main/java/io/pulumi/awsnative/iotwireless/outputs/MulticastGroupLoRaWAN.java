@@ -33,12 +33,12 @@ public final class MulticastGroupLoRaWAN {
      */
     private final String rfRegion;
 
-    @OutputCustomType.Constructor({"dlClass","numberOfDevicesInGroup","numberOfDevicesRequested","rfRegion"})
+    @OutputCustomType.Constructor
     private MulticastGroupLoRaWAN(
-        String dlClass,
-        @Nullable Integer numberOfDevicesInGroup,
-        @Nullable Integer numberOfDevicesRequested,
-        String rfRegion) {
+        @OutputCustomType.Parameter("dlClass") String dlClass,
+        @OutputCustomType.Parameter("numberOfDevicesInGroup") @Nullable Integer numberOfDevicesInGroup,
+        @OutputCustomType.Parameter("numberOfDevicesRequested") @Nullable Integer numberOfDevicesRequested,
+        @OutputCustomType.Parameter("rfRegion") String rfRegion) {
         this.dlClass = dlClass;
         this.numberOfDevicesInGroup = numberOfDevicesInGroup;
         this.numberOfDevicesRequested = numberOfDevicesRequested;

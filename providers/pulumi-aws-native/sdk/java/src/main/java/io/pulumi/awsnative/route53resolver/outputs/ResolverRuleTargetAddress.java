@@ -22,10 +22,10 @@ public final class ResolverRuleTargetAddress {
      */
     private final @Nullable String port;
 
-    @OutputCustomType.Constructor({"ip","port"})
+    @OutputCustomType.Constructor
     private ResolverRuleTargetAddress(
-        String ip,
-        @Nullable String port) {
+        @OutputCustomType.Parameter("ip") String ip,
+        @OutputCustomType.Parameter("port") @Nullable String port) {
         this.ip = ip;
         this.port = port;
     }

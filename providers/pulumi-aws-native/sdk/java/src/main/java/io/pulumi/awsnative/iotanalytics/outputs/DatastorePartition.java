@@ -14,10 +14,10 @@ public final class DatastorePartition {
     private final @Nullable DatastorePartition partition;
     private final @Nullable DatastoreTimestampPartition timestampPartition;
 
-    @OutputCustomType.Constructor({"partition","timestampPartition"})
+    @OutputCustomType.Constructor
     private DatastorePartition(
-        @Nullable DatastorePartition partition,
-        @Nullable DatastoreTimestampPartition timestampPartition) {
+        @OutputCustomType.Parameter("partition") @Nullable DatastorePartition partition,
+        @OutputCustomType.Parameter("timestampPartition") @Nullable DatastoreTimestampPartition timestampPartition) {
         this.partition = partition;
         this.timestampPartition = timestampPartition;
     }

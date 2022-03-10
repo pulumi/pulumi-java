@@ -28,12 +28,12 @@ public final class PackagingConfigurationHlsPackage {
      */
     private final @Nullable Boolean useAudioRenditionGroup;
 
-    @OutputCustomType.Constructor({"encryption","hlsManifests","segmentDurationSeconds","useAudioRenditionGroup"})
+    @OutputCustomType.Constructor
     private PackagingConfigurationHlsPackage(
-        @Nullable PackagingConfigurationHlsEncryption encryption,
-        List<PackagingConfigurationHlsManifest> hlsManifests,
-        @Nullable Integer segmentDurationSeconds,
-        @Nullable Boolean useAudioRenditionGroup) {
+        @OutputCustomType.Parameter("encryption") @Nullable PackagingConfigurationHlsEncryption encryption,
+        @OutputCustomType.Parameter("hlsManifests") List<PackagingConfigurationHlsManifest> hlsManifests,
+        @OutputCustomType.Parameter("segmentDurationSeconds") @Nullable Integer segmentDurationSeconds,
+        @OutputCustomType.Parameter("useAudioRenditionGroup") @Nullable Boolean useAudioRenditionGroup) {
         this.encryption = encryption;
         this.hlsManifests = hlsManifests;
         this.segmentDurationSeconds = segmentDurationSeconds;

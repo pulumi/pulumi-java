@@ -62,17 +62,17 @@ public final class GetVariableResult {
      */
     private final @Nullable VariableType variableType;
 
-    @OutputCustomType.Constructor({"arn","createdTime","dataSource","dataType","defaultValue","description","lastUpdatedTime","tags","variableType"})
+    @OutputCustomType.Constructor
     private GetVariableResult(
-        @Nullable String arn,
-        @Nullable String createdTime,
-        @Nullable VariableDataSource dataSource,
-        @Nullable VariableDataType dataType,
-        @Nullable String defaultValue,
-        @Nullable String description,
-        @Nullable String lastUpdatedTime,
-        @Nullable List<VariableTag> tags,
-        @Nullable VariableType variableType) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("createdTime") @Nullable String createdTime,
+        @OutputCustomType.Parameter("dataSource") @Nullable VariableDataSource dataSource,
+        @OutputCustomType.Parameter("dataType") @Nullable VariableDataType dataType,
+        @OutputCustomType.Parameter("defaultValue") @Nullable String defaultValue,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("lastUpdatedTime") @Nullable String lastUpdatedTime,
+        @OutputCustomType.Parameter("tags") @Nullable List<VariableTag> tags,
+        @OutputCustomType.Parameter("variableType") @Nullable VariableType variableType) {
         this.arn = arn;
         this.createdTime = createdTime;
         this.dataSource = dataSource;

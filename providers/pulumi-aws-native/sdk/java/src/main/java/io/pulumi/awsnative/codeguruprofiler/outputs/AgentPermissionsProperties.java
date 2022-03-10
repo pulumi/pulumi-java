@@ -16,8 +16,8 @@ public final class AgentPermissionsProperties {
      */
     private final List<String> principals;
 
-    @OutputCustomType.Constructor({"principals"})
-    private AgentPermissionsProperties(List<String> principals) {
+    @OutputCustomType.Constructor
+    private AgentPermissionsProperties(@OutputCustomType.Parameter("principals") List<String> principals) {
         this.principals = principals;
     }
 

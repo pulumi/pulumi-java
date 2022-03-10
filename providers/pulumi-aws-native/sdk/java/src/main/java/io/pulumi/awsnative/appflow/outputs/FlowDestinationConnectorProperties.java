@@ -27,16 +27,16 @@ public final class FlowDestinationConnectorProperties {
     private final @Nullable FlowUpsolverDestinationProperties upsolver;
     private final @Nullable FlowZendeskDestinationProperties zendesk;
 
-    @OutputCustomType.Constructor({"eventBridge","lookoutMetrics","redshift","s3","salesforce","snowflake","upsolver","zendesk"})
+    @OutputCustomType.Constructor
     private FlowDestinationConnectorProperties(
-        @Nullable FlowEventBridgeDestinationProperties eventBridge,
-        @Nullable FlowLookoutMetricsDestinationProperties lookoutMetrics,
-        @Nullable FlowRedshiftDestinationProperties redshift,
-        @Nullable FlowS3DestinationProperties s3,
-        @Nullable FlowSalesforceDestinationProperties salesforce,
-        @Nullable FlowSnowflakeDestinationProperties snowflake,
-        @Nullable FlowUpsolverDestinationProperties upsolver,
-        @Nullable FlowZendeskDestinationProperties zendesk) {
+        @OutputCustomType.Parameter("eventBridge") @Nullable FlowEventBridgeDestinationProperties eventBridge,
+        @OutputCustomType.Parameter("lookoutMetrics") @Nullable FlowLookoutMetricsDestinationProperties lookoutMetrics,
+        @OutputCustomType.Parameter("redshift") @Nullable FlowRedshiftDestinationProperties redshift,
+        @OutputCustomType.Parameter("s3") @Nullable FlowS3DestinationProperties s3,
+        @OutputCustomType.Parameter("salesforce") @Nullable FlowSalesforceDestinationProperties salesforce,
+        @OutputCustomType.Parameter("snowflake") @Nullable FlowSnowflakeDestinationProperties snowflake,
+        @OutputCustomType.Parameter("upsolver") @Nullable FlowUpsolverDestinationProperties upsolver,
+        @OutputCustomType.Parameter("zendesk") @Nullable FlowZendeskDestinationProperties zendesk) {
         this.eventBridge = eventBridge;
         this.lookoutMetrics = lookoutMetrics;
         this.redshift = redshift;

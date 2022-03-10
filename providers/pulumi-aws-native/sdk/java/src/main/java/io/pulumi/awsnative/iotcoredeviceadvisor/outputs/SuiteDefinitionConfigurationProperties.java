@@ -20,13 +20,13 @@ public final class SuiteDefinitionConfigurationProperties {
     private final String rootGroup;
     private final @Nullable String suiteDefinitionName;
 
-    @OutputCustomType.Constructor({"devicePermissionRoleArn","devices","intendedForQualification","rootGroup","suiteDefinitionName"})
+    @OutputCustomType.Constructor
     private SuiteDefinitionConfigurationProperties(
-        String devicePermissionRoleArn,
-        @Nullable List<SuiteDefinitionDeviceUnderTest> devices,
-        @Nullable Boolean intendedForQualification,
-        String rootGroup,
-        @Nullable String suiteDefinitionName) {
+        @OutputCustomType.Parameter("devicePermissionRoleArn") String devicePermissionRoleArn,
+        @OutputCustomType.Parameter("devices") @Nullable List<SuiteDefinitionDeviceUnderTest> devices,
+        @OutputCustomType.Parameter("intendedForQualification") @Nullable Boolean intendedForQualification,
+        @OutputCustomType.Parameter("rootGroup") String rootGroup,
+        @OutputCustomType.Parameter("suiteDefinitionName") @Nullable String suiteDefinitionName) {
         this.devicePermissionRoleArn = devicePermissionRoleArn;
         this.devices = devices;
         this.intendedForQualification = intendedForQualification;

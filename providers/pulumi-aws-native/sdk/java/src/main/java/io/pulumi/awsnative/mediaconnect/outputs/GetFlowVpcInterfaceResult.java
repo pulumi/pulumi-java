@@ -33,12 +33,12 @@ public final class GetFlowVpcInterfaceResult {
      */
     private final @Nullable String subnetId;
 
-    @OutputCustomType.Constructor({"networkInterfaceIds","roleArn","securityGroupIds","subnetId"})
+    @OutputCustomType.Constructor
     private GetFlowVpcInterfaceResult(
-        @Nullable List<String> networkInterfaceIds,
-        @Nullable String roleArn,
-        @Nullable List<String> securityGroupIds,
-        @Nullable String subnetId) {
+        @OutputCustomType.Parameter("networkInterfaceIds") @Nullable List<String> networkInterfaceIds,
+        @OutputCustomType.Parameter("roleArn") @Nullable String roleArn,
+        @OutputCustomType.Parameter("securityGroupIds") @Nullable List<String> securityGroupIds,
+        @OutputCustomType.Parameter("subnetId") @Nullable String subnetId) {
         this.networkInterfaceIds = networkInterfaceIds;
         this.roleArn = roleArn;
         this.securityGroupIds = securityGroupIds;

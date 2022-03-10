@@ -23,15 +23,15 @@ public final class WirelessDeviceLoRaWANDevice {
     private final @Nullable WirelessDeviceOtaaV11 otaaV11;
     private final @Nullable String serviceProfileId;
 
-    @OutputCustomType.Constructor({"abpV10x","abpV11","devEui","deviceProfileId","otaaV10x","otaaV11","serviceProfileId"})
+    @OutputCustomType.Constructor
     private WirelessDeviceLoRaWANDevice(
-        @Nullable WirelessDeviceAbpV10x abpV10x,
-        @Nullable WirelessDeviceAbpV11 abpV11,
-        @Nullable String devEui,
-        @Nullable String deviceProfileId,
-        @Nullable WirelessDeviceOtaaV10x otaaV10x,
-        @Nullable WirelessDeviceOtaaV11 otaaV11,
-        @Nullable String serviceProfileId) {
+        @OutputCustomType.Parameter("abpV10x") @Nullable WirelessDeviceAbpV10x abpV10x,
+        @OutputCustomType.Parameter("abpV11") @Nullable WirelessDeviceAbpV11 abpV11,
+        @OutputCustomType.Parameter("devEui") @Nullable String devEui,
+        @OutputCustomType.Parameter("deviceProfileId") @Nullable String deviceProfileId,
+        @OutputCustomType.Parameter("otaaV10x") @Nullable WirelessDeviceOtaaV10x otaaV10x,
+        @OutputCustomType.Parameter("otaaV11") @Nullable WirelessDeviceOtaaV11 otaaV11,
+        @OutputCustomType.Parameter("serviceProfileId") @Nullable String serviceProfileId) {
         this.abpV10x = abpV10x;
         this.abpV11 = abpV11;
         this.devEui = devEui;

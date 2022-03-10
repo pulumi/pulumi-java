@@ -23,10 +23,10 @@ public final class GetAppImageConfigResult {
      */
     private final @Nullable AppImageConfigKernelGatewayImageConfig kernelGatewayImageConfig;
 
-    @OutputCustomType.Constructor({"appImageConfigArn","kernelGatewayImageConfig"})
+    @OutputCustomType.Constructor
     private GetAppImageConfigResult(
-        @Nullable String appImageConfigArn,
-        @Nullable AppImageConfigKernelGatewayImageConfig kernelGatewayImageConfig) {
+        @OutputCustomType.Parameter("appImageConfigArn") @Nullable String appImageConfigArn,
+        @OutputCustomType.Parameter("kernelGatewayImageConfig") @Nullable AppImageConfigKernelGatewayImageConfig kernelGatewayImageConfig) {
         this.appImageConfigArn = appImageConfigArn;
         this.kernelGatewayImageConfig = kernelGatewayImageConfig;
     }

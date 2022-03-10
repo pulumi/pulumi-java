@@ -29,11 +29,11 @@ public final class GetConformancePackResult {
      */
     private final @Nullable String deliveryS3KeyPrefix;
 
-    @OutputCustomType.Constructor({"conformancePackInputParameters","deliveryS3Bucket","deliveryS3KeyPrefix"})
+    @OutputCustomType.Constructor
     private GetConformancePackResult(
-        @Nullable List<ConformancePackInputParameter> conformancePackInputParameters,
-        @Nullable String deliveryS3Bucket,
-        @Nullable String deliveryS3KeyPrefix) {
+        @OutputCustomType.Parameter("conformancePackInputParameters") @Nullable List<ConformancePackInputParameter> conformancePackInputParameters,
+        @OutputCustomType.Parameter("deliveryS3Bucket") @Nullable String deliveryS3Bucket,
+        @OutputCustomType.Parameter("deliveryS3KeyPrefix") @Nullable String deliveryS3KeyPrefix) {
         this.conformancePackInputParameters = conformancePackInputParameters;
         this.deliveryS3Bucket = deliveryS3Bucket;
         this.deliveryS3KeyPrefix = deliveryS3KeyPrefix;

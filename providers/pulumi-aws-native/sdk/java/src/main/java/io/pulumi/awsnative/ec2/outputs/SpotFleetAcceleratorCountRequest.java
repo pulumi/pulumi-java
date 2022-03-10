@@ -14,10 +14,10 @@ public final class SpotFleetAcceleratorCountRequest {
     private final @Nullable Integer max;
     private final @Nullable Integer min;
 
-    @OutputCustomType.Constructor({"max","min"})
+    @OutputCustomType.Constructor
     private SpotFleetAcceleratorCountRequest(
-        @Nullable Integer max,
-        @Nullable Integer min) {
+        @OutputCustomType.Parameter("max") @Nullable Integer max,
+        @OutputCustomType.Parameter("min") @Nullable Integer min) {
         this.max = max;
         this.min = min;
     }

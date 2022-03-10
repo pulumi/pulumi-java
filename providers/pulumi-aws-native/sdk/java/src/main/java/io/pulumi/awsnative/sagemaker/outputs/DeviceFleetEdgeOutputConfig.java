@@ -22,10 +22,10 @@ public final class DeviceFleetEdgeOutputConfig {
      */
     private final String s3OutputLocation;
 
-    @OutputCustomType.Constructor({"kmsKeyId","s3OutputLocation"})
+    @OutputCustomType.Constructor
     private DeviceFleetEdgeOutputConfig(
-        @Nullable String kmsKeyId,
-        String s3OutputLocation) {
+        @OutputCustomType.Parameter("kmsKeyId") @Nullable String kmsKeyId,
+        @OutputCustomType.Parameter("s3OutputLocation") String s3OutputLocation) {
         this.kmsKeyId = kmsKeyId;
         this.s3OutputLocation = s3OutputLocation;
     }

@@ -27,11 +27,11 @@ public final class ApplicationJMXPrometheusExporter {
      */
     private final @Nullable String prometheusPort;
 
-    @OutputCustomType.Constructor({"hostPort","jMXURL","prometheusPort"})
+    @OutputCustomType.Constructor
     private ApplicationJMXPrometheusExporter(
-        @Nullable String hostPort,
-        @Nullable String jMXURL,
-        @Nullable String prometheusPort) {
+        @OutputCustomType.Parameter("hostPort") @Nullable String hostPort,
+        @OutputCustomType.Parameter("jMXURL") @Nullable String jMXURL,
+        @OutputCustomType.Parameter("prometheusPort") @Nullable String prometheusPort) {
         this.hostPort = hostPort;
         this.jMXURL = jMXURL;
         this.prometheusPort = prometheusPort;

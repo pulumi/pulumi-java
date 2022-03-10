@@ -15,10 +15,10 @@ public final class GetFleetResult {
     private final @Nullable String arn;
     private final @Nullable FleetTags tags;
 
-    @OutputCustomType.Constructor({"arn","tags"})
+    @OutputCustomType.Constructor
     private GetFleetResult(
-        @Nullable String arn,
-        @Nullable FleetTags tags) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("tags") @Nullable FleetTags tags) {
         this.arn = arn;
         this.tags = tags;
     }

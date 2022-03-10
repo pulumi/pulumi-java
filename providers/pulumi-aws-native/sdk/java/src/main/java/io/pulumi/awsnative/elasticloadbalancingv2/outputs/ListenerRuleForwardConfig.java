@@ -16,10 +16,10 @@ public final class ListenerRuleForwardConfig {
     private final @Nullable ListenerRuleTargetGroupStickinessConfig targetGroupStickinessConfig;
     private final @Nullable List<ListenerRuleTargetGroupTuple> targetGroups;
 
-    @OutputCustomType.Constructor({"targetGroupStickinessConfig","targetGroups"})
+    @OutputCustomType.Constructor
     private ListenerRuleForwardConfig(
-        @Nullable ListenerRuleTargetGroupStickinessConfig targetGroupStickinessConfig,
-        @Nullable List<ListenerRuleTargetGroupTuple> targetGroups) {
+        @OutputCustomType.Parameter("targetGroupStickinessConfig") @Nullable ListenerRuleTargetGroupStickinessConfig targetGroupStickinessConfig,
+        @OutputCustomType.Parameter("targetGroups") @Nullable List<ListenerRuleTargetGroupTuple> targetGroups) {
         this.targetGroupStickinessConfig = targetGroupStickinessConfig;
         this.targetGroups = targetGroups;
     }

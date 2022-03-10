@@ -21,10 +21,10 @@ public final class ModelExplainabilityJobDefinitionVpcConfig {
      */
     private final List<String> subnets;
 
-    @OutputCustomType.Constructor({"securityGroupIds","subnets"})
+    @OutputCustomType.Constructor
     private ModelExplainabilityJobDefinitionVpcConfig(
-        List<String> securityGroupIds,
-        List<String> subnets) {
+        @OutputCustomType.Parameter("securityGroupIds") List<String> securityGroupIds,
+        @OutputCustomType.Parameter("subnets") List<String> subnets) {
         this.securityGroupIds = securityGroupIds;
         this.subnets = subnets;
     }

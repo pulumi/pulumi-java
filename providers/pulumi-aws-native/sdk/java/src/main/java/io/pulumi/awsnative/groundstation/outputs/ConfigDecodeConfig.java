@@ -13,8 +13,8 @@ import javax.annotation.Nullable;
 public final class ConfigDecodeConfig {
     private final @Nullable String unvalidatedJSON;
 
-    @OutputCustomType.Constructor({"unvalidatedJSON"})
-    private ConfigDecodeConfig(@Nullable String unvalidatedJSON) {
+    @OutputCustomType.Constructor
+    private ConfigDecodeConfig(@OutputCustomType.Parameter("unvalidatedJSON") @Nullable String unvalidatedJSON) {
         this.unvalidatedJSON = unvalidatedJSON;
     }
 

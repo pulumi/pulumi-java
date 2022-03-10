@@ -21,13 +21,13 @@ public final class AnomalyDetectorMetricSource {
     private final @Nullable AnomalyDetectorRedshiftSourceConfig redshiftSourceConfig;
     private final @Nullable AnomalyDetectorS3SourceConfig s3SourceConfig;
 
-    @OutputCustomType.Constructor({"appFlowConfig","cloudwatchConfig","rDSSourceConfig","redshiftSourceConfig","s3SourceConfig"})
+    @OutputCustomType.Constructor
     private AnomalyDetectorMetricSource(
-        @Nullable AnomalyDetectorAppFlowConfig appFlowConfig,
-        @Nullable AnomalyDetectorCloudwatchConfig cloudwatchConfig,
-        @Nullable AnomalyDetectorRDSSourceConfig rDSSourceConfig,
-        @Nullable AnomalyDetectorRedshiftSourceConfig redshiftSourceConfig,
-        @Nullable AnomalyDetectorS3SourceConfig s3SourceConfig) {
+        @OutputCustomType.Parameter("appFlowConfig") @Nullable AnomalyDetectorAppFlowConfig appFlowConfig,
+        @OutputCustomType.Parameter("cloudwatchConfig") @Nullable AnomalyDetectorCloudwatchConfig cloudwatchConfig,
+        @OutputCustomType.Parameter("rDSSourceConfig") @Nullable AnomalyDetectorRDSSourceConfig rDSSourceConfig,
+        @OutputCustomType.Parameter("redshiftSourceConfig") @Nullable AnomalyDetectorRedshiftSourceConfig redshiftSourceConfig,
+        @OutputCustomType.Parameter("s3SourceConfig") @Nullable AnomalyDetectorS3SourceConfig s3SourceConfig) {
         this.appFlowConfig = appFlowConfig;
         this.cloudwatchConfig = cloudwatchConfig;
         this.rDSSourceConfig = rDSSourceConfig;

@@ -30,19 +30,19 @@ public final class ComponentVersionLambdaExecutionParameters {
     private final @Nullable Integer statusTimeoutInSeconds;
     private final @Nullable Integer timeoutInSeconds;
 
-    @OutputCustomType.Constructor({"environmentVariables","eventSources","execArgs","inputPayloadEncodingType","linuxProcessParams","maxIdleTimeInSeconds","maxInstancesCount","maxQueueSize","pinned","statusTimeoutInSeconds","timeoutInSeconds"})
+    @OutputCustomType.Constructor
     private ComponentVersionLambdaExecutionParameters(
-        @Nullable Object environmentVariables,
-        @Nullable List<ComponentVersionLambdaEventSource> eventSources,
-        @Nullable List<String> execArgs,
-        @Nullable ComponentVersionLambdaExecutionParametersInputPayloadEncodingType inputPayloadEncodingType,
-        @Nullable ComponentVersionLambdaLinuxProcessParams linuxProcessParams,
-        @Nullable Integer maxIdleTimeInSeconds,
-        @Nullable Integer maxInstancesCount,
-        @Nullable Integer maxQueueSize,
-        @Nullable Boolean pinned,
-        @Nullable Integer statusTimeoutInSeconds,
-        @Nullable Integer timeoutInSeconds) {
+        @OutputCustomType.Parameter("environmentVariables") @Nullable Object environmentVariables,
+        @OutputCustomType.Parameter("eventSources") @Nullable List<ComponentVersionLambdaEventSource> eventSources,
+        @OutputCustomType.Parameter("execArgs") @Nullable List<String> execArgs,
+        @OutputCustomType.Parameter("inputPayloadEncodingType") @Nullable ComponentVersionLambdaExecutionParametersInputPayloadEncodingType inputPayloadEncodingType,
+        @OutputCustomType.Parameter("linuxProcessParams") @Nullable ComponentVersionLambdaLinuxProcessParams linuxProcessParams,
+        @OutputCustomType.Parameter("maxIdleTimeInSeconds") @Nullable Integer maxIdleTimeInSeconds,
+        @OutputCustomType.Parameter("maxInstancesCount") @Nullable Integer maxInstancesCount,
+        @OutputCustomType.Parameter("maxQueueSize") @Nullable Integer maxQueueSize,
+        @OutputCustomType.Parameter("pinned") @Nullable Boolean pinned,
+        @OutputCustomType.Parameter("statusTimeoutInSeconds") @Nullable Integer statusTimeoutInSeconds,
+        @OutputCustomType.Parameter("timeoutInSeconds") @Nullable Integer timeoutInSeconds) {
         this.environmentVariables = environmentVariables;
         this.eventSources = eventSources;
         this.execArgs = execArgs;

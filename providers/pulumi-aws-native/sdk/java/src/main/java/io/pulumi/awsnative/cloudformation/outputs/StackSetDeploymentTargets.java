@@ -22,10 +22,10 @@ public final class StackSetDeploymentTargets {
      */
     private final @Nullable List<String> organizationalUnitIds;
 
-    @OutputCustomType.Constructor({"accounts","organizationalUnitIds"})
+    @OutputCustomType.Constructor
     private StackSetDeploymentTargets(
-        @Nullable List<String> accounts,
-        @Nullable List<String> organizationalUnitIds) {
+        @OutputCustomType.Parameter("accounts") @Nullable List<String> accounts,
+        @OutputCustomType.Parameter("organizationalUnitIds") @Nullable List<String> organizationalUnitIds) {
         this.accounts = accounts;
         this.organizationalUnitIds = organizationalUnitIds;
     }

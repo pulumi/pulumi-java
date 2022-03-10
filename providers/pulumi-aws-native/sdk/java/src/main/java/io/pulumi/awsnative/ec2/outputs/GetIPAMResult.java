@@ -52,16 +52,16 @@ public final class GetIPAMResult {
      */
     private final @Nullable List<IPAMTag> tags;
 
-    @OutputCustomType.Constructor({"arn","description","ipamId","operatingRegions","privateDefaultScopeId","publicDefaultScopeId","scopeCount","tags"})
+    @OutputCustomType.Constructor
     private GetIPAMResult(
-        @Nullable String arn,
-        @Nullable String description,
-        @Nullable String ipamId,
-        @Nullable List<IPAMIpamOperatingRegion> operatingRegions,
-        @Nullable String privateDefaultScopeId,
-        @Nullable String publicDefaultScopeId,
-        @Nullable Integer scopeCount,
-        @Nullable List<IPAMTag> tags) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("ipamId") @Nullable String ipamId,
+        @OutputCustomType.Parameter("operatingRegions") @Nullable List<IPAMIpamOperatingRegion> operatingRegions,
+        @OutputCustomType.Parameter("privateDefaultScopeId") @Nullable String privateDefaultScopeId,
+        @OutputCustomType.Parameter("publicDefaultScopeId") @Nullable String publicDefaultScopeId,
+        @OutputCustomType.Parameter("scopeCount") @Nullable Integer scopeCount,
+        @OutputCustomType.Parameter("tags") @Nullable List<IPAMTag> tags) {
         this.arn = arn;
         this.description = description;
         this.ipamId = ipamId;

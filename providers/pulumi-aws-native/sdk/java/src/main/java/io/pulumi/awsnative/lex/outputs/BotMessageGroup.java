@@ -18,10 +18,10 @@ public final class BotMessageGroup {
      */
     private final @Nullable List<BotMessage> variations;
 
-    @OutputCustomType.Constructor({"message","variations"})
+    @OutputCustomType.Constructor
     private BotMessageGroup(
-        BotMessage message,
-        @Nullable List<BotMessage> variations) {
+        @OutputCustomType.Parameter("message") BotMessage message,
+        @OutputCustomType.Parameter("variations") @Nullable List<BotMessage> variations) {
         this.message = message;
         this.variations = variations;
     }

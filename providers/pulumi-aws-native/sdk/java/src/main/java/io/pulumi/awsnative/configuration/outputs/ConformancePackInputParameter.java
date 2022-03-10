@@ -12,10 +12,10 @@ public final class ConformancePackInputParameter {
     private final String parameterName;
     private final String parameterValue;
 
-    @OutputCustomType.Constructor({"parameterName","parameterValue"})
+    @OutputCustomType.Constructor
     private ConformancePackInputParameter(
-        String parameterName,
-        String parameterValue) {
+        @OutputCustomType.Parameter("parameterName") String parameterName,
+        @OutputCustomType.Parameter("parameterValue") String parameterValue) {
         this.parameterName = parameterName;
         this.parameterValue = parameterValue;
     }

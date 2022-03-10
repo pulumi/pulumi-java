@@ -12,10 +12,10 @@ public final class TableProvisionedThroughput {
     private final Integer readCapacityUnits;
     private final Integer writeCapacityUnits;
 
-    @OutputCustomType.Constructor({"readCapacityUnits","writeCapacityUnits"})
+    @OutputCustomType.Constructor
     private TableProvisionedThroughput(
-        Integer readCapacityUnits,
-        Integer writeCapacityUnits) {
+        @OutputCustomType.Parameter("readCapacityUnits") Integer readCapacityUnits,
+        @OutputCustomType.Parameter("writeCapacityUnits") Integer writeCapacityUnits) {
         this.readCapacityUnits = readCapacityUnits;
         this.writeCapacityUnits = writeCapacityUnits;
     }

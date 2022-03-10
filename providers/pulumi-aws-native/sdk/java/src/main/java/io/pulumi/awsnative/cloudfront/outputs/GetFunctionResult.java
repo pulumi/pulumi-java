@@ -19,13 +19,13 @@ public final class GetFunctionResult {
     private final @Nullable String name;
     private final @Nullable String stage;
 
-    @OutputCustomType.Constructor({"functionARN","functionConfig","functionMetadata","name","stage"})
+    @OutputCustomType.Constructor
     private GetFunctionResult(
-        @Nullable String functionARN,
-        @Nullable FunctionConfig functionConfig,
-        @Nullable FunctionMetadata functionMetadata,
-        @Nullable String name,
-        @Nullable String stage) {
+        @OutputCustomType.Parameter("functionARN") @Nullable String functionARN,
+        @OutputCustomType.Parameter("functionConfig") @Nullable FunctionConfig functionConfig,
+        @OutputCustomType.Parameter("functionMetadata") @Nullable FunctionMetadata functionMetadata,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("stage") @Nullable String stage) {
         this.functionARN = functionARN;
         this.functionConfig = functionConfig;
         this.functionMetadata = functionMetadata;

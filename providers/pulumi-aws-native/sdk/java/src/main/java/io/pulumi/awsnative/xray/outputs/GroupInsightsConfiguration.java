@@ -22,10 +22,10 @@ public final class GroupInsightsConfiguration {
      */
     private final @Nullable Boolean notificationsEnabled;
 
-    @OutputCustomType.Constructor({"insightsEnabled","notificationsEnabled"})
+    @OutputCustomType.Constructor
     private GroupInsightsConfiguration(
-        @Nullable Boolean insightsEnabled,
-        @Nullable Boolean notificationsEnabled) {
+        @OutputCustomType.Parameter("insightsEnabled") @Nullable Boolean insightsEnabled,
+        @OutputCustomType.Parameter("notificationsEnabled") @Nullable Boolean notificationsEnabled) {
         this.insightsEnabled = insightsEnabled;
         this.notificationsEnabled = notificationsEnabled;
     }

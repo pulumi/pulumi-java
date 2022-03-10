@@ -64,18 +64,18 @@ public final class DashboardVersion {
      */
     private final @Nullable Double versionNumber;
 
-    @OutputCustomType.Constructor({"arn","createdTime","dataSetArns","description","errors","sheets","sourceEntityArn","status","themeArn","versionNumber"})
+    @OutputCustomType.Constructor
     private DashboardVersion(
-        @Nullable String arn,
-        @Nullable String createdTime,
-        @Nullable List<String> dataSetArns,
-        @Nullable String description,
-        @Nullable List<DashboardError> errors,
-        @Nullable List<DashboardSheet> sheets,
-        @Nullable String sourceEntityArn,
-        @Nullable DashboardResourceStatus status,
-        @Nullable String themeArn,
-        @Nullable Double versionNumber) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("createdTime") @Nullable String createdTime,
+        @OutputCustomType.Parameter("dataSetArns") @Nullable List<String> dataSetArns,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("errors") @Nullable List<DashboardError> errors,
+        @OutputCustomType.Parameter("sheets") @Nullable List<DashboardSheet> sheets,
+        @OutputCustomType.Parameter("sourceEntityArn") @Nullable String sourceEntityArn,
+        @OutputCustomType.Parameter("status") @Nullable DashboardResourceStatus status,
+        @OutputCustomType.Parameter("themeArn") @Nullable String themeArn,
+        @OutputCustomType.Parameter("versionNumber") @Nullable Double versionNumber) {
         this.arn = arn;
         this.createdTime = createdTime;
         this.dataSetArns = dataSetArns;

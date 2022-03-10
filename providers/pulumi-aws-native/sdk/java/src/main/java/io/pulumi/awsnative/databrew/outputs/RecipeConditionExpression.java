@@ -27,11 +27,11 @@ public final class RecipeConditionExpression {
      */
     private final @Nullable String value;
 
-    @OutputCustomType.Constructor({"condition","targetColumn","value"})
+    @OutputCustomType.Constructor
     private RecipeConditionExpression(
-        String condition,
-        String targetColumn,
-        @Nullable String value) {
+        @OutputCustomType.Parameter("condition") String condition,
+        @OutputCustomType.Parameter("targetColumn") String targetColumn,
+        @OutputCustomType.Parameter("value") @Nullable String value) {
         this.condition = condition;
         this.targetColumn = targetColumn;
         this.value = value;

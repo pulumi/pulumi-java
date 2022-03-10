@@ -11,8 +11,8 @@ import java.util.Objects;
 public final class ConnectorKafkaCluster {
     private final ConnectorApacheKafkaCluster apacheKafkaCluster;
 
-    @OutputCustomType.Constructor({"apacheKafkaCluster"})
-    private ConnectorKafkaCluster(ConnectorApacheKafkaCluster apacheKafkaCluster) {
+    @OutputCustomType.Constructor
+    private ConnectorKafkaCluster(@OutputCustomType.Parameter("apacheKafkaCluster") ConnectorApacheKafkaCluster apacheKafkaCluster) {
         this.apacheKafkaCluster = apacheKafkaCluster;
     }
 

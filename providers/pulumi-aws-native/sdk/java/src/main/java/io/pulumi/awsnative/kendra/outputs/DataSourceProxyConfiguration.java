@@ -16,11 +16,11 @@ public final class DataSourceProxyConfiguration {
     private final String host;
     private final Integer port;
 
-    @OutputCustomType.Constructor({"credentials","host","port"})
+    @OutputCustomType.Constructor
     private DataSourceProxyConfiguration(
-        @Nullable String credentials,
-        String host,
-        Integer port) {
+        @OutputCustomType.Parameter("credentials") @Nullable String credentials,
+        @OutputCustomType.Parameter("host") String host,
+        @OutputCustomType.Parameter("port") Integer port) {
         this.credentials = credentials;
         this.host = host;
         this.port = port;

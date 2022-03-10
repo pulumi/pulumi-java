@@ -15,8 +15,8 @@ public final class EventIntegrationEventFilter {
      */
     private final String source;
 
-    @OutputCustomType.Constructor({"source"})
-    private EventIntegrationEventFilter(String source) {
+    @OutputCustomType.Constructor
+    private EventIntegrationEventFilter(@OutputCustomType.Parameter("source") String source) {
         this.source = source;
     }
 

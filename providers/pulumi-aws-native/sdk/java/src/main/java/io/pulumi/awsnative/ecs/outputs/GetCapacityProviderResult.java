@@ -16,10 +16,10 @@ public final class GetCapacityProviderResult {
     private final @Nullable CapacityProviderAutoScalingGroupProvider autoScalingGroupProvider;
     private final @Nullable List<CapacityProviderTag> tags;
 
-    @OutputCustomType.Constructor({"autoScalingGroupProvider","tags"})
+    @OutputCustomType.Constructor
     private GetCapacityProviderResult(
-        @Nullable CapacityProviderAutoScalingGroupProvider autoScalingGroupProvider,
-        @Nullable List<CapacityProviderTag> tags) {
+        @OutputCustomType.Parameter("autoScalingGroupProvider") @Nullable CapacityProviderAutoScalingGroupProvider autoScalingGroupProvider,
+        @OutputCustomType.Parameter("tags") @Nullable List<CapacityProviderTag> tags) {
         this.autoScalingGroupProvider = autoScalingGroupProvider;
         this.tags = tags;
     }

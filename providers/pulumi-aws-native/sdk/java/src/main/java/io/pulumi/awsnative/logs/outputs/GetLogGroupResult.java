@@ -35,12 +35,12 @@ public final class GetLogGroupResult {
      */
     private final @Nullable List<LogGroupTag> tags;
 
-    @OutputCustomType.Constructor({"arn","kmsKeyId","retentionInDays","tags"})
+    @OutputCustomType.Constructor
     private GetLogGroupResult(
-        @Nullable String arn,
-        @Nullable String kmsKeyId,
-        @Nullable Integer retentionInDays,
-        @Nullable List<LogGroupTag> tags) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("kmsKeyId") @Nullable String kmsKeyId,
+        @OutputCustomType.Parameter("retentionInDays") @Nullable Integer retentionInDays,
+        @OutputCustomType.Parameter("tags") @Nullable List<LogGroupTag> tags) {
         this.arn = arn;
         this.kmsKeyId = kmsKeyId;
         this.retentionInDays = retentionInDays;

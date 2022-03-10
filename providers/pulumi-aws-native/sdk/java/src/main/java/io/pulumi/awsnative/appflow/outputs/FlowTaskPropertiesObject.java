@@ -13,10 +13,10 @@ public final class FlowTaskPropertiesObject {
     private final FlowOperatorPropertiesKeys key;
     private final String value;
 
-    @OutputCustomType.Constructor({"key","value"})
+    @OutputCustomType.Constructor
     private FlowTaskPropertiesObject(
-        FlowOperatorPropertiesKeys key,
-        String value) {
+        @OutputCustomType.Parameter("key") FlowOperatorPropertiesKeys key,
+        @OutputCustomType.Parameter("value") String value) {
         this.key = key;
         this.value = value;
     }

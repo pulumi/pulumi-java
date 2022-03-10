@@ -71,19 +71,19 @@ public final class GetWirelessDeviceResult {
      */
     private final @Nullable WirelessDeviceType type;
 
-    @OutputCustomType.Constructor({"arn","description","destinationName","id","lastUplinkReceivedAt","loRaWAN","name","tags","thingArn","thingName","type"})
+    @OutputCustomType.Constructor
     private GetWirelessDeviceResult(
-        @Nullable String arn,
-        @Nullable String description,
-        @Nullable String destinationName,
-        @Nullable String id,
-        @Nullable String lastUplinkReceivedAt,
-        @Nullable WirelessDeviceLoRaWANDevice loRaWAN,
-        @Nullable String name,
-        @Nullable List<WirelessDeviceTag> tags,
-        @Nullable String thingArn,
-        @Nullable String thingName,
-        @Nullable WirelessDeviceType type) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("destinationName") @Nullable String destinationName,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("lastUplinkReceivedAt") @Nullable String lastUplinkReceivedAt,
+        @OutputCustomType.Parameter("loRaWAN") @Nullable WirelessDeviceLoRaWANDevice loRaWAN,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("tags") @Nullable List<WirelessDeviceTag> tags,
+        @OutputCustomType.Parameter("thingArn") @Nullable String thingArn,
+        @OutputCustomType.Parameter("thingName") @Nullable String thingName,
+        @OutputCustomType.Parameter("type") @Nullable WirelessDeviceType type) {
         this.arn = arn;
         this.description = description;
         this.destinationName = destinationName;

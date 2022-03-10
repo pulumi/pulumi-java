@@ -17,11 +17,11 @@ public final class BotFulfillmentCodeHookSetting {
     private final @Nullable BotFulfillmentUpdatesSpecification fulfillmentUpdatesSpecification;
     private final @Nullable BotPostFulfillmentStatusSpecification postFulfillmentStatusSpecification;
 
-    @OutputCustomType.Constructor({"enabled","fulfillmentUpdatesSpecification","postFulfillmentStatusSpecification"})
+    @OutputCustomType.Constructor
     private BotFulfillmentCodeHookSetting(
-        Boolean enabled,
-        @Nullable BotFulfillmentUpdatesSpecification fulfillmentUpdatesSpecification,
-        @Nullable BotPostFulfillmentStatusSpecification postFulfillmentStatusSpecification) {
+        @OutputCustomType.Parameter("enabled") Boolean enabled,
+        @OutputCustomType.Parameter("fulfillmentUpdatesSpecification") @Nullable BotFulfillmentUpdatesSpecification fulfillmentUpdatesSpecification,
+        @OutputCustomType.Parameter("postFulfillmentStatusSpecification") @Nullable BotPostFulfillmentStatusSpecification postFulfillmentStatusSpecification) {
         this.enabled = enabled;
         this.fulfillmentUpdatesSpecification = fulfillmentUpdatesSpecification;
         this.postFulfillmentStatusSpecification = postFulfillmentStatusSpecification;

@@ -54,15 +54,15 @@ public final class ApplicationConfigurationDetails {
      */
     private final @Nullable List<ApplicationWindowsEvent> windowsEvents;
 
-    @OutputCustomType.Constructor({"alarmMetrics","alarms","hAClusterPrometheusExporter","hANAPrometheusExporter","jMXPrometheusExporter","logs","windowsEvents"})
+    @OutputCustomType.Constructor
     private ApplicationConfigurationDetails(
-        @Nullable List<ApplicationAlarmMetric> alarmMetrics,
-        @Nullable List<ApplicationAlarm> alarms,
-        @Nullable ApplicationHAClusterPrometheusExporter hAClusterPrometheusExporter,
-        @Nullable ApplicationHANAPrometheusExporter hANAPrometheusExporter,
-        @Nullable ApplicationJMXPrometheusExporter jMXPrometheusExporter,
-        @Nullable List<ApplicationLog> logs,
-        @Nullable List<ApplicationWindowsEvent> windowsEvents) {
+        @OutputCustomType.Parameter("alarmMetrics") @Nullable List<ApplicationAlarmMetric> alarmMetrics,
+        @OutputCustomType.Parameter("alarms") @Nullable List<ApplicationAlarm> alarms,
+        @OutputCustomType.Parameter("hAClusterPrometheusExporter") @Nullable ApplicationHAClusterPrometheusExporter hAClusterPrometheusExporter,
+        @OutputCustomType.Parameter("hANAPrometheusExporter") @Nullable ApplicationHANAPrometheusExporter hANAPrometheusExporter,
+        @OutputCustomType.Parameter("jMXPrometheusExporter") @Nullable ApplicationJMXPrometheusExporter jMXPrometheusExporter,
+        @OutputCustomType.Parameter("logs") @Nullable List<ApplicationLog> logs,
+        @OutputCustomType.Parameter("windowsEvents") @Nullable List<ApplicationWindowsEvent> windowsEvents) {
         this.alarmMetrics = alarmMetrics;
         this.alarms = alarms;
         this.hAClusterPrometheusExporter = hAClusterPrometheusExporter;

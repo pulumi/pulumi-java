@@ -26,11 +26,11 @@ public final class ApplicationLogPattern {
      */
     private final Integer rank;
 
-    @OutputCustomType.Constructor({"pattern","patternName","rank"})
+    @OutputCustomType.Constructor
     private ApplicationLogPattern(
-        String pattern,
-        String patternName,
-        Integer rank) {
+        @OutputCustomType.Parameter("pattern") String pattern,
+        @OutputCustomType.Parameter("patternName") String patternName,
+        @OutputCustomType.Parameter("rank") Integer rank) {
         this.pattern = pattern;
         this.patternName = patternName;
         this.rank = rank;

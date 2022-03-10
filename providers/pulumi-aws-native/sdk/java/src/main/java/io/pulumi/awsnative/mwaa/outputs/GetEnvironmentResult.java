@@ -53,28 +53,28 @@ public final class GetEnvironmentResult {
     private final @Nullable String webserverUrl;
     private final @Nullable String weeklyMaintenanceWindowStart;
 
-    @OutputCustomType.Constructor({"airflowConfigurationOptions","airflowVersion","arn","dagS3Path","environmentClass","executionRoleArn","loggingConfiguration","maxWorkers","minWorkers","networkConfiguration","pluginsS3ObjectVersion","pluginsS3Path","requirementsS3ObjectVersion","requirementsS3Path","schedulers","sourceBucketArn","tags","webserverAccessMode","webserverUrl","weeklyMaintenanceWindowStart"})
+    @OutputCustomType.Constructor
     private GetEnvironmentResult(
-        @Nullable Object airflowConfigurationOptions,
-        @Nullable String airflowVersion,
-        @Nullable String arn,
-        @Nullable String dagS3Path,
-        @Nullable String environmentClass,
-        @Nullable String executionRoleArn,
-        @Nullable EnvironmentLoggingConfiguration loggingConfiguration,
-        @Nullable Integer maxWorkers,
-        @Nullable Integer minWorkers,
-        @Nullable EnvironmentNetworkConfiguration networkConfiguration,
-        @Nullable String pluginsS3ObjectVersion,
-        @Nullable String pluginsS3Path,
-        @Nullable String requirementsS3ObjectVersion,
-        @Nullable String requirementsS3Path,
-        @Nullable Integer schedulers,
-        @Nullable String sourceBucketArn,
-        @Nullable Object tags,
-        @Nullable EnvironmentWebserverAccessMode webserverAccessMode,
-        @Nullable String webserverUrl,
-        @Nullable String weeklyMaintenanceWindowStart) {
+        @OutputCustomType.Parameter("airflowConfigurationOptions") @Nullable Object airflowConfigurationOptions,
+        @OutputCustomType.Parameter("airflowVersion") @Nullable String airflowVersion,
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("dagS3Path") @Nullable String dagS3Path,
+        @OutputCustomType.Parameter("environmentClass") @Nullable String environmentClass,
+        @OutputCustomType.Parameter("executionRoleArn") @Nullable String executionRoleArn,
+        @OutputCustomType.Parameter("loggingConfiguration") @Nullable EnvironmentLoggingConfiguration loggingConfiguration,
+        @OutputCustomType.Parameter("maxWorkers") @Nullable Integer maxWorkers,
+        @OutputCustomType.Parameter("minWorkers") @Nullable Integer minWorkers,
+        @OutputCustomType.Parameter("networkConfiguration") @Nullable EnvironmentNetworkConfiguration networkConfiguration,
+        @OutputCustomType.Parameter("pluginsS3ObjectVersion") @Nullable String pluginsS3ObjectVersion,
+        @OutputCustomType.Parameter("pluginsS3Path") @Nullable String pluginsS3Path,
+        @OutputCustomType.Parameter("requirementsS3ObjectVersion") @Nullable String requirementsS3ObjectVersion,
+        @OutputCustomType.Parameter("requirementsS3Path") @Nullable String requirementsS3Path,
+        @OutputCustomType.Parameter("schedulers") @Nullable Integer schedulers,
+        @OutputCustomType.Parameter("sourceBucketArn") @Nullable String sourceBucketArn,
+        @OutputCustomType.Parameter("tags") @Nullable Object tags,
+        @OutputCustomType.Parameter("webserverAccessMode") @Nullable EnvironmentWebserverAccessMode webserverAccessMode,
+        @OutputCustomType.Parameter("webserverUrl") @Nullable String webserverUrl,
+        @OutputCustomType.Parameter("weeklyMaintenanceWindowStart") @Nullable String weeklyMaintenanceWindowStart) {
         this.airflowConfigurationOptions = airflowConfigurationOptions;
         this.airflowVersion = airflowVersion;
         this.arn = arn;

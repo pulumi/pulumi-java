@@ -47,15 +47,15 @@ public final class GetAcceleratorResult {
     private final @Nullable String name;
     private final @Nullable List<AcceleratorTag> tags;
 
-    @OutputCustomType.Constructor({"acceleratorArn","dnsName","enabled","ipAddressType","ipAddresses","name","tags"})
+    @OutputCustomType.Constructor
     private GetAcceleratorResult(
-        @Nullable String acceleratorArn,
-        @Nullable String dnsName,
-        @Nullable Boolean enabled,
-        @Nullable AcceleratorIpAddressType ipAddressType,
-        @Nullable List<String> ipAddresses,
-        @Nullable String name,
-        @Nullable List<AcceleratorTag> tags) {
+        @OutputCustomType.Parameter("acceleratorArn") @Nullable String acceleratorArn,
+        @OutputCustomType.Parameter("dnsName") @Nullable String dnsName,
+        @OutputCustomType.Parameter("enabled") @Nullable Boolean enabled,
+        @OutputCustomType.Parameter("ipAddressType") @Nullable AcceleratorIpAddressType ipAddressType,
+        @OutputCustomType.Parameter("ipAddresses") @Nullable List<String> ipAddresses,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("tags") @Nullable List<AcceleratorTag> tags) {
         this.acceleratorArn = acceleratorArn;
         this.dnsName = dnsName;
         this.enabled = enabled;

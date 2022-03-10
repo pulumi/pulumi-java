@@ -24,18 +24,18 @@ public final class GetApplicationResult {
     private final @Nullable String launchPath;
     private final @Nullable String workingDirectory;
 
-    @OutputCustomType.Constructor({"appBlockArn","arn","attributesToDelete","createdTime","description","displayName","iconS3Location","launchParameters","launchPath","workingDirectory"})
+    @OutputCustomType.Constructor
     private GetApplicationResult(
-        @Nullable String appBlockArn,
-        @Nullable String arn,
-        @Nullable List<String> attributesToDelete,
-        @Nullable String createdTime,
-        @Nullable String description,
-        @Nullable String displayName,
-        @Nullable ApplicationS3Location iconS3Location,
-        @Nullable String launchParameters,
-        @Nullable String launchPath,
-        @Nullable String workingDirectory) {
+        @OutputCustomType.Parameter("appBlockArn") @Nullable String appBlockArn,
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("attributesToDelete") @Nullable List<String> attributesToDelete,
+        @OutputCustomType.Parameter("createdTime") @Nullable String createdTime,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("displayName") @Nullable String displayName,
+        @OutputCustomType.Parameter("iconS3Location") @Nullable ApplicationS3Location iconS3Location,
+        @OutputCustomType.Parameter("launchParameters") @Nullable String launchParameters,
+        @OutputCustomType.Parameter("launchPath") @Nullable String launchPath,
+        @OutputCustomType.Parameter("workingDirectory") @Nullable String workingDirectory) {
         this.appBlockArn = appBlockArn;
         this.arn = arn;
         this.attributesToDelete = attributesToDelete;

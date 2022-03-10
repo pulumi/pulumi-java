@@ -29,11 +29,11 @@ public final class GetLocationFSxWindowsResult {
      */
     private final @Nullable List<LocationFSxWindowsTag> tags;
 
-    @OutputCustomType.Constructor({"locationArn","locationUri","tags"})
+    @OutputCustomType.Constructor
     private GetLocationFSxWindowsResult(
-        @Nullable String locationArn,
-        @Nullable String locationUri,
-        @Nullable List<LocationFSxWindowsTag> tags) {
+        @OutputCustomType.Parameter("locationArn") @Nullable String locationArn,
+        @OutputCustomType.Parameter("locationUri") @Nullable String locationUri,
+        @OutputCustomType.Parameter("tags") @Nullable List<LocationFSxWindowsTag> tags) {
         this.locationArn = locationArn;
         this.locationUri = locationUri;
         this.tags = tags;

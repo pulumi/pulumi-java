@@ -24,10 +24,10 @@ public final class GetDeviceResult {
      */
     private final @Nullable List<DeviceTag> tags;
 
-    @OutputCustomType.Constructor({"device","tags"})
+    @OutputCustomType.Constructor
     private GetDeviceResult(
-        @Nullable Device device,
-        @Nullable List<DeviceTag> tags) {
+        @OutputCustomType.Parameter("device") @Nullable Device device,
+        @OutputCustomType.Parameter("tags") @Nullable List<DeviceTag> tags) {
         this.device = device;
         this.tags = tags;
     }

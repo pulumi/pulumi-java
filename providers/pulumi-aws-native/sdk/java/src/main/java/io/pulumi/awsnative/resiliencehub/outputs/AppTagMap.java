@@ -8,7 +8,7 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class AppTagMap {
-    @OutputCustomType.Constructor({})
+    @OutputCustomType.Constructor
     private AppTagMap() {
     }
 

@@ -22,10 +22,10 @@ public final class GetAccountResult {
      */
     private final @Nullable String id;
 
-    @OutputCustomType.Constructor({"cloudWatchRoleArn","id"})
+    @OutputCustomType.Constructor
     private GetAccountResult(
-        @Nullable String cloudWatchRoleArn,
-        @Nullable String id) {
+        @OutputCustomType.Parameter("cloudWatchRoleArn") @Nullable String cloudWatchRoleArn,
+        @OutputCustomType.Parameter("id") @Nullable String id) {
         this.cloudWatchRoleArn = cloudWatchRoleArn;
         this.id = id;
     }

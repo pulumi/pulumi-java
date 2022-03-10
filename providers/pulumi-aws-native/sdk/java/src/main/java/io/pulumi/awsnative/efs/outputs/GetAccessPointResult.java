@@ -17,11 +17,11 @@ public final class GetAccessPointResult {
     private final @Nullable List<AccessPointTag> accessPointTags;
     private final @Nullable String arn;
 
-    @OutputCustomType.Constructor({"accessPointId","accessPointTags","arn"})
+    @OutputCustomType.Constructor
     private GetAccessPointResult(
-        @Nullable String accessPointId,
-        @Nullable List<AccessPointTag> accessPointTags,
-        @Nullable String arn) {
+        @OutputCustomType.Parameter("accessPointId") @Nullable String accessPointId,
+        @OutputCustomType.Parameter("accessPointTags") @Nullable List<AccessPointTag> accessPointTags,
+        @OutputCustomType.Parameter("arn") @Nullable String arn) {
         this.accessPointId = accessPointId;
         this.accessPointTags = accessPointTags;
         this.arn = arn;

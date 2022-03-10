@@ -34,12 +34,12 @@ public final class GetHookDefaultVersionResult {
      */
     private final @Nullable String versionId;
 
-    @OutputCustomType.Constructor({"arn","typeName","typeVersionArn","versionId"})
+    @OutputCustomType.Constructor
     private GetHookDefaultVersionResult(
-        @Nullable String arn,
-        @Nullable String typeName,
-        @Nullable String typeVersionArn,
-        @Nullable String versionId) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("typeName") @Nullable String typeName,
+        @OutputCustomType.Parameter("typeVersionArn") @Nullable String typeVersionArn,
+        @OutputCustomType.Parameter("versionId") @Nullable String versionId) {
         this.arn = arn;
         this.typeName = typeName;
         this.typeVersionArn = typeVersionArn;

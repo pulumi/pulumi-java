@@ -13,10 +13,10 @@ public final class DatasetResourceConfiguration {
     private final DatasetResourceConfigurationComputeType computeType;
     private final Integer volumeSizeInGB;
 
-    @OutputCustomType.Constructor({"computeType","volumeSizeInGB"})
+    @OutputCustomType.Constructor
     private DatasetResourceConfiguration(
-        DatasetResourceConfigurationComputeType computeType,
-        Integer volumeSizeInGB) {
+        @OutputCustomType.Parameter("computeType") DatasetResourceConfigurationComputeType computeType,
+        @OutputCustomType.Parameter("volumeSizeInGB") Integer volumeSizeInGB) {
         this.computeType = computeType;
         this.volumeSizeInGB = volumeSizeInGB;
     }

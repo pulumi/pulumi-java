@@ -23,16 +23,16 @@ public final class CertificateGeneralName {
     private final @Nullable String rfc822Name;
     private final @Nullable String uniformResourceIdentifier;
 
-    @OutputCustomType.Constructor({"directoryName","dnsName","ediPartyName","ipAddress","otherName","registeredId","rfc822Name","uniformResourceIdentifier"})
+    @OutputCustomType.Constructor
     private CertificateGeneralName(
-        @Nullable CertificateSubject directoryName,
-        @Nullable String dnsName,
-        @Nullable CertificateEdiPartyName ediPartyName,
-        @Nullable String ipAddress,
-        @Nullable CertificateOtherName otherName,
-        @Nullable String registeredId,
-        @Nullable String rfc822Name,
-        @Nullable String uniformResourceIdentifier) {
+        @OutputCustomType.Parameter("directoryName") @Nullable CertificateSubject directoryName,
+        @OutputCustomType.Parameter("dnsName") @Nullable String dnsName,
+        @OutputCustomType.Parameter("ediPartyName") @Nullable CertificateEdiPartyName ediPartyName,
+        @OutputCustomType.Parameter("ipAddress") @Nullable String ipAddress,
+        @OutputCustomType.Parameter("otherName") @Nullable CertificateOtherName otherName,
+        @OutputCustomType.Parameter("registeredId") @Nullable String registeredId,
+        @OutputCustomType.Parameter("rfc822Name") @Nullable String rfc822Name,
+        @OutputCustomType.Parameter("uniformResourceIdentifier") @Nullable String uniformResourceIdentifier) {
         this.directoryName = directoryName;
         this.dnsName = dnsName;
         this.ediPartyName = ediPartyName;

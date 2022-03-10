@@ -17,11 +17,11 @@ public final class BudgetsActionDefinition {
     private final @Nullable BudgetsActionScpActionDefinition scpActionDefinition;
     private final @Nullable BudgetsActionSsmActionDefinition ssmActionDefinition;
 
-    @OutputCustomType.Constructor({"iamActionDefinition","scpActionDefinition","ssmActionDefinition"})
+    @OutputCustomType.Constructor
     private BudgetsActionDefinition(
-        @Nullable BudgetsActionIamActionDefinition iamActionDefinition,
-        @Nullable BudgetsActionScpActionDefinition scpActionDefinition,
-        @Nullable BudgetsActionSsmActionDefinition ssmActionDefinition) {
+        @OutputCustomType.Parameter("iamActionDefinition") @Nullable BudgetsActionIamActionDefinition iamActionDefinition,
+        @OutputCustomType.Parameter("scpActionDefinition") @Nullable BudgetsActionScpActionDefinition scpActionDefinition,
+        @OutputCustomType.Parameter("ssmActionDefinition") @Nullable BudgetsActionSsmActionDefinition ssmActionDefinition) {
         this.iamActionDefinition = iamActionDefinition;
         this.scpActionDefinition = scpActionDefinition;
         this.ssmActionDefinition = ssmActionDefinition;

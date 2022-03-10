@@ -22,12 +22,12 @@ public final class GetOIDCProviderResult {
     private final @Nullable List<OIDCProviderTag> tags;
     private final @Nullable List<String> thumbprintList;
 
-    @OutputCustomType.Constructor({"arn","clientIdList","tags","thumbprintList"})
+    @OutputCustomType.Constructor
     private GetOIDCProviderResult(
-        @Nullable String arn,
-        @Nullable List<String> clientIdList,
-        @Nullable List<OIDCProviderTag> tags,
-        @Nullable List<String> thumbprintList) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("clientIdList") @Nullable List<String> clientIdList,
+        @OutputCustomType.Parameter("tags") @Nullable List<OIDCProviderTag> tags,
+        @OutputCustomType.Parameter("thumbprintList") @Nullable List<String> thumbprintList) {
         this.arn = arn;
         this.clientIdList = clientIdList;
         this.tags = tags;

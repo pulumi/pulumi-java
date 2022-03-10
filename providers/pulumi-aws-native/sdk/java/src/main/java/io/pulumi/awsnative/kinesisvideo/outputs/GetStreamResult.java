@@ -45,14 +45,14 @@ public final class GetStreamResult {
      */
     private final @Nullable List<StreamTag> tags;
 
-    @OutputCustomType.Constructor({"arn","dataRetentionInHours","deviceName","kmsKeyId","mediaType","tags"})
+    @OutputCustomType.Constructor
     private GetStreamResult(
-        @Nullable String arn,
-        @Nullable Integer dataRetentionInHours,
-        @Nullable String deviceName,
-        @Nullable String kmsKeyId,
-        @Nullable String mediaType,
-        @Nullable List<StreamTag> tags) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("dataRetentionInHours") @Nullable Integer dataRetentionInHours,
+        @OutputCustomType.Parameter("deviceName") @Nullable String deviceName,
+        @OutputCustomType.Parameter("kmsKeyId") @Nullable String kmsKeyId,
+        @OutputCustomType.Parameter("mediaType") @Nullable String mediaType,
+        @OutputCustomType.Parameter("tags") @Nullable List<StreamTag> tags) {
         this.arn = arn;
         this.dataRetentionInHours = dataRetentionInHours;
         this.deviceName = deviceName;

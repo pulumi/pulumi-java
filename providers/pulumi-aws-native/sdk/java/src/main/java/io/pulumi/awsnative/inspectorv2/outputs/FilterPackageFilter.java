@@ -19,14 +19,14 @@ public final class FilterPackageFilter {
     private final @Nullable FilterStringFilter sourceLayerHash;
     private final @Nullable FilterStringFilter version;
 
-    @OutputCustomType.Constructor({"architecture","epoch","name","release","sourceLayerHash","version"})
+    @OutputCustomType.Constructor
     private FilterPackageFilter(
-        @Nullable FilterStringFilter architecture,
-        @Nullable FilterNumberFilter epoch,
-        @Nullable FilterStringFilter name,
-        @Nullable FilterStringFilter release,
-        @Nullable FilterStringFilter sourceLayerHash,
-        @Nullable FilterStringFilter version) {
+        @OutputCustomType.Parameter("architecture") @Nullable FilterStringFilter architecture,
+        @OutputCustomType.Parameter("epoch") @Nullable FilterNumberFilter epoch,
+        @OutputCustomType.Parameter("name") @Nullable FilterStringFilter name,
+        @OutputCustomType.Parameter("release") @Nullable FilterStringFilter release,
+        @OutputCustomType.Parameter("sourceLayerHash") @Nullable FilterStringFilter sourceLayerHash,
+        @OutputCustomType.Parameter("version") @Nullable FilterStringFilter version) {
         this.architecture = architecture;
         this.epoch = epoch;
         this.name = name;

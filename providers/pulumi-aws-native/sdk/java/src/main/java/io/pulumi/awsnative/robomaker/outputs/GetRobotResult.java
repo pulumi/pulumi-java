@@ -15,10 +15,10 @@ public final class GetRobotResult {
     private final @Nullable String arn;
     private final @Nullable RobotTags tags;
 
-    @OutputCustomType.Constructor({"arn","tags"})
+    @OutputCustomType.Constructor
     private GetRobotResult(
-        @Nullable String arn,
-        @Nullable RobotTags tags) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("tags") @Nullable RobotTags tags) {
         this.arn = arn;
         this.tags = tags;
     }

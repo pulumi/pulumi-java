@@ -29,11 +29,11 @@ public final class LoggingConfigurationFieldToMatchJsonBodyProperties {
      */
     private final LoggingConfigurationFieldToMatchJsonBodyPropertiesMatchScope matchScope;
 
-    @OutputCustomType.Constructor({"invalidFallbackBehavior","matchPattern","matchScope"})
+    @OutputCustomType.Constructor
     private LoggingConfigurationFieldToMatchJsonBodyProperties(
-        @Nullable LoggingConfigurationFieldToMatchJsonBodyPropertiesInvalidFallbackBehavior invalidFallbackBehavior,
-        LoggingConfigurationFieldToMatchJsonBodyPropertiesMatchPatternProperties matchPattern,
-        LoggingConfigurationFieldToMatchJsonBodyPropertiesMatchScope matchScope) {
+        @OutputCustomType.Parameter("invalidFallbackBehavior") @Nullable LoggingConfigurationFieldToMatchJsonBodyPropertiesInvalidFallbackBehavior invalidFallbackBehavior,
+        @OutputCustomType.Parameter("matchPattern") LoggingConfigurationFieldToMatchJsonBodyPropertiesMatchPatternProperties matchPattern,
+        @OutputCustomType.Parameter("matchScope") LoggingConfigurationFieldToMatchJsonBodyPropertiesMatchScope matchScope) {
         this.invalidFallbackBehavior = invalidFallbackBehavior;
         this.matchPattern = matchPattern;
         this.matchScope = matchScope;

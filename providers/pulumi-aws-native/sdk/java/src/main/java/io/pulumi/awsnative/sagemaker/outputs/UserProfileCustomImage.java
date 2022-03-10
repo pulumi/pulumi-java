@@ -28,11 +28,11 @@ public final class UserProfileCustomImage {
      */
     private final @Nullable Integer imageVersionNumber;
 
-    @OutputCustomType.Constructor({"appImageConfigName","imageName","imageVersionNumber"})
+    @OutputCustomType.Constructor
     private UserProfileCustomImage(
-        String appImageConfigName,
-        String imageName,
-        @Nullable Integer imageVersionNumber) {
+        @OutputCustomType.Parameter("appImageConfigName") String appImageConfigName,
+        @OutputCustomType.Parameter("imageName") String imageName,
+        @OutputCustomType.Parameter("imageVersionNumber") @Nullable Integer imageVersionNumber) {
         this.appImageConfigName = appImageConfigName;
         this.imageName = imageName;
         this.imageVersionNumber = imageVersionNumber;

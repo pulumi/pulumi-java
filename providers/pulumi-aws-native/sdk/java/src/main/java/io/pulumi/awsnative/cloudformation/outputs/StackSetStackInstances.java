@@ -25,11 +25,11 @@ public final class StackSetStackInstances {
      */
     private final List<String> regions;
 
-    @OutputCustomType.Constructor({"deploymentTargets","parameterOverrides","regions"})
+    @OutputCustomType.Constructor
     private StackSetStackInstances(
-        StackSetDeploymentTargets deploymentTargets,
-        @Nullable List<StackSetParameter> parameterOverrides,
-        List<String> regions) {
+        @OutputCustomType.Parameter("deploymentTargets") StackSetDeploymentTargets deploymentTargets,
+        @OutputCustomType.Parameter("parameterOverrides") @Nullable List<StackSetParameter> parameterOverrides,
+        @OutputCustomType.Parameter("regions") List<String> regions) {
         this.deploymentTargets = deploymentTargets;
         this.parameterOverrides = parameterOverrides;
         this.regions = regions;

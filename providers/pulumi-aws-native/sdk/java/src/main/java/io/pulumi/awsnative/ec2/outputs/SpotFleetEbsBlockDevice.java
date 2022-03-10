@@ -21,14 +21,14 @@ public final class SpotFleetEbsBlockDevice {
     private final @Nullable Integer volumeSize;
     private final @Nullable SpotFleetEbsBlockDeviceVolumeType volumeType;
 
-    @OutputCustomType.Constructor({"deleteOnTermination","encrypted","iops","snapshotId","volumeSize","volumeType"})
+    @OutputCustomType.Constructor
     private SpotFleetEbsBlockDevice(
-        @Nullable Boolean deleteOnTermination,
-        @Nullable Boolean encrypted,
-        @Nullable Integer iops,
-        @Nullable String snapshotId,
-        @Nullable Integer volumeSize,
-        @Nullable SpotFleetEbsBlockDeviceVolumeType volumeType) {
+        @OutputCustomType.Parameter("deleteOnTermination") @Nullable Boolean deleteOnTermination,
+        @OutputCustomType.Parameter("encrypted") @Nullable Boolean encrypted,
+        @OutputCustomType.Parameter("iops") @Nullable Integer iops,
+        @OutputCustomType.Parameter("snapshotId") @Nullable String snapshotId,
+        @OutputCustomType.Parameter("volumeSize") @Nullable Integer volumeSize,
+        @OutputCustomType.Parameter("volumeType") @Nullable SpotFleetEbsBlockDeviceVolumeType volumeType) {
         this.deleteOnTermination = deleteOnTermination;
         this.encrypted = encrypted;
         this.iops = iops;

@@ -18,12 +18,12 @@ public final class DataSourceSalesforceCustomKnowledgeArticleTypeConfiguration {
     private final @Nullable List<DataSourceToIndexFieldMapping> fieldMappings;
     private final String name;
 
-    @OutputCustomType.Constructor({"documentDataFieldName","documentTitleFieldName","fieldMappings","name"})
+    @OutputCustomType.Constructor
     private DataSourceSalesforceCustomKnowledgeArticleTypeConfiguration(
-        String documentDataFieldName,
-        @Nullable String documentTitleFieldName,
-        @Nullable List<DataSourceToIndexFieldMapping> fieldMappings,
-        String name) {
+        @OutputCustomType.Parameter("documentDataFieldName") String documentDataFieldName,
+        @OutputCustomType.Parameter("documentTitleFieldName") @Nullable String documentTitleFieldName,
+        @OutputCustomType.Parameter("fieldMappings") @Nullable List<DataSourceToIndexFieldMapping> fieldMappings,
+        @OutputCustomType.Parameter("name") String name) {
         this.documentDataFieldName = documentDataFieldName;
         this.documentTitleFieldName = documentTitleFieldName;
         this.fieldMappings = fieldMappings;

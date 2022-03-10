@@ -18,12 +18,12 @@ public final class WorkGroupResultConfigurationUpdates {
     private final @Nullable Boolean removeEncryptionConfiguration;
     private final @Nullable Boolean removeOutputLocation;
 
-    @OutputCustomType.Constructor({"encryptionConfiguration","outputLocation","removeEncryptionConfiguration","removeOutputLocation"})
+    @OutputCustomType.Constructor
     private WorkGroupResultConfigurationUpdates(
-        @Nullable WorkGroupEncryptionConfiguration encryptionConfiguration,
-        @Nullable String outputLocation,
-        @Nullable Boolean removeEncryptionConfiguration,
-        @Nullable Boolean removeOutputLocation) {
+        @OutputCustomType.Parameter("encryptionConfiguration") @Nullable WorkGroupEncryptionConfiguration encryptionConfiguration,
+        @OutputCustomType.Parameter("outputLocation") @Nullable String outputLocation,
+        @OutputCustomType.Parameter("removeEncryptionConfiguration") @Nullable Boolean removeEncryptionConfiguration,
+        @OutputCustomType.Parameter("removeOutputLocation") @Nullable Boolean removeOutputLocation) {
         this.encryptionConfiguration = encryptionConfiguration;
         this.outputLocation = outputLocation;
         this.removeEncryptionConfiguration = removeEncryptionConfiguration;

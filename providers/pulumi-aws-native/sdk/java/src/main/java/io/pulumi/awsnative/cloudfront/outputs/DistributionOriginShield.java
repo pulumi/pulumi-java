@@ -15,10 +15,10 @@ public final class DistributionOriginShield {
     private final @Nullable Boolean enabled;
     private final @Nullable String originShieldRegion;
 
-    @OutputCustomType.Constructor({"enabled","originShieldRegion"})
+    @OutputCustomType.Constructor
     private DistributionOriginShield(
-        @Nullable Boolean enabled,
-        @Nullable String originShieldRegion) {
+        @OutputCustomType.Parameter("enabled") @Nullable Boolean enabled,
+        @OutputCustomType.Parameter("originShieldRegion") @Nullable String originShieldRegion) {
         this.enabled = enabled;
         this.originShieldRegion = originShieldRegion;
     }

@@ -46,15 +46,15 @@ public final class GetLocationSMBResult {
      */
     private final @Nullable String user;
 
-    @OutputCustomType.Constructor({"agentArns","domain","locationArn","locationUri","mountOptions","tags","user"})
+    @OutputCustomType.Constructor
     private GetLocationSMBResult(
-        @Nullable List<String> agentArns,
-        @Nullable String domain,
-        @Nullable String locationArn,
-        @Nullable String locationUri,
-        @Nullable LocationSMBMountOptions mountOptions,
-        @Nullable List<LocationSMBTag> tags,
-        @Nullable String user) {
+        @OutputCustomType.Parameter("agentArns") @Nullable List<String> agentArns,
+        @OutputCustomType.Parameter("domain") @Nullable String domain,
+        @OutputCustomType.Parameter("locationArn") @Nullable String locationArn,
+        @OutputCustomType.Parameter("locationUri") @Nullable String locationUri,
+        @OutputCustomType.Parameter("mountOptions") @Nullable LocationSMBMountOptions mountOptions,
+        @OutputCustomType.Parameter("tags") @Nullable List<LocationSMBTag> tags,
+        @OutputCustomType.Parameter("user") @Nullable String user) {
         this.agentArns = agentArns;
         this.domain = domain;
         this.locationArn = locationArn;

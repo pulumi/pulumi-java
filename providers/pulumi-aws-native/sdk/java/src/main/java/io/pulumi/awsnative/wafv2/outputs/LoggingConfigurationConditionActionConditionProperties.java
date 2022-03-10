@@ -15,8 +15,8 @@ public final class LoggingConfigurationConditionActionConditionProperties {
      */
     private final LoggingConfigurationConditionActionConditionPropertiesAction action;
 
-    @OutputCustomType.Constructor({"action"})
-    private LoggingConfigurationConditionActionConditionProperties(LoggingConfigurationConditionActionConditionPropertiesAction action) {
+    @OutputCustomType.Constructor
+    private LoggingConfigurationConditionActionConditionProperties(@OutputCustomType.Parameter("action") LoggingConfigurationConditionActionConditionPropertiesAction action) {
         this.action = action;
     }
 

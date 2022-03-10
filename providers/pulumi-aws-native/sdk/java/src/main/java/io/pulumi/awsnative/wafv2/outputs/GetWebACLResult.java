@@ -35,19 +35,19 @@ public final class GetWebACLResult {
     private final @Nullable List<WebACLTag> tags;
     private final @Nullable WebACLVisibilityConfig visibilityConfig;
 
-    @OutputCustomType.Constructor({"arn","capacity","captchaConfig","customResponseBodies","defaultAction","description","id","labelNamespace","rules","tags","visibilityConfig"})
+    @OutputCustomType.Constructor
     private GetWebACLResult(
-        @Nullable String arn,
-        @Nullable Integer capacity,
-        @Nullable WebACLCaptchaConfig captchaConfig,
-        @Nullable WebACLCustomResponseBodies customResponseBodies,
-        @Nullable WebACLDefaultAction defaultAction,
-        @Nullable String description,
-        @Nullable String id,
-        @Nullable String labelNamespace,
-        @Nullable List<WebACLRule> rules,
-        @Nullable List<WebACLTag> tags,
-        @Nullable WebACLVisibilityConfig visibilityConfig) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("capacity") @Nullable Integer capacity,
+        @OutputCustomType.Parameter("captchaConfig") @Nullable WebACLCaptchaConfig captchaConfig,
+        @OutputCustomType.Parameter("customResponseBodies") @Nullable WebACLCustomResponseBodies customResponseBodies,
+        @OutputCustomType.Parameter("defaultAction") @Nullable WebACLDefaultAction defaultAction,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("labelNamespace") @Nullable String labelNamespace,
+        @OutputCustomType.Parameter("rules") @Nullable List<WebACLRule> rules,
+        @OutputCustomType.Parameter("tags") @Nullable List<WebACLTag> tags,
+        @OutputCustomType.Parameter("visibilityConfig") @Nullable WebACLVisibilityConfig visibilityConfig) {
         this.arn = arn;
         this.capacity = capacity;
         this.captchaConfig = captchaConfig;

@@ -26,11 +26,11 @@ public final class GetRulesetResult {
     private final @Nullable List<RulesetRule> rules;
     private final @Nullable List<RulesetTag> tags;
 
-    @OutputCustomType.Constructor({"description","rules","tags"})
+    @OutputCustomType.Constructor
     private GetRulesetResult(
-        @Nullable String description,
-        @Nullable List<RulesetRule> rules,
-        @Nullable List<RulesetTag> tags) {
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("rules") @Nullable List<RulesetRule> rules,
+        @OutputCustomType.Parameter("tags") @Nullable List<RulesetTag> tags) {
         this.description = description;
         this.rules = rules;
         this.tags = tags;

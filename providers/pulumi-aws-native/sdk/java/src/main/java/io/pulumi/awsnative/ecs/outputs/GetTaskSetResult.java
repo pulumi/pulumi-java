@@ -23,10 +23,10 @@ public final class GetTaskSetResult {
      */
     private final @Nullable TaskSetScale scale;
 
-    @OutputCustomType.Constructor({"id","scale"})
+    @OutputCustomType.Constructor
     private GetTaskSetResult(
-        @Nullable String id,
-        @Nullable TaskSetScale scale) {
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("scale") @Nullable TaskSetScale scale) {
         this.id = id;
         this.scale = scale;
     }

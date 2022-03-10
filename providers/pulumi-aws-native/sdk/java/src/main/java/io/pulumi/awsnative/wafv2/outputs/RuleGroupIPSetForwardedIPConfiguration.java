@@ -15,11 +15,11 @@ public final class RuleGroupIPSetForwardedIPConfiguration {
     private final String headerName;
     private final RuleGroupIPSetForwardedIPConfigurationPosition position;
 
-    @OutputCustomType.Constructor({"fallbackBehavior","headerName","position"})
+    @OutputCustomType.Constructor
     private RuleGroupIPSetForwardedIPConfiguration(
-        RuleGroupIPSetForwardedIPConfigurationFallbackBehavior fallbackBehavior,
-        String headerName,
-        RuleGroupIPSetForwardedIPConfigurationPosition position) {
+        @OutputCustomType.Parameter("fallbackBehavior") RuleGroupIPSetForwardedIPConfigurationFallbackBehavior fallbackBehavior,
+        @OutputCustomType.Parameter("headerName") String headerName,
+        @OutputCustomType.Parameter("position") RuleGroupIPSetForwardedIPConfigurationPosition position) {
         this.fallbackBehavior = fallbackBehavior;
         this.headerName = headerName;
         this.position = position;

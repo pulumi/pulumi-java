@@ -13,10 +13,10 @@ public final class ResponseHeadersPolicyReferrerPolicy {
     private final Boolean override;
     private final String referrerPolicy;
 
-    @OutputCustomType.Constructor({"override","referrerPolicy"})
+    @OutputCustomType.Constructor
     private ResponseHeadersPolicyReferrerPolicy(
-        Boolean override,
-        String referrerPolicy) {
+        @OutputCustomType.Parameter("override") Boolean override,
+        @OutputCustomType.Parameter("referrerPolicy") String referrerPolicy) {
         this.override = override;
         this.referrerPolicy = referrerPolicy;
     }

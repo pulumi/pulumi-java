@@ -21,10 +21,10 @@ public final class StreamEncryption {
      */
     private final String keyId;
 
-    @OutputCustomType.Constructor({"encryptionType","keyId"})
+    @OutputCustomType.Constructor
     private StreamEncryption(
-        StreamEncryptionEncryptionType encryptionType,
-        String keyId) {
+        @OutputCustomType.Parameter("encryptionType") StreamEncryptionEncryptionType encryptionType,
+        @OutputCustomType.Parameter("keyId") String keyId) {
         this.encryptionType = encryptionType;
         this.keyId = keyId;
     }

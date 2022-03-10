@@ -39,13 +39,13 @@ public final class ClusterResourcesVpcConfig {
      */
     private final List<String> subnetIds;
 
-    @OutputCustomType.Constructor({"endpointPrivateAccess","endpointPublicAccess","publicAccessCidrs","securityGroupIds","subnetIds"})
+    @OutputCustomType.Constructor
     private ClusterResourcesVpcConfig(
-        @Nullable Boolean endpointPrivateAccess,
-        @Nullable Boolean endpointPublicAccess,
-        @Nullable List<String> publicAccessCidrs,
-        @Nullable List<String> securityGroupIds,
-        List<String> subnetIds) {
+        @OutputCustomType.Parameter("endpointPrivateAccess") @Nullable Boolean endpointPrivateAccess,
+        @OutputCustomType.Parameter("endpointPublicAccess") @Nullable Boolean endpointPublicAccess,
+        @OutputCustomType.Parameter("publicAccessCidrs") @Nullable List<String> publicAccessCidrs,
+        @OutputCustomType.Parameter("securityGroupIds") @Nullable List<String> securityGroupIds,
+        @OutputCustomType.Parameter("subnetIds") List<String> subnetIds) {
         this.endpointPrivateAccess = endpointPrivateAccess;
         this.endpointPublicAccess = endpointPublicAccess;
         this.publicAccessCidrs = publicAccessCidrs;

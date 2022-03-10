@@ -17,11 +17,11 @@ public final class LicenseConsumptionConfiguration {
     private final @Nullable LicenseProvisionalConfiguration provisionalConfiguration;
     private final @Nullable String renewType;
 
-    @OutputCustomType.Constructor({"borrowConfiguration","provisionalConfiguration","renewType"})
+    @OutputCustomType.Constructor
     private LicenseConsumptionConfiguration(
-        @Nullable LicenseBorrowConfiguration borrowConfiguration,
-        @Nullable LicenseProvisionalConfiguration provisionalConfiguration,
-        @Nullable String renewType) {
+        @OutputCustomType.Parameter("borrowConfiguration") @Nullable LicenseBorrowConfiguration borrowConfiguration,
+        @OutputCustomType.Parameter("provisionalConfiguration") @Nullable LicenseProvisionalConfiguration provisionalConfiguration,
+        @OutputCustomType.Parameter("renewType") @Nullable String renewType) {
         this.borrowConfiguration = borrowConfiguration;
         this.provisionalConfiguration = provisionalConfiguration;
         this.renewType = renewType;

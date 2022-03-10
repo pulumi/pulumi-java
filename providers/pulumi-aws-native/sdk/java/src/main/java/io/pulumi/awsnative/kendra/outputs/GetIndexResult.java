@@ -44,18 +44,18 @@ public final class GetIndexResult {
     private final @Nullable IndexUserContextPolicy userContextPolicy;
     private final @Nullable List<IndexUserTokenConfiguration> userTokenConfigurations;
 
-    @OutputCustomType.Constructor({"arn","capacityUnits","description","documentMetadataConfigurations","id","name","roleArn","tags","userContextPolicy","userTokenConfigurations"})
+    @OutputCustomType.Constructor
     private GetIndexResult(
-        @Nullable String arn,
-        @Nullable IndexCapacityUnitsConfiguration capacityUnits,
-        @Nullable String description,
-        @Nullable List<IndexDocumentMetadataConfiguration> documentMetadataConfigurations,
-        @Nullable String id,
-        @Nullable String name,
-        @Nullable String roleArn,
-        @Nullable List<IndexTag> tags,
-        @Nullable IndexUserContextPolicy userContextPolicy,
-        @Nullable List<IndexUserTokenConfiguration> userTokenConfigurations) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("capacityUnits") @Nullable IndexCapacityUnitsConfiguration capacityUnits,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("documentMetadataConfigurations") @Nullable List<IndexDocumentMetadataConfiguration> documentMetadataConfigurations,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("roleArn") @Nullable String roleArn,
+        @OutputCustomType.Parameter("tags") @Nullable List<IndexTag> tags,
+        @OutputCustomType.Parameter("userContextPolicy") @Nullable IndexUserContextPolicy userContextPolicy,
+        @OutputCustomType.Parameter("userTokenConfigurations") @Nullable List<IndexUserTokenConfiguration> userTokenConfigurations) {
         this.arn = arn;
         this.capacityUnits = capacityUnits;
         this.description = description;

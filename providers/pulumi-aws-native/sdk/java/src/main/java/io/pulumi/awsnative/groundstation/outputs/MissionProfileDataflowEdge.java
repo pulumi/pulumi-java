@@ -14,10 +14,10 @@ public final class MissionProfileDataflowEdge {
     private final @Nullable String destination;
     private final @Nullable String source;
 
-    @OutputCustomType.Constructor({"destination","source"})
+    @OutputCustomType.Constructor
     private MissionProfileDataflowEdge(
-        @Nullable String destination,
-        @Nullable String source) {
+        @OutputCustomType.Parameter("destination") @Nullable String destination,
+        @OutputCustomType.Parameter("source") @Nullable String source) {
         this.destination = destination;
         this.source = source;
     }

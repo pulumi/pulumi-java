@@ -32,13 +32,13 @@ public final class GetAccessPointResult {
      */
     private final @Nullable AccessPointPublicAccessBlockConfiguration publicAccessBlockConfiguration;
 
-    @OutputCustomType.Constructor({"arn","creationDate","objectLambdaConfiguration","policyStatus","publicAccessBlockConfiguration"})
+    @OutputCustomType.Constructor
     private GetAccessPointResult(
-        @Nullable String arn,
-        @Nullable String creationDate,
-        @Nullable AccessPointObjectLambdaConfiguration objectLambdaConfiguration,
-        @Nullable PolicyStatusProperties policyStatus,
-        @Nullable AccessPointPublicAccessBlockConfiguration publicAccessBlockConfiguration) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("creationDate") @Nullable String creationDate,
+        @OutputCustomType.Parameter("objectLambdaConfiguration") @Nullable AccessPointObjectLambdaConfiguration objectLambdaConfiguration,
+        @OutputCustomType.Parameter("policyStatus") @Nullable PolicyStatusProperties policyStatus,
+        @OutputCustomType.Parameter("publicAccessBlockConfiguration") @Nullable AccessPointPublicAccessBlockConfiguration publicAccessBlockConfiguration) {
         this.arn = arn;
         this.creationDate = creationDate;
         this.objectLambdaConfiguration = objectLambdaConfiguration;

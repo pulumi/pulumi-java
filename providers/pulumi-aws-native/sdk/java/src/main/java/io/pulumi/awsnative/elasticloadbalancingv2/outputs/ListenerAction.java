@@ -26,16 +26,16 @@ public final class ListenerAction {
     private final @Nullable String targetGroupArn;
     private final String type;
 
-    @OutputCustomType.Constructor({"authenticateCognitoConfig","authenticateOidcConfig","fixedResponseConfig","forwardConfig","order","redirectConfig","targetGroupArn","type"})
+    @OutputCustomType.Constructor
     private ListenerAction(
-        @Nullable ListenerAuthenticateCognitoConfig authenticateCognitoConfig,
-        @Nullable ListenerAuthenticateOidcConfig authenticateOidcConfig,
-        @Nullable ListenerFixedResponseConfig fixedResponseConfig,
-        @Nullable ListenerForwardConfig forwardConfig,
-        @Nullable Integer order,
-        @Nullable ListenerRedirectConfig redirectConfig,
-        @Nullable String targetGroupArn,
-        String type) {
+        @OutputCustomType.Parameter("authenticateCognitoConfig") @Nullable ListenerAuthenticateCognitoConfig authenticateCognitoConfig,
+        @OutputCustomType.Parameter("authenticateOidcConfig") @Nullable ListenerAuthenticateOidcConfig authenticateOidcConfig,
+        @OutputCustomType.Parameter("fixedResponseConfig") @Nullable ListenerFixedResponseConfig fixedResponseConfig,
+        @OutputCustomType.Parameter("forwardConfig") @Nullable ListenerForwardConfig forwardConfig,
+        @OutputCustomType.Parameter("order") @Nullable Integer order,
+        @OutputCustomType.Parameter("redirectConfig") @Nullable ListenerRedirectConfig redirectConfig,
+        @OutputCustomType.Parameter("targetGroupArn") @Nullable String targetGroupArn,
+        @OutputCustomType.Parameter("type") String type) {
         this.authenticateCognitoConfig = authenticateCognitoConfig;
         this.authenticateOidcConfig = authenticateOidcConfig;
         this.fixedResponseConfig = fixedResponseConfig;

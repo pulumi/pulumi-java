@@ -33,12 +33,12 @@ public final class DetectorModelTransitionEvent {
      */
     private final String nextState;
 
-    @OutputCustomType.Constructor({"actions","condition","eventName","nextState"})
+    @OutputCustomType.Constructor
     private DetectorModelTransitionEvent(
-        @Nullable List<DetectorModelAction> actions,
-        String condition,
-        String eventName,
-        String nextState) {
+        @OutputCustomType.Parameter("actions") @Nullable List<DetectorModelAction> actions,
+        @OutputCustomType.Parameter("condition") String condition,
+        @OutputCustomType.Parameter("eventName") String eventName,
+        @OutputCustomType.Parameter("nextState") String nextState) {
         this.actions = actions;
         this.condition = condition;
         this.eventName = eventName;

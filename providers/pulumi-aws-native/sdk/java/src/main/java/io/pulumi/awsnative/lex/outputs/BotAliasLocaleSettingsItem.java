@@ -17,10 +17,10 @@ public final class BotAliasLocaleSettingsItem {
      */
     private final String localeId;
 
-    @OutputCustomType.Constructor({"botAliasLocaleSetting","localeId"})
+    @OutputCustomType.Constructor
     private BotAliasLocaleSettingsItem(
-        BotAliasLocaleSettings botAliasLocaleSetting,
-        String localeId) {
+        @OutputCustomType.Parameter("botAliasLocaleSetting") BotAliasLocaleSettings botAliasLocaleSetting,
+        @OutputCustomType.Parameter("localeId") String localeId) {
         this.botAliasLocaleSetting = botAliasLocaleSetting;
         this.localeId = localeId;
     }

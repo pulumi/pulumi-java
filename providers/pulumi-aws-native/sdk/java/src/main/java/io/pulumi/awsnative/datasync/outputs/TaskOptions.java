@@ -95,22 +95,22 @@ public final class TaskOptions {
      */
     private final @Nullable TaskOptionsVerifyMode verifyMode;
 
-    @OutputCustomType.Constructor({"atime","bytesPerSecond","gid","logLevel","mtime","overwriteMode","posixPermissions","preserveDeletedFiles","preserveDevices","securityDescriptorCopyFlags","taskQueueing","transferMode","uid","verifyMode"})
+    @OutputCustomType.Constructor
     private TaskOptions(
-        @Nullable TaskOptionsAtime atime,
-        @Nullable Integer bytesPerSecond,
-        @Nullable TaskOptionsGid gid,
-        @Nullable TaskOptionsLogLevel logLevel,
-        @Nullable TaskOptionsMtime mtime,
-        @Nullable TaskOptionsOverwriteMode overwriteMode,
-        @Nullable TaskOptionsPosixPermissions posixPermissions,
-        @Nullable TaskOptionsPreserveDeletedFiles preserveDeletedFiles,
-        @Nullable TaskOptionsPreserveDevices preserveDevices,
-        @Nullable TaskOptionsSecurityDescriptorCopyFlags securityDescriptorCopyFlags,
-        @Nullable TaskOptionsTaskQueueing taskQueueing,
-        @Nullable TaskOptionsTransferMode transferMode,
-        @Nullable TaskOptionsUid uid,
-        @Nullable TaskOptionsVerifyMode verifyMode) {
+        @OutputCustomType.Parameter("atime") @Nullable TaskOptionsAtime atime,
+        @OutputCustomType.Parameter("bytesPerSecond") @Nullable Integer bytesPerSecond,
+        @OutputCustomType.Parameter("gid") @Nullable TaskOptionsGid gid,
+        @OutputCustomType.Parameter("logLevel") @Nullable TaskOptionsLogLevel logLevel,
+        @OutputCustomType.Parameter("mtime") @Nullable TaskOptionsMtime mtime,
+        @OutputCustomType.Parameter("overwriteMode") @Nullable TaskOptionsOverwriteMode overwriteMode,
+        @OutputCustomType.Parameter("posixPermissions") @Nullable TaskOptionsPosixPermissions posixPermissions,
+        @OutputCustomType.Parameter("preserveDeletedFiles") @Nullable TaskOptionsPreserveDeletedFiles preserveDeletedFiles,
+        @OutputCustomType.Parameter("preserveDevices") @Nullable TaskOptionsPreserveDevices preserveDevices,
+        @OutputCustomType.Parameter("securityDescriptorCopyFlags") @Nullable TaskOptionsSecurityDescriptorCopyFlags securityDescriptorCopyFlags,
+        @OutputCustomType.Parameter("taskQueueing") @Nullable TaskOptionsTaskQueueing taskQueueing,
+        @OutputCustomType.Parameter("transferMode") @Nullable TaskOptionsTransferMode transferMode,
+        @OutputCustomType.Parameter("uid") @Nullable TaskOptionsUid uid,
+        @OutputCustomType.Parameter("verifyMode") @Nullable TaskOptionsVerifyMode verifyMode) {
         this.atime = atime;
         this.bytesPerSecond = bytesPerSecond;
         this.gid = gid;

@@ -53,16 +53,16 @@ public final class DatabaseRelationalDatabaseParameter {
      */
     private final @Nullable String parameterValue;
 
-    @OutputCustomType.Constructor({"allowedValues","applyMethod","applyType","dataType","description","isModifiable","parameterName","parameterValue"})
+    @OutputCustomType.Constructor
     private DatabaseRelationalDatabaseParameter(
-        @Nullable String allowedValues,
-        @Nullable String applyMethod,
-        @Nullable String applyType,
-        @Nullable String dataType,
-        @Nullable String description,
-        @Nullable Boolean isModifiable,
-        @Nullable String parameterName,
-        @Nullable String parameterValue) {
+        @OutputCustomType.Parameter("allowedValues") @Nullable String allowedValues,
+        @OutputCustomType.Parameter("applyMethod") @Nullable String applyMethod,
+        @OutputCustomType.Parameter("applyType") @Nullable String applyType,
+        @OutputCustomType.Parameter("dataType") @Nullable String dataType,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("isModifiable") @Nullable Boolean isModifiable,
+        @OutputCustomType.Parameter("parameterName") @Nullable String parameterName,
+        @OutputCustomType.Parameter("parameterValue") @Nullable String parameterValue) {
         this.allowedValues = allowedValues;
         this.applyMethod = applyMethod;
         this.applyType = applyType;

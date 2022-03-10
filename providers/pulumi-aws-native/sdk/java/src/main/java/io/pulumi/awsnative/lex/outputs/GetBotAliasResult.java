@@ -30,17 +30,17 @@ public final class GetBotAliasResult {
      */
     private final @Nullable SentimentAnalysisSettingsProperties sentimentAnalysisSettings;
 
-    @OutputCustomType.Constructor({"arn","botAliasId","botAliasLocaleSettings","botAliasName","botAliasStatus","botVersion","conversationLogSettings","description","sentimentAnalysisSettings"})
+    @OutputCustomType.Constructor
     private GetBotAliasResult(
-        @Nullable String arn,
-        @Nullable String botAliasId,
-        @Nullable List<BotAliasLocaleSettingsItem> botAliasLocaleSettings,
-        @Nullable String botAliasName,
-        @Nullable BotAliasStatus botAliasStatus,
-        @Nullable String botVersion,
-        @Nullable BotAliasConversationLogSettings conversationLogSettings,
-        @Nullable String description,
-        @Nullable SentimentAnalysisSettingsProperties sentimentAnalysisSettings) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("botAliasId") @Nullable String botAliasId,
+        @OutputCustomType.Parameter("botAliasLocaleSettings") @Nullable List<BotAliasLocaleSettingsItem> botAliasLocaleSettings,
+        @OutputCustomType.Parameter("botAliasName") @Nullable String botAliasName,
+        @OutputCustomType.Parameter("botAliasStatus") @Nullable BotAliasStatus botAliasStatus,
+        @OutputCustomType.Parameter("botVersion") @Nullable String botVersion,
+        @OutputCustomType.Parameter("conversationLogSettings") @Nullable BotAliasConversationLogSettings conversationLogSettings,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("sentimentAnalysisSettings") @Nullable SentimentAnalysisSettingsProperties sentimentAnalysisSettings) {
         this.arn = arn;
         this.botAliasId = botAliasId;
         this.botAliasLocaleSettings = botAliasLocaleSettings;

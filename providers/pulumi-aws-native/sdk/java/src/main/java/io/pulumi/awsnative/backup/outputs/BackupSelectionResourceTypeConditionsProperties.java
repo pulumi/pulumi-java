@@ -16,12 +16,12 @@ public final class BackupSelectionResourceTypeConditionsProperties {
     private final @Nullable List<BackupSelectionConditionParameter> stringNotEquals;
     private final @Nullable List<BackupSelectionConditionParameter> stringNotLike;
 
-    @OutputCustomType.Constructor({"stringEquals","stringLike","stringNotEquals","stringNotLike"})
+    @OutputCustomType.Constructor
     private BackupSelectionResourceTypeConditionsProperties(
-        @Nullable List<BackupSelectionConditionParameter> stringEquals,
-        @Nullable List<BackupSelectionConditionParameter> stringLike,
-        @Nullable List<BackupSelectionConditionParameter> stringNotEquals,
-        @Nullable List<BackupSelectionConditionParameter> stringNotLike) {
+        @OutputCustomType.Parameter("stringEquals") @Nullable List<BackupSelectionConditionParameter> stringEquals,
+        @OutputCustomType.Parameter("stringLike") @Nullable List<BackupSelectionConditionParameter> stringLike,
+        @OutputCustomType.Parameter("stringNotEquals") @Nullable List<BackupSelectionConditionParameter> stringNotEquals,
+        @OutputCustomType.Parameter("stringNotLike") @Nullable List<BackupSelectionConditionParameter> stringNotLike) {
         this.stringEquals = stringEquals;
         this.stringLike = stringLike;
         this.stringNotEquals = stringNotEquals;

@@ -13,8 +13,8 @@ import javax.annotation.Nullable;
 public final class DatastoreIotSiteWiseMultiLayerStorage {
     private final @Nullable DatastoreCustomerManagedS3Storage customerManagedS3Storage;
 
-    @OutputCustomType.Constructor({"customerManagedS3Storage"})
-    private DatastoreIotSiteWiseMultiLayerStorage(@Nullable DatastoreCustomerManagedS3Storage customerManagedS3Storage) {
+    @OutputCustomType.Constructor
+    private DatastoreIotSiteWiseMultiLayerStorage(@OutputCustomType.Parameter("customerManagedS3Storage") @Nullable DatastoreCustomerManagedS3Storage customerManagedS3Storage) {
         this.customerManagedS3Storage = customerManagedS3Storage;
     }
 

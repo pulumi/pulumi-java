@@ -14,11 +14,11 @@ public final class TaskDefinitionUlimit {
     private final String name;
     private final Integer softLimit;
 
-    @OutputCustomType.Constructor({"hardLimit","name","softLimit"})
+    @OutputCustomType.Constructor
     private TaskDefinitionUlimit(
-        Integer hardLimit,
-        String name,
-        Integer softLimit) {
+        @OutputCustomType.Parameter("hardLimit") Integer hardLimit,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("softLimit") Integer softLimit) {
         this.hardLimit = hardLimit;
         this.name = name;
         this.softLimit = softLimit;

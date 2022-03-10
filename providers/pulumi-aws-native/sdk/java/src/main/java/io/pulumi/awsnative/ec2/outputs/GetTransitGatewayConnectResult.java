@@ -39,13 +39,13 @@ public final class GetTransitGatewayConnectResult {
      */
     private final @Nullable String transitGatewayId;
 
-    @OutputCustomType.Constructor({"creationTime","state","tags","transitGatewayAttachmentId","transitGatewayId"})
+    @OutputCustomType.Constructor
     private GetTransitGatewayConnectResult(
-        @Nullable String creationTime,
-        @Nullable String state,
-        @Nullable List<TransitGatewayConnectTag> tags,
-        @Nullable String transitGatewayAttachmentId,
-        @Nullable String transitGatewayId) {
+        @OutputCustomType.Parameter("creationTime") @Nullable String creationTime,
+        @OutputCustomType.Parameter("state") @Nullable String state,
+        @OutputCustomType.Parameter("tags") @Nullable List<TransitGatewayConnectTag> tags,
+        @OutputCustomType.Parameter("transitGatewayAttachmentId") @Nullable String transitGatewayAttachmentId,
+        @OutputCustomType.Parameter("transitGatewayId") @Nullable String transitGatewayId) {
         this.creationTime = creationTime;
         this.state = state;
         this.tags = tags;

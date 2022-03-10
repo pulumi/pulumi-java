@@ -26,11 +26,11 @@ public final class GetHealthCheckResult {
      */
     private final @Nullable List<HealthCheckTag> healthCheckTags;
 
-    @OutputCustomType.Constructor({"healthCheckConfig","healthCheckId","healthCheckTags"})
+    @OutputCustomType.Constructor
     private GetHealthCheckResult(
-        @Nullable HealthCheckConfigProperties healthCheckConfig,
-        @Nullable String healthCheckId,
-        @Nullable List<HealthCheckTag> healthCheckTags) {
+        @OutputCustomType.Parameter("healthCheckConfig") @Nullable HealthCheckConfigProperties healthCheckConfig,
+        @OutputCustomType.Parameter("healthCheckId") @Nullable String healthCheckId,
+        @OutputCustomType.Parameter("healthCheckTags") @Nullable List<HealthCheckTag> healthCheckTags) {
         this.healthCheckConfig = healthCheckConfig;
         this.healthCheckId = healthCheckId;
         this.healthCheckTags = healthCheckTags;

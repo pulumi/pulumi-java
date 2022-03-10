@@ -19,10 +19,10 @@ public final class ContainerPublicDomainName {
      */
     private final @Nullable List<String> domainNames;
 
-    @OutputCustomType.Constructor({"certificateName","domainNames"})
+    @OutputCustomType.Constructor
     private ContainerPublicDomainName(
-        @Nullable String certificateName,
-        @Nullable List<String> domainNames) {
+        @OutputCustomType.Parameter("certificateName") @Nullable String certificateName,
+        @OutputCustomType.Parameter("domainNames") @Nullable List<String> domainNames) {
         this.certificateName = certificateName;
         this.domainNames = domainNames;
     }

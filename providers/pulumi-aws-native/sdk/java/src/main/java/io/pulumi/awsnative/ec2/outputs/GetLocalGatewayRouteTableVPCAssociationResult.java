@@ -34,12 +34,12 @@ public final class GetLocalGatewayRouteTableVPCAssociationResult {
      */
     private final @Nullable List<LocalGatewayRouteTableVPCAssociationTag> tags;
 
-    @OutputCustomType.Constructor({"localGatewayId","localGatewayRouteTableVpcAssociationId","state","tags"})
+    @OutputCustomType.Constructor
     private GetLocalGatewayRouteTableVPCAssociationResult(
-        @Nullable String localGatewayId,
-        @Nullable String localGatewayRouteTableVpcAssociationId,
-        @Nullable String state,
-        @Nullable List<LocalGatewayRouteTableVPCAssociationTag> tags) {
+        @OutputCustomType.Parameter("localGatewayId") @Nullable String localGatewayId,
+        @OutputCustomType.Parameter("localGatewayRouteTableVpcAssociationId") @Nullable String localGatewayRouteTableVpcAssociationId,
+        @OutputCustomType.Parameter("state") @Nullable String state,
+        @OutputCustomType.Parameter("tags") @Nullable List<LocalGatewayRouteTableVPCAssociationTag> tags) {
         this.localGatewayId = localGatewayId;
         this.localGatewayRouteTableVpcAssociationId = localGatewayRouteTableVpcAssociationId;
         this.state = state;

@@ -24,11 +24,11 @@ public final class SamplingRuleRecord {
     private final @Nullable String modifiedAt;
     private final @Nullable SamplingRule samplingRule;
 
-    @OutputCustomType.Constructor({"createdAt","modifiedAt","samplingRule"})
+    @OutputCustomType.Constructor
     private SamplingRuleRecord(
-        @Nullable String createdAt,
-        @Nullable String modifiedAt,
-        @Nullable SamplingRule samplingRule) {
+        @OutputCustomType.Parameter("createdAt") @Nullable String createdAt,
+        @OutputCustomType.Parameter("modifiedAt") @Nullable String modifiedAt,
+        @OutputCustomType.Parameter("samplingRule") @Nullable SamplingRule samplingRule) {
         this.createdAt = createdAt;
         this.modifiedAt = modifiedAt;
         this.samplingRule = samplingRule;

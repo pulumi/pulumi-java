@@ -19,12 +19,12 @@ public final class AssetModelPropertyType {
     private final @Nullable AssetModelTransform transform;
     private final AssetModelTypeName typeName;
 
-    @OutputCustomType.Constructor({"attribute","metric","transform","typeName"})
+    @OutputCustomType.Constructor
     private AssetModelPropertyType(
-        @Nullable AssetModelAttribute attribute,
-        @Nullable AssetModelMetric metric,
-        @Nullable AssetModelTransform transform,
-        AssetModelTypeName typeName) {
+        @OutputCustomType.Parameter("attribute") @Nullable AssetModelAttribute attribute,
+        @OutputCustomType.Parameter("metric") @Nullable AssetModelMetric metric,
+        @OutputCustomType.Parameter("transform") @Nullable AssetModelTransform transform,
+        @OutputCustomType.Parameter("typeName") AssetModelTypeName typeName) {
         this.attribute = attribute;
         this.metric = metric;
         this.transform = transform;

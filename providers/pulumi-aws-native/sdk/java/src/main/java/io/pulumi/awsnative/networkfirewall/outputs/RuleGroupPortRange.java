@@ -12,10 +12,10 @@ public final class RuleGroupPortRange {
     private final Integer fromPort;
     private final Integer toPort;
 
-    @OutputCustomType.Constructor({"fromPort","toPort"})
+    @OutputCustomType.Constructor
     private RuleGroupPortRange(
-        Integer fromPort,
-        Integer toPort) {
+        @OutputCustomType.Parameter("fromPort") Integer fromPort,
+        @OutputCustomType.Parameter("toPort") Integer toPort) {
         this.fromPort = fromPort;
         this.toPort = toPort;
     }

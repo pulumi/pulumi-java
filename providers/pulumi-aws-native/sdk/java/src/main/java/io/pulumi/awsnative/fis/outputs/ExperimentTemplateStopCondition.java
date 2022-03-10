@@ -14,10 +14,10 @@ public final class ExperimentTemplateStopCondition {
     private final String source;
     private final @Nullable String value;
 
-    @OutputCustomType.Constructor({"source","value"})
+    @OutputCustomType.Constructor
     private ExperimentTemplateStopCondition(
-        String source,
-        @Nullable String value) {
+        @OutputCustomType.Parameter("source") String source,
+        @OutputCustomType.Parameter("value") @Nullable String value) {
         this.source = source;
         this.value = value;
     }

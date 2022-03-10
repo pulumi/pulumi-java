@@ -13,8 +13,8 @@ import javax.annotation.Nullable;
 public final class FirewallPolicyStatefulEngineOptions {
     private final @Nullable FirewallPolicyRuleOrder ruleOrder;
 
-    @OutputCustomType.Constructor({"ruleOrder"})
-    private FirewallPolicyStatefulEngineOptions(@Nullable FirewallPolicyRuleOrder ruleOrder) {
+    @OutputCustomType.Constructor
+    private FirewallPolicyStatefulEngineOptions(@OutputCustomType.Parameter("ruleOrder") @Nullable FirewallPolicyRuleOrder ruleOrder) {
         this.ruleOrder = ruleOrder;
     }
 

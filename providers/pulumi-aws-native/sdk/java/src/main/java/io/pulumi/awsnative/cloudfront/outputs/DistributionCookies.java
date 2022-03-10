@@ -14,10 +14,10 @@ public final class DistributionCookies {
     private final String forward;
     private final @Nullable List<String> whitelistedNames;
 
-    @OutputCustomType.Constructor({"forward","whitelistedNames"})
+    @OutputCustomType.Constructor
     private DistributionCookies(
-        String forward,
-        @Nullable List<String> whitelistedNames) {
+        @OutputCustomType.Parameter("forward") String forward,
+        @OutputCustomType.Parameter("whitelistedNames") @Nullable List<String> whitelistedNames) {
         this.forward = forward;
         this.whitelistedNames = whitelistedNames;
     }

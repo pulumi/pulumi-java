@@ -28,11 +28,11 @@ public final class FunctionImageConfig {
      */
     private final @Nullable String workingDirectory;
 
-    @OutputCustomType.Constructor({"command","entryPoint","workingDirectory"})
+    @OutputCustomType.Constructor
     private FunctionImageConfig(
-        @Nullable List<String> command,
-        @Nullable List<String> entryPoint,
-        @Nullable String workingDirectory) {
+        @OutputCustomType.Parameter("command") @Nullable List<String> command,
+        @OutputCustomType.Parameter("entryPoint") @Nullable List<String> entryPoint,
+        @OutputCustomType.Parameter("workingDirectory") @Nullable String workingDirectory) {
         this.command = command;
         this.entryPoint = entryPoint;
         this.workingDirectory = workingDirectory;

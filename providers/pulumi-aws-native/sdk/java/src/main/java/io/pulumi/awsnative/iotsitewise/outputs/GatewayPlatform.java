@@ -23,10 +23,10 @@ public final class GatewayPlatform {
      */
     private final @Nullable GatewayGreengrassV2 greengrassV2;
 
-    @OutputCustomType.Constructor({"greengrass","greengrassV2"})
+    @OutputCustomType.Constructor
     private GatewayPlatform(
-        @Nullable GatewayGreengrass greengrass,
-        @Nullable GatewayGreengrassV2 greengrassV2) {
+        @OutputCustomType.Parameter("greengrass") @Nullable GatewayGreengrass greengrass,
+        @OutputCustomType.Parameter("greengrassV2") @Nullable GatewayGreengrassV2 greengrassV2) {
         this.greengrass = greengrass;
         this.greengrassV2 = greengrassV2;
     }

@@ -29,11 +29,11 @@ public final class GetHookTypeConfigResult {
      */
     private final @Nullable String typeName;
 
-    @OutputCustomType.Constructor({"configuration","configurationArn","typeName"})
+    @OutputCustomType.Constructor
     private GetHookTypeConfigResult(
-        @Nullable String configuration,
-        @Nullable String configurationArn,
-        @Nullable String typeName) {
+        @OutputCustomType.Parameter("configuration") @Nullable String configuration,
+        @OutputCustomType.Parameter("configurationArn") @Nullable String configurationArn,
+        @OutputCustomType.Parameter("typeName") @Nullable String typeName) {
         this.configuration = configuration;
         this.configurationArn = configurationArn;
         this.typeName = typeName;

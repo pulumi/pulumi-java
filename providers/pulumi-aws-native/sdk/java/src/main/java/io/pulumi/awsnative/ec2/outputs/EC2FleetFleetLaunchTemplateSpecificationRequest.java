@@ -15,11 +15,11 @@ public final class EC2FleetFleetLaunchTemplateSpecificationRequest {
     private final @Nullable String launchTemplateName;
     private final @Nullable String version;
 
-    @OutputCustomType.Constructor({"launchTemplateId","launchTemplateName","version"})
+    @OutputCustomType.Constructor
     private EC2FleetFleetLaunchTemplateSpecificationRequest(
-        @Nullable String launchTemplateId,
-        @Nullable String launchTemplateName,
-        @Nullable String version) {
+        @OutputCustomType.Parameter("launchTemplateId") @Nullable String launchTemplateId,
+        @OutputCustomType.Parameter("launchTemplateName") @Nullable String launchTemplateName,
+        @OutputCustomType.Parameter("version") @Nullable String version) {
         this.launchTemplateId = launchTemplateId;
         this.launchTemplateName = launchTemplateName;
         this.version = version;

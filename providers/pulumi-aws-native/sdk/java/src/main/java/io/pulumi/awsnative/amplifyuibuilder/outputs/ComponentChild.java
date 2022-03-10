@@ -17,12 +17,12 @@ public final class ComponentChild {
     private final String name;
     private final ComponentProperties properties;
 
-    @OutputCustomType.Constructor({"children","componentType","name","properties"})
+    @OutputCustomType.Constructor
     private ComponentChild(
-        @Nullable List<ComponentChild> children,
-        String componentType,
-        String name,
-        ComponentProperties properties) {
+        @OutputCustomType.Parameter("children") @Nullable List<ComponentChild> children,
+        @OutputCustomType.Parameter("componentType") String componentType,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("properties") ComponentProperties properties) {
         this.children = children;
         this.componentType = componentType;
         this.name = name;

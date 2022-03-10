@@ -16,11 +16,11 @@ public final class RuleGroupStatefulRule {
     private final RuleGroupHeader header;
     private final List<RuleGroupRuleOption> ruleOptions;
 
-    @OutputCustomType.Constructor({"action","header","ruleOptions"})
+    @OutputCustomType.Constructor
     private RuleGroupStatefulRule(
-        RuleGroupStatefulRuleAction action,
-        RuleGroupHeader header,
-        List<RuleGroupRuleOption> ruleOptions) {
+        @OutputCustomType.Parameter("action") RuleGroupStatefulRuleAction action,
+        @OutputCustomType.Parameter("header") RuleGroupHeader header,
+        @OutputCustomType.Parameter("ruleOptions") List<RuleGroupRuleOption> ruleOptions) {
         this.action = action;
         this.header = header;
         this.ruleOptions = ruleOptions;

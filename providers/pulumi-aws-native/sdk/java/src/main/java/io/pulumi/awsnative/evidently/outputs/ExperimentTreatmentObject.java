@@ -16,12 +16,12 @@ public final class ExperimentTreatmentObject {
     private final String treatmentName;
     private final String variation;
 
-    @OutputCustomType.Constructor({"description","feature","treatmentName","variation"})
+    @OutputCustomType.Constructor
     private ExperimentTreatmentObject(
-        @Nullable String description,
-        String feature,
-        String treatmentName,
-        String variation) {
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("feature") String feature,
+        @OutputCustomType.Parameter("treatmentName") String treatmentName,
+        @OutputCustomType.Parameter("variation") String variation) {
         this.description = description;
         this.feature = feature;
         this.treatmentName = treatmentName;

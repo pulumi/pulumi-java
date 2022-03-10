@@ -32,12 +32,12 @@ public final class FleetIpPermission {
      */
     private final Integer toPort;
 
-    @OutputCustomType.Constructor({"fromPort","ipRange","protocol","toPort"})
+    @OutputCustomType.Constructor
     private FleetIpPermission(
-        Integer fromPort,
-        String ipRange,
-        FleetIpPermissionProtocol protocol,
-        Integer toPort) {
+        @OutputCustomType.Parameter("fromPort") Integer fromPort,
+        @OutputCustomType.Parameter("ipRange") String ipRange,
+        @OutputCustomType.Parameter("protocol") FleetIpPermissionProtocol protocol,
+        @OutputCustomType.Parameter("toPort") Integer toPort) {
         this.fromPort = fromPort;
         this.ipRange = ipRange;
         this.protocol = protocol;

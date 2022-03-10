@@ -29,11 +29,11 @@ public final class DeploymentCanarySetting {
      */
     private final @Nullable Boolean useStageCache;
 
-    @OutputCustomType.Constructor({"percentTraffic","stageVariableOverrides","useStageCache"})
+    @OutputCustomType.Constructor
     private DeploymentCanarySetting(
-        @Nullable Double percentTraffic,
-        @Nullable Object stageVariableOverrides,
-        @Nullable Boolean useStageCache) {
+        @OutputCustomType.Parameter("percentTraffic") @Nullable Double percentTraffic,
+        @OutputCustomType.Parameter("stageVariableOverrides") @Nullable Object stageVariableOverrides,
+        @OutputCustomType.Parameter("useStageCache") @Nullable Boolean useStageCache) {
         this.percentTraffic = percentTraffic;
         this.stageVariableOverrides = stageVariableOverrides;
         this.useStageCache = useStageCache;

@@ -19,10 +19,10 @@ public final class DetectorModelIotEvents {
     private final String inputName;
     private final @Nullable DetectorModelPayload payload;
 
-    @OutputCustomType.Constructor({"inputName","payload"})
+    @OutputCustomType.Constructor
     private DetectorModelIotEvents(
-        String inputName,
-        @Nullable DetectorModelPayload payload) {
+        @OutputCustomType.Parameter("inputName") String inputName,
+        @OutputCustomType.Parameter("payload") @Nullable DetectorModelPayload payload) {
         this.inputName = inputName;
         this.payload = payload;
     }

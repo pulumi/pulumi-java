@@ -22,10 +22,10 @@ public final class DeploymentAccessLogSetting {
      */
     private final @Nullable String format;
 
-    @OutputCustomType.Constructor({"destinationArn","format"})
+    @OutputCustomType.Constructor
     private DeploymentAccessLogSetting(
-        @Nullable String destinationArn,
-        @Nullable String format) {
+        @OutputCustomType.Parameter("destinationArn") @Nullable String destinationArn,
+        @OutputCustomType.Parameter("format") @Nullable String format) {
         this.destinationArn = destinationArn;
         this.format = format;
     }

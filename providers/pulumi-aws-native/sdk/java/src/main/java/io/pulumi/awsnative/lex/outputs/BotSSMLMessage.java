@@ -15,8 +15,8 @@ public final class BotSSMLMessage {
      */
     private final String value;
 
-    @OutputCustomType.Constructor({"value"})
-    private BotSSMLMessage(String value) {
+    @OutputCustomType.Constructor
+    private BotSSMLMessage(@OutputCustomType.Parameter("value") String value) {
         this.value = value;
     }
 

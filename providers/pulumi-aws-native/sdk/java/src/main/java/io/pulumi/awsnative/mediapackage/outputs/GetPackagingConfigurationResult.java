@@ -53,15 +53,15 @@ public final class GetPackagingConfigurationResult {
      */
     private final @Nullable List<PackagingConfigurationTag> tags;
 
-    @OutputCustomType.Constructor({"arn","cmafPackage","dashPackage","hlsPackage","mssPackage","packagingGroupId","tags"})
+    @OutputCustomType.Constructor
     private GetPackagingConfigurationResult(
-        @Nullable String arn,
-        @Nullable PackagingConfigurationCmafPackage cmafPackage,
-        @Nullable PackagingConfigurationDashPackage dashPackage,
-        @Nullable PackagingConfigurationHlsPackage hlsPackage,
-        @Nullable PackagingConfigurationMssPackage mssPackage,
-        @Nullable String packagingGroupId,
-        @Nullable List<PackagingConfigurationTag> tags) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("cmafPackage") @Nullable PackagingConfigurationCmafPackage cmafPackage,
+        @OutputCustomType.Parameter("dashPackage") @Nullable PackagingConfigurationDashPackage dashPackage,
+        @OutputCustomType.Parameter("hlsPackage") @Nullable PackagingConfigurationHlsPackage hlsPackage,
+        @OutputCustomType.Parameter("mssPackage") @Nullable PackagingConfigurationMssPackage mssPackage,
+        @OutputCustomType.Parameter("packagingGroupId") @Nullable String packagingGroupId,
+        @OutputCustomType.Parameter("tags") @Nullable List<PackagingConfigurationTag> tags) {
         this.arn = arn;
         this.cmafPackage = cmafPackage;
         this.dashPackage = dashPackage;

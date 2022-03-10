@@ -21,14 +21,14 @@ public final class DataSourceServiceNowServiceCatalogConfiguration {
     private final @Nullable List<DataSourceToIndexFieldMapping> fieldMappings;
     private final @Nullable List<String> includeAttachmentFilePatterns;
 
-    @OutputCustomType.Constructor({"crawlAttachments","documentDataFieldName","documentTitleFieldName","excludeAttachmentFilePatterns","fieldMappings","includeAttachmentFilePatterns"})
+    @OutputCustomType.Constructor
     private DataSourceServiceNowServiceCatalogConfiguration(
-        @Nullable Boolean crawlAttachments,
-        String documentDataFieldName,
-        @Nullable String documentTitleFieldName,
-        @Nullable List<String> excludeAttachmentFilePatterns,
-        @Nullable List<DataSourceToIndexFieldMapping> fieldMappings,
-        @Nullable List<String> includeAttachmentFilePatterns) {
+        @OutputCustomType.Parameter("crawlAttachments") @Nullable Boolean crawlAttachments,
+        @OutputCustomType.Parameter("documentDataFieldName") String documentDataFieldName,
+        @OutputCustomType.Parameter("documentTitleFieldName") @Nullable String documentTitleFieldName,
+        @OutputCustomType.Parameter("excludeAttachmentFilePatterns") @Nullable List<String> excludeAttachmentFilePatterns,
+        @OutputCustomType.Parameter("fieldMappings") @Nullable List<DataSourceToIndexFieldMapping> fieldMappings,
+        @OutputCustomType.Parameter("includeAttachmentFilePatterns") @Nullable List<String> includeAttachmentFilePatterns) {
         this.crawlAttachments = crawlAttachments;
         this.documentDataFieldName = documentDataFieldName;
         this.documentTitleFieldName = documentTitleFieldName;

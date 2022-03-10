@@ -15,8 +15,8 @@ public final class BotSampleValue {
      */
     private final String value;
 
-    @OutputCustomType.Constructor({"value"})
-    private BotSampleValue(String value) {
+    @OutputCustomType.Constructor
+    private BotSampleValue(@OutputCustomType.Parameter("value") String value) {
         this.value = value;
     }
 

@@ -17,11 +17,11 @@ public final class ScheduledActionType {
     private final @Nullable ScheduledActionResizeClusterMessage resizeCluster;
     private final @Nullable ScheduledActionResumeClusterMessage resumeCluster;
 
-    @OutputCustomType.Constructor({"pauseCluster","resizeCluster","resumeCluster"})
+    @OutputCustomType.Constructor
     private ScheduledActionType(
-        @Nullable ScheduledActionPauseClusterMessage pauseCluster,
-        @Nullable ScheduledActionResizeClusterMessage resizeCluster,
-        @Nullable ScheduledActionResumeClusterMessage resumeCluster) {
+        @OutputCustomType.Parameter("pauseCluster") @Nullable ScheduledActionPauseClusterMessage pauseCluster,
+        @OutputCustomType.Parameter("resizeCluster") @Nullable ScheduledActionResizeClusterMessage resizeCluster,
+        @OutputCustomType.Parameter("resumeCluster") @Nullable ScheduledActionResumeClusterMessage resumeCluster) {
         this.pauseCluster = pauseCluster;
         this.resizeCluster = resizeCluster;
         this.resumeCluster = resumeCluster;

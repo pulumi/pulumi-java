@@ -17,12 +17,12 @@ public final class SpotFleetBlockDeviceMapping {
     private final @Nullable String noDevice;
     private final @Nullable String virtualName;
 
-    @OutputCustomType.Constructor({"deviceName","ebs","noDevice","virtualName"})
+    @OutputCustomType.Constructor
     private SpotFleetBlockDeviceMapping(
-        String deviceName,
-        @Nullable SpotFleetEbsBlockDevice ebs,
-        @Nullable String noDevice,
-        @Nullable String virtualName) {
+        @OutputCustomType.Parameter("deviceName") String deviceName,
+        @OutputCustomType.Parameter("ebs") @Nullable SpotFleetEbsBlockDevice ebs,
+        @OutputCustomType.Parameter("noDevice") @Nullable String noDevice,
+        @OutputCustomType.Parameter("virtualName") @Nullable String virtualName) {
         this.deviceName = deviceName;
         this.ebs = ebs;
         this.noDevice = noDevice;

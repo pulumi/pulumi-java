@@ -84,21 +84,21 @@ public final class GetEventSubscriptionResult {
      */
     private final @Nullable List<EventSubscriptionTag> tags;
 
-    @OutputCustomType.Constructor({"custSubscriptionId","customerAwsId","enabled","eventCategories","eventCategoriesList","severity","snsTopicArn","sourceIds","sourceIdsList","sourceType","status","subscriptionCreationTime","tags"})
+    @OutputCustomType.Constructor
     private GetEventSubscriptionResult(
-        @Nullable String custSubscriptionId,
-        @Nullable String customerAwsId,
-        @Nullable Boolean enabled,
-        @Nullable List<EventSubscriptionEventCategoriesItem> eventCategories,
-        @Nullable List<String> eventCategoriesList,
-        @Nullable EventSubscriptionSeverity severity,
-        @Nullable String snsTopicArn,
-        @Nullable List<String> sourceIds,
-        @Nullable List<String> sourceIdsList,
-        @Nullable EventSubscriptionSourceType sourceType,
-        @Nullable EventSubscriptionStatus status,
-        @Nullable String subscriptionCreationTime,
-        @Nullable List<EventSubscriptionTag> tags) {
+        @OutputCustomType.Parameter("custSubscriptionId") @Nullable String custSubscriptionId,
+        @OutputCustomType.Parameter("customerAwsId") @Nullable String customerAwsId,
+        @OutputCustomType.Parameter("enabled") @Nullable Boolean enabled,
+        @OutputCustomType.Parameter("eventCategories") @Nullable List<EventSubscriptionEventCategoriesItem> eventCategories,
+        @OutputCustomType.Parameter("eventCategoriesList") @Nullable List<String> eventCategoriesList,
+        @OutputCustomType.Parameter("severity") @Nullable EventSubscriptionSeverity severity,
+        @OutputCustomType.Parameter("snsTopicArn") @Nullable String snsTopicArn,
+        @OutputCustomType.Parameter("sourceIds") @Nullable List<String> sourceIds,
+        @OutputCustomType.Parameter("sourceIdsList") @Nullable List<String> sourceIdsList,
+        @OutputCustomType.Parameter("sourceType") @Nullable EventSubscriptionSourceType sourceType,
+        @OutputCustomType.Parameter("status") @Nullable EventSubscriptionStatus status,
+        @OutputCustomType.Parameter("subscriptionCreationTime") @Nullable String subscriptionCreationTime,
+        @OutputCustomType.Parameter("tags") @Nullable List<EventSubscriptionTag> tags) {
         this.custSubscriptionId = custSubscriptionId;
         this.customerAwsId = customerAwsId;
         this.enabled = enabled;

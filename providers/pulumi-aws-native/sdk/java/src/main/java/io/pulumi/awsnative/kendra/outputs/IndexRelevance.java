@@ -22,13 +22,13 @@ public final class IndexRelevance {
     private final @Nullable IndexOrder rankOrder;
     private final @Nullable List<IndexValueImportanceItem> valueImportanceItems;
 
-    @OutputCustomType.Constructor({"duration","freshness","importance","rankOrder","valueImportanceItems"})
+    @OutputCustomType.Constructor
     private IndexRelevance(
-        @Nullable String duration,
-        @Nullable Boolean freshness,
-        @Nullable Integer importance,
-        @Nullable IndexOrder rankOrder,
-        @Nullable List<IndexValueImportanceItem> valueImportanceItems) {
+        @OutputCustomType.Parameter("duration") @Nullable String duration,
+        @OutputCustomType.Parameter("freshness") @Nullable Boolean freshness,
+        @OutputCustomType.Parameter("importance") @Nullable Integer importance,
+        @OutputCustomType.Parameter("rankOrder") @Nullable IndexOrder rankOrder,
+        @OutputCustomType.Parameter("valueImportanceItems") @Nullable List<IndexValueImportanceItem> valueImportanceItems) {
         this.duration = duration;
         this.freshness = freshness;
         this.importance = importance;

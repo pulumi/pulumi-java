@@ -45,14 +45,14 @@ public final class GetDomainResult {
      */
     private final @Nullable List<DomainTag> tags;
 
-    @OutputCustomType.Constructor({"createdAt","deadLetterQueueUrl","defaultEncryptionKey","defaultExpirationDays","lastUpdatedAt","tags"})
+    @OutputCustomType.Constructor
     private GetDomainResult(
-        @Nullable String createdAt,
-        @Nullable String deadLetterQueueUrl,
-        @Nullable String defaultEncryptionKey,
-        @Nullable Integer defaultExpirationDays,
-        @Nullable String lastUpdatedAt,
-        @Nullable List<DomainTag> tags) {
+        @OutputCustomType.Parameter("createdAt") @Nullable String createdAt,
+        @OutputCustomType.Parameter("deadLetterQueueUrl") @Nullable String deadLetterQueueUrl,
+        @OutputCustomType.Parameter("defaultEncryptionKey") @Nullable String defaultEncryptionKey,
+        @OutputCustomType.Parameter("defaultExpirationDays") @Nullable Integer defaultExpirationDays,
+        @OutputCustomType.Parameter("lastUpdatedAt") @Nullable String lastUpdatedAt,
+        @OutputCustomType.Parameter("tags") @Nullable List<DomainTag> tags) {
         this.createdAt = createdAt;
         this.deadLetterQueueUrl = deadLetterQueueUrl;
         this.defaultEncryptionKey = defaultEncryptionKey;

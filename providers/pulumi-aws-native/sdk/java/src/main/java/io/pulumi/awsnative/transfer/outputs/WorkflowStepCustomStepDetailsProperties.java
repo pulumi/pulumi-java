@@ -28,11 +28,11 @@ public final class WorkflowStepCustomStepDetailsProperties {
      */
     private final @Nullable Integer timeoutSeconds;
 
-    @OutputCustomType.Constructor({"name","target","timeoutSeconds"})
+    @OutputCustomType.Constructor
     private WorkflowStepCustomStepDetailsProperties(
-        @Nullable String name,
-        @Nullable String target,
-        @Nullable Integer timeoutSeconds) {
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("target") @Nullable String target,
+        @OutputCustomType.Parameter("timeoutSeconds") @Nullable Integer timeoutSeconds) {
         this.name = name;
         this.target = target;
         this.timeoutSeconds = timeoutSeconds;

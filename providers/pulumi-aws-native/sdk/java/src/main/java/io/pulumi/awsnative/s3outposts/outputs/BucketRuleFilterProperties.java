@@ -29,11 +29,11 @@ public final class BucketRuleFilterProperties {
      */
     private final @Nullable BucketFilterTag tag;
 
-    @OutputCustomType.Constructor({"andOperator","prefix","tag"})
+    @OutputCustomType.Constructor
     private BucketRuleFilterProperties(
-        @Nullable BucketFilterAndOperator andOperator,
-        @Nullable String prefix,
-        @Nullable BucketFilterTag tag) {
+        @OutputCustomType.Parameter("andOperator") @Nullable BucketFilterAndOperator andOperator,
+        @OutputCustomType.Parameter("prefix") @Nullable String prefix,
+        @OutputCustomType.Parameter("tag") @Nullable BucketFilterTag tag) {
         this.andOperator = andOperator;
         this.prefix = prefix;
         this.tag = tag;

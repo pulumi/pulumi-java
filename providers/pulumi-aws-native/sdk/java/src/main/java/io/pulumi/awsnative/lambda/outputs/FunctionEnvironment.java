@@ -17,8 +17,8 @@ public final class FunctionEnvironment {
      */
     private final @Nullable Object variables;
 
-    @OutputCustomType.Constructor({"variables"})
-    private FunctionEnvironment(@Nullable Object variables) {
+    @OutputCustomType.Constructor
+    private FunctionEnvironment(@OutputCustomType.Parameter("variables") @Nullable Object variables) {
         this.variables = variables;
     }
 

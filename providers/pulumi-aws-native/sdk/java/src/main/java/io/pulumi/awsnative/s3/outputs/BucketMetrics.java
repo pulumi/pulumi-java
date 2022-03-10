@@ -15,10 +15,10 @@ public final class BucketMetrics {
     private final @Nullable BucketReplicationTimeValue eventThreshold;
     private final BucketMetricsStatus status;
 
-    @OutputCustomType.Constructor({"eventThreshold","status"})
+    @OutputCustomType.Constructor
     private BucketMetrics(
-        @Nullable BucketReplicationTimeValue eventThreshold,
-        BucketMetricsStatus status) {
+        @OutputCustomType.Parameter("eventThreshold") @Nullable BucketReplicationTimeValue eventThreshold,
+        @OutputCustomType.Parameter("status") BucketMetricsStatus status) {
         this.eventThreshold = eventThreshold;
         this.status = status;
     }

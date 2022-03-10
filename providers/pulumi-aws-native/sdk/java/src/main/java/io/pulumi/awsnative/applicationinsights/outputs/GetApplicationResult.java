@@ -63,17 +63,17 @@ public final class GetApplicationResult {
      */
     private final @Nullable List<ApplicationTag> tags;
 
-    @OutputCustomType.Constructor({"applicationARN","autoConfigurationEnabled","cWEMonitorEnabled","componentMonitoringSettings","customComponents","logPatternSets","opsCenterEnabled","opsItemSNSTopicArn","tags"})
+    @OutputCustomType.Constructor
     private GetApplicationResult(
-        @Nullable String applicationARN,
-        @Nullable Boolean autoConfigurationEnabled,
-        @Nullable Boolean cWEMonitorEnabled,
-        @Nullable List<ApplicationComponentMonitoringSetting> componentMonitoringSettings,
-        @Nullable List<ApplicationCustomComponent> customComponents,
-        @Nullable List<ApplicationLogPatternSet> logPatternSets,
-        @Nullable Boolean opsCenterEnabled,
-        @Nullable String opsItemSNSTopicArn,
-        @Nullable List<ApplicationTag> tags) {
+        @OutputCustomType.Parameter("applicationARN") @Nullable String applicationARN,
+        @OutputCustomType.Parameter("autoConfigurationEnabled") @Nullable Boolean autoConfigurationEnabled,
+        @OutputCustomType.Parameter("cWEMonitorEnabled") @Nullable Boolean cWEMonitorEnabled,
+        @OutputCustomType.Parameter("componentMonitoringSettings") @Nullable List<ApplicationComponentMonitoringSetting> componentMonitoringSettings,
+        @OutputCustomType.Parameter("customComponents") @Nullable List<ApplicationCustomComponent> customComponents,
+        @OutputCustomType.Parameter("logPatternSets") @Nullable List<ApplicationLogPatternSet> logPatternSets,
+        @OutputCustomType.Parameter("opsCenterEnabled") @Nullable Boolean opsCenterEnabled,
+        @OutputCustomType.Parameter("opsItemSNSTopicArn") @Nullable String opsItemSNSTopicArn,
+        @OutputCustomType.Parameter("tags") @Nullable List<ApplicationTag> tags) {
         this.applicationARN = applicationARN;
         this.autoConfigurationEnabled = autoConfigurationEnabled;
         this.cWEMonitorEnabled = cWEMonitorEnabled;

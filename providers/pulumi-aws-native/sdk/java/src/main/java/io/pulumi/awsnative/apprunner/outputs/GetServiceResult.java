@@ -38,15 +38,15 @@ public final class GetServiceResult {
      */
     private final @Nullable String status;
 
-    @OutputCustomType.Constructor({"healthCheckConfiguration","instanceConfiguration","serviceArn","serviceId","serviceUrl","sourceConfiguration","status"})
+    @OutputCustomType.Constructor
     private GetServiceResult(
-        @Nullable ServiceHealthCheckConfiguration healthCheckConfiguration,
-        @Nullable ServiceInstanceConfiguration instanceConfiguration,
-        @Nullable String serviceArn,
-        @Nullable String serviceId,
-        @Nullable String serviceUrl,
-        @Nullable ServiceSourceConfiguration sourceConfiguration,
-        @Nullable String status) {
+        @OutputCustomType.Parameter("healthCheckConfiguration") @Nullable ServiceHealthCheckConfiguration healthCheckConfiguration,
+        @OutputCustomType.Parameter("instanceConfiguration") @Nullable ServiceInstanceConfiguration instanceConfiguration,
+        @OutputCustomType.Parameter("serviceArn") @Nullable String serviceArn,
+        @OutputCustomType.Parameter("serviceId") @Nullable String serviceId,
+        @OutputCustomType.Parameter("serviceUrl") @Nullable String serviceUrl,
+        @OutputCustomType.Parameter("sourceConfiguration") @Nullable ServiceSourceConfiguration sourceConfiguration,
+        @OutputCustomType.Parameter("status") @Nullable String status) {
         this.healthCheckConfiguration = healthCheckConfiguration;
         this.instanceConfiguration = instanceConfiguration;
         this.serviceArn = serviceArn;

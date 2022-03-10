@@ -16,11 +16,11 @@ public final class ClusterCapacityProviderAssociationsCapacityProviderStrategy {
     private final String capacityProvider;
     private final @Nullable Integer weight;
 
-    @OutputCustomType.Constructor({"base","capacityProvider","weight"})
+    @OutputCustomType.Constructor
     private ClusterCapacityProviderAssociationsCapacityProviderStrategy(
-        @Nullable Integer base,
-        String capacityProvider,
-        @Nullable Integer weight) {
+        @OutputCustomType.Parameter("base") @Nullable Integer base,
+        @OutputCustomType.Parameter("capacityProvider") String capacityProvider,
+        @OutputCustomType.Parameter("weight") @Nullable Integer weight) {
         this.base = base;
         this.capacityProvider = capacityProvider;
         this.weight = weight;

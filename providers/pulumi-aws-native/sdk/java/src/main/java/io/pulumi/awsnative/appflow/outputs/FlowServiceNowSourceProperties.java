@@ -11,8 +11,8 @@ import java.util.Objects;
 public final class FlowServiceNowSourceProperties {
     private final String object;
 
-    @OutputCustomType.Constructor({"object"})
-    private FlowServiceNowSourceProperties(String object) {
+    @OutputCustomType.Constructor
+    private FlowServiceNowSourceProperties(@OutputCustomType.Parameter("object") String object) {
         this.object = object;
     }
 

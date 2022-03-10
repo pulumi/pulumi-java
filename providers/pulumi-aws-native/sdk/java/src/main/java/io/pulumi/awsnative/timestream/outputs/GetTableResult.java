@@ -37,13 +37,13 @@ public final class GetTableResult {
      */
     private final @Nullable List<TableTag> tags;
 
-    @OutputCustomType.Constructor({"arn","magneticStoreWriteProperties","name","retentionProperties","tags"})
+    @OutputCustomType.Constructor
     private GetTableResult(
-        @Nullable String arn,
-        @Nullable MagneticStoreWritePropertiesProperties magneticStoreWriteProperties,
-        @Nullable String name,
-        @Nullable RetentionPropertiesProperties retentionProperties,
-        @Nullable List<TableTag> tags) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("magneticStoreWriteProperties") @Nullable MagneticStoreWritePropertiesProperties magneticStoreWriteProperties,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("retentionProperties") @Nullable RetentionPropertiesProperties retentionProperties,
+        @OutputCustomType.Parameter("tags") @Nullable List<TableTag> tags) {
         this.arn = arn;
         this.magneticStoreWriteProperties = magneticStoreWriteProperties;
         this.name = name;

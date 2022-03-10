@@ -11,8 +11,8 @@ import java.util.Objects;
 public final class RuleGroupAddress {
     private final String addressDefinition;
 
-    @OutputCustomType.Constructor({"addressDefinition"})
-    private RuleGroupAddress(String addressDefinition) {
+    @OutputCustomType.Constructor
+    private RuleGroupAddress(@OutputCustomType.Parameter("addressDefinition") String addressDefinition) {
         this.addressDefinition = addressDefinition;
     }
 

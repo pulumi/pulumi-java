@@ -18,12 +18,12 @@ public final class RuleGroupSizeConstraintStatement {
     private final Double size;
     private final List<RuleGroupTextTransformation> textTransformations;
 
-    @OutputCustomType.Constructor({"comparisonOperator","fieldToMatch","size","textTransformations"})
+    @OutputCustomType.Constructor
     private RuleGroupSizeConstraintStatement(
-        RuleGroupSizeConstraintStatementComparisonOperator comparisonOperator,
-        RuleGroupFieldToMatch fieldToMatch,
-        Double size,
-        List<RuleGroupTextTransformation> textTransformations) {
+        @OutputCustomType.Parameter("comparisonOperator") RuleGroupSizeConstraintStatementComparisonOperator comparisonOperator,
+        @OutputCustomType.Parameter("fieldToMatch") RuleGroupFieldToMatch fieldToMatch,
+        @OutputCustomType.Parameter("size") Double size,
+        @OutputCustomType.Parameter("textTransformations") List<RuleGroupTextTransformation> textTransformations) {
         this.comparisonOperator = comparisonOperator;
         this.fieldToMatch = fieldToMatch;
         this.size = size;

@@ -12,8 +12,8 @@ import java.util.Objects;
 public final class DataSourceWebCrawlerSiteMapsConfiguration {
     private final List<String> siteMaps;
 
-    @OutputCustomType.Constructor({"siteMaps"})
-    private DataSourceWebCrawlerSiteMapsConfiguration(List<String> siteMaps) {
+    @OutputCustomType.Constructor
+    private DataSourceWebCrawlerSiteMapsConfiguration(@OutputCustomType.Parameter("siteMaps") List<String> siteMaps) {
         this.siteMaps = siteMaps;
     }
 

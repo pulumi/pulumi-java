@@ -14,10 +14,10 @@ public final class ConfigDataflowEndpointConfig {
     private final @Nullable String dataflowEndpointName;
     private final @Nullable String dataflowEndpointRegion;
 
-    @OutputCustomType.Constructor({"dataflowEndpointName","dataflowEndpointRegion"})
+    @OutputCustomType.Constructor
     private ConfigDataflowEndpointConfig(
-        @Nullable String dataflowEndpointName,
-        @Nullable String dataflowEndpointRegion) {
+        @OutputCustomType.Parameter("dataflowEndpointName") @Nullable String dataflowEndpointName,
+        @OutputCustomType.Parameter("dataflowEndpointRegion") @Nullable String dataflowEndpointRegion) {
         this.dataflowEndpointName = dataflowEndpointName;
         this.dataflowEndpointRegion = dataflowEndpointRegion;
     }

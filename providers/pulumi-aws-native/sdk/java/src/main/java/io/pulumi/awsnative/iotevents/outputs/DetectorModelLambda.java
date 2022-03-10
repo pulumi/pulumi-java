@@ -19,10 +19,10 @@ public final class DetectorModelLambda {
     private final String functionArn;
     private final @Nullable DetectorModelPayload payload;
 
-    @OutputCustomType.Constructor({"functionArn","payload"})
+    @OutputCustomType.Constructor
     private DetectorModelLambda(
-        String functionArn,
-        @Nullable DetectorModelPayload payload) {
+        @OutputCustomType.Parameter("functionArn") String functionArn,
+        @OutputCustomType.Parameter("payload") @Nullable DetectorModelPayload payload) {
         this.functionArn = functionArn;
         this.payload = payload;
     }

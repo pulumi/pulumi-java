@@ -31,21 +31,21 @@ public final class GetPolicyResult {
     private final @Nullable SecurityServicePolicyDataProperties securityServicePolicyData;
     private final @Nullable List<PolicyTag> tags;
 
-    @OutputCustomType.Constructor({"arn","excludeMap","excludeResourceTags","id","includeMap","policyName","remediationEnabled","resourceTags","resourceType","resourceTypeList","resourcesCleanUp","securityServicePolicyData","tags"})
+    @OutputCustomType.Constructor
     private GetPolicyResult(
-        @Nullable String arn,
-        @Nullable PolicyIEMap excludeMap,
-        @Nullable Boolean excludeResourceTags,
-        @Nullable String id,
-        @Nullable PolicyIEMap includeMap,
-        @Nullable String policyName,
-        @Nullable Boolean remediationEnabled,
-        @Nullable List<PolicyResourceTag> resourceTags,
-        @Nullable String resourceType,
-        @Nullable List<String> resourceTypeList,
-        @Nullable Boolean resourcesCleanUp,
-        @Nullable SecurityServicePolicyDataProperties securityServicePolicyData,
-        @Nullable List<PolicyTag> tags) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("excludeMap") @Nullable PolicyIEMap excludeMap,
+        @OutputCustomType.Parameter("excludeResourceTags") @Nullable Boolean excludeResourceTags,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("includeMap") @Nullable PolicyIEMap includeMap,
+        @OutputCustomType.Parameter("policyName") @Nullable String policyName,
+        @OutputCustomType.Parameter("remediationEnabled") @Nullable Boolean remediationEnabled,
+        @OutputCustomType.Parameter("resourceTags") @Nullable List<PolicyResourceTag> resourceTags,
+        @OutputCustomType.Parameter("resourceType") @Nullable String resourceType,
+        @OutputCustomType.Parameter("resourceTypeList") @Nullable List<String> resourceTypeList,
+        @OutputCustomType.Parameter("resourcesCleanUp") @Nullable Boolean resourcesCleanUp,
+        @OutputCustomType.Parameter("securityServicePolicyData") @Nullable SecurityServicePolicyDataProperties securityServicePolicyData,
+        @OutputCustomType.Parameter("tags") @Nullable List<PolicyTag> tags) {
         this.arn = arn;
         this.excludeMap = excludeMap;
         this.excludeResourceTags = excludeResourceTags;

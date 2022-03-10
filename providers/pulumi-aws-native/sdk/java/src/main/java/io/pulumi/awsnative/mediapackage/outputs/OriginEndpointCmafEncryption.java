@@ -25,11 +25,11 @@ public final class OriginEndpointCmafEncryption {
     private final @Nullable Integer keyRotationIntervalSeconds;
     private final OriginEndpointSpekeKeyProvider spekeKeyProvider;
 
-    @OutputCustomType.Constructor({"constantInitializationVector","keyRotationIntervalSeconds","spekeKeyProvider"})
+    @OutputCustomType.Constructor
     private OriginEndpointCmafEncryption(
-        @Nullable String constantInitializationVector,
-        @Nullable Integer keyRotationIntervalSeconds,
-        OriginEndpointSpekeKeyProvider spekeKeyProvider) {
+        @OutputCustomType.Parameter("constantInitializationVector") @Nullable String constantInitializationVector,
+        @OutputCustomType.Parameter("keyRotationIntervalSeconds") @Nullable Integer keyRotationIntervalSeconds,
+        @OutputCustomType.Parameter("spekeKeyProvider") OriginEndpointSpekeKeyProvider spekeKeyProvider) {
         this.constantInitializationVector = constantInitializationVector;
         this.keyRotationIntervalSeconds = keyRotationIntervalSeconds;
         this.spekeKeyProvider = spekeKeyProvider;

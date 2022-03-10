@@ -12,8 +12,8 @@ import java.util.Objects;
 public final class GetAzsResult {
     private final List<String> azs;
 
-    @OutputCustomType.Constructor({"azs"})
-    private GetAzsResult(List<String> azs) {
+    @OutputCustomType.Constructor
+    private GetAzsResult(@OutputCustomType.Parameter("azs") List<String> azs) {
         this.azs = azs;
     }
 

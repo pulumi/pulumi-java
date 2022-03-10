@@ -15,10 +15,10 @@ public final class DatastoreRetentionPeriod {
     private final @Nullable Integer numberOfDays;
     private final @Nullable Boolean unlimited;
 
-    @OutputCustomType.Constructor({"numberOfDays","unlimited"})
+    @OutputCustomType.Constructor
     private DatastoreRetentionPeriod(
-        @Nullable Integer numberOfDays,
-        @Nullable Boolean unlimited) {
+        @OutputCustomType.Parameter("numberOfDays") @Nullable Integer numberOfDays,
+        @OutputCustomType.Parameter("unlimited") @Nullable Boolean unlimited) {
         this.numberOfDays = numberOfDays;
         this.unlimited = unlimited;
     }

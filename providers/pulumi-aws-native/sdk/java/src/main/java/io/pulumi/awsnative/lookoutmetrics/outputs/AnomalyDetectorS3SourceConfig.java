@@ -17,12 +17,12 @@ public final class AnomalyDetectorS3SourceConfig {
     private final String roleArn;
     private final @Nullable List<String> templatedPathList;
 
-    @OutputCustomType.Constructor({"fileFormatDescriptor","historicalDataPathList","roleArn","templatedPathList"})
+    @OutputCustomType.Constructor
     private AnomalyDetectorS3SourceConfig(
-        AnomalyDetectorFileFormatDescriptor fileFormatDescriptor,
-        @Nullable List<String> historicalDataPathList,
-        String roleArn,
-        @Nullable List<String> templatedPathList) {
+        @OutputCustomType.Parameter("fileFormatDescriptor") AnomalyDetectorFileFormatDescriptor fileFormatDescriptor,
+        @OutputCustomType.Parameter("historicalDataPathList") @Nullable List<String> historicalDataPathList,
+        @OutputCustomType.Parameter("roleArn") String roleArn,
+        @OutputCustomType.Parameter("templatedPathList") @Nullable List<String> templatedPathList) {
         this.fileFormatDescriptor = fileFormatDescriptor;
         this.historicalDataPathList = historicalDataPathList;
         this.roleArn = roleArn;

@@ -13,8 +13,8 @@ import javax.annotation.Nullable;
 public final class DeliveryStreamHiveJsonSerDe {
     private final @Nullable List<String> timestampFormats;
 
-    @OutputCustomType.Constructor({"timestampFormats"})
-    private DeliveryStreamHiveJsonSerDe(@Nullable List<String> timestampFormats) {
+    @OutputCustomType.Constructor
+    private DeliveryStreamHiveJsonSerDe(@OutputCustomType.Parameter("timestampFormats") @Nullable List<String> timestampFormats) {
         this.timestampFormats = timestampFormats;
     }
 

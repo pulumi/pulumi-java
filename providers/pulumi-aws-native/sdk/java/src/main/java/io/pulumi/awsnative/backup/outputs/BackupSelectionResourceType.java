@@ -21,14 +21,14 @@ public final class BackupSelectionResourceType {
     private final @Nullable List<String> resources;
     private final String selectionName;
 
-    @OutputCustomType.Constructor({"conditions","iamRoleArn","listOfTags","notResources","resources","selectionName"})
+    @OutputCustomType.Constructor
     private BackupSelectionResourceType(
-        @Nullable BackupSelectionResourceTypeConditionsProperties conditions,
-        String iamRoleArn,
-        @Nullable List<BackupSelectionConditionResourceType> listOfTags,
-        @Nullable List<String> notResources,
-        @Nullable List<String> resources,
-        String selectionName) {
+        @OutputCustomType.Parameter("conditions") @Nullable BackupSelectionResourceTypeConditionsProperties conditions,
+        @OutputCustomType.Parameter("iamRoleArn") String iamRoleArn,
+        @OutputCustomType.Parameter("listOfTags") @Nullable List<BackupSelectionConditionResourceType> listOfTags,
+        @OutputCustomType.Parameter("notResources") @Nullable List<String> notResources,
+        @OutputCustomType.Parameter("resources") @Nullable List<String> resources,
+        @OutputCustomType.Parameter("selectionName") String selectionName) {
         this.conditions = conditions;
         this.iamRoleArn = iamRoleArn;
         this.listOfTags = listOfTags;

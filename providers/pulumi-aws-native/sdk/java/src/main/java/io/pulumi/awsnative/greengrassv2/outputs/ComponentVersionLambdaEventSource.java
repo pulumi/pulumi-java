@@ -15,10 +15,10 @@ public final class ComponentVersionLambdaEventSource {
     private final @Nullable String topic;
     private final @Nullable ComponentVersionLambdaEventSourceType type;
 
-    @OutputCustomType.Constructor({"topic","type"})
+    @OutputCustomType.Constructor
     private ComponentVersionLambdaEventSource(
-        @Nullable String topic,
-        @Nullable ComponentVersionLambdaEventSourceType type) {
+        @OutputCustomType.Parameter("topic") @Nullable String topic,
+        @OutputCustomType.Parameter("type") @Nullable ComponentVersionLambdaEventSourceType type) {
         this.topic = topic;
         this.type = type;
     }

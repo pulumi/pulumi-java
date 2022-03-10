@@ -27,17 +27,17 @@ public final class DataSourceWebCrawlerConfiguration {
     private final @Nullable List<String> urlInclusionPatterns;
     private final DataSourceWebCrawlerUrls urls;
 
-    @OutputCustomType.Constructor({"authenticationConfiguration","crawlDepth","maxContentSizePerPageInMegaBytes","maxLinksPerPage","maxUrlsPerMinuteCrawlRate","proxyConfiguration","urlExclusionPatterns","urlInclusionPatterns","urls"})
+    @OutputCustomType.Constructor
     private DataSourceWebCrawlerConfiguration(
-        @Nullable DataSourceWebCrawlerAuthenticationConfiguration authenticationConfiguration,
-        @Nullable Integer crawlDepth,
-        @Nullable Double maxContentSizePerPageInMegaBytes,
-        @Nullable Integer maxLinksPerPage,
-        @Nullable Integer maxUrlsPerMinuteCrawlRate,
-        @Nullable DataSourceProxyConfiguration proxyConfiguration,
-        @Nullable List<String> urlExclusionPatterns,
-        @Nullable List<String> urlInclusionPatterns,
-        DataSourceWebCrawlerUrls urls) {
+        @OutputCustomType.Parameter("authenticationConfiguration") @Nullable DataSourceWebCrawlerAuthenticationConfiguration authenticationConfiguration,
+        @OutputCustomType.Parameter("crawlDepth") @Nullable Integer crawlDepth,
+        @OutputCustomType.Parameter("maxContentSizePerPageInMegaBytes") @Nullable Double maxContentSizePerPageInMegaBytes,
+        @OutputCustomType.Parameter("maxLinksPerPage") @Nullable Integer maxLinksPerPage,
+        @OutputCustomType.Parameter("maxUrlsPerMinuteCrawlRate") @Nullable Integer maxUrlsPerMinuteCrawlRate,
+        @OutputCustomType.Parameter("proxyConfiguration") @Nullable DataSourceProxyConfiguration proxyConfiguration,
+        @OutputCustomType.Parameter("urlExclusionPatterns") @Nullable List<String> urlExclusionPatterns,
+        @OutputCustomType.Parameter("urlInclusionPatterns") @Nullable List<String> urlInclusionPatterns,
+        @OutputCustomType.Parameter("urls") DataSourceWebCrawlerUrls urls) {
         this.authenticationConfiguration = authenticationConfiguration;
         this.crawlDepth = crawlDepth;
         this.maxContentSizePerPageInMegaBytes = maxContentSizePerPageInMegaBytes;

@@ -11,8 +11,8 @@ import java.util.Objects;
 public final class GlobalTableStreamSpecification {
     private final String streamViewType;
 
-    @OutputCustomType.Constructor({"streamViewType"})
-    private GlobalTableStreamSpecification(String streamViewType) {
+    @OutputCustomType.Constructor
+    private GlobalTableStreamSpecification(@OutputCustomType.Parameter("streamViewType") String streamViewType) {
         this.streamViewType = streamViewType;
     }
 

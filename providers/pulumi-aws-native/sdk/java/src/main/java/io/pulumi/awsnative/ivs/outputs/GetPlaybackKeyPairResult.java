@@ -29,11 +29,11 @@ public final class GetPlaybackKeyPairResult {
      */
     private final @Nullable List<PlaybackKeyPairTag> tags;
 
-    @OutputCustomType.Constructor({"arn","fingerprint","tags"})
+    @OutputCustomType.Constructor
     private GetPlaybackKeyPairResult(
-        @Nullable String arn,
-        @Nullable String fingerprint,
-        @Nullable List<PlaybackKeyPairTag> tags) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("fingerprint") @Nullable String fingerprint,
+        @OutputCustomType.Parameter("tags") @Nullable List<PlaybackKeyPairTag> tags) {
         this.arn = arn;
         this.fingerprint = fingerprint;
         this.tags = tags;

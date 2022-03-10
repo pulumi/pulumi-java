@@ -11,8 +11,8 @@ import java.util.Objects;
 public final class SpotFleetInstanceIpv6Address {
     private final String ipv6Address;
 
-    @OutputCustomType.Constructor({"ipv6Address"})
-    private SpotFleetInstanceIpv6Address(String ipv6Address) {
+    @OutputCustomType.Constructor
+    private SpotFleetInstanceIpv6Address(@OutputCustomType.Parameter("ipv6Address") String ipv6Address) {
         this.ipv6Address = ipv6Address;
     }
 

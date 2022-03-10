@@ -51,15 +51,15 @@ public final class GetLocationObjectStorageResult {
      */
     private final @Nullable List<LocationObjectStorageTag> tags;
 
-    @OutputCustomType.Constructor({"accessKey","agentArns","locationArn","locationUri","serverPort","serverProtocol","tags"})
+    @OutputCustomType.Constructor
     private GetLocationObjectStorageResult(
-        @Nullable String accessKey,
-        @Nullable List<String> agentArns,
-        @Nullable String locationArn,
-        @Nullable String locationUri,
-        @Nullable Integer serverPort,
-        @Nullable LocationObjectStorageServerProtocol serverProtocol,
-        @Nullable List<LocationObjectStorageTag> tags) {
+        @OutputCustomType.Parameter("accessKey") @Nullable String accessKey,
+        @OutputCustomType.Parameter("agentArns") @Nullable List<String> agentArns,
+        @OutputCustomType.Parameter("locationArn") @Nullable String locationArn,
+        @OutputCustomType.Parameter("locationUri") @Nullable String locationUri,
+        @OutputCustomType.Parameter("serverPort") @Nullable Integer serverPort,
+        @OutputCustomType.Parameter("serverProtocol") @Nullable LocationObjectStorageServerProtocol serverProtocol,
+        @OutputCustomType.Parameter("tags") @Nullable List<LocationObjectStorageTag> tags) {
         this.accessKey = accessKey;
         this.agentArns = agentArns;
         this.locationArn = locationArn;

@@ -20,15 +20,15 @@ public final class IndexJwtTokenTypeConfiguration {
     private final @Nullable String uRL;
     private final @Nullable String userNameAttributeField;
 
-    @OutputCustomType.Constructor({"claimRegex","groupAttributeField","issuer","keyLocation","secretManagerArn","uRL","userNameAttributeField"})
+    @OutputCustomType.Constructor
     private IndexJwtTokenTypeConfiguration(
-        @Nullable String claimRegex,
-        @Nullable String groupAttributeField,
-        @Nullable String issuer,
-        IndexKeyLocation keyLocation,
-        @Nullable String secretManagerArn,
-        @Nullable String uRL,
-        @Nullable String userNameAttributeField) {
+        @OutputCustomType.Parameter("claimRegex") @Nullable String claimRegex,
+        @OutputCustomType.Parameter("groupAttributeField") @Nullable String groupAttributeField,
+        @OutputCustomType.Parameter("issuer") @Nullable String issuer,
+        @OutputCustomType.Parameter("keyLocation") IndexKeyLocation keyLocation,
+        @OutputCustomType.Parameter("secretManagerArn") @Nullable String secretManagerArn,
+        @OutputCustomType.Parameter("uRL") @Nullable String uRL,
+        @OutputCustomType.Parameter("userNameAttributeField") @Nullable String userNameAttributeField) {
         this.claimRegex = claimRegex;
         this.groupAttributeField = groupAttributeField;
         this.issuer = issuer;

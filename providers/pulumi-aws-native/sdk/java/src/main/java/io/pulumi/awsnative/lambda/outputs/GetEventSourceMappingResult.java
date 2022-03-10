@@ -105,25 +105,25 @@ public final class GetEventSourceMappingResult {
      */
     private final @Nullable Integer tumblingWindowInSeconds;
 
-    @OutputCustomType.Constructor({"batchSize","bisectBatchOnFunctionError","destinationConfig","enabled","filterCriteria","functionName","functionResponseTypes","id","maximumBatchingWindowInSeconds","maximumRecordAgeInSeconds","maximumRetryAttempts","parallelizationFactor","queues","sourceAccessConfigurations","startingPositionTimestamp","topics","tumblingWindowInSeconds"})
+    @OutputCustomType.Constructor
     private GetEventSourceMappingResult(
-        @Nullable Integer batchSize,
-        @Nullable Boolean bisectBatchOnFunctionError,
-        @Nullable EventSourceMappingDestinationConfig destinationConfig,
-        @Nullable Boolean enabled,
-        @Nullable FilterCriteriaProperties filterCriteria,
-        @Nullable String functionName,
-        @Nullable List<EventSourceMappingFunctionResponseTypesItem> functionResponseTypes,
-        @Nullable String id,
-        @Nullable Integer maximumBatchingWindowInSeconds,
-        @Nullable Integer maximumRecordAgeInSeconds,
-        @Nullable Integer maximumRetryAttempts,
-        @Nullable Integer parallelizationFactor,
-        @Nullable List<String> queues,
-        @Nullable List<EventSourceMappingSourceAccessConfiguration> sourceAccessConfigurations,
-        @Nullable Double startingPositionTimestamp,
-        @Nullable List<String> topics,
-        @Nullable Integer tumblingWindowInSeconds) {
+        @OutputCustomType.Parameter("batchSize") @Nullable Integer batchSize,
+        @OutputCustomType.Parameter("bisectBatchOnFunctionError") @Nullable Boolean bisectBatchOnFunctionError,
+        @OutputCustomType.Parameter("destinationConfig") @Nullable EventSourceMappingDestinationConfig destinationConfig,
+        @OutputCustomType.Parameter("enabled") @Nullable Boolean enabled,
+        @OutputCustomType.Parameter("filterCriteria") @Nullable FilterCriteriaProperties filterCriteria,
+        @OutputCustomType.Parameter("functionName") @Nullable String functionName,
+        @OutputCustomType.Parameter("functionResponseTypes") @Nullable List<EventSourceMappingFunctionResponseTypesItem> functionResponseTypes,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("maximumBatchingWindowInSeconds") @Nullable Integer maximumBatchingWindowInSeconds,
+        @OutputCustomType.Parameter("maximumRecordAgeInSeconds") @Nullable Integer maximumRecordAgeInSeconds,
+        @OutputCustomType.Parameter("maximumRetryAttempts") @Nullable Integer maximumRetryAttempts,
+        @OutputCustomType.Parameter("parallelizationFactor") @Nullable Integer parallelizationFactor,
+        @OutputCustomType.Parameter("queues") @Nullable List<String> queues,
+        @OutputCustomType.Parameter("sourceAccessConfigurations") @Nullable List<EventSourceMappingSourceAccessConfiguration> sourceAccessConfigurations,
+        @OutputCustomType.Parameter("startingPositionTimestamp") @Nullable Double startingPositionTimestamp,
+        @OutputCustomType.Parameter("topics") @Nullable List<String> topics,
+        @OutputCustomType.Parameter("tumblingWindowInSeconds") @Nullable Integer tumblingWindowInSeconds) {
         this.batchSize = batchSize;
         this.bisectBatchOnFunctionError = bisectBatchOnFunctionError;
         this.destinationConfig = destinationConfig;

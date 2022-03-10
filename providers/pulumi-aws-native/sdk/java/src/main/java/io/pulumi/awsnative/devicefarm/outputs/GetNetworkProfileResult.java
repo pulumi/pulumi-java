@@ -27,20 +27,20 @@ public final class GetNetworkProfileResult {
     private final @Nullable Integer uplinkJitterMs;
     private final @Nullable Integer uplinkLossPercent;
 
-    @OutputCustomType.Constructor({"arn","description","downlinkBandwidthBits","downlinkDelayMs","downlinkJitterMs","downlinkLossPercent","name","tags","uplinkBandwidthBits","uplinkDelayMs","uplinkJitterMs","uplinkLossPercent"})
+    @OutputCustomType.Constructor
     private GetNetworkProfileResult(
-        @Nullable String arn,
-        @Nullable String description,
-        @Nullable Integer downlinkBandwidthBits,
-        @Nullable Integer downlinkDelayMs,
-        @Nullable Integer downlinkJitterMs,
-        @Nullable Integer downlinkLossPercent,
-        @Nullable String name,
-        @Nullable List<NetworkProfileTag> tags,
-        @Nullable Integer uplinkBandwidthBits,
-        @Nullable Integer uplinkDelayMs,
-        @Nullable Integer uplinkJitterMs,
-        @Nullable Integer uplinkLossPercent) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("downlinkBandwidthBits") @Nullable Integer downlinkBandwidthBits,
+        @OutputCustomType.Parameter("downlinkDelayMs") @Nullable Integer downlinkDelayMs,
+        @OutputCustomType.Parameter("downlinkJitterMs") @Nullable Integer downlinkJitterMs,
+        @OutputCustomType.Parameter("downlinkLossPercent") @Nullable Integer downlinkLossPercent,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("tags") @Nullable List<NetworkProfileTag> tags,
+        @OutputCustomType.Parameter("uplinkBandwidthBits") @Nullable Integer uplinkBandwidthBits,
+        @OutputCustomType.Parameter("uplinkDelayMs") @Nullable Integer uplinkDelayMs,
+        @OutputCustomType.Parameter("uplinkJitterMs") @Nullable Integer uplinkJitterMs,
+        @OutputCustomType.Parameter("uplinkLossPercent") @Nullable Integer uplinkLossPercent) {
         this.arn = arn;
         this.description = description;
         this.downlinkBandwidthBits = downlinkBandwidthBits;

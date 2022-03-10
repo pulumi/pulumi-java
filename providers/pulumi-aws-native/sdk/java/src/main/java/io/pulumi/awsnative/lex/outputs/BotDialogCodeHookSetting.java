@@ -11,8 +11,8 @@ import java.util.Objects;
 public final class BotDialogCodeHookSetting {
     private final Boolean enabled;
 
-    @OutputCustomType.Constructor({"enabled"})
-    private BotDialogCodeHookSetting(Boolean enabled) {
+    @OutputCustomType.Constructor
+    private BotDialogCodeHookSetting(@OutputCustomType.Parameter("enabled") Boolean enabled) {
         this.enabled = enabled;
     }
 

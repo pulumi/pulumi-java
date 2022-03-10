@@ -45,14 +45,14 @@ public final class GetFlowEntitlementResult {
      */
     private final @Nullable List<String> subscribers;
 
-    @OutputCustomType.Constructor({"description","encryption","entitlementArn","entitlementStatus","flowArn","subscribers"})
+    @OutputCustomType.Constructor
     private GetFlowEntitlementResult(
-        @Nullable String description,
-        @Nullable FlowEntitlementEncryption encryption,
-        @Nullable String entitlementArn,
-        @Nullable FlowEntitlementEntitlementStatus entitlementStatus,
-        @Nullable String flowArn,
-        @Nullable List<String> subscribers) {
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("encryption") @Nullable FlowEntitlementEncryption encryption,
+        @OutputCustomType.Parameter("entitlementArn") @Nullable String entitlementArn,
+        @OutputCustomType.Parameter("entitlementStatus") @Nullable FlowEntitlementEntitlementStatus entitlementStatus,
+        @OutputCustomType.Parameter("flowArn") @Nullable String flowArn,
+        @OutputCustomType.Parameter("subscribers") @Nullable List<String> subscribers) {
         this.description = description;
         this.encryption = encryption;
         this.entitlementArn = entitlementArn;

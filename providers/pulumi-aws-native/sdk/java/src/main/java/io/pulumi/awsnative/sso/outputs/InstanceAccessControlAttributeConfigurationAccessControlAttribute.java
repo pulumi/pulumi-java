@@ -13,10 +13,10 @@ public final class InstanceAccessControlAttributeConfigurationAccessControlAttri
     private final String key;
     private final InstanceAccessControlAttributeConfigurationAccessControlAttributeValue value;
 
-    @OutputCustomType.Constructor({"key","value"})
+    @OutputCustomType.Constructor
     private InstanceAccessControlAttributeConfigurationAccessControlAttribute(
-        String key,
-        InstanceAccessControlAttributeConfigurationAccessControlAttributeValue value) {
+        @OutputCustomType.Parameter("key") String key,
+        @OutputCustomType.Parameter("value") InstanceAccessControlAttributeConfigurationAccessControlAttributeValue value) {
         this.key = key;
         this.value = value;
     }

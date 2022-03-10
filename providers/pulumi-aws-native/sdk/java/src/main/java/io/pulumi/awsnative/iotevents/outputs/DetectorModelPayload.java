@@ -20,10 +20,10 @@ public final class DetectorModelPayload {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"contentExpression","type"})
+    @OutputCustomType.Constructor
     private DetectorModelPayload(
-        String contentExpression,
-        String type) {
+        @OutputCustomType.Parameter("contentExpression") String contentExpression,
+        @OutputCustomType.Parameter("type") String type) {
         this.contentExpression = contentExpression;
         this.type = type;
     }

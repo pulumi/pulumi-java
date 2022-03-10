@@ -22,14 +22,14 @@ public final class BotSlotType {
     private final @Nullable List<BotSlotTypeValue> slotTypeValues;
     private final @Nullable BotSlotValueSelectionSetting valueSelectionSetting;
 
-    @OutputCustomType.Constructor({"description","externalSourceSetting","name","parentSlotTypeSignature","slotTypeValues","valueSelectionSetting"})
+    @OutputCustomType.Constructor
     private BotSlotType(
-        @Nullable String description,
-        @Nullable BotExternalSourceSetting externalSourceSetting,
-        String name,
-        @Nullable String parentSlotTypeSignature,
-        @Nullable List<BotSlotTypeValue> slotTypeValues,
-        @Nullable BotSlotValueSelectionSetting valueSelectionSetting) {
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("externalSourceSetting") @Nullable BotExternalSourceSetting externalSourceSetting,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("parentSlotTypeSignature") @Nullable String parentSlotTypeSignature,
+        @OutputCustomType.Parameter("slotTypeValues") @Nullable List<BotSlotTypeValue> slotTypeValues,
+        @OutputCustomType.Parameter("valueSelectionSetting") @Nullable BotSlotValueSelectionSetting valueSelectionSetting) {
         this.description = description;
         this.externalSourceSetting = externalSourceSetting;
         this.name = name;

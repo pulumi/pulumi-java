@@ -24,11 +24,11 @@ public final class ModelQualityJobDefinitionNetworkConfig {
     private final @Nullable Boolean enableNetworkIsolation;
     private final @Nullable ModelQualityJobDefinitionVpcConfig vpcConfig;
 
-    @OutputCustomType.Constructor({"enableInterContainerTrafficEncryption","enableNetworkIsolation","vpcConfig"})
+    @OutputCustomType.Constructor
     private ModelQualityJobDefinitionNetworkConfig(
-        @Nullable Boolean enableInterContainerTrafficEncryption,
-        @Nullable Boolean enableNetworkIsolation,
-        @Nullable ModelQualityJobDefinitionVpcConfig vpcConfig) {
+        @OutputCustomType.Parameter("enableInterContainerTrafficEncryption") @Nullable Boolean enableInterContainerTrafficEncryption,
+        @OutputCustomType.Parameter("enableNetworkIsolation") @Nullable Boolean enableNetworkIsolation,
+        @OutputCustomType.Parameter("vpcConfig") @Nullable ModelQualityJobDefinitionVpcConfig vpcConfig) {
         this.enableInterContainerTrafficEncryption = enableInterContainerTrafficEncryption;
         this.enableNetworkIsolation = enableNetworkIsolation;
         this.vpcConfig = vpcConfig;

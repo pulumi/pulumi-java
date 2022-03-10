@@ -17,11 +17,11 @@ public final class DatasetFormatOptions {
     private final @Nullable DatasetExcelOptions excel;
     private final @Nullable DatasetJsonOptions json;
 
-    @OutputCustomType.Constructor({"csv","excel","json"})
+    @OutputCustomType.Constructor
     private DatasetFormatOptions(
-        @Nullable DatasetCsvOptions csv,
-        @Nullable DatasetExcelOptions excel,
-        @Nullable DatasetJsonOptions json) {
+        @OutputCustomType.Parameter("csv") @Nullable DatasetCsvOptions csv,
+        @OutputCustomType.Parameter("excel") @Nullable DatasetExcelOptions excel,
+        @OutputCustomType.Parameter("json") @Nullable DatasetJsonOptions json) {
         this.csv = csv;
         this.excel = excel;
         this.json = json;

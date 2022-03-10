@@ -14,10 +14,10 @@ public final class DistributionFunctionAssociation {
     private final @Nullable String eventType;
     private final @Nullable String functionARN;
 
-    @OutputCustomType.Constructor({"eventType","functionARN"})
+    @OutputCustomType.Constructor
     private DistributionFunctionAssociation(
-        @Nullable String eventType,
-        @Nullable String functionARN) {
+        @OutputCustomType.Parameter("eventType") @Nullable String eventType,
+        @OutputCustomType.Parameter("functionARN") @Nullable String functionARN) {
         this.eventType = eventType;
         this.functionARN = functionARN;
     }

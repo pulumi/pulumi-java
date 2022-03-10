@@ -20,10 +20,10 @@ public final class StackSetParameter {
      */
     private final String parameterValue;
 
-    @OutputCustomType.Constructor({"parameterKey","parameterValue"})
+    @OutputCustomType.Constructor
     private StackSetParameter(
-        String parameterKey,
-        String parameterValue) {
+        @OutputCustomType.Parameter("parameterKey") String parameterKey,
+        @OutputCustomType.Parameter("parameterValue") String parameterValue) {
         this.parameterKey = parameterKey;
         this.parameterValue = parameterValue;
     }

@@ -28,17 +28,17 @@ public final class GetDataSourceResult {
      */
     private final @Nullable List<DataSourceTag> tags;
 
-    @OutputCustomType.Constructor({"arn","dataSourceConfiguration","description","id","indexId","name","roleArn","schedule","tags"})
+    @OutputCustomType.Constructor
     private GetDataSourceResult(
-        @Nullable String arn,
-        @Nullable DataSourceConfiguration dataSourceConfiguration,
-        @Nullable String description,
-        @Nullable String id,
-        @Nullable String indexId,
-        @Nullable String name,
-        @Nullable String roleArn,
-        @Nullable String schedule,
-        @Nullable List<DataSourceTag> tags) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("dataSourceConfiguration") @Nullable DataSourceConfiguration dataSourceConfiguration,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("indexId") @Nullable String indexId,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("roleArn") @Nullable String roleArn,
+        @OutputCustomType.Parameter("schedule") @Nullable String schedule,
+        @OutputCustomType.Parameter("tags") @Nullable List<DataSourceTag> tags) {
         this.arn = arn;
         this.dataSourceConfiguration = dataSourceConfiguration;
         this.description = description;

@@ -17,8 +17,8 @@ public final class ThemeMarginStyle {
      */
     private final @Nullable Boolean show;
 
-    @OutputCustomType.Constructor({"show"})
-    private ThemeMarginStyle(@Nullable Boolean show) {
+    @OutputCustomType.Constructor
+    private ThemeMarginStyle(@OutputCustomType.Parameter("show") @Nullable Boolean show) {
         this.show = show;
     }
 

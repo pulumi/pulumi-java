@@ -35,12 +35,12 @@ public final class GetTemplateResult {
      */
     private final @Nullable List<TemplateTag> tags;
 
-    @OutputCustomType.Constructor({"arn","name","permissions","tags"})
+    @OutputCustomType.Constructor
     private GetTemplateResult(
-        @Nullable String arn,
-        @Nullable String name,
-        @Nullable List<TemplateResourcePermission> permissions,
-        @Nullable List<TemplateTag> tags) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("permissions") @Nullable List<TemplateResourcePermission> permissions,
+        @OutputCustomType.Parameter("tags") @Nullable List<TemplateTag> tags) {
         this.arn = arn;
         this.name = name;
         this.permissions = permissions;

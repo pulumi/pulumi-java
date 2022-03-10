@@ -24,10 +24,10 @@ public final class MonitoringScheduleMonitoringOutputConfig {
      */
     private final List<MonitoringScheduleMonitoringOutput> monitoringOutputs;
 
-    @OutputCustomType.Constructor({"kmsKeyId","monitoringOutputs"})
+    @OutputCustomType.Constructor
     private MonitoringScheduleMonitoringOutputConfig(
-        @Nullable String kmsKeyId,
-        List<MonitoringScheduleMonitoringOutput> monitoringOutputs) {
+        @OutputCustomType.Parameter("kmsKeyId") @Nullable String kmsKeyId,
+        @OutputCustomType.Parameter("monitoringOutputs") List<MonitoringScheduleMonitoringOutput> monitoringOutputs) {
         this.kmsKeyId = kmsKeyId;
         this.monitoringOutputs = monitoringOutputs;
     }

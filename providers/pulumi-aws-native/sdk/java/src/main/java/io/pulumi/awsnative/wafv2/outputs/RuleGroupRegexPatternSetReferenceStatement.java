@@ -16,11 +16,11 @@ public final class RuleGroupRegexPatternSetReferenceStatement {
     private final RuleGroupFieldToMatch fieldToMatch;
     private final List<RuleGroupTextTransformation> textTransformations;
 
-    @OutputCustomType.Constructor({"arn","fieldToMatch","textTransformations"})
+    @OutputCustomType.Constructor
     private RuleGroupRegexPatternSetReferenceStatement(
-        String arn,
-        RuleGroupFieldToMatch fieldToMatch,
-        List<RuleGroupTextTransformation> textTransformations) {
+        @OutputCustomType.Parameter("arn") String arn,
+        @OutputCustomType.Parameter("fieldToMatch") RuleGroupFieldToMatch fieldToMatch,
+        @OutputCustomType.Parameter("textTransformations") List<RuleGroupTextTransformation> textTransformations) {
         this.arn = arn;
         this.fieldToMatch = fieldToMatch;
         this.textTransformations = textTransformations;

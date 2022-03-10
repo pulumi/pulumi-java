@@ -20,10 +20,10 @@ public final class InstanceNetworking {
      */
     private final List<InstancePort> ports;
 
-    @OutputCustomType.Constructor({"monthlyTransfer","ports"})
+    @OutputCustomType.Constructor
     private InstanceNetworking(
-        @Nullable InstanceMonthlyTransfer monthlyTransfer,
-        List<InstancePort> ports) {
+        @OutputCustomType.Parameter("monthlyTransfer") @Nullable InstanceMonthlyTransfer monthlyTransfer,
+        @OutputCustomType.Parameter("ports") List<InstancePort> ports) {
         this.monthlyTransfer = monthlyTransfer;
         this.ports = ports;
     }

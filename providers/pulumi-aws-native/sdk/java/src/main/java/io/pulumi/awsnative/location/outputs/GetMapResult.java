@@ -17,13 +17,13 @@ public final class GetMapResult {
     private final @Nullable String mapArn;
     private final @Nullable String updateTime;
 
-    @OutputCustomType.Constructor({"arn","createTime","dataSource","mapArn","updateTime"})
+    @OutputCustomType.Constructor
     private GetMapResult(
-        @Nullable String arn,
-        @Nullable String createTime,
-        @Nullable String dataSource,
-        @Nullable String mapArn,
-        @Nullable String updateTime) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("createTime") @Nullable String createTime,
+        @OutputCustomType.Parameter("dataSource") @Nullable String dataSource,
+        @OutputCustomType.Parameter("mapArn") @Nullable String mapArn,
+        @OutputCustomType.Parameter("updateTime") @Nullable String updateTime) {
         this.arn = arn;
         this.createTime = createTime;
         this.dataSource = dataSource;

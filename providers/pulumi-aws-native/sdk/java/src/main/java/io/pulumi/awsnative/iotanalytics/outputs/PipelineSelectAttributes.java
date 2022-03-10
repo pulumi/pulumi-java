@@ -16,11 +16,11 @@ public final class PipelineSelectAttributes {
     private final String name;
     private final @Nullable String next;
 
-    @OutputCustomType.Constructor({"attributes","name","next"})
+    @OutputCustomType.Constructor
     private PipelineSelectAttributes(
-        List<String> attributes,
-        String name,
-        @Nullable String next) {
+        @OutputCustomType.Parameter("attributes") List<String> attributes,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("next") @Nullable String next) {
         this.attributes = attributes;
         this.name = name;
         this.next = next;

@@ -15,8 +15,8 @@ public final class BotPlainTextMessage {
      */
     private final String value;
 
-    @OutputCustomType.Constructor({"value"})
-    private BotPlainTextMessage(String value) {
+    @OutputCustomType.Constructor
+    private BotPlainTextMessage(@OutputCustomType.Parameter("value") String value) {
         this.value = value;
     }
 

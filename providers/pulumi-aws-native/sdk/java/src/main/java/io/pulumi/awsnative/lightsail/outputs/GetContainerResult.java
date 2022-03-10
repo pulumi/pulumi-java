@@ -54,16 +54,16 @@ public final class GetContainerResult {
      */
     private final @Nullable String url;
 
-    @OutputCustomType.Constructor({"containerArn","containerServiceDeployment","isDisabled","power","publicDomainNames","scale","tags","url"})
+    @OutputCustomType.Constructor
     private GetContainerResult(
-        @Nullable String containerArn,
-        @Nullable ContainerServiceDeployment containerServiceDeployment,
-        @Nullable Boolean isDisabled,
-        @Nullable String power,
-        @Nullable List<ContainerPublicDomainName> publicDomainNames,
-        @Nullable Integer scale,
-        @Nullable List<ContainerTag> tags,
-        @Nullable String url) {
+        @OutputCustomType.Parameter("containerArn") @Nullable String containerArn,
+        @OutputCustomType.Parameter("containerServiceDeployment") @Nullable ContainerServiceDeployment containerServiceDeployment,
+        @OutputCustomType.Parameter("isDisabled") @Nullable Boolean isDisabled,
+        @OutputCustomType.Parameter("power") @Nullable String power,
+        @OutputCustomType.Parameter("publicDomainNames") @Nullable List<ContainerPublicDomainName> publicDomainNames,
+        @OutputCustomType.Parameter("scale") @Nullable Integer scale,
+        @OutputCustomType.Parameter("tags") @Nullable List<ContainerTag> tags,
+        @OutputCustomType.Parameter("url") @Nullable String url) {
         this.containerArn = containerArn;
         this.containerServiceDeployment = containerServiceDeployment;
         this.isDisabled = isDisabled;

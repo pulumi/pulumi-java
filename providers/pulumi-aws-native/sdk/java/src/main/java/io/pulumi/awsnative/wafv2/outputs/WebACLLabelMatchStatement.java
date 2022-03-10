@@ -13,10 +13,10 @@ public final class WebACLLabelMatchStatement {
     private final String key;
     private final WebACLLabelMatchScope scope;
 
-    @OutputCustomType.Constructor({"key","scope"})
+    @OutputCustomType.Constructor
     private WebACLLabelMatchStatement(
-        String key,
-        WebACLLabelMatchScope scope) {
+        @OutputCustomType.Parameter("key") String key,
+        @OutputCustomType.Parameter("scope") WebACLLabelMatchScope scope) {
         this.key = key;
         this.scope = scope;
     }

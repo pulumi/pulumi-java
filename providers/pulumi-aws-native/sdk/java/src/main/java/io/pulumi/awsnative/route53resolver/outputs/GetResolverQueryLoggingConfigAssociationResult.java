@@ -39,13 +39,13 @@ public final class GetResolverQueryLoggingConfigAssociationResult {
      */
     private final @Nullable ResolverQueryLoggingConfigAssociationStatus status;
 
-    @OutputCustomType.Constructor({"creationTime","error","errorMessage","id","status"})
+    @OutputCustomType.Constructor
     private GetResolverQueryLoggingConfigAssociationResult(
-        @Nullable String creationTime,
-        @Nullable ResolverQueryLoggingConfigAssociationError error,
-        @Nullable String errorMessage,
-        @Nullable String id,
-        @Nullable ResolverQueryLoggingConfigAssociationStatus status) {
+        @OutputCustomType.Parameter("creationTime") @Nullable String creationTime,
+        @OutputCustomType.Parameter("error") @Nullable ResolverQueryLoggingConfigAssociationError error,
+        @OutputCustomType.Parameter("errorMessage") @Nullable String errorMessage,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("status") @Nullable ResolverQueryLoggingConfigAssociationStatus status) {
         this.creationTime = creationTime;
         this.error = error;
         this.errorMessage = errorMessage;

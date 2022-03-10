@@ -15,10 +15,10 @@ public final class ChannelStorage {
     private final @Nullable ChannelCustomerManagedS3 customerManagedS3;
     private final @Nullable ChannelServiceManagedS3 serviceManagedS3;
 
-    @OutputCustomType.Constructor({"customerManagedS3","serviceManagedS3"})
+    @OutputCustomType.Constructor
     private ChannelStorage(
-        @Nullable ChannelCustomerManagedS3 customerManagedS3,
-        @Nullable ChannelServiceManagedS3 serviceManagedS3) {
+        @OutputCustomType.Parameter("customerManagedS3") @Nullable ChannelCustomerManagedS3 customerManagedS3,
+        @OutputCustomType.Parameter("serviceManagedS3") @Nullable ChannelServiceManagedS3 serviceManagedS3) {
         this.customerManagedS3 = customerManagedS3;
         this.serviceManagedS3 = serviceManagedS3;
     }

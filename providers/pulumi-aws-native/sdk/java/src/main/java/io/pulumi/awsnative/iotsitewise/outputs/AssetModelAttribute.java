@@ -13,8 +13,8 @@ import javax.annotation.Nullable;
 public final class AssetModelAttribute {
     private final @Nullable String defaultValue;
 
-    @OutputCustomType.Constructor({"defaultValue"})
-    private AssetModelAttribute(@Nullable String defaultValue) {
+    @OutputCustomType.Constructor
+    private AssetModelAttribute(@OutputCustomType.Parameter("defaultValue") @Nullable String defaultValue) {
         this.defaultValue = defaultValue;
     }
 

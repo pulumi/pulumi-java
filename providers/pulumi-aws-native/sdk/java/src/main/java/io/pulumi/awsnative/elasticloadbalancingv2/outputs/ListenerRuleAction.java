@@ -26,16 +26,16 @@ public final class ListenerRuleAction {
     private final @Nullable String targetGroupArn;
     private final String type;
 
-    @OutputCustomType.Constructor({"authenticateCognitoConfig","authenticateOidcConfig","fixedResponseConfig","forwardConfig","order","redirectConfig","targetGroupArn","type"})
+    @OutputCustomType.Constructor
     private ListenerRuleAction(
-        @Nullable ListenerRuleAuthenticateCognitoConfig authenticateCognitoConfig,
-        @Nullable ListenerRuleAuthenticateOidcConfig authenticateOidcConfig,
-        @Nullable ListenerRuleFixedResponseConfig fixedResponseConfig,
-        @Nullable ListenerRuleForwardConfig forwardConfig,
-        @Nullable Integer order,
-        @Nullable ListenerRuleRedirectConfig redirectConfig,
-        @Nullable String targetGroupArn,
-        String type) {
+        @OutputCustomType.Parameter("authenticateCognitoConfig") @Nullable ListenerRuleAuthenticateCognitoConfig authenticateCognitoConfig,
+        @OutputCustomType.Parameter("authenticateOidcConfig") @Nullable ListenerRuleAuthenticateOidcConfig authenticateOidcConfig,
+        @OutputCustomType.Parameter("fixedResponseConfig") @Nullable ListenerRuleFixedResponseConfig fixedResponseConfig,
+        @OutputCustomType.Parameter("forwardConfig") @Nullable ListenerRuleForwardConfig forwardConfig,
+        @OutputCustomType.Parameter("order") @Nullable Integer order,
+        @OutputCustomType.Parameter("redirectConfig") @Nullable ListenerRuleRedirectConfig redirectConfig,
+        @OutputCustomType.Parameter("targetGroupArn") @Nullable String targetGroupArn,
+        @OutputCustomType.Parameter("type") String type) {
         this.authenticateCognitoConfig = authenticateCognitoConfig;
         this.authenticateOidcConfig = authenticateOidcConfig;
         this.fixedResponseConfig = fixedResponseConfig;

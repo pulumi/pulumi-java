@@ -11,8 +11,8 @@ import java.util.Objects;
 public final class ModelQualityJobDefinitionMonitoringOutput {
     private final ModelQualityJobDefinitionS3Output s3Output;
 
-    @OutputCustomType.Constructor({"s3Output"})
-    private ModelQualityJobDefinitionMonitoringOutput(ModelQualityJobDefinitionS3Output s3Output) {
+    @OutputCustomType.Constructor
+    private ModelQualityJobDefinitionMonitoringOutput(@OutputCustomType.Parameter("s3Output") ModelQualityJobDefinitionS3Output s3Output) {
         this.s3Output = s3Output;
     }
 

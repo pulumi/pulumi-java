@@ -45,15 +45,15 @@ public final class ModelExplainabilityJobDefinitionEndpointInput {
      */
     private final @Nullable ModelExplainabilityJobDefinitionEndpointInputS3InputMode s3InputMode;
 
-    @OutputCustomType.Constructor({"endpointName","featuresAttribute","inferenceAttribute","localPath","probabilityAttribute","s3DataDistributionType","s3InputMode"})
+    @OutputCustomType.Constructor
     private ModelExplainabilityJobDefinitionEndpointInput(
-        String endpointName,
-        @Nullable String featuresAttribute,
-        @Nullable String inferenceAttribute,
-        String localPath,
-        @Nullable String probabilityAttribute,
-        @Nullable ModelExplainabilityJobDefinitionEndpointInputS3DataDistributionType s3DataDistributionType,
-        @Nullable ModelExplainabilityJobDefinitionEndpointInputS3InputMode s3InputMode) {
+        @OutputCustomType.Parameter("endpointName") String endpointName,
+        @OutputCustomType.Parameter("featuresAttribute") @Nullable String featuresAttribute,
+        @OutputCustomType.Parameter("inferenceAttribute") @Nullable String inferenceAttribute,
+        @OutputCustomType.Parameter("localPath") String localPath,
+        @OutputCustomType.Parameter("probabilityAttribute") @Nullable String probabilityAttribute,
+        @OutputCustomType.Parameter("s3DataDistributionType") @Nullable ModelExplainabilityJobDefinitionEndpointInputS3DataDistributionType s3DataDistributionType,
+        @OutputCustomType.Parameter("s3InputMode") @Nullable ModelExplainabilityJobDefinitionEndpointInputS3InputMode s3InputMode) {
         this.endpointName = endpointName;
         this.featuresAttribute = featuresAttribute;
         this.inferenceAttribute = inferenceAttribute;

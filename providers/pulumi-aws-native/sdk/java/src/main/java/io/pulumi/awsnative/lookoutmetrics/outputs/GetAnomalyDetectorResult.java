@@ -36,13 +36,13 @@ public final class GetAnomalyDetectorResult {
      */
     private final @Nullable List<AnomalyDetectorMetricSet> metricSetList;
 
-    @OutputCustomType.Constructor({"anomalyDetectorConfig","anomalyDetectorDescription","arn","kmsKeyArn","metricSetList"})
+    @OutputCustomType.Constructor
     private GetAnomalyDetectorResult(
-        @Nullable AnomalyDetectorConfig anomalyDetectorConfig,
-        @Nullable String anomalyDetectorDescription,
-        @Nullable String arn,
-        @Nullable String kmsKeyArn,
-        @Nullable List<AnomalyDetectorMetricSet> metricSetList) {
+        @OutputCustomType.Parameter("anomalyDetectorConfig") @Nullable AnomalyDetectorConfig anomalyDetectorConfig,
+        @OutputCustomType.Parameter("anomalyDetectorDescription") @Nullable String anomalyDetectorDescription,
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("kmsKeyArn") @Nullable String kmsKeyArn,
+        @OutputCustomType.Parameter("metricSetList") @Nullable List<AnomalyDetectorMetricSet> metricSetList) {
         this.anomalyDetectorConfig = anomalyDetectorConfig;
         this.anomalyDetectorDescription = anomalyDetectorDescription;
         this.arn = arn;

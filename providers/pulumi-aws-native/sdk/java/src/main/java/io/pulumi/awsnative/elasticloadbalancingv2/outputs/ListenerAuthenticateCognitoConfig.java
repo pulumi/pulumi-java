@@ -21,16 +21,16 @@ public final class ListenerAuthenticateCognitoConfig {
     private final String userPoolClientId;
     private final String userPoolDomain;
 
-    @OutputCustomType.Constructor({"authenticationRequestExtraParams","onUnauthenticatedRequest","scope","sessionCookieName","sessionTimeout","userPoolArn","userPoolClientId","userPoolDomain"})
+    @OutputCustomType.Constructor
     private ListenerAuthenticateCognitoConfig(
-        @Nullable Object authenticationRequestExtraParams,
-        @Nullable String onUnauthenticatedRequest,
-        @Nullable String scope,
-        @Nullable String sessionCookieName,
-        @Nullable String sessionTimeout,
-        String userPoolArn,
-        String userPoolClientId,
-        String userPoolDomain) {
+        @OutputCustomType.Parameter("authenticationRequestExtraParams") @Nullable Object authenticationRequestExtraParams,
+        @OutputCustomType.Parameter("onUnauthenticatedRequest") @Nullable String onUnauthenticatedRequest,
+        @OutputCustomType.Parameter("scope") @Nullable String scope,
+        @OutputCustomType.Parameter("sessionCookieName") @Nullable String sessionCookieName,
+        @OutputCustomType.Parameter("sessionTimeout") @Nullable String sessionTimeout,
+        @OutputCustomType.Parameter("userPoolArn") String userPoolArn,
+        @OutputCustomType.Parameter("userPoolClientId") String userPoolClientId,
+        @OutputCustomType.Parameter("userPoolDomain") String userPoolDomain) {
         this.authenticationRequestExtraParams = authenticationRequestExtraParams;
         this.onUnauthenticatedRequest = onUnauthenticatedRequest;
         this.scope = scope;

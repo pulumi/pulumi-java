@@ -14,10 +14,10 @@ public final class NetworkInsightsAccessScopeResourceStatementRequest {
     private final @Nullable List<String> resourceTypes;
     private final @Nullable List<String> resources;
 
-    @OutputCustomType.Constructor({"resourceTypes","resources"})
+    @OutputCustomType.Constructor
     private NetworkInsightsAccessScopeResourceStatementRequest(
-        @Nullable List<String> resourceTypes,
-        @Nullable List<String> resources) {
+        @OutputCustomType.Parameter("resourceTypes") @Nullable List<String> resourceTypes,
+        @OutputCustomType.Parameter("resources") @Nullable List<String> resources) {
         this.resourceTypes = resourceTypes;
         this.resources = resources;
     }

@@ -13,10 +13,10 @@ public final class BudgetsActionSubscriber {
     private final String address;
     private final BudgetsActionSubscriberType type;
 
-    @OutputCustomType.Constructor({"address","type"})
+    @OutputCustomType.Constructor
     private BudgetsActionSubscriber(
-        String address,
-        BudgetsActionSubscriberType type) {
+        @OutputCustomType.Parameter("address") String address,
+        @OutputCustomType.Parameter("type") BudgetsActionSubscriberType type) {
         this.address = address;
         this.type = type;
     }

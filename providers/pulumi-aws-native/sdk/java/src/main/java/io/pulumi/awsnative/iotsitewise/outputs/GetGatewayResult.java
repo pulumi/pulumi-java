@@ -35,12 +35,12 @@ public final class GetGatewayResult {
      */
     private final @Nullable List<GatewayTag> tags;
 
-    @OutputCustomType.Constructor({"gatewayCapabilitySummaries","gatewayId","gatewayName","tags"})
+    @OutputCustomType.Constructor
     private GetGatewayResult(
-        @Nullable List<GatewayCapabilitySummary> gatewayCapabilitySummaries,
-        @Nullable String gatewayId,
-        @Nullable String gatewayName,
-        @Nullable List<GatewayTag> tags) {
+        @OutputCustomType.Parameter("gatewayCapabilitySummaries") @Nullable List<GatewayCapabilitySummary> gatewayCapabilitySummaries,
+        @OutputCustomType.Parameter("gatewayId") @Nullable String gatewayId,
+        @OutputCustomType.Parameter("gatewayName") @Nullable String gatewayName,
+        @OutputCustomType.Parameter("tags") @Nullable List<GatewayTag> tags) {
         this.gatewayCapabilitySummaries = gatewayCapabilitySummaries;
         this.gatewayId = gatewayId;
         this.gatewayName = gatewayName;

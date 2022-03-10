@@ -22,14 +22,14 @@ public final class GetInAppTemplateResult {
     private final @Nullable Object tags;
     private final @Nullable String templateDescription;
 
-    @OutputCustomType.Constructor({"arn","content","customConfig","layout","tags","templateDescription"})
+    @OutputCustomType.Constructor
     private GetInAppTemplateResult(
-        @Nullable String arn,
-        @Nullable List<InAppTemplateInAppMessageContent> content,
-        @Nullable Object customConfig,
-        @Nullable InAppTemplateLayout layout,
-        @Nullable Object tags,
-        @Nullable String templateDescription) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("content") @Nullable List<InAppTemplateInAppMessageContent> content,
+        @OutputCustomType.Parameter("customConfig") @Nullable Object customConfig,
+        @OutputCustomType.Parameter("layout") @Nullable InAppTemplateLayout layout,
+        @OutputCustomType.Parameter("tags") @Nullable Object tags,
+        @OutputCustomType.Parameter("templateDescription") @Nullable String templateDescription) {
         this.arn = arn;
         this.content = content;
         this.customConfig = customConfig;

@@ -31,14 +31,14 @@ public final class ExperimentMetricGoalObject {
      */
     private final String valueKey;
 
-    @OutputCustomType.Constructor({"desiredChange","entityIdKey","eventPattern","metricName","unitLabel","valueKey"})
+    @OutputCustomType.Constructor
     private ExperimentMetricGoalObject(
-        ExperimentMetricGoalObjectDesiredChange desiredChange,
-        String entityIdKey,
-        String eventPattern,
-        String metricName,
-        @Nullable String unitLabel,
-        String valueKey) {
+        @OutputCustomType.Parameter("desiredChange") ExperimentMetricGoalObjectDesiredChange desiredChange,
+        @OutputCustomType.Parameter("entityIdKey") String entityIdKey,
+        @OutputCustomType.Parameter("eventPattern") String eventPattern,
+        @OutputCustomType.Parameter("metricName") String metricName,
+        @OutputCustomType.Parameter("unitLabel") @Nullable String unitLabel,
+        @OutputCustomType.Parameter("valueKey") String valueKey) {
         this.desiredChange = desiredChange;
         this.entityIdKey = entityIdKey;
         this.eventPattern = eventPattern;

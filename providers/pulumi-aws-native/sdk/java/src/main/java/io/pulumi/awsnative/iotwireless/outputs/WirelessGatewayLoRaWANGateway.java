@@ -12,10 +12,10 @@ public final class WirelessGatewayLoRaWANGateway {
     private final String gatewayEui;
     private final String rfRegion;
 
-    @OutputCustomType.Constructor({"gatewayEui","rfRegion"})
+    @OutputCustomType.Constructor
     private WirelessGatewayLoRaWANGateway(
-        String gatewayEui,
-        String rfRegion) {
+        @OutputCustomType.Parameter("gatewayEui") String gatewayEui,
+        @OutputCustomType.Parameter("rfRegion") String rfRegion) {
         this.gatewayEui = gatewayEui;
         this.rfRegion = rfRegion;
     }

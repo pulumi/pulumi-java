@@ -16,10 +16,10 @@ public final class ExperimentOnlineAbConfigObject {
     private final @Nullable String controlTreatmentName;
     private final @Nullable List<ExperimentTreatmentToWeight> treatmentWeights;
 
-    @OutputCustomType.Constructor({"controlTreatmentName","treatmentWeights"})
+    @OutputCustomType.Constructor
     private ExperimentOnlineAbConfigObject(
-        @Nullable String controlTreatmentName,
-        @Nullable List<ExperimentTreatmentToWeight> treatmentWeights) {
+        @OutputCustomType.Parameter("controlTreatmentName") @Nullable String controlTreatmentName,
+        @OutputCustomType.Parameter("treatmentWeights") @Nullable List<ExperimentTreatmentToWeight> treatmentWeights) {
         this.controlTreatmentName = controlTreatmentName;
         this.treatmentWeights = treatmentWeights;
     }

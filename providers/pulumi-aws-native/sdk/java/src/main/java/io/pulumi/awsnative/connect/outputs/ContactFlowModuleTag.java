@@ -20,10 +20,10 @@ public final class ContactFlowModuleTag {
      */
     private final String value;
 
-    @OutputCustomType.Constructor({"key","value"})
+    @OutputCustomType.Constructor
     private ContactFlowModuleTag(
-        String key,
-        String value) {
+        @OutputCustomType.Parameter("key") String key,
+        @OutputCustomType.Parameter("value") String value) {
         this.key = key;
         this.value = value;
     }

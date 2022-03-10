@@ -52,15 +52,15 @@ public final class GetUsagePlanResult {
      */
     private final @Nullable String usagePlanName;
 
-    @OutputCustomType.Constructor({"apiStages","description","id","quota","tags","throttle","usagePlanName"})
+    @OutputCustomType.Constructor
     private GetUsagePlanResult(
-        @Nullable List<UsagePlanApiStage> apiStages,
-        @Nullable String description,
-        @Nullable String id,
-        @Nullable UsagePlanQuotaSettings quota,
-        @Nullable List<UsagePlanTag> tags,
-        @Nullable UsagePlanThrottleSettings throttle,
-        @Nullable String usagePlanName) {
+        @OutputCustomType.Parameter("apiStages") @Nullable List<UsagePlanApiStage> apiStages,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("quota") @Nullable UsagePlanQuotaSettings quota,
+        @OutputCustomType.Parameter("tags") @Nullable List<UsagePlanTag> tags,
+        @OutputCustomType.Parameter("throttle") @Nullable UsagePlanThrottleSettings throttle,
+        @OutputCustomType.Parameter("usagePlanName") @Nullable String usagePlanName) {
         this.apiStages = apiStages;
         this.description = description;
         this.id = id;

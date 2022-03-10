@@ -19,13 +19,13 @@ public final class DistributionLegacyCustomOrigin {
     private final String originProtocolPolicy;
     private final List<String> originSSLProtocols;
 
-    @OutputCustomType.Constructor({"dNSName","hTTPPort","hTTPSPort","originProtocolPolicy","originSSLProtocols"})
+    @OutputCustomType.Constructor
     private DistributionLegacyCustomOrigin(
-        String dNSName,
-        @Nullable Integer hTTPPort,
-        @Nullable Integer hTTPSPort,
-        String originProtocolPolicy,
-        List<String> originSSLProtocols) {
+        @OutputCustomType.Parameter("dNSName") String dNSName,
+        @OutputCustomType.Parameter("hTTPPort") @Nullable Integer hTTPPort,
+        @OutputCustomType.Parameter("hTTPSPort") @Nullable Integer hTTPSPort,
+        @OutputCustomType.Parameter("originProtocolPolicy") String originProtocolPolicy,
+        @OutputCustomType.Parameter("originSSLProtocols") List<String> originSSLProtocols) {
         this.dNSName = dNSName;
         this.hTTPPort = hTTPPort;
         this.hTTPSPort = hTTPSPort;

@@ -27,11 +27,11 @@ public final class OptionsProperties {
      */
     private final @Nullable String ipv6Support;
 
-    @OutputCustomType.Constructor({"applianceModeSupport","dnsSupport","ipv6Support"})
+    @OutputCustomType.Constructor
     private OptionsProperties(
-        @Nullable String applianceModeSupport,
-        @Nullable String dnsSupport,
-        @Nullable String ipv6Support) {
+        @OutputCustomType.Parameter("applianceModeSupport") @Nullable String applianceModeSupport,
+        @OutputCustomType.Parameter("dnsSupport") @Nullable String dnsSupport,
+        @OutputCustomType.Parameter("ipv6Support") @Nullable String ipv6Support) {
         this.applianceModeSupport = applianceModeSupport;
         this.dnsSupport = dnsSupport;
         this.ipv6Support = ipv6Support;

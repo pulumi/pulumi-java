@@ -20,11 +20,11 @@ public final class BotKendraConfiguration {
      */
     private final @Nullable Boolean queryFilterStringEnabled;
 
-    @OutputCustomType.Constructor({"kendraIndex","queryFilterString","queryFilterStringEnabled"})
+    @OutputCustomType.Constructor
     private BotKendraConfiguration(
-        String kendraIndex,
-        @Nullable String queryFilterString,
-        @Nullable Boolean queryFilterStringEnabled) {
+        @OutputCustomType.Parameter("kendraIndex") String kendraIndex,
+        @OutputCustomType.Parameter("queryFilterString") @Nullable String queryFilterString,
+        @OutputCustomType.Parameter("queryFilterStringEnabled") @Nullable Boolean queryFilterStringEnabled) {
         this.kendraIndex = kendraIndex;
         this.queryFilterString = queryFilterString;
         this.queryFilterStringEnabled = queryFilterStringEnabled;

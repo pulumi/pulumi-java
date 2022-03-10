@@ -42,14 +42,14 @@ public final class BucketRule {
     private final @Nullable String id;
     private final @Nullable BucketRuleStatus status;
 
-    @OutputCustomType.Constructor({"abortIncompleteMultipartUpload","expirationDate","expirationInDays","filter","id","status"})
+    @OutputCustomType.Constructor
     private BucketRule(
-        @Nullable BucketAbortIncompleteMultipartUpload abortIncompleteMultipartUpload,
-        @Nullable String expirationDate,
-        @Nullable Integer expirationInDays,
-        @Nullable BucketRuleFilterProperties filter,
-        @Nullable String id,
-        @Nullable BucketRuleStatus status) {
+        @OutputCustomType.Parameter("abortIncompleteMultipartUpload") @Nullable BucketAbortIncompleteMultipartUpload abortIncompleteMultipartUpload,
+        @OutputCustomType.Parameter("expirationDate") @Nullable String expirationDate,
+        @OutputCustomType.Parameter("expirationInDays") @Nullable Integer expirationInDays,
+        @OutputCustomType.Parameter("filter") @Nullable BucketRuleFilterProperties filter,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("status") @Nullable BucketRuleStatus status) {
         this.abortIncompleteMultipartUpload = abortIncompleteMultipartUpload;
         this.expirationDate = expirationDate;
         this.expirationInDays = expirationInDays;

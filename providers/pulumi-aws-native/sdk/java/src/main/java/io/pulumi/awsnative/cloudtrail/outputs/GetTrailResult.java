@@ -85,24 +85,24 @@ public final class GetTrailResult {
     private final @Nullable String snsTopicName;
     private final @Nullable List<TrailTag> tags;
 
-    @OutputCustomType.Constructor({"arn","cloudWatchLogsLogGroupArn","cloudWatchLogsRoleArn","enableLogFileValidation","eventSelectors","includeGlobalServiceEvents","insightSelectors","isLogging","isMultiRegionTrail","isOrganizationTrail","kMSKeyId","s3BucketName","s3KeyPrefix","snsTopicArn","snsTopicName","tags"})
+    @OutputCustomType.Constructor
     private GetTrailResult(
-        @Nullable String arn,
-        @Nullable String cloudWatchLogsLogGroupArn,
-        @Nullable String cloudWatchLogsRoleArn,
-        @Nullable Boolean enableLogFileValidation,
-        @Nullable List<TrailEventSelector> eventSelectors,
-        @Nullable Boolean includeGlobalServiceEvents,
-        @Nullable List<TrailInsightSelector> insightSelectors,
-        @Nullable Boolean isLogging,
-        @Nullable Boolean isMultiRegionTrail,
-        @Nullable Boolean isOrganizationTrail,
-        @Nullable String kMSKeyId,
-        @Nullable String s3BucketName,
-        @Nullable String s3KeyPrefix,
-        @Nullable String snsTopicArn,
-        @Nullable String snsTopicName,
-        @Nullable List<TrailTag> tags) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("cloudWatchLogsLogGroupArn") @Nullable String cloudWatchLogsLogGroupArn,
+        @OutputCustomType.Parameter("cloudWatchLogsRoleArn") @Nullable String cloudWatchLogsRoleArn,
+        @OutputCustomType.Parameter("enableLogFileValidation") @Nullable Boolean enableLogFileValidation,
+        @OutputCustomType.Parameter("eventSelectors") @Nullable List<TrailEventSelector> eventSelectors,
+        @OutputCustomType.Parameter("includeGlobalServiceEvents") @Nullable Boolean includeGlobalServiceEvents,
+        @OutputCustomType.Parameter("insightSelectors") @Nullable List<TrailInsightSelector> insightSelectors,
+        @OutputCustomType.Parameter("isLogging") @Nullable Boolean isLogging,
+        @OutputCustomType.Parameter("isMultiRegionTrail") @Nullable Boolean isMultiRegionTrail,
+        @OutputCustomType.Parameter("isOrganizationTrail") @Nullable Boolean isOrganizationTrail,
+        @OutputCustomType.Parameter("kMSKeyId") @Nullable String kMSKeyId,
+        @OutputCustomType.Parameter("s3BucketName") @Nullable String s3BucketName,
+        @OutputCustomType.Parameter("s3KeyPrefix") @Nullable String s3KeyPrefix,
+        @OutputCustomType.Parameter("snsTopicArn") @Nullable String snsTopicArn,
+        @OutputCustomType.Parameter("snsTopicName") @Nullable String snsTopicName,
+        @OutputCustomType.Parameter("tags") @Nullable List<TrailTag> tags) {
         this.arn = arn;
         this.cloudWatchLogsLogGroupArn = cloudWatchLogsLogGroupArn;
         this.cloudWatchLogsRoleArn = cloudWatchLogsRoleArn;

@@ -14,10 +14,10 @@ public final class SuiteDefinitionDeviceUnderTest {
     private final @Nullable String certificateArn;
     private final @Nullable String thingArn;
 
-    @OutputCustomType.Constructor({"certificateArn","thingArn"})
+    @OutputCustomType.Constructor
     private SuiteDefinitionDeviceUnderTest(
-        @Nullable String certificateArn,
-        @Nullable String thingArn) {
+        @OutputCustomType.Parameter("certificateArn") @Nullable String certificateArn,
+        @OutputCustomType.Parameter("thingArn") @Nullable String thingArn) {
         this.certificateArn = certificateArn;
         this.thingArn = thingArn;
     }

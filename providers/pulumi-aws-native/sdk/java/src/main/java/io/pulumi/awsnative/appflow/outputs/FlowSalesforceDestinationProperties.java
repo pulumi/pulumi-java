@@ -23,12 +23,12 @@ public final class FlowSalesforceDestinationProperties {
     private final String object;
     private final @Nullable FlowWriteOperationType writeOperationType;
 
-    @OutputCustomType.Constructor({"errorHandlingConfig","idFieldNames","object","writeOperationType"})
+    @OutputCustomType.Constructor
     private FlowSalesforceDestinationProperties(
-        @Nullable FlowErrorHandlingConfig errorHandlingConfig,
-        @Nullable List<String> idFieldNames,
-        String object,
-        @Nullable FlowWriteOperationType writeOperationType) {
+        @OutputCustomType.Parameter("errorHandlingConfig") @Nullable FlowErrorHandlingConfig errorHandlingConfig,
+        @OutputCustomType.Parameter("idFieldNames") @Nullable List<String> idFieldNames,
+        @OutputCustomType.Parameter("object") String object,
+        @OutputCustomType.Parameter("writeOperationType") @Nullable FlowWriteOperationType writeOperationType) {
         this.errorHandlingConfig = errorHandlingConfig;
         this.idFieldNames = idFieldNames;
         this.object = object;

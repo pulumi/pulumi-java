@@ -41,13 +41,13 @@ public final class GetReportPlanResult {
      */
     private final @Nullable ReportSettingProperties reportSetting;
 
-    @OutputCustomType.Constructor({"reportDeliveryChannel","reportPlanArn","reportPlanDescription","reportPlanTags","reportSetting"})
+    @OutputCustomType.Constructor
     private GetReportPlanResult(
-        @Nullable ReportDeliveryChannelProperties reportDeliveryChannel,
-        @Nullable String reportPlanArn,
-        @Nullable String reportPlanDescription,
-        @Nullable List<ReportPlanTag> reportPlanTags,
-        @Nullable ReportSettingProperties reportSetting) {
+        @OutputCustomType.Parameter("reportDeliveryChannel") @Nullable ReportDeliveryChannelProperties reportDeliveryChannel,
+        @OutputCustomType.Parameter("reportPlanArn") @Nullable String reportPlanArn,
+        @OutputCustomType.Parameter("reportPlanDescription") @Nullable String reportPlanDescription,
+        @OutputCustomType.Parameter("reportPlanTags") @Nullable List<ReportPlanTag> reportPlanTags,
+        @OutputCustomType.Parameter("reportSetting") @Nullable ReportSettingProperties reportSetting) {
         this.reportDeliveryChannel = reportDeliveryChannel;
         this.reportPlanArn = reportPlanArn;
         this.reportPlanDescription = reportPlanDescription;

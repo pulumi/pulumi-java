@@ -13,8 +13,8 @@ import javax.annotation.Nullable;
 public final class DashboardExportToCSVOption {
     private final @Nullable DashboardBehavior availabilityStatus;
 
-    @OutputCustomType.Constructor({"availabilityStatus"})
-    private DashboardExportToCSVOption(@Nullable DashboardBehavior availabilityStatus) {
+    @OutputCustomType.Constructor
+    private DashboardExportToCSVOption(@OutputCustomType.Parameter("availabilityStatus") @Nullable DashboardBehavior availabilityStatus) {
         this.availabilityStatus = availabilityStatus;
     }
 

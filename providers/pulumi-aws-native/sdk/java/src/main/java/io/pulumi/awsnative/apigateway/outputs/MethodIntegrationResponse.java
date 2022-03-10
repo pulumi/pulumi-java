@@ -39,13 +39,13 @@ public final class MethodIntegrationResponse {
      */
     private final String statusCode;
 
-    @OutputCustomType.Constructor({"contentHandling","responseParameters","responseTemplates","selectionPattern","statusCode"})
+    @OutputCustomType.Constructor
     private MethodIntegrationResponse(
-        @Nullable MethodIntegrationResponseContentHandling contentHandling,
-        @Nullable Object responseParameters,
-        @Nullable Object responseTemplates,
-        @Nullable String selectionPattern,
-        String statusCode) {
+        @OutputCustomType.Parameter("contentHandling") @Nullable MethodIntegrationResponseContentHandling contentHandling,
+        @OutputCustomType.Parameter("responseParameters") @Nullable Object responseParameters,
+        @OutputCustomType.Parameter("responseTemplates") @Nullable Object responseTemplates,
+        @OutputCustomType.Parameter("selectionPattern") @Nullable String selectionPattern,
+        @OutputCustomType.Parameter("statusCode") String statusCode) {
         this.contentHandling = contentHandling;
         this.responseParameters = responseParameters;
         this.responseTemplates = responseTemplates;

@@ -16,10 +16,10 @@ public final class ScheduledQueryMultiMeasureMappings {
     private final List<ScheduledQueryMultiMeasureAttributeMapping> multiMeasureAttributeMappings;
     private final @Nullable String targetMultiMeasureName;
 
-    @OutputCustomType.Constructor({"multiMeasureAttributeMappings","targetMultiMeasureName"})
+    @OutputCustomType.Constructor
     private ScheduledQueryMultiMeasureMappings(
-        List<ScheduledQueryMultiMeasureAttributeMapping> multiMeasureAttributeMappings,
-        @Nullable String targetMultiMeasureName) {
+        @OutputCustomType.Parameter("multiMeasureAttributeMappings") List<ScheduledQueryMultiMeasureAttributeMapping> multiMeasureAttributeMappings,
+        @OutputCustomType.Parameter("targetMultiMeasureName") @Nullable String targetMultiMeasureName) {
         this.multiMeasureAttributeMappings = multiMeasureAttributeMappings;
         this.targetMultiMeasureName = targetMultiMeasureName;
     }

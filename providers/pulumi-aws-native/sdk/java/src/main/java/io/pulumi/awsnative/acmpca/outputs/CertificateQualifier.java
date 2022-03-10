@@ -11,8 +11,8 @@ import java.util.Objects;
 public final class CertificateQualifier {
     private final String cpsUri;
 
-    @OutputCustomType.Constructor({"cpsUri"})
-    private CertificateQualifier(String cpsUri) {
+    @OutputCustomType.Constructor
+    private CertificateQualifier(@OutputCustomType.Parameter("cpsUri") String cpsUri) {
         this.cpsUri = cpsUri;
     }
 

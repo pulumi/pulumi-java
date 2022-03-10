@@ -16,11 +16,11 @@ public final class TaskDefinitionMountPoint {
     private final @Nullable Boolean readOnly;
     private final @Nullable String sourceVolume;
 
-    @OutputCustomType.Constructor({"containerPath","readOnly","sourceVolume"})
+    @OutputCustomType.Constructor
     private TaskDefinitionMountPoint(
-        @Nullable String containerPath,
-        @Nullable Boolean readOnly,
-        @Nullable String sourceVolume) {
+        @OutputCustomType.Parameter("containerPath") @Nullable String containerPath,
+        @OutputCustomType.Parameter("readOnly") @Nullable Boolean readOnly,
+        @OutputCustomType.Parameter("sourceVolume") @Nullable String sourceVolume) {
         this.containerPath = containerPath;
         this.readOnly = readOnly;
         this.sourceVolume = sourceVolume;

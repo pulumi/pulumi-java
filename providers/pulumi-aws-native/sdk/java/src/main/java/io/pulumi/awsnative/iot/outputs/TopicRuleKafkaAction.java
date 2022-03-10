@@ -18,13 +18,13 @@ public final class TopicRuleKafkaAction {
     private final @Nullable String partition;
     private final String topic;
 
-    @OutputCustomType.Constructor({"clientProperties","destinationArn","key","partition","topic"})
+    @OutputCustomType.Constructor
     private TopicRuleKafkaAction(
-        Object clientProperties,
-        String destinationArn,
-        @Nullable String key,
-        @Nullable String partition,
-        String topic) {
+        @OutputCustomType.Parameter("clientProperties") Object clientProperties,
+        @OutputCustomType.Parameter("destinationArn") String destinationArn,
+        @OutputCustomType.Parameter("key") @Nullable String key,
+        @OutputCustomType.Parameter("partition") @Nullable String partition,
+        @OutputCustomType.Parameter("topic") String topic) {
         this.clientProperties = clientProperties;
         this.destinationArn = destinationArn;
         this.key = key;

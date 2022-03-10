@@ -19,13 +19,13 @@ public final class GetNetworkInsightsAccessScopeResult {
     private final @Nullable List<NetworkInsightsAccessScopeTag> tags;
     private final @Nullable String updatedDate;
 
-    @OutputCustomType.Constructor({"createdDate","networkInsightsAccessScopeArn","networkInsightsAccessScopeId","tags","updatedDate"})
+    @OutputCustomType.Constructor
     private GetNetworkInsightsAccessScopeResult(
-        @Nullable String createdDate,
-        @Nullable String networkInsightsAccessScopeArn,
-        @Nullable String networkInsightsAccessScopeId,
-        @Nullable List<NetworkInsightsAccessScopeTag> tags,
-        @Nullable String updatedDate) {
+        @OutputCustomType.Parameter("createdDate") @Nullable String createdDate,
+        @OutputCustomType.Parameter("networkInsightsAccessScopeArn") @Nullable String networkInsightsAccessScopeArn,
+        @OutputCustomType.Parameter("networkInsightsAccessScopeId") @Nullable String networkInsightsAccessScopeId,
+        @OutputCustomType.Parameter("tags") @Nullable List<NetworkInsightsAccessScopeTag> tags,
+        @OutputCustomType.Parameter("updatedDate") @Nullable String updatedDate) {
         this.createdDate = createdDate;
         this.networkInsightsAccessScopeArn = networkInsightsAccessScopeArn;
         this.networkInsightsAccessScopeId = networkInsightsAccessScopeId;

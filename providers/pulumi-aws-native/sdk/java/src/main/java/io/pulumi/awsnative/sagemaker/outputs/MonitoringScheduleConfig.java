@@ -23,12 +23,12 @@ public final class MonitoringScheduleConfig {
     private final @Nullable MonitoringScheduleMonitoringType monitoringType;
     private final @Nullable MonitoringScheduleScheduleConfig scheduleConfig;
 
-    @OutputCustomType.Constructor({"monitoringJobDefinition","monitoringJobDefinitionName","monitoringType","scheduleConfig"})
+    @OutputCustomType.Constructor
     private MonitoringScheduleConfig(
-        @Nullable MonitoringScheduleMonitoringJobDefinition monitoringJobDefinition,
-        @Nullable String monitoringJobDefinitionName,
-        @Nullable MonitoringScheduleMonitoringType monitoringType,
-        @Nullable MonitoringScheduleScheduleConfig scheduleConfig) {
+        @OutputCustomType.Parameter("monitoringJobDefinition") @Nullable MonitoringScheduleMonitoringJobDefinition monitoringJobDefinition,
+        @OutputCustomType.Parameter("monitoringJobDefinitionName") @Nullable String monitoringJobDefinitionName,
+        @OutputCustomType.Parameter("monitoringType") @Nullable MonitoringScheduleMonitoringType monitoringType,
+        @OutputCustomType.Parameter("scheduleConfig") @Nullable MonitoringScheduleScheduleConfig scheduleConfig) {
         this.monitoringJobDefinition = monitoringJobDefinition;
         this.monitoringJobDefinitionName = monitoringJobDefinitionName;
         this.monitoringType = monitoringType;

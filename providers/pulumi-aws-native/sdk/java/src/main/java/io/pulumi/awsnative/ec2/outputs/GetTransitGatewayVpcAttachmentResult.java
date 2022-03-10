@@ -24,13 +24,13 @@ public final class GetTransitGatewayVpcAttachmentResult {
     private final @Nullable List<String> removeSubnetIds;
     private final @Nullable List<TransitGatewayVpcAttachmentTag> tags;
 
-    @OutputCustomType.Constructor({"addSubnetIds","id","options","removeSubnetIds","tags"})
+    @OutputCustomType.Constructor
     private GetTransitGatewayVpcAttachmentResult(
-        @Nullable List<String> addSubnetIds,
-        @Nullable String id,
-        @Nullable OptionsProperties options,
-        @Nullable List<String> removeSubnetIds,
-        @Nullable List<TransitGatewayVpcAttachmentTag> tags) {
+        @OutputCustomType.Parameter("addSubnetIds") @Nullable List<String> addSubnetIds,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("options") @Nullable OptionsProperties options,
+        @OutputCustomType.Parameter("removeSubnetIds") @Nullable List<String> removeSubnetIds,
+        @OutputCustomType.Parameter("tags") @Nullable List<TransitGatewayVpcAttachmentTag> tags) {
         this.addSubnetIds = addSubnetIds;
         this.id = id;
         this.options = options;

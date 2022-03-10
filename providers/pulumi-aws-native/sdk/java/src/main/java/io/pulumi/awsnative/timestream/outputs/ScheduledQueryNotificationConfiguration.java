@@ -11,8 +11,8 @@ import java.util.Objects;
 public final class ScheduledQueryNotificationConfiguration {
     private final ScheduledQuerySnsConfiguration snsConfiguration;
 
-    @OutputCustomType.Constructor({"snsConfiguration"})
-    private ScheduledQueryNotificationConfiguration(ScheduledQuerySnsConfiguration snsConfiguration) {
+    @OutputCustomType.Constructor
+    private ScheduledQueryNotificationConfiguration(@OutputCustomType.Parameter("snsConfiguration") ScheduledQuerySnsConfiguration snsConfiguration) {
         this.snsConfiguration = snsConfiguration;
     }
 

@@ -30,11 +30,11 @@ public final class GetRecordingConfigurationResult {
      */
     private final @Nullable List<RecordingConfigurationTag> tags;
 
-    @OutputCustomType.Constructor({"arn","state","tags"})
+    @OutputCustomType.Constructor
     private GetRecordingConfigurationResult(
-        @Nullable String arn,
-        @Nullable RecordingConfigurationState state,
-        @Nullable List<RecordingConfigurationTag> tags) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("state") @Nullable RecordingConfigurationState state,
+        @OutputCustomType.Parameter("tags") @Nullable List<RecordingConfigurationTag> tags) {
         this.arn = arn;
         this.state = state;
         this.tags = tags;

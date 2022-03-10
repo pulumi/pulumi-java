@@ -11,8 +11,8 @@ import java.util.Objects;
 public final class ModelExplainabilityJobDefinitionMonitoringOutput {
     private final ModelExplainabilityJobDefinitionS3Output s3Output;
 
-    @OutputCustomType.Constructor({"s3Output"})
-    private ModelExplainabilityJobDefinitionMonitoringOutput(ModelExplainabilityJobDefinitionS3Output s3Output) {
+    @OutputCustomType.Constructor
+    private ModelExplainabilityJobDefinitionMonitoringOutput(@OutputCustomType.Parameter("s3Output") ModelExplainabilityJobDefinitionS3Output s3Output) {
         this.s3Output = s3Output;
     }
 

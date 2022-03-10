@@ -14,10 +14,10 @@ public final class RuleGroupTCPFlagField {
     private final List<RuleGroupTCPFlag> flags;
     private final @Nullable List<RuleGroupTCPFlag> masks;
 
-    @OutputCustomType.Constructor({"flags","masks"})
+    @OutputCustomType.Constructor
     private RuleGroupTCPFlagField(
-        List<RuleGroupTCPFlag> flags,
-        @Nullable List<RuleGroupTCPFlag> masks) {
+        @OutputCustomType.Parameter("flags") List<RuleGroupTCPFlag> flags,
+        @OutputCustomType.Parameter("masks") @Nullable List<RuleGroupTCPFlag> masks) {
         this.flags = flags;
         this.masks = masks;
     }

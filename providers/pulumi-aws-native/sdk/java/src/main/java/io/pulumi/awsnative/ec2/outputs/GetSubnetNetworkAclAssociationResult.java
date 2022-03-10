@@ -13,8 +13,8 @@ import javax.annotation.Nullable;
 public final class GetSubnetNetworkAclAssociationResult {
     private final @Nullable String associationId;
 
-    @OutputCustomType.Constructor({"associationId"})
-    private GetSubnetNetworkAclAssociationResult(@Nullable String associationId) {
+    @OutputCustomType.Constructor
+    private GetSubnetNetworkAclAssociationResult(@OutputCustomType.Parameter("associationId") @Nullable String associationId) {
         this.associationId = associationId;
     }
 

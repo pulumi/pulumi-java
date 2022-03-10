@@ -64,18 +64,18 @@ public final class GetStudioResult {
      */
     private final @Nullable String url;
 
-    @OutputCustomType.Constructor({"arn","defaultS3Location","description","idpAuthUrl","idpRelayStateParameterName","name","studioId","subnetIds","tags","url"})
+    @OutputCustomType.Constructor
     private GetStudioResult(
-        @Nullable String arn,
-        @Nullable String defaultS3Location,
-        @Nullable String description,
-        @Nullable String idpAuthUrl,
-        @Nullable String idpRelayStateParameterName,
-        @Nullable String name,
-        @Nullable String studioId,
-        @Nullable List<String> subnetIds,
-        @Nullable List<StudioTag> tags,
-        @Nullable String url) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("defaultS3Location") @Nullable String defaultS3Location,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("idpAuthUrl") @Nullable String idpAuthUrl,
+        @OutputCustomType.Parameter("idpRelayStateParameterName") @Nullable String idpRelayStateParameterName,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("studioId") @Nullable String studioId,
+        @OutputCustomType.Parameter("subnetIds") @Nullable List<String> subnetIds,
+        @OutputCustomType.Parameter("tags") @Nullable List<StudioTag> tags,
+        @OutputCustomType.Parameter("url") @Nullable String url) {
         this.arn = arn;
         this.defaultS3Location = defaultS3Location;
         this.description = description;

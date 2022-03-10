@@ -17,8 +17,8 @@ public final class EventSourceMappingDestinationConfig {
      */
     private final @Nullable EventSourceMappingOnFailure onFailure;
 
-    @OutputCustomType.Constructor({"onFailure"})
-    private EventSourceMappingDestinationConfig(@Nullable EventSourceMappingOnFailure onFailure) {
+    @OutputCustomType.Constructor
+    private EventSourceMappingDestinationConfig(@OutputCustomType.Parameter("onFailure") @Nullable EventSourceMappingOnFailure onFailure) {
         this.onFailure = onFailure;
     }
 

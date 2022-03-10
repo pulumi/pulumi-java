@@ -19,12 +19,12 @@ public final class UserPhoneConfig {
     private final @Nullable String deskPhoneNumber;
     private final UserPhoneType phoneType;
 
-    @OutputCustomType.Constructor({"afterContactWorkTimeLimit","autoAccept","deskPhoneNumber","phoneType"})
+    @OutputCustomType.Constructor
     private UserPhoneConfig(
-        @Nullable Integer afterContactWorkTimeLimit,
-        @Nullable Boolean autoAccept,
-        @Nullable String deskPhoneNumber,
-        UserPhoneType phoneType) {
+        @OutputCustomType.Parameter("afterContactWorkTimeLimit") @Nullable Integer afterContactWorkTimeLimit,
+        @OutputCustomType.Parameter("autoAccept") @Nullable Boolean autoAccept,
+        @OutputCustomType.Parameter("deskPhoneNumber") @Nullable String deskPhoneNumber,
+        @OutputCustomType.Parameter("phoneType") UserPhoneType phoneType) {
         this.afterContactWorkTimeLimit = afterContactWorkTimeLimit;
         this.autoAccept = autoAccept;
         this.deskPhoneNumber = deskPhoneNumber;

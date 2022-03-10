@@ -17,11 +17,11 @@ public final class RuleGroupJsonBody {
     private final RuleGroupJsonMatchPattern matchPattern;
     private final RuleGroupJsonMatchScope matchScope;
 
-    @OutputCustomType.Constructor({"invalidFallbackBehavior","matchPattern","matchScope"})
+    @OutputCustomType.Constructor
     private RuleGroupJsonBody(
-        @Nullable RuleGroupBodyParsingFallbackBehavior invalidFallbackBehavior,
-        RuleGroupJsonMatchPattern matchPattern,
-        RuleGroupJsonMatchScope matchScope) {
+        @OutputCustomType.Parameter("invalidFallbackBehavior") @Nullable RuleGroupBodyParsingFallbackBehavior invalidFallbackBehavior,
+        @OutputCustomType.Parameter("matchPattern") RuleGroupJsonMatchPattern matchPattern,
+        @OutputCustomType.Parameter("matchScope") RuleGroupJsonMatchScope matchScope) {
         this.invalidFallbackBehavior = invalidFallbackBehavior;
         this.matchPattern = matchPattern;
         this.matchScope = matchScope;

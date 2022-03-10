@@ -12,10 +12,10 @@ public final class ConnectionClientParameters {
     private final String clientID;
     private final String clientSecret;
 
-    @OutputCustomType.Constructor({"clientID","clientSecret"})
+    @OutputCustomType.Constructor
     private ConnectionClientParameters(
-        String clientID,
-        String clientSecret) {
+        @OutputCustomType.Parameter("clientID") String clientID,
+        @OutputCustomType.Parameter("clientSecret") String clientSecret) {
         this.clientID = clientID;
         this.clientSecret = clientSecret;
     }

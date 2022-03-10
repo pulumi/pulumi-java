@@ -16,11 +16,11 @@ public final class TaskDefinitionDevice {
     private final @Nullable String hostPath;
     private final @Nullable List<String> permissions;
 
-    @OutputCustomType.Constructor({"containerPath","hostPath","permissions"})
+    @OutputCustomType.Constructor
     private TaskDefinitionDevice(
-        @Nullable String containerPath,
-        @Nullable String hostPath,
-        @Nullable List<String> permissions) {
+        @OutputCustomType.Parameter("containerPath") @Nullable String containerPath,
+        @OutputCustomType.Parameter("hostPath") @Nullable String hostPath,
+        @OutputCustomType.Parameter("permissions") @Nullable List<String> permissions) {
         this.containerPath = containerPath;
         this.hostPath = hostPath;
         this.permissions = permissions;

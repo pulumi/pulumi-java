@@ -15,10 +15,10 @@ public final class DeliveryStreamDynamicPartitioningConfiguration {
     private final @Nullable Boolean enabled;
     private final @Nullable DeliveryStreamRetryOptions retryOptions;
 
-    @OutputCustomType.Constructor({"enabled","retryOptions"})
+    @OutputCustomType.Constructor
     private DeliveryStreamDynamicPartitioningConfiguration(
-        @Nullable Boolean enabled,
-        @Nullable DeliveryStreamRetryOptions retryOptions) {
+        @OutputCustomType.Parameter("enabled") @Nullable Boolean enabled,
+        @OutputCustomType.Parameter("retryOptions") @Nullable DeliveryStreamRetryOptions retryOptions) {
         this.enabled = enabled;
         this.retryOptions = retryOptions;
     }

@@ -11,8 +11,8 @@ import java.util.Objects;
 public final class DatasetDeltaTimeSessionWindowConfiguration {
     private final Integer timeoutInMinutes;
 
-    @OutputCustomType.Constructor({"timeoutInMinutes"})
-    private DatasetDeltaTimeSessionWindowConfiguration(Integer timeoutInMinutes) {
+    @OutputCustomType.Constructor
+    private DatasetDeltaTimeSessionWindowConfiguration(@OutputCustomType.Parameter("timeoutInMinutes") Integer timeoutInMinutes) {
         this.timeoutInMinutes = timeoutInMinutes;
     }
 

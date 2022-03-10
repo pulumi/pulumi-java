@@ -51,15 +51,15 @@ public final class GetEndpointAccessResult {
      */
     private final @Nullable List<EndpointAccessVpcSecurityGroup> vpcSecurityGroups;
 
-    @OutputCustomType.Constructor({"address","endpointCreateTime","endpointStatus","port","vpcEndpoint","vpcSecurityGroupIds","vpcSecurityGroups"})
+    @OutputCustomType.Constructor
     private GetEndpointAccessResult(
-        @Nullable String address,
-        @Nullable String endpointCreateTime,
-        @Nullable String endpointStatus,
-        @Nullable Integer port,
-        @Nullable VpcEndpointProperties vpcEndpoint,
-        @Nullable List<String> vpcSecurityGroupIds,
-        @Nullable List<EndpointAccessVpcSecurityGroup> vpcSecurityGroups) {
+        @OutputCustomType.Parameter("address") @Nullable String address,
+        @OutputCustomType.Parameter("endpointCreateTime") @Nullable String endpointCreateTime,
+        @OutputCustomType.Parameter("endpointStatus") @Nullable String endpointStatus,
+        @OutputCustomType.Parameter("port") @Nullable Integer port,
+        @OutputCustomType.Parameter("vpcEndpoint") @Nullable VpcEndpointProperties vpcEndpoint,
+        @OutputCustomType.Parameter("vpcSecurityGroupIds") @Nullable List<String> vpcSecurityGroupIds,
+        @OutputCustomType.Parameter("vpcSecurityGroups") @Nullable List<EndpointAccessVpcSecurityGroup> vpcSecurityGroups) {
         this.address = address;
         this.endpointCreateTime = endpointCreateTime;
         this.endpointStatus = endpointStatus;

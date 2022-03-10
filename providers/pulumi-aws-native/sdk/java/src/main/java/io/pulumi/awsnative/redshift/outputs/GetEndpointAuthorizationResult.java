@@ -60,17 +60,17 @@ public final class GetEndpointAuthorizationResult {
      */
     private final @Nullable List<String> vpcIds;
 
-    @OutputCustomType.Constructor({"allowedAllVPCs","allowedVPCs","authorizeTime","clusterStatus","endpointCount","grantee","grantor","status","vpcIds"})
+    @OutputCustomType.Constructor
     private GetEndpointAuthorizationResult(
-        @Nullable Boolean allowedAllVPCs,
-        @Nullable List<String> allowedVPCs,
-        @Nullable String authorizeTime,
-        @Nullable String clusterStatus,
-        @Nullable Integer endpointCount,
-        @Nullable String grantee,
-        @Nullable String grantor,
-        @Nullable String status,
-        @Nullable List<String> vpcIds) {
+        @OutputCustomType.Parameter("allowedAllVPCs") @Nullable Boolean allowedAllVPCs,
+        @OutputCustomType.Parameter("allowedVPCs") @Nullable List<String> allowedVPCs,
+        @OutputCustomType.Parameter("authorizeTime") @Nullable String authorizeTime,
+        @OutputCustomType.Parameter("clusterStatus") @Nullable String clusterStatus,
+        @OutputCustomType.Parameter("endpointCount") @Nullable Integer endpointCount,
+        @OutputCustomType.Parameter("grantee") @Nullable String grantee,
+        @OutputCustomType.Parameter("grantor") @Nullable String grantor,
+        @OutputCustomType.Parameter("status") @Nullable String status,
+        @OutputCustomType.Parameter("vpcIds") @Nullable List<String> vpcIds) {
         this.allowedAllVPCs = allowedAllVPCs;
         this.allowedVPCs = allowedVPCs;
         this.authorizeTime = authorizeTime;

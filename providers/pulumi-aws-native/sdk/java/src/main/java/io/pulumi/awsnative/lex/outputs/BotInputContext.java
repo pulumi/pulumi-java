@@ -15,8 +15,8 @@ public final class BotInputContext {
      */
     private final String name;
 
-    @OutputCustomType.Constructor({"name"})
-    private BotInputContext(String name) {
+    @OutputCustomType.Constructor
+    private BotInputContext(@OutputCustomType.Parameter("name") String name) {
         this.name = name;
     }
 

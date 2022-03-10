@@ -14,10 +14,10 @@ public final class TopicRuleIotSiteWiseAction {
     private final List<TopicRulePutAssetPropertyValueEntry> putAssetPropertyValueEntries;
     private final String roleArn;
 
-    @OutputCustomType.Constructor({"putAssetPropertyValueEntries","roleArn"})
+    @OutputCustomType.Constructor
     private TopicRuleIotSiteWiseAction(
-        List<TopicRulePutAssetPropertyValueEntry> putAssetPropertyValueEntries,
-        String roleArn) {
+        @OutputCustomType.Parameter("putAssetPropertyValueEntries") List<TopicRulePutAssetPropertyValueEntry> putAssetPropertyValueEntries,
+        @OutputCustomType.Parameter("roleArn") String roleArn) {
         this.putAssetPropertyValueEntries = putAssetPropertyValueEntries;
         this.roleArn = roleArn;
     }

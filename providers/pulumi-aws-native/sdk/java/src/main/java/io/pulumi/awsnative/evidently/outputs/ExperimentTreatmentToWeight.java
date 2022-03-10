@@ -13,10 +13,10 @@ public final class ExperimentTreatmentToWeight {
     private final Integer splitWeight;
     private final String treatment;
 
-    @OutputCustomType.Constructor({"splitWeight","treatment"})
+    @OutputCustomType.Constructor
     private ExperimentTreatmentToWeight(
-        Integer splitWeight,
-        String treatment) {
+        @OutputCustomType.Parameter("splitWeight") Integer splitWeight,
+        @OutputCustomType.Parameter("treatment") String treatment) {
         this.splitWeight = splitWeight;
         this.treatment = treatment;
     }

@@ -37,15 +37,15 @@ public final class GetRepositoryResult {
      */
     private final @Nullable List<RepositoryTag> tags;
 
-    @OutputCustomType.Constructor({"arn","imageScanningConfiguration","imageTagMutability","lifecyclePolicy","repositoryPolicyText","repositoryUri","tags"})
+    @OutputCustomType.Constructor
     private GetRepositoryResult(
-        @Nullable String arn,
-        @Nullable RepositoryImageScanningConfiguration imageScanningConfiguration,
-        @Nullable RepositoryImageTagMutability imageTagMutability,
-        @Nullable RepositoryLifecyclePolicy lifecyclePolicy,
-        @Nullable Object repositoryPolicyText,
-        @Nullable String repositoryUri,
-        @Nullable List<RepositoryTag> tags) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("imageScanningConfiguration") @Nullable RepositoryImageScanningConfiguration imageScanningConfiguration,
+        @OutputCustomType.Parameter("imageTagMutability") @Nullable RepositoryImageTagMutability imageTagMutability,
+        @OutputCustomType.Parameter("lifecyclePolicy") @Nullable RepositoryLifecyclePolicy lifecyclePolicy,
+        @OutputCustomType.Parameter("repositoryPolicyText") @Nullable Object repositoryPolicyText,
+        @OutputCustomType.Parameter("repositoryUri") @Nullable String repositoryUri,
+        @OutputCustomType.Parameter("tags") @Nullable List<RepositoryTag> tags) {
         this.arn = arn;
         this.imageScanningConfiguration = imageScanningConfiguration;
         this.imageTagMutability = imageTagMutability;

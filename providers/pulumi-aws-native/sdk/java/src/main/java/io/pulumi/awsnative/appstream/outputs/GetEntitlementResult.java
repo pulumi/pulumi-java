@@ -19,13 +19,13 @@ public final class GetEntitlementResult {
     private final @Nullable String description;
     private final @Nullable String lastModifiedTime;
 
-    @OutputCustomType.Constructor({"appVisibility","attributes","createdTime","description","lastModifiedTime"})
+    @OutputCustomType.Constructor
     private GetEntitlementResult(
-        @Nullable String appVisibility,
-        @Nullable List<EntitlementAttribute> attributes,
-        @Nullable String createdTime,
-        @Nullable String description,
-        @Nullable String lastModifiedTime) {
+        @OutputCustomType.Parameter("appVisibility") @Nullable String appVisibility,
+        @OutputCustomType.Parameter("attributes") @Nullable List<EntitlementAttribute> attributes,
+        @OutputCustomType.Parameter("createdTime") @Nullable String createdTime,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("lastModifiedTime") @Nullable String lastModifiedTime) {
         this.appVisibility = appVisibility;
         this.attributes = attributes;
         this.createdTime = createdTime;

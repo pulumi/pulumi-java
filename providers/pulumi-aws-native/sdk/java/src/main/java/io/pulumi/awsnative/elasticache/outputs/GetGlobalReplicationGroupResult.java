@@ -34,12 +34,12 @@ public final class GetGlobalReplicationGroupResult {
      */
     private final @Nullable String status;
 
-    @OutputCustomType.Constructor({"cacheParameterGroupName","globalReplicationGroupId","members","status"})
+    @OutputCustomType.Constructor
     private GetGlobalReplicationGroupResult(
-        @Nullable String cacheParameterGroupName,
-        @Nullable String globalReplicationGroupId,
-        @Nullable List<GlobalReplicationGroupMember> members,
-        @Nullable String status) {
+        @OutputCustomType.Parameter("cacheParameterGroupName") @Nullable String cacheParameterGroupName,
+        @OutputCustomType.Parameter("globalReplicationGroupId") @Nullable String globalReplicationGroupId,
+        @OutputCustomType.Parameter("members") @Nullable List<GlobalReplicationGroupMember> members,
+        @OutputCustomType.Parameter("status") @Nullable String status) {
         this.cacheParameterGroupName = cacheParameterGroupName;
         this.globalReplicationGroupId = globalReplicationGroupId;
         this.members = members;

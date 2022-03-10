@@ -15,10 +15,10 @@ public final class GetAccountResult {
     private final @Nullable String accountId;
     private final @Nullable AccountExpiryEventsConfiguration expiryEventsConfiguration;
 
-    @OutputCustomType.Constructor({"accountId","expiryEventsConfiguration"})
+    @OutputCustomType.Constructor
     private GetAccountResult(
-        @Nullable String accountId,
-        @Nullable AccountExpiryEventsConfiguration expiryEventsConfiguration) {
+        @OutputCustomType.Parameter("accountId") @Nullable String accountId,
+        @OutputCustomType.Parameter("expiryEventsConfiguration") @Nullable AccountExpiryEventsConfiguration expiryEventsConfiguration) {
         this.accountId = accountId;
         this.expiryEventsConfiguration = expiryEventsConfiguration;
     }

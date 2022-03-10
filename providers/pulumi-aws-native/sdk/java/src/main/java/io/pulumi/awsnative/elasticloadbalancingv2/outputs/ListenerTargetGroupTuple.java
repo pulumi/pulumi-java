@@ -15,10 +15,10 @@ public final class ListenerTargetGroupTuple {
     private final @Nullable String targetGroupArn;
     private final @Nullable Integer weight;
 
-    @OutputCustomType.Constructor({"targetGroupArn","weight"})
+    @OutputCustomType.Constructor
     private ListenerTargetGroupTuple(
-        @Nullable String targetGroupArn,
-        @Nullable Integer weight) {
+        @OutputCustomType.Parameter("targetGroupArn") @Nullable String targetGroupArn,
+        @OutputCustomType.Parameter("weight") @Nullable Integer weight) {
         this.targetGroupArn = targetGroupArn;
         this.weight = weight;
     }

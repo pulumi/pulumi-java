@@ -15,10 +15,10 @@ public final class ResourceSetTargetResource {
     private final @Nullable ResourceSetNLBResource nLBResource;
     private final @Nullable ResourceSetR53ResourceRecord r53Resource;
 
-    @OutputCustomType.Constructor({"nLBResource","r53Resource"})
+    @OutputCustomType.Constructor
     private ResourceSetTargetResource(
-        @Nullable ResourceSetNLBResource nLBResource,
-        @Nullable ResourceSetR53ResourceRecord r53Resource) {
+        @OutputCustomType.Parameter("nLBResource") @Nullable ResourceSetNLBResource nLBResource,
+        @OutputCustomType.Parameter("r53Resource") @Nullable ResourceSetR53ResourceRecord r53Resource) {
         this.nLBResource = nLBResource;
         this.r53Resource = r53Resource;
     }

@@ -60,17 +60,17 @@ public final class GetWirelessGatewayResult {
      */
     private final @Nullable String thingName;
 
-    @OutputCustomType.Constructor({"arn","description","id","lastUplinkReceivedAt","loRaWAN","name","tags","thingArn","thingName"})
+    @OutputCustomType.Constructor
     private GetWirelessGatewayResult(
-        @Nullable String arn,
-        @Nullable String description,
-        @Nullable String id,
-        @Nullable String lastUplinkReceivedAt,
-        @Nullable WirelessGatewayLoRaWANGateway loRaWAN,
-        @Nullable String name,
-        @Nullable List<WirelessGatewayTag> tags,
-        @Nullable String thingArn,
-        @Nullable String thingName) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("lastUplinkReceivedAt") @Nullable String lastUplinkReceivedAt,
+        @OutputCustomType.Parameter("loRaWAN") @Nullable WirelessGatewayLoRaWANGateway loRaWAN,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("tags") @Nullable List<WirelessGatewayTag> tags,
+        @OutputCustomType.Parameter("thingArn") @Nullable String thingArn,
+        @OutputCustomType.Parameter("thingName") @Nullable String thingName) {
         this.arn = arn;
         this.description = description;
         this.id = id;

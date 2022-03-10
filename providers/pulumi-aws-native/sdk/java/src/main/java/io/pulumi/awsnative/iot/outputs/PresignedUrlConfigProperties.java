@@ -15,10 +15,10 @@ public final class PresignedUrlConfigProperties {
     private final @Nullable Integer expiresInSec;
     private final String roleArn;
 
-    @OutputCustomType.Constructor({"expiresInSec","roleArn"})
+    @OutputCustomType.Constructor
     private PresignedUrlConfigProperties(
-        @Nullable Integer expiresInSec,
-        String roleArn) {
+        @OutputCustomType.Parameter("expiresInSec") @Nullable Integer expiresInSec,
+        @OutputCustomType.Parameter("roleArn") String roleArn) {
         this.expiresInSec = expiresInSec;
         this.roleArn = roleArn;
     }

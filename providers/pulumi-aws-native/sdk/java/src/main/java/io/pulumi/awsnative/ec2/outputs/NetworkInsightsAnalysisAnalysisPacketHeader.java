@@ -19,13 +19,13 @@ public final class NetworkInsightsAnalysisAnalysisPacketHeader {
     private final @Nullable List<String> sourceAddresses;
     private final @Nullable List<NetworkInsightsAnalysisPortRange> sourcePortRanges;
 
-    @OutputCustomType.Constructor({"destinationAddresses","destinationPortRanges","protocol","sourceAddresses","sourcePortRanges"})
+    @OutputCustomType.Constructor
     private NetworkInsightsAnalysisAnalysisPacketHeader(
-        @Nullable List<String> destinationAddresses,
-        @Nullable List<NetworkInsightsAnalysisPortRange> destinationPortRanges,
-        @Nullable String protocol,
-        @Nullable List<String> sourceAddresses,
-        @Nullable List<NetworkInsightsAnalysisPortRange> sourcePortRanges) {
+        @OutputCustomType.Parameter("destinationAddresses") @Nullable List<String> destinationAddresses,
+        @OutputCustomType.Parameter("destinationPortRanges") @Nullable List<NetworkInsightsAnalysisPortRange> destinationPortRanges,
+        @OutputCustomType.Parameter("protocol") @Nullable String protocol,
+        @OutputCustomType.Parameter("sourceAddresses") @Nullable List<String> sourceAddresses,
+        @OutputCustomType.Parameter("sourcePortRanges") @Nullable List<NetworkInsightsAnalysisPortRange> sourcePortRanges) {
         this.destinationAddresses = destinationAddresses;
         this.destinationPortRanges = destinationPortRanges;
         this.protocol = protocol;

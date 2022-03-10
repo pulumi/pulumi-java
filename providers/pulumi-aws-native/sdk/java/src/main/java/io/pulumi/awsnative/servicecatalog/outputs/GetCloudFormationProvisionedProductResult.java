@@ -36,22 +36,22 @@ public final class GetCloudFormationProvisionedProductResult {
     private final @Nullable String recordId;
     private final @Nullable List<CloudFormationProvisionedProductTag> tags;
 
-    @OutputCustomType.Constructor({"acceptLanguage","cloudformationStackArn","outputs","pathId","pathName","productId","productName","provisionedProductId","provisioningArtifactId","provisioningArtifactName","provisioningParameters","provisioningPreferences","recordId","tags"})
+    @OutputCustomType.Constructor
     private GetCloudFormationProvisionedProductResult(
-        @Nullable CloudFormationProvisionedProductAcceptLanguage acceptLanguage,
-        @Nullable String cloudformationStackArn,
-        @Nullable Object outputs,
-        @Nullable String pathId,
-        @Nullable String pathName,
-        @Nullable String productId,
-        @Nullable String productName,
-        @Nullable String provisionedProductId,
-        @Nullable String provisioningArtifactId,
-        @Nullable String provisioningArtifactName,
-        @Nullable List<CloudFormationProvisionedProductProvisioningParameter> provisioningParameters,
-        @Nullable CloudFormationProvisionedProductProvisioningPreferences provisioningPreferences,
-        @Nullable String recordId,
-        @Nullable List<CloudFormationProvisionedProductTag> tags) {
+        @OutputCustomType.Parameter("acceptLanguage") @Nullable CloudFormationProvisionedProductAcceptLanguage acceptLanguage,
+        @OutputCustomType.Parameter("cloudformationStackArn") @Nullable String cloudformationStackArn,
+        @OutputCustomType.Parameter("outputs") @Nullable Object outputs,
+        @OutputCustomType.Parameter("pathId") @Nullable String pathId,
+        @OutputCustomType.Parameter("pathName") @Nullable String pathName,
+        @OutputCustomType.Parameter("productId") @Nullable String productId,
+        @OutputCustomType.Parameter("productName") @Nullable String productName,
+        @OutputCustomType.Parameter("provisionedProductId") @Nullable String provisionedProductId,
+        @OutputCustomType.Parameter("provisioningArtifactId") @Nullable String provisioningArtifactId,
+        @OutputCustomType.Parameter("provisioningArtifactName") @Nullable String provisioningArtifactName,
+        @OutputCustomType.Parameter("provisioningParameters") @Nullable List<CloudFormationProvisionedProductProvisioningParameter> provisioningParameters,
+        @OutputCustomType.Parameter("provisioningPreferences") @Nullable CloudFormationProvisionedProductProvisioningPreferences provisioningPreferences,
+        @OutputCustomType.Parameter("recordId") @Nullable String recordId,
+        @OutputCustomType.Parameter("tags") @Nullable List<CloudFormationProvisionedProductTag> tags) {
         this.acceptLanguage = acceptLanguage;
         this.cloudformationStackArn = cloudformationStackArn;
         this.outputs = outputs;

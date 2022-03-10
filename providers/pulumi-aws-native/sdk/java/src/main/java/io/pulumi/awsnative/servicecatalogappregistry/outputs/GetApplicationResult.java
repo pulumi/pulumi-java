@@ -26,13 +26,13 @@ public final class GetApplicationResult {
     private final @Nullable String name;
     private final @Nullable ApplicationTags tags;
 
-    @OutputCustomType.Constructor({"arn","description","id","name","tags"})
+    @OutputCustomType.Constructor
     private GetApplicationResult(
-        @Nullable String arn,
-        @Nullable String description,
-        @Nullable String id,
-        @Nullable String name,
-        @Nullable ApplicationTags tags) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("tags") @Nullable ApplicationTags tags) {
         this.arn = arn;
         this.description = description;
         this.id = id;

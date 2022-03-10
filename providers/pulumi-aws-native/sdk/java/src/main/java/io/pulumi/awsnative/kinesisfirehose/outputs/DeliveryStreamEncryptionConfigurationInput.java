@@ -15,10 +15,10 @@ public final class DeliveryStreamEncryptionConfigurationInput {
     private final @Nullable String keyARN;
     private final DeliveryStreamEncryptionConfigurationInputKeyType keyType;
 
-    @OutputCustomType.Constructor({"keyARN","keyType"})
+    @OutputCustomType.Constructor
     private DeliveryStreamEncryptionConfigurationInput(
-        @Nullable String keyARN,
-        DeliveryStreamEncryptionConfigurationInputKeyType keyType) {
+        @OutputCustomType.Parameter("keyARN") @Nullable String keyARN,
+        @OutputCustomType.Parameter("keyType") DeliveryStreamEncryptionConfigurationInputKeyType keyType) {
         this.keyARN = keyARN;
         this.keyType = keyType;
     }

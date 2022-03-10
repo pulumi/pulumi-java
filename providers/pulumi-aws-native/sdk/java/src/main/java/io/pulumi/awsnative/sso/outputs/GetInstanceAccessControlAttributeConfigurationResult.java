@@ -20,10 +20,10 @@ public final class GetInstanceAccessControlAttributeConfigurationResult {
      */
     private final @Nullable InstanceAccessControlAttributeConfigurationProperties instanceAccessControlAttributeConfiguration;
 
-    @OutputCustomType.Constructor({"accessControlAttributes","instanceAccessControlAttributeConfiguration"})
+    @OutputCustomType.Constructor
     private GetInstanceAccessControlAttributeConfigurationResult(
-        @Nullable List<InstanceAccessControlAttributeConfigurationAccessControlAttribute> accessControlAttributes,
-        @Nullable InstanceAccessControlAttributeConfigurationProperties instanceAccessControlAttributeConfiguration) {
+        @OutputCustomType.Parameter("accessControlAttributes") @Nullable List<InstanceAccessControlAttributeConfigurationAccessControlAttribute> accessControlAttributes,
+        @OutputCustomType.Parameter("instanceAccessControlAttributeConfiguration") @Nullable InstanceAccessControlAttributeConfigurationProperties instanceAccessControlAttributeConfiguration) {
         this.accessControlAttributes = accessControlAttributes;
         this.instanceAccessControlAttributeConfiguration = instanceAccessControlAttributeConfiguration;
     }

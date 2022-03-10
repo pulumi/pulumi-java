@@ -11,8 +11,8 @@ import java.util.Objects;
 public final class GetPartitionResult {
     private final String partition;
 
-    @OutputCustomType.Constructor({"partition"})
-    private GetPartitionResult(String partition) {
+    @OutputCustomType.Constructor
+    private GetPartitionResult(@OutputCustomType.Parameter("partition") String partition) {
         this.partition = partition;
     }
 

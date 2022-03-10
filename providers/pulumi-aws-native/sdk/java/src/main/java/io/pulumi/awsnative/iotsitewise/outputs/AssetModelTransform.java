@@ -22,10 +22,10 @@ public final class AssetModelTransform {
      */
     private final List<AssetModelExpressionVariable> variables;
 
-    @OutputCustomType.Constructor({"expression","variables"})
+    @OutputCustomType.Constructor
     private AssetModelTransform(
-        String expression,
-        List<AssetModelExpressionVariable> variables) {
+        @OutputCustomType.Parameter("expression") String expression,
+        @OutputCustomType.Parameter("variables") List<AssetModelExpressionVariable> variables) {
         this.expression = expression;
         this.variables = variables;
     }

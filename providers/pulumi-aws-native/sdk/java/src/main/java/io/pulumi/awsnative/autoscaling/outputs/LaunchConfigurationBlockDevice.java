@@ -49,15 +49,15 @@ public final class LaunchConfigurationBlockDevice {
      */
     private final @Nullable String volumeType;
 
-    @OutputCustomType.Constructor({"deleteOnTermination","encrypted","iops","snapshotId","throughput","volumeSize","volumeType"})
+    @OutputCustomType.Constructor
     private LaunchConfigurationBlockDevice(
-        @Nullable Boolean deleteOnTermination,
-        @Nullable Boolean encrypted,
-        @Nullable Integer iops,
-        @Nullable String snapshotId,
-        @Nullable Integer throughput,
-        @Nullable Integer volumeSize,
-        @Nullable String volumeType) {
+        @OutputCustomType.Parameter("deleteOnTermination") @Nullable Boolean deleteOnTermination,
+        @OutputCustomType.Parameter("encrypted") @Nullable Boolean encrypted,
+        @OutputCustomType.Parameter("iops") @Nullable Integer iops,
+        @OutputCustomType.Parameter("snapshotId") @Nullable String snapshotId,
+        @OutputCustomType.Parameter("throughput") @Nullable Integer throughput,
+        @OutputCustomType.Parameter("volumeSize") @Nullable Integer volumeSize,
+        @OutputCustomType.Parameter("volumeType") @Nullable String volumeType) {
         this.deleteOnTermination = deleteOnTermination;
         this.encrypted = encrypted;
         this.iops = iops;

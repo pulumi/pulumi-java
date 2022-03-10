@@ -16,11 +16,11 @@ public final class ClusterCapacityProviderStrategyItem {
     private final @Nullable String capacityProvider;
     private final @Nullable Integer weight;
 
-    @OutputCustomType.Constructor({"base","capacityProvider","weight"})
+    @OutputCustomType.Constructor
     private ClusterCapacityProviderStrategyItem(
-        @Nullable Integer base,
-        @Nullable String capacityProvider,
-        @Nullable Integer weight) {
+        @OutputCustomType.Parameter("base") @Nullable Integer base,
+        @OutputCustomType.Parameter("capacityProvider") @Nullable String capacityProvider,
+        @OutputCustomType.Parameter("weight") @Nullable Integer weight) {
         this.base = base;
         this.capacityProvider = capacityProvider;
         this.weight = weight;

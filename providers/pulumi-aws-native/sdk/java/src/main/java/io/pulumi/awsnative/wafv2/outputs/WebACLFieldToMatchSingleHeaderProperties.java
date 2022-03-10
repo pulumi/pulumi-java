@@ -11,8 +11,8 @@ import java.util.Objects;
 public final class WebACLFieldToMatchSingleHeaderProperties {
     private final String name;
 
-    @OutputCustomType.Constructor({"name"})
-    private WebACLFieldToMatchSingleHeaderProperties(String name) {
+    @OutputCustomType.Constructor
+    private WebACLFieldToMatchSingleHeaderProperties(@OutputCustomType.Parameter("name") String name) {
         this.name = name;
     }
 

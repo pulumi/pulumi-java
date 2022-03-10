@@ -22,14 +22,14 @@ public final class ComponentVersionLambdaFunctionRecipeSource {
     private final @Nullable String componentVersion;
     private final @Nullable String lambdaArn;
 
-    @OutputCustomType.Constructor({"componentDependencies","componentLambdaParameters","componentName","componentPlatforms","componentVersion","lambdaArn"})
+    @OutputCustomType.Constructor
     private ComponentVersionLambdaFunctionRecipeSource(
-        @Nullable Object componentDependencies,
-        @Nullable ComponentVersionLambdaExecutionParameters componentLambdaParameters,
-        @Nullable String componentName,
-        @Nullable List<ComponentVersionComponentPlatform> componentPlatforms,
-        @Nullable String componentVersion,
-        @Nullable String lambdaArn) {
+        @OutputCustomType.Parameter("componentDependencies") @Nullable Object componentDependencies,
+        @OutputCustomType.Parameter("componentLambdaParameters") @Nullable ComponentVersionLambdaExecutionParameters componentLambdaParameters,
+        @OutputCustomType.Parameter("componentName") @Nullable String componentName,
+        @OutputCustomType.Parameter("componentPlatforms") @Nullable List<ComponentVersionComponentPlatform> componentPlatforms,
+        @OutputCustomType.Parameter("componentVersion") @Nullable String componentVersion,
+        @OutputCustomType.Parameter("lambdaArn") @Nullable String lambdaArn) {
         this.componentDependencies = componentDependencies;
         this.componentLambdaParameters = componentLambdaParameters;
         this.componentName = componentName;

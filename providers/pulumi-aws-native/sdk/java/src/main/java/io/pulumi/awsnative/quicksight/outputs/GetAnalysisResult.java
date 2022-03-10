@@ -62,16 +62,16 @@ public final class GetAnalysisResult {
      */
     private final @Nullable String themeArn;
 
-    @OutputCustomType.Constructor({"arn","createdTime","dataSetArns","errors","name","permissions","tags","themeArn"})
+    @OutputCustomType.Constructor
     private GetAnalysisResult(
-        @Nullable String arn,
-        @Nullable String createdTime,
-        @Nullable List<String> dataSetArns,
-        @Nullable List<AnalysisError> errors,
-        @Nullable String name,
-        @Nullable List<AnalysisResourcePermission> permissions,
-        @Nullable List<AnalysisTag> tags,
-        @Nullable String themeArn) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("createdTime") @Nullable String createdTime,
+        @OutputCustomType.Parameter("dataSetArns") @Nullable List<String> dataSetArns,
+        @OutputCustomType.Parameter("errors") @Nullable List<AnalysisError> errors,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("permissions") @Nullable List<AnalysisResourcePermission> permissions,
+        @OutputCustomType.Parameter("tags") @Nullable List<AnalysisTag> tags,
+        @OutputCustomType.Parameter("themeArn") @Nullable String themeArn) {
         this.arn = arn;
         this.createdTime = createdTime;
         this.dataSetArns = dataSetArns;

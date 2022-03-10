@@ -21,13 +21,13 @@ public final class IntegrationTask {
     private final @Nullable List<IntegrationTaskPropertiesMap> taskProperties;
     private final IntegrationTaskType taskType;
 
-    @OutputCustomType.Constructor({"connectorOperator","destinationField","sourceFields","taskProperties","taskType"})
+    @OutputCustomType.Constructor
     private IntegrationTask(
-        @Nullable IntegrationConnectorOperator connectorOperator,
-        @Nullable String destinationField,
-        List<String> sourceFields,
-        @Nullable List<IntegrationTaskPropertiesMap> taskProperties,
-        IntegrationTaskType taskType) {
+        @OutputCustomType.Parameter("connectorOperator") @Nullable IntegrationConnectorOperator connectorOperator,
+        @OutputCustomType.Parameter("destinationField") @Nullable String destinationField,
+        @OutputCustomType.Parameter("sourceFields") List<String> sourceFields,
+        @OutputCustomType.Parameter("taskProperties") @Nullable List<IntegrationTaskPropertiesMap> taskProperties,
+        @OutputCustomType.Parameter("taskType") IntegrationTaskType taskType) {
         this.connectorOperator = connectorOperator;
         this.destinationField = destinationField;
         this.sourceFields = sourceFields;

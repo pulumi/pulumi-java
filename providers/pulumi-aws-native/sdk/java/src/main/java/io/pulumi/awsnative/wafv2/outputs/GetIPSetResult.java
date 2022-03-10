@@ -25,14 +25,14 @@ public final class GetIPSetResult {
     private final @Nullable String id;
     private final @Nullable List<IPSetTag> tags;
 
-    @OutputCustomType.Constructor({"addresses","arn","description","iPAddressVersion","id","tags"})
+    @OutputCustomType.Constructor
     private GetIPSetResult(
-        @Nullable List<String> addresses,
-        @Nullable String arn,
-        @Nullable String description,
-        @Nullable IPSetIPAddressVersion iPAddressVersion,
-        @Nullable String id,
-        @Nullable List<IPSetTag> tags) {
+        @OutputCustomType.Parameter("addresses") @Nullable List<String> addresses,
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("iPAddressVersion") @Nullable IPSetIPAddressVersion iPAddressVersion,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("tags") @Nullable List<IPSetTag> tags) {
         this.addresses = addresses;
         this.arn = arn;
         this.description = description;

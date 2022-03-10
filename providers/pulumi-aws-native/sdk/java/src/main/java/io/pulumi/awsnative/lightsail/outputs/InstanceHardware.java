@@ -29,11 +29,11 @@ public final class InstanceHardware {
      */
     private final @Nullable Integer ramSizeInGb;
 
-    @OutputCustomType.Constructor({"cpuCount","disks","ramSizeInGb"})
+    @OutputCustomType.Constructor
     private InstanceHardware(
-        @Nullable Integer cpuCount,
-        @Nullable List<InstanceDisk> disks,
-        @Nullable Integer ramSizeInGb) {
+        @OutputCustomType.Parameter("cpuCount") @Nullable Integer cpuCount,
+        @OutputCustomType.Parameter("disks") @Nullable List<InstanceDisk> disks,
+        @OutputCustomType.Parameter("ramSizeInGb") @Nullable Integer ramSizeInGb) {
         this.cpuCount = cpuCount;
         this.disks = disks;
         this.ramSizeInGb = ramSizeInGb;

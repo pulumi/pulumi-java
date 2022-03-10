@@ -17,8 +17,8 @@ public final class InstanceAutoSnapshotAddOn {
      */
     private final @Nullable String snapshotTimeOfDay;
 
-    @OutputCustomType.Constructor({"snapshotTimeOfDay"})
-    private InstanceAutoSnapshotAddOn(@Nullable String snapshotTimeOfDay) {
+    @OutputCustomType.Constructor
+    private InstanceAutoSnapshotAddOn(@OutputCustomType.Parameter("snapshotTimeOfDay") @Nullable String snapshotTimeOfDay) {
         this.snapshotTimeOfDay = snapshotTimeOfDay;
     }
 

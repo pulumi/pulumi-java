@@ -20,10 +20,10 @@ public final class GetGraphResult {
     private final @Nullable String arn;
     private final @Nullable List<GraphTag> tags;
 
-    @OutputCustomType.Constructor({"arn","tags"})
+    @OutputCustomType.Constructor
     private GetGraphResult(
-        @Nullable String arn,
-        @Nullable List<GraphTag> tags) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("tags") @Nullable List<GraphTag> tags) {
         this.arn = arn;
         this.tags = tags;
     }

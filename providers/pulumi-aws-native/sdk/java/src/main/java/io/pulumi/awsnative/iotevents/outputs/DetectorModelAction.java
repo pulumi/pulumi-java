@@ -37,21 +37,21 @@ public final class DetectorModelAction {
     private final @Nullable DetectorModelSns sns;
     private final @Nullable DetectorModelSqs sqs;
 
-    @OutputCustomType.Constructor({"clearTimer","dynamoDB","dynamoDBv2","firehose","iotEvents","iotSiteWise","iotTopicPublish","lambda","resetTimer","setTimer","setVariable","sns","sqs"})
+    @OutputCustomType.Constructor
     private DetectorModelAction(
-        @Nullable DetectorModelClearTimer clearTimer,
-        @Nullable DetectorModelDynamoDB dynamoDB,
-        @Nullable DetectorModelDynamoDBv2 dynamoDBv2,
-        @Nullable DetectorModelFirehose firehose,
-        @Nullable DetectorModelIotEvents iotEvents,
-        @Nullable DetectorModelIotSiteWise iotSiteWise,
-        @Nullable DetectorModelIotTopicPublish iotTopicPublish,
-        @Nullable DetectorModelLambda lambda,
-        @Nullable DetectorModelResetTimer resetTimer,
-        @Nullable DetectorModelSetTimer setTimer,
-        @Nullable DetectorModelSetVariable setVariable,
-        @Nullable DetectorModelSns sns,
-        @Nullable DetectorModelSqs sqs) {
+        @OutputCustomType.Parameter("clearTimer") @Nullable DetectorModelClearTimer clearTimer,
+        @OutputCustomType.Parameter("dynamoDB") @Nullable DetectorModelDynamoDB dynamoDB,
+        @OutputCustomType.Parameter("dynamoDBv2") @Nullable DetectorModelDynamoDBv2 dynamoDBv2,
+        @OutputCustomType.Parameter("firehose") @Nullable DetectorModelFirehose firehose,
+        @OutputCustomType.Parameter("iotEvents") @Nullable DetectorModelIotEvents iotEvents,
+        @OutputCustomType.Parameter("iotSiteWise") @Nullable DetectorModelIotSiteWise iotSiteWise,
+        @OutputCustomType.Parameter("iotTopicPublish") @Nullable DetectorModelIotTopicPublish iotTopicPublish,
+        @OutputCustomType.Parameter("lambda") @Nullable DetectorModelLambda lambda,
+        @OutputCustomType.Parameter("resetTimer") @Nullable DetectorModelResetTimer resetTimer,
+        @OutputCustomType.Parameter("setTimer") @Nullable DetectorModelSetTimer setTimer,
+        @OutputCustomType.Parameter("setVariable") @Nullable DetectorModelSetVariable setVariable,
+        @OutputCustomType.Parameter("sns") @Nullable DetectorModelSns sns,
+        @OutputCustomType.Parameter("sqs") @Nullable DetectorModelSqs sqs) {
         this.clearTimer = clearTimer;
         this.dynamoDB = dynamoDB;
         this.dynamoDBv2 = dynamoDBv2;

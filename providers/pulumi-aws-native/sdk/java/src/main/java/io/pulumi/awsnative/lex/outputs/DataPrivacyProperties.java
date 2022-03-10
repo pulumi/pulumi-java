@@ -11,8 +11,8 @@ import java.util.Objects;
 public final class DataPrivacyProperties {
     private final Boolean childDirected;
 
-    @OutputCustomType.Constructor({"childDirected"})
-    private DataPrivacyProperties(Boolean childDirected) {
+    @OutputCustomType.Constructor
+    private DataPrivacyProperties(@OutputCustomType.Parameter("childDirected") Boolean childDirected) {
         this.childDirected = childDirected;
     }
 

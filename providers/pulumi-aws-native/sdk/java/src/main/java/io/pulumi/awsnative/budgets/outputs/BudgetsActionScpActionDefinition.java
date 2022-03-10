@@ -13,10 +13,10 @@ public final class BudgetsActionScpActionDefinition {
     private final String policyId;
     private final List<String> targetIds;
 
-    @OutputCustomType.Constructor({"policyId","targetIds"})
+    @OutputCustomType.Constructor
     private BudgetsActionScpActionDefinition(
-        String policyId,
-        List<String> targetIds) {
+        @OutputCustomType.Parameter("policyId") String policyId,
+        @OutputCustomType.Parameter("targetIds") List<String> targetIds) {
         this.policyId = policyId;
         this.targetIds = targetIds;
     }

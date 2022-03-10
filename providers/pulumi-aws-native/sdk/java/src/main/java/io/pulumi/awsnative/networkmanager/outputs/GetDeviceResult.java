@@ -65,18 +65,18 @@ public final class GetDeviceResult {
      */
     private final @Nullable String vendor;
 
-    @OutputCustomType.Constructor({"description","deviceArn","deviceId","location","model","serialNumber","siteId","tags","type","vendor"})
+    @OutputCustomType.Constructor
     private GetDeviceResult(
-        @Nullable String description,
-        @Nullable String deviceArn,
-        @Nullable String deviceId,
-        @Nullable DeviceLocation location,
-        @Nullable String model,
-        @Nullable String serialNumber,
-        @Nullable String siteId,
-        @Nullable List<DeviceTag> tags,
-        @Nullable String type,
-        @Nullable String vendor) {
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("deviceArn") @Nullable String deviceArn,
+        @OutputCustomType.Parameter("deviceId") @Nullable String deviceId,
+        @OutputCustomType.Parameter("location") @Nullable DeviceLocation location,
+        @OutputCustomType.Parameter("model") @Nullable String model,
+        @OutputCustomType.Parameter("serialNumber") @Nullable String serialNumber,
+        @OutputCustomType.Parameter("siteId") @Nullable String siteId,
+        @OutputCustomType.Parameter("tags") @Nullable List<DeviceTag> tags,
+        @OutputCustomType.Parameter("type") @Nullable String type,
+        @OutputCustomType.Parameter("vendor") @Nullable String vendor) {
         this.description = description;
         this.deviceArn = deviceArn;
         this.deviceId = deviceId;

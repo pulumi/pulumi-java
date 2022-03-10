@@ -32,12 +32,12 @@ public final class ChannelIngestEndpoint {
      */
     private final @Nullable String username;
 
-    @OutputCustomType.Constructor({"id","password","url","username"})
+    @OutputCustomType.Constructor
     private ChannelIngestEndpoint(
-        @Nullable String id,
-        @Nullable String password,
-        @Nullable String url,
-        @Nullable String username) {
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("password") @Nullable String password,
+        @OutputCustomType.Parameter("url") @Nullable String url,
+        @OutputCustomType.Parameter("username") @Nullable String username) {
         this.id = id;
         this.password = password;
         this.url = url;

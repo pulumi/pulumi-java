@@ -13,8 +13,8 @@ import javax.annotation.Nullable;
 public final class WorkflowInputFileLocation {
     private final @Nullable WorkflowS3InputFileLocation s3FileLocation;
 
-    @OutputCustomType.Constructor({"s3FileLocation"})
-    private WorkflowInputFileLocation(@Nullable WorkflowS3InputFileLocation s3FileLocation) {
+    @OutputCustomType.Constructor
+    private WorkflowInputFileLocation(@OutputCustomType.Parameter("s3FileLocation") @Nullable WorkflowS3InputFileLocation s3FileLocation) {
         this.s3FileLocation = s3FileLocation;
     }
 

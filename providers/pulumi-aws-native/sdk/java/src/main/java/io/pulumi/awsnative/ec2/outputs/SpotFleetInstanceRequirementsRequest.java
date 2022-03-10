@@ -53,29 +53,29 @@ public final class SpotFleetInstanceRequirementsRequest {
     private final @Nullable SpotFleetTotalLocalStorageGBRequest totalLocalStorageGB;
     private final @Nullable SpotFleetVCpuCountRangeRequest vCpuCount;
 
-    @OutputCustomType.Constructor({"acceleratorCount","acceleratorManufacturers","acceleratorNames","acceleratorTotalMemoryMiB","acceleratorTypes","bareMetal","baselineEbsBandwidthMbps","burstablePerformance","cpuManufacturers","excludedInstanceTypes","instanceGenerations","localStorage","localStorageTypes","memoryGiBPerVCpu","memoryMiB","networkInterfaceCount","onDemandMaxPricePercentageOverLowestPrice","requireHibernateSupport","spotMaxPricePercentageOverLowestPrice","totalLocalStorageGB","vCpuCount"})
+    @OutputCustomType.Constructor
     private SpotFleetInstanceRequirementsRequest(
-        @Nullable SpotFleetAcceleratorCountRequest acceleratorCount,
-        @Nullable List<SpotFleetInstanceRequirementsRequestAcceleratorManufacturersItem> acceleratorManufacturers,
-        @Nullable List<SpotFleetInstanceRequirementsRequestAcceleratorNamesItem> acceleratorNames,
-        @Nullable SpotFleetAcceleratorTotalMemoryMiBRequest acceleratorTotalMemoryMiB,
-        @Nullable List<SpotFleetInstanceRequirementsRequestAcceleratorTypesItem> acceleratorTypes,
-        @Nullable SpotFleetInstanceRequirementsRequestBareMetal bareMetal,
-        @Nullable SpotFleetBaselineEbsBandwidthMbpsRequest baselineEbsBandwidthMbps,
-        @Nullable SpotFleetInstanceRequirementsRequestBurstablePerformance burstablePerformance,
-        @Nullable List<SpotFleetInstanceRequirementsRequestCpuManufacturersItem> cpuManufacturers,
-        @Nullable List<String> excludedInstanceTypes,
-        @Nullable List<SpotFleetInstanceRequirementsRequestInstanceGenerationsItem> instanceGenerations,
-        @Nullable SpotFleetInstanceRequirementsRequestLocalStorage localStorage,
-        @Nullable List<SpotFleetInstanceRequirementsRequestLocalStorageTypesItem> localStorageTypes,
-        @Nullable SpotFleetMemoryGiBPerVCpuRequest memoryGiBPerVCpu,
-        @Nullable SpotFleetMemoryMiBRequest memoryMiB,
-        @Nullable SpotFleetNetworkInterfaceCountRequest networkInterfaceCount,
-        @Nullable Integer onDemandMaxPricePercentageOverLowestPrice,
-        @Nullable Boolean requireHibernateSupport,
-        @Nullable Integer spotMaxPricePercentageOverLowestPrice,
-        @Nullable SpotFleetTotalLocalStorageGBRequest totalLocalStorageGB,
-        @Nullable SpotFleetVCpuCountRangeRequest vCpuCount) {
+        @OutputCustomType.Parameter("acceleratorCount") @Nullable SpotFleetAcceleratorCountRequest acceleratorCount,
+        @OutputCustomType.Parameter("acceleratorManufacturers") @Nullable List<SpotFleetInstanceRequirementsRequestAcceleratorManufacturersItem> acceleratorManufacturers,
+        @OutputCustomType.Parameter("acceleratorNames") @Nullable List<SpotFleetInstanceRequirementsRequestAcceleratorNamesItem> acceleratorNames,
+        @OutputCustomType.Parameter("acceleratorTotalMemoryMiB") @Nullable SpotFleetAcceleratorTotalMemoryMiBRequest acceleratorTotalMemoryMiB,
+        @OutputCustomType.Parameter("acceleratorTypes") @Nullable List<SpotFleetInstanceRequirementsRequestAcceleratorTypesItem> acceleratorTypes,
+        @OutputCustomType.Parameter("bareMetal") @Nullable SpotFleetInstanceRequirementsRequestBareMetal bareMetal,
+        @OutputCustomType.Parameter("baselineEbsBandwidthMbps") @Nullable SpotFleetBaselineEbsBandwidthMbpsRequest baselineEbsBandwidthMbps,
+        @OutputCustomType.Parameter("burstablePerformance") @Nullable SpotFleetInstanceRequirementsRequestBurstablePerformance burstablePerformance,
+        @OutputCustomType.Parameter("cpuManufacturers") @Nullable List<SpotFleetInstanceRequirementsRequestCpuManufacturersItem> cpuManufacturers,
+        @OutputCustomType.Parameter("excludedInstanceTypes") @Nullable List<String> excludedInstanceTypes,
+        @OutputCustomType.Parameter("instanceGenerations") @Nullable List<SpotFleetInstanceRequirementsRequestInstanceGenerationsItem> instanceGenerations,
+        @OutputCustomType.Parameter("localStorage") @Nullable SpotFleetInstanceRequirementsRequestLocalStorage localStorage,
+        @OutputCustomType.Parameter("localStorageTypes") @Nullable List<SpotFleetInstanceRequirementsRequestLocalStorageTypesItem> localStorageTypes,
+        @OutputCustomType.Parameter("memoryGiBPerVCpu") @Nullable SpotFleetMemoryGiBPerVCpuRequest memoryGiBPerVCpu,
+        @OutputCustomType.Parameter("memoryMiB") @Nullable SpotFleetMemoryMiBRequest memoryMiB,
+        @OutputCustomType.Parameter("networkInterfaceCount") @Nullable SpotFleetNetworkInterfaceCountRequest networkInterfaceCount,
+        @OutputCustomType.Parameter("onDemandMaxPricePercentageOverLowestPrice") @Nullable Integer onDemandMaxPricePercentageOverLowestPrice,
+        @OutputCustomType.Parameter("requireHibernateSupport") @Nullable Boolean requireHibernateSupport,
+        @OutputCustomType.Parameter("spotMaxPricePercentageOverLowestPrice") @Nullable Integer spotMaxPricePercentageOverLowestPrice,
+        @OutputCustomType.Parameter("totalLocalStorageGB") @Nullable SpotFleetTotalLocalStorageGBRequest totalLocalStorageGB,
+        @OutputCustomType.Parameter("vCpuCount") @Nullable SpotFleetVCpuCountRangeRequest vCpuCount) {
         this.acceleratorCount = acceleratorCount;
         this.acceleratorManufacturers = acceleratorManufacturers;
         this.acceleratorNames = acceleratorNames;

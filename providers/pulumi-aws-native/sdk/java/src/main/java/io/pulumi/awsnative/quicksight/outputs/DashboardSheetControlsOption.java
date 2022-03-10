@@ -13,8 +13,8 @@ import javax.annotation.Nullable;
 public final class DashboardSheetControlsOption {
     private final @Nullable DashboardUIState visibilityState;
 
-    @OutputCustomType.Constructor({"visibilityState"})
-    private DashboardSheetControlsOption(@Nullable DashboardUIState visibilityState) {
+    @OutputCustomType.Constructor
+    private DashboardSheetControlsOption(@OutputCustomType.Parameter("visibilityState") @Nullable DashboardUIState visibilityState) {
         this.visibilityState = visibilityState;
     }
 

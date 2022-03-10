@@ -15,10 +15,10 @@ public final class MonitoringScheduleBaselineConfig {
     private final @Nullable MonitoringScheduleConstraintsResource constraintsResource;
     private final @Nullable MonitoringScheduleStatisticsResource statisticsResource;
 
-    @OutputCustomType.Constructor({"constraintsResource","statisticsResource"})
+    @OutputCustomType.Constructor
     private MonitoringScheduleBaselineConfig(
-        @Nullable MonitoringScheduleConstraintsResource constraintsResource,
-        @Nullable MonitoringScheduleStatisticsResource statisticsResource) {
+        @OutputCustomType.Parameter("constraintsResource") @Nullable MonitoringScheduleConstraintsResource constraintsResource,
+        @OutputCustomType.Parameter("statisticsResource") @Nullable MonitoringScheduleStatisticsResource statisticsResource) {
         this.constraintsResource = constraintsResource;
         this.statisticsResource = statisticsResource;
     }

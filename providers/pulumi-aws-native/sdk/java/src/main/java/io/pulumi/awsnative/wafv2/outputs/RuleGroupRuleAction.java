@@ -35,12 +35,12 @@ public final class RuleGroupRuleAction {
      */
     private final @Nullable RuleGroupRuleActionCountProperties count;
 
-    @OutputCustomType.Constructor({"allow","block","captcha","count"})
+    @OutputCustomType.Constructor
     private RuleGroupRuleAction(
-        @Nullable RuleGroupRuleActionAllowProperties allow,
-        @Nullable RuleGroupRuleActionBlockProperties block,
-        @Nullable RuleGroupRuleActionCaptchaProperties captcha,
-        @Nullable RuleGroupRuleActionCountProperties count) {
+        @OutputCustomType.Parameter("allow") @Nullable RuleGroupRuleActionAllowProperties allow,
+        @OutputCustomType.Parameter("block") @Nullable RuleGroupRuleActionBlockProperties block,
+        @OutputCustomType.Parameter("captcha") @Nullable RuleGroupRuleActionCaptchaProperties captcha,
+        @OutputCustomType.Parameter("count") @Nullable RuleGroupRuleActionCountProperties count) {
         this.allow = allow;
         this.block = block;
         this.captcha = captcha;

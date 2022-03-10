@@ -17,8 +17,8 @@ public final class GetVPCDHCPOptionsAssociationResult {
      */
     private final @Nullable String id;
 
-    @OutputCustomType.Constructor({"id"})
-    private GetVPCDHCPOptionsAssociationResult(@Nullable String id) {
+    @OutputCustomType.Constructor
+    private GetVPCDHCPOptionsAssociationResult(@OutputCustomType.Parameter("id") @Nullable String id) {
         this.id = id;
     }
 

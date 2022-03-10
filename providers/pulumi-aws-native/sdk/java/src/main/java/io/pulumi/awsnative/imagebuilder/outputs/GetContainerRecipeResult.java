@@ -17,8 +17,8 @@ public final class GetContainerRecipeResult {
      */
     private final @Nullable String arn;
 
-    @OutputCustomType.Constructor({"arn"})
-    private GetContainerRecipeResult(@Nullable String arn) {
+    @OutputCustomType.Constructor
+    private GetContainerRecipeResult(@OutputCustomType.Parameter("arn") @Nullable String arn) {
         this.arn = arn;
     }
 

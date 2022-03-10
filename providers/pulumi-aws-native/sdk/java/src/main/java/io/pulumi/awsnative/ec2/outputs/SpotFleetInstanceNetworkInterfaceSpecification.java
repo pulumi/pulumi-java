@@ -28,19 +28,19 @@ public final class SpotFleetInstanceNetworkInterfaceSpecification {
     private final @Nullable Integer secondaryPrivateIpAddressCount;
     private final @Nullable String subnetId;
 
-    @OutputCustomType.Constructor({"associatePublicIpAddress","deleteOnTermination","description","deviceIndex","groups","ipv6AddressCount","ipv6Addresses","networkInterfaceId","privateIpAddresses","secondaryPrivateIpAddressCount","subnetId"})
+    @OutputCustomType.Constructor
     private SpotFleetInstanceNetworkInterfaceSpecification(
-        @Nullable Boolean associatePublicIpAddress,
-        @Nullable Boolean deleteOnTermination,
-        @Nullable String description,
-        @Nullable Integer deviceIndex,
-        @Nullable List<String> groups,
-        @Nullable Integer ipv6AddressCount,
-        @Nullable List<SpotFleetInstanceIpv6Address> ipv6Addresses,
-        @Nullable String networkInterfaceId,
-        @Nullable List<SpotFleetPrivateIpAddressSpecification> privateIpAddresses,
-        @Nullable Integer secondaryPrivateIpAddressCount,
-        @Nullable String subnetId) {
+        @OutputCustomType.Parameter("associatePublicIpAddress") @Nullable Boolean associatePublicIpAddress,
+        @OutputCustomType.Parameter("deleteOnTermination") @Nullable Boolean deleteOnTermination,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("deviceIndex") @Nullable Integer deviceIndex,
+        @OutputCustomType.Parameter("groups") @Nullable List<String> groups,
+        @OutputCustomType.Parameter("ipv6AddressCount") @Nullable Integer ipv6AddressCount,
+        @OutputCustomType.Parameter("ipv6Addresses") @Nullable List<SpotFleetInstanceIpv6Address> ipv6Addresses,
+        @OutputCustomType.Parameter("networkInterfaceId") @Nullable String networkInterfaceId,
+        @OutputCustomType.Parameter("privateIpAddresses") @Nullable List<SpotFleetPrivateIpAddressSpecification> privateIpAddresses,
+        @OutputCustomType.Parameter("secondaryPrivateIpAddressCount") @Nullable Integer secondaryPrivateIpAddressCount,
+        @OutputCustomType.Parameter("subnetId") @Nullable String subnetId) {
         this.associatePublicIpAddress = associatePublicIpAddress;
         this.deleteOnTermination = deleteOnTermination;
         this.description = description;

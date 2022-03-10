@@ -13,8 +13,8 @@ import javax.annotation.Nullable;
 public final class StateMachineTracingConfiguration {
     private final @Nullable Boolean enabled;
 
-    @OutputCustomType.Constructor({"enabled"})
-    private StateMachineTracingConfiguration(@Nullable Boolean enabled) {
+    @OutputCustomType.Constructor
+    private StateMachineTracingConfiguration(@OutputCustomType.Parameter("enabled") @Nullable Boolean enabled) {
         this.enabled = enabled;
     }
 

@@ -39,13 +39,13 @@ public final class GetCodeSigningConfigResult {
      */
     private final @Nullable String description;
 
-    @OutputCustomType.Constructor({"allowedPublishers","codeSigningConfigArn","codeSigningConfigId","codeSigningPolicies","description"})
+    @OutputCustomType.Constructor
     private GetCodeSigningConfigResult(
-        @Nullable CodeSigningConfigAllowedPublishers allowedPublishers,
-        @Nullable String codeSigningConfigArn,
-        @Nullable String codeSigningConfigId,
-        @Nullable CodeSigningConfigCodeSigningPolicies codeSigningPolicies,
-        @Nullable String description) {
+        @OutputCustomType.Parameter("allowedPublishers") @Nullable CodeSigningConfigAllowedPublishers allowedPublishers,
+        @OutputCustomType.Parameter("codeSigningConfigArn") @Nullable String codeSigningConfigArn,
+        @OutputCustomType.Parameter("codeSigningConfigId") @Nullable String codeSigningConfigId,
+        @OutputCustomType.Parameter("codeSigningPolicies") @Nullable CodeSigningConfigCodeSigningPolicies codeSigningPolicies,
+        @OutputCustomType.Parameter("description") @Nullable String description) {
         this.allowedPublishers = allowedPublishers;
         this.codeSigningConfigArn = codeSigningConfigArn;
         this.codeSigningConfigId = codeSigningConfigId;

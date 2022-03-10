@@ -21,11 +21,11 @@ public final class DetectorModelAssetPropertyValue {
     private final @Nullable DetectorModelAssetPropertyTimestamp timestamp;
     private final DetectorModelAssetPropertyVariant value;
 
-    @OutputCustomType.Constructor({"quality","timestamp","value"})
+    @OutputCustomType.Constructor
     private DetectorModelAssetPropertyValue(
-        @Nullable String quality,
-        @Nullable DetectorModelAssetPropertyTimestamp timestamp,
-        DetectorModelAssetPropertyVariant value) {
+        @OutputCustomType.Parameter("quality") @Nullable String quality,
+        @OutputCustomType.Parameter("timestamp") @Nullable DetectorModelAssetPropertyTimestamp timestamp,
+        @OutputCustomType.Parameter("value") DetectorModelAssetPropertyVariant value) {
         this.quality = quality;
         this.timestamp = timestamp;
         this.value = value;

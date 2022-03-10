@@ -19,10 +19,10 @@ public final class ServiceCodeConfiguration {
      */
     private final ServiceCodeConfigurationConfigurationSource configurationSource;
 
-    @OutputCustomType.Constructor({"codeConfigurationValues","configurationSource"})
+    @OutputCustomType.Constructor
     private ServiceCodeConfiguration(
-        @Nullable ServiceCodeConfigurationValues codeConfigurationValues,
-        ServiceCodeConfigurationConfigurationSource configurationSource) {
+        @OutputCustomType.Parameter("codeConfigurationValues") @Nullable ServiceCodeConfigurationValues codeConfigurationValues,
+        @OutputCustomType.Parameter("configurationSource") ServiceCodeConfigurationConfigurationSource configurationSource) {
         this.codeConfigurationValues = codeConfigurationValues;
         this.configurationSource = configurationSource;
     }

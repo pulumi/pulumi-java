@@ -24,14 +24,14 @@ public final class GetDatastoreResult {
     private final @Nullable DatastoreRetentionPeriod retentionPeriod;
     private final @Nullable List<DatastoreTag> tags;
 
-    @OutputCustomType.Constructor({"datastorePartitions","datastoreStorage","fileFormatConfiguration","id","retentionPeriod","tags"})
+    @OutputCustomType.Constructor
     private GetDatastoreResult(
-        @Nullable DatastorePartitions datastorePartitions,
-        @Nullable DatastoreStorage datastoreStorage,
-        @Nullable DatastoreFileFormatConfiguration fileFormatConfiguration,
-        @Nullable String id,
-        @Nullable DatastoreRetentionPeriod retentionPeriod,
-        @Nullable List<DatastoreTag> tags) {
+        @OutputCustomType.Parameter("datastorePartitions") @Nullable DatastorePartitions datastorePartitions,
+        @OutputCustomType.Parameter("datastoreStorage") @Nullable DatastoreStorage datastoreStorage,
+        @OutputCustomType.Parameter("fileFormatConfiguration") @Nullable DatastoreFileFormatConfiguration fileFormatConfiguration,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("retentionPeriod") @Nullable DatastoreRetentionPeriod retentionPeriod,
+        @OutputCustomType.Parameter("tags") @Nullable List<DatastoreTag> tags) {
         this.datastorePartitions = datastorePartitions;
         this.datastoreStorage = datastoreStorage;
         this.fileFormatConfiguration = fileFormatConfiguration;

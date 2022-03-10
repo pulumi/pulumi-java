@@ -21,10 +21,10 @@ public final class ConnectorCustomPlugin {
      */
     private final Integer revision;
 
-    @OutputCustomType.Constructor({"customPluginArn","revision"})
+    @OutputCustomType.Constructor
     private ConnectorCustomPlugin(
-        String customPluginArn,
-        Integer revision) {
+        @OutputCustomType.Parameter("customPluginArn") String customPluginArn,
+        @OutputCustomType.Parameter("revision") Integer revision) {
         this.customPluginArn = customPluginArn;
         this.revision = revision;
     }

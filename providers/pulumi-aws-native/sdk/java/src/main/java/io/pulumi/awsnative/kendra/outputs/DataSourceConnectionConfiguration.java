@@ -16,13 +16,13 @@ public final class DataSourceConnectionConfiguration {
     private final String secretArn;
     private final String tableName;
 
-    @OutputCustomType.Constructor({"databaseHost","databaseName","databasePort","secretArn","tableName"})
+    @OutputCustomType.Constructor
     private DataSourceConnectionConfiguration(
-        String databaseHost,
-        String databaseName,
-        Integer databasePort,
-        String secretArn,
-        String tableName) {
+        @OutputCustomType.Parameter("databaseHost") String databaseHost,
+        @OutputCustomType.Parameter("databaseName") String databaseName,
+        @OutputCustomType.Parameter("databasePort") Integer databasePort,
+        @OutputCustomType.Parameter("secretArn") String secretArn,
+        @OutputCustomType.Parameter("tableName") String tableName) {
         this.databaseHost = databaseHost;
         this.databaseName = databaseName;
         this.databasePort = databasePort;

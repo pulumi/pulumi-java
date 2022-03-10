@@ -21,11 +21,11 @@ public final class GetFaqResult {
      */
     private final @Nullable List<FaqTag> tags;
 
-    @OutputCustomType.Constructor({"arn","id","tags"})
+    @OutputCustomType.Constructor
     private GetFaqResult(
-        @Nullable String arn,
-        @Nullable String id,
-        @Nullable List<FaqTag> tags) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("tags") @Nullable List<FaqTag> tags) {
         this.arn = arn;
         this.id = id;
         this.tags = tags;

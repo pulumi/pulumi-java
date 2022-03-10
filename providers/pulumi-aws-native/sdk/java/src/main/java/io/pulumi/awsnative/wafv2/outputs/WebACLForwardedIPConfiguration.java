@@ -13,10 +13,10 @@ public final class WebACLForwardedIPConfiguration {
     private final WebACLForwardedIPConfigurationFallbackBehavior fallbackBehavior;
     private final String headerName;
 
-    @OutputCustomType.Constructor({"fallbackBehavior","headerName"})
+    @OutputCustomType.Constructor
     private WebACLForwardedIPConfiguration(
-        WebACLForwardedIPConfigurationFallbackBehavior fallbackBehavior,
-        String headerName) {
+        @OutputCustomType.Parameter("fallbackBehavior") WebACLForwardedIPConfigurationFallbackBehavior fallbackBehavior,
+        @OutputCustomType.Parameter("headerName") String headerName) {
         this.fallbackBehavior = fallbackBehavior;
         this.headerName = headerName;
     }

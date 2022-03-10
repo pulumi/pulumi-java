@@ -39,13 +39,13 @@ public final class GetLabelResult {
      */
     private final @Nullable List<LabelTag> tags;
 
-    @OutputCustomType.Constructor({"arn","createdTime","description","lastUpdatedTime","tags"})
+    @OutputCustomType.Constructor
     private GetLabelResult(
-        @Nullable String arn,
-        @Nullable String createdTime,
-        @Nullable String description,
-        @Nullable String lastUpdatedTime,
-        @Nullable List<LabelTag> tags) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("createdTime") @Nullable String createdTime,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("lastUpdatedTime") @Nullable String lastUpdatedTime,
+        @OutputCustomType.Parameter("tags") @Nullable List<LabelTag> tags) {
         this.arn = arn;
         this.createdTime = createdTime;
         this.description = description;

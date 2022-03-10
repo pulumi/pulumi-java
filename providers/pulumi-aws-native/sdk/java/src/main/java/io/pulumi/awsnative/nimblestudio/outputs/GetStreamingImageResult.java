@@ -41,15 +41,15 @@ public final class GetStreamingImageResult {
     private final @Nullable String platform;
     private final @Nullable String streamingImageId;
 
-    @OutputCustomType.Constructor({"description","encryptionConfiguration","eulaIds","name","owner","platform","streamingImageId"})
+    @OutputCustomType.Constructor
     private GetStreamingImageResult(
-        @Nullable String description,
-        @Nullable StreamingImageEncryptionConfiguration encryptionConfiguration,
-        @Nullable List<String> eulaIds,
-        @Nullable String name,
-        @Nullable String owner,
-        @Nullable String platform,
-        @Nullable String streamingImageId) {
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("encryptionConfiguration") @Nullable StreamingImageEncryptionConfiguration encryptionConfiguration,
+        @OutputCustomType.Parameter("eulaIds") @Nullable List<String> eulaIds,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("owner") @Nullable String owner,
+        @OutputCustomType.Parameter("platform") @Nullable String platform,
+        @OutputCustomType.Parameter("streamingImageId") @Nullable String streamingImageId) {
         this.description = description;
         this.encryptionConfiguration = encryptionConfiguration;
         this.eulaIds = eulaIds;

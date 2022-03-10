@@ -51,15 +51,15 @@ public final class FirewallRuleGroupFirewallRule {
      */
     private final Integer priority;
 
-    @OutputCustomType.Constructor({"action","blockOverrideDnsType","blockOverrideDomain","blockOverrideTtl","blockResponse","firewallDomainListId","priority"})
+    @OutputCustomType.Constructor
     private FirewallRuleGroupFirewallRule(
-        FirewallRuleGroupFirewallRuleAction action,
-        @Nullable FirewallRuleGroupFirewallRuleBlockOverrideDnsType blockOverrideDnsType,
-        @Nullable String blockOverrideDomain,
-        @Nullable Integer blockOverrideTtl,
-        @Nullable FirewallRuleGroupFirewallRuleBlockResponse blockResponse,
-        String firewallDomainListId,
-        Integer priority) {
+        @OutputCustomType.Parameter("action") FirewallRuleGroupFirewallRuleAction action,
+        @OutputCustomType.Parameter("blockOverrideDnsType") @Nullable FirewallRuleGroupFirewallRuleBlockOverrideDnsType blockOverrideDnsType,
+        @OutputCustomType.Parameter("blockOverrideDomain") @Nullable String blockOverrideDomain,
+        @OutputCustomType.Parameter("blockOverrideTtl") @Nullable Integer blockOverrideTtl,
+        @OutputCustomType.Parameter("blockResponse") @Nullable FirewallRuleGroupFirewallRuleBlockResponse blockResponse,
+        @OutputCustomType.Parameter("firewallDomainListId") String firewallDomainListId,
+        @OutputCustomType.Parameter("priority") Integer priority) {
         this.action = action;
         this.blockOverrideDnsType = blockOverrideDnsType;
         this.blockOverrideDomain = blockOverrideDomain;

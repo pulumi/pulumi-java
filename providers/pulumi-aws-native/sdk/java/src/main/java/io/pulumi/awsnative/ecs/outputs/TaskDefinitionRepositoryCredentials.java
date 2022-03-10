@@ -13,8 +13,8 @@ import javax.annotation.Nullable;
 public final class TaskDefinitionRepositoryCredentials {
     private final @Nullable String credentialsParameter;
 
-    @OutputCustomType.Constructor({"credentialsParameter"})
-    private TaskDefinitionRepositoryCredentials(@Nullable String credentialsParameter) {
+    @OutputCustomType.Constructor
+    private TaskDefinitionRepositoryCredentials(@OutputCustomType.Parameter("credentialsParameter") @Nullable String credentialsParameter) {
         this.credentialsParameter = credentialsParameter;
     }
 

@@ -19,13 +19,13 @@ public final class EC2FleetTargetCapacitySpecificationRequest {
     private final @Nullable EC2FleetTargetCapacitySpecificationRequestTargetCapacityUnitType targetCapacityUnitType;
     private final Integer totalTargetCapacity;
 
-    @OutputCustomType.Constructor({"defaultTargetCapacityType","onDemandTargetCapacity","spotTargetCapacity","targetCapacityUnitType","totalTargetCapacity"})
+    @OutputCustomType.Constructor
     private EC2FleetTargetCapacitySpecificationRequest(
-        @Nullable EC2FleetTargetCapacitySpecificationRequestDefaultTargetCapacityType defaultTargetCapacityType,
-        @Nullable Integer onDemandTargetCapacity,
-        @Nullable Integer spotTargetCapacity,
-        @Nullable EC2FleetTargetCapacitySpecificationRequestTargetCapacityUnitType targetCapacityUnitType,
-        Integer totalTargetCapacity) {
+        @OutputCustomType.Parameter("defaultTargetCapacityType") @Nullable EC2FleetTargetCapacitySpecificationRequestDefaultTargetCapacityType defaultTargetCapacityType,
+        @OutputCustomType.Parameter("onDemandTargetCapacity") @Nullable Integer onDemandTargetCapacity,
+        @OutputCustomType.Parameter("spotTargetCapacity") @Nullable Integer spotTargetCapacity,
+        @OutputCustomType.Parameter("targetCapacityUnitType") @Nullable EC2FleetTargetCapacitySpecificationRequestTargetCapacityUnitType targetCapacityUnitType,
+        @OutputCustomType.Parameter("totalTargetCapacity") Integer totalTargetCapacity) {
         this.defaultTargetCapacityType = defaultTargetCapacityType;
         this.onDemandTargetCapacity = onDemandTargetCapacity;
         this.spotTargetCapacity = spotTargetCapacity;

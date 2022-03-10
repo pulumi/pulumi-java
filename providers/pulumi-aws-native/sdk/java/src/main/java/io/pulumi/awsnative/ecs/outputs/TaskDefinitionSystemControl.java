@@ -14,10 +14,10 @@ public final class TaskDefinitionSystemControl {
     private final @Nullable String namespace;
     private final @Nullable String value;
 
-    @OutputCustomType.Constructor({"namespace","value"})
+    @OutputCustomType.Constructor
     private TaskDefinitionSystemControl(
-        @Nullable String namespace,
-        @Nullable String value) {
+        @OutputCustomType.Parameter("namespace") @Nullable String namespace,
+        @OutputCustomType.Parameter("value") @Nullable String value) {
         this.namespace = namespace;
         this.value = value;
     }

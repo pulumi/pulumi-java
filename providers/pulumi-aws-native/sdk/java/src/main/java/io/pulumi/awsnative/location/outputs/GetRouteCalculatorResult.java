@@ -16,12 +16,12 @@ public final class GetRouteCalculatorResult {
     private final @Nullable String createTime;
     private final @Nullable String updateTime;
 
-    @OutputCustomType.Constructor({"arn","calculatorArn","createTime","updateTime"})
+    @OutputCustomType.Constructor
     private GetRouteCalculatorResult(
-        @Nullable String arn,
-        @Nullable String calculatorArn,
-        @Nullable String createTime,
-        @Nullable String updateTime) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("calculatorArn") @Nullable String calculatorArn,
+        @OutputCustomType.Parameter("createTime") @Nullable String createTime,
+        @OutputCustomType.Parameter("updateTime") @Nullable String updateTime) {
         this.arn = arn;
         this.calculatorArn = calculatorArn;
         this.createTime = createTime;

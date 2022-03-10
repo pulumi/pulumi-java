@@ -15,10 +15,10 @@ public final class RecipeSecondaryInput {
     private final @Nullable RecipeDataCatalogInputDefinition dataCatalogInputDefinition;
     private final @Nullable RecipeS3Location s3InputDefinition;
 
-    @OutputCustomType.Constructor({"dataCatalogInputDefinition","s3InputDefinition"})
+    @OutputCustomType.Constructor
     private RecipeSecondaryInput(
-        @Nullable RecipeDataCatalogInputDefinition dataCatalogInputDefinition,
-        @Nullable RecipeS3Location s3InputDefinition) {
+        @OutputCustomType.Parameter("dataCatalogInputDefinition") @Nullable RecipeDataCatalogInputDefinition dataCatalogInputDefinition,
+        @OutputCustomType.Parameter("s3InputDefinition") @Nullable RecipeS3Location s3InputDefinition) {
         this.dataCatalogInputDefinition = dataCatalogInputDefinition;
         this.s3InputDefinition = s3InputDefinition;
     }

@@ -22,10 +22,10 @@ public final class DashboardSourceTemplate {
      */
     private final List<DashboardDataSetReference> dataSetReferences;
 
-    @OutputCustomType.Constructor({"arn","dataSetReferences"})
+    @OutputCustomType.Constructor
     private DashboardSourceTemplate(
-        String arn,
-        List<DashboardDataSetReference> dataSetReferences) {
+        @OutputCustomType.Parameter("arn") String arn,
+        @OutputCustomType.Parameter("dataSetReferences") List<DashboardDataSetReference> dataSetReferences) {
         this.arn = arn;
         this.dataSetReferences = dataSetReferences;
     }

@@ -23,10 +23,10 @@ public final class TemplateSourceAnalysis {
      */
     private final List<TemplateDataSetReference> dataSetReferences;
 
-    @OutputCustomType.Constructor({"arn","dataSetReferences"})
+    @OutputCustomType.Constructor
     private TemplateSourceAnalysis(
-        String arn,
-        List<TemplateDataSetReference> dataSetReferences) {
+        @OutputCustomType.Parameter("arn") String arn,
+        @OutputCustomType.Parameter("dataSetReferences") List<TemplateDataSetReference> dataSetReferences) {
         this.arn = arn;
         this.dataSetReferences = dataSetReferences;
     }

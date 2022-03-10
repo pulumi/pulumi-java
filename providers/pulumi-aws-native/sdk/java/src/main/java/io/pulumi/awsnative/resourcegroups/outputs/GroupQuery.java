@@ -17,11 +17,11 @@ public final class GroupQuery {
     private final @Nullable String stackIdentifier;
     private final @Nullable List<GroupTagFilter> tagFilters;
 
-    @OutputCustomType.Constructor({"resourceTypeFilters","stackIdentifier","tagFilters"})
+    @OutputCustomType.Constructor
     private GroupQuery(
-        @Nullable List<String> resourceTypeFilters,
-        @Nullable String stackIdentifier,
-        @Nullable List<GroupTagFilter> tagFilters) {
+        @OutputCustomType.Parameter("resourceTypeFilters") @Nullable List<String> resourceTypeFilters,
+        @OutputCustomType.Parameter("stackIdentifier") @Nullable String stackIdentifier,
+        @OutputCustomType.Parameter("tagFilters") @Nullable List<GroupTagFilter> tagFilters) {
         this.resourceTypeFilters = resourceTypeFilters;
         this.stackIdentifier = stackIdentifier;
         this.tagFilters = tagFilters;

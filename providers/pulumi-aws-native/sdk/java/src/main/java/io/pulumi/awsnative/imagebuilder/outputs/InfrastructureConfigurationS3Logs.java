@@ -22,10 +22,10 @@ public final class InfrastructureConfigurationS3Logs {
      */
     private final @Nullable String s3KeyPrefix;
 
-    @OutputCustomType.Constructor({"s3BucketName","s3KeyPrefix"})
+    @OutputCustomType.Constructor
     private InfrastructureConfigurationS3Logs(
-        @Nullable String s3BucketName,
-        @Nullable String s3KeyPrefix) {
+        @OutputCustomType.Parameter("s3BucketName") @Nullable String s3BucketName,
+        @OutputCustomType.Parameter("s3KeyPrefix") @Nullable String s3KeyPrefix) {
         this.s3BucketName = s3BucketName;
         this.s3KeyPrefix = s3KeyPrefix;
     }

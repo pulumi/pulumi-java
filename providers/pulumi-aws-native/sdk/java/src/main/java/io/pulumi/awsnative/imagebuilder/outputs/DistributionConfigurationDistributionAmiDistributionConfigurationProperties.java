@@ -45,14 +45,14 @@ public final class DistributionConfigurationDistributionAmiDistributionConfigura
      */
     private final @Nullable List<String> targetAccountIds;
 
-    @OutputCustomType.Constructor({"amiTags","description","kmsKeyId","launchPermissionConfiguration","name","targetAccountIds"})
+    @OutputCustomType.Constructor
     private DistributionConfigurationDistributionAmiDistributionConfigurationProperties(
-        @Nullable Object amiTags,
-        @Nullable String description,
-        @Nullable String kmsKeyId,
-        @Nullable DistributionConfigurationDistributionAmiDistributionConfigurationPropertiesLaunchPermissionConfigurationProperties launchPermissionConfiguration,
-        @Nullable String name,
-        @Nullable List<String> targetAccountIds) {
+        @OutputCustomType.Parameter("amiTags") @Nullable Object amiTags,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("kmsKeyId") @Nullable String kmsKeyId,
+        @OutputCustomType.Parameter("launchPermissionConfiguration") @Nullable DistributionConfigurationDistributionAmiDistributionConfigurationPropertiesLaunchPermissionConfigurationProperties launchPermissionConfiguration,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("targetAccountIds") @Nullable List<String> targetAccountIds) {
         this.amiTags = amiTags;
         this.description = description;
         this.kmsKeyId = kmsKeyId;

@@ -15,10 +15,10 @@ public final class ConfigEirp {
     private final @Nullable ConfigEirpUnits units;
     private final @Nullable Double value;
 
-    @OutputCustomType.Constructor({"units","value"})
+    @OutputCustomType.Constructor
     private ConfigEirp(
-        @Nullable ConfigEirpUnits units,
-        @Nullable Double value) {
+        @OutputCustomType.Parameter("units") @Nullable ConfigEirpUnits units,
+        @OutputCustomType.Parameter("value") @Nullable Double value) {
         this.units = units;
         this.value = value;
     }

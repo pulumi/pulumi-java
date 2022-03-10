@@ -14,10 +14,10 @@ public final class OriginRequestPolicyHeadersConfig {
     private final String headerBehavior;
     private final @Nullable List<String> headers;
 
-    @OutputCustomType.Constructor({"headerBehavior","headers"})
+    @OutputCustomType.Constructor
     private OriginRequestPolicyHeadersConfig(
-        String headerBehavior,
-        @Nullable List<String> headers) {
+        @OutputCustomType.Parameter("headerBehavior") String headerBehavior,
+        @OutputCustomType.Parameter("headers") @Nullable List<String> headers) {
         this.headerBehavior = headerBehavior;
         this.headers = headers;
     }

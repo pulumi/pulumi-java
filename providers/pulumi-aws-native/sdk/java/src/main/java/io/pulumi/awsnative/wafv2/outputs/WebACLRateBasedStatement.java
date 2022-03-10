@@ -19,12 +19,12 @@ public final class WebACLRateBasedStatement {
     private final Integer limit;
     private final @Nullable WebACLStatement scopeDownStatement;
 
-    @OutputCustomType.Constructor({"aggregateKeyType","forwardedIPConfig","limit","scopeDownStatement"})
+    @OutputCustomType.Constructor
     private WebACLRateBasedStatement(
-        WebACLRateBasedStatementAggregateKeyType aggregateKeyType,
-        @Nullable WebACLForwardedIPConfiguration forwardedIPConfig,
-        Integer limit,
-        @Nullable WebACLStatement scopeDownStatement) {
+        @OutputCustomType.Parameter("aggregateKeyType") WebACLRateBasedStatementAggregateKeyType aggregateKeyType,
+        @OutputCustomType.Parameter("forwardedIPConfig") @Nullable WebACLForwardedIPConfiguration forwardedIPConfig,
+        @OutputCustomType.Parameter("limit") Integer limit,
+        @OutputCustomType.Parameter("scopeDownStatement") @Nullable WebACLStatement scopeDownStatement) {
         this.aggregateKeyType = aggregateKeyType;
         this.forwardedIPConfig = forwardedIPConfig;
         this.limit = limit;

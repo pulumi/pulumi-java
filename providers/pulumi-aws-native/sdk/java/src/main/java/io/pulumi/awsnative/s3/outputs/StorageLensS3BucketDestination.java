@@ -41,14 +41,14 @@ public final class StorageLensS3BucketDestination {
      */
     private final @Nullable String prefix;
 
-    @OutputCustomType.Constructor({"accountId","arn","encryption","format","outputSchemaVersion","prefix"})
+    @OutputCustomType.Constructor
     private StorageLensS3BucketDestination(
-        String accountId,
-        String arn,
-        @Nullable StorageLensEncryption encryption,
-        StorageLensS3BucketDestinationFormat format,
-        StorageLensS3BucketDestinationOutputSchemaVersion outputSchemaVersion,
-        @Nullable String prefix) {
+        @OutputCustomType.Parameter("accountId") String accountId,
+        @OutputCustomType.Parameter("arn") String arn,
+        @OutputCustomType.Parameter("encryption") @Nullable StorageLensEncryption encryption,
+        @OutputCustomType.Parameter("format") StorageLensS3BucketDestinationFormat format,
+        @OutputCustomType.Parameter("outputSchemaVersion") StorageLensS3BucketDestinationOutputSchemaVersion outputSchemaVersion,
+        @OutputCustomType.Parameter("prefix") @Nullable String prefix) {
         this.accountId = accountId;
         this.arn = arn;
         this.encryption = encryption;

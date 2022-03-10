@@ -15,8 +15,8 @@ public final class AnomalyDetectorConfig {
      */
     private final AnomalyDetectorFrequency anomalyDetectorFrequency;
 
-    @OutputCustomType.Constructor({"anomalyDetectorFrequency"})
-    private AnomalyDetectorConfig(AnomalyDetectorFrequency anomalyDetectorFrequency) {
+    @OutputCustomType.Constructor
+    private AnomalyDetectorConfig(@OutputCustomType.Parameter("anomalyDetectorFrequency") AnomalyDetectorFrequency anomalyDetectorFrequency) {
         this.anomalyDetectorFrequency = anomalyDetectorFrequency;
     }
 

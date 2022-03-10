@@ -19,12 +19,12 @@ public final class QuickConnectConfig {
     private final QuickConnectType quickConnectType;
     private final @Nullable QuickConnectUserQuickConnectConfig userConfig;
 
-    @OutputCustomType.Constructor({"phoneConfig","queueConfig","quickConnectType","userConfig"})
+    @OutputCustomType.Constructor
     private QuickConnectConfig(
-        @Nullable QuickConnectPhoneNumberQuickConnectConfig phoneConfig,
-        @Nullable QuickConnectQueueQuickConnectConfig queueConfig,
-        QuickConnectType quickConnectType,
-        @Nullable QuickConnectUserQuickConnectConfig userConfig) {
+        @OutputCustomType.Parameter("phoneConfig") @Nullable QuickConnectPhoneNumberQuickConnectConfig phoneConfig,
+        @OutputCustomType.Parameter("queueConfig") @Nullable QuickConnectQueueQuickConnectConfig queueConfig,
+        @OutputCustomType.Parameter("quickConnectType") QuickConnectType quickConnectType,
+        @OutputCustomType.Parameter("userConfig") @Nullable QuickConnectUserQuickConnectConfig userConfig) {
         this.phoneConfig = phoneConfig;
         this.queueConfig = queueConfig;
         this.quickConnectType = quickConnectType;

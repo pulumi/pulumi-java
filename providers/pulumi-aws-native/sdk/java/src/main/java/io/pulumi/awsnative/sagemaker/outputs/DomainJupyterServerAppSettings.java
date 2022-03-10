@@ -13,8 +13,8 @@ import javax.annotation.Nullable;
 public final class DomainJupyterServerAppSettings {
     private final @Nullable DomainResourceSpec defaultResourceSpec;
 
-    @OutputCustomType.Constructor({"defaultResourceSpec"})
-    private DomainJupyterServerAppSettings(@Nullable DomainResourceSpec defaultResourceSpec) {
+    @OutputCustomType.Constructor
+    private DomainJupyterServerAppSettings(@OutputCustomType.Parameter("defaultResourceSpec") @Nullable DomainResourceSpec defaultResourceSpec) {
         this.defaultResourceSpec = defaultResourceSpec;
     }
 

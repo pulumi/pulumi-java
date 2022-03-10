@@ -23,10 +23,10 @@ public final class GetResourceSpecificLoggingResult {
      */
     private final @Nullable String targetId;
 
-    @OutputCustomType.Constructor({"logLevel","targetId"})
+    @OutputCustomType.Constructor
     private GetResourceSpecificLoggingResult(
-        @Nullable ResourceSpecificLoggingLogLevel logLevel,
-        @Nullable String targetId) {
+        @OutputCustomType.Parameter("logLevel") @Nullable ResourceSpecificLoggingLogLevel logLevel,
+        @OutputCustomType.Parameter("targetId") @Nullable String targetId) {
         this.logLevel = logLevel;
         this.targetId = targetId;
     }

@@ -14,11 +14,11 @@ public final class DeliveryStreamVpcConfiguration {
     private final List<String> securityGroupIds;
     private final List<String> subnetIds;
 
-    @OutputCustomType.Constructor({"roleARN","securityGroupIds","subnetIds"})
+    @OutputCustomType.Constructor
     private DeliveryStreamVpcConfiguration(
-        String roleARN,
-        List<String> securityGroupIds,
-        List<String> subnetIds) {
+        @OutputCustomType.Parameter("roleARN") String roleARN,
+        @OutputCustomType.Parameter("securityGroupIds") List<String> securityGroupIds,
+        @OutputCustomType.Parameter("subnetIds") List<String> subnetIds) {
         this.roleARN = roleARN;
         this.securityGroupIds = securityGroupIds;
         this.subnetIds = subnetIds;

@@ -19,12 +19,12 @@ public final class GetDataflowEndpointGroupResult {
     private final @Nullable String id;
     private final @Nullable List<DataflowEndpointGroupTag> tags;
 
-    @OutputCustomType.Constructor({"arn","endpointDetails","id","tags"})
+    @OutputCustomType.Constructor
     private GetDataflowEndpointGroupResult(
-        @Nullable String arn,
-        @Nullable List<DataflowEndpointGroupEndpointDetails> endpointDetails,
-        @Nullable String id,
-        @Nullable List<DataflowEndpointGroupTag> tags) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("endpointDetails") @Nullable List<DataflowEndpointGroupEndpointDetails> endpointDetails,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("tags") @Nullable List<DataflowEndpointGroupTag> tags) {
         this.arn = arn;
         this.endpointDetails = endpointDetails;
         this.id = id;

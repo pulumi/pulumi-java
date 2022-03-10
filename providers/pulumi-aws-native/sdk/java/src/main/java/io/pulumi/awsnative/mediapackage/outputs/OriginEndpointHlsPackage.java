@@ -63,19 +63,19 @@ public final class OriginEndpointHlsPackage {
      */
     private final @Nullable Boolean useAudioRenditionGroup;
 
-    @OutputCustomType.Constructor({"adMarkers","adTriggers","adsOnDeliveryRestrictions","encryption","includeIframeOnlyStream","playlistType","playlistWindowSeconds","programDateTimeIntervalSeconds","segmentDurationSeconds","streamSelection","useAudioRenditionGroup"})
+    @OutputCustomType.Constructor
     private OriginEndpointHlsPackage(
-        @Nullable OriginEndpointHlsPackageAdMarkers adMarkers,
-        @Nullable List<OriginEndpointHlsPackageAdTriggersItem> adTriggers,
-        @Nullable OriginEndpointAdsOnDeliveryRestrictions adsOnDeliveryRestrictions,
-        @Nullable OriginEndpointHlsEncryption encryption,
-        @Nullable Boolean includeIframeOnlyStream,
-        @Nullable OriginEndpointHlsPackagePlaylistType playlistType,
-        @Nullable Integer playlistWindowSeconds,
-        @Nullable Integer programDateTimeIntervalSeconds,
-        @Nullable Integer segmentDurationSeconds,
-        @Nullable OriginEndpointStreamSelection streamSelection,
-        @Nullable Boolean useAudioRenditionGroup) {
+        @OutputCustomType.Parameter("adMarkers") @Nullable OriginEndpointHlsPackageAdMarkers adMarkers,
+        @OutputCustomType.Parameter("adTriggers") @Nullable List<OriginEndpointHlsPackageAdTriggersItem> adTriggers,
+        @OutputCustomType.Parameter("adsOnDeliveryRestrictions") @Nullable OriginEndpointAdsOnDeliveryRestrictions adsOnDeliveryRestrictions,
+        @OutputCustomType.Parameter("encryption") @Nullable OriginEndpointHlsEncryption encryption,
+        @OutputCustomType.Parameter("includeIframeOnlyStream") @Nullable Boolean includeIframeOnlyStream,
+        @OutputCustomType.Parameter("playlistType") @Nullable OriginEndpointHlsPackagePlaylistType playlistType,
+        @OutputCustomType.Parameter("playlistWindowSeconds") @Nullable Integer playlistWindowSeconds,
+        @OutputCustomType.Parameter("programDateTimeIntervalSeconds") @Nullable Integer programDateTimeIntervalSeconds,
+        @OutputCustomType.Parameter("segmentDurationSeconds") @Nullable Integer segmentDurationSeconds,
+        @OutputCustomType.Parameter("streamSelection") @Nullable OriginEndpointStreamSelection streamSelection,
+        @OutputCustomType.Parameter("useAudioRenditionGroup") @Nullable Boolean useAudioRenditionGroup) {
         this.adMarkers = adMarkers;
         this.adTriggers = adTriggers;
         this.adsOnDeliveryRestrictions = adsOnDeliveryRestrictions;

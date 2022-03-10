@@ -14,10 +14,10 @@ public final class TaskDefinitionEnvironmentFile {
     private final @Nullable String type;
     private final @Nullable String value;
 
-    @OutputCustomType.Constructor({"type","value"})
+    @OutputCustomType.Constructor
     private TaskDefinitionEnvironmentFile(
-        @Nullable String type,
-        @Nullable String value) {
+        @OutputCustomType.Parameter("type") @Nullable String type,
+        @OutputCustomType.Parameter("value") @Nullable String value) {
         this.type = type;
         this.value = value;
     }

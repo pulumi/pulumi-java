@@ -68,18 +68,18 @@ public final class GetObjectTypeResult {
      */
     private final @Nullable String templateId;
 
-    @OutputCustomType.Constructor({"allowProfileCreation","createdAt","description","encryptionKey","expirationDays","fields","keys","lastUpdatedAt","tags","templateId"})
+    @OutputCustomType.Constructor
     private GetObjectTypeResult(
-        @Nullable Boolean allowProfileCreation,
-        @Nullable String createdAt,
-        @Nullable String description,
-        @Nullable String encryptionKey,
-        @Nullable Integer expirationDays,
-        @Nullable List<ObjectTypeFieldMap> fields,
-        @Nullable List<ObjectTypeKeyMap> keys,
-        @Nullable String lastUpdatedAt,
-        @Nullable List<ObjectTypeTag> tags,
-        @Nullable String templateId) {
+        @OutputCustomType.Parameter("allowProfileCreation") @Nullable Boolean allowProfileCreation,
+        @OutputCustomType.Parameter("createdAt") @Nullable String createdAt,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("encryptionKey") @Nullable String encryptionKey,
+        @OutputCustomType.Parameter("expirationDays") @Nullable Integer expirationDays,
+        @OutputCustomType.Parameter("fields") @Nullable List<ObjectTypeFieldMap> fields,
+        @OutputCustomType.Parameter("keys") @Nullable List<ObjectTypeKeyMap> keys,
+        @OutputCustomType.Parameter("lastUpdatedAt") @Nullable String lastUpdatedAt,
+        @OutputCustomType.Parameter("tags") @Nullable List<ObjectTypeTag> tags,
+        @OutputCustomType.Parameter("templateId") @Nullable String templateId) {
         this.allowProfileCreation = allowProfileCreation;
         this.createdAt = createdAt;
         this.description = description;

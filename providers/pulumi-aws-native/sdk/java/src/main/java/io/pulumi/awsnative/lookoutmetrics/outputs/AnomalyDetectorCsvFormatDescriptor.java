@@ -21,14 +21,14 @@ public final class AnomalyDetectorCsvFormatDescriptor {
     private final @Nullable List<String> headerList;
     private final @Nullable String quoteSymbol;
 
-    @OutputCustomType.Constructor({"charset","containsHeader","delimiter","fileCompression","headerList","quoteSymbol"})
+    @OutputCustomType.Constructor
     private AnomalyDetectorCsvFormatDescriptor(
-        @Nullable String charset,
-        @Nullable Boolean containsHeader,
-        @Nullable String delimiter,
-        @Nullable AnomalyDetectorCsvFormatDescriptorFileCompression fileCompression,
-        @Nullable List<String> headerList,
-        @Nullable String quoteSymbol) {
+        @OutputCustomType.Parameter("charset") @Nullable String charset,
+        @OutputCustomType.Parameter("containsHeader") @Nullable Boolean containsHeader,
+        @OutputCustomType.Parameter("delimiter") @Nullable String delimiter,
+        @OutputCustomType.Parameter("fileCompression") @Nullable AnomalyDetectorCsvFormatDescriptorFileCompression fileCompression,
+        @OutputCustomType.Parameter("headerList") @Nullable List<String> headerList,
+        @OutputCustomType.Parameter("quoteSymbol") @Nullable String quoteSymbol) {
         this.charset = charset;
         this.containsHeader = containsHeader;
         this.delimiter = delimiter;

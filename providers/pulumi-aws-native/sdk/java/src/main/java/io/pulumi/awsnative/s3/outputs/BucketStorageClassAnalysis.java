@@ -13,8 +13,8 @@ import javax.annotation.Nullable;
 public final class BucketStorageClassAnalysis {
     private final @Nullable BucketDataExport dataExport;
 
-    @OutputCustomType.Constructor({"dataExport"})
-    private BucketStorageClassAnalysis(@Nullable BucketDataExport dataExport) {
+    @OutputCustomType.Constructor
+    private BucketStorageClassAnalysis(@OutputCustomType.Parameter("dataExport") @Nullable BucketDataExport dataExport) {
         this.dataExport = dataExport;
     }
 

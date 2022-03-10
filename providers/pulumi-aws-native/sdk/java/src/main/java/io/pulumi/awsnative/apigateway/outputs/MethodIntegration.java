@@ -90,22 +90,22 @@ public final class MethodIntegration {
      */
     private final @Nullable String uri;
 
-    @OutputCustomType.Constructor({"cacheKeyParameters","cacheNamespace","connectionId","connectionType","contentHandling","credentials","integrationHttpMethod","integrationResponses","passthroughBehavior","requestParameters","requestTemplates","timeoutInMillis","type","uri"})
+    @OutputCustomType.Constructor
     private MethodIntegration(
-        @Nullable List<String> cacheKeyParameters,
-        @Nullable String cacheNamespace,
-        @Nullable String connectionId,
-        @Nullable MethodIntegrationConnectionType connectionType,
-        @Nullable MethodIntegrationContentHandling contentHandling,
-        @Nullable String credentials,
-        @Nullable String integrationHttpMethod,
-        @Nullable List<MethodIntegrationResponse> integrationResponses,
-        @Nullable MethodIntegrationPassthroughBehavior passthroughBehavior,
-        @Nullable Object requestParameters,
-        @Nullable Object requestTemplates,
-        @Nullable Integer timeoutInMillis,
-        MethodIntegrationType type,
-        @Nullable String uri) {
+        @OutputCustomType.Parameter("cacheKeyParameters") @Nullable List<String> cacheKeyParameters,
+        @OutputCustomType.Parameter("cacheNamespace") @Nullable String cacheNamespace,
+        @OutputCustomType.Parameter("connectionId") @Nullable String connectionId,
+        @OutputCustomType.Parameter("connectionType") @Nullable MethodIntegrationConnectionType connectionType,
+        @OutputCustomType.Parameter("contentHandling") @Nullable MethodIntegrationContentHandling contentHandling,
+        @OutputCustomType.Parameter("credentials") @Nullable String credentials,
+        @OutputCustomType.Parameter("integrationHttpMethod") @Nullable String integrationHttpMethod,
+        @OutputCustomType.Parameter("integrationResponses") @Nullable List<MethodIntegrationResponse> integrationResponses,
+        @OutputCustomType.Parameter("passthroughBehavior") @Nullable MethodIntegrationPassthroughBehavior passthroughBehavior,
+        @OutputCustomType.Parameter("requestParameters") @Nullable Object requestParameters,
+        @OutputCustomType.Parameter("requestTemplates") @Nullable Object requestTemplates,
+        @OutputCustomType.Parameter("timeoutInMillis") @Nullable Integer timeoutInMillis,
+        @OutputCustomType.Parameter("type") MethodIntegrationType type,
+        @OutputCustomType.Parameter("uri") @Nullable String uri) {
         this.cacheKeyParameters = cacheKeyParameters;
         this.cacheNamespace = cacheNamespace;
         this.connectionId = connectionId;

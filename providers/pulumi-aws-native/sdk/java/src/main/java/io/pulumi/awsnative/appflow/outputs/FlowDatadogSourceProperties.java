@@ -11,8 +11,8 @@ import java.util.Objects;
 public final class FlowDatadogSourceProperties {
     private final String object;
 
-    @OutputCustomType.Constructor({"object"})
-    private FlowDatadogSourceProperties(String object) {
+    @OutputCustomType.Constructor
+    private FlowDatadogSourceProperties(@OutputCustomType.Parameter("object") String object) {
         this.object = object;
     }
 

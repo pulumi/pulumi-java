@@ -78,20 +78,20 @@ public final class GetFirewallRuleGroupResult {
      */
     private final @Nullable List<FirewallRuleGroupTag> tags;
 
-    @OutputCustomType.Constructor({"arn","creationTime","creatorRequestId","firewallRules","id","modificationTime","ownerId","ruleCount","shareStatus","status","statusMessage","tags"})
+    @OutputCustomType.Constructor
     private GetFirewallRuleGroupResult(
-        @Nullable String arn,
-        @Nullable String creationTime,
-        @Nullable String creatorRequestId,
-        @Nullable List<FirewallRuleGroupFirewallRule> firewallRules,
-        @Nullable String id,
-        @Nullable String modificationTime,
-        @Nullable String ownerId,
-        @Nullable Integer ruleCount,
-        @Nullable FirewallRuleGroupShareStatus shareStatus,
-        @Nullable FirewallRuleGroupStatus status,
-        @Nullable String statusMessage,
-        @Nullable List<FirewallRuleGroupTag> tags) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("creationTime") @Nullable String creationTime,
+        @OutputCustomType.Parameter("creatorRequestId") @Nullable String creatorRequestId,
+        @OutputCustomType.Parameter("firewallRules") @Nullable List<FirewallRuleGroupFirewallRule> firewallRules,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("modificationTime") @Nullable String modificationTime,
+        @OutputCustomType.Parameter("ownerId") @Nullable String ownerId,
+        @OutputCustomType.Parameter("ruleCount") @Nullable Integer ruleCount,
+        @OutputCustomType.Parameter("shareStatus") @Nullable FirewallRuleGroupShareStatus shareStatus,
+        @OutputCustomType.Parameter("status") @Nullable FirewallRuleGroupStatus status,
+        @OutputCustomType.Parameter("statusMessage") @Nullable String statusMessage,
+        @OutputCustomType.Parameter("tags") @Nullable List<FirewallRuleGroupTag> tags) {
         this.arn = arn;
         this.creationTime = creationTime;
         this.creatorRequestId = creatorRequestId;

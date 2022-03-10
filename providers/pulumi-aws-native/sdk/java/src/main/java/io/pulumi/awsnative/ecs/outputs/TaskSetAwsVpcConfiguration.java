@@ -29,11 +29,11 @@ public final class TaskSetAwsVpcConfiguration {
      */
     private final List<String> subnets;
 
-    @OutputCustomType.Constructor({"assignPublicIp","securityGroups","subnets"})
+    @OutputCustomType.Constructor
     private TaskSetAwsVpcConfiguration(
-        @Nullable TaskSetAwsVpcConfigurationAssignPublicIp assignPublicIp,
-        @Nullable List<String> securityGroups,
-        List<String> subnets) {
+        @OutputCustomType.Parameter("assignPublicIp") @Nullable TaskSetAwsVpcConfigurationAssignPublicIp assignPublicIp,
+        @OutputCustomType.Parameter("securityGroups") @Nullable List<String> securityGroups,
+        @OutputCustomType.Parameter("subnets") List<String> subnets) {
         this.assignPublicIp = assignPublicIp;
         this.securityGroups = securityGroups;
         this.subnets = subnets;

@@ -14,12 +14,12 @@ public final class WirelessDeviceSessionKeysAbpV11 {
     private final String nwkSEncKey;
     private final String sNwkSIntKey;
 
-    @OutputCustomType.Constructor({"appSKey","fNwkSIntKey","nwkSEncKey","sNwkSIntKey"})
+    @OutputCustomType.Constructor
     private WirelessDeviceSessionKeysAbpV11(
-        String appSKey,
-        String fNwkSIntKey,
-        String nwkSEncKey,
-        String sNwkSIntKey) {
+        @OutputCustomType.Parameter("appSKey") String appSKey,
+        @OutputCustomType.Parameter("fNwkSIntKey") String fNwkSIntKey,
+        @OutputCustomType.Parameter("nwkSEncKey") String nwkSEncKey,
+        @OutputCustomType.Parameter("sNwkSIntKey") String sNwkSIntKey) {
         this.appSKey = appSKey;
         this.fNwkSIntKey = fNwkSIntKey;
         this.nwkSEncKey = nwkSEncKey;

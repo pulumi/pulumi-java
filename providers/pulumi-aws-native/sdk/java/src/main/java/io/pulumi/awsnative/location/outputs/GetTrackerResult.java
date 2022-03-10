@@ -16,12 +16,12 @@ public final class GetTrackerResult {
     private final @Nullable String trackerArn;
     private final @Nullable String updateTime;
 
-    @OutputCustomType.Constructor({"arn","createTime","trackerArn","updateTime"})
+    @OutputCustomType.Constructor
     private GetTrackerResult(
-        @Nullable String arn,
-        @Nullable String createTime,
-        @Nullable String trackerArn,
-        @Nullable String updateTime) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("createTime") @Nullable String createTime,
+        @OutputCustomType.Parameter("trackerArn") @Nullable String trackerArn,
+        @OutputCustomType.Parameter("updateTime") @Nullable String updateTime) {
         this.arn = arn;
         this.createTime = createTime;
         this.trackerArn = trackerArn;

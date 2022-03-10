@@ -33,14 +33,14 @@ public final class GetHostedZoneResult {
      */
     private final @Nullable List<HostedZoneVPC> vPCs;
 
-    @OutputCustomType.Constructor({"hostedZoneConfig","hostedZoneTags","id","nameServers","queryLoggingConfig","vPCs"})
+    @OutputCustomType.Constructor
     private GetHostedZoneResult(
-        @Nullable HostedZoneConfig hostedZoneConfig,
-        @Nullable List<HostedZoneTag> hostedZoneTags,
-        @Nullable String id,
-        @Nullable List<String> nameServers,
-        @Nullable HostedZoneQueryLoggingConfig queryLoggingConfig,
-        @Nullable List<HostedZoneVPC> vPCs) {
+        @OutputCustomType.Parameter("hostedZoneConfig") @Nullable HostedZoneConfig hostedZoneConfig,
+        @OutputCustomType.Parameter("hostedZoneTags") @Nullable List<HostedZoneTag> hostedZoneTags,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("nameServers") @Nullable List<String> nameServers,
+        @OutputCustomType.Parameter("queryLoggingConfig") @Nullable HostedZoneQueryLoggingConfig queryLoggingConfig,
+        @OutputCustomType.Parameter("vPCs") @Nullable List<HostedZoneVPC> vPCs) {
         this.hostedZoneConfig = hostedZoneConfig;
         this.hostedZoneTags = hostedZoneTags;
         this.id = id;

@@ -28,11 +28,11 @@ public final class UserProfileSharingSettings {
      */
     private final @Nullable String s3OutputPath;
 
-    @OutputCustomType.Constructor({"notebookOutputOption","s3KmsKeyId","s3OutputPath"})
+    @OutputCustomType.Constructor
     private UserProfileSharingSettings(
-        @Nullable UserProfileSharingSettingsNotebookOutputOption notebookOutputOption,
-        @Nullable String s3KmsKeyId,
-        @Nullable String s3OutputPath) {
+        @OutputCustomType.Parameter("notebookOutputOption") @Nullable UserProfileSharingSettingsNotebookOutputOption notebookOutputOption,
+        @OutputCustomType.Parameter("s3KmsKeyId") @Nullable String s3KmsKeyId,
+        @OutputCustomType.Parameter("s3OutputPath") @Nullable String s3OutputPath) {
         this.notebookOutputOption = notebookOutputOption;
         this.s3KmsKeyId = s3KmsKeyId;
         this.s3OutputPath = s3OutputPath;

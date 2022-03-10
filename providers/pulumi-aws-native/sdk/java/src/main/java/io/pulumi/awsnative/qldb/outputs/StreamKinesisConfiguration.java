@@ -15,10 +15,10 @@ public final class StreamKinesisConfiguration {
     private final @Nullable Boolean aggregationEnabled;
     private final @Nullable String streamArn;
 
-    @OutputCustomType.Constructor({"aggregationEnabled","streamArn"})
+    @OutputCustomType.Constructor
     private StreamKinesisConfiguration(
-        @Nullable Boolean aggregationEnabled,
-        @Nullable String streamArn) {
+        @OutputCustomType.Parameter("aggregationEnabled") @Nullable Boolean aggregationEnabled,
+        @OutputCustomType.Parameter("streamArn") @Nullable String streamArn) {
         this.aggregationEnabled = aggregationEnabled;
         this.streamArn = streamArn;
     }

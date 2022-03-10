@@ -17,8 +17,8 @@ public final class GetResourcePolicyResult {
      */
     private final @Nullable String policyDocument;
 
-    @OutputCustomType.Constructor({"policyDocument"})
-    private GetResourcePolicyResult(@Nullable String policyDocument) {
+    @OutputCustomType.Constructor
+    private GetResourcePolicyResult(@OutputCustomType.Parameter("policyDocument") @Nullable String policyDocument) {
         this.policyDocument = policyDocument;
     }
 

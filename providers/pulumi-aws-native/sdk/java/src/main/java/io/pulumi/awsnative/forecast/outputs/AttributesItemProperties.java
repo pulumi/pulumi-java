@@ -23,10 +23,10 @@ public final class AttributesItemProperties {
      */
     private final @Nullable DatasetAttributesItemPropertiesAttributeType attributeType;
 
-    @OutputCustomType.Constructor({"attributeName","attributeType"})
+    @OutputCustomType.Constructor
     private AttributesItemProperties(
-        @Nullable String attributeName,
-        @Nullable DatasetAttributesItemPropertiesAttributeType attributeType) {
+        @OutputCustomType.Parameter("attributeName") @Nullable String attributeName,
+        @OutputCustomType.Parameter("attributeType") @Nullable DatasetAttributesItemPropertiesAttributeType attributeType) {
         this.attributeName = attributeName;
         this.attributeType = attributeType;
     }

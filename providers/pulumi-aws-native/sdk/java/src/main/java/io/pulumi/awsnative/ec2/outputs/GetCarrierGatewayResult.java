@@ -34,12 +34,12 @@ public final class GetCarrierGatewayResult {
      */
     private final @Nullable List<CarrierGatewayTag> tags;
 
-    @OutputCustomType.Constructor({"carrierGatewayId","ownerId","state","tags"})
+    @OutputCustomType.Constructor
     private GetCarrierGatewayResult(
-        @Nullable String carrierGatewayId,
-        @Nullable String ownerId,
-        @Nullable String state,
-        @Nullable List<CarrierGatewayTag> tags) {
+        @OutputCustomType.Parameter("carrierGatewayId") @Nullable String carrierGatewayId,
+        @OutputCustomType.Parameter("ownerId") @Nullable String ownerId,
+        @OutputCustomType.Parameter("state") @Nullable String state,
+        @OutputCustomType.Parameter("tags") @Nullable List<CarrierGatewayTag> tags) {
         this.carrierGatewayId = carrierGatewayId;
         this.ownerId = ownerId;
         this.state = state;

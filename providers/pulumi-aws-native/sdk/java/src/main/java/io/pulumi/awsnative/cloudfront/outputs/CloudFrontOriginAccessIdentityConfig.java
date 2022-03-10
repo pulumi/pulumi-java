@@ -11,8 +11,8 @@ import java.util.Objects;
 public final class CloudFrontOriginAccessIdentityConfig {
     private final String comment;
 
-    @OutputCustomType.Constructor({"comment"})
-    private CloudFrontOriginAccessIdentityConfig(String comment) {
+    @OutputCustomType.Constructor
+    private CloudFrontOriginAccessIdentityConfig(@OutputCustomType.Parameter("comment") String comment) {
         this.comment = comment;
     }
 

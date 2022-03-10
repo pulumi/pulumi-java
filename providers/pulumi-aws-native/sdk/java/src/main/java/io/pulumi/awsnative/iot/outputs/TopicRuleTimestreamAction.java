@@ -22,14 +22,14 @@ public final class TopicRuleTimestreamAction {
     private final String tableName;
     private final @Nullable TopicRuleTimestreamTimestamp timestamp;
 
-    @OutputCustomType.Constructor({"batchMode","databaseName","dimensions","roleArn","tableName","timestamp"})
+    @OutputCustomType.Constructor
     private TopicRuleTimestreamAction(
-        @Nullable Boolean batchMode,
-        String databaseName,
-        List<TopicRuleTimestreamDimension> dimensions,
-        String roleArn,
-        String tableName,
-        @Nullable TopicRuleTimestreamTimestamp timestamp) {
+        @OutputCustomType.Parameter("batchMode") @Nullable Boolean batchMode,
+        @OutputCustomType.Parameter("databaseName") String databaseName,
+        @OutputCustomType.Parameter("dimensions") List<TopicRuleTimestreamDimension> dimensions,
+        @OutputCustomType.Parameter("roleArn") String roleArn,
+        @OutputCustomType.Parameter("tableName") String tableName,
+        @OutputCustomType.Parameter("timestamp") @Nullable TopicRuleTimestreamTimestamp timestamp) {
         this.batchMode = batchMode;
         this.databaseName = databaseName;
         this.dimensions = dimensions;

@@ -25,10 +25,10 @@ public final class DataSetIngestionWaitPolicy {
      */
     private final @Nullable Boolean waitForSpiceIngestion;
 
-    @OutputCustomType.Constructor({"ingestionWaitTimeInHours","waitForSpiceIngestion"})
+    @OutputCustomType.Constructor
     private DataSetIngestionWaitPolicy(
-        @Nullable Double ingestionWaitTimeInHours,
-        @Nullable Boolean waitForSpiceIngestion) {
+        @OutputCustomType.Parameter("ingestionWaitTimeInHours") @Nullable Double ingestionWaitTimeInHours,
+        @OutputCustomType.Parameter("waitForSpiceIngestion") @Nullable Boolean waitForSpiceIngestion) {
         this.ingestionWaitTimeInHours = ingestionWaitTimeInHours;
         this.waitForSpiceIngestion = waitForSpiceIngestion;
     }

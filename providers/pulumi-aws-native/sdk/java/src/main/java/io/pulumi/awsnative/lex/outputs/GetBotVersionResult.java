@@ -14,10 +14,10 @@ public final class GetBotVersionResult {
     private final @Nullable String botVersion;
     private final @Nullable String description;
 
-    @OutputCustomType.Constructor({"botVersion","description"})
+    @OutputCustomType.Constructor
     private GetBotVersionResult(
-        @Nullable String botVersion,
-        @Nullable String description) {
+        @OutputCustomType.Parameter("botVersion") @Nullable String botVersion,
+        @OutputCustomType.Parameter("description") @Nullable String description) {
         this.botVersion = botVersion;
         this.description = description;
     }

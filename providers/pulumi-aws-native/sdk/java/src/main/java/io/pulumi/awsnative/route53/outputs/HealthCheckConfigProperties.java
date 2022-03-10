@@ -35,25 +35,25 @@ public final class HealthCheckConfigProperties {
     private final @Nullable String searchString;
     private final HealthCheckConfigPropertiesType type;
 
-    @OutputCustomType.Constructor({"alarmIdentifier","childHealthChecks","enableSNI","failureThreshold","fullyQualifiedDomainName","healthThreshold","iPAddress","insufficientDataHealthStatus","inverted","measureLatency","port","regions","requestInterval","resourcePath","routingControlArn","searchString","type"})
+    @OutputCustomType.Constructor
     private HealthCheckConfigProperties(
-        @Nullable HealthCheckAlarmIdentifier alarmIdentifier,
-        @Nullable List<String> childHealthChecks,
-        @Nullable Boolean enableSNI,
-        @Nullable Integer failureThreshold,
-        @Nullable String fullyQualifiedDomainName,
-        @Nullable Integer healthThreshold,
-        @Nullable String iPAddress,
-        @Nullable HealthCheckConfigPropertiesInsufficientDataHealthStatus insufficientDataHealthStatus,
-        @Nullable Boolean inverted,
-        @Nullable Boolean measureLatency,
-        @Nullable Integer port,
-        @Nullable List<String> regions,
-        @Nullable Integer requestInterval,
-        @Nullable String resourcePath,
-        @Nullable String routingControlArn,
-        @Nullable String searchString,
-        HealthCheckConfigPropertiesType type) {
+        @OutputCustomType.Parameter("alarmIdentifier") @Nullable HealthCheckAlarmIdentifier alarmIdentifier,
+        @OutputCustomType.Parameter("childHealthChecks") @Nullable List<String> childHealthChecks,
+        @OutputCustomType.Parameter("enableSNI") @Nullable Boolean enableSNI,
+        @OutputCustomType.Parameter("failureThreshold") @Nullable Integer failureThreshold,
+        @OutputCustomType.Parameter("fullyQualifiedDomainName") @Nullable String fullyQualifiedDomainName,
+        @OutputCustomType.Parameter("healthThreshold") @Nullable Integer healthThreshold,
+        @OutputCustomType.Parameter("iPAddress") @Nullable String iPAddress,
+        @OutputCustomType.Parameter("insufficientDataHealthStatus") @Nullable HealthCheckConfigPropertiesInsufficientDataHealthStatus insufficientDataHealthStatus,
+        @OutputCustomType.Parameter("inverted") @Nullable Boolean inverted,
+        @OutputCustomType.Parameter("measureLatency") @Nullable Boolean measureLatency,
+        @OutputCustomType.Parameter("port") @Nullable Integer port,
+        @OutputCustomType.Parameter("regions") @Nullable List<String> regions,
+        @OutputCustomType.Parameter("requestInterval") @Nullable Integer requestInterval,
+        @OutputCustomType.Parameter("resourcePath") @Nullable String resourcePath,
+        @OutputCustomType.Parameter("routingControlArn") @Nullable String routingControlArn,
+        @OutputCustomType.Parameter("searchString") @Nullable String searchString,
+        @OutputCustomType.Parameter("type") HealthCheckConfigPropertiesType type) {
         this.alarmIdentifier = alarmIdentifier;
         this.childHealthChecks = childHealthChecks;
         this.enableSNI = enableSNI;
