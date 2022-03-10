@@ -17,8 +17,8 @@ public final class DataFlowResponseFolder {
      */
     private final @Nullable String name;
 
-    @OutputCustomType.Constructor({"name"})
-    private DataFlowResponseFolder(@Nullable String name) {
+    @OutputCustomType.Constructor
+    private DataFlowResponseFolder(@OutputCustomType.Parameter("name") @Nullable String name) {
         this.name = name;
     }
 

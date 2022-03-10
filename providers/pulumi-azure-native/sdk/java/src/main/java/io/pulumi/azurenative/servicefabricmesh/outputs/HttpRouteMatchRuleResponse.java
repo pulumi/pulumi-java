@@ -23,10 +23,10 @@ public final class HttpRouteMatchRuleResponse {
      */
     private final HttpRouteMatchPathResponse path;
 
-    @OutputCustomType.Constructor({"headers","path"})
+    @OutputCustomType.Constructor
     private HttpRouteMatchRuleResponse(
-        @Nullable List<HttpRouteMatchHeaderResponse> headers,
-        HttpRouteMatchPathResponse path) {
+        @OutputCustomType.Parameter("headers") @Nullable List<HttpRouteMatchHeaderResponse> headers,
+        @OutputCustomType.Parameter("path") HttpRouteMatchPathResponse path) {
         this.headers = headers;
         this.path = path;
     }

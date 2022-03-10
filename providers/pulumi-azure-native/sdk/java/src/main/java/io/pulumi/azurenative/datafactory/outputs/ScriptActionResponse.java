@@ -33,12 +33,12 @@ public final class ScriptActionResponse {
      */
     private final String uri;
 
-    @OutputCustomType.Constructor({"name","parameters","roles","uri"})
+    @OutputCustomType.Constructor
     private ScriptActionResponse(
-        String name,
-        @Nullable String parameters,
-        Object roles,
-        String uri) {
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("parameters") @Nullable String parameters,
+        @OutputCustomType.Parameter("roles") Object roles,
+        @OutputCustomType.Parameter("uri") String uri) {
         this.name = name;
         this.parameters = parameters;
         this.roles = roles;

@@ -26,11 +26,11 @@ public final class UserAssignedIdentityAuthInfoResponse {
      */
     private final String subscriptionId;
 
-    @OutputCustomType.Constructor({"authType","clientId","subscriptionId"})
+    @OutputCustomType.Constructor
     private UserAssignedIdentityAuthInfoResponse(
-        String authType,
-        String clientId,
-        String subscriptionId) {
+        @OutputCustomType.Parameter("authType") String authType,
+        @OutputCustomType.Parameter("clientId") String clientId,
+        @OutputCustomType.Parameter("subscriptionId") String subscriptionId) {
         this.authType = authType;
         this.clientId = clientId;
         this.subscriptionId = subscriptionId;

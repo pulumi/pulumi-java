@@ -32,12 +32,12 @@ public final class PlacementProfileResponse {
      */
     private final @Nullable String resourcePoolId;
 
-    @OutputCustomType.Constructor({"clusterId","datastoreId","hostId","resourcePoolId"})
+    @OutputCustomType.Constructor
     private PlacementProfileResponse(
-        @Nullable String clusterId,
-        @Nullable String datastoreId,
-        @Nullable String hostId,
-        @Nullable String resourcePoolId) {
+        @OutputCustomType.Parameter("clusterId") @Nullable String clusterId,
+        @OutputCustomType.Parameter("datastoreId") @Nullable String datastoreId,
+        @OutputCustomType.Parameter("hostId") @Nullable String hostId,
+        @OutputCustomType.Parameter("resourcePoolId") @Nullable String resourcePoolId) {
         this.clusterId = clusterId;
         this.datastoreId = datastoreId;
         this.hostId = hostId;

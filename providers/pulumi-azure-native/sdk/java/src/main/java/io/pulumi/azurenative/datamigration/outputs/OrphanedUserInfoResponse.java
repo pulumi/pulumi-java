@@ -22,10 +22,10 @@ public final class OrphanedUserInfoResponse {
      */
     private final @Nullable String name;
 
-    @OutputCustomType.Constructor({"databaseName","name"})
+    @OutputCustomType.Constructor
     private OrphanedUserInfoResponse(
-        @Nullable String databaseName,
-        @Nullable String name) {
+        @OutputCustomType.Parameter("databaseName") @Nullable String databaseName,
+        @OutputCustomType.Parameter("name") @Nullable String name) {
         this.databaseName = databaseName;
         this.name = name;
     }

@@ -17,8 +17,8 @@ public final class LogAnalyticsWorkspaceConfigResponse {
      */
     private final @Nullable String workspaceId;
 
-    @OutputCustomType.Constructor({"workspaceId"})
-    private LogAnalyticsWorkspaceConfigResponse(@Nullable String workspaceId) {
+    @OutputCustomType.Constructor
+    private LogAnalyticsWorkspaceConfigResponse(@OutputCustomType.Parameter("workspaceId") @Nullable String workspaceId) {
         this.workspaceId = workspaceId;
     }
 

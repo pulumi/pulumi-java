@@ -27,11 +27,11 @@ public final class FirewallRuleResponse {
      */
     private final @Nullable String startIpAddress;
 
-    @OutputCustomType.Constructor({"endIpAddress","ruleName","startIpAddress"})
+    @OutputCustomType.Constructor
     private FirewallRuleResponse(
-        @Nullable String endIpAddress,
-        @Nullable String ruleName,
-        @Nullable String startIpAddress) {
+        @OutputCustomType.Parameter("endIpAddress") @Nullable String endIpAddress,
+        @OutputCustomType.Parameter("ruleName") @Nullable String ruleName,
+        @OutputCustomType.Parameter("startIpAddress") @Nullable String startIpAddress) {
         this.endIpAddress = endIpAddress;
         this.ruleName = ruleName;
         this.startIpAddress = startIpAddress;

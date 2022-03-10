@@ -22,10 +22,10 @@ public final class LoadBalancerNatRuleReferenceResponse {
      */
     private final String sourceArmResourceId;
 
-    @OutputCustomType.Constructor({"name","sourceArmResourceId"})
+    @OutputCustomType.Constructor
     private LoadBalancerNatRuleReferenceResponse(
-        @Nullable String name,
-        String sourceArmResourceId) {
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("sourceArmResourceId") String sourceArmResourceId) {
         this.name = name;
         this.sourceArmResourceId = sourceArmResourceId;
     }

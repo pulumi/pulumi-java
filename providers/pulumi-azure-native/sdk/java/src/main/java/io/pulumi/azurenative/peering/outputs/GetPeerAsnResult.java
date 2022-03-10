@@ -55,16 +55,16 @@ public final class GetPeerAsnResult {
      */
     private final @Nullable String validationState;
 
-    @OutputCustomType.Constructor({"errorMessage","id","name","peerAsn","peerContactDetail","peerName","type","validationState"})
+    @OutputCustomType.Constructor
     private GetPeerAsnResult(
-        String errorMessage,
-        String id,
-        String name,
-        @Nullable Integer peerAsn,
-        @Nullable List<ContactDetailResponse> peerContactDetail,
-        @Nullable String peerName,
-        String type,
-        @Nullable String validationState) {
+        @OutputCustomType.Parameter("errorMessage") String errorMessage,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("peerAsn") @Nullable Integer peerAsn,
+        @OutputCustomType.Parameter("peerContactDetail") @Nullable List<ContactDetailResponse> peerContactDetail,
+        @OutputCustomType.Parameter("peerName") @Nullable String peerName,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("validationState") @Nullable String validationState) {
         this.errorMessage = errorMessage;
         this.id = id;
         this.name = name;

@@ -22,10 +22,10 @@ public final class FirewallPolicyIntrusionDetectionSignatureSpecificationRespons
      */
     private final @Nullable String mode;
 
-    @OutputCustomType.Constructor({"id","mode"})
+    @OutputCustomType.Constructor
     private FirewallPolicyIntrusionDetectionSignatureSpecificationResponse(
-        @Nullable String id,
-        @Nullable String mode) {
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("mode") @Nullable String mode) {
         this.id = id;
         this.mode = mode;
     }

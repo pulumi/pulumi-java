@@ -76,21 +76,21 @@ public final class GetMultipleActivationKeyResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"agreementNumber","expirationDate","id","installedServerNumber","isEligible","location","multipleActivationKey","name","osType","provisioningState","supportType","tags","type"})
+    @OutputCustomType.Constructor
     private GetMultipleActivationKeyResult(
-        @Nullable String agreementNumber,
-        String expirationDate,
-        String id,
-        @Nullable Integer installedServerNumber,
-        @Nullable Boolean isEligible,
-        String location,
-        String multipleActivationKey,
-        String name,
-        @Nullable String osType,
-        String provisioningState,
-        @Nullable String supportType,
-        @Nullable Map<String,String> tags,
-        String type) {
+        @OutputCustomType.Parameter("agreementNumber") @Nullable String agreementNumber,
+        @OutputCustomType.Parameter("expirationDate") String expirationDate,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("installedServerNumber") @Nullable Integer installedServerNumber,
+        @OutputCustomType.Parameter("isEligible") @Nullable Boolean isEligible,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("multipleActivationKey") String multipleActivationKey,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("osType") @Nullable String osType,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("supportType") @Nullable String supportType,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type) {
         this.agreementNumber = agreementNumber;
         this.expirationDate = expirationDate;
         this.id = id;

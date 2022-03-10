@@ -20,10 +20,10 @@ public final class EdifactAgreementContentResponse {
      */
     private final EdifactOneWayAgreementResponse sendAgreement;
 
-    @OutputCustomType.Constructor({"receiveAgreement","sendAgreement"})
+    @OutputCustomType.Constructor
     private EdifactAgreementContentResponse(
-        EdifactOneWayAgreementResponse receiveAgreement,
-        EdifactOneWayAgreementResponse sendAgreement) {
+        @OutputCustomType.Parameter("receiveAgreement") EdifactOneWayAgreementResponse receiveAgreement,
+        @OutputCustomType.Parameter("sendAgreement") EdifactOneWayAgreementResponse sendAgreement) {
         this.receiveAgreement = receiveAgreement;
         this.sendAgreement = sendAgreement;
     }

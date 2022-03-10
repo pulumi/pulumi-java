@@ -56,16 +56,16 @@ public final class GetReportByBillingAccountResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"definition","deliveryInfo","format","id","name","schedule","tags","type"})
+    @OutputCustomType.Constructor
     private GetReportByBillingAccountResult(
-        ReportDefinitionResponse definition,
-        ReportDeliveryInfoResponse deliveryInfo,
-        @Nullable String format,
-        String id,
-        String name,
-        @Nullable ReportScheduleResponse schedule,
-        Map<String,String> tags,
-        String type) {
+        @OutputCustomType.Parameter("definition") ReportDefinitionResponse definition,
+        @OutputCustomType.Parameter("deliveryInfo") ReportDeliveryInfoResponse deliveryInfo,
+        @OutputCustomType.Parameter("format") @Nullable String format,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("schedule") @Nullable ReportScheduleResponse schedule,
+        @OutputCustomType.Parameter("tags") Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type) {
         this.definition = definition;
         this.deliveryInfo = deliveryInfo;
         this.format = format;

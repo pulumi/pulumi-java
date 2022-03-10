@@ -73,19 +73,19 @@ public final class RoutingRuleResponse {
      */
     private final @Nullable RoutingRuleUpdateParametersResponseWebApplicationFirewallPolicyLink webApplicationFirewallPolicyLink;
 
-    @OutputCustomType.Constructor({"acceptedProtocols","enabledState","frontendEndpoints","id","name","patternsToMatch","resourceState","routeConfiguration","rulesEngine","type","webApplicationFirewallPolicyLink"})
+    @OutputCustomType.Constructor
     private RoutingRuleResponse(
-        @Nullable List<String> acceptedProtocols,
-        @Nullable String enabledState,
-        @Nullable List<SubResourceResponse> frontendEndpoints,
-        @Nullable String id,
-        @Nullable String name,
-        @Nullable List<String> patternsToMatch,
-        String resourceState,
-        @Nullable Either<ForwardingConfigurationResponse,RedirectConfigurationResponse> routeConfiguration,
-        @Nullable SubResourceResponse rulesEngine,
-        String type,
-        @Nullable RoutingRuleUpdateParametersResponseWebApplicationFirewallPolicyLink webApplicationFirewallPolicyLink) {
+        @OutputCustomType.Parameter("acceptedProtocols") @Nullable List<String> acceptedProtocols,
+        @OutputCustomType.Parameter("enabledState") @Nullable String enabledState,
+        @OutputCustomType.Parameter("frontendEndpoints") @Nullable List<SubResourceResponse> frontendEndpoints,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("patternsToMatch") @Nullable List<String> patternsToMatch,
+        @OutputCustomType.Parameter("resourceState") String resourceState,
+        @OutputCustomType.Parameter("routeConfiguration") @Nullable Either<ForwardingConfigurationResponse,RedirectConfigurationResponse> routeConfiguration,
+        @OutputCustomType.Parameter("rulesEngine") @Nullable SubResourceResponse rulesEngine,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("webApplicationFirewallPolicyLink") @Nullable RoutingRuleUpdateParametersResponseWebApplicationFirewallPolicyLink webApplicationFirewallPolicyLink) {
         this.acceptedProtocols = acceptedProtocols;
         this.enabledState = enabledState;
         this.frontendEndpoints = frontendEndpoints;

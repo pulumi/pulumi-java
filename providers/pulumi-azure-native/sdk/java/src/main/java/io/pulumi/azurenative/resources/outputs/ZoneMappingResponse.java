@@ -19,10 +19,10 @@ public final class ZoneMappingResponse {
     private final @Nullable String location;
     private final @Nullable List<String> zones;
 
-    @OutputCustomType.Constructor({"location","zones"})
+    @OutputCustomType.Constructor
     private ZoneMappingResponse(
-        @Nullable String location,
-        @Nullable List<String> zones) {
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("zones") @Nullable List<String> zones) {
         this.location = location;
         this.zones = zones;
     }

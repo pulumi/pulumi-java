@@ -30,12 +30,12 @@ public final class StageDetailsResponse {
      */
     private final String startTime;
 
-    @OutputCustomType.Constructor({"displayName","stageName","stageStatus","startTime"})
+    @OutputCustomType.Constructor
     private StageDetailsResponse(
-        String displayName,
-        String stageName,
-        String stageStatus,
-        String startTime) {
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("stageName") String stageName,
+        @OutputCustomType.Parameter("stageStatus") String stageStatus,
+        @OutputCustomType.Parameter("startTime") String startTime) {
         this.displayName = displayName;
         this.stageName = stageName;
         this.stageStatus = stageStatus;

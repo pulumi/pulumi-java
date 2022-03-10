@@ -20,10 +20,10 @@ public final class BusinessIdentityResponse {
      */
     private final String value;
 
-    @OutputCustomType.Constructor({"qualifier","value"})
+    @OutputCustomType.Constructor
     private BusinessIdentityResponse(
-        String qualifier,
-        String value) {
+        @OutputCustomType.Parameter("qualifier") String qualifier,
+        @OutputCustomType.Parameter("value") String value) {
         this.qualifier = qualifier;
         this.value = value;
     }

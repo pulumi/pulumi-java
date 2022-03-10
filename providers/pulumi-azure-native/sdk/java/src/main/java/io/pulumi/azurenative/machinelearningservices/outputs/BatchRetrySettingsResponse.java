@@ -23,10 +23,10 @@ public final class BatchRetrySettingsResponse {
      */
     private final @Nullable String timeout;
 
-    @OutputCustomType.Constructor({"maxRetries","timeout"})
+    @OutputCustomType.Constructor
     private BatchRetrySettingsResponse(
-        @Nullable Integer maxRetries,
-        @Nullable String timeout) {
+        @OutputCustomType.Parameter("maxRetries") @Nullable Integer maxRetries,
+        @OutputCustomType.Parameter("timeout") @Nullable String timeout) {
         this.maxRetries = maxRetries;
         this.timeout = timeout;
     }

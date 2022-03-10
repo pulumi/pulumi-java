@@ -28,11 +28,11 @@ public final class IotDpsSkuInfoResponse {
      */
     private final String tier;
 
-    @OutputCustomType.Constructor({"capacity","name","tier"})
+    @OutputCustomType.Constructor
     private IotDpsSkuInfoResponse(
-        @Nullable Double capacity,
-        @Nullable String name,
-        String tier) {
+        @OutputCustomType.Parameter("capacity") @Nullable Double capacity,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("tier") String tier) {
         this.capacity = capacity;
         this.name = name;
         this.tier = tier;

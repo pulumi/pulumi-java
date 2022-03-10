@@ -30,11 +30,11 @@ public final class LiveEventTranscriptionResponse {
      */
     private final @Nullable LiveEventOutputTranscriptionTrackResponse outputTranscriptionTrack;
 
-    @OutputCustomType.Constructor({"inputTrackSelection","language","outputTranscriptionTrack"})
+    @OutputCustomType.Constructor
     private LiveEventTranscriptionResponse(
-        @Nullable List<LiveEventInputTrackSelectionResponse> inputTrackSelection,
-        @Nullable String language,
-        @Nullable LiveEventOutputTranscriptionTrackResponse outputTranscriptionTrack) {
+        @OutputCustomType.Parameter("inputTrackSelection") @Nullable List<LiveEventInputTrackSelectionResponse> inputTrackSelection,
+        @OutputCustomType.Parameter("language") @Nullable String language,
+        @OutputCustomType.Parameter("outputTranscriptionTrack") @Nullable LiveEventOutputTranscriptionTrackResponse outputTranscriptionTrack) {
         this.inputTrackSelection = inputTrackSelection;
         this.language = language;
         this.outputTranscriptionTrack = outputTranscriptionTrack;

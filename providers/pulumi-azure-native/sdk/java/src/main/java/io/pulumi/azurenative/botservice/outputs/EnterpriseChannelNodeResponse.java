@@ -37,13 +37,13 @@ public final class EnterpriseChannelNodeResponse {
      */
     private final @Nullable String state;
 
-    @OutputCustomType.Constructor({"azureLocation","azureSku","id","name","state"})
+    @OutputCustomType.Constructor
     private EnterpriseChannelNodeResponse(
-        String azureLocation,
-        String azureSku,
-        String id,
-        String name,
-        @Nullable String state) {
+        @OutputCustomType.Parameter("azureLocation") String azureLocation,
+        @OutputCustomType.Parameter("azureSku") String azureSku,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("state") @Nullable String state) {
         this.azureLocation = azureLocation;
         this.azureSku = azureSku;
         this.id = id;

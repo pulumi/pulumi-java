@@ -39,13 +39,13 @@ public final class AzureDataLakeStoreWriteSettingsResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"copyBehavior","disableMetricsCollection","expiryDateTime","maxConcurrentConnections","type"})
+    @OutputCustomType.Constructor
     private AzureDataLakeStoreWriteSettingsResponse(
-        @Nullable Object copyBehavior,
-        @Nullable Object disableMetricsCollection,
-        @Nullable Object expiryDateTime,
-        @Nullable Object maxConcurrentConnections,
-        String type) {
+        @OutputCustomType.Parameter("copyBehavior") @Nullable Object copyBehavior,
+        @OutputCustomType.Parameter("disableMetricsCollection") @Nullable Object disableMetricsCollection,
+        @OutputCustomType.Parameter("expiryDateTime") @Nullable Object expiryDateTime,
+        @OutputCustomType.Parameter("maxConcurrentConnections") @Nullable Object maxConcurrentConnections,
+        @OutputCustomType.Parameter("type") String type) {
         this.copyBehavior = copyBehavior;
         this.disableMetricsCollection = disableMetricsCollection;
         this.expiryDateTime = expiryDateTime;

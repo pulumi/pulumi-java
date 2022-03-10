@@ -29,11 +29,11 @@ public final class TrafficWeightResponse {
      */
     private final @Nullable Integer weight;
 
-    @OutputCustomType.Constructor({"latestRevision","revisionName","weight"})
+    @OutputCustomType.Constructor
     private TrafficWeightResponse(
-        @Nullable Boolean latestRevision,
-        @Nullable String revisionName,
-        @Nullable Integer weight) {
+        @OutputCustomType.Parameter("latestRevision") @Nullable Boolean latestRevision,
+        @OutputCustomType.Parameter("revisionName") @Nullable String revisionName,
+        @OutputCustomType.Parameter("weight") @Nullable Integer weight) {
         this.latestRevision = latestRevision;
         this.revisionName = revisionName;
         this.weight = weight;

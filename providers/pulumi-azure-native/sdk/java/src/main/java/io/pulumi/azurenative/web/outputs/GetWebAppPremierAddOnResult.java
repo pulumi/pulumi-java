@@ -68,19 +68,19 @@ public final class GetWebAppPremierAddOnResult {
      */
     private final @Nullable String vendor;
 
-    @OutputCustomType.Constructor({"id","kind","location","marketplaceOffer","marketplacePublisher","name","product","sku","tags","type","vendor"})
+    @OutputCustomType.Constructor
     private GetWebAppPremierAddOnResult(
-        String id,
-        @Nullable String kind,
-        String location,
-        @Nullable String marketplaceOffer,
-        @Nullable String marketplacePublisher,
-        String name,
-        @Nullable String product,
-        @Nullable String sku,
-        @Nullable Map<String,String> tags,
-        String type,
-        @Nullable String vendor) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("kind") @Nullable String kind,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("marketplaceOffer") @Nullable String marketplaceOffer,
+        @OutputCustomType.Parameter("marketplacePublisher") @Nullable String marketplacePublisher,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("product") @Nullable String product,
+        @OutputCustomType.Parameter("sku") @Nullable String sku,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("vendor") @Nullable String vendor) {
         this.id = id;
         this.kind = kind;
         this.location = location;

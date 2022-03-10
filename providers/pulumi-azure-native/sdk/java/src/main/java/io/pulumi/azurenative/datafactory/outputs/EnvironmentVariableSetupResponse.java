@@ -26,11 +26,11 @@ public final class EnvironmentVariableSetupResponse {
      */
     private final String variableValue;
 
-    @OutputCustomType.Constructor({"type","variableName","variableValue"})
+    @OutputCustomType.Constructor
     private EnvironmentVariableSetupResponse(
-        String type,
-        String variableName,
-        String variableValue) {
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("variableName") String variableName,
+        @OutputCustomType.Parameter("variableValue") String variableValue) {
         this.type = type;
         this.variableName = variableName;
         this.variableValue = variableValue;

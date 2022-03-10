@@ -37,12 +37,12 @@ public final class ConfigurationResponse {
      */
     private final @Nullable List<SecretResponse> secrets;
 
-    @OutputCustomType.Constructor({"activeRevisionsMode","ingress","registries","secrets"})
+    @OutputCustomType.Constructor
     private ConfigurationResponse(
-        @Nullable String activeRevisionsMode,
-        @Nullable IngressResponse ingress,
-        @Nullable List<RegistryCredentialsResponse> registries,
-        @Nullable List<SecretResponse> secrets) {
+        @OutputCustomType.Parameter("activeRevisionsMode") @Nullable String activeRevisionsMode,
+        @OutputCustomType.Parameter("ingress") @Nullable IngressResponse ingress,
+        @OutputCustomType.Parameter("registries") @Nullable List<RegistryCredentialsResponse> registries,
+        @OutputCustomType.Parameter("secrets") @Nullable List<SecretResponse> secrets) {
         this.activeRevisionsMode = activeRevisionsMode;
         this.ingress = ingress;
         this.registries = registries;

@@ -20,10 +20,10 @@ public final class ListWorkflowAccessKeySecretKeysResult {
      */
     private final String secondarySecretKey;
 
-    @OutputCustomType.Constructor({"primarySecretKey","secondarySecretKey"})
+    @OutputCustomType.Constructor
     private ListWorkflowAccessKeySecretKeysResult(
-        String primarySecretKey,
-        String secondarySecretKey) {
+        @OutputCustomType.Parameter("primarySecretKey") String primarySecretKey,
+        @OutputCustomType.Parameter("secondarySecretKey") String secondarySecretKey) {
         this.primarySecretKey = primarySecretKey;
         this.secondarySecretKey = secondarySecretKey;
     }

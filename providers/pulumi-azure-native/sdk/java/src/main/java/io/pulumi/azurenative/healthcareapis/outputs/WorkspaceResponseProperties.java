@@ -15,8 +15,8 @@ public final class WorkspaceResponseProperties {
      */
     private final String provisioningState;
 
-    @OutputCustomType.Constructor({"provisioningState"})
-    private WorkspaceResponseProperties(String provisioningState) {
+    @OutputCustomType.Constructor
+    private WorkspaceResponseProperties(@OutputCustomType.Parameter("provisioningState") String provisioningState) {
         this.provisioningState = provisioningState;
     }
 

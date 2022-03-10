@@ -41,13 +41,13 @@ public final class AlertingActionResponse {
      */
     private final TriggerConditionResponse trigger;
 
-    @OutputCustomType.Constructor({"aznsAction","odataType","severity","throttlingInMin","trigger"})
+    @OutputCustomType.Constructor
     private AlertingActionResponse(
-        @Nullable AzNsActionGroupResponse aznsAction,
-        String odataType,
-        String severity,
-        @Nullable Integer throttlingInMin,
-        TriggerConditionResponse trigger) {
+        @OutputCustomType.Parameter("aznsAction") @Nullable AzNsActionGroupResponse aznsAction,
+        @OutputCustomType.Parameter("odataType") String odataType,
+        @OutputCustomType.Parameter("severity") String severity,
+        @OutputCustomType.Parameter("throttlingInMin") @Nullable Integer throttlingInMin,
+        @OutputCustomType.Parameter("trigger") TriggerConditionResponse trigger) {
         this.aznsAction = aznsAction;
         this.odataType = odataType;
         this.severity = severity;

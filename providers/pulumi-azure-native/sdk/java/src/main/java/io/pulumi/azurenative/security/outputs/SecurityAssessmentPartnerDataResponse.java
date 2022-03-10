@@ -20,10 +20,10 @@ public final class SecurityAssessmentPartnerDataResponse {
      */
     private final String secret;
 
-    @OutputCustomType.Constructor({"partnerName","secret"})
+    @OutputCustomType.Constructor
     private SecurityAssessmentPartnerDataResponse(
-        String partnerName,
-        String secret) {
+        @OutputCustomType.Parameter("partnerName") String partnerName,
+        @OutputCustomType.Parameter("secret") String secret) {
         this.partnerName = partnerName;
         this.secret = secret;
     }

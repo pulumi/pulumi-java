@@ -28,11 +28,11 @@ public final class CloudServiceRoleSkuResponse {
      */
     private final @Nullable String tier;
 
-    @OutputCustomType.Constructor({"capacity","name","tier"})
+    @OutputCustomType.Constructor
     private CloudServiceRoleSkuResponse(
-        @Nullable Double capacity,
-        @Nullable String name,
-        @Nullable String tier) {
+        @OutputCustomType.Parameter("capacity") @Nullable Double capacity,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("tier") @Nullable String tier) {
         this.capacity = capacity;
         this.name = name;
         this.tier = tier;

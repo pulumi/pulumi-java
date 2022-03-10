@@ -32,12 +32,12 @@ public final class ProtocolCustomSettingsFormatResponse {
      */
     private final @Nullable String triggerSensitivityOverride;
 
-    @OutputCustomType.Constructor({"protocol","sourceRateOverride","triggerRateOverride","triggerSensitivityOverride"})
+    @OutputCustomType.Constructor
     private ProtocolCustomSettingsFormatResponse(
-        @Nullable String protocol,
-        @Nullable String sourceRateOverride,
-        @Nullable String triggerRateOverride,
-        @Nullable String triggerSensitivityOverride) {
+        @OutputCustomType.Parameter("protocol") @Nullable String protocol,
+        @OutputCustomType.Parameter("sourceRateOverride") @Nullable String sourceRateOverride,
+        @OutputCustomType.Parameter("triggerRateOverride") @Nullable String triggerRateOverride,
+        @OutputCustomType.Parameter("triggerSensitivityOverride") @Nullable String triggerSensitivityOverride) {
         this.protocol = protocol;
         this.sourceRateOverride = sourceRateOverride;
         this.triggerRateOverride = triggerRateOverride;

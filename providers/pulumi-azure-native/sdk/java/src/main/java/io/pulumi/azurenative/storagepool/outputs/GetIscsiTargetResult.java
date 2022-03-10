@@ -47,15 +47,15 @@ public final class GetIscsiTargetResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"id","name","provisioningState","status","targetIqn","tpgs","type"})
+    @OutputCustomType.Constructor
     private GetIscsiTargetResult(
-        String id,
-        String name,
-        String provisioningState,
-        String status,
-        String targetIqn,
-        List<TargetPortalGroupResponse> tpgs,
-        String type) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("status") String status,
+        @OutputCustomType.Parameter("targetIqn") String targetIqn,
+        @OutputCustomType.Parameter("tpgs") List<TargetPortalGroupResponse> tpgs,
+        @OutputCustomType.Parameter("type") String type) {
         this.id = id;
         this.name = name;
         this.provisioningState = provisioningState;

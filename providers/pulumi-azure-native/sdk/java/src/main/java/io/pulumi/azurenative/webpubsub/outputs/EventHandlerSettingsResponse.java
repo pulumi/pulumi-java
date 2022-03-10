@@ -19,8 +19,8 @@ public final class EventHandlerSettingsResponse {
      */
     private final @Nullable Map<String,List<EventHandlerTemplateResponse>> items;
 
-    @OutputCustomType.Constructor({"items"})
-    private EventHandlerSettingsResponse(@Nullable Map<String,List<EventHandlerTemplateResponse>> items) {
+    @OutputCustomType.Constructor
+    private EventHandlerSettingsResponse(@OutputCustomType.Parameter("items") @Nullable Map<String,List<EventHandlerTemplateResponse>> items) {
         this.items = items;
     }
 

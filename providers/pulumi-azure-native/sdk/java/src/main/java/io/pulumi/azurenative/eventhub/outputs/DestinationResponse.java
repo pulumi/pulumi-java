@@ -32,12 +32,12 @@ public final class DestinationResponse {
      */
     private final @Nullable String storageAccountResourceId;
 
-    @OutputCustomType.Constructor({"archiveNameFormat","blobContainer","name","storageAccountResourceId"})
+    @OutputCustomType.Constructor
     private DestinationResponse(
-        @Nullable String archiveNameFormat,
-        @Nullable String blobContainer,
-        @Nullable String name,
-        @Nullable String storageAccountResourceId) {
+        @OutputCustomType.Parameter("archiveNameFormat") @Nullable String archiveNameFormat,
+        @OutputCustomType.Parameter("blobContainer") @Nullable String blobContainer,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("storageAccountResourceId") @Nullable String storageAccountResourceId) {
         this.archiveNameFormat = archiveNameFormat;
         this.blobContainer = blobContainer;
         this.name = name;

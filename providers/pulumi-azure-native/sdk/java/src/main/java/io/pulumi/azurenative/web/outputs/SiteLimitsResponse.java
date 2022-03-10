@@ -27,11 +27,11 @@ public final class SiteLimitsResponse {
      */
     private final @Nullable Double maxPercentageCpu;
 
-    @OutputCustomType.Constructor({"maxDiskSizeInMb","maxMemoryInMb","maxPercentageCpu"})
+    @OutputCustomType.Constructor
     private SiteLimitsResponse(
-        @Nullable Double maxDiskSizeInMb,
-        @Nullable Double maxMemoryInMb,
-        @Nullable Double maxPercentageCpu) {
+        @OutputCustomType.Parameter("maxDiskSizeInMb") @Nullable Double maxDiskSizeInMb,
+        @OutputCustomType.Parameter("maxMemoryInMb") @Nullable Double maxMemoryInMb,
+        @OutputCustomType.Parameter("maxPercentageCpu") @Nullable Double maxPercentageCpu) {
         this.maxDiskSizeInMb = maxDiskSizeInMb;
         this.maxMemoryInMb = maxMemoryInMb;
         this.maxPercentageCpu = maxPercentageCpu;

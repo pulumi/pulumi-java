@@ -17,8 +17,8 @@ public final class CacheResponseSku {
      */
     private final @Nullable String name;
 
-    @OutputCustomType.Constructor({"name"})
-    private CacheResponseSku(@Nullable String name) {
+    @OutputCustomType.Constructor
+    private CacheResponseSku(@OutputCustomType.Parameter("name") @Nullable String name) {
         this.name = name;
     }
 

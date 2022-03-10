@@ -20,10 +20,10 @@ public final class ListNotebookWorkspaceConnectionInfoResult {
      */
     private final String notebookServerEndpoint;
 
-    @OutputCustomType.Constructor({"authToken","notebookServerEndpoint"})
+    @OutputCustomType.Constructor
     private ListNotebookWorkspaceConnectionInfoResult(
-        String authToken,
-        String notebookServerEndpoint) {
+        @OutputCustomType.Parameter("authToken") String authToken,
+        @OutputCustomType.Parameter("notebookServerEndpoint") String notebookServerEndpoint) {
         this.authToken = authToken;
         this.notebookServerEndpoint = notebookServerEndpoint;
     }

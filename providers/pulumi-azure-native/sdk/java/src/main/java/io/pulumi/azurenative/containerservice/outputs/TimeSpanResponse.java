@@ -22,10 +22,10 @@ public final class TimeSpanResponse {
      */
     private final @Nullable String start;
 
-    @OutputCustomType.Constructor({"end","start"})
+    @OutputCustomType.Constructor
     private TimeSpanResponse(
-        @Nullable String end,
-        @Nullable String start) {
+        @OutputCustomType.Parameter("end") @Nullable String end,
+        @OutputCustomType.Parameter("start") @Nullable String start) {
         this.end = end;
         this.start = start;
     }

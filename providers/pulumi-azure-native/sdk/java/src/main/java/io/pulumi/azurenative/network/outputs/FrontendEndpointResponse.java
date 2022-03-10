@@ -70,19 +70,19 @@ public final class FrontendEndpointResponse {
      */
     private final @Nullable FrontendEndpointUpdateParametersResponseWebApplicationFirewallPolicyLink webApplicationFirewallPolicyLink;
 
-    @OutputCustomType.Constructor({"customHttpsConfiguration","customHttpsProvisioningState","customHttpsProvisioningSubstate","hostName","id","name","resourceState","sessionAffinityEnabledState","sessionAffinityTtlSeconds","type","webApplicationFirewallPolicyLink"})
+    @OutputCustomType.Constructor
     private FrontendEndpointResponse(
-        CustomHttpsConfigurationResponse customHttpsConfiguration,
-        String customHttpsProvisioningState,
-        String customHttpsProvisioningSubstate,
-        @Nullable String hostName,
-        @Nullable String id,
-        @Nullable String name,
-        String resourceState,
-        @Nullable String sessionAffinityEnabledState,
-        @Nullable Integer sessionAffinityTtlSeconds,
-        String type,
-        @Nullable FrontendEndpointUpdateParametersResponseWebApplicationFirewallPolicyLink webApplicationFirewallPolicyLink) {
+        @OutputCustomType.Parameter("customHttpsConfiguration") CustomHttpsConfigurationResponse customHttpsConfiguration,
+        @OutputCustomType.Parameter("customHttpsProvisioningState") String customHttpsProvisioningState,
+        @OutputCustomType.Parameter("customHttpsProvisioningSubstate") String customHttpsProvisioningSubstate,
+        @OutputCustomType.Parameter("hostName") @Nullable String hostName,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("resourceState") String resourceState,
+        @OutputCustomType.Parameter("sessionAffinityEnabledState") @Nullable String sessionAffinityEnabledState,
+        @OutputCustomType.Parameter("sessionAffinityTtlSeconds") @Nullable Integer sessionAffinityTtlSeconds,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("webApplicationFirewallPolicyLink") @Nullable FrontendEndpointUpdateParametersResponseWebApplicationFirewallPolicyLink webApplicationFirewallPolicyLink) {
         this.customHttpsConfiguration = customHttpsConfiguration;
         this.customHttpsProvisioningState = customHttpsProvisioningState;
         this.customHttpsProvisioningSubstate = customHttpsProvisioningSubstate;

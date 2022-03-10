@@ -101,25 +101,25 @@ public final class MigrateSqlServerSqlMITaskOutputMigrationLevelResponse {
      */
     private final String targetServerVersion;
 
-    @OutputCustomType.Constructor({"agentJobs","databases","endedOn","exceptionsAndWarnings","id","logins","message","orphanedUsersInfo","resultType","serverRoleResults","sourceServerBrandVersion","sourceServerVersion","startedOn","state","status","targetServerBrandVersion","targetServerVersion"})
+    @OutputCustomType.Constructor
     private MigrateSqlServerSqlMITaskOutputMigrationLevelResponse(
-        Map<String,String> agentJobs,
-        Map<String,String> databases,
-        String endedOn,
-        List<ReportableExceptionResponse> exceptionsAndWarnings,
-        String id,
-        Map<String,String> logins,
-        String message,
-        List<OrphanedUserInfoResponse> orphanedUsersInfo,
-        String resultType,
-        Map<String,StartMigrationScenarioServerRoleResultResponse> serverRoleResults,
-        String sourceServerBrandVersion,
-        String sourceServerVersion,
-        String startedOn,
-        String state,
-        String status,
-        String targetServerBrandVersion,
-        String targetServerVersion) {
+        @OutputCustomType.Parameter("agentJobs") Map<String,String> agentJobs,
+        @OutputCustomType.Parameter("databases") Map<String,String> databases,
+        @OutputCustomType.Parameter("endedOn") String endedOn,
+        @OutputCustomType.Parameter("exceptionsAndWarnings") List<ReportableExceptionResponse> exceptionsAndWarnings,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("logins") Map<String,String> logins,
+        @OutputCustomType.Parameter("message") String message,
+        @OutputCustomType.Parameter("orphanedUsersInfo") List<OrphanedUserInfoResponse> orphanedUsersInfo,
+        @OutputCustomType.Parameter("resultType") String resultType,
+        @OutputCustomType.Parameter("serverRoleResults") Map<String,StartMigrationScenarioServerRoleResultResponse> serverRoleResults,
+        @OutputCustomType.Parameter("sourceServerBrandVersion") String sourceServerBrandVersion,
+        @OutputCustomType.Parameter("sourceServerVersion") String sourceServerVersion,
+        @OutputCustomType.Parameter("startedOn") String startedOn,
+        @OutputCustomType.Parameter("state") String state,
+        @OutputCustomType.Parameter("status") String status,
+        @OutputCustomType.Parameter("targetServerBrandVersion") String targetServerBrandVersion,
+        @OutputCustomType.Parameter("targetServerVersion") String targetServerVersion) {
         this.agentJobs = agentJobs;
         this.databases = databases;
         this.endedOn = endedOn;

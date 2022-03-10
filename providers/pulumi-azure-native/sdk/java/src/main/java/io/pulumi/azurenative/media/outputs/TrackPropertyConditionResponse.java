@@ -27,11 +27,11 @@ public final class TrackPropertyConditionResponse {
      */
     private final @Nullable String value;
 
-    @OutputCustomType.Constructor({"operation","property","value"})
+    @OutputCustomType.Constructor
     private TrackPropertyConditionResponse(
-        String operation,
-        String property,
-        @Nullable String value) {
+        @OutputCustomType.Parameter("operation") String operation,
+        @OutputCustomType.Parameter("property") String property,
+        @OutputCustomType.Parameter("value") @Nullable String value) {
         this.operation = operation;
         this.property = property;
         this.value = value;

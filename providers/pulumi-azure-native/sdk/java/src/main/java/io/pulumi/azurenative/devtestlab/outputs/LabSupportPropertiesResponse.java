@@ -22,10 +22,10 @@ public final class LabSupportPropertiesResponse {
      */
     private final @Nullable String markdown;
 
-    @OutputCustomType.Constructor({"enabled","markdown"})
+    @OutputCustomType.Constructor
     private LabSupportPropertiesResponse(
-        @Nullable String enabled,
-        @Nullable String markdown) {
+        @OutputCustomType.Parameter("enabled") @Nullable String enabled,
+        @OutputCustomType.Parameter("markdown") @Nullable String markdown) {
         this.enabled = enabled;
         this.markdown = markdown;
     }

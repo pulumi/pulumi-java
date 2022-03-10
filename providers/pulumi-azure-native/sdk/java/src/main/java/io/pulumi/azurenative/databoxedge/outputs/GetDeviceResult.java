@@ -151,34 +151,34 @@ public final class GetDeviceResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"configuredRoleTypes","culture","dataBoxEdgeDeviceStatus","description","deviceHcsVersion","deviceLocalCapacity","deviceModel","deviceSoftwareVersion","deviceType","edgeProfile","etag","friendlyName","id","identity","kind","location","modelDescription","name","nodeCount","resourceMoveDetails","serialNumber","sku","systemData","tags","timeZone","type"})
+    @OutputCustomType.Constructor
     private GetDeviceResult(
-        List<String> configuredRoleTypes,
-        String culture,
-        @Nullable String dataBoxEdgeDeviceStatus,
-        String description,
-        String deviceHcsVersion,
-        Double deviceLocalCapacity,
-        String deviceModel,
-        String deviceSoftwareVersion,
-        String deviceType,
-        EdgeProfileResponse edgeProfile,
-        @Nullable String etag,
-        String friendlyName,
-        String id,
-        @Nullable ResourceIdentityResponse identity,
-        String kind,
-        String location,
-        String modelDescription,
-        String name,
-        Integer nodeCount,
-        ResourceMoveDetailsResponse resourceMoveDetails,
-        String serialNumber,
-        @Nullable SkuResponse sku,
-        SystemDataResponse systemData,
-        @Nullable Map<String,String> tags,
-        String timeZone,
-        String type) {
+        @OutputCustomType.Parameter("configuredRoleTypes") List<String> configuredRoleTypes,
+        @OutputCustomType.Parameter("culture") String culture,
+        @OutputCustomType.Parameter("dataBoxEdgeDeviceStatus") @Nullable String dataBoxEdgeDeviceStatus,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("deviceHcsVersion") String deviceHcsVersion,
+        @OutputCustomType.Parameter("deviceLocalCapacity") Double deviceLocalCapacity,
+        @OutputCustomType.Parameter("deviceModel") String deviceModel,
+        @OutputCustomType.Parameter("deviceSoftwareVersion") String deviceSoftwareVersion,
+        @OutputCustomType.Parameter("deviceType") String deviceType,
+        @OutputCustomType.Parameter("edgeProfile") EdgeProfileResponse edgeProfile,
+        @OutputCustomType.Parameter("etag") @Nullable String etag,
+        @OutputCustomType.Parameter("friendlyName") String friendlyName,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("identity") @Nullable ResourceIdentityResponse identity,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("modelDescription") String modelDescription,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("nodeCount") Integer nodeCount,
+        @OutputCustomType.Parameter("resourceMoveDetails") ResourceMoveDetailsResponse resourceMoveDetails,
+        @OutputCustomType.Parameter("serialNumber") String serialNumber,
+        @OutputCustomType.Parameter("sku") @Nullable SkuResponse sku,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("timeZone") String timeZone,
+        @OutputCustomType.Parameter("type") String type) {
         this.configuredRoleTypes = configuredRoleTypes;
         this.culture = culture;
         this.dataBoxEdgeDeviceStatus = dataBoxEdgeDeviceStatus;

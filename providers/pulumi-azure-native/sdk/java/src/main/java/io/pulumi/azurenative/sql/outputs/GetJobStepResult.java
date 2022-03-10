@@ -61,17 +61,17 @@ public final class GetJobStepResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"action","credential","executionOptions","id","name","output","stepId","targetGroup","type"})
+    @OutputCustomType.Constructor
     private GetJobStepResult(
-        JobStepActionResponse action,
-        String credential,
-        @Nullable JobStepExecutionOptionsResponse executionOptions,
-        String id,
-        String name,
-        @Nullable JobStepOutputResponse output,
-        @Nullable Integer stepId,
-        String targetGroup,
-        String type) {
+        @OutputCustomType.Parameter("action") JobStepActionResponse action,
+        @OutputCustomType.Parameter("credential") String credential,
+        @OutputCustomType.Parameter("executionOptions") @Nullable JobStepExecutionOptionsResponse executionOptions,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("output") @Nullable JobStepOutputResponse output,
+        @OutputCustomType.Parameter("stepId") @Nullable Integer stepId,
+        @OutputCustomType.Parameter("targetGroup") String targetGroup,
+        @OutputCustomType.Parameter("type") String type) {
         this.action = action;
         this.credential = credential;
         this.executionOptions = executionOptions;

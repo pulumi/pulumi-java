@@ -15,8 +15,8 @@ public final class DataCollectionEndpointResponseLogsIngestion {
      */
     private final String endpoint;
 
-    @OutputCustomType.Constructor({"endpoint"})
-    private DataCollectionEndpointResponseLogsIngestion(String endpoint) {
+    @OutputCustomType.Constructor
+    private DataCollectionEndpointResponseLogsIngestion(@OutputCustomType.Parameter("endpoint") String endpoint) {
         this.endpoint = endpoint;
     }
 

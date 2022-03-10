@@ -20,10 +20,10 @@ public final class ReportTimePeriodResponse {
      */
     private final String to;
 
-    @OutputCustomType.Constructor({"from","to"})
+    @OutputCustomType.Constructor
     private ReportTimePeriodResponse(
-        String from,
-        String to) {
+        @OutputCustomType.Parameter("from") String from,
+        @OutputCustomType.Parameter("to") String to) {
         this.from = from;
         this.to = to;
     }

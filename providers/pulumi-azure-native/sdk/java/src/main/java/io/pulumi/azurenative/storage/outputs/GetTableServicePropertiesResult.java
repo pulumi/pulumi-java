@@ -33,12 +33,12 @@ public final class GetTableServicePropertiesResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"cors","id","name","type"})
+    @OutputCustomType.Constructor
     private GetTableServicePropertiesResult(
-        @Nullable CorsRulesResponse cors,
-        String id,
-        String name,
-        String type) {
+        @OutputCustomType.Parameter("cors") @Nullable CorsRulesResponse cors,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("type") String type) {
         this.cors = cors;
         this.id = id;
         this.name = name;

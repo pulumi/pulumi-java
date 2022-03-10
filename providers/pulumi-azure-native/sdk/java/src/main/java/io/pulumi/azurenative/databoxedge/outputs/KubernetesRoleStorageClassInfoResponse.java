@@ -25,11 +25,11 @@ public final class KubernetesRoleStorageClassInfoResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"name","posixCompliant","type"})
+    @OutputCustomType.Constructor
     private KubernetesRoleStorageClassInfoResponse(
-        String name,
-        String posixCompliant,
-        String type) {
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("posixCompliant") String posixCompliant,
+        @OutputCustomType.Parameter("type") String type) {
         this.name = name;
         this.posixCompliant = posixCompliant;
         this.type = type;

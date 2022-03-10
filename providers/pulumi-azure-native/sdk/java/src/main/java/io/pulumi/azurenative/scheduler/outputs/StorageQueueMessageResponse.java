@@ -32,12 +32,12 @@ public final class StorageQueueMessageResponse {
      */
     private final @Nullable String storageAccount;
 
-    @OutputCustomType.Constructor({"message","queueName","sasToken","storageAccount"})
+    @OutputCustomType.Constructor
     private StorageQueueMessageResponse(
-        @Nullable String message,
-        @Nullable String queueName,
-        @Nullable String sasToken,
-        @Nullable String storageAccount) {
+        @OutputCustomType.Parameter("message") @Nullable String message,
+        @OutputCustomType.Parameter("queueName") @Nullable String queueName,
+        @OutputCustomType.Parameter("sasToken") @Nullable String sasToken,
+        @OutputCustomType.Parameter("storageAccount") @Nullable String storageAccount) {
         this.message = message;
         this.queueName = queueName;
         this.sasToken = sasToken;

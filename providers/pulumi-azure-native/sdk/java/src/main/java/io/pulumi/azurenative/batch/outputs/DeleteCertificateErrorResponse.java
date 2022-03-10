@@ -33,12 +33,12 @@ public final class DeleteCertificateErrorResponse {
      */
     private final @Nullable String target;
 
-    @OutputCustomType.Constructor({"code","details","message","target"})
+    @OutputCustomType.Constructor
     private DeleteCertificateErrorResponse(
-        String code,
-        @Nullable List<DeleteCertificateErrorResponse> details,
-        String message,
-        @Nullable String target) {
+        @OutputCustomType.Parameter("code") String code,
+        @OutputCustomType.Parameter("details") @Nullable List<DeleteCertificateErrorResponse> details,
+        @OutputCustomType.Parameter("message") String message,
+        @OutputCustomType.Parameter("target") @Nullable String target) {
         this.code = code;
         this.details = details;
         this.message = message;

@@ -85,22 +85,22 @@ public final class SubscriptionFeatureRegistrationResponseProperties {
      */
     private final String tenantId;
 
-    @OutputCustomType.Constructor({"approvalType","authorizationProfile","description","displayName","documentationLink","featureName","metadata","providerNamespace","registrationDate","releaseDate","shouldFeatureDisplayInPortal","state","subscriptionId","tenantId"})
+    @OutputCustomType.Constructor
     private SubscriptionFeatureRegistrationResponseProperties(
-        String approvalType,
-        @Nullable AuthorizationProfileResponse authorizationProfile,
-        @Nullable String description,
-        String displayName,
-        String documentationLink,
-        String featureName,
-        @Nullable Map<String,String> metadata,
-        String providerNamespace,
-        String registrationDate,
-        String releaseDate,
-        @Nullable Boolean shouldFeatureDisplayInPortal,
-        @Nullable String state,
-        String subscriptionId,
-        String tenantId) {
+        @OutputCustomType.Parameter("approvalType") String approvalType,
+        @OutputCustomType.Parameter("authorizationProfile") @Nullable AuthorizationProfileResponse authorizationProfile,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("documentationLink") String documentationLink,
+        @OutputCustomType.Parameter("featureName") String featureName,
+        @OutputCustomType.Parameter("metadata") @Nullable Map<String,String> metadata,
+        @OutputCustomType.Parameter("providerNamespace") String providerNamespace,
+        @OutputCustomType.Parameter("registrationDate") String registrationDate,
+        @OutputCustomType.Parameter("releaseDate") String releaseDate,
+        @OutputCustomType.Parameter("shouldFeatureDisplayInPortal") @Nullable Boolean shouldFeatureDisplayInPortal,
+        @OutputCustomType.Parameter("state") @Nullable String state,
+        @OutputCustomType.Parameter("subscriptionId") String subscriptionId,
+        @OutputCustomType.Parameter("tenantId") String tenantId) {
         this.approvalType = approvalType;
         this.authorizationProfile = authorizationProfile;
         this.description = description;

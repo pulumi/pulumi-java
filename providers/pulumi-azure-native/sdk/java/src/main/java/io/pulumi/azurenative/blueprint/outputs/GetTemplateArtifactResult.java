@@ -67,18 +67,18 @@ public final class GetTemplateArtifactResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"dependsOn","description","displayName","id","kind","name","parameters","resourceGroup","template","type"})
+    @OutputCustomType.Constructor
     private GetTemplateArtifactResult(
-        @Nullable List<String> dependsOn,
-        @Nullable String description,
-        @Nullable String displayName,
-        String id,
-        String kind,
-        String name,
-        Map<String,ParameterValueResponse> parameters,
-        @Nullable String resourceGroup,
-        Object template,
-        String type) {
+        @OutputCustomType.Parameter("dependsOn") @Nullable List<String> dependsOn,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("displayName") @Nullable String displayName,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("parameters") Map<String,ParameterValueResponse> parameters,
+        @OutputCustomType.Parameter("resourceGroup") @Nullable String resourceGroup,
+        @OutputCustomType.Parameter("template") Object template,
+        @OutputCustomType.Parameter("type") String type) {
         this.dependsOn = dependsOn;
         this.description = description;
         this.displayName = displayName;

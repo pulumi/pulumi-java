@@ -43,14 +43,14 @@ public final class StepOperationInfoResponse {
      */
     private final String startTime;
 
-    @OutputCustomType.Constructor({"correlationId","deploymentName","endTime","error","lastUpdatedTime","startTime"})
+    @OutputCustomType.Constructor
     private StepOperationInfoResponse(
-        String correlationId,
-        String deploymentName,
-        String endTime,
-        @Nullable CloudErrorBodyResponse error,
-        String lastUpdatedTime,
-        String startTime) {
+        @OutputCustomType.Parameter("correlationId") String correlationId,
+        @OutputCustomType.Parameter("deploymentName") String deploymentName,
+        @OutputCustomType.Parameter("endTime") String endTime,
+        @OutputCustomType.Parameter("error") @Nullable CloudErrorBodyResponse error,
+        @OutputCustomType.Parameter("lastUpdatedTime") String lastUpdatedTime,
+        @OutputCustomType.Parameter("startTime") String startTime) {
         this.correlationId = correlationId;
         this.deploymentName = deploymentName;
         this.endTime = endTime;

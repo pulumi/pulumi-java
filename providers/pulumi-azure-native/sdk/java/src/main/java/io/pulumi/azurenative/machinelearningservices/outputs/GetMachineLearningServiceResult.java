@@ -65,17 +65,17 @@ public final class GetMachineLearningServiceResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"id","identity","location","name","properties","sku","systemData","tags","type"})
+    @OutputCustomType.Constructor
     private GetMachineLearningServiceResult(
-        String id,
-        @Nullable IdentityResponse identity,
-        @Nullable String location,
-        String name,
-        Object properties,
-        @Nullable SkuResponse sku,
-        SystemDataResponse systemData,
-        @Nullable Map<String,String> tags,
-        String type) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("identity") @Nullable IdentityResponse identity,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("properties") Object properties,
+        @OutputCustomType.Parameter("sku") @Nullable SkuResponse sku,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type) {
         this.id = id;
         this.identity = identity;
         this.location = location;

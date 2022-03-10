@@ -39,13 +39,13 @@ public final class EventRequestMessageResponse {
      */
     private final @Nullable String version;
 
-    @OutputCustomType.Constructor({"content","headers","method","requestUri","version"})
+    @OutputCustomType.Constructor
     private EventRequestMessageResponse(
-        @Nullable EventContentResponse content,
-        @Nullable Map<String,String> headers,
-        @Nullable String method,
-        @Nullable String requestUri,
-        @Nullable String version) {
+        @OutputCustomType.Parameter("content") @Nullable EventContentResponse content,
+        @OutputCustomType.Parameter("headers") @Nullable Map<String,String> headers,
+        @OutputCustomType.Parameter("method") @Nullable String method,
+        @OutputCustomType.Parameter("requestUri") @Nullable String requestUri,
+        @OutputCustomType.Parameter("version") @Nullable String version) {
         this.content = content;
         this.headers = headers;
         this.method = method;

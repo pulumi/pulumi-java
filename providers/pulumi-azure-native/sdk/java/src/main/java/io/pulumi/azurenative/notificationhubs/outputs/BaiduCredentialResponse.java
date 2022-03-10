@@ -27,11 +27,11 @@ public final class BaiduCredentialResponse {
      */
     private final @Nullable String baiduSecretKey;
 
-    @OutputCustomType.Constructor({"baiduApiKey","baiduEndPoint","baiduSecretKey"})
+    @OutputCustomType.Constructor
     private BaiduCredentialResponse(
-        @Nullable String baiduApiKey,
-        @Nullable String baiduEndPoint,
-        @Nullable String baiduSecretKey) {
+        @OutputCustomType.Parameter("baiduApiKey") @Nullable String baiduApiKey,
+        @OutputCustomType.Parameter("baiduEndPoint") @Nullable String baiduEndPoint,
+        @OutputCustomType.Parameter("baiduSecretKey") @Nullable String baiduSecretKey) {
         this.baiduApiKey = baiduApiKey;
         this.baiduEndPoint = baiduEndPoint;
         this.baiduSecretKey = baiduSecretKey;

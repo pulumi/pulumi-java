@@ -37,13 +37,13 @@ public final class ClusterReportedPropertiesResponse {
      */
     private final List<ClusterNodeResponse> nodes;
 
-    @OutputCustomType.Constructor({"clusterId","clusterName","clusterVersion","lastUpdated","nodes"})
+    @OutputCustomType.Constructor
     private ClusterReportedPropertiesResponse(
-        String clusterId,
-        String clusterName,
-        String clusterVersion,
-        String lastUpdated,
-        List<ClusterNodeResponse> nodes) {
+        @OutputCustomType.Parameter("clusterId") String clusterId,
+        @OutputCustomType.Parameter("clusterName") String clusterName,
+        @OutputCustomType.Parameter("clusterVersion") String clusterVersion,
+        @OutputCustomType.Parameter("lastUpdated") String lastUpdated,
+        @OutputCustomType.Parameter("nodes") List<ClusterNodeResponse> nodes) {
         this.clusterId = clusterId;
         this.clusterName = clusterName;
         this.clusterVersion = clusterVersion;

@@ -37,13 +37,13 @@ public final class P2SVpnServerConfigRadiusServerRootCertificateResponse {
      */
     private final String publicCertData;
 
-    @OutputCustomType.Constructor({"etag","id","name","provisioningState","publicCertData"})
+    @OutputCustomType.Constructor
     private P2SVpnServerConfigRadiusServerRootCertificateResponse(
-        @Nullable String etag,
-        @Nullable String id,
-        @Nullable String name,
-        String provisioningState,
-        String publicCertData) {
+        @OutputCustomType.Parameter("etag") @Nullable String etag,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("publicCertData") String publicCertData) {
         this.etag = etag;
         this.id = id;
         this.name = name;

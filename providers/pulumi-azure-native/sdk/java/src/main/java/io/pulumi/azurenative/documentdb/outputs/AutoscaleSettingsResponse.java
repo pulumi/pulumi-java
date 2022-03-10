@@ -17,8 +17,8 @@ public final class AutoscaleSettingsResponse {
      */
     private final @Nullable Integer maxThroughput;
 
-    @OutputCustomType.Constructor({"maxThroughput"})
-    private AutoscaleSettingsResponse(@Nullable Integer maxThroughput) {
+    @OutputCustomType.Constructor
+    private AutoscaleSettingsResponse(@OutputCustomType.Parameter("maxThroughput") @Nullable Integer maxThroughput) {
         this.maxThroughput = maxThroughput;
     }
 

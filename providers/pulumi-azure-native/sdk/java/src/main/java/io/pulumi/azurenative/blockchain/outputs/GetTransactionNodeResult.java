@@ -64,18 +64,18 @@ public final class GetTransactionNodeResult {
      */
     private final String userName;
 
-    @OutputCustomType.Constructor({"dns","firewallRules","id","location","name","password","provisioningState","publicKey","type","userName"})
+    @OutputCustomType.Constructor
     private GetTransactionNodeResult(
-        String dns,
-        @Nullable List<FirewallRuleResponse> firewallRules,
-        String id,
-        @Nullable String location,
-        String name,
-        @Nullable String password,
-        String provisioningState,
-        String publicKey,
-        String type,
-        String userName) {
+        @OutputCustomType.Parameter("dns") String dns,
+        @OutputCustomType.Parameter("firewallRules") @Nullable List<FirewallRuleResponse> firewallRules,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("password") @Nullable String password,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("publicKey") String publicKey,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("userName") String userName) {
         this.dns = dns;
         this.firewallRules = firewallRules;
         this.id = id;

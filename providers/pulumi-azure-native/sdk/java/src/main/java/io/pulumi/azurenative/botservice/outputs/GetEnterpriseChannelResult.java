@@ -60,17 +60,17 @@ public final class GetEnterpriseChannelResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"etag","id","kind","location","name","properties","sku","tags","type"})
+    @OutputCustomType.Constructor
     private GetEnterpriseChannelResult(
-        @Nullable String etag,
-        String id,
-        @Nullable String kind,
-        @Nullable String location,
-        String name,
-        EnterpriseChannelPropertiesResponse properties,
-        @Nullable SkuResponse sku,
-        @Nullable Map<String,String> tags,
-        String type) {
+        @OutputCustomType.Parameter("etag") @Nullable String etag,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("kind") @Nullable String kind,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("properties") EnterpriseChannelPropertiesResponse properties,
+        @OutputCustomType.Parameter("sku") @Nullable SkuResponse sku,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type) {
         this.etag = etag;
         this.id = id;
         this.kind = kind;

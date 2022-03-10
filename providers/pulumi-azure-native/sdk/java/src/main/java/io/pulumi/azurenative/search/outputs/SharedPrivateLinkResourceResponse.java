@@ -33,12 +33,12 @@ public final class SharedPrivateLinkResourceResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"id","name","properties","type"})
+    @OutputCustomType.Constructor
     private SharedPrivateLinkResourceResponse(
-        String id,
-        String name,
-        @Nullable SharedPrivateLinkResourcePropertiesResponse properties,
-        String type) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("properties") @Nullable SharedPrivateLinkResourcePropertiesResponse properties,
+        @OutputCustomType.Parameter("type") String type) {
         this.id = id;
         this.name = name;
         this.properties = properties;

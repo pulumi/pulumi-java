@@ -22,10 +22,10 @@ public final class ApiResourcePoliciesResponse {
      */
     private final @Nullable String contentLink;
 
-    @OutputCustomType.Constructor({"content","contentLink"})
+    @OutputCustomType.Constructor
     private ApiResourcePoliciesResponse(
-        @Nullable String content,
-        @Nullable String contentLink) {
+        @OutputCustomType.Parameter("content") @Nullable String content,
+        @OutputCustomType.Parameter("contentLink") @Nullable String contentLink) {
         this.content = content;
         this.contentLink = contentLink;
     }

@@ -38,12 +38,12 @@ public final class PerfCounterDataSourceResponse {
      */
     private final @Nullable List<String> streams;
 
-    @OutputCustomType.Constructor({"counterSpecifiers","name","samplingFrequencyInSeconds","streams"})
+    @OutputCustomType.Constructor
     private PerfCounterDataSourceResponse(
-        @Nullable List<String> counterSpecifiers,
-        @Nullable String name,
-        @Nullable Integer samplingFrequencyInSeconds,
-        @Nullable List<String> streams) {
+        @OutputCustomType.Parameter("counterSpecifiers") @Nullable List<String> counterSpecifiers,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("samplingFrequencyInSeconds") @Nullable Integer samplingFrequencyInSeconds,
+        @OutputCustomType.Parameter("streams") @Nullable List<String> streams) {
         this.counterSpecifiers = counterSpecifiers;
         this.name = name;
         this.samplingFrequencyInSeconds = samplingFrequencyInSeconds;

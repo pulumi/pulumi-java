@@ -37,13 +37,13 @@ public final class UserPropertiesResponse {
      */
     private final TerminalSettingsResponse terminalSettings;
 
-    @OutputCustomType.Constructor({"preferredLocation","preferredOsType","preferredShellType","storageProfile","terminalSettings"})
+    @OutputCustomType.Constructor
     private UserPropertiesResponse(
-        String preferredLocation,
-        String preferredOsType,
-        String preferredShellType,
-        StorageProfileResponse storageProfile,
-        TerminalSettingsResponse terminalSettings) {
+        @OutputCustomType.Parameter("preferredLocation") String preferredLocation,
+        @OutputCustomType.Parameter("preferredOsType") String preferredOsType,
+        @OutputCustomType.Parameter("preferredShellType") String preferredShellType,
+        @OutputCustomType.Parameter("storageProfile") StorageProfileResponse storageProfile,
+        @OutputCustomType.Parameter("terminalSettings") TerminalSettingsResponse terminalSettings) {
         this.preferredLocation = preferredLocation;
         this.preferredOsType = preferredOsType;
         this.preferredShellType = preferredShellType;

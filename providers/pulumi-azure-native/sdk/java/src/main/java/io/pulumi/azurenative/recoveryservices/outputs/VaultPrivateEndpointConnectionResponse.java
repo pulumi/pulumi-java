@@ -27,11 +27,11 @@ public final class VaultPrivateEndpointConnectionResponse {
      */
     private final String provisioningState;
 
-    @OutputCustomType.Constructor({"privateEndpoint","privateLinkServiceConnectionState","provisioningState"})
+    @OutputCustomType.Constructor
     private VaultPrivateEndpointConnectionResponse(
-        PrivateEndpointResponse privateEndpoint,
-        VaultPrivateLinkServiceConnectionStateResponse privateLinkServiceConnectionState,
-        String provisioningState) {
+        @OutputCustomType.Parameter("privateEndpoint") PrivateEndpointResponse privateEndpoint,
+        @OutputCustomType.Parameter("privateLinkServiceConnectionState") VaultPrivateLinkServiceConnectionStateResponse privateLinkServiceConnectionState,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState) {
         this.privateEndpoint = privateEndpoint;
         this.privateLinkServiceConnectionState = privateLinkServiceConnectionState;
         this.provisioningState = provisioningState;

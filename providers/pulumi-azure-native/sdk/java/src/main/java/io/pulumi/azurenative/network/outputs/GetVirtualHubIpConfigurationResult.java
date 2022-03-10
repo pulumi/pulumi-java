@@ -59,17 +59,17 @@ public final class GetVirtualHubIpConfigurationResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"etag","id","name","privateIPAddress","privateIPAllocationMethod","provisioningState","publicIPAddress","subnet","type"})
+    @OutputCustomType.Constructor
     private GetVirtualHubIpConfigurationResult(
-        String etag,
-        @Nullable String id,
-        @Nullable String name,
-        @Nullable String privateIPAddress,
-        @Nullable String privateIPAllocationMethod,
-        String provisioningState,
-        @Nullable PublicIPAddressResponse publicIPAddress,
-        @Nullable SubnetResponse subnet,
-        String type) {
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("privateIPAddress") @Nullable String privateIPAddress,
+        @OutputCustomType.Parameter("privateIPAllocationMethod") @Nullable String privateIPAllocationMethod,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("publicIPAddress") @Nullable PublicIPAddressResponse publicIPAddress,
+        @OutputCustomType.Parameter("subnet") @Nullable SubnetResponse subnet,
+        @OutputCustomType.Parameter("type") String type) {
         this.etag = etag;
         this.id = id;
         this.name = name;

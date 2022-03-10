@@ -22,10 +22,10 @@ public final class NetworkPropertiesResponse {
      */
     private final @Nullable String resourceProviderConnection;
 
-    @OutputCustomType.Constructor({"privateLink","resourceProviderConnection"})
+    @OutputCustomType.Constructor
     private NetworkPropertiesResponse(
-        @Nullable String privateLink,
-        @Nullable String resourceProviderConnection) {
+        @OutputCustomType.Parameter("privateLink") @Nullable String privateLink,
+        @OutputCustomType.Parameter("resourceProviderConnection") @Nullable String resourceProviderConnection) {
         this.privateLink = privateLink;
         this.resourceProviderConnection = resourceProviderConnection;
     }

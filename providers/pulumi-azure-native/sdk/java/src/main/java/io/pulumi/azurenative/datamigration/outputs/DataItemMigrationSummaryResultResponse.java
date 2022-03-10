@@ -56,17 +56,17 @@ public final class DataItemMigrationSummaryResultResponse {
      */
     private final String statusMessage;
 
-    @OutputCustomType.Constructor({"endedOn","errorPrefix","itemsCompletedCount","itemsCount","name","resultPrefix","startedOn","state","statusMessage"})
+    @OutputCustomType.Constructor
     private DataItemMigrationSummaryResultResponse(
-        String endedOn,
-        String errorPrefix,
-        Double itemsCompletedCount,
-        Double itemsCount,
-        String name,
-        String resultPrefix,
-        String startedOn,
-        String state,
-        String statusMessage) {
+        @OutputCustomType.Parameter("endedOn") String endedOn,
+        @OutputCustomType.Parameter("errorPrefix") String errorPrefix,
+        @OutputCustomType.Parameter("itemsCompletedCount") Double itemsCompletedCount,
+        @OutputCustomType.Parameter("itemsCount") Double itemsCount,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("resultPrefix") String resultPrefix,
+        @OutputCustomType.Parameter("startedOn") String startedOn,
+        @OutputCustomType.Parameter("state") String state,
+        @OutputCustomType.Parameter("statusMessage") String statusMessage) {
         this.endedOn = endedOn;
         this.errorPrefix = errorPrefix;
         this.itemsCompletedCount = itemsCompletedCount;

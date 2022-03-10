@@ -17,8 +17,8 @@ public final class EncryptionPreferencesResponse {
      */
     private final @Nullable String doubleEncryptionStatus;
 
-    @OutputCustomType.Constructor({"doubleEncryptionStatus"})
-    private EncryptionPreferencesResponse(@Nullable String doubleEncryptionStatus) {
+    @OutputCustomType.Constructor
+    private EncryptionPreferencesResponse(@OutputCustomType.Parameter("doubleEncryptionStatus") @Nullable String doubleEncryptionStatus) {
         this.doubleEncryptionStatus = doubleEncryptionStatus;
     }
 

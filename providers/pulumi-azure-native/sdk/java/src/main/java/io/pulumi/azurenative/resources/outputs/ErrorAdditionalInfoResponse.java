@@ -21,10 +21,10 @@ public final class ErrorAdditionalInfoResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"info","type"})
+    @OutputCustomType.Constructor
     private ErrorAdditionalInfoResponse(
-        Object info,
-        String type) {
+        @OutputCustomType.Parameter("info") Object info,
+        @OutputCustomType.Parameter("type") String type) {
         this.info = info;
         this.type = type;
     }

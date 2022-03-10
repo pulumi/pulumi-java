@@ -22,10 +22,10 @@ public final class ApiKeyResponse {
      */
     private final @Nullable String value;
 
-    @OutputCustomType.Constructor({"keyName","value"})
+    @OutputCustomType.Constructor
     private ApiKeyResponse(
-        @Nullable String keyName,
-        @Nullable String value) {
+        @OutputCustomType.Parameter("keyName") @Nullable String keyName,
+        @OutputCustomType.Parameter("value") @Nullable String value) {
         this.keyName = keyName;
         this.value = value;
     }

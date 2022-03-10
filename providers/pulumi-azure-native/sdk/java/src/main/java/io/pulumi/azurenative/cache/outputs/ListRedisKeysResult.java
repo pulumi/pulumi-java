@@ -20,10 +20,10 @@ public final class ListRedisKeysResult {
      */
     private final String secondaryKey;
 
-    @OutputCustomType.Constructor({"primaryKey","secondaryKey"})
+    @OutputCustomType.Constructor
     private ListRedisKeysResult(
-        String primaryKey,
-        String secondaryKey) {
+        @OutputCustomType.Parameter("primaryKey") String primaryKey,
+        @OutputCustomType.Parameter("secondaryKey") String secondaryKey) {
         this.primaryKey = primaryKey;
         this.secondaryKey = secondaryKey;
     }

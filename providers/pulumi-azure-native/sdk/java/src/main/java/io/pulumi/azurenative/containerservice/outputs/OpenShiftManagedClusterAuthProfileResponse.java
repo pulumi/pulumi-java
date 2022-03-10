@@ -17,8 +17,8 @@ public final class OpenShiftManagedClusterAuthProfileResponse {
      */
     private final @Nullable List<OpenShiftManagedClusterIdentityProviderResponse> identityProviders;
 
-    @OutputCustomType.Constructor({"identityProviders"})
-    private OpenShiftManagedClusterAuthProfileResponse(@Nullable List<OpenShiftManagedClusterIdentityProviderResponse> identityProviders) {
+    @OutputCustomType.Constructor
+    private OpenShiftManagedClusterAuthProfileResponse(@OutputCustomType.Parameter("identityProviders") @Nullable List<OpenShiftManagedClusterIdentityProviderResponse> identityProviders) {
         this.identityProviders = identityProviders;
     }
 

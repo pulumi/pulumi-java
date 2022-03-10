@@ -22,10 +22,10 @@ public final class ListAccountKeysResult {
      */
     private final @Nullable String atlasKafkaSecondaryEndpoint;
 
-    @OutputCustomType.Constructor({"atlasKafkaPrimaryEndpoint","atlasKafkaSecondaryEndpoint"})
+    @OutputCustomType.Constructor
     private ListAccountKeysResult(
-        @Nullable String atlasKafkaPrimaryEndpoint,
-        @Nullable String atlasKafkaSecondaryEndpoint) {
+        @OutputCustomType.Parameter("atlasKafkaPrimaryEndpoint") @Nullable String atlasKafkaPrimaryEndpoint,
+        @OutputCustomType.Parameter("atlasKafkaSecondaryEndpoint") @Nullable String atlasKafkaSecondaryEndpoint) {
         this.atlasKafkaPrimaryEndpoint = atlasKafkaPrimaryEndpoint;
         this.atlasKafkaSecondaryEndpoint = atlasKafkaSecondaryEndpoint;
     }

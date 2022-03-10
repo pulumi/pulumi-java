@@ -27,11 +27,11 @@ public final class DiagnosticStoragePropertiesResponse {
      */
     private final String resourceId;
 
-    @OutputCustomType.Constructor({"authenticationType","connectionString","resourceId"})
+    @OutputCustomType.Constructor
     private DiagnosticStoragePropertiesResponse(
-        String authenticationType,
-        @Nullable String connectionString,
-        String resourceId) {
+        @OutputCustomType.Parameter("authenticationType") String authenticationType,
+        @OutputCustomType.Parameter("connectionString") @Nullable String connectionString,
+        @OutputCustomType.Parameter("resourceId") String resourceId) {
         this.authenticationType = authenticationType;
         this.connectionString = connectionString;
         this.resourceId = resourceId;

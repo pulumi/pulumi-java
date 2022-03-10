@@ -74,20 +74,20 @@ public final class RestSinkResponse {
      */
     private final @Nullable Object writeBatchTimeout;
 
-    @OutputCustomType.Constructor({"additionalHeaders","disableMetricsCollection","httpCompressionType","httpRequestTimeout","maxConcurrentConnections","requestInterval","requestMethod","sinkRetryCount","sinkRetryWait","type","writeBatchSize","writeBatchTimeout"})
+    @OutputCustomType.Constructor
     private RestSinkResponse(
-        @Nullable Object additionalHeaders,
-        @Nullable Object disableMetricsCollection,
-        @Nullable Object httpCompressionType,
-        @Nullable Object httpRequestTimeout,
-        @Nullable Object maxConcurrentConnections,
-        @Nullable Object requestInterval,
-        @Nullable Object requestMethod,
-        @Nullable Object sinkRetryCount,
-        @Nullable Object sinkRetryWait,
-        String type,
-        @Nullable Object writeBatchSize,
-        @Nullable Object writeBatchTimeout) {
+        @OutputCustomType.Parameter("additionalHeaders") @Nullable Object additionalHeaders,
+        @OutputCustomType.Parameter("disableMetricsCollection") @Nullable Object disableMetricsCollection,
+        @OutputCustomType.Parameter("httpCompressionType") @Nullable Object httpCompressionType,
+        @OutputCustomType.Parameter("httpRequestTimeout") @Nullable Object httpRequestTimeout,
+        @OutputCustomType.Parameter("maxConcurrentConnections") @Nullable Object maxConcurrentConnections,
+        @OutputCustomType.Parameter("requestInterval") @Nullable Object requestInterval,
+        @OutputCustomType.Parameter("requestMethod") @Nullable Object requestMethod,
+        @OutputCustomType.Parameter("sinkRetryCount") @Nullable Object sinkRetryCount,
+        @OutputCustomType.Parameter("sinkRetryWait") @Nullable Object sinkRetryWait,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("writeBatchSize") @Nullable Object writeBatchSize,
+        @OutputCustomType.Parameter("writeBatchTimeout") @Nullable Object writeBatchTimeout) {
         this.additionalHeaders = additionalHeaders;
         this.disableMetricsCollection = disableMetricsCollection;
         this.httpCompressionType = httpCompressionType;

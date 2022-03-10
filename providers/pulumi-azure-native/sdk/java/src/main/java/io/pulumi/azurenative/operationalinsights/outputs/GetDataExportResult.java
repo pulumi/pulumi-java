@@ -64,18 +64,18 @@ public final class GetDataExportResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"createdDate","dataExportId","enable","eventHubName","id","lastModifiedDate","name","resourceId","tableNames","type"})
+    @OutputCustomType.Constructor
     private GetDataExportResult(
-        @Nullable String createdDate,
-        @Nullable String dataExportId,
-        @Nullable Boolean enable,
-        @Nullable String eventHubName,
-        String id,
-        @Nullable String lastModifiedDate,
-        String name,
-        String resourceId,
-        List<String> tableNames,
-        String type) {
+        @OutputCustomType.Parameter("createdDate") @Nullable String createdDate,
+        @OutputCustomType.Parameter("dataExportId") @Nullable String dataExportId,
+        @OutputCustomType.Parameter("enable") @Nullable Boolean enable,
+        @OutputCustomType.Parameter("eventHubName") @Nullable String eventHubName,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("lastModifiedDate") @Nullable String lastModifiedDate,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("resourceId") String resourceId,
+        @OutputCustomType.Parameter("tableNames") List<String> tableNames,
+        @OutputCustomType.Parameter("type") String type) {
         this.createdDate = createdDate;
         this.dataExportId = dataExportId;
         this.enable = enable;

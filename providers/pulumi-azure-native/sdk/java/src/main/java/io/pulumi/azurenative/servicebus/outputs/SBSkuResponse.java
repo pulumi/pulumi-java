@@ -28,11 +28,11 @@ public final class SBSkuResponse {
      */
     private final @Nullable String tier;
 
-    @OutputCustomType.Constructor({"capacity","name","tier"})
+    @OutputCustomType.Constructor
     private SBSkuResponse(
-        @Nullable Integer capacity,
-        String name,
-        @Nullable String tier) {
+        @OutputCustomType.Parameter("capacity") @Nullable Integer capacity,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("tier") @Nullable String tier) {
         this.capacity = capacity;
         this.name = name;
         this.tier = tier;

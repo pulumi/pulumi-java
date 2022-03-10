@@ -33,12 +33,12 @@ public final class ClientCertificateResponse {
      */
     private final @Nullable String thumbprint;
 
-    @OutputCustomType.Constructor({"commonName","isAdmin","issuerThumbprint","thumbprint"})
+    @OutputCustomType.Constructor
     private ClientCertificateResponse(
-        @Nullable String commonName,
-        Boolean isAdmin,
-        @Nullable String issuerThumbprint,
-        @Nullable String thumbprint) {
+        @OutputCustomType.Parameter("commonName") @Nullable String commonName,
+        @OutputCustomType.Parameter("isAdmin") Boolean isAdmin,
+        @OutputCustomType.Parameter("issuerThumbprint") @Nullable String issuerThumbprint,
+        @OutputCustomType.Parameter("thumbprint") @Nullable String thumbprint) {
         this.commonName = commonName;
         this.isAdmin = isAdmin;
         this.issuerThumbprint = issuerThumbprint;

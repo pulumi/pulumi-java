@@ -14,10 +14,10 @@ public final class DefaultRolloutSpecificationResponseCanary {
     private final @Nullable List<String> regions;
     private final @Nullable List<String> skipRegions;
 
-    @OutputCustomType.Constructor({"regions","skipRegions"})
+    @OutputCustomType.Constructor
     private DefaultRolloutSpecificationResponseCanary(
-        @Nullable List<String> regions,
-        @Nullable List<String> skipRegions) {
+        @OutputCustomType.Parameter("regions") @Nullable List<String> regions,
+        @OutputCustomType.Parameter("skipRegions") @Nullable List<String> skipRegions) {
         this.regions = regions;
         this.skipRegions = skipRegions;
     }

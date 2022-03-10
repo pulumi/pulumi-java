@@ -45,14 +45,14 @@ public final class ContainerResponse {
      */
     private final @Nullable ContainerResourcesResponse resources;
 
-    @OutputCustomType.Constructor({"args","command","env","image","name","resources"})
+    @OutputCustomType.Constructor
     private ContainerResponse(
-        @Nullable List<String> args,
-        @Nullable List<String> command,
-        @Nullable List<EnvironmentVarResponse> env,
-        @Nullable String image,
-        @Nullable String name,
-        @Nullable ContainerResourcesResponse resources) {
+        @OutputCustomType.Parameter("args") @Nullable List<String> args,
+        @OutputCustomType.Parameter("command") @Nullable List<String> command,
+        @OutputCustomType.Parameter("env") @Nullable List<EnvironmentVarResponse> env,
+        @OutputCustomType.Parameter("image") @Nullable String image,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("resources") @Nullable ContainerResourcesResponse resources) {
         this.args = args;
         this.command = command;
         this.env = env;

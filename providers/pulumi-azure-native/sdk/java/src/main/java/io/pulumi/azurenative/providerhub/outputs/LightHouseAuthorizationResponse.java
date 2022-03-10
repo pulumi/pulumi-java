@@ -12,10 +12,10 @@ public final class LightHouseAuthorizationResponse {
     private final String principalId;
     private final String roleDefinitionId;
 
-    @OutputCustomType.Constructor({"principalId","roleDefinitionId"})
+    @OutputCustomType.Constructor
     private LightHouseAuthorizationResponse(
-        String principalId,
-        String roleDefinitionId) {
+        @OutputCustomType.Parameter("principalId") String principalId,
+        @OutputCustomType.Parameter("roleDefinitionId") String roleDefinitionId) {
         this.principalId = principalId;
         this.roleDefinitionId = roleDefinitionId;
     }

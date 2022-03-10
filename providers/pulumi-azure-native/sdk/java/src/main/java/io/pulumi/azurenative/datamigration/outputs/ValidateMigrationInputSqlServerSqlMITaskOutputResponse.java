@@ -55,16 +55,16 @@ public final class ValidateMigrationInputSqlServerSqlMITaskOutputResponse {
      */
     private final List<ReportableExceptionResponse> restoreDatabaseNameErrors;
 
-    @OutputCustomType.Constructor({"backupFolderErrors","backupShareCredentialsErrors","backupStorageAccountErrors","databaseBackupInfo","existingBackupErrors","id","name","restoreDatabaseNameErrors"})
+    @OutputCustomType.Constructor
     private ValidateMigrationInputSqlServerSqlMITaskOutputResponse(
-        List<ReportableExceptionResponse> backupFolderErrors,
-        List<ReportableExceptionResponse> backupShareCredentialsErrors,
-        List<ReportableExceptionResponse> backupStorageAccountErrors,
-        @Nullable DatabaseBackupInfoResponse databaseBackupInfo,
-        List<ReportableExceptionResponse> existingBackupErrors,
-        String id,
-        String name,
-        List<ReportableExceptionResponse> restoreDatabaseNameErrors) {
+        @OutputCustomType.Parameter("backupFolderErrors") List<ReportableExceptionResponse> backupFolderErrors,
+        @OutputCustomType.Parameter("backupShareCredentialsErrors") List<ReportableExceptionResponse> backupShareCredentialsErrors,
+        @OutputCustomType.Parameter("backupStorageAccountErrors") List<ReportableExceptionResponse> backupStorageAccountErrors,
+        @OutputCustomType.Parameter("databaseBackupInfo") @Nullable DatabaseBackupInfoResponse databaseBackupInfo,
+        @OutputCustomType.Parameter("existingBackupErrors") List<ReportableExceptionResponse> existingBackupErrors,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("restoreDatabaseNameErrors") List<ReportableExceptionResponse> restoreDatabaseNameErrors) {
         this.backupFolderErrors = backupFolderErrors;
         this.backupShareCredentialsErrors = backupShareCredentialsErrors;
         this.backupStorageAccountErrors = backupStorageAccountErrors;

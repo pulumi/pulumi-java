@@ -30,12 +30,12 @@ public final class GetJobCredentialResult {
      */
     private final String username;
 
-    @OutputCustomType.Constructor({"id","name","type","username"})
+    @OutputCustomType.Constructor
     private GetJobCredentialResult(
-        String id,
-        String name,
-        String type,
-        String username) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("username") String username) {
         this.id = id;
         this.name = name;
         this.type = type;

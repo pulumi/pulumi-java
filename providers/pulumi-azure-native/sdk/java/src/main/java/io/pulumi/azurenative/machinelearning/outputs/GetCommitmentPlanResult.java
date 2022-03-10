@@ -55,16 +55,16 @@ public final class GetCommitmentPlanResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"etag","id","location","name","properties","sku","tags","type"})
+    @OutputCustomType.Constructor
     private GetCommitmentPlanResult(
-        @Nullable String etag,
-        String id,
-        String location,
-        String name,
-        CommitmentPlanPropertiesResponse properties,
-        @Nullable ResourceSkuResponse sku,
-        @Nullable Map<String,String> tags,
-        String type) {
+        @OutputCustomType.Parameter("etag") @Nullable String etag,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("properties") CommitmentPlanPropertiesResponse properties,
+        @OutputCustomType.Parameter("sku") @Nullable ResourceSkuResponse sku,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type) {
         this.etag = etag;
         this.id = id;
         this.location = location;

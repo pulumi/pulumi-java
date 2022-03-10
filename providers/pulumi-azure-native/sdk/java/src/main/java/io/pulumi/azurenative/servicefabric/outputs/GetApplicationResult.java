@@ -105,25 +105,25 @@ public final class GetApplicationResult {
      */
     private final @Nullable ApplicationUpgradePolicyResponse upgradePolicy;
 
-    @OutputCustomType.Constructor({"etag","id","identity","location","managedIdentities","maximumNodes","metrics","minimumNodes","name","parameters","provisioningState","removeApplicationCapacity","tags","type","typeName","typeVersion","upgradePolicy"})
+    @OutputCustomType.Constructor
     private GetApplicationResult(
-        String etag,
-        String id,
-        @Nullable ManagedIdentityResponse identity,
-        @Nullable String location,
-        @Nullable List<ApplicationUserAssignedIdentityResponse> managedIdentities,
-        @Nullable Double maximumNodes,
-        @Nullable List<ApplicationMetricDescriptionResponse> metrics,
-        @Nullable Double minimumNodes,
-        String name,
-        @Nullable Map<String,String> parameters,
-        String provisioningState,
-        @Nullable Boolean removeApplicationCapacity,
-        @Nullable Map<String,String> tags,
-        String type,
-        @Nullable String typeName,
-        @Nullable String typeVersion,
-        @Nullable ApplicationUpgradePolicyResponse upgradePolicy) {
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("identity") @Nullable ManagedIdentityResponse identity,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("managedIdentities") @Nullable List<ApplicationUserAssignedIdentityResponse> managedIdentities,
+        @OutputCustomType.Parameter("maximumNodes") @Nullable Double maximumNodes,
+        @OutputCustomType.Parameter("metrics") @Nullable List<ApplicationMetricDescriptionResponse> metrics,
+        @OutputCustomType.Parameter("minimumNodes") @Nullable Double minimumNodes,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("parameters") @Nullable Map<String,String> parameters,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("removeApplicationCapacity") @Nullable Boolean removeApplicationCapacity,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("typeName") @Nullable String typeName,
+        @OutputCustomType.Parameter("typeVersion") @Nullable String typeVersion,
+        @OutputCustomType.Parameter("upgradePolicy") @Nullable ApplicationUpgradePolicyResponse upgradePolicy) {
         this.etag = etag;
         this.id = id;
         this.identity = identity;

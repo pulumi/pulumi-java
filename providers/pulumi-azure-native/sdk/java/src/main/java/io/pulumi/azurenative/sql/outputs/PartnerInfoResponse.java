@@ -25,11 +25,11 @@ public final class PartnerInfoResponse {
      */
     private final String replicationRole;
 
-    @OutputCustomType.Constructor({"id","location","replicationRole"})
+    @OutputCustomType.Constructor
     private PartnerInfoResponse(
-        String id,
-        String location,
-        String replicationRole) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("replicationRole") String replicationRole) {
         this.id = id;
         this.location = location;
         this.replicationRole = replicationRole;

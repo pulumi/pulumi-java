@@ -39,13 +39,13 @@ public final class VirtualMachineExtensionInstanceViewResponse {
      */
     private final @Nullable String typeHandlerVersion;
 
-    @OutputCustomType.Constructor({"name","statuses","substatuses","type","typeHandlerVersion"})
+    @OutputCustomType.Constructor
     private VirtualMachineExtensionInstanceViewResponse(
-        @Nullable String name,
-        @Nullable List<InstanceViewStatusResponse> statuses,
-        @Nullable List<InstanceViewStatusResponse> substatuses,
-        @Nullable String type,
-        @Nullable String typeHandlerVersion) {
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("statuses") @Nullable List<InstanceViewStatusResponse> statuses,
+        @OutputCustomType.Parameter("substatuses") @Nullable List<InstanceViewStatusResponse> substatuses,
+        @OutputCustomType.Parameter("type") @Nullable String type,
+        @OutputCustomType.Parameter("typeHandlerVersion") @Nullable String typeHandlerVersion) {
         this.name = name;
         this.statuses = statuses;
         this.substatuses = substatuses;

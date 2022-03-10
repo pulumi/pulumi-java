@@ -44,14 +44,14 @@ public final class HttpSourceResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"disableMetricsCollection","httpRequestTimeout","maxConcurrentConnections","sourceRetryCount","sourceRetryWait","type"})
+    @OutputCustomType.Constructor
     private HttpSourceResponse(
-        @Nullable Object disableMetricsCollection,
-        @Nullable Object httpRequestTimeout,
-        @Nullable Object maxConcurrentConnections,
-        @Nullable Object sourceRetryCount,
-        @Nullable Object sourceRetryWait,
-        String type) {
+        @OutputCustomType.Parameter("disableMetricsCollection") @Nullable Object disableMetricsCollection,
+        @OutputCustomType.Parameter("httpRequestTimeout") @Nullable Object httpRequestTimeout,
+        @OutputCustomType.Parameter("maxConcurrentConnections") @Nullable Object maxConcurrentConnections,
+        @OutputCustomType.Parameter("sourceRetryCount") @Nullable Object sourceRetryCount,
+        @OutputCustomType.Parameter("sourceRetryWait") @Nullable Object sourceRetryWait,
+        @OutputCustomType.Parameter("type") String type) {
         this.disableMetricsCollection = disableMetricsCollection;
         this.httpRequestTimeout = httpRequestTimeout;
         this.maxConcurrentConnections = maxConcurrentConnections;

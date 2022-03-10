@@ -40,14 +40,14 @@ public final class GetApiIssueAttachmentResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"content","contentFormat","id","name","title","type"})
+    @OutputCustomType.Constructor
     private GetApiIssueAttachmentResult(
-        String content,
-        String contentFormat,
-        String id,
-        String name,
-        String title,
-        String type) {
+        @OutputCustomType.Parameter("content") String content,
+        @OutputCustomType.Parameter("contentFormat") String contentFormat,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("title") String title,
+        @OutputCustomType.Parameter("type") String type) {
         this.content = content;
         this.contentFormat = contentFormat;
         this.id = id;

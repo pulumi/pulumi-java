@@ -25,11 +25,11 @@ public final class SchemaComparisonValidationResultTypeResponse {
      */
     private final String updateAction;
 
-    @OutputCustomType.Constructor({"objectName","objectType","updateAction"})
+    @OutputCustomType.Constructor
     private SchemaComparisonValidationResultTypeResponse(
-        String objectName,
-        String objectType,
-        String updateAction) {
+        @OutputCustomType.Parameter("objectName") String objectName,
+        @OutputCustomType.Parameter("objectType") String objectType,
+        @OutputCustomType.Parameter("updateAction") String updateAction) {
         this.objectName = objectName;
         this.objectType = objectType;
         this.updateAction = updateAction;

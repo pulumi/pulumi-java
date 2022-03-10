@@ -43,14 +43,14 @@ public final class ThresholdCustomAlertRuleResponse {
      */
     private final String ruleType;
 
-    @OutputCustomType.Constructor({"description","displayName","isEnabled","maxThreshold","minThreshold","ruleType"})
+    @OutputCustomType.Constructor
     private ThresholdCustomAlertRuleResponse(
-        String description,
-        String displayName,
-        Boolean isEnabled,
-        Integer maxThreshold,
-        Integer minThreshold,
-        String ruleType) {
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("isEnabled") Boolean isEnabled,
+        @OutputCustomType.Parameter("maxThreshold") Integer maxThreshold,
+        @OutputCustomType.Parameter("minThreshold") Integer minThreshold,
+        @OutputCustomType.Parameter("ruleType") String ruleType) {
         this.description = description;
         this.displayName = displayName;
         this.isEnabled = isEnabled;

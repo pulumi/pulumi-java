@@ -82,23 +82,23 @@ public final class GetAssessmentMetadataInSubscriptionResult {
      */
     private final @Nullable String userImpact;
 
-    @OutputCustomType.Constructor({"assessmentType","categories","description","displayName","id","implementationEffort","name","partnerData","policyDefinitionId","preview","remediationDescription","severity","threats","type","userImpact"})
+    @OutputCustomType.Constructor
     private GetAssessmentMetadataInSubscriptionResult(
-        String assessmentType,
-        @Nullable List<String> categories,
-        @Nullable String description,
-        String displayName,
-        String id,
-        @Nullable String implementationEffort,
-        String name,
-        @Nullable SecurityAssessmentMetadataPartnerDataResponse partnerData,
-        String policyDefinitionId,
-        @Nullable Boolean preview,
-        @Nullable String remediationDescription,
-        String severity,
-        @Nullable List<String> threats,
-        String type,
-        @Nullable String userImpact) {
+        @OutputCustomType.Parameter("assessmentType") String assessmentType,
+        @OutputCustomType.Parameter("categories") @Nullable List<String> categories,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("implementationEffort") @Nullable String implementationEffort,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("partnerData") @Nullable SecurityAssessmentMetadataPartnerDataResponse partnerData,
+        @OutputCustomType.Parameter("policyDefinitionId") String policyDefinitionId,
+        @OutputCustomType.Parameter("preview") @Nullable Boolean preview,
+        @OutputCustomType.Parameter("remediationDescription") @Nullable String remediationDescription,
+        @OutputCustomType.Parameter("severity") String severity,
+        @OutputCustomType.Parameter("threats") @Nullable List<String> threats,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("userImpact") @Nullable String userImpact) {
         this.assessmentType = assessmentType;
         this.categories = categories;
         this.description = description;

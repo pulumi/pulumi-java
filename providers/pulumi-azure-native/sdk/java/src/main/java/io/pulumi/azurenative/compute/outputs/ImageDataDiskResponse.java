@@ -55,16 +55,16 @@ public final class ImageDataDiskResponse {
      */
     private final @Nullable String storageAccountType;
 
-    @OutputCustomType.Constructor({"blobUri","caching","diskEncryptionSet","diskSizeGB","lun","managedDisk","snapshot","storageAccountType"})
+    @OutputCustomType.Constructor
     private ImageDataDiskResponse(
-        @Nullable String blobUri,
-        @Nullable String caching,
-        @Nullable DiskEncryptionSetParametersResponse diskEncryptionSet,
-        @Nullable Integer diskSizeGB,
-        Integer lun,
-        @Nullable SubResourceResponse managedDisk,
-        @Nullable SubResourceResponse snapshot,
-        @Nullable String storageAccountType) {
+        @OutputCustomType.Parameter("blobUri") @Nullable String blobUri,
+        @OutputCustomType.Parameter("caching") @Nullable String caching,
+        @OutputCustomType.Parameter("diskEncryptionSet") @Nullable DiskEncryptionSetParametersResponse diskEncryptionSet,
+        @OutputCustomType.Parameter("diskSizeGB") @Nullable Integer diskSizeGB,
+        @OutputCustomType.Parameter("lun") Integer lun,
+        @OutputCustomType.Parameter("managedDisk") @Nullable SubResourceResponse managedDisk,
+        @OutputCustomType.Parameter("snapshot") @Nullable SubResourceResponse snapshot,
+        @OutputCustomType.Parameter("storageAccountType") @Nullable String storageAccountType) {
         this.blobUri = blobUri;
         this.caching = caching;
         this.diskEncryptionSet = diskEncryptionSet;

@@ -36,13 +36,13 @@ public final class GetFavoriteProcessResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"actualProcessName","id","name","systemData","type"})
+    @OutputCustomType.Constructor
     private GetFavoriteProcessResult(
-        String actualProcessName,
-        String id,
-        String name,
-        SystemDataResponse systemData,
-        String type) {
+        @OutputCustomType.Parameter("actualProcessName") String actualProcessName,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("type") String type) {
         this.actualProcessName = actualProcessName;
         this.id = id;
         this.name = name;

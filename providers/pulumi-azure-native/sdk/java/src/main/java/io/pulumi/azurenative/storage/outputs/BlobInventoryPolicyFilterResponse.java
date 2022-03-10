@@ -34,12 +34,12 @@ public final class BlobInventoryPolicyFilterResponse {
      */
     private final @Nullable List<String> prefixMatch;
 
-    @OutputCustomType.Constructor({"blobTypes","includeBlobVersions","includeSnapshots","prefixMatch"})
+    @OutputCustomType.Constructor
     private BlobInventoryPolicyFilterResponse(
-        List<String> blobTypes,
-        @Nullable Boolean includeBlobVersions,
-        @Nullable Boolean includeSnapshots,
-        @Nullable List<String> prefixMatch) {
+        @OutputCustomType.Parameter("blobTypes") List<String> blobTypes,
+        @OutputCustomType.Parameter("includeBlobVersions") @Nullable Boolean includeBlobVersions,
+        @OutputCustomType.Parameter("includeSnapshots") @Nullable Boolean includeSnapshots,
+        @OutputCustomType.Parameter("prefixMatch") @Nullable List<String> prefixMatch) {
         this.blobTypes = blobTypes;
         this.includeBlobVersions = includeBlobVersions;
         this.includeSnapshots = includeSnapshots;

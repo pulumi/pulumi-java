@@ -25,11 +25,11 @@ public final class SyncMigrationDatabaseErrorEventResponse {
      */
     private final String timestampString;
 
-    @OutputCustomType.Constructor({"eventText","eventTypeString","timestampString"})
+    @OutputCustomType.Constructor
     private SyncMigrationDatabaseErrorEventResponse(
-        String eventText,
-        String eventTypeString,
-        String timestampString) {
+        @OutputCustomType.Parameter("eventText") String eventText,
+        @OutputCustomType.Parameter("eventTypeString") String eventTypeString,
+        @OutputCustomType.Parameter("timestampString") String timestampString) {
         this.eventText = eventText;
         this.eventTypeString = eventTypeString;
         this.timestampString = timestampString;

@@ -28,11 +28,11 @@ public final class LinuxOperatingSystemProfileResponse {
      */
     private final @Nullable String username;
 
-    @OutputCustomType.Constructor({"password","sshProfile","username"})
+    @OutputCustomType.Constructor
     private LinuxOperatingSystemProfileResponse(
-        @Nullable String password,
-        @Nullable SshProfileResponse sshProfile,
-        @Nullable String username) {
+        @OutputCustomType.Parameter("password") @Nullable String password,
+        @OutputCustomType.Parameter("sshProfile") @Nullable SshProfileResponse sshProfile,
+        @OutputCustomType.Parameter("username") @Nullable String username) {
         this.password = password;
         this.sshProfile = sshProfile;
         this.username = username;

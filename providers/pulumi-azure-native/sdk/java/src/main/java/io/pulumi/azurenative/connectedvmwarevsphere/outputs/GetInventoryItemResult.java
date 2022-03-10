@@ -63,18 +63,18 @@ public final class GetInventoryItemResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"id","inventoryType","kind","managedResourceId","moName","moRefId","name","provisioningState","systemData","type"})
+    @OutputCustomType.Constructor
     private GetInventoryItemResult(
-        String id,
-        String inventoryType,
-        @Nullable String kind,
-        @Nullable String managedResourceId,
-        @Nullable String moName,
-        @Nullable String moRefId,
-        String name,
-        String provisioningState,
-        SystemDataResponse systemData,
-        String type) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("inventoryType") String inventoryType,
+        @OutputCustomType.Parameter("kind") @Nullable String kind,
+        @OutputCustomType.Parameter("managedResourceId") @Nullable String managedResourceId,
+        @OutputCustomType.Parameter("moName") @Nullable String moName,
+        @OutputCustomType.Parameter("moRefId") @Nullable String moRefId,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("type") String type) {
         this.id = id;
         this.inventoryType = inventoryType;
         this.kind = kind;

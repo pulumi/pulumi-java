@@ -17,8 +17,8 @@ public final class CassandraPartitionKeyResponse {
      */
     private final @Nullable String name;
 
-    @OutputCustomType.Constructor({"name"})
-    private CassandraPartitionKeyResponse(@Nullable String name) {
+    @OutputCustomType.Constructor
+    private CassandraPartitionKeyResponse(@OutputCustomType.Parameter("name") @Nullable String name) {
         this.name = name;
     }
 

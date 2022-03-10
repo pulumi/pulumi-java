@@ -73,19 +73,19 @@ public final class GetSnapshotPolicyResult {
      */
     private final @Nullable WeeklyScheduleResponse weeklySchedule;
 
-    @OutputCustomType.Constructor({"dailySchedule","enabled","hourlySchedule","id","location","monthlySchedule","name","provisioningState","tags","type","weeklySchedule"})
+    @OutputCustomType.Constructor
     private GetSnapshotPolicyResult(
-        @Nullable DailyScheduleResponse dailySchedule,
-        @Nullable Boolean enabled,
-        @Nullable HourlyScheduleResponse hourlySchedule,
-        String id,
-        String location,
-        @Nullable MonthlyScheduleResponse monthlySchedule,
-        String name,
-        String provisioningState,
-        @Nullable Map<String,String> tags,
-        String type,
-        @Nullable WeeklyScheduleResponse weeklySchedule) {
+        @OutputCustomType.Parameter("dailySchedule") @Nullable DailyScheduleResponse dailySchedule,
+        @OutputCustomType.Parameter("enabled") @Nullable Boolean enabled,
+        @OutputCustomType.Parameter("hourlySchedule") @Nullable HourlyScheduleResponse hourlySchedule,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("monthlySchedule") @Nullable MonthlyScheduleResponse monthlySchedule,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("weeklySchedule") @Nullable WeeklyScheduleResponse weeklySchedule) {
         this.dailySchedule = dailySchedule;
         this.enabled = enabled;
         this.hourlySchedule = hourlySchedule;

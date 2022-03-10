@@ -42,14 +42,14 @@ public final class GetApiIssueCommentResult {
      */
     private final String userId;
 
-    @OutputCustomType.Constructor({"createdDate","id","name","text","type","userId"})
+    @OutputCustomType.Constructor
     private GetApiIssueCommentResult(
-        @Nullable String createdDate,
-        String id,
-        String name,
-        String text,
-        String type,
-        String userId) {
+        @OutputCustomType.Parameter("createdDate") @Nullable String createdDate,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("text") String text,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("userId") String userId) {
         this.createdDate = createdDate;
         this.id = id;
         this.name = name;

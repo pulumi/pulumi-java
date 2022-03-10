@@ -31,12 +31,12 @@ public final class GetQueueAuthorizationRuleResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"id","name","rights","type"})
+    @OutputCustomType.Constructor
     private GetQueueAuthorizationRuleResult(
-        String id,
-        String name,
-        List<String> rights,
-        String type) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("rights") List<String> rights,
+        @OutputCustomType.Parameter("type") String type) {
         this.id = id;
         this.name = name;
         this.rights = rights;

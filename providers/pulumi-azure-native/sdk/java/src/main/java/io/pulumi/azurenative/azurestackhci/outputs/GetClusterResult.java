@@ -125,30 +125,30 @@ public final class GetClusterResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"aadClientId","aadTenantId","billingModel","cloudId","createdAt","createdBy","createdByType","id","lastBillingTimestamp","lastModifiedAt","lastModifiedBy","lastModifiedByType","lastSyncTimestamp","location","name","provisioningState","registrationTimestamp","reportedProperties","status","tags","trialDaysRemaining","type"})
+    @OutputCustomType.Constructor
     private GetClusterResult(
-        String aadClientId,
-        String aadTenantId,
-        String billingModel,
-        String cloudId,
-        @Nullable String createdAt,
-        @Nullable String createdBy,
-        @Nullable String createdByType,
-        String id,
-        String lastBillingTimestamp,
-        @Nullable String lastModifiedAt,
-        @Nullable String lastModifiedBy,
-        @Nullable String lastModifiedByType,
-        String lastSyncTimestamp,
-        String location,
-        String name,
-        String provisioningState,
-        String registrationTimestamp,
-        @Nullable ClusterReportedPropertiesResponse reportedProperties,
-        String status,
-        @Nullable Map<String,String> tags,
-        Double trialDaysRemaining,
-        String type) {
+        @OutputCustomType.Parameter("aadClientId") String aadClientId,
+        @OutputCustomType.Parameter("aadTenantId") String aadTenantId,
+        @OutputCustomType.Parameter("billingModel") String billingModel,
+        @OutputCustomType.Parameter("cloudId") String cloudId,
+        @OutputCustomType.Parameter("createdAt") @Nullable String createdAt,
+        @OutputCustomType.Parameter("createdBy") @Nullable String createdBy,
+        @OutputCustomType.Parameter("createdByType") @Nullable String createdByType,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("lastBillingTimestamp") String lastBillingTimestamp,
+        @OutputCustomType.Parameter("lastModifiedAt") @Nullable String lastModifiedAt,
+        @OutputCustomType.Parameter("lastModifiedBy") @Nullable String lastModifiedBy,
+        @OutputCustomType.Parameter("lastModifiedByType") @Nullable String lastModifiedByType,
+        @OutputCustomType.Parameter("lastSyncTimestamp") String lastSyncTimestamp,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("registrationTimestamp") String registrationTimestamp,
+        @OutputCustomType.Parameter("reportedProperties") @Nullable ClusterReportedPropertiesResponse reportedProperties,
+        @OutputCustomType.Parameter("status") String status,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("trialDaysRemaining") Double trialDaysRemaining,
+        @OutputCustomType.Parameter("type") String type) {
         this.aadClientId = aadClientId;
         this.aadTenantId = aadTenantId;
         this.billingModel = billingModel;

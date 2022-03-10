@@ -87,21 +87,21 @@ public final class ComputeInstanceResponseProperties {
      */
     private final @Nullable String vmSize;
 
-    @OutputCustomType.Constructor({"applicationSharingPolicy","applications","computeInstanceAuthorizationType","connectivityEndpoints","createdBy","errors","lastOperation","personalComputeInstanceSettings","setupScripts","sshSettings","state","subnet","vmSize"})
+    @OutputCustomType.Constructor
     private ComputeInstanceResponseProperties(
-        @Nullable String applicationSharingPolicy,
-        List<ComputeInstanceApplicationResponse> applications,
-        @Nullable String computeInstanceAuthorizationType,
-        ComputeInstanceConnectivityEndpointsResponse connectivityEndpoints,
-        ComputeInstanceCreatedByResponse createdBy,
-        List<MachineLearningServiceErrorResponse> errors,
-        ComputeInstanceLastOperationResponse lastOperation,
-        @Nullable PersonalComputeInstanceSettingsResponse personalComputeInstanceSettings,
-        @Nullable SetupScriptsResponse setupScripts,
-        @Nullable ComputeInstanceSshSettingsResponse sshSettings,
-        String state,
-        @Nullable ResourceIdResponse subnet,
-        @Nullable String vmSize) {
+        @OutputCustomType.Parameter("applicationSharingPolicy") @Nullable String applicationSharingPolicy,
+        @OutputCustomType.Parameter("applications") List<ComputeInstanceApplicationResponse> applications,
+        @OutputCustomType.Parameter("computeInstanceAuthorizationType") @Nullable String computeInstanceAuthorizationType,
+        @OutputCustomType.Parameter("connectivityEndpoints") ComputeInstanceConnectivityEndpointsResponse connectivityEndpoints,
+        @OutputCustomType.Parameter("createdBy") ComputeInstanceCreatedByResponse createdBy,
+        @OutputCustomType.Parameter("errors") List<MachineLearningServiceErrorResponse> errors,
+        @OutputCustomType.Parameter("lastOperation") ComputeInstanceLastOperationResponse lastOperation,
+        @OutputCustomType.Parameter("personalComputeInstanceSettings") @Nullable PersonalComputeInstanceSettingsResponse personalComputeInstanceSettings,
+        @OutputCustomType.Parameter("setupScripts") @Nullable SetupScriptsResponse setupScripts,
+        @OutputCustomType.Parameter("sshSettings") @Nullable ComputeInstanceSshSettingsResponse sshSettings,
+        @OutputCustomType.Parameter("state") String state,
+        @OutputCustomType.Parameter("subnet") @Nullable ResourceIdResponse subnet,
+        @OutputCustomType.Parameter("vmSize") @Nullable String vmSize) {
         this.applicationSharingPolicy = applicationSharingPolicy;
         this.applications = applications;
         this.computeInstanceAuthorizationType = computeInstanceAuthorizationType;

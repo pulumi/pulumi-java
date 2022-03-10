@@ -45,14 +45,14 @@ public final class GetProactiveDetectionConfigurationResult {
      */
     private final @Nullable Boolean sendEmailsToSubscriptionOwners;
 
-    @OutputCustomType.Constructor({"customEmails","enabled","lastUpdatedTime","name","ruleDefinitions","sendEmailsToSubscriptionOwners"})
+    @OutputCustomType.Constructor
     private GetProactiveDetectionConfigurationResult(
-        @Nullable List<String> customEmails,
-        @Nullable Boolean enabled,
-        @Nullable String lastUpdatedTime,
-        @Nullable String name,
-        @Nullable ApplicationInsightsComponentProactiveDetectionConfigurationResponseRuleDefinitions ruleDefinitions,
-        @Nullable Boolean sendEmailsToSubscriptionOwners) {
+        @OutputCustomType.Parameter("customEmails") @Nullable List<String> customEmails,
+        @OutputCustomType.Parameter("enabled") @Nullable Boolean enabled,
+        @OutputCustomType.Parameter("lastUpdatedTime") @Nullable String lastUpdatedTime,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("ruleDefinitions") @Nullable ApplicationInsightsComponentProactiveDetectionConfigurationResponseRuleDefinitions ruleDefinitions,
+        @OutputCustomType.Parameter("sendEmailsToSubscriptionOwners") @Nullable Boolean sendEmailsToSubscriptionOwners) {
         this.customEmails = customEmails;
         this.enabled = enabled;
         this.lastUpdatedTime = lastUpdatedTime;

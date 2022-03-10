@@ -50,15 +50,15 @@ public final class GetSolutionResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"id","location","name","plan","properties","tags","type"})
+    @OutputCustomType.Constructor
     private GetSolutionResult(
-        String id,
-        @Nullable String location,
-        String name,
-        @Nullable SolutionPlanResponse plan,
-        SolutionPropertiesResponse properties,
-        @Nullable Map<String,String> tags,
-        String type) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("plan") @Nullable SolutionPlanResponse plan,
+        @OutputCustomType.Parameter("properties") SolutionPropertiesResponse properties,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type) {
         this.id = id;
         this.location = location;
         this.name = name;

@@ -20,10 +20,10 @@ public final class GetFluidRelayServerKeysResult {
      */
     private final String key2;
 
-    @OutputCustomType.Constructor({"key1","key2"})
+    @OutputCustomType.Constructor
     private GetFluidRelayServerKeysResult(
-        String key1,
-        String key2) {
+        @OutputCustomType.Parameter("key1") String key1,
+        @OutputCustomType.Parameter("key2") String key2) {
         this.key1 = key1;
         this.key2 = key2;
     }

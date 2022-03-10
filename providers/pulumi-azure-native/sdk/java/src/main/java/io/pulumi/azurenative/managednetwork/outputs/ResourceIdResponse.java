@@ -17,8 +17,8 @@ public final class ResourceIdResponse {
      */
     private final @Nullable String id;
 
-    @OutputCustomType.Constructor({"id"})
-    private ResourceIdResponse(@Nullable String id) {
+    @OutputCustomType.Constructor
+    private ResourceIdResponse(@OutputCustomType.Parameter("id") @Nullable String id) {
         this.id = id;
     }
 

@@ -24,10 +24,10 @@ public final class WebPubSubHubPropertiesResponse {
      */
     private final @Nullable List<EventHandlerResponse> eventHandlers;
 
-    @OutputCustomType.Constructor({"anonymousConnectPolicy","eventHandlers"})
+    @OutputCustomType.Constructor
     private WebPubSubHubPropertiesResponse(
-        @Nullable String anonymousConnectPolicy,
-        @Nullable List<EventHandlerResponse> eventHandlers) {
+        @OutputCustomType.Parameter("anonymousConnectPolicy") @Nullable String anonymousConnectPolicy,
+        @OutputCustomType.Parameter("eventHandlers") @Nullable List<EventHandlerResponse> eventHandlers) {
         this.anonymousConnectPolicy = anonymousConnectPolicy;
         this.eventHandlers = eventHandlers;
     }

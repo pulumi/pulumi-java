@@ -17,8 +17,8 @@ public final class ListAgentPoolQueueStatusResult {
      */
     private final @Nullable Integer count;
 
-    @OutputCustomType.Constructor({"count"})
-    private ListAgentPoolQueueStatusResult(@Nullable Integer count) {
+    @OutputCustomType.Constructor
+    private ListAgentPoolQueueStatusResult(@OutputCustomType.Parameter("count") @Nullable Integer count) {
         this.count = count;
     }
 

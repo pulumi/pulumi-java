@@ -22,10 +22,10 @@ public final class KeyVaultPropertiesResponse {
      */
     private final @Nullable String keyIdentifier;
 
-    @OutputCustomType.Constructor({"currentKeyIdentifier","keyIdentifier"})
+    @OutputCustomType.Constructor
     private KeyVaultPropertiesResponse(
-        String currentKeyIdentifier,
-        @Nullable String keyIdentifier) {
+        @OutputCustomType.Parameter("currentKeyIdentifier") String currentKeyIdentifier,
+        @OutputCustomType.Parameter("keyIdentifier") @Nullable String keyIdentifier) {
         this.currentKeyIdentifier = currentKeyIdentifier;
         this.keyIdentifier = keyIdentifier;
     }

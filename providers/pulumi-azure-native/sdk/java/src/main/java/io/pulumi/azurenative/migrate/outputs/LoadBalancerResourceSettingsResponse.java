@@ -47,14 +47,14 @@ public final class LoadBalancerResourceSettingsResponse {
      */
     private final @Nullable String zones;
 
-    @OutputCustomType.Constructor({"backendAddressPools","frontendIPConfigurations","resourceType","sku","targetResourceName","zones"})
+    @OutputCustomType.Constructor
     private LoadBalancerResourceSettingsResponse(
-        @Nullable List<LBBackendAddressPoolResourceSettingsResponse> backendAddressPools,
-        @Nullable List<LBFrontendIPConfigurationResourceSettingsResponse> frontendIPConfigurations,
-        String resourceType,
-        @Nullable String sku,
-        String targetResourceName,
-        @Nullable String zones) {
+        @OutputCustomType.Parameter("backendAddressPools") @Nullable List<LBBackendAddressPoolResourceSettingsResponse> backendAddressPools,
+        @OutputCustomType.Parameter("frontendIPConfigurations") @Nullable List<LBFrontendIPConfigurationResourceSettingsResponse> frontendIPConfigurations,
+        @OutputCustomType.Parameter("resourceType") String resourceType,
+        @OutputCustomType.Parameter("sku") @Nullable String sku,
+        @OutputCustomType.Parameter("targetResourceName") String targetResourceName,
+        @OutputCustomType.Parameter("zones") @Nullable String zones) {
         this.backendAddressPools = backendAddressPools;
         this.frontendIPConfigurations = frontendIPConfigurations;
         this.resourceType = resourceType;

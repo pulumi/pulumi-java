@@ -65,18 +65,18 @@ public final class GetEventHubResult {
      */
     private final String updatedAt;
 
-    @OutputCustomType.Constructor({"captureDescription","createdAt","id","messageRetentionInDays","name","partitionCount","partitionIds","status","type","updatedAt"})
+    @OutputCustomType.Constructor
     private GetEventHubResult(
-        @Nullable CaptureDescriptionResponse captureDescription,
-        String createdAt,
-        String id,
-        @Nullable Double messageRetentionInDays,
-        String name,
-        @Nullable Double partitionCount,
-        List<String> partitionIds,
-        @Nullable String status,
-        String type,
-        String updatedAt) {
+        @OutputCustomType.Parameter("captureDescription") @Nullable CaptureDescriptionResponse captureDescription,
+        @OutputCustomType.Parameter("createdAt") String createdAt,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("messageRetentionInDays") @Nullable Double messageRetentionInDays,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("partitionCount") @Nullable Double partitionCount,
+        @OutputCustomType.Parameter("partitionIds") List<String> partitionIds,
+        @OutputCustomType.Parameter("status") @Nullable String status,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("updatedAt") String updatedAt) {
         this.captureDescription = captureDescription;
         this.createdAt = createdAt;
         this.id = id;

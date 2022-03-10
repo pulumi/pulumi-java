@@ -20,10 +20,10 @@ public final class ApiProfileResponse {
      */
     private final String profileVersion;
 
-    @OutputCustomType.Constructor({"apiVersion","profileVersion"})
+    @OutputCustomType.Constructor
     private ApiProfileResponse(
-        String apiVersion,
-        String profileVersion) {
+        @OutputCustomType.Parameter("apiVersion") String apiVersion,
+        @OutputCustomType.Parameter("profileVersion") String profileVersion) {
         this.apiVersion = apiVersion;
         this.profileVersion = profileVersion;
     }

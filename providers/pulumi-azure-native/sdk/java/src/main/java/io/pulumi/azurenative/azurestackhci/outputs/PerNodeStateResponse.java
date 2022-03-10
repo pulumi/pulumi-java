@@ -25,11 +25,11 @@ public final class PerNodeStateResponse {
      */
     private final String state;
 
-    @OutputCustomType.Constructor({"arcInstance","name","state"})
+    @OutputCustomType.Constructor
     private PerNodeStateResponse(
-        String arcInstance,
-        String name,
-        String state) {
+        @OutputCustomType.Parameter("arcInstance") String arcInstance,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("state") String state) {
         this.arcInstance = arcInstance;
         this.name = name;
         this.state = state;

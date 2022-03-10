@@ -15,8 +15,8 @@ public final class X12MessageIdentifierResponse {
      */
     private final String messageId;
 
-    @OutputCustomType.Constructor({"messageId"})
-    private X12MessageIdentifierResponse(String messageId) {
+    @OutputCustomType.Constructor
+    private X12MessageIdentifierResponse(@OutputCustomType.Parameter("messageId") String messageId) {
         this.messageId = messageId;
     }
 

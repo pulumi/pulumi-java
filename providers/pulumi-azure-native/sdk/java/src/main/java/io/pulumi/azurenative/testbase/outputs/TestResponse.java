@@ -35,12 +35,12 @@ public final class TestResponse {
      */
     private final String validationRunStatus;
 
-    @OutputCustomType.Constructor({"commands","isActive","testType","validationRunStatus"})
+    @OutputCustomType.Constructor
     private TestResponse(
-        List<CommandResponse> commands,
-        @Nullable Boolean isActive,
-        String testType,
-        String validationRunStatus) {
+        @OutputCustomType.Parameter("commands") List<CommandResponse> commands,
+        @OutputCustomType.Parameter("isActive") @Nullable Boolean isActive,
+        @OutputCustomType.Parameter("testType") String testType,
+        @OutputCustomType.Parameter("validationRunStatus") String validationRunStatus) {
         this.commands = commands;
         this.isActive = isActive;
         this.testType = testType;

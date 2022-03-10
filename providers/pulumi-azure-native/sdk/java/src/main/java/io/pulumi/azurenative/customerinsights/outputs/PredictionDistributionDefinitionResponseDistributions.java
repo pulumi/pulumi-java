@@ -38,13 +38,13 @@ public final class PredictionDistributionDefinitionResponseDistributions {
      */
     private final @Nullable Integer scoreThreshold;
 
-    @OutputCustomType.Constructor({"negatives","negativesAboveThreshold","positives","positivesAboveThreshold","scoreThreshold"})
+    @OutputCustomType.Constructor
     private PredictionDistributionDefinitionResponseDistributions(
-        @Nullable Double negatives,
-        @Nullable Double negativesAboveThreshold,
-        @Nullable Double positives,
-        @Nullable Double positivesAboveThreshold,
-        @Nullable Integer scoreThreshold) {
+        @OutputCustomType.Parameter("negatives") @Nullable Double negatives,
+        @OutputCustomType.Parameter("negativesAboveThreshold") @Nullable Double negativesAboveThreshold,
+        @OutputCustomType.Parameter("positives") @Nullable Double positives,
+        @OutputCustomType.Parameter("positivesAboveThreshold") @Nullable Double positivesAboveThreshold,
+        @OutputCustomType.Parameter("scoreThreshold") @Nullable Integer scoreThreshold) {
         this.negatives = negatives;
         this.negativesAboveThreshold = negativesAboveThreshold;
         this.positives = positives;

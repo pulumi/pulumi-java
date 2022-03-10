@@ -47,15 +47,15 @@ public final class WsfcDomainProfileResponse {
      */
     private final @Nullable String storageAccountUrl;
 
-    @OutputCustomType.Constructor({"clusterBootstrapAccount","clusterOperatorAccount","domainFqdn","fileShareWitnessPath","ouPath","sqlServiceAccount","storageAccountUrl"})
+    @OutputCustomType.Constructor
     private WsfcDomainProfileResponse(
-        @Nullable String clusterBootstrapAccount,
-        @Nullable String clusterOperatorAccount,
-        @Nullable String domainFqdn,
-        @Nullable String fileShareWitnessPath,
-        @Nullable String ouPath,
-        @Nullable String sqlServiceAccount,
-        @Nullable String storageAccountUrl) {
+        @OutputCustomType.Parameter("clusterBootstrapAccount") @Nullable String clusterBootstrapAccount,
+        @OutputCustomType.Parameter("clusterOperatorAccount") @Nullable String clusterOperatorAccount,
+        @OutputCustomType.Parameter("domainFqdn") @Nullable String domainFqdn,
+        @OutputCustomType.Parameter("fileShareWitnessPath") @Nullable String fileShareWitnessPath,
+        @OutputCustomType.Parameter("ouPath") @Nullable String ouPath,
+        @OutputCustomType.Parameter("sqlServiceAccount") @Nullable String sqlServiceAccount,
+        @OutputCustomType.Parameter("storageAccountUrl") @Nullable String storageAccountUrl) {
         this.clusterBootstrapAccount = clusterBootstrapAccount;
         this.clusterOperatorAccount = clusterOperatorAccount;
         this.domainFqdn = domainFqdn;

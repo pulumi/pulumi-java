@@ -37,13 +37,13 @@ public final class SAPSystemIDResponse {
      */
     private final @Nullable String username;
 
-    @OutputCustomType.Constructor({"gid","memoryAllocation","sid","uid","username"})
+    @OutputCustomType.Constructor
     private SAPSystemIDResponse(
-        @Nullable String gid,
-        String memoryAllocation,
-        @Nullable String sid,
-        @Nullable String uid,
-        @Nullable String username) {
+        @OutputCustomType.Parameter("gid") @Nullable String gid,
+        @OutputCustomType.Parameter("memoryAllocation") String memoryAllocation,
+        @OutputCustomType.Parameter("sid") @Nullable String sid,
+        @OutputCustomType.Parameter("uid") @Nullable String uid,
+        @OutputCustomType.Parameter("username") @Nullable String username) {
         this.gid = gid;
         this.memoryAllocation = memoryAllocation;
         this.sid = sid;

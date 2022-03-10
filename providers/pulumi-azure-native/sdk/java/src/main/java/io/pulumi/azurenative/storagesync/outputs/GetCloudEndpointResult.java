@@ -72,20 +72,20 @@ public final class GetCloudEndpointResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"azureFileShareName","backupEnabled","friendlyName","id","lastOperationName","lastWorkflowId","name","partnershipId","provisioningState","storageAccountResourceId","storageAccountTenantId","type"})
+    @OutputCustomType.Constructor
     private GetCloudEndpointResult(
-        @Nullable String azureFileShareName,
-        String backupEnabled,
-        @Nullable String friendlyName,
-        String id,
-        @Nullable String lastOperationName,
-        @Nullable String lastWorkflowId,
-        String name,
-        @Nullable String partnershipId,
-        @Nullable String provisioningState,
-        @Nullable String storageAccountResourceId,
-        @Nullable String storageAccountTenantId,
-        String type) {
+        @OutputCustomType.Parameter("azureFileShareName") @Nullable String azureFileShareName,
+        @OutputCustomType.Parameter("backupEnabled") String backupEnabled,
+        @OutputCustomType.Parameter("friendlyName") @Nullable String friendlyName,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("lastOperationName") @Nullable String lastOperationName,
+        @OutputCustomType.Parameter("lastWorkflowId") @Nullable String lastWorkflowId,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("partnershipId") @Nullable String partnershipId,
+        @OutputCustomType.Parameter("provisioningState") @Nullable String provisioningState,
+        @OutputCustomType.Parameter("storageAccountResourceId") @Nullable String storageAccountResourceId,
+        @OutputCustomType.Parameter("storageAccountTenantId") @Nullable String storageAccountTenantId,
+        @OutputCustomType.Parameter("type") String type) {
         this.azureFileShareName = azureFileShareName;
         this.backupEnabled = backupEnabled;
         this.friendlyName = friendlyName;

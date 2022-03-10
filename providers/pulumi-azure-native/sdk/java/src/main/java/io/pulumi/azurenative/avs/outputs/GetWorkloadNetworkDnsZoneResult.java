@@ -64,18 +64,18 @@ public final class GetWorkloadNetworkDnsZoneResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"displayName","dnsServerIps","dnsServices","domain","id","name","provisioningState","revision","sourceIp","type"})
+    @OutputCustomType.Constructor
     private GetWorkloadNetworkDnsZoneResult(
-        @Nullable String displayName,
-        @Nullable List<String> dnsServerIps,
-        @Nullable Double dnsServices,
-        @Nullable List<String> domain,
-        String id,
-        String name,
-        String provisioningState,
-        @Nullable Double revision,
-        @Nullable String sourceIp,
-        String type) {
+        @OutputCustomType.Parameter("displayName") @Nullable String displayName,
+        @OutputCustomType.Parameter("dnsServerIps") @Nullable List<String> dnsServerIps,
+        @OutputCustomType.Parameter("dnsServices") @Nullable Double dnsServices,
+        @OutputCustomType.Parameter("domain") @Nullable List<String> domain,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("revision") @Nullable Double revision,
+        @OutputCustomType.Parameter("sourceIp") @Nullable String sourceIp,
+        @OutputCustomType.Parameter("type") String type) {
         this.displayName = displayName;
         this.dnsServerIps = dnsServerIps;
         this.dnsServices = dnsServices;

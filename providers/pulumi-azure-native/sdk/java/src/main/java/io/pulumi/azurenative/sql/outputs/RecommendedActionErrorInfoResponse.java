@@ -20,10 +20,10 @@ public final class RecommendedActionErrorInfoResponse {
      */
     private final String isRetryable;
 
-    @OutputCustomType.Constructor({"errorCode","isRetryable"})
+    @OutputCustomType.Constructor
     private RecommendedActionErrorInfoResponse(
-        String errorCode,
-        String isRetryable) {
+        @OutputCustomType.Parameter("errorCode") String errorCode,
+        @OutputCustomType.Parameter("isRetryable") String isRetryable) {
         this.errorCode = errorCode;
         this.isRetryable = isRetryable;
     }

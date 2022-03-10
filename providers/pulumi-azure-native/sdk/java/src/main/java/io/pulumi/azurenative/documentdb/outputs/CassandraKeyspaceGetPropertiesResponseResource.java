@@ -31,12 +31,12 @@ public final class CassandraKeyspaceGetPropertiesResponseResource {
      */
     private final Double ts;
 
-    @OutputCustomType.Constructor({"etag","id","rid","ts"})
+    @OutputCustomType.Constructor
     private CassandraKeyspaceGetPropertiesResponseResource(
-        String etag,
-        String id,
-        String rid,
-        Double ts) {
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("rid") String rid,
+        @OutputCustomType.Parameter("ts") Double ts) {
         this.etag = etag;
         this.id = id;
         this.rid = rid;

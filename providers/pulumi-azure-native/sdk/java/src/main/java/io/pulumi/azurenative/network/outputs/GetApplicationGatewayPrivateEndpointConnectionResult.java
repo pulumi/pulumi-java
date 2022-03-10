@@ -54,16 +54,16 @@ public final class GetApplicationGatewayPrivateEndpointConnectionResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"etag","id","linkIdentifier","name","privateEndpoint","privateLinkServiceConnectionState","provisioningState","type"})
+    @OutputCustomType.Constructor
     private GetApplicationGatewayPrivateEndpointConnectionResult(
-        String etag,
-        @Nullable String id,
-        String linkIdentifier,
-        @Nullable String name,
-        PrivateEndpointResponse privateEndpoint,
-        @Nullable PrivateLinkServiceConnectionStateResponse privateLinkServiceConnectionState,
-        String provisioningState,
-        String type) {
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("linkIdentifier") String linkIdentifier,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("privateEndpoint") PrivateEndpointResponse privateEndpoint,
+        @OutputCustomType.Parameter("privateLinkServiceConnectionState") @Nullable PrivateLinkServiceConnectionStateResponse privateLinkServiceConnectionState,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("type") String type) {
         this.etag = etag;
         this.id = id;
         this.linkIdentifier = linkIdentifier;

@@ -62,18 +62,18 @@ public final class GetADLSGen1FolderDataSetResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"accountName","dataSetId","folderPath","id","kind","name","resourceGroup","subscriptionId","systemData","type"})
+    @OutputCustomType.Constructor
     private GetADLSGen1FolderDataSetResult(
-        String accountName,
-        String dataSetId,
-        String folderPath,
-        String id,
-        String kind,
-        String name,
-        String resourceGroup,
-        String subscriptionId,
-        SystemDataResponse systemData,
-        String type) {
+        @OutputCustomType.Parameter("accountName") String accountName,
+        @OutputCustomType.Parameter("dataSetId") String dataSetId,
+        @OutputCustomType.Parameter("folderPath") String folderPath,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("resourceGroup") String resourceGroup,
+        @OutputCustomType.Parameter("subscriptionId") String subscriptionId,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("type") String type) {
         this.accountName = accountName;
         this.dataSetId = dataSetId;
         this.folderPath = folderPath;

@@ -56,18 +56,18 @@ public final class AssemblyPropertiesResponse {
     private final @Nullable String createdTime;
     private final @Nullable Object metadata;
 
-    @OutputCustomType.Constructor({"assemblyCulture","assemblyName","assemblyPublicKeyToken","assemblyVersion","changedTime","content","contentLink","contentType","createdTime","metadata"})
+    @OutputCustomType.Constructor
     private AssemblyPropertiesResponse(
-        @Nullable String assemblyCulture,
-        String assemblyName,
-        @Nullable String assemblyPublicKeyToken,
-        @Nullable String assemblyVersion,
-        @Nullable String changedTime,
-        @Nullable Object content,
-        @Nullable ContentLinkResponse contentLink,
-        @Nullable String contentType,
-        @Nullable String createdTime,
-        @Nullable Object metadata) {
+        @OutputCustomType.Parameter("assemblyCulture") @Nullable String assemblyCulture,
+        @OutputCustomType.Parameter("assemblyName") String assemblyName,
+        @OutputCustomType.Parameter("assemblyPublicKeyToken") @Nullable String assemblyPublicKeyToken,
+        @OutputCustomType.Parameter("assemblyVersion") @Nullable String assemblyVersion,
+        @OutputCustomType.Parameter("changedTime") @Nullable String changedTime,
+        @OutputCustomType.Parameter("content") @Nullable Object content,
+        @OutputCustomType.Parameter("contentLink") @Nullable ContentLinkResponse contentLink,
+        @OutputCustomType.Parameter("contentType") @Nullable String contentType,
+        @OutputCustomType.Parameter("createdTime") @Nullable String createdTime,
+        @OutputCustomType.Parameter("metadata") @Nullable Object metadata) {
         this.assemblyCulture = assemblyCulture;
         this.assemblyName = assemblyName;
         this.assemblyPublicKeyToken = assemblyPublicKeyToken;

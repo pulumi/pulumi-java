@@ -64,18 +64,18 @@ public final class GetSubscriptionDiagnosticSettingResult {
      */
     private final @Nullable String workspaceId;
 
-    @OutputCustomType.Constructor({"eventHubAuthorizationRuleId","eventHubName","id","location","logs","name","serviceBusRuleId","storageAccountId","type","workspaceId"})
+    @OutputCustomType.Constructor
     private GetSubscriptionDiagnosticSettingResult(
-        @Nullable String eventHubAuthorizationRuleId,
-        @Nullable String eventHubName,
-        String id,
-        @Nullable String location,
-        @Nullable List<SubscriptionLogSettingsResponse> logs,
-        String name,
-        @Nullable String serviceBusRuleId,
-        @Nullable String storageAccountId,
-        String type,
-        @Nullable String workspaceId) {
+        @OutputCustomType.Parameter("eventHubAuthorizationRuleId") @Nullable String eventHubAuthorizationRuleId,
+        @OutputCustomType.Parameter("eventHubName") @Nullable String eventHubName,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("logs") @Nullable List<SubscriptionLogSettingsResponse> logs,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("serviceBusRuleId") @Nullable String serviceBusRuleId,
+        @OutputCustomType.Parameter("storageAccountId") @Nullable String storageAccountId,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("workspaceId") @Nullable String workspaceId) {
         this.eventHubAuthorizationRuleId = eventHubAuthorizationRuleId;
         this.eventHubName = eventHubName;
         this.id = id;

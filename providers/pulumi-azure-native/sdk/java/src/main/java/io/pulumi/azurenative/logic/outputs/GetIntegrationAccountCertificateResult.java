@@ -65,18 +65,18 @@ public final class GetIntegrationAccountCertificateResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"changedTime","createdTime","id","key","location","metadata","name","publicCertificate","tags","type"})
+    @OutputCustomType.Constructor
     private GetIntegrationAccountCertificateResult(
-        String changedTime,
-        String createdTime,
-        String id,
-        @Nullable KeyVaultKeyReferenceResponse key,
-        @Nullable String location,
-        @Nullable Object metadata,
-        String name,
-        @Nullable String publicCertificate,
-        @Nullable Map<String,String> tags,
-        String type) {
+        @OutputCustomType.Parameter("changedTime") String changedTime,
+        @OutputCustomType.Parameter("createdTime") String createdTime,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("key") @Nullable KeyVaultKeyReferenceResponse key,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("metadata") @Nullable Object metadata,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("publicCertificate") @Nullable String publicCertificate,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type) {
         this.changedTime = changedTime;
         this.createdTime = createdTime;
         this.id = id;

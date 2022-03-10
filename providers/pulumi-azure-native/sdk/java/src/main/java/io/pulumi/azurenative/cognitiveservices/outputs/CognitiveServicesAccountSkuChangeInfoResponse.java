@@ -26,11 +26,11 @@ public final class CognitiveServicesAccountSkuChangeInfoResponse {
      */
     private final String lastChangeDate;
 
-    @OutputCustomType.Constructor({"countOfDowngrades","countOfUpgradesAfterDowngrades","lastChangeDate"})
+    @OutputCustomType.Constructor
     private CognitiveServicesAccountSkuChangeInfoResponse(
-        Double countOfDowngrades,
-        Double countOfUpgradesAfterDowngrades,
-        String lastChangeDate) {
+        @OutputCustomType.Parameter("countOfDowngrades") Double countOfDowngrades,
+        @OutputCustomType.Parameter("countOfUpgradesAfterDowngrades") Double countOfUpgradesAfterDowngrades,
+        @OutputCustomType.Parameter("lastChangeDate") String lastChangeDate) {
         this.countOfDowngrades = countOfDowngrades;
         this.countOfUpgradesAfterDowngrades = countOfUpgradesAfterDowngrades;
         this.lastChangeDate = lastChangeDate;

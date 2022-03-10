@@ -57,17 +57,17 @@ public final class VMwareCbtNicDetailsResponse {
      */
     private final @Nullable String targetSubnetName;
 
-    @OutputCustomType.Constructor({"isPrimaryNic","isSelectedForMigration","nicId","sourceIPAddress","sourceIPAddressType","sourceNetworkId","targetIPAddress","targetIPAddressType","targetSubnetName"})
+    @OutputCustomType.Constructor
     private VMwareCbtNicDetailsResponse(
-        @Nullable String isPrimaryNic,
-        @Nullable String isSelectedForMigration,
-        String nicId,
-        String sourceIPAddress,
-        String sourceIPAddressType,
-        String sourceNetworkId,
-        @Nullable String targetIPAddress,
-        @Nullable String targetIPAddressType,
-        @Nullable String targetSubnetName) {
+        @OutputCustomType.Parameter("isPrimaryNic") @Nullable String isPrimaryNic,
+        @OutputCustomType.Parameter("isSelectedForMigration") @Nullable String isSelectedForMigration,
+        @OutputCustomType.Parameter("nicId") String nicId,
+        @OutputCustomType.Parameter("sourceIPAddress") String sourceIPAddress,
+        @OutputCustomType.Parameter("sourceIPAddressType") String sourceIPAddressType,
+        @OutputCustomType.Parameter("sourceNetworkId") String sourceNetworkId,
+        @OutputCustomType.Parameter("targetIPAddress") @Nullable String targetIPAddress,
+        @OutputCustomType.Parameter("targetIPAddressType") @Nullable String targetIPAddressType,
+        @OutputCustomType.Parameter("targetSubnetName") @Nullable String targetSubnetName) {
         this.isPrimaryNic = isPrimaryNic;
         this.isSelectedForMigration = isSelectedForMigration;
         this.nicId = nicId;

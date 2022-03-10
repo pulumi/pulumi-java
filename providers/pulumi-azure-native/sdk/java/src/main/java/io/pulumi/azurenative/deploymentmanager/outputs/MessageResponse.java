@@ -20,10 +20,10 @@ public final class MessageResponse {
      */
     private final String timeStamp;
 
-    @OutputCustomType.Constructor({"message","timeStamp"})
+    @OutputCustomType.Constructor
     private MessageResponse(
-        String message,
-        String timeStamp) {
+        @OutputCustomType.Parameter("message") String message,
+        @OutputCustomType.Parameter("timeStamp") String timeStamp) {
         this.message = message;
         this.timeStamp = timeStamp;
     }

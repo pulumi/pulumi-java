@@ -52,16 +52,16 @@ public final class JobStepOutputResponse {
      */
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor({"credential","databaseName","resourceGroupName","schemaName","serverName","subscriptionId","tableName","type"})
+    @OutputCustomType.Constructor
     private JobStepOutputResponse(
-        String credential,
-        String databaseName,
-        @Nullable String resourceGroupName,
-        @Nullable String schemaName,
-        String serverName,
-        @Nullable String subscriptionId,
-        String tableName,
-        @Nullable String type) {
+        @OutputCustomType.Parameter("credential") String credential,
+        @OutputCustomType.Parameter("databaseName") String databaseName,
+        @OutputCustomType.Parameter("resourceGroupName") @Nullable String resourceGroupName,
+        @OutputCustomType.Parameter("schemaName") @Nullable String schemaName,
+        @OutputCustomType.Parameter("serverName") String serverName,
+        @OutputCustomType.Parameter("subscriptionId") @Nullable String subscriptionId,
+        @OutputCustomType.Parameter("tableName") String tableName,
+        @OutputCustomType.Parameter("type") @Nullable String type) {
         this.credential = credential;
         this.databaseName = databaseName;
         this.resourceGroupName = resourceGroupName;

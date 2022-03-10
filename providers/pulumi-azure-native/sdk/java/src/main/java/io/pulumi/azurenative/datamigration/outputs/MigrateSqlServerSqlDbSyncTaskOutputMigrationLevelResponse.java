@@ -57,17 +57,17 @@ public final class MigrateSqlServerSqlDbSyncTaskOutputMigrationLevelResponse {
      */
     private final String targetServerVersion;
 
-    @OutputCustomType.Constructor({"databaseCount","endedOn","id","resultType","sourceServer","sourceServerVersion","startedOn","targetServer","targetServerVersion"})
+    @OutputCustomType.Constructor
     private MigrateSqlServerSqlDbSyncTaskOutputMigrationLevelResponse(
-        Integer databaseCount,
-        String endedOn,
-        String id,
-        String resultType,
-        String sourceServer,
-        String sourceServerVersion,
-        String startedOn,
-        String targetServer,
-        String targetServerVersion) {
+        @OutputCustomType.Parameter("databaseCount") Integer databaseCount,
+        @OutputCustomType.Parameter("endedOn") String endedOn,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("resultType") String resultType,
+        @OutputCustomType.Parameter("sourceServer") String sourceServer,
+        @OutputCustomType.Parameter("sourceServerVersion") String sourceServerVersion,
+        @OutputCustomType.Parameter("startedOn") String startedOn,
+        @OutputCustomType.Parameter("targetServer") String targetServer,
+        @OutputCustomType.Parameter("targetServerVersion") String targetServerVersion) {
         this.databaseCount = databaseCount;
         this.endedOn = endedOn;
         this.id = id;

@@ -44,14 +44,14 @@ public final class VirtualHubRouteTableV2Response {
      */
     private final @Nullable List<VirtualHubRouteV2Response> routes;
 
-    @OutputCustomType.Constructor({"attachedConnections","etag","id","name","provisioningState","routes"})
+    @OutputCustomType.Constructor
     private VirtualHubRouteTableV2Response(
-        @Nullable List<String> attachedConnections,
-        String etag,
-        @Nullable String id,
-        @Nullable String name,
-        String provisioningState,
-        @Nullable List<VirtualHubRouteV2Response> routes) {
+        @OutputCustomType.Parameter("attachedConnections") @Nullable List<String> attachedConnections,
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("routes") @Nullable List<VirtualHubRouteV2Response> routes) {
         this.attachedConnections = attachedConnections;
         this.etag = etag;
         this.id = id;

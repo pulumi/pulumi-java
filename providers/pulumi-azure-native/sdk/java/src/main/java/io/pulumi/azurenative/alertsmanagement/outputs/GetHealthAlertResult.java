@@ -71,19 +71,19 @@ public final class GetHealthAlertResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"actions","criteria","description","enabled","id","lastUpdatedTime","location","name","scopes","tags","type"})
+    @OutputCustomType.Constructor
     private GetHealthAlertResult(
-        @Nullable List<HealthAlertActionResponse> actions,
-        HealthAlertCriteriaResponse criteria,
-        String description,
-        Boolean enabled,
-        String id,
-        String lastUpdatedTime,
-        String location,
-        String name,
-        @Nullable List<String> scopes,
-        @Nullable Map<String,String> tags,
-        String type) {
+        @OutputCustomType.Parameter("actions") @Nullable List<HealthAlertActionResponse> actions,
+        @OutputCustomType.Parameter("criteria") HealthAlertCriteriaResponse criteria,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("enabled") Boolean enabled,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("lastUpdatedTime") String lastUpdatedTime,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("scopes") @Nullable List<String> scopes,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type) {
         this.actions = actions;
         this.criteria = criteria;
         this.description = description;

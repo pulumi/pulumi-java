@@ -81,20 +81,20 @@ public final class SalesforceMarketingCloudLinkedServiceResponse {
      */
     private final @Nullable Object usePeerVerification;
 
-    @OutputCustomType.Constructor({"annotations","clientId","clientSecret","connectVia","connectionProperties","description","encryptedCredential","parameters","type","useEncryptedEndpoints","useHostVerification","usePeerVerification"})
+    @OutputCustomType.Constructor
     private SalesforceMarketingCloudLinkedServiceResponse(
-        @Nullable List<Object> annotations,
-        @Nullable Object clientId,
-        @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> clientSecret,
-        @Nullable IntegrationRuntimeReferenceResponse connectVia,
-        @Nullable Object connectionProperties,
-        @Nullable String description,
-        @Nullable Object encryptedCredential,
-        @Nullable Map<String,ParameterSpecificationResponse> parameters,
-        String type,
-        @Nullable Object useEncryptedEndpoints,
-        @Nullable Object useHostVerification,
-        @Nullable Object usePeerVerification) {
+        @OutputCustomType.Parameter("annotations") @Nullable List<Object> annotations,
+        @OutputCustomType.Parameter("clientId") @Nullable Object clientId,
+        @OutputCustomType.Parameter("clientSecret") @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> clientSecret,
+        @OutputCustomType.Parameter("connectVia") @Nullable IntegrationRuntimeReferenceResponse connectVia,
+        @OutputCustomType.Parameter("connectionProperties") @Nullable Object connectionProperties,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("encryptedCredential") @Nullable Object encryptedCredential,
+        @OutputCustomType.Parameter("parameters") @Nullable Map<String,ParameterSpecificationResponse> parameters,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("useEncryptedEndpoints") @Nullable Object useEncryptedEndpoints,
+        @OutputCustomType.Parameter("useHostVerification") @Nullable Object useHostVerification,
+        @OutputCustomType.Parameter("usePeerVerification") @Nullable Object usePeerVerification) {
         this.annotations = annotations;
         this.clientId = clientId;
         this.clientSecret = clientSecret;

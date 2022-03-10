@@ -16,11 +16,11 @@ public final class ResourceTypeExtensionResponse {
     private final @Nullable List<String> extensionCategories;
     private final @Nullable String timeout;
 
-    @OutputCustomType.Constructor({"endpointUri","extensionCategories","timeout"})
+    @OutputCustomType.Constructor
     private ResourceTypeExtensionResponse(
-        @Nullable String endpointUri,
-        @Nullable List<String> extensionCategories,
-        @Nullable String timeout) {
+        @OutputCustomType.Parameter("endpointUri") @Nullable String endpointUri,
+        @OutputCustomType.Parameter("extensionCategories") @Nullable List<String> extensionCategories,
+        @OutputCustomType.Parameter("timeout") @Nullable String timeout) {
         this.endpointUri = endpointUri;
         this.extensionCategories = extensionCategories;
         this.timeout = timeout;

@@ -27,11 +27,11 @@ public final class LogAnalyticsQueryPackQueryPropertiesResponseRelated {
      */
     private final @Nullable List<String> solutions;
 
-    @OutputCustomType.Constructor({"categories","resourceTypes","solutions"})
+    @OutputCustomType.Constructor
     private LogAnalyticsQueryPackQueryPropertiesResponseRelated(
-        @Nullable List<String> categories,
-        @Nullable List<String> resourceTypes,
-        @Nullable List<String> solutions) {
+        @OutputCustomType.Parameter("categories") @Nullable List<String> categories,
+        @OutputCustomType.Parameter("resourceTypes") @Nullable List<String> resourceTypes,
+        @OutputCustomType.Parameter("solutions") @Nullable List<String> solutions) {
         this.categories = categories;
         this.resourceTypes = resourceTypes;
         this.solutions = solutions;

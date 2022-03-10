@@ -49,15 +49,15 @@ public final class ConnectionMonitorEndpointResponse {
      */
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor({"address","coverageLevel","filter","name","resourceId","scope","type"})
+    @OutputCustomType.Constructor
     private ConnectionMonitorEndpointResponse(
-        @Nullable String address,
-        @Nullable String coverageLevel,
-        @Nullable ConnectionMonitorEndpointFilterResponse filter,
-        String name,
-        @Nullable String resourceId,
-        @Nullable ConnectionMonitorEndpointScopeResponse scope,
-        @Nullable String type) {
+        @OutputCustomType.Parameter("address") @Nullable String address,
+        @OutputCustomType.Parameter("coverageLevel") @Nullable String coverageLevel,
+        @OutputCustomType.Parameter("filter") @Nullable ConnectionMonitorEndpointFilterResponse filter,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("resourceId") @Nullable String resourceId,
+        @OutputCustomType.Parameter("scope") @Nullable ConnectionMonitorEndpointScopeResponse scope,
+        @OutputCustomType.Parameter("type") @Nullable String type) {
         this.address = address;
         this.coverageLevel = coverageLevel;
         this.filter = filter;

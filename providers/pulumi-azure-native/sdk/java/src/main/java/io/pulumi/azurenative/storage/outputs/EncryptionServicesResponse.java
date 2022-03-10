@@ -32,12 +32,12 @@ public final class EncryptionServicesResponse {
      */
     private final @Nullable EncryptionServiceResponse table;
 
-    @OutputCustomType.Constructor({"blob","file","queue","table"})
+    @OutputCustomType.Constructor
     private EncryptionServicesResponse(
-        @Nullable EncryptionServiceResponse blob,
-        @Nullable EncryptionServiceResponse file,
-        @Nullable EncryptionServiceResponse queue,
-        @Nullable EncryptionServiceResponse table) {
+        @OutputCustomType.Parameter("blob") @Nullable EncryptionServiceResponse blob,
+        @OutputCustomType.Parameter("file") @Nullable EncryptionServiceResponse file,
+        @OutputCustomType.Parameter("queue") @Nullable EncryptionServiceResponse queue,
+        @OutputCustomType.Parameter("table") @Nullable EncryptionServiceResponse table) {
         this.blob = blob;
         this.file = file;
         this.queue = queue;

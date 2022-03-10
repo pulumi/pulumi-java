@@ -34,12 +34,12 @@ public final class GraphNodeResponse {
      */
     private final @Nullable Map<String,WebServiceParameterResponse> parameters;
 
-    @OutputCustomType.Constructor({"assetId","inputId","outputId","parameters"})
+    @OutputCustomType.Constructor
     private GraphNodeResponse(
-        @Nullable String assetId,
-        @Nullable String inputId,
-        @Nullable String outputId,
-        @Nullable Map<String,WebServiceParameterResponse> parameters) {
+        @OutputCustomType.Parameter("assetId") @Nullable String assetId,
+        @OutputCustomType.Parameter("inputId") @Nullable String inputId,
+        @OutputCustomType.Parameter("outputId") @Nullable String outputId,
+        @OutputCustomType.Parameter("parameters") @Nullable Map<String,WebServiceParameterResponse> parameters) {
         this.assetId = assetId;
         this.inputId = inputId;
         this.outputId = outputId;

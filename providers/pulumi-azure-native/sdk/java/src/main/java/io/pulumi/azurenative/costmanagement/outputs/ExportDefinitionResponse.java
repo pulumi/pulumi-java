@@ -34,12 +34,12 @@ public final class ExportDefinitionResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"dataSet","timePeriod","timeframe","type"})
+    @OutputCustomType.Constructor
     private ExportDefinitionResponse(
-        @Nullable ExportDatasetResponse dataSet,
-        @Nullable ExportTimePeriodResponse timePeriod,
-        String timeframe,
-        String type) {
+        @OutputCustomType.Parameter("dataSet") @Nullable ExportDatasetResponse dataSet,
+        @OutputCustomType.Parameter("timePeriod") @Nullable ExportTimePeriodResponse timePeriod,
+        @OutputCustomType.Parameter("timeframe") String timeframe,
+        @OutputCustomType.Parameter("type") String type) {
         this.dataSet = dataSet;
         this.timePeriod = timePeriod;
         this.timeframe = timeframe;

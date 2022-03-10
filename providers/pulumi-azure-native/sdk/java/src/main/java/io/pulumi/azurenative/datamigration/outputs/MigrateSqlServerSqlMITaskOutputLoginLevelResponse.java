@@ -58,17 +58,17 @@ public final class MigrateSqlServerSqlMITaskOutputLoginLevelResponse {
      */
     private final String state;
 
-    @OutputCustomType.Constructor({"endedOn","exceptionsAndWarnings","id","loginName","message","resultType","stage","startedOn","state"})
+    @OutputCustomType.Constructor
     private MigrateSqlServerSqlMITaskOutputLoginLevelResponse(
-        String endedOn,
-        List<ReportableExceptionResponse> exceptionsAndWarnings,
-        String id,
-        String loginName,
-        String message,
-        String resultType,
-        String stage,
-        String startedOn,
-        String state) {
+        @OutputCustomType.Parameter("endedOn") String endedOn,
+        @OutputCustomType.Parameter("exceptionsAndWarnings") List<ReportableExceptionResponse> exceptionsAndWarnings,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("loginName") String loginName,
+        @OutputCustomType.Parameter("message") String message,
+        @OutputCustomType.Parameter("resultType") String resultType,
+        @OutputCustomType.Parameter("stage") String stage,
+        @OutputCustomType.Parameter("startedOn") String startedOn,
+        @OutputCustomType.Parameter("state") String state) {
         this.endedOn = endedOn;
         this.exceptionsAndWarnings = exceptionsAndWarnings;
         this.id = id;

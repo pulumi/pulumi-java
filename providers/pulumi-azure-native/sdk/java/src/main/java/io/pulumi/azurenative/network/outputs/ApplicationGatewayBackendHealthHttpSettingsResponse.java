@@ -24,10 +24,10 @@ public final class ApplicationGatewayBackendHealthHttpSettingsResponse {
      */
     private final @Nullable List<ApplicationGatewayBackendHealthServerResponse> servers;
 
-    @OutputCustomType.Constructor({"backendHttpSettings","servers"})
+    @OutputCustomType.Constructor
     private ApplicationGatewayBackendHealthHttpSettingsResponse(
-        @Nullable ApplicationGatewayBackendHttpSettingsResponse backendHttpSettings,
-        @Nullable List<ApplicationGatewayBackendHealthServerResponse> servers) {
+        @OutputCustomType.Parameter("backendHttpSettings") @Nullable ApplicationGatewayBackendHttpSettingsResponse backendHttpSettings,
+        @OutputCustomType.Parameter("servers") @Nullable List<ApplicationGatewayBackendHealthServerResponse> servers) {
         this.backendHttpSettings = backendHttpSettings;
         this.servers = servers;
     }

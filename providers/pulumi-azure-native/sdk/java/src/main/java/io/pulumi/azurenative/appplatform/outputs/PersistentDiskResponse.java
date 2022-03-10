@@ -28,11 +28,11 @@ public final class PersistentDiskResponse {
      */
     private final Integer usedInGB;
 
-    @OutputCustomType.Constructor({"mountPath","sizeInGB","usedInGB"})
+    @OutputCustomType.Constructor
     private PersistentDiskResponse(
-        @Nullable String mountPath,
-        @Nullable Integer sizeInGB,
-        Integer usedInGB) {
+        @OutputCustomType.Parameter("mountPath") @Nullable String mountPath,
+        @OutputCustomType.Parameter("sizeInGB") @Nullable Integer sizeInGB,
+        @OutputCustomType.Parameter("usedInGB") Integer usedInGB) {
         this.mountPath = mountPath;
         this.sizeInGB = sizeInGB;
         this.usedInGB = usedInGB;

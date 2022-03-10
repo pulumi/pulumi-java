@@ -95,21 +95,21 @@ public final class BatchDeploymentResponse {
      */
     private final @Nullable BatchRetrySettingsResponse retrySettings;
 
-    @OutputCustomType.Constructor({"codeConfiguration","compute","description","environmentId","environmentVariables","errorThreshold","loggingLevel","miniBatchSize","model","outputConfiguration","partitionKeys","properties","retrySettings"})
+    @OutputCustomType.Constructor
     private BatchDeploymentResponse(
-        @Nullable CodeConfigurationResponse codeConfiguration,
-        @Nullable ComputeConfigurationResponse compute,
-        @Nullable String description,
-        @Nullable String environmentId,
-        @Nullable Map<String,String> environmentVariables,
-        @Nullable Integer errorThreshold,
-        @Nullable String loggingLevel,
-        @Nullable Double miniBatchSize,
-        @Nullable Object model,
-        @Nullable BatchOutputConfigurationResponse outputConfiguration,
-        @Nullable List<String> partitionKeys,
-        @Nullable Map<String,String> properties,
-        @Nullable BatchRetrySettingsResponse retrySettings) {
+        @OutputCustomType.Parameter("codeConfiguration") @Nullable CodeConfigurationResponse codeConfiguration,
+        @OutputCustomType.Parameter("compute") @Nullable ComputeConfigurationResponse compute,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("environmentId") @Nullable String environmentId,
+        @OutputCustomType.Parameter("environmentVariables") @Nullable Map<String,String> environmentVariables,
+        @OutputCustomType.Parameter("errorThreshold") @Nullable Integer errorThreshold,
+        @OutputCustomType.Parameter("loggingLevel") @Nullable String loggingLevel,
+        @OutputCustomType.Parameter("miniBatchSize") @Nullable Double miniBatchSize,
+        @OutputCustomType.Parameter("model") @Nullable Object model,
+        @OutputCustomType.Parameter("outputConfiguration") @Nullable BatchOutputConfigurationResponse outputConfiguration,
+        @OutputCustomType.Parameter("partitionKeys") @Nullable List<String> partitionKeys,
+        @OutputCustomType.Parameter("properties") @Nullable Map<String,String> properties,
+        @OutputCustomType.Parameter("retrySettings") @Nullable BatchRetrySettingsResponse retrySettings) {
         this.codeConfiguration = codeConfiguration;
         this.compute = compute;
         this.description = description;

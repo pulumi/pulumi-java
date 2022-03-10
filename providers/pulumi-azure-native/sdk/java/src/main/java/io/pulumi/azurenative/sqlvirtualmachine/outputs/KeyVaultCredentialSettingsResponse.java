@@ -33,12 +33,12 @@ public final class KeyVaultCredentialSettingsResponse {
      */
     private final @Nullable String servicePrincipalName;
 
-    @OutputCustomType.Constructor({"azureKeyVaultUrl","credentialName","enable","servicePrincipalName"})
+    @OutputCustomType.Constructor
     private KeyVaultCredentialSettingsResponse(
-        @Nullable String azureKeyVaultUrl,
-        @Nullable String credentialName,
-        @Nullable Boolean enable,
-        @Nullable String servicePrincipalName) {
+        @OutputCustomType.Parameter("azureKeyVaultUrl") @Nullable String azureKeyVaultUrl,
+        @OutputCustomType.Parameter("credentialName") @Nullable String credentialName,
+        @OutputCustomType.Parameter("enable") @Nullable Boolean enable,
+        @OutputCustomType.Parameter("servicePrincipalName") @Nullable String servicePrincipalName) {
         this.azureKeyVaultUrl = azureKeyVaultUrl;
         this.credentialName = credentialName;
         this.enable = enable;

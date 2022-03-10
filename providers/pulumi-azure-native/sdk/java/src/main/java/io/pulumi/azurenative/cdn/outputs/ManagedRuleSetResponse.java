@@ -35,12 +35,12 @@ public final class ManagedRuleSetResponse {
      */
     private final String ruleSetVersion;
 
-    @OutputCustomType.Constructor({"anomalyScore","ruleGroupOverrides","ruleSetType","ruleSetVersion"})
+    @OutputCustomType.Constructor
     private ManagedRuleSetResponse(
-        @Nullable Integer anomalyScore,
-        @Nullable List<ManagedRuleGroupOverrideResponse> ruleGroupOverrides,
-        String ruleSetType,
-        String ruleSetVersion) {
+        @OutputCustomType.Parameter("anomalyScore") @Nullable Integer anomalyScore,
+        @OutputCustomType.Parameter("ruleGroupOverrides") @Nullable List<ManagedRuleGroupOverrideResponse> ruleGroupOverrides,
+        @OutputCustomType.Parameter("ruleSetType") String ruleSetType,
+        @OutputCustomType.Parameter("ruleSetVersion") String ruleSetVersion) {
         this.anomalyScore = anomalyScore;
         this.ruleGroupOverrides = ruleGroupOverrides;
         this.ruleSetType = ruleSetType;

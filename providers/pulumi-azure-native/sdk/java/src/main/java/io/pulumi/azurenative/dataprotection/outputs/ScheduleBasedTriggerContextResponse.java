@@ -29,11 +29,11 @@ public final class ScheduleBasedTriggerContextResponse {
      */
     private final List<TaggingCriteriaResponse> taggingCriteria;
 
-    @OutputCustomType.Constructor({"objectType","schedule","taggingCriteria"})
+    @OutputCustomType.Constructor
     private ScheduleBasedTriggerContextResponse(
-        String objectType,
-        BackupScheduleResponse schedule,
-        List<TaggingCriteriaResponse> taggingCriteria) {
+        @OutputCustomType.Parameter("objectType") String objectType,
+        @OutputCustomType.Parameter("schedule") BackupScheduleResponse schedule,
+        @OutputCustomType.Parameter("taggingCriteria") List<TaggingCriteriaResponse> taggingCriteria) {
         this.objectType = objectType;
         this.schedule = schedule;
         this.taggingCriteria = taggingCriteria;

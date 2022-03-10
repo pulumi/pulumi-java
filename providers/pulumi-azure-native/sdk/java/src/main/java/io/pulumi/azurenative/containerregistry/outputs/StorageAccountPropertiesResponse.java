@@ -15,8 +15,8 @@ public final class StorageAccountPropertiesResponse {
      */
     private final String id;
 
-    @OutputCustomType.Constructor({"id"})
-    private StorageAccountPropertiesResponse(String id) {
+    @OutputCustomType.Constructor
+    private StorageAccountPropertiesResponse(@OutputCustomType.Parameter("id") String id) {
         this.id = id;
     }
 

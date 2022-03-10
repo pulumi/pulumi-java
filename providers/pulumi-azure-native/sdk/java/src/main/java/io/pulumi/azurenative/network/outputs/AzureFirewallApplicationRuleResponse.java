@@ -49,15 +49,15 @@ public final class AzureFirewallApplicationRuleResponse {
      */
     private final @Nullable List<String> targetFqdns;
 
-    @OutputCustomType.Constructor({"description","fqdnTags","name","protocols","sourceAddresses","sourceIpGroups","targetFqdns"})
+    @OutputCustomType.Constructor
     private AzureFirewallApplicationRuleResponse(
-        @Nullable String description,
-        @Nullable List<String> fqdnTags,
-        @Nullable String name,
-        @Nullable List<AzureFirewallApplicationRuleProtocolResponse> protocols,
-        @Nullable List<String> sourceAddresses,
-        @Nullable List<String> sourceIpGroups,
-        @Nullable List<String> targetFqdns) {
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("fqdnTags") @Nullable List<String> fqdnTags,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("protocols") @Nullable List<AzureFirewallApplicationRuleProtocolResponse> protocols,
+        @OutputCustomType.Parameter("sourceAddresses") @Nullable List<String> sourceAddresses,
+        @OutputCustomType.Parameter("sourceIpGroups") @Nullable List<String> sourceIpGroups,
+        @OutputCustomType.Parameter("targetFqdns") @Nullable List<String> targetFqdns) {
         this.description = description;
         this.fqdnTags = fqdnTags;
         this.name = name;

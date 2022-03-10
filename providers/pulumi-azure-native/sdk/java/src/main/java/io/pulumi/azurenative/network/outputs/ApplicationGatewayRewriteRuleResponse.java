@@ -36,12 +36,12 @@ public final class ApplicationGatewayRewriteRuleResponse {
      */
     private final @Nullable Integer ruleSequence;
 
-    @OutputCustomType.Constructor({"actionSet","conditions","name","ruleSequence"})
+    @OutputCustomType.Constructor
     private ApplicationGatewayRewriteRuleResponse(
-        @Nullable ApplicationGatewayRewriteRuleActionSetResponse actionSet,
-        @Nullable List<ApplicationGatewayRewriteRuleConditionResponse> conditions,
-        @Nullable String name,
-        @Nullable Integer ruleSequence) {
+        @OutputCustomType.Parameter("actionSet") @Nullable ApplicationGatewayRewriteRuleActionSetResponse actionSet,
+        @OutputCustomType.Parameter("conditions") @Nullable List<ApplicationGatewayRewriteRuleConditionResponse> conditions,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("ruleSequence") @Nullable Integer ruleSequence) {
         this.actionSet = actionSet;
         this.conditions = conditions;
         this.name = name;

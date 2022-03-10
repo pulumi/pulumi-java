@@ -37,13 +37,13 @@ public final class VpnClientRootCertificateResponse {
      */
     private final String publicCertData;
 
-    @OutputCustomType.Constructor({"etag","id","name","provisioningState","publicCertData"})
+    @OutputCustomType.Constructor
     private VpnClientRootCertificateResponse(
-        String etag,
-        @Nullable String id,
-        @Nullable String name,
-        String provisioningState,
-        String publicCertData) {
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("publicCertData") String publicCertData) {
         this.etag = etag;
         this.id = id;
         this.name = name;

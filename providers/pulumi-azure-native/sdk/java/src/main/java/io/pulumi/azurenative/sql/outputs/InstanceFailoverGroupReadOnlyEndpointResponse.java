@@ -17,8 +17,8 @@ public final class InstanceFailoverGroupReadOnlyEndpointResponse {
      */
     private final @Nullable String failoverPolicy;
 
-    @OutputCustomType.Constructor({"failoverPolicy"})
-    private InstanceFailoverGroupReadOnlyEndpointResponse(@Nullable String failoverPolicy) {
+    @OutputCustomType.Constructor
+    private InstanceFailoverGroupReadOnlyEndpointResponse(@OutputCustomType.Parameter("failoverPolicy") @Nullable String failoverPolicy) {
         this.failoverPolicy = failoverPolicy;
     }
 

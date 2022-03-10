@@ -42,14 +42,14 @@ public final class GetServerTrustCertificateResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"certificateName","id","name","publicBlob","thumbprint","type"})
+    @OutputCustomType.Constructor
     private GetServerTrustCertificateResult(
-        String certificateName,
-        String id,
-        String name,
-        @Nullable String publicBlob,
-        String thumbprint,
-        String type) {
+        @OutputCustomType.Parameter("certificateName") String certificateName,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("publicBlob") @Nullable String publicBlob,
+        @OutputCustomType.Parameter("thumbprint") String thumbprint,
+        @OutputCustomType.Parameter("type") String type) {
         this.certificateName = certificateName;
         this.id = id;
         this.name = name;

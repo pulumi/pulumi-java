@@ -71,18 +71,18 @@ public final class SharePointOnlineListLinkedServiceResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"annotations","connectVia","description","encryptedCredential","parameters","servicePrincipalId","servicePrincipalKey","siteUrl","tenantId","type"})
+    @OutputCustomType.Constructor
     private SharePointOnlineListLinkedServiceResponse(
-        @Nullable List<Object> annotations,
-        @Nullable IntegrationRuntimeReferenceResponse connectVia,
-        @Nullable String description,
-        @Nullable Object encryptedCredential,
-        @Nullable Map<String,ParameterSpecificationResponse> parameters,
-        Object servicePrincipalId,
-        Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalKey,
-        Object siteUrl,
-        Object tenantId,
-        String type) {
+        @OutputCustomType.Parameter("annotations") @Nullable List<Object> annotations,
+        @OutputCustomType.Parameter("connectVia") @Nullable IntegrationRuntimeReferenceResponse connectVia,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("encryptedCredential") @Nullable Object encryptedCredential,
+        @OutputCustomType.Parameter("parameters") @Nullable Map<String,ParameterSpecificationResponse> parameters,
+        @OutputCustomType.Parameter("servicePrincipalId") Object servicePrincipalId,
+        @OutputCustomType.Parameter("servicePrincipalKey") Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalKey,
+        @OutputCustomType.Parameter("siteUrl") Object siteUrl,
+        @OutputCustomType.Parameter("tenantId") Object tenantId,
+        @OutputCustomType.Parameter("type") String type) {
         this.annotations = annotations;
         this.connectVia = connectVia;
         this.description = description;

@@ -33,12 +33,12 @@ public final class FixedScaleSettingsResponse {
      */
     private final @Nullable Integer targetLowPriorityNodes;
 
-    @OutputCustomType.Constructor({"nodeDeallocationOption","resizeTimeout","targetDedicatedNodes","targetLowPriorityNodes"})
+    @OutputCustomType.Constructor
     private FixedScaleSettingsResponse(
-        @Nullable String nodeDeallocationOption,
-        @Nullable String resizeTimeout,
-        @Nullable Integer targetDedicatedNodes,
-        @Nullable Integer targetLowPriorityNodes) {
+        @OutputCustomType.Parameter("nodeDeallocationOption") @Nullable String nodeDeallocationOption,
+        @OutputCustomType.Parameter("resizeTimeout") @Nullable String resizeTimeout,
+        @OutputCustomType.Parameter("targetDedicatedNodes") @Nullable Integer targetDedicatedNodes,
+        @OutputCustomType.Parameter("targetLowPriorityNodes") @Nullable Integer targetLowPriorityNodes) {
         this.nodeDeallocationOption = nodeDeallocationOption;
         this.resizeTimeout = resizeTimeout;
         this.targetDedicatedNodes = targetDedicatedNodes;

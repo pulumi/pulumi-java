@@ -22,10 +22,10 @@ public final class ListSaasSubscriptionLevelAccessTokenResult {
      */
     private final @Nullable String token;
 
-    @OutputCustomType.Constructor({"publisherOfferBaseUri","token"})
+    @OutputCustomType.Constructor
     private ListSaasSubscriptionLevelAccessTokenResult(
-        @Nullable String publisherOfferBaseUri,
-        @Nullable String token) {
+        @OutputCustomType.Parameter("publisherOfferBaseUri") @Nullable String publisherOfferBaseUri,
+        @OutputCustomType.Parameter("token") @Nullable String token) {
         this.publisherOfferBaseUri = publisherOfferBaseUri;
         this.token = token;
     }

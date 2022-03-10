@@ -23,10 +23,10 @@ public final class ObjectReplicationPolicyFilterResponse {
      */
     private final @Nullable List<String> prefixMatch;
 
-    @OutputCustomType.Constructor({"minCreationTime","prefixMatch"})
+    @OutputCustomType.Constructor
     private ObjectReplicationPolicyFilterResponse(
-        @Nullable String minCreationTime,
-        @Nullable List<String> prefixMatch) {
+        @OutputCustomType.Parameter("minCreationTime") @Nullable String minCreationTime,
+        @OutputCustomType.Parameter("prefixMatch") @Nullable List<String> prefixMatch) {
         this.minCreationTime = minCreationTime;
         this.prefixMatch = prefixMatch;
     }

@@ -50,15 +50,15 @@ public final class GetPrivateLinkHubResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"id","location","name","privateEndpointConnections","provisioningState","tags","type"})
+    @OutputCustomType.Constructor
     private GetPrivateLinkHubResult(
-        String id,
-        String location,
-        String name,
-        List<PrivateEndpointConnectionForPrivateLinkHubBasicResponse> privateEndpointConnections,
-        @Nullable String provisioningState,
-        @Nullable Map<String,String> tags,
-        String type) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("privateEndpointConnections") List<PrivateEndpointConnectionForPrivateLinkHubBasicResponse> privateEndpointConnections,
+        @OutputCustomType.Parameter("provisioningState") @Nullable String provisioningState,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type) {
         this.id = id;
         this.location = location;
         this.name = name;

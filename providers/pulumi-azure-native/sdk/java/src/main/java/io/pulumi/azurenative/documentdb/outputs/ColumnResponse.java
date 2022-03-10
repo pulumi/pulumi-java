@@ -22,10 +22,10 @@ public final class ColumnResponse {
      */
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor({"name","type"})
+    @OutputCustomType.Constructor
     private ColumnResponse(
-        @Nullable String name,
-        @Nullable String type) {
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("type") @Nullable String type) {
         this.name = name;
         this.type = type;
     }

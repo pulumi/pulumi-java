@@ -50,15 +50,15 @@ public final class GetEyesOnResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"etag","id","isEnabled","kind","name","systemData","type"})
+    @OutputCustomType.Constructor
     private GetEyesOnResult(
-        @Nullable String etag,
-        String id,
-        Boolean isEnabled,
-        String kind,
-        String name,
-        SystemDataResponse systemData,
-        String type) {
+        @OutputCustomType.Parameter("etag") @Nullable String etag,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("isEnabled") Boolean isEnabled,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("type") String type) {
         this.etag = etag;
         this.id = id;
         this.isEnabled = isEnabled;

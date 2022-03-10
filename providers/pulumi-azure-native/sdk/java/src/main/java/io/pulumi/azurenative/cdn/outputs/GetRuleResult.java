@@ -84,18 +84,18 @@ public final class GetRuleResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"actions","conditions","deploymentStatus","id","matchProcessingBehavior","name","order","provisioningState","systemData","type"})
+    @OutputCustomType.Constructor
     private GetRuleResult(
-        List<Object> actions,
-        @Nullable List<Object> conditions,
-        String deploymentStatus,
-        String id,
-        @Nullable String matchProcessingBehavior,
-        String name,
-        Integer order,
-        String provisioningState,
-        SystemDataResponse systemData,
-        String type) {
+        @OutputCustomType.Parameter("actions") List<Object> actions,
+        @OutputCustomType.Parameter("conditions") @Nullable List<Object> conditions,
+        @OutputCustomType.Parameter("deploymentStatus") String deploymentStatus,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("matchProcessingBehavior") @Nullable String matchProcessingBehavior,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("order") Integer order,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("type") String type) {
         this.actions = actions;
         this.conditions = conditions;
         this.deploymentStatus = deploymentStatus;

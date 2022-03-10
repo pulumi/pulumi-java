@@ -76,19 +76,19 @@ public final class InformixLinkedServiceResponse {
      */
     private final @Nullable Object userName;
 
-    @OutputCustomType.Constructor({"annotations","authenticationType","connectVia","connectionString","credential","description","encryptedCredential","parameters","password","type","userName"})
+    @OutputCustomType.Constructor
     private InformixLinkedServiceResponse(
-        @Nullable List<Object> annotations,
-        @Nullable Object authenticationType,
-        @Nullable IntegrationRuntimeReferenceResponse connectVia,
-        Object connectionString,
-        @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> credential,
-        @Nullable String description,
-        @Nullable Object encryptedCredential,
-        @Nullable Map<String,ParameterSpecificationResponse> parameters,
-        @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password,
-        String type,
-        @Nullable Object userName) {
+        @OutputCustomType.Parameter("annotations") @Nullable List<Object> annotations,
+        @OutputCustomType.Parameter("authenticationType") @Nullable Object authenticationType,
+        @OutputCustomType.Parameter("connectVia") @Nullable IntegrationRuntimeReferenceResponse connectVia,
+        @OutputCustomType.Parameter("connectionString") Object connectionString,
+        @OutputCustomType.Parameter("credential") @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> credential,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("encryptedCredential") @Nullable Object encryptedCredential,
+        @OutputCustomType.Parameter("parameters") @Nullable Map<String,ParameterSpecificationResponse> parameters,
+        @OutputCustomType.Parameter("password") @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("userName") @Nullable Object userName) {
         this.annotations = annotations;
         this.authenticationType = authenticationType;
         this.connectVia = connectVia;

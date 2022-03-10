@@ -55,16 +55,16 @@ public final class OnlineEndpointResponse {
      */
     private final @Nullable Map<String,Integer> traffic;
 
-    @OutputCustomType.Constructor({"authMode","description","properties","provisioningState","scoringUri","swaggerUri","target","traffic"})
+    @OutputCustomType.Constructor
     private OnlineEndpointResponse(
-        String authMode,
-        @Nullable String description,
-        @Nullable Map<String,String> properties,
-        String provisioningState,
-        String scoringUri,
-        String swaggerUri,
-        @Nullable String target,
-        @Nullable Map<String,Integer> traffic) {
+        @OutputCustomType.Parameter("authMode") String authMode,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("properties") @Nullable Map<String,String> properties,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("scoringUri") String scoringUri,
+        @OutputCustomType.Parameter("swaggerUri") String swaggerUri,
+        @OutputCustomType.Parameter("target") @Nullable String target,
+        @OutputCustomType.Parameter("traffic") @Nullable Map<String,Integer> traffic) {
         this.authMode = authMode;
         this.description = description;
         this.properties = properties;

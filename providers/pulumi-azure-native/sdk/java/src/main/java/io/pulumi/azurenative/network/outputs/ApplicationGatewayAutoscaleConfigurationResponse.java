@@ -22,10 +22,10 @@ public final class ApplicationGatewayAutoscaleConfigurationResponse {
      */
     private final Integer minCapacity;
 
-    @OutputCustomType.Constructor({"maxCapacity","minCapacity"})
+    @OutputCustomType.Constructor
     private ApplicationGatewayAutoscaleConfigurationResponse(
-        @Nullable Integer maxCapacity,
-        Integer minCapacity) {
+        @OutputCustomType.Parameter("maxCapacity") @Nullable Integer maxCapacity,
+        @OutputCustomType.Parameter("minCapacity") Integer minCapacity) {
         this.maxCapacity = maxCapacity;
         this.minCapacity = minCapacity;
     }

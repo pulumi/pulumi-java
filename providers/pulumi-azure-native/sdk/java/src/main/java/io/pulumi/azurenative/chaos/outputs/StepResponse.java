@@ -22,10 +22,10 @@ public final class StepResponse {
      */
     private final String name;
 
-    @OutputCustomType.Constructor({"branches","name"})
+    @OutputCustomType.Constructor
     private StepResponse(
-        List<BranchResponse> branches,
-        String name) {
+        @OutputCustomType.Parameter("branches") List<BranchResponse> branches,
+        @OutputCustomType.Parameter("name") String name) {
         this.branches = branches;
         this.name = name;
     }

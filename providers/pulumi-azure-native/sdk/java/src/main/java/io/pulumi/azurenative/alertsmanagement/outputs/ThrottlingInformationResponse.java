@@ -17,8 +17,8 @@ public final class ThrottlingInformationResponse {
      */
     private final @Nullable String duration;
 
-    @OutputCustomType.Constructor({"duration"})
-    private ThrottlingInformationResponse(@Nullable String duration) {
+    @OutputCustomType.Constructor
+    private ThrottlingInformationResponse(@OutputCustomType.Parameter("duration") @Nullable String duration) {
         this.duration = duration;
     }
 

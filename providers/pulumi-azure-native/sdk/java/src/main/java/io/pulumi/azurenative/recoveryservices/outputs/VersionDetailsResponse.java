@@ -27,11 +27,11 @@ public final class VersionDetailsResponse {
      */
     private final @Nullable String version;
 
-    @OutputCustomType.Constructor({"expiryDate","status","version"})
+    @OutputCustomType.Constructor
     private VersionDetailsResponse(
-        @Nullable String expiryDate,
-        @Nullable String status,
-        @Nullable String version) {
+        @OutputCustomType.Parameter("expiryDate") @Nullable String expiryDate,
+        @OutputCustomType.Parameter("status") @Nullable String status,
+        @OutputCustomType.Parameter("version") @Nullable String version) {
         this.expiryDate = expiryDate;
         this.status = status;
         this.version = version;

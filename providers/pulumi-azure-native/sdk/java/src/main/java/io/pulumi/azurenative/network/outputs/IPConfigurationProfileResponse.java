@@ -43,14 +43,14 @@ public final class IPConfigurationProfileResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"etag","id","name","provisioningState","subnet","type"})
+    @OutputCustomType.Constructor
     private IPConfigurationProfileResponse(
-        String etag,
-        @Nullable String id,
-        @Nullable String name,
-        String provisioningState,
-        @Nullable SubnetResponse subnet,
-        String type) {
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("subnet") @Nullable SubnetResponse subnet,
+        @OutputCustomType.Parameter("type") String type) {
         this.etag = etag;
         this.id = id;
         this.name = name;

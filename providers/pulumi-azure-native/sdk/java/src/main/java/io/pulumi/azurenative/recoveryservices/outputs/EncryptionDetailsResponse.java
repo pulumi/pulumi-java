@@ -27,11 +27,11 @@ public final class EncryptionDetailsResponse {
      */
     private final @Nullable String kekState;
 
-    @OutputCustomType.Constructor({"kekCertExpiryDate","kekCertThumbprint","kekState"})
+    @OutputCustomType.Constructor
     private EncryptionDetailsResponse(
-        @Nullable String kekCertExpiryDate,
-        @Nullable String kekCertThumbprint,
-        @Nullable String kekState) {
+        @OutputCustomType.Parameter("kekCertExpiryDate") @Nullable String kekCertExpiryDate,
+        @OutputCustomType.Parameter("kekCertThumbprint") @Nullable String kekCertThumbprint,
+        @OutputCustomType.Parameter("kekState") @Nullable String kekState) {
         this.kekCertExpiryDate = kekCertExpiryDate;
         this.kekCertThumbprint = kekCertThumbprint;
         this.kekState = kekState;

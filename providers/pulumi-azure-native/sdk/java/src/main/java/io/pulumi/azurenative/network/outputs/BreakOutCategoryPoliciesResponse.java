@@ -27,11 +27,11 @@ public final class BreakOutCategoryPoliciesResponse {
      */
     private final @Nullable Boolean optimize;
 
-    @OutputCustomType.Constructor({"allow","$default","optimize"})
+    @OutputCustomType.Constructor
     private BreakOutCategoryPoliciesResponse(
-        @Nullable Boolean allow,
-        @Nullable Boolean $default,
-        @Nullable Boolean optimize) {
+        @OutputCustomType.Parameter("allow") @Nullable Boolean allow,
+        @OutputCustomType.Parameter("default") @Nullable Boolean $default,
+        @OutputCustomType.Parameter("optimize") @Nullable Boolean optimize) {
         this.allow = allow;
         this.$default = $default;
         this.optimize = optimize;

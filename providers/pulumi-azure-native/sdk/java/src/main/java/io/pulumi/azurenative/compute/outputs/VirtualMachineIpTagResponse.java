@@ -22,10 +22,10 @@ public final class VirtualMachineIpTagResponse {
      */
     private final @Nullable String tag;
 
-    @OutputCustomType.Constructor({"ipTagType","tag"})
+    @OutputCustomType.Constructor
     private VirtualMachineIpTagResponse(
-        @Nullable String ipTagType,
-        @Nullable String tag) {
+        @OutputCustomType.Parameter("ipTagType") @Nullable String ipTagType,
+        @OutputCustomType.Parameter("tag") @Nullable String tag) {
         this.ipTagType = ipTagType;
         this.tag = tag;
     }

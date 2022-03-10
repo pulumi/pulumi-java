@@ -15,8 +15,8 @@ public final class DateAfterCreationResponse {
      */
     private final Double daysAfterCreationGreaterThan;
 
-    @OutputCustomType.Constructor({"daysAfterCreationGreaterThan"})
-    private DateAfterCreationResponse(Double daysAfterCreationGreaterThan) {
+    @OutputCustomType.Constructor
+    private DateAfterCreationResponse(@OutputCustomType.Parameter("daysAfterCreationGreaterThan") Double daysAfterCreationGreaterThan) {
         this.daysAfterCreationGreaterThan = daysAfterCreationGreaterThan;
     }
 

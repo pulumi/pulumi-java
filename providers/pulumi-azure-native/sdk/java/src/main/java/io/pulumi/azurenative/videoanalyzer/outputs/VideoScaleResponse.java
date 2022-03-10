@@ -27,11 +27,11 @@ public final class VideoScaleResponse {
      */
     private final @Nullable String width;
 
-    @OutputCustomType.Constructor({"height","mode","width"})
+    @OutputCustomType.Constructor
     private VideoScaleResponse(
-        @Nullable String height,
-        @Nullable String mode,
-        @Nullable String width) {
+        @OutputCustomType.Parameter("height") @Nullable String height,
+        @OutputCustomType.Parameter("mode") @Nullable String mode,
+        @OutputCustomType.Parameter("width") @Nullable String width) {
         this.height = height;
         this.mode = mode;
         this.width = width;

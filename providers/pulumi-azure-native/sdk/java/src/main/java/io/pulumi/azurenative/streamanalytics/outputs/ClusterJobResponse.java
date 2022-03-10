@@ -26,11 +26,11 @@ public final class ClusterJobResponse {
      */
     private final Integer streamingUnits;
 
-    @OutputCustomType.Constructor({"id","jobState","streamingUnits"})
+    @OutputCustomType.Constructor
     private ClusterJobResponse(
-        String id,
-        String jobState,
-        Integer streamingUnits) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("jobState") String jobState,
+        @OutputCustomType.Parameter("streamingUnits") Integer streamingUnits) {
         this.id = id;
         this.jobState = jobState;
         this.streamingUnits = streamingUnits;

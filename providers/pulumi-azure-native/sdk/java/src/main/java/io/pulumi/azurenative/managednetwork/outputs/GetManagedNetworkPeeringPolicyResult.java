@@ -38,13 +38,13 @@ public final class GetManagedNetworkPeeringPolicyResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"id","location","name","properties","type"})
+    @OutputCustomType.Constructor
     private GetManagedNetworkPeeringPolicyResult(
-        String id,
-        @Nullable String location,
-        String name,
-        ManagedNetworkPeeringPolicyPropertiesResponse properties,
-        String type) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("properties") ManagedNetworkPeeringPolicyPropertiesResponse properties,
+        @OutputCustomType.Parameter("type") String type) {
         this.id = id;
         this.location = location;
         this.name = name;

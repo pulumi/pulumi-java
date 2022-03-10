@@ -33,12 +33,12 @@ public final class SsisEnvironmentReferenceResponse {
      */
     private final @Nullable String referenceType;
 
-    @OutputCustomType.Constructor({"environmentFolderName","environmentName","id","referenceType"})
+    @OutputCustomType.Constructor
     private SsisEnvironmentReferenceResponse(
-        @Nullable String environmentFolderName,
-        @Nullable String environmentName,
-        @Nullable Double id,
-        @Nullable String referenceType) {
+        @OutputCustomType.Parameter("environmentFolderName") @Nullable String environmentFolderName,
+        @OutputCustomType.Parameter("environmentName") @Nullable String environmentName,
+        @OutputCustomType.Parameter("id") @Nullable Double id,
+        @OutputCustomType.Parameter("referenceType") @Nullable String referenceType) {
         this.environmentFolderName = environmentFolderName;
         this.environmentName = environmentName;
         this.id = id;

@@ -24,10 +24,10 @@ public final class EnterpriseChannelPropertiesResponse {
      */
     private final @Nullable String state;
 
-    @OutputCustomType.Constructor({"nodes","state"})
+    @OutputCustomType.Constructor
     private EnterpriseChannelPropertiesResponse(
-        List<EnterpriseChannelNodeResponse> nodes,
-        @Nullable String state) {
+        @OutputCustomType.Parameter("nodes") List<EnterpriseChannelNodeResponse> nodes,
+        @OutputCustomType.Parameter("state") @Nullable String state) {
         this.nodes = nodes;
         this.state = state;
     }

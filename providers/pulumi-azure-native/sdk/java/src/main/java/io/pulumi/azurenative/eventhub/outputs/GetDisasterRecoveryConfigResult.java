@@ -53,16 +53,16 @@ public final class GetDisasterRecoveryConfigResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"alternateName","id","name","partnerNamespace","pendingReplicationOperationsCount","provisioningState","role","type"})
+    @OutputCustomType.Constructor
     private GetDisasterRecoveryConfigResult(
-        @Nullable String alternateName,
-        String id,
-        String name,
-        @Nullable String partnerNamespace,
-        Double pendingReplicationOperationsCount,
-        String provisioningState,
-        String role,
-        String type) {
+        @OutputCustomType.Parameter("alternateName") @Nullable String alternateName,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("partnerNamespace") @Nullable String partnerNamespace,
+        @OutputCustomType.Parameter("pendingReplicationOperationsCount") Double pendingReplicationOperationsCount,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("role") String role,
+        @OutputCustomType.Parameter("type") String type) {
         this.alternateName = alternateName;
         this.id = id;
         this.name = name;

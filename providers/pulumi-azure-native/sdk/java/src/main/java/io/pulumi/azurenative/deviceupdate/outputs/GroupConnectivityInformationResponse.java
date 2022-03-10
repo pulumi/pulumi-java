@@ -43,14 +43,14 @@ public final class GroupConnectivityInformationResponse {
      */
     private final @Nullable String redirectMapId;
 
-    @OutputCustomType.Constructor({"customerVisibleFqdns","groupId","internalFqdn","memberName","privateLinkServiceArmRegion","redirectMapId"})
+    @OutputCustomType.Constructor
     private GroupConnectivityInformationResponse(
-        @Nullable List<String> customerVisibleFqdns,
-        String groupId,
-        String internalFqdn,
-        String memberName,
-        @Nullable String privateLinkServiceArmRegion,
-        @Nullable String redirectMapId) {
+        @OutputCustomType.Parameter("customerVisibleFqdns") @Nullable List<String> customerVisibleFqdns,
+        @OutputCustomType.Parameter("groupId") String groupId,
+        @OutputCustomType.Parameter("internalFqdn") String internalFqdn,
+        @OutputCustomType.Parameter("memberName") String memberName,
+        @OutputCustomType.Parameter("privateLinkServiceArmRegion") @Nullable String privateLinkServiceArmRegion,
+        @OutputCustomType.Parameter("redirectMapId") @Nullable String redirectMapId) {
         this.customerVisibleFqdns = customerVisibleFqdns;
         this.groupId = groupId;
         this.internalFqdn = internalFqdn;

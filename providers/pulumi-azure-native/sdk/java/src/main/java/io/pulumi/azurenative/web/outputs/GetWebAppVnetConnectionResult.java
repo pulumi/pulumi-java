@@ -71,19 +71,19 @@ public final class GetWebAppVnetConnectionResult {
      */
     private final @Nullable String vnetResourceId;
 
-    @OutputCustomType.Constructor({"certBlob","certThumbprint","dnsServers","id","isSwift","kind","name","resyncRequired","routes","type","vnetResourceId"})
+    @OutputCustomType.Constructor
     private GetWebAppVnetConnectionResult(
-        @Nullable String certBlob,
-        String certThumbprint,
-        @Nullable String dnsServers,
-        String id,
-        @Nullable Boolean isSwift,
-        @Nullable String kind,
-        String name,
-        Boolean resyncRequired,
-        List<VnetRouteResponse> routes,
-        String type,
-        @Nullable String vnetResourceId) {
+        @OutputCustomType.Parameter("certBlob") @Nullable String certBlob,
+        @OutputCustomType.Parameter("certThumbprint") String certThumbprint,
+        @OutputCustomType.Parameter("dnsServers") @Nullable String dnsServers,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("isSwift") @Nullable Boolean isSwift,
+        @OutputCustomType.Parameter("kind") @Nullable String kind,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("resyncRequired") Boolean resyncRequired,
+        @OutputCustomType.Parameter("routes") List<VnetRouteResponse> routes,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("vnetResourceId") @Nullable String vnetResourceId) {
         this.certBlob = certBlob;
         this.certThumbprint = certThumbprint;
         this.dnsServers = dnsServers;

@@ -43,14 +43,14 @@ public final class GetChannelResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"channelFunctions","channelType","credentials","id","name","type"})
+    @OutputCustomType.Constructor
     private GetChannelResult(
-        @Nullable List<String> channelFunctions,
-        String channelType,
-        @Nullable Map<String,String> credentials,
-        String id,
-        String name,
-        String type) {
+        @OutputCustomType.Parameter("channelFunctions") @Nullable List<String> channelFunctions,
+        @OutputCustomType.Parameter("channelType") String channelType,
+        @OutputCustomType.Parameter("credentials") @Nullable Map<String,String> credentials,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("type") String type) {
         this.channelFunctions = channelFunctions;
         this.channelType = channelType;
         this.credentials = credentials;

@@ -70,19 +70,19 @@ public final class SingleQueryResultResponse {
      */
     private final @Nullable List<String> sourcePorts;
 
-    @OutputCustomType.Constructor({"description","destinationPorts","direction","group","inheritedFromParentPolicy","lastUpdated","mode","protocol","severity","signatureId","sourcePorts"})
+    @OutputCustomType.Constructor
     private SingleQueryResultResponse(
-        @Nullable String description,
-        @Nullable List<String> destinationPorts,
-        @Nullable Integer direction,
-        @Nullable String group,
-        @Nullable Boolean inheritedFromParentPolicy,
-        @Nullable String lastUpdated,
-        @Nullable Integer mode,
-        @Nullable String protocol,
-        @Nullable Integer severity,
-        @Nullable Integer signatureId,
-        @Nullable List<String> sourcePorts) {
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("destinationPorts") @Nullable List<String> destinationPorts,
+        @OutputCustomType.Parameter("direction") @Nullable Integer direction,
+        @OutputCustomType.Parameter("group") @Nullable String group,
+        @OutputCustomType.Parameter("inheritedFromParentPolicy") @Nullable Boolean inheritedFromParentPolicy,
+        @OutputCustomType.Parameter("lastUpdated") @Nullable String lastUpdated,
+        @OutputCustomType.Parameter("mode") @Nullable Integer mode,
+        @OutputCustomType.Parameter("protocol") @Nullable String protocol,
+        @OutputCustomType.Parameter("severity") @Nullable Integer severity,
+        @OutputCustomType.Parameter("signatureId") @Nullable Integer signatureId,
+        @OutputCustomType.Parameter("sourcePorts") @Nullable List<String> sourcePorts) {
         this.description = description;
         this.destinationPorts = destinationPorts;
         this.direction = direction;

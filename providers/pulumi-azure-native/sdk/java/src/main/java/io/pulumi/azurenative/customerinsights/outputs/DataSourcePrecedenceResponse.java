@@ -43,14 +43,14 @@ public final class DataSourcePrecedenceResponse {
      */
     private final String status;
 
-    @OutputCustomType.Constructor({"dataSourceReferenceId","dataSourceType","id","name","precedence","status"})
+    @OutputCustomType.Constructor
     private DataSourcePrecedenceResponse(
-        String dataSourceReferenceId,
-        String dataSourceType,
-        Integer id,
-        String name,
-        @Nullable Integer precedence,
-        String status) {
+        @OutputCustomType.Parameter("dataSourceReferenceId") String dataSourceReferenceId,
+        @OutputCustomType.Parameter("dataSourceType") String dataSourceType,
+        @OutputCustomType.Parameter("id") Integer id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("precedence") @Nullable Integer precedence,
+        @OutputCustomType.Parameter("status") String status) {
         this.dataSourceReferenceId = dataSourceReferenceId;
         this.dataSourceType = dataSourceType;
         this.id = id;

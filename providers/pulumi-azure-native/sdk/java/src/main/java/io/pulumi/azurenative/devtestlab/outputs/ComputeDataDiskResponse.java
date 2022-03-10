@@ -33,12 +33,12 @@ public final class ComputeDataDiskResponse {
      */
     private final @Nullable String name;
 
-    @OutputCustomType.Constructor({"diskSizeGiB","diskUri","managedDiskId","name"})
+    @OutputCustomType.Constructor
     private ComputeDataDiskResponse(
-        @Nullable Integer diskSizeGiB,
-        @Nullable String diskUri,
-        @Nullable String managedDiskId,
-        @Nullable String name) {
+        @OutputCustomType.Parameter("diskSizeGiB") @Nullable Integer diskSizeGiB,
+        @OutputCustomType.Parameter("diskUri") @Nullable String diskUri,
+        @OutputCustomType.Parameter("managedDiskId") @Nullable String managedDiskId,
+        @OutputCustomType.Parameter("name") @Nullable String name) {
         this.diskSizeGiB = diskSizeGiB;
         this.diskUri = diskUri;
         this.managedDiskId = managedDiskId;

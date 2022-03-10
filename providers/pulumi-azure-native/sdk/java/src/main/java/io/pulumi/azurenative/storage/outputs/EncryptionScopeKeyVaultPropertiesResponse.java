@@ -27,11 +27,11 @@ public final class EncryptionScopeKeyVaultPropertiesResponse {
      */
     private final String lastKeyRotationTimestamp;
 
-    @OutputCustomType.Constructor({"currentVersionedKeyIdentifier","keyUri","lastKeyRotationTimestamp"})
+    @OutputCustomType.Constructor
     private EncryptionScopeKeyVaultPropertiesResponse(
-        String currentVersionedKeyIdentifier,
-        @Nullable String keyUri,
-        String lastKeyRotationTimestamp) {
+        @OutputCustomType.Parameter("currentVersionedKeyIdentifier") String currentVersionedKeyIdentifier,
+        @OutputCustomType.Parameter("keyUri") @Nullable String keyUri,
+        @OutputCustomType.Parameter("lastKeyRotationTimestamp") String lastKeyRotationTimestamp) {
         this.currentVersionedKeyIdentifier = currentVersionedKeyIdentifier;
         this.keyUri = keyUri;
         this.lastKeyRotationTimestamp = lastKeyRotationTimestamp;

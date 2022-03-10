@@ -24,10 +24,10 @@ public final class TarReadSettingsResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"preserveCompressionFileNameAsFolder","type"})
+    @OutputCustomType.Constructor
     private TarReadSettingsResponse(
-        @Nullable Object preserveCompressionFileNameAsFolder,
-        String type) {
+        @OutputCustomType.Parameter("preserveCompressionFileNameAsFolder") @Nullable Object preserveCompressionFileNameAsFolder,
+        @OutputCustomType.Parameter("type") String type) {
         this.preserveCompressionFileNameAsFolder = preserveCompressionFileNameAsFolder;
         this.type = type;
     }

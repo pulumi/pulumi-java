@@ -20,10 +20,10 @@ public final class IscsiLunResponse {
      */
     private final String name;
 
-    @OutputCustomType.Constructor({"managedDiskAzureResourceId","name"})
+    @OutputCustomType.Constructor
     private IscsiLunResponse(
-        String managedDiskAzureResourceId,
-        String name) {
+        @OutputCustomType.Parameter("managedDiskAzureResourceId") String managedDiskAzureResourceId,
+        @OutputCustomType.Parameter("name") String name) {
         this.managedDiskAzureResourceId = managedDiskAzureResourceId;
         this.name = name;
     }

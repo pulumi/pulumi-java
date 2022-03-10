@@ -59,17 +59,17 @@ public final class GetIotConnectorFhirDestinationResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"etag","fhirMapping","fhirServiceResourceId","id","location","name","resourceIdentityResolutionType","systemData","type"})
+    @OutputCustomType.Constructor
     private GetIotConnectorFhirDestinationResult(
-        @Nullable String etag,
-        IotMappingPropertiesResponse fhirMapping,
-        String fhirServiceResourceId,
-        String id,
-        @Nullable String location,
-        String name,
-        String resourceIdentityResolutionType,
-        SystemDataResponse systemData,
-        String type) {
+        @OutputCustomType.Parameter("etag") @Nullable String etag,
+        @OutputCustomType.Parameter("fhirMapping") IotMappingPropertiesResponse fhirMapping,
+        @OutputCustomType.Parameter("fhirServiceResourceId") String fhirServiceResourceId,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("resourceIdentityResolutionType") String resourceIdentityResolutionType,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("type") String type) {
         this.etag = etag;
         this.fhirMapping = fhirMapping;
         this.fhirServiceResourceId = fhirServiceResourceId;

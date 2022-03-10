@@ -72,20 +72,20 @@ public final class GetSqlDWTableDataSetMappingResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"dataSetId","dataSetMappingStatus","dataWarehouseName","id","kind","name","provisioningState","schemaName","sqlServerResourceId","systemData","tableName","type"})
+    @OutputCustomType.Constructor
     private GetSqlDWTableDataSetMappingResult(
-        String dataSetId,
-        String dataSetMappingStatus,
-        String dataWarehouseName,
-        String id,
-        String kind,
-        String name,
-        String provisioningState,
-        String schemaName,
-        String sqlServerResourceId,
-        SystemDataResponse systemData,
-        String tableName,
-        String type) {
+        @OutputCustomType.Parameter("dataSetId") String dataSetId,
+        @OutputCustomType.Parameter("dataSetMappingStatus") String dataSetMappingStatus,
+        @OutputCustomType.Parameter("dataWarehouseName") String dataWarehouseName,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("schemaName") String schemaName,
+        @OutputCustomType.Parameter("sqlServerResourceId") String sqlServerResourceId,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("tableName") String tableName,
+        @OutputCustomType.Parameter("type") String type) {
         this.dataSetId = dataSetId;
         this.dataSetMappingStatus = dataSetMappingStatus;
         this.dataWarehouseName = dataWarehouseName;

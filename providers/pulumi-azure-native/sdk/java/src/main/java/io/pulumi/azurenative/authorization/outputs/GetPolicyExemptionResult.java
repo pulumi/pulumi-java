@@ -70,19 +70,19 @@ public final class GetPolicyExemptionResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"description","displayName","exemptionCategory","expiresOn","id","metadata","name","policyAssignmentId","policyDefinitionReferenceIds","systemData","type"})
+    @OutputCustomType.Constructor
     private GetPolicyExemptionResult(
-        @Nullable String description,
-        @Nullable String displayName,
-        String exemptionCategory,
-        @Nullable String expiresOn,
-        String id,
-        @Nullable Object metadata,
-        String name,
-        String policyAssignmentId,
-        @Nullable List<String> policyDefinitionReferenceIds,
-        SystemDataResponse systemData,
-        String type) {
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("displayName") @Nullable String displayName,
+        @OutputCustomType.Parameter("exemptionCategory") String exemptionCategory,
+        @OutputCustomType.Parameter("expiresOn") @Nullable String expiresOn,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("metadata") @Nullable Object metadata,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("policyAssignmentId") String policyAssignmentId,
+        @OutputCustomType.Parameter("policyDefinitionReferenceIds") @Nullable List<String> policyDefinitionReferenceIds,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("type") String type) {
         this.description = description;
         this.displayName = displayName;
         this.exemptionCategory = exemptionCategory;

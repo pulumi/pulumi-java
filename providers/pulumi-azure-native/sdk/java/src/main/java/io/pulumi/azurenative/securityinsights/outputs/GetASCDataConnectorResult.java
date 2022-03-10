@@ -49,15 +49,15 @@ public final class GetASCDataConnectorResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"dataTypes","etag","id","kind","name","subscriptionId","type"})
+    @OutputCustomType.Constructor
     private GetASCDataConnectorResult(
-        @Nullable AlertsDataTypeOfDataConnectorResponse dataTypes,
-        @Nullable String etag,
-        String id,
-        String kind,
-        String name,
-        @Nullable String subscriptionId,
-        String type) {
+        @OutputCustomType.Parameter("dataTypes") @Nullable AlertsDataTypeOfDataConnectorResponse dataTypes,
+        @OutputCustomType.Parameter("etag") @Nullable String etag,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("subscriptionId") @Nullable String subscriptionId,
+        @OutputCustomType.Parameter("type") String type) {
         this.dataTypes = dataTypes;
         this.etag = etag;
         this.id = id;

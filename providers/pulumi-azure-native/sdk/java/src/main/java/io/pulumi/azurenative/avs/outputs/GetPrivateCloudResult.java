@@ -119,28 +119,28 @@ public final class GetPrivateCloudResult {
      */
     private final String vmotionNetwork;
 
-    @OutputCustomType.Constructor({"circuit","endpoints","id","identitySources","internet","location","managementCluster","managementNetwork","name","networkBlock","nsxtCertificateThumbprint","nsxtPassword","provisioningNetwork","provisioningState","sku","tags","type","vcenterCertificateThumbprint","vcenterPassword","vmotionNetwork"})
+    @OutputCustomType.Constructor
     private GetPrivateCloudResult(
-        @Nullable CircuitResponse circuit,
-        EndpointsResponse endpoints,
-        String id,
-        @Nullable List<IdentitySourceResponse> identitySources,
-        @Nullable String internet,
-        String location,
-        ManagementClusterResponse managementCluster,
-        String managementNetwork,
-        String name,
-        String networkBlock,
-        String nsxtCertificateThumbprint,
-        @Nullable String nsxtPassword,
-        String provisioningNetwork,
-        String provisioningState,
-        SkuResponse sku,
-        @Nullable Map<String,String> tags,
-        String type,
-        String vcenterCertificateThumbprint,
-        @Nullable String vcenterPassword,
-        String vmotionNetwork) {
+        @OutputCustomType.Parameter("circuit") @Nullable CircuitResponse circuit,
+        @OutputCustomType.Parameter("endpoints") EndpointsResponse endpoints,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("identitySources") @Nullable List<IdentitySourceResponse> identitySources,
+        @OutputCustomType.Parameter("internet") @Nullable String internet,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("managementCluster") ManagementClusterResponse managementCluster,
+        @OutputCustomType.Parameter("managementNetwork") String managementNetwork,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("networkBlock") String networkBlock,
+        @OutputCustomType.Parameter("nsxtCertificateThumbprint") String nsxtCertificateThumbprint,
+        @OutputCustomType.Parameter("nsxtPassword") @Nullable String nsxtPassword,
+        @OutputCustomType.Parameter("provisioningNetwork") String provisioningNetwork,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("sku") SkuResponse sku,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("vcenterCertificateThumbprint") String vcenterCertificateThumbprint,
+        @OutputCustomType.Parameter("vcenterPassword") @Nullable String vcenterPassword,
+        @OutputCustomType.Parameter("vmotionNetwork") String vmotionNetwork) {
         this.circuit = circuit;
         this.endpoints = endpoints;
         this.id = id;

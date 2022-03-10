@@ -27,11 +27,11 @@ public final class RelationshipLinkFieldMappingResponse {
      */
     private final String relationshipFieldName;
 
-    @OutputCustomType.Constructor({"interactionFieldName","linkType","relationshipFieldName"})
+    @OutputCustomType.Constructor
     private RelationshipLinkFieldMappingResponse(
-        String interactionFieldName,
-        @Nullable String linkType,
-        String relationshipFieldName) {
+        @OutputCustomType.Parameter("interactionFieldName") String interactionFieldName,
+        @OutputCustomType.Parameter("linkType") @Nullable String linkType,
+        @OutputCustomType.Parameter("relationshipFieldName") String relationshipFieldName) {
         this.interactionFieldName = interactionFieldName;
         this.linkType = linkType;
         this.relationshipFieldName = relationshipFieldName;

@@ -74,21 +74,21 @@ public final class GetSqlPoolSensitivityLabelResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"columnName","id","informationType","informationTypeId","isDisabled","labelId","labelName","managedBy","name","rank","schemaName","tableName","type"})
+    @OutputCustomType.Constructor
     private GetSqlPoolSensitivityLabelResult(
-        String columnName,
-        String id,
-        @Nullable String informationType,
-        @Nullable String informationTypeId,
-        Boolean isDisabled,
-        @Nullable String labelId,
-        @Nullable String labelName,
-        String managedBy,
-        String name,
-        @Nullable String rank,
-        String schemaName,
-        String tableName,
-        String type) {
+        @OutputCustomType.Parameter("columnName") String columnName,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("informationType") @Nullable String informationType,
+        @OutputCustomType.Parameter("informationTypeId") @Nullable String informationTypeId,
+        @OutputCustomType.Parameter("isDisabled") Boolean isDisabled,
+        @OutputCustomType.Parameter("labelId") @Nullable String labelId,
+        @OutputCustomType.Parameter("labelName") @Nullable String labelName,
+        @OutputCustomType.Parameter("managedBy") String managedBy,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("rank") @Nullable String rank,
+        @OutputCustomType.Parameter("schemaName") String schemaName,
+        @OutputCustomType.Parameter("tableName") String tableName,
+        @OutputCustomType.Parameter("type") String type) {
         this.columnName = columnName;
         this.id = id;
         this.informationType = informationType;

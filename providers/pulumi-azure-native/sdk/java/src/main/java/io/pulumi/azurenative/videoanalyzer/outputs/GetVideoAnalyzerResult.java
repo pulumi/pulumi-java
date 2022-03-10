@@ -69,18 +69,18 @@ public final class GetVideoAnalyzerResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"encryption","endpoints","id","identity","location","name","storageAccounts","systemData","tags","type"})
+    @OutputCustomType.Constructor
     private GetVideoAnalyzerResult(
-        AccountEncryptionResponse encryption,
-        List<EndpointResponse> endpoints,
-        String id,
-        @Nullable VideoAnalyzerIdentityResponse identity,
-        String location,
-        String name,
-        List<StorageAccountResponse> storageAccounts,
-        SystemDataResponse systemData,
-        @Nullable Map<String,String> tags,
-        String type) {
+        @OutputCustomType.Parameter("encryption") AccountEncryptionResponse encryption,
+        @OutputCustomType.Parameter("endpoints") List<EndpointResponse> endpoints,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("identity") @Nullable VideoAnalyzerIdentityResponse identity,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("storageAccounts") List<StorageAccountResponse> storageAccounts,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type) {
         this.encryption = encryption;
         this.endpoints = endpoints;
         this.id = id;

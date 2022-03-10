@@ -38,13 +38,13 @@ public final class SmbSettingResponse {
      */
     private final @Nullable String versions;
 
-    @OutputCustomType.Constructor({"authenticationMethods","channelEncryption","kerberosTicketEncryption","multichannel","versions"})
+    @OutputCustomType.Constructor
     private SmbSettingResponse(
-        @Nullable String authenticationMethods,
-        @Nullable String channelEncryption,
-        @Nullable String kerberosTicketEncryption,
-        @Nullable MultichannelResponse multichannel,
-        @Nullable String versions) {
+        @OutputCustomType.Parameter("authenticationMethods") @Nullable String authenticationMethods,
+        @OutputCustomType.Parameter("channelEncryption") @Nullable String channelEncryption,
+        @OutputCustomType.Parameter("kerberosTicketEncryption") @Nullable String kerberosTicketEncryption,
+        @OutputCustomType.Parameter("multichannel") @Nullable MultichannelResponse multichannel,
+        @OutputCustomType.Parameter("versions") @Nullable String versions) {
         this.authenticationMethods = authenticationMethods;
         this.channelEncryption = channelEncryption;
         this.kerberosTicketEncryption = kerberosTicketEncryption;

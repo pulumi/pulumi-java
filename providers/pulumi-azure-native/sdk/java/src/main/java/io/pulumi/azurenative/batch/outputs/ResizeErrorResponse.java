@@ -23,11 +23,11 @@ public final class ResizeErrorResponse {
      */
     private final String message;
 
-    @OutputCustomType.Constructor({"code","details","message"})
+    @OutputCustomType.Constructor
     private ResizeErrorResponse(
-        String code,
-        @Nullable List<ResizeErrorResponse> details,
-        String message) {
+        @OutputCustomType.Parameter("code") String code,
+        @OutputCustomType.Parameter("details") @Nullable List<ResizeErrorResponse> details,
+        @OutputCustomType.Parameter("message") String message) {
         this.code = code;
         this.details = details;
         this.message = message;

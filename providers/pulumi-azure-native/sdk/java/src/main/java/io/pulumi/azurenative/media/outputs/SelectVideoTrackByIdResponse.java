@@ -22,10 +22,10 @@ public final class SelectVideoTrackByIdResponse {
      */
     private final Double trackId;
 
-    @OutputCustomType.Constructor({"odataType","trackId"})
+    @OutputCustomType.Constructor
     private SelectVideoTrackByIdResponse(
-        String odataType,
-        Double trackId) {
+        @OutputCustomType.Parameter("odataType") String odataType,
+        @OutputCustomType.Parameter("trackId") Double trackId) {
         this.odataType = odataType;
         this.trackId = trackId;
     }

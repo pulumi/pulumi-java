@@ -110,27 +110,27 @@ public final class GetNamespaceResult {
      */
     private final @Nullable String updatedAt;
 
-    @OutputCustomType.Constructor({"createdAt","critical","dataCenter","enabled","id","location","metricId","name","namespaceType","provisioningState","region","scaleUnit","serviceBusEndpoint","sku","status","subscriptionId","tags","type","updatedAt"})
+    @OutputCustomType.Constructor
     private GetNamespaceResult(
-        @Nullable String createdAt,
-        @Nullable Boolean critical,
-        @Nullable String dataCenter,
-        @Nullable Boolean enabled,
-        String id,
-        @Nullable String location,
-        String metricId,
-        String name,
-        @Nullable String namespaceType,
-        @Nullable String provisioningState,
-        @Nullable String region,
-        @Nullable String scaleUnit,
-        @Nullable String serviceBusEndpoint,
-        @Nullable SkuResponse sku,
-        @Nullable String status,
-        @Nullable String subscriptionId,
-        @Nullable Map<String,String> tags,
-        String type,
-        @Nullable String updatedAt) {
+        @OutputCustomType.Parameter("createdAt") @Nullable String createdAt,
+        @OutputCustomType.Parameter("critical") @Nullable Boolean critical,
+        @OutputCustomType.Parameter("dataCenter") @Nullable String dataCenter,
+        @OutputCustomType.Parameter("enabled") @Nullable Boolean enabled,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("metricId") String metricId,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("namespaceType") @Nullable String namespaceType,
+        @OutputCustomType.Parameter("provisioningState") @Nullable String provisioningState,
+        @OutputCustomType.Parameter("region") @Nullable String region,
+        @OutputCustomType.Parameter("scaleUnit") @Nullable String scaleUnit,
+        @OutputCustomType.Parameter("serviceBusEndpoint") @Nullable String serviceBusEndpoint,
+        @OutputCustomType.Parameter("sku") @Nullable SkuResponse sku,
+        @OutputCustomType.Parameter("status") @Nullable String status,
+        @OutputCustomType.Parameter("subscriptionId") @Nullable String subscriptionId,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("updatedAt") @Nullable String updatedAt) {
         this.createdAt = createdAt;
         this.critical = critical;
         this.dataCenter = dataCenter;

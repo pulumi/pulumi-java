@@ -43,14 +43,14 @@ public final class RuleMetricDataSourceResponse {
      */
     private final @Nullable String resourceUri;
 
-    @OutputCustomType.Constructor({"legacyResourceId","metricName","metricNamespace","odataType","resourceLocation","resourceUri"})
+    @OutputCustomType.Constructor
     private RuleMetricDataSourceResponse(
-        @Nullable String legacyResourceId,
-        @Nullable String metricName,
-        @Nullable String metricNamespace,
-        String odataType,
-        @Nullable String resourceLocation,
-        @Nullable String resourceUri) {
+        @OutputCustomType.Parameter("legacyResourceId") @Nullable String legacyResourceId,
+        @OutputCustomType.Parameter("metricName") @Nullable String metricName,
+        @OutputCustomType.Parameter("metricNamespace") @Nullable String metricNamespace,
+        @OutputCustomType.Parameter("odataType") String odataType,
+        @OutputCustomType.Parameter("resourceLocation") @Nullable String resourceLocation,
+        @OutputCustomType.Parameter("resourceUri") @Nullable String resourceUri) {
         this.legacyResourceId = legacyResourceId;
         this.metricName = metricName;
         this.metricNamespace = metricNamespace;

@@ -23,10 +23,10 @@ public final class WebChatChannelPropertiesResponse {
      */
     private final String webChatEmbedCode;
 
-    @OutputCustomType.Constructor({"sites","webChatEmbedCode"})
+    @OutputCustomType.Constructor
     private WebChatChannelPropertiesResponse(
-        @Nullable List<WebChatSiteResponse> sites,
-        String webChatEmbedCode) {
+        @OutputCustomType.Parameter("sites") @Nullable List<WebChatSiteResponse> sites,
+        @OutputCustomType.Parameter("webChatEmbedCode") String webChatEmbedCode) {
         this.sites = sites;
         this.webChatEmbedCode = webChatEmbedCode;
     }

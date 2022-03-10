@@ -42,14 +42,14 @@ public final class ResourceOperationResponse {
      */
     private final String statusMessage;
 
-    @OutputCustomType.Constructor({"operationId","provisioningState","resourceName","resourceType","statusCode","statusMessage"})
+    @OutputCustomType.Constructor
     private ResourceOperationResponse(
-        String operationId,
-        String provisioningState,
-        @Nullable String resourceName,
-        @Nullable String resourceType,
-        String statusCode,
-        String statusMessage) {
+        @OutputCustomType.Parameter("operationId") String operationId,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("resourceName") @Nullable String resourceName,
+        @OutputCustomType.Parameter("resourceType") @Nullable String resourceType,
+        @OutputCustomType.Parameter("statusCode") String statusCode,
+        @OutputCustomType.Parameter("statusMessage") String statusMessage) {
         this.operationId = operationId;
         this.provisioningState = provisioningState;
         this.resourceName = resourceName;

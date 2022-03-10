@@ -38,13 +38,13 @@ public final class PolicySettingsResponse {
      */
     private final @Nullable String mode;
 
-    @OutputCustomType.Constructor({"defaultCustomBlockResponseBody","defaultCustomBlockResponseStatusCode","defaultRedirectUrl","enabledState","mode"})
+    @OutputCustomType.Constructor
     private PolicySettingsResponse(
-        @Nullable String defaultCustomBlockResponseBody,
-        @Nullable Integer defaultCustomBlockResponseStatusCode,
-        @Nullable String defaultRedirectUrl,
-        @Nullable String enabledState,
-        @Nullable String mode) {
+        @OutputCustomType.Parameter("defaultCustomBlockResponseBody") @Nullable String defaultCustomBlockResponseBody,
+        @OutputCustomType.Parameter("defaultCustomBlockResponseStatusCode") @Nullable Integer defaultCustomBlockResponseStatusCode,
+        @OutputCustomType.Parameter("defaultRedirectUrl") @Nullable String defaultRedirectUrl,
+        @OutputCustomType.Parameter("enabledState") @Nullable String enabledState,
+        @OutputCustomType.Parameter("mode") @Nullable String mode) {
         this.defaultCustomBlockResponseBody = defaultCustomBlockResponseBody;
         this.defaultCustomBlockResponseStatusCode = defaultCustomBlockResponseStatusCode;
         this.defaultRedirectUrl = defaultRedirectUrl;

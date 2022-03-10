@@ -25,11 +25,11 @@ public final class DataTransferRegionalServiceResourceResponse {
      */
     private final String status;
 
-    @OutputCustomType.Constructor({"location","name","status"})
+    @OutputCustomType.Constructor
     private DataTransferRegionalServiceResourceResponse(
-        String location,
-        String name,
-        String status) {
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("status") String status) {
         this.location = location;
         this.name = name;
         this.status = status;

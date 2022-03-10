@@ -38,13 +38,13 @@ public final class ProbeSettingsResponse {
      */
     private final @Nullable String timeout;
 
-    @OutputCustomType.Constructor({"failureThreshold","initialDelay","period","successThreshold","timeout"})
+    @OutputCustomType.Constructor
     private ProbeSettingsResponse(
-        @Nullable Integer failureThreshold,
-        @Nullable String initialDelay,
-        @Nullable String period,
-        @Nullable Integer successThreshold,
-        @Nullable String timeout) {
+        @OutputCustomType.Parameter("failureThreshold") @Nullable Integer failureThreshold,
+        @OutputCustomType.Parameter("initialDelay") @Nullable String initialDelay,
+        @OutputCustomType.Parameter("period") @Nullable String period,
+        @OutputCustomType.Parameter("successThreshold") @Nullable Integer successThreshold,
+        @OutputCustomType.Parameter("timeout") @Nullable String timeout) {
         this.failureThreshold = failureThreshold;
         this.initialDelay = initialDelay;
         this.period = period;

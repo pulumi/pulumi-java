@@ -76,20 +76,20 @@ public final class GetVirtualRouterResult {
      */
     private final @Nullable List<String> virtualRouterIps;
 
-    @OutputCustomType.Constructor({"etag","hostedGateway","hostedSubnet","id","location","name","peerings","provisioningState","tags","type","virtualRouterAsn","virtualRouterIps"})
+    @OutputCustomType.Constructor
     private GetVirtualRouterResult(
-        String etag,
-        @Nullable SubResourceResponse hostedGateway,
-        @Nullable SubResourceResponse hostedSubnet,
-        @Nullable String id,
-        @Nullable String location,
-        String name,
-        List<SubResourceResponse> peerings,
-        String provisioningState,
-        @Nullable Map<String,String> tags,
-        String type,
-        @Nullable Double virtualRouterAsn,
-        @Nullable List<String> virtualRouterIps) {
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("hostedGateway") @Nullable SubResourceResponse hostedGateway,
+        @OutputCustomType.Parameter("hostedSubnet") @Nullable SubResourceResponse hostedSubnet,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("peerings") List<SubResourceResponse> peerings,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("virtualRouterAsn") @Nullable Double virtualRouterAsn,
+        @OutputCustomType.Parameter("virtualRouterIps") @Nullable List<String> virtualRouterIps) {
         this.etag = etag;
         this.hostedGateway = hostedGateway;
         this.hostedSubnet = hostedSubnet;

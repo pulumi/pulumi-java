@@ -24,10 +24,10 @@ public final class NetworkProfileResponse {
      */
     private final @Nullable ApiEntityReferenceResponse subnet;
 
-    @OutputCustomType.Constructor({"networkInterfaces","subnet"})
+    @OutputCustomType.Constructor
     private NetworkProfileResponse(
-        @Nullable List<NetworkInterfaceResponse> networkInterfaces,
-        @Nullable ApiEntityReferenceResponse subnet) {
+        @OutputCustomType.Parameter("networkInterfaces") @Nullable List<NetworkInterfaceResponse> networkInterfaces,
+        @OutputCustomType.Parameter("subnet") @Nullable ApiEntityReferenceResponse subnet) {
         this.networkInterfaces = networkInterfaces;
         this.subnet = subnet;
     }

@@ -23,10 +23,10 @@ public final class RecoveryPlanManualActionDetailsResponse {
      */
     private final String instanceType;
 
-    @OutputCustomType.Constructor({"description","instanceType"})
+    @OutputCustomType.Constructor
     private RecoveryPlanManualActionDetailsResponse(
-        @Nullable String description,
-        String instanceType) {
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("instanceType") String instanceType) {
         this.description = description;
         this.instanceType = instanceType;
     }

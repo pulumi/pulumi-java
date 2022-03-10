@@ -84,21 +84,21 @@ public final class PrivateEndpointResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"customDnsConfigs","etag","extendedLocation","id","location","manualPrivateLinkServiceConnections","name","networkInterfaces","privateLinkServiceConnections","provisioningState","subnet","tags","type"})
+    @OutputCustomType.Constructor
     private PrivateEndpointResponse(
-        @Nullable List<CustomDnsConfigPropertiesFormatResponse> customDnsConfigs,
-        String etag,
-        @Nullable ExtendedLocationResponse extendedLocation,
-        @Nullable String id,
-        @Nullable String location,
-        @Nullable List<PrivateLinkServiceConnectionResponse> manualPrivateLinkServiceConnections,
-        String name,
-        List<NetworkInterfaceResponse> networkInterfaces,
-        @Nullable List<PrivateLinkServiceConnectionResponse> privateLinkServiceConnections,
-        String provisioningState,
-        @Nullable SubnetResponse subnet,
-        @Nullable Map<String,String> tags,
-        String type) {
+        @OutputCustomType.Parameter("customDnsConfigs") @Nullable List<CustomDnsConfigPropertiesFormatResponse> customDnsConfigs,
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("extendedLocation") @Nullable ExtendedLocationResponse extendedLocation,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("manualPrivateLinkServiceConnections") @Nullable List<PrivateLinkServiceConnectionResponse> manualPrivateLinkServiceConnections,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("networkInterfaces") List<NetworkInterfaceResponse> networkInterfaces,
+        @OutputCustomType.Parameter("privateLinkServiceConnections") @Nullable List<PrivateLinkServiceConnectionResponse> privateLinkServiceConnections,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("subnet") @Nullable SubnetResponse subnet,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type) {
         this.customDnsConfigs = customDnsConfigs;
         this.etag = etag;
         this.extendedLocation = extendedLocation;

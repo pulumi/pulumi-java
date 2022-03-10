@@ -28,11 +28,11 @@ public final class HourlyScheduleResponse {
      */
     private final @Nullable Double usedBytes;
 
-    @OutputCustomType.Constructor({"minute","snapshotsToKeep","usedBytes"})
+    @OutputCustomType.Constructor
     private HourlyScheduleResponse(
-        @Nullable Integer minute,
-        @Nullable Integer snapshotsToKeep,
-        @Nullable Double usedBytes) {
+        @OutputCustomType.Parameter("minute") @Nullable Integer minute,
+        @OutputCustomType.Parameter("snapshotsToKeep") @Nullable Integer snapshotsToKeep,
+        @OutputCustomType.Parameter("usedBytes") @Nullable Double usedBytes) {
         this.minute = minute;
         this.snapshotsToKeep = snapshotsToKeep;
         this.usedBytes = usedBytes;

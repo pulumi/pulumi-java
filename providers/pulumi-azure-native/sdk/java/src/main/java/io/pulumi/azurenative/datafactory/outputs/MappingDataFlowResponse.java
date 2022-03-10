@@ -64,17 +64,17 @@ public final class MappingDataFlowResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"annotations","description","folder","script","scriptLines","sinks","sources","transformations","type"})
+    @OutputCustomType.Constructor
     private MappingDataFlowResponse(
-        @Nullable List<Object> annotations,
-        @Nullable String description,
-        @Nullable DataFlowResponseFolder folder,
-        @Nullable String script,
-        @Nullable List<String> scriptLines,
-        @Nullable List<DataFlowSinkResponse> sinks,
-        @Nullable List<DataFlowSourceResponse> sources,
-        @Nullable List<TransformationResponse> transformations,
-        String type) {
+        @OutputCustomType.Parameter("annotations") @Nullable List<Object> annotations,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("folder") @Nullable DataFlowResponseFolder folder,
+        @OutputCustomType.Parameter("script") @Nullable String script,
+        @OutputCustomType.Parameter("scriptLines") @Nullable List<String> scriptLines,
+        @OutputCustomType.Parameter("sinks") @Nullable List<DataFlowSinkResponse> sinks,
+        @OutputCustomType.Parameter("sources") @Nullable List<DataFlowSourceResponse> sources,
+        @OutputCustomType.Parameter("transformations") @Nullable List<TransformationResponse> transformations,
+        @OutputCustomType.Parameter("type") String type) {
         this.annotations = annotations;
         this.description = description;
         this.folder = folder;

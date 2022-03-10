@@ -50,15 +50,15 @@ public final class GetUebaResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"dataSources","etag","id","kind","name","systemData","type"})
+    @OutputCustomType.Constructor
     private GetUebaResult(
-        @Nullable List<String> dataSources,
-        @Nullable String etag,
-        String id,
-        String kind,
-        String name,
-        SystemDataResponse systemData,
-        String type) {
+        @OutputCustomType.Parameter("dataSources") @Nullable List<String> dataSources,
+        @OutputCustomType.Parameter("etag") @Nullable String etag,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("type") String type) {
         this.dataSources = dataSources;
         this.etag = etag;
         this.id = id;

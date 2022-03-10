@@ -21,10 +21,10 @@ public final class IdentityResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"identityIds","type"})
+    @OutputCustomType.Constructor
     private IdentityResponse(
-        List<String> identityIds,
-        String type) {
+        @OutputCustomType.Parameter("identityIds") List<String> identityIds,
+        @OutputCustomType.Parameter("type") String type) {
         this.identityIds = identityIds;
         this.type = type;
     }

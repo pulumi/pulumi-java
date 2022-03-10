@@ -44,14 +44,14 @@ public final class RulesEngineMatchConditionResponse {
      */
     private final @Nullable List<String> transforms;
 
-    @OutputCustomType.Constructor({"negateCondition","rulesEngineMatchValue","rulesEngineMatchVariable","rulesEngineOperator","selector","transforms"})
+    @OutputCustomType.Constructor
     private RulesEngineMatchConditionResponse(
-        @Nullable Boolean negateCondition,
-        List<String> rulesEngineMatchValue,
-        String rulesEngineMatchVariable,
-        String rulesEngineOperator,
-        @Nullable String selector,
-        @Nullable List<String> transforms) {
+        @OutputCustomType.Parameter("negateCondition") @Nullable Boolean negateCondition,
+        @OutputCustomType.Parameter("rulesEngineMatchValue") List<String> rulesEngineMatchValue,
+        @OutputCustomType.Parameter("rulesEngineMatchVariable") String rulesEngineMatchVariable,
+        @OutputCustomType.Parameter("rulesEngineOperator") String rulesEngineOperator,
+        @OutputCustomType.Parameter("selector") @Nullable String selector,
+        @OutputCustomType.Parameter("transforms") @Nullable List<String> transforms) {
         this.negateCondition = negateCondition;
         this.rulesEngineMatchValue = rulesEngineMatchValue;
         this.rulesEngineMatchVariable = rulesEngineMatchVariable;

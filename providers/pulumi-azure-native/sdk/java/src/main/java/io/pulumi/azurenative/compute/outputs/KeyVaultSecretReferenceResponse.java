@@ -21,10 +21,10 @@ public final class KeyVaultSecretReferenceResponse {
      */
     private final SubResourceResponse sourceVault;
 
-    @OutputCustomType.Constructor({"secretUrl","sourceVault"})
+    @OutputCustomType.Constructor
     private KeyVaultSecretReferenceResponse(
-        String secretUrl,
-        SubResourceResponse sourceVault) {
+        @OutputCustomType.Parameter("secretUrl") String secretUrl,
+        @OutputCustomType.Parameter("sourceVault") SubResourceResponse sourceVault) {
         this.secretUrl = secretUrl;
         this.sourceVault = sourceVault;
     }

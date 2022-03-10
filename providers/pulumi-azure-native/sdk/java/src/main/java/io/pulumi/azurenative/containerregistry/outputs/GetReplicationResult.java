@@ -48,15 +48,15 @@ public final class GetReplicationResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"id","location","name","provisioningState","status","tags","type"})
+    @OutputCustomType.Constructor
     private GetReplicationResult(
-        String id,
-        String location,
-        String name,
-        String provisioningState,
-        StatusResponse status,
-        @Nullable Map<String,String> tags,
-        String type) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("status") StatusResponse status,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type) {
         this.id = id;
         this.location = location;
         this.name = name;

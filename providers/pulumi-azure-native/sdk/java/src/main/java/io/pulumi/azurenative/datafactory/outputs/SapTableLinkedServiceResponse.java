@@ -126,29 +126,29 @@ public final class SapTableLinkedServiceResponse {
      */
     private final @Nullable Object userName;
 
-    @OutputCustomType.Constructor({"annotations","clientId","connectVia","description","encryptedCredential","language","logonGroup","messageServer","messageServerService","parameters","password","server","sncLibraryPath","sncMode","sncMyName","sncPartnerName","sncQop","systemId","systemNumber","type","userName"})
+    @OutputCustomType.Constructor
     private SapTableLinkedServiceResponse(
-        @Nullable List<Object> annotations,
-        @Nullable Object clientId,
-        @Nullable IntegrationRuntimeReferenceResponse connectVia,
-        @Nullable String description,
-        @Nullable Object encryptedCredential,
-        @Nullable Object language,
-        @Nullable Object logonGroup,
-        @Nullable Object messageServer,
-        @Nullable Object messageServerService,
-        @Nullable Map<String,ParameterSpecificationResponse> parameters,
-        @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password,
-        @Nullable Object server,
-        @Nullable Object sncLibraryPath,
-        @Nullable Object sncMode,
-        @Nullable Object sncMyName,
-        @Nullable Object sncPartnerName,
-        @Nullable Object sncQop,
-        @Nullable Object systemId,
-        @Nullable Object systemNumber,
-        String type,
-        @Nullable Object userName) {
+        @OutputCustomType.Parameter("annotations") @Nullable List<Object> annotations,
+        @OutputCustomType.Parameter("clientId") @Nullable Object clientId,
+        @OutputCustomType.Parameter("connectVia") @Nullable IntegrationRuntimeReferenceResponse connectVia,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("encryptedCredential") @Nullable Object encryptedCredential,
+        @OutputCustomType.Parameter("language") @Nullable Object language,
+        @OutputCustomType.Parameter("logonGroup") @Nullable Object logonGroup,
+        @OutputCustomType.Parameter("messageServer") @Nullable Object messageServer,
+        @OutputCustomType.Parameter("messageServerService") @Nullable Object messageServerService,
+        @OutputCustomType.Parameter("parameters") @Nullable Map<String,ParameterSpecificationResponse> parameters,
+        @OutputCustomType.Parameter("password") @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password,
+        @OutputCustomType.Parameter("server") @Nullable Object server,
+        @OutputCustomType.Parameter("sncLibraryPath") @Nullable Object sncLibraryPath,
+        @OutputCustomType.Parameter("sncMode") @Nullable Object sncMode,
+        @OutputCustomType.Parameter("sncMyName") @Nullable Object sncMyName,
+        @OutputCustomType.Parameter("sncPartnerName") @Nullable Object sncPartnerName,
+        @OutputCustomType.Parameter("sncQop") @Nullable Object sncQop,
+        @OutputCustomType.Parameter("systemId") @Nullable Object systemId,
+        @OutputCustomType.Parameter("systemNumber") @Nullable Object systemNumber,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("userName") @Nullable Object userName) {
         this.annotations = annotations;
         this.clientId = clientId;
         this.connectVia = connectVia;

@@ -63,18 +63,18 @@ public final class GetControllerDetailsResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"dncAppId","dncEndpoint","dncTenantId","id","location","name","provisioningState","resourceGuid","tags","type"})
+    @OutputCustomType.Constructor
     private GetControllerDetailsResult(
-        String dncAppId,
-        String dncEndpoint,
-        String dncTenantId,
-        String id,
-        @Nullable String location,
-        String name,
-        String provisioningState,
-        String resourceGuid,
-        @Nullable Map<String,String> tags,
-        String type) {
+        @OutputCustomType.Parameter("dncAppId") String dncAppId,
+        @OutputCustomType.Parameter("dncEndpoint") String dncEndpoint,
+        @OutputCustomType.Parameter("dncTenantId") String dncTenantId,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("resourceGuid") String resourceGuid,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type) {
         this.dncAppId = dncAppId;
         this.dncEndpoint = dncEndpoint;
         this.dncTenantId = dncTenantId;

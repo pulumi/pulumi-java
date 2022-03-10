@@ -21,10 +21,10 @@ public final class TlsPropertiesResponse {
      */
     private final String status;
 
-    @OutputCustomType.Constructor({"certificate","status"})
+    @OutputCustomType.Constructor
     private TlsPropertiesResponse(
-        TlsCertificatePropertiesResponse certificate,
-        String status) {
+        @OutputCustomType.Parameter("certificate") TlsCertificatePropertiesResponse certificate,
+        @OutputCustomType.Parameter("status") String status) {
         this.certificate = certificate;
         this.status = status;
     }

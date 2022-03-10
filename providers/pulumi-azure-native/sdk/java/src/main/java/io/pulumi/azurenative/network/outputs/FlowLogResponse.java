@@ -87,22 +87,22 @@ public final class FlowLogResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"enabled","etag","flowAnalyticsConfiguration","format","id","location","name","provisioningState","retentionPolicy","storageId","tags","targetResourceGuid","targetResourceId","type"})
+    @OutputCustomType.Constructor
     private FlowLogResponse(
-        @Nullable Boolean enabled,
-        String etag,
-        @Nullable TrafficAnalyticsPropertiesResponse flowAnalyticsConfiguration,
-        @Nullable FlowLogFormatParametersResponse format,
-        @Nullable String id,
-        @Nullable String location,
-        String name,
-        String provisioningState,
-        @Nullable RetentionPolicyParametersResponse retentionPolicy,
-        String storageId,
-        @Nullable Map<String,String> tags,
-        String targetResourceGuid,
-        String targetResourceId,
-        String type) {
+        @OutputCustomType.Parameter("enabled") @Nullable Boolean enabled,
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("flowAnalyticsConfiguration") @Nullable TrafficAnalyticsPropertiesResponse flowAnalyticsConfiguration,
+        @OutputCustomType.Parameter("format") @Nullable FlowLogFormatParametersResponse format,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("retentionPolicy") @Nullable RetentionPolicyParametersResponse retentionPolicy,
+        @OutputCustomType.Parameter("storageId") String storageId,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("targetResourceGuid") String targetResourceGuid,
+        @OutputCustomType.Parameter("targetResourceId") String targetResourceId,
+        @OutputCustomType.Parameter("type") String type) {
         this.enabled = enabled;
         this.etag = etag;
         this.flowAnalyticsConfiguration = flowAnalyticsConfiguration;

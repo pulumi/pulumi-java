@@ -61,17 +61,17 @@ public final class CustomEventsTriggerResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"annotations","description","events","pipelines","runtimeState","scope","subjectBeginsWith","subjectEndsWith","type"})
+    @OutputCustomType.Constructor
     private CustomEventsTriggerResponse(
-        @Nullable List<Object> annotations,
-        @Nullable String description,
-        List<Object> events,
-        @Nullable List<TriggerPipelineReferenceResponse> pipelines,
-        String runtimeState,
-        String scope,
-        @Nullable String subjectBeginsWith,
-        @Nullable String subjectEndsWith,
-        String type) {
+        @OutputCustomType.Parameter("annotations") @Nullable List<Object> annotations,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("events") List<Object> events,
+        @OutputCustomType.Parameter("pipelines") @Nullable List<TriggerPipelineReferenceResponse> pipelines,
+        @OutputCustomType.Parameter("runtimeState") String runtimeState,
+        @OutputCustomType.Parameter("scope") String scope,
+        @OutputCustomType.Parameter("subjectBeginsWith") @Nullable String subjectBeginsWith,
+        @OutputCustomType.Parameter("subjectEndsWith") @Nullable String subjectEndsWith,
+        @OutputCustomType.Parameter("type") String type) {
         this.annotations = annotations;
         this.description = description;
         this.events = events;

@@ -20,11 +20,11 @@ public final class PolicyInfoResponse {
     private final @Nullable PolicyParametersResponse policyParameters;
     private final String policyVersion;
 
-    @OutputCustomType.Constructor({"policyId","policyParameters","policyVersion"})
+    @OutputCustomType.Constructor
     private PolicyInfoResponse(
-        String policyId,
-        @Nullable PolicyParametersResponse policyParameters,
-        String policyVersion) {
+        @OutputCustomType.Parameter("policyId") String policyId,
+        @OutputCustomType.Parameter("policyParameters") @Nullable PolicyParametersResponse policyParameters,
+        @OutputCustomType.Parameter("policyVersion") String policyVersion) {
         this.policyId = policyId;
         this.policyParameters = policyParameters;
         this.policyVersion = policyVersion;

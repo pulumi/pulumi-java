@@ -31,12 +31,12 @@ public final class DataBoxDiskCopyLogDetailsResponse {
      */
     private final String verboseLogLink;
 
-    @OutputCustomType.Constructor({"copyLogDetailsType","diskSerialNumber","errorLogLink","verboseLogLink"})
+    @OutputCustomType.Constructor
     private DataBoxDiskCopyLogDetailsResponse(
-        String copyLogDetailsType,
-        String diskSerialNumber,
-        String errorLogLink,
-        String verboseLogLink) {
+        @OutputCustomType.Parameter("copyLogDetailsType") String copyLogDetailsType,
+        @OutputCustomType.Parameter("diskSerialNumber") String diskSerialNumber,
+        @OutputCustomType.Parameter("errorLogLink") String errorLogLink,
+        @OutputCustomType.Parameter("verboseLogLink") String verboseLogLink) {
         this.copyLogDetailsType = copyLogDetailsType;
         this.diskSerialNumber = diskSerialNumber;
         this.errorLogLink = errorLogLink;

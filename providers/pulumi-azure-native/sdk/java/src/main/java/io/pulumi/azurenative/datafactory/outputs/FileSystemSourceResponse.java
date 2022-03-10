@@ -49,15 +49,15 @@ public final class FileSystemSourceResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"additionalColumns","disableMetricsCollection","maxConcurrentConnections","recursive","sourceRetryCount","sourceRetryWait","type"})
+    @OutputCustomType.Constructor
     private FileSystemSourceResponse(
-        @Nullable Object additionalColumns,
-        @Nullable Object disableMetricsCollection,
-        @Nullable Object maxConcurrentConnections,
-        @Nullable Object recursive,
-        @Nullable Object sourceRetryCount,
-        @Nullable Object sourceRetryWait,
-        String type) {
+        @OutputCustomType.Parameter("additionalColumns") @Nullable Object additionalColumns,
+        @OutputCustomType.Parameter("disableMetricsCollection") @Nullable Object disableMetricsCollection,
+        @OutputCustomType.Parameter("maxConcurrentConnections") @Nullable Object maxConcurrentConnections,
+        @OutputCustomType.Parameter("recursive") @Nullable Object recursive,
+        @OutputCustomType.Parameter("sourceRetryCount") @Nullable Object sourceRetryCount,
+        @OutputCustomType.Parameter("sourceRetryWait") @Nullable Object sourceRetryWait,
+        @OutputCustomType.Parameter("type") String type) {
         this.additionalColumns = additionalColumns;
         this.disableMetricsCollection = disableMetricsCollection;
         this.maxConcurrentConnections = maxConcurrentConnections;

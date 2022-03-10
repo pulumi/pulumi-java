@@ -57,17 +57,17 @@ public final class ListWebAppPublishingCredentialsSlotResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"id","kind","name","publishingPassword","publishingPasswordHash","publishingPasswordHashSalt","publishingUserName","scmUri","type"})
+    @OutputCustomType.Constructor
     private ListWebAppPublishingCredentialsSlotResult(
-        String id,
-        @Nullable String kind,
-        String name,
-        @Nullable String publishingPassword,
-        @Nullable String publishingPasswordHash,
-        @Nullable String publishingPasswordHashSalt,
-        String publishingUserName,
-        @Nullable String scmUri,
-        String type) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("kind") @Nullable String kind,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("publishingPassword") @Nullable String publishingPassword,
+        @OutputCustomType.Parameter("publishingPasswordHash") @Nullable String publishingPasswordHash,
+        @OutputCustomType.Parameter("publishingPasswordHashSalt") @Nullable String publishingPasswordHashSalt,
+        @OutputCustomType.Parameter("publishingUserName") String publishingUserName,
+        @OutputCustomType.Parameter("scmUri") @Nullable String scmUri,
+        @OutputCustomType.Parameter("type") String type) {
         this.id = id;
         this.kind = kind;
         this.name = name;

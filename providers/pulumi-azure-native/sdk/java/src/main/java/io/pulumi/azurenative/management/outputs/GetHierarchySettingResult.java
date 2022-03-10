@@ -43,14 +43,14 @@ public final class GetHierarchySettingResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"defaultManagementGroup","id","name","requireAuthorizationForGroupCreation","tenantId","type"})
+    @OutputCustomType.Constructor
     private GetHierarchySettingResult(
-        @Nullable String defaultManagementGroup,
-        String id,
-        String name,
-        @Nullable Boolean requireAuthorizationForGroupCreation,
-        @Nullable String tenantId,
-        String type) {
+        @OutputCustomType.Parameter("defaultManagementGroup") @Nullable String defaultManagementGroup,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("requireAuthorizationForGroupCreation") @Nullable Boolean requireAuthorizationForGroupCreation,
+        @OutputCustomType.Parameter("tenantId") @Nullable String tenantId,
+        @OutputCustomType.Parameter("type") String type) {
         this.defaultManagementGroup = defaultManagementGroup;
         this.id = id;
         this.name = name;

@@ -109,26 +109,26 @@ public final class GetNetworkVirtualApplianceResult {
      */
     private final @Nullable SubResourceResponse virtualHub;
 
-    @OutputCustomType.Constructor({"addressPrefix","bootStrapConfigurationBlobs","cloudInitConfiguration","cloudInitConfigurationBlobs","etag","id","identity","inboundSecurityRules","location","name","nvaSku","provisioningState","tags","type","virtualApplianceAsn","virtualApplianceNics","virtualApplianceSites","virtualHub"})
+    @OutputCustomType.Constructor
     private GetNetworkVirtualApplianceResult(
-        String addressPrefix,
-        @Nullable List<String> bootStrapConfigurationBlobs,
-        @Nullable String cloudInitConfiguration,
-        @Nullable List<String> cloudInitConfigurationBlobs,
-        String etag,
-        @Nullable String id,
-        @Nullable ManagedServiceIdentityResponse identity,
-        List<SubResourceResponse> inboundSecurityRules,
-        @Nullable String location,
-        String name,
-        @Nullable VirtualApplianceSkuPropertiesResponse nvaSku,
-        String provisioningState,
-        @Nullable Map<String,String> tags,
-        String type,
-        @Nullable Double virtualApplianceAsn,
-        List<VirtualApplianceNicPropertiesResponse> virtualApplianceNics,
-        List<SubResourceResponse> virtualApplianceSites,
-        @Nullable SubResourceResponse virtualHub) {
+        @OutputCustomType.Parameter("addressPrefix") String addressPrefix,
+        @OutputCustomType.Parameter("bootStrapConfigurationBlobs") @Nullable List<String> bootStrapConfigurationBlobs,
+        @OutputCustomType.Parameter("cloudInitConfiguration") @Nullable String cloudInitConfiguration,
+        @OutputCustomType.Parameter("cloudInitConfigurationBlobs") @Nullable List<String> cloudInitConfigurationBlobs,
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("identity") @Nullable ManagedServiceIdentityResponse identity,
+        @OutputCustomType.Parameter("inboundSecurityRules") List<SubResourceResponse> inboundSecurityRules,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("nvaSku") @Nullable VirtualApplianceSkuPropertiesResponse nvaSku,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("virtualApplianceAsn") @Nullable Double virtualApplianceAsn,
+        @OutputCustomType.Parameter("virtualApplianceNics") List<VirtualApplianceNicPropertiesResponse> virtualApplianceNics,
+        @OutputCustomType.Parameter("virtualApplianceSites") List<SubResourceResponse> virtualApplianceSites,
+        @OutputCustomType.Parameter("virtualHub") @Nullable SubResourceResponse virtualHub) {
         this.addressPrefix = addressPrefix;
         this.bootStrapConfigurationBlobs = bootStrapConfigurationBlobs;
         this.cloudInitConfiguration = cloudInitConfiguration;

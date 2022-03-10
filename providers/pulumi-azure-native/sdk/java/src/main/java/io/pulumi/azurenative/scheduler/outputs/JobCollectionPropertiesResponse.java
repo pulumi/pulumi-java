@@ -29,11 +29,11 @@ public final class JobCollectionPropertiesResponse {
      */
     private final @Nullable String state;
 
-    @OutputCustomType.Constructor({"quota","sku","state"})
+    @OutputCustomType.Constructor
     private JobCollectionPropertiesResponse(
-        @Nullable JobCollectionQuotaResponse quota,
-        @Nullable SkuResponse sku,
-        @Nullable String state) {
+        @OutputCustomType.Parameter("quota") @Nullable JobCollectionQuotaResponse quota,
+        @OutputCustomType.Parameter("sku") @Nullable SkuResponse sku,
+        @OutputCustomType.Parameter("state") @Nullable String state) {
         this.quota = quota;
         this.sku = sku;
         this.state = state;

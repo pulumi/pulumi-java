@@ -22,10 +22,10 @@ public final class ListWorkspaceCollectionAccessKeysResult {
      */
     private final @Nullable String key2;
 
-    @OutputCustomType.Constructor({"key1","key2"})
+    @OutputCustomType.Constructor
     private ListWorkspaceCollectionAccessKeysResult(
-        @Nullable String key1,
-        @Nullable String key2) {
+        @OutputCustomType.Parameter("key1") @Nullable String key1,
+        @OutputCustomType.Parameter("key2") @Nullable String key2) {
         this.key1 = key1;
         this.key2 = key2;
     }

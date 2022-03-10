@@ -26,11 +26,11 @@ public final class ContainerServiceCredentialsResponse {
      */
     private final ServicePrincipalPropertiesResponse servicePrincipalConfiguration;
 
-    @OutputCustomType.Constructor({"acsKubeConfig","imagePullSecretName","servicePrincipalConfiguration"})
+    @OutputCustomType.Constructor
     private ContainerServiceCredentialsResponse(
-        String acsKubeConfig,
-        String imagePullSecretName,
-        ServicePrincipalPropertiesResponse servicePrincipalConfiguration) {
+        @OutputCustomType.Parameter("acsKubeConfig") String acsKubeConfig,
+        @OutputCustomType.Parameter("imagePullSecretName") String imagePullSecretName,
+        @OutputCustomType.Parameter("servicePrincipalConfiguration") ServicePrincipalPropertiesResponse servicePrincipalConfiguration) {
         this.acsKubeConfig = acsKubeConfig;
         this.imagePullSecretName = imagePullSecretName;
         this.servicePrincipalConfiguration = servicePrincipalConfiguration;

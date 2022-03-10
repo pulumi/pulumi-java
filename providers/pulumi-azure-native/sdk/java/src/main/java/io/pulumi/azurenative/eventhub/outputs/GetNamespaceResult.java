@@ -86,22 +86,22 @@ public final class GetNamespaceResult {
      */
     private final String updatedAt;
 
-    @OutputCustomType.Constructor({"createdAt","id","isAutoInflateEnabled","kafkaEnabled","location","maximumThroughputUnits","metricId","name","provisioningState","serviceBusEndpoint","sku","tags","type","updatedAt"})
+    @OutputCustomType.Constructor
     private GetNamespaceResult(
-        String createdAt,
-        String id,
-        @Nullable Boolean isAutoInflateEnabled,
-        @Nullable Boolean kafkaEnabled,
-        @Nullable String location,
-        @Nullable Integer maximumThroughputUnits,
-        String metricId,
-        String name,
-        String provisioningState,
-        String serviceBusEndpoint,
-        @Nullable SkuResponse sku,
-        @Nullable Map<String,String> tags,
-        String type,
-        String updatedAt) {
+        @OutputCustomType.Parameter("createdAt") String createdAt,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("isAutoInflateEnabled") @Nullable Boolean isAutoInflateEnabled,
+        @OutputCustomType.Parameter("kafkaEnabled") @Nullable Boolean kafkaEnabled,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("maximumThroughputUnits") @Nullable Integer maximumThroughputUnits,
+        @OutputCustomType.Parameter("metricId") String metricId,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("serviceBusEndpoint") String serviceBusEndpoint,
+        @OutputCustomType.Parameter("sku") @Nullable SkuResponse sku,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("updatedAt") String updatedAt) {
         this.createdAt = createdAt;
         this.id = id;
         this.isAutoInflateEnabled = isAutoInflateEnabled;

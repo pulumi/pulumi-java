@@ -35,12 +35,12 @@ public final class DedicatedHostInstanceViewWithNameResponse {
      */
     private final @Nullable List<InstanceViewStatusResponse> statuses;
 
-    @OutputCustomType.Constructor({"assetId","availableCapacity","name","statuses"})
+    @OutputCustomType.Constructor
     private DedicatedHostInstanceViewWithNameResponse(
-        String assetId,
-        @Nullable DedicatedHostAvailableCapacityResponse availableCapacity,
-        String name,
-        @Nullable List<InstanceViewStatusResponse> statuses) {
+        @OutputCustomType.Parameter("assetId") String assetId,
+        @OutputCustomType.Parameter("availableCapacity") @Nullable DedicatedHostAvailableCapacityResponse availableCapacity,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("statuses") @Nullable List<InstanceViewStatusResponse> statuses) {
         this.assetId = assetId;
         this.availableCapacity = availableCapacity;
         this.name = name;

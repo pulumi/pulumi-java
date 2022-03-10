@@ -60,17 +60,17 @@ public final class CreationDataResponse {
      */
     private final @Nullable Double uploadSizeBytes;
 
-    @OutputCustomType.Constructor({"createOption","galleryImageReference","imageReference","logicalSectorSize","sourceResourceId","sourceUniqueId","sourceUri","storageAccountId","uploadSizeBytes"})
+    @OutputCustomType.Constructor
     private CreationDataResponse(
-        String createOption,
-        @Nullable ImageDiskReferenceResponse galleryImageReference,
-        @Nullable ImageDiskReferenceResponse imageReference,
-        @Nullable Integer logicalSectorSize,
-        @Nullable String sourceResourceId,
-        String sourceUniqueId,
-        @Nullable String sourceUri,
-        @Nullable String storageAccountId,
-        @Nullable Double uploadSizeBytes) {
+        @OutputCustomType.Parameter("createOption") String createOption,
+        @OutputCustomType.Parameter("galleryImageReference") @Nullable ImageDiskReferenceResponse galleryImageReference,
+        @OutputCustomType.Parameter("imageReference") @Nullable ImageDiskReferenceResponse imageReference,
+        @OutputCustomType.Parameter("logicalSectorSize") @Nullable Integer logicalSectorSize,
+        @OutputCustomType.Parameter("sourceResourceId") @Nullable String sourceResourceId,
+        @OutputCustomType.Parameter("sourceUniqueId") String sourceUniqueId,
+        @OutputCustomType.Parameter("sourceUri") @Nullable String sourceUri,
+        @OutputCustomType.Parameter("storageAccountId") @Nullable String storageAccountId,
+        @OutputCustomType.Parameter("uploadSizeBytes") @Nullable Double uploadSizeBytes) {
         this.createOption = createOption;
         this.galleryImageReference = galleryImageReference;
         this.imageReference = imageReference;

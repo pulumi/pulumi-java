@@ -24,10 +24,10 @@ public final class TimeInWeekResponse {
      */
     private final @Nullable List<Integer> hourSlots;
 
-    @OutputCustomType.Constructor({"day","hourSlots"})
+    @OutputCustomType.Constructor
     private TimeInWeekResponse(
-        @Nullable String day,
-        @Nullable List<Integer> hourSlots) {
+        @OutputCustomType.Parameter("day") @Nullable String day,
+        @OutputCustomType.Parameter("hourSlots") @Nullable List<Integer> hourSlots) {
         this.day = day;
         this.hourSlots = hourSlots;
     }

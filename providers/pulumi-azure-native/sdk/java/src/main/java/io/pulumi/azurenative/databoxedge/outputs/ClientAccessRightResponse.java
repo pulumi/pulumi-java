@@ -20,10 +20,10 @@ public final class ClientAccessRightResponse {
      */
     private final String client;
 
-    @OutputCustomType.Constructor({"accessPermission","client"})
+    @OutputCustomType.Constructor
     private ClientAccessRightResponse(
-        String accessPermission,
-        String client) {
+        @OutputCustomType.Parameter("accessPermission") String accessPermission,
+        @OutputCustomType.Parameter("client") String client) {
         this.accessPermission = accessPermission;
         this.client = client;
     }

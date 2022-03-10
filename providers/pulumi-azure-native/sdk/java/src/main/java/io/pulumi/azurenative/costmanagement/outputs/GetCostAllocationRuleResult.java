@@ -31,12 +31,12 @@ public final class GetCostAllocationRuleResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"id","name","properties","type"})
+    @OutputCustomType.Constructor
     private GetCostAllocationRuleResult(
-        String id,
-        String name,
-        CostAllocationRulePropertiesResponse properties,
-        String type) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("properties") CostAllocationRulePropertiesResponse properties,
+        @OutputCustomType.Parameter("type") String type) {
         this.id = id;
         this.name = name;
         this.properties = properties;

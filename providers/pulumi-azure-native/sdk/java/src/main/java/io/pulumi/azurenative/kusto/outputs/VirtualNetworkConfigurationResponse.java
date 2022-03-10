@@ -25,11 +25,11 @@ public final class VirtualNetworkConfigurationResponse {
      */
     private final String subnetId;
 
-    @OutputCustomType.Constructor({"dataManagementPublicIpId","enginePublicIpId","subnetId"})
+    @OutputCustomType.Constructor
     private VirtualNetworkConfigurationResponse(
-        String dataManagementPublicIpId,
-        String enginePublicIpId,
-        String subnetId) {
+        @OutputCustomType.Parameter("dataManagementPublicIpId") String dataManagementPublicIpId,
+        @OutputCustomType.Parameter("enginePublicIpId") String enginePublicIpId,
+        @OutputCustomType.Parameter("subnetId") String subnetId) {
         this.dataManagementPublicIpId = dataManagementPublicIpId;
         this.enginePublicIpId = enginePublicIpId;
         this.subnetId = subnetId;

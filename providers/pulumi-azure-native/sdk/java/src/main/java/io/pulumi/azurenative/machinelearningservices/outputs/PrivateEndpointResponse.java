@@ -20,10 +20,10 @@ public final class PrivateEndpointResponse {
      */
     private final String subnetArmId;
 
-    @OutputCustomType.Constructor({"id","subnetArmId"})
+    @OutputCustomType.Constructor
     private PrivateEndpointResponse(
-        String id,
-        String subnetArmId) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("subnetArmId") String subnetArmId) {
         this.id = id;
         this.subnetArmId = subnetArmId;
     }

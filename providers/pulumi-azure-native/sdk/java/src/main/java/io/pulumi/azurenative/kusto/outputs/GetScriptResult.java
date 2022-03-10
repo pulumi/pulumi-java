@@ -54,16 +54,16 @@ public final class GetScriptResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"continueOnErrors","forceUpdateTag","id","name","provisioningState","scriptUrl","systemData","type"})
+    @OutputCustomType.Constructor
     private GetScriptResult(
-        @Nullable Boolean continueOnErrors,
-        @Nullable String forceUpdateTag,
-        String id,
-        String name,
-        String provisioningState,
-        String scriptUrl,
-        SystemDataResponse systemData,
-        String type) {
+        @OutputCustomType.Parameter("continueOnErrors") @Nullable Boolean continueOnErrors,
+        @OutputCustomType.Parameter("forceUpdateTag") @Nullable String forceUpdateTag,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("scriptUrl") String scriptUrl,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("type") String type) {
         this.continueOnErrors = continueOnErrors;
         this.forceUpdateTag = forceUpdateTag;
         this.id = id;

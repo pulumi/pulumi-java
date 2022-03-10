@@ -50,15 +50,15 @@ public final class P2SConnectionConfigurationResponse {
      */
     private final @Nullable AddressSpaceResponse vpnClientAddressPool;
 
-    @OutputCustomType.Constructor({"enableInternetSecurity","etag","id","name","provisioningState","routingConfiguration","vpnClientAddressPool"})
+    @OutputCustomType.Constructor
     private P2SConnectionConfigurationResponse(
-        @Nullable Boolean enableInternetSecurity,
-        String etag,
-        @Nullable String id,
-        @Nullable String name,
-        String provisioningState,
-        @Nullable RoutingConfigurationResponse routingConfiguration,
-        @Nullable AddressSpaceResponse vpnClientAddressPool) {
+        @OutputCustomType.Parameter("enableInternetSecurity") @Nullable Boolean enableInternetSecurity,
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("routingConfiguration") @Nullable RoutingConfigurationResponse routingConfiguration,
+        @OutputCustomType.Parameter("vpnClientAddressPool") @Nullable AddressSpaceResponse vpnClientAddressPool) {
         this.enableInternetSecurity = enableInternetSecurity;
         this.etag = etag;
         this.id = id;

@@ -68,19 +68,19 @@ public final class GetGalleryApplicationResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"description","endOfLifeDate","eula","id","location","name","privacyStatementUri","releaseNoteUri","supportedOSType","tags","type"})
+    @OutputCustomType.Constructor
     private GetGalleryApplicationResult(
-        @Nullable String description,
-        @Nullable String endOfLifeDate,
-        @Nullable String eula,
-        String id,
-        String location,
-        String name,
-        @Nullable String privacyStatementUri,
-        @Nullable String releaseNoteUri,
-        String supportedOSType,
-        @Nullable Map<String,String> tags,
-        String type) {
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("endOfLifeDate") @Nullable String endOfLifeDate,
+        @OutputCustomType.Parameter("eula") @Nullable String eula,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("privacyStatementUri") @Nullable String privacyStatementUri,
+        @OutputCustomType.Parameter("releaseNoteUri") @Nullable String releaseNoteUri,
+        @OutputCustomType.Parameter("supportedOSType") String supportedOSType,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type) {
         this.description = description;
         this.endOfLifeDate = endOfLifeDate;
         this.eula = eula;

@@ -41,13 +41,13 @@ public final class ImmutabilityPolicyPropertiesResponse {
      */
     private final List<UpdateHistoryPropertyResponse> updateHistory;
 
-    @OutputCustomType.Constructor({"allowProtectedAppendWrites","etag","immutabilityPeriodSinceCreationInDays","state","updateHistory"})
+    @OutputCustomType.Constructor
     private ImmutabilityPolicyPropertiesResponse(
-        @Nullable Boolean allowProtectedAppendWrites,
-        String etag,
-        @Nullable Integer immutabilityPeriodSinceCreationInDays,
-        String state,
-        List<UpdateHistoryPropertyResponse> updateHistory) {
+        @OutputCustomType.Parameter("allowProtectedAppendWrites") @Nullable Boolean allowProtectedAppendWrites,
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("immutabilityPeriodSinceCreationInDays") @Nullable Integer immutabilityPeriodSinceCreationInDays,
+        @OutputCustomType.Parameter("state") String state,
+        @OutputCustomType.Parameter("updateHistory") List<UpdateHistoryPropertyResponse> updateHistory) {
         this.allowProtectedAppendWrites = allowProtectedAppendWrites;
         this.etag = etag;
         this.immutabilityPeriodSinceCreationInDays = immutabilityPeriodSinceCreationInDays;

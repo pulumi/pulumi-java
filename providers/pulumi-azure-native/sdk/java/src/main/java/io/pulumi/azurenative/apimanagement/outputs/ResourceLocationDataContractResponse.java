@@ -32,12 +32,12 @@ public final class ResourceLocationDataContractResponse {
      */
     private final String name;
 
-    @OutputCustomType.Constructor({"city","countryOrRegion","district","name"})
+    @OutputCustomType.Constructor
     private ResourceLocationDataContractResponse(
-        @Nullable String city,
-        @Nullable String countryOrRegion,
-        @Nullable String district,
-        String name) {
+        @OutputCustomType.Parameter("city") @Nullable String city,
+        @OutputCustomType.Parameter("countryOrRegion") @Nullable String countryOrRegion,
+        @OutputCustomType.Parameter("district") @Nullable String district,
+        @OutputCustomType.Parameter("name") String name) {
         this.city = city;
         this.countryOrRegion = countryOrRegion;
         this.district = district;

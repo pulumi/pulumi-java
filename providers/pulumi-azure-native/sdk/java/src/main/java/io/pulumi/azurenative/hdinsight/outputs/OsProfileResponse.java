@@ -17,8 +17,8 @@ public final class OsProfileResponse {
      */
     private final @Nullable LinuxOperatingSystemProfileResponse linuxOperatingSystemProfile;
 
-    @OutputCustomType.Constructor({"linuxOperatingSystemProfile"})
-    private OsProfileResponse(@Nullable LinuxOperatingSystemProfileResponse linuxOperatingSystemProfile) {
+    @OutputCustomType.Constructor
+    private OsProfileResponse(@OutputCustomType.Parameter("linuxOperatingSystemProfile") @Nullable LinuxOperatingSystemProfileResponse linuxOperatingSystemProfile) {
         this.linuxOperatingSystemProfile = linuxOperatingSystemProfile;
     }
 

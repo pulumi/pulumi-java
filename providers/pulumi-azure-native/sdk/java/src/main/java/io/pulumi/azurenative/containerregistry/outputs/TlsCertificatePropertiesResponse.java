@@ -20,10 +20,10 @@ public final class TlsCertificatePropertiesResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"location","type"})
+    @OutputCustomType.Constructor
     private TlsCertificatePropertiesResponse(
-        String location,
-        String type) {
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("type") String type) {
         this.location = location;
         this.type = type;
     }

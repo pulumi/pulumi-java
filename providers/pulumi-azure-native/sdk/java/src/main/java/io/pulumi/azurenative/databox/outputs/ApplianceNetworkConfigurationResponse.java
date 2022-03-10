@@ -20,10 +20,10 @@ public final class ApplianceNetworkConfigurationResponse {
      */
     private final String name;
 
-    @OutputCustomType.Constructor({"macAddress","name"})
+    @OutputCustomType.Constructor
     private ApplianceNetworkConfigurationResponse(
-        String macAddress,
-        String name) {
+        @OutputCustomType.Parameter("macAddress") String macAddress,
+        @OutputCustomType.Parameter("name") String name) {
         this.macAddress = macAddress;
         this.name = name;
     }

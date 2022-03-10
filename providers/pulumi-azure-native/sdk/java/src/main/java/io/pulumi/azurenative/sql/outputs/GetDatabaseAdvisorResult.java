@@ -67,19 +67,19 @@ public final class GetDatabaseAdvisorResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"advisorStatus","autoExecuteStatus","autoExecuteStatusInheritedFrom","id","kind","lastChecked","location","name","recommendationsStatus","recommendedActions","type"})
+    @OutputCustomType.Constructor
     private GetDatabaseAdvisorResult(
-        String advisorStatus,
-        String autoExecuteStatus,
-        String autoExecuteStatusInheritedFrom,
-        String id,
-        String kind,
-        String lastChecked,
-        String location,
-        String name,
-        String recommendationsStatus,
-        List<RecommendedActionResponse> recommendedActions,
-        String type) {
+        @OutputCustomType.Parameter("advisorStatus") String advisorStatus,
+        @OutputCustomType.Parameter("autoExecuteStatus") String autoExecuteStatus,
+        @OutputCustomType.Parameter("autoExecuteStatusInheritedFrom") String autoExecuteStatusInheritedFrom,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("lastChecked") String lastChecked,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("recommendationsStatus") String recommendationsStatus,
+        @OutputCustomType.Parameter("recommendedActions") List<RecommendedActionResponse> recommendedActions,
+        @OutputCustomType.Parameter("type") String type) {
         this.advisorStatus = advisorStatus;
         this.autoExecuteStatus = autoExecuteStatus;
         this.autoExecuteStatusInheritedFrom = autoExecuteStatusInheritedFrom;

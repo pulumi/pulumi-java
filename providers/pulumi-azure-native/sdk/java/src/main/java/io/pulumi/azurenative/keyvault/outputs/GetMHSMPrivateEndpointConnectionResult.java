@@ -72,19 +72,19 @@ public final class GetMHSMPrivateEndpointConnectionResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"etag","id","location","name","privateEndpoint","privateLinkServiceConnectionState","provisioningState","sku","systemData","tags","type"})
+    @OutputCustomType.Constructor
     private GetMHSMPrivateEndpointConnectionResult(
-        @Nullable String etag,
-        String id,
-        @Nullable String location,
-        String name,
-        @Nullable MHSMPrivateEndpointResponse privateEndpoint,
-        @Nullable MHSMPrivateLinkServiceConnectionStateResponse privateLinkServiceConnectionState,
-        String provisioningState,
-        @Nullable ManagedHsmSkuResponse sku,
-        SystemDataResponse systemData,
-        @Nullable Map<String,String> tags,
-        String type) {
+        @OutputCustomType.Parameter("etag") @Nullable String etag,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("privateEndpoint") @Nullable MHSMPrivateEndpointResponse privateEndpoint,
+        @OutputCustomType.Parameter("privateLinkServiceConnectionState") @Nullable MHSMPrivateLinkServiceConnectionStateResponse privateLinkServiceConnectionState,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("sku") @Nullable ManagedHsmSkuResponse sku,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type) {
         this.etag = etag;
         this.id = id;
         this.location = location;

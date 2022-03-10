@@ -37,13 +37,13 @@ public final class GetDatabaseResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"charset","collation","id","name","type"})
+    @OutputCustomType.Constructor
     private GetDatabaseResult(
-        @Nullable String charset,
-        @Nullable String collation,
-        String id,
-        String name,
-        String type) {
+        @OutputCustomType.Parameter("charset") @Nullable String charset,
+        @OutputCustomType.Parameter("collation") @Nullable String collation,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("type") String type) {
         this.charset = charset;
         this.collation = collation;
         this.id = id;

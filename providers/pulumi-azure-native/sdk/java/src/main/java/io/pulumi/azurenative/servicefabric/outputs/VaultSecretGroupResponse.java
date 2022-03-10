@@ -22,10 +22,10 @@ public final class VaultSecretGroupResponse {
      */
     private final List<VaultCertificateResponse> vaultCertificates;
 
-    @OutputCustomType.Constructor({"sourceVault","vaultCertificates"})
+    @OutputCustomType.Constructor
     private VaultSecretGroupResponse(
-        SubResourceResponse sourceVault,
-        List<VaultCertificateResponse> vaultCertificates) {
+        @OutputCustomType.Parameter("sourceVault") SubResourceResponse sourceVault,
+        @OutputCustomType.Parameter("vaultCertificates") List<VaultCertificateResponse> vaultCertificates) {
         this.sourceVault = sourceVault;
         this.vaultCertificates = vaultCertificates;
     }

@@ -23,10 +23,10 @@ public final class ComputeIsolationPropertiesResponse {
      */
     private final @Nullable String hostSku;
 
-    @OutputCustomType.Constructor({"enableComputeIsolation","hostSku"})
+    @OutputCustomType.Constructor
     private ComputeIsolationPropertiesResponse(
-        @Nullable Boolean enableComputeIsolation,
-        @Nullable String hostSku) {
+        @OutputCustomType.Parameter("enableComputeIsolation") @Nullable Boolean enableComputeIsolation,
+        @OutputCustomType.Parameter("hostSku") @Nullable String hostSku) {
         this.enableComputeIsolation = enableComputeIsolation;
         this.hostSku = hostSku;
     }

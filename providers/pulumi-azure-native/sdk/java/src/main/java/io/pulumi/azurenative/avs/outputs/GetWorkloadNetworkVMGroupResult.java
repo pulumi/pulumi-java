@@ -54,16 +54,16 @@ public final class GetWorkloadNetworkVMGroupResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"displayName","id","members","name","provisioningState","revision","status","type"})
+    @OutputCustomType.Constructor
     private GetWorkloadNetworkVMGroupResult(
-        @Nullable String displayName,
-        String id,
-        @Nullable List<String> members,
-        String name,
-        String provisioningState,
-        @Nullable Double revision,
-        String status,
-        String type) {
+        @OutputCustomType.Parameter("displayName") @Nullable String displayName,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("members") @Nullable List<String> members,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("revision") @Nullable Double revision,
+        @OutputCustomType.Parameter("status") String status,
+        @OutputCustomType.Parameter("type") String type) {
         this.displayName = displayName;
         this.id = id;
         this.members = members;

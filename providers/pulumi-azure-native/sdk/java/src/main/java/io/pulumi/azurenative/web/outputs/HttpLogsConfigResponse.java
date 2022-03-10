@@ -23,10 +23,10 @@ public final class HttpLogsConfigResponse {
      */
     private final @Nullable FileSystemHttpLogsConfigResponse fileSystem;
 
-    @OutputCustomType.Constructor({"azureBlobStorage","fileSystem"})
+    @OutputCustomType.Constructor
     private HttpLogsConfigResponse(
-        @Nullable AzureBlobStorageHttpLogsConfigResponse azureBlobStorage,
-        @Nullable FileSystemHttpLogsConfigResponse fileSystem) {
+        @OutputCustomType.Parameter("azureBlobStorage") @Nullable AzureBlobStorageHttpLogsConfigResponse azureBlobStorage,
+        @OutputCustomType.Parameter("fileSystem") @Nullable FileSystemHttpLogsConfigResponse fileSystem) {
         this.azureBlobStorage = azureBlobStorage;
         this.fileSystem = fileSystem;
     }

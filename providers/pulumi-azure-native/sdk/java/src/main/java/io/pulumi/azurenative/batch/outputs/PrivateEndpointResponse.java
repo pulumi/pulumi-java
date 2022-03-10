@@ -11,8 +11,8 @@ import java.util.Objects;
 public final class PrivateEndpointResponse {
     private final String id;
 
-    @OutputCustomType.Constructor({"id"})
-    private PrivateEndpointResponse(String id) {
+    @OutputCustomType.Constructor
+    private PrivateEndpointResponse(@OutputCustomType.Parameter("id") String id) {
         this.id = id;
     }
 

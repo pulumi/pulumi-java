@@ -54,16 +54,16 @@ public final class GetRoleDefinitionResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"assignableScopes","description","id","name","permissions","roleName","roleType","type"})
+    @OutputCustomType.Constructor
     private GetRoleDefinitionResult(
-        @Nullable List<String> assignableScopes,
-        @Nullable String description,
-        String id,
-        String name,
-        @Nullable List<PermissionResponse> permissions,
-        @Nullable String roleName,
-        @Nullable String roleType,
-        String type) {
+        @OutputCustomType.Parameter("assignableScopes") @Nullable List<String> assignableScopes,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("permissions") @Nullable List<PermissionResponse> permissions,
+        @OutputCustomType.Parameter("roleName") @Nullable String roleName,
+        @OutputCustomType.Parameter("roleType") @Nullable String roleType,
+        @OutputCustomType.Parameter("type") String type) {
         this.assignableScopes = assignableScopes;
         this.description = description;
         this.id = id;

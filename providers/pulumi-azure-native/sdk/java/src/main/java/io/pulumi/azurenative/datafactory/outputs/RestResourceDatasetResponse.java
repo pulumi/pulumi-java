@@ -84,21 +84,21 @@ public final class RestResourceDatasetResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"additionalHeaders","annotations","description","folder","linkedServiceName","paginationRules","parameters","relativeUrl","requestBody","requestMethod","schema","structure","type"})
+    @OutputCustomType.Constructor
     private RestResourceDatasetResponse(
-        @Nullable Object additionalHeaders,
-        @Nullable List<Object> annotations,
-        @Nullable String description,
-        @Nullable DatasetResponseFolder folder,
-        LinkedServiceReferenceResponse linkedServiceName,
-        @Nullable Object paginationRules,
-        @Nullable Map<String,ParameterSpecificationResponse> parameters,
-        @Nullable Object relativeUrl,
-        @Nullable Object requestBody,
-        @Nullable Object requestMethod,
-        @Nullable Object schema,
-        @Nullable Object structure,
-        String type) {
+        @OutputCustomType.Parameter("additionalHeaders") @Nullable Object additionalHeaders,
+        @OutputCustomType.Parameter("annotations") @Nullable List<Object> annotations,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("folder") @Nullable DatasetResponseFolder folder,
+        @OutputCustomType.Parameter("linkedServiceName") LinkedServiceReferenceResponse linkedServiceName,
+        @OutputCustomType.Parameter("paginationRules") @Nullable Object paginationRules,
+        @OutputCustomType.Parameter("parameters") @Nullable Map<String,ParameterSpecificationResponse> parameters,
+        @OutputCustomType.Parameter("relativeUrl") @Nullable Object relativeUrl,
+        @OutputCustomType.Parameter("requestBody") @Nullable Object requestBody,
+        @OutputCustomType.Parameter("requestMethod") @Nullable Object requestMethod,
+        @OutputCustomType.Parameter("schema") @Nullable Object schema,
+        @OutputCustomType.Parameter("structure") @Nullable Object structure,
+        @OutputCustomType.Parameter("type") String type) {
         this.additionalHeaders = additionalHeaders;
         this.annotations = annotations;
         this.description = description;

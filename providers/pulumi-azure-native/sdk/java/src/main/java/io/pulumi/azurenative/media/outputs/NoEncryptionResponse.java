@@ -17,8 +17,8 @@ public final class NoEncryptionResponse {
      */
     private final @Nullable EnabledProtocolsResponse enabledProtocols;
 
-    @OutputCustomType.Constructor({"enabledProtocols"})
-    private NoEncryptionResponse(@Nullable EnabledProtocolsResponse enabledProtocols) {
+    @OutputCustomType.Constructor
+    private NoEncryptionResponse(@OutputCustomType.Parameter("enabledProtocols") @Nullable EnabledProtocolsResponse enabledProtocols) {
         this.enabledProtocols = enabledProtocols;
     }
 

@@ -23,10 +23,10 @@ public final class AuthenticationSettingsContractResponse {
      */
     private final @Nullable OpenIdAuthenticationSettingsContractResponse openid;
 
-    @OutputCustomType.Constructor({"oAuth2","openid"})
+    @OutputCustomType.Constructor
     private AuthenticationSettingsContractResponse(
-        @Nullable OAuth2AuthenticationSettingsContractResponse oAuth2,
-        @Nullable OpenIdAuthenticationSettingsContractResponse openid) {
+        @OutputCustomType.Parameter("oAuth2") @Nullable OAuth2AuthenticationSettingsContractResponse oAuth2,
+        @OutputCustomType.Parameter("openid") @Nullable OpenIdAuthenticationSettingsContractResponse openid) {
         this.oAuth2 = oAuth2;
         this.openid = openid;
     }

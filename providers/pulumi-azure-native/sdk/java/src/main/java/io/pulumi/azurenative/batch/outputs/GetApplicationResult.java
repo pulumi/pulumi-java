@@ -48,15 +48,15 @@ public final class GetApplicationResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"allowUpdates","defaultVersion","displayName","etag","id","name","type"})
+    @OutputCustomType.Constructor
     private GetApplicationResult(
-        @Nullable Boolean allowUpdates,
-        @Nullable String defaultVersion,
-        @Nullable String displayName,
-        String etag,
-        String id,
-        String name,
-        String type) {
+        @OutputCustomType.Parameter("allowUpdates") @Nullable Boolean allowUpdates,
+        @OutputCustomType.Parameter("defaultVersion") @Nullable String defaultVersion,
+        @OutputCustomType.Parameter("displayName") @Nullable String displayName,
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("type") String type) {
         this.allowUpdates = allowUpdates;
         this.defaultVersion = defaultVersion;
         this.displayName = displayName;

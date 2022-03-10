@@ -15,8 +15,8 @@ public final class MHSMIPRuleResponse {
      */
     private final String value;
 
-    @OutputCustomType.Constructor({"value"})
-    private MHSMIPRuleResponse(String value) {
+    @OutputCustomType.Constructor
+    private MHSMIPRuleResponse(@OutputCustomType.Parameter("value") String value) {
         this.value = value;
     }
 

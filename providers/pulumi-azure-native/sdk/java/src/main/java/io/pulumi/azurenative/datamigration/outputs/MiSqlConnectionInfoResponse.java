@@ -33,12 +33,12 @@ public final class MiSqlConnectionInfoResponse {
      */
     private final @Nullable String userName;
 
-    @OutputCustomType.Constructor({"managedInstanceResourceId","password","type","userName"})
+    @OutputCustomType.Constructor
     private MiSqlConnectionInfoResponse(
-        String managedInstanceResourceId,
-        @Nullable String password,
-        String type,
-        @Nullable String userName) {
+        @OutputCustomType.Parameter("managedInstanceResourceId") String managedInstanceResourceId,
+        @OutputCustomType.Parameter("password") @Nullable String password,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("userName") @Nullable String userName) {
         this.managedInstanceResourceId = managedInstanceResourceId;
         this.password = password;
         this.type = type;

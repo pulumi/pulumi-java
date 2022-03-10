@@ -44,14 +44,14 @@ public final class GetManagementLockAtSubscriptionLevelResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"id","level","name","notes","owners","type"})
+    @OutputCustomType.Constructor
     private GetManagementLockAtSubscriptionLevelResult(
-        String id,
-        String level,
-        String name,
-        @Nullable String notes,
-        @Nullable List<ManagementLockOwnerResponse> owners,
-        String type) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("level") String level,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("notes") @Nullable String notes,
+        @OutputCustomType.Parameter("owners") @Nullable List<ManagementLockOwnerResponse> owners,
+        @OutputCustomType.Parameter("type") String type) {
         this.id = id;
         this.level = level;
         this.name = name;

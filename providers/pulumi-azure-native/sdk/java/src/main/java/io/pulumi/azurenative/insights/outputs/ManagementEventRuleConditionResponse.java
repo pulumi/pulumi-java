@@ -32,11 +32,11 @@ public final class ManagementEventRuleConditionResponse {
      */
     private final String odataType;
 
-    @OutputCustomType.Constructor({"aggregation","dataSource","odataType"})
+    @OutputCustomType.Constructor
     private ManagementEventRuleConditionResponse(
-        @Nullable ManagementEventAggregationConditionResponse aggregation,
-        @Nullable Either<RuleManagementEventDataSourceResponse,RuleMetricDataSourceResponse> dataSource,
-        String odataType) {
+        @OutputCustomType.Parameter("aggregation") @Nullable ManagementEventAggregationConditionResponse aggregation,
+        @OutputCustomType.Parameter("dataSource") @Nullable Either<RuleManagementEventDataSourceResponse,RuleMetricDataSourceResponse> dataSource,
+        @OutputCustomType.Parameter("odataType") String odataType) {
         this.aggregation = aggregation;
         this.dataSource = dataSource;
         this.odataType = odataType;

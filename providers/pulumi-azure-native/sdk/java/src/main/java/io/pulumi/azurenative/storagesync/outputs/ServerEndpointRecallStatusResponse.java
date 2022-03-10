@@ -28,11 +28,11 @@ public final class ServerEndpointRecallStatusResponse {
      */
     private final Double totalRecallErrorsCount;
 
-    @OutputCustomType.Constructor({"lastUpdatedTimestamp","recallErrors","totalRecallErrorsCount"})
+    @OutputCustomType.Constructor
     private ServerEndpointRecallStatusResponse(
-        String lastUpdatedTimestamp,
-        List<ServerEndpointRecallErrorResponse> recallErrors,
-        Double totalRecallErrorsCount) {
+        @OutputCustomType.Parameter("lastUpdatedTimestamp") String lastUpdatedTimestamp,
+        @OutputCustomType.Parameter("recallErrors") List<ServerEndpointRecallErrorResponse> recallErrors,
+        @OutputCustomType.Parameter("totalRecallErrorsCount") Double totalRecallErrorsCount) {
         this.lastUpdatedTimestamp = lastUpdatedTimestamp;
         this.recallErrors = recallErrors;
         this.totalRecallErrorsCount = totalRecallErrorsCount;

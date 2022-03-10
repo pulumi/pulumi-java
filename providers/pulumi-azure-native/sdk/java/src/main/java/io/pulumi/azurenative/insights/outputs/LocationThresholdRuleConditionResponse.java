@@ -37,12 +37,12 @@ public final class LocationThresholdRuleConditionResponse {
      */
     private final @Nullable String windowSize;
 
-    @OutputCustomType.Constructor({"dataSource","failedLocationCount","odataType","windowSize"})
+    @OutputCustomType.Constructor
     private LocationThresholdRuleConditionResponse(
-        @Nullable Either<RuleManagementEventDataSourceResponse,RuleMetricDataSourceResponse> dataSource,
-        Integer failedLocationCount,
-        String odataType,
-        @Nullable String windowSize) {
+        @OutputCustomType.Parameter("dataSource") @Nullable Either<RuleManagementEventDataSourceResponse,RuleMetricDataSourceResponse> dataSource,
+        @OutputCustomType.Parameter("failedLocationCount") Integer failedLocationCount,
+        @OutputCustomType.Parameter("odataType") String odataType,
+        @OutputCustomType.Parameter("windowSize") @Nullable String windowSize) {
         this.dataSource = dataSource;
         this.failedLocationCount = failedLocationCount;
         this.odataType = odataType;

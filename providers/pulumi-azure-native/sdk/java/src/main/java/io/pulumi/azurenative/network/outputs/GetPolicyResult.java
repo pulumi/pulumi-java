@@ -92,23 +92,23 @@ public final class GetPolicyResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"customRules","etag","frontendEndpointLinks","id","location","managedRules","name","policySettings","provisioningState","resourceState","routingRuleLinks","securityPolicyLinks","sku","tags","type"})
+    @OutputCustomType.Constructor
     private GetPolicyResult(
-        @Nullable CustomRuleListResponse customRules,
-        @Nullable String etag,
-        List<FrontendEndpointLinkResponse> frontendEndpointLinks,
-        String id,
-        @Nullable String location,
-        @Nullable ManagedRuleSetListResponse managedRules,
-        String name,
-        @Nullable FrontDoorPolicySettingsResponse policySettings,
-        String provisioningState,
-        String resourceState,
-        List<RoutingRuleLinkResponse> routingRuleLinks,
-        List<SecurityPolicyLinkResponse> securityPolicyLinks,
-        @Nullable SkuResponse sku,
-        @Nullable Map<String,String> tags,
-        String type) {
+        @OutputCustomType.Parameter("customRules") @Nullable CustomRuleListResponse customRules,
+        @OutputCustomType.Parameter("etag") @Nullable String etag,
+        @OutputCustomType.Parameter("frontendEndpointLinks") List<FrontendEndpointLinkResponse> frontendEndpointLinks,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("managedRules") @Nullable ManagedRuleSetListResponse managedRules,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("policySettings") @Nullable FrontDoorPolicySettingsResponse policySettings,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("resourceState") String resourceState,
+        @OutputCustomType.Parameter("routingRuleLinks") List<RoutingRuleLinkResponse> routingRuleLinks,
+        @OutputCustomType.Parameter("securityPolicyLinks") List<SecurityPolicyLinkResponse> securityPolicyLinks,
+        @OutputCustomType.Parameter("sku") @Nullable SkuResponse sku,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type) {
         this.customRules = customRules;
         this.etag = etag;
         this.frontendEndpointLinks = frontendEndpointLinks;

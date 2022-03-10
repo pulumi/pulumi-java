@@ -22,10 +22,10 @@ public final class ClientGroupInfoResponse {
      */
     private final @Nullable String groupName;
 
-    @OutputCustomType.Constructor({"groupId","groupName"})
+    @OutputCustomType.Constructor
     private ClientGroupInfoResponse(
-        @Nullable String groupId,
-        @Nullable String groupName) {
+        @OutputCustomType.Parameter("groupId") @Nullable String groupId,
+        @OutputCustomType.Parameter("groupName") @Nullable String groupName) {
         this.groupId = groupId;
         this.groupName = groupName;
     }

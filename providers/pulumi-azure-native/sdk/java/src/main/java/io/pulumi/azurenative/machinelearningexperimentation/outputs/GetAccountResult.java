@@ -89,23 +89,23 @@ public final class GetAccountResult {
      */
     private final String vsoAccountId;
 
-    @OutputCustomType.Constructor({"accountId","creationDate","description","discoveryUri","friendlyName","id","keyVaultId","location","name","provisioningState","seats","storageAccount","tags","type","vsoAccountId"})
+    @OutputCustomType.Constructor
     private GetAccountResult(
-        String accountId,
-        String creationDate,
-        @Nullable String description,
-        String discoveryUri,
-        @Nullable String friendlyName,
-        String id,
-        String keyVaultId,
-        String location,
-        String name,
-        String provisioningState,
-        @Nullable String seats,
-        StorageAccountPropertiesResponse storageAccount,
-        @Nullable Map<String,String> tags,
-        String type,
-        String vsoAccountId) {
+        @OutputCustomType.Parameter("accountId") String accountId,
+        @OutputCustomType.Parameter("creationDate") String creationDate,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("discoveryUri") String discoveryUri,
+        @OutputCustomType.Parameter("friendlyName") @Nullable String friendlyName,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("keyVaultId") String keyVaultId,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("seats") @Nullable String seats,
+        @OutputCustomType.Parameter("storageAccount") StorageAccountPropertiesResponse storageAccount,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("vsoAccountId") String vsoAccountId) {
         this.accountId = accountId;
         this.creationDate = creationDate;
         this.description = description;

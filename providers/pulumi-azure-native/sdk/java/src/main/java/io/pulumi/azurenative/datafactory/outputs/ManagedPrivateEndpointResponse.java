@@ -45,14 +45,14 @@ public final class ManagedPrivateEndpointResponse {
      */
     private final String provisioningState;
 
-    @OutputCustomType.Constructor({"connectionState","fqdns","groupId","isReserved","privateLinkResourceId","provisioningState"})
+    @OutputCustomType.Constructor
     private ManagedPrivateEndpointResponse(
-        @Nullable ConnectionStatePropertiesResponse connectionState,
-        @Nullable List<String> fqdns,
-        @Nullable String groupId,
-        Boolean isReserved,
-        @Nullable String privateLinkResourceId,
-        String provisioningState) {
+        @OutputCustomType.Parameter("connectionState") @Nullable ConnectionStatePropertiesResponse connectionState,
+        @OutputCustomType.Parameter("fqdns") @Nullable List<String> fqdns,
+        @OutputCustomType.Parameter("groupId") @Nullable String groupId,
+        @OutputCustomType.Parameter("isReserved") Boolean isReserved,
+        @OutputCustomType.Parameter("privateLinkResourceId") @Nullable String privateLinkResourceId,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState) {
         this.connectionState = connectionState;
         this.fqdns = fqdns;
         this.groupId = groupId;

@@ -65,18 +65,18 @@ public final class CosmosDbMongoDbApiSourceResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"additionalColumns","batchSize","cursorMethods","disableMetricsCollection","filter","maxConcurrentConnections","queryTimeout","sourceRetryCount","sourceRetryWait","type"})
+    @OutputCustomType.Constructor
     private CosmosDbMongoDbApiSourceResponse(
-        @Nullable Object additionalColumns,
-        @Nullable Object batchSize,
-        @Nullable MongoDbCursorMethodsPropertiesResponse cursorMethods,
-        @Nullable Object disableMetricsCollection,
-        @Nullable Object filter,
-        @Nullable Object maxConcurrentConnections,
-        @Nullable Object queryTimeout,
-        @Nullable Object sourceRetryCount,
-        @Nullable Object sourceRetryWait,
-        String type) {
+        @OutputCustomType.Parameter("additionalColumns") @Nullable Object additionalColumns,
+        @OutputCustomType.Parameter("batchSize") @Nullable Object batchSize,
+        @OutputCustomType.Parameter("cursorMethods") @Nullable MongoDbCursorMethodsPropertiesResponse cursorMethods,
+        @OutputCustomType.Parameter("disableMetricsCollection") @Nullable Object disableMetricsCollection,
+        @OutputCustomType.Parameter("filter") @Nullable Object filter,
+        @OutputCustomType.Parameter("maxConcurrentConnections") @Nullable Object maxConcurrentConnections,
+        @OutputCustomType.Parameter("queryTimeout") @Nullable Object queryTimeout,
+        @OutputCustomType.Parameter("sourceRetryCount") @Nullable Object sourceRetryCount,
+        @OutputCustomType.Parameter("sourceRetryWait") @Nullable Object sourceRetryWait,
+        @OutputCustomType.Parameter("type") String type) {
         this.additionalColumns = additionalColumns;
         this.batchSize = batchSize;
         this.cursorMethods = cursorMethods;

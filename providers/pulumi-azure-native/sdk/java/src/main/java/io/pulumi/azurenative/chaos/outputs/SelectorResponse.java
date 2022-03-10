@@ -27,11 +27,11 @@ public final class SelectorResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"id","targets","type"})
+    @OutputCustomType.Constructor
     private SelectorResponse(
-        String id,
-        List<TargetReferenceResponse> targets,
-        String type) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("targets") List<TargetReferenceResponse> targets,
+        @OutputCustomType.Parameter("type") String type) {
         this.id = id;
         this.targets = targets;
         this.type = type;

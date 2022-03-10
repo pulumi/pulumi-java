@@ -31,12 +31,12 @@ public final class GetRegistrationAssignmentResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"id","name","properties","type"})
+    @OutputCustomType.Constructor
     private GetRegistrationAssignmentResult(
-        String id,
-        String name,
-        RegistrationAssignmentPropertiesResponse properties,
-        String type) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("properties") RegistrationAssignmentPropertiesResponse properties,
+        @OutputCustomType.Parameter("type") String type) {
         this.id = id;
         this.name = name;
         this.properties = properties;

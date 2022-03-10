@@ -76,19 +76,19 @@ public final class AmazonRedshiftLinkedServiceResponse {
      */
     private final @Nullable Object username;
 
-    @OutputCustomType.Constructor({"annotations","connectVia","database","description","encryptedCredential","parameters","password","port","server","type","username"})
+    @OutputCustomType.Constructor
     private AmazonRedshiftLinkedServiceResponse(
-        @Nullable List<Object> annotations,
-        @Nullable IntegrationRuntimeReferenceResponse connectVia,
-        Object database,
-        @Nullable String description,
-        @Nullable Object encryptedCredential,
-        @Nullable Map<String,ParameterSpecificationResponse> parameters,
-        @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password,
-        @Nullable Object port,
-        Object server,
-        String type,
-        @Nullable Object username) {
+        @OutputCustomType.Parameter("annotations") @Nullable List<Object> annotations,
+        @OutputCustomType.Parameter("connectVia") @Nullable IntegrationRuntimeReferenceResponse connectVia,
+        @OutputCustomType.Parameter("database") Object database,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("encryptedCredential") @Nullable Object encryptedCredential,
+        @OutputCustomType.Parameter("parameters") @Nullable Map<String,ParameterSpecificationResponse> parameters,
+        @OutputCustomType.Parameter("password") @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password,
+        @OutputCustomType.Parameter("port") @Nullable Object port,
+        @OutputCustomType.Parameter("server") Object server,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("username") @Nullable Object username) {
         this.annotations = annotations;
         this.connectVia = connectVia;
         this.database = database;

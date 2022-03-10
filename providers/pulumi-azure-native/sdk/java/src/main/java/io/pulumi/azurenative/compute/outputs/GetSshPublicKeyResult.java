@@ -43,14 +43,14 @@ public final class GetSshPublicKeyResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"id","location","name","publicKey","tags","type"})
+    @OutputCustomType.Constructor
     private GetSshPublicKeyResult(
-        String id,
-        String location,
-        String name,
-        @Nullable String publicKey,
-        @Nullable Map<String,String> tags,
-        String type) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("publicKey") @Nullable String publicKey,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type) {
         this.id = id;
         this.location = location;
         this.name = name;

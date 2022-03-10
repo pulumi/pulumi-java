@@ -92,23 +92,23 @@ public final class GetHanaInstanceResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"hanaInstanceId","hardwareProfile","hwRevision","id","location","name","networkProfile","osProfile","partnerNodeId","powerState","provisioningState","proximityPlacementGroup","storageProfile","tags","type"})
+    @OutputCustomType.Constructor
     private GetHanaInstanceResult(
-        String hanaInstanceId,
-        @Nullable HardwareProfileResponse hardwareProfile,
-        String hwRevision,
-        String id,
-        @Nullable String location,
-        String name,
-        @Nullable NetworkProfileResponse networkProfile,
-        @Nullable OSProfileResponse osProfile,
-        @Nullable String partnerNodeId,
-        String powerState,
-        String provisioningState,
-        String proximityPlacementGroup,
-        @Nullable StorageProfileResponse storageProfile,
-        @Nullable Map<String,String> tags,
-        String type) {
+        @OutputCustomType.Parameter("hanaInstanceId") String hanaInstanceId,
+        @OutputCustomType.Parameter("hardwareProfile") @Nullable HardwareProfileResponse hardwareProfile,
+        @OutputCustomType.Parameter("hwRevision") String hwRevision,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("networkProfile") @Nullable NetworkProfileResponse networkProfile,
+        @OutputCustomType.Parameter("osProfile") @Nullable OSProfileResponse osProfile,
+        @OutputCustomType.Parameter("partnerNodeId") @Nullable String partnerNodeId,
+        @OutputCustomType.Parameter("powerState") String powerState,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("proximityPlacementGroup") String proximityPlacementGroup,
+        @OutputCustomType.Parameter("storageProfile") @Nullable StorageProfileResponse storageProfile,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type) {
         this.hanaInstanceId = hanaInstanceId;
         this.hardwareProfile = hardwareProfile;
         this.hwRevision = hwRevision;

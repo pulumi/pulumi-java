@@ -85,22 +85,22 @@ public final class GetEventHubDataConnectionResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"compression","consumerGroup","dataFormat","eventHubResourceId","eventSystemProperties","id","kind","location","mappingRuleName","name","provisioningState","systemData","tableName","type"})
+    @OutputCustomType.Constructor
     private GetEventHubDataConnectionResult(
-        @Nullable String compression,
-        String consumerGroup,
-        @Nullable String dataFormat,
-        String eventHubResourceId,
-        @Nullable List<String> eventSystemProperties,
-        String id,
-        String kind,
-        @Nullable String location,
-        @Nullable String mappingRuleName,
-        String name,
-        String provisioningState,
-        SystemDataResponse systemData,
-        @Nullable String tableName,
-        String type) {
+        @OutputCustomType.Parameter("compression") @Nullable String compression,
+        @OutputCustomType.Parameter("consumerGroup") String consumerGroup,
+        @OutputCustomType.Parameter("dataFormat") @Nullable String dataFormat,
+        @OutputCustomType.Parameter("eventHubResourceId") String eventHubResourceId,
+        @OutputCustomType.Parameter("eventSystemProperties") @Nullable List<String> eventSystemProperties,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("mappingRuleName") @Nullable String mappingRuleName,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("tableName") @Nullable String tableName,
+        @OutputCustomType.Parameter("type") String type) {
         this.compression = compression;
         this.consumerGroup = consumerGroup;
         this.dataFormat = dataFormat;

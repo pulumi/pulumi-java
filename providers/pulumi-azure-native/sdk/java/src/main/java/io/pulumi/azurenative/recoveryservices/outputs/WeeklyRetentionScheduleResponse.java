@@ -29,11 +29,11 @@ public final class WeeklyRetentionScheduleResponse {
      */
     private final @Nullable List<String> retentionTimes;
 
-    @OutputCustomType.Constructor({"daysOfTheWeek","retentionDuration","retentionTimes"})
+    @OutputCustomType.Constructor
     private WeeklyRetentionScheduleResponse(
-        @Nullable List<String> daysOfTheWeek,
-        @Nullable RetentionDurationResponse retentionDuration,
-        @Nullable List<String> retentionTimes) {
+        @OutputCustomType.Parameter("daysOfTheWeek") @Nullable List<String> daysOfTheWeek,
+        @OutputCustomType.Parameter("retentionDuration") @Nullable RetentionDurationResponse retentionDuration,
+        @OutputCustomType.Parameter("retentionTimes") @Nullable List<String> retentionTimes) {
         this.daysOfTheWeek = daysOfTheWeek;
         this.retentionDuration = retentionDuration;
         this.retentionTimes = retentionTimes;

@@ -61,17 +61,17 @@ public final class GetExportPipelineResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"id","identity","location","name","options","provisioningState","systemData","target","type"})
+    @OutputCustomType.Constructor
     private GetExportPipelineResult(
-        String id,
-        @Nullable IdentityPropertiesResponse identity,
-        @Nullable String location,
-        String name,
-        @Nullable List<String> options,
-        String provisioningState,
-        SystemDataResponse systemData,
-        ExportPipelineTargetPropertiesResponse target,
-        String type) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("identity") @Nullable IdentityPropertiesResponse identity,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("options") @Nullable List<String> options,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("target") ExportPipelineTargetPropertiesResponse target,
+        @OutputCustomType.Parameter("type") String type) {
         this.id = id;
         this.identity = identity;
         this.location = location;

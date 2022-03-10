@@ -29,11 +29,11 @@ public final class LogSettingsResponse {
      */
     private final LogLocationSettingsResponse logLocationSettings;
 
-    @OutputCustomType.Constructor({"copyActivityLogSettings","enableCopyActivityLog","logLocationSettings"})
+    @OutputCustomType.Constructor
     private LogSettingsResponse(
-        @Nullable CopyActivityLogSettingsResponse copyActivityLogSettings,
-        @Nullable Object enableCopyActivityLog,
-        LogLocationSettingsResponse logLocationSettings) {
+        @OutputCustomType.Parameter("copyActivityLogSettings") @Nullable CopyActivityLogSettingsResponse copyActivityLogSettings,
+        @OutputCustomType.Parameter("enableCopyActivityLog") @Nullable Object enableCopyActivityLog,
+        @OutputCustomType.Parameter("logLocationSettings") LogLocationSettingsResponse logLocationSettings) {
         this.copyActivityLogSettings = copyActivityLogSettings;
         this.enableCopyActivityLog = enableCopyActivityLog;
         this.logLocationSettings = logLocationSettings;

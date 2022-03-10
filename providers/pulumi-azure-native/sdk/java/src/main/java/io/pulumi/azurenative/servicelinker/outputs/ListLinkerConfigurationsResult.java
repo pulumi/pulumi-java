@@ -17,8 +17,8 @@ public final class ListLinkerConfigurationsResult {
      */
     private final @Nullable List<SourceConfigurationResponse> configurations;
 
-    @OutputCustomType.Constructor({"configurations"})
-    private ListLinkerConfigurationsResult(@Nullable List<SourceConfigurationResponse> configurations) {
+    @OutputCustomType.Constructor
+    private ListLinkerConfigurationsResult(@OutputCustomType.Parameter("configurations") @Nullable List<SourceConfigurationResponse> configurations) {
         this.configurations = configurations;
     }
 

@@ -30,12 +30,12 @@ public final class VmStateDetailsResponse {
      */
     private final String sshAuthority;
 
-    @OutputCustomType.Constructor({"lastKnownPowerState","powerState","rdpAuthority","sshAuthority"})
+    @OutputCustomType.Constructor
     private VmStateDetailsResponse(
-        String lastKnownPowerState,
-        String powerState,
-        String rdpAuthority,
-        String sshAuthority) {
+        @OutputCustomType.Parameter("lastKnownPowerState") String lastKnownPowerState,
+        @OutputCustomType.Parameter("powerState") String powerState,
+        @OutputCustomType.Parameter("rdpAuthority") String rdpAuthority,
+        @OutputCustomType.Parameter("sshAuthority") String sshAuthority) {
         this.lastKnownPowerState = lastKnownPowerState;
         this.powerState = powerState;
         this.rdpAuthority = rdpAuthority;

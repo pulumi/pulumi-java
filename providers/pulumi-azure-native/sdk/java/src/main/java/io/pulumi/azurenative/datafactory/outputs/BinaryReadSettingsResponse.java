@@ -27,10 +27,10 @@ public final class BinaryReadSettingsResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"compressionProperties","type"})
+    @OutputCustomType.Constructor
     private BinaryReadSettingsResponse(
-        @Nullable Object compressionProperties,
-        String type) {
+        @OutputCustomType.Parameter("compressionProperties") @Nullable Object compressionProperties,
+        @OutputCustomType.Parameter("type") String type) {
         this.compressionProperties = compressionProperties;
         this.type = type;
     }

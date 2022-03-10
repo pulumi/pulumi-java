@@ -21,10 +21,10 @@ public final class UserDefinedResourcesPropertiesResponse {
      */
     private final List<String> querySubscriptions;
 
-    @OutputCustomType.Constructor({"query","querySubscriptions"})
+    @OutputCustomType.Constructor
     private UserDefinedResourcesPropertiesResponse(
-        String query,
-        List<String> querySubscriptions) {
+        @OutputCustomType.Parameter("query") String query,
+        @OutputCustomType.Parameter("querySubscriptions") List<String> querySubscriptions) {
         this.query = query;
         this.querySubscriptions = querySubscriptions;
     }

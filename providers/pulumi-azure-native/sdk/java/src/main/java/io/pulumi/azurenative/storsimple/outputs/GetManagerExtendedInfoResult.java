@@ -67,19 +67,19 @@ public final class GetManagerExtendedInfoResult {
      */
     private final @Nullable String version;
 
-    @OutputCustomType.Constructor({"algorithm","encryptionKey","encryptionKeyThumbprint","etag","id","integrityKey","kind","name","portalCertificateThumbprint","type","version"})
+    @OutputCustomType.Constructor
     private GetManagerExtendedInfoResult(
-        String algorithm,
-        @Nullable String encryptionKey,
-        @Nullable String encryptionKeyThumbprint,
-        @Nullable String etag,
-        String id,
-        String integrityKey,
-        @Nullable String kind,
-        String name,
-        @Nullable String portalCertificateThumbprint,
-        String type,
-        @Nullable String version) {
+        @OutputCustomType.Parameter("algorithm") String algorithm,
+        @OutputCustomType.Parameter("encryptionKey") @Nullable String encryptionKey,
+        @OutputCustomType.Parameter("encryptionKeyThumbprint") @Nullable String encryptionKeyThumbprint,
+        @OutputCustomType.Parameter("etag") @Nullable String etag,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("integrityKey") String integrityKey,
+        @OutputCustomType.Parameter("kind") @Nullable String kind,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("portalCertificateThumbprint") @Nullable String portalCertificateThumbprint,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("version") @Nullable String version) {
         this.algorithm = algorithm;
         this.encryptionKey = encryptionKey;
         this.encryptionKeyThumbprint = encryptionKeyThumbprint;

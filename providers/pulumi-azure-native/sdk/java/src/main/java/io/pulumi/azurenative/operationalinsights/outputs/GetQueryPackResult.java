@@ -57,17 +57,17 @@ public final class GetQueryPackResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"id","location","name","provisioningState","queryPackId","tags","timeCreated","timeModified","type"})
+    @OutputCustomType.Constructor
     private GetQueryPackResult(
-        String id,
-        String location,
-        String name,
-        String provisioningState,
-        String queryPackId,
-        @Nullable Map<String,String> tags,
-        String timeCreated,
-        String timeModified,
-        String type) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("queryPackId") String queryPackId,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("timeCreated") String timeCreated,
+        @OutputCustomType.Parameter("timeModified") String timeModified,
+        @OutputCustomType.Parameter("type") String type) {
         this.id = id;
         this.location = location;
         this.name = name;

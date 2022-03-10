@@ -71,19 +71,19 @@ public final class GetServiceEndpointPolicyResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"etag","id","kind","location","name","provisioningState","resourceGuid","serviceEndpointPolicyDefinitions","subnets","tags","type"})
+    @OutputCustomType.Constructor
     private GetServiceEndpointPolicyResult(
-        String etag,
-        @Nullable String id,
-        String kind,
-        @Nullable String location,
-        String name,
-        String provisioningState,
-        String resourceGuid,
-        @Nullable List<ServiceEndpointPolicyDefinitionResponse> serviceEndpointPolicyDefinitions,
-        List<SubnetResponse> subnets,
-        @Nullable Map<String,String> tags,
-        String type) {
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("resourceGuid") String resourceGuid,
+        @OutputCustomType.Parameter("serviceEndpointPolicyDefinitions") @Nullable List<ServiceEndpointPolicyDefinitionResponse> serviceEndpointPolicyDefinitions,
+        @OutputCustomType.Parameter("subnets") List<SubnetResponse> subnets,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type) {
         this.etag = etag;
         this.id = id;
         this.kind = kind;

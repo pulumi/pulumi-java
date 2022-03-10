@@ -17,8 +17,8 @@ public final class JobDeliveryInfoResponse {
      */
     private final @Nullable String scheduledDateTime;
 
-    @OutputCustomType.Constructor({"scheduledDateTime"})
-    private JobDeliveryInfoResponse(@Nullable String scheduledDateTime) {
+    @OutputCustomType.Constructor
+    private JobDeliveryInfoResponse(@OutputCustomType.Parameter("scheduledDateTime") @Nullable String scheduledDateTime) {
         this.scheduledDateTime = scheduledDateTime;
     }
 

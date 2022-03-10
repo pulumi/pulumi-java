@@ -63,19 +63,19 @@ public final class GetEndpointResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"createdAt","createdBy","createdByType","id","lastModifiedAt","lastModifiedBy","lastModifiedByType","name","provisioningState","resourceId","type"})
+    @OutputCustomType.Constructor
     private GetEndpointResult(
-        @Nullable String createdAt,
-        @Nullable String createdBy,
-        @Nullable String createdByType,
-        String id,
-        @Nullable String lastModifiedAt,
-        @Nullable String lastModifiedBy,
-        @Nullable String lastModifiedByType,
-        String name,
-        String provisioningState,
-        @Nullable String resourceId,
-        String type) {
+        @OutputCustomType.Parameter("createdAt") @Nullable String createdAt,
+        @OutputCustomType.Parameter("createdBy") @Nullable String createdBy,
+        @OutputCustomType.Parameter("createdByType") @Nullable String createdByType,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("lastModifiedAt") @Nullable String lastModifiedAt,
+        @OutputCustomType.Parameter("lastModifiedBy") @Nullable String lastModifiedBy,
+        @OutputCustomType.Parameter("lastModifiedByType") @Nullable String lastModifiedByType,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("resourceId") @Nullable String resourceId,
+        @OutputCustomType.Parameter("type") String type) {
         this.createdAt = createdAt;
         this.createdBy = createdBy;
         this.createdByType = createdByType;

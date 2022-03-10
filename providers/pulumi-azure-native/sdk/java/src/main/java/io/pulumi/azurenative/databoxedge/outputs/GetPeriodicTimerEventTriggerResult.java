@@ -56,16 +56,16 @@ public final class GetPeriodicTimerEventTriggerResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"customContextTag","id","kind","name","sinkInfo","sourceInfo","systemData","type"})
+    @OutputCustomType.Constructor
     private GetPeriodicTimerEventTriggerResult(
-        @Nullable String customContextTag,
-        String id,
-        String kind,
-        String name,
-        RoleSinkInfoResponse sinkInfo,
-        PeriodicTimerSourceInfoResponse sourceInfo,
-        SystemDataResponse systemData,
-        String type) {
+        @OutputCustomType.Parameter("customContextTag") @Nullable String customContextTag,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("sinkInfo") RoleSinkInfoResponse sinkInfo,
+        @OutputCustomType.Parameter("sourceInfo") PeriodicTimerSourceInfoResponse sourceInfo,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("type") String type) {
         this.customContextTag = customContextTag;
         this.id = id;
         this.kind = kind;

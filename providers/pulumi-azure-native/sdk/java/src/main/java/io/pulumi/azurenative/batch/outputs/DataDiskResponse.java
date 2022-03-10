@@ -38,12 +38,12 @@ public final class DataDiskResponse {
      */
     private final @Nullable String storageAccountType;
 
-    @OutputCustomType.Constructor({"caching","diskSizeGB","lun","storageAccountType"})
+    @OutputCustomType.Constructor
     private DataDiskResponse(
-        @Nullable String caching,
-        Integer diskSizeGB,
-        Integer lun,
-        @Nullable String storageAccountType) {
+        @OutputCustomType.Parameter("caching") @Nullable String caching,
+        @OutputCustomType.Parameter("diskSizeGB") Integer diskSizeGB,
+        @OutputCustomType.Parameter("lun") Integer lun,
+        @OutputCustomType.Parameter("storageAccountType") @Nullable String storageAccountType) {
         this.caching = caching;
         this.diskSizeGB = diskSizeGB;
         this.lun = lun;

@@ -35,12 +35,12 @@ public final class DefenderForServersAwsOfferingResponse {
      */
     private final String offeringType;
 
-    @OutputCustomType.Constructor({"arcAutoProvisioning","defenderForServers","description","offeringType"})
+    @OutputCustomType.Constructor
     private DefenderForServersAwsOfferingResponse(
-        @Nullable DefenderForServersAwsOfferingResponseArcAutoProvisioning arcAutoProvisioning,
-        @Nullable DefenderForServersAwsOfferingResponseDefenderForServers defenderForServers,
-        String description,
-        String offeringType) {
+        @OutputCustomType.Parameter("arcAutoProvisioning") @Nullable DefenderForServersAwsOfferingResponseArcAutoProvisioning arcAutoProvisioning,
+        @OutputCustomType.Parameter("defenderForServers") @Nullable DefenderForServersAwsOfferingResponseDefenderForServers defenderForServers,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("offeringType") String offeringType) {
         this.arcAutoProvisioning = arcAutoProvisioning;
         this.defenderForServers = defenderForServers;
         this.description = description;

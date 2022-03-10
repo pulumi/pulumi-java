@@ -17,8 +17,8 @@ public final class PeeringServiceSkuResponse {
      */
     private final @Nullable String name;
 
-    @OutputCustomType.Constructor({"name"})
-    private PeeringServiceSkuResponse(@Nullable String name) {
+    @OutputCustomType.Constructor
+    private PeeringServiceSkuResponse(@OutputCustomType.Parameter("name") @Nullable String name) {
         this.name = name;
     }
 

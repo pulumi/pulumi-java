@@ -17,8 +17,8 @@ public final class UserObjectReceiverValueResponse {
      */
     private final @Nullable List<String> userObjectIds;
 
-    @OutputCustomType.Constructor({"userObjectIds"})
-    private UserObjectReceiverValueResponse(@Nullable List<String> userObjectIds) {
+    @OutputCustomType.Constructor
+    private UserObjectReceiverValueResponse(@OutputCustomType.Parameter("userObjectIds") @Nullable List<String> userObjectIds) {
         this.userObjectIds = userObjectIds;
     }
 

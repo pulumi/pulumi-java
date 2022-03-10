@@ -46,14 +46,14 @@ public final class DataTransferServiceResourcePropertiesResponse {
      */
     private final String status;
 
-    @OutputCustomType.Constructor({"creationTime","instanceCount","instanceSize","locations","serviceType","status"})
+    @OutputCustomType.Constructor
     private DataTransferServiceResourcePropertiesResponse(
-        String creationTime,
-        @Nullable Integer instanceCount,
-        @Nullable String instanceSize,
-        List<DataTransferRegionalServiceResourceResponse> locations,
-        String serviceType,
-        String status) {
+        @OutputCustomType.Parameter("creationTime") String creationTime,
+        @OutputCustomType.Parameter("instanceCount") @Nullable Integer instanceCount,
+        @OutputCustomType.Parameter("instanceSize") @Nullable String instanceSize,
+        @OutputCustomType.Parameter("locations") List<DataTransferRegionalServiceResourceResponse> locations,
+        @OutputCustomType.Parameter("serviceType") String serviceType,
+        @OutputCustomType.Parameter("status") String status) {
         this.creationTime = creationTime;
         this.instanceCount = instanceCount;
         this.instanceSize = instanceSize;

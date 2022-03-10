@@ -39,13 +39,13 @@ public final class CommitmentPeriodResponse {
      */
     private final @Nullable String tier;
 
-    @OutputCustomType.Constructor({"count","endDate","quota","startDate","tier"})
+    @OutputCustomType.Constructor
     private CommitmentPeriodResponse(
-        @Nullable Integer count,
-        String endDate,
-        CommitmentQuotaResponse quota,
-        String startDate,
-        @Nullable String tier) {
+        @OutputCustomType.Parameter("count") @Nullable Integer count,
+        @OutputCustomType.Parameter("endDate") String endDate,
+        @OutputCustomType.Parameter("quota") CommitmentQuotaResponse quota,
+        @OutputCustomType.Parameter("startDate") String startDate,
+        @OutputCustomType.Parameter("tier") @Nullable String tier) {
         this.count = count;
         this.endDate = endDate;
         this.quota = quota;

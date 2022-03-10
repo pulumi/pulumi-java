@@ -94,23 +94,23 @@ public final class VaultPropertiesResponse {
      */
     private final @Nullable String vaultUri;
 
-    @OutputCustomType.Constructor({"accessPolicies","enablePurgeProtection","enableRbacAuthorization","enableSoftDelete","enabledForDeployment","enabledForDiskEncryption","enabledForTemplateDeployment","hsmPoolResourceId","networkAcls","privateEndpointConnections","provisioningState","sku","softDeleteRetentionInDays","tenantId","vaultUri"})
+    @OutputCustomType.Constructor
     private VaultPropertiesResponse(
-        @Nullable List<AccessPolicyEntryResponse> accessPolicies,
-        @Nullable Boolean enablePurgeProtection,
-        @Nullable Boolean enableRbacAuthorization,
-        @Nullable Boolean enableSoftDelete,
-        @Nullable Boolean enabledForDeployment,
-        @Nullable Boolean enabledForDiskEncryption,
-        @Nullable Boolean enabledForTemplateDeployment,
-        String hsmPoolResourceId,
-        @Nullable NetworkRuleSetResponse networkAcls,
-        List<PrivateEndpointConnectionItemResponse> privateEndpointConnections,
-        @Nullable String provisioningState,
-        SkuResponse sku,
-        @Nullable Integer softDeleteRetentionInDays,
-        String tenantId,
-        @Nullable String vaultUri) {
+        @OutputCustomType.Parameter("accessPolicies") @Nullable List<AccessPolicyEntryResponse> accessPolicies,
+        @OutputCustomType.Parameter("enablePurgeProtection") @Nullable Boolean enablePurgeProtection,
+        @OutputCustomType.Parameter("enableRbacAuthorization") @Nullable Boolean enableRbacAuthorization,
+        @OutputCustomType.Parameter("enableSoftDelete") @Nullable Boolean enableSoftDelete,
+        @OutputCustomType.Parameter("enabledForDeployment") @Nullable Boolean enabledForDeployment,
+        @OutputCustomType.Parameter("enabledForDiskEncryption") @Nullable Boolean enabledForDiskEncryption,
+        @OutputCustomType.Parameter("enabledForTemplateDeployment") @Nullable Boolean enabledForTemplateDeployment,
+        @OutputCustomType.Parameter("hsmPoolResourceId") String hsmPoolResourceId,
+        @OutputCustomType.Parameter("networkAcls") @Nullable NetworkRuleSetResponse networkAcls,
+        @OutputCustomType.Parameter("privateEndpointConnections") List<PrivateEndpointConnectionItemResponse> privateEndpointConnections,
+        @OutputCustomType.Parameter("provisioningState") @Nullable String provisioningState,
+        @OutputCustomType.Parameter("sku") SkuResponse sku,
+        @OutputCustomType.Parameter("softDeleteRetentionInDays") @Nullable Integer softDeleteRetentionInDays,
+        @OutputCustomType.Parameter("tenantId") String tenantId,
+        @OutputCustomType.Parameter("vaultUri") @Nullable String vaultUri) {
         this.accessPolicies = accessPolicies;
         this.enablePurgeProtection = enablePurgeProtection;
         this.enableRbacAuthorization = enableRbacAuthorization;

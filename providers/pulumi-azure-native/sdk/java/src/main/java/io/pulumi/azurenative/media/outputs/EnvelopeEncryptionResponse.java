@@ -36,12 +36,12 @@ public final class EnvelopeEncryptionResponse {
      */
     private final @Nullable EnabledProtocolsResponse enabledProtocols;
 
-    @OutputCustomType.Constructor({"clearTracks","contentKeys","customKeyAcquisitionUrlTemplate","enabledProtocols"})
+    @OutputCustomType.Constructor
     private EnvelopeEncryptionResponse(
-        @Nullable List<TrackSelectionResponse> clearTracks,
-        @Nullable StreamingPolicyContentKeysResponse contentKeys,
-        @Nullable String customKeyAcquisitionUrlTemplate,
-        @Nullable EnabledProtocolsResponse enabledProtocols) {
+        @OutputCustomType.Parameter("clearTracks") @Nullable List<TrackSelectionResponse> clearTracks,
+        @OutputCustomType.Parameter("contentKeys") @Nullable StreamingPolicyContentKeysResponse contentKeys,
+        @OutputCustomType.Parameter("customKeyAcquisitionUrlTemplate") @Nullable String customKeyAcquisitionUrlTemplate,
+        @OutputCustomType.Parameter("enabledProtocols") @Nullable EnabledProtocolsResponse enabledProtocols) {
         this.clearTracks = clearTracks;
         this.contentKeys = contentKeys;
         this.customKeyAcquisitionUrlTemplate = customKeyAcquisitionUrlTemplate;

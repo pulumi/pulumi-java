@@ -122,29 +122,29 @@ public final class GetProfileResult {
      */
     private final @Nullable String typeName;
 
-    @OutputCustomType.Constructor({"apiEntitySetName","attributes","description","displayName","entityType","fields","id","instancesCount","largeImage","lastChangedUtc","localizedAttributes","mediumImage","name","provisioningState","schemaItemTypeLink","smallImage","strongIds","tenantId","timestampFieldName","type","typeName"})
+    @OutputCustomType.Constructor
     private GetProfileResult(
-        @Nullable String apiEntitySetName,
-        @Nullable Map<String,List<String>> attributes,
-        @Nullable Map<String,String> description,
-        @Nullable Map<String,String> displayName,
-        @Nullable String entityType,
-        @Nullable List<PropertyDefinitionResponse> fields,
-        String id,
-        @Nullable Integer instancesCount,
-        @Nullable String largeImage,
-        String lastChangedUtc,
-        @Nullable Map<String,Map<String,String>> localizedAttributes,
-        @Nullable String mediumImage,
-        String name,
-        String provisioningState,
-        @Nullable String schemaItemTypeLink,
-        @Nullable String smallImage,
-        @Nullable List<StrongIdResponse> strongIds,
-        String tenantId,
-        @Nullable String timestampFieldName,
-        String type,
-        @Nullable String typeName) {
+        @OutputCustomType.Parameter("apiEntitySetName") @Nullable String apiEntitySetName,
+        @OutputCustomType.Parameter("attributes") @Nullable Map<String,List<String>> attributes,
+        @OutputCustomType.Parameter("description") @Nullable Map<String,String> description,
+        @OutputCustomType.Parameter("displayName") @Nullable Map<String,String> displayName,
+        @OutputCustomType.Parameter("entityType") @Nullable String entityType,
+        @OutputCustomType.Parameter("fields") @Nullable List<PropertyDefinitionResponse> fields,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("instancesCount") @Nullable Integer instancesCount,
+        @OutputCustomType.Parameter("largeImage") @Nullable String largeImage,
+        @OutputCustomType.Parameter("lastChangedUtc") String lastChangedUtc,
+        @OutputCustomType.Parameter("localizedAttributes") @Nullable Map<String,Map<String,String>> localizedAttributes,
+        @OutputCustomType.Parameter("mediumImage") @Nullable String mediumImage,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("schemaItemTypeLink") @Nullable String schemaItemTypeLink,
+        @OutputCustomType.Parameter("smallImage") @Nullable String smallImage,
+        @OutputCustomType.Parameter("strongIds") @Nullable List<StrongIdResponse> strongIds,
+        @OutputCustomType.Parameter("tenantId") String tenantId,
+        @OutputCustomType.Parameter("timestampFieldName") @Nullable String timestampFieldName,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("typeName") @Nullable String typeName) {
         this.apiEntitySetName = apiEntitySetName;
         this.attributes = attributes;
         this.description = description;

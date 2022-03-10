@@ -108,28 +108,28 @@ public final class GetScalingPlanResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"description","etag","exclusionTag","friendlyName","hostPoolReferences","hostPoolType","id","identity","kind","location","managedBy","name","objectId","plan","ring","schedules","sku","tags","timeZone","type"})
+    @OutputCustomType.Constructor
     private GetScalingPlanResult(
-        @Nullable String description,
-        String etag,
-        @Nullable String exclusionTag,
-        @Nullable String friendlyName,
-        @Nullable List<ScalingHostPoolReferenceResponse> hostPoolReferences,
-        @Nullable String hostPoolType,
-        String id,
-        @Nullable ResourceModelWithAllowedPropertySetResponseIdentity identity,
-        @Nullable String kind,
-        @Nullable String location,
-        @Nullable String managedBy,
-        String name,
-        String objectId,
-        @Nullable ResourceModelWithAllowedPropertySetResponsePlan plan,
-        @Nullable Integer ring,
-        @Nullable List<ScalingScheduleResponse> schedules,
-        @Nullable ResourceModelWithAllowedPropertySetResponseSku sku,
-        @Nullable Map<String,String> tags,
-        @Nullable String timeZone,
-        String type) {
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("exclusionTag") @Nullable String exclusionTag,
+        @OutputCustomType.Parameter("friendlyName") @Nullable String friendlyName,
+        @OutputCustomType.Parameter("hostPoolReferences") @Nullable List<ScalingHostPoolReferenceResponse> hostPoolReferences,
+        @OutputCustomType.Parameter("hostPoolType") @Nullable String hostPoolType,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("identity") @Nullable ResourceModelWithAllowedPropertySetResponseIdentity identity,
+        @OutputCustomType.Parameter("kind") @Nullable String kind,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("managedBy") @Nullable String managedBy,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("objectId") String objectId,
+        @OutputCustomType.Parameter("plan") @Nullable ResourceModelWithAllowedPropertySetResponsePlan plan,
+        @OutputCustomType.Parameter("ring") @Nullable Integer ring,
+        @OutputCustomType.Parameter("schedules") @Nullable List<ScalingScheduleResponse> schedules,
+        @OutputCustomType.Parameter("sku") @Nullable ResourceModelWithAllowedPropertySetResponseSku sku,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("timeZone") @Nullable String timeZone,
+        @OutputCustomType.Parameter("type") String type) {
         this.description = description;
         this.etag = etag;
         this.exclusionTag = exclusionTag;

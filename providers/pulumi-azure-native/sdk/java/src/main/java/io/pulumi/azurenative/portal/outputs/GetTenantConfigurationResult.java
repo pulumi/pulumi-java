@@ -33,12 +33,12 @@ public final class GetTenantConfigurationResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"enforcePrivateMarkdownStorage","id","name","type"})
+    @OutputCustomType.Constructor
     private GetTenantConfigurationResult(
-        @Nullable Boolean enforcePrivateMarkdownStorage,
-        String id,
-        String name,
-        String type) {
+        @OutputCustomType.Parameter("enforcePrivateMarkdownStorage") @Nullable Boolean enforcePrivateMarkdownStorage,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("type") String type) {
         this.enforcePrivateMarkdownStorage = enforcePrivateMarkdownStorage;
         this.id = id;
         this.name = name;

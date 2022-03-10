@@ -23,10 +23,10 @@ public final class SkuResponse {
      */
     private final @Nullable ResourceReferenceResponse plan;
 
-    @OutputCustomType.Constructor({"name","plan"})
+    @OutputCustomType.Constructor
     private SkuResponse(
-        String name,
-        @Nullable ResourceReferenceResponse plan) {
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("plan") @Nullable ResourceReferenceResponse plan) {
         this.name = name;
         this.plan = plan;
     }

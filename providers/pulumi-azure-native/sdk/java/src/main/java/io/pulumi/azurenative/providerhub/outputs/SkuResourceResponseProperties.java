@@ -16,10 +16,10 @@ public final class SkuResourceResponseProperties {
     private final @Nullable String provisioningState;
     private final List<SkuSettingResponse> skuSettings;
 
-    @OutputCustomType.Constructor({"provisioningState","skuSettings"})
+    @OutputCustomType.Constructor
     private SkuResourceResponseProperties(
-        @Nullable String provisioningState,
-        List<SkuSettingResponse> skuSettings) {
+        @OutputCustomType.Parameter("provisioningState") @Nullable String provisioningState,
+        @OutputCustomType.Parameter("skuSettings") List<SkuSettingResponse> skuSettings) {
         this.provisioningState = provisioningState;
         this.skuSettings = skuSettings;
     }

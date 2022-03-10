@@ -22,10 +22,10 @@ public final class AutomationRuleRunPlaybookActionResponseActionConfiguration {
      */
     private final @Nullable String tenantId;
 
-    @OutputCustomType.Constructor({"logicAppResourceId","tenantId"})
+    @OutputCustomType.Constructor
     private AutomationRuleRunPlaybookActionResponseActionConfiguration(
-        @Nullable String logicAppResourceId,
-        @Nullable String tenantId) {
+        @OutputCustomType.Parameter("logicAppResourceId") @Nullable String logicAppResourceId,
+        @OutputCustomType.Parameter("tenantId") @Nullable String tenantId) {
         this.logicAppResourceId = logicAppResourceId;
         this.tenantId = tenantId;
     }

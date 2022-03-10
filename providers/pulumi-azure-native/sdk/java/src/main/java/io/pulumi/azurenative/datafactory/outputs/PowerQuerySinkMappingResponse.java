@@ -24,10 +24,10 @@ public final class PowerQuerySinkMappingResponse {
      */
     private final @Nullable String queryName;
 
-    @OutputCustomType.Constructor({"dataflowSinks","queryName"})
+    @OutputCustomType.Constructor
     private PowerQuerySinkMappingResponse(
-        @Nullable List<PowerQuerySinkResponse> dataflowSinks,
-        @Nullable String queryName) {
+        @OutputCustomType.Parameter("dataflowSinks") @Nullable List<PowerQuerySinkResponse> dataflowSinks,
+        @OutputCustomType.Parameter("queryName") @Nullable String queryName) {
         this.dataflowSinks = dataflowSinks;
         this.queryName = queryName;
     }

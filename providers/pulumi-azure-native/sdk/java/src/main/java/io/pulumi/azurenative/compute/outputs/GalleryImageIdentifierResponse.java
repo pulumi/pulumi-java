@@ -25,11 +25,11 @@ public final class GalleryImageIdentifierResponse {
      */
     private final String sku;
 
-    @OutputCustomType.Constructor({"offer","publisher","sku"})
+    @OutputCustomType.Constructor
     private GalleryImageIdentifierResponse(
-        String offer,
-        String publisher,
-        String sku) {
+        @OutputCustomType.Parameter("offer") String offer,
+        @OutputCustomType.Parameter("publisher") String publisher,
+        @OutputCustomType.Parameter("sku") String sku) {
         this.offer = offer;
         this.publisher = publisher;
         this.sku = sku;

@@ -146,34 +146,34 @@ public final class GetCertificateResult {
      */
     private final Boolean valid;
 
-    @OutputCustomType.Constructor({"canonicalName","cerBlob","domainValidationMethod","expirationDate","friendlyName","hostNames","hostingEnvironmentProfile","id","issueDate","issuer","keyVaultId","keyVaultSecretName","keyVaultSecretStatus","kind","location","name","pfxBlob","publicKeyHash","selfLink","serverFarmId","siteName","subjectName","tags","thumbprint","type","valid"})
+    @OutputCustomType.Constructor
     private GetCertificateResult(
-        @Nullable String canonicalName,
-        String cerBlob,
-        @Nullable String domainValidationMethod,
-        String expirationDate,
-        String friendlyName,
-        @Nullable List<String> hostNames,
-        HostingEnvironmentProfileResponse hostingEnvironmentProfile,
-        String id,
-        String issueDate,
-        String issuer,
-        @Nullable String keyVaultId,
-        @Nullable String keyVaultSecretName,
-        String keyVaultSecretStatus,
-        @Nullable String kind,
-        String location,
-        String name,
-        @Nullable String pfxBlob,
-        String publicKeyHash,
-        String selfLink,
-        @Nullable String serverFarmId,
-        String siteName,
-        String subjectName,
-        @Nullable Map<String,String> tags,
-        String thumbprint,
-        String type,
-        Boolean valid) {
+        @OutputCustomType.Parameter("canonicalName") @Nullable String canonicalName,
+        @OutputCustomType.Parameter("cerBlob") String cerBlob,
+        @OutputCustomType.Parameter("domainValidationMethod") @Nullable String domainValidationMethod,
+        @OutputCustomType.Parameter("expirationDate") String expirationDate,
+        @OutputCustomType.Parameter("friendlyName") String friendlyName,
+        @OutputCustomType.Parameter("hostNames") @Nullable List<String> hostNames,
+        @OutputCustomType.Parameter("hostingEnvironmentProfile") HostingEnvironmentProfileResponse hostingEnvironmentProfile,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("issueDate") String issueDate,
+        @OutputCustomType.Parameter("issuer") String issuer,
+        @OutputCustomType.Parameter("keyVaultId") @Nullable String keyVaultId,
+        @OutputCustomType.Parameter("keyVaultSecretName") @Nullable String keyVaultSecretName,
+        @OutputCustomType.Parameter("keyVaultSecretStatus") String keyVaultSecretStatus,
+        @OutputCustomType.Parameter("kind") @Nullable String kind,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("pfxBlob") @Nullable String pfxBlob,
+        @OutputCustomType.Parameter("publicKeyHash") String publicKeyHash,
+        @OutputCustomType.Parameter("selfLink") String selfLink,
+        @OutputCustomType.Parameter("serverFarmId") @Nullable String serverFarmId,
+        @OutputCustomType.Parameter("siteName") String siteName,
+        @OutputCustomType.Parameter("subjectName") String subjectName,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("thumbprint") String thumbprint,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("valid") Boolean valid) {
         this.canonicalName = canonicalName;
         this.cerBlob = cerBlob;
         this.domainValidationMethod = domainValidationMethod;

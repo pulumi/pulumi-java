@@ -44,14 +44,14 @@ public final class ApplicationInsightsComponentDataVolumeCapResponse {
      */
     private final @Nullable Integer warningThreshold;
 
-    @OutputCustomType.Constructor({"cap","maxHistoryCap","resetTime","stopSendNotificationWhenHitCap","stopSendNotificationWhenHitThreshold","warningThreshold"})
+    @OutputCustomType.Constructor
     private ApplicationInsightsComponentDataVolumeCapResponse(
-        @Nullable Double cap,
-        Double maxHistoryCap,
-        Integer resetTime,
-        @Nullable Boolean stopSendNotificationWhenHitCap,
-        @Nullable Boolean stopSendNotificationWhenHitThreshold,
-        @Nullable Integer warningThreshold) {
+        @OutputCustomType.Parameter("cap") @Nullable Double cap,
+        @OutputCustomType.Parameter("maxHistoryCap") Double maxHistoryCap,
+        @OutputCustomType.Parameter("resetTime") Integer resetTime,
+        @OutputCustomType.Parameter("stopSendNotificationWhenHitCap") @Nullable Boolean stopSendNotificationWhenHitCap,
+        @OutputCustomType.Parameter("stopSendNotificationWhenHitThreshold") @Nullable Boolean stopSendNotificationWhenHitThreshold,
+        @OutputCustomType.Parameter("warningThreshold") @Nullable Integer warningThreshold) {
         this.cap = cap;
         this.maxHistoryCap = maxHistoryCap;
         this.resetTime = resetTime;

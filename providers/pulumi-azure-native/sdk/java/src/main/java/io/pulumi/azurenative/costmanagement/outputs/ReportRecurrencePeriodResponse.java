@@ -22,10 +22,10 @@ public final class ReportRecurrencePeriodResponse {
      */
     private final @Nullable String to;
 
-    @OutputCustomType.Constructor({"from","to"})
+    @OutputCustomType.Constructor
     private ReportRecurrencePeriodResponse(
-        String from,
-        @Nullable String to) {
+        @OutputCustomType.Parameter("from") String from,
+        @OutputCustomType.Parameter("to") @Nullable String to) {
         this.from = from;
         this.to = to;
     }

@@ -101,25 +101,25 @@ public final class SaasResourceResponseProperties {
      */
     private final @Nullable String termId;
 
-    @OutputCustomType.Constructor({"autoRenew","created","isFreeTrial","lastModified","offerId","paymentChannelMetadata","paymentChannelType","publisherId","publisherTestEnvironment","quantity","saasResourceName","saasSessionId","saasSubscriptionId","skuId","status","term","termId"})
+    @OutputCustomType.Constructor
     private SaasResourceResponseProperties(
-        @Nullable Boolean autoRenew,
-        String created,
-        @Nullable Boolean isFreeTrial,
-        @Nullable String lastModified,
-        @Nullable String offerId,
-        @Nullable Map<String,String> paymentChannelMetadata,
-        @Nullable String paymentChannelType,
-        @Nullable String publisherId,
-        @Nullable String publisherTestEnvironment,
-        @Nullable Double quantity,
-        @Nullable String saasResourceName,
-        @Nullable String saasSessionId,
-        @Nullable String saasSubscriptionId,
-        @Nullable String skuId,
-        @Nullable String status,
-        @Nullable SaasPropertiesResponseTerm term,
-        @Nullable String termId) {
+        @OutputCustomType.Parameter("autoRenew") @Nullable Boolean autoRenew,
+        @OutputCustomType.Parameter("created") String created,
+        @OutputCustomType.Parameter("isFreeTrial") @Nullable Boolean isFreeTrial,
+        @OutputCustomType.Parameter("lastModified") @Nullable String lastModified,
+        @OutputCustomType.Parameter("offerId") @Nullable String offerId,
+        @OutputCustomType.Parameter("paymentChannelMetadata") @Nullable Map<String,String> paymentChannelMetadata,
+        @OutputCustomType.Parameter("paymentChannelType") @Nullable String paymentChannelType,
+        @OutputCustomType.Parameter("publisherId") @Nullable String publisherId,
+        @OutputCustomType.Parameter("publisherTestEnvironment") @Nullable String publisherTestEnvironment,
+        @OutputCustomType.Parameter("quantity") @Nullable Double quantity,
+        @OutputCustomType.Parameter("saasResourceName") @Nullable String saasResourceName,
+        @OutputCustomType.Parameter("saasSessionId") @Nullable String saasSessionId,
+        @OutputCustomType.Parameter("saasSubscriptionId") @Nullable String saasSubscriptionId,
+        @OutputCustomType.Parameter("skuId") @Nullable String skuId,
+        @OutputCustomType.Parameter("status") @Nullable String status,
+        @OutputCustomType.Parameter("term") @Nullable SaasPropertiesResponseTerm term,
+        @OutputCustomType.Parameter("termId") @Nullable String termId) {
         this.autoRenew = autoRenew;
         this.created = created;
         this.isFreeTrial = isFreeTrial;

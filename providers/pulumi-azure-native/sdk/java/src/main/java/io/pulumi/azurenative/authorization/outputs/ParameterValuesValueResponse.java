@@ -17,8 +17,8 @@ public final class ParameterValuesValueResponse {
      */
     private final @Nullable Object value;
 
-    @OutputCustomType.Constructor({"value"})
-    private ParameterValuesValueResponse(@Nullable Object value) {
+    @OutputCustomType.Constructor
+    private ParameterValuesValueResponse(@OutputCustomType.Parameter("value") @Nullable Object value) {
         this.value = value;
     }
 

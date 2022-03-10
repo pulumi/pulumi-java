@@ -103,25 +103,25 @@ public final class GetWebTestResult {
      */
     private final String webTestName;
 
-    @OutputCustomType.Constructor({"configuration","description","enabled","frequency","id","kind","location","locations","name","provisioningState","retryEnabled","syntheticMonitorId","tags","timeout","type","webTestKind","webTestName"})
+    @OutputCustomType.Constructor
     private GetWebTestResult(
-        @Nullable WebTestPropertiesResponseConfiguration configuration,
-        @Nullable String description,
-        @Nullable Boolean enabled,
-        @Nullable Integer frequency,
-        String id,
-        @Nullable String kind,
-        String location,
-        List<WebTestGeolocationResponse> locations,
-        String name,
-        String provisioningState,
-        @Nullable Boolean retryEnabled,
-        String syntheticMonitorId,
-        @Nullable Map<String,String> tags,
-        @Nullable Integer timeout,
-        String type,
-        String webTestKind,
-        String webTestName) {
+        @OutputCustomType.Parameter("configuration") @Nullable WebTestPropertiesResponseConfiguration configuration,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("enabled") @Nullable Boolean enabled,
+        @OutputCustomType.Parameter("frequency") @Nullable Integer frequency,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("kind") @Nullable String kind,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("locations") List<WebTestGeolocationResponse> locations,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("retryEnabled") @Nullable Boolean retryEnabled,
+        @OutputCustomType.Parameter("syntheticMonitorId") String syntheticMonitorId,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("timeout") @Nullable Integer timeout,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("webTestKind") String webTestKind,
+        @OutputCustomType.Parameter("webTestName") String webTestName) {
         this.configuration = configuration;
         this.description = description;
         this.enabled = enabled;

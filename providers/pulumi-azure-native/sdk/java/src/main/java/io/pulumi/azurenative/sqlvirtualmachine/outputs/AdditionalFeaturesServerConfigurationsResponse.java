@@ -17,8 +17,8 @@ public final class AdditionalFeaturesServerConfigurationsResponse {
      */
     private final @Nullable Boolean isRServicesEnabled;
 
-    @OutputCustomType.Constructor({"isRServicesEnabled"})
-    private AdditionalFeaturesServerConfigurationsResponse(@Nullable Boolean isRServicesEnabled) {
+    @OutputCustomType.Constructor
+    private AdditionalFeaturesServerConfigurationsResponse(@OutputCustomType.Parameter("isRServicesEnabled") @Nullable Boolean isRServicesEnabled) {
         this.isRServicesEnabled = isRServicesEnabled;
     }
 

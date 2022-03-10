@@ -27,11 +27,11 @@ public final class EncryptionKeyDetailsResponse {
      */
     private final @Nullable String kekVaultResourceID;
 
-    @OutputCustomType.Constructor({"kekType","kekUrl","kekVaultResourceID"})
+    @OutputCustomType.Constructor
     private EncryptionKeyDetailsResponse(
-        @Nullable String kekType,
-        @Nullable String kekUrl,
-        @Nullable String kekVaultResourceID) {
+        @OutputCustomType.Parameter("kekType") @Nullable String kekType,
+        @OutputCustomType.Parameter("kekUrl") @Nullable String kekUrl,
+        @OutputCustomType.Parameter("kekVaultResourceID") @Nullable String kekVaultResourceID) {
         this.kekType = kekType;
         this.kekUrl = kekUrl;
         this.kekVaultResourceID = kekVaultResourceID;

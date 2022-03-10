@@ -43,14 +43,14 @@ public final class GetAccessControlRecordResult {
      */
     private final Integer volumeCount;
 
-    @OutputCustomType.Constructor({"id","initiatorName","kind","name","type","volumeCount"})
+    @OutputCustomType.Constructor
     private GetAccessControlRecordResult(
-        String id,
-        String initiatorName,
-        @Nullable String kind,
-        String name,
-        String type,
-        Integer volumeCount) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("initiatorName") String initiatorName,
+        @OutputCustomType.Parameter("kind") @Nullable String kind,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("volumeCount") Integer volumeCount) {
         this.id = id;
         this.initiatorName = initiatorName;
         this.kind = kind;

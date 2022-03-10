@@ -32,12 +32,12 @@ public final class IdentityPropertiesResponse {
      */
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor({"clientSecretUrl","principalId","tenantId","type"})
+    @OutputCustomType.Constructor
     private IdentityPropertiesResponse(
-        @Nullable String clientSecretUrl,
-        @Nullable String principalId,
-        @Nullable String tenantId,
-        @Nullable String type) {
+        @OutputCustomType.Parameter("clientSecretUrl") @Nullable String clientSecretUrl,
+        @OutputCustomType.Parameter("principalId") @Nullable String principalId,
+        @OutputCustomType.Parameter("tenantId") @Nullable String tenantId,
+        @OutputCustomType.Parameter("type") @Nullable String type) {
         this.clientSecretUrl = clientSecretUrl;
         this.principalId = principalId;
         this.tenantId = tenantId;

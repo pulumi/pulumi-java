@@ -55,16 +55,16 @@ public final class AzureTableOutputDataSourceResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"accountKey","accountName","batchSize","columnsToRemove","partitionKey","rowKey","table","type"})
+    @OutputCustomType.Constructor
     private AzureTableOutputDataSourceResponse(
-        @Nullable String accountKey,
-        @Nullable String accountName,
-        @Nullable Integer batchSize,
-        @Nullable List<String> columnsToRemove,
-        @Nullable String partitionKey,
-        @Nullable String rowKey,
-        @Nullable String table,
-        String type) {
+        @OutputCustomType.Parameter("accountKey") @Nullable String accountKey,
+        @OutputCustomType.Parameter("accountName") @Nullable String accountName,
+        @OutputCustomType.Parameter("batchSize") @Nullable Integer batchSize,
+        @OutputCustomType.Parameter("columnsToRemove") @Nullable List<String> columnsToRemove,
+        @OutputCustomType.Parameter("partitionKey") @Nullable String partitionKey,
+        @OutputCustomType.Parameter("rowKey") @Nullable String rowKey,
+        @OutputCustomType.Parameter("table") @Nullable String table,
+        @OutputCustomType.Parameter("type") String type) {
         this.accountKey = accountKey;
         this.accountName = accountName;
         this.batchSize = batchSize;

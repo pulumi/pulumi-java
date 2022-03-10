@@ -17,8 +17,8 @@ public final class FlavorDataResponse {
      */
     private final @Nullable Map<String,String> data;
 
-    @OutputCustomType.Constructor({"data"})
-    private FlavorDataResponse(@Nullable Map<String,String> data) {
+    @OutputCustomType.Constructor
+    private FlavorDataResponse(@OutputCustomType.Parameter("data") @Nullable Map<String,String> data) {
         this.data = data;
     }
 

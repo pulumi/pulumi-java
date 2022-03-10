@@ -42,13 +42,13 @@ public final class ProductDetailsResponse {
      */
     private final String productDoubleEncryptionStatus;
 
-    @OutputCustomType.Constructor({"count","deviceDetails","displayInfo","hierarchyInformation","productDoubleEncryptionStatus"})
+    @OutputCustomType.Constructor
     private ProductDetailsResponse(
-        Integer count,
-        List<DeviceDetailsResponse> deviceDetails,
-        @Nullable DisplayInfoResponse displayInfo,
-        HierarchyInformationResponse hierarchyInformation,
-        String productDoubleEncryptionStatus) {
+        @OutputCustomType.Parameter("count") Integer count,
+        @OutputCustomType.Parameter("deviceDetails") List<DeviceDetailsResponse> deviceDetails,
+        @OutputCustomType.Parameter("displayInfo") @Nullable DisplayInfoResponse displayInfo,
+        @OutputCustomType.Parameter("hierarchyInformation") HierarchyInformationResponse hierarchyInformation,
+        @OutputCustomType.Parameter("productDoubleEncryptionStatus") String productDoubleEncryptionStatus) {
         this.count = count;
         this.deviceDetails = deviceDetails;
         this.displayInfo = displayInfo;

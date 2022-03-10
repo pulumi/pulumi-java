@@ -34,12 +34,12 @@ public final class VirtualMachineResponseProperties {
      */
     private final @Nullable String virtualMachineSize;
 
-    @OutputCustomType.Constructor({"address","administratorAccount","sshPort","virtualMachineSize"})
+    @OutputCustomType.Constructor
     private VirtualMachineResponseProperties(
-        @Nullable String address,
-        @Nullable VirtualMachineSshCredentialsResponse administratorAccount,
-        @Nullable Integer sshPort,
-        @Nullable String virtualMachineSize) {
+        @OutputCustomType.Parameter("address") @Nullable String address,
+        @OutputCustomType.Parameter("administratorAccount") @Nullable VirtualMachineSshCredentialsResponse administratorAccount,
+        @OutputCustomType.Parameter("sshPort") @Nullable Integer sshPort,
+        @OutputCustomType.Parameter("virtualMachineSize") @Nullable String virtualMachineSize) {
         this.address = address;
         this.administratorAccount = administratorAccount;
         this.sshPort = sshPort;

@@ -48,15 +48,15 @@ public final class GetLongTermRetentionPolicyResult {
      */
     private final @Nullable String yearlyRetention;
 
-    @OutputCustomType.Constructor({"id","monthlyRetention","name","type","weekOfYear","weeklyRetention","yearlyRetention"})
+    @OutputCustomType.Constructor
     private GetLongTermRetentionPolicyResult(
-        String id,
-        @Nullable String monthlyRetention,
-        String name,
-        String type,
-        @Nullable Integer weekOfYear,
-        @Nullable String weeklyRetention,
-        @Nullable String yearlyRetention) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("monthlyRetention") @Nullable String monthlyRetention,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("weekOfYear") @Nullable Integer weekOfYear,
+        @OutputCustomType.Parameter("weeklyRetention") @Nullable String weeklyRetention,
+        @OutputCustomType.Parameter("yearlyRetention") @Nullable String yearlyRetention) {
         this.id = id;
         this.monthlyRetention = monthlyRetention;
         this.name = name;

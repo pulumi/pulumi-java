@@ -42,14 +42,14 @@ public final class OSDetailsResponse {
      */
     private final @Nullable String productType;
 
-    @OutputCustomType.Constructor({"oSMajorVersion","oSMinorVersion","oSVersion","osEdition","osType","productType"})
+    @OutputCustomType.Constructor
     private OSDetailsResponse(
-        @Nullable String oSMajorVersion,
-        @Nullable String oSMinorVersion,
-        @Nullable String oSVersion,
-        @Nullable String osEdition,
-        @Nullable String osType,
-        @Nullable String productType) {
+        @OutputCustomType.Parameter("oSMajorVersion") @Nullable String oSMajorVersion,
+        @OutputCustomType.Parameter("oSMinorVersion") @Nullable String oSMinorVersion,
+        @OutputCustomType.Parameter("oSVersion") @Nullable String oSVersion,
+        @OutputCustomType.Parameter("osEdition") @Nullable String osEdition,
+        @OutputCustomType.Parameter("osType") @Nullable String osType,
+        @OutputCustomType.Parameter("productType") @Nullable String productType) {
         this.oSMajorVersion = oSMajorVersion;
         this.oSMinorVersion = oSMinorVersion;
         this.oSVersion = oSVersion;

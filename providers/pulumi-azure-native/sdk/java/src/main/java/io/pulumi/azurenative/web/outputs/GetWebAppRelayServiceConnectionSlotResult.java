@@ -40,19 +40,19 @@ public final class GetWebAppRelayServiceConnectionSlotResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"biztalkUri","entityConnectionString","entityName","hostname","id","kind","name","port","resourceConnectionString","resourceType","type"})
+    @OutputCustomType.Constructor
     private GetWebAppRelayServiceConnectionSlotResult(
-        @Nullable String biztalkUri,
-        @Nullable String entityConnectionString,
-        @Nullable String entityName,
-        @Nullable String hostname,
-        String id,
-        @Nullable String kind,
-        String name,
-        @Nullable Integer port,
-        @Nullable String resourceConnectionString,
-        @Nullable String resourceType,
-        String type) {
+        @OutputCustomType.Parameter("biztalkUri") @Nullable String biztalkUri,
+        @OutputCustomType.Parameter("entityConnectionString") @Nullable String entityConnectionString,
+        @OutputCustomType.Parameter("entityName") @Nullable String entityName,
+        @OutputCustomType.Parameter("hostname") @Nullable String hostname,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("kind") @Nullable String kind,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("port") @Nullable Integer port,
+        @OutputCustomType.Parameter("resourceConnectionString") @Nullable String resourceConnectionString,
+        @OutputCustomType.Parameter("resourceType") @Nullable String resourceType,
+        @OutputCustomType.Parameter("type") String type) {
         this.biztalkUri = biztalkUri;
         this.entityConnectionString = entityConnectionString;
         this.entityName = entityName;

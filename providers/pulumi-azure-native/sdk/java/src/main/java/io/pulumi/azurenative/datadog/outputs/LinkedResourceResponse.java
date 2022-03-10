@@ -17,8 +17,8 @@ public final class LinkedResourceResponse {
      */
     private final @Nullable String id;
 
-    @OutputCustomType.Constructor({"id"})
-    private LinkedResourceResponse(@Nullable String id) {
+    @OutputCustomType.Constructor
+    private LinkedResourceResponse(@OutputCustomType.Parameter("id") @Nullable String id) {
         this.id = id;
     }
 

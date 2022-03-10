@@ -63,18 +63,18 @@ public final class SecurityAlertTimelineItemResponse {
      */
     private final String timeGenerated;
 
-    @OutputCustomType.Constructor({"alertType","azureResourceId","description","displayName","endTimeUtc","kind","productName","severity","startTimeUtc","timeGenerated"})
+    @OutputCustomType.Constructor
     private SecurityAlertTimelineItemResponse(
-        String alertType,
-        String azureResourceId,
-        @Nullable String description,
-        String displayName,
-        String endTimeUtc,
-        String kind,
-        @Nullable String productName,
-        String severity,
-        String startTimeUtc,
-        String timeGenerated) {
+        @OutputCustomType.Parameter("alertType") String alertType,
+        @OutputCustomType.Parameter("azureResourceId") String azureResourceId,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("endTimeUtc") String endTimeUtc,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("productName") @Nullable String productName,
+        @OutputCustomType.Parameter("severity") String severity,
+        @OutputCustomType.Parameter("startTimeUtc") String startTimeUtc,
+        @OutputCustomType.Parameter("timeGenerated") String timeGenerated) {
         this.alertType = alertType;
         this.azureResourceId = azureResourceId;
         this.description = description;

@@ -32,12 +32,12 @@ public final class KeyVaultPropertiesResponse {
      */
     private final @Nullable String userIdentity;
 
-    @OutputCustomType.Constructor({"keyName","keyVaultUri","keyVersion","userIdentity"})
+    @OutputCustomType.Constructor
     private KeyVaultPropertiesResponse(
-        String keyName,
-        String keyVaultUri,
-        @Nullable String keyVersion,
-        @Nullable String userIdentity) {
+        @OutputCustomType.Parameter("keyName") String keyName,
+        @OutputCustomType.Parameter("keyVaultUri") String keyVaultUri,
+        @OutputCustomType.Parameter("keyVersion") @Nullable String keyVersion,
+        @OutputCustomType.Parameter("userIdentity") @Nullable String userIdentity) {
         this.keyName = keyName;
         this.keyVaultUri = keyVaultUri;
         this.keyVersion = keyVersion;

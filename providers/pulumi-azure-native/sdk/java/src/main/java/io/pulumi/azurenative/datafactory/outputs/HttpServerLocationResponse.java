@@ -34,12 +34,12 @@ public final class HttpServerLocationResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"fileName","folderPath","relativeUrl","type"})
+    @OutputCustomType.Constructor
     private HttpServerLocationResponse(
-        @Nullable Object fileName,
-        @Nullable Object folderPath,
-        @Nullable Object relativeUrl,
-        String type) {
+        @OutputCustomType.Parameter("fileName") @Nullable Object fileName,
+        @OutputCustomType.Parameter("folderPath") @Nullable Object folderPath,
+        @OutputCustomType.Parameter("relativeUrl") @Nullable Object relativeUrl,
+        @OutputCustomType.Parameter("type") String type) {
         this.fileName = fileName;
         this.folderPath = folderPath;
         this.relativeUrl = relativeUrl;

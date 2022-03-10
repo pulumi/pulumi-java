@@ -69,19 +69,19 @@ public final class ListProductDetailsResult {
      */
     private final Boolean vmScaleSetEnabled;
 
-    @OutputCustomType.Constructor({"computeRole","dataDiskImages","galleryPackageBlobSasUri","isSystemExtension","osDiskImage","productKind","supportMultipleExtensions","uri","version","vmOsType","vmScaleSetEnabled"})
+    @OutputCustomType.Constructor
     private ListProductDetailsResult(
-        String computeRole,
-        List<DataDiskImageResponse> dataDiskImages,
-        String galleryPackageBlobSasUri,
-        Boolean isSystemExtension,
-        OsDiskImageResponse osDiskImage,
-        String productKind,
-        Boolean supportMultipleExtensions,
-        String uri,
-        String version,
-        String vmOsType,
-        Boolean vmScaleSetEnabled) {
+        @OutputCustomType.Parameter("computeRole") String computeRole,
+        @OutputCustomType.Parameter("dataDiskImages") List<DataDiskImageResponse> dataDiskImages,
+        @OutputCustomType.Parameter("galleryPackageBlobSasUri") String galleryPackageBlobSasUri,
+        @OutputCustomType.Parameter("isSystemExtension") Boolean isSystemExtension,
+        @OutputCustomType.Parameter("osDiskImage") OsDiskImageResponse osDiskImage,
+        @OutputCustomType.Parameter("productKind") String productKind,
+        @OutputCustomType.Parameter("supportMultipleExtensions") Boolean supportMultipleExtensions,
+        @OutputCustomType.Parameter("uri") String uri,
+        @OutputCustomType.Parameter("version") String version,
+        @OutputCustomType.Parameter("vmOsType") String vmOsType,
+        @OutputCustomType.Parameter("vmScaleSetEnabled") Boolean vmScaleSetEnabled) {
         this.computeRole = computeRole;
         this.dataDiskImages = dataDiskImages;
         this.galleryPackageBlobSasUri = galleryPackageBlobSasUri;

@@ -35,12 +35,12 @@ public final class SyslogDataSourceResponse {
      */
     private final @Nullable List<String> streams;
 
-    @OutputCustomType.Constructor({"facilityNames","logLevels","name","streams"})
+    @OutputCustomType.Constructor
     private SyslogDataSourceResponse(
-        @Nullable List<String> facilityNames,
-        @Nullable List<String> logLevels,
-        @Nullable String name,
-        @Nullable List<String> streams) {
+        @OutputCustomType.Parameter("facilityNames") @Nullable List<String> facilityNames,
+        @OutputCustomType.Parameter("logLevels") @Nullable List<String> logLevels,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("streams") @Nullable List<String> streams) {
         this.facilityNames = facilityNames;
         this.logLevels = logLevels;
         this.name = name;

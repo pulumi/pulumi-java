@@ -38,13 +38,13 @@ public final class StorageConfigurationSettingsResponse {
      */
     private final @Nullable String storageWorkloadType;
 
-    @OutputCustomType.Constructor({"diskConfigurationType","sqlDataSettings","sqlLogSettings","sqlTempDbSettings","storageWorkloadType"})
+    @OutputCustomType.Constructor
     private StorageConfigurationSettingsResponse(
-        @Nullable String diskConfigurationType,
-        @Nullable SQLStorageSettingsResponse sqlDataSettings,
-        @Nullable SQLStorageSettingsResponse sqlLogSettings,
-        @Nullable SQLStorageSettingsResponse sqlTempDbSettings,
-        @Nullable String storageWorkloadType) {
+        @OutputCustomType.Parameter("diskConfigurationType") @Nullable String diskConfigurationType,
+        @OutputCustomType.Parameter("sqlDataSettings") @Nullable SQLStorageSettingsResponse sqlDataSettings,
+        @OutputCustomType.Parameter("sqlLogSettings") @Nullable SQLStorageSettingsResponse sqlLogSettings,
+        @OutputCustomType.Parameter("sqlTempDbSettings") @Nullable SQLStorageSettingsResponse sqlTempDbSettings,
+        @OutputCustomType.Parameter("storageWorkloadType") @Nullable String storageWorkloadType) {
         this.diskConfigurationType = diskConfigurationType;
         this.sqlDataSettings = sqlDataSettings;
         this.sqlLogSettings = sqlLogSettings;

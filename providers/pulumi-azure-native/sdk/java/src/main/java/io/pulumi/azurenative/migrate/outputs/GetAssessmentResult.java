@@ -38,13 +38,13 @@ public final class GetAssessmentResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"eTag","id","name","properties","type"})
+    @OutputCustomType.Constructor
     private GetAssessmentResult(
-        @Nullable String eTag,
-        String id,
-        String name,
-        AssessmentPropertiesResponse properties,
-        String type) {
+        @OutputCustomType.Parameter("eTag") @Nullable String eTag,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("properties") AssessmentPropertiesResponse properties,
+        @OutputCustomType.Parameter("type") String type) {
         this.eTag = eTag;
         this.id = id;
         this.name = name;

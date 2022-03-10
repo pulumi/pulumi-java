@@ -69,19 +69,19 @@ public final class EdifactAcknowledgementSettingsResponse {
      */
     private final Boolean sendSynchronousAcknowledgement;
 
-    @OutputCustomType.Constructor({"acknowledgementControlNumberLowerBound","acknowledgementControlNumberPrefix","acknowledgementControlNumberSuffix","acknowledgementControlNumberUpperBound","batchFunctionalAcknowledgements","batchTechnicalAcknowledgements","needFunctionalAcknowledgement","needLoopForValidMessages","needTechnicalAcknowledgement","rolloverAcknowledgementControlNumber","sendSynchronousAcknowledgement"})
+    @OutputCustomType.Constructor
     private EdifactAcknowledgementSettingsResponse(
-        Integer acknowledgementControlNumberLowerBound,
-        @Nullable String acknowledgementControlNumberPrefix,
-        @Nullable String acknowledgementControlNumberSuffix,
-        Integer acknowledgementControlNumberUpperBound,
-        Boolean batchFunctionalAcknowledgements,
-        Boolean batchTechnicalAcknowledgements,
-        Boolean needFunctionalAcknowledgement,
-        Boolean needLoopForValidMessages,
-        Boolean needTechnicalAcknowledgement,
-        Boolean rolloverAcknowledgementControlNumber,
-        Boolean sendSynchronousAcknowledgement) {
+        @OutputCustomType.Parameter("acknowledgementControlNumberLowerBound") Integer acknowledgementControlNumberLowerBound,
+        @OutputCustomType.Parameter("acknowledgementControlNumberPrefix") @Nullable String acknowledgementControlNumberPrefix,
+        @OutputCustomType.Parameter("acknowledgementControlNumberSuffix") @Nullable String acknowledgementControlNumberSuffix,
+        @OutputCustomType.Parameter("acknowledgementControlNumberUpperBound") Integer acknowledgementControlNumberUpperBound,
+        @OutputCustomType.Parameter("batchFunctionalAcknowledgements") Boolean batchFunctionalAcknowledgements,
+        @OutputCustomType.Parameter("batchTechnicalAcknowledgements") Boolean batchTechnicalAcknowledgements,
+        @OutputCustomType.Parameter("needFunctionalAcknowledgement") Boolean needFunctionalAcknowledgement,
+        @OutputCustomType.Parameter("needLoopForValidMessages") Boolean needLoopForValidMessages,
+        @OutputCustomType.Parameter("needTechnicalAcknowledgement") Boolean needTechnicalAcknowledgement,
+        @OutputCustomType.Parameter("rolloverAcknowledgementControlNumber") Boolean rolloverAcknowledgementControlNumber,
+        @OutputCustomType.Parameter("sendSynchronousAcknowledgement") Boolean sendSynchronousAcknowledgement) {
         this.acknowledgementControlNumberLowerBound = acknowledgementControlNumberLowerBound;
         this.acknowledgementControlNumberPrefix = acknowledgementControlNumberPrefix;
         this.acknowledgementControlNumberSuffix = acknowledgementControlNumberSuffix;

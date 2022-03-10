@@ -61,17 +61,17 @@ public final class GetRestorePointCollectionResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"id","location","name","provisioningState","restorePointCollectionId","restorePoints","source","tags","type"})
+    @OutputCustomType.Constructor
     private GetRestorePointCollectionResult(
-        String id,
-        String location,
-        String name,
-        String provisioningState,
-        String restorePointCollectionId,
-        List<RestorePointResponse> restorePoints,
-        @Nullable RestorePointCollectionSourcePropertiesResponse source,
-        @Nullable Map<String,String> tags,
-        String type) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("restorePointCollectionId") String restorePointCollectionId,
+        @OutputCustomType.Parameter("restorePoints") List<RestorePointResponse> restorePoints,
+        @OutputCustomType.Parameter("source") @Nullable RestorePointCollectionSourcePropertiesResponse source,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type) {
         this.id = id;
         this.location = location;
         this.name = name;

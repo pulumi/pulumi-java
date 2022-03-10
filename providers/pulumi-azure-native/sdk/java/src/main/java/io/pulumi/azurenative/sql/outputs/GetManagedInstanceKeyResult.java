@@ -46,15 +46,15 @@ public final class GetManagedInstanceKeyResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"autoRotationEnabled","creationDate","id","kind","name","thumbprint","type"})
+    @OutputCustomType.Constructor
     private GetManagedInstanceKeyResult(
-        Boolean autoRotationEnabled,
-        String creationDate,
-        String id,
-        String kind,
-        String name,
-        String thumbprint,
-        String type) {
+        @OutputCustomType.Parameter("autoRotationEnabled") Boolean autoRotationEnabled,
+        @OutputCustomType.Parameter("creationDate") String creationDate,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("thumbprint") String thumbprint,
+        @OutputCustomType.Parameter("type") String type) {
         this.autoRotationEnabled = autoRotationEnabled;
         this.creationDate = creationDate;
         this.id = id;

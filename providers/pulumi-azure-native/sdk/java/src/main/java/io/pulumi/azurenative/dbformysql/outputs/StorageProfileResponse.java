@@ -33,12 +33,12 @@ public final class StorageProfileResponse {
      */
     private final @Nullable Integer storageMB;
 
-    @OutputCustomType.Constructor({"backupRetentionDays","geoRedundantBackup","storageAutogrow","storageMB"})
+    @OutputCustomType.Constructor
     private StorageProfileResponse(
-        @Nullable Integer backupRetentionDays,
-        @Nullable String geoRedundantBackup,
-        @Nullable String storageAutogrow,
-        @Nullable Integer storageMB) {
+        @OutputCustomType.Parameter("backupRetentionDays") @Nullable Integer backupRetentionDays,
+        @OutputCustomType.Parameter("geoRedundantBackup") @Nullable String geoRedundantBackup,
+        @OutputCustomType.Parameter("storageAutogrow") @Nullable String storageAutogrow,
+        @OutputCustomType.Parameter("storageMB") @Nullable Integer storageMB) {
         this.backupRetentionDays = backupRetentionDays;
         this.geoRedundantBackup = geoRedundantBackup;
         this.storageAutogrow = storageAutogrow;

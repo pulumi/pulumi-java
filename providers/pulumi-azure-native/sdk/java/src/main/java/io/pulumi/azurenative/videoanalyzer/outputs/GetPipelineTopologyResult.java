@@ -76,19 +76,19 @@ public final class GetPipelineTopologyResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"description","id","kind","name","parameters","processors","sinks","sku","sources","systemData","type"})
+    @OutputCustomType.Constructor
     private GetPipelineTopologyResult(
-        @Nullable String description,
-        String id,
-        String kind,
-        String name,
-        @Nullable List<ParameterDeclarationResponse> parameters,
-        @Nullable List<EncoderProcessorResponse> processors,
-        List<VideoSinkResponse> sinks,
-        SkuResponse sku,
-        List<Either<RtspSourceResponse,VideoSourceResponse>> sources,
-        SystemDataResponse systemData,
-        String type) {
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("parameters") @Nullable List<ParameterDeclarationResponse> parameters,
+        @OutputCustomType.Parameter("processors") @Nullable List<EncoderProcessorResponse> processors,
+        @OutputCustomType.Parameter("sinks") List<VideoSinkResponse> sinks,
+        @OutputCustomType.Parameter("sku") SkuResponse sku,
+        @OutputCustomType.Parameter("sources") List<Either<RtspSourceResponse,VideoSourceResponse>> sources,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("type") String type) {
         this.description = description;
         this.id = id;
         this.kind = kind;

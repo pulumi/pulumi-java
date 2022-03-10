@@ -28,11 +28,11 @@ public final class SelfDependencyTumblingWindowTriggerReferenceResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"offset","size","type"})
+    @OutputCustomType.Constructor
     private SelfDependencyTumblingWindowTriggerReferenceResponse(
-        String offset,
-        @Nullable String size,
-        String type) {
+        @OutputCustomType.Parameter("offset") String offset,
+        @OutputCustomType.Parameter("size") @Nullable String size,
+        @OutputCustomType.Parameter("type") String type) {
         this.offset = offset;
         this.size = size;
         this.type = type;

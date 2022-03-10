@@ -51,16 +51,16 @@ public final class MigratePostgreSqlAzureDbForPostgreSqlSyncTaskOutputMigrationL
      */
     private final String targetServerVersion;
 
-    @OutputCustomType.Constructor({"endedOn","id","resultType","sourceServer","sourceServerVersion","startedOn","targetServer","targetServerVersion"})
+    @OutputCustomType.Constructor
     private MigratePostgreSqlAzureDbForPostgreSqlSyncTaskOutputMigrationLevelResponse(
-        String endedOn,
-        String id,
-        String resultType,
-        String sourceServer,
-        String sourceServerVersion,
-        String startedOn,
-        String targetServer,
-        String targetServerVersion) {
+        @OutputCustomType.Parameter("endedOn") String endedOn,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("resultType") String resultType,
+        @OutputCustomType.Parameter("sourceServer") String sourceServer,
+        @OutputCustomType.Parameter("sourceServerVersion") String sourceServerVersion,
+        @OutputCustomType.Parameter("startedOn") String startedOn,
+        @OutputCustomType.Parameter("targetServer") String targetServer,
+        @OutputCustomType.Parameter("targetServerVersion") String targetServerVersion) {
         this.endedOn = endedOn;
         this.id = id;
         this.resultType = resultType;

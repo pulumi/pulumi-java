@@ -22,10 +22,10 @@ public final class DeliveryRuleResponseHeaderActionResponse {
      */
     private final HeaderActionParametersResponse parameters;
 
-    @OutputCustomType.Constructor({"name","parameters"})
+    @OutputCustomType.Constructor
     private DeliveryRuleResponseHeaderActionResponse(
-        String name,
-        HeaderActionParametersResponse parameters) {
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("parameters") HeaderActionParametersResponse parameters) {
         this.name = name;
         this.parameters = parameters;
     }

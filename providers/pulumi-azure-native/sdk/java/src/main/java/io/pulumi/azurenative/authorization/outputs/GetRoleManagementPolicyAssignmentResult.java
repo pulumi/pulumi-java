@@ -48,15 +48,15 @@ public final class GetRoleManagementPolicyAssignmentResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"id","name","policyAssignmentProperties","policyId","roleDefinitionId","scope","type"})
+    @OutputCustomType.Constructor
     private GetRoleManagementPolicyAssignmentResult(
-        String id,
-        String name,
-        PolicyAssignmentPropertiesResponse policyAssignmentProperties,
-        @Nullable String policyId,
-        @Nullable String roleDefinitionId,
-        @Nullable String scope,
-        String type) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("policyAssignmentProperties") PolicyAssignmentPropertiesResponse policyAssignmentProperties,
+        @OutputCustomType.Parameter("policyId") @Nullable String policyId,
+        @OutputCustomType.Parameter("roleDefinitionId") @Nullable String roleDefinitionId,
+        @OutputCustomType.Parameter("scope") @Nullable String scope,
+        @OutputCustomType.Parameter("type") String type) {
         this.id = id;
         this.name = name;
         this.policyAssignmentProperties = policyAssignmentProperties;

@@ -114,27 +114,27 @@ public final class GetGalleryImageResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"description","disallowed","endOfLifeDate","eula","features","hyperVGeneration","id","identifier","location","name","osState","osType","privacyStatementUri","provisioningState","purchasePlan","recommended","releaseNoteUri","tags","type"})
+    @OutputCustomType.Constructor
     private GetGalleryImageResult(
-        @Nullable String description,
-        @Nullable DisallowedResponse disallowed,
-        @Nullable String endOfLifeDate,
-        @Nullable String eula,
-        @Nullable List<GalleryImageFeatureResponse> features,
-        @Nullable String hyperVGeneration,
-        String id,
-        GalleryImageIdentifierResponse identifier,
-        String location,
-        String name,
-        String osState,
-        String osType,
-        @Nullable String privacyStatementUri,
-        String provisioningState,
-        @Nullable ImagePurchasePlanResponse purchasePlan,
-        @Nullable RecommendedMachineConfigurationResponse recommended,
-        @Nullable String releaseNoteUri,
-        @Nullable Map<String,String> tags,
-        String type) {
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("disallowed") @Nullable DisallowedResponse disallowed,
+        @OutputCustomType.Parameter("endOfLifeDate") @Nullable String endOfLifeDate,
+        @OutputCustomType.Parameter("eula") @Nullable String eula,
+        @OutputCustomType.Parameter("features") @Nullable List<GalleryImageFeatureResponse> features,
+        @OutputCustomType.Parameter("hyperVGeneration") @Nullable String hyperVGeneration,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("identifier") GalleryImageIdentifierResponse identifier,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("osState") String osState,
+        @OutputCustomType.Parameter("osType") String osType,
+        @OutputCustomType.Parameter("privacyStatementUri") @Nullable String privacyStatementUri,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("purchasePlan") @Nullable ImagePurchasePlanResponse purchasePlan,
+        @OutputCustomType.Parameter("recommended") @Nullable RecommendedMachineConfigurationResponse recommended,
+        @OutputCustomType.Parameter("releaseNoteUri") @Nullable String releaseNoteUri,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type) {
         this.description = description;
         this.disallowed = disallowed;
         this.endOfLifeDate = endOfLifeDate;

@@ -32,12 +32,12 @@ public final class SupportInfoResponse {
      */
     private final @Nullable String url;
 
-    @OutputCustomType.Constructor({"email","instructions","phone","url"})
+    @OutputCustomType.Constructor
     private SupportInfoResponse(
-        @Nullable String email,
-        @Nullable String instructions,
-        @Nullable String phone,
-        @Nullable String url) {
+        @OutputCustomType.Parameter("email") @Nullable String email,
+        @OutputCustomType.Parameter("instructions") @Nullable String instructions,
+        @OutputCustomType.Parameter("phone") @Nullable String phone,
+        @OutputCustomType.Parameter("url") @Nullable String url) {
         this.email = email;
         this.instructions = instructions;
         this.phone = phone;

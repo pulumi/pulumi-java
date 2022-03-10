@@ -28,11 +28,11 @@ public final class BasicAuthenticationResponse {
      */
     private final @Nullable String username;
 
-    @OutputCustomType.Constructor({"password","type","username"})
+    @OutputCustomType.Constructor
     private BasicAuthenticationResponse(
-        @Nullable String password,
-        String type,
-        @Nullable String username) {
+        @OutputCustomType.Parameter("password") @Nullable String password,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("username") @Nullable String username) {
         this.password = password;
         this.type = type;
         this.username = username;

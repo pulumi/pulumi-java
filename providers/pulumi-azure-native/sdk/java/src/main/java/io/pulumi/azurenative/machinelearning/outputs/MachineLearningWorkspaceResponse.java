@@ -15,8 +15,8 @@ public final class MachineLearningWorkspaceResponse {
      */
     private final String id;
 
-    @OutputCustomType.Constructor({"id"})
-    private MachineLearningWorkspaceResponse(String id) {
+    @OutputCustomType.Constructor
+    private MachineLearningWorkspaceResponse(@OutputCustomType.Parameter("id") String id) {
         this.id = id;
     }
 

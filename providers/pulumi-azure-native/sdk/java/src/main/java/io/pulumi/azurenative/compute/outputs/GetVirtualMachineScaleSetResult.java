@@ -151,33 +151,33 @@ public final class GetVirtualMachineScaleSetResult {
      */
     private final @Nullable List<String> zones;
 
-    @OutputCustomType.Constructor({"additionalCapabilities","automaticRepairsPolicy","doNotRunExtensionsOnOverprovisionedVMs","extendedLocation","hostGroup","id","identity","location","name","orchestrationMode","overprovision","plan","platformFaultDomainCount","provisioningState","proximityPlacementGroup","scaleInPolicy","singlePlacementGroup","sku","tags","type","uniqueId","upgradePolicy","virtualMachineProfile","zoneBalance","zones"})
+    @OutputCustomType.Constructor
     private GetVirtualMachineScaleSetResult(
-        @Nullable AdditionalCapabilitiesResponse additionalCapabilities,
-        @Nullable AutomaticRepairsPolicyResponse automaticRepairsPolicy,
-        @Nullable Boolean doNotRunExtensionsOnOverprovisionedVMs,
-        @Nullable ExtendedLocationResponse extendedLocation,
-        @Nullable SubResourceResponse hostGroup,
-        String id,
-        @Nullable VirtualMachineScaleSetIdentityResponse identity,
-        String location,
-        String name,
-        @Nullable String orchestrationMode,
-        @Nullable Boolean overprovision,
-        @Nullable PlanResponse plan,
-        @Nullable Integer platformFaultDomainCount,
-        String provisioningState,
-        @Nullable SubResourceResponse proximityPlacementGroup,
-        @Nullable ScaleInPolicyResponse scaleInPolicy,
-        @Nullable Boolean singlePlacementGroup,
-        @Nullable SkuResponse sku,
-        @Nullable Map<String,String> tags,
-        String type,
-        String uniqueId,
-        @Nullable UpgradePolicyResponse upgradePolicy,
-        @Nullable VirtualMachineScaleSetVMProfileResponse virtualMachineProfile,
-        @Nullable Boolean zoneBalance,
-        @Nullable List<String> zones) {
+        @OutputCustomType.Parameter("additionalCapabilities") @Nullable AdditionalCapabilitiesResponse additionalCapabilities,
+        @OutputCustomType.Parameter("automaticRepairsPolicy") @Nullable AutomaticRepairsPolicyResponse automaticRepairsPolicy,
+        @OutputCustomType.Parameter("doNotRunExtensionsOnOverprovisionedVMs") @Nullable Boolean doNotRunExtensionsOnOverprovisionedVMs,
+        @OutputCustomType.Parameter("extendedLocation") @Nullable ExtendedLocationResponse extendedLocation,
+        @OutputCustomType.Parameter("hostGroup") @Nullable SubResourceResponse hostGroup,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("identity") @Nullable VirtualMachineScaleSetIdentityResponse identity,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("orchestrationMode") @Nullable String orchestrationMode,
+        @OutputCustomType.Parameter("overprovision") @Nullable Boolean overprovision,
+        @OutputCustomType.Parameter("plan") @Nullable PlanResponse plan,
+        @OutputCustomType.Parameter("platformFaultDomainCount") @Nullable Integer platformFaultDomainCount,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("proximityPlacementGroup") @Nullable SubResourceResponse proximityPlacementGroup,
+        @OutputCustomType.Parameter("scaleInPolicy") @Nullable ScaleInPolicyResponse scaleInPolicy,
+        @OutputCustomType.Parameter("singlePlacementGroup") @Nullable Boolean singlePlacementGroup,
+        @OutputCustomType.Parameter("sku") @Nullable SkuResponse sku,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("uniqueId") String uniqueId,
+        @OutputCustomType.Parameter("upgradePolicy") @Nullable UpgradePolicyResponse upgradePolicy,
+        @OutputCustomType.Parameter("virtualMachineProfile") @Nullable VirtualMachineScaleSetVMProfileResponse virtualMachineProfile,
+        @OutputCustomType.Parameter("zoneBalance") @Nullable Boolean zoneBalance,
+        @OutputCustomType.Parameter("zones") @Nullable List<String> zones) {
         this.additionalCapabilities = additionalCapabilities;
         this.automaticRepairsPolicy = automaticRepairsPolicy;
         this.doNotRunExtensionsOnOverprovisionedVMs = doNotRunExtensionsOnOverprovisionedVMs;

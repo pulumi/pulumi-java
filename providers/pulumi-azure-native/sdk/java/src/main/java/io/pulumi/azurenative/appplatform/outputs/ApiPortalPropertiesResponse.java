@@ -62,17 +62,17 @@ public final class ApiPortalPropertiesResponse {
      */
     private final String url;
 
-    @OutputCustomType.Constructor({"gatewayIds","httpsOnly","instances","provisioningState","$public","resourceRequests","sourceUrls","ssoProperties","url"})
+    @OutputCustomType.Constructor
     private ApiPortalPropertiesResponse(
-        @Nullable List<String> gatewayIds,
-        @Nullable Boolean httpsOnly,
-        List<ApiPortalInstanceResponse> instances,
-        String provisioningState,
-        @Nullable Boolean $public,
-        ApiPortalResourceRequestsResponse resourceRequests,
-        @Nullable List<String> sourceUrls,
-        @Nullable SsoPropertiesResponse ssoProperties,
-        String url) {
+        @OutputCustomType.Parameter("gatewayIds") @Nullable List<String> gatewayIds,
+        @OutputCustomType.Parameter("httpsOnly") @Nullable Boolean httpsOnly,
+        @OutputCustomType.Parameter("instances") List<ApiPortalInstanceResponse> instances,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("public") @Nullable Boolean $public,
+        @OutputCustomType.Parameter("resourceRequests") ApiPortalResourceRequestsResponse resourceRequests,
+        @OutputCustomType.Parameter("sourceUrls") @Nullable List<String> sourceUrls,
+        @OutputCustomType.Parameter("ssoProperties") @Nullable SsoPropertiesResponse ssoProperties,
+        @OutputCustomType.Parameter("url") String url) {
         this.gatewayIds = gatewayIds;
         this.httpsOnly = httpsOnly;
         this.instances = instances;

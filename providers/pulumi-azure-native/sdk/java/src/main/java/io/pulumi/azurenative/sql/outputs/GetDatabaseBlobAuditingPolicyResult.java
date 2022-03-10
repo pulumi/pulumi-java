@@ -142,20 +142,20 @@ public final class GetDatabaseBlobAuditingPolicyResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"auditActionsAndGroups","id","isAzureMonitorTargetEnabled","isStorageSecondaryKeyInUse","kind","name","queueDelayMs","retentionDays","state","storageAccountSubscriptionId","storageEndpoint","type"})
+    @OutputCustomType.Constructor
     private GetDatabaseBlobAuditingPolicyResult(
-        @Nullable List<String> auditActionsAndGroups,
-        String id,
-        @Nullable Boolean isAzureMonitorTargetEnabled,
-        @Nullable Boolean isStorageSecondaryKeyInUse,
-        String kind,
-        String name,
-        @Nullable Integer queueDelayMs,
-        @Nullable Integer retentionDays,
-        String state,
-        @Nullable String storageAccountSubscriptionId,
-        @Nullable String storageEndpoint,
-        String type) {
+        @OutputCustomType.Parameter("auditActionsAndGroups") @Nullable List<String> auditActionsAndGroups,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("isAzureMonitorTargetEnabled") @Nullable Boolean isAzureMonitorTargetEnabled,
+        @OutputCustomType.Parameter("isStorageSecondaryKeyInUse") @Nullable Boolean isStorageSecondaryKeyInUse,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("queueDelayMs") @Nullable Integer queueDelayMs,
+        @OutputCustomType.Parameter("retentionDays") @Nullable Integer retentionDays,
+        @OutputCustomType.Parameter("state") String state,
+        @OutputCustomType.Parameter("storageAccountSubscriptionId") @Nullable String storageAccountSubscriptionId,
+        @OutputCustomType.Parameter("storageEndpoint") @Nullable String storageEndpoint,
+        @OutputCustomType.Parameter("type") String type) {
         this.auditActionsAndGroups = auditActionsAndGroups;
         this.id = id;
         this.isAzureMonitorTargetEnabled = isAzureMonitorTargetEnabled;

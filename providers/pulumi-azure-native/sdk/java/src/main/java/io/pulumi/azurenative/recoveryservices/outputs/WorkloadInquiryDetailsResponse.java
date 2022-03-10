@@ -29,11 +29,11 @@ public final class WorkloadInquiryDetailsResponse {
      */
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor({"inquiryValidation","itemCount","type"})
+    @OutputCustomType.Constructor
     private WorkloadInquiryDetailsResponse(
-        @Nullable InquiryValidationResponse inquiryValidation,
-        @Nullable Double itemCount,
-        @Nullable String type) {
+        @OutputCustomType.Parameter("inquiryValidation") @Nullable InquiryValidationResponse inquiryValidation,
+        @OutputCustomType.Parameter("itemCount") @Nullable Double itemCount,
+        @OutputCustomType.Parameter("type") @Nullable String type) {
         this.inquiryValidation = inquiryValidation;
         this.itemCount = itemCount;
         this.type = type;

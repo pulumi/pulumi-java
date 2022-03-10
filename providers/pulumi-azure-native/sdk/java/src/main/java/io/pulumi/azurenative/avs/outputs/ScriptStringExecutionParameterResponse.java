@@ -28,11 +28,11 @@ public final class ScriptStringExecutionParameterResponse {
      */
     private final @Nullable String value;
 
-    @OutputCustomType.Constructor({"name","type","value"})
+    @OutputCustomType.Constructor
     private ScriptStringExecutionParameterResponse(
-        String name,
-        String type,
-        @Nullable String value) {
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("value") @Nullable String value) {
         this.name = name;
         this.type = type;
         this.value = value;

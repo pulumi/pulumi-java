@@ -23,10 +23,10 @@ public final class EncryptionPropertiesResponse {
      */
     private final @Nullable KeyVaultPropertiesResponse keyVaultProperties;
 
-    @OutputCustomType.Constructor({"keySource","keyVaultProperties"})
+    @OutputCustomType.Constructor
     private EncryptionPropertiesResponse(
-        @Nullable String keySource,
-        @Nullable KeyVaultPropertiesResponse keyVaultProperties) {
+        @OutputCustomType.Parameter("keySource") @Nullable String keySource,
+        @OutputCustomType.Parameter("keyVaultProperties") @Nullable KeyVaultPropertiesResponse keyVaultProperties) {
         this.keySource = keySource;
         this.keyVaultProperties = keyVaultProperties;
     }

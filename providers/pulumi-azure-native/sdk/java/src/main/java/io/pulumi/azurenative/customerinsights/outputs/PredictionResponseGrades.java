@@ -28,11 +28,11 @@ public final class PredictionResponseGrades {
      */
     private final @Nullable Integer minScoreThreshold;
 
-    @OutputCustomType.Constructor({"gradeName","maxScoreThreshold","minScoreThreshold"})
+    @OutputCustomType.Constructor
     private PredictionResponseGrades(
-        @Nullable String gradeName,
-        @Nullable Integer maxScoreThreshold,
-        @Nullable Integer minScoreThreshold) {
+        @OutputCustomType.Parameter("gradeName") @Nullable String gradeName,
+        @OutputCustomType.Parameter("maxScoreThreshold") @Nullable Integer maxScoreThreshold,
+        @OutputCustomType.Parameter("minScoreThreshold") @Nullable Integer minScoreThreshold) {
         this.gradeName = gradeName;
         this.maxScoreThreshold = maxScoreThreshold;
         this.minScoreThreshold = minScoreThreshold;

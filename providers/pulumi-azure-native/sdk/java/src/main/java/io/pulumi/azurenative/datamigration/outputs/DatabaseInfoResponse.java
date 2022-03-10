@@ -15,8 +15,8 @@ public final class DatabaseInfoResponse {
      */
     private final String sourceDatabaseName;
 
-    @OutputCustomType.Constructor({"sourceDatabaseName"})
-    private DatabaseInfoResponse(String sourceDatabaseName) {
+    @OutputCustomType.Constructor
+    private DatabaseInfoResponse(@OutputCustomType.Parameter("sourceDatabaseName") String sourceDatabaseName) {
         this.sourceDatabaseName = sourceDatabaseName;
     }
 

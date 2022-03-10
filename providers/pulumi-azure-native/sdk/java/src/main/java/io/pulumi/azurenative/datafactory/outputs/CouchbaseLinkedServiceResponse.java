@@ -59,16 +59,16 @@ public final class CouchbaseLinkedServiceResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"annotations","connectVia","connectionString","credString","description","encryptedCredential","parameters","type"})
+    @OutputCustomType.Constructor
     private CouchbaseLinkedServiceResponse(
-        @Nullable List<Object> annotations,
-        @Nullable IntegrationRuntimeReferenceResponse connectVia,
-        @Nullable Object connectionString,
-        @Nullable AzureKeyVaultSecretReferenceResponse credString,
-        @Nullable String description,
-        @Nullable Object encryptedCredential,
-        @Nullable Map<String,ParameterSpecificationResponse> parameters,
-        String type) {
+        @OutputCustomType.Parameter("annotations") @Nullable List<Object> annotations,
+        @OutputCustomType.Parameter("connectVia") @Nullable IntegrationRuntimeReferenceResponse connectVia,
+        @OutputCustomType.Parameter("connectionString") @Nullable Object connectionString,
+        @OutputCustomType.Parameter("credString") @Nullable AzureKeyVaultSecretReferenceResponse credString,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("encryptedCredential") @Nullable Object encryptedCredential,
+        @OutputCustomType.Parameter("parameters") @Nullable Map<String,ParameterSpecificationResponse> parameters,
+        @OutputCustomType.Parameter("type") String type) {
         this.annotations = annotations;
         this.connectVia = connectVia;
         this.connectionString = connectionString;

@@ -27,11 +27,11 @@ public final class SecurityAssessmentMetadataPartnerDataResponse {
      */
     private final String secret;
 
-    @OutputCustomType.Constructor({"partnerName","productName","secret"})
+    @OutputCustomType.Constructor
     private SecurityAssessmentMetadataPartnerDataResponse(
-        String partnerName,
-        @Nullable String productName,
-        String secret) {
+        @OutputCustomType.Parameter("partnerName") String partnerName,
+        @OutputCustomType.Parameter("productName") @Nullable String productName,
+        @OutputCustomType.Parameter("secret") String secret) {
         this.partnerName = partnerName;
         this.productName = productName;
         this.secret = secret;

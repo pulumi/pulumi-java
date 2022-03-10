@@ -138,32 +138,32 @@ public final class GetComponentResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"appId","applicationId","applicationType","connectionString","creationDate","disableIpMasking","flowType","hockeyAppId","hockeyAppToken","id","immediatePurgeDataOn30Days","ingestionMode","instrumentationKey","kind","location","name","privateLinkScopedResources","provisioningState","requestSource","retentionInDays","samplingPercentage","tags","tenantId","type"})
+    @OutputCustomType.Constructor
     private GetComponentResult(
-        String appId,
-        String applicationId,
-        String applicationType,
-        String connectionString,
-        String creationDate,
-        @Nullable Boolean disableIpMasking,
-        @Nullable String flowType,
-        @Nullable String hockeyAppId,
-        String hockeyAppToken,
-        String id,
-        @Nullable Boolean immediatePurgeDataOn30Days,
-        @Nullable String ingestionMode,
-        String instrumentationKey,
-        String kind,
-        String location,
-        String name,
-        List<PrivateLinkScopedResourceResponse> privateLinkScopedResources,
-        String provisioningState,
-        @Nullable String requestSource,
-        @Nullable Integer retentionInDays,
-        @Nullable Double samplingPercentage,
-        @Nullable Map<String,String> tags,
-        String tenantId,
-        String type) {
+        @OutputCustomType.Parameter("appId") String appId,
+        @OutputCustomType.Parameter("applicationId") String applicationId,
+        @OutputCustomType.Parameter("applicationType") String applicationType,
+        @OutputCustomType.Parameter("connectionString") String connectionString,
+        @OutputCustomType.Parameter("creationDate") String creationDate,
+        @OutputCustomType.Parameter("disableIpMasking") @Nullable Boolean disableIpMasking,
+        @OutputCustomType.Parameter("flowType") @Nullable String flowType,
+        @OutputCustomType.Parameter("hockeyAppId") @Nullable String hockeyAppId,
+        @OutputCustomType.Parameter("hockeyAppToken") String hockeyAppToken,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("immediatePurgeDataOn30Days") @Nullable Boolean immediatePurgeDataOn30Days,
+        @OutputCustomType.Parameter("ingestionMode") @Nullable String ingestionMode,
+        @OutputCustomType.Parameter("instrumentationKey") String instrumentationKey,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("privateLinkScopedResources") List<PrivateLinkScopedResourceResponse> privateLinkScopedResources,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("requestSource") @Nullable String requestSource,
+        @OutputCustomType.Parameter("retentionInDays") @Nullable Integer retentionInDays,
+        @OutputCustomType.Parameter("samplingPercentage") @Nullable Double samplingPercentage,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("tenantId") String tenantId,
+        @OutputCustomType.Parameter("type") String type) {
         this.appId = appId;
         this.applicationId = applicationId;
         this.applicationType = applicationType;

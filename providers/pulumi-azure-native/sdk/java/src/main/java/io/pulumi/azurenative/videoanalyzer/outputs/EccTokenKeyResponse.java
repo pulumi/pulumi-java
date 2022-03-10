@@ -36,13 +36,13 @@ public final class EccTokenKeyResponse {
      */
     private final String y;
 
-    @OutputCustomType.Constructor({"alg","kid","type","x","y"})
+    @OutputCustomType.Constructor
     private EccTokenKeyResponse(
-        String alg,
-        String kid,
-        String type,
-        String x,
-        String y) {
+        @OutputCustomType.Parameter("alg") String alg,
+        @OutputCustomType.Parameter("kid") String kid,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("x") String x,
+        @OutputCustomType.Parameter("y") String y) {
         this.alg = alg;
         this.kid = kid;
         this.type = type;

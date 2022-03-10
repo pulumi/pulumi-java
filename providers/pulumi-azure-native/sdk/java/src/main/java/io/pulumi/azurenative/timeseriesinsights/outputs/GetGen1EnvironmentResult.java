@@ -93,23 +93,23 @@ public final class GetGen1EnvironmentResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"creationTime","dataAccessFqdn","dataAccessId","dataRetentionTime","id","kind","location","name","partitionKeyProperties","provisioningState","sku","status","storageLimitExceededBehavior","tags","type"})
+    @OutputCustomType.Constructor
     private GetGen1EnvironmentResult(
-        String creationTime,
-        String dataAccessFqdn,
-        String dataAccessId,
-        String dataRetentionTime,
-        String id,
-        String kind,
-        String location,
-        String name,
-        @Nullable List<TimeSeriesIdPropertyResponse> partitionKeyProperties,
-        String provisioningState,
-        SkuResponse sku,
-        EnvironmentStatusResponse status,
-        @Nullable String storageLimitExceededBehavior,
-        @Nullable Map<String,String> tags,
-        String type) {
+        @OutputCustomType.Parameter("creationTime") String creationTime,
+        @OutputCustomType.Parameter("dataAccessFqdn") String dataAccessFqdn,
+        @OutputCustomType.Parameter("dataAccessId") String dataAccessId,
+        @OutputCustomType.Parameter("dataRetentionTime") String dataRetentionTime,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("partitionKeyProperties") @Nullable List<TimeSeriesIdPropertyResponse> partitionKeyProperties,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("sku") SkuResponse sku,
+        @OutputCustomType.Parameter("status") EnvironmentStatusResponse status,
+        @OutputCustomType.Parameter("storageLimitExceededBehavior") @Nullable String storageLimitExceededBehavior,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type) {
         this.creationTime = creationTime;
         this.dataAccessFqdn = dataAccessFqdn;
         this.dataAccessId = dataAccessId;

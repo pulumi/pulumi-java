@@ -26,11 +26,11 @@ public final class BootDiagnosticsInstanceViewResponse {
      */
     private final InstanceViewStatusResponse status;
 
-    @OutputCustomType.Constructor({"consoleScreenshotBlobUri","serialConsoleLogBlobUri","status"})
+    @OutputCustomType.Constructor
     private BootDiagnosticsInstanceViewResponse(
-        String consoleScreenshotBlobUri,
-        String serialConsoleLogBlobUri,
-        InstanceViewStatusResponse status) {
+        @OutputCustomType.Parameter("consoleScreenshotBlobUri") String consoleScreenshotBlobUri,
+        @OutputCustomType.Parameter("serialConsoleLogBlobUri") String serialConsoleLogBlobUri,
+        @OutputCustomType.Parameter("status") InstanceViewStatusResponse status) {
         this.consoleScreenshotBlobUri = consoleScreenshotBlobUri;
         this.serialConsoleLogBlobUri = serialConsoleLogBlobUri;
         this.status = status;

@@ -53,15 +53,15 @@ public final class GetProtectionIntentResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"eTag","id","location","name","properties","tags","type"})
+    @OutputCustomType.Constructor
     private GetProtectionIntentResult(
-        @Nullable String eTag,
-        String id,
-        @Nullable String location,
-        String name,
-        Object properties,
-        @Nullable Map<String,String> tags,
-        String type) {
+        @OutputCustomType.Parameter("eTag") @Nullable String eTag,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("properties") Object properties,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type) {
         this.eTag = eTag;
         this.id = id;
         this.location = location;

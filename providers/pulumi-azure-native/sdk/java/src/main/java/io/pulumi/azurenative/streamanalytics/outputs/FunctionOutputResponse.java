@@ -17,8 +17,8 @@ public final class FunctionOutputResponse {
      */
     private final @Nullable String dataType;
 
-    @OutputCustomType.Constructor({"dataType"})
-    private FunctionOutputResponse(@Nullable String dataType) {
+    @OutputCustomType.Constructor
+    private FunctionOutputResponse(@OutputCustomType.Parameter("dataType") @Nullable String dataType) {
         this.dataType = dataType;
     }
 

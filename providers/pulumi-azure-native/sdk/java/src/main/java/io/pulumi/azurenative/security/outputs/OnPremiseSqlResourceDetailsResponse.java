@@ -46,15 +46,15 @@ public final class OnPremiseSqlResourceDetailsResponse {
      */
     private final String workspaceId;
 
-    @OutputCustomType.Constructor({"databaseName","machineName","serverName","source","sourceComputerId","vmuuid","workspaceId"})
+    @OutputCustomType.Constructor
     private OnPremiseSqlResourceDetailsResponse(
-        String databaseName,
-        String machineName,
-        String serverName,
-        String source,
-        String sourceComputerId,
-        String vmuuid,
-        String workspaceId) {
+        @OutputCustomType.Parameter("databaseName") String databaseName,
+        @OutputCustomType.Parameter("machineName") String machineName,
+        @OutputCustomType.Parameter("serverName") String serverName,
+        @OutputCustomType.Parameter("source") String source,
+        @OutputCustomType.Parameter("sourceComputerId") String sourceComputerId,
+        @OutputCustomType.Parameter("vmuuid") String vmuuid,
+        @OutputCustomType.Parameter("workspaceId") String workspaceId) {
         this.databaseName = databaseName;
         this.machineName = machineName;
         this.serverName = serverName;

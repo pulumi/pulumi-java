@@ -36,14 +36,14 @@ public final class KeyVaultSigningKeyParametersResponse {
      */
     private final String vaultName;
 
-    @OutputCustomType.Constructor({"odataType","resourceGroupName","secretName","secretVersion","subscriptionId","vaultName"})
+    @OutputCustomType.Constructor
     private KeyVaultSigningKeyParametersResponse(
-        String odataType,
-        String resourceGroupName,
-        String secretName,
-        String secretVersion,
-        String subscriptionId,
-        String vaultName) {
+        @OutputCustomType.Parameter("odataType") String odataType,
+        @OutputCustomType.Parameter("resourceGroupName") String resourceGroupName,
+        @OutputCustomType.Parameter("secretName") String secretName,
+        @OutputCustomType.Parameter("secretVersion") String secretVersion,
+        @OutputCustomType.Parameter("subscriptionId") String subscriptionId,
+        @OutputCustomType.Parameter("vaultName") String vaultName) {
         this.odataType = odataType;
         this.resourceGroupName = resourceGroupName;
         this.secretName = secretName;

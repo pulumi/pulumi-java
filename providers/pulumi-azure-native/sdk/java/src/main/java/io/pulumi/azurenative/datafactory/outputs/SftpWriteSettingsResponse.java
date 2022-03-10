@@ -44,14 +44,14 @@ public final class SftpWriteSettingsResponse {
      */
     private final @Nullable Object useTempFileRename;
 
-    @OutputCustomType.Constructor({"copyBehavior","disableMetricsCollection","maxConcurrentConnections","operationTimeout","type","useTempFileRename"})
+    @OutputCustomType.Constructor
     private SftpWriteSettingsResponse(
-        @Nullable Object copyBehavior,
-        @Nullable Object disableMetricsCollection,
-        @Nullable Object maxConcurrentConnections,
-        @Nullable Object operationTimeout,
-        String type,
-        @Nullable Object useTempFileRename) {
+        @OutputCustomType.Parameter("copyBehavior") @Nullable Object copyBehavior,
+        @OutputCustomType.Parameter("disableMetricsCollection") @Nullable Object disableMetricsCollection,
+        @OutputCustomType.Parameter("maxConcurrentConnections") @Nullable Object maxConcurrentConnections,
+        @OutputCustomType.Parameter("operationTimeout") @Nullable Object operationTimeout,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("useTempFileRename") @Nullable Object useTempFileRename) {
         this.copyBehavior = copyBehavior;
         this.disableMetricsCollection = disableMetricsCollection;
         this.maxConcurrentConnections = maxConcurrentConnections;

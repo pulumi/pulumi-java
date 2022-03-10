@@ -23,10 +23,10 @@ public final class ListLocalUserKeysResult {
      */
     private final @Nullable List<SshPublicKeyResponse> sshAuthorizedKeys;
 
-    @OutputCustomType.Constructor({"sharedKey","sshAuthorizedKeys"})
+    @OutputCustomType.Constructor
     private ListLocalUserKeysResult(
-        String sharedKey,
-        @Nullable List<SshPublicKeyResponse> sshAuthorizedKeys) {
+        @OutputCustomType.Parameter("sharedKey") String sharedKey,
+        @OutputCustomType.Parameter("sshAuthorizedKeys") @Nullable List<SshPublicKeyResponse> sshAuthorizedKeys) {
         this.sharedKey = sharedKey;
         this.sshAuthorizedKeys = sshAuthorizedKeys;
     }

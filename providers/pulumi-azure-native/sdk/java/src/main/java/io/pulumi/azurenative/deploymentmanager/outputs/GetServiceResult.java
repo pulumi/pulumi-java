@@ -47,15 +47,15 @@ public final class GetServiceResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"id","location","name","tags","targetLocation","targetSubscriptionId","type"})
+    @OutputCustomType.Constructor
     private GetServiceResult(
-        String id,
-        String location,
-        String name,
-        @Nullable Map<String,String> tags,
-        String targetLocation,
-        String targetSubscriptionId,
-        String type) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("targetLocation") String targetLocation,
+        @OutputCustomType.Parameter("targetSubscriptionId") String targetSubscriptionId,
+        @OutputCustomType.Parameter("type") String type) {
         this.id = id;
         this.location = location;
         this.name = name;

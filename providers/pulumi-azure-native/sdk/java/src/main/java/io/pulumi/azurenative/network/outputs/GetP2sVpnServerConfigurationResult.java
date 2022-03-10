@@ -84,21 +84,21 @@ public final class GetP2sVpnServerConfigurationResult {
      */
     private final @Nullable List<String> vpnProtocols;
 
-    @OutputCustomType.Constructor({"etag","id","name","p2SVpnGateways","p2SVpnServerConfigRadiusClientRootCertificates","p2SVpnServerConfigRadiusServerRootCertificates","p2SVpnServerConfigVpnClientRevokedCertificates","p2SVpnServerConfigVpnClientRootCertificates","provisioningState","radiusServerAddress","radiusServerSecret","vpnClientIpsecPolicies","vpnProtocols"})
+    @OutputCustomType.Constructor
     private GetP2sVpnServerConfigurationResult(
-        String etag,
-        @Nullable String id,
-        @Nullable String name,
-        List<SubResourceResponse> p2SVpnGateways,
-        @Nullable List<P2SVpnServerConfigRadiusClientRootCertificateResponse> p2SVpnServerConfigRadiusClientRootCertificates,
-        @Nullable List<P2SVpnServerConfigRadiusServerRootCertificateResponse> p2SVpnServerConfigRadiusServerRootCertificates,
-        @Nullable List<P2SVpnServerConfigVpnClientRevokedCertificateResponse> p2SVpnServerConfigVpnClientRevokedCertificates,
-        @Nullable List<P2SVpnServerConfigVpnClientRootCertificateResponse> p2SVpnServerConfigVpnClientRootCertificates,
-        String provisioningState,
-        @Nullable String radiusServerAddress,
-        @Nullable String radiusServerSecret,
-        @Nullable List<IpsecPolicyResponse> vpnClientIpsecPolicies,
-        @Nullable List<String> vpnProtocols) {
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("p2SVpnGateways") List<SubResourceResponse> p2SVpnGateways,
+        @OutputCustomType.Parameter("p2SVpnServerConfigRadiusClientRootCertificates") @Nullable List<P2SVpnServerConfigRadiusClientRootCertificateResponse> p2SVpnServerConfigRadiusClientRootCertificates,
+        @OutputCustomType.Parameter("p2SVpnServerConfigRadiusServerRootCertificates") @Nullable List<P2SVpnServerConfigRadiusServerRootCertificateResponse> p2SVpnServerConfigRadiusServerRootCertificates,
+        @OutputCustomType.Parameter("p2SVpnServerConfigVpnClientRevokedCertificates") @Nullable List<P2SVpnServerConfigVpnClientRevokedCertificateResponse> p2SVpnServerConfigVpnClientRevokedCertificates,
+        @OutputCustomType.Parameter("p2SVpnServerConfigVpnClientRootCertificates") @Nullable List<P2SVpnServerConfigVpnClientRootCertificateResponse> p2SVpnServerConfigVpnClientRootCertificates,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("radiusServerAddress") @Nullable String radiusServerAddress,
+        @OutputCustomType.Parameter("radiusServerSecret") @Nullable String radiusServerSecret,
+        @OutputCustomType.Parameter("vpnClientIpsecPolicies") @Nullable List<IpsecPolicyResponse> vpnClientIpsecPolicies,
+        @OutputCustomType.Parameter("vpnProtocols") @Nullable List<String> vpnProtocols) {
         this.etag = etag;
         this.id = id;
         this.name = name;

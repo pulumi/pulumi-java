@@ -46,15 +46,15 @@ public final class ServerEndpointSyncActivityStatusResponse {
      */
     private final Double totalItemCount;
 
-    @OutputCustomType.Constructor({"appliedBytes","appliedItemCount","perItemErrorCount","syncMode","timestamp","totalBytes","totalItemCount"})
+    @OutputCustomType.Constructor
     private ServerEndpointSyncActivityStatusResponse(
-        Double appliedBytes,
-        Double appliedItemCount,
-        Double perItemErrorCount,
-        String syncMode,
-        String timestamp,
-        Double totalBytes,
-        Double totalItemCount) {
+        @OutputCustomType.Parameter("appliedBytes") Double appliedBytes,
+        @OutputCustomType.Parameter("appliedItemCount") Double appliedItemCount,
+        @OutputCustomType.Parameter("perItemErrorCount") Double perItemErrorCount,
+        @OutputCustomType.Parameter("syncMode") String syncMode,
+        @OutputCustomType.Parameter("timestamp") String timestamp,
+        @OutputCustomType.Parameter("totalBytes") Double totalBytes,
+        @OutputCustomType.Parameter("totalItemCount") Double totalItemCount) {
         this.appliedBytes = appliedBytes;
         this.appliedItemCount = appliedItemCount;
         this.perItemErrorCount = perItemErrorCount;

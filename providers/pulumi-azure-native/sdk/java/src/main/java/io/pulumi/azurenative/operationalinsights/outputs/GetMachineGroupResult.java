@@ -61,17 +61,17 @@ public final class GetMachineGroupResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"count","displayName","etag","groupType","id","kind","machines","name","type"})
+    @OutputCustomType.Constructor
     private GetMachineGroupResult(
-        @Nullable Integer count,
-        String displayName,
-        @Nullable String etag,
-        @Nullable String groupType,
-        String id,
-        String kind,
-        @Nullable List<MachineReferenceWithHintsResponse> machines,
-        String name,
-        String type) {
+        @OutputCustomType.Parameter("count") @Nullable Integer count,
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("etag") @Nullable String etag,
+        @OutputCustomType.Parameter("groupType") @Nullable String groupType,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("machines") @Nullable List<MachineReferenceWithHintsResponse> machines,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("type") String type) {
         this.count = count;
         this.displayName = displayName;
         this.etag = etag;

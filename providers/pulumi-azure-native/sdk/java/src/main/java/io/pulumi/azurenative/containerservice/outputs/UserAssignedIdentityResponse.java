@@ -27,11 +27,11 @@ public final class UserAssignedIdentityResponse {
      */
     private final @Nullable String resourceId;
 
-    @OutputCustomType.Constructor({"clientId","objectId","resourceId"})
+    @OutputCustomType.Constructor
     private UserAssignedIdentityResponse(
-        @Nullable String clientId,
-        @Nullable String objectId,
-        @Nullable String resourceId) {
+        @OutputCustomType.Parameter("clientId") @Nullable String clientId,
+        @OutputCustomType.Parameter("objectId") @Nullable String objectId,
+        @OutputCustomType.Parameter("resourceId") @Nullable String resourceId) {
         this.clientId = clientId;
         this.objectId = objectId;
         this.resourceId = resourceId;

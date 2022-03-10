@@ -29,11 +29,11 @@ public final class GetEntityResult {
      */
     private final @Nullable List<EntityInfoResponse> value;
 
-    @OutputCustomType.Constructor({"count","nextLink","value"})
+    @OutputCustomType.Constructor
     private GetEntityResult(
-        Integer count,
-        String nextLink,
-        @Nullable List<EntityInfoResponse> value) {
+        @OutputCustomType.Parameter("count") Integer count,
+        @OutputCustomType.Parameter("nextLink") String nextLink,
+        @OutputCustomType.Parameter("value") @Nullable List<EntityInfoResponse> value) {
         this.count = count;
         this.nextLink = nextLink;
         this.value = value;

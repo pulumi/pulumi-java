@@ -42,13 +42,13 @@ public final class MigrateMISyncCompleteCommandPropertiesResponse {
      */
     private final String state;
 
-    @OutputCustomType.Constructor({"commandType","errors","input","output","state"})
+    @OutputCustomType.Constructor
     private MigrateMISyncCompleteCommandPropertiesResponse(
-        String commandType,
-        List<ODataErrorResponse> errors,
-        @Nullable MigrateMISyncCompleteCommandInputResponse input,
-        MigrateMISyncCompleteCommandOutputResponse output,
-        String state) {
+        @OutputCustomType.Parameter("commandType") String commandType,
+        @OutputCustomType.Parameter("errors") List<ODataErrorResponse> errors,
+        @OutputCustomType.Parameter("input") @Nullable MigrateMISyncCompleteCommandInputResponse input,
+        @OutputCustomType.Parameter("output") MigrateMISyncCompleteCommandOutputResponse output,
+        @OutputCustomType.Parameter("state") String state) {
         this.commandType = commandType;
         this.errors = errors;
         this.input = input;

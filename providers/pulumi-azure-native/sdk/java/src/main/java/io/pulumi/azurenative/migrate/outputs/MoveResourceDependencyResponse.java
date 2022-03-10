@@ -49,15 +49,15 @@ public final class MoveResourceDependencyResponse {
      */
     private final @Nullable String resolutionType;
 
-    @OutputCustomType.Constructor({"automaticResolution","dependencyType","id","isOptional","manualResolution","resolutionStatus","resolutionType"})
+    @OutputCustomType.Constructor
     private MoveResourceDependencyResponse(
-        @Nullable AutomaticResolutionPropertiesResponse automaticResolution,
-        @Nullable String dependencyType,
-        @Nullable String id,
-        @Nullable String isOptional,
-        @Nullable ManualResolutionPropertiesResponse manualResolution,
-        @Nullable String resolutionStatus,
-        @Nullable String resolutionType) {
+        @OutputCustomType.Parameter("automaticResolution") @Nullable AutomaticResolutionPropertiesResponse automaticResolution,
+        @OutputCustomType.Parameter("dependencyType") @Nullable String dependencyType,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("isOptional") @Nullable String isOptional,
+        @OutputCustomType.Parameter("manualResolution") @Nullable ManualResolutionPropertiesResponse manualResolution,
+        @OutputCustomType.Parameter("resolutionStatus") @Nullable String resolutionStatus,
+        @OutputCustomType.Parameter("resolutionType") @Nullable String resolutionType) {
         this.automaticResolution = automaticResolution;
         this.dependencyType = dependencyType;
         this.id = id;

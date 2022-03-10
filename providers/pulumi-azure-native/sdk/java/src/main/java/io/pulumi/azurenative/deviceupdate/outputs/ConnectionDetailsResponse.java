@@ -35,13 +35,13 @@ public final class ConnectionDetailsResponse {
      */
     private final String privateIpAddress;
 
-    @OutputCustomType.Constructor({"groupId","id","linkIdentifier","memberName","privateIpAddress"})
+    @OutputCustomType.Constructor
     private ConnectionDetailsResponse(
-        String groupId,
-        String id,
-        String linkIdentifier,
-        String memberName,
-        String privateIpAddress) {
+        @OutputCustomType.Parameter("groupId") String groupId,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("linkIdentifier") String linkIdentifier,
+        @OutputCustomType.Parameter("memberName") String memberName,
+        @OutputCustomType.Parameter("privateIpAddress") String privateIpAddress) {
         this.groupId = groupId;
         this.id = id;
         this.linkIdentifier = linkIdentifier;

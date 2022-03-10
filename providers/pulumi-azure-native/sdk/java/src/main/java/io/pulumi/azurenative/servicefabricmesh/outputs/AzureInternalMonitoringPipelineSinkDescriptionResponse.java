@@ -54,16 +54,16 @@ public final class AzureInternalMonitoringPipelineSinkDescriptionResponse {
      */
     private final @Nullable String namespace;
 
-    @OutputCustomType.Constructor({"accountName","autoKeyConfigUrl","description","fluentdConfigUrl","kind","maConfigUrl","name","namespace"})
+    @OutputCustomType.Constructor
     private AzureInternalMonitoringPipelineSinkDescriptionResponse(
-        @Nullable String accountName,
-        @Nullable String autoKeyConfigUrl,
-        @Nullable String description,
-        @Nullable Object fluentdConfigUrl,
-        String kind,
-        @Nullable String maConfigUrl,
-        @Nullable String name,
-        @Nullable String namespace) {
+        @OutputCustomType.Parameter("accountName") @Nullable String accountName,
+        @OutputCustomType.Parameter("autoKeyConfigUrl") @Nullable String autoKeyConfigUrl,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("fluentdConfigUrl") @Nullable Object fluentdConfigUrl,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("maConfigUrl") @Nullable String maConfigUrl,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("namespace") @Nullable String namespace) {
         this.accountName = accountName;
         this.autoKeyConfigUrl = autoKeyConfigUrl;
         this.description = description;

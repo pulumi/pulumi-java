@@ -28,11 +28,11 @@ public final class CustomImagePropertiesCustomResponse {
      */
     private final @Nullable Boolean sysPrep;
 
-    @OutputCustomType.Constructor({"imageName","osType","sysPrep"})
+    @OutputCustomType.Constructor
     private CustomImagePropertiesCustomResponse(
-        @Nullable String imageName,
-        String osType,
-        @Nullable Boolean sysPrep) {
+        @OutputCustomType.Parameter("imageName") @Nullable String imageName,
+        @OutputCustomType.Parameter("osType") String osType,
+        @OutputCustomType.Parameter("sysPrep") @Nullable Boolean sysPrep) {
         this.imageName = imageName;
         this.osType = osType;
         this.sysPrep = sysPrep;

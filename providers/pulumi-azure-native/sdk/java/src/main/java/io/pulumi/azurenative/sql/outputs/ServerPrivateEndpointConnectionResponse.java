@@ -21,10 +21,10 @@ public final class ServerPrivateEndpointConnectionResponse {
      */
     private final PrivateEndpointConnectionPropertiesResponse properties;
 
-    @OutputCustomType.Constructor({"id","properties"})
+    @OutputCustomType.Constructor
     private ServerPrivateEndpointConnectionResponse(
-        String id,
-        PrivateEndpointConnectionPropertiesResponse properties) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("properties") PrivateEndpointConnectionPropertiesResponse properties) {
         this.id = id;
         this.properties = properties;
     }

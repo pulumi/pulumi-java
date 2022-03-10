@@ -54,16 +54,16 @@ public final class ConnectToSourceSqlServerTaskOutputTaskLevelResponse {
      */
     private final List<ReportableExceptionResponse> validationErrors;
 
-    @OutputCustomType.Constructor({"agentJobs","databases","id","logins","resultType","sourceServerBrandVersion","sourceServerVersion","validationErrors"})
+    @OutputCustomType.Constructor
     private ConnectToSourceSqlServerTaskOutputTaskLevelResponse(
-        Map<String,String> agentJobs,
-        Map<String,String> databases,
-        String id,
-        Map<String,String> logins,
-        String resultType,
-        String sourceServerBrandVersion,
-        String sourceServerVersion,
-        List<ReportableExceptionResponse> validationErrors) {
+        @OutputCustomType.Parameter("agentJobs") Map<String,String> agentJobs,
+        @OutputCustomType.Parameter("databases") Map<String,String> databases,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("logins") Map<String,String> logins,
+        @OutputCustomType.Parameter("resultType") String resultType,
+        @OutputCustomType.Parameter("sourceServerBrandVersion") String sourceServerBrandVersion,
+        @OutputCustomType.Parameter("sourceServerVersion") String sourceServerVersion,
+        @OutputCustomType.Parameter("validationErrors") List<ReportableExceptionResponse> validationErrors) {
         this.agentJobs = agentJobs;
         this.databases = databases;
         this.id = id;

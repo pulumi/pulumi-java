@@ -17,8 +17,8 @@ public final class NetworkFunctionUserConfigurationResponseOsProfile {
      */
     private final @Nullable String customData;
 
-    @OutputCustomType.Constructor({"customData"})
-    private NetworkFunctionUserConfigurationResponseOsProfile(@Nullable String customData) {
+    @OutputCustomType.Constructor
+    private NetworkFunctionUserConfigurationResponseOsProfile(@OutputCustomType.Parameter("customData") @Nullable String customData) {
         this.customData = customData;
     }
 

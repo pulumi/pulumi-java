@@ -36,12 +36,12 @@ public final class TransferFilterDetailsResponse {
      */
     private final @Nullable List<FilterFileDetailsResponse> filterFileDetails;
 
-    @OutputCustomType.Constructor({"azureFileFilterDetails","blobFilterDetails","dataAccountType","filterFileDetails"})
+    @OutputCustomType.Constructor
     private TransferFilterDetailsResponse(
-        @Nullable AzureFileFilterDetailsResponse azureFileFilterDetails,
-        @Nullable BlobFilterDetailsResponse blobFilterDetails,
-        String dataAccountType,
-        @Nullable List<FilterFileDetailsResponse> filterFileDetails) {
+        @OutputCustomType.Parameter("azureFileFilterDetails") @Nullable AzureFileFilterDetailsResponse azureFileFilterDetails,
+        @OutputCustomType.Parameter("blobFilterDetails") @Nullable BlobFilterDetailsResponse blobFilterDetails,
+        @OutputCustomType.Parameter("dataAccountType") String dataAccountType,
+        @OutputCustomType.Parameter("filterFileDetails") @Nullable List<FilterFileDetailsResponse> filterFileDetails) {
         this.azureFileFilterDetails = azureFileFilterDetails;
         this.blobFilterDetails = blobFilterDetails;
         this.dataAccountType = dataAccountType;

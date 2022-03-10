@@ -54,16 +54,16 @@ public final class GetHybridConnectionResult {
      */
     private final @Nullable String userMetadata;
 
-    @OutputCustomType.Constructor({"createdAt","id","listenerCount","name","requiresClientAuthorization","type","updatedAt","userMetadata"})
+    @OutputCustomType.Constructor
     private GetHybridConnectionResult(
-        String createdAt,
-        String id,
-        Integer listenerCount,
-        String name,
-        @Nullable Boolean requiresClientAuthorization,
-        String type,
-        String updatedAt,
-        @Nullable String userMetadata) {
+        @OutputCustomType.Parameter("createdAt") String createdAt,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("listenerCount") Integer listenerCount,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("requiresClientAuthorization") @Nullable Boolean requiresClientAuthorization,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("updatedAt") String updatedAt,
+        @OutputCustomType.Parameter("userMetadata") @Nullable String userMetadata) {
         this.createdAt = createdAt;
         this.id = id;
         this.listenerCount = listenerCount;

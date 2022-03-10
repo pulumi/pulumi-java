@@ -77,21 +77,21 @@ public final class GetBillingRoleAssignmentByDepartmentResult {
      */
     private final @Nullable String userEmailAddress;
 
-    @OutputCustomType.Constructor({"createdByPrincipalId","createdByPrincipalTenantId","createdByUserEmailAddress","createdOn","id","name","principalId","principalTenantId","roleDefinitionId","scope","type","userAuthenticationType","userEmailAddress"})
+    @OutputCustomType.Constructor
     private GetBillingRoleAssignmentByDepartmentResult(
-        String createdByPrincipalId,
-        String createdByPrincipalTenantId,
-        String createdByUserEmailAddress,
-        String createdOn,
-        String id,
-        String name,
-        @Nullable String principalId,
-        @Nullable String principalTenantId,
-        @Nullable String roleDefinitionId,
-        String scope,
-        String type,
-        @Nullable String userAuthenticationType,
-        @Nullable String userEmailAddress) {
+        @OutputCustomType.Parameter("createdByPrincipalId") String createdByPrincipalId,
+        @OutputCustomType.Parameter("createdByPrincipalTenantId") String createdByPrincipalTenantId,
+        @OutputCustomType.Parameter("createdByUserEmailAddress") String createdByUserEmailAddress,
+        @OutputCustomType.Parameter("createdOn") String createdOn,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("principalId") @Nullable String principalId,
+        @OutputCustomType.Parameter("principalTenantId") @Nullable String principalTenantId,
+        @OutputCustomType.Parameter("roleDefinitionId") @Nullable String roleDefinitionId,
+        @OutputCustomType.Parameter("scope") String scope,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("userAuthenticationType") @Nullable String userAuthenticationType,
+        @OutputCustomType.Parameter("userEmailAddress") @Nullable String userEmailAddress) {
         this.createdByPrincipalId = createdByPrincipalId;
         this.createdByPrincipalTenantId = createdByPrincipalTenantId;
         this.createdByUserEmailAddress = createdByUserEmailAddress;

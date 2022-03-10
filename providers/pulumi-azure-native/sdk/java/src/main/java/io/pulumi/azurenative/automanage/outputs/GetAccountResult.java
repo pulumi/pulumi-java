@@ -44,14 +44,14 @@ public final class GetAccountResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"id","identity","location","name","tags","type"})
+    @OutputCustomType.Constructor
     private GetAccountResult(
-        String id,
-        @Nullable AccountIdentityResponse identity,
-        String location,
-        String name,
-        @Nullable Map<String,String> tags,
-        String type) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("identity") @Nullable AccountIdentityResponse identity,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type) {
         this.id = id;
         this.identity = identity;
         this.location = location;

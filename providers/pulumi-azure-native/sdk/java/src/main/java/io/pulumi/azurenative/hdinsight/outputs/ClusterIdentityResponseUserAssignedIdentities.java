@@ -27,11 +27,11 @@ public final class ClusterIdentityResponseUserAssignedIdentities {
      */
     private final @Nullable String tenantId;
 
-    @OutputCustomType.Constructor({"clientId","principalId","tenantId"})
+    @OutputCustomType.Constructor
     private ClusterIdentityResponseUserAssignedIdentities(
-        String clientId,
-        String principalId,
-        @Nullable String tenantId) {
+        @OutputCustomType.Parameter("clientId") String clientId,
+        @OutputCustomType.Parameter("principalId") String principalId,
+        @OutputCustomType.Parameter("tenantId") @Nullable String tenantId) {
         this.clientId = clientId;
         this.principalId = principalId;
         this.tenantId = tenantId;

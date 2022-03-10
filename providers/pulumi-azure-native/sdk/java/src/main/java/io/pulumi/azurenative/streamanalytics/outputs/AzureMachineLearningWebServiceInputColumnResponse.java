@@ -28,11 +28,11 @@ public final class AzureMachineLearningWebServiceInputColumnResponse {
      */
     private final @Nullable String name;
 
-    @OutputCustomType.Constructor({"dataType","mapTo","name"})
+    @OutputCustomType.Constructor
     private AzureMachineLearningWebServiceInputColumnResponse(
-        @Nullable String dataType,
-        @Nullable Integer mapTo,
-        @Nullable String name) {
+        @OutputCustomType.Parameter("dataType") @Nullable String dataType,
+        @OutputCustomType.Parameter("mapTo") @Nullable Integer mapTo,
+        @OutputCustomType.Parameter("name") @Nullable String name) {
         this.dataType = dataType;
         this.mapTo = mapTo;
         this.name = name;

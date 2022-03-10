@@ -41,13 +41,13 @@ public final class AzureSqlContainerResponse {
      */
     private final @Nullable String registrationStatus;
 
-    @OutputCustomType.Constructor({"backupManagementType","containerType","friendlyName","healthStatus","registrationStatus"})
+    @OutputCustomType.Constructor
     private AzureSqlContainerResponse(
-        @Nullable String backupManagementType,
-        String containerType,
-        @Nullable String friendlyName,
-        @Nullable String healthStatus,
-        @Nullable String registrationStatus) {
+        @OutputCustomType.Parameter("backupManagementType") @Nullable String backupManagementType,
+        @OutputCustomType.Parameter("containerType") String containerType,
+        @OutputCustomType.Parameter("friendlyName") @Nullable String friendlyName,
+        @OutputCustomType.Parameter("healthStatus") @Nullable String healthStatus,
+        @OutputCustomType.Parameter("registrationStatus") @Nullable String registrationStatus) {
         this.backupManagementType = backupManagementType;
         this.containerType = containerType;
         this.friendlyName = friendlyName;

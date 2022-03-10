@@ -35,12 +35,12 @@ public final class ParameterDefinitionsValueResponse {
      */
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor({"allowedValues","defaultValue","metadata","type"})
+    @OutputCustomType.Constructor
     private ParameterDefinitionsValueResponse(
-        @Nullable List<Object> allowedValues,
-        @Nullable Object defaultValue,
-        @Nullable ParameterDefinitionsValueResponseMetadata metadata,
-        @Nullable String type) {
+        @OutputCustomType.Parameter("allowedValues") @Nullable List<Object> allowedValues,
+        @OutputCustomType.Parameter("defaultValue") @Nullable Object defaultValue,
+        @OutputCustomType.Parameter("metadata") @Nullable ParameterDefinitionsValueResponseMetadata metadata,
+        @OutputCustomType.Parameter("type") @Nullable String type) {
         this.allowedValues = allowedValues;
         this.defaultValue = defaultValue;
         this.metadata = metadata;

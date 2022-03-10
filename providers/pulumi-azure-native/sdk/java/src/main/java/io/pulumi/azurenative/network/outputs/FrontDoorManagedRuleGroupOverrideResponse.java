@@ -29,11 +29,11 @@ public final class FrontDoorManagedRuleGroupOverrideResponse {
      */
     private final @Nullable List<FrontDoorManagedRuleOverrideResponse> rules;
 
-    @OutputCustomType.Constructor({"exclusions","ruleGroupName","rules"})
+    @OutputCustomType.Constructor
     private FrontDoorManagedRuleGroupOverrideResponse(
-        @Nullable List<ManagedRuleExclusionResponse> exclusions,
-        String ruleGroupName,
-        @Nullable List<FrontDoorManagedRuleOverrideResponse> rules) {
+        @OutputCustomType.Parameter("exclusions") @Nullable List<ManagedRuleExclusionResponse> exclusions,
+        @OutputCustomType.Parameter("ruleGroupName") String ruleGroupName,
+        @OutputCustomType.Parameter("rules") @Nullable List<FrontDoorManagedRuleOverrideResponse> rules) {
         this.exclusions = exclusions;
         this.ruleGroupName = ruleGroupName;
         this.rules = rules;

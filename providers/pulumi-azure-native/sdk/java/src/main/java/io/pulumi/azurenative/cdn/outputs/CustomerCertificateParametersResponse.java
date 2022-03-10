@@ -46,14 +46,14 @@ public final class CustomerCertificateParametersResponse {
      */
     private final @Nullable Boolean useLatestVersion;
 
-    @OutputCustomType.Constructor({"certificateAuthority","secretSource","secretVersion","subjectAlternativeNames","type","useLatestVersion"})
+    @OutputCustomType.Constructor
     private CustomerCertificateParametersResponse(
-        @Nullable String certificateAuthority,
-        ResourceReferenceResponse secretSource,
-        @Nullable String secretVersion,
-        @Nullable List<String> subjectAlternativeNames,
-        String type,
-        @Nullable Boolean useLatestVersion) {
+        @OutputCustomType.Parameter("certificateAuthority") @Nullable String certificateAuthority,
+        @OutputCustomType.Parameter("secretSource") ResourceReferenceResponse secretSource,
+        @OutputCustomType.Parameter("secretVersion") @Nullable String secretVersion,
+        @OutputCustomType.Parameter("subjectAlternativeNames") @Nullable List<String> subjectAlternativeNames,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("useLatestVersion") @Nullable Boolean useLatestVersion) {
         this.certificateAuthority = certificateAuthority;
         this.secretSource = secretSource;
         this.secretVersion = secretVersion;

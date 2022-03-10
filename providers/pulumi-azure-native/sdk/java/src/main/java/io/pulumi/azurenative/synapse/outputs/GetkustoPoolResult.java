@@ -90,23 +90,23 @@ public final class GetkustoPoolResult {
      */
     private final @Nullable String workspaceUid;
 
-    @OutputCustomType.Constructor({"dataIngestionUri","engineType","etag","id","location","name","provisioningState","sku","state","stateReason","systemData","tags","type","uri","workspaceUid"})
+    @OutputCustomType.Constructor
     private GetkustoPoolResult(
-        String dataIngestionUri,
-        @Nullable String engineType,
-        String etag,
-        String id,
-        String location,
-        String name,
-        String provisioningState,
-        AzureSkuResponse sku,
-        String state,
-        String stateReason,
-        SystemDataResponse systemData,
-        @Nullable Map<String,String> tags,
-        String type,
-        String uri,
-        @Nullable String workspaceUid) {
+        @OutputCustomType.Parameter("dataIngestionUri") String dataIngestionUri,
+        @OutputCustomType.Parameter("engineType") @Nullable String engineType,
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("sku") AzureSkuResponse sku,
+        @OutputCustomType.Parameter("state") String state,
+        @OutputCustomType.Parameter("stateReason") String stateReason,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("uri") String uri,
+        @OutputCustomType.Parameter("workspaceUid") @Nullable String workspaceUid) {
         this.dataIngestionUri = dataIngestionUri;
         this.engineType = engineType;
         this.etag = etag;

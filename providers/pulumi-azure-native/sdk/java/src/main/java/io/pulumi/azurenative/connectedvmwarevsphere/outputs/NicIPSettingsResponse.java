@@ -54,16 +54,16 @@ public final class NicIPSettingsResponse {
      */
     private final @Nullable String subnetMask;
 
-    @OutputCustomType.Constructor({"allocationMethod","dnsServers","gateway","ipAddress","ipAddressInfo","primaryWinsServer","secondaryWinsServer","subnetMask"})
+    @OutputCustomType.Constructor
     private NicIPSettingsResponse(
-        @Nullable String allocationMethod,
-        @Nullable List<String> dnsServers,
-        @Nullable List<String> gateway,
-        @Nullable String ipAddress,
-        List<NicIPAddressSettingsResponse> ipAddressInfo,
-        String primaryWinsServer,
-        String secondaryWinsServer,
-        @Nullable String subnetMask) {
+        @OutputCustomType.Parameter("allocationMethod") @Nullable String allocationMethod,
+        @OutputCustomType.Parameter("dnsServers") @Nullable List<String> dnsServers,
+        @OutputCustomType.Parameter("gateway") @Nullable List<String> gateway,
+        @OutputCustomType.Parameter("ipAddress") @Nullable String ipAddress,
+        @OutputCustomType.Parameter("ipAddressInfo") List<NicIPAddressSettingsResponse> ipAddressInfo,
+        @OutputCustomType.Parameter("primaryWinsServer") String primaryWinsServer,
+        @OutputCustomType.Parameter("secondaryWinsServer") String secondaryWinsServer,
+        @OutputCustomType.Parameter("subnetMask") @Nullable String subnetMask) {
         this.allocationMethod = allocationMethod;
         this.dnsServers = dnsServers;
         this.gateway = gateway;

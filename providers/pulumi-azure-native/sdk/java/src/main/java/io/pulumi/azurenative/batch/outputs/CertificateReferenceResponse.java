@@ -25,12 +25,12 @@ public final class CertificateReferenceResponse {
     private final @Nullable String storeName;
     private final @Nullable List<String> visibility;
 
-    @OutputCustomType.Constructor({"id","storeLocation","storeName","visibility"})
+    @OutputCustomType.Constructor
     private CertificateReferenceResponse(
-        String id,
-        @Nullable String storeLocation,
-        @Nullable String storeName,
-        @Nullable List<String> visibility) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("storeLocation") @Nullable String storeLocation,
+        @OutputCustomType.Parameter("storeName") @Nullable String storeName,
+        @OutputCustomType.Parameter("visibility") @Nullable List<String> visibility) {
         this.id = id;
         this.storeLocation = storeLocation;
         this.storeName = storeName;

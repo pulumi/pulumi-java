@@ -20,10 +20,10 @@ public final class GetTestBaseAccountFileUploadUrlResult {
      */
     private final String uploadUrl;
 
-    @OutputCustomType.Constructor({"blobPath","uploadUrl"})
+    @OutputCustomType.Constructor
     private GetTestBaseAccountFileUploadUrlResult(
-        String blobPath,
-        String uploadUrl) {
+        @OutputCustomType.Parameter("blobPath") String blobPath,
+        @OutputCustomType.Parameter("uploadUrl") String uploadUrl) {
         this.blobPath = blobPath;
         this.uploadUrl = uploadUrl;
     }

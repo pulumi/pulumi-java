@@ -28,11 +28,11 @@ public final class RetentionPolicyResponse {
      */
     private final @Nullable String status;
 
-    @OutputCustomType.Constructor({"days","lastUpdatedTime","status"})
+    @OutputCustomType.Constructor
     private RetentionPolicyResponse(
-        @Nullable Integer days,
-        String lastUpdatedTime,
-        @Nullable String status) {
+        @OutputCustomType.Parameter("days") @Nullable Integer days,
+        @OutputCustomType.Parameter("lastUpdatedTime") String lastUpdatedTime,
+        @OutputCustomType.Parameter("status") @Nullable String status) {
         this.days = days;
         this.lastUpdatedTime = lastUpdatedTime;
         this.status = status;

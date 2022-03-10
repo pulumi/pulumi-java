@@ -27,11 +27,11 @@ public final class KubernetesRoleComputeResponse {
      */
     private final String vmProfile;
 
-    @OutputCustomType.Constructor({"memoryInBytes","processorCount","vmProfile"})
+    @OutputCustomType.Constructor
     private KubernetesRoleComputeResponse(
-        Double memoryInBytes,
-        Integer processorCount,
-        String vmProfile) {
+        @OutputCustomType.Parameter("memoryInBytes") Double memoryInBytes,
+        @OutputCustomType.Parameter("processorCount") Integer processorCount,
+        @OutputCustomType.Parameter("vmProfile") String vmProfile) {
         this.memoryInBytes = memoryInBytes;
         this.processorCount = processorCount;
         this.vmProfile = vmProfile;

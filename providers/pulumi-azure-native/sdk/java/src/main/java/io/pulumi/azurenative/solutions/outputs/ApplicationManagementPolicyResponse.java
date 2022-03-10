@@ -17,8 +17,8 @@ public final class ApplicationManagementPolicyResponse {
      */
     private final @Nullable String mode;
 
-    @OutputCustomType.Constructor({"mode"})
-    private ApplicationManagementPolicyResponse(@Nullable String mode) {
+    @OutputCustomType.Constructor
+    private ApplicationManagementPolicyResponse(@OutputCustomType.Parameter("mode") @Nullable String mode) {
         this.mode = mode;
     }
 

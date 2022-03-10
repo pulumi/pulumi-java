@@ -55,16 +55,16 @@ public final class GetClusterResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"etag","id","identity","location","name","properties","tags","type"})
+    @OutputCustomType.Constructor
     private GetClusterResult(
-        @Nullable String etag,
-        String id,
-        @Nullable ClusterIdentityResponse identity,
-        @Nullable String location,
-        String name,
-        ClusterGetPropertiesResponse properties,
-        @Nullable Map<String,String> tags,
-        String type) {
+        @OutputCustomType.Parameter("etag") @Nullable String etag,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("identity") @Nullable ClusterIdentityResponse identity,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("properties") ClusterGetPropertiesResponse properties,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type) {
         this.etag = etag;
         this.id = id;
         this.identity = identity;

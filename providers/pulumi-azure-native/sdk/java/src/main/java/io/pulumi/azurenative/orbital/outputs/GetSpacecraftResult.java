@@ -86,22 +86,22 @@ public final class GetSpacecraftResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"authorizationStatus","authorizationStatusExtended","etag","id","links","location","name","noradId","systemData","tags","titleLine","tleLine1","tleLine2","type"})
+    @OutputCustomType.Constructor
     private GetSpacecraftResult(
-        String authorizationStatus,
-        String authorizationStatusExtended,
-        String etag,
-        String id,
-        @Nullable List<SpacecraftLinkResponse> links,
-        String location,
-        String name,
-        String noradId,
-        SystemDataResponse systemData,
-        @Nullable Map<String,String> tags,
-        @Nullable String titleLine,
-        @Nullable String tleLine1,
-        @Nullable String tleLine2,
-        String type) {
+        @OutputCustomType.Parameter("authorizationStatus") String authorizationStatus,
+        @OutputCustomType.Parameter("authorizationStatusExtended") String authorizationStatusExtended,
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("links") @Nullable List<SpacecraftLinkResponse> links,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("noradId") String noradId,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("titleLine") @Nullable String titleLine,
+        @OutputCustomType.Parameter("tleLine1") @Nullable String tleLine1,
+        @OutputCustomType.Parameter("tleLine2") @Nullable String tleLine2,
+        @OutputCustomType.Parameter("type") String type) {
         this.authorizationStatus = authorizationStatus;
         this.authorizationStatusExtended = authorizationStatusExtended;
         this.etag = etag;

@@ -32,12 +32,12 @@ public final class GetComponentLinkedStorageAccountResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"id","linkedStorageAccount","name","type"})
+    @OutputCustomType.Constructor
     private GetComponentLinkedStorageAccountResult(
-        String id,
-        @Nullable String linkedStorageAccount,
-        String name,
-        String type) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("linkedStorageAccount") @Nullable String linkedStorageAccount,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("type") String type) {
         this.id = id;
         this.linkedStorageAccount = linkedStorageAccount;
         this.name = name;

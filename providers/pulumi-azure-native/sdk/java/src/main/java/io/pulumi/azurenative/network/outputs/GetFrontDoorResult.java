@@ -111,26 +111,26 @@ public final class GetFrontDoorResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"backendPools","backendPoolsSettings","cname","enabledState","friendlyName","frontdoorId","frontendEndpoints","healthProbeSettings","id","loadBalancingSettings","location","name","provisioningState","resourceState","routingRules","rulesEngines","tags","type"})
+    @OutputCustomType.Constructor
     private GetFrontDoorResult(
-        @Nullable List<BackendPoolResponse> backendPools,
-        @Nullable BackendPoolsSettingsResponse backendPoolsSettings,
-        String cname,
-        @Nullable String enabledState,
-        @Nullable String friendlyName,
-        String frontdoorId,
-        @Nullable List<FrontendEndpointResponse> frontendEndpoints,
-        @Nullable List<HealthProbeSettingsModelResponse> healthProbeSettings,
-        String id,
-        @Nullable List<LoadBalancingSettingsModelResponse> loadBalancingSettings,
-        @Nullable String location,
-        String name,
-        String provisioningState,
-        String resourceState,
-        @Nullable List<RoutingRuleResponse> routingRules,
-        List<RulesEngineResponse> rulesEngines,
-        @Nullable Map<String,String> tags,
-        String type) {
+        @OutputCustomType.Parameter("backendPools") @Nullable List<BackendPoolResponse> backendPools,
+        @OutputCustomType.Parameter("backendPoolsSettings") @Nullable BackendPoolsSettingsResponse backendPoolsSettings,
+        @OutputCustomType.Parameter("cname") String cname,
+        @OutputCustomType.Parameter("enabledState") @Nullable String enabledState,
+        @OutputCustomType.Parameter("friendlyName") @Nullable String friendlyName,
+        @OutputCustomType.Parameter("frontdoorId") String frontdoorId,
+        @OutputCustomType.Parameter("frontendEndpoints") @Nullable List<FrontendEndpointResponse> frontendEndpoints,
+        @OutputCustomType.Parameter("healthProbeSettings") @Nullable List<HealthProbeSettingsModelResponse> healthProbeSettings,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("loadBalancingSettings") @Nullable List<LoadBalancingSettingsModelResponse> loadBalancingSettings,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("resourceState") String resourceState,
+        @OutputCustomType.Parameter("routingRules") @Nullable List<RoutingRuleResponse> routingRules,
+        @OutputCustomType.Parameter("rulesEngines") List<RulesEngineResponse> rulesEngines,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type) {
         this.backendPools = backendPools;
         this.backendPoolsSettings = backendPoolsSettings;
         this.cname = cname;

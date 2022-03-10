@@ -17,8 +17,8 @@ public final class PrivateLinkServicePropertiesResponseVisibility {
      */
     private final @Nullable List<String> subscriptions;
 
-    @OutputCustomType.Constructor({"subscriptions"})
-    private PrivateLinkServicePropertiesResponseVisibility(@Nullable List<String> subscriptions) {
+    @OutputCustomType.Constructor
+    private PrivateLinkServicePropertiesResponseVisibility(@OutputCustomType.Parameter("subscriptions") @Nullable List<String> subscriptions) {
         this.subscriptions = subscriptions;
     }
 

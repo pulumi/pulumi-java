@@ -79,21 +79,21 @@ public final class SiteResponse {
      */
     private final @Nullable List<String> trustedOrigins;
 
-    @OutputCustomType.Constructor({"eTag","isBlockUserUploadEnabled","isEnabled","isSecureSiteEnabled","isTokenEnabled","isV1Enabled","isV3Enabled","isWebchatPreviewEnabled","key","key2","siteId","siteName","trustedOrigins"})
+    @OutputCustomType.Constructor
     private SiteResponse(
-        @Nullable String eTag,
-        @Nullable Boolean isBlockUserUploadEnabled,
-        Boolean isEnabled,
-        @Nullable Boolean isSecureSiteEnabled,
-        @Nullable Boolean isTokenEnabled,
-        Boolean isV1Enabled,
-        Boolean isV3Enabled,
-        Boolean isWebchatPreviewEnabled,
-        String key,
-        String key2,
-        String siteId,
-        String siteName,
-        @Nullable List<String> trustedOrigins) {
+        @OutputCustomType.Parameter("eTag") @Nullable String eTag,
+        @OutputCustomType.Parameter("isBlockUserUploadEnabled") @Nullable Boolean isBlockUserUploadEnabled,
+        @OutputCustomType.Parameter("isEnabled") Boolean isEnabled,
+        @OutputCustomType.Parameter("isSecureSiteEnabled") @Nullable Boolean isSecureSiteEnabled,
+        @OutputCustomType.Parameter("isTokenEnabled") @Nullable Boolean isTokenEnabled,
+        @OutputCustomType.Parameter("isV1Enabled") Boolean isV1Enabled,
+        @OutputCustomType.Parameter("isV3Enabled") Boolean isV3Enabled,
+        @OutputCustomType.Parameter("isWebchatPreviewEnabled") Boolean isWebchatPreviewEnabled,
+        @OutputCustomType.Parameter("key") String key,
+        @OutputCustomType.Parameter("key2") String key2,
+        @OutputCustomType.Parameter("siteId") String siteId,
+        @OutputCustomType.Parameter("siteName") String siteName,
+        @OutputCustomType.Parameter("trustedOrigins") @Nullable List<String> trustedOrigins) {
         this.eTag = eTag;
         this.isBlockUserUploadEnabled = isBlockUserUploadEnabled;
         this.isEnabled = isEnabled;

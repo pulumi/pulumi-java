@@ -91,23 +91,23 @@ public final class GetApplicationResult {
      */
     private final String unhealthyEvaluation;
 
-    @OutputCustomType.Constructor({"debugParams","description","diagnostics","healthState","id","location","name","provisioningState","serviceNames","services","status","statusDetails","tags","type","unhealthyEvaluation"})
+    @OutputCustomType.Constructor
     private GetApplicationResult(
-        @Nullable String debugParams,
-        @Nullable String description,
-        @Nullable DiagnosticsDescriptionResponse diagnostics,
-        String healthState,
-        String id,
-        String location,
-        String name,
-        String provisioningState,
-        List<String> serviceNames,
-        @Nullable List<ServiceResourceDescriptionResponse> services,
-        String status,
-        String statusDetails,
-        @Nullable Map<String,String> tags,
-        String type,
-        String unhealthyEvaluation) {
+        @OutputCustomType.Parameter("debugParams") @Nullable String debugParams,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("diagnostics") @Nullable DiagnosticsDescriptionResponse diagnostics,
+        @OutputCustomType.Parameter("healthState") String healthState,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("serviceNames") List<String> serviceNames,
+        @OutputCustomType.Parameter("services") @Nullable List<ServiceResourceDescriptionResponse> services,
+        @OutputCustomType.Parameter("status") String status,
+        @OutputCustomType.Parameter("statusDetails") String statusDetails,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("unhealthyEvaluation") String unhealthyEvaluation) {
         this.debugParams = debugParams;
         this.description = description;
         this.diagnostics = diagnostics;

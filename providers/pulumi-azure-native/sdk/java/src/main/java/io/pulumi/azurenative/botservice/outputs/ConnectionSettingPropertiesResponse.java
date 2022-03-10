@@ -64,18 +64,18 @@ public final class ConnectionSettingPropertiesResponse {
      */
     private final String settingId;
 
-    @OutputCustomType.Constructor({"clientId","clientSecret","id","name","parameters","provisioningState","scopes","serviceProviderDisplayName","serviceProviderId","settingId"})
+    @OutputCustomType.Constructor
     private ConnectionSettingPropertiesResponse(
-        @Nullable String clientId,
-        @Nullable String clientSecret,
-        @Nullable String id,
-        @Nullable String name,
-        @Nullable List<ConnectionSettingParameterResponse> parameters,
-        @Nullable String provisioningState,
-        @Nullable String scopes,
-        @Nullable String serviceProviderDisplayName,
-        @Nullable String serviceProviderId,
-        String settingId) {
+        @OutputCustomType.Parameter("clientId") @Nullable String clientId,
+        @OutputCustomType.Parameter("clientSecret") @Nullable String clientSecret,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("parameters") @Nullable List<ConnectionSettingParameterResponse> parameters,
+        @OutputCustomType.Parameter("provisioningState") @Nullable String provisioningState,
+        @OutputCustomType.Parameter("scopes") @Nullable String scopes,
+        @OutputCustomType.Parameter("serviceProviderDisplayName") @Nullable String serviceProviderDisplayName,
+        @OutputCustomType.Parameter("serviceProviderId") @Nullable String serviceProviderId,
+        @OutputCustomType.Parameter("settingId") String settingId) {
         this.clientId = clientId;
         this.clientSecret = clientSecret;
         this.id = id;

@@ -79,18 +79,18 @@ public final class GetChannelResult {
      */
     private final List<String> zones;
 
-    @OutputCustomType.Constructor({"etag","id","kind","location","name","properties","sku","tags","type","zones"})
+    @OutputCustomType.Constructor
     private GetChannelResult(
-        @Nullable String etag,
-        String id,
-        @Nullable String kind,
-        @Nullable String location,
-        String name,
-        Object properties,
-        @Nullable SkuResponse sku,
-        @Nullable Map<String,String> tags,
-        String type,
-        List<String> zones) {
+        @OutputCustomType.Parameter("etag") @Nullable String etag,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("kind") @Nullable String kind,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("properties") Object properties,
+        @OutputCustomType.Parameter("sku") @Nullable SkuResponse sku,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("zones") List<String> zones) {
         this.etag = etag;
         this.id = id;
         this.kind = kind;

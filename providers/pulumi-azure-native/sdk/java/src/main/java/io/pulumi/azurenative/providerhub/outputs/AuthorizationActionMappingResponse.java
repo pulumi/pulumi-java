@@ -14,10 +14,10 @@ public final class AuthorizationActionMappingResponse {
     private final @Nullable String desired;
     private final @Nullable String original;
 
-    @OutputCustomType.Constructor({"desired","original"})
+    @OutputCustomType.Constructor
     private AuthorizationActionMappingResponse(
-        @Nullable String desired,
-        @Nullable String original) {
+        @OutputCustomType.Parameter("desired") @Nullable String desired,
+        @OutputCustomType.Parameter("original") @Nullable String original) {
         this.desired = desired;
         this.original = original;
     }

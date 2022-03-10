@@ -70,19 +70,19 @@ public final class GetAgentPoolResult {
      */
     private final @Nullable String virtualNetworkSubnetResourceId;
 
-    @OutputCustomType.Constructor({"count","id","location","name","os","provisioningState","systemData","tags","tier","type","virtualNetworkSubnetResourceId"})
+    @OutputCustomType.Constructor
     private GetAgentPoolResult(
-        @Nullable Integer count,
-        String id,
-        String location,
-        String name,
-        @Nullable String os,
-        String provisioningState,
-        SystemDataResponse systemData,
-        @Nullable Map<String,String> tags,
-        @Nullable String tier,
-        String type,
-        @Nullable String virtualNetworkSubnetResourceId) {
+        @OutputCustomType.Parameter("count") @Nullable Integer count,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("os") @Nullable String os,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("tier") @Nullable String tier,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("virtualNetworkSubnetResourceId") @Nullable String virtualNetworkSubnetResourceId) {
         this.count = count;
         this.id = id;
         this.location = location;

@@ -33,12 +33,12 @@ public final class CertificateConfigurationResponse {
      */
     private final String storeName;
 
-    @OutputCustomType.Constructor({"certificate","certificatePassword","encodedCertificate","storeName"})
+    @OutputCustomType.Constructor
     private CertificateConfigurationResponse(
-        @Nullable CertificateInformationResponse certificate,
-        @Nullable String certificatePassword,
-        @Nullable String encodedCertificate,
-        String storeName) {
+        @OutputCustomType.Parameter("certificate") @Nullable CertificateInformationResponse certificate,
+        @OutputCustomType.Parameter("certificatePassword") @Nullable String certificatePassword,
+        @OutputCustomType.Parameter("encodedCertificate") @Nullable String encodedCertificate,
+        @OutputCustomType.Parameter("storeName") String storeName) {
         this.certificate = certificate;
         this.certificatePassword = certificatePassword;
         this.encodedCertificate = encodedCertificate;

@@ -23,10 +23,10 @@ public final class ListStreamingLocatorPathsResult {
      */
     private final @Nullable List<StreamingPathResponse> streamingPaths;
 
-    @OutputCustomType.Constructor({"downloadPaths","streamingPaths"})
+    @OutputCustomType.Constructor
     private ListStreamingLocatorPathsResult(
-        @Nullable List<String> downloadPaths,
-        @Nullable List<StreamingPathResponse> streamingPaths) {
+        @OutputCustomType.Parameter("downloadPaths") @Nullable List<String> downloadPaths,
+        @OutputCustomType.Parameter("streamingPaths") @Nullable List<StreamingPathResponse> streamingPaths) {
         this.downloadPaths = downloadPaths;
         this.streamingPaths = streamingPaths;
     }

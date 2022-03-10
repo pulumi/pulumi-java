@@ -17,8 +17,8 @@ public final class WorkloadNetworkSegmentPortVifResponse {
      */
     private final @Nullable String portName;
 
-    @OutputCustomType.Constructor({"portName"})
-    private WorkloadNetworkSegmentPortVifResponse(@Nullable String portName) {
+    @OutputCustomType.Constructor
+    private WorkloadNetworkSegmentPortVifResponse(@OutputCustomType.Parameter("portName") @Nullable String portName) {
         this.portName = portName;
     }
 

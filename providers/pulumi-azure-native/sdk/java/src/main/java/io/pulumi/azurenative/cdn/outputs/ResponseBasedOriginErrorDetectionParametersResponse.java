@@ -30,11 +30,11 @@ public final class ResponseBasedOriginErrorDetectionParametersResponse {
      */
     private final @Nullable Integer responseBasedFailoverThresholdPercentage;
 
-    @OutputCustomType.Constructor({"httpErrorRanges","responseBasedDetectedErrorTypes","responseBasedFailoverThresholdPercentage"})
+    @OutputCustomType.Constructor
     private ResponseBasedOriginErrorDetectionParametersResponse(
-        @Nullable List<HttpErrorRangeParametersResponse> httpErrorRanges,
-        @Nullable String responseBasedDetectedErrorTypes,
-        @Nullable Integer responseBasedFailoverThresholdPercentage) {
+        @OutputCustomType.Parameter("httpErrorRanges") @Nullable List<HttpErrorRangeParametersResponse> httpErrorRanges,
+        @OutputCustomType.Parameter("responseBasedDetectedErrorTypes") @Nullable String responseBasedDetectedErrorTypes,
+        @OutputCustomType.Parameter("responseBasedFailoverThresholdPercentage") @Nullable Integer responseBasedFailoverThresholdPercentage) {
         this.httpErrorRanges = httpErrorRanges;
         this.responseBasedDetectedErrorTypes = responseBasedDetectedErrorTypes;
         this.responseBasedFailoverThresholdPercentage = responseBasedFailoverThresholdPercentage;

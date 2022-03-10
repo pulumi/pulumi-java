@@ -15,8 +15,8 @@ public final class IpRuleResponse {
      */
     private final String value;
 
-    @OutputCustomType.Constructor({"value"})
-    private IpRuleResponse(String value) {
+    @OutputCustomType.Constructor
+    private IpRuleResponse(@OutputCustomType.Parameter("value") String value) {
         this.value = value;
     }
 

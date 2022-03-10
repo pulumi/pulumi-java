@@ -29,11 +29,11 @@ public final class NotificationReceiverValueResponse {
      */
     private final @Nullable UserObjectReceiverValueResponse userObjectReceiverValue;
 
-    @OutputCustomType.Constructor({"distributionGroupListReceiverValue","subscriptionReceiverValue","userObjectReceiverValue"})
+    @OutputCustomType.Constructor
     private NotificationReceiverValueResponse(
-        @Nullable DistributionGroupListReceiverValueResponse distributionGroupListReceiverValue,
-        @Nullable SubscriptionReceiverValueResponse subscriptionReceiverValue,
-        @Nullable UserObjectReceiverValueResponse userObjectReceiverValue) {
+        @OutputCustomType.Parameter("distributionGroupListReceiverValue") @Nullable DistributionGroupListReceiverValueResponse distributionGroupListReceiverValue,
+        @OutputCustomType.Parameter("subscriptionReceiverValue") @Nullable SubscriptionReceiverValueResponse subscriptionReceiverValue,
+        @OutputCustomType.Parameter("userObjectReceiverValue") @Nullable UserObjectReceiverValueResponse userObjectReceiverValue) {
         this.distributionGroupListReceiverValue = distributionGroupListReceiverValue;
         this.subscriptionReceiverValue = subscriptionReceiverValue;
         this.userObjectReceiverValue = userObjectReceiverValue;

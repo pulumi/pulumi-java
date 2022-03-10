@@ -27,11 +27,11 @@ public final class ContainerAccountResponse {
      */
     private final @Nullable String spn;
 
-    @OutputCustomType.Constructor({"accountName","password","spn"})
+    @OutputCustomType.Constructor
     private ContainerAccountResponse(
-        @Nullable String accountName,
-        @Nullable String password,
-        @Nullable String spn) {
+        @OutputCustomType.Parameter("accountName") @Nullable String accountName,
+        @OutputCustomType.Parameter("password") @Nullable String password,
+        @OutputCustomType.Parameter("spn") @Nullable String spn) {
         this.accountName = accountName;
         this.password = password;
         this.spn = spn;

@@ -92,23 +92,23 @@ public final class GetKubeEnvironmentResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"aksResourceID","appLogsConfiguration","arcConfiguration","defaultDomain","deploymentErrors","extendedLocation","id","internalLoadBalancerEnabled","kind","location","name","provisioningState","staticIp","tags","type"})
+    @OutputCustomType.Constructor
     private GetKubeEnvironmentResult(
-        @Nullable String aksResourceID,
-        @Nullable AppLogsConfigurationResponse appLogsConfiguration,
-        @Nullable ArcConfigurationResponse arcConfiguration,
-        String defaultDomain,
-        String deploymentErrors,
-        @Nullable ExtendedLocationResponse extendedLocation,
-        String id,
-        @Nullable Boolean internalLoadBalancerEnabled,
-        @Nullable String kind,
-        String location,
-        String name,
-        String provisioningState,
-        @Nullable String staticIp,
-        @Nullable Map<String,String> tags,
-        String type) {
+        @OutputCustomType.Parameter("aksResourceID") @Nullable String aksResourceID,
+        @OutputCustomType.Parameter("appLogsConfiguration") @Nullable AppLogsConfigurationResponse appLogsConfiguration,
+        @OutputCustomType.Parameter("arcConfiguration") @Nullable ArcConfigurationResponse arcConfiguration,
+        @OutputCustomType.Parameter("defaultDomain") String defaultDomain,
+        @OutputCustomType.Parameter("deploymentErrors") String deploymentErrors,
+        @OutputCustomType.Parameter("extendedLocation") @Nullable ExtendedLocationResponse extendedLocation,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("internalLoadBalancerEnabled") @Nullable Boolean internalLoadBalancerEnabled,
+        @OutputCustomType.Parameter("kind") @Nullable String kind,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("staticIp") @Nullable String staticIp,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type) {
         this.aksResourceID = aksResourceID;
         this.appLogsConfiguration = appLogsConfiguration;
         this.arcConfiguration = arcConfiguration;

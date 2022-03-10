@@ -21,10 +21,10 @@ public final class RosettaNetPipAcknowledgmentOfReceiptSettingsResponse {
      */
     private final Integer timeToAcknowledgeInSeconds;
 
-    @OutputCustomType.Constructor({"isNonRepudiationRequired","timeToAcknowledgeInSeconds"})
+    @OutputCustomType.Constructor
     private RosettaNetPipAcknowledgmentOfReceiptSettingsResponse(
-        Boolean isNonRepudiationRequired,
-        Integer timeToAcknowledgeInSeconds) {
+        @OutputCustomType.Parameter("isNonRepudiationRequired") Boolean isNonRepudiationRequired,
+        @OutputCustomType.Parameter("timeToAcknowledgeInSeconds") Integer timeToAcknowledgeInSeconds) {
         this.isNonRepudiationRequired = isNonRepudiationRequired;
         this.timeToAcknowledgeInSeconds = timeToAcknowledgeInSeconds;
     }

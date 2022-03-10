@@ -62,17 +62,17 @@ public final class GetMonitorResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"id","identity","location","name","properties","sku","systemData","tags","type"})
+    @OutputCustomType.Constructor
     private GetMonitorResult(
-        String id,
-        @Nullable IdentityPropertiesResponse identity,
-        String location,
-        String name,
-        MonitorPropertiesResponse properties,
-        @Nullable ResourceSkuResponse sku,
-        SystemDataResponse systemData,
-        @Nullable Map<String,String> tags,
-        String type) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("identity") @Nullable IdentityPropertiesResponse identity,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("properties") MonitorPropertiesResponse properties,
+        @OutputCustomType.Parameter("sku") @Nullable ResourceSkuResponse sku,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type) {
         this.id = id;
         this.identity = identity;
         this.location = location;

@@ -25,11 +25,11 @@ public final class FollowerDatabaseDefinitionResponse {
      */
     private final String databaseName;
 
-    @OutputCustomType.Constructor({"attachedDatabaseConfigurationName","clusterResourceId","databaseName"})
+    @OutputCustomType.Constructor
     private FollowerDatabaseDefinitionResponse(
-        String attachedDatabaseConfigurationName,
-        String clusterResourceId,
-        String databaseName) {
+        @OutputCustomType.Parameter("attachedDatabaseConfigurationName") String attachedDatabaseConfigurationName,
+        @OutputCustomType.Parameter("clusterResourceId") String clusterResourceId,
+        @OutputCustomType.Parameter("databaseName") String databaseName) {
         this.attachedDatabaseConfigurationName = attachedDatabaseConfigurationName;
         this.clusterResourceId = clusterResourceId;
         this.databaseName = databaseName;

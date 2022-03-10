@@ -23,10 +23,10 @@ public final class LabelClassResponse {
      */
     private final @Nullable Map<String,LabelClassResponse> subclasses;
 
-    @OutputCustomType.Constructor({"displayName","subclasses"})
+    @OutputCustomType.Constructor
     private LabelClassResponse(
-        @Nullable String displayName,
-        @Nullable Map<String,LabelClassResponse> subclasses) {
+        @OutputCustomType.Parameter("displayName") @Nullable String displayName,
+        @OutputCustomType.Parameter("subclasses") @Nullable Map<String,LabelClassResponse> subclasses) {
         this.displayName = displayName;
         this.subclasses = subclasses;
     }

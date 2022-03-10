@@ -32,12 +32,12 @@ public final class RefreshDetailsResponse {
      */
     private final @Nullable String lastJob;
 
-    @OutputCustomType.Constructor({"errorManifestFile","inProgressRefreshJobId","lastCompletedRefreshJobTimeInUTC","lastJob"})
+    @OutputCustomType.Constructor
     private RefreshDetailsResponse(
-        @Nullable String errorManifestFile,
-        @Nullable String inProgressRefreshJobId,
-        @Nullable String lastCompletedRefreshJobTimeInUTC,
-        @Nullable String lastJob) {
+        @OutputCustomType.Parameter("errorManifestFile") @Nullable String errorManifestFile,
+        @OutputCustomType.Parameter("inProgressRefreshJobId") @Nullable String inProgressRefreshJobId,
+        @OutputCustomType.Parameter("lastCompletedRefreshJobTimeInUTC") @Nullable String lastCompletedRefreshJobTimeInUTC,
+        @OutputCustomType.Parameter("lastJob") @Nullable String lastJob) {
         this.errorManifestFile = errorManifestFile;
         this.inProgressRefreshJobId = inProgressRefreshJobId;
         this.lastCompletedRefreshJobTimeInUTC = lastCompletedRefreshJobTimeInUTC;

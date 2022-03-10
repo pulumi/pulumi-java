@@ -60,17 +60,17 @@ public final class ServersProjectSummaryResponse {
      */
     private final @Nullable Integer testMigratedCount;
 
-    @OutputCustomType.Constructor({"assessedCount","discoveredCount","extendedSummary","instanceType","lastSummaryRefreshedTime","migratedCount","refreshSummaryState","replicatingCount","testMigratedCount"})
+    @OutputCustomType.Constructor
     private ServersProjectSummaryResponse(
-        @Nullable Integer assessedCount,
-        @Nullable Integer discoveredCount,
-        @Nullable Map<String,String> extendedSummary,
-        String instanceType,
-        @Nullable String lastSummaryRefreshedTime,
-        @Nullable Integer migratedCount,
-        @Nullable String refreshSummaryState,
-        @Nullable Integer replicatingCount,
-        @Nullable Integer testMigratedCount) {
+        @OutputCustomType.Parameter("assessedCount") @Nullable Integer assessedCount,
+        @OutputCustomType.Parameter("discoveredCount") @Nullable Integer discoveredCount,
+        @OutputCustomType.Parameter("extendedSummary") @Nullable Map<String,String> extendedSummary,
+        @OutputCustomType.Parameter("instanceType") String instanceType,
+        @OutputCustomType.Parameter("lastSummaryRefreshedTime") @Nullable String lastSummaryRefreshedTime,
+        @OutputCustomType.Parameter("migratedCount") @Nullable Integer migratedCount,
+        @OutputCustomType.Parameter("refreshSummaryState") @Nullable String refreshSummaryState,
+        @OutputCustomType.Parameter("replicatingCount") @Nullable Integer replicatingCount,
+        @OutputCustomType.Parameter("testMigratedCount") @Nullable Integer testMigratedCount) {
         this.assessedCount = assessedCount;
         this.discoveredCount = discoveredCount;
         this.extendedSummary = extendedSummary;

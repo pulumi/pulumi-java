@@ -16,8 +16,8 @@ public final class CapacityReservationUtilizationResponse {
      */
     private final List<SubResourceReadOnlyResponse> virtualMachinesAllocated;
 
-    @OutputCustomType.Constructor({"virtualMachinesAllocated"})
-    private CapacityReservationUtilizationResponse(List<SubResourceReadOnlyResponse> virtualMachinesAllocated) {
+    @OutputCustomType.Constructor
+    private CapacityReservationUtilizationResponse(@OutputCustomType.Parameter("virtualMachinesAllocated") List<SubResourceReadOnlyResponse> virtualMachinesAllocated) {
         this.virtualMachinesAllocated = virtualMachinesAllocated;
     }
 

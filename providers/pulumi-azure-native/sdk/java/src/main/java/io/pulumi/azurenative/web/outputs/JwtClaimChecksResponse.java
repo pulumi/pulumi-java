@@ -22,10 +22,10 @@ public final class JwtClaimChecksResponse {
      */
     private final @Nullable List<String> allowedGroups;
 
-    @OutputCustomType.Constructor({"allowedClientApplications","allowedGroups"})
+    @OutputCustomType.Constructor
     private JwtClaimChecksResponse(
-        @Nullable List<String> allowedClientApplications,
-        @Nullable List<String> allowedGroups) {
+        @OutputCustomType.Parameter("allowedClientApplications") @Nullable List<String> allowedClientApplications,
+        @OutputCustomType.Parameter("allowedGroups") @Nullable List<String> allowedGroups) {
         this.allowedClientApplications = allowedClientApplications;
         this.allowedGroups = allowedGroups;
     }

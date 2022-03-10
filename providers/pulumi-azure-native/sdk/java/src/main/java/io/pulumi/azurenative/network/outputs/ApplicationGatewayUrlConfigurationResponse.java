@@ -28,11 +28,11 @@ public final class ApplicationGatewayUrlConfigurationResponse {
      */
     private final @Nullable Boolean reroute;
 
-    @OutputCustomType.Constructor({"modifiedPath","modifiedQueryString","reroute"})
+    @OutputCustomType.Constructor
     private ApplicationGatewayUrlConfigurationResponse(
-        @Nullable String modifiedPath,
-        @Nullable String modifiedQueryString,
-        @Nullable Boolean reroute) {
+        @OutputCustomType.Parameter("modifiedPath") @Nullable String modifiedPath,
+        @OutputCustomType.Parameter("modifiedQueryString") @Nullable String modifiedQueryString,
+        @OutputCustomType.Parameter("reroute") @Nullable Boolean reroute) {
         this.modifiedPath = modifiedPath;
         this.modifiedQueryString = modifiedQueryString;
         this.reroute = reroute;

@@ -29,11 +29,11 @@ public final class NetworkConfigurationResponse {
      */
     private final @Nullable String subnetId;
 
-    @OutputCustomType.Constructor({"endpointConfiguration","publicIPAddressConfiguration","subnetId"})
+    @OutputCustomType.Constructor
     private NetworkConfigurationResponse(
-        @Nullable PoolEndpointConfigurationResponse endpointConfiguration,
-        @Nullable PublicIPAddressConfigurationResponse publicIPAddressConfiguration,
-        @Nullable String subnetId) {
+        @OutputCustomType.Parameter("endpointConfiguration") @Nullable PoolEndpointConfigurationResponse endpointConfiguration,
+        @OutputCustomType.Parameter("publicIPAddressConfiguration") @Nullable PublicIPAddressConfigurationResponse publicIPAddressConfiguration,
+        @OutputCustomType.Parameter("subnetId") @Nullable String subnetId) {
         this.endpointConfiguration = endpointConfiguration;
         this.publicIPAddressConfiguration = publicIPAddressConfiguration;
         this.subnetId = subnetId;

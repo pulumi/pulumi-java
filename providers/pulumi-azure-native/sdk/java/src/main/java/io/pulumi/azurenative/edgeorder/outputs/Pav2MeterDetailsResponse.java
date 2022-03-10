@@ -32,12 +32,12 @@ public final class Pav2MeterDetailsResponse {
      */
     private final Double multiplier;
 
-    @OutputCustomType.Constructor({"billingType","chargingType","meterGuid","multiplier"})
+    @OutputCustomType.Constructor
     private Pav2MeterDetailsResponse(
-        String billingType,
-        String chargingType,
-        String meterGuid,
-        Double multiplier) {
+        @OutputCustomType.Parameter("billingType") String billingType,
+        @OutputCustomType.Parameter("chargingType") String chargingType,
+        @OutputCustomType.Parameter("meterGuid") String meterGuid,
+        @OutputCustomType.Parameter("multiplier") Double multiplier) {
         this.billingType = billingType;
         this.chargingType = chargingType;
         this.meterGuid = meterGuid;

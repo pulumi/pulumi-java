@@ -88,23 +88,23 @@ public final class CopyProgressResponse {
      */
     private final String transferType;
 
-    @OutputCustomType.Constructor({"accountId","bytesProcessed","dataAccountType","directoriesErroredOut","filesErroredOut","filesProcessed","invalidDirectoriesProcessed","invalidFileBytesUploaded","invalidFilesProcessed","isEnumerationInProgress","renamedContainerCount","storageAccountName","totalBytesToProcess","totalFilesToProcess","transferType"})
+    @OutputCustomType.Constructor
     private CopyProgressResponse(
-        String accountId,
-        Double bytesProcessed,
-        String dataAccountType,
-        Double directoriesErroredOut,
-        Double filesErroredOut,
-        Double filesProcessed,
-        Double invalidDirectoriesProcessed,
-        Double invalidFileBytesUploaded,
-        Double invalidFilesProcessed,
-        Boolean isEnumerationInProgress,
-        Double renamedContainerCount,
-        String storageAccountName,
-        Double totalBytesToProcess,
-        Double totalFilesToProcess,
-        String transferType) {
+        @OutputCustomType.Parameter("accountId") String accountId,
+        @OutputCustomType.Parameter("bytesProcessed") Double bytesProcessed,
+        @OutputCustomType.Parameter("dataAccountType") String dataAccountType,
+        @OutputCustomType.Parameter("directoriesErroredOut") Double directoriesErroredOut,
+        @OutputCustomType.Parameter("filesErroredOut") Double filesErroredOut,
+        @OutputCustomType.Parameter("filesProcessed") Double filesProcessed,
+        @OutputCustomType.Parameter("invalidDirectoriesProcessed") Double invalidDirectoriesProcessed,
+        @OutputCustomType.Parameter("invalidFileBytesUploaded") Double invalidFileBytesUploaded,
+        @OutputCustomType.Parameter("invalidFilesProcessed") Double invalidFilesProcessed,
+        @OutputCustomType.Parameter("isEnumerationInProgress") Boolean isEnumerationInProgress,
+        @OutputCustomType.Parameter("renamedContainerCount") Double renamedContainerCount,
+        @OutputCustomType.Parameter("storageAccountName") String storageAccountName,
+        @OutputCustomType.Parameter("totalBytesToProcess") Double totalBytesToProcess,
+        @OutputCustomType.Parameter("totalFilesToProcess") Double totalFilesToProcess,
+        @OutputCustomType.Parameter("transferType") String transferType) {
         this.accountId = accountId;
         this.bytesProcessed = bytesProcessed;
         this.dataAccountType = dataAccountType;

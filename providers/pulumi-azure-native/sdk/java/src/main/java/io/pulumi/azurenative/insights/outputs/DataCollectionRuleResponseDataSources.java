@@ -35,12 +35,12 @@ public final class DataCollectionRuleResponseDataSources {
      */
     private final @Nullable List<WindowsEventLogDataSourceResponse> windowsEventLogs;
 
-    @OutputCustomType.Constructor({"extensions","performanceCounters","syslog","windowsEventLogs"})
+    @OutputCustomType.Constructor
     private DataCollectionRuleResponseDataSources(
-        @Nullable List<ExtensionDataSourceResponse> extensions,
-        @Nullable List<PerfCounterDataSourceResponse> performanceCounters,
-        @Nullable List<SyslogDataSourceResponse> syslog,
-        @Nullable List<WindowsEventLogDataSourceResponse> windowsEventLogs) {
+        @OutputCustomType.Parameter("extensions") @Nullable List<ExtensionDataSourceResponse> extensions,
+        @OutputCustomType.Parameter("performanceCounters") @Nullable List<PerfCounterDataSourceResponse> performanceCounters,
+        @OutputCustomType.Parameter("syslog") @Nullable List<SyslogDataSourceResponse> syslog,
+        @OutputCustomType.Parameter("windowsEventLogs") @Nullable List<WindowsEventLogDataSourceResponse> windowsEventLogs) {
         this.extensions = extensions;
         this.performanceCounters = performanceCounters;
         this.syslog = syslog;

@@ -43,14 +43,14 @@ public final class MetadataDependenciesResponse {
      */
     private final @Nullable String version;
 
-    @OutputCustomType.Constructor({"contentId","criteria","kind","name","operator","version"})
+    @OutputCustomType.Constructor
     private MetadataDependenciesResponse(
-        @Nullable String contentId,
-        @Nullable List<MetadataDependenciesResponse> criteria,
-        @Nullable String kind,
-        @Nullable String name,
-        @Nullable String operator,
-        @Nullable String version) {
+        @OutputCustomType.Parameter("contentId") @Nullable String contentId,
+        @OutputCustomType.Parameter("criteria") @Nullable List<MetadataDependenciesResponse> criteria,
+        @OutputCustomType.Parameter("kind") @Nullable String kind,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("operator") @Nullable String operator,
+        @OutputCustomType.Parameter("version") @Nullable String version) {
         this.contentId = contentId;
         this.criteria = criteria;
         this.kind = kind;

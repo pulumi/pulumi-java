@@ -47,15 +47,15 @@ public final class ResourceNavigationLinkResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"etag","id","link","linkedResourceType","name","provisioningState","type"})
+    @OutputCustomType.Constructor
     private ResourceNavigationLinkResponse(
-        String etag,
-        String id,
-        @Nullable String link,
-        @Nullable String linkedResourceType,
-        @Nullable String name,
-        String provisioningState,
-        String type) {
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("link") @Nullable String link,
+        @OutputCustomType.Parameter("linkedResourceType") @Nullable String linkedResourceType,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("type") String type) {
         this.etag = etag;
         this.id = id;
         this.link = link;

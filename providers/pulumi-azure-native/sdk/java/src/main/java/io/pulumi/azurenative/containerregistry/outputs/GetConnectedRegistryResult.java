@@ -94,23 +94,23 @@ public final class GetConnectedRegistryResult {
      */
     private final String version;
 
-    @OutputCustomType.Constructor({"activation","clientTokenIds","connectionState","id","lastActivityTime","logging","loginServer","mode","name","parent","provisioningState","statusDetails","systemData","type","version"})
+    @OutputCustomType.Constructor
     private GetConnectedRegistryResult(
-        ActivationPropertiesResponse activation,
-        @Nullable List<String> clientTokenIds,
-        String connectionState,
-        String id,
-        String lastActivityTime,
-        @Nullable LoggingPropertiesResponse logging,
-        @Nullable LoginServerPropertiesResponse loginServer,
-        String mode,
-        String name,
-        ParentPropertiesResponse parent,
-        String provisioningState,
-        List<StatusDetailPropertiesResponse> statusDetails,
-        SystemDataResponse systemData,
-        String type,
-        String version) {
+        @OutputCustomType.Parameter("activation") ActivationPropertiesResponse activation,
+        @OutputCustomType.Parameter("clientTokenIds") @Nullable List<String> clientTokenIds,
+        @OutputCustomType.Parameter("connectionState") String connectionState,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("lastActivityTime") String lastActivityTime,
+        @OutputCustomType.Parameter("logging") @Nullable LoggingPropertiesResponse logging,
+        @OutputCustomType.Parameter("loginServer") @Nullable LoginServerPropertiesResponse loginServer,
+        @OutputCustomType.Parameter("mode") String mode,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("parent") ParentPropertiesResponse parent,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("statusDetails") List<StatusDetailPropertiesResponse> statusDetails,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("version") String version) {
         this.activation = activation;
         this.clientTokenIds = clientTokenIds;
         this.connectionState = connectionState;

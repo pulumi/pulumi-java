@@ -82,21 +82,21 @@ public final class GetQueryResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"author","body","description","displayName","id","name","properties","related","systemData","tags","timeCreated","timeModified","type"})
+    @OutputCustomType.Constructor
     private GetQueryResult(
-        String author,
-        String body,
-        @Nullable String description,
-        String displayName,
-        String id,
-        String name,
-        Object properties,
-        @Nullable LogAnalyticsQueryPackQueryPropertiesResponseRelated related,
-        SystemDataResponse systemData,
-        @Nullable Map<String,List<String>> tags,
-        String timeCreated,
-        String timeModified,
-        String type) {
+        @OutputCustomType.Parameter("author") String author,
+        @OutputCustomType.Parameter("body") String body,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("properties") Object properties,
+        @OutputCustomType.Parameter("related") @Nullable LogAnalyticsQueryPackQueryPropertiesResponseRelated related,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,List<String>> tags,
+        @OutputCustomType.Parameter("timeCreated") String timeCreated,
+        @OutputCustomType.Parameter("timeModified") String timeModified,
+        @OutputCustomType.Parameter("type") String type) {
         this.author = author;
         this.body = body;
         this.description = description;

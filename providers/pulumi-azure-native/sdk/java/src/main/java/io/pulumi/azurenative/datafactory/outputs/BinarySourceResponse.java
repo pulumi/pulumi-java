@@ -63,15 +63,15 @@ public final class BinarySourceResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"disableMetricsCollection","formatSettings","maxConcurrentConnections","sourceRetryCount","sourceRetryWait","storeSettings","type"})
+    @OutputCustomType.Constructor
     private BinarySourceResponse(
-        @Nullable Object disableMetricsCollection,
-        @Nullable BinaryReadSettingsResponse formatSettings,
-        @Nullable Object maxConcurrentConnections,
-        @Nullable Object sourceRetryCount,
-        @Nullable Object sourceRetryWait,
-        @Nullable Object storeSettings,
-        String type) {
+        @OutputCustomType.Parameter("disableMetricsCollection") @Nullable Object disableMetricsCollection,
+        @OutputCustomType.Parameter("formatSettings") @Nullable BinaryReadSettingsResponse formatSettings,
+        @OutputCustomType.Parameter("maxConcurrentConnections") @Nullable Object maxConcurrentConnections,
+        @OutputCustomType.Parameter("sourceRetryCount") @Nullable Object sourceRetryCount,
+        @OutputCustomType.Parameter("sourceRetryWait") @Nullable Object sourceRetryWait,
+        @OutputCustomType.Parameter("storeSettings") @Nullable Object storeSettings,
+        @OutputCustomType.Parameter("type") String type) {
         this.disableMetricsCollection = disableMetricsCollection;
         this.formatSettings = formatSettings;
         this.maxConcurrentConnections = maxConcurrentConnections;

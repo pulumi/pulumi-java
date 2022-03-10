@@ -21,10 +21,10 @@ public final class ManagedInstancePecPropertyResponse {
      */
     private final ManagedInstancePrivateEndpointConnectionPropertiesResponse properties;
 
-    @OutputCustomType.Constructor({"id","properties"})
+    @OutputCustomType.Constructor
     private ManagedInstancePecPropertyResponse(
-        String id,
-        ManagedInstancePrivateEndpointConnectionPropertiesResponse properties) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("properties") ManagedInstancePrivateEndpointConnectionPropertiesResponse properties) {
         this.id = id;
         this.properties = properties;
     }

@@ -89,23 +89,23 @@ public final class InMageProtectedDiskDetailsResponse {
      */
     private final @Nullable Double targetDataInMB;
 
-    @OutputCustomType.Constructor({"diskCapacityInBytes","diskId","diskName","diskResized","fileSystemCapacityInBytes","healthErrorCode","lastRpoCalculatedTime","protectionStage","psDataInMB","resyncDurationInSeconds","resyncProgressPercentage","resyncRequired","rpoInSeconds","sourceDataInMB","targetDataInMB"})
+    @OutputCustomType.Constructor
     private InMageProtectedDiskDetailsResponse(
-        @Nullable Double diskCapacityInBytes,
-        @Nullable String diskId,
-        @Nullable String diskName,
-        @Nullable String diskResized,
-        @Nullable Double fileSystemCapacityInBytes,
-        @Nullable String healthErrorCode,
-        @Nullable String lastRpoCalculatedTime,
-        @Nullable String protectionStage,
-        @Nullable Double psDataInMB,
-        @Nullable Double resyncDurationInSeconds,
-        @Nullable Integer resyncProgressPercentage,
-        @Nullable String resyncRequired,
-        @Nullable Double rpoInSeconds,
-        @Nullable Double sourceDataInMB,
-        @Nullable Double targetDataInMB) {
+        @OutputCustomType.Parameter("diskCapacityInBytes") @Nullable Double diskCapacityInBytes,
+        @OutputCustomType.Parameter("diskId") @Nullable String diskId,
+        @OutputCustomType.Parameter("diskName") @Nullable String diskName,
+        @OutputCustomType.Parameter("diskResized") @Nullable String diskResized,
+        @OutputCustomType.Parameter("fileSystemCapacityInBytes") @Nullable Double fileSystemCapacityInBytes,
+        @OutputCustomType.Parameter("healthErrorCode") @Nullable String healthErrorCode,
+        @OutputCustomType.Parameter("lastRpoCalculatedTime") @Nullable String lastRpoCalculatedTime,
+        @OutputCustomType.Parameter("protectionStage") @Nullable String protectionStage,
+        @OutputCustomType.Parameter("psDataInMB") @Nullable Double psDataInMB,
+        @OutputCustomType.Parameter("resyncDurationInSeconds") @Nullable Double resyncDurationInSeconds,
+        @OutputCustomType.Parameter("resyncProgressPercentage") @Nullable Integer resyncProgressPercentage,
+        @OutputCustomType.Parameter("resyncRequired") @Nullable String resyncRequired,
+        @OutputCustomType.Parameter("rpoInSeconds") @Nullable Double rpoInSeconds,
+        @OutputCustomType.Parameter("sourceDataInMB") @Nullable Double sourceDataInMB,
+        @OutputCustomType.Parameter("targetDataInMB") @Nullable Double targetDataInMB) {
         this.diskCapacityInBytes = diskCapacityInBytes;
         this.diskId = diskId;
         this.diskName = diskName;

@@ -22,10 +22,10 @@ public final class AuthorizationResponse {
      */
     private final @Nullable Map<String,String> parameters;
 
-    @OutputCustomType.Constructor({"authorizationType","parameters"})
+    @OutputCustomType.Constructor
     private AuthorizationResponse(
-        String authorizationType,
-        @Nullable Map<String,String> parameters) {
+        @OutputCustomType.Parameter("authorizationType") String authorizationType,
+        @OutputCustomType.Parameter("parameters") @Nullable Map<String,String> parameters) {
         this.authorizationType = authorizationType;
         this.parameters = parameters;
     }

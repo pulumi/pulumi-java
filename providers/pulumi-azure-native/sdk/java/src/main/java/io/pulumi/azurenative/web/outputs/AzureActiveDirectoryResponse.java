@@ -42,13 +42,13 @@ public final class AzureActiveDirectoryResponse {
      */
     private final @Nullable AzureActiveDirectoryValidationResponse validation;
 
-    @OutputCustomType.Constructor({"enabled","isAutoProvisioned","login","registration","validation"})
+    @OutputCustomType.Constructor
     private AzureActiveDirectoryResponse(
-        @Nullable Boolean enabled,
-        @Nullable Boolean isAutoProvisioned,
-        @Nullable AzureActiveDirectoryLoginResponse login,
-        @Nullable AzureActiveDirectoryRegistrationResponse registration,
-        @Nullable AzureActiveDirectoryValidationResponse validation) {
+        @OutputCustomType.Parameter("enabled") @Nullable Boolean enabled,
+        @OutputCustomType.Parameter("isAutoProvisioned") @Nullable Boolean isAutoProvisioned,
+        @OutputCustomType.Parameter("login") @Nullable AzureActiveDirectoryLoginResponse login,
+        @OutputCustomType.Parameter("registration") @Nullable AzureActiveDirectoryRegistrationResponse registration,
+        @OutputCustomType.Parameter("validation") @Nullable AzureActiveDirectoryValidationResponse validation) {
         this.enabled = enabled;
         this.isAutoProvisioned = isAutoProvisioned;
         this.login = login;

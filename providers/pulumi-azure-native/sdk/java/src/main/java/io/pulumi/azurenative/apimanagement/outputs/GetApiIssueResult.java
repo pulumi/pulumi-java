@@ -57,17 +57,17 @@ public final class GetApiIssueResult {
      */
     private final String userId;
 
-    @OutputCustomType.Constructor({"apiId","createdDate","description","id","name","state","title","type","userId"})
+    @OutputCustomType.Constructor
     private GetApiIssueResult(
-        @Nullable String apiId,
-        @Nullable String createdDate,
-        String description,
-        String id,
-        String name,
-        @Nullable String state,
-        String title,
-        String type,
-        String userId) {
+        @OutputCustomType.Parameter("apiId") @Nullable String apiId,
+        @OutputCustomType.Parameter("createdDate") @Nullable String createdDate,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("state") @Nullable String state,
+        @OutputCustomType.Parameter("title") String title,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("userId") String userId) {
         this.apiId = apiId;
         this.createdDate = createdDate;
         this.description = description;

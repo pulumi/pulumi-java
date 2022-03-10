@@ -21,10 +21,10 @@ public final class PngFormatResponse {
      */
     private final String odataType;
 
-    @OutputCustomType.Constructor({"filenamePattern","odataType"})
+    @OutputCustomType.Constructor
     private PngFormatResponse(
-        String filenamePattern,
-        String odataType) {
+        @OutputCustomType.Parameter("filenamePattern") String filenamePattern,
+        @OutputCustomType.Parameter("odataType") String odataType) {
         this.filenamePattern = filenamePattern;
         this.odataType = odataType;
     }

@@ -51,15 +51,15 @@ public final class GetUserResult {
      */
     private final String userType;
 
-    @OutputCustomType.Constructor({"encryptedPassword","id","name","shareAccessRights","systemData","type","userType"})
+    @OutputCustomType.Constructor
     private GetUserResult(
-        @Nullable AsymmetricEncryptedSecretResponse encryptedPassword,
-        String id,
-        String name,
-        List<ShareAccessRightResponse> shareAccessRights,
-        SystemDataResponse systemData,
-        String type,
-        String userType) {
+        @OutputCustomType.Parameter("encryptedPassword") @Nullable AsymmetricEncryptedSecretResponse encryptedPassword,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("shareAccessRights") List<ShareAccessRightResponse> shareAccessRights,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("userType") String userType) {
         this.encryptedPassword = encryptedPassword;
         this.id = id;
         this.name = name;

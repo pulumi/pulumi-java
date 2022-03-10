@@ -32,12 +32,12 @@ public final class PlanDataResponse {
      */
     private final @Nullable String usageType;
 
-    @OutputCustomType.Constructor({"billingCycle","effectiveDate","planDetails","usageType"})
+    @OutputCustomType.Constructor
     private PlanDataResponse(
-        @Nullable String billingCycle,
-        @Nullable String effectiveDate,
-        @Nullable String planDetails,
-        @Nullable String usageType) {
+        @OutputCustomType.Parameter("billingCycle") @Nullable String billingCycle,
+        @OutputCustomType.Parameter("effectiveDate") @Nullable String effectiveDate,
+        @OutputCustomType.Parameter("planDetails") @Nullable String planDetails,
+        @OutputCustomType.Parameter("usageType") @Nullable String usageType) {
         this.billingCycle = billingCycle;
         this.effectiveDate = effectiveDate;
         this.planDetails = planDetails;

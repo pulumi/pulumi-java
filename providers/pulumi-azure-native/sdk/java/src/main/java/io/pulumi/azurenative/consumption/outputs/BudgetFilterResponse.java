@@ -34,12 +34,12 @@ public final class BudgetFilterResponse {
      */
     private final @Nullable BudgetComparisonExpressionResponse tags;
 
-    @OutputCustomType.Constructor({"and","dimensions","not","tags"})
+    @OutputCustomType.Constructor
     private BudgetFilterResponse(
-        @Nullable List<BudgetFilterPropertiesResponse> and,
-        @Nullable BudgetComparisonExpressionResponse dimensions,
-        @Nullable BudgetFilterPropertiesResponse not,
-        @Nullable BudgetComparisonExpressionResponse tags) {
+        @OutputCustomType.Parameter("and") @Nullable List<BudgetFilterPropertiesResponse> and,
+        @OutputCustomType.Parameter("dimensions") @Nullable BudgetComparisonExpressionResponse dimensions,
+        @OutputCustomType.Parameter("not") @Nullable BudgetFilterPropertiesResponse not,
+        @OutputCustomType.Parameter("tags") @Nullable BudgetComparisonExpressionResponse tags) {
         this.and = and;
         this.dimensions = dimensions;
         this.not = not;

@@ -43,14 +43,14 @@ public final class ConfigurationProfileAssignmentPropertiesResponse {
      */
     private final @Nullable String targetId;
 
-    @OutputCustomType.Constructor({"accountId","compliance","configurationProfile","configurationProfilePreferenceId","provisioningState","targetId"})
+    @OutputCustomType.Constructor
     private ConfigurationProfileAssignmentPropertiesResponse(
-        @Nullable String accountId,
-        @Nullable ConfigurationProfileAssignmentComplianceResponse compliance,
-        @Nullable String configurationProfile,
-        @Nullable String configurationProfilePreferenceId,
-        String provisioningState,
-        @Nullable String targetId) {
+        @OutputCustomType.Parameter("accountId") @Nullable String accountId,
+        @OutputCustomType.Parameter("compliance") @Nullable ConfigurationProfileAssignmentComplianceResponse compliance,
+        @OutputCustomType.Parameter("configurationProfile") @Nullable String configurationProfile,
+        @OutputCustomType.Parameter("configurationProfilePreferenceId") @Nullable String configurationProfilePreferenceId,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("targetId") @Nullable String targetId) {
         this.accountId = accountId;
         this.compliance = compliance;
         this.configurationProfile = configurationProfile;

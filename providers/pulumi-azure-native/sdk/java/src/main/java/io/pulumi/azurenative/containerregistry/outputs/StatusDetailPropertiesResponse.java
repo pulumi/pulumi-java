@@ -35,13 +35,13 @@ public final class StatusDetailPropertiesResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"code","correlationId","description","timestamp","type"})
+    @OutputCustomType.Constructor
     private StatusDetailPropertiesResponse(
-        String code,
-        String correlationId,
-        String description,
-        String timestamp,
-        String type) {
+        @OutputCustomType.Parameter("code") String code,
+        @OutputCustomType.Parameter("correlationId") String correlationId,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("timestamp") String timestamp,
+        @OutputCustomType.Parameter("type") String type) {
         this.code = code;
         this.correlationId = correlationId;
         this.description = description;

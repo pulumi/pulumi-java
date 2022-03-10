@@ -15,8 +15,8 @@ public final class MHSMVirtualNetworkRuleResponse {
      */
     private final String id;
 
-    @OutputCustomType.Constructor({"id"})
-    private MHSMVirtualNetworkRuleResponse(String id) {
+    @OutputCustomType.Constructor
+    private MHSMVirtualNetworkRuleResponse(@OutputCustomType.Parameter("id") String id) {
         this.id = id;
     }
 

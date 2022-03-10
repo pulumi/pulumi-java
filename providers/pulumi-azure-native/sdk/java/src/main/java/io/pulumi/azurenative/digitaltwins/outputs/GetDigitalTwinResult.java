@@ -72,20 +72,20 @@ public final class GetDigitalTwinResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"createdTime","hostName","id","identity","lastUpdatedTime","location","name","privateEndpointConnections","provisioningState","publicNetworkAccess","tags","type"})
+    @OutputCustomType.Constructor
     private GetDigitalTwinResult(
-        String createdTime,
-        String hostName,
-        String id,
-        @Nullable DigitalTwinsIdentityResponse identity,
-        String lastUpdatedTime,
-        String location,
-        String name,
-        @Nullable List<PrivateEndpointConnectionResponse> privateEndpointConnections,
-        String provisioningState,
-        @Nullable String publicNetworkAccess,
-        @Nullable Map<String,String> tags,
-        String type) {
+        @OutputCustomType.Parameter("createdTime") String createdTime,
+        @OutputCustomType.Parameter("hostName") String hostName,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("identity") @Nullable DigitalTwinsIdentityResponse identity,
+        @OutputCustomType.Parameter("lastUpdatedTime") String lastUpdatedTime,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("privateEndpointConnections") @Nullable List<PrivateEndpointConnectionResponse> privateEndpointConnections,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("publicNetworkAccess") @Nullable String publicNetworkAccess,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type) {
         this.createdTime = createdTime;
         this.hostName = hostName;
         this.id = id;

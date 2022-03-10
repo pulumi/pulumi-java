@@ -29,11 +29,11 @@ public final class GraphParameterResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"description","links","type"})
+    @OutputCustomType.Constructor
     private GraphParameterResponse(
-        @Nullable String description,
-        List<GraphParameterLinkResponse> links,
-        String type) {
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("links") List<GraphParameterLinkResponse> links,
+        @OutputCustomType.Parameter("type") String type) {
         this.description = description;
         this.links = links;
         this.type = type;

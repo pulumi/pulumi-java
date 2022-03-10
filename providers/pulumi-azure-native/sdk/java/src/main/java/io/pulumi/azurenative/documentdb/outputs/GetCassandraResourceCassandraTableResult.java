@@ -42,15 +42,15 @@ public final class GetCassandraResourceCassandraTableResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"id","location","name","options","resource","tags","type"})
+    @OutputCustomType.Constructor
     private GetCassandraResourceCassandraTableResult(
-        String id,
-        @Nullable String location,
-        String name,
-        @Nullable CassandraTableGetPropertiesResponseOptions options,
-        @Nullable CassandraTableGetPropertiesResponseResource resource,
-        @Nullable Map<String,String> tags,
-        String type) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("options") @Nullable CassandraTableGetPropertiesResponseOptions options,
+        @OutputCustomType.Parameter("resource") @Nullable CassandraTableGetPropertiesResponseResource resource,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type) {
         this.id = id;
         this.location = location;
         this.name = name;

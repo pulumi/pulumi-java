@@ -39,13 +39,13 @@ public final class VideoAnalyzerPresetResponse {
      */
     private final String odataType;
 
-    @OutputCustomType.Constructor({"audioLanguage","experimentalOptions","insightsToExtract","mode","odataType"})
+    @OutputCustomType.Constructor
     private VideoAnalyzerPresetResponse(
-        @Nullable String audioLanguage,
-        @Nullable Map<String,String> experimentalOptions,
-        @Nullable String insightsToExtract,
-        @Nullable String mode,
-        String odataType) {
+        @OutputCustomType.Parameter("audioLanguage") @Nullable String audioLanguage,
+        @OutputCustomType.Parameter("experimentalOptions") @Nullable Map<String,String> experimentalOptions,
+        @OutputCustomType.Parameter("insightsToExtract") @Nullable String insightsToExtract,
+        @OutputCustomType.Parameter("mode") @Nullable String mode,
+        @OutputCustomType.Parameter("odataType") String odataType) {
         this.audioLanguage = audioLanguage;
         this.experimentalOptions = experimentalOptions;
         this.insightsToExtract = insightsToExtract;

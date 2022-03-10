@@ -19,8 +19,8 @@ public final class GetEventSubscriptionDeliveryAttributesResult {
      */
     private final @Nullable List<Either<DynamicDeliveryAttributeMappingResponse,StaticDeliveryAttributeMappingResponse>> value;
 
-    @OutputCustomType.Constructor({"value"})
-    private GetEventSubscriptionDeliveryAttributesResult(@Nullable List<Either<DynamicDeliveryAttributeMappingResponse,StaticDeliveryAttributeMappingResponse>> value) {
+    @OutputCustomType.Constructor
+    private GetEventSubscriptionDeliveryAttributesResult(@OutputCustomType.Parameter("value") @Nullable List<Either<DynamicDeliveryAttributeMappingResponse,StaticDeliveryAttributeMappingResponse>> value) {
         this.value = value;
     }
 

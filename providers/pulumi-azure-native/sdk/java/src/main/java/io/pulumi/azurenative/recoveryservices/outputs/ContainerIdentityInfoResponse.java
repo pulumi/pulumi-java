@@ -32,12 +32,12 @@ public final class ContainerIdentityInfoResponse {
      */
     private final @Nullable String uniqueName;
 
-    @OutputCustomType.Constructor({"aadTenantId","audience","servicePrincipalClientId","uniqueName"})
+    @OutputCustomType.Constructor
     private ContainerIdentityInfoResponse(
-        @Nullable String aadTenantId,
-        @Nullable String audience,
-        @Nullable String servicePrincipalClientId,
-        @Nullable String uniqueName) {
+        @OutputCustomType.Parameter("aadTenantId") @Nullable String aadTenantId,
+        @OutputCustomType.Parameter("audience") @Nullable String audience,
+        @OutputCustomType.Parameter("servicePrincipalClientId") @Nullable String servicePrincipalClientId,
+        @OutputCustomType.Parameter("uniqueName") @Nullable String uniqueName) {
         this.aadTenantId = aadTenantId;
         this.audience = audience;
         this.servicePrincipalClientId = servicePrincipalClientId;

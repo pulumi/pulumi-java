@@ -41,14 +41,14 @@ public final class VirtualNetworkResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"assignable","id","location","name","privateCloudId","type"})
+    @OutputCustomType.Constructor
     private VirtualNetworkResponse(
-        Boolean assignable,
-        String id,
-        String location,
-        String name,
-        String privateCloudId,
-        String type) {
+        @OutputCustomType.Parameter("assignable") Boolean assignable,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("privateCloudId") String privateCloudId,
+        @OutputCustomType.Parameter("type") String type) {
         this.assignable = assignable;
         this.id = id;
         this.location = location;

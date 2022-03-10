@@ -58,17 +58,17 @@ public final class GetDedicatedCloudServiceResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"gatewaySubnet","id","isAccountOnboarded","location","name","nodes","serviceURL","tags","type"})
+    @OutputCustomType.Constructor
     private GetDedicatedCloudServiceResult(
-        String gatewaySubnet,
-        String id,
-        String isAccountOnboarded,
-        String location,
-        String name,
-        Integer nodes,
-        String serviceURL,
-        @Nullable Map<String,String> tags,
-        String type) {
+        @OutputCustomType.Parameter("gatewaySubnet") String gatewaySubnet,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("isAccountOnboarded") String isAccountOnboarded,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("nodes") Integer nodes,
+        @OutputCustomType.Parameter("serviceURL") String serviceURL,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type) {
         this.gatewaySubnet = gatewaySubnet;
         this.id = id;
         this.isAccountOnboarded = isAccountOnboarded;

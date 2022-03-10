@@ -22,10 +22,10 @@ public final class ListClusterStreamingJobsResult {
      */
     private final List<ClusterJobResponse> value;
 
-    @OutputCustomType.Constructor({"nextLink","value"})
+    @OutputCustomType.Constructor
     private ListClusterStreamingJobsResult(
-        String nextLink,
-        List<ClusterJobResponse> value) {
+        @OutputCustomType.Parameter("nextLink") String nextLink,
+        @OutputCustomType.Parameter("value") List<ClusterJobResponse> value) {
         this.nextLink = nextLink;
         this.value = value;
     }

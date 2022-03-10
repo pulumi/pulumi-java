@@ -22,10 +22,10 @@ public final class DcAccessSecurityCodeResponse {
      */
     private final @Nullable String reverseDCAccessCode;
 
-    @OutputCustomType.Constructor({"forwardDCAccessCode","reverseDCAccessCode"})
+    @OutputCustomType.Constructor
     private DcAccessSecurityCodeResponse(
-        @Nullable String forwardDCAccessCode,
-        @Nullable String reverseDCAccessCode) {
+        @OutputCustomType.Parameter("forwardDCAccessCode") @Nullable String forwardDCAccessCode,
+        @OutputCustomType.Parameter("reverseDCAccessCode") @Nullable String reverseDCAccessCode) {
         this.forwardDCAccessCode = forwardDCAccessCode;
         this.reverseDCAccessCode = reverseDCAccessCode;
     }

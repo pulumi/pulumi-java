@@ -22,10 +22,10 @@ public final class PipelineJobErrorResponse {
      */
     private final @Nullable String message;
 
-    @OutputCustomType.Constructor({"code","message"})
+    @OutputCustomType.Constructor
     private PipelineJobErrorResponse(
-        @Nullable String code,
-        @Nullable String message) {
+        @OutputCustomType.Parameter("code") @Nullable String code,
+        @OutputCustomType.Parameter("message") @Nullable String message) {
         this.code = code;
         this.message = message;
     }

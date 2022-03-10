@@ -32,12 +32,12 @@ public final class GetMonitoringConfigResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"id","metricConfigurations","name","type"})
+    @OutputCustomType.Constructor
     private GetMonitoringConfigResult(
-        String id,
-        List<MetricConfigurationResponse> metricConfigurations,
-        String name,
-        String type) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("metricConfigurations") List<MetricConfigurationResponse> metricConfigurations,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("type") String type) {
         this.id = id;
         this.metricConfigurations = metricConfigurations;
         this.name = name;

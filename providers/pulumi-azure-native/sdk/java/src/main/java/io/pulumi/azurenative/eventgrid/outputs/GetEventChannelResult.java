@@ -73,19 +73,19 @@ public final class GetEventChannelResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"destination","expirationTimeIfNotActivatedUtc","filter","id","name","partnerTopicFriendlyDescription","partnerTopicReadinessState","provisioningState","source","systemData","type"})
+    @OutputCustomType.Constructor
     private GetEventChannelResult(
-        @Nullable EventChannelDestinationResponse destination,
-        @Nullable String expirationTimeIfNotActivatedUtc,
-        @Nullable EventChannelFilterResponse filter,
-        String id,
-        String name,
-        @Nullable String partnerTopicFriendlyDescription,
-        String partnerTopicReadinessState,
-        String provisioningState,
-        @Nullable EventChannelSourceResponse source,
-        SystemDataResponse systemData,
-        String type) {
+        @OutputCustomType.Parameter("destination") @Nullable EventChannelDestinationResponse destination,
+        @OutputCustomType.Parameter("expirationTimeIfNotActivatedUtc") @Nullable String expirationTimeIfNotActivatedUtc,
+        @OutputCustomType.Parameter("filter") @Nullable EventChannelFilterResponse filter,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("partnerTopicFriendlyDescription") @Nullable String partnerTopicFriendlyDescription,
+        @OutputCustomType.Parameter("partnerTopicReadinessState") String partnerTopicReadinessState,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("source") @Nullable EventChannelSourceResponse source,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("type") String type) {
         this.destination = destination;
         this.expirationTimeIfNotActivatedUtc = expirationTimeIfNotActivatedUtc;
         this.filter = filter;

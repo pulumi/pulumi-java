@@ -22,10 +22,10 @@ public final class FlowEndpointsResponse {
      */
     private final @Nullable List<IpAddressResponse> outgoingIpAddresses;
 
-    @OutputCustomType.Constructor({"accessEndpointIpAddresses","outgoingIpAddresses"})
+    @OutputCustomType.Constructor
     private FlowEndpointsResponse(
-        @Nullable List<IpAddressResponse> accessEndpointIpAddresses,
-        @Nullable List<IpAddressResponse> outgoingIpAddresses) {
+        @OutputCustomType.Parameter("accessEndpointIpAddresses") @Nullable List<IpAddressResponse> accessEndpointIpAddresses,
+        @OutputCustomType.Parameter("outgoingIpAddresses") @Nullable List<IpAddressResponse> outgoingIpAddresses) {
         this.accessEndpointIpAddresses = accessEndpointIpAddresses;
         this.outgoingIpAddresses = outgoingIpAddresses;
     }

@@ -42,14 +42,14 @@ public final class AwAssumeRoleAuthenticationDetailsPropertiesResponse {
      */
     private final List<String> grantedPermissions;
 
-    @OutputCustomType.Constructor({"accountId","authenticationProvisioningState","authenticationType","awsAssumeRoleArn","awsExternalId","grantedPermissions"})
+    @OutputCustomType.Constructor
     private AwAssumeRoleAuthenticationDetailsPropertiesResponse(
-        String accountId,
-        String authenticationProvisioningState,
-        String authenticationType,
-        String awsAssumeRoleArn,
-        String awsExternalId,
-        List<String> grantedPermissions) {
+        @OutputCustomType.Parameter("accountId") String accountId,
+        @OutputCustomType.Parameter("authenticationProvisioningState") String authenticationProvisioningState,
+        @OutputCustomType.Parameter("authenticationType") String authenticationType,
+        @OutputCustomType.Parameter("awsAssumeRoleArn") String awsAssumeRoleArn,
+        @OutputCustomType.Parameter("awsExternalId") String awsExternalId,
+        @OutputCustomType.Parameter("grantedPermissions") List<String> grantedPermissions) {
         this.accountId = accountId;
         this.authenticationProvisioningState = authenticationProvisioningState;
         this.authenticationType = authenticationType;

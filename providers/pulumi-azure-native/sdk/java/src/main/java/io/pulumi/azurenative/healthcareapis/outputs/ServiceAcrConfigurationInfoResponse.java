@@ -17,8 +17,8 @@ public final class ServiceAcrConfigurationInfoResponse {
      */
     private final @Nullable List<String> loginServers;
 
-    @OutputCustomType.Constructor({"loginServers"})
-    private ServiceAcrConfigurationInfoResponse(@Nullable List<String> loginServers) {
+    @OutputCustomType.Constructor
+    private ServiceAcrConfigurationInfoResponse(@OutputCustomType.Parameter("loginServers") @Nullable List<String> loginServers) {
         this.loginServers = loginServers;
     }
 

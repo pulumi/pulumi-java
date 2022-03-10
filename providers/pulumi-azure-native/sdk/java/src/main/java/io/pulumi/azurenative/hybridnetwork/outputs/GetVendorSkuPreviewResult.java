@@ -25,11 +25,11 @@ public final class GetVendorSkuPreviewResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"id","name","type"})
+    @OutputCustomType.Constructor
     private GetVendorSkuPreviewResult(
-        String id,
-        String name,
-        String type) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("type") String type) {
         this.id = id;
         this.name = name;
         this.type = type;

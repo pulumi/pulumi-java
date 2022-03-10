@@ -73,20 +73,20 @@ public final class BackendResponse {
      */
     private final @Nullable Integer weight;
 
-    @OutputCustomType.Constructor({"address","backendHostHeader","enabledState","httpPort","httpsPort","priority","privateEndpointStatus","privateLinkAlias","privateLinkApprovalMessage","privateLinkLocation","privateLinkResourceId","weight"})
+    @OutputCustomType.Constructor
     private BackendResponse(
-        @Nullable String address,
-        @Nullable String backendHostHeader,
-        @Nullable String enabledState,
-        @Nullable Integer httpPort,
-        @Nullable Integer httpsPort,
-        @Nullable Integer priority,
-        String privateEndpointStatus,
-        @Nullable String privateLinkAlias,
-        @Nullable String privateLinkApprovalMessage,
-        @Nullable String privateLinkLocation,
-        @Nullable String privateLinkResourceId,
-        @Nullable Integer weight) {
+        @OutputCustomType.Parameter("address") @Nullable String address,
+        @OutputCustomType.Parameter("backendHostHeader") @Nullable String backendHostHeader,
+        @OutputCustomType.Parameter("enabledState") @Nullable String enabledState,
+        @OutputCustomType.Parameter("httpPort") @Nullable Integer httpPort,
+        @OutputCustomType.Parameter("httpsPort") @Nullable Integer httpsPort,
+        @OutputCustomType.Parameter("priority") @Nullable Integer priority,
+        @OutputCustomType.Parameter("privateEndpointStatus") String privateEndpointStatus,
+        @OutputCustomType.Parameter("privateLinkAlias") @Nullable String privateLinkAlias,
+        @OutputCustomType.Parameter("privateLinkApprovalMessage") @Nullable String privateLinkApprovalMessage,
+        @OutputCustomType.Parameter("privateLinkLocation") @Nullable String privateLinkLocation,
+        @OutputCustomType.Parameter("privateLinkResourceId") @Nullable String privateLinkResourceId,
+        @OutputCustomType.Parameter("weight") @Nullable Integer weight) {
         this.address = address;
         this.backendHostHeader = backendHostHeader;
         this.enabledState = enabledState;

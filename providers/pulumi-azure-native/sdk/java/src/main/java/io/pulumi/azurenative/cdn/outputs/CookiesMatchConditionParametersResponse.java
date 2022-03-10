@@ -40,14 +40,14 @@ public final class CookiesMatchConditionParametersResponse {
      */
     private final @Nullable List<String> transforms;
 
-    @OutputCustomType.Constructor({"matchValues","negateCondition","odataType","operator","selector","transforms"})
+    @OutputCustomType.Constructor
     private CookiesMatchConditionParametersResponse(
-        @Nullable List<String> matchValues,
-        @Nullable Boolean negateCondition,
-        String odataType,
-        String operator,
-        @Nullable String selector,
-        @Nullable List<String> transforms) {
+        @OutputCustomType.Parameter("matchValues") @Nullable List<String> matchValues,
+        @OutputCustomType.Parameter("negateCondition") @Nullable Boolean negateCondition,
+        @OutputCustomType.Parameter("odataType") String odataType,
+        @OutputCustomType.Parameter("operator") String operator,
+        @OutputCustomType.Parameter("selector") @Nullable String selector,
+        @OutputCustomType.Parameter("transforms") @Nullable List<String> transforms) {
         this.matchValues = matchValues;
         this.negateCondition = negateCondition;
         this.odataType = odataType;

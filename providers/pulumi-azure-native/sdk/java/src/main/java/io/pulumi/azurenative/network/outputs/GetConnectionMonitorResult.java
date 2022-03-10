@@ -117,27 +117,27 @@ public final class GetConnectionMonitorResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"autoStart","connectionMonitorType","destination","endpoints","etag","id","location","monitoringIntervalInSeconds","monitoringStatus","name","notes","outputs","provisioningState","source","startTime","tags","testConfigurations","testGroups","type"})
+    @OutputCustomType.Constructor
     private GetConnectionMonitorResult(
-        @Nullable Boolean autoStart,
-        String connectionMonitorType,
-        @Nullable ConnectionMonitorDestinationResponse destination,
-        @Nullable List<ConnectionMonitorEndpointResponse> endpoints,
-        String etag,
-        String id,
-        @Nullable String location,
-        @Nullable Integer monitoringIntervalInSeconds,
-        String monitoringStatus,
-        String name,
-        @Nullable String notes,
-        @Nullable List<ConnectionMonitorOutputResponse> outputs,
-        String provisioningState,
-        @Nullable ConnectionMonitorSourceResponse source,
-        String startTime,
-        @Nullable Map<String,String> tags,
-        @Nullable List<ConnectionMonitorTestConfigurationResponse> testConfigurations,
-        @Nullable List<ConnectionMonitorTestGroupResponse> testGroups,
-        String type) {
+        @OutputCustomType.Parameter("autoStart") @Nullable Boolean autoStart,
+        @OutputCustomType.Parameter("connectionMonitorType") String connectionMonitorType,
+        @OutputCustomType.Parameter("destination") @Nullable ConnectionMonitorDestinationResponse destination,
+        @OutputCustomType.Parameter("endpoints") @Nullable List<ConnectionMonitorEndpointResponse> endpoints,
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("monitoringIntervalInSeconds") @Nullable Integer monitoringIntervalInSeconds,
+        @OutputCustomType.Parameter("monitoringStatus") String monitoringStatus,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("notes") @Nullable String notes,
+        @OutputCustomType.Parameter("outputs") @Nullable List<ConnectionMonitorOutputResponse> outputs,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("source") @Nullable ConnectionMonitorSourceResponse source,
+        @OutputCustomType.Parameter("startTime") String startTime,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("testConfigurations") @Nullable List<ConnectionMonitorTestConfigurationResponse> testConfigurations,
+        @OutputCustomType.Parameter("testGroups") @Nullable List<ConnectionMonitorTestGroupResponse> testGroups,
+        @OutputCustomType.Parameter("type") String type) {
         this.autoStart = autoStart;
         this.connectionMonitorType = connectionMonitorType;
         this.destination = destination;

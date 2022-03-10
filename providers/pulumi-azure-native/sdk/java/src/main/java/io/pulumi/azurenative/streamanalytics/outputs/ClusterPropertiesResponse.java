@@ -36,13 +36,13 @@ public final class ClusterPropertiesResponse {
      */
     private final String provisioningState;
 
-    @OutputCustomType.Constructor({"capacityAllocated","capacityAssigned","clusterId","createdDate","provisioningState"})
+    @OutputCustomType.Constructor
     private ClusterPropertiesResponse(
-        Integer capacityAllocated,
-        Integer capacityAssigned,
-        String clusterId,
-        String createdDate,
-        String provisioningState) {
+        @OutputCustomType.Parameter("capacityAllocated") Integer capacityAllocated,
+        @OutputCustomType.Parameter("capacityAssigned") Integer capacityAssigned,
+        @OutputCustomType.Parameter("clusterId") String clusterId,
+        @OutputCustomType.Parameter("createdDate") String createdDate,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState) {
         this.capacityAllocated = capacityAllocated;
         this.capacityAssigned = capacityAssigned;
         this.clusterId = clusterId;

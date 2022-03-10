@@ -31,12 +31,12 @@ public final class ServicePrincipalCertificateAuthInfoResponse {
      */
     private final String principalId;
 
-    @OutputCustomType.Constructor({"authType","certificate","clientId","principalId"})
+    @OutputCustomType.Constructor
     private ServicePrincipalCertificateAuthInfoResponse(
-        String authType,
-        String certificate,
-        String clientId,
-        String principalId) {
+        @OutputCustomType.Parameter("authType") String authType,
+        @OutputCustomType.Parameter("certificate") String certificate,
+        @OutputCustomType.Parameter("clientId") String clientId,
+        @OutputCustomType.Parameter("principalId") String principalId) {
         this.authType = authType;
         this.certificate = certificate;
         this.clientId = clientId;

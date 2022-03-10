@@ -17,8 +17,8 @@ public final class PipelineSourceTriggerDescriptorResponse {
      */
     private final @Nullable String timestamp;
 
-    @OutputCustomType.Constructor({"timestamp"})
-    private PipelineSourceTriggerDescriptorResponse(@Nullable String timestamp) {
+    @OutputCustomType.Constructor
+    private PipelineSourceTriggerDescriptorResponse(@OutputCustomType.Parameter("timestamp") @Nullable String timestamp) {
         this.timestamp = timestamp;
     }
 

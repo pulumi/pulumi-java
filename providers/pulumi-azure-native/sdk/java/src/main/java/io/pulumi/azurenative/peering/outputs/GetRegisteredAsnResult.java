@@ -43,14 +43,14 @@ public final class GetRegisteredAsnResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"asn","id","name","peeringServicePrefixKey","provisioningState","type"})
+    @OutputCustomType.Constructor
     private GetRegisteredAsnResult(
-        @Nullable Integer asn,
-        String id,
-        String name,
-        String peeringServicePrefixKey,
-        String provisioningState,
-        String type) {
+        @OutputCustomType.Parameter("asn") @Nullable Integer asn,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("peeringServicePrefixKey") String peeringServicePrefixKey,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("type") String type) {
         this.asn = asn;
         this.id = id;
         this.name = name;

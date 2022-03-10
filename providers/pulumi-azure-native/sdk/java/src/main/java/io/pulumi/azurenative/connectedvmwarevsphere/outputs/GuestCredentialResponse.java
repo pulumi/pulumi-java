@@ -17,8 +17,8 @@ public final class GuestCredentialResponse {
      */
     private final @Nullable String username;
 
-    @OutputCustomType.Constructor({"username"})
-    private GuestCredentialResponse(@Nullable String username) {
+    @OutputCustomType.Constructor
+    private GuestCredentialResponse(@OutputCustomType.Parameter("username") @Nullable String username) {
         this.username = username;
     }
 

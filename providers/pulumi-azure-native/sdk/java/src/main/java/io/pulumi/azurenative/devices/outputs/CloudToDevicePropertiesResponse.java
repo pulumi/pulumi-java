@@ -29,11 +29,11 @@ public final class CloudToDevicePropertiesResponse {
      */
     private final @Nullable Integer maxDeliveryCount;
 
-    @OutputCustomType.Constructor({"defaultTtlAsIso8601","feedback","maxDeliveryCount"})
+    @OutputCustomType.Constructor
     private CloudToDevicePropertiesResponse(
-        @Nullable String defaultTtlAsIso8601,
-        @Nullable FeedbackPropertiesResponse feedback,
-        @Nullable Integer maxDeliveryCount) {
+        @OutputCustomType.Parameter("defaultTtlAsIso8601") @Nullable String defaultTtlAsIso8601,
+        @OutputCustomType.Parameter("feedback") @Nullable FeedbackPropertiesResponse feedback,
+        @OutputCustomType.Parameter("maxDeliveryCount") @Nullable Integer maxDeliveryCount) {
         this.defaultTtlAsIso8601 = defaultTtlAsIso8601;
         this.feedback = feedback;
         this.maxDeliveryCount = maxDeliveryCount;

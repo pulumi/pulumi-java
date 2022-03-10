@@ -49,15 +49,15 @@ public final class ApplicableScheduleResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"id","labVmsShutdown","labVmsStartup","location","name","tags","type"})
+    @OutputCustomType.Constructor
     private ApplicableScheduleResponse(
-        String id,
-        @Nullable ScheduleResponse labVmsShutdown,
-        @Nullable ScheduleResponse labVmsStartup,
-        @Nullable String location,
-        String name,
-        @Nullable Map<String,String> tags,
-        String type) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("labVmsShutdown") @Nullable ScheduleResponse labVmsShutdown,
+        @OutputCustomType.Parameter("labVmsStartup") @Nullable ScheduleResponse labVmsStartup,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type) {
         this.id = id;
         this.labVmsShutdown = labVmsShutdown;
         this.labVmsStartup = labVmsStartup;

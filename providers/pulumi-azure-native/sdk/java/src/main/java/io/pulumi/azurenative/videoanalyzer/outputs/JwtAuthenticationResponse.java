@@ -42,13 +42,13 @@ public final class JwtAuthenticationResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"audiences","claims","issuers","keys","type"})
+    @OutputCustomType.Constructor
     private JwtAuthenticationResponse(
-        @Nullable List<String> audiences,
-        @Nullable List<TokenClaimResponse> claims,
-        @Nullable List<String> issuers,
-        @Nullable List<Either<EccTokenKeyResponse,RsaTokenKeyResponse>> keys,
-        String type) {
+        @OutputCustomType.Parameter("audiences") @Nullable List<String> audiences,
+        @OutputCustomType.Parameter("claims") @Nullable List<TokenClaimResponse> claims,
+        @OutputCustomType.Parameter("issuers") @Nullable List<String> issuers,
+        @OutputCustomType.Parameter("keys") @Nullable List<Either<EccTokenKeyResponse,RsaTokenKeyResponse>> keys,
+        @OutputCustomType.Parameter("type") String type) {
         this.audiences = audiences;
         this.claims = claims;
         this.issuers = issuers;

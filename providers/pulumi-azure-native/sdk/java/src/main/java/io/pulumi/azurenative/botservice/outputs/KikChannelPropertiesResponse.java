@@ -33,12 +33,12 @@ public final class KikChannelPropertiesResponse {
      */
     private final String userName;
 
-    @OutputCustomType.Constructor({"apiKey","isEnabled","isValidated","userName"})
+    @OutputCustomType.Constructor
     private KikChannelPropertiesResponse(
-        @Nullable String apiKey,
-        Boolean isEnabled,
-        @Nullable Boolean isValidated,
-        String userName) {
+        @OutputCustomType.Parameter("apiKey") @Nullable String apiKey,
+        @OutputCustomType.Parameter("isEnabled") Boolean isEnabled,
+        @OutputCustomType.Parameter("isValidated") @Nullable Boolean isValidated,
+        @OutputCustomType.Parameter("userName") String userName) {
         this.apiKey = apiKey;
         this.isEnabled = isEnabled;
         this.isValidated = isValidated;

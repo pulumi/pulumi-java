@@ -49,15 +49,15 @@ public final class WebHookEventSubscriptionDestinationResponse {
      */
     private final @Nullable Integer preferredBatchSizeInKilobytes;
 
-    @OutputCustomType.Constructor({"azureActiveDirectoryApplicationIdOrUri","azureActiveDirectoryTenantId","endpointBaseUrl","endpointType","endpointUrl","maxEventsPerBatch","preferredBatchSizeInKilobytes"})
+    @OutputCustomType.Constructor
     private WebHookEventSubscriptionDestinationResponse(
-        @Nullable String azureActiveDirectoryApplicationIdOrUri,
-        @Nullable String azureActiveDirectoryTenantId,
-        String endpointBaseUrl,
-        String endpointType,
-        @Nullable String endpointUrl,
-        @Nullable Integer maxEventsPerBatch,
-        @Nullable Integer preferredBatchSizeInKilobytes) {
+        @OutputCustomType.Parameter("azureActiveDirectoryApplicationIdOrUri") @Nullable String azureActiveDirectoryApplicationIdOrUri,
+        @OutputCustomType.Parameter("azureActiveDirectoryTenantId") @Nullable String azureActiveDirectoryTenantId,
+        @OutputCustomType.Parameter("endpointBaseUrl") String endpointBaseUrl,
+        @OutputCustomType.Parameter("endpointType") String endpointType,
+        @OutputCustomType.Parameter("endpointUrl") @Nullable String endpointUrl,
+        @OutputCustomType.Parameter("maxEventsPerBatch") @Nullable Integer maxEventsPerBatch,
+        @OutputCustomType.Parameter("preferredBatchSizeInKilobytes") @Nullable Integer preferredBatchSizeInKilobytes) {
         this.azureActiveDirectoryApplicationIdOrUri = azureActiveDirectoryApplicationIdOrUri;
         this.azureActiveDirectoryTenantId = azureActiveDirectoryTenantId;
         this.endpointBaseUrl = endpointBaseUrl;

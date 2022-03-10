@@ -17,8 +17,8 @@ public final class DynamicExecutorAllocationResponse {
      */
     private final @Nullable Boolean enabled;
 
-    @OutputCustomType.Constructor({"enabled"})
-    private DynamicExecutorAllocationResponse(@Nullable Boolean enabled) {
+    @OutputCustomType.Constructor
+    private DynamicExecutorAllocationResponse(@OutputCustomType.Parameter("enabled") @Nullable Boolean enabled) {
         this.enabled = enabled;
     }
 

@@ -45,15 +45,15 @@ public final class ListEventHubKeysResult {
      */
     private final String secondaryKey;
 
-    @OutputCustomType.Constructor({"aliasPrimaryConnectionString","aliasSecondaryConnectionString","keyName","primaryConnectionString","primaryKey","secondaryConnectionString","secondaryKey"})
+    @OutputCustomType.Constructor
     private ListEventHubKeysResult(
-        String aliasPrimaryConnectionString,
-        String aliasSecondaryConnectionString,
-        String keyName,
-        String primaryConnectionString,
-        String primaryKey,
-        String secondaryConnectionString,
-        String secondaryKey) {
+        @OutputCustomType.Parameter("aliasPrimaryConnectionString") String aliasPrimaryConnectionString,
+        @OutputCustomType.Parameter("aliasSecondaryConnectionString") String aliasSecondaryConnectionString,
+        @OutputCustomType.Parameter("keyName") String keyName,
+        @OutputCustomType.Parameter("primaryConnectionString") String primaryConnectionString,
+        @OutputCustomType.Parameter("primaryKey") String primaryKey,
+        @OutputCustomType.Parameter("secondaryConnectionString") String secondaryConnectionString,
+        @OutputCustomType.Parameter("secondaryKey") String secondaryKey) {
         this.aliasPrimaryConnectionString = aliasPrimaryConnectionString;
         this.aliasSecondaryConnectionString = aliasSecondaryConnectionString;
         this.keyName = keyName;

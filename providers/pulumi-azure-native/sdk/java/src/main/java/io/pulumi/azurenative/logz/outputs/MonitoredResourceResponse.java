@@ -44,14 +44,14 @@ public final class MonitoredResourceResponse {
      */
     private final SystemDataResponse systemData;
 
-    @OutputCustomType.Constructor({"id","reasonForLogsStatus","reasonForMetricsStatus","sendingLogs","sendingMetrics","systemData"})
+    @OutputCustomType.Constructor
     private MonitoredResourceResponse(
-        @Nullable String id,
-        @Nullable String reasonForLogsStatus,
-        @Nullable String reasonForMetricsStatus,
-        @Nullable Boolean sendingLogs,
-        @Nullable Boolean sendingMetrics,
-        SystemDataResponse systemData) {
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("reasonForLogsStatus") @Nullable String reasonForLogsStatus,
+        @OutputCustomType.Parameter("reasonForMetricsStatus") @Nullable String reasonForMetricsStatus,
+        @OutputCustomType.Parameter("sendingLogs") @Nullable Boolean sendingLogs,
+        @OutputCustomType.Parameter("sendingMetrics") @Nullable Boolean sendingMetrics,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData) {
         this.id = id;
         this.reasonForLogsStatus = reasonForLogsStatus;
         this.reasonForMetricsStatus = reasonForMetricsStatus;

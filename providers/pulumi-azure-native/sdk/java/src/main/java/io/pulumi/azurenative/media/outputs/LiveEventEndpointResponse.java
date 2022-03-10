@@ -22,10 +22,10 @@ public final class LiveEventEndpointResponse {
      */
     private final @Nullable String url;
 
-    @OutputCustomType.Constructor({"protocol","url"})
+    @OutputCustomType.Constructor
     private LiveEventEndpointResponse(
-        @Nullable String protocol,
-        @Nullable String url) {
+        @OutputCustomType.Parameter("protocol") @Nullable String protocol,
+        @OutputCustomType.Parameter("url") @Nullable String url) {
         this.protocol = protocol;
         this.url = url;
     }

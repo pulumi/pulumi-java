@@ -27,11 +27,11 @@ public final class EffectiveVirtualNetworkResponse {
      */
     private final @Nullable String membershipType;
 
-    @OutputCustomType.Constructor({"id","location","membershipType"})
+    @OutputCustomType.Constructor
     private EffectiveVirtualNetworkResponse(
-        @Nullable String id,
-        @Nullable String location,
-        @Nullable String membershipType) {
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("membershipType") @Nullable String membershipType) {
         this.id = id;
         this.location = location;
         this.membershipType = membershipType;

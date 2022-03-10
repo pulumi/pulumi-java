@@ -38,13 +38,13 @@ public final class GroupContractPropertiesResponse {
      */
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor({"builtIn","description","displayName","externalId","type"})
+    @OutputCustomType.Constructor
     private GroupContractPropertiesResponse(
-        Boolean builtIn,
-        @Nullable String description,
-        String displayName,
-        @Nullable String externalId,
-        @Nullable String type) {
+        @OutputCustomType.Parameter("builtIn") Boolean builtIn,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("externalId") @Nullable String externalId,
+        @OutputCustomType.Parameter("type") @Nullable String type) {
         this.builtIn = builtIn;
         this.description = description;
         this.displayName = displayName;

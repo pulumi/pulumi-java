@@ -34,12 +34,12 @@ public final class GitHubActionConfigurationResponse {
      */
     private final @Nullable Boolean isLinux;
 
-    @OutputCustomType.Constructor({"codeConfiguration","containerConfiguration","generateWorkflowFile","isLinux"})
+    @OutputCustomType.Constructor
     private GitHubActionConfigurationResponse(
-        @Nullable GitHubActionCodeConfigurationResponse codeConfiguration,
-        @Nullable GitHubActionContainerConfigurationResponse containerConfiguration,
-        @Nullable Boolean generateWorkflowFile,
-        @Nullable Boolean isLinux) {
+        @OutputCustomType.Parameter("codeConfiguration") @Nullable GitHubActionCodeConfigurationResponse codeConfiguration,
+        @OutputCustomType.Parameter("containerConfiguration") @Nullable GitHubActionContainerConfigurationResponse containerConfiguration,
+        @OutputCustomType.Parameter("generateWorkflowFile") @Nullable Boolean generateWorkflowFile,
+        @OutputCustomType.Parameter("isLinux") @Nullable Boolean isLinux) {
         this.codeConfiguration = codeConfiguration;
         this.containerConfiguration = containerConfiguration;
         this.generateWorkflowFile = generateWorkflowFile;

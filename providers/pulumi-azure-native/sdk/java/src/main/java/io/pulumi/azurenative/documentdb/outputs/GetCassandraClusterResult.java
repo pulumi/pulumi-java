@@ -50,15 +50,15 @@ public final class GetCassandraClusterResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"id","identity","location","name","properties","tags","type"})
+    @OutputCustomType.Constructor
     private GetCassandraClusterResult(
-        String id,
-        @Nullable ManagedServiceIdentityResponse identity,
-        @Nullable String location,
-        String name,
-        ClusterResourceResponseProperties properties,
-        @Nullable Map<String,String> tags,
-        String type) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("identity") @Nullable ManagedServiceIdentityResponse identity,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("properties") ClusterResourceResponseProperties properties,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type) {
         this.id = id;
         this.identity = identity;
         this.location = location;

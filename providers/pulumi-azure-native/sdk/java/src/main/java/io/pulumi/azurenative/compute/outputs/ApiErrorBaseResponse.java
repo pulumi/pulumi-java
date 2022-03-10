@@ -27,11 +27,11 @@ public final class ApiErrorBaseResponse {
      */
     private final @Nullable String target;
 
-    @OutputCustomType.Constructor({"code","message","target"})
+    @OutputCustomType.Constructor
     private ApiErrorBaseResponse(
-        @Nullable String code,
-        @Nullable String message,
-        @Nullable String target) {
+        @OutputCustomType.Parameter("code") @Nullable String code,
+        @OutputCustomType.Parameter("message") @Nullable String message,
+        @OutputCustomType.Parameter("target") @Nullable String target) {
         this.code = code;
         this.message = message;
         this.target = target;

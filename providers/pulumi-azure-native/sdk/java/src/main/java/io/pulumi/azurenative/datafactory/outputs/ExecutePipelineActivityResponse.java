@@ -60,16 +60,16 @@ public final class ExecutePipelineActivityResponse {
      */
     private final @Nullable Boolean waitOnCompletion;
 
-    @OutputCustomType.Constructor({"dependsOn","description","name","parameters","pipeline","type","userProperties","waitOnCompletion"})
+    @OutputCustomType.Constructor
     private ExecutePipelineActivityResponse(
-        @Nullable List<ActivityDependencyResponse> dependsOn,
-        @Nullable String description,
-        String name,
-        @Nullable Map<String,Object> parameters,
-        PipelineReferenceResponse pipeline,
-        String type,
-        @Nullable List<UserPropertyResponse> userProperties,
-        @Nullable Boolean waitOnCompletion) {
+        @OutputCustomType.Parameter("dependsOn") @Nullable List<ActivityDependencyResponse> dependsOn,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("parameters") @Nullable Map<String,Object> parameters,
+        @OutputCustomType.Parameter("pipeline") PipelineReferenceResponse pipeline,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("userProperties") @Nullable List<UserPropertyResponse> userProperties,
+        @OutputCustomType.Parameter("waitOnCompletion") @Nullable Boolean waitOnCompletion) {
         this.dependsOn = dependsOn;
         this.description = description;
         this.name = name;

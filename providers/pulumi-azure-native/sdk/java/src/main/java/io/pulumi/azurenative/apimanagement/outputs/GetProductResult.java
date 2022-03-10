@@ -64,18 +64,18 @@ public final class GetProductResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"approvalRequired","description","displayName","id","name","state","subscriptionRequired","subscriptionsLimit","terms","type"})
+    @OutputCustomType.Constructor
     private GetProductResult(
-        @Nullable Boolean approvalRequired,
-        @Nullable String description,
-        String displayName,
-        String id,
-        String name,
-        @Nullable String state,
-        @Nullable Boolean subscriptionRequired,
-        @Nullable Integer subscriptionsLimit,
-        @Nullable String terms,
-        String type) {
+        @OutputCustomType.Parameter("approvalRequired") @Nullable Boolean approvalRequired,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("state") @Nullable String state,
+        @OutputCustomType.Parameter("subscriptionRequired") @Nullable Boolean subscriptionRequired,
+        @OutputCustomType.Parameter("subscriptionsLimit") @Nullable Integer subscriptionsLimit,
+        @OutputCustomType.Parameter("terms") @Nullable String terms,
+        @OutputCustomType.Parameter("type") String type) {
         this.approvalRequired = approvalRequired;
         this.description = description;
         this.displayName = displayName;

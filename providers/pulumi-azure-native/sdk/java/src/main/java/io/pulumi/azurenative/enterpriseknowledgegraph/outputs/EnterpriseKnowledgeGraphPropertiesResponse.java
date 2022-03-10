@@ -28,11 +28,11 @@ public final class EnterpriseKnowledgeGraphPropertiesResponse {
      */
     private final @Nullable String provisioningState;
 
-    @OutputCustomType.Constructor({"description","metadata","provisioningState"})
+    @OutputCustomType.Constructor
     private EnterpriseKnowledgeGraphPropertiesResponse(
-        @Nullable String description,
-        @Nullable Object metadata,
-        @Nullable String provisioningState) {
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("metadata") @Nullable Object metadata,
+        @OutputCustomType.Parameter("provisioningState") @Nullable String provisioningState) {
         this.description = description;
         this.metadata = metadata;
         this.provisioningState = provisioningState;

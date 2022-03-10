@@ -69,19 +69,19 @@ public final class GetManagedNetworkGroupResult {
      */
     private final @Nullable List<ResourceIdResponse> virtualNetworks;
 
-    @OutputCustomType.Constructor({"etag","id","kind","location","managementGroups","name","provisioningState","subnets","subscriptions","type","virtualNetworks"})
+    @OutputCustomType.Constructor
     private GetManagedNetworkGroupResult(
-        String etag,
-        String id,
-        @Nullable String kind,
-        @Nullable String location,
-        @Nullable List<ResourceIdResponse> managementGroups,
-        String name,
-        String provisioningState,
-        @Nullable List<ResourceIdResponse> subnets,
-        @Nullable List<ResourceIdResponse> subscriptions,
-        String type,
-        @Nullable List<ResourceIdResponse> virtualNetworks) {
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("kind") @Nullable String kind,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("managementGroups") @Nullable List<ResourceIdResponse> managementGroups,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("subnets") @Nullable List<ResourceIdResponse> subnets,
+        @OutputCustomType.Parameter("subscriptions") @Nullable List<ResourceIdResponse> subscriptions,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("virtualNetworks") @Nullable List<ResourceIdResponse> virtualNetworks) {
         this.etag = etag;
         this.id = id;
         this.kind = kind;

@@ -32,12 +32,12 @@ public final class ExpressRouteLinkMacSecConfigResponse {
      */
     private final @Nullable String sciState;
 
-    @OutputCustomType.Constructor({"cakSecretIdentifier","cipher","cknSecretIdentifier","sciState"})
+    @OutputCustomType.Constructor
     private ExpressRouteLinkMacSecConfigResponse(
-        @Nullable String cakSecretIdentifier,
-        @Nullable String cipher,
-        @Nullable String cknSecretIdentifier,
-        @Nullable String sciState) {
+        @OutputCustomType.Parameter("cakSecretIdentifier") @Nullable String cakSecretIdentifier,
+        @OutputCustomType.Parameter("cipher") @Nullable String cipher,
+        @OutputCustomType.Parameter("cknSecretIdentifier") @Nullable String cknSecretIdentifier,
+        @OutputCustomType.Parameter("sciState") @Nullable String sciState) {
         this.cakSecretIdentifier = cakSecretIdentifier;
         this.cipher = cipher;
         this.cknSecretIdentifier = cknSecretIdentifier;

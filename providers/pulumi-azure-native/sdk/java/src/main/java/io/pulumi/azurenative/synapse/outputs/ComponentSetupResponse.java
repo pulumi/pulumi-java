@@ -29,11 +29,11 @@ public final class ComponentSetupResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"componentName","licenseKey","type"})
+    @OutputCustomType.Constructor
     private ComponentSetupResponse(
-        String componentName,
-        @Nullable SecureStringResponse licenseKey,
-        String type) {
+        @OutputCustomType.Parameter("componentName") String componentName,
+        @OutputCustomType.Parameter("licenseKey") @Nullable SecureStringResponse licenseKey,
+        @OutputCustomType.Parameter("type") String type) {
         this.componentName = componentName;
         this.licenseKey = licenseKey;
         this.type = type;

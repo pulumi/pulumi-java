@@ -65,17 +65,17 @@ public final class ServicesPropertiesResponse {
      */
     private final @Nullable String publicNetworkAccess;
 
-    @OutputCustomType.Constructor({"accessPolicies","acrConfiguration","authenticationConfiguration","corsConfiguration","cosmosDbConfiguration","exportConfiguration","privateEndpointConnections","provisioningState","publicNetworkAccess"})
+    @OutputCustomType.Constructor
     private ServicesPropertiesResponse(
-        @Nullable List<ServiceAccessPolicyEntryResponse> accessPolicies,
-        @Nullable ServiceAcrConfigurationInfoResponse acrConfiguration,
-        @Nullable ServiceAuthenticationConfigurationInfoResponse authenticationConfiguration,
-        @Nullable ServiceCorsConfigurationInfoResponse corsConfiguration,
-        @Nullable ServiceCosmosDbConfigurationInfoResponse cosmosDbConfiguration,
-        @Nullable ServiceExportConfigurationInfoResponse exportConfiguration,
-        @Nullable List<PrivateEndpointConnectionResponse> privateEndpointConnections,
-        String provisioningState,
-        @Nullable String publicNetworkAccess) {
+        @OutputCustomType.Parameter("accessPolicies") @Nullable List<ServiceAccessPolicyEntryResponse> accessPolicies,
+        @OutputCustomType.Parameter("acrConfiguration") @Nullable ServiceAcrConfigurationInfoResponse acrConfiguration,
+        @OutputCustomType.Parameter("authenticationConfiguration") @Nullable ServiceAuthenticationConfigurationInfoResponse authenticationConfiguration,
+        @OutputCustomType.Parameter("corsConfiguration") @Nullable ServiceCorsConfigurationInfoResponse corsConfiguration,
+        @OutputCustomType.Parameter("cosmosDbConfiguration") @Nullable ServiceCosmosDbConfigurationInfoResponse cosmosDbConfiguration,
+        @OutputCustomType.Parameter("exportConfiguration") @Nullable ServiceExportConfigurationInfoResponse exportConfiguration,
+        @OutputCustomType.Parameter("privateEndpointConnections") @Nullable List<PrivateEndpointConnectionResponse> privateEndpointConnections,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("publicNetworkAccess") @Nullable String publicNetworkAccess) {
         this.accessPolicies = accessPolicies;
         this.acrConfiguration = acrConfiguration;
         this.authenticationConfiguration = authenticationConfiguration;

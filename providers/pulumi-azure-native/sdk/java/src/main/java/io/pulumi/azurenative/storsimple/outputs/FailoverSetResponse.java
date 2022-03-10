@@ -24,10 +24,10 @@ public final class FailoverSetResponse {
      */
     private final @Nullable List<VolumeContainerFailoverMetadataResponse> volumeContainers;
 
-    @OutputCustomType.Constructor({"eligibilityResult","volumeContainers"})
+    @OutputCustomType.Constructor
     private FailoverSetResponse(
-        @Nullable FailoverSetEligibilityResultResponse eligibilityResult,
-        @Nullable List<VolumeContainerFailoverMetadataResponse> volumeContainers) {
+        @OutputCustomType.Parameter("eligibilityResult") @Nullable FailoverSetEligibilityResultResponse eligibilityResult,
+        @OutputCustomType.Parameter("volumeContainers") @Nullable List<VolumeContainerFailoverMetadataResponse> volumeContainers) {
         this.eligibilityResult = eligibilityResult;
         this.volumeContainers = volumeContainers;
     }

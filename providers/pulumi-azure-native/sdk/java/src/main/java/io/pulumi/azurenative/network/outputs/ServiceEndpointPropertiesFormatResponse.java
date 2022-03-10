@@ -28,11 +28,11 @@ public final class ServiceEndpointPropertiesFormatResponse {
      */
     private final @Nullable String service;
 
-    @OutputCustomType.Constructor({"locations","provisioningState","service"})
+    @OutputCustomType.Constructor
     private ServiceEndpointPropertiesFormatResponse(
-        @Nullable List<String> locations,
-        String provisioningState,
-        @Nullable String service) {
+        @OutputCustomType.Parameter("locations") @Nullable List<String> locations,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("service") @Nullable String service) {
         this.locations = locations;
         this.provisioningState = provisioningState;
         this.service = service;

@@ -153,35 +153,35 @@ public final class AzureVmWorkloadProtectedItemResponse {
      */
     private final @Nullable String workloadType;
 
-    @OutputCustomType.Constructor({"backupManagementType","backupSetName","containerName","createMode","deferredDeleteTimeInUTC","deferredDeleteTimeRemaining","extendedInfo","friendlyName","isDeferredDeleteScheduleUpcoming","isRehydrate","isScheduledForDeferredDelete","kpisHealths","lastBackupErrorDetail","lastBackupStatus","lastBackupTime","lastRecoveryPoint","parentName","parentType","policyId","protectedItemDataSourceId","protectedItemHealthStatus","protectedItemType","protectionState","protectionStatus","serverName","sourceResourceId","workloadType"})
+    @OutputCustomType.Constructor
     private AzureVmWorkloadProtectedItemResponse(
-        @Nullable String backupManagementType,
-        @Nullable String backupSetName,
-        @Nullable String containerName,
-        @Nullable String createMode,
-        @Nullable String deferredDeleteTimeInUTC,
-        @Nullable String deferredDeleteTimeRemaining,
-        @Nullable AzureVmWorkloadProtectedItemExtendedInfoResponse extendedInfo,
-        @Nullable String friendlyName,
-        @Nullable Boolean isDeferredDeleteScheduleUpcoming,
-        @Nullable Boolean isRehydrate,
-        @Nullable Boolean isScheduledForDeferredDelete,
-        @Nullable Map<String,KPIResourceHealthDetailsResponse> kpisHealths,
-        @Nullable ErrorDetailResponse lastBackupErrorDetail,
-        @Nullable String lastBackupStatus,
-        @Nullable String lastBackupTime,
-        @Nullable String lastRecoveryPoint,
-        @Nullable String parentName,
-        @Nullable String parentType,
-        @Nullable String policyId,
-        @Nullable String protectedItemDataSourceId,
-        @Nullable String protectedItemHealthStatus,
-        String protectedItemType,
-        @Nullable String protectionState,
-        @Nullable String protectionStatus,
-        @Nullable String serverName,
-        @Nullable String sourceResourceId,
-        @Nullable String workloadType) {
+        @OutputCustomType.Parameter("backupManagementType") @Nullable String backupManagementType,
+        @OutputCustomType.Parameter("backupSetName") @Nullable String backupSetName,
+        @OutputCustomType.Parameter("containerName") @Nullable String containerName,
+        @OutputCustomType.Parameter("createMode") @Nullable String createMode,
+        @OutputCustomType.Parameter("deferredDeleteTimeInUTC") @Nullable String deferredDeleteTimeInUTC,
+        @OutputCustomType.Parameter("deferredDeleteTimeRemaining") @Nullable String deferredDeleteTimeRemaining,
+        @OutputCustomType.Parameter("extendedInfo") @Nullable AzureVmWorkloadProtectedItemExtendedInfoResponse extendedInfo,
+        @OutputCustomType.Parameter("friendlyName") @Nullable String friendlyName,
+        @OutputCustomType.Parameter("isDeferredDeleteScheduleUpcoming") @Nullable Boolean isDeferredDeleteScheduleUpcoming,
+        @OutputCustomType.Parameter("isRehydrate") @Nullable Boolean isRehydrate,
+        @OutputCustomType.Parameter("isScheduledForDeferredDelete") @Nullable Boolean isScheduledForDeferredDelete,
+        @OutputCustomType.Parameter("kpisHealths") @Nullable Map<String,KPIResourceHealthDetailsResponse> kpisHealths,
+        @OutputCustomType.Parameter("lastBackupErrorDetail") @Nullable ErrorDetailResponse lastBackupErrorDetail,
+        @OutputCustomType.Parameter("lastBackupStatus") @Nullable String lastBackupStatus,
+        @OutputCustomType.Parameter("lastBackupTime") @Nullable String lastBackupTime,
+        @OutputCustomType.Parameter("lastRecoveryPoint") @Nullable String lastRecoveryPoint,
+        @OutputCustomType.Parameter("parentName") @Nullable String parentName,
+        @OutputCustomType.Parameter("parentType") @Nullable String parentType,
+        @OutputCustomType.Parameter("policyId") @Nullable String policyId,
+        @OutputCustomType.Parameter("protectedItemDataSourceId") @Nullable String protectedItemDataSourceId,
+        @OutputCustomType.Parameter("protectedItemHealthStatus") @Nullable String protectedItemHealthStatus,
+        @OutputCustomType.Parameter("protectedItemType") String protectedItemType,
+        @OutputCustomType.Parameter("protectionState") @Nullable String protectionState,
+        @OutputCustomType.Parameter("protectionStatus") @Nullable String protectionStatus,
+        @OutputCustomType.Parameter("serverName") @Nullable String serverName,
+        @OutputCustomType.Parameter("sourceResourceId") @Nullable String sourceResourceId,
+        @OutputCustomType.Parameter("workloadType") @Nullable String workloadType) {
         this.backupManagementType = backupManagementType;
         this.backupSetName = backupSetName;
         this.containerName = containerName;

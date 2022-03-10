@@ -39,13 +39,13 @@ public final class JobRecurrenceScheduleResponse {
      */
     private final @Nullable List<String> weekDays;
 
-    @OutputCustomType.Constructor({"hours","minutes","monthDays","monthlyOccurrences","weekDays"})
+    @OutputCustomType.Constructor
     private JobRecurrenceScheduleResponse(
-        @Nullable List<Integer> hours,
-        @Nullable List<Integer> minutes,
-        @Nullable List<Integer> monthDays,
-        @Nullable List<JobRecurrenceScheduleMonthlyOccurrenceResponse> monthlyOccurrences,
-        @Nullable List<String> weekDays) {
+        @OutputCustomType.Parameter("hours") @Nullable List<Integer> hours,
+        @OutputCustomType.Parameter("minutes") @Nullable List<Integer> minutes,
+        @OutputCustomType.Parameter("monthDays") @Nullable List<Integer> monthDays,
+        @OutputCustomType.Parameter("monthlyOccurrences") @Nullable List<JobRecurrenceScheduleMonthlyOccurrenceResponse> monthlyOccurrences,
+        @OutputCustomType.Parameter("weekDays") @Nullable List<String> weekDays) {
         this.hours = hours;
         this.minutes = minutes;
         this.monthDays = monthDays;

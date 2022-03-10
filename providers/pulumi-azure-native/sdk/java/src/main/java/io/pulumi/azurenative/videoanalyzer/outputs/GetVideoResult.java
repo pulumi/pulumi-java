@@ -61,17 +61,17 @@ public final class GetVideoResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"description","flags","id","mediaInfo","name","streaming","systemData","title","type"})
+    @OutputCustomType.Constructor
     private GetVideoResult(
-        @Nullable String description,
-        VideoFlagsResponse flags,
-        String id,
-        VideoMediaInfoResponse mediaInfo,
-        String name,
-        VideoStreamingResponse streaming,
-        SystemDataResponse systemData,
-        @Nullable String title,
-        String type) {
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("flags") VideoFlagsResponse flags,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("mediaInfo") VideoMediaInfoResponse mediaInfo,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("streaming") VideoStreamingResponse streaming,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("title") @Nullable String title,
+        @OutputCustomType.Parameter("type") String type) {
         this.description = description;
         this.flags = flags;
         this.id = id;

@@ -65,18 +65,18 @@ public final class GetLoadTestResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"dataPlaneURI","description","id","identity","location","name","provisioningState","systemData","tags","type"})
+    @OutputCustomType.Constructor
     private GetLoadTestResult(
-        String dataPlaneURI,
-        @Nullable String description,
-        String id,
-        @Nullable SystemAssignedServiceIdentityResponse identity,
-        String location,
-        String name,
-        String provisioningState,
-        SystemDataResponse systemData,
-        @Nullable Map<String,String> tags,
-        String type) {
+        @OutputCustomType.Parameter("dataPlaneURI") String dataPlaneURI,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("identity") @Nullable SystemAssignedServiceIdentityResponse identity,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type) {
         this.dataPlaneURI = dataPlaneURI;
         this.description = description;
         this.id = id;

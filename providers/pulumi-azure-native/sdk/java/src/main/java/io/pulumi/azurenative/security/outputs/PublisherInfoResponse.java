@@ -32,12 +32,12 @@ public final class PublisherInfoResponse {
      */
     private final @Nullable String version;
 
-    @OutputCustomType.Constructor({"binaryName","productName","publisherName","version"})
+    @OutputCustomType.Constructor
     private PublisherInfoResponse(
-        @Nullable String binaryName,
-        @Nullable String productName,
-        @Nullable String publisherName,
-        @Nullable String version) {
+        @OutputCustomType.Parameter("binaryName") @Nullable String binaryName,
+        @OutputCustomType.Parameter("productName") @Nullable String productName,
+        @OutputCustomType.Parameter("publisherName") @Nullable String publisherName,
+        @OutputCustomType.Parameter("version") @Nullable String version) {
         this.binaryName = binaryName;
         this.productName = productName;
         this.publisherName = publisherName;

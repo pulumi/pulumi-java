@@ -54,16 +54,16 @@ public final class GetJobAgentResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"databaseId","id","location","name","sku","state","tags","type"})
+    @OutputCustomType.Constructor
     private GetJobAgentResult(
-        String databaseId,
-        String id,
-        String location,
-        String name,
-        @Nullable SkuResponse sku,
-        String state,
-        @Nullable Map<String,String> tags,
-        String type) {
+        @OutputCustomType.Parameter("databaseId") String databaseId,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("sku") @Nullable SkuResponse sku,
+        @OutputCustomType.Parameter("state") String state,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type) {
         this.databaseId = databaseId;
         this.id = id;
         this.location = location;

@@ -28,11 +28,11 @@ public final class IoTEdgeAgentInfoResponse {
      */
     private final String tag;
 
-    @OutputCustomType.Constructor({"imageName","imageRepository","tag"})
+    @OutputCustomType.Constructor
     private IoTEdgeAgentInfoResponse(
-        String imageName,
-        @Nullable ImageRepositoryCredentialResponse imageRepository,
-        String tag) {
+        @OutputCustomType.Parameter("imageName") String imageName,
+        @OutputCustomType.Parameter("imageRepository") @Nullable ImageRepositoryCredentialResponse imageRepository,
+        @OutputCustomType.Parameter("tag") String tag) {
         this.imageName = imageName;
         this.imageRepository = imageRepository;
         this.tag = tag;

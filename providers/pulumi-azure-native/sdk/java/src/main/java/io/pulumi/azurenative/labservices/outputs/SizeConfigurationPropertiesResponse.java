@@ -17,8 +17,8 @@ public final class SizeConfigurationPropertiesResponse {
      */
     private final @Nullable List<EnvironmentSizeResponse> environmentSizes;
 
-    @OutputCustomType.Constructor({"environmentSizes"})
-    private SizeConfigurationPropertiesResponse(@Nullable List<EnvironmentSizeResponse> environmentSizes) {
+    @OutputCustomType.Constructor
+    private SizeConfigurationPropertiesResponse(@OutputCustomType.Parameter("environmentSizes") @Nullable List<EnvironmentSizeResponse> environmentSizes) {
         this.environmentSizes = environmentSizes;
     }
 

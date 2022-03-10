@@ -28,11 +28,11 @@ public final class ScaleSettingsResponse {
      */
     private final @Nullable String nodeIdleTimeBeforeScaleDown;
 
-    @OutputCustomType.Constructor({"maxNodeCount","minNodeCount","nodeIdleTimeBeforeScaleDown"})
+    @OutputCustomType.Constructor
     private ScaleSettingsResponse(
-        Integer maxNodeCount,
-        @Nullable Integer minNodeCount,
-        @Nullable String nodeIdleTimeBeforeScaleDown) {
+        @OutputCustomType.Parameter("maxNodeCount") Integer maxNodeCount,
+        @OutputCustomType.Parameter("minNodeCount") @Nullable Integer minNodeCount,
+        @OutputCustomType.Parameter("nodeIdleTimeBeforeScaleDown") @Nullable String nodeIdleTimeBeforeScaleDown) {
         this.maxNodeCount = maxNodeCount;
         this.minNodeCount = minNodeCount;
         this.nodeIdleTimeBeforeScaleDown = nodeIdleTimeBeforeScaleDown;

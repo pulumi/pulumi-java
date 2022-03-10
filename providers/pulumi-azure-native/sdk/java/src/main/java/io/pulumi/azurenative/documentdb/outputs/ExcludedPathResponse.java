@@ -17,8 +17,8 @@ public final class ExcludedPathResponse {
      */
     private final @Nullable String path;
 
-    @OutputCustomType.Constructor({"path"})
-    private ExcludedPathResponse(@Nullable String path) {
+    @OutputCustomType.Constructor
+    private ExcludedPathResponse(@OutputCustomType.Parameter("path") @Nullable String path) {
         this.path = path;
     }
 

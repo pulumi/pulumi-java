@@ -43,14 +43,14 @@ public final class GetServiceTopologyResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"artifactSourceId","id","location","name","tags","type"})
+    @OutputCustomType.Constructor
     private GetServiceTopologyResult(
-        @Nullable String artifactSourceId,
-        String id,
-        String location,
-        String name,
-        @Nullable Map<String,String> tags,
-        String type) {
+        @OutputCustomType.Parameter("artifactSourceId") @Nullable String artifactSourceId,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type) {
         this.artifactSourceId = artifactSourceId;
         this.id = id;
         this.location = location;

@@ -50,15 +50,15 @@ public final class ComputeVmPropertiesResponse {
      */
     private final @Nullable String vmSize;
 
-    @OutputCustomType.Constructor({"dataDiskIds","dataDisks","networkInterfaceId","osDiskId","osType","statuses","vmSize"})
+    @OutputCustomType.Constructor
     private ComputeVmPropertiesResponse(
-        @Nullable List<String> dataDiskIds,
-        @Nullable List<ComputeDataDiskResponse> dataDisks,
-        @Nullable String networkInterfaceId,
-        @Nullable String osDiskId,
-        @Nullable String osType,
-        @Nullable List<ComputeVmInstanceViewStatusResponse> statuses,
-        @Nullable String vmSize) {
+        @OutputCustomType.Parameter("dataDiskIds") @Nullable List<String> dataDiskIds,
+        @OutputCustomType.Parameter("dataDisks") @Nullable List<ComputeDataDiskResponse> dataDisks,
+        @OutputCustomType.Parameter("networkInterfaceId") @Nullable String networkInterfaceId,
+        @OutputCustomType.Parameter("osDiskId") @Nullable String osDiskId,
+        @OutputCustomType.Parameter("osType") @Nullable String osType,
+        @OutputCustomType.Parameter("statuses") @Nullable List<ComputeVmInstanceViewStatusResponse> statuses,
+        @OutputCustomType.Parameter("vmSize") @Nullable String vmSize) {
         this.dataDiskIds = dataDiskIds;
         this.dataDisks = dataDisks;
         this.networkInterfaceId = networkInterfaceId;

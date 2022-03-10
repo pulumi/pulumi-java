@@ -54,16 +54,16 @@ public final class GetIntegrationAccountSessionResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"changedTime","content","createdTime","id","location","name","tags","type"})
+    @OutputCustomType.Constructor
     private GetIntegrationAccountSessionResult(
-        String changedTime,
-        @Nullable Object content,
-        String createdTime,
-        String id,
-        @Nullable String location,
-        String name,
-        @Nullable Map<String,String> tags,
-        String type) {
+        @OutputCustomType.Parameter("changedTime") String changedTime,
+        @OutputCustomType.Parameter("content") @Nullable Object content,
+        @OutputCustomType.Parameter("createdTime") String createdTime,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type) {
         this.changedTime = changedTime;
         this.content = content;
         this.createdTime = createdTime;

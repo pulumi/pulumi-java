@@ -22,10 +22,10 @@ public final class DateAfterModificationResponse {
      */
     private final @Nullable Double daysAfterModificationGreaterThan;
 
-    @OutputCustomType.Constructor({"daysAfterLastAccessTimeGreaterThan","daysAfterModificationGreaterThan"})
+    @OutputCustomType.Constructor
     private DateAfterModificationResponse(
-        @Nullable Double daysAfterLastAccessTimeGreaterThan,
-        @Nullable Double daysAfterModificationGreaterThan) {
+        @OutputCustomType.Parameter("daysAfterLastAccessTimeGreaterThan") @Nullable Double daysAfterLastAccessTimeGreaterThan,
+        @OutputCustomType.Parameter("daysAfterModificationGreaterThan") @Nullable Double daysAfterModificationGreaterThan) {
         this.daysAfterLastAccessTimeGreaterThan = daysAfterLastAccessTimeGreaterThan;
         this.daysAfterModificationGreaterThan = daysAfterModificationGreaterThan;
     }

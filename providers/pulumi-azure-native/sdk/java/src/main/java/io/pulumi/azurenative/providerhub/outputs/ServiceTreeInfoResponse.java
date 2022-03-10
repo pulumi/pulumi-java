@@ -14,10 +14,10 @@ public final class ServiceTreeInfoResponse {
     private final @Nullable String componentId;
     private final @Nullable String serviceId;
 
-    @OutputCustomType.Constructor({"componentId","serviceId"})
+    @OutputCustomType.Constructor
     private ServiceTreeInfoResponse(
-        @Nullable String componentId,
-        @Nullable String serviceId) {
+        @OutputCustomType.Parameter("componentId") @Nullable String componentId,
+        @OutputCustomType.Parameter("serviceId") @Nullable String serviceId) {
         this.componentId = componentId;
         this.serviceId = serviceId;
     }

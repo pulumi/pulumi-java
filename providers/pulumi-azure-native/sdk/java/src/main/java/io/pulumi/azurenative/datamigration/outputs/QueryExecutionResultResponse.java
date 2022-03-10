@@ -32,12 +32,12 @@ public final class QueryExecutionResultResponse {
      */
     private final ExecutionStatisticsResponse targetResult;
 
-    @OutputCustomType.Constructor({"queryText","sourceResult","statementsInBatch","targetResult"})
+    @OutputCustomType.Constructor
     private QueryExecutionResultResponse(
-        String queryText,
-        ExecutionStatisticsResponse sourceResult,
-        Double statementsInBatch,
-        ExecutionStatisticsResponse targetResult) {
+        @OutputCustomType.Parameter("queryText") String queryText,
+        @OutputCustomType.Parameter("sourceResult") ExecutionStatisticsResponse sourceResult,
+        @OutputCustomType.Parameter("statementsInBatch") Double statementsInBatch,
+        @OutputCustomType.Parameter("targetResult") ExecutionStatisticsResponse targetResult) {
         this.queryText = queryText;
         this.sourceResult = sourceResult;
         this.statementsInBatch = statementsInBatch;

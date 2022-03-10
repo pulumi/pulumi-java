@@ -28,11 +28,11 @@ public final class JsonSerializationResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"encoding","format","type"})
+    @OutputCustomType.Constructor
     private JsonSerializationResponse(
-        @Nullable String encoding,
-        @Nullable String format,
-        String type) {
+        @OutputCustomType.Parameter("encoding") @Nullable String encoding,
+        @OutputCustomType.Parameter("format") @Nullable String format,
+        @OutputCustomType.Parameter("type") String type) {
         this.encoding = encoding;
         this.format = format;
         this.type = type;

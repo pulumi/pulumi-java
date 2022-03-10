@@ -50,15 +50,15 @@ public final class GetManagementGroupResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"children","details","displayName","id","name","tenantId","type"})
+    @OutputCustomType.Constructor
     private GetManagementGroupResult(
-        @Nullable List<ManagementGroupChildInfoResponse> children,
-        @Nullable ManagementGroupDetailsResponse details,
-        @Nullable String displayName,
-        String id,
-        String name,
-        @Nullable String tenantId,
-        String type) {
+        @OutputCustomType.Parameter("children") @Nullable List<ManagementGroupChildInfoResponse> children,
+        @OutputCustomType.Parameter("details") @Nullable ManagementGroupDetailsResponse details,
+        @OutputCustomType.Parameter("displayName") @Nullable String displayName,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("tenantId") @Nullable String tenantId,
+        @OutputCustomType.Parameter("type") String type) {
         this.children = children;
         this.details = details;
         this.displayName = displayName;

@@ -44,14 +44,14 @@ public final class GetDatastoreResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"diskPoolVolume","id","name","netAppVolume","provisioningState","type"})
+    @OutputCustomType.Constructor
     private GetDatastoreResult(
-        @Nullable DiskPoolVolumeResponse diskPoolVolume,
-        String id,
-        String name,
-        @Nullable NetAppVolumeResponse netAppVolume,
-        String provisioningState,
-        String type) {
+        @OutputCustomType.Parameter("diskPoolVolume") @Nullable DiskPoolVolumeResponse diskPoolVolume,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("netAppVolume") @Nullable NetAppVolumeResponse netAppVolume,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("type") String type) {
         this.diskPoolVolume = diskPoolVolume;
         this.id = id;
         this.name = name;

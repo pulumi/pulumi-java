@@ -116,27 +116,27 @@ public final class GetPublicIPPrefixResult {
      */
     private final @Nullable List<String> zones;
 
-    @OutputCustomType.Constructor({"customIPPrefix","etag","extendedLocation","id","ipPrefix","ipTags","loadBalancerFrontendIpConfiguration","location","name","natGateway","prefixLength","provisioningState","publicIPAddressVersion","publicIPAddresses","resourceGuid","sku","tags","type","zones"})
+    @OutputCustomType.Constructor
     private GetPublicIPPrefixResult(
-        @Nullable SubResourceResponse customIPPrefix,
-        String etag,
-        @Nullable ExtendedLocationResponse extendedLocation,
-        @Nullable String id,
-        String ipPrefix,
-        @Nullable List<IpTagResponse> ipTags,
-        SubResourceResponse loadBalancerFrontendIpConfiguration,
-        @Nullable String location,
-        String name,
-        @Nullable NatGatewayResponse natGateway,
-        @Nullable Integer prefixLength,
-        String provisioningState,
-        @Nullable String publicIPAddressVersion,
-        List<ReferencedPublicIpAddressResponse> publicIPAddresses,
-        String resourceGuid,
-        @Nullable PublicIPPrefixSkuResponse sku,
-        @Nullable Map<String,String> tags,
-        String type,
-        @Nullable List<String> zones) {
+        @OutputCustomType.Parameter("customIPPrefix") @Nullable SubResourceResponse customIPPrefix,
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("extendedLocation") @Nullable ExtendedLocationResponse extendedLocation,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("ipPrefix") String ipPrefix,
+        @OutputCustomType.Parameter("ipTags") @Nullable List<IpTagResponse> ipTags,
+        @OutputCustomType.Parameter("loadBalancerFrontendIpConfiguration") SubResourceResponse loadBalancerFrontendIpConfiguration,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("natGateway") @Nullable NatGatewayResponse natGateway,
+        @OutputCustomType.Parameter("prefixLength") @Nullable Integer prefixLength,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("publicIPAddressVersion") @Nullable String publicIPAddressVersion,
+        @OutputCustomType.Parameter("publicIPAddresses") List<ReferencedPublicIpAddressResponse> publicIPAddresses,
+        @OutputCustomType.Parameter("resourceGuid") String resourceGuid,
+        @OutputCustomType.Parameter("sku") @Nullable PublicIPPrefixSkuResponse sku,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("zones") @Nullable List<String> zones) {
         this.customIPPrefix = customIPPrefix;
         this.etag = etag;
         this.extendedLocation = extendedLocation;

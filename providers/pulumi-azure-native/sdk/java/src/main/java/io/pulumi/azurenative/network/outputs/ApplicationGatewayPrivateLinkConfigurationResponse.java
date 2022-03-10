@@ -44,14 +44,14 @@ public final class ApplicationGatewayPrivateLinkConfigurationResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"etag","id","ipConfigurations","name","provisioningState","type"})
+    @OutputCustomType.Constructor
     private ApplicationGatewayPrivateLinkConfigurationResponse(
-        String etag,
-        @Nullable String id,
-        @Nullable List<ApplicationGatewayPrivateLinkIpConfigurationResponse> ipConfigurations,
-        @Nullable String name,
-        String provisioningState,
-        String type) {
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("ipConfigurations") @Nullable List<ApplicationGatewayPrivateLinkIpConfigurationResponse> ipConfigurations,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("type") String type) {
         this.etag = etag;
         this.id = id;
         this.ipConfigurations = ipConfigurations;

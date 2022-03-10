@@ -24,10 +24,10 @@ public final class EncryptionImagesResponse {
      */
     private final @Nullable OSDiskImageEncryptionResponse osDiskImage;
 
-    @OutputCustomType.Constructor({"dataDiskImages","osDiskImage"})
+    @OutputCustomType.Constructor
     private EncryptionImagesResponse(
-        @Nullable List<DataDiskImageEncryptionResponse> dataDiskImages,
-        @Nullable OSDiskImageEncryptionResponse osDiskImage) {
+        @OutputCustomType.Parameter("dataDiskImages") @Nullable List<DataDiskImageEncryptionResponse> dataDiskImages,
+        @OutputCustomType.Parameter("osDiskImage") @Nullable OSDiskImageEncryptionResponse osDiskImage) {
         this.dataDiskImages = dataDiskImages;
         this.osDiskImage = osDiskImage;
     }

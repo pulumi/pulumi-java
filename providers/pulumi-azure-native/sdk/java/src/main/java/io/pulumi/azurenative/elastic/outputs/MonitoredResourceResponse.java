@@ -27,11 +27,11 @@ public final class MonitoredResourceResponse {
      */
     private final @Nullable String sendingLogs;
 
-    @OutputCustomType.Constructor({"id","reasonForLogsStatus","sendingLogs"})
+    @OutputCustomType.Constructor
     private MonitoredResourceResponse(
-        @Nullable String id,
-        @Nullable String reasonForLogsStatus,
-        @Nullable String sendingLogs) {
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("reasonForLogsStatus") @Nullable String reasonForLogsStatus,
+        @OutputCustomType.Parameter("sendingLogs") @Nullable String sendingLogs) {
         this.id = id;
         this.reasonForLogsStatus = reasonForLogsStatus;
         this.sendingLogs = sendingLogs;

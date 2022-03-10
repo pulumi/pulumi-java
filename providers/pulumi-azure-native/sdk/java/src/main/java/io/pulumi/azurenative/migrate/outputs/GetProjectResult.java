@@ -49,15 +49,15 @@ public final class GetProjectResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"eTag","id","location","name","properties","tags","type"})
+    @OutputCustomType.Constructor
     private GetProjectResult(
-        @Nullable String eTag,
-        String id,
-        @Nullable String location,
-        String name,
-        ProjectPropertiesResponse properties,
-        @Nullable Object tags,
-        String type) {
+        @OutputCustomType.Parameter("eTag") @Nullable String eTag,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("properties") ProjectPropertiesResponse properties,
+        @OutputCustomType.Parameter("tags") @Nullable Object tags,
+        @OutputCustomType.Parameter("type") String type) {
         this.eTag = eTag;
         this.id = id;
         this.location = location;

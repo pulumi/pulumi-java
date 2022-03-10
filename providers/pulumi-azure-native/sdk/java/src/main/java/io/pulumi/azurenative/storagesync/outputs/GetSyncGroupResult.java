@@ -35,13 +35,13 @@ public final class GetSyncGroupResult {
      */
     private final String uniqueId;
 
-    @OutputCustomType.Constructor({"id","name","syncGroupStatus","type","uniqueId"})
+    @OutputCustomType.Constructor
     private GetSyncGroupResult(
-        String id,
-        String name,
-        String syncGroupStatus,
-        String type,
-        String uniqueId) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("syncGroupStatus") String syncGroupStatus,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("uniqueId") String uniqueId) {
         this.id = id;
         this.name = name;
         this.syncGroupStatus = syncGroupStatus;

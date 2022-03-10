@@ -28,11 +28,11 @@ public final class IotHubSkuInfoResponse {
      */
     private final String tier;
 
-    @OutputCustomType.Constructor({"capacity","name","tier"})
+    @OutputCustomType.Constructor
     private IotHubSkuInfoResponse(
-        @Nullable Double capacity,
-        String name,
-        String tier) {
+        @OutputCustomType.Parameter("capacity") @Nullable Double capacity,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("tier") String tier) {
         this.capacity = capacity;
         this.name = name;
         this.tier = tier;

@@ -17,8 +17,8 @@ public final class ApplicationGatewayClientAuthConfigurationResponse {
      */
     private final @Nullable Boolean verifyClientCertIssuerDN;
 
-    @OutputCustomType.Constructor({"verifyClientCertIssuerDN"})
-    private ApplicationGatewayClientAuthConfigurationResponse(@Nullable Boolean verifyClientCertIssuerDN) {
+    @OutputCustomType.Constructor
+    private ApplicationGatewayClientAuthConfigurationResponse(@OutputCustomType.Parameter("verifyClientCertIssuerDN") @Nullable Boolean verifyClientCertIssuerDN) {
         this.verifyClientCertIssuerDN = verifyClientCertIssuerDN;
     }
 

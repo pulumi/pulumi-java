@@ -88,22 +88,22 @@ public final class GetTableResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"archiveRetentionInDays","id","lastPlanModifiedDate","name","plan","provisioningState","restoredLogs","resultStatistics","retentionInDays","schema","searchResults","systemData","totalRetentionInDays","type"})
+    @OutputCustomType.Constructor
     private GetTableResult(
-        Integer archiveRetentionInDays,
-        String id,
-        String lastPlanModifiedDate,
-        String name,
-        @Nullable String plan,
-        String provisioningState,
-        @Nullable RestoredLogsResponse restoredLogs,
-        @Nullable ResultStatisticsResponse resultStatistics,
-        @Nullable Integer retentionInDays,
-        @Nullable SchemaResponse schema,
-        @Nullable SearchResultsResponse searchResults,
-        SystemDataResponse systemData,
-        @Nullable Integer totalRetentionInDays,
-        String type) {
+        @OutputCustomType.Parameter("archiveRetentionInDays") Integer archiveRetentionInDays,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("lastPlanModifiedDate") String lastPlanModifiedDate,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("plan") @Nullable String plan,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("restoredLogs") @Nullable RestoredLogsResponse restoredLogs,
+        @OutputCustomType.Parameter("resultStatistics") @Nullable ResultStatisticsResponse resultStatistics,
+        @OutputCustomType.Parameter("retentionInDays") @Nullable Integer retentionInDays,
+        @OutputCustomType.Parameter("schema") @Nullable SchemaResponse schema,
+        @OutputCustomType.Parameter("searchResults") @Nullable SearchResultsResponse searchResults,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("totalRetentionInDays") @Nullable Integer totalRetentionInDays,
+        @OutputCustomType.Parameter("type") String type) {
         this.archiveRetentionInDays = archiveRetentionInDays;
         this.id = id;
         this.lastPlanModifiedDate = lastPlanModifiedDate;

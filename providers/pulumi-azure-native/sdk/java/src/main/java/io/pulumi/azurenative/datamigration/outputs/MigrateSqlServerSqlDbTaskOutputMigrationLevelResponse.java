@@ -97,24 +97,24 @@ public final class MigrateSqlServerSqlDbTaskOutputMigrationLevelResponse {
      */
     private final String targetServerVersion;
 
-    @OutputCustomType.Constructor({"databaseSummary","databases","durationInSeconds","endedOn","exceptionsAndWarnings","id","message","migrationReport","resultType","sourceServerBrandVersion","sourceServerVersion","startedOn","status","statusMessage","targetServerBrandVersion","targetServerVersion"})
+    @OutputCustomType.Constructor
     private MigrateSqlServerSqlDbTaskOutputMigrationLevelResponse(
-        Map<String,DatabaseSummaryResultResponse> databaseSummary,
-        Map<String,String> databases,
-        Double durationInSeconds,
-        String endedOn,
-        List<ReportableExceptionResponse> exceptionsAndWarnings,
-        String id,
-        String message,
-        MigrationReportResultResponse migrationReport,
-        String resultType,
-        String sourceServerBrandVersion,
-        String sourceServerVersion,
-        String startedOn,
-        String status,
-        String statusMessage,
-        String targetServerBrandVersion,
-        String targetServerVersion) {
+        @OutputCustomType.Parameter("databaseSummary") Map<String,DatabaseSummaryResultResponse> databaseSummary,
+        @OutputCustomType.Parameter("databases") Map<String,String> databases,
+        @OutputCustomType.Parameter("durationInSeconds") Double durationInSeconds,
+        @OutputCustomType.Parameter("endedOn") String endedOn,
+        @OutputCustomType.Parameter("exceptionsAndWarnings") List<ReportableExceptionResponse> exceptionsAndWarnings,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("message") String message,
+        @OutputCustomType.Parameter("migrationReport") MigrationReportResultResponse migrationReport,
+        @OutputCustomType.Parameter("resultType") String resultType,
+        @OutputCustomType.Parameter("sourceServerBrandVersion") String sourceServerBrandVersion,
+        @OutputCustomType.Parameter("sourceServerVersion") String sourceServerVersion,
+        @OutputCustomType.Parameter("startedOn") String startedOn,
+        @OutputCustomType.Parameter("status") String status,
+        @OutputCustomType.Parameter("statusMessage") String statusMessage,
+        @OutputCustomType.Parameter("targetServerBrandVersion") String targetServerBrandVersion,
+        @OutputCustomType.Parameter("targetServerVersion") String targetServerVersion) {
         this.databaseSummary = databaseSummary;
         this.databases = databases;
         this.durationInSeconds = durationInSeconds;

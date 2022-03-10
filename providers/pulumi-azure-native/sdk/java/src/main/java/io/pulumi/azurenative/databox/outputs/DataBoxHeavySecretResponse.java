@@ -38,13 +38,13 @@ public final class DataBoxHeavySecretResponse {
      */
     private final List<ApplianceNetworkConfigurationResponse> networkConfigurations;
 
-    @OutputCustomType.Constructor({"accountCredentialDetails","devicePassword","deviceSerialNumber","encodedValidationCertPubKey","networkConfigurations"})
+    @OutputCustomType.Constructor
     private DataBoxHeavySecretResponse(
-        List<AccountCredentialDetailsResponse> accountCredentialDetails,
-        String devicePassword,
-        String deviceSerialNumber,
-        String encodedValidationCertPubKey,
-        List<ApplianceNetworkConfigurationResponse> networkConfigurations) {
+        @OutputCustomType.Parameter("accountCredentialDetails") List<AccountCredentialDetailsResponse> accountCredentialDetails,
+        @OutputCustomType.Parameter("devicePassword") String devicePassword,
+        @OutputCustomType.Parameter("deviceSerialNumber") String deviceSerialNumber,
+        @OutputCustomType.Parameter("encodedValidationCertPubKey") String encodedValidationCertPubKey,
+        @OutputCustomType.Parameter("networkConfigurations") List<ApplianceNetworkConfigurationResponse> networkConfigurations) {
         this.accountCredentialDetails = accountCredentialDetails;
         this.devicePassword = devicePassword;
         this.deviceSerialNumber = deviceSerialNumber;

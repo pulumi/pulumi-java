@@ -22,10 +22,10 @@ public final class AzurePlanResponse {
      */
     private final @Nullable String skuId;
 
-    @OutputCustomType.Constructor({"skuDescription","skuId"})
+    @OutputCustomType.Constructor
     private AzurePlanResponse(
-        String skuDescription,
-        @Nullable String skuId) {
+        @OutputCustomType.Parameter("skuDescription") String skuDescription,
+        @OutputCustomType.Parameter("skuId") @Nullable String skuId) {
         this.skuDescription = skuDescription;
         this.skuId = skuId;
     }

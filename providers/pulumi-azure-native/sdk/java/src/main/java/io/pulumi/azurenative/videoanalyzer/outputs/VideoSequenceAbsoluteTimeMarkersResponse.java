@@ -21,10 +21,10 @@ public final class VideoSequenceAbsoluteTimeMarkersResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"ranges","type"})
+    @OutputCustomType.Constructor
     private VideoSequenceAbsoluteTimeMarkersResponse(
-        String ranges,
-        String type) {
+        @OutputCustomType.Parameter("ranges") String ranges,
+        @OutputCustomType.Parameter("type") String type) {
         this.ranges = ranges;
         this.type = type;
     }

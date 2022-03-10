@@ -149,34 +149,34 @@ public final class GetAppServiceCertificateOrderResult {
      */
     private final @Nullable Integer validityInYears;
 
-    @OutputCustomType.Constructor({"appServiceCertificateNotRenewableReasons","autoRenew","certificates","csr","distinguishedName","domainVerificationToken","expirationTime","id","intermediate","isPrivateKeyExternal","keySize","kind","lastCertificateIssuanceTime","location","name","nextAutoRenewalTimeStamp","productType","provisioningState","root","serialNumber","signedCertificate","status","systemData","tags","type","validityInYears"})
+    @OutputCustomType.Constructor
     private GetAppServiceCertificateOrderResult(
-        List<String> appServiceCertificateNotRenewableReasons,
-        @Nullable Boolean autoRenew,
-        @Nullable Map<String,AppServiceCertificateResponse> certificates,
-        @Nullable String csr,
-        @Nullable String distinguishedName,
-        String domainVerificationToken,
-        String expirationTime,
-        String id,
-        CertificateDetailsResponse intermediate,
-        Boolean isPrivateKeyExternal,
-        @Nullable Integer keySize,
-        @Nullable String kind,
-        String lastCertificateIssuanceTime,
-        String location,
-        String name,
-        String nextAutoRenewalTimeStamp,
-        String productType,
-        String provisioningState,
-        CertificateDetailsResponse root,
-        String serialNumber,
-        CertificateDetailsResponse signedCertificate,
-        String status,
-        SystemDataResponse systemData,
-        @Nullable Map<String,String> tags,
-        String type,
-        @Nullable Integer validityInYears) {
+        @OutputCustomType.Parameter("appServiceCertificateNotRenewableReasons") List<String> appServiceCertificateNotRenewableReasons,
+        @OutputCustomType.Parameter("autoRenew") @Nullable Boolean autoRenew,
+        @OutputCustomType.Parameter("certificates") @Nullable Map<String,AppServiceCertificateResponse> certificates,
+        @OutputCustomType.Parameter("csr") @Nullable String csr,
+        @OutputCustomType.Parameter("distinguishedName") @Nullable String distinguishedName,
+        @OutputCustomType.Parameter("domainVerificationToken") String domainVerificationToken,
+        @OutputCustomType.Parameter("expirationTime") String expirationTime,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("intermediate") CertificateDetailsResponse intermediate,
+        @OutputCustomType.Parameter("isPrivateKeyExternal") Boolean isPrivateKeyExternal,
+        @OutputCustomType.Parameter("keySize") @Nullable Integer keySize,
+        @OutputCustomType.Parameter("kind") @Nullable String kind,
+        @OutputCustomType.Parameter("lastCertificateIssuanceTime") String lastCertificateIssuanceTime,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("nextAutoRenewalTimeStamp") String nextAutoRenewalTimeStamp,
+        @OutputCustomType.Parameter("productType") String productType,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("root") CertificateDetailsResponse root,
+        @OutputCustomType.Parameter("serialNumber") String serialNumber,
+        @OutputCustomType.Parameter("signedCertificate") CertificateDetailsResponse signedCertificate,
+        @OutputCustomType.Parameter("status") String status,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("validityInYears") @Nullable Integer validityInYears) {
         this.appServiceCertificateNotRenewableReasons = appServiceCertificateNotRenewableReasons;
         this.autoRenew = autoRenew;
         this.certificates = certificates;

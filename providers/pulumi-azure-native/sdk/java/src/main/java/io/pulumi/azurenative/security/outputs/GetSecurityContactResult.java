@@ -49,15 +49,15 @@ public final class GetSecurityContactResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"alertNotifications","emails","id","name","notificationsByRole","phone","type"})
+    @OutputCustomType.Constructor
     private GetSecurityContactResult(
-        @Nullable SecurityContactPropertiesResponseAlertNotifications alertNotifications,
-        @Nullable String emails,
-        String id,
-        String name,
-        @Nullable SecurityContactPropertiesResponseNotificationsByRole notificationsByRole,
-        @Nullable String phone,
-        String type) {
+        @OutputCustomType.Parameter("alertNotifications") @Nullable SecurityContactPropertiesResponseAlertNotifications alertNotifications,
+        @OutputCustomType.Parameter("emails") @Nullable String emails,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("notificationsByRole") @Nullable SecurityContactPropertiesResponseNotificationsByRole notificationsByRole,
+        @OutputCustomType.Parameter("phone") @Nullable String phone,
+        @OutputCustomType.Parameter("type") String type) {
         this.alertNotifications = alertNotifications;
         this.emails = emails;
         this.id = id;

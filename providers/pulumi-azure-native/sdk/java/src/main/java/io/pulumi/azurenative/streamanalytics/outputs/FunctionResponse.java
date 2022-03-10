@@ -33,12 +33,12 @@ public final class FunctionResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"id","name","properties","type"})
+    @OutputCustomType.Constructor
     private FunctionResponse(
-        String id,
-        @Nullable String name,
-        @Nullable ScalarFunctionPropertiesResponse properties,
-        String type) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("properties") @Nullable ScalarFunctionPropertiesResponse properties,
+        @OutputCustomType.Parameter("type") String type) {
         this.id = id;
         this.name = name;
         this.properties = properties;

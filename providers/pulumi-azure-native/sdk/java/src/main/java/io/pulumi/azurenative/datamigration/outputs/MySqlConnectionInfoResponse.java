@@ -39,13 +39,13 @@ public final class MySqlConnectionInfoResponse {
      */
     private final @Nullable String userName;
 
-    @OutputCustomType.Constructor({"password","port","serverName","type","userName"})
+    @OutputCustomType.Constructor
     private MySqlConnectionInfoResponse(
-        @Nullable String password,
-        Integer port,
-        String serverName,
-        String type,
-        @Nullable String userName) {
+        @OutputCustomType.Parameter("password") @Nullable String password,
+        @OutputCustomType.Parameter("port") Integer port,
+        @OutputCustomType.Parameter("serverName") String serverName,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("userName") @Nullable String userName) {
         this.password = password;
         this.port = port;
         this.serverName = serverName;

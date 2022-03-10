@@ -17,8 +17,8 @@ public final class HardwareProfileResponse {
      */
     private final @Nullable String vmSize;
 
-    @OutputCustomType.Constructor({"vmSize"})
-    private HardwareProfileResponse(@Nullable String vmSize) {
+    @OutputCustomType.Constructor
+    private HardwareProfileResponse(@OutputCustomType.Parameter("vmSize") @Nullable String vmSize) {
         this.vmSize = vmSize;
     }
 

@@ -27,11 +27,11 @@ public final class ModuleResponse {
      */
     private final String version;
 
-    @OutputCustomType.Constructor({"args","name","version"})
+    @OutputCustomType.Constructor
     private ModuleResponse(
-        @Nullable String args,
-        String name,
-        String version) {
+        @OutputCustomType.Parameter("args") @Nullable String args,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("version") String version) {
         this.args = args;
         this.name = name;
         this.version = version;

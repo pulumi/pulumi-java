@@ -22,10 +22,10 @@ public final class GitHubActionCodeConfigurationResponse {
      */
     private final @Nullable String runtimeVersion;
 
-    @OutputCustomType.Constructor({"runtimeStack","runtimeVersion"})
+    @OutputCustomType.Constructor
     private GitHubActionCodeConfigurationResponse(
-        @Nullable String runtimeStack,
-        @Nullable String runtimeVersion) {
+        @OutputCustomType.Parameter("runtimeStack") @Nullable String runtimeStack,
+        @OutputCustomType.Parameter("runtimeVersion") @Nullable String runtimeVersion) {
         this.runtimeStack = runtimeStack;
         this.runtimeVersion = runtimeVersion;
     }

@@ -34,12 +34,12 @@ public final class UniformInt64RangePartitionSchemeDescriptionResponse {
      */
     private final String partitionScheme;
 
-    @OutputCustomType.Constructor({"count","highKey","lowKey","partitionScheme"})
+    @OutputCustomType.Constructor
     private UniformInt64RangePartitionSchemeDescriptionResponse(
-        Integer count,
-        String highKey,
-        String lowKey,
-        String partitionScheme) {
+        @OutputCustomType.Parameter("count") Integer count,
+        @OutputCustomType.Parameter("highKey") String highKey,
+        @OutputCustomType.Parameter("lowKey") String lowKey,
+        @OutputCustomType.Parameter("partitionScheme") String partitionScheme) {
         this.count = count;
         this.highKey = highKey;
         this.lowKey = lowKey;

@@ -23,10 +23,10 @@ public final class SecurityPolicyWebApplicationFirewallAssociationResponse {
      */
     private final @Nullable List<String> patternsToMatch;
 
-    @OutputCustomType.Constructor({"domains","patternsToMatch"})
+    @OutputCustomType.Constructor
     private SecurityPolicyWebApplicationFirewallAssociationResponse(
-        @Nullable List<ResourceReferenceResponse> domains,
-        @Nullable List<String> patternsToMatch) {
+        @OutputCustomType.Parameter("domains") @Nullable List<ResourceReferenceResponse> domains,
+        @OutputCustomType.Parameter("patternsToMatch") @Nullable List<String> patternsToMatch) {
         this.domains = domains;
         this.patternsToMatch = patternsToMatch;
     }

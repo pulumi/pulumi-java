@@ -20,10 +20,10 @@ public final class AzureSkuResponse {
      */
     private final String tier;
 
-    @OutputCustomType.Constructor({"name","tier"})
+    @OutputCustomType.Constructor
     private AzureSkuResponse(
-        String name,
-        String tier) {
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("tier") String tier) {
         this.name = name;
         this.tier = tier;
     }

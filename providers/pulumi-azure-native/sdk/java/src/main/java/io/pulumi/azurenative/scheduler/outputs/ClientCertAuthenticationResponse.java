@@ -43,14 +43,14 @@ public final class ClientCertAuthenticationResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"certificateExpirationDate","certificateSubjectName","certificateThumbprint","password","pfx","type"})
+    @OutputCustomType.Constructor
     private ClientCertAuthenticationResponse(
-        @Nullable String certificateExpirationDate,
-        @Nullable String certificateSubjectName,
-        @Nullable String certificateThumbprint,
-        @Nullable String password,
-        @Nullable String pfx,
-        String type) {
+        @OutputCustomType.Parameter("certificateExpirationDate") @Nullable String certificateExpirationDate,
+        @OutputCustomType.Parameter("certificateSubjectName") @Nullable String certificateSubjectName,
+        @OutputCustomType.Parameter("certificateThumbprint") @Nullable String certificateThumbprint,
+        @OutputCustomType.Parameter("password") @Nullable String password,
+        @OutputCustomType.Parameter("pfx") @Nullable String pfx,
+        @OutputCustomType.Parameter("type") String type) {
         this.certificateExpirationDate = certificateExpirationDate;
         this.certificateSubjectName = certificateSubjectName;
         this.certificateThumbprint = certificateThumbprint;

@@ -22,10 +22,10 @@ public final class DiffDiskSettingsResponse {
      */
     private final @Nullable String placement;
 
-    @OutputCustomType.Constructor({"option","placement"})
+    @OutputCustomType.Constructor
     private DiffDiskSettingsResponse(
-        @Nullable String option,
-        @Nullable String placement) {
+        @OutputCustomType.Parameter("option") @Nullable String option,
+        @OutputCustomType.Parameter("placement") @Nullable String placement) {
         this.option = option;
         this.placement = placement;
     }

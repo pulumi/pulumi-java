@@ -59,17 +59,17 @@ public final class PrivateLinkServiceConnectionResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"etag","groupIds","id","name","privateLinkServiceConnectionState","privateLinkServiceId","provisioningState","requestMessage","type"})
+    @OutputCustomType.Constructor
     private PrivateLinkServiceConnectionResponse(
-        String etag,
-        @Nullable List<String> groupIds,
-        @Nullable String id,
-        @Nullable String name,
-        @Nullable PrivateLinkServiceConnectionStateResponse privateLinkServiceConnectionState,
-        @Nullable String privateLinkServiceId,
-        String provisioningState,
-        @Nullable String requestMessage,
-        String type) {
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("groupIds") @Nullable List<String> groupIds,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("privateLinkServiceConnectionState") @Nullable PrivateLinkServiceConnectionStateResponse privateLinkServiceConnectionState,
+        @OutputCustomType.Parameter("privateLinkServiceId") @Nullable String privateLinkServiceId,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("requestMessage") @Nullable String requestMessage,
+        @OutputCustomType.Parameter("type") String type) {
         this.etag = etag;
         this.groupIds = groupIds;
         this.id = id;

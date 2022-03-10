@@ -79,21 +79,21 @@ public final class GetWebAppDeploymentSlotResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"active","author","authorEmail","deployer","details","endTime","id","kind","message","name","startTime","status","type"})
+    @OutputCustomType.Constructor
     private GetWebAppDeploymentSlotResult(
-        @Nullable Boolean active,
-        @Nullable String author,
-        @Nullable String authorEmail,
-        @Nullable String deployer,
-        @Nullable String details,
-        @Nullable String endTime,
-        String id,
-        @Nullable String kind,
-        @Nullable String message,
-        String name,
-        @Nullable String startTime,
-        @Nullable Integer status,
-        String type) {
+        @OutputCustomType.Parameter("active") @Nullable Boolean active,
+        @OutputCustomType.Parameter("author") @Nullable String author,
+        @OutputCustomType.Parameter("authorEmail") @Nullable String authorEmail,
+        @OutputCustomType.Parameter("deployer") @Nullable String deployer,
+        @OutputCustomType.Parameter("details") @Nullable String details,
+        @OutputCustomType.Parameter("endTime") @Nullable String endTime,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("kind") @Nullable String kind,
+        @OutputCustomType.Parameter("message") @Nullable String message,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("startTime") @Nullable String startTime,
+        @OutputCustomType.Parameter("status") @Nullable Integer status,
+        @OutputCustomType.Parameter("type") String type) {
         this.active = active;
         this.author = author;
         this.authorEmail = authorEmail;

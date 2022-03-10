@@ -73,19 +73,19 @@ public final class GetAvailabilitySetResult {
      */
     private final @Nullable List<SubResourceResponse> virtualMachines;
 
-    @OutputCustomType.Constructor({"id","location","name","platformFaultDomainCount","platformUpdateDomainCount","proximityPlacementGroup","sku","statuses","tags","type","virtualMachines"})
+    @OutputCustomType.Constructor
     private GetAvailabilitySetResult(
-        String id,
-        String location,
-        String name,
-        @Nullable Integer platformFaultDomainCount,
-        @Nullable Integer platformUpdateDomainCount,
-        @Nullable SubResourceResponse proximityPlacementGroup,
-        @Nullable SkuResponse sku,
-        List<InstanceViewStatusResponse> statuses,
-        @Nullable Map<String,String> tags,
-        String type,
-        @Nullable List<SubResourceResponse> virtualMachines) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("platformFaultDomainCount") @Nullable Integer platformFaultDomainCount,
+        @OutputCustomType.Parameter("platformUpdateDomainCount") @Nullable Integer platformUpdateDomainCount,
+        @OutputCustomType.Parameter("proximityPlacementGroup") @Nullable SubResourceResponse proximityPlacementGroup,
+        @OutputCustomType.Parameter("sku") @Nullable SkuResponse sku,
+        @OutputCustomType.Parameter("statuses") List<InstanceViewStatusResponse> statuses,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("virtualMachines") @Nullable List<SubResourceResponse> virtualMachines) {
         this.id = id;
         this.location = location;
         this.name = name;

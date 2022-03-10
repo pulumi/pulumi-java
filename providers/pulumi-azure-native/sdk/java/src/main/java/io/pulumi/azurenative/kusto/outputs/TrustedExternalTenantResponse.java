@@ -17,8 +17,8 @@ public final class TrustedExternalTenantResponse {
      */
     private final @Nullable String value;
 
-    @OutputCustomType.Constructor({"value"})
-    private TrustedExternalTenantResponse(@Nullable String value) {
+    @OutputCustomType.Constructor
+    private TrustedExternalTenantResponse(@OutputCustomType.Parameter("value") @Nullable String value) {
         this.value = value;
     }
 

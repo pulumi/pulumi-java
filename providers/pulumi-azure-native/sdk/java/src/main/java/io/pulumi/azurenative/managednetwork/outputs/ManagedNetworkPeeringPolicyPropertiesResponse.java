@@ -44,14 +44,14 @@ public final class ManagedNetworkPeeringPolicyPropertiesResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"etag","hub","mesh","provisioningState","spokes","type"})
+    @OutputCustomType.Constructor
     private ManagedNetworkPeeringPolicyPropertiesResponse(
-        String etag,
-        @Nullable ResourceIdResponse hub,
-        @Nullable List<ResourceIdResponse> mesh,
-        String provisioningState,
-        @Nullable List<ResourceIdResponse> spokes,
-        String type) {
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("hub") @Nullable ResourceIdResponse hub,
+        @OutputCustomType.Parameter("mesh") @Nullable List<ResourceIdResponse> mesh,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("spokes") @Nullable List<ResourceIdResponse> spokes,
+        @OutputCustomType.Parameter("type") String type) {
         this.etag = etag;
         this.hub = hub;
         this.mesh = mesh;

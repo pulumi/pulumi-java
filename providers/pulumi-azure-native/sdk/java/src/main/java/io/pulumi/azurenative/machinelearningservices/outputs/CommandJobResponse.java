@@ -135,29 +135,29 @@ public final class CommandJobResponse {
      */
     private final @Nullable String timeout;
 
-    @OutputCustomType.Constructor({"codeId","command","compute","description","distribution","environmentId","environmentVariables","experimentName","identity","inputDataBindings","interactionEndpoints","jobType","output","outputDataBindings","parameters","priority","properties","provisioningState","status","tags","timeout"})
+    @OutputCustomType.Constructor
     private CommandJobResponse(
-        @Nullable String codeId,
-        String command,
-        ComputeConfigurationResponse compute,
-        @Nullable String description,
-        @Nullable Object distribution,
-        @Nullable String environmentId,
-        @Nullable Map<String,String> environmentVariables,
-        @Nullable String experimentName,
-        @Nullable Either<AmlTokenResponse,ManagedIdentityResponse> identity,
-        @Nullable Map<String,InputDataBindingResponse> inputDataBindings,
-        Map<String,JobEndpointResponse> interactionEndpoints,
-        String jobType,
-        JobOutputResponse output,
-        @Nullable Map<String,OutputDataBindingResponse> outputDataBindings,
-        Object parameters,
-        @Nullable Integer priority,
-        @Nullable Map<String,String> properties,
-        String provisioningState,
-        String status,
-        @Nullable Map<String,String> tags,
-        @Nullable String timeout) {
+        @OutputCustomType.Parameter("codeId") @Nullable String codeId,
+        @OutputCustomType.Parameter("command") String command,
+        @OutputCustomType.Parameter("compute") ComputeConfigurationResponse compute,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("distribution") @Nullable Object distribution,
+        @OutputCustomType.Parameter("environmentId") @Nullable String environmentId,
+        @OutputCustomType.Parameter("environmentVariables") @Nullable Map<String,String> environmentVariables,
+        @OutputCustomType.Parameter("experimentName") @Nullable String experimentName,
+        @OutputCustomType.Parameter("identity") @Nullable Either<AmlTokenResponse,ManagedIdentityResponse> identity,
+        @OutputCustomType.Parameter("inputDataBindings") @Nullable Map<String,InputDataBindingResponse> inputDataBindings,
+        @OutputCustomType.Parameter("interactionEndpoints") Map<String,JobEndpointResponse> interactionEndpoints,
+        @OutputCustomType.Parameter("jobType") String jobType,
+        @OutputCustomType.Parameter("output") JobOutputResponse output,
+        @OutputCustomType.Parameter("outputDataBindings") @Nullable Map<String,OutputDataBindingResponse> outputDataBindings,
+        @OutputCustomType.Parameter("parameters") Object parameters,
+        @OutputCustomType.Parameter("priority") @Nullable Integer priority,
+        @OutputCustomType.Parameter("properties") @Nullable Map<String,String> properties,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("status") String status,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("timeout") @Nullable String timeout) {
         this.codeId = codeId;
         this.command = command;
         this.compute = compute;

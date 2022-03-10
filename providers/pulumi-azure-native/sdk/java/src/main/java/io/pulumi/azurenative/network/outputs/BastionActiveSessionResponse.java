@@ -67,19 +67,19 @@ public final class BastionActiveSessionResponse {
      */
     private final String userName;
 
-    @OutputCustomType.Constructor({"protocol","resourceType","sessionDurationInMins","sessionId","startTime","targetHostName","targetIpAddress","targetResourceGroup","targetResourceId","targetSubscriptionId","userName"})
+    @OutputCustomType.Constructor
     private BastionActiveSessionResponse(
-        String protocol,
-        String resourceType,
-        Double sessionDurationInMins,
-        String sessionId,
-        Object startTime,
-        String targetHostName,
-        String targetIpAddress,
-        String targetResourceGroup,
-        String targetResourceId,
-        String targetSubscriptionId,
-        String userName) {
+        @OutputCustomType.Parameter("protocol") String protocol,
+        @OutputCustomType.Parameter("resourceType") String resourceType,
+        @OutputCustomType.Parameter("sessionDurationInMins") Double sessionDurationInMins,
+        @OutputCustomType.Parameter("sessionId") String sessionId,
+        @OutputCustomType.Parameter("startTime") Object startTime,
+        @OutputCustomType.Parameter("targetHostName") String targetHostName,
+        @OutputCustomType.Parameter("targetIpAddress") String targetIpAddress,
+        @OutputCustomType.Parameter("targetResourceGroup") String targetResourceGroup,
+        @OutputCustomType.Parameter("targetResourceId") String targetResourceId,
+        @OutputCustomType.Parameter("targetSubscriptionId") String targetSubscriptionId,
+        @OutputCustomType.Parameter("userName") String userName) {
         this.protocol = protocol;
         this.resourceType = resourceType;
         this.sessionDurationInMins = sessionDurationInMins;

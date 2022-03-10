@@ -27,11 +27,11 @@ public final class RosettaNetPipActivitySettingsResponse {
      */
     private final String activityType;
 
-    @OutputCustomType.Constructor({"acknowledgmentOfReceiptSettings","activityBehavior","activityType"})
+    @OutputCustomType.Constructor
     private RosettaNetPipActivitySettingsResponse(
-        RosettaNetPipAcknowledgmentOfReceiptSettingsResponse acknowledgmentOfReceiptSettings,
-        RosettaNetPipActivityBehaviorResponse activityBehavior,
-        String activityType) {
+        @OutputCustomType.Parameter("acknowledgmentOfReceiptSettings") RosettaNetPipAcknowledgmentOfReceiptSettingsResponse acknowledgmentOfReceiptSettings,
+        @OutputCustomType.Parameter("activityBehavior") RosettaNetPipActivityBehaviorResponse activityBehavior,
+        @OutputCustomType.Parameter("activityType") String activityType) {
         this.acknowledgmentOfReceiptSettings = acknowledgmentOfReceiptSettings;
         this.activityBehavior = activityBehavior;
         this.activityType = activityType;

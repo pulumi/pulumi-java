@@ -40,14 +40,14 @@ public final class StorageAccountMicrosoftEndpointsResponse {
      */
     private final String web;
 
-    @OutputCustomType.Constructor({"blob","dfs","file","queue","table","web"})
+    @OutputCustomType.Constructor
     private StorageAccountMicrosoftEndpointsResponse(
-        String blob,
-        String dfs,
-        String file,
-        String queue,
-        String table,
-        String web) {
+        @OutputCustomType.Parameter("blob") String blob,
+        @OutputCustomType.Parameter("dfs") String dfs,
+        @OutputCustomType.Parameter("file") String file,
+        @OutputCustomType.Parameter("queue") String queue,
+        @OutputCustomType.Parameter("table") String table,
+        @OutputCustomType.Parameter("web") String web) {
         this.blob = blob;
         this.dfs = dfs;
         this.file = file;

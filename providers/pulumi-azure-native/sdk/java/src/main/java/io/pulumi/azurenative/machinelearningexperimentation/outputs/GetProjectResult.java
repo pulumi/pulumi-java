@@ -78,21 +78,21 @@ public final class GetProjectResult {
      */
     private final String workspaceId;
 
-    @OutputCustomType.Constructor({"accountId","creationDate","description","friendlyName","gitrepo","id","location","name","projectId","provisioningState","tags","type","workspaceId"})
+    @OutputCustomType.Constructor
     private GetProjectResult(
-        String accountId,
-        String creationDate,
-        @Nullable String description,
-        String friendlyName,
-        @Nullable String gitrepo,
-        String id,
-        String location,
-        String name,
-        String projectId,
-        String provisioningState,
-        @Nullable Map<String,String> tags,
-        String type,
-        String workspaceId) {
+        @OutputCustomType.Parameter("accountId") String accountId,
+        @OutputCustomType.Parameter("creationDate") String creationDate,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("friendlyName") String friendlyName,
+        @OutputCustomType.Parameter("gitrepo") @Nullable String gitrepo,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("projectId") String projectId,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("workspaceId") String workspaceId) {
         this.accountId = accountId;
         this.creationDate = creationDate;
         this.description = description;

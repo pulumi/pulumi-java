@@ -22,10 +22,10 @@ public final class MigrationEligibilityInfoResponse {
      */
     private final List<String> validationMessages;
 
-    @OutputCustomType.Constructor({"isEligibleForMigration","validationMessages"})
+    @OutputCustomType.Constructor
     private MigrationEligibilityInfoResponse(
-        Boolean isEligibleForMigration,
-        List<String> validationMessages) {
+        @OutputCustomType.Parameter("isEligibleForMigration") Boolean isEligibleForMigration,
+        @OutputCustomType.Parameter("validationMessages") List<String> validationMessages) {
         this.isEligibleForMigration = isEligibleForMigration;
         this.validationMessages = validationMessages;
     }

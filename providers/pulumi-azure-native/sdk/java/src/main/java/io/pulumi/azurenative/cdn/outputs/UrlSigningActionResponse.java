@@ -22,10 +22,10 @@ public final class UrlSigningActionResponse {
      */
     private final UrlSigningActionParametersResponse parameters;
 
-    @OutputCustomType.Constructor({"name","parameters"})
+    @OutputCustomType.Constructor
     private UrlSigningActionResponse(
-        String name,
-        UrlSigningActionParametersResponse parameters) {
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("parameters") UrlSigningActionParametersResponse parameters) {
         this.name = name;
         this.parameters = parameters;
     }

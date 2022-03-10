@@ -48,15 +48,15 @@ public final class GetCertificateResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"expirationDate","id","keyVault","name","subject","thumbprint","type"})
+    @OutputCustomType.Constructor
     private GetCertificateResult(
-        String expirationDate,
-        String id,
-        @Nullable KeyVaultContractPropertiesResponse keyVault,
-        String name,
-        String subject,
-        String thumbprint,
-        String type) {
+        @OutputCustomType.Parameter("expirationDate") String expirationDate,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("keyVault") @Nullable KeyVaultContractPropertiesResponse keyVault,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("subject") String subject,
+        @OutputCustomType.Parameter("thumbprint") String thumbprint,
+        @OutputCustomType.Parameter("type") String type) {
         this.expirationDate = expirationDate;
         this.id = id;
         this.keyVault = keyVault;

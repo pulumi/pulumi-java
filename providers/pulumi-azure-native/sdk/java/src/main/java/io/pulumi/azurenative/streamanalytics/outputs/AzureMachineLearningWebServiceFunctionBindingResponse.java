@@ -47,14 +47,14 @@ public final class AzureMachineLearningWebServiceFunctionBindingResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"apiKey","batchSize","endpoint","inputs","outputs","type"})
+    @OutputCustomType.Constructor
     private AzureMachineLearningWebServiceFunctionBindingResponse(
-        @Nullable String apiKey,
-        @Nullable Integer batchSize,
-        @Nullable String endpoint,
-        @Nullable AzureMachineLearningWebServiceInputsResponse inputs,
-        @Nullable List<AzureMachineLearningWebServiceOutputColumnResponse> outputs,
-        String type) {
+        @OutputCustomType.Parameter("apiKey") @Nullable String apiKey,
+        @OutputCustomType.Parameter("batchSize") @Nullable Integer batchSize,
+        @OutputCustomType.Parameter("endpoint") @Nullable String endpoint,
+        @OutputCustomType.Parameter("inputs") @Nullable AzureMachineLearningWebServiceInputsResponse inputs,
+        @OutputCustomType.Parameter("outputs") @Nullable List<AzureMachineLearningWebServiceOutputColumnResponse> outputs,
+        @OutputCustomType.Parameter("type") String type) {
         this.apiKey = apiKey;
         this.batchSize = batchSize;
         this.endpoint = endpoint;

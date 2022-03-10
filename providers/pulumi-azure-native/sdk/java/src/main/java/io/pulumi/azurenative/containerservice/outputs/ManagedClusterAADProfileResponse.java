@@ -49,15 +49,15 @@ public final class ManagedClusterAADProfileResponse {
      */
     private final @Nullable String tenantID;
 
-    @OutputCustomType.Constructor({"adminGroupObjectIDs","clientAppID","enableAzureRBAC","managed","serverAppID","serverAppSecret","tenantID"})
+    @OutputCustomType.Constructor
     private ManagedClusterAADProfileResponse(
-        @Nullable List<String> adminGroupObjectIDs,
-        @Nullable String clientAppID,
-        @Nullable Boolean enableAzureRBAC,
-        @Nullable Boolean managed,
-        @Nullable String serverAppID,
-        @Nullable String serverAppSecret,
-        @Nullable String tenantID) {
+        @OutputCustomType.Parameter("adminGroupObjectIDs") @Nullable List<String> adminGroupObjectIDs,
+        @OutputCustomType.Parameter("clientAppID") @Nullable String clientAppID,
+        @OutputCustomType.Parameter("enableAzureRBAC") @Nullable Boolean enableAzureRBAC,
+        @OutputCustomType.Parameter("managed") @Nullable Boolean managed,
+        @OutputCustomType.Parameter("serverAppID") @Nullable String serverAppID,
+        @OutputCustomType.Parameter("serverAppSecret") @Nullable String serverAppSecret,
+        @OutputCustomType.Parameter("tenantID") @Nullable String tenantID) {
         this.adminGroupObjectIDs = adminGroupObjectIDs;
         this.clientAppID = clientAppID;
         this.enableAzureRBAC = enableAzureRBAC;

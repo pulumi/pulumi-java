@@ -35,12 +35,12 @@ public final class ManagedClusterPodIdentityProfileResponse {
      */
     private final @Nullable List<ManagedClusterPodIdentityExceptionResponse> userAssignedIdentityExceptions;
 
-    @OutputCustomType.Constructor({"allowNetworkPluginKubenet","enabled","userAssignedIdentities","userAssignedIdentityExceptions"})
+    @OutputCustomType.Constructor
     private ManagedClusterPodIdentityProfileResponse(
-        @Nullable Boolean allowNetworkPluginKubenet,
-        @Nullable Boolean enabled,
-        @Nullable List<ManagedClusterPodIdentityResponse> userAssignedIdentities,
-        @Nullable List<ManagedClusterPodIdentityExceptionResponse> userAssignedIdentityExceptions) {
+        @OutputCustomType.Parameter("allowNetworkPluginKubenet") @Nullable Boolean allowNetworkPluginKubenet,
+        @OutputCustomType.Parameter("enabled") @Nullable Boolean enabled,
+        @OutputCustomType.Parameter("userAssignedIdentities") @Nullable List<ManagedClusterPodIdentityResponse> userAssignedIdentities,
+        @OutputCustomType.Parameter("userAssignedIdentityExceptions") @Nullable List<ManagedClusterPodIdentityExceptionResponse> userAssignedIdentityExceptions) {
         this.allowNetworkPluginKubenet = allowNetworkPluginKubenet;
         this.enabled = enabled;
         this.userAssignedIdentities = userAssignedIdentities;

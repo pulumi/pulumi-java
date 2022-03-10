@@ -64,17 +64,17 @@ public final class AzureDataExplorerCommandActivityResponse {
      */
     private final @Nullable List<UserPropertyResponse> userProperties;
 
-    @OutputCustomType.Constructor({"command","commandTimeout","dependsOn","description","linkedServiceName","name","policy","type","userProperties"})
+    @OutputCustomType.Constructor
     private AzureDataExplorerCommandActivityResponse(
-        Object command,
-        @Nullable Object commandTimeout,
-        @Nullable List<ActivityDependencyResponse> dependsOn,
-        @Nullable String description,
-        @Nullable LinkedServiceReferenceResponse linkedServiceName,
-        String name,
-        @Nullable ActivityPolicyResponse policy,
-        String type,
-        @Nullable List<UserPropertyResponse> userProperties) {
+        @OutputCustomType.Parameter("command") Object command,
+        @OutputCustomType.Parameter("commandTimeout") @Nullable Object commandTimeout,
+        @OutputCustomType.Parameter("dependsOn") @Nullable List<ActivityDependencyResponse> dependsOn,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("linkedServiceName") @Nullable LinkedServiceReferenceResponse linkedServiceName,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("policy") @Nullable ActivityPolicyResponse policy,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("userProperties") @Nullable List<UserPropertyResponse> userProperties) {
         this.command = command;
         this.commandTimeout = commandTimeout;
         this.dependsOn = dependsOn;

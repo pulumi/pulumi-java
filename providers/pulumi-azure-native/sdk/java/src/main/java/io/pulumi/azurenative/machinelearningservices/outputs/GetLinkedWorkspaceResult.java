@@ -31,12 +31,12 @@ public final class GetLinkedWorkspaceResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"id","name","properties","type"})
+    @OutputCustomType.Constructor
     private GetLinkedWorkspaceResult(
-        String id,
-        String name,
-        LinkedWorkspacePropsResponse properties,
-        String type) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("properties") LinkedWorkspacePropsResponse properties,
+        @OutputCustomType.Parameter("type") String type) {
         this.id = id;
         this.name = name;
         this.properties = properties;

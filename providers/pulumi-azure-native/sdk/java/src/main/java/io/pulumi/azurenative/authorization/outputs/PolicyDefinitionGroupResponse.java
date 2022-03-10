@@ -37,13 +37,13 @@ public final class PolicyDefinitionGroupResponse {
      */
     private final String name;
 
-    @OutputCustomType.Constructor({"additionalMetadataId","category","description","displayName","name"})
+    @OutputCustomType.Constructor
     private PolicyDefinitionGroupResponse(
-        @Nullable String additionalMetadataId,
-        @Nullable String category,
-        @Nullable String description,
-        @Nullable String displayName,
-        String name) {
+        @OutputCustomType.Parameter("additionalMetadataId") @Nullable String additionalMetadataId,
+        @OutputCustomType.Parameter("category") @Nullable String category,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("displayName") @Nullable String displayName,
+        @OutputCustomType.Parameter("name") String name) {
         this.additionalMetadataId = additionalMetadataId;
         this.category = category;
         this.description = description;

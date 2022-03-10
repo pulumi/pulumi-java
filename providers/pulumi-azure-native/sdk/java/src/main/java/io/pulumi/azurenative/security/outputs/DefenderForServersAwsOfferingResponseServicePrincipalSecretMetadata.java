@@ -27,11 +27,11 @@ public final class DefenderForServersAwsOfferingResponseServicePrincipalSecretMe
      */
     private final @Nullable String parameterStoreRegion;
 
-    @OutputCustomType.Constructor({"expiryDate","parameterNameInStore","parameterStoreRegion"})
+    @OutputCustomType.Constructor
     private DefenderForServersAwsOfferingResponseServicePrincipalSecretMetadata(
-        @Nullable String expiryDate,
-        @Nullable String parameterNameInStore,
-        @Nullable String parameterStoreRegion) {
+        @OutputCustomType.Parameter("expiryDate") @Nullable String expiryDate,
+        @OutputCustomType.Parameter("parameterNameInStore") @Nullable String parameterNameInStore,
+        @OutputCustomType.Parameter("parameterStoreRegion") @Nullable String parameterStoreRegion) {
         this.expiryDate = expiryDate;
         this.parameterNameInStore = parameterNameInStore;
         this.parameterStoreRegion = parameterStoreRegion;

@@ -32,12 +32,12 @@ public final class ScriptReferenceResponse {
      */
     private final @Nullable String timeout;
 
-    @OutputCustomType.Constructor({"scriptArguments","scriptData","scriptSource","timeout"})
+    @OutputCustomType.Constructor
     private ScriptReferenceResponse(
-        @Nullable String scriptArguments,
-        @Nullable String scriptData,
-        @Nullable String scriptSource,
-        @Nullable String timeout) {
+        @OutputCustomType.Parameter("scriptArguments") @Nullable String scriptArguments,
+        @OutputCustomType.Parameter("scriptData") @Nullable String scriptData,
+        @OutputCustomType.Parameter("scriptSource") @Nullable String scriptSource,
+        @OutputCustomType.Parameter("timeout") @Nullable String timeout) {
         this.scriptArguments = scriptArguments;
         this.scriptData = scriptData;
         this.scriptSource = scriptSource;

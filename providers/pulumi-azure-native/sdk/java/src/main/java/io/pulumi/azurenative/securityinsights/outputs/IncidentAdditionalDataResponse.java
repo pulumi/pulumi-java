@@ -37,13 +37,13 @@ public final class IncidentAdditionalDataResponse {
      */
     private final List<String> tactics;
 
-    @OutputCustomType.Constructor({"alertProductNames","alertsCount","bookmarksCount","commentsCount","tactics"})
+    @OutputCustomType.Constructor
     private IncidentAdditionalDataResponse(
-        List<String> alertProductNames,
-        Integer alertsCount,
-        Integer bookmarksCount,
-        Integer commentsCount,
-        List<String> tactics) {
+        @OutputCustomType.Parameter("alertProductNames") List<String> alertProductNames,
+        @OutputCustomType.Parameter("alertsCount") Integer alertsCount,
+        @OutputCustomType.Parameter("bookmarksCount") Integer bookmarksCount,
+        @OutputCustomType.Parameter("commentsCount") Integer commentsCount,
+        @OutputCustomType.Parameter("tactics") List<String> tactics) {
         this.alertProductNames = alertProductNames;
         this.alertsCount = alertsCount;
         this.bookmarksCount = bookmarksCount;

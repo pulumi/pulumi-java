@@ -47,15 +47,15 @@ public final class ConditionsResponse {
      */
     private final @Nullable ConditionResponse targetResourceType;
 
-    @OutputCustomType.Constructor({"alertContext","alertRuleId","description","monitorCondition","monitorService","severity","targetResourceType"})
+    @OutputCustomType.Constructor
     private ConditionsResponse(
-        @Nullable ConditionResponse alertContext,
-        @Nullable ConditionResponse alertRuleId,
-        @Nullable ConditionResponse description,
-        @Nullable ConditionResponse monitorCondition,
-        @Nullable ConditionResponse monitorService,
-        @Nullable ConditionResponse severity,
-        @Nullable ConditionResponse targetResourceType) {
+        @OutputCustomType.Parameter("alertContext") @Nullable ConditionResponse alertContext,
+        @OutputCustomType.Parameter("alertRuleId") @Nullable ConditionResponse alertRuleId,
+        @OutputCustomType.Parameter("description") @Nullable ConditionResponse description,
+        @OutputCustomType.Parameter("monitorCondition") @Nullable ConditionResponse monitorCondition,
+        @OutputCustomType.Parameter("monitorService") @Nullable ConditionResponse monitorService,
+        @OutputCustomType.Parameter("severity") @Nullable ConditionResponse severity,
+        @OutputCustomType.Parameter("targetResourceType") @Nullable ConditionResponse targetResourceType) {
         this.alertContext = alertContext;
         this.alertRuleId = alertRuleId;
         this.description = description;

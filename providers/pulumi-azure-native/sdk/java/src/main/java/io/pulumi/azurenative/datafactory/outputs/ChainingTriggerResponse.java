@@ -52,15 +52,15 @@ public final class ChainingTriggerResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"annotations","dependsOn","description","pipeline","runDimension","runtimeState","type"})
+    @OutputCustomType.Constructor
     private ChainingTriggerResponse(
-        @Nullable List<Object> annotations,
-        List<PipelineReferenceResponse> dependsOn,
-        @Nullable String description,
-        TriggerPipelineReferenceResponse pipeline,
-        String runDimension,
-        String runtimeState,
-        String type) {
+        @OutputCustomType.Parameter("annotations") @Nullable List<Object> annotations,
+        @OutputCustomType.Parameter("dependsOn") List<PipelineReferenceResponse> dependsOn,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("pipeline") TriggerPipelineReferenceResponse pipeline,
+        @OutputCustomType.Parameter("runDimension") String runDimension,
+        @OutputCustomType.Parameter("runtimeState") String runtimeState,
+        @OutputCustomType.Parameter("type") String type) {
         this.annotations = annotations;
         this.dependsOn = dependsOn;
         this.description = description;

@@ -82,21 +82,21 @@ public final class GetSmartDetectorAlertRuleResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"actionGroups","description","detector","frequency","id","location","name","scope","severity","state","tags","throttling","type"})
+    @OutputCustomType.Constructor
     private GetSmartDetectorAlertRuleResult(
-        ActionGroupsInformationResponse actionGroups,
-        @Nullable String description,
-        DetectorResponse detector,
-        String frequency,
-        String id,
-        @Nullable String location,
-        String name,
-        List<String> scope,
-        String severity,
-        String state,
-        @Nullable Map<String,String> tags,
-        @Nullable ThrottlingInformationResponse throttling,
-        String type) {
+        @OutputCustomType.Parameter("actionGroups") ActionGroupsInformationResponse actionGroups,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("detector") DetectorResponse detector,
+        @OutputCustomType.Parameter("frequency") String frequency,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("scope") List<String> scope,
+        @OutputCustomType.Parameter("severity") String severity,
+        @OutputCustomType.Parameter("state") String state,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("throttling") @Nullable ThrottlingInformationResponse throttling,
+        @OutputCustomType.Parameter("type") String type) {
         this.actionGroups = actionGroups;
         this.description = description;
         this.detector = detector;

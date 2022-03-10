@@ -22,10 +22,10 @@ public final class AdhocBasedTriggerContextResponse {
      */
     private final AdhocBasedTaggingCriteriaResponse taggingCriteria;
 
-    @OutputCustomType.Constructor({"objectType","taggingCriteria"})
+    @OutputCustomType.Constructor
     private AdhocBasedTriggerContextResponse(
-        String objectType,
-        AdhocBasedTaggingCriteriaResponse taggingCriteria) {
+        @OutputCustomType.Parameter("objectType") String objectType,
+        @OutputCustomType.Parameter("taggingCriteria") AdhocBasedTaggingCriteriaResponse taggingCriteria) {
         this.objectType = objectType;
         this.taggingCriteria = taggingCriteria;
     }

@@ -17,8 +17,8 @@ public final class PrivateAtlasPropertiesResponse {
      */
     private final @Nullable String provisioningState;
 
-    @OutputCustomType.Constructor({"provisioningState"})
-    private PrivateAtlasPropertiesResponse(@Nullable String provisioningState) {
+    @OutputCustomType.Constructor
+    private PrivateAtlasPropertiesResponse(@OutputCustomType.Parameter("provisioningState") @Nullable String provisioningState) {
         this.provisioningState = provisioningState;
     }
 

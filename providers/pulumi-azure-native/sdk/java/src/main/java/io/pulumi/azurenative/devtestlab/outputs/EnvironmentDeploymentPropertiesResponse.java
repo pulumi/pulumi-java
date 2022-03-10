@@ -24,10 +24,10 @@ public final class EnvironmentDeploymentPropertiesResponse {
      */
     private final @Nullable List<ArmTemplateParameterPropertiesResponse> parameters;
 
-    @OutputCustomType.Constructor({"armTemplateId","parameters"})
+    @OutputCustomType.Constructor
     private EnvironmentDeploymentPropertiesResponse(
-        @Nullable String armTemplateId,
-        @Nullable List<ArmTemplateParameterPropertiesResponse> parameters) {
+        @OutputCustomType.Parameter("armTemplateId") @Nullable String armTemplateId,
+        @OutputCustomType.Parameter("parameters") @Nullable List<ArmTemplateParameterPropertiesResponse> parameters) {
         this.armTemplateId = armTemplateId;
         this.parameters = parameters;
     }

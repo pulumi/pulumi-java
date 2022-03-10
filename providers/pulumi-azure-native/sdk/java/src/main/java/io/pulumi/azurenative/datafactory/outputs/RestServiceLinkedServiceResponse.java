@@ -112,26 +112,26 @@ public final class RestServiceLinkedServiceResponse {
      */
     private final @Nullable Object userName;
 
-    @OutputCustomType.Constructor({"aadResourceId","annotations","authHeaders","authenticationType","azureCloudType","connectVia","credential","description","enableServerCertificateValidation","encryptedCredential","parameters","password","servicePrincipalId","servicePrincipalKey","tenant","type","url","userName"})
+    @OutputCustomType.Constructor
     private RestServiceLinkedServiceResponse(
-        @Nullable Object aadResourceId,
-        @Nullable List<Object> annotations,
-        @Nullable Object authHeaders,
-        String authenticationType,
-        @Nullable Object azureCloudType,
-        @Nullable IntegrationRuntimeReferenceResponse connectVia,
-        @Nullable CredentialReferenceResponse credential,
-        @Nullable String description,
-        @Nullable Object enableServerCertificateValidation,
-        @Nullable Object encryptedCredential,
-        @Nullable Map<String,ParameterSpecificationResponse> parameters,
-        @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password,
-        @Nullable Object servicePrincipalId,
-        @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalKey,
-        @Nullable Object tenant,
-        String type,
-        Object url,
-        @Nullable Object userName) {
+        @OutputCustomType.Parameter("aadResourceId") @Nullable Object aadResourceId,
+        @OutputCustomType.Parameter("annotations") @Nullable List<Object> annotations,
+        @OutputCustomType.Parameter("authHeaders") @Nullable Object authHeaders,
+        @OutputCustomType.Parameter("authenticationType") String authenticationType,
+        @OutputCustomType.Parameter("azureCloudType") @Nullable Object azureCloudType,
+        @OutputCustomType.Parameter("connectVia") @Nullable IntegrationRuntimeReferenceResponse connectVia,
+        @OutputCustomType.Parameter("credential") @Nullable CredentialReferenceResponse credential,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("enableServerCertificateValidation") @Nullable Object enableServerCertificateValidation,
+        @OutputCustomType.Parameter("encryptedCredential") @Nullable Object encryptedCredential,
+        @OutputCustomType.Parameter("parameters") @Nullable Map<String,ParameterSpecificationResponse> parameters,
+        @OutputCustomType.Parameter("password") @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password,
+        @OutputCustomType.Parameter("servicePrincipalId") @Nullable Object servicePrincipalId,
+        @OutputCustomType.Parameter("servicePrincipalKey") @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalKey,
+        @OutputCustomType.Parameter("tenant") @Nullable Object tenant,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("url") Object url,
+        @OutputCustomType.Parameter("userName") @Nullable Object userName) {
         this.aadResourceId = aadResourceId;
         this.annotations = annotations;
         this.authHeaders = authHeaders;

@@ -51,15 +51,15 @@ public final class RestorePointSourceVMOSDiskResponse {
      */
     private final @Nullable String osType;
 
-    @OutputCustomType.Constructor({"caching","diskRestorePoint","diskSizeGB","encryptionSettings","managedDisk","name","osType"})
+    @OutputCustomType.Constructor
     private RestorePointSourceVMOSDiskResponse(
-        @Nullable String caching,
-        @Nullable ApiEntityReferenceResponse diskRestorePoint,
-        @Nullable Integer diskSizeGB,
-        @Nullable DiskEncryptionSettingsResponse encryptionSettings,
-        @Nullable ManagedDiskParametersResponse managedDisk,
-        @Nullable String name,
-        @Nullable String osType) {
+        @OutputCustomType.Parameter("caching") @Nullable String caching,
+        @OutputCustomType.Parameter("diskRestorePoint") @Nullable ApiEntityReferenceResponse diskRestorePoint,
+        @OutputCustomType.Parameter("diskSizeGB") @Nullable Integer diskSizeGB,
+        @OutputCustomType.Parameter("encryptionSettings") @Nullable DiskEncryptionSettingsResponse encryptionSettings,
+        @OutputCustomType.Parameter("managedDisk") @Nullable ManagedDiskParametersResponse managedDisk,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("osType") @Nullable String osType) {
         this.caching = caching;
         this.diskRestorePoint = diskRestorePoint;
         this.diskSizeGB = diskSizeGB;

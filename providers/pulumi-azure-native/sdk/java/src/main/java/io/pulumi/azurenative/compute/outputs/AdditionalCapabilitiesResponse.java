@@ -17,8 +17,8 @@ public final class AdditionalCapabilitiesResponse {
      */
     private final @Nullable Boolean ultraSSDEnabled;
 
-    @OutputCustomType.Constructor({"ultraSSDEnabled"})
-    private AdditionalCapabilitiesResponse(@Nullable Boolean ultraSSDEnabled) {
+    @OutputCustomType.Constructor
+    private AdditionalCapabilitiesResponse(@OutputCustomType.Parameter("ultraSSDEnabled") @Nullable Boolean ultraSSDEnabled) {
         this.ultraSSDEnabled = ultraSSDEnabled;
     }
 

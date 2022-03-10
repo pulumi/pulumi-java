@@ -45,14 +45,14 @@ public final class WebApplicationFirewallCustomRuleResponse {
      */
     private final String ruleType;
 
-    @OutputCustomType.Constructor({"action","etag","matchConditions","name","priority","ruleType"})
+    @OutputCustomType.Constructor
     private WebApplicationFirewallCustomRuleResponse(
-        String action,
-        String etag,
-        List<MatchConditionResponse> matchConditions,
-        @Nullable String name,
-        Integer priority,
-        String ruleType) {
+        @OutputCustomType.Parameter("action") String action,
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("matchConditions") List<MatchConditionResponse> matchConditions,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("priority") Integer priority,
+        @OutputCustomType.Parameter("ruleType") String ruleType) {
         this.action = action;
         this.etag = etag;
         this.matchConditions = matchConditions;

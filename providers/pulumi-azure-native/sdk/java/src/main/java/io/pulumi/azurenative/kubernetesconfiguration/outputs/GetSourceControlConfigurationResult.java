@@ -102,25 +102,25 @@ public final class GetSourceControlConfigurationResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"complianceStatus","configurationProtectedSettings","enableHelmOperator","helmOperatorProperties","id","name","operatorInstanceName","operatorNamespace","operatorParams","operatorScope","operatorType","provisioningState","repositoryPublicKey","repositoryUrl","sshKnownHostsContents","systemData","type"})
+    @OutputCustomType.Constructor
     private GetSourceControlConfigurationResult(
-        ComplianceStatusResponse complianceStatus,
-        @Nullable Map<String,String> configurationProtectedSettings,
-        @Nullable Boolean enableHelmOperator,
-        @Nullable HelmOperatorPropertiesResponse helmOperatorProperties,
-        String id,
-        String name,
-        @Nullable String operatorInstanceName,
-        @Nullable String operatorNamespace,
-        @Nullable String operatorParams,
-        @Nullable String operatorScope,
-        @Nullable String operatorType,
-        String provisioningState,
-        String repositoryPublicKey,
-        @Nullable String repositoryUrl,
-        @Nullable String sshKnownHostsContents,
-        SystemDataResponse systemData,
-        String type) {
+        @OutputCustomType.Parameter("complianceStatus") ComplianceStatusResponse complianceStatus,
+        @OutputCustomType.Parameter("configurationProtectedSettings") @Nullable Map<String,String> configurationProtectedSettings,
+        @OutputCustomType.Parameter("enableHelmOperator") @Nullable Boolean enableHelmOperator,
+        @OutputCustomType.Parameter("helmOperatorProperties") @Nullable HelmOperatorPropertiesResponse helmOperatorProperties,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("operatorInstanceName") @Nullable String operatorInstanceName,
+        @OutputCustomType.Parameter("operatorNamespace") @Nullable String operatorNamespace,
+        @OutputCustomType.Parameter("operatorParams") @Nullable String operatorParams,
+        @OutputCustomType.Parameter("operatorScope") @Nullable String operatorScope,
+        @OutputCustomType.Parameter("operatorType") @Nullable String operatorType,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("repositoryPublicKey") String repositoryPublicKey,
+        @OutputCustomType.Parameter("repositoryUrl") @Nullable String repositoryUrl,
+        @OutputCustomType.Parameter("sshKnownHostsContents") @Nullable String sshKnownHostsContents,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("type") String type) {
         this.complianceStatus = complianceStatus;
         this.configurationProtectedSettings = configurationProtectedSettings;
         this.enableHelmOperator = enableHelmOperator;

@@ -51,15 +51,15 @@ public final class AzureFirewallNatRuleCollectionResponse {
      */
     private final @Nullable List<AzureFirewallNatRuleResponse> rules;
 
-    @OutputCustomType.Constructor({"action","etag","id","name","priority","provisioningState","rules"})
+    @OutputCustomType.Constructor
     private AzureFirewallNatRuleCollectionResponse(
-        @Nullable AzureFirewallNatRCActionResponse action,
-        String etag,
-        @Nullable String id,
-        @Nullable String name,
-        @Nullable Integer priority,
-        String provisioningState,
-        @Nullable List<AzureFirewallNatRuleResponse> rules) {
+        @OutputCustomType.Parameter("action") @Nullable AzureFirewallNatRCActionResponse action,
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("priority") @Nullable Integer priority,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("rules") @Nullable List<AzureFirewallNatRuleResponse> rules) {
         this.action = action;
         this.etag = etag;
         this.id = id;

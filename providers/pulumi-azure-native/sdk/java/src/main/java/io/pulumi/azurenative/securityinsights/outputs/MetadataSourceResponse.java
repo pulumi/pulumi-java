@@ -27,11 +27,11 @@ public final class MetadataSourceResponse {
      */
     private final @Nullable String sourceId;
 
-    @OutputCustomType.Constructor({"kind","name","sourceId"})
+    @OutputCustomType.Constructor
     private MetadataSourceResponse(
-        String kind,
-        @Nullable String name,
-        @Nullable String sourceId) {
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("sourceId") @Nullable String sourceId) {
         this.kind = kind;
         this.name = name;
         this.sourceId = sourceId;

@@ -36,13 +36,13 @@ public final class RecommendedActionMetricInfoResponse {
      */
     private final Double value;
 
-    @OutputCustomType.Constructor({"metricName","startTime","timeGrain","unit","value"})
+    @OutputCustomType.Constructor
     private RecommendedActionMetricInfoResponse(
-        String metricName,
-        String startTime,
-        String timeGrain,
-        String unit,
-        Double value) {
+        @OutputCustomType.Parameter("metricName") String metricName,
+        @OutputCustomType.Parameter("startTime") String startTime,
+        @OutputCustomType.Parameter("timeGrain") String timeGrain,
+        @OutputCustomType.Parameter("unit") String unit,
+        @OutputCustomType.Parameter("value") Double value) {
         this.metricName = metricName;
         this.startTime = startTime;
         this.timeGrain = timeGrain;

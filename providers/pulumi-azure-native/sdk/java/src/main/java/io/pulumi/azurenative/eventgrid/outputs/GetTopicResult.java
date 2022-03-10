@@ -85,22 +85,22 @@ public final class GetTopicResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"endpoint","id","inboundIpRules","inputSchema","inputSchemaMapping","location","metricResourceId","name","privateEndpointConnections","provisioningState","publicNetworkAccess","systemData","tags","type"})
+    @OutputCustomType.Constructor
     private GetTopicResult(
-        String endpoint,
-        String id,
-        @Nullable List<InboundIpRuleResponse> inboundIpRules,
-        @Nullable String inputSchema,
-        @Nullable JsonInputSchemaMappingResponse inputSchemaMapping,
-        String location,
-        String metricResourceId,
-        String name,
-        List<PrivateEndpointConnectionResponse> privateEndpointConnections,
-        String provisioningState,
-        @Nullable String publicNetworkAccess,
-        SystemDataResponse systemData,
-        @Nullable Map<String,String> tags,
-        String type) {
+        @OutputCustomType.Parameter("endpoint") String endpoint,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("inboundIpRules") @Nullable List<InboundIpRuleResponse> inboundIpRules,
+        @OutputCustomType.Parameter("inputSchema") @Nullable String inputSchema,
+        @OutputCustomType.Parameter("inputSchemaMapping") @Nullable JsonInputSchemaMappingResponse inputSchemaMapping,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("metricResourceId") String metricResourceId,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("privateEndpointConnections") List<PrivateEndpointConnectionResponse> privateEndpointConnections,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("publicNetworkAccess") @Nullable String publicNetworkAccess,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type) {
         this.endpoint = endpoint;
         this.id = id;
         this.inboundIpRules = inboundIpRules;

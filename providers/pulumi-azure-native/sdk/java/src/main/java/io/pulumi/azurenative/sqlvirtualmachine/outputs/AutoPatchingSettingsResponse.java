@@ -34,12 +34,12 @@ public final class AutoPatchingSettingsResponse {
      */
     private final @Nullable Integer maintenanceWindowStartingHour;
 
-    @OutputCustomType.Constructor({"dayOfWeek","enable","maintenanceWindowDuration","maintenanceWindowStartingHour"})
+    @OutputCustomType.Constructor
     private AutoPatchingSettingsResponse(
-        @Nullable String dayOfWeek,
-        @Nullable Boolean enable,
-        @Nullable Integer maintenanceWindowDuration,
-        @Nullable Integer maintenanceWindowStartingHour) {
+        @OutputCustomType.Parameter("dayOfWeek") @Nullable String dayOfWeek,
+        @OutputCustomType.Parameter("enable") @Nullable Boolean enable,
+        @OutputCustomType.Parameter("maintenanceWindowDuration") @Nullable Integer maintenanceWindowDuration,
+        @OutputCustomType.Parameter("maintenanceWindowStartingHour") @Nullable Integer maintenanceWindowStartingHour) {
         this.dayOfWeek = dayOfWeek;
         this.enable = enable;
         this.maintenanceWindowDuration = maintenanceWindowDuration;

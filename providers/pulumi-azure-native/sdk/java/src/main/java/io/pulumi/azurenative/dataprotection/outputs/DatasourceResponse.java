@@ -47,15 +47,15 @@ public final class DatasourceResponse {
      */
     private final @Nullable String resourceUri;
 
-    @OutputCustomType.Constructor({"datasourceType","objectType","resourceID","resourceLocation","resourceName","resourceType","resourceUri"})
+    @OutputCustomType.Constructor
     private DatasourceResponse(
-        @Nullable String datasourceType,
-        @Nullable String objectType,
-        String resourceID,
-        @Nullable String resourceLocation,
-        @Nullable String resourceName,
-        @Nullable String resourceType,
-        @Nullable String resourceUri) {
+        @OutputCustomType.Parameter("datasourceType") @Nullable String datasourceType,
+        @OutputCustomType.Parameter("objectType") @Nullable String objectType,
+        @OutputCustomType.Parameter("resourceID") String resourceID,
+        @OutputCustomType.Parameter("resourceLocation") @Nullable String resourceLocation,
+        @OutputCustomType.Parameter("resourceName") @Nullable String resourceName,
+        @OutputCustomType.Parameter("resourceType") @Nullable String resourceType,
+        @OutputCustomType.Parameter("resourceUri") @Nullable String resourceUri) {
         this.datasourceType = datasourceType;
         this.objectType = objectType;
         this.resourceID = resourceID;

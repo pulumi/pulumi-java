@@ -55,17 +55,17 @@ public final class GetApplicationPackageResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"etag","format","id","lastActivationTime","name","state","storageUrl","storageUrlExpiry","type"})
+    @OutputCustomType.Constructor
     private GetApplicationPackageResult(
-        String etag,
-        String format,
-        String id,
-        String lastActivationTime,
-        String name,
-        String state,
-        String storageUrl,
-        String storageUrlExpiry,
-        String type) {
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("format") String format,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("lastActivationTime") String lastActivationTime,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("state") String state,
+        @OutputCustomType.Parameter("storageUrl") String storageUrl,
+        @OutputCustomType.Parameter("storageUrlExpiry") String storageUrlExpiry,
+        @OutputCustomType.Parameter("type") String type) {
         this.etag = etag;
         this.format = format;
         this.id = id;

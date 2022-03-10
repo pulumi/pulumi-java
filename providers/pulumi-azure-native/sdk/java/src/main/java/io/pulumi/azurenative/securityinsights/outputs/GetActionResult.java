@@ -42,14 +42,14 @@ public final class GetActionResult {
      */
     private final @Nullable String workflowId;
 
-    @OutputCustomType.Constructor({"etag","id","logicAppResourceId","name","type","workflowId"})
+    @OutputCustomType.Constructor
     private GetActionResult(
-        @Nullable String etag,
-        String id,
-        String logicAppResourceId,
-        String name,
-        String type,
-        @Nullable String workflowId) {
+        @OutputCustomType.Parameter("etag") @Nullable String etag,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("logicAppResourceId") String logicAppResourceId,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("workflowId") @Nullable String workflowId) {
         this.etag = etag;
         this.id = id;
         this.logicAppResourceId = logicAppResourceId;

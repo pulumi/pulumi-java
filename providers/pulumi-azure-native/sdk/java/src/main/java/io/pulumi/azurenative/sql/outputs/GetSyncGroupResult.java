@@ -91,23 +91,23 @@ public final class GetSyncGroupResult {
      */
     private final @Nullable Boolean usePrivateLinkConnection;
 
-    @OutputCustomType.Constructor({"conflictLoggingRetentionInDays","conflictResolutionPolicy","enableConflictLogging","hubDatabaseUserName","id","interval","lastSyncTime","name","privateEndpointName","schema","sku","syncDatabaseId","syncState","type","usePrivateLinkConnection"})
+    @OutputCustomType.Constructor
     private GetSyncGroupResult(
-        @Nullable Integer conflictLoggingRetentionInDays,
-        @Nullable String conflictResolutionPolicy,
-        @Nullable Boolean enableConflictLogging,
-        @Nullable String hubDatabaseUserName,
-        String id,
-        @Nullable Integer interval,
-        String lastSyncTime,
-        String name,
-        String privateEndpointName,
-        @Nullable SyncGroupSchemaResponse schema,
-        @Nullable SkuResponse sku,
-        @Nullable String syncDatabaseId,
-        String syncState,
-        String type,
-        @Nullable Boolean usePrivateLinkConnection) {
+        @OutputCustomType.Parameter("conflictLoggingRetentionInDays") @Nullable Integer conflictLoggingRetentionInDays,
+        @OutputCustomType.Parameter("conflictResolutionPolicy") @Nullable String conflictResolutionPolicy,
+        @OutputCustomType.Parameter("enableConflictLogging") @Nullable Boolean enableConflictLogging,
+        @OutputCustomType.Parameter("hubDatabaseUserName") @Nullable String hubDatabaseUserName,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("interval") @Nullable Integer interval,
+        @OutputCustomType.Parameter("lastSyncTime") String lastSyncTime,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("privateEndpointName") String privateEndpointName,
+        @OutputCustomType.Parameter("schema") @Nullable SyncGroupSchemaResponse schema,
+        @OutputCustomType.Parameter("sku") @Nullable SkuResponse sku,
+        @OutputCustomType.Parameter("syncDatabaseId") @Nullable String syncDatabaseId,
+        @OutputCustomType.Parameter("syncState") String syncState,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("usePrivateLinkConnection") @Nullable Boolean usePrivateLinkConnection) {
         this.conflictLoggingRetentionInDays = conflictLoggingRetentionInDays;
         this.conflictResolutionPolicy = conflictResolutionPolicy;
         this.enableConflictLogging = enableConflictLogging;

@@ -59,17 +59,17 @@ public final class GetEncryptionScopeResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"creationTime","id","keyVaultProperties","lastModifiedTime","name","requireInfrastructureEncryption","source","state","type"})
+    @OutputCustomType.Constructor
     private GetEncryptionScopeResult(
-        String creationTime,
-        String id,
-        @Nullable EncryptionScopeKeyVaultPropertiesResponse keyVaultProperties,
-        String lastModifiedTime,
-        String name,
-        @Nullable Boolean requireInfrastructureEncryption,
-        @Nullable String source,
-        @Nullable String state,
-        String type) {
+        @OutputCustomType.Parameter("creationTime") String creationTime,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("keyVaultProperties") @Nullable EncryptionScopeKeyVaultPropertiesResponse keyVaultProperties,
+        @OutputCustomType.Parameter("lastModifiedTime") String lastModifiedTime,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("requireInfrastructureEncryption") @Nullable Boolean requireInfrastructureEncryption,
+        @OutputCustomType.Parameter("source") @Nullable String source,
+        @OutputCustomType.Parameter("state") @Nullable String state,
+        @OutputCustomType.Parameter("type") String type) {
         this.creationTime = creationTime;
         this.id = id;
         this.keyVaultProperties = keyVaultProperties;

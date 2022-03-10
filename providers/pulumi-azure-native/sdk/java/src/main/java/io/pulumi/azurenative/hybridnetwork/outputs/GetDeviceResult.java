@@ -59,17 +59,17 @@ public final class GetDeviceResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"deviceType","id","location","name","networkFunctions","provisioningState","status","tags","type"})
+    @OutputCustomType.Constructor
     private GetDeviceResult(
-        String deviceType,
-        String id,
-        String location,
-        String name,
-        List<SubResourceResponse> networkFunctions,
-        String provisioningState,
-        String status,
-        @Nullable Map<String,String> tags,
-        String type) {
+        @OutputCustomType.Parameter("deviceType") String deviceType,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("networkFunctions") List<SubResourceResponse> networkFunctions,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("status") String status,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type) {
         this.deviceType = deviceType;
         this.id = id;
         this.location = location;

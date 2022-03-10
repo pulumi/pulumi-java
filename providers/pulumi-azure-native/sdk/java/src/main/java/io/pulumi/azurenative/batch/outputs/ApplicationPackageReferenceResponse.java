@@ -18,10 +18,10 @@ public final class ApplicationPackageReferenceResponse {
      */
     private final @Nullable String version;
 
-    @OutputCustomType.Constructor({"id","version"})
+    @OutputCustomType.Constructor
     private ApplicationPackageReferenceResponse(
-        String id,
-        @Nullable String version) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("version") @Nullable String version) {
         this.id = id;
         this.version = version;
     }

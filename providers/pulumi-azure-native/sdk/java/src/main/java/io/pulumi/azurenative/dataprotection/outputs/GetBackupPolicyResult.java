@@ -37,13 +37,13 @@ public final class GetBackupPolicyResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"id","name","properties","systemData","type"})
+    @OutputCustomType.Constructor
     private GetBackupPolicyResult(
-        String id,
-        String name,
-        BackupPolicyResponse properties,
-        SystemDataResponse systemData,
-        String type) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("properties") BackupPolicyResponse properties,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("type") String type) {
         this.id = id;
         this.name = name;
         this.properties = properties;

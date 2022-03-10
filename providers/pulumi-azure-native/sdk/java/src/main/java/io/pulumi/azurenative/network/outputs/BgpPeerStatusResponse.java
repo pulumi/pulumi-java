@@ -51,16 +51,16 @@ public final class BgpPeerStatusResponse {
      */
     private final String state;
 
-    @OutputCustomType.Constructor({"asn","connectedDuration","localAddress","messagesReceived","messagesSent","neighbor","routesReceived","state"})
+    @OutputCustomType.Constructor
     private BgpPeerStatusResponse(
-        Double asn,
-        String connectedDuration,
-        String localAddress,
-        Double messagesReceived,
-        Double messagesSent,
-        String neighbor,
-        Double routesReceived,
-        String state) {
+        @OutputCustomType.Parameter("asn") Double asn,
+        @OutputCustomType.Parameter("connectedDuration") String connectedDuration,
+        @OutputCustomType.Parameter("localAddress") String localAddress,
+        @OutputCustomType.Parameter("messagesReceived") Double messagesReceived,
+        @OutputCustomType.Parameter("messagesSent") Double messagesSent,
+        @OutputCustomType.Parameter("neighbor") String neighbor,
+        @OutputCustomType.Parameter("routesReceived") Double routesReceived,
+        @OutputCustomType.Parameter("state") String state) {
         this.asn = asn;
         this.connectedDuration = connectedDuration;
         this.localAddress = localAddress;

@@ -57,17 +57,17 @@ public final class WorkspaceRepositoryConfigurationResponse {
      */
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor({"accountName","collaborationBranch","hostName","lastCommitId","projectName","repositoryName","rootFolder","tenantId","type"})
+    @OutputCustomType.Constructor
     private WorkspaceRepositoryConfigurationResponse(
-        @Nullable String accountName,
-        @Nullable String collaborationBranch,
-        @Nullable String hostName,
-        @Nullable String lastCommitId,
-        @Nullable String projectName,
-        @Nullable String repositoryName,
-        @Nullable String rootFolder,
-        @Nullable String tenantId,
-        @Nullable String type) {
+        @OutputCustomType.Parameter("accountName") @Nullable String accountName,
+        @OutputCustomType.Parameter("collaborationBranch") @Nullable String collaborationBranch,
+        @OutputCustomType.Parameter("hostName") @Nullable String hostName,
+        @OutputCustomType.Parameter("lastCommitId") @Nullable String lastCommitId,
+        @OutputCustomType.Parameter("projectName") @Nullable String projectName,
+        @OutputCustomType.Parameter("repositoryName") @Nullable String repositoryName,
+        @OutputCustomType.Parameter("rootFolder") @Nullable String rootFolder,
+        @OutputCustomType.Parameter("tenantId") @Nullable String tenantId,
+        @OutputCustomType.Parameter("type") @Nullable String type) {
         this.accountName = accountName;
         this.collaborationBranch = collaborationBranch;
         this.hostName = hostName;

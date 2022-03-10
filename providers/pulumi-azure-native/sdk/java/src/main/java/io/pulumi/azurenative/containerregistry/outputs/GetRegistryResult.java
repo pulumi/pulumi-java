@@ -89,22 +89,22 @@ public final class GetRegistryResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"adminUserEnabled","creationDate","id","location","loginServer","name","networkRuleSet","policies","provisioningState","sku","status","storageAccount","tags","type"})
+    @OutputCustomType.Constructor
     private GetRegistryResult(
-        @Nullable Boolean adminUserEnabled,
-        String creationDate,
-        String id,
-        String location,
-        String loginServer,
-        String name,
-        @Nullable NetworkRuleSetResponse networkRuleSet,
-        @Nullable PoliciesResponse policies,
-        String provisioningState,
-        SkuResponse sku,
-        StatusResponse status,
-        @Nullable StorageAccountPropertiesResponse storageAccount,
-        @Nullable Map<String,String> tags,
-        String type) {
+        @OutputCustomType.Parameter("adminUserEnabled") @Nullable Boolean adminUserEnabled,
+        @OutputCustomType.Parameter("creationDate") String creationDate,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("loginServer") String loginServer,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("networkRuleSet") @Nullable NetworkRuleSetResponse networkRuleSet,
+        @OutputCustomType.Parameter("policies") @Nullable PoliciesResponse policies,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("sku") SkuResponse sku,
+        @OutputCustomType.Parameter("status") StatusResponse status,
+        @OutputCustomType.Parameter("storageAccount") @Nullable StorageAccountPropertiesResponse storageAccount,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type) {
         this.adminUserEnabled = adminUserEnabled;
         this.creationDate = creationDate;
         this.id = id;

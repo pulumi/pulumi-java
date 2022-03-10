@@ -22,10 +22,10 @@ public final class SubnetReferenceResponse {
      */
     private final String sourceArmResourceId;
 
-    @OutputCustomType.Constructor({"name","sourceArmResourceId"})
+    @OutputCustomType.Constructor
     private SubnetReferenceResponse(
-        @Nullable String name,
-        String sourceArmResourceId) {
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("sourceArmResourceId") String sourceArmResourceId) {
         this.name = name;
         this.sourceArmResourceId = sourceArmResourceId;
     }

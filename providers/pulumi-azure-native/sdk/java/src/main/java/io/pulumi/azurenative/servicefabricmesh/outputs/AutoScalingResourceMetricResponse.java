@@ -21,10 +21,10 @@ public final class AutoScalingResourceMetricResponse {
      */
     private final String name;
 
-    @OutputCustomType.Constructor({"kind","name"})
+    @OutputCustomType.Constructor
     private AutoScalingResourceMetricResponse(
-        String kind,
-        String name) {
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("name") String name) {
         this.kind = kind;
         this.name = name;
     }

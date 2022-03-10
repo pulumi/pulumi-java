@@ -58,17 +58,17 @@ public final class GetApplicationTypeVersionResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"appPackageUrl","defaultParameterList","etag","id","location","name","provisioningState","tags","type"})
+    @OutputCustomType.Constructor
     private GetApplicationTypeVersionResult(
-        String appPackageUrl,
-        Map<String,String> defaultParameterList,
-        String etag,
-        String id,
-        @Nullable String location,
-        String name,
-        String provisioningState,
-        @Nullable Map<String,String> tags,
-        String type) {
+        @OutputCustomType.Parameter("appPackageUrl") String appPackageUrl,
+        @OutputCustomType.Parameter("defaultParameterList") Map<String,String> defaultParameterList,
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type) {
         this.appPackageUrl = appPackageUrl;
         this.defaultParameterList = defaultParameterList;
         this.etag = etag;

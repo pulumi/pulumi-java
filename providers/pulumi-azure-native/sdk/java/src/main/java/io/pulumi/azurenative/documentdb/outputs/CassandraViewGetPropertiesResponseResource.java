@@ -36,13 +36,13 @@ public final class CassandraViewGetPropertiesResponseResource {
      */
     private final String viewDefinition;
 
-    @OutputCustomType.Constructor({"etag","id","rid","ts","viewDefinition"})
+    @OutputCustomType.Constructor
     private CassandraViewGetPropertiesResponseResource(
-        String etag,
-        String id,
-        String rid,
-        Double ts,
-        String viewDefinition) {
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("rid") String rid,
+        @OutputCustomType.Parameter("ts") Double ts,
+        @OutputCustomType.Parameter("viewDefinition") String viewDefinition) {
         this.etag = etag;
         this.id = id;
         this.rid = rid;

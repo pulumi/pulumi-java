@@ -27,11 +27,11 @@ public final class TimeWindowResponse {
      */
     private final @Nullable String timeZone;
 
-    @OutputCustomType.Constructor({"end","start","timeZone"})
+    @OutputCustomType.Constructor
     private TimeWindowResponse(
-        String end,
-        String start,
-        @Nullable String timeZone) {
+        @OutputCustomType.Parameter("end") String end,
+        @OutputCustomType.Parameter("start") String start,
+        @OutputCustomType.Parameter("timeZone") @Nullable String timeZone) {
         this.end = end;
         this.start = start;
         this.timeZone = timeZone;

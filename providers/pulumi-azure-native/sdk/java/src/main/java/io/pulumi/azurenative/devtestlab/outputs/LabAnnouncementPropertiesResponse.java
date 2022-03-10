@@ -48,15 +48,15 @@ public final class LabAnnouncementPropertiesResponse {
      */
     private final String uniqueIdentifier;
 
-    @OutputCustomType.Constructor({"enabled","expirationDate","expired","markdown","provisioningState","title","uniqueIdentifier"})
+    @OutputCustomType.Constructor
     private LabAnnouncementPropertiesResponse(
-        @Nullable String enabled,
-        @Nullable String expirationDate,
-        @Nullable Boolean expired,
-        @Nullable String markdown,
-        String provisioningState,
-        @Nullable String title,
-        String uniqueIdentifier) {
+        @OutputCustomType.Parameter("enabled") @Nullable String enabled,
+        @OutputCustomType.Parameter("expirationDate") @Nullable String expirationDate,
+        @OutputCustomType.Parameter("expired") @Nullable Boolean expired,
+        @OutputCustomType.Parameter("markdown") @Nullable String markdown,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("title") @Nullable String title,
+        @OutputCustomType.Parameter("uniqueIdentifier") String uniqueIdentifier) {
         this.enabled = enabled;
         this.expirationDate = expirationDate;
         this.expired = expired;

@@ -24,10 +24,10 @@ public final class TargetCopySettingResponse {
      */
     private final DataStoreInfoBaseResponse dataStore;
 
-    @OutputCustomType.Constructor({"copyAfter","dataStore"})
+    @OutputCustomType.Constructor
     private TargetCopySettingResponse(
-        Object copyAfter,
-        DataStoreInfoBaseResponse dataStore) {
+        @OutputCustomType.Parameter("copyAfter") Object copyAfter,
+        @OutputCustomType.Parameter("dataStore") DataStoreInfoBaseResponse dataStore) {
         this.copyAfter = copyAfter;
         this.dataStore = dataStore;
     }

@@ -82,21 +82,21 @@ public final class GetVirtualNetworkResult {
      */
     private final String uniqueIdentifier;
 
-    @OutputCustomType.Constructor({"allowedSubnets","createdDate","description","externalProviderResourceId","externalSubnets","id","location","name","provisioningState","subnetOverrides","tags","type","uniqueIdentifier"})
+    @OutputCustomType.Constructor
     private GetVirtualNetworkResult(
-        @Nullable List<SubnetResponse> allowedSubnets,
-        String createdDate,
-        @Nullable String description,
-        @Nullable String externalProviderResourceId,
-        List<ExternalSubnetResponse> externalSubnets,
-        String id,
-        @Nullable String location,
-        String name,
-        String provisioningState,
-        @Nullable List<SubnetOverrideResponse> subnetOverrides,
-        @Nullable Map<String,String> tags,
-        String type,
-        String uniqueIdentifier) {
+        @OutputCustomType.Parameter("allowedSubnets") @Nullable List<SubnetResponse> allowedSubnets,
+        @OutputCustomType.Parameter("createdDate") String createdDate,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("externalProviderResourceId") @Nullable String externalProviderResourceId,
+        @OutputCustomType.Parameter("externalSubnets") List<ExternalSubnetResponse> externalSubnets,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("subnetOverrides") @Nullable List<SubnetOverrideResponse> subnetOverrides,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("uniqueIdentifier") String uniqueIdentifier) {
         this.allowedSubnets = allowedSubnets;
         this.createdDate = createdDate;
         this.description = description;

@@ -22,10 +22,10 @@ public final class SqlDWUpsertSettingsResponse {
      */
     private final @Nullable Object keys;
 
-    @OutputCustomType.Constructor({"interimSchemaName","keys"})
+    @OutputCustomType.Constructor
     private SqlDWUpsertSettingsResponse(
-        @Nullable Object interimSchemaName,
-        @Nullable Object keys) {
+        @OutputCustomType.Parameter("interimSchemaName") @Nullable Object interimSchemaName,
+        @OutputCustomType.Parameter("keys") @Nullable Object keys) {
         this.interimSchemaName = interimSchemaName;
         this.keys = keys;
     }

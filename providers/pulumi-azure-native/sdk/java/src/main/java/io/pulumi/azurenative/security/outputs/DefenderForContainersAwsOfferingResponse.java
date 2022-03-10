@@ -47,14 +47,14 @@ public final class DefenderForContainersAwsOfferingResponse {
      */
     private final String offeringType;
 
-    @OutputCustomType.Constructor({"cloudWatchToKinesis","description","kinesisToS3","kubernetesScubaReader","kubernetesService","offeringType"})
+    @OutputCustomType.Constructor
     private DefenderForContainersAwsOfferingResponse(
-        @Nullable DefenderForContainersAwsOfferingResponseCloudWatchToKinesis cloudWatchToKinesis,
-        String description,
-        @Nullable DefenderForContainersAwsOfferingResponseKinesisToS3 kinesisToS3,
-        @Nullable DefenderForContainersAwsOfferingResponseKubernetesScubaReader kubernetesScubaReader,
-        @Nullable DefenderForContainersAwsOfferingResponseKubernetesService kubernetesService,
-        String offeringType) {
+        @OutputCustomType.Parameter("cloudWatchToKinesis") @Nullable DefenderForContainersAwsOfferingResponseCloudWatchToKinesis cloudWatchToKinesis,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("kinesisToS3") @Nullable DefenderForContainersAwsOfferingResponseKinesisToS3 kinesisToS3,
+        @OutputCustomType.Parameter("kubernetesScubaReader") @Nullable DefenderForContainersAwsOfferingResponseKubernetesScubaReader kubernetesScubaReader,
+        @OutputCustomType.Parameter("kubernetesService") @Nullable DefenderForContainersAwsOfferingResponseKubernetesService kubernetesService,
+        @OutputCustomType.Parameter("offeringType") String offeringType) {
         this.cloudWatchToKinesis = cloudWatchToKinesis;
         this.description = description;
         this.kinesisToS3 = kinesisToS3;

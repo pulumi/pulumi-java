@@ -56,16 +56,16 @@ public final class GetExperimentResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"id","identity","location","name","properties","systemData","tags","type"})
+    @OutputCustomType.Constructor
     private GetExperimentResult(
-        String id,
-        @Nullable ResourceIdentityResponse identity,
-        String location,
-        String name,
-        ExperimentPropertiesResponse properties,
-        SystemDataResponse systemData,
-        @Nullable Map<String,String> tags,
-        String type) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("identity") @Nullable ResourceIdentityResponse identity,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("properties") ExperimentPropertiesResponse properties,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type) {
         this.id = id;
         this.identity = identity;
         this.location = location;

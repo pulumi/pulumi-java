@@ -17,8 +17,8 @@ public final class AzureFirewallNatRCActionResponse {
      */
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor({"type"})
-    private AzureFirewallNatRCActionResponse(@Nullable String type) {
+    @OutputCustomType.Constructor
+    private AzureFirewallNatRCActionResponse(@OutputCustomType.Parameter("type") @Nullable String type) {
         this.type = type;
     }
 

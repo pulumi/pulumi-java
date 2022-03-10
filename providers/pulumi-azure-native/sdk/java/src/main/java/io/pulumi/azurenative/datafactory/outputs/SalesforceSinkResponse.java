@@ -64,18 +64,18 @@ public final class SalesforceSinkResponse {
      */
     private final @Nullable String writeBehavior;
 
-    @OutputCustomType.Constructor({"disableMetricsCollection","externalIdFieldName","ignoreNullValues","maxConcurrentConnections","sinkRetryCount","sinkRetryWait","type","writeBatchSize","writeBatchTimeout","writeBehavior"})
+    @OutputCustomType.Constructor
     private SalesforceSinkResponse(
-        @Nullable Object disableMetricsCollection,
-        @Nullable Object externalIdFieldName,
-        @Nullable Object ignoreNullValues,
-        @Nullable Object maxConcurrentConnections,
-        @Nullable Object sinkRetryCount,
-        @Nullable Object sinkRetryWait,
-        String type,
-        @Nullable Object writeBatchSize,
-        @Nullable Object writeBatchTimeout,
-        @Nullable String writeBehavior) {
+        @OutputCustomType.Parameter("disableMetricsCollection") @Nullable Object disableMetricsCollection,
+        @OutputCustomType.Parameter("externalIdFieldName") @Nullable Object externalIdFieldName,
+        @OutputCustomType.Parameter("ignoreNullValues") @Nullable Object ignoreNullValues,
+        @OutputCustomType.Parameter("maxConcurrentConnections") @Nullable Object maxConcurrentConnections,
+        @OutputCustomType.Parameter("sinkRetryCount") @Nullable Object sinkRetryCount,
+        @OutputCustomType.Parameter("sinkRetryWait") @Nullable Object sinkRetryWait,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("writeBatchSize") @Nullable Object writeBatchSize,
+        @OutputCustomType.Parameter("writeBatchTimeout") @Nullable Object writeBatchTimeout,
+        @OutputCustomType.Parameter("writeBehavior") @Nullable String writeBehavior) {
         this.disableMetricsCollection = disableMetricsCollection;
         this.externalIdFieldName = externalIdFieldName;
         this.ignoreNullValues = ignoreNullValues;

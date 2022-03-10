@@ -23,10 +23,10 @@ public final class KeyVaultKeyResponse {
      */
     private final @Nullable String kid;
 
-    @OutputCustomType.Constructor({"attributes","kid"})
+    @OutputCustomType.Constructor
     private KeyVaultKeyResponse(
-        @Nullable KeyVaultKeyResponseAttributes attributes,
-        @Nullable String kid) {
+        @OutputCustomType.Parameter("attributes") @Nullable KeyVaultKeyResponseAttributes attributes,
+        @OutputCustomType.Parameter("kid") @Nullable String kid) {
         this.attributes = attributes;
         this.kid = kid;
     }

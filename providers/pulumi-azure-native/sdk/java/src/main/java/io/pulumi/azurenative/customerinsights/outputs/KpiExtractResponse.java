@@ -20,10 +20,10 @@ public final class KpiExtractResponse {
      */
     private final String extractName;
 
-    @OutputCustomType.Constructor({"expression","extractName"})
+    @OutputCustomType.Constructor
     private KpiExtractResponse(
-        String expression,
-        String extractName) {
+        @OutputCustomType.Parameter("expression") String expression,
+        @OutputCustomType.Parameter("extractName") String extractName) {
         this.expression = expression;
         this.extractName = extractName;
     }

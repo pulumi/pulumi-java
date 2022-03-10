@@ -43,14 +43,14 @@ public final class ManagedInstanceExternalAdministratorResponse {
      */
     private final @Nullable String tenantId;
 
-    @OutputCustomType.Constructor({"administratorType","azureADOnlyAuthentication","login","principalType","sid","tenantId"})
+    @OutputCustomType.Constructor
     private ManagedInstanceExternalAdministratorResponse(
-        @Nullable String administratorType,
-        @Nullable Boolean azureADOnlyAuthentication,
-        @Nullable String login,
-        @Nullable String principalType,
-        @Nullable String sid,
-        @Nullable String tenantId) {
+        @OutputCustomType.Parameter("administratorType") @Nullable String administratorType,
+        @OutputCustomType.Parameter("azureADOnlyAuthentication") @Nullable Boolean azureADOnlyAuthentication,
+        @OutputCustomType.Parameter("login") @Nullable String login,
+        @OutputCustomType.Parameter("principalType") @Nullable String principalType,
+        @OutputCustomType.Parameter("sid") @Nullable String sid,
+        @OutputCustomType.Parameter("tenantId") @Nullable String tenantId) {
         this.administratorType = administratorType;
         this.azureADOnlyAuthentication = azureADOnlyAuthentication;
         this.login = login;

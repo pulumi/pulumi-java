@@ -60,17 +60,17 @@ public final class AppResourcePropertiesResponse {
      */
     private final String url;
 
-    @OutputCustomType.Constructor({"activeDeploymentName","createdTime","fqdn","httpsOnly","persistentDisk","provisioningState","$public","temporaryDisk","url"})
+    @OutputCustomType.Constructor
     private AppResourcePropertiesResponse(
-        @Nullable String activeDeploymentName,
-        String createdTime,
-        @Nullable String fqdn,
-        @Nullable Boolean httpsOnly,
-        @Nullable PersistentDiskResponse persistentDisk,
-        String provisioningState,
-        @Nullable Boolean $public,
-        @Nullable TemporaryDiskResponse temporaryDisk,
-        String url) {
+        @OutputCustomType.Parameter("activeDeploymentName") @Nullable String activeDeploymentName,
+        @OutputCustomType.Parameter("createdTime") String createdTime,
+        @OutputCustomType.Parameter("fqdn") @Nullable String fqdn,
+        @OutputCustomType.Parameter("httpsOnly") @Nullable Boolean httpsOnly,
+        @OutputCustomType.Parameter("persistentDisk") @Nullable PersistentDiskResponse persistentDisk,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("public") @Nullable Boolean $public,
+        @OutputCustomType.Parameter("temporaryDisk") @Nullable TemporaryDiskResponse temporaryDisk,
+        @OutputCustomType.Parameter("url") String url) {
         this.activeDeploymentName = activeDeploymentName;
         this.createdTime = createdTime;
         this.fqdn = fqdn;

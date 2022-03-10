@@ -33,12 +33,12 @@ public final class ApplicationGatewayBackendHealthServerResponse {
      */
     private final @Nullable NetworkInterfaceIPConfigurationResponse ipConfiguration;
 
-    @OutputCustomType.Constructor({"address","health","healthProbeLog","ipConfiguration"})
+    @OutputCustomType.Constructor
     private ApplicationGatewayBackendHealthServerResponse(
-        @Nullable String address,
-        @Nullable String health,
-        @Nullable String healthProbeLog,
-        @Nullable NetworkInterfaceIPConfigurationResponse ipConfiguration) {
+        @OutputCustomType.Parameter("address") @Nullable String address,
+        @OutputCustomType.Parameter("health") @Nullable String health,
+        @OutputCustomType.Parameter("healthProbeLog") @Nullable String healthProbeLog,
+        @OutputCustomType.Parameter("ipConfiguration") @Nullable NetworkInterfaceIPConfigurationResponse ipConfiguration) {
         this.address = address;
         this.health = health;
         this.healthProbeLog = healthProbeLog;

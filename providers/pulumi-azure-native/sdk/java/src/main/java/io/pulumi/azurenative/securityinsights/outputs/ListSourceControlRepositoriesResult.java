@@ -22,10 +22,10 @@ public final class ListSourceControlRepositoriesResult {
      */
     private final List<RepoResponse> value;
 
-    @OutputCustomType.Constructor({"nextLink","value"})
+    @OutputCustomType.Constructor
     private ListSourceControlRepositoriesResult(
-        String nextLink,
-        List<RepoResponse> value) {
+        @OutputCustomType.Parameter("nextLink") String nextLink,
+        @OutputCustomType.Parameter("value") List<RepoResponse> value) {
         this.nextLink = nextLink;
         this.value = value;
     }

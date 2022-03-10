@@ -75,20 +75,20 @@ public final class SqlDWSourceResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"additionalColumns","disableMetricsCollection","maxConcurrentConnections","partitionOption","partitionSettings","queryTimeout","sourceRetryCount","sourceRetryWait","sqlReaderQuery","sqlReaderStoredProcedureName","storedProcedureParameters","type"})
+    @OutputCustomType.Constructor
     private SqlDWSourceResponse(
-        @Nullable Object additionalColumns,
-        @Nullable Object disableMetricsCollection,
-        @Nullable Object maxConcurrentConnections,
-        @Nullable Object partitionOption,
-        @Nullable SqlPartitionSettingsResponse partitionSettings,
-        @Nullable Object queryTimeout,
-        @Nullable Object sourceRetryCount,
-        @Nullable Object sourceRetryWait,
-        @Nullable Object sqlReaderQuery,
-        @Nullable Object sqlReaderStoredProcedureName,
-        @Nullable Object storedProcedureParameters,
-        String type) {
+        @OutputCustomType.Parameter("additionalColumns") @Nullable Object additionalColumns,
+        @OutputCustomType.Parameter("disableMetricsCollection") @Nullable Object disableMetricsCollection,
+        @OutputCustomType.Parameter("maxConcurrentConnections") @Nullable Object maxConcurrentConnections,
+        @OutputCustomType.Parameter("partitionOption") @Nullable Object partitionOption,
+        @OutputCustomType.Parameter("partitionSettings") @Nullable SqlPartitionSettingsResponse partitionSettings,
+        @OutputCustomType.Parameter("queryTimeout") @Nullable Object queryTimeout,
+        @OutputCustomType.Parameter("sourceRetryCount") @Nullable Object sourceRetryCount,
+        @OutputCustomType.Parameter("sourceRetryWait") @Nullable Object sourceRetryWait,
+        @OutputCustomType.Parameter("sqlReaderQuery") @Nullable Object sqlReaderQuery,
+        @OutputCustomType.Parameter("sqlReaderStoredProcedureName") @Nullable Object sqlReaderStoredProcedureName,
+        @OutputCustomType.Parameter("storedProcedureParameters") @Nullable Object storedProcedureParameters,
+        @OutputCustomType.Parameter("type") String type) {
         this.additionalColumns = additionalColumns;
         this.disableMetricsCollection = disableMetricsCollection;
         this.maxConcurrentConnections = maxConcurrentConnections;

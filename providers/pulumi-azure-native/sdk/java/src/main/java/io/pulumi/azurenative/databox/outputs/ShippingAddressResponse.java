@@ -62,18 +62,18 @@ public final class ShippingAddressResponse {
      */
     private final @Nullable String zipExtendedCode;
 
-    @OutputCustomType.Constructor({"addressType","city","companyName","country","postalCode","stateOrProvince","streetAddress1","streetAddress2","streetAddress3","zipExtendedCode"})
+    @OutputCustomType.Constructor
     private ShippingAddressResponse(
-        @Nullable String addressType,
-        @Nullable String city,
-        @Nullable String companyName,
-        String country,
-        @Nullable String postalCode,
-        @Nullable String stateOrProvince,
-        String streetAddress1,
-        @Nullable String streetAddress2,
-        @Nullable String streetAddress3,
-        @Nullable String zipExtendedCode) {
+        @OutputCustomType.Parameter("addressType") @Nullable String addressType,
+        @OutputCustomType.Parameter("city") @Nullable String city,
+        @OutputCustomType.Parameter("companyName") @Nullable String companyName,
+        @OutputCustomType.Parameter("country") String country,
+        @OutputCustomType.Parameter("postalCode") @Nullable String postalCode,
+        @OutputCustomType.Parameter("stateOrProvince") @Nullable String stateOrProvince,
+        @OutputCustomType.Parameter("streetAddress1") String streetAddress1,
+        @OutputCustomType.Parameter("streetAddress2") @Nullable String streetAddress2,
+        @OutputCustomType.Parameter("streetAddress3") @Nullable String streetAddress3,
+        @OutputCustomType.Parameter("zipExtendedCode") @Nullable String zipExtendedCode) {
         this.addressType = addressType;
         this.city = city;
         this.companyName = companyName;

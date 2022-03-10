@@ -63,18 +63,18 @@ public final class SkypeChannelPropertiesResponse {
      */
     private final Boolean isEnabled;
 
-    @OutputCustomType.Constructor({"callingWebHook","enableCalling","enableGroups","enableMediaCards","enableMessaging","enableScreenSharing","enableVideo","groupsMode","incomingCallRoute","isEnabled"})
+    @OutputCustomType.Constructor
     private SkypeChannelPropertiesResponse(
-        @Nullable String callingWebHook,
-        @Nullable Boolean enableCalling,
-        @Nullable Boolean enableGroups,
-        @Nullable Boolean enableMediaCards,
-        @Nullable Boolean enableMessaging,
-        @Nullable Boolean enableScreenSharing,
-        @Nullable Boolean enableVideo,
-        @Nullable String groupsMode,
-        @Nullable String incomingCallRoute,
-        Boolean isEnabled) {
+        @OutputCustomType.Parameter("callingWebHook") @Nullable String callingWebHook,
+        @OutputCustomType.Parameter("enableCalling") @Nullable Boolean enableCalling,
+        @OutputCustomType.Parameter("enableGroups") @Nullable Boolean enableGroups,
+        @OutputCustomType.Parameter("enableMediaCards") @Nullable Boolean enableMediaCards,
+        @OutputCustomType.Parameter("enableMessaging") @Nullable Boolean enableMessaging,
+        @OutputCustomType.Parameter("enableScreenSharing") @Nullable Boolean enableScreenSharing,
+        @OutputCustomType.Parameter("enableVideo") @Nullable Boolean enableVideo,
+        @OutputCustomType.Parameter("groupsMode") @Nullable String groupsMode,
+        @OutputCustomType.Parameter("incomingCallRoute") @Nullable String incomingCallRoute,
+        @OutputCustomType.Parameter("isEnabled") Boolean isEnabled) {
         this.callingWebHook = callingWebHook;
         this.enableCalling = enableCalling;
         this.enableGroups = enableGroups;

@@ -29,11 +29,11 @@ public final class DiskEncryptionSettingsResponse {
      */
     private final @Nullable KeyVaultKeyReferenceResponse keyEncryptionKey;
 
-    @OutputCustomType.Constructor({"diskEncryptionKey","enabled","keyEncryptionKey"})
+    @OutputCustomType.Constructor
     private DiskEncryptionSettingsResponse(
-        @Nullable KeyVaultSecretReferenceResponse diskEncryptionKey,
-        @Nullable Boolean enabled,
-        @Nullable KeyVaultKeyReferenceResponse keyEncryptionKey) {
+        @OutputCustomType.Parameter("diskEncryptionKey") @Nullable KeyVaultSecretReferenceResponse diskEncryptionKey,
+        @OutputCustomType.Parameter("enabled") @Nullable Boolean enabled,
+        @OutputCustomType.Parameter("keyEncryptionKey") @Nullable KeyVaultKeyReferenceResponse keyEncryptionKey) {
         this.diskEncryptionKey = diskEncryptionKey;
         this.enabled = enabled;
         this.keyEncryptionKey = keyEncryptionKey;

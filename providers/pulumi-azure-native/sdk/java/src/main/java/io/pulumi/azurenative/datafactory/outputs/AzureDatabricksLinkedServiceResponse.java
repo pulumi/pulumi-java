@@ -142,32 +142,32 @@ public final class AzureDatabricksLinkedServiceResponse {
      */
     private final @Nullable Object workspaceResourceId;
 
-    @OutputCustomType.Constructor({"accessToken","annotations","authentication","connectVia","credential","description","domain","encryptedCredential","existingClusterId","instancePoolId","newClusterCustomTags","newClusterDriverNodeType","newClusterEnableElasticDisk","newClusterInitScripts","newClusterLogDestination","newClusterNodeType","newClusterNumOfWorker","newClusterSparkConf","newClusterSparkEnvVars","newClusterVersion","parameters","policyId","type","workspaceResourceId"})
+    @OutputCustomType.Constructor
     private AzureDatabricksLinkedServiceResponse(
-        @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> accessToken,
-        @Nullable List<Object> annotations,
-        @Nullable Object authentication,
-        @Nullable IntegrationRuntimeReferenceResponse connectVia,
-        @Nullable CredentialReferenceResponse credential,
-        @Nullable String description,
-        Object domain,
-        @Nullable Object encryptedCredential,
-        @Nullable Object existingClusterId,
-        @Nullable Object instancePoolId,
-        @Nullable Map<String,Object> newClusterCustomTags,
-        @Nullable Object newClusterDriverNodeType,
-        @Nullable Object newClusterEnableElasticDisk,
-        @Nullable Object newClusterInitScripts,
-        @Nullable Object newClusterLogDestination,
-        @Nullable Object newClusterNodeType,
-        @Nullable Object newClusterNumOfWorker,
-        @Nullable Map<String,Object> newClusterSparkConf,
-        @Nullable Map<String,Object> newClusterSparkEnvVars,
-        @Nullable Object newClusterVersion,
-        @Nullable Map<String,ParameterSpecificationResponse> parameters,
-        @Nullable Object policyId,
-        String type,
-        @Nullable Object workspaceResourceId) {
+        @OutputCustomType.Parameter("accessToken") @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> accessToken,
+        @OutputCustomType.Parameter("annotations") @Nullable List<Object> annotations,
+        @OutputCustomType.Parameter("authentication") @Nullable Object authentication,
+        @OutputCustomType.Parameter("connectVia") @Nullable IntegrationRuntimeReferenceResponse connectVia,
+        @OutputCustomType.Parameter("credential") @Nullable CredentialReferenceResponse credential,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("domain") Object domain,
+        @OutputCustomType.Parameter("encryptedCredential") @Nullable Object encryptedCredential,
+        @OutputCustomType.Parameter("existingClusterId") @Nullable Object existingClusterId,
+        @OutputCustomType.Parameter("instancePoolId") @Nullable Object instancePoolId,
+        @OutputCustomType.Parameter("newClusterCustomTags") @Nullable Map<String,Object> newClusterCustomTags,
+        @OutputCustomType.Parameter("newClusterDriverNodeType") @Nullable Object newClusterDriverNodeType,
+        @OutputCustomType.Parameter("newClusterEnableElasticDisk") @Nullable Object newClusterEnableElasticDisk,
+        @OutputCustomType.Parameter("newClusterInitScripts") @Nullable Object newClusterInitScripts,
+        @OutputCustomType.Parameter("newClusterLogDestination") @Nullable Object newClusterLogDestination,
+        @OutputCustomType.Parameter("newClusterNodeType") @Nullable Object newClusterNodeType,
+        @OutputCustomType.Parameter("newClusterNumOfWorker") @Nullable Object newClusterNumOfWorker,
+        @OutputCustomType.Parameter("newClusterSparkConf") @Nullable Map<String,Object> newClusterSparkConf,
+        @OutputCustomType.Parameter("newClusterSparkEnvVars") @Nullable Map<String,Object> newClusterSparkEnvVars,
+        @OutputCustomType.Parameter("newClusterVersion") @Nullable Object newClusterVersion,
+        @OutputCustomType.Parameter("parameters") @Nullable Map<String,ParameterSpecificationResponse> parameters,
+        @OutputCustomType.Parameter("policyId") @Nullable Object policyId,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("workspaceResourceId") @Nullable Object workspaceResourceId) {
         this.accessToken = accessToken;
         this.annotations = annotations;
         this.authentication = authentication;

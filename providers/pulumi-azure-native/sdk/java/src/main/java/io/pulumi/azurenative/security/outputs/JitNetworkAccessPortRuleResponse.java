@@ -31,13 +31,13 @@ public final class JitNetworkAccessPortRuleResponse {
     private final Integer number;
     private final String protocol;
 
-    @OutputCustomType.Constructor({"allowedSourceAddressPrefix","allowedSourceAddressPrefixes","maxRequestAccessDuration","number","protocol"})
+    @OutputCustomType.Constructor
     private JitNetworkAccessPortRuleResponse(
-        @Nullable String allowedSourceAddressPrefix,
-        @Nullable List<String> allowedSourceAddressPrefixes,
-        String maxRequestAccessDuration,
-        Integer number,
-        String protocol) {
+        @OutputCustomType.Parameter("allowedSourceAddressPrefix") @Nullable String allowedSourceAddressPrefix,
+        @OutputCustomType.Parameter("allowedSourceAddressPrefixes") @Nullable List<String> allowedSourceAddressPrefixes,
+        @OutputCustomType.Parameter("maxRequestAccessDuration") String maxRequestAccessDuration,
+        @OutputCustomType.Parameter("number") Integer number,
+        @OutputCustomType.Parameter("protocol") String protocol) {
         this.allowedSourceAddressPrefix = allowedSourceAddressPrefix;
         this.allowedSourceAddressPrefixes = allowedSourceAddressPrefixes;
         this.maxRequestAccessDuration = maxRequestAccessDuration;

@@ -61,15 +61,15 @@ public final class GetOutputResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"datasource","diagnostics","etag","id","name","serialization","type"})
+    @OutputCustomType.Constructor
     private GetOutputResult(
-        @Nullable Object datasource,
-        DiagnosticsResponse diagnostics,
-        String etag,
-        String id,
-        @Nullable String name,
-        @Nullable Object serialization,
-        String type) {
+        @OutputCustomType.Parameter("datasource") @Nullable Object datasource,
+        @OutputCustomType.Parameter("diagnostics") DiagnosticsResponse diagnostics,
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("serialization") @Nullable Object serialization,
+        @OutputCustomType.Parameter("type") String type) {
         this.datasource = datasource;
         this.diagnostics = diagnostics;
         this.etag = etag;

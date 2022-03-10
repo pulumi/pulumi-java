@@ -24,10 +24,10 @@ public final class ListBotConnectionServiceProvidersResult {
      */
     private final List<ServiceProviderResponse> value;
 
-    @OutputCustomType.Constructor({"nextLink","value"})
+    @OutputCustomType.Constructor
     private ListBotConnectionServiceProvidersResult(
-        @Nullable String nextLink,
-        List<ServiceProviderResponse> value) {
+        @OutputCustomType.Parameter("nextLink") @Nullable String nextLink,
+        @OutputCustomType.Parameter("value") List<ServiceProviderResponse> value) {
         this.nextLink = nextLink;
         this.value = value;
     }

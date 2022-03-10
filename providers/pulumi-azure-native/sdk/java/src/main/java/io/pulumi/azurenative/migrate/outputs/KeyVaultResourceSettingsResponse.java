@@ -21,10 +21,10 @@ public final class KeyVaultResourceSettingsResponse {
      */
     private final String targetResourceName;
 
-    @OutputCustomType.Constructor({"resourceType","targetResourceName"})
+    @OutputCustomType.Constructor
     private KeyVaultResourceSettingsResponse(
-        String resourceType,
-        String targetResourceName) {
+        @OutputCustomType.Parameter("resourceType") String resourceType,
+        @OutputCustomType.Parameter("targetResourceName") String targetResourceName) {
         this.resourceType = resourceType;
         this.targetResourceName = targetResourceName;
     }

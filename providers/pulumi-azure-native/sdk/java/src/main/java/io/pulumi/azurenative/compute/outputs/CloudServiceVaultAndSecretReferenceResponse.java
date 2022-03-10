@@ -15,10 +15,10 @@ public final class CloudServiceVaultAndSecretReferenceResponse {
     private final @Nullable String secretUrl;
     private final @Nullable SubResourceResponse sourceVault;
 
-    @OutputCustomType.Constructor({"secretUrl","sourceVault"})
+    @OutputCustomType.Constructor
     private CloudServiceVaultAndSecretReferenceResponse(
-        @Nullable String secretUrl,
-        @Nullable SubResourceResponse sourceVault) {
+        @OutputCustomType.Parameter("secretUrl") @Nullable String secretUrl,
+        @OutputCustomType.Parameter("sourceVault") @Nullable SubResourceResponse sourceVault) {
         this.secretUrl = secretUrl;
         this.sourceVault = sourceVault;
     }

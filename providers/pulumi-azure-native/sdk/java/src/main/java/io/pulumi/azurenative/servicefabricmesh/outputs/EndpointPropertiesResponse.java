@@ -23,10 +23,10 @@ public final class EndpointPropertiesResponse {
      */
     private final @Nullable Integer port;
 
-    @OutputCustomType.Constructor({"name","port"})
+    @OutputCustomType.Constructor
     private EndpointPropertiesResponse(
-        String name,
-        @Nullable Integer port) {
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("port") @Nullable Integer port) {
         this.name = name;
         this.port = port;
     }

@@ -49,15 +49,15 @@ public final class DataVersionResponse {
      */
     private final @Nullable Map<String,String> tags;
 
-    @OutputCustomType.Constructor({"datasetType","datastoreId","description","isAnonymous","path","properties","tags"})
+    @OutputCustomType.Constructor
     private DataVersionResponse(
-        @Nullable String datasetType,
-        @Nullable String datastoreId,
-        @Nullable String description,
-        @Nullable Boolean isAnonymous,
-        String path,
-        @Nullable Map<String,String> properties,
-        @Nullable Map<String,String> tags) {
+        @OutputCustomType.Parameter("datasetType") @Nullable String datasetType,
+        @OutputCustomType.Parameter("datastoreId") @Nullable String datastoreId,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("isAnonymous") @Nullable Boolean isAnonymous,
+        @OutputCustomType.Parameter("path") String path,
+        @OutputCustomType.Parameter("properties") @Nullable Map<String,String> properties,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags) {
         this.datasetType = datasetType;
         this.datastoreId = datastoreId;
         this.description = description;

@@ -59,17 +59,17 @@ public final class GalleryApplicationVersionPublishingProfileResponse {
      */
     private final @Nullable List<TargetRegionResponse> targetRegions;
 
-    @OutputCustomType.Constructor({"enableHealthCheck","endOfLifeDate","excludeFromLatest","manageActions","publishedDate","replicaCount","source","storageAccountType","targetRegions"})
+    @OutputCustomType.Constructor
     private GalleryApplicationVersionPublishingProfileResponse(
-        @Nullable Boolean enableHealthCheck,
-        @Nullable String endOfLifeDate,
-        @Nullable Boolean excludeFromLatest,
-        @Nullable UserArtifactManageResponse manageActions,
-        String publishedDate,
-        @Nullable Integer replicaCount,
-        UserArtifactSourceResponse source,
-        @Nullable String storageAccountType,
-        @Nullable List<TargetRegionResponse> targetRegions) {
+        @OutputCustomType.Parameter("enableHealthCheck") @Nullable Boolean enableHealthCheck,
+        @OutputCustomType.Parameter("endOfLifeDate") @Nullable String endOfLifeDate,
+        @OutputCustomType.Parameter("excludeFromLatest") @Nullable Boolean excludeFromLatest,
+        @OutputCustomType.Parameter("manageActions") @Nullable UserArtifactManageResponse manageActions,
+        @OutputCustomType.Parameter("publishedDate") String publishedDate,
+        @OutputCustomType.Parameter("replicaCount") @Nullable Integer replicaCount,
+        @OutputCustomType.Parameter("source") UserArtifactSourceResponse source,
+        @OutputCustomType.Parameter("storageAccountType") @Nullable String storageAccountType,
+        @OutputCustomType.Parameter("targetRegions") @Nullable List<TargetRegionResponse> targetRegions) {
         this.enableHealthCheck = enableHealthCheck;
         this.endOfLifeDate = endOfLifeDate;
         this.excludeFromLatest = excludeFromLatest;

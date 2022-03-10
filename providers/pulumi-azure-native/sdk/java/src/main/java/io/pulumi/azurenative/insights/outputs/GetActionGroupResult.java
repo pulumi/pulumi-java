@@ -119,27 +119,27 @@ public final class GetActionGroupResult {
      */
     private final @Nullable List<WebhookReceiverResponse> webhookReceivers;
 
-    @OutputCustomType.Constructor({"armRoleReceivers","automationRunbookReceivers","azureAppPushReceivers","azureFunctionReceivers","emailReceivers","enabled","groupShortName","id","identity","itsmReceivers","kind","location","logicAppReceivers","name","smsReceivers","tags","type","voiceReceivers","webhookReceivers"})
+    @OutputCustomType.Constructor
     private GetActionGroupResult(
-        @Nullable List<ArmRoleReceiverResponse> armRoleReceivers,
-        @Nullable List<AutomationRunbookReceiverResponse> automationRunbookReceivers,
-        @Nullable List<AzureAppPushReceiverResponse> azureAppPushReceivers,
-        @Nullable List<AzureFunctionReceiverResponse> azureFunctionReceivers,
-        @Nullable List<EmailReceiverResponse> emailReceivers,
-        Boolean enabled,
-        String groupShortName,
-        String id,
-        String identity,
-        @Nullable List<ItsmReceiverResponse> itsmReceivers,
-        String kind,
-        String location,
-        @Nullable List<LogicAppReceiverResponse> logicAppReceivers,
-        String name,
-        @Nullable List<SmsReceiverResponse> smsReceivers,
-        @Nullable Map<String,String> tags,
-        String type,
-        @Nullable List<VoiceReceiverResponse> voiceReceivers,
-        @Nullable List<WebhookReceiverResponse> webhookReceivers) {
+        @OutputCustomType.Parameter("armRoleReceivers") @Nullable List<ArmRoleReceiverResponse> armRoleReceivers,
+        @OutputCustomType.Parameter("automationRunbookReceivers") @Nullable List<AutomationRunbookReceiverResponse> automationRunbookReceivers,
+        @OutputCustomType.Parameter("azureAppPushReceivers") @Nullable List<AzureAppPushReceiverResponse> azureAppPushReceivers,
+        @OutputCustomType.Parameter("azureFunctionReceivers") @Nullable List<AzureFunctionReceiverResponse> azureFunctionReceivers,
+        @OutputCustomType.Parameter("emailReceivers") @Nullable List<EmailReceiverResponse> emailReceivers,
+        @OutputCustomType.Parameter("enabled") Boolean enabled,
+        @OutputCustomType.Parameter("groupShortName") String groupShortName,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("identity") String identity,
+        @OutputCustomType.Parameter("itsmReceivers") @Nullable List<ItsmReceiverResponse> itsmReceivers,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("logicAppReceivers") @Nullable List<LogicAppReceiverResponse> logicAppReceivers,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("smsReceivers") @Nullable List<SmsReceiverResponse> smsReceivers,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("voiceReceivers") @Nullable List<VoiceReceiverResponse> voiceReceivers,
+        @OutputCustomType.Parameter("webhookReceivers") @Nullable List<WebhookReceiverResponse> webhookReceivers) {
         this.armRoleReceivers = armRoleReceivers;
         this.automationRunbookReceivers = automationRunbookReceivers;
         this.azureAppPushReceivers = azureAppPushReceivers;

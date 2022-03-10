@@ -46,14 +46,14 @@ public final class DataBoxDiskJobSecretsResponse {
      */
     private final String passKey;
 
-    @OutputCustomType.Constructor({"dcAccessSecurityCode","diskSecrets","error","isPasskeyUserDefined","jobSecretsType","passKey"})
+    @OutputCustomType.Constructor
     private DataBoxDiskJobSecretsResponse(
-        DcAccessSecurityCodeResponse dcAccessSecurityCode,
-        List<DiskSecretResponse> diskSecrets,
-        CloudErrorResponse error,
-        Boolean isPasskeyUserDefined,
-        String jobSecretsType,
-        String passKey) {
+        @OutputCustomType.Parameter("dcAccessSecurityCode") DcAccessSecurityCodeResponse dcAccessSecurityCode,
+        @OutputCustomType.Parameter("diskSecrets") List<DiskSecretResponse> diskSecrets,
+        @OutputCustomType.Parameter("error") CloudErrorResponse error,
+        @OutputCustomType.Parameter("isPasskeyUserDefined") Boolean isPasskeyUserDefined,
+        @OutputCustomType.Parameter("jobSecretsType") String jobSecretsType,
+        @OutputCustomType.Parameter("passKey") String passKey) {
         this.dcAccessSecurityCode = dcAccessSecurityCode;
         this.diskSecrets = diskSecrets;
         this.error = error;

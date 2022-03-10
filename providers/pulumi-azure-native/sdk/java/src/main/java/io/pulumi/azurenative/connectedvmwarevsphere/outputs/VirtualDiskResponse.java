@@ -63,18 +63,18 @@ public final class VirtualDiskResponse {
      */
     private final @Nullable Integer unitNumber;
 
-    @OutputCustomType.Constructor({"controllerKey","deviceKey","deviceName","diskMode","diskObjectId","diskSizeGB","diskType","label","name","unitNumber"})
+    @OutputCustomType.Constructor
     private VirtualDiskResponse(
-        @Nullable Integer controllerKey,
-        @Nullable Integer deviceKey,
-        @Nullable String deviceName,
-        @Nullable String diskMode,
-        String diskObjectId,
-        @Nullable Integer diskSizeGB,
-        @Nullable String diskType,
-        String label,
-        @Nullable String name,
-        @Nullable Integer unitNumber) {
+        @OutputCustomType.Parameter("controllerKey") @Nullable Integer controllerKey,
+        @OutputCustomType.Parameter("deviceKey") @Nullable Integer deviceKey,
+        @OutputCustomType.Parameter("deviceName") @Nullable String deviceName,
+        @OutputCustomType.Parameter("diskMode") @Nullable String diskMode,
+        @OutputCustomType.Parameter("diskObjectId") String diskObjectId,
+        @OutputCustomType.Parameter("diskSizeGB") @Nullable Integer diskSizeGB,
+        @OutputCustomType.Parameter("diskType") @Nullable String diskType,
+        @OutputCustomType.Parameter("label") String label,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("unitNumber") @Nullable Integer unitNumber) {
         this.controllerKey = controllerKey;
         this.deviceKey = deviceKey;
         this.deviceName = deviceName;

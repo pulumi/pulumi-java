@@ -15,8 +15,8 @@ public final class Gen2StorageConfigurationOutputResponse {
      */
     private final String accountName;
 
-    @OutputCustomType.Constructor({"accountName"})
-    private Gen2StorageConfigurationOutputResponse(String accountName) {
+    @OutputCustomType.Constructor
+    private Gen2StorageConfigurationOutputResponse(@OutputCustomType.Parameter("accountName") String accountName) {
         this.accountName = accountName;
     }
 

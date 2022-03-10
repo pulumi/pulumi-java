@@ -50,15 +50,15 @@ public final class JsonInputSchemaMappingResponse {
      */
     private final @Nullable JsonFieldResponse topic;
 
-    @OutputCustomType.Constructor({"dataVersion","eventTime","eventType","id","inputSchemaMappingType","subject","topic"})
+    @OutputCustomType.Constructor
     private JsonInputSchemaMappingResponse(
-        @Nullable JsonFieldWithDefaultResponse dataVersion,
-        @Nullable JsonFieldResponse eventTime,
-        @Nullable JsonFieldWithDefaultResponse eventType,
-        @Nullable JsonFieldResponse id,
-        String inputSchemaMappingType,
-        @Nullable JsonFieldWithDefaultResponse subject,
-        @Nullable JsonFieldResponse topic) {
+        @OutputCustomType.Parameter("dataVersion") @Nullable JsonFieldWithDefaultResponse dataVersion,
+        @OutputCustomType.Parameter("eventTime") @Nullable JsonFieldResponse eventTime,
+        @OutputCustomType.Parameter("eventType") @Nullable JsonFieldWithDefaultResponse eventType,
+        @OutputCustomType.Parameter("id") @Nullable JsonFieldResponse id,
+        @OutputCustomType.Parameter("inputSchemaMappingType") String inputSchemaMappingType,
+        @OutputCustomType.Parameter("subject") @Nullable JsonFieldWithDefaultResponse subject,
+        @OutputCustomType.Parameter("topic") @Nullable JsonFieldResponse topic) {
         this.dataVersion = dataVersion;
         this.eventTime = eventTime;
         this.eventType = eventType;

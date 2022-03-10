@@ -27,11 +27,11 @@ public final class WsfcDomainCredentialsResponse {
      */
     private final @Nullable String sqlServiceAccountPassword;
 
-    @OutputCustomType.Constructor({"clusterBootstrapAccountPassword","clusterOperatorAccountPassword","sqlServiceAccountPassword"})
+    @OutputCustomType.Constructor
     private WsfcDomainCredentialsResponse(
-        @Nullable String clusterBootstrapAccountPassword,
-        @Nullable String clusterOperatorAccountPassword,
-        @Nullable String sqlServiceAccountPassword) {
+        @OutputCustomType.Parameter("clusterBootstrapAccountPassword") @Nullable String clusterBootstrapAccountPassword,
+        @OutputCustomType.Parameter("clusterOperatorAccountPassword") @Nullable String clusterOperatorAccountPassword,
+        @OutputCustomType.Parameter("sqlServiceAccountPassword") @Nullable String sqlServiceAccountPassword) {
         this.clusterBootstrapAccountPassword = clusterBootstrapAccountPassword;
         this.clusterOperatorAccountPassword = clusterOperatorAccountPassword;
         this.sqlServiceAccountPassword = sqlServiceAccountPassword;

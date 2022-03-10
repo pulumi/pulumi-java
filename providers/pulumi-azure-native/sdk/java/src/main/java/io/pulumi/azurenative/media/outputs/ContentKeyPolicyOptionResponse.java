@@ -41,12 +41,12 @@ public final class ContentKeyPolicyOptionResponse {
      */
     private final Object restriction;
 
-    @OutputCustomType.Constructor({"configuration","name","policyOptionId","restriction"})
+    @OutputCustomType.Constructor
     private ContentKeyPolicyOptionResponse(
-        Object configuration,
-        @Nullable String name,
-        String policyOptionId,
-        Object restriction) {
+        @OutputCustomType.Parameter("configuration") Object configuration,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("policyOptionId") String policyOptionId,
+        @OutputCustomType.Parameter("restriction") Object restriction) {
         this.configuration = configuration;
         this.name = name;
         this.policyOptionId = policyOptionId;

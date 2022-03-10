@@ -27,11 +27,11 @@ public final class OnPremisePropertyResponse {
      */
     private final @Nullable String signingCertificateThumbprint;
 
-    @OutputCustomType.Constructor({"id","publicSigningKey","signingCertificateThumbprint"})
+    @OutputCustomType.Constructor
     private OnPremisePropertyResponse(
-        String id,
-        String publicSigningKey,
-        @Nullable String signingCertificateThumbprint) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("publicSigningKey") String publicSigningKey,
+        @OutputCustomType.Parameter("signingCertificateThumbprint") @Nullable String signingCertificateThumbprint) {
         this.id = id;
         this.publicSigningKey = publicSigningKey;
         this.signingCertificateThumbprint = signingCertificateThumbprint;

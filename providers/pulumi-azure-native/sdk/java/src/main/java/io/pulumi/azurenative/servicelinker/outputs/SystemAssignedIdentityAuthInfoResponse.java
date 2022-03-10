@@ -16,8 +16,8 @@ public final class SystemAssignedIdentityAuthInfoResponse {
      */
     private final String authType;
 
-    @OutputCustomType.Constructor({"authType"})
-    private SystemAssignedIdentityAuthInfoResponse(String authType) {
+    @OutputCustomType.Constructor
+    private SystemAssignedIdentityAuthInfoResponse(@OutputCustomType.Parameter("authType") String authType) {
         this.authType = authType;
     }
 

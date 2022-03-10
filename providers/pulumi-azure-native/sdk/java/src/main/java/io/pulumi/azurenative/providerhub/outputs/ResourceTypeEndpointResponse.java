@@ -23,15 +23,15 @@ public final class ResourceTypeEndpointResponse {
     private final @Nullable List<String> requiredFeatures;
     private final @Nullable String timeout;
 
-    @OutputCustomType.Constructor({"apiVersions","enabled","extensions","featuresRule","locations","requiredFeatures","timeout"})
+    @OutputCustomType.Constructor
     private ResourceTypeEndpointResponse(
-        @Nullable List<String> apiVersions,
-        @Nullable Boolean enabled,
-        @Nullable List<ResourceTypeExtensionResponse> extensions,
-        @Nullable ResourceTypeEndpointResponseFeaturesRule featuresRule,
-        @Nullable List<String> locations,
-        @Nullable List<String> requiredFeatures,
-        @Nullable String timeout) {
+        @OutputCustomType.Parameter("apiVersions") @Nullable List<String> apiVersions,
+        @OutputCustomType.Parameter("enabled") @Nullable Boolean enabled,
+        @OutputCustomType.Parameter("extensions") @Nullable List<ResourceTypeExtensionResponse> extensions,
+        @OutputCustomType.Parameter("featuresRule") @Nullable ResourceTypeEndpointResponseFeaturesRule featuresRule,
+        @OutputCustomType.Parameter("locations") @Nullable List<String> locations,
+        @OutputCustomType.Parameter("requiredFeatures") @Nullable List<String> requiredFeatures,
+        @OutputCustomType.Parameter("timeout") @Nullable String timeout) {
         this.apiVersions = apiVersions;
         this.enabled = enabled;
         this.extensions = extensions;

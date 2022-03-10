@@ -40,14 +40,14 @@ public final class InboundNatPoolResponse {
     private final @Nullable List<NetworkSecurityGroupRuleResponse> networkSecurityGroupRules;
     private final String protocol;
 
-    @OutputCustomType.Constructor({"backendPort","frontendPortRangeEnd","frontendPortRangeStart","name","networkSecurityGroupRules","protocol"})
+    @OutputCustomType.Constructor
     private InboundNatPoolResponse(
-        Integer backendPort,
-        Integer frontendPortRangeEnd,
-        Integer frontendPortRangeStart,
-        String name,
-        @Nullable List<NetworkSecurityGroupRuleResponse> networkSecurityGroupRules,
-        String protocol) {
+        @OutputCustomType.Parameter("backendPort") Integer backendPort,
+        @OutputCustomType.Parameter("frontendPortRangeEnd") Integer frontendPortRangeEnd,
+        @OutputCustomType.Parameter("frontendPortRangeStart") Integer frontendPortRangeStart,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("networkSecurityGroupRules") @Nullable List<NetworkSecurityGroupRuleResponse> networkSecurityGroupRules,
+        @OutputCustomType.Parameter("protocol") String protocol) {
         this.backendPort = backendPort;
         this.frontendPortRangeEnd = frontendPortRangeEnd;
         this.frontendPortRangeStart = frontendPortRangeStart;

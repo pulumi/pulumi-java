@@ -77,19 +77,19 @@ public final class AzureDataExplorerLinkedServiceResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"annotations","connectVia","credential","database","description","endpoint","parameters","servicePrincipalId","servicePrincipalKey","tenant","type"})
+    @OutputCustomType.Constructor
     private AzureDataExplorerLinkedServiceResponse(
-        @Nullable List<Object> annotations,
-        @Nullable IntegrationRuntimeReferenceResponse connectVia,
-        @Nullable CredentialReferenceResponse credential,
-        Object database,
-        @Nullable String description,
-        Object endpoint,
-        @Nullable Map<String,ParameterSpecificationResponse> parameters,
-        @Nullable Object servicePrincipalId,
-        @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalKey,
-        @Nullable Object tenant,
-        String type) {
+        @OutputCustomType.Parameter("annotations") @Nullable List<Object> annotations,
+        @OutputCustomType.Parameter("connectVia") @Nullable IntegrationRuntimeReferenceResponse connectVia,
+        @OutputCustomType.Parameter("credential") @Nullable CredentialReferenceResponse credential,
+        @OutputCustomType.Parameter("database") Object database,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("endpoint") Object endpoint,
+        @OutputCustomType.Parameter("parameters") @Nullable Map<String,ParameterSpecificationResponse> parameters,
+        @OutputCustomType.Parameter("servicePrincipalId") @Nullable Object servicePrincipalId,
+        @OutputCustomType.Parameter("servicePrincipalKey") @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalKey,
+        @OutputCustomType.Parameter("tenant") @Nullable Object tenant,
+        @OutputCustomType.Parameter("type") String type) {
         this.annotations = annotations;
         this.connectVia = connectVia;
         this.credential = credential;

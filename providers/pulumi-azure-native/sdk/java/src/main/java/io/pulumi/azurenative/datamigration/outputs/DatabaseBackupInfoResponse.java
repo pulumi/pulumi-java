@@ -53,16 +53,16 @@ public final class DatabaseBackupInfoResponse {
      */
     private final Integer position;
 
-    @OutputCustomType.Constructor({"backupFiles","backupFinishDate","backupType","databaseName","familyCount","isCompressed","isDamaged","position"})
+    @OutputCustomType.Constructor
     private DatabaseBackupInfoResponse(
-        List<String> backupFiles,
-        String backupFinishDate,
-        String backupType,
-        String databaseName,
-        Integer familyCount,
-        Boolean isCompressed,
-        Boolean isDamaged,
-        Integer position) {
+        @OutputCustomType.Parameter("backupFiles") List<String> backupFiles,
+        @OutputCustomType.Parameter("backupFinishDate") String backupFinishDate,
+        @OutputCustomType.Parameter("backupType") String backupType,
+        @OutputCustomType.Parameter("databaseName") String databaseName,
+        @OutputCustomType.Parameter("familyCount") Integer familyCount,
+        @OutputCustomType.Parameter("isCompressed") Boolean isCompressed,
+        @OutputCustomType.Parameter("isDamaged") Boolean isDamaged,
+        @OutputCustomType.Parameter("position") Integer position) {
         this.backupFiles = backupFiles;
         this.backupFinishDate = backupFinishDate;
         this.backupType = backupType;

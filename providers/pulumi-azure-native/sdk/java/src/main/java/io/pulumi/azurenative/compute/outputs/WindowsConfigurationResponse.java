@@ -47,14 +47,14 @@ public final class WindowsConfigurationResponse {
      */
     private final @Nullable WinRMConfigurationResponse winRM;
 
-    @OutputCustomType.Constructor({"additionalUnattendContent","enableAutomaticUpdates","patchSettings","provisionVMAgent","timeZone","winRM"})
+    @OutputCustomType.Constructor
     private WindowsConfigurationResponse(
-        @Nullable List<AdditionalUnattendContentResponse> additionalUnattendContent,
-        @Nullable Boolean enableAutomaticUpdates,
-        @Nullable PatchSettingsResponse patchSettings,
-        @Nullable Boolean provisionVMAgent,
-        @Nullable String timeZone,
-        @Nullable WinRMConfigurationResponse winRM) {
+        @OutputCustomType.Parameter("additionalUnattendContent") @Nullable List<AdditionalUnattendContentResponse> additionalUnattendContent,
+        @OutputCustomType.Parameter("enableAutomaticUpdates") @Nullable Boolean enableAutomaticUpdates,
+        @OutputCustomType.Parameter("patchSettings") @Nullable PatchSettingsResponse patchSettings,
+        @OutputCustomType.Parameter("provisionVMAgent") @Nullable Boolean provisionVMAgent,
+        @OutputCustomType.Parameter("timeZone") @Nullable String timeZone,
+        @OutputCustomType.Parameter("winRM") @Nullable WinRMConfigurationResponse winRM) {
         this.additionalUnattendContent = additionalUnattendContent;
         this.enableAutomaticUpdates = enableAutomaticUpdates;
         this.patchSettings = patchSettings;

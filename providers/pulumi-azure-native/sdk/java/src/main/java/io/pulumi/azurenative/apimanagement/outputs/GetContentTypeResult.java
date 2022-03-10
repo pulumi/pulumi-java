@@ -43,14 +43,14 @@ public final class GetContentTypeResult {
      */
     private final @Nullable String version;
 
-    @OutputCustomType.Constructor({"description","id","name","schema","type","version"})
+    @OutputCustomType.Constructor
     private GetContentTypeResult(
-        @Nullable String description,
-        String id,
-        String name,
-        @Nullable Object schema,
-        String type,
-        @Nullable String version) {
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("schema") @Nullable Object schema,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("version") @Nullable String version) {
         this.description = description;
         this.id = id;
         this.name = name;

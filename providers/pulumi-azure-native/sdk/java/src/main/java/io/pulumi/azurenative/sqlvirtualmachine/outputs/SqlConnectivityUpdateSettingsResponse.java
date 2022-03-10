@@ -23,10 +23,10 @@ public final class SqlConnectivityUpdateSettingsResponse {
      */
     private final @Nullable Integer port;
 
-    @OutputCustomType.Constructor({"connectivityType","port"})
+    @OutputCustomType.Constructor
     private SqlConnectivityUpdateSettingsResponse(
-        @Nullable String connectivityType,
-        @Nullable Integer port) {
+        @OutputCustomType.Parameter("connectivityType") @Nullable String connectivityType,
+        @OutputCustomType.Parameter("port") @Nullable Integer port) {
         this.connectivityType = connectivityType;
         this.port = port;
     }

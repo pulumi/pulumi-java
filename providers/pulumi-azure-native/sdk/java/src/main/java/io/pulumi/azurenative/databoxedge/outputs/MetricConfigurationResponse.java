@@ -34,12 +34,12 @@ public final class MetricConfigurationResponse {
      */
     private final String resourceId;
 
-    @OutputCustomType.Constructor({"counterSets","mdmAccount","metricNameSpace","resourceId"})
+    @OutputCustomType.Constructor
     private MetricConfigurationResponse(
-        List<MetricCounterSetResponse> counterSets,
-        @Nullable String mdmAccount,
-        @Nullable String metricNameSpace,
-        String resourceId) {
+        @OutputCustomType.Parameter("counterSets") List<MetricCounterSetResponse> counterSets,
+        @OutputCustomType.Parameter("mdmAccount") @Nullable String mdmAccount,
+        @OutputCustomType.Parameter("metricNameSpace") @Nullable String metricNameSpace,
+        @OutputCustomType.Parameter("resourceId") String resourceId) {
         this.counterSets = counterSets;
         this.mdmAccount = mdmAccount;
         this.metricNameSpace = metricNameSpace;

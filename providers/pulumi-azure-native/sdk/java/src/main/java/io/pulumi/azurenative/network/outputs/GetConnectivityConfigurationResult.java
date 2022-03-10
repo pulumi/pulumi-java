@@ -81,21 +81,21 @@ public final class GetConnectivityConfigurationResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"appliesToGroups","connectivityTopology","deleteExistingPeering","description","displayName","etag","hubs","id","isGlobal","name","provisioningState","systemData","type"})
+    @OutputCustomType.Constructor
     private GetConnectivityConfigurationResult(
-        @Nullable List<ConnectivityGroupItemResponse> appliesToGroups,
-        String connectivityTopology,
-        @Nullable String deleteExistingPeering,
-        @Nullable String description,
-        @Nullable String displayName,
-        String etag,
-        @Nullable List<HubResponse> hubs,
-        String id,
-        @Nullable String isGlobal,
-        String name,
-        String provisioningState,
-        SystemDataResponse systemData,
-        String type) {
+        @OutputCustomType.Parameter("appliesToGroups") @Nullable List<ConnectivityGroupItemResponse> appliesToGroups,
+        @OutputCustomType.Parameter("connectivityTopology") String connectivityTopology,
+        @OutputCustomType.Parameter("deleteExistingPeering") @Nullable String deleteExistingPeering,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("displayName") @Nullable String displayName,
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("hubs") @Nullable List<HubResponse> hubs,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("isGlobal") @Nullable String isGlobal,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("type") String type) {
         this.appliesToGroups = appliesToGroups;
         this.connectivityTopology = connectivityTopology;
         this.deleteExistingPeering = deleteExistingPeering;

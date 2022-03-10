@@ -128,30 +128,30 @@ public final class GetProductResult {
      */
     private final @Nullable String vmExtensionType;
 
-    @OutputCustomType.Constructor({"billingPartNumber","compatibility","description","displayName","etag","galleryItemIdentity","iconUris","id","legalTerms","links","name","offer","offerVersion","payloadLength","privacyPolicy","productKind","productProperties","publisherDisplayName","publisherIdentifier","sku","type","vmExtensionType"})
+    @OutputCustomType.Constructor
     private GetProductResult(
-        @Nullable String billingPartNumber,
-        @Nullable CompatibilityResponse compatibility,
-        @Nullable String description,
-        @Nullable String displayName,
-        @Nullable String etag,
-        @Nullable String galleryItemIdentity,
-        @Nullable IconUrisResponse iconUris,
-        String id,
-        @Nullable String legalTerms,
-        @Nullable List<ProductLinkResponse> links,
-        String name,
-        @Nullable String offer,
-        @Nullable String offerVersion,
-        @Nullable Double payloadLength,
-        @Nullable String privacyPolicy,
-        @Nullable String productKind,
-        @Nullable ProductPropertiesResponse productProperties,
-        @Nullable String publisherDisplayName,
-        @Nullable String publisherIdentifier,
-        @Nullable String sku,
-        String type,
-        @Nullable String vmExtensionType) {
+        @OutputCustomType.Parameter("billingPartNumber") @Nullable String billingPartNumber,
+        @OutputCustomType.Parameter("compatibility") @Nullable CompatibilityResponse compatibility,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("displayName") @Nullable String displayName,
+        @OutputCustomType.Parameter("etag") @Nullable String etag,
+        @OutputCustomType.Parameter("galleryItemIdentity") @Nullable String galleryItemIdentity,
+        @OutputCustomType.Parameter("iconUris") @Nullable IconUrisResponse iconUris,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("legalTerms") @Nullable String legalTerms,
+        @OutputCustomType.Parameter("links") @Nullable List<ProductLinkResponse> links,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("offer") @Nullable String offer,
+        @OutputCustomType.Parameter("offerVersion") @Nullable String offerVersion,
+        @OutputCustomType.Parameter("payloadLength") @Nullable Double payloadLength,
+        @OutputCustomType.Parameter("privacyPolicy") @Nullable String privacyPolicy,
+        @OutputCustomType.Parameter("productKind") @Nullable String productKind,
+        @OutputCustomType.Parameter("productProperties") @Nullable ProductPropertiesResponse productProperties,
+        @OutputCustomType.Parameter("publisherDisplayName") @Nullable String publisherDisplayName,
+        @OutputCustomType.Parameter("publisherIdentifier") @Nullable String publisherIdentifier,
+        @OutputCustomType.Parameter("sku") @Nullable String sku,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("vmExtensionType") @Nullable String vmExtensionType) {
         this.billingPartNumber = billingPartNumber;
         this.compatibility = compatibility;
         this.description = description;

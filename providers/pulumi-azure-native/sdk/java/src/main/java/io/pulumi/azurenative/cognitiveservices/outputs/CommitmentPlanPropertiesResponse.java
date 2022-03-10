@@ -44,14 +44,14 @@ public final class CommitmentPlanPropertiesResponse {
      */
     private final @Nullable String planType;
 
-    @OutputCustomType.Constructor({"autoRenew","current","hostingModel","last","next","planType"})
+    @OutputCustomType.Constructor
     private CommitmentPlanPropertiesResponse(
-        @Nullable Boolean autoRenew,
-        @Nullable CommitmentPeriodResponse current,
-        @Nullable String hostingModel,
-        CommitmentPeriodResponse last,
-        @Nullable CommitmentPeriodResponse next,
-        @Nullable String planType) {
+        @OutputCustomType.Parameter("autoRenew") @Nullable Boolean autoRenew,
+        @OutputCustomType.Parameter("current") @Nullable CommitmentPeriodResponse current,
+        @OutputCustomType.Parameter("hostingModel") @Nullable String hostingModel,
+        @OutputCustomType.Parameter("last") CommitmentPeriodResponse last,
+        @OutputCustomType.Parameter("next") @Nullable CommitmentPeriodResponse next,
+        @OutputCustomType.Parameter("planType") @Nullable String planType) {
         this.autoRenew = autoRenew;
         this.current = current;
         this.hostingModel = hostingModel;

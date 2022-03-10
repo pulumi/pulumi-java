@@ -59,13 +59,13 @@ public final class GetTaskResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"etag","id","name","properties","type"})
+    @OutputCustomType.Constructor
     private GetTaskResult(
-        @Nullable String etag,
-        String id,
-        String name,
-        Object properties,
-        String type) {
+        @OutputCustomType.Parameter("etag") @Nullable String etag,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("properties") Object properties,
+        @OutputCustomType.Parameter("type") String type) {
         this.etag = etag;
         this.id = id;
         this.name = name;

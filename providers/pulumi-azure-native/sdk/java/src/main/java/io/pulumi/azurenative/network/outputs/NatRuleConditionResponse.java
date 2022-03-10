@@ -54,16 +54,16 @@ public final class NatRuleConditionResponse {
      */
     private final @Nullable List<String> sourceIpGroups;
 
-    @OutputCustomType.Constructor({"description","destinationAddresses","destinationPorts","ipProtocols","name","ruleConditionType","sourceAddresses","sourceIpGroups"})
+    @OutputCustomType.Constructor
     private NatRuleConditionResponse(
-        @Nullable String description,
-        @Nullable List<String> destinationAddresses,
-        @Nullable List<String> destinationPorts,
-        @Nullable List<String> ipProtocols,
-        @Nullable String name,
-        String ruleConditionType,
-        @Nullable List<String> sourceAddresses,
-        @Nullable List<String> sourceIpGroups) {
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("destinationAddresses") @Nullable List<String> destinationAddresses,
+        @OutputCustomType.Parameter("destinationPorts") @Nullable List<String> destinationPorts,
+        @OutputCustomType.Parameter("ipProtocols") @Nullable List<String> ipProtocols,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("ruleConditionType") String ruleConditionType,
+        @OutputCustomType.Parameter("sourceAddresses") @Nullable List<String> sourceAddresses,
+        @OutputCustomType.Parameter("sourceIpGroups") @Nullable List<String> sourceIpGroups) {
         this.description = description;
         this.destinationAddresses = destinationAddresses;
         this.destinationPorts = destinationPorts;

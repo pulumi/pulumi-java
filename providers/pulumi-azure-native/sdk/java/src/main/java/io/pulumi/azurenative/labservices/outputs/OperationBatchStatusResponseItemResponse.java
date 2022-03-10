@@ -20,10 +20,10 @@ public final class OperationBatchStatusResponseItemResponse {
      */
     private final String status;
 
-    @OutputCustomType.Constructor({"operationUrl","status"})
+    @OutputCustomType.Constructor
     private OperationBatchStatusResponseItemResponse(
-        String operationUrl,
-        String status) {
+        @OutputCustomType.Parameter("operationUrl") String operationUrl,
+        @OutputCustomType.Parameter("status") String status) {
         this.operationUrl = operationUrl;
         this.status = status;
     }

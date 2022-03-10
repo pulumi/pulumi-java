@@ -33,12 +33,12 @@ public final class LogMetricTriggerResponse {
      */
     private final @Nullable String thresholdOperator;
 
-    @OutputCustomType.Constructor({"metricColumn","metricTriggerType","threshold","thresholdOperator"})
+    @OutputCustomType.Constructor
     private LogMetricTriggerResponse(
-        @Nullable String metricColumn,
-        @Nullable String metricTriggerType,
-        @Nullable Double threshold,
-        @Nullable String thresholdOperator) {
+        @OutputCustomType.Parameter("metricColumn") @Nullable String metricColumn,
+        @OutputCustomType.Parameter("metricTriggerType") @Nullable String metricTriggerType,
+        @OutputCustomType.Parameter("threshold") @Nullable Double threshold,
+        @OutputCustomType.Parameter("thresholdOperator") @Nullable String thresholdOperator) {
         this.metricColumn = metricColumn;
         this.metricTriggerType = metricTriggerType;
         this.threshold = threshold;

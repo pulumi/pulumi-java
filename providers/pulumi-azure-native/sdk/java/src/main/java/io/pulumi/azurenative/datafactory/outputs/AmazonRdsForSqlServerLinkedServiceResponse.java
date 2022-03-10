@@ -72,18 +72,18 @@ public final class AmazonRdsForSqlServerLinkedServiceResponse {
      */
     private final @Nullable Object userName;
 
-    @OutputCustomType.Constructor({"alwaysEncryptedSettings","annotations","connectVia","connectionString","description","encryptedCredential","parameters","password","type","userName"})
+    @OutputCustomType.Constructor
     private AmazonRdsForSqlServerLinkedServiceResponse(
-        @Nullable SqlAlwaysEncryptedPropertiesResponse alwaysEncryptedSettings,
-        @Nullable List<Object> annotations,
-        @Nullable IntegrationRuntimeReferenceResponse connectVia,
-        Object connectionString,
-        @Nullable String description,
-        @Nullable Object encryptedCredential,
-        @Nullable Map<String,ParameterSpecificationResponse> parameters,
-        @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password,
-        String type,
-        @Nullable Object userName) {
+        @OutputCustomType.Parameter("alwaysEncryptedSettings") @Nullable SqlAlwaysEncryptedPropertiesResponse alwaysEncryptedSettings,
+        @OutputCustomType.Parameter("annotations") @Nullable List<Object> annotations,
+        @OutputCustomType.Parameter("connectVia") @Nullable IntegrationRuntimeReferenceResponse connectVia,
+        @OutputCustomType.Parameter("connectionString") Object connectionString,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("encryptedCredential") @Nullable Object encryptedCredential,
+        @OutputCustomType.Parameter("parameters") @Nullable Map<String,ParameterSpecificationResponse> parameters,
+        @OutputCustomType.Parameter("password") @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("userName") @Nullable Object userName) {
         this.alwaysEncryptedSettings = alwaysEncryptedSettings;
         this.annotations = annotations;
         this.connectVia = connectVia;

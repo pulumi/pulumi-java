@@ -27,11 +27,11 @@ public final class ApplicationPackageContactResponse {
      */
     private final String phone;
 
-    @OutputCustomType.Constructor({"contactName","email","phone"})
+    @OutputCustomType.Constructor
     private ApplicationPackageContactResponse(
-        @Nullable String contactName,
-        String email,
-        String phone) {
+        @OutputCustomType.Parameter("contactName") @Nullable String contactName,
+        @OutputCustomType.Parameter("email") String email,
+        @OutputCustomType.Parameter("phone") String phone) {
         this.contactName = contactName;
         this.email = email;
         this.phone = phone;

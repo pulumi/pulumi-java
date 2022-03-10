@@ -69,19 +69,19 @@ public final class AzureTableSinkResponse {
      */
     private final @Nullable Object writeBatchTimeout;
 
-    @OutputCustomType.Constructor({"azureTableDefaultPartitionKeyValue","azureTableInsertType","azureTablePartitionKeyName","azureTableRowKeyName","disableMetricsCollection","maxConcurrentConnections","sinkRetryCount","sinkRetryWait","type","writeBatchSize","writeBatchTimeout"})
+    @OutputCustomType.Constructor
     private AzureTableSinkResponse(
-        @Nullable Object azureTableDefaultPartitionKeyValue,
-        @Nullable Object azureTableInsertType,
-        @Nullable Object azureTablePartitionKeyName,
-        @Nullable Object azureTableRowKeyName,
-        @Nullable Object disableMetricsCollection,
-        @Nullable Object maxConcurrentConnections,
-        @Nullable Object sinkRetryCount,
-        @Nullable Object sinkRetryWait,
-        String type,
-        @Nullable Object writeBatchSize,
-        @Nullable Object writeBatchTimeout) {
+        @OutputCustomType.Parameter("azureTableDefaultPartitionKeyValue") @Nullable Object azureTableDefaultPartitionKeyValue,
+        @OutputCustomType.Parameter("azureTableInsertType") @Nullable Object azureTableInsertType,
+        @OutputCustomType.Parameter("azureTablePartitionKeyName") @Nullable Object azureTablePartitionKeyName,
+        @OutputCustomType.Parameter("azureTableRowKeyName") @Nullable Object azureTableRowKeyName,
+        @OutputCustomType.Parameter("disableMetricsCollection") @Nullable Object disableMetricsCollection,
+        @OutputCustomType.Parameter("maxConcurrentConnections") @Nullable Object maxConcurrentConnections,
+        @OutputCustomType.Parameter("sinkRetryCount") @Nullable Object sinkRetryCount,
+        @OutputCustomType.Parameter("sinkRetryWait") @Nullable Object sinkRetryWait,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("writeBatchSize") @Nullable Object writeBatchSize,
+        @OutputCustomType.Parameter("writeBatchTimeout") @Nullable Object writeBatchTimeout) {
         this.azureTableDefaultPartitionKeyValue = azureTableDefaultPartitionKeyValue;
         this.azureTableInsertType = azureTableInsertType;
         this.azureTablePartitionKeyName = azureTablePartitionKeyName;

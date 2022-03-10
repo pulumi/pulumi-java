@@ -105,26 +105,26 @@ public final class DPMProtectedItemResponse {
      */
     private final @Nullable String workloadType;
 
-    @OutputCustomType.Constructor({"backupEngineName","backupManagementType","backupSetName","containerName","createMode","deferredDeleteTimeInUTC","deferredDeleteTimeRemaining","extendedInfo","friendlyName","isDeferredDeleteScheduleUpcoming","isRehydrate","isScheduledForDeferredDelete","lastRecoveryPoint","policyId","protectedItemType","protectionState","sourceResourceId","workloadType"})
+    @OutputCustomType.Constructor
     private DPMProtectedItemResponse(
-        @Nullable String backupEngineName,
-        @Nullable String backupManagementType,
-        @Nullable String backupSetName,
-        @Nullable String containerName,
-        @Nullable String createMode,
-        @Nullable String deferredDeleteTimeInUTC,
-        @Nullable String deferredDeleteTimeRemaining,
-        @Nullable DPMProtectedItemExtendedInfoResponse extendedInfo,
-        @Nullable String friendlyName,
-        @Nullable Boolean isDeferredDeleteScheduleUpcoming,
-        @Nullable Boolean isRehydrate,
-        @Nullable Boolean isScheduledForDeferredDelete,
-        @Nullable String lastRecoveryPoint,
-        @Nullable String policyId,
-        String protectedItemType,
-        @Nullable String protectionState,
-        @Nullable String sourceResourceId,
-        @Nullable String workloadType) {
+        @OutputCustomType.Parameter("backupEngineName") @Nullable String backupEngineName,
+        @OutputCustomType.Parameter("backupManagementType") @Nullable String backupManagementType,
+        @OutputCustomType.Parameter("backupSetName") @Nullable String backupSetName,
+        @OutputCustomType.Parameter("containerName") @Nullable String containerName,
+        @OutputCustomType.Parameter("createMode") @Nullable String createMode,
+        @OutputCustomType.Parameter("deferredDeleteTimeInUTC") @Nullable String deferredDeleteTimeInUTC,
+        @OutputCustomType.Parameter("deferredDeleteTimeRemaining") @Nullable String deferredDeleteTimeRemaining,
+        @OutputCustomType.Parameter("extendedInfo") @Nullable DPMProtectedItemExtendedInfoResponse extendedInfo,
+        @OutputCustomType.Parameter("friendlyName") @Nullable String friendlyName,
+        @OutputCustomType.Parameter("isDeferredDeleteScheduleUpcoming") @Nullable Boolean isDeferredDeleteScheduleUpcoming,
+        @OutputCustomType.Parameter("isRehydrate") @Nullable Boolean isRehydrate,
+        @OutputCustomType.Parameter("isScheduledForDeferredDelete") @Nullable Boolean isScheduledForDeferredDelete,
+        @OutputCustomType.Parameter("lastRecoveryPoint") @Nullable String lastRecoveryPoint,
+        @OutputCustomType.Parameter("policyId") @Nullable String policyId,
+        @OutputCustomType.Parameter("protectedItemType") String protectedItemType,
+        @OutputCustomType.Parameter("protectionState") @Nullable String protectionState,
+        @OutputCustomType.Parameter("sourceResourceId") @Nullable String sourceResourceId,
+        @OutputCustomType.Parameter("workloadType") @Nullable String workloadType) {
         this.backupEngineName = backupEngineName;
         this.backupManagementType = backupManagementType;
         this.backupSetName = backupSetName;

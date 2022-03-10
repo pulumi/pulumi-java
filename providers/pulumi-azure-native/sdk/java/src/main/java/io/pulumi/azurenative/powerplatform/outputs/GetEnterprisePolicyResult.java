@@ -73,19 +73,19 @@ public final class GetEnterprisePolicyResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"encryption","id","identity","kind","location","lockbox","name","networkInjection","systemData","tags","type"})
+    @OutputCustomType.Constructor
     private GetEnterprisePolicyResult(
-        @Nullable PropertiesResponseEncryption encryption,
-        String id,
-        @Nullable EnterprisePolicyIdentityResponse identity,
-        String kind,
-        String location,
-        @Nullable PropertiesResponseLockbox lockbox,
-        String name,
-        @Nullable PropertiesResponseNetworkInjection networkInjection,
-        SystemDataResponse systemData,
-        @Nullable Map<String,String> tags,
-        String type) {
+        @OutputCustomType.Parameter("encryption") @Nullable PropertiesResponseEncryption encryption,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("identity") @Nullable EnterprisePolicyIdentityResponse identity,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("lockbox") @Nullable PropertiesResponseLockbox lockbox,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("networkInjection") @Nullable PropertiesResponseNetworkInjection networkInjection,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type) {
         this.encryption = encryption;
         this.id = id;
         this.identity = identity;

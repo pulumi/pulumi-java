@@ -26,11 +26,11 @@ public final class ManagedDiskDetailsResponse {
      */
     private final String stagingStorageAccountId;
 
-    @OutputCustomType.Constructor({"dataAccountType","resourceGroupId","stagingStorageAccountId"})
+    @OutputCustomType.Constructor
     private ManagedDiskDetailsResponse(
-        String dataAccountType,
-        String resourceGroupId,
-        String stagingStorageAccountId) {
+        @OutputCustomType.Parameter("dataAccountType") String dataAccountType,
+        @OutputCustomType.Parameter("resourceGroupId") String resourceGroupId,
+        @OutputCustomType.Parameter("stagingStorageAccountId") String stagingStorageAccountId) {
         this.dataAccountType = dataAccountType;
         this.resourceGroupId = resourceGroupId;
         this.stagingStorageAccountId = stagingStorageAccountId;

@@ -36,12 +36,12 @@ public final class DaprResponse {
      */
     private final @Nullable Boolean enabled;
 
-    @OutputCustomType.Constructor({"appId","appPort","components","enabled"})
+    @OutputCustomType.Constructor
     private DaprResponse(
-        @Nullable String appId,
-        @Nullable Integer appPort,
-        @Nullable List<DaprComponentResponse> components,
-        @Nullable Boolean enabled) {
+        @OutputCustomType.Parameter("appId") @Nullable String appId,
+        @OutputCustomType.Parameter("appPort") @Nullable Integer appPort,
+        @OutputCustomType.Parameter("components") @Nullable List<DaprComponentResponse> components,
+        @OutputCustomType.Parameter("enabled") @Nullable Boolean enabled) {
         this.appId = appId;
         this.appPort = appPort;
         this.components = components;

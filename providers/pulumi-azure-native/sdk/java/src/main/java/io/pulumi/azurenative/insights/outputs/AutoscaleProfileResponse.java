@@ -42,13 +42,13 @@ public final class AutoscaleProfileResponse {
      */
     private final List<ScaleRuleResponse> rules;
 
-    @OutputCustomType.Constructor({"capacity","fixedDate","name","recurrence","rules"})
+    @OutputCustomType.Constructor
     private AutoscaleProfileResponse(
-        ScaleCapacityResponse capacity,
-        @Nullable TimeWindowResponse fixedDate,
-        String name,
-        @Nullable RecurrenceResponse recurrence,
-        List<ScaleRuleResponse> rules) {
+        @OutputCustomType.Parameter("capacity") ScaleCapacityResponse capacity,
+        @OutputCustomType.Parameter("fixedDate") @Nullable TimeWindowResponse fixedDate,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("recurrence") @Nullable RecurrenceResponse recurrence,
+        @OutputCustomType.Parameter("rules") List<ScaleRuleResponse> rules) {
         this.capacity = capacity;
         this.fixedDate = fixedDate;
         this.name = name;

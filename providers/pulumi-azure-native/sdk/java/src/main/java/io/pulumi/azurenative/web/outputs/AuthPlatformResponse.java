@@ -30,11 +30,11 @@ public final class AuthPlatformResponse {
      */
     private final @Nullable String runtimeVersion;
 
-    @OutputCustomType.Constructor({"configFilePath","enabled","runtimeVersion"})
+    @OutputCustomType.Constructor
     private AuthPlatformResponse(
-        @Nullable String configFilePath,
-        @Nullable Boolean enabled,
-        @Nullable String runtimeVersion) {
+        @OutputCustomType.Parameter("configFilePath") @Nullable String configFilePath,
+        @OutputCustomType.Parameter("enabled") @Nullable Boolean enabled,
+        @OutputCustomType.Parameter("runtimeVersion") @Nullable String runtimeVersion) {
         this.configFilePath = configFilePath;
         this.enabled = enabled;
         this.runtimeVersion = runtimeVersion;

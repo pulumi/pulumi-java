@@ -27,11 +27,11 @@ public final class CurrentJobDetailsResponse {
      */
     private final @Nullable String startTime;
 
-    @OutputCustomType.Constructor({"jobId","jobName","startTime"})
+    @OutputCustomType.Constructor
     private CurrentJobDetailsResponse(
-        @Nullable String jobId,
-        @Nullable String jobName,
-        @Nullable String startTime) {
+        @OutputCustomType.Parameter("jobId") @Nullable String jobId,
+        @OutputCustomType.Parameter("jobName") @Nullable String jobName,
+        @OutputCustomType.Parameter("startTime") @Nullable String startTime) {
         this.jobId = jobId;
         this.jobName = jobName;
         this.startTime = startTime;

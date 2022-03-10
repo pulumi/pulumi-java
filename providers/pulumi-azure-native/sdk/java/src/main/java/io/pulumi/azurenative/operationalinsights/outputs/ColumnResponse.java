@@ -48,15 +48,15 @@ public final class ColumnResponse {
      */
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor({"dataTypeHint","description","displayName","isDefaultDisplay","isHidden","name","type"})
+    @OutputCustomType.Constructor
     private ColumnResponse(
-        @Nullable String dataTypeHint,
-        @Nullable String description,
-        @Nullable String displayName,
-        Boolean isDefaultDisplay,
-        Boolean isHidden,
-        @Nullable String name,
-        @Nullable String type) {
+        @OutputCustomType.Parameter("dataTypeHint") @Nullable String dataTypeHint,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("displayName") @Nullable String displayName,
+        @OutputCustomType.Parameter("isDefaultDisplay") Boolean isDefaultDisplay,
+        @OutputCustomType.Parameter("isHidden") Boolean isHidden,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("type") @Nullable String type) {
         this.dataTypeHint = dataTypeHint;
         this.description = description;
         this.displayName = displayName;

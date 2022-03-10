@@ -40,14 +40,14 @@ public final class X12ProcessingSettingsResponse {
      */
     private final Boolean useDotAsDecimalSeparator;
 
-    @OutputCustomType.Constructor({"convertImpliedDecimal","createEmptyXmlTagsForTrailingSeparators","maskSecurityInfo","preserveInterchange","suspendInterchangeOnError","useDotAsDecimalSeparator"})
+    @OutputCustomType.Constructor
     private X12ProcessingSettingsResponse(
-        Boolean convertImpliedDecimal,
-        Boolean createEmptyXmlTagsForTrailingSeparators,
-        Boolean maskSecurityInfo,
-        Boolean preserveInterchange,
-        Boolean suspendInterchangeOnError,
-        Boolean useDotAsDecimalSeparator) {
+        @OutputCustomType.Parameter("convertImpliedDecimal") Boolean convertImpliedDecimal,
+        @OutputCustomType.Parameter("createEmptyXmlTagsForTrailingSeparators") Boolean createEmptyXmlTagsForTrailingSeparators,
+        @OutputCustomType.Parameter("maskSecurityInfo") Boolean maskSecurityInfo,
+        @OutputCustomType.Parameter("preserveInterchange") Boolean preserveInterchange,
+        @OutputCustomType.Parameter("suspendInterchangeOnError") Boolean suspendInterchangeOnError,
+        @OutputCustomType.Parameter("useDotAsDecimalSeparator") Boolean useDotAsDecimalSeparator) {
         this.convertImpliedDecimal = convertImpliedDecimal;
         this.createEmptyXmlTagsForTrailingSeparators = createEmptyXmlTagsForTrailingSeparators;
         this.maskSecurityInfo = maskSecurityInfo;

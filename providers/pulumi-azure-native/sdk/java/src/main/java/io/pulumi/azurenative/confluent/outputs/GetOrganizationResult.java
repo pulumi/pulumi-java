@@ -70,19 +70,19 @@ public final class GetOrganizationResult {
      */
     private final @Nullable OrganizationResourcePropertiesResponseUserDetail userDetail;
 
-    @OutputCustomType.Constructor({"createdTime","id","location","name","offerDetail","organizationId","provisioningState","ssoUrl","tags","type","userDetail"})
+    @OutputCustomType.Constructor
     private GetOrganizationResult(
-        String createdTime,
-        String id,
-        @Nullable String location,
-        String name,
-        @Nullable OrganizationResourcePropertiesResponseOfferDetail offerDetail,
-        String organizationId,
-        String provisioningState,
-        String ssoUrl,
-        @Nullable Map<String,String> tags,
-        String type,
-        @Nullable OrganizationResourcePropertiesResponseUserDetail userDetail) {
+        @OutputCustomType.Parameter("createdTime") String createdTime,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("offerDetail") @Nullable OrganizationResourcePropertiesResponseOfferDetail offerDetail,
+        @OutputCustomType.Parameter("organizationId") String organizationId,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("ssoUrl") String ssoUrl,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("userDetail") @Nullable OrganizationResourcePropertiesResponseUserDetail userDetail) {
         this.createdTime = createdTime;
         this.id = id;
         this.location = location;

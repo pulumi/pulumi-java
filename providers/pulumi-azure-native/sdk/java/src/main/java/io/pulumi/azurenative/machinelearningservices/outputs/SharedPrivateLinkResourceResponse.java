@@ -37,13 +37,13 @@ public final class SharedPrivateLinkResourceResponse {
      */
     private final @Nullable String status;
 
-    @OutputCustomType.Constructor({"groupId","name","privateLinkResourceId","requestMessage","status"})
+    @OutputCustomType.Constructor
     private SharedPrivateLinkResourceResponse(
-        @Nullable String groupId,
-        @Nullable String name,
-        @Nullable String privateLinkResourceId,
-        @Nullable String requestMessage,
-        @Nullable String status) {
+        @OutputCustomType.Parameter("groupId") @Nullable String groupId,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("privateLinkResourceId") @Nullable String privateLinkResourceId,
+        @OutputCustomType.Parameter("requestMessage") @Nullable String requestMessage,
+        @OutputCustomType.Parameter("status") @Nullable String status) {
         this.groupId = groupId;
         this.name = name;
         this.privateLinkResourceId = privateLinkResourceId;

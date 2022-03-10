@@ -29,11 +29,11 @@ public final class SnowflakeImportCopyCommandResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"additionalCopyOptions","additionalFormatOptions","type"})
+    @OutputCustomType.Constructor
     private SnowflakeImportCopyCommandResponse(
-        @Nullable Map<String,Object> additionalCopyOptions,
-        @Nullable Map<String,Object> additionalFormatOptions,
-        String type) {
+        @OutputCustomType.Parameter("additionalCopyOptions") @Nullable Map<String,Object> additionalCopyOptions,
+        @OutputCustomType.Parameter("additionalFormatOptions") @Nullable Map<String,Object> additionalFormatOptions,
+        @OutputCustomType.Parameter("type") String type) {
         this.additionalCopyOptions = additionalCopyOptions;
         this.additionalFormatOptions = additionalFormatOptions;
         this.type = type;

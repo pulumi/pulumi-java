@@ -140,32 +140,32 @@ public final class GetStreamingJobResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"compatibilityLevel","createdDate","dataLocale","etag","eventsLateArrivalMaxDelayInSeconds","eventsOutOfOrderMaxDelayInSeconds","eventsOutOfOrderPolicy","functions","id","inputs","jobId","jobState","lastOutputEventTime","location","name","outputErrorPolicy","outputStartMode","outputStartTime","outputs","provisioningState","sku","tags","transformation","type"})
+    @OutputCustomType.Constructor
     private GetStreamingJobResult(
-        @Nullable String compatibilityLevel,
-        String createdDate,
-        @Nullable String dataLocale,
-        String etag,
-        @Nullable Integer eventsLateArrivalMaxDelayInSeconds,
-        @Nullable Integer eventsOutOfOrderMaxDelayInSeconds,
-        @Nullable String eventsOutOfOrderPolicy,
-        @Nullable List<FunctionResponse> functions,
-        String id,
-        @Nullable List<InputResponse> inputs,
-        String jobId,
-        String jobState,
-        String lastOutputEventTime,
-        @Nullable String location,
-        String name,
-        @Nullable String outputErrorPolicy,
-        @Nullable String outputStartMode,
-        @Nullable String outputStartTime,
-        @Nullable List<OutputResponse> outputs,
-        String provisioningState,
-        @Nullable SkuResponse sku,
-        @Nullable Map<String,String> tags,
-        @Nullable TransformationResponse transformation,
-        String type) {
+        @OutputCustomType.Parameter("compatibilityLevel") @Nullable String compatibilityLevel,
+        @OutputCustomType.Parameter("createdDate") String createdDate,
+        @OutputCustomType.Parameter("dataLocale") @Nullable String dataLocale,
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("eventsLateArrivalMaxDelayInSeconds") @Nullable Integer eventsLateArrivalMaxDelayInSeconds,
+        @OutputCustomType.Parameter("eventsOutOfOrderMaxDelayInSeconds") @Nullable Integer eventsOutOfOrderMaxDelayInSeconds,
+        @OutputCustomType.Parameter("eventsOutOfOrderPolicy") @Nullable String eventsOutOfOrderPolicy,
+        @OutputCustomType.Parameter("functions") @Nullable List<FunctionResponse> functions,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("inputs") @Nullable List<InputResponse> inputs,
+        @OutputCustomType.Parameter("jobId") String jobId,
+        @OutputCustomType.Parameter("jobState") String jobState,
+        @OutputCustomType.Parameter("lastOutputEventTime") String lastOutputEventTime,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("outputErrorPolicy") @Nullable String outputErrorPolicy,
+        @OutputCustomType.Parameter("outputStartMode") @Nullable String outputStartMode,
+        @OutputCustomType.Parameter("outputStartTime") @Nullable String outputStartTime,
+        @OutputCustomType.Parameter("outputs") @Nullable List<OutputResponse> outputs,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("sku") @Nullable SkuResponse sku,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("transformation") @Nullable TransformationResponse transformation,
+        @OutputCustomType.Parameter("type") String type) {
         this.compatibilityLevel = compatibilityLevel;
         this.createdDate = createdDate;
         this.dataLocale = dataLocale;

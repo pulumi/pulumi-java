@@ -38,13 +38,13 @@ public final class RulesEngineResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"id","name","resourceState","rules","type"})
+    @OutputCustomType.Constructor
     private RulesEngineResponse(
-        String id,
-        String name,
-        String resourceState,
-        @Nullable List<RulesEngineRuleResponse> rules,
-        String type) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("resourceState") String resourceState,
+        @OutputCustomType.Parameter("rules") @Nullable List<RulesEngineRuleResponse> rules,
+        @OutputCustomType.Parameter("type") String type) {
         this.id = id;
         this.name = name;
         this.resourceState = resourceState;

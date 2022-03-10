@@ -29,12 +29,12 @@ public final class DatabaseBackupSettingResponse {
     private final String databaseType;
     private final @Nullable String name;
 
-    @OutputCustomType.Constructor({"connectionString","connectionStringName","databaseType","name"})
+    @OutputCustomType.Constructor
     private DatabaseBackupSettingResponse(
-        @Nullable String connectionString,
-        @Nullable String connectionStringName,
-        String databaseType,
-        @Nullable String name) {
+        @OutputCustomType.Parameter("connectionString") @Nullable String connectionString,
+        @OutputCustomType.Parameter("connectionStringName") @Nullable String connectionStringName,
+        @OutputCustomType.Parameter("databaseType") String databaseType,
+        @OutputCustomType.Parameter("name") @Nullable String name) {
         this.connectionString = connectionString;
         this.connectionStringName = connectionStringName;
         this.databaseType = databaseType;

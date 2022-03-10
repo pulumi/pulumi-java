@@ -64,18 +64,18 @@ public final class GetBackupScheduleResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"backupType","id","kind","lastSuccessfulRun","name","retentionCount","scheduleRecurrence","scheduleStatus","startTime","type"})
+    @OutputCustomType.Constructor
     private GetBackupScheduleResult(
-        String backupType,
-        String id,
-        @Nullable String kind,
-        String lastSuccessfulRun,
-        String name,
-        Double retentionCount,
-        ScheduleRecurrenceResponse scheduleRecurrence,
-        String scheduleStatus,
-        String startTime,
-        String type) {
+        @OutputCustomType.Parameter("backupType") String backupType,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("kind") @Nullable String kind,
+        @OutputCustomType.Parameter("lastSuccessfulRun") String lastSuccessfulRun,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("retentionCount") Double retentionCount,
+        @OutputCustomType.Parameter("scheduleRecurrence") ScheduleRecurrenceResponse scheduleRecurrence,
+        @OutputCustomType.Parameter("scheduleStatus") String scheduleStatus,
+        @OutputCustomType.Parameter("startTime") String startTime,
+        @OutputCustomType.Parameter("type") String type) {
         this.backupType = backupType;
         this.id = id;
         this.kind = kind;

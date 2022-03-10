@@ -40,14 +40,14 @@ public final class LatestOperationResultResponse {
      */
     private final String status;
 
-    @OutputCustomType.Constructor({"errorCode","errorMessage","httpMethod","operationUrl","requestUri","status"})
+    @OutputCustomType.Constructor
     private LatestOperationResultResponse(
-        String errorCode,
-        String errorMessage,
-        String httpMethod,
-        String operationUrl,
-        String requestUri,
-        String status) {
+        @OutputCustomType.Parameter("errorCode") String errorCode,
+        @OutputCustomType.Parameter("errorMessage") String errorMessage,
+        @OutputCustomType.Parameter("httpMethod") String httpMethod,
+        @OutputCustomType.Parameter("operationUrl") String operationUrl,
+        @OutputCustomType.Parameter("requestUri") String requestUri,
+        @OutputCustomType.Parameter("status") String status) {
         this.errorCode = errorCode;
         this.errorMessage = errorMessage;
         this.httpMethod = httpMethod;

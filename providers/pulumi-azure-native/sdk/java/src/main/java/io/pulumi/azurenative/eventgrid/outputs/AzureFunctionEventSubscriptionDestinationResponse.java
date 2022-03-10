@@ -34,12 +34,12 @@ public final class AzureFunctionEventSubscriptionDestinationResponse {
      */
     private final @Nullable String resourceId;
 
-    @OutputCustomType.Constructor({"endpointType","maxEventsPerBatch","preferredBatchSizeInKilobytes","resourceId"})
+    @OutputCustomType.Constructor
     private AzureFunctionEventSubscriptionDestinationResponse(
-        String endpointType,
-        @Nullable Integer maxEventsPerBatch,
-        @Nullable Integer preferredBatchSizeInKilobytes,
-        @Nullable String resourceId) {
+        @OutputCustomType.Parameter("endpointType") String endpointType,
+        @OutputCustomType.Parameter("maxEventsPerBatch") @Nullable Integer maxEventsPerBatch,
+        @OutputCustomType.Parameter("preferredBatchSizeInKilobytes") @Nullable Integer preferredBatchSizeInKilobytes,
+        @OutputCustomType.Parameter("resourceId") @Nullable String resourceId) {
         this.endpointType = endpointType;
         this.maxEventsPerBatch = maxEventsPerBatch;
         this.preferredBatchSizeInKilobytes = preferredBatchSizeInKilobytes;

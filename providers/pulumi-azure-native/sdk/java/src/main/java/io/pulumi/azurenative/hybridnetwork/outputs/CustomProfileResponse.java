@@ -17,8 +17,8 @@ public final class CustomProfileResponse {
      */
     private final @Nullable String metadataConfigurationPath;
 
-    @OutputCustomType.Constructor({"metadataConfigurationPath"})
-    private CustomProfileResponse(@Nullable String metadataConfigurationPath) {
+    @OutputCustomType.Constructor
+    private CustomProfileResponse(@OutputCustomType.Parameter("metadataConfigurationPath") @Nullable String metadataConfigurationPath) {
         this.metadataConfigurationPath = metadataConfigurationPath;
     }
 

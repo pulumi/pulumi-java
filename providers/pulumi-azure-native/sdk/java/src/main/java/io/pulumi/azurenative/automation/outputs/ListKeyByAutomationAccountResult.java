@@ -17,8 +17,8 @@ public final class ListKeyByAutomationAccountResult {
      */
     private final @Nullable List<KeyResponse> keys;
 
-    @OutputCustomType.Constructor({"keys"})
-    private ListKeyByAutomationAccountResult(@Nullable List<KeyResponse> keys) {
+    @OutputCustomType.Constructor
+    private ListKeyByAutomationAccountResult(@OutputCustomType.Parameter("keys") @Nullable List<KeyResponse> keys) {
         this.keys = keys;
     }
 

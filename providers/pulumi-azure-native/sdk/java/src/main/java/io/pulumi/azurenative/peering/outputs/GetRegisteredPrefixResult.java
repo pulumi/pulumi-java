@@ -52,16 +52,16 @@ public final class GetRegisteredPrefixResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"errorMessage","id","name","peeringServicePrefixKey","prefix","prefixValidationState","provisioningState","type"})
+    @OutputCustomType.Constructor
     private GetRegisteredPrefixResult(
-        String errorMessage,
-        String id,
-        String name,
-        String peeringServicePrefixKey,
-        @Nullable String prefix,
-        String prefixValidationState,
-        String provisioningState,
-        String type) {
+        @OutputCustomType.Parameter("errorMessage") String errorMessage,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("peeringServicePrefixKey") String peeringServicePrefixKey,
+        @OutputCustomType.Parameter("prefix") @Nullable String prefix,
+        @OutputCustomType.Parameter("prefixValidationState") String prefixValidationState,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("type") String type) {
         this.errorMessage = errorMessage;
         this.id = id;
         this.name = name;

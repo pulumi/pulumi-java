@@ -47,15 +47,15 @@ public final class GetScopeAssignmentResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"assignedManagedNetwork","etag","id","location","name","provisioningState","type"})
+    @OutputCustomType.Constructor
     private GetScopeAssignmentResult(
-        @Nullable String assignedManagedNetwork,
-        String etag,
-        String id,
-        @Nullable String location,
-        String name,
-        String provisioningState,
-        String type) {
+        @OutputCustomType.Parameter("assignedManagedNetwork") @Nullable String assignedManagedNetwork,
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("type") String type) {
         this.assignedManagedNetwork = assignedManagedNetwork;
         this.etag = etag;
         this.id = id;

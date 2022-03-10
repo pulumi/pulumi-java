@@ -47,15 +47,15 @@ public final class GetManagedInstanceAdministratorResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"administratorType","id","login","name","sid","tenantId","type"})
+    @OutputCustomType.Constructor
     private GetManagedInstanceAdministratorResult(
-        String administratorType,
-        String id,
-        String login,
-        String name,
-        String sid,
-        @Nullable String tenantId,
-        String type) {
+        @OutputCustomType.Parameter("administratorType") String administratorType,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("login") String login,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("sid") String sid,
+        @OutputCustomType.Parameter("tenantId") @Nullable String tenantId,
+        @OutputCustomType.Parameter("type") String type) {
         this.administratorType = administratorType;
         this.id = id;
         this.login = login;

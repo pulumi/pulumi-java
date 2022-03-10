@@ -89,23 +89,23 @@ public final class X12AcknowledgementSettingsResponse {
      */
     private final Boolean sendSynchronousAcknowledgement;
 
-    @OutputCustomType.Constructor({"acknowledgementControlNumberLowerBound","acknowledgementControlNumberPrefix","acknowledgementControlNumberSuffix","acknowledgementControlNumberUpperBound","batchFunctionalAcknowledgements","batchImplementationAcknowledgements","batchTechnicalAcknowledgements","functionalAcknowledgementVersion","implementationAcknowledgementVersion","needFunctionalAcknowledgement","needImplementationAcknowledgement","needLoopForValidMessages","needTechnicalAcknowledgement","rolloverAcknowledgementControlNumber","sendSynchronousAcknowledgement"})
+    @OutputCustomType.Constructor
     private X12AcknowledgementSettingsResponse(
-        Integer acknowledgementControlNumberLowerBound,
-        @Nullable String acknowledgementControlNumberPrefix,
-        @Nullable String acknowledgementControlNumberSuffix,
-        Integer acknowledgementControlNumberUpperBound,
-        Boolean batchFunctionalAcknowledgements,
-        Boolean batchImplementationAcknowledgements,
-        Boolean batchTechnicalAcknowledgements,
-        @Nullable String functionalAcknowledgementVersion,
-        @Nullable String implementationAcknowledgementVersion,
-        Boolean needFunctionalAcknowledgement,
-        Boolean needImplementationAcknowledgement,
-        Boolean needLoopForValidMessages,
-        Boolean needTechnicalAcknowledgement,
-        Boolean rolloverAcknowledgementControlNumber,
-        Boolean sendSynchronousAcknowledgement) {
+        @OutputCustomType.Parameter("acknowledgementControlNumberLowerBound") Integer acknowledgementControlNumberLowerBound,
+        @OutputCustomType.Parameter("acknowledgementControlNumberPrefix") @Nullable String acknowledgementControlNumberPrefix,
+        @OutputCustomType.Parameter("acknowledgementControlNumberSuffix") @Nullable String acknowledgementControlNumberSuffix,
+        @OutputCustomType.Parameter("acknowledgementControlNumberUpperBound") Integer acknowledgementControlNumberUpperBound,
+        @OutputCustomType.Parameter("batchFunctionalAcknowledgements") Boolean batchFunctionalAcknowledgements,
+        @OutputCustomType.Parameter("batchImplementationAcknowledgements") Boolean batchImplementationAcknowledgements,
+        @OutputCustomType.Parameter("batchTechnicalAcknowledgements") Boolean batchTechnicalAcknowledgements,
+        @OutputCustomType.Parameter("functionalAcknowledgementVersion") @Nullable String functionalAcknowledgementVersion,
+        @OutputCustomType.Parameter("implementationAcknowledgementVersion") @Nullable String implementationAcknowledgementVersion,
+        @OutputCustomType.Parameter("needFunctionalAcknowledgement") Boolean needFunctionalAcknowledgement,
+        @OutputCustomType.Parameter("needImplementationAcknowledgement") Boolean needImplementationAcknowledgement,
+        @OutputCustomType.Parameter("needLoopForValidMessages") Boolean needLoopForValidMessages,
+        @OutputCustomType.Parameter("needTechnicalAcknowledgement") Boolean needTechnicalAcknowledgement,
+        @OutputCustomType.Parameter("rolloverAcknowledgementControlNumber") Boolean rolloverAcknowledgementControlNumber,
+        @OutputCustomType.Parameter("sendSynchronousAcknowledgement") Boolean sendSynchronousAcknowledgement) {
         this.acknowledgementControlNumberLowerBound = acknowledgementControlNumberLowerBound;
         this.acknowledgementControlNumberPrefix = acknowledgementControlNumberPrefix;
         this.acknowledgementControlNumberSuffix = acknowledgementControlNumberSuffix;

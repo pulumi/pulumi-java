@@ -22,10 +22,10 @@ public final class GetUserTablesSqlTaskInputResponse {
      */
     private final List<String> selectedDatabases;
 
-    @OutputCustomType.Constructor({"connectionInfo","selectedDatabases"})
+    @OutputCustomType.Constructor
     private GetUserTablesSqlTaskInputResponse(
-        SqlConnectionInfoResponse connectionInfo,
-        List<String> selectedDatabases) {
+        @OutputCustomType.Parameter("connectionInfo") SqlConnectionInfoResponse connectionInfo,
+        @OutputCustomType.Parameter("selectedDatabases") List<String> selectedDatabases) {
         this.connectionInfo = connectionInfo;
         this.selectedDatabases = selectedDatabases;
     }

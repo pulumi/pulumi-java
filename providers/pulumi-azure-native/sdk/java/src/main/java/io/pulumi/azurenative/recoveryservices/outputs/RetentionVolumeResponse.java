@@ -34,12 +34,12 @@ public final class RetentionVolumeResponse {
      */
     private final @Nullable String volumeName;
 
-    @OutputCustomType.Constructor({"capacityInBytes","freeSpaceInBytes","thresholdPercentage","volumeName"})
+    @OutputCustomType.Constructor
     private RetentionVolumeResponse(
-        @Nullable Double capacityInBytes,
-        @Nullable Double freeSpaceInBytes,
-        @Nullable Integer thresholdPercentage,
-        @Nullable String volumeName) {
+        @OutputCustomType.Parameter("capacityInBytes") @Nullable Double capacityInBytes,
+        @OutputCustomType.Parameter("freeSpaceInBytes") @Nullable Double freeSpaceInBytes,
+        @OutputCustomType.Parameter("thresholdPercentage") @Nullable Integer thresholdPercentage,
+        @OutputCustomType.Parameter("volumeName") @Nullable String volumeName) {
         this.capacityInBytes = capacityInBytes;
         this.freeSpaceInBytes = freeSpaceInBytes;
         this.thresholdPercentage = thresholdPercentage;

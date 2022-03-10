@@ -38,13 +38,13 @@ public final class ResourceGuardResponse {
      */
     private final List<String> vaultCriticalOperationExclusionList;
 
-    @OutputCustomType.Constructor({"allowAutoApprovals","description","provisioningState","resourceGuardOperations","vaultCriticalOperationExclusionList"})
+    @OutputCustomType.Constructor
     private ResourceGuardResponse(
-        Boolean allowAutoApprovals,
-        String description,
-        String provisioningState,
-        List<ResourceGuardOperationResponse> resourceGuardOperations,
-        List<String> vaultCriticalOperationExclusionList) {
+        @OutputCustomType.Parameter("allowAutoApprovals") Boolean allowAutoApprovals,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("resourceGuardOperations") List<ResourceGuardOperationResponse> resourceGuardOperations,
+        @OutputCustomType.Parameter("vaultCriticalOperationExclusionList") List<String> vaultCriticalOperationExclusionList) {
         this.allowAutoApprovals = allowAutoApprovals;
         this.description = description;
         this.provisioningState = provisioningState;

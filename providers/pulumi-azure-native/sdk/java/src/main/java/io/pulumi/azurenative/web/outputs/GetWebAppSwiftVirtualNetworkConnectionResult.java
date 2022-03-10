@@ -49,15 +49,15 @@ public final class GetWebAppSwiftVirtualNetworkConnectionResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"id","kind","name","subnetResourceId","swiftSupported","systemData","type"})
+    @OutputCustomType.Constructor
     private GetWebAppSwiftVirtualNetworkConnectionResult(
-        String id,
-        @Nullable String kind,
-        String name,
-        @Nullable String subnetResourceId,
-        @Nullable Boolean swiftSupported,
-        SystemDataResponse systemData,
-        String type) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("kind") @Nullable String kind,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("subnetResourceId") @Nullable String subnetResourceId,
+        @OutputCustomType.Parameter("swiftSupported") @Nullable Boolean swiftSupported,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("type") String type) {
         this.id = id;
         this.kind = kind;
         this.name = name;

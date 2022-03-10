@@ -91,21 +91,21 @@ public final class K8sOnlineDeploymentResponse {
      */
     private final @Nullable Either<AutoScaleSettingsResponse,ManualScaleSettingsResponse> scaleSettings;
 
-    @OutputCustomType.Constructor({"appInsightsEnabled","codeConfiguration","containerResourceRequirements","description","endpointComputeType","environmentId","environmentVariables","livenessProbe","model","properties","provisioningState","requestSettings","scaleSettings"})
+    @OutputCustomType.Constructor
     private K8sOnlineDeploymentResponse(
-        @Nullable Boolean appInsightsEnabled,
-        @Nullable CodeConfigurationResponse codeConfiguration,
-        @Nullable ContainerResourceRequirementsResponse containerResourceRequirements,
-        @Nullable String description,
-        String endpointComputeType,
-        @Nullable String environmentId,
-        @Nullable Map<String,String> environmentVariables,
-        @Nullable ProbeSettingsResponse livenessProbe,
-        @Nullable Object model,
-        @Nullable Map<String,String> properties,
-        String provisioningState,
-        @Nullable OnlineRequestSettingsResponse requestSettings,
-        @Nullable Either<AutoScaleSettingsResponse,ManualScaleSettingsResponse> scaleSettings) {
+        @OutputCustomType.Parameter("appInsightsEnabled") @Nullable Boolean appInsightsEnabled,
+        @OutputCustomType.Parameter("codeConfiguration") @Nullable CodeConfigurationResponse codeConfiguration,
+        @OutputCustomType.Parameter("containerResourceRequirements") @Nullable ContainerResourceRequirementsResponse containerResourceRequirements,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("endpointComputeType") String endpointComputeType,
+        @OutputCustomType.Parameter("environmentId") @Nullable String environmentId,
+        @OutputCustomType.Parameter("environmentVariables") @Nullable Map<String,String> environmentVariables,
+        @OutputCustomType.Parameter("livenessProbe") @Nullable ProbeSettingsResponse livenessProbe,
+        @OutputCustomType.Parameter("model") @Nullable Object model,
+        @OutputCustomType.Parameter("properties") @Nullable Map<String,String> properties,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("requestSettings") @Nullable OnlineRequestSettingsResponse requestSettings,
+        @OutputCustomType.Parameter("scaleSettings") @Nullable Either<AutoScaleSettingsResponse,ManualScaleSettingsResponse> scaleSettings) {
         this.appInsightsEnabled = appInsightsEnabled;
         this.codeConfiguration = codeConfiguration;
         this.containerResourceRequirements = containerResourceRequirements;

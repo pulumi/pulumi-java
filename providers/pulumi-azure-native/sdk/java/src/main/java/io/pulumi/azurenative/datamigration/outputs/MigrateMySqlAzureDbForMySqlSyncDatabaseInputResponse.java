@@ -38,13 +38,13 @@ public final class MigrateMySqlAzureDbForMySqlSyncDatabaseInputResponse {
      */
     private final @Nullable Map<String,String> targetSetting;
 
-    @OutputCustomType.Constructor({"migrationSetting","name","sourceSetting","targetDatabaseName","targetSetting"})
+    @OutputCustomType.Constructor
     private MigrateMySqlAzureDbForMySqlSyncDatabaseInputResponse(
-        @Nullable Map<String,String> migrationSetting,
-        @Nullable String name,
-        @Nullable Map<String,String> sourceSetting,
-        @Nullable String targetDatabaseName,
-        @Nullable Map<String,String> targetSetting) {
+        @OutputCustomType.Parameter("migrationSetting") @Nullable Map<String,String> migrationSetting,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("sourceSetting") @Nullable Map<String,String> sourceSetting,
+        @OutputCustomType.Parameter("targetDatabaseName") @Nullable String targetDatabaseName,
+        @OutputCustomType.Parameter("targetSetting") @Nullable Map<String,String> targetSetting) {
         this.migrationSetting = migrationSetting;
         this.name = name;
         this.sourceSetting = sourceSetting;

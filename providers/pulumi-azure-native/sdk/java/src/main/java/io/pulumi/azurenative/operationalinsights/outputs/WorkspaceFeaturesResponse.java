@@ -38,13 +38,13 @@ public final class WorkspaceFeaturesResponse {
      */
     private final @Nullable Boolean immediatePurgeDataOn30Days;
 
-    @OutputCustomType.Constructor({"clusterResourceId","disableLocalAuth","enableDataExport","enableLogAccessUsingOnlyResourcePermissions","immediatePurgeDataOn30Days"})
+    @OutputCustomType.Constructor
     private WorkspaceFeaturesResponse(
-        @Nullable String clusterResourceId,
-        @Nullable Boolean disableLocalAuth,
-        @Nullable Boolean enableDataExport,
-        @Nullable Boolean enableLogAccessUsingOnlyResourcePermissions,
-        @Nullable Boolean immediatePurgeDataOn30Days) {
+        @OutputCustomType.Parameter("clusterResourceId") @Nullable String clusterResourceId,
+        @OutputCustomType.Parameter("disableLocalAuth") @Nullable Boolean disableLocalAuth,
+        @OutputCustomType.Parameter("enableDataExport") @Nullable Boolean enableDataExport,
+        @OutputCustomType.Parameter("enableLogAccessUsingOnlyResourcePermissions") @Nullable Boolean enableLogAccessUsingOnlyResourcePermissions,
+        @OutputCustomType.Parameter("immediatePurgeDataOn30Days") @Nullable Boolean immediatePurgeDataOn30Days) {
         this.clusterResourceId = clusterResourceId;
         this.disableLocalAuth = disableLocalAuth;
         this.enableDataExport = enableDataExport;

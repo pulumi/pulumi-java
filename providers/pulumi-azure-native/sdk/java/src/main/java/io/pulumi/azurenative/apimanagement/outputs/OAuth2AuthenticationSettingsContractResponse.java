@@ -22,10 +22,10 @@ public final class OAuth2AuthenticationSettingsContractResponse {
      */
     private final @Nullable String scope;
 
-    @OutputCustomType.Constructor({"authorizationServerId","scope"})
+    @OutputCustomType.Constructor
     private OAuth2AuthenticationSettingsContractResponse(
-        @Nullable String authorizationServerId,
-        @Nullable String scope) {
+        @OutputCustomType.Parameter("authorizationServerId") @Nullable String authorizationServerId,
+        @OutputCustomType.Parameter("scope") @Nullable String scope) {
         this.authorizationServerId = authorizationServerId;
         this.scope = scope;
     }

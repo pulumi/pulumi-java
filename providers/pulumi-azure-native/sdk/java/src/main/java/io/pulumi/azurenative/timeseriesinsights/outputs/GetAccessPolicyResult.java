@@ -43,14 +43,14 @@ public final class GetAccessPolicyResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"description","id","name","principalObjectId","roles","type"})
+    @OutputCustomType.Constructor
     private GetAccessPolicyResult(
-        @Nullable String description,
-        String id,
-        String name,
-        @Nullable String principalObjectId,
-        @Nullable List<String> roles,
-        String type) {
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("principalObjectId") @Nullable String principalObjectId,
+        @OutputCustomType.Parameter("roles") @Nullable List<String> roles,
+        @OutputCustomType.Parameter("type") String type) {
         this.description = description;
         this.id = id;
         this.name = name;

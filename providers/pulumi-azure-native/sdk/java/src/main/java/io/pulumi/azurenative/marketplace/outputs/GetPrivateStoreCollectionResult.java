@@ -71,19 +71,19 @@ public final class GetPrivateStoreCollectionResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"allSubscriptions","claim","collectionId","collectionName","enabled","id","name","numberOfOffers","subscriptionsList","systemData","type"})
+    @OutputCustomType.Constructor
     private GetPrivateStoreCollectionResult(
-        @Nullable Boolean allSubscriptions,
-        @Nullable String claim,
-        String collectionId,
-        @Nullable String collectionName,
-        @Nullable Boolean enabled,
-        String id,
-        String name,
-        Double numberOfOffers,
-        @Nullable List<String> subscriptionsList,
-        SystemDataResponse systemData,
-        String type) {
+        @OutputCustomType.Parameter("allSubscriptions") @Nullable Boolean allSubscriptions,
+        @OutputCustomType.Parameter("claim") @Nullable String claim,
+        @OutputCustomType.Parameter("collectionId") String collectionId,
+        @OutputCustomType.Parameter("collectionName") @Nullable String collectionName,
+        @OutputCustomType.Parameter("enabled") @Nullable Boolean enabled,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("numberOfOffers") Double numberOfOffers,
+        @OutputCustomType.Parameter("subscriptionsList") @Nullable List<String> subscriptionsList,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("type") String type) {
         this.allSubscriptions = allSubscriptions;
         this.claim = claim;
         this.collectionId = collectionId;

@@ -79,21 +79,21 @@ public final class GetArcSettingResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"aggregateState","arcInstanceResourceGroup","createdAt","createdBy","createdByType","id","lastModifiedAt","lastModifiedBy","lastModifiedByType","name","perNodeDetails","provisioningState","type"})
+    @OutputCustomType.Constructor
     private GetArcSettingResult(
-        String aggregateState,
-        String arcInstanceResourceGroup,
-        @Nullable String createdAt,
-        @Nullable String createdBy,
-        @Nullable String createdByType,
-        String id,
-        @Nullable String lastModifiedAt,
-        @Nullable String lastModifiedBy,
-        @Nullable String lastModifiedByType,
-        String name,
-        List<PerNodeStateResponse> perNodeDetails,
-        String provisioningState,
-        String type) {
+        @OutputCustomType.Parameter("aggregateState") String aggregateState,
+        @OutputCustomType.Parameter("arcInstanceResourceGroup") String arcInstanceResourceGroup,
+        @OutputCustomType.Parameter("createdAt") @Nullable String createdAt,
+        @OutputCustomType.Parameter("createdBy") @Nullable String createdBy,
+        @OutputCustomType.Parameter("createdByType") @Nullable String createdByType,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("lastModifiedAt") @Nullable String lastModifiedAt,
+        @OutputCustomType.Parameter("lastModifiedBy") @Nullable String lastModifiedBy,
+        @OutputCustomType.Parameter("lastModifiedByType") @Nullable String lastModifiedByType,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("perNodeDetails") List<PerNodeStateResponse> perNodeDetails,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("type") String type) {
         this.aggregateState = aggregateState;
         this.arcInstanceResourceGroup = arcInstanceResourceGroup;
         this.createdAt = createdAt;

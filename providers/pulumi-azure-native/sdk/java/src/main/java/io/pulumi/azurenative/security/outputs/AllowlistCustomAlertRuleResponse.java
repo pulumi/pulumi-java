@@ -43,14 +43,14 @@ public final class AllowlistCustomAlertRuleResponse {
      */
     private final String valueType;
 
-    @OutputCustomType.Constructor({"allowlistValues","description","displayName","isEnabled","ruleType","valueType"})
+    @OutputCustomType.Constructor
     private AllowlistCustomAlertRuleResponse(
-        List<String> allowlistValues,
-        String description,
-        String displayName,
-        Boolean isEnabled,
-        String ruleType,
-        String valueType) {
+        @OutputCustomType.Parameter("allowlistValues") List<String> allowlistValues,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("isEnabled") Boolean isEnabled,
+        @OutputCustomType.Parameter("ruleType") String ruleType,
+        @OutputCustomType.Parameter("valueType") String valueType) {
         this.allowlistValues = allowlistValues;
         this.description = description;
         this.displayName = displayName;

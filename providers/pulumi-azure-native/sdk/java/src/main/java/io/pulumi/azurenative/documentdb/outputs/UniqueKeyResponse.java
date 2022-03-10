@@ -17,8 +17,8 @@ public final class UniqueKeyResponse {
      */
     private final @Nullable List<String> paths;
 
-    @OutputCustomType.Constructor({"paths"})
-    private UniqueKeyResponse(@Nullable List<String> paths) {
+    @OutputCustomType.Constructor
+    private UniqueKeyResponse(@OutputCustomType.Parameter("paths") @Nullable List<String> paths) {
         this.paths = paths;
     }
 

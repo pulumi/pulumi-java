@@ -23,10 +23,10 @@ public final class ServiceCosmosDbConfigurationInfoResponse {
      */
     private final @Nullable Double offerThroughput;
 
-    @OutputCustomType.Constructor({"keyVaultKeyUri","offerThroughput"})
+    @OutputCustomType.Constructor
     private ServiceCosmosDbConfigurationInfoResponse(
-        @Nullable String keyVaultKeyUri,
-        @Nullable Double offerThroughput) {
+        @OutputCustomType.Parameter("keyVaultKeyUri") @Nullable String keyVaultKeyUri,
+        @OutputCustomType.Parameter("offerThroughput") @Nullable Double offerThroughput) {
         this.keyVaultKeyUri = keyVaultKeyUri;
         this.offerThroughput = offerThroughput;
     }

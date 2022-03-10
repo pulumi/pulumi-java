@@ -27,11 +27,11 @@ public final class MigrationValidationOptionsResponse {
      */
     private final @Nullable Boolean enableSchemaValidation;
 
-    @OutputCustomType.Constructor({"enableDataIntegrityValidation","enableQueryAnalysisValidation","enableSchemaValidation"})
+    @OutputCustomType.Constructor
     private MigrationValidationOptionsResponse(
-        @Nullable Boolean enableDataIntegrityValidation,
-        @Nullable Boolean enableQueryAnalysisValidation,
-        @Nullable Boolean enableSchemaValidation) {
+        @OutputCustomType.Parameter("enableDataIntegrityValidation") @Nullable Boolean enableDataIntegrityValidation,
+        @OutputCustomType.Parameter("enableQueryAnalysisValidation") @Nullable Boolean enableQueryAnalysisValidation,
+        @OutputCustomType.Parameter("enableSchemaValidation") @Nullable Boolean enableSchemaValidation) {
         this.enableDataIntegrityValidation = enableDataIntegrityValidation;
         this.enableQueryAnalysisValidation = enableQueryAnalysisValidation;
         this.enableSchemaValidation = enableSchemaValidation;

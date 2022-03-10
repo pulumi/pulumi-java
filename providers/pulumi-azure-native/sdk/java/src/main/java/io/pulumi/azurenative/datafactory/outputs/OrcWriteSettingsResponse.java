@@ -29,11 +29,11 @@ public final class OrcWriteSettingsResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"fileNamePrefix","maxRowsPerFile","type"})
+    @OutputCustomType.Constructor
     private OrcWriteSettingsResponse(
-        @Nullable Object fileNamePrefix,
-        @Nullable Object maxRowsPerFile,
-        String type) {
+        @OutputCustomType.Parameter("fileNamePrefix") @Nullable Object fileNamePrefix,
+        @OutputCustomType.Parameter("maxRowsPerFile") @Nullable Object maxRowsPerFile,
+        @OutputCustomType.Parameter("type") String type) {
         this.fileNamePrefix = fileNamePrefix;
         this.maxRowsPerFile = maxRowsPerFile;
         this.type = type;

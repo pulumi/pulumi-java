@@ -23,10 +23,10 @@ public final class SecretResponse {
      */
     private final @Nullable String keyVaultId;
 
-    @OutputCustomType.Constructor({"encryptedSecret","keyVaultId"})
+    @OutputCustomType.Constructor
     private SecretResponse(
-        @Nullable AsymmetricEncryptedSecretResponse encryptedSecret,
-        @Nullable String keyVaultId) {
+        @OutputCustomType.Parameter("encryptedSecret") @Nullable AsymmetricEncryptedSecretResponse encryptedSecret,
+        @OutputCustomType.Parameter("keyVaultId") @Nullable String keyVaultId) {
         this.encryptedSecret = encryptedSecret;
         this.keyVaultId = keyVaultId;
     }

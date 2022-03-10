@@ -64,17 +64,17 @@ public final class DynamicsEntityDatasetResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"annotations","description","entityName","folder","linkedServiceName","parameters","schema","structure","type"})
+    @OutputCustomType.Constructor
     private DynamicsEntityDatasetResponse(
-        @Nullable List<Object> annotations,
-        @Nullable String description,
-        @Nullable Object entityName,
-        @Nullable DatasetResponseFolder folder,
-        LinkedServiceReferenceResponse linkedServiceName,
-        @Nullable Map<String,ParameterSpecificationResponse> parameters,
-        @Nullable Object schema,
-        @Nullable Object structure,
-        String type) {
+        @OutputCustomType.Parameter("annotations") @Nullable List<Object> annotations,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("entityName") @Nullable Object entityName,
+        @OutputCustomType.Parameter("folder") @Nullable DatasetResponseFolder folder,
+        @OutputCustomType.Parameter("linkedServiceName") LinkedServiceReferenceResponse linkedServiceName,
+        @OutputCustomType.Parameter("parameters") @Nullable Map<String,ParameterSpecificationResponse> parameters,
+        @OutputCustomType.Parameter("schema") @Nullable Object schema,
+        @OutputCustomType.Parameter("structure") @Nullable Object structure,
+        @OutputCustomType.Parameter("type") String type) {
         this.annotations = annotations;
         this.description = description;
         this.entityName = entityName;

@@ -28,11 +28,11 @@ public final class ManagementEventAggregationConditionResponse {
      */
     private final @Nullable String windowSize;
 
-    @OutputCustomType.Constructor({"operator","threshold","windowSize"})
+    @OutputCustomType.Constructor
     private ManagementEventAggregationConditionResponse(
-        @Nullable String operator,
-        @Nullable Double threshold,
-        @Nullable String windowSize) {
+        @OutputCustomType.Parameter("operator") @Nullable String operator,
+        @OutputCustomType.Parameter("threshold") @Nullable Double threshold,
+        @OutputCustomType.Parameter("windowSize") @Nullable String windowSize) {
         this.operator = operator;
         this.threshold = threshold;
         this.windowSize = windowSize;

@@ -131,32 +131,32 @@ public final class GetWebAppSiteExtensionResult {
      */
     private final @Nullable String version;
 
-    @OutputCustomType.Constructor({"authors","comment","description","downloadCount","extensionId","extensionType","extensionUrl","feedUrl","iconUrl","id","installedDateTime","installerCommandLineParams","kind","licenseUrl","localIsLatestVersion","localPath","name","projectUrl","provisioningState","publishedDateTime","summary","title","type","version"})
+    @OutputCustomType.Constructor
     private GetWebAppSiteExtensionResult(
-        @Nullable List<String> authors,
-        @Nullable String comment,
-        @Nullable String description,
-        @Nullable Integer downloadCount,
-        @Nullable String extensionId,
-        @Nullable String extensionType,
-        @Nullable String extensionUrl,
-        @Nullable String feedUrl,
-        @Nullable String iconUrl,
-        String id,
-        @Nullable String installedDateTime,
-        @Nullable String installerCommandLineParams,
-        @Nullable String kind,
-        @Nullable String licenseUrl,
-        @Nullable Boolean localIsLatestVersion,
-        @Nullable String localPath,
-        String name,
-        @Nullable String projectUrl,
-        @Nullable String provisioningState,
-        @Nullable String publishedDateTime,
-        @Nullable String summary,
-        @Nullable String title,
-        String type,
-        @Nullable String version) {
+        @OutputCustomType.Parameter("authors") @Nullable List<String> authors,
+        @OutputCustomType.Parameter("comment") @Nullable String comment,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("downloadCount") @Nullable Integer downloadCount,
+        @OutputCustomType.Parameter("extensionId") @Nullable String extensionId,
+        @OutputCustomType.Parameter("extensionType") @Nullable String extensionType,
+        @OutputCustomType.Parameter("extensionUrl") @Nullable String extensionUrl,
+        @OutputCustomType.Parameter("feedUrl") @Nullable String feedUrl,
+        @OutputCustomType.Parameter("iconUrl") @Nullable String iconUrl,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("installedDateTime") @Nullable String installedDateTime,
+        @OutputCustomType.Parameter("installerCommandLineParams") @Nullable String installerCommandLineParams,
+        @OutputCustomType.Parameter("kind") @Nullable String kind,
+        @OutputCustomType.Parameter("licenseUrl") @Nullable String licenseUrl,
+        @OutputCustomType.Parameter("localIsLatestVersion") @Nullable Boolean localIsLatestVersion,
+        @OutputCustomType.Parameter("localPath") @Nullable String localPath,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("projectUrl") @Nullable String projectUrl,
+        @OutputCustomType.Parameter("provisioningState") @Nullable String provisioningState,
+        @OutputCustomType.Parameter("publishedDateTime") @Nullable String publishedDateTime,
+        @OutputCustomType.Parameter("summary") @Nullable String summary,
+        @OutputCustomType.Parameter("title") @Nullable String title,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("version") @Nullable String version) {
         this.authors = authors;
         this.comment = comment;
         this.description = description;

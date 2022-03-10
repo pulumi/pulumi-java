@@ -39,13 +39,13 @@ public final class RepositoryResponse {
      */
     private final @Nullable String url;
 
-    @OutputCustomType.Constructor({"branch","deploymentLogsUrl","displayUrl","pathMapping","url"})
+    @OutputCustomType.Constructor
     private RepositoryResponse(
-        @Nullable String branch,
-        @Nullable String deploymentLogsUrl,
-        @Nullable String displayUrl,
-        @Nullable List<ContentPathMapResponse> pathMapping,
-        @Nullable String url) {
+        @OutputCustomType.Parameter("branch") @Nullable String branch,
+        @OutputCustomType.Parameter("deploymentLogsUrl") @Nullable String deploymentLogsUrl,
+        @OutputCustomType.Parameter("displayUrl") @Nullable String displayUrl,
+        @OutputCustomType.Parameter("pathMapping") @Nullable List<ContentPathMapResponse> pathMapping,
+        @OutputCustomType.Parameter("url") @Nullable String url) {
         this.branch = branch;
         this.deploymentLogsUrl = deploymentLogsUrl;
         this.displayUrl = displayUrl;

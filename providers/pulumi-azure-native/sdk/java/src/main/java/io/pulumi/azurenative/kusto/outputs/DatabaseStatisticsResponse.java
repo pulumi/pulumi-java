@@ -17,8 +17,8 @@ public final class DatabaseStatisticsResponse {
      */
     private final @Nullable Double size;
 
-    @OutputCustomType.Constructor({"size"})
-    private DatabaseStatisticsResponse(@Nullable Double size) {
+    @OutputCustomType.Constructor
+    private DatabaseStatisticsResponse(@OutputCustomType.Parameter("size") @Nullable Double size) {
         this.size = size;
     }
 

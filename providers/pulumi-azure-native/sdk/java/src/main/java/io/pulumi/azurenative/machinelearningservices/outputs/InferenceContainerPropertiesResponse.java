@@ -27,11 +27,11 @@ public final class InferenceContainerPropertiesResponse {
      */
     private final @Nullable RouteResponse scoringRoute;
 
-    @OutputCustomType.Constructor({"livenessRoute","readinessRoute","scoringRoute"})
+    @OutputCustomType.Constructor
     private InferenceContainerPropertiesResponse(
-        @Nullable RouteResponse livenessRoute,
-        @Nullable RouteResponse readinessRoute,
-        @Nullable RouteResponse scoringRoute) {
+        @OutputCustomType.Parameter("livenessRoute") @Nullable RouteResponse livenessRoute,
+        @OutputCustomType.Parameter("readinessRoute") @Nullable RouteResponse readinessRoute,
+        @OutputCustomType.Parameter("scoringRoute") @Nullable RouteResponse scoringRoute) {
         this.livenessRoute = livenessRoute;
         this.readinessRoute = readinessRoute;
         this.scoringRoute = scoringRoute;

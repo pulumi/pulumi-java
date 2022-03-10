@@ -40,13 +40,13 @@ public final class ManagementConfigurationPropertiesResponse {
      */
     private final Object template;
 
-    @OutputCustomType.Constructor({"applicationId","parameters","parentResourceType","provisioningState","template"})
+    @OutputCustomType.Constructor
     private ManagementConfigurationPropertiesResponse(
-        @Nullable String applicationId,
-        List<ArmTemplateParameterResponse> parameters,
-        String parentResourceType,
-        String provisioningState,
-        Object template) {
+        @OutputCustomType.Parameter("applicationId") @Nullable String applicationId,
+        @OutputCustomType.Parameter("parameters") List<ArmTemplateParameterResponse> parameters,
+        @OutputCustomType.Parameter("parentResourceType") String parentResourceType,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("template") Object template) {
         this.applicationId = applicationId;
         this.parameters = parameters;
         this.parentResourceType = parentResourceType;

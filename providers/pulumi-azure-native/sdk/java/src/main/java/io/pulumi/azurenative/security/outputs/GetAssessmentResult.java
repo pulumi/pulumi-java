@@ -71,18 +71,18 @@ public final class GetAssessmentResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"additionalData","displayName","id","links","metadata","name","partnersData","resourceDetails","status","type"})
+    @OutputCustomType.Constructor
     private GetAssessmentResult(
-        @Nullable Map<String,String> additionalData,
-        String displayName,
-        String id,
-        AssessmentLinksResponse links,
-        @Nullable SecurityAssessmentMetadataPropertiesResponse metadata,
-        String name,
-        @Nullable SecurityAssessmentPartnerDataResponse partnersData,
-        Object resourceDetails,
-        AssessmentStatusResponse status,
-        String type) {
+        @OutputCustomType.Parameter("additionalData") @Nullable Map<String,String> additionalData,
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("links") AssessmentLinksResponse links,
+        @OutputCustomType.Parameter("metadata") @Nullable SecurityAssessmentMetadataPropertiesResponse metadata,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("partnersData") @Nullable SecurityAssessmentPartnerDataResponse partnersData,
+        @OutputCustomType.Parameter("resourceDetails") Object resourceDetails,
+        @OutputCustomType.Parameter("status") AssessmentStatusResponse status,
+        @OutputCustomType.Parameter("type") String type) {
         this.additionalData = additionalData;
         this.displayName = displayName;
         this.id = id;

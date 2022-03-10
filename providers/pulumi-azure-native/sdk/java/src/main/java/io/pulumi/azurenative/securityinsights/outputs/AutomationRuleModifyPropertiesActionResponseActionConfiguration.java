@@ -50,15 +50,15 @@ public final class AutomationRuleModifyPropertiesActionResponseActionConfigurati
      */
     private final @Nullable String status;
 
-    @OutputCustomType.Constructor({"classification","classificationComment","classificationReason","labels","owner","severity","status"})
+    @OutputCustomType.Constructor
     private AutomationRuleModifyPropertiesActionResponseActionConfiguration(
-        @Nullable String classification,
-        @Nullable String classificationComment,
-        @Nullable String classificationReason,
-        @Nullable List<IncidentLabelResponse> labels,
-        @Nullable IncidentOwnerInfoResponse owner,
-        @Nullable String severity,
-        @Nullable String status) {
+        @OutputCustomType.Parameter("classification") @Nullable String classification,
+        @OutputCustomType.Parameter("classificationComment") @Nullable String classificationComment,
+        @OutputCustomType.Parameter("classificationReason") @Nullable String classificationReason,
+        @OutputCustomType.Parameter("labels") @Nullable List<IncidentLabelResponse> labels,
+        @OutputCustomType.Parameter("owner") @Nullable IncidentOwnerInfoResponse owner,
+        @OutputCustomType.Parameter("severity") @Nullable String severity,
+        @OutputCustomType.Parameter("status") @Nullable String status) {
         this.classification = classification;
         this.classificationComment = classificationComment;
         this.classificationReason = classificationReason;

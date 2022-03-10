@@ -123,29 +123,29 @@ public final class VpnSiteLinkConnectionResponse {
      */
     private final @Nullable SubResourceResponse vpnSiteLink;
 
-    @OutputCustomType.Constructor({"connectionBandwidth","connectionStatus","egressBytesTransferred","egressNatRules","enableBgp","enableRateLimiting","etag","id","ingressBytesTransferred","ingressNatRules","ipsecPolicies","name","provisioningState","routingWeight","sharedKey","type","useLocalAzureIpAddress","usePolicyBasedTrafficSelectors","vpnConnectionProtocolType","vpnLinkConnectionMode","vpnSiteLink"})
+    @OutputCustomType.Constructor
     private VpnSiteLinkConnectionResponse(
-        @Nullable Integer connectionBandwidth,
-        String connectionStatus,
-        Double egressBytesTransferred,
-        @Nullable List<SubResourceResponse> egressNatRules,
-        @Nullable Boolean enableBgp,
-        @Nullable Boolean enableRateLimiting,
-        String etag,
-        @Nullable String id,
-        Double ingressBytesTransferred,
-        @Nullable List<SubResourceResponse> ingressNatRules,
-        @Nullable List<IpsecPolicyResponse> ipsecPolicies,
-        @Nullable String name,
-        String provisioningState,
-        @Nullable Integer routingWeight,
-        @Nullable String sharedKey,
-        String type,
-        @Nullable Boolean useLocalAzureIpAddress,
-        @Nullable Boolean usePolicyBasedTrafficSelectors,
-        @Nullable String vpnConnectionProtocolType,
-        @Nullable String vpnLinkConnectionMode,
-        @Nullable SubResourceResponse vpnSiteLink) {
+        @OutputCustomType.Parameter("connectionBandwidth") @Nullable Integer connectionBandwidth,
+        @OutputCustomType.Parameter("connectionStatus") String connectionStatus,
+        @OutputCustomType.Parameter("egressBytesTransferred") Double egressBytesTransferred,
+        @OutputCustomType.Parameter("egressNatRules") @Nullable List<SubResourceResponse> egressNatRules,
+        @OutputCustomType.Parameter("enableBgp") @Nullable Boolean enableBgp,
+        @OutputCustomType.Parameter("enableRateLimiting") @Nullable Boolean enableRateLimiting,
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("ingressBytesTransferred") Double ingressBytesTransferred,
+        @OutputCustomType.Parameter("ingressNatRules") @Nullable List<SubResourceResponse> ingressNatRules,
+        @OutputCustomType.Parameter("ipsecPolicies") @Nullable List<IpsecPolicyResponse> ipsecPolicies,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("routingWeight") @Nullable Integer routingWeight,
+        @OutputCustomType.Parameter("sharedKey") @Nullable String sharedKey,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("useLocalAzureIpAddress") @Nullable Boolean useLocalAzureIpAddress,
+        @OutputCustomType.Parameter("usePolicyBasedTrafficSelectors") @Nullable Boolean usePolicyBasedTrafficSelectors,
+        @OutputCustomType.Parameter("vpnConnectionProtocolType") @Nullable String vpnConnectionProtocolType,
+        @OutputCustomType.Parameter("vpnLinkConnectionMode") @Nullable String vpnLinkConnectionMode,
+        @OutputCustomType.Parameter("vpnSiteLink") @Nullable SubResourceResponse vpnSiteLink) {
         this.connectionBandwidth = connectionBandwidth;
         this.connectionStatus = connectionStatus;
         this.egressBytesTransferred = egressBytesTransferred;

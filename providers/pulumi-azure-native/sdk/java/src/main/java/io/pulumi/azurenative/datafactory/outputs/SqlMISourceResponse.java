@@ -82,21 +82,21 @@ public final class SqlMISourceResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"additionalColumns","disableMetricsCollection","maxConcurrentConnections","partitionOption","partitionSettings","produceAdditionalTypes","queryTimeout","sourceRetryCount","sourceRetryWait","sqlReaderQuery","sqlReaderStoredProcedureName","storedProcedureParameters","type"})
+    @OutputCustomType.Constructor
     private SqlMISourceResponse(
-        @Nullable Object additionalColumns,
-        @Nullable Object disableMetricsCollection,
-        @Nullable Object maxConcurrentConnections,
-        @Nullable Object partitionOption,
-        @Nullable SqlPartitionSettingsResponse partitionSettings,
-        @Nullable Object produceAdditionalTypes,
-        @Nullable Object queryTimeout,
-        @Nullable Object sourceRetryCount,
-        @Nullable Object sourceRetryWait,
-        @Nullable Object sqlReaderQuery,
-        @Nullable Object sqlReaderStoredProcedureName,
-        @Nullable Map<String,StoredProcedureParameterResponse> storedProcedureParameters,
-        String type) {
+        @OutputCustomType.Parameter("additionalColumns") @Nullable Object additionalColumns,
+        @OutputCustomType.Parameter("disableMetricsCollection") @Nullable Object disableMetricsCollection,
+        @OutputCustomType.Parameter("maxConcurrentConnections") @Nullable Object maxConcurrentConnections,
+        @OutputCustomType.Parameter("partitionOption") @Nullable Object partitionOption,
+        @OutputCustomType.Parameter("partitionSettings") @Nullable SqlPartitionSettingsResponse partitionSettings,
+        @OutputCustomType.Parameter("produceAdditionalTypes") @Nullable Object produceAdditionalTypes,
+        @OutputCustomType.Parameter("queryTimeout") @Nullable Object queryTimeout,
+        @OutputCustomType.Parameter("sourceRetryCount") @Nullable Object sourceRetryCount,
+        @OutputCustomType.Parameter("sourceRetryWait") @Nullable Object sourceRetryWait,
+        @OutputCustomType.Parameter("sqlReaderQuery") @Nullable Object sqlReaderQuery,
+        @OutputCustomType.Parameter("sqlReaderStoredProcedureName") @Nullable Object sqlReaderStoredProcedureName,
+        @OutputCustomType.Parameter("storedProcedureParameters") @Nullable Map<String,StoredProcedureParameterResponse> storedProcedureParameters,
+        @OutputCustomType.Parameter("type") String type) {
         this.additionalColumns = additionalColumns;
         this.disableMetricsCollection = disableMetricsCollection;
         this.maxConcurrentConnections = maxConcurrentConnections;

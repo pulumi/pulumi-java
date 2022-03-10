@@ -49,15 +49,15 @@ public final class ContactProfileLinkChannelResponse {
      */
     private final @Nullable String modulationConfiguration;
 
-    @OutputCustomType.Constructor({"bandwidthMHz","centerFrequencyMHz","decodingConfiguration","demodulationConfiguration","encodingConfiguration","endPoint","modulationConfiguration"})
+    @OutputCustomType.Constructor
     private ContactProfileLinkChannelResponse(
-        Double bandwidthMHz,
-        Double centerFrequencyMHz,
-        @Nullable String decodingConfiguration,
-        @Nullable String demodulationConfiguration,
-        @Nullable String encodingConfiguration,
-        EndPointResponse endPoint,
-        @Nullable String modulationConfiguration) {
+        @OutputCustomType.Parameter("bandwidthMHz") Double bandwidthMHz,
+        @OutputCustomType.Parameter("centerFrequencyMHz") Double centerFrequencyMHz,
+        @OutputCustomType.Parameter("decodingConfiguration") @Nullable String decodingConfiguration,
+        @OutputCustomType.Parameter("demodulationConfiguration") @Nullable String demodulationConfiguration,
+        @OutputCustomType.Parameter("encodingConfiguration") @Nullable String encodingConfiguration,
+        @OutputCustomType.Parameter("endPoint") EndPointResponse endPoint,
+        @OutputCustomType.Parameter("modulationConfiguration") @Nullable String modulationConfiguration) {
         this.bandwidthMHz = bandwidthMHz;
         this.centerFrequencyMHz = centerFrequencyMHz;
         this.decodingConfiguration = decodingConfiguration;

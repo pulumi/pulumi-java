@@ -17,8 +17,8 @@ public final class PartnerContentResponse {
      */
     private final @Nullable B2BPartnerContentResponse b2b;
 
-    @OutputCustomType.Constructor({"b2b"})
-    private PartnerContentResponse(@Nullable B2BPartnerContentResponse b2b) {
+    @OutputCustomType.Constructor
+    private PartnerContentResponse(@OutputCustomType.Parameter("b2b") @Nullable B2BPartnerContentResponse b2b) {
         this.b2b = b2b;
     }
 

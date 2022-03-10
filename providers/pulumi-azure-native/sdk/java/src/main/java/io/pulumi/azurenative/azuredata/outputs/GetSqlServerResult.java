@@ -53,16 +53,16 @@ public final class GetSqlServerResult {
      */
     private final @Nullable String version;
 
-    @OutputCustomType.Constructor({"cores","edition","id","name","propertyBag","registrationID","type","version"})
+    @OutputCustomType.Constructor
     private GetSqlServerResult(
-        @Nullable Integer cores,
-        @Nullable String edition,
-        String id,
-        String name,
-        @Nullable String propertyBag,
-        @Nullable String registrationID,
-        String type,
-        @Nullable String version) {
+        @OutputCustomType.Parameter("cores") @Nullable Integer cores,
+        @OutputCustomType.Parameter("edition") @Nullable String edition,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("propertyBag") @Nullable String propertyBag,
+        @OutputCustomType.Parameter("registrationID") @Nullable String registrationID,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("version") @Nullable String version) {
         this.cores = cores;
         this.edition = edition;
         this.id = id;

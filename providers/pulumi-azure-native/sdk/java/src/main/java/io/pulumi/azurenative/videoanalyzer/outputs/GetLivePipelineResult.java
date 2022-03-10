@@ -61,17 +61,17 @@ public final class GetLivePipelineResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"bitrateKbps","description","id","name","parameters","state","systemData","topologyName","type"})
+    @OutputCustomType.Constructor
     private GetLivePipelineResult(
-        Integer bitrateKbps,
-        @Nullable String description,
-        String id,
-        String name,
-        @Nullable List<ParameterDefinitionResponse> parameters,
-        String state,
-        SystemDataResponse systemData,
-        String topologyName,
-        String type) {
+        @OutputCustomType.Parameter("bitrateKbps") Integer bitrateKbps,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("parameters") @Nullable List<ParameterDefinitionResponse> parameters,
+        @OutputCustomType.Parameter("state") String state,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("topologyName") String topologyName,
+        @OutputCustomType.Parameter("type") String type) {
         this.bitrateKbps = bitrateKbps;
         this.description = description;
         this.id = id;

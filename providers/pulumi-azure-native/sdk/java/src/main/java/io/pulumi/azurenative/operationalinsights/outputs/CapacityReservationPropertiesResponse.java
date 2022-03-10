@@ -21,10 +21,10 @@ public final class CapacityReservationPropertiesResponse {
      */
     private final Double minCapacity;
 
-    @OutputCustomType.Constructor({"lastSkuUpdate","minCapacity"})
+    @OutputCustomType.Constructor
     private CapacityReservationPropertiesResponse(
-        String lastSkuUpdate,
-        Double minCapacity) {
+        @OutputCustomType.Parameter("lastSkuUpdate") String lastSkuUpdate,
+        @OutputCustomType.Parameter("minCapacity") Double minCapacity) {
         this.lastSkuUpdate = lastSkuUpdate;
         this.minCapacity = minCapacity;
     }

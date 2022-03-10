@@ -30,16 +30,16 @@ public final class GetSqlMigrationServiceResult {
     private final @Nullable Map<String,String> tags;
     private final String type;
 
-    @OutputCustomType.Constructor({"id","integrationRuntimeState","location","name","provisioningState","systemData","tags","type"})
+    @OutputCustomType.Constructor
     private GetSqlMigrationServiceResult(
-        String id,
-        String integrationRuntimeState,
-        @Nullable String location,
-        String name,
-        String provisioningState,
-        SystemDataResponse systemData,
-        @Nullable Map<String,String> tags,
-        String type) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("integrationRuntimeState") String integrationRuntimeState,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type) {
         this.id = id;
         this.integrationRuntimeState = integrationRuntimeState;
         this.location = location;

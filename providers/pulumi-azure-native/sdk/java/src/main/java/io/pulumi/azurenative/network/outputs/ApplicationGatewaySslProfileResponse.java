@@ -56,16 +56,16 @@ public final class ApplicationGatewaySslProfileResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"clientAuthConfiguration","etag","id","name","provisioningState","sslPolicy","trustedClientCertificates","type"})
+    @OutputCustomType.Constructor
     private ApplicationGatewaySslProfileResponse(
-        @Nullable ApplicationGatewayClientAuthConfigurationResponse clientAuthConfiguration,
-        String etag,
-        @Nullable String id,
-        @Nullable String name,
-        String provisioningState,
-        @Nullable ApplicationGatewaySslPolicyResponse sslPolicy,
-        @Nullable List<SubResourceResponse> trustedClientCertificates,
-        String type) {
+        @OutputCustomType.Parameter("clientAuthConfiguration") @Nullable ApplicationGatewayClientAuthConfigurationResponse clientAuthConfiguration,
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("sslPolicy") @Nullable ApplicationGatewaySslPolicyResponse sslPolicy,
+        @OutputCustomType.Parameter("trustedClientCertificates") @Nullable List<SubResourceResponse> trustedClientCertificates,
+        @OutputCustomType.Parameter("type") String type) {
         this.clientAuthConfiguration = clientAuthConfiguration;
         this.etag = etag;
         this.id = id;

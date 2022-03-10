@@ -38,13 +38,13 @@ public final class VMResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"id","location","name","tags","type"})
+    @OutputCustomType.Constructor
     private VMResponse(
-        @Nullable String id,
-        @Nullable String location,
-        String name,
-        @Nullable Map<String,String> tags,
-        String type) {
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type) {
         this.id = id;
         this.location = location;
         this.name = name;

@@ -30,12 +30,12 @@ public final class ListPrivateCloudAdminCredentialsResult {
      */
     private final String vcenterUsername;
 
-    @OutputCustomType.Constructor({"nsxtPassword","nsxtUsername","vcenterPassword","vcenterUsername"})
+    @OutputCustomType.Constructor
     private ListPrivateCloudAdminCredentialsResult(
-        String nsxtPassword,
-        String nsxtUsername,
-        String vcenterPassword,
-        String vcenterUsername) {
+        @OutputCustomType.Parameter("nsxtPassword") String nsxtPassword,
+        @OutputCustomType.Parameter("nsxtUsername") String nsxtUsername,
+        @OutputCustomType.Parameter("vcenterPassword") String vcenterPassword,
+        @OutputCustomType.Parameter("vcenterUsername") String vcenterUsername) {
         this.nsxtPassword = nsxtPassword;
         this.nsxtUsername = nsxtUsername;
         this.vcenterPassword = vcenterPassword;

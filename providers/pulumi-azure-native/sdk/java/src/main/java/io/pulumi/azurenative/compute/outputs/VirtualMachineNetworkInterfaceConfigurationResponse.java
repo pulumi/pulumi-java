@@ -63,18 +63,18 @@ public final class VirtualMachineNetworkInterfaceConfigurationResponse {
      */
     private final @Nullable Boolean primary;
 
-    @OutputCustomType.Constructor({"deleteOption","dnsSettings","dscpConfiguration","enableAcceleratedNetworking","enableFpga","enableIPForwarding","ipConfigurations","name","networkSecurityGroup","primary"})
+    @OutputCustomType.Constructor
     private VirtualMachineNetworkInterfaceConfigurationResponse(
-        @Nullable String deleteOption,
-        @Nullable VirtualMachineNetworkInterfaceDnsSettingsConfigurationResponse dnsSettings,
-        @Nullable SubResourceResponse dscpConfiguration,
-        @Nullable Boolean enableAcceleratedNetworking,
-        @Nullable Boolean enableFpga,
-        @Nullable Boolean enableIPForwarding,
-        List<VirtualMachineNetworkInterfaceIPConfigurationResponse> ipConfigurations,
-        String name,
-        @Nullable SubResourceResponse networkSecurityGroup,
-        @Nullable Boolean primary) {
+        @OutputCustomType.Parameter("deleteOption") @Nullable String deleteOption,
+        @OutputCustomType.Parameter("dnsSettings") @Nullable VirtualMachineNetworkInterfaceDnsSettingsConfigurationResponse dnsSettings,
+        @OutputCustomType.Parameter("dscpConfiguration") @Nullable SubResourceResponse dscpConfiguration,
+        @OutputCustomType.Parameter("enableAcceleratedNetworking") @Nullable Boolean enableAcceleratedNetworking,
+        @OutputCustomType.Parameter("enableFpga") @Nullable Boolean enableFpga,
+        @OutputCustomType.Parameter("enableIPForwarding") @Nullable Boolean enableIPForwarding,
+        @OutputCustomType.Parameter("ipConfigurations") List<VirtualMachineNetworkInterfaceIPConfigurationResponse> ipConfigurations,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("networkSecurityGroup") @Nullable SubResourceResponse networkSecurityGroup,
+        @OutputCustomType.Parameter("primary") @Nullable Boolean primary) {
         this.deleteOption = deleteOption;
         this.dnsSettings = dnsSettings;
         this.dscpConfiguration = dscpConfiguration;

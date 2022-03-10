@@ -17,8 +17,8 @@ public final class BlobStorageTokenStoreResponse {
      */
     private final @Nullable String sasUrlSettingName;
 
-    @OutputCustomType.Constructor({"sasUrlSettingName"})
-    private BlobStorageTokenStoreResponse(@Nullable String sasUrlSettingName) {
+    @OutputCustomType.Constructor
+    private BlobStorageTokenStoreResponse(@OutputCustomType.Parameter("sasUrlSettingName") @Nullable String sasUrlSettingName) {
         this.sasUrlSettingName = sasUrlSettingName;
     }
 

@@ -31,12 +31,12 @@ public final class SpacecraftLinkResponse {
      */
     private final String polarization;
 
-    @OutputCustomType.Constructor({"bandwidthMHz","centerFrequencyMHz","direction","polarization"})
+    @OutputCustomType.Constructor
     private SpacecraftLinkResponse(
-        Double bandwidthMHz,
-        Double centerFrequencyMHz,
-        String direction,
-        String polarization) {
+        @OutputCustomType.Parameter("bandwidthMHz") Double bandwidthMHz,
+        @OutputCustomType.Parameter("centerFrequencyMHz") Double centerFrequencyMHz,
+        @OutputCustomType.Parameter("direction") String direction,
+        @OutputCustomType.Parameter("polarization") String polarization) {
         this.bandwidthMHz = bandwidthMHz;
         this.centerFrequencyMHz = centerFrequencyMHz;
         this.direction = direction;

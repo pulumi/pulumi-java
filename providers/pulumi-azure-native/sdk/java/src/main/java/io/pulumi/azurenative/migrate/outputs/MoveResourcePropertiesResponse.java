@@ -87,19 +87,19 @@ public final class MoveResourcePropertiesResponse {
      */
     private final String targetId;
 
-    @OutputCustomType.Constructor({"dependsOn","dependsOnOverrides","errors","existingTargetId","isResolveRequired","moveStatus","provisioningState","resourceSettings","sourceId","sourceResourceSettings","targetId"})
+    @OutputCustomType.Constructor
     private MoveResourcePropertiesResponse(
-        List<MoveResourceDependencyResponse> dependsOn,
-        @Nullable List<MoveResourceDependencyOverrideResponse> dependsOnOverrides,
-        MoveResourcePropertiesResponseErrors errors,
-        @Nullable String existingTargetId,
-        Boolean isResolveRequired,
-        MoveResourcePropertiesResponseMoveStatus moveStatus,
-        String provisioningState,
-        @Nullable Object resourceSettings,
-        String sourceId,
-        Object sourceResourceSettings,
-        String targetId) {
+        @OutputCustomType.Parameter("dependsOn") List<MoveResourceDependencyResponse> dependsOn,
+        @OutputCustomType.Parameter("dependsOnOverrides") @Nullable List<MoveResourceDependencyOverrideResponse> dependsOnOverrides,
+        @OutputCustomType.Parameter("errors") MoveResourcePropertiesResponseErrors errors,
+        @OutputCustomType.Parameter("existingTargetId") @Nullable String existingTargetId,
+        @OutputCustomType.Parameter("isResolveRequired") Boolean isResolveRequired,
+        @OutputCustomType.Parameter("moveStatus") MoveResourcePropertiesResponseMoveStatus moveStatus,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("resourceSettings") @Nullable Object resourceSettings,
+        @OutputCustomType.Parameter("sourceId") String sourceId,
+        @OutputCustomType.Parameter("sourceResourceSettings") Object sourceResourceSettings,
+        @OutputCustomType.Parameter("targetId") String targetId) {
         this.dependsOn = dependsOn;
         this.dependsOnOverrides = dependsOnOverrides;
         this.errors = errors;

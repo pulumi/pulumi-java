@@ -14,12 +14,12 @@ public final class OperationsDefinitionResponseDisplay {
     private final String provider;
     private final String resource;
 
-    @OutputCustomType.Constructor({"description","operation","provider","resource"})
+    @OutputCustomType.Constructor
     private OperationsDefinitionResponseDisplay(
-        String description,
-        String operation,
-        String provider,
-        String resource) {
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("operation") String operation,
+        @OutputCustomType.Parameter("provider") String provider,
+        @OutputCustomType.Parameter("resource") String resource) {
         this.description = description;
         this.operation = operation;
         this.provider = provider;

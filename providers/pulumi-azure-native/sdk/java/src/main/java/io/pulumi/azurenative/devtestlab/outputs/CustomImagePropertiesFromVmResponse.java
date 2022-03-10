@@ -29,11 +29,11 @@ public final class CustomImagePropertiesFromVmResponse {
      */
     private final @Nullable WindowsOsInfoResponse windowsOsInfo;
 
-    @OutputCustomType.Constructor({"linuxOsInfo","sourceVmId","windowsOsInfo"})
+    @OutputCustomType.Constructor
     private CustomImagePropertiesFromVmResponse(
-        @Nullable LinuxOsInfoResponse linuxOsInfo,
-        @Nullable String sourceVmId,
-        @Nullable WindowsOsInfoResponse windowsOsInfo) {
+        @OutputCustomType.Parameter("linuxOsInfo") @Nullable LinuxOsInfoResponse linuxOsInfo,
+        @OutputCustomType.Parameter("sourceVmId") @Nullable String sourceVmId,
+        @OutputCustomType.Parameter("windowsOsInfo") @Nullable WindowsOsInfoResponse windowsOsInfo) {
         this.linuxOsInfo = linuxOsInfo;
         this.sourceVmId = sourceVmId;
         this.windowsOsInfo = windowsOsInfo;

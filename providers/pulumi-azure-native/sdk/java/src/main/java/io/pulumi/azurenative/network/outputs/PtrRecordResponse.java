@@ -17,8 +17,8 @@ public final class PtrRecordResponse {
      */
     private final @Nullable String ptrdname;
 
-    @OutputCustomType.Constructor({"ptrdname"})
-    private PtrRecordResponse(@Nullable String ptrdname) {
+    @OutputCustomType.Constructor
+    private PtrRecordResponse(@OutputCustomType.Parameter("ptrdname") @Nullable String ptrdname) {
         this.ptrdname = ptrdname;
     }
 

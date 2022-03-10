@@ -20,10 +20,10 @@ public final class ConfigurationServiceInstanceResponse {
      */
     private final String status;
 
-    @OutputCustomType.Constructor({"name","status"})
+    @OutputCustomType.Constructor
     private ConfigurationServiceInstanceResponse(
-        String name,
-        String status) {
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("status") String status) {
         this.name = name;
         this.status = status;
     }

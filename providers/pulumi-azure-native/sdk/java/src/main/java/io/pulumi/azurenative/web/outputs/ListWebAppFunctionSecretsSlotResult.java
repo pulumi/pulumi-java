@@ -22,10 +22,10 @@ public final class ListWebAppFunctionSecretsSlotResult {
      */
     private final @Nullable String triggerUrl;
 
-    @OutputCustomType.Constructor({"key","triggerUrl"})
+    @OutputCustomType.Constructor
     private ListWebAppFunctionSecretsSlotResult(
-        @Nullable String key,
-        @Nullable String triggerUrl) {
+        @OutputCustomType.Parameter("key") @Nullable String key,
+        @OutputCustomType.Parameter("triggerUrl") @Nullable String triggerUrl) {
         this.key = key;
         this.triggerUrl = triggerUrl;
     }

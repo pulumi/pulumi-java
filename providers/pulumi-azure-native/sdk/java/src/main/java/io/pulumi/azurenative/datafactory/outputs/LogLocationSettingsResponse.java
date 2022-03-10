@@ -23,10 +23,10 @@ public final class LogLocationSettingsResponse {
      */
     private final @Nullable Object path;
 
-    @OutputCustomType.Constructor({"linkedServiceName","path"})
+    @OutputCustomType.Constructor
     private LogLocationSettingsResponse(
-        LinkedServiceReferenceResponse linkedServiceName,
-        @Nullable Object path) {
+        @OutputCustomType.Parameter("linkedServiceName") LinkedServiceReferenceResponse linkedServiceName,
+        @OutputCustomType.Parameter("path") @Nullable Object path) {
         this.linkedServiceName = linkedServiceName;
         this.path = path;
     }

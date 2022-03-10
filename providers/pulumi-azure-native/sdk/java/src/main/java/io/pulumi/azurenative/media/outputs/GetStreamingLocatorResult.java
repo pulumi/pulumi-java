@@ -85,22 +85,22 @@ public final class GetStreamingLocatorResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"alternativeMediaId","assetName","contentKeys","created","defaultContentKeyPolicyName","endTime","filters","id","name","startTime","streamingLocatorId","streamingPolicyName","systemData","type"})
+    @OutputCustomType.Constructor
     private GetStreamingLocatorResult(
-        @Nullable String alternativeMediaId,
-        String assetName,
-        @Nullable List<StreamingLocatorContentKeyResponse> contentKeys,
-        String created,
-        @Nullable String defaultContentKeyPolicyName,
-        @Nullable String endTime,
-        @Nullable List<String> filters,
-        String id,
-        String name,
-        @Nullable String startTime,
-        @Nullable String streamingLocatorId,
-        String streamingPolicyName,
-        SystemDataResponse systemData,
-        String type) {
+        @OutputCustomType.Parameter("alternativeMediaId") @Nullable String alternativeMediaId,
+        @OutputCustomType.Parameter("assetName") String assetName,
+        @OutputCustomType.Parameter("contentKeys") @Nullable List<StreamingLocatorContentKeyResponse> contentKeys,
+        @OutputCustomType.Parameter("created") String created,
+        @OutputCustomType.Parameter("defaultContentKeyPolicyName") @Nullable String defaultContentKeyPolicyName,
+        @OutputCustomType.Parameter("endTime") @Nullable String endTime,
+        @OutputCustomType.Parameter("filters") @Nullable List<String> filters,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("startTime") @Nullable String startTime,
+        @OutputCustomType.Parameter("streamingLocatorId") @Nullable String streamingLocatorId,
+        @OutputCustomType.Parameter("streamingPolicyName") String streamingPolicyName,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("type") String type) {
         this.alternativeMediaId = alternativeMediaId;
         this.assetName = assetName;
         this.contentKeys = contentKeys;

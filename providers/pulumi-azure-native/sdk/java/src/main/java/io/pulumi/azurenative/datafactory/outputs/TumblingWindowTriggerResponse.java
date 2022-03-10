@@ -86,21 +86,21 @@ public final class TumblingWindowTriggerResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"annotations","delay","dependsOn","description","endTime","frequency","interval","maxConcurrency","pipeline","retryPolicy","runtimeState","startTime","type"})
+    @OutputCustomType.Constructor
     private TumblingWindowTriggerResponse(
-        @Nullable List<Object> annotations,
-        @Nullable Object delay,
-        @Nullable List<Object> dependsOn,
-        @Nullable String description,
-        @Nullable String endTime,
-        String frequency,
-        Integer interval,
-        Integer maxConcurrency,
-        TriggerPipelineReferenceResponse pipeline,
-        @Nullable RetryPolicyResponse retryPolicy,
-        String runtimeState,
-        String startTime,
-        String type) {
+        @OutputCustomType.Parameter("annotations") @Nullable List<Object> annotations,
+        @OutputCustomType.Parameter("delay") @Nullable Object delay,
+        @OutputCustomType.Parameter("dependsOn") @Nullable List<Object> dependsOn,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("endTime") @Nullable String endTime,
+        @OutputCustomType.Parameter("frequency") String frequency,
+        @OutputCustomType.Parameter("interval") Integer interval,
+        @OutputCustomType.Parameter("maxConcurrency") Integer maxConcurrency,
+        @OutputCustomType.Parameter("pipeline") TriggerPipelineReferenceResponse pipeline,
+        @OutputCustomType.Parameter("retryPolicy") @Nullable RetryPolicyResponse retryPolicy,
+        @OutputCustomType.Parameter("runtimeState") String runtimeState,
+        @OutputCustomType.Parameter("startTime") String startTime,
+        @OutputCustomType.Parameter("type") String type) {
         this.annotations = annotations;
         this.delay = delay;
         this.dependsOn = dependsOn;

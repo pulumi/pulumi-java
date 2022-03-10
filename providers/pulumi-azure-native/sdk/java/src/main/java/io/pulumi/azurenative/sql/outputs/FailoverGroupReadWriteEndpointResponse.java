@@ -23,10 +23,10 @@ public final class FailoverGroupReadWriteEndpointResponse {
      */
     private final @Nullable Integer failoverWithDataLossGracePeriodMinutes;
 
-    @OutputCustomType.Constructor({"failoverPolicy","failoverWithDataLossGracePeriodMinutes"})
+    @OutputCustomType.Constructor
     private FailoverGroupReadWriteEndpointResponse(
-        String failoverPolicy,
-        @Nullable Integer failoverWithDataLossGracePeriodMinutes) {
+        @OutputCustomType.Parameter("failoverPolicy") String failoverPolicy,
+        @OutputCustomType.Parameter("failoverWithDataLossGracePeriodMinutes") @Nullable Integer failoverWithDataLossGracePeriodMinutes) {
         this.failoverPolicy = failoverPolicy;
         this.failoverWithDataLossGracePeriodMinutes = failoverWithDataLossGracePeriodMinutes;
     }

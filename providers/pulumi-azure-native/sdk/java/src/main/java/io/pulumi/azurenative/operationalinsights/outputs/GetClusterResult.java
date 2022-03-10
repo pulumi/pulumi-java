@@ -100,24 +100,24 @@ public final class GetClusterResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"associatedWorkspaces","billingType","capacityReservationProperties","clusterId","createdDate","id","identity","isAvailabilityZonesEnabled","keyVaultProperties","lastModifiedDate","location","name","provisioningState","sku","tags","type"})
+    @OutputCustomType.Constructor
     private GetClusterResult(
-        @Nullable List<AssociatedWorkspaceResponse> associatedWorkspaces,
-        @Nullable String billingType,
-        @Nullable CapacityReservationPropertiesResponse capacityReservationProperties,
-        String clusterId,
-        String createdDate,
-        String id,
-        @Nullable IdentityResponse identity,
-        @Nullable Boolean isAvailabilityZonesEnabled,
-        @Nullable KeyVaultPropertiesResponse keyVaultProperties,
-        String lastModifiedDate,
-        String location,
-        String name,
-        String provisioningState,
-        @Nullable ClusterSkuResponse sku,
-        @Nullable Map<String,String> tags,
-        String type) {
+        @OutputCustomType.Parameter("associatedWorkspaces") @Nullable List<AssociatedWorkspaceResponse> associatedWorkspaces,
+        @OutputCustomType.Parameter("billingType") @Nullable String billingType,
+        @OutputCustomType.Parameter("capacityReservationProperties") @Nullable CapacityReservationPropertiesResponse capacityReservationProperties,
+        @OutputCustomType.Parameter("clusterId") String clusterId,
+        @OutputCustomType.Parameter("createdDate") String createdDate,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("identity") @Nullable IdentityResponse identity,
+        @OutputCustomType.Parameter("isAvailabilityZonesEnabled") @Nullable Boolean isAvailabilityZonesEnabled,
+        @OutputCustomType.Parameter("keyVaultProperties") @Nullable KeyVaultPropertiesResponse keyVaultProperties,
+        @OutputCustomType.Parameter("lastModifiedDate") String lastModifiedDate,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("sku") @Nullable ClusterSkuResponse sku,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type) {
         this.associatedWorkspaces = associatedWorkspaces;
         this.billingType = billingType;
         this.capacityReservationProperties = capacityReservationProperties;

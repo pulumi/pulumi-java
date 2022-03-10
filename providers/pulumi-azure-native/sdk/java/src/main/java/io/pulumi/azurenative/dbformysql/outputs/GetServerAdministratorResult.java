@@ -45,15 +45,15 @@ public final class GetServerAdministratorResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"administratorType","id","login","name","sid","tenantId","type"})
+    @OutputCustomType.Constructor
     private GetServerAdministratorResult(
-        String administratorType,
-        String id,
-        String login,
-        String name,
-        String sid,
-        String tenantId,
-        String type) {
+        @OutputCustomType.Parameter("administratorType") String administratorType,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("login") String login,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("sid") String sid,
+        @OutputCustomType.Parameter("tenantId") String tenantId,
+        @OutputCustomType.Parameter("type") String type) {
         this.administratorType = administratorType;
         this.id = id;
         this.login = login;

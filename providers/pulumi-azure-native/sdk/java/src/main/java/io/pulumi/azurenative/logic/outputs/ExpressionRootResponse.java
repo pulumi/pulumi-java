@@ -37,13 +37,13 @@ public final class ExpressionRootResponse {
     private final @Nullable String text;
     private final @Nullable Object value;
 
-    @OutputCustomType.Constructor({"error","path","subexpressions","text","value"})
+    @OutputCustomType.Constructor
     private ExpressionRootResponse(
-        @Nullable AzureResourceErrorInfoResponse error,
-        @Nullable String path,
-        @Nullable List<ExpressionResponse> subexpressions,
-        @Nullable String text,
-        @Nullable Object value) {
+        @OutputCustomType.Parameter("error") @Nullable AzureResourceErrorInfoResponse error,
+        @OutputCustomType.Parameter("path") @Nullable String path,
+        @OutputCustomType.Parameter("subexpressions") @Nullable List<ExpressionResponse> subexpressions,
+        @OutputCustomType.Parameter("text") @Nullable String text,
+        @OutputCustomType.Parameter("value") @Nullable Object value) {
         this.error = error;
         this.path = path;
         this.subexpressions = subexpressions;

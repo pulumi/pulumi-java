@@ -15,10 +15,10 @@ public final class SwaggerSpecificationResponse {
     private final @Nullable List<String> apiVersions;
     private final @Nullable String swaggerSpecFolderUri;
 
-    @OutputCustomType.Constructor({"apiVersions","swaggerSpecFolderUri"})
+    @OutputCustomType.Constructor
     private SwaggerSpecificationResponse(
-        @Nullable List<String> apiVersions,
-        @Nullable String swaggerSpecFolderUri) {
+        @OutputCustomType.Parameter("apiVersions") @Nullable List<String> apiVersions,
+        @OutputCustomType.Parameter("swaggerSpecFolderUri") @Nullable String swaggerSpecFolderUri) {
         this.apiVersions = apiVersions;
         this.swaggerSpecFolderUri = swaggerSpecFolderUri;
     }

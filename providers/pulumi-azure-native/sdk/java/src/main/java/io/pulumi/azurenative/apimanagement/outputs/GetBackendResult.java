@@ -76,20 +76,20 @@ public final class GetBackendResult {
      */
     private final String url;
 
-    @OutputCustomType.Constructor({"credentials","description","id","name","properties","protocol","proxy","resourceId","title","tls","type","url"})
+    @OutputCustomType.Constructor
     private GetBackendResult(
-        @Nullable BackendCredentialsContractResponse credentials,
-        @Nullable String description,
-        String id,
-        String name,
-        BackendPropertiesResponse properties,
-        String protocol,
-        @Nullable BackendProxyContractResponse proxy,
-        @Nullable String resourceId,
-        @Nullable String title,
-        @Nullable BackendTlsPropertiesResponse tls,
-        String type,
-        String url) {
+        @OutputCustomType.Parameter("credentials") @Nullable BackendCredentialsContractResponse credentials,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("properties") BackendPropertiesResponse properties,
+        @OutputCustomType.Parameter("protocol") String protocol,
+        @OutputCustomType.Parameter("proxy") @Nullable BackendProxyContractResponse proxy,
+        @OutputCustomType.Parameter("resourceId") @Nullable String resourceId,
+        @OutputCustomType.Parameter("title") @Nullable String title,
+        @OutputCustomType.Parameter("tls") @Nullable BackendTlsPropertiesResponse tls,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("url") String url) {
         this.credentials = credentials;
         this.description = description;
         this.id = id;

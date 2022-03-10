@@ -67,18 +67,18 @@ public final class DockerBuildStepResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"arguments","baseImageDependencies","contextAccessToken","contextPath","dockerFilePath","imageNames","isPushEnabled","noCache","target","type"})
+    @OutputCustomType.Constructor
     private DockerBuildStepResponse(
-        @Nullable List<ArgumentResponse> arguments,
-        List<BaseImageDependencyResponse> baseImageDependencies,
-        @Nullable String contextAccessToken,
-        @Nullable String contextPath,
-        String dockerFilePath,
-        @Nullable List<String> imageNames,
-        @Nullable Boolean isPushEnabled,
-        @Nullable Boolean noCache,
-        @Nullable String target,
-        String type) {
+        @OutputCustomType.Parameter("arguments") @Nullable List<ArgumentResponse> arguments,
+        @OutputCustomType.Parameter("baseImageDependencies") List<BaseImageDependencyResponse> baseImageDependencies,
+        @OutputCustomType.Parameter("contextAccessToken") @Nullable String contextAccessToken,
+        @OutputCustomType.Parameter("contextPath") @Nullable String contextPath,
+        @OutputCustomType.Parameter("dockerFilePath") String dockerFilePath,
+        @OutputCustomType.Parameter("imageNames") @Nullable List<String> imageNames,
+        @OutputCustomType.Parameter("isPushEnabled") @Nullable Boolean isPushEnabled,
+        @OutputCustomType.Parameter("noCache") @Nullable Boolean noCache,
+        @OutputCustomType.Parameter("target") @Nullable String target,
+        @OutputCustomType.Parameter("type") String type) {
         this.arguments = arguments;
         this.baseImageDependencies = baseImageDependencies;
         this.contextAccessToken = contextAccessToken;

@@ -49,15 +49,15 @@ public final class GetAADDataConnectorResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"dataTypes","etag","id","kind","name","tenantId","type"})
+    @OutputCustomType.Constructor
     private GetAADDataConnectorResult(
-        @Nullable AlertsDataTypeOfDataConnectorResponse dataTypes,
-        @Nullable String etag,
-        String id,
-        String kind,
-        String name,
-        @Nullable String tenantId,
-        String type) {
+        @OutputCustomType.Parameter("dataTypes") @Nullable AlertsDataTypeOfDataConnectorResponse dataTypes,
+        @OutputCustomType.Parameter("etag") @Nullable String etag,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("tenantId") @Nullable String tenantId,
+        @OutputCustomType.Parameter("type") String type) {
         this.dataTypes = dataTypes;
         this.etag = etag;
         this.id = id;

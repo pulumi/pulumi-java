@@ -28,11 +28,11 @@ public final class AzureOperationalStoreParametersResponse {
      */
     private final @Nullable String resourceGroupId;
 
-    @OutputCustomType.Constructor({"dataStoreType","objectType","resourceGroupId"})
+    @OutputCustomType.Constructor
     private AzureOperationalStoreParametersResponse(
-        String dataStoreType,
-        String objectType,
-        @Nullable String resourceGroupId) {
+        @OutputCustomType.Parameter("dataStoreType") String dataStoreType,
+        @OutputCustomType.Parameter("objectType") String objectType,
+        @OutputCustomType.Parameter("resourceGroupId") @Nullable String resourceGroupId) {
         this.dataStoreType = dataStoreType;
         this.objectType = objectType;
         this.resourceGroupId = resourceGroupId;

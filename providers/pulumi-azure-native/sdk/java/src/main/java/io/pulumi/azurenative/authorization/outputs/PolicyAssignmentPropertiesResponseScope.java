@@ -27,11 +27,11 @@ public final class PolicyAssignmentPropertiesResponseScope {
      */
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor({"displayName","id","type"})
+    @OutputCustomType.Constructor
     private PolicyAssignmentPropertiesResponseScope(
-        @Nullable String displayName,
-        @Nullable String id,
-        @Nullable String type) {
+        @OutputCustomType.Parameter("displayName") @Nullable String displayName,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("type") @Nullable String type) {
         this.displayName = displayName;
         this.id = id;
         this.type = type;

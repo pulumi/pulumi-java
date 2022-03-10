@@ -30,12 +30,12 @@ public final class TrustedIdProviderResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"id","idProvider","name","type"})
+    @OutputCustomType.Constructor
     private TrustedIdProviderResponse(
-        String id,
-        String idProvider,
-        String name,
-        String type) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("idProvider") String idProvider,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("type") String type) {
         this.id = id;
         this.idProvider = idProvider;
         this.name = name;

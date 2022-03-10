@@ -39,13 +39,13 @@ public final class RoutePropertiesResponse {
      */
     private final String source;
 
-    @OutputCustomType.Constructor({"condition","endpointNames","isEnabled","name","source"})
+    @OutputCustomType.Constructor
     private RoutePropertiesResponse(
-        @Nullable String condition,
-        List<String> endpointNames,
-        Boolean isEnabled,
-        String name,
-        String source) {
+        @OutputCustomType.Parameter("condition") @Nullable String condition,
+        @OutputCustomType.Parameter("endpointNames") List<String> endpointNames,
+        @OutputCustomType.Parameter("isEnabled") Boolean isEnabled,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("source") String source) {
         this.condition = condition;
         this.endpointNames = endpointNames;
         this.isEnabled = isEnabled;

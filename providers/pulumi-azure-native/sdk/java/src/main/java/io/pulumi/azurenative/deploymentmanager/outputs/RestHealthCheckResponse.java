@@ -29,11 +29,11 @@ public final class RestHealthCheckResponse {
      */
     private final @Nullable RestResponseResponse response;
 
-    @OutputCustomType.Constructor({"name","request","response"})
+    @OutputCustomType.Constructor
     private RestHealthCheckResponse(
-        String name,
-        RestRequestResponse request,
-        @Nullable RestResponseResponse response) {
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("request") RestRequestResponse request,
+        @OutputCustomType.Parameter("response") @Nullable RestResponseResponse response) {
         this.name = name;
         this.request = request;
         this.response = response;

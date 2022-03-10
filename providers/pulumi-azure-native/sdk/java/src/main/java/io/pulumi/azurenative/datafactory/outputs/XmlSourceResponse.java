@@ -68,16 +68,16 @@ public final class XmlSourceResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"additionalColumns","disableMetricsCollection","formatSettings","maxConcurrentConnections","sourceRetryCount","sourceRetryWait","storeSettings","type"})
+    @OutputCustomType.Constructor
     private XmlSourceResponse(
-        @Nullable Object additionalColumns,
-        @Nullable Object disableMetricsCollection,
-        @Nullable XmlReadSettingsResponse formatSettings,
-        @Nullable Object maxConcurrentConnections,
-        @Nullable Object sourceRetryCount,
-        @Nullable Object sourceRetryWait,
-        @Nullable Object storeSettings,
-        String type) {
+        @OutputCustomType.Parameter("additionalColumns") @Nullable Object additionalColumns,
+        @OutputCustomType.Parameter("disableMetricsCollection") @Nullable Object disableMetricsCollection,
+        @OutputCustomType.Parameter("formatSettings") @Nullable XmlReadSettingsResponse formatSettings,
+        @OutputCustomType.Parameter("maxConcurrentConnections") @Nullable Object maxConcurrentConnections,
+        @OutputCustomType.Parameter("sourceRetryCount") @Nullable Object sourceRetryCount,
+        @OutputCustomType.Parameter("sourceRetryWait") @Nullable Object sourceRetryWait,
+        @OutputCustomType.Parameter("storeSettings") @Nullable Object storeSettings,
+        @OutputCustomType.Parameter("type") String type) {
         this.additionalColumns = additionalColumns;
         this.disableMetricsCollection = disableMetricsCollection;
         this.formatSettings = formatSettings;

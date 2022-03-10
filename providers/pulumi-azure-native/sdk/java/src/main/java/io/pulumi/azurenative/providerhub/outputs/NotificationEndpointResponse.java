@@ -15,10 +15,10 @@ public final class NotificationEndpointResponse {
     private final @Nullable List<String> locations;
     private final @Nullable String notificationDestination;
 
-    @OutputCustomType.Constructor({"locations","notificationDestination"})
+    @OutputCustomType.Constructor
     private NotificationEndpointResponse(
-        @Nullable List<String> locations,
-        @Nullable String notificationDestination) {
+        @OutputCustomType.Parameter("locations") @Nullable List<String> locations,
+        @OutputCustomType.Parameter("notificationDestination") @Nullable String notificationDestination) {
         this.locations = locations;
         this.notificationDestination = notificationDestination;
     }

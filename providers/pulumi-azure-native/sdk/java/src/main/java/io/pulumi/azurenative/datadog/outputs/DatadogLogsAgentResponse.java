@@ -17,8 +17,8 @@ public final class DatadogLogsAgentResponse {
      */
     private final @Nullable String transport;
 
-    @OutputCustomType.Constructor({"transport"})
-    private DatadogLogsAgentResponse(@Nullable String transport) {
+    @OutputCustomType.Constructor
+    private DatadogLogsAgentResponse(@OutputCustomType.Parameter("transport") @Nullable String transport) {
         this.transport = transport;
     }
 

@@ -73,20 +73,20 @@ public final class RoutingStorageContainerPropertiesResponse {
      */
     private final @Nullable String subscriptionId;
 
-    @OutputCustomType.Constructor({"authenticationType","batchFrequencyInSeconds","connectionString","containerName","encoding","endpointUri","fileNameFormat","id","maxChunkSizeInBytes","name","resourceGroup","subscriptionId"})
+    @OutputCustomType.Constructor
     private RoutingStorageContainerPropertiesResponse(
-        @Nullable String authenticationType,
-        @Nullable Integer batchFrequencyInSeconds,
-        @Nullable String connectionString,
-        String containerName,
-        @Nullable String encoding,
-        @Nullable String endpointUri,
-        @Nullable String fileNameFormat,
-        @Nullable String id,
-        @Nullable Integer maxChunkSizeInBytes,
-        String name,
-        @Nullable String resourceGroup,
-        @Nullable String subscriptionId) {
+        @OutputCustomType.Parameter("authenticationType") @Nullable String authenticationType,
+        @OutputCustomType.Parameter("batchFrequencyInSeconds") @Nullable Integer batchFrequencyInSeconds,
+        @OutputCustomType.Parameter("connectionString") @Nullable String connectionString,
+        @OutputCustomType.Parameter("containerName") String containerName,
+        @OutputCustomType.Parameter("encoding") @Nullable String encoding,
+        @OutputCustomType.Parameter("endpointUri") @Nullable String endpointUri,
+        @OutputCustomType.Parameter("fileNameFormat") @Nullable String fileNameFormat,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("maxChunkSizeInBytes") @Nullable Integer maxChunkSizeInBytes,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("resourceGroup") @Nullable String resourceGroup,
+        @OutputCustomType.Parameter("subscriptionId") @Nullable String subscriptionId) {
         this.authenticationType = authenticationType;
         this.batchFrequencyInSeconds = batchFrequencyInSeconds;
         this.connectionString = connectionString;

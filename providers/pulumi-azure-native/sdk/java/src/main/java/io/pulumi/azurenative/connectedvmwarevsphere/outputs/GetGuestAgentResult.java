@@ -77,20 +77,20 @@ public final class GetGuestAgentResult {
      */
     private final String uuid;
 
-    @OutputCustomType.Constructor({"credentials","customResourceName","httpProxyConfig","id","name","provisioningAction","provisioningState","status","statuses","systemData","type","uuid"})
+    @OutputCustomType.Constructor
     private GetGuestAgentResult(
-        @Nullable GuestCredentialResponse credentials,
-        String customResourceName,
-        @Nullable HttpProxyConfigurationResponse httpProxyConfig,
-        String id,
-        String name,
-        @Nullable String provisioningAction,
-        String provisioningState,
-        String status,
-        List<ResourceStatusResponse> statuses,
-        SystemDataResponse systemData,
-        String type,
-        String uuid) {
+        @OutputCustomType.Parameter("credentials") @Nullable GuestCredentialResponse credentials,
+        @OutputCustomType.Parameter("customResourceName") String customResourceName,
+        @OutputCustomType.Parameter("httpProxyConfig") @Nullable HttpProxyConfigurationResponse httpProxyConfig,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("provisioningAction") @Nullable String provisioningAction,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("status") String status,
+        @OutputCustomType.Parameter("statuses") List<ResourceStatusResponse> statuses,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("uuid") String uuid) {
         this.credentials = credentials;
         this.customResourceName = customResourceName;
         this.httpProxyConfig = httpProxyConfig;

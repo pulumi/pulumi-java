@@ -22,10 +22,10 @@ public final class StackPropertiesResponse {
      */
     private final @Nullable String version;
 
-    @OutputCustomType.Constructor({"id","version"})
+    @OutputCustomType.Constructor
     private StackPropertiesResponse(
-        @Nullable String id,
-        @Nullable String version) {
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("version") @Nullable String version) {
         this.id = id;
         this.version = version;
     }

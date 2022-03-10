@@ -30,12 +30,12 @@ public final class GetServerDnsAliasResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"azureDnsRecord","id","name","type"})
+    @OutputCustomType.Constructor
     private GetServerDnsAliasResult(
-        String azureDnsRecord,
-        String id,
-        String name,
-        String type) {
+        @OutputCustomType.Parameter("azureDnsRecord") String azureDnsRecord,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("type") String type) {
         this.azureDnsRecord = azureDnsRecord;
         this.id = id;
         this.name = name;

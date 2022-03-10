@@ -71,19 +71,19 @@ public final class GetDedicatedHsmResult {
      */
     private final @Nullable List<String> zones;
 
-    @OutputCustomType.Constructor({"id","location","name","networkProfile","provisioningState","sku","stampId","statusMessage","tags","type","zones"})
+    @OutputCustomType.Constructor
     private GetDedicatedHsmResult(
-        String id,
-        String location,
-        String name,
-        @Nullable NetworkProfileResponse networkProfile,
-        String provisioningState,
-        SkuResponse sku,
-        @Nullable String stampId,
-        String statusMessage,
-        @Nullable Map<String,String> tags,
-        String type,
-        @Nullable List<String> zones) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("networkProfile") @Nullable NetworkProfileResponse networkProfile,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("sku") SkuResponse sku,
+        @OutputCustomType.Parameter("stampId") @Nullable String stampId,
+        @OutputCustomType.Parameter("statusMessage") String statusMessage,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("zones") @Nullable List<String> zones) {
         this.id = id;
         this.location = location;
         this.name = name;

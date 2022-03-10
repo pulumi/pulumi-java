@@ -40,14 +40,14 @@ public final class GetSqlResourceSqlUserDefinedFunctionResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"id","location","name","resource","tags","type"})
+    @OutputCustomType.Constructor
     private GetSqlResourceSqlUserDefinedFunctionResult(
-        String id,
-        @Nullable String location,
-        String name,
-        @Nullable SqlUserDefinedFunctionGetPropertiesResponseResource resource,
-        @Nullable Map<String,String> tags,
-        String type) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("resource") @Nullable SqlUserDefinedFunctionGetPropertiesResponseResource resource,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type) {
         this.id = id;
         this.location = location;
         this.name = name;

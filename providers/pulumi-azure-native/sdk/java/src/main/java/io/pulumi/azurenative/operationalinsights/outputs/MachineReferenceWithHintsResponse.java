@@ -41,14 +41,14 @@ public final class MachineReferenceWithHintsResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"displayNameHint","id","kind","name","osFamilyHint","type"})
+    @OutputCustomType.Constructor
     private MachineReferenceWithHintsResponse(
-        String displayNameHint,
-        String id,
-        String kind,
-        String name,
-        String osFamilyHint,
-        String type) {
+        @OutputCustomType.Parameter("displayNameHint") String displayNameHint,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("osFamilyHint") String osFamilyHint,
+        @OutputCustomType.Parameter("type") String type) {
         this.displayNameHint = displayNameHint;
         this.id = id;
         this.kind = kind;

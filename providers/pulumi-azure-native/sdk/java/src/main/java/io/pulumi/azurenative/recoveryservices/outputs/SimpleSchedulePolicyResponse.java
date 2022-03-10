@@ -40,13 +40,13 @@ public final class SimpleSchedulePolicyResponse {
      */
     private final @Nullable Integer scheduleWeeklyFrequency;
 
-    @OutputCustomType.Constructor({"schedulePolicyType","scheduleRunDays","scheduleRunFrequency","scheduleRunTimes","scheduleWeeklyFrequency"})
+    @OutputCustomType.Constructor
     private SimpleSchedulePolicyResponse(
-        String schedulePolicyType,
-        @Nullable List<String> scheduleRunDays,
-        @Nullable String scheduleRunFrequency,
-        @Nullable List<String> scheduleRunTimes,
-        @Nullable Integer scheduleWeeklyFrequency) {
+        @OutputCustomType.Parameter("schedulePolicyType") String schedulePolicyType,
+        @OutputCustomType.Parameter("scheduleRunDays") @Nullable List<String> scheduleRunDays,
+        @OutputCustomType.Parameter("scheduleRunFrequency") @Nullable String scheduleRunFrequency,
+        @OutputCustomType.Parameter("scheduleRunTimes") @Nullable List<String> scheduleRunTimes,
+        @OutputCustomType.Parameter("scheduleWeeklyFrequency") @Nullable Integer scheduleWeeklyFrequency) {
         this.schedulePolicyType = schedulePolicyType;
         this.scheduleRunDays = scheduleRunDays;
         this.scheduleRunFrequency = scheduleRunFrequency;

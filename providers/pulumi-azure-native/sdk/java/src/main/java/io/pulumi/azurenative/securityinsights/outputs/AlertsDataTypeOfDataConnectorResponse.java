@@ -17,8 +17,8 @@ public final class AlertsDataTypeOfDataConnectorResponse {
      */
     private final @Nullable DataConnectorDataTypeCommonResponse alerts;
 
-    @OutputCustomType.Constructor({"alerts"})
-    private AlertsDataTypeOfDataConnectorResponse(@Nullable DataConnectorDataTypeCommonResponse alerts) {
+    @OutputCustomType.Constructor
+    private AlertsDataTypeOfDataConnectorResponse(@OutputCustomType.Parameter("alerts") @Nullable DataConnectorDataTypeCommonResponse alerts) {
         this.alerts = alerts;
     }
 

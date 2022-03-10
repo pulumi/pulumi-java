@@ -54,16 +54,16 @@ public final class GetWorkloadNetworkDhcpResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"dhcpType","displayName","id","name","provisioningState","revision","segments","type"})
+    @OutputCustomType.Constructor
     private GetWorkloadNetworkDhcpResult(
-        String dhcpType,
-        @Nullable String displayName,
-        String id,
-        String name,
-        String provisioningState,
-        @Nullable Double revision,
-        List<String> segments,
-        String type) {
+        @OutputCustomType.Parameter("dhcpType") String dhcpType,
+        @OutputCustomType.Parameter("displayName") @Nullable String displayName,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("revision") @Nullable Double revision,
+        @OutputCustomType.Parameter("segments") List<String> segments,
+        @OutputCustomType.Parameter("type") String type) {
         this.dhcpType = dhcpType;
         this.displayName = displayName;
         this.id = id;

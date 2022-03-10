@@ -96,23 +96,23 @@ public final class DockerBuildRequestResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"agentConfiguration","agentPoolName","arguments","credentials","dockerFilePath","imageNames","isArchiveEnabled","isPushEnabled","logTemplate","noCache","platform","sourceLocation","target","timeout","type"})
+    @OutputCustomType.Constructor
     private DockerBuildRequestResponse(
-        @Nullable AgentPropertiesResponse agentConfiguration,
-        @Nullable String agentPoolName,
-        @Nullable List<ArgumentResponse> arguments,
-        @Nullable CredentialsResponse credentials,
-        String dockerFilePath,
-        @Nullable List<String> imageNames,
-        @Nullable Boolean isArchiveEnabled,
-        @Nullable Boolean isPushEnabled,
-        @Nullable String logTemplate,
-        @Nullable Boolean noCache,
-        PlatformPropertiesResponse platform,
-        @Nullable String sourceLocation,
-        @Nullable String target,
-        @Nullable Integer timeout,
-        String type) {
+        @OutputCustomType.Parameter("agentConfiguration") @Nullable AgentPropertiesResponse agentConfiguration,
+        @OutputCustomType.Parameter("agentPoolName") @Nullable String agentPoolName,
+        @OutputCustomType.Parameter("arguments") @Nullable List<ArgumentResponse> arguments,
+        @OutputCustomType.Parameter("credentials") @Nullable CredentialsResponse credentials,
+        @OutputCustomType.Parameter("dockerFilePath") String dockerFilePath,
+        @OutputCustomType.Parameter("imageNames") @Nullable List<String> imageNames,
+        @OutputCustomType.Parameter("isArchiveEnabled") @Nullable Boolean isArchiveEnabled,
+        @OutputCustomType.Parameter("isPushEnabled") @Nullable Boolean isPushEnabled,
+        @OutputCustomType.Parameter("logTemplate") @Nullable String logTemplate,
+        @OutputCustomType.Parameter("noCache") @Nullable Boolean noCache,
+        @OutputCustomType.Parameter("platform") PlatformPropertiesResponse platform,
+        @OutputCustomType.Parameter("sourceLocation") @Nullable String sourceLocation,
+        @OutputCustomType.Parameter("target") @Nullable String target,
+        @OutputCustomType.Parameter("timeout") @Nullable Integer timeout,
+        @OutputCustomType.Parameter("type") String type) {
         this.agentConfiguration = agentConfiguration;
         this.agentPoolName = agentPoolName;
         this.arguments = arguments;

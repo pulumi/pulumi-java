@@ -45,15 +45,15 @@ public final class JitNetworkAccessRequestPortResponse {
      */
     private final String statusReason;
 
-    @OutputCustomType.Constructor({"allowedSourceAddressPrefix","allowedSourceAddressPrefixes","endTimeUtc","mappedPort","number","status","statusReason"})
+    @OutputCustomType.Constructor
     private JitNetworkAccessRequestPortResponse(
-        @Nullable String allowedSourceAddressPrefix,
-        @Nullable List<String> allowedSourceAddressPrefixes,
-        String endTimeUtc,
-        @Nullable Integer mappedPort,
-        Integer number,
-        String status,
-        String statusReason) {
+        @OutputCustomType.Parameter("allowedSourceAddressPrefix") @Nullable String allowedSourceAddressPrefix,
+        @OutputCustomType.Parameter("allowedSourceAddressPrefixes") @Nullable List<String> allowedSourceAddressPrefixes,
+        @OutputCustomType.Parameter("endTimeUtc") String endTimeUtc,
+        @OutputCustomType.Parameter("mappedPort") @Nullable Integer mappedPort,
+        @OutputCustomType.Parameter("number") Integer number,
+        @OutputCustomType.Parameter("status") String status,
+        @OutputCustomType.Parameter("statusReason") String statusReason) {
         this.allowedSourceAddressPrefix = allowedSourceAddressPrefix;
         this.allowedSourceAddressPrefixes = allowedSourceAddressPrefixes;
         this.endTimeUtc = endTimeUtc;

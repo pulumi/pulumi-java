@@ -17,8 +17,8 @@ public final class ContainerExecResponse {
      */
     private final @Nullable List<String> command;
 
-    @OutputCustomType.Constructor({"command"})
-    private ContainerExecResponse(@Nullable List<String> command) {
+    @OutputCustomType.Constructor
+    private ContainerExecResponse(@OutputCustomType.Parameter("command") @Nullable List<String> command) {
         this.command = command;
     }
 

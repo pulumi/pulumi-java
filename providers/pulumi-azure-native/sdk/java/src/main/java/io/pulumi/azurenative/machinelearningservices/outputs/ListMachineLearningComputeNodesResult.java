@@ -28,11 +28,11 @@ public final class ListMachineLearningComputeNodesResult {
      */
     private final List<AmlComputeNodeInformationResponse> nodes;
 
-    @OutputCustomType.Constructor({"computeType","nextLink","nodes"})
+    @OutputCustomType.Constructor
     private ListMachineLearningComputeNodesResult(
-        String computeType,
-        String nextLink,
-        List<AmlComputeNodeInformationResponse> nodes) {
+        @OutputCustomType.Parameter("computeType") String computeType,
+        @OutputCustomType.Parameter("nextLink") String nextLink,
+        @OutputCustomType.Parameter("nodes") List<AmlComputeNodeInformationResponse> nodes) {
         this.computeType = computeType;
         this.nextLink = nextLink;
         this.nodes = nodes;

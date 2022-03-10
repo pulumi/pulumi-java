@@ -34,12 +34,12 @@ public final class VideoEncoderH264Response {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"bitrateKbps","frameRate","scale","type"})
+    @OutputCustomType.Constructor
     private VideoEncoderH264Response(
-        @Nullable String bitrateKbps,
-        @Nullable String frameRate,
-        @Nullable VideoScaleResponse scale,
-        String type) {
+        @OutputCustomType.Parameter("bitrateKbps") @Nullable String bitrateKbps,
+        @OutputCustomType.Parameter("frameRate") @Nullable String frameRate,
+        @OutputCustomType.Parameter("scale") @Nullable VideoScaleResponse scale,
+        @OutputCustomType.Parameter("type") String type) {
         this.bitrateKbps = bitrateKbps;
         this.frameRate = frameRate;
         this.scale = scale;

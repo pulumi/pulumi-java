@@ -42,14 +42,14 @@ public final class ReprotectAgentDetailsResponse {
      */
     private final String version;
 
-    @OutputCustomType.Constructor({"health","healthErrors","id","lastHeartbeatUtc","name","version"})
+    @OutputCustomType.Constructor
     private ReprotectAgentDetailsResponse(
-        String health,
-        List<HealthErrorResponse> healthErrors,
-        String id,
-        String lastHeartbeatUtc,
-        String name,
-        String version) {
+        @OutputCustomType.Parameter("health") String health,
+        @OutputCustomType.Parameter("healthErrors") List<HealthErrorResponse> healthErrors,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("lastHeartbeatUtc") String lastHeartbeatUtc,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("version") String version) {
         this.health = health;
         this.healthErrors = healthErrors;
         this.id = id;

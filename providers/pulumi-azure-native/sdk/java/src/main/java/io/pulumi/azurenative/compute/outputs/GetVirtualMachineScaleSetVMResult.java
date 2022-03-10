@@ -164,35 +164,35 @@ public final class GetVirtualMachineScaleSetVMResult {
      */
     private final List<String> zones;
 
-    @OutputCustomType.Constructor({"additionalCapabilities","availabilitySet","diagnosticsProfile","hardwareProfile","id","instanceId","instanceView","latestModelApplied","licenseType","location","modelDefinitionApplied","name","networkProfile","networkProfileConfiguration","osProfile","plan","protectionPolicy","provisioningState","resources","securityProfile","sku","storageProfile","tags","type","userData","vmId","zones"})
+    @OutputCustomType.Constructor
     private GetVirtualMachineScaleSetVMResult(
-        @Nullable AdditionalCapabilitiesResponse additionalCapabilities,
-        @Nullable SubResourceResponse availabilitySet,
-        @Nullable DiagnosticsProfileResponse diagnosticsProfile,
-        @Nullable HardwareProfileResponse hardwareProfile,
-        String id,
-        String instanceId,
-        VirtualMachineScaleSetVMInstanceViewResponse instanceView,
-        Boolean latestModelApplied,
-        @Nullable String licenseType,
-        String location,
-        String modelDefinitionApplied,
-        String name,
-        @Nullable NetworkProfileResponse networkProfile,
-        @Nullable VirtualMachineScaleSetVMNetworkProfileConfigurationResponse networkProfileConfiguration,
-        @Nullable OSProfileResponse osProfile,
-        @Nullable PlanResponse plan,
-        @Nullable VirtualMachineScaleSetVMProtectionPolicyResponse protectionPolicy,
-        String provisioningState,
-        List<VirtualMachineExtensionResponse> resources,
-        @Nullable SecurityProfileResponse securityProfile,
-        SkuResponse sku,
-        @Nullable StorageProfileResponse storageProfile,
-        @Nullable Map<String,String> tags,
-        String type,
-        @Nullable String userData,
-        String vmId,
-        List<String> zones) {
+        @OutputCustomType.Parameter("additionalCapabilities") @Nullable AdditionalCapabilitiesResponse additionalCapabilities,
+        @OutputCustomType.Parameter("availabilitySet") @Nullable SubResourceResponse availabilitySet,
+        @OutputCustomType.Parameter("diagnosticsProfile") @Nullable DiagnosticsProfileResponse diagnosticsProfile,
+        @OutputCustomType.Parameter("hardwareProfile") @Nullable HardwareProfileResponse hardwareProfile,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("instanceId") String instanceId,
+        @OutputCustomType.Parameter("instanceView") VirtualMachineScaleSetVMInstanceViewResponse instanceView,
+        @OutputCustomType.Parameter("latestModelApplied") Boolean latestModelApplied,
+        @OutputCustomType.Parameter("licenseType") @Nullable String licenseType,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("modelDefinitionApplied") String modelDefinitionApplied,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("networkProfile") @Nullable NetworkProfileResponse networkProfile,
+        @OutputCustomType.Parameter("networkProfileConfiguration") @Nullable VirtualMachineScaleSetVMNetworkProfileConfigurationResponse networkProfileConfiguration,
+        @OutputCustomType.Parameter("osProfile") @Nullable OSProfileResponse osProfile,
+        @OutputCustomType.Parameter("plan") @Nullable PlanResponse plan,
+        @OutputCustomType.Parameter("protectionPolicy") @Nullable VirtualMachineScaleSetVMProtectionPolicyResponse protectionPolicy,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("resources") List<VirtualMachineExtensionResponse> resources,
+        @OutputCustomType.Parameter("securityProfile") @Nullable SecurityProfileResponse securityProfile,
+        @OutputCustomType.Parameter("sku") SkuResponse sku,
+        @OutputCustomType.Parameter("storageProfile") @Nullable StorageProfileResponse storageProfile,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("userData") @Nullable String userData,
+        @OutputCustomType.Parameter("vmId") String vmId,
+        @OutputCustomType.Parameter("zones") List<String> zones) {
         this.additionalCapabilities = additionalCapabilities;
         this.availabilitySet = availabilitySet;
         this.diagnosticsProfile = diagnosticsProfile;

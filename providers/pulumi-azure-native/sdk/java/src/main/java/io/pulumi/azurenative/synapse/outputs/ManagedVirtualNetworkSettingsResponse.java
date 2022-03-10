@@ -29,11 +29,11 @@ public final class ManagedVirtualNetworkSettingsResponse {
      */
     private final @Nullable Boolean preventDataExfiltration;
 
-    @OutputCustomType.Constructor({"allowedAadTenantIdsForLinking","linkedAccessCheckOnTargetResource","preventDataExfiltration"})
+    @OutputCustomType.Constructor
     private ManagedVirtualNetworkSettingsResponse(
-        @Nullable List<String> allowedAadTenantIdsForLinking,
-        @Nullable Boolean linkedAccessCheckOnTargetResource,
-        @Nullable Boolean preventDataExfiltration) {
+        @OutputCustomType.Parameter("allowedAadTenantIdsForLinking") @Nullable List<String> allowedAadTenantIdsForLinking,
+        @OutputCustomType.Parameter("linkedAccessCheckOnTargetResource") @Nullable Boolean linkedAccessCheckOnTargetResource,
+        @OutputCustomType.Parameter("preventDataExfiltration") @Nullable Boolean preventDataExfiltration) {
         this.allowedAadTenantIdsForLinking = allowedAadTenantIdsForLinking;
         this.linkedAccessCheckOnTargetResource = linkedAccessCheckOnTargetResource;
         this.preventDataExfiltration = preventDataExfiltration;

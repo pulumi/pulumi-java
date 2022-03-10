@@ -72,19 +72,19 @@ public final class GetOrderResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"contactInformation","currentStatus","deliveryTrackingInfo","id","name","orderHistory","returnTrackingInfo","serialNumber","shipmentType","shippingAddress","type"})
+    @OutputCustomType.Constructor
     private GetOrderResult(
-        ContactDetailsResponse contactInformation,
-        OrderStatusResponse currentStatus,
-        List<TrackingInfoResponse> deliveryTrackingInfo,
-        String id,
-        String name,
-        List<OrderStatusResponse> orderHistory,
-        List<TrackingInfoResponse> returnTrackingInfo,
-        String serialNumber,
-        @Nullable String shipmentType,
-        @Nullable AddressResponse shippingAddress,
-        String type) {
+        @OutputCustomType.Parameter("contactInformation") ContactDetailsResponse contactInformation,
+        @OutputCustomType.Parameter("currentStatus") OrderStatusResponse currentStatus,
+        @OutputCustomType.Parameter("deliveryTrackingInfo") List<TrackingInfoResponse> deliveryTrackingInfo,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("orderHistory") List<OrderStatusResponse> orderHistory,
+        @OutputCustomType.Parameter("returnTrackingInfo") List<TrackingInfoResponse> returnTrackingInfo,
+        @OutputCustomType.Parameter("serialNumber") String serialNumber,
+        @OutputCustomType.Parameter("shipmentType") @Nullable String shipmentType,
+        @OutputCustomType.Parameter("shippingAddress") @Nullable AddressResponse shippingAddress,
+        @OutputCustomType.Parameter("type") String type) {
         this.contactInformation = contactInformation;
         this.currentStatus = currentStatus;
         this.deliveryTrackingInfo = deliveryTrackingInfo;

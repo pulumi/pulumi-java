@@ -38,13 +38,13 @@ public final class LoadBalancingRuleResponse {
      */
     private final String protocol;
 
-    @OutputCustomType.Constructor({"backendPort","frontendPort","probeProtocol","probeRequestPath","protocol"})
+    @OutputCustomType.Constructor
     private LoadBalancingRuleResponse(
-        Integer backendPort,
-        Integer frontendPort,
-        String probeProtocol,
-        @Nullable String probeRequestPath,
-        String protocol) {
+        @OutputCustomType.Parameter("backendPort") Integer backendPort,
+        @OutputCustomType.Parameter("frontendPort") Integer frontendPort,
+        @OutputCustomType.Parameter("probeProtocol") String probeProtocol,
+        @OutputCustomType.Parameter("probeRequestPath") @Nullable String probeRequestPath,
+        @OutputCustomType.Parameter("protocol") String protocol) {
         this.backendPort = backendPort;
         this.frontendPort = frontendPort;
         this.probeProtocol = probeProtocol;

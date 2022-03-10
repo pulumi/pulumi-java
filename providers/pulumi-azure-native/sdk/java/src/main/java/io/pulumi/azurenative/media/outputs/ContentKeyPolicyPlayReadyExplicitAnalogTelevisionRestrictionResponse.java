@@ -21,10 +21,10 @@ public final class ContentKeyPolicyPlayReadyExplicitAnalogTelevisionRestrictionR
      */
     private final Integer configurationData;
 
-    @OutputCustomType.Constructor({"bestEffort","configurationData"})
+    @OutputCustomType.Constructor
     private ContentKeyPolicyPlayReadyExplicitAnalogTelevisionRestrictionResponse(
-        Boolean bestEffort,
-        Integer configurationData) {
+        @OutputCustomType.Parameter("bestEffort") Boolean bestEffort,
+        @OutputCustomType.Parameter("configurationData") Integer configurationData) {
         this.bestEffort = bestEffort;
         this.configurationData = configurationData;
     }

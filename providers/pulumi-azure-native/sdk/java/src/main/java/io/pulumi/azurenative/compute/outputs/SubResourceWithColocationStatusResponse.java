@@ -23,10 +23,10 @@ public final class SubResourceWithColocationStatusResponse {
      */
     private final @Nullable String id;
 
-    @OutputCustomType.Constructor({"colocationStatus","id"})
+    @OutputCustomType.Constructor
     private SubResourceWithColocationStatusResponse(
-        @Nullable InstanceViewStatusResponse colocationStatus,
-        @Nullable String id) {
+        @OutputCustomType.Parameter("colocationStatus") @Nullable InstanceViewStatusResponse colocationStatus,
+        @OutputCustomType.Parameter("id") @Nullable String id) {
         this.colocationStatus = colocationStatus;
         this.id = id;
     }

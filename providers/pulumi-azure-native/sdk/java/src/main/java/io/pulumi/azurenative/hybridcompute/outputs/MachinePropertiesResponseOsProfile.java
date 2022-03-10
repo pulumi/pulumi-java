@@ -15,8 +15,8 @@ public final class MachinePropertiesResponseOsProfile {
      */
     private final String computerName;
 
-    @OutputCustomType.Constructor({"computerName"})
-    private MachinePropertiesResponseOsProfile(String computerName) {
+    @OutputCustomType.Constructor
+    private MachinePropertiesResponseOsProfile(@OutputCustomType.Parameter("computerName") String computerName) {
         this.computerName = computerName;
     }
 

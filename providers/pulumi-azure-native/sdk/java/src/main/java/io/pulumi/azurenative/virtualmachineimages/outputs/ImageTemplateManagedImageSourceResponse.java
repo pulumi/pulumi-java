@@ -21,10 +21,10 @@ public final class ImageTemplateManagedImageSourceResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"imageId","type"})
+    @OutputCustomType.Constructor
     private ImageTemplateManagedImageSourceResponse(
-        String imageId,
-        String type) {
+        @OutputCustomType.Parameter("imageId") String imageId,
+        @OutputCustomType.Parameter("type") String type) {
         this.imageId = imageId;
         this.type = type;
     }

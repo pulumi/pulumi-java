@@ -64,18 +64,18 @@ public final class AS2ValidationSettingsResponse {
      */
     private final @Nullable String signingAlgorithm;
 
-    @OutputCustomType.Constructor({"checkCertificateRevocationListOnReceive","checkCertificateRevocationListOnSend","checkDuplicateMessage","compressMessage","encryptMessage","encryptionAlgorithm","interchangeDuplicatesValidityDays","overrideMessageProperties","signMessage","signingAlgorithm"})
+    @OutputCustomType.Constructor
     private AS2ValidationSettingsResponse(
-        Boolean checkCertificateRevocationListOnReceive,
-        Boolean checkCertificateRevocationListOnSend,
-        Boolean checkDuplicateMessage,
-        Boolean compressMessage,
-        Boolean encryptMessage,
-        String encryptionAlgorithm,
-        Integer interchangeDuplicatesValidityDays,
-        Boolean overrideMessageProperties,
-        Boolean signMessage,
-        @Nullable String signingAlgorithm) {
+        @OutputCustomType.Parameter("checkCertificateRevocationListOnReceive") Boolean checkCertificateRevocationListOnReceive,
+        @OutputCustomType.Parameter("checkCertificateRevocationListOnSend") Boolean checkCertificateRevocationListOnSend,
+        @OutputCustomType.Parameter("checkDuplicateMessage") Boolean checkDuplicateMessage,
+        @OutputCustomType.Parameter("compressMessage") Boolean compressMessage,
+        @OutputCustomType.Parameter("encryptMessage") Boolean encryptMessage,
+        @OutputCustomType.Parameter("encryptionAlgorithm") String encryptionAlgorithm,
+        @OutputCustomType.Parameter("interchangeDuplicatesValidityDays") Integer interchangeDuplicatesValidityDays,
+        @OutputCustomType.Parameter("overrideMessageProperties") Boolean overrideMessageProperties,
+        @OutputCustomType.Parameter("signMessage") Boolean signMessage,
+        @OutputCustomType.Parameter("signingAlgorithm") @Nullable String signingAlgorithm) {
         this.checkCertificateRevocationListOnReceive = checkCertificateRevocationListOnReceive;
         this.checkCertificateRevocationListOnSend = checkCertificateRevocationListOnSend;
         this.checkDuplicateMessage = checkDuplicateMessage;

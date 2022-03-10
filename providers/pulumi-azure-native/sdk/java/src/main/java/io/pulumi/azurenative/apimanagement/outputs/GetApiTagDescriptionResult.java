@@ -52,16 +52,16 @@ public final class GetApiTagDescriptionResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"description","displayName","externalDocsDescription","externalDocsUrl","id","name","tagId","type"})
+    @OutputCustomType.Constructor
     private GetApiTagDescriptionResult(
-        @Nullable String description,
-        @Nullable String displayName,
-        @Nullable String externalDocsDescription,
-        @Nullable String externalDocsUrl,
-        String id,
-        String name,
-        @Nullable String tagId,
-        String type) {
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("displayName") @Nullable String displayName,
+        @OutputCustomType.Parameter("externalDocsDescription") @Nullable String externalDocsDescription,
+        @OutputCustomType.Parameter("externalDocsUrl") @Nullable String externalDocsUrl,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("tagId") @Nullable String tagId,
+        @OutputCustomType.Parameter("type") String type) {
         this.description = description;
         this.displayName = displayName;
         this.externalDocsDescription = externalDocsDescription;

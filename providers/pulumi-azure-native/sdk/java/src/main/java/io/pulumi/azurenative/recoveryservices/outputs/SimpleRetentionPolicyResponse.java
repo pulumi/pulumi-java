@@ -24,10 +24,10 @@ public final class SimpleRetentionPolicyResponse {
      */
     private final String retentionPolicyType;
 
-    @OutputCustomType.Constructor({"retentionDuration","retentionPolicyType"})
+    @OutputCustomType.Constructor
     private SimpleRetentionPolicyResponse(
-        @Nullable RetentionDurationResponse retentionDuration,
-        String retentionPolicyType) {
+        @OutputCustomType.Parameter("retentionDuration") @Nullable RetentionDurationResponse retentionDuration,
+        @OutputCustomType.Parameter("retentionPolicyType") String retentionPolicyType) {
         this.retentionDuration = retentionDuration;
         this.retentionPolicyType = retentionPolicyType;
     }

@@ -23,10 +23,10 @@ public final class ResourceRequirementsResponse {
      */
     private final ResourceRequestsResponse requests;
 
-    @OutputCustomType.Constructor({"limits","requests"})
+    @OutputCustomType.Constructor
     private ResourceRequirementsResponse(
-        @Nullable ResourceLimitsResponse limits,
-        ResourceRequestsResponse requests) {
+        @OutputCustomType.Parameter("limits") @Nullable ResourceLimitsResponse limits,
+        @OutputCustomType.Parameter("requests") ResourceRequestsResponse requests) {
         this.limits = limits;
         this.requests = requests;
     }

@@ -11,8 +11,8 @@ import java.util.Objects;
 public final class SinkConfigurationResponse {
     private final String kind;
 
-    @OutputCustomType.Constructor({"kind"})
-    private SinkConfigurationResponse(String kind) {
+    @OutputCustomType.Constructor
+    private SinkConfigurationResponse(@OutputCustomType.Parameter("kind") String kind) {
         this.kind = kind;
     }
 

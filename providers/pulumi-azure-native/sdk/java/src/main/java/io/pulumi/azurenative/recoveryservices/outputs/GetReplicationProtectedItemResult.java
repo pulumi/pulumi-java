@@ -38,13 +38,13 @@ public final class GetReplicationProtectedItemResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"id","location","name","properties","type"})
+    @OutputCustomType.Constructor
     private GetReplicationProtectedItemResult(
-        String id,
-        @Nullable String location,
-        String name,
-        ReplicationProtectedItemPropertiesResponse properties,
-        String type) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("properties") ReplicationProtectedItemPropertiesResponse properties,
+        @OutputCustomType.Parameter("type") String type) {
         this.id = id;
         this.location = location;
         this.name = name;

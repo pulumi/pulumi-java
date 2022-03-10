@@ -27,11 +27,11 @@ public final class AutoScalingPolicyResponse {
      */
     private final AverageLoadScalingTriggerResponse trigger;
 
-    @OutputCustomType.Constructor({"mechanism","name","trigger"})
+    @OutputCustomType.Constructor
     private AutoScalingPolicyResponse(
-        AddRemoveReplicaScalingMechanismResponse mechanism,
-        String name,
-        AverageLoadScalingTriggerResponse trigger) {
+        @OutputCustomType.Parameter("mechanism") AddRemoveReplicaScalingMechanismResponse mechanism,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("trigger") AverageLoadScalingTriggerResponse trigger) {
         this.mechanism = mechanism;
         this.name = name;
         this.trigger = trigger;

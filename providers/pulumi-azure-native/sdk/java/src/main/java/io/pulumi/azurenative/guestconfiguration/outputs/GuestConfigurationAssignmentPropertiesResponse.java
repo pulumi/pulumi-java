@@ -76,20 +76,20 @@ public final class GuestConfigurationAssignmentPropertiesResponse {
      */
     private final @Nullable List<VMSSVMInfoResponse> vmssVMList;
 
-    @OutputCustomType.Constructor({"assignmentHash","complianceStatus","context","guestConfiguration","lastComplianceStatusChecked","latestAssignmentReport","latestReportId","parameterHash","provisioningState","resourceType","targetResourceId","vmssVMList"})
+    @OutputCustomType.Constructor
     private GuestConfigurationAssignmentPropertiesResponse(
-        String assignmentHash,
-        String complianceStatus,
-        @Nullable String context,
-        @Nullable GuestConfigurationNavigationResponse guestConfiguration,
-        String lastComplianceStatusChecked,
-        @Nullable AssignmentReportResponse latestAssignmentReport,
-        String latestReportId,
-        String parameterHash,
-        String provisioningState,
-        String resourceType,
-        String targetResourceId,
-        @Nullable List<VMSSVMInfoResponse> vmssVMList) {
+        @OutputCustomType.Parameter("assignmentHash") String assignmentHash,
+        @OutputCustomType.Parameter("complianceStatus") String complianceStatus,
+        @OutputCustomType.Parameter("context") @Nullable String context,
+        @OutputCustomType.Parameter("guestConfiguration") @Nullable GuestConfigurationNavigationResponse guestConfiguration,
+        @OutputCustomType.Parameter("lastComplianceStatusChecked") String lastComplianceStatusChecked,
+        @OutputCustomType.Parameter("latestAssignmentReport") @Nullable AssignmentReportResponse latestAssignmentReport,
+        @OutputCustomType.Parameter("latestReportId") String latestReportId,
+        @OutputCustomType.Parameter("parameterHash") String parameterHash,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("resourceType") String resourceType,
+        @OutputCustomType.Parameter("targetResourceId") String targetResourceId,
+        @OutputCustomType.Parameter("vmssVMList") @Nullable List<VMSSVMInfoResponse> vmssVMList) {
         this.assignmentHash = assignmentHash;
         this.complianceStatus = complianceStatus;
         this.context = context;

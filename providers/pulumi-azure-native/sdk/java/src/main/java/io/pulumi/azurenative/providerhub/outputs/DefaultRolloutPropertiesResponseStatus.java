@@ -20,13 +20,13 @@ public final class DefaultRolloutPropertiesResponseStatus {
     private final @Nullable String nextTrafficRegionScheduledTime;
     private final @Nullable String subscriptionReregistrationResult;
 
-    @OutputCustomType.Constructor({"completedRegions","failedOrSkippedRegions","nextTrafficRegion","nextTrafficRegionScheduledTime","subscriptionReregistrationResult"})
+    @OutputCustomType.Constructor
     private DefaultRolloutPropertiesResponseStatus(
-        @Nullable List<String> completedRegions,
-        @Nullable Map<String,ExtendedErrorInfoResponse> failedOrSkippedRegions,
-        @Nullable String nextTrafficRegion,
-        @Nullable String nextTrafficRegionScheduledTime,
-        @Nullable String subscriptionReregistrationResult) {
+        @OutputCustomType.Parameter("completedRegions") @Nullable List<String> completedRegions,
+        @OutputCustomType.Parameter("failedOrSkippedRegions") @Nullable Map<String,ExtendedErrorInfoResponse> failedOrSkippedRegions,
+        @OutputCustomType.Parameter("nextTrafficRegion") @Nullable String nextTrafficRegion,
+        @OutputCustomType.Parameter("nextTrafficRegionScheduledTime") @Nullable String nextTrafficRegionScheduledTime,
+        @OutputCustomType.Parameter("subscriptionReregistrationResult") @Nullable String subscriptionReregistrationResult) {
         this.completedRegions = completedRegions;
         this.failedOrSkippedRegions = failedOrSkippedRegions;
         this.nextTrafficRegion = nextTrafficRegion;

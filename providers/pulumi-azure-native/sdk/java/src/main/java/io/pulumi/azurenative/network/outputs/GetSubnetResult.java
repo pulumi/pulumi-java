@@ -140,31 +140,31 @@ public final class GetSubnetResult {
      */
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor({"addressPrefix","addressPrefixes","applicationGatewayIpConfigurations","delegations","etag","id","ipAllocations","ipConfigurationProfiles","ipConfigurations","name","natGateway","networkSecurityGroup","privateEndpointNetworkPolicies","privateEndpoints","privateLinkServiceNetworkPolicies","provisioningState","purpose","resourceNavigationLinks","routeTable","serviceAssociationLinks","serviceEndpointPolicies","serviceEndpoints","type"})
+    @OutputCustomType.Constructor
     private GetSubnetResult(
-        @Nullable String addressPrefix,
-        @Nullable List<String> addressPrefixes,
-        @Nullable List<ApplicationGatewayIPConfigurationResponse> applicationGatewayIpConfigurations,
-        @Nullable List<DelegationResponse> delegations,
-        String etag,
-        @Nullable String id,
-        @Nullable List<SubResourceResponse> ipAllocations,
-        List<IPConfigurationProfileResponse> ipConfigurationProfiles,
-        List<IPConfigurationResponse> ipConfigurations,
-        @Nullable String name,
-        @Nullable SubResourceResponse natGateway,
-        @Nullable NetworkSecurityGroupResponse networkSecurityGroup,
-        @Nullable String privateEndpointNetworkPolicies,
-        List<PrivateEndpointResponse> privateEndpoints,
-        @Nullable String privateLinkServiceNetworkPolicies,
-        String provisioningState,
-        String purpose,
-        List<ResourceNavigationLinkResponse> resourceNavigationLinks,
-        @Nullable RouteTableResponse routeTable,
-        List<ServiceAssociationLinkResponse> serviceAssociationLinks,
-        @Nullable List<ServiceEndpointPolicyResponse> serviceEndpointPolicies,
-        @Nullable List<ServiceEndpointPropertiesFormatResponse> serviceEndpoints,
-        @Nullable String type) {
+        @OutputCustomType.Parameter("addressPrefix") @Nullable String addressPrefix,
+        @OutputCustomType.Parameter("addressPrefixes") @Nullable List<String> addressPrefixes,
+        @OutputCustomType.Parameter("applicationGatewayIpConfigurations") @Nullable List<ApplicationGatewayIPConfigurationResponse> applicationGatewayIpConfigurations,
+        @OutputCustomType.Parameter("delegations") @Nullable List<DelegationResponse> delegations,
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("ipAllocations") @Nullable List<SubResourceResponse> ipAllocations,
+        @OutputCustomType.Parameter("ipConfigurationProfiles") List<IPConfigurationProfileResponse> ipConfigurationProfiles,
+        @OutputCustomType.Parameter("ipConfigurations") List<IPConfigurationResponse> ipConfigurations,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("natGateway") @Nullable SubResourceResponse natGateway,
+        @OutputCustomType.Parameter("networkSecurityGroup") @Nullable NetworkSecurityGroupResponse networkSecurityGroup,
+        @OutputCustomType.Parameter("privateEndpointNetworkPolicies") @Nullable String privateEndpointNetworkPolicies,
+        @OutputCustomType.Parameter("privateEndpoints") List<PrivateEndpointResponse> privateEndpoints,
+        @OutputCustomType.Parameter("privateLinkServiceNetworkPolicies") @Nullable String privateLinkServiceNetworkPolicies,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("purpose") String purpose,
+        @OutputCustomType.Parameter("resourceNavigationLinks") List<ResourceNavigationLinkResponse> resourceNavigationLinks,
+        @OutputCustomType.Parameter("routeTable") @Nullable RouteTableResponse routeTable,
+        @OutputCustomType.Parameter("serviceAssociationLinks") List<ServiceAssociationLinkResponse> serviceAssociationLinks,
+        @OutputCustomType.Parameter("serviceEndpointPolicies") @Nullable List<ServiceEndpointPolicyResponse> serviceEndpointPolicies,
+        @OutputCustomType.Parameter("serviceEndpoints") @Nullable List<ServiceEndpointPropertiesFormatResponse> serviceEndpoints,
+        @OutputCustomType.Parameter("type") @Nullable String type) {
         this.addressPrefix = addressPrefix;
         this.addressPrefixes = addressPrefixes;
         this.applicationGatewayIpConfigurations = applicationGatewayIpConfigurations;

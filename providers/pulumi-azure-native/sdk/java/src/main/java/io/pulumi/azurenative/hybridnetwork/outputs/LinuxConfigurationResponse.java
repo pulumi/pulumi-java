@@ -17,8 +17,8 @@ public final class LinuxConfigurationResponse {
      */
     private final @Nullable SshConfigurationResponse ssh;
 
-    @OutputCustomType.Constructor({"ssh"})
-    private LinuxConfigurationResponse(@Nullable SshConfigurationResponse ssh) {
+    @OutputCustomType.Constructor
+    private LinuxConfigurationResponse(@OutputCustomType.Parameter("ssh") @Nullable SshConfigurationResponse ssh) {
         this.ssh = ssh;
     }
 

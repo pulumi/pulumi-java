@@ -36,13 +36,13 @@ public final class GetEdgeModuleResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"edgeModuleId","id","name","systemData","type"})
+    @OutputCustomType.Constructor
     private GetEdgeModuleResult(
-        String edgeModuleId,
-        String id,
-        String name,
-        SystemDataResponse systemData,
-        String type) {
+        @OutputCustomType.Parameter("edgeModuleId") String edgeModuleId,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("type") String type) {
         this.edgeModuleId = edgeModuleId;
         this.id = id;
         this.name = name;

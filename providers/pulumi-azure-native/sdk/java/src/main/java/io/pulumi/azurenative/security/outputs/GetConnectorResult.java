@@ -42,13 +42,13 @@ public final class GetConnectorResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"authenticationDetails","hybridComputeSettings","id","name","type"})
+    @OutputCustomType.Constructor
     private GetConnectorResult(
-        @Nullable Object authenticationDetails,
-        @Nullable HybridComputeSettingsPropertiesResponse hybridComputeSettings,
-        String id,
-        String name,
-        String type) {
+        @OutputCustomType.Parameter("authenticationDetails") @Nullable Object authenticationDetails,
+        @OutputCustomType.Parameter("hybridComputeSettings") @Nullable HybridComputeSettingsPropertiesResponse hybridComputeSettings,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("type") String type) {
         this.authenticationDetails = authenticationDetails;
         this.hybridComputeSettings = hybridComputeSettings;
         this.id = id;

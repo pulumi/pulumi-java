@@ -29,11 +29,11 @@ public final class AdvancedScheduleResponse {
      */
     private final @Nullable List<String> weekDays;
 
-    @OutputCustomType.Constructor({"monthDays","monthlyOccurrences","weekDays"})
+    @OutputCustomType.Constructor
     private AdvancedScheduleResponse(
-        @Nullable List<Integer> monthDays,
-        @Nullable List<AdvancedScheduleMonthlyOccurrenceResponse> monthlyOccurrences,
-        @Nullable List<String> weekDays) {
+        @OutputCustomType.Parameter("monthDays") @Nullable List<Integer> monthDays,
+        @OutputCustomType.Parameter("monthlyOccurrences") @Nullable List<AdvancedScheduleMonthlyOccurrenceResponse> monthlyOccurrences,
+        @OutputCustomType.Parameter("weekDays") @Nullable List<String> weekDays) {
         this.monthDays = monthDays;
         this.monthlyOccurrences = monthlyOccurrences;
         this.weekDays = weekDays;

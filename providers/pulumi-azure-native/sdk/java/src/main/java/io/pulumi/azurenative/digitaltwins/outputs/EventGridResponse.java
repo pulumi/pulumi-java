@@ -58,17 +58,17 @@ public final class EventGridResponse {
      */
     private final String topicEndpoint;
 
-    @OutputCustomType.Constructor({"accessKey1","accessKey2","authenticationType","createdTime","deadLetterSecret","deadLetterUri","endpointType","provisioningState","topicEndpoint"})
+    @OutputCustomType.Constructor
     private EventGridResponse(
-        String accessKey1,
-        @Nullable String accessKey2,
-        @Nullable String authenticationType,
-        String createdTime,
-        @Nullable String deadLetterSecret,
-        @Nullable String deadLetterUri,
-        String endpointType,
-        String provisioningState,
-        String topicEndpoint) {
+        @OutputCustomType.Parameter("accessKey1") String accessKey1,
+        @OutputCustomType.Parameter("accessKey2") @Nullable String accessKey2,
+        @OutputCustomType.Parameter("authenticationType") @Nullable String authenticationType,
+        @OutputCustomType.Parameter("createdTime") String createdTime,
+        @OutputCustomType.Parameter("deadLetterSecret") @Nullable String deadLetterSecret,
+        @OutputCustomType.Parameter("deadLetterUri") @Nullable String deadLetterUri,
+        @OutputCustomType.Parameter("endpointType") String endpointType,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("topicEndpoint") String topicEndpoint) {
         this.accessKey1 = accessKey1;
         this.accessKey2 = accessKey2;
         this.authenticationType = authenticationType;

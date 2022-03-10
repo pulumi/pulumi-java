@@ -24,10 +24,10 @@ public final class ImageTemplateIdentityResponse {
      */
     private final @Nullable Map<String,ImageTemplateIdentityResponseUserAssignedIdentities> userAssignedIdentities;
 
-    @OutputCustomType.Constructor({"type","userAssignedIdentities"})
+    @OutputCustomType.Constructor
     private ImageTemplateIdentityResponse(
-        @Nullable String type,
-        @Nullable Map<String,ImageTemplateIdentityResponseUserAssignedIdentities> userAssignedIdentities) {
+        @OutputCustomType.Parameter("type") @Nullable String type,
+        @OutputCustomType.Parameter("userAssignedIdentities") @Nullable Map<String,ImageTemplateIdentityResponseUserAssignedIdentities> userAssignedIdentities) {
         this.type = type;
         this.userAssignedIdentities = userAssignedIdentities;
     }

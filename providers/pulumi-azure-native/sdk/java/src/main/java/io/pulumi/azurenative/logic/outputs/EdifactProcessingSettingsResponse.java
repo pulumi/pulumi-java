@@ -35,13 +35,13 @@ public final class EdifactProcessingSettingsResponse {
      */
     private final Boolean useDotAsDecimalSeparator;
 
-    @OutputCustomType.Constructor({"createEmptyXmlTagsForTrailingSeparators","maskSecurityInfo","preserveInterchange","suspendInterchangeOnError","useDotAsDecimalSeparator"})
+    @OutputCustomType.Constructor
     private EdifactProcessingSettingsResponse(
-        Boolean createEmptyXmlTagsForTrailingSeparators,
-        Boolean maskSecurityInfo,
-        Boolean preserveInterchange,
-        Boolean suspendInterchangeOnError,
-        Boolean useDotAsDecimalSeparator) {
+        @OutputCustomType.Parameter("createEmptyXmlTagsForTrailingSeparators") Boolean createEmptyXmlTagsForTrailingSeparators,
+        @OutputCustomType.Parameter("maskSecurityInfo") Boolean maskSecurityInfo,
+        @OutputCustomType.Parameter("preserveInterchange") Boolean preserveInterchange,
+        @OutputCustomType.Parameter("suspendInterchangeOnError") Boolean suspendInterchangeOnError,
+        @OutputCustomType.Parameter("useDotAsDecimalSeparator") Boolean useDotAsDecimalSeparator) {
         this.createEmptyXmlTagsForTrailingSeparators = createEmptyXmlTagsForTrailingSeparators;
         this.maskSecurityInfo = maskSecurityInfo;
         this.preserveInterchange = preserveInterchange;

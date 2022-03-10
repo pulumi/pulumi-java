@@ -32,12 +32,12 @@ public final class LabDetailsResponse {
      */
     private final String usageQuota;
 
-    @OutputCustomType.Constructor({"id","name","provisioningState","usageQuota"})
+    @OutputCustomType.Constructor
     private LabDetailsResponse(
-        @Nullable String id,
-        @Nullable String name,
-        @Nullable String provisioningState,
-        String usageQuota) {
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("provisioningState") @Nullable String provisioningState,
+        @OutputCustomType.Parameter("usageQuota") String usageQuota) {
         this.id = id;
         this.name = name;
         this.provisioningState = provisioningState;

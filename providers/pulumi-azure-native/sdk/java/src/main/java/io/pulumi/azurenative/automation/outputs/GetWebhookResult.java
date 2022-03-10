@@ -85,22 +85,22 @@ public final class GetWebhookResult {
      */
     private final @Nullable String uri;
 
-    @OutputCustomType.Constructor({"creationTime","description","expiryTime","id","isEnabled","lastInvokedTime","lastModifiedBy","lastModifiedTime","name","parameters","runOn","runbook","type","uri"})
+    @OutputCustomType.Constructor
     private GetWebhookResult(
-        @Nullable String creationTime,
-        @Nullable String description,
-        @Nullable String expiryTime,
-        String id,
-        @Nullable Boolean isEnabled,
-        @Nullable String lastInvokedTime,
-        @Nullable String lastModifiedBy,
-        @Nullable String lastModifiedTime,
-        String name,
-        @Nullable Map<String,String> parameters,
-        @Nullable String runOn,
-        @Nullable RunbookAssociationPropertyResponse runbook,
-        String type,
-        @Nullable String uri) {
+        @OutputCustomType.Parameter("creationTime") @Nullable String creationTime,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("expiryTime") @Nullable String expiryTime,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("isEnabled") @Nullable Boolean isEnabled,
+        @OutputCustomType.Parameter("lastInvokedTime") @Nullable String lastInvokedTime,
+        @OutputCustomType.Parameter("lastModifiedBy") @Nullable String lastModifiedBy,
+        @OutputCustomType.Parameter("lastModifiedTime") @Nullable String lastModifiedTime,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("parameters") @Nullable Map<String,String> parameters,
+        @OutputCustomType.Parameter("runOn") @Nullable String runOn,
+        @OutputCustomType.Parameter("runbook") @Nullable RunbookAssociationPropertyResponse runbook,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("uri") @Nullable String uri) {
         this.creationTime = creationTime;
         this.description = description;
         this.expiryTime = expiryTime;

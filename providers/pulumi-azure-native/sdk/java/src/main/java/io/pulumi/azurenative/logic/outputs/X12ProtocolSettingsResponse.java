@@ -83,20 +83,20 @@ public final class X12ProtocolSettingsResponse {
      */
     private final @Nullable List<X12DelimiterOverridesResponse> x12DelimiterOverrides;
 
-    @OutputCustomType.Constructor({"acknowledgementSettings","envelopeOverrides","envelopeSettings","framingSettings","messageFilter","messageFilterList","processingSettings","schemaReferences","securitySettings","validationOverrides","validationSettings","x12DelimiterOverrides"})
+    @OutputCustomType.Constructor
     private X12ProtocolSettingsResponse(
-        X12AcknowledgementSettingsResponse acknowledgementSettings,
-        @Nullable List<X12EnvelopeOverrideResponse> envelopeOverrides,
-        X12EnvelopeSettingsResponse envelopeSettings,
-        X12FramingSettingsResponse framingSettings,
-        X12MessageFilterResponse messageFilter,
-        @Nullable List<X12MessageIdentifierResponse> messageFilterList,
-        X12ProcessingSettingsResponse processingSettings,
-        List<X12SchemaReferenceResponse> schemaReferences,
-        X12SecuritySettingsResponse securitySettings,
-        @Nullable List<X12ValidationOverrideResponse> validationOverrides,
-        X12ValidationSettingsResponse validationSettings,
-        @Nullable List<X12DelimiterOverridesResponse> x12DelimiterOverrides) {
+        @OutputCustomType.Parameter("acknowledgementSettings") X12AcknowledgementSettingsResponse acknowledgementSettings,
+        @OutputCustomType.Parameter("envelopeOverrides") @Nullable List<X12EnvelopeOverrideResponse> envelopeOverrides,
+        @OutputCustomType.Parameter("envelopeSettings") X12EnvelopeSettingsResponse envelopeSettings,
+        @OutputCustomType.Parameter("framingSettings") X12FramingSettingsResponse framingSettings,
+        @OutputCustomType.Parameter("messageFilter") X12MessageFilterResponse messageFilter,
+        @OutputCustomType.Parameter("messageFilterList") @Nullable List<X12MessageIdentifierResponse> messageFilterList,
+        @OutputCustomType.Parameter("processingSettings") X12ProcessingSettingsResponse processingSettings,
+        @OutputCustomType.Parameter("schemaReferences") List<X12SchemaReferenceResponse> schemaReferences,
+        @OutputCustomType.Parameter("securitySettings") X12SecuritySettingsResponse securitySettings,
+        @OutputCustomType.Parameter("validationOverrides") @Nullable List<X12ValidationOverrideResponse> validationOverrides,
+        @OutputCustomType.Parameter("validationSettings") X12ValidationSettingsResponse validationSettings,
+        @OutputCustomType.Parameter("x12DelimiterOverrides") @Nullable List<X12DelimiterOverridesResponse> x12DelimiterOverrides) {
         this.acknowledgementSettings = acknowledgementSettings;
         this.envelopeOverrides = envelopeOverrides;
         this.envelopeSettings = envelopeSettings;

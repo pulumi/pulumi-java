@@ -33,12 +33,12 @@ public final class ManagedClusterHTTPProxyConfigResponse {
      */
     private final @Nullable String trustedCa;
 
-    @OutputCustomType.Constructor({"httpProxy","httpsProxy","noProxy","trustedCa"})
+    @OutputCustomType.Constructor
     private ManagedClusterHTTPProxyConfigResponse(
-        @Nullable String httpProxy,
-        @Nullable String httpsProxy,
-        @Nullable List<String> noProxy,
-        @Nullable String trustedCa) {
+        @OutputCustomType.Parameter("httpProxy") @Nullable String httpProxy,
+        @OutputCustomType.Parameter("httpsProxy") @Nullable String httpsProxy,
+        @OutputCustomType.Parameter("noProxy") @Nullable List<String> noProxy,
+        @OutputCustomType.Parameter("trustedCa") @Nullable String trustedCa) {
         this.httpProxy = httpProxy;
         this.httpsProxy = httpsProxy;
         this.noProxy = noProxy;

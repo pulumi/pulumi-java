@@ -20,10 +20,10 @@ public final class ParticipantPropertyReferenceResponse {
      */
     private final String targetPropertyName;
 
-    @OutputCustomType.Constructor({"sourcePropertyName","targetPropertyName"})
+    @OutputCustomType.Constructor
     private ParticipantPropertyReferenceResponse(
-        String sourcePropertyName,
-        String targetPropertyName) {
+        @OutputCustomType.Parameter("sourcePropertyName") String sourcePropertyName,
+        @OutputCustomType.Parameter("targetPropertyName") String targetPropertyName) {
         this.sourcePropertyName = sourcePropertyName;
         this.targetPropertyName = targetPropertyName;
     }

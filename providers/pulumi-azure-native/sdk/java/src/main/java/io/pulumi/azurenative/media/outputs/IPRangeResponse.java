@@ -28,11 +28,11 @@ public final class IPRangeResponse {
      */
     private final @Nullable Integer subnetPrefixLength;
 
-    @OutputCustomType.Constructor({"address","name","subnetPrefixLength"})
+    @OutputCustomType.Constructor
     private IPRangeResponse(
-        @Nullable String address,
-        @Nullable String name,
-        @Nullable Integer subnetPrefixLength) {
+        @OutputCustomType.Parameter("address") @Nullable String address,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("subnetPrefixLength") @Nullable Integer subnetPrefixLength) {
         this.address = address;
         this.name = name;
         this.subnetPrefixLength = subnetPrefixLength;

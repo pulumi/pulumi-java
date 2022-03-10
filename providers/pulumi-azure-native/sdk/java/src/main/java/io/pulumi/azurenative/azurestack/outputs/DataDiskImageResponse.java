@@ -21,10 +21,10 @@ public final class DataDiskImageResponse {
      */
     private final String sourceBlobSasUri;
 
-    @OutputCustomType.Constructor({"lun","sourceBlobSasUri"})
+    @OutputCustomType.Constructor
     private DataDiskImageResponse(
-        Integer lun,
-        String sourceBlobSasUri) {
+        @OutputCustomType.Parameter("lun") Integer lun,
+        @OutputCustomType.Parameter("sourceBlobSasUri") String sourceBlobSasUri) {
         this.lun = lun;
         this.sourceBlobSasUri = sourceBlobSasUri;
     }

@@ -69,19 +69,19 @@ public final class GetVolumeResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"azureFileParameters","description","id","location","name","provider","provisioningState","status","statusDetails","tags","type"})
+    @OutputCustomType.Constructor
     private GetVolumeResult(
-        @Nullable VolumeProviderParametersAzureFileResponse azureFileParameters,
-        @Nullable String description,
-        String id,
-        String location,
-        String name,
-        String provider,
-        String provisioningState,
-        String status,
-        String statusDetails,
-        @Nullable Map<String,String> tags,
-        String type) {
+        @OutputCustomType.Parameter("azureFileParameters") @Nullable VolumeProviderParametersAzureFileResponse azureFileParameters,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("provider") String provider,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("status") String status,
+        @OutputCustomType.Parameter("statusDetails") String statusDetails,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type) {
         this.azureFileParameters = azureFileParameters;
         this.description = description;
         this.id = id;

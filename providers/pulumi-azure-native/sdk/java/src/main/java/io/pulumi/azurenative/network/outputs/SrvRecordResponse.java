@@ -33,12 +33,12 @@ public final class SrvRecordResponse {
      */
     private final @Nullable Integer weight;
 
-    @OutputCustomType.Constructor({"port","priority","target","weight"})
+    @OutputCustomType.Constructor
     private SrvRecordResponse(
-        @Nullable Integer port,
-        @Nullable Integer priority,
-        @Nullable String target,
-        @Nullable Integer weight) {
+        @OutputCustomType.Parameter("port") @Nullable Integer port,
+        @OutputCustomType.Parameter("priority") @Nullable Integer priority,
+        @OutputCustomType.Parameter("target") @Nullable String target,
+        @OutputCustomType.Parameter("weight") @Nullable Integer weight) {
         this.port = port;
         this.priority = priority;
         this.target = target;

@@ -81,21 +81,21 @@ public final class GetZoneResult {
      */
     private final @Nullable String zoneType;
 
-    @OutputCustomType.Constructor({"etag","id","location","maxNumberOfRecordSets","maxNumberOfRecordsPerRecordSet","name","nameServers","numberOfRecordSets","registrationVirtualNetworks","resolutionVirtualNetworks","tags","type","zoneType"})
+    @OutputCustomType.Constructor
     private GetZoneResult(
-        @Nullable String etag,
-        String id,
-        String location,
-        Double maxNumberOfRecordSets,
-        Double maxNumberOfRecordsPerRecordSet,
-        String name,
-        List<String> nameServers,
-        Double numberOfRecordSets,
-        @Nullable List<SubResourceResponse> registrationVirtualNetworks,
-        @Nullable List<SubResourceResponse> resolutionVirtualNetworks,
-        @Nullable Map<String,String> tags,
-        String type,
-        @Nullable String zoneType) {
+        @OutputCustomType.Parameter("etag") @Nullable String etag,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("maxNumberOfRecordSets") Double maxNumberOfRecordSets,
+        @OutputCustomType.Parameter("maxNumberOfRecordsPerRecordSet") Double maxNumberOfRecordsPerRecordSet,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("nameServers") List<String> nameServers,
+        @OutputCustomType.Parameter("numberOfRecordSets") Double numberOfRecordSets,
+        @OutputCustomType.Parameter("registrationVirtualNetworks") @Nullable List<SubResourceResponse> registrationVirtualNetworks,
+        @OutputCustomType.Parameter("resolutionVirtualNetworks") @Nullable List<SubResourceResponse> resolutionVirtualNetworks,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("zoneType") @Nullable String zoneType) {
         this.etag = etag;
         this.id = id;
         this.location = location;

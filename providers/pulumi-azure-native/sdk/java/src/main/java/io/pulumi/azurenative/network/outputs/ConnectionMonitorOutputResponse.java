@@ -23,10 +23,10 @@ public final class ConnectionMonitorOutputResponse {
      */
     private final @Nullable ConnectionMonitorWorkspaceSettingsResponse workspaceSettings;
 
-    @OutputCustomType.Constructor({"type","workspaceSettings"})
+    @OutputCustomType.Constructor
     private ConnectionMonitorOutputResponse(
-        @Nullable String type,
-        @Nullable ConnectionMonitorWorkspaceSettingsResponse workspaceSettings) {
+        @OutputCustomType.Parameter("type") @Nullable String type,
+        @OutputCustomType.Parameter("workspaceSettings") @Nullable ConnectionMonitorWorkspaceSettingsResponse workspaceSettings) {
         this.type = type;
         this.workspaceSettings = workspaceSettings;
     }

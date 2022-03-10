@@ -77,19 +77,19 @@ public final class AzureFunctionLinkedServiceResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"annotations","authentication","connectVia","credential","description","encryptedCredential","functionAppUrl","functionKey","parameters","resourceId","type"})
+    @OutputCustomType.Constructor
     private AzureFunctionLinkedServiceResponse(
-        @Nullable List<Object> annotations,
-        @Nullable Object authentication,
-        @Nullable IntegrationRuntimeReferenceResponse connectVia,
-        @Nullable CredentialReferenceResponse credential,
-        @Nullable String description,
-        @Nullable Object encryptedCredential,
-        Object functionAppUrl,
-        @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> functionKey,
-        @Nullable Map<String,ParameterSpecificationResponse> parameters,
-        @Nullable Object resourceId,
-        String type) {
+        @OutputCustomType.Parameter("annotations") @Nullable List<Object> annotations,
+        @OutputCustomType.Parameter("authentication") @Nullable Object authentication,
+        @OutputCustomType.Parameter("connectVia") @Nullable IntegrationRuntimeReferenceResponse connectVia,
+        @OutputCustomType.Parameter("credential") @Nullable CredentialReferenceResponse credential,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("encryptedCredential") @Nullable Object encryptedCredential,
+        @OutputCustomType.Parameter("functionAppUrl") Object functionAppUrl,
+        @OutputCustomType.Parameter("functionKey") @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> functionKey,
+        @OutputCustomType.Parameter("parameters") @Nullable Map<String,ParameterSpecificationResponse> parameters,
+        @OutputCustomType.Parameter("resourceId") @Nullable Object resourceId,
+        @OutputCustomType.Parameter("type") String type) {
         this.annotations = annotations;
         this.authentication = authentication;
         this.connectVia = connectVia;

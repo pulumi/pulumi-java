@@ -52,16 +52,16 @@ public final class GetHybridUseBenefitResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"createdDate","etag","id","lastUpdatedDate","name","provisioningState","sku","type"})
+    @OutputCustomType.Constructor
     private GetHybridUseBenefitResult(
-        String createdDate,
-        Integer etag,
-        String id,
-        String lastUpdatedDate,
-        String name,
-        String provisioningState,
-        SkuResponse sku,
-        String type) {
+        @OutputCustomType.Parameter("createdDate") String createdDate,
+        @OutputCustomType.Parameter("etag") Integer etag,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("lastUpdatedDate") String lastUpdatedDate,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("sku") SkuResponse sku,
+        @OutputCustomType.Parameter("type") String type) {
         this.createdDate = createdDate;
         this.etag = etag;
         this.id = id;

@@ -27,11 +27,11 @@ public final class DaprMetadataResponse {
      */
     private final @Nullable String value;
 
-    @OutputCustomType.Constructor({"name","secretRef","value"})
+    @OutputCustomType.Constructor
     private DaprMetadataResponse(
-        @Nullable String name,
-        @Nullable String secretRef,
-        @Nullable String value) {
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("secretRef") @Nullable String secretRef,
+        @OutputCustomType.Parameter("value") @Nullable String value) {
         this.name = name;
         this.secretRef = secretRef;
         this.value = value;

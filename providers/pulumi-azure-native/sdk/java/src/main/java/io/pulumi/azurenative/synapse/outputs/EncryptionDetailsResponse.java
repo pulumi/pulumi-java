@@ -23,10 +23,10 @@ public final class EncryptionDetailsResponse {
      */
     private final Boolean doubleEncryptionEnabled;
 
-    @OutputCustomType.Constructor({"cmk","doubleEncryptionEnabled"})
+    @OutputCustomType.Constructor
     private EncryptionDetailsResponse(
-        @Nullable CustomerManagedKeyDetailsResponse cmk,
-        Boolean doubleEncryptionEnabled) {
+        @OutputCustomType.Parameter("cmk") @Nullable CustomerManagedKeyDetailsResponse cmk,
+        @OutputCustomType.Parameter("doubleEncryptionEnabled") Boolean doubleEncryptionEnabled) {
         this.cmk = cmk;
         this.doubleEncryptionEnabled = doubleEncryptionEnabled;
     }

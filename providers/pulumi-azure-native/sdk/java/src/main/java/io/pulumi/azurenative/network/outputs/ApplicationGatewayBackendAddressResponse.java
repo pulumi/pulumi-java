@@ -22,10 +22,10 @@ public final class ApplicationGatewayBackendAddressResponse {
      */
     private final @Nullable String ipAddress;
 
-    @OutputCustomType.Constructor({"fqdn","ipAddress"})
+    @OutputCustomType.Constructor
     private ApplicationGatewayBackendAddressResponse(
-        @Nullable String fqdn,
-        @Nullable String ipAddress) {
+        @OutputCustomType.Parameter("fqdn") @Nullable String fqdn,
+        @OutputCustomType.Parameter("ipAddress") @Nullable String ipAddress) {
         this.fqdn = fqdn;
         this.ipAddress = ipAddress;
     }

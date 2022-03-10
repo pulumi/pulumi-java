@@ -70,18 +70,18 @@ public final class GatewayPropertiesResponse {
      */
     private final String url;
 
-    @OutputCustomType.Constructor({"apiMetadataProperties","corsProperties","httpsOnly","instances","operatorProperties","provisioningState","$public","resourceRequests","ssoProperties","url"})
+    @OutputCustomType.Constructor
     private GatewayPropertiesResponse(
-        @Nullable GatewayApiMetadataPropertiesResponse apiMetadataProperties,
-        @Nullable GatewayCorsPropertiesResponse corsProperties,
-        @Nullable Boolean httpsOnly,
-        List<GatewayInstanceResponse> instances,
-        GatewayOperatorPropertiesResponse operatorProperties,
-        String provisioningState,
-        @Nullable Boolean $public,
-        @Nullable GatewayResourceRequestsResponse resourceRequests,
-        @Nullable SsoPropertiesResponse ssoProperties,
-        String url) {
+        @OutputCustomType.Parameter("apiMetadataProperties") @Nullable GatewayApiMetadataPropertiesResponse apiMetadataProperties,
+        @OutputCustomType.Parameter("corsProperties") @Nullable GatewayCorsPropertiesResponse corsProperties,
+        @OutputCustomType.Parameter("httpsOnly") @Nullable Boolean httpsOnly,
+        @OutputCustomType.Parameter("instances") List<GatewayInstanceResponse> instances,
+        @OutputCustomType.Parameter("operatorProperties") GatewayOperatorPropertiesResponse operatorProperties,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("public") @Nullable Boolean $public,
+        @OutputCustomType.Parameter("resourceRequests") @Nullable GatewayResourceRequestsResponse resourceRequests,
+        @OutputCustomType.Parameter("ssoProperties") @Nullable SsoPropertiesResponse ssoProperties,
+        @OutputCustomType.Parameter("url") String url) {
         this.apiMetadataProperties = apiMetadataProperties;
         this.corsProperties = corsProperties;
         this.httpsOnly = httpsOnly;

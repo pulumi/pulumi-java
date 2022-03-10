@@ -74,20 +74,20 @@ public final class GetExperimentResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"description","enabledState","endpointA","endpointB","id","location","name","resourceState","scriptFileUri","status","tags","type"})
+    @OutputCustomType.Constructor
     private GetExperimentResult(
-        @Nullable String description,
-        @Nullable String enabledState,
-        @Nullable ExperimentEndpointResponse endpointA,
-        @Nullable ExperimentEndpointResponse endpointB,
-        String id,
-        @Nullable String location,
-        String name,
-        String resourceState,
-        String scriptFileUri,
-        String status,
-        @Nullable Map<String,String> tags,
-        String type) {
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("enabledState") @Nullable String enabledState,
+        @OutputCustomType.Parameter("endpointA") @Nullable ExperimentEndpointResponse endpointA,
+        @OutputCustomType.Parameter("endpointB") @Nullable ExperimentEndpointResponse endpointB,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("resourceState") String resourceState,
+        @OutputCustomType.Parameter("scriptFileUri") String scriptFileUri,
+        @OutputCustomType.Parameter("status") String status,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type) {
         this.description = description;
         this.enabledState = enabledState;
         this.endpointA = endpointA;

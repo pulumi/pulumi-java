@@ -17,8 +17,8 @@ public final class UnknownTargetResponse {
      */
     private final @Nullable Map<String,String> attributes;
 
-    @OutputCustomType.Constructor({"attributes"})
-    private UnknownTargetResponse(@Nullable Map<String,String> attributes) {
+    @OutputCustomType.Constructor
+    private UnknownTargetResponse(@OutputCustomType.Parameter("attributes") @Nullable Map<String,String> attributes) {
         this.attributes = attributes;
     }
 

@@ -37,13 +37,13 @@ public final class RedisInstanceDetailsResponse {
      */
     private final String zone;
 
-    @OutputCustomType.Constructor({"isMaster","nonSslPort","shardId","sslPort","zone"})
+    @OutputCustomType.Constructor
     private RedisInstanceDetailsResponse(
-        Boolean isMaster,
-        Integer nonSslPort,
-        Integer shardId,
-        Integer sslPort,
-        String zone) {
+        @OutputCustomType.Parameter("isMaster") Boolean isMaster,
+        @OutputCustomType.Parameter("nonSslPort") Integer nonSslPort,
+        @OutputCustomType.Parameter("shardId") Integer shardId,
+        @OutputCustomType.Parameter("sslPort") Integer sslPort,
+        @OutputCustomType.Parameter("zone") String zone) {
         this.isMaster = isMaster;
         this.nonSslPort = nonSslPort;
         this.shardId = shardId;

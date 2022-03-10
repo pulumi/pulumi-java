@@ -33,12 +33,12 @@ public final class ObjectReplicationPolicyRuleResponse {
      */
     private final String sourceContainer;
 
-    @OutputCustomType.Constructor({"destinationContainer","filters","ruleId","sourceContainer"})
+    @OutputCustomType.Constructor
     private ObjectReplicationPolicyRuleResponse(
-        String destinationContainer,
-        @Nullable ObjectReplicationPolicyFilterResponse filters,
-        @Nullable String ruleId,
-        String sourceContainer) {
+        @OutputCustomType.Parameter("destinationContainer") String destinationContainer,
+        @OutputCustomType.Parameter("filters") @Nullable ObjectReplicationPolicyFilterResponse filters,
+        @OutputCustomType.Parameter("ruleId") @Nullable String ruleId,
+        @OutputCustomType.Parameter("sourceContainer") String sourceContainer) {
         this.destinationContainer = destinationContainer;
         this.filters = filters;
         this.ruleId = ruleId;

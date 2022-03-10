@@ -22,10 +22,10 @@ public final class CookieExpirationResponse {
      */
     private final @Nullable String timeToExpiration;
 
-    @OutputCustomType.Constructor({"convention","timeToExpiration"})
+    @OutputCustomType.Constructor
     private CookieExpirationResponse(
-        @Nullable String convention,
-        @Nullable String timeToExpiration) {
+        @OutputCustomType.Parameter("convention") @Nullable String convention,
+        @OutputCustomType.Parameter("timeToExpiration") @Nullable String timeToExpiration) {
         this.convention = convention;
         this.timeToExpiration = timeToExpiration;
     }

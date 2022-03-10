@@ -17,8 +17,8 @@ public final class WindowsUserConfigurationResponse {
      */
     private final @Nullable String loginMode;
 
-    @OutputCustomType.Constructor({"loginMode"})
-    private WindowsUserConfigurationResponse(@Nullable String loginMode) {
+    @OutputCustomType.Constructor
+    private WindowsUserConfigurationResponse(@OutputCustomType.Parameter("loginMode") @Nullable String loginMode) {
         this.loginMode = loginMode;
     }
 

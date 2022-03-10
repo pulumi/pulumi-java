@@ -28,11 +28,11 @@ public final class RecoveryPlanA2ADetailsResponse {
      */
     private final @Nullable String recoveryZone;
 
-    @OutputCustomType.Constructor({"instanceType","primaryZone","recoveryZone"})
+    @OutputCustomType.Constructor
     private RecoveryPlanA2ADetailsResponse(
-        String instanceType,
-        @Nullable String primaryZone,
-        @Nullable String recoveryZone) {
+        @OutputCustomType.Parameter("instanceType") String instanceType,
+        @OutputCustomType.Parameter("primaryZone") @Nullable String primaryZone,
+        @OutputCustomType.Parameter("recoveryZone") @Nullable String recoveryZone) {
         this.instanceType = instanceType;
         this.primaryZone = primaryZone;
         this.recoveryZone = recoveryZone;

@@ -23,10 +23,10 @@ public final class DnsResourceReferenceResponse {
      */
     private final @Nullable SubResourceResponse targetResource;
 
-    @OutputCustomType.Constructor({"dnsResources","targetResource"})
+    @OutputCustomType.Constructor
     private DnsResourceReferenceResponse(
-        @Nullable List<SubResourceResponse> dnsResources,
-        @Nullable SubResourceResponse targetResource) {
+        @OutputCustomType.Parameter("dnsResources") @Nullable List<SubResourceResponse> dnsResources,
+        @OutputCustomType.Parameter("targetResource") @Nullable SubResourceResponse targetResource) {
         this.dnsResources = dnsResources;
         this.targetResource = targetResource;
     }

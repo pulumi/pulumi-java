@@ -28,11 +28,11 @@ public final class BackupFileInfoResponse {
      */
     private final @Nullable String status;
 
-    @OutputCustomType.Constructor({"familySequenceNumber","fileLocation","status"})
+    @OutputCustomType.Constructor
     private BackupFileInfoResponse(
-        @Nullable Integer familySequenceNumber,
-        @Nullable String fileLocation,
-        @Nullable String status) {
+        @OutputCustomType.Parameter("familySequenceNumber") @Nullable Integer familySequenceNumber,
+        @OutputCustomType.Parameter("fileLocation") @Nullable String fileLocation,
+        @OutputCustomType.Parameter("status") @Nullable String status) {
         this.familySequenceNumber = familySequenceNumber;
         this.fileLocation = fileLocation;
         this.status = status;

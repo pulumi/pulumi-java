@@ -90,23 +90,23 @@ public final class GetEventGridDataConnectionResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"blobStorageEventType","consumerGroup","dataFormat","eventHubResourceId","id","ignoreFirstRecord","kind","location","mappingRuleName","name","provisioningState","storageAccountResourceId","systemData","tableName","type"})
+    @OutputCustomType.Constructor
     private GetEventGridDataConnectionResult(
-        @Nullable String blobStorageEventType,
-        String consumerGroup,
-        @Nullable String dataFormat,
-        String eventHubResourceId,
-        String id,
-        @Nullable Boolean ignoreFirstRecord,
-        String kind,
-        @Nullable String location,
-        @Nullable String mappingRuleName,
-        String name,
-        String provisioningState,
-        String storageAccountResourceId,
-        SystemDataResponse systemData,
-        @Nullable String tableName,
-        String type) {
+        @OutputCustomType.Parameter("blobStorageEventType") @Nullable String blobStorageEventType,
+        @OutputCustomType.Parameter("consumerGroup") String consumerGroup,
+        @OutputCustomType.Parameter("dataFormat") @Nullable String dataFormat,
+        @OutputCustomType.Parameter("eventHubResourceId") String eventHubResourceId,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("ignoreFirstRecord") @Nullable Boolean ignoreFirstRecord,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("mappingRuleName") @Nullable String mappingRuleName,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("storageAccountResourceId") String storageAccountResourceId,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("tableName") @Nullable String tableName,
+        @OutputCustomType.Parameter("type") String type) {
         this.blobStorageEventType = blobStorageEventType;
         this.consumerGroup = consumerGroup;
         this.dataFormat = dataFormat;

@@ -59,17 +59,17 @@ public final class GetWebhookResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"actions","id","location","name","provisioningState","scope","status","tags","type"})
+    @OutputCustomType.Constructor
     private GetWebhookResult(
-        List<String> actions,
-        String id,
-        String location,
-        String name,
-        String provisioningState,
-        @Nullable String scope,
-        @Nullable String status,
-        @Nullable Map<String,String> tags,
-        String type) {
+        @OutputCustomType.Parameter("actions") List<String> actions,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("scope") @Nullable String scope,
+        @OutputCustomType.Parameter("status") @Nullable String status,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type) {
         this.actions = actions;
         this.id = id;
         this.location = location;

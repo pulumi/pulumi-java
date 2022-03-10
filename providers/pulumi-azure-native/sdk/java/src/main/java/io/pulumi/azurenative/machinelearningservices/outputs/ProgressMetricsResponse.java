@@ -31,12 +31,12 @@ public final class ProgressMetricsResponse {
      */
     private final Double totalDatapointCount;
 
-    @OutputCustomType.Constructor({"completedDatapointCount","incrementalDatasetLastRefreshTime","skippedDatapointCount","totalDatapointCount"})
+    @OutputCustomType.Constructor
     private ProgressMetricsResponse(
-        Double completedDatapointCount,
-        String incrementalDatasetLastRefreshTime,
-        Double skippedDatapointCount,
-        Double totalDatapointCount) {
+        @OutputCustomType.Parameter("completedDatapointCount") Double completedDatapointCount,
+        @OutputCustomType.Parameter("incrementalDatasetLastRefreshTime") String incrementalDatasetLastRefreshTime,
+        @OutputCustomType.Parameter("skippedDatapointCount") Double skippedDatapointCount,
+        @OutputCustomType.Parameter("totalDatapointCount") Double totalDatapointCount) {
         this.completedDatapointCount = completedDatapointCount;
         this.incrementalDatasetLastRefreshTime = incrementalDatasetLastRefreshTime;
         this.skippedDatapointCount = skippedDatapointCount;

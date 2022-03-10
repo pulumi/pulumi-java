@@ -23,10 +23,10 @@ public final class ChangeFeedResponse {
      */
     private final @Nullable Integer retentionInDays;
 
-    @OutputCustomType.Constructor({"enabled","retentionInDays"})
+    @OutputCustomType.Constructor
     private ChangeFeedResponse(
-        @Nullable Boolean enabled,
-        @Nullable Integer retentionInDays) {
+        @OutputCustomType.Parameter("enabled") @Nullable Boolean enabled,
+        @OutputCustomType.Parameter("retentionInDays") @Nullable Integer retentionInDays) {
         this.enabled = enabled;
         this.retentionInDays = retentionInDays;
     }

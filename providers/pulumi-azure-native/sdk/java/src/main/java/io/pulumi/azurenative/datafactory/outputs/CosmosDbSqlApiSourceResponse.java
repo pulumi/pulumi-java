@@ -64,18 +64,18 @@ public final class CosmosDbSqlApiSourceResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"additionalColumns","detectDatetime","disableMetricsCollection","maxConcurrentConnections","pageSize","preferredRegions","query","sourceRetryCount","sourceRetryWait","type"})
+    @OutputCustomType.Constructor
     private CosmosDbSqlApiSourceResponse(
-        @Nullable Object additionalColumns,
-        @Nullable Object detectDatetime,
-        @Nullable Object disableMetricsCollection,
-        @Nullable Object maxConcurrentConnections,
-        @Nullable Object pageSize,
-        @Nullable Object preferredRegions,
-        @Nullable Object query,
-        @Nullable Object sourceRetryCount,
-        @Nullable Object sourceRetryWait,
-        String type) {
+        @OutputCustomType.Parameter("additionalColumns") @Nullable Object additionalColumns,
+        @OutputCustomType.Parameter("detectDatetime") @Nullable Object detectDatetime,
+        @OutputCustomType.Parameter("disableMetricsCollection") @Nullable Object disableMetricsCollection,
+        @OutputCustomType.Parameter("maxConcurrentConnections") @Nullable Object maxConcurrentConnections,
+        @OutputCustomType.Parameter("pageSize") @Nullable Object pageSize,
+        @OutputCustomType.Parameter("preferredRegions") @Nullable Object preferredRegions,
+        @OutputCustomType.Parameter("query") @Nullable Object query,
+        @OutputCustomType.Parameter("sourceRetryCount") @Nullable Object sourceRetryCount,
+        @OutputCustomType.Parameter("sourceRetryWait") @Nullable Object sourceRetryWait,
+        @OutputCustomType.Parameter("type") String type) {
         this.additionalColumns = additionalColumns;
         this.detectDatetime = detectDatetime;
         this.disableMetricsCollection = disableMetricsCollection;

@@ -27,11 +27,11 @@ public final class VirtualNetworkConfigurationResponse {
      */
     private final String vnetid;
 
-    @OutputCustomType.Constructor({"subnetResourceId","subnetname","vnetid"})
+    @OutputCustomType.Constructor
     private VirtualNetworkConfigurationResponse(
-        @Nullable String subnetResourceId,
-        String subnetname,
-        String vnetid) {
+        @OutputCustomType.Parameter("subnetResourceId") @Nullable String subnetResourceId,
+        @OutputCustomType.Parameter("subnetname") String subnetname,
+        @OutputCustomType.Parameter("vnetid") String vnetid) {
         this.subnetResourceId = subnetResourceId;
         this.subnetname = subnetname;
         this.vnetid = vnetid;

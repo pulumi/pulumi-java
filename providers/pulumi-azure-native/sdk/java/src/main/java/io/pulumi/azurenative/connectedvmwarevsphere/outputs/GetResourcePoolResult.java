@@ -134,30 +134,30 @@ public final class GetResourcePoolResult {
      */
     private final @Nullable String vCenterId;
 
-    @OutputCustomType.Constructor({"cpuLimitMHz","cpuReservationMHz","cpuSharesLevel","customResourceName","extendedLocation","id","inventoryItemId","kind","location","memLimitMB","memReservationMB","memSharesLevel","moName","moRefId","name","provisioningState","statuses","systemData","tags","type","uuid","vCenterId"})
+    @OutputCustomType.Constructor
     private GetResourcePoolResult(
-        Double cpuLimitMHz,
-        Double cpuReservationMHz,
-        String cpuSharesLevel,
-        String customResourceName,
-        @Nullable ExtendedLocationResponse extendedLocation,
-        String id,
-        @Nullable String inventoryItemId,
-        @Nullable String kind,
-        String location,
-        Double memLimitMB,
-        Double memReservationMB,
-        String memSharesLevel,
-        String moName,
-        @Nullable String moRefId,
-        String name,
-        String provisioningState,
-        List<ResourceStatusResponse> statuses,
-        SystemDataResponse systemData,
-        @Nullable Map<String,String> tags,
-        String type,
-        String uuid,
-        @Nullable String vCenterId) {
+        @OutputCustomType.Parameter("cpuLimitMHz") Double cpuLimitMHz,
+        @OutputCustomType.Parameter("cpuReservationMHz") Double cpuReservationMHz,
+        @OutputCustomType.Parameter("cpuSharesLevel") String cpuSharesLevel,
+        @OutputCustomType.Parameter("customResourceName") String customResourceName,
+        @OutputCustomType.Parameter("extendedLocation") @Nullable ExtendedLocationResponse extendedLocation,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("inventoryItemId") @Nullable String inventoryItemId,
+        @OutputCustomType.Parameter("kind") @Nullable String kind,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("memLimitMB") Double memLimitMB,
+        @OutputCustomType.Parameter("memReservationMB") Double memReservationMB,
+        @OutputCustomType.Parameter("memSharesLevel") String memSharesLevel,
+        @OutputCustomType.Parameter("moName") String moName,
+        @OutputCustomType.Parameter("moRefId") @Nullable String moRefId,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("statuses") List<ResourceStatusResponse> statuses,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("uuid") String uuid,
+        @OutputCustomType.Parameter("vCenterId") @Nullable String vCenterId) {
         this.cpuLimitMHz = cpuLimitMHz;
         this.cpuReservationMHz = cpuReservationMHz;
         this.cpuSharesLevel = cpuSharesLevel;

@@ -22,10 +22,10 @@ public final class Ipv6CircuitConnectionConfigResponse {
      */
     private final String circuitConnectionStatus;
 
-    @OutputCustomType.Constructor({"addressPrefix","circuitConnectionStatus"})
+    @OutputCustomType.Constructor
     private Ipv6CircuitConnectionConfigResponse(
-        @Nullable String addressPrefix,
-        String circuitConnectionStatus) {
+        @OutputCustomType.Parameter("addressPrefix") @Nullable String addressPrefix,
+        @OutputCustomType.Parameter("circuitConnectionStatus") String circuitConnectionStatus) {
         this.addressPrefix = addressPrefix;
         this.circuitConnectionStatus = circuitConnectionStatus;
     }

@@ -49,15 +49,15 @@ public final class GetAwsCloudTrailDataConnectorResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"awsRoleArn","dataTypes","etag","id","kind","name","type"})
+    @OutputCustomType.Constructor
     private GetAwsCloudTrailDataConnectorResult(
-        @Nullable String awsRoleArn,
-        @Nullable AwsCloudTrailDataConnectorDataTypesResponse dataTypes,
-        @Nullable String etag,
-        String id,
-        String kind,
-        String name,
-        String type) {
+        @OutputCustomType.Parameter("awsRoleArn") @Nullable String awsRoleArn,
+        @OutputCustomType.Parameter("dataTypes") @Nullable AwsCloudTrailDataConnectorDataTypesResponse dataTypes,
+        @OutputCustomType.Parameter("etag") @Nullable String etag,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("type") String type) {
         this.awsRoleArn = awsRoleArn;
         this.dataTypes = dataTypes;
         this.etag = etag;

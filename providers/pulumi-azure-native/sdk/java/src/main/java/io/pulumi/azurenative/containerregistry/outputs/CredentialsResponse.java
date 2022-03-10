@@ -27,10 +27,10 @@ public final class CredentialsResponse {
      */
     private final @Nullable SourceRegistryCredentialsResponse sourceRegistry;
 
-    @OutputCustomType.Constructor({"customRegistries","sourceRegistry"})
+    @OutputCustomType.Constructor
     private CredentialsResponse(
-        @Nullable Map<String,CustomRegistryCredentialsResponse> customRegistries,
-        @Nullable SourceRegistryCredentialsResponse sourceRegistry) {
+        @OutputCustomType.Parameter("customRegistries") @Nullable Map<String,CustomRegistryCredentialsResponse> customRegistries,
+        @OutputCustomType.Parameter("sourceRegistry") @Nullable SourceRegistryCredentialsResponse sourceRegistry) {
         this.customRegistries = customRegistries;
         this.sourceRegistry = sourceRegistry;
     }

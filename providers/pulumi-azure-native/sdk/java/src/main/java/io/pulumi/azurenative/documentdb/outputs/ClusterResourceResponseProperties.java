@@ -82,21 +82,21 @@ public final class ClusterResourceResponseProperties {
      */
     private final List<SeedNodeResponse> seedNodes;
 
-    @OutputCustomType.Constructor({"authenticationMethod","cassandraVersion","clientCertificates","clusterNameOverride","delegatedManagementSubnetId","externalGossipCertificates","externalSeedNodes","gossipCertificates","hoursBetweenBackups","prometheusEndpoint","provisioningState","repairEnabled","seedNodes"})
+    @OutputCustomType.Constructor
     private ClusterResourceResponseProperties(
-        @Nullable String authenticationMethod,
-        @Nullable String cassandraVersion,
-        @Nullable List<CertificateResponse> clientCertificates,
-        @Nullable String clusterNameOverride,
-        @Nullable String delegatedManagementSubnetId,
-        @Nullable List<CertificateResponse> externalGossipCertificates,
-        @Nullable List<SeedNodeResponse> externalSeedNodes,
-        List<CertificateResponse> gossipCertificates,
-        @Nullable Integer hoursBetweenBackups,
-        @Nullable SeedNodeResponse prometheusEndpoint,
-        @Nullable String provisioningState,
-        @Nullable Boolean repairEnabled,
-        List<SeedNodeResponse> seedNodes) {
+        @OutputCustomType.Parameter("authenticationMethod") @Nullable String authenticationMethod,
+        @OutputCustomType.Parameter("cassandraVersion") @Nullable String cassandraVersion,
+        @OutputCustomType.Parameter("clientCertificates") @Nullable List<CertificateResponse> clientCertificates,
+        @OutputCustomType.Parameter("clusterNameOverride") @Nullable String clusterNameOverride,
+        @OutputCustomType.Parameter("delegatedManagementSubnetId") @Nullable String delegatedManagementSubnetId,
+        @OutputCustomType.Parameter("externalGossipCertificates") @Nullable List<CertificateResponse> externalGossipCertificates,
+        @OutputCustomType.Parameter("externalSeedNodes") @Nullable List<SeedNodeResponse> externalSeedNodes,
+        @OutputCustomType.Parameter("gossipCertificates") List<CertificateResponse> gossipCertificates,
+        @OutputCustomType.Parameter("hoursBetweenBackups") @Nullable Integer hoursBetweenBackups,
+        @OutputCustomType.Parameter("prometheusEndpoint") @Nullable SeedNodeResponse prometheusEndpoint,
+        @OutputCustomType.Parameter("provisioningState") @Nullable String provisioningState,
+        @OutputCustomType.Parameter("repairEnabled") @Nullable Boolean repairEnabled,
+        @OutputCustomType.Parameter("seedNodes") List<SeedNodeResponse> seedNodes) {
         this.authenticationMethod = authenticationMethod;
         this.cassandraVersion = cassandraVersion;
         this.clientCertificates = clientCertificates;

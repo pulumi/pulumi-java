@@ -17,8 +17,8 @@ public final class ContainerGroupDiagnosticsResponse {
      */
     private final @Nullable LogAnalyticsResponse logAnalytics;
 
-    @OutputCustomType.Constructor({"logAnalytics"})
-    private ContainerGroupDiagnosticsResponse(@Nullable LogAnalyticsResponse logAnalytics) {
+    @OutputCustomType.Constructor
+    private ContainerGroupDiagnosticsResponse(@OutputCustomType.Parameter("logAnalytics") @Nullable LogAnalyticsResponse logAnalytics) {
         this.logAnalytics = logAnalytics;
     }
 

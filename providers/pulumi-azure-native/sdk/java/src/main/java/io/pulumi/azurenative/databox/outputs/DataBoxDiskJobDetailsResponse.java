@@ -119,26 +119,26 @@ public final class DataBoxDiskJobDetailsResponse {
      */
     private final @Nullable ShippingAddressResponse shippingAddress;
 
-    @OutputCustomType.Constructor({"chainOfCustodySasKey","contactDetails","copyLogDetails","copyProgress","dataExportDetails","dataImportDetails","deliveryPackage","disksAndSizeDetails","expectedDataSizeInTeraBytes","jobDetailsType","jobStages","keyEncryptionKey","passkey","preferences","preferredDisks","returnPackage","reverseShipmentLabelSasKey","shippingAddress"})
+    @OutputCustomType.Constructor
     private DataBoxDiskJobDetailsResponse(
-        String chainOfCustodySasKey,
-        ContactDetailsResponse contactDetails,
-        List<Object> copyLogDetails,
-        List<DataBoxDiskCopyProgressResponse> copyProgress,
-        @Nullable List<DataExportDetailsResponse> dataExportDetails,
-        @Nullable List<DataImportDetailsResponse> dataImportDetails,
-        PackageShippingDetailsResponse deliveryPackage,
-        Map<String,Integer> disksAndSizeDetails,
-        @Nullable Integer expectedDataSizeInTeraBytes,
-        String jobDetailsType,
-        List<JobStagesResponse> jobStages,
-        @Nullable KeyEncryptionKeyResponse keyEncryptionKey,
-        @Nullable String passkey,
-        @Nullable PreferencesResponse preferences,
-        @Nullable Map<String,Integer> preferredDisks,
-        PackageShippingDetailsResponse returnPackage,
-        String reverseShipmentLabelSasKey,
-        @Nullable ShippingAddressResponse shippingAddress) {
+        @OutputCustomType.Parameter("chainOfCustodySasKey") String chainOfCustodySasKey,
+        @OutputCustomType.Parameter("contactDetails") ContactDetailsResponse contactDetails,
+        @OutputCustomType.Parameter("copyLogDetails") List<Object> copyLogDetails,
+        @OutputCustomType.Parameter("copyProgress") List<DataBoxDiskCopyProgressResponse> copyProgress,
+        @OutputCustomType.Parameter("dataExportDetails") @Nullable List<DataExportDetailsResponse> dataExportDetails,
+        @OutputCustomType.Parameter("dataImportDetails") @Nullable List<DataImportDetailsResponse> dataImportDetails,
+        @OutputCustomType.Parameter("deliveryPackage") PackageShippingDetailsResponse deliveryPackage,
+        @OutputCustomType.Parameter("disksAndSizeDetails") Map<String,Integer> disksAndSizeDetails,
+        @OutputCustomType.Parameter("expectedDataSizeInTeraBytes") @Nullable Integer expectedDataSizeInTeraBytes,
+        @OutputCustomType.Parameter("jobDetailsType") String jobDetailsType,
+        @OutputCustomType.Parameter("jobStages") List<JobStagesResponse> jobStages,
+        @OutputCustomType.Parameter("keyEncryptionKey") @Nullable KeyEncryptionKeyResponse keyEncryptionKey,
+        @OutputCustomType.Parameter("passkey") @Nullable String passkey,
+        @OutputCustomType.Parameter("preferences") @Nullable PreferencesResponse preferences,
+        @OutputCustomType.Parameter("preferredDisks") @Nullable Map<String,Integer> preferredDisks,
+        @OutputCustomType.Parameter("returnPackage") PackageShippingDetailsResponse returnPackage,
+        @OutputCustomType.Parameter("reverseShipmentLabelSasKey") String reverseShipmentLabelSasKey,
+        @OutputCustomType.Parameter("shippingAddress") @Nullable ShippingAddressResponse shippingAddress) {
         this.chainOfCustodySasKey = chainOfCustodySasKey;
         this.contactDetails = contactDetails;
         this.copyLogDetails = copyLogDetails;

@@ -33,12 +33,12 @@ public final class ParameterDefinitionsValueResponseMetadata {
      */
     private final @Nullable String strongType;
 
-    @OutputCustomType.Constructor({"assignPermissions","description","displayName","strongType"})
+    @OutputCustomType.Constructor
     private ParameterDefinitionsValueResponseMetadata(
-        @Nullable Boolean assignPermissions,
-        @Nullable String description,
-        @Nullable String displayName,
-        @Nullable String strongType) {
+        @OutputCustomType.Parameter("assignPermissions") @Nullable Boolean assignPermissions,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("displayName") @Nullable String displayName,
+        @OutputCustomType.Parameter("strongType") @Nullable String strongType) {
         this.assignPermissions = assignPermissions;
         this.description = description;
         this.displayName = displayName;

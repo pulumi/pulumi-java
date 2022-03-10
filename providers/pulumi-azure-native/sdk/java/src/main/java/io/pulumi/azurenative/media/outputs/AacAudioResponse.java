@@ -44,14 +44,14 @@ public final class AacAudioResponse {
      */
     private final @Nullable Integer samplingRate;
 
-    @OutputCustomType.Constructor({"bitrate","channels","label","odataType","profile","samplingRate"})
+    @OutputCustomType.Constructor
     private AacAudioResponse(
-        @Nullable Integer bitrate,
-        @Nullable Integer channels,
-        @Nullable String label,
-        String odataType,
-        @Nullable String profile,
-        @Nullable Integer samplingRate) {
+        @OutputCustomType.Parameter("bitrate") @Nullable Integer bitrate,
+        @OutputCustomType.Parameter("channels") @Nullable Integer channels,
+        @OutputCustomType.Parameter("label") @Nullable String label,
+        @OutputCustomType.Parameter("odataType") String odataType,
+        @OutputCustomType.Parameter("profile") @Nullable String profile,
+        @OutputCustomType.Parameter("samplingRate") @Nullable Integer samplingRate) {
         this.bitrate = bitrate;
         this.channels = channels;
         this.label = label;

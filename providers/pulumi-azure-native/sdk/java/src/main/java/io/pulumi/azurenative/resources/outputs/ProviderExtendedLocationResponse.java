@@ -28,11 +28,11 @@ public final class ProviderExtendedLocationResponse {
      */
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor({"extendedLocations","location","type"})
+    @OutputCustomType.Constructor
     private ProviderExtendedLocationResponse(
-        @Nullable List<String> extendedLocations,
-        @Nullable String location,
-        @Nullable String type) {
+        @OutputCustomType.Parameter("extendedLocations") @Nullable List<String> extendedLocations,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("type") @Nullable String type) {
         this.extendedLocations = extendedLocations;
         this.location = location;
         this.type = type;

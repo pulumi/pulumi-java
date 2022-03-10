@@ -17,8 +17,8 @@ public final class ServiceTypeHealthPolicyResponse {
      */
     private final @Nullable Integer maxPercentUnhealthyServices;
 
-    @OutputCustomType.Constructor({"maxPercentUnhealthyServices"})
-    private ServiceTypeHealthPolicyResponse(@Nullable Integer maxPercentUnhealthyServices) {
+    @OutputCustomType.Constructor
+    private ServiceTypeHealthPolicyResponse(@OutputCustomType.Parameter("maxPercentUnhealthyServices") @Nullable Integer maxPercentUnhealthyServices) {
         this.maxPercentUnhealthyServices = maxPercentUnhealthyServices;
     }
 

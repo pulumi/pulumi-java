@@ -22,10 +22,10 @@ public final class ListTopLevelDomainAgreementsResult {
      */
     private final List<TldLegalAgreementResponse> value;
 
-    @OutputCustomType.Constructor({"nextLink","value"})
+    @OutputCustomType.Constructor
     private ListTopLevelDomainAgreementsResult(
-        String nextLink,
-        List<TldLegalAgreementResponse> value) {
+        @OutputCustomType.Parameter("nextLink") String nextLink,
+        @OutputCustomType.Parameter("value") List<TldLegalAgreementResponse> value) {
         this.nextLink = nextLink;
         this.value = value;
     }

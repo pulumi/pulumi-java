@@ -27,11 +27,11 @@ public final class MpnsCredentialResponse {
      */
     private final @Nullable String thumbprint;
 
-    @OutputCustomType.Constructor({"certificateKey","mpnsCertificate","thumbprint"})
+    @OutputCustomType.Constructor
     private MpnsCredentialResponse(
-        @Nullable String certificateKey,
-        @Nullable String mpnsCertificate,
-        @Nullable String thumbprint) {
+        @OutputCustomType.Parameter("certificateKey") @Nullable String certificateKey,
+        @OutputCustomType.Parameter("mpnsCertificate") @Nullable String mpnsCertificate,
+        @OutputCustomType.Parameter("thumbprint") @Nullable String thumbprint) {
         this.certificateKey = certificateKey;
         this.mpnsCertificate = mpnsCertificate;
         this.thumbprint = thumbprint;

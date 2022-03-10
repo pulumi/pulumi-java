@@ -17,8 +17,8 @@ public final class ReportConfigDatasetConfigurationResponse {
      */
     private final @Nullable List<String> columns;
 
-    @OutputCustomType.Constructor({"columns"})
-    private ReportConfigDatasetConfigurationResponse(@Nullable List<String> columns) {
+    @OutputCustomType.Constructor
+    private ReportConfigDatasetConfigurationResponse(@OutputCustomType.Parameter("columns") @Nullable List<String> columns) {
         this.columns = columns;
     }
 

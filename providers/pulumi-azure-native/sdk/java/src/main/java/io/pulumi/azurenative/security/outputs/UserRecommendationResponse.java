@@ -22,10 +22,10 @@ public final class UserRecommendationResponse {
      */
     private final @Nullable String username;
 
-    @OutputCustomType.Constructor({"recommendationAction","username"})
+    @OutputCustomType.Constructor
     private UserRecommendationResponse(
-        @Nullable String recommendationAction,
-        @Nullable String username) {
+        @OutputCustomType.Parameter("recommendationAction") @Nullable String recommendationAction,
+        @OutputCustomType.Parameter("username") @Nullable String username) {
         this.recommendationAction = recommendationAction;
         this.username = username;
     }

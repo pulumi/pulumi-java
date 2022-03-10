@@ -22,10 +22,10 @@ public final class KubernetesIPConfigurationResponse {
      */
     private final String port;
 
-    @OutputCustomType.Constructor({"ipAddress","port"})
+    @OutputCustomType.Constructor
     private KubernetesIPConfigurationResponse(
-        @Nullable String ipAddress,
-        String port) {
+        @OutputCustomType.Parameter("ipAddress") @Nullable String ipAddress,
+        @OutputCustomType.Parameter("port") String port) {
         this.ipAddress = ipAddress;
         this.port = port;
     }

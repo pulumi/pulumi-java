@@ -49,15 +49,15 @@ public final class ArtifactInstallPropertiesResponse {
      */
     private final @Nullable String vmExtensionStatusMessage;
 
-    @OutputCustomType.Constructor({"artifactId","artifactTitle","deploymentStatusMessage","installTime","parameters","status","vmExtensionStatusMessage"})
+    @OutputCustomType.Constructor
     private ArtifactInstallPropertiesResponse(
-        @Nullable String artifactId,
-        @Nullable String artifactTitle,
-        @Nullable String deploymentStatusMessage,
-        @Nullable String installTime,
-        @Nullable List<ArtifactParameterPropertiesResponse> parameters,
-        @Nullable String status,
-        @Nullable String vmExtensionStatusMessage) {
+        @OutputCustomType.Parameter("artifactId") @Nullable String artifactId,
+        @OutputCustomType.Parameter("artifactTitle") @Nullable String artifactTitle,
+        @OutputCustomType.Parameter("deploymentStatusMessage") @Nullable String deploymentStatusMessage,
+        @OutputCustomType.Parameter("installTime") @Nullable String installTime,
+        @OutputCustomType.Parameter("parameters") @Nullable List<ArtifactParameterPropertiesResponse> parameters,
+        @OutputCustomType.Parameter("status") @Nullable String status,
+        @OutputCustomType.Parameter("vmExtensionStatusMessage") @Nullable String vmExtensionStatusMessage) {
         this.artifactId = artifactId;
         this.artifactTitle = artifactTitle;
         this.deploymentStatusMessage = deploymentStatusMessage;

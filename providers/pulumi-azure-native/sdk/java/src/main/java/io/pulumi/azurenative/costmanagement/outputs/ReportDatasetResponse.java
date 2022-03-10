@@ -43,13 +43,13 @@ public final class ReportDatasetResponse {
      */
     private final @Nullable List<ReportGroupingResponse> grouping;
 
-    @OutputCustomType.Constructor({"aggregation","configuration","filter","granularity","grouping"})
+    @OutputCustomType.Constructor
     private ReportDatasetResponse(
-        @Nullable Map<String,ReportAggregationResponse> aggregation,
-        @Nullable ReportDatasetConfigurationResponse configuration,
-        @Nullable ReportFilterResponse filter,
-        @Nullable String granularity,
-        @Nullable List<ReportGroupingResponse> grouping) {
+        @OutputCustomType.Parameter("aggregation") @Nullable Map<String,ReportAggregationResponse> aggregation,
+        @OutputCustomType.Parameter("configuration") @Nullable ReportDatasetConfigurationResponse configuration,
+        @OutputCustomType.Parameter("filter") @Nullable ReportFilterResponse filter,
+        @OutputCustomType.Parameter("granularity") @Nullable String granularity,
+        @OutputCustomType.Parameter("grouping") @Nullable List<ReportGroupingResponse> grouping) {
         this.aggregation = aggregation;
         this.configuration = configuration;
         this.filter = filter;

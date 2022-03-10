@@ -22,10 +22,10 @@ public final class VaultCertificateResponse {
      */
     private final @Nullable String certificateUrl;
 
-    @OutputCustomType.Constructor({"certificateStore","certificateUrl"})
+    @OutputCustomType.Constructor
     private VaultCertificateResponse(
-        @Nullable String certificateStore,
-        @Nullable String certificateUrl) {
+        @OutputCustomType.Parameter("certificateStore") @Nullable String certificateStore,
+        @OutputCustomType.Parameter("certificateUrl") @Nullable String certificateUrl) {
         this.certificateStore = certificateStore;
         this.certificateUrl = certificateUrl;
     }

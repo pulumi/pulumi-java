@@ -17,8 +17,8 @@ public final class ListOpenIdConnectProviderSecretsResult {
      */
     private final @Nullable String clientSecret;
 
-    @OutputCustomType.Constructor({"clientSecret"})
-    private ListOpenIdConnectProviderSecretsResult(@Nullable String clientSecret) {
+    @OutputCustomType.Constructor
+    private ListOpenIdConnectProviderSecretsResult(@OutputCustomType.Parameter("clientSecret") @Nullable String clientSecret) {
         this.clientSecret = clientSecret;
     }
 

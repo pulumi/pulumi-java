@@ -29,11 +29,11 @@ public final class EventChannelDestinationResponse {
      */
     private final @Nullable String resourceGroup;
 
-    @OutputCustomType.Constructor({"azureSubscriptionId","partnerTopicName","resourceGroup"})
+    @OutputCustomType.Constructor
     private EventChannelDestinationResponse(
-        @Nullable String azureSubscriptionId,
-        @Nullable String partnerTopicName,
-        @Nullable String resourceGroup) {
+        @OutputCustomType.Parameter("azureSubscriptionId") @Nullable String azureSubscriptionId,
+        @OutputCustomType.Parameter("partnerTopicName") @Nullable String partnerTopicName,
+        @OutputCustomType.Parameter("resourceGroup") @Nullable String resourceGroup) {
         this.azureSubscriptionId = azureSubscriptionId;
         this.partnerTopicName = partnerTopicName;
         this.resourceGroup = resourceGroup;

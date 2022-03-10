@@ -43,14 +43,14 @@ public final class ServiceProviderPropertiesResponse {
      */
     private final String serviceProviderName;
 
-    @OutputCustomType.Constructor({"devPortalUrl","displayName","iconUrl","id","parameters","serviceProviderName"})
+    @OutputCustomType.Constructor
     private ServiceProviderPropertiesResponse(
-        String devPortalUrl,
-        String displayName,
-        String iconUrl,
-        String id,
-        @Nullable List<ServiceProviderParameterResponse> parameters,
-        String serviceProviderName) {
+        @OutputCustomType.Parameter("devPortalUrl") String devPortalUrl,
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("iconUrl") String iconUrl,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("parameters") @Nullable List<ServiceProviderParameterResponse> parameters,
+        @OutputCustomType.Parameter("serviceProviderName") String serviceProviderName) {
         this.devPortalUrl = devPortalUrl;
         this.displayName = displayName;
         this.iconUrl = iconUrl;

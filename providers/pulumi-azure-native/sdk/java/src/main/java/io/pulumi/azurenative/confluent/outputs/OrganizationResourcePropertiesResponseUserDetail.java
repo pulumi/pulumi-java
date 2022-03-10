@@ -27,11 +27,11 @@ public final class OrganizationResourcePropertiesResponseUserDetail {
      */
     private final @Nullable String lastName;
 
-    @OutputCustomType.Constructor({"emailAddress","firstName","lastName"})
+    @OutputCustomType.Constructor
     private OrganizationResourcePropertiesResponseUserDetail(
-        @Nullable String emailAddress,
-        @Nullable String firstName,
-        @Nullable String lastName) {
+        @OutputCustomType.Parameter("emailAddress") @Nullable String emailAddress,
+        @OutputCustomType.Parameter("firstName") @Nullable String firstName,
+        @OutputCustomType.Parameter("lastName") @Nullable String lastName) {
         this.emailAddress = emailAddress;
         this.firstName = firstName;
         this.lastName = lastName;

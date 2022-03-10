@@ -62,17 +62,17 @@ public final class MetricCriteriaResponse {
      */
     private final String timeAggregation;
 
-    @OutputCustomType.Constructor({"criterionType","dimensions","metricName","metricNamespace","name","operator","skipMetricValidation","threshold","timeAggregation"})
+    @OutputCustomType.Constructor
     private MetricCriteriaResponse(
-        String criterionType,
-        @Nullable List<MetricDimensionResponse> dimensions,
-        String metricName,
-        @Nullable String metricNamespace,
-        String name,
-        String operator,
-        @Nullable Boolean skipMetricValidation,
-        Double threshold,
-        String timeAggregation) {
+        @OutputCustomType.Parameter("criterionType") String criterionType,
+        @OutputCustomType.Parameter("dimensions") @Nullable List<MetricDimensionResponse> dimensions,
+        @OutputCustomType.Parameter("metricName") String metricName,
+        @OutputCustomType.Parameter("metricNamespace") @Nullable String metricNamespace,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("operator") String operator,
+        @OutputCustomType.Parameter("skipMetricValidation") @Nullable Boolean skipMetricValidation,
+        @OutputCustomType.Parameter("threshold") Double threshold,
+        @OutputCustomType.Parameter("timeAggregation") String timeAggregation) {
         this.criterionType = criterionType;
         this.dimensions = dimensions;
         this.metricName = metricName;

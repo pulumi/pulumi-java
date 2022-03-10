@@ -103,26 +103,26 @@ public final class ProcessServerDetailsResponse {
      */
     private final String version;
 
-    @OutputCustomType.Constructor({"availableMemoryInBytes","availableSpaceInBytes","freeSpacePercentage","health","healthErrors","historicHealth","id","lastHeartbeatUtc","memoryUsagePercentage","name","processorUsagePercentage","throughputInBytes","throughputUploadPendingDataInBytes","totalMemoryInBytes","totalSpaceInBytes","usedMemoryInBytes","usedSpaceInBytes","version"})
+    @OutputCustomType.Constructor
     private ProcessServerDetailsResponse(
-        Double availableMemoryInBytes,
-        Double availableSpaceInBytes,
-        Double freeSpacePercentage,
-        String health,
-        List<HealthErrorResponse> healthErrors,
-        String historicHealth,
-        String id,
-        String lastHeartbeatUtc,
-        Double memoryUsagePercentage,
-        String name,
-        Double processorUsagePercentage,
-        Double throughputInBytes,
-        Double throughputUploadPendingDataInBytes,
-        Double totalMemoryInBytes,
-        Double totalSpaceInBytes,
-        Double usedMemoryInBytes,
-        Double usedSpaceInBytes,
-        String version) {
+        @OutputCustomType.Parameter("availableMemoryInBytes") Double availableMemoryInBytes,
+        @OutputCustomType.Parameter("availableSpaceInBytes") Double availableSpaceInBytes,
+        @OutputCustomType.Parameter("freeSpacePercentage") Double freeSpacePercentage,
+        @OutputCustomType.Parameter("health") String health,
+        @OutputCustomType.Parameter("healthErrors") List<HealthErrorResponse> healthErrors,
+        @OutputCustomType.Parameter("historicHealth") String historicHealth,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("lastHeartbeatUtc") String lastHeartbeatUtc,
+        @OutputCustomType.Parameter("memoryUsagePercentage") Double memoryUsagePercentage,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("processorUsagePercentage") Double processorUsagePercentage,
+        @OutputCustomType.Parameter("throughputInBytes") Double throughputInBytes,
+        @OutputCustomType.Parameter("throughputUploadPendingDataInBytes") Double throughputUploadPendingDataInBytes,
+        @OutputCustomType.Parameter("totalMemoryInBytes") Double totalMemoryInBytes,
+        @OutputCustomType.Parameter("totalSpaceInBytes") Double totalSpaceInBytes,
+        @OutputCustomType.Parameter("usedMemoryInBytes") Double usedMemoryInBytes,
+        @OutputCustomType.Parameter("usedSpaceInBytes") Double usedSpaceInBytes,
+        @OutputCustomType.Parameter("version") String version) {
         this.availableMemoryInBytes = availableMemoryInBytes;
         this.availableSpaceInBytes = availableSpaceInBytes;
         this.freeSpacePercentage = freeSpacePercentage;

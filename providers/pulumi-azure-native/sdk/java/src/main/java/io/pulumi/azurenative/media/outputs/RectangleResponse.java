@@ -32,12 +32,12 @@ public final class RectangleResponse {
      */
     private final @Nullable String width;
 
-    @OutputCustomType.Constructor({"height","left","top","width"})
+    @OutputCustomType.Constructor
     private RectangleResponse(
-        @Nullable String height,
-        @Nullable String left,
-        @Nullable String top,
-        @Nullable String width) {
+        @OutputCustomType.Parameter("height") @Nullable String height,
+        @OutputCustomType.Parameter("left") @Nullable String left,
+        @OutputCustomType.Parameter("top") @Nullable String top,
+        @OutputCustomType.Parameter("width") @Nullable String width) {
         this.height = height;
         this.left = left;
         this.top = top;

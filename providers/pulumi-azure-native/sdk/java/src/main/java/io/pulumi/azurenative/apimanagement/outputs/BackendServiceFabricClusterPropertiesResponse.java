@@ -45,14 +45,14 @@ public final class BackendServiceFabricClusterPropertiesResponse {
      */
     private final @Nullable List<X509CertificateNameResponse> serverX509Names;
 
-    @OutputCustomType.Constructor({"clientCertificateId","clientCertificatethumbprint","managementEndpoints","maxPartitionResolutionRetries","serverCertificateThumbprints","serverX509Names"})
+    @OutputCustomType.Constructor
     private BackendServiceFabricClusterPropertiesResponse(
-        @Nullable String clientCertificateId,
-        @Nullable String clientCertificatethumbprint,
-        List<String> managementEndpoints,
-        @Nullable Integer maxPartitionResolutionRetries,
-        @Nullable List<String> serverCertificateThumbprints,
-        @Nullable List<X509CertificateNameResponse> serverX509Names) {
+        @OutputCustomType.Parameter("clientCertificateId") @Nullable String clientCertificateId,
+        @OutputCustomType.Parameter("clientCertificatethumbprint") @Nullable String clientCertificatethumbprint,
+        @OutputCustomType.Parameter("managementEndpoints") List<String> managementEndpoints,
+        @OutputCustomType.Parameter("maxPartitionResolutionRetries") @Nullable Integer maxPartitionResolutionRetries,
+        @OutputCustomType.Parameter("serverCertificateThumbprints") @Nullable List<String> serverCertificateThumbprints,
+        @OutputCustomType.Parameter("serverX509Names") @Nullable List<X509CertificateNameResponse> serverX509Names) {
         this.clientCertificateId = clientCertificateId;
         this.clientCertificatethumbprint = clientCertificatethumbprint;
         this.managementEndpoints = managementEndpoints;

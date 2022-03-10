@@ -29,12 +29,12 @@ public final class CollectorPropertiesResponse {
      */
     private final String updatedTimestamp;
 
-    @OutputCustomType.Constructor({"agentProperties","createdTimestamp","discoverySiteId","updatedTimestamp"})
+    @OutputCustomType.Constructor
     private CollectorPropertiesResponse(
-        @Nullable CollectorAgentPropertiesResponse agentProperties,
-        String createdTimestamp,
-        @Nullable String discoverySiteId,
-        String updatedTimestamp) {
+        @OutputCustomType.Parameter("agentProperties") @Nullable CollectorAgentPropertiesResponse agentProperties,
+        @OutputCustomType.Parameter("createdTimestamp") String createdTimestamp,
+        @OutputCustomType.Parameter("discoverySiteId") @Nullable String discoverySiteId,
+        @OutputCustomType.Parameter("updatedTimestamp") String updatedTimestamp) {
         this.agentProperties = agentProperties;
         this.createdTimestamp = createdTimestamp;
         this.discoverySiteId = discoverySiteId;

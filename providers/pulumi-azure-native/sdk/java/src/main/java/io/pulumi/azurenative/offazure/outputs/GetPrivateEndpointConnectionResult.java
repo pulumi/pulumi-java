@@ -42,14 +42,14 @@ public final class GetPrivateEndpointConnectionResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"eTag","id","name","properties","systemData","type"})
+    @OutputCustomType.Constructor
     private GetPrivateEndpointConnectionResult(
-        String eTag,
-        String id,
-        String name,
-        PrivateEndpointConnectionPropertiesResponse properties,
-        SystemDataResponse systemData,
-        String type) {
+        @OutputCustomType.Parameter("eTag") String eTag,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("properties") PrivateEndpointConnectionPropertiesResponse properties,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("type") String type) {
         this.eTag = eTag;
         this.id = id;
         this.name = name;

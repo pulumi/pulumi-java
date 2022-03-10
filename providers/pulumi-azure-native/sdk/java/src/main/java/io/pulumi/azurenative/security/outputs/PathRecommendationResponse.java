@@ -53,17 +53,17 @@ public final class PathRecommendationResponse {
     private final @Nullable List<String> userSids;
     private final @Nullable List<UserRecommendationResponse> usernames;
 
-    @OutputCustomType.Constructor({"action","common","configurationStatus","fileType","path","publisherInfo","type","userSids","usernames"})
+    @OutputCustomType.Constructor
     private PathRecommendationResponse(
-        @Nullable String action,
-        @Nullable Boolean common,
-        @Nullable String configurationStatus,
-        @Nullable String fileType,
-        @Nullable String path,
-        @Nullable PublisherInfoResponse publisherInfo,
-        @Nullable String type,
-        @Nullable List<String> userSids,
-        @Nullable List<UserRecommendationResponse> usernames) {
+        @OutputCustomType.Parameter("action") @Nullable String action,
+        @OutputCustomType.Parameter("common") @Nullable Boolean common,
+        @OutputCustomType.Parameter("configurationStatus") @Nullable String configurationStatus,
+        @OutputCustomType.Parameter("fileType") @Nullable String fileType,
+        @OutputCustomType.Parameter("path") @Nullable String path,
+        @OutputCustomType.Parameter("publisherInfo") @Nullable PublisherInfoResponse publisherInfo,
+        @OutputCustomType.Parameter("type") @Nullable String type,
+        @OutputCustomType.Parameter("userSids") @Nullable List<String> userSids,
+        @OutputCustomType.Parameter("usernames") @Nullable List<UserRecommendationResponse> usernames) {
         this.action = action;
         this.common = common;
         this.configurationStatus = configurationStatus;

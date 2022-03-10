@@ -74,19 +74,19 @@ public final class GoogleBigQueryObjectDatasetResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"annotations","dataset","description","folder","linkedServiceName","parameters","schema","structure","table","tableName","type"})
+    @OutputCustomType.Constructor
     private GoogleBigQueryObjectDatasetResponse(
-        @Nullable List<Object> annotations,
-        @Nullable Object dataset,
-        @Nullable String description,
-        @Nullable DatasetResponseFolder folder,
-        LinkedServiceReferenceResponse linkedServiceName,
-        @Nullable Map<String,ParameterSpecificationResponse> parameters,
-        @Nullable Object schema,
-        @Nullable Object structure,
-        @Nullable Object table,
-        @Nullable Object tableName,
-        String type) {
+        @OutputCustomType.Parameter("annotations") @Nullable List<Object> annotations,
+        @OutputCustomType.Parameter("dataset") @Nullable Object dataset,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("folder") @Nullable DatasetResponseFolder folder,
+        @OutputCustomType.Parameter("linkedServiceName") LinkedServiceReferenceResponse linkedServiceName,
+        @OutputCustomType.Parameter("parameters") @Nullable Map<String,ParameterSpecificationResponse> parameters,
+        @OutputCustomType.Parameter("schema") @Nullable Object schema,
+        @OutputCustomType.Parameter("structure") @Nullable Object structure,
+        @OutputCustomType.Parameter("table") @Nullable Object table,
+        @OutputCustomType.Parameter("tableName") @Nullable Object tableName,
+        @OutputCustomType.Parameter("type") String type) {
         this.annotations = annotations;
         this.dataset = dataset;
         this.description = description;

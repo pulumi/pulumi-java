@@ -71,19 +71,19 @@ public final class GetPublishedBlueprintResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"blueprintName","changeNotes","description","displayName","id","name","parameters","resourceGroups","status","targetScope","type"})
+    @OutputCustomType.Constructor
     private GetPublishedBlueprintResult(
-        @Nullable String blueprintName,
-        @Nullable String changeNotes,
-        @Nullable String description,
-        @Nullable String displayName,
-        String id,
-        String name,
-        @Nullable Map<String,ParameterDefinitionResponse> parameters,
-        @Nullable Map<String,ResourceGroupDefinitionResponse> resourceGroups,
-        BlueprintStatusResponse status,
-        @Nullable String targetScope,
-        String type) {
+        @OutputCustomType.Parameter("blueprintName") @Nullable String blueprintName,
+        @OutputCustomType.Parameter("changeNotes") @Nullable String changeNotes,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("displayName") @Nullable String displayName,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("parameters") @Nullable Map<String,ParameterDefinitionResponse> parameters,
+        @OutputCustomType.Parameter("resourceGroups") @Nullable Map<String,ResourceGroupDefinitionResponse> resourceGroups,
+        @OutputCustomType.Parameter("status") BlueprintStatusResponse status,
+        @OutputCustomType.Parameter("targetScope") @Nullable String targetScope,
+        @OutputCustomType.Parameter("type") String type) {
         this.blueprintName = blueprintName;
         this.changeNotes = changeNotes;
         this.description = description;

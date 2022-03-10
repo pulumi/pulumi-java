@@ -20,10 +20,10 @@ public final class GlusterFsSectionResponse {
      */
     private final String volumeName;
 
-    @OutputCustomType.Constructor({"serverAddress","volumeName"})
+    @OutputCustomType.Constructor
     private GlusterFsSectionResponse(
-        String serverAddress,
-        String volumeName) {
+        @OutputCustomType.Parameter("serverAddress") String serverAddress,
+        @OutputCustomType.Parameter("volumeName") String volumeName) {
         this.serverAddress = serverAddress;
         this.volumeName = volumeName;
     }

@@ -39,13 +39,13 @@ public final class GetRegistrationDefinitionResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"id","name","plan","properties","type"})
+    @OutputCustomType.Constructor
     private GetRegistrationDefinitionResult(
-        String id,
-        String name,
-        @Nullable PlanResponse plan,
-        RegistrationDefinitionPropertiesResponse properties,
-        String type) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("plan") @Nullable PlanResponse plan,
+        @OutputCustomType.Parameter("properties") RegistrationDefinitionPropertiesResponse properties,
+        @OutputCustomType.Parameter("type") String type) {
         this.id = id;
         this.name = name;
         this.plan = plan;

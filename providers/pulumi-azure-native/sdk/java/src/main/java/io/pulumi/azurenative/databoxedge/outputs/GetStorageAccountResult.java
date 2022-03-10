@@ -64,18 +64,18 @@ public final class GetStorageAccountResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"blobEndpoint","containerCount","dataPolicy","description","id","name","storageAccountCredentialId","storageAccountStatus","systemData","type"})
+    @OutputCustomType.Constructor
     private GetStorageAccountResult(
-        String blobEndpoint,
-        Integer containerCount,
-        String dataPolicy,
-        @Nullable String description,
-        String id,
-        String name,
-        @Nullable String storageAccountCredentialId,
-        @Nullable String storageAccountStatus,
-        SystemDataResponse systemData,
-        String type) {
+        @OutputCustomType.Parameter("blobEndpoint") String blobEndpoint,
+        @OutputCustomType.Parameter("containerCount") Integer containerCount,
+        @OutputCustomType.Parameter("dataPolicy") String dataPolicy,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("storageAccountCredentialId") @Nullable String storageAccountCredentialId,
+        @OutputCustomType.Parameter("storageAccountStatus") @Nullable String storageAccountStatus,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("type") String type) {
         this.blobEndpoint = blobEndpoint;
         this.containerCount = containerCount;
         this.dataPolicy = dataPolicy;

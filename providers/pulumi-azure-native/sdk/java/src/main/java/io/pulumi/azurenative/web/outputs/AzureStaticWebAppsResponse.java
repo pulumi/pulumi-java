@@ -23,10 +23,10 @@ public final class AzureStaticWebAppsResponse {
      */
     private final @Nullable AzureStaticWebAppsRegistrationResponse registration;
 
-    @OutputCustomType.Constructor({"enabled","registration"})
+    @OutputCustomType.Constructor
     private AzureStaticWebAppsResponse(
-        @Nullable Boolean enabled,
-        @Nullable AzureStaticWebAppsRegistrationResponse registration) {
+        @OutputCustomType.Parameter("enabled") @Nullable Boolean enabled,
+        @OutputCustomType.Parameter("registration") @Nullable AzureStaticWebAppsRegistrationResponse registration) {
         this.enabled = enabled;
         this.registration = registration;
     }

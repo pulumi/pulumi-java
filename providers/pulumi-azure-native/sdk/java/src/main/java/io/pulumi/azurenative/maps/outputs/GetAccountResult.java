@@ -48,15 +48,15 @@ public final class GetAccountResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"id","location","name","properties","sku","tags","type"})
+    @OutputCustomType.Constructor
     private GetAccountResult(
-        String id,
-        String location,
-        String name,
-        MapsAccountPropertiesResponse properties,
-        SkuResponse sku,
-        Map<String,String> tags,
-        String type) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("properties") MapsAccountPropertiesResponse properties,
+        @OutputCustomType.Parameter("sku") SkuResponse sku,
+        @OutputCustomType.Parameter("tags") Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type) {
         this.id = id;
         this.location = location;
         this.name = name;

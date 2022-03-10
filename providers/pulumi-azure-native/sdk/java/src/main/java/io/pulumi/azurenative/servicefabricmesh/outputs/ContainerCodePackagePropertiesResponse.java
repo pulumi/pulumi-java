@@ -99,23 +99,23 @@ public final class ContainerCodePackagePropertiesResponse {
      */
     private final @Nullable List<ApplicationScopedVolumeResponse> volumes;
 
-    @OutputCustomType.Constructor({"commands","diagnostics","endpoints","entrypoint","environmentVariables","image","imageRegistryCredential","instanceView","labels","name","reliableCollectionsRefs","resources","settings","volumeRefs","volumes"})
+    @OutputCustomType.Constructor
     private ContainerCodePackagePropertiesResponse(
-        @Nullable List<String> commands,
-        @Nullable DiagnosticsRefResponse diagnostics,
-        @Nullable List<EndpointPropertiesResponse> endpoints,
-        @Nullable String entrypoint,
-        @Nullable List<EnvironmentVariableResponse> environmentVariables,
-        String image,
-        @Nullable ImageRegistryCredentialResponse imageRegistryCredential,
-        ContainerInstanceViewResponse instanceView,
-        @Nullable List<ContainerLabelResponse> labels,
-        String name,
-        @Nullable List<ReliableCollectionsRefResponse> reliableCollectionsRefs,
-        ResourceRequirementsResponse resources,
-        @Nullable List<SettingResponse> settings,
-        @Nullable List<VolumeReferenceResponse> volumeRefs,
-        @Nullable List<ApplicationScopedVolumeResponse> volumes) {
+        @OutputCustomType.Parameter("commands") @Nullable List<String> commands,
+        @OutputCustomType.Parameter("diagnostics") @Nullable DiagnosticsRefResponse diagnostics,
+        @OutputCustomType.Parameter("endpoints") @Nullable List<EndpointPropertiesResponse> endpoints,
+        @OutputCustomType.Parameter("entrypoint") @Nullable String entrypoint,
+        @OutputCustomType.Parameter("environmentVariables") @Nullable List<EnvironmentVariableResponse> environmentVariables,
+        @OutputCustomType.Parameter("image") String image,
+        @OutputCustomType.Parameter("imageRegistryCredential") @Nullable ImageRegistryCredentialResponse imageRegistryCredential,
+        @OutputCustomType.Parameter("instanceView") ContainerInstanceViewResponse instanceView,
+        @OutputCustomType.Parameter("labels") @Nullable List<ContainerLabelResponse> labels,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("reliableCollectionsRefs") @Nullable List<ReliableCollectionsRefResponse> reliableCollectionsRefs,
+        @OutputCustomType.Parameter("resources") ResourceRequirementsResponse resources,
+        @OutputCustomType.Parameter("settings") @Nullable List<SettingResponse> settings,
+        @OutputCustomType.Parameter("volumeRefs") @Nullable List<VolumeReferenceResponse> volumeRefs,
+        @OutputCustomType.Parameter("volumes") @Nullable List<ApplicationScopedVolumeResponse> volumes) {
         this.commands = commands;
         this.diagnostics = diagnostics;
         this.endpoints = endpoints;

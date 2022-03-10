@@ -15,8 +15,8 @@ public final class RedisLinkedServerResponse {
      */
     private final String id;
 
-    @OutputCustomType.Constructor({"id"})
-    private RedisLinkedServerResponse(String id) {
+    @OutputCustomType.Constructor
+    private RedisLinkedServerResponse(@OutputCustomType.Parameter("id") String id) {
         this.id = id;
     }
 

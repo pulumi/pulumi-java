@@ -22,10 +22,10 @@ public final class ServicePrincipalPropertiesResponse {
      */
     private final @Nullable String secret;
 
-    @OutputCustomType.Constructor({"applicationId","secret"})
+    @OutputCustomType.Constructor
     private ServicePrincipalPropertiesResponse(
-        @Nullable String applicationId,
-        @Nullable String secret) {
+        @OutputCustomType.Parameter("applicationId") @Nullable String applicationId,
+        @OutputCustomType.Parameter("secret") @Nullable String secret) {
         this.applicationId = applicationId;
         this.secret = secret;
     }

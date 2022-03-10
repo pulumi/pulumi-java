@@ -13,8 +13,8 @@ import javax.annotation.Nullable;
 public final class ResourceProviderManifestPropertiesResponseRequestHeaderOptions {
     private final @Nullable String optInHeaders;
 
-    @OutputCustomType.Constructor({"optInHeaders"})
-    private ResourceProviderManifestPropertiesResponseRequestHeaderOptions(@Nullable String optInHeaders) {
+    @OutputCustomType.Constructor
+    private ResourceProviderManifestPropertiesResponseRequestHeaderOptions(@OutputCustomType.Parameter("optInHeaders") @Nullable String optInHeaders) {
         this.optInHeaders = optInHeaders;
     }
 

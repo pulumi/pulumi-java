@@ -15,8 +15,8 @@ public final class VideoMediaInfoResponse {
      */
     private final String segmentLength;
 
-    @OutputCustomType.Constructor({"segmentLength"})
-    private VideoMediaInfoResponse(String segmentLength) {
+    @OutputCustomType.Constructor
+    private VideoMediaInfoResponse(@OutputCustomType.Parameter("segmentLength") String segmentLength) {
         this.segmentLength = segmentLength;
     }
 

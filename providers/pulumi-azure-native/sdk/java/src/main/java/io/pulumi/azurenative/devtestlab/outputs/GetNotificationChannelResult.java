@@ -80,21 +80,21 @@ public final class GetNotificationChannelResult {
      */
     private final @Nullable String webHookUrl;
 
-    @OutputCustomType.Constructor({"createdDate","description","emailRecipient","events","id","location","name","notificationLocale","provisioningState","tags","type","uniqueIdentifier","webHookUrl"})
+    @OutputCustomType.Constructor
     private GetNotificationChannelResult(
-        String createdDate,
-        @Nullable String description,
-        @Nullable String emailRecipient,
-        @Nullable List<EventResponse> events,
-        String id,
-        @Nullable String location,
-        String name,
-        @Nullable String notificationLocale,
-        String provisioningState,
-        @Nullable Map<String,String> tags,
-        String type,
-        String uniqueIdentifier,
-        @Nullable String webHookUrl) {
+        @OutputCustomType.Parameter("createdDate") String createdDate,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("emailRecipient") @Nullable String emailRecipient,
+        @OutputCustomType.Parameter("events") @Nullable List<EventResponse> events,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("notificationLocale") @Nullable String notificationLocale,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("uniqueIdentifier") String uniqueIdentifier,
+        @OutputCustomType.Parameter("webHookUrl") @Nullable String webHookUrl) {
         this.createdDate = createdDate;
         this.description = description;
         this.emailRecipient = emailRecipient;

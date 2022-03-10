@@ -55,16 +55,16 @@ public final class GetWorkspaceResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"etag","id","location","name","properties","systemData","tags","type"})
+    @OutputCustomType.Constructor
     private GetWorkspaceResult(
-        @Nullable String etag,
-        String id,
-        @Nullable String location,
-        String name,
-        WorkspaceResponseProperties properties,
-        SystemDataResponse systemData,
-        @Nullable Map<String,String> tags,
-        String type) {
+        @OutputCustomType.Parameter("etag") @Nullable String etag,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("properties") WorkspaceResponseProperties properties,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type) {
         this.etag = etag;
         this.id = id;
         this.location = location;

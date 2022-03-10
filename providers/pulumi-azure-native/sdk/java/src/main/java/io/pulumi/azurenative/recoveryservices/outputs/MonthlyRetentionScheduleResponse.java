@@ -41,13 +41,13 @@ public final class MonthlyRetentionScheduleResponse {
      */
     private final @Nullable List<String> retentionTimes;
 
-    @OutputCustomType.Constructor({"retentionDuration","retentionScheduleDaily","retentionScheduleFormatType","retentionScheduleWeekly","retentionTimes"})
+    @OutputCustomType.Constructor
     private MonthlyRetentionScheduleResponse(
-        @Nullable RetentionDurationResponse retentionDuration,
-        @Nullable DailyRetentionFormatResponse retentionScheduleDaily,
-        @Nullable String retentionScheduleFormatType,
-        @Nullable WeeklyRetentionFormatResponse retentionScheduleWeekly,
-        @Nullable List<String> retentionTimes) {
+        @OutputCustomType.Parameter("retentionDuration") @Nullable RetentionDurationResponse retentionDuration,
+        @OutputCustomType.Parameter("retentionScheduleDaily") @Nullable DailyRetentionFormatResponse retentionScheduleDaily,
+        @OutputCustomType.Parameter("retentionScheduleFormatType") @Nullable String retentionScheduleFormatType,
+        @OutputCustomType.Parameter("retentionScheduleWeekly") @Nullable WeeklyRetentionFormatResponse retentionScheduleWeekly,
+        @OutputCustomType.Parameter("retentionTimes") @Nullable List<String> retentionTimes) {
         this.retentionDuration = retentionDuration;
         this.retentionScheduleDaily = retentionScheduleDaily;
         this.retentionScheduleFormatType = retentionScheduleFormatType;

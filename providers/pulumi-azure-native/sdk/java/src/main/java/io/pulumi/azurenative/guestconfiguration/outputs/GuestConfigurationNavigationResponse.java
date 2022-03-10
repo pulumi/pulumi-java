@@ -65,18 +65,18 @@ public final class GuestConfigurationNavigationResponse {
      */
     private final @Nullable String version;
 
-    @OutputCustomType.Constructor({"assignmentType","configurationParameter","configurationProtectedParameter","configurationSetting","contentHash","contentType","contentUri","kind","name","version"})
+    @OutputCustomType.Constructor
     private GuestConfigurationNavigationResponse(
-        @Nullable String assignmentType,
-        @Nullable List<ConfigurationParameterResponse> configurationParameter,
-        @Nullable List<ConfigurationParameterResponse> configurationProtectedParameter,
-        @Nullable ConfigurationSettingResponse configurationSetting,
-        @Nullable String contentHash,
-        String contentType,
-        @Nullable String contentUri,
-        @Nullable String kind,
-        @Nullable String name,
-        @Nullable String version) {
+        @OutputCustomType.Parameter("assignmentType") @Nullable String assignmentType,
+        @OutputCustomType.Parameter("configurationParameter") @Nullable List<ConfigurationParameterResponse> configurationParameter,
+        @OutputCustomType.Parameter("configurationProtectedParameter") @Nullable List<ConfigurationParameterResponse> configurationProtectedParameter,
+        @OutputCustomType.Parameter("configurationSetting") @Nullable ConfigurationSettingResponse configurationSetting,
+        @OutputCustomType.Parameter("contentHash") @Nullable String contentHash,
+        @OutputCustomType.Parameter("contentType") String contentType,
+        @OutputCustomType.Parameter("contentUri") @Nullable String contentUri,
+        @OutputCustomType.Parameter("kind") @Nullable String kind,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("version") @Nullable String version) {
         this.assignmentType = assignmentType;
         this.configurationParameter = configurationParameter;
         this.configurationProtectedParameter = configurationProtectedParameter;

@@ -38,13 +38,13 @@ public final class GetFileResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"etag","id","name","properties","type"})
+    @OutputCustomType.Constructor
     private GetFileResult(
-        @Nullable String etag,
-        String id,
-        String name,
-        ProjectFilePropertiesResponse properties,
-        String type) {
+        @OutputCustomType.Parameter("etag") @Nullable String etag,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("properties") ProjectFilePropertiesResponse properties,
+        @OutputCustomType.Parameter("type") String type) {
         this.etag = etag;
         this.id = id;
         this.name = name;

@@ -102,17 +102,17 @@ public final class ForEachActivityResponse {
      */
     private final @Nullable List<UserPropertyResponse> userProperties;
 
-    @OutputCustomType.Constructor({"activities","batchCount","dependsOn","description","isSequential","items","name","type","userProperties"})
+    @OutputCustomType.Constructor
     private ForEachActivityResponse(
-        List<Object> activities,
-        @Nullable Integer batchCount,
-        @Nullable List<ActivityDependencyResponse> dependsOn,
-        @Nullable String description,
-        @Nullable Boolean isSequential,
-        ExpressionResponse items,
-        String name,
-        String type,
-        @Nullable List<UserPropertyResponse> userProperties) {
+        @OutputCustomType.Parameter("activities") List<Object> activities,
+        @OutputCustomType.Parameter("batchCount") @Nullable Integer batchCount,
+        @OutputCustomType.Parameter("dependsOn") @Nullable List<ActivityDependencyResponse> dependsOn,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("isSequential") @Nullable Boolean isSequential,
+        @OutputCustomType.Parameter("items") ExpressionResponse items,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("userProperties") @Nullable List<UserPropertyResponse> userProperties) {
         this.activities = activities;
         this.batchCount = batchCount;
         this.dependsOn = dependsOn;

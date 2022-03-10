@@ -18,11 +18,11 @@ public final class ProviderRegistrationPropertiesResponseProviderHubMetadata {
     private final @Nullable List<ResourceProviderAuthorizationResponse> providerAuthorizations;
     private final @Nullable ProviderHubMetadataResponseThirdPartyProviderAuthorization thirdPartyProviderAuthorization;
 
-    @OutputCustomType.Constructor({"providerAuthentication","providerAuthorizations","thirdPartyProviderAuthorization"})
+    @OutputCustomType.Constructor
     private ProviderRegistrationPropertiesResponseProviderHubMetadata(
-        @Nullable ProviderHubMetadataResponseProviderAuthentication providerAuthentication,
-        @Nullable List<ResourceProviderAuthorizationResponse> providerAuthorizations,
-        @Nullable ProviderHubMetadataResponseThirdPartyProviderAuthorization thirdPartyProviderAuthorization) {
+        @OutputCustomType.Parameter("providerAuthentication") @Nullable ProviderHubMetadataResponseProviderAuthentication providerAuthentication,
+        @OutputCustomType.Parameter("providerAuthorizations") @Nullable List<ResourceProviderAuthorizationResponse> providerAuthorizations,
+        @OutputCustomType.Parameter("thirdPartyProviderAuthorization") @Nullable ProviderHubMetadataResponseThirdPartyProviderAuthorization thirdPartyProviderAuthorization) {
         this.providerAuthentication = providerAuthentication;
         this.providerAuthorizations = providerAuthorizations;
         this.thirdPartyProviderAuthorization = thirdPartyProviderAuthorization;

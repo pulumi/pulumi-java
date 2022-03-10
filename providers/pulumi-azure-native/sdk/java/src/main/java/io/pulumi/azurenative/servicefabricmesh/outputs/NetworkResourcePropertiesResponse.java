@@ -38,13 +38,13 @@ public final class NetworkResourcePropertiesResponse {
      */
     private final String statusDetails;
 
-    @OutputCustomType.Constructor({"description","kind","provisioningState","status","statusDetails"})
+    @OutputCustomType.Constructor
     private NetworkResourcePropertiesResponse(
-        @Nullable String description,
-        String kind,
-        String provisioningState,
-        String status,
-        String statusDetails) {
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("status") String status,
+        @OutputCustomType.Parameter("statusDetails") String statusDetails) {
         this.description = description;
         this.kind = kind;
         this.provisioningState = provisioningState;

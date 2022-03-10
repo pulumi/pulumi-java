@@ -59,17 +59,17 @@ public final class FactoryGitHubConfigurationResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"accountName","clientId","clientSecret","collaborationBranch","hostName","lastCommitId","repositoryName","rootFolder","type"})
+    @OutputCustomType.Constructor
     private FactoryGitHubConfigurationResponse(
-        String accountName,
-        @Nullable String clientId,
-        @Nullable GitHubClientSecretResponse clientSecret,
-        String collaborationBranch,
-        @Nullable String hostName,
-        @Nullable String lastCommitId,
-        String repositoryName,
-        String rootFolder,
-        String type) {
+        @OutputCustomType.Parameter("accountName") String accountName,
+        @OutputCustomType.Parameter("clientId") @Nullable String clientId,
+        @OutputCustomType.Parameter("clientSecret") @Nullable GitHubClientSecretResponse clientSecret,
+        @OutputCustomType.Parameter("collaborationBranch") String collaborationBranch,
+        @OutputCustomType.Parameter("hostName") @Nullable String hostName,
+        @OutputCustomType.Parameter("lastCommitId") @Nullable String lastCommitId,
+        @OutputCustomType.Parameter("repositoryName") String repositoryName,
+        @OutputCustomType.Parameter("rootFolder") String rootFolder,
+        @OutputCustomType.Parameter("type") String type) {
         this.accountName = accountName;
         this.clientId = clientId;
         this.clientSecret = clientSecret;

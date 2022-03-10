@@ -16,8 +16,8 @@ public final class PoolEndpointConfigurationResponse {
      */
     private final List<InboundNatPoolResponse> inboundNatPools;
 
-    @OutputCustomType.Constructor({"inboundNatPools"})
-    private PoolEndpointConfigurationResponse(List<InboundNatPoolResponse> inboundNatPools) {
+    @OutputCustomType.Constructor
+    private PoolEndpointConfigurationResponse(@OutputCustomType.Parameter("inboundNatPools") List<InboundNatPoolResponse> inboundNatPools) {
         this.inboundNatPools = inboundNatPools;
     }
 

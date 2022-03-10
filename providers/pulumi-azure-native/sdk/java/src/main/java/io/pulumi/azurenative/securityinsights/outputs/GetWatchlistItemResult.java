@@ -91,23 +91,23 @@ public final class GetWatchlistItemResult {
      */
     private final @Nullable String watchlistItemType;
 
-    @OutputCustomType.Constructor({"created","createdBy","entityMapping","etag","id","isDeleted","itemsKeyValue","name","systemData","tenantId","type","updated","updatedBy","watchlistItemId","watchlistItemType"})
+    @OutputCustomType.Constructor
     private GetWatchlistItemResult(
-        @Nullable String created,
-        @Nullable WatchlistUserInfoResponse createdBy,
-        @Nullable Object entityMapping,
-        @Nullable String etag,
-        String id,
-        @Nullable Boolean isDeleted,
-        Object itemsKeyValue,
-        String name,
-        SystemDataResponse systemData,
-        @Nullable String tenantId,
-        String type,
-        @Nullable String updated,
-        @Nullable WatchlistUserInfoResponse updatedBy,
-        @Nullable String watchlistItemId,
-        @Nullable String watchlistItemType) {
+        @OutputCustomType.Parameter("created") @Nullable String created,
+        @OutputCustomType.Parameter("createdBy") @Nullable WatchlistUserInfoResponse createdBy,
+        @OutputCustomType.Parameter("entityMapping") @Nullable Object entityMapping,
+        @OutputCustomType.Parameter("etag") @Nullable String etag,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("isDeleted") @Nullable Boolean isDeleted,
+        @OutputCustomType.Parameter("itemsKeyValue") Object itemsKeyValue,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("tenantId") @Nullable String tenantId,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("updated") @Nullable String updated,
+        @OutputCustomType.Parameter("updatedBy") @Nullable WatchlistUserInfoResponse updatedBy,
+        @OutputCustomType.Parameter("watchlistItemId") @Nullable String watchlistItemId,
+        @OutputCustomType.Parameter("watchlistItemType") @Nullable String watchlistItemType) {
         this.created = created;
         this.createdBy = createdBy;
         this.entityMapping = entityMapping;

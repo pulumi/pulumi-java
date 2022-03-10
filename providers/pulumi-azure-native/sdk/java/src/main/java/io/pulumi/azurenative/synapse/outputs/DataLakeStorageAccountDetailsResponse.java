@@ -22,10 +22,10 @@ public final class DataLakeStorageAccountDetailsResponse {
      */
     private final @Nullable String filesystem;
 
-    @OutputCustomType.Constructor({"accountUrl","filesystem"})
+    @OutputCustomType.Constructor
     private DataLakeStorageAccountDetailsResponse(
-        @Nullable String accountUrl,
-        @Nullable String filesystem) {
+        @OutputCustomType.Parameter("accountUrl") @Nullable String accountUrl,
+        @OutputCustomType.Parameter("filesystem") @Nullable String filesystem) {
         this.accountUrl = accountUrl;
         this.filesystem = filesystem;
     }

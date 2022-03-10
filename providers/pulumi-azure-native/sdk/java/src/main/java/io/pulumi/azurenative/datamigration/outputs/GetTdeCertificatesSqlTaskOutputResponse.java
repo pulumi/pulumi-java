@@ -23,10 +23,10 @@ public final class GetTdeCertificatesSqlTaskOutputResponse {
      */
     private final List<ReportableExceptionResponse> validationErrors;
 
-    @OutputCustomType.Constructor({"base64EncodedCertificates","validationErrors"})
+    @OutputCustomType.Constructor
     private GetTdeCertificatesSqlTaskOutputResponse(
-        Map<String,List<String>> base64EncodedCertificates,
-        List<ReportableExceptionResponse> validationErrors) {
+        @OutputCustomType.Parameter("base64EncodedCertificates") Map<String,List<String>> base64EncodedCertificates,
+        @OutputCustomType.Parameter("validationErrors") List<ReportableExceptionResponse> validationErrors) {
         this.base64EncodedCertificates = base64EncodedCertificates;
         this.validationErrors = validationErrors;
     }

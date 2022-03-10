@@ -37,13 +37,13 @@ public final class GetServerTrustGroupResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"groupMembers","id","name","trustScopes","type"})
+    @OutputCustomType.Constructor
     private GetServerTrustGroupResult(
-        List<ServerInfoResponse> groupMembers,
-        String id,
-        String name,
-        List<String> trustScopes,
-        String type) {
+        @OutputCustomType.Parameter("groupMembers") List<ServerInfoResponse> groupMembers,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("trustScopes") List<String> trustScopes,
+        @OutputCustomType.Parameter("type") String type) {
         this.groupMembers = groupMembers;
         this.id = id;
         this.name = name;

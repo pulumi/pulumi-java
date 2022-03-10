@@ -38,13 +38,13 @@ public final class ContinuousActionResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"duration","name","parameters","selectorId","type"})
+    @OutputCustomType.Constructor
     private ContinuousActionResponse(
-        String duration,
-        String name,
-        List<KeyValuePairResponse> parameters,
-        String selectorId,
-        String type) {
+        @OutputCustomType.Parameter("duration") String duration,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("parameters") List<KeyValuePairResponse> parameters,
+        @OutputCustomType.Parameter("selectorId") String selectorId,
+        @OutputCustomType.Parameter("type") String type) {
         this.duration = duration;
         this.name = name;
         this.parameters = parameters;

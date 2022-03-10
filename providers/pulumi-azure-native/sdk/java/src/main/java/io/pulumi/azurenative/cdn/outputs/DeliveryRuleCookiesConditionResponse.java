@@ -22,10 +22,10 @@ public final class DeliveryRuleCookiesConditionResponse {
      */
     private final CookiesMatchConditionParametersResponse parameters;
 
-    @OutputCustomType.Constructor({"name","parameters"})
+    @OutputCustomType.Constructor
     private DeliveryRuleCookiesConditionResponse(
-        String name,
-        CookiesMatchConditionParametersResponse parameters) {
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("parameters") CookiesMatchConditionParametersResponse parameters) {
         this.name = name;
         this.parameters = parameters;
     }

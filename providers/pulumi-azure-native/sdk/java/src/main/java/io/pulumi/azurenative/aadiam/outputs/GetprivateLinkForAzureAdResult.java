@@ -65,18 +65,18 @@ public final class GetprivateLinkForAzureAdResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"allTenants","id","name","ownerTenantId","resourceGroup","resourceName","subscriptionId","tags","tenants","type"})
+    @OutputCustomType.Constructor
     private GetprivateLinkForAzureAdResult(
-        @Nullable Boolean allTenants,
-        String id,
-        @Nullable String name,
-        @Nullable String ownerTenantId,
-        @Nullable String resourceGroup,
-        @Nullable String resourceName,
-        @Nullable String subscriptionId,
-        @Nullable Map<String,String> tags,
-        @Nullable List<String> tenants,
-        String type) {
+        @OutputCustomType.Parameter("allTenants") @Nullable Boolean allTenants,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("ownerTenantId") @Nullable String ownerTenantId,
+        @OutputCustomType.Parameter("resourceGroup") @Nullable String resourceGroup,
+        @OutputCustomType.Parameter("resourceName") @Nullable String resourceName,
+        @OutputCustomType.Parameter("subscriptionId") @Nullable String subscriptionId,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("tenants") @Nullable List<String> tenants,
+        @OutputCustomType.Parameter("type") String type) {
         this.allTenants = allTenants;
         this.id = id;
         this.name = name;

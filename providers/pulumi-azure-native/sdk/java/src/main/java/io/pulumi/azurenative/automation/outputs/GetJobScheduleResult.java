@@ -55,16 +55,16 @@ public final class GetJobScheduleResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"id","jobScheduleId","name","parameters","runOn","runbook","schedule","type"})
+    @OutputCustomType.Constructor
     private GetJobScheduleResult(
-        String id,
-        @Nullable String jobScheduleId,
-        String name,
-        @Nullable Map<String,String> parameters,
-        @Nullable String runOn,
-        @Nullable RunbookAssociationPropertyResponse runbook,
-        @Nullable ScheduleAssociationPropertyResponse schedule,
-        String type) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("jobScheduleId") @Nullable String jobScheduleId,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("parameters") @Nullable Map<String,String> parameters,
+        @OutputCustomType.Parameter("runOn") @Nullable String runOn,
+        @OutputCustomType.Parameter("runbook") @Nullable RunbookAssociationPropertyResponse runbook,
+        @OutputCustomType.Parameter("schedule") @Nullable ScheduleAssociationPropertyResponse schedule,
+        @OutputCustomType.Parameter("type") String type) {
         this.id = id;
         this.jobScheduleId = jobScheduleId;
         this.name = name;

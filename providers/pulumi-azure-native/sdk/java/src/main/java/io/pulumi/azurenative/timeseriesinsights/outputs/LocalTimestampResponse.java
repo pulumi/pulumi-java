@@ -23,10 +23,10 @@ public final class LocalTimestampResponse {
      */
     private final @Nullable LocalTimestampResponseTimeZoneOffset timeZoneOffset;
 
-    @OutputCustomType.Constructor({"format","timeZoneOffset"})
+    @OutputCustomType.Constructor
     private LocalTimestampResponse(
-        @Nullable String format,
-        @Nullable LocalTimestampResponseTimeZoneOffset timeZoneOffset) {
+        @OutputCustomType.Parameter("format") @Nullable String format,
+        @OutputCustomType.Parameter("timeZoneOffset") @Nullable LocalTimestampResponseTimeZoneOffset timeZoneOffset) {
         this.format = format;
         this.timeZoneOffset = timeZoneOffset;
     }

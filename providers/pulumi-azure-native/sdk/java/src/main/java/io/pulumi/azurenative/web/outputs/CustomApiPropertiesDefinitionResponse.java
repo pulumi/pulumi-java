@@ -79,20 +79,20 @@ public final class CustomApiPropertiesDefinitionResponse {
      */
     private final @Nullable WsdlDefinitionResponse wsdlDefinition;
 
-    @OutputCustomType.Constructor({"apiDefinitions","apiType","backendService","brandColor","capabilities","connectionParameters","description","displayName","iconUri","runtimeUrls","swagger","wsdlDefinition"})
+    @OutputCustomType.Constructor
     private CustomApiPropertiesDefinitionResponse(
-        @Nullable ApiResourceDefinitionsResponse apiDefinitions,
-        @Nullable String apiType,
-        @Nullable ApiResourceBackendServiceResponse backendService,
-        @Nullable String brandColor,
-        @Nullable List<String> capabilities,
-        @Nullable Map<String,ConnectionParameterResponse> connectionParameters,
-        @Nullable String description,
-        @Nullable String displayName,
-        @Nullable String iconUri,
-        @Nullable List<String> runtimeUrls,
-        @Nullable Object swagger,
-        @Nullable WsdlDefinitionResponse wsdlDefinition) {
+        @OutputCustomType.Parameter("apiDefinitions") @Nullable ApiResourceDefinitionsResponse apiDefinitions,
+        @OutputCustomType.Parameter("apiType") @Nullable String apiType,
+        @OutputCustomType.Parameter("backendService") @Nullable ApiResourceBackendServiceResponse backendService,
+        @OutputCustomType.Parameter("brandColor") @Nullable String brandColor,
+        @OutputCustomType.Parameter("capabilities") @Nullable List<String> capabilities,
+        @OutputCustomType.Parameter("connectionParameters") @Nullable Map<String,ConnectionParameterResponse> connectionParameters,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("displayName") @Nullable String displayName,
+        @OutputCustomType.Parameter("iconUri") @Nullable String iconUri,
+        @OutputCustomType.Parameter("runtimeUrls") @Nullable List<String> runtimeUrls,
+        @OutputCustomType.Parameter("swagger") @Nullable Object swagger,
+        @OutputCustomType.Parameter("wsdlDefinition") @Nullable WsdlDefinitionResponse wsdlDefinition) {
         this.apiDefinitions = apiDefinitions;
         this.apiType = apiType;
         this.backendService = backendService;

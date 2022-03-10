@@ -44,14 +44,14 @@ public final class GetLinkedServiceResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"id","identity","location","name","properties","type"})
+    @OutputCustomType.Constructor
     private GetLinkedServiceResult(
-        String id,
-        @Nullable IdentityResponse identity,
-        @Nullable String location,
-        String name,
-        LinkedServicePropsResponse properties,
-        String type) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("identity") @Nullable IdentityResponse identity,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("properties") LinkedServicePropsResponse properties,
+        @OutputCustomType.Parameter("type") String type) {
         this.id = id;
         this.identity = identity;
         this.location = location;

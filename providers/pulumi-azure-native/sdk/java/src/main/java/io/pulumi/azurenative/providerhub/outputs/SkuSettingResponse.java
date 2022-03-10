@@ -29,20 +29,20 @@ public final class SkuSettingResponse {
     private final @Nullable String size;
     private final @Nullable String tier;
 
-    @OutputCustomType.Constructor({"capabilities","capacity","costs","family","kind","locationInfo","locations","name","requiredFeatures","requiredQuotaIds","size","tier"})
+    @OutputCustomType.Constructor
     private SkuSettingResponse(
-        @Nullable List<SkuCapabilityResponse> capabilities,
-        @Nullable SkuSettingResponseCapacity capacity,
-        @Nullable List<SkuCostResponse> costs,
-        @Nullable String family,
-        @Nullable String kind,
-        @Nullable List<SkuLocationInfoResponse> locationInfo,
-        @Nullable List<String> locations,
-        String name,
-        @Nullable List<String> requiredFeatures,
-        @Nullable List<String> requiredQuotaIds,
-        @Nullable String size,
-        @Nullable String tier) {
+        @OutputCustomType.Parameter("capabilities") @Nullable List<SkuCapabilityResponse> capabilities,
+        @OutputCustomType.Parameter("capacity") @Nullable SkuSettingResponseCapacity capacity,
+        @OutputCustomType.Parameter("costs") @Nullable List<SkuCostResponse> costs,
+        @OutputCustomType.Parameter("family") @Nullable String family,
+        @OutputCustomType.Parameter("kind") @Nullable String kind,
+        @OutputCustomType.Parameter("locationInfo") @Nullable List<SkuLocationInfoResponse> locationInfo,
+        @OutputCustomType.Parameter("locations") @Nullable List<String> locations,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("requiredFeatures") @Nullable List<String> requiredFeatures,
+        @OutputCustomType.Parameter("requiredQuotaIds") @Nullable List<String> requiredQuotaIds,
+        @OutputCustomType.Parameter("size") @Nullable String size,
+        @OutputCustomType.Parameter("tier") @Nullable String tier) {
         this.capabilities = capabilities;
         this.capacity = capacity;
         this.costs = costs;

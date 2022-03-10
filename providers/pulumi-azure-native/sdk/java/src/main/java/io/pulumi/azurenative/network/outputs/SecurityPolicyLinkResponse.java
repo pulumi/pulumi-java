@@ -17,8 +17,8 @@ public final class SecurityPolicyLinkResponse {
      */
     private final @Nullable String id;
 
-    @OutputCustomType.Constructor({"id"})
-    private SecurityPolicyLinkResponse(@Nullable String id) {
+    @OutputCustomType.Constructor
+    private SecurityPolicyLinkResponse(@OutputCustomType.Parameter("id") @Nullable String id) {
         this.id = id;
     }
 

@@ -17,8 +17,8 @@ public final class PropertyUpdatesInProgressResponse {
      */
     private final @Nullable String targetTier;
 
-    @OutputCustomType.Constructor({"targetTier"})
-    private PropertyUpdatesInProgressResponse(@Nullable String targetTier) {
+    @OutputCustomType.Constructor
+    private PropertyUpdatesInProgressResponse(@OutputCustomType.Parameter("targetTier") @Nullable String targetTier) {
         this.targetTier = targetTier;
     }
 

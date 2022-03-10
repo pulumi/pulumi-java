@@ -32,12 +32,12 @@ public final class GraphEdgeResponse {
      */
     private final @Nullable String targetPortId;
 
-    @OutputCustomType.Constructor({"sourceNodeId","sourcePortId","targetNodeId","targetPortId"})
+    @OutputCustomType.Constructor
     private GraphEdgeResponse(
-        @Nullable String sourceNodeId,
-        @Nullable String sourcePortId,
-        @Nullable String targetNodeId,
-        @Nullable String targetPortId) {
+        @OutputCustomType.Parameter("sourceNodeId") @Nullable String sourceNodeId,
+        @OutputCustomType.Parameter("sourcePortId") @Nullable String sourcePortId,
+        @OutputCustomType.Parameter("targetNodeId") @Nullable String targetNodeId,
+        @OutputCustomType.Parameter("targetPortId") @Nullable String targetPortId) {
         this.sourceNodeId = sourceNodeId;
         this.sourcePortId = sourcePortId;
         this.targetNodeId = targetNodeId;

@@ -98,25 +98,25 @@ public final class MigrateSqlServerSqlDbSyncTaskOutputDatabaseLevelResponse {
      */
     private final String startedOn;
 
-    @OutputCustomType.Constructor({"appliedChanges","cdcDeleteCounter","cdcInsertCounter","cdcUpdateCounter","databaseName","endedOn","fullLoadCompletedTables","fullLoadErroredTables","fullLoadLoadingTables","fullLoadQueuedTables","id","incomingChanges","initializationCompleted","latency","migrationState","resultType","startedOn"})
+    @OutputCustomType.Constructor
     private MigrateSqlServerSqlDbSyncTaskOutputDatabaseLevelResponse(
-        Double appliedChanges,
-        Double cdcDeleteCounter,
-        Double cdcInsertCounter,
-        Double cdcUpdateCounter,
-        String databaseName,
-        String endedOn,
-        Double fullLoadCompletedTables,
-        Double fullLoadErroredTables,
-        Double fullLoadLoadingTables,
-        Double fullLoadQueuedTables,
-        String id,
-        Double incomingChanges,
-        Boolean initializationCompleted,
-        Double latency,
-        String migrationState,
-        String resultType,
-        String startedOn) {
+        @OutputCustomType.Parameter("appliedChanges") Double appliedChanges,
+        @OutputCustomType.Parameter("cdcDeleteCounter") Double cdcDeleteCounter,
+        @OutputCustomType.Parameter("cdcInsertCounter") Double cdcInsertCounter,
+        @OutputCustomType.Parameter("cdcUpdateCounter") Double cdcUpdateCounter,
+        @OutputCustomType.Parameter("databaseName") String databaseName,
+        @OutputCustomType.Parameter("endedOn") String endedOn,
+        @OutputCustomType.Parameter("fullLoadCompletedTables") Double fullLoadCompletedTables,
+        @OutputCustomType.Parameter("fullLoadErroredTables") Double fullLoadErroredTables,
+        @OutputCustomType.Parameter("fullLoadLoadingTables") Double fullLoadLoadingTables,
+        @OutputCustomType.Parameter("fullLoadQueuedTables") Double fullLoadQueuedTables,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("incomingChanges") Double incomingChanges,
+        @OutputCustomType.Parameter("initializationCompleted") Boolean initializationCompleted,
+        @OutputCustomType.Parameter("latency") Double latency,
+        @OutputCustomType.Parameter("migrationState") String migrationState,
+        @OutputCustomType.Parameter("resultType") String resultType,
+        @OutputCustomType.Parameter("startedOn") String startedOn) {
         this.appliedChanges = appliedChanges;
         this.cdcDeleteCounter = cdcDeleteCounter;
         this.cdcInsertCounter = cdcInsertCounter;

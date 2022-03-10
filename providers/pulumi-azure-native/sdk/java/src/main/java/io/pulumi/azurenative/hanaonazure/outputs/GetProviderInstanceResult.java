@@ -42,14 +42,14 @@ public final class GetProviderInstanceResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"id","metadata","name","properties","provisioningState","type"})
+    @OutputCustomType.Constructor
     private GetProviderInstanceResult(
-        String id,
-        @Nullable String metadata,
-        String name,
-        String properties,
-        String provisioningState,
-        String type) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("metadata") @Nullable String metadata,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("properties") String properties,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("type") String type) {
         this.id = id;
         this.metadata = metadata;
         this.name = name;

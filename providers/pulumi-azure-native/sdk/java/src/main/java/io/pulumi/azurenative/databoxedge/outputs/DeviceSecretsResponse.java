@@ -52,16 +52,16 @@ public final class DeviceSecretsResponse {
      */
     private final @Nullable SecretResponse systemVolumeBitLockerRecoveryKey;
 
-    @OutputCustomType.Constructor({"bmcDefaultUserPassword","hcsDataVolumeBitLockerExternalKey","hcsInternalVolumeBitLockerExternalKey","rotateKeyForDataVolumeBitlocker","rotateKeysForSedDrivesSerialized","sedEncryptionExternalKey","sedEncryptionExternalKeyId","systemVolumeBitLockerRecoveryKey"})
+    @OutputCustomType.Constructor
     private DeviceSecretsResponse(
-        @Nullable SecretResponse bmcDefaultUserPassword,
-        @Nullable SecretResponse hcsDataVolumeBitLockerExternalKey,
-        @Nullable SecretResponse hcsInternalVolumeBitLockerExternalKey,
-        @Nullable SecretResponse rotateKeyForDataVolumeBitlocker,
-        @Nullable SecretResponse rotateKeysForSedDrivesSerialized,
-        @Nullable SecretResponse sedEncryptionExternalKey,
-        @Nullable SecretResponse sedEncryptionExternalKeyId,
-        @Nullable SecretResponse systemVolumeBitLockerRecoveryKey) {
+        @OutputCustomType.Parameter("bmcDefaultUserPassword") @Nullable SecretResponse bmcDefaultUserPassword,
+        @OutputCustomType.Parameter("hcsDataVolumeBitLockerExternalKey") @Nullable SecretResponse hcsDataVolumeBitLockerExternalKey,
+        @OutputCustomType.Parameter("hcsInternalVolumeBitLockerExternalKey") @Nullable SecretResponse hcsInternalVolumeBitLockerExternalKey,
+        @OutputCustomType.Parameter("rotateKeyForDataVolumeBitlocker") @Nullable SecretResponse rotateKeyForDataVolumeBitlocker,
+        @OutputCustomType.Parameter("rotateKeysForSedDrivesSerialized") @Nullable SecretResponse rotateKeysForSedDrivesSerialized,
+        @OutputCustomType.Parameter("sedEncryptionExternalKey") @Nullable SecretResponse sedEncryptionExternalKey,
+        @OutputCustomType.Parameter("sedEncryptionExternalKeyId") @Nullable SecretResponse sedEncryptionExternalKeyId,
+        @OutputCustomType.Parameter("systemVolumeBitLockerRecoveryKey") @Nullable SecretResponse systemVolumeBitLockerRecoveryKey) {
         this.bmcDefaultUserPassword = bmcDefaultUserPassword;
         this.hcsDataVolumeBitLockerExternalKey = hcsDataVolumeBitLockerExternalKey;
         this.hcsInternalVolumeBitLockerExternalKey = hcsInternalVolumeBitLockerExternalKey;

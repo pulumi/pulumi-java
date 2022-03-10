@@ -85,22 +85,22 @@ public final class AzureDataLakeStoreReadSettingsResponse {
      */
     private final @Nullable Object wildcardFolderPath;
 
-    @OutputCustomType.Constructor({"deleteFilesAfterCompletion","disableMetricsCollection","enablePartitionDiscovery","fileListPath","listAfter","listBefore","maxConcurrentConnections","modifiedDatetimeEnd","modifiedDatetimeStart","partitionRootPath","recursive","type","wildcardFileName","wildcardFolderPath"})
+    @OutputCustomType.Constructor
     private AzureDataLakeStoreReadSettingsResponse(
-        @Nullable Object deleteFilesAfterCompletion,
-        @Nullable Object disableMetricsCollection,
-        @Nullable Boolean enablePartitionDiscovery,
-        @Nullable Object fileListPath,
-        @Nullable Object listAfter,
-        @Nullable Object listBefore,
-        @Nullable Object maxConcurrentConnections,
-        @Nullable Object modifiedDatetimeEnd,
-        @Nullable Object modifiedDatetimeStart,
-        @Nullable Object partitionRootPath,
-        @Nullable Object recursive,
-        String type,
-        @Nullable Object wildcardFileName,
-        @Nullable Object wildcardFolderPath) {
+        @OutputCustomType.Parameter("deleteFilesAfterCompletion") @Nullable Object deleteFilesAfterCompletion,
+        @OutputCustomType.Parameter("disableMetricsCollection") @Nullable Object disableMetricsCollection,
+        @OutputCustomType.Parameter("enablePartitionDiscovery") @Nullable Boolean enablePartitionDiscovery,
+        @OutputCustomType.Parameter("fileListPath") @Nullable Object fileListPath,
+        @OutputCustomType.Parameter("listAfter") @Nullable Object listAfter,
+        @OutputCustomType.Parameter("listBefore") @Nullable Object listBefore,
+        @OutputCustomType.Parameter("maxConcurrentConnections") @Nullable Object maxConcurrentConnections,
+        @OutputCustomType.Parameter("modifiedDatetimeEnd") @Nullable Object modifiedDatetimeEnd,
+        @OutputCustomType.Parameter("modifiedDatetimeStart") @Nullable Object modifiedDatetimeStart,
+        @OutputCustomType.Parameter("partitionRootPath") @Nullable Object partitionRootPath,
+        @OutputCustomType.Parameter("recursive") @Nullable Object recursive,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("wildcardFileName") @Nullable Object wildcardFileName,
+        @OutputCustomType.Parameter("wildcardFolderPath") @Nullable Object wildcardFolderPath) {
         this.deleteFilesAfterCompletion = deleteFilesAfterCompletion;
         this.disableMetricsCollection = disableMetricsCollection;
         this.enablePartitionDiscovery = enablePartitionDiscovery;

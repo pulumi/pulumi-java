@@ -27,11 +27,11 @@ public final class UploadWatermarkResponse {
      */
     private final @Nullable String usages;
 
-    @OutputCustomType.Constructor({"logs","metrics","usages"})
+    @OutputCustomType.Constructor
     private UploadWatermarkResponse(
-        @Nullable String logs,
-        @Nullable String metrics,
-        @Nullable String usages) {
+        @OutputCustomType.Parameter("logs") @Nullable String logs,
+        @OutputCustomType.Parameter("metrics") @Nullable String metrics,
+        @OutputCustomType.Parameter("usages") @Nullable String usages) {
         this.logs = logs;
         this.metrics = metrics;
         this.usages = usages;

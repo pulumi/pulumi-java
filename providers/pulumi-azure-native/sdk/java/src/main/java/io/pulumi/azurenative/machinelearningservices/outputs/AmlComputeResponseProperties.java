@@ -101,24 +101,24 @@ public final class AmlComputeResponseProperties {
      */
     private final @Nullable String vmSize;
 
-    @OutputCustomType.Constructor({"allocationState","allocationStateTransitionTime","currentNodeCount","enableNodePublicIp","errors","isolatedNetwork","nodeStateCounts","osType","remoteLoginPortPublicAccess","scaleSettings","subnet","targetNodeCount","userAccountCredentials","virtualMachineImage","vmPriority","vmSize"})
+    @OutputCustomType.Constructor
     private AmlComputeResponseProperties(
-        String allocationState,
-        String allocationStateTransitionTime,
-        Integer currentNodeCount,
-        @Nullable Boolean enableNodePublicIp,
-        List<MachineLearningServiceErrorResponse> errors,
-        @Nullable Boolean isolatedNetwork,
-        NodeStateCountsResponse nodeStateCounts,
-        @Nullable String osType,
-        @Nullable String remoteLoginPortPublicAccess,
-        @Nullable ScaleSettingsResponse scaleSettings,
-        @Nullable ResourceIdResponse subnet,
-        Integer targetNodeCount,
-        @Nullable UserAccountCredentialsResponse userAccountCredentials,
-        @Nullable VirtualMachineImageResponse virtualMachineImage,
-        @Nullable String vmPriority,
-        @Nullable String vmSize) {
+        @OutputCustomType.Parameter("allocationState") String allocationState,
+        @OutputCustomType.Parameter("allocationStateTransitionTime") String allocationStateTransitionTime,
+        @OutputCustomType.Parameter("currentNodeCount") Integer currentNodeCount,
+        @OutputCustomType.Parameter("enableNodePublicIp") @Nullable Boolean enableNodePublicIp,
+        @OutputCustomType.Parameter("errors") List<MachineLearningServiceErrorResponse> errors,
+        @OutputCustomType.Parameter("isolatedNetwork") @Nullable Boolean isolatedNetwork,
+        @OutputCustomType.Parameter("nodeStateCounts") NodeStateCountsResponse nodeStateCounts,
+        @OutputCustomType.Parameter("osType") @Nullable String osType,
+        @OutputCustomType.Parameter("remoteLoginPortPublicAccess") @Nullable String remoteLoginPortPublicAccess,
+        @OutputCustomType.Parameter("scaleSettings") @Nullable ScaleSettingsResponse scaleSettings,
+        @OutputCustomType.Parameter("subnet") @Nullable ResourceIdResponse subnet,
+        @OutputCustomType.Parameter("targetNodeCount") Integer targetNodeCount,
+        @OutputCustomType.Parameter("userAccountCredentials") @Nullable UserAccountCredentialsResponse userAccountCredentials,
+        @OutputCustomType.Parameter("virtualMachineImage") @Nullable VirtualMachineImageResponse virtualMachineImage,
+        @OutputCustomType.Parameter("vmPriority") @Nullable String vmPriority,
+        @OutputCustomType.Parameter("vmSize") @Nullable String vmSize) {
         this.allocationState = allocationState;
         this.allocationStateTransitionTime = allocationStateTransitionTime;
         this.currentNodeCount = currentNodeCount;

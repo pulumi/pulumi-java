@@ -46,14 +46,14 @@ public final class SsisEnvironmentResponse {
      */
     private final @Nullable List<SsisVariableResponse> variables;
 
-    @OutputCustomType.Constructor({"description","folderId","id","name","type","variables"})
+    @OutputCustomType.Constructor
     private SsisEnvironmentResponse(
-        @Nullable String description,
-        @Nullable Double folderId,
-        @Nullable Double id,
-        @Nullable String name,
-        String type,
-        @Nullable List<SsisVariableResponse> variables) {
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("folderId") @Nullable Double folderId,
+        @OutputCustomType.Parameter("id") @Nullable Double id,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("variables") @Nullable List<SsisVariableResponse> variables) {
         this.description = description;
         this.folderId = folderId;
         this.id = id;

@@ -44,14 +44,14 @@ public final class GetPrivateEndpointConnectionResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"id","name","privateEndpoint","privateLinkServiceConnectionState","provisioningState","type"})
+    @OutputCustomType.Constructor
     private GetPrivateEndpointConnectionResult(
-        String id,
-        String name,
-        @Nullable PrivateEndpointPropertyResponse privateEndpoint,
-        @Nullable PrivateLinkServiceConnectionStatePropertyResponse privateLinkServiceConnectionState,
-        String provisioningState,
-        String type) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("privateEndpoint") @Nullable PrivateEndpointPropertyResponse privateEndpoint,
+        @OutputCustomType.Parameter("privateLinkServiceConnectionState") @Nullable PrivateLinkServiceConnectionStatePropertyResponse privateLinkServiceConnectionState,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("type") String type) {
         this.id = id;
         this.name = name;
         this.privateEndpoint = privateEndpoint;

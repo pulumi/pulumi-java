@@ -79,20 +79,20 @@ public final class GetAutomationRuleResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"actions","createdBy","createdTimeUtc","displayName","etag","id","lastModifiedBy","lastModifiedTimeUtc","name","order","triggeringLogic","type"})
+    @OutputCustomType.Constructor
     private GetAutomationRuleResult(
-        List<Either<AutomationRuleModifyPropertiesActionResponse,AutomationRuleRunPlaybookActionResponse>> actions,
-        ClientInfoResponse createdBy,
-        String createdTimeUtc,
-        String displayName,
-        @Nullable String etag,
-        String id,
-        ClientInfoResponse lastModifiedBy,
-        String lastModifiedTimeUtc,
-        String name,
-        Integer order,
-        AutomationRuleTriggeringLogicResponse triggeringLogic,
-        String type) {
+        @OutputCustomType.Parameter("actions") List<Either<AutomationRuleModifyPropertiesActionResponse,AutomationRuleRunPlaybookActionResponse>> actions,
+        @OutputCustomType.Parameter("createdBy") ClientInfoResponse createdBy,
+        @OutputCustomType.Parameter("createdTimeUtc") String createdTimeUtc,
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("etag") @Nullable String etag,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("lastModifiedBy") ClientInfoResponse lastModifiedBy,
+        @OutputCustomType.Parameter("lastModifiedTimeUtc") String lastModifiedTimeUtc,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("order") Integer order,
+        @OutputCustomType.Parameter("triggeringLogic") AutomationRuleTriggeringLogicResponse triggeringLogic,
+        @OutputCustomType.Parameter("type") String type) {
         this.actions = actions;
         this.createdBy = createdBy;
         this.createdTimeUtc = createdTimeUtc;

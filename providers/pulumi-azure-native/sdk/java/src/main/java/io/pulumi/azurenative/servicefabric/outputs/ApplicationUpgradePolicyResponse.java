@@ -45,14 +45,14 @@ public final class ApplicationUpgradePolicyResponse {
      */
     private final @Nullable String upgradeReplicaSetCheckTimeout;
 
-    @OutputCustomType.Constructor({"applicationHealthPolicy","forceRestart","recreateApplication","rollingUpgradeMonitoringPolicy","upgradeMode","upgradeReplicaSetCheckTimeout"})
+    @OutputCustomType.Constructor
     private ApplicationUpgradePolicyResponse(
-        @Nullable ArmApplicationHealthPolicyResponse applicationHealthPolicy,
-        @Nullable Boolean forceRestart,
-        @Nullable Boolean recreateApplication,
-        @Nullable ArmRollingUpgradeMonitoringPolicyResponse rollingUpgradeMonitoringPolicy,
-        @Nullable String upgradeMode,
-        @Nullable String upgradeReplicaSetCheckTimeout) {
+        @OutputCustomType.Parameter("applicationHealthPolicy") @Nullable ArmApplicationHealthPolicyResponse applicationHealthPolicy,
+        @OutputCustomType.Parameter("forceRestart") @Nullable Boolean forceRestart,
+        @OutputCustomType.Parameter("recreateApplication") @Nullable Boolean recreateApplication,
+        @OutputCustomType.Parameter("rollingUpgradeMonitoringPolicy") @Nullable ArmRollingUpgradeMonitoringPolicyResponse rollingUpgradeMonitoringPolicy,
+        @OutputCustomType.Parameter("upgradeMode") @Nullable String upgradeMode,
+        @OutputCustomType.Parameter("upgradeReplicaSetCheckTimeout") @Nullable String upgradeReplicaSetCheckTimeout) {
         this.applicationHealthPolicy = applicationHealthPolicy;
         this.forceRestart = forceRestart;
         this.recreateApplication = recreateApplication;

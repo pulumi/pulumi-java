@@ -29,11 +29,11 @@ public final class EventResponse {
      */
     private final @Nullable String id;
 
-    @OutputCustomType.Constructor({"eventRequestMessage","eventResponseMessage","id"})
+    @OutputCustomType.Constructor
     private EventResponse(
-        @Nullable EventRequestMessageResponse eventRequestMessage,
-        @Nullable EventResponseMessageResponse eventResponseMessage,
-        @Nullable String id) {
+        @OutputCustomType.Parameter("eventRequestMessage") @Nullable EventRequestMessageResponse eventRequestMessage,
+        @OutputCustomType.Parameter("eventResponseMessage") @Nullable EventResponseMessageResponse eventResponseMessage,
+        @OutputCustomType.Parameter("id") @Nullable String id) {
         this.eventRequestMessage = eventRequestMessage;
         this.eventResponseMessage = eventResponseMessage;
         this.id = id;

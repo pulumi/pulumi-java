@@ -20,11 +20,11 @@ public final class AutoScaleRunResponse {
      */
     private final @Nullable String results;
 
-    @OutputCustomType.Constructor({"error","evaluationTime","results"})
+    @OutputCustomType.Constructor
     private AutoScaleRunResponse(
-        @Nullable AutoScaleRunErrorResponse error,
-        String evaluationTime,
-        @Nullable String results) {
+        @OutputCustomType.Parameter("error") @Nullable AutoScaleRunErrorResponse error,
+        @OutputCustomType.Parameter("evaluationTime") String evaluationTime,
+        @OutputCustomType.Parameter("results") @Nullable String results) {
         this.error = error;
         this.evaluationTime = evaluationTime;
         this.results = results;

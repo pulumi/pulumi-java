@@ -24,10 +24,10 @@ public final class HubPublicIPAddressesResponse {
      */
     private final @Nullable Integer count;
 
-    @OutputCustomType.Constructor({"addresses","count"})
+    @OutputCustomType.Constructor
     private HubPublicIPAddressesResponse(
-        @Nullable List<AzureFirewallPublicIPAddressResponse> addresses,
-        @Nullable Integer count) {
+        @OutputCustomType.Parameter("addresses") @Nullable List<AzureFirewallPublicIPAddressResponse> addresses,
+        @OutputCustomType.Parameter("count") @Nullable Integer count) {
         this.addresses = addresses;
         this.count = count;
     }

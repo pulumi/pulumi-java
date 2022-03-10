@@ -87,23 +87,23 @@ public final class GetAFDOriginResult {
      */
     private final @Nullable Integer weight;
 
-    @OutputCustomType.Constructor({"azureOrigin","deploymentStatus","enabledState","hostName","httpPort","httpsPort","id","name","originHostHeader","priority","provisioningState","sharedPrivateLinkResource","systemData","type","weight"})
+    @OutputCustomType.Constructor
     private GetAFDOriginResult(
-        @Nullable ResourceReferenceResponse azureOrigin,
-        String deploymentStatus,
-        @Nullable String enabledState,
-        String hostName,
-        @Nullable Integer httpPort,
-        @Nullable Integer httpsPort,
-        String id,
-        String name,
-        @Nullable String originHostHeader,
-        @Nullable Integer priority,
-        String provisioningState,
-        @Nullable SharedPrivateLinkResourcePropertiesResponse sharedPrivateLinkResource,
-        SystemDataResponse systemData,
-        String type,
-        @Nullable Integer weight) {
+        @OutputCustomType.Parameter("azureOrigin") @Nullable ResourceReferenceResponse azureOrigin,
+        @OutputCustomType.Parameter("deploymentStatus") String deploymentStatus,
+        @OutputCustomType.Parameter("enabledState") @Nullable String enabledState,
+        @OutputCustomType.Parameter("hostName") String hostName,
+        @OutputCustomType.Parameter("httpPort") @Nullable Integer httpPort,
+        @OutputCustomType.Parameter("httpsPort") @Nullable Integer httpsPort,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("originHostHeader") @Nullable String originHostHeader,
+        @OutputCustomType.Parameter("priority") @Nullable Integer priority,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("sharedPrivateLinkResource") @Nullable SharedPrivateLinkResourcePropertiesResponse sharedPrivateLinkResource,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("weight") @Nullable Integer weight) {
         this.azureOrigin = azureOrigin;
         this.deploymentStatus = deploymentStatus;
         this.enabledState = enabledState;

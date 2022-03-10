@@ -20,10 +20,10 @@ public final class HealthBotPropertiesResponse {
      */
     private final String provisioningState;
 
-    @OutputCustomType.Constructor({"botManagementPortalLink","provisioningState"})
+    @OutputCustomType.Constructor
     private HealthBotPropertiesResponse(
-        String botManagementPortalLink,
-        String provisioningState) {
+        @OutputCustomType.Parameter("botManagementPortalLink") String botManagementPortalLink,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState) {
         this.botManagementPortalLink = botManagementPortalLink;
         this.provisioningState = provisioningState;
     }

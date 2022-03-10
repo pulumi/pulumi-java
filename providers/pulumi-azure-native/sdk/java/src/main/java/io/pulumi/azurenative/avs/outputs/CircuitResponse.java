@@ -30,12 +30,12 @@ public final class CircuitResponse {
      */
     private final String secondarySubnet;
 
-    @OutputCustomType.Constructor({"expressRouteID","expressRoutePrivatePeeringID","primarySubnet","secondarySubnet"})
+    @OutputCustomType.Constructor
     private CircuitResponse(
-        String expressRouteID,
-        String expressRoutePrivatePeeringID,
-        String primarySubnet,
-        String secondarySubnet) {
+        @OutputCustomType.Parameter("expressRouteID") String expressRouteID,
+        @OutputCustomType.Parameter("expressRoutePrivatePeeringID") String expressRoutePrivatePeeringID,
+        @OutputCustomType.Parameter("primarySubnet") String primarySubnet,
+        @OutputCustomType.Parameter("secondarySubnet") String secondarySubnet) {
         this.expressRouteID = expressRouteID;
         this.expressRoutePrivatePeeringID = expressRoutePrivatePeeringID;
         this.primarySubnet = primarySubnet;

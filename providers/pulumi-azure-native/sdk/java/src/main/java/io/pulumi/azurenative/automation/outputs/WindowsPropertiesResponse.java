@@ -33,12 +33,12 @@ public final class WindowsPropertiesResponse {
      */
     private final @Nullable String rebootSetting;
 
-    @OutputCustomType.Constructor({"excludedKbNumbers","includedKbNumbers","includedUpdateClassifications","rebootSetting"})
+    @OutputCustomType.Constructor
     private WindowsPropertiesResponse(
-        @Nullable List<String> excludedKbNumbers,
-        @Nullable List<String> includedKbNumbers,
-        @Nullable String includedUpdateClassifications,
-        @Nullable String rebootSetting) {
+        @OutputCustomType.Parameter("excludedKbNumbers") @Nullable List<String> excludedKbNumbers,
+        @OutputCustomType.Parameter("includedKbNumbers") @Nullable List<String> includedKbNumbers,
+        @OutputCustomType.Parameter("includedUpdateClassifications") @Nullable String includedUpdateClassifications,
+        @OutputCustomType.Parameter("rebootSetting") @Nullable String rebootSetting) {
         this.excludedKbNumbers = excludedKbNumbers;
         this.includedKbNumbers = includedKbNumbers;
         this.includedUpdateClassifications = includedUpdateClassifications;

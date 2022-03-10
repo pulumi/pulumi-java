@@ -81,21 +81,21 @@ public final class GetIntegrationAccountMapResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"changedTime","content","contentLink","contentType","createdTime","id","location","mapType","metadata","name","parametersSchema","tags","type"})
+    @OutputCustomType.Constructor
     private GetIntegrationAccountMapResult(
-        String changedTime,
-        @Nullable String content,
-        ContentLinkResponse contentLink,
-        @Nullable String contentType,
-        String createdTime,
-        String id,
-        @Nullable String location,
-        String mapType,
-        @Nullable Object metadata,
-        String name,
-        @Nullable IntegrationAccountMapPropertiesResponseParametersSchema parametersSchema,
-        @Nullable Map<String,String> tags,
-        String type) {
+        @OutputCustomType.Parameter("changedTime") String changedTime,
+        @OutputCustomType.Parameter("content") @Nullable String content,
+        @OutputCustomType.Parameter("contentLink") ContentLinkResponse contentLink,
+        @OutputCustomType.Parameter("contentType") @Nullable String contentType,
+        @OutputCustomType.Parameter("createdTime") String createdTime,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("mapType") String mapType,
+        @OutputCustomType.Parameter("metadata") @Nullable Object metadata,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("parametersSchema") @Nullable IntegrationAccountMapPropertiesResponseParametersSchema parametersSchema,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type) {
         this.changedTime = changedTime;
         this.content = content;
         this.contentLink = contentLink;

@@ -22,10 +22,10 @@ public final class ManagementGroupPathElementResponse {
      */
     private final @Nullable String name;
 
-    @OutputCustomType.Constructor({"displayName","name"})
+    @OutputCustomType.Constructor
     private ManagementGroupPathElementResponse(
-        @Nullable String displayName,
-        @Nullable String name) {
+        @OutputCustomType.Parameter("displayName") @Nullable String displayName,
+        @OutputCustomType.Parameter("name") @Nullable String name) {
         this.displayName = displayName;
         this.name = name;
     }

@@ -30,12 +30,12 @@ public final class SmsReceiverResponse {
      */
     private final String status;
 
-    @OutputCustomType.Constructor({"countryCode","name","phoneNumber","status"})
+    @OutputCustomType.Constructor
     private SmsReceiverResponse(
-        String countryCode,
-        String name,
-        String phoneNumber,
-        String status) {
+        @OutputCustomType.Parameter("countryCode") String countryCode,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("phoneNumber") String phoneNumber,
+        @OutputCustomType.Parameter("status") String status) {
         this.countryCode = countryCode;
         this.name = name;
         this.phoneNumber = phoneNumber;

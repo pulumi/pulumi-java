@@ -25,11 +25,11 @@ public final class AzureActiveDirectoryAppResponse {
      */
     private final String tenantId;
 
-    @OutputCustomType.Constructor({"appKey","applicationId","tenantId"})
+    @OutputCustomType.Constructor
     private AzureActiveDirectoryAppResponse(
-        String appKey,
-        String applicationId,
-        String tenantId) {
+        @OutputCustomType.Parameter("appKey") String appKey,
+        @OutputCustomType.Parameter("applicationId") String applicationId,
+        @OutputCustomType.Parameter("tenantId") String tenantId) {
         this.appKey = appKey;
         this.applicationId = applicationId;
         this.tenantId = tenantId;

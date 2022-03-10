@@ -60,17 +60,17 @@ public final class GetCapacityReservationGroupResult {
      */
     private final @Nullable List<String> zones;
 
-    @OutputCustomType.Constructor({"capacityReservations","id","instanceView","location","name","tags","type","virtualMachinesAssociated","zones"})
+    @OutputCustomType.Constructor
     private GetCapacityReservationGroupResult(
-        List<SubResourceReadOnlyResponse> capacityReservations,
-        String id,
-        CapacityReservationGroupInstanceViewResponse instanceView,
-        String location,
-        String name,
-        @Nullable Map<String,String> tags,
-        String type,
-        List<SubResourceReadOnlyResponse> virtualMachinesAssociated,
-        @Nullable List<String> zones) {
+        @OutputCustomType.Parameter("capacityReservations") List<SubResourceReadOnlyResponse> capacityReservations,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("instanceView") CapacityReservationGroupInstanceViewResponse instanceView,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("virtualMachinesAssociated") List<SubResourceReadOnlyResponse> virtualMachinesAssociated,
+        @OutputCustomType.Parameter("zones") @Nullable List<String> zones) {
         this.capacityReservations = capacityReservations;
         this.id = id;
         this.instanceView = instanceView;

@@ -25,11 +25,11 @@ public final class PredictionResponseMappings {
      */
     private final String score;
 
-    @OutputCustomType.Constructor({"grade","reason","score"})
+    @OutputCustomType.Constructor
     private PredictionResponseMappings(
-        String grade,
-        String reason,
-        String score) {
+        @OutputCustomType.Parameter("grade") String grade,
+        @OutputCustomType.Parameter("reason") String reason,
+        @OutputCustomType.Parameter("score") String score) {
         this.grade = grade;
         this.reason = reason;
         this.score = score;

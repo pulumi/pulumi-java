@@ -37,13 +37,13 @@ public final class GetCapabilityResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"id","name","properties","systemData","type"})
+    @OutputCustomType.Constructor
     private GetCapabilityResult(
-        String id,
-        String name,
-        CapabilityPropertiesResponse properties,
-        SystemDataResponse systemData,
-        String type) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("properties") CapabilityPropertiesResponse properties,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("type") String type) {
         this.id = id;
         this.name = name;
         this.properties = properties;

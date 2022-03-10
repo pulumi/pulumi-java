@@ -34,12 +34,12 @@ public final class FrontDoorManagedRuleOverrideResponse {
      */
     private final String ruleId;
 
-    @OutputCustomType.Constructor({"action","enabledState","exclusions","ruleId"})
+    @OutputCustomType.Constructor
     private FrontDoorManagedRuleOverrideResponse(
-        @Nullable String action,
-        @Nullable String enabledState,
-        @Nullable List<ManagedRuleExclusionResponse> exclusions,
-        String ruleId) {
+        @OutputCustomType.Parameter("action") @Nullable String action,
+        @OutputCustomType.Parameter("enabledState") @Nullable String enabledState,
+        @OutputCustomType.Parameter("exclusions") @Nullable List<ManagedRuleExclusionResponse> exclusions,
+        @OutputCustomType.Parameter("ruleId") String ruleId) {
         this.action = action;
         this.enabledState = enabledState;
         this.exclusions = exclusions;

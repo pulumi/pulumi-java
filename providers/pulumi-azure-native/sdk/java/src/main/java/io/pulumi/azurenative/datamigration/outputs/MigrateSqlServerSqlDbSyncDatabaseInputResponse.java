@@ -53,16 +53,16 @@ public final class MigrateSqlServerSqlDbSyncDatabaseInputResponse {
      */
     private final @Nullable Map<String,String> targetSetting;
 
-    @OutputCustomType.Constructor({"id","migrationSetting","name","schemaName","sourceSetting","tableMap","targetDatabaseName","targetSetting"})
+    @OutputCustomType.Constructor
     private MigrateSqlServerSqlDbSyncDatabaseInputResponse(
-        @Nullable String id,
-        @Nullable Map<String,String> migrationSetting,
-        @Nullable String name,
-        @Nullable String schemaName,
-        @Nullable Map<String,String> sourceSetting,
-        @Nullable Map<String,String> tableMap,
-        @Nullable String targetDatabaseName,
-        @Nullable Map<String,String> targetSetting) {
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("migrationSetting") @Nullable Map<String,String> migrationSetting,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("schemaName") @Nullable String schemaName,
+        @OutputCustomType.Parameter("sourceSetting") @Nullable Map<String,String> sourceSetting,
+        @OutputCustomType.Parameter("tableMap") @Nullable Map<String,String> tableMap,
+        @OutputCustomType.Parameter("targetDatabaseName") @Nullable String targetDatabaseName,
+        @OutputCustomType.Parameter("targetSetting") @Nullable Map<String,String> targetSetting) {
         this.id = id;
         this.migrationSetting = migrationSetting;
         this.name = name;

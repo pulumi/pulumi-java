@@ -44,14 +44,14 @@ public final class GetServiceRunnerResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"id","identity","location","name","tags","type"})
+    @OutputCustomType.Constructor
     private GetServiceRunnerResult(
-        String id,
-        @Nullable IdentityPropertiesResponse identity,
-        @Nullable String location,
-        String name,
-        @Nullable Map<String,String> tags,
-        String type) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("identity") @Nullable IdentityPropertiesResponse identity,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type) {
         this.id = id;
         this.identity = identity;
         this.location = location;

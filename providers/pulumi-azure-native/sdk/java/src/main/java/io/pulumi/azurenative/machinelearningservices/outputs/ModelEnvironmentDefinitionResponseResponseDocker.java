@@ -28,11 +28,11 @@ public final class ModelEnvironmentDefinitionResponseResponseDocker {
      */
     private final @Nullable ModelDockerSectionResponseResponseBaseImageRegistry baseImageRegistry;
 
-    @OutputCustomType.Constructor({"baseDockerfile","baseImage","baseImageRegistry"})
+    @OutputCustomType.Constructor
     private ModelEnvironmentDefinitionResponseResponseDocker(
-        @Nullable String baseDockerfile,
-        @Nullable String baseImage,
-        @Nullable ModelDockerSectionResponseResponseBaseImageRegistry baseImageRegistry) {
+        @OutputCustomType.Parameter("baseDockerfile") @Nullable String baseDockerfile,
+        @OutputCustomType.Parameter("baseImage") @Nullable String baseImage,
+        @OutputCustomType.Parameter("baseImageRegistry") @Nullable ModelDockerSectionResponseResponseBaseImageRegistry baseImageRegistry) {
         this.baseDockerfile = baseDockerfile;
         this.baseImage = baseImage;
         this.baseImageRegistry = baseImageRegistry;

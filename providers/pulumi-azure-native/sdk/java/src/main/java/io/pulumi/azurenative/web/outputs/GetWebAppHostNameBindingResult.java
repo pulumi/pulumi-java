@@ -77,21 +77,21 @@ public final class GetWebAppHostNameBindingResult {
      */
     private final String virtualIP;
 
-    @OutputCustomType.Constructor({"azureResourceName","azureResourceType","customHostNameDnsRecordType","domainId","hostNameType","id","kind","name","siteName","sslState","thumbprint","type","virtualIP"})
+    @OutputCustomType.Constructor
     private GetWebAppHostNameBindingResult(
-        @Nullable String azureResourceName,
-        @Nullable String azureResourceType,
-        @Nullable String customHostNameDnsRecordType,
-        @Nullable String domainId,
-        @Nullable String hostNameType,
-        String id,
-        @Nullable String kind,
-        String name,
-        @Nullable String siteName,
-        @Nullable String sslState,
-        @Nullable String thumbprint,
-        String type,
-        String virtualIP) {
+        @OutputCustomType.Parameter("azureResourceName") @Nullable String azureResourceName,
+        @OutputCustomType.Parameter("azureResourceType") @Nullable String azureResourceType,
+        @OutputCustomType.Parameter("customHostNameDnsRecordType") @Nullable String customHostNameDnsRecordType,
+        @OutputCustomType.Parameter("domainId") @Nullable String domainId,
+        @OutputCustomType.Parameter("hostNameType") @Nullable String hostNameType,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("kind") @Nullable String kind,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("siteName") @Nullable String siteName,
+        @OutputCustomType.Parameter("sslState") @Nullable String sslState,
+        @OutputCustomType.Parameter("thumbprint") @Nullable String thumbprint,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("virtualIP") String virtualIP) {
         this.azureResourceName = azureResourceName;
         this.azureResourceType = azureResourceType;
         this.customHostNameDnsRecordType = customHostNameDnsRecordType;

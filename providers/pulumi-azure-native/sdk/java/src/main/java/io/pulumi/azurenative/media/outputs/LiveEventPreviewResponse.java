@@ -40,13 +40,13 @@ public final class LiveEventPreviewResponse {
      */
     private final @Nullable String streamingPolicyName;
 
-    @OutputCustomType.Constructor({"accessControl","alternativeMediaId","endpoints","previewLocator","streamingPolicyName"})
+    @OutputCustomType.Constructor
     private LiveEventPreviewResponse(
-        @Nullable LiveEventPreviewAccessControlResponse accessControl,
-        @Nullable String alternativeMediaId,
-        @Nullable List<LiveEventEndpointResponse> endpoints,
-        @Nullable String previewLocator,
-        @Nullable String streamingPolicyName) {
+        @OutputCustomType.Parameter("accessControl") @Nullable LiveEventPreviewAccessControlResponse accessControl,
+        @OutputCustomType.Parameter("alternativeMediaId") @Nullable String alternativeMediaId,
+        @OutputCustomType.Parameter("endpoints") @Nullable List<LiveEventEndpointResponse> endpoints,
+        @OutputCustomType.Parameter("previewLocator") @Nullable String previewLocator,
+        @OutputCustomType.Parameter("streamingPolicyName") @Nullable String streamingPolicyName) {
         this.accessControl = accessControl;
         this.alternativeMediaId = alternativeMediaId;
         this.endpoints = endpoints;

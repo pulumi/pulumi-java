@@ -87,22 +87,22 @@ public final class GetGatewayResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"description","destinationNetwork","http","id","ipAddress","location","name","provisioningState","sourceNetwork","status","statusDetails","tags","tcp","type"})
+    @OutputCustomType.Constructor
     private GetGatewayResult(
-        @Nullable String description,
-        NetworkRefResponse destinationNetwork,
-        @Nullable List<HttpConfigResponse> http,
-        String id,
-        String ipAddress,
-        String location,
-        String name,
-        String provisioningState,
-        NetworkRefResponse sourceNetwork,
-        String status,
-        String statusDetails,
-        @Nullable Map<String,String> tags,
-        @Nullable List<TcpConfigResponse> tcp,
-        String type) {
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("destinationNetwork") NetworkRefResponse destinationNetwork,
+        @OutputCustomType.Parameter("http") @Nullable List<HttpConfigResponse> http,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("ipAddress") String ipAddress,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("sourceNetwork") NetworkRefResponse sourceNetwork,
+        @OutputCustomType.Parameter("status") String status,
+        @OutputCustomType.Parameter("statusDetails") String statusDetails,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("tcp") @Nullable List<TcpConfigResponse> tcp,
+        @OutputCustomType.Parameter("type") String type) {
         this.description = description;
         this.destinationNetwork = destinationNetwork;
         this.http = http;

@@ -30,12 +30,12 @@ public final class SqlDedicatedGatewayRegionalServiceResourceResponse {
      */
     private final String status;
 
-    @OutputCustomType.Constructor({"location","name","sqlDedicatedGatewayEndpoint","status"})
+    @OutputCustomType.Constructor
     private SqlDedicatedGatewayRegionalServiceResourceResponse(
-        String location,
-        String name,
-        String sqlDedicatedGatewayEndpoint,
-        String status) {
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("sqlDedicatedGatewayEndpoint") String sqlDedicatedGatewayEndpoint,
+        @OutputCustomType.Parameter("status") String status) {
         this.location = location;
         this.name = name;
         this.sqlDedicatedGatewayEndpoint = sqlDedicatedGatewayEndpoint;

@@ -30,11 +30,11 @@ public final class TriggerPropertiesResponse {
      */
     private final @Nullable List<TimerTriggerResponse> timerTriggers;
 
-    @OutputCustomType.Constructor({"baseImageTrigger","sourceTriggers","timerTriggers"})
+    @OutputCustomType.Constructor
     private TriggerPropertiesResponse(
-        @Nullable BaseImageTriggerResponse baseImageTrigger,
-        @Nullable List<SourceTriggerResponse> sourceTriggers,
-        @Nullable List<TimerTriggerResponse> timerTriggers) {
+        @OutputCustomType.Parameter("baseImageTrigger") @Nullable BaseImageTriggerResponse baseImageTrigger,
+        @OutputCustomType.Parameter("sourceTriggers") @Nullable List<SourceTriggerResponse> sourceTriggers,
+        @OutputCustomType.Parameter("timerTriggers") @Nullable List<TimerTriggerResponse> timerTriggers) {
         this.baseImageTrigger = baseImageTrigger;
         this.sourceTriggers = sourceTriggers;
         this.timerTriggers = timerTriggers;

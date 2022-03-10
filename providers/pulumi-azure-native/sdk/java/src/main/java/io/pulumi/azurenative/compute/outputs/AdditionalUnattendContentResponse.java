@@ -32,12 +32,12 @@ public final class AdditionalUnattendContentResponse {
      */
     private final @Nullable String settingName;
 
-    @OutputCustomType.Constructor({"componentName","content","passName","settingName"})
+    @OutputCustomType.Constructor
     private AdditionalUnattendContentResponse(
-        @Nullable String componentName,
-        @Nullable String content,
-        @Nullable String passName,
-        @Nullable String settingName) {
+        @OutputCustomType.Parameter("componentName") @Nullable String componentName,
+        @OutputCustomType.Parameter("content") @Nullable String content,
+        @OutputCustomType.Parameter("passName") @Nullable String passName,
+        @OutputCustomType.Parameter("settingName") @Nullable String settingName) {
         this.componentName = componentName;
         this.content = content;
         this.passName = passName;

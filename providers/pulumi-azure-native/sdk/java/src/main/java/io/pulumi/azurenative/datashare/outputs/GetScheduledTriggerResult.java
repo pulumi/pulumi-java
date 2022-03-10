@@ -74,20 +74,20 @@ public final class GetScheduledTriggerResult {
      */
     private final String userName;
 
-    @OutputCustomType.Constructor({"createdAt","id","kind","name","provisioningState","recurrenceInterval","synchronizationMode","synchronizationTime","systemData","triggerStatus","type","userName"})
+    @OutputCustomType.Constructor
     private GetScheduledTriggerResult(
-        String createdAt,
-        String id,
-        String kind,
-        String name,
-        String provisioningState,
-        String recurrenceInterval,
-        @Nullable String synchronizationMode,
-        String synchronizationTime,
-        SystemDataResponse systemData,
-        String triggerStatus,
-        String type,
-        String userName) {
+        @OutputCustomType.Parameter("createdAt") String createdAt,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("recurrenceInterval") String recurrenceInterval,
+        @OutputCustomType.Parameter("synchronizationMode") @Nullable String synchronizationMode,
+        @OutputCustomType.Parameter("synchronizationTime") String synchronizationTime,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("triggerStatus") String triggerStatus,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("userName") String userName) {
         this.createdAt = createdAt;
         this.id = id;
         this.kind = kind;

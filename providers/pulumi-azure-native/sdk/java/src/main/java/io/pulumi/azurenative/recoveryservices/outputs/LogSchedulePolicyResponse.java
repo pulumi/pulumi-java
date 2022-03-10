@@ -24,10 +24,10 @@ public final class LogSchedulePolicyResponse {
      */
     private final String schedulePolicyType;
 
-    @OutputCustomType.Constructor({"scheduleFrequencyInMins","schedulePolicyType"})
+    @OutputCustomType.Constructor
     private LogSchedulePolicyResponse(
-        @Nullable Integer scheduleFrequencyInMins,
-        String schedulePolicyType) {
+        @OutputCustomType.Parameter("scheduleFrequencyInMins") @Nullable Integer scheduleFrequencyInMins,
+        @OutputCustomType.Parameter("schedulePolicyType") String schedulePolicyType) {
         this.scheduleFrequencyInMins = scheduleFrequencyInMins;
         this.schedulePolicyType = schedulePolicyType;
     }

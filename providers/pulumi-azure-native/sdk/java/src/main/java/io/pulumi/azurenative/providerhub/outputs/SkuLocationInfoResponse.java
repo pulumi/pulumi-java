@@ -19,13 +19,13 @@ public final class SkuLocationInfoResponse {
     private final @Nullable List<SkuZoneDetailResponse> zoneDetails;
     private final @Nullable List<String> zones;
 
-    @OutputCustomType.Constructor({"extendedLocations","location","type","zoneDetails","zones"})
+    @OutputCustomType.Constructor
     private SkuLocationInfoResponse(
-        @Nullable List<String> extendedLocations,
-        String location,
-        @Nullable String type,
-        @Nullable List<SkuZoneDetailResponse> zoneDetails,
-        @Nullable List<String> zones) {
+        @OutputCustomType.Parameter("extendedLocations") @Nullable List<String> extendedLocations,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("type") @Nullable String type,
+        @OutputCustomType.Parameter("zoneDetails") @Nullable List<SkuZoneDetailResponse> zoneDetails,
+        @OutputCustomType.Parameter("zones") @Nullable List<String> zones) {
         this.extendedLocations = extendedLocations;
         this.location = location;
         this.type = type;

@@ -66,21 +66,21 @@ public final class GetCertificateResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"deleteCertificateError","etag","format","id","name","previousProvisioningState","previousProvisioningStateTransitionTime","provisioningState","provisioningStateTransitionTime","publicData","thumbprint","thumbprintAlgorithm","type"})
+    @OutputCustomType.Constructor
     private GetCertificateResult(
-        DeleteCertificateErrorResponse deleteCertificateError,
-        String etag,
-        @Nullable String format,
-        String id,
-        String name,
-        String previousProvisioningState,
-        String previousProvisioningStateTransitionTime,
-        String provisioningState,
-        String provisioningStateTransitionTime,
-        String publicData,
-        @Nullable String thumbprint,
-        @Nullable String thumbprintAlgorithm,
-        String type) {
+        @OutputCustomType.Parameter("deleteCertificateError") DeleteCertificateErrorResponse deleteCertificateError,
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("format") @Nullable String format,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("previousProvisioningState") String previousProvisioningState,
+        @OutputCustomType.Parameter("previousProvisioningStateTransitionTime") String previousProvisioningStateTransitionTime,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("provisioningStateTransitionTime") String provisioningStateTransitionTime,
+        @OutputCustomType.Parameter("publicData") String publicData,
+        @OutputCustomType.Parameter("thumbprint") @Nullable String thumbprint,
+        @OutputCustomType.Parameter("thumbprintAlgorithm") @Nullable String thumbprintAlgorithm,
+        @OutputCustomType.Parameter("type") String type) {
         this.deleteCertificateError = deleteCertificateError;
         this.etag = etag;
         this.format = format;

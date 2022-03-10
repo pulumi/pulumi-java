@@ -23,10 +23,10 @@ public final class BootDiagnosticsResponse {
      */
     private final @Nullable String storageUri;
 
-    @OutputCustomType.Constructor({"enabled","storageUri"})
+    @OutputCustomType.Constructor
     private BootDiagnosticsResponse(
-        @Nullable Boolean enabled,
-        @Nullable String storageUri) {
+        @OutputCustomType.Parameter("enabled") @Nullable Boolean enabled,
+        @OutputCustomType.Parameter("storageUri") @Nullable String storageUri) {
         this.enabled = enabled;
         this.storageUri = storageUri;
     }

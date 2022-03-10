@@ -42,13 +42,13 @@ public final class DeepCreatedOriginGroupResponse {
      */
     private final @Nullable Integer trafficRestorationTimeToHealedOrNewEndpointsInMinutes;
 
-    @OutputCustomType.Constructor({"healthProbeSettings","name","origins","responseBasedOriginErrorDetectionSettings","trafficRestorationTimeToHealedOrNewEndpointsInMinutes"})
+    @OutputCustomType.Constructor
     private DeepCreatedOriginGroupResponse(
-        @Nullable HealthProbeParametersResponse healthProbeSettings,
-        String name,
-        List<ResourceReferenceResponse> origins,
-        @Nullable ResponseBasedOriginErrorDetectionParametersResponse responseBasedOriginErrorDetectionSettings,
-        @Nullable Integer trafficRestorationTimeToHealedOrNewEndpointsInMinutes) {
+        @OutputCustomType.Parameter("healthProbeSettings") @Nullable HealthProbeParametersResponse healthProbeSettings,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("origins") List<ResourceReferenceResponse> origins,
+        @OutputCustomType.Parameter("responseBasedOriginErrorDetectionSettings") @Nullable ResponseBasedOriginErrorDetectionParametersResponse responseBasedOriginErrorDetectionSettings,
+        @OutputCustomType.Parameter("trafficRestorationTimeToHealedOrNewEndpointsInMinutes") @Nullable Integer trafficRestorationTimeToHealedOrNewEndpointsInMinutes) {
         this.healthProbeSettings = healthProbeSettings;
         this.name = name;
         this.origins = origins;

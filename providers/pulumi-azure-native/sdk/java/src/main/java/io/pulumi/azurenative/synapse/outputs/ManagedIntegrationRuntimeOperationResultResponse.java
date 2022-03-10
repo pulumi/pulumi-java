@@ -41,14 +41,14 @@ public final class ManagedIntegrationRuntimeOperationResultResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"activityId","errorCode","parameters","result","startTime","type"})
+    @OutputCustomType.Constructor
     private ManagedIntegrationRuntimeOperationResultResponse(
-        String activityId,
-        String errorCode,
-        List<String> parameters,
-        String result,
-        String startTime,
-        String type) {
+        @OutputCustomType.Parameter("activityId") String activityId,
+        @OutputCustomType.Parameter("errorCode") String errorCode,
+        @OutputCustomType.Parameter("parameters") List<String> parameters,
+        @OutputCustomType.Parameter("result") String result,
+        @OutputCustomType.Parameter("startTime") String startTime,
+        @OutputCustomType.Parameter("type") String type) {
         this.activityId = activityId;
         this.errorCode = errorCode;
         this.parameters = parameters;

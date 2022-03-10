@@ -40,13 +40,13 @@ public final class MLAssistConfigurationResponse {
      */
     private final ComputeBindingResponse trainingComputeBinding;
 
-    @OutputCustomType.Constructor({"inferencingComputeBinding","mlAssistEnabled","modelNamePrefix","prelabelAccuracyThreshold","trainingComputeBinding"})
+    @OutputCustomType.Constructor
     private MLAssistConfigurationResponse(
-        ComputeBindingResponse inferencingComputeBinding,
-        @Nullable Boolean mlAssistEnabled,
-        String modelNamePrefix,
-        @Nullable Double prelabelAccuracyThreshold,
-        ComputeBindingResponse trainingComputeBinding) {
+        @OutputCustomType.Parameter("inferencingComputeBinding") ComputeBindingResponse inferencingComputeBinding,
+        @OutputCustomType.Parameter("mlAssistEnabled") @Nullable Boolean mlAssistEnabled,
+        @OutputCustomType.Parameter("modelNamePrefix") String modelNamePrefix,
+        @OutputCustomType.Parameter("prelabelAccuracyThreshold") @Nullable Double prelabelAccuracyThreshold,
+        @OutputCustomType.Parameter("trainingComputeBinding") ComputeBindingResponse trainingComputeBinding) {
         this.inferencingComputeBinding = inferencingComputeBinding;
         this.mlAssistEnabled = mlAssistEnabled;
         this.modelNamePrefix = modelNamePrefix;

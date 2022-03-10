@@ -116,28 +116,28 @@ public final class GetSubscriptionResult {
      */
     private final String updatedAt;
 
-    @OutputCustomType.Constructor({"accessedAt","autoDeleteOnIdle","countDetails","createdAt","deadLetteringOnFilterEvaluationExceptions","deadLetteringOnMessageExpiration","defaultMessageTimeToLive","duplicateDetectionHistoryTimeWindow","enableBatchedOperations","forwardDeadLetteredMessagesTo","forwardTo","id","lockDuration","maxDeliveryCount","messageCount","name","requiresSession","status","type","updatedAt"})
+    @OutputCustomType.Constructor
     private GetSubscriptionResult(
-        String accessedAt,
-        @Nullable String autoDeleteOnIdle,
-        MessageCountDetailsResponse countDetails,
-        String createdAt,
-        @Nullable Boolean deadLetteringOnFilterEvaluationExceptions,
-        @Nullable Boolean deadLetteringOnMessageExpiration,
-        @Nullable String defaultMessageTimeToLive,
-        @Nullable String duplicateDetectionHistoryTimeWindow,
-        @Nullable Boolean enableBatchedOperations,
-        @Nullable String forwardDeadLetteredMessagesTo,
-        @Nullable String forwardTo,
-        String id,
-        @Nullable String lockDuration,
-        @Nullable Integer maxDeliveryCount,
-        Double messageCount,
-        String name,
-        @Nullable Boolean requiresSession,
-        @Nullable String status,
-        String type,
-        String updatedAt) {
+        @OutputCustomType.Parameter("accessedAt") String accessedAt,
+        @OutputCustomType.Parameter("autoDeleteOnIdle") @Nullable String autoDeleteOnIdle,
+        @OutputCustomType.Parameter("countDetails") MessageCountDetailsResponse countDetails,
+        @OutputCustomType.Parameter("createdAt") String createdAt,
+        @OutputCustomType.Parameter("deadLetteringOnFilterEvaluationExceptions") @Nullable Boolean deadLetteringOnFilterEvaluationExceptions,
+        @OutputCustomType.Parameter("deadLetteringOnMessageExpiration") @Nullable Boolean deadLetteringOnMessageExpiration,
+        @OutputCustomType.Parameter("defaultMessageTimeToLive") @Nullable String defaultMessageTimeToLive,
+        @OutputCustomType.Parameter("duplicateDetectionHistoryTimeWindow") @Nullable String duplicateDetectionHistoryTimeWindow,
+        @OutputCustomType.Parameter("enableBatchedOperations") @Nullable Boolean enableBatchedOperations,
+        @OutputCustomType.Parameter("forwardDeadLetteredMessagesTo") @Nullable String forwardDeadLetteredMessagesTo,
+        @OutputCustomType.Parameter("forwardTo") @Nullable String forwardTo,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("lockDuration") @Nullable String lockDuration,
+        @OutputCustomType.Parameter("maxDeliveryCount") @Nullable Integer maxDeliveryCount,
+        @OutputCustomType.Parameter("messageCount") Double messageCount,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("requiresSession") @Nullable Boolean requiresSession,
+        @OutputCustomType.Parameter("status") @Nullable String status,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("updatedAt") String updatedAt) {
         this.accessedAt = accessedAt;
         this.autoDeleteOnIdle = autoDeleteOnIdle;
         this.countDetails = countDetails;

@@ -103,25 +103,25 @@ public final class GetAssignmentResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"additionalData","assignedComponent","assignedStandard","description","displayName","effect","etag","expiresOn","id","kind","location","metadata","name","scope","systemData","tags","type"})
+    @OutputCustomType.Constructor
     private GetAssignmentResult(
-        @Nullable AssignmentPropertiesResponseAdditionalData additionalData,
-        @Nullable AssignedComponentItemResponse assignedComponent,
-        @Nullable AssignedStandardItemResponse assignedStandard,
-        @Nullable String description,
-        @Nullable String displayName,
-        @Nullable String effect,
-        @Nullable String etag,
-        @Nullable String expiresOn,
-        String id,
-        @Nullable String kind,
-        @Nullable String location,
-        @Nullable Object metadata,
-        String name,
-        @Nullable String scope,
-        SystemDataResponse systemData,
-        @Nullable Map<String,String> tags,
-        String type) {
+        @OutputCustomType.Parameter("additionalData") @Nullable AssignmentPropertiesResponseAdditionalData additionalData,
+        @OutputCustomType.Parameter("assignedComponent") @Nullable AssignedComponentItemResponse assignedComponent,
+        @OutputCustomType.Parameter("assignedStandard") @Nullable AssignedStandardItemResponse assignedStandard,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("displayName") @Nullable String displayName,
+        @OutputCustomType.Parameter("effect") @Nullable String effect,
+        @OutputCustomType.Parameter("etag") @Nullable String etag,
+        @OutputCustomType.Parameter("expiresOn") @Nullable String expiresOn,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("kind") @Nullable String kind,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("metadata") @Nullable Object metadata,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("scope") @Nullable String scope,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type) {
         this.additionalData = additionalData;
         this.assignedComponent = assignedComponent;
         this.assignedStandard = assignedStandard;

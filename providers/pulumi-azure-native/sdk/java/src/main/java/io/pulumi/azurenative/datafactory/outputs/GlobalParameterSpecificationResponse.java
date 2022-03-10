@@ -21,10 +21,10 @@ public final class GlobalParameterSpecificationResponse {
      */
     private final Object value;
 
-    @OutputCustomType.Constructor({"type","value"})
+    @OutputCustomType.Constructor
     private GlobalParameterSpecificationResponse(
-        String type,
-        Object value) {
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("value") Object value) {
         this.type = type;
         this.value = value;
     }

@@ -15,8 +15,8 @@ public final class ListStorageAccountSASResult {
      */
     private final String accountSasToken;
 
-    @OutputCustomType.Constructor({"accountSasToken"})
-    private ListStorageAccountSASResult(String accountSasToken) {
+    @OutputCustomType.Constructor
+    private ListStorageAccountSASResult(@OutputCustomType.Parameter("accountSasToken") String accountSasToken) {
         this.accountSasToken = accountSasToken;
     }
 

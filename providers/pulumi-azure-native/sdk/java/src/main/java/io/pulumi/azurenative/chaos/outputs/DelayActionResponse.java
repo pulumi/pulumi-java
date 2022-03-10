@@ -26,11 +26,11 @@ public final class DelayActionResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"duration","name","type"})
+    @OutputCustomType.Constructor
     private DelayActionResponse(
-        String duration,
-        String name,
-        String type) {
+        @OutputCustomType.Parameter("duration") String duration,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("type") String type) {
         this.duration = duration;
         this.name = name;
         this.type = type;

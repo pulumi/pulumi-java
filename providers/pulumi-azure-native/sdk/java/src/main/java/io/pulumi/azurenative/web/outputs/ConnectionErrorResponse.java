@@ -53,16 +53,16 @@ public final class ConnectionErrorResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"code","etag","id","location","message","name","tags","type"})
+    @OutputCustomType.Constructor
     private ConnectionErrorResponse(
-        @Nullable String code,
-        @Nullable String etag,
-        String id,
-        @Nullable String location,
-        @Nullable String message,
-        String name,
-        @Nullable Map<String,String> tags,
-        String type) {
+        @OutputCustomType.Parameter("code") @Nullable String code,
+        @OutputCustomType.Parameter("etag") @Nullable String etag,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("message") @Nullable String message,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type) {
         this.code = code;
         this.etag = etag;
         this.id = id;

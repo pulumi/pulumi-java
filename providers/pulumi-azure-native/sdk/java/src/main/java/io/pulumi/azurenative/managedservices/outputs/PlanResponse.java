@@ -30,12 +30,12 @@ public final class PlanResponse {
      */
     private final String version;
 
-    @OutputCustomType.Constructor({"name","product","publisher","version"})
+    @OutputCustomType.Constructor
     private PlanResponse(
-        String name,
-        String product,
-        String publisher,
-        String version) {
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("product") String product,
+        @OutputCustomType.Parameter("publisher") String publisher,
+        @OutputCustomType.Parameter("version") String version) {
         this.name = name;
         this.product = product;
         this.publisher = publisher;

@@ -20,10 +20,10 @@ public final class IncidentLabelResponse {
      */
     private final String labelType;
 
-    @OutputCustomType.Constructor({"labelName","labelType"})
+    @OutputCustomType.Constructor
     private IncidentLabelResponse(
-        String labelName,
-        String labelType) {
+        @OutputCustomType.Parameter("labelName") String labelName,
+        @OutputCustomType.Parameter("labelType") String labelType) {
         this.labelName = labelName;
         this.labelType = labelType;
     }

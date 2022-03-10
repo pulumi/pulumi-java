@@ -33,12 +33,12 @@ public final class SelectVideoTrackByAttributeResponse {
      */
     private final String odataType;
 
-    @OutputCustomType.Constructor({"attribute","filter","filterValue","odataType"})
+    @OutputCustomType.Constructor
     private SelectVideoTrackByAttributeResponse(
-        String attribute,
-        String filter,
-        @Nullable String filterValue,
-        String odataType) {
+        @OutputCustomType.Parameter("attribute") String attribute,
+        @OutputCustomType.Parameter("filter") String filter,
+        @OutputCustomType.Parameter("filterValue") @Nullable String filterValue,
+        @OutputCustomType.Parameter("odataType") String odataType) {
         this.attribute = attribute;
         this.filter = filter;
         this.filterValue = filterValue;

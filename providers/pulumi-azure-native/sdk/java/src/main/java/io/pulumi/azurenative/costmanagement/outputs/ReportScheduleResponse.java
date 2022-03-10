@@ -28,11 +28,11 @@ public final class ReportScheduleResponse {
      */
     private final @Nullable String status;
 
-    @OutputCustomType.Constructor({"recurrence","recurrencePeriod","status"})
+    @OutputCustomType.Constructor
     private ReportScheduleResponse(
-        String recurrence,
-        @Nullable ReportRecurrencePeriodResponse recurrencePeriod,
-        @Nullable String status) {
+        @OutputCustomType.Parameter("recurrence") String recurrence,
+        @OutputCustomType.Parameter("recurrencePeriod") @Nullable ReportRecurrencePeriodResponse recurrencePeriod,
+        @OutputCustomType.Parameter("status") @Nullable String status) {
         this.recurrence = recurrence;
         this.recurrencePeriod = recurrencePeriod;
         this.status = status;

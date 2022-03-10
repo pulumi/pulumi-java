@@ -43,14 +43,14 @@ public final class DenylistCustomAlertRuleResponse {
      */
     private final String valueType;
 
-    @OutputCustomType.Constructor({"denylistValues","description","displayName","isEnabled","ruleType","valueType"})
+    @OutputCustomType.Constructor
     private DenylistCustomAlertRuleResponse(
-        List<String> denylistValues,
-        String description,
-        String displayName,
-        Boolean isEnabled,
-        String ruleType,
-        String valueType) {
+        @OutputCustomType.Parameter("denylistValues") List<String> denylistValues,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("isEnabled") Boolean isEnabled,
+        @OutputCustomType.Parameter("ruleType") String ruleType,
+        @OutputCustomType.Parameter("valueType") String valueType) {
         this.denylistValues = denylistValues;
         this.description = description;
         this.displayName = displayName;

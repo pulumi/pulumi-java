@@ -23,10 +23,10 @@ public final class SizeAvailabilityResponse {
      */
     private final @Nullable String sizeCategory;
 
-    @OutputCustomType.Constructor({"isAvailable","sizeCategory"})
+    @OutputCustomType.Constructor
     private SizeAvailabilityResponse(
-        @Nullable Boolean isAvailable,
-        @Nullable String sizeCategory) {
+        @OutputCustomType.Parameter("isAvailable") @Nullable Boolean isAvailable,
+        @OutputCustomType.Parameter("sizeCategory") @Nullable String sizeCategory) {
         this.isAvailable = isAvailable;
         this.sizeCategory = sizeCategory;
     }

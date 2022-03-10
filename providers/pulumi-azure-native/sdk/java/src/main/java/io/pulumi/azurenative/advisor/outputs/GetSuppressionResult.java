@@ -42,14 +42,14 @@ public final class GetSuppressionResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"expirationTimeStamp","id","name","suppressionId","ttl","type"})
+    @OutputCustomType.Constructor
     private GetSuppressionResult(
-        String expirationTimeStamp,
-        String id,
-        String name,
-        @Nullable String suppressionId,
-        @Nullable String ttl,
-        String type) {
+        @OutputCustomType.Parameter("expirationTimeStamp") String expirationTimeStamp,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("suppressionId") @Nullable String suppressionId,
+        @OutputCustomType.Parameter("ttl") @Nullable String ttl,
+        @OutputCustomType.Parameter("type") String type) {
         this.expirationTimeStamp = expirationTimeStamp;
         this.id = id;
         this.name = name;

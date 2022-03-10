@@ -32,12 +32,12 @@ public final class VideoCreationPropertiesResponse {
      */
     private final @Nullable String title;
 
-    @OutputCustomType.Constructor({"description","retentionPeriod","segmentLength","title"})
+    @OutputCustomType.Constructor
     private VideoCreationPropertiesResponse(
-        @Nullable String description,
-        @Nullable String retentionPeriod,
-        @Nullable String segmentLength,
-        @Nullable String title) {
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("retentionPeriod") @Nullable String retentionPeriod,
+        @OutputCustomType.Parameter("segmentLength") @Nullable String segmentLength,
+        @OutputCustomType.Parameter("title") @Nullable String title) {
         this.description = description;
         this.retentionPeriod = retentionPeriod;
         this.segmentLength = segmentLength;

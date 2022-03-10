@@ -63,18 +63,18 @@ public final class AS2SecuritySettingsResponse {
      */
     private final @Nullable String signingCertificateName;
 
-    @OutputCustomType.Constructor({"enableNRRForInboundDecodedMessages","enableNRRForInboundEncodedMessages","enableNRRForInboundMDN","enableNRRForOutboundDecodedMessages","enableNRRForOutboundEncodedMessages","enableNRRForOutboundMDN","encryptionCertificateName","overrideGroupSigningCertificate","sha2AlgorithmFormat","signingCertificateName"})
+    @OutputCustomType.Constructor
     private AS2SecuritySettingsResponse(
-        Boolean enableNRRForInboundDecodedMessages,
-        Boolean enableNRRForInboundEncodedMessages,
-        Boolean enableNRRForInboundMDN,
-        Boolean enableNRRForOutboundDecodedMessages,
-        Boolean enableNRRForOutboundEncodedMessages,
-        Boolean enableNRRForOutboundMDN,
-        @Nullable String encryptionCertificateName,
-        Boolean overrideGroupSigningCertificate,
-        @Nullable String sha2AlgorithmFormat,
-        @Nullable String signingCertificateName) {
+        @OutputCustomType.Parameter("enableNRRForInboundDecodedMessages") Boolean enableNRRForInboundDecodedMessages,
+        @OutputCustomType.Parameter("enableNRRForInboundEncodedMessages") Boolean enableNRRForInboundEncodedMessages,
+        @OutputCustomType.Parameter("enableNRRForInboundMDN") Boolean enableNRRForInboundMDN,
+        @OutputCustomType.Parameter("enableNRRForOutboundDecodedMessages") Boolean enableNRRForOutboundDecodedMessages,
+        @OutputCustomType.Parameter("enableNRRForOutboundEncodedMessages") Boolean enableNRRForOutboundEncodedMessages,
+        @OutputCustomType.Parameter("enableNRRForOutboundMDN") Boolean enableNRRForOutboundMDN,
+        @OutputCustomType.Parameter("encryptionCertificateName") @Nullable String encryptionCertificateName,
+        @OutputCustomType.Parameter("overrideGroupSigningCertificate") Boolean overrideGroupSigningCertificate,
+        @OutputCustomType.Parameter("sha2AlgorithmFormat") @Nullable String sha2AlgorithmFormat,
+        @OutputCustomType.Parameter("signingCertificateName") @Nullable String signingCertificateName) {
         this.enableNRRForInboundDecodedMessages = enableNRRForInboundDecodedMessages;
         this.enableNRRForInboundEncodedMessages = enableNRRForInboundEncodedMessages;
         this.enableNRRForInboundMDN = enableNRRForInboundMDN;

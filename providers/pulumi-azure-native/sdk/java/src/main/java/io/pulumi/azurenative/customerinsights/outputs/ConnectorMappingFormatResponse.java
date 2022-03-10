@@ -42,14 +42,14 @@ public final class ConnectorMappingFormatResponse {
      */
     private final @Nullable String quoteEscapeCharacter;
 
-    @OutputCustomType.Constructor({"acceptLanguage","arraySeparator","columnDelimiter","formatType","quoteCharacter","quoteEscapeCharacter"})
+    @OutputCustomType.Constructor
     private ConnectorMappingFormatResponse(
-        @Nullable String acceptLanguage,
-        @Nullable String arraySeparator,
-        @Nullable String columnDelimiter,
-        String formatType,
-        @Nullable String quoteCharacter,
-        @Nullable String quoteEscapeCharacter) {
+        @OutputCustomType.Parameter("acceptLanguage") @Nullable String acceptLanguage,
+        @OutputCustomType.Parameter("arraySeparator") @Nullable String arraySeparator,
+        @OutputCustomType.Parameter("columnDelimiter") @Nullable String columnDelimiter,
+        @OutputCustomType.Parameter("formatType") String formatType,
+        @OutputCustomType.Parameter("quoteCharacter") @Nullable String quoteCharacter,
+        @OutputCustomType.Parameter("quoteEscapeCharacter") @Nullable String quoteEscapeCharacter) {
         this.acceptLanguage = acceptLanguage;
         this.arraySeparator = arraySeparator;
         this.columnDelimiter = columnDelimiter;

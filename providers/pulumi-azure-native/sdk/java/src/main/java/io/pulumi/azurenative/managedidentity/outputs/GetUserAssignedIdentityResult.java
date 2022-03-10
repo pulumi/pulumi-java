@@ -52,16 +52,16 @@ public final class GetUserAssignedIdentityResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"clientId","id","location","name","principalId","tags","tenantId","type"})
+    @OutputCustomType.Constructor
     private GetUserAssignedIdentityResult(
-        String clientId,
-        String id,
-        String location,
-        String name,
-        String principalId,
-        @Nullable Map<String,String> tags,
-        String tenantId,
-        String type) {
+        @OutputCustomType.Parameter("clientId") String clientId,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("principalId") String principalId,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("tenantId") String tenantId,
+        @OutputCustomType.Parameter("type") String type) {
         this.clientId = clientId;
         this.id = id;
         this.location = location;

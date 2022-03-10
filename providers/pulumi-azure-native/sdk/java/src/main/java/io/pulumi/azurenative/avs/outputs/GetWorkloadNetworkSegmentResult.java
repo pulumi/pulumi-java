@@ -66,18 +66,18 @@ public final class GetWorkloadNetworkSegmentResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"connectedGateway","displayName","id","name","portVif","provisioningState","revision","status","subnet","type"})
+    @OutputCustomType.Constructor
     private GetWorkloadNetworkSegmentResult(
-        @Nullable String connectedGateway,
-        @Nullable String displayName,
-        String id,
-        String name,
-        List<WorkloadNetworkSegmentPortVifResponse> portVif,
-        String provisioningState,
-        @Nullable Double revision,
-        String status,
-        @Nullable WorkloadNetworkSegmentSubnetResponse subnet,
-        String type) {
+        @OutputCustomType.Parameter("connectedGateway") @Nullable String connectedGateway,
+        @OutputCustomType.Parameter("displayName") @Nullable String displayName,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("portVif") List<WorkloadNetworkSegmentPortVifResponse> portVif,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("revision") @Nullable Double revision,
+        @OutputCustomType.Parameter("status") String status,
+        @OutputCustomType.Parameter("subnet") @Nullable WorkloadNetworkSegmentSubnetResponse subnet,
+        @OutputCustomType.Parameter("type") String type) {
         this.connectedGateway = connectedGateway;
         this.displayName = displayName;
         this.id = id;

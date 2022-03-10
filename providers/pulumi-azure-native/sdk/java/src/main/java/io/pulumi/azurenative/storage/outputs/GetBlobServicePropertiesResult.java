@@ -84,21 +84,21 @@ public final class GetBlobServicePropertiesResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"automaticSnapshotPolicyEnabled","changeFeed","containerDeleteRetentionPolicy","cors","defaultServiceVersion","deleteRetentionPolicy","id","isVersioningEnabled","lastAccessTimeTrackingPolicy","name","restorePolicy","sku","type"})
+    @OutputCustomType.Constructor
     private GetBlobServicePropertiesResult(
-        @Nullable Boolean automaticSnapshotPolicyEnabled,
-        @Nullable ChangeFeedResponse changeFeed,
-        @Nullable DeleteRetentionPolicyResponse containerDeleteRetentionPolicy,
-        @Nullable CorsRulesResponse cors,
-        @Nullable String defaultServiceVersion,
-        @Nullable DeleteRetentionPolicyResponse deleteRetentionPolicy,
-        String id,
-        @Nullable Boolean isVersioningEnabled,
-        @Nullable LastAccessTimeTrackingPolicyResponse lastAccessTimeTrackingPolicy,
-        String name,
-        @Nullable RestorePolicyPropertiesResponse restorePolicy,
-        SkuResponse sku,
-        String type) {
+        @OutputCustomType.Parameter("automaticSnapshotPolicyEnabled") @Nullable Boolean automaticSnapshotPolicyEnabled,
+        @OutputCustomType.Parameter("changeFeed") @Nullable ChangeFeedResponse changeFeed,
+        @OutputCustomType.Parameter("containerDeleteRetentionPolicy") @Nullable DeleteRetentionPolicyResponse containerDeleteRetentionPolicy,
+        @OutputCustomType.Parameter("cors") @Nullable CorsRulesResponse cors,
+        @OutputCustomType.Parameter("defaultServiceVersion") @Nullable String defaultServiceVersion,
+        @OutputCustomType.Parameter("deleteRetentionPolicy") @Nullable DeleteRetentionPolicyResponse deleteRetentionPolicy,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("isVersioningEnabled") @Nullable Boolean isVersioningEnabled,
+        @OutputCustomType.Parameter("lastAccessTimeTrackingPolicy") @Nullable LastAccessTimeTrackingPolicyResponse lastAccessTimeTrackingPolicy,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("restorePolicy") @Nullable RestorePolicyPropertiesResponse restorePolicy,
+        @OutputCustomType.Parameter("sku") SkuResponse sku,
+        @OutputCustomType.Parameter("type") String type) {
         this.automaticSnapshotPolicyEnabled = automaticSnapshotPolicyEnabled;
         this.changeFeed = changeFeed;
         this.containerDeleteRetentionPolicy = containerDeleteRetentionPolicy;

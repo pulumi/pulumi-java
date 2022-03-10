@@ -29,11 +29,11 @@ public final class VolumePropertiesResponseDataProtection {
      */
     private final @Nullable VolumeSnapshotPropertiesResponse snapshot;
 
-    @OutputCustomType.Constructor({"backup","replication","snapshot"})
+    @OutputCustomType.Constructor
     private VolumePropertiesResponseDataProtection(
-        @Nullable VolumeBackupPropertiesResponse backup,
-        @Nullable ReplicationObjectResponse replication,
-        @Nullable VolumeSnapshotPropertiesResponse snapshot) {
+        @OutputCustomType.Parameter("backup") @Nullable VolumeBackupPropertiesResponse backup,
+        @OutputCustomType.Parameter("replication") @Nullable ReplicationObjectResponse replication,
+        @OutputCustomType.Parameter("snapshot") @Nullable VolumeSnapshotPropertiesResponse snapshot) {
         this.backup = backup;
         this.replication = replication;
         this.snapshot = snapshot;

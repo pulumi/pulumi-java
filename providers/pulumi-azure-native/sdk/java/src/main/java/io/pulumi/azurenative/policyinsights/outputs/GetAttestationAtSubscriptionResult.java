@@ -80,21 +80,21 @@ public final class GetAttestationAtSubscriptionResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"comments","complianceState","evidence","expiresOn","id","lastComplianceStateChangeAt","name","owner","policyAssignmentId","policyDefinitionReferenceId","provisioningState","systemData","type"})
+    @OutputCustomType.Constructor
     private GetAttestationAtSubscriptionResult(
-        @Nullable String comments,
-        @Nullable String complianceState,
-        @Nullable List<AttestationEvidenceResponse> evidence,
-        @Nullable String expiresOn,
-        String id,
-        String lastComplianceStateChangeAt,
-        String name,
-        @Nullable String owner,
-        String policyAssignmentId,
-        @Nullable String policyDefinitionReferenceId,
-        String provisioningState,
-        SystemDataResponse systemData,
-        String type) {
+        @OutputCustomType.Parameter("comments") @Nullable String comments,
+        @OutputCustomType.Parameter("complianceState") @Nullable String complianceState,
+        @OutputCustomType.Parameter("evidence") @Nullable List<AttestationEvidenceResponse> evidence,
+        @OutputCustomType.Parameter("expiresOn") @Nullable String expiresOn,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("lastComplianceStateChangeAt") String lastComplianceStateChangeAt,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("owner") @Nullable String owner,
+        @OutputCustomType.Parameter("policyAssignmentId") String policyAssignmentId,
+        @OutputCustomType.Parameter("policyDefinitionReferenceId") @Nullable String policyDefinitionReferenceId,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("type") String type) {
         this.comments = comments;
         this.complianceState = complianceState;
         this.evidence = evidence;

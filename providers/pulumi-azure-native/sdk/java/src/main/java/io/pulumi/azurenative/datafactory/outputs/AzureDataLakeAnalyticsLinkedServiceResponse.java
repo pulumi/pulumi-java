@@ -86,21 +86,21 @@ public final class AzureDataLakeAnalyticsLinkedServiceResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"accountName","annotations","connectVia","dataLakeAnalyticsUri","description","encryptedCredential","parameters","resourceGroupName","servicePrincipalId","servicePrincipalKey","subscriptionId","tenant","type"})
+    @OutputCustomType.Constructor
     private AzureDataLakeAnalyticsLinkedServiceResponse(
-        Object accountName,
-        @Nullable List<Object> annotations,
-        @Nullable IntegrationRuntimeReferenceResponse connectVia,
-        @Nullable Object dataLakeAnalyticsUri,
-        @Nullable String description,
-        @Nullable Object encryptedCredential,
-        @Nullable Map<String,ParameterSpecificationResponse> parameters,
-        @Nullable Object resourceGroupName,
-        @Nullable Object servicePrincipalId,
-        @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalKey,
-        @Nullable Object subscriptionId,
-        Object tenant,
-        String type) {
+        @OutputCustomType.Parameter("accountName") Object accountName,
+        @OutputCustomType.Parameter("annotations") @Nullable List<Object> annotations,
+        @OutputCustomType.Parameter("connectVia") @Nullable IntegrationRuntimeReferenceResponse connectVia,
+        @OutputCustomType.Parameter("dataLakeAnalyticsUri") @Nullable Object dataLakeAnalyticsUri,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("encryptedCredential") @Nullable Object encryptedCredential,
+        @OutputCustomType.Parameter("parameters") @Nullable Map<String,ParameterSpecificationResponse> parameters,
+        @OutputCustomType.Parameter("resourceGroupName") @Nullable Object resourceGroupName,
+        @OutputCustomType.Parameter("servicePrincipalId") @Nullable Object servicePrincipalId,
+        @OutputCustomType.Parameter("servicePrincipalKey") @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalKey,
+        @OutputCustomType.Parameter("subscriptionId") @Nullable Object subscriptionId,
+        @OutputCustomType.Parameter("tenant") Object tenant,
+        @OutputCustomType.Parameter("type") String type) {
         this.accountName = accountName;
         this.annotations = annotations;
         this.connectVia = connectVia;

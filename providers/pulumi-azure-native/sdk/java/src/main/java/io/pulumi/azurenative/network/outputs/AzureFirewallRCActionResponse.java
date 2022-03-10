@@ -17,8 +17,8 @@ public final class AzureFirewallRCActionResponse {
      */
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor({"type"})
-    private AzureFirewallRCActionResponse(@Nullable String type) {
+    @OutputCustomType.Constructor
+    private AzureFirewallRCActionResponse(@OutputCustomType.Parameter("type") @Nullable String type) {
         this.type = type;
     }
 

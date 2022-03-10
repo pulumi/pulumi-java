@@ -27,11 +27,11 @@ public final class NetworkRuleSetIpRuleResponse {
      */
     private final String ipMask;
 
-    @OutputCustomType.Constructor({"action","filterName","ipMask"})
+    @OutputCustomType.Constructor
     private NetworkRuleSetIpRuleResponse(
-        @Nullable String action,
-        String filterName,
-        String ipMask) {
+        @OutputCustomType.Parameter("action") @Nullable String action,
+        @OutputCustomType.Parameter("filterName") String filterName,
+        @OutputCustomType.Parameter("ipMask") String ipMask) {
         this.action = action;
         this.filterName = filterName;
         this.ipMask = ipMask;

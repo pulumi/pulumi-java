@@ -28,11 +28,11 @@ public final class NamedPartitionSchemeDescriptionResponse {
      */
     private final String partitionScheme;
 
-    @OutputCustomType.Constructor({"count","names","partitionScheme"})
+    @OutputCustomType.Constructor
     private NamedPartitionSchemeDescriptionResponse(
-        Integer count,
-        List<String> names,
-        String partitionScheme) {
+        @OutputCustomType.Parameter("count") Integer count,
+        @OutputCustomType.Parameter("names") List<String> names,
+        @OutputCustomType.Parameter("partitionScheme") String partitionScheme) {
         this.count = count;
         this.names = names;
         this.partitionScheme = partitionScheme;

@@ -17,8 +17,8 @@ public final class ListControllerConnectionDetailsResult {
      */
     private final @Nullable List<ControllerConnectionDetailsResponse> connectionDetailsList;
 
-    @OutputCustomType.Constructor({"connectionDetailsList"})
-    private ListControllerConnectionDetailsResult(@Nullable List<ControllerConnectionDetailsResponse> connectionDetailsList) {
+    @OutputCustomType.Constructor
+    private ListControllerConnectionDetailsResult(@OutputCustomType.Parameter("connectionDetailsList") @Nullable List<ControllerConnectionDetailsResponse> connectionDetailsList) {
         this.connectionDetailsList = connectionDetailsList;
     }
 

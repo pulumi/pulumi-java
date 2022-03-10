@@ -51,15 +51,15 @@ public final class ApiOAuthSettingsResponse {
      */
     private final @Nullable List<String> scopes;
 
-    @OutputCustomType.Constructor({"clientId","clientSecret","customParameters","identityProvider","properties","redirectUrl","scopes"})
+    @OutputCustomType.Constructor
     private ApiOAuthSettingsResponse(
-        @Nullable String clientId,
-        @Nullable String clientSecret,
-        @Nullable Map<String,ApiOAuthSettingsParameterResponse> customParameters,
-        @Nullable String identityProvider,
-        @Nullable Object properties,
-        @Nullable String redirectUrl,
-        @Nullable List<String> scopes) {
+        @OutputCustomType.Parameter("clientId") @Nullable String clientId,
+        @OutputCustomType.Parameter("clientSecret") @Nullable String clientSecret,
+        @OutputCustomType.Parameter("customParameters") @Nullable Map<String,ApiOAuthSettingsParameterResponse> customParameters,
+        @OutputCustomType.Parameter("identityProvider") @Nullable String identityProvider,
+        @OutputCustomType.Parameter("properties") @Nullable Object properties,
+        @OutputCustomType.Parameter("redirectUrl") @Nullable String redirectUrl,
+        @OutputCustomType.Parameter("scopes") @Nullable List<String> scopes) {
         this.clientId = clientId;
         this.clientSecret = clientSecret;
         this.customParameters = customParameters;

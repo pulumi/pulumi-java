@@ -33,12 +33,12 @@ public final class EmailReceiverResponse {
      */
     private final @Nullable Boolean useCommonAlertSchema;
 
-    @OutputCustomType.Constructor({"emailAddress","name","status","useCommonAlertSchema"})
+    @OutputCustomType.Constructor
     private EmailReceiverResponse(
-        String emailAddress,
-        String name,
-        String status,
-        @Nullable Boolean useCommonAlertSchema) {
+        @OutputCustomType.Parameter("emailAddress") String emailAddress,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("status") String status,
+        @OutputCustomType.Parameter("useCommonAlertSchema") @Nullable Boolean useCommonAlertSchema) {
         this.emailAddress = emailAddress;
         this.name = name;
         this.status = status;

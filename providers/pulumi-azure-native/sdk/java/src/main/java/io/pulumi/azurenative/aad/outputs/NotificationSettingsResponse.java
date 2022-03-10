@@ -28,11 +28,11 @@ public final class NotificationSettingsResponse {
      */
     private final @Nullable String notifyGlobalAdmins;
 
-    @OutputCustomType.Constructor({"additionalRecipients","notifyDcAdmins","notifyGlobalAdmins"})
+    @OutputCustomType.Constructor
     private NotificationSettingsResponse(
-        @Nullable List<String> additionalRecipients,
-        @Nullable String notifyDcAdmins,
-        @Nullable String notifyGlobalAdmins) {
+        @OutputCustomType.Parameter("additionalRecipients") @Nullable List<String> additionalRecipients,
+        @OutputCustomType.Parameter("notifyDcAdmins") @Nullable String notifyDcAdmins,
+        @OutputCustomType.Parameter("notifyGlobalAdmins") @Nullable String notifyGlobalAdmins) {
         this.additionalRecipients = additionalRecipients;
         this.notifyDcAdmins = notifyDcAdmins;
         this.notifyGlobalAdmins = notifyGlobalAdmins;

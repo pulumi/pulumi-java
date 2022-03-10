@@ -58,17 +58,17 @@ public final class NetworkInterfacePropertiesResponse {
      */
     private final @Nullable String virtualNetworkId;
 
-    @OutputCustomType.Constructor({"dnsName","privateIpAddress","publicIpAddress","publicIpAddressId","rdpAuthority","sharedPublicIpAddressConfiguration","sshAuthority","subnetId","virtualNetworkId"})
+    @OutputCustomType.Constructor
     private NetworkInterfacePropertiesResponse(
-        @Nullable String dnsName,
-        @Nullable String privateIpAddress,
-        @Nullable String publicIpAddress,
-        @Nullable String publicIpAddressId,
-        @Nullable String rdpAuthority,
-        @Nullable SharedPublicIpAddressConfigurationResponse sharedPublicIpAddressConfiguration,
-        @Nullable String sshAuthority,
-        @Nullable String subnetId,
-        @Nullable String virtualNetworkId) {
+        @OutputCustomType.Parameter("dnsName") @Nullable String dnsName,
+        @OutputCustomType.Parameter("privateIpAddress") @Nullable String privateIpAddress,
+        @OutputCustomType.Parameter("publicIpAddress") @Nullable String publicIpAddress,
+        @OutputCustomType.Parameter("publicIpAddressId") @Nullable String publicIpAddressId,
+        @OutputCustomType.Parameter("rdpAuthority") @Nullable String rdpAuthority,
+        @OutputCustomType.Parameter("sharedPublicIpAddressConfiguration") @Nullable SharedPublicIpAddressConfigurationResponse sharedPublicIpAddressConfiguration,
+        @OutputCustomType.Parameter("sshAuthority") @Nullable String sshAuthority,
+        @OutputCustomType.Parameter("subnetId") @Nullable String subnetId,
+        @OutputCustomType.Parameter("virtualNetworkId") @Nullable String virtualNetworkId) {
         this.dnsName = dnsName;
         this.privateIpAddress = privateIpAddress;
         this.publicIpAddress = publicIpAddress;

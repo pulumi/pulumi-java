@@ -28,11 +28,11 @@ public final class KeyVaultKeyReferenceResponse {
      */
     private final @Nullable String keyVersion;
 
-    @OutputCustomType.Constructor({"keyName","keyVault","keyVersion"})
+    @OutputCustomType.Constructor
     private KeyVaultKeyReferenceResponse(
-        String keyName,
-        KeyVaultKeyReferenceResponseKeyVault keyVault,
-        @Nullable String keyVersion) {
+        @OutputCustomType.Parameter("keyName") String keyName,
+        @OutputCustomType.Parameter("keyVault") KeyVaultKeyReferenceResponseKeyVault keyVault,
+        @OutputCustomType.Parameter("keyVersion") @Nullable String keyVersion) {
         this.keyName = keyName;
         this.keyVault = keyVault;
         this.keyVersion = keyVersion;

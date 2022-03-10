@@ -64,18 +64,18 @@ public final class GetScheduleResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"id","name","notes","provisioningState","recurrencePattern","startAt","stopAt","systemData","timeZoneId","type"})
+    @OutputCustomType.Constructor
     private GetScheduleResult(
-        String id,
-        String name,
-        @Nullable String notes,
-        String provisioningState,
-        @Nullable RecurrencePatternResponse recurrencePattern,
-        @Nullable String startAt,
-        String stopAt,
-        SystemDataResponse systemData,
-        String timeZoneId,
-        String type) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("notes") @Nullable String notes,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("recurrencePattern") @Nullable RecurrencePatternResponse recurrencePattern,
+        @OutputCustomType.Parameter("startAt") @Nullable String startAt,
+        @OutputCustomType.Parameter("stopAt") String stopAt,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("timeZoneId") String timeZoneId,
+        @OutputCustomType.Parameter("type") String type) {
         this.id = id;
         this.name = name;
         this.notes = notes;

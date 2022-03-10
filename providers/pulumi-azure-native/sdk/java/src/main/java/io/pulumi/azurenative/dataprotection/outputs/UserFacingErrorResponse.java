@@ -57,17 +57,17 @@ public final class UserFacingErrorResponse {
      */
     private final @Nullable String target;
 
-    @OutputCustomType.Constructor({"code","details","innerError","isRetryable","isUserError","message","properties","recommendedAction","target"})
+    @OutputCustomType.Constructor
     private UserFacingErrorResponse(
-        @Nullable String code,
-        @Nullable List<UserFacingErrorResponse> details,
-        @Nullable InnerErrorResponse innerError,
-        @Nullable Boolean isRetryable,
-        @Nullable Boolean isUserError,
-        @Nullable String message,
-        @Nullable Map<String,String> properties,
-        @Nullable List<String> recommendedAction,
-        @Nullable String target) {
+        @OutputCustomType.Parameter("code") @Nullable String code,
+        @OutputCustomType.Parameter("details") @Nullable List<UserFacingErrorResponse> details,
+        @OutputCustomType.Parameter("innerError") @Nullable InnerErrorResponse innerError,
+        @OutputCustomType.Parameter("isRetryable") @Nullable Boolean isRetryable,
+        @OutputCustomType.Parameter("isUserError") @Nullable Boolean isUserError,
+        @OutputCustomType.Parameter("message") @Nullable String message,
+        @OutputCustomType.Parameter("properties") @Nullable Map<String,String> properties,
+        @OutputCustomType.Parameter("recommendedAction") @Nullable List<String> recommendedAction,
+        @OutputCustomType.Parameter("target") @Nullable String target) {
         this.code = code;
         this.details = details;
         this.innerError = innerError;

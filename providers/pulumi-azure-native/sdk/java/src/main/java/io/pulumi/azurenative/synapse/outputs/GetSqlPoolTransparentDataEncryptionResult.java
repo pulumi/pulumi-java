@@ -37,13 +37,13 @@ public final class GetSqlPoolTransparentDataEncryptionResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"id","location","name","status","type"})
+    @OutputCustomType.Constructor
     private GetSqlPoolTransparentDataEncryptionResult(
-        String id,
-        String location,
-        String name,
-        @Nullable String status,
-        String type) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("status") @Nullable String status,
+        @OutputCustomType.Parameter("type") String type) {
         this.id = id;
         this.location = location;
         this.name = name;

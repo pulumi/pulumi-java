@@ -34,12 +34,12 @@ public final class TumblingWindowTriggerDependencyReferenceResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"offset","referenceTrigger","size","type"})
+    @OutputCustomType.Constructor
     private TumblingWindowTriggerDependencyReferenceResponse(
-        @Nullable String offset,
-        TriggerReferenceResponse referenceTrigger,
-        @Nullable String size,
-        String type) {
+        @OutputCustomType.Parameter("offset") @Nullable String offset,
+        @OutputCustomType.Parameter("referenceTrigger") TriggerReferenceResponse referenceTrigger,
+        @OutputCustomType.Parameter("size") @Nullable String size,
+        @OutputCustomType.Parameter("type") String type) {
         this.offset = offset;
         this.referenceTrigger = referenceTrigger;
         this.size = size;

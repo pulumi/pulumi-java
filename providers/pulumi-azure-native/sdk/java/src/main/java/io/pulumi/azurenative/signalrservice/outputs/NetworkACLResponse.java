@@ -22,10 +22,10 @@ public final class NetworkACLResponse {
      */
     private final @Nullable List<String> deny;
 
-    @OutputCustomType.Constructor({"allow","deny"})
+    @OutputCustomType.Constructor
     private NetworkACLResponse(
-        @Nullable List<String> allow,
-        @Nullable List<String> deny) {
+        @OutputCustomType.Parameter("allow") @Nullable List<String> allow,
+        @OutputCustomType.Parameter("deny") @Nullable List<String> deny) {
         this.allow = allow;
         this.deny = deny;
     }

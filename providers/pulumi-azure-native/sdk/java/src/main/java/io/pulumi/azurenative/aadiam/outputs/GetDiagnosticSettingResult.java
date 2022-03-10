@@ -59,17 +59,17 @@ public final class GetDiagnosticSettingResult {
      */
     private final @Nullable String workspaceId;
 
-    @OutputCustomType.Constructor({"eventHubAuthorizationRuleId","eventHubName","id","logs","name","serviceBusRuleId","storageAccountId","type","workspaceId"})
+    @OutputCustomType.Constructor
     private GetDiagnosticSettingResult(
-        @Nullable String eventHubAuthorizationRuleId,
-        @Nullable String eventHubName,
-        String id,
-        @Nullable List<LogSettingsResponse> logs,
-        String name,
-        @Nullable String serviceBusRuleId,
-        @Nullable String storageAccountId,
-        String type,
-        @Nullable String workspaceId) {
+        @OutputCustomType.Parameter("eventHubAuthorizationRuleId") @Nullable String eventHubAuthorizationRuleId,
+        @OutputCustomType.Parameter("eventHubName") @Nullable String eventHubName,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("logs") @Nullable List<LogSettingsResponse> logs,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("serviceBusRuleId") @Nullable String serviceBusRuleId,
+        @OutputCustomType.Parameter("storageAccountId") @Nullable String storageAccountId,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("workspaceId") @Nullable String workspaceId) {
         this.eventHubAuthorizationRuleId = eventHubAuthorizationRuleId;
         this.eventHubName = eventHubName;
         this.id = id;

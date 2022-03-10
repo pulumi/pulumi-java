@@ -17,8 +17,8 @@ public final class VpnNatRuleMappingResponse {
      */
     private final @Nullable String addressSpace;
 
-    @OutputCustomType.Constructor({"addressSpace"})
-    private VpnNatRuleMappingResponse(@Nullable String addressSpace) {
+    @OutputCustomType.Constructor
+    private VpnNatRuleMappingResponse(@OutputCustomType.Parameter("addressSpace") @Nullable String addressSpace) {
         this.addressSpace = addressSpace;
     }
 

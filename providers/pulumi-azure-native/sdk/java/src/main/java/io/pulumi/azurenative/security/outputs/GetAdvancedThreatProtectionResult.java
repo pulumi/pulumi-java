@@ -33,12 +33,12 @@ public final class GetAdvancedThreatProtectionResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"id","isEnabled","name","type"})
+    @OutputCustomType.Constructor
     private GetAdvancedThreatProtectionResult(
-        String id,
-        @Nullable Boolean isEnabled,
-        String name,
-        String type) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("isEnabled") @Nullable Boolean isEnabled,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("type") String type) {
         this.id = id;
         this.isEnabled = isEnabled;
         this.name = name;

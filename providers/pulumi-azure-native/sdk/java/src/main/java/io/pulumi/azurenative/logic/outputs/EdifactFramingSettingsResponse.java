@@ -68,19 +68,19 @@ public final class EdifactFramingSettingsResponse {
      */
     private final @Nullable String serviceCodeListDirectoryVersion;
 
-    @OutputCustomType.Constructor({"characterEncoding","characterSet","componentSeparator","dataElementSeparator","decimalPointIndicator","protocolVersion","releaseIndicator","repetitionSeparator","segmentTerminator","segmentTerminatorSuffix","serviceCodeListDirectoryVersion"})
+    @OutputCustomType.Constructor
     private EdifactFramingSettingsResponse(
-        @Nullable String characterEncoding,
-        String characterSet,
-        Integer componentSeparator,
-        Integer dataElementSeparator,
-        String decimalPointIndicator,
-        Integer protocolVersion,
-        Integer releaseIndicator,
-        Integer repetitionSeparator,
-        Integer segmentTerminator,
-        String segmentTerminatorSuffix,
-        @Nullable String serviceCodeListDirectoryVersion) {
+        @OutputCustomType.Parameter("characterEncoding") @Nullable String characterEncoding,
+        @OutputCustomType.Parameter("characterSet") String characterSet,
+        @OutputCustomType.Parameter("componentSeparator") Integer componentSeparator,
+        @OutputCustomType.Parameter("dataElementSeparator") Integer dataElementSeparator,
+        @OutputCustomType.Parameter("decimalPointIndicator") String decimalPointIndicator,
+        @OutputCustomType.Parameter("protocolVersion") Integer protocolVersion,
+        @OutputCustomType.Parameter("releaseIndicator") Integer releaseIndicator,
+        @OutputCustomType.Parameter("repetitionSeparator") Integer repetitionSeparator,
+        @OutputCustomType.Parameter("segmentTerminator") Integer segmentTerminator,
+        @OutputCustomType.Parameter("segmentTerminatorSuffix") String segmentTerminatorSuffix,
+        @OutputCustomType.Parameter("serviceCodeListDirectoryVersion") @Nullable String serviceCodeListDirectoryVersion) {
         this.characterEncoding = characterEncoding;
         this.characterSet = characterSet;
         this.componentSeparator = componentSeparator;

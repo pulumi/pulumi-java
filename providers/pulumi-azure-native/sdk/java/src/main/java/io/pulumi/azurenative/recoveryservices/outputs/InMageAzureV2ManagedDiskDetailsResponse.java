@@ -27,11 +27,11 @@ public final class InMageAzureV2ManagedDiskDetailsResponse {
      */
     private final @Nullable String seedManagedDiskId;
 
-    @OutputCustomType.Constructor({"diskId","replicaDiskType","seedManagedDiskId"})
+    @OutputCustomType.Constructor
     private InMageAzureV2ManagedDiskDetailsResponse(
-        @Nullable String diskId,
-        @Nullable String replicaDiskType,
-        @Nullable String seedManagedDiskId) {
+        @OutputCustomType.Parameter("diskId") @Nullable String diskId,
+        @OutputCustomType.Parameter("replicaDiskType") @Nullable String replicaDiskType,
+        @OutputCustomType.Parameter("seedManagedDiskId") @Nullable String seedManagedDiskId) {
         this.diskId = diskId;
         this.replicaDiskType = replicaDiskType;
         this.seedManagedDiskId = seedManagedDiskId;

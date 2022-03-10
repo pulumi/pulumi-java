@@ -90,21 +90,21 @@ public final class GetEventSubscriptionResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"deadLetterDestination","destination","eventDeliverySchema","expirationTimeUtc","filter","id","labels","name","provisioningState","retryPolicy","systemData","topic","type"})
+    @OutputCustomType.Constructor
     private GetEventSubscriptionResult(
-        @Nullable StorageBlobDeadLetterDestinationResponse deadLetterDestination,
-        @Nullable Object destination,
-        @Nullable String eventDeliverySchema,
-        @Nullable String expirationTimeUtc,
-        @Nullable EventSubscriptionFilterResponse filter,
-        String id,
-        @Nullable List<String> labels,
-        String name,
-        String provisioningState,
-        @Nullable RetryPolicyResponse retryPolicy,
-        SystemDataResponse systemData,
-        String topic,
-        String type) {
+        @OutputCustomType.Parameter("deadLetterDestination") @Nullable StorageBlobDeadLetterDestinationResponse deadLetterDestination,
+        @OutputCustomType.Parameter("destination") @Nullable Object destination,
+        @OutputCustomType.Parameter("eventDeliverySchema") @Nullable String eventDeliverySchema,
+        @OutputCustomType.Parameter("expirationTimeUtc") @Nullable String expirationTimeUtc,
+        @OutputCustomType.Parameter("filter") @Nullable EventSubscriptionFilterResponse filter,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("labels") @Nullable List<String> labels,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("retryPolicy") @Nullable RetryPolicyResponse retryPolicy,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("topic") String topic,
+        @OutputCustomType.Parameter("type") String type) {
         this.deadLetterDestination = deadLetterDestination;
         this.destination = destination;
         this.eventDeliverySchema = eventDeliverySchema;

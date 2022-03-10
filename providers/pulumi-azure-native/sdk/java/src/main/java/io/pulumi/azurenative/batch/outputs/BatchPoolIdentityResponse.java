@@ -23,10 +23,10 @@ public final class BatchPoolIdentityResponse {
      */
     private final @Nullable Map<String,BatchPoolIdentityResponseUserAssignedIdentities> userAssignedIdentities;
 
-    @OutputCustomType.Constructor({"type","userAssignedIdentities"})
+    @OutputCustomType.Constructor
     private BatchPoolIdentityResponse(
-        String type,
-        @Nullable Map<String,BatchPoolIdentityResponseUserAssignedIdentities> userAssignedIdentities) {
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("userAssignedIdentities") @Nullable Map<String,BatchPoolIdentityResponseUserAssignedIdentities> userAssignedIdentities) {
         this.type = type;
         this.userAssignedIdentities = userAssignedIdentities;
     }

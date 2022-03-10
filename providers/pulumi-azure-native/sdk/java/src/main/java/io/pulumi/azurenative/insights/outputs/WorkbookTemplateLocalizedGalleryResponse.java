@@ -24,10 +24,10 @@ public final class WorkbookTemplateLocalizedGalleryResponse {
      */
     private final @Nullable Object templateData;
 
-    @OutputCustomType.Constructor({"galleries","templateData"})
+    @OutputCustomType.Constructor
     private WorkbookTemplateLocalizedGalleryResponse(
-        @Nullable List<WorkbookTemplateGalleryResponse> galleries,
-        @Nullable Object templateData) {
+        @OutputCustomType.Parameter("galleries") @Nullable List<WorkbookTemplateGalleryResponse> galleries,
+        @OutputCustomType.Parameter("templateData") @Nullable Object templateData) {
         this.galleries = galleries;
         this.templateData = templateData;
     }

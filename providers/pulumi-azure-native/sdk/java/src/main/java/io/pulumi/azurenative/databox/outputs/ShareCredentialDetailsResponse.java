@@ -36,13 +36,13 @@ public final class ShareCredentialDetailsResponse {
      */
     private final String userName;
 
-    @OutputCustomType.Constructor({"password","shareName","shareType","supportedAccessProtocols","userName"})
+    @OutputCustomType.Constructor
     private ShareCredentialDetailsResponse(
-        String password,
-        String shareName,
-        String shareType,
-        List<String> supportedAccessProtocols,
-        String userName) {
+        @OutputCustomType.Parameter("password") String password,
+        @OutputCustomType.Parameter("shareName") String shareName,
+        @OutputCustomType.Parameter("shareType") String shareType,
+        @OutputCustomType.Parameter("supportedAccessProtocols") List<String> supportedAccessProtocols,
+        @OutputCustomType.Parameter("userName") String userName) {
         this.password = password;
         this.shareName = shareName;
         this.shareType = shareType;

@@ -108,27 +108,27 @@ public final class GetShareSubscriptionResult {
      */
     private final String userName;
 
-    @OutputCustomType.Constructor({"createdAt","expirationDate","id","invitationId","name","providerEmail","providerName","providerTenantName","provisioningState","shareDescription","shareKind","shareName","shareSubscriptionStatus","shareTerms","sourceShareLocation","systemData","type","userEmail","userName"})
+    @OutputCustomType.Constructor
     private GetShareSubscriptionResult(
-        String createdAt,
-        @Nullable String expirationDate,
-        String id,
-        String invitationId,
-        String name,
-        String providerEmail,
-        String providerName,
-        String providerTenantName,
-        String provisioningState,
-        String shareDescription,
-        String shareKind,
-        String shareName,
-        String shareSubscriptionStatus,
-        String shareTerms,
-        String sourceShareLocation,
-        SystemDataResponse systemData,
-        String type,
-        String userEmail,
-        String userName) {
+        @OutputCustomType.Parameter("createdAt") String createdAt,
+        @OutputCustomType.Parameter("expirationDate") @Nullable String expirationDate,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("invitationId") String invitationId,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("providerEmail") String providerEmail,
+        @OutputCustomType.Parameter("providerName") String providerName,
+        @OutputCustomType.Parameter("providerTenantName") String providerTenantName,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("shareDescription") String shareDescription,
+        @OutputCustomType.Parameter("shareKind") String shareKind,
+        @OutputCustomType.Parameter("shareName") String shareName,
+        @OutputCustomType.Parameter("shareSubscriptionStatus") String shareSubscriptionStatus,
+        @OutputCustomType.Parameter("shareTerms") String shareTerms,
+        @OutputCustomType.Parameter("sourceShareLocation") String sourceShareLocation,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("userEmail") String userEmail,
+        @OutputCustomType.Parameter("userName") String userName) {
         this.createdAt = createdAt;
         this.expirationDate = expirationDate;
         this.id = id;

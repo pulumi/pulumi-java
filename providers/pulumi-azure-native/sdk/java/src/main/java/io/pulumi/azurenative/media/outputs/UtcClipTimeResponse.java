@@ -21,10 +21,10 @@ public final class UtcClipTimeResponse {
      */
     private final String time;
 
-    @OutputCustomType.Constructor({"odataType","time"})
+    @OutputCustomType.Constructor
     private UtcClipTimeResponse(
-        String odataType,
-        String time) {
+        @OutputCustomType.Parameter("odataType") String odataType,
+        @OutputCustomType.Parameter("time") String time) {
         this.odataType = odataType;
         this.time = time;
     }

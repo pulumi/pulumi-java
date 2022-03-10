@@ -88,22 +88,22 @@ public final class GetPolicyAssignmentResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"description","displayName","enforcementMode","id","identity","location","metadata","name","nonComplianceMessages","notScopes","parameters","policyDefinitionId","scope","type"})
+    @OutputCustomType.Constructor
     private GetPolicyAssignmentResult(
-        @Nullable String description,
-        @Nullable String displayName,
-        @Nullable String enforcementMode,
-        String id,
-        @Nullable IdentityResponse identity,
-        @Nullable String location,
-        @Nullable Object metadata,
-        String name,
-        @Nullable List<NonComplianceMessageResponse> nonComplianceMessages,
-        @Nullable List<String> notScopes,
-        @Nullable Map<String,ParameterValuesValueResponse> parameters,
-        @Nullable String policyDefinitionId,
-        String scope,
-        String type) {
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("displayName") @Nullable String displayName,
+        @OutputCustomType.Parameter("enforcementMode") @Nullable String enforcementMode,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("identity") @Nullable IdentityResponse identity,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("metadata") @Nullable Object metadata,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("nonComplianceMessages") @Nullable List<NonComplianceMessageResponse> nonComplianceMessages,
+        @OutputCustomType.Parameter("notScopes") @Nullable List<String> notScopes,
+        @OutputCustomType.Parameter("parameters") @Nullable Map<String,ParameterValuesValueResponse> parameters,
+        @OutputCustomType.Parameter("policyDefinitionId") @Nullable String policyDefinitionId,
+        @OutputCustomType.Parameter("scope") String scope,
+        @OutputCustomType.Parameter("type") String type) {
         this.description = description;
         this.displayName = displayName;
         this.enforcementMode = enforcementMode;

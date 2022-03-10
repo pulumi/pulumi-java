@@ -52,16 +52,16 @@ public final class GetOpenIdConnectProviderResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"clientId","clientSecret","description","displayName","id","metadataEndpoint","name","type"})
+    @OutputCustomType.Constructor
     private GetOpenIdConnectProviderResult(
-        String clientId,
-        @Nullable String clientSecret,
-        @Nullable String description,
-        String displayName,
-        String id,
-        String metadataEndpoint,
-        String name,
-        String type) {
+        @OutputCustomType.Parameter("clientId") String clientId,
+        @OutputCustomType.Parameter("clientSecret") @Nullable String clientSecret,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("metadataEndpoint") String metadataEndpoint,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("type") String type) {
         this.clientId = clientId;
         this.clientSecret = clientSecret;
         this.description = description;

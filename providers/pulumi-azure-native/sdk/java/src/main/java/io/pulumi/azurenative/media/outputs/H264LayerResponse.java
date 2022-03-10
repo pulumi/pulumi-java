@@ -90,23 +90,23 @@ public final class H264LayerResponse {
      */
     private final @Nullable String width;
 
-    @OutputCustomType.Constructor({"adaptiveBFrame","bFrames","bitrate","bufferWindow","entropyMode","frameRate","height","label","level","maxBitrate","odataType","profile","referenceFrames","slices","width"})
+    @OutputCustomType.Constructor
     private H264LayerResponse(
-        @Nullable Boolean adaptiveBFrame,
-        @Nullable Integer bFrames,
-        Integer bitrate,
-        @Nullable String bufferWindow,
-        @Nullable String entropyMode,
-        @Nullable String frameRate,
-        @Nullable String height,
-        @Nullable String label,
-        @Nullable String level,
-        @Nullable Integer maxBitrate,
-        String odataType,
-        @Nullable String profile,
-        @Nullable Integer referenceFrames,
-        @Nullable Integer slices,
-        @Nullable String width) {
+        @OutputCustomType.Parameter("adaptiveBFrame") @Nullable Boolean adaptiveBFrame,
+        @OutputCustomType.Parameter("bFrames") @Nullable Integer bFrames,
+        @OutputCustomType.Parameter("bitrate") Integer bitrate,
+        @OutputCustomType.Parameter("bufferWindow") @Nullable String bufferWindow,
+        @OutputCustomType.Parameter("entropyMode") @Nullable String entropyMode,
+        @OutputCustomType.Parameter("frameRate") @Nullable String frameRate,
+        @OutputCustomType.Parameter("height") @Nullable String height,
+        @OutputCustomType.Parameter("label") @Nullable String label,
+        @OutputCustomType.Parameter("level") @Nullable String level,
+        @OutputCustomType.Parameter("maxBitrate") @Nullable Integer maxBitrate,
+        @OutputCustomType.Parameter("odataType") String odataType,
+        @OutputCustomType.Parameter("profile") @Nullable String profile,
+        @OutputCustomType.Parameter("referenceFrames") @Nullable Integer referenceFrames,
+        @OutputCustomType.Parameter("slices") @Nullable Integer slices,
+        @OutputCustomType.Parameter("width") @Nullable String width) {
         this.adaptiveBFrame = adaptiveBFrame;
         this.bFrames = bFrames;
         this.bitrate = bitrate;

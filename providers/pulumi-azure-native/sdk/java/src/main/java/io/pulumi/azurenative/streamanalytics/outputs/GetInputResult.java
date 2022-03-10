@@ -35,12 +35,12 @@ public final class GetInputResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"id","name","properties","type"})
+    @OutputCustomType.Constructor
     private GetInputResult(
-        String id,
-        @Nullable String name,
-        Either<ReferenceInputPropertiesResponse,StreamInputPropertiesResponse> properties,
-        String type) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("properties") Either<ReferenceInputPropertiesResponse,StreamInputPropertiesResponse> properties,
+        @OutputCustomType.Parameter("type") String type) {
         this.id = id;
         this.name = name;
         this.properties = properties;

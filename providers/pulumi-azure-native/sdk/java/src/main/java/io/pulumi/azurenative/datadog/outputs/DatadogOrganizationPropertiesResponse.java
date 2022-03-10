@@ -20,10 +20,10 @@ public final class DatadogOrganizationPropertiesResponse {
      */
     private final String name;
 
-    @OutputCustomType.Constructor({"id","name"})
+    @OutputCustomType.Constructor
     private DatadogOrganizationPropertiesResponse(
-        String id,
-        String name) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name) {
         this.id = id;
         this.name = name;
     }

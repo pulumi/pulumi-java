@@ -42,13 +42,13 @@ public final class MigrateProjectPropertiesResponse {
      */
     private final Map<String,Either<DatabaseProjectSummaryResponse,ServersProjectSummaryResponse>> summary;
 
-    @OutputCustomType.Constructor({"lastSummaryRefreshedTime","provisioningState","refreshSummaryState","registeredTools","summary"})
+    @OutputCustomType.Constructor
     private MigrateProjectPropertiesResponse(
-        String lastSummaryRefreshedTime,
-        @Nullable String provisioningState,
-        String refreshSummaryState,
-        @Nullable List<String> registeredTools,
-        Map<String,Either<DatabaseProjectSummaryResponse,ServersProjectSummaryResponse>> summary) {
+        @OutputCustomType.Parameter("lastSummaryRefreshedTime") String lastSummaryRefreshedTime,
+        @OutputCustomType.Parameter("provisioningState") @Nullable String provisioningState,
+        @OutputCustomType.Parameter("refreshSummaryState") String refreshSummaryState,
+        @OutputCustomType.Parameter("registeredTools") @Nullable List<String> registeredTools,
+        @OutputCustomType.Parameter("summary") Map<String,Either<DatabaseProjectSummaryResponse,ServersProjectSummaryResponse>> summary) {
         this.lastSummaryRefreshedTime = lastSummaryRefreshedTime;
         this.provisioningState = provisioningState;
         this.refreshSummaryState = refreshSummaryState;

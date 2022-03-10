@@ -112,26 +112,26 @@ public final class GetVirtualNetworkResult {
      */
     private final @Nullable List<VirtualNetworkPeeringResponse> virtualNetworkPeerings;
 
-    @OutputCustomType.Constructor({"addressSpace","bgpCommunities","ddosProtectionPlan","dhcpOptions","enableDdosProtection","enableVmProtection","etag","extendedLocation","id","ipAllocations","location","name","provisioningState","resourceGuid","subnets","tags","type","virtualNetworkPeerings"})
+    @OutputCustomType.Constructor
     private GetVirtualNetworkResult(
-        @Nullable AddressSpaceResponse addressSpace,
-        @Nullable VirtualNetworkBgpCommunitiesResponse bgpCommunities,
-        @Nullable SubResourceResponse ddosProtectionPlan,
-        @Nullable DhcpOptionsResponse dhcpOptions,
-        @Nullable Boolean enableDdosProtection,
-        @Nullable Boolean enableVmProtection,
-        String etag,
-        @Nullable ExtendedLocationResponse extendedLocation,
-        @Nullable String id,
-        @Nullable List<SubResourceResponse> ipAllocations,
-        @Nullable String location,
-        String name,
-        String provisioningState,
-        String resourceGuid,
-        @Nullable List<SubnetResponse> subnets,
-        @Nullable Map<String,String> tags,
-        String type,
-        @Nullable List<VirtualNetworkPeeringResponse> virtualNetworkPeerings) {
+        @OutputCustomType.Parameter("addressSpace") @Nullable AddressSpaceResponse addressSpace,
+        @OutputCustomType.Parameter("bgpCommunities") @Nullable VirtualNetworkBgpCommunitiesResponse bgpCommunities,
+        @OutputCustomType.Parameter("ddosProtectionPlan") @Nullable SubResourceResponse ddosProtectionPlan,
+        @OutputCustomType.Parameter("dhcpOptions") @Nullable DhcpOptionsResponse dhcpOptions,
+        @OutputCustomType.Parameter("enableDdosProtection") @Nullable Boolean enableDdosProtection,
+        @OutputCustomType.Parameter("enableVmProtection") @Nullable Boolean enableVmProtection,
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("extendedLocation") @Nullable ExtendedLocationResponse extendedLocation,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("ipAllocations") @Nullable List<SubResourceResponse> ipAllocations,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("resourceGuid") String resourceGuid,
+        @OutputCustomType.Parameter("subnets") @Nullable List<SubnetResponse> subnets,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("virtualNetworkPeerings") @Nullable List<VirtualNetworkPeeringResponse> virtualNetworkPeerings) {
         this.addressSpace = addressSpace;
         this.bgpCommunities = bgpCommunities;
         this.ddosProtectionPlan = ddosProtectionPlan;

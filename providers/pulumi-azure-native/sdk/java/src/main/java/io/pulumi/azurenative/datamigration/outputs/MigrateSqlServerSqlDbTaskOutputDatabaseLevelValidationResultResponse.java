@@ -69,19 +69,19 @@ public final class MigrateSqlServerSqlDbTaskOutputDatabaseLevelValidationResultR
      */
     private final String targetDatabaseName;
 
-    @OutputCustomType.Constructor({"dataIntegrityValidationResult","endedOn","id","migrationId","queryAnalysisValidationResult","resultType","schemaValidationResult","sourceDatabaseName","startedOn","status","targetDatabaseName"})
+    @OutputCustomType.Constructor
     private MigrateSqlServerSqlDbTaskOutputDatabaseLevelValidationResultResponse(
-        DataIntegrityValidationResultResponse dataIntegrityValidationResult,
-        String endedOn,
-        String id,
-        String migrationId,
-        QueryAnalysisValidationResultResponse queryAnalysisValidationResult,
-        String resultType,
-        SchemaComparisonValidationResultResponse schemaValidationResult,
-        String sourceDatabaseName,
-        String startedOn,
-        String status,
-        String targetDatabaseName) {
+        @OutputCustomType.Parameter("dataIntegrityValidationResult") DataIntegrityValidationResultResponse dataIntegrityValidationResult,
+        @OutputCustomType.Parameter("endedOn") String endedOn,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("migrationId") String migrationId,
+        @OutputCustomType.Parameter("queryAnalysisValidationResult") QueryAnalysisValidationResultResponse queryAnalysisValidationResult,
+        @OutputCustomType.Parameter("resultType") String resultType,
+        @OutputCustomType.Parameter("schemaValidationResult") SchemaComparisonValidationResultResponse schemaValidationResult,
+        @OutputCustomType.Parameter("sourceDatabaseName") String sourceDatabaseName,
+        @OutputCustomType.Parameter("startedOn") String startedOn,
+        @OutputCustomType.Parameter("status") String status,
+        @OutputCustomType.Parameter("targetDatabaseName") String targetDatabaseName) {
         this.dataIntegrityValidationResult = dataIntegrityValidationResult;
         this.endedOn = endedOn;
         this.id = id;

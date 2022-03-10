@@ -129,30 +129,30 @@ public final class GetKpiResult {
      */
     private final @Nullable String unit;
 
-    @OutputCustomType.Constructor({"aliases","calculationWindow","calculationWindowFieldName","description","displayName","entityType","entityTypeName","expression","extracts","filter","function","groupBy","groupByMetadata","id","kpiName","name","participantProfilesMetadata","provisioningState","tenantId","thresHolds","type","unit"})
+    @OutputCustomType.Constructor
     private GetKpiResult(
-        @Nullable List<KpiAliasResponse> aliases,
-        String calculationWindow,
-        @Nullable String calculationWindowFieldName,
-        @Nullable Map<String,String> description,
-        @Nullable Map<String,String> displayName,
-        String entityType,
-        String entityTypeName,
-        String expression,
-        @Nullable List<KpiExtractResponse> extracts,
-        @Nullable String filter,
-        String function,
-        @Nullable List<String> groupBy,
-        List<KpiGroupByMetadataResponse> groupByMetadata,
-        String id,
-        String kpiName,
-        String name,
-        List<KpiParticipantProfilesMetadataResponse> participantProfilesMetadata,
-        String provisioningState,
-        String tenantId,
-        @Nullable KpiThresholdsResponse thresHolds,
-        String type,
-        @Nullable String unit) {
+        @OutputCustomType.Parameter("aliases") @Nullable List<KpiAliasResponse> aliases,
+        @OutputCustomType.Parameter("calculationWindow") String calculationWindow,
+        @OutputCustomType.Parameter("calculationWindowFieldName") @Nullable String calculationWindowFieldName,
+        @OutputCustomType.Parameter("description") @Nullable Map<String,String> description,
+        @OutputCustomType.Parameter("displayName") @Nullable Map<String,String> displayName,
+        @OutputCustomType.Parameter("entityType") String entityType,
+        @OutputCustomType.Parameter("entityTypeName") String entityTypeName,
+        @OutputCustomType.Parameter("expression") String expression,
+        @OutputCustomType.Parameter("extracts") @Nullable List<KpiExtractResponse> extracts,
+        @OutputCustomType.Parameter("filter") @Nullable String filter,
+        @OutputCustomType.Parameter("function") String function,
+        @OutputCustomType.Parameter("groupBy") @Nullable List<String> groupBy,
+        @OutputCustomType.Parameter("groupByMetadata") List<KpiGroupByMetadataResponse> groupByMetadata,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("kpiName") String kpiName,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("participantProfilesMetadata") List<KpiParticipantProfilesMetadataResponse> participantProfilesMetadata,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("tenantId") String tenantId,
+        @OutputCustomType.Parameter("thresHolds") @Nullable KpiThresholdsResponse thresHolds,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("unit") @Nullable String unit) {
         this.aliases = aliases;
         this.calculationWindow = calculationWindow;
         this.calculationWindowFieldName = calculationWindowFieldName;

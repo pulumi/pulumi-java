@@ -15,8 +15,8 @@ public final class AppSkuInfoResponse {
      */
     private final String name;
 
-    @OutputCustomType.Constructor({"name"})
-    private AppSkuInfoResponse(String name) {
+    @OutputCustomType.Constructor
+    private AppSkuInfoResponse(@OutputCustomType.Parameter("name") String name) {
         this.name = name;
     }
 

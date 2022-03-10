@@ -52,15 +52,15 @@ public final class ValidateMigrationInputSqlServerSqlMITaskInputResponse {
      */
     private final SqlConnectionInfoResponse targetConnectionInfo;
 
-    @OutputCustomType.Constructor({"backupBlobShare","backupFileShare","backupMode","selectedDatabases","selectedLogins","sourceConnectionInfo","targetConnectionInfo"})
+    @OutputCustomType.Constructor
     private ValidateMigrationInputSqlServerSqlMITaskInputResponse(
-        BlobShareResponse backupBlobShare,
-        @Nullable FileShareResponse backupFileShare,
-        @Nullable String backupMode,
-        List<MigrateSqlServerSqlMIDatabaseInputResponse> selectedDatabases,
-        @Nullable List<String> selectedLogins,
-        SqlConnectionInfoResponse sourceConnectionInfo,
-        SqlConnectionInfoResponse targetConnectionInfo) {
+        @OutputCustomType.Parameter("backupBlobShare") BlobShareResponse backupBlobShare,
+        @OutputCustomType.Parameter("backupFileShare") @Nullable FileShareResponse backupFileShare,
+        @OutputCustomType.Parameter("backupMode") @Nullable String backupMode,
+        @OutputCustomType.Parameter("selectedDatabases") List<MigrateSqlServerSqlMIDatabaseInputResponse> selectedDatabases,
+        @OutputCustomType.Parameter("selectedLogins") @Nullable List<String> selectedLogins,
+        @OutputCustomType.Parameter("sourceConnectionInfo") SqlConnectionInfoResponse sourceConnectionInfo,
+        @OutputCustomType.Parameter("targetConnectionInfo") SqlConnectionInfoResponse targetConnectionInfo) {
         this.backupBlobShare = backupBlobShare;
         this.backupFileShare = backupFileShare;
         this.backupMode = backupMode;

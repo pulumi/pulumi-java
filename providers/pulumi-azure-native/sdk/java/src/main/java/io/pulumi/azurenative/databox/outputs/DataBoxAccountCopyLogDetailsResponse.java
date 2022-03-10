@@ -31,12 +31,12 @@ public final class DataBoxAccountCopyLogDetailsResponse {
      */
     private final String copyVerboseLogLink;
 
-    @OutputCustomType.Constructor({"accountName","copyLogDetailsType","copyLogLink","copyVerboseLogLink"})
+    @OutputCustomType.Constructor
     private DataBoxAccountCopyLogDetailsResponse(
-        String accountName,
-        String copyLogDetailsType,
-        String copyLogLink,
-        String copyVerboseLogLink) {
+        @OutputCustomType.Parameter("accountName") String accountName,
+        @OutputCustomType.Parameter("copyLogDetailsType") String copyLogDetailsType,
+        @OutputCustomType.Parameter("copyLogLink") String copyLogLink,
+        @OutputCustomType.Parameter("copyVerboseLogLink") String copyVerboseLogLink) {
         this.accountName = accountName;
         this.copyLogDetailsType = copyLogDetailsType;
         this.copyLogLink = copyLogLink;

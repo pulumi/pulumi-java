@@ -24,10 +24,10 @@ public final class ListFirewallPolicyIdpsSignatureResult {
      */
     private final @Nullable List<SingleQueryResultResponse> signatures;
 
-    @OutputCustomType.Constructor({"matchingRecordsCount","signatures"})
+    @OutputCustomType.Constructor
     private ListFirewallPolicyIdpsSignatureResult(
-        @Nullable Double matchingRecordsCount,
-        @Nullable List<SingleQueryResultResponse> signatures) {
+        @OutputCustomType.Parameter("matchingRecordsCount") @Nullable Double matchingRecordsCount,
+        @OutputCustomType.Parameter("signatures") @Nullable List<SingleQueryResultResponse> signatures) {
         this.matchingRecordsCount = matchingRecordsCount;
         this.signatures = signatures;
     }

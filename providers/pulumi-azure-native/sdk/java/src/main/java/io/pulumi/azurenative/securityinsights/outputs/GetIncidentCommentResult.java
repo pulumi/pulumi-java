@@ -59,17 +59,17 @@ public final class GetIncidentCommentResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"author","createdTimeUtc","etag","id","lastModifiedTimeUtc","message","name","systemData","type"})
+    @OutputCustomType.Constructor
     private GetIncidentCommentResult(
-        ClientInfoResponse author,
-        String createdTimeUtc,
-        @Nullable String etag,
-        String id,
-        String lastModifiedTimeUtc,
-        String message,
-        String name,
-        SystemDataResponse systemData,
-        String type) {
+        @OutputCustomType.Parameter("author") ClientInfoResponse author,
+        @OutputCustomType.Parameter("createdTimeUtc") String createdTimeUtc,
+        @OutputCustomType.Parameter("etag") @Nullable String etag,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("lastModifiedTimeUtc") String lastModifiedTimeUtc,
+        @OutputCustomType.Parameter("message") String message,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("type") String type) {
         this.author = author;
         this.createdTimeUtc = createdTimeUtc;
         this.etag = etag;

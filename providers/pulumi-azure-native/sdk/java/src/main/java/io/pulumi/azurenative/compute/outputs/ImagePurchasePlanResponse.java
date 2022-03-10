@@ -27,11 +27,11 @@ public final class ImagePurchasePlanResponse {
      */
     private final @Nullable String publisher;
 
-    @OutputCustomType.Constructor({"name","product","publisher"})
+    @OutputCustomType.Constructor
     private ImagePurchasePlanResponse(
-        @Nullable String name,
-        @Nullable String product,
-        @Nullable String publisher) {
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("product") @Nullable String product,
+        @OutputCustomType.Parameter("publisher") @Nullable String publisher) {
         this.name = name;
         this.product = product;
         this.publisher = publisher;

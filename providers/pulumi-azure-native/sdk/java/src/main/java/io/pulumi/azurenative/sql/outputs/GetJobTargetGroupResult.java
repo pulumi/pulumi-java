@@ -32,12 +32,12 @@ public final class GetJobTargetGroupResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"id","members","name","type"})
+    @OutputCustomType.Constructor
     private GetJobTargetGroupResult(
-        String id,
-        List<JobTargetResponse> members,
-        String name,
-        String type) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("members") List<JobTargetResponse> members,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("type") String type) {
         this.id = id;
         this.members = members;
         this.name = name;

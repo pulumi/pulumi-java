@@ -17,8 +17,8 @@ public final class DefenderForServersAwsOfferingResponseDefenderForServers {
      */
     private final @Nullable String cloudRoleArn;
 
-    @OutputCustomType.Constructor({"cloudRoleArn"})
-    private DefenderForServersAwsOfferingResponseDefenderForServers(@Nullable String cloudRoleArn) {
+    @OutputCustomType.Constructor
+    private DefenderForServersAwsOfferingResponseDefenderForServers(@OutputCustomType.Parameter("cloudRoleArn") @Nullable String cloudRoleArn) {
         this.cloudRoleArn = cloudRoleArn;
     }
 

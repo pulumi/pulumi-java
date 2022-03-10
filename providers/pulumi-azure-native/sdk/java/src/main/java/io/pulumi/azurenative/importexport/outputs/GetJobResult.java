@@ -56,16 +56,16 @@ public final class GetJobResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"id","identity","location","name","properties","systemData","tags","type"})
+    @OutputCustomType.Constructor
     private GetJobResult(
-        String id,
-        @Nullable IdentityDetailsResponse identity,
-        @Nullable String location,
-        String name,
-        JobDetailsResponse properties,
-        SystemDataResponse systemData,
-        @Nullable Object tags,
-        String type) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("identity") @Nullable IdentityDetailsResponse identity,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("properties") JobDetailsResponse properties,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("tags") @Nullable Object tags,
+        @OutputCustomType.Parameter("type") String type) {
         this.id = id;
         this.identity = identity;
         this.location = location;

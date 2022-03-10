@@ -39,13 +39,13 @@ public final class WeeklyScheduleResponse {
      */
     private final @Nullable Double usedBytes;
 
-    @OutputCustomType.Constructor({"day","hour","minute","snapshotsToKeep","usedBytes"})
+    @OutputCustomType.Constructor
     private WeeklyScheduleResponse(
-        @Nullable String day,
-        @Nullable Integer hour,
-        @Nullable Integer minute,
-        @Nullable Integer snapshotsToKeep,
-        @Nullable Double usedBytes) {
+        @OutputCustomType.Parameter("day") @Nullable String day,
+        @OutputCustomType.Parameter("hour") @Nullable Integer hour,
+        @OutputCustomType.Parameter("minute") @Nullable Integer minute,
+        @OutputCustomType.Parameter("snapshotsToKeep") @Nullable Integer snapshotsToKeep,
+        @OutputCustomType.Parameter("usedBytes") @Nullable Double usedBytes) {
         this.day = day;
         this.hour = hour;
         this.minute = minute;

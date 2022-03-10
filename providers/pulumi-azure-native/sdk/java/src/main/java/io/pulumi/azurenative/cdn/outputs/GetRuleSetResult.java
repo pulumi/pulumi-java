@@ -37,14 +37,14 @@ public final class GetRuleSetResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"deploymentStatus","id","name","provisioningState","systemData","type"})
+    @OutputCustomType.Constructor
     private GetRuleSetResult(
-        String deploymentStatus,
-        String id,
-        String name,
-        String provisioningState,
-        SystemDataResponse systemData,
-        String type) {
+        @OutputCustomType.Parameter("deploymentStatus") String deploymentStatus,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("type") String type) {
         this.deploymentStatus = deploymentStatus;
         this.id = id;
         this.name = name;

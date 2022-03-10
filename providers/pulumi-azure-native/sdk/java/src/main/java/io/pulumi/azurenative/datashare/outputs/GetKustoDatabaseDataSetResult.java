@@ -57,17 +57,17 @@ public final class GetKustoDatabaseDataSetResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"dataSetId","id","kind","kustoDatabaseResourceId","location","name","provisioningState","systemData","type"})
+    @OutputCustomType.Constructor
     private GetKustoDatabaseDataSetResult(
-        String dataSetId,
-        String id,
-        String kind,
-        String kustoDatabaseResourceId,
-        String location,
-        String name,
-        String provisioningState,
-        SystemDataResponse systemData,
-        String type) {
+        @OutputCustomType.Parameter("dataSetId") String dataSetId,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("kustoDatabaseResourceId") String kustoDatabaseResourceId,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("type") String type) {
         this.dataSetId = dataSetId;
         this.id = id;
         this.kind = kind;

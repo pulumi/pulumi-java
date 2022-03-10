@@ -20,10 +20,10 @@ public final class LinkResponse {
      */
     private final String linkUrl;
 
-    @OutputCustomType.Constructor({"linkType","linkUrl"})
+    @OutputCustomType.Constructor
     private LinkResponse(
-        String linkType,
-        String linkUrl) {
+        @OutputCustomType.Parameter("linkType") String linkType,
+        @OutputCustomType.Parameter("linkUrl") String linkUrl) {
         this.linkType = linkType;
         this.linkUrl = linkUrl;
     }

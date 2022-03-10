@@ -28,11 +28,11 @@ public final class ImageRepositoryCredentialResponse {
      */
     private final String userName;
 
-    @OutputCustomType.Constructor({"imageRepositoryUrl","password","userName"})
+    @OutputCustomType.Constructor
     private ImageRepositoryCredentialResponse(
-        String imageRepositoryUrl,
-        @Nullable AsymmetricEncryptedSecretResponse password,
-        String userName) {
+        @OutputCustomType.Parameter("imageRepositoryUrl") String imageRepositoryUrl,
+        @OutputCustomType.Parameter("password") @Nullable AsymmetricEncryptedSecretResponse password,
+        @OutputCustomType.Parameter("userName") String userName) {
         this.imageRepositoryUrl = imageRepositoryUrl;
         this.password = password;
         this.userName = userName;

@@ -25,11 +25,11 @@ public final class SlotSwapStatusResponse {
      */
     private final String timestampUtc;
 
-    @OutputCustomType.Constructor({"destinationSlotName","sourceSlotName","timestampUtc"})
+    @OutputCustomType.Constructor
     private SlotSwapStatusResponse(
-        String destinationSlotName,
-        String sourceSlotName,
-        String timestampUtc) {
+        @OutputCustomType.Parameter("destinationSlotName") String destinationSlotName,
+        @OutputCustomType.Parameter("sourceSlotName") String sourceSlotName,
+        @OutputCustomType.Parameter("timestampUtc") String timestampUtc) {
         this.destinationSlotName = destinationSlotName;
         this.sourceSlotName = sourceSlotName;
         this.timestampUtc = timestampUtc;

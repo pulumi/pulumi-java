@@ -36,12 +36,12 @@ public final class PreferencesResponse {
      */
     private final @Nullable TransportPreferencesResponse transportPreferences;
 
-    @OutputCustomType.Constructor({"encryptionPreferences","managementResourcePreferences","notificationPreferences","transportPreferences"})
+    @OutputCustomType.Constructor
     private PreferencesResponse(
-        @Nullable EncryptionPreferencesResponse encryptionPreferences,
-        @Nullable ManagementResourcePreferencesResponse managementResourcePreferences,
-        @Nullable List<NotificationPreferenceResponse> notificationPreferences,
-        @Nullable TransportPreferencesResponse transportPreferences) {
+        @OutputCustomType.Parameter("encryptionPreferences") @Nullable EncryptionPreferencesResponse encryptionPreferences,
+        @OutputCustomType.Parameter("managementResourcePreferences") @Nullable ManagementResourcePreferencesResponse managementResourcePreferences,
+        @OutputCustomType.Parameter("notificationPreferences") @Nullable List<NotificationPreferenceResponse> notificationPreferences,
+        @OutputCustomType.Parameter("transportPreferences") @Nullable TransportPreferencesResponse transportPreferences) {
         this.encryptionPreferences = encryptionPreferences;
         this.managementResourcePreferences = managementResourcePreferences;
         this.notificationPreferences = notificationPreferences;

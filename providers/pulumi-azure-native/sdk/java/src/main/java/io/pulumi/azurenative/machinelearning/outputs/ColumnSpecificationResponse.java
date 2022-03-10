@@ -40,13 +40,13 @@ public final class ColumnSpecificationResponse {
      */
     private final @Nullable Boolean xMsIsordered;
 
-    @OutputCustomType.Constructor({"$enum","format","type","xMsIsnullable","xMsIsordered"})
+    @OutputCustomType.Constructor
     private ColumnSpecificationResponse(
-        @Nullable List<Object> $enum,
-        @Nullable String format,
-        String type,
-        @Nullable Boolean xMsIsnullable,
-        @Nullable Boolean xMsIsordered) {
+        @OutputCustomType.Parameter("enum") @Nullable List<Object> $enum,
+        @OutputCustomType.Parameter("format") @Nullable String format,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("xMsIsnullable") @Nullable Boolean xMsIsnullable,
+        @OutputCustomType.Parameter("xMsIsordered") @Nullable Boolean xMsIsordered) {
         this.$enum = $enum;
         this.format = format;
         this.type = type;

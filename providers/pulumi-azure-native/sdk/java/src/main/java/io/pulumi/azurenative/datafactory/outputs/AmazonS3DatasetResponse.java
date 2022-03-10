@@ -105,24 +105,24 @@ public final class AmazonS3DatasetResponse {
      */
     private final @Nullable Object version;
 
-    @OutputCustomType.Constructor({"annotations","bucketName","compression","description","folder","format","key","linkedServiceName","modifiedDatetimeEnd","modifiedDatetimeStart","parameters","prefix","schema","structure","type","version"})
+    @OutputCustomType.Constructor
     private AmazonS3DatasetResponse(
-        @Nullable List<Object> annotations,
-        Object bucketName,
-        @Nullable DatasetCompressionResponse compression,
-        @Nullable String description,
-        @Nullable DatasetResponseFolder folder,
-        @Nullable Object format,
-        @Nullable Object key,
-        LinkedServiceReferenceResponse linkedServiceName,
-        @Nullable Object modifiedDatetimeEnd,
-        @Nullable Object modifiedDatetimeStart,
-        @Nullable Map<String,ParameterSpecificationResponse> parameters,
-        @Nullable Object prefix,
-        @Nullable Object schema,
-        @Nullable Object structure,
-        String type,
-        @Nullable Object version) {
+        @OutputCustomType.Parameter("annotations") @Nullable List<Object> annotations,
+        @OutputCustomType.Parameter("bucketName") Object bucketName,
+        @OutputCustomType.Parameter("compression") @Nullable DatasetCompressionResponse compression,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("folder") @Nullable DatasetResponseFolder folder,
+        @OutputCustomType.Parameter("format") @Nullable Object format,
+        @OutputCustomType.Parameter("key") @Nullable Object key,
+        @OutputCustomType.Parameter("linkedServiceName") LinkedServiceReferenceResponse linkedServiceName,
+        @OutputCustomType.Parameter("modifiedDatetimeEnd") @Nullable Object modifiedDatetimeEnd,
+        @OutputCustomType.Parameter("modifiedDatetimeStart") @Nullable Object modifiedDatetimeStart,
+        @OutputCustomType.Parameter("parameters") @Nullable Map<String,ParameterSpecificationResponse> parameters,
+        @OutputCustomType.Parameter("prefix") @Nullable Object prefix,
+        @OutputCustomType.Parameter("schema") @Nullable Object schema,
+        @OutputCustomType.Parameter("structure") @Nullable Object structure,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("version") @Nullable Object version) {
         this.annotations = annotations;
         this.bucketName = bucketName;
         this.compression = compression;

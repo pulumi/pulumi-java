@@ -22,10 +22,10 @@ public final class ListSqlMigrationServiceMonitoringDataResult {
      */
     private final List<NodeMonitoringDataResponse> nodes;
 
-    @OutputCustomType.Constructor({"name","nodes"})
+    @OutputCustomType.Constructor
     private ListSqlMigrationServiceMonitoringDataResult(
-        String name,
-        List<NodeMonitoringDataResponse> nodes) {
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("nodes") List<NodeMonitoringDataResponse> nodes) {
         this.name = name;
         this.nodes = nodes;
     }

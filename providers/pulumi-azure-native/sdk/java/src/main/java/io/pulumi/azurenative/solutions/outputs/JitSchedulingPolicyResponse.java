@@ -21,11 +21,11 @@ public final class JitSchedulingPolicyResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"duration","startTime","type"})
+    @OutputCustomType.Constructor
     private JitSchedulingPolicyResponse(
-        String duration,
-        String startTime,
-        String type) {
+        @OutputCustomType.Parameter("duration") String duration,
+        @OutputCustomType.Parameter("startTime") String startTime,
+        @OutputCustomType.Parameter("type") String type) {
         this.duration = duration;
         this.startTime = startTime;
         this.type = type;

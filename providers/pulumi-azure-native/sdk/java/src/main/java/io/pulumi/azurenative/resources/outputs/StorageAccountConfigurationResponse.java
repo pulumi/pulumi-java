@@ -22,10 +22,10 @@ public final class StorageAccountConfigurationResponse {
      */
     private final @Nullable String storageAccountName;
 
-    @OutputCustomType.Constructor({"storageAccountKey","storageAccountName"})
+    @OutputCustomType.Constructor
     private StorageAccountConfigurationResponse(
-        @Nullable String storageAccountKey,
-        @Nullable String storageAccountName) {
+        @OutputCustomType.Parameter("storageAccountKey") @Nullable String storageAccountKey,
+        @OutputCustomType.Parameter("storageAccountName") @Nullable String storageAccountName) {
         this.storageAccountKey = storageAccountKey;
         this.storageAccountName = storageAccountName;
     }

@@ -32,12 +32,12 @@ public final class ContainerNetworkInterfaceIpConfigurationResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"etag","name","provisioningState","type"})
+    @OutputCustomType.Constructor
     private ContainerNetworkInterfaceIpConfigurationResponse(
-        String etag,
-        @Nullable String name,
-        String provisioningState,
-        String type) {
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("type") String type) {
         this.etag = etag;
         this.name = name;
         this.provisioningState = provisioningState;

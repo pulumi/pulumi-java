@@ -83,21 +83,21 @@ public final class GetDataCollectionRuleResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"dataFlows","dataSources","description","destinations","etag","id","immutableId","kind","location","name","provisioningState","tags","type"})
+    @OutputCustomType.Constructor
     private GetDataCollectionRuleResult(
-        @Nullable List<DataFlowResponse> dataFlows,
-        @Nullable DataCollectionRuleResponseDataSources dataSources,
-        @Nullable String description,
-        @Nullable DataCollectionRuleResponseDestinations destinations,
-        String etag,
-        String id,
-        String immutableId,
-        @Nullable String kind,
-        String location,
-        String name,
-        String provisioningState,
-        @Nullable Map<String,String> tags,
-        String type) {
+        @OutputCustomType.Parameter("dataFlows") @Nullable List<DataFlowResponse> dataFlows,
+        @OutputCustomType.Parameter("dataSources") @Nullable DataCollectionRuleResponseDataSources dataSources,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("destinations") @Nullable DataCollectionRuleResponseDestinations destinations,
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("immutableId") String immutableId,
+        @OutputCustomType.Parameter("kind") @Nullable String kind,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type) {
         this.dataFlows = dataFlows;
         this.dataSources = dataSources;
         this.description = description;

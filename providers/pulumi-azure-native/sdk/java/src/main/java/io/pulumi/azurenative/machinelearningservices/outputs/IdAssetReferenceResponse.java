@@ -21,10 +21,10 @@ public final class IdAssetReferenceResponse {
      */
     private final String referenceType;
 
-    @OutputCustomType.Constructor({"assetId","referenceType"})
+    @OutputCustomType.Constructor
     private IdAssetReferenceResponse(
-        String assetId,
-        String referenceType) {
+        @OutputCustomType.Parameter("assetId") String assetId,
+        @OutputCustomType.Parameter("referenceType") String referenceType) {
         this.assetId = assetId;
         this.referenceType = referenceType;
     }

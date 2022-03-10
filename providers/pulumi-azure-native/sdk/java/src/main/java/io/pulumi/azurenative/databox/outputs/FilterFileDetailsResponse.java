@@ -20,10 +20,10 @@ public final class FilterFileDetailsResponse {
      */
     private final String filterFileType;
 
-    @OutputCustomType.Constructor({"filterFilePath","filterFileType"})
+    @OutputCustomType.Constructor
     private FilterFileDetailsResponse(
-        String filterFilePath,
-        String filterFileType) {
+        @OutputCustomType.Parameter("filterFilePath") String filterFilePath,
+        @OutputCustomType.Parameter("filterFileType") String filterFileType) {
         this.filterFilePath = filterFilePath;
         this.filterFileType = filterFileType;
     }

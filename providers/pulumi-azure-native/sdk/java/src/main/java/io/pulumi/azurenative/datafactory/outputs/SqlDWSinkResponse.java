@@ -97,24 +97,24 @@ public final class SqlDWSinkResponse {
      */
     private final @Nullable Object writeBehavior;
 
-    @OutputCustomType.Constructor({"allowCopyCommand","allowPolyBase","copyCommandSettings","disableMetricsCollection","maxConcurrentConnections","polyBaseSettings","preCopyScript","sinkRetryCount","sinkRetryWait","sqlWriterUseTableLock","tableOption","type","upsertSettings","writeBatchSize","writeBatchTimeout","writeBehavior"})
+    @OutputCustomType.Constructor
     private SqlDWSinkResponse(
-        @Nullable Object allowCopyCommand,
-        @Nullable Object allowPolyBase,
-        @Nullable DWCopyCommandSettingsResponse copyCommandSettings,
-        @Nullable Object disableMetricsCollection,
-        @Nullable Object maxConcurrentConnections,
-        @Nullable PolybaseSettingsResponse polyBaseSettings,
-        @Nullable Object preCopyScript,
-        @Nullable Object sinkRetryCount,
-        @Nullable Object sinkRetryWait,
-        @Nullable Object sqlWriterUseTableLock,
-        @Nullable Object tableOption,
-        String type,
-        @Nullable SqlDWUpsertSettingsResponse upsertSettings,
-        @Nullable Object writeBatchSize,
-        @Nullable Object writeBatchTimeout,
-        @Nullable Object writeBehavior) {
+        @OutputCustomType.Parameter("allowCopyCommand") @Nullable Object allowCopyCommand,
+        @OutputCustomType.Parameter("allowPolyBase") @Nullable Object allowPolyBase,
+        @OutputCustomType.Parameter("copyCommandSettings") @Nullable DWCopyCommandSettingsResponse copyCommandSettings,
+        @OutputCustomType.Parameter("disableMetricsCollection") @Nullable Object disableMetricsCollection,
+        @OutputCustomType.Parameter("maxConcurrentConnections") @Nullable Object maxConcurrentConnections,
+        @OutputCustomType.Parameter("polyBaseSettings") @Nullable PolybaseSettingsResponse polyBaseSettings,
+        @OutputCustomType.Parameter("preCopyScript") @Nullable Object preCopyScript,
+        @OutputCustomType.Parameter("sinkRetryCount") @Nullable Object sinkRetryCount,
+        @OutputCustomType.Parameter("sinkRetryWait") @Nullable Object sinkRetryWait,
+        @OutputCustomType.Parameter("sqlWriterUseTableLock") @Nullable Object sqlWriterUseTableLock,
+        @OutputCustomType.Parameter("tableOption") @Nullable Object tableOption,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("upsertSettings") @Nullable SqlDWUpsertSettingsResponse upsertSettings,
+        @OutputCustomType.Parameter("writeBatchSize") @Nullable Object writeBatchSize,
+        @OutputCustomType.Parameter("writeBatchTimeout") @Nullable Object writeBatchTimeout,
+        @OutputCustomType.Parameter("writeBehavior") @Nullable Object writeBehavior) {
         this.allowCopyCommand = allowCopyCommand;
         this.allowPolyBase = allowPolyBase;
         this.copyCommandSettings = copyCommandSettings;

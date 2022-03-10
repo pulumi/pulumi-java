@@ -95,24 +95,24 @@ public final class WorkspaceCustomParametersResponse {
      */
     private final @Nullable WorkspaceCustomStringParameterResponse vnetAddressPrefix;
 
-    @OutputCustomType.Constructor({"amlWorkspaceId","customPrivateSubnetName","customPublicSubnetName","customVirtualNetworkId","enableNoPublicIp","encryption","loadBalancerBackendPoolName","loadBalancerId","natGatewayName","prepareEncryption","publicIpName","requireInfrastructureEncryption","resourceTags","storageAccountName","storageAccountSkuName","vnetAddressPrefix"})
+    @OutputCustomType.Constructor
     private WorkspaceCustomParametersResponse(
-        @Nullable WorkspaceCustomStringParameterResponse amlWorkspaceId,
-        @Nullable WorkspaceCustomStringParameterResponse customPrivateSubnetName,
-        @Nullable WorkspaceCustomStringParameterResponse customPublicSubnetName,
-        @Nullable WorkspaceCustomStringParameterResponse customVirtualNetworkId,
-        @Nullable WorkspaceCustomBooleanParameterResponse enableNoPublicIp,
-        @Nullable WorkspaceEncryptionParameterResponse encryption,
-        @Nullable WorkspaceCustomStringParameterResponse loadBalancerBackendPoolName,
-        @Nullable WorkspaceCustomStringParameterResponse loadBalancerId,
-        @Nullable WorkspaceCustomStringParameterResponse natGatewayName,
-        @Nullable WorkspaceCustomBooleanParameterResponse prepareEncryption,
-        @Nullable WorkspaceCustomStringParameterResponse publicIpName,
-        @Nullable WorkspaceCustomBooleanParameterResponse requireInfrastructureEncryption,
-        WorkspaceCustomObjectParameterResponse resourceTags,
-        @Nullable WorkspaceCustomStringParameterResponse storageAccountName,
-        @Nullable WorkspaceCustomStringParameterResponse storageAccountSkuName,
-        @Nullable WorkspaceCustomStringParameterResponse vnetAddressPrefix) {
+        @OutputCustomType.Parameter("amlWorkspaceId") @Nullable WorkspaceCustomStringParameterResponse amlWorkspaceId,
+        @OutputCustomType.Parameter("customPrivateSubnetName") @Nullable WorkspaceCustomStringParameterResponse customPrivateSubnetName,
+        @OutputCustomType.Parameter("customPublicSubnetName") @Nullable WorkspaceCustomStringParameterResponse customPublicSubnetName,
+        @OutputCustomType.Parameter("customVirtualNetworkId") @Nullable WorkspaceCustomStringParameterResponse customVirtualNetworkId,
+        @OutputCustomType.Parameter("enableNoPublicIp") @Nullable WorkspaceCustomBooleanParameterResponse enableNoPublicIp,
+        @OutputCustomType.Parameter("encryption") @Nullable WorkspaceEncryptionParameterResponse encryption,
+        @OutputCustomType.Parameter("loadBalancerBackendPoolName") @Nullable WorkspaceCustomStringParameterResponse loadBalancerBackendPoolName,
+        @OutputCustomType.Parameter("loadBalancerId") @Nullable WorkspaceCustomStringParameterResponse loadBalancerId,
+        @OutputCustomType.Parameter("natGatewayName") @Nullable WorkspaceCustomStringParameterResponse natGatewayName,
+        @OutputCustomType.Parameter("prepareEncryption") @Nullable WorkspaceCustomBooleanParameterResponse prepareEncryption,
+        @OutputCustomType.Parameter("publicIpName") @Nullable WorkspaceCustomStringParameterResponse publicIpName,
+        @OutputCustomType.Parameter("requireInfrastructureEncryption") @Nullable WorkspaceCustomBooleanParameterResponse requireInfrastructureEncryption,
+        @OutputCustomType.Parameter("resourceTags") WorkspaceCustomObjectParameterResponse resourceTags,
+        @OutputCustomType.Parameter("storageAccountName") @Nullable WorkspaceCustomStringParameterResponse storageAccountName,
+        @OutputCustomType.Parameter("storageAccountSkuName") @Nullable WorkspaceCustomStringParameterResponse storageAccountSkuName,
+        @OutputCustomType.Parameter("vnetAddressPrefix") @Nullable WorkspaceCustomStringParameterResponse vnetAddressPrefix) {
         this.amlWorkspaceId = amlWorkspaceId;
         this.customPrivateSubnetName = customPrivateSubnetName;
         this.customPublicSubnetName = customPublicSubnetName;

@@ -59,17 +59,17 @@ public final class SapCloudForCustomerSinkResponse {
      */
     private final @Nullable String writeBehavior;
 
-    @OutputCustomType.Constructor({"disableMetricsCollection","httpRequestTimeout","maxConcurrentConnections","sinkRetryCount","sinkRetryWait","type","writeBatchSize","writeBatchTimeout","writeBehavior"})
+    @OutputCustomType.Constructor
     private SapCloudForCustomerSinkResponse(
-        @Nullable Object disableMetricsCollection,
-        @Nullable Object httpRequestTimeout,
-        @Nullable Object maxConcurrentConnections,
-        @Nullable Object sinkRetryCount,
-        @Nullable Object sinkRetryWait,
-        String type,
-        @Nullable Object writeBatchSize,
-        @Nullable Object writeBatchTimeout,
-        @Nullable String writeBehavior) {
+        @OutputCustomType.Parameter("disableMetricsCollection") @Nullable Object disableMetricsCollection,
+        @OutputCustomType.Parameter("httpRequestTimeout") @Nullable Object httpRequestTimeout,
+        @OutputCustomType.Parameter("maxConcurrentConnections") @Nullable Object maxConcurrentConnections,
+        @OutputCustomType.Parameter("sinkRetryCount") @Nullable Object sinkRetryCount,
+        @OutputCustomType.Parameter("sinkRetryWait") @Nullable Object sinkRetryWait,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("writeBatchSize") @Nullable Object writeBatchSize,
+        @OutputCustomType.Parameter("writeBatchTimeout") @Nullable Object writeBatchTimeout,
+        @OutputCustomType.Parameter("writeBehavior") @Nullable String writeBehavior) {
         this.disableMetricsCollection = disableMetricsCollection;
         this.httpRequestTimeout = httpRequestTimeout;
         this.maxConcurrentConnections = maxConcurrentConnections;

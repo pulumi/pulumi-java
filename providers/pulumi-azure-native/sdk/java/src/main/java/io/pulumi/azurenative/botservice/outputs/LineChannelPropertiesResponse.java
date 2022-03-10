@@ -28,11 +28,11 @@ public final class LineChannelPropertiesResponse {
      */
     private final List<LineRegistrationResponse> lineRegistrations;
 
-    @OutputCustomType.Constructor({"callbackUrl","isValidated","lineRegistrations"})
+    @OutputCustomType.Constructor
     private LineChannelPropertiesResponse(
-        String callbackUrl,
-        Boolean isValidated,
-        List<LineRegistrationResponse> lineRegistrations) {
+        @OutputCustomType.Parameter("callbackUrl") String callbackUrl,
+        @OutputCustomType.Parameter("isValidated") Boolean isValidated,
+        @OutputCustomType.Parameter("lineRegistrations") List<LineRegistrationResponse> lineRegistrations) {
         this.callbackUrl = callbackUrl;
         this.isValidated = isValidated;
         this.lineRegistrations = lineRegistrations;

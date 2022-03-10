@@ -58,17 +58,17 @@ public final class TargetResponse {
      */
     private final @Nullable String version;
 
-    @OutputCustomType.Constructor({"digest","length","mediaType","name","repository","size","tag","url","version"})
+    @OutputCustomType.Constructor
     private TargetResponse(
-        @Nullable String digest,
-        @Nullable Double length,
-        @Nullable String mediaType,
-        @Nullable String name,
-        @Nullable String repository,
-        @Nullable Double size,
-        @Nullable String tag,
-        @Nullable String url,
-        @Nullable String version) {
+        @OutputCustomType.Parameter("digest") @Nullable String digest,
+        @OutputCustomType.Parameter("length") @Nullable Double length,
+        @OutputCustomType.Parameter("mediaType") @Nullable String mediaType,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("repository") @Nullable String repository,
+        @OutputCustomType.Parameter("size") @Nullable Double size,
+        @OutputCustomType.Parameter("tag") @Nullable String tag,
+        @OutputCustomType.Parameter("url") @Nullable String url,
+        @OutputCustomType.Parameter("version") @Nullable String version) {
         this.digest = digest;
         this.length = length;
         this.mediaType = mediaType;

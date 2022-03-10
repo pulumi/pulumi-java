@@ -23,10 +23,10 @@ public final class AdaptiveApplicationControlIssueSummaryResponse {
      */
     private final @Nullable Double numberOfVms;
 
-    @OutputCustomType.Constructor({"issue","numberOfVms"})
+    @OutputCustomType.Constructor
     private AdaptiveApplicationControlIssueSummaryResponse(
-        @Nullable String issue,
-        @Nullable Double numberOfVms) {
+        @OutputCustomType.Parameter("issue") @Nullable String issue,
+        @OutputCustomType.Parameter("numberOfVms") @Nullable Double numberOfVms) {
         this.issue = issue;
         this.numberOfVms = numberOfVms;
     }

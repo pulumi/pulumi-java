@@ -22,10 +22,10 @@ public final class AttestationEvidenceResponse {
      */
     private final @Nullable String sourceUri;
 
-    @OutputCustomType.Constructor({"description","sourceUri"})
+    @OutputCustomType.Constructor
     private AttestationEvidenceResponse(
-        @Nullable String description,
-        @Nullable String sourceUri) {
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("sourceUri") @Nullable String sourceUri) {
         this.description = description;
         this.sourceUri = sourceUri;
     }

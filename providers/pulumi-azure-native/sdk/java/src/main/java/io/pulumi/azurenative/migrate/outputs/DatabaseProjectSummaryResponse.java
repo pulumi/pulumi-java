@@ -34,12 +34,12 @@ public final class DatabaseProjectSummaryResponse {
      */
     private final @Nullable String refreshSummaryState;
 
-    @OutputCustomType.Constructor({"extendedSummary","instanceType","lastSummaryRefreshedTime","refreshSummaryState"})
+    @OutputCustomType.Constructor
     private DatabaseProjectSummaryResponse(
-        @Nullable Map<String,String> extendedSummary,
-        String instanceType,
-        @Nullable String lastSummaryRefreshedTime,
-        @Nullable String refreshSummaryState) {
+        @OutputCustomType.Parameter("extendedSummary") @Nullable Map<String,String> extendedSummary,
+        @OutputCustomType.Parameter("instanceType") String instanceType,
+        @OutputCustomType.Parameter("lastSummaryRefreshedTime") @Nullable String lastSummaryRefreshedTime,
+        @OutputCustomType.Parameter("refreshSummaryState") @Nullable String refreshSummaryState) {
         this.extendedSummary = extendedSummary;
         this.instanceType = instanceType;
         this.lastSummaryRefreshedTime = lastSummaryRefreshedTime;

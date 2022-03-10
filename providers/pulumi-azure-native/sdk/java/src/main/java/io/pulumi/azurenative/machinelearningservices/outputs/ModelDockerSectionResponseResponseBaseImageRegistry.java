@@ -13,8 +13,8 @@ import javax.annotation.Nullable;
 public final class ModelDockerSectionResponseResponseBaseImageRegistry {
     private final @Nullable String address;
 
-    @OutputCustomType.Constructor({"address"})
-    private ModelDockerSectionResponseResponseBaseImageRegistry(@Nullable String address) {
+    @OutputCustomType.Constructor
+    private ModelDockerSectionResponseResponseBaseImageRegistry(@OutputCustomType.Parameter("address") @Nullable String address) {
         this.address = address;
     }
 

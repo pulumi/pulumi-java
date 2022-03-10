@@ -31,12 +31,12 @@ public final class DatasetResponseSqlDataPath {
      */
     private final String sqlTableName;
 
-    @OutputCustomType.Constructor({"queryTimeout","sqlQuery","sqlStoredProcedureName","sqlTableName"})
+    @OutputCustomType.Constructor
     private DatasetResponseSqlDataPath(
-        Double queryTimeout,
-        String sqlQuery,
-        String sqlStoredProcedureName,
-        String sqlTableName) {
+        @OutputCustomType.Parameter("queryTimeout") Double queryTimeout,
+        @OutputCustomType.Parameter("sqlQuery") String sqlQuery,
+        @OutputCustomType.Parameter("sqlStoredProcedureName") String sqlStoredProcedureName,
+        @OutputCustomType.Parameter("sqlTableName") String sqlTableName) {
         this.queryTimeout = queryTimeout;
         this.sqlQuery = sqlQuery;
         this.sqlStoredProcedureName = sqlStoredProcedureName;

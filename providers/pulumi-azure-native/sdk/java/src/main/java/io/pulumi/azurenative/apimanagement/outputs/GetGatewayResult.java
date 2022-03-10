@@ -38,13 +38,13 @@ public final class GetGatewayResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"description","id","locationData","name","type"})
+    @OutputCustomType.Constructor
     private GetGatewayResult(
-        @Nullable String description,
-        String id,
-        @Nullable ResourceLocationDataContractResponse locationData,
-        String name,
-        String type) {
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("locationData") @Nullable ResourceLocationDataContractResponse locationData,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("type") String type) {
         this.description = description;
         this.id = id;
         this.locationData = locationData;

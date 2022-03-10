@@ -33,12 +33,12 @@ public final class ContainerPropertiesResponseInstanceView {
      */
     private final Integer restartCount;
 
-    @OutputCustomType.Constructor({"currentState","events","previousState","restartCount"})
+    @OutputCustomType.Constructor
     private ContainerPropertiesResponseInstanceView(
-        ContainerStateResponse currentState,
-        List<EventResponse> events,
-        ContainerStateResponse previousState,
-        Integer restartCount) {
+        @OutputCustomType.Parameter("currentState") ContainerStateResponse currentState,
+        @OutputCustomType.Parameter("events") List<EventResponse> events,
+        @OutputCustomType.Parameter("previousState") ContainerStateResponse previousState,
+        @OutputCustomType.Parameter("restartCount") Integer restartCount) {
         this.currentState = currentState;
         this.events = events;
         this.previousState = previousState;

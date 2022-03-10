@@ -70,19 +70,19 @@ public final class GetSystemTopicResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"id","identity","location","metricResourceId","name","provisioningState","source","systemData","tags","topicType","type"})
+    @OutputCustomType.Constructor
     private GetSystemTopicResult(
-        String id,
-        @Nullable IdentityInfoResponse identity,
-        String location,
-        String metricResourceId,
-        String name,
-        String provisioningState,
-        @Nullable String source,
-        SystemDataResponse systemData,
-        @Nullable Map<String,String> tags,
-        @Nullable String topicType,
-        String type) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("identity") @Nullable IdentityInfoResponse identity,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("metricResourceId") String metricResourceId,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("source") @Nullable String source,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("topicType") @Nullable String topicType,
+        @OutputCustomType.Parameter("type") String type) {
         this.id = id;
         this.identity = identity;
         this.location = location;

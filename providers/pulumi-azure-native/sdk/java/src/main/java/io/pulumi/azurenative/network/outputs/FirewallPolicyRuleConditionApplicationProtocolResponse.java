@@ -23,10 +23,10 @@ public final class FirewallPolicyRuleConditionApplicationProtocolResponse {
      */
     private final @Nullable String protocolType;
 
-    @OutputCustomType.Constructor({"port","protocolType"})
+    @OutputCustomType.Constructor
     private FirewallPolicyRuleConditionApplicationProtocolResponse(
-        @Nullable Integer port,
-        @Nullable String protocolType) {
+        @OutputCustomType.Parameter("port") @Nullable Integer port,
+        @OutputCustomType.Parameter("protocolType") @Nullable String protocolType) {
         this.port = port;
         this.protocolType = protocolType;
     }

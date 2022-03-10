@@ -34,12 +34,12 @@ public final class GetUserTablesSqlSyncTaskOutputResponse {
      */
     private final List<ReportableExceptionResponse> validationErrors;
 
-    @OutputCustomType.Constructor({"databasesToSourceTables","databasesToTargetTables","tableValidationErrors","validationErrors"})
+    @OutputCustomType.Constructor
     private GetUserTablesSqlSyncTaskOutputResponse(
-        Map<String,List<DatabaseTableResponse>> databasesToSourceTables,
-        Map<String,List<DatabaseTableResponse>> databasesToTargetTables,
-        Map<String,List<String>> tableValidationErrors,
-        List<ReportableExceptionResponse> validationErrors) {
+        @OutputCustomType.Parameter("databasesToSourceTables") Map<String,List<DatabaseTableResponse>> databasesToSourceTables,
+        @OutputCustomType.Parameter("databasesToTargetTables") Map<String,List<DatabaseTableResponse>> databasesToTargetTables,
+        @OutputCustomType.Parameter("tableValidationErrors") Map<String,List<String>> tableValidationErrors,
+        @OutputCustomType.Parameter("validationErrors") List<ReportableExceptionResponse> validationErrors) {
         this.databasesToSourceTables = databasesToSourceTables;
         this.databasesToTargetTables = databasesToTargetTables;
         this.tableValidationErrors = tableValidationErrors;

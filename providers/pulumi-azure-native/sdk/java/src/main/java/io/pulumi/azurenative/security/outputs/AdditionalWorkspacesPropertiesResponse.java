@@ -28,11 +28,11 @@ public final class AdditionalWorkspacesPropertiesResponse {
      */
     private final @Nullable String workspace;
 
-    @OutputCustomType.Constructor({"dataTypes","type","workspace"})
+    @OutputCustomType.Constructor
     private AdditionalWorkspacesPropertiesResponse(
-        @Nullable List<String> dataTypes,
-        @Nullable String type,
-        @Nullable String workspace) {
+        @OutputCustomType.Parameter("dataTypes") @Nullable List<String> dataTypes,
+        @OutputCustomType.Parameter("type") @Nullable String type,
+        @OutputCustomType.Parameter("workspace") @Nullable String workspace) {
         this.dataTypes = dataTypes;
         this.type = type;
         this.workspace = workspace;

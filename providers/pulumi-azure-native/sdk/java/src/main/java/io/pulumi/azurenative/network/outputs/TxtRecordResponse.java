@@ -17,8 +17,8 @@ public final class TxtRecordResponse {
      */
     private final @Nullable List<String> value;
 
-    @OutputCustomType.Constructor({"value"})
-    private TxtRecordResponse(@Nullable List<String> value) {
+    @OutputCustomType.Constructor
+    private TxtRecordResponse(@OutputCustomType.Parameter("value") @Nullable List<String> value) {
         this.value = value;
     }
 

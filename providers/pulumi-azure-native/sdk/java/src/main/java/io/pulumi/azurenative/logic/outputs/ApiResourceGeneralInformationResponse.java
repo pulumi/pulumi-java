@@ -42,14 +42,14 @@ public final class ApiResourceGeneralInformationResponse {
      */
     private final @Nullable String tier;
 
-    @OutputCustomType.Constructor({"description","displayName","iconUrl","releaseTag","termsOfUseUrl","tier"})
+    @OutputCustomType.Constructor
     private ApiResourceGeneralInformationResponse(
-        @Nullable String description,
-        @Nullable String displayName,
-        @Nullable String iconUrl,
-        @Nullable String releaseTag,
-        @Nullable String termsOfUseUrl,
-        @Nullable String tier) {
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("displayName") @Nullable String displayName,
+        @OutputCustomType.Parameter("iconUrl") @Nullable String iconUrl,
+        @OutputCustomType.Parameter("releaseTag") @Nullable String releaseTag,
+        @OutputCustomType.Parameter("termsOfUseUrl") @Nullable String termsOfUseUrl,
+        @OutputCustomType.Parameter("tier") @Nullable String tier) {
         this.description = description;
         this.displayName = displayName;
         this.iconUrl = iconUrl;

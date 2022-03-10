@@ -39,13 +39,13 @@ public final class CodeRepositoryResponse {
      */
     private final String repositoryType;
 
-    @OutputCustomType.Constructor({"authorization","defaultBranch","id","properties","repositoryType"})
+    @OutputCustomType.Constructor
     private CodeRepositoryResponse(
-        @Nullable AuthorizationResponse authorization,
-        String defaultBranch,
-        String id,
-        @Nullable Map<String,String> properties,
-        String repositoryType) {
+        @OutputCustomType.Parameter("authorization") @Nullable AuthorizationResponse authorization,
+        @OutputCustomType.Parameter("defaultBranch") String defaultBranch,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("properties") @Nullable Map<String,String> properties,
+        @OutputCustomType.Parameter("repositoryType") String repositoryType) {
         this.authorization = authorization;
         this.defaultBranch = defaultBranch;
         this.id = id;

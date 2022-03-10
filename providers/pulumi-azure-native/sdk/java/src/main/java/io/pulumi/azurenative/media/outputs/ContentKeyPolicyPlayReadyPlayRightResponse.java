@@ -80,21 +80,21 @@ public final class ContentKeyPolicyPlayReadyPlayRightResponse {
      */
     private final @Nullable Integer uncompressedDigitalVideoOpl;
 
-    @OutputCustomType.Constructor({"agcAndColorStripeRestriction","allowPassingVideoContentToUnknownOutput","analogVideoOpl","compressedDigitalAudioOpl","compressedDigitalVideoOpl","digitalVideoOnlyContentRestriction","explicitAnalogTelevisionOutputRestriction","firstPlayExpiration","imageConstraintForAnalogComponentVideoRestriction","imageConstraintForAnalogComputerMonitorRestriction","scmsRestriction","uncompressedDigitalAudioOpl","uncompressedDigitalVideoOpl"})
+    @OutputCustomType.Constructor
     private ContentKeyPolicyPlayReadyPlayRightResponse(
-        @Nullable Integer agcAndColorStripeRestriction,
-        String allowPassingVideoContentToUnknownOutput,
-        @Nullable Integer analogVideoOpl,
-        @Nullable Integer compressedDigitalAudioOpl,
-        @Nullable Integer compressedDigitalVideoOpl,
-        Boolean digitalVideoOnlyContentRestriction,
-        @Nullable ContentKeyPolicyPlayReadyExplicitAnalogTelevisionRestrictionResponse explicitAnalogTelevisionOutputRestriction,
-        @Nullable String firstPlayExpiration,
-        Boolean imageConstraintForAnalogComponentVideoRestriction,
-        Boolean imageConstraintForAnalogComputerMonitorRestriction,
-        @Nullable Integer scmsRestriction,
-        @Nullable Integer uncompressedDigitalAudioOpl,
-        @Nullable Integer uncompressedDigitalVideoOpl) {
+        @OutputCustomType.Parameter("agcAndColorStripeRestriction") @Nullable Integer agcAndColorStripeRestriction,
+        @OutputCustomType.Parameter("allowPassingVideoContentToUnknownOutput") String allowPassingVideoContentToUnknownOutput,
+        @OutputCustomType.Parameter("analogVideoOpl") @Nullable Integer analogVideoOpl,
+        @OutputCustomType.Parameter("compressedDigitalAudioOpl") @Nullable Integer compressedDigitalAudioOpl,
+        @OutputCustomType.Parameter("compressedDigitalVideoOpl") @Nullable Integer compressedDigitalVideoOpl,
+        @OutputCustomType.Parameter("digitalVideoOnlyContentRestriction") Boolean digitalVideoOnlyContentRestriction,
+        @OutputCustomType.Parameter("explicitAnalogTelevisionOutputRestriction") @Nullable ContentKeyPolicyPlayReadyExplicitAnalogTelevisionRestrictionResponse explicitAnalogTelevisionOutputRestriction,
+        @OutputCustomType.Parameter("firstPlayExpiration") @Nullable String firstPlayExpiration,
+        @OutputCustomType.Parameter("imageConstraintForAnalogComponentVideoRestriction") Boolean imageConstraintForAnalogComponentVideoRestriction,
+        @OutputCustomType.Parameter("imageConstraintForAnalogComputerMonitorRestriction") Boolean imageConstraintForAnalogComputerMonitorRestriction,
+        @OutputCustomType.Parameter("scmsRestriction") @Nullable Integer scmsRestriction,
+        @OutputCustomType.Parameter("uncompressedDigitalAudioOpl") @Nullable Integer uncompressedDigitalAudioOpl,
+        @OutputCustomType.Parameter("uncompressedDigitalVideoOpl") @Nullable Integer uncompressedDigitalVideoOpl) {
         this.agcAndColorStripeRestriction = agcAndColorStripeRestriction;
         this.allowPassingVideoContentToUnknownOutput = allowPassingVideoContentToUnknownOutput;
         this.analogVideoOpl = analogVideoOpl;

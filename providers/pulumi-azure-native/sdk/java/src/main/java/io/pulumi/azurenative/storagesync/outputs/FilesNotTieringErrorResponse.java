@@ -21,10 +21,10 @@ public final class FilesNotTieringErrorResponse {
      */
     private final Double fileCount;
 
-    @OutputCustomType.Constructor({"errorCode","fileCount"})
+    @OutputCustomType.Constructor
     private FilesNotTieringErrorResponse(
-        Integer errorCode,
-        Double fileCount) {
+        @OutputCustomType.Parameter("errorCode") Integer errorCode,
+        @OutputCustomType.Parameter("fileCount") Double fileCount) {
         this.errorCode = errorCode;
         this.fileCount = fileCount;
     }

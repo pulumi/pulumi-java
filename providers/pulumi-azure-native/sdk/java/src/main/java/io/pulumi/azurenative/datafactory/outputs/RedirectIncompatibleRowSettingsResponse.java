@@ -22,10 +22,10 @@ public final class RedirectIncompatibleRowSettingsResponse {
      */
     private final @Nullable Object path;
 
-    @OutputCustomType.Constructor({"linkedServiceName","path"})
+    @OutputCustomType.Constructor
     private RedirectIncompatibleRowSettingsResponse(
-        Object linkedServiceName,
-        @Nullable Object path) {
+        @OutputCustomType.Parameter("linkedServiceName") Object linkedServiceName,
+        @OutputCustomType.Parameter("path") @Nullable Object path) {
         this.linkedServiceName = linkedServiceName;
         this.path = path;
     }

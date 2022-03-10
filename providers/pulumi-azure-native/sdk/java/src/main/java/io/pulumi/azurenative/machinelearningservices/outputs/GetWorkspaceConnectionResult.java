@@ -52,16 +52,16 @@ public final class GetWorkspaceConnectionResult {
      */
     private final @Nullable String valueFormat;
 
-    @OutputCustomType.Constructor({"authType","category","id","name","target","type","value","valueFormat"})
+    @OutputCustomType.Constructor
     private GetWorkspaceConnectionResult(
-        @Nullable String authType,
-        @Nullable String category,
-        String id,
-        String name,
-        @Nullable String target,
-        String type,
-        @Nullable String value,
-        @Nullable String valueFormat) {
+        @OutputCustomType.Parameter("authType") @Nullable String authType,
+        @OutputCustomType.Parameter("category") @Nullable String category,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("target") @Nullable String target,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("value") @Nullable String value,
+        @OutputCustomType.Parameter("valueFormat") @Nullable String valueFormat) {
         this.authType = authType;
         this.category = category;
         this.id = id;

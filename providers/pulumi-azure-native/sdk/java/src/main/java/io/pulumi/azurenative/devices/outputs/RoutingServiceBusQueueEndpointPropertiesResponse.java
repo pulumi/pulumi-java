@@ -52,16 +52,16 @@ public final class RoutingServiceBusQueueEndpointPropertiesResponse {
      */
     private final @Nullable String subscriptionId;
 
-    @OutputCustomType.Constructor({"authenticationType","connectionString","endpointUri","entityPath","id","name","resourceGroup","subscriptionId"})
+    @OutputCustomType.Constructor
     private RoutingServiceBusQueueEndpointPropertiesResponse(
-        @Nullable String authenticationType,
-        @Nullable String connectionString,
-        @Nullable String endpointUri,
-        @Nullable String entityPath,
-        @Nullable String id,
-        String name,
-        @Nullable String resourceGroup,
-        @Nullable String subscriptionId) {
+        @OutputCustomType.Parameter("authenticationType") @Nullable String authenticationType,
+        @OutputCustomType.Parameter("connectionString") @Nullable String connectionString,
+        @OutputCustomType.Parameter("endpointUri") @Nullable String endpointUri,
+        @OutputCustomType.Parameter("entityPath") @Nullable String entityPath,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("resourceGroup") @Nullable String resourceGroup,
+        @OutputCustomType.Parameter("subscriptionId") @Nullable String subscriptionId) {
         this.authenticationType = authenticationType;
         this.connectionString = connectionString;
         this.endpointUri = endpointUri;

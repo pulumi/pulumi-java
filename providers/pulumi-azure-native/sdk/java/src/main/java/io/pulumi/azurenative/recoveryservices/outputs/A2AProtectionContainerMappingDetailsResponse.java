@@ -38,13 +38,13 @@ public final class A2AProtectionContainerMappingDetailsResponse {
      */
     private final @Nullable String scheduleName;
 
-    @OutputCustomType.Constructor({"agentAutoUpdateStatus","automationAccountArmId","instanceType","jobScheduleName","scheduleName"})
+    @OutputCustomType.Constructor
     private A2AProtectionContainerMappingDetailsResponse(
-        @Nullable String agentAutoUpdateStatus,
-        @Nullable String automationAccountArmId,
-        String instanceType,
-        @Nullable String jobScheduleName,
-        @Nullable String scheduleName) {
+        @OutputCustomType.Parameter("agentAutoUpdateStatus") @Nullable String agentAutoUpdateStatus,
+        @OutputCustomType.Parameter("automationAccountArmId") @Nullable String automationAccountArmId,
+        @OutputCustomType.Parameter("instanceType") String instanceType,
+        @OutputCustomType.Parameter("jobScheduleName") @Nullable String jobScheduleName,
+        @OutputCustomType.Parameter("scheduleName") @Nullable String scheduleName) {
         this.agentAutoUpdateStatus = agentAutoUpdateStatus;
         this.automationAccountArmId = automationAccountArmId;
         this.instanceType = instanceType;

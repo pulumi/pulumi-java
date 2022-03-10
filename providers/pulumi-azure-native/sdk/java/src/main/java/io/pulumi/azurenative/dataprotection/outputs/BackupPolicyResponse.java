@@ -29,11 +29,11 @@ public final class BackupPolicyResponse {
      */
     private final List<Either<AzureBackupRuleResponse,AzureRetentionRuleResponse>> policyRules;
 
-    @OutputCustomType.Constructor({"datasourceTypes","objectType","policyRules"})
+    @OutputCustomType.Constructor
     private BackupPolicyResponse(
-        List<String> datasourceTypes,
-        String objectType,
-        List<Either<AzureBackupRuleResponse,AzureRetentionRuleResponse>> policyRules) {
+        @OutputCustomType.Parameter("datasourceTypes") List<String> datasourceTypes,
+        @OutputCustomType.Parameter("objectType") String objectType,
+        @OutputCustomType.Parameter("policyRules") List<Either<AzureBackupRuleResponse,AzureRetentionRuleResponse>> policyRules) {
         this.datasourceTypes = datasourceTypes;
         this.objectType = objectType;
         this.policyRules = policyRules;

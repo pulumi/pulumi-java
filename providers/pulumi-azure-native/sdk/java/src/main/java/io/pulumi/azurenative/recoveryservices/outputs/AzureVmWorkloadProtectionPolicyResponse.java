@@ -48,14 +48,14 @@ public final class AzureVmWorkloadProtectionPolicyResponse {
      */
     private final @Nullable String workLoadType;
 
-    @OutputCustomType.Constructor({"backupManagementType","makePolicyConsistent","protectedItemsCount","settings","subProtectionPolicy","workLoadType"})
+    @OutputCustomType.Constructor
     private AzureVmWorkloadProtectionPolicyResponse(
-        String backupManagementType,
-        @Nullable Boolean makePolicyConsistent,
-        @Nullable Integer protectedItemsCount,
-        @Nullable SettingsResponse settings,
-        @Nullable List<SubProtectionPolicyResponse> subProtectionPolicy,
-        @Nullable String workLoadType) {
+        @OutputCustomType.Parameter("backupManagementType") String backupManagementType,
+        @OutputCustomType.Parameter("makePolicyConsistent") @Nullable Boolean makePolicyConsistent,
+        @OutputCustomType.Parameter("protectedItemsCount") @Nullable Integer protectedItemsCount,
+        @OutputCustomType.Parameter("settings") @Nullable SettingsResponse settings,
+        @OutputCustomType.Parameter("subProtectionPolicy") @Nullable List<SubProtectionPolicyResponse> subProtectionPolicy,
+        @OutputCustomType.Parameter("workLoadType") @Nullable String workLoadType) {
         this.backupManagementType = backupManagementType;
         this.makePolicyConsistent = makePolicyConsistent;
         this.protectedItemsCount = protectedItemsCount;

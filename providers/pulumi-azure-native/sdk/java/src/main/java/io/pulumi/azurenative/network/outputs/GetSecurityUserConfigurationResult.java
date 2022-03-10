@@ -63,18 +63,18 @@ public final class GetSecurityUserConfigurationResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"deleteExistingNSGs","description","displayName","etag","id","name","provisioningState","securityType","systemData","type"})
+    @OutputCustomType.Constructor
     private GetSecurityUserConfigurationResult(
-        @Nullable String deleteExistingNSGs,
-        @Nullable String description,
-        @Nullable String displayName,
-        String etag,
-        String id,
-        String name,
-        String provisioningState,
-        @Nullable String securityType,
-        SystemDataResponse systemData,
-        String type) {
+        @OutputCustomType.Parameter("deleteExistingNSGs") @Nullable String deleteExistingNSGs,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("displayName") @Nullable String displayName,
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("securityType") @Nullable String securityType,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("type") String type) {
         this.deleteExistingNSGs = deleteExistingNSGs;
         this.description = description;
         this.displayName = displayName;

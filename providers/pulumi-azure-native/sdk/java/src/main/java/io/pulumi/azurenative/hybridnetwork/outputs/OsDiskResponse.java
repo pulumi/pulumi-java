@@ -28,11 +28,11 @@ public final class OsDiskResponse {
      */
     private final @Nullable String osType;
 
-    @OutputCustomType.Constructor({"diskSizeGB","name","osType"})
+    @OutputCustomType.Constructor
     private OsDiskResponse(
-        @Nullable Integer diskSizeGB,
-        @Nullable String name,
-        @Nullable String osType) {
+        @OutputCustomType.Parameter("diskSizeGB") @Nullable Integer diskSizeGB,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("osType") @Nullable String osType) {
         this.diskSizeGB = diskSizeGB;
         this.name = name;
         this.osType = osType;

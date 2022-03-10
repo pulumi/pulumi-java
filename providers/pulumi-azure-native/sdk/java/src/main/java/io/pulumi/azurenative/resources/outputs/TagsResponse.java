@@ -13,8 +13,8 @@ import javax.annotation.Nullable;
 public final class TagsResponse {
     private final @Nullable Map<String,String> tags;
 
-    @OutputCustomType.Constructor({"tags"})
-    private TagsResponse(@Nullable Map<String,String> tags) {
+    @OutputCustomType.Constructor
+    private TagsResponse(@OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags) {
         this.tags = tags;
     }
 

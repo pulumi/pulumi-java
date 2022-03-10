@@ -22,10 +22,10 @@ public final class ListRunLogSasUrlResult {
      */
     private final @Nullable String logLink;
 
-    @OutputCustomType.Constructor({"logArtifactLink","logLink"})
+    @OutputCustomType.Constructor
     private ListRunLogSasUrlResult(
-        @Nullable String logArtifactLink,
-        @Nullable String logLink) {
+        @OutputCustomType.Parameter("logArtifactLink") @Nullable String logArtifactLink,
+        @OutputCustomType.Parameter("logLink") @Nullable String logLink) {
         this.logArtifactLink = logArtifactLink;
         this.logLink = logLink;
     }

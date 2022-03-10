@@ -22,10 +22,10 @@ public final class TlsValidationOptionsResponse {
      */
     private final @Nullable String ignoreSignature;
 
-    @OutputCustomType.Constructor({"ignoreHostname","ignoreSignature"})
+    @OutputCustomType.Constructor
     private TlsValidationOptionsResponse(
-        @Nullable String ignoreHostname,
-        @Nullable String ignoreSignature) {
+        @OutputCustomType.Parameter("ignoreHostname") @Nullable String ignoreHostname,
+        @OutputCustomType.Parameter("ignoreSignature") @Nullable String ignoreSignature) {
         this.ignoreHostname = ignoreHostname;
         this.ignoreSignature = ignoreSignature;
     }

@@ -49,15 +49,15 @@ public final class GetDataSourceResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"etag","id","kind","name","properties","tags","type"})
+    @OutputCustomType.Constructor
     private GetDataSourceResult(
-        @Nullable String etag,
-        String id,
-        String kind,
-        String name,
-        Object properties,
-        @Nullable Map<String,String> tags,
-        String type) {
+        @OutputCustomType.Parameter("etag") @Nullable String etag,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("properties") Object properties,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type) {
         this.etag = etag;
         this.id = id;
         this.kind = kind;

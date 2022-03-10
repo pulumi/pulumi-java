@@ -23,10 +23,10 @@ public final class ConnectorMappingErrorManagementResponse {
      */
     private final String errorManagementType;
 
-    @OutputCustomType.Constructor({"errorLimit","errorManagementType"})
+    @OutputCustomType.Constructor
     private ConnectorMappingErrorManagementResponse(
-        @Nullable Integer errorLimit,
-        String errorManagementType) {
+        @OutputCustomType.Parameter("errorLimit") @Nullable Integer errorLimit,
+        @OutputCustomType.Parameter("errorManagementType") String errorManagementType) {
         this.errorLimit = errorLimit;
         this.errorManagementType = errorManagementType;
     }

@@ -67,20 +67,20 @@ public final class SecurityAssessmentMetadataPropertiesResponse {
      */
     private final @Nullable String userImpact;
 
-    @OutputCustomType.Constructor({"assessmentType","categories","description","displayName","implementationEffort","partnerData","policyDefinitionId","preview","remediationDescription","severity","threats","userImpact"})
+    @OutputCustomType.Constructor
     private SecurityAssessmentMetadataPropertiesResponse(
-        String assessmentType,
-        @Nullable List<String> categories,
-        @Nullable String description,
-        String displayName,
-        @Nullable String implementationEffort,
-        @Nullable SecurityAssessmentMetadataPartnerDataResponse partnerData,
-        String policyDefinitionId,
-        @Nullable Boolean preview,
-        @Nullable String remediationDescription,
-        String severity,
-        @Nullable List<String> threats,
-        @Nullable String userImpact) {
+        @OutputCustomType.Parameter("assessmentType") String assessmentType,
+        @OutputCustomType.Parameter("categories") @Nullable List<String> categories,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("implementationEffort") @Nullable String implementationEffort,
+        @OutputCustomType.Parameter("partnerData") @Nullable SecurityAssessmentMetadataPartnerDataResponse partnerData,
+        @OutputCustomType.Parameter("policyDefinitionId") String policyDefinitionId,
+        @OutputCustomType.Parameter("preview") @Nullable Boolean preview,
+        @OutputCustomType.Parameter("remediationDescription") @Nullable String remediationDescription,
+        @OutputCustomType.Parameter("severity") String severity,
+        @OutputCustomType.Parameter("threats") @Nullable List<String> threats,
+        @OutputCustomType.Parameter("userImpact") @Nullable String userImpact) {
         this.assessmentType = assessmentType;
         this.categories = categories;
         this.description = description;

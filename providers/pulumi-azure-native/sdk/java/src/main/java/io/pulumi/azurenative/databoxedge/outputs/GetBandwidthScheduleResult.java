@@ -53,16 +53,16 @@ public final class GetBandwidthScheduleResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"days","id","name","rateInMbps","start","stop","systemData","type"})
+    @OutputCustomType.Constructor
     private GetBandwidthScheduleResult(
-        List<String> days,
-        String id,
-        String name,
-        Integer rateInMbps,
-        String start,
-        String stop,
-        SystemDataResponse systemData,
-        String type) {
+        @OutputCustomType.Parameter("days") List<String> days,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("rateInMbps") Integer rateInMbps,
+        @OutputCustomType.Parameter("start") String start,
+        @OutputCustomType.Parameter("stop") String stop,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("type") String type) {
         this.days = days;
         this.id = id;
         this.name = name;

@@ -38,13 +38,13 @@ public final class ListServiceTestKeysResult {
      */
     private final @Nullable String secondaryTestEndpoint;
 
-    @OutputCustomType.Constructor({"enabled","primaryKey","primaryTestEndpoint","secondaryKey","secondaryTestEndpoint"})
+    @OutputCustomType.Constructor
     private ListServiceTestKeysResult(
-        @Nullable Boolean enabled,
-        @Nullable String primaryKey,
-        @Nullable String primaryTestEndpoint,
-        @Nullable String secondaryKey,
-        @Nullable String secondaryTestEndpoint) {
+        @OutputCustomType.Parameter("enabled") @Nullable Boolean enabled,
+        @OutputCustomType.Parameter("primaryKey") @Nullable String primaryKey,
+        @OutputCustomType.Parameter("primaryTestEndpoint") @Nullable String primaryTestEndpoint,
+        @OutputCustomType.Parameter("secondaryKey") @Nullable String secondaryKey,
+        @OutputCustomType.Parameter("secondaryTestEndpoint") @Nullable String secondaryTestEndpoint) {
         this.enabled = enabled;
         this.primaryKey = primaryKey;
         this.primaryTestEndpoint = primaryTestEndpoint;

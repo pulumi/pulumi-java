@@ -22,10 +22,10 @@ public final class AutomationRulePropertyValuesConditionResponse {
      */
     private final String conditionType;
 
-    @OutputCustomType.Constructor({"conditionProperties","conditionType"})
+    @OutputCustomType.Constructor
     private AutomationRulePropertyValuesConditionResponse(
-        AutomationRulePropertyValuesConditionResponseConditionProperties conditionProperties,
-        String conditionType) {
+        @OutputCustomType.Parameter("conditionProperties") AutomationRulePropertyValuesConditionResponseConditionProperties conditionProperties,
+        @OutputCustomType.Parameter("conditionType") String conditionType) {
         this.conditionProperties = conditionProperties;
         this.conditionType = conditionType;
     }

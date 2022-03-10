@@ -51,15 +51,15 @@ public final class UpdateConfigurationResponse {
      */
     private final @Nullable WindowsPropertiesResponse windows;
 
-    @OutputCustomType.Constructor({"azureVirtualMachines","duration","linux","nonAzureComputerNames","operatingSystem","targets","windows"})
+    @OutputCustomType.Constructor
     private UpdateConfigurationResponse(
-        @Nullable List<String> azureVirtualMachines,
-        @Nullable String duration,
-        @Nullable LinuxPropertiesResponse linux,
-        @Nullable List<String> nonAzureComputerNames,
-        String operatingSystem,
-        @Nullable TargetPropertiesResponse targets,
-        @Nullable WindowsPropertiesResponse windows) {
+        @OutputCustomType.Parameter("azureVirtualMachines") @Nullable List<String> azureVirtualMachines,
+        @OutputCustomType.Parameter("duration") @Nullable String duration,
+        @OutputCustomType.Parameter("linux") @Nullable LinuxPropertiesResponse linux,
+        @OutputCustomType.Parameter("nonAzureComputerNames") @Nullable List<String> nonAzureComputerNames,
+        @OutputCustomType.Parameter("operatingSystem") String operatingSystem,
+        @OutputCustomType.Parameter("targets") @Nullable TargetPropertiesResponse targets,
+        @OutputCustomType.Parameter("windows") @Nullable WindowsPropertiesResponse windows) {
         this.azureVirtualMachines = azureVirtualMachines;
         this.duration = duration;
         this.linux = linux;

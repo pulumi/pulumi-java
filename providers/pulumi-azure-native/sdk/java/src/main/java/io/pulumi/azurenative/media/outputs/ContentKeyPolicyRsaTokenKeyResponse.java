@@ -26,11 +26,11 @@ public final class ContentKeyPolicyRsaTokenKeyResponse {
      */
     private final String odataType;
 
-    @OutputCustomType.Constructor({"exponent","modulus","odataType"})
+    @OutputCustomType.Constructor
     private ContentKeyPolicyRsaTokenKeyResponse(
-        String exponent,
-        String modulus,
-        String odataType) {
+        @OutputCustomType.Parameter("exponent") String exponent,
+        @OutputCustomType.Parameter("modulus") String modulus,
+        @OutputCustomType.Parameter("odataType") String odataType) {
         this.exponent = exponent;
         this.modulus = modulus;
         this.odataType = odataType;

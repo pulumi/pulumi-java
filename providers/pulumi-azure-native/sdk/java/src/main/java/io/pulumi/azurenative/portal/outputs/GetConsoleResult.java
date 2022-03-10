@@ -15,8 +15,8 @@ public final class GetConsoleResult {
      */
     private final ConsolePropertiesResponse properties;
 
-    @OutputCustomType.Constructor({"properties"})
-    private GetConsoleResult(ConsolePropertiesResponse properties) {
+    @OutputCustomType.Constructor
+    private GetConsoleResult(@OutputCustomType.Parameter("properties") ConsolePropertiesResponse properties) {
         this.properties = properties;
     }
 

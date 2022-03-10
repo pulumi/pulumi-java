@@ -48,15 +48,15 @@ public final class CustomHttpsConfigurationResponse {
      */
     private final @Nullable KeyVaultCertificateSourceParametersResponseVault vault;
 
-    @OutputCustomType.Constructor({"certificateSource","certificateType","minimumTlsVersion","protocolType","secretName","secretVersion","vault"})
+    @OutputCustomType.Constructor
     private CustomHttpsConfigurationResponse(
-        String certificateSource,
-        @Nullable String certificateType,
-        String minimumTlsVersion,
-        String protocolType,
-        @Nullable String secretName,
-        @Nullable String secretVersion,
-        @Nullable KeyVaultCertificateSourceParametersResponseVault vault) {
+        @OutputCustomType.Parameter("certificateSource") String certificateSource,
+        @OutputCustomType.Parameter("certificateType") @Nullable String certificateType,
+        @OutputCustomType.Parameter("minimumTlsVersion") String minimumTlsVersion,
+        @OutputCustomType.Parameter("protocolType") String protocolType,
+        @OutputCustomType.Parameter("secretName") @Nullable String secretName,
+        @OutputCustomType.Parameter("secretVersion") @Nullable String secretVersion,
+        @OutputCustomType.Parameter("vault") @Nullable KeyVaultCertificateSourceParametersResponseVault vault) {
         this.certificateSource = certificateSource;
         this.certificateType = certificateType;
         this.minimumTlsVersion = minimumTlsVersion;

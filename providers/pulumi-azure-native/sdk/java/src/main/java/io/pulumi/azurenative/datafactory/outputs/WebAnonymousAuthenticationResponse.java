@@ -22,10 +22,10 @@ public final class WebAnonymousAuthenticationResponse {
      */
     private final Object url;
 
-    @OutputCustomType.Constructor({"authenticationType","url"})
+    @OutputCustomType.Constructor
     private WebAnonymousAuthenticationResponse(
-        String authenticationType,
-        Object url) {
+        @OutputCustomType.Parameter("authenticationType") String authenticationType,
+        @OutputCustomType.Parameter("url") Object url) {
         this.authenticationType = authenticationType;
         this.url = url;
     }

@@ -34,12 +34,12 @@ public final class DaprComponentResponse {
      */
     private final @Nullable String version;
 
-    @OutputCustomType.Constructor({"metadata","name","type","version"})
+    @OutputCustomType.Constructor
     private DaprComponentResponse(
-        @Nullable List<DaprMetadataResponse> metadata,
-        @Nullable String name,
-        @Nullable String type,
-        @Nullable String version) {
+        @OutputCustomType.Parameter("metadata") @Nullable List<DaprMetadataResponse> metadata,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("type") @Nullable String type,
+        @OutputCustomType.Parameter("version") @Nullable String version) {
         this.metadata = metadata;
         this.name = name;
         this.type = type;

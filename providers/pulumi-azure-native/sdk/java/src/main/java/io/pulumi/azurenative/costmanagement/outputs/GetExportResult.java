@@ -66,18 +66,18 @@ public final class GetExportResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"definition","deliveryInfo","eTag","format","id","name","nextRunTimeEstimate","runHistory","schedule","type"})
+    @OutputCustomType.Constructor
     private GetExportResult(
-        ExportDefinitionResponse definition,
-        ExportDeliveryInfoResponse deliveryInfo,
-        @Nullable String eTag,
-        @Nullable String format,
-        String id,
-        String name,
-        String nextRunTimeEstimate,
-        @Nullable ExportExecutionListResultResponse runHistory,
-        @Nullable ExportScheduleResponse schedule,
-        String type) {
+        @OutputCustomType.Parameter("definition") ExportDefinitionResponse definition,
+        @OutputCustomType.Parameter("deliveryInfo") ExportDeliveryInfoResponse deliveryInfo,
+        @OutputCustomType.Parameter("eTag") @Nullable String eTag,
+        @OutputCustomType.Parameter("format") @Nullable String format,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("nextRunTimeEstimate") String nextRunTimeEstimate,
+        @OutputCustomType.Parameter("runHistory") @Nullable ExportExecutionListResultResponse runHistory,
+        @OutputCustomType.Parameter("schedule") @Nullable ExportScheduleResponse schedule,
+        @OutputCustomType.Parameter("type") String type) {
         this.definition = definition;
         this.deliveryInfo = deliveryInfo;
         this.eTag = eTag;

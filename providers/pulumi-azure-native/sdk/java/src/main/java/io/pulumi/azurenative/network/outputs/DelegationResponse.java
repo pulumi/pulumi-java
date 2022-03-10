@@ -48,15 +48,15 @@ public final class DelegationResponse {
      */
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor({"actions","etag","id","name","provisioningState","serviceName","type"})
+    @OutputCustomType.Constructor
     private DelegationResponse(
-        List<String> actions,
-        String etag,
-        @Nullable String id,
-        @Nullable String name,
-        String provisioningState,
-        @Nullable String serviceName,
-        @Nullable String type) {
+        @OutputCustomType.Parameter("actions") List<String> actions,
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("serviceName") @Nullable String serviceName,
+        @OutputCustomType.Parameter("type") @Nullable String type) {
         this.actions = actions;
         this.etag = etag;
         this.id = id;

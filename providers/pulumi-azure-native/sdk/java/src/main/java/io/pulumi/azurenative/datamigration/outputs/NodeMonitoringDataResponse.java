@@ -59,17 +59,17 @@ public final class NodeMonitoringDataResponse {
      */
     private final Double sentBytes;
 
-    @OutputCustomType.Constructor({"additionalProperties","availableMemoryInMB","concurrentJobsLimit","concurrentJobsRunning","cpuUtilization","maxConcurrentJobs","nodeName","receivedBytes","sentBytes"})
+    @OutputCustomType.Constructor
     private NodeMonitoringDataResponse(
-        Map<String,Object> additionalProperties,
-        Integer availableMemoryInMB,
-        Integer concurrentJobsLimit,
-        Integer concurrentJobsRunning,
-        Integer cpuUtilization,
-        Integer maxConcurrentJobs,
-        String nodeName,
-        Double receivedBytes,
-        Double sentBytes) {
+        @OutputCustomType.Parameter("additionalProperties") Map<String,Object> additionalProperties,
+        @OutputCustomType.Parameter("availableMemoryInMB") Integer availableMemoryInMB,
+        @OutputCustomType.Parameter("concurrentJobsLimit") Integer concurrentJobsLimit,
+        @OutputCustomType.Parameter("concurrentJobsRunning") Integer concurrentJobsRunning,
+        @OutputCustomType.Parameter("cpuUtilization") Integer cpuUtilization,
+        @OutputCustomType.Parameter("maxConcurrentJobs") Integer maxConcurrentJobs,
+        @OutputCustomType.Parameter("nodeName") String nodeName,
+        @OutputCustomType.Parameter("receivedBytes") Double receivedBytes,
+        @OutputCustomType.Parameter("sentBytes") Double sentBytes) {
         this.additionalProperties = additionalProperties;
         this.availableMemoryInMB = availableMemoryInMB;
         this.concurrentJobsLimit = concurrentJobsLimit;

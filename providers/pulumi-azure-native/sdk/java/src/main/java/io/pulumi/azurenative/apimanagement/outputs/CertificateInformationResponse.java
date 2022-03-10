@@ -25,11 +25,11 @@ public final class CertificateInformationResponse {
      */
     private final String thumbprint;
 
-    @OutputCustomType.Constructor({"expiry","subject","thumbprint"})
+    @OutputCustomType.Constructor
     private CertificateInformationResponse(
-        String expiry,
-        String subject,
-        String thumbprint) {
+        @OutputCustomType.Parameter("expiry") String expiry,
+        @OutputCustomType.Parameter("subject") String subject,
+        @OutputCustomType.Parameter("thumbprint") String thumbprint) {
         this.expiry = expiry;
         this.subject = subject;
         this.thumbprint = thumbprint;

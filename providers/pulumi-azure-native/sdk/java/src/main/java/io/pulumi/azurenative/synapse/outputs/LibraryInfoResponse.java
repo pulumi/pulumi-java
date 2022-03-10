@@ -47,15 +47,15 @@ public final class LibraryInfoResponse {
      */
     private final String uploadedTimestamp;
 
-    @OutputCustomType.Constructor({"containerName","creatorId","name","path","provisioningStatus","type","uploadedTimestamp"})
+    @OutputCustomType.Constructor
     private LibraryInfoResponse(
-        @Nullable String containerName,
-        String creatorId,
-        @Nullable String name,
-        @Nullable String path,
-        String provisioningStatus,
-        @Nullable String type,
-        String uploadedTimestamp) {
+        @OutputCustomType.Parameter("containerName") @Nullable String containerName,
+        @OutputCustomType.Parameter("creatorId") String creatorId,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("path") @Nullable String path,
+        @OutputCustomType.Parameter("provisioningStatus") String provisioningStatus,
+        @OutputCustomType.Parameter("type") @Nullable String type,
+        @OutputCustomType.Parameter("uploadedTimestamp") String uploadedTimestamp) {
         this.containerName = containerName;
         this.creatorId = creatorId;
         this.name = name;

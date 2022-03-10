@@ -48,15 +48,15 @@ public final class GetSecretValueResult {
      */
     private final @Nullable String value;
 
-    @OutputCustomType.Constructor({"id","location","name","provisioningState","tags","type","value"})
+    @OutputCustomType.Constructor
     private GetSecretValueResult(
-        String id,
-        String location,
-        String name,
-        String provisioningState,
-        @Nullable Map<String,String> tags,
-        String type,
-        @Nullable String value) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("value") @Nullable String value) {
         this.id = id;
         this.location = location;
         this.name = name;

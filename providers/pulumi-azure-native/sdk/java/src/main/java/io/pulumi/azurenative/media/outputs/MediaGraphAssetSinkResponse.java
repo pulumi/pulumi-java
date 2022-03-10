@@ -32,12 +32,12 @@ public final class MediaGraphAssetSinkResponse {
      */
     private final String odataType;
 
-    @OutputCustomType.Constructor({"assetName","inputs","name","odataType"})
+    @OutputCustomType.Constructor
     private MediaGraphAssetSinkResponse(
-        String assetName,
-        List<String> inputs,
-        String name,
-        String odataType) {
+        @OutputCustomType.Parameter("assetName") String assetName,
+        @OutputCustomType.Parameter("inputs") List<String> inputs,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("odataType") String odataType) {
         this.assetName = assetName;
         this.inputs = inputs;
         this.name = name;

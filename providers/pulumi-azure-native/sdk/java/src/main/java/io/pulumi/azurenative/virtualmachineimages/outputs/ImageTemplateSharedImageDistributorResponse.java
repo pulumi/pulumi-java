@@ -51,15 +51,15 @@ public final class ImageTemplateSharedImageDistributorResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"artifactTags","excludeFromLatest","galleryImageId","replicationRegions","runOutputName","storageAccountType","type"})
+    @OutputCustomType.Constructor
     private ImageTemplateSharedImageDistributorResponse(
-        @Nullable Map<String,String> artifactTags,
-        @Nullable Boolean excludeFromLatest,
-        String galleryImageId,
-        List<String> replicationRegions,
-        String runOutputName,
-        @Nullable String storageAccountType,
-        String type) {
+        @OutputCustomType.Parameter("artifactTags") @Nullable Map<String,String> artifactTags,
+        @OutputCustomType.Parameter("excludeFromLatest") @Nullable Boolean excludeFromLatest,
+        @OutputCustomType.Parameter("galleryImageId") String galleryImageId,
+        @OutputCustomType.Parameter("replicationRegions") List<String> replicationRegions,
+        @OutputCustomType.Parameter("runOutputName") String runOutputName,
+        @OutputCustomType.Parameter("storageAccountType") @Nullable String storageAccountType,
+        @OutputCustomType.Parameter("type") String type) {
         this.artifactTags = artifactTags;
         this.excludeFromLatest = excludeFromLatest;
         this.galleryImageId = galleryImageId;

@@ -73,19 +73,19 @@ public final class GetKeyValueResult {
      */
     private final @Nullable String value;
 
-    @OutputCustomType.Constructor({"contentType","eTag","id","key","label","lastModified","locked","name","tags","type","value"})
+    @OutputCustomType.Constructor
     private GetKeyValueResult(
-        @Nullable String contentType,
-        String eTag,
-        String id,
-        String key,
-        String label,
-        String lastModified,
-        Boolean locked,
-        String name,
-        @Nullable Map<String,String> tags,
-        String type,
-        @Nullable String value) {
+        @OutputCustomType.Parameter("contentType") @Nullable String contentType,
+        @OutputCustomType.Parameter("eTag") String eTag,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("key") String key,
+        @OutputCustomType.Parameter("label") String label,
+        @OutputCustomType.Parameter("lastModified") String lastModified,
+        @OutputCustomType.Parameter("locked") Boolean locked,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("value") @Nullable String value) {
         this.contentType = contentType;
         this.eTag = eTag;
         this.id = id;

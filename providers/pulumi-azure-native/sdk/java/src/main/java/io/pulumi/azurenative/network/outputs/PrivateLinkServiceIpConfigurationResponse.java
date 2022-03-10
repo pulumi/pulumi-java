@@ -64,18 +64,18 @@ public final class PrivateLinkServiceIpConfigurationResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"etag","id","name","primary","privateIPAddress","privateIPAddressVersion","privateIPAllocationMethod","provisioningState","subnet","type"})
+    @OutputCustomType.Constructor
     private PrivateLinkServiceIpConfigurationResponse(
-        String etag,
-        @Nullable String id,
-        @Nullable String name,
-        @Nullable Boolean primary,
-        @Nullable String privateIPAddress,
-        @Nullable String privateIPAddressVersion,
-        @Nullable String privateIPAllocationMethod,
-        String provisioningState,
-        @Nullable SubnetResponse subnet,
-        String type) {
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("primary") @Nullable Boolean primary,
+        @OutputCustomType.Parameter("privateIPAddress") @Nullable String privateIPAddress,
+        @OutputCustomType.Parameter("privateIPAddressVersion") @Nullable String privateIPAddressVersion,
+        @OutputCustomType.Parameter("privateIPAllocationMethod") @Nullable String privateIPAllocationMethod,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("subnet") @Nullable SubnetResponse subnet,
+        @OutputCustomType.Parameter("type") String type) {
         this.etag = etag;
         this.id = id;
         this.name = name;

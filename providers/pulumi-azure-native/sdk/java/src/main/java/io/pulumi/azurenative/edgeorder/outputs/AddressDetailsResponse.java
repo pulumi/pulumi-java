@@ -20,10 +20,10 @@ public final class AddressDetailsResponse {
      */
     private final AddressPropertiesResponse returnAddress;
 
-    @OutputCustomType.Constructor({"forwardAddress","returnAddress"})
+    @OutputCustomType.Constructor
     private AddressDetailsResponse(
-        AddressPropertiesResponse forwardAddress,
-        AddressPropertiesResponse returnAddress) {
+        @OutputCustomType.Parameter("forwardAddress") AddressPropertiesResponse forwardAddress,
+        @OutputCustomType.Parameter("returnAddress") AddressPropertiesResponse returnAddress) {
         this.forwardAddress = forwardAddress;
         this.returnAddress = returnAddress;
     }

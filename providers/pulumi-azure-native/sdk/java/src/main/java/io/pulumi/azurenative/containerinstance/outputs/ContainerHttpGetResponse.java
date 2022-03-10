@@ -34,12 +34,12 @@ public final class ContainerHttpGetResponse {
      */
     private final @Nullable String scheme;
 
-    @OutputCustomType.Constructor({"httpHeaders","path","port","scheme"})
+    @OutputCustomType.Constructor
     private ContainerHttpGetResponse(
-        @Nullable HttpHeadersResponse httpHeaders,
-        @Nullable String path,
-        Integer port,
-        @Nullable String scheme) {
+        @OutputCustomType.Parameter("httpHeaders") @Nullable HttpHeadersResponse httpHeaders,
+        @OutputCustomType.Parameter("path") @Nullable String path,
+        @OutputCustomType.Parameter("port") Integer port,
+        @OutputCustomType.Parameter("scheme") @Nullable String scheme) {
         this.httpHeaders = httpHeaders;
         this.path = path;
         this.port = port;

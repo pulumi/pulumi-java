@@ -23,10 +23,10 @@ public final class NotificationSettingsResponse {
      */
     private final @Nullable AzureMonitorWorkspacePropertiesResponse azureMonitorWorkspaceProperties;
 
-    @OutputCustomType.Constructor({"activationState","azureMonitorWorkspaceProperties"})
+    @OutputCustomType.Constructor
     private NotificationSettingsResponse(
-        @Nullable String activationState,
-        @Nullable AzureMonitorWorkspacePropertiesResponse azureMonitorWorkspaceProperties) {
+        @OutputCustomType.Parameter("activationState") @Nullable String activationState,
+        @OutputCustomType.Parameter("azureMonitorWorkspaceProperties") @Nullable AzureMonitorWorkspacePropertiesResponse azureMonitorWorkspaceProperties) {
         this.activationState = activationState;
         this.azureMonitorWorkspaceProperties = azureMonitorWorkspaceProperties;
     }

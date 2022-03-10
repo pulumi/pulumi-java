@@ -17,8 +17,8 @@ public final class FailoverGroupReadOnlyEndpointResponse {
      */
     private final @Nullable String failoverPolicy;
 
-    @OutputCustomType.Constructor({"failoverPolicy"})
-    private FailoverGroupReadOnlyEndpointResponse(@Nullable String failoverPolicy) {
+    @OutputCustomType.Constructor
+    private FailoverGroupReadOnlyEndpointResponse(@OutputCustomType.Parameter("failoverPolicy") @Nullable String failoverPolicy) {
         this.failoverPolicy = failoverPolicy;
     }
 

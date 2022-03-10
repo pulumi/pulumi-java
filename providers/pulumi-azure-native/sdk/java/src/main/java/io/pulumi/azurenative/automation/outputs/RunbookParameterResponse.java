@@ -34,12 +34,12 @@ public final class RunbookParameterResponse {
      */
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor({"defaultValue","isMandatory","position","type"})
+    @OutputCustomType.Constructor
     private RunbookParameterResponse(
-        @Nullable String defaultValue,
-        @Nullable Boolean isMandatory,
-        @Nullable Integer position,
-        @Nullable String type) {
+        @OutputCustomType.Parameter("defaultValue") @Nullable String defaultValue,
+        @OutputCustomType.Parameter("isMandatory") @Nullable Boolean isMandatory,
+        @OutputCustomType.Parameter("position") @Nullable Integer position,
+        @OutputCustomType.Parameter("type") @Nullable String type) {
         this.defaultValue = defaultValue;
         this.isMandatory = isMandatory;
         this.position = position;

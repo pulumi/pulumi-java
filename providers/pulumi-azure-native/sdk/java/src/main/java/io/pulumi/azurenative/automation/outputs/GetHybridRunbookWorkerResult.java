@@ -63,18 +63,18 @@ public final class GetHybridRunbookWorkerResult {
      */
     private final @Nullable String workerType;
 
-    @OutputCustomType.Constructor({"id","ip","lastSeenDateTime","name","registeredDateTime","systemData","type","vmResourceId","workerName","workerType"})
+    @OutputCustomType.Constructor
     private GetHybridRunbookWorkerResult(
-        String id,
-        @Nullable String ip,
-        @Nullable String lastSeenDateTime,
-        String name,
-        @Nullable String registeredDateTime,
-        SystemDataResponse systemData,
-        String type,
-        @Nullable String vmResourceId,
-        @Nullable String workerName,
-        @Nullable String workerType) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("ip") @Nullable String ip,
+        @OutputCustomType.Parameter("lastSeenDateTime") @Nullable String lastSeenDateTime,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("registeredDateTime") @Nullable String registeredDateTime,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("vmResourceId") @Nullable String vmResourceId,
+        @OutputCustomType.Parameter("workerName") @Nullable String workerName,
+        @OutputCustomType.Parameter("workerType") @Nullable String workerType) {
         this.id = id;
         this.ip = ip;
         this.lastSeenDateTime = lastSeenDateTime;

@@ -22,10 +22,10 @@ public final class ProductLinkResponse {
      */
     private final @Nullable String uri;
 
-    @OutputCustomType.Constructor({"displayName","uri"})
+    @OutputCustomType.Constructor
     private ProductLinkResponse(
-        @Nullable String displayName,
-        @Nullable String uri) {
+        @OutputCustomType.Parameter("displayName") @Nullable String displayName,
+        @OutputCustomType.Parameter("uri") @Nullable String uri) {
         this.displayName = displayName;
         this.uri = uri;
     }

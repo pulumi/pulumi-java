@@ -38,13 +38,13 @@ public final class CorsPolicyResponse {
      */
     private final @Nullable Double maxAgeInSeconds;
 
-    @OutputCustomType.Constructor({"allowedHeaders","allowedMethods","allowedOrigins","exposedHeaders","maxAgeInSeconds"})
+    @OutputCustomType.Constructor
     private CorsPolicyResponse(
-        @Nullable String allowedHeaders,
-        @Nullable String allowedMethods,
-        String allowedOrigins,
-        @Nullable String exposedHeaders,
-        @Nullable Double maxAgeInSeconds) {
+        @OutputCustomType.Parameter("allowedHeaders") @Nullable String allowedHeaders,
+        @OutputCustomType.Parameter("allowedMethods") @Nullable String allowedMethods,
+        @OutputCustomType.Parameter("allowedOrigins") String allowedOrigins,
+        @OutputCustomType.Parameter("exposedHeaders") @Nullable String exposedHeaders,
+        @OutputCustomType.Parameter("maxAgeInSeconds") @Nullable Double maxAgeInSeconds) {
         this.allowedHeaders = allowedHeaders;
         this.allowedMethods = allowedMethods;
         this.allowedOrigins = allowedOrigins;

@@ -32,12 +32,12 @@ public final class ScaleActionResponse {
      */
     private final @Nullable String value;
 
-    @OutputCustomType.Constructor({"cooldown","direction","type","value"})
+    @OutputCustomType.Constructor
     private ScaleActionResponse(
-        String cooldown,
-        String direction,
-        String type,
-        @Nullable String value) {
+        @OutputCustomType.Parameter("cooldown") String cooldown,
+        @OutputCustomType.Parameter("direction") String direction,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("value") @Nullable String value) {
         this.cooldown = cooldown;
         this.direction = direction;
         this.type = type;

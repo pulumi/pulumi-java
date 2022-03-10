@@ -30,11 +30,11 @@ public final class BuilderPropertiesResponse {
      */
     private final @Nullable StackPropertiesResponse stack;
 
-    @OutputCustomType.Constructor({"buildpackGroups","provisioningState","stack"})
+    @OutputCustomType.Constructor
     private BuilderPropertiesResponse(
-        @Nullable List<BuildpacksGroupPropertiesResponse> buildpackGroups,
-        String provisioningState,
-        @Nullable StackPropertiesResponse stack) {
+        @OutputCustomType.Parameter("buildpackGroups") @Nullable List<BuildpacksGroupPropertiesResponse> buildpackGroups,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("stack") @Nullable StackPropertiesResponse stack) {
         this.buildpackGroups = buildpackGroups;
         this.provisioningState = provisioningState;
         this.stack = stack;

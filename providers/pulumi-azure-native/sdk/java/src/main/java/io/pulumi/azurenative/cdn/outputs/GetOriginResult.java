@@ -105,26 +105,26 @@ public final class GetOriginResult {
      */
     private final @Nullable Integer weight;
 
-    @OutputCustomType.Constructor({"enabled","hostName","httpPort","httpsPort","id","name","originHostHeader","priority","privateEndpointStatus","privateLinkAlias","privateLinkApprovalMessage","privateLinkLocation","privateLinkResourceId","provisioningState","resourceState","systemData","type","weight"})
+    @OutputCustomType.Constructor
     private GetOriginResult(
-        @Nullable Boolean enabled,
-        String hostName,
-        @Nullable Integer httpPort,
-        @Nullable Integer httpsPort,
-        String id,
-        String name,
-        @Nullable String originHostHeader,
-        @Nullable Integer priority,
-        String privateEndpointStatus,
-        @Nullable String privateLinkAlias,
-        @Nullable String privateLinkApprovalMessage,
-        @Nullable String privateLinkLocation,
-        @Nullable String privateLinkResourceId,
-        String provisioningState,
-        String resourceState,
-        SystemDataResponse systemData,
-        String type,
-        @Nullable Integer weight) {
+        @OutputCustomType.Parameter("enabled") @Nullable Boolean enabled,
+        @OutputCustomType.Parameter("hostName") String hostName,
+        @OutputCustomType.Parameter("httpPort") @Nullable Integer httpPort,
+        @OutputCustomType.Parameter("httpsPort") @Nullable Integer httpsPort,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("originHostHeader") @Nullable String originHostHeader,
+        @OutputCustomType.Parameter("priority") @Nullable Integer priority,
+        @OutputCustomType.Parameter("privateEndpointStatus") String privateEndpointStatus,
+        @OutputCustomType.Parameter("privateLinkAlias") @Nullable String privateLinkAlias,
+        @OutputCustomType.Parameter("privateLinkApprovalMessage") @Nullable String privateLinkApprovalMessage,
+        @OutputCustomType.Parameter("privateLinkLocation") @Nullable String privateLinkLocation,
+        @OutputCustomType.Parameter("privateLinkResourceId") @Nullable String privateLinkResourceId,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("resourceState") String resourceState,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("weight") @Nullable Integer weight) {
         this.enabled = enabled;
         this.hostName = hostName;
         this.httpPort = httpPort;

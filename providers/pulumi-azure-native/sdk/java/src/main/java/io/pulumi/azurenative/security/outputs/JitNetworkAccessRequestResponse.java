@@ -30,12 +30,12 @@ public final class JitNetworkAccessRequestResponse {
     private final String startTimeUtc;
     private final List<JitNetworkAccessRequestVirtualMachineResponse> virtualMachines;
 
-    @OutputCustomType.Constructor({"justification","requestor","startTimeUtc","virtualMachines"})
+    @OutputCustomType.Constructor
     private JitNetworkAccessRequestResponse(
-        @Nullable String justification,
-        String requestor,
-        String startTimeUtc,
-        List<JitNetworkAccessRequestVirtualMachineResponse> virtualMachines) {
+        @OutputCustomType.Parameter("justification") @Nullable String justification,
+        @OutputCustomType.Parameter("requestor") String requestor,
+        @OutputCustomType.Parameter("startTimeUtc") String startTimeUtc,
+        @OutputCustomType.Parameter("virtualMachines") List<JitNetworkAccessRequestVirtualMachineResponse> virtualMachines) {
         this.justification = justification;
         this.requestor = requestor;
         this.startTimeUtc = startTimeUtc;

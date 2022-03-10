@@ -57,16 +57,16 @@ public final class ConnectionMonitorTestConfigurationResponse {
      */
     private final @Nullable Integer testFrequencySec;
 
-    @OutputCustomType.Constructor({"httpConfiguration","icmpConfiguration","name","preferredIPVersion","protocol","successThreshold","tcpConfiguration","testFrequencySec"})
+    @OutputCustomType.Constructor
     private ConnectionMonitorTestConfigurationResponse(
-        @Nullable ConnectionMonitorHttpConfigurationResponse httpConfiguration,
-        @Nullable ConnectionMonitorIcmpConfigurationResponse icmpConfiguration,
-        String name,
-        @Nullable String preferredIPVersion,
-        String protocol,
-        @Nullable ConnectionMonitorSuccessThresholdResponse successThreshold,
-        @Nullable ConnectionMonitorTcpConfigurationResponse tcpConfiguration,
-        @Nullable Integer testFrequencySec) {
+        @OutputCustomType.Parameter("httpConfiguration") @Nullable ConnectionMonitorHttpConfigurationResponse httpConfiguration,
+        @OutputCustomType.Parameter("icmpConfiguration") @Nullable ConnectionMonitorIcmpConfigurationResponse icmpConfiguration,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("preferredIPVersion") @Nullable String preferredIPVersion,
+        @OutputCustomType.Parameter("protocol") String protocol,
+        @OutputCustomType.Parameter("successThreshold") @Nullable ConnectionMonitorSuccessThresholdResponse successThreshold,
+        @OutputCustomType.Parameter("tcpConfiguration") @Nullable ConnectionMonitorTcpConfigurationResponse tcpConfiguration,
+        @OutputCustomType.Parameter("testFrequencySec") @Nullable Integer testFrequencySec) {
         this.httpConfiguration = httpConfiguration;
         this.icmpConfiguration = icmpConfiguration;
         this.name = name;

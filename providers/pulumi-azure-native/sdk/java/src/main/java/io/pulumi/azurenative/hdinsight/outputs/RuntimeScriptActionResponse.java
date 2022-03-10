@@ -38,13 +38,13 @@ public final class RuntimeScriptActionResponse {
      */
     private final String uri;
 
-    @OutputCustomType.Constructor({"applicationName","name","parameters","roles","uri"})
+    @OutputCustomType.Constructor
     private RuntimeScriptActionResponse(
-        String applicationName,
-        String name,
-        @Nullable String parameters,
-        List<String> roles,
-        String uri) {
+        @OutputCustomType.Parameter("applicationName") String applicationName,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("parameters") @Nullable String parameters,
+        @OutputCustomType.Parameter("roles") List<String> roles,
+        @OutputCustomType.Parameter("uri") String uri) {
         this.applicationName = applicationName;
         this.name = name;
         this.parameters = parameters;

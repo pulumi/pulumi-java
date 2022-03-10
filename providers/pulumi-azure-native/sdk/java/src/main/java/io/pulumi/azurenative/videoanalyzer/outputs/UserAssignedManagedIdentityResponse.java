@@ -20,10 +20,10 @@ public final class UserAssignedManagedIdentityResponse {
      */
     private final String principalId;
 
-    @OutputCustomType.Constructor({"clientId","principalId"})
+    @OutputCustomType.Constructor
     private UserAssignedManagedIdentityResponse(
-        String clientId,
-        String principalId) {
+        @OutputCustomType.Parameter("clientId") String clientId,
+        @OutputCustomType.Parameter("principalId") String principalId) {
         this.clientId = clientId;
         this.principalId = principalId;
     }

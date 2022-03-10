@@ -55,16 +55,16 @@ public final class GetMoveCollectionResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"etag","id","identity","location","name","properties","tags","type"})
+    @OutputCustomType.Constructor
     private GetMoveCollectionResult(
-        String etag,
-        String id,
-        @Nullable IdentityResponse identity,
-        @Nullable String location,
-        String name,
-        MoveCollectionPropertiesResponse properties,
-        @Nullable Map<String,String> tags,
-        String type) {
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("identity") @Nullable IdentityResponse identity,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("properties") MoveCollectionPropertiesResponse properties,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type) {
         this.etag = etag;
         this.id = id;
         this.identity = identity;

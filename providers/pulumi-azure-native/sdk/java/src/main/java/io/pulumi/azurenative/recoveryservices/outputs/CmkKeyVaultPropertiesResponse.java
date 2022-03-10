@@ -17,8 +17,8 @@ public final class CmkKeyVaultPropertiesResponse {
      */
     private final @Nullable String keyUri;
 
-    @OutputCustomType.Constructor({"keyUri"})
-    private CmkKeyVaultPropertiesResponse(@Nullable String keyUri) {
+    @OutputCustomType.Constructor
+    private CmkKeyVaultPropertiesResponse(@OutputCustomType.Parameter("keyUri") @Nullable String keyUri) {
         this.keyUri = keyUri;
     }
 

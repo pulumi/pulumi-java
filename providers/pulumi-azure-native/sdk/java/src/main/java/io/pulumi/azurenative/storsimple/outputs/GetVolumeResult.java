@@ -79,21 +79,21 @@ public final class GetVolumeResult {
      */
     private final String volumeType;
 
-    @OutputCustomType.Constructor({"accessControlRecordIds","backupPolicyIds","backupStatus","id","kind","monitoringStatus","name","operationStatus","sizeInBytes","type","volumeContainerId","volumeStatus","volumeType"})
+    @OutputCustomType.Constructor
     private GetVolumeResult(
-        List<String> accessControlRecordIds,
-        List<String> backupPolicyIds,
-        String backupStatus,
-        String id,
-        @Nullable String kind,
-        String monitoringStatus,
-        String name,
-        String operationStatus,
-        Double sizeInBytes,
-        String type,
-        String volumeContainerId,
-        String volumeStatus,
-        String volumeType) {
+        @OutputCustomType.Parameter("accessControlRecordIds") List<String> accessControlRecordIds,
+        @OutputCustomType.Parameter("backupPolicyIds") List<String> backupPolicyIds,
+        @OutputCustomType.Parameter("backupStatus") String backupStatus,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("kind") @Nullable String kind,
+        @OutputCustomType.Parameter("monitoringStatus") String monitoringStatus,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("operationStatus") String operationStatus,
+        @OutputCustomType.Parameter("sizeInBytes") Double sizeInBytes,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("volumeContainerId") String volumeContainerId,
+        @OutputCustomType.Parameter("volumeStatus") String volumeStatus,
+        @OutputCustomType.Parameter("volumeType") String volumeType) {
         this.accessControlRecordIds = accessControlRecordIds;
         this.backupPolicyIds = backupPolicyIds;
         this.backupStatus = backupStatus;

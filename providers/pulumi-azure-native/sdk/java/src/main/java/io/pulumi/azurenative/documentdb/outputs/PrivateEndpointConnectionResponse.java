@@ -49,15 +49,15 @@ public final class PrivateEndpointConnectionResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"groupId","id","name","privateEndpoint","privateLinkServiceConnectionState","provisioningState","type"})
+    @OutputCustomType.Constructor
     private PrivateEndpointConnectionResponse(
-        @Nullable String groupId,
-        String id,
-        String name,
-        @Nullable PrivateEndpointPropertyResponse privateEndpoint,
-        @Nullable PrivateLinkServiceConnectionStatePropertyResponse privateLinkServiceConnectionState,
-        @Nullable String provisioningState,
-        String type) {
+        @OutputCustomType.Parameter("groupId") @Nullable String groupId,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("privateEndpoint") @Nullable PrivateEndpointPropertyResponse privateEndpoint,
+        @OutputCustomType.Parameter("privateLinkServiceConnectionState") @Nullable PrivateLinkServiceConnectionStatePropertyResponse privateLinkServiceConnectionState,
+        @OutputCustomType.Parameter("provisioningState") @Nullable String provisioningState,
+        @OutputCustomType.Parameter("type") String type) {
         this.groupId = groupId;
         this.id = id;
         this.name = name;

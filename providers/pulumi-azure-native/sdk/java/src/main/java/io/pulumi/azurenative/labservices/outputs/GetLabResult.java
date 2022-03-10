@@ -95,24 +95,24 @@ public final class GetLabResult {
      */
     private final Integer userQuota;
 
-    @OutputCustomType.Constructor({"createdByObjectId","createdByUserPrincipalName","createdDate","id","invitationCode","latestOperationResult","location","maxUsersInLab","name","provisioningState","tags","type","uniqueIdentifier","usageQuota","userAccessMode","userQuota"})
+    @OutputCustomType.Constructor
     private GetLabResult(
-        String createdByObjectId,
-        String createdByUserPrincipalName,
-        String createdDate,
-        String id,
-        String invitationCode,
-        LatestOperationResultResponse latestOperationResult,
-        @Nullable String location,
-        @Nullable Integer maxUsersInLab,
-        String name,
-        @Nullable String provisioningState,
-        @Nullable Map<String,String> tags,
-        String type,
-        @Nullable String uniqueIdentifier,
-        @Nullable String usageQuota,
-        @Nullable String userAccessMode,
-        Integer userQuota) {
+        @OutputCustomType.Parameter("createdByObjectId") String createdByObjectId,
+        @OutputCustomType.Parameter("createdByUserPrincipalName") String createdByUserPrincipalName,
+        @OutputCustomType.Parameter("createdDate") String createdDate,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("invitationCode") String invitationCode,
+        @OutputCustomType.Parameter("latestOperationResult") LatestOperationResultResponse latestOperationResult,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("maxUsersInLab") @Nullable Integer maxUsersInLab,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("provisioningState") @Nullable String provisioningState,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("uniqueIdentifier") @Nullable String uniqueIdentifier,
+        @OutputCustomType.Parameter("usageQuota") @Nullable String usageQuota,
+        @OutputCustomType.Parameter("userAccessMode") @Nullable String userAccessMode,
+        @OutputCustomType.Parameter("userQuota") Integer userQuota) {
         this.createdByObjectId = createdByObjectId;
         this.createdByUserPrincipalName = createdByUserPrincipalName;
         this.createdDate = createdDate;

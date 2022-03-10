@@ -42,14 +42,14 @@ public final class SiteSpnPropertiesResponse {
      */
     private final @Nullable String tenantId;
 
-    @OutputCustomType.Constructor({"aadAuthority","applicationId","audience","objectId","rawCertData","tenantId"})
+    @OutputCustomType.Constructor
     private SiteSpnPropertiesResponse(
-        @Nullable String aadAuthority,
-        @Nullable String applicationId,
-        @Nullable String audience,
-        @Nullable String objectId,
-        @Nullable String rawCertData,
-        @Nullable String tenantId) {
+        @OutputCustomType.Parameter("aadAuthority") @Nullable String aadAuthority,
+        @OutputCustomType.Parameter("applicationId") @Nullable String applicationId,
+        @OutputCustomType.Parameter("audience") @Nullable String audience,
+        @OutputCustomType.Parameter("objectId") @Nullable String objectId,
+        @OutputCustomType.Parameter("rawCertData") @Nullable String rawCertData,
+        @OutputCustomType.Parameter("tenantId") @Nullable String tenantId) {
         this.aadAuthority = aadAuthority;
         this.applicationId = applicationId;
         this.audience = audience;

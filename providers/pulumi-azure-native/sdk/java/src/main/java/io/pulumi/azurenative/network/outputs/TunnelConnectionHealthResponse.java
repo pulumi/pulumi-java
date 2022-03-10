@@ -36,13 +36,13 @@ public final class TunnelConnectionHealthResponse {
      */
     private final String tunnel;
 
-    @OutputCustomType.Constructor({"connectionStatus","egressBytesTransferred","ingressBytesTransferred","lastConnectionEstablishedUtcTime","tunnel"})
+    @OutputCustomType.Constructor
     private TunnelConnectionHealthResponse(
-        String connectionStatus,
-        Double egressBytesTransferred,
-        Double ingressBytesTransferred,
-        String lastConnectionEstablishedUtcTime,
-        String tunnel) {
+        @OutputCustomType.Parameter("connectionStatus") String connectionStatus,
+        @OutputCustomType.Parameter("egressBytesTransferred") Double egressBytesTransferred,
+        @OutputCustomType.Parameter("ingressBytesTransferred") Double ingressBytesTransferred,
+        @OutputCustomType.Parameter("lastConnectionEstablishedUtcTime") String lastConnectionEstablishedUtcTime,
+        @OutputCustomType.Parameter("tunnel") String tunnel) {
         this.connectionStatus = connectionStatus;
         this.egressBytesTransferred = egressBytesTransferred;
         this.ingressBytesTransferred = ingressBytesTransferred;

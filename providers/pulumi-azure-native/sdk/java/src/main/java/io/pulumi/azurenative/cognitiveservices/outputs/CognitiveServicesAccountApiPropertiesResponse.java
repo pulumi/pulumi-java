@@ -63,18 +63,18 @@ public final class CognitiveServicesAccountApiPropertiesResponse {
      */
     private final @Nullable String websiteName;
 
-    @OutputCustomType.Constructor({"aadClientId","aadTenantId","eventHubConnectionString","qnaAzureSearchEndpointId","qnaAzureSearchEndpointKey","qnaRuntimeEndpoint","statisticsEnabled","storageAccountConnectionString","superUser","websiteName"})
+    @OutputCustomType.Constructor
     private CognitiveServicesAccountApiPropertiesResponse(
-        @Nullable String aadClientId,
-        @Nullable String aadTenantId,
-        @Nullable String eventHubConnectionString,
-        @Nullable String qnaAzureSearchEndpointId,
-        @Nullable String qnaAzureSearchEndpointKey,
-        @Nullable String qnaRuntimeEndpoint,
-        @Nullable Boolean statisticsEnabled,
-        @Nullable String storageAccountConnectionString,
-        @Nullable String superUser,
-        @Nullable String websiteName) {
+        @OutputCustomType.Parameter("aadClientId") @Nullable String aadClientId,
+        @OutputCustomType.Parameter("aadTenantId") @Nullable String aadTenantId,
+        @OutputCustomType.Parameter("eventHubConnectionString") @Nullable String eventHubConnectionString,
+        @OutputCustomType.Parameter("qnaAzureSearchEndpointId") @Nullable String qnaAzureSearchEndpointId,
+        @OutputCustomType.Parameter("qnaAzureSearchEndpointKey") @Nullable String qnaAzureSearchEndpointKey,
+        @OutputCustomType.Parameter("qnaRuntimeEndpoint") @Nullable String qnaRuntimeEndpoint,
+        @OutputCustomType.Parameter("statisticsEnabled") @Nullable Boolean statisticsEnabled,
+        @OutputCustomType.Parameter("storageAccountConnectionString") @Nullable String storageAccountConnectionString,
+        @OutputCustomType.Parameter("superUser") @Nullable String superUser,
+        @OutputCustomType.Parameter("websiteName") @Nullable String websiteName) {
         this.aadClientId = aadClientId;
         this.aadTenantId = aadTenantId;
         this.eventHubConnectionString = eventHubConnectionString;

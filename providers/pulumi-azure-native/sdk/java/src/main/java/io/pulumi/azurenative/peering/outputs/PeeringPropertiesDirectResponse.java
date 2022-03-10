@@ -36,12 +36,12 @@ public final class PeeringPropertiesDirectResponse {
      */
     private final Boolean useForPeeringService;
 
-    @OutputCustomType.Constructor({"connections","directPeeringType","peerAsn","useForPeeringService"})
+    @OutputCustomType.Constructor
     private PeeringPropertiesDirectResponse(
-        @Nullable List<DirectConnectionResponse> connections,
-        @Nullable String directPeeringType,
-        @Nullable SubResourceResponse peerAsn,
-        Boolean useForPeeringService) {
+        @OutputCustomType.Parameter("connections") @Nullable List<DirectConnectionResponse> connections,
+        @OutputCustomType.Parameter("directPeeringType") @Nullable String directPeeringType,
+        @OutputCustomType.Parameter("peerAsn") @Nullable SubResourceResponse peerAsn,
+        @OutputCustomType.Parameter("useForPeeringService") Boolean useForPeeringService) {
         this.connections = connections;
         this.directPeeringType = directPeeringType;
         this.peerAsn = peerAsn;

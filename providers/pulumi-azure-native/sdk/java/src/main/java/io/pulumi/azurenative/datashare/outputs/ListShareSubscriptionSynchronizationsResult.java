@@ -24,10 +24,10 @@ public final class ListShareSubscriptionSynchronizationsResult {
      */
     private final List<ShareSubscriptionSynchronizationResponse> value;
 
-    @OutputCustomType.Constructor({"nextLink","value"})
+    @OutputCustomType.Constructor
     private ListShareSubscriptionSynchronizationsResult(
-        @Nullable String nextLink,
-        List<ShareSubscriptionSynchronizationResponse> value) {
+        @OutputCustomType.Parameter("nextLink") @Nullable String nextLink,
+        @OutputCustomType.Parameter("value") List<ShareSubscriptionSynchronizationResponse> value) {
         this.nextLink = nextLink;
         this.value = value;
     }

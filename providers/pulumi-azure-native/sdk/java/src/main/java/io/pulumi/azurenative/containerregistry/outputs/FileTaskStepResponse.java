@@ -51,15 +51,15 @@ public final class FileTaskStepResponse {
      */
     private final @Nullable String valuesFilePath;
 
-    @OutputCustomType.Constructor({"baseImageDependencies","contextAccessToken","contextPath","taskFilePath","type","values","valuesFilePath"})
+    @OutputCustomType.Constructor
     private FileTaskStepResponse(
-        List<BaseImageDependencyResponse> baseImageDependencies,
-        @Nullable String contextAccessToken,
-        @Nullable String contextPath,
-        String taskFilePath,
-        String type,
-        @Nullable List<SetValueResponse> values,
-        @Nullable String valuesFilePath) {
+        @OutputCustomType.Parameter("baseImageDependencies") List<BaseImageDependencyResponse> baseImageDependencies,
+        @OutputCustomType.Parameter("contextAccessToken") @Nullable String contextAccessToken,
+        @OutputCustomType.Parameter("contextPath") @Nullable String contextPath,
+        @OutputCustomType.Parameter("taskFilePath") String taskFilePath,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("values") @Nullable List<SetValueResponse> values,
+        @OutputCustomType.Parameter("valuesFilePath") @Nullable String valuesFilePath) {
         this.baseImageDependencies = baseImageDependencies;
         this.contextAccessToken = contextAccessToken;
         this.contextPath = contextPath;

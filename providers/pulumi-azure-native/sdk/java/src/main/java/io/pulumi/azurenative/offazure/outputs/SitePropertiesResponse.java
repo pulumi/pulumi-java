@@ -39,13 +39,13 @@ public final class SitePropertiesResponse {
      */
     private final @Nullable SiteSpnPropertiesResponse servicePrincipalIdentityDetails;
 
-    @OutputCustomType.Constructor({"agentDetails","applianceName","discoverySolutionId","serviceEndpoint","servicePrincipalIdentityDetails"})
+    @OutputCustomType.Constructor
     private SitePropertiesResponse(
-        @Nullable SiteAgentPropertiesResponse agentDetails,
-        @Nullable String applianceName,
-        @Nullable String discoverySolutionId,
-        String serviceEndpoint,
-        @Nullable SiteSpnPropertiesResponse servicePrincipalIdentityDetails) {
+        @OutputCustomType.Parameter("agentDetails") @Nullable SiteAgentPropertiesResponse agentDetails,
+        @OutputCustomType.Parameter("applianceName") @Nullable String applianceName,
+        @OutputCustomType.Parameter("discoverySolutionId") @Nullable String discoverySolutionId,
+        @OutputCustomType.Parameter("serviceEndpoint") String serviceEndpoint,
+        @OutputCustomType.Parameter("servicePrincipalIdentityDetails") @Nullable SiteSpnPropertiesResponse servicePrincipalIdentityDetails) {
         this.agentDetails = agentDetails;
         this.applianceName = applianceName;
         this.discoverySolutionId = discoverySolutionId;

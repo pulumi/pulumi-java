@@ -38,13 +38,13 @@ public final class ManagementGroupChildInfoResponse {
      */
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor({"children","displayName","id","name","type"})
+    @OutputCustomType.Constructor
     private ManagementGroupChildInfoResponse(
-        @Nullable List<ManagementGroupChildInfoResponse> children,
-        @Nullable String displayName,
-        @Nullable String id,
-        @Nullable String name,
-        @Nullable String type) {
+        @OutputCustomType.Parameter("children") @Nullable List<ManagementGroupChildInfoResponse> children,
+        @OutputCustomType.Parameter("displayName") @Nullable String displayName,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("type") @Nullable String type) {
         this.children = children;
         this.displayName = displayName;
         this.id = id;

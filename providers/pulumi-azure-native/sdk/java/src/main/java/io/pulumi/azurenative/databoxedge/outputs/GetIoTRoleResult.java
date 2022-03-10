@@ -84,21 +84,21 @@ public final class GetIoTRoleResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"computeResource","hostPlatform","hostPlatformType","id","ioTDeviceDetails","ioTEdgeAgentInfo","ioTEdgeDeviceDetails","kind","name","roleStatus","shareMappings","systemData","type"})
+    @OutputCustomType.Constructor
     private GetIoTRoleResult(
-        @Nullable ComputeResourceResponse computeResource,
-        String hostPlatform,
-        String hostPlatformType,
-        String id,
-        IoTDeviceInfoResponse ioTDeviceDetails,
-        @Nullable IoTEdgeAgentInfoResponse ioTEdgeAgentInfo,
-        IoTDeviceInfoResponse ioTEdgeDeviceDetails,
-        String kind,
-        String name,
-        String roleStatus,
-        @Nullable List<MountPointMapResponse> shareMappings,
-        SystemDataResponse systemData,
-        String type) {
+        @OutputCustomType.Parameter("computeResource") @Nullable ComputeResourceResponse computeResource,
+        @OutputCustomType.Parameter("hostPlatform") String hostPlatform,
+        @OutputCustomType.Parameter("hostPlatformType") String hostPlatformType,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("ioTDeviceDetails") IoTDeviceInfoResponse ioTDeviceDetails,
+        @OutputCustomType.Parameter("ioTEdgeAgentInfo") @Nullable IoTEdgeAgentInfoResponse ioTEdgeAgentInfo,
+        @OutputCustomType.Parameter("ioTEdgeDeviceDetails") IoTDeviceInfoResponse ioTEdgeDeviceDetails,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("roleStatus") String roleStatus,
+        @OutputCustomType.Parameter("shareMappings") @Nullable List<MountPointMapResponse> shareMappings,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("type") String type) {
         this.computeResource = computeResource;
         this.hostPlatform = hostPlatform;
         this.hostPlatformType = hostPlatformType;

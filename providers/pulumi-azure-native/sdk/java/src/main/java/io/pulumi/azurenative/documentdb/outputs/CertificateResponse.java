@@ -17,8 +17,8 @@ public final class CertificateResponse {
      */
     private final @Nullable String pem;
 
-    @OutputCustomType.Constructor({"pem"})
-    private CertificateResponse(@Nullable String pem) {
+    @OutputCustomType.Constructor
+    private CertificateResponse(@OutputCustomType.Parameter("pem") @Nullable String pem) {
         this.pem = pem;
     }
 

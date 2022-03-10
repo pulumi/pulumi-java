@@ -44,14 +44,14 @@ public final class KeyAttributesResponse {
      */
     private final Double updated;
 
-    @OutputCustomType.Constructor({"created","enabled","expires","notBefore","recoveryLevel","updated"})
+    @OutputCustomType.Constructor
     private KeyAttributesResponse(
-        Double created,
-        @Nullable Boolean enabled,
-        @Nullable Double expires,
-        @Nullable Double notBefore,
-        String recoveryLevel,
-        Double updated) {
+        @OutputCustomType.Parameter("created") Double created,
+        @OutputCustomType.Parameter("enabled") @Nullable Boolean enabled,
+        @OutputCustomType.Parameter("expires") @Nullable Double expires,
+        @OutputCustomType.Parameter("notBefore") @Nullable Double notBefore,
+        @OutputCustomType.Parameter("recoveryLevel") String recoveryLevel,
+        @OutputCustomType.Parameter("updated") Double updated) {
         this.created = created;
         this.enabled = enabled;
         this.expires = expires;

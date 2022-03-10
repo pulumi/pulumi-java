@@ -27,11 +27,11 @@ public final class UserArtifactManageResponse {
      */
     private final @Nullable String update;
 
-    @OutputCustomType.Constructor({"install","remove","update"})
+    @OutputCustomType.Constructor
     private UserArtifactManageResponse(
-        String install,
-        String remove,
-        @Nullable String update) {
+        @OutputCustomType.Parameter("install") String install,
+        @OutputCustomType.Parameter("remove") String remove,
+        @OutputCustomType.Parameter("update") @Nullable String update) {
         this.install = install;
         this.remove = remove;
         this.update = update;

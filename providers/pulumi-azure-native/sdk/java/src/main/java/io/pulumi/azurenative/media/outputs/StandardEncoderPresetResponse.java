@@ -52,12 +52,12 @@ public final class StandardEncoderPresetResponse {
      */
     private final String odataType;
 
-    @OutputCustomType.Constructor({"codecs","filters","formats","odataType"})
+    @OutputCustomType.Constructor
     private StandardEncoderPresetResponse(
-        List<Object> codecs,
-        @Nullable FiltersResponse filters,
-        List<Object> formats,
-        String odataType) {
+        @OutputCustomType.Parameter("codecs") List<Object> codecs,
+        @OutputCustomType.Parameter("filters") @Nullable FiltersResponse filters,
+        @OutputCustomType.Parameter("formats") List<Object> formats,
+        @OutputCustomType.Parameter("odataType") String odataType) {
         this.codecs = codecs;
         this.filters = filters;
         this.formats = formats;

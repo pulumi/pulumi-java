@@ -16,8 +16,8 @@ public final class AlertRuleAllOfConditionResponse {
      */
     private final List<AlertRuleAnyOfOrLeafConditionResponse> allOf;
 
-    @OutputCustomType.Constructor({"allOf"})
-    private AlertRuleAllOfConditionResponse(List<AlertRuleAnyOfOrLeafConditionResponse> allOf) {
+    @OutputCustomType.Constructor
+    private AlertRuleAllOfConditionResponse(@OutputCustomType.Parameter("allOf") List<AlertRuleAnyOfOrLeafConditionResponse> allOf) {
         this.allOf = allOf;
     }
 

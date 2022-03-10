@@ -25,11 +25,11 @@ public final class KeyResponse {
      */
     private final String value;
 
-    @OutputCustomType.Constructor({"keyName","permissions","value"})
+    @OutputCustomType.Constructor
     private KeyResponse(
-        String keyName,
-        String permissions,
-        String value) {
+        @OutputCustomType.Parameter("keyName") String keyName,
+        @OutputCustomType.Parameter("permissions") String permissions,
+        @OutputCustomType.Parameter("value") String value) {
         this.keyName = keyName;
         this.permissions = permissions;
         this.value = value;

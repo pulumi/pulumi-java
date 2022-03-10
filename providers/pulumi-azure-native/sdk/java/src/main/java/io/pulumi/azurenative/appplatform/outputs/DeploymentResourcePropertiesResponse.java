@@ -57,16 +57,16 @@ public final class DeploymentResourcePropertiesResponse {
      */
     private final String status;
 
-    @OutputCustomType.Constructor({"active","appName","createdTime","deploymentSettings","instances","provisioningState","source","status"})
+    @OutputCustomType.Constructor
     private DeploymentResourcePropertiesResponse(
-        Boolean active,
-        String appName,
-        String createdTime,
-        @Nullable DeploymentSettingsResponse deploymentSettings,
-        List<DeploymentInstanceResponse> instances,
-        String provisioningState,
-        @Nullable UserSourceInfoResponse source,
-        String status) {
+        @OutputCustomType.Parameter("active") Boolean active,
+        @OutputCustomType.Parameter("appName") String appName,
+        @OutputCustomType.Parameter("createdTime") String createdTime,
+        @OutputCustomType.Parameter("deploymentSettings") @Nullable DeploymentSettingsResponse deploymentSettings,
+        @OutputCustomType.Parameter("instances") List<DeploymentInstanceResponse> instances,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("source") @Nullable UserSourceInfoResponse source,
+        @OutputCustomType.Parameter("status") String status) {
         this.active = active;
         this.appName = appName;
         this.createdTime = createdTime;

@@ -20,10 +20,10 @@ public final class ManagedVirtualNetworkReferenceResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"referenceName","type"})
+    @OutputCustomType.Constructor
     private ManagedVirtualNetworkReferenceResponse(
-        String referenceName,
-        String type) {
+        @OutputCustomType.Parameter("referenceName") String referenceName,
+        @OutputCustomType.Parameter("type") String type) {
         this.referenceName = referenceName;
         this.type = type;
     }

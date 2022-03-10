@@ -27,11 +27,11 @@ public final class NetezzaPartitionSettingsResponse {
      */
     private final @Nullable Object partitionUpperBound;
 
-    @OutputCustomType.Constructor({"partitionColumnName","partitionLowerBound","partitionUpperBound"})
+    @OutputCustomType.Constructor
     private NetezzaPartitionSettingsResponse(
-        @Nullable Object partitionColumnName,
-        @Nullable Object partitionLowerBound,
-        @Nullable Object partitionUpperBound) {
+        @OutputCustomType.Parameter("partitionColumnName") @Nullable Object partitionColumnName,
+        @OutputCustomType.Parameter("partitionLowerBound") @Nullable Object partitionLowerBound,
+        @OutputCustomType.Parameter("partitionUpperBound") @Nullable Object partitionUpperBound) {
         this.partitionColumnName = partitionColumnName;
         this.partitionLowerBound = partitionLowerBound;
         this.partitionUpperBound = partitionUpperBound;

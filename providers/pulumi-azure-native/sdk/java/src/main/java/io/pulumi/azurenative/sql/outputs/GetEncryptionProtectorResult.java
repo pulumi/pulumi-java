@@ -68,19 +68,19 @@ public final class GetEncryptionProtectorResult {
      */
     private final String uri;
 
-    @OutputCustomType.Constructor({"autoRotationEnabled","id","kind","location","name","serverKeyName","serverKeyType","subregion","thumbprint","type","uri"})
+    @OutputCustomType.Constructor
     private GetEncryptionProtectorResult(
-        @Nullable Boolean autoRotationEnabled,
-        String id,
-        String kind,
-        String location,
-        String name,
-        @Nullable String serverKeyName,
-        String serverKeyType,
-        String subregion,
-        String thumbprint,
-        String type,
-        String uri) {
+        @OutputCustomType.Parameter("autoRotationEnabled") @Nullable Boolean autoRotationEnabled,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("serverKeyName") @Nullable String serverKeyName,
+        @OutputCustomType.Parameter("serverKeyType") String serverKeyType,
+        @OutputCustomType.Parameter("subregion") String subregion,
+        @OutputCustomType.Parameter("thumbprint") String thumbprint,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("uri") String uri) {
         this.autoRotationEnabled = autoRotationEnabled;
         this.id = id;
         this.kind = kind;

@@ -43,14 +43,14 @@ public final class GetStaticMemberResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"etag","id","name","resourceId","systemData","type"})
+    @OutputCustomType.Constructor
     private GetStaticMemberResult(
-        String etag,
-        String id,
-        String name,
-        @Nullable String resourceId,
-        SystemDataResponse systemData,
-        String type) {
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("resourceId") @Nullable String resourceId,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("type") String type) {
         this.etag = etag;
         this.id = id;
         this.name = name;

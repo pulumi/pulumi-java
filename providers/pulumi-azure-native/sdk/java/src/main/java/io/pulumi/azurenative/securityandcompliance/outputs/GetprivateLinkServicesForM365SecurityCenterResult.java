@@ -66,18 +66,18 @@ public final class GetprivateLinkServicesForM365SecurityCenterResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"etag","id","identity","kind","location","name","properties","systemData","tags","type"})
+    @OutputCustomType.Constructor
     private GetprivateLinkServicesForM365SecurityCenterResult(
-        @Nullable String etag,
-        String id,
-        @Nullable ServicesResourceResponseIdentity identity,
-        String kind,
-        String location,
-        String name,
-        ServicesPropertiesResponse properties,
-        SystemDataResponse systemData,
-        @Nullable Map<String,String> tags,
-        String type) {
+        @OutputCustomType.Parameter("etag") @Nullable String etag,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("identity") @Nullable ServicesResourceResponseIdentity identity,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("properties") ServicesPropertiesResponse properties,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type) {
         this.etag = etag;
         this.id = id;
         this.identity = identity;

@@ -97,24 +97,24 @@ public final class RecoveryServicesProviderPropertiesResponse {
      */
     private final @Nullable String serverVersion;
 
-    @OutputCustomType.Constructor({"allowedScenarios","authenticationIdentityDetails","connectionStatus","draIdentifier","fabricFriendlyName","fabricType","friendlyName","healthErrorDetails","lastHeartBeat","protectedItemCount","providerVersion","providerVersionDetails","providerVersionExpiryDate","providerVersionState","resourceAccessIdentityDetails","serverVersion"})
+    @OutputCustomType.Constructor
     private RecoveryServicesProviderPropertiesResponse(
-        @Nullable List<String> allowedScenarios,
-        @Nullable IdentityProviderDetailsResponse authenticationIdentityDetails,
-        @Nullable String connectionStatus,
-        @Nullable String draIdentifier,
-        @Nullable String fabricFriendlyName,
-        @Nullable String fabricType,
-        @Nullable String friendlyName,
-        @Nullable List<HealthErrorResponse> healthErrorDetails,
-        @Nullable String lastHeartBeat,
-        @Nullable Integer protectedItemCount,
-        @Nullable String providerVersion,
-        @Nullable VersionDetailsResponse providerVersionDetails,
-        @Nullable String providerVersionExpiryDate,
-        @Nullable String providerVersionState,
-        @Nullable IdentityProviderDetailsResponse resourceAccessIdentityDetails,
-        @Nullable String serverVersion) {
+        @OutputCustomType.Parameter("allowedScenarios") @Nullable List<String> allowedScenarios,
+        @OutputCustomType.Parameter("authenticationIdentityDetails") @Nullable IdentityProviderDetailsResponse authenticationIdentityDetails,
+        @OutputCustomType.Parameter("connectionStatus") @Nullable String connectionStatus,
+        @OutputCustomType.Parameter("draIdentifier") @Nullable String draIdentifier,
+        @OutputCustomType.Parameter("fabricFriendlyName") @Nullable String fabricFriendlyName,
+        @OutputCustomType.Parameter("fabricType") @Nullable String fabricType,
+        @OutputCustomType.Parameter("friendlyName") @Nullable String friendlyName,
+        @OutputCustomType.Parameter("healthErrorDetails") @Nullable List<HealthErrorResponse> healthErrorDetails,
+        @OutputCustomType.Parameter("lastHeartBeat") @Nullable String lastHeartBeat,
+        @OutputCustomType.Parameter("protectedItemCount") @Nullable Integer protectedItemCount,
+        @OutputCustomType.Parameter("providerVersion") @Nullable String providerVersion,
+        @OutputCustomType.Parameter("providerVersionDetails") @Nullable VersionDetailsResponse providerVersionDetails,
+        @OutputCustomType.Parameter("providerVersionExpiryDate") @Nullable String providerVersionExpiryDate,
+        @OutputCustomType.Parameter("providerVersionState") @Nullable String providerVersionState,
+        @OutputCustomType.Parameter("resourceAccessIdentityDetails") @Nullable IdentityProviderDetailsResponse resourceAccessIdentityDetails,
+        @OutputCustomType.Parameter("serverVersion") @Nullable String serverVersion) {
         this.allowedScenarios = allowedScenarios;
         this.authenticationIdentityDetails = authenticationIdentityDetails;
         this.connectionStatus = connectionStatus;

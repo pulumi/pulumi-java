@@ -27,11 +27,11 @@ public final class KeyVaultLastAccessStatusContractPropertiesResponse {
      */
     private final @Nullable String timeStampUtc;
 
-    @OutputCustomType.Constructor({"code","message","timeStampUtc"})
+    @OutputCustomType.Constructor
     private KeyVaultLastAccessStatusContractPropertiesResponse(
-        @Nullable String code,
-        @Nullable String message,
-        @Nullable String timeStampUtc) {
+        @OutputCustomType.Parameter("code") @Nullable String code,
+        @OutputCustomType.Parameter("message") @Nullable String message,
+        @OutputCustomType.Parameter("timeStampUtc") @Nullable String timeStampUtc) {
         this.code = code;
         this.message = message;
         this.timeStampUtc = timeStampUtc;

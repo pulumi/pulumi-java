@@ -30,11 +30,11 @@ public final class ModelEnvironmentDefinitionResponseResponseSpark {
      */
     private final @Nullable List<String> repositories;
 
-    @OutputCustomType.Constructor({"packages","precachePackages","repositories"})
+    @OutputCustomType.Constructor
     private ModelEnvironmentDefinitionResponseResponseSpark(
-        @Nullable List<SparkMavenPackageResponse> packages,
-        @Nullable Boolean precachePackages,
-        @Nullable List<String> repositories) {
+        @OutputCustomType.Parameter("packages") @Nullable List<SparkMavenPackageResponse> packages,
+        @OutputCustomType.Parameter("precachePackages") @Nullable Boolean precachePackages,
+        @OutputCustomType.Parameter("repositories") @Nullable List<String> repositories) {
         this.packages = packages;
         this.precachePackages = precachePackages;
         this.repositories = repositories;

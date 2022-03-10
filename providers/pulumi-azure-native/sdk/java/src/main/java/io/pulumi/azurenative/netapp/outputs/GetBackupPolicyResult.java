@@ -82,21 +82,21 @@ public final class GetBackupPolicyResult {
      */
     private final @Nullable Integer yearlyBackupsToKeep;
 
-    @OutputCustomType.Constructor({"dailyBackupsToKeep","enabled","id","location","monthlyBackupsToKeep","name","provisioningState","tags","type","volumeBackups","volumesAssigned","weeklyBackupsToKeep","yearlyBackupsToKeep"})
+    @OutputCustomType.Constructor
     private GetBackupPolicyResult(
-        @Nullable Integer dailyBackupsToKeep,
-        @Nullable Boolean enabled,
-        String id,
-        String location,
-        @Nullable Integer monthlyBackupsToKeep,
-        String name,
-        String provisioningState,
-        @Nullable Map<String,String> tags,
-        String type,
-        @Nullable List<VolumeBackupsResponse> volumeBackups,
-        @Nullable Integer volumesAssigned,
-        @Nullable Integer weeklyBackupsToKeep,
-        @Nullable Integer yearlyBackupsToKeep) {
+        @OutputCustomType.Parameter("dailyBackupsToKeep") @Nullable Integer dailyBackupsToKeep,
+        @OutputCustomType.Parameter("enabled") @Nullable Boolean enabled,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("monthlyBackupsToKeep") @Nullable Integer monthlyBackupsToKeep,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("volumeBackups") @Nullable List<VolumeBackupsResponse> volumeBackups,
+        @OutputCustomType.Parameter("volumesAssigned") @Nullable Integer volumesAssigned,
+        @OutputCustomType.Parameter("weeklyBackupsToKeep") @Nullable Integer weeklyBackupsToKeep,
+        @OutputCustomType.Parameter("yearlyBackupsToKeep") @Nullable Integer yearlyBackupsToKeep) {
         this.dailyBackupsToKeep = dailyBackupsToKeep;
         this.enabled = enabled;
         this.id = id;

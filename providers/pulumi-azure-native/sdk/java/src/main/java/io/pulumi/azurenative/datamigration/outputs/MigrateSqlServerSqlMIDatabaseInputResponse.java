@@ -34,12 +34,12 @@ public final class MigrateSqlServerSqlMIDatabaseInputResponse {
      */
     private final String restoreDatabaseName;
 
-    @OutputCustomType.Constructor({"backupFilePaths","backupFileShare","name","restoreDatabaseName"})
+    @OutputCustomType.Constructor
     private MigrateSqlServerSqlMIDatabaseInputResponse(
-        @Nullable List<String> backupFilePaths,
-        @Nullable FileShareResponse backupFileShare,
-        String name,
-        String restoreDatabaseName) {
+        @OutputCustomType.Parameter("backupFilePaths") @Nullable List<String> backupFilePaths,
+        @OutputCustomType.Parameter("backupFileShare") @Nullable FileShareResponse backupFileShare,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("restoreDatabaseName") String restoreDatabaseName) {
         this.backupFilePaths = backupFilePaths;
         this.backupFileShare = backupFileShare;
         this.name = name;

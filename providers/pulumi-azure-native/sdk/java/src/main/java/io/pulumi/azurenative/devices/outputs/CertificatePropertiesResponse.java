@@ -46,15 +46,15 @@ public final class CertificatePropertiesResponse {
      */
     private final String updated;
 
-    @OutputCustomType.Constructor({"certificate","created","expiry","isVerified","subject","thumbprint","updated"})
+    @OutputCustomType.Constructor
     private CertificatePropertiesResponse(
-        String certificate,
-        String created,
-        String expiry,
-        Boolean isVerified,
-        String subject,
-        String thumbprint,
-        String updated) {
+        @OutputCustomType.Parameter("certificate") String certificate,
+        @OutputCustomType.Parameter("created") String created,
+        @OutputCustomType.Parameter("expiry") String expiry,
+        @OutputCustomType.Parameter("isVerified") Boolean isVerified,
+        @OutputCustomType.Parameter("subject") String subject,
+        @OutputCustomType.Parameter("thumbprint") String thumbprint,
+        @OutputCustomType.Parameter("updated") String updated) {
         this.certificate = certificate;
         this.created = created;
         this.expiry = expiry;

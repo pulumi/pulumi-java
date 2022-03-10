@@ -103,25 +103,25 @@ public final class GetActivityCustomEntityQueryResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"content","createdTimeUtc","description","enabled","entitiesFilter","etag","id","inputEntityType","kind","lastModifiedTimeUtc","name","queryDefinitions","requiredInputFieldsSets","systemData","templateName","title","type"})
+    @OutputCustomType.Constructor
     private GetActivityCustomEntityQueryResult(
-        @Nullable String content,
-        String createdTimeUtc,
-        @Nullable String description,
-        @Nullable Boolean enabled,
-        @Nullable Map<String,List<String>> entitiesFilter,
-        @Nullable String etag,
-        String id,
-        @Nullable String inputEntityType,
-        String kind,
-        String lastModifiedTimeUtc,
-        String name,
-        @Nullable ActivityEntityQueriesPropertiesResponseQueryDefinitions queryDefinitions,
-        @Nullable List<List<String>> requiredInputFieldsSets,
-        SystemDataResponse systemData,
-        @Nullable String templateName,
-        @Nullable String title,
-        String type) {
+        @OutputCustomType.Parameter("content") @Nullable String content,
+        @OutputCustomType.Parameter("createdTimeUtc") String createdTimeUtc,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("enabled") @Nullable Boolean enabled,
+        @OutputCustomType.Parameter("entitiesFilter") @Nullable Map<String,List<String>> entitiesFilter,
+        @OutputCustomType.Parameter("etag") @Nullable String etag,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("inputEntityType") @Nullable String inputEntityType,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("lastModifiedTimeUtc") String lastModifiedTimeUtc,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("queryDefinitions") @Nullable ActivityEntityQueriesPropertiesResponseQueryDefinitions queryDefinitions,
+        @OutputCustomType.Parameter("requiredInputFieldsSets") @Nullable List<List<String>> requiredInputFieldsSets,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("templateName") @Nullable String templateName,
+        @OutputCustomType.Parameter("title") @Nullable String title,
+        @OutputCustomType.Parameter("type") String type) {
         this.content = content;
         this.createdTimeUtc = createdTimeUtc;
         this.description = description;

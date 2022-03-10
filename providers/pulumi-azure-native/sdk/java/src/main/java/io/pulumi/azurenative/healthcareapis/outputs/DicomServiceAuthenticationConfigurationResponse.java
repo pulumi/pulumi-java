@@ -21,10 +21,10 @@ public final class DicomServiceAuthenticationConfigurationResponse {
      */
     private final String authority;
 
-    @OutputCustomType.Constructor({"audiences","authority"})
+    @OutputCustomType.Constructor
     private DicomServiceAuthenticationConfigurationResponse(
-        List<String> audiences,
-        String authority) {
+        @OutputCustomType.Parameter("audiences") List<String> audiences,
+        @OutputCustomType.Parameter("authority") String authority) {
         this.audiences = audiences;
         this.authority = authority;
     }

@@ -91,22 +91,22 @@ public final class CustomActivityResponse {
      */
     private final @Nullable List<UserPropertyResponse> userProperties;
 
-    @OutputCustomType.Constructor({"autoUserSpecification","command","dependsOn","description","extendedProperties","folderPath","linkedServiceName","name","policy","referenceObjects","resourceLinkedService","retentionTimeInDays","type","userProperties"})
+    @OutputCustomType.Constructor
     private CustomActivityResponse(
-        @Nullable Object autoUserSpecification,
-        Object command,
-        @Nullable List<ActivityDependencyResponse> dependsOn,
-        @Nullable String description,
-        @Nullable Map<String,Object> extendedProperties,
-        @Nullable Object folderPath,
-        @Nullable LinkedServiceReferenceResponse linkedServiceName,
-        String name,
-        @Nullable ActivityPolicyResponse policy,
-        @Nullable CustomActivityReferenceObjectResponse referenceObjects,
-        @Nullable LinkedServiceReferenceResponse resourceLinkedService,
-        @Nullable Object retentionTimeInDays,
-        String type,
-        @Nullable List<UserPropertyResponse> userProperties) {
+        @OutputCustomType.Parameter("autoUserSpecification") @Nullable Object autoUserSpecification,
+        @OutputCustomType.Parameter("command") Object command,
+        @OutputCustomType.Parameter("dependsOn") @Nullable List<ActivityDependencyResponse> dependsOn,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("extendedProperties") @Nullable Map<String,Object> extendedProperties,
+        @OutputCustomType.Parameter("folderPath") @Nullable Object folderPath,
+        @OutputCustomType.Parameter("linkedServiceName") @Nullable LinkedServiceReferenceResponse linkedServiceName,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("policy") @Nullable ActivityPolicyResponse policy,
+        @OutputCustomType.Parameter("referenceObjects") @Nullable CustomActivityReferenceObjectResponse referenceObjects,
+        @OutputCustomType.Parameter("resourceLinkedService") @Nullable LinkedServiceReferenceResponse resourceLinkedService,
+        @OutputCustomType.Parameter("retentionTimeInDays") @Nullable Object retentionTimeInDays,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("userProperties") @Nullable List<UserPropertyResponse> userProperties) {
         this.autoUserSpecification = autoUserSpecification;
         this.command = command;
         this.dependsOn = dependsOn;

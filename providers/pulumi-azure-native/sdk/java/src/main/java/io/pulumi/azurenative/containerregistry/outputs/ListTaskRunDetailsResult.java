@@ -70,18 +70,18 @@ public final class ListTaskRunDetailsResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"forceUpdateTag","id","identity","location","name","provisioningState","runRequest","runResult","systemData","type"})
+    @OutputCustomType.Constructor
     private ListTaskRunDetailsResult(
-        @Nullable String forceUpdateTag,
-        String id,
-        @Nullable IdentityPropertiesResponse identity,
-        @Nullable String location,
-        String name,
-        String provisioningState,
-        @Nullable Object runRequest,
-        RunResponse runResult,
-        SystemDataResponse systemData,
-        String type) {
+        @OutputCustomType.Parameter("forceUpdateTag") @Nullable String forceUpdateTag,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("identity") @Nullable IdentityPropertiesResponse identity,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("runRequest") @Nullable Object runRequest,
+        @OutputCustomType.Parameter("runResult") RunResponse runResult,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("type") String type) {
         this.forceUpdateTag = forceUpdateTag;
         this.id = id;
         this.identity = identity;

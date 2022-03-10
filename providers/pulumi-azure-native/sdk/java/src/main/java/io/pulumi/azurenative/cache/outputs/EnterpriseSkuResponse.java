@@ -23,10 +23,10 @@ public final class EnterpriseSkuResponse {
      */
     private final String name;
 
-    @OutputCustomType.Constructor({"capacity","name"})
+    @OutputCustomType.Constructor
     private EnterpriseSkuResponse(
-        @Nullable Integer capacity,
-        String name) {
+        @OutputCustomType.Parameter("capacity") @Nullable Integer capacity,
+        @OutputCustomType.Parameter("name") String name) {
         this.capacity = capacity;
         this.name = name;
     }

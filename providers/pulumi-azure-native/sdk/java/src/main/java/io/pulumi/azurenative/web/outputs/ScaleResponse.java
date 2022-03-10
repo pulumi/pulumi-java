@@ -29,11 +29,11 @@ public final class ScaleResponse {
      */
     private final @Nullable List<ScaleRuleResponse> rules;
 
-    @OutputCustomType.Constructor({"maxReplicas","minReplicas","rules"})
+    @OutputCustomType.Constructor
     private ScaleResponse(
-        @Nullable Integer maxReplicas,
-        @Nullable Integer minReplicas,
-        @Nullable List<ScaleRuleResponse> rules) {
+        @OutputCustomType.Parameter("maxReplicas") @Nullable Integer maxReplicas,
+        @OutputCustomType.Parameter("minReplicas") @Nullable Integer minReplicas,
+        @OutputCustomType.Parameter("rules") @Nullable List<ScaleRuleResponse> rules) {
         this.maxReplicas = maxReplicas;
         this.minReplicas = minReplicas;
         this.rules = rules;

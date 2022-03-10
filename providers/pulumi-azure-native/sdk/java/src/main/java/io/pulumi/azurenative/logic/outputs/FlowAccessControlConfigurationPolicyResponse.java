@@ -24,10 +24,10 @@ public final class FlowAccessControlConfigurationPolicyResponse {
      */
     private final @Nullable OpenAuthenticationAccessPoliciesResponse openAuthenticationPolicies;
 
-    @OutputCustomType.Constructor({"allowedCallerIpAddresses","openAuthenticationPolicies"})
+    @OutputCustomType.Constructor
     private FlowAccessControlConfigurationPolicyResponse(
-        @Nullable List<IpAddressRangeResponse> allowedCallerIpAddresses,
-        @Nullable OpenAuthenticationAccessPoliciesResponse openAuthenticationPolicies) {
+        @OutputCustomType.Parameter("allowedCallerIpAddresses") @Nullable List<IpAddressRangeResponse> allowedCallerIpAddresses,
+        @OutputCustomType.Parameter("openAuthenticationPolicies") @Nullable OpenAuthenticationAccessPoliciesResponse openAuthenticationPolicies) {
         this.allowedCallerIpAddresses = allowedCallerIpAddresses;
         this.openAuthenticationPolicies = openAuthenticationPolicies;
     }

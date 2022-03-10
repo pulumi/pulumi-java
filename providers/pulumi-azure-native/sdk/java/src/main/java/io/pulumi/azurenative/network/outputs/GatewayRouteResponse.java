@@ -46,15 +46,15 @@ public final class GatewayRouteResponse {
      */
     private final Integer weight;
 
-    @OutputCustomType.Constructor({"asPath","localAddress","network","nextHop","origin","sourcePeer","weight"})
+    @OutputCustomType.Constructor
     private GatewayRouteResponse(
-        String asPath,
-        String localAddress,
-        String network,
-        String nextHop,
-        String origin,
-        String sourcePeer,
-        Integer weight) {
+        @OutputCustomType.Parameter("asPath") String asPath,
+        @OutputCustomType.Parameter("localAddress") String localAddress,
+        @OutputCustomType.Parameter("network") String network,
+        @OutputCustomType.Parameter("nextHop") String nextHop,
+        @OutputCustomType.Parameter("origin") String origin,
+        @OutputCustomType.Parameter("sourcePeer") String sourcePeer,
+        @OutputCustomType.Parameter("weight") Integer weight) {
         this.asPath = asPath;
         this.localAddress = localAddress;
         this.network = network;

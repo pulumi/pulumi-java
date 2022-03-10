@@ -35,12 +35,12 @@ public final class TaggingCriteriaResponse {
      */
     private final Double taggingPriority;
 
-    @OutputCustomType.Constructor({"criteria","isDefault","tagInfo","taggingPriority"})
+    @OutputCustomType.Constructor
     private TaggingCriteriaResponse(
-        @Nullable List<ScheduleBasedBackupCriteriaResponse> criteria,
-        Boolean isDefault,
-        RetentionTagResponse tagInfo,
-        Double taggingPriority) {
+        @OutputCustomType.Parameter("criteria") @Nullable List<ScheduleBasedBackupCriteriaResponse> criteria,
+        @OutputCustomType.Parameter("isDefault") Boolean isDefault,
+        @OutputCustomType.Parameter("tagInfo") RetentionTagResponse tagInfo,
+        @OutputCustomType.Parameter("taggingPriority") Double taggingPriority) {
         this.criteria = criteria;
         this.isDefault = isDefault;
         this.tagInfo = tagInfo;

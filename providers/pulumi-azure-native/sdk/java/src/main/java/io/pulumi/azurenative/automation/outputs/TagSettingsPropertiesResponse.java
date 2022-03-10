@@ -24,10 +24,10 @@ public final class TagSettingsPropertiesResponse {
      */
     private final @Nullable Map<String,List<String>> tags;
 
-    @OutputCustomType.Constructor({"filterOperator","tags"})
+    @OutputCustomType.Constructor
     private TagSettingsPropertiesResponse(
-        @Nullable String filterOperator,
-        @Nullable Map<String,List<String>> tags) {
+        @OutputCustomType.Parameter("filterOperator") @Nullable String filterOperator,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,List<String>> tags) {
         this.filterOperator = filterOperator;
         this.tags = tags;
     }

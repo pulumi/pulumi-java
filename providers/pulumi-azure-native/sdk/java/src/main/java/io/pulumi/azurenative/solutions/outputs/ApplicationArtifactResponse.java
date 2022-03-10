@@ -25,11 +25,11 @@ public final class ApplicationArtifactResponse {
      */
     private final String uri;
 
-    @OutputCustomType.Constructor({"name","type","uri"})
+    @OutputCustomType.Constructor
     private ApplicationArtifactResponse(
-        String name,
-        String type,
-        String uri) {
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("uri") String uri) {
         this.name = name;
         this.type = type;
         this.uri = uri;

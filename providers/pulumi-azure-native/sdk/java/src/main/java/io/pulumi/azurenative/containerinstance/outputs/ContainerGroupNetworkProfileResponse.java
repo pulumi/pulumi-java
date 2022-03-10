@@ -15,8 +15,8 @@ public final class ContainerGroupNetworkProfileResponse {
      */
     private final String id;
 
-    @OutputCustomType.Constructor({"id"})
-    private ContainerGroupNetworkProfileResponse(String id) {
+    @OutputCustomType.Constructor
+    private ContainerGroupNetworkProfileResponse(@OutputCustomType.Parameter("id") String id) {
         this.id = id;
     }
 

@@ -100,24 +100,24 @@ public final class GetOperationalizationClusterResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"appInsights","clusterType","containerRegistry","containerService","createdOn","description","globalServiceConfiguration","id","location","modifiedOn","name","provisioningErrors","provisioningState","storageAccount","tags","type"})
+    @OutputCustomType.Constructor
     private GetOperationalizationClusterResult(
-        @Nullable AppInsightsPropertiesResponse appInsights,
-        String clusterType,
-        @Nullable ContainerRegistryPropertiesResponse containerRegistry,
-        @Nullable AcsClusterPropertiesResponse containerService,
-        String createdOn,
-        @Nullable String description,
-        @Nullable GlobalServiceConfigurationResponse globalServiceConfiguration,
-        String id,
-        String location,
-        String modifiedOn,
-        String name,
-        List<ErrorResponseWrapperResponse> provisioningErrors,
-        String provisioningState,
-        @Nullable StorageAccountPropertiesResponse storageAccount,
-        @Nullable Map<String,String> tags,
-        String type) {
+        @OutputCustomType.Parameter("appInsights") @Nullable AppInsightsPropertiesResponse appInsights,
+        @OutputCustomType.Parameter("clusterType") String clusterType,
+        @OutputCustomType.Parameter("containerRegistry") @Nullable ContainerRegistryPropertiesResponse containerRegistry,
+        @OutputCustomType.Parameter("containerService") @Nullable AcsClusterPropertiesResponse containerService,
+        @OutputCustomType.Parameter("createdOn") String createdOn,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("globalServiceConfiguration") @Nullable GlobalServiceConfigurationResponse globalServiceConfiguration,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("modifiedOn") String modifiedOn,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("provisioningErrors") List<ErrorResponseWrapperResponse> provisioningErrors,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("storageAccount") @Nullable StorageAccountPropertiesResponse storageAccount,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type) {
         this.appInsights = appInsights;
         this.clusterType = clusterType;
         this.containerRegistry = containerRegistry;

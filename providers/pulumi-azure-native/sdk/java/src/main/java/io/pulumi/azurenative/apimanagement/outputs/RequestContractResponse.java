@@ -35,12 +35,12 @@ public final class RequestContractResponse {
      */
     private final @Nullable List<RepresentationContractResponse> representations;
 
-    @OutputCustomType.Constructor({"description","headers","queryParameters","representations"})
+    @OutputCustomType.Constructor
     private RequestContractResponse(
-        @Nullable String description,
-        @Nullable List<ParameterContractResponse> headers,
-        @Nullable List<ParameterContractResponse> queryParameters,
-        @Nullable List<RepresentationContractResponse> representations) {
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("headers") @Nullable List<ParameterContractResponse> headers,
+        @OutputCustomType.Parameter("queryParameters") @Nullable List<ParameterContractResponse> queryParameters,
+        @OutputCustomType.Parameter("representations") @Nullable List<RepresentationContractResponse> representations) {
         this.description = description;
         this.headers = headers;
         this.queryParameters = queryParameters;

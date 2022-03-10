@@ -53,16 +53,16 @@ public final class GetMaintenanceConfigurationResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"extensionProperties","id","location","maintenanceScope","name","namespace","tags","type"})
+    @OutputCustomType.Constructor
     private GetMaintenanceConfigurationResult(
-        @Nullable Map<String,String> extensionProperties,
-        String id,
-        @Nullable String location,
-        @Nullable String maintenanceScope,
-        String name,
-        @Nullable String namespace,
-        @Nullable Map<String,String> tags,
-        String type) {
+        @OutputCustomType.Parameter("extensionProperties") @Nullable Map<String,String> extensionProperties,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("maintenanceScope") @Nullable String maintenanceScope,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("namespace") @Nullable String namespace,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type) {
         this.extensionProperties = extensionProperties;
         this.id = id;
         this.location = location;

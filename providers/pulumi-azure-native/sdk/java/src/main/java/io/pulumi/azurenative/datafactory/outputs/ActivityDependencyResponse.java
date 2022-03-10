@@ -21,10 +21,10 @@ public final class ActivityDependencyResponse {
      */
     private final List<String> dependencyConditions;
 
-    @OutputCustomType.Constructor({"activity","dependencyConditions"})
+    @OutputCustomType.Constructor
     private ActivityDependencyResponse(
-        String activity,
-        List<String> dependencyConditions) {
+        @OutputCustomType.Parameter("activity") String activity,
+        @OutputCustomType.Parameter("dependencyConditions") List<String> dependencyConditions) {
         this.activity = activity;
         this.dependencyConditions = dependencyConditions;
     }

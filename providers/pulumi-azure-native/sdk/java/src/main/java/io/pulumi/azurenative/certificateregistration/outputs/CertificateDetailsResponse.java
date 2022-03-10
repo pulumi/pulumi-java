@@ -56,17 +56,17 @@ public final class CertificateDetailsResponse {
      */
     private final Integer version;
 
-    @OutputCustomType.Constructor({"issuer","notAfter","notBefore","rawData","serialNumber","signatureAlgorithm","subject","thumbprint","version"})
+    @OutputCustomType.Constructor
     private CertificateDetailsResponse(
-        String issuer,
-        String notAfter,
-        String notBefore,
-        String rawData,
-        String serialNumber,
-        String signatureAlgorithm,
-        String subject,
-        String thumbprint,
-        Integer version) {
+        @OutputCustomType.Parameter("issuer") String issuer,
+        @OutputCustomType.Parameter("notAfter") String notAfter,
+        @OutputCustomType.Parameter("notBefore") String notBefore,
+        @OutputCustomType.Parameter("rawData") String rawData,
+        @OutputCustomType.Parameter("serialNumber") String serialNumber,
+        @OutputCustomType.Parameter("signatureAlgorithm") String signatureAlgorithm,
+        @OutputCustomType.Parameter("subject") String subject,
+        @OutputCustomType.Parameter("thumbprint") String thumbprint,
+        @OutputCustomType.Parameter("version") Integer version) {
         this.issuer = issuer;
         this.notAfter = notAfter;
         this.notBefore = notBefore;

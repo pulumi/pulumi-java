@@ -49,15 +49,15 @@ public final class HyperVReplicaAzurePolicyDetailsResponse {
      */
     private final @Nullable Integer replicationInterval;
 
-    @OutputCustomType.Constructor({"activeStorageAccountId","applicationConsistentSnapshotFrequencyInHours","encryption","instanceType","onlineReplicationStartTime","recoveryPointHistoryDurationInHours","replicationInterval"})
+    @OutputCustomType.Constructor
     private HyperVReplicaAzurePolicyDetailsResponse(
-        @Nullable String activeStorageAccountId,
-        @Nullable Integer applicationConsistentSnapshotFrequencyInHours,
-        @Nullable String encryption,
-        String instanceType,
-        @Nullable String onlineReplicationStartTime,
-        @Nullable Integer recoveryPointHistoryDurationInHours,
-        @Nullable Integer replicationInterval) {
+        @OutputCustomType.Parameter("activeStorageAccountId") @Nullable String activeStorageAccountId,
+        @OutputCustomType.Parameter("applicationConsistentSnapshotFrequencyInHours") @Nullable Integer applicationConsistentSnapshotFrequencyInHours,
+        @OutputCustomType.Parameter("encryption") @Nullable String encryption,
+        @OutputCustomType.Parameter("instanceType") String instanceType,
+        @OutputCustomType.Parameter("onlineReplicationStartTime") @Nullable String onlineReplicationStartTime,
+        @OutputCustomType.Parameter("recoveryPointHistoryDurationInHours") @Nullable Integer recoveryPointHistoryDurationInHours,
+        @OutputCustomType.Parameter("replicationInterval") @Nullable Integer replicationInterval) {
         this.activeStorageAccountId = activeStorageAccountId;
         this.applicationConsistentSnapshotFrequencyInHours = applicationConsistentSnapshotFrequencyInHours;
         this.encryption = encryption;

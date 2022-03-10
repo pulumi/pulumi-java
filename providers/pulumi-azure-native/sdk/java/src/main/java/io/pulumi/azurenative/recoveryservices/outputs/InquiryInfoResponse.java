@@ -32,11 +32,11 @@ public final class InquiryInfoResponse {
      */
     private final @Nullable String status;
 
-    @OutputCustomType.Constructor({"errorDetail","inquiryDetails","status"})
+    @OutputCustomType.Constructor
     private InquiryInfoResponse(
-        @Nullable ErrorDetailResponse errorDetail,
-        @Nullable List<WorkloadInquiryDetailsResponse> inquiryDetails,
-        @Nullable String status) {
+        @OutputCustomType.Parameter("errorDetail") @Nullable ErrorDetailResponse errorDetail,
+        @OutputCustomType.Parameter("inquiryDetails") @Nullable List<WorkloadInquiryDetailsResponse> inquiryDetails,
+        @OutputCustomType.Parameter("status") @Nullable String status) {
         this.errorDetail = errorDetail;
         this.inquiryDetails = inquiryDetails;
         this.status = status;

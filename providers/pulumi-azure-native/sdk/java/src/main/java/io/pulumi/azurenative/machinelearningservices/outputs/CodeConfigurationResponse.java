@@ -22,10 +22,10 @@ public final class CodeConfigurationResponse {
      */
     private final String scoringScript;
 
-    @OutputCustomType.Constructor({"codeId","scoringScript"})
+    @OutputCustomType.Constructor
     private CodeConfigurationResponse(
-        @Nullable String codeId,
-        String scoringScript) {
+        @OutputCustomType.Parameter("codeId") @Nullable String codeId,
+        @OutputCustomType.Parameter("scoringScript") String scoringScript) {
         this.codeId = codeId;
         this.scoringScript = scoringScript;
     }

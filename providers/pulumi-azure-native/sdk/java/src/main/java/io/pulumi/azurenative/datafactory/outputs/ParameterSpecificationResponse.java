@@ -23,10 +23,10 @@ public final class ParameterSpecificationResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"defaultValue","type"})
+    @OutputCustomType.Constructor
     private ParameterSpecificationResponse(
-        @Nullable Object defaultValue,
-        String type) {
+        @OutputCustomType.Parameter("defaultValue") @Nullable Object defaultValue,
+        @OutputCustomType.Parameter("type") String type) {
         this.defaultValue = defaultValue;
         this.type = type;
     }

@@ -15,8 +15,8 @@ public final class AzureADMetricsPropertiesFormatResponse {
      */
     private final String provisioningState;
 
-    @OutputCustomType.Constructor({"provisioningState"})
-    private AzureADMetricsPropertiesFormatResponse(String provisioningState) {
+    @OutputCustomType.Constructor
+    private AzureADMetricsPropertiesFormatResponse(@OutputCustomType.Parameter("provisioningState") String provisioningState) {
         this.provisioningState = provisioningState;
     }
 

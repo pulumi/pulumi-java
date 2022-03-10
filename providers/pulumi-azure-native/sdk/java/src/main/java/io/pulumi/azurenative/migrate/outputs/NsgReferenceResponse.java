@@ -15,8 +15,8 @@ public final class NsgReferenceResponse {
      */
     private final String sourceArmResourceId;
 
-    @OutputCustomType.Constructor({"sourceArmResourceId"})
-    private NsgReferenceResponse(String sourceArmResourceId) {
+    @OutputCustomType.Constructor
+    private NsgReferenceResponse(@OutputCustomType.Parameter("sourceArmResourceId") String sourceArmResourceId) {
         this.sourceArmResourceId = sourceArmResourceId;
     }
 

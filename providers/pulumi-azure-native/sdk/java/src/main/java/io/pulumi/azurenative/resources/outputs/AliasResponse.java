@@ -46,14 +46,14 @@ public final class AliasResponse {
      */
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor({"defaultMetadata","defaultPath","defaultPattern","name","paths","type"})
+    @OutputCustomType.Constructor
     private AliasResponse(
-        AliasPathMetadataResponse defaultMetadata,
-        @Nullable String defaultPath,
-        @Nullable AliasPatternResponse defaultPattern,
-        @Nullable String name,
-        @Nullable List<AliasPathResponse> paths,
-        @Nullable String type) {
+        @OutputCustomType.Parameter("defaultMetadata") AliasPathMetadataResponse defaultMetadata,
+        @OutputCustomType.Parameter("defaultPath") @Nullable String defaultPath,
+        @OutputCustomType.Parameter("defaultPattern") @Nullable AliasPatternResponse defaultPattern,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("paths") @Nullable List<AliasPathResponse> paths,
+        @OutputCustomType.Parameter("type") @Nullable String type) {
         this.defaultMetadata = defaultMetadata;
         this.defaultPath = defaultPath;
         this.defaultPattern = defaultPattern;

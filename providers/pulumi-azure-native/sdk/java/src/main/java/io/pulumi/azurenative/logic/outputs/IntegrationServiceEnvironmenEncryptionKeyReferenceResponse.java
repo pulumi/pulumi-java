@@ -28,11 +28,11 @@ public final class IntegrationServiceEnvironmenEncryptionKeyReferenceResponse {
      */
     private final @Nullable String keyVersion;
 
-    @OutputCustomType.Constructor({"keyName","keyVault","keyVersion"})
+    @OutputCustomType.Constructor
     private IntegrationServiceEnvironmenEncryptionKeyReferenceResponse(
-        @Nullable String keyName,
-        @Nullable ResourceReferenceResponse keyVault,
-        @Nullable String keyVersion) {
+        @OutputCustomType.Parameter("keyName") @Nullable String keyName,
+        @OutputCustomType.Parameter("keyVault") @Nullable ResourceReferenceResponse keyVault,
+        @OutputCustomType.Parameter("keyVersion") @Nullable String keyVersion) {
         this.keyName = keyName;
         this.keyVault = keyVault;
         this.keyVersion = keyVersion;

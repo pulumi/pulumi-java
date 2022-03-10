@@ -38,13 +38,13 @@ public final class ServiceLoadMetricDescriptionResponse {
      */
     private final @Nullable String weight;
 
-    @OutputCustomType.Constructor({"defaultLoad","name","primaryDefaultLoad","secondaryDefaultLoad","weight"})
+    @OutputCustomType.Constructor
     private ServiceLoadMetricDescriptionResponse(
-        @Nullable Integer defaultLoad,
-        String name,
-        @Nullable Integer primaryDefaultLoad,
-        @Nullable Integer secondaryDefaultLoad,
-        @Nullable String weight) {
+        @OutputCustomType.Parameter("defaultLoad") @Nullable Integer defaultLoad,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("primaryDefaultLoad") @Nullable Integer primaryDefaultLoad,
+        @OutputCustomType.Parameter("secondaryDefaultLoad") @Nullable Integer secondaryDefaultLoad,
+        @OutputCustomType.Parameter("weight") @Nullable String weight) {
         this.defaultLoad = defaultLoad;
         this.name = name;
         this.primaryDefaultLoad = primaryDefaultLoad;

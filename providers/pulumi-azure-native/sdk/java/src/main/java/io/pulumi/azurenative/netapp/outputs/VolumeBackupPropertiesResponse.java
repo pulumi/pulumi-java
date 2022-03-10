@@ -33,12 +33,12 @@ public final class VolumeBackupPropertiesResponse {
      */
     private final @Nullable String vaultId;
 
-    @OutputCustomType.Constructor({"backupEnabled","backupPolicyId","policyEnforced","vaultId"})
+    @OutputCustomType.Constructor
     private VolumeBackupPropertiesResponse(
-        @Nullable Boolean backupEnabled,
-        @Nullable String backupPolicyId,
-        @Nullable Boolean policyEnforced,
-        @Nullable String vaultId) {
+        @OutputCustomType.Parameter("backupEnabled") @Nullable Boolean backupEnabled,
+        @OutputCustomType.Parameter("backupPolicyId") @Nullable String backupPolicyId,
+        @OutputCustomType.Parameter("policyEnforced") @Nullable Boolean policyEnforced,
+        @OutputCustomType.Parameter("vaultId") @Nullable String vaultId) {
         this.backupEnabled = backupEnabled;
         this.backupPolicyId = backupPolicyId;
         this.policyEnforced = policyEnforced;

@@ -23,10 +23,10 @@ public final class AdditionalErrorInfoResponse {
      */
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor({"info","type"})
+    @OutputCustomType.Constructor
     private AdditionalErrorInfoResponse(
-        @Nullable Object info,
-        @Nullable String type) {
+        @OutputCustomType.Parameter("info") @Nullable Object info,
+        @OutputCustomType.Parameter("type") @Nullable String type) {
         this.info = info;
         this.type = type;
     }

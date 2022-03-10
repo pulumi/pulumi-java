@@ -22,10 +22,10 @@ public final class MediaGraphPemCertificateListResponse {
      */
     private final String odataType;
 
-    @OutputCustomType.Constructor({"certificates","odataType"})
+    @OutputCustomType.Constructor
     private MediaGraphPemCertificateListResponse(
-        List<String> certificates,
-        String odataType) {
+        @OutputCustomType.Parameter("certificates") List<String> certificates,
+        @OutputCustomType.Parameter("odataType") String odataType) {
         this.certificates = certificates;
         this.odataType = odataType;
     }

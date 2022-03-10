@@ -47,14 +47,14 @@ public final class AutoHealTriggersResponse {
      */
     private final @Nullable List<StatusCodesRangeBasedTriggerResponse> statusCodesRange;
 
-    @OutputCustomType.Constructor({"privateBytesInKB","requests","slowRequests","slowRequestsWithPath","statusCodes","statusCodesRange"})
+    @OutputCustomType.Constructor
     private AutoHealTriggersResponse(
-        @Nullable Integer privateBytesInKB,
-        @Nullable RequestsBasedTriggerResponse requests,
-        @Nullable SlowRequestsBasedTriggerResponse slowRequests,
-        @Nullable List<SlowRequestsBasedTriggerResponse> slowRequestsWithPath,
-        @Nullable List<StatusCodesBasedTriggerResponse> statusCodes,
-        @Nullable List<StatusCodesRangeBasedTriggerResponse> statusCodesRange) {
+        @OutputCustomType.Parameter("privateBytesInKB") @Nullable Integer privateBytesInKB,
+        @OutputCustomType.Parameter("requests") @Nullable RequestsBasedTriggerResponse requests,
+        @OutputCustomType.Parameter("slowRequests") @Nullable SlowRequestsBasedTriggerResponse slowRequests,
+        @OutputCustomType.Parameter("slowRequestsWithPath") @Nullable List<SlowRequestsBasedTriggerResponse> slowRequestsWithPath,
+        @OutputCustomType.Parameter("statusCodes") @Nullable List<StatusCodesBasedTriggerResponse> statusCodes,
+        @OutputCustomType.Parameter("statusCodesRange") @Nullable List<StatusCodesRangeBasedTriggerResponse> statusCodesRange) {
         this.privateBytesInKB = privateBytesInKB;
         this.requests = requests;
         this.slowRequests = slowRequests;

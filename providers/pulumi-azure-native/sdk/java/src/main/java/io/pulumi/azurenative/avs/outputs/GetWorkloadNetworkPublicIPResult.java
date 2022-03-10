@@ -48,15 +48,15 @@ public final class GetWorkloadNetworkPublicIPResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"displayName","id","name","numberOfPublicIPs","provisioningState","publicIPBlock","type"})
+    @OutputCustomType.Constructor
     private GetWorkloadNetworkPublicIPResult(
-        @Nullable String displayName,
-        String id,
-        String name,
-        @Nullable Double numberOfPublicIPs,
-        String provisioningState,
-        String publicIPBlock,
-        String type) {
+        @OutputCustomType.Parameter("displayName") @Nullable String displayName,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("numberOfPublicIPs") @Nullable Double numberOfPublicIPs,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("publicIPBlock") String publicIPBlock,
+        @OutputCustomType.Parameter("type") String type) {
         this.displayName = displayName;
         this.id = id;
         this.name = name;

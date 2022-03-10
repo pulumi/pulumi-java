@@ -43,14 +43,14 @@ public final class GetDataConnectionResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"id","kind","location","name","systemData","type"})
+    @OutputCustomType.Constructor
     private GetDataConnectionResult(
-        String id,
-        String kind,
-        @Nullable String location,
-        String name,
-        SystemDataResponse systemData,
-        String type) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("type") String type) {
         this.id = id;
         this.kind = kind;
         this.location = location;

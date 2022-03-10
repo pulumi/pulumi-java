@@ -31,12 +31,12 @@ public final class BlobRestoreStatusResponse {
      */
     private final String status;
 
-    @OutputCustomType.Constructor({"failureReason","parameters","restoreId","status"})
+    @OutputCustomType.Constructor
     private BlobRestoreStatusResponse(
-        String failureReason,
-        BlobRestoreParametersResponse parameters,
-        String restoreId,
-        String status) {
+        @OutputCustomType.Parameter("failureReason") String failureReason,
+        @OutputCustomType.Parameter("parameters") BlobRestoreParametersResponse parameters,
+        @OutputCustomType.Parameter("restoreId") String restoreId,
+        @OutputCustomType.Parameter("status") String status) {
         this.failureReason = failureReason;
         this.parameters = parameters;
         this.restoreId = restoreId;

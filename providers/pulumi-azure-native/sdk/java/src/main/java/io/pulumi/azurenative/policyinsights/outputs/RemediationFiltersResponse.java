@@ -17,8 +17,8 @@ public final class RemediationFiltersResponse {
      */
     private final @Nullable List<String> locations;
 
-    @OutputCustomType.Constructor({"locations"})
-    private RemediationFiltersResponse(@Nullable List<String> locations) {
+    @OutputCustomType.Constructor
+    private RemediationFiltersResponse(@OutputCustomType.Parameter("locations") @Nullable List<String> locations) {
         this.locations = locations;
     }
 

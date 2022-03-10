@@ -42,15 +42,15 @@ public final class MonitorPropertiesResponse {
      */
     private final @Nullable UserInfoResponse userInfo;
 
-    @OutputCustomType.Constructor({"datadogOrganizationProperties","liftrResourceCategory","liftrResourcePreference","marketplaceSubscriptionStatus","monitoringStatus","provisioningState","userInfo"})
+    @OutputCustomType.Constructor
     private MonitorPropertiesResponse(
-        @Nullable DatadogOrganizationPropertiesResponse datadogOrganizationProperties,
-        String liftrResourceCategory,
-        Integer liftrResourcePreference,
-        String marketplaceSubscriptionStatus,
-        @Nullable String monitoringStatus,
-        String provisioningState,
-        @Nullable UserInfoResponse userInfo) {
+        @OutputCustomType.Parameter("datadogOrganizationProperties") @Nullable DatadogOrganizationPropertiesResponse datadogOrganizationProperties,
+        @OutputCustomType.Parameter("liftrResourceCategory") String liftrResourceCategory,
+        @OutputCustomType.Parameter("liftrResourcePreference") Integer liftrResourcePreference,
+        @OutputCustomType.Parameter("marketplaceSubscriptionStatus") String marketplaceSubscriptionStatus,
+        @OutputCustomType.Parameter("monitoringStatus") @Nullable String monitoringStatus,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("userInfo") @Nullable UserInfoResponse userInfo) {
         this.datadogOrganizationProperties = datadogOrganizationProperties;
         this.liftrResourceCategory = liftrResourceCategory;
         this.liftrResourcePreference = liftrResourcePreference;

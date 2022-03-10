@@ -142,31 +142,31 @@ public final class WebServicePropertiesForGraphResponse {
      */
     private final @Nullable String title;
 
-    @OutputCustomType.Constructor({"assets","commitmentPlan","createdOn","description","diagnostics","exampleRequest","exposeSampleData","input","keys","machineLearningWorkspace","modifiedOn","output","$package","packageType","parameters","payloadsInBlobStorage","payloadsLocation","provisioningState","readOnly","realtimeConfiguration","storageAccount","swaggerLocation","title"})
+    @OutputCustomType.Constructor
     private WebServicePropertiesForGraphResponse(
-        @Nullable Map<String,AssetItemResponse> assets,
-        @Nullable CommitmentPlanResponse commitmentPlan,
-        String createdOn,
-        @Nullable String description,
-        @Nullable DiagnosticsConfigurationResponse diagnostics,
-        @Nullable ExampleRequestResponse exampleRequest,
-        @Nullable Boolean exposeSampleData,
-        @Nullable ServiceInputOutputSpecificationResponse input,
-        @Nullable WebServiceKeysResponse keys,
-        @Nullable MachineLearningWorkspaceResponse machineLearningWorkspace,
-        String modifiedOn,
-        @Nullable ServiceInputOutputSpecificationResponse output,
-        @Nullable GraphPackageResponse $package,
-        String packageType,
-        @Nullable Map<String,WebServiceParameterResponse> parameters,
-        @Nullable Boolean payloadsInBlobStorage,
-        @Nullable BlobLocationResponse payloadsLocation,
-        String provisioningState,
-        @Nullable Boolean readOnly,
-        @Nullable RealtimeConfigurationResponse realtimeConfiguration,
-        @Nullable StorageAccountResponse storageAccount,
-        String swaggerLocation,
-        @Nullable String title) {
+        @OutputCustomType.Parameter("assets") @Nullable Map<String,AssetItemResponse> assets,
+        @OutputCustomType.Parameter("commitmentPlan") @Nullable CommitmentPlanResponse commitmentPlan,
+        @OutputCustomType.Parameter("createdOn") String createdOn,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("diagnostics") @Nullable DiagnosticsConfigurationResponse diagnostics,
+        @OutputCustomType.Parameter("exampleRequest") @Nullable ExampleRequestResponse exampleRequest,
+        @OutputCustomType.Parameter("exposeSampleData") @Nullable Boolean exposeSampleData,
+        @OutputCustomType.Parameter("input") @Nullable ServiceInputOutputSpecificationResponse input,
+        @OutputCustomType.Parameter("keys") @Nullable WebServiceKeysResponse keys,
+        @OutputCustomType.Parameter("machineLearningWorkspace") @Nullable MachineLearningWorkspaceResponse machineLearningWorkspace,
+        @OutputCustomType.Parameter("modifiedOn") String modifiedOn,
+        @OutputCustomType.Parameter("output") @Nullable ServiceInputOutputSpecificationResponse output,
+        @OutputCustomType.Parameter("package") @Nullable GraphPackageResponse $package,
+        @OutputCustomType.Parameter("packageType") String packageType,
+        @OutputCustomType.Parameter("parameters") @Nullable Map<String,WebServiceParameterResponse> parameters,
+        @OutputCustomType.Parameter("payloadsInBlobStorage") @Nullable Boolean payloadsInBlobStorage,
+        @OutputCustomType.Parameter("payloadsLocation") @Nullable BlobLocationResponse payloadsLocation,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("readOnly") @Nullable Boolean readOnly,
+        @OutputCustomType.Parameter("realtimeConfiguration") @Nullable RealtimeConfigurationResponse realtimeConfiguration,
+        @OutputCustomType.Parameter("storageAccount") @Nullable StorageAccountResponse storageAccount,
+        @OutputCustomType.Parameter("swaggerLocation") String swaggerLocation,
+        @OutputCustomType.Parameter("title") @Nullable String title) {
         this.assets = assets;
         this.commitmentPlan = commitmentPlan;
         this.createdOn = createdOn;

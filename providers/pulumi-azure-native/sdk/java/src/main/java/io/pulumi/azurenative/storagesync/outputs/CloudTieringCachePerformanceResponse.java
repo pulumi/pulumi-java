@@ -32,12 +32,12 @@ public final class CloudTieringCachePerformanceResponse {
      */
     private final String lastUpdatedTimestamp;
 
-    @OutputCustomType.Constructor({"cacheHitBytes","cacheHitBytesPercent","cacheMissBytes","lastUpdatedTimestamp"})
+    @OutputCustomType.Constructor
     private CloudTieringCachePerformanceResponse(
-        Double cacheHitBytes,
-        Integer cacheHitBytesPercent,
-        Double cacheMissBytes,
-        String lastUpdatedTimestamp) {
+        @OutputCustomType.Parameter("cacheHitBytes") Double cacheHitBytes,
+        @OutputCustomType.Parameter("cacheHitBytesPercent") Integer cacheHitBytesPercent,
+        @OutputCustomType.Parameter("cacheMissBytes") Double cacheMissBytes,
+        @OutputCustomType.Parameter("lastUpdatedTimestamp") String lastUpdatedTimestamp) {
         this.cacheHitBytes = cacheHitBytes;
         this.cacheHitBytesPercent = cacheHitBytesPercent;
         this.cacheMissBytes = cacheMissBytes;

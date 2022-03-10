@@ -104,24 +104,24 @@ public final class GetPrivateRecordSetResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"aRecords","aaaaRecords","cnameRecord","etag","fqdn","id","isAutoRegistered","metadata","mxRecords","name","ptrRecords","soaRecord","srvRecords","ttl","txtRecords","type"})
+    @OutputCustomType.Constructor
     private GetPrivateRecordSetResult(
-        @Nullable List<ARecordResponse> aRecords,
-        @Nullable List<AaaaRecordResponse> aaaaRecords,
-        @Nullable CnameRecordResponse cnameRecord,
-        @Nullable String etag,
-        String fqdn,
-        String id,
-        Boolean isAutoRegistered,
-        @Nullable Map<String,String> metadata,
-        @Nullable List<MxRecordResponse> mxRecords,
-        String name,
-        @Nullable List<PtrRecordResponse> ptrRecords,
-        @Nullable SoaRecordResponse soaRecord,
-        @Nullable List<SrvRecordResponse> srvRecords,
-        @Nullable Double ttl,
-        @Nullable List<TxtRecordResponse> txtRecords,
-        String type) {
+        @OutputCustomType.Parameter("aRecords") @Nullable List<ARecordResponse> aRecords,
+        @OutputCustomType.Parameter("aaaaRecords") @Nullable List<AaaaRecordResponse> aaaaRecords,
+        @OutputCustomType.Parameter("cnameRecord") @Nullable CnameRecordResponse cnameRecord,
+        @OutputCustomType.Parameter("etag") @Nullable String etag,
+        @OutputCustomType.Parameter("fqdn") String fqdn,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("isAutoRegistered") Boolean isAutoRegistered,
+        @OutputCustomType.Parameter("metadata") @Nullable Map<String,String> metadata,
+        @OutputCustomType.Parameter("mxRecords") @Nullable List<MxRecordResponse> mxRecords,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("ptrRecords") @Nullable List<PtrRecordResponse> ptrRecords,
+        @OutputCustomType.Parameter("soaRecord") @Nullable SoaRecordResponse soaRecord,
+        @OutputCustomType.Parameter("srvRecords") @Nullable List<SrvRecordResponse> srvRecords,
+        @OutputCustomType.Parameter("ttl") @Nullable Double ttl,
+        @OutputCustomType.Parameter("txtRecords") @Nullable List<TxtRecordResponse> txtRecords,
+        @OutputCustomType.Parameter("type") String type) {
         this.aRecords = aRecords;
         this.aaaaRecords = aaaaRecords;
         this.cnameRecord = cnameRecord;

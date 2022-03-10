@@ -29,11 +29,11 @@ public final class ConsistencyPolicyResponse {
      */
     private final @Nullable Double maxStalenessPrefix;
 
-    @OutputCustomType.Constructor({"defaultConsistencyLevel","maxIntervalInSeconds","maxStalenessPrefix"})
+    @OutputCustomType.Constructor
     private ConsistencyPolicyResponse(
-        String defaultConsistencyLevel,
-        @Nullable Integer maxIntervalInSeconds,
-        @Nullable Double maxStalenessPrefix) {
+        @OutputCustomType.Parameter("defaultConsistencyLevel") String defaultConsistencyLevel,
+        @OutputCustomType.Parameter("maxIntervalInSeconds") @Nullable Integer maxIntervalInSeconds,
+        @OutputCustomType.Parameter("maxStalenessPrefix") @Nullable Double maxStalenessPrefix) {
         this.defaultConsistencyLevel = defaultConsistencyLevel;
         this.maxIntervalInSeconds = maxIntervalInSeconds;
         this.maxStalenessPrefix = maxStalenessPrefix;

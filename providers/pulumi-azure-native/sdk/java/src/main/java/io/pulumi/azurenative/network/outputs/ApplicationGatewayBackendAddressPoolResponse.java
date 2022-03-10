@@ -50,15 +50,15 @@ public final class ApplicationGatewayBackendAddressPoolResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"backendAddresses","backendIPConfigurations","etag","id","name","provisioningState","type"})
+    @OutputCustomType.Constructor
     private ApplicationGatewayBackendAddressPoolResponse(
-        @Nullable List<ApplicationGatewayBackendAddressResponse> backendAddresses,
-        List<NetworkInterfaceIPConfigurationResponse> backendIPConfigurations,
-        String etag,
-        @Nullable String id,
-        @Nullable String name,
-        String provisioningState,
-        String type) {
+        @OutputCustomType.Parameter("backendAddresses") @Nullable List<ApplicationGatewayBackendAddressResponse> backendAddresses,
+        @OutputCustomType.Parameter("backendIPConfigurations") List<NetworkInterfaceIPConfigurationResponse> backendIPConfigurations,
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("type") String type) {
         this.backendAddresses = backendAddresses;
         this.backendIPConfigurations = backendIPConfigurations;
         this.etag = etag;

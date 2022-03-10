@@ -28,11 +28,11 @@ public final class KeyVaultKeyResponseAttributes {
      */
     private final @Nullable Double updated;
 
-    @OutputCustomType.Constructor({"created","enabled","updated"})
+    @OutputCustomType.Constructor
     private KeyVaultKeyResponseAttributes(
-        @Nullable Double created,
-        @Nullable Boolean enabled,
-        @Nullable Double updated) {
+        @OutputCustomType.Parameter("created") @Nullable Double created,
+        @OutputCustomType.Parameter("enabled") @Nullable Boolean enabled,
+        @OutputCustomType.Parameter("updated") @Nullable Double updated) {
         this.created = created;
         this.enabled = enabled;
         this.updated = updated;

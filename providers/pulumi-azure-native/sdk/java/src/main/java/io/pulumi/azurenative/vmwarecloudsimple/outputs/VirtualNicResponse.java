@@ -56,16 +56,16 @@ public final class VirtualNicResponse {
      */
     private final String virtualNicName;
 
-    @OutputCustomType.Constructor({"customization","ipAddresses","macAddress","network","nicType","powerOnBoot","virtualNicId","virtualNicName"})
+    @OutputCustomType.Constructor
     private VirtualNicResponse(
-        @Nullable GuestOSNICCustomizationResponse customization,
-        @Nullable List<String> ipAddresses,
-        @Nullable String macAddress,
-        VirtualNetworkResponse network,
-        String nicType,
-        @Nullable Boolean powerOnBoot,
-        @Nullable String virtualNicId,
-        String virtualNicName) {
+        @OutputCustomType.Parameter("customization") @Nullable GuestOSNICCustomizationResponse customization,
+        @OutputCustomType.Parameter("ipAddresses") @Nullable List<String> ipAddresses,
+        @OutputCustomType.Parameter("macAddress") @Nullable String macAddress,
+        @OutputCustomType.Parameter("network") VirtualNetworkResponse network,
+        @OutputCustomType.Parameter("nicType") String nicType,
+        @OutputCustomType.Parameter("powerOnBoot") @Nullable Boolean powerOnBoot,
+        @OutputCustomType.Parameter("virtualNicId") @Nullable String virtualNicId,
+        @OutputCustomType.Parameter("virtualNicName") String virtualNicName) {
         this.customization = customization;
         this.ipAddresses = ipAddresses;
         this.macAddress = macAddress;

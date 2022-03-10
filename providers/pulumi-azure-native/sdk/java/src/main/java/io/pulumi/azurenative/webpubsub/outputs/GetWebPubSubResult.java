@@ -136,29 +136,29 @@ public final class GetWebPubSubResult {
      */
     private final String version;
 
-    @OutputCustomType.Constructor({"eventHandler","externalIP","features","hostName","id","identity","location","name","networkACLs","privateEndpointConnections","provisioningState","publicNetworkAccess","publicPort","serverPort","sharedPrivateLinkResources","sku","systemData","tags","tls","type","version"})
+    @OutputCustomType.Constructor
     private GetWebPubSubResult(
-        @Nullable EventHandlerSettingsResponse eventHandler,
-        String externalIP,
-        @Nullable List<WebPubSubFeatureResponse> features,
-        String hostName,
-        String id,
-        @Nullable ManagedIdentityResponse identity,
-        @Nullable String location,
-        String name,
-        @Nullable WebPubSubNetworkACLsResponse networkACLs,
-        List<PrivateEndpointConnectionResponse> privateEndpointConnections,
-        String provisioningState,
-        @Nullable String publicNetworkAccess,
-        Integer publicPort,
-        Integer serverPort,
-        List<SharedPrivateLinkResourceResponse> sharedPrivateLinkResources,
-        @Nullable ResourceSkuResponse sku,
-        SystemDataResponse systemData,
-        @Nullable Map<String,String> tags,
-        @Nullable WebPubSubTlsSettingsResponse tls,
-        String type,
-        String version) {
+        @OutputCustomType.Parameter("eventHandler") @Nullable EventHandlerSettingsResponse eventHandler,
+        @OutputCustomType.Parameter("externalIP") String externalIP,
+        @OutputCustomType.Parameter("features") @Nullable List<WebPubSubFeatureResponse> features,
+        @OutputCustomType.Parameter("hostName") String hostName,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("identity") @Nullable ManagedIdentityResponse identity,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("networkACLs") @Nullable WebPubSubNetworkACLsResponse networkACLs,
+        @OutputCustomType.Parameter("privateEndpointConnections") List<PrivateEndpointConnectionResponse> privateEndpointConnections,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("publicNetworkAccess") @Nullable String publicNetworkAccess,
+        @OutputCustomType.Parameter("publicPort") Integer publicPort,
+        @OutputCustomType.Parameter("serverPort") Integer serverPort,
+        @OutputCustomType.Parameter("sharedPrivateLinkResources") List<SharedPrivateLinkResourceResponse> sharedPrivateLinkResources,
+        @OutputCustomType.Parameter("sku") @Nullable ResourceSkuResponse sku,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("tls") @Nullable WebPubSubTlsSettingsResponse tls,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("version") String version) {
         this.eventHandler = eventHandler;
         this.externalIP = externalIP;
         this.features = features;

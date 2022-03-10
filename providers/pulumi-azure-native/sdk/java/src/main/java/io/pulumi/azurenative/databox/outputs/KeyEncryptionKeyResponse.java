@@ -33,12 +33,12 @@ public final class KeyEncryptionKeyResponse {
      */
     private final @Nullable String kekVaultResourceID;
 
-    @OutputCustomType.Constructor({"identityProperties","kekType","kekUrl","kekVaultResourceID"})
+    @OutputCustomType.Constructor
     private KeyEncryptionKeyResponse(
-        @Nullable IdentityPropertiesResponse identityProperties,
-        String kekType,
-        @Nullable String kekUrl,
-        @Nullable String kekVaultResourceID) {
+        @OutputCustomType.Parameter("identityProperties") @Nullable IdentityPropertiesResponse identityProperties,
+        @OutputCustomType.Parameter("kekType") String kekType,
+        @OutputCustomType.Parameter("kekUrl") @Nullable String kekUrl,
+        @OutputCustomType.Parameter("kekVaultResourceID") @Nullable String kekVaultResourceID) {
         this.identityProperties = identityProperties;
         this.kekType = kekType;
         this.kekUrl = kekUrl;

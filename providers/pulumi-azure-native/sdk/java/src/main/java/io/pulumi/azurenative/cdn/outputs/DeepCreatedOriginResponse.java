@@ -74,20 +74,20 @@ public final class DeepCreatedOriginResponse {
      */
     private final @Nullable Integer weight;
 
-    @OutputCustomType.Constructor({"enabled","hostName","httpPort","httpsPort","name","originHostHeader","priority","privateLinkAlias","privateLinkApprovalMessage","privateLinkLocation","privateLinkResourceId","weight"})
+    @OutputCustomType.Constructor
     private DeepCreatedOriginResponse(
-        @Nullable Boolean enabled,
-        String hostName,
-        @Nullable Integer httpPort,
-        @Nullable Integer httpsPort,
-        String name,
-        @Nullable String originHostHeader,
-        @Nullable Integer priority,
-        @Nullable String privateLinkAlias,
-        @Nullable String privateLinkApprovalMessage,
-        @Nullable String privateLinkLocation,
-        @Nullable String privateLinkResourceId,
-        @Nullable Integer weight) {
+        @OutputCustomType.Parameter("enabled") @Nullable Boolean enabled,
+        @OutputCustomType.Parameter("hostName") String hostName,
+        @OutputCustomType.Parameter("httpPort") @Nullable Integer httpPort,
+        @OutputCustomType.Parameter("httpsPort") @Nullable Integer httpsPort,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("originHostHeader") @Nullable String originHostHeader,
+        @OutputCustomType.Parameter("priority") @Nullable Integer priority,
+        @OutputCustomType.Parameter("privateLinkAlias") @Nullable String privateLinkAlias,
+        @OutputCustomType.Parameter("privateLinkApprovalMessage") @Nullable String privateLinkApprovalMessage,
+        @OutputCustomType.Parameter("privateLinkLocation") @Nullable String privateLinkLocation,
+        @OutputCustomType.Parameter("privateLinkResourceId") @Nullable String privateLinkResourceId,
+        @OutputCustomType.Parameter("weight") @Nullable Integer weight) {
         this.enabled = enabled;
         this.hostName = hostName;
         this.httpPort = httpPort;

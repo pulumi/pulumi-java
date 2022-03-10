@@ -27,11 +27,11 @@ public final class SubscriptionReceiverValueResponse {
      */
     private final @Nullable String subscriptionName;
 
-    @OutputCustomType.Constructor({"role","subscriptionId","subscriptionName"})
+    @OutputCustomType.Constructor
     private SubscriptionReceiverValueResponse(
-        @Nullable String role,
-        @Nullable String subscriptionId,
-        @Nullable String subscriptionName) {
+        @OutputCustomType.Parameter("role") @Nullable String role,
+        @OutputCustomType.Parameter("subscriptionId") @Nullable String subscriptionId,
+        @OutputCustomType.Parameter("subscriptionName") @Nullable String subscriptionName) {
         this.role = role;
         this.subscriptionId = subscriptionId;
         this.subscriptionName = subscriptionName;

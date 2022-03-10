@@ -31,12 +31,12 @@ public final class ApiKeyAuthenticationResponse {
      */
     private final String value;
 
-    @OutputCustomType.Constructor({"in","name","type","value"})
+    @OutputCustomType.Constructor
     private ApiKeyAuthenticationResponse(
-        String in,
-        String name,
-        String type,
-        String value) {
+        @OutputCustomType.Parameter("in") String in,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("value") String value) {
         this.in = in;
         this.name = name;
         this.type = type;

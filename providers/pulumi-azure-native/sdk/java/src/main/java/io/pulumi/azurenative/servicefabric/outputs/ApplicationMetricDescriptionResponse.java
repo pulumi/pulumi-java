@@ -43,12 +43,12 @@ public final class ApplicationMetricDescriptionResponse {
      */
     private final @Nullable Double totalApplicationCapacity;
 
-    @OutputCustomType.Constructor({"maximumCapacity","name","reservationCapacity","totalApplicationCapacity"})
+    @OutputCustomType.Constructor
     private ApplicationMetricDescriptionResponse(
-        @Nullable Double maximumCapacity,
-        @Nullable String name,
-        @Nullable Double reservationCapacity,
-        @Nullable Double totalApplicationCapacity) {
+        @OutputCustomType.Parameter("maximumCapacity") @Nullable Double maximumCapacity,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("reservationCapacity") @Nullable Double reservationCapacity,
+        @OutputCustomType.Parameter("totalApplicationCapacity") @Nullable Double totalApplicationCapacity) {
         this.maximumCapacity = maximumCapacity;
         this.name = name;
         this.reservationCapacity = reservationCapacity;

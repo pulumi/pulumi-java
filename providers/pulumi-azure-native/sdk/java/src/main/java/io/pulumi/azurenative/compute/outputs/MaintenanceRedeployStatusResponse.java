@@ -48,15 +48,15 @@ public final class MaintenanceRedeployStatusResponse {
      */
     private final @Nullable String preMaintenanceWindowStartTime;
 
-    @OutputCustomType.Constructor({"isCustomerInitiatedMaintenanceAllowed","lastOperationMessage","lastOperationResultCode","maintenanceWindowEndTime","maintenanceWindowStartTime","preMaintenanceWindowEndTime","preMaintenanceWindowStartTime"})
+    @OutputCustomType.Constructor
     private MaintenanceRedeployStatusResponse(
-        @Nullable Boolean isCustomerInitiatedMaintenanceAllowed,
-        @Nullable String lastOperationMessage,
-        @Nullable String lastOperationResultCode,
-        @Nullable String maintenanceWindowEndTime,
-        @Nullable String maintenanceWindowStartTime,
-        @Nullable String preMaintenanceWindowEndTime,
-        @Nullable String preMaintenanceWindowStartTime) {
+        @OutputCustomType.Parameter("isCustomerInitiatedMaintenanceAllowed") @Nullable Boolean isCustomerInitiatedMaintenanceAllowed,
+        @OutputCustomType.Parameter("lastOperationMessage") @Nullable String lastOperationMessage,
+        @OutputCustomType.Parameter("lastOperationResultCode") @Nullable String lastOperationResultCode,
+        @OutputCustomType.Parameter("maintenanceWindowEndTime") @Nullable String maintenanceWindowEndTime,
+        @OutputCustomType.Parameter("maintenanceWindowStartTime") @Nullable String maintenanceWindowStartTime,
+        @OutputCustomType.Parameter("preMaintenanceWindowEndTime") @Nullable String preMaintenanceWindowEndTime,
+        @OutputCustomType.Parameter("preMaintenanceWindowStartTime") @Nullable String preMaintenanceWindowStartTime) {
         this.isCustomerInitiatedMaintenanceAllowed = isCustomerInitiatedMaintenanceAllowed;
         this.lastOperationMessage = lastOperationMessage;
         this.lastOperationResultCode = lastOperationResultCode;

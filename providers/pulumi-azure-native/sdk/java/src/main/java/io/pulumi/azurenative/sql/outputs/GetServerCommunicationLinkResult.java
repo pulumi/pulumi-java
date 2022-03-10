@@ -45,15 +45,15 @@ public final class GetServerCommunicationLinkResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"id","kind","location","name","partnerServer","state","type"})
+    @OutputCustomType.Constructor
     private GetServerCommunicationLinkResult(
-        String id,
-        String kind,
-        String location,
-        String name,
-        String partnerServer,
-        String state,
-        String type) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("partnerServer") String partnerServer,
+        @OutputCustomType.Parameter("state") String state,
+        @OutputCustomType.Parameter("type") String type) {
         this.id = id;
         this.kind = kind;
         this.location = location;

@@ -30,10 +30,10 @@ public final class FromAllInputFileResponse {
      */
     private final String odataType;
 
-    @OutputCustomType.Constructor({"includedTracks","odataType"})
+    @OutputCustomType.Constructor
     private FromAllInputFileResponse(
-        @Nullable List<Object> includedTracks,
-        String odataType) {
+        @OutputCustomType.Parameter("includedTracks") @Nullable List<Object> includedTracks,
+        @OutputCustomType.Parameter("odataType") String odataType) {
         this.includedTracks = includedTracks;
         this.odataType = odataType;
     }

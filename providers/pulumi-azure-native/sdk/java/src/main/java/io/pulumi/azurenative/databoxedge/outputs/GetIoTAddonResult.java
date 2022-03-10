@@ -68,19 +68,19 @@ public final class GetIoTAddonResult {
      */
     private final String version;
 
-    @OutputCustomType.Constructor({"hostPlatform","hostPlatformType","id","ioTDeviceDetails","ioTEdgeDeviceDetails","kind","name","provisioningState","systemData","type","version"})
+    @OutputCustomType.Constructor
     private GetIoTAddonResult(
-        String hostPlatform,
-        String hostPlatformType,
-        String id,
-        IoTDeviceInfoResponse ioTDeviceDetails,
-        IoTDeviceInfoResponse ioTEdgeDeviceDetails,
-        String kind,
-        String name,
-        String provisioningState,
-        SystemDataResponse systemData,
-        String type,
-        String version) {
+        @OutputCustomType.Parameter("hostPlatform") String hostPlatform,
+        @OutputCustomType.Parameter("hostPlatformType") String hostPlatformType,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("ioTDeviceDetails") IoTDeviceInfoResponse ioTDeviceDetails,
+        @OutputCustomType.Parameter("ioTEdgeDeviceDetails") IoTDeviceInfoResponse ioTEdgeDeviceDetails,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("version") String version) {
         this.hostPlatform = hostPlatform;
         this.hostPlatformType = hostPlatformType;
         this.id = id;

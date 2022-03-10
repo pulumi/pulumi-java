@@ -60,17 +60,17 @@ public final class GatewayApiRouteResponse {
      */
     private final @Nullable String uri;
 
-    @OutputCustomType.Constructor({"description","filters","order","predicates","ssoEnabled","tags","title","tokenRelay","uri"})
+    @OutputCustomType.Constructor
     private GatewayApiRouteResponse(
-        @Nullable String description,
-        @Nullable List<String> filters,
-        @Nullable Integer order,
-        @Nullable List<String> predicates,
-        @Nullable Boolean ssoEnabled,
-        @Nullable List<String> tags,
-        @Nullable String title,
-        @Nullable Boolean tokenRelay,
-        @Nullable String uri) {
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("filters") @Nullable List<String> filters,
+        @OutputCustomType.Parameter("order") @Nullable Integer order,
+        @OutputCustomType.Parameter("predicates") @Nullable List<String> predicates,
+        @OutputCustomType.Parameter("ssoEnabled") @Nullable Boolean ssoEnabled,
+        @OutputCustomType.Parameter("tags") @Nullable List<String> tags,
+        @OutputCustomType.Parameter("title") @Nullable String title,
+        @OutputCustomType.Parameter("tokenRelay") @Nullable Boolean tokenRelay,
+        @OutputCustomType.Parameter("uri") @Nullable String uri) {
         this.description = description;
         this.filters = filters;
         this.order = order;

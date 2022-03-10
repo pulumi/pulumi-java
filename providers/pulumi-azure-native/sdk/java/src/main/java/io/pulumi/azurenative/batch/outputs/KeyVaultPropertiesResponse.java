@@ -21,8 +21,8 @@ public final class KeyVaultPropertiesResponse {
      */
     private final @Nullable String keyIdentifier;
 
-    @OutputCustomType.Constructor({"keyIdentifier"})
-    private KeyVaultPropertiesResponse(@Nullable String keyIdentifier) {
+    @OutputCustomType.Constructor
+    private KeyVaultPropertiesResponse(@OutputCustomType.Parameter("keyIdentifier") @Nullable String keyIdentifier) {
         this.keyIdentifier = keyIdentifier;
     }
 

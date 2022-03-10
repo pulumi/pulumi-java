@@ -33,12 +33,12 @@ public final class SourceResponse {
      */
     private final @Nullable String queryType;
 
-    @OutputCustomType.Constructor({"authorizedResources","dataSourceId","query","queryType"})
+    @OutputCustomType.Constructor
     private SourceResponse(
-        @Nullable List<String> authorizedResources,
-        String dataSourceId,
-        @Nullable String query,
-        @Nullable String queryType) {
+        @OutputCustomType.Parameter("authorizedResources") @Nullable List<String> authorizedResources,
+        @OutputCustomType.Parameter("dataSourceId") String dataSourceId,
+        @OutputCustomType.Parameter("query") @Nullable String query,
+        @OutputCustomType.Parameter("queryType") @Nullable String queryType) {
         this.authorizedResources = authorizedResources;
         this.dataSourceId = dataSourceId;
         this.query = query;

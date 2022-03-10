@@ -28,11 +28,11 @@ public final class ScheduleEntryResponse {
      */
     private final Integer startHourUtc;
 
-    @OutputCustomType.Constructor({"dayOfWeek","maintenanceWindow","startHourUtc"})
+    @OutputCustomType.Constructor
     private ScheduleEntryResponse(
-        String dayOfWeek,
-        @Nullable String maintenanceWindow,
-        Integer startHourUtc) {
+        @OutputCustomType.Parameter("dayOfWeek") String dayOfWeek,
+        @OutputCustomType.Parameter("maintenanceWindow") @Nullable String maintenanceWindow,
+        @OutputCustomType.Parameter("startHourUtc") Integer startHourUtc) {
         this.dayOfWeek = dayOfWeek;
         this.maintenanceWindow = maintenanceWindow;
         this.startHourUtc = startHourUtc;

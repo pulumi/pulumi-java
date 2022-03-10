@@ -17,8 +17,8 @@ public final class SetupScriptsResponse {
      */
     private final @Nullable ScriptsToExecuteResponse scripts;
 
-    @OutputCustomType.Constructor({"scripts"})
-    private SetupScriptsResponse(@Nullable ScriptsToExecuteResponse scripts) {
+    @OutputCustomType.Constructor
+    private SetupScriptsResponse(@OutputCustomType.Parameter("scripts") @Nullable ScriptsToExecuteResponse scripts) {
         this.scripts = scripts;
     }
 

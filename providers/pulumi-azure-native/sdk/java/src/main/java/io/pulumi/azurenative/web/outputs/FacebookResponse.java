@@ -35,12 +35,12 @@ public final class FacebookResponse {
      */
     private final @Nullable AppRegistrationResponse registration;
 
-    @OutputCustomType.Constructor({"enabled","graphApiVersion","login","registration"})
+    @OutputCustomType.Constructor
     private FacebookResponse(
-        @Nullable Boolean enabled,
-        @Nullable String graphApiVersion,
-        @Nullable LoginScopesResponse login,
-        @Nullable AppRegistrationResponse registration) {
+        @OutputCustomType.Parameter("enabled") @Nullable Boolean enabled,
+        @OutputCustomType.Parameter("graphApiVersion") @Nullable String graphApiVersion,
+        @OutputCustomType.Parameter("login") @Nullable LoginScopesResponse login,
+        @OutputCustomType.Parameter("registration") @Nullable AppRegistrationResponse registration) {
         this.enabled = enabled;
         this.graphApiVersion = graphApiVersion;
         this.login = login;

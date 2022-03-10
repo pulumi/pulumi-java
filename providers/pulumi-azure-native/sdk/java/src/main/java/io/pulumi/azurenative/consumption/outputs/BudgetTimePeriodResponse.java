@@ -22,10 +22,10 @@ public final class BudgetTimePeriodResponse {
      */
     private final String startDate;
 
-    @OutputCustomType.Constructor({"endDate","startDate"})
+    @OutputCustomType.Constructor
     private BudgetTimePeriodResponse(
-        @Nullable String endDate,
-        String startDate) {
+        @OutputCustomType.Parameter("endDate") @Nullable String endDate,
+        @OutputCustomType.Parameter("startDate") String startDate) {
         this.endDate = endDate;
         this.startDate = startDate;
     }

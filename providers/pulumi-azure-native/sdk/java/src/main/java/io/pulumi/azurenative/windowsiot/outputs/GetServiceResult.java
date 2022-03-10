@@ -69,19 +69,19 @@ public final class GetServiceResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"adminDomainName","billingDomainName","etag","id","location","name","notes","quantity","startDate","tags","type"})
+    @OutputCustomType.Constructor
     private GetServiceResult(
-        @Nullable String adminDomainName,
-        @Nullable String billingDomainName,
-        @Nullable String etag,
-        String id,
-        @Nullable String location,
-        String name,
-        @Nullable String notes,
-        @Nullable Double quantity,
-        String startDate,
-        @Nullable Map<String,String> tags,
-        String type) {
+        @OutputCustomType.Parameter("adminDomainName") @Nullable String adminDomainName,
+        @OutputCustomType.Parameter("billingDomainName") @Nullable String billingDomainName,
+        @OutputCustomType.Parameter("etag") @Nullable String etag,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("notes") @Nullable String notes,
+        @OutputCustomType.Parameter("quantity") @Nullable Double quantity,
+        @OutputCustomType.Parameter("startDate") String startDate,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type) {
         this.adminDomainName = adminDomainName;
         this.billingDomainName = billingDomainName;
         this.etag = etag;

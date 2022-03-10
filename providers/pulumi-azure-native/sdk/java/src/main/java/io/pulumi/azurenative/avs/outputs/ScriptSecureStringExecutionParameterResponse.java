@@ -28,11 +28,11 @@ public final class ScriptSecureStringExecutionParameterResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"name","secureValue","type"})
+    @OutputCustomType.Constructor
     private ScriptSecureStringExecutionParameterResponse(
-        String name,
-        @Nullable String secureValue,
-        String type) {
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("secureValue") @Nullable String secureValue,
+        @OutputCustomType.Parameter("type") String type) {
         this.name = name;
         this.secureValue = secureValue;
         this.type = type;

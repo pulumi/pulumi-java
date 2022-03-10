@@ -22,10 +22,10 @@ public final class HttpHostConfigResponse {
      */
     private final List<HttpRouteConfigResponse> routes;
 
-    @OutputCustomType.Constructor({"name","routes"})
+    @OutputCustomType.Constructor
     private HttpHostConfigResponse(
-        String name,
-        List<HttpRouteConfigResponse> routes) {
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("routes") List<HttpRouteConfigResponse> routes) {
         this.name = name;
         this.routes = routes;
     }

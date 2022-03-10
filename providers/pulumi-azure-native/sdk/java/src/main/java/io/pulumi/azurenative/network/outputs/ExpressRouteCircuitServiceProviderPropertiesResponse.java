@@ -28,11 +28,11 @@ public final class ExpressRouteCircuitServiceProviderPropertiesResponse {
      */
     private final @Nullable String serviceProviderName;
 
-    @OutputCustomType.Constructor({"bandwidthInMbps","peeringLocation","serviceProviderName"})
+    @OutputCustomType.Constructor
     private ExpressRouteCircuitServiceProviderPropertiesResponse(
-        @Nullable Integer bandwidthInMbps,
-        @Nullable String peeringLocation,
-        @Nullable String serviceProviderName) {
+        @OutputCustomType.Parameter("bandwidthInMbps") @Nullable Integer bandwidthInMbps,
+        @OutputCustomType.Parameter("peeringLocation") @Nullable String peeringLocation,
+        @OutputCustomType.Parameter("serviceProviderName") @Nullable String serviceProviderName) {
         this.bandwidthInMbps = bandwidthInMbps;
         this.peeringLocation = peeringLocation;
         this.serviceProviderName = serviceProviderName;

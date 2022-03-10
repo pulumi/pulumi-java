@@ -89,22 +89,22 @@ public final class GetWebApplicationFirewallPolicyResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"applicationGateways","customRules","etag","httpListeners","id","location","managedRules","name","pathBasedRules","policySettings","provisioningState","resourceState","tags","type"})
+    @OutputCustomType.Constructor
     private GetWebApplicationFirewallPolicyResult(
-        List<ApplicationGatewayResponse> applicationGateways,
-        @Nullable List<WebApplicationFirewallCustomRuleResponse> customRules,
-        String etag,
-        List<SubResourceResponse> httpListeners,
-        @Nullable String id,
-        @Nullable String location,
-        ManagedRulesDefinitionResponse managedRules,
-        String name,
-        List<SubResourceResponse> pathBasedRules,
-        @Nullable PolicySettingsResponse policySettings,
-        String provisioningState,
-        String resourceState,
-        @Nullable Map<String,String> tags,
-        String type) {
+        @OutputCustomType.Parameter("applicationGateways") List<ApplicationGatewayResponse> applicationGateways,
+        @OutputCustomType.Parameter("customRules") @Nullable List<WebApplicationFirewallCustomRuleResponse> customRules,
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("httpListeners") List<SubResourceResponse> httpListeners,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("managedRules") ManagedRulesDefinitionResponse managedRules,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("pathBasedRules") List<SubResourceResponse> pathBasedRules,
+        @OutputCustomType.Parameter("policySettings") @Nullable PolicySettingsResponse policySettings,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("resourceState") String resourceState,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type) {
         this.applicationGateways = applicationGateways;
         this.customRules = customRules;
         this.etag = etag;

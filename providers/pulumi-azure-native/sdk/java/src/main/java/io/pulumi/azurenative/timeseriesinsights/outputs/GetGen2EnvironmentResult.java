@@ -95,23 +95,23 @@ public final class GetGen2EnvironmentResult {
      */
     private final @Nullable WarmStoreConfigurationPropertiesResponse warmStoreConfiguration;
 
-    @OutputCustomType.Constructor({"creationTime","dataAccessFqdn","dataAccessId","id","kind","location","name","provisioningState","sku","status","storageConfiguration","tags","timeSeriesIdProperties","type","warmStoreConfiguration"})
+    @OutputCustomType.Constructor
     private GetGen2EnvironmentResult(
-        String creationTime,
-        String dataAccessFqdn,
-        String dataAccessId,
-        String id,
-        String kind,
-        String location,
-        String name,
-        String provisioningState,
-        SkuResponse sku,
-        EnvironmentStatusResponse status,
-        Gen2StorageConfigurationOutputResponse storageConfiguration,
-        @Nullable Map<String,String> tags,
-        List<TimeSeriesIdPropertyResponse> timeSeriesIdProperties,
-        String type,
-        @Nullable WarmStoreConfigurationPropertiesResponse warmStoreConfiguration) {
+        @OutputCustomType.Parameter("creationTime") String creationTime,
+        @OutputCustomType.Parameter("dataAccessFqdn") String dataAccessFqdn,
+        @OutputCustomType.Parameter("dataAccessId") String dataAccessId,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("sku") SkuResponse sku,
+        @OutputCustomType.Parameter("status") EnvironmentStatusResponse status,
+        @OutputCustomType.Parameter("storageConfiguration") Gen2StorageConfigurationOutputResponse storageConfiguration,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("timeSeriesIdProperties") List<TimeSeriesIdPropertyResponse> timeSeriesIdProperties,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("warmStoreConfiguration") @Nullable WarmStoreConfigurationPropertiesResponse warmStoreConfiguration) {
         this.creationTime = creationTime;
         this.dataAccessFqdn = dataAccessFqdn;
         this.dataAccessId = dataAccessId;

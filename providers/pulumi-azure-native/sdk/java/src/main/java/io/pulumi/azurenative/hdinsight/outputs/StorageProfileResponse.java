@@ -17,8 +17,8 @@ public final class StorageProfileResponse {
      */
     private final @Nullable List<StorageAccountResponse> storageaccounts;
 
-    @OutputCustomType.Constructor({"storageaccounts"})
-    private StorageProfileResponse(@Nullable List<StorageAccountResponse> storageaccounts) {
+    @OutputCustomType.Constructor
+    private StorageProfileResponse(@OutputCustomType.Parameter("storageaccounts") @Nullable List<StorageAccountResponse> storageaccounts) {
         this.storageaccounts = storageaccounts;
     }
 

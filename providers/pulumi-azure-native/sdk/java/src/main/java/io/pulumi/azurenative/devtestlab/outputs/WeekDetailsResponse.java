@@ -23,10 +23,10 @@ public final class WeekDetailsResponse {
      */
     private final @Nullable List<String> weekdays;
 
-    @OutputCustomType.Constructor({"time","weekdays"})
+    @OutputCustomType.Constructor
     private WeekDetailsResponse(
-        @Nullable String time,
-        @Nullable List<String> weekdays) {
+        @OutputCustomType.Parameter("time") @Nullable String time,
+        @OutputCustomType.Parameter("weekdays") @Nullable List<String> weekdays) {
         this.time = time;
         this.weekdays = weekdays;
     }

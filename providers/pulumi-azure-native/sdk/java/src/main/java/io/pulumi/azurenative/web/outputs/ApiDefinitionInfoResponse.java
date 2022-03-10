@@ -17,8 +17,8 @@ public final class ApiDefinitionInfoResponse {
      */
     private final @Nullable String url;
 
-    @OutputCustomType.Constructor({"url"})
-    private ApiDefinitionInfoResponse(@Nullable String url) {
+    @OutputCustomType.Constructor
+    private ApiDefinitionInfoResponse(@OutputCustomType.Parameter("url") @Nullable String url) {
         this.url = url;
     }
 

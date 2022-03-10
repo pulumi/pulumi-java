@@ -17,8 +17,8 @@ public final class LBBackendAddressPoolResourceSettingsResponse {
      */
     private final @Nullable String name;
 
-    @OutputCustomType.Constructor({"name"})
-    private LBBackendAddressPoolResourceSettingsResponse(@Nullable String name) {
+    @OutputCustomType.Constructor
+    private LBBackendAddressPoolResourceSettingsResponse(@OutputCustomType.Parameter("name") @Nullable String name) {
         this.name = name;
     }
 

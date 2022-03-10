@@ -34,13 +34,13 @@ public final class GetResourceManagementPrivateLinkResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"id","location","name","properties","type"})
+    @OutputCustomType.Constructor
     private GetResourceManagementPrivateLinkResult(
-        String id,
-        @Nullable String location,
-        String name,
-        ResourceManagementPrivateLinkEndpointConnectionsResponse properties,
-        String type) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("properties") ResourceManagementPrivateLinkEndpointConnectionsResponse properties,
+        @OutputCustomType.Parameter("type") String type) {
         this.id = id;
         this.location = location;
         this.name = name;

@@ -27,11 +27,11 @@ public final class AzureFileFilterDetailsResponse {
      */
     private final @Nullable List<String> fileShareList;
 
-    @OutputCustomType.Constructor({"filePathList","filePrefixList","fileShareList"})
+    @OutputCustomType.Constructor
     private AzureFileFilterDetailsResponse(
-        @Nullable List<String> filePathList,
-        @Nullable List<String> filePrefixList,
-        @Nullable List<String> fileShareList) {
+        @OutputCustomType.Parameter("filePathList") @Nullable List<String> filePathList,
+        @OutputCustomType.Parameter("filePrefixList") @Nullable List<String> filePrefixList,
+        @OutputCustomType.Parameter("fileShareList") @Nullable List<String> fileShareList) {
         this.filePathList = filePathList;
         this.filePrefixList = filePrefixList;
         this.fileShareList = fileShareList;

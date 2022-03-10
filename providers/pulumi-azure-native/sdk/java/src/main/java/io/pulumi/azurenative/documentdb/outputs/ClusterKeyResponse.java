@@ -22,10 +22,10 @@ public final class ClusterKeyResponse {
      */
     private final @Nullable String orderBy;
 
-    @OutputCustomType.Constructor({"name","orderBy"})
+    @OutputCustomType.Constructor
     private ClusterKeyResponse(
-        @Nullable String name,
-        @Nullable String orderBy) {
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("orderBy") @Nullable String orderBy) {
         this.name = name;
         this.orderBy = orderBy;
     }

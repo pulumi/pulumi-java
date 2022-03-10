@@ -33,12 +33,12 @@ public final class PngLayerResponse {
      */
     private final @Nullable String width;
 
-    @OutputCustomType.Constructor({"height","label","odataType","width"})
+    @OutputCustomType.Constructor
     private PngLayerResponse(
-        @Nullable String height,
-        @Nullable String label,
-        String odataType,
-        @Nullable String width) {
+        @OutputCustomType.Parameter("height") @Nullable String height,
+        @OutputCustomType.Parameter("label") @Nullable String label,
+        @OutputCustomType.Parameter("odataType") String odataType,
+        @OutputCustomType.Parameter("width") @Nullable String width) {
         this.height = height;
         this.label = label;
         this.odataType = odataType;

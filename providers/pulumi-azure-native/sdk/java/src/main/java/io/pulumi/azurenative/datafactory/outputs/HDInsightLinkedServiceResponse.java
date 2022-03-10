@@ -87,21 +87,21 @@ public final class HDInsightLinkedServiceResponse {
      */
     private final @Nullable Object userName;
 
-    @OutputCustomType.Constructor({"annotations","clusterUri","connectVia","description","encryptedCredential","fileSystem","hcatalogLinkedServiceName","isEspEnabled","linkedServiceName","parameters","password","type","userName"})
+    @OutputCustomType.Constructor
     private HDInsightLinkedServiceResponse(
-        @Nullable List<Object> annotations,
-        Object clusterUri,
-        @Nullable IntegrationRuntimeReferenceResponse connectVia,
-        @Nullable String description,
-        @Nullable Object encryptedCredential,
-        @Nullable Object fileSystem,
-        @Nullable LinkedServiceReferenceResponse hcatalogLinkedServiceName,
-        @Nullable Object isEspEnabled,
-        @Nullable LinkedServiceReferenceResponse linkedServiceName,
-        @Nullable Map<String,ParameterSpecificationResponse> parameters,
-        @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password,
-        String type,
-        @Nullable Object userName) {
+        @OutputCustomType.Parameter("annotations") @Nullable List<Object> annotations,
+        @OutputCustomType.Parameter("clusterUri") Object clusterUri,
+        @OutputCustomType.Parameter("connectVia") @Nullable IntegrationRuntimeReferenceResponse connectVia,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("encryptedCredential") @Nullable Object encryptedCredential,
+        @OutputCustomType.Parameter("fileSystem") @Nullable Object fileSystem,
+        @OutputCustomType.Parameter("hcatalogLinkedServiceName") @Nullable LinkedServiceReferenceResponse hcatalogLinkedServiceName,
+        @OutputCustomType.Parameter("isEspEnabled") @Nullable Object isEspEnabled,
+        @OutputCustomType.Parameter("linkedServiceName") @Nullable LinkedServiceReferenceResponse linkedServiceName,
+        @OutputCustomType.Parameter("parameters") @Nullable Map<String,ParameterSpecificationResponse> parameters,
+        @OutputCustomType.Parameter("password") @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("userName") @Nullable Object userName) {
         this.annotations = annotations;
         this.clusterUri = clusterUri;
         this.connectVia = connectVia;

@@ -44,14 +44,14 @@ public final class ResourceSettingsResponse {
      */
     private final @Nullable String size;
 
-    @OutputCustomType.Constructor({"cores","galleryImageResourceId","id","imageName","referenceVm","size"})
+    @OutputCustomType.Constructor
     private ResourceSettingsResponse(
-        Integer cores,
-        @Nullable String galleryImageResourceId,
-        String id,
-        String imageName,
-        ReferenceVmResponse referenceVm,
-        @Nullable String size) {
+        @OutputCustomType.Parameter("cores") Integer cores,
+        @OutputCustomType.Parameter("galleryImageResourceId") @Nullable String galleryImageResourceId,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("imageName") String imageName,
+        @OutputCustomType.Parameter("referenceVm") ReferenceVmResponse referenceVm,
+        @OutputCustomType.Parameter("size") @Nullable String size) {
         this.cores = cores;
         this.galleryImageResourceId = galleryImageResourceId;
         this.id = id;

@@ -23,10 +23,10 @@ public final class PrivateEndpointPropertiesResponse {
      */
     private final @Nullable List<PrivateLinkServiceConnectionResponse> manualPrivateLinkServiceConnections;
 
-    @OutputCustomType.Constructor({"createdDate","manualPrivateLinkServiceConnections"})
+    @OutputCustomType.Constructor
     private PrivateEndpointPropertiesResponse(
-        String createdDate,
-        @Nullable List<PrivateLinkServiceConnectionResponse> manualPrivateLinkServiceConnections) {
+        @OutputCustomType.Parameter("createdDate") String createdDate,
+        @OutputCustomType.Parameter("manualPrivateLinkServiceConnections") @Nullable List<PrivateLinkServiceConnectionResponse> manualPrivateLinkServiceConnections) {
         this.createdDate = createdDate;
         this.manualPrivateLinkServiceConnections = manualPrivateLinkServiceConnections;
     }

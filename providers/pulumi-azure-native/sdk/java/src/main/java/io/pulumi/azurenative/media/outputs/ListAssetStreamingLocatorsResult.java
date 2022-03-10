@@ -16,8 +16,8 @@ public final class ListAssetStreamingLocatorsResult {
      */
     private final List<AssetStreamingLocatorResponse> streamingLocators;
 
-    @OutputCustomType.Constructor({"streamingLocators"})
-    private ListAssetStreamingLocatorsResult(List<AssetStreamingLocatorResponse> streamingLocators) {
+    @OutputCustomType.Constructor
+    private ListAssetStreamingLocatorsResult(@OutputCustomType.Parameter("streamingLocators") List<AssetStreamingLocatorResponse> streamingLocators) {
         this.streamingLocators = streamingLocators;
     }
 

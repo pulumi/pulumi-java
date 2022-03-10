@@ -97,24 +97,24 @@ public final class PropertyDefinitionResponse {
      */
     private final @Nullable String schemaItemPropLink;
 
-    @OutputCustomType.Constructor({"arrayValueSeparator","dataSourcePrecedenceRules","enumValidValues","fieldName","fieldType","isArray","isAvailableInGraph","isEnum","isFlagEnum","isImage","isLocalizedString","isName","isRequired","maxLength","propertyId","schemaItemPropLink"})
+    @OutputCustomType.Constructor
     private PropertyDefinitionResponse(
-        @Nullable String arrayValueSeparator,
-        List<DataSourcePrecedenceResponse> dataSourcePrecedenceRules,
-        @Nullable List<ProfileEnumValidValuesFormatResponse> enumValidValues,
-        String fieldName,
-        String fieldType,
-        @Nullable Boolean isArray,
-        @Nullable Boolean isAvailableInGraph,
-        @Nullable Boolean isEnum,
-        @Nullable Boolean isFlagEnum,
-        @Nullable Boolean isImage,
-        @Nullable Boolean isLocalizedString,
-        @Nullable Boolean isName,
-        @Nullable Boolean isRequired,
-        @Nullable Integer maxLength,
-        @Nullable String propertyId,
-        @Nullable String schemaItemPropLink) {
+        @OutputCustomType.Parameter("arrayValueSeparator") @Nullable String arrayValueSeparator,
+        @OutputCustomType.Parameter("dataSourcePrecedenceRules") List<DataSourcePrecedenceResponse> dataSourcePrecedenceRules,
+        @OutputCustomType.Parameter("enumValidValues") @Nullable List<ProfileEnumValidValuesFormatResponse> enumValidValues,
+        @OutputCustomType.Parameter("fieldName") String fieldName,
+        @OutputCustomType.Parameter("fieldType") String fieldType,
+        @OutputCustomType.Parameter("isArray") @Nullable Boolean isArray,
+        @OutputCustomType.Parameter("isAvailableInGraph") @Nullable Boolean isAvailableInGraph,
+        @OutputCustomType.Parameter("isEnum") @Nullable Boolean isEnum,
+        @OutputCustomType.Parameter("isFlagEnum") @Nullable Boolean isFlagEnum,
+        @OutputCustomType.Parameter("isImage") @Nullable Boolean isImage,
+        @OutputCustomType.Parameter("isLocalizedString") @Nullable Boolean isLocalizedString,
+        @OutputCustomType.Parameter("isName") @Nullable Boolean isName,
+        @OutputCustomType.Parameter("isRequired") @Nullable Boolean isRequired,
+        @OutputCustomType.Parameter("maxLength") @Nullable Integer maxLength,
+        @OutputCustomType.Parameter("propertyId") @Nullable String propertyId,
+        @OutputCustomType.Parameter("schemaItemPropLink") @Nullable String schemaItemPropLink) {
         this.arrayValueSeparator = arrayValueSeparator;
         this.dataSourcePrecedenceRules = dataSourcePrecedenceRules;
         this.enumValidValues = enumValidValues;

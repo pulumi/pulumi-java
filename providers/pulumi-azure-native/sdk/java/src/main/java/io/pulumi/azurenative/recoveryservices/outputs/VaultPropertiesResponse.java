@@ -46,14 +46,14 @@ public final class VaultPropertiesResponse {
      */
     private final @Nullable UpgradeDetailsResponse upgradeDetails;
 
-    @OutputCustomType.Constructor({"encryption","privateEndpointConnections","privateEndpointStateForBackup","privateEndpointStateForSiteRecovery","provisioningState","upgradeDetails"})
+    @OutputCustomType.Constructor
     private VaultPropertiesResponse(
-        @Nullable VaultPropertiesResponseEncryption encryption,
-        List<PrivateEndpointConnectionVaultPropertiesResponse> privateEndpointConnections,
-        String privateEndpointStateForBackup,
-        String privateEndpointStateForSiteRecovery,
-        String provisioningState,
-        @Nullable UpgradeDetailsResponse upgradeDetails) {
+        @OutputCustomType.Parameter("encryption") @Nullable VaultPropertiesResponseEncryption encryption,
+        @OutputCustomType.Parameter("privateEndpointConnections") List<PrivateEndpointConnectionVaultPropertiesResponse> privateEndpointConnections,
+        @OutputCustomType.Parameter("privateEndpointStateForBackup") String privateEndpointStateForBackup,
+        @OutputCustomType.Parameter("privateEndpointStateForSiteRecovery") String privateEndpointStateForSiteRecovery,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("upgradeDetails") @Nullable UpgradeDetailsResponse upgradeDetails) {
         this.encryption = encryption;
         this.privateEndpointConnections = privateEndpointConnections;
         this.privateEndpointStateForBackup = privateEndpointStateForBackup;

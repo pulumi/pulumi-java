@@ -17,8 +17,8 @@ public final class FirewallPolicyTransportSecurityResponse {
      */
     private final @Nullable FirewallPolicyCertificateAuthorityResponse certificateAuthority;
 
-    @OutputCustomType.Constructor({"certificateAuthority"})
-    private FirewallPolicyTransportSecurityResponse(@Nullable FirewallPolicyCertificateAuthorityResponse certificateAuthority) {
+    @OutputCustomType.Constructor
+    private FirewallPolicyTransportSecurityResponse(@OutputCustomType.Parameter("certificateAuthority") @Nullable FirewallPolicyCertificateAuthorityResponse certificateAuthority) {
         this.certificateAuthority = certificateAuthority;
     }
 

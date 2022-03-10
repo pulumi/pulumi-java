@@ -47,14 +47,14 @@ public final class XmlReadSettingsResponse {
      */
     private final @Nullable Object validationMode;
 
-    @OutputCustomType.Constructor({"compressionProperties","detectDataType","namespacePrefixes","namespaces","type","validationMode"})
+    @OutputCustomType.Constructor
     private XmlReadSettingsResponse(
-        @Nullable Object compressionProperties,
-        @Nullable Object detectDataType,
-        @Nullable Object namespacePrefixes,
-        @Nullable Object namespaces,
-        String type,
-        @Nullable Object validationMode) {
+        @OutputCustomType.Parameter("compressionProperties") @Nullable Object compressionProperties,
+        @OutputCustomType.Parameter("detectDataType") @Nullable Object detectDataType,
+        @OutputCustomType.Parameter("namespacePrefixes") @Nullable Object namespacePrefixes,
+        @OutputCustomType.Parameter("namespaces") @Nullable Object namespaces,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("validationMode") @Nullable Object validationMode) {
         this.compressionProperties = compressionProperties;
         this.detectDataType = detectDataType;
         this.namespacePrefixes = namespacePrefixes;

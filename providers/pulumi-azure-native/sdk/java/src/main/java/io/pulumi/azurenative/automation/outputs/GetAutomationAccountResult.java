@@ -115,27 +115,27 @@ public final class GetAutomationAccountResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"automationHybridServiceUrl","creationTime","description","disableLocalAuth","encryption","etag","id","identity","lastModifiedBy","lastModifiedTime","location","name","privateEndpointConnections","publicNetworkAccess","sku","state","systemData","tags","type"})
+    @OutputCustomType.Constructor
     private GetAutomationAccountResult(
-        @Nullable String automationHybridServiceUrl,
-        String creationTime,
-        @Nullable String description,
-        @Nullable Boolean disableLocalAuth,
-        @Nullable EncryptionPropertiesResponse encryption,
-        @Nullable String etag,
-        String id,
-        @Nullable IdentityResponse identity,
-        @Nullable String lastModifiedBy,
-        String lastModifiedTime,
-        @Nullable String location,
-        String name,
-        @Nullable List<PrivateEndpointConnectionResponse> privateEndpointConnections,
-        @Nullable Boolean publicNetworkAccess,
-        @Nullable SkuResponse sku,
-        String state,
-        SystemDataResponse systemData,
-        @Nullable Map<String,String> tags,
-        String type) {
+        @OutputCustomType.Parameter("automationHybridServiceUrl") @Nullable String automationHybridServiceUrl,
+        @OutputCustomType.Parameter("creationTime") String creationTime,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("disableLocalAuth") @Nullable Boolean disableLocalAuth,
+        @OutputCustomType.Parameter("encryption") @Nullable EncryptionPropertiesResponse encryption,
+        @OutputCustomType.Parameter("etag") @Nullable String etag,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("identity") @Nullable IdentityResponse identity,
+        @OutputCustomType.Parameter("lastModifiedBy") @Nullable String lastModifiedBy,
+        @OutputCustomType.Parameter("lastModifiedTime") String lastModifiedTime,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("privateEndpointConnections") @Nullable List<PrivateEndpointConnectionResponse> privateEndpointConnections,
+        @OutputCustomType.Parameter("publicNetworkAccess") @Nullable Boolean publicNetworkAccess,
+        @OutputCustomType.Parameter("sku") @Nullable SkuResponse sku,
+        @OutputCustomType.Parameter("state") String state,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type) {
         this.automationHybridServiceUrl = automationHybridServiceUrl;
         this.creationTime = creationTime;
         this.description = description;

@@ -89,22 +89,22 @@ public final class GetLabPlanResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"allowedRegions","defaultAutoShutdownProfile","defaultConnectionProfile","defaultNetworkProfile","id","linkedLmsInstance","location","name","provisioningState","sharedGalleryId","supportInfo","systemData","tags","type"})
+    @OutputCustomType.Constructor
     private GetLabPlanResult(
-        @Nullable List<String> allowedRegions,
-        @Nullable AutoShutdownProfileResponse defaultAutoShutdownProfile,
-        @Nullable ConnectionProfileResponse defaultConnectionProfile,
-        @Nullable LabPlanNetworkProfileResponse defaultNetworkProfile,
-        String id,
-        @Nullable String linkedLmsInstance,
-        String location,
-        String name,
-        String provisioningState,
-        @Nullable String sharedGalleryId,
-        @Nullable SupportInfoResponse supportInfo,
-        SystemDataResponse systemData,
-        @Nullable Map<String,String> tags,
-        String type) {
+        @OutputCustomType.Parameter("allowedRegions") @Nullable List<String> allowedRegions,
+        @OutputCustomType.Parameter("defaultAutoShutdownProfile") @Nullable AutoShutdownProfileResponse defaultAutoShutdownProfile,
+        @OutputCustomType.Parameter("defaultConnectionProfile") @Nullable ConnectionProfileResponse defaultConnectionProfile,
+        @OutputCustomType.Parameter("defaultNetworkProfile") @Nullable LabPlanNetworkProfileResponse defaultNetworkProfile,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("linkedLmsInstance") @Nullable String linkedLmsInstance,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("sharedGalleryId") @Nullable String sharedGalleryId,
+        @OutputCustomType.Parameter("supportInfo") @Nullable SupportInfoResponse supportInfo,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type) {
         this.allowedRegions = allowedRegions;
         this.defaultAutoShutdownProfile = defaultAutoShutdownProfile;
         this.defaultConnectionProfile = defaultConnectionProfile;

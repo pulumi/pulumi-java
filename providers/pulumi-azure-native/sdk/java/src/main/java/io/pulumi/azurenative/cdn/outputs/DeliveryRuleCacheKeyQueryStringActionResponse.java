@@ -22,10 +22,10 @@ public final class DeliveryRuleCacheKeyQueryStringActionResponse {
      */
     private final CacheKeyQueryStringActionParametersResponse parameters;
 
-    @OutputCustomType.Constructor({"name","parameters"})
+    @OutputCustomType.Constructor
     private DeliveryRuleCacheKeyQueryStringActionResponse(
-        String name,
-        CacheKeyQueryStringActionParametersResponse parameters) {
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("parameters") CacheKeyQueryStringActionParametersResponse parameters) {
         this.name = name;
         this.parameters = parameters;
     }

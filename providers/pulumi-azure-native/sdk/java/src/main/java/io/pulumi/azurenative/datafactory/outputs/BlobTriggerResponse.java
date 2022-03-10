@@ -58,16 +58,16 @@ public final class BlobTriggerResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"annotations","description","folderPath","linkedService","maxConcurrency","pipelines","runtimeState","type"})
+    @OutputCustomType.Constructor
     private BlobTriggerResponse(
-        @Nullable List<Object> annotations,
-        @Nullable String description,
-        String folderPath,
-        LinkedServiceReferenceResponse linkedService,
-        Integer maxConcurrency,
-        @Nullable List<TriggerPipelineReferenceResponse> pipelines,
-        String runtimeState,
-        String type) {
+        @OutputCustomType.Parameter("annotations") @Nullable List<Object> annotations,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("folderPath") String folderPath,
+        @OutputCustomType.Parameter("linkedService") LinkedServiceReferenceResponse linkedService,
+        @OutputCustomType.Parameter("maxConcurrency") Integer maxConcurrency,
+        @OutputCustomType.Parameter("pipelines") @Nullable List<TriggerPipelineReferenceResponse> pipelines,
+        @OutputCustomType.Parameter("runtimeState") String runtimeState,
+        @OutputCustomType.Parameter("type") String type) {
         this.annotations = annotations;
         this.description = description;
         this.folderPath = folderPath;

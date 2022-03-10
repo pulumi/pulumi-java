@@ -22,10 +22,10 @@ public final class HelmOperatorPropertiesResponse {
      */
     private final @Nullable String chartVersion;
 
-    @OutputCustomType.Constructor({"chartValues","chartVersion"})
+    @OutputCustomType.Constructor
     private HelmOperatorPropertiesResponse(
-        @Nullable String chartValues,
-        @Nullable String chartVersion) {
+        @OutputCustomType.Parameter("chartValues") @Nullable String chartValues,
+        @OutputCustomType.Parameter("chartVersion") @Nullable String chartVersion) {
         this.chartValues = chartValues;
         this.chartVersion = chartVersion;
     }

@@ -131,30 +131,30 @@ public final class GetVpnConnectionResult {
      */
     private final @Nullable List<VpnSiteLinkConnectionResponse> vpnLinkConnections;
 
-    @OutputCustomType.Constructor({"connectionBandwidth","connectionStatus","dpdTimeoutSeconds","egressBytesTransferred","enableBgp","enableInternetSecurity","enableRateLimiting","etag","id","ingressBytesTransferred","ipsecPolicies","name","provisioningState","remoteVpnSite","routingConfiguration","routingWeight","sharedKey","trafficSelectorPolicies","useLocalAzureIpAddress","usePolicyBasedTrafficSelectors","vpnConnectionProtocolType","vpnLinkConnections"})
+    @OutputCustomType.Constructor
     private GetVpnConnectionResult(
-        @Nullable Integer connectionBandwidth,
-        String connectionStatus,
-        @Nullable Integer dpdTimeoutSeconds,
-        Double egressBytesTransferred,
-        @Nullable Boolean enableBgp,
-        @Nullable Boolean enableInternetSecurity,
-        @Nullable Boolean enableRateLimiting,
-        String etag,
-        @Nullable String id,
-        Double ingressBytesTransferred,
-        @Nullable List<IpsecPolicyResponse> ipsecPolicies,
-        @Nullable String name,
-        String provisioningState,
-        @Nullable SubResourceResponse remoteVpnSite,
-        @Nullable RoutingConfigurationResponse routingConfiguration,
-        @Nullable Integer routingWeight,
-        @Nullable String sharedKey,
-        @Nullable List<TrafficSelectorPolicyResponse> trafficSelectorPolicies,
-        @Nullable Boolean useLocalAzureIpAddress,
-        @Nullable Boolean usePolicyBasedTrafficSelectors,
-        @Nullable String vpnConnectionProtocolType,
-        @Nullable List<VpnSiteLinkConnectionResponse> vpnLinkConnections) {
+        @OutputCustomType.Parameter("connectionBandwidth") @Nullable Integer connectionBandwidth,
+        @OutputCustomType.Parameter("connectionStatus") String connectionStatus,
+        @OutputCustomType.Parameter("dpdTimeoutSeconds") @Nullable Integer dpdTimeoutSeconds,
+        @OutputCustomType.Parameter("egressBytesTransferred") Double egressBytesTransferred,
+        @OutputCustomType.Parameter("enableBgp") @Nullable Boolean enableBgp,
+        @OutputCustomType.Parameter("enableInternetSecurity") @Nullable Boolean enableInternetSecurity,
+        @OutputCustomType.Parameter("enableRateLimiting") @Nullable Boolean enableRateLimiting,
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("ingressBytesTransferred") Double ingressBytesTransferred,
+        @OutputCustomType.Parameter("ipsecPolicies") @Nullable List<IpsecPolicyResponse> ipsecPolicies,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("remoteVpnSite") @Nullable SubResourceResponse remoteVpnSite,
+        @OutputCustomType.Parameter("routingConfiguration") @Nullable RoutingConfigurationResponse routingConfiguration,
+        @OutputCustomType.Parameter("routingWeight") @Nullable Integer routingWeight,
+        @OutputCustomType.Parameter("sharedKey") @Nullable String sharedKey,
+        @OutputCustomType.Parameter("trafficSelectorPolicies") @Nullable List<TrafficSelectorPolicyResponse> trafficSelectorPolicies,
+        @OutputCustomType.Parameter("useLocalAzureIpAddress") @Nullable Boolean useLocalAzureIpAddress,
+        @OutputCustomType.Parameter("usePolicyBasedTrafficSelectors") @Nullable Boolean usePolicyBasedTrafficSelectors,
+        @OutputCustomType.Parameter("vpnConnectionProtocolType") @Nullable String vpnConnectionProtocolType,
+        @OutputCustomType.Parameter("vpnLinkConnections") @Nullable List<VpnSiteLinkConnectionResponse> vpnLinkConnections) {
         this.connectionBandwidth = connectionBandwidth;
         this.connectionStatus = connectionStatus;
         this.dpdTimeoutSeconds = dpdTimeoutSeconds;

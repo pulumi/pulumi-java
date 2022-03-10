@@ -57,17 +57,17 @@ public final class ShippingInformationResponse {
      */
     private final @Nullable String streetAddress2;
 
-    @OutputCustomType.Constructor({"additionalInformation","city","countryOrRegion","phone","postalCode","recipientName","stateOrProvince","streetAddress1","streetAddress2"})
+    @OutputCustomType.Constructor
     private ShippingInformationResponse(
-        String additionalInformation,
-        @Nullable String city,
-        @Nullable String countryOrRegion,
-        @Nullable String phone,
-        @Nullable String postalCode,
-        @Nullable String recipientName,
-        @Nullable String stateOrProvince,
-        @Nullable String streetAddress1,
-        @Nullable String streetAddress2) {
+        @OutputCustomType.Parameter("additionalInformation") String additionalInformation,
+        @OutputCustomType.Parameter("city") @Nullable String city,
+        @OutputCustomType.Parameter("countryOrRegion") @Nullable String countryOrRegion,
+        @OutputCustomType.Parameter("phone") @Nullable String phone,
+        @OutputCustomType.Parameter("postalCode") @Nullable String postalCode,
+        @OutputCustomType.Parameter("recipientName") @Nullable String recipientName,
+        @OutputCustomType.Parameter("stateOrProvince") @Nullable String stateOrProvince,
+        @OutputCustomType.Parameter("streetAddress1") @Nullable String streetAddress1,
+        @OutputCustomType.Parameter("streetAddress2") @Nullable String streetAddress2) {
         this.additionalInformation = additionalInformation;
         this.city = city;
         this.countryOrRegion = countryOrRegion;

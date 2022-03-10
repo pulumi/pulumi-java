@@ -22,10 +22,10 @@ public final class SettingsSectionDescriptionResponse {
      */
     private final List<SettingsParameterDescriptionResponse> parameters;
 
-    @OutputCustomType.Constructor({"name","parameters"})
+    @OutputCustomType.Constructor
     private SettingsSectionDescriptionResponse(
-        String name,
-        List<SettingsParameterDescriptionResponse> parameters) {
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("parameters") List<SettingsParameterDescriptionResponse> parameters) {
         this.name = name;
         this.parameters = parameters;
     }

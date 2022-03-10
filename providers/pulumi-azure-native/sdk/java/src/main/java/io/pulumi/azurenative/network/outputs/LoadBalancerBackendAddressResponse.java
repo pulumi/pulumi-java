@@ -43,14 +43,14 @@ public final class LoadBalancerBackendAddressResponse {
      */
     private final @Nullable SubResourceResponse virtualNetwork;
 
-    @OutputCustomType.Constructor({"ipAddress","loadBalancerFrontendIPConfiguration","name","networkInterfaceIPConfiguration","subnet","virtualNetwork"})
+    @OutputCustomType.Constructor
     private LoadBalancerBackendAddressResponse(
-        @Nullable String ipAddress,
-        @Nullable SubResourceResponse loadBalancerFrontendIPConfiguration,
-        @Nullable String name,
-        SubResourceResponse networkInterfaceIPConfiguration,
-        @Nullable SubResourceResponse subnet,
-        @Nullable SubResourceResponse virtualNetwork) {
+        @OutputCustomType.Parameter("ipAddress") @Nullable String ipAddress,
+        @OutputCustomType.Parameter("loadBalancerFrontendIPConfiguration") @Nullable SubResourceResponse loadBalancerFrontendIPConfiguration,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("networkInterfaceIPConfiguration") SubResourceResponse networkInterfaceIPConfiguration,
+        @OutputCustomType.Parameter("subnet") @Nullable SubResourceResponse subnet,
+        @OutputCustomType.Parameter("virtualNetwork") @Nullable SubResourceResponse virtualNetwork) {
         this.ipAddress = ipAddress;
         this.loadBalancerFrontendIPConfiguration = loadBalancerFrontendIPConfiguration;
         this.name = name;

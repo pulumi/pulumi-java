@@ -28,10 +28,10 @@ public final class JobInputsResponse {
      */
     private final String odataType;
 
-    @OutputCustomType.Constructor({"inputs","odataType"})
+    @OutputCustomType.Constructor
     private JobInputsResponse(
-        @Nullable List<Object> inputs,
-        String odataType) {
+        @OutputCustomType.Parameter("inputs") @Nullable List<Object> inputs,
+        @OutputCustomType.Parameter("odataType") String odataType) {
         this.inputs = inputs;
         this.odataType = odataType;
     }

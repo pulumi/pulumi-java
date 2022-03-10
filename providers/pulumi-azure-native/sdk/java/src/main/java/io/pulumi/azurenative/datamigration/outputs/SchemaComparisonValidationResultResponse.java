@@ -35,12 +35,12 @@ public final class SchemaComparisonValidationResultResponse {
      */
     private final ValidationErrorResponse validationErrors;
 
-    @OutputCustomType.Constructor({"schemaDifferences","sourceDatabaseObjectCount","targetDatabaseObjectCount","validationErrors"})
+    @OutputCustomType.Constructor
     private SchemaComparisonValidationResultResponse(
-        SchemaComparisonValidationResultTypeResponse schemaDifferences,
-        @Nullable Map<String,Double> sourceDatabaseObjectCount,
-        @Nullable Map<String,Double> targetDatabaseObjectCount,
-        ValidationErrorResponse validationErrors) {
+        @OutputCustomType.Parameter("schemaDifferences") SchemaComparisonValidationResultTypeResponse schemaDifferences,
+        @OutputCustomType.Parameter("sourceDatabaseObjectCount") @Nullable Map<String,Double> sourceDatabaseObjectCount,
+        @OutputCustomType.Parameter("targetDatabaseObjectCount") @Nullable Map<String,Double> targetDatabaseObjectCount,
+        @OutputCustomType.Parameter("validationErrors") ValidationErrorResponse validationErrors) {
         this.schemaDifferences = schemaDifferences;
         this.sourceDatabaseObjectCount = sourceDatabaseObjectCount;
         this.targetDatabaseObjectCount = targetDatabaseObjectCount;

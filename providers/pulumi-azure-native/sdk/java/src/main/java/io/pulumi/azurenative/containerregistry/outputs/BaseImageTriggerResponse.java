@@ -37,13 +37,13 @@ public final class BaseImageTriggerResponse {
      */
     private final @Nullable String updateTriggerPayloadType;
 
-    @OutputCustomType.Constructor({"baseImageTriggerType","name","status","updateTriggerEndpoint","updateTriggerPayloadType"})
+    @OutputCustomType.Constructor
     private BaseImageTriggerResponse(
-        String baseImageTriggerType,
-        String name,
-        @Nullable String status,
-        @Nullable String updateTriggerEndpoint,
-        @Nullable String updateTriggerPayloadType) {
+        @OutputCustomType.Parameter("baseImageTriggerType") String baseImageTriggerType,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("status") @Nullable String status,
+        @OutputCustomType.Parameter("updateTriggerEndpoint") @Nullable String updateTriggerEndpoint,
+        @OutputCustomType.Parameter("updateTriggerPayloadType") @Nullable String updateTriggerPayloadType) {
         this.baseImageTriggerType = baseImageTriggerType;
         this.name = name;
         this.status = status;

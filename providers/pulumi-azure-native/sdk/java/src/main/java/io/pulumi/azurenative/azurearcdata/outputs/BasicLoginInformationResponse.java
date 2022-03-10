@@ -17,8 +17,8 @@ public final class BasicLoginInformationResponse {
      */
     private final @Nullable String username;
 
-    @OutputCustomType.Constructor({"username"})
-    private BasicLoginInformationResponse(@Nullable String username) {
+    @OutputCustomType.Constructor
+    private BasicLoginInformationResponse(@OutputCustomType.Parameter("username") @Nullable String username) {
         this.username = username;
     }
 

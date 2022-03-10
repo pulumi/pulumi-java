@@ -37,13 +37,13 @@ public final class RequestResponse {
      */
     private final @Nullable String useragent;
 
-    @OutputCustomType.Constructor({"addr","host","id","method","useragent"})
+    @OutputCustomType.Constructor
     private RequestResponse(
-        @Nullable String addr,
-        @Nullable String host,
-        @Nullable String id,
-        @Nullable String method,
-        @Nullable String useragent) {
+        @OutputCustomType.Parameter("addr") @Nullable String addr,
+        @OutputCustomType.Parameter("host") @Nullable String host,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("method") @Nullable String method,
+        @OutputCustomType.Parameter("useragent") @Nullable String useragent) {
         this.addr = addr;
         this.host = host;
         this.id = id;

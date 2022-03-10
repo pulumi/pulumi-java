@@ -15,8 +15,8 @@ public final class PrivateEndpointPropertyResponse {
      */
     private final String id;
 
-    @OutputCustomType.Constructor({"id"})
-    private PrivateEndpointPropertyResponse(String id) {
+    @OutputCustomType.Constructor
+    private PrivateEndpointPropertyResponse(@OutputCustomType.Parameter("id") String id) {
         this.id = id;
     }
 

@@ -23,10 +23,10 @@ public final class KeyVaultPropertiesResponse {
      */
     private final @Nullable KeyPropertiesResponse key;
 
-    @OutputCustomType.Constructor({"id","key"})
+    @OutputCustomType.Constructor
     private KeyVaultPropertiesResponse(
-        @Nullable String id,
-        @Nullable KeyPropertiesResponse key) {
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("key") @Nullable KeyPropertiesResponse key) {
         this.id = id;
         this.key = key;
     }

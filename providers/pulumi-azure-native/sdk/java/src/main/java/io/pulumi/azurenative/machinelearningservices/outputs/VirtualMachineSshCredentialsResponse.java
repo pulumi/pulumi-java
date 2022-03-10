@@ -32,12 +32,12 @@ public final class VirtualMachineSshCredentialsResponse {
      */
     private final @Nullable String username;
 
-    @OutputCustomType.Constructor({"password","privateKeyData","publicKeyData","username"})
+    @OutputCustomType.Constructor
     private VirtualMachineSshCredentialsResponse(
-        @Nullable String password,
-        @Nullable String privateKeyData,
-        @Nullable String publicKeyData,
-        @Nullable String username) {
+        @OutputCustomType.Parameter("password") @Nullable String password,
+        @OutputCustomType.Parameter("privateKeyData") @Nullable String privateKeyData,
+        @OutputCustomType.Parameter("publicKeyData") @Nullable String publicKeyData,
+        @OutputCustomType.Parameter("username") @Nullable String username) {
         this.password = password;
         this.privateKeyData = privateKeyData;
         this.publicKeyData = publicKeyData;

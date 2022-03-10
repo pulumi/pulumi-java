@@ -38,13 +38,13 @@ public final class GetReplicationProtectionContainerMappingResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"id","location","name","properties","type"})
+    @OutputCustomType.Constructor
     private GetReplicationProtectionContainerMappingResult(
-        String id,
-        @Nullable String location,
-        String name,
-        ProtectionContainerMappingPropertiesResponse properties,
-        String type) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("properties") ProtectionContainerMappingPropertiesResponse properties,
+        @OutputCustomType.Parameter("type") String type) {
         this.id = id;
         this.location = location;
         this.name = name;

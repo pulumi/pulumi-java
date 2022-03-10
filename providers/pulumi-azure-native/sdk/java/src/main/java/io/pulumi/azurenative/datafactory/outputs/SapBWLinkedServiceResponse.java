@@ -76,19 +76,19 @@ public final class SapBWLinkedServiceResponse {
      */
     private final @Nullable Object userName;
 
-    @OutputCustomType.Constructor({"annotations","clientId","connectVia","description","encryptedCredential","parameters","password","server","systemNumber","type","userName"})
+    @OutputCustomType.Constructor
     private SapBWLinkedServiceResponse(
-        @Nullable List<Object> annotations,
-        Object clientId,
-        @Nullable IntegrationRuntimeReferenceResponse connectVia,
-        @Nullable String description,
-        @Nullable Object encryptedCredential,
-        @Nullable Map<String,ParameterSpecificationResponse> parameters,
-        @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password,
-        Object server,
-        Object systemNumber,
-        String type,
-        @Nullable Object userName) {
+        @OutputCustomType.Parameter("annotations") @Nullable List<Object> annotations,
+        @OutputCustomType.Parameter("clientId") Object clientId,
+        @OutputCustomType.Parameter("connectVia") @Nullable IntegrationRuntimeReferenceResponse connectVia,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("encryptedCredential") @Nullable Object encryptedCredential,
+        @OutputCustomType.Parameter("parameters") @Nullable Map<String,ParameterSpecificationResponse> parameters,
+        @OutputCustomType.Parameter("password") @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password,
+        @OutputCustomType.Parameter("server") Object server,
+        @OutputCustomType.Parameter("systemNumber") Object systemNumber,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("userName") @Nullable Object userName) {
         this.annotations = annotations;
         this.clientId = clientId;
         this.connectVia = connectVia;

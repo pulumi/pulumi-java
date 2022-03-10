@@ -66,18 +66,18 @@ public final class GetRouteFilterResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"etag","id","ipv6Peerings","location","name","peerings","provisioningState","rules","tags","type"})
+    @OutputCustomType.Constructor
     private GetRouteFilterResult(
-        String etag,
-        @Nullable String id,
-        List<ExpressRouteCircuitPeeringResponse> ipv6Peerings,
-        String location,
-        String name,
-        List<ExpressRouteCircuitPeeringResponse> peerings,
-        String provisioningState,
-        @Nullable List<RouteFilterRuleResponse> rules,
-        @Nullable Map<String,String> tags,
-        String type) {
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("ipv6Peerings") List<ExpressRouteCircuitPeeringResponse> ipv6Peerings,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("peerings") List<ExpressRouteCircuitPeeringResponse> peerings,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("rules") @Nullable List<RouteFilterRuleResponse> rules,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type) {
         this.etag = etag;
         this.id = id;
         this.ipv6Peerings = ipv6Peerings;

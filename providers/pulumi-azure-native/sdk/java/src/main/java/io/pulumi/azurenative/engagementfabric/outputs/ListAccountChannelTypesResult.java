@@ -17,8 +17,8 @@ public final class ListAccountChannelTypesResult {
      */
     private final @Nullable List<ChannelTypeDescriptionResponse> value;
 
-    @OutputCustomType.Constructor({"value"})
-    private ListAccountChannelTypesResult(@Nullable List<ChannelTypeDescriptionResponse> value) {
+    @OutputCustomType.Constructor
+    private ListAccountChannelTypesResult(@OutputCustomType.Parameter("value") @Nullable List<ChannelTypeDescriptionResponse> value) {
         this.value = value;
     }
 

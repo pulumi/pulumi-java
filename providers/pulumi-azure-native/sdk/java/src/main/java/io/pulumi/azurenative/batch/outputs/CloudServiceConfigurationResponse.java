@@ -22,10 +22,10 @@ public final class CloudServiceConfigurationResponse {
      */
     private final @Nullable String osVersion;
 
-    @OutputCustomType.Constructor({"osFamily","osVersion"})
+    @OutputCustomType.Constructor
     private CloudServiceConfigurationResponse(
-        String osFamily,
-        @Nullable String osVersion) {
+        @OutputCustomType.Parameter("osFamily") String osFamily,
+        @OutputCustomType.Parameter("osVersion") @Nullable String osVersion) {
         this.osFamily = osFamily;
         this.osVersion = osVersion;
     }

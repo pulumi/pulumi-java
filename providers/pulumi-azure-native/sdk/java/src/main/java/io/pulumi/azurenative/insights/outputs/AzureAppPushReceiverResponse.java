@@ -20,10 +20,10 @@ public final class AzureAppPushReceiverResponse {
      */
     private final String name;
 
-    @OutputCustomType.Constructor({"emailAddress","name"})
+    @OutputCustomType.Constructor
     private AzureAppPushReceiverResponse(
-        String emailAddress,
-        String name) {
+        @OutputCustomType.Parameter("emailAddress") String emailAddress,
+        @OutputCustomType.Parameter("name") String name) {
         this.emailAddress = emailAddress;
         this.name = name;
     }

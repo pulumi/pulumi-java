@@ -38,13 +38,13 @@ public final class GetGuestConfigurationHCRPAssignmentResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"id","location","name","properties","type"})
+    @OutputCustomType.Constructor
     private GetGuestConfigurationHCRPAssignmentResult(
-        String id,
-        @Nullable String location,
-        @Nullable String name,
-        GuestConfigurationAssignmentPropertiesResponse properties,
-        String type) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("properties") GuestConfigurationAssignmentPropertiesResponse properties,
+        @OutputCustomType.Parameter("type") String type) {
         this.id = id;
         this.location = location;
         this.name = name;

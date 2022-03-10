@@ -48,15 +48,15 @@ public final class GetConfigurationAssignmentParentResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"id","location","maintenanceConfigurationId","name","resourceId","systemData","type"})
+    @OutputCustomType.Constructor
     private GetConfigurationAssignmentParentResult(
-        String id,
-        @Nullable String location,
-        @Nullable String maintenanceConfigurationId,
-        String name,
-        @Nullable String resourceId,
-        SystemDataResponse systemData,
-        String type) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("maintenanceConfigurationId") @Nullable String maintenanceConfigurationId,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("resourceId") @Nullable String resourceId,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("type") String type) {
         this.id = id;
         this.location = location;
         this.maintenanceConfigurationId = maintenanceConfigurationId;

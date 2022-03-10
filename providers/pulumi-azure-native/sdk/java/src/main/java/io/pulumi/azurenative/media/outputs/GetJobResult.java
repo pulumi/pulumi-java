@@ -92,22 +92,22 @@ public final class GetJobResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"correlationData","created","description","endTime","id","input","lastModified","name","outputs","priority","startTime","state","systemData","type"})
+    @OutputCustomType.Constructor
     private GetJobResult(
-        @Nullable Map<String,String> correlationData,
-        String created,
-        @Nullable String description,
-        String endTime,
-        String id,
-        Object input,
-        String lastModified,
-        String name,
-        List<JobOutputAssetResponse> outputs,
-        @Nullable String priority,
-        String startTime,
-        String state,
-        SystemDataResponse systemData,
-        String type) {
+        @OutputCustomType.Parameter("correlationData") @Nullable Map<String,String> correlationData,
+        @OutputCustomType.Parameter("created") String created,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("endTime") String endTime,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("input") Object input,
+        @OutputCustomType.Parameter("lastModified") String lastModified,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("outputs") List<JobOutputAssetResponse> outputs,
+        @OutputCustomType.Parameter("priority") @Nullable String priority,
+        @OutputCustomType.Parameter("startTime") String startTime,
+        @OutputCustomType.Parameter("state") String state,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("type") String type) {
         this.correlationData = correlationData;
         this.created = created;
         this.description = description;

@@ -20,10 +20,10 @@ public final class JobOutputResponse {
      */
     private final String path;
 
-    @OutputCustomType.Constructor({"datastoreId","path"})
+    @OutputCustomType.Constructor
     private JobOutputResponse(
-        String datastoreId,
-        String path) {
+        @OutputCustomType.Parameter("datastoreId") String datastoreId,
+        @OutputCustomType.Parameter("path") String path) {
         this.datastoreId = datastoreId;
         this.path = path;
     }

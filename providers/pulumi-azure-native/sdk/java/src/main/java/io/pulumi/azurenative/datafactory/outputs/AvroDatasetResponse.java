@@ -84,19 +84,19 @@ public final class AvroDatasetResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"annotations","avroCompressionCodec","avroCompressionLevel","description","folder","linkedServiceName","location","parameters","schema","structure","type"})
+    @OutputCustomType.Constructor
     private AvroDatasetResponse(
-        @Nullable List<Object> annotations,
-        @Nullable Object avroCompressionCodec,
-        @Nullable Integer avroCompressionLevel,
-        @Nullable String description,
-        @Nullable DatasetResponseFolder folder,
-        LinkedServiceReferenceResponse linkedServiceName,
-        Object location,
-        @Nullable Map<String,ParameterSpecificationResponse> parameters,
-        @Nullable Object schema,
-        @Nullable Object structure,
-        String type) {
+        @OutputCustomType.Parameter("annotations") @Nullable List<Object> annotations,
+        @OutputCustomType.Parameter("avroCompressionCodec") @Nullable Object avroCompressionCodec,
+        @OutputCustomType.Parameter("avroCompressionLevel") @Nullable Integer avroCompressionLevel,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("folder") @Nullable DatasetResponseFolder folder,
+        @OutputCustomType.Parameter("linkedServiceName") LinkedServiceReferenceResponse linkedServiceName,
+        @OutputCustomType.Parameter("location") Object location,
+        @OutputCustomType.Parameter("parameters") @Nullable Map<String,ParameterSpecificationResponse> parameters,
+        @OutputCustomType.Parameter("schema") @Nullable Object schema,
+        @OutputCustomType.Parameter("structure") @Nullable Object structure,
+        @OutputCustomType.Parameter("type") String type) {
         this.annotations = annotations;
         this.avroCompressionCodec = avroCompressionCodec;
         this.avroCompressionLevel = avroCompressionLevel;

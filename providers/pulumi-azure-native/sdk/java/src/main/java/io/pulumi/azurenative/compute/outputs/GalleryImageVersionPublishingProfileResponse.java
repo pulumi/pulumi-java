@@ -46,14 +46,14 @@ public final class GalleryImageVersionPublishingProfileResponse {
      */
     private final @Nullable List<TargetRegionResponse> targetRegions;
 
-    @OutputCustomType.Constructor({"endOfLifeDate","excludeFromLatest","publishedDate","replicaCount","storageAccountType","targetRegions"})
+    @OutputCustomType.Constructor
     private GalleryImageVersionPublishingProfileResponse(
-        @Nullable String endOfLifeDate,
-        @Nullable Boolean excludeFromLatest,
-        String publishedDate,
-        @Nullable Integer replicaCount,
-        @Nullable String storageAccountType,
-        @Nullable List<TargetRegionResponse> targetRegions) {
+        @OutputCustomType.Parameter("endOfLifeDate") @Nullable String endOfLifeDate,
+        @OutputCustomType.Parameter("excludeFromLatest") @Nullable Boolean excludeFromLatest,
+        @OutputCustomType.Parameter("publishedDate") String publishedDate,
+        @OutputCustomType.Parameter("replicaCount") @Nullable Integer replicaCount,
+        @OutputCustomType.Parameter("storageAccountType") @Nullable String storageAccountType,
+        @OutputCustomType.Parameter("targetRegions") @Nullable List<TargetRegionResponse> targetRegions) {
         this.endOfLifeDate = endOfLifeDate;
         this.excludeFromLatest = excludeFromLatest;
         this.publishedDate = publishedDate;

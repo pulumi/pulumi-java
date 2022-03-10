@@ -74,20 +74,20 @@ public final class GetReadOnlyFollowingDatabaseResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"attachedDatabaseConfigurationName","hotCachePeriod","id","kind","leaderClusterResourceId","location","name","principalsModificationKind","provisioningState","softDeletePeriod","statistics","type"})
+    @OutputCustomType.Constructor
     private GetReadOnlyFollowingDatabaseResult(
-        String attachedDatabaseConfigurationName,
-        @Nullable String hotCachePeriod,
-        String id,
-        String kind,
-        String leaderClusterResourceId,
-        @Nullable String location,
-        String name,
-        String principalsModificationKind,
-        String provisioningState,
-        String softDeletePeriod,
-        DatabaseStatisticsResponse statistics,
-        String type) {
+        @OutputCustomType.Parameter("attachedDatabaseConfigurationName") String attachedDatabaseConfigurationName,
+        @OutputCustomType.Parameter("hotCachePeriod") @Nullable String hotCachePeriod,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("leaderClusterResourceId") String leaderClusterResourceId,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("principalsModificationKind") String principalsModificationKind,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("softDeletePeriod") String softDeletePeriod,
+        @OutputCustomType.Parameter("statistics") DatabaseStatisticsResponse statistics,
+        @OutputCustomType.Parameter("type") String type) {
         this.attachedDatabaseConfigurationName = attachedDatabaseConfigurationName;
         this.hotCachePeriod = hotCachePeriod;
         this.id = id;

@@ -36,11 +36,11 @@ public final class InputFileResponse {
      */
     private final String odataType;
 
-    @OutputCustomType.Constructor({"filename","includedTracks","odataType"})
+    @OutputCustomType.Constructor
     private InputFileResponse(
-        @Nullable String filename,
-        @Nullable List<Object> includedTracks,
-        String odataType) {
+        @OutputCustomType.Parameter("filename") @Nullable String filename,
+        @OutputCustomType.Parameter("includedTracks") @Nullable List<Object> includedTracks,
+        @OutputCustomType.Parameter("odataType") String odataType) {
         this.filename = filename;
         this.includedTracks = includedTracks;
         this.odataType = odataType;

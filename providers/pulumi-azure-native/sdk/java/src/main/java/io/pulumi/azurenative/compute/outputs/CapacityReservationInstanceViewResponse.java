@@ -24,10 +24,10 @@ public final class CapacityReservationInstanceViewResponse {
      */
     private final @Nullable CapacityReservationUtilizationResponse utilizationInfo;
 
-    @OutputCustomType.Constructor({"statuses","utilizationInfo"})
+    @OutputCustomType.Constructor
     private CapacityReservationInstanceViewResponse(
-        @Nullable List<InstanceViewStatusResponse> statuses,
-        @Nullable CapacityReservationUtilizationResponse utilizationInfo) {
+        @OutputCustomType.Parameter("statuses") @Nullable List<InstanceViewStatusResponse> statuses,
+        @OutputCustomType.Parameter("utilizationInfo") @Nullable CapacityReservationUtilizationResponse utilizationInfo) {
         this.statuses = statuses;
         this.utilizationInfo = utilizationInfo;
     }

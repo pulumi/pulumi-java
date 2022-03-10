@@ -22,10 +22,10 @@ public final class StorageSettingResponse {
      */
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor({"datastoreType","type"})
+    @OutputCustomType.Constructor
     private StorageSettingResponse(
-        @Nullable String datastoreType,
-        @Nullable String type) {
+        @OutputCustomType.Parameter("datastoreType") @Nullable String datastoreType,
+        @OutputCustomType.Parameter("type") @Nullable String type) {
         this.datastoreType = datastoreType;
         this.type = type;
     }

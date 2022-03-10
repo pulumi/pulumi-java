@@ -37,13 +37,13 @@ public final class TemplateLinkResponse {
      */
     private final @Nullable String uri;
 
-    @OutputCustomType.Constructor({"contentVersion","id","queryString","relativePath","uri"})
+    @OutputCustomType.Constructor
     private TemplateLinkResponse(
-        @Nullable String contentVersion,
-        @Nullable String id,
-        @Nullable String queryString,
-        @Nullable String relativePath,
-        @Nullable String uri) {
+        @OutputCustomType.Parameter("contentVersion") @Nullable String contentVersion,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("queryString") @Nullable String queryString,
+        @OutputCustomType.Parameter("relativePath") @Nullable String relativePath,
+        @OutputCustomType.Parameter("uri") @Nullable String uri) {
         this.contentVersion = contentVersion;
         this.id = id;
         this.queryString = queryString;

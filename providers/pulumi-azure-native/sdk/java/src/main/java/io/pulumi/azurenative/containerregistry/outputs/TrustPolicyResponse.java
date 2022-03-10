@@ -22,10 +22,10 @@ public final class TrustPolicyResponse {
      */
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor({"status","type"})
+    @OutputCustomType.Constructor
     private TrustPolicyResponse(
-        @Nullable String status,
-        @Nullable String type) {
+        @OutputCustomType.Parameter("status") @Nullable String status,
+        @OutputCustomType.Parameter("type") @Nullable String type) {
         this.status = status;
         this.type = type;
     }

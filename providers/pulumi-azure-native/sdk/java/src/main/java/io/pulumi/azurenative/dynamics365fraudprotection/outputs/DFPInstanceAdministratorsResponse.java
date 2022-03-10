@@ -17,8 +17,8 @@ public final class DFPInstanceAdministratorsResponse {
      */
     private final @Nullable List<String> members;
 
-    @OutputCustomType.Constructor({"members"})
-    private DFPInstanceAdministratorsResponse(@Nullable List<String> members) {
+    @OutputCustomType.Constructor
+    private DFPInstanceAdministratorsResponse(@OutputCustomType.Parameter("members") @Nullable List<String> members) {
         this.members = members;
     }
 

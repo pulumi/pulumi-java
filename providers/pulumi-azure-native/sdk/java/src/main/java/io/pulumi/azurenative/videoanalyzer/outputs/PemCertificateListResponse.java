@@ -22,10 +22,10 @@ public final class PemCertificateListResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"certificates","type"})
+    @OutputCustomType.Constructor
     private PemCertificateListResponse(
-        List<String> certificates,
-        String type) {
+        @OutputCustomType.Parameter("certificates") List<String> certificates,
+        @OutputCustomType.Parameter("type") String type) {
         this.certificates = certificates;
         this.type = type;
     }

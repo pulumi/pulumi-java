@@ -101,25 +101,25 @@ public final class GetGalleryImageResult {
      */
     private final @Nullable String uniqueIdentifier;
 
-    @OutputCustomType.Constructor({"author","createdDate","description","icon","id","imageReference","isEnabled","isOverride","isPlanAuthorized","latestOperationResult","location","name","planId","provisioningState","tags","type","uniqueIdentifier"})
+    @OutputCustomType.Constructor
     private GetGalleryImageResult(
-        String author,
-        String createdDate,
-        String description,
-        String icon,
-        String id,
-        GalleryImageReferenceResponse imageReference,
-        @Nullable Boolean isEnabled,
-        @Nullable Boolean isOverride,
-        @Nullable Boolean isPlanAuthorized,
-        LatestOperationResultResponse latestOperationResult,
-        @Nullable String location,
-        String name,
-        String planId,
-        @Nullable String provisioningState,
-        @Nullable Map<String,String> tags,
-        String type,
-        @Nullable String uniqueIdentifier) {
+        @OutputCustomType.Parameter("author") String author,
+        @OutputCustomType.Parameter("createdDate") String createdDate,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("icon") String icon,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("imageReference") GalleryImageReferenceResponse imageReference,
+        @OutputCustomType.Parameter("isEnabled") @Nullable Boolean isEnabled,
+        @OutputCustomType.Parameter("isOverride") @Nullable Boolean isOverride,
+        @OutputCustomType.Parameter("isPlanAuthorized") @Nullable Boolean isPlanAuthorized,
+        @OutputCustomType.Parameter("latestOperationResult") LatestOperationResultResponse latestOperationResult,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("planId") String planId,
+        @OutputCustomType.Parameter("provisioningState") @Nullable String provisioningState,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("uniqueIdentifier") @Nullable String uniqueIdentifier) {
         this.author = author;
         this.createdDate = createdDate;
         this.description = description;

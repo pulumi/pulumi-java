@@ -16,10 +16,10 @@ public final class CdnCertificateSourceParametersResponse {
     private final String certificateType;
     private final String odataType;
 
-    @OutputCustomType.Constructor({"certificateType","odataType"})
+    @OutputCustomType.Constructor
     private CdnCertificateSourceParametersResponse(
-        String certificateType,
-        String odataType) {
+        @OutputCustomType.Parameter("certificateType") String certificateType,
+        @OutputCustomType.Parameter("odataType") String odataType) {
         this.certificateType = certificateType;
         this.odataType = odataType;
     }

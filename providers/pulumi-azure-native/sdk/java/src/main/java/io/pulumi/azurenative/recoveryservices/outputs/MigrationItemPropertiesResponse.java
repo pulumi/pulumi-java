@@ -81,21 +81,21 @@ public final class MigrationItemPropertiesResponse {
      */
     private final String testMigrateStateDescription;
 
-    @OutputCustomType.Constructor({"allowedOperations","currentJob","health","healthErrors","machineName","migrationState","migrationStateDescription","policyFriendlyName","policyId","providerSpecificDetails","recoveryServicesProviderId","testMigrateState","testMigrateStateDescription"})
+    @OutputCustomType.Constructor
     private MigrationItemPropertiesResponse(
-        List<String> allowedOperations,
-        CurrentJobDetailsResponse currentJob,
-        String health,
-        List<HealthErrorResponse> healthErrors,
-        String machineName,
-        String migrationState,
-        String migrationStateDescription,
-        String policyFriendlyName,
-        String policyId,
-        @Nullable VMwareCbtMigrationDetailsResponse providerSpecificDetails,
-        String recoveryServicesProviderId,
-        String testMigrateState,
-        String testMigrateStateDescription) {
+        @OutputCustomType.Parameter("allowedOperations") List<String> allowedOperations,
+        @OutputCustomType.Parameter("currentJob") CurrentJobDetailsResponse currentJob,
+        @OutputCustomType.Parameter("health") String health,
+        @OutputCustomType.Parameter("healthErrors") List<HealthErrorResponse> healthErrors,
+        @OutputCustomType.Parameter("machineName") String machineName,
+        @OutputCustomType.Parameter("migrationState") String migrationState,
+        @OutputCustomType.Parameter("migrationStateDescription") String migrationStateDescription,
+        @OutputCustomType.Parameter("policyFriendlyName") String policyFriendlyName,
+        @OutputCustomType.Parameter("policyId") String policyId,
+        @OutputCustomType.Parameter("providerSpecificDetails") @Nullable VMwareCbtMigrationDetailsResponse providerSpecificDetails,
+        @OutputCustomType.Parameter("recoveryServicesProviderId") String recoveryServicesProviderId,
+        @OutputCustomType.Parameter("testMigrateState") String testMigrateState,
+        @OutputCustomType.Parameter("testMigrateStateDescription") String testMigrateStateDescription) {
         this.allowedOperations = allowedOperations;
         this.currentJob = currentJob;
         this.health = health;

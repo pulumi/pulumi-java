@@ -29,11 +29,11 @@ public final class ImageTemplateVmProfileResponse {
      */
     private final @Nullable VirtualNetworkConfigResponse vnetConfig;
 
-    @OutputCustomType.Constructor({"osDiskSizeGB","vmSize","vnetConfig"})
+    @OutputCustomType.Constructor
     private ImageTemplateVmProfileResponse(
-        @Nullable Integer osDiskSizeGB,
-        @Nullable String vmSize,
-        @Nullable VirtualNetworkConfigResponse vnetConfig) {
+        @OutputCustomType.Parameter("osDiskSizeGB") @Nullable Integer osDiskSizeGB,
+        @OutputCustomType.Parameter("vmSize") @Nullable String vmSize,
+        @OutputCustomType.Parameter("vnetConfig") @Nullable VirtualNetworkConfigResponse vnetConfig) {
         this.osDiskSizeGB = osDiskSizeGB;
         this.vmSize = vmSize;
         this.vnetConfig = vnetConfig;

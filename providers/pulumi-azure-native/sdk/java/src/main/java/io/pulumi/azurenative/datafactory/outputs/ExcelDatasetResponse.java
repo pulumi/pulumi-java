@@ -108,23 +108,23 @@ public final class ExcelDatasetResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"annotations","compression","description","firstRowAsHeader","folder","linkedServiceName","location","nullValue","parameters","range","schema","sheetIndex","sheetName","structure","type"})
+    @OutputCustomType.Constructor
     private ExcelDatasetResponse(
-        @Nullable List<Object> annotations,
-        @Nullable DatasetCompressionResponse compression,
-        @Nullable String description,
-        @Nullable Object firstRowAsHeader,
-        @Nullable DatasetResponseFolder folder,
-        LinkedServiceReferenceResponse linkedServiceName,
-        Object location,
-        @Nullable Object nullValue,
-        @Nullable Map<String,ParameterSpecificationResponse> parameters,
-        @Nullable Object range,
-        @Nullable Object schema,
-        @Nullable Object sheetIndex,
-        @Nullable Object sheetName,
-        @Nullable Object structure,
-        String type) {
+        @OutputCustomType.Parameter("annotations") @Nullable List<Object> annotations,
+        @OutputCustomType.Parameter("compression") @Nullable DatasetCompressionResponse compression,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("firstRowAsHeader") @Nullable Object firstRowAsHeader,
+        @OutputCustomType.Parameter("folder") @Nullable DatasetResponseFolder folder,
+        @OutputCustomType.Parameter("linkedServiceName") LinkedServiceReferenceResponse linkedServiceName,
+        @OutputCustomType.Parameter("location") Object location,
+        @OutputCustomType.Parameter("nullValue") @Nullable Object nullValue,
+        @OutputCustomType.Parameter("parameters") @Nullable Map<String,ParameterSpecificationResponse> parameters,
+        @OutputCustomType.Parameter("range") @Nullable Object range,
+        @OutputCustomType.Parameter("schema") @Nullable Object schema,
+        @OutputCustomType.Parameter("sheetIndex") @Nullable Object sheetIndex,
+        @OutputCustomType.Parameter("sheetName") @Nullable Object sheetName,
+        @OutputCustomType.Parameter("structure") @Nullable Object structure,
+        @OutputCustomType.Parameter("type") String type) {
         this.annotations = annotations;
         this.compression = compression;
         this.description = description;

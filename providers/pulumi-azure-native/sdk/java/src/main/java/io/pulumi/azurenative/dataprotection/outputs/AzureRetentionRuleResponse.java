@@ -23,12 +23,12 @@ public final class AzureRetentionRuleResponse {
      */
     private final String objectType;
 
-    @OutputCustomType.Constructor({"isDefault","lifecycles","name","objectType"})
+    @OutputCustomType.Constructor
     private AzureRetentionRuleResponse(
-        @Nullable Boolean isDefault,
-        List<SourceLifeCycleResponse> lifecycles,
-        String name,
-        String objectType) {
+        @OutputCustomType.Parameter("isDefault") @Nullable Boolean isDefault,
+        @OutputCustomType.Parameter("lifecycles") List<SourceLifeCycleResponse> lifecycles,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("objectType") String objectType) {
         this.isDefault = isDefault;
         this.lifecycles = lifecycles;
         this.name = name;

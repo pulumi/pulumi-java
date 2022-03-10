@@ -78,20 +78,20 @@ public final class WebHookActivityResponse {
      */
     private final @Nullable List<UserPropertyResponse> userProperties;
 
-    @OutputCustomType.Constructor({"authentication","body","dependsOn","description","headers","method","name","reportStatusOnCallBack","timeout","type","url","userProperties"})
+    @OutputCustomType.Constructor
     private WebHookActivityResponse(
-        @Nullable WebActivityAuthenticationResponse authentication,
-        @Nullable Object body,
-        @Nullable List<ActivityDependencyResponse> dependsOn,
-        @Nullable String description,
-        @Nullable Object headers,
-        String method,
-        String name,
-        @Nullable Object reportStatusOnCallBack,
-        @Nullable String timeout,
-        String type,
-        Object url,
-        @Nullable List<UserPropertyResponse> userProperties) {
+        @OutputCustomType.Parameter("authentication") @Nullable WebActivityAuthenticationResponse authentication,
+        @OutputCustomType.Parameter("body") @Nullable Object body,
+        @OutputCustomType.Parameter("dependsOn") @Nullable List<ActivityDependencyResponse> dependsOn,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("headers") @Nullable Object headers,
+        @OutputCustomType.Parameter("method") String method,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("reportStatusOnCallBack") @Nullable Object reportStatusOnCallBack,
+        @OutputCustomType.Parameter("timeout") @Nullable String timeout,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("url") Object url,
+        @OutputCustomType.Parameter("userProperties") @Nullable List<UserPropertyResponse> userProperties) {
         this.authentication = authentication;
         this.body = body;
         this.dependsOn = dependsOn;

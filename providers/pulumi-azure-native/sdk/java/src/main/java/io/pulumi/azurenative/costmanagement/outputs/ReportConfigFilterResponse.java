@@ -43,14 +43,14 @@ public final class ReportConfigFilterResponse {
      */
     private final @Nullable ReportConfigComparisonExpressionResponse tags;
 
-    @OutputCustomType.Constructor({"and","dimensions","or","tagKey","tagValue","tags"})
+    @OutputCustomType.Constructor
     private ReportConfigFilterResponse(
-        @Nullable List<ReportConfigFilterResponse> and,
-        @Nullable ReportConfigComparisonExpressionResponse dimensions,
-        @Nullable List<ReportConfigFilterResponse> or,
-        @Nullable ReportConfigComparisonExpressionResponse tagKey,
-        @Nullable ReportConfigComparisonExpressionResponse tagValue,
-        @Nullable ReportConfigComparisonExpressionResponse tags) {
+        @OutputCustomType.Parameter("and") @Nullable List<ReportConfigFilterResponse> and,
+        @OutputCustomType.Parameter("dimensions") @Nullable ReportConfigComparisonExpressionResponse dimensions,
+        @OutputCustomType.Parameter("or") @Nullable List<ReportConfigFilterResponse> or,
+        @OutputCustomType.Parameter("tagKey") @Nullable ReportConfigComparisonExpressionResponse tagKey,
+        @OutputCustomType.Parameter("tagValue") @Nullable ReportConfigComparisonExpressionResponse tagValue,
+        @OutputCustomType.Parameter("tags") @Nullable ReportConfigComparisonExpressionResponse tags) {
         this.and = and;
         this.dimensions = dimensions;
         this.or = or;

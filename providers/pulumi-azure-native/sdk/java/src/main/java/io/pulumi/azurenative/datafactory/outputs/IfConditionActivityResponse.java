@@ -95,16 +95,16 @@ public final class IfConditionActivityResponse {
      */
     private final @Nullable List<UserPropertyResponse> userProperties;
 
-    @OutputCustomType.Constructor({"dependsOn","description","expression","ifFalseActivities","ifTrueActivities","name","type","userProperties"})
+    @OutputCustomType.Constructor
     private IfConditionActivityResponse(
-        @Nullable List<ActivityDependencyResponse> dependsOn,
-        @Nullable String description,
-        ExpressionResponse expression,
-        @Nullable List<Object> ifFalseActivities,
-        @Nullable List<Object> ifTrueActivities,
-        String name,
-        String type,
-        @Nullable List<UserPropertyResponse> userProperties) {
+        @OutputCustomType.Parameter("dependsOn") @Nullable List<ActivityDependencyResponse> dependsOn,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("expression") ExpressionResponse expression,
+        @OutputCustomType.Parameter("ifFalseActivities") @Nullable List<Object> ifFalseActivities,
+        @OutputCustomType.Parameter("ifTrueActivities") @Nullable List<Object> ifTrueActivities,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("userProperties") @Nullable List<UserPropertyResponse> userProperties) {
         this.dependsOn = dependsOn;
         this.description = description;
         this.expression = expression;

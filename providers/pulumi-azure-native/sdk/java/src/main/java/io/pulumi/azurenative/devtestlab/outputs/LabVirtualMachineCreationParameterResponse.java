@@ -156,35 +156,35 @@ public final class LabVirtualMachineCreationParameterResponse {
      */
     private final @Nullable String userName;
 
-    @OutputCustomType.Constructor({"allowClaim","artifacts","bulkCreationParameters","createdDate","customImageId","dataDiskParameters","disallowPublicIpAddress","environmentId","expirationDate","galleryImageReference","isAuthenticationWithSshKey","labSubnetName","labVirtualNetworkId","location","name","networkInterface","notes","ownerObjectId","ownerUserPrincipalName","password","planId","scheduleParameters","size","sshKey","storageType","tags","userName"})
+    @OutputCustomType.Constructor
     private LabVirtualMachineCreationParameterResponse(
-        @Nullable Boolean allowClaim,
-        @Nullable List<ArtifactInstallPropertiesResponse> artifacts,
-        @Nullable BulkCreationParametersResponse bulkCreationParameters,
-        @Nullable String createdDate,
-        @Nullable String customImageId,
-        @Nullable List<DataDiskPropertiesResponse> dataDiskParameters,
-        @Nullable Boolean disallowPublicIpAddress,
-        @Nullable String environmentId,
-        @Nullable String expirationDate,
-        @Nullable GalleryImageReferenceResponse galleryImageReference,
-        @Nullable Boolean isAuthenticationWithSshKey,
-        @Nullable String labSubnetName,
-        @Nullable String labVirtualNetworkId,
-        @Nullable String location,
-        @Nullable String name,
-        @Nullable NetworkInterfacePropertiesResponse networkInterface,
-        @Nullable String notes,
-        @Nullable String ownerObjectId,
-        @Nullable String ownerUserPrincipalName,
-        @Nullable String password,
-        @Nullable String planId,
-        @Nullable List<ScheduleCreationParameterResponse> scheduleParameters,
-        @Nullable String size,
-        @Nullable String sshKey,
-        @Nullable String storageType,
-        @Nullable Map<String,String> tags,
-        @Nullable String userName) {
+        @OutputCustomType.Parameter("allowClaim") @Nullable Boolean allowClaim,
+        @OutputCustomType.Parameter("artifacts") @Nullable List<ArtifactInstallPropertiesResponse> artifacts,
+        @OutputCustomType.Parameter("bulkCreationParameters") @Nullable BulkCreationParametersResponse bulkCreationParameters,
+        @OutputCustomType.Parameter("createdDate") @Nullable String createdDate,
+        @OutputCustomType.Parameter("customImageId") @Nullable String customImageId,
+        @OutputCustomType.Parameter("dataDiskParameters") @Nullable List<DataDiskPropertiesResponse> dataDiskParameters,
+        @OutputCustomType.Parameter("disallowPublicIpAddress") @Nullable Boolean disallowPublicIpAddress,
+        @OutputCustomType.Parameter("environmentId") @Nullable String environmentId,
+        @OutputCustomType.Parameter("expirationDate") @Nullable String expirationDate,
+        @OutputCustomType.Parameter("galleryImageReference") @Nullable GalleryImageReferenceResponse galleryImageReference,
+        @OutputCustomType.Parameter("isAuthenticationWithSshKey") @Nullable Boolean isAuthenticationWithSshKey,
+        @OutputCustomType.Parameter("labSubnetName") @Nullable String labSubnetName,
+        @OutputCustomType.Parameter("labVirtualNetworkId") @Nullable String labVirtualNetworkId,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("networkInterface") @Nullable NetworkInterfacePropertiesResponse networkInterface,
+        @OutputCustomType.Parameter("notes") @Nullable String notes,
+        @OutputCustomType.Parameter("ownerObjectId") @Nullable String ownerObjectId,
+        @OutputCustomType.Parameter("ownerUserPrincipalName") @Nullable String ownerUserPrincipalName,
+        @OutputCustomType.Parameter("password") @Nullable String password,
+        @OutputCustomType.Parameter("planId") @Nullable String planId,
+        @OutputCustomType.Parameter("scheduleParameters") @Nullable List<ScheduleCreationParameterResponse> scheduleParameters,
+        @OutputCustomType.Parameter("size") @Nullable String size,
+        @OutputCustomType.Parameter("sshKey") @Nullable String sshKey,
+        @OutputCustomType.Parameter("storageType") @Nullable String storageType,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("userName") @Nullable String userName) {
         this.allowClaim = allowClaim;
         this.artifacts = artifacts;
         this.bulkCreationParameters = bulkCreationParameters;

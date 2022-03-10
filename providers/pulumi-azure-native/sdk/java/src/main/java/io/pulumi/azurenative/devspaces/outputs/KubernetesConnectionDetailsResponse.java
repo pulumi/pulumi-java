@@ -23,10 +23,10 @@ public final class KubernetesConnectionDetailsResponse {
      */
     private final @Nullable String kubeConfig;
 
-    @OutputCustomType.Constructor({"instanceType","kubeConfig"})
+    @OutputCustomType.Constructor
     private KubernetesConnectionDetailsResponse(
-        String instanceType,
-        @Nullable String kubeConfig) {
+        @OutputCustomType.Parameter("instanceType") String instanceType,
+        @OutputCustomType.Parameter("kubeConfig") @Nullable String kubeConfig) {
         this.instanceType = instanceType;
         this.kubeConfig = kubeConfig;
     }

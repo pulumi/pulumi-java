@@ -17,8 +17,8 @@ public final class GetVirtualNetworkGatewayLearnedRoutesResult {
      */
     private final @Nullable List<GatewayRouteResponse> value;
 
-    @OutputCustomType.Constructor({"value"})
-    private GetVirtualNetworkGatewayLearnedRoutesResult(@Nullable List<GatewayRouteResponse> value) {
+    @OutputCustomType.Constructor
+    private GetVirtualNetworkGatewayLearnedRoutesResult(@OutputCustomType.Parameter("value") @Nullable List<GatewayRouteResponse> value) {
         this.value = value;
     }
 

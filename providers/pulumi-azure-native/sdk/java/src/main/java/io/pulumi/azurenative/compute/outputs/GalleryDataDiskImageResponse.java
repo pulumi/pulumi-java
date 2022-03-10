@@ -34,12 +34,12 @@ public final class GalleryDataDiskImageResponse {
      */
     private final @Nullable GalleryArtifactVersionSourceResponse source;
 
-    @OutputCustomType.Constructor({"hostCaching","lun","sizeInGB","source"})
+    @OutputCustomType.Constructor
     private GalleryDataDiskImageResponse(
-        @Nullable String hostCaching,
-        Integer lun,
-        Integer sizeInGB,
-        @Nullable GalleryArtifactVersionSourceResponse source) {
+        @OutputCustomType.Parameter("hostCaching") @Nullable String hostCaching,
+        @OutputCustomType.Parameter("lun") Integer lun,
+        @OutputCustomType.Parameter("sizeInGB") Integer sizeInGB,
+        @OutputCustomType.Parameter("source") @Nullable GalleryArtifactVersionSourceResponse source) {
         this.hostCaching = hostCaching;
         this.lun = lun;
         this.sizeInGB = sizeInGB;

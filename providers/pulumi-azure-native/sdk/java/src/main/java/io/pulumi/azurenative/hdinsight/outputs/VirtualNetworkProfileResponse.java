@@ -22,10 +22,10 @@ public final class VirtualNetworkProfileResponse {
      */
     private final @Nullable String subnet;
 
-    @OutputCustomType.Constructor({"id","subnet"})
+    @OutputCustomType.Constructor
     private VirtualNetworkProfileResponse(
-        @Nullable String id,
-        @Nullable String subnet) {
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("subnet") @Nullable String subnet) {
         this.id = id;
         this.subnet = subnet;
     }

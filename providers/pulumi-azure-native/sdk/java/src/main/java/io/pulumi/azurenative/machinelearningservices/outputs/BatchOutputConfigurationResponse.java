@@ -22,10 +22,10 @@ public final class BatchOutputConfigurationResponse {
      */
     private final @Nullable String outputAction;
 
-    @OutputCustomType.Constructor({"appendRowFileName","outputAction"})
+    @OutputCustomType.Constructor
     private BatchOutputConfigurationResponse(
-        @Nullable String appendRowFileName,
-        @Nullable String outputAction) {
+        @OutputCustomType.Parameter("appendRowFileName") @Nullable String appendRowFileName,
+        @OutputCustomType.Parameter("outputAction") @Nullable String outputAction) {
         this.appendRowFileName = appendRowFileName;
         this.outputAction = outputAction;
     }

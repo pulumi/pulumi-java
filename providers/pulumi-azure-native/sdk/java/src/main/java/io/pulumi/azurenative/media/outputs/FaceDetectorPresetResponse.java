@@ -39,13 +39,13 @@ public final class FaceDetectorPresetResponse {
      */
     private final @Nullable String resolution;
 
-    @OutputCustomType.Constructor({"blurType","experimentalOptions","mode","odataType","resolution"})
+    @OutputCustomType.Constructor
     private FaceDetectorPresetResponse(
-        @Nullable String blurType,
-        @Nullable Map<String,String> experimentalOptions,
-        @Nullable String mode,
-        String odataType,
-        @Nullable String resolution) {
+        @OutputCustomType.Parameter("blurType") @Nullable String blurType,
+        @OutputCustomType.Parameter("experimentalOptions") @Nullable Map<String,String> experimentalOptions,
+        @OutputCustomType.Parameter("mode") @Nullable String mode,
+        @OutputCustomType.Parameter("odataType") String odataType,
+        @OutputCustomType.Parameter("resolution") @Nullable String resolution) {
         this.blurType = blurType;
         this.experimentalOptions = experimentalOptions;
         this.mode = mode;

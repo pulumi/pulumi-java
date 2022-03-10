@@ -34,12 +34,12 @@ public final class NetworkInterfaceResponse {
      */
     private final @Nullable String vmSwitchType;
 
-    @OutputCustomType.Constructor({"ipConfigurations","macAddress","networkInterfaceName","vmSwitchType"})
+    @OutputCustomType.Constructor
     private NetworkInterfaceResponse(
-        @Nullable List<NetworkInterfaceIPConfigurationResponse> ipConfigurations,
-        @Nullable String macAddress,
-        @Nullable String networkInterfaceName,
-        @Nullable String vmSwitchType) {
+        @OutputCustomType.Parameter("ipConfigurations") @Nullable List<NetworkInterfaceIPConfigurationResponse> ipConfigurations,
+        @OutputCustomType.Parameter("macAddress") @Nullable String macAddress,
+        @OutputCustomType.Parameter("networkInterfaceName") @Nullable String networkInterfaceName,
+        @OutputCustomType.Parameter("vmSwitchType") @Nullable String vmSwitchType) {
         this.ipConfigurations = ipConfigurations;
         this.macAddress = macAddress;
         this.networkInterfaceName = networkInterfaceName;

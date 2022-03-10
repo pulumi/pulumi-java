@@ -32,12 +32,12 @@ public final class MetadataSupportResponse {
      */
     private final String tier;
 
-    @OutputCustomType.Constructor({"email","link","name","tier"})
+    @OutputCustomType.Constructor
     private MetadataSupportResponse(
-        @Nullable String email,
-        @Nullable String link,
-        @Nullable String name,
-        String tier) {
+        @OutputCustomType.Parameter("email") @Nullable String email,
+        @OutputCustomType.Parameter("link") @Nullable String link,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("tier") String tier) {
         this.email = email;
         this.link = link;
         this.name = name;

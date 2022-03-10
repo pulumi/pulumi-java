@@ -79,20 +79,20 @@ public final class GetStorageTargetResult {
      */
     private final @Nullable UnknownTargetResponse unknown;
 
-    @OutputCustomType.Constructor({"blobNfs","clfs","id","junctions","location","name","nfs3","provisioningState","systemData","targetType","type","unknown"})
+    @OutputCustomType.Constructor
     private GetStorageTargetResult(
-        @Nullable BlobNfsTargetResponse blobNfs,
-        @Nullable ClfsTargetResponse clfs,
-        String id,
-        @Nullable List<NamespaceJunctionResponse> junctions,
-        String location,
-        String name,
-        @Nullable Nfs3TargetResponse nfs3,
-        @Nullable String provisioningState,
-        SystemDataResponse systemData,
-        String targetType,
-        String type,
-        @Nullable UnknownTargetResponse unknown) {
+        @OutputCustomType.Parameter("blobNfs") @Nullable BlobNfsTargetResponse blobNfs,
+        @OutputCustomType.Parameter("clfs") @Nullable ClfsTargetResponse clfs,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("junctions") @Nullable List<NamespaceJunctionResponse> junctions,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("nfs3") @Nullable Nfs3TargetResponse nfs3,
+        @OutputCustomType.Parameter("provisioningState") @Nullable String provisioningState,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("targetType") String targetType,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("unknown") @Nullable UnknownTargetResponse unknown) {
         this.blobNfs = blobNfs;
         this.clfs = clfs;
         this.id = id;

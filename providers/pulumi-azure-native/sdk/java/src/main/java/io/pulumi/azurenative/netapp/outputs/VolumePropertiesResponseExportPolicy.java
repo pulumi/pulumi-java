@@ -17,8 +17,8 @@ public final class VolumePropertiesResponseExportPolicy {
      */
     private final @Nullable List<ExportPolicyRuleResponse> rules;
 
-    @OutputCustomType.Constructor({"rules"})
-    private VolumePropertiesResponseExportPolicy(@Nullable List<ExportPolicyRuleResponse> rules) {
+    @OutputCustomType.Constructor
+    private VolumePropertiesResponseExportPolicy(@OutputCustomType.Parameter("rules") @Nullable List<ExportPolicyRuleResponse> rules) {
         this.rules = rules;
     }
 

@@ -87,22 +87,22 @@ public final class GetNatGatewayResult {
      */
     private final @Nullable List<String> zones;
 
-    @OutputCustomType.Constructor({"etag","id","idleTimeoutInMinutes","location","name","provisioningState","publicIpAddresses","publicIpPrefixes","resourceGuid","sku","subnets","tags","type","zones"})
+    @OutputCustomType.Constructor
     private GetNatGatewayResult(
-        String etag,
-        @Nullable String id,
-        @Nullable Integer idleTimeoutInMinutes,
-        @Nullable String location,
-        String name,
-        String provisioningState,
-        @Nullable List<SubResourceResponse> publicIpAddresses,
-        @Nullable List<SubResourceResponse> publicIpPrefixes,
-        String resourceGuid,
-        @Nullable NatGatewaySkuResponse sku,
-        List<SubResourceResponse> subnets,
-        @Nullable Map<String,String> tags,
-        String type,
-        @Nullable List<String> zones) {
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("idleTimeoutInMinutes") @Nullable Integer idleTimeoutInMinutes,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("publicIpAddresses") @Nullable List<SubResourceResponse> publicIpAddresses,
+        @OutputCustomType.Parameter("publicIpPrefixes") @Nullable List<SubResourceResponse> publicIpPrefixes,
+        @OutputCustomType.Parameter("resourceGuid") String resourceGuid,
+        @OutputCustomType.Parameter("sku") @Nullable NatGatewaySkuResponse sku,
+        @OutputCustomType.Parameter("subnets") List<SubResourceResponse> subnets,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("zones") @Nullable List<String> zones) {
         this.etag = etag;
         this.id = id;
         this.idleTimeoutInMinutes = idleTimeoutInMinutes;

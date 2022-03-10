@@ -20,10 +20,10 @@ public final class MyWorkbookUserAssignedIdentitiesResponse {
      */
     private final String tenantId;
 
-    @OutputCustomType.Constructor({"principalId","tenantId"})
+    @OutputCustomType.Constructor
     private MyWorkbookUserAssignedIdentitiesResponse(
-        String principalId,
-        String tenantId) {
+        @OutputCustomType.Parameter("principalId") String principalId,
+        @OutputCustomType.Parameter("tenantId") String tenantId) {
         this.principalId = principalId;
         this.tenantId = tenantId;
     }

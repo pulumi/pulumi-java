@@ -143,33 +143,33 @@ public final class GetLabResult {
      */
     private final String vmCreationResourceGroup;
 
-    @OutputCustomType.Constructor({"announcement","artifactsStorageAccount","createdDate","defaultPremiumStorageAccount","defaultStorageAccount","environmentPermission","extendedProperties","id","labStorageType","loadBalancerId","location","mandatoryArtifactsResourceIdsLinux","mandatoryArtifactsResourceIdsWindows","name","networkSecurityGroupId","premiumDataDiskStorageAccount","premiumDataDisks","provisioningState","publicIpId","support","tags","type","uniqueIdentifier","vaultName","vmCreationResourceGroup"})
+    @OutputCustomType.Constructor
     private GetLabResult(
-        @Nullable LabAnnouncementPropertiesResponse announcement,
-        String artifactsStorageAccount,
-        String createdDate,
-        String defaultPremiumStorageAccount,
-        String defaultStorageAccount,
-        @Nullable String environmentPermission,
-        @Nullable Map<String,String> extendedProperties,
-        String id,
-        @Nullable String labStorageType,
-        String loadBalancerId,
-        @Nullable String location,
-        @Nullable List<String> mandatoryArtifactsResourceIdsLinux,
-        @Nullable List<String> mandatoryArtifactsResourceIdsWindows,
-        String name,
-        String networkSecurityGroupId,
-        String premiumDataDiskStorageAccount,
-        @Nullable String premiumDataDisks,
-        String provisioningState,
-        String publicIpId,
-        @Nullable LabSupportPropertiesResponse support,
-        @Nullable Map<String,String> tags,
-        String type,
-        String uniqueIdentifier,
-        String vaultName,
-        String vmCreationResourceGroup) {
+        @OutputCustomType.Parameter("announcement") @Nullable LabAnnouncementPropertiesResponse announcement,
+        @OutputCustomType.Parameter("artifactsStorageAccount") String artifactsStorageAccount,
+        @OutputCustomType.Parameter("createdDate") String createdDate,
+        @OutputCustomType.Parameter("defaultPremiumStorageAccount") String defaultPremiumStorageAccount,
+        @OutputCustomType.Parameter("defaultStorageAccount") String defaultStorageAccount,
+        @OutputCustomType.Parameter("environmentPermission") @Nullable String environmentPermission,
+        @OutputCustomType.Parameter("extendedProperties") @Nullable Map<String,String> extendedProperties,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("labStorageType") @Nullable String labStorageType,
+        @OutputCustomType.Parameter("loadBalancerId") String loadBalancerId,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("mandatoryArtifactsResourceIdsLinux") @Nullable List<String> mandatoryArtifactsResourceIdsLinux,
+        @OutputCustomType.Parameter("mandatoryArtifactsResourceIdsWindows") @Nullable List<String> mandatoryArtifactsResourceIdsWindows,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("networkSecurityGroupId") String networkSecurityGroupId,
+        @OutputCustomType.Parameter("premiumDataDiskStorageAccount") String premiumDataDiskStorageAccount,
+        @OutputCustomType.Parameter("premiumDataDisks") @Nullable String premiumDataDisks,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("publicIpId") String publicIpId,
+        @OutputCustomType.Parameter("support") @Nullable LabSupportPropertiesResponse support,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("uniqueIdentifier") String uniqueIdentifier,
+        @OutputCustomType.Parameter("vaultName") String vaultName,
+        @OutputCustomType.Parameter("vmCreationResourceGroup") String vmCreationResourceGroup) {
         this.announcement = announcement;
         this.artifactsStorageAccount = artifactsStorageAccount;
         this.createdDate = createdDate;

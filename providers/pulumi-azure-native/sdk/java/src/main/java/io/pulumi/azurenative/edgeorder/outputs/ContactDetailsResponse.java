@@ -38,13 +38,13 @@ public final class ContactDetailsResponse {
      */
     private final @Nullable String phoneExtension;
 
-    @OutputCustomType.Constructor({"contactName","emailList","mobile","phone","phoneExtension"})
+    @OutputCustomType.Constructor
     private ContactDetailsResponse(
-        String contactName,
-        List<String> emailList,
-        @Nullable String mobile,
-        String phone,
-        @Nullable String phoneExtension) {
+        @OutputCustomType.Parameter("contactName") String contactName,
+        @OutputCustomType.Parameter("emailList") List<String> emailList,
+        @OutputCustomType.Parameter("mobile") @Nullable String mobile,
+        @OutputCustomType.Parameter("phone") String phone,
+        @OutputCustomType.Parameter("phoneExtension") @Nullable String phoneExtension) {
         this.contactName = contactName;
         this.emailList = emailList;
         this.mobile = mobile;

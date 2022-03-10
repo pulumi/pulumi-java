@@ -31,12 +31,12 @@ public final class PlanQuantityResponse {
      */
     private final String overageMeter;
 
-    @OutputCustomType.Constructor({"allowance","amount","includedQuantityMeter","overageMeter"})
+    @OutputCustomType.Constructor
     private PlanQuantityResponse(
-        Double allowance,
-        Double amount,
-        String includedQuantityMeter,
-        String overageMeter) {
+        @OutputCustomType.Parameter("allowance") Double allowance,
+        @OutputCustomType.Parameter("amount") Double amount,
+        @OutputCustomType.Parameter("includedQuantityMeter") String includedQuantityMeter,
+        @OutputCustomType.Parameter("overageMeter") String overageMeter) {
         this.allowance = allowance;
         this.amount = amount;
         this.includedQuantityMeter = includedQuantityMeter;

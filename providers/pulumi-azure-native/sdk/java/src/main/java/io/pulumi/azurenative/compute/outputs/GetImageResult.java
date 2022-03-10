@@ -66,18 +66,18 @@ public final class GetImageResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"extendedLocation","hyperVGeneration","id","location","name","provisioningState","sourceVirtualMachine","storageProfile","tags","type"})
+    @OutputCustomType.Constructor
     private GetImageResult(
-        @Nullable ExtendedLocationResponse extendedLocation,
-        @Nullable String hyperVGeneration,
-        String id,
-        String location,
-        String name,
-        String provisioningState,
-        @Nullable SubResourceResponse sourceVirtualMachine,
-        @Nullable ImageStorageProfileResponse storageProfile,
-        @Nullable Map<String,String> tags,
-        String type) {
+        @OutputCustomType.Parameter("extendedLocation") @Nullable ExtendedLocationResponse extendedLocation,
+        @OutputCustomType.Parameter("hyperVGeneration") @Nullable String hyperVGeneration,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("sourceVirtualMachine") @Nullable SubResourceResponse sourceVirtualMachine,
+        @OutputCustomType.Parameter("storageProfile") @Nullable ImageStorageProfileResponse storageProfile,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type) {
         this.extendedLocation = extendedLocation;
         this.hyperVGeneration = hyperVGeneration;
         this.id = id;

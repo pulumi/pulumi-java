@@ -22,10 +22,10 @@ public final class PeriodicModePropertiesResponse {
      */
     private final @Nullable Integer backupRetentionIntervalInHours;
 
-    @OutputCustomType.Constructor({"backupIntervalInMinutes","backupRetentionIntervalInHours"})
+    @OutputCustomType.Constructor
     private PeriodicModePropertiesResponse(
-        @Nullable Integer backupIntervalInMinutes,
-        @Nullable Integer backupRetentionIntervalInHours) {
+        @OutputCustomType.Parameter("backupIntervalInMinutes") @Nullable Integer backupIntervalInMinutes,
+        @OutputCustomType.Parameter("backupRetentionIntervalInHours") @Nullable Integer backupRetentionIntervalInHours) {
         this.backupIntervalInMinutes = backupIntervalInMinutes;
         this.backupRetentionIntervalInHours = backupRetentionIntervalInHours;
     }

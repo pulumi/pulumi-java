@@ -35,13 +35,13 @@ public final class BatchConfigurationPropertiesResponse {
      */
     private final BatchReleaseCriteriaResponse releaseCriteria;
 
-    @OutputCustomType.Constructor({"batchGroupName","changedTime","createdTime","metadata","releaseCriteria"})
+    @OutputCustomType.Constructor
     private BatchConfigurationPropertiesResponse(
-        String batchGroupName,
-        @Nullable String changedTime,
-        @Nullable String createdTime,
-        @Nullable Object metadata,
-        BatchReleaseCriteriaResponse releaseCriteria) {
+        @OutputCustomType.Parameter("batchGroupName") String batchGroupName,
+        @OutputCustomType.Parameter("changedTime") @Nullable String changedTime,
+        @OutputCustomType.Parameter("createdTime") @Nullable String createdTime,
+        @OutputCustomType.Parameter("metadata") @Nullable Object metadata,
+        @OutputCustomType.Parameter("releaseCriteria") BatchReleaseCriteriaResponse releaseCriteria) {
         this.batchGroupName = batchGroupName;
         this.changedTime = changedTime;
         this.createdTime = createdTime;

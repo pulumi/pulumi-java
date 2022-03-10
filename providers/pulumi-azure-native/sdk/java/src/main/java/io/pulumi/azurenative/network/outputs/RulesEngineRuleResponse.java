@@ -41,13 +41,13 @@ public final class RulesEngineRuleResponse {
      */
     private final Integer priority;
 
-    @OutputCustomType.Constructor({"action","matchConditions","matchProcessingBehavior","name","priority"})
+    @OutputCustomType.Constructor
     private RulesEngineRuleResponse(
-        RulesEngineActionResponse action,
-        @Nullable List<RulesEngineMatchConditionResponse> matchConditions,
-        @Nullable String matchProcessingBehavior,
-        String name,
-        Integer priority) {
+        @OutputCustomType.Parameter("action") RulesEngineActionResponse action,
+        @OutputCustomType.Parameter("matchConditions") @Nullable List<RulesEngineMatchConditionResponse> matchConditions,
+        @OutputCustomType.Parameter("matchProcessingBehavior") @Nullable String matchProcessingBehavior,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("priority") Integer priority) {
         this.action = action;
         this.matchConditions = matchConditions;
         this.matchProcessingBehavior = matchProcessingBehavior;

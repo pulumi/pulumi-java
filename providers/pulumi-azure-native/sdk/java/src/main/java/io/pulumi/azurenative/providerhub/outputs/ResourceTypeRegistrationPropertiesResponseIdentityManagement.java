@@ -14,10 +14,10 @@ public final class ResourceTypeRegistrationPropertiesResponseIdentityManagement 
     private final @Nullable String applicationId;
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor({"applicationId","type"})
+    @OutputCustomType.Constructor
     private ResourceTypeRegistrationPropertiesResponseIdentityManagement(
-        @Nullable String applicationId,
-        @Nullable String type) {
+        @OutputCustomType.Parameter("applicationId") @Nullable String applicationId,
+        @OutputCustomType.Parameter("type") @Nullable String type) {
         this.applicationId = applicationId;
         this.type = type;
     }

@@ -35,12 +35,12 @@ public final class VpnClientConnectionHealthResponse {
      */
     private final @Nullable Integer vpnClientConnectionsCount;
 
-    @OutputCustomType.Constructor({"allocatedIpAddresses","totalEgressBytesTransferred","totalIngressBytesTransferred","vpnClientConnectionsCount"})
+    @OutputCustomType.Constructor
     private VpnClientConnectionHealthResponse(
-        @Nullable List<String> allocatedIpAddresses,
-        Double totalEgressBytesTransferred,
-        Double totalIngressBytesTransferred,
-        @Nullable Integer vpnClientConnectionsCount) {
+        @OutputCustomType.Parameter("allocatedIpAddresses") @Nullable List<String> allocatedIpAddresses,
+        @OutputCustomType.Parameter("totalEgressBytesTransferred") Double totalEgressBytesTransferred,
+        @OutputCustomType.Parameter("totalIngressBytesTransferred") Double totalIngressBytesTransferred,
+        @OutputCustomType.Parameter("vpnClientConnectionsCount") @Nullable Integer vpnClientConnectionsCount) {
         this.allocatedIpAddresses = allocatedIpAddresses;
         this.totalEgressBytesTransferred = totalEgressBytesTransferred;
         this.totalIngressBytesTransferred = totalIngressBytesTransferred;

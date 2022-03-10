@@ -54,16 +54,16 @@ public final class DataControllerPropertiesResponse {
      */
     private final @Nullable UploadWatermarkResponse uploadWatermark;
 
-    @OutputCustomType.Constructor({"basicLoginInformation","k8sRaw","lastUploadedDate","logAnalyticsWorkspaceConfig","onPremiseProperty","provisioningState","uploadServicePrincipal","uploadWatermark"})
+    @OutputCustomType.Constructor
     private DataControllerPropertiesResponse(
-        @Nullable BasicLoginInformationResponse basicLoginInformation,
-        @Nullable Object k8sRaw,
-        @Nullable String lastUploadedDate,
-        @Nullable LogAnalyticsWorkspaceConfigResponse logAnalyticsWorkspaceConfig,
-        @Nullable OnPremisePropertyResponse onPremiseProperty,
-        String provisioningState,
-        @Nullable UploadServicePrincipalResponse uploadServicePrincipal,
-        @Nullable UploadWatermarkResponse uploadWatermark) {
+        @OutputCustomType.Parameter("basicLoginInformation") @Nullable BasicLoginInformationResponse basicLoginInformation,
+        @OutputCustomType.Parameter("k8sRaw") @Nullable Object k8sRaw,
+        @OutputCustomType.Parameter("lastUploadedDate") @Nullable String lastUploadedDate,
+        @OutputCustomType.Parameter("logAnalyticsWorkspaceConfig") @Nullable LogAnalyticsWorkspaceConfigResponse logAnalyticsWorkspaceConfig,
+        @OutputCustomType.Parameter("onPremiseProperty") @Nullable OnPremisePropertyResponse onPremiseProperty,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("uploadServicePrincipal") @Nullable UploadServicePrincipalResponse uploadServicePrincipal,
+        @OutputCustomType.Parameter("uploadWatermark") @Nullable UploadWatermarkResponse uploadWatermark) {
         this.basicLoginInformation = basicLoginInformation;
         this.k8sRaw = k8sRaw;
         this.lastUploadedDate = lastUploadedDate;

@@ -53,16 +53,16 @@ public final class GetClusterResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"clusterId","clusterSize","hosts","id","name","provisioningState","sku","type"})
+    @OutputCustomType.Constructor
     private GetClusterResult(
-        Integer clusterId,
-        Integer clusterSize,
-        List<String> hosts,
-        String id,
-        String name,
-        String provisioningState,
-        SkuResponse sku,
-        String type) {
+        @OutputCustomType.Parameter("clusterId") Integer clusterId,
+        @OutputCustomType.Parameter("clusterSize") Integer clusterSize,
+        @OutputCustomType.Parameter("hosts") List<String> hosts,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("sku") SkuResponse sku,
+        @OutputCustomType.Parameter("type") String type) {
         this.clusterId = clusterId;
         this.clusterSize = clusterSize;
         this.hosts = hosts;

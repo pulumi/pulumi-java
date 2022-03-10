@@ -28,11 +28,11 @@ public final class ArtifactDeploymentStatusPropertiesResponse {
      */
     private final @Nullable Integer totalArtifacts;
 
-    @OutputCustomType.Constructor({"artifactsApplied","deploymentStatus","totalArtifacts"})
+    @OutputCustomType.Constructor
     private ArtifactDeploymentStatusPropertiesResponse(
-        @Nullable Integer artifactsApplied,
-        @Nullable String deploymentStatus,
-        @Nullable Integer totalArtifacts) {
+        @OutputCustomType.Parameter("artifactsApplied") @Nullable Integer artifactsApplied,
+        @OutputCustomType.Parameter("deploymentStatus") @Nullable String deploymentStatus,
+        @OutputCustomType.Parameter("totalArtifacts") @Nullable Integer totalArtifacts) {
         this.artifactsApplied = artifactsApplied;
         this.deploymentStatus = deploymentStatus;
         this.totalArtifacts = totalArtifacts;

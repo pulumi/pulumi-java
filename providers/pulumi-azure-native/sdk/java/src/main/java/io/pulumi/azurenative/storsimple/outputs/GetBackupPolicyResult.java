@@ -69,19 +69,19 @@ public final class GetBackupPolicyResult {
      */
     private final List<String> volumeIds;
 
-    @OutputCustomType.Constructor({"backupPolicyCreationType","id","kind","lastBackupTime","name","nextBackupTime","scheduledBackupStatus","schedulesCount","ssmHostName","type","volumeIds"})
+    @OutputCustomType.Constructor
     private GetBackupPolicyResult(
-        String backupPolicyCreationType,
-        String id,
-        @Nullable String kind,
-        String lastBackupTime,
-        String name,
-        String nextBackupTime,
-        String scheduledBackupStatus,
-        Double schedulesCount,
-        String ssmHostName,
-        String type,
-        List<String> volumeIds) {
+        @OutputCustomType.Parameter("backupPolicyCreationType") String backupPolicyCreationType,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("kind") @Nullable String kind,
+        @OutputCustomType.Parameter("lastBackupTime") String lastBackupTime,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("nextBackupTime") String nextBackupTime,
+        @OutputCustomType.Parameter("scheduledBackupStatus") String scheduledBackupStatus,
+        @OutputCustomType.Parameter("schedulesCount") Double schedulesCount,
+        @OutputCustomType.Parameter("ssmHostName") String ssmHostName,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("volumeIds") List<String> volumeIds) {
         this.backupPolicyCreationType = backupPolicyCreationType;
         this.id = id;
         this.kind = kind;

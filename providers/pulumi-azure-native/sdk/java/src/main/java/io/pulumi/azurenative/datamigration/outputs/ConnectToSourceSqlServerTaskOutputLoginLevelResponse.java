@@ -48,15 +48,15 @@ public final class ConnectToSourceSqlServerTaskOutputLoginLevelResponse {
      */
     private final String resultType;
 
-    @OutputCustomType.Constructor({"defaultDatabase","id","isEnabled","loginType","migrationEligibility","name","resultType"})
+    @OutputCustomType.Constructor
     private ConnectToSourceSqlServerTaskOutputLoginLevelResponse(
-        String defaultDatabase,
-        String id,
-        Boolean isEnabled,
-        String loginType,
-        MigrationEligibilityInfoResponse migrationEligibility,
-        String name,
-        String resultType) {
+        @OutputCustomType.Parameter("defaultDatabase") String defaultDatabase,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("isEnabled") Boolean isEnabled,
+        @OutputCustomType.Parameter("loginType") String loginType,
+        @OutputCustomType.Parameter("migrationEligibility") MigrationEligibilityInfoResponse migrationEligibility,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("resultType") String resultType) {
         this.defaultDatabase = defaultDatabase;
         this.id = id;
         this.isEnabled = isEnabled;

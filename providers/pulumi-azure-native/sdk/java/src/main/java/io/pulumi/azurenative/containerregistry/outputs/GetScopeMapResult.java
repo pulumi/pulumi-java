@@ -56,16 +56,16 @@ public final class GetScopeMapResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"actions","creationDate","description","id","name","provisioningState","systemData","type"})
+    @OutputCustomType.Constructor
     private GetScopeMapResult(
-        List<String> actions,
-        String creationDate,
-        @Nullable String description,
-        String id,
-        String name,
-        String provisioningState,
-        SystemDataResponse systemData,
-        String type) {
+        @OutputCustomType.Parameter("actions") List<String> actions,
+        @OutputCustomType.Parameter("creationDate") String creationDate,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("type") String type) {
         this.actions = actions;
         this.creationDate = creationDate;
         this.description = description;

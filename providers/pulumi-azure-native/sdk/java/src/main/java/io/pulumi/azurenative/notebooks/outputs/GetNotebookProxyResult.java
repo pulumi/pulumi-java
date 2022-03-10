@@ -63,18 +63,18 @@ public final class GetNotebookProxyResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"hostname","id","name","publicDns","publicNetworkAccess","region","resourceId","secondaryAppId","systemData","type"})
+    @OutputCustomType.Constructor
     private GetNotebookProxyResult(
-        @Nullable String hostname,
-        String id,
-        String name,
-        @Nullable String publicDns,
-        @Nullable String publicNetworkAccess,
-        @Nullable String region,
-        String resourceId,
-        @Nullable String secondaryAppId,
-        @Nullable NotebookResourceSystemDataResponse systemData,
-        String type) {
+        @OutputCustomType.Parameter("hostname") @Nullable String hostname,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("publicDns") @Nullable String publicDns,
+        @OutputCustomType.Parameter("publicNetworkAccess") @Nullable String publicNetworkAccess,
+        @OutputCustomType.Parameter("region") @Nullable String region,
+        @OutputCustomType.Parameter("resourceId") String resourceId,
+        @OutputCustomType.Parameter("secondaryAppId") @Nullable String secondaryAppId,
+        @OutputCustomType.Parameter("systemData") @Nullable NotebookResourceSystemDataResponse systemData,
+        @OutputCustomType.Parameter("type") String type) {
         this.hostname = hostname;
         this.id = id;
         this.name = name;

@@ -67,19 +67,19 @@ public final class GetAFDCustomDomainResult {
      */
     private final DomainValidationPropertiesResponse validationProperties;
 
-    @OutputCustomType.Constructor({"azureDnsZone","deploymentStatus","domainValidationState","hostName","id","name","provisioningState","systemData","tlsSettings","type","validationProperties"})
+    @OutputCustomType.Constructor
     private GetAFDCustomDomainResult(
-        @Nullable ResourceReferenceResponse azureDnsZone,
-        String deploymentStatus,
-        String domainValidationState,
-        String hostName,
-        String id,
-        String name,
-        String provisioningState,
-        SystemDataResponse systemData,
-        @Nullable AFDDomainHttpsParametersResponse tlsSettings,
-        String type,
-        DomainValidationPropertiesResponse validationProperties) {
+        @OutputCustomType.Parameter("azureDnsZone") @Nullable ResourceReferenceResponse azureDnsZone,
+        @OutputCustomType.Parameter("deploymentStatus") String deploymentStatus,
+        @OutputCustomType.Parameter("domainValidationState") String domainValidationState,
+        @OutputCustomType.Parameter("hostName") String hostName,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("tlsSettings") @Nullable AFDDomainHttpsParametersResponse tlsSettings,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("validationProperties") DomainValidationPropertiesResponse validationProperties) {
         this.azureDnsZone = azureDnsZone;
         this.deploymentStatus = deploymentStatus;
         this.domainValidationState = domainValidationState;

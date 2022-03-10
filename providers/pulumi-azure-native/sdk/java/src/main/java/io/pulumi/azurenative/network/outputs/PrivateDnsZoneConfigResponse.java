@@ -29,11 +29,11 @@ public final class PrivateDnsZoneConfigResponse {
      */
     private final List<RecordSetResponse> recordSets;
 
-    @OutputCustomType.Constructor({"name","privateDnsZoneId","recordSets"})
+    @OutputCustomType.Constructor
     private PrivateDnsZoneConfigResponse(
-        @Nullable String name,
-        @Nullable String privateDnsZoneId,
-        List<RecordSetResponse> recordSets) {
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("privateDnsZoneId") @Nullable String privateDnsZoneId,
+        @OutputCustomType.Parameter("recordSets") List<RecordSetResponse> recordSets) {
         this.name = name;
         this.privateDnsZoneId = privateDnsZoneId;
         this.recordSets = recordSets;

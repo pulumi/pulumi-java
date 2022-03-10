@@ -33,12 +33,12 @@ public final class EncryptionConfigurationResponse {
      */
     private final String vaultBaseUrl;
 
-    @OutputCustomType.Constructor({"identity","keyName","keyVersion","vaultBaseUrl"})
+    @OutputCustomType.Constructor
     private EncryptionConfigurationResponse(
-        @Nullable CMKIdentityDefinitionResponse identity,
-        String keyName,
-        @Nullable String keyVersion,
-        String vaultBaseUrl) {
+        @OutputCustomType.Parameter("identity") @Nullable CMKIdentityDefinitionResponse identity,
+        @OutputCustomType.Parameter("keyName") String keyName,
+        @OutputCustomType.Parameter("keyVersion") @Nullable String keyVersion,
+        @OutputCustomType.Parameter("vaultBaseUrl") String vaultBaseUrl) {
         this.identity = identity;
         this.keyName = keyName;
         this.keyVersion = keyVersion;

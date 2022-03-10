@@ -32,12 +32,12 @@ public final class OSProfileResponse {
      */
     private final String version;
 
-    @OutputCustomType.Constructor({"computerName","osType","sshPublicKey","version"})
+    @OutputCustomType.Constructor
     private OSProfileResponse(
-        @Nullable String computerName,
-        String osType,
-        @Nullable String sshPublicKey,
-        String version) {
+        @OutputCustomType.Parameter("computerName") @Nullable String computerName,
+        @OutputCustomType.Parameter("osType") String osType,
+        @OutputCustomType.Parameter("sshPublicKey") @Nullable String sshPublicKey,
+        @OutputCustomType.Parameter("version") String version) {
         this.computerName = computerName;
         this.osType = osType;
         this.sshPublicKey = sshPublicKey;

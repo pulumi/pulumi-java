@@ -24,10 +24,10 @@ public final class FirewallPolicyLogAnalyticsResourcesResponse {
      */
     private final @Nullable List<FirewallPolicyLogAnalyticsWorkspaceResponse> workspaces;
 
-    @OutputCustomType.Constructor({"defaultWorkspaceId","workspaces"})
+    @OutputCustomType.Constructor
     private FirewallPolicyLogAnalyticsResourcesResponse(
-        @Nullable SubResourceResponse defaultWorkspaceId,
-        @Nullable List<FirewallPolicyLogAnalyticsWorkspaceResponse> workspaces) {
+        @OutputCustomType.Parameter("defaultWorkspaceId") @Nullable SubResourceResponse defaultWorkspaceId,
+        @OutputCustomType.Parameter("workspaces") @Nullable List<FirewallPolicyLogAnalyticsWorkspaceResponse> workspaces) {
         this.defaultWorkspaceId = defaultWorkspaceId;
         this.workspaces = workspaces;
     }

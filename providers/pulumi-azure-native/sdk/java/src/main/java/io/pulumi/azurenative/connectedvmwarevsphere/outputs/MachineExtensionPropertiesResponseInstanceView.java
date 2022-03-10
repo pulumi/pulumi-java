@@ -33,12 +33,12 @@ public final class MachineExtensionPropertiesResponseInstanceView {
      */
     private final String typeHandlerVersion;
 
-    @OutputCustomType.Constructor({"name","status","type","typeHandlerVersion"})
+    @OutputCustomType.Constructor
     private MachineExtensionPropertiesResponseInstanceView(
-        String name,
-        @Nullable MachineExtensionInstanceViewResponseStatus status,
-        String type,
-        String typeHandlerVersion) {
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("status") @Nullable MachineExtensionInstanceViewResponseStatus status,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("typeHandlerVersion") String typeHandlerVersion) {
         this.name = name;
         this.status = status;
         this.type = type;

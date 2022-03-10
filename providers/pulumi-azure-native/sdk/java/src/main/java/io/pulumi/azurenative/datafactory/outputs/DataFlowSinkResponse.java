@@ -45,14 +45,14 @@ public final class DataFlowSinkResponse {
      */
     private final @Nullable LinkedServiceReferenceResponse schemaLinkedService;
 
-    @OutputCustomType.Constructor({"dataset","description","flowlet","linkedService","name","schemaLinkedService"})
+    @OutputCustomType.Constructor
     private DataFlowSinkResponse(
-        @Nullable DatasetReferenceResponse dataset,
-        @Nullable String description,
-        @Nullable DataFlowReferenceResponse flowlet,
-        @Nullable LinkedServiceReferenceResponse linkedService,
-        String name,
-        @Nullable LinkedServiceReferenceResponse schemaLinkedService) {
+        @OutputCustomType.Parameter("dataset") @Nullable DatasetReferenceResponse dataset,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("flowlet") @Nullable DataFlowReferenceResponse flowlet,
+        @OutputCustomType.Parameter("linkedService") @Nullable LinkedServiceReferenceResponse linkedService,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("schemaLinkedService") @Nullable LinkedServiceReferenceResponse schemaLinkedService) {
         this.dataset = dataset;
         this.description = description;
         this.flowlet = flowlet;

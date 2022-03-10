@@ -43,14 +43,14 @@ public final class SubnetOverrideResponse {
      */
     private final @Nullable String virtualNetworkPoolName;
 
-    @OutputCustomType.Constructor({"labSubnetName","resourceId","sharedPublicIpAddressConfiguration","useInVmCreationPermission","usePublicIpAddressPermission","virtualNetworkPoolName"})
+    @OutputCustomType.Constructor
     private SubnetOverrideResponse(
-        @Nullable String labSubnetName,
-        @Nullable String resourceId,
-        @Nullable SubnetSharedPublicIpAddressConfigurationResponse sharedPublicIpAddressConfiguration,
-        @Nullable String useInVmCreationPermission,
-        @Nullable String usePublicIpAddressPermission,
-        @Nullable String virtualNetworkPoolName) {
+        @OutputCustomType.Parameter("labSubnetName") @Nullable String labSubnetName,
+        @OutputCustomType.Parameter("resourceId") @Nullable String resourceId,
+        @OutputCustomType.Parameter("sharedPublicIpAddressConfiguration") @Nullable SubnetSharedPublicIpAddressConfigurationResponse sharedPublicIpAddressConfiguration,
+        @OutputCustomType.Parameter("useInVmCreationPermission") @Nullable String useInVmCreationPermission,
+        @OutputCustomType.Parameter("usePublicIpAddressPermission") @Nullable String usePublicIpAddressPermission,
+        @OutputCustomType.Parameter("virtualNetworkPoolName") @Nullable String virtualNetworkPoolName) {
         this.labSubnetName = labSubnetName;
         this.resourceId = resourceId;
         this.sharedPublicIpAddressConfiguration = sharedPublicIpAddressConfiguration;

@@ -50,15 +50,15 @@ public final class ManagedIntegrationRuntimeStatusResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"createTime","dataFactoryName","lastOperation","nodes","otherErrors","state","type"})
+    @OutputCustomType.Constructor
     private ManagedIntegrationRuntimeStatusResponse(
-        String createTime,
-        String dataFactoryName,
-        ManagedIntegrationRuntimeOperationResultResponse lastOperation,
-        List<ManagedIntegrationRuntimeNodeResponse> nodes,
-        List<ManagedIntegrationRuntimeErrorResponse> otherErrors,
-        String state,
-        String type) {
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("dataFactoryName") String dataFactoryName,
+        @OutputCustomType.Parameter("lastOperation") ManagedIntegrationRuntimeOperationResultResponse lastOperation,
+        @OutputCustomType.Parameter("nodes") List<ManagedIntegrationRuntimeNodeResponse> nodes,
+        @OutputCustomType.Parameter("otherErrors") List<ManagedIntegrationRuntimeErrorResponse> otherErrors,
+        @OutputCustomType.Parameter("state") String state,
+        @OutputCustomType.Parameter("type") String type) {
         this.createTime = createTime;
         this.dataFactoryName = dataFactoryName;
         this.lastOperation = lastOperation;

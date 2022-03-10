@@ -28,11 +28,11 @@ public final class ManagementPolicyFilterResponse {
      */
     private final @Nullable List<String> prefixMatch;
 
-    @OutputCustomType.Constructor({"blobIndexMatch","blobTypes","prefixMatch"})
+    @OutputCustomType.Constructor
     private ManagementPolicyFilterResponse(
-        @Nullable List<TagFilterResponse> blobIndexMatch,
-        List<String> blobTypes,
-        @Nullable List<String> prefixMatch) {
+        @OutputCustomType.Parameter("blobIndexMatch") @Nullable List<TagFilterResponse> blobIndexMatch,
+        @OutputCustomType.Parameter("blobTypes") List<String> blobTypes,
+        @OutputCustomType.Parameter("prefixMatch") @Nullable List<String> prefixMatch) {
         this.blobIndexMatch = blobIndexMatch;
         this.blobTypes = blobTypes;
         this.prefixMatch = prefixMatch;

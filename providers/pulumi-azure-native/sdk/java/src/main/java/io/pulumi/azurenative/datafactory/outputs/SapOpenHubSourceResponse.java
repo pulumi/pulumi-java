@@ -69,19 +69,19 @@ public final class SapOpenHubSourceResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"additionalColumns","baseRequestId","customRfcReadTableFunctionModule","disableMetricsCollection","excludeLastRequest","maxConcurrentConnections","queryTimeout","sapDataColumnDelimiter","sourceRetryCount","sourceRetryWait","type"})
+    @OutputCustomType.Constructor
     private SapOpenHubSourceResponse(
-        @Nullable Object additionalColumns,
-        @Nullable Object baseRequestId,
-        @Nullable Object customRfcReadTableFunctionModule,
-        @Nullable Object disableMetricsCollection,
-        @Nullable Object excludeLastRequest,
-        @Nullable Object maxConcurrentConnections,
-        @Nullable Object queryTimeout,
-        @Nullable Object sapDataColumnDelimiter,
-        @Nullable Object sourceRetryCount,
-        @Nullable Object sourceRetryWait,
-        String type) {
+        @OutputCustomType.Parameter("additionalColumns") @Nullable Object additionalColumns,
+        @OutputCustomType.Parameter("baseRequestId") @Nullable Object baseRequestId,
+        @OutputCustomType.Parameter("customRfcReadTableFunctionModule") @Nullable Object customRfcReadTableFunctionModule,
+        @OutputCustomType.Parameter("disableMetricsCollection") @Nullable Object disableMetricsCollection,
+        @OutputCustomType.Parameter("excludeLastRequest") @Nullable Object excludeLastRequest,
+        @OutputCustomType.Parameter("maxConcurrentConnections") @Nullable Object maxConcurrentConnections,
+        @OutputCustomType.Parameter("queryTimeout") @Nullable Object queryTimeout,
+        @OutputCustomType.Parameter("sapDataColumnDelimiter") @Nullable Object sapDataColumnDelimiter,
+        @OutputCustomType.Parameter("sourceRetryCount") @Nullable Object sourceRetryCount,
+        @OutputCustomType.Parameter("sourceRetryWait") @Nullable Object sourceRetryWait,
+        @OutputCustomType.Parameter("type") String type) {
         this.additionalColumns = additionalColumns;
         this.baseRequestId = baseRequestId;
         this.customRfcReadTableFunctionModule = customRfcReadTableFunctionModule;

@@ -39,13 +39,13 @@ public final class WebChatChannelResponse {
      */
     private final String provisioningState;
 
-    @OutputCustomType.Constructor({"channelName","etag","location","properties","provisioningState"})
+    @OutputCustomType.Constructor
     private WebChatChannelResponse(
-        String channelName,
-        @Nullable String etag,
-        @Nullable String location,
-        @Nullable WebChatChannelPropertiesResponse properties,
-        String provisioningState) {
+        @OutputCustomType.Parameter("channelName") String channelName,
+        @OutputCustomType.Parameter("etag") @Nullable String etag,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("properties") @Nullable WebChatChannelPropertiesResponse properties,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState) {
         this.channelName = channelName;
         this.etag = etag;
         this.location = location;

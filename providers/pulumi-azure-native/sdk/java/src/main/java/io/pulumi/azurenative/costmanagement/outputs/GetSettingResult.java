@@ -49,15 +49,15 @@ public final class GetSettingResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"cache","id","kind","name","scope","startOn","type"})
+    @OutputCustomType.Constructor
     private GetSettingResult(
-        @Nullable List<SettingsPropertiesResponseCache> cache,
-        String id,
-        String kind,
-        String name,
-        String scope,
-        @Nullable String startOn,
-        String type) {
+        @OutputCustomType.Parameter("cache") @Nullable List<SettingsPropertiesResponseCache> cache,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("scope") String scope,
+        @OutputCustomType.Parameter("startOn") @Nullable String startOn,
+        @OutputCustomType.Parameter("type") String type) {
         this.cache = cache;
         this.id = id;
         this.kind = kind;

@@ -32,12 +32,12 @@ public final class AksNetworkingConfigurationResponse {
      */
     private final @Nullable String subnetId;
 
-    @OutputCustomType.Constructor({"dnsServiceIP","dockerBridgeCidr","serviceCidr","subnetId"})
+    @OutputCustomType.Constructor
     private AksNetworkingConfigurationResponse(
-        @Nullable String dnsServiceIP,
-        @Nullable String dockerBridgeCidr,
-        @Nullable String serviceCidr,
-        @Nullable String subnetId) {
+        @OutputCustomType.Parameter("dnsServiceIP") @Nullable String dnsServiceIP,
+        @OutputCustomType.Parameter("dockerBridgeCidr") @Nullable String dockerBridgeCidr,
+        @OutputCustomType.Parameter("serviceCidr") @Nullable String serviceCidr,
+        @OutputCustomType.Parameter("subnetId") @Nullable String subnetId) {
         this.dnsServiceIP = dnsServiceIP;
         this.dockerBridgeCidr = dockerBridgeCidr;
         this.serviceCidr = serviceCidr;

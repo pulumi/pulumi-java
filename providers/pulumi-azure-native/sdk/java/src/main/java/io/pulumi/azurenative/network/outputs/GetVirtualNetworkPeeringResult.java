@@ -91,23 +91,23 @@ public final class GetVirtualNetworkPeeringResult {
      */
     private final @Nullable Boolean useRemoteGateways;
 
-    @OutputCustomType.Constructor({"allowForwardedTraffic","allowGatewayTransit","allowVirtualNetworkAccess","doNotVerifyRemoteGateways","etag","id","name","peeringState","provisioningState","remoteAddressSpace","remoteBgpCommunities","remoteVirtualNetwork","resourceGuid","type","useRemoteGateways"})
+    @OutputCustomType.Constructor
     private GetVirtualNetworkPeeringResult(
-        @Nullable Boolean allowForwardedTraffic,
-        @Nullable Boolean allowGatewayTransit,
-        @Nullable Boolean allowVirtualNetworkAccess,
-        @Nullable Boolean doNotVerifyRemoteGateways,
-        String etag,
-        @Nullable String id,
-        @Nullable String name,
-        @Nullable String peeringState,
-        String provisioningState,
-        @Nullable AddressSpaceResponse remoteAddressSpace,
-        @Nullable VirtualNetworkBgpCommunitiesResponse remoteBgpCommunities,
-        @Nullable SubResourceResponse remoteVirtualNetwork,
-        String resourceGuid,
-        @Nullable String type,
-        @Nullable Boolean useRemoteGateways) {
+        @OutputCustomType.Parameter("allowForwardedTraffic") @Nullable Boolean allowForwardedTraffic,
+        @OutputCustomType.Parameter("allowGatewayTransit") @Nullable Boolean allowGatewayTransit,
+        @OutputCustomType.Parameter("allowVirtualNetworkAccess") @Nullable Boolean allowVirtualNetworkAccess,
+        @OutputCustomType.Parameter("doNotVerifyRemoteGateways") @Nullable Boolean doNotVerifyRemoteGateways,
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("peeringState") @Nullable String peeringState,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("remoteAddressSpace") @Nullable AddressSpaceResponse remoteAddressSpace,
+        @OutputCustomType.Parameter("remoteBgpCommunities") @Nullable VirtualNetworkBgpCommunitiesResponse remoteBgpCommunities,
+        @OutputCustomType.Parameter("remoteVirtualNetwork") @Nullable SubResourceResponse remoteVirtualNetwork,
+        @OutputCustomType.Parameter("resourceGuid") String resourceGuid,
+        @OutputCustomType.Parameter("type") @Nullable String type,
+        @OutputCustomType.Parameter("useRemoteGateways") @Nullable Boolean useRemoteGateways) {
         this.allowForwardedTraffic = allowForwardedTraffic;
         this.allowGatewayTransit = allowGatewayTransit;
         this.allowVirtualNetworkAccess = allowVirtualNetworkAccess;

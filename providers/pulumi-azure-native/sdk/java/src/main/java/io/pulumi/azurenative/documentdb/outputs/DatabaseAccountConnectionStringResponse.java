@@ -20,10 +20,10 @@ public final class DatabaseAccountConnectionStringResponse {
      */
     private final String description;
 
-    @OutputCustomType.Constructor({"connectionString","description"})
+    @OutputCustomType.Constructor
     private DatabaseAccountConnectionStringResponse(
-        String connectionString,
-        String description) {
+        @OutputCustomType.Parameter("connectionString") String connectionString,
+        @OutputCustomType.Parameter("description") String description) {
         this.connectionString = connectionString;
         this.description = description;
     }

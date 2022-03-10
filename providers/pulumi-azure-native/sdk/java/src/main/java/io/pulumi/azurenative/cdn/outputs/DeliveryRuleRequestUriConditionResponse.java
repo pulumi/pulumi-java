@@ -22,10 +22,10 @@ public final class DeliveryRuleRequestUriConditionResponse {
      */
     private final RequestUriMatchConditionParametersResponse parameters;
 
-    @OutputCustomType.Constructor({"name","parameters"})
+    @OutputCustomType.Constructor
     private DeliveryRuleRequestUriConditionResponse(
-        String name,
-        RequestUriMatchConditionParametersResponse parameters) {
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("parameters") RequestUriMatchConditionParametersResponse parameters) {
         this.name = name;
         this.parameters = parameters;
     }

@@ -46,15 +46,15 @@ public final class ShareSubscriptionSynchronizationResponse {
      */
     private final String synchronizationMode;
 
-    @OutputCustomType.Constructor({"durationMs","endTime","message","startTime","status","synchronizationId","synchronizationMode"})
+    @OutputCustomType.Constructor
     private ShareSubscriptionSynchronizationResponse(
-        Integer durationMs,
-        String endTime,
-        String message,
-        String startTime,
-        String status,
-        String synchronizationId,
-        String synchronizationMode) {
+        @OutputCustomType.Parameter("durationMs") Integer durationMs,
+        @OutputCustomType.Parameter("endTime") String endTime,
+        @OutputCustomType.Parameter("message") String message,
+        @OutputCustomType.Parameter("startTime") String startTime,
+        @OutputCustomType.Parameter("status") String status,
+        @OutputCustomType.Parameter("synchronizationId") String synchronizationId,
+        @OutputCustomType.Parameter("synchronizationMode") String synchronizationMode) {
         this.durationMs = durationMs;
         this.endTime = endTime;
         this.message = message;

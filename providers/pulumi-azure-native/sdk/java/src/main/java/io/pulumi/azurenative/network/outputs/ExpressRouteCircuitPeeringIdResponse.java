@@ -17,8 +17,8 @@ public final class ExpressRouteCircuitPeeringIdResponse {
      */
     private final @Nullable String id;
 
-    @OutputCustomType.Constructor({"id"})
-    private ExpressRouteCircuitPeeringIdResponse(@Nullable String id) {
+    @OutputCustomType.Constructor
+    private ExpressRouteCircuitPeeringIdResponse(@OutputCustomType.Parameter("id") @Nullable String id) {
         this.id = id;
     }
 

@@ -28,11 +28,11 @@ public final class OutputPathAssetReferenceResponse {
      */
     private final String referenceType;
 
-    @OutputCustomType.Constructor({"jobId","path","referenceType"})
+    @OutputCustomType.Constructor
     private OutputPathAssetReferenceResponse(
-        @Nullable String jobId,
-        @Nullable String path,
-        String referenceType) {
+        @OutputCustomType.Parameter("jobId") @Nullable String jobId,
+        @OutputCustomType.Parameter("path") @Nullable String path,
+        @OutputCustomType.Parameter("referenceType") String referenceType) {
         this.jobId = jobId;
         this.path = path;
         this.referenceType = referenceType;

@@ -75,20 +75,20 @@ public final class GetDiagnosticResult {
      */
     private final @Nullable String verbosity;
 
-    @OutputCustomType.Constructor({"alwaysLog","backend","frontend","httpCorrelationProtocol","id","logClientIp","loggerId","name","operationNameFormat","sampling","type","verbosity"})
+    @OutputCustomType.Constructor
     private GetDiagnosticResult(
-        @Nullable String alwaysLog,
-        @Nullable PipelineDiagnosticSettingsResponse backend,
-        @Nullable PipelineDiagnosticSettingsResponse frontend,
-        @Nullable String httpCorrelationProtocol,
-        String id,
-        @Nullable Boolean logClientIp,
-        String loggerId,
-        String name,
-        @Nullable String operationNameFormat,
-        @Nullable SamplingSettingsResponse sampling,
-        String type,
-        @Nullable String verbosity) {
+        @OutputCustomType.Parameter("alwaysLog") @Nullable String alwaysLog,
+        @OutputCustomType.Parameter("backend") @Nullable PipelineDiagnosticSettingsResponse backend,
+        @OutputCustomType.Parameter("frontend") @Nullable PipelineDiagnosticSettingsResponse frontend,
+        @OutputCustomType.Parameter("httpCorrelationProtocol") @Nullable String httpCorrelationProtocol,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("logClientIp") @Nullable Boolean logClientIp,
+        @OutputCustomType.Parameter("loggerId") String loggerId,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("operationNameFormat") @Nullable String operationNameFormat,
+        @OutputCustomType.Parameter("sampling") @Nullable SamplingSettingsResponse sampling,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("verbosity") @Nullable String verbosity) {
         this.alwaysLog = alwaysLog;
         this.backend = backend;
         this.frontend = frontend;

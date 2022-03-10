@@ -27,11 +27,11 @@ public final class AssignmentPrincipalResponse {
      */
     private final String principalType;
 
-    @OutputCustomType.Constructor({"principalId","principalMetadata","principalType"})
+    @OutputCustomType.Constructor
     private AssignmentPrincipalResponse(
-        String principalId,
-        @Nullable Map<String,String> principalMetadata,
-        String principalType) {
+        @OutputCustomType.Parameter("principalId") String principalId,
+        @OutputCustomType.Parameter("principalMetadata") @Nullable Map<String,String> principalMetadata,
+        @OutputCustomType.Parameter("principalType") String principalType) {
         this.principalId = principalId;
         this.principalMetadata = principalMetadata;
         this.principalType = principalType;

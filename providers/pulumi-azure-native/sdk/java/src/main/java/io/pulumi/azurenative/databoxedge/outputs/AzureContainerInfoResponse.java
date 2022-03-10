@@ -25,11 +25,11 @@ public final class AzureContainerInfoResponse {
      */
     private final String storageAccountCredentialId;
 
-    @OutputCustomType.Constructor({"containerName","dataFormat","storageAccountCredentialId"})
+    @OutputCustomType.Constructor
     private AzureContainerInfoResponse(
-        String containerName,
-        String dataFormat,
-        String storageAccountCredentialId) {
+        @OutputCustomType.Parameter("containerName") String containerName,
+        @OutputCustomType.Parameter("dataFormat") String dataFormat,
+        @OutputCustomType.Parameter("storageAccountCredentialId") String storageAccountCredentialId) {
         this.containerName = containerName;
         this.dataFormat = dataFormat;
         this.storageAccountCredentialId = storageAccountCredentialId;

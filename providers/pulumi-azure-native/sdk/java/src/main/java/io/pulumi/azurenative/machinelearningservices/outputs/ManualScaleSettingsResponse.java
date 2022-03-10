@@ -33,12 +33,12 @@ public final class ManualScaleSettingsResponse {
      */
     private final String scaleType;
 
-    @OutputCustomType.Constructor({"instanceCount","maxInstances","minInstances","scaleType"})
+    @OutputCustomType.Constructor
     private ManualScaleSettingsResponse(
-        @Nullable Integer instanceCount,
-        @Nullable Integer maxInstances,
-        @Nullable Integer minInstances,
-        String scaleType) {
+        @OutputCustomType.Parameter("instanceCount") @Nullable Integer instanceCount,
+        @OutputCustomType.Parameter("maxInstances") @Nullable Integer maxInstances,
+        @OutputCustomType.Parameter("minInstances") @Nullable Integer minInstances,
+        @OutputCustomType.Parameter("scaleType") String scaleType) {
         this.instanceCount = instanceCount;
         this.maxInstances = maxInstances;
         this.minInstances = minInstances;

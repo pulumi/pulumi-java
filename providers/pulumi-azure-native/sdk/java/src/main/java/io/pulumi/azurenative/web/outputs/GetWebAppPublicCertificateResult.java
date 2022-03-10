@@ -47,15 +47,15 @@ public final class GetWebAppPublicCertificateResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"blob","id","kind","name","publicCertificateLocation","thumbprint","type"})
+    @OutputCustomType.Constructor
     private GetWebAppPublicCertificateResult(
-        @Nullable String blob,
-        String id,
-        @Nullable String kind,
-        String name,
-        @Nullable String publicCertificateLocation,
-        String thumbprint,
-        String type) {
+        @OutputCustomType.Parameter("blob") @Nullable String blob,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("kind") @Nullable String kind,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("publicCertificateLocation") @Nullable String publicCertificateLocation,
+        @OutputCustomType.Parameter("thumbprint") String thumbprint,
+        @OutputCustomType.Parameter("type") String type) {
         this.blob = blob;
         this.id = id;
         this.kind = kind;

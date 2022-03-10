@@ -25,11 +25,11 @@ public final class GetClusterGatewaySettingsResult {
      */
     private final String userName;
 
-    @OutputCustomType.Constructor({"isCredentialEnabled","password","userName"})
+    @OutputCustomType.Constructor
     private GetClusterGatewaySettingsResult(
-        String isCredentialEnabled,
-        String password,
-        String userName) {
+        @OutputCustomType.Parameter("isCredentialEnabled") String isCredentialEnabled,
+        @OutputCustomType.Parameter("password") String password,
+        @OutputCustomType.Parameter("userName") String userName) {
         this.isCredentialEnabled = isCredentialEnabled;
         this.password = password;
         this.userName = userName;

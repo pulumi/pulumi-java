@@ -32,12 +32,12 @@ public final class RecurrentScheduleResponse {
      */
     private final String timeZone;
 
-    @OutputCustomType.Constructor({"days","hours","minutes","timeZone"})
+    @OutputCustomType.Constructor
     private RecurrentScheduleResponse(
-        List<String> days,
-        List<Integer> hours,
-        List<Integer> minutes,
-        String timeZone) {
+        @OutputCustomType.Parameter("days") List<String> days,
+        @OutputCustomType.Parameter("hours") List<Integer> hours,
+        @OutputCustomType.Parameter("minutes") List<Integer> minutes,
+        @OutputCustomType.Parameter("timeZone") String timeZone) {
         this.days = days;
         this.hours = hours;
         this.minutes = minutes;

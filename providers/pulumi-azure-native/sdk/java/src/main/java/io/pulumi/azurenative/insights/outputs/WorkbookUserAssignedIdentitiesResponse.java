@@ -25,11 +25,11 @@ public final class WorkbookUserAssignedIdentitiesResponse {
      */
     private final String tenantId;
 
-    @OutputCustomType.Constructor({"clientId","principalId","tenantId"})
+    @OutputCustomType.Constructor
     private WorkbookUserAssignedIdentitiesResponse(
-        String clientId,
-        String principalId,
-        String tenantId) {
+        @OutputCustomType.Parameter("clientId") String clientId,
+        @OutputCustomType.Parameter("principalId") String principalId,
+        @OutputCustomType.Parameter("tenantId") String tenantId) {
         this.clientId = clientId;
         this.principalId = principalId;
         this.tenantId = tenantId;

@@ -15,8 +15,8 @@ public final class GetManagerDevicePublicEncryptionKeyResult {
      */
     private final String key;
 
-    @OutputCustomType.Constructor({"key"})
-    private GetManagerDevicePublicEncryptionKeyResult(String key) {
+    @OutputCustomType.Constructor
+    private GetManagerDevicePublicEncryptionKeyResult(@OutputCustomType.Parameter("key") String key) {
         this.key = key;
     }
 

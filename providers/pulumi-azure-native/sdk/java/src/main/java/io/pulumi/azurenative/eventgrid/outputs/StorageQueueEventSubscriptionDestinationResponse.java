@@ -28,11 +28,11 @@ public final class StorageQueueEventSubscriptionDestinationResponse {
      */
     private final @Nullable String resourceId;
 
-    @OutputCustomType.Constructor({"endpointType","queueName","resourceId"})
+    @OutputCustomType.Constructor
     private StorageQueueEventSubscriptionDestinationResponse(
-        String endpointType,
-        @Nullable String queueName,
-        @Nullable String resourceId) {
+        @OutputCustomType.Parameter("endpointType") String endpointType,
+        @OutputCustomType.Parameter("queueName") @Nullable String queueName,
+        @OutputCustomType.Parameter("resourceId") @Nullable String resourceId) {
         this.endpointType = endpointType;
         this.queueName = queueName;
         this.resourceId = resourceId;

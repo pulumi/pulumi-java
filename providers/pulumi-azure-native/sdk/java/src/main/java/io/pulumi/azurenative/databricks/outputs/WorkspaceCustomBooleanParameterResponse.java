@@ -21,10 +21,10 @@ public final class WorkspaceCustomBooleanParameterResponse {
      */
     private final Boolean value;
 
-    @OutputCustomType.Constructor({"type","value"})
+    @OutputCustomType.Constructor
     private WorkspaceCustomBooleanParameterResponse(
-        String type,
-        Boolean value) {
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("value") Boolean value) {
         this.type = type;
         this.value = value;
     }

@@ -38,13 +38,13 @@ public final class ProjectFilePropertiesResponse {
      */
     private final Double size;
 
-    @OutputCustomType.Constructor({"extension","filePath","lastModified","mediaType","size"})
+    @OutputCustomType.Constructor
     private ProjectFilePropertiesResponse(
-        @Nullable String extension,
-        @Nullable String filePath,
-        String lastModified,
-        @Nullable String mediaType,
-        Double size) {
+        @OutputCustomType.Parameter("extension") @Nullable String extension,
+        @OutputCustomType.Parameter("filePath") @Nullable String filePath,
+        @OutputCustomType.Parameter("lastModified") String lastModified,
+        @OutputCustomType.Parameter("mediaType") @Nullable String mediaType,
+        @OutputCustomType.Parameter("size") Double size) {
         this.extension = extension;
         this.filePath = filePath;
         this.lastModified = lastModified;

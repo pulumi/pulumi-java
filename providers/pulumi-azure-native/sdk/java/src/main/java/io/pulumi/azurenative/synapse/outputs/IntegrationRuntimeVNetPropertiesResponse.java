@@ -33,12 +33,12 @@ public final class IntegrationRuntimeVNetPropertiesResponse {
      */
     private final @Nullable String vNetId;
 
-    @OutputCustomType.Constructor({"publicIPs","subnet","subnetId","vNetId"})
+    @OutputCustomType.Constructor
     private IntegrationRuntimeVNetPropertiesResponse(
-        @Nullable List<String> publicIPs,
-        @Nullable String subnet,
-        @Nullable String subnetId,
-        @Nullable String vNetId) {
+        @OutputCustomType.Parameter("publicIPs") @Nullable List<String> publicIPs,
+        @OutputCustomType.Parameter("subnet") @Nullable String subnet,
+        @OutputCustomType.Parameter("subnetId") @Nullable String subnetId,
+        @OutputCustomType.Parameter("vNetId") @Nullable String vNetId) {
         this.publicIPs = publicIPs;
         this.subnet = subnet;
         this.subnetId = subnetId;

@@ -22,10 +22,10 @@ public final class NetAppVolumeResponse {
      */
     private final @Nullable String nfsProviderIp;
 
-    @OutputCustomType.Constructor({"nfsFilePath","nfsProviderIp"})
+    @OutputCustomType.Constructor
     private NetAppVolumeResponse(
-        @Nullable String nfsFilePath,
-        @Nullable String nfsProviderIp) {
+        @OutputCustomType.Parameter("nfsFilePath") @Nullable String nfsFilePath,
+        @OutputCustomType.Parameter("nfsProviderIp") @Nullable String nfsProviderIp) {
         this.nfsFilePath = nfsFilePath;
         this.nfsProviderIp = nfsProviderIp;
     }

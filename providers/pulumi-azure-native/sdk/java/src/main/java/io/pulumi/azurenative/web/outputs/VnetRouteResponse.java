@@ -52,15 +52,15 @@ public final class VnetRouteResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"endAddress","id","kind","name","routeType","startAddress","type"})
+    @OutputCustomType.Constructor
     private VnetRouteResponse(
-        @Nullable String endAddress,
-        String id,
-        @Nullable String kind,
-        String name,
-        @Nullable String routeType,
-        @Nullable String startAddress,
-        String type) {
+        @OutputCustomType.Parameter("endAddress") @Nullable String endAddress,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("kind") @Nullable String kind,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("routeType") @Nullable String routeType,
+        @OutputCustomType.Parameter("startAddress") @Nullable String startAddress,
+        @OutputCustomType.Parameter("type") String type) {
         this.endAddress = endAddress;
         this.id = id;
         this.kind = kind;

@@ -19,8 +19,8 @@ public final class SourceRegistryCredentialsResponse {
      */
     private final @Nullable String loginMode;
 
-    @OutputCustomType.Constructor({"loginMode"})
-    private SourceRegistryCredentialsResponse(@Nullable String loginMode) {
+    @OutputCustomType.Constructor
+    private SourceRegistryCredentialsResponse(@OutputCustomType.Parameter("loginMode") @Nullable String loginMode) {
         this.loginMode = loginMode;
     }
 

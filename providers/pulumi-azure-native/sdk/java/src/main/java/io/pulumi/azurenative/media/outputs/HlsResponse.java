@@ -17,8 +17,8 @@ public final class HlsResponse {
      */
     private final @Nullable Integer fragmentsPerTsSegment;
 
-    @OutputCustomType.Constructor({"fragmentsPerTsSegment"})
-    private HlsResponse(@Nullable Integer fragmentsPerTsSegment) {
+    @OutputCustomType.Constructor
+    private HlsResponse(@OutputCustomType.Parameter("fragmentsPerTsSegment") @Nullable Integer fragmentsPerTsSegment) {
         this.fragmentsPerTsSegment = fragmentsPerTsSegment;
     }
 

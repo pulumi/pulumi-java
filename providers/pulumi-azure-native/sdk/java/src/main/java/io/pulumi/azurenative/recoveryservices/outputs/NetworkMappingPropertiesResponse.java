@@ -61,17 +61,17 @@ public final class NetworkMappingPropertiesResponse {
      */
     private final @Nullable String state;
 
-    @OutputCustomType.Constructor({"fabricSpecificSettings","primaryFabricFriendlyName","primaryNetworkFriendlyName","primaryNetworkId","recoveryFabricArmId","recoveryFabricFriendlyName","recoveryNetworkFriendlyName","recoveryNetworkId","state"})
+    @OutputCustomType.Constructor
     private NetworkMappingPropertiesResponse(
-        @Nullable Object fabricSpecificSettings,
-        @Nullable String primaryFabricFriendlyName,
-        @Nullable String primaryNetworkFriendlyName,
-        @Nullable String primaryNetworkId,
-        @Nullable String recoveryFabricArmId,
-        @Nullable String recoveryFabricFriendlyName,
-        @Nullable String recoveryNetworkFriendlyName,
-        @Nullable String recoveryNetworkId,
-        @Nullable String state) {
+        @OutputCustomType.Parameter("fabricSpecificSettings") @Nullable Object fabricSpecificSettings,
+        @OutputCustomType.Parameter("primaryFabricFriendlyName") @Nullable String primaryFabricFriendlyName,
+        @OutputCustomType.Parameter("primaryNetworkFriendlyName") @Nullable String primaryNetworkFriendlyName,
+        @OutputCustomType.Parameter("primaryNetworkId") @Nullable String primaryNetworkId,
+        @OutputCustomType.Parameter("recoveryFabricArmId") @Nullable String recoveryFabricArmId,
+        @OutputCustomType.Parameter("recoveryFabricFriendlyName") @Nullable String recoveryFabricFriendlyName,
+        @OutputCustomType.Parameter("recoveryNetworkFriendlyName") @Nullable String recoveryNetworkFriendlyName,
+        @OutputCustomType.Parameter("recoveryNetworkId") @Nullable String recoveryNetworkId,
+        @OutputCustomType.Parameter("state") @Nullable String state) {
         this.fabricSpecificSettings = fabricSpecificSettings;
         this.primaryFabricFriendlyName = primaryFabricFriendlyName;
         this.primaryNetworkFriendlyName = primaryNetworkFriendlyName;

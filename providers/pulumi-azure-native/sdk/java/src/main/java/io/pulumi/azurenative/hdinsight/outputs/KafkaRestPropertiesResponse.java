@@ -24,10 +24,10 @@ public final class KafkaRestPropertiesResponse {
      */
     private final @Nullable Map<String,String> configurationOverride;
 
-    @OutputCustomType.Constructor({"clientGroupInfo","configurationOverride"})
+    @OutputCustomType.Constructor
     private KafkaRestPropertiesResponse(
-        @Nullable ClientGroupInfoResponse clientGroupInfo,
-        @Nullable Map<String,String> configurationOverride) {
+        @OutputCustomType.Parameter("clientGroupInfo") @Nullable ClientGroupInfoResponse clientGroupInfo,
+        @OutputCustomType.Parameter("configurationOverride") @Nullable Map<String,String> configurationOverride) {
         this.clientGroupInfo = clientGroupInfo;
         this.configurationOverride = configurationOverride;
     }

@@ -30,12 +30,12 @@ public final class ListDatabaseAccountKeysResult {
      */
     private final String secondaryReadonlyMasterKey;
 
-    @OutputCustomType.Constructor({"primaryMasterKey","primaryReadonlyMasterKey","secondaryMasterKey","secondaryReadonlyMasterKey"})
+    @OutputCustomType.Constructor
     private ListDatabaseAccountKeysResult(
-        String primaryMasterKey,
-        String primaryReadonlyMasterKey,
-        String secondaryMasterKey,
-        String secondaryReadonlyMasterKey) {
+        @OutputCustomType.Parameter("primaryMasterKey") String primaryMasterKey,
+        @OutputCustomType.Parameter("primaryReadonlyMasterKey") String primaryReadonlyMasterKey,
+        @OutputCustomType.Parameter("secondaryMasterKey") String secondaryMasterKey,
+        @OutputCustomType.Parameter("secondaryReadonlyMasterKey") String secondaryReadonlyMasterKey) {
         this.primaryMasterKey = primaryMasterKey;
         this.primaryReadonlyMasterKey = primaryReadonlyMasterKey;
         this.secondaryMasterKey = secondaryMasterKey;

@@ -81,20 +81,20 @@ public final class LabelingJobPropertiesResponse {
      */
     private final @Nullable Map<String,String> tags;
 
-    @OutputCustomType.Constructor({"createdTimeUtc","datasetConfiguration","jobInstructions","labelCategories","labelingJobMediaProperties","mlAssistConfiguration","progressMetrics","projectId","properties","status","statusMessages","tags"})
+    @OutputCustomType.Constructor
     private LabelingJobPropertiesResponse(
-        String createdTimeUtc,
-        LabelingDatasetConfigurationResponse datasetConfiguration,
-        LabelingJobInstructionsResponse jobInstructions,
-        Map<String,LabelCategoryResponse> labelCategories,
-        LabelingJobImagePropertiesResponse labelingJobMediaProperties,
-        @Nullable MLAssistConfigurationResponse mlAssistConfiguration,
-        ProgressMetricsResponse progressMetrics,
-        String projectId,
-        @Nullable Map<String,String> properties,
-        String status,
-        List<StatusMessageResponse> statusMessages,
-        @Nullable Map<String,String> tags) {
+        @OutputCustomType.Parameter("createdTimeUtc") String createdTimeUtc,
+        @OutputCustomType.Parameter("datasetConfiguration") LabelingDatasetConfigurationResponse datasetConfiguration,
+        @OutputCustomType.Parameter("jobInstructions") LabelingJobInstructionsResponse jobInstructions,
+        @OutputCustomType.Parameter("labelCategories") Map<String,LabelCategoryResponse> labelCategories,
+        @OutputCustomType.Parameter("labelingJobMediaProperties") LabelingJobImagePropertiesResponse labelingJobMediaProperties,
+        @OutputCustomType.Parameter("mlAssistConfiguration") @Nullable MLAssistConfigurationResponse mlAssistConfiguration,
+        @OutputCustomType.Parameter("progressMetrics") ProgressMetricsResponse progressMetrics,
+        @OutputCustomType.Parameter("projectId") String projectId,
+        @OutputCustomType.Parameter("properties") @Nullable Map<String,String> properties,
+        @OutputCustomType.Parameter("status") String status,
+        @OutputCustomType.Parameter("statusMessages") List<StatusMessageResponse> statusMessages,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags) {
         this.createdTimeUtc = createdTimeUtc;
         this.datasetConfiguration = datasetConfiguration;
         this.jobInstructions = jobInstructions;

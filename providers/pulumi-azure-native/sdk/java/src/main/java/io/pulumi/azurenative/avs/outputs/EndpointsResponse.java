@@ -25,11 +25,11 @@ public final class EndpointsResponse {
      */
     private final String vcsa;
 
-    @OutputCustomType.Constructor({"hcxCloudManager","nsxtManager","vcsa"})
+    @OutputCustomType.Constructor
     private EndpointsResponse(
-        String hcxCloudManager,
-        String nsxtManager,
-        String vcsa) {
+        @OutputCustomType.Parameter("hcxCloudManager") String hcxCloudManager,
+        @OutputCustomType.Parameter("nsxtManager") String nsxtManager,
+        @OutputCustomType.Parameter("vcsa") String vcsa) {
         this.hcxCloudManager = hcxCloudManager;
         this.nsxtManager = nsxtManager;
         this.vcsa = vcsa;

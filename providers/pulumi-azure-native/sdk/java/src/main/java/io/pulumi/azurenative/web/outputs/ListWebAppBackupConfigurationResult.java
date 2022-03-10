@@ -61,17 +61,17 @@ public final class ListWebAppBackupConfigurationResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"backupName","backupSchedule","databases","enabled","id","kind","name","storageAccountUrl","type"})
+    @OutputCustomType.Constructor
     private ListWebAppBackupConfigurationResult(
-        @Nullable String backupName,
-        @Nullable BackupScheduleResponse backupSchedule,
-        @Nullable List<DatabaseBackupSettingResponse> databases,
-        @Nullable Boolean enabled,
-        String id,
-        @Nullable String kind,
-        String name,
-        String storageAccountUrl,
-        String type) {
+        @OutputCustomType.Parameter("backupName") @Nullable String backupName,
+        @OutputCustomType.Parameter("backupSchedule") @Nullable BackupScheduleResponse backupSchedule,
+        @OutputCustomType.Parameter("databases") @Nullable List<DatabaseBackupSettingResponse> databases,
+        @OutputCustomType.Parameter("enabled") @Nullable Boolean enabled,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("kind") @Nullable String kind,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("storageAccountUrl") String storageAccountUrl,
+        @OutputCustomType.Parameter("type") String type) {
         this.backupName = backupName;
         this.backupSchedule = backupSchedule;
         this.databases = databases;
