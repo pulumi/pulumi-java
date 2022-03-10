@@ -15,11 +15,11 @@ public final class ContainerDevice {
     private final String hostPath;
     private final @Nullable String permissions;
 
-    @OutputCustomType.Constructor({"containerPath","hostPath","permissions"})
+    @OutputCustomType.Constructor
     private ContainerDevice(
-        @Nullable String containerPath,
-        String hostPath,
-        @Nullable String permissions) {
+        @OutputCustomType.Parameter("containerPath") @Nullable String containerPath,
+        @OutputCustomType.Parameter("hostPath") String hostPath,
+        @OutputCustomType.Parameter("permissions") @Nullable String permissions) {
         this.containerPath = containerPath;
         this.hostPath = hostPath;
         this.permissions = permissions;

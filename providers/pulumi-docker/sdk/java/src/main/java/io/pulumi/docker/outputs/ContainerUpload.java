@@ -19,14 +19,14 @@ public final class ContainerUpload {
     private final @Nullable String source;
     private final @Nullable String sourceHash;
 
-    @OutputCustomType.Constructor({"content","contentBase64","executable","file","source","sourceHash"})
+    @OutputCustomType.Constructor
     private ContainerUpload(
-        @Nullable String content,
-        @Nullable String contentBase64,
-        @Nullable Boolean executable,
-        String file,
-        @Nullable String source,
-        @Nullable String sourceHash) {
+        @OutputCustomType.Parameter("content") @Nullable String content,
+        @OutputCustomType.Parameter("contentBase64") @Nullable String contentBase64,
+        @OutputCustomType.Parameter("executable") @Nullable Boolean executable,
+        @OutputCustomType.Parameter("file") String file,
+        @OutputCustomType.Parameter("source") @Nullable String source,
+        @OutputCustomType.Parameter("sourceHash") @Nullable String sourceHash) {
         this.content = content;
         this.contentBase64 = contentBase64;
         this.executable = executable;

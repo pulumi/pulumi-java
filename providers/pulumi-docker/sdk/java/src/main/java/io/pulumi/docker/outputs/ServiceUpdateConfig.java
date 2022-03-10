@@ -19,14 +19,14 @@ public final class ServiceUpdateConfig {
     private final @Nullable String order;
     private final @Nullable Integer parallelism;
 
-    @OutputCustomType.Constructor({"delay","failureAction","maxFailureRatio","monitor","order","parallelism"})
+    @OutputCustomType.Constructor
     private ServiceUpdateConfig(
-        @Nullable String delay,
-        @Nullable String failureAction,
-        @Nullable String maxFailureRatio,
-        @Nullable String monitor,
-        @Nullable String order,
-        @Nullable Integer parallelism) {
+        @OutputCustomType.Parameter("delay") @Nullable String delay,
+        @OutputCustomType.Parameter("failureAction") @Nullable String failureAction,
+        @OutputCustomType.Parameter("maxFailureRatio") @Nullable String maxFailureRatio,
+        @OutputCustomType.Parameter("monitor") @Nullable String monitor,
+        @OutputCustomType.Parameter("order") @Nullable String order,
+        @OutputCustomType.Parameter("parallelism") @Nullable Integer parallelism) {
         this.delay = delay;
         this.failureAction = failureAction;
         this.maxFailureRatio = maxFailureRatio;

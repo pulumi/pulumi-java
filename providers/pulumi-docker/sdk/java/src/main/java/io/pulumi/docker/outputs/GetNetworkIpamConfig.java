@@ -18,12 +18,12 @@ public final class GetNetworkIpamConfig {
     private final @Nullable String ipRange;
     private final @Nullable String subnet;
 
-    @OutputCustomType.Constructor({"auxAddress","gateway","ipRange","subnet"})
+    @OutputCustomType.Constructor
     private GetNetworkIpamConfig(
-        @Nullable Map<String,Object> auxAddress,
-        @Nullable String gateway,
-        @Nullable String ipRange,
-        @Nullable String subnet) {
+        @OutputCustomType.Parameter("auxAddress") @Nullable Map<String,Object> auxAddress,
+        @OutputCustomType.Parameter("gateway") @Nullable String gateway,
+        @OutputCustomType.Parameter("ipRange") @Nullable String ipRange,
+        @OutputCustomType.Parameter("subnet") @Nullable String subnet) {
         this.auxAddress = auxAddress;
         this.gateway = gateway;
         this.ipRange = ipRange;

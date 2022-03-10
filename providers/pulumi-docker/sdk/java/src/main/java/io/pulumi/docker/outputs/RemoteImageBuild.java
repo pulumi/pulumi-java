@@ -24,17 +24,17 @@ public final class RemoteImageBuild {
     private final @Nullable List<String> tags;
     private final @Nullable String target;
 
-    @OutputCustomType.Constructor({"buildArg","dockerfile","forceRemove","label","noCache","path","remove","tags","target"})
+    @OutputCustomType.Constructor
     private RemoteImageBuild(
-        @Nullable Map<String,String> buildArg,
-        @Nullable String dockerfile,
-        @Nullable Boolean forceRemove,
-        @Nullable Map<String,String> label,
-        @Nullable Boolean noCache,
-        String path,
-        @Nullable Boolean remove,
-        @Nullable List<String> tags,
-        @Nullable String target) {
+        @OutputCustomType.Parameter("buildArg") @Nullable Map<String,String> buildArg,
+        @OutputCustomType.Parameter("dockerfile") @Nullable String dockerfile,
+        @OutputCustomType.Parameter("forceRemove") @Nullable Boolean forceRemove,
+        @OutputCustomType.Parameter("label") @Nullable Map<String,String> label,
+        @OutputCustomType.Parameter("noCache") @Nullable Boolean noCache,
+        @OutputCustomType.Parameter("path") String path,
+        @OutputCustomType.Parameter("remove") @Nullable Boolean remove,
+        @OutputCustomType.Parameter("tags") @Nullable List<String> tags,
+        @OutputCustomType.Parameter("target") @Nullable String target) {
         this.buildArg = buildArg;
         this.dockerfile = dockerfile;
         this.forceRemove = forceRemove;

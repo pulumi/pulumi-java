@@ -14,11 +14,11 @@ public final class RegistryImageBuildUlimit {
     private final String name;
     private final Integer soft;
 
-    @OutputCustomType.Constructor({"hard","name","soft"})
+    @OutputCustomType.Constructor
     private RegistryImageBuildUlimit(
-        Integer hard,
-        String name,
-        Integer soft) {
+        @OutputCustomType.Parameter("hard") Integer hard,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("soft") Integer soft) {
         this.hard = hard;
         this.name = name;
         this.soft = soft;

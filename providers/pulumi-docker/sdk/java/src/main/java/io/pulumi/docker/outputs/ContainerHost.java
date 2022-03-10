@@ -12,10 +12,10 @@ public final class ContainerHost {
     private final String host;
     private final String ip;
 
-    @OutputCustomType.Constructor({"host","ip"})
+    @OutputCustomType.Constructor
     private ContainerHost(
-        String host,
-        String ip) {
+        @OutputCustomType.Parameter("host") String host,
+        @OutputCustomType.Parameter("ip") String ip) {
         this.host = host;
         this.ip = ip;
     }

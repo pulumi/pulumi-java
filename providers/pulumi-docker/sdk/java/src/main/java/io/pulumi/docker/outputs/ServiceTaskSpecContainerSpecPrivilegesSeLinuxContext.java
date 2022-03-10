@@ -18,13 +18,13 @@ public final class ServiceTaskSpecContainerSpecPrivilegesSeLinuxContext {
     private final @Nullable String type;
     private final @Nullable String user;
 
-    @OutputCustomType.Constructor({"disable","level","role","type","user"})
+    @OutputCustomType.Constructor
     private ServiceTaskSpecContainerSpecPrivilegesSeLinuxContext(
-        @Nullable Boolean disable,
-        @Nullable String level,
-        @Nullable String role,
-        @Nullable String type,
-        @Nullable String user) {
+        @OutputCustomType.Parameter("disable") @Nullable Boolean disable,
+        @OutputCustomType.Parameter("level") @Nullable String level,
+        @OutputCustomType.Parameter("role") @Nullable String role,
+        @OutputCustomType.Parameter("type") @Nullable String type,
+        @OutputCustomType.Parameter("user") @Nullable String user) {
         this.disable = disable;
         this.level = level;
         this.role = role;

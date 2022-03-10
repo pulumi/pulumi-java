@@ -19,13 +19,13 @@ public final class ContainerHealthcheck {
     private final List<String> tests;
     private final @Nullable String timeout;
 
-    @OutputCustomType.Constructor({"interval","retries","startPeriod","tests","timeout"})
+    @OutputCustomType.Constructor
     private ContainerHealthcheck(
-        @Nullable String interval,
-        @Nullable Integer retries,
-        @Nullable String startPeriod,
-        List<String> tests,
-        @Nullable String timeout) {
+        @OutputCustomType.Parameter("interval") @Nullable String interval,
+        @OutputCustomType.Parameter("retries") @Nullable Integer retries,
+        @OutputCustomType.Parameter("startPeriod") @Nullable String startPeriod,
+        @OutputCustomType.Parameter("tests") List<String> tests,
+        @OutputCustomType.Parameter("timeout") @Nullable String timeout) {
         this.interval = interval;
         this.retries = retries;
         this.startPeriod = startPeriod;

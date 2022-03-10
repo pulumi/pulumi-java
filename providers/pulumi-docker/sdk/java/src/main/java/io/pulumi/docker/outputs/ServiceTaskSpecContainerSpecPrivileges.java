@@ -15,10 +15,10 @@ public final class ServiceTaskSpecContainerSpecPrivileges {
     private final @Nullable ServiceTaskSpecContainerSpecPrivilegesCredentialSpec credentialSpec;
     private final @Nullable ServiceTaskSpecContainerSpecPrivilegesSeLinuxContext seLinuxContext;
 
-    @OutputCustomType.Constructor({"credentialSpec","seLinuxContext"})
+    @OutputCustomType.Constructor
     private ServiceTaskSpecContainerSpecPrivileges(
-        @Nullable ServiceTaskSpecContainerSpecPrivilegesCredentialSpec credentialSpec,
-        @Nullable ServiceTaskSpecContainerSpecPrivilegesSeLinuxContext seLinuxContext) {
+        @OutputCustomType.Parameter("credentialSpec") @Nullable ServiceTaskSpecContainerSpecPrivilegesCredentialSpec credentialSpec,
+        @OutputCustomType.Parameter("seLinuxContext") @Nullable ServiceTaskSpecContainerSpecPrivilegesSeLinuxContext seLinuxContext) {
         this.credentialSpec = credentialSpec;
         this.seLinuxContext = seLinuxContext;
     }

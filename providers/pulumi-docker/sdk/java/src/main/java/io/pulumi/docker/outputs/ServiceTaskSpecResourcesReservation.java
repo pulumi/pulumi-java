@@ -16,11 +16,11 @@ public final class ServiceTaskSpecResourcesReservation {
     private final @Nullable Integer memoryBytes;
     private final @Nullable Integer nanoCpus;
 
-    @OutputCustomType.Constructor({"genericResources","memoryBytes","nanoCpus"})
+    @OutputCustomType.Constructor
     private ServiceTaskSpecResourcesReservation(
-        @Nullable ServiceTaskSpecResourcesReservationGenericResources genericResources,
-        @Nullable Integer memoryBytes,
-        @Nullable Integer nanoCpus) {
+        @OutputCustomType.Parameter("genericResources") @Nullable ServiceTaskSpecResourcesReservationGenericResources genericResources,
+        @OutputCustomType.Parameter("memoryBytes") @Nullable Integer memoryBytes,
+        @OutputCustomType.Parameter("nanoCpus") @Nullable Integer nanoCpus) {
         this.genericResources = genericResources;
         this.memoryBytes = memoryBytes;
         this.nanoCpus = nanoCpus;

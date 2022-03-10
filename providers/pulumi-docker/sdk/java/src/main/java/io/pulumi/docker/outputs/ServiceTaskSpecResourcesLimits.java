@@ -14,10 +14,10 @@ public final class ServiceTaskSpecResourcesLimits {
     private final @Nullable Integer memoryBytes;
     private final @Nullable Integer nanoCpus;
 
-    @OutputCustomType.Constructor({"memoryBytes","nanoCpus"})
+    @OutputCustomType.Constructor
     private ServiceTaskSpecResourcesLimits(
-        @Nullable Integer memoryBytes,
-        @Nullable Integer nanoCpus) {
+        @OutputCustomType.Parameter("memoryBytes") @Nullable Integer memoryBytes,
+        @OutputCustomType.Parameter("nanoCpus") @Nullable Integer nanoCpus) {
         this.memoryBytes = memoryBytes;
         this.nanoCpus = nanoCpus;
     }

@@ -18,13 +18,13 @@ public final class ContainerVolume {
     private final @Nullable Boolean readOnly;
     private final @Nullable String volumeName;
 
-    @OutputCustomType.Constructor({"containerPath","fromContainer","hostPath","readOnly","volumeName"})
+    @OutputCustomType.Constructor
     private ContainerVolume(
-        @Nullable String containerPath,
-        @Nullable String fromContainer,
-        @Nullable String hostPath,
-        @Nullable Boolean readOnly,
-        @Nullable String volumeName) {
+        @OutputCustomType.Parameter("containerPath") @Nullable String containerPath,
+        @OutputCustomType.Parameter("fromContainer") @Nullable String fromContainer,
+        @OutputCustomType.Parameter("hostPath") @Nullable String hostPath,
+        @OutputCustomType.Parameter("readOnly") @Nullable Boolean readOnly,
+        @OutputCustomType.Parameter("volumeName") @Nullable String volumeName) {
         this.containerPath = containerPath;
         this.fromContainer = fromContainer;
         this.hostPath = hostPath;

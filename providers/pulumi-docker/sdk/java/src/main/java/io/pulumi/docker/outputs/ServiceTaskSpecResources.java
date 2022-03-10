@@ -15,10 +15,10 @@ public final class ServiceTaskSpecResources {
     private final @Nullable ServiceTaskSpecResourcesLimits limits;
     private final @Nullable ServiceTaskSpecResourcesReservation reservation;
 
-    @OutputCustomType.Constructor({"limits","reservation"})
+    @OutputCustomType.Constructor
     private ServiceTaskSpecResources(
-        @Nullable ServiceTaskSpecResourcesLimits limits,
-        @Nullable ServiceTaskSpecResourcesReservation reservation) {
+        @OutputCustomType.Parameter("limits") @Nullable ServiceTaskSpecResourcesLimits limits,
+        @OutputCustomType.Parameter("reservation") @Nullable ServiceTaskSpecResourcesReservation reservation) {
         this.limits = limits;
         this.reservation = reservation;
     }

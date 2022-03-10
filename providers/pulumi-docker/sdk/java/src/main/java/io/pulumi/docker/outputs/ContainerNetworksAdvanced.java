@@ -17,12 +17,12 @@ public final class ContainerNetworksAdvanced {
     private final @Nullable String ipv6Address;
     private final String name;
 
-    @OutputCustomType.Constructor({"aliases","ipv4Address","ipv6Address","name"})
+    @OutputCustomType.Constructor
     private ContainerNetworksAdvanced(
-        @Nullable List<String> aliases,
-        @Nullable String ipv4Address,
-        @Nullable String ipv6Address,
-        String name) {
+        @OutputCustomType.Parameter("aliases") @Nullable List<String> aliases,
+        @OutputCustomType.Parameter("ipv4Address") @Nullable String ipv4Address,
+        @OutputCustomType.Parameter("ipv6Address") @Nullable String ipv6Address,
+        @OutputCustomType.Parameter("name") String name) {
         this.aliases = aliases;
         this.ipv4Address = ipv4Address;
         this.ipv6Address = ipv6Address;

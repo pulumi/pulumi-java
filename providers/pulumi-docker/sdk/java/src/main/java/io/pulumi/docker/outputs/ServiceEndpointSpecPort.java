@@ -18,13 +18,13 @@ public final class ServiceEndpointSpecPort {
     private final @Nullable Integer publishedPort;
     private final Integer targetPort;
 
-    @OutputCustomType.Constructor({"name","protocol","publishMode","publishedPort","targetPort"})
+    @OutputCustomType.Constructor
     private ServiceEndpointSpecPort(
-        @Nullable String name,
-        @Nullable String protocol,
-        @Nullable String publishMode,
-        @Nullable Integer publishedPort,
-        Integer targetPort) {
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("protocol") @Nullable String protocol,
+        @OutputCustomType.Parameter("publishMode") @Nullable String publishMode,
+        @OutputCustomType.Parameter("publishedPort") @Nullable Integer publishedPort,
+        @OutputCustomType.Parameter("targetPort") Integer targetPort) {
         this.name = name;
         this.protocol = protocol;
         this.publishMode = publishMode;

@@ -38,15 +38,15 @@ public final class ContainerNetworkData {
     private final @Nullable String ipv6Gateway;
     private final @Nullable String networkName;
 
-    @OutputCustomType.Constructor({"gateway","globalIpv6Address","globalIpv6PrefixLength","ipAddress","ipPrefixLength","ipv6Gateway","networkName"})
+    @OutputCustomType.Constructor
     private ContainerNetworkData(
-        @Nullable String gateway,
-        @Nullable String globalIpv6Address,
-        @Nullable Integer globalIpv6PrefixLength,
-        @Nullable String ipAddress,
-        @Nullable Integer ipPrefixLength,
-        @Nullable String ipv6Gateway,
-        @Nullable String networkName) {
+        @OutputCustomType.Parameter("gateway") @Nullable String gateway,
+        @OutputCustomType.Parameter("globalIpv6Address") @Nullable String globalIpv6Address,
+        @OutputCustomType.Parameter("globalIpv6PrefixLength") @Nullable Integer globalIpv6PrefixLength,
+        @OutputCustomType.Parameter("ipAddress") @Nullable String ipAddress,
+        @OutputCustomType.Parameter("ipPrefixLength") @Nullable Integer ipPrefixLength,
+        @OutputCustomType.Parameter("ipv6Gateway") @Nullable String ipv6Gateway,
+        @OutputCustomType.Parameter("networkName") @Nullable String networkName) {
         this.gateway = gateway;
         this.globalIpv6Address = globalIpv6Address;
         this.globalIpv6PrefixLength = globalIpv6PrefixLength;

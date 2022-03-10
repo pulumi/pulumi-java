@@ -12,10 +12,10 @@ public final class ServiceTaskSpecPlacementPlatform {
     private final String architecture;
     private final String os;
 
-    @OutputCustomType.Constructor({"architecture","os"})
+    @OutputCustomType.Constructor
     private ServiceTaskSpecPlacementPlatform(
-        String architecture,
-        String os) {
+        @OutputCustomType.Parameter("architecture") String architecture,
+        @OutputCustomType.Parameter("os") String os) {
         this.architecture = architecture;
         this.os = os;
     }

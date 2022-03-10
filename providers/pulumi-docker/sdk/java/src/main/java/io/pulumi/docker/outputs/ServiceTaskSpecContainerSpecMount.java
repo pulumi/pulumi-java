@@ -23,15 +23,15 @@ public final class ServiceTaskSpecContainerSpecMount {
     private final String type;
     private final @Nullable ServiceTaskSpecContainerSpecMountVolumeOptions volumeOptions;
 
-    @OutputCustomType.Constructor({"bindOptions","readOnly","source","target","tmpfsOptions","type","volumeOptions"})
+    @OutputCustomType.Constructor
     private ServiceTaskSpecContainerSpecMount(
-        @Nullable ServiceTaskSpecContainerSpecMountBindOptions bindOptions,
-        @Nullable Boolean readOnly,
-        @Nullable String source,
-        String target,
-        @Nullable ServiceTaskSpecContainerSpecMountTmpfsOptions tmpfsOptions,
-        String type,
-        @Nullable ServiceTaskSpecContainerSpecMountVolumeOptions volumeOptions) {
+        @OutputCustomType.Parameter("bindOptions") @Nullable ServiceTaskSpecContainerSpecMountBindOptions bindOptions,
+        @OutputCustomType.Parameter("readOnly") @Nullable Boolean readOnly,
+        @OutputCustomType.Parameter("source") @Nullable String source,
+        @OutputCustomType.Parameter("target") String target,
+        @OutputCustomType.Parameter("tmpfsOptions") @Nullable ServiceTaskSpecContainerSpecMountTmpfsOptions tmpfsOptions,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("volumeOptions") @Nullable ServiceTaskSpecContainerSpecMountVolumeOptions volumeOptions) {
         this.bindOptions = bindOptions;
         this.readOnly = readOnly;
         this.source = source;
