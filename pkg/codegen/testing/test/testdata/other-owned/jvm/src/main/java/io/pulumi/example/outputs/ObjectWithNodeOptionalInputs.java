@@ -15,10 +15,10 @@ public final class ObjectWithNodeOptionalInputs {
     private final @Nullable Integer bar;
     private final String foo;
 
-    @OutputCustomType.Constructor({"bar","foo"})
+    @OutputCustomType.Constructor
     private ObjectWithNodeOptionalInputs(
-        @Nullable Integer bar,
-        String foo) {
+        @OutputCustomType.Parameter("bar") @Nullable Integer bar,
+        @OutputCustomType.Parameter("foo") String foo) {
         this.bar = bar;
         this.foo = foo;
     }

@@ -8,7 +8,7 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class SuppressionResponse {
-    @OutputCustomType.Constructor({})
+    @OutputCustomType.Constructor
     private SuppressionResponse() {
     }
 

@@ -30,12 +30,12 @@ public final class StorageAccountKeyResponse {
      */
     private final String value;
 
-    @OutputCustomType.Constructor({"creationTime","keyName","permissions","value"})
+    @OutputCustomType.Constructor
     private StorageAccountKeyResponse(
-        String creationTime,
-        String keyName,
-        String permissions,
-        String value) {
+        @OutputCustomType.Parameter("creationTime") String creationTime,
+        @OutputCustomType.Parameter("keyName") String keyName,
+        @OutputCustomType.Parameter("permissions") String permissions,
+        @OutputCustomType.Parameter("value") String value) {
         this.creationTime = creationTime;
         this.keyName = keyName;
         this.permissions = permissions;

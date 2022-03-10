@@ -20,14 +20,14 @@ public final class Foo {
     private final String e;
     private final @Nullable String f;
 
-    @OutputCustomType.Constructor({"a","b","c","d","e","f"})
+    @OutputCustomType.Constructor
     private Foo(
-        Boolean a,
-        @Nullable Boolean b,
-        Integer c,
-        @Nullable Integer d,
-        String e,
-        @Nullable String f) {
+        @OutputCustomType.Parameter("a") Boolean a,
+        @OutputCustomType.Parameter("b") @Nullable Boolean b,
+        @OutputCustomType.Parameter("c") Integer c,
+        @OutputCustomType.Parameter("d") @Nullable Integer d,
+        @OutputCustomType.Parameter("e") String e,
+        @OutputCustomType.Parameter("f") @Nullable String f) {
         this.a = a;
         this.b = b;
         this.c = c;

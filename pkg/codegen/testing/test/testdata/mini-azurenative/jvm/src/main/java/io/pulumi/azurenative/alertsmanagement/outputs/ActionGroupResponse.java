@@ -53,16 +53,16 @@ public final class ActionGroupResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"actionGroupId","createdAt","createdBy","description","lastModifiedAt","lastModifiedBy","status","type"})
+    @OutputCustomType.Constructor
     private ActionGroupResponse(
-        String actionGroupId,
-        String createdAt,
-        String createdBy,
-        @Nullable String description,
-        String lastModifiedAt,
-        String lastModifiedBy,
-        @Nullable String status,
-        String type) {
+        @OutputCustomType.Parameter("actionGroupId") String actionGroupId,
+        @OutputCustomType.Parameter("createdAt") String createdAt,
+        @OutputCustomType.Parameter("createdBy") String createdBy,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("lastModifiedAt") String lastModifiedAt,
+        @OutputCustomType.Parameter("lastModifiedBy") String lastModifiedBy,
+        @OutputCustomType.Parameter("status") @Nullable String status,
+        @OutputCustomType.Parameter("type") String type) {
         this.actionGroupId = actionGroupId;
         this.createdAt = createdAt;
         this.createdBy = createdBy;

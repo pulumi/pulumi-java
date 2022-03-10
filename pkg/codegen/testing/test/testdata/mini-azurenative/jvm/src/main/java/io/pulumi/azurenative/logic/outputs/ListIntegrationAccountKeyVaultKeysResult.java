@@ -17,8 +17,8 @@ public final class ListIntegrationAccountKeyVaultKeysResult {
      */
     private final @Nullable String skipToken;
 
-    @OutputCustomType.Constructor({"skipToken"})
-    private ListIntegrationAccountKeyVaultKeysResult(@Nullable String skipToken) {
+    @OutputCustomType.Constructor
+    private ListIntegrationAccountKeyVaultKeysResult(@OutputCustomType.Parameter("skipToken") @Nullable String skipToken) {
         this.skipToken = skipToken;
     }
 

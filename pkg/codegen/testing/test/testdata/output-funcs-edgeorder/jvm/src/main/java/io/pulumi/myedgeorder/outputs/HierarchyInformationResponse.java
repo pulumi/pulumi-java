@@ -32,12 +32,12 @@ public final class HierarchyInformationResponse {
      */
     private final @Nullable String productName;
 
-    @OutputCustomType.Constructor({"configurationName","productFamilyName","productLineName","productName"})
+    @OutputCustomType.Constructor
     private HierarchyInformationResponse(
-        @Nullable String configurationName,
-        @Nullable String productFamilyName,
-        @Nullable String productLineName,
-        @Nullable String productName) {
+        @OutputCustomType.Parameter("configurationName") @Nullable String configurationName,
+        @OutputCustomType.Parameter("productFamilyName") @Nullable String productFamilyName,
+        @OutputCustomType.Parameter("productLineName") @Nullable String productLineName,
+        @OutputCustomType.Parameter("productName") @Nullable String productName) {
         this.configurationName = configurationName;
         this.productFamilyName = productFamilyName;
         this.productLineName = productLineName;

@@ -22,10 +22,10 @@ public final class CostInformationResponse {
      */
     private final List<BillingMeterDetailsResponse> billingMeterDetails;
 
-    @OutputCustomType.Constructor({"billingInfoUrl","billingMeterDetails"})
+    @OutputCustomType.Constructor
     private CostInformationResponse(
-        String billingInfoUrl,
-        List<BillingMeterDetailsResponse> billingMeterDetails) {
+        @OutputCustomType.Parameter("billingInfoUrl") String billingInfoUrl,
+        @OutputCustomType.Parameter("billingMeterDetails") List<BillingMeterDetailsResponse> billingMeterDetails) {
         this.billingInfoUrl = billingInfoUrl;
         this.billingMeterDetails = billingMeterDetails;
     }

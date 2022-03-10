@@ -12,8 +12,8 @@ import javax.annotation.Nullable;
 public final class Rec {
     private final @Nullable Rec rec1;
 
-    @OutputCustomType.Constructor({"rec1"})
-    private Rec(@Nullable Rec rec1) {
+    @OutputCustomType.Constructor
+    private Rec(@OutputCustomType.Parameter("rec1") @Nullable Rec rec1) {
         this.rec1 = rec1;
     }
 
