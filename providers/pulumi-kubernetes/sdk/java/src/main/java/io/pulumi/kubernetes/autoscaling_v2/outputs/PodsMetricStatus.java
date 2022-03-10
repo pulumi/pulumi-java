@@ -21,10 +21,10 @@ public final class PodsMetricStatus {
      */
     private final MetricIdentifier metric;
 
-    @OutputCustomType.Constructor({"current","metric"})
+    @OutputCustomType.Constructor
     private PodsMetricStatus(
-        MetricValueStatus current,
-        MetricIdentifier metric) {
+        @OutputCustomType.Parameter("current") MetricValueStatus current,
+        @OutputCustomType.Parameter("metric") MetricIdentifier metric) {
         this.current = current;
         this.metric = metric;
     }

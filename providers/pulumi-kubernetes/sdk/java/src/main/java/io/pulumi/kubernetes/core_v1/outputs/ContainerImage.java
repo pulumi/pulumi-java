@@ -24,10 +24,10 @@ public final class ContainerImage {
      */
     private final @Nullable Integer sizeBytes;
 
-    @OutputCustomType.Constructor({"names","sizeBytes"})
+    @OutputCustomType.Constructor
     private ContainerImage(
-        List<String> names,
-        @Nullable Integer sizeBytes) {
+        @OutputCustomType.Parameter("names") List<String> names,
+        @OutputCustomType.Parameter("sizeBytes") @Nullable Integer sizeBytes) {
         this.names = names;
         this.sizeBytes = sizeBytes;
     }

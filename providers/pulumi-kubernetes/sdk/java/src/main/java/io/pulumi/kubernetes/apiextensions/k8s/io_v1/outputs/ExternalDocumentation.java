@@ -14,10 +14,10 @@ public final class ExternalDocumentation {
     private final @Nullable String description;
     private final @Nullable String url;
 
-    @OutputCustomType.Constructor({"description","url"})
+    @OutputCustomType.Constructor
     private ExternalDocumentation(
-        @Nullable String description,
-        @Nullable String url) {
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("url") @Nullable String url) {
         this.description = description;
         this.url = url;
     }

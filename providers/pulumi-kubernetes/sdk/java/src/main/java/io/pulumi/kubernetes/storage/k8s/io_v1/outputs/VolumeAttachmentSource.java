@@ -23,10 +23,10 @@ public final class VolumeAttachmentSource {
      */
     private final @Nullable String persistentVolumeName;
 
-    @OutputCustomType.Constructor({"inlineVolumeSpec","persistentVolumeName"})
+    @OutputCustomType.Constructor
     private VolumeAttachmentSource(
-        @Nullable PersistentVolumeSpec inlineVolumeSpec,
-        @Nullable String persistentVolumeName) {
+        @OutputCustomType.Parameter("inlineVolumeSpec") @Nullable PersistentVolumeSpec inlineVolumeSpec,
+        @OutputCustomType.Parameter("persistentVolumeName") @Nullable String persistentVolumeName) {
         this.inlineVolumeSpec = inlineVolumeSpec;
         this.persistentVolumeName = persistentVolumeName;
     }

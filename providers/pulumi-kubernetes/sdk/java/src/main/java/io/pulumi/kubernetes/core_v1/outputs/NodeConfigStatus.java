@@ -33,12 +33,12 @@ public final class NodeConfigStatus {
      */
     private final @Nullable NodeConfigSource lastKnownGood;
 
-    @OutputCustomType.Constructor({"active","assigned","error","lastKnownGood"})
+    @OutputCustomType.Constructor
     private NodeConfigStatus(
-        @Nullable NodeConfigSource active,
-        @Nullable NodeConfigSource assigned,
-        @Nullable String error,
-        @Nullable NodeConfigSource lastKnownGood) {
+        @OutputCustomType.Parameter("active") @Nullable NodeConfigSource active,
+        @OutputCustomType.Parameter("assigned") @Nullable NodeConfigSource assigned,
+        @OutputCustomType.Parameter("error") @Nullable String error,
+        @OutputCustomType.Parameter("lastKnownGood") @Nullable NodeConfigSource lastKnownGood) {
         this.active = active;
         this.assigned = assigned;
         this.error = error;

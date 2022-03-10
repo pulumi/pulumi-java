@@ -44,14 +44,14 @@ public final class ReplicationControllerStatus {
      */
     private final Integer replicas;
 
-    @OutputCustomType.Constructor({"availableReplicas","conditions","fullyLabeledReplicas","observedGeneration","readyReplicas","replicas"})
+    @OutputCustomType.Constructor
     private ReplicationControllerStatus(
-        @Nullable Integer availableReplicas,
-        @Nullable List<ReplicationControllerCondition> conditions,
-        @Nullable Integer fullyLabeledReplicas,
-        @Nullable Integer observedGeneration,
-        @Nullable Integer readyReplicas,
-        Integer replicas) {
+        @OutputCustomType.Parameter("availableReplicas") @Nullable Integer availableReplicas,
+        @OutputCustomType.Parameter("conditions") @Nullable List<ReplicationControllerCondition> conditions,
+        @OutputCustomType.Parameter("fullyLabeledReplicas") @Nullable Integer fullyLabeledReplicas,
+        @OutputCustomType.Parameter("observedGeneration") @Nullable Integer observedGeneration,
+        @OutputCustomType.Parameter("readyReplicas") @Nullable Integer readyReplicas,
+        @OutputCustomType.Parameter("replicas") Integer replicas) {
         this.availableReplicas = availableReplicas;
         this.conditions = conditions;
         this.fullyLabeledReplicas = fullyLabeledReplicas;

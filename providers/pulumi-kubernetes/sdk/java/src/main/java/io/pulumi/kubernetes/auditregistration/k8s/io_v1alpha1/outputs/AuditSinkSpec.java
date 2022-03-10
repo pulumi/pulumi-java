@@ -21,10 +21,10 @@ public final class AuditSinkSpec {
      */
     private final Webhook webhook;
 
-    @OutputCustomType.Constructor({"policy","webhook"})
+    @OutputCustomType.Constructor
     private AuditSinkSpec(
-        Policy policy,
-        Webhook webhook) {
+        @OutputCustomType.Parameter("policy") Policy policy,
+        @OutputCustomType.Parameter("webhook") Webhook webhook) {
         this.policy = policy;
         this.webhook = webhook;
     }

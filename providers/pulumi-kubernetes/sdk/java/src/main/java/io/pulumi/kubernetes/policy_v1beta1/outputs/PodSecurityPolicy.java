@@ -34,12 +34,12 @@ public final class PodSecurityPolicy {
      */
     private final @Nullable PodSecurityPolicySpec spec;
 
-    @OutputCustomType.Constructor({"apiVersion","kind","metadata","spec"})
+    @OutputCustomType.Constructor
     private PodSecurityPolicy(
-        @Nullable String apiVersion,
-        @Nullable String kind,
-        @Nullable ObjectMeta metadata,
-        @Nullable PodSecurityPolicySpec spec) {
+        @OutputCustomType.Parameter("apiVersion") @Nullable String apiVersion,
+        @OutputCustomType.Parameter("kind") @Nullable String kind,
+        @OutputCustomType.Parameter("metadata") @Nullable ObjectMeta metadata,
+        @OutputCustomType.Parameter("spec") @Nullable PodSecurityPolicySpec spec) {
         this.apiVersion = apiVersion;
         this.kind = kind;
         this.metadata = metadata;

@@ -24,10 +24,10 @@ public final class TCPSocketAction {
      */
     private final Either<Integer,String> port;
 
-    @OutputCustomType.Constructor({"host","port"})
+    @OutputCustomType.Constructor
     private TCPSocketAction(
-        @Nullable String host,
-        Either<Integer,String> port) {
+        @OutputCustomType.Parameter("host") @Nullable String host,
+        @OutputCustomType.Parameter("port") Either<Integer,String> port) {
         this.host = host;
         this.port = port;
     }

@@ -34,12 +34,12 @@ public final class PodAffinityTerm {
      */
     private final String topologyKey;
 
-    @OutputCustomType.Constructor({"labelSelector","namespaceSelector","namespaces","topologyKey"})
+    @OutputCustomType.Constructor
     private PodAffinityTerm(
-        @Nullable LabelSelector labelSelector,
-        @Nullable LabelSelector namespaceSelector,
-        @Nullable List<String> namespaces,
-        String topologyKey) {
+        @OutputCustomType.Parameter("labelSelector") @Nullable LabelSelector labelSelector,
+        @OutputCustomType.Parameter("namespaceSelector") @Nullable LabelSelector namespaceSelector,
+        @OutputCustomType.Parameter("namespaces") @Nullable List<String> namespaces,
+        @OutputCustomType.Parameter("topologyKey") String topologyKey) {
         this.labelSelector = labelSelector;
         this.namespaceSelector = namespaceSelector;
         this.namespaces = namespaces;

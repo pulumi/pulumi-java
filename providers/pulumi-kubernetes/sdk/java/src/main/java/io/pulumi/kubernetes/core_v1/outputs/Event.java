@@ -102,25 +102,25 @@ public final class Event {
      */
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor({"action","apiVersion","count","eventTime","firstTimestamp","involvedObject","kind","lastTimestamp","message","metadata","reason","related","reportingComponent","reportingInstance","series","source","type"})
+    @OutputCustomType.Constructor
     private Event(
-        @Nullable String action,
-        @Nullable String apiVersion,
-        @Nullable Integer count,
-        @Nullable String eventTime,
-        @Nullable String firstTimestamp,
-        ObjectReference involvedObject,
-        @Nullable String kind,
-        @Nullable String lastTimestamp,
-        @Nullable String message,
-        ObjectMeta metadata,
-        @Nullable String reason,
-        @Nullable ObjectReference related,
-        @Nullable String reportingComponent,
-        @Nullable String reportingInstance,
-        @Nullable EventSeries series,
-        @Nullable EventSource source,
-        @Nullable String type) {
+        @OutputCustomType.Parameter("action") @Nullable String action,
+        @OutputCustomType.Parameter("apiVersion") @Nullable String apiVersion,
+        @OutputCustomType.Parameter("count") @Nullable Integer count,
+        @OutputCustomType.Parameter("eventTime") @Nullable String eventTime,
+        @OutputCustomType.Parameter("firstTimestamp") @Nullable String firstTimestamp,
+        @OutputCustomType.Parameter("involvedObject") ObjectReference involvedObject,
+        @OutputCustomType.Parameter("kind") @Nullable String kind,
+        @OutputCustomType.Parameter("lastTimestamp") @Nullable String lastTimestamp,
+        @OutputCustomType.Parameter("message") @Nullable String message,
+        @OutputCustomType.Parameter("metadata") ObjectMeta metadata,
+        @OutputCustomType.Parameter("reason") @Nullable String reason,
+        @OutputCustomType.Parameter("related") @Nullable ObjectReference related,
+        @OutputCustomType.Parameter("reportingComponent") @Nullable String reportingComponent,
+        @OutputCustomType.Parameter("reportingInstance") @Nullable String reportingInstance,
+        @OutputCustomType.Parameter("series") @Nullable EventSeries series,
+        @OutputCustomType.Parameter("source") @Nullable EventSource source,
+        @OutputCustomType.Parameter("type") @Nullable String type) {
         this.action = action;
         this.apiVersion = apiVersion;
         this.count = count;

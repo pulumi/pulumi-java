@@ -55,16 +55,16 @@ public final class RBDPersistentVolumeSource {
      */
     private final @Nullable String user;
 
-    @OutputCustomType.Constructor({"fsType","image","keyring","monitors","pool","readOnly","secretRef","user"})
+    @OutputCustomType.Constructor
     private RBDPersistentVolumeSource(
-        @Nullable String fsType,
-        String image,
-        @Nullable String keyring,
-        List<String> monitors,
-        @Nullable String pool,
-        @Nullable Boolean readOnly,
-        @Nullable SecretReference secretRef,
-        @Nullable String user) {
+        @OutputCustomType.Parameter("fsType") @Nullable String fsType,
+        @OutputCustomType.Parameter("image") String image,
+        @OutputCustomType.Parameter("keyring") @Nullable String keyring,
+        @OutputCustomType.Parameter("monitors") List<String> monitors,
+        @OutputCustomType.Parameter("pool") @Nullable String pool,
+        @OutputCustomType.Parameter("readOnly") @Nullable Boolean readOnly,
+        @OutputCustomType.Parameter("secretRef") @Nullable SecretReference secretRef,
+        @OutputCustomType.Parameter("user") @Nullable String user) {
         this.fsType = fsType;
         this.image = image;
         this.keyring = keyring;

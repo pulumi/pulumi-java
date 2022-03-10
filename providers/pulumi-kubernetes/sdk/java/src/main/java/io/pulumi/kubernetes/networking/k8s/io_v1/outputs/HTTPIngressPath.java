@@ -38,11 +38,11 @@ public final class HTTPIngressPath {
      */
     private final String pathType;
 
-    @OutputCustomType.Constructor({"backend","path","pathType"})
+    @OutputCustomType.Constructor
     private HTTPIngressPath(
-        IngressBackend backend,
-        @Nullable String path,
-        String pathType) {
+        @OutputCustomType.Parameter("backend") IngressBackend backend,
+        @OutputCustomType.Parameter("path") @Nullable String path,
+        @OutputCustomType.Parameter("pathType") String pathType) {
         this.backend = backend;
         this.path = path;
         this.pathType = pathType;

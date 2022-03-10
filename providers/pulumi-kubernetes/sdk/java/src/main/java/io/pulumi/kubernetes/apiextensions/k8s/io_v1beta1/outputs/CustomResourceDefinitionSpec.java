@@ -70,18 +70,18 @@ public final class CustomResourceDefinitionSpec {
      */
     private final @Nullable List<CustomResourceDefinitionVersion> versions;
 
-    @OutputCustomType.Constructor({"additionalPrinterColumns","conversion","group","names","preserveUnknownFields","scope","subresources","validation","version","versions"})
+    @OutputCustomType.Constructor
     private CustomResourceDefinitionSpec(
-        @Nullable List<CustomResourceColumnDefinition> additionalPrinterColumns,
-        @Nullable CustomResourceConversion conversion,
-        String group,
-        CustomResourceDefinitionNames names,
-        @Nullable Boolean preserveUnknownFields,
-        String scope,
-        @Nullable CustomResourceSubresources subresources,
-        @Nullable CustomResourceValidation validation,
-        @Nullable String version,
-        @Nullable List<CustomResourceDefinitionVersion> versions) {
+        @OutputCustomType.Parameter("additionalPrinterColumns") @Nullable List<CustomResourceColumnDefinition> additionalPrinterColumns,
+        @OutputCustomType.Parameter("conversion") @Nullable CustomResourceConversion conversion,
+        @OutputCustomType.Parameter("group") String group,
+        @OutputCustomType.Parameter("names") CustomResourceDefinitionNames names,
+        @OutputCustomType.Parameter("preserveUnknownFields") @Nullable Boolean preserveUnknownFields,
+        @OutputCustomType.Parameter("scope") String scope,
+        @OutputCustomType.Parameter("subresources") @Nullable CustomResourceSubresources subresources,
+        @OutputCustomType.Parameter("validation") @Nullable CustomResourceValidation validation,
+        @OutputCustomType.Parameter("version") @Nullable String version,
+        @OutputCustomType.Parameter("versions") @Nullable List<CustomResourceDefinitionVersion> versions) {
         this.additionalPrinterColumns = additionalPrinterColumns;
         this.conversion = conversion;
         this.group = group;

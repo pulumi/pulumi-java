@@ -55,15 +55,15 @@ public final class CronJobSpec {
      */
     private final @Nullable Boolean suspend;
 
-    @OutputCustomType.Constructor({"concurrencyPolicy","failedJobsHistoryLimit","jobTemplate","schedule","startingDeadlineSeconds","successfulJobsHistoryLimit","suspend"})
+    @OutputCustomType.Constructor
     private CronJobSpec(
-        @Nullable String concurrencyPolicy,
-        @Nullable Integer failedJobsHistoryLimit,
-        JobTemplateSpec jobTemplate,
-        String schedule,
-        @Nullable Integer startingDeadlineSeconds,
-        @Nullable Integer successfulJobsHistoryLimit,
-        @Nullable Boolean suspend) {
+        @OutputCustomType.Parameter("concurrencyPolicy") @Nullable String concurrencyPolicy,
+        @OutputCustomType.Parameter("failedJobsHistoryLimit") @Nullable Integer failedJobsHistoryLimit,
+        @OutputCustomType.Parameter("jobTemplate") JobTemplateSpec jobTemplate,
+        @OutputCustomType.Parameter("schedule") String schedule,
+        @OutputCustomType.Parameter("startingDeadlineSeconds") @Nullable Integer startingDeadlineSeconds,
+        @OutputCustomType.Parameter("successfulJobsHistoryLimit") @Nullable Integer successfulJobsHistoryLimit,
+        @OutputCustomType.Parameter("suspend") @Nullable Boolean suspend) {
         this.concurrencyPolicy = concurrencyPolicy;
         this.failedJobsHistoryLimit = failedJobsHistoryLimit;
         this.jobTemplate = jobTemplate;

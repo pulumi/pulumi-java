@@ -46,14 +46,14 @@ public final class HorizontalPodAutoscalerStatus {
      */
     private final @Nullable Integer observedGeneration;
 
-    @OutputCustomType.Constructor({"conditions","currentMetrics","currentReplicas","desiredReplicas","lastScaleTime","observedGeneration"})
+    @OutputCustomType.Constructor
     private HorizontalPodAutoscalerStatus(
-        @Nullable List<HorizontalPodAutoscalerCondition> conditions,
-        @Nullable List<MetricStatus> currentMetrics,
-        Integer currentReplicas,
-        Integer desiredReplicas,
-        @Nullable String lastScaleTime,
-        @Nullable Integer observedGeneration) {
+        @OutputCustomType.Parameter("conditions") @Nullable List<HorizontalPodAutoscalerCondition> conditions,
+        @OutputCustomType.Parameter("currentMetrics") @Nullable List<MetricStatus> currentMetrics,
+        @OutputCustomType.Parameter("currentReplicas") Integer currentReplicas,
+        @OutputCustomType.Parameter("desiredReplicas") Integer desiredReplicas,
+        @OutputCustomType.Parameter("lastScaleTime") @Nullable String lastScaleTime,
+        @OutputCustomType.Parameter("observedGeneration") @Nullable Integer observedGeneration) {
         this.conditions = conditions;
         this.currentMetrics = currentMetrics;
         this.currentReplicas = currentReplicas;

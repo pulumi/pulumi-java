@@ -16,8 +16,8 @@ public final class NodeSelector {
      */
     private final List<NodeSelectorTerm> nodeSelectorTerms;
 
-    @OutputCustomType.Constructor({"nodeSelectorTerms"})
-    private NodeSelector(List<NodeSelectorTerm> nodeSelectorTerms) {
+    @OutputCustomType.Constructor
+    private NodeSelector(@OutputCustomType.Parameter("nodeSelectorTerms") List<NodeSelectorTerm> nodeSelectorTerms) {
         this.nodeSelectorTerms = nodeSelectorTerms;
     }
 

@@ -24,10 +24,10 @@ public final class NodeAffinity {
      */
     private final @Nullable NodeSelector requiredDuringSchedulingIgnoredDuringExecution;
 
-    @OutputCustomType.Constructor({"preferredDuringSchedulingIgnoredDuringExecution","requiredDuringSchedulingIgnoredDuringExecution"})
+    @OutputCustomType.Constructor
     private NodeAffinity(
-        @Nullable List<PreferredSchedulingTerm> preferredDuringSchedulingIgnoredDuringExecution,
-        @Nullable NodeSelector requiredDuringSchedulingIgnoredDuringExecution) {
+        @OutputCustomType.Parameter("preferredDuringSchedulingIgnoredDuringExecution") @Nullable List<PreferredSchedulingTerm> preferredDuringSchedulingIgnoredDuringExecution,
+        @OutputCustomType.Parameter("requiredDuringSchedulingIgnoredDuringExecution") @Nullable NodeSelector requiredDuringSchedulingIgnoredDuringExecution) {
         this.preferredDuringSchedulingIgnoredDuringExecution = preferredDuringSchedulingIgnoredDuringExecution;
         this.requiredDuringSchedulingIgnoredDuringExecution = requiredDuringSchedulingIgnoredDuringExecution;
     }

@@ -34,12 +34,12 @@ public final class GCEPersistentDiskVolumeSource {
      */
     private final @Nullable Boolean readOnly;
 
-    @OutputCustomType.Constructor({"fsType","partition","pdName","readOnly"})
+    @OutputCustomType.Constructor
     private GCEPersistentDiskVolumeSource(
-        @Nullable String fsType,
-        @Nullable Integer partition,
-        String pdName,
-        @Nullable Boolean readOnly) {
+        @OutputCustomType.Parameter("fsType") @Nullable String fsType,
+        @OutputCustomType.Parameter("partition") @Nullable Integer partition,
+        @OutputCustomType.Parameter("pdName") String pdName,
+        @OutputCustomType.Parameter("readOnly") @Nullable Boolean readOnly) {
         this.fsType = fsType;
         this.partition = partition;
         this.pdName = pdName;

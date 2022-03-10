@@ -30,11 +30,11 @@ public final class ConfigMapProjection {
      */
     private final @Nullable Boolean optional;
 
-    @OutputCustomType.Constructor({"items","name","optional"})
+    @OutputCustomType.Constructor
     private ConfigMapProjection(
-        @Nullable List<KeyToPath> items,
-        @Nullable String name,
-        @Nullable Boolean optional) {
+        @OutputCustomType.Parameter("items") @Nullable List<KeyToPath> items,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("optional") @Nullable Boolean optional) {
         this.items = items;
         this.name = name;
         this.optional = optional;

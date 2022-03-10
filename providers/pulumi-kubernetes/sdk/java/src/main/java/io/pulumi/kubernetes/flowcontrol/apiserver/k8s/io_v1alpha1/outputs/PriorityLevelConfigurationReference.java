@@ -15,8 +15,8 @@ public final class PriorityLevelConfigurationReference {
      */
     private final String name;
 
-    @OutputCustomType.Constructor({"name"})
-    private PriorityLevelConfigurationReference(String name) {
+    @OutputCustomType.Constructor
+    private PriorityLevelConfigurationReference(@OutputCustomType.Parameter("name") String name) {
         this.name = name;
     }
 

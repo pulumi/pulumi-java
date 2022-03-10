@@ -56,15 +56,15 @@ public final class CertificateSigningRequestSpec {
      */
     private final @Nullable String username;
 
-    @OutputCustomType.Constructor({"extra","groups","request","signerName","uid","usages","username"})
+    @OutputCustomType.Constructor
     private CertificateSigningRequestSpec(
-        @Nullable Map<String,List<String>> extra,
-        @Nullable List<String> groups,
-        String request,
-        @Nullable String signerName,
-        @Nullable String uid,
-        @Nullable List<String> usages,
-        @Nullable String username) {
+        @OutputCustomType.Parameter("extra") @Nullable Map<String,List<String>> extra,
+        @OutputCustomType.Parameter("groups") @Nullable List<String> groups,
+        @OutputCustomType.Parameter("request") String request,
+        @OutputCustomType.Parameter("signerName") @Nullable String signerName,
+        @OutputCustomType.Parameter("uid") @Nullable String uid,
+        @OutputCustomType.Parameter("usages") @Nullable List<String> usages,
+        @OutputCustomType.Parameter("username") @Nullable String username) {
         this.extra = extra;
         this.groups = groups;
         this.request = request;

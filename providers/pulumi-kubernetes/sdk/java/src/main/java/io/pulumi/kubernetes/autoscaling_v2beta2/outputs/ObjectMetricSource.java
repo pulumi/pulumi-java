@@ -23,11 +23,11 @@ public final class ObjectMetricSource {
      */
     private final MetricTarget target;
 
-    @OutputCustomType.Constructor({"describedObject","metric","target"})
+    @OutputCustomType.Constructor
     private ObjectMetricSource(
-        CrossVersionObjectReference describedObject,
-        MetricIdentifier metric,
-        MetricTarget target) {
+        @OutputCustomType.Parameter("describedObject") CrossVersionObjectReference describedObject,
+        @OutputCustomType.Parameter("metric") MetricIdentifier metric,
+        @OutputCustomType.Parameter("target") MetricTarget target) {
         this.describedObject = describedObject;
         this.metric = metric;
         this.target = target;

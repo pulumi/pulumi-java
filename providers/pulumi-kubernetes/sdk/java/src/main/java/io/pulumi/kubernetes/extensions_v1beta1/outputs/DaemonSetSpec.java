@@ -45,14 +45,14 @@ public final class DaemonSetSpec {
      */
     private final @Nullable DaemonSetUpdateStrategy updateStrategy;
 
-    @OutputCustomType.Constructor({"minReadySeconds","revisionHistoryLimit","selector","template","templateGeneration","updateStrategy"})
+    @OutputCustomType.Constructor
     private DaemonSetSpec(
-        @Nullable Integer minReadySeconds,
-        @Nullable Integer revisionHistoryLimit,
-        @Nullable LabelSelector selector,
-        PodTemplateSpec template,
-        @Nullable Integer templateGeneration,
-        @Nullable DaemonSetUpdateStrategy updateStrategy) {
+        @OutputCustomType.Parameter("minReadySeconds") @Nullable Integer minReadySeconds,
+        @OutputCustomType.Parameter("revisionHistoryLimit") @Nullable Integer revisionHistoryLimit,
+        @OutputCustomType.Parameter("selector") @Nullable LabelSelector selector,
+        @OutputCustomType.Parameter("template") PodTemplateSpec template,
+        @OutputCustomType.Parameter("templateGeneration") @Nullable Integer templateGeneration,
+        @OutputCustomType.Parameter("updateStrategy") @Nullable DaemonSetUpdateStrategy updateStrategy) {
         this.minReadySeconds = minReadySeconds;
         this.revisionHistoryLimit = revisionHistoryLimit;
         this.selector = selector;

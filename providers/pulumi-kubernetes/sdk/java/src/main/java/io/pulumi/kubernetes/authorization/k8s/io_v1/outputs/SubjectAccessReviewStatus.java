@@ -33,12 +33,12 @@ public final class SubjectAccessReviewStatus {
      */
     private final @Nullable String reason;
 
-    @OutputCustomType.Constructor({"allowed","denied","evaluationError","reason"})
+    @OutputCustomType.Constructor
     private SubjectAccessReviewStatus(
-        Boolean allowed,
-        @Nullable Boolean denied,
-        @Nullable String evaluationError,
-        @Nullable String reason) {
+        @OutputCustomType.Parameter("allowed") Boolean allowed,
+        @OutputCustomType.Parameter("denied") @Nullable Boolean denied,
+        @OutputCustomType.Parameter("evaluationError") @Nullable String evaluationError,
+        @OutputCustomType.Parameter("reason") @Nullable String reason) {
         this.allowed = allowed;
         this.denied = denied;
         this.evaluationError = evaluationError;

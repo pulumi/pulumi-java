@@ -41,13 +41,13 @@ public final class ClusterRoleBinding {
      */
     private final @Nullable List<Subject> subjects;
 
-    @OutputCustomType.Constructor({"apiVersion","kind","metadata","roleRef","subjects"})
+    @OutputCustomType.Constructor
     private ClusterRoleBinding(
-        @Nullable String apiVersion,
-        @Nullable String kind,
-        @Nullable ObjectMeta metadata,
-        RoleRef roleRef,
-        @Nullable List<Subject> subjects) {
+        @OutputCustomType.Parameter("apiVersion") @Nullable String apiVersion,
+        @OutputCustomType.Parameter("kind") @Nullable String kind,
+        @OutputCustomType.Parameter("metadata") @Nullable ObjectMeta metadata,
+        @OutputCustomType.Parameter("roleRef") RoleRef roleRef,
+        @OutputCustomType.Parameter("subjects") @Nullable List<Subject> subjects) {
         this.apiVersion = apiVersion;
         this.kind = kind;
         this.metadata = metadata;

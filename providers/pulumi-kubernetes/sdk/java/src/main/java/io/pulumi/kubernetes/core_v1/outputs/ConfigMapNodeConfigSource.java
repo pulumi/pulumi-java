@@ -37,13 +37,13 @@ public final class ConfigMapNodeConfigSource {
      */
     private final @Nullable String uid;
 
-    @OutputCustomType.Constructor({"kubeletConfigKey","name","namespace","resourceVersion","uid"})
+    @OutputCustomType.Constructor
     private ConfigMapNodeConfigSource(
-        String kubeletConfigKey,
-        String name,
-        String namespace,
-        @Nullable String resourceVersion,
-        @Nullable String uid) {
+        @OutputCustomType.Parameter("kubeletConfigKey") String kubeletConfigKey,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("namespace") String namespace,
+        @OutputCustomType.Parameter("resourceVersion") @Nullable String resourceVersion,
+        @OutputCustomType.Parameter("uid") @Nullable String uid) {
         this.kubeletConfigKey = kubeletConfigKey;
         this.name = name;
         this.namespace = namespace;

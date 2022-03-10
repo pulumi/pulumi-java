@@ -24,10 +24,10 @@ public final class ServiceStatus {
      */
     private final @Nullable LoadBalancerStatus loadBalancer;
 
-    @OutputCustomType.Constructor({"conditions","loadBalancer"})
+    @OutputCustomType.Constructor
     private ServiceStatus(
-        @Nullable List<Condition> conditions,
-        @Nullable LoadBalancerStatus loadBalancer) {
+        @OutputCustomType.Parameter("conditions") @Nullable List<Condition> conditions,
+        @OutputCustomType.Parameter("loadBalancer") @Nullable LoadBalancerStatus loadBalancer) {
         this.conditions = conditions;
         this.loadBalancer = loadBalancer;
     }

@@ -17,8 +17,8 @@ public final class ContainerStateRunning {
      */
     private final @Nullable String startedAt;
 
-    @OutputCustomType.Constructor({"startedAt"})
-    private ContainerStateRunning(@Nullable String startedAt) {
+    @OutputCustomType.Constructor
+    private ContainerStateRunning(@OutputCustomType.Parameter("startedAt") @Nullable String startedAt) {
         this.startedAt = startedAt;
     }
 

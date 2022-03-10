@@ -29,11 +29,11 @@ public final class ContainerState {
      */
     private final @Nullable ContainerStateWaiting waiting;
 
-    @OutputCustomType.Constructor({"running","terminated","waiting"})
+    @OutputCustomType.Constructor
     private ContainerState(
-        @Nullable ContainerStateRunning running,
-        @Nullable ContainerStateTerminated terminated,
-        @Nullable ContainerStateWaiting waiting) {
+        @OutputCustomType.Parameter("running") @Nullable ContainerStateRunning running,
+        @OutputCustomType.Parameter("terminated") @Nullable ContainerStateTerminated terminated,
+        @OutputCustomType.Parameter("waiting") @Nullable ContainerStateWaiting waiting) {
         this.running = running;
         this.terminated = terminated;
         this.waiting = waiting;

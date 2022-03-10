@@ -64,18 +64,18 @@ public final class DaemonSetStatus {
      */
     private final @Nullable Integer updatedNumberScheduled;
 
-    @OutputCustomType.Constructor({"collisionCount","conditions","currentNumberScheduled","desiredNumberScheduled","numberAvailable","numberMisscheduled","numberReady","numberUnavailable","observedGeneration","updatedNumberScheduled"})
+    @OutputCustomType.Constructor
     private DaemonSetStatus(
-        @Nullable Integer collisionCount,
-        @Nullable List<DaemonSetCondition> conditions,
-        Integer currentNumberScheduled,
-        Integer desiredNumberScheduled,
-        @Nullable Integer numberAvailable,
-        Integer numberMisscheduled,
-        Integer numberReady,
-        @Nullable Integer numberUnavailable,
-        @Nullable Integer observedGeneration,
-        @Nullable Integer updatedNumberScheduled) {
+        @OutputCustomType.Parameter("collisionCount") @Nullable Integer collisionCount,
+        @OutputCustomType.Parameter("conditions") @Nullable List<DaemonSetCondition> conditions,
+        @OutputCustomType.Parameter("currentNumberScheduled") Integer currentNumberScheduled,
+        @OutputCustomType.Parameter("desiredNumberScheduled") Integer desiredNumberScheduled,
+        @OutputCustomType.Parameter("numberAvailable") @Nullable Integer numberAvailable,
+        @OutputCustomType.Parameter("numberMisscheduled") Integer numberMisscheduled,
+        @OutputCustomType.Parameter("numberReady") Integer numberReady,
+        @OutputCustomType.Parameter("numberUnavailable") @Nullable Integer numberUnavailable,
+        @OutputCustomType.Parameter("observedGeneration") @Nullable Integer observedGeneration,
+        @OutputCustomType.Parameter("updatedNumberScheduled") @Nullable Integer updatedNumberScheduled) {
         this.collisionCount = collisionCount;
         this.conditions = conditions;
         this.currentNumberScheduled = currentNumberScheduled;

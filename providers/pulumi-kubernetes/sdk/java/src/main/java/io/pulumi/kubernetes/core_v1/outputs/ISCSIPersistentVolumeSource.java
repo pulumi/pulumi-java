@@ -71,19 +71,19 @@ public final class ISCSIPersistentVolumeSource {
      */
     private final String targetPortal;
 
-    @OutputCustomType.Constructor({"chapAuthDiscovery","chapAuthSession","fsType","initiatorName","iqn","iscsiInterface","lun","portals","readOnly","secretRef","targetPortal"})
+    @OutputCustomType.Constructor
     private ISCSIPersistentVolumeSource(
-        @Nullable Boolean chapAuthDiscovery,
-        @Nullable Boolean chapAuthSession,
-        @Nullable String fsType,
-        @Nullable String initiatorName,
-        String iqn,
-        @Nullable String iscsiInterface,
-        Integer lun,
-        @Nullable List<String> portals,
-        @Nullable Boolean readOnly,
-        @Nullable SecretReference secretRef,
-        String targetPortal) {
+        @OutputCustomType.Parameter("chapAuthDiscovery") @Nullable Boolean chapAuthDiscovery,
+        @OutputCustomType.Parameter("chapAuthSession") @Nullable Boolean chapAuthSession,
+        @OutputCustomType.Parameter("fsType") @Nullable String fsType,
+        @OutputCustomType.Parameter("initiatorName") @Nullable String initiatorName,
+        @OutputCustomType.Parameter("iqn") String iqn,
+        @OutputCustomType.Parameter("iscsiInterface") @Nullable String iscsiInterface,
+        @OutputCustomType.Parameter("lun") Integer lun,
+        @OutputCustomType.Parameter("portals") @Nullable List<String> portals,
+        @OutputCustomType.Parameter("readOnly") @Nullable Boolean readOnly,
+        @OutputCustomType.Parameter("secretRef") @Nullable SecretReference secretRef,
+        @OutputCustomType.Parameter("targetPortal") String targetPortal) {
         this.chapAuthDiscovery = chapAuthDiscovery;
         this.chapAuthSession = chapAuthSession;
         this.fsType = fsType;

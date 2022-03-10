@@ -17,8 +17,8 @@ public final class LocalObjectReference {
      */
     private final @Nullable String name;
 
-    @OutputCustomType.Constructor({"name"})
-    private LocalObjectReference(@Nullable String name) {
+    @OutputCustomType.Constructor
+    private LocalObjectReference(@OutputCustomType.Parameter("name") @Nullable String name) {
         this.name = name;
     }
 

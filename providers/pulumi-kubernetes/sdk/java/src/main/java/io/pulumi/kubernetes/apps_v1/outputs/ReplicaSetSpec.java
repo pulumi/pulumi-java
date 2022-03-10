@@ -34,12 +34,12 @@ public final class ReplicaSetSpec {
      */
     private final @Nullable PodTemplateSpec template;
 
-    @OutputCustomType.Constructor({"minReadySeconds","replicas","selector","template"})
+    @OutputCustomType.Constructor
     private ReplicaSetSpec(
-        @Nullable Integer minReadySeconds,
-        @Nullable Integer replicas,
-        LabelSelector selector,
-        @Nullable PodTemplateSpec template) {
+        @OutputCustomType.Parameter("minReadySeconds") @Nullable Integer minReadySeconds,
+        @OutputCustomType.Parameter("replicas") @Nullable Integer replicas,
+        @OutputCustomType.Parameter("selector") LabelSelector selector,
+        @OutputCustomType.Parameter("template") @Nullable PodTemplateSpec template) {
         this.minReadySeconds = minReadySeconds;
         this.replicas = replicas;
         this.selector = selector;

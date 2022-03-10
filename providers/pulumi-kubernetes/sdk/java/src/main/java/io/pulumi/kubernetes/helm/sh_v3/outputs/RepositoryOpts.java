@@ -42,14 +42,14 @@ public final class RepositoryOpts {
      */
     private final @Nullable String username;
 
-    @OutputCustomType.Constructor({"caFile","certFile","keyFile","password","repo","username"})
+    @OutputCustomType.Constructor
     private RepositoryOpts(
-        @Nullable String caFile,
-        @Nullable String certFile,
-        @Nullable String keyFile,
-        @Nullable String password,
-        @Nullable String repo,
-        @Nullable String username) {
+        @OutputCustomType.Parameter("caFile") @Nullable String caFile,
+        @OutputCustomType.Parameter("certFile") @Nullable String certFile,
+        @OutputCustomType.Parameter("keyFile") @Nullable String keyFile,
+        @OutputCustomType.Parameter("password") @Nullable String password,
+        @OutputCustomType.Parameter("repo") @Nullable String repo,
+        @OutputCustomType.Parameter("username") @Nullable String username) {
         this.caFile = caFile;
         this.certFile = certFile;
         this.keyFile = keyFile;

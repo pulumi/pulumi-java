@@ -45,13 +45,13 @@ public final class HTTPGetAction {
      */
     private final @Nullable String scheme;
 
-    @OutputCustomType.Constructor({"host","httpHeaders","path","port","scheme"})
+    @OutputCustomType.Constructor
     private HTTPGetAction(
-        @Nullable String host,
-        @Nullable List<HTTPHeader> httpHeaders,
-        @Nullable String path,
-        Either<Integer,String> port,
-        @Nullable String scheme) {
+        @OutputCustomType.Parameter("host") @Nullable String host,
+        @OutputCustomType.Parameter("httpHeaders") @Nullable List<HTTPHeader> httpHeaders,
+        @OutputCustomType.Parameter("path") @Nullable String path,
+        @OutputCustomType.Parameter("port") Either<Integer,String> port,
+        @OutputCustomType.Parameter("scheme") @Nullable String scheme) {
         this.host = host;
         this.httpHeaders = httpHeaders;
         this.path = path;

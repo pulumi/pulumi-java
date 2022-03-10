@@ -25,11 +25,11 @@ public final class RoleRef {
      */
     private final String name;
 
-    @OutputCustomType.Constructor({"apiGroup","kind","name"})
+    @OutputCustomType.Constructor
     private RoleRef(
-        String apiGroup,
-        String kind,
-        String name) {
+        @OutputCustomType.Parameter("apiGroup") String apiGroup,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("name") String name) {
         this.apiGroup = apiGroup;
         this.kind = kind;
         this.name = name;

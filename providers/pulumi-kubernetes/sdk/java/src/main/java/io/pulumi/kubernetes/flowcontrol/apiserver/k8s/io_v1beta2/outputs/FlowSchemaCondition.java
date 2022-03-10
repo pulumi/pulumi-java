@@ -37,13 +37,13 @@ public final class FlowSchemaCondition {
      */
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor({"lastTransitionTime","message","reason","status","type"})
+    @OutputCustomType.Constructor
     private FlowSchemaCondition(
-        @Nullable String lastTransitionTime,
-        @Nullable String message,
-        @Nullable String reason,
-        @Nullable String status,
-        @Nullable String type) {
+        @OutputCustomType.Parameter("lastTransitionTime") @Nullable String lastTransitionTime,
+        @OutputCustomType.Parameter("message") @Nullable String message,
+        @OutputCustomType.Parameter("reason") @Nullable String reason,
+        @OutputCustomType.Parameter("status") @Nullable String status,
+        @OutputCustomType.Parameter("type") @Nullable String type) {
         this.lastTransitionTime = lastTransitionTime;
         this.message = message;
         this.reason = reason;

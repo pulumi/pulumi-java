@@ -15,8 +15,8 @@ public final class AllowedCSIDriver {
      */
     private final String name;
 
-    @OutputCustomType.Constructor({"name"})
-    private AllowedCSIDriver(String name) {
+    @OutputCustomType.Constructor
+    private AllowedCSIDriver(@OutputCustomType.Parameter("name") String name) {
         this.name = name;
     }
 

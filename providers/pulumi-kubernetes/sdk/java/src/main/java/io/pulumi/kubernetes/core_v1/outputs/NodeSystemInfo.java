@@ -60,18 +60,18 @@ public final class NodeSystemInfo {
      */
     private final String systemUUID;
 
-    @OutputCustomType.Constructor({"architecture","bootID","containerRuntimeVersion","kernelVersion","kubeProxyVersion","kubeletVersion","machineID","operatingSystem","osImage","systemUUID"})
+    @OutputCustomType.Constructor
     private NodeSystemInfo(
-        String architecture,
-        String bootID,
-        String containerRuntimeVersion,
-        String kernelVersion,
-        String kubeProxyVersion,
-        String kubeletVersion,
-        String machineID,
-        String operatingSystem,
-        String osImage,
-        String systemUUID) {
+        @OutputCustomType.Parameter("architecture") String architecture,
+        @OutputCustomType.Parameter("bootID") String bootID,
+        @OutputCustomType.Parameter("containerRuntimeVersion") String containerRuntimeVersion,
+        @OutputCustomType.Parameter("kernelVersion") String kernelVersion,
+        @OutputCustomType.Parameter("kubeProxyVersion") String kubeProxyVersion,
+        @OutputCustomType.Parameter("kubeletVersion") String kubeletVersion,
+        @OutputCustomType.Parameter("machineID") String machineID,
+        @OutputCustomType.Parameter("operatingSystem") String operatingSystem,
+        @OutputCustomType.Parameter("osImage") String osImage,
+        @OutputCustomType.Parameter("systemUUID") String systemUUID) {
         this.architecture = architecture;
         this.bootID = bootID;
         this.containerRuntimeVersion = containerRuntimeVersion;

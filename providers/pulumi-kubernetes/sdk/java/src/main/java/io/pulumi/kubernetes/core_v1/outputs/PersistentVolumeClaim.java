@@ -40,13 +40,13 @@ public final class PersistentVolumeClaim {
      */
     private final @Nullable PersistentVolumeClaimStatus status;
 
-    @OutputCustomType.Constructor({"apiVersion","kind","metadata","spec","status"})
+    @OutputCustomType.Constructor
     private PersistentVolumeClaim(
-        @Nullable String apiVersion,
-        @Nullable String kind,
-        @Nullable ObjectMeta metadata,
-        @Nullable PersistentVolumeClaimSpec spec,
-        @Nullable PersistentVolumeClaimStatus status) {
+        @OutputCustomType.Parameter("apiVersion") @Nullable String apiVersion,
+        @OutputCustomType.Parameter("kind") @Nullable String kind,
+        @OutputCustomType.Parameter("metadata") @Nullable ObjectMeta metadata,
+        @OutputCustomType.Parameter("spec") @Nullable PersistentVolumeClaimSpec spec,
+        @OutputCustomType.Parameter("status") @Nullable PersistentVolumeClaimStatus status) {
         this.apiVersion = apiVersion;
         this.kind = kind;
         this.metadata = metadata;

@@ -28,11 +28,11 @@ public final class PortworxVolumeSource {
      */
     private final String volumeID;
 
-    @OutputCustomType.Constructor({"fsType","readOnly","volumeID"})
+    @OutputCustomType.Constructor
     private PortworxVolumeSource(
-        @Nullable String fsType,
-        @Nullable Boolean readOnly,
-        String volumeID) {
+        @OutputCustomType.Parameter("fsType") @Nullable String fsType,
+        @OutputCustomType.Parameter("readOnly") @Nullable Boolean readOnly,
+        @OutputCustomType.Parameter("volumeID") String volumeID) {
         this.fsType = fsType;
         this.readOnly = readOnly;
         this.volumeID = volumeID;

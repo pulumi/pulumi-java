@@ -17,8 +17,8 @@ public final class APIServiceStatus {
      */
     private final @Nullable List<APIServiceCondition> conditions;
 
-    @OutputCustomType.Constructor({"conditions"})
-    private APIServiceStatus(@Nullable List<APIServiceCondition> conditions) {
+    @OutputCustomType.Constructor
+    private APIServiceStatus(@OutputCustomType.Parameter("conditions") @Nullable List<APIServiceCondition> conditions) {
         this.conditions = conditions;
     }
 

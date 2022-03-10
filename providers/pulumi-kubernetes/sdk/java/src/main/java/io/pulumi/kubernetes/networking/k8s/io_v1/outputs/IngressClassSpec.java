@@ -23,10 +23,10 @@ public final class IngressClassSpec {
      */
     private final @Nullable IngressClassParametersReference parameters;
 
-    @OutputCustomType.Constructor({"controller","parameters"})
+    @OutputCustomType.Constructor
     private IngressClassSpec(
-        @Nullable String controller,
-        @Nullable IngressClassParametersReference parameters) {
+        @OutputCustomType.Parameter("controller") @Nullable String controller,
+        @OutputCustomType.Parameter("parameters") @Nullable IngressClassParametersReference parameters) {
         this.controller = controller;
         this.parameters = parameters;
     }

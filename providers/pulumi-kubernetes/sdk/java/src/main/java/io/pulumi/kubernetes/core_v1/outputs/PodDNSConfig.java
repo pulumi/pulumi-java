@@ -28,11 +28,11 @@ public final class PodDNSConfig {
      */
     private final @Nullable List<String> searches;
 
-    @OutputCustomType.Constructor({"nameservers","options","searches"})
+    @OutputCustomType.Constructor
     private PodDNSConfig(
-        @Nullable List<String> nameservers,
-        @Nullable List<PodDNSConfigOption> options,
-        @Nullable List<String> searches) {
+        @OutputCustomType.Parameter("nameservers") @Nullable List<String> nameservers,
+        @OutputCustomType.Parameter("options") @Nullable List<PodDNSConfigOption> options,
+        @OutputCustomType.Parameter("searches") @Nullable List<String> searches) {
         this.nameservers = nameservers;
         this.options = options;
         this.searches = searches;

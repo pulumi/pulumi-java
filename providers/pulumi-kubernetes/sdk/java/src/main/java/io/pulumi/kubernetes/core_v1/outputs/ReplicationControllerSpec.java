@@ -35,12 +35,12 @@ public final class ReplicationControllerSpec {
      */
     private final @Nullable PodTemplateSpec template;
 
-    @OutputCustomType.Constructor({"minReadySeconds","replicas","selector","template"})
+    @OutputCustomType.Constructor
     private ReplicationControllerSpec(
-        @Nullable Integer minReadySeconds,
-        @Nullable Integer replicas,
-        @Nullable Map<String,String> selector,
-        @Nullable PodTemplateSpec template) {
+        @OutputCustomType.Parameter("minReadySeconds") @Nullable Integer minReadySeconds,
+        @OutputCustomType.Parameter("replicas") @Nullable Integer replicas,
+        @OutputCustomType.Parameter("selector") @Nullable Map<String,String> selector,
+        @OutputCustomType.Parameter("template") @Nullable PodTemplateSpec template) {
         this.minReadySeconds = minReadySeconds;
         this.replicas = replicas;
         this.selector = selector;

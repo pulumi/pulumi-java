@@ -42,14 +42,14 @@ public final class CertificateSigningRequestCondition {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"lastTransitionTime","lastUpdateTime","message","reason","status","type"})
+    @OutputCustomType.Constructor
     private CertificateSigningRequestCondition(
-        @Nullable String lastTransitionTime,
-        @Nullable String lastUpdateTime,
-        @Nullable String message,
-        @Nullable String reason,
-        @Nullable String status,
-        String type) {
+        @OutputCustomType.Parameter("lastTransitionTime") @Nullable String lastTransitionTime,
+        @OutputCustomType.Parameter("lastUpdateTime") @Nullable String lastUpdateTime,
+        @OutputCustomType.Parameter("message") @Nullable String message,
+        @OutputCustomType.Parameter("reason") @Nullable String reason,
+        @OutputCustomType.Parameter("status") @Nullable String status,
+        @OutputCustomType.Parameter("type") String type) {
         this.lastTransitionTime = lastTransitionTime;
         this.lastUpdateTime = lastUpdateTime;
         this.message = message;

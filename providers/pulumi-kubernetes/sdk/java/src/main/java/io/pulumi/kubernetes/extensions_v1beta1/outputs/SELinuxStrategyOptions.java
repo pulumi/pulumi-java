@@ -23,10 +23,10 @@ public final class SELinuxStrategyOptions {
      */
     private final @Nullable SELinuxOptions seLinuxOptions;
 
-    @OutputCustomType.Constructor({"rule","seLinuxOptions"})
+    @OutputCustomType.Constructor
     private SELinuxStrategyOptions(
-        String rule,
-        @Nullable SELinuxOptions seLinuxOptions) {
+        @OutputCustomType.Parameter("rule") String rule,
+        @OutputCustomType.Parameter("seLinuxOptions") @Nullable SELinuxOptions seLinuxOptions) {
         this.rule = rule;
         this.seLinuxOptions = seLinuxOptions;
     }

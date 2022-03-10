@@ -41,13 +41,13 @@ public final class ClusterRole {
      */
     private final @Nullable List<PolicyRule> rules;
 
-    @OutputCustomType.Constructor({"aggregationRule","apiVersion","kind","metadata","rules"})
+    @OutputCustomType.Constructor
     private ClusterRole(
-        @Nullable AggregationRule aggregationRule,
-        @Nullable String apiVersion,
-        @Nullable String kind,
-        @Nullable ObjectMeta metadata,
-        @Nullable List<PolicyRule> rules) {
+        @OutputCustomType.Parameter("aggregationRule") @Nullable AggregationRule aggregationRule,
+        @OutputCustomType.Parameter("apiVersion") @Nullable String apiVersion,
+        @OutputCustomType.Parameter("kind") @Nullable String kind,
+        @OutputCustomType.Parameter("metadata") @Nullable ObjectMeta metadata,
+        @OutputCustomType.Parameter("rules") @Nullable List<PolicyRule> rules) {
         this.aggregationRule = aggregationRule;
         this.apiVersion = apiVersion;
         this.kind = kind;

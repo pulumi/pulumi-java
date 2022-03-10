@@ -23,10 +23,10 @@ public final class ServiceBackendPort {
      */
     private final @Nullable Integer number;
 
-    @OutputCustomType.Constructor({"name","number"})
+    @OutputCustomType.Constructor
     private ServiceBackendPort(
-        @Nullable String name,
-        @Nullable Integer number) {
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("number") @Nullable Integer number) {
         this.name = name;
         this.number = number;
     }

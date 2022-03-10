@@ -39,13 +39,13 @@ public final class StorageOSPersistentVolumeSource {
      */
     private final @Nullable String volumeNamespace;
 
-    @OutputCustomType.Constructor({"fsType","readOnly","secretRef","volumeName","volumeNamespace"})
+    @OutputCustomType.Constructor
     private StorageOSPersistentVolumeSource(
-        @Nullable String fsType,
-        @Nullable Boolean readOnly,
-        @Nullable ObjectReference secretRef,
-        @Nullable String volumeName,
-        @Nullable String volumeNamespace) {
+        @OutputCustomType.Parameter("fsType") @Nullable String fsType,
+        @OutputCustomType.Parameter("readOnly") @Nullable Boolean readOnly,
+        @OutputCustomType.Parameter("secretRef") @Nullable ObjectReference secretRef,
+        @OutputCustomType.Parameter("volumeName") @Nullable String volumeName,
+        @OutputCustomType.Parameter("volumeNamespace") @Nullable String volumeNamespace) {
         this.fsType = fsType;
         this.readOnly = readOnly;
         this.secretRef = secretRef;

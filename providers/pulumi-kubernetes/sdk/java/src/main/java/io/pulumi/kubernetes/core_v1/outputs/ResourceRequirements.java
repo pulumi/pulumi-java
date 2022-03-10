@@ -22,10 +22,10 @@ public final class ResourceRequirements {
      */
     private final @Nullable Map<String,String> requests;
 
-    @OutputCustomType.Constructor({"limits","requests"})
+    @OutputCustomType.Constructor
     private ResourceRequirements(
-        @Nullable Map<String,String> limits,
-        @Nullable Map<String,String> requests) {
+        @OutputCustomType.Parameter("limits") @Nullable Map<String,String> limits,
+        @OutputCustomType.Parameter("requests") @Nullable Map<String,String> requests) {
         this.limits = limits;
         this.requests = requests;
     }

@@ -40,13 +40,13 @@ public final class FlexPersistentVolumeSource {
      */
     private final @Nullable SecretReference secretRef;
 
-    @OutputCustomType.Constructor({"driver","fsType","options","readOnly","secretRef"})
+    @OutputCustomType.Constructor
     private FlexPersistentVolumeSource(
-        String driver,
-        @Nullable String fsType,
-        @Nullable Map<String,String> options,
-        @Nullable Boolean readOnly,
-        @Nullable SecretReference secretRef) {
+        @OutputCustomType.Parameter("driver") String driver,
+        @OutputCustomType.Parameter("fsType") @Nullable String fsType,
+        @OutputCustomType.Parameter("options") @Nullable Map<String,String> options,
+        @OutputCustomType.Parameter("readOnly") @Nullable Boolean readOnly,
+        @OutputCustomType.Parameter("secretRef") @Nullable SecretReference secretRef) {
         this.driver = driver;
         this.fsType = fsType;
         this.options = options;

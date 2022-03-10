@@ -33,12 +33,12 @@ public final class ContainerResourceMetricStatus {
      */
     private final String name;
 
-    @OutputCustomType.Constructor({"container","currentAverageUtilization","currentAverageValue","name"})
+    @OutputCustomType.Constructor
     private ContainerResourceMetricStatus(
-        String container,
-        @Nullable Integer currentAverageUtilization,
-        String currentAverageValue,
-        String name) {
+        @OutputCustomType.Parameter("container") String container,
+        @OutputCustomType.Parameter("currentAverageUtilization") @Nullable Integer currentAverageUtilization,
+        @OutputCustomType.Parameter("currentAverageValue") String currentAverageValue,
+        @OutputCustomType.Parameter("name") String name) {
         this.container = container;
         this.currentAverageUtilization = currentAverageUtilization;
         this.currentAverageValue = currentAverageValue;

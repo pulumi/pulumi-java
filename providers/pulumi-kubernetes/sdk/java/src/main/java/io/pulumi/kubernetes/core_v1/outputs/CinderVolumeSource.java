@@ -34,12 +34,12 @@ public final class CinderVolumeSource {
      */
     private final String volumeID;
 
-    @OutputCustomType.Constructor({"fsType","readOnly","secretRef","volumeID"})
+    @OutputCustomType.Constructor
     private CinderVolumeSource(
-        @Nullable String fsType,
-        @Nullable Boolean readOnly,
-        @Nullable LocalObjectReference secretRef,
-        String volumeID) {
+        @OutputCustomType.Parameter("fsType") @Nullable String fsType,
+        @OutputCustomType.Parameter("readOnly") @Nullable Boolean readOnly,
+        @OutputCustomType.Parameter("secretRef") @Nullable LocalObjectReference secretRef,
+        @OutputCustomType.Parameter("volumeID") String volumeID) {
         this.fsType = fsType;
         this.readOnly = readOnly;
         this.secretRef = secretRef;

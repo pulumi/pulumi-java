@@ -58,16 +58,16 @@ public final class StatefulSetSpec {
      */
     private final @Nullable List<PersistentVolumeClaim> volumeClaimTemplates;
 
-    @OutputCustomType.Constructor({"podManagementPolicy","replicas","revisionHistoryLimit","selector","serviceName","template","updateStrategy","volumeClaimTemplates"})
+    @OutputCustomType.Constructor
     private StatefulSetSpec(
-        @Nullable String podManagementPolicy,
-        @Nullable Integer replicas,
-        @Nullable Integer revisionHistoryLimit,
-        LabelSelector selector,
-        String serviceName,
-        PodTemplateSpec template,
-        @Nullable StatefulSetUpdateStrategy updateStrategy,
-        @Nullable List<PersistentVolumeClaim> volumeClaimTemplates) {
+        @OutputCustomType.Parameter("podManagementPolicy") @Nullable String podManagementPolicy,
+        @OutputCustomType.Parameter("replicas") @Nullable Integer replicas,
+        @OutputCustomType.Parameter("revisionHistoryLimit") @Nullable Integer revisionHistoryLimit,
+        @OutputCustomType.Parameter("selector") LabelSelector selector,
+        @OutputCustomType.Parameter("serviceName") String serviceName,
+        @OutputCustomType.Parameter("template") PodTemplateSpec template,
+        @OutputCustomType.Parameter("updateStrategy") @Nullable StatefulSetUpdateStrategy updateStrategy,
+        @OutputCustomType.Parameter("volumeClaimTemplates") @Nullable List<PersistentVolumeClaim> volumeClaimTemplates) {
         this.podManagementPolicy = podManagementPolicy;
         this.replicas = replicas;
         this.revisionHistoryLimit = revisionHistoryLimit;

@@ -148,32 +148,32 @@ public final class PodSecurityPolicySpec {
      */
     private final @Nullable List<String> volumes;
 
-    @OutputCustomType.Constructor({"allowPrivilegeEscalation","allowedCSIDrivers","allowedCapabilities","allowedFlexVolumes","allowedHostPaths","allowedProcMountTypes","allowedUnsafeSysctls","defaultAddCapabilities","defaultAllowPrivilegeEscalation","forbiddenSysctls","fsGroup","hostIPC","hostNetwork","hostPID","hostPorts","privileged","readOnlyRootFilesystem","requiredDropCapabilities","runAsGroup","runAsUser","runtimeClass","seLinux","supplementalGroups","volumes"})
+    @OutputCustomType.Constructor
     private PodSecurityPolicySpec(
-        @Nullable Boolean allowPrivilegeEscalation,
-        @Nullable List<AllowedCSIDriver> allowedCSIDrivers,
-        @Nullable List<String> allowedCapabilities,
-        @Nullable List<AllowedFlexVolume> allowedFlexVolumes,
-        @Nullable List<AllowedHostPath> allowedHostPaths,
-        @Nullable List<String> allowedProcMountTypes,
-        @Nullable List<String> allowedUnsafeSysctls,
-        @Nullable List<String> defaultAddCapabilities,
-        @Nullable Boolean defaultAllowPrivilegeEscalation,
-        @Nullable List<String> forbiddenSysctls,
-        FSGroupStrategyOptions fsGroup,
-        @Nullable Boolean hostIPC,
-        @Nullable Boolean hostNetwork,
-        @Nullable Boolean hostPID,
-        @Nullable List<HostPortRange> hostPorts,
-        @Nullable Boolean privileged,
-        @Nullable Boolean readOnlyRootFilesystem,
-        @Nullable List<String> requiredDropCapabilities,
-        @Nullable RunAsGroupStrategyOptions runAsGroup,
-        RunAsUserStrategyOptions runAsUser,
-        @Nullable RuntimeClassStrategyOptions runtimeClass,
-        SELinuxStrategyOptions seLinux,
-        SupplementalGroupsStrategyOptions supplementalGroups,
-        @Nullable List<String> volumes) {
+        @OutputCustomType.Parameter("allowPrivilegeEscalation") @Nullable Boolean allowPrivilegeEscalation,
+        @OutputCustomType.Parameter("allowedCSIDrivers") @Nullable List<AllowedCSIDriver> allowedCSIDrivers,
+        @OutputCustomType.Parameter("allowedCapabilities") @Nullable List<String> allowedCapabilities,
+        @OutputCustomType.Parameter("allowedFlexVolumes") @Nullable List<AllowedFlexVolume> allowedFlexVolumes,
+        @OutputCustomType.Parameter("allowedHostPaths") @Nullable List<AllowedHostPath> allowedHostPaths,
+        @OutputCustomType.Parameter("allowedProcMountTypes") @Nullable List<String> allowedProcMountTypes,
+        @OutputCustomType.Parameter("allowedUnsafeSysctls") @Nullable List<String> allowedUnsafeSysctls,
+        @OutputCustomType.Parameter("defaultAddCapabilities") @Nullable List<String> defaultAddCapabilities,
+        @OutputCustomType.Parameter("defaultAllowPrivilegeEscalation") @Nullable Boolean defaultAllowPrivilegeEscalation,
+        @OutputCustomType.Parameter("forbiddenSysctls") @Nullable List<String> forbiddenSysctls,
+        @OutputCustomType.Parameter("fsGroup") FSGroupStrategyOptions fsGroup,
+        @OutputCustomType.Parameter("hostIPC") @Nullable Boolean hostIPC,
+        @OutputCustomType.Parameter("hostNetwork") @Nullable Boolean hostNetwork,
+        @OutputCustomType.Parameter("hostPID") @Nullable Boolean hostPID,
+        @OutputCustomType.Parameter("hostPorts") @Nullable List<HostPortRange> hostPorts,
+        @OutputCustomType.Parameter("privileged") @Nullable Boolean privileged,
+        @OutputCustomType.Parameter("readOnlyRootFilesystem") @Nullable Boolean readOnlyRootFilesystem,
+        @OutputCustomType.Parameter("requiredDropCapabilities") @Nullable List<String> requiredDropCapabilities,
+        @OutputCustomType.Parameter("runAsGroup") @Nullable RunAsGroupStrategyOptions runAsGroup,
+        @OutputCustomType.Parameter("runAsUser") RunAsUserStrategyOptions runAsUser,
+        @OutputCustomType.Parameter("runtimeClass") @Nullable RuntimeClassStrategyOptions runtimeClass,
+        @OutputCustomType.Parameter("seLinux") SELinuxStrategyOptions seLinux,
+        @OutputCustomType.Parameter("supplementalGroups") SupplementalGroupsStrategyOptions supplementalGroups,
+        @OutputCustomType.Parameter("volumes") @Nullable List<String> volumes) {
         this.allowPrivilegeEscalation = allowPrivilegeEscalation;
         this.allowedCSIDrivers = allowedCSIDrivers;
         this.allowedCapabilities = allowedCapabilities;

@@ -17,8 +17,8 @@ public final class RollingUpdateStatefulSetStrategy {
      */
     private final @Nullable Integer partition;
 
-    @OutputCustomType.Constructor({"partition"})
-    private RollingUpdateStatefulSetStrategy(@Nullable Integer partition) {
+    @OutputCustomType.Constructor
+    private RollingUpdateStatefulSetStrategy(@OutputCustomType.Parameter("partition") @Nullable Integer partition) {
         this.partition = partition;
     }
 

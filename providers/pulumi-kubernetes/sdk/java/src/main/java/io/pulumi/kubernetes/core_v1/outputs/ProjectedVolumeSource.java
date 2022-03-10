@@ -24,10 +24,10 @@ public final class ProjectedVolumeSource {
      */
     private final List<VolumeProjection> sources;
 
-    @OutputCustomType.Constructor({"defaultMode","sources"})
+    @OutputCustomType.Constructor
     private ProjectedVolumeSource(
-        @Nullable Integer defaultMode,
-        List<VolumeProjection> sources) {
+        @OutputCustomType.Parameter("defaultMode") @Nullable Integer defaultMode,
+        @OutputCustomType.Parameter("sources") List<VolumeProjection> sources) {
         this.defaultMode = defaultMode;
         this.sources = sources;
     }

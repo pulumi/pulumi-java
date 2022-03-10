@@ -81,19 +81,19 @@ public final class NodeStatus {
      */
     private final @Nullable List<String> volumesInUse;
 
-    @OutputCustomType.Constructor({"addresses","allocatable","capacity","conditions","config","daemonEndpoints","images","nodeInfo","phase","volumesAttached","volumesInUse"})
+    @OutputCustomType.Constructor
     private NodeStatus(
-        @Nullable List<NodeAddress> addresses,
-        @Nullable Map<String,String> allocatable,
-        @Nullable Map<String,String> capacity,
-        @Nullable List<NodeCondition> conditions,
-        @Nullable NodeConfigStatus config,
-        @Nullable NodeDaemonEndpoints daemonEndpoints,
-        @Nullable List<ContainerImage> images,
-        @Nullable NodeSystemInfo nodeInfo,
-        @Nullable String phase,
-        @Nullable List<AttachedVolume> volumesAttached,
-        @Nullable List<String> volumesInUse) {
+        @OutputCustomType.Parameter("addresses") @Nullable List<NodeAddress> addresses,
+        @OutputCustomType.Parameter("allocatable") @Nullable Map<String,String> allocatable,
+        @OutputCustomType.Parameter("capacity") @Nullable Map<String,String> capacity,
+        @OutputCustomType.Parameter("conditions") @Nullable List<NodeCondition> conditions,
+        @OutputCustomType.Parameter("config") @Nullable NodeConfigStatus config,
+        @OutputCustomType.Parameter("daemonEndpoints") @Nullable NodeDaemonEndpoints daemonEndpoints,
+        @OutputCustomType.Parameter("images") @Nullable List<ContainerImage> images,
+        @OutputCustomType.Parameter("nodeInfo") @Nullable NodeSystemInfo nodeInfo,
+        @OutputCustomType.Parameter("phase") @Nullable String phase,
+        @OutputCustomType.Parameter("volumesAttached") @Nullable List<AttachedVolume> volumesAttached,
+        @OutputCustomType.Parameter("volumesInUse") @Nullable List<String> volumesInUse) {
         this.addresses = addresses;
         this.allocatable = allocatable;
         this.capacity = capacity;

@@ -35,12 +35,12 @@ public final class Endpoints {
      */
     private final @Nullable List<EndpointSubset> subsets;
 
-    @OutputCustomType.Constructor({"apiVersion","kind","metadata","subsets"})
+    @OutputCustomType.Constructor
     private Endpoints(
-        @Nullable String apiVersion,
-        @Nullable String kind,
-        @Nullable ObjectMeta metadata,
-        @Nullable List<EndpointSubset> subsets) {
+        @OutputCustomType.Parameter("apiVersion") @Nullable String apiVersion,
+        @OutputCustomType.Parameter("kind") @Nullable String kind,
+        @OutputCustomType.Parameter("metadata") @Nullable ObjectMeta metadata,
+        @OutputCustomType.Parameter("subsets") @Nullable List<EndpointSubset> subsets) {
         this.apiVersion = apiVersion;
         this.kind = kind;
         this.metadata = metadata;

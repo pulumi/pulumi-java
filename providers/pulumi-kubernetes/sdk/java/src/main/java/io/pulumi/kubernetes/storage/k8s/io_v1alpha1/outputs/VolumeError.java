@@ -22,10 +22,10 @@ public final class VolumeError {
      */
     private final @Nullable String time;
 
-    @OutputCustomType.Constructor({"message","time"})
+    @OutputCustomType.Constructor
     private VolumeError(
-        @Nullable String message,
-        @Nullable String time) {
+        @OutputCustomType.Parameter("message") @Nullable String message,
+        @OutputCustomType.Parameter("time") @Nullable String time) {
         this.message = message;
         this.time = time;
     }

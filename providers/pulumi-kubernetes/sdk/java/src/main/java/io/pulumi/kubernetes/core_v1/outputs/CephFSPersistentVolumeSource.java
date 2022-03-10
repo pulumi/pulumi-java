@@ -45,14 +45,14 @@ public final class CephFSPersistentVolumeSource {
      */
     private final @Nullable String user;
 
-    @OutputCustomType.Constructor({"monitors","path","readOnly","secretFile","secretRef","user"})
+    @OutputCustomType.Constructor
     private CephFSPersistentVolumeSource(
-        List<String> monitors,
-        @Nullable String path,
-        @Nullable Boolean readOnly,
-        @Nullable String secretFile,
-        @Nullable SecretReference secretRef,
-        @Nullable String user) {
+        @OutputCustomType.Parameter("monitors") List<String> monitors,
+        @OutputCustomType.Parameter("path") @Nullable String path,
+        @OutputCustomType.Parameter("readOnly") @Nullable Boolean readOnly,
+        @OutputCustomType.Parameter("secretFile") @Nullable String secretFile,
+        @OutputCustomType.Parameter("secretRef") @Nullable SecretReference secretRef,
+        @OutputCustomType.Parameter("user") @Nullable String user) {
         this.monitors = monitors;
         this.path = path;
         this.readOnly = readOnly;

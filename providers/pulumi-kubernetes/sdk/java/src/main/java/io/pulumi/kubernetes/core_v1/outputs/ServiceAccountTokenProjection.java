@@ -28,11 +28,11 @@ public final class ServiceAccountTokenProjection {
      */
     private final String path;
 
-    @OutputCustomType.Constructor({"audience","expirationSeconds","path"})
+    @OutputCustomType.Constructor
     private ServiceAccountTokenProjection(
-        @Nullable String audience,
-        @Nullable Integer expirationSeconds,
-        String path) {
+        @OutputCustomType.Parameter("audience") @Nullable String audience,
+        @OutputCustomType.Parameter("expirationSeconds") @Nullable Integer expirationSeconds,
+        @OutputCustomType.Parameter("path") String path) {
         this.audience = audience;
         this.expirationSeconds = expirationSeconds;
         this.path = path;

@@ -15,8 +15,8 @@ public final class ForZone {
      */
     private final String name;
 
-    @OutputCustomType.Constructor({"name"})
-    private ForZone(String name) {
+    @OutputCustomType.Constructor
+    private ForZone(@OutputCustomType.Parameter("name") String name) {
         this.name = name;
     }
 

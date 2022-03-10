@@ -23,10 +23,10 @@ public final class JobTemplateSpec {
      */
     private final @Nullable JobSpec spec;
 
-    @OutputCustomType.Constructor({"metadata","spec"})
+    @OutputCustomType.Constructor
     private JobTemplateSpec(
-        @Nullable ObjectMeta metadata,
-        @Nullable JobSpec spec) {
+        @OutputCustomType.Parameter("metadata") @Nullable ObjectMeta metadata,
+        @OutputCustomType.Parameter("spec") @Nullable JobSpec spec) {
         this.metadata = metadata;
         this.spec = spec;
     }

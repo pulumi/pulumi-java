@@ -32,12 +32,12 @@ public final class BoundObjectReference {
      */
     private final @Nullable String uid;
 
-    @OutputCustomType.Constructor({"apiVersion","kind","name","uid"})
+    @OutputCustomType.Constructor
     private BoundObjectReference(
-        @Nullable String apiVersion,
-        @Nullable String kind,
-        @Nullable String name,
-        @Nullable String uid) {
+        @OutputCustomType.Parameter("apiVersion") @Nullable String apiVersion,
+        @OutputCustomType.Parameter("kind") @Nullable String kind,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("uid") @Nullable String uid) {
         this.apiVersion = apiVersion;
         this.kind = kind;
         this.name = name;

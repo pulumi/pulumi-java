@@ -35,12 +35,12 @@ public final class MutatingWebhookConfiguration {
      */
     private final @Nullable List<MutatingWebhook> webhooks;
 
-    @OutputCustomType.Constructor({"apiVersion","kind","metadata","webhooks"})
+    @OutputCustomType.Constructor
     private MutatingWebhookConfiguration(
-        @Nullable String apiVersion,
-        @Nullable String kind,
-        @Nullable ObjectMeta metadata,
-        @Nullable List<MutatingWebhook> webhooks) {
+        @OutputCustomType.Parameter("apiVersion") @Nullable String apiVersion,
+        @OutputCustomType.Parameter("kind") @Nullable String kind,
+        @OutputCustomType.Parameter("metadata") @Nullable ObjectMeta metadata,
+        @OutputCustomType.Parameter("webhooks") @Nullable List<MutatingWebhook> webhooks) {
         this.apiVersion = apiVersion;
         this.kind = kind;
         this.metadata = metadata;

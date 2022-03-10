@@ -24,10 +24,10 @@ public final class FSGroupStrategyOptions {
      */
     private final @Nullable String rule;
 
-    @OutputCustomType.Constructor({"ranges","rule"})
+    @OutputCustomType.Constructor
     private FSGroupStrategyOptions(
-        @Nullable List<IDRange> ranges,
-        @Nullable String rule) {
+        @OutputCustomType.Parameter("ranges") @Nullable List<IDRange> ranges,
+        @OutputCustomType.Parameter("rule") @Nullable String rule) {
         this.ranges = ranges;
         this.rule = rule;
     }

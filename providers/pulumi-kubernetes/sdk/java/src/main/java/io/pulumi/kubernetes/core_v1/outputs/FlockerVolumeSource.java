@@ -22,10 +22,10 @@ public final class FlockerVolumeSource {
      */
     private final @Nullable String datasetUUID;
 
-    @OutputCustomType.Constructor({"datasetName","datasetUUID"})
+    @OutputCustomType.Constructor
     private FlockerVolumeSource(
-        @Nullable String datasetName,
-        @Nullable String datasetUUID) {
+        @OutputCustomType.Parameter("datasetName") @Nullable String datasetName,
+        @OutputCustomType.Parameter("datasetUUID") @Nullable String datasetUUID) {
         this.datasetName = datasetName;
         this.datasetUUID = datasetUUID;
     }

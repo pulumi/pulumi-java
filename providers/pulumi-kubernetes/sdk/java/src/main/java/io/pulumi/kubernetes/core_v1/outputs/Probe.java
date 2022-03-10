@@ -66,18 +66,18 @@ public final class Probe {
      */
     private final @Nullable Integer timeoutSeconds;
 
-    @OutputCustomType.Constructor({"exec","failureThreshold","grpc","httpGet","initialDelaySeconds","periodSeconds","successThreshold","tcpSocket","terminationGracePeriodSeconds","timeoutSeconds"})
+    @OutputCustomType.Constructor
     private Probe(
-        @Nullable ExecAction exec,
-        @Nullable Integer failureThreshold,
-        @Nullable GRPCAction grpc,
-        @Nullable HTTPGetAction httpGet,
-        @Nullable Integer initialDelaySeconds,
-        @Nullable Integer periodSeconds,
-        @Nullable Integer successThreshold,
-        @Nullable TCPSocketAction tcpSocket,
-        @Nullable Integer terminationGracePeriodSeconds,
-        @Nullable Integer timeoutSeconds) {
+        @OutputCustomType.Parameter("exec") @Nullable ExecAction exec,
+        @OutputCustomType.Parameter("failureThreshold") @Nullable Integer failureThreshold,
+        @OutputCustomType.Parameter("grpc") @Nullable GRPCAction grpc,
+        @OutputCustomType.Parameter("httpGet") @Nullable HTTPGetAction httpGet,
+        @OutputCustomType.Parameter("initialDelaySeconds") @Nullable Integer initialDelaySeconds,
+        @OutputCustomType.Parameter("periodSeconds") @Nullable Integer periodSeconds,
+        @OutputCustomType.Parameter("successThreshold") @Nullable Integer successThreshold,
+        @OutputCustomType.Parameter("tcpSocket") @Nullable TCPSocketAction tcpSocket,
+        @OutputCustomType.Parameter("terminationGracePeriodSeconds") @Nullable Integer terminationGracePeriodSeconds,
+        @OutputCustomType.Parameter("timeoutSeconds") @Nullable Integer timeoutSeconds) {
         this.exec = exec;
         this.failureThreshold = failureThreshold;
         this.grpc = grpc;

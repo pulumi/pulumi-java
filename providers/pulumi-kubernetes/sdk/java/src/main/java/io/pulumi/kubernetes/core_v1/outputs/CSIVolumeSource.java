@@ -40,13 +40,13 @@ public final class CSIVolumeSource {
      */
     private final @Nullable Map<String,String> volumeAttributes;
 
-    @OutputCustomType.Constructor({"driver","fsType","nodePublishSecretRef","readOnly","volumeAttributes"})
+    @OutputCustomType.Constructor
     private CSIVolumeSource(
-        String driver,
-        @Nullable String fsType,
-        @Nullable LocalObjectReference nodePublishSecretRef,
-        @Nullable Boolean readOnly,
-        @Nullable Map<String,String> volumeAttributes) {
+        @OutputCustomType.Parameter("driver") String driver,
+        @OutputCustomType.Parameter("fsType") @Nullable String fsType,
+        @OutputCustomType.Parameter("nodePublishSecretRef") @Nullable LocalObjectReference nodePublishSecretRef,
+        @OutputCustomType.Parameter("readOnly") @Nullable Boolean readOnly,
+        @OutputCustomType.Parameter("volumeAttributes") @Nullable Map<String,String> volumeAttributes) {
         this.driver = driver;
         this.fsType = fsType;
         this.nodePublishSecretRef = nodePublishSecretRef;

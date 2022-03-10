@@ -28,11 +28,11 @@ public final class AzureFileVolumeSource {
      */
     private final String shareName;
 
-    @OutputCustomType.Constructor({"readOnly","secretName","shareName"})
+    @OutputCustomType.Constructor
     private AzureFileVolumeSource(
-        @Nullable Boolean readOnly,
-        String secretName,
-        String shareName) {
+        @OutputCustomType.Parameter("readOnly") @Nullable Boolean readOnly,
+        @OutputCustomType.Parameter("secretName") String secretName,
+        @OutputCustomType.Parameter("shareName") String shareName) {
         this.readOnly = readOnly;
         this.secretName = secretName;
         this.shareName = shareName;

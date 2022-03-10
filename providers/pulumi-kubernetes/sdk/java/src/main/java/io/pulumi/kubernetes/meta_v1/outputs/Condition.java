@@ -43,14 +43,14 @@ public final class Condition {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"lastTransitionTime","message","observedGeneration","reason","status","type"})
+    @OutputCustomType.Constructor
     private Condition(
-        String lastTransitionTime,
-        String message,
-        @Nullable Integer observedGeneration,
-        String reason,
-        String status,
-        String type) {
+        @OutputCustomType.Parameter("lastTransitionTime") String lastTransitionTime,
+        @OutputCustomType.Parameter("message") String message,
+        @OutputCustomType.Parameter("observedGeneration") @Nullable Integer observedGeneration,
+        @OutputCustomType.Parameter("reason") String reason,
+        @OutputCustomType.Parameter("status") String status,
+        @OutputCustomType.Parameter("type") String type) {
         this.lastTransitionTime = lastTransitionTime;
         this.message = message;
         this.observedGeneration = observedGeneration;

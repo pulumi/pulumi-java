@@ -21,10 +21,10 @@ public final class ResourceMetricStatus {
      */
     private final String name;
 
-    @OutputCustomType.Constructor({"current","name"})
+    @OutputCustomType.Constructor
     private ResourceMetricStatus(
-        MetricValueStatus current,
-        String name) {
+        @OutputCustomType.Parameter("current") MetricValueStatus current,
+        @OutputCustomType.Parameter("name") String name) {
         this.current = current;
         this.name = name;
     }

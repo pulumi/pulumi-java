@@ -47,15 +47,15 @@ public final class ObjectReference {
      */
     private final @Nullable String uid;
 
-    @OutputCustomType.Constructor({"apiVersion","fieldPath","kind","name","namespace","resourceVersion","uid"})
+    @OutputCustomType.Constructor
     private ObjectReference(
-        @Nullable String apiVersion,
-        @Nullable String fieldPath,
-        @Nullable String kind,
-        @Nullable String name,
-        @Nullable String namespace,
-        @Nullable String resourceVersion,
-        @Nullable String uid) {
+        @OutputCustomType.Parameter("apiVersion") @Nullable String apiVersion,
+        @OutputCustomType.Parameter("fieldPath") @Nullable String fieldPath,
+        @OutputCustomType.Parameter("kind") @Nullable String kind,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("namespace") @Nullable String namespace,
+        @OutputCustomType.Parameter("resourceVersion") @Nullable String resourceVersion,
+        @OutputCustomType.Parameter("uid") @Nullable String uid) {
         this.apiVersion = apiVersion;
         this.fieldPath = fieldPath;
         this.kind = kind;

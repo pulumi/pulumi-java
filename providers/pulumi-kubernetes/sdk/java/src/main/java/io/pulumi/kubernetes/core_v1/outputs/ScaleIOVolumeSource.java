@@ -64,18 +64,18 @@ public final class ScaleIOVolumeSource {
      */
     private final @Nullable String volumeName;
 
-    @OutputCustomType.Constructor({"fsType","gateway","protectionDomain","readOnly","secretRef","sslEnabled","storageMode","storagePool","system","volumeName"})
+    @OutputCustomType.Constructor
     private ScaleIOVolumeSource(
-        @Nullable String fsType,
-        String gateway,
-        @Nullable String protectionDomain,
-        @Nullable Boolean readOnly,
-        LocalObjectReference secretRef,
-        @Nullable Boolean sslEnabled,
-        @Nullable String storageMode,
-        @Nullable String storagePool,
-        String system,
-        @Nullable String volumeName) {
+        @OutputCustomType.Parameter("fsType") @Nullable String fsType,
+        @OutputCustomType.Parameter("gateway") String gateway,
+        @OutputCustomType.Parameter("protectionDomain") @Nullable String protectionDomain,
+        @OutputCustomType.Parameter("readOnly") @Nullable Boolean readOnly,
+        @OutputCustomType.Parameter("secretRef") LocalObjectReference secretRef,
+        @OutputCustomType.Parameter("sslEnabled") @Nullable Boolean sslEnabled,
+        @OutputCustomType.Parameter("storageMode") @Nullable String storageMode,
+        @OutputCustomType.Parameter("storagePool") @Nullable String storagePool,
+        @OutputCustomType.Parameter("system") String system,
+        @OutputCustomType.Parameter("volumeName") @Nullable String volumeName) {
         this.fsType = fsType;
         this.gateway = gateway;
         this.protectionDomain = protectionDomain;

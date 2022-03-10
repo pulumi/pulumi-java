@@ -74,18 +74,18 @@ public final class JobSpec {
      */
     private final @Nullable Integer ttlSecondsAfterFinished;
 
-    @OutputCustomType.Constructor({"activeDeadlineSeconds","backoffLimit","completionMode","completions","manualSelector","parallelism","selector","suspend","template","ttlSecondsAfterFinished"})
+    @OutputCustomType.Constructor
     private JobSpec(
-        @Nullable Integer activeDeadlineSeconds,
-        @Nullable Integer backoffLimit,
-        @Nullable String completionMode,
-        @Nullable Integer completions,
-        @Nullable Boolean manualSelector,
-        @Nullable Integer parallelism,
-        @Nullable LabelSelector selector,
-        @Nullable Boolean suspend,
-        PodTemplateSpec template,
-        @Nullable Integer ttlSecondsAfterFinished) {
+        @OutputCustomType.Parameter("activeDeadlineSeconds") @Nullable Integer activeDeadlineSeconds,
+        @OutputCustomType.Parameter("backoffLimit") @Nullable Integer backoffLimit,
+        @OutputCustomType.Parameter("completionMode") @Nullable String completionMode,
+        @OutputCustomType.Parameter("completions") @Nullable Integer completions,
+        @OutputCustomType.Parameter("manualSelector") @Nullable Boolean manualSelector,
+        @OutputCustomType.Parameter("parallelism") @Nullable Integer parallelism,
+        @OutputCustomType.Parameter("selector") @Nullable LabelSelector selector,
+        @OutputCustomType.Parameter("suspend") @Nullable Boolean suspend,
+        @OutputCustomType.Parameter("template") PodTemplateSpec template,
+        @OutputCustomType.Parameter("ttlSecondsAfterFinished") @Nullable Integer ttlSecondsAfterFinished) {
         this.activeDeadlineSeconds = activeDeadlineSeconds;
         this.backoffLimit = backoffLimit;
         this.completionMode = completionMode;

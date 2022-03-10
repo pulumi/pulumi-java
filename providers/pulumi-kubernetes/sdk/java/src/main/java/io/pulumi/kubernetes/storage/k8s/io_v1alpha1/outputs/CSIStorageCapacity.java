@@ -57,15 +57,15 @@ public final class CSIStorageCapacity {
      */
     private final String storageClassName;
 
-    @OutputCustomType.Constructor({"apiVersion","capacity","kind","maximumVolumeSize","metadata","nodeTopology","storageClassName"})
+    @OutputCustomType.Constructor
     private CSIStorageCapacity(
-        @Nullable String apiVersion,
-        @Nullable String capacity,
-        @Nullable String kind,
-        @Nullable String maximumVolumeSize,
-        @Nullable ObjectMeta metadata,
-        @Nullable LabelSelector nodeTopology,
-        String storageClassName) {
+        @OutputCustomType.Parameter("apiVersion") @Nullable String apiVersion,
+        @OutputCustomType.Parameter("capacity") @Nullable String capacity,
+        @OutputCustomType.Parameter("kind") @Nullable String kind,
+        @OutputCustomType.Parameter("maximumVolumeSize") @Nullable String maximumVolumeSize,
+        @OutputCustomType.Parameter("metadata") @Nullable ObjectMeta metadata,
+        @OutputCustomType.Parameter("nodeTopology") @Nullable LabelSelector nodeTopology,
+        @OutputCustomType.Parameter("storageClassName") String storageClassName) {
         this.apiVersion = apiVersion;
         this.capacity = capacity;
         this.kind = kind;

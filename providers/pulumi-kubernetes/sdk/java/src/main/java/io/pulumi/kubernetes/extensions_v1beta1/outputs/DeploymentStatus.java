@@ -54,16 +54,16 @@ public final class DeploymentStatus {
      */
     private final @Nullable Integer updatedReplicas;
 
-    @OutputCustomType.Constructor({"availableReplicas","collisionCount","conditions","observedGeneration","readyReplicas","replicas","unavailableReplicas","updatedReplicas"})
+    @OutputCustomType.Constructor
     private DeploymentStatus(
-        @Nullable Integer availableReplicas,
-        @Nullable Integer collisionCount,
-        @Nullable List<DeploymentCondition> conditions,
-        @Nullable Integer observedGeneration,
-        @Nullable Integer readyReplicas,
-        @Nullable Integer replicas,
-        @Nullable Integer unavailableReplicas,
-        @Nullable Integer updatedReplicas) {
+        @OutputCustomType.Parameter("availableReplicas") @Nullable Integer availableReplicas,
+        @OutputCustomType.Parameter("collisionCount") @Nullable Integer collisionCount,
+        @OutputCustomType.Parameter("conditions") @Nullable List<DeploymentCondition> conditions,
+        @OutputCustomType.Parameter("observedGeneration") @Nullable Integer observedGeneration,
+        @OutputCustomType.Parameter("readyReplicas") @Nullable Integer readyReplicas,
+        @OutputCustomType.Parameter("replicas") @Nullable Integer replicas,
+        @OutputCustomType.Parameter("unavailableReplicas") @Nullable Integer unavailableReplicas,
+        @OutputCustomType.Parameter("updatedReplicas") @Nullable Integer updatedReplicas) {
         this.availableReplicas = availableReplicas;
         this.collisionCount = collisionCount;
         this.conditions = conditions;

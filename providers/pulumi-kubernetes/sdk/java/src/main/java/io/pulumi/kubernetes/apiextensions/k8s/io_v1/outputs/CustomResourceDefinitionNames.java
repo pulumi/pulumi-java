@@ -43,14 +43,14 @@ public final class CustomResourceDefinitionNames {
      */
     private final @Nullable String singular;
 
-    @OutputCustomType.Constructor({"categories","kind","listKind","plural","shortNames","singular"})
+    @OutputCustomType.Constructor
     private CustomResourceDefinitionNames(
-        @Nullable List<String> categories,
-        String kind,
-        @Nullable String listKind,
-        String plural,
-        @Nullable List<String> shortNames,
-        @Nullable String singular) {
+        @OutputCustomType.Parameter("categories") @Nullable List<String> categories,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("listKind") @Nullable String listKind,
+        @OutputCustomType.Parameter("plural") String plural,
+        @OutputCustomType.Parameter("shortNames") @Nullable List<String> shortNames,
+        @OutputCustomType.Parameter("singular") @Nullable String singular) {
         this.categories = categories;
         this.kind = kind;
         this.listKind = listKind;

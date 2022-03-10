@@ -32,11 +32,11 @@ public final class NetworkPolicyPeer {
      */
     private final @Nullable LabelSelector podSelector;
 
-    @OutputCustomType.Constructor({"ipBlock","namespaceSelector","podSelector"})
+    @OutputCustomType.Constructor
     private NetworkPolicyPeer(
-        @Nullable IPBlock ipBlock,
-        @Nullable LabelSelector namespaceSelector,
-        @Nullable LabelSelector podSelector) {
+        @OutputCustomType.Parameter("ipBlock") @Nullable IPBlock ipBlock,
+        @OutputCustomType.Parameter("namespaceSelector") @Nullable LabelSelector namespaceSelector,
+        @OutputCustomType.Parameter("podSelector") @Nullable LabelSelector podSelector) {
         this.ipBlock = ipBlock;
         this.namespaceSelector = namespaceSelector;
         this.podSelector = podSelector;

@@ -30,11 +30,11 @@ public final class IngressBackend {
      */
     private final Either<Integer,String> servicePort;
 
-    @OutputCustomType.Constructor({"resource","serviceName","servicePort"})
+    @OutputCustomType.Constructor
     private IngressBackend(
-        @Nullable TypedLocalObjectReference resource,
-        String serviceName,
-        Either<Integer,String> servicePort) {
+        @OutputCustomType.Parameter("resource") @Nullable TypedLocalObjectReference resource,
+        @OutputCustomType.Parameter("serviceName") String serviceName,
+        @OutputCustomType.Parameter("servicePort") Either<Integer,String> servicePort) {
         this.resource = resource;
         this.serviceName = serviceName;
         this.servicePort = servicePort;

@@ -47,15 +47,15 @@ public final class ResourceAttributes {
      */
     private final @Nullable String version;
 
-    @OutputCustomType.Constructor({"group","name","namespace","resource","subresource","verb","version"})
+    @OutputCustomType.Constructor
     private ResourceAttributes(
-        @Nullable String group,
-        @Nullable String name,
-        @Nullable String namespace,
-        @Nullable String resource,
-        @Nullable String subresource,
-        @Nullable String verb,
-        @Nullable String version) {
+        @OutputCustomType.Parameter("group") @Nullable String group,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("namespace") @Nullable String namespace,
+        @OutputCustomType.Parameter("resource") @Nullable String resource,
+        @OutputCustomType.Parameter("subresource") @Nullable String subresource,
+        @OutputCustomType.Parameter("verb") @Nullable String verb,
+        @OutputCustomType.Parameter("version") @Nullable String version) {
         this.group = group;
         this.name = name;
         this.namespace = namespace;

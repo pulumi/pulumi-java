@@ -28,11 +28,11 @@ public final class ConfigMapKeySelector {
      */
     private final @Nullable Boolean optional;
 
-    @OutputCustomType.Constructor({"key","name","optional"})
+    @OutputCustomType.Constructor
     private ConfigMapKeySelector(
-        String key,
-        @Nullable String name,
-        @Nullable Boolean optional) {
+        @OutputCustomType.Parameter("key") String key,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("optional") @Nullable Boolean optional) {
         this.key = key;
         this.name = name;
         this.optional = optional;

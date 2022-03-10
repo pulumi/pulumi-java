@@ -36,13 +36,13 @@ public final class CertificateSigningRequest {
      */
     private final @Nullable CertificateSigningRequestStatus status;
 
-    @OutputCustomType.Constructor({"apiVersion","kind","metadata","spec","status"})
+    @OutputCustomType.Constructor
     private CertificateSigningRequest(
-        @Nullable String apiVersion,
-        @Nullable String kind,
-        @Nullable ObjectMeta metadata,
-        CertificateSigningRequestSpec spec,
-        @Nullable CertificateSigningRequestStatus status) {
+        @OutputCustomType.Parameter("apiVersion") @Nullable String apiVersion,
+        @OutputCustomType.Parameter("kind") @Nullable String kind,
+        @OutputCustomType.Parameter("metadata") @Nullable ObjectMeta metadata,
+        @OutputCustomType.Parameter("spec") CertificateSigningRequestSpec spec,
+        @OutputCustomType.Parameter("status") @Nullable CertificateSigningRequestStatus status) {
         this.apiVersion = apiVersion;
         this.kind = kind;
         this.metadata = metadata;

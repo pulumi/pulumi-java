@@ -17,8 +17,8 @@ public final class Overhead {
      */
     private final @Nullable Map<String,String> podFixed;
 
-    @OutputCustomType.Constructor({"podFixed"})
-    private Overhead(@Nullable Map<String,String> podFixed) {
+    @OutputCustomType.Constructor
+    private Overhead(@OutputCustomType.Parameter("podFixed") @Nullable Map<String,String> podFixed) {
         this.podFixed = podFixed;
     }
 

@@ -57,16 +57,16 @@ public final class Endpoint {
      */
     private final @Nullable String zone;
 
-    @OutputCustomType.Constructor({"addresses","conditions","deprecatedTopology","hints","hostname","nodeName","targetRef","zone"})
+    @OutputCustomType.Constructor
     private Endpoint(
-        List<String> addresses,
-        @Nullable EndpointConditions conditions,
-        @Nullable Map<String,String> deprecatedTopology,
-        @Nullable EndpointHints hints,
-        @Nullable String hostname,
-        @Nullable String nodeName,
-        @Nullable ObjectReference targetRef,
-        @Nullable String zone) {
+        @OutputCustomType.Parameter("addresses") List<String> addresses,
+        @OutputCustomType.Parameter("conditions") @Nullable EndpointConditions conditions,
+        @OutputCustomType.Parameter("deprecatedTopology") @Nullable Map<String,String> deprecatedTopology,
+        @OutputCustomType.Parameter("hints") @Nullable EndpointHints hints,
+        @OutputCustomType.Parameter("hostname") @Nullable String hostname,
+        @OutputCustomType.Parameter("nodeName") @Nullable String nodeName,
+        @OutputCustomType.Parameter("targetRef") @Nullable ObjectReference targetRef,
+        @OutputCustomType.Parameter("zone") @Nullable String zone) {
         this.addresses = addresses;
         this.conditions = conditions;
         this.deprecatedTopology = deprecatedTopology;

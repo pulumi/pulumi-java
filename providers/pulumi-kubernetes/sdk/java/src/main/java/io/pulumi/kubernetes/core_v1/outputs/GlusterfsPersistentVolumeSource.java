@@ -33,12 +33,12 @@ public final class GlusterfsPersistentVolumeSource {
      */
     private final @Nullable Boolean readOnly;
 
-    @OutputCustomType.Constructor({"endpoints","endpointsNamespace","path","readOnly"})
+    @OutputCustomType.Constructor
     private GlusterfsPersistentVolumeSource(
-        String endpoints,
-        @Nullable String endpointsNamespace,
-        String path,
-        @Nullable Boolean readOnly) {
+        @OutputCustomType.Parameter("endpoints") String endpoints,
+        @OutputCustomType.Parameter("endpointsNamespace") @Nullable String endpointsNamespace,
+        @OutputCustomType.Parameter("path") String path,
+        @OutputCustomType.Parameter("readOnly") @Nullable Boolean readOnly) {
         this.endpoints = endpoints;
         this.endpointsNamespace = endpointsNamespace;
         this.path = path;

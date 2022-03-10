@@ -34,12 +34,12 @@ public final class CSINode {
      */
     private final CSINodeSpec spec;
 
-    @OutputCustomType.Constructor({"apiVersion","kind","metadata","spec"})
+    @OutputCustomType.Constructor
     private CSINode(
-        @Nullable String apiVersion,
-        @Nullable String kind,
-        @Nullable ObjectMeta metadata,
-        CSINodeSpec spec) {
+        @OutputCustomType.Parameter("apiVersion") @Nullable String apiVersion,
+        @OutputCustomType.Parameter("kind") @Nullable String kind,
+        @OutputCustomType.Parameter("metadata") @Nullable ObjectMeta metadata,
+        @OutputCustomType.Parameter("spec") CSINodeSpec spec) {
         this.apiVersion = apiVersion;
         this.kind = kind;
         this.metadata = metadata;

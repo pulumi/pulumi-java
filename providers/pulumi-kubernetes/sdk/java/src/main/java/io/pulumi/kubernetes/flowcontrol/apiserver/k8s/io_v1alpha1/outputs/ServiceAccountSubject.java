@@ -20,10 +20,10 @@ public final class ServiceAccountSubject {
      */
     private final String namespace;
 
-    @OutputCustomType.Constructor({"name","namespace"})
+    @OutputCustomType.Constructor
     private ServiceAccountSubject(
-        String name,
-        String namespace) {
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("namespace") String namespace) {
         this.name = name;
         this.namespace = namespace;
     }

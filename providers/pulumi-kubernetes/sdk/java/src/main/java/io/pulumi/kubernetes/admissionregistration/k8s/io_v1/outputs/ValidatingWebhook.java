@@ -103,18 +103,18 @@ public final class ValidatingWebhook {
      */
     private final @Nullable Integer timeoutSeconds;
 
-    @OutputCustomType.Constructor({"admissionReviewVersions","clientConfig","failurePolicy","matchPolicy","name","namespaceSelector","objectSelector","rules","sideEffects","timeoutSeconds"})
+    @OutputCustomType.Constructor
     private ValidatingWebhook(
-        List<String> admissionReviewVersions,
-        WebhookClientConfig clientConfig,
-        @Nullable String failurePolicy,
-        @Nullable String matchPolicy,
-        String name,
-        @Nullable LabelSelector namespaceSelector,
-        @Nullable LabelSelector objectSelector,
-        @Nullable List<RuleWithOperations> rules,
-        String sideEffects,
-        @Nullable Integer timeoutSeconds) {
+        @OutputCustomType.Parameter("admissionReviewVersions") List<String> admissionReviewVersions,
+        @OutputCustomType.Parameter("clientConfig") WebhookClientConfig clientConfig,
+        @OutputCustomType.Parameter("failurePolicy") @Nullable String failurePolicy,
+        @OutputCustomType.Parameter("matchPolicy") @Nullable String matchPolicy,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("namespaceSelector") @Nullable LabelSelector namespaceSelector,
+        @OutputCustomType.Parameter("objectSelector") @Nullable LabelSelector objectSelector,
+        @OutputCustomType.Parameter("rules") @Nullable List<RuleWithOperations> rules,
+        @OutputCustomType.Parameter("sideEffects") String sideEffects,
+        @OutputCustomType.Parameter("timeoutSeconds") @Nullable Integer timeoutSeconds) {
         this.admissionReviewVersions = admissionReviewVersions;
         this.clientConfig = clientConfig;
         this.failurePolicy = failurePolicy;

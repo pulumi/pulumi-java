@@ -22,10 +22,10 @@ public final class LocalVolumeSource {
      */
     private final String path;
 
-    @OutputCustomType.Constructor({"fsType","path"})
+    @OutputCustomType.Constructor
     private LocalVolumeSource(
-        @Nullable String fsType,
-        String path) {
+        @OutputCustomType.Parameter("fsType") @Nullable String fsType,
+        @OutputCustomType.Parameter("path") String path) {
         this.fsType = fsType;
         this.path = path;
     }

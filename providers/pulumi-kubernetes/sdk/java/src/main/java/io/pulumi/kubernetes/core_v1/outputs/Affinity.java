@@ -29,11 +29,11 @@ public final class Affinity {
      */
     private final @Nullable PodAntiAffinity podAntiAffinity;
 
-    @OutputCustomType.Constructor({"nodeAffinity","podAffinity","podAntiAffinity"})
+    @OutputCustomType.Constructor
     private Affinity(
-        @Nullable NodeAffinity nodeAffinity,
-        @Nullable PodAffinity podAffinity,
-        @Nullable PodAntiAffinity podAntiAffinity) {
+        @OutputCustomType.Parameter("nodeAffinity") @Nullable NodeAffinity nodeAffinity,
+        @OutputCustomType.Parameter("podAffinity") @Nullable PodAffinity podAffinity,
+        @OutputCustomType.Parameter("podAntiAffinity") @Nullable PodAntiAffinity podAntiAffinity) {
         this.nodeAffinity = nodeAffinity;
         this.podAffinity = podAffinity;
         this.podAntiAffinity = podAntiAffinity;

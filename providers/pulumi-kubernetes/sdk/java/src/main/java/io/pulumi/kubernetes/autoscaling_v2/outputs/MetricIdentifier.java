@@ -23,10 +23,10 @@ public final class MetricIdentifier {
      */
     private final @Nullable LabelSelector selector;
 
-    @OutputCustomType.Constructor({"name","selector"})
+    @OutputCustomType.Constructor
     private MetricIdentifier(
-        String name,
-        @Nullable LabelSelector selector) {
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("selector") @Nullable LabelSelector selector) {
         this.name = name;
         this.selector = selector;
     }
