@@ -21,10 +21,10 @@ public final class FilterablePropertyResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"supportedValues","type"})
+    @OutputCustomType.Constructor
     private FilterablePropertyResponse(
-        List<String> supportedValues,
-        String type) {
+        @OutputCustomType.Parameter("supportedValues") List<String> supportedValues,
+        @OutputCustomType.Parameter("type") String type) {
         this.supportedValues = supportedValues;
         this.type = type;
     }

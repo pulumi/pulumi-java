@@ -46,15 +46,15 @@ public final class DimensionsResponse {
      */
     private final Double width;
 
-    @OutputCustomType.Constructor({"depth","height","length","lengthHeightUnit","weight","weightUnit","width"})
+    @OutputCustomType.Constructor
     private DimensionsResponse(
-        Double depth,
-        Double height,
-        Double length,
-        String lengthHeightUnit,
-        Double weight,
-        String weightUnit,
-        Double width) {
+        @OutputCustomType.Parameter("depth") Double depth,
+        @OutputCustomType.Parameter("height") Double height,
+        @OutputCustomType.Parameter("length") Double length,
+        @OutputCustomType.Parameter("lengthHeightUnit") String lengthHeightUnit,
+        @OutputCustomType.Parameter("weight") Double weight,
+        @OutputCustomType.Parameter("weightUnit") String weightUnit,
+        @OutputCustomType.Parameter("width") Double width) {
         this.depth = depth;
         this.height = height;
         this.length = length;

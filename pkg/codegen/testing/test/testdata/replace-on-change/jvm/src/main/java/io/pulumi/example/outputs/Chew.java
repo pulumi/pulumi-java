@@ -13,8 +13,8 @@ import javax.annotation.Nullable;
 public final class Chew {
     private final @Nullable Dog owner;
 
-    @OutputCustomType.Constructor({"owner"})
-    private Chew(@Nullable Dog owner) {
+    @OutputCustomType.Constructor
+    private Chew(@OutputCustomType.Parameter("owner") @Nullable Dog owner) {
         this.owner = owner;
     }
 

@@ -13,8 +13,8 @@ import javax.annotation.Nullable;
 public final class Pet {
     private final @Nullable String name;
 
-    @OutputCustomType.Constructor({"name"})
-    private Pet(@Nullable String name) {
+    @OutputCustomType.Constructor
+    private Pet(@OutputCustomType.Parameter("name") @Nullable String name) {
         this.name = name;
     }
 

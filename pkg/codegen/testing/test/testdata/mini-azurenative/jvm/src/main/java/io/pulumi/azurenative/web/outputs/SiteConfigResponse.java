@@ -17,8 +17,8 @@ public final class SiteConfigResponse {
      */
     private final @Nullable String netFrameworkVersion;
 
-    @OutputCustomType.Constructor({"netFrameworkVersion"})
-    private SiteConfigResponse(@Nullable String netFrameworkVersion) {
+    @OutputCustomType.Constructor
+    private SiteConfigResponse(@OutputCustomType.Parameter("netFrameworkVersion") @Nullable String netFrameworkVersion) {
         this.netFrameworkVersion = netFrameworkVersion;
     }
 

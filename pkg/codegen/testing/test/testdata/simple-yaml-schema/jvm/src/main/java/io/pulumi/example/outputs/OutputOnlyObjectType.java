@@ -13,8 +13,8 @@ import javax.annotation.Nullable;
 public final class OutputOnlyObjectType {
     private final @Nullable String foo;
 
-    @OutputCustomType.Constructor({"foo"})
-    private OutputOnlyObjectType(@Nullable String foo) {
+    @OutputCustomType.Constructor
+    private OutputOnlyObjectType(@OutputCustomType.Parameter("foo") @Nullable String foo) {
         this.foo = foo;
     }
 

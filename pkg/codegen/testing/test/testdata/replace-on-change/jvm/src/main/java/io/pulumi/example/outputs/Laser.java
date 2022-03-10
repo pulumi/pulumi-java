@@ -17,11 +17,11 @@ public final class Laser {
     private final @Nullable Boolean batteries;
     private final @Nullable Double light;
 
-    @OutputCustomType.Constructor({"animal","batteries","light"})
+    @OutputCustomType.Constructor
     private Laser(
-        @Nullable Cat animal,
-        @Nullable Boolean batteries,
-        @Nullable Double light) {
+        @OutputCustomType.Parameter("animal") @Nullable Cat animal,
+        @OutputCustomType.Parameter("batteries") @Nullable Boolean batteries,
+        @OutputCustomType.Parameter("light") @Nullable Double light) {
         this.animal = animal;
         this.batteries = batteries;
         this.light = light;

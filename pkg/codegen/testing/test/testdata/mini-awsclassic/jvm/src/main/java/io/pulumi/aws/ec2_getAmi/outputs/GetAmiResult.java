@@ -16,8 +16,8 @@ public final class GetAmiResult {
      */
     private final String kernelId;
 
-    @OutputCustomType.Constructor({"kernelId"})
-    private GetAmiResult(String kernelId) {
+    @OutputCustomType.Constructor
+    private GetAmiResult(@OutputCustomType.Parameter("kernelId") String kernelId) {
         this.kernelId = kernelId;
     }
 
