@@ -234,122 +234,122 @@ public final class RandomStringState extends io.pulumi.resources.ResourceArgs {
     	      this.upper = defaults.upper;
         }
 
-        public Builder setKeepers(@Nullable Input<Map<String,Object>> keepers) {
+        public Builder keepers(@Nullable Input<Map<String,Object>> keepers) {
             this.keepers = keepers;
             return this;
         }
 
-        public Builder setKeepers(@Nullable Map<String,Object> keepers) {
+        public Builder keepers(@Nullable Map<String,Object> keepers) {
             this.keepers = Input.ofNullable(keepers);
             return this;
         }
 
-        public Builder setLength(@Nullable Input<Integer> length) {
+        public Builder length(@Nullable Input<Integer> length) {
             this.length = length;
             return this;
         }
 
-        public Builder setLength(@Nullable Integer length) {
+        public Builder length(@Nullable Integer length) {
             this.length = Input.ofNullable(length);
             return this;
         }
 
-        public Builder setLower(@Nullable Input<Boolean> lower) {
+        public Builder lower(@Nullable Input<Boolean> lower) {
             this.lower = lower;
             return this;
         }
 
-        public Builder setLower(@Nullable Boolean lower) {
+        public Builder lower(@Nullable Boolean lower) {
             this.lower = Input.ofNullable(lower);
             return this;
         }
 
-        public Builder setMinLower(@Nullable Input<Integer> minLower) {
+        public Builder minLower(@Nullable Input<Integer> minLower) {
             this.minLower = minLower;
             return this;
         }
 
-        public Builder setMinLower(@Nullable Integer minLower) {
+        public Builder minLower(@Nullable Integer minLower) {
             this.minLower = Input.ofNullable(minLower);
             return this;
         }
 
-        public Builder setMinNumeric(@Nullable Input<Integer> minNumeric) {
+        public Builder minNumeric(@Nullable Input<Integer> minNumeric) {
             this.minNumeric = minNumeric;
             return this;
         }
 
-        public Builder setMinNumeric(@Nullable Integer minNumeric) {
+        public Builder minNumeric(@Nullable Integer minNumeric) {
             this.minNumeric = Input.ofNullable(minNumeric);
             return this;
         }
 
-        public Builder setMinSpecial(@Nullable Input<Integer> minSpecial) {
+        public Builder minSpecial(@Nullable Input<Integer> minSpecial) {
             this.minSpecial = minSpecial;
             return this;
         }
 
-        public Builder setMinSpecial(@Nullable Integer minSpecial) {
+        public Builder minSpecial(@Nullable Integer minSpecial) {
             this.minSpecial = Input.ofNullable(minSpecial);
             return this;
         }
 
-        public Builder setMinUpper(@Nullable Input<Integer> minUpper) {
+        public Builder minUpper(@Nullable Input<Integer> minUpper) {
             this.minUpper = minUpper;
             return this;
         }
 
-        public Builder setMinUpper(@Nullable Integer minUpper) {
+        public Builder minUpper(@Nullable Integer minUpper) {
             this.minUpper = Input.ofNullable(minUpper);
             return this;
         }
 
-        public Builder setNumber(@Nullable Input<Boolean> number) {
+        public Builder number(@Nullable Input<Boolean> number) {
             this.number = number;
             return this;
         }
 
-        public Builder setNumber(@Nullable Boolean number) {
+        public Builder number(@Nullable Boolean number) {
             this.number = Input.ofNullable(number);
             return this;
         }
 
-        public Builder setOverrideSpecial(@Nullable Input<String> overrideSpecial) {
+        public Builder overrideSpecial(@Nullable Input<String> overrideSpecial) {
             this.overrideSpecial = overrideSpecial;
             return this;
         }
 
-        public Builder setOverrideSpecial(@Nullable String overrideSpecial) {
+        public Builder overrideSpecial(@Nullable String overrideSpecial) {
             this.overrideSpecial = Input.ofNullable(overrideSpecial);
             return this;
         }
 
-        public Builder setResult(@Nullable Input<String> result) {
+        public Builder result(@Nullable Input<String> result) {
             this.result = result;
             return this;
         }
 
-        public Builder setResult(@Nullable String result) {
+        public Builder result(@Nullable String result) {
             this.result = Input.ofNullable(result);
             return this;
         }
 
-        public Builder setSpecial(@Nullable Input<Boolean> special) {
+        public Builder special(@Nullable Input<Boolean> special) {
             this.special = special;
             return this;
         }
 
-        public Builder setSpecial(@Nullable Boolean special) {
+        public Builder special(@Nullable Boolean special) {
             this.special = Input.ofNullable(special);
             return this;
         }
 
-        public Builder setUpper(@Nullable Input<Boolean> upper) {
+        public Builder upper(@Nullable Input<Boolean> upper) {
             this.upper = upper;
             return this;
         }
 
-        public Builder setUpper(@Nullable Boolean upper) {
+        public Builder upper(@Nullable Boolean upper) {
             this.upper = Input.ofNullable(upper);
             return this;
         }

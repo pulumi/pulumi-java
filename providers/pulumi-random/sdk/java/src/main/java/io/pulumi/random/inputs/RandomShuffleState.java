@@ -122,52 +122,52 @@ public final class RandomShuffleState extends io.pulumi.resources.ResourceArgs {
     	      this.seed = defaults.seed;
         }
 
-        public Builder setInputs(@Nullable Input<List<String>> inputs) {
+        public Builder inputs(@Nullable Input<List<String>> inputs) {
             this.inputs = inputs;
             return this;
         }
 
-        public Builder setInputs(@Nullable List<String> inputs) {
+        public Builder inputs(@Nullable List<String> inputs) {
             this.inputs = Input.ofNullable(inputs);
             return this;
         }
 
-        public Builder setKeepers(@Nullable Input<Map<String,Object>> keepers) {
+        public Builder keepers(@Nullable Input<Map<String,Object>> keepers) {
             this.keepers = keepers;
             return this;
         }
 
-        public Builder setKeepers(@Nullable Map<String,Object> keepers) {
+        public Builder keepers(@Nullable Map<String,Object> keepers) {
             this.keepers = Input.ofNullable(keepers);
             return this;
         }
 
-        public Builder setResultCount(@Nullable Input<Integer> resultCount) {
+        public Builder resultCount(@Nullable Input<Integer> resultCount) {
             this.resultCount = resultCount;
             return this;
         }
 
-        public Builder setResultCount(@Nullable Integer resultCount) {
+        public Builder resultCount(@Nullable Integer resultCount) {
             this.resultCount = Input.ofNullable(resultCount);
             return this;
         }
 
-        public Builder setResults(@Nullable Input<List<String>> results) {
+        public Builder results(@Nullable Input<List<String>> results) {
             this.results = results;
             return this;
         }
 
-        public Builder setResults(@Nullable List<String> results) {
+        public Builder results(@Nullable List<String> results) {
             this.results = Input.ofNullable(results);
             return this;
         }
 
-        public Builder setSeed(@Nullable Input<String> seed) {
+        public Builder seed(@Nullable Input<String> seed) {
             this.seed = seed;
             return this;
         }
 
-        public Builder setSeed(@Nullable String seed) {
+        public Builder seed(@Nullable String seed) {
             this.seed = Input.ofNullable(seed);
             return this;
         }
