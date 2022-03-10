@@ -101,7 +101,7 @@ jobs:
       - name: Run tests
         run: |
           for provider in `ls tests/examples/*/ -d`; do
-            bash -c  "cd  $provider && pulumi preview";
+            bash -c  "cd  $provider && pulumi destroy -s dev; pulumi stack rm dev --yes; pulumi stack init dev; pulumi preview; pulumi stack rm dev --yes;";
           done;
     strategy:
       fail-fast: true
