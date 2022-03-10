@@ -50,7 +50,7 @@ public final class ListIntegrationAccountKeyVaultKeysResult {
     	      this.skipToken = defaults.skipToken;
         }
 
-        public Builder setSkipToken(@Nullable String skipToken) {
+        public Builder skipToken(@Nullable String skipToken) {
             this.skipToken = skipToken;
             return this;
         }

@@ -25,12 +25,12 @@ class InputTests {
     @Test
     void testInputsFooArgs_simpleValues() {
         var args = FooArgs.builder()
-                .setA(true)
-                .setB(true)
-                .setC(1)
-                .setD(2)
-                .setE("test1")
-                .setF("test2")
+                .a(true)
+                .b(true)
+                .c(1)
+                .d(2)
+                .e("test1")
+                .f("test2")
                 .build();
 
         var map = Internal.from(args).toOptionalMapAsync(mock(Log.class)).join();

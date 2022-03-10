@@ -51,12 +51,12 @@ public final class RubberTreeState extends io.pulumi.resources.ResourceArgs {
     	      this.farm = defaults.farm;
         }
 
-        public Builder setFarm(@Nullable Input<Either<Farm,String>> farm) {
+        public Builder farm(@Nullable Input<Either<Farm,String>> farm) {
             this.farm = farm;
             return this;
         }
 
-        public Builder setFarm(@Nullable Either<Farm,String> farm) {
+        public Builder farm(@Nullable Either<Farm,String> farm) {
             this.farm = Input.ofNullable(farm);
             return this;
         }

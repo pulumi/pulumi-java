@@ -50,7 +50,7 @@ public final class SqlContainerGetPropertiesResponseResource {
     	      this.indexingPolicy = defaults.indexingPolicy;
         }
 
-        public Builder setIndexingPolicy(@Nullable IndexingPolicyResponse indexingPolicy) {
+        public Builder indexingPolicy(@Nullable IndexingPolicyResponse indexingPolicy) {
             this.indexingPolicy = indexingPolicy;
             return this;
         }

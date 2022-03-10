@@ -61,17 +61,17 @@ public final class Laser {
     	      this.light = defaults.light;
         }
 
-        public Builder setAnimal(@Nullable Cat animal) {
+        public Builder animal(@Nullable Cat animal) {
             this.animal = animal;
             return this;
         }
 
-        public Builder setBatteries(@Nullable Boolean batteries) {
+        public Builder batteries(@Nullable Boolean batteries) {
             this.batteries = batteries;
             return this;
         }
 
-        public Builder setLight(@Nullable Double light) {
+        public Builder light(@Nullable Double light) {
             this.light = light;
             return this;
         }

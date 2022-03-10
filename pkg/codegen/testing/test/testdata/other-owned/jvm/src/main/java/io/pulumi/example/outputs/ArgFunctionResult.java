@@ -42,7 +42,7 @@ public final class ArgFunctionResult {
     	      this.result = defaults.result;
         }
 
-        public Builder setResult(@Nullable Resource result) {
+        public Builder result(@Nullable Resource result) {
             this.result = result;
             return this;
         }

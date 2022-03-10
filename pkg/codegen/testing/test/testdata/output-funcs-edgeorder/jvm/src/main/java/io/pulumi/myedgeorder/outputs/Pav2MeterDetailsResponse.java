@@ -100,22 +100,22 @@ public final class Pav2MeterDetailsResponse {
     	      this.multiplier = defaults.multiplier;
         }
 
-        public Builder setBillingType(String billingType) {
+        public Builder billingType(String billingType) {
             this.billingType = Objects.requireNonNull(billingType);
             return this;
         }
 
-        public Builder setChargingType(String chargingType) {
+        public Builder chargingType(String chargingType) {
             this.chargingType = Objects.requireNonNull(chargingType);
             return this;
         }
 
-        public Builder setMeterGuid(String meterGuid) {
+        public Builder meterGuid(String meterGuid) {
             this.meterGuid = Objects.requireNonNull(meterGuid);
             return this;
         }
 
-        public Builder setMultiplier(Double multiplier) {
+        public Builder multiplier(Double multiplier) {
             this.multiplier = Objects.requireNonNull(multiplier);
             return this;
         }

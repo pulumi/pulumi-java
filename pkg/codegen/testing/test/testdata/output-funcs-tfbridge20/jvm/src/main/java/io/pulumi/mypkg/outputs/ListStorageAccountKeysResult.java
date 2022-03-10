@@ -49,7 +49,7 @@ public final class ListStorageAccountKeysResult {
     	      this.keys = defaults.keys;
         }
 
-        public Builder setKeys(List<StorageAccountKeyResponse> keys) {
+        public Builder keys(List<StorageAccountKeyResponse> keys) {
             this.keys = Objects.requireNonNull(keys);
             return this;
         }

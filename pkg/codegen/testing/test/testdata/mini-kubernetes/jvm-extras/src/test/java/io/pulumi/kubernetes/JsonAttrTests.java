@@ -16,7 +16,7 @@ class JsonAttrTests {
     @Test
     void verifyKubeConfigNotDoubleEncoded() {
         var log = new Log(mock(EngineLogger.class));
-        var providerArgs = ProviderArgs.builder().setKubeconfig(Input.of("kc")).build();
+        var providerArgs = ProviderArgs.builder().kubeconfig(Input.of("kc")).build();
         var map = Internal.from(providerArgs).toOptionalMapAsync(log).join();
         var v = map.get("kubeconfig").get();
         var r = new Serializer(log).serializeAsync("", v, true).join();

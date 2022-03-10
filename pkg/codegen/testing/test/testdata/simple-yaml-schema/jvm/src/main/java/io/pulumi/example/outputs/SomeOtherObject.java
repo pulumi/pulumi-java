@@ -42,7 +42,7 @@ public final class SomeOtherObject {
     	      this.baz = defaults.baz;
         }
 
-        public Builder setBaz(@Nullable String baz) {
+        public Builder baz(@Nullable String baz) {
             this.baz = baz;
             return this;
         }

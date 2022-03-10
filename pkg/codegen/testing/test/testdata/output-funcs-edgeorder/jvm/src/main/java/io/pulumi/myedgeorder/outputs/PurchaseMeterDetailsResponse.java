@@ -132,32 +132,32 @@ public final class PurchaseMeterDetailsResponse {
     	      this.termId = defaults.termId;
         }
 
-        public Builder setBillingType(String billingType) {
+        public Builder billingType(String billingType) {
             this.billingType = Objects.requireNonNull(billingType);
             return this;
         }
 
-        public Builder setChargingType(String chargingType) {
+        public Builder chargingType(String chargingType) {
             this.chargingType = Objects.requireNonNull(chargingType);
             return this;
         }
 
-        public Builder setMultiplier(Double multiplier) {
+        public Builder multiplier(Double multiplier) {
             this.multiplier = Objects.requireNonNull(multiplier);
             return this;
         }
 
-        public Builder setProductId(String productId) {
+        public Builder productId(String productId) {
             this.productId = Objects.requireNonNull(productId);
             return this;
         }
 
-        public Builder setSkuId(String skuId) {
+        public Builder skuId(String skuId) {
             this.skuId = Objects.requireNonNull(skuId);
             return this;
         }
 
-        public Builder setTermId(String termId) {
+        public Builder termId(String termId) {
             this.termId = Objects.requireNonNull(termId);
             return this;
         }

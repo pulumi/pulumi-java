@@ -50,7 +50,7 @@ public final class IndexingPolicyResponse {
     	      this.compositeIndexes = defaults.compositeIndexes;
         }
 
-        public Builder setCompositeIndexes(@Nullable List<List<CompositePathResponse>> compositeIndexes) {
+        public Builder compositeIndexes(@Nullable List<List<CompositePathResponse>> compositeIndexes) {
             this.compositeIndexes = compositeIndexes;
             return this;
         }

@@ -246,132 +246,132 @@ public final class ModuleResourceArgs extends io.pulumi.resources.ResourceArgs {
     	      this.required_string = defaults.required_string;
         }
 
-        public Builder setOptional_bool(@Nullable Input<Boolean> optional_bool) {
+        public Builder optional_bool(@Nullable Input<Boolean> optional_bool) {
             this.optional_bool = optional_bool;
             return this;
         }
 
-        public Builder setOptional_bool(@Nullable Boolean optional_bool) {
+        public Builder optional_bool(@Nullable Boolean optional_bool) {
             this.optional_bool = Input.ofNullable(optional_bool);
             return this;
         }
 
-        public Builder setOptional_const(@Nullable Input<String> optional_const) {
+        public Builder optional_const(@Nullable Input<String> optional_const) {
             this.optional_const = optional_const;
             return this;
         }
 
-        public Builder setOptional_const(@Nullable String optional_const) {
+        public Builder optional_const(@Nullable String optional_const) {
             this.optional_const = Input.ofNullable(optional_const);
             return this;
         }
 
-        public Builder setOptional_enum(@Nullable Input<EnumThing> optional_enum) {
+        public Builder optional_enum(@Nullable Input<EnumThing> optional_enum) {
             this.optional_enum = optional_enum;
             return this;
         }
 
-        public Builder setOptional_enum(@Nullable EnumThing optional_enum) {
+        public Builder optional_enum(@Nullable EnumThing optional_enum) {
             this.optional_enum = Input.ofNullable(optional_enum);
             return this;
         }
 
-        public Builder setOptional_number(@Nullable Input<Double> optional_number) {
+        public Builder optional_number(@Nullable Input<Double> optional_number) {
             this.optional_number = optional_number;
             return this;
         }
 
-        public Builder setOptional_number(@Nullable Double optional_number) {
+        public Builder optional_number(@Nullable Double optional_number) {
             this.optional_number = Input.ofNullable(optional_number);
             return this;
         }
 
-        public Builder setOptional_string(@Nullable Input<String> optional_string) {
+        public Builder optional_string(@Nullable Input<String> optional_string) {
             this.optional_string = optional_string;
             return this;
         }
 
-        public Builder setOptional_string(@Nullable String optional_string) {
+        public Builder optional_string(@Nullable String optional_string) {
             this.optional_string = Input.ofNullable(optional_string);
             return this;
         }
 
-        public Builder setPlain_optional_bool(@Nullable Boolean plain_optional_bool) {
+        public Builder plain_optional_bool(@Nullable Boolean plain_optional_bool) {
             this.plain_optional_bool = plain_optional_bool;
             return this;
         }
 
-        public Builder setPlain_optional_const(@Nullable String plain_optional_const) {
+        public Builder plain_optional_const(@Nullable String plain_optional_const) {
             this.plain_optional_const = plain_optional_const;
             return this;
         }
 
-        public Builder setPlain_optional_number(@Nullable Double plain_optional_number) {
+        public Builder plain_optional_number(@Nullable Double plain_optional_number) {
             this.plain_optional_number = plain_optional_number;
             return this;
         }
 
-        public Builder setPlain_optional_string(@Nullable String plain_optional_string) {
+        public Builder plain_optional_string(@Nullable String plain_optional_string) {
             this.plain_optional_string = plain_optional_string;
             return this;
         }
 
-        public Builder setPlain_required_bool(Boolean plain_required_bool) {
+        public Builder plain_required_bool(Boolean plain_required_bool) {
             this.plain_required_bool = Objects.requireNonNull(plain_required_bool);
             return this;
         }
 
-        public Builder setPlain_required_const(String plain_required_const) {
+        public Builder plain_required_const(String plain_required_const) {
             this.plain_required_const = Objects.requireNonNull(plain_required_const);
             return this;
         }
 
-        public Builder setPlain_required_number(Double plain_required_number) {
+        public Builder plain_required_number(Double plain_required_number) {
             this.plain_required_number = Objects.requireNonNull(plain_required_number);
             return this;
         }
 
-        public Builder setPlain_required_string(String plain_required_string) {
+        public Builder plain_required_string(String plain_required_string) {
             this.plain_required_string = Objects.requireNonNull(plain_required_string);
             return this;
         }
 
-        public Builder setRequired_bool(Input<Boolean> required_bool) {
+        public Builder required_bool(Input<Boolean> required_bool) {
             this.required_bool = Objects.requireNonNull(required_bool);
             return this;
         }
 
-        public Builder setRequired_bool(Boolean required_bool) {
+        public Builder required_bool(Boolean required_bool) {
             this.required_bool = Input.of(Objects.requireNonNull(required_bool));
             return this;
         }
 
-        public Builder setRequired_enum(Input<EnumThing> required_enum) {
+        public Builder required_enum(Input<EnumThing> required_enum) {
             this.required_enum = Objects.requireNonNull(required_enum);
             return this;
         }
 
-        public Builder setRequired_enum(EnumThing required_enum) {
+        public Builder required_enum(EnumThing required_enum) {
             this.required_enum = Input.of(Objects.requireNonNull(required_enum));
             return this;
         }
 
-        public Builder setRequired_number(Input<Double> required_number) {
+        public Builder required_number(Input<Double> required_number) {
             this.required_number = Objects.requireNonNull(required_number);
             return this;
         }
 
-        public Builder setRequired_number(Double required_number) {
+        public Builder required_number(Double required_number) {
             this.required_number = Input.of(Objects.requireNonNull(required_number));
             return this;
         }
 
-        public Builder setRequired_string(Input<String> required_string) {
+        public Builder required_string(Input<String> required_string) {
             this.required_string = Objects.requireNonNull(required_string);
             return this;
         }
 
-        public Builder setRequired_string(String required_string) {
+        public Builder required_string(String required_string) {
             this.required_string = Input.of(Objects.requireNonNull(required_string));
             return this;
         }

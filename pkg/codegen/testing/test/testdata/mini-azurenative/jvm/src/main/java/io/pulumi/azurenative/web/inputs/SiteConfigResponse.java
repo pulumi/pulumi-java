@@ -57,7 +57,7 @@ public final class SiteConfigResponse extends io.pulumi.resources.InvokeArgs {
     	      this.netFrameworkVersion = defaults.netFrameworkVersion;
         }
 
-        public Builder setNetFrameworkVersion(@Nullable String netFrameworkVersion) {
+        public Builder netFrameworkVersion(@Nullable String netFrameworkVersion) {
             this.netFrameworkVersion = netFrameworkVersion;
             return this;
         }
