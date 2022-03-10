@@ -24,13 +24,13 @@ public final class GetMitigationActionResult {
      */
     private final @Nullable List<MitigationActionTag> tags;
 
-    @OutputCustomType.Constructor({"actionParams","mitigationActionArn","mitigationActionId","roleArn","tags"})
+    @OutputCustomType.Constructor
     private GetMitigationActionResult(
-        @Nullable MitigationActionActionParams actionParams,
-        @Nullable String mitigationActionArn,
-        @Nullable String mitigationActionId,
-        @Nullable String roleArn,
-        @Nullable List<MitigationActionTag> tags) {
+        @OutputCustomType.Parameter("actionParams") @Nullable MitigationActionActionParams actionParams,
+        @OutputCustomType.Parameter("mitigationActionArn") @Nullable String mitigationActionArn,
+        @OutputCustomType.Parameter("mitigationActionId") @Nullable String mitigationActionId,
+        @OutputCustomType.Parameter("roleArn") @Nullable String roleArn,
+        @OutputCustomType.Parameter("tags") @Nullable List<MitigationActionTag> tags) {
         this.actionParams = actionParams;
         this.mitigationActionArn = mitigationActionArn;
         this.mitigationActionId = mitigationActionId;

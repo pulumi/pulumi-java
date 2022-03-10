@@ -20,14 +20,14 @@ public final class DeliveryStreamParquetSerDe {
     private final @Nullable Integer pageSizeBytes;
     private final @Nullable String writerVersion;
 
-    @OutputCustomType.Constructor({"blockSizeBytes","compression","enableDictionaryCompression","maxPaddingBytes","pageSizeBytes","writerVersion"})
+    @OutputCustomType.Constructor
     private DeliveryStreamParquetSerDe(
-        @Nullable Integer blockSizeBytes,
-        @Nullable String compression,
-        @Nullable Boolean enableDictionaryCompression,
-        @Nullable Integer maxPaddingBytes,
-        @Nullable Integer pageSizeBytes,
-        @Nullable String writerVersion) {
+        @OutputCustomType.Parameter("blockSizeBytes") @Nullable Integer blockSizeBytes,
+        @OutputCustomType.Parameter("compression") @Nullable String compression,
+        @OutputCustomType.Parameter("enableDictionaryCompression") @Nullable Boolean enableDictionaryCompression,
+        @OutputCustomType.Parameter("maxPaddingBytes") @Nullable Integer maxPaddingBytes,
+        @OutputCustomType.Parameter("pageSizeBytes") @Nullable Integer pageSizeBytes,
+        @OutputCustomType.Parameter("writerVersion") @Nullable String writerVersion) {
         this.blockSizeBytes = blockSizeBytes;
         this.compression = compression;
         this.enableDictionaryCompression = enableDictionaryCompression;

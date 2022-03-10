@@ -17,8 +17,8 @@ public final class GetDocumentationVersionResult {
      */
     private final @Nullable String description;
 
-    @OutputCustomType.Constructor({"description"})
-    private GetDocumentationVersionResult(@Nullable String description) {
+    @OutputCustomType.Constructor
+    private GetDocumentationVersionResult(@OutputCustomType.Parameter("description") @Nullable String description) {
         this.description = description;
     }
 

@@ -25,13 +25,13 @@ public final class GetAttributeGroupAssociationResult {
     private final @Nullable String attributeGroupArn;
     private final @Nullable String id;
 
-    @OutputCustomType.Constructor({"application","applicationArn","attributeGroup","attributeGroupArn","id"})
+    @OutputCustomType.Constructor
     private GetAttributeGroupAssociationResult(
-        @Nullable String application,
-        @Nullable String applicationArn,
-        @Nullable String attributeGroup,
-        @Nullable String attributeGroupArn,
-        @Nullable String id) {
+        @OutputCustomType.Parameter("application") @Nullable String application,
+        @OutputCustomType.Parameter("applicationArn") @Nullable String applicationArn,
+        @OutputCustomType.Parameter("attributeGroup") @Nullable String attributeGroup,
+        @OutputCustomType.Parameter("attributeGroupArn") @Nullable String attributeGroupArn,
+        @OutputCustomType.Parameter("id") @Nullable String id) {
         this.application = application;
         this.applicationArn = applicationArn;
         this.attributeGroup = attributeGroup;

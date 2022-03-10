@@ -130,31 +130,31 @@ public final class GetBucketResult {
      */
     private final @Nullable String websiteURL;
 
-    @OutputCustomType.Constructor({"accelerateConfiguration","accessControl","analyticsConfigurations","arn","bucketEncryption","corsConfiguration","domainName","dualStackDomainName","intelligentTieringConfigurations","inventoryConfigurations","lifecycleConfiguration","loggingConfiguration","metricsConfigurations","notificationConfiguration","objectLockConfiguration","ownershipControls","publicAccessBlockConfiguration","regionalDomainName","replicationConfiguration","tags","versioningConfiguration","websiteConfiguration","websiteURL"})
+    @OutputCustomType.Constructor
     private GetBucketResult(
-        @Nullable BucketAccelerateConfiguration accelerateConfiguration,
-        @Nullable BucketAccessControl accessControl,
-        @Nullable List<BucketAnalyticsConfiguration> analyticsConfigurations,
-        @Nullable String arn,
-        @Nullable BucketEncryption bucketEncryption,
-        @Nullable BucketCorsConfiguration corsConfiguration,
-        @Nullable String domainName,
-        @Nullable String dualStackDomainName,
-        @Nullable List<BucketIntelligentTieringConfiguration> intelligentTieringConfigurations,
-        @Nullable List<BucketInventoryConfiguration> inventoryConfigurations,
-        @Nullable BucketLifecycleConfiguration lifecycleConfiguration,
-        @Nullable BucketLoggingConfiguration loggingConfiguration,
-        @Nullable List<BucketMetricsConfiguration> metricsConfigurations,
-        @Nullable BucketNotificationConfiguration notificationConfiguration,
-        @Nullable BucketObjectLockConfiguration objectLockConfiguration,
-        @Nullable BucketOwnershipControls ownershipControls,
-        @Nullable BucketPublicAccessBlockConfiguration publicAccessBlockConfiguration,
-        @Nullable String regionalDomainName,
-        @Nullable BucketReplicationConfiguration replicationConfiguration,
-        @Nullable List<BucketTag> tags,
-        @Nullable BucketVersioningConfiguration versioningConfiguration,
-        @Nullable BucketWebsiteConfiguration websiteConfiguration,
-        @Nullable String websiteURL) {
+        @OutputCustomType.Parameter("accelerateConfiguration") @Nullable BucketAccelerateConfiguration accelerateConfiguration,
+        @OutputCustomType.Parameter("accessControl") @Nullable BucketAccessControl accessControl,
+        @OutputCustomType.Parameter("analyticsConfigurations") @Nullable List<BucketAnalyticsConfiguration> analyticsConfigurations,
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("bucketEncryption") @Nullable BucketEncryption bucketEncryption,
+        @OutputCustomType.Parameter("corsConfiguration") @Nullable BucketCorsConfiguration corsConfiguration,
+        @OutputCustomType.Parameter("domainName") @Nullable String domainName,
+        @OutputCustomType.Parameter("dualStackDomainName") @Nullable String dualStackDomainName,
+        @OutputCustomType.Parameter("intelligentTieringConfigurations") @Nullable List<BucketIntelligentTieringConfiguration> intelligentTieringConfigurations,
+        @OutputCustomType.Parameter("inventoryConfigurations") @Nullable List<BucketInventoryConfiguration> inventoryConfigurations,
+        @OutputCustomType.Parameter("lifecycleConfiguration") @Nullable BucketLifecycleConfiguration lifecycleConfiguration,
+        @OutputCustomType.Parameter("loggingConfiguration") @Nullable BucketLoggingConfiguration loggingConfiguration,
+        @OutputCustomType.Parameter("metricsConfigurations") @Nullable List<BucketMetricsConfiguration> metricsConfigurations,
+        @OutputCustomType.Parameter("notificationConfiguration") @Nullable BucketNotificationConfiguration notificationConfiguration,
+        @OutputCustomType.Parameter("objectLockConfiguration") @Nullable BucketObjectLockConfiguration objectLockConfiguration,
+        @OutputCustomType.Parameter("ownershipControls") @Nullable BucketOwnershipControls ownershipControls,
+        @OutputCustomType.Parameter("publicAccessBlockConfiguration") @Nullable BucketPublicAccessBlockConfiguration publicAccessBlockConfiguration,
+        @OutputCustomType.Parameter("regionalDomainName") @Nullable String regionalDomainName,
+        @OutputCustomType.Parameter("replicationConfiguration") @Nullable BucketReplicationConfiguration replicationConfiguration,
+        @OutputCustomType.Parameter("tags") @Nullable List<BucketTag> tags,
+        @OutputCustomType.Parameter("versioningConfiguration") @Nullable BucketVersioningConfiguration versioningConfiguration,
+        @OutputCustomType.Parameter("websiteConfiguration") @Nullable BucketWebsiteConfiguration websiteConfiguration,
+        @OutputCustomType.Parameter("websiteURL") @Nullable String websiteURL) {
         this.accelerateConfiguration = accelerateConfiguration;
         this.accessControl = accessControl;
         this.analyticsConfigurations = analyticsConfigurations;

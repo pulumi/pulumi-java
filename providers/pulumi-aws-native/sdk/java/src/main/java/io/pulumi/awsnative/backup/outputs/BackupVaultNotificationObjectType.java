@@ -13,10 +13,10 @@ public final class BackupVaultNotificationObjectType {
     private final List<String> backupVaultEvents;
     private final String sNSTopicArn;
 
-    @OutputCustomType.Constructor({"backupVaultEvents","sNSTopicArn"})
+    @OutputCustomType.Constructor
     private BackupVaultNotificationObjectType(
-        List<String> backupVaultEvents,
-        String sNSTopicArn) {
+        @OutputCustomType.Parameter("backupVaultEvents") List<String> backupVaultEvents,
+        @OutputCustomType.Parameter("sNSTopicArn") String sNSTopicArn) {
         this.backupVaultEvents = backupVaultEvents;
         this.sNSTopicArn = sNSTopicArn;
     }

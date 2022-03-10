@@ -46,14 +46,14 @@ public final class GetApiKeyResult {
      */
     private final @Nullable List<ApiKeyTag> tags;
 
-    @OutputCustomType.Constructor({"aPIKeyId","customerId","description","enabled","stageKeys","tags"})
+    @OutputCustomType.Constructor
     private GetApiKeyResult(
-        @Nullable String aPIKeyId,
-        @Nullable String customerId,
-        @Nullable String description,
-        @Nullable Boolean enabled,
-        @Nullable List<ApiKeyStageKey> stageKeys,
-        @Nullable List<ApiKeyTag> tags) {
+        @OutputCustomType.Parameter("aPIKeyId") @Nullable String aPIKeyId,
+        @OutputCustomType.Parameter("customerId") @Nullable String customerId,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("enabled") @Nullable Boolean enabled,
+        @OutputCustomType.Parameter("stageKeys") @Nullable List<ApiKeyStageKey> stageKeys,
+        @OutputCustomType.Parameter("tags") @Nullable List<ApiKeyTag> tags) {
         this.aPIKeyId = aPIKeyId;
         this.customerId = customerId;
         this.description = description;

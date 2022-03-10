@@ -14,10 +14,10 @@ public final class CertificateExtendedKeyUsage {
     private final @Nullable String extendedKeyUsageObjectIdentifier;
     private final @Nullable String extendedKeyUsageType;
 
-    @OutputCustomType.Constructor({"extendedKeyUsageObjectIdentifier","extendedKeyUsageType"})
+    @OutputCustomType.Constructor
     private CertificateExtendedKeyUsage(
-        @Nullable String extendedKeyUsageObjectIdentifier,
-        @Nullable String extendedKeyUsageType) {
+        @OutputCustomType.Parameter("extendedKeyUsageObjectIdentifier") @Nullable String extendedKeyUsageObjectIdentifier,
+        @OutputCustomType.Parameter("extendedKeyUsageType") @Nullable String extendedKeyUsageType) {
         this.extendedKeyUsageObjectIdentifier = extendedKeyUsageObjectIdentifier;
         this.extendedKeyUsageType = extendedKeyUsageType;
     }

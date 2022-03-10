@@ -72,21 +72,21 @@ public final class SamplingRule {
      */
     private final @Nullable Integer version;
 
-    @OutputCustomType.Constructor({"attributes","fixedRate","hTTPMethod","host","priority","reservoirSize","resourceARN","ruleARN","ruleName","serviceName","serviceType","uRLPath","version"})
+    @OutputCustomType.Constructor
     private SamplingRule(
-        @Nullable Object attributes,
-        @Nullable Double fixedRate,
-        @Nullable String hTTPMethod,
-        @Nullable String host,
-        @Nullable Integer priority,
-        @Nullable Integer reservoirSize,
-        @Nullable String resourceARN,
-        @Nullable String ruleARN,
-        @Nullable String ruleName,
-        @Nullable String serviceName,
-        @Nullable String serviceType,
-        @Nullable String uRLPath,
-        @Nullable Integer version) {
+        @OutputCustomType.Parameter("attributes") @Nullable Object attributes,
+        @OutputCustomType.Parameter("fixedRate") @Nullable Double fixedRate,
+        @OutputCustomType.Parameter("hTTPMethod") @Nullable String hTTPMethod,
+        @OutputCustomType.Parameter("host") @Nullable String host,
+        @OutputCustomType.Parameter("priority") @Nullable Integer priority,
+        @OutputCustomType.Parameter("reservoirSize") @Nullable Integer reservoirSize,
+        @OutputCustomType.Parameter("resourceARN") @Nullable String resourceARN,
+        @OutputCustomType.Parameter("ruleARN") @Nullable String ruleARN,
+        @OutputCustomType.Parameter("ruleName") @Nullable String ruleName,
+        @OutputCustomType.Parameter("serviceName") @Nullable String serviceName,
+        @OutputCustomType.Parameter("serviceType") @Nullable String serviceType,
+        @OutputCustomType.Parameter("uRLPath") @Nullable String uRLPath,
+        @OutputCustomType.Parameter("version") @Nullable Integer version) {
         this.attributes = attributes;
         this.fixedRate = fixedRate;
         this.hTTPMethod = hTTPMethod;

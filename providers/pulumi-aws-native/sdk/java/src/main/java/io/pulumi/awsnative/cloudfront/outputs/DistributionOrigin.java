@@ -27,17 +27,17 @@ public final class DistributionOrigin {
     private final @Nullable DistributionOriginShield originShield;
     private final @Nullable DistributionS3OriginConfig s3OriginConfig;
 
-    @OutputCustomType.Constructor({"connectionAttempts","connectionTimeout","customOriginConfig","domainName","id","originCustomHeaders","originPath","originShield","s3OriginConfig"})
+    @OutputCustomType.Constructor
     private DistributionOrigin(
-        @Nullable Integer connectionAttempts,
-        @Nullable Integer connectionTimeout,
-        @Nullable DistributionCustomOriginConfig customOriginConfig,
-        String domainName,
-        String id,
-        @Nullable List<DistributionOriginCustomHeader> originCustomHeaders,
-        @Nullable String originPath,
-        @Nullable DistributionOriginShield originShield,
-        @Nullable DistributionS3OriginConfig s3OriginConfig) {
+        @OutputCustomType.Parameter("connectionAttempts") @Nullable Integer connectionAttempts,
+        @OutputCustomType.Parameter("connectionTimeout") @Nullable Integer connectionTimeout,
+        @OutputCustomType.Parameter("customOriginConfig") @Nullable DistributionCustomOriginConfig customOriginConfig,
+        @OutputCustomType.Parameter("domainName") String domainName,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("originCustomHeaders") @Nullable List<DistributionOriginCustomHeader> originCustomHeaders,
+        @OutputCustomType.Parameter("originPath") @Nullable String originPath,
+        @OutputCustomType.Parameter("originShield") @Nullable DistributionOriginShield originShield,
+        @OutputCustomType.Parameter("s3OriginConfig") @Nullable DistributionS3OriginConfig s3OriginConfig) {
         this.connectionAttempts = connectionAttempts;
         this.connectionTimeout = connectionTimeout;
         this.customOriginConfig = customOriginConfig;

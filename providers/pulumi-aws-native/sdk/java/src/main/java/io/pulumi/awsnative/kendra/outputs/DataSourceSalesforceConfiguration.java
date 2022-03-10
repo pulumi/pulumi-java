@@ -27,17 +27,17 @@ public final class DataSourceSalesforceConfiguration {
     private final @Nullable DataSourceSalesforceStandardObjectAttachmentConfiguration standardObjectAttachmentConfiguration;
     private final @Nullable List<DataSourceSalesforceStandardObjectConfiguration> standardObjectConfigurations;
 
-    @OutputCustomType.Constructor({"chatterFeedConfiguration","crawlAttachments","excludeAttachmentFilePatterns","includeAttachmentFilePatterns","knowledgeArticleConfiguration","secretArn","serverUrl","standardObjectAttachmentConfiguration","standardObjectConfigurations"})
+    @OutputCustomType.Constructor
     private DataSourceSalesforceConfiguration(
-        @Nullable DataSourceSalesforceChatterFeedConfiguration chatterFeedConfiguration,
-        @Nullable Boolean crawlAttachments,
-        @Nullable List<String> excludeAttachmentFilePatterns,
-        @Nullable List<String> includeAttachmentFilePatterns,
-        @Nullable DataSourceSalesforceKnowledgeArticleConfiguration knowledgeArticleConfiguration,
-        String secretArn,
-        String serverUrl,
-        @Nullable DataSourceSalesforceStandardObjectAttachmentConfiguration standardObjectAttachmentConfiguration,
-        @Nullable List<DataSourceSalesforceStandardObjectConfiguration> standardObjectConfigurations) {
+        @OutputCustomType.Parameter("chatterFeedConfiguration") @Nullable DataSourceSalesforceChatterFeedConfiguration chatterFeedConfiguration,
+        @OutputCustomType.Parameter("crawlAttachments") @Nullable Boolean crawlAttachments,
+        @OutputCustomType.Parameter("excludeAttachmentFilePatterns") @Nullable List<String> excludeAttachmentFilePatterns,
+        @OutputCustomType.Parameter("includeAttachmentFilePatterns") @Nullable List<String> includeAttachmentFilePatterns,
+        @OutputCustomType.Parameter("knowledgeArticleConfiguration") @Nullable DataSourceSalesforceKnowledgeArticleConfiguration knowledgeArticleConfiguration,
+        @OutputCustomType.Parameter("secretArn") String secretArn,
+        @OutputCustomType.Parameter("serverUrl") String serverUrl,
+        @OutputCustomType.Parameter("standardObjectAttachmentConfiguration") @Nullable DataSourceSalesforceStandardObjectAttachmentConfiguration standardObjectAttachmentConfiguration,
+        @OutputCustomType.Parameter("standardObjectConfigurations") @Nullable List<DataSourceSalesforceStandardObjectConfiguration> standardObjectConfigurations) {
         this.chatterFeedConfiguration = chatterFeedConfiguration;
         this.crawlAttachments = crawlAttachments;
         this.excludeAttachmentFilePatterns = excludeAttachmentFilePatterns;

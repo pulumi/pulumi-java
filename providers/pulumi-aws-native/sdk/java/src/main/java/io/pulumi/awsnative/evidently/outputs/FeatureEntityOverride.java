@@ -14,10 +14,10 @@ public final class FeatureEntityOverride {
     private final @Nullable String entityId;
     private final @Nullable String variation;
 
-    @OutputCustomType.Constructor({"entityId","variation"})
+    @OutputCustomType.Constructor
     private FeatureEntityOverride(
-        @Nullable String entityId,
-        @Nullable String variation) {
+        @OutputCustomType.Parameter("entityId") @Nullable String entityId,
+        @OutputCustomType.Parameter("variation") @Nullable String variation) {
         this.entityId = entityId;
         this.variation = variation;
     }

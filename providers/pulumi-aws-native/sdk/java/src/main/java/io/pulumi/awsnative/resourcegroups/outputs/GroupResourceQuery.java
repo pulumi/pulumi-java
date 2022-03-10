@@ -15,10 +15,10 @@ public final class GroupResourceQuery {
     private final @Nullable GroupQuery query;
     private final @Nullable GroupResourceQueryType type;
 
-    @OutputCustomType.Constructor({"query","type"})
+    @OutputCustomType.Constructor
     private GroupResourceQuery(
-        @Nullable GroupQuery query,
-        @Nullable GroupResourceQueryType type) {
+        @OutputCustomType.Parameter("query") @Nullable GroupQuery query,
+        @OutputCustomType.Parameter("type") @Nullable GroupResourceQueryType type) {
         this.query = query;
         this.type = type;
     }

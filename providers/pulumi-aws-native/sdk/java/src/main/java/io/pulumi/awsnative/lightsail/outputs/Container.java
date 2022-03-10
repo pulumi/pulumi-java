@@ -40,13 +40,13 @@ public final class Container {
      */
     private final @Nullable List<ContainerPortInfo> ports;
 
-    @OutputCustomType.Constructor({"command","containerName","environment","image","ports"})
+    @OutputCustomType.Constructor
     private Container(
-        @Nullable List<String> command,
-        @Nullable String containerName,
-        @Nullable List<ContainerEnvironmentVariable> environment,
-        @Nullable String image,
-        @Nullable List<ContainerPortInfo> ports) {
+        @OutputCustomType.Parameter("command") @Nullable List<String> command,
+        @OutputCustomType.Parameter("containerName") @Nullable String containerName,
+        @OutputCustomType.Parameter("environment") @Nullable List<ContainerEnvironmentVariable> environment,
+        @OutputCustomType.Parameter("image") @Nullable String image,
+        @OutputCustomType.Parameter("ports") @Nullable List<ContainerPortInfo> ports) {
         this.command = command;
         this.containerName = containerName;
         this.environment = environment;

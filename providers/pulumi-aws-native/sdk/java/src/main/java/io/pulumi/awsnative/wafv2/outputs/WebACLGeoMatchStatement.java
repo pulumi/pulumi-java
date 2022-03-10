@@ -16,10 +16,10 @@ public final class WebACLGeoMatchStatement {
     private final @Nullable List<String> countryCodes;
     private final @Nullable WebACLForwardedIPConfiguration forwardedIPConfig;
 
-    @OutputCustomType.Constructor({"countryCodes","forwardedIPConfig"})
+    @OutputCustomType.Constructor
     private WebACLGeoMatchStatement(
-        @Nullable List<String> countryCodes,
-        @Nullable WebACLForwardedIPConfiguration forwardedIPConfig) {
+        @OutputCustomType.Parameter("countryCodes") @Nullable List<String> countryCodes,
+        @OutputCustomType.Parameter("forwardedIPConfig") @Nullable WebACLForwardedIPConfiguration forwardedIPConfig) {
         this.countryCodes = countryCodes;
         this.forwardedIPConfig = forwardedIPConfig;
     }

@@ -34,21 +34,21 @@ public final class DeliveryStreamExtendedS3DestinationConfiguration {
     private final @Nullable DeliveryStreamS3DestinationConfiguration s3BackupConfiguration;
     private final @Nullable DeliveryStreamExtendedS3DestinationConfigurationS3BackupMode s3BackupMode;
 
-    @OutputCustomType.Constructor({"bucketARN","bufferingHints","cloudWatchLoggingOptions","compressionFormat","dataFormatConversionConfiguration","dynamicPartitioningConfiguration","encryptionConfiguration","errorOutputPrefix","prefix","processingConfiguration","roleARN","s3BackupConfiguration","s3BackupMode"})
+    @OutputCustomType.Constructor
     private DeliveryStreamExtendedS3DestinationConfiguration(
-        String bucketARN,
-        @Nullable DeliveryStreamBufferingHints bufferingHints,
-        @Nullable DeliveryStreamCloudWatchLoggingOptions cloudWatchLoggingOptions,
-        @Nullable DeliveryStreamExtendedS3DestinationConfigurationCompressionFormat compressionFormat,
-        @Nullable DeliveryStreamDataFormatConversionConfiguration dataFormatConversionConfiguration,
-        @Nullable DeliveryStreamDynamicPartitioningConfiguration dynamicPartitioningConfiguration,
-        @Nullable DeliveryStreamEncryptionConfiguration encryptionConfiguration,
-        @Nullable String errorOutputPrefix,
-        @Nullable String prefix,
-        @Nullable DeliveryStreamProcessingConfiguration processingConfiguration,
-        String roleARN,
-        @Nullable DeliveryStreamS3DestinationConfiguration s3BackupConfiguration,
-        @Nullable DeliveryStreamExtendedS3DestinationConfigurationS3BackupMode s3BackupMode) {
+        @OutputCustomType.Parameter("bucketARN") String bucketARN,
+        @OutputCustomType.Parameter("bufferingHints") @Nullable DeliveryStreamBufferingHints bufferingHints,
+        @OutputCustomType.Parameter("cloudWatchLoggingOptions") @Nullable DeliveryStreamCloudWatchLoggingOptions cloudWatchLoggingOptions,
+        @OutputCustomType.Parameter("compressionFormat") @Nullable DeliveryStreamExtendedS3DestinationConfigurationCompressionFormat compressionFormat,
+        @OutputCustomType.Parameter("dataFormatConversionConfiguration") @Nullable DeliveryStreamDataFormatConversionConfiguration dataFormatConversionConfiguration,
+        @OutputCustomType.Parameter("dynamicPartitioningConfiguration") @Nullable DeliveryStreamDynamicPartitioningConfiguration dynamicPartitioningConfiguration,
+        @OutputCustomType.Parameter("encryptionConfiguration") @Nullable DeliveryStreamEncryptionConfiguration encryptionConfiguration,
+        @OutputCustomType.Parameter("errorOutputPrefix") @Nullable String errorOutputPrefix,
+        @OutputCustomType.Parameter("prefix") @Nullable String prefix,
+        @OutputCustomType.Parameter("processingConfiguration") @Nullable DeliveryStreamProcessingConfiguration processingConfiguration,
+        @OutputCustomType.Parameter("roleARN") String roleARN,
+        @OutputCustomType.Parameter("s3BackupConfiguration") @Nullable DeliveryStreamS3DestinationConfiguration s3BackupConfiguration,
+        @OutputCustomType.Parameter("s3BackupMode") @Nullable DeliveryStreamExtendedS3DestinationConfigurationS3BackupMode s3BackupMode) {
         this.bucketARN = bucketARN;
         this.bufferingHints = bufferingHints;
         this.cloudWatchLoggingOptions = cloudWatchLoggingOptions;

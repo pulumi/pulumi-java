@@ -12,10 +12,10 @@ public final class TopicRuleCloudwatchLogsAction {
     private final String logGroupName;
     private final String roleArn;
 
-    @OutputCustomType.Constructor({"logGroupName","roleArn"})
+    @OutputCustomType.Constructor
     private TopicRuleCloudwatchLogsAction(
-        String logGroupName,
-        String roleArn) {
+        @OutputCustomType.Parameter("logGroupName") String logGroupName,
+        @OutputCustomType.Parameter("roleArn") String roleArn) {
         this.logGroupName = logGroupName;
         this.roleArn = roleArn;
     }

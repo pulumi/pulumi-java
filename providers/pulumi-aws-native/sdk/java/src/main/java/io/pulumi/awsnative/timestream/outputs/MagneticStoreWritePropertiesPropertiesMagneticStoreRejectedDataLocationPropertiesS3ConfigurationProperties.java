@@ -32,12 +32,12 @@ public final class MagneticStoreWritePropertiesPropertiesMagneticStoreRejectedDa
      */
     private final @Nullable String objectKeyPrefix;
 
-    @OutputCustomType.Constructor({"bucketName","encryptionOption","kmsKeyId","objectKeyPrefix"})
+    @OutputCustomType.Constructor
     private MagneticStoreWritePropertiesPropertiesMagneticStoreRejectedDataLocationPropertiesS3ConfigurationProperties(
-        String bucketName,
-        String encryptionOption,
-        @Nullable String kmsKeyId,
-        @Nullable String objectKeyPrefix) {
+        @OutputCustomType.Parameter("bucketName") String bucketName,
+        @OutputCustomType.Parameter("encryptionOption") String encryptionOption,
+        @OutputCustomType.Parameter("kmsKeyId") @Nullable String kmsKeyId,
+        @OutputCustomType.Parameter("objectKeyPrefix") @Nullable String objectKeyPrefix) {
         this.bucketName = bucketName;
         this.encryptionOption = encryptionOption;
         this.kmsKeyId = kmsKeyId;

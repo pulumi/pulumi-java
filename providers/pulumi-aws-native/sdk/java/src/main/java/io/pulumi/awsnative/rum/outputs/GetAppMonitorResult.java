@@ -28,12 +28,12 @@ public final class GetAppMonitorResult {
     private final @Nullable String domain;
     private final @Nullable List<AppMonitorTag> tags;
 
-    @OutputCustomType.Constructor({"appMonitorConfiguration","cwLogEnabled","domain","tags"})
+    @OutputCustomType.Constructor
     private GetAppMonitorResult(
-        @Nullable AppMonitorConfiguration appMonitorConfiguration,
-        @Nullable Boolean cwLogEnabled,
-        @Nullable String domain,
-        @Nullable List<AppMonitorTag> tags) {
+        @OutputCustomType.Parameter("appMonitorConfiguration") @Nullable AppMonitorConfiguration appMonitorConfiguration,
+        @OutputCustomType.Parameter("cwLogEnabled") @Nullable Boolean cwLogEnabled,
+        @OutputCustomType.Parameter("domain") @Nullable String domain,
+        @OutputCustomType.Parameter("tags") @Nullable List<AppMonitorTag> tags) {
         this.appMonitorConfiguration = appMonitorConfiguration;
         this.cwLogEnabled = cwLogEnabled;
         this.domain = domain;

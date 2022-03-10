@@ -16,10 +16,10 @@ public final class DeliveryStreamProcessingConfiguration {
     private final @Nullable Boolean enabled;
     private final @Nullable List<DeliveryStreamProcessor> processors;
 
-    @OutputCustomType.Constructor({"enabled","processors"})
+    @OutputCustomType.Constructor
     private DeliveryStreamProcessingConfiguration(
-        @Nullable Boolean enabled,
-        @Nullable List<DeliveryStreamProcessor> processors) {
+        @OutputCustomType.Parameter("enabled") @Nullable Boolean enabled,
+        @OutputCustomType.Parameter("processors") @Nullable List<DeliveryStreamProcessor> processors) {
         this.enabled = enabled;
         this.processors = processors;
     }

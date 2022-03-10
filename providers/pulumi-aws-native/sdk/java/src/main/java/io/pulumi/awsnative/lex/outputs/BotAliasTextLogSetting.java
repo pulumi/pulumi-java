@@ -15,10 +15,10 @@ public final class BotAliasTextLogSetting {
     private final @Nullable BotAliasTextLogDestination destination;
     private final @Nullable Boolean enabled;
 
-    @OutputCustomType.Constructor({"destination","enabled"})
+    @OutputCustomType.Constructor
     private BotAliasTextLogSetting(
-        @Nullable BotAliasTextLogDestination destination,
-        @Nullable Boolean enabled) {
+        @OutputCustomType.Parameter("destination") @Nullable BotAliasTextLogDestination destination,
+        @OutputCustomType.Parameter("enabled") @Nullable Boolean enabled) {
         this.destination = destination;
         this.enabled = enabled;
     }

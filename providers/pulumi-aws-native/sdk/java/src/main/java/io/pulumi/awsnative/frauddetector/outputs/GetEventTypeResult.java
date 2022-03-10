@@ -45,16 +45,16 @@ public final class GetEventTypeResult {
      */
     private final @Nullable List<EventTypeTag> tags;
 
-    @OutputCustomType.Constructor({"arn","createdTime","description","entityTypes","eventVariables","labels","lastUpdatedTime","tags"})
+    @OutputCustomType.Constructor
     private GetEventTypeResult(
-        @Nullable String arn,
-        @Nullable String createdTime,
-        @Nullable String description,
-        @Nullable List<EventTypeEntityType> entityTypes,
-        @Nullable List<EventTypeEventVariable> eventVariables,
-        @Nullable List<EventTypeLabel> labels,
-        @Nullable String lastUpdatedTime,
-        @Nullable List<EventTypeTag> tags) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("createdTime") @Nullable String createdTime,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("entityTypes") @Nullable List<EventTypeEntityType> entityTypes,
+        @OutputCustomType.Parameter("eventVariables") @Nullable List<EventTypeEventVariable> eventVariables,
+        @OutputCustomType.Parameter("labels") @Nullable List<EventTypeLabel> labels,
+        @OutputCustomType.Parameter("lastUpdatedTime") @Nullable String lastUpdatedTime,
+        @OutputCustomType.Parameter("tags") @Nullable List<EventTypeTag> tags) {
         this.arn = arn;
         this.createdTime = createdTime;
         this.description = description;

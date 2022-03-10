@@ -40,13 +40,13 @@ public final class GetTransitGatewayPeeringAttachmentResult {
      */
     private final @Nullable String transitGatewayAttachmentId;
 
-    @OutputCustomType.Constructor({"creationTime","state","status","tags","transitGatewayAttachmentId"})
+    @OutputCustomType.Constructor
     private GetTransitGatewayPeeringAttachmentResult(
-        @Nullable String creationTime,
-        @Nullable String state,
-        @Nullable TransitGatewayPeeringAttachmentPeeringAttachmentStatus status,
-        @Nullable List<TransitGatewayPeeringAttachmentTag> tags,
-        @Nullable String transitGatewayAttachmentId) {
+        @OutputCustomType.Parameter("creationTime") @Nullable String creationTime,
+        @OutputCustomType.Parameter("state") @Nullable String state,
+        @OutputCustomType.Parameter("status") @Nullable TransitGatewayPeeringAttachmentPeeringAttachmentStatus status,
+        @OutputCustomType.Parameter("tags") @Nullable List<TransitGatewayPeeringAttachmentTag> tags,
+        @OutputCustomType.Parameter("transitGatewayAttachmentId") @Nullable String transitGatewayAttachmentId) {
         this.creationTime = creationTime;
         this.state = state;
         this.status = status;

@@ -29,12 +29,12 @@ public final class DatasetDataCatalogInputDefinition {
     private final @Nullable String tableName;
     private final @Nullable DatasetS3Location tempDirectory;
 
-    @OutputCustomType.Constructor({"catalogId","databaseName","tableName","tempDirectory"})
+    @OutputCustomType.Constructor
     private DatasetDataCatalogInputDefinition(
-        @Nullable String catalogId,
-        @Nullable String databaseName,
-        @Nullable String tableName,
-        @Nullable DatasetS3Location tempDirectory) {
+        @OutputCustomType.Parameter("catalogId") @Nullable String catalogId,
+        @OutputCustomType.Parameter("databaseName") @Nullable String databaseName,
+        @OutputCustomType.Parameter("tableName") @Nullable String tableName,
+        @OutputCustomType.Parameter("tempDirectory") @Nullable DatasetS3Location tempDirectory) {
         this.catalogId = catalogId;
         this.databaseName = databaseName;
         this.tableName = tableName;

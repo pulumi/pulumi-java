@@ -14,11 +14,11 @@ public final class DestinationOptionsProperties {
     private final Boolean hiveCompatiblePartitions;
     private final Boolean perHourPartition;
 
-    @OutputCustomType.Constructor({"fileFormat","hiveCompatiblePartitions","perHourPartition"})
+    @OutputCustomType.Constructor
     private DestinationOptionsProperties(
-        FlowLogDestinationOptionsPropertiesFileFormat fileFormat,
-        Boolean hiveCompatiblePartitions,
-        Boolean perHourPartition) {
+        @OutputCustomType.Parameter("fileFormat") FlowLogDestinationOptionsPropertiesFileFormat fileFormat,
+        @OutputCustomType.Parameter("hiveCompatiblePartitions") Boolean hiveCompatiblePartitions,
+        @OutputCustomType.Parameter("perHourPartition") Boolean perHourPartition) {
         this.fileFormat = fileFormat;
         this.hiveCompatiblePartitions = hiveCompatiblePartitions;
         this.perHourPartition = perHourPartition;

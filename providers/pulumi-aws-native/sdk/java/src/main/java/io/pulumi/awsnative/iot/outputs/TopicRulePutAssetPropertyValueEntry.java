@@ -19,13 +19,13 @@ public final class TopicRulePutAssetPropertyValueEntry {
     private final @Nullable String propertyId;
     private final List<TopicRuleAssetPropertyValue> propertyValues;
 
-    @OutputCustomType.Constructor({"assetId","entryId","propertyAlias","propertyId","propertyValues"})
+    @OutputCustomType.Constructor
     private TopicRulePutAssetPropertyValueEntry(
-        @Nullable String assetId,
-        @Nullable String entryId,
-        @Nullable String propertyAlias,
-        @Nullable String propertyId,
-        List<TopicRuleAssetPropertyValue> propertyValues) {
+        @OutputCustomType.Parameter("assetId") @Nullable String assetId,
+        @OutputCustomType.Parameter("entryId") @Nullable String entryId,
+        @OutputCustomType.Parameter("propertyAlias") @Nullable String propertyAlias,
+        @OutputCustomType.Parameter("propertyId") @Nullable String propertyId,
+        @OutputCustomType.Parameter("propertyValues") List<TopicRuleAssetPropertyValue> propertyValues) {
         this.assetId = assetId;
         this.entryId = entryId;
         this.propertyAlias = propertyAlias;

@@ -66,18 +66,18 @@ public final class GetFirewallDomainListResult {
      */
     private final @Nullable List<FirewallDomainListTag> tags;
 
-    @OutputCustomType.Constructor({"arn","creationTime","creatorRequestId","domainCount","id","managedOwnerName","modificationTime","status","statusMessage","tags"})
+    @OutputCustomType.Constructor
     private GetFirewallDomainListResult(
-        @Nullable String arn,
-        @Nullable String creationTime,
-        @Nullable String creatorRequestId,
-        @Nullable Integer domainCount,
-        @Nullable String id,
-        @Nullable String managedOwnerName,
-        @Nullable String modificationTime,
-        @Nullable FirewallDomainListStatus status,
-        @Nullable String statusMessage,
-        @Nullable List<FirewallDomainListTag> tags) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("creationTime") @Nullable String creationTime,
+        @OutputCustomType.Parameter("creatorRequestId") @Nullable String creatorRequestId,
+        @OutputCustomType.Parameter("domainCount") @Nullable Integer domainCount,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("managedOwnerName") @Nullable String managedOwnerName,
+        @OutputCustomType.Parameter("modificationTime") @Nullable String modificationTime,
+        @OutputCustomType.Parameter("status") @Nullable FirewallDomainListStatus status,
+        @OutputCustomType.Parameter("statusMessage") @Nullable String statusMessage,
+        @OutputCustomType.Parameter("tags") @Nullable List<FirewallDomainListTag> tags) {
         this.arn = arn;
         this.creationTime = creationTime;
         this.creatorRequestId = creatorRequestId;

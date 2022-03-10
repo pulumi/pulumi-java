@@ -22,13 +22,13 @@ public final class GetListenerRuleResult {
     private final @Nullable Integer priority;
     private final @Nullable String ruleArn;
 
-    @OutputCustomType.Constructor({"actions","conditions","isDefault","priority","ruleArn"})
+    @OutputCustomType.Constructor
     private GetListenerRuleResult(
-        @Nullable List<ListenerRuleAction> actions,
-        @Nullable List<ListenerRuleRuleCondition> conditions,
-        @Nullable Boolean isDefault,
-        @Nullable Integer priority,
-        @Nullable String ruleArn) {
+        @OutputCustomType.Parameter("actions") @Nullable List<ListenerRuleAction> actions,
+        @OutputCustomType.Parameter("conditions") @Nullable List<ListenerRuleRuleCondition> conditions,
+        @OutputCustomType.Parameter("isDefault") @Nullable Boolean isDefault,
+        @OutputCustomType.Parameter("priority") @Nullable Integer priority,
+        @OutputCustomType.Parameter("ruleArn") @Nullable String ruleArn) {
         this.actions = actions;
         this.conditions = conditions;
         this.isDefault = isDefault;

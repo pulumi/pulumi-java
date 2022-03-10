@@ -29,15 +29,15 @@ public final class GetBotResult {
     private final @Nullable String name;
     private final @Nullable String roleArn;
 
-    @OutputCustomType.Constructor({"arn","dataPrivacy","description","id","idleSessionTTLInSeconds","name","roleArn"})
+    @OutputCustomType.Constructor
     private GetBotResult(
-        @Nullable String arn,
-        @Nullable DataPrivacyProperties dataPrivacy,
-        @Nullable String description,
-        @Nullable String id,
-        @Nullable Integer idleSessionTTLInSeconds,
-        @Nullable String name,
-        @Nullable String roleArn) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("dataPrivacy") @Nullable DataPrivacyProperties dataPrivacy,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("idleSessionTTLInSeconds") @Nullable Integer idleSessionTTLInSeconds,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("roleArn") @Nullable String roleArn) {
         this.arn = arn;
         this.dataPrivacy = dataPrivacy;
         this.description = description;

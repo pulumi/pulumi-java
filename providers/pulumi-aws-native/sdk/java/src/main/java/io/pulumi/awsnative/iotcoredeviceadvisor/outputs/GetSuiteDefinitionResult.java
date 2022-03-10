@@ -36,13 +36,13 @@ public final class GetSuiteDefinitionResult {
      */
     private final @Nullable List<SuiteDefinitionTag> tags;
 
-    @OutputCustomType.Constructor({"suiteDefinitionArn","suiteDefinitionConfiguration","suiteDefinitionId","suiteDefinitionVersion","tags"})
+    @OutputCustomType.Constructor
     private GetSuiteDefinitionResult(
-        @Nullable String suiteDefinitionArn,
-        @Nullable SuiteDefinitionConfigurationProperties suiteDefinitionConfiguration,
-        @Nullable String suiteDefinitionId,
-        @Nullable String suiteDefinitionVersion,
-        @Nullable List<SuiteDefinitionTag> tags) {
+        @OutputCustomType.Parameter("suiteDefinitionArn") @Nullable String suiteDefinitionArn,
+        @OutputCustomType.Parameter("suiteDefinitionConfiguration") @Nullable SuiteDefinitionConfigurationProperties suiteDefinitionConfiguration,
+        @OutputCustomType.Parameter("suiteDefinitionId") @Nullable String suiteDefinitionId,
+        @OutputCustomType.Parameter("suiteDefinitionVersion") @Nullable String suiteDefinitionVersion,
+        @OutputCustomType.Parameter("tags") @Nullable List<SuiteDefinitionTag> tags) {
         this.suiteDefinitionArn = suiteDefinitionArn;
         this.suiteDefinitionConfiguration = suiteDefinitionConfiguration;
         this.suiteDefinitionId = suiteDefinitionId;

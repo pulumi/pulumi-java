@@ -23,10 +23,10 @@ public final class GetAppResult {
      */
     private final @Nullable AppResourceSpec resourceSpec;
 
-    @OutputCustomType.Constructor({"appArn","resourceSpec"})
+    @OutputCustomType.Constructor
     private GetAppResult(
-        @Nullable String appArn,
-        @Nullable AppResourceSpec resourceSpec) {
+        @OutputCustomType.Parameter("appArn") @Nullable String appArn,
+        @OutputCustomType.Parameter("resourceSpec") @Nullable AppResourceSpec resourceSpec) {
         this.appArn = appArn;
         this.resourceSpec = resourceSpec;
     }

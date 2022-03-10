@@ -62,18 +62,18 @@ public final class GetAlarmResult {
      */
     private final @Nullable String treatMissingData;
 
-    @OutputCustomType.Constructor({"alarmArn","comparisonOperator","contactProtocols","datapointsToAlarm","evaluationPeriods","notificationEnabled","notificationTriggers","state","threshold","treatMissingData"})
+    @OutputCustomType.Constructor
     private GetAlarmResult(
-        @Nullable String alarmArn,
-        @Nullable String comparisonOperator,
-        @Nullable List<String> contactProtocols,
-        @Nullable Integer datapointsToAlarm,
-        @Nullable Integer evaluationPeriods,
-        @Nullable Boolean notificationEnabled,
-        @Nullable List<String> notificationTriggers,
-        @Nullable String state,
-        @Nullable Double threshold,
-        @Nullable String treatMissingData) {
+        @OutputCustomType.Parameter("alarmArn") @Nullable String alarmArn,
+        @OutputCustomType.Parameter("comparisonOperator") @Nullable String comparisonOperator,
+        @OutputCustomType.Parameter("contactProtocols") @Nullable List<String> contactProtocols,
+        @OutputCustomType.Parameter("datapointsToAlarm") @Nullable Integer datapointsToAlarm,
+        @OutputCustomType.Parameter("evaluationPeriods") @Nullable Integer evaluationPeriods,
+        @OutputCustomType.Parameter("notificationEnabled") @Nullable Boolean notificationEnabled,
+        @OutputCustomType.Parameter("notificationTriggers") @Nullable List<String> notificationTriggers,
+        @OutputCustomType.Parameter("state") @Nullable String state,
+        @OutputCustomType.Parameter("threshold") @Nullable Double threshold,
+        @OutputCustomType.Parameter("treatMissingData") @Nullable String treatMissingData) {
         this.alarmArn = alarmArn;
         this.comparisonOperator = comparisonOperator;
         this.contactProtocols = contactProtocols;

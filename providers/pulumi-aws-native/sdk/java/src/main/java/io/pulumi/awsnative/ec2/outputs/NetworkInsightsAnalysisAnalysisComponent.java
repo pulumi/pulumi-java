@@ -14,10 +14,10 @@ public final class NetworkInsightsAnalysisAnalysisComponent {
     private final @Nullable String arn;
     private final @Nullable String id;
 
-    @OutputCustomType.Constructor({"arn","id"})
+    @OutputCustomType.Constructor
     private NetworkInsightsAnalysisAnalysisComponent(
-        @Nullable String arn,
-        @Nullable String id) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("id") @Nullable String id) {
         this.arn = arn;
         this.id = id;
     }

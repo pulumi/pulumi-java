@@ -11,8 +11,8 @@ import java.util.Objects;
 public final class ModelExplainabilityJobDefinitionModelExplainabilityJobInput {
     private final ModelExplainabilityJobDefinitionEndpointInput endpointInput;
 
-    @OutputCustomType.Constructor({"endpointInput"})
-    private ModelExplainabilityJobDefinitionModelExplainabilityJobInput(ModelExplainabilityJobDefinitionEndpointInput endpointInput) {
+    @OutputCustomType.Constructor
+    private ModelExplainabilityJobDefinitionModelExplainabilityJobInput(@OutputCustomType.Parameter("endpointInput") ModelExplainabilityJobDefinitionEndpointInput endpointInput) {
         this.endpointInput = endpointInput;
     }
 

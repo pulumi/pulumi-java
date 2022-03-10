@@ -28,11 +28,11 @@ public final class GlobalReplicationGroupMember {
      */
     private final @Nullable GlobalReplicationGroupMemberRole role;
 
-    @OutputCustomType.Constructor({"replicationGroupId","replicationGroupRegion","role"})
+    @OutputCustomType.Constructor
     private GlobalReplicationGroupMember(
-        @Nullable String replicationGroupId,
-        @Nullable String replicationGroupRegion,
-        @Nullable GlobalReplicationGroupMemberRole role) {
+        @OutputCustomType.Parameter("replicationGroupId") @Nullable String replicationGroupId,
+        @OutputCustomType.Parameter("replicationGroupRegion") @Nullable String replicationGroupRegion,
+        @OutputCustomType.Parameter("role") @Nullable GlobalReplicationGroupMemberRole role) {
         this.replicationGroupId = replicationGroupId;
         this.replicationGroupRegion = replicationGroupRegion;
         this.role = role;

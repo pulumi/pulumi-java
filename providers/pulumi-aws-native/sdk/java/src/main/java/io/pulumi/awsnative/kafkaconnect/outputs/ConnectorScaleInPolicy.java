@@ -15,8 +15,8 @@ public final class ConnectorScaleInPolicy {
      */
     private final Integer cpuUtilizationPercentage;
 
-    @OutputCustomType.Constructor({"cpuUtilizationPercentage"})
-    private ConnectorScaleInPolicy(Integer cpuUtilizationPercentage) {
+    @OutputCustomType.Constructor
+    private ConnectorScaleInPolicy(@OutputCustomType.Parameter("cpuUtilizationPercentage") Integer cpuUtilizationPercentage) {
         this.cpuUtilizationPercentage = cpuUtilizationPercentage;
     }
 

@@ -26,15 +26,15 @@ public final class GlobalTableReplicaSpecification {
     private final @Nullable GlobalTableReplicaSSESpecification sSESpecification;
     private final @Nullable List<GlobalTableTag> tags;
 
-    @OutputCustomType.Constructor({"contributorInsightsSpecification","globalSecondaryIndexes","pointInTimeRecoverySpecification","readProvisionedThroughputSettings","region","sSESpecification","tags"})
+    @OutputCustomType.Constructor
     private GlobalTableReplicaSpecification(
-        @Nullable GlobalTableContributorInsightsSpecification contributorInsightsSpecification,
-        @Nullable List<GlobalTableReplicaGlobalSecondaryIndexSpecification> globalSecondaryIndexes,
-        @Nullable GlobalTablePointInTimeRecoverySpecification pointInTimeRecoverySpecification,
-        @Nullable GlobalTableReadProvisionedThroughputSettings readProvisionedThroughputSettings,
-        String region,
-        @Nullable GlobalTableReplicaSSESpecification sSESpecification,
-        @Nullable List<GlobalTableTag> tags) {
+        @OutputCustomType.Parameter("contributorInsightsSpecification") @Nullable GlobalTableContributorInsightsSpecification contributorInsightsSpecification,
+        @OutputCustomType.Parameter("globalSecondaryIndexes") @Nullable List<GlobalTableReplicaGlobalSecondaryIndexSpecification> globalSecondaryIndexes,
+        @OutputCustomType.Parameter("pointInTimeRecoverySpecification") @Nullable GlobalTablePointInTimeRecoverySpecification pointInTimeRecoverySpecification,
+        @OutputCustomType.Parameter("readProvisionedThroughputSettings") @Nullable GlobalTableReadProvisionedThroughputSettings readProvisionedThroughputSettings,
+        @OutputCustomType.Parameter("region") String region,
+        @OutputCustomType.Parameter("sSESpecification") @Nullable GlobalTableReplicaSSESpecification sSESpecification,
+        @OutputCustomType.Parameter("tags") @Nullable List<GlobalTableTag> tags) {
         this.contributorInsightsSpecification = contributorInsightsSpecification;
         this.globalSecondaryIndexes = globalSecondaryIndexes;
         this.pointInTimeRecoverySpecification = pointInTimeRecoverySpecification;

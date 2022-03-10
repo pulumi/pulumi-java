@@ -38,14 +38,14 @@ public final class GetLaunchProfileResult {
      */
     private final @Nullable List<String> studioComponentIds;
 
-    @OutputCustomType.Constructor({"description","launchProfileId","launchProfileProtocolVersions","name","streamConfiguration","studioComponentIds"})
+    @OutputCustomType.Constructor
     private GetLaunchProfileResult(
-        @Nullable String description,
-        @Nullable String launchProfileId,
-        @Nullable List<String> launchProfileProtocolVersions,
-        @Nullable String name,
-        @Nullable LaunchProfileStreamConfiguration streamConfiguration,
-        @Nullable List<String> studioComponentIds) {
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("launchProfileId") @Nullable String launchProfileId,
+        @OutputCustomType.Parameter("launchProfileProtocolVersions") @Nullable List<String> launchProfileProtocolVersions,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("streamConfiguration") @Nullable LaunchProfileStreamConfiguration streamConfiguration,
+        @OutputCustomType.Parameter("studioComponentIds") @Nullable List<String> studioComponentIds) {
         this.description = description;
         this.launchProfileId = launchProfileId;
         this.launchProfileProtocolVersions = launchProfileProtocolVersions;

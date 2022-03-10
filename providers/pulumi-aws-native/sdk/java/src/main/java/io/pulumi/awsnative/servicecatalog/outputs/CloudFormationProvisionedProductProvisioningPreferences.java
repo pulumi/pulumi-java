@@ -22,15 +22,15 @@ public final class CloudFormationProvisionedProductProvisioningPreferences {
     private final @Nullable CloudFormationProvisionedProductProvisioningPreferencesStackSetOperationType stackSetOperationType;
     private final @Nullable List<String> stackSetRegions;
 
-    @OutputCustomType.Constructor({"stackSetAccounts","stackSetFailureToleranceCount","stackSetFailureTolerancePercentage","stackSetMaxConcurrencyCount","stackSetMaxConcurrencyPercentage","stackSetOperationType","stackSetRegions"})
+    @OutputCustomType.Constructor
     private CloudFormationProvisionedProductProvisioningPreferences(
-        @Nullable List<String> stackSetAccounts,
-        @Nullable Integer stackSetFailureToleranceCount,
-        @Nullable Integer stackSetFailureTolerancePercentage,
-        @Nullable Integer stackSetMaxConcurrencyCount,
-        @Nullable Integer stackSetMaxConcurrencyPercentage,
-        @Nullable CloudFormationProvisionedProductProvisioningPreferencesStackSetOperationType stackSetOperationType,
-        @Nullable List<String> stackSetRegions) {
+        @OutputCustomType.Parameter("stackSetAccounts") @Nullable List<String> stackSetAccounts,
+        @OutputCustomType.Parameter("stackSetFailureToleranceCount") @Nullable Integer stackSetFailureToleranceCount,
+        @OutputCustomType.Parameter("stackSetFailureTolerancePercentage") @Nullable Integer stackSetFailureTolerancePercentage,
+        @OutputCustomType.Parameter("stackSetMaxConcurrencyCount") @Nullable Integer stackSetMaxConcurrencyCount,
+        @OutputCustomType.Parameter("stackSetMaxConcurrencyPercentage") @Nullable Integer stackSetMaxConcurrencyPercentage,
+        @OutputCustomType.Parameter("stackSetOperationType") @Nullable CloudFormationProvisionedProductProvisioningPreferencesStackSetOperationType stackSetOperationType,
+        @OutputCustomType.Parameter("stackSetRegions") @Nullable List<String> stackSetRegions) {
         this.stackSetAccounts = stackSetAccounts;
         this.stackSetFailureToleranceCount = stackSetFailureToleranceCount;
         this.stackSetFailureTolerancePercentage = stackSetFailureTolerancePercentage;

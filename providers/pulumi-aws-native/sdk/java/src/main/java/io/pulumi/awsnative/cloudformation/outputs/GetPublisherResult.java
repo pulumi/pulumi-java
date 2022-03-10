@@ -34,12 +34,12 @@ public final class GetPublisherResult {
      */
     private final @Nullable PublisherStatus publisherStatus;
 
-    @OutputCustomType.Constructor({"identityProvider","publisherId","publisherProfile","publisherStatus"})
+    @OutputCustomType.Constructor
     private GetPublisherResult(
-        @Nullable PublisherIdentityProvider identityProvider,
-        @Nullable String publisherId,
-        @Nullable String publisherProfile,
-        @Nullable PublisherStatus publisherStatus) {
+        @OutputCustomType.Parameter("identityProvider") @Nullable PublisherIdentityProvider identityProvider,
+        @OutputCustomType.Parameter("publisherId") @Nullable String publisherId,
+        @OutputCustomType.Parameter("publisherProfile") @Nullable String publisherProfile,
+        @OutputCustomType.Parameter("publisherStatus") @Nullable PublisherStatus publisherStatus) {
         this.identityProvider = identityProvider;
         this.publisherId = publisherId;
         this.publisherProfile = publisherProfile;

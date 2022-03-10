@@ -34,12 +34,12 @@ public final class GetAddonResult {
      */
     private final @Nullable List<AddonTag> tags;
 
-    @OutputCustomType.Constructor({"addonVersion","arn","serviceAccountRoleArn","tags"})
+    @OutputCustomType.Constructor
     private GetAddonResult(
-        @Nullable String addonVersion,
-        @Nullable String arn,
-        @Nullable String serviceAccountRoleArn,
-        @Nullable List<AddonTag> tags) {
+        @OutputCustomType.Parameter("addonVersion") @Nullable String addonVersion,
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("serviceAccountRoleArn") @Nullable String serviceAccountRoleArn,
+        @OutputCustomType.Parameter("tags") @Nullable List<AddonTag> tags) {
         this.addonVersion = addonVersion;
         this.arn = arn;
         this.serviceAccountRoleArn = serviceAccountRoleArn;

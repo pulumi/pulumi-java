@@ -33,13 +33,13 @@ public final class GetModelPackageGroupResult {
      */
     private final @Nullable List<ModelPackageGroupTag> tags;
 
-    @OutputCustomType.Constructor({"creationTime","modelPackageGroupArn","modelPackageGroupPolicy","modelPackageGroupStatus","tags"})
+    @OutputCustomType.Constructor
     private GetModelPackageGroupResult(
-        @Nullable String creationTime,
-        @Nullable String modelPackageGroupArn,
-        @Nullable Object modelPackageGroupPolicy,
-        @Nullable ModelPackageGroupStatus modelPackageGroupStatus,
-        @Nullable List<ModelPackageGroupTag> tags) {
+        @OutputCustomType.Parameter("creationTime") @Nullable String creationTime,
+        @OutputCustomType.Parameter("modelPackageGroupArn") @Nullable String modelPackageGroupArn,
+        @OutputCustomType.Parameter("modelPackageGroupPolicy") @Nullable Object modelPackageGroupPolicy,
+        @OutputCustomType.Parameter("modelPackageGroupStatus") @Nullable ModelPackageGroupStatus modelPackageGroupStatus,
+        @OutputCustomType.Parameter("tags") @Nullable List<ModelPackageGroupTag> tags) {
         this.creationTime = creationTime;
         this.modelPackageGroupArn = modelPackageGroupArn;
         this.modelPackageGroupPolicy = modelPackageGroupPolicy;

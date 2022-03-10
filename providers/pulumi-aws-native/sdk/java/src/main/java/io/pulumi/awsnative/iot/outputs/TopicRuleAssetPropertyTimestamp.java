@@ -14,10 +14,10 @@ public final class TopicRuleAssetPropertyTimestamp {
     private final @Nullable String offsetInNanos;
     private final String timeInSeconds;
 
-    @OutputCustomType.Constructor({"offsetInNanos","timeInSeconds"})
+    @OutputCustomType.Constructor
     private TopicRuleAssetPropertyTimestamp(
-        @Nullable String offsetInNanos,
-        String timeInSeconds) {
+        @OutputCustomType.Parameter("offsetInNanos") @Nullable String offsetInNanos,
+        @OutputCustomType.Parameter("timeInSeconds") String timeInSeconds) {
         this.offsetInNanos = offsetInNanos;
         this.timeInSeconds = timeInSeconds;
     }

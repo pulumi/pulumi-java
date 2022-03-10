@@ -15,11 +15,11 @@ public final class ConfigS3RecordingConfig {
     private final @Nullable String prefix;
     private final @Nullable String roleArn;
 
-    @OutputCustomType.Constructor({"bucketArn","prefix","roleArn"})
+    @OutputCustomType.Constructor
     private ConfigS3RecordingConfig(
-        @Nullable String bucketArn,
-        @Nullable String prefix,
-        @Nullable String roleArn) {
+        @OutputCustomType.Parameter("bucketArn") @Nullable String bucketArn,
+        @OutputCustomType.Parameter("prefix") @Nullable String prefix,
+        @OutputCustomType.Parameter("roleArn") @Nullable String roleArn) {
         this.bucketArn = bucketArn;
         this.prefix = prefix;
         this.roleArn = roleArn;

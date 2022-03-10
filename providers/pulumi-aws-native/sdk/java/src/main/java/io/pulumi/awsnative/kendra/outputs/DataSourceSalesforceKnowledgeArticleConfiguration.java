@@ -18,11 +18,11 @@ public final class DataSourceSalesforceKnowledgeArticleConfiguration {
     private final List<DataSourceSalesforceKnowledgeArticleState> includedStates;
     private final @Nullable DataSourceSalesforceStandardKnowledgeArticleTypeConfiguration standardKnowledgeArticleTypeConfiguration;
 
-    @OutputCustomType.Constructor({"customKnowledgeArticleTypeConfigurations","includedStates","standardKnowledgeArticleTypeConfiguration"})
+    @OutputCustomType.Constructor
     private DataSourceSalesforceKnowledgeArticleConfiguration(
-        @Nullable List<DataSourceSalesforceCustomKnowledgeArticleTypeConfiguration> customKnowledgeArticleTypeConfigurations,
-        List<DataSourceSalesforceKnowledgeArticleState> includedStates,
-        @Nullable DataSourceSalesforceStandardKnowledgeArticleTypeConfiguration standardKnowledgeArticleTypeConfiguration) {
+        @OutputCustomType.Parameter("customKnowledgeArticleTypeConfigurations") @Nullable List<DataSourceSalesforceCustomKnowledgeArticleTypeConfiguration> customKnowledgeArticleTypeConfigurations,
+        @OutputCustomType.Parameter("includedStates") List<DataSourceSalesforceKnowledgeArticleState> includedStates,
+        @OutputCustomType.Parameter("standardKnowledgeArticleTypeConfiguration") @Nullable DataSourceSalesforceStandardKnowledgeArticleTypeConfiguration standardKnowledgeArticleTypeConfiguration) {
         this.customKnowledgeArticleTypeConfigurations = customKnowledgeArticleTypeConfigurations;
         this.includedStates = includedStates;
         this.standardKnowledgeArticleTypeConfiguration = standardKnowledgeArticleTypeConfiguration;

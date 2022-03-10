@@ -13,10 +13,10 @@ public final class ResponseHeadersPolicyFrameOptions {
     private final String frameOption;
     private final Boolean override;
 
-    @OutputCustomType.Constructor({"frameOption","override"})
+    @OutputCustomType.Constructor
     private ResponseHeadersPolicyFrameOptions(
-        String frameOption,
-        Boolean override) {
+        @OutputCustomType.Parameter("frameOption") String frameOption,
+        @OutputCustomType.Parameter("override") Boolean override) {
         this.frameOption = frameOption;
         this.override = override;
     }

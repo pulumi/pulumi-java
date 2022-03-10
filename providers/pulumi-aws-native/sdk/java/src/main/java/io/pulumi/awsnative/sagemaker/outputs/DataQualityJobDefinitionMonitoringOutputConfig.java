@@ -24,10 +24,10 @@ public final class DataQualityJobDefinitionMonitoringOutputConfig {
      */
     private final List<DataQualityJobDefinitionMonitoringOutput> monitoringOutputs;
 
-    @OutputCustomType.Constructor({"kmsKeyId","monitoringOutputs"})
+    @OutputCustomType.Constructor
     private DataQualityJobDefinitionMonitoringOutputConfig(
-        @Nullable String kmsKeyId,
-        List<DataQualityJobDefinitionMonitoringOutput> monitoringOutputs) {
+        @OutputCustomType.Parameter("kmsKeyId") @Nullable String kmsKeyId,
+        @OutputCustomType.Parameter("monitoringOutputs") List<DataQualityJobDefinitionMonitoringOutput> monitoringOutputs) {
         this.kmsKeyId = kmsKeyId;
         this.monitoringOutputs = monitoringOutputs;
     }

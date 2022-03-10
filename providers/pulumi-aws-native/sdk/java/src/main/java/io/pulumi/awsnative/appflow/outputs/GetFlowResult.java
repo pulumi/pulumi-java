@@ -53,15 +53,15 @@ public final class GetFlowResult {
      */
     private final @Nullable FlowTriggerConfig triggerConfig;
 
-    @OutputCustomType.Constructor({"description","destinationFlowConfigList","flowArn","sourceFlowConfig","tags","tasks","triggerConfig"})
+    @OutputCustomType.Constructor
     private GetFlowResult(
-        @Nullable String description,
-        @Nullable List<FlowDestinationFlowConfig> destinationFlowConfigList,
-        @Nullable String flowArn,
-        @Nullable FlowSourceFlowConfig sourceFlowConfig,
-        @Nullable List<FlowTag> tags,
-        @Nullable List<FlowTask> tasks,
-        @Nullable FlowTriggerConfig triggerConfig) {
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("destinationFlowConfigList") @Nullable List<FlowDestinationFlowConfig> destinationFlowConfigList,
+        @OutputCustomType.Parameter("flowArn") @Nullable String flowArn,
+        @OutputCustomType.Parameter("sourceFlowConfig") @Nullable FlowSourceFlowConfig sourceFlowConfig,
+        @OutputCustomType.Parameter("tags") @Nullable List<FlowTag> tags,
+        @OutputCustomType.Parameter("tasks") @Nullable List<FlowTask> tasks,
+        @OutputCustomType.Parameter("triggerConfig") @Nullable FlowTriggerConfig triggerConfig) {
         this.description = description;
         this.destinationFlowConfigList = destinationFlowConfigList;
         this.flowArn = flowArn;

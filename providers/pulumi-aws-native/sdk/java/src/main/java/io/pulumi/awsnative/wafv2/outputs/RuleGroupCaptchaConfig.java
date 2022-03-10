@@ -13,8 +13,8 @@ import javax.annotation.Nullable;
 public final class RuleGroupCaptchaConfig {
     private final @Nullable RuleGroupImmunityTimeProperty immunityTimeProperty;
 
-    @OutputCustomType.Constructor({"immunityTimeProperty"})
-    private RuleGroupCaptchaConfig(@Nullable RuleGroupImmunityTimeProperty immunityTimeProperty) {
+    @OutputCustomType.Constructor
+    private RuleGroupCaptchaConfig(@OutputCustomType.Parameter("immunityTimeProperty") @Nullable RuleGroupImmunityTimeProperty immunityTimeProperty) {
         this.immunityTimeProperty = immunityTimeProperty;
     }
 

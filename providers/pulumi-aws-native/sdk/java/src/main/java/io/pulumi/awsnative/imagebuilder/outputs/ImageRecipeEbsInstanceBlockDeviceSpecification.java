@@ -55,16 +55,16 @@ public final class ImageRecipeEbsInstanceBlockDeviceSpecification {
      */
     private final @Nullable ImageRecipeEbsInstanceBlockDeviceSpecificationVolumeType volumeType;
 
-    @OutputCustomType.Constructor({"deleteOnTermination","encrypted","iops","kmsKeyId","snapshotId","throughput","volumeSize","volumeType"})
+    @OutputCustomType.Constructor
     private ImageRecipeEbsInstanceBlockDeviceSpecification(
-        @Nullable Boolean deleteOnTermination,
-        @Nullable Boolean encrypted,
-        @Nullable Integer iops,
-        @Nullable String kmsKeyId,
-        @Nullable String snapshotId,
-        @Nullable Integer throughput,
-        @Nullable Integer volumeSize,
-        @Nullable ImageRecipeEbsInstanceBlockDeviceSpecificationVolumeType volumeType) {
+        @OutputCustomType.Parameter("deleteOnTermination") @Nullable Boolean deleteOnTermination,
+        @OutputCustomType.Parameter("encrypted") @Nullable Boolean encrypted,
+        @OutputCustomType.Parameter("iops") @Nullable Integer iops,
+        @OutputCustomType.Parameter("kmsKeyId") @Nullable String kmsKeyId,
+        @OutputCustomType.Parameter("snapshotId") @Nullable String snapshotId,
+        @OutputCustomType.Parameter("throughput") @Nullable Integer throughput,
+        @OutputCustomType.Parameter("volumeSize") @Nullable Integer volumeSize,
+        @OutputCustomType.Parameter("volumeType") @Nullable ImageRecipeEbsInstanceBlockDeviceSpecificationVolumeType volumeType) {
         this.deleteOnTermination = deleteOnTermination;
         this.encrypted = encrypted;
         this.iops = iops;

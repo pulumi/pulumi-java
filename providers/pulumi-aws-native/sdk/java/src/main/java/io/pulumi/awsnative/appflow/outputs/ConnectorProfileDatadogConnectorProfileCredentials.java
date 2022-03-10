@@ -20,10 +20,10 @@ public final class ConnectorProfileDatadogConnectorProfileCredentials {
      */
     private final String applicationKey;
 
-    @OutputCustomType.Constructor({"apiKey","applicationKey"})
+    @OutputCustomType.Constructor
     private ConnectorProfileDatadogConnectorProfileCredentials(
-        String apiKey,
-        String applicationKey) {
+        @OutputCustomType.Parameter("apiKey") String apiKey,
+        @OutputCustomType.Parameter("applicationKey") String applicationKey) {
         this.apiKey = apiKey;
         this.applicationKey = applicationKey;
     }

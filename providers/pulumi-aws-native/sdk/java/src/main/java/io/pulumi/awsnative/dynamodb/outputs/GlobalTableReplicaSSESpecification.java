@@ -11,8 +11,8 @@ import java.util.Objects;
 public final class GlobalTableReplicaSSESpecification {
     private final String kMSMasterKeyId;
 
-    @OutputCustomType.Constructor({"kMSMasterKeyId"})
-    private GlobalTableReplicaSSESpecification(String kMSMasterKeyId) {
+    @OutputCustomType.Constructor
+    private GlobalTableReplicaSSESpecification(@OutputCustomType.Parameter("kMSMasterKeyId") String kMSMasterKeyId) {
         this.kMSMasterKeyId = kMSMasterKeyId;
     }
 

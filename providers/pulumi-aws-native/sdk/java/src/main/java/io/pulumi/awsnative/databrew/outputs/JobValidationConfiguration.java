@@ -19,10 +19,10 @@ public final class JobValidationConfiguration {
     private final String rulesetArn;
     private final @Nullable JobValidationMode validationMode;
 
-    @OutputCustomType.Constructor({"rulesetArn","validationMode"})
+    @OutputCustomType.Constructor
     private JobValidationConfiguration(
-        String rulesetArn,
-        @Nullable JobValidationMode validationMode) {
+        @OutputCustomType.Parameter("rulesetArn") String rulesetArn,
+        @OutputCustomType.Parameter("validationMode") @Nullable JobValidationMode validationMode) {
         this.rulesetArn = rulesetArn;
         this.validationMode = validationMode;
     }

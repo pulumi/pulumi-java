@@ -20,10 +20,10 @@ public final class AlertLambdaConfiguration {
      */
     private final String roleArn;
 
-    @OutputCustomType.Constructor({"lambdaArn","roleArn"})
+    @OutputCustomType.Constructor
     private AlertLambdaConfiguration(
-        String lambdaArn,
-        String roleArn) {
+        @OutputCustomType.Parameter("lambdaArn") String lambdaArn,
+        @OutputCustomType.Parameter("roleArn") String roleArn) {
         this.lambdaArn = lambdaArn;
         this.roleArn = roleArn;
     }

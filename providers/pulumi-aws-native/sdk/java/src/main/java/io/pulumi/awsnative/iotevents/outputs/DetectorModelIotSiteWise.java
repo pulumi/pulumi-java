@@ -34,13 +34,13 @@ public final class DetectorModelIotSiteWise {
     private final @Nullable String propertyId;
     private final DetectorModelAssetPropertyValue propertyValue;
 
-    @OutputCustomType.Constructor({"assetId","entryId","propertyAlias","propertyId","propertyValue"})
+    @OutputCustomType.Constructor
     private DetectorModelIotSiteWise(
-        @Nullable String assetId,
-        @Nullable String entryId,
-        @Nullable String propertyAlias,
-        @Nullable String propertyId,
-        DetectorModelAssetPropertyValue propertyValue) {
+        @OutputCustomType.Parameter("assetId") @Nullable String assetId,
+        @OutputCustomType.Parameter("entryId") @Nullable String entryId,
+        @OutputCustomType.Parameter("propertyAlias") @Nullable String propertyAlias,
+        @OutputCustomType.Parameter("propertyId") @Nullable String propertyId,
+        @OutputCustomType.Parameter("propertyValue") DetectorModelAssetPropertyValue propertyValue) {
         this.assetId = assetId;
         this.entryId = entryId;
         this.propertyAlias = propertyAlias;

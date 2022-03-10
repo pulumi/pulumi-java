@@ -11,8 +11,8 @@ import java.util.Objects;
 public final class MapConfiguration {
     private final String style;
 
-    @OutputCustomType.Constructor({"style"})
-    private MapConfiguration(String style) {
+    @OutputCustomType.Constructor
+    private MapConfiguration(@OutputCustomType.Parameter("style") String style) {
         this.style = style;
     }
 

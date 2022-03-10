@@ -24,10 +24,10 @@ public final class DomainKernelGatewayAppSettings {
      */
     private final @Nullable DomainResourceSpec defaultResourceSpec;
 
-    @OutputCustomType.Constructor({"customImages","defaultResourceSpec"})
+    @OutputCustomType.Constructor
     private DomainKernelGatewayAppSettings(
-        @Nullable List<DomainCustomImage> customImages,
-        @Nullable DomainResourceSpec defaultResourceSpec) {
+        @OutputCustomType.Parameter("customImages") @Nullable List<DomainCustomImage> customImages,
+        @OutputCustomType.Parameter("defaultResourceSpec") @Nullable DomainResourceSpec defaultResourceSpec) {
         this.customImages = customImages;
         this.defaultResourceSpec = defaultResourceSpec;
     }

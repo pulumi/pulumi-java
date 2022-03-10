@@ -29,11 +29,11 @@ public final class GlobalReplicationGroupRegionalConfiguration {
      */
     private final @Nullable List<GlobalReplicationGroupReshardingConfiguration> reshardingConfigurations;
 
-    @OutputCustomType.Constructor({"replicationGroupId","replicationGroupRegion","reshardingConfigurations"})
+    @OutputCustomType.Constructor
     private GlobalReplicationGroupRegionalConfiguration(
-        @Nullable String replicationGroupId,
-        @Nullable String replicationGroupRegion,
-        @Nullable List<GlobalReplicationGroupReshardingConfiguration> reshardingConfigurations) {
+        @OutputCustomType.Parameter("replicationGroupId") @Nullable String replicationGroupId,
+        @OutputCustomType.Parameter("replicationGroupRegion") @Nullable String replicationGroupRegion,
+        @OutputCustomType.Parameter("reshardingConfigurations") @Nullable List<GlobalReplicationGroupReshardingConfiguration> reshardingConfigurations) {
         this.replicationGroupId = replicationGroupId;
         this.replicationGroupRegion = replicationGroupRegion;
         this.reshardingConfigurations = reshardingConfigurations;

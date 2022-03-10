@@ -50,15 +50,15 @@ public final class GetLinkResult {
      */
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor({"bandwidth","description","linkArn","linkId","provider","tags","type"})
+    @OutputCustomType.Constructor
     private GetLinkResult(
-        @Nullable LinkBandwidth bandwidth,
-        @Nullable String description,
-        @Nullable String linkArn,
-        @Nullable String linkId,
-        @Nullable String provider,
-        @Nullable List<LinkTag> tags,
-        @Nullable String type) {
+        @OutputCustomType.Parameter("bandwidth") @Nullable LinkBandwidth bandwidth,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("linkArn") @Nullable String linkArn,
+        @OutputCustomType.Parameter("linkId") @Nullable String linkId,
+        @OutputCustomType.Parameter("provider") @Nullable String provider,
+        @OutputCustomType.Parameter("tags") @Nullable List<LinkTag> tags,
+        @OutputCustomType.Parameter("type") @Nullable String type) {
         this.bandwidth = bandwidth;
         this.description = description;
         this.linkArn = linkArn;

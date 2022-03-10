@@ -23,10 +23,10 @@ public final class ApplicationAlarm {
      */
     private final @Nullable ApplicationAlarmSeverity severity;
 
-    @OutputCustomType.Constructor({"alarmName","severity"})
+    @OutputCustomType.Constructor
     private ApplicationAlarm(
-        String alarmName,
-        @Nullable ApplicationAlarmSeverity severity) {
+        @OutputCustomType.Parameter("alarmName") String alarmName,
+        @OutputCustomType.Parameter("severity") @Nullable ApplicationAlarmSeverity severity) {
         this.alarmName = alarmName;
         this.severity = severity;
     }

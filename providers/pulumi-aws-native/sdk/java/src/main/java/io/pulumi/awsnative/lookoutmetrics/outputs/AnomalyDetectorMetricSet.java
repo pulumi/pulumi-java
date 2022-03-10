@@ -51,17 +51,17 @@ public final class AnomalyDetectorMetricSet {
     private final @Nullable AnomalyDetectorTimestampColumn timestampColumn;
     private final @Nullable String timezone;
 
-    @OutputCustomType.Constructor({"dimensionList","metricList","metricSetDescription","metricSetFrequency","metricSetName","metricSource","offset","timestampColumn","timezone"})
+    @OutputCustomType.Constructor
     private AnomalyDetectorMetricSet(
-        @Nullable List<String> dimensionList,
-        List<AnomalyDetectorMetric> metricList,
-        @Nullable String metricSetDescription,
-        @Nullable AnomalyDetectorMetricSetMetricSetFrequency metricSetFrequency,
-        String metricSetName,
-        AnomalyDetectorMetricSource metricSource,
-        @Nullable Integer offset,
-        @Nullable AnomalyDetectorTimestampColumn timestampColumn,
-        @Nullable String timezone) {
+        @OutputCustomType.Parameter("dimensionList") @Nullable List<String> dimensionList,
+        @OutputCustomType.Parameter("metricList") List<AnomalyDetectorMetric> metricList,
+        @OutputCustomType.Parameter("metricSetDescription") @Nullable String metricSetDescription,
+        @OutputCustomType.Parameter("metricSetFrequency") @Nullable AnomalyDetectorMetricSetMetricSetFrequency metricSetFrequency,
+        @OutputCustomType.Parameter("metricSetName") String metricSetName,
+        @OutputCustomType.Parameter("metricSource") AnomalyDetectorMetricSource metricSource,
+        @OutputCustomType.Parameter("offset") @Nullable Integer offset,
+        @OutputCustomType.Parameter("timestampColumn") @Nullable AnomalyDetectorTimestampColumn timestampColumn,
+        @OutputCustomType.Parameter("timezone") @Nullable String timezone) {
         this.dimensionList = dimensionList;
         this.metricList = metricList;
         this.metricSetDescription = metricSetDescription;

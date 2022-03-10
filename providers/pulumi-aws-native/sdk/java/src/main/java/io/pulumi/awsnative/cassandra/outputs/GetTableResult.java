@@ -40,14 +40,14 @@ public final class GetTableResult {
      */
     private final @Nullable List<TableTag> tags;
 
-    @OutputCustomType.Constructor({"billingMode","defaultTimeToLive","encryptionSpecification","pointInTimeRecoveryEnabled","regularColumns","tags"})
+    @OutputCustomType.Constructor
     private GetTableResult(
-        @Nullable TableBillingMode billingMode,
-        @Nullable Integer defaultTimeToLive,
-        @Nullable TableEncryptionSpecification encryptionSpecification,
-        @Nullable Boolean pointInTimeRecoveryEnabled,
-        @Nullable List<TableColumn> regularColumns,
-        @Nullable List<TableTag> tags) {
+        @OutputCustomType.Parameter("billingMode") @Nullable TableBillingMode billingMode,
+        @OutputCustomType.Parameter("defaultTimeToLive") @Nullable Integer defaultTimeToLive,
+        @OutputCustomType.Parameter("encryptionSpecification") @Nullable TableEncryptionSpecification encryptionSpecification,
+        @OutputCustomType.Parameter("pointInTimeRecoveryEnabled") @Nullable Boolean pointInTimeRecoveryEnabled,
+        @OutputCustomType.Parameter("regularColumns") @Nullable List<TableColumn> regularColumns,
+        @OutputCustomType.Parameter("tags") @Nullable List<TableTag> tags) {
         this.billingMode = billingMode;
         this.defaultTimeToLive = defaultTimeToLive;
         this.encryptionSpecification = encryptionSpecification;

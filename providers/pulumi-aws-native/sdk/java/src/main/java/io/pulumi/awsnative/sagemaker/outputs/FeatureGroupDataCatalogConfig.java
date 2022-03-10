@@ -13,11 +13,11 @@ public final class FeatureGroupDataCatalogConfig {
     private final String database;
     private final String tableName;
 
-    @OutputCustomType.Constructor({"catalog","database","tableName"})
+    @OutputCustomType.Constructor
     private FeatureGroupDataCatalogConfig(
-        String catalog,
-        String database,
-        String tableName) {
+        @OutputCustomType.Parameter("catalog") String catalog,
+        @OutputCustomType.Parameter("database") String database,
+        @OutputCustomType.Parameter("tableName") String tableName) {
         this.catalog = catalog;
         this.database = database;
         this.tableName = tableName;

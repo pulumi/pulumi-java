@@ -81,18 +81,18 @@ public final class DetectorModelDynamoDB {
      */
     private final String tableName;
 
-    @OutputCustomType.Constructor({"hashKeyField","hashKeyType","hashKeyValue","operation","payload","payloadField","rangeKeyField","rangeKeyType","rangeKeyValue","tableName"})
+    @OutputCustomType.Constructor
     private DetectorModelDynamoDB(
-        String hashKeyField,
-        @Nullable String hashKeyType,
-        String hashKeyValue,
-        @Nullable String operation,
-        @Nullable DetectorModelPayload payload,
-        @Nullable String payloadField,
-        @Nullable String rangeKeyField,
-        @Nullable String rangeKeyType,
-        @Nullable String rangeKeyValue,
-        String tableName) {
+        @OutputCustomType.Parameter("hashKeyField") String hashKeyField,
+        @OutputCustomType.Parameter("hashKeyType") @Nullable String hashKeyType,
+        @OutputCustomType.Parameter("hashKeyValue") String hashKeyValue,
+        @OutputCustomType.Parameter("operation") @Nullable String operation,
+        @OutputCustomType.Parameter("payload") @Nullable DetectorModelPayload payload,
+        @OutputCustomType.Parameter("payloadField") @Nullable String payloadField,
+        @OutputCustomType.Parameter("rangeKeyField") @Nullable String rangeKeyField,
+        @OutputCustomType.Parameter("rangeKeyType") @Nullable String rangeKeyType,
+        @OutputCustomType.Parameter("rangeKeyValue") @Nullable String rangeKeyValue,
+        @OutputCustomType.Parameter("tableName") String tableName) {
         this.hashKeyField = hashKeyField;
         this.hashKeyType = hashKeyType;
         this.hashKeyValue = hashKeyValue;

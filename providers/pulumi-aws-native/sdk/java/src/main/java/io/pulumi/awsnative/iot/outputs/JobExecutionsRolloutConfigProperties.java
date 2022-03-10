@@ -23,10 +23,10 @@ public final class JobExecutionsRolloutConfigProperties {
      */
     private final @Nullable Integer maximumPerMinute;
 
-    @OutputCustomType.Constructor({"exponentialRolloutRate","maximumPerMinute"})
+    @OutputCustomType.Constructor
     private JobExecutionsRolloutConfigProperties(
-        @Nullable JobTemplateExponentialRolloutRate exponentialRolloutRate,
-        @Nullable Integer maximumPerMinute) {
+        @OutputCustomType.Parameter("exponentialRolloutRate") @Nullable JobTemplateExponentialRolloutRate exponentialRolloutRate,
+        @OutputCustomType.Parameter("maximumPerMinute") @Nullable Integer maximumPerMinute) {
         this.exponentialRolloutRate = exponentialRolloutRate;
         this.maximumPerMinute = maximumPerMinute;
     }

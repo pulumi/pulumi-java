@@ -13,8 +13,8 @@ import javax.annotation.Nullable;
 public final class StateMachineLogDestination {
     private final @Nullable StateMachineCloudWatchLogsLogGroup cloudWatchLogsLogGroup;
 
-    @OutputCustomType.Constructor({"cloudWatchLogsLogGroup"})
-    private StateMachineLogDestination(@Nullable StateMachineCloudWatchLogsLogGroup cloudWatchLogsLogGroup) {
+    @OutputCustomType.Constructor
+    private StateMachineLogDestination(@OutputCustomType.Parameter("cloudWatchLogsLogGroup") @Nullable StateMachineCloudWatchLogsLogGroup cloudWatchLogsLogGroup) {
         this.cloudWatchLogsLogGroup = cloudWatchLogsLogGroup;
     }
 

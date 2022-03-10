@@ -33,12 +33,12 @@ public final class TaskSetServiceRegistry {
      */
     private final @Nullable String registryArn;
 
-    @OutputCustomType.Constructor({"containerName","containerPort","port","registryArn"})
+    @OutputCustomType.Constructor
     private TaskSetServiceRegistry(
-        @Nullable String containerName,
-        @Nullable Integer containerPort,
-        @Nullable Integer port,
-        @Nullable String registryArn) {
+        @OutputCustomType.Parameter("containerName") @Nullable String containerName,
+        @OutputCustomType.Parameter("containerPort") @Nullable Integer containerPort,
+        @OutputCustomType.Parameter("port") @Nullable Integer port,
+        @OutputCustomType.Parameter("registryArn") @Nullable String registryArn) {
         this.containerName = containerName;
         this.containerPort = containerPort;
         this.port = port;

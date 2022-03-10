@@ -15,10 +15,10 @@ public final class DeliveryStreamDeserializer {
     private final @Nullable DeliveryStreamHiveJsonSerDe hiveJsonSerDe;
     private final @Nullable DeliveryStreamOpenXJsonSerDe openXJsonSerDe;
 
-    @OutputCustomType.Constructor({"hiveJsonSerDe","openXJsonSerDe"})
+    @OutputCustomType.Constructor
     private DeliveryStreamDeserializer(
-        @Nullable DeliveryStreamHiveJsonSerDe hiveJsonSerDe,
-        @Nullable DeliveryStreamOpenXJsonSerDe openXJsonSerDe) {
+        @OutputCustomType.Parameter("hiveJsonSerDe") @Nullable DeliveryStreamHiveJsonSerDe hiveJsonSerDe,
+        @OutputCustomType.Parameter("openXJsonSerDe") @Nullable DeliveryStreamOpenXJsonSerDe openXJsonSerDe) {
         this.hiveJsonSerDe = hiveJsonSerDe;
         this.openXJsonSerDe = openXJsonSerDe;
     }

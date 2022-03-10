@@ -35,12 +35,12 @@ public final class GetAgentResult {
      */
     private final @Nullable List<AgentTag> tags;
 
-    @OutputCustomType.Constructor({"agentArn","agentName","endpointType","tags"})
+    @OutputCustomType.Constructor
     private GetAgentResult(
-        @Nullable String agentArn,
-        @Nullable String agentName,
-        @Nullable AgentEndpointType endpointType,
-        @Nullable List<AgentTag> tags) {
+        @OutputCustomType.Parameter("agentArn") @Nullable String agentArn,
+        @OutputCustomType.Parameter("agentName") @Nullable String agentName,
+        @OutputCustomType.Parameter("endpointType") @Nullable AgentEndpointType endpointType,
+        @OutputCustomType.Parameter("tags") @Nullable List<AgentTag> tags) {
         this.agentArn = agentArn;
         this.agentName = agentName;
         this.endpointType = endpointType;

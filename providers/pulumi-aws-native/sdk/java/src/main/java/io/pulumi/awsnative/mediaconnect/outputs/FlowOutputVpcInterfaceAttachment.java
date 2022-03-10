@@ -17,8 +17,8 @@ public final class FlowOutputVpcInterfaceAttachment {
      */
     private final @Nullable String vpcInterfaceName;
 
-    @OutputCustomType.Constructor({"vpcInterfaceName"})
-    private FlowOutputVpcInterfaceAttachment(@Nullable String vpcInterfaceName) {
+    @OutputCustomType.Constructor
+    private FlowOutputVpcInterfaceAttachment(@OutputCustomType.Parameter("vpcInterfaceName") @Nullable String vpcInterfaceName) {
         this.vpcInterfaceName = vpcInterfaceName;
     }
 

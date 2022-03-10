@@ -38,13 +38,13 @@ public final class BucketRedirectRule {
      */
     private final @Nullable String replaceKeyWith;
 
-    @OutputCustomType.Constructor({"hostName","httpRedirectCode","protocol","replaceKeyPrefixWith","replaceKeyWith"})
+    @OutputCustomType.Constructor
     private BucketRedirectRule(
-        @Nullable String hostName,
-        @Nullable String httpRedirectCode,
-        @Nullable BucketRedirectRuleProtocol protocol,
-        @Nullable String replaceKeyPrefixWith,
-        @Nullable String replaceKeyWith) {
+        @OutputCustomType.Parameter("hostName") @Nullable String hostName,
+        @OutputCustomType.Parameter("httpRedirectCode") @Nullable String httpRedirectCode,
+        @OutputCustomType.Parameter("protocol") @Nullable BucketRedirectRuleProtocol protocol,
+        @OutputCustomType.Parameter("replaceKeyPrefixWith") @Nullable String replaceKeyPrefixWith,
+        @OutputCustomType.Parameter("replaceKeyWith") @Nullable String replaceKeyWith) {
         this.hostName = hostName;
         this.httpRedirectCode = httpRedirectCode;
         this.protocol = protocol;

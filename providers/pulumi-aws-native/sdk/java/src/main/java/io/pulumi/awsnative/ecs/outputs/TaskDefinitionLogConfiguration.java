@@ -18,11 +18,11 @@ public final class TaskDefinitionLogConfiguration {
     private final @Nullable Object options;
     private final @Nullable List<TaskDefinitionSecret> secretOptions;
 
-    @OutputCustomType.Constructor({"logDriver","options","secretOptions"})
+    @OutputCustomType.Constructor
     private TaskDefinitionLogConfiguration(
-        String logDriver,
-        @Nullable Object options,
-        @Nullable List<TaskDefinitionSecret> secretOptions) {
+        @OutputCustomType.Parameter("logDriver") String logDriver,
+        @OutputCustomType.Parameter("options") @Nullable Object options,
+        @OutputCustomType.Parameter("secretOptions") @Nullable List<TaskDefinitionSecret> secretOptions) {
         this.logDriver = logDriver;
         this.options = options;
         this.secretOptions = secretOptions;

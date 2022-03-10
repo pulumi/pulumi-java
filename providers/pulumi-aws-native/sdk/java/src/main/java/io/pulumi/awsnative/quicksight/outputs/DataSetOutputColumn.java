@@ -24,11 +24,11 @@ public final class DataSetOutputColumn {
     private final @Nullable String name;
     private final @Nullable DataSetColumnDataType type;
 
-    @OutputCustomType.Constructor({"description","name","type"})
+    @OutputCustomType.Constructor
     private DataSetOutputColumn(
-        @Nullable String description,
-        @Nullable String name,
-        @Nullable DataSetColumnDataType type) {
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("type") @Nullable DataSetColumnDataType type) {
         this.description = description;
         this.name = name;
         this.type = type;

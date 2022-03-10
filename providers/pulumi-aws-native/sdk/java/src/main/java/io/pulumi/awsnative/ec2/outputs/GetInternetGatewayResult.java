@@ -24,10 +24,10 @@ public final class GetInternetGatewayResult {
      */
     private final @Nullable List<InternetGatewayTag> tags;
 
-    @OutputCustomType.Constructor({"internetGatewayId","tags"})
+    @OutputCustomType.Constructor
     private GetInternetGatewayResult(
-        @Nullable String internetGatewayId,
-        @Nullable List<InternetGatewayTag> tags) {
+        @OutputCustomType.Parameter("internetGatewayId") @Nullable String internetGatewayId,
+        @OutputCustomType.Parameter("tags") @Nullable List<InternetGatewayTag> tags) {
         this.internetGatewayId = internetGatewayId;
         this.tags = tags;
     }

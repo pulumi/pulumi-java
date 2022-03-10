@@ -17,8 +17,8 @@ public final class DataSourceSslProperties {
      */
     private final @Nullable Boolean disableSsl;
 
-    @OutputCustomType.Constructor({"disableSsl"})
-    private DataSourceSslProperties(@Nullable Boolean disableSsl) {
+    @OutputCustomType.Constructor
+    private DataSourceSslProperties(@OutputCustomType.Parameter("disableSsl") @Nullable Boolean disableSsl) {
         this.disableSsl = disableSsl;
     }
 

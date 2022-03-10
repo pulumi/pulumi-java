@@ -17,8 +17,8 @@ public final class DataQualityJobDefinitionConstraintsResource {
      */
     private final @Nullable String s3Uri;
 
-    @OutputCustomType.Constructor({"s3Uri"})
-    private DataQualityJobDefinitionConstraintsResource(@Nullable String s3Uri) {
+    @OutputCustomType.Constructor
+    private DataQualityJobDefinitionConstraintsResource(@OutputCustomType.Parameter("s3Uri") @Nullable String s3Uri) {
         this.s3Uri = s3Uri;
     }
 

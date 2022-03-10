@@ -18,12 +18,12 @@ public final class GlobalTableTargetTrackingScalingPolicyConfiguration {
     private final @Nullable Integer scaleOutCooldown;
     private final Double targetValue;
 
-    @OutputCustomType.Constructor({"disableScaleIn","scaleInCooldown","scaleOutCooldown","targetValue"})
+    @OutputCustomType.Constructor
     private GlobalTableTargetTrackingScalingPolicyConfiguration(
-        @Nullable Boolean disableScaleIn,
-        @Nullable Integer scaleInCooldown,
-        @Nullable Integer scaleOutCooldown,
-        Double targetValue) {
+        @OutputCustomType.Parameter("disableScaleIn") @Nullable Boolean disableScaleIn,
+        @OutputCustomType.Parameter("scaleInCooldown") @Nullable Integer scaleInCooldown,
+        @OutputCustomType.Parameter("scaleOutCooldown") @Nullable Integer scaleOutCooldown,
+        @OutputCustomType.Parameter("targetValue") Double targetValue) {
         this.disableScaleIn = disableScaleIn;
         this.scaleInCooldown = scaleInCooldown;
         this.scaleOutCooldown = scaleOutCooldown;

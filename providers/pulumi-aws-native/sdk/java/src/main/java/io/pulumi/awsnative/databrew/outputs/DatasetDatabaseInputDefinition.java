@@ -29,12 +29,12 @@ public final class DatasetDatabaseInputDefinition {
     private final @Nullable String queryString;
     private final @Nullable DatasetS3Location tempDirectory;
 
-    @OutputCustomType.Constructor({"databaseTableName","glueConnectionName","queryString","tempDirectory"})
+    @OutputCustomType.Constructor
     private DatasetDatabaseInputDefinition(
-        @Nullable String databaseTableName,
-        String glueConnectionName,
-        @Nullable String queryString,
-        @Nullable DatasetS3Location tempDirectory) {
+        @OutputCustomType.Parameter("databaseTableName") @Nullable String databaseTableName,
+        @OutputCustomType.Parameter("glueConnectionName") String glueConnectionName,
+        @OutputCustomType.Parameter("queryString") @Nullable String queryString,
+        @OutputCustomType.Parameter("tempDirectory") @Nullable DatasetS3Location tempDirectory) {
         this.databaseTableName = databaseTableName;
         this.glueConnectionName = glueConnectionName;
         this.queryString = queryString;

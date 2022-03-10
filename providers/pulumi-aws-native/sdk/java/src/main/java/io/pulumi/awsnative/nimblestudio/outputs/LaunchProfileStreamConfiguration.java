@@ -53,14 +53,14 @@ public final class LaunchProfileStreamConfiguration {
      */
     private final List<String> streamingImageIds;
 
-    @OutputCustomType.Constructor({"clipboardMode","ec2InstanceTypes","maxSessionLengthInMinutes","maxStoppedSessionLengthInMinutes","sessionStorage","streamingImageIds"})
+    @OutputCustomType.Constructor
     private LaunchProfileStreamConfiguration(
-        LaunchProfileStreamingClipboardMode clipboardMode,
-        List<LaunchProfileStreamingInstanceType> ec2InstanceTypes,
-        @Nullable Double maxSessionLengthInMinutes,
-        @Nullable Double maxStoppedSessionLengthInMinutes,
-        @Nullable LaunchProfileStreamConfigurationSessionStorage sessionStorage,
-        List<String> streamingImageIds) {
+        @OutputCustomType.Parameter("clipboardMode") LaunchProfileStreamingClipboardMode clipboardMode,
+        @OutputCustomType.Parameter("ec2InstanceTypes") List<LaunchProfileStreamingInstanceType> ec2InstanceTypes,
+        @OutputCustomType.Parameter("maxSessionLengthInMinutes") @Nullable Double maxSessionLengthInMinutes,
+        @OutputCustomType.Parameter("maxStoppedSessionLengthInMinutes") @Nullable Double maxStoppedSessionLengthInMinutes,
+        @OutputCustomType.Parameter("sessionStorage") @Nullable LaunchProfileStreamConfigurationSessionStorage sessionStorage,
+        @OutputCustomType.Parameter("streamingImageIds") List<String> streamingImageIds) {
         this.clipboardMode = clipboardMode;
         this.ec2InstanceTypes = ec2InstanceTypes;
         this.maxSessionLengthInMinutes = maxSessionLengthInMinutes;

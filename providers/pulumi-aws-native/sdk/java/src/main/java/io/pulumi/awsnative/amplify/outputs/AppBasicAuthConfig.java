@@ -16,11 +16,11 @@ public final class AppBasicAuthConfig {
     private final @Nullable String password;
     private final @Nullable String username;
 
-    @OutputCustomType.Constructor({"enableBasicAuth","password","username"})
+    @OutputCustomType.Constructor
     private AppBasicAuthConfig(
-        @Nullable Boolean enableBasicAuth,
-        @Nullable String password,
-        @Nullable String username) {
+        @OutputCustomType.Parameter("enableBasicAuth") @Nullable Boolean enableBasicAuth,
+        @OutputCustomType.Parameter("password") @Nullable String password,
+        @OutputCustomType.Parameter("username") @Nullable String username) {
         this.enableBasicAuth = enableBasicAuth;
         this.password = password;
         this.username = username;

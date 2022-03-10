@@ -53,16 +53,16 @@ public final class GetTransitGatewayMulticastGroupSourceResult {
      */
     private final @Nullable String transitGatewayAttachmentId;
 
-    @OutputCustomType.Constructor({"groupMember","groupSource","memberType","resourceId","resourceType","sourceType","subnetId","transitGatewayAttachmentId"})
+    @OutputCustomType.Constructor
     private GetTransitGatewayMulticastGroupSourceResult(
-        @Nullable Boolean groupMember,
-        @Nullable Boolean groupSource,
-        @Nullable String memberType,
-        @Nullable String resourceId,
-        @Nullable String resourceType,
-        @Nullable String sourceType,
-        @Nullable String subnetId,
-        @Nullable String transitGatewayAttachmentId) {
+        @OutputCustomType.Parameter("groupMember") @Nullable Boolean groupMember,
+        @OutputCustomType.Parameter("groupSource") @Nullable Boolean groupSource,
+        @OutputCustomType.Parameter("memberType") @Nullable String memberType,
+        @OutputCustomType.Parameter("resourceId") @Nullable String resourceId,
+        @OutputCustomType.Parameter("resourceType") @Nullable String resourceType,
+        @OutputCustomType.Parameter("sourceType") @Nullable String sourceType,
+        @OutputCustomType.Parameter("subnetId") @Nullable String subnetId,
+        @OutputCustomType.Parameter("transitGatewayAttachmentId") @Nullable String transitGatewayAttachmentId) {
         this.groupMember = groupMember;
         this.groupSource = groupSource;
         this.memberType = memberType;

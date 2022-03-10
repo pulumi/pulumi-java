@@ -21,14 +21,14 @@ public final class JobDataCatalogOutput {
     private final @Nullable JobS3TableOutputOptions s3Options;
     private final String tableName;
 
-    @OutputCustomType.Constructor({"catalogId","databaseName","databaseOptions","overwrite","s3Options","tableName"})
+    @OutputCustomType.Constructor
     private JobDataCatalogOutput(
-        @Nullable String catalogId,
-        String databaseName,
-        @Nullable JobDatabaseTableOutputOptions databaseOptions,
-        @Nullable Boolean overwrite,
-        @Nullable JobS3TableOutputOptions s3Options,
-        String tableName) {
+        @OutputCustomType.Parameter("catalogId") @Nullable String catalogId,
+        @OutputCustomType.Parameter("databaseName") String databaseName,
+        @OutputCustomType.Parameter("databaseOptions") @Nullable JobDatabaseTableOutputOptions databaseOptions,
+        @OutputCustomType.Parameter("overwrite") @Nullable Boolean overwrite,
+        @OutputCustomType.Parameter("s3Options") @Nullable JobS3TableOutputOptions s3Options,
+        @OutputCustomType.Parameter("tableName") String tableName) {
         this.catalogId = catalogId;
         this.databaseName = databaseName;
         this.databaseOptions = databaseOptions;

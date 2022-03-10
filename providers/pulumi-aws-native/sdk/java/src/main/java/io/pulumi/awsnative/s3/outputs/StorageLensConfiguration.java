@@ -33,16 +33,16 @@ public final class StorageLensConfiguration {
      */
     private final @Nullable String storageLensArn;
 
-    @OutputCustomType.Constructor({"accountLevel","awsOrg","dataExport","exclude","id","include","isEnabled","storageLensArn"})
+    @OutputCustomType.Constructor
     private StorageLensConfiguration(
-        StorageLensAccountLevel accountLevel,
-        @Nullable StorageLensAwsOrg awsOrg,
-        @Nullable StorageLensDataExport dataExport,
-        @Nullable StorageLensBucketsAndRegions exclude,
-        String id,
-        @Nullable StorageLensBucketsAndRegions include,
-        Boolean isEnabled,
-        @Nullable String storageLensArn) {
+        @OutputCustomType.Parameter("accountLevel") StorageLensAccountLevel accountLevel,
+        @OutputCustomType.Parameter("awsOrg") @Nullable StorageLensAwsOrg awsOrg,
+        @OutputCustomType.Parameter("dataExport") @Nullable StorageLensDataExport dataExport,
+        @OutputCustomType.Parameter("exclude") @Nullable StorageLensBucketsAndRegions exclude,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("include") @Nullable StorageLensBucketsAndRegions include,
+        @OutputCustomType.Parameter("isEnabled") Boolean isEnabled,
+        @OutputCustomType.Parameter("storageLensArn") @Nullable String storageLensArn) {
         this.accountLevel = accountLevel;
         this.awsOrg = awsOrg;
         this.dataExport = dataExport;

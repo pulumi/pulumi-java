@@ -24,10 +24,10 @@ public final class ContainerRecipeInstanceConfiguration {
      */
     private final @Nullable String image;
 
-    @OutputCustomType.Constructor({"blockDeviceMappings","image"})
+    @OutputCustomType.Constructor
     private ContainerRecipeInstanceConfiguration(
-        @Nullable List<ContainerRecipeInstanceBlockDeviceMapping> blockDeviceMappings,
-        @Nullable String image) {
+        @OutputCustomType.Parameter("blockDeviceMappings") @Nullable List<ContainerRecipeInstanceBlockDeviceMapping> blockDeviceMappings,
+        @OutputCustomType.Parameter("image") @Nullable String image) {
         this.blockDeviceMappings = blockDeviceMappings;
         this.image = image;
     }

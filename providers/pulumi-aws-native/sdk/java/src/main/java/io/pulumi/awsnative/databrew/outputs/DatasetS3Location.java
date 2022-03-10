@@ -14,10 +14,10 @@ public final class DatasetS3Location {
     private final String bucket;
     private final @Nullable String key;
 
-    @OutputCustomType.Constructor({"bucket","key"})
+    @OutputCustomType.Constructor
     private DatasetS3Location(
-        String bucket,
-        @Nullable String key) {
+        @OutputCustomType.Parameter("bucket") String bucket,
+        @OutputCustomType.Parameter("key") @Nullable String key) {
         this.bucket = bucket;
         this.key = key;
     }

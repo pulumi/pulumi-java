@@ -56,16 +56,16 @@ public final class GetContactFlowModuleResult {
      */
     private final @Nullable List<ContactFlowModuleTag> tags;
 
-    @OutputCustomType.Constructor({"contactFlowModuleArn","content","description","instanceArn","name","state","status","tags"})
+    @OutputCustomType.Constructor
     private GetContactFlowModuleResult(
-        @Nullable String contactFlowModuleArn,
-        @Nullable String content,
-        @Nullable String description,
-        @Nullable String instanceArn,
-        @Nullable String name,
-        @Nullable ContactFlowModuleState state,
-        @Nullable ContactFlowModuleStatus status,
-        @Nullable List<ContactFlowModuleTag> tags) {
+        @OutputCustomType.Parameter("contactFlowModuleArn") @Nullable String contactFlowModuleArn,
+        @OutputCustomType.Parameter("content") @Nullable String content,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("instanceArn") @Nullable String instanceArn,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("state") @Nullable ContactFlowModuleState state,
+        @OutputCustomType.Parameter("status") @Nullable ContactFlowModuleStatus status,
+        @OutputCustomType.Parameter("tags") @Nullable List<ContactFlowModuleTag> tags) {
         this.contactFlowModuleArn = contactFlowModuleArn;
         this.content = content;
         this.description = description;

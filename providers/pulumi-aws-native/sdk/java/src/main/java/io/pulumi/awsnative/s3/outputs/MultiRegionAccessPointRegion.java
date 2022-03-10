@@ -11,8 +11,8 @@ import java.util.Objects;
 public final class MultiRegionAccessPointRegion {
     private final String bucket;
 
-    @OutputCustomType.Constructor({"bucket"})
-    private MultiRegionAccessPointRegion(String bucket) {
+    @OutputCustomType.Constructor
+    private MultiRegionAccessPointRegion(@OutputCustomType.Parameter("bucket") String bucket) {
         this.bucket = bucket;
     }
 

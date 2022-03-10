@@ -30,15 +30,15 @@ public final class RuleGroupRule {
     private final RuleGroupStatement statement;
     private final RuleGroupVisibilityConfig visibilityConfig;
 
-    @OutputCustomType.Constructor({"action","captchaConfig","name","priority","ruleLabels","statement","visibilityConfig"})
+    @OutputCustomType.Constructor
     private RuleGroupRule(
-        @Nullable RuleGroupRuleAction action,
-        @Nullable RuleGroupCaptchaConfig captchaConfig,
-        String name,
-        Integer priority,
-        @Nullable List<RuleGroupLabel> ruleLabels,
-        RuleGroupStatement statement,
-        RuleGroupVisibilityConfig visibilityConfig) {
+        @OutputCustomType.Parameter("action") @Nullable RuleGroupRuleAction action,
+        @OutputCustomType.Parameter("captchaConfig") @Nullable RuleGroupCaptchaConfig captchaConfig,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("priority") Integer priority,
+        @OutputCustomType.Parameter("ruleLabels") @Nullable List<RuleGroupLabel> ruleLabels,
+        @OutputCustomType.Parameter("statement") RuleGroupStatement statement,
+        @OutputCustomType.Parameter("visibilityConfig") RuleGroupVisibilityConfig visibilityConfig) {
         this.action = action;
         this.captchaConfig = captchaConfig;
         this.name = name;

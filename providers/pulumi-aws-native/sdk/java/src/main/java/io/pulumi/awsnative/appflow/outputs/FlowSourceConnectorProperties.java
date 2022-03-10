@@ -41,23 +41,23 @@ public final class FlowSourceConnectorProperties {
     private final @Nullable FlowVeevaSourceProperties veeva;
     private final @Nullable FlowZendeskSourceProperties zendesk;
 
-    @OutputCustomType.Constructor({"amplitude","datadog","dynatrace","googleAnalytics","inforNexus","marketo","s3","sAPOData","salesforce","serviceNow","singular","slack","trendmicro","veeva","zendesk"})
+    @OutputCustomType.Constructor
     private FlowSourceConnectorProperties(
-        @Nullable FlowAmplitudeSourceProperties amplitude,
-        @Nullable FlowDatadogSourceProperties datadog,
-        @Nullable FlowDynatraceSourceProperties dynatrace,
-        @Nullable FlowGoogleAnalyticsSourceProperties googleAnalytics,
-        @Nullable FlowInforNexusSourceProperties inforNexus,
-        @Nullable FlowMarketoSourceProperties marketo,
-        @Nullable FlowS3SourceProperties s3,
-        @Nullable FlowSAPODataSourceProperties sAPOData,
-        @Nullable FlowSalesforceSourceProperties salesforce,
-        @Nullable FlowServiceNowSourceProperties serviceNow,
-        @Nullable FlowSingularSourceProperties singular,
-        @Nullable FlowSlackSourceProperties slack,
-        @Nullable FlowTrendmicroSourceProperties trendmicro,
-        @Nullable FlowVeevaSourceProperties veeva,
-        @Nullable FlowZendeskSourceProperties zendesk) {
+        @OutputCustomType.Parameter("amplitude") @Nullable FlowAmplitudeSourceProperties amplitude,
+        @OutputCustomType.Parameter("datadog") @Nullable FlowDatadogSourceProperties datadog,
+        @OutputCustomType.Parameter("dynatrace") @Nullable FlowDynatraceSourceProperties dynatrace,
+        @OutputCustomType.Parameter("googleAnalytics") @Nullable FlowGoogleAnalyticsSourceProperties googleAnalytics,
+        @OutputCustomType.Parameter("inforNexus") @Nullable FlowInforNexusSourceProperties inforNexus,
+        @OutputCustomType.Parameter("marketo") @Nullable FlowMarketoSourceProperties marketo,
+        @OutputCustomType.Parameter("s3") @Nullable FlowS3SourceProperties s3,
+        @OutputCustomType.Parameter("sAPOData") @Nullable FlowSAPODataSourceProperties sAPOData,
+        @OutputCustomType.Parameter("salesforce") @Nullable FlowSalesforceSourceProperties salesforce,
+        @OutputCustomType.Parameter("serviceNow") @Nullable FlowServiceNowSourceProperties serviceNow,
+        @OutputCustomType.Parameter("singular") @Nullable FlowSingularSourceProperties singular,
+        @OutputCustomType.Parameter("slack") @Nullable FlowSlackSourceProperties slack,
+        @OutputCustomType.Parameter("trendmicro") @Nullable FlowTrendmicroSourceProperties trendmicro,
+        @OutputCustomType.Parameter("veeva") @Nullable FlowVeevaSourceProperties veeva,
+        @OutputCustomType.Parameter("zendesk") @Nullable FlowZendeskSourceProperties zendesk) {
         this.amplitude = amplitude;
         this.datadog = datadog;
         this.dynatrace = dynatrace;

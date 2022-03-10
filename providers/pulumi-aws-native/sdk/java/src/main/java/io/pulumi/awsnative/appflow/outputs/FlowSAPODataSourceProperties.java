@@ -11,8 +11,8 @@ import java.util.Objects;
 public final class FlowSAPODataSourceProperties {
     private final String objectPath;
 
-    @OutputCustomType.Constructor({"objectPath"})
-    private FlowSAPODataSourceProperties(String objectPath) {
+    @OutputCustomType.Constructor
+    private FlowSAPODataSourceProperties(@OutputCustomType.Parameter("objectPath") String objectPath) {
         this.objectPath = objectPath;
     }
 

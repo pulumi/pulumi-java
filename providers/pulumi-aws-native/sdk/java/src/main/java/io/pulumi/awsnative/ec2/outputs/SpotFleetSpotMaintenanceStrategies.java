@@ -13,8 +13,8 @@ import javax.annotation.Nullable;
 public final class SpotFleetSpotMaintenanceStrategies {
     private final @Nullable SpotFleetSpotCapacityRebalance capacityRebalance;
 
-    @OutputCustomType.Constructor({"capacityRebalance"})
-    private SpotFleetSpotMaintenanceStrategies(@Nullable SpotFleetSpotCapacityRebalance capacityRebalance) {
+    @OutputCustomType.Constructor
+    private SpotFleetSpotMaintenanceStrategies(@OutputCustomType.Parameter("capacityRebalance") @Nullable SpotFleetSpotCapacityRebalance capacityRebalance) {
         this.capacityRebalance = capacityRebalance;
     }
 

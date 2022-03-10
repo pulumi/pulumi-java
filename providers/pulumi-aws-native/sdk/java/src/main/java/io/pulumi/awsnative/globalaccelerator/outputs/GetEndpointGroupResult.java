@@ -55,17 +55,17 @@ public final class GetEndpointGroupResult {
      */
     private final @Nullable Double trafficDialPercentage;
 
-    @OutputCustomType.Constructor({"endpointConfigurations","endpointGroupArn","healthCheckIntervalSeconds","healthCheckPath","healthCheckPort","healthCheckProtocol","portOverrides","thresholdCount","trafficDialPercentage"})
+    @OutputCustomType.Constructor
     private GetEndpointGroupResult(
-        @Nullable List<EndpointGroupEndpointConfiguration> endpointConfigurations,
-        @Nullable String endpointGroupArn,
-        @Nullable Integer healthCheckIntervalSeconds,
-        @Nullable String healthCheckPath,
-        @Nullable Integer healthCheckPort,
-        @Nullable EndpointGroupHealthCheckProtocol healthCheckProtocol,
-        @Nullable List<EndpointGroupPortOverride> portOverrides,
-        @Nullable Integer thresholdCount,
-        @Nullable Double trafficDialPercentage) {
+        @OutputCustomType.Parameter("endpointConfigurations") @Nullable List<EndpointGroupEndpointConfiguration> endpointConfigurations,
+        @OutputCustomType.Parameter("endpointGroupArn") @Nullable String endpointGroupArn,
+        @OutputCustomType.Parameter("healthCheckIntervalSeconds") @Nullable Integer healthCheckIntervalSeconds,
+        @OutputCustomType.Parameter("healthCheckPath") @Nullable String healthCheckPath,
+        @OutputCustomType.Parameter("healthCheckPort") @Nullable Integer healthCheckPort,
+        @OutputCustomType.Parameter("healthCheckProtocol") @Nullable EndpointGroupHealthCheckProtocol healthCheckProtocol,
+        @OutputCustomType.Parameter("portOverrides") @Nullable List<EndpointGroupPortOverride> portOverrides,
+        @OutputCustomType.Parameter("thresholdCount") @Nullable Integer thresholdCount,
+        @OutputCustomType.Parameter("trafficDialPercentage") @Nullable Double trafficDialPercentage) {
         this.endpointConfigurations = endpointConfigurations;
         this.endpointGroupArn = endpointGroupArn;
         this.healthCheckIntervalSeconds = healthCheckIntervalSeconds;

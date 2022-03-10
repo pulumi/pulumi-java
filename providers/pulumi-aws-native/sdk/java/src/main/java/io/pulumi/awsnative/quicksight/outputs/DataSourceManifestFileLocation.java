@@ -20,10 +20,10 @@ public final class DataSourceManifestFileLocation {
      */
     private final String key;
 
-    @OutputCustomType.Constructor({"bucket","key"})
+    @OutputCustomType.Constructor
     private DataSourceManifestFileLocation(
-        String bucket,
-        String key) {
+        @OutputCustomType.Parameter("bucket") String bucket,
+        @OutputCustomType.Parameter("key") String key) {
         this.bucket = bucket;
         this.key = key;
     }

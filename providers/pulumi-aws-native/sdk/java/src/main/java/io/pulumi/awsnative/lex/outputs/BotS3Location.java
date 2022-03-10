@@ -27,11 +27,11 @@ public final class BotS3Location {
      */
     private final @Nullable String s3ObjectVersion;
 
-    @OutputCustomType.Constructor({"s3Bucket","s3ObjectKey","s3ObjectVersion"})
+    @OutputCustomType.Constructor
     private BotS3Location(
-        String s3Bucket,
-        String s3ObjectKey,
-        @Nullable String s3ObjectVersion) {
+        @OutputCustomType.Parameter("s3Bucket") String s3Bucket,
+        @OutputCustomType.Parameter("s3ObjectKey") String s3ObjectKey,
+        @OutputCustomType.Parameter("s3ObjectVersion") @Nullable String s3ObjectVersion) {
         this.s3Bucket = s3Bucket;
         this.s3ObjectKey = s3ObjectKey;
         this.s3ObjectVersion = s3ObjectVersion;

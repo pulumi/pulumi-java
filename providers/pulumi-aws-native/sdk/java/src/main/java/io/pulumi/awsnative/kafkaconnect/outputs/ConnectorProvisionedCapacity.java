@@ -22,10 +22,10 @@ public final class ConnectorProvisionedCapacity {
      */
     private final Integer workerCount;
 
-    @OutputCustomType.Constructor({"mcuCount","workerCount"})
+    @OutputCustomType.Constructor
     private ConnectorProvisionedCapacity(
-        @Nullable Integer mcuCount,
-        Integer workerCount) {
+        @OutputCustomType.Parameter("mcuCount") @Nullable Integer mcuCount,
+        @OutputCustomType.Parameter("workerCount") Integer workerCount) {
         this.mcuCount = mcuCount;
         this.workerCount = workerCount;
     }

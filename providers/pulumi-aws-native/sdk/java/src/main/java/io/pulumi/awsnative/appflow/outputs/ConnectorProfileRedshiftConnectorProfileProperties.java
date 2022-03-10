@@ -32,12 +32,12 @@ public final class ConnectorProfileRedshiftConnectorProfileProperties {
      */
     private final String roleArn;
 
-    @OutputCustomType.Constructor({"bucketName","bucketPrefix","databaseUrl","roleArn"})
+    @OutputCustomType.Constructor
     private ConnectorProfileRedshiftConnectorProfileProperties(
-        String bucketName,
-        @Nullable String bucketPrefix,
-        String databaseUrl,
-        String roleArn) {
+        @OutputCustomType.Parameter("bucketName") String bucketName,
+        @OutputCustomType.Parameter("bucketPrefix") @Nullable String bucketPrefix,
+        @OutputCustomType.Parameter("databaseUrl") String databaseUrl,
+        @OutputCustomType.Parameter("roleArn") String roleArn) {
         this.bucketName = bucketName;
         this.bucketPrefix = bucketPrefix;
         this.databaseUrl = databaseUrl;

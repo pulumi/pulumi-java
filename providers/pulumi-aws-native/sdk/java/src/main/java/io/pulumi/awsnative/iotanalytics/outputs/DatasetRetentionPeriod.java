@@ -13,10 +13,10 @@ public final class DatasetRetentionPeriod {
     private final Integer numberOfDays;
     private final Boolean unlimited;
 
-    @OutputCustomType.Constructor({"numberOfDays","unlimited"})
+    @OutputCustomType.Constructor
     private DatasetRetentionPeriod(
-        Integer numberOfDays,
-        Boolean unlimited) {
+        @OutputCustomType.Parameter("numberOfDays") Integer numberOfDays,
+        @OutputCustomType.Parameter("unlimited") Boolean unlimited) {
         this.numberOfDays = numberOfDays;
         this.unlimited = unlimited;
     }

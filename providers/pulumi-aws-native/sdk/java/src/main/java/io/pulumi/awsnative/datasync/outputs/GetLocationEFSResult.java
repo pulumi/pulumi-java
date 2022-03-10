@@ -29,11 +29,11 @@ public final class GetLocationEFSResult {
      */
     private final @Nullable List<LocationEFSTag> tags;
 
-    @OutputCustomType.Constructor({"locationArn","locationUri","tags"})
+    @OutputCustomType.Constructor
     private GetLocationEFSResult(
-        @Nullable String locationArn,
-        @Nullable String locationUri,
-        @Nullable List<LocationEFSTag> tags) {
+        @OutputCustomType.Parameter("locationArn") @Nullable String locationArn,
+        @OutputCustomType.Parameter("locationUri") @Nullable String locationUri,
+        @OutputCustomType.Parameter("tags") @Nullable List<LocationEFSTag> tags) {
         this.locationArn = locationArn;
         this.locationUri = locationUri;
         this.tags = tags;

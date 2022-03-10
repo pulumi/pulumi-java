@@ -14,10 +14,10 @@ public final class GetNotificationChannelResult {
     private final @Nullable String snsRoleName;
     private final @Nullable String snsTopicArn;
 
-    @OutputCustomType.Constructor({"snsRoleName","snsTopicArn"})
+    @OutputCustomType.Constructor
     private GetNotificationChannelResult(
-        @Nullable String snsRoleName,
-        @Nullable String snsTopicArn) {
+        @OutputCustomType.Parameter("snsRoleName") @Nullable String snsRoleName,
+        @OutputCustomType.Parameter("snsTopicArn") @Nullable String snsTopicArn) {
         this.snsRoleName = snsRoleName;
         this.snsTopicArn = snsTopicArn;
     }

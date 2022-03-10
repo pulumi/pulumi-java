@@ -21,10 +21,10 @@ public final class ApplicationSubComponentTypeConfiguration {
      */
     private final ApplicationSubComponentTypeConfigurationSubComponentType subComponentType;
 
-    @OutputCustomType.Constructor({"subComponentConfigurationDetails","subComponentType"})
+    @OutputCustomType.Constructor
     private ApplicationSubComponentTypeConfiguration(
-        ApplicationSubComponentConfigurationDetails subComponentConfigurationDetails,
-        ApplicationSubComponentTypeConfigurationSubComponentType subComponentType) {
+        @OutputCustomType.Parameter("subComponentConfigurationDetails") ApplicationSubComponentConfigurationDetails subComponentConfigurationDetails,
+        @OutputCustomType.Parameter("subComponentType") ApplicationSubComponentTypeConfigurationSubComponentType subComponentType) {
         this.subComponentConfigurationDetails = subComponentConfigurationDetails;
         this.subComponentType = subComponentType;
     }

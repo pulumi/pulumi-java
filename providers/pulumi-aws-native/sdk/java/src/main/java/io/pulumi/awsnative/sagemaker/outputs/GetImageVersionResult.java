@@ -17,12 +17,12 @@ public final class GetImageVersionResult {
     private final @Nullable String imageVersionArn;
     private final @Nullable Integer version;
 
-    @OutputCustomType.Constructor({"containerImage","imageArn","imageVersionArn","version"})
+    @OutputCustomType.Constructor
     private GetImageVersionResult(
-        @Nullable String containerImage,
-        @Nullable String imageArn,
-        @Nullable String imageVersionArn,
-        @Nullable Integer version) {
+        @OutputCustomType.Parameter("containerImage") @Nullable String containerImage,
+        @OutputCustomType.Parameter("imageArn") @Nullable String imageArn,
+        @OutputCustomType.Parameter("imageVersionArn") @Nullable String imageVersionArn,
+        @OutputCustomType.Parameter("version") @Nullable Integer version) {
         this.containerImage = containerImage;
         this.imageArn = imageArn;
         this.imageVersionArn = imageVersionArn;

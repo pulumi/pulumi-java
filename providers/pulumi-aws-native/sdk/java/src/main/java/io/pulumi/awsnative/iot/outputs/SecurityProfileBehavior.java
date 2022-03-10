@@ -32,13 +32,13 @@ public final class SecurityProfileBehavior {
      */
     private final @Nullable Boolean suppressAlerts;
 
-    @OutputCustomType.Constructor({"criteria","metric","metricDimension","name","suppressAlerts"})
+    @OutputCustomType.Constructor
     private SecurityProfileBehavior(
-        @Nullable SecurityProfileBehaviorCriteria criteria,
-        @Nullable String metric,
-        @Nullable SecurityProfileMetricDimension metricDimension,
-        String name,
-        @Nullable Boolean suppressAlerts) {
+        @OutputCustomType.Parameter("criteria") @Nullable SecurityProfileBehaviorCriteria criteria,
+        @OutputCustomType.Parameter("metric") @Nullable String metric,
+        @OutputCustomType.Parameter("metricDimension") @Nullable SecurityProfileMetricDimension metricDimension,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("suppressAlerts") @Nullable Boolean suppressAlerts) {
         this.criteria = criteria;
         this.metric = metric;
         this.metricDimension = metricDimension;

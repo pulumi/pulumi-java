@@ -19,10 +19,10 @@ public final class StorageLensPrefixLevelStorageMetrics {
     private final @Nullable Boolean isEnabled;
     private final @Nullable StorageLensSelectionCriteria selectionCriteria;
 
-    @OutputCustomType.Constructor({"isEnabled","selectionCriteria"})
+    @OutputCustomType.Constructor
     private StorageLensPrefixLevelStorageMetrics(
-        @Nullable Boolean isEnabled,
-        @Nullable StorageLensSelectionCriteria selectionCriteria) {
+        @OutputCustomType.Parameter("isEnabled") @Nullable Boolean isEnabled,
+        @OutputCustomType.Parameter("selectionCriteria") @Nullable StorageLensSelectionCriteria selectionCriteria) {
         this.isEnabled = isEnabled;
         this.selectionCriteria = selectionCriteria;
     }

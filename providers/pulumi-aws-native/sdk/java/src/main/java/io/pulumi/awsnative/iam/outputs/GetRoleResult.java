@@ -62,17 +62,17 @@ public final class GetRoleResult {
      */
     private final @Nullable List<RoleTag> tags;
 
-    @OutputCustomType.Constructor({"arn","assumeRolePolicyDocument","description","managedPolicyArns","maxSessionDuration","permissionsBoundary","policies","roleId","tags"})
+    @OutputCustomType.Constructor
     private GetRoleResult(
-        @Nullable String arn,
-        @Nullable Object assumeRolePolicyDocument,
-        @Nullable String description,
-        @Nullable List<String> managedPolicyArns,
-        @Nullable Integer maxSessionDuration,
-        @Nullable String permissionsBoundary,
-        @Nullable List<RolePolicy> policies,
-        @Nullable String roleId,
-        @Nullable List<RoleTag> tags) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("assumeRolePolicyDocument") @Nullable Object assumeRolePolicyDocument,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("managedPolicyArns") @Nullable List<String> managedPolicyArns,
+        @OutputCustomType.Parameter("maxSessionDuration") @Nullable Integer maxSessionDuration,
+        @OutputCustomType.Parameter("permissionsBoundary") @Nullable String permissionsBoundary,
+        @OutputCustomType.Parameter("policies") @Nullable List<RolePolicy> policies,
+        @OutputCustomType.Parameter("roleId") @Nullable String roleId,
+        @OutputCustomType.Parameter("tags") @Nullable List<RoleTag> tags) {
         this.arn = arn;
         this.assumeRolePolicyDocument = assumeRolePolicyDocument;
         this.description = description;

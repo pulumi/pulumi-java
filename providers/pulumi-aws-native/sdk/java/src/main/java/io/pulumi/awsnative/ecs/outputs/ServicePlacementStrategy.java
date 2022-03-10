@@ -15,10 +15,10 @@ public final class ServicePlacementStrategy {
     private final @Nullable String field;
     private final ServicePlacementStrategyType type;
 
-    @OutputCustomType.Constructor({"field","type"})
+    @OutputCustomType.Constructor
     private ServicePlacementStrategy(
-        @Nullable String field,
-        ServicePlacementStrategyType type) {
+        @OutputCustomType.Parameter("field") @Nullable String field,
+        @OutputCustomType.Parameter("type") ServicePlacementStrategyType type) {
         this.field = field;
         this.type = type;
     }

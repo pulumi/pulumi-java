@@ -18,12 +18,12 @@ public final class AppBlockScriptDetails {
     private final AppBlockS3Location scriptS3Location;
     private final Integer timeoutInSeconds;
 
-    @OutputCustomType.Constructor({"executableParameters","executablePath","scriptS3Location","timeoutInSeconds"})
+    @OutputCustomType.Constructor
     private AppBlockScriptDetails(
-        @Nullable String executableParameters,
-        String executablePath,
-        AppBlockS3Location scriptS3Location,
-        Integer timeoutInSeconds) {
+        @OutputCustomType.Parameter("executableParameters") @Nullable String executableParameters,
+        @OutputCustomType.Parameter("executablePath") String executablePath,
+        @OutputCustomType.Parameter("scriptS3Location") AppBlockS3Location scriptS3Location,
+        @OutputCustomType.Parameter("timeoutInSeconds") Integer timeoutInSeconds) {
         this.executableParameters = executableParameters;
         this.executablePath = executablePath;
         this.scriptS3Location = scriptS3Location;

@@ -33,12 +33,12 @@ public final class GetContactChannelResult {
      */
     private final @Nullable Boolean deferActivation;
 
-    @OutputCustomType.Constructor({"arn","channelAddress","channelName","deferActivation"})
+    @OutputCustomType.Constructor
     private GetContactChannelResult(
-        @Nullable String arn,
-        @Nullable String channelAddress,
-        @Nullable String channelName,
-        @Nullable Boolean deferActivation) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("channelAddress") @Nullable String channelAddress,
+        @OutputCustomType.Parameter("channelName") @Nullable String channelName,
+        @OutputCustomType.Parameter("deferActivation") @Nullable Boolean deferActivation) {
         this.arn = arn;
         this.channelAddress = channelAddress;
         this.channelName = channelName;

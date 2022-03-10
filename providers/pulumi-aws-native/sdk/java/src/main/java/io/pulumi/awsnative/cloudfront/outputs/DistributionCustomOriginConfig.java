@@ -20,14 +20,14 @@ public final class DistributionCustomOriginConfig {
     private final @Nullable Integer originReadTimeout;
     private final @Nullable List<String> originSSLProtocols;
 
-    @OutputCustomType.Constructor({"hTTPPort","hTTPSPort","originKeepaliveTimeout","originProtocolPolicy","originReadTimeout","originSSLProtocols"})
+    @OutputCustomType.Constructor
     private DistributionCustomOriginConfig(
-        @Nullable Integer hTTPPort,
-        @Nullable Integer hTTPSPort,
-        @Nullable Integer originKeepaliveTimeout,
-        String originProtocolPolicy,
-        @Nullable Integer originReadTimeout,
-        @Nullable List<String> originSSLProtocols) {
+        @OutputCustomType.Parameter("hTTPPort") @Nullable Integer hTTPPort,
+        @OutputCustomType.Parameter("hTTPSPort") @Nullable Integer hTTPSPort,
+        @OutputCustomType.Parameter("originKeepaliveTimeout") @Nullable Integer originKeepaliveTimeout,
+        @OutputCustomType.Parameter("originProtocolPolicy") String originProtocolPolicy,
+        @OutputCustomType.Parameter("originReadTimeout") @Nullable Integer originReadTimeout,
+        @OutputCustomType.Parameter("originSSLProtocols") @Nullable List<String> originSSLProtocols) {
         this.hTTPPort = hTTPPort;
         this.hTTPSPort = hTTPSPort;
         this.originKeepaliveTimeout = originKeepaliveTimeout;

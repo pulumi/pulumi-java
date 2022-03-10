@@ -19,10 +19,10 @@ public final class StudioEncryptionConfiguration {
     private final @Nullable String keyArn;
     private final StudioEncryptionConfigurationKeyType keyType;
 
-    @OutputCustomType.Constructor({"keyArn","keyType"})
+    @OutputCustomType.Constructor
     private StudioEncryptionConfiguration(
-        @Nullable String keyArn,
-        StudioEncryptionConfigurationKeyType keyType) {
+        @OutputCustomType.Parameter("keyArn") @Nullable String keyArn,
+        @OutputCustomType.Parameter("keyType") StudioEncryptionConfigurationKeyType keyType) {
         this.keyArn = keyArn;
         this.keyType = keyType;
     }

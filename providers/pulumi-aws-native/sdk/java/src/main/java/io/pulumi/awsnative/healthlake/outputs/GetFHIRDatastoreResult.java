@@ -22,14 +22,14 @@ public final class GetFHIRDatastoreResult {
     private final @Nullable FHIRDatastoreDatastoreStatus datastoreStatus;
     private final @Nullable List<FHIRDatastoreTag> tags;
 
-    @OutputCustomType.Constructor({"createdAt","datastoreArn","datastoreEndpoint","datastoreId","datastoreStatus","tags"})
+    @OutputCustomType.Constructor
     private GetFHIRDatastoreResult(
-        @Nullable FHIRDatastoreCreatedAt createdAt,
-        @Nullable String datastoreArn,
-        @Nullable String datastoreEndpoint,
-        @Nullable String datastoreId,
-        @Nullable FHIRDatastoreDatastoreStatus datastoreStatus,
-        @Nullable List<FHIRDatastoreTag> tags) {
+        @OutputCustomType.Parameter("createdAt") @Nullable FHIRDatastoreCreatedAt createdAt,
+        @OutputCustomType.Parameter("datastoreArn") @Nullable String datastoreArn,
+        @OutputCustomType.Parameter("datastoreEndpoint") @Nullable String datastoreEndpoint,
+        @OutputCustomType.Parameter("datastoreId") @Nullable String datastoreId,
+        @OutputCustomType.Parameter("datastoreStatus") @Nullable FHIRDatastoreDatastoreStatus datastoreStatus,
+        @OutputCustomType.Parameter("tags") @Nullable List<FHIRDatastoreTag> tags) {
         this.createdAt = createdAt;
         this.datastoreArn = datastoreArn;
         this.datastoreEndpoint = datastoreEndpoint;

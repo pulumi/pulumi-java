@@ -25,17 +25,17 @@ public final class GetNotificationRuleResult {
     private final @Nullable String targetAddress;
     private final @Nullable List<NotificationRuleTarget> targets;
 
-    @OutputCustomType.Constructor({"arn","createdBy","detailType","eventTypeId","eventTypeIds","name","status","targetAddress","targets"})
+    @OutputCustomType.Constructor
     private GetNotificationRuleResult(
-        @Nullable String arn,
-        @Nullable String createdBy,
-        @Nullable NotificationRuleDetailType detailType,
-        @Nullable String eventTypeId,
-        @Nullable List<String> eventTypeIds,
-        @Nullable String name,
-        @Nullable NotificationRuleStatus status,
-        @Nullable String targetAddress,
-        @Nullable List<NotificationRuleTarget> targets) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("createdBy") @Nullable String createdBy,
+        @OutputCustomType.Parameter("detailType") @Nullable NotificationRuleDetailType detailType,
+        @OutputCustomType.Parameter("eventTypeId") @Nullable String eventTypeId,
+        @OutputCustomType.Parameter("eventTypeIds") @Nullable List<String> eventTypeIds,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("status") @Nullable NotificationRuleStatus status,
+        @OutputCustomType.Parameter("targetAddress") @Nullable String targetAddress,
+        @OutputCustomType.Parameter("targets") @Nullable List<NotificationRuleTarget> targets) {
         this.arn = arn;
         this.createdBy = createdBy;
         this.detailType = detailType;

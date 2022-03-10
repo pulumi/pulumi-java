@@ -24,15 +24,15 @@ public final class ResponseHeadersPolicyCorsConfig {
     private final @Nullable Integer accessControlMaxAgeSec;
     private final Boolean originOverride;
 
-    @OutputCustomType.Constructor({"accessControlAllowCredentials","accessControlAllowHeaders","accessControlAllowMethods","accessControlAllowOrigins","accessControlExposeHeaders","accessControlMaxAgeSec","originOverride"})
+    @OutputCustomType.Constructor
     private ResponseHeadersPolicyCorsConfig(
-        Boolean accessControlAllowCredentials,
-        ResponseHeadersPolicyAccessControlAllowHeaders accessControlAllowHeaders,
-        ResponseHeadersPolicyAccessControlAllowMethods accessControlAllowMethods,
-        ResponseHeadersPolicyAccessControlAllowOrigins accessControlAllowOrigins,
-        @Nullable ResponseHeadersPolicyAccessControlExposeHeaders accessControlExposeHeaders,
-        @Nullable Integer accessControlMaxAgeSec,
-        Boolean originOverride) {
+        @OutputCustomType.Parameter("accessControlAllowCredentials") Boolean accessControlAllowCredentials,
+        @OutputCustomType.Parameter("accessControlAllowHeaders") ResponseHeadersPolicyAccessControlAllowHeaders accessControlAllowHeaders,
+        @OutputCustomType.Parameter("accessControlAllowMethods") ResponseHeadersPolicyAccessControlAllowMethods accessControlAllowMethods,
+        @OutputCustomType.Parameter("accessControlAllowOrigins") ResponseHeadersPolicyAccessControlAllowOrigins accessControlAllowOrigins,
+        @OutputCustomType.Parameter("accessControlExposeHeaders") @Nullable ResponseHeadersPolicyAccessControlExposeHeaders accessControlExposeHeaders,
+        @OutputCustomType.Parameter("accessControlMaxAgeSec") @Nullable Integer accessControlMaxAgeSec,
+        @OutputCustomType.Parameter("originOverride") Boolean originOverride) {
         this.accessControlAllowCredentials = accessControlAllowCredentials;
         this.accessControlAllowHeaders = accessControlAllowHeaders;
         this.accessControlAllowMethods = accessControlAllowMethods;

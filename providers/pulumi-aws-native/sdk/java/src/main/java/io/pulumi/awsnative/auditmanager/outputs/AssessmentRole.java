@@ -15,10 +15,10 @@ public final class AssessmentRole {
     private final @Nullable String roleArn;
     private final @Nullable AssessmentRoleType roleType;
 
-    @OutputCustomType.Constructor({"roleArn","roleType"})
+    @OutputCustomType.Constructor
     private AssessmentRole(
-        @Nullable String roleArn,
-        @Nullable AssessmentRoleType roleType) {
+        @OutputCustomType.Parameter("roleArn") @Nullable String roleArn,
+        @OutputCustomType.Parameter("roleType") @Nullable AssessmentRoleType roleType) {
         this.roleArn = roleArn;
         this.roleType = roleType;
     }

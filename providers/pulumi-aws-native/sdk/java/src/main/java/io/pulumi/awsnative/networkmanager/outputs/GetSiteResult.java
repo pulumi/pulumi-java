@@ -40,13 +40,13 @@ public final class GetSiteResult {
      */
     private final @Nullable List<SiteTag> tags;
 
-    @OutputCustomType.Constructor({"description","location","siteArn","siteId","tags"})
+    @OutputCustomType.Constructor
     private GetSiteResult(
-        @Nullable String description,
-        @Nullable SiteLocation location,
-        @Nullable String siteArn,
-        @Nullable String siteId,
-        @Nullable List<SiteTag> tags) {
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("location") @Nullable SiteLocation location,
+        @OutputCustomType.Parameter("siteArn") @Nullable String siteArn,
+        @OutputCustomType.Parameter("siteId") @Nullable String siteId,
+        @OutputCustomType.Parameter("tags") @Nullable List<SiteTag> tags) {
         this.description = description;
         this.location = location;
         this.siteArn = siteArn;

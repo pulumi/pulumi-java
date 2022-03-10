@@ -20,10 +20,10 @@ public final class HealthCheckAlarmIdentifier {
      */
     private final String region;
 
-    @OutputCustomType.Constructor({"name","region"})
+    @OutputCustomType.Constructor
     private HealthCheckAlarmIdentifier(
-        String name,
-        String region) {
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("region") String region) {
         this.name = name;
         this.region = region;
     }

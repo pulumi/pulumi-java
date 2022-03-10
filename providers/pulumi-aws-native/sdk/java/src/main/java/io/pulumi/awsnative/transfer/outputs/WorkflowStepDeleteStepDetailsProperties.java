@@ -17,8 +17,8 @@ public final class WorkflowStepDeleteStepDetailsProperties {
      */
     private final @Nullable String name;
 
-    @OutputCustomType.Constructor({"name"})
-    private WorkflowStepDeleteStepDetailsProperties(@Nullable String name) {
+    @OutputCustomType.Constructor
+    private WorkflowStepDeleteStepDetailsProperties(@OutputCustomType.Parameter("name") @Nullable String name) {
         this.name = name;
     }
 

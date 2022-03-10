@@ -11,8 +11,8 @@ import java.util.Objects;
 public final class WebACLLabel {
     private final String name;
 
-    @OutputCustomType.Constructor({"name"})
-    private WebACLLabel(String name) {
+    @OutputCustomType.Constructor
+    private WebACLLabel(@OutputCustomType.Parameter("name") String name) {
         this.name = name;
     }
 

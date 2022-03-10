@@ -19,12 +19,12 @@ public final class GetDistributionResult {
     private final @Nullable String id;
     private final @Nullable List<DistributionTag> tags;
 
-    @OutputCustomType.Constructor({"distributionConfig","domainName","id","tags"})
+    @OutputCustomType.Constructor
     private GetDistributionResult(
-        @Nullable DistributionConfig distributionConfig,
-        @Nullable String domainName,
-        @Nullable String id,
-        @Nullable List<DistributionTag> tags) {
+        @OutputCustomType.Parameter("distributionConfig") @Nullable DistributionConfig distributionConfig,
+        @OutputCustomType.Parameter("domainName") @Nullable String domainName,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("tags") @Nullable List<DistributionTag> tags) {
         this.distributionConfig = distributionConfig;
         this.domainName = domainName;
         this.id = id;

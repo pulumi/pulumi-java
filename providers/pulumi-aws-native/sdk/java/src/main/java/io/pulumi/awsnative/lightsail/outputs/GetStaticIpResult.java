@@ -29,12 +29,12 @@ public final class GetStaticIpResult {
     private final @Nullable Boolean isAttached;
     private final @Nullable String staticIpArn;
 
-    @OutputCustomType.Constructor({"attachedTo","ipAddress","isAttached","staticIpArn"})
+    @OutputCustomType.Constructor
     private GetStaticIpResult(
-        @Nullable String attachedTo,
-        @Nullable String ipAddress,
-        @Nullable Boolean isAttached,
-        @Nullable String staticIpArn) {
+        @OutputCustomType.Parameter("attachedTo") @Nullable String attachedTo,
+        @OutputCustomType.Parameter("ipAddress") @Nullable String ipAddress,
+        @OutputCustomType.Parameter("isAttached") @Nullable Boolean isAttached,
+        @OutputCustomType.Parameter("staticIpArn") @Nullable String staticIpArn) {
         this.attachedTo = attachedTo;
         this.ipAddress = ipAddress;
         this.isAttached = isAttached;

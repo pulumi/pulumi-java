@@ -27,11 +27,11 @@ public final class BotGrammarSlotTypeSource {
      */
     private final String s3ObjectKey;
 
-    @OutputCustomType.Constructor({"kmsKeyArn","s3BucketName","s3ObjectKey"})
+    @OutputCustomType.Constructor
     private BotGrammarSlotTypeSource(
-        @Nullable String kmsKeyArn,
-        String s3BucketName,
-        String s3ObjectKey) {
+        @OutputCustomType.Parameter("kmsKeyArn") @Nullable String kmsKeyArn,
+        @OutputCustomType.Parameter("s3BucketName") String s3BucketName,
+        @OutputCustomType.Parameter("s3ObjectKey") String s3ObjectKey) {
         this.kmsKeyArn = kmsKeyArn;
         this.s3BucketName = s3BucketName;
         this.s3ObjectKey = s3ObjectKey;

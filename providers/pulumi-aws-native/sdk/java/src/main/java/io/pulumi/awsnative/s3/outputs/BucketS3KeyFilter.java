@@ -12,8 +12,8 @@ import java.util.Objects;
 public final class BucketS3KeyFilter {
     private final List<BucketFilterRule> rules;
 
-    @OutputCustomType.Constructor({"rules"})
-    private BucketS3KeyFilter(List<BucketFilterRule> rules) {
+    @OutputCustomType.Constructor
+    private BucketS3KeyFilter(@OutputCustomType.Parameter("rules") List<BucketFilterRule> rules) {
         this.rules = rules;
     }
 

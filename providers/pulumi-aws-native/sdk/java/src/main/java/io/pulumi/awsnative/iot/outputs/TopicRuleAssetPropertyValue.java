@@ -17,11 +17,11 @@ public final class TopicRuleAssetPropertyValue {
     private final TopicRuleAssetPropertyTimestamp timestamp;
     private final TopicRuleAssetPropertyVariant value;
 
-    @OutputCustomType.Constructor({"quality","timestamp","value"})
+    @OutputCustomType.Constructor
     private TopicRuleAssetPropertyValue(
-        @Nullable String quality,
-        TopicRuleAssetPropertyTimestamp timestamp,
-        TopicRuleAssetPropertyVariant value) {
+        @OutputCustomType.Parameter("quality") @Nullable String quality,
+        @OutputCustomType.Parameter("timestamp") TopicRuleAssetPropertyTimestamp timestamp,
+        @OutputCustomType.Parameter("value") TopicRuleAssetPropertyVariant value) {
         this.quality = quality;
         this.timestamp = timestamp;
         this.value = value;

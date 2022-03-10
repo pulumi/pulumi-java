@@ -35,14 +35,14 @@ public final class GetCostCategoryResult {
      */
     private final @Nullable String splitChargeRules;
 
-    @OutputCustomType.Constructor({"arn","defaultValue","effectiveStart","ruleVersion","rules","splitChargeRules"})
+    @OutputCustomType.Constructor
     private GetCostCategoryResult(
-        @Nullable String arn,
-        @Nullable String defaultValue,
-        @Nullable String effectiveStart,
-        @Nullable CostCategoryRuleVersion ruleVersion,
-        @Nullable String rules,
-        @Nullable String splitChargeRules) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("defaultValue") @Nullable String defaultValue,
+        @OutputCustomType.Parameter("effectiveStart") @Nullable String effectiveStart,
+        @OutputCustomType.Parameter("ruleVersion") @Nullable CostCategoryRuleVersion ruleVersion,
+        @OutputCustomType.Parameter("rules") @Nullable String rules,
+        @OutputCustomType.Parameter("splitChargeRules") @Nullable String splitChargeRules) {
         this.arn = arn;
         this.defaultValue = defaultValue;
         this.effectiveStart = effectiveStart;

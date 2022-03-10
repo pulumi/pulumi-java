@@ -90,23 +90,23 @@ public final class FlowSource {
      */
     private final @Nullable String whitelistCidr;
 
-    @OutputCustomType.Constructor({"decryption","description","entitlementArn","ingestIp","ingestPort","maxBitrate","maxLatency","minLatency","name","protocol","sourceArn","sourceIngestPort","streamId","vpcInterfaceName","whitelistCidr"})
+    @OutputCustomType.Constructor
     private FlowSource(
-        @Nullable FlowEncryption decryption,
-        @Nullable String description,
-        @Nullable String entitlementArn,
-        @Nullable String ingestIp,
-        @Nullable Integer ingestPort,
-        @Nullable Integer maxBitrate,
-        @Nullable Integer maxLatency,
-        @Nullable Integer minLatency,
-        @Nullable String name,
-        @Nullable FlowSourceProtocol protocol,
-        @Nullable String sourceArn,
-        @Nullable String sourceIngestPort,
-        @Nullable String streamId,
-        @Nullable String vpcInterfaceName,
-        @Nullable String whitelistCidr) {
+        @OutputCustomType.Parameter("decryption") @Nullable FlowEncryption decryption,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("entitlementArn") @Nullable String entitlementArn,
+        @OutputCustomType.Parameter("ingestIp") @Nullable String ingestIp,
+        @OutputCustomType.Parameter("ingestPort") @Nullable Integer ingestPort,
+        @OutputCustomType.Parameter("maxBitrate") @Nullable Integer maxBitrate,
+        @OutputCustomType.Parameter("maxLatency") @Nullable Integer maxLatency,
+        @OutputCustomType.Parameter("minLatency") @Nullable Integer minLatency,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("protocol") @Nullable FlowSourceProtocol protocol,
+        @OutputCustomType.Parameter("sourceArn") @Nullable String sourceArn,
+        @OutputCustomType.Parameter("sourceIngestPort") @Nullable String sourceIngestPort,
+        @OutputCustomType.Parameter("streamId") @Nullable String streamId,
+        @OutputCustomType.Parameter("vpcInterfaceName") @Nullable String vpcInterfaceName,
+        @OutputCustomType.Parameter("whitelistCidr") @Nullable String whitelistCidr) {
         this.decryption = decryption;
         this.description = description;
         this.entitlementArn = entitlementArn;

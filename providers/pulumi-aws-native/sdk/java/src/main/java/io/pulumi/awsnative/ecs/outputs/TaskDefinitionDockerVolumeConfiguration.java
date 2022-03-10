@@ -19,13 +19,13 @@ public final class TaskDefinitionDockerVolumeConfiguration {
     private final @Nullable Object labels;
     private final @Nullable String scope;
 
-    @OutputCustomType.Constructor({"autoprovision","driver","driverOpts","labels","scope"})
+    @OutputCustomType.Constructor
     private TaskDefinitionDockerVolumeConfiguration(
-        @Nullable Boolean autoprovision,
-        @Nullable String driver,
-        @Nullable Object driverOpts,
-        @Nullable Object labels,
-        @Nullable String scope) {
+        @OutputCustomType.Parameter("autoprovision") @Nullable Boolean autoprovision,
+        @OutputCustomType.Parameter("driver") @Nullable String driver,
+        @OutputCustomType.Parameter("driverOpts") @Nullable Object driverOpts,
+        @OutputCustomType.Parameter("labels") @Nullable Object labels,
+        @OutputCustomType.Parameter("scope") @Nullable String scope) {
         this.autoprovision = autoprovision;
         this.driver = driver;
         this.driverOpts = driverOpts;

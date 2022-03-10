@@ -15,10 +15,10 @@ public final class ConfigUplinkEchoConfig {
     private final @Nullable String antennaUplinkConfigArn;
     private final @Nullable Boolean enabled;
 
-    @OutputCustomType.Constructor({"antennaUplinkConfigArn","enabled"})
+    @OutputCustomType.Constructor
     private ConfigUplinkEchoConfig(
-        @Nullable String antennaUplinkConfigArn,
-        @Nullable Boolean enabled) {
+        @OutputCustomType.Parameter("antennaUplinkConfigArn") @Nullable String antennaUplinkConfigArn,
+        @OutputCustomType.Parameter("enabled") @Nullable Boolean enabled) {
         this.antennaUplinkConfigArn = antennaUplinkConfigArn;
         this.enabled = enabled;
     }

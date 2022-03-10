@@ -17,8 +17,8 @@ public final class GetSchemaVersionResult {
      */
     private final @Nullable String versionId;
 
-    @OutputCustomType.Constructor({"versionId"})
-    private GetSchemaVersionResult(@Nullable String versionId) {
+    @OutputCustomType.Constructor
+    private GetSchemaVersionResult(@OutputCustomType.Parameter("versionId") @Nullable String versionId) {
         this.versionId = versionId;
     }
 

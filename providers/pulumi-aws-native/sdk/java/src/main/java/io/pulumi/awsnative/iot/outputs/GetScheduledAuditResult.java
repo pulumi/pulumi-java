@@ -46,14 +46,14 @@ public final class GetScheduledAuditResult {
      */
     private final @Nullable List<String> targetCheckNames;
 
-    @OutputCustomType.Constructor({"dayOfMonth","dayOfWeek","frequency","scheduledAuditArn","tags","targetCheckNames"})
+    @OutputCustomType.Constructor
     private GetScheduledAuditResult(
-        @Nullable String dayOfMonth,
-        @Nullable ScheduledAuditDayOfWeek dayOfWeek,
-        @Nullable ScheduledAuditFrequency frequency,
-        @Nullable String scheduledAuditArn,
-        @Nullable List<ScheduledAuditTag> tags,
-        @Nullable List<String> targetCheckNames) {
+        @OutputCustomType.Parameter("dayOfMonth") @Nullable String dayOfMonth,
+        @OutputCustomType.Parameter("dayOfWeek") @Nullable ScheduledAuditDayOfWeek dayOfWeek,
+        @OutputCustomType.Parameter("frequency") @Nullable ScheduledAuditFrequency frequency,
+        @OutputCustomType.Parameter("scheduledAuditArn") @Nullable String scheduledAuditArn,
+        @OutputCustomType.Parameter("tags") @Nullable List<ScheduledAuditTag> tags,
+        @OutputCustomType.Parameter("targetCheckNames") @Nullable List<String> targetCheckNames) {
         this.dayOfMonth = dayOfMonth;
         this.dayOfWeek = dayOfWeek;
         this.frequency = frequency;

@@ -14,10 +14,10 @@ public final class GetDomainNameApiAssociationResult {
     private final @Nullable String apiAssociationIdentifier;
     private final @Nullable String apiId;
 
-    @OutputCustomType.Constructor({"apiAssociationIdentifier","apiId"})
+    @OutputCustomType.Constructor
     private GetDomainNameApiAssociationResult(
-        @Nullable String apiAssociationIdentifier,
-        @Nullable String apiId) {
+        @OutputCustomType.Parameter("apiAssociationIdentifier") @Nullable String apiAssociationIdentifier,
+        @OutputCustomType.Parameter("apiId") @Nullable String apiId) {
         this.apiAssociationIdentifier = apiAssociationIdentifier;
         this.apiId = apiId;
     }

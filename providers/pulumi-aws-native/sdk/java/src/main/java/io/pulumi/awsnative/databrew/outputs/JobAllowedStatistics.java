@@ -12,8 +12,8 @@ import java.util.Objects;
 public final class JobAllowedStatistics {
     private final List<String> statistics;
 
-    @OutputCustomType.Constructor({"statistics"})
-    private JobAllowedStatistics(List<String> statistics) {
+    @OutputCustomType.Constructor
+    private JobAllowedStatistics(@OutputCustomType.Parameter("statistics") List<String> statistics) {
         this.statistics = statistics;
     }
 

@@ -31,19 +31,19 @@ public final class GetGlobalTableResult {
     private final @Nullable GlobalTableTimeToLiveSpecification timeToLiveSpecification;
     private final @Nullable GlobalTableWriteProvisionedThroughputSettings writeProvisionedThroughputSettings;
 
-    @OutputCustomType.Constructor({"arn","attributeDefinitions","billingMode","globalSecondaryIndexes","replicas","sSESpecification","streamArn","streamSpecification","tableId","timeToLiveSpecification","writeProvisionedThroughputSettings"})
+    @OutputCustomType.Constructor
     private GetGlobalTableResult(
-        @Nullable String arn,
-        @Nullable List<GlobalTableAttributeDefinition> attributeDefinitions,
-        @Nullable String billingMode,
-        @Nullable List<GlobalTableGlobalSecondaryIndex> globalSecondaryIndexes,
-        @Nullable List<GlobalTableReplicaSpecification> replicas,
-        @Nullable GlobalTableSSESpecification sSESpecification,
-        @Nullable String streamArn,
-        @Nullable GlobalTableStreamSpecification streamSpecification,
-        @Nullable String tableId,
-        @Nullable GlobalTableTimeToLiveSpecification timeToLiveSpecification,
-        @Nullable GlobalTableWriteProvisionedThroughputSettings writeProvisionedThroughputSettings) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("attributeDefinitions") @Nullable List<GlobalTableAttributeDefinition> attributeDefinitions,
+        @OutputCustomType.Parameter("billingMode") @Nullable String billingMode,
+        @OutputCustomType.Parameter("globalSecondaryIndexes") @Nullable List<GlobalTableGlobalSecondaryIndex> globalSecondaryIndexes,
+        @OutputCustomType.Parameter("replicas") @Nullable List<GlobalTableReplicaSpecification> replicas,
+        @OutputCustomType.Parameter("sSESpecification") @Nullable GlobalTableSSESpecification sSESpecification,
+        @OutputCustomType.Parameter("streamArn") @Nullable String streamArn,
+        @OutputCustomType.Parameter("streamSpecification") @Nullable GlobalTableStreamSpecification streamSpecification,
+        @OutputCustomType.Parameter("tableId") @Nullable String tableId,
+        @OutputCustomType.Parameter("timeToLiveSpecification") @Nullable GlobalTableTimeToLiveSpecification timeToLiveSpecification,
+        @OutputCustomType.Parameter("writeProvisionedThroughputSettings") @Nullable GlobalTableWriteProvisionedThroughputSettings writeProvisionedThroughputSettings) {
         this.arn = arn;
         this.attributeDefinitions = attributeDefinitions;
         this.billingMode = billingMode;

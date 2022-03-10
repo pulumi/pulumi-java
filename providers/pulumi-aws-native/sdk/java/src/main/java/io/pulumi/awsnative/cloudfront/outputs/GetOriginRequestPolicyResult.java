@@ -16,11 +16,11 @@ public final class GetOriginRequestPolicyResult {
     private final @Nullable String lastModifiedTime;
     private final @Nullable OriginRequestPolicyConfig originRequestPolicyConfig;
 
-    @OutputCustomType.Constructor({"id","lastModifiedTime","originRequestPolicyConfig"})
+    @OutputCustomType.Constructor
     private GetOriginRequestPolicyResult(
-        @Nullable String id,
-        @Nullable String lastModifiedTime,
-        @Nullable OriginRequestPolicyConfig originRequestPolicyConfig) {
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("lastModifiedTime") @Nullable String lastModifiedTime,
+        @OutputCustomType.Parameter("originRequestPolicyConfig") @Nullable OriginRequestPolicyConfig originRequestPolicyConfig) {
         this.id = id;
         this.lastModifiedTime = lastModifiedTime;
         this.originRequestPolicyConfig = originRequestPolicyConfig;

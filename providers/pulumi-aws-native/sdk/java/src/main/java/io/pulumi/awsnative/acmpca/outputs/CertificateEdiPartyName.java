@@ -12,10 +12,10 @@ public final class CertificateEdiPartyName {
     private final String nameAssigner;
     private final String partyName;
 
-    @OutputCustomType.Constructor({"nameAssigner","partyName"})
+    @OutputCustomType.Constructor
     private CertificateEdiPartyName(
-        String nameAssigner,
-        String partyName) {
+        @OutputCustomType.Parameter("nameAssigner") String nameAssigner,
+        @OutputCustomType.Parameter("partyName") String partyName) {
         this.nameAssigner = nameAssigner;
         this.partyName = partyName;
     }

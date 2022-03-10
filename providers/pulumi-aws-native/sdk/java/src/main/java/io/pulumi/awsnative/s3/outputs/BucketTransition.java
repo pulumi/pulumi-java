@@ -17,11 +17,11 @@ public final class BucketTransition {
     private final @Nullable String transitionDate;
     private final @Nullable Integer transitionInDays;
 
-    @OutputCustomType.Constructor({"storageClass","transitionDate","transitionInDays"})
+    @OutputCustomType.Constructor
     private BucketTransition(
-        BucketTransitionStorageClass storageClass,
-        @Nullable String transitionDate,
-        @Nullable Integer transitionInDays) {
+        @OutputCustomType.Parameter("storageClass") BucketTransitionStorageClass storageClass,
+        @OutputCustomType.Parameter("transitionDate") @Nullable String transitionDate,
+        @OutputCustomType.Parameter("transitionInDays") @Nullable Integer transitionInDays) {
         this.storageClass = storageClass;
         this.transitionDate = transitionDate;
         this.transitionInDays = transitionInDays;

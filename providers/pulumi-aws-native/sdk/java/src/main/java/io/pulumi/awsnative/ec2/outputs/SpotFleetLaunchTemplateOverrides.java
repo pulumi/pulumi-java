@@ -20,14 +20,14 @@ public final class SpotFleetLaunchTemplateOverrides {
     private final @Nullable String subnetId;
     private final @Nullable Double weightedCapacity;
 
-    @OutputCustomType.Constructor({"availabilityZone","instanceRequirements","instanceType","spotPrice","subnetId","weightedCapacity"})
+    @OutputCustomType.Constructor
     private SpotFleetLaunchTemplateOverrides(
-        @Nullable String availabilityZone,
-        @Nullable SpotFleetInstanceRequirementsRequest instanceRequirements,
-        @Nullable String instanceType,
-        @Nullable String spotPrice,
-        @Nullable String subnetId,
-        @Nullable Double weightedCapacity) {
+        @OutputCustomType.Parameter("availabilityZone") @Nullable String availabilityZone,
+        @OutputCustomType.Parameter("instanceRequirements") @Nullable SpotFleetInstanceRequirementsRequest instanceRequirements,
+        @OutputCustomType.Parameter("instanceType") @Nullable String instanceType,
+        @OutputCustomType.Parameter("spotPrice") @Nullable String spotPrice,
+        @OutputCustomType.Parameter("subnetId") @Nullable String subnetId,
+        @OutputCustomType.Parameter("weightedCapacity") @Nullable Double weightedCapacity) {
         this.availabilityZone = availabilityZone;
         this.instanceRequirements = instanceRequirements;
         this.instanceType = instanceType;

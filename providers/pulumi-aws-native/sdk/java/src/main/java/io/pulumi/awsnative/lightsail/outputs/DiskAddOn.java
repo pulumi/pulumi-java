@@ -25,11 +25,11 @@ public final class DiskAddOn {
      */
     private final @Nullable DiskAddOnStatus status;
 
-    @OutputCustomType.Constructor({"addOnType","autoSnapshotAddOnRequest","status"})
+    @OutputCustomType.Constructor
     private DiskAddOn(
-        String addOnType,
-        @Nullable DiskAutoSnapshotAddOn autoSnapshotAddOnRequest,
-        @Nullable DiskAddOnStatus status) {
+        @OutputCustomType.Parameter("addOnType") String addOnType,
+        @OutputCustomType.Parameter("autoSnapshotAddOnRequest") @Nullable DiskAutoSnapshotAddOn autoSnapshotAddOnRequest,
+        @OutputCustomType.Parameter("status") @Nullable DiskAddOnStatus status) {
         this.addOnType = addOnType;
         this.autoSnapshotAddOnRequest = autoSnapshotAddOnRequest;
         this.status = status;

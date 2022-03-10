@@ -23,10 +23,10 @@ public final class GetAccessPointResult {
      */
     private final @Nullable Object policy;
 
-    @OutputCustomType.Constructor({"arn","policy"})
+    @OutputCustomType.Constructor
     private GetAccessPointResult(
-        @Nullable String arn,
-        @Nullable Object policy) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("policy") @Nullable Object policy) {
         this.arn = arn;
         this.policy = policy;
     }

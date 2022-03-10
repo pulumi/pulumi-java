@@ -20,13 +20,13 @@ public final class GetRuleGroupResult {
     private final @Nullable String ruleGroupId;
     private final @Nullable List<RuleGroupTag> tags;
 
-    @OutputCustomType.Constructor({"description","ruleGroup","ruleGroupArn","ruleGroupId","tags"})
+    @OutputCustomType.Constructor
     private GetRuleGroupResult(
-        @Nullable String description,
-        @Nullable RuleGroup ruleGroup,
-        @Nullable String ruleGroupArn,
-        @Nullable String ruleGroupId,
-        @Nullable List<RuleGroupTag> tags) {
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("ruleGroup") @Nullable RuleGroup ruleGroup,
+        @OutputCustomType.Parameter("ruleGroupArn") @Nullable String ruleGroupArn,
+        @OutputCustomType.Parameter("ruleGroupId") @Nullable String ruleGroupId,
+        @OutputCustomType.Parameter("tags") @Nullable List<RuleGroupTag> tags) {
         this.description = description;
         this.ruleGroup = ruleGroup;
         this.ruleGroupArn = ruleGroupArn;

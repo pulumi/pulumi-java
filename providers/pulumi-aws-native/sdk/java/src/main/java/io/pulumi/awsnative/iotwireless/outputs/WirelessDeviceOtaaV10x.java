@@ -12,10 +12,10 @@ public final class WirelessDeviceOtaaV10x {
     private final String appEui;
     private final String appKey;
 
-    @OutputCustomType.Constructor({"appEui","appKey"})
+    @OutputCustomType.Constructor
     private WirelessDeviceOtaaV10x(
-        String appEui,
-        String appKey) {
+        @OutputCustomType.Parameter("appEui") String appEui,
+        @OutputCustomType.Parameter("appKey") String appKey) {
         this.appEui = appEui;
         this.appKey = appKey;
     }

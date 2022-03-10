@@ -25,16 +25,16 @@ public final class EC2FleetSpotOptionsRequest {
     private final @Nullable Boolean singleAvailabilityZone;
     private final @Nullable Boolean singleInstanceType;
 
-    @OutputCustomType.Constructor({"allocationStrategy","instanceInterruptionBehavior","instancePoolsToUseCount","maintenanceStrategies","maxTotalPrice","minTargetCapacity","singleAvailabilityZone","singleInstanceType"})
+    @OutputCustomType.Constructor
     private EC2FleetSpotOptionsRequest(
-        @Nullable EC2FleetSpotOptionsRequestAllocationStrategy allocationStrategy,
-        @Nullable EC2FleetSpotOptionsRequestInstanceInterruptionBehavior instanceInterruptionBehavior,
-        @Nullable Integer instancePoolsToUseCount,
-        @Nullable EC2FleetMaintenanceStrategies maintenanceStrategies,
-        @Nullable String maxTotalPrice,
-        @Nullable Integer minTargetCapacity,
-        @Nullable Boolean singleAvailabilityZone,
-        @Nullable Boolean singleInstanceType) {
+        @OutputCustomType.Parameter("allocationStrategy") @Nullable EC2FleetSpotOptionsRequestAllocationStrategy allocationStrategy,
+        @OutputCustomType.Parameter("instanceInterruptionBehavior") @Nullable EC2FleetSpotOptionsRequestInstanceInterruptionBehavior instanceInterruptionBehavior,
+        @OutputCustomType.Parameter("instancePoolsToUseCount") @Nullable Integer instancePoolsToUseCount,
+        @OutputCustomType.Parameter("maintenanceStrategies") @Nullable EC2FleetMaintenanceStrategies maintenanceStrategies,
+        @OutputCustomType.Parameter("maxTotalPrice") @Nullable String maxTotalPrice,
+        @OutputCustomType.Parameter("minTargetCapacity") @Nullable Integer minTargetCapacity,
+        @OutputCustomType.Parameter("singleAvailabilityZone") @Nullable Boolean singleAvailabilityZone,
+        @OutputCustomType.Parameter("singleInstanceType") @Nullable Boolean singleInstanceType) {
         this.allocationStrategy = allocationStrategy;
         this.instanceInterruptionBehavior = instanceInterruptionBehavior;
         this.instancePoolsToUseCount = instancePoolsToUseCount;

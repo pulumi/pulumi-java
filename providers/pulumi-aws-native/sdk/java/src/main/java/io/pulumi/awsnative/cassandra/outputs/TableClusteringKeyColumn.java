@@ -15,10 +15,10 @@ public final class TableClusteringKeyColumn {
     private final TableColumn column;
     private final @Nullable TableClusteringKeyColumnOrderBy orderBy;
 
-    @OutputCustomType.Constructor({"column","orderBy"})
+    @OutputCustomType.Constructor
     private TableClusteringKeyColumn(
-        TableColumn column,
-        @Nullable TableClusteringKeyColumnOrderBy orderBy) {
+        @OutputCustomType.Parameter("column") TableColumn column,
+        @OutputCustomType.Parameter("orderBy") @Nullable TableClusteringKeyColumnOrderBy orderBy) {
         this.column = column;
         this.orderBy = orderBy;
     }

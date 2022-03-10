@@ -16,10 +16,10 @@ public final class GetActivityResult {
     private final @Nullable String arn;
     private final @Nullable List<ActivityTagsEntry> tags;
 
-    @OutputCustomType.Constructor({"arn","tags"})
+    @OutputCustomType.Constructor
     private GetActivityResult(
-        @Nullable String arn,
-        @Nullable List<ActivityTagsEntry> tags) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("tags") @Nullable List<ActivityTagsEntry> tags) {
         this.arn = arn;
         this.tags = tags;
     }

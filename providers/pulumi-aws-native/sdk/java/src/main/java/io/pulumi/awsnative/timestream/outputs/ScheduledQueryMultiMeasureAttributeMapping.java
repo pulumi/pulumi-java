@@ -16,11 +16,11 @@ public final class ScheduledQueryMultiMeasureAttributeMapping {
     private final String sourceColumn;
     private final @Nullable String targetMultiMeasureAttributeName;
 
-    @OutputCustomType.Constructor({"measureValueType","sourceColumn","targetMultiMeasureAttributeName"})
+    @OutputCustomType.Constructor
     private ScheduledQueryMultiMeasureAttributeMapping(
-        ScheduledQueryMultiMeasureAttributeMappingMeasureValueType measureValueType,
-        String sourceColumn,
-        @Nullable String targetMultiMeasureAttributeName) {
+        @OutputCustomType.Parameter("measureValueType") ScheduledQueryMultiMeasureAttributeMappingMeasureValueType measureValueType,
+        @OutputCustomType.Parameter("sourceColumn") String sourceColumn,
+        @OutputCustomType.Parameter("targetMultiMeasureAttributeName") @Nullable String targetMultiMeasureAttributeName) {
         this.measureValueType = measureValueType;
         this.sourceColumn = sourceColumn;
         this.targetMultiMeasureAttributeName = targetMultiMeasureAttributeName;

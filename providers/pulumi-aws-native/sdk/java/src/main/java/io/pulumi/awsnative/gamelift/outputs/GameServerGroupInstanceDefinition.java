@@ -14,10 +14,10 @@ public final class GameServerGroupInstanceDefinition {
     private final String instanceType;
     private final @Nullable String weightedCapacity;
 
-    @OutputCustomType.Constructor({"instanceType","weightedCapacity"})
+    @OutputCustomType.Constructor
     private GameServerGroupInstanceDefinition(
-        String instanceType,
-        @Nullable String weightedCapacity) {
+        @OutputCustomType.Parameter("instanceType") String instanceType,
+        @OutputCustomType.Parameter("weightedCapacity") @Nullable String weightedCapacity) {
         this.instanceType = instanceType;
         this.weightedCapacity = weightedCapacity;
     }

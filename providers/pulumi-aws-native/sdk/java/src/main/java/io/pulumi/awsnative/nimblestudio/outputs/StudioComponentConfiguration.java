@@ -19,12 +19,12 @@ public final class StudioComponentConfiguration {
     private final @Nullable StudioComponentLicenseServiceConfiguration licenseServiceConfiguration;
     private final @Nullable StudioComponentSharedFileSystemConfiguration sharedFileSystemConfiguration;
 
-    @OutputCustomType.Constructor({"activeDirectoryConfiguration","computeFarmConfiguration","licenseServiceConfiguration","sharedFileSystemConfiguration"})
+    @OutputCustomType.Constructor
     private StudioComponentConfiguration(
-        @Nullable StudioComponentActiveDirectoryConfiguration activeDirectoryConfiguration,
-        @Nullable StudioComponentComputeFarmConfiguration computeFarmConfiguration,
-        @Nullable StudioComponentLicenseServiceConfiguration licenseServiceConfiguration,
-        @Nullable StudioComponentSharedFileSystemConfiguration sharedFileSystemConfiguration) {
+        @OutputCustomType.Parameter("activeDirectoryConfiguration") @Nullable StudioComponentActiveDirectoryConfiguration activeDirectoryConfiguration,
+        @OutputCustomType.Parameter("computeFarmConfiguration") @Nullable StudioComponentComputeFarmConfiguration computeFarmConfiguration,
+        @OutputCustomType.Parameter("licenseServiceConfiguration") @Nullable StudioComponentLicenseServiceConfiguration licenseServiceConfiguration,
+        @OutputCustomType.Parameter("sharedFileSystemConfiguration") @Nullable StudioComponentSharedFileSystemConfiguration sharedFileSystemConfiguration) {
         this.activeDirectoryConfiguration = activeDirectoryConfiguration;
         this.computeFarmConfiguration = computeFarmConfiguration;
         this.licenseServiceConfiguration = licenseServiceConfiguration;

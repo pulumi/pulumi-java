@@ -27,17 +27,17 @@ public final class BackupPlanBackupRuleResourceType {
     private final @Nullable Double startWindowMinutes;
     private final String targetBackupVault;
 
-    @OutputCustomType.Constructor({"completionWindowMinutes","copyActions","enableContinuousBackup","lifecycle","recoveryPointTags","ruleName","scheduleExpression","startWindowMinutes","targetBackupVault"})
+    @OutputCustomType.Constructor
     private BackupPlanBackupRuleResourceType(
-        @Nullable Double completionWindowMinutes,
-        @Nullable List<BackupPlanCopyActionResourceType> copyActions,
-        @Nullable Boolean enableContinuousBackup,
-        @Nullable BackupPlanLifecycleResourceType lifecycle,
-        @Nullable Object recoveryPointTags,
-        String ruleName,
-        @Nullable String scheduleExpression,
-        @Nullable Double startWindowMinutes,
-        String targetBackupVault) {
+        @OutputCustomType.Parameter("completionWindowMinutes") @Nullable Double completionWindowMinutes,
+        @OutputCustomType.Parameter("copyActions") @Nullable List<BackupPlanCopyActionResourceType> copyActions,
+        @OutputCustomType.Parameter("enableContinuousBackup") @Nullable Boolean enableContinuousBackup,
+        @OutputCustomType.Parameter("lifecycle") @Nullable BackupPlanLifecycleResourceType lifecycle,
+        @OutputCustomType.Parameter("recoveryPointTags") @Nullable Object recoveryPointTags,
+        @OutputCustomType.Parameter("ruleName") String ruleName,
+        @OutputCustomType.Parameter("scheduleExpression") @Nullable String scheduleExpression,
+        @OutputCustomType.Parameter("startWindowMinutes") @Nullable Double startWindowMinutes,
+        @OutputCustomType.Parameter("targetBackupVault") String targetBackupVault) {
         this.completionWindowMinutes = completionWindowMinutes;
         this.copyActions = copyActions;
         this.enableContinuousBackup = enableContinuousBackup;

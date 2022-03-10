@@ -23,10 +23,10 @@ public final class FHIRDatastoreKmsEncryptionConfig {
      */
     private final @Nullable String kmsKeyId;
 
-    @OutputCustomType.Constructor({"cmkType","kmsKeyId"})
+    @OutputCustomType.Constructor
     private FHIRDatastoreKmsEncryptionConfig(
-        FHIRDatastoreKmsEncryptionConfigCmkType cmkType,
-        @Nullable String kmsKeyId) {
+        @OutputCustomType.Parameter("cmkType") FHIRDatastoreKmsEncryptionConfigCmkType cmkType,
+        @OutputCustomType.Parameter("kmsKeyId") @Nullable String kmsKeyId) {
         this.cmkType = cmkType;
         this.kmsKeyId = kmsKeyId;
     }

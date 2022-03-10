@@ -16,11 +16,11 @@ public final class TaskDefinitionUpdateWirelessGatewayTaskCreate {
     private final @Nullable String updateDataRole;
     private final @Nullable String updateDataSource;
 
-    @OutputCustomType.Constructor({"loRaWAN","updateDataRole","updateDataSource"})
+    @OutputCustomType.Constructor
     private TaskDefinitionUpdateWirelessGatewayTaskCreate(
-        @Nullable TaskDefinitionLoRaWANUpdateGatewayTaskCreate loRaWAN,
-        @Nullable String updateDataRole,
-        @Nullable String updateDataSource) {
+        @OutputCustomType.Parameter("loRaWAN") @Nullable TaskDefinitionLoRaWANUpdateGatewayTaskCreate loRaWAN,
+        @OutputCustomType.Parameter("updateDataRole") @Nullable String updateDataRole,
+        @OutputCustomType.Parameter("updateDataSource") @Nullable String updateDataSource) {
         this.loRaWAN = loRaWAN;
         this.updateDataRole = updateDataRole;
         this.updateDataSource = updateDataSource;

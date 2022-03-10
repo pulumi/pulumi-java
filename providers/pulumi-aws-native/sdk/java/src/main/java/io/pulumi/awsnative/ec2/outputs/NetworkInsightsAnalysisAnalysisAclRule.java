@@ -21,14 +21,14 @@ public final class NetworkInsightsAnalysisAnalysisAclRule {
     private final @Nullable String ruleAction;
     private final @Nullable Integer ruleNumber;
 
-    @OutputCustomType.Constructor({"cidr","egress","portRange","protocol","ruleAction","ruleNumber"})
+    @OutputCustomType.Constructor
     private NetworkInsightsAnalysisAnalysisAclRule(
-        @Nullable String cidr,
-        @Nullable Boolean egress,
-        @Nullable NetworkInsightsAnalysisPortRange portRange,
-        @Nullable String protocol,
-        @Nullable String ruleAction,
-        @Nullable Integer ruleNumber) {
+        @OutputCustomType.Parameter("cidr") @Nullable String cidr,
+        @OutputCustomType.Parameter("egress") @Nullable Boolean egress,
+        @OutputCustomType.Parameter("portRange") @Nullable NetworkInsightsAnalysisPortRange portRange,
+        @OutputCustomType.Parameter("protocol") @Nullable String protocol,
+        @OutputCustomType.Parameter("ruleAction") @Nullable String ruleAction,
+        @OutputCustomType.Parameter("ruleNumber") @Nullable Integer ruleNumber) {
         this.cidr = cidr;
         this.egress = egress;
         this.portRange = portRange;

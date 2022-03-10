@@ -15,10 +15,10 @@ public final class DomainConfigurationAuthorizerConfig {
     private final @Nullable Boolean allowAuthorizerOverride;
     private final @Nullable String defaultAuthorizerName;
 
-    @OutputCustomType.Constructor({"allowAuthorizerOverride","defaultAuthorizerName"})
+    @OutputCustomType.Constructor
     private DomainConfigurationAuthorizerConfig(
-        @Nullable Boolean allowAuthorizerOverride,
-        @Nullable String defaultAuthorizerName) {
+        @OutputCustomType.Parameter("allowAuthorizerOverride") @Nullable Boolean allowAuthorizerOverride,
+        @OutputCustomType.Parameter("defaultAuthorizerName") @Nullable String defaultAuthorizerName) {
         this.allowAuthorizerOverride = allowAuthorizerOverride;
         this.defaultAuthorizerName = defaultAuthorizerName;
     }

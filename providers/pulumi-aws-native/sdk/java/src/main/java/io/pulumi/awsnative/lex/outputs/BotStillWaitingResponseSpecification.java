@@ -23,12 +23,12 @@ public final class BotStillWaitingResponseSpecification {
     private final List<BotMessageGroup> messageGroupsList;
     private final Integer timeoutInSeconds;
 
-    @OutputCustomType.Constructor({"allowInterrupt","frequencyInSeconds","messageGroupsList","timeoutInSeconds"})
+    @OutputCustomType.Constructor
     private BotStillWaitingResponseSpecification(
-        @Nullable Boolean allowInterrupt,
-        Integer frequencyInSeconds,
-        List<BotMessageGroup> messageGroupsList,
-        Integer timeoutInSeconds) {
+        @OutputCustomType.Parameter("allowInterrupt") @Nullable Boolean allowInterrupt,
+        @OutputCustomType.Parameter("frequencyInSeconds") Integer frequencyInSeconds,
+        @OutputCustomType.Parameter("messageGroupsList") List<BotMessageGroup> messageGroupsList,
+        @OutputCustomType.Parameter("timeoutInSeconds") Integer timeoutInSeconds) {
         this.allowInterrupt = allowInterrupt;
         this.frequencyInSeconds = frequencyInSeconds;
         this.messageGroupsList = messageGroupsList;

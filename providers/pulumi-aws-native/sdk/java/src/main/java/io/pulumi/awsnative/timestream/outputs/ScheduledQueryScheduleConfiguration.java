@@ -11,8 +11,8 @@ import java.util.Objects;
 public final class ScheduledQueryScheduleConfiguration {
     private final String scheduleExpression;
 
-    @OutputCustomType.Constructor({"scheduleExpression"})
-    private ScheduledQueryScheduleConfiguration(String scheduleExpression) {
+    @OutputCustomType.Constructor
+    private ScheduledQueryScheduleConfiguration(@OutputCustomType.Parameter("scheduleExpression") String scheduleExpression) {
         this.scheduleExpression = scheduleExpression;
     }
 

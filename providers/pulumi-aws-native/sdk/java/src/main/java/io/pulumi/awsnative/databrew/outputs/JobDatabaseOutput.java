@@ -25,11 +25,11 @@ public final class JobDatabaseOutput {
      */
     private final String glueConnectionName;
 
-    @OutputCustomType.Constructor({"databaseOptions","databaseOutputMode","glueConnectionName"})
+    @OutputCustomType.Constructor
     private JobDatabaseOutput(
-        JobDatabaseTableOutputOptions databaseOptions,
-        @Nullable JobDatabaseOutputDatabaseOutputMode databaseOutputMode,
-        String glueConnectionName) {
+        @OutputCustomType.Parameter("databaseOptions") JobDatabaseTableOutputOptions databaseOptions,
+        @OutputCustomType.Parameter("databaseOutputMode") @Nullable JobDatabaseOutputDatabaseOutputMode databaseOutputMode,
+        @OutputCustomType.Parameter("glueConnectionName") String glueConnectionName) {
         this.databaseOptions = databaseOptions;
         this.databaseOutputMode = databaseOutputMode;
         this.glueConnectionName = glueConnectionName;

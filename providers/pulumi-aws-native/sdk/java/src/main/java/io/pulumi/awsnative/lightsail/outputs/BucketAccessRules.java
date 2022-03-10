@@ -23,10 +23,10 @@ public final class BucketAccessRules {
      */
     private final @Nullable String getObject;
 
-    @OutputCustomType.Constructor({"allowPublicOverrides","getObject"})
+    @OutputCustomType.Constructor
     private BucketAccessRules(
-        @Nullable Boolean allowPublicOverrides,
-        @Nullable String getObject) {
+        @OutputCustomType.Parameter("allowPublicOverrides") @Nullable Boolean allowPublicOverrides,
+        @OutputCustomType.Parameter("getObject") @Nullable String getObject) {
         this.allowPublicOverrides = allowPublicOverrides;
         this.getObject = getObject;
     }

@@ -35,10 +35,10 @@ public final class DataSourceResourcePermission {
      */
     private final String principal;
 
-    @OutputCustomType.Constructor({"actions","principal"})
+    @OutputCustomType.Constructor
     private DataSourceResourcePermission(
-        List<String> actions,
-        String principal) {
+        @OutputCustomType.Parameter("actions") List<String> actions,
+        @OutputCustomType.Parameter("principal") String principal) {
         this.actions = actions;
         this.principal = principal;
     }

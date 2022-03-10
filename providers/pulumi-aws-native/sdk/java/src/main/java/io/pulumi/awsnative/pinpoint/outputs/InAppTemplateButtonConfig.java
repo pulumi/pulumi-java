@@ -17,12 +17,12 @@ public final class InAppTemplateButtonConfig {
     private final @Nullable InAppTemplateOverrideButtonConfiguration iOS;
     private final @Nullable InAppTemplateOverrideButtonConfiguration web;
 
-    @OutputCustomType.Constructor({"android","defaultConfig","iOS","web"})
+    @OutputCustomType.Constructor
     private InAppTemplateButtonConfig(
-        @Nullable InAppTemplateOverrideButtonConfiguration android,
-        @Nullable InAppTemplateDefaultButtonConfiguration defaultConfig,
-        @Nullable InAppTemplateOverrideButtonConfiguration iOS,
-        @Nullable InAppTemplateOverrideButtonConfiguration web) {
+        @OutputCustomType.Parameter("android") @Nullable InAppTemplateOverrideButtonConfiguration android,
+        @OutputCustomType.Parameter("defaultConfig") @Nullable InAppTemplateDefaultButtonConfiguration defaultConfig,
+        @OutputCustomType.Parameter("iOS") @Nullable InAppTemplateOverrideButtonConfiguration iOS,
+        @OutputCustomType.Parameter("web") @Nullable InAppTemplateOverrideButtonConfiguration web) {
         this.android = android;
         this.defaultConfig = defaultConfig;
         this.iOS = iOS;

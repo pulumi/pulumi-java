@@ -13,8 +13,8 @@ import javax.annotation.Nullable;
 public final class RuleGroupActionDefinition {
     private final @Nullable RuleGroupPublishMetricAction publishMetricAction;
 
-    @OutputCustomType.Constructor({"publishMetricAction"})
-    private RuleGroupActionDefinition(@Nullable RuleGroupPublishMetricAction publishMetricAction) {
+    @OutputCustomType.Constructor
+    private RuleGroupActionDefinition(@OutputCustomType.Parameter("publishMetricAction") @Nullable RuleGroupPublishMetricAction publishMetricAction) {
         this.publishMetricAction = publishMetricAction;
     }
 

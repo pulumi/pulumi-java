@@ -20,16 +20,16 @@ public final class AnomalyDetectorRDSSourceConfig {
     private final String tableName;
     private final AnomalyDetectorVpcConfiguration vpcConfiguration;
 
-    @OutputCustomType.Constructor({"dBInstanceIdentifier","databaseHost","databaseName","databasePort","roleArn","secretManagerArn","tableName","vpcConfiguration"})
+    @OutputCustomType.Constructor
     private AnomalyDetectorRDSSourceConfig(
-        String dBInstanceIdentifier,
-        String databaseHost,
-        String databaseName,
-        Integer databasePort,
-        String roleArn,
-        String secretManagerArn,
-        String tableName,
-        AnomalyDetectorVpcConfiguration vpcConfiguration) {
+        @OutputCustomType.Parameter("dBInstanceIdentifier") String dBInstanceIdentifier,
+        @OutputCustomType.Parameter("databaseHost") String databaseHost,
+        @OutputCustomType.Parameter("databaseName") String databaseName,
+        @OutputCustomType.Parameter("databasePort") Integer databasePort,
+        @OutputCustomType.Parameter("roleArn") String roleArn,
+        @OutputCustomType.Parameter("secretManagerArn") String secretManagerArn,
+        @OutputCustomType.Parameter("tableName") String tableName,
+        @OutputCustomType.Parameter("vpcConfiguration") AnomalyDetectorVpcConfiguration vpcConfiguration) {
         this.dBInstanceIdentifier = dBInstanceIdentifier;
         this.databaseHost = databaseHost;
         this.databaseName = databaseName;

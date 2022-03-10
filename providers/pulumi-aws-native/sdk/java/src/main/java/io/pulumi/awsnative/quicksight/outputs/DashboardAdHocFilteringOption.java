@@ -13,8 +13,8 @@ import javax.annotation.Nullable;
 public final class DashboardAdHocFilteringOption {
     private final @Nullable DashboardBehavior availabilityStatus;
 
-    @OutputCustomType.Constructor({"availabilityStatus"})
-    private DashboardAdHocFilteringOption(@Nullable DashboardBehavior availabilityStatus) {
+    @OutputCustomType.Constructor
+    private DashboardAdHocFilteringOption(@OutputCustomType.Parameter("availabilityStatus") @Nullable DashboardBehavior availabilityStatus) {
         this.availabilityStatus = availabilityStatus;
     }
 

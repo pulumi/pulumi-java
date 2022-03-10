@@ -19,12 +19,12 @@ public final class IntegrationSourceFlowConfig {
     private final @Nullable IntegrationIncrementalPullConfig incrementalPullConfig;
     private final IntegrationSourceConnectorProperties sourceConnectorProperties;
 
-    @OutputCustomType.Constructor({"connectorProfileName","connectorType","incrementalPullConfig","sourceConnectorProperties"})
+    @OutputCustomType.Constructor
     private IntegrationSourceFlowConfig(
-        @Nullable String connectorProfileName,
-        IntegrationConnectorType connectorType,
-        @Nullable IntegrationIncrementalPullConfig incrementalPullConfig,
-        IntegrationSourceConnectorProperties sourceConnectorProperties) {
+        @OutputCustomType.Parameter("connectorProfileName") @Nullable String connectorProfileName,
+        @OutputCustomType.Parameter("connectorType") IntegrationConnectorType connectorType,
+        @OutputCustomType.Parameter("incrementalPullConfig") @Nullable IntegrationIncrementalPullConfig incrementalPullConfig,
+        @OutputCustomType.Parameter("sourceConnectorProperties") IntegrationSourceConnectorProperties sourceConnectorProperties) {
         this.connectorProfileName = connectorProfileName;
         this.connectorType = connectorType;
         this.incrementalPullConfig = incrementalPullConfig;

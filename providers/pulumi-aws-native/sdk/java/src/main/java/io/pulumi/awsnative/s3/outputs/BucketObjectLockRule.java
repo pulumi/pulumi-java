@@ -13,8 +13,8 @@ import javax.annotation.Nullable;
 public final class BucketObjectLockRule {
     private final @Nullable BucketDefaultRetention defaultRetention;
 
-    @OutputCustomType.Constructor({"defaultRetention"})
-    private BucketObjectLockRule(@Nullable BucketDefaultRetention defaultRetention) {
+    @OutputCustomType.Constructor
+    private BucketObjectLockRule(@OutputCustomType.Parameter("defaultRetention") @Nullable BucketDefaultRetention defaultRetention) {
         this.defaultRetention = defaultRetention;
     }
 

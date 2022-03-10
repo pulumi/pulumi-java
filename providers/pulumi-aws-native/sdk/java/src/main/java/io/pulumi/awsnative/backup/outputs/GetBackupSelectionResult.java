@@ -14,10 +14,10 @@ public final class GetBackupSelectionResult {
     private final @Nullable String id;
     private final @Nullable String selectionId;
 
-    @OutputCustomType.Constructor({"id","selectionId"})
+    @OutputCustomType.Constructor
     private GetBackupSelectionResult(
-        @Nullable String id,
-        @Nullable String selectionId) {
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("selectionId") @Nullable String selectionId) {
         this.id = id;
         this.selectionId = selectionId;
     }

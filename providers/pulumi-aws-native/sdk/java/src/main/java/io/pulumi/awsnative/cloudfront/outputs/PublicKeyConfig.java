@@ -16,12 +16,12 @@ public final class PublicKeyConfig {
     private final String encodedKey;
     private final String name;
 
-    @OutputCustomType.Constructor({"callerReference","comment","encodedKey","name"})
+    @OutputCustomType.Constructor
     private PublicKeyConfig(
-        String callerReference,
-        @Nullable String comment,
-        String encodedKey,
-        String name) {
+        @OutputCustomType.Parameter("callerReference") String callerReference,
+        @OutputCustomType.Parameter("comment") @Nullable String comment,
+        @OutputCustomType.Parameter("encodedKey") String encodedKey,
+        @OutputCustomType.Parameter("name") String name) {
         this.callerReference = callerReference;
         this.comment = comment;
         this.encodedKey = encodedKey;

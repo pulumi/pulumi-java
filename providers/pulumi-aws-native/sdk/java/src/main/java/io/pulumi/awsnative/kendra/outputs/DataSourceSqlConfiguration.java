@@ -13,8 +13,8 @@ import javax.annotation.Nullable;
 public final class DataSourceSqlConfiguration {
     private final @Nullable DataSourceQueryIdentifiersEnclosingOption queryIdentifiersEnclosingOption;
 
-    @OutputCustomType.Constructor({"queryIdentifiersEnclosingOption"})
-    private DataSourceSqlConfiguration(@Nullable DataSourceQueryIdentifiersEnclosingOption queryIdentifiersEnclosingOption) {
+    @OutputCustomType.Constructor
+    private DataSourceSqlConfiguration(@OutputCustomType.Parameter("queryIdentifiersEnclosingOption") @Nullable DataSourceQueryIdentifiersEnclosingOption queryIdentifiersEnclosingOption) {
         this.queryIdentifiersEnclosingOption = queryIdentifiersEnclosingOption;
     }
 

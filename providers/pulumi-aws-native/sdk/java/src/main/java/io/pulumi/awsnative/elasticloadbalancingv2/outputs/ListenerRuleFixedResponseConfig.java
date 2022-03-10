@@ -15,11 +15,11 @@ public final class ListenerRuleFixedResponseConfig {
     private final @Nullable String messageBody;
     private final String statusCode;
 
-    @OutputCustomType.Constructor({"contentType","messageBody","statusCode"})
+    @OutputCustomType.Constructor
     private ListenerRuleFixedResponseConfig(
-        @Nullable String contentType,
-        @Nullable String messageBody,
-        String statusCode) {
+        @OutputCustomType.Parameter("contentType") @Nullable String contentType,
+        @OutputCustomType.Parameter("messageBody") @Nullable String messageBody,
+        @OutputCustomType.Parameter("statusCode") String statusCode) {
         this.contentType = contentType;
         this.messageBody = messageBody;
         this.statusCode = statusCode;

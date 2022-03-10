@@ -37,13 +37,13 @@ public final class FunctionCode {
      */
     private final @Nullable String zipFile;
 
-    @OutputCustomType.Constructor({"imageUri","s3Bucket","s3Key","s3ObjectVersion","zipFile"})
+    @OutputCustomType.Constructor
     private FunctionCode(
-        @Nullable String imageUri,
-        @Nullable String s3Bucket,
-        @Nullable String s3Key,
-        @Nullable String s3ObjectVersion,
-        @Nullable String zipFile) {
+        @OutputCustomType.Parameter("imageUri") @Nullable String imageUri,
+        @OutputCustomType.Parameter("s3Bucket") @Nullable String s3Bucket,
+        @OutputCustomType.Parameter("s3Key") @Nullable String s3Key,
+        @OutputCustomType.Parameter("s3ObjectVersion") @Nullable String s3ObjectVersion,
+        @OutputCustomType.Parameter("zipFile") @Nullable String zipFile) {
         this.imageUri = imageUri;
         this.s3Bucket = s3Bucket;
         this.s3Key = s3Key;

@@ -26,17 +26,17 @@ public final class GetNetworkInsightsAccessScopeAnalysisResult {
     private final @Nullable String statusMessage;
     private final @Nullable List<NetworkInsightsAccessScopeAnalysisTag> tags;
 
-    @OutputCustomType.Constructor({"analyzedEniCount","endDate","findingsFound","networkInsightsAccessScopeAnalysisArn","networkInsightsAccessScopeAnalysisId","startDate","status","statusMessage","tags"})
+    @OutputCustomType.Constructor
     private GetNetworkInsightsAccessScopeAnalysisResult(
-        @Nullable Integer analyzedEniCount,
-        @Nullable String endDate,
-        @Nullable NetworkInsightsAccessScopeAnalysisFindingsFound findingsFound,
-        @Nullable String networkInsightsAccessScopeAnalysisArn,
-        @Nullable String networkInsightsAccessScopeAnalysisId,
-        @Nullable String startDate,
-        @Nullable NetworkInsightsAccessScopeAnalysisStatus status,
-        @Nullable String statusMessage,
-        @Nullable List<NetworkInsightsAccessScopeAnalysisTag> tags) {
+        @OutputCustomType.Parameter("analyzedEniCount") @Nullable Integer analyzedEniCount,
+        @OutputCustomType.Parameter("endDate") @Nullable String endDate,
+        @OutputCustomType.Parameter("findingsFound") @Nullable NetworkInsightsAccessScopeAnalysisFindingsFound findingsFound,
+        @OutputCustomType.Parameter("networkInsightsAccessScopeAnalysisArn") @Nullable String networkInsightsAccessScopeAnalysisArn,
+        @OutputCustomType.Parameter("networkInsightsAccessScopeAnalysisId") @Nullable String networkInsightsAccessScopeAnalysisId,
+        @OutputCustomType.Parameter("startDate") @Nullable String startDate,
+        @OutputCustomType.Parameter("status") @Nullable NetworkInsightsAccessScopeAnalysisStatus status,
+        @OutputCustomType.Parameter("statusMessage") @Nullable String statusMessage,
+        @OutputCustomType.Parameter("tags") @Nullable List<NetworkInsightsAccessScopeAnalysisTag> tags) {
         this.analyzedEniCount = analyzedEniCount;
         this.endDate = endDate;
         this.findingsFound = findingsFound;

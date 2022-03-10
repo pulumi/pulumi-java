@@ -11,8 +11,8 @@ import java.util.Objects;
 public final class ScheduledQueryTargetConfiguration {
     private final ScheduledQueryTimestreamConfiguration timestreamConfiguration;
 
-    @OutputCustomType.Constructor({"timestreamConfiguration"})
-    private ScheduledQueryTargetConfiguration(ScheduledQueryTimestreamConfiguration timestreamConfiguration) {
+    @OutputCustomType.Constructor
+    private ScheduledQueryTargetConfiguration(@OutputCustomType.Parameter("timestreamConfiguration") ScheduledQueryTimestreamConfiguration timestreamConfiguration) {
         this.timestreamConfiguration = timestreamConfiguration;
     }
 

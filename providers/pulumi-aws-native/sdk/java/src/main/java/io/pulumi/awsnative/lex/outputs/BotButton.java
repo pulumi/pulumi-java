@@ -20,10 +20,10 @@ public final class BotButton {
      */
     private final String value;
 
-    @OutputCustomType.Constructor({"text","value"})
+    @OutputCustomType.Constructor
     private BotButton(
-        String text,
-        String value) {
+        @OutputCustomType.Parameter("text") String text,
+        @OutputCustomType.Parameter("value") String value) {
         this.text = text;
         this.value = value;
     }

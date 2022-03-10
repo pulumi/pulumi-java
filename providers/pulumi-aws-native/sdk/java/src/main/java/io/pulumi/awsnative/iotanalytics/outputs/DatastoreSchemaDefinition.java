@@ -13,8 +13,8 @@ import javax.annotation.Nullable;
 public final class DatastoreSchemaDefinition {
     private final @Nullable List<DatastoreColumn> columns;
 
-    @OutputCustomType.Constructor({"columns"})
-    private DatastoreSchemaDefinition(@Nullable List<DatastoreColumn> columns) {
+    @OutputCustomType.Constructor
+    private DatastoreSchemaDefinition(@OutputCustomType.Parameter("columns") @Nullable List<DatastoreColumn> columns) {
         this.columns = columns;
     }
 

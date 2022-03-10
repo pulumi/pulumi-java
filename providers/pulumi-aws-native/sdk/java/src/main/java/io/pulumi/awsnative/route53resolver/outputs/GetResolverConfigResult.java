@@ -28,11 +28,11 @@ public final class GetResolverConfigResult {
      */
     private final @Nullable String ownerId;
 
-    @OutputCustomType.Constructor({"autodefinedReverse","id","ownerId"})
+    @OutputCustomType.Constructor
     private GetResolverConfigResult(
-        @Nullable ResolverConfigAutodefinedReverse autodefinedReverse,
-        @Nullable String id,
-        @Nullable String ownerId) {
+        @OutputCustomType.Parameter("autodefinedReverse") @Nullable ResolverConfigAutodefinedReverse autodefinedReverse,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("ownerId") @Nullable String ownerId) {
         this.autodefinedReverse = autodefinedReverse;
         this.id = id;
         this.ownerId = ownerId;

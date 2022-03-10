@@ -12,10 +12,10 @@ public final class IndexJsonTokenTypeConfiguration {
     private final String groupAttributeField;
     private final String userNameAttributeField;
 
-    @OutputCustomType.Constructor({"groupAttributeField","userNameAttributeField"})
+    @OutputCustomType.Constructor
     private IndexJsonTokenTypeConfiguration(
-        String groupAttributeField,
-        String userNameAttributeField) {
+        @OutputCustomType.Parameter("groupAttributeField") String groupAttributeField,
+        @OutputCustomType.Parameter("userNameAttributeField") String userNameAttributeField) {
         this.groupAttributeField = groupAttributeField;
         this.userNameAttributeField = userNameAttributeField;
     }

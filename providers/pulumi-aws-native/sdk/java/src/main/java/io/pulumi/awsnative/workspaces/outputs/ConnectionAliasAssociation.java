@@ -17,12 +17,12 @@ public final class ConnectionAliasAssociation {
     private final @Nullable String connectionIdentifier;
     private final @Nullable String resourceId;
 
-    @OutputCustomType.Constructor({"associatedAccountId","associationStatus","connectionIdentifier","resourceId"})
+    @OutputCustomType.Constructor
     private ConnectionAliasAssociation(
-        @Nullable String associatedAccountId,
-        @Nullable ConnectionAliasAssociationAssociationStatus associationStatus,
-        @Nullable String connectionIdentifier,
-        @Nullable String resourceId) {
+        @OutputCustomType.Parameter("associatedAccountId") @Nullable String associatedAccountId,
+        @OutputCustomType.Parameter("associationStatus") @Nullable ConnectionAliasAssociationAssociationStatus associationStatus,
+        @OutputCustomType.Parameter("connectionIdentifier") @Nullable String connectionIdentifier,
+        @OutputCustomType.Parameter("resourceId") @Nullable String resourceId) {
         this.associatedAccountId = associatedAccountId;
         this.associationStatus = associationStatus;
         this.connectionIdentifier = connectionIdentifier;

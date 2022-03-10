@@ -21,13 +21,13 @@ public final class RuleGroupByteMatchStatement {
     private final @Nullable String searchStringBase64;
     private final List<RuleGroupTextTransformation> textTransformations;
 
-    @OutputCustomType.Constructor({"fieldToMatch","positionalConstraint","searchString","searchStringBase64","textTransformations"})
+    @OutputCustomType.Constructor
     private RuleGroupByteMatchStatement(
-        RuleGroupFieldToMatch fieldToMatch,
-        RuleGroupPositionalConstraint positionalConstraint,
-        @Nullable String searchString,
-        @Nullable String searchStringBase64,
-        List<RuleGroupTextTransformation> textTransformations) {
+        @OutputCustomType.Parameter("fieldToMatch") RuleGroupFieldToMatch fieldToMatch,
+        @OutputCustomType.Parameter("positionalConstraint") RuleGroupPositionalConstraint positionalConstraint,
+        @OutputCustomType.Parameter("searchString") @Nullable String searchString,
+        @OutputCustomType.Parameter("searchStringBase64") @Nullable String searchStringBase64,
+        @OutputCustomType.Parameter("textTransformations") List<RuleGroupTextTransformation> textTransformations) {
         this.fieldToMatch = fieldToMatch;
         this.positionalConstraint = positionalConstraint;
         this.searchString = searchString;

@@ -33,12 +33,12 @@ public final class DataQualityJobDefinitionClusterConfig {
      */
     private final Integer volumeSizeInGB;
 
-    @OutputCustomType.Constructor({"instanceCount","instanceType","volumeKmsKeyId","volumeSizeInGB"})
+    @OutputCustomType.Constructor
     private DataQualityJobDefinitionClusterConfig(
-        Integer instanceCount,
-        String instanceType,
-        @Nullable String volumeKmsKeyId,
-        Integer volumeSizeInGB) {
+        @OutputCustomType.Parameter("instanceCount") Integer instanceCount,
+        @OutputCustomType.Parameter("instanceType") String instanceType,
+        @OutputCustomType.Parameter("volumeKmsKeyId") @Nullable String volumeKmsKeyId,
+        @OutputCustomType.Parameter("volumeSizeInGB") Integer volumeSizeInGB) {
         this.instanceCount = instanceCount;
         this.instanceType = instanceType;
         this.volumeKmsKeyId = volumeKmsKeyId;

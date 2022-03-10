@@ -25,11 +25,11 @@ public final class PackagingConfigurationHlsEncryption {
     private final @Nullable PackagingConfigurationHlsEncryptionEncryptionMethod encryptionMethod;
     private final PackagingConfigurationSpekeKeyProvider spekeKeyProvider;
 
-    @OutputCustomType.Constructor({"constantInitializationVector","encryptionMethod","spekeKeyProvider"})
+    @OutputCustomType.Constructor
     private PackagingConfigurationHlsEncryption(
-        @Nullable String constantInitializationVector,
-        @Nullable PackagingConfigurationHlsEncryptionEncryptionMethod encryptionMethod,
-        PackagingConfigurationSpekeKeyProvider spekeKeyProvider) {
+        @OutputCustomType.Parameter("constantInitializationVector") @Nullable String constantInitializationVector,
+        @OutputCustomType.Parameter("encryptionMethod") @Nullable PackagingConfigurationHlsEncryptionEncryptionMethod encryptionMethod,
+        @OutputCustomType.Parameter("spekeKeyProvider") PackagingConfigurationSpekeKeyProvider spekeKeyProvider) {
         this.constantInitializationVector = constantInitializationVector;
         this.encryptionMethod = encryptionMethod;
         this.spekeKeyProvider = spekeKeyProvider;

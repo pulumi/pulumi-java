@@ -29,11 +29,11 @@ public final class StorageLensSelectionCriteria {
      */
     private final @Nullable Double minStorageBytesPercentage;
 
-    @OutputCustomType.Constructor({"delimiter","maxDepth","minStorageBytesPercentage"})
+    @OutputCustomType.Constructor
     private StorageLensSelectionCriteria(
-        @Nullable String delimiter,
-        @Nullable Integer maxDepth,
-        @Nullable Double minStorageBytesPercentage) {
+        @OutputCustomType.Parameter("delimiter") @Nullable String delimiter,
+        @OutputCustomType.Parameter("maxDepth") @Nullable Integer maxDepth,
+        @OutputCustomType.Parameter("minStorageBytesPercentage") @Nullable Double minStorageBytesPercentage) {
         this.delimiter = delimiter;
         this.maxDepth = maxDepth;
         this.minStorageBytesPercentage = minStorageBytesPercentage;

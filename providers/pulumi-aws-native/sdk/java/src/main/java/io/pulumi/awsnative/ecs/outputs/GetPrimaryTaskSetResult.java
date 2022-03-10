@@ -17,8 +17,8 @@ public final class GetPrimaryTaskSetResult {
      */
     private final @Nullable String taskSetId;
 
-    @OutputCustomType.Constructor({"taskSetId"})
-    private GetPrimaryTaskSetResult(@Nullable String taskSetId) {
+    @OutputCustomType.Constructor
+    private GetPrimaryTaskSetResult(@OutputCustomType.Parameter("taskSetId") @Nullable String taskSetId) {
         this.taskSetId = taskSetId;
     }
 

@@ -13,8 +13,8 @@ import javax.annotation.Nullable;
 public final class ClusterConfiguration {
     private final @Nullable ClusterExecuteCommandConfiguration executeCommandConfiguration;
 
-    @OutputCustomType.Constructor({"executeCommandConfiguration"})
-    private ClusterConfiguration(@Nullable ClusterExecuteCommandConfiguration executeCommandConfiguration) {
+    @OutputCustomType.Constructor
+    private ClusterConfiguration(@OutputCustomType.Parameter("executeCommandConfiguration") @Nullable ClusterExecuteCommandConfiguration executeCommandConfiguration) {
         this.executeCommandConfiguration = executeCommandConfiguration;
     }
 

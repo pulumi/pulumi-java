@@ -85,21 +85,21 @@ public final class GetGameServerGroupResult {
      */
     private final @Nullable List<String> vpcSubnets;
 
-    @OutputCustomType.Constructor({"autoScalingGroupArn","autoScalingPolicy","balancingStrategy","gameServerGroupArn","gameServerGroupName","gameServerProtectionPolicy","instanceDefinitions","launchTemplate","maxSize","minSize","roleArn","tags","vpcSubnets"})
+    @OutputCustomType.Constructor
     private GetGameServerGroupResult(
-        @Nullable String autoScalingGroupArn,
-        @Nullable GameServerGroupAutoScalingPolicy autoScalingPolicy,
-        @Nullable GameServerGroupBalancingStrategy balancingStrategy,
-        @Nullable String gameServerGroupArn,
-        @Nullable String gameServerGroupName,
-        @Nullable GameServerGroupGameServerProtectionPolicy gameServerProtectionPolicy,
-        @Nullable List<GameServerGroupInstanceDefinition> instanceDefinitions,
-        @Nullable GameServerGroupLaunchTemplate launchTemplate,
-        @Nullable Double maxSize,
-        @Nullable Double minSize,
-        @Nullable String roleArn,
-        @Nullable List<GameServerGroupTag> tags,
-        @Nullable List<String> vpcSubnets) {
+        @OutputCustomType.Parameter("autoScalingGroupArn") @Nullable String autoScalingGroupArn,
+        @OutputCustomType.Parameter("autoScalingPolicy") @Nullable GameServerGroupAutoScalingPolicy autoScalingPolicy,
+        @OutputCustomType.Parameter("balancingStrategy") @Nullable GameServerGroupBalancingStrategy balancingStrategy,
+        @OutputCustomType.Parameter("gameServerGroupArn") @Nullable String gameServerGroupArn,
+        @OutputCustomType.Parameter("gameServerGroupName") @Nullable String gameServerGroupName,
+        @OutputCustomType.Parameter("gameServerProtectionPolicy") @Nullable GameServerGroupGameServerProtectionPolicy gameServerProtectionPolicy,
+        @OutputCustomType.Parameter("instanceDefinitions") @Nullable List<GameServerGroupInstanceDefinition> instanceDefinitions,
+        @OutputCustomType.Parameter("launchTemplate") @Nullable GameServerGroupLaunchTemplate launchTemplate,
+        @OutputCustomType.Parameter("maxSize") @Nullable Double maxSize,
+        @OutputCustomType.Parameter("minSize") @Nullable Double minSize,
+        @OutputCustomType.Parameter("roleArn") @Nullable String roleArn,
+        @OutputCustomType.Parameter("tags") @Nullable List<GameServerGroupTag> tags,
+        @OutputCustomType.Parameter("vpcSubnets") @Nullable List<String> vpcSubnets) {
         this.autoScalingGroupArn = autoScalingGroupArn;
         this.autoScalingPolicy = autoScalingPolicy;
         this.balancingStrategy = balancingStrategy;

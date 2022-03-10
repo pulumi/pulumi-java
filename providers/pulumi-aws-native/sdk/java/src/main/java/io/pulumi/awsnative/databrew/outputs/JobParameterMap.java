@@ -8,7 +8,7 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class JobParameterMap {
-    @OutputCustomType.Constructor({})
+    @OutputCustomType.Constructor
     private JobParameterMap() {
     }
 

@@ -15,10 +15,10 @@ public final class GetMountTargetResult {
     private final @Nullable String id;
     private final @Nullable List<String> securityGroups;
 
-    @OutputCustomType.Constructor({"id","securityGroups"})
+    @OutputCustomType.Constructor
     private GetMountTargetResult(
-        @Nullable String id,
-        @Nullable List<String> securityGroups) {
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("securityGroups") @Nullable List<String> securityGroups) {
         this.id = id;
         this.securityGroups = securityGroups;
     }

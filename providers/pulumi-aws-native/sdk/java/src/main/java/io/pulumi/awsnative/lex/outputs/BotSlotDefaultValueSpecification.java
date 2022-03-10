@@ -16,8 +16,8 @@ public final class BotSlotDefaultValueSpecification {
      */
     private final List<BotSlotDefaultValue> defaultValueList;
 
-    @OutputCustomType.Constructor({"defaultValueList"})
-    private BotSlotDefaultValueSpecification(List<BotSlotDefaultValue> defaultValueList) {
+    @OutputCustomType.Constructor
+    private BotSlotDefaultValueSpecification(@OutputCustomType.Parameter("defaultValueList") List<BotSlotDefaultValue> defaultValueList) {
         this.defaultValueList = defaultValueList;
     }
 

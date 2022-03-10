@@ -22,10 +22,10 @@ public final class ContainerTag {
      */
     private final @Nullable String value;
 
-    @OutputCustomType.Constructor({"key","value"})
+    @OutputCustomType.Constructor
     private ContainerTag(
-        String key,
-        @Nullable String value) {
+        @OutputCustomType.Parameter("key") String key,
+        @OutputCustomType.Parameter("value") @Nullable String value) {
         this.key = key;
         this.value = value;
     }

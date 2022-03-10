@@ -28,11 +28,11 @@ public final class OriginEndpointStreamSelection {
      */
     private final @Nullable OriginEndpointStreamSelectionStreamOrder streamOrder;
 
-    @OutputCustomType.Constructor({"maxVideoBitsPerSecond","minVideoBitsPerSecond","streamOrder"})
+    @OutputCustomType.Constructor
     private OriginEndpointStreamSelection(
-        @Nullable Integer maxVideoBitsPerSecond,
-        @Nullable Integer minVideoBitsPerSecond,
-        @Nullable OriginEndpointStreamSelectionStreamOrder streamOrder) {
+        @OutputCustomType.Parameter("maxVideoBitsPerSecond") @Nullable Integer maxVideoBitsPerSecond,
+        @OutputCustomType.Parameter("minVideoBitsPerSecond") @Nullable Integer minVideoBitsPerSecond,
+        @OutputCustomType.Parameter("streamOrder") @Nullable OriginEndpointStreamSelectionStreamOrder streamOrder) {
         this.maxVideoBitsPerSecond = maxVideoBitsPerSecond;
         this.minVideoBitsPerSecond = minVideoBitsPerSecond;
         this.streamOrder = streamOrder;

@@ -13,8 +13,8 @@ import javax.annotation.Nullable;
 public final class ListenerRuleHostHeaderConfig {
     private final @Nullable List<String> values;
 
-    @OutputCustomType.Constructor({"values"})
-    private ListenerRuleHostHeaderConfig(@Nullable List<String> values) {
+    @OutputCustomType.Constructor
+    private ListenerRuleHostHeaderConfig(@OutputCustomType.Parameter("values") @Nullable List<String> values) {
         this.values = values;
     }
 

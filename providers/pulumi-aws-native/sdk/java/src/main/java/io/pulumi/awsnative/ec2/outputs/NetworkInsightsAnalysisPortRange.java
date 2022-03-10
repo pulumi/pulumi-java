@@ -14,10 +14,10 @@ public final class NetworkInsightsAnalysisPortRange {
     private final @Nullable Integer from;
     private final @Nullable Integer to;
 
-    @OutputCustomType.Constructor({"from","to"})
+    @OutputCustomType.Constructor
     private NetworkInsightsAnalysisPortRange(
-        @Nullable Integer from,
-        @Nullable Integer to) {
+        @OutputCustomType.Parameter("from") @Nullable Integer from,
+        @OutputCustomType.Parameter("to") @Nullable Integer to) {
         this.from = from;
         this.to = to;
     }

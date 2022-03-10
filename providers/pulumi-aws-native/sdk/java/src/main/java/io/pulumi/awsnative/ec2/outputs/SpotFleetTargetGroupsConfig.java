@@ -12,8 +12,8 @@ import java.util.Objects;
 public final class SpotFleetTargetGroupsConfig {
     private final List<SpotFleetTargetGroup> targetGroups;
 
-    @OutputCustomType.Constructor({"targetGroups"})
-    private SpotFleetTargetGroupsConfig(List<SpotFleetTargetGroup> targetGroups) {
+    @OutputCustomType.Constructor
+    private SpotFleetTargetGroupsConfig(@OutputCustomType.Parameter("targetGroups") List<SpotFleetTargetGroup> targetGroups) {
         this.targetGroups = targetGroups;
     }
 

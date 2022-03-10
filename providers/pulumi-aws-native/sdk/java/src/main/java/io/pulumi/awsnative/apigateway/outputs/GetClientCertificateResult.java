@@ -29,11 +29,11 @@ public final class GetClientCertificateResult {
      */
     private final @Nullable List<ClientCertificateTag> tags;
 
-    @OutputCustomType.Constructor({"clientCertificateId","description","tags"})
+    @OutputCustomType.Constructor
     private GetClientCertificateResult(
-        @Nullable String clientCertificateId,
-        @Nullable String description,
-        @Nullable List<ClientCertificateTag> tags) {
+        @OutputCustomType.Parameter("clientCertificateId") @Nullable String clientCertificateId,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("tags") @Nullable List<ClientCertificateTag> tags) {
         this.clientCertificateId = clientCertificateId;
         this.description = description;
         this.tags = tags;

@@ -26,19 +26,19 @@ public final class AssessmentDelegation {
     private final @Nullable AssessmentRoleType roleType;
     private final @Nullable AssessmentDelegationStatus status;
 
-    @OutputCustomType.Constructor({"assessmentId","assessmentName","comment","controlSetId","createdBy","creationTime","id","lastUpdated","roleArn","roleType","status"})
+    @OutputCustomType.Constructor
     private AssessmentDelegation(
-        @Nullable String assessmentId,
-        @Nullable String assessmentName,
-        @Nullable String comment,
-        @Nullable String controlSetId,
-        @Nullable String createdBy,
-        @Nullable Double creationTime,
-        @Nullable String id,
-        @Nullable Double lastUpdated,
-        @Nullable String roleArn,
-        @Nullable AssessmentRoleType roleType,
-        @Nullable AssessmentDelegationStatus status) {
+        @OutputCustomType.Parameter("assessmentId") @Nullable String assessmentId,
+        @OutputCustomType.Parameter("assessmentName") @Nullable String assessmentName,
+        @OutputCustomType.Parameter("comment") @Nullable String comment,
+        @OutputCustomType.Parameter("controlSetId") @Nullable String controlSetId,
+        @OutputCustomType.Parameter("createdBy") @Nullable String createdBy,
+        @OutputCustomType.Parameter("creationTime") @Nullable Double creationTime,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("lastUpdated") @Nullable Double lastUpdated,
+        @OutputCustomType.Parameter("roleArn") @Nullable String roleArn,
+        @OutputCustomType.Parameter("roleType") @Nullable AssessmentRoleType roleType,
+        @OutputCustomType.Parameter("status") @Nullable AssessmentDelegationStatus status) {
         this.assessmentId = assessmentId;
         this.assessmentName = assessmentName;
         this.comment = comment;

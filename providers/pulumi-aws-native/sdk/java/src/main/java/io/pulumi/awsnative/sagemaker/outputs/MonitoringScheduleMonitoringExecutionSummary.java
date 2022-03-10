@@ -45,16 +45,16 @@ public final class MonitoringScheduleMonitoringExecutionSummary {
      */
     private final String scheduledTime;
 
-    @OutputCustomType.Constructor({"creationTime","endpointName","failureReason","lastModifiedTime","monitoringExecutionStatus","monitoringScheduleName","processingJobArn","scheduledTime"})
+    @OutputCustomType.Constructor
     private MonitoringScheduleMonitoringExecutionSummary(
-        String creationTime,
-        @Nullable String endpointName,
-        @Nullable String failureReason,
-        String lastModifiedTime,
-        MonitoringScheduleMonitoringExecutionSummaryMonitoringExecutionStatus monitoringExecutionStatus,
-        String monitoringScheduleName,
-        @Nullable String processingJobArn,
-        String scheduledTime) {
+        @OutputCustomType.Parameter("creationTime") String creationTime,
+        @OutputCustomType.Parameter("endpointName") @Nullable String endpointName,
+        @OutputCustomType.Parameter("failureReason") @Nullable String failureReason,
+        @OutputCustomType.Parameter("lastModifiedTime") String lastModifiedTime,
+        @OutputCustomType.Parameter("monitoringExecutionStatus") MonitoringScheduleMonitoringExecutionSummaryMonitoringExecutionStatus monitoringExecutionStatus,
+        @OutputCustomType.Parameter("monitoringScheduleName") String monitoringScheduleName,
+        @OutputCustomType.Parameter("processingJobArn") @Nullable String processingJobArn,
+        @OutputCustomType.Parameter("scheduledTime") String scheduledTime) {
         this.creationTime = creationTime;
         this.endpointName = endpointName;
         this.failureReason = failureReason;

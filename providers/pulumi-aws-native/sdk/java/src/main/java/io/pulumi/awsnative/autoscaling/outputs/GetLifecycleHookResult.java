@@ -43,14 +43,14 @@ public final class GetLifecycleHookResult {
      */
     private final @Nullable String roleARN;
 
-    @OutputCustomType.Constructor({"defaultResult","heartbeatTimeout","lifecycleTransition","notificationMetadata","notificationTargetARN","roleARN"})
+    @OutputCustomType.Constructor
     private GetLifecycleHookResult(
-        @Nullable String defaultResult,
-        @Nullable Integer heartbeatTimeout,
-        @Nullable String lifecycleTransition,
-        @Nullable String notificationMetadata,
-        @Nullable String notificationTargetARN,
-        @Nullable String roleARN) {
+        @OutputCustomType.Parameter("defaultResult") @Nullable String defaultResult,
+        @OutputCustomType.Parameter("heartbeatTimeout") @Nullable Integer heartbeatTimeout,
+        @OutputCustomType.Parameter("lifecycleTransition") @Nullable String lifecycleTransition,
+        @OutputCustomType.Parameter("notificationMetadata") @Nullable String notificationMetadata,
+        @OutputCustomType.Parameter("notificationTargetARN") @Nullable String notificationTargetARN,
+        @OutputCustomType.Parameter("roleARN") @Nullable String roleARN) {
         this.defaultResult = defaultResult;
         this.heartbeatTimeout = heartbeatTimeout;
         this.lifecycleTransition = lifecycleTransition;

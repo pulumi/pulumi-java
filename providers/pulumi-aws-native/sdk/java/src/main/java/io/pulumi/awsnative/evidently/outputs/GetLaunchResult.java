@@ -28,15 +28,15 @@ public final class GetLaunchResult {
      */
     private final @Nullable List<LaunchTag> tags;
 
-    @OutputCustomType.Constructor({"arn","description","groups","metricMonitors","randomizationSalt","scheduledSplitsConfig","tags"})
+    @OutputCustomType.Constructor
     private GetLaunchResult(
-        @Nullable String arn,
-        @Nullable String description,
-        @Nullable List<LaunchGroupObject> groups,
-        @Nullable List<LaunchMetricDefinitionObject> metricMonitors,
-        @Nullable String randomizationSalt,
-        @Nullable List<LaunchStepConfig> scheduledSplitsConfig,
-        @Nullable List<LaunchTag> tags) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("groups") @Nullable List<LaunchGroupObject> groups,
+        @OutputCustomType.Parameter("metricMonitors") @Nullable List<LaunchMetricDefinitionObject> metricMonitors,
+        @OutputCustomType.Parameter("randomizationSalt") @Nullable String randomizationSalt,
+        @OutputCustomType.Parameter("scheduledSplitsConfig") @Nullable List<LaunchStepConfig> scheduledSplitsConfig,
+        @OutputCustomType.Parameter("tags") @Nullable List<LaunchTag> tags) {
         this.arn = arn;
         this.description = description;
         this.groups = groups;

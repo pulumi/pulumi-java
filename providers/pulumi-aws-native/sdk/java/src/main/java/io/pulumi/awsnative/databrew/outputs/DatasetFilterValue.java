@@ -16,10 +16,10 @@ public final class DatasetFilterValue {
      */
     private final String valueReference;
 
-    @OutputCustomType.Constructor({"value","valueReference"})
+    @OutputCustomType.Constructor
     private DatasetFilterValue(
-        String value,
-        String valueReference) {
+        @OutputCustomType.Parameter("value") String value,
+        @OutputCustomType.Parameter("valueReference") String valueReference) {
         this.value = value;
         this.valueReference = valueReference;
     }

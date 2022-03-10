@@ -25,11 +25,11 @@ public final class DetectorModelSqs {
      */
     private final @Nullable Boolean useBase64;
 
-    @OutputCustomType.Constructor({"payload","queueUrl","useBase64"})
+    @OutputCustomType.Constructor
     private DetectorModelSqs(
-        @Nullable DetectorModelPayload payload,
-        String queueUrl,
-        @Nullable Boolean useBase64) {
+        @OutputCustomType.Parameter("payload") @Nullable DetectorModelPayload payload,
+        @OutputCustomType.Parameter("queueUrl") String queueUrl,
+        @OutputCustomType.Parameter("useBase64") @Nullable Boolean useBase64) {
         this.payload = payload;
         this.queueUrl = queueUrl;
         this.useBase64 = useBase64;

@@ -11,8 +11,8 @@ import java.util.Objects;
 public final class RuleGroupFieldToMatchSingleQueryArgumentProperties {
     private final String name;
 
-    @OutputCustomType.Constructor({"name"})
-    private RuleGroupFieldToMatchSingleQueryArgumentProperties(String name) {
+    @OutputCustomType.Constructor
+    private RuleGroupFieldToMatchSingleQueryArgumentProperties(@OutputCustomType.Parameter("name") String name) {
         this.name = name;
     }
 

@@ -33,21 +33,21 @@ public final class DeliveryStreamElasticsearchDestinationConfiguration {
     private final @Nullable String typeName;
     private final @Nullable DeliveryStreamVpcConfiguration vpcConfiguration;
 
-    @OutputCustomType.Constructor({"bufferingHints","cloudWatchLoggingOptions","clusterEndpoint","domainARN","indexName","indexRotationPeriod","processingConfiguration","retryOptions","roleARN","s3BackupMode","s3Configuration","typeName","vpcConfiguration"})
+    @OutputCustomType.Constructor
     private DeliveryStreamElasticsearchDestinationConfiguration(
-        @Nullable DeliveryStreamElasticsearchBufferingHints bufferingHints,
-        @Nullable DeliveryStreamCloudWatchLoggingOptions cloudWatchLoggingOptions,
-        @Nullable String clusterEndpoint,
-        @Nullable String domainARN,
-        String indexName,
-        @Nullable DeliveryStreamElasticsearchDestinationConfigurationIndexRotationPeriod indexRotationPeriod,
-        @Nullable DeliveryStreamProcessingConfiguration processingConfiguration,
-        @Nullable DeliveryStreamElasticsearchRetryOptions retryOptions,
-        String roleARN,
-        @Nullable DeliveryStreamElasticsearchDestinationConfigurationS3BackupMode s3BackupMode,
-        DeliveryStreamS3DestinationConfiguration s3Configuration,
-        @Nullable String typeName,
-        @Nullable DeliveryStreamVpcConfiguration vpcConfiguration) {
+        @OutputCustomType.Parameter("bufferingHints") @Nullable DeliveryStreamElasticsearchBufferingHints bufferingHints,
+        @OutputCustomType.Parameter("cloudWatchLoggingOptions") @Nullable DeliveryStreamCloudWatchLoggingOptions cloudWatchLoggingOptions,
+        @OutputCustomType.Parameter("clusterEndpoint") @Nullable String clusterEndpoint,
+        @OutputCustomType.Parameter("domainARN") @Nullable String domainARN,
+        @OutputCustomType.Parameter("indexName") String indexName,
+        @OutputCustomType.Parameter("indexRotationPeriod") @Nullable DeliveryStreamElasticsearchDestinationConfigurationIndexRotationPeriod indexRotationPeriod,
+        @OutputCustomType.Parameter("processingConfiguration") @Nullable DeliveryStreamProcessingConfiguration processingConfiguration,
+        @OutputCustomType.Parameter("retryOptions") @Nullable DeliveryStreamElasticsearchRetryOptions retryOptions,
+        @OutputCustomType.Parameter("roleARN") String roleARN,
+        @OutputCustomType.Parameter("s3BackupMode") @Nullable DeliveryStreamElasticsearchDestinationConfigurationS3BackupMode s3BackupMode,
+        @OutputCustomType.Parameter("s3Configuration") DeliveryStreamS3DestinationConfiguration s3Configuration,
+        @OutputCustomType.Parameter("typeName") @Nullable String typeName,
+        @OutputCustomType.Parameter("vpcConfiguration") @Nullable DeliveryStreamVpcConfiguration vpcConfiguration) {
         this.bufferingHints = bufferingHints;
         this.cloudWatchLoggingOptions = cloudWatchLoggingOptions;
         this.clusterEndpoint = clusterEndpoint;

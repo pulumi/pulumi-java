@@ -102,24 +102,24 @@ public final class ThemeUIColorPalette {
      */
     private final @Nullable String warningForeground;
 
-    @OutputCustomType.Constructor({"accent","accentForeground","danger","dangerForeground","dimension","dimensionForeground","measure","measureForeground","primaryBackground","primaryForeground","secondaryBackground","secondaryForeground","success","successForeground","warning","warningForeground"})
+    @OutputCustomType.Constructor
     private ThemeUIColorPalette(
-        @Nullable String accent,
-        @Nullable String accentForeground,
-        @Nullable String danger,
-        @Nullable String dangerForeground,
-        @Nullable String dimension,
-        @Nullable String dimensionForeground,
-        @Nullable String measure,
-        @Nullable String measureForeground,
-        @Nullable String primaryBackground,
-        @Nullable String primaryForeground,
-        @Nullable String secondaryBackground,
-        @Nullable String secondaryForeground,
-        @Nullable String success,
-        @Nullable String successForeground,
-        @Nullable String warning,
-        @Nullable String warningForeground) {
+        @OutputCustomType.Parameter("accent") @Nullable String accent,
+        @OutputCustomType.Parameter("accentForeground") @Nullable String accentForeground,
+        @OutputCustomType.Parameter("danger") @Nullable String danger,
+        @OutputCustomType.Parameter("dangerForeground") @Nullable String dangerForeground,
+        @OutputCustomType.Parameter("dimension") @Nullable String dimension,
+        @OutputCustomType.Parameter("dimensionForeground") @Nullable String dimensionForeground,
+        @OutputCustomType.Parameter("measure") @Nullable String measure,
+        @OutputCustomType.Parameter("measureForeground") @Nullable String measureForeground,
+        @OutputCustomType.Parameter("primaryBackground") @Nullable String primaryBackground,
+        @OutputCustomType.Parameter("primaryForeground") @Nullable String primaryForeground,
+        @OutputCustomType.Parameter("secondaryBackground") @Nullable String secondaryBackground,
+        @OutputCustomType.Parameter("secondaryForeground") @Nullable String secondaryForeground,
+        @OutputCustomType.Parameter("success") @Nullable String success,
+        @OutputCustomType.Parameter("successForeground") @Nullable String successForeground,
+        @OutputCustomType.Parameter("warning") @Nullable String warning,
+        @OutputCustomType.Parameter("warningForeground") @Nullable String warningForeground) {
         this.accent = accent;
         this.accentForeground = accentForeground;
         this.danger = danger;

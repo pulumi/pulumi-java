@@ -39,13 +39,13 @@ public final class GetDataIntegrationResult {
      */
     private final @Nullable List<DataIntegrationTag> tags;
 
-    @OutputCustomType.Constructor({"dataIntegrationArn","description","id","name","tags"})
+    @OutputCustomType.Constructor
     private GetDataIntegrationResult(
-        @Nullable String dataIntegrationArn,
-        @Nullable String description,
-        @Nullable String id,
-        @Nullable String name,
-        @Nullable List<DataIntegrationTag> tags) {
+        @OutputCustomType.Parameter("dataIntegrationArn") @Nullable String dataIntegrationArn,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("tags") @Nullable List<DataIntegrationTag> tags) {
         this.dataIntegrationArn = dataIntegrationArn;
         this.description = description;
         this.id = id;

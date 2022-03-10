@@ -18,11 +18,11 @@ public final class DatasetExcelOptions {
     private final @Nullable List<Integer> sheetIndexes;
     private final @Nullable List<String> sheetNames;
 
-    @OutputCustomType.Constructor({"headerRow","sheetIndexes","sheetNames"})
+    @OutputCustomType.Constructor
     private DatasetExcelOptions(
-        @Nullable Boolean headerRow,
-        @Nullable List<Integer> sheetIndexes,
-        @Nullable List<String> sheetNames) {
+        @OutputCustomType.Parameter("headerRow") @Nullable Boolean headerRow,
+        @OutputCustomType.Parameter("sheetIndexes") @Nullable List<Integer> sheetIndexes,
+        @OutputCustomType.Parameter("sheetNames") @Nullable List<String> sheetNames) {
         this.headerRow = headerRow;
         this.sheetIndexes = sheetIndexes;
         this.sheetNames = sheetNames;

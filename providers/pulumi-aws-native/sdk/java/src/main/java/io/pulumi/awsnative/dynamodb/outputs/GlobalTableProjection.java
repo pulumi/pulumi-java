@@ -15,10 +15,10 @@ public final class GlobalTableProjection {
     private final @Nullable List<String> nonKeyAttributes;
     private final @Nullable String projectionType;
 
-    @OutputCustomType.Constructor({"nonKeyAttributes","projectionType"})
+    @OutputCustomType.Constructor
     private GlobalTableProjection(
-        @Nullable List<String> nonKeyAttributes,
-        @Nullable String projectionType) {
+        @OutputCustomType.Parameter("nonKeyAttributes") @Nullable List<String> nonKeyAttributes,
+        @OutputCustomType.Parameter("projectionType") @Nullable String projectionType) {
         this.nonKeyAttributes = nonKeyAttributes;
         this.projectionType = projectionType;
     }

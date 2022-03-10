@@ -33,13 +33,13 @@ public final class GetLocationNFSResult {
      */
     private final @Nullable List<LocationNFSTag> tags;
 
-    @OutputCustomType.Constructor({"locationArn","locationUri","mountOptions","onPremConfig","tags"})
+    @OutputCustomType.Constructor
     private GetLocationNFSResult(
-        @Nullable String locationArn,
-        @Nullable String locationUri,
-        @Nullable LocationNFSMountOptions mountOptions,
-        @Nullable LocationNFSOnPremConfig onPremConfig,
-        @Nullable List<LocationNFSTag> tags) {
+        @OutputCustomType.Parameter("locationArn") @Nullable String locationArn,
+        @OutputCustomType.Parameter("locationUri") @Nullable String locationUri,
+        @OutputCustomType.Parameter("mountOptions") @Nullable LocationNFSMountOptions mountOptions,
+        @OutputCustomType.Parameter("onPremConfig") @Nullable LocationNFSOnPremConfig onPremConfig,
+        @OutputCustomType.Parameter("tags") @Nullable List<LocationNFSTag> tags) {
         this.locationArn = locationArn;
         this.locationUri = locationUri;
         this.mountOptions = mountOptions;

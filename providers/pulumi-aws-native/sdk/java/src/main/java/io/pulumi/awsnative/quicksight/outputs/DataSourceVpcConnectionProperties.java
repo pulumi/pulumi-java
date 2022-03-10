@@ -15,8 +15,8 @@ public final class DataSourceVpcConnectionProperties {
      */
     private final String vpcConnectionArn;
 
-    @OutputCustomType.Constructor({"vpcConnectionArn"})
-    private DataSourceVpcConnectionProperties(String vpcConnectionArn) {
+    @OutputCustomType.Constructor
+    private DataSourceVpcConnectionProperties(@OutputCustomType.Parameter("vpcConnectionArn") String vpcConnectionArn) {
         this.vpcConnectionArn = vpcConnectionArn;
     }
 

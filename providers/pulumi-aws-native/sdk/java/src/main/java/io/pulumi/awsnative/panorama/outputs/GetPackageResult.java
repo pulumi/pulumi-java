@@ -21,13 +21,13 @@ public final class GetPackageResult {
     private final @Nullable PackageStorageLocation storageLocation;
     private final @Nullable List<PackageTag> tags;
 
-    @OutputCustomType.Constructor({"arn","createdTime","packageId","storageLocation","tags"})
+    @OutputCustomType.Constructor
     private GetPackageResult(
-        @Nullable String arn,
-        @Nullable Integer createdTime,
-        @Nullable String packageId,
-        @Nullable PackageStorageLocation storageLocation,
-        @Nullable List<PackageTag> tags) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("createdTime") @Nullable Integer createdTime,
+        @OutputCustomType.Parameter("packageId") @Nullable String packageId,
+        @OutputCustomType.Parameter("storageLocation") @Nullable PackageStorageLocation storageLocation,
+        @OutputCustomType.Parameter("tags") @Nullable List<PackageTag> tags) {
         this.arn = arn;
         this.createdTime = createdTime;
         this.packageId = packageId;

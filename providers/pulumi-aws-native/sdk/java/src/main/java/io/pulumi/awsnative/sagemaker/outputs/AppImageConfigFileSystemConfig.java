@@ -28,11 +28,11 @@ public final class AppImageConfigFileSystemConfig {
      */
     private final @Nullable String mountPath;
 
-    @OutputCustomType.Constructor({"defaultGid","defaultUid","mountPath"})
+    @OutputCustomType.Constructor
     private AppImageConfigFileSystemConfig(
-        @Nullable Integer defaultGid,
-        @Nullable Integer defaultUid,
-        @Nullable String mountPath) {
+        @OutputCustomType.Parameter("defaultGid") @Nullable Integer defaultGid,
+        @OutputCustomType.Parameter("defaultUid") @Nullable Integer defaultUid,
+        @OutputCustomType.Parameter("mountPath") @Nullable String mountPath) {
         this.defaultGid = defaultGid;
         this.defaultUid = defaultUid;
         this.mountPath = mountPath;

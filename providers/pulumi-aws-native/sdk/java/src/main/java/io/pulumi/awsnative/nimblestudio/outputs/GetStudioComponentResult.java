@@ -45,16 +45,16 @@ public final class GetStudioComponentResult {
     private final @Nullable String studioComponentId;
     private final @Nullable StudioComponentType type;
 
-    @OutputCustomType.Constructor({"configuration","description","ec2SecurityGroupIds","initializationScripts","name","scriptParameters","studioComponentId","type"})
+    @OutputCustomType.Constructor
     private GetStudioComponentResult(
-        @Nullable StudioComponentConfiguration configuration,
-        @Nullable String description,
-        @Nullable List<String> ec2SecurityGroupIds,
-        @Nullable List<StudioComponentInitializationScript> initializationScripts,
-        @Nullable String name,
-        @Nullable List<StudioComponentScriptParameterKeyValue> scriptParameters,
-        @Nullable String studioComponentId,
-        @Nullable StudioComponentType type) {
+        @OutputCustomType.Parameter("configuration") @Nullable StudioComponentConfiguration configuration,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("ec2SecurityGroupIds") @Nullable List<String> ec2SecurityGroupIds,
+        @OutputCustomType.Parameter("initializationScripts") @Nullable List<StudioComponentInitializationScript> initializationScripts,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("scriptParameters") @Nullable List<StudioComponentScriptParameterKeyValue> scriptParameters,
+        @OutputCustomType.Parameter("studioComponentId") @Nullable String studioComponentId,
+        @OutputCustomType.Parameter("type") @Nullable StudioComponentType type) {
         this.configuration = configuration;
         this.description = description;
         this.ec2SecurityGroupIds = ec2SecurityGroupIds;

@@ -12,10 +12,10 @@ public final class WirelessDeviceSessionKeysAbpV10x {
     private final String appSKey;
     private final String nwkSKey;
 
-    @OutputCustomType.Constructor({"appSKey","nwkSKey"})
+    @OutputCustomType.Constructor
     private WirelessDeviceSessionKeysAbpV10x(
-        String appSKey,
-        String nwkSKey) {
+        @OutputCustomType.Parameter("appSKey") String appSKey,
+        @OutputCustomType.Parameter("nwkSKey") String nwkSKey) {
         this.appSKey = appSKey;
         this.nwkSKey = nwkSKey;
     }

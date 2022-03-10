@@ -39,13 +39,13 @@ public final class GetEntityTypeResult {
      */
     private final @Nullable List<EntityTypeTag> tags;
 
-    @OutputCustomType.Constructor({"arn","createdTime","description","lastUpdatedTime","tags"})
+    @OutputCustomType.Constructor
     private GetEntityTypeResult(
-        @Nullable String arn,
-        @Nullable String createdTime,
-        @Nullable String description,
-        @Nullable String lastUpdatedTime,
-        @Nullable List<EntityTypeTag> tags) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("createdTime") @Nullable String createdTime,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("lastUpdatedTime") @Nullable String lastUpdatedTime,
+        @OutputCustomType.Parameter("tags") @Nullable List<EntityTypeTag> tags) {
         this.arn = arn;
         this.createdTime = createdTime;
         this.description = description;

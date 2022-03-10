@@ -22,10 +22,10 @@ public final class WebACLOverrideAction {
      */
     private final @Nullable Object none;
 
-    @OutputCustomType.Constructor({"count","none"})
+    @OutputCustomType.Constructor
     private WebACLOverrideAction(
-        @Nullable Object count,
-        @Nullable Object none) {
+        @OutputCustomType.Parameter("count") @Nullable Object count,
+        @OutputCustomType.Parameter("none") @Nullable Object none) {
         this.count = count;
         this.none = none;
     }

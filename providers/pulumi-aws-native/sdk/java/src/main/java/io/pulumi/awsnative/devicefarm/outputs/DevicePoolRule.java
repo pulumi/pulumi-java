@@ -29,11 +29,11 @@ public final class DevicePoolRule {
      */
     private final @Nullable String value;
 
-    @OutputCustomType.Constructor({"attribute","operator","value"})
+    @OutputCustomType.Constructor
     private DevicePoolRule(
-        @Nullable DevicePoolRuleAttribute attribute,
-        @Nullable DevicePoolRuleOperator operator,
-        @Nullable String value) {
+        @OutputCustomType.Parameter("attribute") @Nullable DevicePoolRuleAttribute attribute,
+        @OutputCustomType.Parameter("operator") @Nullable DevicePoolRuleOperator operator,
+        @OutputCustomType.Parameter("value") @Nullable String value) {
         this.attribute = attribute;
         this.operator = operator;
         this.value = value;

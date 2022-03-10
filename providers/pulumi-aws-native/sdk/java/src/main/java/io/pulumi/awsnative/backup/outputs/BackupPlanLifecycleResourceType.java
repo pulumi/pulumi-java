@@ -14,10 +14,10 @@ public final class BackupPlanLifecycleResourceType {
     private final @Nullable Double deleteAfterDays;
     private final @Nullable Double moveToColdStorageAfterDays;
 
-    @OutputCustomType.Constructor({"deleteAfterDays","moveToColdStorageAfterDays"})
+    @OutputCustomType.Constructor
     private BackupPlanLifecycleResourceType(
-        @Nullable Double deleteAfterDays,
-        @Nullable Double moveToColdStorageAfterDays) {
+        @OutputCustomType.Parameter("deleteAfterDays") @Nullable Double deleteAfterDays,
+        @OutputCustomType.Parameter("moveToColdStorageAfterDays") @Nullable Double moveToColdStorageAfterDays) {
         this.deleteAfterDays = deleteAfterDays;
         this.moveToColdStorageAfterDays = moveToColdStorageAfterDays;
     }

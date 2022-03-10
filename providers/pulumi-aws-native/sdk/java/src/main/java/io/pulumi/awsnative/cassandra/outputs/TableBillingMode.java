@@ -15,10 +15,10 @@ public final class TableBillingMode {
     private final TableMode mode;
     private final @Nullable TableProvisionedThroughput provisionedThroughput;
 
-    @OutputCustomType.Constructor({"mode","provisionedThroughput"})
+    @OutputCustomType.Constructor
     private TableBillingMode(
-        TableMode mode,
-        @Nullable TableProvisionedThroughput provisionedThroughput) {
+        @OutputCustomType.Parameter("mode") TableMode mode,
+        @OutputCustomType.Parameter("provisionedThroughput") @Nullable TableProvisionedThroughput provisionedThroughput) {
         this.mode = mode;
         this.provisionedThroughput = provisionedThroughput;
     }

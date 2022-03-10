@@ -20,13 +20,13 @@ public final class DatasetVariable {
     private final @Nullable String stringValue;
     private final String variableName;
 
-    @OutputCustomType.Constructor({"datasetContentVersionValue","doubleValue","outputFileUriValue","stringValue","variableName"})
+    @OutputCustomType.Constructor
     private DatasetVariable(
-        @Nullable DatasetContentVersionValue datasetContentVersionValue,
-        @Nullable Double doubleValue,
-        @Nullable DatasetOutputFileUriValue outputFileUriValue,
-        @Nullable String stringValue,
-        String variableName) {
+        @OutputCustomType.Parameter("datasetContentVersionValue") @Nullable DatasetContentVersionValue datasetContentVersionValue,
+        @OutputCustomType.Parameter("doubleValue") @Nullable Double doubleValue,
+        @OutputCustomType.Parameter("outputFileUriValue") @Nullable DatasetOutputFileUriValue outputFileUriValue,
+        @OutputCustomType.Parameter("stringValue") @Nullable String stringValue,
+        @OutputCustomType.Parameter("variableName") String variableName) {
         this.datasetContentVersionValue = datasetContentVersionValue;
         this.doubleValue = doubleValue;
         this.outputFileUriValue = outputFileUriValue;

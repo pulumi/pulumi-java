@@ -15,10 +15,10 @@ public final class ContactTargets {
     private final @Nullable ContactChannelTargetInfo channelTargetInfo;
     private final @Nullable ContactTargetInfo contactTargetInfo;
 
-    @OutputCustomType.Constructor({"channelTargetInfo","contactTargetInfo"})
+    @OutputCustomType.Constructor
     private ContactTargets(
-        @Nullable ContactChannelTargetInfo channelTargetInfo,
-        @Nullable ContactTargetInfo contactTargetInfo) {
+        @OutputCustomType.Parameter("channelTargetInfo") @Nullable ContactChannelTargetInfo channelTargetInfo,
+        @OutputCustomType.Parameter("contactTargetInfo") @Nullable ContactTargetInfo contactTargetInfo) {
         this.channelTargetInfo = channelTargetInfo;
         this.contactTargetInfo = contactTargetInfo;
     }

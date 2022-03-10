@@ -15,8 +15,8 @@ public final class TaskSchedule {
      */
     private final String scheduleExpression;
 
-    @OutputCustomType.Constructor({"scheduleExpression"})
-    private TaskSchedule(String scheduleExpression) {
+    @OutputCustomType.Constructor
+    private TaskSchedule(@OutputCustomType.Parameter("scheduleExpression") String scheduleExpression) {
         this.scheduleExpression = scheduleExpression;
     }
 

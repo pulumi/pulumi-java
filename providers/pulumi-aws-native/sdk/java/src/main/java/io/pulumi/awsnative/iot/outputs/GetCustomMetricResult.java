@@ -29,11 +29,11 @@ public final class GetCustomMetricResult {
      */
     private final @Nullable List<CustomMetricTag> tags;
 
-    @OutputCustomType.Constructor({"displayName","metricArn","tags"})
+    @OutputCustomType.Constructor
     private GetCustomMetricResult(
-        @Nullable String displayName,
-        @Nullable String metricArn,
-        @Nullable List<CustomMetricTag> tags) {
+        @OutputCustomType.Parameter("displayName") @Nullable String displayName,
+        @OutputCustomType.Parameter("metricArn") @Nullable String metricArn,
+        @OutputCustomType.Parameter("tags") @Nullable List<CustomMetricTag> tags) {
         this.displayName = displayName;
         this.metricArn = metricArn;
         this.tags = tags;

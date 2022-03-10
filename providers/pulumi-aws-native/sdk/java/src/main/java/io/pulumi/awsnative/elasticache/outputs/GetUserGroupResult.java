@@ -28,11 +28,11 @@ public final class GetUserGroupResult {
      */
     private final @Nullable List<String> userIds;
 
-    @OutputCustomType.Constructor({"arn","status","userIds"})
+    @OutputCustomType.Constructor
     private GetUserGroupResult(
-        @Nullable String arn,
-        @Nullable String status,
-        @Nullable List<String> userIds) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("status") @Nullable String status,
+        @OutputCustomType.Parameter("userIds") @Nullable List<String> userIds) {
         this.arn = arn;
         this.status = status;
         this.userIds = userIds;

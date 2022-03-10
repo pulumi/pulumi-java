@@ -24,10 +24,10 @@ public final class LoggingConfigurationFieldToMatchJsonBodyPropertiesMatchPatter
      */
     private final @Nullable List<String> includedPaths;
 
-    @OutputCustomType.Constructor({"all","includedPaths"})
+    @OutputCustomType.Constructor
     private LoggingConfigurationFieldToMatchJsonBodyPropertiesMatchPatternProperties(
-        @Nullable Object all,
-        @Nullable List<String> includedPaths) {
+        @OutputCustomType.Parameter("all") @Nullable Object all,
+        @OutputCustomType.Parameter("includedPaths") @Nullable List<String> includedPaths) {
         this.all = all;
         this.includedPaths = includedPaths;
     }

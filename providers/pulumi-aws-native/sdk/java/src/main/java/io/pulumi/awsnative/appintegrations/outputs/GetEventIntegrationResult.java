@@ -35,12 +35,12 @@ public final class GetEventIntegrationResult {
      */
     private final @Nullable List<EventIntegrationTag> tags;
 
-    @OutputCustomType.Constructor({"associations","description","eventIntegrationArn","tags"})
+    @OutputCustomType.Constructor
     private GetEventIntegrationResult(
-        @Nullable List<EventIntegrationAssociation> associations,
-        @Nullable String description,
-        @Nullable String eventIntegrationArn,
-        @Nullable List<EventIntegrationTag> tags) {
+        @OutputCustomType.Parameter("associations") @Nullable List<EventIntegrationAssociation> associations,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("eventIntegrationArn") @Nullable String eventIntegrationArn,
+        @OutputCustomType.Parameter("tags") @Nullable List<EventIntegrationTag> tags) {
         this.associations = associations;
         this.description = description;
         this.eventIntegrationArn = eventIntegrationArn;

@@ -20,10 +20,10 @@ public final class GetCollectionResult {
      */
     private final @Nullable List<CollectionTag> tags;
 
-    @OutputCustomType.Constructor({"arn","tags"})
+    @OutputCustomType.Constructor
     private GetCollectionResult(
-        @Nullable String arn,
-        @Nullable List<CollectionTag> tags) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("tags") @Nullable List<CollectionTag> tags) {
         this.arn = arn;
         this.tags = tags;
     }

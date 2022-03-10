@@ -16,11 +16,11 @@ public final class FilterMapFilter {
     private final @Nullable String key;
     private final @Nullable String value;
 
-    @OutputCustomType.Constructor({"comparison","key","value"})
+    @OutputCustomType.Constructor
     private FilterMapFilter(
-        FilterMapComparison comparison,
-        @Nullable String key,
-        @Nullable String value) {
+        @OutputCustomType.Parameter("comparison") FilterMapComparison comparison,
+        @OutputCustomType.Parameter("key") @Nullable String key,
+        @OutputCustomType.Parameter("value") @Nullable String value) {
         this.comparison = comparison;
         this.key = key;
         this.value = value;

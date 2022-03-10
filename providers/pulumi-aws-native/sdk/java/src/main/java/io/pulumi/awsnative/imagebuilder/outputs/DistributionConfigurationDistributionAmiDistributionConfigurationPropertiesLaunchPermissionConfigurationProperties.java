@@ -32,12 +32,12 @@ public final class DistributionConfigurationDistributionAmiDistributionConfigura
      */
     private final @Nullable List<String> userIds;
 
-    @OutputCustomType.Constructor({"organizationArns","organizationalUnitArns","userGroups","userIds"})
+    @OutputCustomType.Constructor
     private DistributionConfigurationDistributionAmiDistributionConfigurationPropertiesLaunchPermissionConfigurationProperties(
-        @Nullable List<String> organizationArns,
-        @Nullable List<String> organizationalUnitArns,
-        @Nullable List<String> userGroups,
-        @Nullable List<String> userIds) {
+        @OutputCustomType.Parameter("organizationArns") @Nullable List<String> organizationArns,
+        @OutputCustomType.Parameter("organizationalUnitArns") @Nullable List<String> organizationalUnitArns,
+        @OutputCustomType.Parameter("userGroups") @Nullable List<String> userGroups,
+        @OutputCustomType.Parameter("userIds") @Nullable List<String> userIds) {
         this.organizationArns = organizationArns;
         this.organizationalUnitArns = organizationalUnitArns;
         this.userGroups = userGroups;

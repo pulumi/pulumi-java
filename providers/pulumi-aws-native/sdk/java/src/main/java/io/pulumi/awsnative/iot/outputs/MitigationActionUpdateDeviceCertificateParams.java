@@ -11,8 +11,8 @@ import java.util.Objects;
 public final class MitigationActionUpdateDeviceCertificateParams {
     private final MitigationActionUpdateDeviceCertificateParamsAction action;
 
-    @OutputCustomType.Constructor({"action"})
-    private MitigationActionUpdateDeviceCertificateParams(MitigationActionUpdateDeviceCertificateParamsAction action) {
+    @OutputCustomType.Constructor
+    private MitigationActionUpdateDeviceCertificateParams(@OutputCustomType.Parameter("action") MitigationActionUpdateDeviceCertificateParamsAction action) {
         this.action = action;
     }
 

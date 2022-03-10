@@ -45,19 +45,19 @@ public final class DetectorEventVariable {
     private final @Nullable List<DetectorTag> tags;
     private final @Nullable DetectorEventVariableVariableType variableType;
 
-    @OutputCustomType.Constructor({"arn","createdTime","dataSource","dataType","defaultValue","description","inline","lastUpdatedTime","name","tags","variableType"})
+    @OutputCustomType.Constructor
     private DetectorEventVariable(
-        @Nullable String arn,
-        @Nullable String createdTime,
-        @Nullable DetectorEventVariableDataSource dataSource,
-        @Nullable DetectorEventVariableDataType dataType,
-        @Nullable String defaultValue,
-        @Nullable String description,
-        @Nullable Boolean inline,
-        @Nullable String lastUpdatedTime,
-        @Nullable String name,
-        @Nullable List<DetectorTag> tags,
-        @Nullable DetectorEventVariableVariableType variableType) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("createdTime") @Nullable String createdTime,
+        @OutputCustomType.Parameter("dataSource") @Nullable DetectorEventVariableDataSource dataSource,
+        @OutputCustomType.Parameter("dataType") @Nullable DetectorEventVariableDataType dataType,
+        @OutputCustomType.Parameter("defaultValue") @Nullable String defaultValue,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("inline") @Nullable Boolean inline,
+        @OutputCustomType.Parameter("lastUpdatedTime") @Nullable String lastUpdatedTime,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("tags") @Nullable List<DetectorTag> tags,
+        @OutputCustomType.Parameter("variableType") @Nullable DetectorEventVariableVariableType variableType) {
         this.arn = arn;
         this.createdTime = createdTime;
         this.dataSource = dataSource;

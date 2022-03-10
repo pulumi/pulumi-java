@@ -19,10 +19,10 @@ public final class ConnectorProfileSalesforceConnectorProfileProperties {
     private final @Nullable String instanceUrl;
     private final @Nullable Boolean isSandboxEnvironment;
 
-    @OutputCustomType.Constructor({"instanceUrl","isSandboxEnvironment"})
+    @OutputCustomType.Constructor
     private ConnectorProfileSalesforceConnectorProfileProperties(
-        @Nullable String instanceUrl,
-        @Nullable Boolean isSandboxEnvironment) {
+        @OutputCustomType.Parameter("instanceUrl") @Nullable String instanceUrl,
+        @OutputCustomType.Parameter("isSandboxEnvironment") @Nullable Boolean isSandboxEnvironment) {
         this.instanceUrl = instanceUrl;
         this.isSandboxEnvironment = isSandboxEnvironment;
     }

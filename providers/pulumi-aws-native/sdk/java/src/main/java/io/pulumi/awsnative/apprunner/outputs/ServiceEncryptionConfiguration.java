@@ -15,8 +15,8 @@ public final class ServiceEncryptionConfiguration {
      */
     private final String kmsKey;
 
-    @OutputCustomType.Constructor({"kmsKey"})
-    private ServiceEncryptionConfiguration(String kmsKey) {
+    @OutputCustomType.Constructor
+    private ServiceEncryptionConfiguration(@OutputCustomType.Parameter("kmsKey") String kmsKey) {
         this.kmsKey = kmsKey;
     }
 

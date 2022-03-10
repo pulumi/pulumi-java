@@ -14,10 +14,10 @@ public final class DistributionLegacyS3Origin {
     private final String dNSName;
     private final @Nullable String originAccessIdentity;
 
-    @OutputCustomType.Constructor({"dNSName","originAccessIdentity"})
+    @OutputCustomType.Constructor
     private DistributionLegacyS3Origin(
-        String dNSName,
-        @Nullable String originAccessIdentity) {
+        @OutputCustomType.Parameter("dNSName") String dNSName,
+        @OutputCustomType.Parameter("originAccessIdentity") @Nullable String originAccessIdentity) {
         this.dNSName = dNSName;
         this.originAccessIdentity = originAccessIdentity;
     }

@@ -15,10 +15,10 @@ public final class DataSourceWebCrawlerUrls {
     private final @Nullable DataSourceWebCrawlerSeedUrlConfiguration seedUrlConfiguration;
     private final @Nullable DataSourceWebCrawlerSiteMapsConfiguration siteMapsConfiguration;
 
-    @OutputCustomType.Constructor({"seedUrlConfiguration","siteMapsConfiguration"})
+    @OutputCustomType.Constructor
     private DataSourceWebCrawlerUrls(
-        @Nullable DataSourceWebCrawlerSeedUrlConfiguration seedUrlConfiguration,
-        @Nullable DataSourceWebCrawlerSiteMapsConfiguration siteMapsConfiguration) {
+        @OutputCustomType.Parameter("seedUrlConfiguration") @Nullable DataSourceWebCrawlerSeedUrlConfiguration seedUrlConfiguration,
+        @OutputCustomType.Parameter("siteMapsConfiguration") @Nullable DataSourceWebCrawlerSiteMapsConfiguration siteMapsConfiguration) {
         this.seedUrlConfiguration = seedUrlConfiguration;
         this.siteMapsConfiguration = siteMapsConfiguration;
     }

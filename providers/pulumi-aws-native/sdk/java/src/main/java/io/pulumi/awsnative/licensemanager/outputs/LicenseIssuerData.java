@@ -14,10 +14,10 @@ public final class LicenseIssuerData {
     private final String name;
     private final @Nullable String signKey;
 
-    @OutputCustomType.Constructor({"name","signKey"})
+    @OutputCustomType.Constructor
     private LicenseIssuerData(
-        String name,
-        @Nullable String signKey) {
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("signKey") @Nullable String signKey) {
         this.name = name;
         this.signKey = signKey;
     }

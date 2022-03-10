@@ -29,19 +29,19 @@ public final class GetApplicationInstanceResult {
     private final @Nullable ApplicationInstanceStatusFilter statusFilter;
     private final @Nullable List<ApplicationInstanceTag> tags;
 
-    @OutputCustomType.Constructor({"applicationInstanceId","arn","createdTime","defaultRuntimeContextDeviceName","deviceId","healthStatus","lastUpdatedTime","status","statusDescription","statusFilter","tags"})
+    @OutputCustomType.Constructor
     private GetApplicationInstanceResult(
-        @Nullable String applicationInstanceId,
-        @Nullable String arn,
-        @Nullable Integer createdTime,
-        @Nullable String defaultRuntimeContextDeviceName,
-        @Nullable String deviceId,
-        @Nullable ApplicationInstanceHealthStatus healthStatus,
-        @Nullable Integer lastUpdatedTime,
-        @Nullable ApplicationInstanceStatus status,
-        @Nullable String statusDescription,
-        @Nullable ApplicationInstanceStatusFilter statusFilter,
-        @Nullable List<ApplicationInstanceTag> tags) {
+        @OutputCustomType.Parameter("applicationInstanceId") @Nullable String applicationInstanceId,
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("createdTime") @Nullable Integer createdTime,
+        @OutputCustomType.Parameter("defaultRuntimeContextDeviceName") @Nullable String defaultRuntimeContextDeviceName,
+        @OutputCustomType.Parameter("deviceId") @Nullable String deviceId,
+        @OutputCustomType.Parameter("healthStatus") @Nullable ApplicationInstanceHealthStatus healthStatus,
+        @OutputCustomType.Parameter("lastUpdatedTime") @Nullable Integer lastUpdatedTime,
+        @OutputCustomType.Parameter("status") @Nullable ApplicationInstanceStatus status,
+        @OutputCustomType.Parameter("statusDescription") @Nullable String statusDescription,
+        @OutputCustomType.Parameter("statusFilter") @Nullable ApplicationInstanceStatusFilter statusFilter,
+        @OutputCustomType.Parameter("tags") @Nullable List<ApplicationInstanceTag> tags) {
         this.applicationInstanceId = applicationInstanceId;
         this.arn = arn;
         this.createdTime = createdTime;

@@ -41,17 +41,17 @@ public final class GetAssessmentResult {
      */
     private final @Nullable List<AssessmentTag> tags;
 
-    @OutputCustomType.Constructor({"arn","assessmentId","assessmentReportsDestination","creationTime","delegations","roles","scope","status","tags"})
+    @OutputCustomType.Constructor
     private GetAssessmentResult(
-        @Nullable String arn,
-        @Nullable String assessmentId,
-        @Nullable AssessmentReportsDestination assessmentReportsDestination,
-        @Nullable Double creationTime,
-        @Nullable List<AssessmentDelegation> delegations,
-        @Nullable List<AssessmentRole> roles,
-        @Nullable AssessmentScope scope,
-        @Nullable AssessmentStatus status,
-        @Nullable List<AssessmentTag> tags) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("assessmentId") @Nullable String assessmentId,
+        @OutputCustomType.Parameter("assessmentReportsDestination") @Nullable AssessmentReportsDestination assessmentReportsDestination,
+        @OutputCustomType.Parameter("creationTime") @Nullable Double creationTime,
+        @OutputCustomType.Parameter("delegations") @Nullable List<AssessmentDelegation> delegations,
+        @OutputCustomType.Parameter("roles") @Nullable List<AssessmentRole> roles,
+        @OutputCustomType.Parameter("scope") @Nullable AssessmentScope scope,
+        @OutputCustomType.Parameter("status") @Nullable AssessmentStatus status,
+        @OutputCustomType.Parameter("tags") @Nullable List<AssessmentTag> tags) {
         this.arn = arn;
         this.assessmentId = assessmentId;
         this.assessmentReportsDestination = assessmentReportsDestination;

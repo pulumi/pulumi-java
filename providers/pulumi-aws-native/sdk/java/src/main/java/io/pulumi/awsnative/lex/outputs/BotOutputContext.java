@@ -14,11 +14,11 @@ public final class BotOutputContext {
     private final Integer timeToLiveInSeconds;
     private final Integer turnsToLive;
 
-    @OutputCustomType.Constructor({"name","timeToLiveInSeconds","turnsToLive"})
+    @OutputCustomType.Constructor
     private BotOutputContext(
-        String name,
-        Integer timeToLiveInSeconds,
-        Integer turnsToLive) {
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("timeToLiveInSeconds") Integer timeToLiveInSeconds,
+        @OutputCustomType.Parameter("turnsToLive") Integer turnsToLive) {
         this.name = name;
         this.timeToLiveInSeconds = timeToLiveInSeconds;
         this.turnsToLive = turnsToLive;

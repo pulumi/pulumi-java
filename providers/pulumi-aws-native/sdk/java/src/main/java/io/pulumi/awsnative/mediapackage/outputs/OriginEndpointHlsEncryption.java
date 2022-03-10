@@ -37,13 +37,13 @@ public final class OriginEndpointHlsEncryption {
     private final @Nullable Boolean repeatExtXKey;
     private final OriginEndpointSpekeKeyProvider spekeKeyProvider;
 
-    @OutputCustomType.Constructor({"constantInitializationVector","encryptionMethod","keyRotationIntervalSeconds","repeatExtXKey","spekeKeyProvider"})
+    @OutputCustomType.Constructor
     private OriginEndpointHlsEncryption(
-        @Nullable String constantInitializationVector,
-        @Nullable OriginEndpointHlsEncryptionEncryptionMethod encryptionMethod,
-        @Nullable Integer keyRotationIntervalSeconds,
-        @Nullable Boolean repeatExtXKey,
-        OriginEndpointSpekeKeyProvider spekeKeyProvider) {
+        @OutputCustomType.Parameter("constantInitializationVector") @Nullable String constantInitializationVector,
+        @OutputCustomType.Parameter("encryptionMethod") @Nullable OriginEndpointHlsEncryptionEncryptionMethod encryptionMethod,
+        @OutputCustomType.Parameter("keyRotationIntervalSeconds") @Nullable Integer keyRotationIntervalSeconds,
+        @OutputCustomType.Parameter("repeatExtXKey") @Nullable Boolean repeatExtXKey,
+        @OutputCustomType.Parameter("spekeKeyProvider") OriginEndpointSpekeKeyProvider spekeKeyProvider) {
         this.constantInitializationVector = constantInitializationVector;
         this.encryptionMethod = encryptionMethod;
         this.keyRotationIntervalSeconds = keyRotationIntervalSeconds;

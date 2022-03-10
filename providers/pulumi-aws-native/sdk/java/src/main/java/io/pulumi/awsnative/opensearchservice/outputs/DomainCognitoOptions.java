@@ -17,12 +17,12 @@ public final class DomainCognitoOptions {
     private final @Nullable String roleArn;
     private final @Nullable String userPoolId;
 
-    @OutputCustomType.Constructor({"enabled","identityPoolId","roleArn","userPoolId"})
+    @OutputCustomType.Constructor
     private DomainCognitoOptions(
-        @Nullable Boolean enabled,
-        @Nullable String identityPoolId,
-        @Nullable String roleArn,
-        @Nullable String userPoolId) {
+        @OutputCustomType.Parameter("enabled") @Nullable Boolean enabled,
+        @OutputCustomType.Parameter("identityPoolId") @Nullable String identityPoolId,
+        @OutputCustomType.Parameter("roleArn") @Nullable String roleArn,
+        @OutputCustomType.Parameter("userPoolId") @Nullable String userPoolId) {
         this.enabled = enabled;
         this.identityPoolId = identityPoolId;
         this.roleArn = roleArn;

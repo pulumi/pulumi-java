@@ -14,10 +14,10 @@ public final class NetworkInsightsPathTag {
     private final String key;
     private final @Nullable String value;
 
-    @OutputCustomType.Constructor({"key","value"})
+    @OutputCustomType.Constructor
     private NetworkInsightsPathTag(
-        String key,
-        @Nullable String value) {
+        @OutputCustomType.Parameter("key") String key,
+        @OutputCustomType.Parameter("value") @Nullable String value) {
         this.key = key;
         this.value = value;
     }

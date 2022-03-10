@@ -40,21 +40,21 @@ public final class BotIntent {
      */
     private final @Nullable List<BotSlot> slots;
 
-    @OutputCustomType.Constructor({"description","dialogCodeHook","fulfillmentCodeHook","inputContexts","intentClosingSetting","intentConfirmationSetting","kendraConfiguration","name","outputContexts","parentIntentSignature","sampleUtterances","slotPriorities","slots"})
+    @OutputCustomType.Constructor
     private BotIntent(
-        @Nullable String description,
-        @Nullable BotDialogCodeHookSetting dialogCodeHook,
-        @Nullable BotFulfillmentCodeHookSetting fulfillmentCodeHook,
-        @Nullable List<BotInputContext> inputContexts,
-        @Nullable BotIntentClosingSetting intentClosingSetting,
-        @Nullable BotIntentConfirmationSetting intentConfirmationSetting,
-        @Nullable BotKendraConfiguration kendraConfiguration,
-        String name,
-        @Nullable List<BotOutputContext> outputContexts,
-        @Nullable String parentIntentSignature,
-        @Nullable List<BotSampleUtterance> sampleUtterances,
-        @Nullable List<BotSlotPriority> slotPriorities,
-        @Nullable List<BotSlot> slots) {
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("dialogCodeHook") @Nullable BotDialogCodeHookSetting dialogCodeHook,
+        @OutputCustomType.Parameter("fulfillmentCodeHook") @Nullable BotFulfillmentCodeHookSetting fulfillmentCodeHook,
+        @OutputCustomType.Parameter("inputContexts") @Nullable List<BotInputContext> inputContexts,
+        @OutputCustomType.Parameter("intentClosingSetting") @Nullable BotIntentClosingSetting intentClosingSetting,
+        @OutputCustomType.Parameter("intentConfirmationSetting") @Nullable BotIntentConfirmationSetting intentConfirmationSetting,
+        @OutputCustomType.Parameter("kendraConfiguration") @Nullable BotKendraConfiguration kendraConfiguration,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("outputContexts") @Nullable List<BotOutputContext> outputContexts,
+        @OutputCustomType.Parameter("parentIntentSignature") @Nullable String parentIntentSignature,
+        @OutputCustomType.Parameter("sampleUtterances") @Nullable List<BotSampleUtterance> sampleUtterances,
+        @OutputCustomType.Parameter("slotPriorities") @Nullable List<BotSlotPriority> slotPriorities,
+        @OutputCustomType.Parameter("slots") @Nullable List<BotSlot> slots) {
         this.description = description;
         this.dialogCodeHook = dialogCodeHook;
         this.fulfillmentCodeHook = fulfillmentCodeHook;

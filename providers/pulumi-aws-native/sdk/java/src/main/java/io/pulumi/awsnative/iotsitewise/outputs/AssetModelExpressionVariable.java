@@ -21,10 +21,10 @@ public final class AssetModelExpressionVariable {
      */
     private final AssetModelVariableValue value;
 
-    @OutputCustomType.Constructor({"name","value"})
+    @OutputCustomType.Constructor
     private AssetModelExpressionVariable(
-        String name,
-        AssetModelVariableValue value) {
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("value") AssetModelVariableValue value) {
         this.name = name;
         this.value = value;
     }

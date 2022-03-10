@@ -65,18 +65,18 @@ public final class OriginEndpointHlsManifest {
      */
     private final @Nullable String url;
 
-    @OutputCustomType.Constructor({"adMarkers","adTriggers","adsOnDeliveryRestrictions","id","includeIframeOnlyStream","manifestName","playlistType","playlistWindowSeconds","programDateTimeIntervalSeconds","url"})
+    @OutputCustomType.Constructor
     private OriginEndpointHlsManifest(
-        @Nullable OriginEndpointHlsManifestAdMarkers adMarkers,
-        @Nullable List<OriginEndpointHlsManifestAdTriggersItem> adTriggers,
-        @Nullable OriginEndpointAdsOnDeliveryRestrictions adsOnDeliveryRestrictions,
-        String id,
-        @Nullable Boolean includeIframeOnlyStream,
-        @Nullable String manifestName,
-        @Nullable OriginEndpointHlsManifestPlaylistType playlistType,
-        @Nullable Integer playlistWindowSeconds,
-        @Nullable Integer programDateTimeIntervalSeconds,
-        @Nullable String url) {
+        @OutputCustomType.Parameter("adMarkers") @Nullable OriginEndpointHlsManifestAdMarkers adMarkers,
+        @OutputCustomType.Parameter("adTriggers") @Nullable List<OriginEndpointHlsManifestAdTriggersItem> adTriggers,
+        @OutputCustomType.Parameter("adsOnDeliveryRestrictions") @Nullable OriginEndpointAdsOnDeliveryRestrictions adsOnDeliveryRestrictions,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("includeIframeOnlyStream") @Nullable Boolean includeIframeOnlyStream,
+        @OutputCustomType.Parameter("manifestName") @Nullable String manifestName,
+        @OutputCustomType.Parameter("playlistType") @Nullable OriginEndpointHlsManifestPlaylistType playlistType,
+        @OutputCustomType.Parameter("playlistWindowSeconds") @Nullable Integer playlistWindowSeconds,
+        @OutputCustomType.Parameter("programDateTimeIntervalSeconds") @Nullable Integer programDateTimeIntervalSeconds,
+        @OutputCustomType.Parameter("url") @Nullable String url) {
         this.adMarkers = adMarkers;
         this.adTriggers = adTriggers;
         this.adsOnDeliveryRestrictions = adsOnDeliveryRestrictions;

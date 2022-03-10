@@ -22,14 +22,14 @@ public final class DataSourceServiceNowConfiguration {
     private final @Nullable DataSourceServiceNowServiceCatalogConfiguration serviceCatalogConfiguration;
     private final DataSourceServiceNowBuildVersionType serviceNowBuildVersion;
 
-    @OutputCustomType.Constructor({"authenticationType","hostUrl","knowledgeArticleConfiguration","secretArn","serviceCatalogConfiguration","serviceNowBuildVersion"})
+    @OutputCustomType.Constructor
     private DataSourceServiceNowConfiguration(
-        @Nullable DataSourceServiceNowAuthenticationType authenticationType,
-        String hostUrl,
-        @Nullable DataSourceServiceNowKnowledgeArticleConfiguration knowledgeArticleConfiguration,
-        String secretArn,
-        @Nullable DataSourceServiceNowServiceCatalogConfiguration serviceCatalogConfiguration,
-        DataSourceServiceNowBuildVersionType serviceNowBuildVersion) {
+        @OutputCustomType.Parameter("authenticationType") @Nullable DataSourceServiceNowAuthenticationType authenticationType,
+        @OutputCustomType.Parameter("hostUrl") String hostUrl,
+        @OutputCustomType.Parameter("knowledgeArticleConfiguration") @Nullable DataSourceServiceNowKnowledgeArticleConfiguration knowledgeArticleConfiguration,
+        @OutputCustomType.Parameter("secretArn") String secretArn,
+        @OutputCustomType.Parameter("serviceCatalogConfiguration") @Nullable DataSourceServiceNowServiceCatalogConfiguration serviceCatalogConfiguration,
+        @OutputCustomType.Parameter("serviceNowBuildVersion") DataSourceServiceNowBuildVersionType serviceNowBuildVersion) {
         this.authenticationType = authenticationType;
         this.hostUrl = hostUrl;
         this.knowledgeArticleConfiguration = knowledgeArticleConfiguration;

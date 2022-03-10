@@ -23,10 +23,10 @@ public final class MagneticStoreWritePropertiesProperties {
      */
     private final @Nullable MagneticStoreWritePropertiesPropertiesMagneticStoreRejectedDataLocationProperties magneticStoreRejectedDataLocation;
 
-    @OutputCustomType.Constructor({"enableMagneticStoreWrites","magneticStoreRejectedDataLocation"})
+    @OutputCustomType.Constructor
     private MagneticStoreWritePropertiesProperties(
-        Boolean enableMagneticStoreWrites,
-        @Nullable MagneticStoreWritePropertiesPropertiesMagneticStoreRejectedDataLocationProperties magneticStoreRejectedDataLocation) {
+        @OutputCustomType.Parameter("enableMagneticStoreWrites") Boolean enableMagneticStoreWrites,
+        @OutputCustomType.Parameter("magneticStoreRejectedDataLocation") @Nullable MagneticStoreWritePropertiesPropertiesMagneticStoreRejectedDataLocationProperties magneticStoreRejectedDataLocation) {
         this.enableMagneticStoreWrites = enableMagneticStoreWrites;
         this.magneticStoreRejectedDataLocation = magneticStoreRejectedDataLocation;
     }

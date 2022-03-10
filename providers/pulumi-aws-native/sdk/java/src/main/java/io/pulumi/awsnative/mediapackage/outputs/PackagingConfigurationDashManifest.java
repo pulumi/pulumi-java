@@ -33,13 +33,13 @@ public final class PackagingConfigurationDashManifest {
     private final @Nullable PackagingConfigurationDashManifestProfile profile;
     private final @Nullable PackagingConfigurationStreamSelection streamSelection;
 
-    @OutputCustomType.Constructor({"manifestLayout","manifestName","minBufferTimeSeconds","profile","streamSelection"})
+    @OutputCustomType.Constructor
     private PackagingConfigurationDashManifest(
-        @Nullable PackagingConfigurationDashManifestManifestLayout manifestLayout,
-        @Nullable String manifestName,
-        @Nullable Integer minBufferTimeSeconds,
-        @Nullable PackagingConfigurationDashManifestProfile profile,
-        @Nullable PackagingConfigurationStreamSelection streamSelection) {
+        @OutputCustomType.Parameter("manifestLayout") @Nullable PackagingConfigurationDashManifestManifestLayout manifestLayout,
+        @OutputCustomType.Parameter("manifestName") @Nullable String manifestName,
+        @OutputCustomType.Parameter("minBufferTimeSeconds") @Nullable Integer minBufferTimeSeconds,
+        @OutputCustomType.Parameter("profile") @Nullable PackagingConfigurationDashManifestProfile profile,
+        @OutputCustomType.Parameter("streamSelection") @Nullable PackagingConfigurationStreamSelection streamSelection) {
         this.manifestLayout = manifestLayout;
         this.manifestName = manifestName;
         this.minBufferTimeSeconds = minBufferTimeSeconds;

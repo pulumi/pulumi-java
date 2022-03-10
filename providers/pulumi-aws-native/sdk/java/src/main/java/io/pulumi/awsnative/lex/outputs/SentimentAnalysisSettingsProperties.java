@@ -15,8 +15,8 @@ public final class SentimentAnalysisSettingsProperties {
      */
     private final Boolean detectSentiment;
 
-    @OutputCustomType.Constructor({"detectSentiment"})
-    private SentimentAnalysisSettingsProperties(Boolean detectSentiment) {
+    @OutputCustomType.Constructor
+    private SentimentAnalysisSettingsProperties(@OutputCustomType.Parameter("detectSentiment") Boolean detectSentiment) {
         this.detectSentiment = detectSentiment;
     }
 

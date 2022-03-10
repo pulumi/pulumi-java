@@ -13,10 +13,10 @@ public final class AnomalyDetectorVpcConfiguration {
     private final List<String> securityGroupIdList;
     private final List<String> subnetIdList;
 
-    @OutputCustomType.Constructor({"securityGroupIdList","subnetIdList"})
+    @OutputCustomType.Constructor
     private AnomalyDetectorVpcConfiguration(
-        List<String> securityGroupIdList,
-        List<String> subnetIdList) {
+        @OutputCustomType.Parameter("securityGroupIdList") List<String> securityGroupIdList,
+        @OutputCustomType.Parameter("subnetIdList") List<String> subnetIdList) {
         this.securityGroupIdList = securityGroupIdList;
         this.subnetIdList = subnetIdList;
     }

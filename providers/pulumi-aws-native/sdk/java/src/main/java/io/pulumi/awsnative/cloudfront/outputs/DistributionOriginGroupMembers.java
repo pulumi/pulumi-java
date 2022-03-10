@@ -14,10 +14,10 @@ public final class DistributionOriginGroupMembers {
     private final List<DistributionOriginGroupMember> items;
     private final Integer quantity;
 
-    @OutputCustomType.Constructor({"items","quantity"})
+    @OutputCustomType.Constructor
     private DistributionOriginGroupMembers(
-        List<DistributionOriginGroupMember> items,
-        Integer quantity) {
+        @OutputCustomType.Parameter("items") List<DistributionOriginGroupMember> items,
+        @OutputCustomType.Parameter("quantity") Integer quantity) {
         this.items = items;
         this.quantity = quantity;
     }

@@ -14,10 +14,10 @@ public final class BotSlotTypeValue {
     private final BotSampleValue sampleValue;
     private final @Nullable List<BotSampleValue> synonyms;
 
-    @OutputCustomType.Constructor({"sampleValue","synonyms"})
+    @OutputCustomType.Constructor
     private BotSlotTypeValue(
-        BotSampleValue sampleValue,
-        @Nullable List<BotSampleValue> synonyms) {
+        @OutputCustomType.Parameter("sampleValue") BotSampleValue sampleValue,
+        @OutputCustomType.Parameter("synonyms") @Nullable List<BotSampleValue> synonyms) {
         this.sampleValue = sampleValue;
         this.synonyms = synonyms;
     }

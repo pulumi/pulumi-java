@@ -28,17 +28,17 @@ public final class DeliveryStreamHttpEndpointDestinationConfiguration {
     private final @Nullable String s3BackupMode;
     private final DeliveryStreamS3DestinationConfiguration s3Configuration;
 
-    @OutputCustomType.Constructor({"bufferingHints","cloudWatchLoggingOptions","endpointConfiguration","processingConfiguration","requestConfiguration","retryOptions","roleARN","s3BackupMode","s3Configuration"})
+    @OutputCustomType.Constructor
     private DeliveryStreamHttpEndpointDestinationConfiguration(
-        @Nullable DeliveryStreamBufferingHints bufferingHints,
-        @Nullable DeliveryStreamCloudWatchLoggingOptions cloudWatchLoggingOptions,
-        DeliveryStreamHttpEndpointConfiguration endpointConfiguration,
-        @Nullable DeliveryStreamProcessingConfiguration processingConfiguration,
-        @Nullable DeliveryStreamHttpEndpointRequestConfiguration requestConfiguration,
-        @Nullable DeliveryStreamRetryOptions retryOptions,
-        @Nullable String roleARN,
-        @Nullable String s3BackupMode,
-        DeliveryStreamS3DestinationConfiguration s3Configuration) {
+        @OutputCustomType.Parameter("bufferingHints") @Nullable DeliveryStreamBufferingHints bufferingHints,
+        @OutputCustomType.Parameter("cloudWatchLoggingOptions") @Nullable DeliveryStreamCloudWatchLoggingOptions cloudWatchLoggingOptions,
+        @OutputCustomType.Parameter("endpointConfiguration") DeliveryStreamHttpEndpointConfiguration endpointConfiguration,
+        @OutputCustomType.Parameter("processingConfiguration") @Nullable DeliveryStreamProcessingConfiguration processingConfiguration,
+        @OutputCustomType.Parameter("requestConfiguration") @Nullable DeliveryStreamHttpEndpointRequestConfiguration requestConfiguration,
+        @OutputCustomType.Parameter("retryOptions") @Nullable DeliveryStreamRetryOptions retryOptions,
+        @OutputCustomType.Parameter("roleARN") @Nullable String roleARN,
+        @OutputCustomType.Parameter("s3BackupMode") @Nullable String s3BackupMode,
+        @OutputCustomType.Parameter("s3Configuration") DeliveryStreamS3DestinationConfiguration s3Configuration) {
         this.bufferingHints = bufferingHints;
         this.cloudWatchLoggingOptions = cloudWatchLoggingOptions;
         this.endpointConfiguration = endpointConfiguration;

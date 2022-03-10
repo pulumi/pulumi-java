@@ -13,10 +13,10 @@ public final class WebACLTextTransformation {
     private final Integer priority;
     private final WebACLTextTransformationType type;
 
-    @OutputCustomType.Constructor({"priority","type"})
+    @OutputCustomType.Constructor
     private WebACLTextTransformation(
-        Integer priority,
-        WebACLTextTransformationType type) {
+        @OutputCustomType.Parameter("priority") Integer priority,
+        @OutputCustomType.Parameter("type") WebACLTextTransformationType type) {
         this.priority = priority;
         this.type = type;
     }

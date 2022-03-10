@@ -22,10 +22,10 @@ public final class StudioComponentComputeFarmConfiguration {
      */
     private final @Nullable String endpoint;
 
-    @OutputCustomType.Constructor({"activeDirectoryUser","endpoint"})
+    @OutputCustomType.Constructor
     private StudioComponentComputeFarmConfiguration(
-        @Nullable String activeDirectoryUser,
-        @Nullable String endpoint) {
+        @OutputCustomType.Parameter("activeDirectoryUser") @Nullable String activeDirectoryUser,
+        @OutputCustomType.Parameter("endpoint") @Nullable String endpoint) {
         this.activeDirectoryUser = activeDirectoryUser;
         this.endpoint = endpoint;
     }

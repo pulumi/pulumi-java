@@ -45,19 +45,19 @@ public final class EventTypeEventVariable {
     private final @Nullable List<EventTypeTag> tags;
     private final @Nullable EventTypeEventVariableVariableType variableType;
 
-    @OutputCustomType.Constructor({"arn","createdTime","dataSource","dataType","defaultValue","description","inline","lastUpdatedTime","name","tags","variableType"})
+    @OutputCustomType.Constructor
     private EventTypeEventVariable(
-        @Nullable String arn,
-        @Nullable String createdTime,
-        @Nullable EventTypeEventVariableDataSource dataSource,
-        @Nullable EventTypeEventVariableDataType dataType,
-        @Nullable String defaultValue,
-        @Nullable String description,
-        @Nullable Boolean inline,
-        @Nullable String lastUpdatedTime,
-        @Nullable String name,
-        @Nullable List<EventTypeTag> tags,
-        @Nullable EventTypeEventVariableVariableType variableType) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("createdTime") @Nullable String createdTime,
+        @OutputCustomType.Parameter("dataSource") @Nullable EventTypeEventVariableDataSource dataSource,
+        @OutputCustomType.Parameter("dataType") @Nullable EventTypeEventVariableDataType dataType,
+        @OutputCustomType.Parameter("defaultValue") @Nullable String defaultValue,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("inline") @Nullable Boolean inline,
+        @OutputCustomType.Parameter("lastUpdatedTime") @Nullable String lastUpdatedTime,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("tags") @Nullable List<EventTypeTag> tags,
+        @OutputCustomType.Parameter("variableType") @Nullable EventTypeEventVariableVariableType variableType) {
         this.arn = arn;
         this.createdTime = createdTime;
         this.dataSource = dataSource;

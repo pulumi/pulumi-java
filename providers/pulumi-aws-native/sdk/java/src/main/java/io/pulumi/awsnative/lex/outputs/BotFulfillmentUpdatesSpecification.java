@@ -27,12 +27,12 @@ public final class BotFulfillmentUpdatesSpecification {
     private final @Nullable Integer timeoutInSeconds;
     private final @Nullable BotFulfillmentUpdateResponseSpecification updateResponse;
 
-    @OutputCustomType.Constructor({"active","startResponse","timeoutInSeconds","updateResponse"})
+    @OutputCustomType.Constructor
     private BotFulfillmentUpdatesSpecification(
-        Boolean active,
-        @Nullable BotFulfillmentStartResponseSpecification startResponse,
-        @Nullable Integer timeoutInSeconds,
-        @Nullable BotFulfillmentUpdateResponseSpecification updateResponse) {
+        @OutputCustomType.Parameter("active") Boolean active,
+        @OutputCustomType.Parameter("startResponse") @Nullable BotFulfillmentStartResponseSpecification startResponse,
+        @OutputCustomType.Parameter("timeoutInSeconds") @Nullable Integer timeoutInSeconds,
+        @OutputCustomType.Parameter("updateResponse") @Nullable BotFulfillmentUpdateResponseSpecification updateResponse) {
         this.active = active;
         this.startResponse = startResponse;
         this.timeoutInSeconds = timeoutInSeconds;

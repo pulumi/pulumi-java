@@ -22,11 +22,11 @@ public final class PackagingConfigurationSpekeKeyProvider {
      */
     private final String url;
 
-    @OutputCustomType.Constructor({"roleArn","systemIds","url"})
+    @OutputCustomType.Constructor
     private PackagingConfigurationSpekeKeyProvider(
-        String roleArn,
-        List<String> systemIds,
-        String url) {
+        @OutputCustomType.Parameter("roleArn") String roleArn,
+        @OutputCustomType.Parameter("systemIds") List<String> systemIds,
+        @OutputCustomType.Parameter("url") String url) {
         this.roleArn = roleArn;
         this.systemIds = systemIds;
         this.url = url;

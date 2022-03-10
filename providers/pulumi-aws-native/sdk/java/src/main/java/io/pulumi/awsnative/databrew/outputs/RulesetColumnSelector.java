@@ -22,10 +22,10 @@ public final class RulesetColumnSelector {
      */
     private final @Nullable String regex;
 
-    @OutputCustomType.Constructor({"name","regex"})
+    @OutputCustomType.Constructor
     private RulesetColumnSelector(
-        @Nullable String name,
-        @Nullable String regex) {
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("regex") @Nullable String regex) {
         this.name = name;
         this.regex = regex;
     }

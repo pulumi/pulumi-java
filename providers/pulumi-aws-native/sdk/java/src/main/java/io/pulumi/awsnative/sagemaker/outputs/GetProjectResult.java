@@ -31,13 +31,13 @@ public final class GetProjectResult {
      */
     private final @Nullable ServiceCatalogProvisionedProductDetailsProperties serviceCatalogProvisionedProductDetails;
 
-    @OutputCustomType.Constructor({"creationTime","projectArn","projectId","projectStatus","serviceCatalogProvisionedProductDetails"})
+    @OutputCustomType.Constructor
     private GetProjectResult(
-        @Nullable String creationTime,
-        @Nullable String projectArn,
-        @Nullable String projectId,
-        @Nullable ProjectStatus projectStatus,
-        @Nullable ServiceCatalogProvisionedProductDetailsProperties serviceCatalogProvisionedProductDetails) {
+        @OutputCustomType.Parameter("creationTime") @Nullable String creationTime,
+        @OutputCustomType.Parameter("projectArn") @Nullable String projectArn,
+        @OutputCustomType.Parameter("projectId") @Nullable String projectId,
+        @OutputCustomType.Parameter("projectStatus") @Nullable ProjectStatus projectStatus,
+        @OutputCustomType.Parameter("serviceCatalogProvisionedProductDetails") @Nullable ServiceCatalogProvisionedProductDetailsProperties serviceCatalogProvisionedProductDetails) {
         this.creationTime = creationTime;
         this.projectArn = projectArn;
         this.projectId = projectId;

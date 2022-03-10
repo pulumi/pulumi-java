@@ -38,14 +38,14 @@ public final class PackagingConfigurationHlsManifest {
     private final @Nullable Boolean repeatExtXKey;
     private final @Nullable PackagingConfigurationStreamSelection streamSelection;
 
-    @OutputCustomType.Constructor({"adMarkers","includeIframeOnlyStream","manifestName","programDateTimeIntervalSeconds","repeatExtXKey","streamSelection"})
+    @OutputCustomType.Constructor
     private PackagingConfigurationHlsManifest(
-        @Nullable PackagingConfigurationHlsManifestAdMarkers adMarkers,
-        @Nullable Boolean includeIframeOnlyStream,
-        @Nullable String manifestName,
-        @Nullable Integer programDateTimeIntervalSeconds,
-        @Nullable Boolean repeatExtXKey,
-        @Nullable PackagingConfigurationStreamSelection streamSelection) {
+        @OutputCustomType.Parameter("adMarkers") @Nullable PackagingConfigurationHlsManifestAdMarkers adMarkers,
+        @OutputCustomType.Parameter("includeIframeOnlyStream") @Nullable Boolean includeIframeOnlyStream,
+        @OutputCustomType.Parameter("manifestName") @Nullable String manifestName,
+        @OutputCustomType.Parameter("programDateTimeIntervalSeconds") @Nullable Integer programDateTimeIntervalSeconds,
+        @OutputCustomType.Parameter("repeatExtXKey") @Nullable Boolean repeatExtXKey,
+        @OutputCustomType.Parameter("streamSelection") @Nullable PackagingConfigurationStreamSelection streamSelection) {
         this.adMarkers = adMarkers;
         this.includeIframeOnlyStream = includeIframeOnlyStream;
         this.manifestName = manifestName;

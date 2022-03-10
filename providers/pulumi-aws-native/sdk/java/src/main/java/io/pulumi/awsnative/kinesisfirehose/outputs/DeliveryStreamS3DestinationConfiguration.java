@@ -24,16 +24,16 @@ public final class DeliveryStreamS3DestinationConfiguration {
     private final @Nullable String prefix;
     private final String roleARN;
 
-    @OutputCustomType.Constructor({"bucketARN","bufferingHints","cloudWatchLoggingOptions","compressionFormat","encryptionConfiguration","errorOutputPrefix","prefix","roleARN"})
+    @OutputCustomType.Constructor
     private DeliveryStreamS3DestinationConfiguration(
-        String bucketARN,
-        @Nullable DeliveryStreamBufferingHints bufferingHints,
-        @Nullable DeliveryStreamCloudWatchLoggingOptions cloudWatchLoggingOptions,
-        @Nullable DeliveryStreamS3DestinationConfigurationCompressionFormat compressionFormat,
-        @Nullable DeliveryStreamEncryptionConfiguration encryptionConfiguration,
-        @Nullable String errorOutputPrefix,
-        @Nullable String prefix,
-        String roleARN) {
+        @OutputCustomType.Parameter("bucketARN") String bucketARN,
+        @OutputCustomType.Parameter("bufferingHints") @Nullable DeliveryStreamBufferingHints bufferingHints,
+        @OutputCustomType.Parameter("cloudWatchLoggingOptions") @Nullable DeliveryStreamCloudWatchLoggingOptions cloudWatchLoggingOptions,
+        @OutputCustomType.Parameter("compressionFormat") @Nullable DeliveryStreamS3DestinationConfigurationCompressionFormat compressionFormat,
+        @OutputCustomType.Parameter("encryptionConfiguration") @Nullable DeliveryStreamEncryptionConfiguration encryptionConfiguration,
+        @OutputCustomType.Parameter("errorOutputPrefix") @Nullable String errorOutputPrefix,
+        @OutputCustomType.Parameter("prefix") @Nullable String prefix,
+        @OutputCustomType.Parameter("roleARN") String roleARN) {
         this.bucketARN = bucketARN;
         this.bufferingHints = bufferingHints;
         this.cloudWatchLoggingOptions = cloudWatchLoggingOptions;

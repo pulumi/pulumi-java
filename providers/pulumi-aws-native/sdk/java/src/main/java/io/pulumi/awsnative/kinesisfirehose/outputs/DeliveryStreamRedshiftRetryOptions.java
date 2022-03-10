@@ -13,8 +13,8 @@ import javax.annotation.Nullable;
 public final class DeliveryStreamRedshiftRetryOptions {
     private final @Nullable Integer durationInSeconds;
 
-    @OutputCustomType.Constructor({"durationInSeconds"})
-    private DeliveryStreamRedshiftRetryOptions(@Nullable Integer durationInSeconds) {
+    @OutputCustomType.Constructor
+    private DeliveryStreamRedshiftRetryOptions(@OutputCustomType.Parameter("durationInSeconds") @Nullable Integer durationInSeconds) {
         this.durationInSeconds = durationInSeconds;
     }
 

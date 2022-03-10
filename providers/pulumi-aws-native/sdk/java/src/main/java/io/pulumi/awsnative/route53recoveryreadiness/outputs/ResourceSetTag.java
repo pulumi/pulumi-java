@@ -13,10 +13,10 @@ public final class ResourceSetTag {
     private final String key;
     private final List<String> value;
 
-    @OutputCustomType.Constructor({"key","value"})
+    @OutputCustomType.Constructor
     private ResourceSetTag(
-        String key,
-        List<String> value) {
+        @OutputCustomType.Parameter("key") String key,
+        @OutputCustomType.Parameter("value") List<String> value) {
         this.key = key;
         this.value = value;
     }

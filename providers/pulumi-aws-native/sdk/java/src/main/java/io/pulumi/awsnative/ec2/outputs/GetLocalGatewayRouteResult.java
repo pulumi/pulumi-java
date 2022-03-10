@@ -22,10 +22,10 @@ public final class GetLocalGatewayRouteResult {
      */
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor({"state","type"})
+    @OutputCustomType.Constructor
     private GetLocalGatewayRouteResult(
-        @Nullable String state,
-        @Nullable String type) {
+        @OutputCustomType.Parameter("state") @Nullable String state,
+        @OutputCustomType.Parameter("type") @Nullable String type) {
         this.state = state;
         this.type = type;
     }

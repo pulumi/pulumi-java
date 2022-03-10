@@ -19,12 +19,12 @@ public final class AuthParametersProperties {
     private final @Nullable ConnectionHttpParameters invocationHttpParameters;
     private final @Nullable ConnectionOAuthParameters oAuthParameters;
 
-    @OutputCustomType.Constructor({"apiKeyAuthParameters","basicAuthParameters","invocationHttpParameters","oAuthParameters"})
+    @OutputCustomType.Constructor
     private AuthParametersProperties(
-        @Nullable ConnectionApiKeyAuthParameters apiKeyAuthParameters,
-        @Nullable ConnectionBasicAuthParameters basicAuthParameters,
-        @Nullable ConnectionHttpParameters invocationHttpParameters,
-        @Nullable ConnectionOAuthParameters oAuthParameters) {
+        @OutputCustomType.Parameter("apiKeyAuthParameters") @Nullable ConnectionApiKeyAuthParameters apiKeyAuthParameters,
+        @OutputCustomType.Parameter("basicAuthParameters") @Nullable ConnectionBasicAuthParameters basicAuthParameters,
+        @OutputCustomType.Parameter("invocationHttpParameters") @Nullable ConnectionHttpParameters invocationHttpParameters,
+        @OutputCustomType.Parameter("oAuthParameters") @Nullable ConnectionOAuthParameters oAuthParameters) {
         this.apiKeyAuthParameters = apiKeyAuthParameters;
         this.basicAuthParameters = basicAuthParameters;
         this.invocationHttpParameters = invocationHttpParameters;

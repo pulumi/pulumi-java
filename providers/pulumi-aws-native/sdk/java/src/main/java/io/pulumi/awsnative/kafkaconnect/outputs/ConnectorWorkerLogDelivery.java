@@ -17,11 +17,11 @@ public final class ConnectorWorkerLogDelivery {
     private final @Nullable ConnectorFirehoseLogDelivery firehose;
     private final @Nullable ConnectorS3LogDelivery s3;
 
-    @OutputCustomType.Constructor({"cloudWatchLogs","firehose","s3"})
+    @OutputCustomType.Constructor
     private ConnectorWorkerLogDelivery(
-        @Nullable ConnectorCloudWatchLogsLogDelivery cloudWatchLogs,
-        @Nullable ConnectorFirehoseLogDelivery firehose,
-        @Nullable ConnectorS3LogDelivery s3) {
+        @OutputCustomType.Parameter("cloudWatchLogs") @Nullable ConnectorCloudWatchLogsLogDelivery cloudWatchLogs,
+        @OutputCustomType.Parameter("firehose") @Nullable ConnectorFirehoseLogDelivery firehose,
+        @OutputCustomType.Parameter("s3") @Nullable ConnectorS3LogDelivery s3) {
         this.cloudWatchLogs = cloudWatchLogs;
         this.firehose = firehose;
         this.s3 = s3;

@@ -20,10 +20,10 @@ public final class RolePolicy {
      */
     private final String policyName;
 
-    @OutputCustomType.Constructor({"policyDocument","policyName"})
+    @OutputCustomType.Constructor
     private RolePolicy(
-        String policyDocument,
-        String policyName) {
+        @OutputCustomType.Parameter("policyDocument") String policyDocument,
+        @OutputCustomType.Parameter("policyName") String policyName) {
         this.policyDocument = policyDocument;
         this.policyName = policyName;
     }

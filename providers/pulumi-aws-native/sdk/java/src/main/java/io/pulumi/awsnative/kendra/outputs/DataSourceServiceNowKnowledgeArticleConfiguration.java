@@ -22,15 +22,15 @@ public final class DataSourceServiceNowKnowledgeArticleConfiguration {
     private final @Nullable String filterQuery;
     private final @Nullable List<String> includeAttachmentFilePatterns;
 
-    @OutputCustomType.Constructor({"crawlAttachments","documentDataFieldName","documentTitleFieldName","excludeAttachmentFilePatterns","fieldMappings","filterQuery","includeAttachmentFilePatterns"})
+    @OutputCustomType.Constructor
     private DataSourceServiceNowKnowledgeArticleConfiguration(
-        @Nullable Boolean crawlAttachments,
-        String documentDataFieldName,
-        @Nullable String documentTitleFieldName,
-        @Nullable List<String> excludeAttachmentFilePatterns,
-        @Nullable List<DataSourceToIndexFieldMapping> fieldMappings,
-        @Nullable String filterQuery,
-        @Nullable List<String> includeAttachmentFilePatterns) {
+        @OutputCustomType.Parameter("crawlAttachments") @Nullable Boolean crawlAttachments,
+        @OutputCustomType.Parameter("documentDataFieldName") String documentDataFieldName,
+        @OutputCustomType.Parameter("documentTitleFieldName") @Nullable String documentTitleFieldName,
+        @OutputCustomType.Parameter("excludeAttachmentFilePatterns") @Nullable List<String> excludeAttachmentFilePatterns,
+        @OutputCustomType.Parameter("fieldMappings") @Nullable List<DataSourceToIndexFieldMapping> fieldMappings,
+        @OutputCustomType.Parameter("filterQuery") @Nullable String filterQuery,
+        @OutputCustomType.Parameter("includeAttachmentFilePatterns") @Nullable List<String> includeAttachmentFilePatterns) {
         this.crawlAttachments = crawlAttachments;
         this.documentDataFieldName = documentDataFieldName;
         this.documentTitleFieldName = documentTitleFieldName;

@@ -12,8 +12,8 @@ import java.util.Objects;
 public final class SpotFleetClassicLoadBalancersConfig {
     private final List<SpotFleetClassicLoadBalancer> classicLoadBalancers;
 
-    @OutputCustomType.Constructor({"classicLoadBalancers"})
-    private SpotFleetClassicLoadBalancersConfig(List<SpotFleetClassicLoadBalancer> classicLoadBalancers) {
+    @OutputCustomType.Constructor
+    private SpotFleetClassicLoadBalancersConfig(@OutputCustomType.Parameter("classicLoadBalancers") List<SpotFleetClassicLoadBalancer> classicLoadBalancers) {
         this.classicLoadBalancers = classicLoadBalancers;
     }
 

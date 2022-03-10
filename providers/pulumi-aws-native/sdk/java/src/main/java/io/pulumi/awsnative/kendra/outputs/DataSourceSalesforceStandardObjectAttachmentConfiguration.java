@@ -16,10 +16,10 @@ public final class DataSourceSalesforceStandardObjectAttachmentConfiguration {
     private final @Nullable String documentTitleFieldName;
     private final @Nullable List<DataSourceToIndexFieldMapping> fieldMappings;
 
-    @OutputCustomType.Constructor({"documentTitleFieldName","fieldMappings"})
+    @OutputCustomType.Constructor
     private DataSourceSalesforceStandardObjectAttachmentConfiguration(
-        @Nullable String documentTitleFieldName,
-        @Nullable List<DataSourceToIndexFieldMapping> fieldMappings) {
+        @OutputCustomType.Parameter("documentTitleFieldName") @Nullable String documentTitleFieldName,
+        @OutputCustomType.Parameter("fieldMappings") @Nullable List<DataSourceToIndexFieldMapping> fieldMappings) {
         this.documentTitleFieldName = documentTitleFieldName;
         this.fieldMappings = fieldMappings;
     }

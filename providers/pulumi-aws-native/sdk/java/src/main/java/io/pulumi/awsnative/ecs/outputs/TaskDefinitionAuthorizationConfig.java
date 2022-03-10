@@ -15,10 +15,10 @@ public final class TaskDefinitionAuthorizationConfig {
     private final @Nullable String accessPointId;
     private final @Nullable TaskDefinitionAuthorizationConfigIAM iAM;
 
-    @OutputCustomType.Constructor({"accessPointId","iAM"})
+    @OutputCustomType.Constructor
     private TaskDefinitionAuthorizationConfig(
-        @Nullable String accessPointId,
-        @Nullable TaskDefinitionAuthorizationConfigIAM iAM) {
+        @OutputCustomType.Parameter("accessPointId") @Nullable String accessPointId,
+        @OutputCustomType.Parameter("iAM") @Nullable TaskDefinitionAuthorizationConfigIAM iAM) {
         this.accessPointId = accessPointId;
         this.iAM = iAM;
     }

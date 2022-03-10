@@ -26,11 +26,11 @@ public final class GetReplicationSetResult {
      */
     private final @Nullable List<ReplicationSetReplicationRegion> regions;
 
-    @OutputCustomType.Constructor({"arn","deletionProtected","regions"})
+    @OutputCustomType.Constructor
     private GetReplicationSetResult(
-        @Nullable String arn,
-        @Nullable Boolean deletionProtected,
-        @Nullable List<ReplicationSetReplicationRegion> regions) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("deletionProtected") @Nullable Boolean deletionProtected,
+        @OutputCustomType.Parameter("regions") @Nullable List<ReplicationSetReplicationRegion> regions) {
         this.arn = arn;
         this.deletionProtected = deletionProtected;
         this.regions = regions;

@@ -14,11 +14,11 @@ public final class DataSourceOracleParameters {
     private final String host;
     private final Double port;
 
-    @OutputCustomType.Constructor({"database","host","port"})
+    @OutputCustomType.Constructor
     private DataSourceOracleParameters(
-        String database,
-        String host,
-        Double port) {
+        @OutputCustomType.Parameter("database") String database,
+        @OutputCustomType.Parameter("host") String host,
+        @OutputCustomType.Parameter("port") Double port) {
         this.database = database;
         this.host = host;
         this.port = port;

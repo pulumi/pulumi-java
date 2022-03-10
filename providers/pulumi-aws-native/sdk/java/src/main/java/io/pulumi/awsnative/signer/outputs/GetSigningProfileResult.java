@@ -39,13 +39,13 @@ public final class GetSigningProfileResult {
      */
     private final @Nullable List<SigningProfileTag> tags;
 
-    @OutputCustomType.Constructor({"arn","profileName","profileVersion","profileVersionArn","tags"})
+    @OutputCustomType.Constructor
     private GetSigningProfileResult(
-        @Nullable String arn,
-        @Nullable String profileName,
-        @Nullable String profileVersion,
-        @Nullable String profileVersionArn,
-        @Nullable List<SigningProfileTag> tags) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("profileName") @Nullable String profileName,
+        @OutputCustomType.Parameter("profileVersion") @Nullable String profileVersion,
+        @OutputCustomType.Parameter("profileVersionArn") @Nullable String profileVersionArn,
+        @OutputCustomType.Parameter("tags") @Nullable List<SigningProfileTag> tags) {
         this.arn = arn;
         this.profileName = profileName;
         this.profileVersion = profileVersion;

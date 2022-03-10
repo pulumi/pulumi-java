@@ -22,10 +22,10 @@ public final class BucketRoutingRuleCondition {
      */
     private final @Nullable String keyPrefixEquals;
 
-    @OutputCustomType.Constructor({"httpErrorCodeReturnedEquals","keyPrefixEquals"})
+    @OutputCustomType.Constructor
     private BucketRoutingRuleCondition(
-        @Nullable String httpErrorCodeReturnedEquals,
-        @Nullable String keyPrefixEquals) {
+        @OutputCustomType.Parameter("httpErrorCodeReturnedEquals") @Nullable String httpErrorCodeReturnedEquals,
+        @OutputCustomType.Parameter("keyPrefixEquals") @Nullable String keyPrefixEquals) {
         this.httpErrorCodeReturnedEquals = httpErrorCodeReturnedEquals;
         this.keyPrefixEquals = keyPrefixEquals;
     }

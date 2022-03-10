@@ -19,10 +19,10 @@ public final class GetConnectorResult {
      */
     private final @Nullable String connectorArn;
 
-    @OutputCustomType.Constructor({"capacity","connectorArn"})
+    @OutputCustomType.Constructor
     private GetConnectorResult(
-        @Nullable ConnectorCapacity capacity,
-        @Nullable String connectorArn) {
+        @OutputCustomType.Parameter("capacity") @Nullable ConnectorCapacity capacity,
+        @OutputCustomType.Parameter("connectorArn") @Nullable String connectorArn) {
         this.capacity = capacity;
         this.connectorArn = connectorArn;
     }

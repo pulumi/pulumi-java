@@ -16,11 +16,11 @@ public final class DomainAdvancedSecurityOptionsInput {
     private final @Nullable Boolean internalUserDatabaseEnabled;
     private final @Nullable DomainMasterUserOptions masterUserOptions;
 
-    @OutputCustomType.Constructor({"enabled","internalUserDatabaseEnabled","masterUserOptions"})
+    @OutputCustomType.Constructor
     private DomainAdvancedSecurityOptionsInput(
-        @Nullable Boolean enabled,
-        @Nullable Boolean internalUserDatabaseEnabled,
-        @Nullable DomainMasterUserOptions masterUserOptions) {
+        @OutputCustomType.Parameter("enabled") @Nullable Boolean enabled,
+        @OutputCustomType.Parameter("internalUserDatabaseEnabled") @Nullable Boolean internalUserDatabaseEnabled,
+        @OutputCustomType.Parameter("masterUserOptions") @Nullable DomainMasterUserOptions masterUserOptions) {
         this.enabled = enabled;
         this.internalUserDatabaseEnabled = internalUserDatabaseEnabled;
         this.masterUserOptions = masterUserOptions;

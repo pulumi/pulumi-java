@@ -27,11 +27,11 @@ public final class SiteLocation {
      */
     private final @Nullable String longitude;
 
-    @OutputCustomType.Constructor({"address","latitude","longitude"})
+    @OutputCustomType.Constructor
     private SiteLocation(
-        @Nullable String address,
-        @Nullable String latitude,
-        @Nullable String longitude) {
+        @OutputCustomType.Parameter("address") @Nullable String address,
+        @OutputCustomType.Parameter("latitude") @Nullable String latitude,
+        @OutputCustomType.Parameter("longitude") @Nullable String longitude) {
         this.address = address;
         this.latitude = latitude;
         this.longitude = longitude;

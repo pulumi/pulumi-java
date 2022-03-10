@@ -23,10 +23,10 @@ public final class GetVpcConnectorResult {
      */
     private final @Nullable Integer vpcConnectorRevision;
 
-    @OutputCustomType.Constructor({"vpcConnectorArn","vpcConnectorRevision"})
+    @OutputCustomType.Constructor
     private GetVpcConnectorResult(
-        @Nullable String vpcConnectorArn,
-        @Nullable Integer vpcConnectorRevision) {
+        @OutputCustomType.Parameter("vpcConnectorArn") @Nullable String vpcConnectorArn,
+        @OutputCustomType.Parameter("vpcConnectorRevision") @Nullable Integer vpcConnectorRevision) {
         this.vpcConnectorArn = vpcConnectorArn;
         this.vpcConnectorRevision = vpcConnectorRevision;
     }

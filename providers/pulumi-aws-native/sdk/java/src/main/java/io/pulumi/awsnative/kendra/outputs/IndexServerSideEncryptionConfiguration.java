@@ -13,8 +13,8 @@ import javax.annotation.Nullable;
 public final class IndexServerSideEncryptionConfiguration {
     private final @Nullable String kmsKeyId;
 
-    @OutputCustomType.Constructor({"kmsKeyId"})
-    private IndexServerSideEncryptionConfiguration(@Nullable String kmsKeyId) {
+    @OutputCustomType.Constructor
+    private IndexServerSideEncryptionConfiguration(@OutputCustomType.Parameter("kmsKeyId") @Nullable String kmsKeyId) {
         this.kmsKeyId = kmsKeyId;
     }
 

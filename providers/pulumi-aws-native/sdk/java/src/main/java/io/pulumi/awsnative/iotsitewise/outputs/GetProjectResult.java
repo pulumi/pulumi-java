@@ -44,14 +44,14 @@ public final class GetProjectResult {
      */
     private final @Nullable List<ProjectTag> tags;
 
-    @OutputCustomType.Constructor({"assetIds","projectArn","projectDescription","projectId","projectName","tags"})
+    @OutputCustomType.Constructor
     private GetProjectResult(
-        @Nullable List<String> assetIds,
-        @Nullable String projectArn,
-        @Nullable String projectDescription,
-        @Nullable String projectId,
-        @Nullable String projectName,
-        @Nullable List<ProjectTag> tags) {
+        @OutputCustomType.Parameter("assetIds") @Nullable List<String> assetIds,
+        @OutputCustomType.Parameter("projectArn") @Nullable String projectArn,
+        @OutputCustomType.Parameter("projectDescription") @Nullable String projectDescription,
+        @OutputCustomType.Parameter("projectId") @Nullable String projectId,
+        @OutputCustomType.Parameter("projectName") @Nullable String projectName,
+        @OutputCustomType.Parameter("tags") @Nullable List<ProjectTag> tags) {
         this.assetIds = assetIds;
         this.projectArn = projectArn;
         this.projectDescription = projectDescription;

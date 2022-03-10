@@ -49,15 +49,15 @@ public final class InstanceDisk {
      */
     private final @Nullable String sizeInGb;
 
-    @OutputCustomType.Constructor({"attachedTo","attachmentState","diskName","iOPS","isSystemDisk","path","sizeInGb"})
+    @OutputCustomType.Constructor
     private InstanceDisk(
-        @Nullable String attachedTo,
-        @Nullable String attachmentState,
-        String diskName,
-        @Nullable Integer iOPS,
-        @Nullable Boolean isSystemDisk,
-        String path,
-        @Nullable String sizeInGb) {
+        @OutputCustomType.Parameter("attachedTo") @Nullable String attachedTo,
+        @OutputCustomType.Parameter("attachmentState") @Nullable String attachmentState,
+        @OutputCustomType.Parameter("diskName") String diskName,
+        @OutputCustomType.Parameter("iOPS") @Nullable Integer iOPS,
+        @OutputCustomType.Parameter("isSystemDisk") @Nullable Boolean isSystemDisk,
+        @OutputCustomType.Parameter("path") String path,
+        @OutputCustomType.Parameter("sizeInGb") @Nullable String sizeInGb) {
         this.attachedTo = attachedTo;
         this.attachmentState = attachmentState;
         this.diskName = diskName;

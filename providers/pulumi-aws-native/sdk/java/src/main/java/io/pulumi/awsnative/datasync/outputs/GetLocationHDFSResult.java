@@ -74,20 +74,20 @@ public final class GetLocationHDFSResult {
      */
     private final @Nullable List<LocationHDFSTag> tags;
 
-    @OutputCustomType.Constructor({"agentArns","authenticationType","blockSize","kerberosPrincipal","kmsKeyProviderUri","locationArn","locationUri","nameNodes","qopConfiguration","replicationFactor","simpleUser","tags"})
+    @OutputCustomType.Constructor
     private GetLocationHDFSResult(
-        @Nullable List<String> agentArns,
-        @Nullable LocationHDFSAuthenticationType authenticationType,
-        @Nullable Integer blockSize,
-        @Nullable String kerberosPrincipal,
-        @Nullable String kmsKeyProviderUri,
-        @Nullable String locationArn,
-        @Nullable String locationUri,
-        @Nullable List<LocationHDFSNameNode> nameNodes,
-        @Nullable LocationHDFSQopConfiguration qopConfiguration,
-        @Nullable Integer replicationFactor,
-        @Nullable String simpleUser,
-        @Nullable List<LocationHDFSTag> tags) {
+        @OutputCustomType.Parameter("agentArns") @Nullable List<String> agentArns,
+        @OutputCustomType.Parameter("authenticationType") @Nullable LocationHDFSAuthenticationType authenticationType,
+        @OutputCustomType.Parameter("blockSize") @Nullable Integer blockSize,
+        @OutputCustomType.Parameter("kerberosPrincipal") @Nullable String kerberosPrincipal,
+        @OutputCustomType.Parameter("kmsKeyProviderUri") @Nullable String kmsKeyProviderUri,
+        @OutputCustomType.Parameter("locationArn") @Nullable String locationArn,
+        @OutputCustomType.Parameter("locationUri") @Nullable String locationUri,
+        @OutputCustomType.Parameter("nameNodes") @Nullable List<LocationHDFSNameNode> nameNodes,
+        @OutputCustomType.Parameter("qopConfiguration") @Nullable LocationHDFSQopConfiguration qopConfiguration,
+        @OutputCustomType.Parameter("replicationFactor") @Nullable Integer replicationFactor,
+        @OutputCustomType.Parameter("simpleUser") @Nullable String simpleUser,
+        @OutputCustomType.Parameter("tags") @Nullable List<LocationHDFSTag> tags) {
         this.agentArns = agentArns;
         this.authenticationType = authenticationType;
         this.blockSize = blockSize;

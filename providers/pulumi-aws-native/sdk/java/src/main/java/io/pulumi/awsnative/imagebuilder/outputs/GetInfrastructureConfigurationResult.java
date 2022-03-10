@@ -82,21 +82,21 @@ public final class GetInfrastructureConfigurationResult {
      */
     private final @Nullable Boolean terminateInstanceOnFailure;
 
-    @OutputCustomType.Constructor({"arn","description","instanceMetadataOptions","instanceProfileName","instanceTypes","keyPair","logging","resourceTags","securityGroupIds","snsTopicArn","subnetId","tags","terminateInstanceOnFailure"})
+    @OutputCustomType.Constructor
     private GetInfrastructureConfigurationResult(
-        @Nullable String arn,
-        @Nullable String description,
-        @Nullable InfrastructureConfigurationInstanceMetadataOptions instanceMetadataOptions,
-        @Nullable String instanceProfileName,
-        @Nullable List<String> instanceTypes,
-        @Nullable String keyPair,
-        @Nullable InfrastructureConfigurationLogging logging,
-        @Nullable Object resourceTags,
-        @Nullable List<String> securityGroupIds,
-        @Nullable String snsTopicArn,
-        @Nullable String subnetId,
-        @Nullable Object tags,
-        @Nullable Boolean terminateInstanceOnFailure) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("instanceMetadataOptions") @Nullable InfrastructureConfigurationInstanceMetadataOptions instanceMetadataOptions,
+        @OutputCustomType.Parameter("instanceProfileName") @Nullable String instanceProfileName,
+        @OutputCustomType.Parameter("instanceTypes") @Nullable List<String> instanceTypes,
+        @OutputCustomType.Parameter("keyPair") @Nullable String keyPair,
+        @OutputCustomType.Parameter("logging") @Nullable InfrastructureConfigurationLogging logging,
+        @OutputCustomType.Parameter("resourceTags") @Nullable Object resourceTags,
+        @OutputCustomType.Parameter("securityGroupIds") @Nullable List<String> securityGroupIds,
+        @OutputCustomType.Parameter("snsTopicArn") @Nullable String snsTopicArn,
+        @OutputCustomType.Parameter("subnetId") @Nullable String subnetId,
+        @OutputCustomType.Parameter("tags") @Nullable Object tags,
+        @OutputCustomType.Parameter("terminateInstanceOnFailure") @Nullable Boolean terminateInstanceOnFailure) {
         this.arn = arn;
         this.description = description;
         this.instanceMetadataOptions = instanceMetadataOptions;

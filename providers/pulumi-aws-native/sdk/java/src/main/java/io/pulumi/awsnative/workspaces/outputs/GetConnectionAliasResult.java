@@ -18,11 +18,11 @@ public final class GetConnectionAliasResult {
     private final @Nullable List<ConnectionAliasAssociation> associations;
     private final @Nullable ConnectionAliasState connectionAliasState;
 
-    @OutputCustomType.Constructor({"aliasId","associations","connectionAliasState"})
+    @OutputCustomType.Constructor
     private GetConnectionAliasResult(
-        @Nullable String aliasId,
-        @Nullable List<ConnectionAliasAssociation> associations,
-        @Nullable ConnectionAliasState connectionAliasState) {
+        @OutputCustomType.Parameter("aliasId") @Nullable String aliasId,
+        @OutputCustomType.Parameter("associations") @Nullable List<ConnectionAliasAssociation> associations,
+        @OutputCustomType.Parameter("connectionAliasState") @Nullable ConnectionAliasState connectionAliasState) {
         this.aliasId = aliasId;
         this.associations = associations;
         this.connectionAliasState = connectionAliasState;

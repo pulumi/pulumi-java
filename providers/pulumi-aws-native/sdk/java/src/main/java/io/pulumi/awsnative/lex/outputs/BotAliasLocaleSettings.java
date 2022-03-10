@@ -19,10 +19,10 @@ public final class BotAliasLocaleSettings {
      */
     private final Boolean enabled;
 
-    @OutputCustomType.Constructor({"codeHookSpecification","enabled"})
+    @OutputCustomType.Constructor
     private BotAliasLocaleSettings(
-        @Nullable BotAliasCodeHookSpecification codeHookSpecification,
-        Boolean enabled) {
+        @OutputCustomType.Parameter("codeHookSpecification") @Nullable BotAliasCodeHookSpecification codeHookSpecification,
+        @OutputCustomType.Parameter("enabled") Boolean enabled) {
         this.codeHookSpecification = codeHookSpecification;
         this.enabled = enabled;
     }

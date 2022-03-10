@@ -53,29 +53,29 @@ public final class TopicRuleAction {
     private final @Nullable TopicRuleStepFunctionsAction stepFunctions;
     private final @Nullable TopicRuleTimestreamAction timestream;
 
-    @OutputCustomType.Constructor({"cloudwatchAlarm","cloudwatchLogs","cloudwatchMetric","dynamoDB","dynamoDBv2","elasticsearch","firehose","http","iotAnalytics","iotEvents","iotSiteWise","kafka","kinesis","lambda","openSearch","republish","s3","sns","sqs","stepFunctions","timestream"})
+    @OutputCustomType.Constructor
     private TopicRuleAction(
-        @Nullable TopicRuleCloudwatchAlarmAction cloudwatchAlarm,
-        @Nullable TopicRuleCloudwatchLogsAction cloudwatchLogs,
-        @Nullable TopicRuleCloudwatchMetricAction cloudwatchMetric,
-        @Nullable TopicRuleDynamoDBAction dynamoDB,
-        @Nullable TopicRuleDynamoDBv2Action dynamoDBv2,
-        @Nullable TopicRuleElasticsearchAction elasticsearch,
-        @Nullable TopicRuleFirehoseAction firehose,
-        @Nullable TopicRuleHttpAction http,
-        @Nullable TopicRuleIotAnalyticsAction iotAnalytics,
-        @Nullable TopicRuleIotEventsAction iotEvents,
-        @Nullable TopicRuleIotSiteWiseAction iotSiteWise,
-        @Nullable TopicRuleKafkaAction kafka,
-        @Nullable TopicRuleKinesisAction kinesis,
-        @Nullable TopicRuleLambdaAction lambda,
-        @Nullable TopicRuleOpenSearchAction openSearch,
-        @Nullable TopicRuleRepublishAction republish,
-        @Nullable TopicRuleS3Action s3,
-        @Nullable TopicRuleSnsAction sns,
-        @Nullable TopicRuleSqsAction sqs,
-        @Nullable TopicRuleStepFunctionsAction stepFunctions,
-        @Nullable TopicRuleTimestreamAction timestream) {
+        @OutputCustomType.Parameter("cloudwatchAlarm") @Nullable TopicRuleCloudwatchAlarmAction cloudwatchAlarm,
+        @OutputCustomType.Parameter("cloudwatchLogs") @Nullable TopicRuleCloudwatchLogsAction cloudwatchLogs,
+        @OutputCustomType.Parameter("cloudwatchMetric") @Nullable TopicRuleCloudwatchMetricAction cloudwatchMetric,
+        @OutputCustomType.Parameter("dynamoDB") @Nullable TopicRuleDynamoDBAction dynamoDB,
+        @OutputCustomType.Parameter("dynamoDBv2") @Nullable TopicRuleDynamoDBv2Action dynamoDBv2,
+        @OutputCustomType.Parameter("elasticsearch") @Nullable TopicRuleElasticsearchAction elasticsearch,
+        @OutputCustomType.Parameter("firehose") @Nullable TopicRuleFirehoseAction firehose,
+        @OutputCustomType.Parameter("http") @Nullable TopicRuleHttpAction http,
+        @OutputCustomType.Parameter("iotAnalytics") @Nullable TopicRuleIotAnalyticsAction iotAnalytics,
+        @OutputCustomType.Parameter("iotEvents") @Nullable TopicRuleIotEventsAction iotEvents,
+        @OutputCustomType.Parameter("iotSiteWise") @Nullable TopicRuleIotSiteWiseAction iotSiteWise,
+        @OutputCustomType.Parameter("kafka") @Nullable TopicRuleKafkaAction kafka,
+        @OutputCustomType.Parameter("kinesis") @Nullable TopicRuleKinesisAction kinesis,
+        @OutputCustomType.Parameter("lambda") @Nullable TopicRuleLambdaAction lambda,
+        @OutputCustomType.Parameter("openSearch") @Nullable TopicRuleOpenSearchAction openSearch,
+        @OutputCustomType.Parameter("republish") @Nullable TopicRuleRepublishAction republish,
+        @OutputCustomType.Parameter("s3") @Nullable TopicRuleS3Action s3,
+        @OutputCustomType.Parameter("sns") @Nullable TopicRuleSnsAction sns,
+        @OutputCustomType.Parameter("sqs") @Nullable TopicRuleSqsAction sqs,
+        @OutputCustomType.Parameter("stepFunctions") @Nullable TopicRuleStepFunctionsAction stepFunctions,
+        @OutputCustomType.Parameter("timestream") @Nullable TopicRuleTimestreamAction timestream) {
         this.cloudwatchAlarm = cloudwatchAlarm;
         this.cloudwatchLogs = cloudwatchLogs;
         this.cloudwatchMetric = cloudwatchMetric;

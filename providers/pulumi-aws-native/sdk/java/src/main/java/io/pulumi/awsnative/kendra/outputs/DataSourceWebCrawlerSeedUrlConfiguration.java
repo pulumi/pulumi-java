@@ -16,10 +16,10 @@ public final class DataSourceWebCrawlerSeedUrlConfiguration {
     private final List<String> seedUrls;
     private final @Nullable DataSourceWebCrawlerSeedUrlConfigurationWebCrawlerMode webCrawlerMode;
 
-    @OutputCustomType.Constructor({"seedUrls","webCrawlerMode"})
+    @OutputCustomType.Constructor
     private DataSourceWebCrawlerSeedUrlConfiguration(
-        List<String> seedUrls,
-        @Nullable DataSourceWebCrawlerSeedUrlConfigurationWebCrawlerMode webCrawlerMode) {
+        @OutputCustomType.Parameter("seedUrls") List<String> seedUrls,
+        @OutputCustomType.Parameter("webCrawlerMode") @Nullable DataSourceWebCrawlerSeedUrlConfigurationWebCrawlerMode webCrawlerMode) {
         this.seedUrls = seedUrls;
         this.webCrawlerMode = webCrawlerMode;
     }

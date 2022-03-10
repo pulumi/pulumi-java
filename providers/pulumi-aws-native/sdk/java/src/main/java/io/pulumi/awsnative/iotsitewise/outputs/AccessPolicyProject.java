@@ -17,8 +17,8 @@ public final class AccessPolicyProject {
      */
     private final @Nullable String id;
 
-    @OutputCustomType.Constructor({"id"})
-    private AccessPolicyProject(@Nullable String id) {
+    @OutputCustomType.Constructor
+    private AccessPolicyProject(@OutputCustomType.Parameter("id") @Nullable String id) {
         this.id = id;
     }
 

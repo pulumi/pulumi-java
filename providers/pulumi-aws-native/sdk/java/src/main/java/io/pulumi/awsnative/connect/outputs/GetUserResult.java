@@ -66,18 +66,18 @@ public final class GetUserResult {
      */
     private final @Nullable String username;
 
-    @OutputCustomType.Constructor({"directoryUserId","hierarchyGroupArn","identityInfo","instanceArn","phoneConfig","routingProfileArn","securityProfileArns","tags","userArn","username"})
+    @OutputCustomType.Constructor
     private GetUserResult(
-        @Nullable String directoryUserId,
-        @Nullable String hierarchyGroupArn,
-        @Nullable UserIdentityInfo identityInfo,
-        @Nullable String instanceArn,
-        @Nullable UserPhoneConfig phoneConfig,
-        @Nullable String routingProfileArn,
-        @Nullable List<String> securityProfileArns,
-        @Nullable List<UserTag> tags,
-        @Nullable String userArn,
-        @Nullable String username) {
+        @OutputCustomType.Parameter("directoryUserId") @Nullable String directoryUserId,
+        @OutputCustomType.Parameter("hierarchyGroupArn") @Nullable String hierarchyGroupArn,
+        @OutputCustomType.Parameter("identityInfo") @Nullable UserIdentityInfo identityInfo,
+        @OutputCustomType.Parameter("instanceArn") @Nullable String instanceArn,
+        @OutputCustomType.Parameter("phoneConfig") @Nullable UserPhoneConfig phoneConfig,
+        @OutputCustomType.Parameter("routingProfileArn") @Nullable String routingProfileArn,
+        @OutputCustomType.Parameter("securityProfileArns") @Nullable List<String> securityProfileArns,
+        @OutputCustomType.Parameter("tags") @Nullable List<UserTag> tags,
+        @OutputCustomType.Parameter("userArn") @Nullable String userArn,
+        @OutputCustomType.Parameter("username") @Nullable String username) {
         this.directoryUserId = directoryUserId;
         this.hierarchyGroupArn = hierarchyGroupArn;
         this.identityInfo = identityInfo;

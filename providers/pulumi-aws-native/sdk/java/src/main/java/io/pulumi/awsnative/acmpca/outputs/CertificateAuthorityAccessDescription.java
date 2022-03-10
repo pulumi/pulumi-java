@@ -13,10 +13,10 @@ public final class CertificateAuthorityAccessDescription {
     private final CertificateAuthorityGeneralName accessLocation;
     private final CertificateAuthorityAccessMethod accessMethod;
 
-    @OutputCustomType.Constructor({"accessLocation","accessMethod"})
+    @OutputCustomType.Constructor
     private CertificateAuthorityAccessDescription(
-        CertificateAuthorityGeneralName accessLocation,
-        CertificateAuthorityAccessMethod accessMethod) {
+        @OutputCustomType.Parameter("accessLocation") CertificateAuthorityGeneralName accessLocation,
+        @OutputCustomType.Parameter("accessMethod") CertificateAuthorityAccessMethod accessMethod) {
         this.accessLocation = accessLocation;
         this.accessMethod = accessMethod;
     }

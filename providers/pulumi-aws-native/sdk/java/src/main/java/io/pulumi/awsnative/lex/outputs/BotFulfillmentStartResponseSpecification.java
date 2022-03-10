@@ -26,11 +26,11 @@ public final class BotFulfillmentStartResponseSpecification {
     private final Integer delayInSeconds;
     private final List<BotMessageGroup> messageGroups;
 
-    @OutputCustomType.Constructor({"allowInterrupt","delayInSeconds","messageGroups"})
+    @OutputCustomType.Constructor
     private BotFulfillmentStartResponseSpecification(
-        @Nullable Boolean allowInterrupt,
-        Integer delayInSeconds,
-        List<BotMessageGroup> messageGroups) {
+        @OutputCustomType.Parameter("allowInterrupt") @Nullable Boolean allowInterrupt,
+        @OutputCustomType.Parameter("delayInSeconds") Integer delayInSeconds,
+        @OutputCustomType.Parameter("messageGroups") List<BotMessageGroup> messageGroups) {
         this.allowInterrupt = allowInterrupt;
         this.delayInSeconds = delayInSeconds;
         this.messageGroups = messageGroups;

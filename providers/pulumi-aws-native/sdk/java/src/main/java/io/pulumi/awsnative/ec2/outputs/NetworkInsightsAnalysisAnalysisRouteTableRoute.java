@@ -22,18 +22,18 @@ public final class NetworkInsightsAnalysisAnalysisRouteTableRoute {
     private final @Nullable String transitGatewayId;
     private final @Nullable String vpcPeeringConnectionId;
 
-    @OutputCustomType.Constructor({"destinationCidr","destinationPrefixListId","egressOnlyInternetGatewayId","gatewayId","instanceId","natGatewayId","networkInterfaceId","origin","transitGatewayId","vpcPeeringConnectionId"})
+    @OutputCustomType.Constructor
     private NetworkInsightsAnalysisAnalysisRouteTableRoute(
-        @Nullable String destinationCidr,
-        @Nullable String destinationPrefixListId,
-        @Nullable String egressOnlyInternetGatewayId,
-        @Nullable String gatewayId,
-        @Nullable String instanceId,
-        @Nullable String natGatewayId,
-        @Nullable String networkInterfaceId,
-        @Nullable String origin,
-        @Nullable String transitGatewayId,
-        @Nullable String vpcPeeringConnectionId) {
+        @OutputCustomType.Parameter("destinationCidr") @Nullable String destinationCidr,
+        @OutputCustomType.Parameter("destinationPrefixListId") @Nullable String destinationPrefixListId,
+        @OutputCustomType.Parameter("egressOnlyInternetGatewayId") @Nullable String egressOnlyInternetGatewayId,
+        @OutputCustomType.Parameter("gatewayId") @Nullable String gatewayId,
+        @OutputCustomType.Parameter("instanceId") @Nullable String instanceId,
+        @OutputCustomType.Parameter("natGatewayId") @Nullable String natGatewayId,
+        @OutputCustomType.Parameter("networkInterfaceId") @Nullable String networkInterfaceId,
+        @OutputCustomType.Parameter("origin") @Nullable String origin,
+        @OutputCustomType.Parameter("transitGatewayId") @Nullable String transitGatewayId,
+        @OutputCustomType.Parameter("vpcPeeringConnectionId") @Nullable String vpcPeeringConnectionId) {
         this.destinationCidr = destinationCidr;
         this.destinationPrefixListId = destinationPrefixListId;
         this.egressOnlyInternetGatewayId = egressOnlyInternetGatewayId;

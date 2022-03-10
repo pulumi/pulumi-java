@@ -12,8 +12,8 @@ import java.util.Objects;
 public final class ResponseHeadersPolicyAccessControlAllowOrigins {
     private final List<String> items;
 
-    @OutputCustomType.Constructor({"items"})
-    private ResponseHeadersPolicyAccessControlAllowOrigins(List<String> items) {
+    @OutputCustomType.Constructor
+    private ResponseHeadersPolicyAccessControlAllowOrigins(@OutputCustomType.Parameter("items") List<String> items) {
         this.items = items;
     }
 

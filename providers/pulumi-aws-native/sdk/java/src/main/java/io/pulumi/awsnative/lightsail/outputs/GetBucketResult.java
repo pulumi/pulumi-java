@@ -53,17 +53,17 @@ public final class GetBucketResult {
      */
     private final @Nullable String url;
 
-    @OutputCustomType.Constructor({"ableToUpdateBundle","accessRules","bucketArn","bundleId","objectVersioning","readOnlyAccessAccounts","resourcesReceivingAccess","tags","url"})
+    @OutputCustomType.Constructor
     private GetBucketResult(
-        @Nullable Boolean ableToUpdateBundle,
-        @Nullable BucketAccessRules accessRules,
-        @Nullable String bucketArn,
-        @Nullable String bundleId,
-        @Nullable Boolean objectVersioning,
-        @Nullable List<String> readOnlyAccessAccounts,
-        @Nullable List<String> resourcesReceivingAccess,
-        @Nullable List<BucketTag> tags,
-        @Nullable String url) {
+        @OutputCustomType.Parameter("ableToUpdateBundle") @Nullable Boolean ableToUpdateBundle,
+        @OutputCustomType.Parameter("accessRules") @Nullable BucketAccessRules accessRules,
+        @OutputCustomType.Parameter("bucketArn") @Nullable String bucketArn,
+        @OutputCustomType.Parameter("bundleId") @Nullable String bundleId,
+        @OutputCustomType.Parameter("objectVersioning") @Nullable Boolean objectVersioning,
+        @OutputCustomType.Parameter("readOnlyAccessAccounts") @Nullable List<String> readOnlyAccessAccounts,
+        @OutputCustomType.Parameter("resourcesReceivingAccess") @Nullable List<String> resourcesReceivingAccess,
+        @OutputCustomType.Parameter("tags") @Nullable List<BucketTag> tags,
+        @OutputCustomType.Parameter("url") @Nullable String url) {
         this.ableToUpdateBundle = ableToUpdateBundle;
         this.accessRules = accessRules;
         this.bucketArn = bucketArn;

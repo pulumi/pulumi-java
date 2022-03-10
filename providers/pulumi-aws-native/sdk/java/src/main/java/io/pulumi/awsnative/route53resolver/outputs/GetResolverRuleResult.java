@@ -45,14 +45,14 @@ public final class GetResolverRuleResult {
      */
     private final @Nullable List<ResolverRuleTargetAddress> targetIps;
 
-    @OutputCustomType.Constructor({"arn","name","resolverEndpointId","resolverRuleId","tags","targetIps"})
+    @OutputCustomType.Constructor
     private GetResolverRuleResult(
-        @Nullable String arn,
-        @Nullable String name,
-        @Nullable String resolverEndpointId,
-        @Nullable String resolverRuleId,
-        @Nullable List<ResolverRuleTag> tags,
-        @Nullable List<ResolverRuleTargetAddress> targetIps) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("resolverEndpointId") @Nullable String resolverEndpointId,
+        @OutputCustomType.Parameter("resolverRuleId") @Nullable String resolverRuleId,
+        @OutputCustomType.Parameter("tags") @Nullable List<ResolverRuleTag> tags,
+        @OutputCustomType.Parameter("targetIps") @Nullable List<ResolverRuleTargetAddress> targetIps) {
         this.arn = arn;
         this.name = name;
         this.resolverEndpointId = resolverEndpointId;

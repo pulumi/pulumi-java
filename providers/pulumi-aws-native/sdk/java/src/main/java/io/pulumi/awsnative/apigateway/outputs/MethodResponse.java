@@ -28,11 +28,11 @@ public final class MethodResponse {
      */
     private final String statusCode;
 
-    @OutputCustomType.Constructor({"responseModels","responseParameters","statusCode"})
+    @OutputCustomType.Constructor
     private MethodResponse(
-        @Nullable Object responseModels,
-        @Nullable Object responseParameters,
-        String statusCode) {
+        @OutputCustomType.Parameter("responseModels") @Nullable Object responseModels,
+        @OutputCustomType.Parameter("responseParameters") @Nullable Object responseParameters,
+        @OutputCustomType.Parameter("statusCode") String statusCode) {
         this.responseModels = responseModels;
         this.responseParameters = responseParameters;
         this.statusCode = statusCode;

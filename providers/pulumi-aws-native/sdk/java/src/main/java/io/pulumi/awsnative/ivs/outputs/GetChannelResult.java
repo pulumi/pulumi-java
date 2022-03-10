@@ -62,17 +62,17 @@ public final class GetChannelResult {
      */
     private final @Nullable ChannelType type;
 
-    @OutputCustomType.Constructor({"arn","authorized","ingestEndpoint","latencyMode","name","playbackUrl","recordingConfigurationArn","tags","type"})
+    @OutputCustomType.Constructor
     private GetChannelResult(
-        @Nullable String arn,
-        @Nullable Boolean authorized,
-        @Nullable String ingestEndpoint,
-        @Nullable ChannelLatencyMode latencyMode,
-        @Nullable String name,
-        @Nullable String playbackUrl,
-        @Nullable String recordingConfigurationArn,
-        @Nullable List<ChannelTag> tags,
-        @Nullable ChannelType type) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("authorized") @Nullable Boolean authorized,
+        @OutputCustomType.Parameter("ingestEndpoint") @Nullable String ingestEndpoint,
+        @OutputCustomType.Parameter("latencyMode") @Nullable ChannelLatencyMode latencyMode,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("playbackUrl") @Nullable String playbackUrl,
+        @OutputCustomType.Parameter("recordingConfigurationArn") @Nullable String recordingConfigurationArn,
+        @OutputCustomType.Parameter("tags") @Nullable List<ChannelTag> tags,
+        @OutputCustomType.Parameter("type") @Nullable ChannelType type) {
         this.arn = arn;
         this.authorized = authorized;
         this.ingestEndpoint = ingestEndpoint;

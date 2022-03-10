@@ -19,13 +19,13 @@ public final class DataSourceColumnConfiguration {
     private final @Nullable String documentTitleColumnName;
     private final @Nullable List<DataSourceToIndexFieldMapping> fieldMappings;
 
-    @OutputCustomType.Constructor({"changeDetectingColumns","documentDataColumnName","documentIdColumnName","documentTitleColumnName","fieldMappings"})
+    @OutputCustomType.Constructor
     private DataSourceColumnConfiguration(
-        List<String> changeDetectingColumns,
-        String documentDataColumnName,
-        String documentIdColumnName,
-        @Nullable String documentTitleColumnName,
-        @Nullable List<DataSourceToIndexFieldMapping> fieldMappings) {
+        @OutputCustomType.Parameter("changeDetectingColumns") List<String> changeDetectingColumns,
+        @OutputCustomType.Parameter("documentDataColumnName") String documentDataColumnName,
+        @OutputCustomType.Parameter("documentIdColumnName") String documentIdColumnName,
+        @OutputCustomType.Parameter("documentTitleColumnName") @Nullable String documentTitleColumnName,
+        @OutputCustomType.Parameter("fieldMappings") @Nullable List<DataSourceToIndexFieldMapping> fieldMappings) {
         this.changeDetectingColumns = changeDetectingColumns;
         this.documentDataColumnName = documentDataColumnName;
         this.documentIdColumnName = documentIdColumnName;

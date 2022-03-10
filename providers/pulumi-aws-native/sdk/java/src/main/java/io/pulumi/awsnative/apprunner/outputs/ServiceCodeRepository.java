@@ -21,11 +21,11 @@ public final class ServiceCodeRepository {
     private final String repositoryUrl;
     private final ServiceSourceCodeVersion sourceCodeVersion;
 
-    @OutputCustomType.Constructor({"codeConfiguration","repositoryUrl","sourceCodeVersion"})
+    @OutputCustomType.Constructor
     private ServiceCodeRepository(
-        @Nullable ServiceCodeConfiguration codeConfiguration,
-        String repositoryUrl,
-        ServiceSourceCodeVersion sourceCodeVersion) {
+        @OutputCustomType.Parameter("codeConfiguration") @Nullable ServiceCodeConfiguration codeConfiguration,
+        @OutputCustomType.Parameter("repositoryUrl") String repositoryUrl,
+        @OutputCustomType.Parameter("sourceCodeVersion") ServiceSourceCodeVersion sourceCodeVersion) {
         this.codeConfiguration = codeConfiguration;
         this.repositoryUrl = repositoryUrl;
         this.sourceCodeVersion = sourceCodeVersion;

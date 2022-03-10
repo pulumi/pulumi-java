@@ -30,11 +30,11 @@ public final class GetBucketResult {
      */
     private final @Nullable List<BucketTag> tags;
 
-    @OutputCustomType.Constructor({"arn","lifecycleConfiguration","tags"})
+    @OutputCustomType.Constructor
     private GetBucketResult(
-        @Nullable String arn,
-        @Nullable BucketLifecycleConfiguration lifecycleConfiguration,
-        @Nullable List<BucketTag> tags) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("lifecycleConfiguration") @Nullable BucketLifecycleConfiguration lifecycleConfiguration,
+        @OutputCustomType.Parameter("tags") @Nullable List<BucketTag> tags) {
         this.arn = arn;
         this.lifecycleConfiguration = lifecycleConfiguration;
         this.tags = tags;

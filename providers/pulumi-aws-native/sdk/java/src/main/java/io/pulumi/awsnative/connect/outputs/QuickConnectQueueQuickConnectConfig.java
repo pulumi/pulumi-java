@@ -12,10 +12,10 @@ public final class QuickConnectQueueQuickConnectConfig {
     private final String contactFlowArn;
     private final String queueArn;
 
-    @OutputCustomType.Constructor({"contactFlowArn","queueArn"})
+    @OutputCustomType.Constructor
     private QuickConnectQueueQuickConnectConfig(
-        String contactFlowArn,
-        String queueArn) {
+        @OutputCustomType.Parameter("contactFlowArn") String contactFlowArn,
+        @OutputCustomType.Parameter("queueArn") String queueArn) {
         this.contactFlowArn = contactFlowArn;
         this.queueArn = queueArn;
     }

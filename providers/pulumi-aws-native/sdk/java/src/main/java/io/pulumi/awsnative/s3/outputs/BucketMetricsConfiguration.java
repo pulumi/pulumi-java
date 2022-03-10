@@ -18,12 +18,12 @@ public final class BucketMetricsConfiguration {
     private final @Nullable String prefix;
     private final @Nullable List<BucketTagFilter> tagFilters;
 
-    @OutputCustomType.Constructor({"accessPointArn","id","prefix","tagFilters"})
+    @OutputCustomType.Constructor
     private BucketMetricsConfiguration(
-        @Nullable String accessPointArn,
-        String id,
-        @Nullable String prefix,
-        @Nullable List<BucketTagFilter> tagFilters) {
+        @OutputCustomType.Parameter("accessPointArn") @Nullable String accessPointArn,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("prefix") @Nullable String prefix,
+        @OutputCustomType.Parameter("tagFilters") @Nullable List<BucketTagFilter> tagFilters) {
         this.accessPointArn = accessPointArn;
         this.id = id;
         this.prefix = prefix;

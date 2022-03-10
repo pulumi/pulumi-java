@@ -13,8 +13,8 @@ import javax.annotation.Nullable;
 public final class InfrastructureConfigurationLogging {
     private final @Nullable InfrastructureConfigurationS3Logs s3Logs;
 
-    @OutputCustomType.Constructor({"s3Logs"})
-    private InfrastructureConfigurationLogging(@Nullable InfrastructureConfigurationS3Logs s3Logs) {
+    @OutputCustomType.Constructor
+    private InfrastructureConfigurationLogging(@OutputCustomType.Parameter("s3Logs") @Nullable InfrastructureConfigurationS3Logs s3Logs) {
         this.s3Logs = s3Logs;
     }
 

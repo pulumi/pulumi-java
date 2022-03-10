@@ -21,10 +21,10 @@ public final class ConnectorWorkerConfiguration {
      */
     private final String workerConfigurationArn;
 
-    @OutputCustomType.Constructor({"revision","workerConfigurationArn"})
+    @OutputCustomType.Constructor
     private ConnectorWorkerConfiguration(
-        Integer revision,
-        String workerConfigurationArn) {
+        @OutputCustomType.Parameter("revision") Integer revision,
+        @OutputCustomType.Parameter("workerConfigurationArn") String workerConfigurationArn) {
         this.revision = revision;
         this.workerConfigurationArn = workerConfigurationArn;
     }

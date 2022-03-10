@@ -65,18 +65,18 @@ public final class StageMethodSetting {
      */
     private final @Nullable Double throttlingRateLimit;
 
-    @OutputCustomType.Constructor({"cacheDataEncrypted","cacheTtlInSeconds","cachingEnabled","dataTraceEnabled","httpMethod","loggingLevel","metricsEnabled","resourcePath","throttlingBurstLimit","throttlingRateLimit"})
+    @OutputCustomType.Constructor
     private StageMethodSetting(
-        @Nullable Boolean cacheDataEncrypted,
-        @Nullable Integer cacheTtlInSeconds,
-        @Nullable Boolean cachingEnabled,
-        @Nullable Boolean dataTraceEnabled,
-        @Nullable String httpMethod,
-        @Nullable String loggingLevel,
-        @Nullable Boolean metricsEnabled,
-        @Nullable String resourcePath,
-        @Nullable Integer throttlingBurstLimit,
-        @Nullable Double throttlingRateLimit) {
+        @OutputCustomType.Parameter("cacheDataEncrypted") @Nullable Boolean cacheDataEncrypted,
+        @OutputCustomType.Parameter("cacheTtlInSeconds") @Nullable Integer cacheTtlInSeconds,
+        @OutputCustomType.Parameter("cachingEnabled") @Nullable Boolean cachingEnabled,
+        @OutputCustomType.Parameter("dataTraceEnabled") @Nullable Boolean dataTraceEnabled,
+        @OutputCustomType.Parameter("httpMethod") @Nullable String httpMethod,
+        @OutputCustomType.Parameter("loggingLevel") @Nullable String loggingLevel,
+        @OutputCustomType.Parameter("metricsEnabled") @Nullable Boolean metricsEnabled,
+        @OutputCustomType.Parameter("resourcePath") @Nullable String resourcePath,
+        @OutputCustomType.Parameter("throttlingBurstLimit") @Nullable Integer throttlingBurstLimit,
+        @OutputCustomType.Parameter("throttlingRateLimit") @Nullable Double throttlingRateLimit) {
         this.cacheDataEncrypted = cacheDataEncrypted;
         this.cacheTtlInSeconds = cacheTtlInSeconds;
         this.cachingEnabled = cachingEnabled;

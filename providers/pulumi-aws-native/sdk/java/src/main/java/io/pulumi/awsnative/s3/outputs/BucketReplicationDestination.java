@@ -28,15 +28,15 @@ public final class BucketReplicationDestination {
      */
     private final @Nullable BucketReplicationDestinationStorageClass storageClass;
 
-    @OutputCustomType.Constructor({"accessControlTranslation","account","bucket","encryptionConfiguration","metrics","replicationTime","storageClass"})
+    @OutputCustomType.Constructor
     private BucketReplicationDestination(
-        @Nullable BucketAccessControlTranslation accessControlTranslation,
-        @Nullable String account,
-        String bucket,
-        @Nullable BucketEncryptionConfiguration encryptionConfiguration,
-        @Nullable BucketMetrics metrics,
-        @Nullable BucketReplicationTime replicationTime,
-        @Nullable BucketReplicationDestinationStorageClass storageClass) {
+        @OutputCustomType.Parameter("accessControlTranslation") @Nullable BucketAccessControlTranslation accessControlTranslation,
+        @OutputCustomType.Parameter("account") @Nullable String account,
+        @OutputCustomType.Parameter("bucket") String bucket,
+        @OutputCustomType.Parameter("encryptionConfiguration") @Nullable BucketEncryptionConfiguration encryptionConfiguration,
+        @OutputCustomType.Parameter("metrics") @Nullable BucketMetrics metrics,
+        @OutputCustomType.Parameter("replicationTime") @Nullable BucketReplicationTime replicationTime,
+        @OutputCustomType.Parameter("storageClass") @Nullable BucketReplicationDestinationStorageClass storageClass) {
         this.accessControlTranslation = accessControlTranslation;
         this.account = account;
         this.bucket = bucket;

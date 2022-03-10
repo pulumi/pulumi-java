@@ -16,11 +16,11 @@ public final class GetResponseHeadersPolicyResult {
     private final @Nullable String lastModifiedTime;
     private final @Nullable ResponseHeadersPolicyConfig responseHeadersPolicyConfig;
 
-    @OutputCustomType.Constructor({"id","lastModifiedTime","responseHeadersPolicyConfig"})
+    @OutputCustomType.Constructor
     private GetResponseHeadersPolicyResult(
-        @Nullable String id,
-        @Nullable String lastModifiedTime,
-        @Nullable ResponseHeadersPolicyConfig responseHeadersPolicyConfig) {
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("lastModifiedTime") @Nullable String lastModifiedTime,
+        @OutputCustomType.Parameter("responseHeadersPolicyConfig") @Nullable ResponseHeadersPolicyConfig responseHeadersPolicyConfig) {
         this.id = id;
         this.lastModifiedTime = lastModifiedTime;
         this.responseHeadersPolicyConfig = responseHeadersPolicyConfig;

@@ -17,8 +17,8 @@ public final class GetAliasResult {
      */
     private final @Nullable String targetKeyId;
 
-    @OutputCustomType.Constructor({"targetKeyId"})
-    private GetAliasResult(@Nullable String targetKeyId) {
+    @OutputCustomType.Constructor
+    private GetAliasResult(@OutputCustomType.Parameter("targetKeyId") @Nullable String targetKeyId) {
         this.targetKeyId = targetKeyId;
     }
 

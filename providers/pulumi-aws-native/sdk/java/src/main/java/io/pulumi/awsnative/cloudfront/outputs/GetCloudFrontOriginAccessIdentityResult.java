@@ -16,11 +16,11 @@ public final class GetCloudFrontOriginAccessIdentityResult {
     private final @Nullable String id;
     private final @Nullable String s3CanonicalUserId;
 
-    @OutputCustomType.Constructor({"cloudFrontOriginAccessIdentityConfig","id","s3CanonicalUserId"})
+    @OutputCustomType.Constructor
     private GetCloudFrontOriginAccessIdentityResult(
-        @Nullable CloudFrontOriginAccessIdentityConfig cloudFrontOriginAccessIdentityConfig,
-        @Nullable String id,
-        @Nullable String s3CanonicalUserId) {
+        @OutputCustomType.Parameter("cloudFrontOriginAccessIdentityConfig") @Nullable CloudFrontOriginAccessIdentityConfig cloudFrontOriginAccessIdentityConfig,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("s3CanonicalUserId") @Nullable String s3CanonicalUserId) {
         this.cloudFrontOriginAccessIdentityConfig = cloudFrontOriginAccessIdentityConfig;
         this.id = id;
         this.s3CanonicalUserId = s3CanonicalUserId;

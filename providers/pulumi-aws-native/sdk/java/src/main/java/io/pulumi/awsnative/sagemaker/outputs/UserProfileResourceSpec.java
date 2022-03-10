@@ -28,11 +28,11 @@ public final class UserProfileResourceSpec {
      */
     private final @Nullable String sageMakerImageVersionArn;
 
-    @OutputCustomType.Constructor({"instanceType","sageMakerImageArn","sageMakerImageVersionArn"})
+    @OutputCustomType.Constructor
     private UserProfileResourceSpec(
-        @Nullable UserProfileResourceSpecInstanceType instanceType,
-        @Nullable String sageMakerImageArn,
-        @Nullable String sageMakerImageVersionArn) {
+        @OutputCustomType.Parameter("instanceType") @Nullable UserProfileResourceSpecInstanceType instanceType,
+        @OutputCustomType.Parameter("sageMakerImageArn") @Nullable String sageMakerImageArn,
+        @OutputCustomType.Parameter("sageMakerImageVersionArn") @Nullable String sageMakerImageVersionArn) {
         this.instanceType = instanceType;
         this.sageMakerImageArn = sageMakerImageArn;
         this.sageMakerImageVersionArn = sageMakerImageVersionArn;

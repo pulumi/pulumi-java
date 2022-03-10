@@ -39,13 +39,13 @@ public final class DBProxyTargetGroupConnectionPoolConfigurationInfoFormat {
      */
     private final @Nullable List<String> sessionPinningFilters;
 
-    @OutputCustomType.Constructor({"connectionBorrowTimeout","initQuery","maxConnectionsPercent","maxIdleConnectionsPercent","sessionPinningFilters"})
+    @OutputCustomType.Constructor
     private DBProxyTargetGroupConnectionPoolConfigurationInfoFormat(
-        @Nullable Integer connectionBorrowTimeout,
-        @Nullable String initQuery,
-        @Nullable Integer maxConnectionsPercent,
-        @Nullable Integer maxIdleConnectionsPercent,
-        @Nullable List<String> sessionPinningFilters) {
+        @OutputCustomType.Parameter("connectionBorrowTimeout") @Nullable Integer connectionBorrowTimeout,
+        @OutputCustomType.Parameter("initQuery") @Nullable String initQuery,
+        @OutputCustomType.Parameter("maxConnectionsPercent") @Nullable Integer maxConnectionsPercent,
+        @OutputCustomType.Parameter("maxIdleConnectionsPercent") @Nullable Integer maxIdleConnectionsPercent,
+        @OutputCustomType.Parameter("sessionPinningFilters") @Nullable List<String> sessionPinningFilters) {
         this.connectionBorrowTimeout = connectionBorrowTimeout;
         this.initQuery = initQuery;
         this.maxConnectionsPercent = maxConnectionsPercent;

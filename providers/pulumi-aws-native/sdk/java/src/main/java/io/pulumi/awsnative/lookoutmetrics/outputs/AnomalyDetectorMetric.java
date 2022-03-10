@@ -20,11 +20,11 @@ public final class AnomalyDetectorMetric {
     private final String metricName;
     private final @Nullable String namespace;
 
-    @OutputCustomType.Constructor({"aggregationFunction","metricName","namespace"})
+    @OutputCustomType.Constructor
     private AnomalyDetectorMetric(
-        AnomalyDetectorMetricAggregationFunction aggregationFunction,
-        String metricName,
-        @Nullable String namespace) {
+        @OutputCustomType.Parameter("aggregationFunction") AnomalyDetectorMetricAggregationFunction aggregationFunction,
+        @OutputCustomType.Parameter("metricName") String metricName,
+        @OutputCustomType.Parameter("namespace") @Nullable String namespace) {
         this.aggregationFunction = aggregationFunction;
         this.metricName = metricName;
         this.namespace = namespace;

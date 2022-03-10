@@ -39,15 +39,15 @@ public final class SecurityProfileBehaviorCriteria {
     private final @Nullable SecurityProfileStatisticalThreshold statisticalThreshold;
     private final @Nullable SecurityProfileMetricValue value;
 
-    @OutputCustomType.Constructor({"comparisonOperator","consecutiveDatapointsToAlarm","consecutiveDatapointsToClear","durationSeconds","mlDetectionConfig","statisticalThreshold","value"})
+    @OutputCustomType.Constructor
     private SecurityProfileBehaviorCriteria(
-        @Nullable SecurityProfileBehaviorCriteriaComparisonOperator comparisonOperator,
-        @Nullable Integer consecutiveDatapointsToAlarm,
-        @Nullable Integer consecutiveDatapointsToClear,
-        @Nullable Integer durationSeconds,
-        @Nullable SecurityProfileMachineLearningDetectionConfig mlDetectionConfig,
-        @Nullable SecurityProfileStatisticalThreshold statisticalThreshold,
-        @Nullable SecurityProfileMetricValue value) {
+        @OutputCustomType.Parameter("comparisonOperator") @Nullable SecurityProfileBehaviorCriteriaComparisonOperator comparisonOperator,
+        @OutputCustomType.Parameter("consecutiveDatapointsToAlarm") @Nullable Integer consecutiveDatapointsToAlarm,
+        @OutputCustomType.Parameter("consecutiveDatapointsToClear") @Nullable Integer consecutiveDatapointsToClear,
+        @OutputCustomType.Parameter("durationSeconds") @Nullable Integer durationSeconds,
+        @OutputCustomType.Parameter("mlDetectionConfig") @Nullable SecurityProfileMachineLearningDetectionConfig mlDetectionConfig,
+        @OutputCustomType.Parameter("statisticalThreshold") @Nullable SecurityProfileStatisticalThreshold statisticalThreshold,
+        @OutputCustomType.Parameter("value") @Nullable SecurityProfileMetricValue value) {
         this.comparisonOperator = comparisonOperator;
         this.consecutiveDatapointsToAlarm = consecutiveDatapointsToAlarm;
         this.consecutiveDatapointsToClear = consecutiveDatapointsToClear;

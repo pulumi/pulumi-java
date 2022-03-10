@@ -23,10 +23,10 @@ public final class SimulationApplicationSimulationSoftwareSuite {
      */
     private final @Nullable SimulationApplicationSimulationSoftwareSuiteVersion version;
 
-    @OutputCustomType.Constructor({"name","version"})
+    @OutputCustomType.Constructor
     private SimulationApplicationSimulationSoftwareSuite(
-        SimulationApplicationSimulationSoftwareSuiteName name,
-        @Nullable SimulationApplicationSimulationSoftwareSuiteVersion version) {
+        @OutputCustomType.Parameter("name") SimulationApplicationSimulationSoftwareSuiteName name,
+        @OutputCustomType.Parameter("version") @Nullable SimulationApplicationSimulationSoftwareSuiteVersion version) {
         this.name = name;
         this.version = version;
     }

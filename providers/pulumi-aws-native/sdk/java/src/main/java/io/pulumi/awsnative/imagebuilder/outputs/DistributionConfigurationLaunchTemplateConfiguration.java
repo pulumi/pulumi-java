@@ -28,11 +28,11 @@ public final class DistributionConfigurationLaunchTemplateConfiguration {
      */
     private final @Nullable Boolean setDefaultVersion;
 
-    @OutputCustomType.Constructor({"accountId","launchTemplateId","setDefaultVersion"})
+    @OutputCustomType.Constructor
     private DistributionConfigurationLaunchTemplateConfiguration(
-        @Nullable String accountId,
-        @Nullable String launchTemplateId,
-        @Nullable Boolean setDefaultVersion) {
+        @OutputCustomType.Parameter("accountId") @Nullable String accountId,
+        @OutputCustomType.Parameter("launchTemplateId") @Nullable String launchTemplateId,
+        @OutputCustomType.Parameter("setDefaultVersion") @Nullable Boolean setDefaultVersion) {
         this.accountId = accountId;
         this.launchTemplateId = launchTemplateId;
         this.setDefaultVersion = setDefaultVersion;

@@ -45,13 +45,13 @@ public final class GetHookVersionResult {
      */
     private final @Nullable HookVersionVisibility visibility;
 
-    @OutputCustomType.Constructor({"arn","isDefaultVersion","typeArn","versionId","visibility"})
+    @OutputCustomType.Constructor
     private GetHookVersionResult(
-        @Nullable String arn,
-        @Nullable Boolean isDefaultVersion,
-        @Nullable String typeArn,
-        @Nullable String versionId,
-        @Nullable HookVersionVisibility visibility) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("isDefaultVersion") @Nullable Boolean isDefaultVersion,
+        @OutputCustomType.Parameter("typeArn") @Nullable String typeArn,
+        @OutputCustomType.Parameter("versionId") @Nullable String versionId,
+        @OutputCustomType.Parameter("visibility") @Nullable HookVersionVisibility visibility) {
         this.arn = arn;
         this.isDefaultVersion = isDefaultVersion;
         this.typeArn = typeArn;

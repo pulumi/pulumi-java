@@ -20,10 +20,10 @@ public final class BotAliasLambdaCodeHook {
      */
     private final String lambdaArn;
 
-    @OutputCustomType.Constructor({"codeHookInterfaceVersion","lambdaArn"})
+    @OutputCustomType.Constructor
     private BotAliasLambdaCodeHook(
-        String codeHookInterfaceVersion,
-        String lambdaArn) {
+        @OutputCustomType.Parameter("codeHookInterfaceVersion") String codeHookInterfaceVersion,
+        @OutputCustomType.Parameter("lambdaArn") String lambdaArn) {
         this.codeHookInterfaceVersion = codeHookInterfaceVersion;
         this.lambdaArn = lambdaArn;
     }

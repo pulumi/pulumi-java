@@ -36,12 +36,12 @@ public final class GetLoggingConfigurationResult {
      */
     private final @Nullable List<LoggingConfigurationFieldToMatch> redactedFields;
 
-    @OutputCustomType.Constructor({"logDestinationConfigs","loggingFilter","managedByFirewallManager","redactedFields"})
+    @OutputCustomType.Constructor
     private GetLoggingConfigurationResult(
-        @Nullable List<String> logDestinationConfigs,
-        @Nullable LoggingFilterProperties loggingFilter,
-        @Nullable Boolean managedByFirewallManager,
-        @Nullable List<LoggingConfigurationFieldToMatch> redactedFields) {
+        @OutputCustomType.Parameter("logDestinationConfigs") @Nullable List<String> logDestinationConfigs,
+        @OutputCustomType.Parameter("loggingFilter") @Nullable LoggingFilterProperties loggingFilter,
+        @OutputCustomType.Parameter("managedByFirewallManager") @Nullable Boolean managedByFirewallManager,
+        @OutputCustomType.Parameter("redactedFields") @Nullable List<LoggingConfigurationFieldToMatch> redactedFields) {
         this.logDestinationConfigs = logDestinationConfigs;
         this.loggingFilter = loggingFilter;
         this.managedByFirewallManager = managedByFirewallManager;

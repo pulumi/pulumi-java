@@ -19,10 +19,10 @@ public final class StreamingImageEncryptionConfiguration {
     private final @Nullable String keyArn;
     private final StreamingImageEncryptionConfigurationKeyType keyType;
 
-    @OutputCustomType.Constructor({"keyArn","keyType"})
+    @OutputCustomType.Constructor
     private StreamingImageEncryptionConfiguration(
-        @Nullable String keyArn,
-        StreamingImageEncryptionConfigurationKeyType keyType) {
+        @OutputCustomType.Parameter("keyArn") @Nullable String keyArn,
+        @OutputCustomType.Parameter("keyType") StreamingImageEncryptionConfigurationKeyType keyType) {
         this.keyArn = keyArn;
         this.keyType = keyType;
     }

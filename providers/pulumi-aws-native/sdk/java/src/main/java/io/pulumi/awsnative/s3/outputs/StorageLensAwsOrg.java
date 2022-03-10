@@ -11,8 +11,8 @@ import java.util.Objects;
 public final class StorageLensAwsOrg {
     private final String arn;
 
-    @OutputCustomType.Constructor({"arn"})
-    private StorageLensAwsOrg(String arn) {
+    @OutputCustomType.Constructor
+    private StorageLensAwsOrg(@OutputCustomType.Parameter("arn") String arn) {
         this.arn = arn;
     }
 

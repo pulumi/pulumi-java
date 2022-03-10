@@ -49,15 +49,15 @@ public final class BucketInventoryConfiguration {
      */
     private final BucketInventoryConfigurationScheduleFrequency scheduleFrequency;
 
-    @OutputCustomType.Constructor({"destination","enabled","id","includedObjectVersions","optionalFields","prefix","scheduleFrequency"})
+    @OutputCustomType.Constructor
     private BucketInventoryConfiguration(
-        BucketDestination destination,
-        Boolean enabled,
-        String id,
-        BucketInventoryConfigurationIncludedObjectVersions includedObjectVersions,
-        @Nullable List<BucketInventoryConfigurationOptionalFieldsItem> optionalFields,
-        @Nullable String prefix,
-        BucketInventoryConfigurationScheduleFrequency scheduleFrequency) {
+        @OutputCustomType.Parameter("destination") BucketDestination destination,
+        @OutputCustomType.Parameter("enabled") Boolean enabled,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("includedObjectVersions") BucketInventoryConfigurationIncludedObjectVersions includedObjectVersions,
+        @OutputCustomType.Parameter("optionalFields") @Nullable List<BucketInventoryConfigurationOptionalFieldsItem> optionalFields,
+        @OutputCustomType.Parameter("prefix") @Nullable String prefix,
+        @OutputCustomType.Parameter("scheduleFrequency") BucketInventoryConfigurationScheduleFrequency scheduleFrequency) {
         this.destination = destination;
         this.enabled = enabled;
         this.id = id;

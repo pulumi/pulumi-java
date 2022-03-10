@@ -15,10 +15,10 @@ public final class BotSlotValueSelectionSetting {
     private final @Nullable BotSlotValueRegexFilter regexFilter;
     private final BotSlotValueResolutionStrategy resolutionStrategy;
 
-    @OutputCustomType.Constructor({"regexFilter","resolutionStrategy"})
+    @OutputCustomType.Constructor
     private BotSlotValueSelectionSetting(
-        @Nullable BotSlotValueRegexFilter regexFilter,
-        BotSlotValueResolutionStrategy resolutionStrategy) {
+        @OutputCustomType.Parameter("regexFilter") @Nullable BotSlotValueRegexFilter regexFilter,
+        @OutputCustomType.Parameter("resolutionStrategy") BotSlotValueResolutionStrategy resolutionStrategy) {
         this.regexFilter = regexFilter;
         this.resolutionStrategy = resolutionStrategy;
     }

@@ -43,27 +43,27 @@ public final class DistributionConfig {
     private final @Nullable DistributionViewerCertificate viewerCertificate;
     private final @Nullable String webACLId;
 
-    @OutputCustomType.Constructor({"aliases","cNAMEs","cacheBehaviors","comment","customErrorResponses","customOrigin","defaultCacheBehavior","defaultRootObject","enabled","httpVersion","iPV6Enabled","logging","originGroups","origins","priceClass","restrictions","s3Origin","viewerCertificate","webACLId"})
+    @OutputCustomType.Constructor
     private DistributionConfig(
-        @Nullable List<String> aliases,
-        @Nullable List<String> cNAMEs,
-        @Nullable List<DistributionCacheBehavior> cacheBehaviors,
-        @Nullable String comment,
-        @Nullable List<DistributionCustomErrorResponse> customErrorResponses,
-        @Nullable DistributionLegacyCustomOrigin customOrigin,
-        @Nullable DistributionDefaultCacheBehavior defaultCacheBehavior,
-        @Nullable String defaultRootObject,
-        Boolean enabled,
-        @Nullable String httpVersion,
-        @Nullable Boolean iPV6Enabled,
-        @Nullable DistributionLogging logging,
-        @Nullable DistributionOriginGroups originGroups,
-        @Nullable List<DistributionOrigin> origins,
-        @Nullable String priceClass,
-        @Nullable DistributionRestrictions restrictions,
-        @Nullable DistributionLegacyS3Origin s3Origin,
-        @Nullable DistributionViewerCertificate viewerCertificate,
-        @Nullable String webACLId) {
+        @OutputCustomType.Parameter("aliases") @Nullable List<String> aliases,
+        @OutputCustomType.Parameter("cNAMEs") @Nullable List<String> cNAMEs,
+        @OutputCustomType.Parameter("cacheBehaviors") @Nullable List<DistributionCacheBehavior> cacheBehaviors,
+        @OutputCustomType.Parameter("comment") @Nullable String comment,
+        @OutputCustomType.Parameter("customErrorResponses") @Nullable List<DistributionCustomErrorResponse> customErrorResponses,
+        @OutputCustomType.Parameter("customOrigin") @Nullable DistributionLegacyCustomOrigin customOrigin,
+        @OutputCustomType.Parameter("defaultCacheBehavior") @Nullable DistributionDefaultCacheBehavior defaultCacheBehavior,
+        @OutputCustomType.Parameter("defaultRootObject") @Nullable String defaultRootObject,
+        @OutputCustomType.Parameter("enabled") Boolean enabled,
+        @OutputCustomType.Parameter("httpVersion") @Nullable String httpVersion,
+        @OutputCustomType.Parameter("iPV6Enabled") @Nullable Boolean iPV6Enabled,
+        @OutputCustomType.Parameter("logging") @Nullable DistributionLogging logging,
+        @OutputCustomType.Parameter("originGroups") @Nullable DistributionOriginGroups originGroups,
+        @OutputCustomType.Parameter("origins") @Nullable List<DistributionOrigin> origins,
+        @OutputCustomType.Parameter("priceClass") @Nullable String priceClass,
+        @OutputCustomType.Parameter("restrictions") @Nullable DistributionRestrictions restrictions,
+        @OutputCustomType.Parameter("s3Origin") @Nullable DistributionLegacyS3Origin s3Origin,
+        @OutputCustomType.Parameter("viewerCertificate") @Nullable DistributionViewerCertificate viewerCertificate,
+        @OutputCustomType.Parameter("webACLId") @Nullable String webACLId) {
         this.aliases = aliases;
         this.cNAMEs = cNAMEs;
         this.cacheBehaviors = cacheBehaviors;

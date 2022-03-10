@@ -38,13 +38,13 @@ public final class OriginEndpointSpekeKeyProvider {
      */
     private final String url;
 
-    @OutputCustomType.Constructor({"certificateArn","resourceId","roleArn","systemIds","url"})
+    @OutputCustomType.Constructor
     private OriginEndpointSpekeKeyProvider(
-        @Nullable String certificateArn,
-        String resourceId,
-        String roleArn,
-        List<String> systemIds,
-        String url) {
+        @OutputCustomType.Parameter("certificateArn") @Nullable String certificateArn,
+        @OutputCustomType.Parameter("resourceId") String resourceId,
+        @OutputCustomType.Parameter("roleArn") String roleArn,
+        @OutputCustomType.Parameter("systemIds") List<String> systemIds,
+        @OutputCustomType.Parameter("url") String url) {
         this.certificateArn = certificateArn;
         this.resourceId = resourceId;
         this.roleArn = roleArn;

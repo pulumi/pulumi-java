@@ -20,15 +20,15 @@ public final class DataSourceGoogleDriveConfiguration {
     private final @Nullable List<String> inclusionPatterns;
     private final String secretArn;
 
-    @OutputCustomType.Constructor({"excludeMimeTypes","excludeSharedDrives","excludeUserAccounts","exclusionPatterns","fieldMappings","inclusionPatterns","secretArn"})
+    @OutputCustomType.Constructor
     private DataSourceGoogleDriveConfiguration(
-        @Nullable List<String> excludeMimeTypes,
-        @Nullable List<String> excludeSharedDrives,
-        @Nullable List<String> excludeUserAccounts,
-        @Nullable List<String> exclusionPatterns,
-        @Nullable List<DataSourceToIndexFieldMapping> fieldMappings,
-        @Nullable List<String> inclusionPatterns,
-        String secretArn) {
+        @OutputCustomType.Parameter("excludeMimeTypes") @Nullable List<String> excludeMimeTypes,
+        @OutputCustomType.Parameter("excludeSharedDrives") @Nullable List<String> excludeSharedDrives,
+        @OutputCustomType.Parameter("excludeUserAccounts") @Nullable List<String> excludeUserAccounts,
+        @OutputCustomType.Parameter("exclusionPatterns") @Nullable List<String> exclusionPatterns,
+        @OutputCustomType.Parameter("fieldMappings") @Nullable List<DataSourceToIndexFieldMapping> fieldMappings,
+        @OutputCustomType.Parameter("inclusionPatterns") @Nullable List<String> inclusionPatterns,
+        @OutputCustomType.Parameter("secretArn") String secretArn) {
         this.excludeMimeTypes = excludeMimeTypes;
         this.excludeSharedDrives = excludeSharedDrives;
         this.excludeUserAccounts = excludeUserAccounts;

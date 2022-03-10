@@ -29,11 +29,11 @@ public final class GetUserResult {
      */
     private final @Nullable List<UserTag> tags;
 
-    @OutputCustomType.Constructor({"arn","status","tags"})
+    @OutputCustomType.Constructor
     private GetUserResult(
-        @Nullable String arn,
-        @Nullable String status,
-        @Nullable List<UserTag> tags) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("status") @Nullable String status,
+        @OutputCustomType.Parameter("tags") @Nullable List<UserTag> tags) {
         this.arn = arn;
         this.status = status;
         this.tags = tags;

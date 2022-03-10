@@ -16,11 +16,11 @@ public final class ScheduledQueryS3Configuration {
     private final @Nullable ScheduledQueryEncryptionOption encryptionOption;
     private final @Nullable String objectKeyPrefix;
 
-    @OutputCustomType.Constructor({"bucketName","encryptionOption","objectKeyPrefix"})
+    @OutputCustomType.Constructor
     private ScheduledQueryS3Configuration(
-        String bucketName,
-        @Nullable ScheduledQueryEncryptionOption encryptionOption,
-        @Nullable String objectKeyPrefix) {
+        @OutputCustomType.Parameter("bucketName") String bucketName,
+        @OutputCustomType.Parameter("encryptionOption") @Nullable ScheduledQueryEncryptionOption encryptionOption,
+        @OutputCustomType.Parameter("objectKeyPrefix") @Nullable String objectKeyPrefix) {
         this.bucketName = bucketName;
         this.encryptionOption = encryptionOption;
         this.objectKeyPrefix = objectKeyPrefix;

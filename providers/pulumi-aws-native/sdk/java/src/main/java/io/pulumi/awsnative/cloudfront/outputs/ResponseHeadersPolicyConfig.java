@@ -20,13 +20,13 @@ public final class ResponseHeadersPolicyConfig {
     private final String name;
     private final @Nullable ResponseHeadersPolicySecurityHeadersConfig securityHeadersConfig;
 
-    @OutputCustomType.Constructor({"comment","corsConfig","customHeadersConfig","name","securityHeadersConfig"})
+    @OutputCustomType.Constructor
     private ResponseHeadersPolicyConfig(
-        @Nullable String comment,
-        @Nullable ResponseHeadersPolicyCorsConfig corsConfig,
-        @Nullable ResponseHeadersPolicyCustomHeadersConfig customHeadersConfig,
-        String name,
-        @Nullable ResponseHeadersPolicySecurityHeadersConfig securityHeadersConfig) {
+        @OutputCustomType.Parameter("comment") @Nullable String comment,
+        @OutputCustomType.Parameter("corsConfig") @Nullable ResponseHeadersPolicyCorsConfig corsConfig,
+        @OutputCustomType.Parameter("customHeadersConfig") @Nullable ResponseHeadersPolicyCustomHeadersConfig customHeadersConfig,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("securityHeadersConfig") @Nullable ResponseHeadersPolicySecurityHeadersConfig securityHeadersConfig) {
         this.comment = comment;
         this.corsConfig = corsConfig;
         this.customHeadersConfig = customHeadersConfig;

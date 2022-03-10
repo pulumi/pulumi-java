@@ -21,15 +21,15 @@ public final class ConnectorProfileSAPODataConnectorProfileProperties {
     private final @Nullable Integer portNumber;
     private final @Nullable String privateLinkServiceName;
 
-    @OutputCustomType.Constructor({"applicationHostUrl","applicationServicePath","clientNumber","logonLanguage","oAuthProperties","portNumber","privateLinkServiceName"})
+    @OutputCustomType.Constructor
     private ConnectorProfileSAPODataConnectorProfileProperties(
-        @Nullable String applicationHostUrl,
-        @Nullable String applicationServicePath,
-        @Nullable String clientNumber,
-        @Nullable String logonLanguage,
-        @Nullable ConnectorProfileOAuthProperties oAuthProperties,
-        @Nullable Integer portNumber,
-        @Nullable String privateLinkServiceName) {
+        @OutputCustomType.Parameter("applicationHostUrl") @Nullable String applicationHostUrl,
+        @OutputCustomType.Parameter("applicationServicePath") @Nullable String applicationServicePath,
+        @OutputCustomType.Parameter("clientNumber") @Nullable String clientNumber,
+        @OutputCustomType.Parameter("logonLanguage") @Nullable String logonLanguage,
+        @OutputCustomType.Parameter("oAuthProperties") @Nullable ConnectorProfileOAuthProperties oAuthProperties,
+        @OutputCustomType.Parameter("portNumber") @Nullable Integer portNumber,
+        @OutputCustomType.Parameter("privateLinkServiceName") @Nullable String privateLinkServiceName) {
         this.applicationHostUrl = applicationHostUrl;
         this.applicationServicePath = applicationServicePath;
         this.clientNumber = clientNumber;

@@ -14,10 +14,10 @@ public final class WebACLSqliMatchStatement {
     private final WebACLFieldToMatch fieldToMatch;
     private final List<WebACLTextTransformation> textTransformations;
 
-    @OutputCustomType.Constructor({"fieldToMatch","textTransformations"})
+    @OutputCustomType.Constructor
     private WebACLSqliMatchStatement(
-        WebACLFieldToMatch fieldToMatch,
-        List<WebACLTextTransformation> textTransformations) {
+        @OutputCustomType.Parameter("fieldToMatch") WebACLFieldToMatch fieldToMatch,
+        @OutputCustomType.Parameter("textTransformations") List<WebACLTextTransformation> textTransformations) {
         this.fieldToMatch = fieldToMatch;
         this.textTransformations = textTransformations;
     }

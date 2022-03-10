@@ -22,10 +22,10 @@ public final class ApiKeyStageKey {
      */
     private final @Nullable String stageName;
 
-    @OutputCustomType.Constructor({"restApiId","stageName"})
+    @OutputCustomType.Constructor
     private ApiKeyStageKey(
-        @Nullable String restApiId,
-        @Nullable String stageName) {
+        @OutputCustomType.Parameter("restApiId") @Nullable String restApiId,
+        @OutputCustomType.Parameter("stageName") @Nullable String stageName) {
         this.restApiId = restApiId;
         this.stageName = stageName;
     }

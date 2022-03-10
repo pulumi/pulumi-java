@@ -15,11 +15,11 @@ public final class DeliveryStreamCopyCommand {
     private final @Nullable String dataTableColumns;
     private final String dataTableName;
 
-    @OutputCustomType.Constructor({"copyOptions","dataTableColumns","dataTableName"})
+    @OutputCustomType.Constructor
     private DeliveryStreamCopyCommand(
-        @Nullable String copyOptions,
-        @Nullable String dataTableColumns,
-        String dataTableName) {
+        @OutputCustomType.Parameter("copyOptions") @Nullable String copyOptions,
+        @OutputCustomType.Parameter("dataTableColumns") @Nullable String dataTableColumns,
+        @OutputCustomType.Parameter("dataTableName") String dataTableName) {
         this.copyOptions = copyOptions;
         this.dataTableColumns = dataTableColumns;
         this.dataTableName = dataTableName;

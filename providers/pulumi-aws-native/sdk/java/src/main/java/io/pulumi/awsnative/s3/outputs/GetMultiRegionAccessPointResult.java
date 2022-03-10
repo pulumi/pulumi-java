@@ -22,10 +22,10 @@ public final class GetMultiRegionAccessPointResult {
      */
     private final @Nullable String createdAt;
 
-    @OutputCustomType.Constructor({"alias","createdAt"})
+    @OutputCustomType.Constructor
     private GetMultiRegionAccessPointResult(
-        @Nullable String alias,
-        @Nullable String createdAt) {
+        @OutputCustomType.Parameter("alias") @Nullable String alias,
+        @OutputCustomType.Parameter("createdAt") @Nullable String createdAt) {
         this.alias = alias;
         this.createdAt = createdAt;
     }

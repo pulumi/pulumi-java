@@ -14,10 +14,10 @@ public final class JobTemplateRateIncreaseCriteria {
     private final @Nullable Integer numberOfNotifiedThings;
     private final @Nullable Integer numberOfSucceededThings;
 
-    @OutputCustomType.Constructor({"numberOfNotifiedThings","numberOfSucceededThings"})
+    @OutputCustomType.Constructor
     private JobTemplateRateIncreaseCriteria(
-        @Nullable Integer numberOfNotifiedThings,
-        @Nullable Integer numberOfSucceededThings) {
+        @OutputCustomType.Parameter("numberOfNotifiedThings") @Nullable Integer numberOfNotifiedThings,
+        @OutputCustomType.Parameter("numberOfSucceededThings") @Nullable Integer numberOfSucceededThings) {
         this.numberOfNotifiedThings = numberOfNotifiedThings;
         this.numberOfSucceededThings = numberOfSucceededThings;
     }

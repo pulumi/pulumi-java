@@ -40,13 +40,13 @@ public final class GetIntegrationResult {
      */
     private final @Nullable List<IntegrationTag> tags;
 
-    @OutputCustomType.Constructor({"createdAt","lastUpdatedAt","objectTypeName","objectTypeNames","tags"})
+    @OutputCustomType.Constructor
     private GetIntegrationResult(
-        @Nullable String createdAt,
-        @Nullable String lastUpdatedAt,
-        @Nullable String objectTypeName,
-        @Nullable List<IntegrationObjectTypeMapping> objectTypeNames,
-        @Nullable List<IntegrationTag> tags) {
+        @OutputCustomType.Parameter("createdAt") @Nullable String createdAt,
+        @OutputCustomType.Parameter("lastUpdatedAt") @Nullable String lastUpdatedAt,
+        @OutputCustomType.Parameter("objectTypeName") @Nullable String objectTypeName,
+        @OutputCustomType.Parameter("objectTypeNames") @Nullable List<IntegrationObjectTypeMapping> objectTypeNames,
+        @OutputCustomType.Parameter("tags") @Nullable List<IntegrationTag> tags) {
         this.createdAt = createdAt;
         this.lastUpdatedAt = lastUpdatedAt;
         this.objectTypeName = objectTypeName;

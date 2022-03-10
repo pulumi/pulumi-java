@@ -13,8 +13,8 @@ import javax.annotation.Nullable;
 public final class RuleGroupRuleActionCountProperties {
     private final @Nullable RuleGroupCustomRequestHandling customRequestHandling;
 
-    @OutputCustomType.Constructor({"customRequestHandling"})
-    private RuleGroupRuleActionCountProperties(@Nullable RuleGroupCustomRequestHandling customRequestHandling) {
+    @OutputCustomType.Constructor
+    private RuleGroupRuleActionCountProperties(@OutputCustomType.Parameter("customRequestHandling") @Nullable RuleGroupCustomRequestHandling customRequestHandling) {
         this.customRequestHandling = customRequestHandling;
     }
 

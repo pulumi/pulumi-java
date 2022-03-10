@@ -25,11 +25,11 @@ public final class ServiceImageRepository {
      */
     private final ServiceImageRepositoryImageRepositoryType imageRepositoryType;
 
-    @OutputCustomType.Constructor({"imageConfiguration","imageIdentifier","imageRepositoryType"})
+    @OutputCustomType.Constructor
     private ServiceImageRepository(
-        @Nullable ServiceImageConfiguration imageConfiguration,
-        String imageIdentifier,
-        ServiceImageRepositoryImageRepositoryType imageRepositoryType) {
+        @OutputCustomType.Parameter("imageConfiguration") @Nullable ServiceImageConfiguration imageConfiguration,
+        @OutputCustomType.Parameter("imageIdentifier") String imageIdentifier,
+        @OutputCustomType.Parameter("imageRepositoryType") ServiceImageRepositoryImageRepositoryType imageRepositoryType) {
         this.imageConfiguration = imageConfiguration;
         this.imageIdentifier = imageIdentifier;
         this.imageRepositoryType = imageRepositoryType;

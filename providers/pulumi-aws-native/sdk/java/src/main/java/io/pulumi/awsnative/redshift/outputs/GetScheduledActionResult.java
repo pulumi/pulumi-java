@@ -61,17 +61,17 @@ public final class GetScheduledActionResult {
      */
     private final @Nullable ScheduledActionType targetAction;
 
-    @OutputCustomType.Constructor({"enable","endTime","iamRole","nextInvocations","schedule","scheduledActionDescription","startTime","state","targetAction"})
+    @OutputCustomType.Constructor
     private GetScheduledActionResult(
-        @Nullable Boolean enable,
-        @Nullable String endTime,
-        @Nullable String iamRole,
-        @Nullable List<String> nextInvocations,
-        @Nullable String schedule,
-        @Nullable String scheduledActionDescription,
-        @Nullable String startTime,
-        @Nullable ScheduledActionState state,
-        @Nullable ScheduledActionType targetAction) {
+        @OutputCustomType.Parameter("enable") @Nullable Boolean enable,
+        @OutputCustomType.Parameter("endTime") @Nullable String endTime,
+        @OutputCustomType.Parameter("iamRole") @Nullable String iamRole,
+        @OutputCustomType.Parameter("nextInvocations") @Nullable List<String> nextInvocations,
+        @OutputCustomType.Parameter("schedule") @Nullable String schedule,
+        @OutputCustomType.Parameter("scheduledActionDescription") @Nullable String scheduledActionDescription,
+        @OutputCustomType.Parameter("startTime") @Nullable String startTime,
+        @OutputCustomType.Parameter("state") @Nullable ScheduledActionState state,
+        @OutputCustomType.Parameter("targetAction") @Nullable ScheduledActionType targetAction) {
         this.enable = enable;
         this.endTime = endTime;
         this.iamRole = iamRole;

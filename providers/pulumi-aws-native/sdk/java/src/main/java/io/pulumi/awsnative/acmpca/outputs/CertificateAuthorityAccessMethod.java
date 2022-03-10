@@ -14,10 +14,10 @@ public final class CertificateAuthorityAccessMethod {
     private final @Nullable String accessMethodType;
     private final @Nullable String customObjectIdentifier;
 
-    @OutputCustomType.Constructor({"accessMethodType","customObjectIdentifier"})
+    @OutputCustomType.Constructor
     private CertificateAuthorityAccessMethod(
-        @Nullable String accessMethodType,
-        @Nullable String customObjectIdentifier) {
+        @OutputCustomType.Parameter("accessMethodType") @Nullable String accessMethodType,
+        @OutputCustomType.Parameter("customObjectIdentifier") @Nullable String customObjectIdentifier) {
         this.accessMethodType = accessMethodType;
         this.customObjectIdentifier = customObjectIdentifier;
     }

@@ -11,8 +11,8 @@ import java.util.Objects;
 public final class MonitoringScheduleMonitoringResources {
     private final MonitoringScheduleClusterConfig clusterConfig;
 
-    @OutputCustomType.Constructor({"clusterConfig"})
-    private MonitoringScheduleMonitoringResources(MonitoringScheduleClusterConfig clusterConfig) {
+    @OutputCustomType.Constructor
+    private MonitoringScheduleMonitoringResources(@OutputCustomType.Parameter("clusterConfig") MonitoringScheduleClusterConfig clusterConfig) {
         this.clusterConfig = clusterConfig;
     }
 

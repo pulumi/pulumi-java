@@ -15,8 +15,8 @@ public final class GatewayGreengrass {
      */
     private final String groupArn;
 
-    @OutputCustomType.Constructor({"groupArn"})
-    private GatewayGreengrass(String groupArn) {
+    @OutputCustomType.Constructor
+    private GatewayGreengrass(@OutputCustomType.Parameter("groupArn") String groupArn) {
         this.groupArn = groupArn;
     }
 

@@ -15,8 +15,8 @@ public final class BucketAccelerateConfiguration {
      */
     private final BucketAccelerateConfigurationAccelerationStatus accelerationStatus;
 
-    @OutputCustomType.Constructor({"accelerationStatus"})
-    private BucketAccelerateConfiguration(BucketAccelerateConfigurationAccelerationStatus accelerationStatus) {
+    @OutputCustomType.Constructor
+    private BucketAccelerateConfiguration(@OutputCustomType.Parameter("accelerationStatus") BucketAccelerateConfigurationAccelerationStatus accelerationStatus) {
         this.accelerationStatus = accelerationStatus;
     }
 

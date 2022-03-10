@@ -12,8 +12,8 @@ import java.util.Objects;
 public final class WebACLOrStatement {
     private final List<WebACLStatement> statements;
 
-    @OutputCustomType.Constructor({"statements"})
-    private WebACLOrStatement(List<WebACLStatement> statements) {
+    @OutputCustomType.Constructor
+    private WebACLOrStatement(@OutputCustomType.Parameter("statements") List<WebACLStatement> statements) {
         this.statements = statements;
     }
 

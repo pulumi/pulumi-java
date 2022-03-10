@@ -48,15 +48,15 @@ public final class ConnectorProfileSnowflakeConnectorProfileProperties {
      */
     private final String warehouse;
 
-    @OutputCustomType.Constructor({"accountName","bucketName","bucketPrefix","privateLinkServiceName","region","stage","warehouse"})
+    @OutputCustomType.Constructor
     private ConnectorProfileSnowflakeConnectorProfileProperties(
-        @Nullable String accountName,
-        String bucketName,
-        @Nullable String bucketPrefix,
-        @Nullable String privateLinkServiceName,
-        @Nullable String region,
-        String stage,
-        String warehouse) {
+        @OutputCustomType.Parameter("accountName") @Nullable String accountName,
+        @OutputCustomType.Parameter("bucketName") String bucketName,
+        @OutputCustomType.Parameter("bucketPrefix") @Nullable String bucketPrefix,
+        @OutputCustomType.Parameter("privateLinkServiceName") @Nullable String privateLinkServiceName,
+        @OutputCustomType.Parameter("region") @Nullable String region,
+        @OutputCustomType.Parameter("stage") String stage,
+        @OutputCustomType.Parameter("warehouse") String warehouse) {
         this.accountName = accountName;
         this.bucketName = bucketName;
         this.bucketPrefix = bucketPrefix;

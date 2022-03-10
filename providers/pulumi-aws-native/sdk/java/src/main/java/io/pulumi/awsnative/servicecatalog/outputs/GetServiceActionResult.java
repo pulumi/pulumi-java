@@ -22,14 +22,14 @@ public final class GetServiceActionResult {
     private final @Nullable String id;
     private final @Nullable String name;
 
-    @OutputCustomType.Constructor({"acceptLanguage","definition","definitionType","description","id","name"})
+    @OutputCustomType.Constructor
     private GetServiceActionResult(
-        @Nullable ServiceActionAcceptLanguage acceptLanguage,
-        @Nullable List<ServiceActionDefinitionParameter> definition,
-        @Nullable ServiceActionDefinitionType definitionType,
-        @Nullable String description,
-        @Nullable String id,
-        @Nullable String name) {
+        @OutputCustomType.Parameter("acceptLanguage") @Nullable ServiceActionAcceptLanguage acceptLanguage,
+        @OutputCustomType.Parameter("definition") @Nullable List<ServiceActionDefinitionParameter> definition,
+        @OutputCustomType.Parameter("definitionType") @Nullable ServiceActionDefinitionType definitionType,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("name") @Nullable String name) {
         this.acceptLanguage = acceptLanguage;
         this.definition = definition;
         this.definitionType = definitionType;

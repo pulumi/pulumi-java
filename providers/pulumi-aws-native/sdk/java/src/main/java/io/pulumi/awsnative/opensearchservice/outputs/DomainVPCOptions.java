@@ -14,10 +14,10 @@ public final class DomainVPCOptions {
     private final @Nullable List<String> securityGroupIds;
     private final @Nullable List<String> subnetIds;
 
-    @OutputCustomType.Constructor({"securityGroupIds","subnetIds"})
+    @OutputCustomType.Constructor
     private DomainVPCOptions(
-        @Nullable List<String> securityGroupIds,
-        @Nullable List<String> subnetIds) {
+        @OutputCustomType.Parameter("securityGroupIds") @Nullable List<String> securityGroupIds,
+        @OutputCustomType.Parameter("subnetIds") @Nullable List<String> subnetIds) {
         this.securityGroupIds = securityGroupIds;
         this.subnetIds = subnetIds;
     }

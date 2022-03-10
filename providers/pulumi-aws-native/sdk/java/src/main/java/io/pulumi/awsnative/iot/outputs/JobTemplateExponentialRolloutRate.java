@@ -27,11 +27,11 @@ public final class JobTemplateExponentialRolloutRate {
      */
     private final JobTemplateRateIncreaseCriteria rateIncreaseCriteria;
 
-    @OutputCustomType.Constructor({"baseRatePerMinute","incrementFactor","rateIncreaseCriteria"})
+    @OutputCustomType.Constructor
     private JobTemplateExponentialRolloutRate(
-        Integer baseRatePerMinute,
-        Double incrementFactor,
-        JobTemplateRateIncreaseCriteria rateIncreaseCriteria) {
+        @OutputCustomType.Parameter("baseRatePerMinute") Integer baseRatePerMinute,
+        @OutputCustomType.Parameter("incrementFactor") Double incrementFactor,
+        @OutputCustomType.Parameter("rateIncreaseCriteria") JobTemplateRateIncreaseCriteria rateIncreaseCriteria) {
         this.baseRatePerMinute = baseRatePerMinute;
         this.incrementFactor = incrementFactor;
         this.rateIncreaseCriteria = rateIncreaseCriteria;

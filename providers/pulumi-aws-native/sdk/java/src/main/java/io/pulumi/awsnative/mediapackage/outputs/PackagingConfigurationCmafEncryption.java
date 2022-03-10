@@ -11,8 +11,8 @@ import java.util.Objects;
 public final class PackagingConfigurationCmafEncryption {
     private final PackagingConfigurationSpekeKeyProvider spekeKeyProvider;
 
-    @OutputCustomType.Constructor({"spekeKeyProvider"})
-    private PackagingConfigurationCmafEncryption(PackagingConfigurationSpekeKeyProvider spekeKeyProvider) {
+    @OutputCustomType.Constructor
+    private PackagingConfigurationCmafEncryption(@OutputCustomType.Parameter("spekeKeyProvider") PackagingConfigurationSpekeKeyProvider spekeKeyProvider) {
         this.spekeKeyProvider = spekeKeyProvider;
     }
 

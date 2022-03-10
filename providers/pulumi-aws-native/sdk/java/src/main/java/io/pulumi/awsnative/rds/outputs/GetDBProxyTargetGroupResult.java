@@ -22,12 +22,12 @@ public final class GetDBProxyTargetGroupResult {
      */
     private final @Nullable String targetGroupArn;
 
-    @OutputCustomType.Constructor({"connectionPoolConfigurationInfo","dBClusterIdentifiers","dBInstanceIdentifiers","targetGroupArn"})
+    @OutputCustomType.Constructor
     private GetDBProxyTargetGroupResult(
-        @Nullable DBProxyTargetGroupConnectionPoolConfigurationInfoFormat connectionPoolConfigurationInfo,
-        @Nullable List<String> dBClusterIdentifiers,
-        @Nullable List<String> dBInstanceIdentifiers,
-        @Nullable String targetGroupArn) {
+        @OutputCustomType.Parameter("connectionPoolConfigurationInfo") @Nullable DBProxyTargetGroupConnectionPoolConfigurationInfoFormat connectionPoolConfigurationInfo,
+        @OutputCustomType.Parameter("dBClusterIdentifiers") @Nullable List<String> dBClusterIdentifiers,
+        @OutputCustomType.Parameter("dBInstanceIdentifiers") @Nullable List<String> dBInstanceIdentifiers,
+        @OutputCustomType.Parameter("targetGroupArn") @Nullable String targetGroupArn) {
         this.connectionPoolConfigurationInfo = connectionPoolConfigurationInfo;
         this.dBClusterIdentifiers = dBClusterIdentifiers;
         this.dBInstanceIdentifiers = dBInstanceIdentifiers;

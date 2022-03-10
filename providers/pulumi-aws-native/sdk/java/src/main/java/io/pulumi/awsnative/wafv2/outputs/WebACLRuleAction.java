@@ -19,12 +19,12 @@ public final class WebACLRuleAction {
     private final @Nullable WebACLCaptchaAction captcha;
     private final @Nullable WebACLCountAction count;
 
-    @OutputCustomType.Constructor({"allow","block","captcha","count"})
+    @OutputCustomType.Constructor
     private WebACLRuleAction(
-        @Nullable WebACLAllowAction allow,
-        @Nullable WebACLBlockAction block,
-        @Nullable WebACLCaptchaAction captcha,
-        @Nullable WebACLCountAction count) {
+        @OutputCustomType.Parameter("allow") @Nullable WebACLAllowAction allow,
+        @OutputCustomType.Parameter("block") @Nullable WebACLBlockAction block,
+        @OutputCustomType.Parameter("captcha") @Nullable WebACLCaptchaAction captcha,
+        @OutputCustomType.Parameter("count") @Nullable WebACLCountAction count) {
         this.allow = allow;
         this.block = block;
         this.captcha = captcha;

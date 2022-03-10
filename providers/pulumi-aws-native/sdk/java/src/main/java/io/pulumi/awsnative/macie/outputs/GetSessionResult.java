@@ -34,12 +34,12 @@ public final class GetSessionResult {
      */
     private final @Nullable SessionStatus status;
 
-    @OutputCustomType.Constructor({"awsAccountId","findingPublishingFrequency","serviceRole","status"})
+    @OutputCustomType.Constructor
     private GetSessionResult(
-        @Nullable String awsAccountId,
-        @Nullable SessionFindingPublishingFrequency findingPublishingFrequency,
-        @Nullable String serviceRole,
-        @Nullable SessionStatus status) {
+        @OutputCustomType.Parameter("awsAccountId") @Nullable String awsAccountId,
+        @OutputCustomType.Parameter("findingPublishingFrequency") @Nullable SessionFindingPublishingFrequency findingPublishingFrequency,
+        @OutputCustomType.Parameter("serviceRole") @Nullable String serviceRole,
+        @OutputCustomType.Parameter("status") @Nullable SessionStatus status) {
         this.awsAccountId = awsAccountId;
         this.findingPublishingFrequency = findingPublishingFrequency;
         this.serviceRole = serviceRole;

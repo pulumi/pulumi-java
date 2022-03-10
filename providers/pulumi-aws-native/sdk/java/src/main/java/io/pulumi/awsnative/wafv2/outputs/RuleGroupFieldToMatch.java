@@ -47,16 +47,16 @@ public final class RuleGroupFieldToMatch {
      */
     private final @Nullable Object uriPath;
 
-    @OutputCustomType.Constructor({"allQueryArguments","body","jsonBody","method","queryString","singleHeader","singleQueryArgument","uriPath"})
+    @OutputCustomType.Constructor
     private RuleGroupFieldToMatch(
-        @Nullable Object allQueryArguments,
-        @Nullable Object body,
-        @Nullable RuleGroupJsonBody jsonBody,
-        @Nullable Object method,
-        @Nullable Object queryString,
-        @Nullable RuleGroupFieldToMatchSingleHeaderProperties singleHeader,
-        @Nullable RuleGroupFieldToMatchSingleQueryArgumentProperties singleQueryArgument,
-        @Nullable Object uriPath) {
+        @OutputCustomType.Parameter("allQueryArguments") @Nullable Object allQueryArguments,
+        @OutputCustomType.Parameter("body") @Nullable Object body,
+        @OutputCustomType.Parameter("jsonBody") @Nullable RuleGroupJsonBody jsonBody,
+        @OutputCustomType.Parameter("method") @Nullable Object method,
+        @OutputCustomType.Parameter("queryString") @Nullable Object queryString,
+        @OutputCustomType.Parameter("singleHeader") @Nullable RuleGroupFieldToMatchSingleHeaderProperties singleHeader,
+        @OutputCustomType.Parameter("singleQueryArgument") @Nullable RuleGroupFieldToMatchSingleQueryArgumentProperties singleQueryArgument,
+        @OutputCustomType.Parameter("uriPath") @Nullable Object uriPath) {
         this.allQueryArguments = allQueryArguments;
         this.body = body;
         this.jsonBody = jsonBody;

@@ -17,8 +17,8 @@ public final class GetDocumentResult {
      */
     private final @Nullable List<DocumentTag> tags;
 
-    @OutputCustomType.Constructor({"tags"})
-    private GetDocumentResult(@Nullable List<DocumentTag> tags) {
+    @OutputCustomType.Constructor
+    private GetDocumentResult(@OutputCustomType.Parameter("tags") @Nullable List<DocumentTag> tags) {
         this.tags = tags;
     }
 

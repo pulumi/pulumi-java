@@ -20,12 +20,12 @@ public final class JobProfileConfiguration {
     private final @Nullable JobEntityDetectorConfiguration entityDetectorConfiguration;
     private final @Nullable List<JobColumnSelector> profileColumns;
 
-    @OutputCustomType.Constructor({"columnStatisticsConfigurations","datasetStatisticsConfiguration","entityDetectorConfiguration","profileColumns"})
+    @OutputCustomType.Constructor
     private JobProfileConfiguration(
-        @Nullable List<JobColumnStatisticsConfiguration> columnStatisticsConfigurations,
-        @Nullable JobStatisticsConfiguration datasetStatisticsConfiguration,
-        @Nullable JobEntityDetectorConfiguration entityDetectorConfiguration,
-        @Nullable List<JobColumnSelector> profileColumns) {
+        @OutputCustomType.Parameter("columnStatisticsConfigurations") @Nullable List<JobColumnStatisticsConfiguration> columnStatisticsConfigurations,
+        @OutputCustomType.Parameter("datasetStatisticsConfiguration") @Nullable JobStatisticsConfiguration datasetStatisticsConfiguration,
+        @OutputCustomType.Parameter("entityDetectorConfiguration") @Nullable JobEntityDetectorConfiguration entityDetectorConfiguration,
+        @OutputCustomType.Parameter("profileColumns") @Nullable List<JobColumnSelector> profileColumns) {
         this.columnStatisticsConfigurations = columnStatisticsConfigurations;
         this.datasetStatisticsConfiguration = datasetStatisticsConfiguration;
         this.entityDetectorConfiguration = entityDetectorConfiguration;

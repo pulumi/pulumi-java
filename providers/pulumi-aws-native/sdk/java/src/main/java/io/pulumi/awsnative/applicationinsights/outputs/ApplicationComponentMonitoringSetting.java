@@ -44,14 +44,14 @@ public final class ApplicationComponentMonitoringSetting {
      */
     private final String tier;
 
-    @OutputCustomType.Constructor({"componentARN","componentConfigurationMode","componentName","customComponentConfiguration","defaultOverwriteComponentConfiguration","tier"})
+    @OutputCustomType.Constructor
     private ApplicationComponentMonitoringSetting(
-        @Nullable String componentARN,
-        ApplicationComponentMonitoringSettingComponentConfigurationMode componentConfigurationMode,
-        @Nullable String componentName,
-        @Nullable ApplicationComponentConfiguration customComponentConfiguration,
-        @Nullable ApplicationComponentConfiguration defaultOverwriteComponentConfiguration,
-        String tier) {
+        @OutputCustomType.Parameter("componentARN") @Nullable String componentARN,
+        @OutputCustomType.Parameter("componentConfigurationMode") ApplicationComponentMonitoringSettingComponentConfigurationMode componentConfigurationMode,
+        @OutputCustomType.Parameter("componentName") @Nullable String componentName,
+        @OutputCustomType.Parameter("customComponentConfiguration") @Nullable ApplicationComponentConfiguration customComponentConfiguration,
+        @OutputCustomType.Parameter("defaultOverwriteComponentConfiguration") @Nullable ApplicationComponentConfiguration defaultOverwriteComponentConfiguration,
+        @OutputCustomType.Parameter("tier") String tier) {
         this.componentARN = componentARN;
         this.componentConfigurationMode = componentConfigurationMode;
         this.componentName = componentName;

@@ -27,18 +27,18 @@ public final class GetBranchResult {
     private final @Nullable BranchStage stage;
     private final @Nullable List<BranchTag> tags;
 
-    @OutputCustomType.Constructor({"arn","buildSpec","description","enableAutoBuild","enablePerformanceMode","enablePullRequestPreview","environmentVariables","pullRequestEnvironmentName","stage","tags"})
+    @OutputCustomType.Constructor
     private GetBranchResult(
-        @Nullable String arn,
-        @Nullable String buildSpec,
-        @Nullable String description,
-        @Nullable Boolean enableAutoBuild,
-        @Nullable Boolean enablePerformanceMode,
-        @Nullable Boolean enablePullRequestPreview,
-        @Nullable List<BranchEnvironmentVariable> environmentVariables,
-        @Nullable String pullRequestEnvironmentName,
-        @Nullable BranchStage stage,
-        @Nullable List<BranchTag> tags) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("buildSpec") @Nullable String buildSpec,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("enableAutoBuild") @Nullable Boolean enableAutoBuild,
+        @OutputCustomType.Parameter("enablePerformanceMode") @Nullable Boolean enablePerformanceMode,
+        @OutputCustomType.Parameter("enablePullRequestPreview") @Nullable Boolean enablePullRequestPreview,
+        @OutputCustomType.Parameter("environmentVariables") @Nullable List<BranchEnvironmentVariable> environmentVariables,
+        @OutputCustomType.Parameter("pullRequestEnvironmentName") @Nullable String pullRequestEnvironmentName,
+        @OutputCustomType.Parameter("stage") @Nullable BranchStage stage,
+        @OutputCustomType.Parameter("tags") @Nullable List<BranchTag> tags) {
         this.arn = arn;
         this.buildSpec = buildSpec;
         this.description = description;

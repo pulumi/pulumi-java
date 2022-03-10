@@ -33,12 +33,12 @@ public final class ConnectorProfileSalesforceConnectorProfileCredentials {
      */
     private final @Nullable String refreshToken;
 
-    @OutputCustomType.Constructor({"accessToken","clientCredentialsArn","connectorOAuthRequest","refreshToken"})
+    @OutputCustomType.Constructor
     private ConnectorProfileSalesforceConnectorProfileCredentials(
-        @Nullable String accessToken,
-        @Nullable String clientCredentialsArn,
-        @Nullable ConnectorProfileConnectorOAuthRequest connectorOAuthRequest,
-        @Nullable String refreshToken) {
+        @OutputCustomType.Parameter("accessToken") @Nullable String accessToken,
+        @OutputCustomType.Parameter("clientCredentialsArn") @Nullable String clientCredentialsArn,
+        @OutputCustomType.Parameter("connectorOAuthRequest") @Nullable ConnectorProfileConnectorOAuthRequest connectorOAuthRequest,
+        @OutputCustomType.Parameter("refreshToken") @Nullable String refreshToken) {
         this.accessToken = accessToken;
         this.clientCredentialsArn = clientCredentialsArn;
         this.connectorOAuthRequest = connectorOAuthRequest;

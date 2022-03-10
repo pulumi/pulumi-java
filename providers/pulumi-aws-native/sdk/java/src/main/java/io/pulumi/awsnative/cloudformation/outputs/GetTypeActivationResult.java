@@ -34,12 +34,12 @@ public final class GetTypeActivationResult {
      */
     private final @Nullable TypeActivationVersionBump versionBump;
 
-    @OutputCustomType.Constructor({"arn","autoUpdate","majorVersion","versionBump"})
+    @OutputCustomType.Constructor
     private GetTypeActivationResult(
-        @Nullable String arn,
-        @Nullable Boolean autoUpdate,
-        @Nullable String majorVersion,
-        @Nullable TypeActivationVersionBump versionBump) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("autoUpdate") @Nullable Boolean autoUpdate,
+        @OutputCustomType.Parameter("majorVersion") @Nullable String majorVersion,
+        @OutputCustomType.Parameter("versionBump") @Nullable TypeActivationVersionBump versionBump) {
         this.arn = arn;
         this.autoUpdate = autoUpdate;
         this.majorVersion = majorVersion;

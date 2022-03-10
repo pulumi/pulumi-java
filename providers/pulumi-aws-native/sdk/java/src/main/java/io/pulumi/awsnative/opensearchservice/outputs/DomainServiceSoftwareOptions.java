@@ -21,16 +21,16 @@ public final class DomainServiceSoftwareOptions {
     private final @Nullable Boolean updateAvailable;
     private final @Nullable String updateStatus;
 
-    @OutputCustomType.Constructor({"automatedUpdateDate","cancellable","currentVersion","description","newVersion","optionalDeployment","updateAvailable","updateStatus"})
+    @OutputCustomType.Constructor
     private DomainServiceSoftwareOptions(
-        @Nullable String automatedUpdateDate,
-        @Nullable Boolean cancellable,
-        @Nullable String currentVersion,
-        @Nullable String description,
-        @Nullable String newVersion,
-        @Nullable Boolean optionalDeployment,
-        @Nullable Boolean updateAvailable,
-        @Nullable String updateStatus) {
+        @OutputCustomType.Parameter("automatedUpdateDate") @Nullable String automatedUpdateDate,
+        @OutputCustomType.Parameter("cancellable") @Nullable Boolean cancellable,
+        @OutputCustomType.Parameter("currentVersion") @Nullable String currentVersion,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("newVersion") @Nullable String newVersion,
+        @OutputCustomType.Parameter("optionalDeployment") @Nullable Boolean optionalDeployment,
+        @OutputCustomType.Parameter("updateAvailable") @Nullable Boolean updateAvailable,
+        @OutputCustomType.Parameter("updateStatus") @Nullable String updateStatus) {
         this.automatedUpdateDate = automatedUpdateDate;
         this.cancellable = cancellable;
         this.currentVersion = currentVersion;

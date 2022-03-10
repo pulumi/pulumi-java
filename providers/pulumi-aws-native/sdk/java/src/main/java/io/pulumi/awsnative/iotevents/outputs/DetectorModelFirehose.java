@@ -24,11 +24,11 @@ public final class DetectorModelFirehose {
      */
     private final @Nullable String separator;
 
-    @OutputCustomType.Constructor({"deliveryStreamName","payload","separator"})
+    @OutputCustomType.Constructor
     private DetectorModelFirehose(
-        String deliveryStreamName,
-        @Nullable DetectorModelPayload payload,
-        @Nullable String separator) {
+        @OutputCustomType.Parameter("deliveryStreamName") String deliveryStreamName,
+        @OutputCustomType.Parameter("payload") @Nullable DetectorModelPayload payload,
+        @OutputCustomType.Parameter("separator") @Nullable String separator) {
         this.deliveryStreamName = deliveryStreamName;
         this.payload = payload;
         this.separator = separator;

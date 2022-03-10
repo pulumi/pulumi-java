@@ -11,8 +11,8 @@ import java.util.Objects;
 public final class BucketReplicationTimeValue {
     private final Integer minutes;
 
-    @OutputCustomType.Constructor({"minutes"})
-    private BucketReplicationTimeValue(Integer minutes) {
+    @OutputCustomType.Constructor
+    private BucketReplicationTimeValue(@OutputCustomType.Parameter("minutes") Integer minutes) {
         this.minutes = minutes;
     }
 

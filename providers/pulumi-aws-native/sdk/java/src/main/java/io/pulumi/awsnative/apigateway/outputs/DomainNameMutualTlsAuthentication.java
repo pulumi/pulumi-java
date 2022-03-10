@@ -14,10 +14,10 @@ public final class DomainNameMutualTlsAuthentication {
     private final @Nullable String truststoreUri;
     private final @Nullable String truststoreVersion;
 
-    @OutputCustomType.Constructor({"truststoreUri","truststoreVersion"})
+    @OutputCustomType.Constructor
     private DomainNameMutualTlsAuthentication(
-        @Nullable String truststoreUri,
-        @Nullable String truststoreVersion) {
+        @OutputCustomType.Parameter("truststoreUri") @Nullable String truststoreUri,
+        @OutputCustomType.Parameter("truststoreVersion") @Nullable String truststoreVersion) {
         this.truststoreUri = truststoreUri;
         this.truststoreVersion = truststoreVersion;
     }

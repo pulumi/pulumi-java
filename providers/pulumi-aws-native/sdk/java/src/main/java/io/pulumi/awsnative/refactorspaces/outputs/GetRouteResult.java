@@ -22,12 +22,12 @@ public final class GetRouteResult {
      */
     private final @Nullable List<RouteTag> tags;
 
-    @OutputCustomType.Constructor({"arn","pathResourceToId","routeIdentifier","tags"})
+    @OutputCustomType.Constructor
     private GetRouteResult(
-        @Nullable String arn,
-        @Nullable String pathResourceToId,
-        @Nullable String routeIdentifier,
-        @Nullable List<RouteTag> tags) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("pathResourceToId") @Nullable String pathResourceToId,
+        @OutputCustomType.Parameter("routeIdentifier") @Nullable String routeIdentifier,
+        @OutputCustomType.Parameter("tags") @Nullable List<RouteTag> tags) {
         this.arn = arn;
         this.pathResourceToId = pathResourceToId;
         this.routeIdentifier = routeIdentifier;

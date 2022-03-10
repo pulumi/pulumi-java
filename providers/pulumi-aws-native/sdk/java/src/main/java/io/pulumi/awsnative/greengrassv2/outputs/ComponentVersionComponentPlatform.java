@@ -15,10 +15,10 @@ public final class ComponentVersionComponentPlatform {
     private final @Nullable Object attributes;
     private final @Nullable String name;
 
-    @OutputCustomType.Constructor({"attributes","name"})
+    @OutputCustomType.Constructor
     private ComponentVersionComponentPlatform(
-        @Nullable Object attributes,
-        @Nullable String name) {
+        @OutputCustomType.Parameter("attributes") @Nullable Object attributes,
+        @OutputCustomType.Parameter("name") @Nullable String name) {
         this.attributes = attributes;
         this.name = name;
     }

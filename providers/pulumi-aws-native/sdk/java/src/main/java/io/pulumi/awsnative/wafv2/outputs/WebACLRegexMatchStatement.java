@@ -16,11 +16,11 @@ public final class WebACLRegexMatchStatement {
     private final String regexString;
     private final List<WebACLTextTransformation> textTransformations;
 
-    @OutputCustomType.Constructor({"fieldToMatch","regexString","textTransformations"})
+    @OutputCustomType.Constructor
     private WebACLRegexMatchStatement(
-        WebACLFieldToMatch fieldToMatch,
-        String regexString,
-        List<WebACLTextTransformation> textTransformations) {
+        @OutputCustomType.Parameter("fieldToMatch") WebACLFieldToMatch fieldToMatch,
+        @OutputCustomType.Parameter("regexString") String regexString,
+        @OutputCustomType.Parameter("textTransformations") List<WebACLTextTransformation> textTransformations) {
         this.fieldToMatch = fieldToMatch;
         this.regexString = regexString;
         this.textTransformations = textTransformations;

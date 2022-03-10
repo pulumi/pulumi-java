@@ -15,10 +15,10 @@ public final class IndexUserTokenConfiguration {
     private final @Nullable IndexJsonTokenTypeConfiguration jsonTokenTypeConfiguration;
     private final @Nullable IndexJwtTokenTypeConfiguration jwtTokenTypeConfiguration;
 
-    @OutputCustomType.Constructor({"jsonTokenTypeConfiguration","jwtTokenTypeConfiguration"})
+    @OutputCustomType.Constructor
     private IndexUserTokenConfiguration(
-        @Nullable IndexJsonTokenTypeConfiguration jsonTokenTypeConfiguration,
-        @Nullable IndexJwtTokenTypeConfiguration jwtTokenTypeConfiguration) {
+        @OutputCustomType.Parameter("jsonTokenTypeConfiguration") @Nullable IndexJsonTokenTypeConfiguration jsonTokenTypeConfiguration,
+        @OutputCustomType.Parameter("jwtTokenTypeConfiguration") @Nullable IndexJwtTokenTypeConfiguration jwtTokenTypeConfiguration) {
         this.jsonTokenTypeConfiguration = jsonTokenTypeConfiguration;
         this.jwtTokenTypeConfiguration = jwtTokenTypeConfiguration;
     }

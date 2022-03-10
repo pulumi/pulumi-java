@@ -52,15 +52,15 @@ public final class GetSecurityProfileResult {
      */
     private final @Nullable List<String> targetArns;
 
-    @OutputCustomType.Constructor({"additionalMetricsToRetainV2","alertTargets","behaviors","securityProfileArn","securityProfileDescription","tags","targetArns"})
+    @OutputCustomType.Constructor
     private GetSecurityProfileResult(
-        @Nullable List<SecurityProfileMetricToRetain> additionalMetricsToRetainV2,
-        @Nullable Object alertTargets,
-        @Nullable List<SecurityProfileBehavior> behaviors,
-        @Nullable String securityProfileArn,
-        @Nullable String securityProfileDescription,
-        @Nullable List<SecurityProfileTag> tags,
-        @Nullable List<String> targetArns) {
+        @OutputCustomType.Parameter("additionalMetricsToRetainV2") @Nullable List<SecurityProfileMetricToRetain> additionalMetricsToRetainV2,
+        @OutputCustomType.Parameter("alertTargets") @Nullable Object alertTargets,
+        @OutputCustomType.Parameter("behaviors") @Nullable List<SecurityProfileBehavior> behaviors,
+        @OutputCustomType.Parameter("securityProfileArn") @Nullable String securityProfileArn,
+        @OutputCustomType.Parameter("securityProfileDescription") @Nullable String securityProfileDescription,
+        @OutputCustomType.Parameter("tags") @Nullable List<SecurityProfileTag> tags,
+        @OutputCustomType.Parameter("targetArns") @Nullable List<String> targetArns) {
         this.additionalMetricsToRetainV2 = additionalMetricsToRetainV2;
         this.alertTargets = alertTargets;
         this.behaviors = behaviors;

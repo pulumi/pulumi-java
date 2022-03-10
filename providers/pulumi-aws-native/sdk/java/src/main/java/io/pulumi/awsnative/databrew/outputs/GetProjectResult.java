@@ -33,12 +33,12 @@ public final class GetProjectResult {
      */
     private final @Nullable ProjectSample sample;
 
-    @OutputCustomType.Constructor({"datasetName","recipeName","roleArn","sample"})
+    @OutputCustomType.Constructor
     private GetProjectResult(
-        @Nullable String datasetName,
-        @Nullable String recipeName,
-        @Nullable String roleArn,
-        @Nullable ProjectSample sample) {
+        @OutputCustomType.Parameter("datasetName") @Nullable String datasetName,
+        @OutputCustomType.Parameter("recipeName") @Nullable String recipeName,
+        @OutputCustomType.Parameter("roleArn") @Nullable String roleArn,
+        @OutputCustomType.Parameter("sample") @Nullable ProjectSample sample) {
         this.datasetName = datasetName;
         this.recipeName = recipeName;
         this.roleArn = roleArn;

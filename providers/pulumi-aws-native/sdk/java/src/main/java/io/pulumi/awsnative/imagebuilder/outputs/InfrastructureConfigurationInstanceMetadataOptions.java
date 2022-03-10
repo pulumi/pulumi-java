@@ -23,10 +23,10 @@ public final class InfrastructureConfigurationInstanceMetadataOptions {
      */
     private final @Nullable InfrastructureConfigurationInstanceMetadataOptionsHttpTokens httpTokens;
 
-    @OutputCustomType.Constructor({"httpPutResponseHopLimit","httpTokens"})
+    @OutputCustomType.Constructor
     private InfrastructureConfigurationInstanceMetadataOptions(
-        @Nullable Integer httpPutResponseHopLimit,
-        @Nullable InfrastructureConfigurationInstanceMetadataOptionsHttpTokens httpTokens) {
+        @OutputCustomType.Parameter("httpPutResponseHopLimit") @Nullable Integer httpPutResponseHopLimit,
+        @OutputCustomType.Parameter("httpTokens") @Nullable InfrastructureConfigurationInstanceMetadataOptionsHttpTokens httpTokens) {
         this.httpPutResponseHopLimit = httpPutResponseHopLimit;
         this.httpTokens = httpTokens;
     }

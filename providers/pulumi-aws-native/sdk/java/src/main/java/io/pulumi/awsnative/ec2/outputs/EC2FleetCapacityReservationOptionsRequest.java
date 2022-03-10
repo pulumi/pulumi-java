@@ -13,8 +13,8 @@ import javax.annotation.Nullable;
 public final class EC2FleetCapacityReservationOptionsRequest {
     private final @Nullable EC2FleetCapacityReservationOptionsRequestUsageStrategy usageStrategy;
 
-    @OutputCustomType.Constructor({"usageStrategy"})
-    private EC2FleetCapacityReservationOptionsRequest(@Nullable EC2FleetCapacityReservationOptionsRequestUsageStrategy usageStrategy) {
+    @OutputCustomType.Constructor
+    private EC2FleetCapacityReservationOptionsRequest(@OutputCustomType.Parameter("usageStrategy") @Nullable EC2FleetCapacityReservationOptionsRequestUsageStrategy usageStrategy) {
         this.usageStrategy = usageStrategy;
     }
 

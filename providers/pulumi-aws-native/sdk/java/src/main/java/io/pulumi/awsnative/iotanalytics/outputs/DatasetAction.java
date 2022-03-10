@@ -17,11 +17,11 @@ public final class DatasetAction {
     private final @Nullable DatasetContainerAction containerAction;
     private final @Nullable DatasetQueryAction queryAction;
 
-    @OutputCustomType.Constructor({"actionName","containerAction","queryAction"})
+    @OutputCustomType.Constructor
     private DatasetAction(
-        String actionName,
-        @Nullable DatasetContainerAction containerAction,
-        @Nullable DatasetQueryAction queryAction) {
+        @OutputCustomType.Parameter("actionName") String actionName,
+        @OutputCustomType.Parameter("containerAction") @Nullable DatasetContainerAction containerAction,
+        @OutputCustomType.Parameter("queryAction") @Nullable DatasetQueryAction queryAction) {
         this.actionName = actionName;
         this.containerAction = containerAction;
         this.queryAction = queryAction;

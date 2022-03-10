@@ -66,19 +66,19 @@ public final class GetEnvironmentResult {
      */
     private final @Nullable EnvironmentStatus status;
 
-    @OutputCustomType.Constructor({"awsAccountId","dedicatedServiceAccountId","description","environmentArn","environmentId","environmentUrl","federationMode","federationParameters","name","sageMakerStudioDomainUrl","status"})
+    @OutputCustomType.Constructor
     private GetEnvironmentResult(
-        @Nullable String awsAccountId,
-        @Nullable String dedicatedServiceAccountId,
-        @Nullable String description,
-        @Nullable String environmentArn,
-        @Nullable String environmentId,
-        @Nullable String environmentUrl,
-        @Nullable EnvironmentFederationMode federationMode,
-        @Nullable EnvironmentFederationParameters federationParameters,
-        @Nullable String name,
-        @Nullable String sageMakerStudioDomainUrl,
-        @Nullable EnvironmentStatus status) {
+        @OutputCustomType.Parameter("awsAccountId") @Nullable String awsAccountId,
+        @OutputCustomType.Parameter("dedicatedServiceAccountId") @Nullable String dedicatedServiceAccountId,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("environmentArn") @Nullable String environmentArn,
+        @OutputCustomType.Parameter("environmentId") @Nullable String environmentId,
+        @OutputCustomType.Parameter("environmentUrl") @Nullable String environmentUrl,
+        @OutputCustomType.Parameter("federationMode") @Nullable EnvironmentFederationMode federationMode,
+        @OutputCustomType.Parameter("federationParameters") @Nullable EnvironmentFederationParameters federationParameters,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("sageMakerStudioDomainUrl") @Nullable String sageMakerStudioDomainUrl,
+        @OutputCustomType.Parameter("status") @Nullable EnvironmentStatus status) {
         this.awsAccountId = awsAccountId;
         this.dedicatedServiceAccountId = dedicatedServiceAccountId;
         this.description = description;

@@ -15,10 +15,10 @@ public final class WorkGroupEncryptionConfiguration {
     private final WorkGroupEncryptionOption encryptionOption;
     private final @Nullable String kmsKey;
 
-    @OutputCustomType.Constructor({"encryptionOption","kmsKey"})
+    @OutputCustomType.Constructor
     private WorkGroupEncryptionConfiguration(
-        WorkGroupEncryptionOption encryptionOption,
-        @Nullable String kmsKey) {
+        @OutputCustomType.Parameter("encryptionOption") WorkGroupEncryptionOption encryptionOption,
+        @OutputCustomType.Parameter("kmsKey") @Nullable String kmsKey) {
         this.encryptionOption = encryptionOption;
         this.kmsKey = kmsKey;
     }

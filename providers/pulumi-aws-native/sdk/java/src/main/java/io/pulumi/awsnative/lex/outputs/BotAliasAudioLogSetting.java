@@ -13,10 +13,10 @@ public final class BotAliasAudioLogSetting {
     private final BotAliasAudioLogDestination destination;
     private final Boolean enabled;
 
-    @OutputCustomType.Constructor({"destination","enabled"})
+    @OutputCustomType.Constructor
     private BotAliasAudioLogSetting(
-        BotAliasAudioLogDestination destination,
-        Boolean enabled) {
+        @OutputCustomType.Parameter("destination") BotAliasAudioLogDestination destination,
+        @OutputCustomType.Parameter("enabled") Boolean enabled) {
         this.destination = destination;
         this.enabled = enabled;
     }

@@ -12,10 +12,10 @@ public final class TaskDefinitionSecret {
     private final String name;
     private final String valueFrom;
 
-    @OutputCustomType.Constructor({"name","valueFrom"})
+    @OutputCustomType.Constructor
     private TaskDefinitionSecret(
-        String name,
-        String valueFrom) {
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("valueFrom") String valueFrom) {
         this.name = name;
         this.valueFrom = valueFrom;
     }

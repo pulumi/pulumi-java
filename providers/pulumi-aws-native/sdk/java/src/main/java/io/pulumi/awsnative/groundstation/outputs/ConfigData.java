@@ -25,15 +25,15 @@ public final class ConfigData {
     private final @Nullable ConfigTrackingConfig trackingConfig;
     private final @Nullable ConfigUplinkEchoConfig uplinkEchoConfig;
 
-    @OutputCustomType.Constructor({"antennaDownlinkConfig","antennaDownlinkDemodDecodeConfig","antennaUplinkConfig","dataflowEndpointConfig","s3RecordingConfig","trackingConfig","uplinkEchoConfig"})
+    @OutputCustomType.Constructor
     private ConfigData(
-        @Nullable ConfigAntennaDownlinkConfig antennaDownlinkConfig,
-        @Nullable ConfigAntennaDownlinkDemodDecodeConfig antennaDownlinkDemodDecodeConfig,
-        @Nullable ConfigAntennaUplinkConfig antennaUplinkConfig,
-        @Nullable ConfigDataflowEndpointConfig dataflowEndpointConfig,
-        @Nullable ConfigS3RecordingConfig s3RecordingConfig,
-        @Nullable ConfigTrackingConfig trackingConfig,
-        @Nullable ConfigUplinkEchoConfig uplinkEchoConfig) {
+        @OutputCustomType.Parameter("antennaDownlinkConfig") @Nullable ConfigAntennaDownlinkConfig antennaDownlinkConfig,
+        @OutputCustomType.Parameter("antennaDownlinkDemodDecodeConfig") @Nullable ConfigAntennaDownlinkDemodDecodeConfig antennaDownlinkDemodDecodeConfig,
+        @OutputCustomType.Parameter("antennaUplinkConfig") @Nullable ConfigAntennaUplinkConfig antennaUplinkConfig,
+        @OutputCustomType.Parameter("dataflowEndpointConfig") @Nullable ConfigDataflowEndpointConfig dataflowEndpointConfig,
+        @OutputCustomType.Parameter("s3RecordingConfig") @Nullable ConfigS3RecordingConfig s3RecordingConfig,
+        @OutputCustomType.Parameter("trackingConfig") @Nullable ConfigTrackingConfig trackingConfig,
+        @OutputCustomType.Parameter("uplinkEchoConfig") @Nullable ConfigUplinkEchoConfig uplinkEchoConfig) {
         this.antennaDownlinkConfig = antennaDownlinkConfig;
         this.antennaDownlinkDemodDecodeConfig = antennaDownlinkDemodDecodeConfig;
         this.antennaUplinkConfig = antennaUplinkConfig;

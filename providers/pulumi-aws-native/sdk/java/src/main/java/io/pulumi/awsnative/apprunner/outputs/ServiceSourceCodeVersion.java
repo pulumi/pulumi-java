@@ -21,10 +21,10 @@ public final class ServiceSourceCodeVersion {
      */
     private final String value;
 
-    @OutputCustomType.Constructor({"type","value"})
+    @OutputCustomType.Constructor
     private ServiceSourceCodeVersion(
-        ServiceSourceCodeVersionType type,
-        String value) {
+        @OutputCustomType.Parameter("type") ServiceSourceCodeVersionType type,
+        @OutputCustomType.Parameter("value") String value) {
         this.type = type;
         this.value = value;
     }

@@ -12,8 +12,8 @@ import java.util.Objects;
 public final class InstanceAccessControlAttributeConfigurationAccessControlAttributeValue {
     private final List<String> source;
 
-    @OutputCustomType.Constructor({"source"})
-    private InstanceAccessControlAttributeConfigurationAccessControlAttributeValue(List<String> source) {
+    @OutputCustomType.Constructor
+    private InstanceAccessControlAttributeConfigurationAccessControlAttributeValue(@OutputCustomType.Parameter("source") List<String> source) {
         this.source = source;
     }
 

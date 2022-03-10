@@ -23,16 +23,16 @@ public final class GetDomainResult {
     private final @Nullable String statusReason;
     private final @Nullable List<DomainSubDomainSetting> subDomainSettings;
 
-    @OutputCustomType.Constructor({"arn","autoSubDomainCreationPatterns","autoSubDomainIAMRole","certificateRecord","domainStatus","enableAutoSubDomain","statusReason","subDomainSettings"})
+    @OutputCustomType.Constructor
     private GetDomainResult(
-        @Nullable String arn,
-        @Nullable List<String> autoSubDomainCreationPatterns,
-        @Nullable String autoSubDomainIAMRole,
-        @Nullable String certificateRecord,
-        @Nullable String domainStatus,
-        @Nullable Boolean enableAutoSubDomain,
-        @Nullable String statusReason,
-        @Nullable List<DomainSubDomainSetting> subDomainSettings) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("autoSubDomainCreationPatterns") @Nullable List<String> autoSubDomainCreationPatterns,
+        @OutputCustomType.Parameter("autoSubDomainIAMRole") @Nullable String autoSubDomainIAMRole,
+        @OutputCustomType.Parameter("certificateRecord") @Nullable String certificateRecord,
+        @OutputCustomType.Parameter("domainStatus") @Nullable String domainStatus,
+        @OutputCustomType.Parameter("enableAutoSubDomain") @Nullable Boolean enableAutoSubDomain,
+        @OutputCustomType.Parameter("statusReason") @Nullable String statusReason,
+        @OutputCustomType.Parameter("subDomainSettings") @Nullable List<DomainSubDomainSetting> subDomainSettings) {
         this.arn = arn;
         this.autoSubDomainCreationPatterns = autoSubDomainCreationPatterns;
         this.autoSubDomainIAMRole = autoSubDomainIAMRole;

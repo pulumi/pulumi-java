@@ -13,8 +13,8 @@ import javax.annotation.Nullable;
 public final class FirewallPolicyActionDefinition {
     private final @Nullable FirewallPolicyPublishMetricAction publishMetricAction;
 
-    @OutputCustomType.Constructor({"publishMetricAction"})
-    private FirewallPolicyActionDefinition(@Nullable FirewallPolicyPublishMetricAction publishMetricAction) {
+    @OutputCustomType.Constructor
+    private FirewallPolicyActionDefinition(@OutputCustomType.Parameter("publishMetricAction") @Nullable FirewallPolicyPublishMetricAction publishMetricAction) {
         this.publishMetricAction = publishMetricAction;
     }
 

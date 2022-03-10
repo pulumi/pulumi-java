@@ -15,10 +15,10 @@ public final class RepositoryEncryptionConfiguration {
     private final RepositoryEncryptionType encryptionType;
     private final @Nullable String kmsKey;
 
-    @OutputCustomType.Constructor({"encryptionType","kmsKey"})
+    @OutputCustomType.Constructor
     private RepositoryEncryptionConfiguration(
-        RepositoryEncryptionType encryptionType,
-        @Nullable String kmsKey) {
+        @OutputCustomType.Parameter("encryptionType") RepositoryEncryptionType encryptionType,
+        @OutputCustomType.Parameter("kmsKey") @Nullable String kmsKey) {
         this.encryptionType = encryptionType;
         this.kmsKey = kmsKey;
     }

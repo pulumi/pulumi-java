@@ -41,14 +41,14 @@ public final class GetEndpointResult {
     private final @Nullable List<EndpointNetworkInterface> networkInterfaces;
     private final @Nullable EndpointStatus status;
 
-    @OutputCustomType.Constructor({"arn","cidrBlock","creationTime","id","networkInterfaces","status"})
+    @OutputCustomType.Constructor
     private GetEndpointResult(
-        @Nullable String arn,
-        @Nullable String cidrBlock,
-        @Nullable String creationTime,
-        @Nullable String id,
-        @Nullable List<EndpointNetworkInterface> networkInterfaces,
-        @Nullable EndpointStatus status) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("cidrBlock") @Nullable String cidrBlock,
+        @OutputCustomType.Parameter("creationTime") @Nullable String creationTime,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("networkInterfaces") @Nullable List<EndpointNetworkInterface> networkInterfaces,
+        @OutputCustomType.Parameter("status") @Nullable EndpointStatus status) {
         this.arn = arn;
         this.cidrBlock = cidrBlock;
         this.creationTime = creationTime;

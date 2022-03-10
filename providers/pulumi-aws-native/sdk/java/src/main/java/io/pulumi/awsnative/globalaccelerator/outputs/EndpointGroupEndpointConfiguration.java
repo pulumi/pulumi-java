@@ -29,11 +29,11 @@ public final class EndpointGroupEndpointConfiguration {
      */
     private final @Nullable Integer weight;
 
-    @OutputCustomType.Constructor({"clientIPPreservationEnabled","endpointId","weight"})
+    @OutputCustomType.Constructor
     private EndpointGroupEndpointConfiguration(
-        @Nullable Boolean clientIPPreservationEnabled,
-        String endpointId,
-        @Nullable Integer weight) {
+        @OutputCustomType.Parameter("clientIPPreservationEnabled") @Nullable Boolean clientIPPreservationEnabled,
+        @OutputCustomType.Parameter("endpointId") String endpointId,
+        @OutputCustomType.Parameter("weight") @Nullable Integer weight) {
         this.clientIPPreservationEnabled = clientIPPreservationEnabled;
         this.endpointId = endpointId;
         this.weight = weight;

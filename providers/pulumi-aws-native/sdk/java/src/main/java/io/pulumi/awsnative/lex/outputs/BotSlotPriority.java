@@ -17,10 +17,10 @@ public final class BotSlotPriority {
      */
     private final String slotName;
 
-    @OutputCustomType.Constructor({"priority","slotName"})
+    @OutputCustomType.Constructor
     private BotSlotPriority(
-        Integer priority,
-        String slotName) {
+        @OutputCustomType.Parameter("priority") Integer priority,
+        @OutputCustomType.Parameter("slotName") String slotName) {
         this.priority = priority;
         this.slotName = slotName;
     }

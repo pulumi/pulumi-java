@@ -33,12 +33,12 @@ public final class BucketDestination {
      */
     private final @Nullable String prefix;
 
-    @OutputCustomType.Constructor({"bucketAccountId","bucketArn","format","prefix"})
+    @OutputCustomType.Constructor
     private BucketDestination(
-        @Nullable String bucketAccountId,
-        String bucketArn,
-        BucketDestinationFormat format,
-        @Nullable String prefix) {
+        @OutputCustomType.Parameter("bucketAccountId") @Nullable String bucketAccountId,
+        @OutputCustomType.Parameter("bucketArn") String bucketArn,
+        @OutputCustomType.Parameter("format") BucketDestinationFormat format,
+        @OutputCustomType.Parameter("prefix") @Nullable String prefix) {
         this.bucketAccountId = bucketAccountId;
         this.bucketArn = bucketArn;
         this.format = format;

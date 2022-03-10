@@ -20,10 +20,10 @@ public final class AlertSNSConfiguration {
      */
     private final String snsTopicArn;
 
-    @OutputCustomType.Constructor({"roleArn","snsTopicArn"})
+    @OutputCustomType.Constructor
     private AlertSNSConfiguration(
-        String roleArn,
-        String snsTopicArn) {
+        @OutputCustomType.Parameter("roleArn") String roleArn,
+        @OutputCustomType.Parameter("snsTopicArn") String snsTopicArn) {
         this.roleArn = roleArn;
         this.snsTopicArn = snsTopicArn;
     }

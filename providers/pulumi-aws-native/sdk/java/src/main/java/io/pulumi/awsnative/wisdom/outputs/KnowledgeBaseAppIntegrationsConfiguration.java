@@ -13,10 +13,10 @@ public final class KnowledgeBaseAppIntegrationsConfiguration {
     private final String appIntegrationArn;
     private final List<String> objectFields;
 
-    @OutputCustomType.Constructor({"appIntegrationArn","objectFields"})
+    @OutputCustomType.Constructor
     private KnowledgeBaseAppIntegrationsConfiguration(
-        String appIntegrationArn,
-        List<String> objectFields) {
+        @OutputCustomType.Parameter("appIntegrationArn") String appIntegrationArn,
+        @OutputCustomType.Parameter("objectFields") List<String> objectFields) {
         this.appIntegrationArn = appIntegrationArn;
         this.objectFields = objectFields;
     }

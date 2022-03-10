@@ -23,10 +23,10 @@ public final class EventSourceMappingSourceAccessConfiguration {
      */
     private final @Nullable String uRI;
 
-    @OutputCustomType.Constructor({"type","uRI"})
+    @OutputCustomType.Constructor
     private EventSourceMappingSourceAccessConfiguration(
-        @Nullable EventSourceMappingSourceAccessConfigurationType type,
-        @Nullable String uRI) {
+        @OutputCustomType.Parameter("type") @Nullable EventSourceMappingSourceAccessConfigurationType type,
+        @OutputCustomType.Parameter("uRI") @Nullable String uRI) {
         this.type = type;
         this.uRI = uRI;
     }

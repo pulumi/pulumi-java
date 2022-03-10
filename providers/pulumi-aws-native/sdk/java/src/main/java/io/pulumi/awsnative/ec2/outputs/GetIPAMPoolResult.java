@@ -95,24 +95,24 @@ public final class GetIPAMPoolResult {
      */
     private final @Nullable List<IPAMPoolTag> tags;
 
-    @OutputCustomType.Constructor({"allocationDefaultNetmaskLength","allocationMaxNetmaskLength","allocationMinNetmaskLength","allocationResourceTags","arn","autoImport","description","ipamArn","ipamPoolId","ipamScopeArn","ipamScopeType","poolDepth","provisionedCidrs","state","stateMessage","tags"})
+    @OutputCustomType.Constructor
     private GetIPAMPoolResult(
-        @Nullable Integer allocationDefaultNetmaskLength,
-        @Nullable Integer allocationMaxNetmaskLength,
-        @Nullable Integer allocationMinNetmaskLength,
-        @Nullable List<IPAMPoolTag> allocationResourceTags,
-        @Nullable String arn,
-        @Nullable Boolean autoImport,
-        @Nullable String description,
-        @Nullable String ipamArn,
-        @Nullable String ipamPoolId,
-        @Nullable String ipamScopeArn,
-        @Nullable IPAMPoolIpamScopeType ipamScopeType,
-        @Nullable Integer poolDepth,
-        @Nullable List<IPAMPoolProvisionedCidr> provisionedCidrs,
-        @Nullable IPAMPoolState state,
-        @Nullable String stateMessage,
-        @Nullable List<IPAMPoolTag> tags) {
+        @OutputCustomType.Parameter("allocationDefaultNetmaskLength") @Nullable Integer allocationDefaultNetmaskLength,
+        @OutputCustomType.Parameter("allocationMaxNetmaskLength") @Nullable Integer allocationMaxNetmaskLength,
+        @OutputCustomType.Parameter("allocationMinNetmaskLength") @Nullable Integer allocationMinNetmaskLength,
+        @OutputCustomType.Parameter("allocationResourceTags") @Nullable List<IPAMPoolTag> allocationResourceTags,
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("autoImport") @Nullable Boolean autoImport,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("ipamArn") @Nullable String ipamArn,
+        @OutputCustomType.Parameter("ipamPoolId") @Nullable String ipamPoolId,
+        @OutputCustomType.Parameter("ipamScopeArn") @Nullable String ipamScopeArn,
+        @OutputCustomType.Parameter("ipamScopeType") @Nullable IPAMPoolIpamScopeType ipamScopeType,
+        @OutputCustomType.Parameter("poolDepth") @Nullable Integer poolDepth,
+        @OutputCustomType.Parameter("provisionedCidrs") @Nullable List<IPAMPoolProvisionedCidr> provisionedCidrs,
+        @OutputCustomType.Parameter("state") @Nullable IPAMPoolState state,
+        @OutputCustomType.Parameter("stateMessage") @Nullable String stateMessage,
+        @OutputCustomType.Parameter("tags") @Nullable List<IPAMPoolTag> tags) {
         this.allocationDefaultNetmaskLength = allocationDefaultNetmaskLength;
         this.allocationMaxNetmaskLength = allocationMaxNetmaskLength;
         this.allocationMinNetmaskLength = allocationMinNetmaskLength;

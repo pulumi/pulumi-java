@@ -29,11 +29,11 @@ public final class GetReadinessCheckResult {
      */
     private final @Nullable List<ReadinessCheckTag> tags;
 
-    @OutputCustomType.Constructor({"readinessCheckArn","resourceSetName","tags"})
+    @OutputCustomType.Constructor
     private GetReadinessCheckResult(
-        @Nullable String readinessCheckArn,
-        @Nullable String resourceSetName,
-        @Nullable List<ReadinessCheckTag> tags) {
+        @OutputCustomType.Parameter("readinessCheckArn") @Nullable String readinessCheckArn,
+        @OutputCustomType.Parameter("resourceSetName") @Nullable String resourceSetName,
+        @OutputCustomType.Parameter("tags") @Nullable List<ReadinessCheckTag> tags) {
         this.readinessCheckArn = readinessCheckArn;
         this.resourceSetName = resourceSetName;
         this.tags = tags;

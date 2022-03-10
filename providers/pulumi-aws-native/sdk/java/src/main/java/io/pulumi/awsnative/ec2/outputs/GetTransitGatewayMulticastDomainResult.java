@@ -45,14 +45,14 @@ public final class GetTransitGatewayMulticastDomainResult {
      */
     private final @Nullable String transitGatewayMulticastDomainId;
 
-    @OutputCustomType.Constructor({"creationTime","options","state","tags","transitGatewayMulticastDomainArn","transitGatewayMulticastDomainId"})
+    @OutputCustomType.Constructor
     private GetTransitGatewayMulticastDomainResult(
-        @Nullable String creationTime,
-        @Nullable OptionsProperties options,
-        @Nullable String state,
-        @Nullable List<TransitGatewayMulticastDomainTag> tags,
-        @Nullable String transitGatewayMulticastDomainArn,
-        @Nullable String transitGatewayMulticastDomainId) {
+        @OutputCustomType.Parameter("creationTime") @Nullable String creationTime,
+        @OutputCustomType.Parameter("options") @Nullable OptionsProperties options,
+        @OutputCustomType.Parameter("state") @Nullable String state,
+        @OutputCustomType.Parameter("tags") @Nullable List<TransitGatewayMulticastDomainTag> tags,
+        @OutputCustomType.Parameter("transitGatewayMulticastDomainArn") @Nullable String transitGatewayMulticastDomainArn,
+        @OutputCustomType.Parameter("transitGatewayMulticastDomainId") @Nullable String transitGatewayMulticastDomainId) {
         this.creationTime = creationTime;
         this.options = options;
         this.state = state;

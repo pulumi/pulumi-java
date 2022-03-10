@@ -28,11 +28,11 @@ public final class AssetModelMetric {
      */
     private final AssetModelMetricWindow window;
 
-    @OutputCustomType.Constructor({"expression","variables","window"})
+    @OutputCustomType.Constructor
     private AssetModelMetric(
-        String expression,
-        List<AssetModelExpressionVariable> variables,
-        AssetModelMetricWindow window) {
+        @OutputCustomType.Parameter("expression") String expression,
+        @OutputCustomType.Parameter("variables") List<AssetModelExpressionVariable> variables,
+        @OutputCustomType.Parameter("window") AssetModelMetricWindow window) {
         this.expression = expression;
         this.variables = variables;
         this.window = window;

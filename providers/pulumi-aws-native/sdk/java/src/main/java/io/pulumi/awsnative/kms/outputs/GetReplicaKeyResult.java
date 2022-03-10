@@ -38,14 +38,14 @@ public final class GetReplicaKeyResult {
      */
     private final @Nullable List<ReplicaKeyTag> tags;
 
-    @OutputCustomType.Constructor({"arn","description","enabled","keyId","keyPolicy","tags"})
+    @OutputCustomType.Constructor
     private GetReplicaKeyResult(
-        @Nullable String arn,
-        @Nullable String description,
-        @Nullable Boolean enabled,
-        @Nullable String keyId,
-        @Nullable Object keyPolicy,
-        @Nullable List<ReplicaKeyTag> tags) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("enabled") @Nullable Boolean enabled,
+        @OutputCustomType.Parameter("keyId") @Nullable String keyId,
+        @OutputCustomType.Parameter("keyPolicy") @Nullable Object keyPolicy,
+        @OutputCustomType.Parameter("tags") @Nullable List<ReplicaKeyTag> tags) {
         this.arn = arn;
         this.description = description;
         this.enabled = enabled;

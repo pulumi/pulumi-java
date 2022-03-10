@@ -23,15 +23,15 @@ public final class GetProvisioningTemplateResult {
     private final @Nullable String templateArn;
     private final @Nullable String templateBody;
 
-    @OutputCustomType.Constructor({"description","enabled","preProvisioningHook","provisioningRoleArn","tags","templateArn","templateBody"})
+    @OutputCustomType.Constructor
     private GetProvisioningTemplateResult(
-        @Nullable String description,
-        @Nullable Boolean enabled,
-        @Nullable ProvisioningTemplateProvisioningHook preProvisioningHook,
-        @Nullable String provisioningRoleArn,
-        @Nullable List<ProvisioningTemplateTag> tags,
-        @Nullable String templateArn,
-        @Nullable String templateBody) {
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("enabled") @Nullable Boolean enabled,
+        @OutputCustomType.Parameter("preProvisioningHook") @Nullable ProvisioningTemplateProvisioningHook preProvisioningHook,
+        @OutputCustomType.Parameter("provisioningRoleArn") @Nullable String provisioningRoleArn,
+        @OutputCustomType.Parameter("tags") @Nullable List<ProvisioningTemplateTag> tags,
+        @OutputCustomType.Parameter("templateArn") @Nullable String templateArn,
+        @OutputCustomType.Parameter("templateBody") @Nullable String templateBody) {
         this.description = description;
         this.enabled = enabled;
         this.preProvisioningHook = preProvisioningHook;

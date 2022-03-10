@@ -25,11 +25,11 @@ public final class AccessPointCreationInfo {
      */
     private final String permissions;
 
-    @OutputCustomType.Constructor({"ownerGid","ownerUid","permissions"})
+    @OutputCustomType.Constructor
     private AccessPointCreationInfo(
-        String ownerGid,
-        String ownerUid,
-        String permissions) {
+        @OutputCustomType.Parameter("ownerGid") String ownerGid,
+        @OutputCustomType.Parameter("ownerUid") String ownerUid,
+        @OutputCustomType.Parameter("permissions") String permissions) {
         this.ownerGid = ownerGid;
         this.ownerUid = ownerUid;
         this.permissions = permissions;

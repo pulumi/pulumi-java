@@ -30,19 +30,19 @@ public final class GetServiceResult {
     private final @Nullable List<ServiceTag> tags;
     private final @Nullable String taskDefinition;
 
-    @OutputCustomType.Constructor({"capacityProviderStrategy","deploymentConfiguration","desiredCount","enableExecuteCommand","healthCheckGracePeriodSeconds","name","networkConfiguration","platformVersion","serviceArn","tags","taskDefinition"})
+    @OutputCustomType.Constructor
     private GetServiceResult(
-        @Nullable List<ServiceCapacityProviderStrategyItem> capacityProviderStrategy,
-        @Nullable ServiceDeploymentConfiguration deploymentConfiguration,
-        @Nullable Integer desiredCount,
-        @Nullable Boolean enableExecuteCommand,
-        @Nullable Integer healthCheckGracePeriodSeconds,
-        @Nullable String name,
-        @Nullable ServiceNetworkConfiguration networkConfiguration,
-        @Nullable String platformVersion,
-        @Nullable String serviceArn,
-        @Nullable List<ServiceTag> tags,
-        @Nullable String taskDefinition) {
+        @OutputCustomType.Parameter("capacityProviderStrategy") @Nullable List<ServiceCapacityProviderStrategyItem> capacityProviderStrategy,
+        @OutputCustomType.Parameter("deploymentConfiguration") @Nullable ServiceDeploymentConfiguration deploymentConfiguration,
+        @OutputCustomType.Parameter("desiredCount") @Nullable Integer desiredCount,
+        @OutputCustomType.Parameter("enableExecuteCommand") @Nullable Boolean enableExecuteCommand,
+        @OutputCustomType.Parameter("healthCheckGracePeriodSeconds") @Nullable Integer healthCheckGracePeriodSeconds,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("networkConfiguration") @Nullable ServiceNetworkConfiguration networkConfiguration,
+        @OutputCustomType.Parameter("platformVersion") @Nullable String platformVersion,
+        @OutputCustomType.Parameter("serviceArn") @Nullable String serviceArn,
+        @OutputCustomType.Parameter("tags") @Nullable List<ServiceTag> tags,
+        @OutputCustomType.Parameter("taskDefinition") @Nullable String taskDefinition) {
         this.capacityProviderStrategy = capacityProviderStrategy;
         this.deploymentConfiguration = deploymentConfiguration;
         this.desiredCount = desiredCount;

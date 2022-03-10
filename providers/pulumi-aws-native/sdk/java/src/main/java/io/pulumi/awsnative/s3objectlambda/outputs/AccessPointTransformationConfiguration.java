@@ -14,10 +14,10 @@ public final class AccessPointTransformationConfiguration {
     private final List<String> actions;
     private final Object contentTransformation;
 
-    @OutputCustomType.Constructor({"actions","contentTransformation"})
+    @OutputCustomType.Constructor
     private AccessPointTransformationConfiguration(
-        List<String> actions,
-        Object contentTransformation) {
+        @OutputCustomType.Parameter("actions") List<String> actions,
+        @OutputCustomType.Parameter("contentTransformation") Object contentTransformation) {
         this.actions = actions;
         this.contentTransformation = contentTransformation;
     }

@@ -11,8 +11,8 @@ import java.util.Objects;
 public final class BotAliasCodeHookSpecification {
     private final BotAliasLambdaCodeHook lambdaCodeHook;
 
-    @OutputCustomType.Constructor({"lambdaCodeHook"})
-    private BotAliasCodeHookSpecification(BotAliasLambdaCodeHook lambdaCodeHook) {
+    @OutputCustomType.Constructor
+    private BotAliasCodeHookSpecification(@OutputCustomType.Parameter("lambdaCodeHook") BotAliasLambdaCodeHook lambdaCodeHook) {
         this.lambdaCodeHook = lambdaCodeHook;
     }
 

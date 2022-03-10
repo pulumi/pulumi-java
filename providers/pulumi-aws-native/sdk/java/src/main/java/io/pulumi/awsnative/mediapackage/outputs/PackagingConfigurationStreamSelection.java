@@ -28,11 +28,11 @@ public final class PackagingConfigurationStreamSelection {
      */
     private final @Nullable PackagingConfigurationStreamSelectionStreamOrder streamOrder;
 
-    @OutputCustomType.Constructor({"maxVideoBitsPerSecond","minVideoBitsPerSecond","streamOrder"})
+    @OutputCustomType.Constructor
     private PackagingConfigurationStreamSelection(
-        @Nullable Integer maxVideoBitsPerSecond,
-        @Nullable Integer minVideoBitsPerSecond,
-        @Nullable PackagingConfigurationStreamSelectionStreamOrder streamOrder) {
+        @OutputCustomType.Parameter("maxVideoBitsPerSecond") @Nullable Integer maxVideoBitsPerSecond,
+        @OutputCustomType.Parameter("minVideoBitsPerSecond") @Nullable Integer minVideoBitsPerSecond,
+        @OutputCustomType.Parameter("streamOrder") @Nullable PackagingConfigurationStreamSelectionStreamOrder streamOrder) {
         this.maxVideoBitsPerSecond = maxVideoBitsPerSecond;
         this.minVideoBitsPerSecond = minVideoBitsPerSecond;
         this.streamOrder = streamOrder;

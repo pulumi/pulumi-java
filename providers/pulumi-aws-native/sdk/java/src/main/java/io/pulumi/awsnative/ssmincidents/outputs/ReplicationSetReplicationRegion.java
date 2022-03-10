@@ -15,10 +15,10 @@ public final class ReplicationSetReplicationRegion {
     private final @Nullable ReplicationSetRegionConfiguration regionConfiguration;
     private final @Nullable String regionName;
 
-    @OutputCustomType.Constructor({"regionConfiguration","regionName"})
+    @OutputCustomType.Constructor
     private ReplicationSetReplicationRegion(
-        @Nullable ReplicationSetRegionConfiguration regionConfiguration,
-        @Nullable String regionName) {
+        @OutputCustomType.Parameter("regionConfiguration") @Nullable ReplicationSetRegionConfiguration regionConfiguration,
+        @OutputCustomType.Parameter("regionName") @Nullable String regionName) {
         this.regionConfiguration = regionConfiguration;
         this.regionName = regionName;
     }

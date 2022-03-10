@@ -24,10 +24,10 @@ public final class AuthenticationModeProperties {
      */
     private final @Nullable UserAuthenticationModePropertiesType type;
 
-    @OutputCustomType.Constructor({"passwords","type"})
+    @OutputCustomType.Constructor
     private AuthenticationModeProperties(
-        @Nullable List<String> passwords,
-        @Nullable UserAuthenticationModePropertiesType type) {
+        @OutputCustomType.Parameter("passwords") @Nullable List<String> passwords,
+        @OutputCustomType.Parameter("type") @Nullable UserAuthenticationModePropertiesType type) {
         this.passwords = passwords;
         this.type = type;
     }

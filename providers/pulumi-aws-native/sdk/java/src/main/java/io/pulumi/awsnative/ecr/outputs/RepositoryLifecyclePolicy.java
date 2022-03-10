@@ -14,10 +14,10 @@ public final class RepositoryLifecyclePolicy {
     private final @Nullable String lifecyclePolicyText;
     private final @Nullable String registryId;
 
-    @OutputCustomType.Constructor({"lifecyclePolicyText","registryId"})
+    @OutputCustomType.Constructor
     private RepositoryLifecyclePolicy(
-        @Nullable String lifecyclePolicyText,
-        @Nullable String registryId) {
+        @OutputCustomType.Parameter("lifecyclePolicyText") @Nullable String lifecyclePolicyText,
+        @OutputCustomType.Parameter("registryId") @Nullable String registryId) {
         this.lifecyclePolicyText = lifecyclePolicyText;
         this.registryId = registryId;
     }

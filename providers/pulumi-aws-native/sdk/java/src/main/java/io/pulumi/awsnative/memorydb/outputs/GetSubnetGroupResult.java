@@ -34,12 +34,12 @@ public final class GetSubnetGroupResult {
      */
     private final @Nullable List<SubnetGroupTag> tags;
 
-    @OutputCustomType.Constructor({"aRN","description","subnetIds","tags"})
+    @OutputCustomType.Constructor
     private GetSubnetGroupResult(
-        @Nullable String aRN,
-        @Nullable String description,
-        @Nullable List<String> subnetIds,
-        @Nullable List<SubnetGroupTag> tags) {
+        @OutputCustomType.Parameter("aRN") @Nullable String aRN,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("subnetIds") @Nullable List<String> subnetIds,
+        @OutputCustomType.Parameter("tags") @Nullable List<SubnetGroupTag> tags) {
         this.aRN = aRN;
         this.description = description;
         this.subnetIds = subnetIds;

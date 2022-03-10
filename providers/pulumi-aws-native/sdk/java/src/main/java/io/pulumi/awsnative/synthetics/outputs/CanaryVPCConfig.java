@@ -16,11 +16,11 @@ public final class CanaryVPCConfig {
     private final List<String> subnetIds;
     private final @Nullable String vpcId;
 
-    @OutputCustomType.Constructor({"securityGroupIds","subnetIds","vpcId"})
+    @OutputCustomType.Constructor
     private CanaryVPCConfig(
-        List<String> securityGroupIds,
-        List<String> subnetIds,
-        @Nullable String vpcId) {
+        @OutputCustomType.Parameter("securityGroupIds") List<String> securityGroupIds,
+        @OutputCustomType.Parameter("subnetIds") List<String> subnetIds,
+        @OutputCustomType.Parameter("vpcId") @Nullable String vpcId) {
         this.securityGroupIds = securityGroupIds;
         this.subnetIds = subnetIds;
         this.vpcId = vpcId;

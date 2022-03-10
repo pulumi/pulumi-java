@@ -14,10 +14,10 @@ public final class TaskDefinitionLoRaWANUpdateGatewayTaskEntry {
     private final @Nullable TaskDefinitionLoRaWANGatewayVersion currentVersion;
     private final @Nullable TaskDefinitionLoRaWANGatewayVersion updateVersion;
 
-    @OutputCustomType.Constructor({"currentVersion","updateVersion"})
+    @OutputCustomType.Constructor
     private TaskDefinitionLoRaWANUpdateGatewayTaskEntry(
-        @Nullable TaskDefinitionLoRaWANGatewayVersion currentVersion,
-        @Nullable TaskDefinitionLoRaWANGatewayVersion updateVersion) {
+        @OutputCustomType.Parameter("currentVersion") @Nullable TaskDefinitionLoRaWANGatewayVersion currentVersion,
+        @OutputCustomType.Parameter("updateVersion") @Nullable TaskDefinitionLoRaWANGatewayVersion updateVersion) {
         this.currentVersion = currentVersion;
         this.updateVersion = updateVersion;
     }

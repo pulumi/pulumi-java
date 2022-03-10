@@ -28,16 +28,16 @@ public final class GetDatasetResult {
     private final @Nullable List<DatasetTrigger> triggers;
     private final @Nullable DatasetVersioningConfiguration versioningConfiguration;
 
-    @OutputCustomType.Constructor({"actions","contentDeliveryRules","id","lateDataRules","retentionPeriod","tags","triggers","versioningConfiguration"})
+    @OutputCustomType.Constructor
     private GetDatasetResult(
-        @Nullable List<DatasetAction> actions,
-        @Nullable List<DatasetContentDeliveryRule> contentDeliveryRules,
-        @Nullable String id,
-        @Nullable List<DatasetLateDataRule> lateDataRules,
-        @Nullable DatasetRetentionPeriod retentionPeriod,
-        @Nullable List<DatasetTag> tags,
-        @Nullable List<DatasetTrigger> triggers,
-        @Nullable DatasetVersioningConfiguration versioningConfiguration) {
+        @OutputCustomType.Parameter("actions") @Nullable List<DatasetAction> actions,
+        @OutputCustomType.Parameter("contentDeliveryRules") @Nullable List<DatasetContentDeliveryRule> contentDeliveryRules,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("lateDataRules") @Nullable List<DatasetLateDataRule> lateDataRules,
+        @OutputCustomType.Parameter("retentionPeriod") @Nullable DatasetRetentionPeriod retentionPeriod,
+        @OutputCustomType.Parameter("tags") @Nullable List<DatasetTag> tags,
+        @OutputCustomType.Parameter("triggers") @Nullable List<DatasetTrigger> triggers,
+        @OutputCustomType.Parameter("versioningConfiguration") @Nullable DatasetVersioningConfiguration versioningConfiguration) {
         this.actions = actions;
         this.contentDeliveryRules = contentDeliveryRules;
         this.id = id;

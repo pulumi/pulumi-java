@@ -15,11 +15,11 @@ public final class DomainMasterUserOptions {
     private final @Nullable String masterUserName;
     private final @Nullable String masterUserPassword;
 
-    @OutputCustomType.Constructor({"masterUserARN","masterUserName","masterUserPassword"})
+    @OutputCustomType.Constructor
     private DomainMasterUserOptions(
-        @Nullable String masterUserARN,
-        @Nullable String masterUserName,
-        @Nullable String masterUserPassword) {
+        @OutputCustomType.Parameter("masterUserARN") @Nullable String masterUserARN,
+        @OutputCustomType.Parameter("masterUserName") @Nullable String masterUserName,
+        @OutputCustomType.Parameter("masterUserPassword") @Nullable String masterUserPassword) {
         this.masterUserARN = masterUserARN;
         this.masterUserName = masterUserName;
         this.masterUserPassword = masterUserPassword;

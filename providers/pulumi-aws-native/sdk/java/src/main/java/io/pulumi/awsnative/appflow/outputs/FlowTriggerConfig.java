@@ -23,10 +23,10 @@ public final class FlowTriggerConfig {
      */
     private final FlowTriggerType triggerType;
 
-    @OutputCustomType.Constructor({"triggerProperties","triggerType"})
+    @OutputCustomType.Constructor
     private FlowTriggerConfig(
-        @Nullable FlowScheduledTriggerProperties triggerProperties,
-        FlowTriggerType triggerType) {
+        @OutputCustomType.Parameter("triggerProperties") @Nullable FlowScheduledTriggerProperties triggerProperties,
+        @OutputCustomType.Parameter("triggerType") FlowTriggerType triggerType) {
         this.triggerProperties = triggerProperties;
         this.triggerType = triggerType;
     }

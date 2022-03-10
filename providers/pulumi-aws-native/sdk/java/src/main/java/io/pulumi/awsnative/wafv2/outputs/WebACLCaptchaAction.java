@@ -13,8 +13,8 @@ import javax.annotation.Nullable;
 public final class WebACLCaptchaAction {
     private final @Nullable WebACLCustomRequestHandling customRequestHandling;
 
-    @OutputCustomType.Constructor({"customRequestHandling"})
-    private WebACLCaptchaAction(@Nullable WebACLCustomRequestHandling customRequestHandling) {
+    @OutputCustomType.Constructor
+    private WebACLCaptchaAction(@OutputCustomType.Parameter("customRequestHandling") @Nullable WebACLCustomRequestHandling customRequestHandling) {
         this.customRequestHandling = customRequestHandling;
     }
 

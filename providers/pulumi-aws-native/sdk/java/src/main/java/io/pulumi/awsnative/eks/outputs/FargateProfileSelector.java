@@ -15,10 +15,10 @@ public final class FargateProfileSelector {
     private final @Nullable List<FargateProfileLabel> labels;
     private final String namespace;
 
-    @OutputCustomType.Constructor({"labels","namespace"})
+    @OutputCustomType.Constructor
     private FargateProfileSelector(
-        @Nullable List<FargateProfileLabel> labels,
-        String namespace) {
+        @OutputCustomType.Parameter("labels") @Nullable List<FargateProfileLabel> labels,
+        @OutputCustomType.Parameter("namespace") String namespace) {
         this.labels = labels;
         this.namespace = namespace;
     }

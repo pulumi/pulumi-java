@@ -43,14 +43,14 @@ public final class GetDomainResult {
      */
     private final @Nullable String url;
 
-    @OutputCustomType.Constructor({"defaultUserSettings","domainArn","domainId","homeEfsFileSystemId","singleSignOnManagedApplicationInstanceId","url"})
+    @OutputCustomType.Constructor
     private GetDomainResult(
-        @Nullable DomainUserSettings defaultUserSettings,
-        @Nullable String domainArn,
-        @Nullable String domainId,
-        @Nullable String homeEfsFileSystemId,
-        @Nullable String singleSignOnManagedApplicationInstanceId,
-        @Nullable String url) {
+        @OutputCustomType.Parameter("defaultUserSettings") @Nullable DomainUserSettings defaultUserSettings,
+        @OutputCustomType.Parameter("domainArn") @Nullable String domainArn,
+        @OutputCustomType.Parameter("domainId") @Nullable String domainId,
+        @OutputCustomType.Parameter("homeEfsFileSystemId") @Nullable String homeEfsFileSystemId,
+        @OutputCustomType.Parameter("singleSignOnManagedApplicationInstanceId") @Nullable String singleSignOnManagedApplicationInstanceId,
+        @OutputCustomType.Parameter("url") @Nullable String url) {
         this.defaultUserSettings = defaultUserSettings;
         this.domainArn = domainArn;
         this.domainId = domainId;

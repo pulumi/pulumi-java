@@ -13,10 +13,10 @@ public final class NetworkInterfacePrivateIpAddressSpecification {
     private final Boolean primary;
     private final String privateIpAddress;
 
-    @OutputCustomType.Constructor({"primary","privateIpAddress"})
+    @OutputCustomType.Constructor
     private NetworkInterfacePrivateIpAddressSpecification(
-        Boolean primary,
-        String privateIpAddress) {
+        @OutputCustomType.Parameter("primary") Boolean primary,
+        @OutputCustomType.Parameter("privateIpAddress") String privateIpAddress) {
         this.primary = primary;
         this.privateIpAddress = privateIpAddress;
     }

@@ -17,12 +17,12 @@ public final class PipelineLambda {
     private final String name;
     private final @Nullable String next;
 
-    @OutputCustomType.Constructor({"batchSize","lambdaName","name","next"})
+    @OutputCustomType.Constructor
     private PipelineLambda(
-        Integer batchSize,
-        String lambdaName,
-        String name,
-        @Nullable String next) {
+        @OutputCustomType.Parameter("batchSize") Integer batchSize,
+        @OutputCustomType.Parameter("lambdaName") String lambdaName,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("next") @Nullable String next) {
         this.batchSize = batchSize;
         this.lambdaName = lambdaName;
         this.name = name;

@@ -16,11 +16,11 @@ public final class DataSourceConfluenceSpaceToIndexFieldMapping {
     private final @Nullable String dateFieldFormat;
     private final String indexFieldName;
 
-    @OutputCustomType.Constructor({"dataSourceFieldName","dateFieldFormat","indexFieldName"})
+    @OutputCustomType.Constructor
     private DataSourceConfluenceSpaceToIndexFieldMapping(
-        DataSourceConfluenceSpaceFieldName dataSourceFieldName,
-        @Nullable String dateFieldFormat,
-        String indexFieldName) {
+        @OutputCustomType.Parameter("dataSourceFieldName") DataSourceConfluenceSpaceFieldName dataSourceFieldName,
+        @OutputCustomType.Parameter("dateFieldFormat") @Nullable String dateFieldFormat,
+        @OutputCustomType.Parameter("indexFieldName") String indexFieldName) {
         this.dataSourceFieldName = dataSourceFieldName;
         this.dateFieldFormat = dateFieldFormat;
         this.indexFieldName = indexFieldName;

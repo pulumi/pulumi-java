@@ -14,11 +14,11 @@ public final class ResponseHeadersPolicyCustomHeader {
     private final Boolean override;
     private final String value;
 
-    @OutputCustomType.Constructor({"header","override","value"})
+    @OutputCustomType.Constructor
     private ResponseHeadersPolicyCustomHeader(
-        String header,
-        Boolean override,
-        String value) {
+        @OutputCustomType.Parameter("header") String header,
+        @OutputCustomType.Parameter("override") Boolean override,
+        @OutputCustomType.Parameter("value") String value) {
         this.header = header;
         this.override = override;
         this.value = value;

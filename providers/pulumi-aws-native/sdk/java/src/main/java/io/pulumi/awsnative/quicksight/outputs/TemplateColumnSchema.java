@@ -27,11 +27,11 @@ public final class TemplateColumnSchema {
      */
     private final @Nullable String name;
 
-    @OutputCustomType.Constructor({"dataType","geographicRole","name"})
+    @OutputCustomType.Constructor
     private TemplateColumnSchema(
-        @Nullable String dataType,
-        @Nullable String geographicRole,
-        @Nullable String name) {
+        @OutputCustomType.Parameter("dataType") @Nullable String dataType,
+        @OutputCustomType.Parameter("geographicRole") @Nullable String geographicRole,
+        @OutputCustomType.Parameter("name") @Nullable String name) {
         this.dataType = dataType;
         this.geographicRole = geographicRole;
         this.name = name;

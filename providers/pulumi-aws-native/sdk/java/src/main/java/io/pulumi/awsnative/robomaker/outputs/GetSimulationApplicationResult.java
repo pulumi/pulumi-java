@@ -50,16 +50,16 @@ public final class GetSimulationApplicationResult {
     private final @Nullable List<SimulationApplicationSourceConfig> sources;
     private final @Nullable SimulationApplicationTags tags;
 
-    @OutputCustomType.Constructor({"arn","currentRevisionId","environment","renderingEngine","robotSoftwareSuite","simulationSoftwareSuite","sources","tags"})
+    @OutputCustomType.Constructor
     private GetSimulationApplicationResult(
-        @Nullable String arn,
-        @Nullable String currentRevisionId,
-        @Nullable String environment,
-        @Nullable SimulationApplicationRenderingEngine renderingEngine,
-        @Nullable SimulationApplicationRobotSoftwareSuite robotSoftwareSuite,
-        @Nullable SimulationApplicationSimulationSoftwareSuite simulationSoftwareSuite,
-        @Nullable List<SimulationApplicationSourceConfig> sources,
-        @Nullable SimulationApplicationTags tags) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("currentRevisionId") @Nullable String currentRevisionId,
+        @OutputCustomType.Parameter("environment") @Nullable String environment,
+        @OutputCustomType.Parameter("renderingEngine") @Nullable SimulationApplicationRenderingEngine renderingEngine,
+        @OutputCustomType.Parameter("robotSoftwareSuite") @Nullable SimulationApplicationRobotSoftwareSuite robotSoftwareSuite,
+        @OutputCustomType.Parameter("simulationSoftwareSuite") @Nullable SimulationApplicationSimulationSoftwareSuite simulationSoftwareSuite,
+        @OutputCustomType.Parameter("sources") @Nullable List<SimulationApplicationSourceConfig> sources,
+        @OutputCustomType.Parameter("tags") @Nullable SimulationApplicationTags tags) {
         this.arn = arn;
         this.currentRevisionId = currentRevisionId;
         this.environment = environment;

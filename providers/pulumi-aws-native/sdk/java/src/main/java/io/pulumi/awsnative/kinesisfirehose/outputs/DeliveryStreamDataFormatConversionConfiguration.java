@@ -19,12 +19,12 @@ public final class DeliveryStreamDataFormatConversionConfiguration {
     private final @Nullable DeliveryStreamOutputFormatConfiguration outputFormatConfiguration;
     private final @Nullable DeliveryStreamSchemaConfiguration schemaConfiguration;
 
-    @OutputCustomType.Constructor({"enabled","inputFormatConfiguration","outputFormatConfiguration","schemaConfiguration"})
+    @OutputCustomType.Constructor
     private DeliveryStreamDataFormatConversionConfiguration(
-        @Nullable Boolean enabled,
-        @Nullable DeliveryStreamInputFormatConfiguration inputFormatConfiguration,
-        @Nullable DeliveryStreamOutputFormatConfiguration outputFormatConfiguration,
-        @Nullable DeliveryStreamSchemaConfiguration schemaConfiguration) {
+        @OutputCustomType.Parameter("enabled") @Nullable Boolean enabled,
+        @OutputCustomType.Parameter("inputFormatConfiguration") @Nullable DeliveryStreamInputFormatConfiguration inputFormatConfiguration,
+        @OutputCustomType.Parameter("outputFormatConfiguration") @Nullable DeliveryStreamOutputFormatConfiguration outputFormatConfiguration,
+        @OutputCustomType.Parameter("schemaConfiguration") @Nullable DeliveryStreamSchemaConfiguration schemaConfiguration) {
         this.enabled = enabled;
         this.inputFormatConfiguration = inputFormatConfiguration;
         this.outputFormatConfiguration = outputFormatConfiguration;

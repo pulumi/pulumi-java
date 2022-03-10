@@ -15,10 +15,10 @@ public final class ListenerRuleHttpHeaderConfig {
     private final @Nullable String httpHeaderName;
     private final @Nullable List<String> values;
 
-    @OutputCustomType.Constructor({"httpHeaderName","values"})
+    @OutputCustomType.Constructor
     private ListenerRuleHttpHeaderConfig(
-        @Nullable String httpHeaderName,
-        @Nullable List<String> values) {
+        @OutputCustomType.Parameter("httpHeaderName") @Nullable String httpHeaderName,
+        @OutputCustomType.Parameter("values") @Nullable List<String> values) {
         this.httpHeaderName = httpHeaderName;
         this.values = values;
     }

@@ -55,16 +55,16 @@ public final class GetResolverQueryLoggingConfigResult {
      */
     private final @Nullable ResolverQueryLoggingConfigStatus status;
 
-    @OutputCustomType.Constructor({"arn","associationCount","creationTime","creatorRequestId","id","ownerId","shareStatus","status"})
+    @OutputCustomType.Constructor
     private GetResolverQueryLoggingConfigResult(
-        @Nullable String arn,
-        @Nullable Integer associationCount,
-        @Nullable String creationTime,
-        @Nullable String creatorRequestId,
-        @Nullable String id,
-        @Nullable String ownerId,
-        @Nullable ResolverQueryLoggingConfigShareStatus shareStatus,
-        @Nullable ResolverQueryLoggingConfigStatus status) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("associationCount") @Nullable Integer associationCount,
+        @OutputCustomType.Parameter("creationTime") @Nullable String creationTime,
+        @OutputCustomType.Parameter("creatorRequestId") @Nullable String creatorRequestId,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("ownerId") @Nullable String ownerId,
+        @OutputCustomType.Parameter("shareStatus") @Nullable ResolverQueryLoggingConfigShareStatus shareStatus,
+        @OutputCustomType.Parameter("status") @Nullable ResolverQueryLoggingConfigStatus status) {
         this.arn = arn;
         this.associationCount = associationCount;
         this.creationTime = creationTime;

@@ -11,8 +11,8 @@ import java.util.Objects;
 public final class BucketNotificationFilter {
     private final BucketS3KeyFilter s3Key;
 
-    @OutputCustomType.Constructor({"s3Key"})
-    private BucketNotificationFilter(BucketS3KeyFilter s3Key) {
+    @OutputCustomType.Constructor
+    private BucketNotificationFilter(@OutputCustomType.Parameter("s3Key") BucketS3KeyFilter s3Key) {
         this.s3Key = s3Key;
     }
 

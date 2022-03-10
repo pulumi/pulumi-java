@@ -21,13 +21,13 @@ public final class IntegrationSourceConnectorProperties {
     private final @Nullable IntegrationServiceNowSourceProperties serviceNow;
     private final @Nullable IntegrationZendeskSourceProperties zendesk;
 
-    @OutputCustomType.Constructor({"marketo","s3","salesforce","serviceNow","zendesk"})
+    @OutputCustomType.Constructor
     private IntegrationSourceConnectorProperties(
-        @Nullable IntegrationMarketoSourceProperties marketo,
-        @Nullable IntegrationS3SourceProperties s3,
-        @Nullable IntegrationSalesforceSourceProperties salesforce,
-        @Nullable IntegrationServiceNowSourceProperties serviceNow,
-        @Nullable IntegrationZendeskSourceProperties zendesk) {
+        @OutputCustomType.Parameter("marketo") @Nullable IntegrationMarketoSourceProperties marketo,
+        @OutputCustomType.Parameter("s3") @Nullable IntegrationS3SourceProperties s3,
+        @OutputCustomType.Parameter("salesforce") @Nullable IntegrationSalesforceSourceProperties salesforce,
+        @OutputCustomType.Parameter("serviceNow") @Nullable IntegrationServiceNowSourceProperties serviceNow,
+        @OutputCustomType.Parameter("zendesk") @Nullable IntegrationZendeskSourceProperties zendesk) {
         this.marketo = marketo;
         this.s3 = s3;
         this.salesforce = salesforce;

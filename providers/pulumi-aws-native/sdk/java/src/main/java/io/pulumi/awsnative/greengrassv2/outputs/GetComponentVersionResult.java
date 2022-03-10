@@ -17,12 +17,12 @@ public final class GetComponentVersionResult {
     private final @Nullable String componentVersion;
     private final @Nullable Object tags;
 
-    @OutputCustomType.Constructor({"arn","componentName","componentVersion","tags"})
+    @OutputCustomType.Constructor
     private GetComponentVersionResult(
-        @Nullable String arn,
-        @Nullable String componentName,
-        @Nullable String componentVersion,
-        @Nullable Object tags) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("componentName") @Nullable String componentName,
+        @OutputCustomType.Parameter("componentVersion") @Nullable String componentVersion,
+        @OutputCustomType.Parameter("tags") @Nullable Object tags) {
         this.arn = arn;
         this.componentName = componentName;
         this.componentVersion = componentVersion;

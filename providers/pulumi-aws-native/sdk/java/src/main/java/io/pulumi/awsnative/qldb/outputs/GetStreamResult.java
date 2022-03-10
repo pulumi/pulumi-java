@@ -21,11 +21,11 @@ public final class GetStreamResult {
      */
     private final @Nullable List<StreamTag> tags;
 
-    @OutputCustomType.Constructor({"arn","id","tags"})
+    @OutputCustomType.Constructor
     private GetStreamResult(
-        @Nullable String arn,
-        @Nullable String id,
-        @Nullable List<StreamTag> tags) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("tags") @Nullable List<StreamTag> tags) {
         this.arn = arn;
         this.id = id;
         this.tags = tags;

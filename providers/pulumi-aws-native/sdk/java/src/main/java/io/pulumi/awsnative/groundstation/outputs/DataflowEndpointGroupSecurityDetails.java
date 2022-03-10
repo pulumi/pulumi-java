@@ -16,11 +16,11 @@ public final class DataflowEndpointGroupSecurityDetails {
     private final @Nullable List<String> securityGroupIds;
     private final @Nullable List<String> subnetIds;
 
-    @OutputCustomType.Constructor({"roleArn","securityGroupIds","subnetIds"})
+    @OutputCustomType.Constructor
     private DataflowEndpointGroupSecurityDetails(
-        @Nullable String roleArn,
-        @Nullable List<String> securityGroupIds,
-        @Nullable List<String> subnetIds) {
+        @OutputCustomType.Parameter("roleArn") @Nullable String roleArn,
+        @OutputCustomType.Parameter("securityGroupIds") @Nullable List<String> securityGroupIds,
+        @OutputCustomType.Parameter("subnetIds") @Nullable List<String> subnetIds) {
         this.roleArn = roleArn;
         this.securityGroupIds = securityGroupIds;
         this.subnetIds = subnetIds;

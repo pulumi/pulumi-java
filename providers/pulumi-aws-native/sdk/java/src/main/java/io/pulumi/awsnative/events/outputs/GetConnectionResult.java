@@ -31,13 +31,13 @@ public final class GetConnectionResult {
      */
     private final @Nullable String secretArn;
 
-    @OutputCustomType.Constructor({"arn","authParameters","authorizationType","description","secretArn"})
+    @OutputCustomType.Constructor
     private GetConnectionResult(
-        @Nullable String arn,
-        @Nullable AuthParametersProperties authParameters,
-        @Nullable ConnectionAuthorizationType authorizationType,
-        @Nullable String description,
-        @Nullable String secretArn) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("authParameters") @Nullable AuthParametersProperties authParameters,
+        @OutputCustomType.Parameter("authorizationType") @Nullable ConnectionAuthorizationType authorizationType,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("secretArn") @Nullable String secretArn) {
         this.arn = arn;
         this.authParameters = authParameters;
         this.authorizationType = authorizationType;

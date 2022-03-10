@@ -12,8 +12,8 @@ import java.util.Objects;
 public final class BucketOwnershipControls {
     private final List<BucketOwnershipControlsRule> rules;
 
-    @OutputCustomType.Constructor({"rules"})
-    private BucketOwnershipControls(List<BucketOwnershipControlsRule> rules) {
+    @OutputCustomType.Constructor
+    private BucketOwnershipControls(@OutputCustomType.Parameter("rules") List<BucketOwnershipControlsRule> rules) {
         this.rules = rules;
     }
 

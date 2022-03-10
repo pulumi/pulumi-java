@@ -24,16 +24,16 @@ public final class GetServerResult {
     private final @Nullable String preferredMaintenanceWindow;
     private final @Nullable List<ServerTag> tags;
 
-    @OutputCustomType.Constructor({"arn","backupRetentionCount","disableAutomatedBackup","endpoint","id","preferredBackupWindow","preferredMaintenanceWindow","tags"})
+    @OutputCustomType.Constructor
     private GetServerResult(
-        @Nullable String arn,
-        @Nullable Integer backupRetentionCount,
-        @Nullable Boolean disableAutomatedBackup,
-        @Nullable String endpoint,
-        @Nullable String id,
-        @Nullable String preferredBackupWindow,
-        @Nullable String preferredMaintenanceWindow,
-        @Nullable List<ServerTag> tags) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("backupRetentionCount") @Nullable Integer backupRetentionCount,
+        @OutputCustomType.Parameter("disableAutomatedBackup") @Nullable Boolean disableAutomatedBackup,
+        @OutputCustomType.Parameter("endpoint") @Nullable String endpoint,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("preferredBackupWindow") @Nullable String preferredBackupWindow,
+        @OutputCustomType.Parameter("preferredMaintenanceWindow") @Nullable String preferredMaintenanceWindow,
+        @OutputCustomType.Parameter("tags") @Nullable List<ServerTag> tags) {
         this.arn = arn;
         this.backupRetentionCount = backupRetentionCount;
         this.disableAutomatedBackup = disableAutomatedBackup;

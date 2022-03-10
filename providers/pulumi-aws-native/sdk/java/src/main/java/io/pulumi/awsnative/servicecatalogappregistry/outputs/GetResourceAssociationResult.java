@@ -31,14 +31,14 @@ public final class GetResourceAssociationResult {
      */
     private final @Nullable ResourceAssociationResourceType resourceType;
 
-    @OutputCustomType.Constructor({"application","applicationArn","id","resource","resourceArn","resourceType"})
+    @OutputCustomType.Constructor
     private GetResourceAssociationResult(
-        @Nullable String application,
-        @Nullable String applicationArn,
-        @Nullable String id,
-        @Nullable String resource,
-        @Nullable String resourceArn,
-        @Nullable ResourceAssociationResourceType resourceType) {
+        @OutputCustomType.Parameter("application") @Nullable String application,
+        @OutputCustomType.Parameter("applicationArn") @Nullable String applicationArn,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("resource") @Nullable String resource,
+        @OutputCustomType.Parameter("resourceArn") @Nullable String resourceArn,
+        @OutputCustomType.Parameter("resourceType") @Nullable ResourceAssociationResourceType resourceType) {
         this.application = application;
         this.applicationArn = applicationArn;
         this.id = id;

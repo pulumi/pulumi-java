@@ -13,10 +13,10 @@ public final class RuleGroupTextTransformation {
     private final Integer priority;
     private final RuleGroupTextTransformationType type;
 
-    @OutputCustomType.Constructor({"priority","type"})
+    @OutputCustomType.Constructor
     private RuleGroupTextTransformation(
-        Integer priority,
-        RuleGroupTextTransformationType type) {
+        @OutputCustomType.Parameter("priority") Integer priority,
+        @OutputCustomType.Parameter("type") RuleGroupTextTransformationType type) {
         this.priority = priority;
         this.type = type;
     }

@@ -28,12 +28,12 @@ public final class GetConfigurationAggregatorResult {
      */
     private final @Nullable List<ConfigurationAggregatorTag> tags;
 
-    @OutputCustomType.Constructor({"accountAggregationSources","configurationAggregatorArn","organizationAggregationSource","tags"})
+    @OutputCustomType.Constructor
     private GetConfigurationAggregatorResult(
-        @Nullable List<ConfigurationAggregatorAccountAggregationSource> accountAggregationSources,
-        @Nullable String configurationAggregatorArn,
-        @Nullable ConfigurationAggregatorOrganizationAggregationSource organizationAggregationSource,
-        @Nullable List<ConfigurationAggregatorTag> tags) {
+        @OutputCustomType.Parameter("accountAggregationSources") @Nullable List<ConfigurationAggregatorAccountAggregationSource> accountAggregationSources,
+        @OutputCustomType.Parameter("configurationAggregatorArn") @Nullable String configurationAggregatorArn,
+        @OutputCustomType.Parameter("organizationAggregationSource") @Nullable ConfigurationAggregatorOrganizationAggregationSource organizationAggregationSource,
+        @OutputCustomType.Parameter("tags") @Nullable List<ConfigurationAggregatorTag> tags) {
         this.accountAggregationSources = accountAggregationSources;
         this.configurationAggregatorArn = configurationAggregatorArn;
         this.organizationAggregationSource = organizationAggregationSource;

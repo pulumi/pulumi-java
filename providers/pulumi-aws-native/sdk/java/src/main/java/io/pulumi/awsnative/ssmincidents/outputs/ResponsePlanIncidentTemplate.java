@@ -40,13 +40,13 @@ public final class ResponsePlanIncidentTemplate {
      */
     private final String title;
 
-    @OutputCustomType.Constructor({"dedupeString","impact","notificationTargets","summary","title"})
+    @OutputCustomType.Constructor
     private ResponsePlanIncidentTemplate(
-        @Nullable String dedupeString,
-        Integer impact,
-        @Nullable List<ResponsePlanNotificationTargetItem> notificationTargets,
-        @Nullable String summary,
-        String title) {
+        @OutputCustomType.Parameter("dedupeString") @Nullable String dedupeString,
+        @OutputCustomType.Parameter("impact") Integer impact,
+        @OutputCustomType.Parameter("notificationTargets") @Nullable List<ResponsePlanNotificationTargetItem> notificationTargets,
+        @OutputCustomType.Parameter("summary") @Nullable String summary,
+        @OutputCustomType.Parameter("title") String title) {
         this.dedupeString = dedupeString;
         this.impact = impact;
         this.notificationTargets = notificationTargets;

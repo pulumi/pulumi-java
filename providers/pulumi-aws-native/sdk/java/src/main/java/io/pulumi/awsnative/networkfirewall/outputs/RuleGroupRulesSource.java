@@ -20,12 +20,12 @@ public final class RuleGroupRulesSource {
     private final @Nullable List<RuleGroupStatefulRule> statefulRules;
     private final @Nullable RuleGroupStatelessRulesAndCustomActions statelessRulesAndCustomActions;
 
-    @OutputCustomType.Constructor({"rulesSourceList","rulesString","statefulRules","statelessRulesAndCustomActions"})
+    @OutputCustomType.Constructor
     private RuleGroupRulesSource(
-        @Nullable RuleGroupRulesSourceList rulesSourceList,
-        @Nullable String rulesString,
-        @Nullable List<RuleGroupStatefulRule> statefulRules,
-        @Nullable RuleGroupStatelessRulesAndCustomActions statelessRulesAndCustomActions) {
+        @OutputCustomType.Parameter("rulesSourceList") @Nullable RuleGroupRulesSourceList rulesSourceList,
+        @OutputCustomType.Parameter("rulesString") @Nullable String rulesString,
+        @OutputCustomType.Parameter("statefulRules") @Nullable List<RuleGroupStatefulRule> statefulRules,
+        @OutputCustomType.Parameter("statelessRulesAndCustomActions") @Nullable RuleGroupStatelessRulesAndCustomActions statelessRulesAndCustomActions) {
         this.rulesSourceList = rulesSourceList;
         this.rulesString = rulesString;
         this.statefulRules = statefulRules;

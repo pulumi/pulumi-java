@@ -15,10 +15,10 @@ public final class AccessPolicyResource {
     private final @Nullable AccessPolicyPortal portal;
     private final @Nullable AccessPolicyProject project;
 
-    @OutputCustomType.Constructor({"portal","project"})
+    @OutputCustomType.Constructor
     private AccessPolicyResource(
-        @Nullable AccessPolicyPortal portal,
-        @Nullable AccessPolicyProject project) {
+        @OutputCustomType.Parameter("portal") @Nullable AccessPolicyPortal portal,
+        @OutputCustomType.Parameter("project") @Nullable AccessPolicyProject project) {
         this.portal = portal;
         this.project = project;
     }

@@ -124,29 +124,29 @@ public final class GetClusterResult {
      */
     private final @Nullable List<ClusterTag> tags;
 
-    @OutputCustomType.Constructor({"aCLName","aRN","autoMinorVersionUpgrade","clusterEndpoint","description","engineVersion","finalSnapshotName","maintenanceWindow","nodeType","numReplicasPerShard","numShards","parameterGroupName","parameterGroupStatus","securityGroupIds","snapshotRetentionLimit","snapshotWindow","snsTopicArn","snsTopicStatus","status","subnetGroupName","tags"})
+    @OutputCustomType.Constructor
     private GetClusterResult(
-        @Nullable String aCLName,
-        @Nullable String aRN,
-        @Nullable Boolean autoMinorVersionUpgrade,
-        @Nullable ClusterEndpoint clusterEndpoint,
-        @Nullable String description,
-        @Nullable String engineVersion,
-        @Nullable String finalSnapshotName,
-        @Nullable String maintenanceWindow,
-        @Nullable String nodeType,
-        @Nullable Integer numReplicasPerShard,
-        @Nullable Integer numShards,
-        @Nullable String parameterGroupName,
-        @Nullable String parameterGroupStatus,
-        @Nullable List<String> securityGroupIds,
-        @Nullable Integer snapshotRetentionLimit,
-        @Nullable String snapshotWindow,
-        @Nullable String snsTopicArn,
-        @Nullable String snsTopicStatus,
-        @Nullable String status,
-        @Nullable String subnetGroupName,
-        @Nullable List<ClusterTag> tags) {
+        @OutputCustomType.Parameter("aCLName") @Nullable String aCLName,
+        @OutputCustomType.Parameter("aRN") @Nullable String aRN,
+        @OutputCustomType.Parameter("autoMinorVersionUpgrade") @Nullable Boolean autoMinorVersionUpgrade,
+        @OutputCustomType.Parameter("clusterEndpoint") @Nullable ClusterEndpoint clusterEndpoint,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("engineVersion") @Nullable String engineVersion,
+        @OutputCustomType.Parameter("finalSnapshotName") @Nullable String finalSnapshotName,
+        @OutputCustomType.Parameter("maintenanceWindow") @Nullable String maintenanceWindow,
+        @OutputCustomType.Parameter("nodeType") @Nullable String nodeType,
+        @OutputCustomType.Parameter("numReplicasPerShard") @Nullable Integer numReplicasPerShard,
+        @OutputCustomType.Parameter("numShards") @Nullable Integer numShards,
+        @OutputCustomType.Parameter("parameterGroupName") @Nullable String parameterGroupName,
+        @OutputCustomType.Parameter("parameterGroupStatus") @Nullable String parameterGroupStatus,
+        @OutputCustomType.Parameter("securityGroupIds") @Nullable List<String> securityGroupIds,
+        @OutputCustomType.Parameter("snapshotRetentionLimit") @Nullable Integer snapshotRetentionLimit,
+        @OutputCustomType.Parameter("snapshotWindow") @Nullable String snapshotWindow,
+        @OutputCustomType.Parameter("snsTopicArn") @Nullable String snsTopicArn,
+        @OutputCustomType.Parameter("snsTopicStatus") @Nullable String snsTopicStatus,
+        @OutputCustomType.Parameter("status") @Nullable String status,
+        @OutputCustomType.Parameter("subnetGroupName") @Nullable String subnetGroupName,
+        @OutputCustomType.Parameter("tags") @Nullable List<ClusterTag> tags) {
         this.aCLName = aCLName;
         this.aRN = aRN;
         this.autoMinorVersionUpgrade = autoMinorVersionUpgrade;

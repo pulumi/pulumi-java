@@ -17,13 +17,13 @@ public final class PipelineDeviceShadowEnrich {
     private final String roleArn;
     private final String thingName;
 
-    @OutputCustomType.Constructor({"attribute","name","next","roleArn","thingName"})
+    @OutputCustomType.Constructor
     private PipelineDeviceShadowEnrich(
-        String attribute,
-        String name,
-        @Nullable String next,
-        String roleArn,
-        String thingName) {
+        @OutputCustomType.Parameter("attribute") String attribute,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("next") @Nullable String next,
+        @OutputCustomType.Parameter("roleArn") String roleArn,
+        @OutputCustomType.Parameter("thingName") String thingName) {
         this.attribute = attribute;
         this.name = name;
         this.next = next;

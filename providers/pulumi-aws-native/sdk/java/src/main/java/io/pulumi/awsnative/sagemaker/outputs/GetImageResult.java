@@ -23,13 +23,13 @@ public final class GetImageResult {
      */
     private final @Nullable List<ImageTag> tags;
 
-    @OutputCustomType.Constructor({"imageArn","imageDescription","imageDisplayName","imageRoleArn","tags"})
+    @OutputCustomType.Constructor
     private GetImageResult(
-        @Nullable String imageArn,
-        @Nullable String imageDescription,
-        @Nullable String imageDisplayName,
-        @Nullable String imageRoleArn,
-        @Nullable List<ImageTag> tags) {
+        @OutputCustomType.Parameter("imageArn") @Nullable String imageArn,
+        @OutputCustomType.Parameter("imageDescription") @Nullable String imageDescription,
+        @OutputCustomType.Parameter("imageDisplayName") @Nullable String imageDisplayName,
+        @OutputCustomType.Parameter("imageRoleArn") @Nullable String imageRoleArn,
+        @OutputCustomType.Parameter("tags") @Nullable List<ImageTag> tags) {
         this.imageArn = imageArn;
         this.imageDescription = imageDescription;
         this.imageDisplayName = imageDisplayName;

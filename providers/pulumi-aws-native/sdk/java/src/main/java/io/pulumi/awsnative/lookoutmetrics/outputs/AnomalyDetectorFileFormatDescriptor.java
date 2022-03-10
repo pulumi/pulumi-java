@@ -15,10 +15,10 @@ public final class AnomalyDetectorFileFormatDescriptor {
     private final @Nullable AnomalyDetectorCsvFormatDescriptor csvFormatDescriptor;
     private final @Nullable AnomalyDetectorJsonFormatDescriptor jsonFormatDescriptor;
 
-    @OutputCustomType.Constructor({"csvFormatDescriptor","jsonFormatDescriptor"})
+    @OutputCustomType.Constructor
     private AnomalyDetectorFileFormatDescriptor(
-        @Nullable AnomalyDetectorCsvFormatDescriptor csvFormatDescriptor,
-        @Nullable AnomalyDetectorJsonFormatDescriptor jsonFormatDescriptor) {
+        @OutputCustomType.Parameter("csvFormatDescriptor") @Nullable AnomalyDetectorCsvFormatDescriptor csvFormatDescriptor,
+        @OutputCustomType.Parameter("jsonFormatDescriptor") @Nullable AnomalyDetectorJsonFormatDescriptor jsonFormatDescriptor) {
         this.csvFormatDescriptor = csvFormatDescriptor;
         this.jsonFormatDescriptor = jsonFormatDescriptor;
     }

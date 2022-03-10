@@ -15,10 +15,10 @@ public final class ConnectorProfileConfig {
     private final ConnectorProfileCredentials connectorProfileCredentials;
     private final @Nullable ConnectorProfileProperties connectorProfileProperties;
 
-    @OutputCustomType.Constructor({"connectorProfileCredentials","connectorProfileProperties"})
+    @OutputCustomType.Constructor
     private ConnectorProfileConfig(
-        ConnectorProfileCredentials connectorProfileCredentials,
-        @Nullable ConnectorProfileProperties connectorProfileProperties) {
+        @OutputCustomType.Parameter("connectorProfileCredentials") ConnectorProfileCredentials connectorProfileCredentials,
+        @OutputCustomType.Parameter("connectorProfileProperties") @Nullable ConnectorProfileProperties connectorProfileProperties) {
         this.connectorProfileCredentials = connectorProfileCredentials;
         this.connectorProfileProperties = connectorProfileProperties;
     }

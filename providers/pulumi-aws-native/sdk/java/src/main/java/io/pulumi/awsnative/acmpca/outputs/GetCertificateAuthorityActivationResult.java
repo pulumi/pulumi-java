@@ -22,10 +22,10 @@ public final class GetCertificateAuthorityActivationResult {
      */
     private final @Nullable String status;
 
-    @OutputCustomType.Constructor({"completeCertificateChain","status"})
+    @OutputCustomType.Constructor
     private GetCertificateAuthorityActivationResult(
-        @Nullable String completeCertificateChain,
-        @Nullable String status) {
+        @OutputCustomType.Parameter("completeCertificateChain") @Nullable String completeCertificateChain,
+        @OutputCustomType.Parameter("status") @Nullable String status) {
         this.completeCertificateChain = completeCertificateChain;
         this.status = status;
     }

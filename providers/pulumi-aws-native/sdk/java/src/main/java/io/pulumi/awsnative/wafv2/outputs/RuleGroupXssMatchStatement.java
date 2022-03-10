@@ -14,10 +14,10 @@ public final class RuleGroupXssMatchStatement {
     private final RuleGroupFieldToMatch fieldToMatch;
     private final List<RuleGroupTextTransformation> textTransformations;
 
-    @OutputCustomType.Constructor({"fieldToMatch","textTransformations"})
+    @OutputCustomType.Constructor
     private RuleGroupXssMatchStatement(
-        RuleGroupFieldToMatch fieldToMatch,
-        List<RuleGroupTextTransformation> textTransformations) {
+        @OutputCustomType.Parameter("fieldToMatch") RuleGroupFieldToMatch fieldToMatch,
+        @OutputCustomType.Parameter("textTransformations") List<RuleGroupTextTransformation> textTransformations) {
         this.fieldToMatch = fieldToMatch;
         this.textTransformations = textTransformations;
     }

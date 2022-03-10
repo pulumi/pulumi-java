@@ -30,11 +30,11 @@ public final class GetClusterResult {
      */
     private final @Nullable ClusterStatus status;
 
-    @OutputCustomType.Constructor({"clusterArn","clusterEndpoints","status"})
+    @OutputCustomType.Constructor
     private GetClusterResult(
-        @Nullable String clusterArn,
-        @Nullable List<ClusterEndpoint> clusterEndpoints,
-        @Nullable ClusterStatus status) {
+        @OutputCustomType.Parameter("clusterArn") @Nullable String clusterArn,
+        @OutputCustomType.Parameter("clusterEndpoints") @Nullable List<ClusterEndpoint> clusterEndpoints,
+        @OutputCustomType.Parameter("status") @Nullable ClusterStatus status) {
         this.clusterArn = clusterArn;
         this.clusterEndpoints = clusterEndpoints;
         this.status = status;

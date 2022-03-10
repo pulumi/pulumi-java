@@ -15,10 +15,10 @@ public final class FleetLocationConfiguration {
     private final String location;
     private final @Nullable FleetLocationCapacity locationCapacity;
 
-    @OutputCustomType.Constructor({"location","locationCapacity"})
+    @OutputCustomType.Constructor
     private FleetLocationConfiguration(
-        String location,
-        @Nullable FleetLocationCapacity locationCapacity) {
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("locationCapacity") @Nullable FleetLocationCapacity locationCapacity) {
         this.location = location;
         this.locationCapacity = locationCapacity;
     }

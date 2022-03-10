@@ -21,14 +21,14 @@ public final class TopicRulePayload {
     private final @Nullable Boolean ruleDisabled;
     private final String sql;
 
-    @OutputCustomType.Constructor({"actions","awsIotSqlVersion","description","errorAction","ruleDisabled","sql"})
+    @OutputCustomType.Constructor
     private TopicRulePayload(
-        List<TopicRuleAction> actions,
-        @Nullable String awsIotSqlVersion,
-        @Nullable String description,
-        @Nullable TopicRuleAction errorAction,
-        @Nullable Boolean ruleDisabled,
-        String sql) {
+        @OutputCustomType.Parameter("actions") List<TopicRuleAction> actions,
+        @OutputCustomType.Parameter("awsIotSqlVersion") @Nullable String awsIotSqlVersion,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("errorAction") @Nullable TopicRuleAction errorAction,
+        @OutputCustomType.Parameter("ruleDisabled") @Nullable Boolean ruleDisabled,
+        @OutputCustomType.Parameter("sql") String sql) {
         this.actions = actions;
         this.awsIotSqlVersion = awsIotSqlVersion;
         this.description = description;

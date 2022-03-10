@@ -32,14 +32,14 @@ public final class GetApiDestinationResult {
     private final @Nullable String invocationEndpoint;
     private final @Nullable Integer invocationRateLimitPerSecond;
 
-    @OutputCustomType.Constructor({"arn","connectionArn","description","httpMethod","invocationEndpoint","invocationRateLimitPerSecond"})
+    @OutputCustomType.Constructor
     private GetApiDestinationResult(
-        @Nullable String arn,
-        @Nullable String connectionArn,
-        @Nullable String description,
-        @Nullable ApiDestinationHttpMethod httpMethod,
-        @Nullable String invocationEndpoint,
-        @Nullable Integer invocationRateLimitPerSecond) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("connectionArn") @Nullable String connectionArn,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("httpMethod") @Nullable ApiDestinationHttpMethod httpMethod,
+        @OutputCustomType.Parameter("invocationEndpoint") @Nullable String invocationEndpoint,
+        @OutputCustomType.Parameter("invocationRateLimitPerSecond") @Nullable Integer invocationRateLimitPerSecond) {
         this.arn = arn;
         this.connectionArn = connectionArn;
         this.description = description;

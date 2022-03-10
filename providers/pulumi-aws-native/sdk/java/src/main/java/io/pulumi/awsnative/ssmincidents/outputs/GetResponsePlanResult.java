@@ -44,15 +44,15 @@ public final class GetResponsePlanResult {
      */
     private final @Nullable List<ResponsePlanTag> tags;
 
-    @OutputCustomType.Constructor({"actions","arn","chatChannel","displayName","engagements","incidentTemplate","tags"})
+    @OutputCustomType.Constructor
     private GetResponsePlanResult(
-        @Nullable List<ResponsePlanAction> actions,
-        @Nullable String arn,
-        @Nullable ResponsePlanChatChannel chatChannel,
-        @Nullable String displayName,
-        @Nullable List<String> engagements,
-        @Nullable ResponsePlanIncidentTemplate incidentTemplate,
-        @Nullable List<ResponsePlanTag> tags) {
+        @OutputCustomType.Parameter("actions") @Nullable List<ResponsePlanAction> actions,
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("chatChannel") @Nullable ResponsePlanChatChannel chatChannel,
+        @OutputCustomType.Parameter("displayName") @Nullable String displayName,
+        @OutputCustomType.Parameter("engagements") @Nullable List<String> engagements,
+        @OutputCustomType.Parameter("incidentTemplate") @Nullable ResponsePlanIncidentTemplate incidentTemplate,
+        @OutputCustomType.Parameter("tags") @Nullable List<ResponsePlanTag> tags) {
         this.actions = actions;
         this.arn = arn;
         this.chatChannel = chatChannel;

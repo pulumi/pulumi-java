@@ -18,12 +18,12 @@ public final class GetCapacityReservationFleetResult {
     private final @Nullable Boolean removeEndDate;
     private final @Nullable Integer totalTargetCapacity;
 
-    @OutputCustomType.Constructor({"capacityReservationFleetId","noRemoveEndDate","removeEndDate","totalTargetCapacity"})
+    @OutputCustomType.Constructor
     private GetCapacityReservationFleetResult(
-        @Nullable String capacityReservationFleetId,
-        @Nullable Boolean noRemoveEndDate,
-        @Nullable Boolean removeEndDate,
-        @Nullable Integer totalTargetCapacity) {
+        @OutputCustomType.Parameter("capacityReservationFleetId") @Nullable String capacityReservationFleetId,
+        @OutputCustomType.Parameter("noRemoveEndDate") @Nullable Boolean noRemoveEndDate,
+        @OutputCustomType.Parameter("removeEndDate") @Nullable Boolean removeEndDate,
+        @OutputCustomType.Parameter("totalTargetCapacity") @Nullable Integer totalTargetCapacity) {
         this.capacityReservationFleetId = capacityReservationFleetId;
         this.noRemoveEndDate = noRemoveEndDate;
         this.removeEndDate = removeEndDate;

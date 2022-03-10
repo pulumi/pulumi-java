@@ -11,8 +11,8 @@ import java.util.Objects;
 public final class DataQualityJobDefinitionMonitoringResources {
     private final DataQualityJobDefinitionClusterConfig clusterConfig;
 
-    @OutputCustomType.Constructor({"clusterConfig"})
-    private DataQualityJobDefinitionMonitoringResources(DataQualityJobDefinitionClusterConfig clusterConfig) {
+    @OutputCustomType.Constructor
+    private DataQualityJobDefinitionMonitoringResources(@OutputCustomType.Parameter("clusterConfig") DataQualityJobDefinitionClusterConfig clusterConfig) {
         this.clusterConfig = clusterConfig;
     }
 

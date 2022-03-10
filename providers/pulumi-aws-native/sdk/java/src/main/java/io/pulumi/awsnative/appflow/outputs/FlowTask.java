@@ -41,13 +41,13 @@ public final class FlowTask {
      */
     private final FlowTaskType taskType;
 
-    @OutputCustomType.Constructor({"connectorOperator","destinationField","sourceFields","taskProperties","taskType"})
+    @OutputCustomType.Constructor
     private FlowTask(
-        @Nullable FlowConnectorOperator connectorOperator,
-        @Nullable String destinationField,
-        List<String> sourceFields,
-        @Nullable List<FlowTaskPropertiesObject> taskProperties,
-        FlowTaskType taskType) {
+        @OutputCustomType.Parameter("connectorOperator") @Nullable FlowConnectorOperator connectorOperator,
+        @OutputCustomType.Parameter("destinationField") @Nullable String destinationField,
+        @OutputCustomType.Parameter("sourceFields") List<String> sourceFields,
+        @OutputCustomType.Parameter("taskProperties") @Nullable List<FlowTaskPropertiesObject> taskProperties,
+        @OutputCustomType.Parameter("taskType") FlowTaskType taskType) {
         this.connectorOperator = connectorOperator;
         this.destinationField = destinationField;
         this.sourceFields = sourceFields;

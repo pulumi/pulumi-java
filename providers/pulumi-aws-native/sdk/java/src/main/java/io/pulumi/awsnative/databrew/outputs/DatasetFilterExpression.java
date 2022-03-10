@@ -18,10 +18,10 @@ public final class DatasetFilterExpression {
     private final String expression;
     private final List<DatasetFilterValue> valuesMap;
 
-    @OutputCustomType.Constructor({"expression","valuesMap"})
+    @OutputCustomType.Constructor
     private DatasetFilterExpression(
-        String expression,
-        List<DatasetFilterValue> valuesMap) {
+        @OutputCustomType.Parameter("expression") String expression,
+        @OutputCustomType.Parameter("valuesMap") List<DatasetFilterValue> valuesMap) {
         this.expression = expression;
         this.valuesMap = valuesMap;
     }

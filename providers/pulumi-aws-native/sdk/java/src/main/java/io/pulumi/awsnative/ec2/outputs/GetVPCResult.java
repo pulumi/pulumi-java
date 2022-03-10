@@ -66,17 +66,17 @@ public final class GetVPCResult {
      */
     private final @Nullable String vpcId;
 
-    @OutputCustomType.Constructor({"cidrBlockAssociations","defaultNetworkAcl","defaultSecurityGroup","enableDnsHostnames","enableDnsSupport","instanceTenancy","ipv6CidrBlocks","tags","vpcId"})
+    @OutputCustomType.Constructor
     private GetVPCResult(
-        @Nullable List<String> cidrBlockAssociations,
-        @Nullable String defaultNetworkAcl,
-        @Nullable String defaultSecurityGroup,
-        @Nullable Boolean enableDnsHostnames,
-        @Nullable Boolean enableDnsSupport,
-        @Nullable String instanceTenancy,
-        @Nullable List<String> ipv6CidrBlocks,
-        @Nullable List<VPCTag> tags,
-        @Nullable String vpcId) {
+        @OutputCustomType.Parameter("cidrBlockAssociations") @Nullable List<String> cidrBlockAssociations,
+        @OutputCustomType.Parameter("defaultNetworkAcl") @Nullable String defaultNetworkAcl,
+        @OutputCustomType.Parameter("defaultSecurityGroup") @Nullable String defaultSecurityGroup,
+        @OutputCustomType.Parameter("enableDnsHostnames") @Nullable Boolean enableDnsHostnames,
+        @OutputCustomType.Parameter("enableDnsSupport") @Nullable Boolean enableDnsSupport,
+        @OutputCustomType.Parameter("instanceTenancy") @Nullable String instanceTenancy,
+        @OutputCustomType.Parameter("ipv6CidrBlocks") @Nullable List<String> ipv6CidrBlocks,
+        @OutputCustomType.Parameter("tags") @Nullable List<VPCTag> tags,
+        @OutputCustomType.Parameter("vpcId") @Nullable String vpcId) {
         this.cidrBlockAssociations = cidrBlockAssociations;
         this.defaultNetworkAcl = defaultNetworkAcl;
         this.defaultSecurityGroup = defaultSecurityGroup;

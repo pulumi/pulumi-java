@@ -56,18 +56,18 @@ public final class GetScheduledQueryResult {
     private final @Nullable String sQTargetConfiguration;
     private final @Nullable List<ScheduledQueryTag> tags;
 
-    @OutputCustomType.Constructor({"arn","sQErrorReportConfiguration","sQKmsKeyId","sQName","sQNotificationConfiguration","sQQueryString","sQScheduleConfiguration","sQScheduledQueryExecutionRoleArn","sQTargetConfiguration","tags"})
+    @OutputCustomType.Constructor
     private GetScheduledQueryResult(
-        @Nullable String arn,
-        @Nullable String sQErrorReportConfiguration,
-        @Nullable String sQKmsKeyId,
-        @Nullable String sQName,
-        @Nullable String sQNotificationConfiguration,
-        @Nullable String sQQueryString,
-        @Nullable String sQScheduleConfiguration,
-        @Nullable String sQScheduledQueryExecutionRoleArn,
-        @Nullable String sQTargetConfiguration,
-        @Nullable List<ScheduledQueryTag> tags) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("sQErrorReportConfiguration") @Nullable String sQErrorReportConfiguration,
+        @OutputCustomType.Parameter("sQKmsKeyId") @Nullable String sQKmsKeyId,
+        @OutputCustomType.Parameter("sQName") @Nullable String sQName,
+        @OutputCustomType.Parameter("sQNotificationConfiguration") @Nullable String sQNotificationConfiguration,
+        @OutputCustomType.Parameter("sQQueryString") @Nullable String sQQueryString,
+        @OutputCustomType.Parameter("sQScheduleConfiguration") @Nullable String sQScheduleConfiguration,
+        @OutputCustomType.Parameter("sQScheduledQueryExecutionRoleArn") @Nullable String sQScheduledQueryExecutionRoleArn,
+        @OutputCustomType.Parameter("sQTargetConfiguration") @Nullable String sQTargetConfiguration,
+        @OutputCustomType.Parameter("tags") @Nullable List<ScheduledQueryTag> tags) {
         this.arn = arn;
         this.sQErrorReportConfiguration = sQErrorReportConfiguration;
         this.sQKmsKeyId = sQKmsKeyId;

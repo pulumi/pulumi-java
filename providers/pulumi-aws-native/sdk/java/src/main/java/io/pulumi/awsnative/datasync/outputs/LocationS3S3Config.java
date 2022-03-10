@@ -15,8 +15,8 @@ public final class LocationS3S3Config {
      */
     private final String bucketAccessRoleArn;
 
-    @OutputCustomType.Constructor({"bucketAccessRoleArn"})
-    private LocationS3S3Config(String bucketAccessRoleArn) {
+    @OutputCustomType.Constructor
+    private LocationS3S3Config(@OutputCustomType.Parameter("bucketAccessRoleArn") String bucketAccessRoleArn) {
         this.bucketAccessRoleArn = bucketAccessRoleArn;
     }
 

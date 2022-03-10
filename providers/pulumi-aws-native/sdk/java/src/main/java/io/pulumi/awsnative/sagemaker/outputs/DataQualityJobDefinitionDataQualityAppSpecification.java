@@ -44,14 +44,14 @@ public final class DataQualityJobDefinitionDataQualityAppSpecification {
      */
     private final @Nullable String recordPreprocessorSourceUri;
 
-    @OutputCustomType.Constructor({"containerArguments","containerEntrypoint","environment","imageUri","postAnalyticsProcessorSourceUri","recordPreprocessorSourceUri"})
+    @OutputCustomType.Constructor
     private DataQualityJobDefinitionDataQualityAppSpecification(
-        @Nullable List<String> containerArguments,
-        @Nullable List<String> containerEntrypoint,
-        @Nullable Object environment,
-        String imageUri,
-        @Nullable String postAnalyticsProcessorSourceUri,
-        @Nullable String recordPreprocessorSourceUri) {
+        @OutputCustomType.Parameter("containerArguments") @Nullable List<String> containerArguments,
+        @OutputCustomType.Parameter("containerEntrypoint") @Nullable List<String> containerEntrypoint,
+        @OutputCustomType.Parameter("environment") @Nullable Object environment,
+        @OutputCustomType.Parameter("imageUri") String imageUri,
+        @OutputCustomType.Parameter("postAnalyticsProcessorSourceUri") @Nullable String postAnalyticsProcessorSourceUri,
+        @OutputCustomType.Parameter("recordPreprocessorSourceUri") @Nullable String recordPreprocessorSourceUri) {
         this.containerArguments = containerArguments;
         this.containerEntrypoint = containerEntrypoint;
         this.environment = environment;

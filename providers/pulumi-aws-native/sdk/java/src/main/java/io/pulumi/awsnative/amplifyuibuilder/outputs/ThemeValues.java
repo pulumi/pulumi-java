@@ -15,10 +15,10 @@ public final class ThemeValues {
     private final @Nullable String key;
     private final @Nullable ThemeValue value;
 
-    @OutputCustomType.Constructor({"key","value"})
+    @OutputCustomType.Constructor
     private ThemeValues(
-        @Nullable String key,
-        @Nullable ThemeValue value) {
+        @OutputCustomType.Parameter("key") @Nullable String key,
+        @OutputCustomType.Parameter("value") @Nullable ThemeValue value) {
         this.key = key;
         this.value = value;
     }

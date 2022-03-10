@@ -16,8 +16,8 @@ public final class WebACLCustomRequestHandling {
      */
     private final List<WebACLCustomHTTPHeader> insertHeaders;
 
-    @OutputCustomType.Constructor({"insertHeaders"})
-    private WebACLCustomRequestHandling(List<WebACLCustomHTTPHeader> insertHeaders) {
+    @OutputCustomType.Constructor
+    private WebACLCustomRequestHandling(@OutputCustomType.Parameter("insertHeaders") List<WebACLCustomHTTPHeader> insertHeaders) {
         this.insertHeaders = insertHeaders;
     }
 

@@ -33,12 +33,12 @@ public final class GetQueryDefinitionResult {
      */
     private final @Nullable String queryString;
 
-    @OutputCustomType.Constructor({"logGroupNames","name","queryDefinitionId","queryString"})
+    @OutputCustomType.Constructor
     private GetQueryDefinitionResult(
-        @Nullable List<String> logGroupNames,
-        @Nullable String name,
-        @Nullable String queryDefinitionId,
-        @Nullable String queryString) {
+        @OutputCustomType.Parameter("logGroupNames") @Nullable List<String> logGroupNames,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("queryDefinitionId") @Nullable String queryDefinitionId,
+        @OutputCustomType.Parameter("queryString") @Nullable String queryString) {
         this.logGroupNames = logGroupNames;
         this.name = name;
         this.queryDefinitionId = queryDefinitionId;

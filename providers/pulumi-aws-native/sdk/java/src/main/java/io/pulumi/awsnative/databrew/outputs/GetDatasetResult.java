@@ -35,12 +35,12 @@ public final class GetDatasetResult {
      */
     private final @Nullable DatasetPathOptions pathOptions;
 
-    @OutputCustomType.Constructor({"format","formatOptions","input","pathOptions"})
+    @OutputCustomType.Constructor
     private GetDatasetResult(
-        @Nullable DatasetFormat format,
-        @Nullable DatasetFormatOptions formatOptions,
-        @Nullable DatasetInput input,
-        @Nullable DatasetPathOptions pathOptions) {
+        @OutputCustomType.Parameter("format") @Nullable DatasetFormat format,
+        @OutputCustomType.Parameter("formatOptions") @Nullable DatasetFormatOptions formatOptions,
+        @OutputCustomType.Parameter("input") @Nullable DatasetInput input,
+        @OutputCustomType.Parameter("pathOptions") @Nullable DatasetPathOptions pathOptions) {
         this.format = format;
         this.formatOptions = formatOptions;
         this.input = input;

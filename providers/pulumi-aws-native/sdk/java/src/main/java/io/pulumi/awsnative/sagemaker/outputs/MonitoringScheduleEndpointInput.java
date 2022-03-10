@@ -30,12 +30,12 @@ public final class MonitoringScheduleEndpointInput {
      */
     private final @Nullable MonitoringScheduleEndpointInputS3InputMode s3InputMode;
 
-    @OutputCustomType.Constructor({"endpointName","localPath","s3DataDistributionType","s3InputMode"})
+    @OutputCustomType.Constructor
     private MonitoringScheduleEndpointInput(
-        String endpointName,
-        String localPath,
-        @Nullable MonitoringScheduleEndpointInputS3DataDistributionType s3DataDistributionType,
-        @Nullable MonitoringScheduleEndpointInputS3InputMode s3InputMode) {
+        @OutputCustomType.Parameter("endpointName") String endpointName,
+        @OutputCustomType.Parameter("localPath") String localPath,
+        @OutputCustomType.Parameter("s3DataDistributionType") @Nullable MonitoringScheduleEndpointInputS3DataDistributionType s3DataDistributionType,
+        @OutputCustomType.Parameter("s3InputMode") @Nullable MonitoringScheduleEndpointInputS3InputMode s3InputMode) {
         this.endpointName = endpointName;
         this.localPath = localPath;
         this.s3DataDistributionType = s3DataDistributionType;

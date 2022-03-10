@@ -14,10 +14,10 @@ public final class OriginRequestPolicyCookiesConfig {
     private final String cookieBehavior;
     private final @Nullable List<String> cookies;
 
-    @OutputCustomType.Constructor({"cookieBehavior","cookies"})
+    @OutputCustomType.Constructor
     private OriginRequestPolicyCookiesConfig(
-        String cookieBehavior,
-        @Nullable List<String> cookies) {
+        @OutputCustomType.Parameter("cookieBehavior") String cookieBehavior,
+        @OutputCustomType.Parameter("cookies") @Nullable List<String> cookies) {
         this.cookieBehavior = cookieBehavior;
         this.cookies = cookies;
     }

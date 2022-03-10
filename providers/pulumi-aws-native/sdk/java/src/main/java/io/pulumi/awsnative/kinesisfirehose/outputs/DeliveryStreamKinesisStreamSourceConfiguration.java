@@ -12,10 +12,10 @@ public final class DeliveryStreamKinesisStreamSourceConfiguration {
     private final String kinesisStreamARN;
     private final String roleARN;
 
-    @OutputCustomType.Constructor({"kinesisStreamARN","roleARN"})
+    @OutputCustomType.Constructor
     private DeliveryStreamKinesisStreamSourceConfiguration(
-        String kinesisStreamARN,
-        String roleARN) {
+        @OutputCustomType.Parameter("kinesisStreamARN") String kinesisStreamARN,
+        @OutputCustomType.Parameter("roleARN") String roleARN) {
         this.kinesisStreamARN = kinesisStreamARN;
         this.roleARN = roleARN;
     }

@@ -17,13 +17,13 @@ public final class EnvironmentLoggingConfiguration {
     private final @Nullable EnvironmentModuleLoggingConfiguration webserverLogs;
     private final @Nullable EnvironmentModuleLoggingConfiguration workerLogs;
 
-    @OutputCustomType.Constructor({"dagProcessingLogs","schedulerLogs","taskLogs","webserverLogs","workerLogs"})
+    @OutputCustomType.Constructor
     private EnvironmentLoggingConfiguration(
-        @Nullable EnvironmentModuleLoggingConfiguration dagProcessingLogs,
-        @Nullable EnvironmentModuleLoggingConfiguration schedulerLogs,
-        @Nullable EnvironmentModuleLoggingConfiguration taskLogs,
-        @Nullable EnvironmentModuleLoggingConfiguration webserverLogs,
-        @Nullable EnvironmentModuleLoggingConfiguration workerLogs) {
+        @OutputCustomType.Parameter("dagProcessingLogs") @Nullable EnvironmentModuleLoggingConfiguration dagProcessingLogs,
+        @OutputCustomType.Parameter("schedulerLogs") @Nullable EnvironmentModuleLoggingConfiguration schedulerLogs,
+        @OutputCustomType.Parameter("taskLogs") @Nullable EnvironmentModuleLoggingConfiguration taskLogs,
+        @OutputCustomType.Parameter("webserverLogs") @Nullable EnvironmentModuleLoggingConfiguration webserverLogs,
+        @OutputCustomType.Parameter("workerLogs") @Nullable EnvironmentModuleLoggingConfiguration workerLogs) {
         this.dagProcessingLogs = dagProcessingLogs;
         this.schedulerLogs = schedulerLogs;
         this.taskLogs = taskLogs;

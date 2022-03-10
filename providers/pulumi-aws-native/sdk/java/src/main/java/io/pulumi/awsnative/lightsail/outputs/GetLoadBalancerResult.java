@@ -41,14 +41,14 @@ public final class GetLoadBalancerResult {
      */
     private final @Nullable List<LoadBalancerTag> tags;
 
-    @OutputCustomType.Constructor({"attachedInstances","healthCheckPath","loadBalancerArn","sessionStickinessEnabled","sessionStickinessLBCookieDurationSeconds","tags"})
+    @OutputCustomType.Constructor
     private GetLoadBalancerResult(
-        @Nullable List<String> attachedInstances,
-        @Nullable String healthCheckPath,
-        @Nullable String loadBalancerArn,
-        @Nullable Boolean sessionStickinessEnabled,
-        @Nullable String sessionStickinessLBCookieDurationSeconds,
-        @Nullable List<LoadBalancerTag> tags) {
+        @OutputCustomType.Parameter("attachedInstances") @Nullable List<String> attachedInstances,
+        @OutputCustomType.Parameter("healthCheckPath") @Nullable String healthCheckPath,
+        @OutputCustomType.Parameter("loadBalancerArn") @Nullable String loadBalancerArn,
+        @OutputCustomType.Parameter("sessionStickinessEnabled") @Nullable Boolean sessionStickinessEnabled,
+        @OutputCustomType.Parameter("sessionStickinessLBCookieDurationSeconds") @Nullable String sessionStickinessLBCookieDurationSeconds,
+        @OutputCustomType.Parameter("tags") @Nullable List<LoadBalancerTag> tags) {
         this.attachedInstances = attachedInstances;
         this.healthCheckPath = healthCheckPath;
         this.loadBalancerArn = loadBalancerArn;

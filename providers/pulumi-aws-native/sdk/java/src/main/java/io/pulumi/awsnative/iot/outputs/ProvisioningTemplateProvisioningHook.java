@@ -14,10 +14,10 @@ public final class ProvisioningTemplateProvisioningHook {
     private final @Nullable String payloadVersion;
     private final @Nullable String targetArn;
 
-    @OutputCustomType.Constructor({"payloadVersion","targetArn"})
+    @OutputCustomType.Constructor
     private ProvisioningTemplateProvisioningHook(
-        @Nullable String payloadVersion,
-        @Nullable String targetArn) {
+        @OutputCustomType.Parameter("payloadVersion") @Nullable String payloadVersion,
+        @OutputCustomType.Parameter("targetArn") @Nullable String targetArn) {
         this.payloadVersion = payloadVersion;
         this.targetArn = targetArn;
     }

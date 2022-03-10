@@ -31,18 +31,18 @@ public final class PipelineActivity {
     private final @Nullable PipelineRemoveAttributes removeAttributes;
     private final @Nullable PipelineSelectAttributes selectAttributes;
 
-    @OutputCustomType.Constructor({"addAttributes","channel","datastore","deviceRegistryEnrich","deviceShadowEnrich","filter","lambda","math","removeAttributes","selectAttributes"})
+    @OutputCustomType.Constructor
     private PipelineActivity(
-        @Nullable PipelineAddAttributes addAttributes,
-        @Nullable PipelineChannel channel,
-        @Nullable PipelineDatastore datastore,
-        @Nullable PipelineDeviceRegistryEnrich deviceRegistryEnrich,
-        @Nullable PipelineDeviceShadowEnrich deviceShadowEnrich,
-        @Nullable PipelineFilter filter,
-        @Nullable PipelineLambda lambda,
-        @Nullable PipelineMath math,
-        @Nullable PipelineRemoveAttributes removeAttributes,
-        @Nullable PipelineSelectAttributes selectAttributes) {
+        @OutputCustomType.Parameter("addAttributes") @Nullable PipelineAddAttributes addAttributes,
+        @OutputCustomType.Parameter("channel") @Nullable PipelineChannel channel,
+        @OutputCustomType.Parameter("datastore") @Nullable PipelineDatastore datastore,
+        @OutputCustomType.Parameter("deviceRegistryEnrich") @Nullable PipelineDeviceRegistryEnrich deviceRegistryEnrich,
+        @OutputCustomType.Parameter("deviceShadowEnrich") @Nullable PipelineDeviceShadowEnrich deviceShadowEnrich,
+        @OutputCustomType.Parameter("filter") @Nullable PipelineFilter filter,
+        @OutputCustomType.Parameter("lambda") @Nullable PipelineLambda lambda,
+        @OutputCustomType.Parameter("math") @Nullable PipelineMath math,
+        @OutputCustomType.Parameter("removeAttributes") @Nullable PipelineRemoveAttributes removeAttributes,
+        @OutputCustomType.Parameter("selectAttributes") @Nullable PipelineSelectAttributes selectAttributes) {
         this.addAttributes = addAttributes;
         this.channel = channel;
         this.datastore = datastore;

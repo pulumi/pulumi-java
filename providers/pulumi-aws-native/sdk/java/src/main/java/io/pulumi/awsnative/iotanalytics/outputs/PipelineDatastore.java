@@ -12,10 +12,10 @@ public final class PipelineDatastore {
     private final String datastoreName;
     private final String name;
 
-    @OutputCustomType.Constructor({"datastoreName","name"})
+    @OutputCustomType.Constructor
     private PipelineDatastore(
-        String datastoreName,
-        String name) {
+        @OutputCustomType.Parameter("datastoreName") String datastoreName,
+        @OutputCustomType.Parameter("name") String name) {
         this.datastoreName = datastoreName;
         this.name = name;
     }

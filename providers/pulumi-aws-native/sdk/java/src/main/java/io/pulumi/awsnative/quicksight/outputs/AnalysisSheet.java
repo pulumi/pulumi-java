@@ -23,10 +23,10 @@ public final class AnalysisSheet {
      */
     private final @Nullable String sheetId;
 
-    @OutputCustomType.Constructor({"name","sheetId"})
+    @OutputCustomType.Constructor
     private AnalysisSheet(
-        @Nullable String name,
-        @Nullable String sheetId) {
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("sheetId") @Nullable String sheetId) {
         this.name = name;
         this.sheetId = sheetId;
     }

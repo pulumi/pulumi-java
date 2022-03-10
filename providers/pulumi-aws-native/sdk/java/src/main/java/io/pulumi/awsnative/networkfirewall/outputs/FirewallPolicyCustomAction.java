@@ -13,10 +13,10 @@ public final class FirewallPolicyCustomAction {
     private final FirewallPolicyActionDefinition actionDefinition;
     private final String actionName;
 
-    @OutputCustomType.Constructor({"actionDefinition","actionName"})
+    @OutputCustomType.Constructor
     private FirewallPolicyCustomAction(
-        FirewallPolicyActionDefinition actionDefinition,
-        String actionName) {
+        @OutputCustomType.Parameter("actionDefinition") FirewallPolicyActionDefinition actionDefinition,
+        @OutputCustomType.Parameter("actionName") String actionName) {
         this.actionDefinition = actionDefinition;
         this.actionName = actionName;
     }

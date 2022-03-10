@@ -43,24 +43,24 @@ public final class ConnectorProfileCredentials {
     private final @Nullable ConnectorProfileVeevaConnectorProfileCredentials veeva;
     private final @Nullable ConnectorProfileZendeskConnectorProfileCredentials zendesk;
 
-    @OutputCustomType.Constructor({"amplitude","datadog","dynatrace","googleAnalytics","inforNexus","marketo","redshift","sAPOData","salesforce","serviceNow","singular","slack","snowflake","trendmicro","veeva","zendesk"})
+    @OutputCustomType.Constructor
     private ConnectorProfileCredentials(
-        @Nullable ConnectorProfileAmplitudeConnectorProfileCredentials amplitude,
-        @Nullable ConnectorProfileDatadogConnectorProfileCredentials datadog,
-        @Nullable ConnectorProfileDynatraceConnectorProfileCredentials dynatrace,
-        @Nullable ConnectorProfileGoogleAnalyticsConnectorProfileCredentials googleAnalytics,
-        @Nullable ConnectorProfileInforNexusConnectorProfileCredentials inforNexus,
-        @Nullable ConnectorProfileMarketoConnectorProfileCredentials marketo,
-        @Nullable ConnectorProfileRedshiftConnectorProfileCredentials redshift,
-        @Nullable ConnectorProfileSAPODataConnectorProfileCredentials sAPOData,
-        @Nullable ConnectorProfileSalesforceConnectorProfileCredentials salesforce,
-        @Nullable ConnectorProfileServiceNowConnectorProfileCredentials serviceNow,
-        @Nullable ConnectorProfileSingularConnectorProfileCredentials singular,
-        @Nullable ConnectorProfileSlackConnectorProfileCredentials slack,
-        @Nullable ConnectorProfileSnowflakeConnectorProfileCredentials snowflake,
-        @Nullable ConnectorProfileTrendmicroConnectorProfileCredentials trendmicro,
-        @Nullable ConnectorProfileVeevaConnectorProfileCredentials veeva,
-        @Nullable ConnectorProfileZendeskConnectorProfileCredentials zendesk) {
+        @OutputCustomType.Parameter("amplitude") @Nullable ConnectorProfileAmplitudeConnectorProfileCredentials amplitude,
+        @OutputCustomType.Parameter("datadog") @Nullable ConnectorProfileDatadogConnectorProfileCredentials datadog,
+        @OutputCustomType.Parameter("dynatrace") @Nullable ConnectorProfileDynatraceConnectorProfileCredentials dynatrace,
+        @OutputCustomType.Parameter("googleAnalytics") @Nullable ConnectorProfileGoogleAnalyticsConnectorProfileCredentials googleAnalytics,
+        @OutputCustomType.Parameter("inforNexus") @Nullable ConnectorProfileInforNexusConnectorProfileCredentials inforNexus,
+        @OutputCustomType.Parameter("marketo") @Nullable ConnectorProfileMarketoConnectorProfileCredentials marketo,
+        @OutputCustomType.Parameter("redshift") @Nullable ConnectorProfileRedshiftConnectorProfileCredentials redshift,
+        @OutputCustomType.Parameter("sAPOData") @Nullable ConnectorProfileSAPODataConnectorProfileCredentials sAPOData,
+        @OutputCustomType.Parameter("salesforce") @Nullable ConnectorProfileSalesforceConnectorProfileCredentials salesforce,
+        @OutputCustomType.Parameter("serviceNow") @Nullable ConnectorProfileServiceNowConnectorProfileCredentials serviceNow,
+        @OutputCustomType.Parameter("singular") @Nullable ConnectorProfileSingularConnectorProfileCredentials singular,
+        @OutputCustomType.Parameter("slack") @Nullable ConnectorProfileSlackConnectorProfileCredentials slack,
+        @OutputCustomType.Parameter("snowflake") @Nullable ConnectorProfileSnowflakeConnectorProfileCredentials snowflake,
+        @OutputCustomType.Parameter("trendmicro") @Nullable ConnectorProfileTrendmicroConnectorProfileCredentials trendmicro,
+        @OutputCustomType.Parameter("veeva") @Nullable ConnectorProfileVeevaConnectorProfileCredentials veeva,
+        @OutputCustomType.Parameter("zendesk") @Nullable ConnectorProfileZendeskConnectorProfileCredentials zendesk) {
         this.amplitude = amplitude;
         this.datadog = datadog;
         this.dynatrace = dynatrace;

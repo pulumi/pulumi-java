@@ -19,13 +19,13 @@ public final class GetBackupPlanResult {
     private final @Nullable Object backupPlanTags;
     private final @Nullable String versionId;
 
-    @OutputCustomType.Constructor({"backupPlan","backupPlanArn","backupPlanId","backupPlanTags","versionId"})
+    @OutputCustomType.Constructor
     private GetBackupPlanResult(
-        @Nullable BackupPlanResourceType backupPlan,
-        @Nullable String backupPlanArn,
-        @Nullable String backupPlanId,
-        @Nullable Object backupPlanTags,
-        @Nullable String versionId) {
+        @OutputCustomType.Parameter("backupPlan") @Nullable BackupPlanResourceType backupPlan,
+        @OutputCustomType.Parameter("backupPlanArn") @Nullable String backupPlanArn,
+        @OutputCustomType.Parameter("backupPlanId") @Nullable String backupPlanId,
+        @OutputCustomType.Parameter("backupPlanTags") @Nullable Object backupPlanTags,
+        @OutputCustomType.Parameter("versionId") @Nullable String versionId) {
         this.backupPlan = backupPlan;
         this.backupPlanArn = backupPlanArn;
         this.backupPlanId = backupPlanId;

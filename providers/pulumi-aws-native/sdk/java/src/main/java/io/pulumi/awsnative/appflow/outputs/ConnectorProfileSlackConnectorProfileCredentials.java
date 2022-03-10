@@ -33,12 +33,12 @@ public final class ConnectorProfileSlackConnectorProfileCredentials {
      */
     private final @Nullable ConnectorProfileConnectorOAuthRequest connectorOAuthRequest;
 
-    @OutputCustomType.Constructor({"accessToken","clientId","clientSecret","connectorOAuthRequest"})
+    @OutputCustomType.Constructor
     private ConnectorProfileSlackConnectorProfileCredentials(
-        @Nullable String accessToken,
-        String clientId,
-        String clientSecret,
-        @Nullable ConnectorProfileConnectorOAuthRequest connectorOAuthRequest) {
+        @OutputCustomType.Parameter("accessToken") @Nullable String accessToken,
+        @OutputCustomType.Parameter("clientId") String clientId,
+        @OutputCustomType.Parameter("clientSecret") String clientSecret,
+        @OutputCustomType.Parameter("connectorOAuthRequest") @Nullable ConnectorProfileConnectorOAuthRequest connectorOAuthRequest) {
         this.accessToken = accessToken;
         this.clientId = clientId;
         this.clientSecret = clientSecret;

@@ -19,10 +19,10 @@ public final class DetectorModelIotTopicPublish {
     private final String mqttTopic;
     private final @Nullable DetectorModelPayload payload;
 
-    @OutputCustomType.Constructor({"mqttTopic","payload"})
+    @OutputCustomType.Constructor
     private DetectorModelIotTopicPublish(
-        String mqttTopic,
-        @Nullable DetectorModelPayload payload) {
+        @OutputCustomType.Parameter("mqttTopic") String mqttTopic,
+        @OutputCustomType.Parameter("payload") @Nullable DetectorModelPayload payload) {
         this.mqttTopic = mqttTopic;
         this.payload = payload;
     }

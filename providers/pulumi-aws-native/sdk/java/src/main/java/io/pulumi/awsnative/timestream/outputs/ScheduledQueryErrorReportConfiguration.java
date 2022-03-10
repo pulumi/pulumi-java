@@ -11,8 +11,8 @@ import java.util.Objects;
 public final class ScheduledQueryErrorReportConfiguration {
     private final ScheduledQueryS3Configuration s3Configuration;
 
-    @OutputCustomType.Constructor({"s3Configuration"})
-    private ScheduledQueryErrorReportConfiguration(ScheduledQueryS3Configuration s3Configuration) {
+    @OutputCustomType.Constructor
+    private ScheduledQueryErrorReportConfiguration(@OutputCustomType.Parameter("s3Configuration") ScheduledQueryS3Configuration s3Configuration) {
         this.s3Configuration = s3Configuration;
     }
 

@@ -17,13 +17,13 @@ public final class CanaryCode {
     private final @Nullable String s3ObjectVersion;
     private final @Nullable String script;
 
-    @OutputCustomType.Constructor({"handler","s3Bucket","s3Key","s3ObjectVersion","script"})
+    @OutputCustomType.Constructor
     private CanaryCode(
-        String handler,
-        @Nullable String s3Bucket,
-        @Nullable String s3Key,
-        @Nullable String s3ObjectVersion,
-        @Nullable String script) {
+        @OutputCustomType.Parameter("handler") String handler,
+        @OutputCustomType.Parameter("s3Bucket") @Nullable String s3Bucket,
+        @OutputCustomType.Parameter("s3Key") @Nullable String s3Key,
+        @OutputCustomType.Parameter("s3ObjectVersion") @Nullable String s3ObjectVersion,
+        @OutputCustomType.Parameter("script") @Nullable String script) {
         this.handler = handler;
         this.s3Bucket = s3Bucket;
         this.s3Key = s3Key;

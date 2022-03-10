@@ -16,10 +16,10 @@ public final class EC2FleetFleetLaunchTemplateConfigRequest {
     private final @Nullable EC2FleetFleetLaunchTemplateSpecificationRequest launchTemplateSpecification;
     private final @Nullable List<EC2FleetFleetLaunchTemplateOverridesRequest> overrides;
 
-    @OutputCustomType.Constructor({"launchTemplateSpecification","overrides"})
+    @OutputCustomType.Constructor
     private EC2FleetFleetLaunchTemplateConfigRequest(
-        @Nullable EC2FleetFleetLaunchTemplateSpecificationRequest launchTemplateSpecification,
-        @Nullable List<EC2FleetFleetLaunchTemplateOverridesRequest> overrides) {
+        @OutputCustomType.Parameter("launchTemplateSpecification") @Nullable EC2FleetFleetLaunchTemplateSpecificationRequest launchTemplateSpecification,
+        @OutputCustomType.Parameter("overrides") @Nullable List<EC2FleetFleetLaunchTemplateOverridesRequest> overrides) {
         this.launchTemplateSpecification = launchTemplateSpecification;
         this.overrides = overrides;
     }

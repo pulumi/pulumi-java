@@ -58,16 +58,16 @@ public final class GetModuleVersionResult {
      */
     private final @Nullable ModuleVersionVisibility visibility;
 
-    @OutputCustomType.Constructor({"arn","description","documentationUrl","isDefaultVersion","schema","timeCreated","versionId","visibility"})
+    @OutputCustomType.Constructor
     private GetModuleVersionResult(
-        @Nullable String arn,
-        @Nullable String description,
-        @Nullable String documentationUrl,
-        @Nullable Boolean isDefaultVersion,
-        @Nullable String schema,
-        @Nullable String timeCreated,
-        @Nullable String versionId,
-        @Nullable ModuleVersionVisibility visibility) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("documentationUrl") @Nullable String documentationUrl,
+        @OutputCustomType.Parameter("isDefaultVersion") @Nullable Boolean isDefaultVersion,
+        @OutputCustomType.Parameter("schema") @Nullable String schema,
+        @OutputCustomType.Parameter("timeCreated") @Nullable String timeCreated,
+        @OutputCustomType.Parameter("versionId") @Nullable String versionId,
+        @OutputCustomType.Parameter("visibility") @Nullable ModuleVersionVisibility visibility) {
         this.arn = arn;
         this.description = description;
         this.documentationUrl = documentationUrl;

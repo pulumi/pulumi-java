@@ -17,11 +17,11 @@ public final class BackupPlanResourceType {
     private final String backupPlanName;
     private final List<BackupPlanBackupRuleResourceType> backupPlanRule;
 
-    @OutputCustomType.Constructor({"advancedBackupSettings","backupPlanName","backupPlanRule"})
+    @OutputCustomType.Constructor
     private BackupPlanResourceType(
-        @Nullable List<BackupPlanAdvancedBackupSettingResourceType> advancedBackupSettings,
-        String backupPlanName,
-        List<BackupPlanBackupRuleResourceType> backupPlanRule) {
+        @OutputCustomType.Parameter("advancedBackupSettings") @Nullable List<BackupPlanAdvancedBackupSettingResourceType> advancedBackupSettings,
+        @OutputCustomType.Parameter("backupPlanName") String backupPlanName,
+        @OutputCustomType.Parameter("backupPlanRule") List<BackupPlanBackupRuleResourceType> backupPlanRule) {
         this.advancedBackupSettings = advancedBackupSettings;
         this.backupPlanName = backupPlanName;
         this.backupPlanRule = backupPlanRule;

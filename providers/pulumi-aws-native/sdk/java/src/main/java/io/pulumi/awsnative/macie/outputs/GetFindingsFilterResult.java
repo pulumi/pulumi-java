@@ -57,16 +57,16 @@ public final class GetFindingsFilterResult {
      */
     private final @Nullable Integer position;
 
-    @OutputCustomType.Constructor({"action","arn","description","findingCriteria","findingsFilterListItems","id","name","position"})
+    @OutputCustomType.Constructor
     private GetFindingsFilterResult(
-        @Nullable FindingsFilterFindingFilterAction action,
-        @Nullable String arn,
-        @Nullable String description,
-        @Nullable FindingsFilterFindingCriteria findingCriteria,
-        @Nullable List<FindingsFilterListItem> findingsFilterListItems,
-        @Nullable String id,
-        @Nullable String name,
-        @Nullable Integer position) {
+        @OutputCustomType.Parameter("action") @Nullable FindingsFilterFindingFilterAction action,
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("findingCriteria") @Nullable FindingsFilterFindingCriteria findingCriteria,
+        @OutputCustomType.Parameter("findingsFilterListItems") @Nullable List<FindingsFilterListItem> findingsFilterListItems,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("position") @Nullable Integer position) {
         this.action = action;
         this.arn = arn;
         this.description = description;

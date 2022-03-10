@@ -13,8 +13,8 @@ import javax.annotation.Nullable;
 public final class DeliveryStreamOutputFormatConfiguration {
     private final @Nullable DeliveryStreamSerializer serializer;
 
-    @OutputCustomType.Constructor({"serializer"})
-    private DeliveryStreamOutputFormatConfiguration(@Nullable DeliveryStreamSerializer serializer) {
+    @OutputCustomType.Constructor
+    private DeliveryStreamOutputFormatConfiguration(@OutputCustomType.Parameter("serializer") @Nullable DeliveryStreamSerializer serializer) {
         this.serializer = serializer;
     }
 

@@ -17,12 +17,12 @@ public final class GetResourcePolicyResult {
     private final @Nullable String resourceArn;
     private final @Nullable String revisionId;
 
-    @OutputCustomType.Constructor({"id","policy","resourceArn","revisionId"})
+    @OutputCustomType.Constructor
     private GetResourcePolicyResult(
-        @Nullable String id,
-        @Nullable ResourcePolicyPolicy policy,
-        @Nullable String resourceArn,
-        @Nullable String revisionId) {
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("policy") @Nullable ResourcePolicyPolicy policy,
+        @OutputCustomType.Parameter("resourceArn") @Nullable String resourceArn,
+        @OutputCustomType.Parameter("revisionId") @Nullable String revisionId) {
         this.id = id;
         this.policy = policy;
         this.resourceArn = resourceArn;

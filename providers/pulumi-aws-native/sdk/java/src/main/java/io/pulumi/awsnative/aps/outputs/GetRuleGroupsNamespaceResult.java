@@ -34,12 +34,12 @@ public final class GetRuleGroupsNamespaceResult {
      */
     private final @Nullable String workspace;
 
-    @OutputCustomType.Constructor({"arn","data","tags","workspace"})
+    @OutputCustomType.Constructor
     private GetRuleGroupsNamespaceResult(
-        @Nullable String arn,
-        @Nullable String data,
-        @Nullable List<RuleGroupsNamespaceTag> tags,
-        @Nullable String workspace) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("data") @Nullable String data,
+        @OutputCustomType.Parameter("tags") @Nullable List<RuleGroupsNamespaceTag> tags,
+        @OutputCustomType.Parameter("workspace") @Nullable String workspace) {
         this.arn = arn;
         this.data = data;
         this.tags = tags;

@@ -14,10 +14,10 @@ public final class DatastoreCustomerManagedS3Storage {
     private final String bucket;
     private final @Nullable String keyPrefix;
 
-    @OutputCustomType.Constructor({"bucket","keyPrefix"})
+    @OutputCustomType.Constructor
     private DatastoreCustomerManagedS3Storage(
-        String bucket,
-        @Nullable String keyPrefix) {
+        @OutputCustomType.Parameter("bucket") String bucket,
+        @OutputCustomType.Parameter("keyPrefix") @Nullable String keyPrefix) {
         this.bucket = bucket;
         this.keyPrefix = keyPrefix;
     }

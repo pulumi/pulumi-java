@@ -13,8 +13,8 @@ import javax.annotation.Nullable;
 public final class KnowledgeBaseRenderingConfiguration {
     private final @Nullable String templateUri;
 
-    @OutputCustomType.Constructor({"templateUri"})
-    private KnowledgeBaseRenderingConfiguration(@Nullable String templateUri) {
+    @OutputCustomType.Constructor
+    private KnowledgeBaseRenderingConfiguration(@OutputCustomType.Parameter("templateUri") @Nullable String templateUri) {
         this.templateUri = templateUri;
     }
 

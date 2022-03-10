@@ -33,12 +33,12 @@ public final class GetAliasResult {
      */
     private final @Nullable AliasRoutingStrategy routingStrategy;
 
-    @OutputCustomType.Constructor({"aliasId","description","name","routingStrategy"})
+    @OutputCustomType.Constructor
     private GetAliasResult(
-        @Nullable String aliasId,
-        @Nullable String description,
-        @Nullable String name,
-        @Nullable AliasRoutingStrategy routingStrategy) {
+        @OutputCustomType.Parameter("aliasId") @Nullable String aliasId,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("routingStrategy") @Nullable AliasRoutingStrategy routingStrategy) {
         this.aliasId = aliasId;
         this.description = description;
         this.name = name;

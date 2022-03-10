@@ -26,11 +26,11 @@ public final class WebACLCustomResponse {
      */
     private final @Nullable List<WebACLCustomHTTPHeader> responseHeaders;
 
-    @OutputCustomType.Constructor({"customResponseBodyKey","responseCode","responseHeaders"})
+    @OutputCustomType.Constructor
     private WebACLCustomResponse(
-        @Nullable String customResponseBodyKey,
-        Integer responseCode,
-        @Nullable List<WebACLCustomHTTPHeader> responseHeaders) {
+        @OutputCustomType.Parameter("customResponseBodyKey") @Nullable String customResponseBodyKey,
+        @OutputCustomType.Parameter("responseCode") Integer responseCode,
+        @OutputCustomType.Parameter("responseHeaders") @Nullable List<WebACLCustomHTTPHeader> responseHeaders) {
         this.customResponseBodyKey = customResponseBodyKey;
         this.responseCode = responseCode;
         this.responseHeaders = responseHeaders;

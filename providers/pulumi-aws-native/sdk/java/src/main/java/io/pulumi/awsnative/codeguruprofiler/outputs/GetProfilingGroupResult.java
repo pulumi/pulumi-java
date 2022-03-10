@@ -36,12 +36,12 @@ public final class GetProfilingGroupResult {
      */
     private final @Nullable List<ProfilingGroupTag> tags;
 
-    @OutputCustomType.Constructor({"agentPermissions","anomalyDetectionNotificationConfiguration","arn","tags"})
+    @OutputCustomType.Constructor
     private GetProfilingGroupResult(
-        @Nullable AgentPermissionsProperties agentPermissions,
-        @Nullable List<ProfilingGroupChannel> anomalyDetectionNotificationConfiguration,
-        @Nullable String arn,
-        @Nullable List<ProfilingGroupTag> tags) {
+        @OutputCustomType.Parameter("agentPermissions") @Nullable AgentPermissionsProperties agentPermissions,
+        @OutputCustomType.Parameter("anomalyDetectionNotificationConfiguration") @Nullable List<ProfilingGroupChannel> anomalyDetectionNotificationConfiguration,
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("tags") @Nullable List<ProfilingGroupTag> tags) {
         this.agentPermissions = agentPermissions;
         this.anomalyDetectionNotificationConfiguration = anomalyDetectionNotificationConfiguration;
         this.arn = arn;

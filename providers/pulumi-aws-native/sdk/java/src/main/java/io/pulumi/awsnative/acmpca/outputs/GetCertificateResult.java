@@ -22,10 +22,10 @@ public final class GetCertificateResult {
      */
     private final @Nullable String certificate;
 
-    @OutputCustomType.Constructor({"arn","certificate"})
+    @OutputCustomType.Constructor
     private GetCertificateResult(
-        @Nullable String arn,
-        @Nullable String certificate) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("certificate") @Nullable String certificate) {
         this.arn = arn;
         this.certificate = certificate;
     }

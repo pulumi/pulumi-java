@@ -16,10 +16,10 @@ public final class CapacityReservationFleetTagSpecification {
     private final @Nullable String resourceType;
     private final @Nullable List<CapacityReservationFleetTag> tags;
 
-    @OutputCustomType.Constructor({"resourceType","tags"})
+    @OutputCustomType.Constructor
     private CapacityReservationFleetTagSpecification(
-        @Nullable String resourceType,
-        @Nullable List<CapacityReservationFleetTag> tags) {
+        @OutputCustomType.Parameter("resourceType") @Nullable String resourceType,
+        @OutputCustomType.Parameter("tags") @Nullable List<CapacityReservationFleetTag> tags) {
         this.resourceType = resourceType;
         this.tags = tags;
     }

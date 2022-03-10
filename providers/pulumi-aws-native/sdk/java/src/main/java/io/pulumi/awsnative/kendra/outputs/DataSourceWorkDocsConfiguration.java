@@ -21,14 +21,14 @@ public final class DataSourceWorkDocsConfiguration {
     private final String organizationId;
     private final @Nullable Boolean useChangeLog;
 
-    @OutputCustomType.Constructor({"crawlComments","exclusionPatterns","fieldMappings","inclusionPatterns","organizationId","useChangeLog"})
+    @OutputCustomType.Constructor
     private DataSourceWorkDocsConfiguration(
-        @Nullable Boolean crawlComments,
-        @Nullable List<String> exclusionPatterns,
-        @Nullable List<DataSourceToIndexFieldMapping> fieldMappings,
-        @Nullable List<String> inclusionPatterns,
-        String organizationId,
-        @Nullable Boolean useChangeLog) {
+        @OutputCustomType.Parameter("crawlComments") @Nullable Boolean crawlComments,
+        @OutputCustomType.Parameter("exclusionPatterns") @Nullable List<String> exclusionPatterns,
+        @OutputCustomType.Parameter("fieldMappings") @Nullable List<DataSourceToIndexFieldMapping> fieldMappings,
+        @OutputCustomType.Parameter("inclusionPatterns") @Nullable List<String> inclusionPatterns,
+        @OutputCustomType.Parameter("organizationId") String organizationId,
+        @OutputCustomType.Parameter("useChangeLog") @Nullable Boolean useChangeLog) {
         this.crawlComments = crawlComments;
         this.exclusionPatterns = exclusionPatterns;
         this.fieldMappings = fieldMappings;

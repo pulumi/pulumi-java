@@ -22,11 +22,11 @@ public final class VirtualClusterContainerProvider {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"id","info","type"})
+    @OutputCustomType.Constructor
     private VirtualClusterContainerProvider(
-        String id,
-        VirtualClusterContainerInfo info,
-        String type) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("info") VirtualClusterContainerInfo info,
+        @OutputCustomType.Parameter("type") String type) {
         this.id = id;
         this.info = info;
         this.type = type;

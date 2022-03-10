@@ -79,20 +79,20 @@ public final class GetStageResult {
      */
     private final @Nullable Object variables;
 
-    @OutputCustomType.Constructor({"accessLogSetting","cacheClusterEnabled","cacheClusterSize","canarySetting","clientCertificateId","deploymentId","description","documentationVersion","methodSettings","tags","tracingEnabled","variables"})
+    @OutputCustomType.Constructor
     private GetStageResult(
-        @Nullable StageAccessLogSetting accessLogSetting,
-        @Nullable Boolean cacheClusterEnabled,
-        @Nullable String cacheClusterSize,
-        @Nullable StageCanarySetting canarySetting,
-        @Nullable String clientCertificateId,
-        @Nullable String deploymentId,
-        @Nullable String description,
-        @Nullable String documentationVersion,
-        @Nullable List<StageMethodSetting> methodSettings,
-        @Nullable List<StageTag> tags,
-        @Nullable Boolean tracingEnabled,
-        @Nullable Object variables) {
+        @OutputCustomType.Parameter("accessLogSetting") @Nullable StageAccessLogSetting accessLogSetting,
+        @OutputCustomType.Parameter("cacheClusterEnabled") @Nullable Boolean cacheClusterEnabled,
+        @OutputCustomType.Parameter("cacheClusterSize") @Nullable String cacheClusterSize,
+        @OutputCustomType.Parameter("canarySetting") @Nullable StageCanarySetting canarySetting,
+        @OutputCustomType.Parameter("clientCertificateId") @Nullable String clientCertificateId,
+        @OutputCustomType.Parameter("deploymentId") @Nullable String deploymentId,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("documentationVersion") @Nullable String documentationVersion,
+        @OutputCustomType.Parameter("methodSettings") @Nullable List<StageMethodSetting> methodSettings,
+        @OutputCustomType.Parameter("tags") @Nullable List<StageTag> tags,
+        @OutputCustomType.Parameter("tracingEnabled") @Nullable Boolean tracingEnabled,
+        @OutputCustomType.Parameter("variables") @Nullable Object variables) {
         this.accessLogSetting = accessLogSetting;
         this.cacheClusterEnabled = cacheClusterEnabled;
         this.cacheClusterSize = cacheClusterSize;

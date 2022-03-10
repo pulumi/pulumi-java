@@ -13,8 +13,8 @@ import javax.annotation.Nullable;
 public final class FindingsFilterFindingCriteria {
     private final @Nullable FindingsFilterCriterion criterion;
 
-    @OutputCustomType.Constructor({"criterion"})
-    private FindingsFilterFindingCriteria(@Nullable FindingsFilterCriterion criterion) {
+    @OutputCustomType.Constructor
+    private FindingsFilterFindingCriteria(@OutputCustomType.Parameter("criterion") @Nullable FindingsFilterCriterion criterion) {
         this.criterion = criterion;
     }
 
