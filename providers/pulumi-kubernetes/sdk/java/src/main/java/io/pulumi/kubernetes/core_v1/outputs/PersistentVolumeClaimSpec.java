@@ -61,16 +61,16 @@ public final class PersistentVolumeClaimSpec {
      */
     private final @Nullable String volumeName;
 
-    @OutputCustomType.Constructor({"accessModes","dataSource","dataSourceRef","resources","selector","storageClassName","volumeMode","volumeName"})
+    @OutputCustomType.Constructor
     private PersistentVolumeClaimSpec(
-        @Nullable List<String> accessModes,
-        @Nullable TypedLocalObjectReference dataSource,
-        @Nullable TypedLocalObjectReference dataSourceRef,
-        @Nullable ResourceRequirements resources,
-        @Nullable LabelSelector selector,
-        @Nullable String storageClassName,
-        @Nullable String volumeMode,
-        @Nullable String volumeName) {
+        @OutputCustomType.Parameter("accessModes") @Nullable List<String> accessModes,
+        @OutputCustomType.Parameter("dataSource") @Nullable TypedLocalObjectReference dataSource,
+        @OutputCustomType.Parameter("dataSourceRef") @Nullable TypedLocalObjectReference dataSourceRef,
+        @OutputCustomType.Parameter("resources") @Nullable ResourceRequirements resources,
+        @OutputCustomType.Parameter("selector") @Nullable LabelSelector selector,
+        @OutputCustomType.Parameter("storageClassName") @Nullable String storageClassName,
+        @OutputCustomType.Parameter("volumeMode") @Nullable String volumeMode,
+        @OutputCustomType.Parameter("volumeName") @Nullable String volumeName) {
         this.accessModes = accessModes;
         this.dataSource = dataSource;
         this.dataSourceRef = dataSourceRef;

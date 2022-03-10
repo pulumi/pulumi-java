@@ -59,15 +59,15 @@ public final class PodDisruptionBudgetStatus {
      */
     private final @Nullable Integer observedGeneration;
 
-    @OutputCustomType.Constructor({"conditions","currentHealthy","desiredHealthy","disruptedPods","disruptionsAllowed","expectedPods","observedGeneration"})
+    @OutputCustomType.Constructor
     private PodDisruptionBudgetStatus(
-        @Nullable List<Condition> conditions,
-        Integer currentHealthy,
-        Integer desiredHealthy,
-        @Nullable Map<String,String> disruptedPods,
-        Integer disruptionsAllowed,
-        Integer expectedPods,
-        @Nullable Integer observedGeneration) {
+        @OutputCustomType.Parameter("conditions") @Nullable List<Condition> conditions,
+        @OutputCustomType.Parameter("currentHealthy") Integer currentHealthy,
+        @OutputCustomType.Parameter("desiredHealthy") Integer desiredHealthy,
+        @OutputCustomType.Parameter("disruptedPods") @Nullable Map<String,String> disruptedPods,
+        @OutputCustomType.Parameter("disruptionsAllowed") Integer disruptionsAllowed,
+        @OutputCustomType.Parameter("expectedPods") Integer expectedPods,
+        @OutputCustomType.Parameter("observedGeneration") @Nullable Integer observedGeneration) {
         this.conditions = conditions;
         this.currentHealthy = currentHealthy;
         this.desiredHealthy = desiredHealthy;

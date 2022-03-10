@@ -33,12 +33,12 @@ public final class MetricTarget {
      */
     private final @Nullable String value;
 
-    @OutputCustomType.Constructor({"averageUtilization","averageValue","type","value"})
+    @OutputCustomType.Constructor
     private MetricTarget(
-        @Nullable Integer averageUtilization,
-        @Nullable String averageValue,
-        String type,
-        @Nullable String value) {
+        @OutputCustomType.Parameter("averageUtilization") @Nullable Integer averageUtilization,
+        @OutputCustomType.Parameter("averageValue") @Nullable String averageValue,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("value") @Nullable String value) {
         this.averageUtilization = averageUtilization;
         this.averageValue = averageValue;
         this.type = type;

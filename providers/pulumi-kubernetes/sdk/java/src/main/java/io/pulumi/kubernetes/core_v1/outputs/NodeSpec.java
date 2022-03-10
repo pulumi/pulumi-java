@@ -51,15 +51,15 @@ public final class NodeSpec {
      */
     private final @Nullable Boolean unschedulable;
 
-    @OutputCustomType.Constructor({"configSource","externalID","podCIDR","podCIDRs","providerID","taints","unschedulable"})
+    @OutputCustomType.Constructor
     private NodeSpec(
-        @Nullable NodeConfigSource configSource,
-        @Nullable String externalID,
-        @Nullable String podCIDR,
-        @Nullable List<String> podCIDRs,
-        @Nullable String providerID,
-        @Nullable List<Taint> taints,
-        @Nullable Boolean unschedulable) {
+        @OutputCustomType.Parameter("configSource") @Nullable NodeConfigSource configSource,
+        @OutputCustomType.Parameter("externalID") @Nullable String externalID,
+        @OutputCustomType.Parameter("podCIDR") @Nullable String podCIDR,
+        @OutputCustomType.Parameter("podCIDRs") @Nullable List<String> podCIDRs,
+        @OutputCustomType.Parameter("providerID") @Nullable String providerID,
+        @OutputCustomType.Parameter("taints") @Nullable List<Taint> taints,
+        @OutputCustomType.Parameter("unschedulable") @Nullable Boolean unschedulable) {
         this.configSource = configSource;
         this.externalID = externalID;
         this.podCIDR = podCIDR;

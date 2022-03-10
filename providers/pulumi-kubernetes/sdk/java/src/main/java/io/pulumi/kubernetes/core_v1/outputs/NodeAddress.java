@@ -27,10 +27,10 @@ public final class NodeAddress {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"address","type"})
+    @OutputCustomType.Constructor
     private NodeAddress(
-        String address,
-        String type) {
+        @OutputCustomType.Parameter("address") String address,
+        @OutputCustomType.Parameter("type") String type) {
         this.address = address;
         this.type = type;
     }

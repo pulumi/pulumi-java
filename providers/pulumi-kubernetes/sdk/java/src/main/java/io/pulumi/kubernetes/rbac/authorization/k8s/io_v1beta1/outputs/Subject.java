@@ -32,12 +32,12 @@ public final class Subject {
      */
     private final @Nullable String namespace;
 
-    @OutputCustomType.Constructor({"apiGroup","kind","name","namespace"})
+    @OutputCustomType.Constructor
     private Subject(
-        @Nullable String apiGroup,
-        String kind,
-        String name,
-        @Nullable String namespace) {
+        @OutputCustomType.Parameter("apiGroup") @Nullable String apiGroup,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("namespace") @Nullable String namespace) {
         this.apiGroup = apiGroup;
         this.kind = kind;
         this.name = name;

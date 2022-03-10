@@ -97,21 +97,21 @@ public final class PodStatus {
      */
     private final @Nullable String startTime;
 
-    @OutputCustomType.Constructor({"conditions","containerStatuses","ephemeralContainerStatuses","hostIP","initContainerStatuses","message","nominatedNodeName","phase","podIP","podIPs","qosClass","reason","startTime"})
+    @OutputCustomType.Constructor
     private PodStatus(
-        @Nullable List<PodCondition> conditions,
-        @Nullable List<ContainerStatus> containerStatuses,
-        @Nullable List<ContainerStatus> ephemeralContainerStatuses,
-        @Nullable String hostIP,
-        @Nullable List<ContainerStatus> initContainerStatuses,
-        @Nullable String message,
-        @Nullable String nominatedNodeName,
-        @Nullable String phase,
-        @Nullable String podIP,
-        @Nullable List<PodIP> podIPs,
-        @Nullable String qosClass,
-        @Nullable String reason,
-        @Nullable String startTime) {
+        @OutputCustomType.Parameter("conditions") @Nullable List<PodCondition> conditions,
+        @OutputCustomType.Parameter("containerStatuses") @Nullable List<ContainerStatus> containerStatuses,
+        @OutputCustomType.Parameter("ephemeralContainerStatuses") @Nullable List<ContainerStatus> ephemeralContainerStatuses,
+        @OutputCustomType.Parameter("hostIP") @Nullable String hostIP,
+        @OutputCustomType.Parameter("initContainerStatuses") @Nullable List<ContainerStatus> initContainerStatuses,
+        @OutputCustomType.Parameter("message") @Nullable String message,
+        @OutputCustomType.Parameter("nominatedNodeName") @Nullable String nominatedNodeName,
+        @OutputCustomType.Parameter("phase") @Nullable String phase,
+        @OutputCustomType.Parameter("podIP") @Nullable String podIP,
+        @OutputCustomType.Parameter("podIPs") @Nullable List<PodIP> podIPs,
+        @OutputCustomType.Parameter("qosClass") @Nullable String qosClass,
+        @OutputCustomType.Parameter("reason") @Nullable String reason,
+        @OutputCustomType.Parameter("startTime") @Nullable String startTime) {
         this.conditions = conditions;
         this.containerStatuses = containerStatuses;
         this.ephemeralContainerStatuses = ephemeralContainerStatuses;

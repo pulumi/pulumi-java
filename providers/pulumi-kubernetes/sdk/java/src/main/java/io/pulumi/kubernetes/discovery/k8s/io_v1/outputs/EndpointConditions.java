@@ -27,11 +27,11 @@ public final class EndpointConditions {
      */
     private final @Nullable Boolean terminating;
 
-    @OutputCustomType.Constructor({"ready","serving","terminating"})
+    @OutputCustomType.Constructor
     private EndpointConditions(
-        @Nullable Boolean ready,
-        @Nullable Boolean serving,
-        @Nullable Boolean terminating) {
+        @OutputCustomType.Parameter("ready") @Nullable Boolean ready,
+        @OutputCustomType.Parameter("serving") @Nullable Boolean serving,
+        @OutputCustomType.Parameter("terminating") @Nullable Boolean terminating) {
         this.ready = ready;
         this.serving = serving;
         this.terminating = terminating;

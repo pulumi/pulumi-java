@@ -21,10 +21,10 @@ public final class WeightedPodAffinityTerm {
      */
     private final Integer weight;
 
-    @OutputCustomType.Constructor({"podAffinityTerm","weight"})
+    @OutputCustomType.Constructor
     private WeightedPodAffinityTerm(
-        PodAffinityTerm podAffinityTerm,
-        Integer weight) {
+        @OutputCustomType.Parameter("podAffinityTerm") PodAffinityTerm podAffinityTerm,
+        @OutputCustomType.Parameter("weight") Integer weight) {
         this.podAffinityTerm = podAffinityTerm;
         this.weight = weight;
     }

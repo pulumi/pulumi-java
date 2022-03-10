@@ -22,10 +22,10 @@ public final class EmptyDirVolumeSource {
      */
     private final @Nullable String sizeLimit;
 
-    @OutputCustomType.Constructor({"medium","sizeLimit"})
+    @OutputCustomType.Constructor
     private EmptyDirVolumeSource(
-        @Nullable String medium,
-        @Nullable String sizeLimit) {
+        @OutputCustomType.Parameter("medium") @Nullable String medium,
+        @OutputCustomType.Parameter("sizeLimit") @Nullable String sizeLimit) {
         this.medium = medium;
         this.sizeLimit = sizeLimit;
     }

@@ -23,10 +23,10 @@ public final class RunAsUserStrategyOptions {
      */
     private final String rule;
 
-    @OutputCustomType.Constructor({"ranges","rule"})
+    @OutputCustomType.Constructor
     private RunAsUserStrategyOptions(
-        @Nullable List<IDRange> ranges,
-        String rule) {
+        @OutputCustomType.Parameter("ranges") @Nullable List<IDRange> ranges,
+        @OutputCustomType.Parameter("rule") String rule) {
         this.ranges = ranges;
         this.rule = rule;
     }

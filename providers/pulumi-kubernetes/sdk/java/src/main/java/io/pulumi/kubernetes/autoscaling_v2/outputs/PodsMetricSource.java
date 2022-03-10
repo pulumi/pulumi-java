@@ -21,10 +21,10 @@ public final class PodsMetricSource {
      */
     private final MetricTarget target;
 
-    @OutputCustomType.Constructor({"metric","target"})
+    @OutputCustomType.Constructor
     private PodsMetricSource(
-        MetricIdentifier metric,
-        MetricTarget target) {
+        @OutputCustomType.Parameter("metric") MetricIdentifier metric,
+        @OutputCustomType.Parameter("target") MetricTarget target) {
         this.metric = metric;
         this.target = target;
     }

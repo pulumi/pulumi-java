@@ -46,14 +46,14 @@ public final class SubjectAccessReviewSpec {
      */
     private final @Nullable String user;
 
-    @OutputCustomType.Constructor({"extra","group","nonResourceAttributes","resourceAttributes","uid","user"})
+    @OutputCustomType.Constructor
     private SubjectAccessReviewSpec(
-        @Nullable Map<String,List<String>> extra,
-        @Nullable List<String> group,
-        @Nullable NonResourceAttributes nonResourceAttributes,
-        @Nullable ResourceAttributes resourceAttributes,
-        @Nullable String uid,
-        @Nullable String user) {
+        @OutputCustomType.Parameter("extra") @Nullable Map<String,List<String>> extra,
+        @OutputCustomType.Parameter("group") @Nullable List<String> group,
+        @OutputCustomType.Parameter("nonResourceAttributes") @Nullable NonResourceAttributes nonResourceAttributes,
+        @OutputCustomType.Parameter("resourceAttributes") @Nullable ResourceAttributes resourceAttributes,
+        @OutputCustomType.Parameter("uid") @Nullable String uid,
+        @OutputCustomType.Parameter("user") @Nullable String user) {
         this.extra = extra;
         this.group = group;
         this.nonResourceAttributes = nonResourceAttributes;

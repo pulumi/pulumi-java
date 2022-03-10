@@ -34,12 +34,12 @@ public final class PodTemplate {
      */
     private final @Nullable PodTemplateSpec template;
 
-    @OutputCustomType.Constructor({"apiVersion","kind","metadata","template"})
+    @OutputCustomType.Constructor
     private PodTemplate(
-        @Nullable String apiVersion,
-        @Nullable String kind,
-        @Nullable ObjectMeta metadata,
-        @Nullable PodTemplateSpec template) {
+        @OutputCustomType.Parameter("apiVersion") @Nullable String apiVersion,
+        @OutputCustomType.Parameter("kind") @Nullable String kind,
+        @OutputCustomType.Parameter("metadata") @Nullable ObjectMeta metadata,
+        @OutputCustomType.Parameter("template") @Nullable PodTemplateSpec template) {
         this.apiVersion = apiVersion;
         this.kind = kind;
         this.metadata = metadata;

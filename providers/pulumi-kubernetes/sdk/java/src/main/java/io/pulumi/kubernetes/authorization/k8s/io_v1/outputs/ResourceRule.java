@@ -33,12 +33,12 @@ public final class ResourceRule {
      */
     private final List<String> verbs;
 
-    @OutputCustomType.Constructor({"apiGroups","resourceNames","resources","verbs"})
+    @OutputCustomType.Constructor
     private ResourceRule(
-        @Nullable List<String> apiGroups,
-        @Nullable List<String> resourceNames,
-        @Nullable List<String> resources,
-        List<String> verbs) {
+        @OutputCustomType.Parameter("apiGroups") @Nullable List<String> apiGroups,
+        @OutputCustomType.Parameter("resourceNames") @Nullable List<String> resourceNames,
+        @OutputCustomType.Parameter("resources") @Nullable List<String> resources,
+        @OutputCustomType.Parameter("verbs") List<String> verbs) {
         this.apiGroups = apiGroups;
         this.resourceNames = resourceNames;
         this.resources = resources;

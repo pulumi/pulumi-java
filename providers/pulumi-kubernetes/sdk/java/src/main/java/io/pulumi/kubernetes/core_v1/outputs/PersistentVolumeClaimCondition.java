@@ -40,14 +40,14 @@ public final class PersistentVolumeClaimCondition {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"lastProbeTime","lastTransitionTime","message","reason","status","type"})
+    @OutputCustomType.Constructor
     private PersistentVolumeClaimCondition(
-        @Nullable String lastProbeTime,
-        @Nullable String lastTransitionTime,
-        @Nullable String message,
-        @Nullable String reason,
-        String status,
-        String type) {
+        @OutputCustomType.Parameter("lastProbeTime") @Nullable String lastProbeTime,
+        @OutputCustomType.Parameter("lastTransitionTime") @Nullable String lastTransitionTime,
+        @OutputCustomType.Parameter("message") @Nullable String message,
+        @OutputCustomType.Parameter("reason") @Nullable String reason,
+        @OutputCustomType.Parameter("status") String status,
+        @OutputCustomType.Parameter("type") String type) {
         this.lastProbeTime = lastProbeTime;
         this.lastTransitionTime = lastTransitionTime;
         this.message = message;

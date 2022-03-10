@@ -29,11 +29,11 @@ public final class LifecycleHandler {
      */
     private final @Nullable TCPSocketAction tcpSocket;
 
-    @OutputCustomType.Constructor({"exec","httpGet","tcpSocket"})
+    @OutputCustomType.Constructor
     private LifecycleHandler(
-        @Nullable ExecAction exec,
-        @Nullable HTTPGetAction httpGet,
-        @Nullable TCPSocketAction tcpSocket) {
+        @OutputCustomType.Parameter("exec") @Nullable ExecAction exec,
+        @OutputCustomType.Parameter("httpGet") @Nullable HTTPGetAction httpGet,
+        @OutputCustomType.Parameter("tcpSocket") @Nullable TCPSocketAction tcpSocket) {
         this.exec = exec;
         this.httpGet = httpGet;
         this.tcpSocket = tcpSocket;

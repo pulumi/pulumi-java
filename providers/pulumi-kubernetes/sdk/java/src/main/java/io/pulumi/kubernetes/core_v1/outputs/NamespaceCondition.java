@@ -32,13 +32,13 @@ public final class NamespaceCondition {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"lastTransitionTime","message","reason","status","type"})
+    @OutputCustomType.Constructor
     private NamespaceCondition(
-        @Nullable String lastTransitionTime,
-        @Nullable String message,
-        @Nullable String reason,
-        String status,
-        String type) {
+        @OutputCustomType.Parameter("lastTransitionTime") @Nullable String lastTransitionTime,
+        @OutputCustomType.Parameter("message") @Nullable String message,
+        @OutputCustomType.Parameter("reason") @Nullable String reason,
+        @OutputCustomType.Parameter("status") String status,
+        @OutputCustomType.Parameter("type") String type) {
         this.lastTransitionTime = lastTransitionTime;
         this.message = message;
         this.reason = reason;

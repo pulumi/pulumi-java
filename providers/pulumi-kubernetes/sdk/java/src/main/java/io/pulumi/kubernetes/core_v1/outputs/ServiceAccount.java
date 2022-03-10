@@ -47,14 +47,14 @@ public final class ServiceAccount {
      */
     private final @Nullable List<ObjectReference> secrets;
 
-    @OutputCustomType.Constructor({"apiVersion","automountServiceAccountToken","imagePullSecrets","kind","metadata","secrets"})
+    @OutputCustomType.Constructor
     private ServiceAccount(
-        @Nullable String apiVersion,
-        @Nullable Boolean automountServiceAccountToken,
-        @Nullable List<LocalObjectReference> imagePullSecrets,
-        @Nullable String kind,
-        @Nullable ObjectMeta metadata,
-        @Nullable List<ObjectReference> secrets) {
+        @OutputCustomType.Parameter("apiVersion") @Nullable String apiVersion,
+        @OutputCustomType.Parameter("automountServiceAccountToken") @Nullable Boolean automountServiceAccountToken,
+        @OutputCustomType.Parameter("imagePullSecrets") @Nullable List<LocalObjectReference> imagePullSecrets,
+        @OutputCustomType.Parameter("kind") @Nullable String kind,
+        @OutputCustomType.Parameter("metadata") @Nullable ObjectMeta metadata,
+        @OutputCustomType.Parameter("secrets") @Nullable List<ObjectReference> secrets) {
         this.apiVersion = apiVersion;
         this.automountServiceAccountToken = automountServiceAccountToken;
         this.imagePullSecrets = imagePullSecrets;

@@ -42,13 +42,13 @@ public final class PodPresetSpec {
      */
     private final @Nullable List<Volume> volumes;
 
-    @OutputCustomType.Constructor({"env","envFrom","selector","volumeMounts","volumes"})
+    @OutputCustomType.Constructor
     private PodPresetSpec(
-        @Nullable List<EnvVar> env,
-        @Nullable List<EnvFromSource> envFrom,
-        @Nullable LabelSelector selector,
-        @Nullable List<VolumeMount> volumeMounts,
-        @Nullable List<Volume> volumes) {
+        @OutputCustomType.Parameter("env") @Nullable List<EnvVar> env,
+        @OutputCustomType.Parameter("envFrom") @Nullable List<EnvFromSource> envFrom,
+        @OutputCustomType.Parameter("selector") @Nullable LabelSelector selector,
+        @OutputCustomType.Parameter("volumeMounts") @Nullable List<VolumeMount> volumeMounts,
+        @OutputCustomType.Parameter("volumes") @Nullable List<Volume> volumes) {
         this.env = env;
         this.envFrom = envFrom;
         this.selector = selector;

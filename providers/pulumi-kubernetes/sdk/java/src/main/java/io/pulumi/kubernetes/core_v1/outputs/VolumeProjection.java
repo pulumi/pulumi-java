@@ -35,12 +35,12 @@ public final class VolumeProjection {
      */
     private final @Nullable ServiceAccountTokenProjection serviceAccountToken;
 
-    @OutputCustomType.Constructor({"configMap","downwardAPI","secret","serviceAccountToken"})
+    @OutputCustomType.Constructor
     private VolumeProjection(
-        @Nullable ConfigMapProjection configMap,
-        @Nullable DownwardAPIProjection downwardAPI,
-        @Nullable SecretProjection secret,
-        @Nullable ServiceAccountTokenProjection serviceAccountToken) {
+        @OutputCustomType.Parameter("configMap") @Nullable ConfigMapProjection configMap,
+        @OutputCustomType.Parameter("downwardAPI") @Nullable DownwardAPIProjection downwardAPI,
+        @OutputCustomType.Parameter("secret") @Nullable SecretProjection secret,
+        @OutputCustomType.Parameter("serviceAccountToken") @Nullable ServiceAccountTokenProjection serviceAccountToken) {
         this.configMap = configMap;
         this.downwardAPI = downwardAPI;
         this.secret = secret;

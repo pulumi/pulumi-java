@@ -38,12 +38,12 @@ public final class EndpointPort {
      */
     private final @Nullable String protocol;
 
-    @OutputCustomType.Constructor({"appProtocol","name","port","protocol"})
+    @OutputCustomType.Constructor
     private EndpointPort(
-        @Nullable String appProtocol,
-        @Nullable String name,
-        Integer port,
-        @Nullable String protocol) {
+        @OutputCustomType.Parameter("appProtocol") @Nullable String appProtocol,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("port") Integer port,
+        @OutputCustomType.Parameter("protocol") @Nullable String protocol) {
         this.appProtocol = appProtocol;
         this.name = name;
         this.port = port;

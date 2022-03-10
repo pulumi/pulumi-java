@@ -17,8 +17,8 @@ public final class CustomResourceValidation {
      */
     private final @Nullable JSONSchemaProps openAPIV3Schema;
 
-    @OutputCustomType.Constructor({"openAPIV3Schema"})
-    private CustomResourceValidation(@Nullable JSONSchemaProps openAPIV3Schema) {
+    @OutputCustomType.Constructor
+    private CustomResourceValidation(@OutputCustomType.Parameter("openAPIV3Schema") @Nullable JSONSchemaProps openAPIV3Schema) {
         this.openAPIV3Schema = openAPIV3Schema;
     }
 

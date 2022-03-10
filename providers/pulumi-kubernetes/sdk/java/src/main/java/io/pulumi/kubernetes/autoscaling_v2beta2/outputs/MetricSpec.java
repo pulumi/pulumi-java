@@ -47,14 +47,14 @@ public final class MetricSpec {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"containerResource","external","object","pods","resource","type"})
+    @OutputCustomType.Constructor
     private MetricSpec(
-        @Nullable ContainerResourceMetricSource containerResource,
-        @Nullable ExternalMetricSource external,
-        @Nullable ObjectMetricSource object,
-        @Nullable PodsMetricSource pods,
-        @Nullable ResourceMetricSource resource,
-        String type) {
+        @OutputCustomType.Parameter("containerResource") @Nullable ContainerResourceMetricSource containerResource,
+        @OutputCustomType.Parameter("external") @Nullable ExternalMetricSource external,
+        @OutputCustomType.Parameter("object") @Nullable ObjectMetricSource object,
+        @OutputCustomType.Parameter("pods") @Nullable PodsMetricSource pods,
+        @OutputCustomType.Parameter("resource") @Nullable ResourceMetricSource resource,
+        @OutputCustomType.Parameter("type") String type) {
         this.containerResource = containerResource;
         this.external = external;
         this.object = object;

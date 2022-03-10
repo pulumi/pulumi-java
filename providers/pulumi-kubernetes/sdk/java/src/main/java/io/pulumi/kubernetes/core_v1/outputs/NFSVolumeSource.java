@@ -28,11 +28,11 @@ public final class NFSVolumeSource {
      */
     private final String server;
 
-    @OutputCustomType.Constructor({"path","readOnly","server"})
+    @OutputCustomType.Constructor
     private NFSVolumeSource(
-        String path,
-        @Nullable Boolean readOnly,
-        String server) {
+        @OutputCustomType.Parameter("path") String path,
+        @OutputCustomType.Parameter("readOnly") @Nullable Boolean readOnly,
+        @OutputCustomType.Parameter("server") String server) {
         this.path = path;
         this.readOnly = readOnly;
         this.server = server;

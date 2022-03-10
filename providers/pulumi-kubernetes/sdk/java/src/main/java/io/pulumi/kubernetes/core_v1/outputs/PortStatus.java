@@ -36,11 +36,11 @@ public final class PortStatus {
      */
     private final String protocol;
 
-    @OutputCustomType.Constructor({"error","port","protocol"})
+    @OutputCustomType.Constructor
     private PortStatus(
-        @Nullable String error,
-        Integer port,
-        String protocol) {
+        @OutputCustomType.Parameter("error") @Nullable String error,
+        @OutputCustomType.Parameter("port") Integer port,
+        @OutputCustomType.Parameter("protocol") String protocol) {
         this.error = error;
         this.port = port;
         this.protocol = protocol;

@@ -22,10 +22,10 @@ public final class PhotonPersistentDiskVolumeSource {
      */
     private final String pdID;
 
-    @OutputCustomType.Constructor({"fsType","pdID"})
+    @OutputCustomType.Constructor
     private PhotonPersistentDiskVolumeSource(
-        @Nullable String fsType,
-        String pdID) {
+        @OutputCustomType.Parameter("fsType") @Nullable String fsType,
+        @OutputCustomType.Parameter("pdID") String pdID) {
         this.fsType = fsType;
         this.pdID = pdID;
     }

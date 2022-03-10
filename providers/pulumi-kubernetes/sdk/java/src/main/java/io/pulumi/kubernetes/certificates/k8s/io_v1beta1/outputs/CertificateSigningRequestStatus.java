@@ -24,10 +24,10 @@ public final class CertificateSigningRequestStatus {
      */
     private final @Nullable List<CertificateSigningRequestCondition> conditions;
 
-    @OutputCustomType.Constructor({"certificate","conditions"})
+    @OutputCustomType.Constructor
     private CertificateSigningRequestStatus(
-        @Nullable String certificate,
-        @Nullable List<CertificateSigningRequestCondition> conditions) {
+        @OutputCustomType.Parameter("certificate") @Nullable String certificate,
+        @OutputCustomType.Parameter("conditions") @Nullable List<CertificateSigningRequestCondition> conditions) {
         this.certificate = certificate;
         this.conditions = conditions;
     }

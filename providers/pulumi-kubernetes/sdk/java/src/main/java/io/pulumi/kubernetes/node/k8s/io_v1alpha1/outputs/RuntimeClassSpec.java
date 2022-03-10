@@ -29,11 +29,11 @@ public final class RuntimeClassSpec {
      */
     private final @Nullable Scheduling scheduling;
 
-    @OutputCustomType.Constructor({"overhead","runtimeHandler","scheduling"})
+    @OutputCustomType.Constructor
     private RuntimeClassSpec(
-        @Nullable Overhead overhead,
-        String runtimeHandler,
-        @Nullable Scheduling scheduling) {
+        @OutputCustomType.Parameter("overhead") @Nullable Overhead overhead,
+        @OutputCustomType.Parameter("runtimeHandler") String runtimeHandler,
+        @OutputCustomType.Parameter("scheduling") @Nullable Scheduling scheduling) {
         this.overhead = overhead;
         this.runtimeHandler = runtimeHandler;
         this.scheduling = scheduling;

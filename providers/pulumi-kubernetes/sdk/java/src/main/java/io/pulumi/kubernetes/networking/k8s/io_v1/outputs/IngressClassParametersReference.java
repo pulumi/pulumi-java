@@ -37,13 +37,13 @@ public final class IngressClassParametersReference {
      */
     private final @Nullable String scope;
 
-    @OutputCustomType.Constructor({"apiGroup","kind","name","namespace","scope"})
+    @OutputCustomType.Constructor
     private IngressClassParametersReference(
-        @Nullable String apiGroup,
-        String kind,
-        String name,
-        @Nullable String namespace,
-        @Nullable String scope) {
+        @OutputCustomType.Parameter("apiGroup") @Nullable String apiGroup,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("namespace") @Nullable String namespace,
+        @OutputCustomType.Parameter("scope") @Nullable String scope) {
         this.apiGroup = apiGroup;
         this.kind = kind;
         this.name = name;

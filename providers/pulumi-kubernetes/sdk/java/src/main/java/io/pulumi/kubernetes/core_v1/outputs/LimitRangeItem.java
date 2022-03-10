@@ -47,14 +47,14 @@ public final class LimitRangeItem {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"$default","defaultRequest","max","maxLimitRequestRatio","min","type"})
+    @OutputCustomType.Constructor
     private LimitRangeItem(
-        @Nullable Map<String,String> $default,
-        @Nullable Map<String,String> defaultRequest,
-        @Nullable Map<String,String> max,
-        @Nullable Map<String,String> maxLimitRequestRatio,
-        @Nullable Map<String,String> min,
-        String type) {
+        @OutputCustomType.Parameter("default") @Nullable Map<String,String> $default,
+        @OutputCustomType.Parameter("defaultRequest") @Nullable Map<String,String> defaultRequest,
+        @OutputCustomType.Parameter("max") @Nullable Map<String,String> max,
+        @OutputCustomType.Parameter("maxLimitRequestRatio") @Nullable Map<String,String> maxLimitRequestRatio,
+        @OutputCustomType.Parameter("min") @Nullable Map<String,String> min,
+        @OutputCustomType.Parameter("type") String type) {
         this.$default = $default;
         this.defaultRequest = defaultRequest;
         this.max = max;

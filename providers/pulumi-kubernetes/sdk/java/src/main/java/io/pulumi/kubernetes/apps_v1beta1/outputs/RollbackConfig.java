@@ -17,8 +17,8 @@ public final class RollbackConfig {
      */
     private final @Nullable Integer revision;
 
-    @OutputCustomType.Constructor({"revision"})
-    private RollbackConfig(@Nullable Integer revision) {
+    @OutputCustomType.Constructor
+    private RollbackConfig(@OutputCustomType.Parameter("revision") @Nullable Integer revision) {
         this.revision = revision;
     }
 

@@ -40,13 +40,13 @@ public final class FCVolumeSource {
      */
     private final @Nullable List<String> wwids;
 
-    @OutputCustomType.Constructor({"fsType","lun","readOnly","targetWWNs","wwids"})
+    @OutputCustomType.Constructor
     private FCVolumeSource(
-        @Nullable String fsType,
-        @Nullable Integer lun,
-        @Nullable Boolean readOnly,
-        @Nullable List<String> targetWWNs,
-        @Nullable List<String> wwids) {
+        @OutputCustomType.Parameter("fsType") @Nullable String fsType,
+        @OutputCustomType.Parameter("lun") @Nullable Integer lun,
+        @OutputCustomType.Parameter("readOnly") @Nullable Boolean readOnly,
+        @OutputCustomType.Parameter("targetWWNs") @Nullable List<String> targetWWNs,
+        @OutputCustomType.Parameter("wwids") @Nullable List<String> wwids) {
         this.fsType = fsType;
         this.lun = lun;
         this.readOnly = readOnly;

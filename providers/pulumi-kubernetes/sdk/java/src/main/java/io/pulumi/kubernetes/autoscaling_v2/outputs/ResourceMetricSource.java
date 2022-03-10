@@ -21,10 +21,10 @@ public final class ResourceMetricSource {
      */
     private final MetricTarget target;
 
-    @OutputCustomType.Constructor({"name","target"})
+    @OutputCustomType.Constructor
     private ResourceMetricSource(
-        String name,
-        MetricTarget target) {
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("target") MetricTarget target) {
         this.name = name;
         this.target = target;
     }

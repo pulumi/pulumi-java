@@ -30,11 +30,11 @@ public final class PodDisruptionBudgetSpec {
      */
     private final @Nullable LabelSelector selector;
 
-    @OutputCustomType.Constructor({"maxUnavailable","minAvailable","selector"})
+    @OutputCustomType.Constructor
     private PodDisruptionBudgetSpec(
-        @Nullable Either<Integer,String> maxUnavailable,
-        @Nullable Either<Integer,String> minAvailable,
-        @Nullable LabelSelector selector) {
+        @OutputCustomType.Parameter("maxUnavailable") @Nullable Either<Integer,String> maxUnavailable,
+        @OutputCustomType.Parameter("minAvailable") @Nullable Either<Integer,String> minAvailable,
+        @OutputCustomType.Parameter("selector") @Nullable LabelSelector selector) {
         this.maxUnavailable = maxUnavailable;
         this.minAvailable = minAvailable;
         this.selector = selector;

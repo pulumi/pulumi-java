@@ -15,8 +15,8 @@ public final class AllowedFlexVolume {
      */
     private final String driver;
 
-    @OutputCustomType.Constructor({"driver"})
-    private AllowedFlexVolume(String driver) {
+    @OutputCustomType.Constructor
+    private AllowedFlexVolume(@OutputCustomType.Parameter("driver") String driver) {
         this.driver = driver;
     }
 

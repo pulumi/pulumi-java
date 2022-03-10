@@ -35,12 +35,12 @@ public final class TokenReviewStatus {
      */
     private final @Nullable UserInfo user;
 
-    @OutputCustomType.Constructor({"audiences","authenticated","error","user"})
+    @OutputCustomType.Constructor
     private TokenReviewStatus(
-        @Nullable List<String> audiences,
-        @Nullable Boolean authenticated,
-        @Nullable String error,
-        @Nullable UserInfo user) {
+        @OutputCustomType.Parameter("audiences") @Nullable List<String> audiences,
+        @OutputCustomType.Parameter("authenticated") @Nullable Boolean authenticated,
+        @OutputCustomType.Parameter("error") @Nullable String error,
+        @OutputCustomType.Parameter("user") @Nullable UserInfo user) {
         this.audiences = audiences;
         this.authenticated = authenticated;
         this.error = error;

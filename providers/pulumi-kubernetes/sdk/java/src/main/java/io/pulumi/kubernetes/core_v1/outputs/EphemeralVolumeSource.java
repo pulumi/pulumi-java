@@ -29,10 +29,10 @@ public final class EphemeralVolumeSource {
      */
     private final @Nullable PersistentVolumeClaimTemplate volumeClaimTemplate;
 
-    @OutputCustomType.Constructor({"readOnly","volumeClaimTemplate"})
+    @OutputCustomType.Constructor
     private EphemeralVolumeSource(
-        @Nullable Boolean readOnly,
-        @Nullable PersistentVolumeClaimTemplate volumeClaimTemplate) {
+        @OutputCustomType.Parameter("readOnly") @Nullable Boolean readOnly,
+        @OutputCustomType.Parameter("volumeClaimTemplate") @Nullable PersistentVolumeClaimTemplate volumeClaimTemplate) {
         this.readOnly = readOnly;
         this.volumeClaimTemplate = volumeClaimTemplate;
     }

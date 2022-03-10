@@ -57,16 +57,16 @@ public final class CustomResourceDefinitionVersion {
      */
     private final @Nullable CustomResourceSubresources subresources;
 
-    @OutputCustomType.Constructor({"additionalPrinterColumns","deprecated","deprecationWarning","name","schema","served","storage","subresources"})
+    @OutputCustomType.Constructor
     private CustomResourceDefinitionVersion(
-        @Nullable List<CustomResourceColumnDefinition> additionalPrinterColumns,
-        @Nullable Boolean deprecated,
-        @Nullable String deprecationWarning,
-        String name,
-        @Nullable CustomResourceValidation schema,
-        Boolean served,
-        Boolean storage,
-        @Nullable CustomResourceSubresources subresources) {
+        @OutputCustomType.Parameter("additionalPrinterColumns") @Nullable List<CustomResourceColumnDefinition> additionalPrinterColumns,
+        @OutputCustomType.Parameter("deprecated") @Nullable Boolean deprecated,
+        @OutputCustomType.Parameter("deprecationWarning") @Nullable String deprecationWarning,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("schema") @Nullable CustomResourceValidation schema,
+        @OutputCustomType.Parameter("served") Boolean served,
+        @OutputCustomType.Parameter("storage") Boolean storage,
+        @OutputCustomType.Parameter("subresources") @Nullable CustomResourceSubresources subresources) {
         this.additionalPrinterColumns = additionalPrinterColumns;
         this.deprecated = deprecated;
         this.deprecationWarning = deprecationWarning;

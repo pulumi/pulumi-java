@@ -28,11 +28,11 @@ public final class ServiceReference {
      */
     private final @Nullable Integer port;
 
-    @OutputCustomType.Constructor({"name","namespace","port"})
+    @OutputCustomType.Constructor
     private ServiceReference(
-        @Nullable String name,
-        @Nullable String namespace,
-        @Nullable Integer port) {
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("namespace") @Nullable String namespace,
+        @OutputCustomType.Parameter("port") @Nullable Integer port) {
         this.name = name;
         this.namespace = namespace;
         this.port = port;

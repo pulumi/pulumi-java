@@ -22,10 +22,10 @@ public final class HostPathVolumeSource {
      */
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor({"path","type"})
+    @OutputCustomType.Constructor
     private HostPathVolumeSource(
-        String path,
-        @Nullable String type) {
+        @OutputCustomType.Parameter("path") String path,
+        @OutputCustomType.Parameter("type") @Nullable String type) {
         this.path = path;
         this.type = type;
     }

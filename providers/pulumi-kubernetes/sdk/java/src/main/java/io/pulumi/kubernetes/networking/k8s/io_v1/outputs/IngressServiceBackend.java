@@ -23,10 +23,10 @@ public final class IngressServiceBackend {
      */
     private final @Nullable ServiceBackendPort port;
 
-    @OutputCustomType.Constructor({"name","port"})
+    @OutputCustomType.Constructor
     private IngressServiceBackend(
-        String name,
-        @Nullable ServiceBackendPort port) {
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("port") @Nullable ServiceBackendPort port) {
         this.name = name;
         this.port = port;
     }

@@ -23,10 +23,10 @@ public final class NetworkPolicyIngressRule {
      */
     private final @Nullable List<NetworkPolicyPort> ports;
 
-    @OutputCustomType.Constructor({"from","ports"})
+    @OutputCustomType.Constructor
     private NetworkPolicyIngressRule(
-        @Nullable List<NetworkPolicyPeer> from,
-        @Nullable List<NetworkPolicyPort> ports) {
+        @OutputCustomType.Parameter("from") @Nullable List<NetworkPolicyPeer> from,
+        @OutputCustomType.Parameter("ports") @Nullable List<NetworkPolicyPort> ports) {
         this.from = from;
         this.ports = ports;
     }

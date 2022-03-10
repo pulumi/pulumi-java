@@ -51,14 +51,14 @@ public final class EndpointSlice {
      */
     private final @Nullable List<EndpointPort> ports;
 
-    @OutputCustomType.Constructor({"addressType","apiVersion","endpoints","kind","metadata","ports"})
+    @OutputCustomType.Constructor
     private EndpointSlice(
-        String addressType,
-        @Nullable String apiVersion,
-        List<Endpoint> endpoints,
-        @Nullable String kind,
-        @Nullable ObjectMeta metadata,
-        @Nullable List<EndpointPort> ports) {
+        @OutputCustomType.Parameter("addressType") String addressType,
+        @OutputCustomType.Parameter("apiVersion") @Nullable String apiVersion,
+        @OutputCustomType.Parameter("endpoints") List<Endpoint> endpoints,
+        @OutputCustomType.Parameter("kind") @Nullable String kind,
+        @OutputCustomType.Parameter("metadata") @Nullable ObjectMeta metadata,
+        @OutputCustomType.Parameter("ports") @Nullable List<EndpointPort> ports) {
         this.addressType = addressType;
         this.apiVersion = apiVersion;
         this.endpoints = endpoints;

@@ -23,10 +23,10 @@ public final class ConfigMapEnvSource {
      */
     private final @Nullable Boolean optional;
 
-    @OutputCustomType.Constructor({"name","optional"})
+    @OutputCustomType.Constructor
     private ConfigMapEnvSource(
-        @Nullable String name,
-        @Nullable Boolean optional) {
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("optional") @Nullable Boolean optional) {
         this.name = name;
         this.optional = optional;
     }

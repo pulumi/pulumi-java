@@ -73,18 +73,18 @@ public final class PodSecurityContext {
      */
     private final @Nullable WindowsSecurityContextOptions windowsOptions;
 
-    @OutputCustomType.Constructor({"fsGroup","fsGroupChangePolicy","runAsGroup","runAsNonRoot","runAsUser","seLinuxOptions","seccompProfile","supplementalGroups","sysctls","windowsOptions"})
+    @OutputCustomType.Constructor
     private PodSecurityContext(
-        @Nullable Integer fsGroup,
-        @Nullable String fsGroupChangePolicy,
-        @Nullable Integer runAsGroup,
-        @Nullable Boolean runAsNonRoot,
-        @Nullable Integer runAsUser,
-        @Nullable SELinuxOptions seLinuxOptions,
-        @Nullable SeccompProfile seccompProfile,
-        @Nullable List<Integer> supplementalGroups,
-        @Nullable List<Sysctl> sysctls,
-        @Nullable WindowsSecurityContextOptions windowsOptions) {
+        @OutputCustomType.Parameter("fsGroup") @Nullable Integer fsGroup,
+        @OutputCustomType.Parameter("fsGroupChangePolicy") @Nullable String fsGroupChangePolicy,
+        @OutputCustomType.Parameter("runAsGroup") @Nullable Integer runAsGroup,
+        @OutputCustomType.Parameter("runAsNonRoot") @Nullable Boolean runAsNonRoot,
+        @OutputCustomType.Parameter("runAsUser") @Nullable Integer runAsUser,
+        @OutputCustomType.Parameter("seLinuxOptions") @Nullable SELinuxOptions seLinuxOptions,
+        @OutputCustomType.Parameter("seccompProfile") @Nullable SeccompProfile seccompProfile,
+        @OutputCustomType.Parameter("supplementalGroups") @Nullable List<Integer> supplementalGroups,
+        @OutputCustomType.Parameter("sysctls") @Nullable List<Sysctl> sysctls,
+        @OutputCustomType.Parameter("windowsOptions") @Nullable WindowsSecurityContextOptions windowsOptions) {
         this.fsGroup = fsGroup;
         this.fsGroupChangePolicy = fsGroupChangePolicy;
         this.runAsGroup = runAsGroup;

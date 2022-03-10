@@ -23,10 +23,10 @@ public final class RunAsGroupStrategyOptions {
      */
     private final String rule;
 
-    @OutputCustomType.Constructor({"ranges","rule"})
+    @OutputCustomType.Constructor
     private RunAsGroupStrategyOptions(
-        @Nullable List<IDRange> ranges,
-        String rule) {
+        @OutputCustomType.Parameter("ranges") @Nullable List<IDRange> ranges,
+        @OutputCustomType.Parameter("rule") String rule) {
         this.ranges = ranges;
         this.rule = rule;
     }

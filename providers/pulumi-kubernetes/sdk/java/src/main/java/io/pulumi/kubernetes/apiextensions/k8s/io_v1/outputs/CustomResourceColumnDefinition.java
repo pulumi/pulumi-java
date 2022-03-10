@@ -43,14 +43,14 @@ public final class CustomResourceColumnDefinition {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"description","format","jsonPath","name","priority","type"})
+    @OutputCustomType.Constructor
     private CustomResourceColumnDefinition(
-        @Nullable String description,
-        @Nullable String format,
-        String jsonPath,
-        String name,
-        @Nullable Integer priority,
-        String type) {
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("format") @Nullable String format,
+        @OutputCustomType.Parameter("jsonPath") String jsonPath,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("priority") @Nullable Integer priority,
+        @OutputCustomType.Parameter("type") String type) {
         this.description = description;
         this.format = format;
         this.jsonPath = jsonPath;

@@ -48,15 +48,15 @@ public final class ReleaseStatus {
      */
     private final @Nullable String version;
 
-    @OutputCustomType.Constructor({"appVersion","chart","name","namespace","revision","status","version"})
+    @OutputCustomType.Constructor
     private ReleaseStatus(
-        @Nullable String appVersion,
-        @Nullable String chart,
-        @Nullable String name,
-        @Nullable String namespace,
-        @Nullable Integer revision,
-        String status,
-        @Nullable String version) {
+        @OutputCustomType.Parameter("appVersion") @Nullable String appVersion,
+        @OutputCustomType.Parameter("chart") @Nullable String chart,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("namespace") @Nullable String namespace,
+        @OutputCustomType.Parameter("revision") @Nullable Integer revision,
+        @OutputCustomType.Parameter("status") String status,
+        @OutputCustomType.Parameter("version") @Nullable String version) {
         this.appVersion = appVersion;
         this.chart = chart;
         this.name = name;

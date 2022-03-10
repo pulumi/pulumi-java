@@ -17,8 +17,8 @@ public final class PodIP {
      */
     private final @Nullable String ip;
 
-    @OutputCustomType.Constructor({"ip"})
-    private PodIP(@Nullable String ip) {
+    @OutputCustomType.Constructor
+    private PodIP(@OutputCustomType.Parameter("ip") @Nullable String ip) {
         this.ip = ip;
     }
 

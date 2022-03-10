@@ -47,14 +47,14 @@ public final class CustomResourceDefinitionSpec {
      */
     private final List<CustomResourceDefinitionVersion> versions;
 
-    @OutputCustomType.Constructor({"conversion","group","names","preserveUnknownFields","scope","versions"})
+    @OutputCustomType.Constructor
     private CustomResourceDefinitionSpec(
-        @Nullable CustomResourceConversion conversion,
-        String group,
-        CustomResourceDefinitionNames names,
-        @Nullable Boolean preserveUnknownFields,
-        String scope,
-        List<CustomResourceDefinitionVersion> versions) {
+        @OutputCustomType.Parameter("conversion") @Nullable CustomResourceConversion conversion,
+        @OutputCustomType.Parameter("group") String group,
+        @OutputCustomType.Parameter("names") CustomResourceDefinitionNames names,
+        @OutputCustomType.Parameter("preserveUnknownFields") @Nullable Boolean preserveUnknownFields,
+        @OutputCustomType.Parameter("scope") String scope,
+        @OutputCustomType.Parameter("versions") List<CustomResourceDefinitionVersion> versions) {
         this.conversion = conversion;
         this.group = group;
         this.names = names;

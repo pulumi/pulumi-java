@@ -60,17 +60,17 @@ public final class ContainerStatus {
      */
     private final @Nullable ContainerState state;
 
-    @OutputCustomType.Constructor({"containerID","image","imageID","lastState","name","ready","restartCount","started","state"})
+    @OutputCustomType.Constructor
     private ContainerStatus(
-        @Nullable String containerID,
-        String image,
-        String imageID,
-        @Nullable ContainerState lastState,
-        String name,
-        Boolean ready,
-        Integer restartCount,
-        @Nullable Boolean started,
-        @Nullable ContainerState state) {
+        @OutputCustomType.Parameter("containerID") @Nullable String containerID,
+        @OutputCustomType.Parameter("image") String image,
+        @OutputCustomType.Parameter("imageID") String imageID,
+        @OutputCustomType.Parameter("lastState") @Nullable ContainerState lastState,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("ready") Boolean ready,
+        @OutputCustomType.Parameter("restartCount") Integer restartCount,
+        @OutputCustomType.Parameter("started") @Nullable Boolean started,
+        @OutputCustomType.Parameter("state") @Nullable ContainerState state) {
         this.containerID = containerID;
         this.image = image;
         this.imageID = imageID;

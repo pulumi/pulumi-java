@@ -26,11 +26,11 @@ public final class VolumeAttachmentSpec {
      */
     private final VolumeAttachmentSource source;
 
-    @OutputCustomType.Constructor({"attacher","nodeName","source"})
+    @OutputCustomType.Constructor
     private VolumeAttachmentSpec(
-        String attacher,
-        String nodeName,
-        VolumeAttachmentSource source) {
+        @OutputCustomType.Parameter("attacher") String attacher,
+        @OutputCustomType.Parameter("nodeName") String nodeName,
+        @OutputCustomType.Parameter("source") VolumeAttachmentSource source) {
         this.attacher = attacher;
         this.nodeName = nodeName;
         this.source = source;

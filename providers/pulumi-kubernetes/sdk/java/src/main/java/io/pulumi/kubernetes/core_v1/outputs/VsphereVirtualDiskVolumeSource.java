@@ -32,12 +32,12 @@ public final class VsphereVirtualDiskVolumeSource {
      */
     private final String volumePath;
 
-    @OutputCustomType.Constructor({"fsType","storagePolicyID","storagePolicyName","volumePath"})
+    @OutputCustomType.Constructor
     private VsphereVirtualDiskVolumeSource(
-        @Nullable String fsType,
-        @Nullable String storagePolicyID,
-        @Nullable String storagePolicyName,
-        String volumePath) {
+        @OutputCustomType.Parameter("fsType") @Nullable String fsType,
+        @OutputCustomType.Parameter("storagePolicyID") @Nullable String storagePolicyID,
+        @OutputCustomType.Parameter("storagePolicyName") @Nullable String storagePolicyName,
+        @OutputCustomType.Parameter("volumePath") String volumePath) {
         this.fsType = fsType;
         this.storagePolicyID = storagePolicyID;
         this.storagePolicyName = storagePolicyName;

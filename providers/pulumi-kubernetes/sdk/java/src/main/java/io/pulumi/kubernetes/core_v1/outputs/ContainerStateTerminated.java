@@ -48,15 +48,15 @@ public final class ContainerStateTerminated {
      */
     private final @Nullable String startedAt;
 
-    @OutputCustomType.Constructor({"containerID","exitCode","finishedAt","message","reason","signal","startedAt"})
+    @OutputCustomType.Constructor
     private ContainerStateTerminated(
-        @Nullable String containerID,
-        Integer exitCode,
-        @Nullable String finishedAt,
-        @Nullable String message,
-        @Nullable String reason,
-        @Nullable Integer signal,
-        @Nullable String startedAt) {
+        @OutputCustomType.Parameter("containerID") @Nullable String containerID,
+        @OutputCustomType.Parameter("exitCode") Integer exitCode,
+        @OutputCustomType.Parameter("finishedAt") @Nullable String finishedAt,
+        @OutputCustomType.Parameter("message") @Nullable String message,
+        @OutputCustomType.Parameter("reason") @Nullable String reason,
+        @OutputCustomType.Parameter("signal") @Nullable Integer signal,
+        @OutputCustomType.Parameter("startedAt") @Nullable String startedAt) {
         this.containerID = containerID;
         this.exitCode = exitCode;
         this.finishedAt = finishedAt;

@@ -23,10 +23,10 @@ public final class PersistentVolumeClaimTemplate {
      */
     private final PersistentVolumeClaimSpec spec;
 
-    @OutputCustomType.Constructor({"metadata","spec"})
+    @OutputCustomType.Constructor
     private PersistentVolumeClaimTemplate(
-        @Nullable ObjectMeta metadata,
-        PersistentVolumeClaimSpec spec) {
+        @OutputCustomType.Parameter("metadata") @Nullable ObjectMeta metadata,
+        @OutputCustomType.Parameter("spec") PersistentVolumeClaimSpec spec) {
         this.metadata = metadata;
         this.spec = spec;
     }

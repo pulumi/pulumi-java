@@ -23,10 +23,10 @@ public final class HostAlias {
      */
     private final @Nullable String ip;
 
-    @OutputCustomType.Constructor({"hostnames","ip"})
+    @OutputCustomType.Constructor
     private HostAlias(
-        @Nullable List<String> hostnames,
-        @Nullable String ip) {
+        @OutputCustomType.Parameter("hostnames") @Nullable List<String> hostnames,
+        @OutputCustomType.Parameter("ip") @Nullable String ip) {
         this.hostnames = hostnames;
         this.ip = ip;
     }

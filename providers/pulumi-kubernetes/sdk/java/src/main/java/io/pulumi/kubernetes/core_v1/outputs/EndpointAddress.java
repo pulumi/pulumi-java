@@ -33,12 +33,12 @@ public final class EndpointAddress {
      */
     private final @Nullable ObjectReference targetRef;
 
-    @OutputCustomType.Constructor({"hostname","ip","nodeName","targetRef"})
+    @OutputCustomType.Constructor
     private EndpointAddress(
-        @Nullable String hostname,
-        String ip,
-        @Nullable String nodeName,
-        @Nullable ObjectReference targetRef) {
+        @OutputCustomType.Parameter("hostname") @Nullable String hostname,
+        @OutputCustomType.Parameter("ip") String ip,
+        @OutputCustomType.Parameter("nodeName") @Nullable String nodeName,
+        @OutputCustomType.Parameter("targetRef") @Nullable ObjectReference targetRef) {
         this.hostname = hostname;
         this.ip = ip;
         this.nodeName = nodeName;

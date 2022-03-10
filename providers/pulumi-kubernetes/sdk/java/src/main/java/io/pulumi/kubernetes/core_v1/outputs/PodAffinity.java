@@ -23,10 +23,10 @@ public final class PodAffinity {
      */
     private final @Nullable List<PodAffinityTerm> requiredDuringSchedulingIgnoredDuringExecution;
 
-    @OutputCustomType.Constructor({"preferredDuringSchedulingIgnoredDuringExecution","requiredDuringSchedulingIgnoredDuringExecution"})
+    @OutputCustomType.Constructor
     private PodAffinity(
-        @Nullable List<WeightedPodAffinityTerm> preferredDuringSchedulingIgnoredDuringExecution,
-        @Nullable List<PodAffinityTerm> requiredDuringSchedulingIgnoredDuringExecution) {
+        @OutputCustomType.Parameter("preferredDuringSchedulingIgnoredDuringExecution") @Nullable List<WeightedPodAffinityTerm> preferredDuringSchedulingIgnoredDuringExecution,
+        @OutputCustomType.Parameter("requiredDuringSchedulingIgnoredDuringExecution") @Nullable List<PodAffinityTerm> requiredDuringSchedulingIgnoredDuringExecution) {
         this.preferredDuringSchedulingIgnoredDuringExecution = preferredDuringSchedulingIgnoredDuringExecution;
         this.requiredDuringSchedulingIgnoredDuringExecution = requiredDuringSchedulingIgnoredDuringExecution;
     }

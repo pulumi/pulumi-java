@@ -37,13 +37,13 @@ public final class PolicyRule {
      */
     private final List<String> verbs;
 
-    @OutputCustomType.Constructor({"apiGroups","nonResourceURLs","resourceNames","resources","verbs"})
+    @OutputCustomType.Constructor
     private PolicyRule(
-        @Nullable List<String> apiGroups,
-        @Nullable List<String> nonResourceURLs,
-        @Nullable List<String> resourceNames,
-        @Nullable List<String> resources,
-        List<String> verbs) {
+        @OutputCustomType.Parameter("apiGroups") @Nullable List<String> apiGroups,
+        @OutputCustomType.Parameter("nonResourceURLs") @Nullable List<String> nonResourceURLs,
+        @OutputCustomType.Parameter("resourceNames") @Nullable List<String> resourceNames,
+        @OutputCustomType.Parameter("resources") @Nullable List<String> resources,
+        @OutputCustomType.Parameter("verbs") List<String> verbs) {
         this.apiGroups = apiGroups;
         this.nonResourceURLs = nonResourceURLs;
         this.resourceNames = resourceNames;

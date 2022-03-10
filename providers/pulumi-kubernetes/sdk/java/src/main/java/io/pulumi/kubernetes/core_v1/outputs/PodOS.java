@@ -15,8 +15,8 @@ public final class PodOS {
      */
     private final String name;
 
-    @OutputCustomType.Constructor({"name"})
-    private PodOS(String name) {
+    @OutputCustomType.Constructor
+    private PodOS(@OutputCustomType.Parameter("name") String name) {
         this.name = name;
     }
 

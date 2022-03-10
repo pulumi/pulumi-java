@@ -28,11 +28,11 @@ public final class ResourceMetricStatus {
      */
     private final String name;
 
-    @OutputCustomType.Constructor({"currentAverageUtilization","currentAverageValue","name"})
+    @OutputCustomType.Constructor
     private ResourceMetricStatus(
-        @Nullable Integer currentAverageUtilization,
-        String currentAverageValue,
-        String name) {
+        @OutputCustomType.Parameter("currentAverageUtilization") @Nullable Integer currentAverageUtilization,
+        @OutputCustomType.Parameter("currentAverageValue") String currentAverageValue,
+        @OutputCustomType.Parameter("name") String name) {
         this.currentAverageUtilization = currentAverageUtilization;
         this.currentAverageValue = currentAverageValue;
         this.name = name;

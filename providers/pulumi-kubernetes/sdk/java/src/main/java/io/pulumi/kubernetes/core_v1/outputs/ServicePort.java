@@ -49,14 +49,14 @@ public final class ServicePort {
      */
     private final @Nullable Either<Integer,String> targetPort;
 
-    @OutputCustomType.Constructor({"appProtocol","name","nodePort","port","protocol","targetPort"})
+    @OutputCustomType.Constructor
     private ServicePort(
-        @Nullable String appProtocol,
-        @Nullable String name,
-        @Nullable Integer nodePort,
-        Integer port,
-        @Nullable String protocol,
-        @Nullable Either<Integer,String> targetPort) {
+        @OutputCustomType.Parameter("appProtocol") @Nullable String appProtocol,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("nodePort") @Nullable Integer nodePort,
+        @OutputCustomType.Parameter("port") Integer port,
+        @OutputCustomType.Parameter("protocol") @Nullable String protocol,
+        @OutputCustomType.Parameter("targetPort") @Nullable Either<Integer,String> targetPort) {
         this.appProtocol = appProtocol;
         this.name = name;
         this.nodePort = nodePort;

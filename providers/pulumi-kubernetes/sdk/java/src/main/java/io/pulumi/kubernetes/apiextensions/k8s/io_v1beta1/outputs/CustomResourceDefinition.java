@@ -36,13 +36,13 @@ public final class CustomResourceDefinition {
      */
     private final @Nullable CustomResourceDefinitionStatus status;
 
-    @OutputCustomType.Constructor({"apiVersion","kind","metadata","spec","status"})
+    @OutputCustomType.Constructor
     private CustomResourceDefinition(
-        @Nullable String apiVersion,
-        @Nullable String kind,
-        @Nullable ObjectMeta metadata,
-        CustomResourceDefinitionSpec spec,
-        @Nullable CustomResourceDefinitionStatus status) {
+        @OutputCustomType.Parameter("apiVersion") @Nullable String apiVersion,
+        @OutputCustomType.Parameter("kind") @Nullable String kind,
+        @OutputCustomType.Parameter("metadata") @Nullable ObjectMeta metadata,
+        @OutputCustomType.Parameter("spec") CustomResourceDefinitionSpec spec,
+        @OutputCustomType.Parameter("status") @Nullable CustomResourceDefinitionStatus status) {
         this.apiVersion = apiVersion;
         this.kind = kind;
         this.metadata = metadata;

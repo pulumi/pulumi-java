@@ -34,12 +34,12 @@ public final class CSINodeDriver {
      */
     private final @Nullable List<String> topologyKeys;
 
-    @OutputCustomType.Constructor({"allocatable","name","nodeID","topologyKeys"})
+    @OutputCustomType.Constructor
     private CSINodeDriver(
-        @Nullable VolumeNodeResources allocatable,
-        String name,
-        String nodeID,
-        @Nullable List<String> topologyKeys) {
+        @OutputCustomType.Parameter("allocatable") @Nullable VolumeNodeResources allocatable,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("nodeID") String nodeID,
+        @OutputCustomType.Parameter("topologyKeys") @Nullable List<String> topologyKeys) {
         this.allocatable = allocatable;
         this.name = name;
         this.nodeID = nodeID;

@@ -22,10 +22,10 @@ public final class SecretReference {
      */
     private final @Nullable String namespace;
 
-    @OutputCustomType.Constructor({"name","namespace"})
+    @OutputCustomType.Constructor
     private SecretReference(
-        @Nullable String name,
-        @Nullable String namespace) {
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("namespace") @Nullable String namespace) {
         this.name = name;
         this.namespace = namespace;
     }

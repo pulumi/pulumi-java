@@ -22,10 +22,10 @@ public final class Policy {
      */
     private final @Nullable List<String> stages;
 
-    @OutputCustomType.Constructor({"level","stages"})
+    @OutputCustomType.Constructor
     private Policy(
-        String level,
-        @Nullable List<String> stages) {
+        @OutputCustomType.Parameter("level") String level,
+        @OutputCustomType.Parameter("stages") @Nullable List<String> stages) {
         this.level = level;
         this.stages = stages;
     }

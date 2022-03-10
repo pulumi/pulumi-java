@@ -17,8 +17,8 @@ public final class FlowSchemaStatus {
      */
     private final @Nullable List<FlowSchemaCondition> conditions;
 
-    @OutputCustomType.Constructor({"conditions"})
-    private FlowSchemaStatus(@Nullable List<FlowSchemaCondition> conditions) {
+    @OutputCustomType.Constructor
+    private FlowSchemaStatus(@OutputCustomType.Parameter("conditions") @Nullable List<FlowSchemaCondition> conditions) {
         this.conditions = conditions;
     }
 

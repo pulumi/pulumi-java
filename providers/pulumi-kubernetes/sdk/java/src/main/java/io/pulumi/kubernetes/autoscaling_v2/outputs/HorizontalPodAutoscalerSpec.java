@@ -41,13 +41,13 @@ public final class HorizontalPodAutoscalerSpec {
      */
     private final CrossVersionObjectReference scaleTargetRef;
 
-    @OutputCustomType.Constructor({"behavior","maxReplicas","metrics","minReplicas","scaleTargetRef"})
+    @OutputCustomType.Constructor
     private HorizontalPodAutoscalerSpec(
-        @Nullable HorizontalPodAutoscalerBehavior behavior,
-        Integer maxReplicas,
-        @Nullable List<MetricSpec> metrics,
-        @Nullable Integer minReplicas,
-        CrossVersionObjectReference scaleTargetRef) {
+        @OutputCustomType.Parameter("behavior") @Nullable HorizontalPodAutoscalerBehavior behavior,
+        @OutputCustomType.Parameter("maxReplicas") Integer maxReplicas,
+        @OutputCustomType.Parameter("metrics") @Nullable List<MetricSpec> metrics,
+        @OutputCustomType.Parameter("minReplicas") @Nullable Integer minReplicas,
+        @OutputCustomType.Parameter("scaleTargetRef") CrossVersionObjectReference scaleTargetRef) {
         this.behavior = behavior;
         this.maxReplicas = maxReplicas;
         this.metrics = metrics;

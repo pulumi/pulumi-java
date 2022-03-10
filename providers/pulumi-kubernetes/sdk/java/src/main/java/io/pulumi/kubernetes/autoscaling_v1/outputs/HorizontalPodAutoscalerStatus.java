@@ -38,13 +38,13 @@ public final class HorizontalPodAutoscalerStatus {
      */
     private final @Nullable Integer observedGeneration;
 
-    @OutputCustomType.Constructor({"currentCPUUtilizationPercentage","currentReplicas","desiredReplicas","lastScaleTime","observedGeneration"})
+    @OutputCustomType.Constructor
     private HorizontalPodAutoscalerStatus(
-        @Nullable Integer currentCPUUtilizationPercentage,
-        Integer currentReplicas,
-        Integer desiredReplicas,
-        @Nullable String lastScaleTime,
-        @Nullable Integer observedGeneration) {
+        @OutputCustomType.Parameter("currentCPUUtilizationPercentage") @Nullable Integer currentCPUUtilizationPercentage,
+        @OutputCustomType.Parameter("currentReplicas") Integer currentReplicas,
+        @OutputCustomType.Parameter("desiredReplicas") Integer desiredReplicas,
+        @OutputCustomType.Parameter("lastScaleTime") @Nullable String lastScaleTime,
+        @OutputCustomType.Parameter("observedGeneration") @Nullable Integer observedGeneration) {
         this.currentCPUUtilizationPercentage = currentCPUUtilizationPercentage;
         this.currentReplicas = currentReplicas;
         this.desiredReplicas = desiredReplicas;

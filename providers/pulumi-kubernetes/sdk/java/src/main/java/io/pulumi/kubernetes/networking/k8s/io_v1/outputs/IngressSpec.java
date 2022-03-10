@@ -36,12 +36,12 @@ public final class IngressSpec {
      */
     private final @Nullable List<IngressTLS> tls;
 
-    @OutputCustomType.Constructor({"defaultBackend","ingressClassName","rules","tls"})
+    @OutputCustomType.Constructor
     private IngressSpec(
-        @Nullable IngressBackend defaultBackend,
-        @Nullable String ingressClassName,
-        @Nullable List<IngressRule> rules,
-        @Nullable List<IngressTLS> tls) {
+        @OutputCustomType.Parameter("defaultBackend") @Nullable IngressBackend defaultBackend,
+        @OutputCustomType.Parameter("ingressClassName") @Nullable String ingressClassName,
+        @OutputCustomType.Parameter("rules") @Nullable List<IngressRule> rules,
+        @OutputCustomType.Parameter("tls") @Nullable List<IngressTLS> tls) {
         this.defaultBackend = defaultBackend;
         this.ingressClassName = ingressClassName;
         this.rules = rules;

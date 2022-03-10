@@ -40,13 +40,13 @@ public final class PersistentVolume {
      */
     private final @Nullable PersistentVolumeStatus status;
 
-    @OutputCustomType.Constructor({"apiVersion","kind","metadata","spec","status"})
+    @OutputCustomType.Constructor
     private PersistentVolume(
-        @Nullable String apiVersion,
-        @Nullable String kind,
-        @Nullable ObjectMeta metadata,
-        @Nullable PersistentVolumeSpec spec,
-        @Nullable PersistentVolumeStatus status) {
+        @OutputCustomType.Parameter("apiVersion") @Nullable String apiVersion,
+        @OutputCustomType.Parameter("kind") @Nullable String kind,
+        @OutputCustomType.Parameter("metadata") @Nullable ObjectMeta metadata,
+        @OutputCustomType.Parameter("spec") @Nullable PersistentVolumeSpec spec,
+        @OutputCustomType.Parameter("status") @Nullable PersistentVolumeStatus status) {
         this.apiVersion = apiVersion;
         this.kind = kind;
         this.metadata = metadata;

@@ -40,13 +40,13 @@ public final class ControllerRevision {
      */
     private final Integer revision;
 
-    @OutputCustomType.Constructor({"apiVersion","data","kind","metadata","revision"})
+    @OutputCustomType.Constructor
     private ControllerRevision(
-        @Nullable String apiVersion,
-        @Nullable JsonElement data,
-        @Nullable String kind,
-        @Nullable ObjectMeta metadata,
-        Integer revision) {
+        @OutputCustomType.Parameter("apiVersion") @Nullable String apiVersion,
+        @OutputCustomType.Parameter("data") @Nullable JsonElement data,
+        @OutputCustomType.Parameter("kind") @Nullable String kind,
+        @OutputCustomType.Parameter("metadata") @Nullable ObjectMeta metadata,
+        @OutputCustomType.Parameter("revision") Integer revision) {
         this.apiVersion = apiVersion;
         this.data = data;
         this.kind = kind;

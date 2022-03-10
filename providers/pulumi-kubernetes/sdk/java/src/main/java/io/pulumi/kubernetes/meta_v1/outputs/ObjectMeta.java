@@ -113,24 +113,24 @@ public final class ObjectMeta {
      */
     private final @Nullable String uid;
 
-    @OutputCustomType.Constructor({"annotations","clusterName","creationTimestamp","deletionGracePeriodSeconds","deletionTimestamp","finalizers","generateName","generation","labels","managedFields","name","namespace","ownerReferences","resourceVersion","selfLink","uid"})
+    @OutputCustomType.Constructor
     private ObjectMeta(
-        @Nullable Map<String,String> annotations,
-        @Nullable String clusterName,
-        @Nullable String creationTimestamp,
-        @Nullable Integer deletionGracePeriodSeconds,
-        @Nullable String deletionTimestamp,
-        @Nullable List<String> finalizers,
-        @Nullable String generateName,
-        @Nullable Integer generation,
-        @Nullable Map<String,String> labels,
-        @Nullable List<ManagedFieldsEntry> managedFields,
-        @Nullable String name,
-        @Nullable String namespace,
-        @Nullable List<OwnerReference> ownerReferences,
-        @Nullable String resourceVersion,
-        @Nullable String selfLink,
-        @Nullable String uid) {
+        @OutputCustomType.Parameter("annotations") @Nullable Map<String,String> annotations,
+        @OutputCustomType.Parameter("clusterName") @Nullable String clusterName,
+        @OutputCustomType.Parameter("creationTimestamp") @Nullable String creationTimestamp,
+        @OutputCustomType.Parameter("deletionGracePeriodSeconds") @Nullable Integer deletionGracePeriodSeconds,
+        @OutputCustomType.Parameter("deletionTimestamp") @Nullable String deletionTimestamp,
+        @OutputCustomType.Parameter("finalizers") @Nullable List<String> finalizers,
+        @OutputCustomType.Parameter("generateName") @Nullable String generateName,
+        @OutputCustomType.Parameter("generation") @Nullable Integer generation,
+        @OutputCustomType.Parameter("labels") @Nullable Map<String,String> labels,
+        @OutputCustomType.Parameter("managedFields") @Nullable List<ManagedFieldsEntry> managedFields,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("namespace") @Nullable String namespace,
+        @OutputCustomType.Parameter("ownerReferences") @Nullable List<OwnerReference> ownerReferences,
+        @OutputCustomType.Parameter("resourceVersion") @Nullable String resourceVersion,
+        @OutputCustomType.Parameter("selfLink") @Nullable String selfLink,
+        @OutputCustomType.Parameter("uid") @Nullable String uid) {
         this.annotations = annotations;
         this.clusterName = clusterName;
         this.creationTimestamp = creationTimestamp;

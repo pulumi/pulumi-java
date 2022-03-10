@@ -39,13 +39,13 @@ public final class ResourcePolicyRule {
      */
     private final List<String> verbs;
 
-    @OutputCustomType.Constructor({"apiGroups","clusterScope","namespaces","resources","verbs"})
+    @OutputCustomType.Constructor
     private ResourcePolicyRule(
-        List<String> apiGroups,
-        @Nullable Boolean clusterScope,
-        @Nullable List<String> namespaces,
-        List<String> resources,
-        List<String> verbs) {
+        @OutputCustomType.Parameter("apiGroups") List<String> apiGroups,
+        @OutputCustomType.Parameter("clusterScope") @Nullable Boolean clusterScope,
+        @OutputCustomType.Parameter("namespaces") @Nullable List<String> namespaces,
+        @OutputCustomType.Parameter("resources") List<String> resources,
+        @OutputCustomType.Parameter("verbs") List<String> verbs) {
         this.apiGroups = apiGroups;
         this.clusterScope = clusterScope;
         this.namespaces = namespaces;

@@ -17,8 +17,8 @@ public final class ScopeSelector {
      */
     private final @Nullable List<ScopedResourceSelectorRequirement> matchExpressions;
 
-    @OutputCustomType.Constructor({"matchExpressions"})
-    private ScopeSelector(@Nullable List<ScopedResourceSelectorRequirement> matchExpressions) {
+    @OutputCustomType.Constructor
+    private ScopeSelector(@OutputCustomType.Parameter("matchExpressions") @Nullable List<ScopedResourceSelectorRequirement> matchExpressions) {
         this.matchExpressions = matchExpressions;
     }
 

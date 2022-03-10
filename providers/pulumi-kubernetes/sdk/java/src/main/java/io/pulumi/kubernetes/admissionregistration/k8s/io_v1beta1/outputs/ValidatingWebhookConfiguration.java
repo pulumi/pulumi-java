@@ -35,12 +35,12 @@ public final class ValidatingWebhookConfiguration {
      */
     private final @Nullable List<ValidatingWebhook> webhooks;
 
-    @OutputCustomType.Constructor({"apiVersion","kind","metadata","webhooks"})
+    @OutputCustomType.Constructor
     private ValidatingWebhookConfiguration(
-        @Nullable String apiVersion,
-        @Nullable String kind,
-        @Nullable ObjectMeta metadata,
-        @Nullable List<ValidatingWebhook> webhooks) {
+        @OutputCustomType.Parameter("apiVersion") @Nullable String apiVersion,
+        @OutputCustomType.Parameter("kind") @Nullable String kind,
+        @OutputCustomType.Parameter("metadata") @Nullable ObjectMeta metadata,
+        @OutputCustomType.Parameter("webhooks") @Nullable List<ValidatingWebhook> webhooks) {
         this.apiVersion = apiVersion;
         this.kind = kind;
         this.metadata = metadata;

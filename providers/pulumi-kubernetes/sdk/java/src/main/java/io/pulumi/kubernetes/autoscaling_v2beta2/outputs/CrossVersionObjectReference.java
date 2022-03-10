@@ -27,11 +27,11 @@ public final class CrossVersionObjectReference {
      */
     private final String name;
 
-    @OutputCustomType.Constructor({"apiVersion","kind","name"})
+    @OutputCustomType.Constructor
     private CrossVersionObjectReference(
-        @Nullable String apiVersion,
-        String kind,
-        String name) {
+        @OutputCustomType.Parameter("apiVersion") @Nullable String apiVersion,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("name") String name) {
         this.apiVersion = apiVersion;
         this.kind = kind;
         this.name = name;

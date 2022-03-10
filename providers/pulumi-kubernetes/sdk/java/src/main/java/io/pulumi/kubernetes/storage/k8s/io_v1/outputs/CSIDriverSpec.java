@@ -81,15 +81,15 @@ public final class CSIDriverSpec {
      */
     private final @Nullable List<String> volumeLifecycleModes;
 
-    @OutputCustomType.Constructor({"attachRequired","fsGroupPolicy","podInfoOnMount","requiresRepublish","storageCapacity","tokenRequests","volumeLifecycleModes"})
+    @OutputCustomType.Constructor
     private CSIDriverSpec(
-        @Nullable Boolean attachRequired,
-        @Nullable String fsGroupPolicy,
-        @Nullable Boolean podInfoOnMount,
-        @Nullable Boolean requiresRepublish,
-        @Nullable Boolean storageCapacity,
-        @Nullable List<TokenRequest> tokenRequests,
-        @Nullable List<String> volumeLifecycleModes) {
+        @OutputCustomType.Parameter("attachRequired") @Nullable Boolean attachRequired,
+        @OutputCustomType.Parameter("fsGroupPolicy") @Nullable String fsGroupPolicy,
+        @OutputCustomType.Parameter("podInfoOnMount") @Nullable Boolean podInfoOnMount,
+        @OutputCustomType.Parameter("requiresRepublish") @Nullable Boolean requiresRepublish,
+        @OutputCustomType.Parameter("storageCapacity") @Nullable Boolean storageCapacity,
+        @OutputCustomType.Parameter("tokenRequests") @Nullable List<TokenRequest> tokenRequests,
+        @OutputCustomType.Parameter("volumeLifecycleModes") @Nullable List<String> volumeLifecycleModes) {
         this.attachRequired = attachRequired;
         this.fsGroupPolicy = fsGroupPolicy;
         this.podInfoOnMount = podInfoOnMount;

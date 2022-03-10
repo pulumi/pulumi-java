@@ -23,12 +23,12 @@ public final class Subject {
     private final @Nullable ServiceAccountSubject serviceAccount;
     private final @Nullable UserSubject user;
 
-    @OutputCustomType.Constructor({"group","kind","serviceAccount","user"})
+    @OutputCustomType.Constructor
     private Subject(
-        @Nullable GroupSubject group,
-        String kind,
-        @Nullable ServiceAccountSubject serviceAccount,
-        @Nullable UserSubject user) {
+        @OutputCustomType.Parameter("group") @Nullable GroupSubject group,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("serviceAccount") @Nullable ServiceAccountSubject serviceAccount,
+        @OutputCustomType.Parameter("user") @Nullable UserSubject user) {
         this.group = group;
         this.kind = kind;
         this.serviceAccount = serviceAccount;

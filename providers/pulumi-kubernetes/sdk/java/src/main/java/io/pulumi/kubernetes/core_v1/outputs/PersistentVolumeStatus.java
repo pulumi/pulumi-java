@@ -34,11 +34,11 @@ public final class PersistentVolumeStatus {
      */
     private final @Nullable String reason;
 
-    @OutputCustomType.Constructor({"message","phase","reason"})
+    @OutputCustomType.Constructor
     private PersistentVolumeStatus(
-        @Nullable String message,
-        @Nullable String phase,
-        @Nullable String reason) {
+        @OutputCustomType.Parameter("message") @Nullable String message,
+        @OutputCustomType.Parameter("phase") @Nullable String phase,
+        @OutputCustomType.Parameter("reason") @Nullable String reason) {
         this.message = message;
         this.phase = phase;
         this.reason = reason;

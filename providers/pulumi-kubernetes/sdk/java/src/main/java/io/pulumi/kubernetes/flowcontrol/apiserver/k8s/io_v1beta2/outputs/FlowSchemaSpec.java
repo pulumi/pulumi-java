@@ -36,12 +36,12 @@ public final class FlowSchemaSpec {
      */
     private final @Nullable List<PolicyRulesWithSubjects> rules;
 
-    @OutputCustomType.Constructor({"distinguisherMethod","matchingPrecedence","priorityLevelConfiguration","rules"})
+    @OutputCustomType.Constructor
     private FlowSchemaSpec(
-        @Nullable FlowDistinguisherMethod distinguisherMethod,
-        @Nullable Integer matchingPrecedence,
-        PriorityLevelConfigurationReference priorityLevelConfiguration,
-        @Nullable List<PolicyRulesWithSubjects> rules) {
+        @OutputCustomType.Parameter("distinguisherMethod") @Nullable FlowDistinguisherMethod distinguisherMethod,
+        @OutputCustomType.Parameter("matchingPrecedence") @Nullable Integer matchingPrecedence,
+        @OutputCustomType.Parameter("priorityLevelConfiguration") PriorityLevelConfigurationReference priorityLevelConfiguration,
+        @OutputCustomType.Parameter("rules") @Nullable List<PolicyRulesWithSubjects> rules) {
         this.distinguisherMethod = distinguisherMethod;
         this.matchingPrecedence = matchingPrecedence;
         this.priorityLevelConfiguration = priorityLevelConfiguration;

@@ -35,12 +35,12 @@ public final class ListMeta {
      */
     private final @Nullable String selfLink;
 
-    @OutputCustomType.Constructor({"$continue","remainingItemCount","resourceVersion","selfLink"})
+    @OutputCustomType.Constructor
     private ListMeta(
-        @Nullable String $continue,
-        @Nullable Integer remainingItemCount,
-        @Nullable String resourceVersion,
-        @Nullable String selfLink) {
+        @OutputCustomType.Parameter("continue") @Nullable String $continue,
+        @OutputCustomType.Parameter("remainingItemCount") @Nullable Integer remainingItemCount,
+        @OutputCustomType.Parameter("resourceVersion") @Nullable String resourceVersion,
+        @OutputCustomType.Parameter("selfLink") @Nullable String selfLink) {
         this.$continue = $continue;
         this.remainingItemCount = remainingItemCount;
         this.resourceVersion = resourceVersion;

@@ -60,17 +60,17 @@ public final class CSIPersistentVolumeSource {
      */
     private final String volumeHandle;
 
-    @OutputCustomType.Constructor({"controllerExpandSecretRef","controllerPublishSecretRef","driver","fsType","nodePublishSecretRef","nodeStageSecretRef","readOnly","volumeAttributes","volumeHandle"})
+    @OutputCustomType.Constructor
     private CSIPersistentVolumeSource(
-        @Nullable SecretReference controllerExpandSecretRef,
-        @Nullable SecretReference controllerPublishSecretRef,
-        String driver,
-        @Nullable String fsType,
-        @Nullable SecretReference nodePublishSecretRef,
-        @Nullable SecretReference nodeStageSecretRef,
-        @Nullable Boolean readOnly,
-        @Nullable Map<String,String> volumeAttributes,
-        String volumeHandle) {
+        @OutputCustomType.Parameter("controllerExpandSecretRef") @Nullable SecretReference controllerExpandSecretRef,
+        @OutputCustomType.Parameter("controllerPublishSecretRef") @Nullable SecretReference controllerPublishSecretRef,
+        @OutputCustomType.Parameter("driver") String driver,
+        @OutputCustomType.Parameter("fsType") @Nullable String fsType,
+        @OutputCustomType.Parameter("nodePublishSecretRef") @Nullable SecretReference nodePublishSecretRef,
+        @OutputCustomType.Parameter("nodeStageSecretRef") @Nullable SecretReference nodeStageSecretRef,
+        @OutputCustomType.Parameter("readOnly") @Nullable Boolean readOnly,
+        @OutputCustomType.Parameter("volumeAttributes") @Nullable Map<String,String> volumeAttributes,
+        @OutputCustomType.Parameter("volumeHandle") String volumeHandle) {
         this.controllerExpandSecretRef = controllerExpandSecretRef;
         this.controllerPublishSecretRef = controllerPublishSecretRef;
         this.driver = driver;

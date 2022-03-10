@@ -21,10 +21,10 @@ public final class EventSeries {
      */
     private final String lastObservedTime;
 
-    @OutputCustomType.Constructor({"count","lastObservedTime"})
+    @OutputCustomType.Constructor
     private EventSeries(
-        Integer count,
-        String lastObservedTime) {
+        @OutputCustomType.Parameter("count") Integer count,
+        @OutputCustomType.Parameter("lastObservedTime") String lastObservedTime) {
         this.count = count;
         this.lastObservedTime = lastObservedTime;
     }

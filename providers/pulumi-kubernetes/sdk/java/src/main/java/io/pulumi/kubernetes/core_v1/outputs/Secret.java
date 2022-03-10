@@ -50,15 +50,15 @@ public final class Secret {
      */
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor({"apiVersion","data","immutable","kind","metadata","stringData","type"})
+    @OutputCustomType.Constructor
     private Secret(
-        @Nullable String apiVersion,
-        @Nullable Map<String,String> data,
-        @Nullable Boolean immutable,
-        @Nullable String kind,
-        @Nullable ObjectMeta metadata,
-        @Nullable Map<String,String> stringData,
-        @Nullable String type) {
+        @OutputCustomType.Parameter("apiVersion") @Nullable String apiVersion,
+        @OutputCustomType.Parameter("data") @Nullable Map<String,String> data,
+        @OutputCustomType.Parameter("immutable") @Nullable Boolean immutable,
+        @OutputCustomType.Parameter("kind") @Nullable String kind,
+        @OutputCustomType.Parameter("metadata") @Nullable ObjectMeta metadata,
+        @OutputCustomType.Parameter("stringData") @Nullable Map<String,String> stringData,
+        @OutputCustomType.Parameter("type") @Nullable String type) {
         this.apiVersion = apiVersion;
         this.data = data;
         this.immutable = immutable;

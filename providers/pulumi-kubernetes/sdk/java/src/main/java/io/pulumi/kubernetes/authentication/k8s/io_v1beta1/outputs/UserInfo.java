@@ -34,12 +34,12 @@ public final class UserInfo {
      */
     private final @Nullable String username;
 
-    @OutputCustomType.Constructor({"extra","groups","uid","username"})
+    @OutputCustomType.Constructor
     private UserInfo(
-        @Nullable Map<String,List<String>> extra,
-        @Nullable List<String> groups,
-        @Nullable String uid,
-        @Nullable String username) {
+        @OutputCustomType.Parameter("extra") @Nullable Map<String,List<String>> extra,
+        @OutputCustomType.Parameter("groups") @Nullable List<String> groups,
+        @OutputCustomType.Parameter("uid") @Nullable String uid,
+        @OutputCustomType.Parameter("username") @Nullable String username) {
         this.extra = extra;
         this.groups = groups;
         this.uid = uid;

@@ -149,31 +149,31 @@ public final class EphemeralContainer {
      */
     private final @Nullable String workingDir;
 
-    @OutputCustomType.Constructor({"args","command","env","envFrom","image","imagePullPolicy","lifecycle","livenessProbe","name","ports","readinessProbe","resources","securityContext","startupProbe","stdin","stdinOnce","targetContainerName","terminationMessagePath","terminationMessagePolicy","tty","volumeDevices","volumeMounts","workingDir"})
+    @OutputCustomType.Constructor
     private EphemeralContainer(
-        @Nullable List<String> args,
-        @Nullable List<String> command,
-        @Nullable List<EnvVar> env,
-        @Nullable List<EnvFromSource> envFrom,
-        @Nullable String image,
-        @Nullable String imagePullPolicy,
-        @Nullable Lifecycle lifecycle,
-        @Nullable Probe livenessProbe,
-        String name,
-        @Nullable List<ContainerPort> ports,
-        @Nullable Probe readinessProbe,
-        @Nullable ResourceRequirements resources,
-        @Nullable SecurityContext securityContext,
-        @Nullable Probe startupProbe,
-        @Nullable Boolean stdin,
-        @Nullable Boolean stdinOnce,
-        @Nullable String targetContainerName,
-        @Nullable String terminationMessagePath,
-        @Nullable String terminationMessagePolicy,
-        @Nullable Boolean tty,
-        @Nullable List<VolumeDevice> volumeDevices,
-        @Nullable List<VolumeMount> volumeMounts,
-        @Nullable String workingDir) {
+        @OutputCustomType.Parameter("args") @Nullable List<String> args,
+        @OutputCustomType.Parameter("command") @Nullable List<String> command,
+        @OutputCustomType.Parameter("env") @Nullable List<EnvVar> env,
+        @OutputCustomType.Parameter("envFrom") @Nullable List<EnvFromSource> envFrom,
+        @OutputCustomType.Parameter("image") @Nullable String image,
+        @OutputCustomType.Parameter("imagePullPolicy") @Nullable String imagePullPolicy,
+        @OutputCustomType.Parameter("lifecycle") @Nullable Lifecycle lifecycle,
+        @OutputCustomType.Parameter("livenessProbe") @Nullable Probe livenessProbe,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("ports") @Nullable List<ContainerPort> ports,
+        @OutputCustomType.Parameter("readinessProbe") @Nullable Probe readinessProbe,
+        @OutputCustomType.Parameter("resources") @Nullable ResourceRequirements resources,
+        @OutputCustomType.Parameter("securityContext") @Nullable SecurityContext securityContext,
+        @OutputCustomType.Parameter("startupProbe") @Nullable Probe startupProbe,
+        @OutputCustomType.Parameter("stdin") @Nullable Boolean stdin,
+        @OutputCustomType.Parameter("stdinOnce") @Nullable Boolean stdinOnce,
+        @OutputCustomType.Parameter("targetContainerName") @Nullable String targetContainerName,
+        @OutputCustomType.Parameter("terminationMessagePath") @Nullable String terminationMessagePath,
+        @OutputCustomType.Parameter("terminationMessagePolicy") @Nullable String terminationMessagePolicy,
+        @OutputCustomType.Parameter("tty") @Nullable Boolean tty,
+        @OutputCustomType.Parameter("volumeDevices") @Nullable List<VolumeDevice> volumeDevices,
+        @OutputCustomType.Parameter("volumeMounts") @Nullable List<VolumeMount> volumeMounts,
+        @OutputCustomType.Parameter("workingDir") @Nullable String workingDir) {
         this.args = args;
         this.command = command;
         this.env = env;

@@ -33,12 +33,12 @@ public final class WindowsSecurityContextOptions {
      */
     private final @Nullable String runAsUserName;
 
-    @OutputCustomType.Constructor({"gmsaCredentialSpec","gmsaCredentialSpecName","hostProcess","runAsUserName"})
+    @OutputCustomType.Constructor
     private WindowsSecurityContextOptions(
-        @Nullable String gmsaCredentialSpec,
-        @Nullable String gmsaCredentialSpecName,
-        @Nullable Boolean hostProcess,
-        @Nullable String runAsUserName) {
+        @OutputCustomType.Parameter("gmsaCredentialSpec") @Nullable String gmsaCredentialSpec,
+        @OutputCustomType.Parameter("gmsaCredentialSpecName") @Nullable String gmsaCredentialSpecName,
+        @OutputCustomType.Parameter("hostProcess") @Nullable Boolean hostProcess,
+        @OutputCustomType.Parameter("runAsUserName") @Nullable String runAsUserName) {
         this.gmsaCredentialSpec = gmsaCredentialSpec;
         this.gmsaCredentialSpecName = gmsaCredentialSpecName;
         this.hostProcess = hostProcess;
