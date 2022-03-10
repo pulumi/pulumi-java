@@ -75,22 +75,22 @@ public final class TokenRequestArgs extends io.pulumi.resources.ResourceArgs {
     	      this.expirationSeconds = defaults.expirationSeconds;
         }
 
-        public Builder setAudience(Input<String> audience) {
+        public Builder audience(Input<String> audience) {
             this.audience = Objects.requireNonNull(audience);
             return this;
         }
 
-        public Builder setAudience(String audience) {
+        public Builder audience(String audience) {
             this.audience = Input.of(Objects.requireNonNull(audience));
             return this;
         }
 
-        public Builder setExpirationSeconds(@Nullable Input<Integer> expirationSeconds) {
+        public Builder expirationSeconds(@Nullable Input<Integer> expirationSeconds) {
             this.expirationSeconds = expirationSeconds;
             return this;
         }
 
-        public Builder setExpirationSeconds(@Nullable Integer expirationSeconds) {
+        public Builder expirationSeconds(@Nullable Integer expirationSeconds) {
             this.expirationSeconds = Input.ofNullable(expirationSeconds);
             return this;
         }

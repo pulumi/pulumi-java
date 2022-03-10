@@ -151,37 +151,37 @@ public final class NodeSpec {
     	      this.unschedulable = defaults.unschedulable;
         }
 
-        public Builder setConfigSource(@Nullable NodeConfigSource configSource) {
+        public Builder configSource(@Nullable NodeConfigSource configSource) {
             this.configSource = configSource;
             return this;
         }
 
-        public Builder setExternalID(@Nullable String externalID) {
+        public Builder externalID(@Nullable String externalID) {
             this.externalID = externalID;
             return this;
         }
 
-        public Builder setPodCIDR(@Nullable String podCIDR) {
+        public Builder podCIDR(@Nullable String podCIDR) {
             this.podCIDR = podCIDR;
             return this;
         }
 
-        public Builder setPodCIDRs(@Nullable List<String> podCIDRs) {
+        public Builder podCIDRs(@Nullable List<String> podCIDRs) {
             this.podCIDRs = podCIDRs;
             return this;
         }
 
-        public Builder setProviderID(@Nullable String providerID) {
+        public Builder providerID(@Nullable String providerID) {
             this.providerID = providerID;
             return this;
         }
 
-        public Builder setTaints(@Nullable List<Taint> taints) {
+        public Builder taints(@Nullable List<Taint> taints) {
             this.taints = taints;
             return this;
         }
 
-        public Builder setUnschedulable(@Nullable Boolean unschedulable) {
+        public Builder unschedulable(@Nullable Boolean unschedulable) {
             this.unschedulable = unschedulable;
             return this;
         }

@@ -73,22 +73,22 @@ public final class IDRangeArgs extends io.pulumi.resources.ResourceArgs {
     	      this.min = defaults.min;
         }
 
-        public Builder setMax(Input<Integer> max) {
+        public Builder max(Input<Integer> max) {
             this.max = Objects.requireNonNull(max);
             return this;
         }
 
-        public Builder setMax(Integer max) {
+        public Builder max(Integer max) {
             this.max = Input.of(Objects.requireNonNull(max));
             return this;
         }
 
-        public Builder setMin(Input<Integer> min) {
+        public Builder min(Input<Integer> min) {
             this.min = Objects.requireNonNull(min);
             return this;
         }
 
-        public Builder setMin(Integer min) {
+        public Builder min(Integer min) {
             this.min = Input.of(Objects.requireNonNull(min));
             return this;
         }

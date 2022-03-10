@@ -85,17 +85,17 @@ public final class LoadBalancerIngress {
     	      this.ports = defaults.ports;
         }
 
-        public Builder setHostname(@Nullable String hostname) {
+        public Builder hostname(@Nullable String hostname) {
             this.hostname = hostname;
             return this;
         }
 
-        public Builder setIp(@Nullable String ip) {
+        public Builder ip(@Nullable String ip) {
             this.ip = ip;
             return this;
         }
 
-        public Builder setPorts(@Nullable List<PortStatus> ports) {
+        public Builder ports(@Nullable List<PortStatus> ports) {
             this.ports = ports;
             return this;
         }

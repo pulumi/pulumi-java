@@ -75,22 +75,22 @@ public final class PriorityLevelConfigurationSpecArgs extends io.pulumi.resource
     	      this.type = defaults.type;
         }
 
-        public Builder setLimited(@Nullable Input<LimitedPriorityLevelConfigurationArgs> limited) {
+        public Builder limited(@Nullable Input<LimitedPriorityLevelConfigurationArgs> limited) {
             this.limited = limited;
             return this;
         }
 
-        public Builder setLimited(@Nullable LimitedPriorityLevelConfigurationArgs limited) {
+        public Builder limited(@Nullable LimitedPriorityLevelConfigurationArgs limited) {
             this.limited = Input.ofNullable(limited);
             return this;
         }
 
-        public Builder setType(Input<String> type) {
+        public Builder type(Input<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }

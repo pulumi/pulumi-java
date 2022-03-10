@@ -85,17 +85,17 @@ public final class Affinity {
     	      this.podAntiAffinity = defaults.podAntiAffinity;
         }
 
-        public Builder setNodeAffinity(@Nullable NodeAffinity nodeAffinity) {
+        public Builder nodeAffinity(@Nullable NodeAffinity nodeAffinity) {
             this.nodeAffinity = nodeAffinity;
             return this;
         }
 
-        public Builder setPodAffinity(@Nullable PodAffinity podAffinity) {
+        public Builder podAffinity(@Nullable PodAffinity podAffinity) {
             this.podAffinity = podAffinity;
             return this;
         }
 
-        public Builder setPodAntiAffinity(@Nullable PodAntiAffinity podAntiAffinity) {
+        public Builder podAntiAffinity(@Nullable PodAntiAffinity podAntiAffinity) {
             this.podAntiAffinity = podAntiAffinity;
             return this;
         }

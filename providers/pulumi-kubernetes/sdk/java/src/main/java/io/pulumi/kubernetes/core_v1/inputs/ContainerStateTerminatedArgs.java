@@ -155,72 +155,72 @@ public final class ContainerStateTerminatedArgs extends io.pulumi.resources.Reso
     	      this.startedAt = defaults.startedAt;
         }
 
-        public Builder setContainerID(@Nullable Input<String> containerID) {
+        public Builder containerID(@Nullable Input<String> containerID) {
             this.containerID = containerID;
             return this;
         }
 
-        public Builder setContainerID(@Nullable String containerID) {
+        public Builder containerID(@Nullable String containerID) {
             this.containerID = Input.ofNullable(containerID);
             return this;
         }
 
-        public Builder setExitCode(Input<Integer> exitCode) {
+        public Builder exitCode(Input<Integer> exitCode) {
             this.exitCode = Objects.requireNonNull(exitCode);
             return this;
         }
 
-        public Builder setExitCode(Integer exitCode) {
+        public Builder exitCode(Integer exitCode) {
             this.exitCode = Input.of(Objects.requireNonNull(exitCode));
             return this;
         }
 
-        public Builder setFinishedAt(@Nullable Input<String> finishedAt) {
+        public Builder finishedAt(@Nullable Input<String> finishedAt) {
             this.finishedAt = finishedAt;
             return this;
         }
 
-        public Builder setFinishedAt(@Nullable String finishedAt) {
+        public Builder finishedAt(@Nullable String finishedAt) {
             this.finishedAt = Input.ofNullable(finishedAt);
             return this;
         }
 
-        public Builder setMessage(@Nullable Input<String> message) {
+        public Builder message(@Nullable Input<String> message) {
             this.message = message;
             return this;
         }
 
-        public Builder setMessage(@Nullable String message) {
+        public Builder message(@Nullable String message) {
             this.message = Input.ofNullable(message);
             return this;
         }
 
-        public Builder setReason(@Nullable Input<String> reason) {
+        public Builder reason(@Nullable Input<String> reason) {
             this.reason = reason;
             return this;
         }
 
-        public Builder setReason(@Nullable String reason) {
+        public Builder reason(@Nullable String reason) {
             this.reason = Input.ofNullable(reason);
             return this;
         }
 
-        public Builder setSignal(@Nullable Input<Integer> signal) {
+        public Builder signal(@Nullable Input<Integer> signal) {
             this.signal = signal;
             return this;
         }
 
-        public Builder setSignal(@Nullable Integer signal) {
+        public Builder signal(@Nullable Integer signal) {
             this.signal = Input.ofNullable(signal);
             return this;
         }
 
-        public Builder setStartedAt(@Nullable Input<String> startedAt) {
+        public Builder startedAt(@Nullable Input<String> startedAt) {
             this.startedAt = startedAt;
             return this;
         }
 
-        public Builder setStartedAt(@Nullable String startedAt) {
+        public Builder startedAt(@Nullable String startedAt) {
             this.startedAt = Input.ofNullable(startedAt);
             return this;
         }

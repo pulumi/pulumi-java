@@ -118,27 +118,27 @@ public final class FlexVolumeSource {
     	      this.secretRef = defaults.secretRef;
         }
 
-        public Builder setDriver(String driver) {
+        public Builder driver(String driver) {
             this.driver = Objects.requireNonNull(driver);
             return this;
         }
 
-        public Builder setFsType(@Nullable String fsType) {
+        public Builder fsType(@Nullable String fsType) {
             this.fsType = fsType;
             return this;
         }
 
-        public Builder setOptions(@Nullable Map<String,String> options) {
+        public Builder options(@Nullable Map<String,String> options) {
             this.options = options;
             return this;
         }
 
-        public Builder setReadOnly(@Nullable Boolean readOnly) {
+        public Builder readOnly(@Nullable Boolean readOnly) {
             this.readOnly = readOnly;
             return this;
         }
 
-        public Builder setSecretRef(@Nullable LocalObjectReference secretRef) {
+        public Builder secretRef(@Nullable LocalObjectReference secretRef) {
             this.secretRef = secretRef;
             return this;
         }

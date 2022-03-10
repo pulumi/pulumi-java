@@ -57,12 +57,12 @@ public final class RollingUpdateStatefulSetStrategyArgs extends io.pulumi.resour
     	      this.partition = defaults.partition;
         }
 
-        public Builder setPartition(@Nullable Input<Integer> partition) {
+        public Builder partition(@Nullable Input<Integer> partition) {
             this.partition = partition;
             return this;
         }
 
-        public Builder setPartition(@Nullable Integer partition) {
+        public Builder partition(@Nullable Integer partition) {
             this.partition = Input.ofNullable(partition);
             return this;
         }

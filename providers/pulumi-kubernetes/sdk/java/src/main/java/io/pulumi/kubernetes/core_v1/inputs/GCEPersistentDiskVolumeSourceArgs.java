@@ -110,42 +110,42 @@ public final class GCEPersistentDiskVolumeSourceArgs extends io.pulumi.resources
     	      this.readOnly = defaults.readOnly;
         }
 
-        public Builder setFsType(@Nullable Input<String> fsType) {
+        public Builder fsType(@Nullable Input<String> fsType) {
             this.fsType = fsType;
             return this;
         }
 
-        public Builder setFsType(@Nullable String fsType) {
+        public Builder fsType(@Nullable String fsType) {
             this.fsType = Input.ofNullable(fsType);
             return this;
         }
 
-        public Builder setPartition(@Nullable Input<Integer> partition) {
+        public Builder partition(@Nullable Input<Integer> partition) {
             this.partition = partition;
             return this;
         }
 
-        public Builder setPartition(@Nullable Integer partition) {
+        public Builder partition(@Nullable Integer partition) {
             this.partition = Input.ofNullable(partition);
             return this;
         }
 
-        public Builder setPdName(Input<String> pdName) {
+        public Builder pdName(Input<String> pdName) {
             this.pdName = Objects.requireNonNull(pdName);
             return this;
         }
 
-        public Builder setPdName(String pdName) {
+        public Builder pdName(String pdName) {
             this.pdName = Input.of(Objects.requireNonNull(pdName));
             return this;
         }
 
-        public Builder setReadOnly(@Nullable Input<Boolean> readOnly) {
+        public Builder readOnly(@Nullable Input<Boolean> readOnly) {
             this.readOnly = readOnly;
             return this;
         }
 
-        public Builder setReadOnly(@Nullable Boolean readOnly) {
+        public Builder readOnly(@Nullable Boolean readOnly) {
             this.readOnly = Input.ofNullable(readOnly);
             return this;
         }

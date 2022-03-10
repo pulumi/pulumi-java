@@ -121,52 +121,52 @@ public final class CustomResourceDefinitionArgs extends io.pulumi.resources.Reso
     	      this.status = defaults.status;
         }
 
-        public Builder setApiVersion(@Nullable Input<String> apiVersion) {
+        public Builder apiVersion(@Nullable Input<String> apiVersion) {
             this.apiVersion = apiVersion;
             return this;
         }
 
-        public Builder setApiVersion(@Nullable String apiVersion) {
+        public Builder apiVersion(@Nullable String apiVersion) {
             this.apiVersion = Input.ofNullable(apiVersion);
             return this;
         }
 
-        public Builder setKind(@Nullable Input<String> kind) {
+        public Builder kind(@Nullable Input<String> kind) {
             this.kind = kind;
             return this;
         }
 
-        public Builder setKind(@Nullable String kind) {
+        public Builder kind(@Nullable String kind) {
             this.kind = Input.ofNullable(kind);
             return this;
         }
 
-        public Builder setMetadata(@Nullable Input<ObjectMetaArgs> metadata) {
+        public Builder metadata(@Nullable Input<ObjectMetaArgs> metadata) {
             this.metadata = metadata;
             return this;
         }
 
-        public Builder setMetadata(@Nullable ObjectMetaArgs metadata) {
+        public Builder metadata(@Nullable ObjectMetaArgs metadata) {
             this.metadata = Input.ofNullable(metadata);
             return this;
         }
 
-        public Builder setSpec(Input<CustomResourceDefinitionSpecArgs> spec) {
+        public Builder spec(Input<CustomResourceDefinitionSpecArgs> spec) {
             this.spec = Objects.requireNonNull(spec);
             return this;
         }
 
-        public Builder setSpec(CustomResourceDefinitionSpecArgs spec) {
+        public Builder spec(CustomResourceDefinitionSpecArgs spec) {
             this.spec = Input.of(Objects.requireNonNull(spec));
             return this;
         }
 
-        public Builder setStatus(@Nullable Input<CustomResourceDefinitionStatusArgs> status) {
+        public Builder status(@Nullable Input<CustomResourceDefinitionStatusArgs> status) {
             this.status = status;
             return this;
         }
 
-        public Builder setStatus(@Nullable CustomResourceDefinitionStatusArgs status) {
+        public Builder status(@Nullable CustomResourceDefinitionStatusArgs status) {
             this.status = Input.ofNullable(status);
             return this;
         }

@@ -67,12 +67,12 @@ public final class NonResourceRule {
     	      this.verbs = defaults.verbs;
         }
 
-        public Builder setNonResourceURLs(@Nullable List<String> nonResourceURLs) {
+        public Builder nonResourceURLs(@Nullable List<String> nonResourceURLs) {
             this.nonResourceURLs = nonResourceURLs;
             return this;
         }
 
-        public Builder setVerbs(List<String> verbs) {
+        public Builder verbs(List<String> verbs) {
             this.verbs = Objects.requireNonNull(verbs);
             return this;
         }

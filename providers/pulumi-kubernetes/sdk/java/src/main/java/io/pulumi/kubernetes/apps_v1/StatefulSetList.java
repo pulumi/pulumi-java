@@ -126,8 +126,8 @@ public class StatefulSetList extends io.pulumi.resources.CustomResource {
     private static StatefulSetListArgs makeArgs(StatefulSetListArgs args) {
         var builder = args == null ? StatefulSetListArgs.builder() : StatefulSetListArgs.builder(args);
         return builder
-            .setApiVersion("apps/v1")
-            .setKind("StatefulSetList")
+            .apiVersion("apps/v1")
+            .kind("StatefulSetList")
             .build();
     }
 

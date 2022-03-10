@@ -126,8 +126,8 @@ public class RoleList extends io.pulumi.resources.CustomResource {
     private static RoleListArgs makeArgs(RoleListArgs args) {
         var builder = args == null ? RoleListArgs.builder() : RoleListArgs.builder(args);
         return builder
-            .setApiVersion("rbac.authorization.k8s.io/v1")
-            .setKind("RoleList")
+            .apiVersion("rbac.authorization.k8s.io/v1")
+            .kind("RoleList")
             .build();
     }
 

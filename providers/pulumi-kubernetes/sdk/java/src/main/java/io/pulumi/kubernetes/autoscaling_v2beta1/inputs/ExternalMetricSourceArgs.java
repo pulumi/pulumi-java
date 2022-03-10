@@ -107,42 +107,42 @@ public final class ExternalMetricSourceArgs extends io.pulumi.resources.Resource
     	      this.targetValue = defaults.targetValue;
         }
 
-        public Builder setMetricName(Input<String> metricName) {
+        public Builder metricName(Input<String> metricName) {
             this.metricName = Objects.requireNonNull(metricName);
             return this;
         }
 
-        public Builder setMetricName(String metricName) {
+        public Builder metricName(String metricName) {
             this.metricName = Input.of(Objects.requireNonNull(metricName));
             return this;
         }
 
-        public Builder setMetricSelector(@Nullable Input<LabelSelectorArgs> metricSelector) {
+        public Builder metricSelector(@Nullable Input<LabelSelectorArgs> metricSelector) {
             this.metricSelector = metricSelector;
             return this;
         }
 
-        public Builder setMetricSelector(@Nullable LabelSelectorArgs metricSelector) {
+        public Builder metricSelector(@Nullable LabelSelectorArgs metricSelector) {
             this.metricSelector = Input.ofNullable(metricSelector);
             return this;
         }
 
-        public Builder setTargetAverageValue(@Nullable Input<String> targetAverageValue) {
+        public Builder targetAverageValue(@Nullable Input<String> targetAverageValue) {
             this.targetAverageValue = targetAverageValue;
             return this;
         }
 
-        public Builder setTargetAverageValue(@Nullable String targetAverageValue) {
+        public Builder targetAverageValue(@Nullable String targetAverageValue) {
             this.targetAverageValue = Input.ofNullable(targetAverageValue);
             return this;
         }
 
-        public Builder setTargetValue(@Nullable Input<String> targetValue) {
+        public Builder targetValue(@Nullable Input<String> targetValue) {
             this.targetValue = targetValue;
             return this;
         }
 
-        public Builder setTargetValue(@Nullable String targetValue) {
+        public Builder targetValue(@Nullable String targetValue) {
             this.targetValue = Input.ofNullable(targetValue);
             return this;
         }

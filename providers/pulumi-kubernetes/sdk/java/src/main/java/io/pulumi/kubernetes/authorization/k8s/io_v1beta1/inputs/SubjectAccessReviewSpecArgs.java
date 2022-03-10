@@ -142,62 +142,62 @@ public final class SubjectAccessReviewSpecArgs extends io.pulumi.resources.Resou
     	      this.user = defaults.user;
         }
 
-        public Builder setExtra(@Nullable Input<Map<String,List<String>>> extra) {
+        public Builder extra(@Nullable Input<Map<String,List<String>>> extra) {
             this.extra = extra;
             return this;
         }
 
-        public Builder setExtra(@Nullable Map<String,List<String>> extra) {
+        public Builder extra(@Nullable Map<String,List<String>> extra) {
             this.extra = Input.ofNullable(extra);
             return this;
         }
 
-        public Builder setGroup(@Nullable Input<List<String>> group) {
+        public Builder group(@Nullable Input<List<String>> group) {
             this.group = group;
             return this;
         }
 
-        public Builder setGroup(@Nullable List<String> group) {
+        public Builder group(@Nullable List<String> group) {
             this.group = Input.ofNullable(group);
             return this;
         }
 
-        public Builder setNonResourceAttributes(@Nullable Input<NonResourceAttributesArgs> nonResourceAttributes) {
+        public Builder nonResourceAttributes(@Nullable Input<NonResourceAttributesArgs> nonResourceAttributes) {
             this.nonResourceAttributes = nonResourceAttributes;
             return this;
         }
 
-        public Builder setNonResourceAttributes(@Nullable NonResourceAttributesArgs nonResourceAttributes) {
+        public Builder nonResourceAttributes(@Nullable NonResourceAttributesArgs nonResourceAttributes) {
             this.nonResourceAttributes = Input.ofNullable(nonResourceAttributes);
             return this;
         }
 
-        public Builder setResourceAttributes(@Nullable Input<ResourceAttributesArgs> resourceAttributes) {
+        public Builder resourceAttributes(@Nullable Input<ResourceAttributesArgs> resourceAttributes) {
             this.resourceAttributes = resourceAttributes;
             return this;
         }
 
-        public Builder setResourceAttributes(@Nullable ResourceAttributesArgs resourceAttributes) {
+        public Builder resourceAttributes(@Nullable ResourceAttributesArgs resourceAttributes) {
             this.resourceAttributes = Input.ofNullable(resourceAttributes);
             return this;
         }
 
-        public Builder setUid(@Nullable Input<String> uid) {
+        public Builder uid(@Nullable Input<String> uid) {
             this.uid = uid;
             return this;
         }
 
-        public Builder setUid(@Nullable String uid) {
+        public Builder uid(@Nullable String uid) {
             this.uid = Input.ofNullable(uid);
             return this;
         }
 
-        public Builder setUser(@Nullable Input<String> user) {
+        public Builder user(@Nullable Input<String> user) {
             this.user = user;
             return this;
         }
 
-        public Builder setUser(@Nullable String user) {
+        public Builder user(@Nullable String user) {
             this.user = Input.ofNullable(user);
             return this;
         }

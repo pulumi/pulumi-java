@@ -442,242 +442,242 @@ public final class PodSecurityPolicySpecArgs extends io.pulumi.resources.Resourc
     	      this.volumes = defaults.volumes;
         }
 
-        public Builder setAllowPrivilegeEscalation(@Nullable Input<Boolean> allowPrivilegeEscalation) {
+        public Builder allowPrivilegeEscalation(@Nullable Input<Boolean> allowPrivilegeEscalation) {
             this.allowPrivilegeEscalation = allowPrivilegeEscalation;
             return this;
         }
 
-        public Builder setAllowPrivilegeEscalation(@Nullable Boolean allowPrivilegeEscalation) {
+        public Builder allowPrivilegeEscalation(@Nullable Boolean allowPrivilegeEscalation) {
             this.allowPrivilegeEscalation = Input.ofNullable(allowPrivilegeEscalation);
             return this;
         }
 
-        public Builder setAllowedCSIDrivers(@Nullable Input<List<AllowedCSIDriverArgs>> allowedCSIDrivers) {
+        public Builder allowedCSIDrivers(@Nullable Input<List<AllowedCSIDriverArgs>> allowedCSIDrivers) {
             this.allowedCSIDrivers = allowedCSIDrivers;
             return this;
         }
 
-        public Builder setAllowedCSIDrivers(@Nullable List<AllowedCSIDriverArgs> allowedCSIDrivers) {
+        public Builder allowedCSIDrivers(@Nullable List<AllowedCSIDriverArgs> allowedCSIDrivers) {
             this.allowedCSIDrivers = Input.ofNullable(allowedCSIDrivers);
             return this;
         }
 
-        public Builder setAllowedCapabilities(@Nullable Input<List<String>> allowedCapabilities) {
+        public Builder allowedCapabilities(@Nullable Input<List<String>> allowedCapabilities) {
             this.allowedCapabilities = allowedCapabilities;
             return this;
         }
 
-        public Builder setAllowedCapabilities(@Nullable List<String> allowedCapabilities) {
+        public Builder allowedCapabilities(@Nullable List<String> allowedCapabilities) {
             this.allowedCapabilities = Input.ofNullable(allowedCapabilities);
             return this;
         }
 
-        public Builder setAllowedFlexVolumes(@Nullable Input<List<AllowedFlexVolumeArgs>> allowedFlexVolumes) {
+        public Builder allowedFlexVolumes(@Nullable Input<List<AllowedFlexVolumeArgs>> allowedFlexVolumes) {
             this.allowedFlexVolumes = allowedFlexVolumes;
             return this;
         }
 
-        public Builder setAllowedFlexVolumes(@Nullable List<AllowedFlexVolumeArgs> allowedFlexVolumes) {
+        public Builder allowedFlexVolumes(@Nullable List<AllowedFlexVolumeArgs> allowedFlexVolumes) {
             this.allowedFlexVolumes = Input.ofNullable(allowedFlexVolumes);
             return this;
         }
 
-        public Builder setAllowedHostPaths(@Nullable Input<List<AllowedHostPathArgs>> allowedHostPaths) {
+        public Builder allowedHostPaths(@Nullable Input<List<AllowedHostPathArgs>> allowedHostPaths) {
             this.allowedHostPaths = allowedHostPaths;
             return this;
         }
 
-        public Builder setAllowedHostPaths(@Nullable List<AllowedHostPathArgs> allowedHostPaths) {
+        public Builder allowedHostPaths(@Nullable List<AllowedHostPathArgs> allowedHostPaths) {
             this.allowedHostPaths = Input.ofNullable(allowedHostPaths);
             return this;
         }
 
-        public Builder setAllowedProcMountTypes(@Nullable Input<List<String>> allowedProcMountTypes) {
+        public Builder allowedProcMountTypes(@Nullable Input<List<String>> allowedProcMountTypes) {
             this.allowedProcMountTypes = allowedProcMountTypes;
             return this;
         }
 
-        public Builder setAllowedProcMountTypes(@Nullable List<String> allowedProcMountTypes) {
+        public Builder allowedProcMountTypes(@Nullable List<String> allowedProcMountTypes) {
             this.allowedProcMountTypes = Input.ofNullable(allowedProcMountTypes);
             return this;
         }
 
-        public Builder setAllowedUnsafeSysctls(@Nullable Input<List<String>> allowedUnsafeSysctls) {
+        public Builder allowedUnsafeSysctls(@Nullable Input<List<String>> allowedUnsafeSysctls) {
             this.allowedUnsafeSysctls = allowedUnsafeSysctls;
             return this;
         }
 
-        public Builder setAllowedUnsafeSysctls(@Nullable List<String> allowedUnsafeSysctls) {
+        public Builder allowedUnsafeSysctls(@Nullable List<String> allowedUnsafeSysctls) {
             this.allowedUnsafeSysctls = Input.ofNullable(allowedUnsafeSysctls);
             return this;
         }
 
-        public Builder setDefaultAddCapabilities(@Nullable Input<List<String>> defaultAddCapabilities) {
+        public Builder defaultAddCapabilities(@Nullable Input<List<String>> defaultAddCapabilities) {
             this.defaultAddCapabilities = defaultAddCapabilities;
             return this;
         }
 
-        public Builder setDefaultAddCapabilities(@Nullable List<String> defaultAddCapabilities) {
+        public Builder defaultAddCapabilities(@Nullable List<String> defaultAddCapabilities) {
             this.defaultAddCapabilities = Input.ofNullable(defaultAddCapabilities);
             return this;
         }
 
-        public Builder setDefaultAllowPrivilegeEscalation(@Nullable Input<Boolean> defaultAllowPrivilegeEscalation) {
+        public Builder defaultAllowPrivilegeEscalation(@Nullable Input<Boolean> defaultAllowPrivilegeEscalation) {
             this.defaultAllowPrivilegeEscalation = defaultAllowPrivilegeEscalation;
             return this;
         }
 
-        public Builder setDefaultAllowPrivilegeEscalation(@Nullable Boolean defaultAllowPrivilegeEscalation) {
+        public Builder defaultAllowPrivilegeEscalation(@Nullable Boolean defaultAllowPrivilegeEscalation) {
             this.defaultAllowPrivilegeEscalation = Input.ofNullable(defaultAllowPrivilegeEscalation);
             return this;
         }
 
-        public Builder setForbiddenSysctls(@Nullable Input<List<String>> forbiddenSysctls) {
+        public Builder forbiddenSysctls(@Nullable Input<List<String>> forbiddenSysctls) {
             this.forbiddenSysctls = forbiddenSysctls;
             return this;
         }
 
-        public Builder setForbiddenSysctls(@Nullable List<String> forbiddenSysctls) {
+        public Builder forbiddenSysctls(@Nullable List<String> forbiddenSysctls) {
             this.forbiddenSysctls = Input.ofNullable(forbiddenSysctls);
             return this;
         }
 
-        public Builder setFsGroup(Input<FSGroupStrategyOptionsArgs> fsGroup) {
+        public Builder fsGroup(Input<FSGroupStrategyOptionsArgs> fsGroup) {
             this.fsGroup = Objects.requireNonNull(fsGroup);
             return this;
         }
 
-        public Builder setFsGroup(FSGroupStrategyOptionsArgs fsGroup) {
+        public Builder fsGroup(FSGroupStrategyOptionsArgs fsGroup) {
             this.fsGroup = Input.of(Objects.requireNonNull(fsGroup));
             return this;
         }
 
-        public Builder setHostIPC(@Nullable Input<Boolean> hostIPC) {
+        public Builder hostIPC(@Nullable Input<Boolean> hostIPC) {
             this.hostIPC = hostIPC;
             return this;
         }
 
-        public Builder setHostIPC(@Nullable Boolean hostIPC) {
+        public Builder hostIPC(@Nullable Boolean hostIPC) {
             this.hostIPC = Input.ofNullable(hostIPC);
             return this;
         }
 
-        public Builder setHostNetwork(@Nullable Input<Boolean> hostNetwork) {
+        public Builder hostNetwork(@Nullable Input<Boolean> hostNetwork) {
             this.hostNetwork = hostNetwork;
             return this;
         }
 
-        public Builder setHostNetwork(@Nullable Boolean hostNetwork) {
+        public Builder hostNetwork(@Nullable Boolean hostNetwork) {
             this.hostNetwork = Input.ofNullable(hostNetwork);
             return this;
         }
 
-        public Builder setHostPID(@Nullable Input<Boolean> hostPID) {
+        public Builder hostPID(@Nullable Input<Boolean> hostPID) {
             this.hostPID = hostPID;
             return this;
         }
 
-        public Builder setHostPID(@Nullable Boolean hostPID) {
+        public Builder hostPID(@Nullable Boolean hostPID) {
             this.hostPID = Input.ofNullable(hostPID);
             return this;
         }
 
-        public Builder setHostPorts(@Nullable Input<List<HostPortRangeArgs>> hostPorts) {
+        public Builder hostPorts(@Nullable Input<List<HostPortRangeArgs>> hostPorts) {
             this.hostPorts = hostPorts;
             return this;
         }
 
-        public Builder setHostPorts(@Nullable List<HostPortRangeArgs> hostPorts) {
+        public Builder hostPorts(@Nullable List<HostPortRangeArgs> hostPorts) {
             this.hostPorts = Input.ofNullable(hostPorts);
             return this;
         }
 
-        public Builder setPrivileged(@Nullable Input<Boolean> privileged) {
+        public Builder privileged(@Nullable Input<Boolean> privileged) {
             this.privileged = privileged;
             return this;
         }
 
-        public Builder setPrivileged(@Nullable Boolean privileged) {
+        public Builder privileged(@Nullable Boolean privileged) {
             this.privileged = Input.ofNullable(privileged);
             return this;
         }
 
-        public Builder setReadOnlyRootFilesystem(@Nullable Input<Boolean> readOnlyRootFilesystem) {
+        public Builder readOnlyRootFilesystem(@Nullable Input<Boolean> readOnlyRootFilesystem) {
             this.readOnlyRootFilesystem = readOnlyRootFilesystem;
             return this;
         }
 
-        public Builder setReadOnlyRootFilesystem(@Nullable Boolean readOnlyRootFilesystem) {
+        public Builder readOnlyRootFilesystem(@Nullable Boolean readOnlyRootFilesystem) {
             this.readOnlyRootFilesystem = Input.ofNullable(readOnlyRootFilesystem);
             return this;
         }
 
-        public Builder setRequiredDropCapabilities(@Nullable Input<List<String>> requiredDropCapabilities) {
+        public Builder requiredDropCapabilities(@Nullable Input<List<String>> requiredDropCapabilities) {
             this.requiredDropCapabilities = requiredDropCapabilities;
             return this;
         }
 
-        public Builder setRequiredDropCapabilities(@Nullable List<String> requiredDropCapabilities) {
+        public Builder requiredDropCapabilities(@Nullable List<String> requiredDropCapabilities) {
             this.requiredDropCapabilities = Input.ofNullable(requiredDropCapabilities);
             return this;
         }
 
-        public Builder setRunAsGroup(@Nullable Input<RunAsGroupStrategyOptionsArgs> runAsGroup) {
+        public Builder runAsGroup(@Nullable Input<RunAsGroupStrategyOptionsArgs> runAsGroup) {
             this.runAsGroup = runAsGroup;
             return this;
         }
 
-        public Builder setRunAsGroup(@Nullable RunAsGroupStrategyOptionsArgs runAsGroup) {
+        public Builder runAsGroup(@Nullable RunAsGroupStrategyOptionsArgs runAsGroup) {
             this.runAsGroup = Input.ofNullable(runAsGroup);
             return this;
         }
 
-        public Builder setRunAsUser(Input<RunAsUserStrategyOptionsArgs> runAsUser) {
+        public Builder runAsUser(Input<RunAsUserStrategyOptionsArgs> runAsUser) {
             this.runAsUser = Objects.requireNonNull(runAsUser);
             return this;
         }
 
-        public Builder setRunAsUser(RunAsUserStrategyOptionsArgs runAsUser) {
+        public Builder runAsUser(RunAsUserStrategyOptionsArgs runAsUser) {
             this.runAsUser = Input.of(Objects.requireNonNull(runAsUser));
             return this;
         }
 
-        public Builder setRuntimeClass(@Nullable Input<RuntimeClassStrategyOptionsArgs> runtimeClass) {
+        public Builder runtimeClass(@Nullable Input<RuntimeClassStrategyOptionsArgs> runtimeClass) {
             this.runtimeClass = runtimeClass;
             return this;
         }
 
-        public Builder setRuntimeClass(@Nullable RuntimeClassStrategyOptionsArgs runtimeClass) {
+        public Builder runtimeClass(@Nullable RuntimeClassStrategyOptionsArgs runtimeClass) {
             this.runtimeClass = Input.ofNullable(runtimeClass);
             return this;
         }
 
-        public Builder setSeLinux(Input<SELinuxStrategyOptionsArgs> seLinux) {
+        public Builder seLinux(Input<SELinuxStrategyOptionsArgs> seLinux) {
             this.seLinux = Objects.requireNonNull(seLinux);
             return this;
         }
 
-        public Builder setSeLinux(SELinuxStrategyOptionsArgs seLinux) {
+        public Builder seLinux(SELinuxStrategyOptionsArgs seLinux) {
             this.seLinux = Input.of(Objects.requireNonNull(seLinux));
             return this;
         }
 
-        public Builder setSupplementalGroups(Input<SupplementalGroupsStrategyOptionsArgs> supplementalGroups) {
+        public Builder supplementalGroups(Input<SupplementalGroupsStrategyOptionsArgs> supplementalGroups) {
             this.supplementalGroups = Objects.requireNonNull(supplementalGroups);
             return this;
         }
 
-        public Builder setSupplementalGroups(SupplementalGroupsStrategyOptionsArgs supplementalGroups) {
+        public Builder supplementalGroups(SupplementalGroupsStrategyOptionsArgs supplementalGroups) {
             this.supplementalGroups = Input.of(Objects.requireNonNull(supplementalGroups));
             return this;
         }
 
-        public Builder setVolumes(@Nullable Input<List<String>> volumes) {
+        public Builder volumes(@Nullable Input<List<String>> volumes) {
             this.volumes = volumes;
             return this;
         }
 
-        public Builder setVolumes(@Nullable List<String> volumes) {
+        public Builder volumes(@Nullable List<String> volumes) {
             this.volumes = Input.ofNullable(volumes);
             return this;
         }

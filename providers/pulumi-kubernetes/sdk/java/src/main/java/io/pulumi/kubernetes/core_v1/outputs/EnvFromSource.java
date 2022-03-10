@@ -85,17 +85,17 @@ public final class EnvFromSource {
     	      this.secretRef = defaults.secretRef;
         }
 
-        public Builder setConfigMapRef(@Nullable ConfigMapEnvSource configMapRef) {
+        public Builder configMapRef(@Nullable ConfigMapEnvSource configMapRef) {
             this.configMapRef = configMapRef;
             return this;
         }
 
-        public Builder setPrefix(@Nullable String prefix) {
+        public Builder prefix(@Nullable String prefix) {
             this.prefix = prefix;
             return this;
         }
 
-        public Builder setSecretRef(@Nullable SecretEnvSource secretRef) {
+        public Builder secretRef(@Nullable SecretEnvSource secretRef) {
             this.secretRef = secretRef;
             return this;
         }

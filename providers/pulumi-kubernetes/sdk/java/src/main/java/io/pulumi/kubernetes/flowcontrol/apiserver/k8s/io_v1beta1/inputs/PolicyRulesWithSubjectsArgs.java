@@ -93,32 +93,32 @@ public final class PolicyRulesWithSubjectsArgs extends io.pulumi.resources.Resou
     	      this.subjects = defaults.subjects;
         }
 
-        public Builder setNonResourceRules(@Nullable Input<List<NonResourcePolicyRuleArgs>> nonResourceRules) {
+        public Builder nonResourceRules(@Nullable Input<List<NonResourcePolicyRuleArgs>> nonResourceRules) {
             this.nonResourceRules = nonResourceRules;
             return this;
         }
 
-        public Builder setNonResourceRules(@Nullable List<NonResourcePolicyRuleArgs> nonResourceRules) {
+        public Builder nonResourceRules(@Nullable List<NonResourcePolicyRuleArgs> nonResourceRules) {
             this.nonResourceRules = Input.ofNullable(nonResourceRules);
             return this;
         }
 
-        public Builder setResourceRules(@Nullable Input<List<ResourcePolicyRuleArgs>> resourceRules) {
+        public Builder resourceRules(@Nullable Input<List<ResourcePolicyRuleArgs>> resourceRules) {
             this.resourceRules = resourceRules;
             return this;
         }
 
-        public Builder setResourceRules(@Nullable List<ResourcePolicyRuleArgs> resourceRules) {
+        public Builder resourceRules(@Nullable List<ResourcePolicyRuleArgs> resourceRules) {
             this.resourceRules = Input.ofNullable(resourceRules);
             return this;
         }
 
-        public Builder setSubjects(Input<List<SubjectArgs>> subjects) {
+        public Builder subjects(Input<List<SubjectArgs>> subjects) {
             this.subjects = Objects.requireNonNull(subjects);
             return this;
         }
 
-        public Builder setSubjects(List<SubjectArgs> subjects) {
+        public Builder subjects(List<SubjectArgs> subjects) {
             this.subjects = Input.of(Objects.requireNonNull(subjects));
             return this;
         }

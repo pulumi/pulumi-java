@@ -174,82 +174,82 @@ public final class DeploymentSpecArgs extends io.pulumi.resources.ResourceArgs {
     	      this.template = defaults.template;
         }
 
-        public Builder setMinReadySeconds(@Nullable Input<Integer> minReadySeconds) {
+        public Builder minReadySeconds(@Nullable Input<Integer> minReadySeconds) {
             this.minReadySeconds = minReadySeconds;
             return this;
         }
 
-        public Builder setMinReadySeconds(@Nullable Integer minReadySeconds) {
+        public Builder minReadySeconds(@Nullable Integer minReadySeconds) {
             this.minReadySeconds = Input.ofNullable(minReadySeconds);
             return this;
         }
 
-        public Builder setPaused(@Nullable Input<Boolean> paused) {
+        public Builder paused(@Nullable Input<Boolean> paused) {
             this.paused = paused;
             return this;
         }
 
-        public Builder setPaused(@Nullable Boolean paused) {
+        public Builder paused(@Nullable Boolean paused) {
             this.paused = Input.ofNullable(paused);
             return this;
         }
 
-        public Builder setProgressDeadlineSeconds(@Nullable Input<Integer> progressDeadlineSeconds) {
+        public Builder progressDeadlineSeconds(@Nullable Input<Integer> progressDeadlineSeconds) {
             this.progressDeadlineSeconds = progressDeadlineSeconds;
             return this;
         }
 
-        public Builder setProgressDeadlineSeconds(@Nullable Integer progressDeadlineSeconds) {
+        public Builder progressDeadlineSeconds(@Nullable Integer progressDeadlineSeconds) {
             this.progressDeadlineSeconds = Input.ofNullable(progressDeadlineSeconds);
             return this;
         }
 
-        public Builder setReplicas(@Nullable Input<Integer> replicas) {
+        public Builder replicas(@Nullable Input<Integer> replicas) {
             this.replicas = replicas;
             return this;
         }
 
-        public Builder setReplicas(@Nullable Integer replicas) {
+        public Builder replicas(@Nullable Integer replicas) {
             this.replicas = Input.ofNullable(replicas);
             return this;
         }
 
-        public Builder setRevisionHistoryLimit(@Nullable Input<Integer> revisionHistoryLimit) {
+        public Builder revisionHistoryLimit(@Nullable Input<Integer> revisionHistoryLimit) {
             this.revisionHistoryLimit = revisionHistoryLimit;
             return this;
         }
 
-        public Builder setRevisionHistoryLimit(@Nullable Integer revisionHistoryLimit) {
+        public Builder revisionHistoryLimit(@Nullable Integer revisionHistoryLimit) {
             this.revisionHistoryLimit = Input.ofNullable(revisionHistoryLimit);
             return this;
         }
 
-        public Builder setSelector(Input<LabelSelectorArgs> selector) {
+        public Builder selector(Input<LabelSelectorArgs> selector) {
             this.selector = Objects.requireNonNull(selector);
             return this;
         }
 
-        public Builder setSelector(LabelSelectorArgs selector) {
+        public Builder selector(LabelSelectorArgs selector) {
             this.selector = Input.of(Objects.requireNonNull(selector));
             return this;
         }
 
-        public Builder setStrategy(@Nullable Input<DeploymentStrategyArgs> strategy) {
+        public Builder strategy(@Nullable Input<DeploymentStrategyArgs> strategy) {
             this.strategy = strategy;
             return this;
         }
 
-        public Builder setStrategy(@Nullable DeploymentStrategyArgs strategy) {
+        public Builder strategy(@Nullable DeploymentStrategyArgs strategy) {
             this.strategy = Input.ofNullable(strategy);
             return this;
         }
 
-        public Builder setTemplate(Input<PodTemplateSpecArgs> template) {
+        public Builder template(Input<PodTemplateSpecArgs> template) {
             this.template = Objects.requireNonNull(template);
             return this;
         }
 
-        public Builder setTemplate(PodTemplateSpecArgs template) {
+        public Builder template(PodTemplateSpecArgs template) {
             this.template = Input.of(Objects.requireNonNull(template));
             return this;
         }

@@ -93,32 +93,32 @@ public final class IngressBackendArgs extends io.pulumi.resources.ResourceArgs {
     	      this.servicePort = defaults.servicePort;
         }
 
-        public Builder setResource(@Nullable Input<TypedLocalObjectReferenceArgs> resource) {
+        public Builder resource(@Nullable Input<TypedLocalObjectReferenceArgs> resource) {
             this.resource = resource;
             return this;
         }
 
-        public Builder setResource(@Nullable TypedLocalObjectReferenceArgs resource) {
+        public Builder resource(@Nullable TypedLocalObjectReferenceArgs resource) {
             this.resource = Input.ofNullable(resource);
             return this;
         }
 
-        public Builder setServiceName(Input<String> serviceName) {
+        public Builder serviceName(Input<String> serviceName) {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
         }
 
-        public Builder setServiceName(String serviceName) {
+        public Builder serviceName(String serviceName) {
             this.serviceName = Input.of(Objects.requireNonNull(serviceName));
             return this;
         }
 
-        public Builder setServicePort(Input<Either<Integer,String>> servicePort) {
+        public Builder servicePort(Input<Either<Integer,String>> servicePort) {
             this.servicePort = Objects.requireNonNull(servicePort);
             return this;
         }
 
-        public Builder setServicePort(Either<Integer,String> servicePort) {
+        public Builder servicePort(Either<Integer,String> servicePort) {
             this.servicePort = Input.of(Objects.requireNonNull(servicePort));
             return this;
         }

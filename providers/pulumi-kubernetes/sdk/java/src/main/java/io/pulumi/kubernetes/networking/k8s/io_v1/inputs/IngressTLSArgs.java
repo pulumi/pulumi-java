@@ -75,22 +75,22 @@ public final class IngressTLSArgs extends io.pulumi.resources.ResourceArgs {
     	      this.secretName = defaults.secretName;
         }
 
-        public Builder setHosts(@Nullable Input<List<String>> hosts) {
+        public Builder hosts(@Nullable Input<List<String>> hosts) {
             this.hosts = hosts;
             return this;
         }
 
-        public Builder setHosts(@Nullable List<String> hosts) {
+        public Builder hosts(@Nullable List<String> hosts) {
             this.hosts = Input.ofNullable(hosts);
             return this;
         }
 
-        public Builder setSecretName(@Nullable Input<String> secretName) {
+        public Builder secretName(@Nullable Input<String> secretName) {
             this.secretName = secretName;
             return this;
         }
 
-        public Builder setSecretName(@Nullable String secretName) {
+        public Builder secretName(@Nullable String secretName) {
             this.secretName = Input.ofNullable(secretName);
             return this;
         }

@@ -102,22 +102,22 @@ public final class MutatingWebhookConfiguration {
     	      this.webhooks = defaults.webhooks;
         }
 
-        public Builder setApiVersion(@Nullable String apiVersion) {
+        public Builder apiVersion(@Nullable String apiVersion) {
             this.apiVersion = apiVersion;
             return this;
         }
 
-        public Builder setKind(@Nullable String kind) {
+        public Builder kind(@Nullable String kind) {
             this.kind = kind;
             return this;
         }
 
-        public Builder setMetadata(@Nullable ObjectMeta metadata) {
+        public Builder metadata(@Nullable ObjectMeta metadata) {
             this.metadata = metadata;
             return this;
         }
 
-        public Builder setWebhooks(@Nullable List<MutatingWebhook> webhooks) {
+        public Builder webhooks(@Nullable List<MutatingWebhook> webhooks) {
             this.webhooks = webhooks;
             return this;
         }

@@ -84,17 +84,17 @@ public final class PodsMetricSource {
     	      this.targetAverageValue = defaults.targetAverageValue;
         }
 
-        public Builder setMetricName(String metricName) {
+        public Builder metricName(String metricName) {
             this.metricName = Objects.requireNonNull(metricName);
             return this;
         }
 
-        public Builder setSelector(@Nullable LabelSelector selector) {
+        public Builder selector(@Nullable LabelSelector selector) {
             this.selector = selector;
             return this;
         }
 
-        public Builder setTargetAverageValue(String targetAverageValue) {
+        public Builder targetAverageValue(String targetAverageValue) {
             this.targetAverageValue = Objects.requireNonNull(targetAverageValue);
             return this;
         }

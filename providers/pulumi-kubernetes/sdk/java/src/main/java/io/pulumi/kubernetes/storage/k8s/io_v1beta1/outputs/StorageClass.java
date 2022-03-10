@@ -200,52 +200,52 @@ public final class StorageClass {
     	      this.volumeBindingMode = defaults.volumeBindingMode;
         }
 
-        public Builder setAllowVolumeExpansion(@Nullable Boolean allowVolumeExpansion) {
+        public Builder allowVolumeExpansion(@Nullable Boolean allowVolumeExpansion) {
             this.allowVolumeExpansion = allowVolumeExpansion;
             return this;
         }
 
-        public Builder setAllowedTopologies(@Nullable List<TopologySelectorTerm> allowedTopologies) {
+        public Builder allowedTopologies(@Nullable List<TopologySelectorTerm> allowedTopologies) {
             this.allowedTopologies = allowedTopologies;
             return this;
         }
 
-        public Builder setApiVersion(@Nullable String apiVersion) {
+        public Builder apiVersion(@Nullable String apiVersion) {
             this.apiVersion = apiVersion;
             return this;
         }
 
-        public Builder setKind(@Nullable String kind) {
+        public Builder kind(@Nullable String kind) {
             this.kind = kind;
             return this;
         }
 
-        public Builder setMetadata(@Nullable ObjectMeta metadata) {
+        public Builder metadata(@Nullable ObjectMeta metadata) {
             this.metadata = metadata;
             return this;
         }
 
-        public Builder setMountOptions(@Nullable List<String> mountOptions) {
+        public Builder mountOptions(@Nullable List<String> mountOptions) {
             this.mountOptions = mountOptions;
             return this;
         }
 
-        public Builder setParameters(@Nullable Map<String,String> parameters) {
+        public Builder parameters(@Nullable Map<String,String> parameters) {
             this.parameters = parameters;
             return this;
         }
 
-        public Builder setProvisioner(String provisioner) {
+        public Builder provisioner(String provisioner) {
             this.provisioner = Objects.requireNonNull(provisioner);
             return this;
         }
 
-        public Builder setReclaimPolicy(@Nullable String reclaimPolicy) {
+        public Builder reclaimPolicy(@Nullable String reclaimPolicy) {
             this.reclaimPolicy = reclaimPolicy;
             return this;
         }
 
-        public Builder setVolumeBindingMode(@Nullable String volumeBindingMode) {
+        public Builder volumeBindingMode(@Nullable String volumeBindingMode) {
             this.volumeBindingMode = volumeBindingMode;
             return this;
         }

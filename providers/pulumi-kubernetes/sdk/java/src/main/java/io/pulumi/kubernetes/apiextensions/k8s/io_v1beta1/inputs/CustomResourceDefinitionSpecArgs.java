@@ -210,102 +210,102 @@ public final class CustomResourceDefinitionSpecArgs extends io.pulumi.resources.
     	      this.versions = defaults.versions;
         }
 
-        public Builder setAdditionalPrinterColumns(@Nullable Input<List<CustomResourceColumnDefinitionArgs>> additionalPrinterColumns) {
+        public Builder additionalPrinterColumns(@Nullable Input<List<CustomResourceColumnDefinitionArgs>> additionalPrinterColumns) {
             this.additionalPrinterColumns = additionalPrinterColumns;
             return this;
         }
 
-        public Builder setAdditionalPrinterColumns(@Nullable List<CustomResourceColumnDefinitionArgs> additionalPrinterColumns) {
+        public Builder additionalPrinterColumns(@Nullable List<CustomResourceColumnDefinitionArgs> additionalPrinterColumns) {
             this.additionalPrinterColumns = Input.ofNullable(additionalPrinterColumns);
             return this;
         }
 
-        public Builder setConversion(@Nullable Input<CustomResourceConversionArgs> conversion) {
+        public Builder conversion(@Nullable Input<CustomResourceConversionArgs> conversion) {
             this.conversion = conversion;
             return this;
         }
 
-        public Builder setConversion(@Nullable CustomResourceConversionArgs conversion) {
+        public Builder conversion(@Nullable CustomResourceConversionArgs conversion) {
             this.conversion = Input.ofNullable(conversion);
             return this;
         }
 
-        public Builder setGroup(Input<String> group) {
+        public Builder group(Input<String> group) {
             this.group = Objects.requireNonNull(group);
             return this;
         }
 
-        public Builder setGroup(String group) {
+        public Builder group(String group) {
             this.group = Input.of(Objects.requireNonNull(group));
             return this;
         }
 
-        public Builder setNames(Input<CustomResourceDefinitionNamesArgs> names) {
+        public Builder names(Input<CustomResourceDefinitionNamesArgs> names) {
             this.names = Objects.requireNonNull(names);
             return this;
         }
 
-        public Builder setNames(CustomResourceDefinitionNamesArgs names) {
+        public Builder names(CustomResourceDefinitionNamesArgs names) {
             this.names = Input.of(Objects.requireNonNull(names));
             return this;
         }
 
-        public Builder setPreserveUnknownFields(@Nullable Input<Boolean> preserveUnknownFields) {
+        public Builder preserveUnknownFields(@Nullable Input<Boolean> preserveUnknownFields) {
             this.preserveUnknownFields = preserveUnknownFields;
             return this;
         }
 
-        public Builder setPreserveUnknownFields(@Nullable Boolean preserveUnknownFields) {
+        public Builder preserveUnknownFields(@Nullable Boolean preserveUnknownFields) {
             this.preserveUnknownFields = Input.ofNullable(preserveUnknownFields);
             return this;
         }
 
-        public Builder setScope(Input<String> scope) {
+        public Builder scope(Input<String> scope) {
             this.scope = Objects.requireNonNull(scope);
             return this;
         }
 
-        public Builder setScope(String scope) {
+        public Builder scope(String scope) {
             this.scope = Input.of(Objects.requireNonNull(scope));
             return this;
         }
 
-        public Builder setSubresources(@Nullable Input<CustomResourceSubresourcesArgs> subresources) {
+        public Builder subresources(@Nullable Input<CustomResourceSubresourcesArgs> subresources) {
             this.subresources = subresources;
             return this;
         }
 
-        public Builder setSubresources(@Nullable CustomResourceSubresourcesArgs subresources) {
+        public Builder subresources(@Nullable CustomResourceSubresourcesArgs subresources) {
             this.subresources = Input.ofNullable(subresources);
             return this;
         }
 
-        public Builder setValidation(@Nullable Input<CustomResourceValidationArgs> validation) {
+        public Builder validation(@Nullable Input<CustomResourceValidationArgs> validation) {
             this.validation = validation;
             return this;
         }
 
-        public Builder setValidation(@Nullable CustomResourceValidationArgs validation) {
+        public Builder validation(@Nullable CustomResourceValidationArgs validation) {
             this.validation = Input.ofNullable(validation);
             return this;
         }
 
-        public Builder setVersion(@Nullable Input<String> version) {
+        public Builder version(@Nullable Input<String> version) {
             this.version = version;
             return this;
         }
 
-        public Builder setVersion(@Nullable String version) {
+        public Builder version(@Nullable String version) {
             this.version = Input.ofNullable(version);
             return this;
         }
 
-        public Builder setVersions(@Nullable Input<List<CustomResourceDefinitionVersionArgs>> versions) {
+        public Builder versions(@Nullable Input<List<CustomResourceDefinitionVersionArgs>> versions) {
             this.versions = versions;
             return this;
         }
 
-        public Builder setVersions(@Nullable List<CustomResourceDefinitionVersionArgs> versions) {
+        public Builder versions(@Nullable List<CustomResourceDefinitionVersionArgs> versions) {
             this.versions = Input.ofNullable(versions);
             return this;
         }

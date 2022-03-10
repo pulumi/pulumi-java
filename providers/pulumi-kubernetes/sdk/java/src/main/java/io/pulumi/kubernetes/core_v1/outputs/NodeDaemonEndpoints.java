@@ -50,7 +50,7 @@ public final class NodeDaemonEndpoints {
     	      this.kubeletEndpoint = defaults.kubeletEndpoint;
         }
 
-        public Builder setKubeletEndpoint(@Nullable DaemonEndpoint kubeletEndpoint) {
+        public Builder kubeletEndpoint(@Nullable DaemonEndpoint kubeletEndpoint) {
             this.kubeletEndpoint = kubeletEndpoint;
             return this;
         }

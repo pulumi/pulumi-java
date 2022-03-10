@@ -50,7 +50,7 @@ public final class PriorityLevelConfigurationStatus {
     	      this.conditions = defaults.conditions;
         }
 
-        public Builder setConditions(@Nullable List<PriorityLevelConfigurationCondition> conditions) {
+        public Builder conditions(@Nullable List<PriorityLevelConfigurationCondition> conditions) {
             this.conditions = conditions;
             return this;
         }

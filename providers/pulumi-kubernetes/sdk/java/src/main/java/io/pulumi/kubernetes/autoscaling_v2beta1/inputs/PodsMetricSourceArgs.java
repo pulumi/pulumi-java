@@ -91,32 +91,32 @@ public final class PodsMetricSourceArgs extends io.pulumi.resources.ResourceArgs
     	      this.targetAverageValue = defaults.targetAverageValue;
         }
 
-        public Builder setMetricName(Input<String> metricName) {
+        public Builder metricName(Input<String> metricName) {
             this.metricName = Objects.requireNonNull(metricName);
             return this;
         }
 
-        public Builder setMetricName(String metricName) {
+        public Builder metricName(String metricName) {
             this.metricName = Input.of(Objects.requireNonNull(metricName));
             return this;
         }
 
-        public Builder setSelector(@Nullable Input<LabelSelectorArgs> selector) {
+        public Builder selector(@Nullable Input<LabelSelectorArgs> selector) {
             this.selector = selector;
             return this;
         }
 
-        public Builder setSelector(@Nullable LabelSelectorArgs selector) {
+        public Builder selector(@Nullable LabelSelectorArgs selector) {
             this.selector = Input.ofNullable(selector);
             return this;
         }
 
-        public Builder setTargetAverageValue(Input<String> targetAverageValue) {
+        public Builder targetAverageValue(Input<String> targetAverageValue) {
             this.targetAverageValue = Objects.requireNonNull(targetAverageValue);
             return this;
         }
 
-        public Builder setTargetAverageValue(String targetAverageValue) {
+        public Builder targetAverageValue(String targetAverageValue) {
             this.targetAverageValue = Input.of(Objects.requireNonNull(targetAverageValue));
             return this;
         }

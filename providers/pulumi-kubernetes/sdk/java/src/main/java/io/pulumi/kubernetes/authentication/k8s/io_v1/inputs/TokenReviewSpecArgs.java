@@ -75,22 +75,22 @@ public final class TokenReviewSpecArgs extends io.pulumi.resources.ResourceArgs 
     	      this.token = defaults.token;
         }
 
-        public Builder setAudiences(@Nullable Input<List<String>> audiences) {
+        public Builder audiences(@Nullable Input<List<String>> audiences) {
             this.audiences = audiences;
             return this;
         }
 
-        public Builder setAudiences(@Nullable List<String> audiences) {
+        public Builder audiences(@Nullable List<String> audiences) {
             this.audiences = Input.ofNullable(audiences);
             return this;
         }
 
-        public Builder setToken(@Nullable Input<String> token) {
+        public Builder token(@Nullable Input<String> token) {
             this.token = token;
             return this;
         }
 
-        public Builder setToken(@Nullable String token) {
+        public Builder token(@Nullable String token) {
             this.token = Input.ofNullable(token);
             return this;
         }

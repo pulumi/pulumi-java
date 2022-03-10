@@ -57,12 +57,12 @@ public final class HTTPIngressRuleValueArgs extends io.pulumi.resources.Resource
     	      this.paths = defaults.paths;
         }
 
-        public Builder setPaths(Input<List<HTTPIngressPathArgs>> paths) {
+        public Builder paths(Input<List<HTTPIngressPathArgs>> paths) {
             this.paths = Objects.requireNonNull(paths);
             return this;
         }
 
-        public Builder setPaths(List<HTTPIngressPathArgs> paths) {
+        public Builder paths(List<HTTPIngressPathArgs> paths) {
             this.paths = Input.of(Objects.requireNonNull(paths));
             return this;
         }

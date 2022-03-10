@@ -68,12 +68,12 @@ public final class PersistentVolumeClaimTemplate {
     	      this.spec = defaults.spec;
         }
 
-        public Builder setMetadata(@Nullable ObjectMeta metadata) {
+        public Builder metadata(@Nullable ObjectMeta metadata) {
             this.metadata = metadata;
             return this;
         }
 
-        public Builder setSpec(PersistentVolumeClaimSpec spec) {
+        public Builder spec(PersistentVolumeClaimSpec spec) {
             this.spec = Objects.requireNonNull(spec);
             return this;
         }

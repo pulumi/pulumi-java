@@ -105,42 +105,42 @@ public final class HorizontalPodAutoscalerListArgs extends io.pulumi.resources.R
     	      this.metadata = defaults.metadata;
         }
 
-        public Builder setApiVersion(@Nullable Input<String> apiVersion) {
+        public Builder apiVersion(@Nullable Input<String> apiVersion) {
             this.apiVersion = apiVersion;
             return this;
         }
 
-        public Builder setApiVersion(@Nullable String apiVersion) {
+        public Builder apiVersion(@Nullable String apiVersion) {
             this.apiVersion = Input.ofNullable(apiVersion);
             return this;
         }
 
-        public Builder setItems(Input<List<HorizontalPodAutoscalerArgs>> items) {
+        public Builder items(Input<List<HorizontalPodAutoscalerArgs>> items) {
             this.items = Objects.requireNonNull(items);
             return this;
         }
 
-        public Builder setItems(List<HorizontalPodAutoscalerArgs> items) {
+        public Builder items(List<HorizontalPodAutoscalerArgs> items) {
             this.items = Input.of(Objects.requireNonNull(items));
             return this;
         }
 
-        public Builder setKind(@Nullable Input<String> kind) {
+        public Builder kind(@Nullable Input<String> kind) {
             this.kind = kind;
             return this;
         }
 
-        public Builder setKind(@Nullable String kind) {
+        public Builder kind(@Nullable String kind) {
             this.kind = Input.ofNullable(kind);
             return this;
         }
 
-        public Builder setMetadata(@Nullable Input<ListMetaArgs> metadata) {
+        public Builder metadata(@Nullable Input<ListMetaArgs> metadata) {
             this.metadata = metadata;
             return this;
         }
 
-        public Builder setMetadata(@Nullable ListMetaArgs metadata) {
+        public Builder metadata(@Nullable ListMetaArgs metadata) {
             this.metadata = Input.ofNullable(metadata);
             return this;
         }

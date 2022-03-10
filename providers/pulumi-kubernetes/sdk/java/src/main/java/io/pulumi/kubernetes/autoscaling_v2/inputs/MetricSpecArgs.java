@@ -143,62 +143,62 @@ public final class MetricSpecArgs extends io.pulumi.resources.ResourceArgs {
     	      this.type = defaults.type;
         }
 
-        public Builder setContainerResource(@Nullable Input<ContainerResourceMetricSourceArgs> containerResource) {
+        public Builder containerResource(@Nullable Input<ContainerResourceMetricSourceArgs> containerResource) {
             this.containerResource = containerResource;
             return this;
         }
 
-        public Builder setContainerResource(@Nullable ContainerResourceMetricSourceArgs containerResource) {
+        public Builder containerResource(@Nullable ContainerResourceMetricSourceArgs containerResource) {
             this.containerResource = Input.ofNullable(containerResource);
             return this;
         }
 
-        public Builder setExternal(@Nullable Input<ExternalMetricSourceArgs> external) {
+        public Builder external(@Nullable Input<ExternalMetricSourceArgs> external) {
             this.external = external;
             return this;
         }
 
-        public Builder setExternal(@Nullable ExternalMetricSourceArgs external) {
+        public Builder external(@Nullable ExternalMetricSourceArgs external) {
             this.external = Input.ofNullable(external);
             return this;
         }
 
-        public Builder setObject(@Nullable Input<ObjectMetricSourceArgs> object) {
+        public Builder object(@Nullable Input<ObjectMetricSourceArgs> object) {
             this.object = object;
             return this;
         }
 
-        public Builder setObject(@Nullable ObjectMetricSourceArgs object) {
+        public Builder object(@Nullable ObjectMetricSourceArgs object) {
             this.object = Input.ofNullable(object);
             return this;
         }
 
-        public Builder setPods(@Nullable Input<PodsMetricSourceArgs> pods) {
+        public Builder pods(@Nullable Input<PodsMetricSourceArgs> pods) {
             this.pods = pods;
             return this;
         }
 
-        public Builder setPods(@Nullable PodsMetricSourceArgs pods) {
+        public Builder pods(@Nullable PodsMetricSourceArgs pods) {
             this.pods = Input.ofNullable(pods);
             return this;
         }
 
-        public Builder setResource(@Nullable Input<ResourceMetricSourceArgs> resource) {
+        public Builder resource(@Nullable Input<ResourceMetricSourceArgs> resource) {
             this.resource = resource;
             return this;
         }
 
-        public Builder setResource(@Nullable ResourceMetricSourceArgs resource) {
+        public Builder resource(@Nullable ResourceMetricSourceArgs resource) {
             this.resource = Input.ofNullable(resource);
             return this;
         }
 
-        public Builder setType(Input<String> type) {
+        public Builder type(Input<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }

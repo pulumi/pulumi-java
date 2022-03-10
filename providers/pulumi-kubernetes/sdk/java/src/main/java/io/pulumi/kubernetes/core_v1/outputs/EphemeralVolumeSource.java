@@ -80,12 +80,12 @@ public final class EphemeralVolumeSource {
     	      this.volumeClaimTemplate = defaults.volumeClaimTemplate;
         }
 
-        public Builder setReadOnly(@Nullable Boolean readOnly) {
+        public Builder readOnly(@Nullable Boolean readOnly) {
             this.readOnly = readOnly;
             return this;
         }
 
-        public Builder setVolumeClaimTemplate(@Nullable PersistentVolumeClaimTemplate volumeClaimTemplate) {
+        public Builder volumeClaimTemplate(@Nullable PersistentVolumeClaimTemplate volumeClaimTemplate) {
             this.volumeClaimTemplate = volumeClaimTemplate;
             return this;
         }

@@ -85,17 +85,17 @@ public final class ContainerState {
     	      this.waiting = defaults.waiting;
         }
 
-        public Builder setRunning(@Nullable ContainerStateRunning running) {
+        public Builder running(@Nullable ContainerStateRunning running) {
             this.running = running;
             return this;
         }
 
-        public Builder setTerminated(@Nullable ContainerStateTerminated terminated) {
+        public Builder terminated(@Nullable ContainerStateTerminated terminated) {
             this.terminated = terminated;
             return this;
         }
 
-        public Builder setWaiting(@Nullable ContainerStateWaiting waiting) {
+        public Builder waiting(@Nullable ContainerStateWaiting waiting) {
             this.waiting = waiting;
             return this;
         }

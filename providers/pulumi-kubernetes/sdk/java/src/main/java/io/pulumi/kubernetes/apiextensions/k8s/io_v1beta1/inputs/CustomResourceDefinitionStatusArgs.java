@@ -93,32 +93,32 @@ public final class CustomResourceDefinitionStatusArgs extends io.pulumi.resource
     	      this.storedVersions = defaults.storedVersions;
         }
 
-        public Builder setAcceptedNames(Input<CustomResourceDefinitionNamesArgs> acceptedNames) {
+        public Builder acceptedNames(Input<CustomResourceDefinitionNamesArgs> acceptedNames) {
             this.acceptedNames = Objects.requireNonNull(acceptedNames);
             return this;
         }
 
-        public Builder setAcceptedNames(CustomResourceDefinitionNamesArgs acceptedNames) {
+        public Builder acceptedNames(CustomResourceDefinitionNamesArgs acceptedNames) {
             this.acceptedNames = Input.of(Objects.requireNonNull(acceptedNames));
             return this;
         }
 
-        public Builder setConditions(@Nullable Input<List<CustomResourceDefinitionConditionArgs>> conditions) {
+        public Builder conditions(@Nullable Input<List<CustomResourceDefinitionConditionArgs>> conditions) {
             this.conditions = conditions;
             return this;
         }
 
-        public Builder setConditions(@Nullable List<CustomResourceDefinitionConditionArgs> conditions) {
+        public Builder conditions(@Nullable List<CustomResourceDefinitionConditionArgs> conditions) {
             this.conditions = Input.ofNullable(conditions);
             return this;
         }
 
-        public Builder setStoredVersions(Input<List<String>> storedVersions) {
+        public Builder storedVersions(Input<List<String>> storedVersions) {
             this.storedVersions = Objects.requireNonNull(storedVersions);
             return this;
         }
 
-        public Builder setStoredVersions(List<String> storedVersions) {
+        public Builder storedVersions(List<String> storedVersions) {
             this.storedVersions = Input.of(Objects.requireNonNull(storedVersions));
             return this;
         }

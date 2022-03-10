@@ -126,8 +126,8 @@ public class IngressList extends io.pulumi.resources.CustomResource {
     private static IngressListArgs makeArgs(IngressListArgs args) {
         var builder = args == null ? IngressListArgs.builder() : IngressListArgs.builder(args);
         return builder
-            .setApiVersion("extensions/v1beta1")
-            .setKind("IngressList")
+            .apiVersion("extensions/v1beta1")
+            .kind("IngressList")
             .build();
     }
 

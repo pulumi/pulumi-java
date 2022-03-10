@@ -101,22 +101,22 @@ public final class ReplicaSetSpec {
     	      this.template = defaults.template;
         }
 
-        public Builder setMinReadySeconds(@Nullable Integer minReadySeconds) {
+        public Builder minReadySeconds(@Nullable Integer minReadySeconds) {
             this.minReadySeconds = minReadySeconds;
             return this;
         }
 
-        public Builder setReplicas(@Nullable Integer replicas) {
+        public Builder replicas(@Nullable Integer replicas) {
             this.replicas = replicas;
             return this;
         }
 
-        public Builder setSelector(@Nullable LabelSelector selector) {
+        public Builder selector(@Nullable LabelSelector selector) {
             this.selector = selector;
             return this;
         }
 
-        public Builder setTemplate(@Nullable PodTemplateSpec template) {
+        public Builder template(@Nullable PodTemplateSpec template) {
             this.template = template;
             return this;
         }

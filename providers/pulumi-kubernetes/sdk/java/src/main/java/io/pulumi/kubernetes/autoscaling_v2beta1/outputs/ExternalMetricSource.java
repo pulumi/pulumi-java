@@ -100,22 +100,22 @@ public final class ExternalMetricSource {
     	      this.targetValue = defaults.targetValue;
         }
 
-        public Builder setMetricName(String metricName) {
+        public Builder metricName(String metricName) {
             this.metricName = Objects.requireNonNull(metricName);
             return this;
         }
 
-        public Builder setMetricSelector(@Nullable LabelSelector metricSelector) {
+        public Builder metricSelector(@Nullable LabelSelector metricSelector) {
             this.metricSelector = metricSelector;
             return this;
         }
 
-        public Builder setTargetAverageValue(@Nullable String targetAverageValue) {
+        public Builder targetAverageValue(@Nullable String targetAverageValue) {
             this.targetAverageValue = targetAverageValue;
             return this;
         }
 
-        public Builder setTargetValue(@Nullable String targetValue) {
+        public Builder targetValue(@Nullable String targetValue) {
             this.targetValue = targetValue;
             return this;
         }

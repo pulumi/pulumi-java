@@ -143,62 +143,62 @@ public final class MetricStatusArgs extends io.pulumi.resources.ResourceArgs {
     	      this.type = defaults.type;
         }
 
-        public Builder setContainerResource(@Nullable Input<ContainerResourceMetricStatusArgs> containerResource) {
+        public Builder containerResource(@Nullable Input<ContainerResourceMetricStatusArgs> containerResource) {
             this.containerResource = containerResource;
             return this;
         }
 
-        public Builder setContainerResource(@Nullable ContainerResourceMetricStatusArgs containerResource) {
+        public Builder containerResource(@Nullable ContainerResourceMetricStatusArgs containerResource) {
             this.containerResource = Input.ofNullable(containerResource);
             return this;
         }
 
-        public Builder setExternal(@Nullable Input<ExternalMetricStatusArgs> external) {
+        public Builder external(@Nullable Input<ExternalMetricStatusArgs> external) {
             this.external = external;
             return this;
         }
 
-        public Builder setExternal(@Nullable ExternalMetricStatusArgs external) {
+        public Builder external(@Nullable ExternalMetricStatusArgs external) {
             this.external = Input.ofNullable(external);
             return this;
         }
 
-        public Builder setObject(@Nullable Input<ObjectMetricStatusArgs> object) {
+        public Builder object(@Nullable Input<ObjectMetricStatusArgs> object) {
             this.object = object;
             return this;
         }
 
-        public Builder setObject(@Nullable ObjectMetricStatusArgs object) {
+        public Builder object(@Nullable ObjectMetricStatusArgs object) {
             this.object = Input.ofNullable(object);
             return this;
         }
 
-        public Builder setPods(@Nullable Input<PodsMetricStatusArgs> pods) {
+        public Builder pods(@Nullable Input<PodsMetricStatusArgs> pods) {
             this.pods = pods;
             return this;
         }
 
-        public Builder setPods(@Nullable PodsMetricStatusArgs pods) {
+        public Builder pods(@Nullable PodsMetricStatusArgs pods) {
             this.pods = Input.ofNullable(pods);
             return this;
         }
 
-        public Builder setResource(@Nullable Input<ResourceMetricStatusArgs> resource) {
+        public Builder resource(@Nullable Input<ResourceMetricStatusArgs> resource) {
             this.resource = resource;
             return this;
         }
 
-        public Builder setResource(@Nullable ResourceMetricStatusArgs resource) {
+        public Builder resource(@Nullable ResourceMetricStatusArgs resource) {
             this.resource = Input.ofNullable(resource);
             return this;
         }
 
-        public Builder setType(Input<String> type) {
+        public Builder type(Input<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }

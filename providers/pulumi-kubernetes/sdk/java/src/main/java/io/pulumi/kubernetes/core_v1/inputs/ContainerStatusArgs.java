@@ -189,92 +189,92 @@ public final class ContainerStatusArgs extends io.pulumi.resources.ResourceArgs 
     	      this.state = defaults.state;
         }
 
-        public Builder setContainerID(@Nullable Input<String> containerID) {
+        public Builder containerID(@Nullable Input<String> containerID) {
             this.containerID = containerID;
             return this;
         }
 
-        public Builder setContainerID(@Nullable String containerID) {
+        public Builder containerID(@Nullable String containerID) {
             this.containerID = Input.ofNullable(containerID);
             return this;
         }
 
-        public Builder setImage(Input<String> image) {
+        public Builder image(Input<String> image) {
             this.image = Objects.requireNonNull(image);
             return this;
         }
 
-        public Builder setImage(String image) {
+        public Builder image(String image) {
             this.image = Input.of(Objects.requireNonNull(image));
             return this;
         }
 
-        public Builder setImageID(Input<String> imageID) {
+        public Builder imageID(Input<String> imageID) {
             this.imageID = Objects.requireNonNull(imageID);
             return this;
         }
 
-        public Builder setImageID(String imageID) {
+        public Builder imageID(String imageID) {
             this.imageID = Input.of(Objects.requireNonNull(imageID));
             return this;
         }
 
-        public Builder setLastState(@Nullable Input<ContainerStateArgs> lastState) {
+        public Builder lastState(@Nullable Input<ContainerStateArgs> lastState) {
             this.lastState = lastState;
             return this;
         }
 
-        public Builder setLastState(@Nullable ContainerStateArgs lastState) {
+        public Builder lastState(@Nullable ContainerStateArgs lastState) {
             this.lastState = Input.ofNullable(lastState);
             return this;
         }
 
-        public Builder setName(Input<String> name) {
+        public Builder name(Input<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder setReady(Input<Boolean> ready) {
+        public Builder ready(Input<Boolean> ready) {
             this.ready = Objects.requireNonNull(ready);
             return this;
         }
 
-        public Builder setReady(Boolean ready) {
+        public Builder ready(Boolean ready) {
             this.ready = Input.of(Objects.requireNonNull(ready));
             return this;
         }
 
-        public Builder setRestartCount(Input<Integer> restartCount) {
+        public Builder restartCount(Input<Integer> restartCount) {
             this.restartCount = Objects.requireNonNull(restartCount);
             return this;
         }
 
-        public Builder setRestartCount(Integer restartCount) {
+        public Builder restartCount(Integer restartCount) {
             this.restartCount = Input.of(Objects.requireNonNull(restartCount));
             return this;
         }
 
-        public Builder setStarted(@Nullable Input<Boolean> started) {
+        public Builder started(@Nullable Input<Boolean> started) {
             this.started = started;
             return this;
         }
 
-        public Builder setStarted(@Nullable Boolean started) {
+        public Builder started(@Nullable Boolean started) {
             this.started = Input.ofNullable(started);
             return this;
         }
 
-        public Builder setState(@Nullable Input<ContainerStateArgs> state) {
+        public Builder state(@Nullable Input<ContainerStateArgs> state) {
             this.state = state;
             return this;
         }
 
-        public Builder setState(@Nullable ContainerStateArgs state) {
+        public Builder state(@Nullable ContainerStateArgs state) {
             this.state = Input.ofNullable(state);
             return this;
         }

@@ -126,8 +126,8 @@ public class PriorityClassList extends io.pulumi.resources.CustomResource {
     private static PriorityClassListArgs makeArgs(PriorityClassListArgs args) {
         var builder = args == null ? PriorityClassListArgs.builder() : PriorityClassListArgs.builder(args);
         return builder
-            .setApiVersion("scheduling.k8s.io/v1alpha1")
-            .setKind("PriorityClassList")
+            .apiVersion("scheduling.k8s.io/v1alpha1")
+            .kind("PriorityClassList")
             .build();
     }
 

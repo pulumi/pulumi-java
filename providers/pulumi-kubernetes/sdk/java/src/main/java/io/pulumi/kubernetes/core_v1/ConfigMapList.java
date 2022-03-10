@@ -126,8 +126,8 @@ public class ConfigMapList extends io.pulumi.resources.CustomResource {
     private static ConfigMapListArgs makeArgs(ConfigMapListArgs args) {
         var builder = args == null ? ConfigMapListArgs.builder() : ConfigMapListArgs.builder(args);
         return builder
-            .setApiVersion("v1")
-            .setKind("ConfigMapList")
+            .apiVersion("v1")
+            .kind("ConfigMapList")
             .build();
     }
 

@@ -77,22 +77,22 @@ public final class HorizontalPodAutoscalerBehaviorArgs extends io.pulumi.resourc
     	      this.scaleUp = defaults.scaleUp;
         }
 
-        public Builder setScaleDown(@Nullable Input<HPAScalingRulesArgs> scaleDown) {
+        public Builder scaleDown(@Nullable Input<HPAScalingRulesArgs> scaleDown) {
             this.scaleDown = scaleDown;
             return this;
         }
 
-        public Builder setScaleDown(@Nullable HPAScalingRulesArgs scaleDown) {
+        public Builder scaleDown(@Nullable HPAScalingRulesArgs scaleDown) {
             this.scaleDown = Input.ofNullable(scaleDown);
             return this;
         }
 
-        public Builder setScaleUp(@Nullable Input<HPAScalingRulesArgs> scaleUp) {
+        public Builder scaleUp(@Nullable Input<HPAScalingRulesArgs> scaleUp) {
             this.scaleUp = scaleUp;
             return this;
         }
 
-        public Builder setScaleUp(@Nullable HPAScalingRulesArgs scaleUp) {
+        public Builder scaleUp(@Nullable HPAScalingRulesArgs scaleUp) {
             this.scaleUp = Input.ofNullable(scaleUp);
             return this;
         }

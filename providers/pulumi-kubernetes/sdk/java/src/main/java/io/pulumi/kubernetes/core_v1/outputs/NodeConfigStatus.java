@@ -100,22 +100,22 @@ public final class NodeConfigStatus {
     	      this.lastKnownGood = defaults.lastKnownGood;
         }
 
-        public Builder setActive(@Nullable NodeConfigSource active) {
+        public Builder active(@Nullable NodeConfigSource active) {
             this.active = active;
             return this;
         }
 
-        public Builder setAssigned(@Nullable NodeConfigSource assigned) {
+        public Builder assigned(@Nullable NodeConfigSource assigned) {
             this.assigned = assigned;
             return this;
         }
 
-        public Builder setError(@Nullable String error) {
+        public Builder error(@Nullable String error) {
             this.error = error;
             return this;
         }
 
-        public Builder setLastKnownGood(@Nullable NodeConfigSource lastKnownGood) {
+        public Builder lastKnownGood(@Nullable NodeConfigSource lastKnownGood) {
             this.lastKnownGood = lastKnownGood;
             return this;
         }

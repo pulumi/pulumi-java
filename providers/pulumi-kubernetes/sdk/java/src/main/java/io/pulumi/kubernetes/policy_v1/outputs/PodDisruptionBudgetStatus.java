@@ -167,37 +167,37 @@ public final class PodDisruptionBudgetStatus {
     	      this.observedGeneration = defaults.observedGeneration;
         }
 
-        public Builder setConditions(@Nullable List<Condition> conditions) {
+        public Builder conditions(@Nullable List<Condition> conditions) {
             this.conditions = conditions;
             return this;
         }
 
-        public Builder setCurrentHealthy(Integer currentHealthy) {
+        public Builder currentHealthy(Integer currentHealthy) {
             this.currentHealthy = Objects.requireNonNull(currentHealthy);
             return this;
         }
 
-        public Builder setDesiredHealthy(Integer desiredHealthy) {
+        public Builder desiredHealthy(Integer desiredHealthy) {
             this.desiredHealthy = Objects.requireNonNull(desiredHealthy);
             return this;
         }
 
-        public Builder setDisruptedPods(@Nullable Map<String,String> disruptedPods) {
+        public Builder disruptedPods(@Nullable Map<String,String> disruptedPods) {
             this.disruptedPods = disruptedPods;
             return this;
         }
 
-        public Builder setDisruptionsAllowed(Integer disruptionsAllowed) {
+        public Builder disruptionsAllowed(Integer disruptionsAllowed) {
             this.disruptionsAllowed = Objects.requireNonNull(disruptionsAllowed);
             return this;
         }
 
-        public Builder setExpectedPods(Integer expectedPods) {
+        public Builder expectedPods(Integer expectedPods) {
             this.expectedPods = Objects.requireNonNull(expectedPods);
             return this;
         }
 
-        public Builder setObservedGeneration(@Nullable Integer observedGeneration) {
+        public Builder observedGeneration(@Nullable Integer observedGeneration) {
             this.observedGeneration = observedGeneration;
             return this;
         }

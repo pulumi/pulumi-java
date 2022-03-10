@@ -319,162 +319,162 @@ public final class ObjectMetaArgs extends io.pulumi.resources.ResourceArgs {
     	      this.uid = defaults.uid;
         }
 
-        public Builder setAnnotations(@Nullable Input<Map<String,String>> annotations) {
+        public Builder annotations(@Nullable Input<Map<String,String>> annotations) {
             this.annotations = annotations;
             return this;
         }
 
-        public Builder setAnnotations(@Nullable Map<String,String> annotations) {
+        public Builder annotations(@Nullable Map<String,String> annotations) {
             this.annotations = Input.ofNullable(annotations);
             return this;
         }
 
-        public Builder setClusterName(@Nullable Input<String> clusterName) {
+        public Builder clusterName(@Nullable Input<String> clusterName) {
             this.clusterName = clusterName;
             return this;
         }
 
-        public Builder setClusterName(@Nullable String clusterName) {
+        public Builder clusterName(@Nullable String clusterName) {
             this.clusterName = Input.ofNullable(clusterName);
             return this;
         }
 
-        public Builder setCreationTimestamp(@Nullable Input<String> creationTimestamp) {
+        public Builder creationTimestamp(@Nullable Input<String> creationTimestamp) {
             this.creationTimestamp = creationTimestamp;
             return this;
         }
 
-        public Builder setCreationTimestamp(@Nullable String creationTimestamp) {
+        public Builder creationTimestamp(@Nullable String creationTimestamp) {
             this.creationTimestamp = Input.ofNullable(creationTimestamp);
             return this;
         }
 
-        public Builder setDeletionGracePeriodSeconds(@Nullable Input<Integer> deletionGracePeriodSeconds) {
+        public Builder deletionGracePeriodSeconds(@Nullable Input<Integer> deletionGracePeriodSeconds) {
             this.deletionGracePeriodSeconds = deletionGracePeriodSeconds;
             return this;
         }
 
-        public Builder setDeletionGracePeriodSeconds(@Nullable Integer deletionGracePeriodSeconds) {
+        public Builder deletionGracePeriodSeconds(@Nullable Integer deletionGracePeriodSeconds) {
             this.deletionGracePeriodSeconds = Input.ofNullable(deletionGracePeriodSeconds);
             return this;
         }
 
-        public Builder setDeletionTimestamp(@Nullable Input<String> deletionTimestamp) {
+        public Builder deletionTimestamp(@Nullable Input<String> deletionTimestamp) {
             this.deletionTimestamp = deletionTimestamp;
             return this;
         }
 
-        public Builder setDeletionTimestamp(@Nullable String deletionTimestamp) {
+        public Builder deletionTimestamp(@Nullable String deletionTimestamp) {
             this.deletionTimestamp = Input.ofNullable(deletionTimestamp);
             return this;
         }
 
-        public Builder setFinalizers(@Nullable Input<List<String>> finalizers) {
+        public Builder finalizers(@Nullable Input<List<String>> finalizers) {
             this.finalizers = finalizers;
             return this;
         }
 
-        public Builder setFinalizers(@Nullable List<String> finalizers) {
+        public Builder finalizers(@Nullable List<String> finalizers) {
             this.finalizers = Input.ofNullable(finalizers);
             return this;
         }
 
-        public Builder setGenerateName(@Nullable Input<String> generateName) {
+        public Builder generateName(@Nullable Input<String> generateName) {
             this.generateName = generateName;
             return this;
         }
 
-        public Builder setGenerateName(@Nullable String generateName) {
+        public Builder generateName(@Nullable String generateName) {
             this.generateName = Input.ofNullable(generateName);
             return this;
         }
 
-        public Builder setGeneration(@Nullable Input<Integer> generation) {
+        public Builder generation(@Nullable Input<Integer> generation) {
             this.generation = generation;
             return this;
         }
 
-        public Builder setGeneration(@Nullable Integer generation) {
+        public Builder generation(@Nullable Integer generation) {
             this.generation = Input.ofNullable(generation);
             return this;
         }
 
-        public Builder setLabels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Input<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
-        public Builder setLabels(@Nullable Map<String,String> labels) {
+        public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Input.ofNullable(labels);
             return this;
         }
 
-        public Builder setManagedFields(@Nullable Input<List<ManagedFieldsEntryArgs>> managedFields) {
+        public Builder managedFields(@Nullable Input<List<ManagedFieldsEntryArgs>> managedFields) {
             this.managedFields = managedFields;
             return this;
         }
 
-        public Builder setManagedFields(@Nullable List<ManagedFieldsEntryArgs> managedFields) {
+        public Builder managedFields(@Nullable List<ManagedFieldsEntryArgs> managedFields) {
             this.managedFields = Input.ofNullable(managedFields);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setNamespace(@Nullable Input<String> namespace) {
+        public Builder namespace(@Nullable Input<String> namespace) {
             this.namespace = namespace;
             return this;
         }
 
-        public Builder setNamespace(@Nullable String namespace) {
+        public Builder namespace(@Nullable String namespace) {
             this.namespace = Input.ofNullable(namespace);
             return this;
         }
 
-        public Builder setOwnerReferences(@Nullable Input<List<OwnerReferenceArgs>> ownerReferences) {
+        public Builder ownerReferences(@Nullable Input<List<OwnerReferenceArgs>> ownerReferences) {
             this.ownerReferences = ownerReferences;
             return this;
         }
 
-        public Builder setOwnerReferences(@Nullable List<OwnerReferenceArgs> ownerReferences) {
+        public Builder ownerReferences(@Nullable List<OwnerReferenceArgs> ownerReferences) {
             this.ownerReferences = Input.ofNullable(ownerReferences);
             return this;
         }
 
-        public Builder setResourceVersion(@Nullable Input<String> resourceVersion) {
+        public Builder resourceVersion(@Nullable Input<String> resourceVersion) {
             this.resourceVersion = resourceVersion;
             return this;
         }
 
-        public Builder setResourceVersion(@Nullable String resourceVersion) {
+        public Builder resourceVersion(@Nullable String resourceVersion) {
             this.resourceVersion = Input.ofNullable(resourceVersion);
             return this;
         }
 
-        public Builder setSelfLink(@Nullable Input<String> selfLink) {
+        public Builder selfLink(@Nullable Input<String> selfLink) {
             this.selfLink = selfLink;
             return this;
         }
 
-        public Builder setSelfLink(@Nullable String selfLink) {
+        public Builder selfLink(@Nullable String selfLink) {
             this.selfLink = Input.ofNullable(selfLink);
             return this;
         }
 
-        public Builder setUid(@Nullable Input<String> uid) {
+        public Builder uid(@Nullable Input<String> uid) {
             this.uid = uid;
             return this;
         }
 
-        public Builder setUid(@Nullable String uid) {
+        public Builder uid(@Nullable String uid) {
             this.uid = Input.ofNullable(uid);
             return this;
         }

@@ -69,12 +69,12 @@ public final class CronJobStatus {
     	      this.lastScheduleTime = defaults.lastScheduleTime;
         }
 
-        public Builder setActive(@Nullable List<ObjectReference> active) {
+        public Builder active(@Nullable List<ObjectReference> active) {
             this.active = active;
             return this;
         }
 
-        public Builder setLastScheduleTime(@Nullable String lastScheduleTime) {
+        public Builder lastScheduleTime(@Nullable String lastScheduleTime) {
             this.lastScheduleTime = lastScheduleTime;
             return this;
         }

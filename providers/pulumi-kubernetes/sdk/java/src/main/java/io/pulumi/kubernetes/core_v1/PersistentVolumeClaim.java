@@ -140,8 +140,8 @@ public class PersistentVolumeClaim extends io.pulumi.resources.CustomResource {
     private static PersistentVolumeClaimArgs makeArgs(@Nullable PersistentVolumeClaimArgs args) {
         var builder = args == null ? PersistentVolumeClaimArgs.builder() : PersistentVolumeClaimArgs.builder(args);
         return builder
-            .setApiVersion("v1")
-            .setKind("PersistentVolumeClaim")
+            .apiVersion("v1")
+            .kind("PersistentVolumeClaim")
             .build();
     }
 

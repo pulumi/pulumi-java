@@ -142,8 +142,8 @@ public class LocalSubjectAccessReview extends io.pulumi.resources.CustomResource
     private static LocalSubjectAccessReviewArgs makeArgs(LocalSubjectAccessReviewArgs args) {
         var builder = args == null ? LocalSubjectAccessReviewArgs.builder() : LocalSubjectAccessReviewArgs.builder(args);
         return builder
-            .setApiVersion("authorization.k8s.io/v1")
-            .setKind("LocalSubjectAccessReview")
+            .apiVersion("authorization.k8s.io/v1")
+            .kind("LocalSubjectAccessReview")
             .build();
     }
 

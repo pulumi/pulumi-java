@@ -101,22 +101,22 @@ public final class IngressClass {
     	      this.spec = defaults.spec;
         }
 
-        public Builder setApiVersion(@Nullable String apiVersion) {
+        public Builder apiVersion(@Nullable String apiVersion) {
             this.apiVersion = apiVersion;
             return this;
         }
 
-        public Builder setKind(@Nullable String kind) {
+        public Builder kind(@Nullable String kind) {
             this.kind = kind;
             return this;
         }
 
-        public Builder setMetadata(@Nullable ObjectMeta metadata) {
+        public Builder metadata(@Nullable ObjectMeta metadata) {
             this.metadata = metadata;
             return this;
         }
 
-        public Builder setSpec(@Nullable IngressClassSpec spec) {
+        public Builder spec(@Nullable IngressClassSpec spec) {
             this.spec = spec;
             return this;
         }

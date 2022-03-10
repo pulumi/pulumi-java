@@ -139,62 +139,62 @@ public final class VolumeMountArgs extends io.pulumi.resources.ResourceArgs {
     	      this.subPathExpr = defaults.subPathExpr;
         }
 
-        public Builder setMountPath(Input<String> mountPath) {
+        public Builder mountPath(Input<String> mountPath) {
             this.mountPath = Objects.requireNonNull(mountPath);
             return this;
         }
 
-        public Builder setMountPath(String mountPath) {
+        public Builder mountPath(String mountPath) {
             this.mountPath = Input.of(Objects.requireNonNull(mountPath));
             return this;
         }
 
-        public Builder setMountPropagation(@Nullable Input<String> mountPropagation) {
+        public Builder mountPropagation(@Nullable Input<String> mountPropagation) {
             this.mountPropagation = mountPropagation;
             return this;
         }
 
-        public Builder setMountPropagation(@Nullable String mountPropagation) {
+        public Builder mountPropagation(@Nullable String mountPropagation) {
             this.mountPropagation = Input.ofNullable(mountPropagation);
             return this;
         }
 
-        public Builder setName(Input<String> name) {
+        public Builder name(Input<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder setReadOnly(@Nullable Input<Boolean> readOnly) {
+        public Builder readOnly(@Nullable Input<Boolean> readOnly) {
             this.readOnly = readOnly;
             return this;
         }
 
-        public Builder setReadOnly(@Nullable Boolean readOnly) {
+        public Builder readOnly(@Nullable Boolean readOnly) {
             this.readOnly = Input.ofNullable(readOnly);
             return this;
         }
 
-        public Builder setSubPath(@Nullable Input<String> subPath) {
+        public Builder subPath(@Nullable Input<String> subPath) {
             this.subPath = subPath;
             return this;
         }
 
-        public Builder setSubPath(@Nullable String subPath) {
+        public Builder subPath(@Nullable String subPath) {
             this.subPath = Input.ofNullable(subPath);
             return this;
         }
 
-        public Builder setSubPathExpr(@Nullable Input<String> subPathExpr) {
+        public Builder subPathExpr(@Nullable Input<String> subPathExpr) {
             this.subPathExpr = subPathExpr;
             return this;
         }
 
-        public Builder setSubPathExpr(@Nullable String subPathExpr) {
+        public Builder subPathExpr(@Nullable String subPathExpr) {
             this.subPathExpr = Input.ofNullable(subPathExpr);
             return this;
         }

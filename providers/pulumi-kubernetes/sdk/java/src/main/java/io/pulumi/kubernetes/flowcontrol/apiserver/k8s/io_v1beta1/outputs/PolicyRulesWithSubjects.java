@@ -85,17 +85,17 @@ public final class PolicyRulesWithSubjects {
     	      this.subjects = defaults.subjects;
         }
 
-        public Builder setNonResourceRules(@Nullable List<NonResourcePolicyRule> nonResourceRules) {
+        public Builder nonResourceRules(@Nullable List<NonResourcePolicyRule> nonResourceRules) {
             this.nonResourceRules = nonResourceRules;
             return this;
         }
 
-        public Builder setResourceRules(@Nullable List<ResourcePolicyRule> resourceRules) {
+        public Builder resourceRules(@Nullable List<ResourcePolicyRule> resourceRules) {
             this.resourceRules = resourceRules;
             return this;
         }
 
-        public Builder setSubjects(List<Subject> subjects) {
+        public Builder subjects(List<Subject> subjects) {
             this.subjects = Objects.requireNonNull(subjects);
             return this;
         }

@@ -81,12 +81,12 @@ public final class SeccompProfile {
     	      this.type = defaults.type;
         }
 
-        public Builder setLocalhostProfile(@Nullable String localhostProfile) {
+        public Builder localhostProfile(@Nullable String localhostProfile) {
             this.localhostProfile = localhostProfile;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

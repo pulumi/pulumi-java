@@ -123,52 +123,52 @@ public final class PolicyRuleArgs extends io.pulumi.resources.ResourceArgs {
     	      this.verbs = defaults.verbs;
         }
 
-        public Builder setApiGroups(@Nullable Input<List<String>> apiGroups) {
+        public Builder apiGroups(@Nullable Input<List<String>> apiGroups) {
             this.apiGroups = apiGroups;
             return this;
         }
 
-        public Builder setApiGroups(@Nullable List<String> apiGroups) {
+        public Builder apiGroups(@Nullable List<String> apiGroups) {
             this.apiGroups = Input.ofNullable(apiGroups);
             return this;
         }
 
-        public Builder setNonResourceURLs(@Nullable Input<List<String>> nonResourceURLs) {
+        public Builder nonResourceURLs(@Nullable Input<List<String>> nonResourceURLs) {
             this.nonResourceURLs = nonResourceURLs;
             return this;
         }
 
-        public Builder setNonResourceURLs(@Nullable List<String> nonResourceURLs) {
+        public Builder nonResourceURLs(@Nullable List<String> nonResourceURLs) {
             this.nonResourceURLs = Input.ofNullable(nonResourceURLs);
             return this;
         }
 
-        public Builder setResourceNames(@Nullable Input<List<String>> resourceNames) {
+        public Builder resourceNames(@Nullable Input<List<String>> resourceNames) {
             this.resourceNames = resourceNames;
             return this;
         }
 
-        public Builder setResourceNames(@Nullable List<String> resourceNames) {
+        public Builder resourceNames(@Nullable List<String> resourceNames) {
             this.resourceNames = Input.ofNullable(resourceNames);
             return this;
         }
 
-        public Builder setResources(@Nullable Input<List<String>> resources) {
+        public Builder resources(@Nullable Input<List<String>> resources) {
             this.resources = resources;
             return this;
         }
 
-        public Builder setResources(@Nullable List<String> resources) {
+        public Builder resources(@Nullable List<String> resources) {
             this.resources = Input.ofNullable(resources);
             return this;
         }
 
-        public Builder setVerbs(Input<List<String>> verbs) {
+        public Builder verbs(Input<List<String>> verbs) {
             this.verbs = Objects.requireNonNull(verbs);
             return this;
         }
 
-        public Builder setVerbs(List<String> verbs) {
+        public Builder verbs(List<String> verbs) {
             this.verbs = Input.of(Objects.requireNonNull(verbs));
             return this;
         }

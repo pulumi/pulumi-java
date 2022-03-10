@@ -142,8 +142,8 @@ public class ClusterRole extends io.pulumi.resources.CustomResource {
     private static ClusterRoleArgs makeArgs(@Nullable ClusterRoleArgs args) {
         var builder = args == null ? ClusterRoleArgs.builder() : ClusterRoleArgs.builder(args);
         return builder
-            .setApiVersion("rbac.authorization.k8s.io/v1alpha1")
-            .setKind("ClusterRole")
+            .apiVersion("rbac.authorization.k8s.io/v1alpha1")
+            .kind("ClusterRole")
             .build();
     }
 

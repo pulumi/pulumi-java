@@ -141,62 +141,62 @@ public final class CephFSVolumeSourceArgs extends io.pulumi.resources.ResourceAr
     	      this.user = defaults.user;
         }
 
-        public Builder setMonitors(Input<List<String>> monitors) {
+        public Builder monitors(Input<List<String>> monitors) {
             this.monitors = Objects.requireNonNull(monitors);
             return this;
         }
 
-        public Builder setMonitors(List<String> monitors) {
+        public Builder monitors(List<String> monitors) {
             this.monitors = Input.of(Objects.requireNonNull(monitors));
             return this;
         }
 
-        public Builder setPath(@Nullable Input<String> path) {
+        public Builder path(@Nullable Input<String> path) {
             this.path = path;
             return this;
         }
 
-        public Builder setPath(@Nullable String path) {
+        public Builder path(@Nullable String path) {
             this.path = Input.ofNullable(path);
             return this;
         }
 
-        public Builder setReadOnly(@Nullable Input<Boolean> readOnly) {
+        public Builder readOnly(@Nullable Input<Boolean> readOnly) {
             this.readOnly = readOnly;
             return this;
         }
 
-        public Builder setReadOnly(@Nullable Boolean readOnly) {
+        public Builder readOnly(@Nullable Boolean readOnly) {
             this.readOnly = Input.ofNullable(readOnly);
             return this;
         }
 
-        public Builder setSecretFile(@Nullable Input<String> secretFile) {
+        public Builder secretFile(@Nullable Input<String> secretFile) {
             this.secretFile = secretFile;
             return this;
         }
 
-        public Builder setSecretFile(@Nullable String secretFile) {
+        public Builder secretFile(@Nullable String secretFile) {
             this.secretFile = Input.ofNullable(secretFile);
             return this;
         }
 
-        public Builder setSecretRef(@Nullable Input<LocalObjectReferenceArgs> secretRef) {
+        public Builder secretRef(@Nullable Input<LocalObjectReferenceArgs> secretRef) {
             this.secretRef = secretRef;
             return this;
         }
 
-        public Builder setSecretRef(@Nullable LocalObjectReferenceArgs secretRef) {
+        public Builder secretRef(@Nullable LocalObjectReferenceArgs secretRef) {
             this.secretRef = Input.ofNullable(secretRef);
             return this;
         }
 
-        public Builder setUser(@Nullable Input<String> user) {
+        public Builder user(@Nullable Input<String> user) {
             this.user = user;
             return this;
         }
 
-        public Builder setUser(@Nullable String user) {
+        public Builder user(@Nullable String user) {
             this.user = Input.ofNullable(user);
             return this;
         }

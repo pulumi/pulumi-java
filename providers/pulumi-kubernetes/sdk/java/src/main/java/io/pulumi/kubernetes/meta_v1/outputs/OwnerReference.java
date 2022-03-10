@@ -132,32 +132,32 @@ public final class OwnerReference {
     	      this.uid = defaults.uid;
         }
 
-        public Builder setApiVersion(String apiVersion) {
+        public Builder apiVersion(String apiVersion) {
             this.apiVersion = Objects.requireNonNull(apiVersion);
             return this;
         }
 
-        public Builder setBlockOwnerDeletion(@Nullable Boolean blockOwnerDeletion) {
+        public Builder blockOwnerDeletion(@Nullable Boolean blockOwnerDeletion) {
             this.blockOwnerDeletion = blockOwnerDeletion;
             return this;
         }
 
-        public Builder setController(@Nullable Boolean controller) {
+        public Builder controller(@Nullable Boolean controller) {
             this.controller = controller;
             return this;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setUid(String uid) {
+        public Builder uid(String uid) {
             this.uid = Objects.requireNonNull(uid);
             return this;
         }

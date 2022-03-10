@@ -165,42 +165,42 @@ public final class DeploymentStatus {
     	      this.updatedReplicas = defaults.updatedReplicas;
         }
 
-        public Builder setAvailableReplicas(@Nullable Integer availableReplicas) {
+        public Builder availableReplicas(@Nullable Integer availableReplicas) {
             this.availableReplicas = availableReplicas;
             return this;
         }
 
-        public Builder setCollisionCount(@Nullable Integer collisionCount) {
+        public Builder collisionCount(@Nullable Integer collisionCount) {
             this.collisionCount = collisionCount;
             return this;
         }
 
-        public Builder setConditions(@Nullable List<DeploymentCondition> conditions) {
+        public Builder conditions(@Nullable List<DeploymentCondition> conditions) {
             this.conditions = conditions;
             return this;
         }
 
-        public Builder setObservedGeneration(@Nullable Integer observedGeneration) {
+        public Builder observedGeneration(@Nullable Integer observedGeneration) {
             this.observedGeneration = observedGeneration;
             return this;
         }
 
-        public Builder setReadyReplicas(@Nullable Integer readyReplicas) {
+        public Builder readyReplicas(@Nullable Integer readyReplicas) {
             this.readyReplicas = readyReplicas;
             return this;
         }
 
-        public Builder setReplicas(@Nullable Integer replicas) {
+        public Builder replicas(@Nullable Integer replicas) {
             this.replicas = replicas;
             return this;
         }
 
-        public Builder setUnavailableReplicas(@Nullable Integer unavailableReplicas) {
+        public Builder unavailableReplicas(@Nullable Integer unavailableReplicas) {
             this.unavailableReplicas = unavailableReplicas;
             return this;
         }
 
-        public Builder setUpdatedReplicas(@Nullable Integer updatedReplicas) {
+        public Builder updatedReplicas(@Nullable Integer updatedReplicas) {
             this.updatedReplicas = updatedReplicas;
             return this;
         }

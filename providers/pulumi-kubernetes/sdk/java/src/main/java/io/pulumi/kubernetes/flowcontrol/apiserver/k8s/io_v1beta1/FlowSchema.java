@@ -142,8 +142,8 @@ public class FlowSchema extends io.pulumi.resources.CustomResource {
     private static FlowSchemaArgs makeArgs(@Nullable FlowSchemaArgs args) {
         var builder = args == null ? FlowSchemaArgs.builder() : FlowSchemaArgs.builder(args);
         return builder
-            .setApiVersion("flowcontrol.apiserver.k8s.io/v1beta1")
-            .setKind("FlowSchema")
+            .apiVersion("flowcontrol.apiserver.k8s.io/v1beta1")
+            .kind("FlowSchema")
             .build();
     }
 

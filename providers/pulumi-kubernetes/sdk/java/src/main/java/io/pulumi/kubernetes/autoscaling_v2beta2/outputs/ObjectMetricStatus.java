@@ -75,17 +75,17 @@ public final class ObjectMetricStatus {
     	      this.metric = defaults.metric;
         }
 
-        public Builder setCurrent(MetricValueStatus current) {
+        public Builder current(MetricValueStatus current) {
             this.current = Objects.requireNonNull(current);
             return this;
         }
 
-        public Builder setDescribedObject(CrossVersionObjectReference describedObject) {
+        public Builder describedObject(CrossVersionObjectReference describedObject) {
             this.describedObject = Objects.requireNonNull(describedObject);
             return this;
         }
 
-        public Builder setMetric(MetricIdentifier metric) {
+        public Builder metric(MetricIdentifier metric) {
             this.metric = Objects.requireNonNull(metric);
             return this;
         }

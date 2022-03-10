@@ -118,8 +118,8 @@ public class AuditSinkList extends io.pulumi.resources.CustomResource {
     private static AuditSinkListArgs makeArgs(AuditSinkListArgs args) {
         var builder = args == null ? AuditSinkListArgs.builder() : AuditSinkListArgs.builder(args);
         return builder
-            .setApiVersion("auditregistration.k8s.io/v1alpha1")
-            .setKind("AuditSinkList")
+            .apiVersion("auditregistration.k8s.io/v1alpha1")
+            .kind("AuditSinkList")
             .build();
     }
 

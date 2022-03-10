@@ -93,32 +93,32 @@ public final class HPAScalingRulesArgs extends io.pulumi.resources.ResourceArgs 
     	      this.stabilizationWindowSeconds = defaults.stabilizationWindowSeconds;
         }
 
-        public Builder setPolicies(@Nullable Input<List<HPAScalingPolicyArgs>> policies) {
+        public Builder policies(@Nullable Input<List<HPAScalingPolicyArgs>> policies) {
             this.policies = policies;
             return this;
         }
 
-        public Builder setPolicies(@Nullable List<HPAScalingPolicyArgs> policies) {
+        public Builder policies(@Nullable List<HPAScalingPolicyArgs> policies) {
             this.policies = Input.ofNullable(policies);
             return this;
         }
 
-        public Builder setSelectPolicy(@Nullable Input<String> selectPolicy) {
+        public Builder selectPolicy(@Nullable Input<String> selectPolicy) {
             this.selectPolicy = selectPolicy;
             return this;
         }
 
-        public Builder setSelectPolicy(@Nullable String selectPolicy) {
+        public Builder selectPolicy(@Nullable String selectPolicy) {
             this.selectPolicy = Input.ofNullable(selectPolicy);
             return this;
         }
 
-        public Builder setStabilizationWindowSeconds(@Nullable Input<Integer> stabilizationWindowSeconds) {
+        public Builder stabilizationWindowSeconds(@Nullable Input<Integer> stabilizationWindowSeconds) {
             this.stabilizationWindowSeconds = stabilizationWindowSeconds;
             return this;
         }
 
-        public Builder setStabilizationWindowSeconds(@Nullable Integer stabilizationWindowSeconds) {
+        public Builder stabilizationWindowSeconds(@Nullable Integer stabilizationWindowSeconds) {
             this.stabilizationWindowSeconds = Input.ofNullable(stabilizationWindowSeconds);
             return this;
         }

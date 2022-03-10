@@ -193,52 +193,52 @@ public final class NodeSystemInfo {
     	      this.systemUUID = defaults.systemUUID;
         }
 
-        public Builder setArchitecture(String architecture) {
+        public Builder architecture(String architecture) {
             this.architecture = Objects.requireNonNull(architecture);
             return this;
         }
 
-        public Builder setBootID(String bootID) {
+        public Builder bootID(String bootID) {
             this.bootID = Objects.requireNonNull(bootID);
             return this;
         }
 
-        public Builder setContainerRuntimeVersion(String containerRuntimeVersion) {
+        public Builder containerRuntimeVersion(String containerRuntimeVersion) {
             this.containerRuntimeVersion = Objects.requireNonNull(containerRuntimeVersion);
             return this;
         }
 
-        public Builder setKernelVersion(String kernelVersion) {
+        public Builder kernelVersion(String kernelVersion) {
             this.kernelVersion = Objects.requireNonNull(kernelVersion);
             return this;
         }
 
-        public Builder setKubeProxyVersion(String kubeProxyVersion) {
+        public Builder kubeProxyVersion(String kubeProxyVersion) {
             this.kubeProxyVersion = Objects.requireNonNull(kubeProxyVersion);
             return this;
         }
 
-        public Builder setKubeletVersion(String kubeletVersion) {
+        public Builder kubeletVersion(String kubeletVersion) {
             this.kubeletVersion = Objects.requireNonNull(kubeletVersion);
             return this;
         }
 
-        public Builder setMachineID(String machineID) {
+        public Builder machineID(String machineID) {
             this.machineID = Objects.requireNonNull(machineID);
             return this;
         }
 
-        public Builder setOperatingSystem(String operatingSystem) {
+        public Builder operatingSystem(String operatingSystem) {
             this.operatingSystem = Objects.requireNonNull(operatingSystem);
             return this;
         }
 
-        public Builder setOsImage(String osImage) {
+        public Builder osImage(String osImage) {
             this.osImage = Objects.requireNonNull(osImage);
             return this;
         }
 
-        public Builder setSystemUUID(String systemUUID) {
+        public Builder systemUUID(String systemUUID) {
             this.systemUUID = Objects.requireNonNull(systemUUID);
             return this;
         }

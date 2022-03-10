@@ -413,107 +413,107 @@ public final class ServiceSpec {
     	      this.type = defaults.type;
         }
 
-        public Builder setAllocateLoadBalancerNodePorts(@Nullable Boolean allocateLoadBalancerNodePorts) {
+        public Builder allocateLoadBalancerNodePorts(@Nullable Boolean allocateLoadBalancerNodePorts) {
             this.allocateLoadBalancerNodePorts = allocateLoadBalancerNodePorts;
             return this;
         }
 
-        public Builder setClusterIP(@Nullable String clusterIP) {
+        public Builder clusterIP(@Nullable String clusterIP) {
             this.clusterIP = clusterIP;
             return this;
         }
 
-        public Builder setClusterIPs(@Nullable List<String> clusterIPs) {
+        public Builder clusterIPs(@Nullable List<String> clusterIPs) {
             this.clusterIPs = clusterIPs;
             return this;
         }
 
-        public Builder setExternalIPs(@Nullable List<String> externalIPs) {
+        public Builder externalIPs(@Nullable List<String> externalIPs) {
             this.externalIPs = externalIPs;
             return this;
         }
 
-        public Builder setExternalName(@Nullable String externalName) {
+        public Builder externalName(@Nullable String externalName) {
             this.externalName = externalName;
             return this;
         }
 
-        public Builder setExternalTrafficPolicy(@Nullable String externalTrafficPolicy) {
+        public Builder externalTrafficPolicy(@Nullable String externalTrafficPolicy) {
             this.externalTrafficPolicy = externalTrafficPolicy;
             return this;
         }
 
-        public Builder setHealthCheckNodePort(@Nullable Integer healthCheckNodePort) {
+        public Builder healthCheckNodePort(@Nullable Integer healthCheckNodePort) {
             this.healthCheckNodePort = healthCheckNodePort;
             return this;
         }
 
-        public Builder setInternalTrafficPolicy(@Nullable String internalTrafficPolicy) {
+        public Builder internalTrafficPolicy(@Nullable String internalTrafficPolicy) {
             this.internalTrafficPolicy = internalTrafficPolicy;
             return this;
         }
 
-        public Builder setIpFamilies(@Nullable List<String> ipFamilies) {
+        public Builder ipFamilies(@Nullable List<String> ipFamilies) {
             this.ipFamilies = ipFamilies;
             return this;
         }
 
-        public Builder setIpFamily(@Nullable String ipFamily) {
+        public Builder ipFamily(@Nullable String ipFamily) {
             this.ipFamily = ipFamily;
             return this;
         }
 
-        public Builder setIpFamilyPolicy(@Nullable String ipFamilyPolicy) {
+        public Builder ipFamilyPolicy(@Nullable String ipFamilyPolicy) {
             this.ipFamilyPolicy = ipFamilyPolicy;
             return this;
         }
 
-        public Builder setLoadBalancerClass(@Nullable String loadBalancerClass) {
+        public Builder loadBalancerClass(@Nullable String loadBalancerClass) {
             this.loadBalancerClass = loadBalancerClass;
             return this;
         }
 
-        public Builder setLoadBalancerIP(@Nullable String loadBalancerIP) {
+        public Builder loadBalancerIP(@Nullable String loadBalancerIP) {
             this.loadBalancerIP = loadBalancerIP;
             return this;
         }
 
-        public Builder setLoadBalancerSourceRanges(@Nullable List<String> loadBalancerSourceRanges) {
+        public Builder loadBalancerSourceRanges(@Nullable List<String> loadBalancerSourceRanges) {
             this.loadBalancerSourceRanges = loadBalancerSourceRanges;
             return this;
         }
 
-        public Builder setPorts(@Nullable List<ServicePort> ports) {
+        public Builder ports(@Nullable List<ServicePort> ports) {
             this.ports = ports;
             return this;
         }
 
-        public Builder setPublishNotReadyAddresses(@Nullable Boolean publishNotReadyAddresses) {
+        public Builder publishNotReadyAddresses(@Nullable Boolean publishNotReadyAddresses) {
             this.publishNotReadyAddresses = publishNotReadyAddresses;
             return this;
         }
 
-        public Builder setSelector(@Nullable Map<String,String> selector) {
+        public Builder selector(@Nullable Map<String,String> selector) {
             this.selector = selector;
             return this;
         }
 
-        public Builder setSessionAffinity(@Nullable String sessionAffinity) {
+        public Builder sessionAffinity(@Nullable String sessionAffinity) {
             this.sessionAffinity = sessionAffinity;
             return this;
         }
 
-        public Builder setSessionAffinityConfig(@Nullable SessionAffinityConfig sessionAffinityConfig) {
+        public Builder sessionAffinityConfig(@Nullable SessionAffinityConfig sessionAffinityConfig) {
             this.sessionAffinityConfig = sessionAffinityConfig;
             return this;
         }
 
-        public Builder setTopologyKeys(@Nullable List<String> topologyKeys) {
+        public Builder topologyKeys(@Nullable List<String> topologyKeys) {
             this.topologyKeys = topologyKeys;
             return this;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = type;
             return this;
         }

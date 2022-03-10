@@ -49,7 +49,7 @@ public final class LimitRangeSpec {
     	      this.limits = defaults.limits;
         }
 
-        public Builder setLimits(List<LimitRangeItem> limits) {
+        public Builder limits(List<LimitRangeItem> limits) {
             this.limits = Objects.requireNonNull(limits);
             return this;
         }

@@ -126,8 +126,8 @@ public class PriorityLevelConfigurationList extends io.pulumi.resources.CustomRe
     private static PriorityLevelConfigurationListArgs makeArgs(PriorityLevelConfigurationListArgs args) {
         var builder = args == null ? PriorityLevelConfigurationListArgs.builder() : PriorityLevelConfigurationListArgs.builder(args);
         return builder
-            .setApiVersion("flowcontrol.apiserver.k8s.io/v1beta2")
-            .setKind("PriorityLevelConfigurationList")
+            .apiVersion("flowcontrol.apiserver.k8s.io/v1beta2")
+            .kind("PriorityLevelConfigurationList")
             .build();
     }
 

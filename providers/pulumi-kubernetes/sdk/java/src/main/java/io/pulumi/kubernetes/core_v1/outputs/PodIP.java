@@ -50,7 +50,7 @@ public final class PodIP {
     	      this.ip = defaults.ip;
         }
 
-        public Builder setIp(@Nullable String ip) {
+        public Builder ip(@Nullable String ip) {
             this.ip = ip;
             return this;
         }

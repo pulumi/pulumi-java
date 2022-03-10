@@ -50,7 +50,7 @@ public final class AggregationRule {
     	      this.clusterRoleSelectors = defaults.clusterRoleSelectors;
         }
 
-        public Builder setClusterRoleSelectors(@Nullable List<LabelSelector> clusterRoleSelectors) {
+        public Builder clusterRoleSelectors(@Nullable List<LabelSelector> clusterRoleSelectors) {
             this.clusterRoleSelectors = clusterRoleSelectors;
             return this;
         }

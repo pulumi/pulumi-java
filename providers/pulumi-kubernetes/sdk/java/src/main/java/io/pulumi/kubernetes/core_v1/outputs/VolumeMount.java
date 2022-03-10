@@ -132,32 +132,32 @@ public final class VolumeMount {
     	      this.subPathExpr = defaults.subPathExpr;
         }
 
-        public Builder setMountPath(String mountPath) {
+        public Builder mountPath(String mountPath) {
             this.mountPath = Objects.requireNonNull(mountPath);
             return this;
         }
 
-        public Builder setMountPropagation(@Nullable String mountPropagation) {
+        public Builder mountPropagation(@Nullable String mountPropagation) {
             this.mountPropagation = mountPropagation;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setReadOnly(@Nullable Boolean readOnly) {
+        public Builder readOnly(@Nullable Boolean readOnly) {
             this.readOnly = readOnly;
             return this;
         }
 
-        public Builder setSubPath(@Nullable String subPath) {
+        public Builder subPath(@Nullable String subPath) {
             this.subPath = subPath;
             return this;
         }
 
-        public Builder setSubPathExpr(@Nullable String subPathExpr) {
+        public Builder subPathExpr(@Nullable String subPathExpr) {
             this.subPathExpr = subPathExpr;
             return this;
         }

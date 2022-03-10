@@ -57,12 +57,12 @@ public final class NodeSelectorArgs extends io.pulumi.resources.ResourceArgs {
     	      this.nodeSelectorTerms = defaults.nodeSelectorTerms;
         }
 
-        public Builder setNodeSelectorTerms(Input<List<NodeSelectorTermArgs>> nodeSelectorTerms) {
+        public Builder nodeSelectorTerms(Input<List<NodeSelectorTermArgs>> nodeSelectorTerms) {
             this.nodeSelectorTerms = Objects.requireNonNull(nodeSelectorTerms);
             return this;
         }
 
-        public Builder setNodeSelectorTerms(List<NodeSelectorTermArgs> nodeSelectorTerms) {
+        public Builder nodeSelectorTerms(List<NodeSelectorTermArgs> nodeSelectorTerms) {
             this.nodeSelectorTerms = Input.of(Objects.requireNonNull(nodeSelectorTerms));
             return this;
         }

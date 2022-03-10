@@ -75,22 +75,22 @@ public final class SelfSubjectAccessReviewSpecArgs extends io.pulumi.resources.R
     	      this.resourceAttributes = defaults.resourceAttributes;
         }
 
-        public Builder setNonResourceAttributes(@Nullable Input<NonResourceAttributesArgs> nonResourceAttributes) {
+        public Builder nonResourceAttributes(@Nullable Input<NonResourceAttributesArgs> nonResourceAttributes) {
             this.nonResourceAttributes = nonResourceAttributes;
             return this;
         }
 
-        public Builder setNonResourceAttributes(@Nullable NonResourceAttributesArgs nonResourceAttributes) {
+        public Builder nonResourceAttributes(@Nullable NonResourceAttributesArgs nonResourceAttributes) {
             this.nonResourceAttributes = Input.ofNullable(nonResourceAttributes);
             return this;
         }
 
-        public Builder setResourceAttributes(@Nullable Input<ResourceAttributesArgs> resourceAttributes) {
+        public Builder resourceAttributes(@Nullable Input<ResourceAttributesArgs> resourceAttributes) {
             this.resourceAttributes = resourceAttributes;
             return this;
         }
 
-        public Builder setResourceAttributes(@Nullable ResourceAttributesArgs resourceAttributes) {
+        public Builder resourceAttributes(@Nullable ResourceAttributesArgs resourceAttributes) {
             this.resourceAttributes = Input.ofNullable(resourceAttributes);
             return this;
         }

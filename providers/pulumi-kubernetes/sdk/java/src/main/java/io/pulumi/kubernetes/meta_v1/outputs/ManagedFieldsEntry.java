@@ -148,37 +148,37 @@ public final class ManagedFieldsEntry {
     	      this.time = defaults.time;
         }
 
-        public Builder setApiVersion(@Nullable String apiVersion) {
+        public Builder apiVersion(@Nullable String apiVersion) {
             this.apiVersion = apiVersion;
             return this;
         }
 
-        public Builder setFieldsType(@Nullable String fieldsType) {
+        public Builder fieldsType(@Nullable String fieldsType) {
             this.fieldsType = fieldsType;
             return this;
         }
 
-        public Builder setFieldsV1(@Nullable JsonElement fieldsV1) {
+        public Builder fieldsV1(@Nullable JsonElement fieldsV1) {
             this.fieldsV1 = fieldsV1;
             return this;
         }
 
-        public Builder setManager(@Nullable String manager) {
+        public Builder manager(@Nullable String manager) {
             this.manager = manager;
             return this;
         }
 
-        public Builder setOperation(@Nullable String operation) {
+        public Builder operation(@Nullable String operation) {
             this.operation = operation;
             return this;
         }
 
-        public Builder setSubresource(@Nullable String subresource) {
+        public Builder subresource(@Nullable String subresource) {
             this.subresource = subresource;
             return this;
         }
 
-        public Builder setTime(@Nullable String time) {
+        public Builder time(@Nullable String time) {
             this.time = time;
             return this;
         }

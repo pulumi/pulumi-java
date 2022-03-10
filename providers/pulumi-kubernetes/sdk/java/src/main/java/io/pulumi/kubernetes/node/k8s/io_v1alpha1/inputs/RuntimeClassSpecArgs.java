@@ -92,32 +92,32 @@ public final class RuntimeClassSpecArgs extends io.pulumi.resources.ResourceArgs
     	      this.scheduling = defaults.scheduling;
         }
 
-        public Builder setOverhead(@Nullable Input<OverheadArgs> overhead) {
+        public Builder overhead(@Nullable Input<OverheadArgs> overhead) {
             this.overhead = overhead;
             return this;
         }
 
-        public Builder setOverhead(@Nullable OverheadArgs overhead) {
+        public Builder overhead(@Nullable OverheadArgs overhead) {
             this.overhead = Input.ofNullable(overhead);
             return this;
         }
 
-        public Builder setRuntimeHandler(Input<String> runtimeHandler) {
+        public Builder runtimeHandler(Input<String> runtimeHandler) {
             this.runtimeHandler = Objects.requireNonNull(runtimeHandler);
             return this;
         }
 
-        public Builder setRuntimeHandler(String runtimeHandler) {
+        public Builder runtimeHandler(String runtimeHandler) {
             this.runtimeHandler = Input.of(Objects.requireNonNull(runtimeHandler));
             return this;
         }
 
-        public Builder setScheduling(@Nullable Input<SchedulingArgs> scheduling) {
+        public Builder scheduling(@Nullable Input<SchedulingArgs> scheduling) {
             this.scheduling = scheduling;
             return this;
         }
 
-        public Builder setScheduling(@Nullable SchedulingArgs scheduling) {
+        public Builder scheduling(@Nullable SchedulingArgs scheduling) {
             this.scheduling = Input.ofNullable(scheduling);
             return this;
         }

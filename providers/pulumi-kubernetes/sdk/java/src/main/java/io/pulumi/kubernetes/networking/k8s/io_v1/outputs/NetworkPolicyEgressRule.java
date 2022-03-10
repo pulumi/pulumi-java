@@ -68,12 +68,12 @@ public final class NetworkPolicyEgressRule {
     	      this.to = defaults.to;
         }
 
-        public Builder setPorts(@Nullable List<NetworkPolicyPort> ports) {
+        public Builder ports(@Nullable List<NetworkPolicyPort> ports) {
             this.ports = ports;
             return this;
         }
 
-        public Builder setTo(@Nullable List<NetworkPolicyPeer> to) {
+        public Builder to(@Nullable List<NetworkPolicyPeer> to) {
             this.to = to;
             return this;
         }

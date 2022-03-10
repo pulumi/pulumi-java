@@ -68,12 +68,12 @@ public final class LimitResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setQueuing(@Nullable QueuingConfiguration queuing) {
+        public Builder queuing(@Nullable QueuingConfiguration queuing) {
             this.queuing = queuing;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

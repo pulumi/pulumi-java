@@ -126,8 +126,8 @@ public class ValidatingWebhookConfigurationList extends io.pulumi.resources.Cust
     private static ValidatingWebhookConfigurationListArgs makeArgs(ValidatingWebhookConfigurationListArgs args) {
         var builder = args == null ? ValidatingWebhookConfigurationListArgs.builder() : ValidatingWebhookConfigurationListArgs.builder(args);
         return builder
-            .setApiVersion("admissionregistration.k8s.io/v1")
-            .setKind("ValidatingWebhookConfigurationList")
+            .apiVersion("admissionregistration.k8s.io/v1")
+            .kind("ValidatingWebhookConfigurationList")
             .build();
     }
 

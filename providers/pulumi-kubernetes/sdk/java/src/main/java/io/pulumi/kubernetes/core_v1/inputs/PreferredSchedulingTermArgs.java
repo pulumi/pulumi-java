@@ -74,22 +74,22 @@ public final class PreferredSchedulingTermArgs extends io.pulumi.resources.Resou
     	      this.weight = defaults.weight;
         }
 
-        public Builder setPreference(Input<NodeSelectorTermArgs> preference) {
+        public Builder preference(Input<NodeSelectorTermArgs> preference) {
             this.preference = Objects.requireNonNull(preference);
             return this;
         }
 
-        public Builder setPreference(NodeSelectorTermArgs preference) {
+        public Builder preference(NodeSelectorTermArgs preference) {
             this.preference = Input.of(Objects.requireNonNull(preference));
             return this;
         }
 
-        public Builder setWeight(Input<Integer> weight) {
+        public Builder weight(Input<Integer> weight) {
             this.weight = Objects.requireNonNull(weight);
             return this;
         }
 
-        public Builder setWeight(Integer weight) {
+        public Builder weight(Integer weight) {
             this.weight = Input.of(Objects.requireNonNull(weight));
             return this;
         }

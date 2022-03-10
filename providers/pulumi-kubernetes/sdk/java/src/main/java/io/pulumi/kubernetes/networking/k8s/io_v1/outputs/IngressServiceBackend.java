@@ -68,12 +68,12 @@ public final class IngressServiceBackend {
     	      this.port = defaults.port;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPort(@Nullable ServiceBackendPort port) {
+        public Builder port(@Nullable ServiceBackendPort port) {
             this.port = port;
             return this;
         }

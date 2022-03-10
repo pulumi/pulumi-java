@@ -110,42 +110,42 @@ public final class IngressSpecArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tls = defaults.tls;
         }
 
-        public Builder setBackend(@Nullable Input<IngressBackendArgs> backend) {
+        public Builder backend(@Nullable Input<IngressBackendArgs> backend) {
             this.backend = backend;
             return this;
         }
 
-        public Builder setBackend(@Nullable IngressBackendArgs backend) {
+        public Builder backend(@Nullable IngressBackendArgs backend) {
             this.backend = Input.ofNullable(backend);
             return this;
         }
 
-        public Builder setIngressClassName(@Nullable Input<String> ingressClassName) {
+        public Builder ingressClassName(@Nullable Input<String> ingressClassName) {
             this.ingressClassName = ingressClassName;
             return this;
         }
 
-        public Builder setIngressClassName(@Nullable String ingressClassName) {
+        public Builder ingressClassName(@Nullable String ingressClassName) {
             this.ingressClassName = Input.ofNullable(ingressClassName);
             return this;
         }
 
-        public Builder setRules(@Nullable Input<List<IngressRuleArgs>> rules) {
+        public Builder rules(@Nullable Input<List<IngressRuleArgs>> rules) {
             this.rules = rules;
             return this;
         }
 
-        public Builder setRules(@Nullable List<IngressRuleArgs> rules) {
+        public Builder rules(@Nullable List<IngressRuleArgs> rules) {
             this.rules = Input.ofNullable(rules);
             return this;
         }
 
-        public Builder setTls(@Nullable Input<List<IngressTLSArgs>> tls) {
+        public Builder tls(@Nullable Input<List<IngressTLSArgs>> tls) {
             this.tls = tls;
             return this;
         }
 
-        public Builder setTls(@Nullable List<IngressTLSArgs> tls) {
+        public Builder tls(@Nullable List<IngressTLSArgs> tls) {
             this.tls = Input.ofNullable(tls);
             return this;
         }

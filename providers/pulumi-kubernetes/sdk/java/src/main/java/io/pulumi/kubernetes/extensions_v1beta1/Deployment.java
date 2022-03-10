@@ -168,8 +168,8 @@ public class Deployment extends io.pulumi.resources.CustomResource {
     private static DeploymentArgs makeArgs(@Nullable DeploymentArgs args) {
         var builder = args == null ? DeploymentArgs.builder() : DeploymentArgs.builder(args);
         return builder
-            .setApiVersion("extensions/v1beta1")
-            .setKind("Deployment")
+            .apiVersion("extensions/v1beta1")
+            .kind("Deployment")
             .build();
     }
 

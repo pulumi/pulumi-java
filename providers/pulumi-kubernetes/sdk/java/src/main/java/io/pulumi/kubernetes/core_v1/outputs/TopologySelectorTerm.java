@@ -50,7 +50,7 @@ public final class TopologySelectorTerm {
     	      this.matchLabelExpressions = defaults.matchLabelExpressions;
         }
 
-        public Builder setMatchLabelExpressions(@Nullable List<TopologySelectorLabelRequirement> matchLabelExpressions) {
+        public Builder matchLabelExpressions(@Nullable List<TopologySelectorLabelRequirement> matchLabelExpressions) {
             this.matchLabelExpressions = matchLabelExpressions;
             return this;
         }

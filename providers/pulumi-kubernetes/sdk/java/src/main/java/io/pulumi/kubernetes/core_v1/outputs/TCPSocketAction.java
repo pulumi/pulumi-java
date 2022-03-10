@@ -69,12 +69,12 @@ public final class TCPSocketAction {
     	      this.port = defaults.port;
         }
 
-        public Builder setHost(@Nullable String host) {
+        public Builder host(@Nullable String host) {
             this.host = host;
             return this;
         }
 
-        public Builder setPort(Either<Integer,String> port) {
+        public Builder port(Either<Integer,String> port) {
             this.port = Objects.requireNonNull(port);
             return this;
         }

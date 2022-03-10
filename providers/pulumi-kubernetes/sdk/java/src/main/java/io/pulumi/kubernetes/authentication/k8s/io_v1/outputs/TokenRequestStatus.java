@@ -65,12 +65,12 @@ public final class TokenRequestStatus {
     	      this.token = defaults.token;
         }
 
-        public Builder setExpirationTimestamp(String expirationTimestamp) {
+        public Builder expirationTimestamp(String expirationTimestamp) {
             this.expirationTimestamp = Objects.requireNonNull(expirationTimestamp);
             return this;
         }
 
-        public Builder setToken(String token) {
+        public Builder token(String token) {
             this.token = Objects.requireNonNull(token);
             return this;
         }

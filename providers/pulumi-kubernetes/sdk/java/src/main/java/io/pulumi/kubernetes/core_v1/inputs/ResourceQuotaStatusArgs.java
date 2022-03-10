@@ -75,22 +75,22 @@ public final class ResourceQuotaStatusArgs extends io.pulumi.resources.ResourceA
     	      this.used = defaults.used;
         }
 
-        public Builder setHard(@Nullable Input<Map<String,String>> hard) {
+        public Builder hard(@Nullable Input<Map<String,String>> hard) {
             this.hard = hard;
             return this;
         }
 
-        public Builder setHard(@Nullable Map<String,String> hard) {
+        public Builder hard(@Nullable Map<String,String> hard) {
             this.hard = Input.ofNullable(hard);
             return this;
         }
 
-        public Builder setUsed(@Nullable Input<Map<String,String>> used) {
+        public Builder used(@Nullable Input<Map<String,String>> used) {
             this.used = used;
             return this;
         }
 
-        public Builder setUsed(@Nullable Map<String,String> used) {
+        public Builder used(@Nullable Map<String,String> used) {
             this.used = Input.ofNullable(used);
             return this;
         }

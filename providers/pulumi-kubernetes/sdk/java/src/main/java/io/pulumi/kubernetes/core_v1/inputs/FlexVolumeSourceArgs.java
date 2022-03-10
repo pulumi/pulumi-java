@@ -125,52 +125,52 @@ public final class FlexVolumeSourceArgs extends io.pulumi.resources.ResourceArgs
     	      this.secretRef = defaults.secretRef;
         }
 
-        public Builder setDriver(Input<String> driver) {
+        public Builder driver(Input<String> driver) {
             this.driver = Objects.requireNonNull(driver);
             return this;
         }
 
-        public Builder setDriver(String driver) {
+        public Builder driver(String driver) {
             this.driver = Input.of(Objects.requireNonNull(driver));
             return this;
         }
 
-        public Builder setFsType(@Nullable Input<String> fsType) {
+        public Builder fsType(@Nullable Input<String> fsType) {
             this.fsType = fsType;
             return this;
         }
 
-        public Builder setFsType(@Nullable String fsType) {
+        public Builder fsType(@Nullable String fsType) {
             this.fsType = Input.ofNullable(fsType);
             return this;
         }
 
-        public Builder setOptions(@Nullable Input<Map<String,String>> options) {
+        public Builder options(@Nullable Input<Map<String,String>> options) {
             this.options = options;
             return this;
         }
 
-        public Builder setOptions(@Nullable Map<String,String> options) {
+        public Builder options(@Nullable Map<String,String> options) {
             this.options = Input.ofNullable(options);
             return this;
         }
 
-        public Builder setReadOnly(@Nullable Input<Boolean> readOnly) {
+        public Builder readOnly(@Nullable Input<Boolean> readOnly) {
             this.readOnly = readOnly;
             return this;
         }
 
-        public Builder setReadOnly(@Nullable Boolean readOnly) {
+        public Builder readOnly(@Nullable Boolean readOnly) {
             this.readOnly = Input.ofNullable(readOnly);
             return this;
         }
 
-        public Builder setSecretRef(@Nullable Input<LocalObjectReferenceArgs> secretRef) {
+        public Builder secretRef(@Nullable Input<LocalObjectReferenceArgs> secretRef) {
             this.secretRef = secretRef;
             return this;
         }
 
-        public Builder setSecretRef(@Nullable LocalObjectReferenceArgs secretRef) {
+        public Builder secretRef(@Nullable LocalObjectReferenceArgs secretRef) {
             this.secretRef = Input.ofNullable(secretRef);
             return this;
         }

@@ -74,12 +74,12 @@ public final class IngressRule {
     	      this.http = defaults.http;
         }
 
-        public Builder setHost(@Nullable String host) {
+        public Builder host(@Nullable String host) {
             this.host = host;
             return this;
         }
 
-        public Builder setHttp(@Nullable HTTPIngressRuleValue http) {
+        public Builder http(@Nullable HTTPIngressRuleValue http) {
             this.http = http;
             return this;
         }

@@ -210,52 +210,52 @@ public final class PodSecurityContext {
     	      this.windowsOptions = defaults.windowsOptions;
         }
 
-        public Builder setFsGroup(@Nullable Integer fsGroup) {
+        public Builder fsGroup(@Nullable Integer fsGroup) {
             this.fsGroup = fsGroup;
             return this;
         }
 
-        public Builder setFsGroupChangePolicy(@Nullable String fsGroupChangePolicy) {
+        public Builder fsGroupChangePolicy(@Nullable String fsGroupChangePolicy) {
             this.fsGroupChangePolicy = fsGroupChangePolicy;
             return this;
         }
 
-        public Builder setRunAsGroup(@Nullable Integer runAsGroup) {
+        public Builder runAsGroup(@Nullable Integer runAsGroup) {
             this.runAsGroup = runAsGroup;
             return this;
         }
 
-        public Builder setRunAsNonRoot(@Nullable Boolean runAsNonRoot) {
+        public Builder runAsNonRoot(@Nullable Boolean runAsNonRoot) {
             this.runAsNonRoot = runAsNonRoot;
             return this;
         }
 
-        public Builder setRunAsUser(@Nullable Integer runAsUser) {
+        public Builder runAsUser(@Nullable Integer runAsUser) {
             this.runAsUser = runAsUser;
             return this;
         }
 
-        public Builder setSeLinuxOptions(@Nullable SELinuxOptions seLinuxOptions) {
+        public Builder seLinuxOptions(@Nullable SELinuxOptions seLinuxOptions) {
             this.seLinuxOptions = seLinuxOptions;
             return this;
         }
 
-        public Builder setSeccompProfile(@Nullable SeccompProfile seccompProfile) {
+        public Builder seccompProfile(@Nullable SeccompProfile seccompProfile) {
             this.seccompProfile = seccompProfile;
             return this;
         }
 
-        public Builder setSupplementalGroups(@Nullable List<Integer> supplementalGroups) {
+        public Builder supplementalGroups(@Nullable List<Integer> supplementalGroups) {
             this.supplementalGroups = supplementalGroups;
             return this;
         }
 
-        public Builder setSysctls(@Nullable List<Sysctl> sysctls) {
+        public Builder sysctls(@Nullable List<Sysctl> sysctls) {
             this.sysctls = sysctls;
             return this;
         }
 
-        public Builder setWindowsOptions(@Nullable WindowsSecurityContextOptions windowsOptions) {
+        public Builder windowsOptions(@Nullable WindowsSecurityContextOptions windowsOptions) {
             this.windowsOptions = windowsOptions;
             return this;
         }

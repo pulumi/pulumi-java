@@ -134,8 +134,8 @@ public class TokenReview extends io.pulumi.resources.CustomResource {
     private static TokenReviewArgs makeArgs(TokenReviewArgs args) {
         var builder = args == null ? TokenReviewArgs.builder() : TokenReviewArgs.builder(args);
         return builder
-            .setApiVersion("authentication.k8s.io/v1beta1")
-            .setKind("TokenReview")
+            .apiVersion("authentication.k8s.io/v1beta1")
+            .kind("TokenReview")
             .build();
     }
 

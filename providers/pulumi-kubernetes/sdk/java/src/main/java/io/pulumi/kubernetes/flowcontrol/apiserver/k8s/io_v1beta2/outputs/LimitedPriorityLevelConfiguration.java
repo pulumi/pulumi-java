@@ -76,12 +76,12 @@ public final class LimitedPriorityLevelConfiguration {
     	      this.limitResponse = defaults.limitResponse;
         }
 
-        public Builder setAssuredConcurrencyShares(@Nullable Integer assuredConcurrencyShares) {
+        public Builder assuredConcurrencyShares(@Nullable Integer assuredConcurrencyShares) {
             this.assuredConcurrencyShares = assuredConcurrencyShares;
             return this;
         }
 
-        public Builder setLimitResponse(@Nullable LimitResponse limitResponse) {
+        public Builder limitResponse(@Nullable LimitResponse limitResponse) {
             this.limitResponse = limitResponse;
             return this;
         }

@@ -214,102 +214,102 @@ public final class JobSpecArgs extends io.pulumi.resources.ResourceArgs {
     	      this.ttlSecondsAfterFinished = defaults.ttlSecondsAfterFinished;
         }
 
-        public Builder setActiveDeadlineSeconds(@Nullable Input<Integer> activeDeadlineSeconds) {
+        public Builder activeDeadlineSeconds(@Nullable Input<Integer> activeDeadlineSeconds) {
             this.activeDeadlineSeconds = activeDeadlineSeconds;
             return this;
         }
 
-        public Builder setActiveDeadlineSeconds(@Nullable Integer activeDeadlineSeconds) {
+        public Builder activeDeadlineSeconds(@Nullable Integer activeDeadlineSeconds) {
             this.activeDeadlineSeconds = Input.ofNullable(activeDeadlineSeconds);
             return this;
         }
 
-        public Builder setBackoffLimit(@Nullable Input<Integer> backoffLimit) {
+        public Builder backoffLimit(@Nullable Input<Integer> backoffLimit) {
             this.backoffLimit = backoffLimit;
             return this;
         }
 
-        public Builder setBackoffLimit(@Nullable Integer backoffLimit) {
+        public Builder backoffLimit(@Nullable Integer backoffLimit) {
             this.backoffLimit = Input.ofNullable(backoffLimit);
             return this;
         }
 
-        public Builder setCompletionMode(@Nullable Input<String> completionMode) {
+        public Builder completionMode(@Nullable Input<String> completionMode) {
             this.completionMode = completionMode;
             return this;
         }
 
-        public Builder setCompletionMode(@Nullable String completionMode) {
+        public Builder completionMode(@Nullable String completionMode) {
             this.completionMode = Input.ofNullable(completionMode);
             return this;
         }
 
-        public Builder setCompletions(@Nullable Input<Integer> completions) {
+        public Builder completions(@Nullable Input<Integer> completions) {
             this.completions = completions;
             return this;
         }
 
-        public Builder setCompletions(@Nullable Integer completions) {
+        public Builder completions(@Nullable Integer completions) {
             this.completions = Input.ofNullable(completions);
             return this;
         }
 
-        public Builder setManualSelector(@Nullable Input<Boolean> manualSelector) {
+        public Builder manualSelector(@Nullable Input<Boolean> manualSelector) {
             this.manualSelector = manualSelector;
             return this;
         }
 
-        public Builder setManualSelector(@Nullable Boolean manualSelector) {
+        public Builder manualSelector(@Nullable Boolean manualSelector) {
             this.manualSelector = Input.ofNullable(manualSelector);
             return this;
         }
 
-        public Builder setParallelism(@Nullable Input<Integer> parallelism) {
+        public Builder parallelism(@Nullable Input<Integer> parallelism) {
             this.parallelism = parallelism;
             return this;
         }
 
-        public Builder setParallelism(@Nullable Integer parallelism) {
+        public Builder parallelism(@Nullable Integer parallelism) {
             this.parallelism = Input.ofNullable(parallelism);
             return this;
         }
 
-        public Builder setSelector(@Nullable Input<LabelSelectorArgs> selector) {
+        public Builder selector(@Nullable Input<LabelSelectorArgs> selector) {
             this.selector = selector;
             return this;
         }
 
-        public Builder setSelector(@Nullable LabelSelectorArgs selector) {
+        public Builder selector(@Nullable LabelSelectorArgs selector) {
             this.selector = Input.ofNullable(selector);
             return this;
         }
 
-        public Builder setSuspend(@Nullable Input<Boolean> suspend) {
+        public Builder suspend(@Nullable Input<Boolean> suspend) {
             this.suspend = suspend;
             return this;
         }
 
-        public Builder setSuspend(@Nullable Boolean suspend) {
+        public Builder suspend(@Nullable Boolean suspend) {
             this.suspend = Input.ofNullable(suspend);
             return this;
         }
 
-        public Builder setTemplate(Input<PodTemplateSpecArgs> template) {
+        public Builder template(Input<PodTemplateSpecArgs> template) {
             this.template = Objects.requireNonNull(template);
             return this;
         }
 
-        public Builder setTemplate(PodTemplateSpecArgs template) {
+        public Builder template(PodTemplateSpecArgs template) {
             this.template = Input.of(Objects.requireNonNull(template));
             return this;
         }
 
-        public Builder setTtlSecondsAfterFinished(@Nullable Input<Integer> ttlSecondsAfterFinished) {
+        public Builder ttlSecondsAfterFinished(@Nullable Input<Integer> ttlSecondsAfterFinished) {
             this.ttlSecondsAfterFinished = ttlSecondsAfterFinished;
             return this;
         }
 
-        public Builder setTtlSecondsAfterFinished(@Nullable Integer ttlSecondsAfterFinished) {
+        public Builder ttlSecondsAfterFinished(@Nullable Integer ttlSecondsAfterFinished) {
             this.ttlSecondsAfterFinished = Input.ofNullable(ttlSecondsAfterFinished);
             return this;
         }

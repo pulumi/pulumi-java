@@ -57,12 +57,12 @@ public final class CustomResourceValidationArgs extends io.pulumi.resources.Reso
     	      this.openAPIV3Schema = defaults.openAPIV3Schema;
         }
 
-        public Builder setOpenAPIV3Schema(@Nullable Input<JSONSchemaPropsArgs> openAPIV3Schema) {
+        public Builder openAPIV3Schema(@Nullable Input<JSONSchemaPropsArgs> openAPIV3Schema) {
             this.openAPIV3Schema = openAPIV3Schema;
             return this;
         }
 
-        public Builder setOpenAPIV3Schema(@Nullable JSONSchemaPropsArgs openAPIV3Schema) {
+        public Builder openAPIV3Schema(@Nullable JSONSchemaPropsArgs openAPIV3Schema) {
             this.openAPIV3Schema = Input.ofNullable(openAPIV3Schema);
             return this;
         }

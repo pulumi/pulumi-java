@@ -124,52 +124,52 @@ public final class ObjectMetricSourceArgs extends io.pulumi.resources.ResourceAr
     	      this.targetValue = defaults.targetValue;
         }
 
-        public Builder setAverageValue(@Nullable Input<String> averageValue) {
+        public Builder averageValue(@Nullable Input<String> averageValue) {
             this.averageValue = averageValue;
             return this;
         }
 
-        public Builder setAverageValue(@Nullable String averageValue) {
+        public Builder averageValue(@Nullable String averageValue) {
             this.averageValue = Input.ofNullable(averageValue);
             return this;
         }
 
-        public Builder setMetricName(Input<String> metricName) {
+        public Builder metricName(Input<String> metricName) {
             this.metricName = Objects.requireNonNull(metricName);
             return this;
         }
 
-        public Builder setMetricName(String metricName) {
+        public Builder metricName(String metricName) {
             this.metricName = Input.of(Objects.requireNonNull(metricName));
             return this;
         }
 
-        public Builder setSelector(@Nullable Input<LabelSelectorArgs> selector) {
+        public Builder selector(@Nullable Input<LabelSelectorArgs> selector) {
             this.selector = selector;
             return this;
         }
 
-        public Builder setSelector(@Nullable LabelSelectorArgs selector) {
+        public Builder selector(@Nullable LabelSelectorArgs selector) {
             this.selector = Input.ofNullable(selector);
             return this;
         }
 
-        public Builder setTarget(Input<CrossVersionObjectReferenceArgs> target) {
+        public Builder target(Input<CrossVersionObjectReferenceArgs> target) {
             this.target = Objects.requireNonNull(target);
             return this;
         }
 
-        public Builder setTarget(CrossVersionObjectReferenceArgs target) {
+        public Builder target(CrossVersionObjectReferenceArgs target) {
             this.target = Input.of(Objects.requireNonNull(target));
             return this;
         }
 
-        public Builder setTargetValue(Input<String> targetValue) {
+        public Builder targetValue(Input<String> targetValue) {
             this.targetValue = Objects.requireNonNull(targetValue);
             return this;
         }
 
-        public Builder setTargetValue(String targetValue) {
+        public Builder targetValue(String targetValue) {
             this.targetValue = Input.of(Objects.requireNonNull(targetValue));
             return this;
         }

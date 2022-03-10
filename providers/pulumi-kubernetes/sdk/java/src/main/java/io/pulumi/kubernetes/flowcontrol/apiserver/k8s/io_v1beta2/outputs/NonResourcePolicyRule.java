@@ -78,12 +78,12 @@ public final class NonResourcePolicyRule {
     	      this.verbs = defaults.verbs;
         }
 
-        public Builder setNonResourceURLs(List<String> nonResourceURLs) {
+        public Builder nonResourceURLs(List<String> nonResourceURLs) {
             this.nonResourceURLs = Objects.requireNonNull(nonResourceURLs);
             return this;
         }
 
-        public Builder setVerbs(List<String> verbs) {
+        public Builder verbs(List<String> verbs) {
             this.verbs = Objects.requireNonNull(verbs);
             return this;
         }

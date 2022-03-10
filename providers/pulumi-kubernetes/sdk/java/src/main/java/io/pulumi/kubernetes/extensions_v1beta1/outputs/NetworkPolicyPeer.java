@@ -92,17 +92,17 @@ public final class NetworkPolicyPeer {
     	      this.podSelector = defaults.podSelector;
         }
 
-        public Builder setIpBlock(@Nullable IPBlock ipBlock) {
+        public Builder ipBlock(@Nullable IPBlock ipBlock) {
             this.ipBlock = ipBlock;
             return this;
         }
 
-        public Builder setNamespaceSelector(@Nullable LabelSelector namespaceSelector) {
+        public Builder namespaceSelector(@Nullable LabelSelector namespaceSelector) {
             this.namespaceSelector = namespaceSelector;
             return this;
         }
 
-        public Builder setPodSelector(@Nullable LabelSelector podSelector) {
+        public Builder podSelector(@Nullable LabelSelector podSelector) {
             this.podSelector = podSelector;
             return this;
         }

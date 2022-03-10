@@ -172,82 +172,82 @@ public final class DeploymentStatusArgs extends io.pulumi.resources.ResourceArgs
     	      this.updatedReplicas = defaults.updatedReplicas;
         }
 
-        public Builder setAvailableReplicas(@Nullable Input<Integer> availableReplicas) {
+        public Builder availableReplicas(@Nullable Input<Integer> availableReplicas) {
             this.availableReplicas = availableReplicas;
             return this;
         }
 
-        public Builder setAvailableReplicas(@Nullable Integer availableReplicas) {
+        public Builder availableReplicas(@Nullable Integer availableReplicas) {
             this.availableReplicas = Input.ofNullable(availableReplicas);
             return this;
         }
 
-        public Builder setCollisionCount(@Nullable Input<Integer> collisionCount) {
+        public Builder collisionCount(@Nullable Input<Integer> collisionCount) {
             this.collisionCount = collisionCount;
             return this;
         }
 
-        public Builder setCollisionCount(@Nullable Integer collisionCount) {
+        public Builder collisionCount(@Nullable Integer collisionCount) {
             this.collisionCount = Input.ofNullable(collisionCount);
             return this;
         }
 
-        public Builder setConditions(@Nullable Input<List<DeploymentConditionArgs>> conditions) {
+        public Builder conditions(@Nullable Input<List<DeploymentConditionArgs>> conditions) {
             this.conditions = conditions;
             return this;
         }
 
-        public Builder setConditions(@Nullable List<DeploymentConditionArgs> conditions) {
+        public Builder conditions(@Nullable List<DeploymentConditionArgs> conditions) {
             this.conditions = Input.ofNullable(conditions);
             return this;
         }
 
-        public Builder setObservedGeneration(@Nullable Input<Integer> observedGeneration) {
+        public Builder observedGeneration(@Nullable Input<Integer> observedGeneration) {
             this.observedGeneration = observedGeneration;
             return this;
         }
 
-        public Builder setObservedGeneration(@Nullable Integer observedGeneration) {
+        public Builder observedGeneration(@Nullable Integer observedGeneration) {
             this.observedGeneration = Input.ofNullable(observedGeneration);
             return this;
         }
 
-        public Builder setReadyReplicas(@Nullable Input<Integer> readyReplicas) {
+        public Builder readyReplicas(@Nullable Input<Integer> readyReplicas) {
             this.readyReplicas = readyReplicas;
             return this;
         }
 
-        public Builder setReadyReplicas(@Nullable Integer readyReplicas) {
+        public Builder readyReplicas(@Nullable Integer readyReplicas) {
             this.readyReplicas = Input.ofNullable(readyReplicas);
             return this;
         }
 
-        public Builder setReplicas(@Nullable Input<Integer> replicas) {
+        public Builder replicas(@Nullable Input<Integer> replicas) {
             this.replicas = replicas;
             return this;
         }
 
-        public Builder setReplicas(@Nullable Integer replicas) {
+        public Builder replicas(@Nullable Integer replicas) {
             this.replicas = Input.ofNullable(replicas);
             return this;
         }
 
-        public Builder setUnavailableReplicas(@Nullable Input<Integer> unavailableReplicas) {
+        public Builder unavailableReplicas(@Nullable Input<Integer> unavailableReplicas) {
             this.unavailableReplicas = unavailableReplicas;
             return this;
         }
 
-        public Builder setUnavailableReplicas(@Nullable Integer unavailableReplicas) {
+        public Builder unavailableReplicas(@Nullable Integer unavailableReplicas) {
             this.unavailableReplicas = Input.ofNullable(unavailableReplicas);
             return this;
         }
 
-        public Builder setUpdatedReplicas(@Nullable Input<Integer> updatedReplicas) {
+        public Builder updatedReplicas(@Nullable Input<Integer> updatedReplicas) {
             this.updatedReplicas = updatedReplicas;
             return this;
         }
 
-        public Builder setUpdatedReplicas(@Nullable Integer updatedReplicas) {
+        public Builder updatedReplicas(@Nullable Integer updatedReplicas) {
             this.updatedReplicas = Input.ofNullable(updatedReplicas);
             return this;
         }

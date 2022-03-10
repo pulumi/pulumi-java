@@ -107,42 +107,42 @@ public final class ExternalMetricStatusArgs extends io.pulumi.resources.Resource
     	      this.metricSelector = defaults.metricSelector;
         }
 
-        public Builder setCurrentAverageValue(@Nullable Input<String> currentAverageValue) {
+        public Builder currentAverageValue(@Nullable Input<String> currentAverageValue) {
             this.currentAverageValue = currentAverageValue;
             return this;
         }
 
-        public Builder setCurrentAverageValue(@Nullable String currentAverageValue) {
+        public Builder currentAverageValue(@Nullable String currentAverageValue) {
             this.currentAverageValue = Input.ofNullable(currentAverageValue);
             return this;
         }
 
-        public Builder setCurrentValue(Input<String> currentValue) {
+        public Builder currentValue(Input<String> currentValue) {
             this.currentValue = Objects.requireNonNull(currentValue);
             return this;
         }
 
-        public Builder setCurrentValue(String currentValue) {
+        public Builder currentValue(String currentValue) {
             this.currentValue = Input.of(Objects.requireNonNull(currentValue));
             return this;
         }
 
-        public Builder setMetricName(Input<String> metricName) {
+        public Builder metricName(Input<String> metricName) {
             this.metricName = Objects.requireNonNull(metricName);
             return this;
         }
 
-        public Builder setMetricName(String metricName) {
+        public Builder metricName(String metricName) {
             this.metricName = Input.of(Objects.requireNonNull(metricName));
             return this;
         }
 
-        public Builder setMetricSelector(@Nullable Input<LabelSelectorArgs> metricSelector) {
+        public Builder metricSelector(@Nullable Input<LabelSelectorArgs> metricSelector) {
             this.metricSelector = metricSelector;
             return this;
         }
 
-        public Builder setMetricSelector(@Nullable LabelSelectorArgs metricSelector) {
+        public Builder metricSelector(@Nullable LabelSelectorArgs metricSelector) {
             this.metricSelector = Input.ofNullable(metricSelector);
             return this;
         }

@@ -134,32 +134,32 @@ public final class ConfigMap {
     	      this.metadata = defaults.metadata;
         }
 
-        public Builder setApiVersion(@Nullable String apiVersion) {
+        public Builder apiVersion(@Nullable String apiVersion) {
             this.apiVersion = apiVersion;
             return this;
         }
 
-        public Builder setBinaryData(@Nullable Map<String,String> binaryData) {
+        public Builder binaryData(@Nullable Map<String,String> binaryData) {
             this.binaryData = binaryData;
             return this;
         }
 
-        public Builder setData(@Nullable Map<String,String> data) {
+        public Builder data(@Nullable Map<String,String> data) {
             this.data = data;
             return this;
         }
 
-        public Builder setImmutable(@Nullable Boolean immutable) {
+        public Builder immutable(@Nullable Boolean immutable) {
             this.immutable = immutable;
             return this;
         }
 
-        public Builder setKind(@Nullable String kind) {
+        public Builder kind(@Nullable String kind) {
             this.kind = kind;
             return this;
         }
 
-        public Builder setMetadata(@Nullable ObjectMeta metadata) {
+        public Builder metadata(@Nullable ObjectMeta metadata) {
             this.metadata = metadata;
             return this;
         }

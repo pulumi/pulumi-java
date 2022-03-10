@@ -134,8 +134,8 @@ public class APIService extends io.pulumi.resources.CustomResource {
     private static APIServiceArgs makeArgs(@Nullable APIServiceArgs args) {
         var builder = args == null ? APIServiceArgs.builder() : APIServiceArgs.builder(args);
         return builder
-            .setApiVersion("apiregistration.k8s.io/v1beta1")
-            .setKind("APIService")
+            .apiVersion("apiregistration.k8s.io/v1beta1")
+            .kind("APIService")
             .build();
     }
 

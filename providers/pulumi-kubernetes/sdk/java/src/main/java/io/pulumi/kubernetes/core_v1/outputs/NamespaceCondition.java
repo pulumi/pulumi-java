@@ -105,27 +105,27 @@ public final class NamespaceCondition {
     	      this.type = defaults.type;
         }
 
-        public Builder setLastTransitionTime(@Nullable String lastTransitionTime) {
+        public Builder lastTransitionTime(@Nullable String lastTransitionTime) {
             this.lastTransitionTime = lastTransitionTime;
             return this;
         }
 
-        public Builder setMessage(@Nullable String message) {
+        public Builder message(@Nullable String message) {
             this.message = message;
             return this;
         }
 
-        public Builder setReason(@Nullable String reason) {
+        public Builder reason(@Nullable String reason) {
             this.reason = reason;
             return this;
         }
 
-        public Builder setStatus(String status) {
+        public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

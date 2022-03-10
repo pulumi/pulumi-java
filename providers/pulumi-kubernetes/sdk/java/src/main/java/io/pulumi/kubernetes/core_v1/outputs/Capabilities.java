@@ -67,12 +67,12 @@ public final class Capabilities {
     	      this.drop = defaults.drop;
         }
 
-        public Builder setAdd(@Nullable List<String> add) {
+        public Builder add(@Nullable List<String> add) {
             this.add = add;
             return this;
         }
 
-        public Builder setDrop(@Nullable List<String> drop) {
+        public Builder drop(@Nullable List<String> drop) {
             this.drop = drop;
             return this;
         }

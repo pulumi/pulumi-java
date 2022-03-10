@@ -50,7 +50,7 @@ public final class ContainerStateRunning {
     	      this.startedAt = defaults.startedAt;
         }
 
-        public Builder setStartedAt(@Nullable String startedAt) {
+        public Builder startedAt(@Nullable String startedAt) {
             this.startedAt = startedAt;
             return this;
         }
