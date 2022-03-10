@@ -1,6 +1,7 @@
 package appservice;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import io.pulumi.Config;
 import io.pulumi.Stack;
@@ -29,6 +30,7 @@ import io.pulumi.azurenative.web.inputs.SiteConfigArgs;
 import io.pulumi.azurenative.web.inputs.SkuDescriptionArgs;
 import io.pulumi.core.Archive;
 import io.pulumi.core.Either;
+import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.deployment.InvokeOptions;
@@ -40,25 +42,21 @@ public final class MyStack extends Stack {
     private final Output<String> endpoint;
 
     public MyStack() {
-        var resourceGroup = new ResourceGroup("resourceGroup",
-                                              ResourceGroupArgs.builder().build(),
-                                              CustomResourceOptions.Empty);
+        var resourceGroup = new ResourceGroup("resourceGroup");
 
         var storageAccount = new StorageAccount("sa",
                 StorageAccountArgs.builder()
                         .setResourceGroupName(resourceGroup.getName().toInput())
                         .setKind(Either.ofRight(Kind.StorageV2))
                         .setSku(SkuArgs.builder().setName(Either.ofRight(SkuName.Standard_LRS)).build())
-                        .build(),
-                CustomResourceOptions.Empty);
+                        .build());
 
         var storageContainer = new BlobContainer("container",
                 BlobContainerArgs.builder()
                         .setResourceGroupName(resourceGroup.getName().toInput())
                         .setAccountName(storageAccount.getName().toInput())
                         .setPublicAccess(PublicAccess.None)
-                        .build(),
-                CustomResourceOptions.Empty);
+                        .build());
 
         var blob = new Blob("blob",
                 BlobArgs.builder()
@@ -66,8 +64,7 @@ public final class MyStack extends Stack {
                         .setAccountName(storageAccount.getName().toInput())
                         .setContainerName(storageContainer.getName().toInput())
                         .setSource(new Archive.FileArchive("wwwroot"))
-                        .build(),
-                CustomResourceOptions.Empty);
+                        .build());
 
         var codeBlobUrl = getSASToken(storageAccount.getName(), storageContainer.getName(), blob.getName(), resourceGroup.getName());
 
@@ -76,8 +73,7 @@ public final class MyStack extends Stack {
                         .setResourceGroupName(resourceGroup.getName().toInput())
                         .setKind("web")
                         .setApplicationType(Either.ofRight(ApplicationType.Web))
-                        .build(),
-                CustomResourceOptions.Empty);
+                        .build());
 
         var username = "pulumi";
 
@@ -91,71 +87,58 @@ public final class MyStack extends Stack {
                         .setAdministratorLogin(username)
                         .setAdministratorLoginPassword(pwd)
                         .setVersion("12.0")
-                        .build(),
-                CustomResourceOptions.Empty);
+                        .build());
 
        var database = new Database("db",
                 DatabaseArgs.builder()
                         .setResourceGroupName(resourceGroup.getName().toInput())
                         .setServerName(sqlServer.getName().toInput())
                         .setSku(io.pulumi.azurenative.sql.inputs.SkuArgs.builder().setName("S0").build())
-                        .build(),
-                CustomResourceOptions.Empty);
+                        .build());
 
         var appServicePlan = new AppServicePlan("asp",
                 AppServicePlanArgs.builder()
                         .setResourceGroupName(resourceGroup.getName().toInput())
                         .setKind("App")
                         .setSku(SkuDescriptionArgs.builder().setName("B1").setTier("Basic").build())
-                        .build(),
-                CustomResourceOptions.Empty);
+                        .build());
 
         var app = new WebApp("webapp",
                 WebAppArgs.builder()
                         .setResourceGroupName(resourceGroup.getName().toInput())
                         .setServerFarmId(appServicePlan.getId().toInput())
                         .setSiteConfig(SiteConfigArgs.builder()
-                                .setAppSettings(new ArrayList<>() {{
-                                    add(NameValuePairArgs.builder()
+                                .setAppSettings(List.of(
+                                        NameValuePairArgs.builder()
                                             .setName("APPINSIGHTS_INSTRUMENTATIONKEY")
                                             .setValue(appInsights.getInstrumentationKey().toInput())
-                                            .build());
-                                    add(NameValuePairArgs.builder()
+                                            .build(),
+                                        NameValuePairArgs.builder()
                                             .setName("APPLICATIONINSIGHTS_CONNECTION_STRING")
-                                            .setValue(appInsights
-                                                    .getInstrumentationKey()
-                                                    .applyValue(v -> String.format("InstrumentationKey=%s", v))
-                                                    .toInput())
-                                            .build());
-                                    add(NameValuePairArgs.builder()
+                                            .setValue(Output.format("InstrumentationKey=%s", appInsights.getInstrumentationKey()).toInput())
+                                            .build(),
+                                        NameValuePairArgs.builder()
                                             .setName("ApplicationInsightsAgent_EXTENSION_VERSION")
                                             .setValue("~2")
-                                            .build());
-                                     add(NameValuePairArgs.builder()
-                                             .setName("WEBSITE_RUN_FROM_PACKAGE")
+                                            .build(),
+                                        NameValuePairArgs.builder()
+                                            .setName("WEBSITE_RUN_FROM_PACKAGE")
                                             .setValue(codeBlobUrl.toInput())
-                                             .build());
-                                }})
-                                 .setConnectionStrings(new ArrayList<>() {{
-                                     add(ConnStringInfoArgs.builder()
-                                             .setName("db")
-                                            .setConnectionString(Output.tuple(sqlServer.getName(), database.getName())
-                                                    .applyValue(t -> String.format("Server=tcp:%s.database.windows.net;initial catalog=%s;user ID=%s;password=%s;Min Pool Size=0;Max Pool Size=30;Persist Security Info=true;",
-                                                            t.t1,
-                                                            t.t2,
-                                                            username,
-                                                            pwd))
-                                                    .toInput())
-                                             .setType(ConnectionStringType.SQLAzure)
-                                             .build());
-                                 }})
-                                 .build())
+                                            .build()))
+                                .setConnectionStrings(List.of(
+                                        ConnStringInfoArgs.builder()
+                                            .setName("db")
+                                            .setConnectionString(
+                                                Output.format(
+                                    "Server=tcp:%s.database.windows.net;initial catalog=%s;user ID=%s;password=%s;Min Pool Size=0;Max Pool Size=30;Persist Security Info=true;",
+                                                   sqlServer.getName(), database.getName(), Input.of(username), Input.of(pwd)).toInput())
+                                            .setType(ConnectionStringType.SQLAzure)
+                                            .build()))
+                                .build())
                         .setHttpsOnly(true)
-                        .build(),
-                CustomResourceOptions.Empty);
+                        .build());
 
-        this.endpoint = app.getDefaultHostName()
-            .applyValue(hostName -> String.format("https://%s", hostName));
+        this.endpoint = Output.format("https://%s", app.getDefaultHostName());
     }
 
     private Output<String> getSASToken(Output<String> storageAccountName, Output<String> storageContainerName,
@@ -178,7 +161,6 @@ public final class MyStack extends Stack {
                         .build(),
                 InvokeOptions.Empty));
         var token = blobSAS.applyValue(ListStorageAccountServiceSASResult::getServiceSasToken);
-        return Output.tuple(storageAccountName, storageContainerName, blobName, token).applyValue(t ->
-                String.format("https://%s.blob.core.windows.net/%s/%s?%s", t.t1, t.t2, t.t3, t.t4));
+        return Output.format("https://%s.blob.core.windows.net/%s/%s?%s", storageAccountName, storageContainerName, blobName, token);
     }
 }
