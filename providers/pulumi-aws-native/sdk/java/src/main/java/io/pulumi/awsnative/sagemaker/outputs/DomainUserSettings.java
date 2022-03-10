@@ -41,13 +41,13 @@ public final class DomainUserSettings {
      */
     private final @Nullable DomainSharingSettings sharingSettings;
 
-    @OutputCustomType.Constructor({"executionRole","jupyterServerAppSettings","kernelGatewayAppSettings","securityGroups","sharingSettings"})
+    @OutputCustomType.Constructor
     private DomainUserSettings(
-        @Nullable String executionRole,
-        @Nullable DomainJupyterServerAppSettings jupyterServerAppSettings,
-        @Nullable DomainKernelGatewayAppSettings kernelGatewayAppSettings,
-        @Nullable List<String> securityGroups,
-        @Nullable DomainSharingSettings sharingSettings) {
+        @OutputCustomType.Parameter("executionRole") @Nullable String executionRole,
+        @OutputCustomType.Parameter("jupyterServerAppSettings") @Nullable DomainJupyterServerAppSettings jupyterServerAppSettings,
+        @OutputCustomType.Parameter("kernelGatewayAppSettings") @Nullable DomainKernelGatewayAppSettings kernelGatewayAppSettings,
+        @OutputCustomType.Parameter("securityGroups") @Nullable List<String> securityGroups,
+        @OutputCustomType.Parameter("sharingSettings") @Nullable DomainSharingSettings sharingSettings) {
         this.executionRole = executionRole;
         this.jupyterServerAppSettings = jupyterServerAppSettings;
         this.kernelGatewayAppSettings = kernelGatewayAppSettings;

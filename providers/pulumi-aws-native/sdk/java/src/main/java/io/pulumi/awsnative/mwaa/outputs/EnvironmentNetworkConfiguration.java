@@ -22,10 +22,10 @@ public final class EnvironmentNetworkConfiguration {
      */
     private final @Nullable List<String> subnetIds;
 
-    @OutputCustomType.Constructor({"securityGroupIds","subnetIds"})
+    @OutputCustomType.Constructor
     private EnvironmentNetworkConfiguration(
-        @Nullable List<String> securityGroupIds,
-        @Nullable List<String> subnetIds) {
+        @OutputCustomType.Parameter("securityGroupIds") @Nullable List<String> securityGroupIds,
+        @OutputCustomType.Parameter("subnetIds") @Nullable List<String> subnetIds) {
         this.securityGroupIds = securityGroupIds;
         this.subnetIds = subnetIds;
     }

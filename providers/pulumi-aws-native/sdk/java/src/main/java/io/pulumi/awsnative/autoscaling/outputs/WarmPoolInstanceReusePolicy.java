@@ -13,8 +13,8 @@ import javax.annotation.Nullable;
 public final class WarmPoolInstanceReusePolicy {
     private final @Nullable Boolean reuseOnScaleIn;
 
-    @OutputCustomType.Constructor({"reuseOnScaleIn"})
-    private WarmPoolInstanceReusePolicy(@Nullable Boolean reuseOnScaleIn) {
+    @OutputCustomType.Constructor
+    private WarmPoolInstanceReusePolicy(@OutputCustomType.Parameter("reuseOnScaleIn") @Nullable Boolean reuseOnScaleIn) {
         this.reuseOnScaleIn = reuseOnScaleIn;
     }
 

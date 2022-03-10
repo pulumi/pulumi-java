@@ -44,14 +44,14 @@ public final class GetWorkspaceResult {
      */
     private final @Nullable String workspaceId;
 
-    @OutputCustomType.Constructor({"alertManagerDefinition","alias","arn","prometheusEndpoint","tags","workspaceId"})
+    @OutputCustomType.Constructor
     private GetWorkspaceResult(
-        @Nullable String alertManagerDefinition,
-        @Nullable String alias,
-        @Nullable String arn,
-        @Nullable String prometheusEndpoint,
-        @Nullable List<WorkspaceTag> tags,
-        @Nullable String workspaceId) {
+        @OutputCustomType.Parameter("alertManagerDefinition") @Nullable String alertManagerDefinition,
+        @OutputCustomType.Parameter("alias") @Nullable String alias,
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("prometheusEndpoint") @Nullable String prometheusEndpoint,
+        @OutputCustomType.Parameter("tags") @Nullable List<WorkspaceTag> tags,
+        @OutputCustomType.Parameter("workspaceId") @Nullable String workspaceId) {
         this.alertManagerDefinition = alertManagerDefinition;
         this.alias = alias;
         this.arn = arn;

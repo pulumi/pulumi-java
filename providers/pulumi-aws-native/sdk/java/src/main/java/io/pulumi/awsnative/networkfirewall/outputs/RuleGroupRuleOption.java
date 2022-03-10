@@ -14,10 +14,10 @@ public final class RuleGroupRuleOption {
     private final String keyword;
     private final @Nullable List<String> settings;
 
-    @OutputCustomType.Constructor({"keyword","settings"})
+    @OutputCustomType.Constructor
     private RuleGroupRuleOption(
-        String keyword,
-        @Nullable List<String> settings) {
+        @OutputCustomType.Parameter("keyword") String keyword,
+        @OutputCustomType.Parameter("settings") @Nullable List<String> settings) {
         this.keyword = keyword;
         this.settings = settings;
     }

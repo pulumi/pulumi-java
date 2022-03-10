@@ -18,14 +18,14 @@ public final class TopicRuleCloudwatchMetricAction {
     private final String metricValue;
     private final String roleArn;
 
-    @OutputCustomType.Constructor({"metricName","metricNamespace","metricTimestamp","metricUnit","metricValue","roleArn"})
+    @OutputCustomType.Constructor
     private TopicRuleCloudwatchMetricAction(
-        String metricName,
-        String metricNamespace,
-        @Nullable String metricTimestamp,
-        String metricUnit,
-        String metricValue,
-        String roleArn) {
+        @OutputCustomType.Parameter("metricName") String metricName,
+        @OutputCustomType.Parameter("metricNamespace") String metricNamespace,
+        @OutputCustomType.Parameter("metricTimestamp") @Nullable String metricTimestamp,
+        @OutputCustomType.Parameter("metricUnit") String metricUnit,
+        @OutputCustomType.Parameter("metricValue") String metricValue,
+        @OutputCustomType.Parameter("roleArn") String roleArn) {
         this.metricName = metricName;
         this.metricNamespace = metricNamespace;
         this.metricTimestamp = metricTimestamp;

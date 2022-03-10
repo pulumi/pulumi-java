@@ -20,10 +20,10 @@ public final class GetTaskDefinitionResult {
      */
     private final @Nullable String taskDefinitionArn;
 
-    @OutputCustomType.Constructor({"tags","taskDefinitionArn"})
+    @OutputCustomType.Constructor
     private GetTaskDefinitionResult(
-        @Nullable List<TaskDefinitionTag> tags,
-        @Nullable String taskDefinitionArn) {
+        @OutputCustomType.Parameter("tags") @Nullable List<TaskDefinitionTag> tags,
+        @OutputCustomType.Parameter("taskDefinitionArn") @Nullable String taskDefinitionArn) {
         this.tags = tags;
         this.taskDefinitionArn = taskDefinitionArn;
     }

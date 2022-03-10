@@ -22,10 +22,10 @@ public final class DetectorModelAssetPropertyTimestamp {
      */
     private final String timeInSeconds;
 
-    @OutputCustomType.Constructor({"offsetInNanos","timeInSeconds"})
+    @OutputCustomType.Constructor
     private DetectorModelAssetPropertyTimestamp(
-        @Nullable String offsetInNanos,
-        String timeInSeconds) {
+        @OutputCustomType.Parameter("offsetInNanos") @Nullable String offsetInNanos,
+        @OutputCustomType.Parameter("timeInSeconds") String timeInSeconds) {
         this.offsetInNanos = offsetInNanos;
         this.timeInSeconds = timeInSeconds;
     }

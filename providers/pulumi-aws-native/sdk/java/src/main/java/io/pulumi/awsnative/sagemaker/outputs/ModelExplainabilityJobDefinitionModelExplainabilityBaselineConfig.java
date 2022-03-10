@@ -15,10 +15,10 @@ public final class ModelExplainabilityJobDefinitionModelExplainabilityBaselineCo
     private final @Nullable String baseliningJobName;
     private final @Nullable ModelExplainabilityJobDefinitionConstraintsResource constraintsResource;
 
-    @OutputCustomType.Constructor({"baseliningJobName","constraintsResource"})
+    @OutputCustomType.Constructor
     private ModelExplainabilityJobDefinitionModelExplainabilityBaselineConfig(
-        @Nullable String baseliningJobName,
-        @Nullable ModelExplainabilityJobDefinitionConstraintsResource constraintsResource) {
+        @OutputCustomType.Parameter("baseliningJobName") @Nullable String baseliningJobName,
+        @OutputCustomType.Parameter("constraintsResource") @Nullable ModelExplainabilityJobDefinitionConstraintsResource constraintsResource) {
         this.baseliningJobName = baseliningJobName;
         this.constraintsResource = constraintsResource;
     }

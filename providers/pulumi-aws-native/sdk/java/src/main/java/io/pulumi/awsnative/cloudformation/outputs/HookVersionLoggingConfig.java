@@ -22,10 +22,10 @@ public final class HookVersionLoggingConfig {
      */
     private final @Nullable String logRoleArn;
 
-    @OutputCustomType.Constructor({"logGroupName","logRoleArn"})
+    @OutputCustomType.Constructor
     private HookVersionLoggingConfig(
-        @Nullable String logGroupName,
-        @Nullable String logRoleArn) {
+        @OutputCustomType.Parameter("logGroupName") @Nullable String logGroupName,
+        @OutputCustomType.Parameter("logRoleArn") @Nullable String logRoleArn) {
         this.logGroupName = logGroupName;
         this.logRoleArn = logRoleArn;
     }

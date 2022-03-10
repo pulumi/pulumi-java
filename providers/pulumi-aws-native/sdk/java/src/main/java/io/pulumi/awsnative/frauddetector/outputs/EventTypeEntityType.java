@@ -38,15 +38,15 @@ public final class EventTypeEntityType {
      */
     private final @Nullable List<EventTypeTag> tags;
 
-    @OutputCustomType.Constructor({"arn","createdTime","description","inline","lastUpdatedTime","name","tags"})
+    @OutputCustomType.Constructor
     private EventTypeEntityType(
-        @Nullable String arn,
-        @Nullable String createdTime,
-        @Nullable String description,
-        @Nullable Boolean inline,
-        @Nullable String lastUpdatedTime,
-        @Nullable String name,
-        @Nullable List<EventTypeTag> tags) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("createdTime") @Nullable String createdTime,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("inline") @Nullable Boolean inline,
+        @OutputCustomType.Parameter("lastUpdatedTime") @Nullable String lastUpdatedTime,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("tags") @Nullable List<EventTypeTag> tags) {
         this.arn = arn;
         this.createdTime = createdTime;
         this.description = description;

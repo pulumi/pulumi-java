@@ -8,7 +8,7 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GetFeatureGroupResult {
-    @OutputCustomType.Constructor({})
+    @OutputCustomType.Constructor
     private GetFeatureGroupResult() {
     }
 

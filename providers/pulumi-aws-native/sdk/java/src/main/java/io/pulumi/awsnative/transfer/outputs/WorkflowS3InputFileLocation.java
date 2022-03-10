@@ -22,10 +22,10 @@ public final class WorkflowS3InputFileLocation {
      */
     private final @Nullable String key;
 
-    @OutputCustomType.Constructor({"bucket","key"})
+    @OutputCustomType.Constructor
     private WorkflowS3InputFileLocation(
-        @Nullable String bucket,
-        @Nullable String key) {
+        @OutputCustomType.Parameter("bucket") @Nullable String bucket,
+        @OutputCustomType.Parameter("key") @Nullable String key) {
         this.bucket = bucket;
         this.key = key;
     }

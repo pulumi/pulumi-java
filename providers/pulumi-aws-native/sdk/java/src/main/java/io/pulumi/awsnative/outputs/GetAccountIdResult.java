@@ -11,8 +11,8 @@ import java.util.Objects;
 public final class GetAccountIdResult {
     private final String accountId;
 
-    @OutputCustomType.Constructor({"accountId"})
-    private GetAccountIdResult(String accountId) {
+    @OutputCustomType.Constructor
+    private GetAccountIdResult(@OutputCustomType.Parameter("accountId") String accountId) {
         this.accountId = accountId;
     }
 

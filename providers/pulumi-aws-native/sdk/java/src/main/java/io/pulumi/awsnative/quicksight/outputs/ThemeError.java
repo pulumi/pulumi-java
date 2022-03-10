@@ -19,10 +19,10 @@ public final class ThemeError {
     private final @Nullable String message;
     private final @Nullable ThemeErrorType type;
 
-    @OutputCustomType.Constructor({"message","type"})
+    @OutputCustomType.Constructor
     private ThemeError(
-        @Nullable String message,
-        @Nullable ThemeErrorType type) {
+        @OutputCustomType.Parameter("message") @Nullable String message,
+        @OutputCustomType.Parameter("type") @Nullable ThemeErrorType type) {
         this.message = message;
         this.type = type;
     }

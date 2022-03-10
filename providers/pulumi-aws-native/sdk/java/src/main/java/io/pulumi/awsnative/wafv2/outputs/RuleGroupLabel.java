@@ -11,8 +11,8 @@ import java.util.Objects;
 public final class RuleGroupLabel {
     private final String name;
 
-    @OutputCustomType.Constructor({"name"})
-    private RuleGroupLabel(String name) {
+    @OutputCustomType.Constructor
+    private RuleGroupLabel(@OutputCustomType.Parameter("name") String name) {
         this.name = name;
     }
 

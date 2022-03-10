@@ -8,7 +8,7 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class StorageLensEncryption {
-    @OutputCustomType.Constructor({})
+    @OutputCustomType.Constructor
     private StorageLensEncryption() {
     }
 

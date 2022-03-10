@@ -11,8 +11,8 @@ import java.util.Objects;
 public final class IntegrationServiceNowSourceProperties {
     private final String object;
 
-    @OutputCustomType.Constructor({"object"})
-    private IntegrationServiceNowSourceProperties(String object) {
+    @OutputCustomType.Constructor
+    private IntegrationServiceNowSourceProperties(@OutputCustomType.Parameter("object") String object) {
         this.object = object;
     }
 

@@ -14,10 +14,10 @@ public final class GatewayCapabilitySummary {
     private final @Nullable String capabilityConfiguration;
     private final String capabilityNamespace;
 
-    @OutputCustomType.Constructor({"capabilityConfiguration","capabilityNamespace"})
+    @OutputCustomType.Constructor
     private GatewayCapabilitySummary(
-        @Nullable String capabilityConfiguration,
-        String capabilityNamespace) {
+        @OutputCustomType.Parameter("capabilityConfiguration") @Nullable String capabilityConfiguration,
+        @OutputCustomType.Parameter("capabilityNamespace") String capabilityNamespace) {
         this.capabilityConfiguration = capabilityConfiguration;
         this.capabilityNamespace = capabilityNamespace;
     }

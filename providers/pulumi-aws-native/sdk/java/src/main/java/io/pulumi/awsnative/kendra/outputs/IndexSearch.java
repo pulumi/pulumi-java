@@ -16,12 +16,12 @@ public final class IndexSearch {
     private final @Nullable Boolean searchable;
     private final @Nullable Boolean sortable;
 
-    @OutputCustomType.Constructor({"displayable","facetable","searchable","sortable"})
+    @OutputCustomType.Constructor
     private IndexSearch(
-        @Nullable Boolean displayable,
-        @Nullable Boolean facetable,
-        @Nullable Boolean searchable,
-        @Nullable Boolean sortable) {
+        @OutputCustomType.Parameter("displayable") @Nullable Boolean displayable,
+        @OutputCustomType.Parameter("facetable") @Nullable Boolean facetable,
+        @OutputCustomType.Parameter("searchable") @Nullable Boolean searchable,
+        @OutputCustomType.Parameter("sortable") @Nullable Boolean sortable) {
         this.displayable = displayable;
         this.facetable = facetable;
         this.searchable = searchable;

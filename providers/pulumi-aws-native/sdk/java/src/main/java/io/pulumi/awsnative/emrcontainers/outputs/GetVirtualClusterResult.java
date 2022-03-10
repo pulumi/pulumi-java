@@ -25,11 +25,11 @@ public final class GetVirtualClusterResult {
      */
     private final @Nullable List<VirtualClusterTag> tags;
 
-    @OutputCustomType.Constructor({"arn","id","tags"})
+    @OutputCustomType.Constructor
     private GetVirtualClusterResult(
-        @Nullable String arn,
-        @Nullable String id,
-        @Nullable List<VirtualClusterTag> tags) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("tags") @Nullable List<VirtualClusterTag> tags) {
         this.arn = arn;
         this.id = id;
         this.tags = tags;

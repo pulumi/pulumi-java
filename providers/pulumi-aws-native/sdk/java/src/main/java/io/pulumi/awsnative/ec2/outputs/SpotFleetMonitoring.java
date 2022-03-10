@@ -13,8 +13,8 @@ import javax.annotation.Nullable;
 public final class SpotFleetMonitoring {
     private final @Nullable Boolean enabled;
 
-    @OutputCustomType.Constructor({"enabled"})
-    private SpotFleetMonitoring(@Nullable Boolean enabled) {
+    @OutputCustomType.Constructor
+    private SpotFleetMonitoring(@OutputCustomType.Parameter("enabled") @Nullable Boolean enabled) {
         this.enabled = enabled;
     }
 

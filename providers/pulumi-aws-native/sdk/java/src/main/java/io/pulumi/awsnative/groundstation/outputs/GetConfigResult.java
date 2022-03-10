@@ -21,14 +21,14 @@ public final class GetConfigResult {
     private final @Nullable List<ConfigTag> tags;
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor({"arn","configData","id","name","tags","type"})
+    @OutputCustomType.Constructor
     private GetConfigResult(
-        @Nullable String arn,
-        @Nullable ConfigData configData,
-        @Nullable String id,
-        @Nullable String name,
-        @Nullable List<ConfigTag> tags,
-        @Nullable String type) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("configData") @Nullable ConfigData configData,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("tags") @Nullable List<ConfigTag> tags,
+        @OutputCustomType.Parameter("type") @Nullable String type) {
         this.arn = arn;
         this.configData = configData;
         this.id = id;

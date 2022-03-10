@@ -15,10 +15,10 @@ public final class SecurityServicePolicyDataProperties {
     private final @Nullable String managedServiceData;
     private final PolicySecurityServicePolicyDataPropertiesType type;
 
-    @OutputCustomType.Constructor({"managedServiceData","type"})
+    @OutputCustomType.Constructor
     private SecurityServicePolicyDataProperties(
-        @Nullable String managedServiceData,
-        PolicySecurityServicePolicyDataPropertiesType type) {
+        @OutputCustomType.Parameter("managedServiceData") @Nullable String managedServiceData,
+        @OutputCustomType.Parameter("type") PolicySecurityServicePolicyDataPropertiesType type) {
         this.managedServiceData = managedServiceData;
         this.type = type;
     }

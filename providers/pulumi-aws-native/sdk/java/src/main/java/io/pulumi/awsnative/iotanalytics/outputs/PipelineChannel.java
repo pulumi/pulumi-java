@@ -15,11 +15,11 @@ public final class PipelineChannel {
     private final String name;
     private final @Nullable String next;
 
-    @OutputCustomType.Constructor({"channelName","name","next"})
+    @OutputCustomType.Constructor
     private PipelineChannel(
-        String channelName,
-        String name,
-        @Nullable String next) {
+        @OutputCustomType.Parameter("channelName") String channelName,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("next") @Nullable String next) {
         this.channelName = channelName;
         this.name = name;
         this.next = next;

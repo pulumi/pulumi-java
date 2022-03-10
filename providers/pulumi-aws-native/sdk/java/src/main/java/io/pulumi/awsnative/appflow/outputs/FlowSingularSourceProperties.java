@@ -11,8 +11,8 @@ import java.util.Objects;
 public final class FlowSingularSourceProperties {
     private final String object;
 
-    @OutputCustomType.Constructor({"object"})
-    private FlowSingularSourceProperties(String object) {
+    @OutputCustomType.Constructor
+    private FlowSingularSourceProperties(@OutputCustomType.Parameter("object") String object) {
         this.object = object;
     }
 

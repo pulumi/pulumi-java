@@ -27,11 +27,11 @@ public final class GetPublicTypeVersionResult {
      */
     private final @Nullable String typeVersionArn;
 
-    @OutputCustomType.Constructor({"publicTypeArn","publisherId","typeVersionArn"})
+    @OutputCustomType.Constructor
     private GetPublicTypeVersionResult(
-        @Nullable String publicTypeArn,
-        @Nullable String publisherId,
-        @Nullable String typeVersionArn) {
+        @OutputCustomType.Parameter("publicTypeArn") @Nullable String publicTypeArn,
+        @OutputCustomType.Parameter("publisherId") @Nullable String publisherId,
+        @OutputCustomType.Parameter("typeVersionArn") @Nullable String typeVersionArn) {
         this.publicTypeArn = publicTypeArn;
         this.publisherId = publisherId;
         this.typeVersionArn = typeVersionArn;

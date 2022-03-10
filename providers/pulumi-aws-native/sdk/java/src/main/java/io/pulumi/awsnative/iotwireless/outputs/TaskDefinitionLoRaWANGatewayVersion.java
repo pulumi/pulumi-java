@@ -15,11 +15,11 @@ public final class TaskDefinitionLoRaWANGatewayVersion {
     private final @Nullable String packageVersion;
     private final @Nullable String station;
 
-    @OutputCustomType.Constructor({"model","packageVersion","station"})
+    @OutputCustomType.Constructor
     private TaskDefinitionLoRaWANGatewayVersion(
-        @Nullable String model,
-        @Nullable String packageVersion,
-        @Nullable String station) {
+        @OutputCustomType.Parameter("model") @Nullable String model,
+        @OutputCustomType.Parameter("packageVersion") @Nullable String packageVersion,
+        @OutputCustomType.Parameter("station") @Nullable String station) {
         this.model = model;
         this.packageVersion = packageVersion;
         this.station = station;

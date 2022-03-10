@@ -22,15 +22,15 @@ public final class IntegrationScheduledTriggerProperties {
     private final @Nullable Double scheduleStartTime;
     private final @Nullable String timezone;
 
-    @OutputCustomType.Constructor({"dataPullMode","firstExecutionFrom","scheduleEndTime","scheduleExpression","scheduleOffset","scheduleStartTime","timezone"})
+    @OutputCustomType.Constructor
     private IntegrationScheduledTriggerProperties(
-        @Nullable IntegrationScheduledTriggerPropertiesDataPullMode dataPullMode,
-        @Nullable Double firstExecutionFrom,
-        @Nullable Double scheduleEndTime,
-        String scheduleExpression,
-        @Nullable Integer scheduleOffset,
-        @Nullable Double scheduleStartTime,
-        @Nullable String timezone) {
+        @OutputCustomType.Parameter("dataPullMode") @Nullable IntegrationScheduledTriggerPropertiesDataPullMode dataPullMode,
+        @OutputCustomType.Parameter("firstExecutionFrom") @Nullable Double firstExecutionFrom,
+        @OutputCustomType.Parameter("scheduleEndTime") @Nullable Double scheduleEndTime,
+        @OutputCustomType.Parameter("scheduleExpression") String scheduleExpression,
+        @OutputCustomType.Parameter("scheduleOffset") @Nullable Integer scheduleOffset,
+        @OutputCustomType.Parameter("scheduleStartTime") @Nullable Double scheduleStartTime,
+        @OutputCustomType.Parameter("timezone") @Nullable String timezone) {
         this.dataPullMode = dataPullMode;
         this.firstExecutionFrom = firstExecutionFrom;
         this.scheduleEndTime = scheduleEndTime;

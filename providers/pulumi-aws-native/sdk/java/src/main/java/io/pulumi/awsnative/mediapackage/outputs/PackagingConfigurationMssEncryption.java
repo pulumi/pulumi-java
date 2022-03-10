@@ -11,8 +11,8 @@ import java.util.Objects;
 public final class PackagingConfigurationMssEncryption {
     private final PackagingConfigurationSpekeKeyProvider spekeKeyProvider;
 
-    @OutputCustomType.Constructor({"spekeKeyProvider"})
-    private PackagingConfigurationMssEncryption(PackagingConfigurationSpekeKeyProvider spekeKeyProvider) {
+    @OutputCustomType.Constructor
+    private PackagingConfigurationMssEncryption(@OutputCustomType.Parameter("spekeKeyProvider") PackagingConfigurationSpekeKeyProvider spekeKeyProvider) {
         this.spekeKeyProvider = spekeKeyProvider;
     }
 

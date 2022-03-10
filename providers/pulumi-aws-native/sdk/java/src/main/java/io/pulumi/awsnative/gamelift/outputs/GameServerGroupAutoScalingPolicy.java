@@ -15,10 +15,10 @@ public final class GameServerGroupAutoScalingPolicy {
     private final @Nullable Double estimatedInstanceWarmup;
     private final GameServerGroupTargetTrackingConfiguration targetTrackingConfiguration;
 
-    @OutputCustomType.Constructor({"estimatedInstanceWarmup","targetTrackingConfiguration"})
+    @OutputCustomType.Constructor
     private GameServerGroupAutoScalingPolicy(
-        @Nullable Double estimatedInstanceWarmup,
-        GameServerGroupTargetTrackingConfiguration targetTrackingConfiguration) {
+        @OutputCustomType.Parameter("estimatedInstanceWarmup") @Nullable Double estimatedInstanceWarmup,
+        @OutputCustomType.Parameter("targetTrackingConfiguration") GameServerGroupTargetTrackingConfiguration targetTrackingConfiguration) {
         this.estimatedInstanceWarmup = estimatedInstanceWarmup;
         this.targetTrackingConfiguration = targetTrackingConfiguration;
     }

@@ -16,8 +16,8 @@ public final class ReplicationConfiguration {
      */
     private final List<ReplicationConfigurationReplicationRule> rules;
 
-    @OutputCustomType.Constructor({"rules"})
-    private ReplicationConfiguration(List<ReplicationConfigurationReplicationRule> rules) {
+    @OutputCustomType.Constructor
+    private ReplicationConfiguration(@OutputCustomType.Parameter("rules") List<ReplicationConfigurationReplicationRule> rules) {
         this.rules = rules;
     }
 

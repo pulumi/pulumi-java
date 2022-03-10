@@ -14,10 +14,10 @@ public final class PrefixListEntry {
     private final String cidr;
     private final @Nullable String description;
 
-    @OutputCustomType.Constructor({"cidr","description"})
+    @OutputCustomType.Constructor
     private PrefixListEntry(
-        String cidr,
-        @Nullable String description) {
+        @OutputCustomType.Parameter("cidr") String cidr,
+        @OutputCustomType.Parameter("description") @Nullable String description) {
         this.cidr = cidr;
         this.description = description;
     }

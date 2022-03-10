@@ -11,8 +11,8 @@ import java.util.Objects;
 public final class OriginEndpointMssEncryption {
     private final OriginEndpointSpekeKeyProvider spekeKeyProvider;
 
-    @OutputCustomType.Constructor({"spekeKeyProvider"})
-    private OriginEndpointMssEncryption(OriginEndpointSpekeKeyProvider spekeKeyProvider) {
+    @OutputCustomType.Constructor
+    private OriginEndpointMssEncryption(@OutputCustomType.Parameter("spekeKeyProvider") OriginEndpointSpekeKeyProvider spekeKeyProvider) {
         this.spekeKeyProvider = spekeKeyProvider;
     }
 

@@ -23,11 +23,11 @@ public final class GetBasePathMappingResult {
      */
     private final @Nullable String stage;
 
-    @OutputCustomType.Constructor({"id","restApiId","stage"})
+    @OutputCustomType.Constructor
     private GetBasePathMappingResult(
-        @Nullable String id,
-        @Nullable String restApiId,
-        @Nullable String stage) {
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("restApiId") @Nullable String restApiId,
+        @OutputCustomType.Parameter("stage") @Nullable String stage) {
         this.id = id;
         this.restApiId = restApiId;
         this.stage = stage;

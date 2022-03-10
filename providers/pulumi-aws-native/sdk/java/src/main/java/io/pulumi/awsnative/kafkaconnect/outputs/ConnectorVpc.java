@@ -21,10 +21,10 @@ public final class ConnectorVpc {
      */
     private final List<String> subnets;
 
-    @OutputCustomType.Constructor({"securityGroups","subnets"})
+    @OutputCustomType.Constructor
     private ConnectorVpc(
-        List<String> securityGroups,
-        List<String> subnets) {
+        @OutputCustomType.Parameter("securityGroups") List<String> securityGroups,
+        @OutputCustomType.Parameter("subnets") List<String> subnets) {
         this.securityGroups = securityGroups;
         this.subnets = subnets;
     }

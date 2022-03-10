@@ -18,13 +18,13 @@ public final class ConnectorProfileSAPODataConnectorProfileCredentialsOAuthCrede
     private final @Nullable ConnectorProfileConnectorOAuthRequest connectorOAuthRequest;
     private final @Nullable String refreshToken;
 
-    @OutputCustomType.Constructor({"accessToken","clientId","clientSecret","connectorOAuthRequest","refreshToken"})
+    @OutputCustomType.Constructor
     private ConnectorProfileSAPODataConnectorProfileCredentialsOAuthCredentialsProperties(
-        @Nullable String accessToken,
-        @Nullable String clientId,
-        @Nullable String clientSecret,
-        @Nullable ConnectorProfileConnectorOAuthRequest connectorOAuthRequest,
-        @Nullable String refreshToken) {
+        @OutputCustomType.Parameter("accessToken") @Nullable String accessToken,
+        @OutputCustomType.Parameter("clientId") @Nullable String clientId,
+        @OutputCustomType.Parameter("clientSecret") @Nullable String clientSecret,
+        @OutputCustomType.Parameter("connectorOAuthRequest") @Nullable ConnectorProfileConnectorOAuthRequest connectorOAuthRequest,
+        @OutputCustomType.Parameter("refreshToken") @Nullable String refreshToken) {
         this.accessToken = accessToken;
         this.clientId = clientId;
         this.clientSecret = clientSecret;

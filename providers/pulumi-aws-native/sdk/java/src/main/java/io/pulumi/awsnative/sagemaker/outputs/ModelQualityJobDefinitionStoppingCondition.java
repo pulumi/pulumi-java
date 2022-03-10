@@ -15,8 +15,8 @@ public final class ModelQualityJobDefinitionStoppingCondition {
      */
     private final Integer maxRuntimeInSeconds;
 
-    @OutputCustomType.Constructor({"maxRuntimeInSeconds"})
-    private ModelQualityJobDefinitionStoppingCondition(Integer maxRuntimeInSeconds) {
+    @OutputCustomType.Constructor
+    private ModelQualityJobDefinitionStoppingCondition(@OutputCustomType.Parameter("maxRuntimeInSeconds") Integer maxRuntimeInSeconds) {
         this.maxRuntimeInSeconds = maxRuntimeInSeconds;
     }
 

@@ -11,8 +11,8 @@ import java.util.Objects;
 public final class SpotFleetGroupIdentifier {
     private final String groupId;
 
-    @OutputCustomType.Constructor({"groupId"})
-    private SpotFleetGroupIdentifier(String groupId) {
+    @OutputCustomType.Constructor
+    private SpotFleetGroupIdentifier(@OutputCustomType.Parameter("groupId") String groupId) {
         this.groupId = groupId;
     }
 

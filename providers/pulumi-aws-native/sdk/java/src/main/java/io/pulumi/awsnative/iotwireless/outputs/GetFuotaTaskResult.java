@@ -80,21 +80,21 @@ public final class GetFuotaTaskResult {
      */
     private final @Nullable List<FuotaTaskTag> tags;
 
-    @OutputCustomType.Constructor({"arn","associateMulticastGroup","associateWirelessDevice","description","disassociateMulticastGroup","disassociateWirelessDevice","firmwareUpdateImage","firmwareUpdateRole","fuotaTaskStatus","id","loRaWAN","name","tags"})
+    @OutputCustomType.Constructor
     private GetFuotaTaskResult(
-        @Nullable String arn,
-        @Nullable String associateMulticastGroup,
-        @Nullable String associateWirelessDevice,
-        @Nullable String description,
-        @Nullable String disassociateMulticastGroup,
-        @Nullable String disassociateWirelessDevice,
-        @Nullable String firmwareUpdateImage,
-        @Nullable String firmwareUpdateRole,
-        @Nullable String fuotaTaskStatus,
-        @Nullable String id,
-        @Nullable FuotaTaskLoRaWAN loRaWAN,
-        @Nullable String name,
-        @Nullable List<FuotaTaskTag> tags) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("associateMulticastGroup") @Nullable String associateMulticastGroup,
+        @OutputCustomType.Parameter("associateWirelessDevice") @Nullable String associateWirelessDevice,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("disassociateMulticastGroup") @Nullable String disassociateMulticastGroup,
+        @OutputCustomType.Parameter("disassociateWirelessDevice") @Nullable String disassociateWirelessDevice,
+        @OutputCustomType.Parameter("firmwareUpdateImage") @Nullable String firmwareUpdateImage,
+        @OutputCustomType.Parameter("firmwareUpdateRole") @Nullable String firmwareUpdateRole,
+        @OutputCustomType.Parameter("fuotaTaskStatus") @Nullable String fuotaTaskStatus,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("loRaWAN") @Nullable FuotaTaskLoRaWAN loRaWAN,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("tags") @Nullable List<FuotaTaskTag> tags) {
         this.arn = arn;
         this.associateMulticastGroup = associateMulticastGroup;
         this.associateWirelessDevice = associateWirelessDevice;

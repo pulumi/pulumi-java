@@ -12,10 +12,10 @@ public final class TopicRuleTimestreamTimestamp {
     private final String unit;
     private final String value;
 
-    @OutputCustomType.Constructor({"unit","value"})
+    @OutputCustomType.Constructor
     private TopicRuleTimestreamTimestamp(
-        String unit,
-        String value) {
+        @OutputCustomType.Parameter("unit") String unit,
+        @OutputCustomType.Parameter("value") String value) {
         this.unit = unit;
         this.value = value;
     }

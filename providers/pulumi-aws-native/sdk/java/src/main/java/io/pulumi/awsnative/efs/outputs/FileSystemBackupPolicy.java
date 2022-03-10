@@ -11,8 +11,8 @@ import java.util.Objects;
 public final class FileSystemBackupPolicy {
     private final String status;
 
-    @OutputCustomType.Constructor({"status"})
-    private FileSystemBackupPolicy(String status) {
+    @OutputCustomType.Constructor
+    private FileSystemBackupPolicy(@OutputCustomType.Parameter("status") String status) {
         this.status = status;
     }
 

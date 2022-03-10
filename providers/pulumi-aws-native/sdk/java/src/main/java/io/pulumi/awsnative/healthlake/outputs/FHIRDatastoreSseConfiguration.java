@@ -11,8 +11,8 @@ import java.util.Objects;
 public final class FHIRDatastoreSseConfiguration {
     private final FHIRDatastoreKmsEncryptionConfig kmsEncryptionConfig;
 
-    @OutputCustomType.Constructor({"kmsEncryptionConfig"})
-    private FHIRDatastoreSseConfiguration(FHIRDatastoreKmsEncryptionConfig kmsEncryptionConfig) {
+    @OutputCustomType.Constructor
+    private FHIRDatastoreSseConfiguration(@OutputCustomType.Parameter("kmsEncryptionConfig") FHIRDatastoreKmsEncryptionConfig kmsEncryptionConfig) {
         this.kmsEncryptionConfig = kmsEncryptionConfig;
     }
 

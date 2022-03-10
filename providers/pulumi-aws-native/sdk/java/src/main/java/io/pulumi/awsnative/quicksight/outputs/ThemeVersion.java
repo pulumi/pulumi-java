@@ -50,16 +50,16 @@ public final class ThemeVersion {
      */
     private final @Nullable Double versionNumber;
 
-    @OutputCustomType.Constructor({"arn","baseThemeId","configuration","createdTime","description","errors","status","versionNumber"})
+    @OutputCustomType.Constructor
     private ThemeVersion(
-        @Nullable String arn,
-        @Nullable String baseThemeId,
-        @Nullable ThemeConfiguration configuration,
-        @Nullable String createdTime,
-        @Nullable String description,
-        @Nullable List<ThemeError> errors,
-        @Nullable ThemeResourceStatus status,
-        @Nullable Double versionNumber) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("baseThemeId") @Nullable String baseThemeId,
+        @OutputCustomType.Parameter("configuration") @Nullable ThemeConfiguration configuration,
+        @OutputCustomType.Parameter("createdTime") @Nullable String createdTime,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("errors") @Nullable List<ThemeError> errors,
+        @OutputCustomType.Parameter("status") @Nullable ThemeResourceStatus status,
+        @OutputCustomType.Parameter("versionNumber") @Nullable Double versionNumber) {
         this.arn = arn;
         this.baseThemeId = baseThemeId;
         this.configuration = configuration;

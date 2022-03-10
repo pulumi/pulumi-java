@@ -15,8 +15,8 @@ public final class ModelBiasJobDefinitionStoppingCondition {
      */
     private final Integer maxRuntimeInSeconds;
 
-    @OutputCustomType.Constructor({"maxRuntimeInSeconds"})
-    private ModelBiasJobDefinitionStoppingCondition(Integer maxRuntimeInSeconds) {
+    @OutputCustomType.Constructor
+    private ModelBiasJobDefinitionStoppingCondition(@OutputCustomType.Parameter("maxRuntimeInSeconds") Integer maxRuntimeInSeconds) {
         this.maxRuntimeInSeconds = maxRuntimeInSeconds;
     }
 

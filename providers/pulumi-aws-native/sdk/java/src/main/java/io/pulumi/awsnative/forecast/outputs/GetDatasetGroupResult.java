@@ -35,12 +35,12 @@ public final class GetDatasetGroupResult {
      */
     private final @Nullable List<DatasetGroupTag> tags;
 
-    @OutputCustomType.Constructor({"datasetArns","datasetGroupArn","domain","tags"})
+    @OutputCustomType.Constructor
     private GetDatasetGroupResult(
-        @Nullable List<String> datasetArns,
-        @Nullable String datasetGroupArn,
-        @Nullable DatasetGroupDomain domain,
-        @Nullable List<DatasetGroupTag> tags) {
+        @OutputCustomType.Parameter("datasetArns") @Nullable List<String> datasetArns,
+        @OutputCustomType.Parameter("datasetGroupArn") @Nullable String datasetGroupArn,
+        @OutputCustomType.Parameter("domain") @Nullable DatasetGroupDomain domain,
+        @OutputCustomType.Parameter("tags") @Nullable List<DatasetGroupTag> tags) {
         this.datasetArns = datasetArns;
         this.datasetGroupArn = datasetGroupArn;
         this.domain = domain;

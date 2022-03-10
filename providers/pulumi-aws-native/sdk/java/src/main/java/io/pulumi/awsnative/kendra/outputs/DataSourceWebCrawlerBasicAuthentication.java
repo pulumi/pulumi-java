@@ -14,11 +14,11 @@ public final class DataSourceWebCrawlerBasicAuthentication {
     private final String host;
     private final Integer port;
 
-    @OutputCustomType.Constructor({"credentials","host","port"})
+    @OutputCustomType.Constructor
     private DataSourceWebCrawlerBasicAuthentication(
-        String credentials,
-        String host,
-        Integer port) {
+        @OutputCustomType.Parameter("credentials") String credentials,
+        @OutputCustomType.Parameter("host") String host,
+        @OutputCustomType.Parameter("port") Integer port) {
         this.credentials = credentials;
         this.host = host;
         this.port = port;

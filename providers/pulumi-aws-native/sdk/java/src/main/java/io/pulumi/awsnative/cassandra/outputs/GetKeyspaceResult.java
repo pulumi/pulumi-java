@@ -13,8 +13,8 @@ import javax.annotation.Nullable;
 public final class GetKeyspaceResult {
     private final @Nullable List<KeyspaceTag> tags;
 
-    @OutputCustomType.Constructor({"tags"})
-    private GetKeyspaceResult(@Nullable List<KeyspaceTag> tags) {
+    @OutputCustomType.Constructor
+    private GetKeyspaceResult(@OutputCustomType.Parameter("tags") @Nullable List<KeyspaceTag> tags) {
         this.tags = tags;
     }
 

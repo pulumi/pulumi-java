@@ -15,8 +15,8 @@ public final class BotCustomPayload {
      */
     private final String value;
 
-    @OutputCustomType.Constructor({"value"})
-    private BotCustomPayload(String value) {
+    @OutputCustomType.Constructor
+    private BotCustomPayload(@OutputCustomType.Parameter("value") String value) {
         this.value = value;
     }
 

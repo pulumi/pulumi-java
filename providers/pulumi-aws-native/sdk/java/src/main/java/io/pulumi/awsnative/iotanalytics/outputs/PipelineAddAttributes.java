@@ -16,11 +16,11 @@ public final class PipelineAddAttributes {
     private final String name;
     private final @Nullable String next;
 
-    @OutputCustomType.Constructor({"attributes","name","next"})
+    @OutputCustomType.Constructor
     private PipelineAddAttributes(
-        Object attributes,
-        String name,
-        @Nullable String next) {
+        @OutputCustomType.Parameter("attributes") Object attributes,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("next") @Nullable String next) {
         this.attributes = attributes;
         this.name = name;
         this.next = next;

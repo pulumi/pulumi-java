@@ -11,8 +11,8 @@ import java.util.Objects;
 public final class FlowZendeskSourceProperties {
     private final String object;
 
-    @OutputCustomType.Constructor({"object"})
-    private FlowZendeskSourceProperties(String object) {
+    @OutputCustomType.Constructor
+    private FlowZendeskSourceProperties(@OutputCustomType.Parameter("object") String object) {
         this.object = object;
     }
 

@@ -22,12 +22,12 @@ public final class GetEnvironmentResult {
     private final @Nullable List<EnvironmentTag> tags;
     private final @Nullable String transitGatewayId;
 
-    @OutputCustomType.Constructor({"arn","environmentIdentifier","tags","transitGatewayId"})
+    @OutputCustomType.Constructor
     private GetEnvironmentResult(
-        @Nullable String arn,
-        @Nullable String environmentIdentifier,
-        @Nullable List<EnvironmentTag> tags,
-        @Nullable String transitGatewayId) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("environmentIdentifier") @Nullable String environmentIdentifier,
+        @OutputCustomType.Parameter("tags") @Nullable List<EnvironmentTag> tags,
+        @OutputCustomType.Parameter("transitGatewayId") @Nullable String transitGatewayId) {
         this.arn = arn;
         this.environmentIdentifier = environmentIdentifier;
         this.tags = tags;

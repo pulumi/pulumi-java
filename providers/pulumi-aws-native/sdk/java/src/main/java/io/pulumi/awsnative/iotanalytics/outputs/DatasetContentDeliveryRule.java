@@ -15,10 +15,10 @@ public final class DatasetContentDeliveryRule {
     private final DatasetContentDeliveryRuleDestination destination;
     private final @Nullable String entryName;
 
-    @OutputCustomType.Constructor({"destination","entryName"})
+    @OutputCustomType.Constructor
     private DatasetContentDeliveryRule(
-        DatasetContentDeliveryRuleDestination destination,
-        @Nullable String entryName) {
+        @OutputCustomType.Parameter("destination") DatasetContentDeliveryRuleDestination destination,
+        @OutputCustomType.Parameter("entryName") @Nullable String entryName) {
         this.destination = destination;
         this.entryName = entryName;
     }

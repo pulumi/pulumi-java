@@ -15,10 +15,10 @@ public final class ConnectorProfileSAPODataConnectorProfileCredentials {
     private final @Nullable ConnectorProfileSAPODataConnectorProfileCredentialsBasicAuthCredentialsProperties basicAuthCredentials;
     private final @Nullable ConnectorProfileSAPODataConnectorProfileCredentialsOAuthCredentialsProperties oAuthCredentials;
 
-    @OutputCustomType.Constructor({"basicAuthCredentials","oAuthCredentials"})
+    @OutputCustomType.Constructor
     private ConnectorProfileSAPODataConnectorProfileCredentials(
-        @Nullable ConnectorProfileSAPODataConnectorProfileCredentialsBasicAuthCredentialsProperties basicAuthCredentials,
-        @Nullable ConnectorProfileSAPODataConnectorProfileCredentialsOAuthCredentialsProperties oAuthCredentials) {
+        @OutputCustomType.Parameter("basicAuthCredentials") @Nullable ConnectorProfileSAPODataConnectorProfileCredentialsBasicAuthCredentialsProperties basicAuthCredentials,
+        @OutputCustomType.Parameter("oAuthCredentials") @Nullable ConnectorProfileSAPODataConnectorProfileCredentialsOAuthCredentialsProperties oAuthCredentials) {
         this.basicAuthCredentials = basicAuthCredentials;
         this.oAuthCredentials = oAuthCredentials;
     }

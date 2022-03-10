@@ -13,10 +13,10 @@ public final class BotVersionLocaleSpecification {
     private final BotVersionLocaleDetails botVersionLocaleDetails;
     private final String localeId;
 
-    @OutputCustomType.Constructor({"botVersionLocaleDetails","localeId"})
+    @OutputCustomType.Constructor
     private BotVersionLocaleSpecification(
-        BotVersionLocaleDetails botVersionLocaleDetails,
-        String localeId) {
+        @OutputCustomType.Parameter("botVersionLocaleDetails") BotVersionLocaleDetails botVersionLocaleDetails,
+        @OutputCustomType.Parameter("localeId") String localeId) {
         this.botVersionLocaleDetails = botVersionLocaleDetails;
         this.localeId = localeId;
     }

@@ -22,15 +22,15 @@ public final class WorkGroupConfigurationUpdates {
     private final @Nullable Boolean requesterPaysEnabled;
     private final @Nullable WorkGroupResultConfigurationUpdates resultConfigurationUpdates;
 
-    @OutputCustomType.Constructor({"bytesScannedCutoffPerQuery","enforceWorkGroupConfiguration","engineVersion","publishCloudWatchMetricsEnabled","removeBytesScannedCutoffPerQuery","requesterPaysEnabled","resultConfigurationUpdates"})
+    @OutputCustomType.Constructor
     private WorkGroupConfigurationUpdates(
-        @Nullable Integer bytesScannedCutoffPerQuery,
-        @Nullable Boolean enforceWorkGroupConfiguration,
-        @Nullable WorkGroupEngineVersion engineVersion,
-        @Nullable Boolean publishCloudWatchMetricsEnabled,
-        @Nullable Boolean removeBytesScannedCutoffPerQuery,
-        @Nullable Boolean requesterPaysEnabled,
-        @Nullable WorkGroupResultConfigurationUpdates resultConfigurationUpdates) {
+        @OutputCustomType.Parameter("bytesScannedCutoffPerQuery") @Nullable Integer bytesScannedCutoffPerQuery,
+        @OutputCustomType.Parameter("enforceWorkGroupConfiguration") @Nullable Boolean enforceWorkGroupConfiguration,
+        @OutputCustomType.Parameter("engineVersion") @Nullable WorkGroupEngineVersion engineVersion,
+        @OutputCustomType.Parameter("publishCloudWatchMetricsEnabled") @Nullable Boolean publishCloudWatchMetricsEnabled,
+        @OutputCustomType.Parameter("removeBytesScannedCutoffPerQuery") @Nullable Boolean removeBytesScannedCutoffPerQuery,
+        @OutputCustomType.Parameter("requesterPaysEnabled") @Nullable Boolean requesterPaysEnabled,
+        @OutputCustomType.Parameter("resultConfigurationUpdates") @Nullable WorkGroupResultConfigurationUpdates resultConfigurationUpdates) {
         this.bytesScannedCutoffPerQuery = bytesScannedCutoffPerQuery;
         this.enforceWorkGroupConfiguration = enforceWorkGroupConfiguration;
         this.engineVersion = engineVersion;

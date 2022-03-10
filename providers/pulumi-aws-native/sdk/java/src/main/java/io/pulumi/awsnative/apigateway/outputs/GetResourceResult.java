@@ -17,8 +17,8 @@ public final class GetResourceResult {
      */
     private final @Nullable String resourceId;
 
-    @OutputCustomType.Constructor({"resourceId"})
-    private GetResourceResult(@Nullable String resourceId) {
+    @OutputCustomType.Constructor
+    private GetResourceResult(@OutputCustomType.Parameter("resourceId") @Nullable String resourceId) {
         this.resourceId = resourceId;
     }
 

@@ -16,11 +16,11 @@ public final class FlowS3SourceProperties {
     private final String bucketPrefix;
     private final @Nullable FlowS3InputFormatConfig s3InputFormatConfig;
 
-    @OutputCustomType.Constructor({"bucketName","bucketPrefix","s3InputFormatConfig"})
+    @OutputCustomType.Constructor
     private FlowS3SourceProperties(
-        String bucketName,
-        String bucketPrefix,
-        @Nullable FlowS3InputFormatConfig s3InputFormatConfig) {
+        @OutputCustomType.Parameter("bucketName") String bucketName,
+        @OutputCustomType.Parameter("bucketPrefix") String bucketPrefix,
+        @OutputCustomType.Parameter("s3InputFormatConfig") @Nullable FlowS3InputFormatConfig s3InputFormatConfig) {
         this.bucketName = bucketName;
         this.bucketPrefix = bucketPrefix;
         this.s3InputFormatConfig = s3InputFormatConfig;

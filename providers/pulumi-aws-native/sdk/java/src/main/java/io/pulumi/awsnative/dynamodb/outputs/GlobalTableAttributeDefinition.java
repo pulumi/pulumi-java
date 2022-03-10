@@ -12,10 +12,10 @@ public final class GlobalTableAttributeDefinition {
     private final String attributeName;
     private final String attributeType;
 
-    @OutputCustomType.Constructor({"attributeName","attributeType"})
+    @OutputCustomType.Constructor
     private GlobalTableAttributeDefinition(
-        String attributeName,
-        String attributeType) {
+        @OutputCustomType.Parameter("attributeName") String attributeName,
+        @OutputCustomType.Parameter("attributeType") String attributeType) {
         this.attributeName = attributeName;
         this.attributeType = attributeType;
     }

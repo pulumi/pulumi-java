@@ -30,12 +30,12 @@ public final class ConnectorProfileInforNexusConnectorProfileCredentials {
      */
     private final String userId;
 
-    @OutputCustomType.Constructor({"accessKeyId","datakey","secretAccessKey","userId"})
+    @OutputCustomType.Constructor
     private ConnectorProfileInforNexusConnectorProfileCredentials(
-        String accessKeyId,
-        String datakey,
-        String secretAccessKey,
-        String userId) {
+        @OutputCustomType.Parameter("accessKeyId") String accessKeyId,
+        @OutputCustomType.Parameter("datakey") String datakey,
+        @OutputCustomType.Parameter("secretAccessKey") String secretAccessKey,
+        @OutputCustomType.Parameter("userId") String userId) {
         this.accessKeyId = accessKeyId;
         this.datakey = datakey;
         this.secretAccessKey = secretAccessKey;

@@ -15,10 +15,10 @@ public final class DatasetTrigger {
     private final @Nullable DatasetSchedule schedule;
     private final @Nullable DatasetTriggeringDataset triggeringDataset;
 
-    @OutputCustomType.Constructor({"schedule","triggeringDataset"})
+    @OutputCustomType.Constructor
     private DatasetTrigger(
-        @Nullable DatasetSchedule schedule,
-        @Nullable DatasetTriggeringDataset triggeringDataset) {
+        @OutputCustomType.Parameter("schedule") @Nullable DatasetSchedule schedule,
+        @OutputCustomType.Parameter("triggeringDataset") @Nullable DatasetTriggeringDataset triggeringDataset) {
         this.schedule = schedule;
         this.triggeringDataset = triggeringDataset;
     }

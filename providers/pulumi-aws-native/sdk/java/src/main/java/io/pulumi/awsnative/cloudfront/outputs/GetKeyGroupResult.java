@@ -16,11 +16,11 @@ public final class GetKeyGroupResult {
     private final @Nullable KeyGroupConfig keyGroupConfig;
     private final @Nullable String lastModifiedTime;
 
-    @OutputCustomType.Constructor({"id","keyGroupConfig","lastModifiedTime"})
+    @OutputCustomType.Constructor
     private GetKeyGroupResult(
-        @Nullable String id,
-        @Nullable KeyGroupConfig keyGroupConfig,
-        @Nullable String lastModifiedTime) {
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("keyGroupConfig") @Nullable KeyGroupConfig keyGroupConfig,
+        @OutputCustomType.Parameter("lastModifiedTime") @Nullable String lastModifiedTime) {
         this.id = id;
         this.keyGroupConfig = keyGroupConfig;
         this.lastModifiedTime = lastModifiedTime;

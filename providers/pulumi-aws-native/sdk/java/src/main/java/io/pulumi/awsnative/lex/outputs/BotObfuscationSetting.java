@@ -15,8 +15,8 @@ public final class BotObfuscationSetting {
      */
     private final BotObfuscationSettingObfuscationSettingType obfuscationSettingType;
 
-    @OutputCustomType.Constructor({"obfuscationSettingType"})
-    private BotObfuscationSetting(BotObfuscationSettingObfuscationSettingType obfuscationSettingType) {
+    @OutputCustomType.Constructor
+    private BotObfuscationSetting(@OutputCustomType.Parameter("obfuscationSettingType") BotObfuscationSettingObfuscationSettingType obfuscationSettingType) {
         this.obfuscationSettingType = obfuscationSettingType;
     }
 

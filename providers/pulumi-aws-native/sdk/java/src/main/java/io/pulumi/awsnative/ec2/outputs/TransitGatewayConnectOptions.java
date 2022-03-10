@@ -17,8 +17,8 @@ public final class TransitGatewayConnectOptions {
      */
     private final @Nullable String protocol;
 
-    @OutputCustomType.Constructor({"protocol"})
-    private TransitGatewayConnectOptions(@Nullable String protocol) {
+    @OutputCustomType.Constructor
+    private TransitGatewayConnectOptions(@OutputCustomType.Parameter("protocol") @Nullable String protocol) {
         this.protocol = protocol;
     }
 

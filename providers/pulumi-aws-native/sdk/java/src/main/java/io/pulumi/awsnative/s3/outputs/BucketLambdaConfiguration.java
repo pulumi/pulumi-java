@@ -28,11 +28,11 @@ public final class BucketLambdaConfiguration {
      */
     private final String function;
 
-    @OutputCustomType.Constructor({"event","filter","function"})
+    @OutputCustomType.Constructor
     private BucketLambdaConfiguration(
-        String event,
-        @Nullable BucketNotificationFilter filter,
-        String function) {
+        @OutputCustomType.Parameter("event") String event,
+        @OutputCustomType.Parameter("filter") @Nullable BucketNotificationFilter filter,
+        @OutputCustomType.Parameter("function") String function) {
         this.event = event;
         this.filter = filter;
         this.function = function;

@@ -11,8 +11,8 @@ import java.util.Objects;
 public final class StorageLensPrefixLevel {
     private final StorageLensPrefixLevelStorageMetrics storageMetrics;
 
-    @OutputCustomType.Constructor({"storageMetrics"})
-    private StorageLensPrefixLevel(StorageLensPrefixLevelStorageMetrics storageMetrics) {
+    @OutputCustomType.Constructor
+    private StorageLensPrefixLevel(@OutputCustomType.Parameter("storageMetrics") StorageLensPrefixLevelStorageMetrics storageMetrics) {
         this.storageMetrics = storageMetrics;
     }
 

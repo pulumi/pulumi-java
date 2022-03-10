@@ -47,14 +47,14 @@ public final class GetStreamResult {
      */
     private final @Nullable List<StreamTag> tags;
 
-    @OutputCustomType.Constructor({"arn","retentionPeriodHours","shardCount","streamEncryption","streamModeDetails","tags"})
+    @OutputCustomType.Constructor
     private GetStreamResult(
-        @Nullable String arn,
-        @Nullable Integer retentionPeriodHours,
-        @Nullable Integer shardCount,
-        @Nullable StreamEncryption streamEncryption,
-        @Nullable StreamModeDetails streamModeDetails,
-        @Nullable List<StreamTag> tags) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("retentionPeriodHours") @Nullable Integer retentionPeriodHours,
+        @OutputCustomType.Parameter("shardCount") @Nullable Integer shardCount,
+        @OutputCustomType.Parameter("streamEncryption") @Nullable StreamEncryption streamEncryption,
+        @OutputCustomType.Parameter("streamModeDetails") @Nullable StreamModeDetails streamModeDetails,
+        @OutputCustomType.Parameter("tags") @Nullable List<StreamTag> tags) {
         this.arn = arn;
         this.retentionPeriodHours = retentionPeriodHours;
         this.shardCount = shardCount;

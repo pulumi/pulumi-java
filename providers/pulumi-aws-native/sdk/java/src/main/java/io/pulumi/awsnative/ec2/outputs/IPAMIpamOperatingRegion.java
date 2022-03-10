@@ -15,8 +15,8 @@ public final class IPAMIpamOperatingRegion {
      */
     private final String regionName;
 
-    @OutputCustomType.Constructor({"regionName"})
-    private IPAMIpamOperatingRegion(String regionName) {
+    @OutputCustomType.Constructor
+    private IPAMIpamOperatingRegion(@OutputCustomType.Parameter("regionName") String regionName) {
         this.regionName = regionName;
     }
 

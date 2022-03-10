@@ -17,8 +17,8 @@ public final class ResourceSetNLBResource {
      */
     private final @Nullable String arn;
 
-    @OutputCustomType.Constructor({"arn"})
-    private ResourceSetNLBResource(@Nullable String arn) {
+    @OutputCustomType.Constructor
+    private ResourceSetNLBResource(@OutputCustomType.Parameter("arn") @Nullable String arn) {
         this.arn = arn;
     }
 

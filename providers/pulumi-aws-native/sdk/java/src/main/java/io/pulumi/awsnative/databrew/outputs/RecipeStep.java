@@ -19,10 +19,10 @@ public final class RecipeStep {
      */
     private final @Nullable List<RecipeConditionExpression> conditionExpressions;
 
-    @OutputCustomType.Constructor({"action","conditionExpressions"})
+    @OutputCustomType.Constructor
     private RecipeStep(
-        RecipeAction action,
-        @Nullable List<RecipeConditionExpression> conditionExpressions) {
+        @OutputCustomType.Parameter("action") RecipeAction action,
+        @OutputCustomType.Parameter("conditionExpressions") @Nullable List<RecipeConditionExpression> conditionExpressions) {
         this.action = action;
         this.conditionExpressions = conditionExpressions;
     }

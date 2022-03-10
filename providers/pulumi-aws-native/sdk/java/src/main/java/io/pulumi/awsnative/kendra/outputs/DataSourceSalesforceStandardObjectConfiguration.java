@@ -19,12 +19,12 @@ public final class DataSourceSalesforceStandardObjectConfiguration {
     private final @Nullable List<DataSourceToIndexFieldMapping> fieldMappings;
     private final DataSourceSalesforceStandardObjectName name;
 
-    @OutputCustomType.Constructor({"documentDataFieldName","documentTitleFieldName","fieldMappings","name"})
+    @OutputCustomType.Constructor
     private DataSourceSalesforceStandardObjectConfiguration(
-        String documentDataFieldName,
-        @Nullable String documentTitleFieldName,
-        @Nullable List<DataSourceToIndexFieldMapping> fieldMappings,
-        DataSourceSalesforceStandardObjectName name) {
+        @OutputCustomType.Parameter("documentDataFieldName") String documentDataFieldName,
+        @OutputCustomType.Parameter("documentTitleFieldName") @Nullable String documentTitleFieldName,
+        @OutputCustomType.Parameter("fieldMappings") @Nullable List<DataSourceToIndexFieldMapping> fieldMappings,
+        @OutputCustomType.Parameter("name") DataSourceSalesforceStandardObjectName name) {
         this.documentDataFieldName = documentDataFieldName;
         this.documentTitleFieldName = documentTitleFieldName;
         this.fieldMappings = fieldMappings;

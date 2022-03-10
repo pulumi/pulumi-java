@@ -15,10 +15,10 @@ public final class GetSchedulingPolicyResult {
     private final @Nullable String arn;
     private final @Nullable SchedulingPolicyFairsharePolicy fairsharePolicy;
 
-    @OutputCustomType.Constructor({"arn","fairsharePolicy"})
+    @OutputCustomType.Constructor
     private GetSchedulingPolicyResult(
-        @Nullable String arn,
-        @Nullable SchedulingPolicyFairsharePolicy fairsharePolicy) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("fairsharePolicy") @Nullable SchedulingPolicyFairsharePolicy fairsharePolicy) {
         this.arn = arn;
         this.fairsharePolicy = fairsharePolicy;
     }

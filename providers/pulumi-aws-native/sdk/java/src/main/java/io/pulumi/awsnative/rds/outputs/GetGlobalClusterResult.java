@@ -17,8 +17,8 @@ public final class GetGlobalClusterResult {
      */
     private final @Nullable Boolean deletionProtection;
 
-    @OutputCustomType.Constructor({"deletionProtection"})
-    private GetGlobalClusterResult(@Nullable Boolean deletionProtection) {
+    @OutputCustomType.Constructor
+    private GetGlobalClusterResult(@OutputCustomType.Parameter("deletionProtection") @Nullable Boolean deletionProtection) {
         this.deletionProtection = deletionProtection;
     }
 

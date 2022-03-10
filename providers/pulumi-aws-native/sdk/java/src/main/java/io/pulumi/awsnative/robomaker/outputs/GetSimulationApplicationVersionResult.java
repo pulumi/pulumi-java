@@ -14,10 +14,10 @@ public final class GetSimulationApplicationVersionResult {
     private final @Nullable String applicationVersion;
     private final @Nullable String arn;
 
-    @OutputCustomType.Constructor({"applicationVersion","arn"})
+    @OutputCustomType.Constructor
     private GetSimulationApplicationVersionResult(
-        @Nullable String applicationVersion,
-        @Nullable String arn) {
+        @OutputCustomType.Parameter("applicationVersion") @Nullable String applicationVersion,
+        @OutputCustomType.Parameter("arn") @Nullable String arn) {
         this.applicationVersion = applicationVersion;
         this.arn = arn;
     }

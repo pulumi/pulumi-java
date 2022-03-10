@@ -17,12 +17,12 @@ public final class DatasetS3DestinationConfiguration {
     private final String key;
     private final String roleArn;
 
-    @OutputCustomType.Constructor({"bucket","glueConfiguration","key","roleArn"})
+    @OutputCustomType.Constructor
     private DatasetS3DestinationConfiguration(
-        String bucket,
-        @Nullable DatasetGlueConfiguration glueConfiguration,
-        String key,
-        String roleArn) {
+        @OutputCustomType.Parameter("bucket") String bucket,
+        @OutputCustomType.Parameter("glueConfiguration") @Nullable DatasetGlueConfiguration glueConfiguration,
+        @OutputCustomType.Parameter("key") String key,
+        @OutputCustomType.Parameter("roleArn") String roleArn) {
         this.bucket = bucket;
         this.glueConfiguration = glueConfiguration;
         this.key = key;

@@ -13,8 +13,8 @@ import javax.annotation.Nullable;
 public final class DomainNameEndpointConfiguration {
     private final @Nullable List<String> types;
 
-    @OutputCustomType.Constructor({"types"})
-    private DomainNameEndpointConfiguration(@Nullable List<String> types) {
+    @OutputCustomType.Constructor
+    private DomainNameEndpointConfiguration(@OutputCustomType.Parameter("types") @Nullable List<String> types) {
         this.types = types;
     }
 

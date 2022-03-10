@@ -23,15 +23,15 @@ public final class ScheduledQueryTimestreamConfiguration {
     private final String tableName;
     private final String timeColumn;
 
-    @OutputCustomType.Constructor({"databaseName","dimensionMappings","measureNameColumn","mixedMeasureMappings","multiMeasureMappings","tableName","timeColumn"})
+    @OutputCustomType.Constructor
     private ScheduledQueryTimestreamConfiguration(
-        String databaseName,
-        List<ScheduledQueryDimensionMapping> dimensionMappings,
-        @Nullable String measureNameColumn,
-        @Nullable List<ScheduledQueryMixedMeasureMapping> mixedMeasureMappings,
-        @Nullable ScheduledQueryMultiMeasureMappings multiMeasureMappings,
-        String tableName,
-        String timeColumn) {
+        @OutputCustomType.Parameter("databaseName") String databaseName,
+        @OutputCustomType.Parameter("dimensionMappings") List<ScheduledQueryDimensionMapping> dimensionMappings,
+        @OutputCustomType.Parameter("measureNameColumn") @Nullable String measureNameColumn,
+        @OutputCustomType.Parameter("mixedMeasureMappings") @Nullable List<ScheduledQueryMixedMeasureMapping> mixedMeasureMappings,
+        @OutputCustomType.Parameter("multiMeasureMappings") @Nullable ScheduledQueryMultiMeasureMappings multiMeasureMappings,
+        @OutputCustomType.Parameter("tableName") String tableName,
+        @OutputCustomType.Parameter("timeColumn") String timeColumn) {
         this.databaseName = databaseName;
         this.dimensionMappings = dimensionMappings;
         this.measureNameColumn = measureNameColumn;

@@ -20,13 +20,13 @@ public final class GetBackupVaultResult {
     private final @Nullable BackupVaultLockConfigurationType lockConfiguration;
     private final @Nullable BackupVaultNotificationObjectType notifications;
 
-    @OutputCustomType.Constructor({"accessPolicy","backupVaultArn","backupVaultTags","lockConfiguration","notifications"})
+    @OutputCustomType.Constructor
     private GetBackupVaultResult(
-        @Nullable Object accessPolicy,
-        @Nullable String backupVaultArn,
-        @Nullable Object backupVaultTags,
-        @Nullable BackupVaultLockConfigurationType lockConfiguration,
-        @Nullable BackupVaultNotificationObjectType notifications) {
+        @OutputCustomType.Parameter("accessPolicy") @Nullable Object accessPolicy,
+        @OutputCustomType.Parameter("backupVaultArn") @Nullable String backupVaultArn,
+        @OutputCustomType.Parameter("backupVaultTags") @Nullable Object backupVaultTags,
+        @OutputCustomType.Parameter("lockConfiguration") @Nullable BackupVaultLockConfigurationType lockConfiguration,
+        @OutputCustomType.Parameter("notifications") @Nullable BackupVaultNotificationObjectType notifications) {
         this.accessPolicy = accessPolicy;
         this.backupVaultArn = backupVaultArn;
         this.backupVaultTags = backupVaultTags;

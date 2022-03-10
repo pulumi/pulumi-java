@@ -39,13 +39,13 @@ public final class GetDetectorModelResult {
      */
     private final @Nullable List<DetectorModelTag> tags;
 
-    @OutputCustomType.Constructor({"detectorModelDefinition","detectorModelDescription","evaluationMethod","roleArn","tags"})
+    @OutputCustomType.Constructor
     private GetDetectorModelResult(
-        @Nullable DetectorModelDefinition detectorModelDefinition,
-        @Nullable String detectorModelDescription,
-        @Nullable DetectorModelEvaluationMethod evaluationMethod,
-        @Nullable String roleArn,
-        @Nullable List<DetectorModelTag> tags) {
+        @OutputCustomType.Parameter("detectorModelDefinition") @Nullable DetectorModelDefinition detectorModelDefinition,
+        @OutputCustomType.Parameter("detectorModelDescription") @Nullable String detectorModelDescription,
+        @OutputCustomType.Parameter("evaluationMethod") @Nullable DetectorModelEvaluationMethod evaluationMethod,
+        @OutputCustomType.Parameter("roleArn") @Nullable String roleArn,
+        @OutputCustomType.Parameter("tags") @Nullable List<DetectorModelTag> tags) {
         this.detectorModelDefinition = detectorModelDefinition;
         this.detectorModelDescription = detectorModelDescription;
         this.evaluationMethod = evaluationMethod;

@@ -18,12 +18,12 @@ public final class GetEC2FleetResult {
     private final @Nullable String fleetId;
     private final @Nullable EC2FleetTargetCapacitySpecificationRequest targetCapacitySpecification;
 
-    @OutputCustomType.Constructor({"context","excessCapacityTerminationPolicy","fleetId","targetCapacitySpecification"})
+    @OutputCustomType.Constructor
     private GetEC2FleetResult(
-        @Nullable String context,
-        @Nullable EC2FleetExcessCapacityTerminationPolicy excessCapacityTerminationPolicy,
-        @Nullable String fleetId,
-        @Nullable EC2FleetTargetCapacitySpecificationRequest targetCapacitySpecification) {
+        @OutputCustomType.Parameter("context") @Nullable String context,
+        @OutputCustomType.Parameter("excessCapacityTerminationPolicy") @Nullable EC2FleetExcessCapacityTerminationPolicy excessCapacityTerminationPolicy,
+        @OutputCustomType.Parameter("fleetId") @Nullable String fleetId,
+        @OutputCustomType.Parameter("targetCapacitySpecification") @Nullable EC2FleetTargetCapacitySpecificationRequest targetCapacitySpecification) {
         this.context = context;
         this.excessCapacityTerminationPolicy = excessCapacityTerminationPolicy;
         this.fleetId = fleetId;

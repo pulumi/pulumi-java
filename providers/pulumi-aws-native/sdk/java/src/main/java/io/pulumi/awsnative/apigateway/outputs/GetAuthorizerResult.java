@@ -60,18 +60,18 @@ public final class GetAuthorizerResult {
      */
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor({"authType","authorizerCredentials","authorizerId","authorizerResultTtlInSeconds","authorizerUri","identitySource","identityValidationExpression","name","providerARNs","type"})
+    @OutputCustomType.Constructor
     private GetAuthorizerResult(
-        @Nullable String authType,
-        @Nullable String authorizerCredentials,
-        @Nullable String authorizerId,
-        @Nullable Integer authorizerResultTtlInSeconds,
-        @Nullable String authorizerUri,
-        @Nullable String identitySource,
-        @Nullable String identityValidationExpression,
-        @Nullable String name,
-        @Nullable List<String> providerARNs,
-        @Nullable String type) {
+        @OutputCustomType.Parameter("authType") @Nullable String authType,
+        @OutputCustomType.Parameter("authorizerCredentials") @Nullable String authorizerCredentials,
+        @OutputCustomType.Parameter("authorizerId") @Nullable String authorizerId,
+        @OutputCustomType.Parameter("authorizerResultTtlInSeconds") @Nullable Integer authorizerResultTtlInSeconds,
+        @OutputCustomType.Parameter("authorizerUri") @Nullable String authorizerUri,
+        @OutputCustomType.Parameter("identitySource") @Nullable String identitySource,
+        @OutputCustomType.Parameter("identityValidationExpression") @Nullable String identityValidationExpression,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("providerARNs") @Nullable List<String> providerARNs,
+        @OutputCustomType.Parameter("type") @Nullable String type) {
         this.authType = authType;
         this.authorizerCredentials = authorizerCredentials;
         this.authorizerId = authorizerId;

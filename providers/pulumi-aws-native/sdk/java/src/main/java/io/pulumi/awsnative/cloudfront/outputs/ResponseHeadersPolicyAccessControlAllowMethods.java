@@ -12,8 +12,8 @@ import java.util.Objects;
 public final class ResponseHeadersPolicyAccessControlAllowMethods {
     private final List<String> items;
 
-    @OutputCustomType.Constructor({"items"})
-    private ResponseHeadersPolicyAccessControlAllowMethods(List<String> items) {
+    @OutputCustomType.Constructor
+    private ResponseHeadersPolicyAccessControlAllowMethods(@OutputCustomType.Parameter("items") List<String> items) {
         this.items = items;
     }
 

@@ -15,10 +15,10 @@ public final class GlobalTableReadProvisionedThroughputSettings {
     private final @Nullable GlobalTableCapacityAutoScalingSettings readCapacityAutoScalingSettings;
     private final @Nullable Integer readCapacityUnits;
 
-    @OutputCustomType.Constructor({"readCapacityAutoScalingSettings","readCapacityUnits"})
+    @OutputCustomType.Constructor
     private GlobalTableReadProvisionedThroughputSettings(
-        @Nullable GlobalTableCapacityAutoScalingSettings readCapacityAutoScalingSettings,
-        @Nullable Integer readCapacityUnits) {
+        @OutputCustomType.Parameter("readCapacityAutoScalingSettings") @Nullable GlobalTableCapacityAutoScalingSettings readCapacityAutoScalingSettings,
+        @OutputCustomType.Parameter("readCapacityUnits") @Nullable Integer readCapacityUnits) {
         this.readCapacityAutoScalingSettings = readCapacityAutoScalingSettings;
         this.readCapacityUnits = readCapacityUnits;
     }

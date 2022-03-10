@@ -8,7 +8,7 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ChannelServiceManagedS3 {
-    @OutputCustomType.Constructor({})
+    @OutputCustomType.Constructor
     private ChannelServiceManagedS3() {
     }
 

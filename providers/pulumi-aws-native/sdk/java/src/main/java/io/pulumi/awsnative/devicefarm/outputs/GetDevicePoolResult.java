@@ -22,14 +22,14 @@ public final class GetDevicePoolResult {
     private final @Nullable List<DevicePoolRule> rules;
     private final @Nullable List<DevicePoolTag> tags;
 
-    @OutputCustomType.Constructor({"arn","description","maxDevices","name","rules","tags"})
+    @OutputCustomType.Constructor
     private GetDevicePoolResult(
-        @Nullable String arn,
-        @Nullable String description,
-        @Nullable Integer maxDevices,
-        @Nullable String name,
-        @Nullable List<DevicePoolRule> rules,
-        @Nullable List<DevicePoolTag> tags) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("maxDevices") @Nullable Integer maxDevices,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("rules") @Nullable List<DevicePoolRule> rules,
+        @OutputCustomType.Parameter("tags") @Nullable List<DevicePoolTag> tags) {
         this.arn = arn;
         this.description = description;
         this.maxDevices = maxDevices;

@@ -17,8 +17,8 @@ public final class GetAccessPointPolicyResult {
      */
     private final @Nullable Object policyDocument;
 
-    @OutputCustomType.Constructor({"policyDocument"})
-    private GetAccessPointPolicyResult(@Nullable Object policyDocument) {
+    @OutputCustomType.Constructor
+    private GetAccessPointPolicyResult(@OutputCustomType.Parameter("policyDocument") @Nullable Object policyDocument) {
         this.policyDocument = policyDocument;
     }
 

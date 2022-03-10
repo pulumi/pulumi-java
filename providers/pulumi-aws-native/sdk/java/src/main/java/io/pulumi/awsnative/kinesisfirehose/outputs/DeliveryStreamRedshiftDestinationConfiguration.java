@@ -29,19 +29,19 @@ public final class DeliveryStreamRedshiftDestinationConfiguration {
     private final DeliveryStreamS3DestinationConfiguration s3Configuration;
     private final String username;
 
-    @OutputCustomType.Constructor({"cloudWatchLoggingOptions","clusterJDBCURL","copyCommand","password","processingConfiguration","retryOptions","roleARN","s3BackupConfiguration","s3BackupMode","s3Configuration","username"})
+    @OutputCustomType.Constructor
     private DeliveryStreamRedshiftDestinationConfiguration(
-        @Nullable DeliveryStreamCloudWatchLoggingOptions cloudWatchLoggingOptions,
-        String clusterJDBCURL,
-        DeliveryStreamCopyCommand copyCommand,
-        String password,
-        @Nullable DeliveryStreamProcessingConfiguration processingConfiguration,
-        @Nullable DeliveryStreamRedshiftRetryOptions retryOptions,
-        String roleARN,
-        @Nullable DeliveryStreamS3DestinationConfiguration s3BackupConfiguration,
-        @Nullable DeliveryStreamRedshiftDestinationConfigurationS3BackupMode s3BackupMode,
-        DeliveryStreamS3DestinationConfiguration s3Configuration,
-        String username) {
+        @OutputCustomType.Parameter("cloudWatchLoggingOptions") @Nullable DeliveryStreamCloudWatchLoggingOptions cloudWatchLoggingOptions,
+        @OutputCustomType.Parameter("clusterJDBCURL") String clusterJDBCURL,
+        @OutputCustomType.Parameter("copyCommand") DeliveryStreamCopyCommand copyCommand,
+        @OutputCustomType.Parameter("password") String password,
+        @OutputCustomType.Parameter("processingConfiguration") @Nullable DeliveryStreamProcessingConfiguration processingConfiguration,
+        @OutputCustomType.Parameter("retryOptions") @Nullable DeliveryStreamRedshiftRetryOptions retryOptions,
+        @OutputCustomType.Parameter("roleARN") String roleARN,
+        @OutputCustomType.Parameter("s3BackupConfiguration") @Nullable DeliveryStreamS3DestinationConfiguration s3BackupConfiguration,
+        @OutputCustomType.Parameter("s3BackupMode") @Nullable DeliveryStreamRedshiftDestinationConfigurationS3BackupMode s3BackupMode,
+        @OutputCustomType.Parameter("s3Configuration") DeliveryStreamS3DestinationConfiguration s3Configuration,
+        @OutputCustomType.Parameter("username") String username) {
         this.cloudWatchLoggingOptions = cloudWatchLoggingOptions;
         this.clusterJDBCURL = clusterJDBCURL;
         this.copyCommand = copyCommand;

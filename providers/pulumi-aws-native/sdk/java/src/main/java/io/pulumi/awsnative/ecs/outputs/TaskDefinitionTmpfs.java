@@ -17,11 +17,11 @@ public final class TaskDefinitionTmpfs {
     private final @Nullable List<String> mountOptions;
     private final Integer size;
 
-    @OutputCustomType.Constructor({"containerPath","mountOptions","size"})
+    @OutputCustomType.Constructor
     private TaskDefinitionTmpfs(
-        @Nullable String containerPath,
-        @Nullable List<String> mountOptions,
-        Integer size) {
+        @OutputCustomType.Parameter("containerPath") @Nullable String containerPath,
+        @OutputCustomType.Parameter("mountOptions") @Nullable List<String> mountOptions,
+        @OutputCustomType.Parameter("size") Integer size) {
         this.containerPath = containerPath;
         this.mountOptions = mountOptions;
         this.size = size;

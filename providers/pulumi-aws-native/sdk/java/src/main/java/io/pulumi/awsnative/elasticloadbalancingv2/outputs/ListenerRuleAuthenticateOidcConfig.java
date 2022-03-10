@@ -27,20 +27,20 @@ public final class ListenerRuleAuthenticateOidcConfig {
     private final @Nullable Boolean useExistingClientSecret;
     private final String userInfoEndpoint;
 
-    @OutputCustomType.Constructor({"authenticationRequestExtraParams","authorizationEndpoint","clientId","clientSecret","issuer","onUnauthenticatedRequest","scope","sessionCookieName","sessionTimeout","tokenEndpoint","useExistingClientSecret","userInfoEndpoint"})
+    @OutputCustomType.Constructor
     private ListenerRuleAuthenticateOidcConfig(
-        @Nullable Object authenticationRequestExtraParams,
-        String authorizationEndpoint,
-        String clientId,
-        String clientSecret,
-        String issuer,
-        @Nullable String onUnauthenticatedRequest,
-        @Nullable String scope,
-        @Nullable String sessionCookieName,
-        @Nullable Integer sessionTimeout,
-        String tokenEndpoint,
-        @Nullable Boolean useExistingClientSecret,
-        String userInfoEndpoint) {
+        @OutputCustomType.Parameter("authenticationRequestExtraParams") @Nullable Object authenticationRequestExtraParams,
+        @OutputCustomType.Parameter("authorizationEndpoint") String authorizationEndpoint,
+        @OutputCustomType.Parameter("clientId") String clientId,
+        @OutputCustomType.Parameter("clientSecret") String clientSecret,
+        @OutputCustomType.Parameter("issuer") String issuer,
+        @OutputCustomType.Parameter("onUnauthenticatedRequest") @Nullable String onUnauthenticatedRequest,
+        @OutputCustomType.Parameter("scope") @Nullable String scope,
+        @OutputCustomType.Parameter("sessionCookieName") @Nullable String sessionCookieName,
+        @OutputCustomType.Parameter("sessionTimeout") @Nullable Integer sessionTimeout,
+        @OutputCustomType.Parameter("tokenEndpoint") String tokenEndpoint,
+        @OutputCustomType.Parameter("useExistingClientSecret") @Nullable Boolean useExistingClientSecret,
+        @OutputCustomType.Parameter("userInfoEndpoint") String userInfoEndpoint) {
         this.authenticationRequestExtraParams = authenticationRequestExtraParams;
         this.authorizationEndpoint = authorizationEndpoint;
         this.clientId = clientId;

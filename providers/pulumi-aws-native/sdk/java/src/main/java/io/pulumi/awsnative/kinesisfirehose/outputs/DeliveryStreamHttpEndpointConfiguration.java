@@ -15,11 +15,11 @@ public final class DeliveryStreamHttpEndpointConfiguration {
     private final @Nullable String name;
     private final String url;
 
-    @OutputCustomType.Constructor({"accessKey","name","url"})
+    @OutputCustomType.Constructor
     private DeliveryStreamHttpEndpointConfiguration(
-        @Nullable String accessKey,
-        @Nullable String name,
-        String url) {
+        @OutputCustomType.Parameter("accessKey") @Nullable String accessKey,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("url") String url) {
         this.accessKey = accessKey;
         this.name = name;
         this.url = url;

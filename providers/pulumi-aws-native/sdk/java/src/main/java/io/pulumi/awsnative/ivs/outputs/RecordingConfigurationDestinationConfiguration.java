@@ -11,8 +11,8 @@ import java.util.Objects;
 public final class RecordingConfigurationDestinationConfiguration {
     private final RecordingConfigurationS3DestinationConfiguration s3;
 
-    @OutputCustomType.Constructor({"s3"})
-    private RecordingConfigurationDestinationConfiguration(RecordingConfigurationS3DestinationConfiguration s3) {
+    @OutputCustomType.Constructor
+    private RecordingConfigurationDestinationConfiguration(@OutputCustomType.Parameter("s3") RecordingConfigurationS3DestinationConfiguration s3) {
         this.s3 = s3;
     }
 

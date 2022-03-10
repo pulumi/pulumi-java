@@ -39,13 +39,13 @@ public final class GetAccessPolicyResult {
      */
     private final @Nullable AccessPolicyResource accessPolicyResource;
 
-    @OutputCustomType.Constructor({"accessPolicyArn","accessPolicyId","accessPolicyIdentity","accessPolicyPermission","accessPolicyResource"})
+    @OutputCustomType.Constructor
     private GetAccessPolicyResult(
-        @Nullable String accessPolicyArn,
-        @Nullable String accessPolicyId,
-        @Nullable AccessPolicyIdentity accessPolicyIdentity,
-        @Nullable String accessPolicyPermission,
-        @Nullable AccessPolicyResource accessPolicyResource) {
+        @OutputCustomType.Parameter("accessPolicyArn") @Nullable String accessPolicyArn,
+        @OutputCustomType.Parameter("accessPolicyId") @Nullable String accessPolicyId,
+        @OutputCustomType.Parameter("accessPolicyIdentity") @Nullable AccessPolicyIdentity accessPolicyIdentity,
+        @OutputCustomType.Parameter("accessPolicyPermission") @Nullable String accessPolicyPermission,
+        @OutputCustomType.Parameter("accessPolicyResource") @Nullable AccessPolicyResource accessPolicyResource) {
         this.accessPolicyArn = accessPolicyArn;
         this.accessPolicyId = accessPolicyId;
         this.accessPolicyIdentity = accessPolicyIdentity;

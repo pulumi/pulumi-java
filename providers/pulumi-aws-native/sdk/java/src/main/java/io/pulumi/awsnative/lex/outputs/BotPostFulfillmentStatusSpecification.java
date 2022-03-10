@@ -15,11 +15,11 @@ public final class BotPostFulfillmentStatusSpecification {
     private final @Nullable BotResponseSpecification successResponse;
     private final @Nullable BotResponseSpecification timeoutResponse;
 
-    @OutputCustomType.Constructor({"failureResponse","successResponse","timeoutResponse"})
+    @OutputCustomType.Constructor
     private BotPostFulfillmentStatusSpecification(
-        @Nullable BotResponseSpecification failureResponse,
-        @Nullable BotResponseSpecification successResponse,
-        @Nullable BotResponseSpecification timeoutResponse) {
+        @OutputCustomType.Parameter("failureResponse") @Nullable BotResponseSpecification failureResponse,
+        @OutputCustomType.Parameter("successResponse") @Nullable BotResponseSpecification successResponse,
+        @OutputCustomType.Parameter("timeoutResponse") @Nullable BotResponseSpecification timeoutResponse) {
         this.failureResponse = failureResponse;
         this.successResponse = successResponse;
         this.timeoutResponse = timeoutResponse;

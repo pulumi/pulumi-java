@@ -29,13 +29,13 @@ public final class LaunchMetricDefinitionObject {
      */
     private final String valueKey;
 
-    @OutputCustomType.Constructor({"entityIdKey","eventPattern","metricName","unitLabel","valueKey"})
+    @OutputCustomType.Constructor
     private LaunchMetricDefinitionObject(
-        String entityIdKey,
-        String eventPattern,
-        String metricName,
-        @Nullable String unitLabel,
-        String valueKey) {
+        @OutputCustomType.Parameter("entityIdKey") String entityIdKey,
+        @OutputCustomType.Parameter("eventPattern") String eventPattern,
+        @OutputCustomType.Parameter("metricName") String metricName,
+        @OutputCustomType.Parameter("unitLabel") @Nullable String unitLabel,
+        @OutputCustomType.Parameter("valueKey") String valueKey) {
         this.entityIdKey = entityIdKey;
         this.eventPattern = eventPattern;
         this.metricName = metricName;

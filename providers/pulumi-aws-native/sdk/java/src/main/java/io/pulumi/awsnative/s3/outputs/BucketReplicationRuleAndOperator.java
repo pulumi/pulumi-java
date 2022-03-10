@@ -16,10 +16,10 @@ public final class BucketReplicationRuleAndOperator {
     private final @Nullable String prefix;
     private final @Nullable List<BucketTagFilter> tagFilters;
 
-    @OutputCustomType.Constructor({"prefix","tagFilters"})
+    @OutputCustomType.Constructor
     private BucketReplicationRuleAndOperator(
-        @Nullable String prefix,
-        @Nullable List<BucketTagFilter> tagFilters) {
+        @OutputCustomType.Parameter("prefix") @Nullable String prefix,
+        @OutputCustomType.Parameter("tagFilters") @Nullable List<BucketTagFilter> tagFilters) {
         this.prefix = prefix;
         this.tagFilters = tagFilters;
     }

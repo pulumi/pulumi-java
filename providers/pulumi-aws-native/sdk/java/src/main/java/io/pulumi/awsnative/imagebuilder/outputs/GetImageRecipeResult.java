@@ -23,10 +23,10 @@ public final class GetImageRecipeResult {
      */
     private final @Nullable String arn;
 
-    @OutputCustomType.Constructor({"additionalInstanceConfiguration","arn"})
+    @OutputCustomType.Constructor
     private GetImageRecipeResult(
-        @Nullable ImageRecipeAdditionalInstanceConfiguration additionalInstanceConfiguration,
-        @Nullable String arn) {
+        @OutputCustomType.Parameter("additionalInstanceConfiguration") @Nullable ImageRecipeAdditionalInstanceConfiguration additionalInstanceConfiguration,
+        @OutputCustomType.Parameter("arn") @Nullable String arn) {
         this.additionalInstanceConfiguration = additionalInstanceConfiguration;
         this.arn = arn;
     }

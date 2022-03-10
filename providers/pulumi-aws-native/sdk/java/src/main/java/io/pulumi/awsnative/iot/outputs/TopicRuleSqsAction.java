@@ -16,11 +16,11 @@ public final class TopicRuleSqsAction {
     private final String roleArn;
     private final @Nullable Boolean useBase64;
 
-    @OutputCustomType.Constructor({"queueUrl","roleArn","useBase64"})
+    @OutputCustomType.Constructor
     private TopicRuleSqsAction(
-        String queueUrl,
-        String roleArn,
-        @Nullable Boolean useBase64) {
+        @OutputCustomType.Parameter("queueUrl") String queueUrl,
+        @OutputCustomType.Parameter("roleArn") String roleArn,
+        @OutputCustomType.Parameter("useBase64") @Nullable Boolean useBase64) {
         this.queueUrl = queueUrl;
         this.roleArn = roleArn;
         this.useBase64 = useBase64;

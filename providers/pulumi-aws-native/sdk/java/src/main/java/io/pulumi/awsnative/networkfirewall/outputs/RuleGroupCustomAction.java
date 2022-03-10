@@ -13,10 +13,10 @@ public final class RuleGroupCustomAction {
     private final RuleGroupActionDefinition actionDefinition;
     private final String actionName;
 
-    @OutputCustomType.Constructor({"actionDefinition","actionName"})
+    @OutputCustomType.Constructor
     private RuleGroupCustomAction(
-        RuleGroupActionDefinition actionDefinition,
-        String actionName) {
+        @OutputCustomType.Parameter("actionDefinition") RuleGroupActionDefinition actionDefinition,
+        @OutputCustomType.Parameter("actionName") String actionName) {
         this.actionDefinition = actionDefinition;
         this.actionName = actionName;
     }

@@ -24,10 +24,10 @@ public final class GetAggregationAuthorizationResult {
      */
     private final @Nullable List<AggregationAuthorizationTag> tags;
 
-    @OutputCustomType.Constructor({"aggregationAuthorizationArn","tags"})
+    @OutputCustomType.Constructor
     private GetAggregationAuthorizationResult(
-        @Nullable String aggregationAuthorizationArn,
-        @Nullable List<AggregationAuthorizationTag> tags) {
+        @OutputCustomType.Parameter("aggregationAuthorizationArn") @Nullable String aggregationAuthorizationArn,
+        @OutputCustomType.Parameter("tags") @Nullable List<AggregationAuthorizationTag> tags) {
         this.aggregationAuthorizationArn = aggregationAuthorizationArn;
         this.tags = tags;
     }

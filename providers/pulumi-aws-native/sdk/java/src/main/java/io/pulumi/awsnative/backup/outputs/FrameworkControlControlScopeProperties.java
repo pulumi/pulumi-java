@@ -28,11 +28,11 @@ public final class FrameworkControlControlScopeProperties {
      */
     private final @Nullable List<FrameworkTag> tags;
 
-    @OutputCustomType.Constructor({"complianceResourceIds","complianceResourceTypes","tags"})
+    @OutputCustomType.Constructor
     private FrameworkControlControlScopeProperties(
-        @Nullable List<String> complianceResourceIds,
-        @Nullable List<String> complianceResourceTypes,
-        @Nullable List<FrameworkTag> tags) {
+        @OutputCustomType.Parameter("complianceResourceIds") @Nullable List<String> complianceResourceIds,
+        @OutputCustomType.Parameter("complianceResourceTypes") @Nullable List<String> complianceResourceTypes,
+        @OutputCustomType.Parameter("tags") @Nullable List<FrameworkTag> tags) {
         this.complianceResourceIds = complianceResourceIds;
         this.complianceResourceTypes = complianceResourceTypes;
         this.tags = tags;

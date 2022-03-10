@@ -13,8 +13,8 @@ import javax.annotation.Nullable;
 public final class EC2FleetMaintenanceStrategies {
     private final @Nullable EC2FleetCapacityRebalance capacityRebalance;
 
-    @OutputCustomType.Constructor({"capacityRebalance"})
-    private EC2FleetMaintenanceStrategies(@Nullable EC2FleetCapacityRebalance capacityRebalance) {
+    @OutputCustomType.Constructor
+    private EC2FleetMaintenanceStrategies(@OutputCustomType.Parameter("capacityRebalance") @Nullable EC2FleetCapacityRebalance capacityRebalance) {
         this.capacityRebalance = capacityRebalance;
     }
 

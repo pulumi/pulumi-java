@@ -45,16 +45,16 @@ public final class GetStudioResult {
      */
     private final @Nullable String userRoleArn;
 
-    @OutputCustomType.Constructor({"adminRoleArn","displayName","homeRegion","ssoClientId","studioEncryptionConfiguration","studioId","studioUrl","userRoleArn"})
+    @OutputCustomType.Constructor
     private GetStudioResult(
-        @Nullable String adminRoleArn,
-        @Nullable String displayName,
-        @Nullable String homeRegion,
-        @Nullable String ssoClientId,
-        @Nullable StudioEncryptionConfiguration studioEncryptionConfiguration,
-        @Nullable String studioId,
-        @Nullable String studioUrl,
-        @Nullable String userRoleArn) {
+        @OutputCustomType.Parameter("adminRoleArn") @Nullable String adminRoleArn,
+        @OutputCustomType.Parameter("displayName") @Nullable String displayName,
+        @OutputCustomType.Parameter("homeRegion") @Nullable String homeRegion,
+        @OutputCustomType.Parameter("ssoClientId") @Nullable String ssoClientId,
+        @OutputCustomType.Parameter("studioEncryptionConfiguration") @Nullable StudioEncryptionConfiguration studioEncryptionConfiguration,
+        @OutputCustomType.Parameter("studioId") @Nullable String studioId,
+        @OutputCustomType.Parameter("studioUrl") @Nullable String studioUrl,
+        @OutputCustomType.Parameter("userRoleArn") @Nullable String userRoleArn) {
         this.adminRoleArn = adminRoleArn;
         this.displayName = displayName;
         this.homeRegion = homeRegion;

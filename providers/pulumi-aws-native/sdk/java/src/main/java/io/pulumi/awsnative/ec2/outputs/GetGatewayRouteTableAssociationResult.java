@@ -22,10 +22,10 @@ public final class GetGatewayRouteTableAssociationResult {
      */
     private final @Nullable String routeTableId;
 
-    @OutputCustomType.Constructor({"associationId","routeTableId"})
+    @OutputCustomType.Constructor
     private GetGatewayRouteTableAssociationResult(
-        @Nullable String associationId,
-        @Nullable String routeTableId) {
+        @OutputCustomType.Parameter("associationId") @Nullable String associationId,
+        @OutputCustomType.Parameter("routeTableId") @Nullable String routeTableId) {
         this.associationId = associationId;
         this.routeTableId = routeTableId;
     }

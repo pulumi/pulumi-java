@@ -21,10 +21,10 @@ public final class SimulationApplicationRenderingEngine {
      */
     private final String version;
 
-    @OutputCustomType.Constructor({"name","version"})
+    @OutputCustomType.Constructor
     private SimulationApplicationRenderingEngine(
-        SimulationApplicationRenderingEngineName name,
-        String version) {
+        @OutputCustomType.Parameter("name") SimulationApplicationRenderingEngineName name,
+        @OutputCustomType.Parameter("version") String version) {
         this.name = name;
         this.version = version;
     }

@@ -16,10 +16,10 @@ public final class ListenerForwardConfig {
     private final @Nullable ListenerTargetGroupStickinessConfig targetGroupStickinessConfig;
     private final @Nullable List<ListenerTargetGroupTuple> targetGroups;
 
-    @OutputCustomType.Constructor({"targetGroupStickinessConfig","targetGroups"})
+    @OutputCustomType.Constructor
     private ListenerForwardConfig(
-        @Nullable ListenerTargetGroupStickinessConfig targetGroupStickinessConfig,
-        @Nullable List<ListenerTargetGroupTuple> targetGroups) {
+        @OutputCustomType.Parameter("targetGroupStickinessConfig") @Nullable ListenerTargetGroupStickinessConfig targetGroupStickinessConfig,
+        @OutputCustomType.Parameter("targetGroups") @Nullable List<ListenerTargetGroupTuple> targetGroups) {
         this.targetGroupStickinessConfig = targetGroupStickinessConfig;
         this.targetGroups = targetGroups;
     }

@@ -13,11 +13,11 @@ public final class TopicRuleSigV4Authorization {
     private final String serviceName;
     private final String signingRegion;
 
-    @OutputCustomType.Constructor({"roleArn","serviceName","signingRegion"})
+    @OutputCustomType.Constructor
     private TopicRuleSigV4Authorization(
-        String roleArn,
-        String serviceName,
-        String signingRegion) {
+        @OutputCustomType.Parameter("roleArn") String roleArn,
+        @OutputCustomType.Parameter("serviceName") String serviceName,
+        @OutputCustomType.Parameter("signingRegion") String signingRegion) {
         this.roleArn = roleArn;
         this.serviceName = serviceName;
         this.signingRegion = signingRegion;

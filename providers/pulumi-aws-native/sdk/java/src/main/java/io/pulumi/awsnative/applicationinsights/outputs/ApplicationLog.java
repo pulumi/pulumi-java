@@ -38,13 +38,13 @@ public final class ApplicationLog {
      */
     private final @Nullable String patternSet;
 
-    @OutputCustomType.Constructor({"encoding","logGroupName","logPath","logType","patternSet"})
+    @OutputCustomType.Constructor
     private ApplicationLog(
-        @Nullable ApplicationLogEncoding encoding,
-        @Nullable String logGroupName,
-        @Nullable String logPath,
-        String logType,
-        @Nullable String patternSet) {
+        @OutputCustomType.Parameter("encoding") @Nullable ApplicationLogEncoding encoding,
+        @OutputCustomType.Parameter("logGroupName") @Nullable String logGroupName,
+        @OutputCustomType.Parameter("logPath") @Nullable String logPath,
+        @OutputCustomType.Parameter("logType") String logType,
+        @OutputCustomType.Parameter("patternSet") @Nullable String patternSet) {
         this.encoding = encoding;
         this.logGroupName = logGroupName;
         this.logPath = logPath;

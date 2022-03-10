@@ -45,14 +45,14 @@ public final class GetDestinationResult {
      */
     private final @Nullable List<DestinationTag> tags;
 
-    @OutputCustomType.Constructor({"arn","description","expression","expressionType","roleArn","tags"})
+    @OutputCustomType.Constructor
     private GetDestinationResult(
-        @Nullable String arn,
-        @Nullable String description,
-        @Nullable String expression,
-        @Nullable DestinationExpressionType expressionType,
-        @Nullable String roleArn,
-        @Nullable List<DestinationTag> tags) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("expression") @Nullable String expression,
+        @OutputCustomType.Parameter("expressionType") @Nullable DestinationExpressionType expressionType,
+        @OutputCustomType.Parameter("roleArn") @Nullable String roleArn,
+        @OutputCustomType.Parameter("tags") @Nullable List<DestinationTag> tags) {
         this.arn = arn;
         this.description = description;
         this.expression = expression;

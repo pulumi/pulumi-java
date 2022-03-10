@@ -51,16 +51,16 @@ public final class GetThemeResult {
     private final @Nullable ThemeType type;
     private final @Nullable ThemeVersion version;
 
-    @OutputCustomType.Constructor({"arn","createdTime","lastUpdatedTime","name","permissions","tags","type","version"})
+    @OutputCustomType.Constructor
     private GetThemeResult(
-        @Nullable String arn,
-        @Nullable String createdTime,
-        @Nullable String lastUpdatedTime,
-        @Nullable String name,
-        @Nullable List<ThemeResourcePermission> permissions,
-        @Nullable List<ThemeTag> tags,
-        @Nullable ThemeType type,
-        @Nullable ThemeVersion version) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("createdTime") @Nullable String createdTime,
+        @OutputCustomType.Parameter("lastUpdatedTime") @Nullable String lastUpdatedTime,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("permissions") @Nullable List<ThemeResourcePermission> permissions,
+        @OutputCustomType.Parameter("tags") @Nullable List<ThemeTag> tags,
+        @OutputCustomType.Parameter("type") @Nullable ThemeType type,
+        @OutputCustomType.Parameter("version") @Nullable ThemeVersion version) {
         this.arn = arn;
         this.createdTime = createdTime;
         this.lastUpdatedTime = lastUpdatedTime;

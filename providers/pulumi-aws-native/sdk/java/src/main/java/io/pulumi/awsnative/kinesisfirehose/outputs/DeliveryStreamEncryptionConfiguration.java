@@ -15,10 +15,10 @@ public final class DeliveryStreamEncryptionConfiguration {
     private final @Nullable DeliveryStreamKMSEncryptionConfig kMSEncryptionConfig;
     private final @Nullable DeliveryStreamEncryptionConfigurationNoEncryptionConfig noEncryptionConfig;
 
-    @OutputCustomType.Constructor({"kMSEncryptionConfig","noEncryptionConfig"})
+    @OutputCustomType.Constructor
     private DeliveryStreamEncryptionConfiguration(
-        @Nullable DeliveryStreamKMSEncryptionConfig kMSEncryptionConfig,
-        @Nullable DeliveryStreamEncryptionConfigurationNoEncryptionConfig noEncryptionConfig) {
+        @OutputCustomType.Parameter("kMSEncryptionConfig") @Nullable DeliveryStreamKMSEncryptionConfig kMSEncryptionConfig,
+        @OutputCustomType.Parameter("noEncryptionConfig") @Nullable DeliveryStreamEncryptionConfigurationNoEncryptionConfig noEncryptionConfig) {
         this.kMSEncryptionConfig = kMSEncryptionConfig;
         this.noEncryptionConfig = noEncryptionConfig;
     }

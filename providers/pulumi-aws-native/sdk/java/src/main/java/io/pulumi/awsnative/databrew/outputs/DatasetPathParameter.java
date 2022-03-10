@@ -13,10 +13,10 @@ public final class DatasetPathParameter {
     private final DatasetParameter datasetParameter;
     private final String pathParameterName;
 
-    @OutputCustomType.Constructor({"datasetParameter","pathParameterName"})
+    @OutputCustomType.Constructor
     private DatasetPathParameter(
-        DatasetParameter datasetParameter,
-        String pathParameterName) {
+        @OutputCustomType.Parameter("datasetParameter") DatasetParameter datasetParameter,
+        @OutputCustomType.Parameter("pathParameterName") String pathParameterName) {
         this.datasetParameter = datasetParameter;
         this.pathParameterName = pathParameterName;
     }

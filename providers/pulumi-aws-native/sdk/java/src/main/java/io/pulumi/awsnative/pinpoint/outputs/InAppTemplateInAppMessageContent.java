@@ -21,14 +21,14 @@ public final class InAppTemplateInAppMessageContent {
     private final @Nullable InAppTemplateButtonConfig primaryBtn;
     private final @Nullable InAppTemplateButtonConfig secondaryBtn;
 
-    @OutputCustomType.Constructor({"backgroundColor","bodyConfig","headerConfig","imageUrl","primaryBtn","secondaryBtn"})
+    @OutputCustomType.Constructor
     private InAppTemplateInAppMessageContent(
-        @Nullable String backgroundColor,
-        @Nullable InAppTemplateBodyConfig bodyConfig,
-        @Nullable InAppTemplateHeaderConfig headerConfig,
-        @Nullable String imageUrl,
-        @Nullable InAppTemplateButtonConfig primaryBtn,
-        @Nullable InAppTemplateButtonConfig secondaryBtn) {
+        @OutputCustomType.Parameter("backgroundColor") @Nullable String backgroundColor,
+        @OutputCustomType.Parameter("bodyConfig") @Nullable InAppTemplateBodyConfig bodyConfig,
+        @OutputCustomType.Parameter("headerConfig") @Nullable InAppTemplateHeaderConfig headerConfig,
+        @OutputCustomType.Parameter("imageUrl") @Nullable String imageUrl,
+        @OutputCustomType.Parameter("primaryBtn") @Nullable InAppTemplateButtonConfig primaryBtn,
+        @OutputCustomType.Parameter("secondaryBtn") @Nullable InAppTemplateButtonConfig secondaryBtn) {
         this.backgroundColor = backgroundColor;
         this.bodyConfig = bodyConfig;
         this.headerConfig = headerConfig;

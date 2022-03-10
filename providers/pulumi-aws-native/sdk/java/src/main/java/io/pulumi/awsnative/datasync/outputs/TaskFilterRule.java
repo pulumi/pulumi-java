@@ -23,10 +23,10 @@ public final class TaskFilterRule {
      */
     private final @Nullable String value;
 
-    @OutputCustomType.Constructor({"filterType","value"})
+    @OutputCustomType.Constructor
     private TaskFilterRule(
-        @Nullable TaskFilterRuleFilterType filterType,
-        @Nullable String value) {
+        @OutputCustomType.Parameter("filterType") @Nullable TaskFilterRuleFilterType filterType,
+        @OutputCustomType.Parameter("value") @Nullable String value) {
         this.filterType = filterType;
         this.value = value;
     }

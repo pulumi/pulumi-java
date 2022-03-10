@@ -20,10 +20,10 @@ public final class AssetHierarchy {
      */
     private final String logicalId;
 
-    @OutputCustomType.Constructor({"childAssetId","logicalId"})
+    @OutputCustomType.Constructor
     private AssetHierarchy(
-        String childAssetId,
-        String logicalId) {
+        @OutputCustomType.Parameter("childAssetId") String childAssetId,
+        @OutputCustomType.Parameter("logicalId") String logicalId) {
         this.childAssetId = childAssetId;
         this.logicalId = logicalId;
     }

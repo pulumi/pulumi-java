@@ -17,8 +17,8 @@ public final class GetResolverRuleAssociationResult {
      */
     private final @Nullable String resolverRuleAssociationId;
 
-    @OutputCustomType.Constructor({"resolverRuleAssociationId"})
-    private GetResolverRuleAssociationResult(@Nullable String resolverRuleAssociationId) {
+    @OutputCustomType.Constructor
+    private GetResolverRuleAssociationResult(@OutputCustomType.Parameter("resolverRuleAssociationId") @Nullable String resolverRuleAssociationId) {
         this.resolverRuleAssociationId = resolverRuleAssociationId;
     }
 

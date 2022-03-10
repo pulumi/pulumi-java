@@ -16,11 +16,11 @@ public final class TopicRuleIotAnalyticsAction {
     private final String channelName;
     private final String roleArn;
 
-    @OutputCustomType.Constructor({"batchMode","channelName","roleArn"})
+    @OutputCustomType.Constructor
     private TopicRuleIotAnalyticsAction(
-        @Nullable Boolean batchMode,
-        String channelName,
-        String roleArn) {
+        @OutputCustomType.Parameter("batchMode") @Nullable Boolean batchMode,
+        @OutputCustomType.Parameter("channelName") String channelName,
+        @OutputCustomType.Parameter("roleArn") String roleArn) {
         this.batchMode = batchMode;
         this.channelName = channelName;
         this.roleArn = roleArn;

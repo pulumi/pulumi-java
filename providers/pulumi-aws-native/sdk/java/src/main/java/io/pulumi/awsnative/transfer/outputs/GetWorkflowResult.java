@@ -29,11 +29,11 @@ public final class GetWorkflowResult {
      */
     private final @Nullable String workflowId;
 
-    @OutputCustomType.Constructor({"arn","tags","workflowId"})
+    @OutputCustomType.Constructor
     private GetWorkflowResult(
-        @Nullable String arn,
-        @Nullable List<WorkflowTag> tags,
-        @Nullable String workflowId) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("tags") @Nullable List<WorkflowTag> tags,
+        @OutputCustomType.Parameter("workflowId") @Nullable String workflowId) {
         this.arn = arn;
         this.tags = tags;
         this.workflowId = workflowId;

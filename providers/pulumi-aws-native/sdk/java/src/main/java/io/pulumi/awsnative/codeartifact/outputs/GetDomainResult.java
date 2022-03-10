@@ -40,13 +40,13 @@ public final class GetDomainResult {
      */
     private final @Nullable List<DomainTag> tags;
 
-    @OutputCustomType.Constructor({"arn","name","owner","permissionsPolicyDocument","tags"})
+    @OutputCustomType.Constructor
     private GetDomainResult(
-        @Nullable String arn,
-        @Nullable String name,
-        @Nullable String owner,
-        @Nullable Object permissionsPolicyDocument,
-        @Nullable List<DomainTag> tags) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("owner") @Nullable String owner,
+        @OutputCustomType.Parameter("permissionsPolicyDocument") @Nullable Object permissionsPolicyDocument,
+        @OutputCustomType.Parameter("tags") @Nullable List<DomainTag> tags) {
         this.arn = arn;
         this.name = name;
         this.owner = owner;

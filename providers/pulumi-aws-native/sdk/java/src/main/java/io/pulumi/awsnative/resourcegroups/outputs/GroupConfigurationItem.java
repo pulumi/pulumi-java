@@ -16,10 +16,10 @@ public final class GroupConfigurationItem {
     private final @Nullable List<GroupConfigurationParameter> parameters;
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor({"parameters","type"})
+    @OutputCustomType.Constructor
     private GroupConfigurationItem(
-        @Nullable List<GroupConfigurationParameter> parameters,
-        @Nullable String type) {
+        @OutputCustomType.Parameter("parameters") @Nullable List<GroupConfigurationParameter> parameters,
+        @OutputCustomType.Parameter("type") @Nullable String type) {
         this.parameters = parameters;
         this.type = type;
     }

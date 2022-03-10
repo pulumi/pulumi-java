@@ -27,12 +27,12 @@ public final class BucketAnalyticsConfiguration {
     private final BucketStorageClassAnalysis storageClassAnalysis;
     private final @Nullable List<BucketTagFilter> tagFilters;
 
-    @OutputCustomType.Constructor({"id","prefix","storageClassAnalysis","tagFilters"})
+    @OutputCustomType.Constructor
     private BucketAnalyticsConfiguration(
-        String id,
-        @Nullable String prefix,
-        BucketStorageClassAnalysis storageClassAnalysis,
-        @Nullable List<BucketTagFilter> tagFilters) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("prefix") @Nullable String prefix,
+        @OutputCustomType.Parameter("storageClassAnalysis") BucketStorageClassAnalysis storageClassAnalysis,
+        @OutputCustomType.Parameter("tagFilters") @Nullable List<BucketTagFilter> tagFilters) {
         this.id = id;
         this.prefix = prefix;
         this.storageClassAnalysis = storageClassAnalysis;

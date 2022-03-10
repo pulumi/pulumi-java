@@ -27,12 +27,12 @@ public final class BucketWebsiteConfiguration {
     private final @Nullable BucketRedirectAllRequestsTo redirectAllRequestsTo;
     private final @Nullable List<BucketRoutingRule> routingRules;
 
-    @OutputCustomType.Constructor({"errorDocument","indexDocument","redirectAllRequestsTo","routingRules"})
+    @OutputCustomType.Constructor
     private BucketWebsiteConfiguration(
-        @Nullable String errorDocument,
-        @Nullable String indexDocument,
-        @Nullable BucketRedirectAllRequestsTo redirectAllRequestsTo,
-        @Nullable List<BucketRoutingRule> routingRules) {
+        @OutputCustomType.Parameter("errorDocument") @Nullable String errorDocument,
+        @OutputCustomType.Parameter("indexDocument") @Nullable String indexDocument,
+        @OutputCustomType.Parameter("redirectAllRequestsTo") @Nullable BucketRedirectAllRequestsTo redirectAllRequestsTo,
+        @OutputCustomType.Parameter("routingRules") @Nullable List<BucketRoutingRule> routingRules) {
         this.errorDocument = errorDocument;
         this.indexDocument = indexDocument;
         this.redirectAllRequestsTo = redirectAllRequestsTo;

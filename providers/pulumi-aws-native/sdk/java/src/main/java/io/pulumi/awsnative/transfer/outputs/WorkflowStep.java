@@ -37,13 +37,13 @@ public final class WorkflowStep {
     private final @Nullable WorkflowStepTagStepDetailsProperties tagStepDetails;
     private final @Nullable WorkflowStepType type;
 
-    @OutputCustomType.Constructor({"copyStepDetails","customStepDetails","deleteStepDetails","tagStepDetails","type"})
+    @OutputCustomType.Constructor
     private WorkflowStep(
-        @Nullable WorkflowStepCopyStepDetailsProperties copyStepDetails,
-        @Nullable WorkflowStepCustomStepDetailsProperties customStepDetails,
-        @Nullable WorkflowStepDeleteStepDetailsProperties deleteStepDetails,
-        @Nullable WorkflowStepTagStepDetailsProperties tagStepDetails,
-        @Nullable WorkflowStepType type) {
+        @OutputCustomType.Parameter("copyStepDetails") @Nullable WorkflowStepCopyStepDetailsProperties copyStepDetails,
+        @OutputCustomType.Parameter("customStepDetails") @Nullable WorkflowStepCustomStepDetailsProperties customStepDetails,
+        @OutputCustomType.Parameter("deleteStepDetails") @Nullable WorkflowStepDeleteStepDetailsProperties deleteStepDetails,
+        @OutputCustomType.Parameter("tagStepDetails") @Nullable WorkflowStepTagStepDetailsProperties tagStepDetails,
+        @OutputCustomType.Parameter("type") @Nullable WorkflowStepType type) {
         this.copyStepDetails = copyStepDetails;
         this.customStepDetails = customStepDetails;
         this.deleteStepDetails = deleteStepDetails;

@@ -17,11 +17,11 @@ public final class BotIntentConfirmationSetting {
     private final @Nullable Boolean isActive;
     private final BotPromptSpecification promptSpecification;
 
-    @OutputCustomType.Constructor({"declinationResponse","isActive","promptSpecification"})
+    @OutputCustomType.Constructor
     private BotIntentConfirmationSetting(
-        BotResponseSpecification declinationResponse,
-        @Nullable Boolean isActive,
-        BotPromptSpecification promptSpecification) {
+        @OutputCustomType.Parameter("declinationResponse") BotResponseSpecification declinationResponse,
+        @OutputCustomType.Parameter("isActive") @Nullable Boolean isActive,
+        @OutputCustomType.Parameter("promptSpecification") BotPromptSpecification promptSpecification) {
         this.declinationResponse = declinationResponse;
         this.isActive = isActive;
         this.promptSpecification = promptSpecification;

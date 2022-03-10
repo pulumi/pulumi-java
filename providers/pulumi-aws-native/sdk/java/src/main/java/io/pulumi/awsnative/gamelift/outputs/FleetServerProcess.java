@@ -32,11 +32,11 @@ public final class FleetServerProcess {
      */
     private final @Nullable String parameters;
 
-    @OutputCustomType.Constructor({"concurrentExecutions","launchPath","parameters"})
+    @OutputCustomType.Constructor
     private FleetServerProcess(
-        Integer concurrentExecutions,
-        String launchPath,
-        @Nullable String parameters) {
+        @OutputCustomType.Parameter("concurrentExecutions") Integer concurrentExecutions,
+        @OutputCustomType.Parameter("launchPath") String launchPath,
+        @OutputCustomType.Parameter("parameters") @Nullable String parameters) {
         this.concurrentExecutions = concurrentExecutions;
         this.launchPath = launchPath;
         this.parameters = parameters;

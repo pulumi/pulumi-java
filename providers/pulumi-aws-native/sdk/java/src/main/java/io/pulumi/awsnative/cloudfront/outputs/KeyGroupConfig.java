@@ -16,11 +16,11 @@ public final class KeyGroupConfig {
     private final List<String> items;
     private final String name;
 
-    @OutputCustomType.Constructor({"comment","items","name"})
+    @OutputCustomType.Constructor
     private KeyGroupConfig(
-        @Nullable String comment,
-        List<String> items,
-        String name) {
+        @OutputCustomType.Parameter("comment") @Nullable String comment,
+        @OutputCustomType.Parameter("items") List<String> items,
+        @OutputCustomType.Parameter("name") String name) {
         this.comment = comment;
         this.items = items;
         this.name = name;

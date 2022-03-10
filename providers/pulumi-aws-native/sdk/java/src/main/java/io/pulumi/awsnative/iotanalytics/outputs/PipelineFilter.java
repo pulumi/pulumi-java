@@ -15,11 +15,11 @@ public final class PipelineFilter {
     private final String name;
     private final @Nullable String next;
 
-    @OutputCustomType.Constructor({"filter","name","next"})
+    @OutputCustomType.Constructor
     private PipelineFilter(
-        String filter,
-        String name,
-        @Nullable String next) {
+        @OutputCustomType.Parameter("filter") String filter,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("next") @Nullable String next) {
         this.filter = filter;
         this.name = name;
         this.next = next;

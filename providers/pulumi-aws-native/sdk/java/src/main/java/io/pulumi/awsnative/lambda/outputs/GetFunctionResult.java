@@ -119,28 +119,28 @@ public final class GetFunctionResult {
      */
     private final @Nullable FunctionVpcConfig vpcConfig;
 
-    @OutputCustomType.Constructor({"architectures","arn","codeSigningConfigArn","deadLetterConfig","description","environment","fileSystemConfigs","handler","imageConfig","kmsKeyArn","layers","memorySize","packageType","reservedConcurrentExecutions","role","runtime","tags","timeout","tracingConfig","vpcConfig"})
+    @OutputCustomType.Constructor
     private GetFunctionResult(
-        @Nullable List<FunctionArchitecturesItem> architectures,
-        @Nullable String arn,
-        @Nullable String codeSigningConfigArn,
-        @Nullable FunctionDeadLetterConfig deadLetterConfig,
-        @Nullable String description,
-        @Nullable FunctionEnvironment environment,
-        @Nullable List<FunctionFileSystemConfig> fileSystemConfigs,
-        @Nullable String handler,
-        @Nullable FunctionImageConfig imageConfig,
-        @Nullable String kmsKeyArn,
-        @Nullable List<String> layers,
-        @Nullable Integer memorySize,
-        @Nullable FunctionPackageType packageType,
-        @Nullable Integer reservedConcurrentExecutions,
-        @Nullable String role,
-        @Nullable String runtime,
-        @Nullable List<FunctionTag> tags,
-        @Nullable Integer timeout,
-        @Nullable FunctionTracingConfig tracingConfig,
-        @Nullable FunctionVpcConfig vpcConfig) {
+        @OutputCustomType.Parameter("architectures") @Nullable List<FunctionArchitecturesItem> architectures,
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("codeSigningConfigArn") @Nullable String codeSigningConfigArn,
+        @OutputCustomType.Parameter("deadLetterConfig") @Nullable FunctionDeadLetterConfig deadLetterConfig,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("environment") @Nullable FunctionEnvironment environment,
+        @OutputCustomType.Parameter("fileSystemConfigs") @Nullable List<FunctionFileSystemConfig> fileSystemConfigs,
+        @OutputCustomType.Parameter("handler") @Nullable String handler,
+        @OutputCustomType.Parameter("imageConfig") @Nullable FunctionImageConfig imageConfig,
+        @OutputCustomType.Parameter("kmsKeyArn") @Nullable String kmsKeyArn,
+        @OutputCustomType.Parameter("layers") @Nullable List<String> layers,
+        @OutputCustomType.Parameter("memorySize") @Nullable Integer memorySize,
+        @OutputCustomType.Parameter("packageType") @Nullable FunctionPackageType packageType,
+        @OutputCustomType.Parameter("reservedConcurrentExecutions") @Nullable Integer reservedConcurrentExecutions,
+        @OutputCustomType.Parameter("role") @Nullable String role,
+        @OutputCustomType.Parameter("runtime") @Nullable String runtime,
+        @OutputCustomType.Parameter("tags") @Nullable List<FunctionTag> tags,
+        @OutputCustomType.Parameter("timeout") @Nullable Integer timeout,
+        @OutputCustomType.Parameter("tracingConfig") @Nullable FunctionTracingConfig tracingConfig,
+        @OutputCustomType.Parameter("vpcConfig") @Nullable FunctionVpcConfig vpcConfig) {
         this.architectures = architectures;
         this.arn = arn;
         this.codeSigningConfigArn = codeSigningConfigArn;

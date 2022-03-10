@@ -15,10 +15,10 @@ public final class BackupPlanCopyActionResourceType {
     private final String destinationBackupVaultArn;
     private final @Nullable BackupPlanLifecycleResourceType lifecycle;
 
-    @OutputCustomType.Constructor({"destinationBackupVaultArn","lifecycle"})
+    @OutputCustomType.Constructor
     private BackupPlanCopyActionResourceType(
-        String destinationBackupVaultArn,
-        @Nullable BackupPlanLifecycleResourceType lifecycle) {
+        @OutputCustomType.Parameter("destinationBackupVaultArn") String destinationBackupVaultArn,
+        @OutputCustomType.Parameter("lifecycle") @Nullable BackupPlanLifecycleResourceType lifecycle) {
         this.destinationBackupVaultArn = destinationBackupVaultArn;
         this.lifecycle = lifecycle;
     }

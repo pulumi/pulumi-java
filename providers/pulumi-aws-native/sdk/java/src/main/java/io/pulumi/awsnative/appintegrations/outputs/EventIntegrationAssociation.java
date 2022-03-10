@@ -39,13 +39,13 @@ public final class EventIntegrationAssociation {
      */
     private final @Nullable String eventIntegrationAssociationId;
 
-    @OutputCustomType.Constructor({"clientAssociationMetadata","clientId","eventBridgeRuleName","eventIntegrationAssociationArn","eventIntegrationAssociationId"})
+    @OutputCustomType.Constructor
     private EventIntegrationAssociation(
-        @Nullable List<EventIntegrationMetadata> clientAssociationMetadata,
-        @Nullable String clientId,
-        @Nullable String eventBridgeRuleName,
-        @Nullable String eventIntegrationAssociationArn,
-        @Nullable String eventIntegrationAssociationId) {
+        @OutputCustomType.Parameter("clientAssociationMetadata") @Nullable List<EventIntegrationMetadata> clientAssociationMetadata,
+        @OutputCustomType.Parameter("clientId") @Nullable String clientId,
+        @OutputCustomType.Parameter("eventBridgeRuleName") @Nullable String eventBridgeRuleName,
+        @OutputCustomType.Parameter("eventIntegrationAssociationArn") @Nullable String eventIntegrationAssociationArn,
+        @OutputCustomType.Parameter("eventIntegrationAssociationId") @Nullable String eventIntegrationAssociationId) {
         this.clientAssociationMetadata = clientAssociationMetadata;
         this.clientId = clientId;
         this.eventBridgeRuleName = eventBridgeRuleName;

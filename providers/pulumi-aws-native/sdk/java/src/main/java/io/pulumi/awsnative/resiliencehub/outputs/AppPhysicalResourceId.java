@@ -16,12 +16,12 @@ public final class AppPhysicalResourceId {
     private final String identifier;
     private final String type;
 
-    @OutputCustomType.Constructor({"awsAccountId","awsRegion","identifier","type"})
+    @OutputCustomType.Constructor
     private AppPhysicalResourceId(
-        @Nullable String awsAccountId,
-        @Nullable String awsRegion,
-        String identifier,
-        String type) {
+        @OutputCustomType.Parameter("awsAccountId") @Nullable String awsAccountId,
+        @OutputCustomType.Parameter("awsRegion") @Nullable String awsRegion,
+        @OutputCustomType.Parameter("identifier") String identifier,
+        @OutputCustomType.Parameter("type") String type) {
         this.awsAccountId = awsAccountId;
         this.awsRegion = awsRegion;
         this.identifier = identifier;

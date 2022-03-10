@@ -11,8 +11,8 @@ import java.util.Objects;
 public final class DataQualityJobDefinitionDataQualityJobInput {
     private final DataQualityJobDefinitionEndpointInput endpointInput;
 
-    @OutputCustomType.Constructor({"endpointInput"})
-    private DataQualityJobDefinitionDataQualityJobInput(DataQualityJobDefinitionEndpointInput endpointInput) {
+    @OutputCustomType.Constructor
+    private DataQualityJobDefinitionDataQualityJobInput(@OutputCustomType.Parameter("endpointInput") DataQualityJobDefinitionEndpointInput endpointInput) {
         this.endpointInput = endpointInput;
     }
 

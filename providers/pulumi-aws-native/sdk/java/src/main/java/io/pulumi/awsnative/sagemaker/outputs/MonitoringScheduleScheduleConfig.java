@@ -15,8 +15,8 @@ public final class MonitoringScheduleScheduleConfig {
      */
     private final String scheduleExpression;
 
-    @OutputCustomType.Constructor({"scheduleExpression"})
-    private MonitoringScheduleScheduleConfig(String scheduleExpression) {
+    @OutputCustomType.Constructor
+    private MonitoringScheduleScheduleConfig(@OutputCustomType.Parameter("scheduleExpression") String scheduleExpression) {
         this.scheduleExpression = scheduleExpression;
     }
 

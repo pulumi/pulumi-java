@@ -20,10 +20,10 @@ public final class DetectorModelSetVariable {
      */
     private final String variableName;
 
-    @OutputCustomType.Constructor({"value","variableName"})
+    @OutputCustomType.Constructor
     private DetectorModelSetVariable(
-        String value,
-        String variableName) {
+        @OutputCustomType.Parameter("value") String value,
+        @OutputCustomType.Parameter("variableName") String variableName) {
         this.value = value;
         this.variableName = variableName;
     }

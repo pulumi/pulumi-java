@@ -19,12 +19,12 @@ public final class DatasetInput {
     private final @Nullable DatasetMetadata metadata;
     private final @Nullable DatasetS3Location s3InputDefinition;
 
-    @OutputCustomType.Constructor({"dataCatalogInputDefinition","databaseInputDefinition","metadata","s3InputDefinition"})
+    @OutputCustomType.Constructor
     private DatasetInput(
-        @Nullable DatasetDataCatalogInputDefinition dataCatalogInputDefinition,
-        @Nullable DatasetDatabaseInputDefinition databaseInputDefinition,
-        @Nullable DatasetMetadata metadata,
-        @Nullable DatasetS3Location s3InputDefinition) {
+        @OutputCustomType.Parameter("dataCatalogInputDefinition") @Nullable DatasetDataCatalogInputDefinition dataCatalogInputDefinition,
+        @OutputCustomType.Parameter("databaseInputDefinition") @Nullable DatasetDatabaseInputDefinition databaseInputDefinition,
+        @OutputCustomType.Parameter("metadata") @Nullable DatasetMetadata metadata,
+        @OutputCustomType.Parameter("s3InputDefinition") @Nullable DatasetS3Location s3InputDefinition) {
         this.dataCatalogInputDefinition = dataCatalogInputDefinition;
         this.databaseInputDefinition = databaseInputDefinition;
         this.metadata = metadata;

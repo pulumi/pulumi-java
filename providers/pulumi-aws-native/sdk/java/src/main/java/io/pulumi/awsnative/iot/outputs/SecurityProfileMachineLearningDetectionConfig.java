@@ -17,8 +17,8 @@ public final class SecurityProfileMachineLearningDetectionConfig {
      */
     private final @Nullable SecurityProfileMachineLearningDetectionConfigConfidenceLevel confidenceLevel;
 
-    @OutputCustomType.Constructor({"confidenceLevel"})
-    private SecurityProfileMachineLearningDetectionConfig(@Nullable SecurityProfileMachineLearningDetectionConfigConfidenceLevel confidenceLevel) {
+    @OutputCustomType.Constructor
+    private SecurityProfileMachineLearningDetectionConfig(@OutputCustomType.Parameter("confidenceLevel") @Nullable SecurityProfileMachineLearningDetectionConfigConfidenceLevel confidenceLevel) {
         this.confidenceLevel = confidenceLevel;
     }
 

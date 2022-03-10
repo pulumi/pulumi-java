@@ -13,8 +13,8 @@ import javax.annotation.Nullable;
 public final class BotGrammarSlotTypeSetting {
     private final @Nullable BotGrammarSlotTypeSource source;
 
-    @OutputCustomType.Constructor({"source"})
-    private BotGrammarSlotTypeSetting(@Nullable BotGrammarSlotTypeSource source) {
+    @OutputCustomType.Constructor
+    private BotGrammarSlotTypeSetting(@OutputCustomType.Parameter("source") @Nullable BotGrammarSlotTypeSource source) {
         this.source = source;
     }
 

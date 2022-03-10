@@ -24,10 +24,10 @@ public final class UserProfileKernelGatewayAppSettings {
      */
     private final @Nullable UserProfileResourceSpec defaultResourceSpec;
 
-    @OutputCustomType.Constructor({"customImages","defaultResourceSpec"})
+    @OutputCustomType.Constructor
     private UserProfileKernelGatewayAppSettings(
-        @Nullable List<UserProfileCustomImage> customImages,
-        @Nullable UserProfileResourceSpec defaultResourceSpec) {
+        @OutputCustomType.Parameter("customImages") @Nullable List<UserProfileCustomImage> customImages,
+        @OutputCustomType.Parameter("defaultResourceSpec") @Nullable UserProfileResourceSpec defaultResourceSpec) {
         this.customImages = customImages;
         this.defaultResourceSpec = defaultResourceSpec;
     }

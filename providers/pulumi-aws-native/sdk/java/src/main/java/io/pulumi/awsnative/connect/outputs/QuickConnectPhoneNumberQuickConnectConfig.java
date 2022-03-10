@@ -11,8 +11,8 @@ import java.util.Objects;
 public final class QuickConnectPhoneNumberQuickConnectConfig {
     private final String phoneNumber;
 
-    @OutputCustomType.Constructor({"phoneNumber"})
-    private QuickConnectPhoneNumberQuickConnectConfig(String phoneNumber) {
+    @OutputCustomType.Constructor
+    private QuickConnectPhoneNumberQuickConnectConfig(@OutputCustomType.Parameter("phoneNumber") String phoneNumber) {
         this.phoneNumber = phoneNumber;
     }
 

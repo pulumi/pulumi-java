@@ -17,12 +17,12 @@ public final class TopicRuleDestinationVpcDestinationProperties {
     private final @Nullable List<String> subnetIds;
     private final @Nullable String vpcId;
 
-    @OutputCustomType.Constructor({"roleArn","securityGroups","subnetIds","vpcId"})
+    @OutputCustomType.Constructor
     private TopicRuleDestinationVpcDestinationProperties(
-        @Nullable String roleArn,
-        @Nullable List<String> securityGroups,
-        @Nullable List<String> subnetIds,
-        @Nullable String vpcId) {
+        @OutputCustomType.Parameter("roleArn") @Nullable String roleArn,
+        @OutputCustomType.Parameter("securityGroups") @Nullable List<String> securityGroups,
+        @OutputCustomType.Parameter("subnetIds") @Nullable List<String> subnetIds,
+        @OutputCustomType.Parameter("vpcId") @Nullable String vpcId) {
         this.roleArn = roleArn;
         this.securityGroups = securityGroups;
         this.subnetIds = subnetIds;

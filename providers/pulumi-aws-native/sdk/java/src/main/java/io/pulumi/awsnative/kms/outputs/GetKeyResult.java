@@ -60,18 +60,18 @@ public final class GetKeyResult {
      */
     private final @Nullable List<KeyTag> tags;
 
-    @OutputCustomType.Constructor({"arn","description","enableKeyRotation","enabled","keyId","keyPolicy","keySpec","keyUsage","multiRegion","tags"})
+    @OutputCustomType.Constructor
     private GetKeyResult(
-        @Nullable String arn,
-        @Nullable String description,
-        @Nullable Boolean enableKeyRotation,
-        @Nullable Boolean enabled,
-        @Nullable String keyId,
-        @Nullable Object keyPolicy,
-        @Nullable KeySpec keySpec,
-        @Nullable KeyUsage keyUsage,
-        @Nullable Boolean multiRegion,
-        @Nullable List<KeyTag> tags) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("enableKeyRotation") @Nullable Boolean enableKeyRotation,
+        @OutputCustomType.Parameter("enabled") @Nullable Boolean enabled,
+        @OutputCustomType.Parameter("keyId") @Nullable String keyId,
+        @OutputCustomType.Parameter("keyPolicy") @Nullable Object keyPolicy,
+        @OutputCustomType.Parameter("keySpec") @Nullable KeySpec keySpec,
+        @OutputCustomType.Parameter("keyUsage") @Nullable KeyUsage keyUsage,
+        @OutputCustomType.Parameter("multiRegion") @Nullable Boolean multiRegion,
+        @OutputCustomType.Parameter("tags") @Nullable List<KeyTag> tags) {
         this.arn = arn;
         this.description = description;
         this.enableKeyRotation = enableKeyRotation;

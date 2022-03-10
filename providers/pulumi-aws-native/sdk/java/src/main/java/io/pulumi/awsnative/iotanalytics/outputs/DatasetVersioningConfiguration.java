@@ -15,10 +15,10 @@ public final class DatasetVersioningConfiguration {
     private final @Nullable Integer maxVersions;
     private final @Nullable Boolean unlimited;
 
-    @OutputCustomType.Constructor({"maxVersions","unlimited"})
+    @OutputCustomType.Constructor
     private DatasetVersioningConfiguration(
-        @Nullable Integer maxVersions,
-        @Nullable Boolean unlimited) {
+        @OutputCustomType.Parameter("maxVersions") @Nullable Integer maxVersions,
+        @OutputCustomType.Parameter("unlimited") @Nullable Boolean unlimited) {
         this.maxVersions = maxVersions;
         this.unlimited = unlimited;
     }

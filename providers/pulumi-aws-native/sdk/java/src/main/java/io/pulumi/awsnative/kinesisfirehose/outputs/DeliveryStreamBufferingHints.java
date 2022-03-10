@@ -14,10 +14,10 @@ public final class DeliveryStreamBufferingHints {
     private final @Nullable Integer intervalInSeconds;
     private final @Nullable Integer sizeInMBs;
 
-    @OutputCustomType.Constructor({"intervalInSeconds","sizeInMBs"})
+    @OutputCustomType.Constructor
     private DeliveryStreamBufferingHints(
-        @Nullable Integer intervalInSeconds,
-        @Nullable Integer sizeInMBs) {
+        @OutputCustomType.Parameter("intervalInSeconds") @Nullable Integer intervalInSeconds,
+        @OutputCustomType.Parameter("sizeInMBs") @Nullable Integer sizeInMBs) {
         this.intervalInSeconds = intervalInSeconds;
         this.sizeInMBs = sizeInMBs;
     }

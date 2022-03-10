@@ -66,19 +66,19 @@ public final class GetDetectorResult {
      */
     private final @Nullable List<DetectorTag> tags;
 
-    @OutputCustomType.Constructor({"arn","associatedModels","createdTime","description","detectorVersionId","detectorVersionStatus","eventType","lastUpdatedTime","ruleExecutionMode","rules","tags"})
+    @OutputCustomType.Constructor
     private GetDetectorResult(
-        @Nullable String arn,
-        @Nullable List<DetectorModel> associatedModels,
-        @Nullable String createdTime,
-        @Nullable String description,
-        @Nullable String detectorVersionId,
-        @Nullable DetectorVersionStatus detectorVersionStatus,
-        @Nullable DetectorEventType eventType,
-        @Nullable String lastUpdatedTime,
-        @Nullable DetectorRuleExecutionMode ruleExecutionMode,
-        @Nullable List<DetectorRule> rules,
-        @Nullable List<DetectorTag> tags) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("associatedModels") @Nullable List<DetectorModel> associatedModels,
+        @OutputCustomType.Parameter("createdTime") @Nullable String createdTime,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("detectorVersionId") @Nullable String detectorVersionId,
+        @OutputCustomType.Parameter("detectorVersionStatus") @Nullable DetectorVersionStatus detectorVersionStatus,
+        @OutputCustomType.Parameter("eventType") @Nullable DetectorEventType eventType,
+        @OutputCustomType.Parameter("lastUpdatedTime") @Nullable String lastUpdatedTime,
+        @OutputCustomType.Parameter("ruleExecutionMode") @Nullable DetectorRuleExecutionMode ruleExecutionMode,
+        @OutputCustomType.Parameter("rules") @Nullable List<DetectorRule> rules,
+        @OutputCustomType.Parameter("tags") @Nullable List<DetectorTag> tags) {
         this.arn = arn;
         this.associatedModels = associatedModels;
         this.createdTime = createdTime;

@@ -20,12 +20,12 @@ public final class RouteUriPathRouteInput {
     private final @Nullable List<RouteMethod> methods;
     private final @Nullable String sourcePath;
 
-    @OutputCustomType.Constructor({"activationState","includeChildPaths","methods","sourcePath"})
+    @OutputCustomType.Constructor
     private RouteUriPathRouteInput(
-        RouteActivationState activationState,
-        @Nullable Boolean includeChildPaths,
-        @Nullable List<RouteMethod> methods,
-        @Nullable String sourcePath) {
+        @OutputCustomType.Parameter("activationState") RouteActivationState activationState,
+        @OutputCustomType.Parameter("includeChildPaths") @Nullable Boolean includeChildPaths,
+        @OutputCustomType.Parameter("methods") @Nullable List<RouteMethod> methods,
+        @OutputCustomType.Parameter("sourcePath") @Nullable String sourcePath) {
         this.activationState = activationState;
         this.includeChildPaths = includeChildPaths;
         this.methods = methods;

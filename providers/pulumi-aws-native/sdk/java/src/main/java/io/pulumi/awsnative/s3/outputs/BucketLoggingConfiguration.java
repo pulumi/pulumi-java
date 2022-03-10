@@ -18,10 +18,10 @@ public final class BucketLoggingConfiguration {
     private final @Nullable String destinationBucketName;
     private final @Nullable String logFilePrefix;
 
-    @OutputCustomType.Constructor({"destinationBucketName","logFilePrefix"})
+    @OutputCustomType.Constructor
     private BucketLoggingConfiguration(
-        @Nullable String destinationBucketName,
-        @Nullable String logFilePrefix) {
+        @OutputCustomType.Parameter("destinationBucketName") @Nullable String destinationBucketName,
+        @OutputCustomType.Parameter("logFilePrefix") @Nullable String logFilePrefix) {
         this.destinationBucketName = destinationBucketName;
         this.logFilePrefix = logFilePrefix;
     }

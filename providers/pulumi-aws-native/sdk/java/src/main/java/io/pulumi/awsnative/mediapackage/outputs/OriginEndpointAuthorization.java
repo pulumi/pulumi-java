@@ -20,10 +20,10 @@ public final class OriginEndpointAuthorization {
      */
     private final String secretsRoleArn;
 
-    @OutputCustomType.Constructor({"cdnIdentifierSecret","secretsRoleArn"})
+    @OutputCustomType.Constructor
     private OriginEndpointAuthorization(
-        String cdnIdentifierSecret,
-        String secretsRoleArn) {
+        @OutputCustomType.Parameter("cdnIdentifierSecret") String cdnIdentifierSecret,
+        @OutputCustomType.Parameter("secretsRoleArn") String secretsRoleArn) {
         this.cdnIdentifierSecret = cdnIdentifierSecret;
         this.secretsRoleArn = secretsRoleArn;
     }

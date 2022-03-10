@@ -12,10 +12,10 @@ public final class DeliveryStreamHttpEndpointCommonAttribute {
     private final String attributeName;
     private final String attributeValue;
 
-    @OutputCustomType.Constructor({"attributeName","attributeValue"})
+    @OutputCustomType.Constructor
     private DeliveryStreamHttpEndpointCommonAttribute(
-        String attributeName,
-        String attributeValue) {
+        @OutputCustomType.Parameter("attributeName") String attributeName,
+        @OutputCustomType.Parameter("attributeValue") String attributeValue) {
         this.attributeName = attributeName;
         this.attributeValue = attributeValue;
     }

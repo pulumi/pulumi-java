@@ -11,8 +11,8 @@ import java.util.Objects;
 public final class FlowTrendmicroSourceProperties {
     private final String object;
 
-    @OutputCustomType.Constructor({"object"})
-    private FlowTrendmicroSourceProperties(String object) {
+    @OutputCustomType.Constructor
+    private FlowTrendmicroSourceProperties(@OutputCustomType.Parameter("object") String object) {
         this.object = object;
     }
 

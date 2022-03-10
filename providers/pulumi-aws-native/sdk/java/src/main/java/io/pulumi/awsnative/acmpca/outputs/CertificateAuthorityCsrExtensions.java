@@ -16,10 +16,10 @@ public final class CertificateAuthorityCsrExtensions {
     private final @Nullable CertificateAuthorityKeyUsage keyUsage;
     private final @Nullable List<CertificateAuthorityAccessDescription> subjectInformationAccess;
 
-    @OutputCustomType.Constructor({"keyUsage","subjectInformationAccess"})
+    @OutputCustomType.Constructor
     private CertificateAuthorityCsrExtensions(
-        @Nullable CertificateAuthorityKeyUsage keyUsage,
-        @Nullable List<CertificateAuthorityAccessDescription> subjectInformationAccess) {
+        @OutputCustomType.Parameter("keyUsage") @Nullable CertificateAuthorityKeyUsage keyUsage,
+        @OutputCustomType.Parameter("subjectInformationAccess") @Nullable List<CertificateAuthorityAccessDescription> subjectInformationAccess) {
         this.keyUsage = keyUsage;
         this.subjectInformationAccess = subjectInformationAccess;
     }

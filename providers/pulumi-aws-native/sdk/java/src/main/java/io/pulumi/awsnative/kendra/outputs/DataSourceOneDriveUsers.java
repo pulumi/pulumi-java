@@ -16,10 +16,10 @@ public final class DataSourceOneDriveUsers {
     private final @Nullable List<String> oneDriveUserList;
     private final @Nullable DataSourceS3Path oneDriveUserS3Path;
 
-    @OutputCustomType.Constructor({"oneDriveUserList","oneDriveUserS3Path"})
+    @OutputCustomType.Constructor
     private DataSourceOneDriveUsers(
-        @Nullable List<String> oneDriveUserList,
-        @Nullable DataSourceS3Path oneDriveUserS3Path) {
+        @OutputCustomType.Parameter("oneDriveUserList") @Nullable List<String> oneDriveUserList,
+        @OutputCustomType.Parameter("oneDriveUserS3Path") @Nullable DataSourceS3Path oneDriveUserS3Path) {
         this.oneDriveUserList = oneDriveUserList;
         this.oneDriveUserS3Path = oneDriveUserS3Path;
     }

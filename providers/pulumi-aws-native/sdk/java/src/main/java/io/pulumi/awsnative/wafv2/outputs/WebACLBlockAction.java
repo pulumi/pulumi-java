@@ -13,8 +13,8 @@ import javax.annotation.Nullable;
 public final class WebACLBlockAction {
     private final @Nullable WebACLCustomResponse customResponse;
 
-    @OutputCustomType.Constructor({"customResponse"})
-    private WebACLBlockAction(@Nullable WebACLCustomResponse customResponse) {
+    @OutputCustomType.Constructor
+    private WebACLBlockAction(@OutputCustomType.Parameter("customResponse") @Nullable WebACLCustomResponse customResponse) {
         this.customResponse = customResponse;
     }
 

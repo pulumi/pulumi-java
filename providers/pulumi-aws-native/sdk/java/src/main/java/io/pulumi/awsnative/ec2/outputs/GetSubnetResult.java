@@ -22,15 +22,15 @@ public final class GetSubnetResult {
     private final @Nullable String subnetId;
     private final @Nullable List<SubnetTag> tags;
 
-    @OutputCustomType.Constructor({"assignIpv6AddressOnCreation","ipv6CidrBlock","ipv6CidrBlocks","mapPublicIpOnLaunch","networkAclAssociationId","subnetId","tags"})
+    @OutputCustomType.Constructor
     private GetSubnetResult(
-        @Nullable Boolean assignIpv6AddressOnCreation,
-        @Nullable String ipv6CidrBlock,
-        @Nullable List<String> ipv6CidrBlocks,
-        @Nullable Boolean mapPublicIpOnLaunch,
-        @Nullable String networkAclAssociationId,
-        @Nullable String subnetId,
-        @Nullable List<SubnetTag> tags) {
+        @OutputCustomType.Parameter("assignIpv6AddressOnCreation") @Nullable Boolean assignIpv6AddressOnCreation,
+        @OutputCustomType.Parameter("ipv6CidrBlock") @Nullable String ipv6CidrBlock,
+        @OutputCustomType.Parameter("ipv6CidrBlocks") @Nullable List<String> ipv6CidrBlocks,
+        @OutputCustomType.Parameter("mapPublicIpOnLaunch") @Nullable Boolean mapPublicIpOnLaunch,
+        @OutputCustomType.Parameter("networkAclAssociationId") @Nullable String networkAclAssociationId,
+        @OutputCustomType.Parameter("subnetId") @Nullable String subnetId,
+        @OutputCustomType.Parameter("tags") @Nullable List<SubnetTag> tags) {
         this.assignIpv6AddressOnCreation = assignIpv6AddressOnCreation;
         this.ipv6CidrBlock = ipv6CidrBlock;
         this.ipv6CidrBlocks = ipv6CidrBlocks;

@@ -15,8 +15,8 @@ public final class GatewayGreengrassV2 {
      */
     private final String coreDeviceThingName;
 
-    @OutputCustomType.Constructor({"coreDeviceThingName"})
-    private GatewayGreengrassV2(String coreDeviceThingName) {
+    @OutputCustomType.Constructor
+    private GatewayGreengrassV2(@OutputCustomType.Parameter("coreDeviceThingName") String coreDeviceThingName) {
         this.coreDeviceThingName = coreDeviceThingName;
     }
 

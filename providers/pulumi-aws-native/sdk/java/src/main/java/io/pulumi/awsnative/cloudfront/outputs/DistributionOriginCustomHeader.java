@@ -12,10 +12,10 @@ public final class DistributionOriginCustomHeader {
     private final String headerName;
     private final String headerValue;
 
-    @OutputCustomType.Constructor({"headerName","headerValue"})
+    @OutputCustomType.Constructor
     private DistributionOriginCustomHeader(
-        String headerName,
-        String headerValue) {
+        @OutputCustomType.Parameter("headerName") String headerName,
+        @OutputCustomType.Parameter("headerValue") String headerValue) {
         this.headerName = headerName;
         this.headerValue = headerValue;
     }

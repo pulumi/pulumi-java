@@ -16,11 +16,11 @@ public final class WebACLRegexPatternSetReferenceStatement {
     private final WebACLFieldToMatch fieldToMatch;
     private final List<WebACLTextTransformation> textTransformations;
 
-    @OutputCustomType.Constructor({"arn","fieldToMatch","textTransformations"})
+    @OutputCustomType.Constructor
     private WebACLRegexPatternSetReferenceStatement(
-        String arn,
-        WebACLFieldToMatch fieldToMatch,
-        List<WebACLTextTransformation> textTransformations) {
+        @OutputCustomType.Parameter("arn") String arn,
+        @OutputCustomType.Parameter("fieldToMatch") WebACLFieldToMatch fieldToMatch,
+        @OutputCustomType.Parameter("textTransformations") List<WebACLTextTransformation> textTransformations) {
         this.arn = arn;
         this.fieldToMatch = fieldToMatch;
         this.textTransformations = textTransformations;

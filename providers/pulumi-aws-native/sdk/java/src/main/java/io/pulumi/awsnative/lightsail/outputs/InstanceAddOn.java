@@ -25,11 +25,11 @@ public final class InstanceAddOn {
      */
     private final @Nullable InstanceAddOnStatus status;
 
-    @OutputCustomType.Constructor({"addOnType","autoSnapshotAddOnRequest","status"})
+    @OutputCustomType.Constructor
     private InstanceAddOn(
-        String addOnType,
-        @Nullable InstanceAutoSnapshotAddOn autoSnapshotAddOnRequest,
-        @Nullable InstanceAddOnStatus status) {
+        @OutputCustomType.Parameter("addOnType") String addOnType,
+        @OutputCustomType.Parameter("autoSnapshotAddOnRequest") @Nullable InstanceAutoSnapshotAddOn autoSnapshotAddOnRequest,
+        @OutputCustomType.Parameter("status") @Nullable InstanceAddOnStatus status) {
         this.addOnType = addOnType;
         this.autoSnapshotAddOnRequest = autoSnapshotAddOnRequest;
         this.status = status;

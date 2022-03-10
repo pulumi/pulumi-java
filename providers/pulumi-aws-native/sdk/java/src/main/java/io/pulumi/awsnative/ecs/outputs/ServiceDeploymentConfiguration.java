@@ -16,11 +16,11 @@ public final class ServiceDeploymentConfiguration {
     private final @Nullable Integer maximumPercent;
     private final @Nullable Integer minimumHealthyPercent;
 
-    @OutputCustomType.Constructor({"deploymentCircuitBreaker","maximumPercent","minimumHealthyPercent"})
+    @OutputCustomType.Constructor
     private ServiceDeploymentConfiguration(
-        @Nullable ServiceDeploymentCircuitBreaker deploymentCircuitBreaker,
-        @Nullable Integer maximumPercent,
-        @Nullable Integer minimumHealthyPercent) {
+        @OutputCustomType.Parameter("deploymentCircuitBreaker") @Nullable ServiceDeploymentCircuitBreaker deploymentCircuitBreaker,
+        @OutputCustomType.Parameter("maximumPercent") @Nullable Integer maximumPercent,
+        @OutputCustomType.Parameter("minimumHealthyPercent") @Nullable Integer minimumHealthyPercent) {
         this.deploymentCircuitBreaker = deploymentCircuitBreaker;
         this.maximumPercent = maximumPercent;
         this.minimumHealthyPercent = minimumHealthyPercent;

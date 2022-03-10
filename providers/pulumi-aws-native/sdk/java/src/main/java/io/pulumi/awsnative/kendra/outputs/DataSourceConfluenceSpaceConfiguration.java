@@ -20,13 +20,13 @@ public final class DataSourceConfluenceSpaceConfiguration {
     private final @Nullable List<String> includeSpaces;
     private final @Nullable List<DataSourceConfluenceSpaceToIndexFieldMapping> spaceFieldMappings;
 
-    @OutputCustomType.Constructor({"crawlArchivedSpaces","crawlPersonalSpaces","excludeSpaces","includeSpaces","spaceFieldMappings"})
+    @OutputCustomType.Constructor
     private DataSourceConfluenceSpaceConfiguration(
-        @Nullable Boolean crawlArchivedSpaces,
-        @Nullable Boolean crawlPersonalSpaces,
-        @Nullable List<String> excludeSpaces,
-        @Nullable List<String> includeSpaces,
-        @Nullable List<DataSourceConfluenceSpaceToIndexFieldMapping> spaceFieldMappings) {
+        @OutputCustomType.Parameter("crawlArchivedSpaces") @Nullable Boolean crawlArchivedSpaces,
+        @OutputCustomType.Parameter("crawlPersonalSpaces") @Nullable Boolean crawlPersonalSpaces,
+        @OutputCustomType.Parameter("excludeSpaces") @Nullable List<String> excludeSpaces,
+        @OutputCustomType.Parameter("includeSpaces") @Nullable List<String> includeSpaces,
+        @OutputCustomType.Parameter("spaceFieldMappings") @Nullable List<DataSourceConfluenceSpaceToIndexFieldMapping> spaceFieldMappings) {
         this.crawlArchivedSpaces = crawlArchivedSpaces;
         this.crawlPersonalSpaces = crawlPersonalSpaces;
         this.excludeSpaces = excludeSpaces;

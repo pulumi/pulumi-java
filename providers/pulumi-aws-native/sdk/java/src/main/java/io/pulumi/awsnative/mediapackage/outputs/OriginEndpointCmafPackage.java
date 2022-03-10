@@ -34,13 +34,13 @@ public final class OriginEndpointCmafPackage {
     private final @Nullable String segmentPrefix;
     private final @Nullable OriginEndpointStreamSelection streamSelection;
 
-    @OutputCustomType.Constructor({"encryption","hlsManifests","segmentDurationSeconds","segmentPrefix","streamSelection"})
+    @OutputCustomType.Constructor
     private OriginEndpointCmafPackage(
-        @Nullable OriginEndpointCmafEncryption encryption,
-        @Nullable List<OriginEndpointHlsManifest> hlsManifests,
-        @Nullable Integer segmentDurationSeconds,
-        @Nullable String segmentPrefix,
-        @Nullable OriginEndpointStreamSelection streamSelection) {
+        @OutputCustomType.Parameter("encryption") @Nullable OriginEndpointCmafEncryption encryption,
+        @OutputCustomType.Parameter("hlsManifests") @Nullable List<OriginEndpointHlsManifest> hlsManifests,
+        @OutputCustomType.Parameter("segmentDurationSeconds") @Nullable Integer segmentDurationSeconds,
+        @OutputCustomType.Parameter("segmentPrefix") @Nullable String segmentPrefix,
+        @OutputCustomType.Parameter("streamSelection") @Nullable OriginEndpointStreamSelection streamSelection) {
         this.encryption = encryption;
         this.hlsManifests = hlsManifests;
         this.segmentDurationSeconds = segmentDurationSeconds;

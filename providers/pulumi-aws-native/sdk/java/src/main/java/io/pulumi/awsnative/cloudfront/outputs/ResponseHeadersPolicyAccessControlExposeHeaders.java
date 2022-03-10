@@ -12,8 +12,8 @@ import java.util.Objects;
 public final class ResponseHeadersPolicyAccessControlExposeHeaders {
     private final List<String> items;
 
-    @OutputCustomType.Constructor({"items"})
-    private ResponseHeadersPolicyAccessControlExposeHeaders(List<String> items) {
+    @OutputCustomType.Constructor
+    private ResponseHeadersPolicyAccessControlExposeHeaders(@OutputCustomType.Parameter("items") List<String> items) {
         this.items = items;
     }
 

@@ -28,14 +28,14 @@ public final class GetAttributeGroupResult {
     private final @Nullable String name;
     private final @Nullable AttributeGroupTags tags;
 
-    @OutputCustomType.Constructor({"arn","attributes","description","id","name","tags"})
+    @OutputCustomType.Constructor
     private GetAttributeGroupResult(
-        @Nullable String arn,
-        @Nullable Object attributes,
-        @Nullable String description,
-        @Nullable String id,
-        @Nullable String name,
-        @Nullable AttributeGroupTags tags) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("attributes") @Nullable Object attributes,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("tags") @Nullable AttributeGroupTags tags) {
         this.arn = arn;
         this.attributes = attributes;
         this.description = description;

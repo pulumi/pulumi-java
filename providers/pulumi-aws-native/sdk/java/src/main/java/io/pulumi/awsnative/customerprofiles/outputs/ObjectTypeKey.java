@@ -23,10 +23,10 @@ public final class ObjectTypeKey {
      */
     private final @Nullable List<ObjectTypeKeyStandardIdentifiersItem> standardIdentifiers;
 
-    @OutputCustomType.Constructor({"fieldNames","standardIdentifiers"})
+    @OutputCustomType.Constructor
     private ObjectTypeKey(
-        @Nullable List<String> fieldNames,
-        @Nullable List<ObjectTypeKeyStandardIdentifiersItem> standardIdentifiers) {
+        @OutputCustomType.Parameter("fieldNames") @Nullable List<String> fieldNames,
+        @OutputCustomType.Parameter("standardIdentifiers") @Nullable List<ObjectTypeKeyStandardIdentifiersItem> standardIdentifiers) {
         this.fieldNames = fieldNames;
         this.standardIdentifiers = standardIdentifiers;
     }

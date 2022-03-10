@@ -22,11 +22,11 @@ public final class BotPromptSpecification {
     private final Integer maxRetries;
     private final List<BotMessageGroup> messageGroupsList;
 
-    @OutputCustomType.Constructor({"allowInterrupt","maxRetries","messageGroupsList"})
+    @OutputCustomType.Constructor
     private BotPromptSpecification(
-        @Nullable Boolean allowInterrupt,
-        Integer maxRetries,
-        List<BotMessageGroup> messageGroupsList) {
+        @OutputCustomType.Parameter("allowInterrupt") @Nullable Boolean allowInterrupt,
+        @OutputCustomType.Parameter("maxRetries") Integer maxRetries,
+        @OutputCustomType.Parameter("messageGroupsList") List<BotMessageGroup> messageGroupsList) {
         this.allowInterrupt = allowInterrupt;
         this.maxRetries = maxRetries;
         this.messageGroupsList = messageGroupsList;

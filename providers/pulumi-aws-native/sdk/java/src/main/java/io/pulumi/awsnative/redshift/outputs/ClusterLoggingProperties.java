@@ -14,10 +14,10 @@ public final class ClusterLoggingProperties {
     private final String bucketName;
     private final @Nullable String s3KeyPrefix;
 
-    @OutputCustomType.Constructor({"bucketName","s3KeyPrefix"})
+    @OutputCustomType.Constructor
     private ClusterLoggingProperties(
-        String bucketName,
-        @Nullable String s3KeyPrefix) {
+        @OutputCustomType.Parameter("bucketName") String bucketName,
+        @OutputCustomType.Parameter("s3KeyPrefix") @Nullable String s3KeyPrefix) {
         this.bucketName = bucketName;
         this.s3KeyPrefix = s3KeyPrefix;
     }

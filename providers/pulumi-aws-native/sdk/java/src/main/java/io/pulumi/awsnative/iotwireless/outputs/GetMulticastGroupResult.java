@@ -60,17 +60,17 @@ public final class GetMulticastGroupResult {
      */
     private final @Nullable List<MulticastGroupTag> tags;
 
-    @OutputCustomType.Constructor({"arn","associateWirelessDevice","description","disassociateWirelessDevice","id","loRaWAN","name","status","tags"})
+    @OutputCustomType.Constructor
     private GetMulticastGroupResult(
-        @Nullable String arn,
-        @Nullable String associateWirelessDevice,
-        @Nullable String description,
-        @Nullable String disassociateWirelessDevice,
-        @Nullable String id,
-        @Nullable MulticastGroupLoRaWAN loRaWAN,
-        @Nullable String name,
-        @Nullable String status,
-        @Nullable List<MulticastGroupTag> tags) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("associateWirelessDevice") @Nullable String associateWirelessDevice,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("disassociateWirelessDevice") @Nullable String disassociateWirelessDevice,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("loRaWAN") @Nullable MulticastGroupLoRaWAN loRaWAN,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("status") @Nullable String status,
+        @OutputCustomType.Parameter("tags") @Nullable List<MulticastGroupTag> tags) {
         this.arn = arn;
         this.associateWirelessDevice = associateWirelessDevice;
         this.description = description;

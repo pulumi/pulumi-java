@@ -18,14 +18,14 @@ public final class DeliveryStreamSchemaConfiguration {
     private final @Nullable String tableName;
     private final @Nullable String versionId;
 
-    @OutputCustomType.Constructor({"catalogId","databaseName","region","roleARN","tableName","versionId"})
+    @OutputCustomType.Constructor
     private DeliveryStreamSchemaConfiguration(
-        @Nullable String catalogId,
-        @Nullable String databaseName,
-        @Nullable String region,
-        @Nullable String roleARN,
-        @Nullable String tableName,
-        @Nullable String versionId) {
+        @OutputCustomType.Parameter("catalogId") @Nullable String catalogId,
+        @OutputCustomType.Parameter("databaseName") @Nullable String databaseName,
+        @OutputCustomType.Parameter("region") @Nullable String region,
+        @OutputCustomType.Parameter("roleARN") @Nullable String roleARN,
+        @OutputCustomType.Parameter("tableName") @Nullable String tableName,
+        @OutputCustomType.Parameter("versionId") @Nullable String versionId) {
         this.catalogId = catalogId;
         this.databaseName = databaseName;
         this.region = region;

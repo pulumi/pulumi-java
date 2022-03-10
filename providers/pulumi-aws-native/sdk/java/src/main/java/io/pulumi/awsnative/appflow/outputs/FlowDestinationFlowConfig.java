@@ -29,11 +29,11 @@ public final class FlowDestinationFlowConfig {
      */
     private final FlowDestinationConnectorProperties destinationConnectorProperties;
 
-    @OutputCustomType.Constructor({"connectorProfileName","connectorType","destinationConnectorProperties"})
+    @OutputCustomType.Constructor
     private FlowDestinationFlowConfig(
-        @Nullable String connectorProfileName,
-        FlowConnectorType connectorType,
-        FlowDestinationConnectorProperties destinationConnectorProperties) {
+        @OutputCustomType.Parameter("connectorProfileName") @Nullable String connectorProfileName,
+        @OutputCustomType.Parameter("connectorType") FlowConnectorType connectorType,
+        @OutputCustomType.Parameter("destinationConnectorProperties") FlowDestinationConnectorProperties destinationConnectorProperties) {
         this.connectorProfileName = connectorProfileName;
         this.connectorType = connectorType;
         this.destinationConnectorProperties = destinationConnectorProperties;

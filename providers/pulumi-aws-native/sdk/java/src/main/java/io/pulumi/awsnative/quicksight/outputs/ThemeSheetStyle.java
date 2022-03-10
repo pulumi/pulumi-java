@@ -15,10 +15,10 @@ public final class ThemeSheetStyle {
     private final @Nullable ThemeTileStyle tile;
     private final @Nullable ThemeTileLayoutStyle tileLayout;
 
-    @OutputCustomType.Constructor({"tile","tileLayout"})
+    @OutputCustomType.Constructor
     private ThemeSheetStyle(
-        @Nullable ThemeTileStyle tile,
-        @Nullable ThemeTileLayoutStyle tileLayout) {
+        @OutputCustomType.Parameter("tile") @Nullable ThemeTileStyle tile,
+        @OutputCustomType.Parameter("tileLayout") @Nullable ThemeTileLayoutStyle tileLayout) {
         this.tile = tile;
         this.tileLayout = tileLayout;
     }

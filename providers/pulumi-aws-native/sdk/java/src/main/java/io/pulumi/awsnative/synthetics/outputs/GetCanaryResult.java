@@ -93,23 +93,23 @@ public final class GetCanaryResult {
      */
     private final @Nullable CanaryVisualReference visualReference;
 
-    @OutputCustomType.Constructor({"artifactConfig","artifactS3Location","code","executionRoleArn","failureRetentionPeriod","id","runConfig","runtimeVersion","schedule","startCanaryAfterCreation","state","successRetentionPeriod","tags","vPCConfig","visualReference"})
+    @OutputCustomType.Constructor
     private GetCanaryResult(
-        @Nullable CanaryArtifactConfig artifactConfig,
-        @Nullable String artifactS3Location,
-        @Nullable CanaryCode code,
-        @Nullable String executionRoleArn,
-        @Nullable Integer failureRetentionPeriod,
-        @Nullable String id,
-        @Nullable CanaryRunConfig runConfig,
-        @Nullable String runtimeVersion,
-        @Nullable CanarySchedule schedule,
-        @Nullable Boolean startCanaryAfterCreation,
-        @Nullable String state,
-        @Nullable Integer successRetentionPeriod,
-        @Nullable List<CanaryTag> tags,
-        @Nullable CanaryVPCConfig vPCConfig,
-        @Nullable CanaryVisualReference visualReference) {
+        @OutputCustomType.Parameter("artifactConfig") @Nullable CanaryArtifactConfig artifactConfig,
+        @OutputCustomType.Parameter("artifactS3Location") @Nullable String artifactS3Location,
+        @OutputCustomType.Parameter("code") @Nullable CanaryCode code,
+        @OutputCustomType.Parameter("executionRoleArn") @Nullable String executionRoleArn,
+        @OutputCustomType.Parameter("failureRetentionPeriod") @Nullable Integer failureRetentionPeriod,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("runConfig") @Nullable CanaryRunConfig runConfig,
+        @OutputCustomType.Parameter("runtimeVersion") @Nullable String runtimeVersion,
+        @OutputCustomType.Parameter("schedule") @Nullable CanarySchedule schedule,
+        @OutputCustomType.Parameter("startCanaryAfterCreation") @Nullable Boolean startCanaryAfterCreation,
+        @OutputCustomType.Parameter("state") @Nullable String state,
+        @OutputCustomType.Parameter("successRetentionPeriod") @Nullable Integer successRetentionPeriod,
+        @OutputCustomType.Parameter("tags") @Nullable List<CanaryTag> tags,
+        @OutputCustomType.Parameter("vPCConfig") @Nullable CanaryVPCConfig vPCConfig,
+        @OutputCustomType.Parameter("visualReference") @Nullable CanaryVisualReference visualReference) {
         this.artifactConfig = artifactConfig;
         this.artifactS3Location = artifactS3Location;
         this.code = code;

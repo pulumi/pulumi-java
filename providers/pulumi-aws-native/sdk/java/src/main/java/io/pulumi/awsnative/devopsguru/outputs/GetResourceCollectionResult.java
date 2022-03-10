@@ -19,10 +19,10 @@ public final class GetResourceCollectionResult {
      */
     private final @Nullable ResourceCollectionType resourceCollectionType;
 
-    @OutputCustomType.Constructor({"resourceCollectionFilter","resourceCollectionType"})
+    @OutputCustomType.Constructor
     private GetResourceCollectionResult(
-        @Nullable ResourceCollectionFilter resourceCollectionFilter,
-        @Nullable ResourceCollectionType resourceCollectionType) {
+        @OutputCustomType.Parameter("resourceCollectionFilter") @Nullable ResourceCollectionFilter resourceCollectionFilter,
+        @OutputCustomType.Parameter("resourceCollectionType") @Nullable ResourceCollectionType resourceCollectionType) {
         this.resourceCollectionFilter = resourceCollectionFilter;
         this.resourceCollectionType = resourceCollectionType;
     }

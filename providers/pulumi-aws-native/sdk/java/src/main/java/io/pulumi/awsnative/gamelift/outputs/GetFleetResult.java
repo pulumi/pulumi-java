@@ -77,20 +77,20 @@ public final class GetFleetResult {
      */
     private final @Nullable FleetRuntimeConfiguration runtimeConfiguration;
 
-    @OutputCustomType.Constructor({"description","desiredEC2Instances","eC2InboundPermissions","fleetId","locations","maxSize","metricGroups","minSize","name","newGameSessionProtectionPolicy","resourceCreationLimitPolicy","runtimeConfiguration"})
+    @OutputCustomType.Constructor
     private GetFleetResult(
-        @Nullable String description,
-        @Nullable Integer desiredEC2Instances,
-        @Nullable List<FleetIpPermission> eC2InboundPermissions,
-        @Nullable String fleetId,
-        @Nullable List<FleetLocationConfiguration> locations,
-        @Nullable Integer maxSize,
-        @Nullable List<String> metricGroups,
-        @Nullable Integer minSize,
-        @Nullable String name,
-        @Nullable FleetNewGameSessionProtectionPolicy newGameSessionProtectionPolicy,
-        @Nullable FleetResourceCreationLimitPolicy resourceCreationLimitPolicy,
-        @Nullable FleetRuntimeConfiguration runtimeConfiguration) {
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("desiredEC2Instances") @Nullable Integer desiredEC2Instances,
+        @OutputCustomType.Parameter("eC2InboundPermissions") @Nullable List<FleetIpPermission> eC2InboundPermissions,
+        @OutputCustomType.Parameter("fleetId") @Nullable String fleetId,
+        @OutputCustomType.Parameter("locations") @Nullable List<FleetLocationConfiguration> locations,
+        @OutputCustomType.Parameter("maxSize") @Nullable Integer maxSize,
+        @OutputCustomType.Parameter("metricGroups") @Nullable List<String> metricGroups,
+        @OutputCustomType.Parameter("minSize") @Nullable Integer minSize,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("newGameSessionProtectionPolicy") @Nullable FleetNewGameSessionProtectionPolicy newGameSessionProtectionPolicy,
+        @OutputCustomType.Parameter("resourceCreationLimitPolicy") @Nullable FleetResourceCreationLimitPolicy resourceCreationLimitPolicy,
+        @OutputCustomType.Parameter("runtimeConfiguration") @Nullable FleetRuntimeConfiguration runtimeConfiguration) {
         this.description = description;
         this.desiredEC2Instances = desiredEC2Instances;
         this.eC2InboundPermissions = eC2InboundPermissions;

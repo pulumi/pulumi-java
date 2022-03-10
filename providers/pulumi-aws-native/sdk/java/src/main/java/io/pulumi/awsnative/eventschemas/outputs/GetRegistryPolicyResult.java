@@ -17,12 +17,12 @@ public final class GetRegistryPolicyResult {
     private final @Nullable String registryName;
     private final @Nullable String revisionId;
 
-    @OutputCustomType.Constructor({"id","policy","registryName","revisionId"})
+    @OutputCustomType.Constructor
     private GetRegistryPolicyResult(
-        @Nullable String id,
-        @Nullable Object policy,
-        @Nullable String registryName,
-        @Nullable String revisionId) {
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("policy") @Nullable Object policy,
+        @OutputCustomType.Parameter("registryName") @Nullable String registryName,
+        @OutputCustomType.Parameter("revisionId") @Nullable String revisionId) {
         this.id = id;
         this.policy = policy;
         this.registryName = registryName;

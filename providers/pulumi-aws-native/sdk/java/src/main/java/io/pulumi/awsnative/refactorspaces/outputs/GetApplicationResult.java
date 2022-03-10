@@ -27,17 +27,17 @@ public final class GetApplicationResult {
     private final @Nullable List<ApplicationTag> tags;
     private final @Nullable String vpcLinkId;
 
-    @OutputCustomType.Constructor({"apiGatewayId","applicationIdentifier","arn","nlbArn","nlbName","proxyUrl","stageName","tags","vpcLinkId"})
+    @OutputCustomType.Constructor
     private GetApplicationResult(
-        @Nullable String apiGatewayId,
-        @Nullable String applicationIdentifier,
-        @Nullable String arn,
-        @Nullable String nlbArn,
-        @Nullable String nlbName,
-        @Nullable String proxyUrl,
-        @Nullable String stageName,
-        @Nullable List<ApplicationTag> tags,
-        @Nullable String vpcLinkId) {
+        @OutputCustomType.Parameter("apiGatewayId") @Nullable String apiGatewayId,
+        @OutputCustomType.Parameter("applicationIdentifier") @Nullable String applicationIdentifier,
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("nlbArn") @Nullable String nlbArn,
+        @OutputCustomType.Parameter("nlbName") @Nullable String nlbName,
+        @OutputCustomType.Parameter("proxyUrl") @Nullable String proxyUrl,
+        @OutputCustomType.Parameter("stageName") @Nullable String stageName,
+        @OutputCustomType.Parameter("tags") @Nullable List<ApplicationTag> tags,
+        @OutputCustomType.Parameter("vpcLinkId") @Nullable String vpcLinkId) {
         this.apiGatewayId = apiGatewayId;
         this.applicationIdentifier = applicationIdentifier;
         this.arn = arn;

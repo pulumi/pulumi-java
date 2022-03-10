@@ -18,12 +18,12 @@ public final class GetWarmPoolResult {
     private final @Nullable Integer minSize;
     private final @Nullable String poolState;
 
-    @OutputCustomType.Constructor({"instanceReusePolicy","maxGroupPreparedCapacity","minSize","poolState"})
+    @OutputCustomType.Constructor
     private GetWarmPoolResult(
-        @Nullable WarmPoolInstanceReusePolicy instanceReusePolicy,
-        @Nullable Integer maxGroupPreparedCapacity,
-        @Nullable Integer minSize,
-        @Nullable String poolState) {
+        @OutputCustomType.Parameter("instanceReusePolicy") @Nullable WarmPoolInstanceReusePolicy instanceReusePolicy,
+        @OutputCustomType.Parameter("maxGroupPreparedCapacity") @Nullable Integer maxGroupPreparedCapacity,
+        @OutputCustomType.Parameter("minSize") @Nullable Integer minSize,
+        @OutputCustomType.Parameter("poolState") @Nullable String poolState) {
         this.instanceReusePolicy = instanceReusePolicy;
         this.maxGroupPreparedCapacity = maxGroupPreparedCapacity;
         this.minSize = minSize;

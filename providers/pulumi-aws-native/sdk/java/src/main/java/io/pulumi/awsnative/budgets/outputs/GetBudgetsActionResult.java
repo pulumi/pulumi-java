@@ -25,15 +25,15 @@ public final class GetBudgetsActionResult {
     private final @Nullable BudgetsActionNotificationType notificationType;
     private final @Nullable List<BudgetsActionSubscriber> subscribers;
 
-    @OutputCustomType.Constructor({"actionId","actionThreshold","approvalModel","definition","executionRoleArn","notificationType","subscribers"})
+    @OutputCustomType.Constructor
     private GetBudgetsActionResult(
-        @Nullable String actionId,
-        @Nullable BudgetsActionActionThreshold actionThreshold,
-        @Nullable BudgetsActionApprovalModel approvalModel,
-        @Nullable BudgetsActionDefinition definition,
-        @Nullable String executionRoleArn,
-        @Nullable BudgetsActionNotificationType notificationType,
-        @Nullable List<BudgetsActionSubscriber> subscribers) {
+        @OutputCustomType.Parameter("actionId") @Nullable String actionId,
+        @OutputCustomType.Parameter("actionThreshold") @Nullable BudgetsActionActionThreshold actionThreshold,
+        @OutputCustomType.Parameter("approvalModel") @Nullable BudgetsActionApprovalModel approvalModel,
+        @OutputCustomType.Parameter("definition") @Nullable BudgetsActionDefinition definition,
+        @OutputCustomType.Parameter("executionRoleArn") @Nullable String executionRoleArn,
+        @OutputCustomType.Parameter("notificationType") @Nullable BudgetsActionNotificationType notificationType,
+        @OutputCustomType.Parameter("subscribers") @Nullable List<BudgetsActionSubscriber> subscribers) {
         this.actionId = actionId;
         this.actionThreshold = actionThreshold;
         this.approvalModel = approvalModel;

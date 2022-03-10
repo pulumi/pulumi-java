@@ -20,13 +20,13 @@ public final class ScheduledQueryMixedMeasureMapping {
     private final @Nullable String sourceColumn;
     private final @Nullable String targetMeasureName;
 
-    @OutputCustomType.Constructor({"measureName","measureValueType","multiMeasureAttributeMappings","sourceColumn","targetMeasureName"})
+    @OutputCustomType.Constructor
     private ScheduledQueryMixedMeasureMapping(
-        @Nullable String measureName,
-        ScheduledQueryMixedMeasureMappingMeasureValueType measureValueType,
-        @Nullable List<ScheduledQueryMultiMeasureAttributeMapping> multiMeasureAttributeMappings,
-        @Nullable String sourceColumn,
-        @Nullable String targetMeasureName) {
+        @OutputCustomType.Parameter("measureName") @Nullable String measureName,
+        @OutputCustomType.Parameter("measureValueType") ScheduledQueryMixedMeasureMappingMeasureValueType measureValueType,
+        @OutputCustomType.Parameter("multiMeasureAttributeMappings") @Nullable List<ScheduledQueryMultiMeasureAttributeMapping> multiMeasureAttributeMappings,
+        @OutputCustomType.Parameter("sourceColumn") @Nullable String sourceColumn,
+        @OutputCustomType.Parameter("targetMeasureName") @Nullable String targetMeasureName) {
         this.measureName = measureName;
         this.measureValueType = measureValueType;
         this.multiMeasureAttributeMappings = multiMeasureAttributeMappings;

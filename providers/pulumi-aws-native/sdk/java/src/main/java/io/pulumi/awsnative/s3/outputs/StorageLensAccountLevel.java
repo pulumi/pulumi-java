@@ -15,10 +15,10 @@ public final class StorageLensAccountLevel {
     private final @Nullable StorageLensActivityMetrics activityMetrics;
     private final StorageLensBucketLevel bucketLevel;
 
-    @OutputCustomType.Constructor({"activityMetrics","bucketLevel"})
+    @OutputCustomType.Constructor
     private StorageLensAccountLevel(
-        @Nullable StorageLensActivityMetrics activityMetrics,
-        StorageLensBucketLevel bucketLevel) {
+        @OutputCustomType.Parameter("activityMetrics") @Nullable StorageLensActivityMetrics activityMetrics,
+        @OutputCustomType.Parameter("bucketLevel") StorageLensBucketLevel bucketLevel) {
         this.activityMetrics = activityMetrics;
         this.bucketLevel = bucketLevel;
     }

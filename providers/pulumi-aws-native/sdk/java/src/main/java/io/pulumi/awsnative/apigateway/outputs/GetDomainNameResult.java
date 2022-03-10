@@ -27,19 +27,19 @@ public final class GetDomainNameResult {
     private final @Nullable String securityPolicy;
     private final @Nullable List<DomainNameTag> tags;
 
-    @OutputCustomType.Constructor({"certificateArn","distributionDomainName","distributionHostedZoneId","endpointConfiguration","mutualTlsAuthentication","ownershipVerificationCertificateArn","regionalCertificateArn","regionalDomainName","regionalHostedZoneId","securityPolicy","tags"})
+    @OutputCustomType.Constructor
     private GetDomainNameResult(
-        @Nullable String certificateArn,
-        @Nullable String distributionDomainName,
-        @Nullable String distributionHostedZoneId,
-        @Nullable DomainNameEndpointConfiguration endpointConfiguration,
-        @Nullable DomainNameMutualTlsAuthentication mutualTlsAuthentication,
-        @Nullable String ownershipVerificationCertificateArn,
-        @Nullable String regionalCertificateArn,
-        @Nullable String regionalDomainName,
-        @Nullable String regionalHostedZoneId,
-        @Nullable String securityPolicy,
-        @Nullable List<DomainNameTag> tags) {
+        @OutputCustomType.Parameter("certificateArn") @Nullable String certificateArn,
+        @OutputCustomType.Parameter("distributionDomainName") @Nullable String distributionDomainName,
+        @OutputCustomType.Parameter("distributionHostedZoneId") @Nullable String distributionHostedZoneId,
+        @OutputCustomType.Parameter("endpointConfiguration") @Nullable DomainNameEndpointConfiguration endpointConfiguration,
+        @OutputCustomType.Parameter("mutualTlsAuthentication") @Nullable DomainNameMutualTlsAuthentication mutualTlsAuthentication,
+        @OutputCustomType.Parameter("ownershipVerificationCertificateArn") @Nullable String ownershipVerificationCertificateArn,
+        @OutputCustomType.Parameter("regionalCertificateArn") @Nullable String regionalCertificateArn,
+        @OutputCustomType.Parameter("regionalDomainName") @Nullable String regionalDomainName,
+        @OutputCustomType.Parameter("regionalHostedZoneId") @Nullable String regionalHostedZoneId,
+        @OutputCustomType.Parameter("securityPolicy") @Nullable String securityPolicy,
+        @OutputCustomType.Parameter("tags") @Nullable List<DomainNameTag> tags) {
         this.certificateArn = certificateArn;
         this.distributionDomainName = distributionDomainName;
         this.distributionHostedZoneId = distributionHostedZoneId;

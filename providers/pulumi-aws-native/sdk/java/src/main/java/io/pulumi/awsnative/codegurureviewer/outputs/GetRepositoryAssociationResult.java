@@ -17,8 +17,8 @@ public final class GetRepositoryAssociationResult {
      */
     private final @Nullable String associationArn;
 
-    @OutputCustomType.Constructor({"associationArn"})
-    private GetRepositoryAssociationResult(@Nullable String associationArn) {
+    @OutputCustomType.Constructor
+    private GetRepositoryAssociationResult(@OutputCustomType.Parameter("associationArn") @Nullable String associationArn) {
         this.associationArn = associationArn;
     }
 

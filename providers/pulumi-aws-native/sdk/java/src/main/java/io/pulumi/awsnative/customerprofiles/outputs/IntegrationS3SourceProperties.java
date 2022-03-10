@@ -14,10 +14,10 @@ public final class IntegrationS3SourceProperties {
     private final String bucketName;
     private final @Nullable String bucketPrefix;
 
-    @OutputCustomType.Constructor({"bucketName","bucketPrefix"})
+    @OutputCustomType.Constructor
     private IntegrationS3SourceProperties(
-        String bucketName,
-        @Nullable String bucketPrefix) {
+        @OutputCustomType.Parameter("bucketName") String bucketName,
+        @OutputCustomType.Parameter("bucketPrefix") @Nullable String bucketPrefix) {
         this.bucketName = bucketName;
         this.bucketPrefix = bucketPrefix;
     }

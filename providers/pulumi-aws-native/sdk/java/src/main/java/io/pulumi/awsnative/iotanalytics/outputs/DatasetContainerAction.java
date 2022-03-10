@@ -18,12 +18,12 @@ public final class DatasetContainerAction {
     private final DatasetResourceConfiguration resourceConfiguration;
     private final @Nullable List<DatasetVariable> variables;
 
-    @OutputCustomType.Constructor({"executionRoleArn","image","resourceConfiguration","variables"})
+    @OutputCustomType.Constructor
     private DatasetContainerAction(
-        String executionRoleArn,
-        String image,
-        DatasetResourceConfiguration resourceConfiguration,
-        @Nullable List<DatasetVariable> variables) {
+        @OutputCustomType.Parameter("executionRoleArn") String executionRoleArn,
+        @OutputCustomType.Parameter("image") String image,
+        @OutputCustomType.Parameter("resourceConfiguration") DatasetResourceConfiguration resourceConfiguration,
+        @OutputCustomType.Parameter("variables") @Nullable List<DatasetVariable> variables) {
         this.executionRoleArn = executionRoleArn;
         this.image = image;
         this.resourceConfiguration = resourceConfiguration;

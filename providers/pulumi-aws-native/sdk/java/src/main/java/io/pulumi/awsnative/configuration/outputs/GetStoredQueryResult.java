@@ -23,13 +23,13 @@ public final class GetStoredQueryResult {
      */
     private final @Nullable List<StoredQueryTag> tags;
 
-    @OutputCustomType.Constructor({"queryArn","queryDescription","queryExpression","queryId","tags"})
+    @OutputCustomType.Constructor
     private GetStoredQueryResult(
-        @Nullable String queryArn,
-        @Nullable String queryDescription,
-        @Nullable String queryExpression,
-        @Nullable String queryId,
-        @Nullable List<StoredQueryTag> tags) {
+        @OutputCustomType.Parameter("queryArn") @Nullable String queryArn,
+        @OutputCustomType.Parameter("queryDescription") @Nullable String queryDescription,
+        @OutputCustomType.Parameter("queryExpression") @Nullable String queryExpression,
+        @OutputCustomType.Parameter("queryId") @Nullable String queryId,
+        @OutputCustomType.Parameter("tags") @Nullable List<StoredQueryTag> tags) {
         this.queryArn = queryArn;
         this.queryDescription = queryDescription;
         this.queryExpression = queryExpression;

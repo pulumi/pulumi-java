@@ -13,10 +13,10 @@ public final class JobStatisticOverride {
     private final JobParameterMap parameters;
     private final String statistic;
 
-    @OutputCustomType.Constructor({"parameters","statistic"})
+    @OutputCustomType.Constructor
     private JobStatisticOverride(
-        JobParameterMap parameters,
-        String statistic) {
+        @OutputCustomType.Parameter("parameters") JobParameterMap parameters,
+        @OutputCustomType.Parameter("statistic") String statistic) {
         this.parameters = parameters;
         this.statistic = statistic;
     }

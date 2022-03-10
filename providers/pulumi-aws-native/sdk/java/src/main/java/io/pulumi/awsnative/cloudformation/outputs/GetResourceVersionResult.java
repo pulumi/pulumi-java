@@ -51,14 +51,14 @@ public final class GetResourceVersionResult {
      */
     private final @Nullable ResourceVersionVisibility visibility;
 
-    @OutputCustomType.Constructor({"arn","isDefaultVersion","provisioningType","typeArn","versionId","visibility"})
+    @OutputCustomType.Constructor
     private GetResourceVersionResult(
-        @Nullable String arn,
-        @Nullable Boolean isDefaultVersion,
-        @Nullable ResourceVersionProvisioningType provisioningType,
-        @Nullable String typeArn,
-        @Nullable String versionId,
-        @Nullable ResourceVersionVisibility visibility) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("isDefaultVersion") @Nullable Boolean isDefaultVersion,
+        @OutputCustomType.Parameter("provisioningType") @Nullable ResourceVersionProvisioningType provisioningType,
+        @OutputCustomType.Parameter("typeArn") @Nullable String typeArn,
+        @OutputCustomType.Parameter("versionId") @Nullable String versionId,
+        @OutputCustomType.Parameter("visibility") @Nullable ResourceVersionVisibility visibility) {
         this.arn = arn;
         this.isDefaultVersion = isDefaultVersion;
         this.provisioningType = provisioningType;

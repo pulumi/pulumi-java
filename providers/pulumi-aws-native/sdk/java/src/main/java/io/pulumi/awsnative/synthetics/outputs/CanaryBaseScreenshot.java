@@ -22,10 +22,10 @@ public final class CanaryBaseScreenshot {
      */
     private final String screenshotName;
 
-    @OutputCustomType.Constructor({"ignoreCoordinates","screenshotName"})
+    @OutputCustomType.Constructor
     private CanaryBaseScreenshot(
-        @Nullable List<String> ignoreCoordinates,
-        String screenshotName) {
+        @OutputCustomType.Parameter("ignoreCoordinates") @Nullable List<String> ignoreCoordinates,
+        @OutputCustomType.Parameter("screenshotName") String screenshotName) {
         this.ignoreCoordinates = ignoreCoordinates;
         this.screenshotName = screenshotName;
     }

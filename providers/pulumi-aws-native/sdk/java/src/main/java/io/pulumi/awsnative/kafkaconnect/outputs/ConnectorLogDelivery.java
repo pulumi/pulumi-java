@@ -11,8 +11,8 @@ import java.util.Objects;
 public final class ConnectorLogDelivery {
     private final ConnectorWorkerLogDelivery workerLogDelivery;
 
-    @OutputCustomType.Constructor({"workerLogDelivery"})
-    private ConnectorLogDelivery(ConnectorWorkerLogDelivery workerLogDelivery) {
+    @OutputCustomType.Constructor
+    private ConnectorLogDelivery(@OutputCustomType.Parameter("workerLogDelivery") ConnectorWorkerLogDelivery workerLogDelivery) {
         this.workerLogDelivery = workerLogDelivery;
     }
 

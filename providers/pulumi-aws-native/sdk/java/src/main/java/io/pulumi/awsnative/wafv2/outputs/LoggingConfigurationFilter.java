@@ -28,11 +28,11 @@ public final class LoggingConfigurationFilter {
      */
     private final LoggingConfigurationFilterRequirement requirement;
 
-    @OutputCustomType.Constructor({"behavior","conditions","requirement"})
+    @OutputCustomType.Constructor
     private LoggingConfigurationFilter(
-        LoggingConfigurationFilterBehavior behavior,
-        List<LoggingConfigurationCondition> conditions,
-        LoggingConfigurationFilterRequirement requirement) {
+        @OutputCustomType.Parameter("behavior") LoggingConfigurationFilterBehavior behavior,
+        @OutputCustomType.Parameter("conditions") List<LoggingConfigurationCondition> conditions,
+        @OutputCustomType.Parameter("requirement") LoggingConfigurationFilterRequirement requirement) {
         this.behavior = behavior;
         this.conditions = conditions;
         this.requirement = requirement;

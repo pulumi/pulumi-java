@@ -12,10 +12,10 @@ public final class DatasetGlueConfiguration {
     private final String databaseName;
     private final String tableName;
 
-    @OutputCustomType.Constructor({"databaseName","tableName"})
+    @OutputCustomType.Constructor
     private DatasetGlueConfiguration(
-        String databaseName,
-        String tableName) {
+        @OutputCustomType.Parameter("databaseName") String databaseName,
+        @OutputCustomType.Parameter("tableName") String tableName) {
         this.databaseName = databaseName;
         this.tableName = tableName;
     }

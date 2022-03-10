@@ -15,10 +15,10 @@ public final class TaskDefinitionFirelensConfiguration {
     private final @Nullable Object options;
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor({"options","type"})
+    @OutputCustomType.Constructor
     private TaskDefinitionFirelensConfiguration(
-        @Nullable Object options,
-        @Nullable String type) {
+        @OutputCustomType.Parameter("options") @Nullable Object options,
+        @OutputCustomType.Parameter("type") @Nullable String type) {
         this.options = options;
         this.type = type;
     }

@@ -11,8 +11,8 @@ import java.util.Objects;
 public final class RuleGroupNotStatement {
     private final RuleGroupStatement statement;
 
-    @OutputCustomType.Constructor({"statement"})
-    private RuleGroupNotStatement(RuleGroupStatement statement) {
+    @OutputCustomType.Constructor
+    private RuleGroupNotStatement(@OutputCustomType.Parameter("statement") RuleGroupStatement statement) {
         this.statement = statement;
     }
 

@@ -17,8 +17,8 @@ public final class GetEgressOnlyInternetGatewayResult {
      */
     private final @Nullable String id;
 
-    @OutputCustomType.Constructor({"id"})
-    private GetEgressOnlyInternetGatewayResult(@Nullable String id) {
+    @OutputCustomType.Constructor
+    private GetEgressOnlyInternetGatewayResult(@OutputCustomType.Parameter("id") @Nullable String id) {
         this.id = id;
     }
 

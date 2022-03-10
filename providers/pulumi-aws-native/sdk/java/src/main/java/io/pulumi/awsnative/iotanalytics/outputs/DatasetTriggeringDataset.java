@@ -11,8 +11,8 @@ import java.util.Objects;
 public final class DatasetTriggeringDataset {
     private final String datasetName;
 
-    @OutputCustomType.Constructor({"datasetName"})
-    private DatasetTriggeringDataset(String datasetName) {
+    @OutputCustomType.Constructor
+    private DatasetTriggeringDataset(@OutputCustomType.Parameter("datasetName") String datasetName) {
         this.datasetName = datasetName;
     }
 

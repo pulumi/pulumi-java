@@ -20,12 +20,12 @@ public final class CertificateExtensions {
     private final @Nullable CertificateKeyUsage keyUsage;
     private final @Nullable List<CertificateGeneralName> subjectAlternativeNames;
 
-    @OutputCustomType.Constructor({"certificatePolicies","extendedKeyUsage","keyUsage","subjectAlternativeNames"})
+    @OutputCustomType.Constructor
     private CertificateExtensions(
-        @Nullable List<CertificatePolicyInformation> certificatePolicies,
-        @Nullable List<CertificateExtendedKeyUsage> extendedKeyUsage,
-        @Nullable CertificateKeyUsage keyUsage,
-        @Nullable List<CertificateGeneralName> subjectAlternativeNames) {
+        @OutputCustomType.Parameter("certificatePolicies") @Nullable List<CertificatePolicyInformation> certificatePolicies,
+        @OutputCustomType.Parameter("extendedKeyUsage") @Nullable List<CertificateExtendedKeyUsage> extendedKeyUsage,
+        @OutputCustomType.Parameter("keyUsage") @Nullable CertificateKeyUsage keyUsage,
+        @OutputCustomType.Parameter("subjectAlternativeNames") @Nullable List<CertificateGeneralName> subjectAlternativeNames) {
         this.certificatePolicies = certificatePolicies;
         this.extendedKeyUsage = extendedKeyUsage;
         this.keyUsage = keyUsage;

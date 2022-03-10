@@ -15,10 +15,10 @@ public final class IntegrationTriggerConfig {
     private final @Nullable IntegrationTriggerProperties triggerProperties;
     private final IntegrationTriggerType triggerType;
 
-    @OutputCustomType.Constructor({"triggerProperties","triggerType"})
+    @OutputCustomType.Constructor
     private IntegrationTriggerConfig(
-        @Nullable IntegrationTriggerProperties triggerProperties,
-        IntegrationTriggerType triggerType) {
+        @OutputCustomType.Parameter("triggerProperties") @Nullable IntegrationTriggerProperties triggerProperties,
+        @OutputCustomType.Parameter("triggerType") IntegrationTriggerType triggerType) {
         this.triggerProperties = triggerProperties;
         this.triggerType = triggerType;
     }

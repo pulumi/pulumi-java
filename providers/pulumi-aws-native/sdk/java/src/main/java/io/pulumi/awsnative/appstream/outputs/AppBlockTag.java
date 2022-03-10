@@ -12,10 +12,10 @@ public final class AppBlockTag {
     private final String tagKey;
     private final String tagValue;
 
-    @OutputCustomType.Constructor({"tagKey","tagValue"})
+    @OutputCustomType.Constructor
     private AppBlockTag(
-        String tagKey,
-        String tagValue) {
+        @OutputCustomType.Parameter("tagKey") String tagKey,
+        @OutputCustomType.Parameter("tagValue") String tagValue) {
         this.tagKey = tagKey;
         this.tagValue = tagValue;
     }

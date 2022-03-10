@@ -22,10 +22,10 @@ public final class AlarmsProperties {
      */
     private final @Nullable String notificationLambdaArn;
 
-    @OutputCustomType.Constructor({"alarmRoleArn","notificationLambdaArn"})
+    @OutputCustomType.Constructor
     private AlarmsProperties(
-        @Nullable String alarmRoleArn,
-        @Nullable String notificationLambdaArn) {
+        @OutputCustomType.Parameter("alarmRoleArn") @Nullable String alarmRoleArn,
+        @OutputCustomType.Parameter("notificationLambdaArn") @Nullable String notificationLambdaArn) {
         this.alarmRoleArn = alarmRoleArn;
         this.notificationLambdaArn = notificationLambdaArn;
     }

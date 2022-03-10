@@ -52,18 +52,18 @@ public final class InstancePort {
      */
     private final @Nullable Integer toPort;
 
-    @OutputCustomType.Constructor({"accessDirection","accessFrom","accessType","cidrListAliases","cidrs","commonName","fromPort","ipv6Cidrs","protocol","toPort"})
+    @OutputCustomType.Constructor
     private InstancePort(
-        @Nullable String accessDirection,
-        @Nullable String accessFrom,
-        @Nullable String accessType,
-        @Nullable List<String> cidrListAliases,
-        @Nullable List<String> cidrs,
-        @Nullable String commonName,
-        @Nullable Integer fromPort,
-        @Nullable List<String> ipv6Cidrs,
-        @Nullable String protocol,
-        @Nullable Integer toPort) {
+        @OutputCustomType.Parameter("accessDirection") @Nullable String accessDirection,
+        @OutputCustomType.Parameter("accessFrom") @Nullable String accessFrom,
+        @OutputCustomType.Parameter("accessType") @Nullable String accessType,
+        @OutputCustomType.Parameter("cidrListAliases") @Nullable List<String> cidrListAliases,
+        @OutputCustomType.Parameter("cidrs") @Nullable List<String> cidrs,
+        @OutputCustomType.Parameter("commonName") @Nullable String commonName,
+        @OutputCustomType.Parameter("fromPort") @Nullable Integer fromPort,
+        @OutputCustomType.Parameter("ipv6Cidrs") @Nullable List<String> ipv6Cidrs,
+        @OutputCustomType.Parameter("protocol") @Nullable String protocol,
+        @OutputCustomType.Parameter("toPort") @Nullable Integer toPort) {
         this.accessDirection = accessDirection;
         this.accessFrom = accessFrom;
         this.accessType = accessType;

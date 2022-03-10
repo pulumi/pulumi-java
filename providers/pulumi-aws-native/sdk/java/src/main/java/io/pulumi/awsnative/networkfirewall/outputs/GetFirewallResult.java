@@ -26,18 +26,18 @@ public final class GetFirewallResult {
     private final @Nullable List<FirewallSubnetMapping> subnetMappings;
     private final @Nullable List<FirewallTag> tags;
 
-    @OutputCustomType.Constructor({"deleteProtection","description","endpointIds","firewallArn","firewallId","firewallPolicyArn","firewallPolicyChangeProtection","subnetChangeProtection","subnetMappings","tags"})
+    @OutputCustomType.Constructor
     private GetFirewallResult(
-        @Nullable Boolean deleteProtection,
-        @Nullable String description,
-        @Nullable List<String> endpointIds,
-        @Nullable String firewallArn,
-        @Nullable String firewallId,
-        @Nullable String firewallPolicyArn,
-        @Nullable Boolean firewallPolicyChangeProtection,
-        @Nullable Boolean subnetChangeProtection,
-        @Nullable List<FirewallSubnetMapping> subnetMappings,
-        @Nullable List<FirewallTag> tags) {
+        @OutputCustomType.Parameter("deleteProtection") @Nullable Boolean deleteProtection,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("endpointIds") @Nullable List<String> endpointIds,
+        @OutputCustomType.Parameter("firewallArn") @Nullable String firewallArn,
+        @OutputCustomType.Parameter("firewallId") @Nullable String firewallId,
+        @OutputCustomType.Parameter("firewallPolicyArn") @Nullable String firewallPolicyArn,
+        @OutputCustomType.Parameter("firewallPolicyChangeProtection") @Nullable Boolean firewallPolicyChangeProtection,
+        @OutputCustomType.Parameter("subnetChangeProtection") @Nullable Boolean subnetChangeProtection,
+        @OutputCustomType.Parameter("subnetMappings") @Nullable List<FirewallSubnetMapping> subnetMappings,
+        @OutputCustomType.Parameter("tags") @Nullable List<FirewallTag> tags) {
         this.deleteProtection = deleteProtection;
         this.description = description;
         this.endpointIds = endpointIds;

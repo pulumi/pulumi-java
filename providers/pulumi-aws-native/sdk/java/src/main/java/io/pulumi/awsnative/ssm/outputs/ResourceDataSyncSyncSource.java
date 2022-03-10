@@ -19,12 +19,12 @@ public final class ResourceDataSyncSyncSource {
     private final List<String> sourceRegions;
     private final String sourceType;
 
-    @OutputCustomType.Constructor({"awsOrganizationsSource","includeFutureRegions","sourceRegions","sourceType"})
+    @OutputCustomType.Constructor
     private ResourceDataSyncSyncSource(
-        @Nullable ResourceDataSyncAwsOrganizationsSource awsOrganizationsSource,
-        @Nullable Boolean includeFutureRegions,
-        List<String> sourceRegions,
-        String sourceType) {
+        @OutputCustomType.Parameter("awsOrganizationsSource") @Nullable ResourceDataSyncAwsOrganizationsSource awsOrganizationsSource,
+        @OutputCustomType.Parameter("includeFutureRegions") @Nullable Boolean includeFutureRegions,
+        @OutputCustomType.Parameter("sourceRegions") List<String> sourceRegions,
+        @OutputCustomType.Parameter("sourceType") String sourceType) {
         this.awsOrganizationsSource = awsOrganizationsSource;
         this.includeFutureRegions = includeFutureRegions;
         this.sourceRegions = sourceRegions;

@@ -11,8 +11,8 @@ import java.util.Objects;
 public final class ConnectorPlugin {
     private final ConnectorCustomPlugin customPlugin;
 
-    @OutputCustomType.Constructor({"customPlugin"})
-    private ConnectorPlugin(ConnectorCustomPlugin customPlugin) {
+    @OutputCustomType.Constructor
+    private ConnectorPlugin(@OutputCustomType.Parameter("customPlugin") ConnectorCustomPlugin customPlugin) {
         this.customPlugin = customPlugin;
     }
 

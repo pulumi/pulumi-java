@@ -28,22 +28,22 @@ public final class DeviceProfileLoRaWANDeviceProfile {
     private final @Nullable Boolean supportsClassC;
     private final @Nullable Boolean supportsJoin;
 
-    @OutputCustomType.Constructor({"classBTimeout","classCTimeout","macVersion","maxDutyCycle","maxEirp","pingSlotDr","pingSlotFreq","pingSlotPeriod","regParamsRevision","rfRegion","supports32BitFCnt","supportsClassB","supportsClassC","supportsJoin"})
+    @OutputCustomType.Constructor
     private DeviceProfileLoRaWANDeviceProfile(
-        @Nullable Integer classBTimeout,
-        @Nullable Integer classCTimeout,
-        @Nullable String macVersion,
-        @Nullable Integer maxDutyCycle,
-        @Nullable Integer maxEirp,
-        @Nullable Integer pingSlotDr,
-        @Nullable Integer pingSlotFreq,
-        @Nullable Integer pingSlotPeriod,
-        @Nullable String regParamsRevision,
-        @Nullable String rfRegion,
-        @Nullable Boolean supports32BitFCnt,
-        @Nullable Boolean supportsClassB,
-        @Nullable Boolean supportsClassC,
-        @Nullable Boolean supportsJoin) {
+        @OutputCustomType.Parameter("classBTimeout") @Nullable Integer classBTimeout,
+        @OutputCustomType.Parameter("classCTimeout") @Nullable Integer classCTimeout,
+        @OutputCustomType.Parameter("macVersion") @Nullable String macVersion,
+        @OutputCustomType.Parameter("maxDutyCycle") @Nullable Integer maxDutyCycle,
+        @OutputCustomType.Parameter("maxEirp") @Nullable Integer maxEirp,
+        @OutputCustomType.Parameter("pingSlotDr") @Nullable Integer pingSlotDr,
+        @OutputCustomType.Parameter("pingSlotFreq") @Nullable Integer pingSlotFreq,
+        @OutputCustomType.Parameter("pingSlotPeriod") @Nullable Integer pingSlotPeriod,
+        @OutputCustomType.Parameter("regParamsRevision") @Nullable String regParamsRevision,
+        @OutputCustomType.Parameter("rfRegion") @Nullable String rfRegion,
+        @OutputCustomType.Parameter("supports32BitFCnt") @Nullable Boolean supports32BitFCnt,
+        @OutputCustomType.Parameter("supportsClassB") @Nullable Boolean supportsClassB,
+        @OutputCustomType.Parameter("supportsClassC") @Nullable Boolean supportsClassC,
+        @OutputCustomType.Parameter("supportsJoin") @Nullable Boolean supportsJoin) {
         this.classBTimeout = classBTimeout;
         this.classCTimeout = classCTimeout;
         this.macVersion = macVersion;

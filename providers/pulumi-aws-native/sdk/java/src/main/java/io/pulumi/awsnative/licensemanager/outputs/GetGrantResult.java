@@ -38,14 +38,14 @@ public final class GetGrantResult {
      */
     private final @Nullable String version;
 
-    @OutputCustomType.Constructor({"grantArn","grantName","homeRegion","licenseArn","status","version"})
+    @OutputCustomType.Constructor
     private GetGrantResult(
-        @Nullable String grantArn,
-        @Nullable String grantName,
-        @Nullable String homeRegion,
-        @Nullable String licenseArn,
-        @Nullable String status,
-        @Nullable String version) {
+        @OutputCustomType.Parameter("grantArn") @Nullable String grantArn,
+        @OutputCustomType.Parameter("grantName") @Nullable String grantName,
+        @OutputCustomType.Parameter("homeRegion") @Nullable String homeRegion,
+        @OutputCustomType.Parameter("licenseArn") @Nullable String licenseArn,
+        @OutputCustomType.Parameter("status") @Nullable String status,
+        @OutputCustomType.Parameter("version") @Nullable String version) {
         this.grantArn = grantArn;
         this.grantName = grantName;
         this.homeRegion = homeRegion;

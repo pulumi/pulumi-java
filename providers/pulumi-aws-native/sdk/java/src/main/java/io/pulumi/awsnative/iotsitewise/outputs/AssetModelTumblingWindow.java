@@ -14,10 +14,10 @@ public final class AssetModelTumblingWindow {
     private final String interval;
     private final @Nullable String offset;
 
-    @OutputCustomType.Constructor({"interval","offset"})
+    @OutputCustomType.Constructor
     private AssetModelTumblingWindow(
-        String interval,
-        @Nullable String offset) {
+        @OutputCustomType.Parameter("interval") String interval,
+        @OutputCustomType.Parameter("offset") @Nullable String offset) {
         this.interval = interval;
         this.offset = offset;
     }

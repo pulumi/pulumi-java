@@ -20,10 +20,10 @@ public final class GetRecipeResult {
     private final @Nullable String description;
     private final @Nullable List<RecipeStep> steps;
 
-    @OutputCustomType.Constructor({"description","steps"})
+    @OutputCustomType.Constructor
     private GetRecipeResult(
-        @Nullable String description,
-        @Nullable List<RecipeStep> steps) {
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("steps") @Nullable List<RecipeStep> steps) {
         this.description = description;
         this.steps = steps;
     }

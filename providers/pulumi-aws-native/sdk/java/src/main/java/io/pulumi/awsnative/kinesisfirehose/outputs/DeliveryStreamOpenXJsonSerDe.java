@@ -16,11 +16,11 @@ public final class DeliveryStreamOpenXJsonSerDe {
     private final @Nullable Object columnToJsonKeyMappings;
     private final @Nullable Boolean convertDotsInJsonKeysToUnderscores;
 
-    @OutputCustomType.Constructor({"caseInsensitive","columnToJsonKeyMappings","convertDotsInJsonKeysToUnderscores"})
+    @OutputCustomType.Constructor
     private DeliveryStreamOpenXJsonSerDe(
-        @Nullable Boolean caseInsensitive,
-        @Nullable Object columnToJsonKeyMappings,
-        @Nullable Boolean convertDotsInJsonKeysToUnderscores) {
+        @OutputCustomType.Parameter("caseInsensitive") @Nullable Boolean caseInsensitive,
+        @OutputCustomType.Parameter("columnToJsonKeyMappings") @Nullable Object columnToJsonKeyMappings,
+        @OutputCustomType.Parameter("convertDotsInJsonKeysToUnderscores") @Nullable Boolean convertDotsInJsonKeysToUnderscores) {
         this.caseInsensitive = caseInsensitive;
         this.columnToJsonKeyMappings = columnToJsonKeyMappings;
         this.convertDotsInJsonKeysToUnderscores = convertDotsInJsonKeysToUnderscores;

@@ -13,8 +13,8 @@ import javax.annotation.Nullable;
 public final class ResponsePlanChatChannel {
     private final @Nullable List<String> chatbotSns;
 
-    @OutputCustomType.Constructor({"chatbotSns"})
-    private ResponsePlanChatChannel(@Nullable List<String> chatbotSns) {
+    @OutputCustomType.Constructor
+    private ResponsePlanChatChannel(@OutputCustomType.Parameter("chatbotSns") @Nullable List<String> chatbotSns) {
         this.chatbotSns = chatbotSns;
     }
 

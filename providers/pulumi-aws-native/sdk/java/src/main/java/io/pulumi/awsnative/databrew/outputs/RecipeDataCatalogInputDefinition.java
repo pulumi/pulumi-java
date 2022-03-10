@@ -29,12 +29,12 @@ public final class RecipeDataCatalogInputDefinition {
     private final @Nullable String tableName;
     private final @Nullable RecipeS3Location tempDirectory;
 
-    @OutputCustomType.Constructor({"catalogId","databaseName","tableName","tempDirectory"})
+    @OutputCustomType.Constructor
     private RecipeDataCatalogInputDefinition(
-        @Nullable String catalogId,
-        @Nullable String databaseName,
-        @Nullable String tableName,
-        @Nullable RecipeS3Location tempDirectory) {
+        @OutputCustomType.Parameter("catalogId") @Nullable String catalogId,
+        @OutputCustomType.Parameter("databaseName") @Nullable String databaseName,
+        @OutputCustomType.Parameter("tableName") @Nullable String tableName,
+        @OutputCustomType.Parameter("tempDirectory") @Nullable RecipeS3Location tempDirectory) {
         this.catalogId = catalogId;
         this.databaseName = databaseName;
         this.tableName = tableName;

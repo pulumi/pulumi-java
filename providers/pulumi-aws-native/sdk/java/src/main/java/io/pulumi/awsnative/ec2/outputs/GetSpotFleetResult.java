@@ -15,10 +15,10 @@ public final class GetSpotFleetResult {
     private final @Nullable String id;
     private final @Nullable SpotFleetRequestConfigData spotFleetRequestConfigData;
 
-    @OutputCustomType.Constructor({"id","spotFleetRequestConfigData"})
+    @OutputCustomType.Constructor
     private GetSpotFleetResult(
-        @Nullable String id,
-        @Nullable SpotFleetRequestConfigData spotFleetRequestConfigData) {
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("spotFleetRequestConfigData") @Nullable SpotFleetRequestConfigData spotFleetRequestConfigData) {
         this.id = id;
         this.spotFleetRequestConfigData = spotFleetRequestConfigData;
     }

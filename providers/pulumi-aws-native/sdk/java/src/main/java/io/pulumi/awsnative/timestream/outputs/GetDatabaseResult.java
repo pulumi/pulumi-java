@@ -25,11 +25,11 @@ public final class GetDatabaseResult {
      */
     private final @Nullable List<DatabaseTag> tags;
 
-    @OutputCustomType.Constructor({"arn","kmsKeyId","tags"})
+    @OutputCustomType.Constructor
     private GetDatabaseResult(
-        @Nullable String arn,
-        @Nullable String kmsKeyId,
-        @Nullable List<DatabaseTag> tags) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("kmsKeyId") @Nullable String kmsKeyId,
+        @OutputCustomType.Parameter("tags") @Nullable List<DatabaseTag> tags) {
         this.arn = arn;
         this.kmsKeyId = kmsKeyId;
         this.tags = tags;

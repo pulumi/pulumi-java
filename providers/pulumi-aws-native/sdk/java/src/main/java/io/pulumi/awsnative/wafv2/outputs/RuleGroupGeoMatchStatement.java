@@ -16,10 +16,10 @@ public final class RuleGroupGeoMatchStatement {
     private final @Nullable List<String> countryCodes;
     private final @Nullable RuleGroupForwardedIPConfiguration forwardedIPConfig;
 
-    @OutputCustomType.Constructor({"countryCodes","forwardedIPConfig"})
+    @OutputCustomType.Constructor
     private RuleGroupGeoMatchStatement(
-        @Nullable List<String> countryCodes,
-        @Nullable RuleGroupForwardedIPConfiguration forwardedIPConfig) {
+        @OutputCustomType.Parameter("countryCodes") @Nullable List<String> countryCodes,
+        @OutputCustomType.Parameter("forwardedIPConfig") @Nullable RuleGroupForwardedIPConfiguration forwardedIPConfig) {
         this.countryCodes = countryCodes;
         this.forwardedIPConfig = forwardedIPConfig;
     }

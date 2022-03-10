@@ -14,10 +14,10 @@ public final class ProjectS3Destination {
     private final String bucketName;
     private final @Nullable String prefix;
 
-    @OutputCustomType.Constructor({"bucketName","prefix"})
+    @OutputCustomType.Constructor
     private ProjectS3Destination(
-        String bucketName,
-        @Nullable String prefix) {
+        @OutputCustomType.Parameter("bucketName") String bucketName,
+        @OutputCustomType.Parameter("prefix") @Nullable String prefix) {
         this.bucketName = bucketName;
         this.prefix = prefix;
     }

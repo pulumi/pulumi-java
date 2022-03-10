@@ -46,30 +46,30 @@ public final class SpotFleetRequestConfigData {
     private final @Nullable String validFrom;
     private final @Nullable String validUntil;
 
-    @OutputCustomType.Constructor({"allocationStrategy","context","excessCapacityTerminationPolicy","iamFleetRole","instanceInterruptionBehavior","instancePoolsToUseCount","launchSpecifications","launchTemplateConfigs","loadBalancersConfig","onDemandAllocationStrategy","onDemandMaxTotalPrice","onDemandTargetCapacity","replaceUnhealthyInstances","spotMaintenanceStrategies","spotMaxTotalPrice","spotPrice","targetCapacity","targetCapacityUnitType","terminateInstancesWithExpiration","type","validFrom","validUntil"})
+    @OutputCustomType.Constructor
     private SpotFleetRequestConfigData(
-        @Nullable SpotFleetRequestConfigDataAllocationStrategy allocationStrategy,
-        @Nullable String context,
-        @Nullable SpotFleetRequestConfigDataExcessCapacityTerminationPolicy excessCapacityTerminationPolicy,
-        String iamFleetRole,
-        @Nullable SpotFleetRequestConfigDataInstanceInterruptionBehavior instanceInterruptionBehavior,
-        @Nullable Integer instancePoolsToUseCount,
-        @Nullable List<SpotFleetLaunchSpecification> launchSpecifications,
-        @Nullable List<SpotFleetLaunchTemplateConfig> launchTemplateConfigs,
-        @Nullable SpotFleetLoadBalancersConfig loadBalancersConfig,
-        @Nullable String onDemandAllocationStrategy,
-        @Nullable String onDemandMaxTotalPrice,
-        @Nullable Integer onDemandTargetCapacity,
-        @Nullable Boolean replaceUnhealthyInstances,
-        @Nullable SpotFleetSpotMaintenanceStrategies spotMaintenanceStrategies,
-        @Nullable String spotMaxTotalPrice,
-        @Nullable String spotPrice,
-        Integer targetCapacity,
-        @Nullable SpotFleetRequestConfigDataTargetCapacityUnitType targetCapacityUnitType,
-        @Nullable Boolean terminateInstancesWithExpiration,
-        @Nullable SpotFleetRequestConfigDataType type,
-        @Nullable String validFrom,
-        @Nullable String validUntil) {
+        @OutputCustomType.Parameter("allocationStrategy") @Nullable SpotFleetRequestConfigDataAllocationStrategy allocationStrategy,
+        @OutputCustomType.Parameter("context") @Nullable String context,
+        @OutputCustomType.Parameter("excessCapacityTerminationPolicy") @Nullable SpotFleetRequestConfigDataExcessCapacityTerminationPolicy excessCapacityTerminationPolicy,
+        @OutputCustomType.Parameter("iamFleetRole") String iamFleetRole,
+        @OutputCustomType.Parameter("instanceInterruptionBehavior") @Nullable SpotFleetRequestConfigDataInstanceInterruptionBehavior instanceInterruptionBehavior,
+        @OutputCustomType.Parameter("instancePoolsToUseCount") @Nullable Integer instancePoolsToUseCount,
+        @OutputCustomType.Parameter("launchSpecifications") @Nullable List<SpotFleetLaunchSpecification> launchSpecifications,
+        @OutputCustomType.Parameter("launchTemplateConfigs") @Nullable List<SpotFleetLaunchTemplateConfig> launchTemplateConfigs,
+        @OutputCustomType.Parameter("loadBalancersConfig") @Nullable SpotFleetLoadBalancersConfig loadBalancersConfig,
+        @OutputCustomType.Parameter("onDemandAllocationStrategy") @Nullable String onDemandAllocationStrategy,
+        @OutputCustomType.Parameter("onDemandMaxTotalPrice") @Nullable String onDemandMaxTotalPrice,
+        @OutputCustomType.Parameter("onDemandTargetCapacity") @Nullable Integer onDemandTargetCapacity,
+        @OutputCustomType.Parameter("replaceUnhealthyInstances") @Nullable Boolean replaceUnhealthyInstances,
+        @OutputCustomType.Parameter("spotMaintenanceStrategies") @Nullable SpotFleetSpotMaintenanceStrategies spotMaintenanceStrategies,
+        @OutputCustomType.Parameter("spotMaxTotalPrice") @Nullable String spotMaxTotalPrice,
+        @OutputCustomType.Parameter("spotPrice") @Nullable String spotPrice,
+        @OutputCustomType.Parameter("targetCapacity") Integer targetCapacity,
+        @OutputCustomType.Parameter("targetCapacityUnitType") @Nullable SpotFleetRequestConfigDataTargetCapacityUnitType targetCapacityUnitType,
+        @OutputCustomType.Parameter("terminateInstancesWithExpiration") @Nullable Boolean terminateInstancesWithExpiration,
+        @OutputCustomType.Parameter("type") @Nullable SpotFleetRequestConfigDataType type,
+        @OutputCustomType.Parameter("validFrom") @Nullable String validFrom,
+        @OutputCustomType.Parameter("validUntil") @Nullable String validUntil) {
         this.allocationStrategy = allocationStrategy;
         this.context = context;
         this.excessCapacityTerminationPolicy = excessCapacityTerminationPolicy;

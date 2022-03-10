@@ -28,11 +28,11 @@ public final class GetConnectorProfileResult {
      */
     private final @Nullable String credentialsArn;
 
-    @OutputCustomType.Constructor({"connectionMode","connectorProfileArn","credentialsArn"})
+    @OutputCustomType.Constructor
     private GetConnectorProfileResult(
-        @Nullable ConnectorProfileConnectionMode connectionMode,
-        @Nullable String connectorProfileArn,
-        @Nullable String credentialsArn) {
+        @OutputCustomType.Parameter("connectionMode") @Nullable ConnectorProfileConnectionMode connectionMode,
+        @OutputCustomType.Parameter("connectorProfileArn") @Nullable String connectorProfileArn,
+        @OutputCustomType.Parameter("credentialsArn") @Nullable String credentialsArn) {
         this.connectionMode = connectionMode;
         this.connectorProfileArn = connectorProfileArn;
         this.credentialsArn = credentialsArn;

@@ -59,21 +59,21 @@ public final class GetTaskResult {
      */
     private final @Nullable String taskArn;
 
-    @OutputCustomType.Constructor({"cloudWatchLogGroupArn","destinationNetworkInterfaceArns","errorCode","errorDetail","excludes","includes","name","options","schedule","sourceNetworkInterfaceArns","status","tags","taskArn"})
+    @OutputCustomType.Constructor
     private GetTaskResult(
-        @Nullable String cloudWatchLogGroupArn,
-        @Nullable List<String> destinationNetworkInterfaceArns,
-        @Nullable String errorCode,
-        @Nullable String errorDetail,
-        @Nullable List<TaskFilterRule> excludes,
-        @Nullable List<TaskFilterRule> includes,
-        @Nullable String name,
-        @Nullable TaskOptions options,
-        @Nullable TaskSchedule schedule,
-        @Nullable List<String> sourceNetworkInterfaceArns,
-        @Nullable TaskStatus status,
-        @Nullable List<TaskTag> tags,
-        @Nullable String taskArn) {
+        @OutputCustomType.Parameter("cloudWatchLogGroupArn") @Nullable String cloudWatchLogGroupArn,
+        @OutputCustomType.Parameter("destinationNetworkInterfaceArns") @Nullable List<String> destinationNetworkInterfaceArns,
+        @OutputCustomType.Parameter("errorCode") @Nullable String errorCode,
+        @OutputCustomType.Parameter("errorDetail") @Nullable String errorDetail,
+        @OutputCustomType.Parameter("excludes") @Nullable List<TaskFilterRule> excludes,
+        @OutputCustomType.Parameter("includes") @Nullable List<TaskFilterRule> includes,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("options") @Nullable TaskOptions options,
+        @OutputCustomType.Parameter("schedule") @Nullable TaskSchedule schedule,
+        @OutputCustomType.Parameter("sourceNetworkInterfaceArns") @Nullable List<String> sourceNetworkInterfaceArns,
+        @OutputCustomType.Parameter("status") @Nullable TaskStatus status,
+        @OutputCustomType.Parameter("tags") @Nullable List<TaskTag> tags,
+        @OutputCustomType.Parameter("taskArn") @Nullable String taskArn) {
         this.cloudWatchLogGroupArn = cloudWatchLogGroupArn;
         this.destinationNetworkInterfaceArns = destinationNetworkInterfaceArns;
         this.errorCode = errorCode;

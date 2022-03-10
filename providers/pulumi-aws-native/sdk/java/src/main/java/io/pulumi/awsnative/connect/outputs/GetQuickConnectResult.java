@@ -45,14 +45,14 @@ public final class GetQuickConnectResult {
      */
     private final @Nullable List<QuickConnectTag> tags;
 
-    @OutputCustomType.Constructor({"description","instanceArn","name","quickConnectArn","quickConnectConfig","tags"})
+    @OutputCustomType.Constructor
     private GetQuickConnectResult(
-        @Nullable String description,
-        @Nullable String instanceArn,
-        @Nullable String name,
-        @Nullable String quickConnectArn,
-        @Nullable QuickConnectConfig quickConnectConfig,
-        @Nullable List<QuickConnectTag> tags) {
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("instanceArn") @Nullable String instanceArn,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("quickConnectArn") @Nullable String quickConnectArn,
+        @OutputCustomType.Parameter("quickConnectConfig") @Nullable QuickConnectConfig quickConnectConfig,
+        @OutputCustomType.Parameter("tags") @Nullable List<QuickConnectTag> tags) {
         this.description = description;
         this.instanceArn = instanceArn;
         this.name = name;

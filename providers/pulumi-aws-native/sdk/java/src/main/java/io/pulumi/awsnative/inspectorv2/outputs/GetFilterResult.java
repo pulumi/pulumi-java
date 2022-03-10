@@ -39,13 +39,13 @@ public final class GetFilterResult {
      */
     private final @Nullable String name;
 
-    @OutputCustomType.Constructor({"arn","description","filterAction","filterCriteria","name"})
+    @OutputCustomType.Constructor
     private GetFilterResult(
-        @Nullable String arn,
-        @Nullable String description,
-        @Nullable FilterAction filterAction,
-        @Nullable FilterCriteria filterCriteria,
-        @Nullable String name) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("filterAction") @Nullable FilterAction filterAction,
+        @OutputCustomType.Parameter("filterCriteria") @Nullable FilterCriteria filterCriteria,
+        @OutputCustomType.Parameter("name") @Nullable String name) {
         this.arn = arn;
         this.description = description;
         this.filterAction = filterAction;

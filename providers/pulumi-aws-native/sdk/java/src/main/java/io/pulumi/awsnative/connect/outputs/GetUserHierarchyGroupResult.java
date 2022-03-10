@@ -27,11 +27,11 @@ public final class GetUserHierarchyGroupResult {
      */
     private final @Nullable String userHierarchyGroupArn;
 
-    @OutputCustomType.Constructor({"instanceArn","name","userHierarchyGroupArn"})
+    @OutputCustomType.Constructor
     private GetUserHierarchyGroupResult(
-        @Nullable String instanceArn,
-        @Nullable String name,
-        @Nullable String userHierarchyGroupArn) {
+        @OutputCustomType.Parameter("instanceArn") @Nullable String instanceArn,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("userHierarchyGroupArn") @Nullable String userHierarchyGroupArn) {
         this.instanceArn = instanceArn;
         this.name = name;
         this.userHierarchyGroupArn = userHierarchyGroupArn;

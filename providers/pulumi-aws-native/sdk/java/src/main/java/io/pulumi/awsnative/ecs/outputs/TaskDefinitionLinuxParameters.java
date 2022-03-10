@@ -24,15 +24,15 @@ public final class TaskDefinitionLinuxParameters {
     private final @Nullable Integer swappiness;
     private final @Nullable List<TaskDefinitionTmpfs> tmpfs;
 
-    @OutputCustomType.Constructor({"capabilities","devices","initProcessEnabled","maxSwap","sharedMemorySize","swappiness","tmpfs"})
+    @OutputCustomType.Constructor
     private TaskDefinitionLinuxParameters(
-        @Nullable TaskDefinitionKernelCapabilities capabilities,
-        @Nullable List<TaskDefinitionDevice> devices,
-        @Nullable Boolean initProcessEnabled,
-        @Nullable Integer maxSwap,
-        @Nullable Integer sharedMemorySize,
-        @Nullable Integer swappiness,
-        @Nullable List<TaskDefinitionTmpfs> tmpfs) {
+        @OutputCustomType.Parameter("capabilities") @Nullable TaskDefinitionKernelCapabilities capabilities,
+        @OutputCustomType.Parameter("devices") @Nullable List<TaskDefinitionDevice> devices,
+        @OutputCustomType.Parameter("initProcessEnabled") @Nullable Boolean initProcessEnabled,
+        @OutputCustomType.Parameter("maxSwap") @Nullable Integer maxSwap,
+        @OutputCustomType.Parameter("sharedMemorySize") @Nullable Integer sharedMemorySize,
+        @OutputCustomType.Parameter("swappiness") @Nullable Integer swappiness,
+        @OutputCustomType.Parameter("tmpfs") @Nullable List<TaskDefinitionTmpfs> tmpfs) {
         this.capabilities = capabilities;
         this.devices = devices;
         this.initProcessEnabled = initProcessEnabled;

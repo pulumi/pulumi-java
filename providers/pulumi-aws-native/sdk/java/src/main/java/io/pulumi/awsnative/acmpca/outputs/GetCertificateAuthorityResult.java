@@ -31,12 +31,12 @@ public final class GetCertificateAuthorityResult {
     private final @Nullable CertificateAuthorityRevocationConfiguration revocationConfiguration;
     private final @Nullable List<CertificateAuthorityTag> tags;
 
-    @OutputCustomType.Constructor({"arn","certificateSigningRequest","revocationConfiguration","tags"})
+    @OutputCustomType.Constructor
     private GetCertificateAuthorityResult(
-        @Nullable String arn,
-        @Nullable String certificateSigningRequest,
-        @Nullable CertificateAuthorityRevocationConfiguration revocationConfiguration,
-        @Nullable List<CertificateAuthorityTag> tags) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("certificateSigningRequest") @Nullable String certificateSigningRequest,
+        @OutputCustomType.Parameter("revocationConfiguration") @Nullable CertificateAuthorityRevocationConfiguration revocationConfiguration,
+        @OutputCustomType.Parameter("tags") @Nullable List<CertificateAuthorityTag> tags) {
         this.arn = arn;
         this.certificateSigningRequest = certificateSigningRequest;
         this.revocationConfiguration = revocationConfiguration;

@@ -15,11 +15,11 @@ public final class GetAssistantAssociationResult {
     private final @Nullable String assistantAssociationArn;
     private final @Nullable String assistantAssociationId;
 
-    @OutputCustomType.Constructor({"assistantArn","assistantAssociationArn","assistantAssociationId"})
+    @OutputCustomType.Constructor
     private GetAssistantAssociationResult(
-        @Nullable String assistantArn,
-        @Nullable String assistantAssociationArn,
-        @Nullable String assistantAssociationId) {
+        @OutputCustomType.Parameter("assistantArn") @Nullable String assistantArn,
+        @OutputCustomType.Parameter("assistantAssociationArn") @Nullable String assistantAssociationArn,
+        @OutputCustomType.Parameter("assistantAssociationId") @Nullable String assistantAssociationId) {
         this.assistantArn = assistantArn;
         this.assistantAssociationArn = assistantAssociationArn;
         this.assistantAssociationId = assistantAssociationId;

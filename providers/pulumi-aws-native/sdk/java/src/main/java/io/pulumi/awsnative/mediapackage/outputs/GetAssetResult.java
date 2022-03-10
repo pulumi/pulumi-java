@@ -60,17 +60,17 @@ public final class GetAssetResult {
      */
     private final @Nullable List<AssetTag> tags;
 
-    @OutputCustomType.Constructor({"arn","createdAt","egressEndpoints","id","packagingGroupId","resourceId","sourceArn","sourceRoleArn","tags"})
+    @OutputCustomType.Constructor
     private GetAssetResult(
-        @Nullable String arn,
-        @Nullable String createdAt,
-        @Nullable List<AssetEgressEndpoint> egressEndpoints,
-        @Nullable String id,
-        @Nullable String packagingGroupId,
-        @Nullable String resourceId,
-        @Nullable String sourceArn,
-        @Nullable String sourceRoleArn,
-        @Nullable List<AssetTag> tags) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("createdAt") @Nullable String createdAt,
+        @OutputCustomType.Parameter("egressEndpoints") @Nullable List<AssetEgressEndpoint> egressEndpoints,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("packagingGroupId") @Nullable String packagingGroupId,
+        @OutputCustomType.Parameter("resourceId") @Nullable String resourceId,
+        @OutputCustomType.Parameter("sourceArn") @Nullable String sourceArn,
+        @OutputCustomType.Parameter("sourceRoleArn") @Nullable String sourceRoleArn,
+        @OutputCustomType.Parameter("tags") @Nullable List<AssetTag> tags) {
         this.arn = arn;
         this.createdAt = createdAt;
         this.egressEndpoints = egressEndpoints;

@@ -36,13 +36,13 @@ public final class ServiceCodeConfigurationValues {
      */
     private final @Nullable String startCommand;
 
-    @OutputCustomType.Constructor({"buildCommand","port","runtime","runtimeEnvironmentVariables","startCommand"})
+    @OutputCustomType.Constructor
     private ServiceCodeConfigurationValues(
-        @Nullable String buildCommand,
-        @Nullable String port,
-        ServiceCodeConfigurationValuesRuntime runtime,
-        @Nullable List<ServiceKeyValuePair> runtimeEnvironmentVariables,
-        @Nullable String startCommand) {
+        @OutputCustomType.Parameter("buildCommand") @Nullable String buildCommand,
+        @OutputCustomType.Parameter("port") @Nullable String port,
+        @OutputCustomType.Parameter("runtime") ServiceCodeConfigurationValuesRuntime runtime,
+        @OutputCustomType.Parameter("runtimeEnvironmentVariables") @Nullable List<ServiceKeyValuePair> runtimeEnvironmentVariables,
+        @OutputCustomType.Parameter("startCommand") @Nullable String startCommand) {
         this.buildCommand = buildCommand;
         this.port = port;
         this.runtime = runtime;

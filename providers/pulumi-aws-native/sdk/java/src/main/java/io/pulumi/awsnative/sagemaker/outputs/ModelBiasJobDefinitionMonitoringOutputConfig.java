@@ -24,10 +24,10 @@ public final class ModelBiasJobDefinitionMonitoringOutputConfig {
      */
     private final List<ModelBiasJobDefinitionMonitoringOutput> monitoringOutputs;
 
-    @OutputCustomType.Constructor({"kmsKeyId","monitoringOutputs"})
+    @OutputCustomType.Constructor
     private ModelBiasJobDefinitionMonitoringOutputConfig(
-        @Nullable String kmsKeyId,
-        List<ModelBiasJobDefinitionMonitoringOutput> monitoringOutputs) {
+        @OutputCustomType.Parameter("kmsKeyId") @Nullable String kmsKeyId,
+        @OutputCustomType.Parameter("monitoringOutputs") List<ModelBiasJobDefinitionMonitoringOutput> monitoringOutputs) {
         this.kmsKeyId = kmsKeyId;
         this.monitoringOutputs = monitoringOutputs;
     }

@@ -35,12 +35,12 @@ public final class FlowSourceFlowConfig {
      */
     private final FlowSourceConnectorProperties sourceConnectorProperties;
 
-    @OutputCustomType.Constructor({"connectorProfileName","connectorType","incrementalPullConfig","sourceConnectorProperties"})
+    @OutputCustomType.Constructor
     private FlowSourceFlowConfig(
-        @Nullable String connectorProfileName,
-        FlowConnectorType connectorType,
-        @Nullable FlowIncrementalPullConfig incrementalPullConfig,
-        FlowSourceConnectorProperties sourceConnectorProperties) {
+        @OutputCustomType.Parameter("connectorProfileName") @Nullable String connectorProfileName,
+        @OutputCustomType.Parameter("connectorType") FlowConnectorType connectorType,
+        @OutputCustomType.Parameter("incrementalPullConfig") @Nullable FlowIncrementalPullConfig incrementalPullConfig,
+        @OutputCustomType.Parameter("sourceConnectorProperties") FlowSourceConnectorProperties sourceConnectorProperties) {
         this.connectorProfileName = connectorProfileName;
         this.connectorType = connectorType;
         this.incrementalPullConfig = incrementalPullConfig;

@@ -28,11 +28,11 @@ public final class BucketTopicConfiguration {
      */
     private final String topic;
 
-    @OutputCustomType.Constructor({"event","filter","topic"})
+    @OutputCustomType.Constructor
     private BucketTopicConfiguration(
-        String event,
-        @Nullable BucketNotificationFilter filter,
-        String topic) {
+        @OutputCustomType.Parameter("event") String event,
+        @OutputCustomType.Parameter("filter") @Nullable BucketNotificationFilter filter,
+        @OutputCustomType.Parameter("topic") String topic) {
         this.event = event;
         this.filter = filter;
         this.topic = topic;

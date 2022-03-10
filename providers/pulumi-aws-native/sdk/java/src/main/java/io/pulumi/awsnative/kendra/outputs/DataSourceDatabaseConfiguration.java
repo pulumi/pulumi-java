@@ -23,14 +23,14 @@ public final class DataSourceDatabaseConfiguration {
     private final @Nullable DataSourceSqlConfiguration sqlConfiguration;
     private final @Nullable DataSourceVpcConfiguration vpcConfiguration;
 
-    @OutputCustomType.Constructor({"aclConfiguration","columnConfiguration","connectionConfiguration","databaseEngineType","sqlConfiguration","vpcConfiguration"})
+    @OutputCustomType.Constructor
     private DataSourceDatabaseConfiguration(
-        @Nullable DataSourceAclConfiguration aclConfiguration,
-        DataSourceColumnConfiguration columnConfiguration,
-        DataSourceConnectionConfiguration connectionConfiguration,
-        DataSourceDatabaseEngineType databaseEngineType,
-        @Nullable DataSourceSqlConfiguration sqlConfiguration,
-        @Nullable DataSourceVpcConfiguration vpcConfiguration) {
+        @OutputCustomType.Parameter("aclConfiguration") @Nullable DataSourceAclConfiguration aclConfiguration,
+        @OutputCustomType.Parameter("columnConfiguration") DataSourceColumnConfiguration columnConfiguration,
+        @OutputCustomType.Parameter("connectionConfiguration") DataSourceConnectionConfiguration connectionConfiguration,
+        @OutputCustomType.Parameter("databaseEngineType") DataSourceDatabaseEngineType databaseEngineType,
+        @OutputCustomType.Parameter("sqlConfiguration") @Nullable DataSourceSqlConfiguration sqlConfiguration,
+        @OutputCustomType.Parameter("vpcConfiguration") @Nullable DataSourceVpcConfiguration vpcConfiguration) {
         this.aclConfiguration = aclConfiguration;
         this.columnConfiguration = columnConfiguration;
         this.connectionConfiguration = connectionConfiguration;

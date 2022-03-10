@@ -17,11 +17,11 @@ public final class GetVirtualMFADeviceResult {
     private final @Nullable List<VirtualMFADeviceTag> tags;
     private final @Nullable List<String> users;
 
-    @OutputCustomType.Constructor({"serialNumber","tags","users"})
+    @OutputCustomType.Constructor
     private GetVirtualMFADeviceResult(
-        @Nullable String serialNumber,
-        @Nullable List<VirtualMFADeviceTag> tags,
-        @Nullable List<String> users) {
+        @OutputCustomType.Parameter("serialNumber") @Nullable String serialNumber,
+        @OutputCustomType.Parameter("tags") @Nullable List<VirtualMFADeviceTag> tags,
+        @OutputCustomType.Parameter("users") @Nullable List<String> users) {
         this.serialNumber = serialNumber;
         this.tags = tags;
         this.users = users;

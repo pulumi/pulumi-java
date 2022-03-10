@@ -22,10 +22,10 @@ public final class BucketReplicationConfiguration {
      */
     private final List<BucketReplicationRule> rules;
 
-    @OutputCustomType.Constructor({"role","rules"})
+    @OutputCustomType.Constructor
     private BucketReplicationConfiguration(
-        String role,
-        List<BucketReplicationRule> rules) {
+        @OutputCustomType.Parameter("role") String role,
+        @OutputCustomType.Parameter("rules") List<BucketReplicationRule> rules) {
         this.role = role;
         this.rules = rules;
     }

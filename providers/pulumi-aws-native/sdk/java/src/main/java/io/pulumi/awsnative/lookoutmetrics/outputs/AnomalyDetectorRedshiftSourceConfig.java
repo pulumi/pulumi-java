@@ -20,16 +20,16 @@ public final class AnomalyDetectorRedshiftSourceConfig {
     private final String tableName;
     private final AnomalyDetectorVpcConfiguration vpcConfiguration;
 
-    @OutputCustomType.Constructor({"clusterIdentifier","databaseHost","databaseName","databasePort","roleArn","secretManagerArn","tableName","vpcConfiguration"})
+    @OutputCustomType.Constructor
     private AnomalyDetectorRedshiftSourceConfig(
-        String clusterIdentifier,
-        String databaseHost,
-        String databaseName,
-        Integer databasePort,
-        String roleArn,
-        String secretManagerArn,
-        String tableName,
-        AnomalyDetectorVpcConfiguration vpcConfiguration) {
+        @OutputCustomType.Parameter("clusterIdentifier") String clusterIdentifier,
+        @OutputCustomType.Parameter("databaseHost") String databaseHost,
+        @OutputCustomType.Parameter("databaseName") String databaseName,
+        @OutputCustomType.Parameter("databasePort") Integer databasePort,
+        @OutputCustomType.Parameter("roleArn") String roleArn,
+        @OutputCustomType.Parameter("secretManagerArn") String secretManagerArn,
+        @OutputCustomType.Parameter("tableName") String tableName,
+        @OutputCustomType.Parameter("vpcConfiguration") AnomalyDetectorVpcConfiguration vpcConfiguration) {
         this.clusterIdentifier = clusterIdentifier;
         this.databaseHost = databaseHost;
         this.databaseName = databaseName;

@@ -17,8 +17,8 @@ public final class GetKeySigningKeyResult {
      */
     private final @Nullable KeySigningKeyStatus status;
 
-    @OutputCustomType.Constructor({"status"})
-    private GetKeySigningKeyResult(@Nullable KeySigningKeyStatus status) {
+    @OutputCustomType.Constructor
+    private GetKeySigningKeyResult(@OutputCustomType.Parameter("status") @Nullable KeySigningKeyStatus status) {
         this.status = status;
     }
 

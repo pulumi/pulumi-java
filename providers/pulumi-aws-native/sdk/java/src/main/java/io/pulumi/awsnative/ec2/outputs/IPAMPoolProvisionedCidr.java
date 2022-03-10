@@ -11,8 +11,8 @@ import java.util.Objects;
 public final class IPAMPoolProvisionedCidr {
     private final String cidr;
 
-    @OutputCustomType.Constructor({"cidr"})
-    private IPAMPoolProvisionedCidr(String cidr) {
+    @OutputCustomType.Constructor
+    private IPAMPoolProvisionedCidr(@OutputCustomType.Parameter("cidr") String cidr) {
         this.cidr = cidr;
     }
 

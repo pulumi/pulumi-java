@@ -27,14 +27,14 @@ public final class RulesetRule {
     private final @Nullable List<RulesetSubstitutionValue> substitutionMap;
     private final @Nullable RulesetThreshold threshold;
 
-    @OutputCustomType.Constructor({"checkExpression","columnSelectors","disabled","name","substitutionMap","threshold"})
+    @OutputCustomType.Constructor
     private RulesetRule(
-        String checkExpression,
-        @Nullable List<RulesetColumnSelector> columnSelectors,
-        @Nullable Boolean disabled,
-        String name,
-        @Nullable List<RulesetSubstitutionValue> substitutionMap,
-        @Nullable RulesetThreshold threshold) {
+        @OutputCustomType.Parameter("checkExpression") String checkExpression,
+        @OutputCustomType.Parameter("columnSelectors") @Nullable List<RulesetColumnSelector> columnSelectors,
+        @OutputCustomType.Parameter("disabled") @Nullable Boolean disabled,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("substitutionMap") @Nullable List<RulesetSubstitutionValue> substitutionMap,
+        @OutputCustomType.Parameter("threshold") @Nullable RulesetThreshold threshold) {
         this.checkExpression = checkExpression;
         this.columnSelectors = columnSelectors;
         this.disabled = disabled;

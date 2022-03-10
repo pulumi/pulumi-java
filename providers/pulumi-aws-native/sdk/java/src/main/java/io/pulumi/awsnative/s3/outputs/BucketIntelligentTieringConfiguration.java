@@ -41,13 +41,13 @@ public final class BucketIntelligentTieringConfiguration {
      */
     private final List<BucketTiering> tierings;
 
-    @OutputCustomType.Constructor({"id","prefix","status","tagFilters","tierings"})
+    @OutputCustomType.Constructor
     private BucketIntelligentTieringConfiguration(
-        String id,
-        @Nullable String prefix,
-        BucketIntelligentTieringConfigurationStatus status,
-        @Nullable List<BucketTagFilter> tagFilters,
-        List<BucketTiering> tierings) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("prefix") @Nullable String prefix,
+        @OutputCustomType.Parameter("status") BucketIntelligentTieringConfigurationStatus status,
+        @OutputCustomType.Parameter("tagFilters") @Nullable List<BucketTagFilter> tagFilters,
+        @OutputCustomType.Parameter("tierings") List<BucketTiering> tierings) {
         this.id = id;
         this.prefix = prefix;
         this.status = status;

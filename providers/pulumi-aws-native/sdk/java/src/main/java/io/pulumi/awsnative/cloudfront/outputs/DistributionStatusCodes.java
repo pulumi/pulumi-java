@@ -13,10 +13,10 @@ public final class DistributionStatusCodes {
     private final List<Integer> items;
     private final Integer quantity;
 
-    @OutputCustomType.Constructor({"items","quantity"})
+    @OutputCustomType.Constructor
     private DistributionStatusCodes(
-        List<Integer> items,
-        Integer quantity) {
+        @OutputCustomType.Parameter("items") List<Integer> items,
+        @OutputCustomType.Parameter("quantity") Integer quantity) {
         this.items = items;
         this.quantity = quantity;
     }

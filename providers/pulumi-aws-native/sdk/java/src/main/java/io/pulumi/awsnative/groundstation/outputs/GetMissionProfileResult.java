@@ -42,18 +42,18 @@ public final class GetMissionProfileResult {
     private final @Nullable List<MissionProfileTag> tags;
     private final @Nullable String trackingConfigArn;
 
-    @OutputCustomType.Constructor({"arn","contactPostPassDurationSeconds","contactPrePassDurationSeconds","dataflowEdges","id","minimumViableContactDurationSeconds","name","region","tags","trackingConfigArn"})
+    @OutputCustomType.Constructor
     private GetMissionProfileResult(
-        @Nullable String arn,
-        @Nullable Integer contactPostPassDurationSeconds,
-        @Nullable Integer contactPrePassDurationSeconds,
-        @Nullable List<MissionProfileDataflowEdge> dataflowEdges,
-        @Nullable String id,
-        @Nullable Integer minimumViableContactDurationSeconds,
-        @Nullable String name,
-        @Nullable String region,
-        @Nullable List<MissionProfileTag> tags,
-        @Nullable String trackingConfigArn) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("contactPostPassDurationSeconds") @Nullable Integer contactPostPassDurationSeconds,
+        @OutputCustomType.Parameter("contactPrePassDurationSeconds") @Nullable Integer contactPrePassDurationSeconds,
+        @OutputCustomType.Parameter("dataflowEdges") @Nullable List<MissionProfileDataflowEdge> dataflowEdges,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("minimumViableContactDurationSeconds") @Nullable Integer minimumViableContactDurationSeconds,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("region") @Nullable String region,
+        @OutputCustomType.Parameter("tags") @Nullable List<MissionProfileTag> tags,
+        @OutputCustomType.Parameter("trackingConfigArn") @Nullable String trackingConfigArn) {
         this.arn = arn;
         this.contactPostPassDurationSeconds = contactPostPassDurationSeconds;
         this.contactPrePassDurationSeconds = contactPrePassDurationSeconds;

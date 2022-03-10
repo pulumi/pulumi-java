@@ -12,10 +12,10 @@ public final class ConnectionApiKeyAuthParameters {
     private final String apiKeyName;
     private final String apiKeyValue;
 
-    @OutputCustomType.Constructor({"apiKeyName","apiKeyValue"})
+    @OutputCustomType.Constructor
     private ConnectionApiKeyAuthParameters(
-        String apiKeyName,
-        String apiKeyValue) {
+        @OutputCustomType.Parameter("apiKeyName") String apiKeyName,
+        @OutputCustomType.Parameter("apiKeyValue") String apiKeyValue) {
         this.apiKeyName = apiKeyName;
         this.apiKeyValue = apiKeyValue;
     }

@@ -29,13 +29,13 @@ public final class ConnectorAutoScaling {
     private final ConnectorScaleInPolicy scaleInPolicy;
     private final ConnectorScaleOutPolicy scaleOutPolicy;
 
-    @OutputCustomType.Constructor({"maxWorkerCount","mcuCount","minWorkerCount","scaleInPolicy","scaleOutPolicy"})
+    @OutputCustomType.Constructor
     private ConnectorAutoScaling(
-        Integer maxWorkerCount,
-        Integer mcuCount,
-        Integer minWorkerCount,
-        ConnectorScaleInPolicy scaleInPolicy,
-        ConnectorScaleOutPolicy scaleOutPolicy) {
+        @OutputCustomType.Parameter("maxWorkerCount") Integer maxWorkerCount,
+        @OutputCustomType.Parameter("mcuCount") Integer mcuCount,
+        @OutputCustomType.Parameter("minWorkerCount") Integer minWorkerCount,
+        @OutputCustomType.Parameter("scaleInPolicy") ConnectorScaleInPolicy scaleInPolicy,
+        @OutputCustomType.Parameter("scaleOutPolicy") ConnectorScaleOutPolicy scaleOutPolicy) {
         this.maxWorkerCount = maxWorkerCount;
         this.mcuCount = mcuCount;
         this.minWorkerCount = minWorkerCount;

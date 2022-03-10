@@ -19,12 +19,12 @@ public final class DataSourceSalesforceChatterFeedConfiguration {
     private final @Nullable List<DataSourceToIndexFieldMapping> fieldMappings;
     private final @Nullable List<DataSourceSalesforceChatterFeedIncludeFilterType> includeFilterTypes;
 
-    @OutputCustomType.Constructor({"documentDataFieldName","documentTitleFieldName","fieldMappings","includeFilterTypes"})
+    @OutputCustomType.Constructor
     private DataSourceSalesforceChatterFeedConfiguration(
-        String documentDataFieldName,
-        @Nullable String documentTitleFieldName,
-        @Nullable List<DataSourceToIndexFieldMapping> fieldMappings,
-        @Nullable List<DataSourceSalesforceChatterFeedIncludeFilterType> includeFilterTypes) {
+        @OutputCustomType.Parameter("documentDataFieldName") String documentDataFieldName,
+        @OutputCustomType.Parameter("documentTitleFieldName") @Nullable String documentTitleFieldName,
+        @OutputCustomType.Parameter("fieldMappings") @Nullable List<DataSourceToIndexFieldMapping> fieldMappings,
+        @OutputCustomType.Parameter("includeFilterTypes") @Nullable List<DataSourceSalesforceChatterFeedIncludeFilterType> includeFilterTypes) {
         this.documentDataFieldName = documentDataFieldName;
         this.documentTitleFieldName = documentTitleFieldName;
         this.fieldMappings = fieldMappings;

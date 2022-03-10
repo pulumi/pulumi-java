@@ -28,11 +28,11 @@ public final class ConnectorS3LogDelivery {
      */
     private final @Nullable String prefix;
 
-    @OutputCustomType.Constructor({"bucket","enabled","prefix"})
+    @OutputCustomType.Constructor
     private ConnectorS3LogDelivery(
-        @Nullable String bucket,
-        Boolean enabled,
-        @Nullable String prefix) {
+        @OutputCustomType.Parameter("bucket") @Nullable String bucket,
+        @OutputCustomType.Parameter("enabled") Boolean enabled,
+        @OutputCustomType.Parameter("prefix") @Nullable String prefix) {
         this.bucket = bucket;
         this.enabled = enabled;
         this.prefix = prefix;

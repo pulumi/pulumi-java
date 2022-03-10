@@ -92,23 +92,23 @@ public final class GetQueueResult {
      */
     private final @Nullable Integer visibilityTimeout;
 
-    @OutputCustomType.Constructor({"arn","contentBasedDeduplication","deduplicationScope","delaySeconds","fifoThroughputLimit","kmsDataKeyReusePeriodSeconds","kmsMasterKeyId","maximumMessageSize","messageRetentionPeriod","queueUrl","receiveMessageWaitTimeSeconds","redriveAllowPolicy","redrivePolicy","tags","visibilityTimeout"})
+    @OutputCustomType.Constructor
     private GetQueueResult(
-        @Nullable String arn,
-        @Nullable Boolean contentBasedDeduplication,
-        @Nullable String deduplicationScope,
-        @Nullable Integer delaySeconds,
-        @Nullable String fifoThroughputLimit,
-        @Nullable Integer kmsDataKeyReusePeriodSeconds,
-        @Nullable String kmsMasterKeyId,
-        @Nullable Integer maximumMessageSize,
-        @Nullable Integer messageRetentionPeriod,
-        @Nullable String queueUrl,
-        @Nullable Integer receiveMessageWaitTimeSeconds,
-        @Nullable Object redriveAllowPolicy,
-        @Nullable Object redrivePolicy,
-        @Nullable List<QueueTag> tags,
-        @Nullable Integer visibilityTimeout) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("contentBasedDeduplication") @Nullable Boolean contentBasedDeduplication,
+        @OutputCustomType.Parameter("deduplicationScope") @Nullable String deduplicationScope,
+        @OutputCustomType.Parameter("delaySeconds") @Nullable Integer delaySeconds,
+        @OutputCustomType.Parameter("fifoThroughputLimit") @Nullable String fifoThroughputLimit,
+        @OutputCustomType.Parameter("kmsDataKeyReusePeriodSeconds") @Nullable Integer kmsDataKeyReusePeriodSeconds,
+        @OutputCustomType.Parameter("kmsMasterKeyId") @Nullable String kmsMasterKeyId,
+        @OutputCustomType.Parameter("maximumMessageSize") @Nullable Integer maximumMessageSize,
+        @OutputCustomType.Parameter("messageRetentionPeriod") @Nullable Integer messageRetentionPeriod,
+        @OutputCustomType.Parameter("queueUrl") @Nullable String queueUrl,
+        @OutputCustomType.Parameter("receiveMessageWaitTimeSeconds") @Nullable Integer receiveMessageWaitTimeSeconds,
+        @OutputCustomType.Parameter("redriveAllowPolicy") @Nullable Object redriveAllowPolicy,
+        @OutputCustomType.Parameter("redrivePolicy") @Nullable Object redrivePolicy,
+        @OutputCustomType.Parameter("tags") @Nullable List<QueueTag> tags,
+        @OutputCustomType.Parameter("visibilityTimeout") @Nullable Integer visibilityTimeout) {
         this.arn = arn;
         this.contentBasedDeduplication = contentBasedDeduplication;
         this.deduplicationScope = deduplicationScope;

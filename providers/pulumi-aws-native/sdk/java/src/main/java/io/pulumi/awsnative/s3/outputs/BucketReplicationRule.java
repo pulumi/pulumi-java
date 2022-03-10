@@ -38,16 +38,16 @@ public final class BucketReplicationRule {
      */
     private final BucketReplicationRuleStatus status;
 
-    @OutputCustomType.Constructor({"deleteMarkerReplication","destination","filter","id","prefix","priority","sourceSelectionCriteria","status"})
+    @OutputCustomType.Constructor
     private BucketReplicationRule(
-        @Nullable BucketDeleteMarkerReplication deleteMarkerReplication,
-        BucketReplicationDestination destination,
-        @Nullable BucketReplicationRuleFilter filter,
-        @Nullable String id,
-        @Nullable String prefix,
-        @Nullable Integer priority,
-        @Nullable BucketSourceSelectionCriteria sourceSelectionCriteria,
-        BucketReplicationRuleStatus status) {
+        @OutputCustomType.Parameter("deleteMarkerReplication") @Nullable BucketDeleteMarkerReplication deleteMarkerReplication,
+        @OutputCustomType.Parameter("destination") BucketReplicationDestination destination,
+        @OutputCustomType.Parameter("filter") @Nullable BucketReplicationRuleFilter filter,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("prefix") @Nullable String prefix,
+        @OutputCustomType.Parameter("priority") @Nullable Integer priority,
+        @OutputCustomType.Parameter("sourceSelectionCriteria") @Nullable BucketSourceSelectionCriteria sourceSelectionCriteria,
+        @OutputCustomType.Parameter("status") BucketReplicationRuleStatus status) {
         this.deleteMarkerReplication = deleteMarkerReplication;
         this.destination = destination;
         this.filter = filter;

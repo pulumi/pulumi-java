@@ -11,8 +11,8 @@ import java.util.Objects;
 public final class SpotFleetClassicLoadBalancer {
     private final String name;
 
-    @OutputCustomType.Constructor({"name"})
-    private SpotFleetClassicLoadBalancer(String name) {
+    @OutputCustomType.Constructor
+    private SpotFleetClassicLoadBalancer(@OutputCustomType.Parameter("name") String name) {
         this.name = name;
     }
 

@@ -23,12 +23,12 @@ public final class GetProjectResult {
      */
     private final @Nullable List<ProjectTag> tags;
 
-    @OutputCustomType.Constructor({"arn","dataDelivery","description","tags"})
+    @OutputCustomType.Constructor
     private GetProjectResult(
-        @Nullable String arn,
-        @Nullable ProjectDataDeliveryObject dataDelivery,
-        @Nullable String description,
-        @Nullable List<ProjectTag> tags) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("dataDelivery") @Nullable ProjectDataDeliveryObject dataDelivery,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("tags") @Nullable List<ProjectTag> tags) {
         this.arn = arn;
         this.dataDelivery = dataDelivery;
         this.description = description;

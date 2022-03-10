@@ -15,10 +15,10 @@ public final class CertificateAuthorityOcspConfiguration {
     private final @Nullable Boolean enabled;
     private final @Nullable String ocspCustomCname;
 
-    @OutputCustomType.Constructor({"enabled","ocspCustomCname"})
+    @OutputCustomType.Constructor
     private CertificateAuthorityOcspConfiguration(
-        @Nullable Boolean enabled,
-        @Nullable String ocspCustomCname) {
+        @OutputCustomType.Parameter("enabled") @Nullable Boolean enabled,
+        @OutputCustomType.Parameter("ocspCustomCname") @Nullable String ocspCustomCname) {
         this.enabled = enabled;
         this.ocspCustomCname = ocspCustomCname;
     }

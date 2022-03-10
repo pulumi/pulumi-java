@@ -19,12 +19,12 @@ public final class TopicRuleHttpAction {
     private final @Nullable List<TopicRuleHttpActionHeader> headers;
     private final String url;
 
-    @OutputCustomType.Constructor({"auth","confirmationUrl","headers","url"})
+    @OutputCustomType.Constructor
     private TopicRuleHttpAction(
-        @Nullable TopicRuleHttpAuthorization auth,
-        @Nullable String confirmationUrl,
-        @Nullable List<TopicRuleHttpActionHeader> headers,
-        String url) {
+        @OutputCustomType.Parameter("auth") @Nullable TopicRuleHttpAuthorization auth,
+        @OutputCustomType.Parameter("confirmationUrl") @Nullable String confirmationUrl,
+        @OutputCustomType.Parameter("headers") @Nullable List<TopicRuleHttpActionHeader> headers,
+        @OutputCustomType.Parameter("url") String url) {
         this.auth = auth;
         this.confirmationUrl = confirmationUrl;
         this.headers = headers;

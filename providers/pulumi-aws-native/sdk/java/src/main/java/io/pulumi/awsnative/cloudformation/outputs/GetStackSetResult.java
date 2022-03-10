@@ -74,19 +74,19 @@ public final class GetStackSetResult {
      */
     private final @Nullable String templateBody;
 
-    @OutputCustomType.Constructor({"administrationRoleARN","autoDeployment","capabilities","description","executionRoleName","managedExecution","parameters","stackInstancesGroup","stackSetId","tags","templateBody"})
+    @OutputCustomType.Constructor
     private GetStackSetResult(
-        @Nullable String administrationRoleARN,
-        @Nullable StackSetAutoDeployment autoDeployment,
-        @Nullable List<StackSetCapability> capabilities,
-        @Nullable String description,
-        @Nullable String executionRoleName,
-        @Nullable ManagedExecutionProperties managedExecution,
-        @Nullable List<StackSetParameter> parameters,
-        @Nullable List<StackSetStackInstances> stackInstancesGroup,
-        @Nullable String stackSetId,
-        @Nullable List<StackSetTag> tags,
-        @Nullable String templateBody) {
+        @OutputCustomType.Parameter("administrationRoleARN") @Nullable String administrationRoleARN,
+        @OutputCustomType.Parameter("autoDeployment") @Nullable StackSetAutoDeployment autoDeployment,
+        @OutputCustomType.Parameter("capabilities") @Nullable List<StackSetCapability> capabilities,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("executionRoleName") @Nullable String executionRoleName,
+        @OutputCustomType.Parameter("managedExecution") @Nullable ManagedExecutionProperties managedExecution,
+        @OutputCustomType.Parameter("parameters") @Nullable List<StackSetParameter> parameters,
+        @OutputCustomType.Parameter("stackInstancesGroup") @Nullable List<StackSetStackInstances> stackInstancesGroup,
+        @OutputCustomType.Parameter("stackSetId") @Nullable String stackSetId,
+        @OutputCustomType.Parameter("tags") @Nullable List<StackSetTag> tags,
+        @OutputCustomType.Parameter("templateBody") @Nullable String templateBody) {
         this.administrationRoleARN = administrationRoleARN;
         this.autoDeployment = autoDeployment;
         this.capabilities = capabilities;

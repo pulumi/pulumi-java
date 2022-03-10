@@ -70,20 +70,20 @@ public final class GetDiskResult {
      */
     private final @Nullable List<DiskTag> tags;
 
-    @OutputCustomType.Constructor({"addOns","attachedTo","attachmentState","diskArn","iops","isAttached","location","path","resourceType","state","supportCode","tags"})
+    @OutputCustomType.Constructor
     private GetDiskResult(
-        @Nullable List<DiskAddOn> addOns,
-        @Nullable String attachedTo,
-        @Nullable String attachmentState,
-        @Nullable String diskArn,
-        @Nullable Integer iops,
-        @Nullable Boolean isAttached,
-        @Nullable DiskLocation location,
-        @Nullable String path,
-        @Nullable String resourceType,
-        @Nullable String state,
-        @Nullable String supportCode,
-        @Nullable List<DiskTag> tags) {
+        @OutputCustomType.Parameter("addOns") @Nullable List<DiskAddOn> addOns,
+        @OutputCustomType.Parameter("attachedTo") @Nullable String attachedTo,
+        @OutputCustomType.Parameter("attachmentState") @Nullable String attachmentState,
+        @OutputCustomType.Parameter("diskArn") @Nullable String diskArn,
+        @OutputCustomType.Parameter("iops") @Nullable Integer iops,
+        @OutputCustomType.Parameter("isAttached") @Nullable Boolean isAttached,
+        @OutputCustomType.Parameter("location") @Nullable DiskLocation location,
+        @OutputCustomType.Parameter("path") @Nullable String path,
+        @OutputCustomType.Parameter("resourceType") @Nullable String resourceType,
+        @OutputCustomType.Parameter("state") @Nullable String state,
+        @OutputCustomType.Parameter("supportCode") @Nullable String supportCode,
+        @OutputCustomType.Parameter("tags") @Nullable List<DiskTag> tags) {
         this.addOns = addOns;
         this.attachedTo = attachedTo;
         this.attachmentState = attachmentState;

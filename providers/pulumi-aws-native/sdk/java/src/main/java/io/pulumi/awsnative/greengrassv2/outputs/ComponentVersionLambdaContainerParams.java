@@ -20,12 +20,12 @@ public final class ComponentVersionLambdaContainerParams {
     private final @Nullable Boolean mountROSysfs;
     private final @Nullable List<ComponentVersionLambdaVolumeMount> volumes;
 
-    @OutputCustomType.Constructor({"devices","memorySizeInKB","mountROSysfs","volumes"})
+    @OutputCustomType.Constructor
     private ComponentVersionLambdaContainerParams(
-        @Nullable List<ComponentVersionLambdaDeviceMount> devices,
-        @Nullable Integer memorySizeInKB,
-        @Nullable Boolean mountROSysfs,
-        @Nullable List<ComponentVersionLambdaVolumeMount> volumes) {
+        @OutputCustomType.Parameter("devices") @Nullable List<ComponentVersionLambdaDeviceMount> devices,
+        @OutputCustomType.Parameter("memorySizeInKB") @Nullable Integer memorySizeInKB,
+        @OutputCustomType.Parameter("mountROSysfs") @Nullable Boolean mountROSysfs,
+        @OutputCustomType.Parameter("volumes") @Nullable List<ComponentVersionLambdaVolumeMount> volumes) {
         this.devices = devices;
         this.memorySizeInKB = memorySizeInKB;
         this.mountROSysfs = mountROSysfs;

@@ -72,19 +72,19 @@ public final class GetImagePipelineResult {
      */
     private final @Nullable Object tags;
 
-    @OutputCustomType.Constructor({"arn","containerRecipeArn","description","distributionConfigurationArn","enhancedImageMetadataEnabled","imageRecipeArn","imageTestsConfiguration","infrastructureConfigurationArn","schedule","status","tags"})
+    @OutputCustomType.Constructor
     private GetImagePipelineResult(
-        @Nullable String arn,
-        @Nullable String containerRecipeArn,
-        @Nullable String description,
-        @Nullable String distributionConfigurationArn,
-        @Nullable Boolean enhancedImageMetadataEnabled,
-        @Nullable String imageRecipeArn,
-        @Nullable ImagePipelineImageTestsConfiguration imageTestsConfiguration,
-        @Nullable String infrastructureConfigurationArn,
-        @Nullable ImagePipelineSchedule schedule,
-        @Nullable ImagePipelineStatus status,
-        @Nullable Object tags) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("containerRecipeArn") @Nullable String containerRecipeArn,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("distributionConfigurationArn") @Nullable String distributionConfigurationArn,
+        @OutputCustomType.Parameter("enhancedImageMetadataEnabled") @Nullable Boolean enhancedImageMetadataEnabled,
+        @OutputCustomType.Parameter("imageRecipeArn") @Nullable String imageRecipeArn,
+        @OutputCustomType.Parameter("imageTestsConfiguration") @Nullable ImagePipelineImageTestsConfiguration imageTestsConfiguration,
+        @OutputCustomType.Parameter("infrastructureConfigurationArn") @Nullable String infrastructureConfigurationArn,
+        @OutputCustomType.Parameter("schedule") @Nullable ImagePipelineSchedule schedule,
+        @OutputCustomType.Parameter("status") @Nullable ImagePipelineStatus status,
+        @OutputCustomType.Parameter("tags") @Nullable Object tags) {
         this.arn = arn;
         this.containerRecipeArn = containerRecipeArn;
         this.description = description;

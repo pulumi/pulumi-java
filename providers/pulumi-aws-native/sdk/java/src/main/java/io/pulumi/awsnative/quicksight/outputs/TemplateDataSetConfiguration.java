@@ -26,11 +26,11 @@ public final class TemplateDataSetConfiguration {
      */
     private final @Nullable String placeholder;
 
-    @OutputCustomType.Constructor({"columnGroupSchemaList","dataSetSchema","placeholder"})
+    @OutputCustomType.Constructor
     private TemplateDataSetConfiguration(
-        @Nullable List<TemplateColumnGroupSchema> columnGroupSchemaList,
-        @Nullable TemplateDataSetSchema dataSetSchema,
-        @Nullable String placeholder) {
+        @OutputCustomType.Parameter("columnGroupSchemaList") @Nullable List<TemplateColumnGroupSchema> columnGroupSchemaList,
+        @OutputCustomType.Parameter("dataSetSchema") @Nullable TemplateDataSetSchema dataSetSchema,
+        @OutputCustomType.Parameter("placeholder") @Nullable String placeholder) {
         this.columnGroupSchemaList = columnGroupSchemaList;
         this.dataSetSchema = dataSetSchema;
         this.placeholder = placeholder;

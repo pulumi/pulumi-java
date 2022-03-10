@@ -11,8 +11,8 @@ import java.util.Objects;
 public final class ModelQualityJobDefinitionMonitoringResources {
     private final ModelQualityJobDefinitionClusterConfig clusterConfig;
 
-    @OutputCustomType.Constructor({"clusterConfig"})
-    private ModelQualityJobDefinitionMonitoringResources(ModelQualityJobDefinitionClusterConfig clusterConfig) {
+    @OutputCustomType.Constructor
+    private ModelQualityJobDefinitionMonitoringResources(@OutputCustomType.Parameter("clusterConfig") ModelQualityJobDefinitionClusterConfig clusterConfig) {
         this.clusterConfig = clusterConfig;
     }
 

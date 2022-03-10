@@ -75,22 +75,22 @@ public final class GetDataSetResult {
      */
     private final @Nullable List<DataSetTag> tags;
 
-    @OutputCustomType.Constructor({"arn","columnGroups","columnLevelPermissionRules","consumedSpiceCapacityInBytes","createdTime","importMode","lastUpdatedTime","logicalTableMap","name","outputColumns","permissions","physicalTableMap","rowLevelPermissionDataSet","tags"})
+    @OutputCustomType.Constructor
     private GetDataSetResult(
-        @Nullable String arn,
-        @Nullable List<DataSetColumnGroup> columnGroups,
-        @Nullable List<DataSetColumnLevelPermissionRule> columnLevelPermissionRules,
-        @Nullable Double consumedSpiceCapacityInBytes,
-        @Nullable String createdTime,
-        @Nullable DataSetImportMode importMode,
-        @Nullable String lastUpdatedTime,
-        @Nullable DataSetLogicalTableMap logicalTableMap,
-        @Nullable String name,
-        @Nullable List<DataSetOutputColumn> outputColumns,
-        @Nullable List<DataSetResourcePermission> permissions,
-        @Nullable DataSetPhysicalTableMap physicalTableMap,
-        @Nullable DataSetRowLevelPermissionDataSet rowLevelPermissionDataSet,
-        @Nullable List<DataSetTag> tags) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("columnGroups") @Nullable List<DataSetColumnGroup> columnGroups,
+        @OutputCustomType.Parameter("columnLevelPermissionRules") @Nullable List<DataSetColumnLevelPermissionRule> columnLevelPermissionRules,
+        @OutputCustomType.Parameter("consumedSpiceCapacityInBytes") @Nullable Double consumedSpiceCapacityInBytes,
+        @OutputCustomType.Parameter("createdTime") @Nullable String createdTime,
+        @OutputCustomType.Parameter("importMode") @Nullable DataSetImportMode importMode,
+        @OutputCustomType.Parameter("lastUpdatedTime") @Nullable String lastUpdatedTime,
+        @OutputCustomType.Parameter("logicalTableMap") @Nullable DataSetLogicalTableMap logicalTableMap,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("outputColumns") @Nullable List<DataSetOutputColumn> outputColumns,
+        @OutputCustomType.Parameter("permissions") @Nullable List<DataSetResourcePermission> permissions,
+        @OutputCustomType.Parameter("physicalTableMap") @Nullable DataSetPhysicalTableMap physicalTableMap,
+        @OutputCustomType.Parameter("rowLevelPermissionDataSet") @Nullable DataSetRowLevelPermissionDataSet rowLevelPermissionDataSet,
+        @OutputCustomType.Parameter("tags") @Nullable List<DataSetTag> tags) {
         this.arn = arn;
         this.columnGroups = columnGroups;
         this.columnLevelPermissionRules = columnLevelPermissionRules;

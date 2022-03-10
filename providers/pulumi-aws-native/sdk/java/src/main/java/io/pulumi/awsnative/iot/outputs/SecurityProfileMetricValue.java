@@ -45,14 +45,14 @@ public final class SecurityProfileMetricValue {
      */
     private final @Nullable List<String> strings;
 
-    @OutputCustomType.Constructor({"cidrs","count","number","numbers","ports","strings"})
+    @OutputCustomType.Constructor
     private SecurityProfileMetricValue(
-        @Nullable List<String> cidrs,
-        @Nullable String count,
-        @Nullable Double number,
-        @Nullable List<Double> numbers,
-        @Nullable List<Integer> ports,
-        @Nullable List<String> strings) {
+        @OutputCustomType.Parameter("cidrs") @Nullable List<String> cidrs,
+        @OutputCustomType.Parameter("count") @Nullable String count,
+        @OutputCustomType.Parameter("number") @Nullable Double number,
+        @OutputCustomType.Parameter("numbers") @Nullable List<Double> numbers,
+        @OutputCustomType.Parameter("ports") @Nullable List<Integer> ports,
+        @OutputCustomType.Parameter("strings") @Nullable List<String> strings) {
         this.cidrs = cidrs;
         this.count = count;
         this.number = number;

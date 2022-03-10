@@ -21,10 +21,10 @@ public final class DataSourceSparkParameters {
      */
     private final Double port;
 
-    @OutputCustomType.Constructor({"host","port"})
+    @OutputCustomType.Constructor
     private DataSourceSparkParameters(
-        String host,
-        Double port) {
+        @OutputCustomType.Parameter("host") String host,
+        @OutputCustomType.Parameter("port") Double port) {
         this.host = host;
         this.port = port;
     }

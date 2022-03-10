@@ -28,11 +28,11 @@ public final class ModelBiasJobDefinitionModelBiasAppSpecification {
      */
     private final String imageUri;
 
-    @OutputCustomType.Constructor({"configUri","environment","imageUri"})
+    @OutputCustomType.Constructor
     private ModelBiasJobDefinitionModelBiasAppSpecification(
-        String configUri,
-        @Nullable Object environment,
-        String imageUri) {
+        @OutputCustomType.Parameter("configUri") String configUri,
+        @OutputCustomType.Parameter("environment") @Nullable Object environment,
+        @OutputCustomType.Parameter("imageUri") String imageUri) {
         this.configUri = configUri;
         this.environment = environment;
         this.imageUri = imageUri;

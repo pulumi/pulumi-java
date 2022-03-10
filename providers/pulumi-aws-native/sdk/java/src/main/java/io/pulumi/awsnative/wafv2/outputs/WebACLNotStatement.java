@@ -11,8 +11,8 @@ import java.util.Objects;
 public final class WebACLNotStatement {
     private final WebACLStatement statement;
 
-    @OutputCustomType.Constructor({"statement"})
-    private WebACLNotStatement(WebACLStatement statement) {
+    @OutputCustomType.Constructor
+    private WebACLNotStatement(@OutputCustomType.Parameter("statement") WebACLStatement statement) {
         this.statement = statement;
     }
 

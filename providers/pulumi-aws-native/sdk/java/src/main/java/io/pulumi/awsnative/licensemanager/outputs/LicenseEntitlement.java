@@ -20,14 +20,14 @@ public final class LicenseEntitlement {
     private final String unit;
     private final @Nullable String value;
 
-    @OutputCustomType.Constructor({"allowCheckIn","maxCount","name","overage","unit","value"})
+    @OutputCustomType.Constructor
     private LicenseEntitlement(
-        @Nullable Boolean allowCheckIn,
-        @Nullable Integer maxCount,
-        String name,
-        @Nullable Boolean overage,
-        String unit,
-        @Nullable String value) {
+        @OutputCustomType.Parameter("allowCheckIn") @Nullable Boolean allowCheckIn,
+        @OutputCustomType.Parameter("maxCount") @Nullable Integer maxCount,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("overage") @Nullable Boolean overage,
+        @OutputCustomType.Parameter("unit") String unit,
+        @OutputCustomType.Parameter("value") @Nullable String value) {
         this.allowCheckIn = allowCheckIn;
         this.maxCount = maxCount;
         this.name = name;

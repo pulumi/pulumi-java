@@ -28,11 +28,11 @@ public final class ObjectTypeField {
      */
     private final @Nullable String target;
 
-    @OutputCustomType.Constructor({"contentType","source","target"})
+    @OutputCustomType.Constructor
     private ObjectTypeField(
-        @Nullable ObjectTypeFieldContentType contentType,
-        @Nullable String source,
-        @Nullable String target) {
+        @OutputCustomType.Parameter("contentType") @Nullable ObjectTypeFieldContentType contentType,
+        @OutputCustomType.Parameter("source") @Nullable String source,
+        @OutputCustomType.Parameter("target") @Nullable String target) {
         this.contentType = contentType;
         this.source = source;
         this.target = target;

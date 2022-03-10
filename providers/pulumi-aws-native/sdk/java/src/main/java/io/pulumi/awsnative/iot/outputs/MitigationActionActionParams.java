@@ -23,14 +23,14 @@ public final class MitigationActionActionParams {
     private final @Nullable MitigationActionUpdateCACertificateParams updateCACertificateParams;
     private final @Nullable MitigationActionUpdateDeviceCertificateParams updateDeviceCertificateParams;
 
-    @OutputCustomType.Constructor({"addThingsToThingGroupParams","enableIoTLoggingParams","publishFindingToSnsParams","replaceDefaultPolicyVersionParams","updateCACertificateParams","updateDeviceCertificateParams"})
+    @OutputCustomType.Constructor
     private MitigationActionActionParams(
-        @Nullable MitigationActionAddThingsToThingGroupParams addThingsToThingGroupParams,
-        @Nullable MitigationActionEnableIoTLoggingParams enableIoTLoggingParams,
-        @Nullable MitigationActionPublishFindingToSnsParams publishFindingToSnsParams,
-        @Nullable MitigationActionReplaceDefaultPolicyVersionParams replaceDefaultPolicyVersionParams,
-        @Nullable MitigationActionUpdateCACertificateParams updateCACertificateParams,
-        @Nullable MitigationActionUpdateDeviceCertificateParams updateDeviceCertificateParams) {
+        @OutputCustomType.Parameter("addThingsToThingGroupParams") @Nullable MitigationActionAddThingsToThingGroupParams addThingsToThingGroupParams,
+        @OutputCustomType.Parameter("enableIoTLoggingParams") @Nullable MitigationActionEnableIoTLoggingParams enableIoTLoggingParams,
+        @OutputCustomType.Parameter("publishFindingToSnsParams") @Nullable MitigationActionPublishFindingToSnsParams publishFindingToSnsParams,
+        @OutputCustomType.Parameter("replaceDefaultPolicyVersionParams") @Nullable MitigationActionReplaceDefaultPolicyVersionParams replaceDefaultPolicyVersionParams,
+        @OutputCustomType.Parameter("updateCACertificateParams") @Nullable MitigationActionUpdateCACertificateParams updateCACertificateParams,
+        @OutputCustomType.Parameter("updateDeviceCertificateParams") @Nullable MitigationActionUpdateDeviceCertificateParams updateDeviceCertificateParams) {
         this.addThingsToThingGroupParams = addThingsToThingGroupParams;
         this.enableIoTLoggingParams = enableIoTLoggingParams;
         this.publishFindingToSnsParams = publishFindingToSnsParams;

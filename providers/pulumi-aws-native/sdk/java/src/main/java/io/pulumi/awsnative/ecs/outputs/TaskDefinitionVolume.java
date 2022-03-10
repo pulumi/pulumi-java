@@ -19,12 +19,12 @@ public final class TaskDefinitionVolume {
     private final @Nullable TaskDefinitionHostVolumeProperties host;
     private final @Nullable String name;
 
-    @OutputCustomType.Constructor({"dockerVolumeConfiguration","eFSVolumeConfiguration","host","name"})
+    @OutputCustomType.Constructor
     private TaskDefinitionVolume(
-        @Nullable TaskDefinitionDockerVolumeConfiguration dockerVolumeConfiguration,
-        @Nullable TaskDefinitionEFSVolumeConfiguration eFSVolumeConfiguration,
-        @Nullable TaskDefinitionHostVolumeProperties host,
-        @Nullable String name) {
+        @OutputCustomType.Parameter("dockerVolumeConfiguration") @Nullable TaskDefinitionDockerVolumeConfiguration dockerVolumeConfiguration,
+        @OutputCustomType.Parameter("eFSVolumeConfiguration") @Nullable TaskDefinitionEFSVolumeConfiguration eFSVolumeConfiguration,
+        @OutputCustomType.Parameter("host") @Nullable TaskDefinitionHostVolumeProperties host,
+        @OutputCustomType.Parameter("name") @Nullable String name) {
         this.dockerVolumeConfiguration = dockerVolumeConfiguration;
         this.eFSVolumeConfiguration = eFSVolumeConfiguration;
         this.host = host;

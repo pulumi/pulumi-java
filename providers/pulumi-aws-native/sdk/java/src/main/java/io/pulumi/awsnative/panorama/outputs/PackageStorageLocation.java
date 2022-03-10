@@ -17,13 +17,13 @@ public final class PackageStorageLocation {
     private final @Nullable String manifestPrefixLocation;
     private final @Nullable String repoPrefixLocation;
 
-    @OutputCustomType.Constructor({"binaryPrefixLocation","bucket","generatedPrefixLocation","manifestPrefixLocation","repoPrefixLocation"})
+    @OutputCustomType.Constructor
     private PackageStorageLocation(
-        @Nullable String binaryPrefixLocation,
-        @Nullable String bucket,
-        @Nullable String generatedPrefixLocation,
-        @Nullable String manifestPrefixLocation,
-        @Nullable String repoPrefixLocation) {
+        @OutputCustomType.Parameter("binaryPrefixLocation") @Nullable String binaryPrefixLocation,
+        @OutputCustomType.Parameter("bucket") @Nullable String bucket,
+        @OutputCustomType.Parameter("generatedPrefixLocation") @Nullable String generatedPrefixLocation,
+        @OutputCustomType.Parameter("manifestPrefixLocation") @Nullable String manifestPrefixLocation,
+        @OutputCustomType.Parameter("repoPrefixLocation") @Nullable String repoPrefixLocation) {
         this.binaryPrefixLocation = binaryPrefixLocation;
         this.bucket = bucket;
         this.generatedPrefixLocation = generatedPrefixLocation;

@@ -26,16 +26,16 @@ public final class GetFileSystemResult {
     private final @Nullable Double provisionedThroughputInMibps;
     private final @Nullable String throughputMode;
 
-    @OutputCustomType.Constructor({"arn","backupPolicy","fileSystemId","fileSystemPolicy","fileSystemTags","lifecyclePolicies","provisionedThroughputInMibps","throughputMode"})
+    @OutputCustomType.Constructor
     private GetFileSystemResult(
-        @Nullable String arn,
-        @Nullable FileSystemBackupPolicy backupPolicy,
-        @Nullable String fileSystemId,
-        @Nullable Object fileSystemPolicy,
-        @Nullable List<FileSystemElasticFileSystemTag> fileSystemTags,
-        @Nullable List<FileSystemLifecyclePolicy> lifecyclePolicies,
-        @Nullable Double provisionedThroughputInMibps,
-        @Nullable String throughputMode) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("backupPolicy") @Nullable FileSystemBackupPolicy backupPolicy,
+        @OutputCustomType.Parameter("fileSystemId") @Nullable String fileSystemId,
+        @OutputCustomType.Parameter("fileSystemPolicy") @Nullable Object fileSystemPolicy,
+        @OutputCustomType.Parameter("fileSystemTags") @Nullable List<FileSystemElasticFileSystemTag> fileSystemTags,
+        @OutputCustomType.Parameter("lifecyclePolicies") @Nullable List<FileSystemLifecyclePolicy> lifecyclePolicies,
+        @OutputCustomType.Parameter("provisionedThroughputInMibps") @Nullable Double provisionedThroughputInMibps,
+        @OutputCustomType.Parameter("throughputMode") @Nullable String throughputMode) {
         this.arn = arn;
         this.backupPolicy = backupPolicy;
         this.fileSystemId = fileSystemId;

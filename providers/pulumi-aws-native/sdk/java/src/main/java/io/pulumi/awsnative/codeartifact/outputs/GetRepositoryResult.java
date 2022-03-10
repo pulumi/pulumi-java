@@ -50,15 +50,15 @@ public final class GetRepositoryResult {
      */
     private final @Nullable List<String> upstreams;
 
-    @OutputCustomType.Constructor({"arn","description","externalConnections","name","permissionsPolicyDocument","tags","upstreams"})
+    @OutputCustomType.Constructor
     private GetRepositoryResult(
-        @Nullable String arn,
-        @Nullable String description,
-        @Nullable List<String> externalConnections,
-        @Nullable String name,
-        @Nullable Object permissionsPolicyDocument,
-        @Nullable List<RepositoryTag> tags,
-        @Nullable List<String> upstreams) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("externalConnections") @Nullable List<String> externalConnections,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("permissionsPolicyDocument") @Nullable Object permissionsPolicyDocument,
+        @OutputCustomType.Parameter("tags") @Nullable List<RepositoryTag> tags,
+        @OutputCustomType.Parameter("upstreams") @Nullable List<String> upstreams) {
         this.arn = arn;
         this.description = description;
         this.externalConnections = externalConnections;

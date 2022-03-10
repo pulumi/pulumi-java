@@ -16,8 +16,8 @@ public final class InputDefinition {
      */
     private final List<InputAttribute> attributes;
 
-    @OutputCustomType.Constructor({"attributes"})
-    private InputDefinition(List<InputAttribute> attributes) {
+    @OutputCustomType.Constructor
+    private InputDefinition(@OutputCustomType.Parameter("attributes") List<InputAttribute> attributes) {
         this.attributes = attributes;
     }
 

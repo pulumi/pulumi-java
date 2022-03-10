@@ -13,10 +13,10 @@ public final class BucketReplicationTime {
     private final BucketReplicationTimeStatus status;
     private final BucketReplicationTimeValue time;
 
-    @OutputCustomType.Constructor({"status","time"})
+    @OutputCustomType.Constructor
     private BucketReplicationTime(
-        BucketReplicationTimeStatus status,
-        BucketReplicationTimeValue time) {
+        @OutputCustomType.Parameter("status") BucketReplicationTimeStatus status,
+        @OutputCustomType.Parameter("time") BucketReplicationTimeValue time) {
         this.status = status;
         this.time = time;
     }

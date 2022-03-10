@@ -16,11 +16,11 @@ public final class DistributionLambdaFunctionAssociation {
     private final @Nullable Boolean includeBody;
     private final @Nullable String lambdaFunctionARN;
 
-    @OutputCustomType.Constructor({"eventType","includeBody","lambdaFunctionARN"})
+    @OutputCustomType.Constructor
     private DistributionLambdaFunctionAssociation(
-        @Nullable String eventType,
-        @Nullable Boolean includeBody,
-        @Nullable String lambdaFunctionARN) {
+        @OutputCustomType.Parameter("eventType") @Nullable String eventType,
+        @OutputCustomType.Parameter("includeBody") @Nullable Boolean includeBody,
+        @OutputCustomType.Parameter("lambdaFunctionARN") @Nullable String lambdaFunctionARN) {
         this.eventType = eventType;
         this.includeBody = includeBody;
         this.lambdaFunctionARN = lambdaFunctionARN;

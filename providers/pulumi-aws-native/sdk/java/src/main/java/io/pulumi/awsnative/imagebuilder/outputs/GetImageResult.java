@@ -32,12 +32,12 @@ public final class GetImageResult {
      */
     private final @Nullable String name;
 
-    @OutputCustomType.Constructor({"arn","containerRecipeArn","imageId","name"})
+    @OutputCustomType.Constructor
     private GetImageResult(
-        @Nullable String arn,
-        @Nullable String containerRecipeArn,
-        @Nullable String imageId,
-        @Nullable String name) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("containerRecipeArn") @Nullable String containerRecipeArn,
+        @OutputCustomType.Parameter("imageId") @Nullable String imageId,
+        @OutputCustomType.Parameter("name") @Nullable String name) {
         this.arn = arn;
         this.containerRecipeArn = containerRecipeArn;
         this.imageId = imageId;

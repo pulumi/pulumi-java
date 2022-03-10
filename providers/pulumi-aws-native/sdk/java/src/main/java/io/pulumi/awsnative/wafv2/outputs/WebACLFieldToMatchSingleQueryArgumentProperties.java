@@ -11,8 +11,8 @@ import java.util.Objects;
 public final class WebACLFieldToMatchSingleQueryArgumentProperties {
     private final String name;
 
-    @OutputCustomType.Constructor({"name"})
-    private WebACLFieldToMatchSingleQueryArgumentProperties(String name) {
+    @OutputCustomType.Constructor
+    private WebACLFieldToMatchSingleQueryArgumentProperties(@OutputCustomType.Parameter("name") String name) {
         this.name = name;
     }
 

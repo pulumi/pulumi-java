@@ -31,22 +31,22 @@ public final class GetAppResult {
     private final @Nullable String repository;
     private final @Nullable List<AppTag> tags;
 
-    @OutputCustomType.Constructor({"appId","appName","arn","buildSpec","customHeaders","customRules","defaultDomain","description","enableBranchAutoDeletion","environmentVariables","iAMServiceRole","name","repository","tags"})
+    @OutputCustomType.Constructor
     private GetAppResult(
-        @Nullable String appId,
-        @Nullable String appName,
-        @Nullable String arn,
-        @Nullable String buildSpec,
-        @Nullable String customHeaders,
-        @Nullable List<AppCustomRule> customRules,
-        @Nullable String defaultDomain,
-        @Nullable String description,
-        @Nullable Boolean enableBranchAutoDeletion,
-        @Nullable List<AppEnvironmentVariable> environmentVariables,
-        @Nullable String iAMServiceRole,
-        @Nullable String name,
-        @Nullable String repository,
-        @Nullable List<AppTag> tags) {
+        @OutputCustomType.Parameter("appId") @Nullable String appId,
+        @OutputCustomType.Parameter("appName") @Nullable String appName,
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("buildSpec") @Nullable String buildSpec,
+        @OutputCustomType.Parameter("customHeaders") @Nullable String customHeaders,
+        @OutputCustomType.Parameter("customRules") @Nullable List<AppCustomRule> customRules,
+        @OutputCustomType.Parameter("defaultDomain") @Nullable String defaultDomain,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("enableBranchAutoDeletion") @Nullable Boolean enableBranchAutoDeletion,
+        @OutputCustomType.Parameter("environmentVariables") @Nullable List<AppEnvironmentVariable> environmentVariables,
+        @OutputCustomType.Parameter("iAMServiceRole") @Nullable String iAMServiceRole,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("repository") @Nullable String repository,
+        @OutputCustomType.Parameter("tags") @Nullable List<AppTag> tags) {
         this.appId = appId;
         this.appName = appName;
         this.arn = arn;

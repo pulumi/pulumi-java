@@ -11,8 +11,8 @@ import java.util.Objects;
 public final class FlowMarketoSourceProperties {
     private final String object;
 
-    @OutputCustomType.Constructor({"object"})
-    private FlowMarketoSourceProperties(String object) {
+    @OutputCustomType.Constructor
+    private FlowMarketoSourceProperties(@OutputCustomType.Parameter("object") String object) {
         this.object = object;
     }
 

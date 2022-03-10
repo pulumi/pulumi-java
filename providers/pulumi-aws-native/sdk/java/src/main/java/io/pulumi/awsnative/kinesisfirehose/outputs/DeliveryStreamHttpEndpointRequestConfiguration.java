@@ -16,10 +16,10 @@ public final class DeliveryStreamHttpEndpointRequestConfiguration {
     private final @Nullable List<DeliveryStreamHttpEndpointCommonAttribute> commonAttributes;
     private final @Nullable DeliveryStreamHttpEndpointRequestConfigurationContentEncoding contentEncoding;
 
-    @OutputCustomType.Constructor({"commonAttributes","contentEncoding"})
+    @OutputCustomType.Constructor
     private DeliveryStreamHttpEndpointRequestConfiguration(
-        @Nullable List<DeliveryStreamHttpEndpointCommonAttribute> commonAttributes,
-        @Nullable DeliveryStreamHttpEndpointRequestConfigurationContentEncoding contentEncoding) {
+        @OutputCustomType.Parameter("commonAttributes") @Nullable List<DeliveryStreamHttpEndpointCommonAttribute> commonAttributes,
+        @OutputCustomType.Parameter("contentEncoding") @Nullable DeliveryStreamHttpEndpointRequestConfigurationContentEncoding contentEncoding) {
         this.commonAttributes = commonAttributes;
         this.contentEncoding = contentEncoding;
     }

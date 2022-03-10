@@ -41,13 +41,13 @@ public final class ApplicationHANAPrometheusExporter {
      */
     private final @Nullable String prometheusPort;
 
-    @OutputCustomType.Constructor({"agreeToInstallHANADBClient","hANAPort","hANASID","hANASecretName","prometheusPort"})
+    @OutputCustomType.Constructor
     private ApplicationHANAPrometheusExporter(
-        Boolean agreeToInstallHANADBClient,
-        String hANAPort,
-        String hANASID,
-        String hANASecretName,
-        @Nullable String prometheusPort) {
+        @OutputCustomType.Parameter("agreeToInstallHANADBClient") Boolean agreeToInstallHANADBClient,
+        @OutputCustomType.Parameter("hANAPort") String hANAPort,
+        @OutputCustomType.Parameter("hANASID") String hANASID,
+        @OutputCustomType.Parameter("hANASecretName") String hANASecretName,
+        @OutputCustomType.Parameter("prometheusPort") @Nullable String prometheusPort) {
         this.agreeToInstallHANADBClient = agreeToInstallHANADBClient;
         this.hANAPort = hANAPort;
         this.hANASID = hANASID;

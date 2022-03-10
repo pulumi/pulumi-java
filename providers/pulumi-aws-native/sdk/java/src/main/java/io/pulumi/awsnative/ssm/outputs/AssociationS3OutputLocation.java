@@ -15,11 +15,11 @@ public final class AssociationS3OutputLocation {
     private final @Nullable String outputS3KeyPrefix;
     private final @Nullable String outputS3Region;
 
-    @OutputCustomType.Constructor({"outputS3BucketName","outputS3KeyPrefix","outputS3Region"})
+    @OutputCustomType.Constructor
     private AssociationS3OutputLocation(
-        @Nullable String outputS3BucketName,
-        @Nullable String outputS3KeyPrefix,
-        @Nullable String outputS3Region) {
+        @OutputCustomType.Parameter("outputS3BucketName") @Nullable String outputS3BucketName,
+        @OutputCustomType.Parameter("outputS3KeyPrefix") @Nullable String outputS3KeyPrefix,
+        @OutputCustomType.Parameter("outputS3Region") @Nullable String outputS3Region) {
         this.outputS3BucketName = outputS3BucketName;
         this.outputS3KeyPrefix = outputS3KeyPrefix;
         this.outputS3Region = outputS3Region;

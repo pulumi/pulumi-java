@@ -16,11 +16,11 @@ public final class GetKnowledgeBaseResult {
     private final @Nullable String knowledgeBaseId;
     private final @Nullable KnowledgeBaseRenderingConfiguration renderingConfiguration;
 
-    @OutputCustomType.Constructor({"knowledgeBaseArn","knowledgeBaseId","renderingConfiguration"})
+    @OutputCustomType.Constructor
     private GetKnowledgeBaseResult(
-        @Nullable String knowledgeBaseArn,
-        @Nullable String knowledgeBaseId,
-        @Nullable KnowledgeBaseRenderingConfiguration renderingConfiguration) {
+        @OutputCustomType.Parameter("knowledgeBaseArn") @Nullable String knowledgeBaseArn,
+        @OutputCustomType.Parameter("knowledgeBaseId") @Nullable String knowledgeBaseId,
+        @OutputCustomType.Parameter("renderingConfiguration") @Nullable KnowledgeBaseRenderingConfiguration renderingConfiguration) {
         this.knowledgeBaseArn = knowledgeBaseArn;
         this.knowledgeBaseId = knowledgeBaseId;
         this.renderingConfiguration = renderingConfiguration;

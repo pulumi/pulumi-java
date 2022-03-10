@@ -13,8 +13,8 @@ import javax.annotation.Nullable;
 public final class TaskDefinitionEphemeralStorage {
     private final @Nullable Integer sizeInGiB;
 
-    @OutputCustomType.Constructor({"sizeInGiB"})
-    private TaskDefinitionEphemeralStorage(@Nullable Integer sizeInGiB) {
+    @OutputCustomType.Constructor
+    private TaskDefinitionEphemeralStorage(@OutputCustomType.Parameter("sizeInGiB") @Nullable Integer sizeInGiB) {
         this.sizeInGiB = sizeInGiB;
     }
 

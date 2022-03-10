@@ -68,18 +68,18 @@ public final class GetMethodResult {
      */
     private final @Nullable String requestValidatorId;
 
-    @OutputCustomType.Constructor({"apiKeyRequired","authorizationScopes","authorizationType","authorizerId","integration","methodResponses","operationName","requestModels","requestParameters","requestValidatorId"})
+    @OutputCustomType.Constructor
     private GetMethodResult(
-        @Nullable Boolean apiKeyRequired,
-        @Nullable List<String> authorizationScopes,
-        @Nullable MethodAuthorizationType authorizationType,
-        @Nullable String authorizerId,
-        @Nullable MethodIntegration integration,
-        @Nullable List<MethodResponse> methodResponses,
-        @Nullable String operationName,
-        @Nullable Object requestModels,
-        @Nullable Object requestParameters,
-        @Nullable String requestValidatorId) {
+        @OutputCustomType.Parameter("apiKeyRequired") @Nullable Boolean apiKeyRequired,
+        @OutputCustomType.Parameter("authorizationScopes") @Nullable List<String> authorizationScopes,
+        @OutputCustomType.Parameter("authorizationType") @Nullable MethodAuthorizationType authorizationType,
+        @OutputCustomType.Parameter("authorizerId") @Nullable String authorizerId,
+        @OutputCustomType.Parameter("integration") @Nullable MethodIntegration integration,
+        @OutputCustomType.Parameter("methodResponses") @Nullable List<MethodResponse> methodResponses,
+        @OutputCustomType.Parameter("operationName") @Nullable String operationName,
+        @OutputCustomType.Parameter("requestModels") @Nullable Object requestModels,
+        @OutputCustomType.Parameter("requestParameters") @Nullable Object requestParameters,
+        @OutputCustomType.Parameter("requestValidatorId") @Nullable String requestValidatorId) {
         this.apiKeyRequired = apiKeyRequired;
         this.authorizationScopes = authorizationScopes;
         this.authorizationType = authorizationType;

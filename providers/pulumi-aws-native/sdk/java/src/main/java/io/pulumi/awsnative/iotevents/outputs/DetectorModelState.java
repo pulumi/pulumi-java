@@ -23,12 +23,12 @@ public final class DetectorModelState {
      */
     private final String stateName;
 
-    @OutputCustomType.Constructor({"onEnter","onExit","onInput","stateName"})
+    @OutputCustomType.Constructor
     private DetectorModelState(
-        @Nullable DetectorModelOnEnter onEnter,
-        @Nullable DetectorModelOnExit onExit,
-        @Nullable DetectorModelOnInput onInput,
-        String stateName) {
+        @OutputCustomType.Parameter("onEnter") @Nullable DetectorModelOnEnter onEnter,
+        @OutputCustomType.Parameter("onExit") @Nullable DetectorModelOnExit onExit,
+        @OutputCustomType.Parameter("onInput") @Nullable DetectorModelOnInput onInput,
+        @OutputCustomType.Parameter("stateName") String stateName) {
         this.onEnter = onEnter;
         this.onExit = onExit;
         this.onInput = onInput;

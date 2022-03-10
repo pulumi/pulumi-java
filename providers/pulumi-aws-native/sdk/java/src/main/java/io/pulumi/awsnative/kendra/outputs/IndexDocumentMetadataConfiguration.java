@@ -19,12 +19,12 @@ public final class IndexDocumentMetadataConfiguration {
     private final @Nullable IndexSearch search;
     private final IndexDocumentAttributeValueType type;
 
-    @OutputCustomType.Constructor({"name","relevance","search","type"})
+    @OutputCustomType.Constructor
     private IndexDocumentMetadataConfiguration(
-        String name,
-        @Nullable IndexRelevance relevance,
-        @Nullable IndexSearch search,
-        IndexDocumentAttributeValueType type) {
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("relevance") @Nullable IndexRelevance relevance,
+        @OutputCustomType.Parameter("search") @Nullable IndexSearch search,
+        @OutputCustomType.Parameter("type") IndexDocumentAttributeValueType type) {
         this.name = name;
         this.relevance = relevance;
         this.search = search;

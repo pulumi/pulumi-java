@@ -28,11 +28,11 @@ public final class BucketQueueConfiguration {
      */
     private final String queue;
 
-    @OutputCustomType.Constructor({"event","filter","queue"})
+    @OutputCustomType.Constructor
     private BucketQueueConfiguration(
-        String event,
-        @Nullable BucketNotificationFilter filter,
-        String queue) {
+        @OutputCustomType.Parameter("event") String event,
+        @OutputCustomType.Parameter("filter") @Nullable BucketNotificationFilter filter,
+        @OutputCustomType.Parameter("queue") String queue) {
         this.event = event;
         this.filter = filter;
         this.queue = queue;

@@ -22,10 +22,10 @@ public final class LaunchProfileStreamingSessionStorageRoot {
      */
     private final @Nullable String windows;
 
-    @OutputCustomType.Constructor({"linux","windows"})
+    @OutputCustomType.Constructor
     private LaunchProfileStreamingSessionStorageRoot(
-        @Nullable String linux,
-        @Nullable String windows) {
+        @OutputCustomType.Parameter("linux") @Nullable String linux,
+        @OutputCustomType.Parameter("windows") @Nullable String windows) {
         this.linux = linux;
         this.windows = windows;
     }

@@ -20,10 +20,10 @@ public final class AnalysisDataSetReference {
      */
     private final String dataSetPlaceholder;
 
-    @OutputCustomType.Constructor({"dataSetArn","dataSetPlaceholder"})
+    @OutputCustomType.Constructor
     private AnalysisDataSetReference(
-        String dataSetArn,
-        String dataSetPlaceholder) {
+        @OutputCustomType.Parameter("dataSetArn") String dataSetArn,
+        @OutputCustomType.Parameter("dataSetPlaceholder") String dataSetPlaceholder) {
         this.dataSetArn = dataSetArn;
         this.dataSetPlaceholder = dataSetPlaceholder;
     }

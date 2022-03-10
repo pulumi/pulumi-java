@@ -54,17 +54,17 @@ public final class GetMonitoringScheduleResult {
      */
     private final @Nullable List<MonitoringScheduleTag> tags;
 
-    @OutputCustomType.Constructor({"creationTime","endpointName","failureReason","lastModifiedTime","lastMonitoringExecutionSummary","monitoringScheduleArn","monitoringScheduleConfig","monitoringScheduleStatus","tags"})
+    @OutputCustomType.Constructor
     private GetMonitoringScheduleResult(
-        @Nullable String creationTime,
-        @Nullable String endpointName,
-        @Nullable String failureReason,
-        @Nullable String lastModifiedTime,
-        @Nullable MonitoringScheduleMonitoringExecutionSummary lastMonitoringExecutionSummary,
-        @Nullable String monitoringScheduleArn,
-        @Nullable MonitoringScheduleConfig monitoringScheduleConfig,
-        @Nullable MonitoringScheduleStatus monitoringScheduleStatus,
-        @Nullable List<MonitoringScheduleTag> tags) {
+        @OutputCustomType.Parameter("creationTime") @Nullable String creationTime,
+        @OutputCustomType.Parameter("endpointName") @Nullable String endpointName,
+        @OutputCustomType.Parameter("failureReason") @Nullable String failureReason,
+        @OutputCustomType.Parameter("lastModifiedTime") @Nullable String lastModifiedTime,
+        @OutputCustomType.Parameter("lastMonitoringExecutionSummary") @Nullable MonitoringScheduleMonitoringExecutionSummary lastMonitoringExecutionSummary,
+        @OutputCustomType.Parameter("monitoringScheduleArn") @Nullable String monitoringScheduleArn,
+        @OutputCustomType.Parameter("monitoringScheduleConfig") @Nullable MonitoringScheduleConfig monitoringScheduleConfig,
+        @OutputCustomType.Parameter("monitoringScheduleStatus") @Nullable MonitoringScheduleStatus monitoringScheduleStatus,
+        @OutputCustomType.Parameter("tags") @Nullable List<MonitoringScheduleTag> tags) {
         this.creationTime = creationTime;
         this.endpointName = endpointName;
         this.failureReason = failureReason;

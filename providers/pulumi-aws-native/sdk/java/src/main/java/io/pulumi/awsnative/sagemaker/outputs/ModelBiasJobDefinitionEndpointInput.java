@@ -57,18 +57,18 @@ public final class ModelBiasJobDefinitionEndpointInput {
      */
     private final @Nullable String startTimeOffset;
 
-    @OutputCustomType.Constructor({"endTimeOffset","endpointName","featuresAttribute","inferenceAttribute","localPath","probabilityAttribute","probabilityThresholdAttribute","s3DataDistributionType","s3InputMode","startTimeOffset"})
+    @OutputCustomType.Constructor
     private ModelBiasJobDefinitionEndpointInput(
-        @Nullable String endTimeOffset,
-        String endpointName,
-        @Nullable String featuresAttribute,
-        @Nullable String inferenceAttribute,
-        String localPath,
-        @Nullable String probabilityAttribute,
-        @Nullable Double probabilityThresholdAttribute,
-        @Nullable ModelBiasJobDefinitionEndpointInputS3DataDistributionType s3DataDistributionType,
-        @Nullable ModelBiasJobDefinitionEndpointInputS3InputMode s3InputMode,
-        @Nullable String startTimeOffset) {
+        @OutputCustomType.Parameter("endTimeOffset") @Nullable String endTimeOffset,
+        @OutputCustomType.Parameter("endpointName") String endpointName,
+        @OutputCustomType.Parameter("featuresAttribute") @Nullable String featuresAttribute,
+        @OutputCustomType.Parameter("inferenceAttribute") @Nullable String inferenceAttribute,
+        @OutputCustomType.Parameter("localPath") String localPath,
+        @OutputCustomType.Parameter("probabilityAttribute") @Nullable String probabilityAttribute,
+        @OutputCustomType.Parameter("probabilityThresholdAttribute") @Nullable Double probabilityThresholdAttribute,
+        @OutputCustomType.Parameter("s3DataDistributionType") @Nullable ModelBiasJobDefinitionEndpointInputS3DataDistributionType s3DataDistributionType,
+        @OutputCustomType.Parameter("s3InputMode") @Nullable ModelBiasJobDefinitionEndpointInputS3InputMode s3InputMode,
+        @OutputCustomType.Parameter("startTimeOffset") @Nullable String startTimeOffset) {
         this.endTimeOffset = endTimeOffset;
         this.endpointName = endpointName;
         this.featuresAttribute = featuresAttribute;

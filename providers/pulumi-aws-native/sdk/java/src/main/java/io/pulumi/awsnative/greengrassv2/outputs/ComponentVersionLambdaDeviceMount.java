@@ -17,11 +17,11 @@ public final class ComponentVersionLambdaDeviceMount {
     private final @Nullable String path;
     private final @Nullable ComponentVersionLambdaFilesystemPermission permission;
 
-    @OutputCustomType.Constructor({"addGroupOwner","path","permission"})
+    @OutputCustomType.Constructor
     private ComponentVersionLambdaDeviceMount(
-        @Nullable Boolean addGroupOwner,
-        @Nullable String path,
-        @Nullable ComponentVersionLambdaFilesystemPermission permission) {
+        @OutputCustomType.Parameter("addGroupOwner") @Nullable Boolean addGroupOwner,
+        @OutputCustomType.Parameter("path") @Nullable String path,
+        @OutputCustomType.Parameter("permission") @Nullable ComponentVersionLambdaFilesystemPermission permission) {
         this.addGroupOwner = addGroupOwner;
         this.path = path;
         this.permission = permission;

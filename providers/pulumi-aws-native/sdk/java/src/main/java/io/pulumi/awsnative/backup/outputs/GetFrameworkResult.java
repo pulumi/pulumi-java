@@ -59,15 +59,15 @@ public final class GetFrameworkResult {
      */
     private final @Nullable List<FrameworkTag> frameworkTags;
 
-    @OutputCustomType.Constructor({"creationTime","deploymentStatus","frameworkArn","frameworkControls","frameworkDescription","frameworkStatus","frameworkTags"})
+    @OutputCustomType.Constructor
     private GetFrameworkResult(
-        @Nullable Double creationTime,
-        @Nullable String deploymentStatus,
-        @Nullable String frameworkArn,
-        @Nullable List<FrameworkControl> frameworkControls,
-        @Nullable String frameworkDescription,
-        @Nullable String frameworkStatus,
-        @Nullable List<FrameworkTag> frameworkTags) {
+        @OutputCustomType.Parameter("creationTime") @Nullable Double creationTime,
+        @OutputCustomType.Parameter("deploymentStatus") @Nullable String deploymentStatus,
+        @OutputCustomType.Parameter("frameworkArn") @Nullable String frameworkArn,
+        @OutputCustomType.Parameter("frameworkControls") @Nullable List<FrameworkControl> frameworkControls,
+        @OutputCustomType.Parameter("frameworkDescription") @Nullable String frameworkDescription,
+        @OutputCustomType.Parameter("frameworkStatus") @Nullable String frameworkStatus,
+        @OutputCustomType.Parameter("frameworkTags") @Nullable List<FrameworkTag> frameworkTags) {
         this.creationTime = creationTime;
         this.deploymentStatus = deploymentStatus;
         this.frameworkArn = frameworkArn;

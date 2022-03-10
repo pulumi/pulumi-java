@@ -11,8 +11,8 @@ import java.util.Objects;
 public final class AssistantAssociationAssociationData {
     private final String knowledgeBaseId;
 
-    @OutputCustomType.Constructor({"knowledgeBaseId"})
-    private AssistantAssociationAssociationData(String knowledgeBaseId) {
+    @OutputCustomType.Constructor
+    private AssistantAssociationAssociationData(@OutputCustomType.Parameter("knowledgeBaseId") String knowledgeBaseId) {
         this.knowledgeBaseId = knowledgeBaseId;
     }
 

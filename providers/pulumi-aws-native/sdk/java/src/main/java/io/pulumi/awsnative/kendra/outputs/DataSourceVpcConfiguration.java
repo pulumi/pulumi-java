@@ -13,10 +13,10 @@ public final class DataSourceVpcConfiguration {
     private final List<String> securityGroupIds;
     private final List<String> subnetIds;
 
-    @OutputCustomType.Constructor({"securityGroupIds","subnetIds"})
+    @OutputCustomType.Constructor
     private DataSourceVpcConfiguration(
-        List<String> securityGroupIds,
-        List<String> subnetIds) {
+        @OutputCustomType.Parameter("securityGroupIds") List<String> securityGroupIds,
+        @OutputCustomType.Parameter("subnetIds") List<String> subnetIds) {
         this.securityGroupIds = securityGroupIds;
         this.subnetIds = subnetIds;
     }

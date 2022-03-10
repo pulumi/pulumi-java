@@ -47,16 +47,16 @@ public final class WebACLFieldToMatch {
      */
     private final @Nullable Object uriPath;
 
-    @OutputCustomType.Constructor({"allQueryArguments","body","jsonBody","method","queryString","singleHeader","singleQueryArgument","uriPath"})
+    @OutputCustomType.Constructor
     private WebACLFieldToMatch(
-        @Nullable Object allQueryArguments,
-        @Nullable Object body,
-        @Nullable WebACLJsonBody jsonBody,
-        @Nullable Object method,
-        @Nullable Object queryString,
-        @Nullable WebACLFieldToMatchSingleHeaderProperties singleHeader,
-        @Nullable WebACLFieldToMatchSingleQueryArgumentProperties singleQueryArgument,
-        @Nullable Object uriPath) {
+        @OutputCustomType.Parameter("allQueryArguments") @Nullable Object allQueryArguments,
+        @OutputCustomType.Parameter("body") @Nullable Object body,
+        @OutputCustomType.Parameter("jsonBody") @Nullable WebACLJsonBody jsonBody,
+        @OutputCustomType.Parameter("method") @Nullable Object method,
+        @OutputCustomType.Parameter("queryString") @Nullable Object queryString,
+        @OutputCustomType.Parameter("singleHeader") @Nullable WebACLFieldToMatchSingleHeaderProperties singleHeader,
+        @OutputCustomType.Parameter("singleQueryArgument") @Nullable WebACLFieldToMatchSingleQueryArgumentProperties singleQueryArgument,
+        @OutputCustomType.Parameter("uriPath") @Nullable Object uriPath) {
         this.allQueryArguments = allQueryArguments;
         this.body = body;
         this.jsonBody = jsonBody;

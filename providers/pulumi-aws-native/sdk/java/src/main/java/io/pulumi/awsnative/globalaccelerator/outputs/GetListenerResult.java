@@ -32,12 +32,12 @@ public final class GetListenerResult {
      */
     private final @Nullable ListenerProtocol protocol;
 
-    @OutputCustomType.Constructor({"clientAffinity","listenerArn","portRanges","protocol"})
+    @OutputCustomType.Constructor
     private GetListenerResult(
-        @Nullable ListenerClientAffinity clientAffinity,
-        @Nullable String listenerArn,
-        @Nullable List<ListenerPortRange> portRanges,
-        @Nullable ListenerProtocol protocol) {
+        @OutputCustomType.Parameter("clientAffinity") @Nullable ListenerClientAffinity clientAffinity,
+        @OutputCustomType.Parameter("listenerArn") @Nullable String listenerArn,
+        @OutputCustomType.Parameter("portRanges") @Nullable List<ListenerPortRange> portRanges,
+        @OutputCustomType.Parameter("protocol") @Nullable ListenerProtocol protocol) {
         this.clientAffinity = clientAffinity;
         this.listenerArn = listenerArn;
         this.portRanges = portRanges;

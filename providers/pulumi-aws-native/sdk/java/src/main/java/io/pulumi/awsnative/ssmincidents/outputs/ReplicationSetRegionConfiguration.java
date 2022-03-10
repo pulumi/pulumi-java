@@ -11,8 +11,8 @@ import java.util.Objects;
 public final class ReplicationSetRegionConfiguration {
     private final String sseKmsKeyId;
 
-    @OutputCustomType.Constructor({"sseKmsKeyId"})
-    private ReplicationSetRegionConfiguration(String sseKmsKeyId) {
+    @OutputCustomType.Constructor
+    private ReplicationSetRegionConfiguration(@OutputCustomType.Parameter("sseKmsKeyId") String sseKmsKeyId) {
         this.sseKmsKeyId = sseKmsKeyId;
     }
 

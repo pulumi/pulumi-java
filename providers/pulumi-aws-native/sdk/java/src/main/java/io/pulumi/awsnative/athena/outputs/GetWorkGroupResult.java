@@ -53,15 +53,15 @@ public final class GetWorkGroupResult {
      */
     private final @Nullable WorkGroupConfigurationUpdates workGroupConfigurationUpdates;
 
-    @OutputCustomType.Constructor({"creationTime","description","recursiveDeleteOption","state","tags","workGroupConfiguration","workGroupConfigurationUpdates"})
+    @OutputCustomType.Constructor
     private GetWorkGroupResult(
-        @Nullable String creationTime,
-        @Nullable String description,
-        @Nullable Boolean recursiveDeleteOption,
-        @Nullable WorkGroupState state,
-        @Nullable List<WorkGroupTag> tags,
-        @Nullable WorkGroupConfiguration workGroupConfiguration,
-        @Nullable WorkGroupConfigurationUpdates workGroupConfigurationUpdates) {
+        @OutputCustomType.Parameter("creationTime") @Nullable String creationTime,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("recursiveDeleteOption") @Nullable Boolean recursiveDeleteOption,
+        @OutputCustomType.Parameter("state") @Nullable WorkGroupState state,
+        @OutputCustomType.Parameter("tags") @Nullable List<WorkGroupTag> tags,
+        @OutputCustomType.Parameter("workGroupConfiguration") @Nullable WorkGroupConfiguration workGroupConfiguration,
+        @OutputCustomType.Parameter("workGroupConfigurationUpdates") @Nullable WorkGroupConfigurationUpdates workGroupConfigurationUpdates) {
         this.creationTime = creationTime;
         this.description = description;
         this.recursiveDeleteOption = recursiveDeleteOption;

@@ -20,13 +20,13 @@ public final class TaskDefinitionEFSVolumeConfiguration {
     private final @Nullable TaskDefinitionEFSVolumeConfigurationTransitEncryption transitEncryption;
     private final @Nullable Integer transitEncryptionPort;
 
-    @OutputCustomType.Constructor({"authorizationConfig","filesystemId","rootDirectory","transitEncryption","transitEncryptionPort"})
+    @OutputCustomType.Constructor
     private TaskDefinitionEFSVolumeConfiguration(
-        @Nullable TaskDefinitionAuthorizationConfig authorizationConfig,
-        String filesystemId,
-        @Nullable String rootDirectory,
-        @Nullable TaskDefinitionEFSVolumeConfigurationTransitEncryption transitEncryption,
-        @Nullable Integer transitEncryptionPort) {
+        @OutputCustomType.Parameter("authorizationConfig") @Nullable TaskDefinitionAuthorizationConfig authorizationConfig,
+        @OutputCustomType.Parameter("filesystemId") String filesystemId,
+        @OutputCustomType.Parameter("rootDirectory") @Nullable String rootDirectory,
+        @OutputCustomType.Parameter("transitEncryption") @Nullable TaskDefinitionEFSVolumeConfigurationTransitEncryption transitEncryption,
+        @OutputCustomType.Parameter("transitEncryptionPort") @Nullable Integer transitEncryptionPort) {
         this.authorizationConfig = authorizationConfig;
         this.filesystemId = filesystemId;
         this.rootDirectory = rootDirectory;

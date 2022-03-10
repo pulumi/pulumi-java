@@ -11,8 +11,8 @@ import java.util.Objects;
 public final class LicenseProvisionalConfiguration {
     private final Integer maxTimeToLiveInMinutes;
 
-    @OutputCustomType.Constructor({"maxTimeToLiveInMinutes"})
-    private LicenseProvisionalConfiguration(Integer maxTimeToLiveInMinutes) {
+    @OutputCustomType.Constructor
+    private LicenseProvisionalConfiguration(@OutputCustomType.Parameter("maxTimeToLiveInMinutes") Integer maxTimeToLiveInMinutes) {
         this.maxTimeToLiveInMinutes = maxTimeToLiveInMinutes;
     }
 

@@ -13,8 +13,8 @@ import javax.annotation.Nullable;
 public final class StateMachineCloudWatchLogsLogGroup {
     private final @Nullable String logGroupArn;
 
-    @OutputCustomType.Constructor({"logGroupArn"})
-    private StateMachineCloudWatchLogsLogGroup(@Nullable String logGroupArn) {
+    @OutputCustomType.Constructor
+    private StateMachineCloudWatchLogsLogGroup(@OutputCustomType.Parameter("logGroupArn") @Nullable String logGroupArn) {
         this.logGroupArn = logGroupArn;
     }
 

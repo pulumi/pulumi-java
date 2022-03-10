@@ -22,10 +22,10 @@ public final class ReportSettingProperties {
      */
     private final String reportTemplate;
 
-    @OutputCustomType.Constructor({"frameworkArns","reportTemplate"})
+    @OutputCustomType.Constructor
     private ReportSettingProperties(
-        @Nullable List<String> frameworkArns,
-        String reportTemplate) {
+        @OutputCustomType.Parameter("frameworkArns") @Nullable List<String> frameworkArns,
+        @OutputCustomType.Parameter("reportTemplate") String reportTemplate) {
         this.frameworkArns = frameworkArns;
         this.reportTemplate = reportTemplate;
     }

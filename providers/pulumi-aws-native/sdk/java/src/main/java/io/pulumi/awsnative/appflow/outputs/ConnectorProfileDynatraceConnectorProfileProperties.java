@@ -15,8 +15,8 @@ public final class ConnectorProfileDynatraceConnectorProfileProperties {
      */
     private final String instanceUrl;
 
-    @OutputCustomType.Constructor({"instanceUrl"})
-    private ConnectorProfileDynatraceConnectorProfileProperties(String instanceUrl) {
+    @OutputCustomType.Constructor
+    private ConnectorProfileDynatraceConnectorProfileProperties(@OutputCustomType.Parameter("instanceUrl") String instanceUrl) {
         this.instanceUrl = instanceUrl;
     }
 

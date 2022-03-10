@@ -14,10 +14,10 @@ public final class ResourceDataSyncAwsOrganizationsSource {
     private final String organizationSourceType;
     private final @Nullable List<String> organizationalUnits;
 
-    @OutputCustomType.Constructor({"organizationSourceType","organizationalUnits"})
+    @OutputCustomType.Constructor
     private ResourceDataSyncAwsOrganizationsSource(
-        String organizationSourceType,
-        @Nullable List<String> organizationalUnits) {
+        @OutputCustomType.Parameter("organizationSourceType") String organizationSourceType,
+        @OutputCustomType.Parameter("organizationalUnits") @Nullable List<String> organizationalUnits) {
         this.organizationSourceType = organizationSourceType;
         this.organizationalUnits = organizationalUnits;
     }

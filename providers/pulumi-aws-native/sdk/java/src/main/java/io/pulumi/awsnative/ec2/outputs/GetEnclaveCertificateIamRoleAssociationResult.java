@@ -27,11 +27,11 @@ public final class GetEnclaveCertificateIamRoleAssociationResult {
      */
     private final @Nullable String encryptionKmsKeyId;
 
-    @OutputCustomType.Constructor({"certificateS3BucketName","certificateS3ObjectKey","encryptionKmsKeyId"})
+    @OutputCustomType.Constructor
     private GetEnclaveCertificateIamRoleAssociationResult(
-        @Nullable String certificateS3BucketName,
-        @Nullable String certificateS3ObjectKey,
-        @Nullable String encryptionKmsKeyId) {
+        @OutputCustomType.Parameter("certificateS3BucketName") @Nullable String certificateS3BucketName,
+        @OutputCustomType.Parameter("certificateS3ObjectKey") @Nullable String certificateS3ObjectKey,
+        @OutputCustomType.Parameter("encryptionKmsKeyId") @Nullable String encryptionKmsKeyId) {
         this.certificateS3BucketName = certificateS3BucketName;
         this.certificateS3ObjectKey = certificateS3ObjectKey;
         this.encryptionKmsKeyId = encryptionKmsKeyId;

@@ -12,10 +12,10 @@ public final class AnomalyDetectorAppFlowConfig {
     private final String flowName;
     private final String roleArn;
 
-    @OutputCustomType.Constructor({"flowName","roleArn"})
+    @OutputCustomType.Constructor
     private AnomalyDetectorAppFlowConfig(
-        String flowName,
-        String roleArn) {
+        @OutputCustomType.Parameter("flowName") String flowName,
+        @OutputCustomType.Parameter("roleArn") String roleArn) {
         this.flowName = flowName;
         this.roleArn = roleArn;
     }

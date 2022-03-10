@@ -15,10 +15,10 @@ public final class GetTemplateResult {
     private final @Nullable String id;
     private final @Nullable Template template;
 
-    @OutputCustomType.Constructor({"id","template"})
+    @OutputCustomType.Constructor
     private GetTemplateResult(
-        @Nullable String id,
-        @Nullable Template template) {
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("template") @Nullable Template template) {
         this.id = id;
         this.template = template;
     }

@@ -23,10 +23,10 @@ public final class DetectorModelOnInput {
      */
     private final @Nullable List<DetectorModelTransitionEvent> transitionEvents;
 
-    @OutputCustomType.Constructor({"events","transitionEvents"})
+    @OutputCustomType.Constructor
     private DetectorModelOnInput(
-        @Nullable List<DetectorModelEvent> events,
-        @Nullable List<DetectorModelTransitionEvent> transitionEvents) {
+        @OutputCustomType.Parameter("events") @Nullable List<DetectorModelEvent> events,
+        @OutputCustomType.Parameter("transitionEvents") @Nullable List<DetectorModelTransitionEvent> transitionEvents) {
         this.events = events;
         this.transitionEvents = transitionEvents;
     }

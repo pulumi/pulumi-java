@@ -13,8 +13,8 @@ import javax.annotation.Nullable;
 public final class TopicRuleDestinationHttpUrlDestinationSummary {
     private final @Nullable String confirmationUrl;
 
-    @OutputCustomType.Constructor({"confirmationUrl"})
-    private TopicRuleDestinationHttpUrlDestinationSummary(@Nullable String confirmationUrl) {
+    @OutputCustomType.Constructor
+    private TopicRuleDestinationHttpUrlDestinationSummary(@OutputCustomType.Parameter("confirmationUrl") @Nullable String confirmationUrl) {
         this.confirmationUrl = confirmationUrl;
     }
 

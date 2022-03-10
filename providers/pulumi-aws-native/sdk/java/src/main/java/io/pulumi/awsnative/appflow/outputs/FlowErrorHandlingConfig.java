@@ -16,11 +16,11 @@ public final class FlowErrorHandlingConfig {
     private final @Nullable String bucketPrefix;
     private final @Nullable Boolean failOnFirstError;
 
-    @OutputCustomType.Constructor({"bucketName","bucketPrefix","failOnFirstError"})
+    @OutputCustomType.Constructor
     private FlowErrorHandlingConfig(
-        @Nullable String bucketName,
-        @Nullable String bucketPrefix,
-        @Nullable Boolean failOnFirstError) {
+        @OutputCustomType.Parameter("bucketName") @Nullable String bucketName,
+        @OutputCustomType.Parameter("bucketPrefix") @Nullable String bucketPrefix,
+        @OutputCustomType.Parameter("failOnFirstError") @Nullable Boolean failOnFirstError) {
         this.bucketName = bucketName;
         this.bucketPrefix = bucketPrefix;
         this.failOnFirstError = failOnFirstError;

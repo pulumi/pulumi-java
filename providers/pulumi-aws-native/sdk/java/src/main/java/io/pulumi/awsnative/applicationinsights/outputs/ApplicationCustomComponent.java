@@ -21,10 +21,10 @@ public final class ApplicationCustomComponent {
      */
     private final List<String> resourceList;
 
-    @OutputCustomType.Constructor({"componentName","resourceList"})
+    @OutputCustomType.Constructor
     private ApplicationCustomComponent(
-        String componentName,
-        List<String> resourceList) {
+        @OutputCustomType.Parameter("componentName") String componentName,
+        @OutputCustomType.Parameter("resourceList") List<String> resourceList) {
         this.componentName = componentName;
         this.resourceList = resourceList;
     }

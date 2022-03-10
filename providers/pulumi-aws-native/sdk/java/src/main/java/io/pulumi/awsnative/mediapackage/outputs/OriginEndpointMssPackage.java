@@ -26,12 +26,12 @@ public final class OriginEndpointMssPackage {
     private final @Nullable Integer segmentDurationSeconds;
     private final @Nullable OriginEndpointStreamSelection streamSelection;
 
-    @OutputCustomType.Constructor({"encryption","manifestWindowSeconds","segmentDurationSeconds","streamSelection"})
+    @OutputCustomType.Constructor
     private OriginEndpointMssPackage(
-        @Nullable OriginEndpointMssEncryption encryption,
-        @Nullable Integer manifestWindowSeconds,
-        @Nullable Integer segmentDurationSeconds,
-        @Nullable OriginEndpointStreamSelection streamSelection) {
+        @OutputCustomType.Parameter("encryption") @Nullable OriginEndpointMssEncryption encryption,
+        @OutputCustomType.Parameter("manifestWindowSeconds") @Nullable Integer manifestWindowSeconds,
+        @OutputCustomType.Parameter("segmentDurationSeconds") @Nullable Integer segmentDurationSeconds,
+        @OutputCustomType.Parameter("streamSelection") @Nullable OriginEndpointStreamSelection streamSelection) {
         this.encryption = encryption;
         this.manifestWindowSeconds = manifestWindowSeconds;
         this.segmentDurationSeconds = segmentDurationSeconds;

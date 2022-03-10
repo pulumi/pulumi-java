@@ -31,13 +31,13 @@ public final class GetRegexPatternSetResult {
     private final @Nullable List<String> regularExpressionList;
     private final @Nullable List<RegexPatternSetTag> tags;
 
-    @OutputCustomType.Constructor({"arn","description","id","regularExpressionList","tags"})
+    @OutputCustomType.Constructor
     private GetRegexPatternSetResult(
-        @Nullable String arn,
-        @Nullable String description,
-        @Nullable String id,
-        @Nullable List<String> regularExpressionList,
-        @Nullable List<RegexPatternSetTag> tags) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("regularExpressionList") @Nullable List<String> regularExpressionList,
+        @OutputCustomType.Parameter("tags") @Nullable List<RegexPatternSetTag> tags) {
         this.arn = arn;
         this.description = description;
         this.id = id;

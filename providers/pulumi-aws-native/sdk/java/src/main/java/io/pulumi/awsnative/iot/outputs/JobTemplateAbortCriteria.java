@@ -33,12 +33,12 @@ public final class JobTemplateAbortCriteria {
      */
     private final Double thresholdPercentage;
 
-    @OutputCustomType.Constructor({"action","failureType","minNumberOfExecutedThings","thresholdPercentage"})
+    @OutputCustomType.Constructor
     private JobTemplateAbortCriteria(
-        JobTemplateAction action,
-        JobTemplateFailureType failureType,
-        Integer minNumberOfExecutedThings,
-        Double thresholdPercentage) {
+        @OutputCustomType.Parameter("action") JobTemplateAction action,
+        @OutputCustomType.Parameter("failureType") JobTemplateFailureType failureType,
+        @OutputCustomType.Parameter("minNumberOfExecutedThings") Integer minNumberOfExecutedThings,
+        @OutputCustomType.Parameter("thresholdPercentage") Double thresholdPercentage) {
         this.action = action;
         this.failureType = failureType;
         this.minNumberOfExecutedThings = minNumberOfExecutedThings;

@@ -27,17 +27,17 @@ public final class DeliveryStreamSplunkDestinationConfiguration {
     private final @Nullable String s3BackupMode;
     private final DeliveryStreamS3DestinationConfiguration s3Configuration;
 
-    @OutputCustomType.Constructor({"cloudWatchLoggingOptions","hECAcknowledgmentTimeoutInSeconds","hECEndpoint","hECEndpointType","hECToken","processingConfiguration","retryOptions","s3BackupMode","s3Configuration"})
+    @OutputCustomType.Constructor
     private DeliveryStreamSplunkDestinationConfiguration(
-        @Nullable DeliveryStreamCloudWatchLoggingOptions cloudWatchLoggingOptions,
-        @Nullable Integer hECAcknowledgmentTimeoutInSeconds,
-        String hECEndpoint,
-        DeliveryStreamSplunkDestinationConfigurationHECEndpointType hECEndpointType,
-        String hECToken,
-        @Nullable DeliveryStreamProcessingConfiguration processingConfiguration,
-        @Nullable DeliveryStreamSplunkRetryOptions retryOptions,
-        @Nullable String s3BackupMode,
-        DeliveryStreamS3DestinationConfiguration s3Configuration) {
+        @OutputCustomType.Parameter("cloudWatchLoggingOptions") @Nullable DeliveryStreamCloudWatchLoggingOptions cloudWatchLoggingOptions,
+        @OutputCustomType.Parameter("hECAcknowledgmentTimeoutInSeconds") @Nullable Integer hECAcknowledgmentTimeoutInSeconds,
+        @OutputCustomType.Parameter("hECEndpoint") String hECEndpoint,
+        @OutputCustomType.Parameter("hECEndpointType") DeliveryStreamSplunkDestinationConfigurationHECEndpointType hECEndpointType,
+        @OutputCustomType.Parameter("hECToken") String hECToken,
+        @OutputCustomType.Parameter("processingConfiguration") @Nullable DeliveryStreamProcessingConfiguration processingConfiguration,
+        @OutputCustomType.Parameter("retryOptions") @Nullable DeliveryStreamSplunkRetryOptions retryOptions,
+        @OutputCustomType.Parameter("s3BackupMode") @Nullable String s3BackupMode,
+        @OutputCustomType.Parameter("s3Configuration") DeliveryStreamS3DestinationConfiguration s3Configuration) {
         this.cloudWatchLoggingOptions = cloudWatchLoggingOptions;
         this.hECAcknowledgmentTimeoutInSeconds = hECAcknowledgmentTimeoutInSeconds;
         this.hECEndpoint = hECEndpoint;

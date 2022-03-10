@@ -11,8 +11,8 @@ import java.util.Objects;
 public final class IntegrationMarketoSourceProperties {
     private final String object;
 
-    @OutputCustomType.Constructor({"object"})
-    private IntegrationMarketoSourceProperties(String object) {
+    @OutputCustomType.Constructor
+    private IntegrationMarketoSourceProperties(@OutputCustomType.Parameter("object") String object) {
         this.object = object;
     }
 

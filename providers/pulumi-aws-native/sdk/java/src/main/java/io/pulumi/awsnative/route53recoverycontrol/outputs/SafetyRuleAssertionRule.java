@@ -22,10 +22,10 @@ public final class SafetyRuleAssertionRule {
      */
     private final Integer waitPeriodMs;
 
-    @OutputCustomType.Constructor({"assertedControls","waitPeriodMs"})
+    @OutputCustomType.Constructor
     private SafetyRuleAssertionRule(
-        List<String> assertedControls,
-        Integer waitPeriodMs) {
+        @OutputCustomType.Parameter("assertedControls") List<String> assertedControls,
+        @OutputCustomType.Parameter("waitPeriodMs") Integer waitPeriodMs) {
         this.assertedControls = assertedControls;
         this.waitPeriodMs = waitPeriodMs;
     }

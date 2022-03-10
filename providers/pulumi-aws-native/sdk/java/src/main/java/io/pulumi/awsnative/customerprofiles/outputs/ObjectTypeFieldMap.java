@@ -15,10 +15,10 @@ public final class ObjectTypeFieldMap {
     private final @Nullable String name;
     private final @Nullable ObjectTypeField objectTypeField;
 
-    @OutputCustomType.Constructor({"name","objectTypeField"})
+    @OutputCustomType.Constructor
     private ObjectTypeFieldMap(
-        @Nullable String name,
-        @Nullable ObjectTypeField objectTypeField) {
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("objectTypeField") @Nullable ObjectTypeField objectTypeField) {
         this.name = name;
         this.objectTypeField = objectTypeField;
     }

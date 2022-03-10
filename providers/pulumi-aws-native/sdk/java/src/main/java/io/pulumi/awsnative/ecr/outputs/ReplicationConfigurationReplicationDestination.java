@@ -12,10 +12,10 @@ public final class ReplicationConfigurationReplicationDestination {
     private final String region;
     private final String registryId;
 
-    @OutputCustomType.Constructor({"region","registryId"})
+    @OutputCustomType.Constructor
     private ReplicationConfigurationReplicationDestination(
-        String region,
-        String registryId) {
+        @OutputCustomType.Parameter("region") String region,
+        @OutputCustomType.Parameter("registryId") String registryId) {
         this.region = region;
         this.registryId = registryId;
     }

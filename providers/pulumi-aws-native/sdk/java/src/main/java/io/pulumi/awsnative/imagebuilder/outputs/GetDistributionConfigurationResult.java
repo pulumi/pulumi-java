@@ -35,12 +35,12 @@ public final class GetDistributionConfigurationResult {
      */
     private final @Nullable Object tags;
 
-    @OutputCustomType.Constructor({"arn","description","distributions","tags"})
+    @OutputCustomType.Constructor
     private GetDistributionConfigurationResult(
-        @Nullable String arn,
-        @Nullable String description,
-        @Nullable List<DistributionConfigurationDistribution> distributions,
-        @Nullable Object tags) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("distributions") @Nullable List<DistributionConfigurationDistribution> distributions,
+        @OutputCustomType.Parameter("tags") @Nullable Object tags) {
         this.arn = arn;
         this.description = description;
         this.distributions = distributions;

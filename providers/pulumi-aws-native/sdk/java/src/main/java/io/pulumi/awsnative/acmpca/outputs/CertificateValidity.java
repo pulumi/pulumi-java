@@ -13,10 +13,10 @@ public final class CertificateValidity {
     private final String type;
     private final Double value;
 
-    @OutputCustomType.Constructor({"type","value"})
+    @OutputCustomType.Constructor
     private CertificateValidity(
-        String type,
-        Double value) {
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("value") Double value) {
         this.type = type;
         this.value = value;
     }

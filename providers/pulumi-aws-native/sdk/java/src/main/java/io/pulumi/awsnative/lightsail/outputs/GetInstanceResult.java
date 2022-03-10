@@ -80,24 +80,24 @@ public final class GetInstanceResult {
      */
     private final @Nullable String userName;
 
-    @OutputCustomType.Constructor({"addOns","hardware","instanceArn","isStaticIp","keyPairName","location","networking","privateIpAddress","publicIpAddress","resourceType","sshKeyName","state","supportCode","tags","userData","userName"})
+    @OutputCustomType.Constructor
     private GetInstanceResult(
-        @Nullable List<InstanceAddOn> addOns,
-        @Nullable InstanceHardware hardware,
-        @Nullable String instanceArn,
-        @Nullable Boolean isStaticIp,
-        @Nullable String keyPairName,
-        @Nullable InstanceLocation location,
-        @Nullable InstanceNetworking networking,
-        @Nullable String privateIpAddress,
-        @Nullable String publicIpAddress,
-        @Nullable String resourceType,
-        @Nullable String sshKeyName,
-        @Nullable InstanceState state,
-        @Nullable String supportCode,
-        @Nullable List<InstanceTag> tags,
-        @Nullable String userData,
-        @Nullable String userName) {
+        @OutputCustomType.Parameter("addOns") @Nullable List<InstanceAddOn> addOns,
+        @OutputCustomType.Parameter("hardware") @Nullable InstanceHardware hardware,
+        @OutputCustomType.Parameter("instanceArn") @Nullable String instanceArn,
+        @OutputCustomType.Parameter("isStaticIp") @Nullable Boolean isStaticIp,
+        @OutputCustomType.Parameter("keyPairName") @Nullable String keyPairName,
+        @OutputCustomType.Parameter("location") @Nullable InstanceLocation location,
+        @OutputCustomType.Parameter("networking") @Nullable InstanceNetworking networking,
+        @OutputCustomType.Parameter("privateIpAddress") @Nullable String privateIpAddress,
+        @OutputCustomType.Parameter("publicIpAddress") @Nullable String publicIpAddress,
+        @OutputCustomType.Parameter("resourceType") @Nullable String resourceType,
+        @OutputCustomType.Parameter("sshKeyName") @Nullable String sshKeyName,
+        @OutputCustomType.Parameter("state") @Nullable InstanceState state,
+        @OutputCustomType.Parameter("supportCode") @Nullable String supportCode,
+        @OutputCustomType.Parameter("tags") @Nullable List<InstanceTag> tags,
+        @OutputCustomType.Parameter("userData") @Nullable String userData,
+        @OutputCustomType.Parameter("userName") @Nullable String userName) {
         this.addOns = addOns;
         this.hardware = hardware;
         this.instanceArn = instanceArn;

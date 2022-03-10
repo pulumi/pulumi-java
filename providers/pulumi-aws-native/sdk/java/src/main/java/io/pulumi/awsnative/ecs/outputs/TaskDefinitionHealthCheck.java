@@ -39,13 +39,13 @@ public final class TaskDefinitionHealthCheck {
      */
     private final @Nullable Integer timeout;
 
-    @OutputCustomType.Constructor({"command","interval","retries","startPeriod","timeout"})
+    @OutputCustomType.Constructor
     private TaskDefinitionHealthCheck(
-        @Nullable List<String> command,
-        @Nullable Integer interval,
-        @Nullable Integer retries,
-        @Nullable Integer startPeriod,
-        @Nullable Integer timeout) {
+        @OutputCustomType.Parameter("command") @Nullable List<String> command,
+        @OutputCustomType.Parameter("interval") @Nullable Integer interval,
+        @OutputCustomType.Parameter("retries") @Nullable Integer retries,
+        @OutputCustomType.Parameter("startPeriod") @Nullable Integer startPeriod,
+        @OutputCustomType.Parameter("timeout") @Nullable Integer timeout) {
         this.command = command;
         this.interval = interval;
         this.retries = retries;

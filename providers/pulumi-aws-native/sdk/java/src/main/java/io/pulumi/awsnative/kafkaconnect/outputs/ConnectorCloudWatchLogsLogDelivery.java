@@ -23,10 +23,10 @@ public final class ConnectorCloudWatchLogsLogDelivery {
      */
     private final @Nullable String logGroup;
 
-    @OutputCustomType.Constructor({"enabled","logGroup"})
+    @OutputCustomType.Constructor
     private ConnectorCloudWatchLogsLogDelivery(
-        Boolean enabled,
-        @Nullable String logGroup) {
+        @OutputCustomType.Parameter("enabled") Boolean enabled,
+        @OutputCustomType.Parameter("logGroup") @Nullable String logGroup) {
         this.enabled = enabled;
         this.logGroup = logGroup;
     }

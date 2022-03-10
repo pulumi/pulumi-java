@@ -14,10 +14,10 @@ public final class ContainerPortInfo {
     private final @Nullable String port;
     private final @Nullable String protocol;
 
-    @OutputCustomType.Constructor({"port","protocol"})
+    @OutputCustomType.Constructor
     private ContainerPortInfo(
-        @Nullable String port,
-        @Nullable String protocol) {
+        @OutputCustomType.Parameter("port") @Nullable String port,
+        @OutputCustomType.Parameter("protocol") @Nullable String protocol) {
         this.port = port;
         this.protocol = protocol;
     }

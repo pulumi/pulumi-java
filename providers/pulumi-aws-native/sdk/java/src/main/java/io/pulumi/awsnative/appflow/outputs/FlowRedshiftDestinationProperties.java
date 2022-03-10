@@ -17,12 +17,12 @@ public final class FlowRedshiftDestinationProperties {
     private final String intermediateBucketName;
     private final String object;
 
-    @OutputCustomType.Constructor({"bucketPrefix","errorHandlingConfig","intermediateBucketName","object"})
+    @OutputCustomType.Constructor
     private FlowRedshiftDestinationProperties(
-        @Nullable String bucketPrefix,
-        @Nullable FlowErrorHandlingConfig errorHandlingConfig,
-        String intermediateBucketName,
-        String object) {
+        @OutputCustomType.Parameter("bucketPrefix") @Nullable String bucketPrefix,
+        @OutputCustomType.Parameter("errorHandlingConfig") @Nullable FlowErrorHandlingConfig errorHandlingConfig,
+        @OutputCustomType.Parameter("intermediateBucketName") String intermediateBucketName,
+        @OutputCustomType.Parameter("object") String object) {
         this.bucketPrefix = bucketPrefix;
         this.errorHandlingConfig = errorHandlingConfig;
         this.intermediateBucketName = intermediateBucketName;

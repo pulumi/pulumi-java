@@ -11,8 +11,8 @@ import java.util.Objects;
 public final class DeliveryStreamKMSEncryptionConfig {
     private final String aWSKMSKeyARN;
 
-    @OutputCustomType.Constructor({"aWSKMSKeyARN"})
-    private DeliveryStreamKMSEncryptionConfig(String aWSKMSKeyARN) {
+    @OutputCustomType.Constructor
+    private DeliveryStreamKMSEncryptionConfig(@OutputCustomType.Parameter("aWSKMSKeyARN") String aWSKMSKeyARN) {
         this.aWSKMSKeyARN = aWSKMSKeyARN;
     }
 

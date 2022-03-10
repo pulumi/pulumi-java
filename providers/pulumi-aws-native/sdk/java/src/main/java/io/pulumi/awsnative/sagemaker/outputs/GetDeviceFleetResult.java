@@ -35,12 +35,12 @@ public final class GetDeviceFleetResult {
      */
     private final @Nullable List<DeviceFleetTag> tags;
 
-    @OutputCustomType.Constructor({"description","outputConfig","roleArn","tags"})
+    @OutputCustomType.Constructor
     private GetDeviceFleetResult(
-        @Nullable String description,
-        @Nullable DeviceFleetEdgeOutputConfig outputConfig,
-        @Nullable String roleArn,
-        @Nullable List<DeviceFleetTag> tags) {
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("outputConfig") @Nullable DeviceFleetEdgeOutputConfig outputConfig,
+        @OutputCustomType.Parameter("roleArn") @Nullable String roleArn,
+        @OutputCustomType.Parameter("tags") @Nullable List<DeviceFleetTag> tags) {
         this.description = description;
         this.outputConfig = outputConfig;
         this.roleArn = roleArn;

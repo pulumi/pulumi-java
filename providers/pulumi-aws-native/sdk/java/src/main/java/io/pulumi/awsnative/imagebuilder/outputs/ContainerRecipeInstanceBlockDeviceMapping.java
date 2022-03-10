@@ -33,12 +33,12 @@ public final class ContainerRecipeInstanceBlockDeviceMapping {
      */
     private final @Nullable String virtualName;
 
-    @OutputCustomType.Constructor({"deviceName","ebs","noDevice","virtualName"})
+    @OutputCustomType.Constructor
     private ContainerRecipeInstanceBlockDeviceMapping(
-        @Nullable String deviceName,
-        @Nullable ContainerRecipeEbsInstanceBlockDeviceSpecification ebs,
-        @Nullable String noDevice,
-        @Nullable String virtualName) {
+        @OutputCustomType.Parameter("deviceName") @Nullable String deviceName,
+        @OutputCustomType.Parameter("ebs") @Nullable ContainerRecipeEbsInstanceBlockDeviceSpecification ebs,
+        @OutputCustomType.Parameter("noDevice") @Nullable String noDevice,
+        @OutputCustomType.Parameter("virtualName") @Nullable String virtualName) {
         this.deviceName = deviceName;
         this.ebs = ebs;
         this.noDevice = noDevice;

@@ -20,10 +20,10 @@ public final class AssetEgressEndpoint {
      */
     private final String url;
 
-    @OutputCustomType.Constructor({"packagingConfigurationId","url"})
+    @OutputCustomType.Constructor
     private AssetEgressEndpoint(
-        String packagingConfigurationId,
-        String url) {
+        @OutputCustomType.Parameter("packagingConfigurationId") String packagingConfigurationId,
+        @OutputCustomType.Parameter("url") String url) {
         this.packagingConfigurationId = packagingConfigurationId;
         this.url = url;
     }

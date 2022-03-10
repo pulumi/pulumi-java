@@ -21,10 +21,10 @@ public final class ContactTargetInfo {
      */
     private final Boolean isEssential;
 
-    @OutputCustomType.Constructor({"contactId","isEssential"})
+    @OutputCustomType.Constructor
     private ContactTargetInfo(
-        String contactId,
-        Boolean isEssential) {
+        @OutputCustomType.Parameter("contactId") String contactId,
+        @OutputCustomType.Parameter("isEssential") Boolean isEssential) {
         this.contactId = contactId;
         this.isEssential = isEssential;
     }

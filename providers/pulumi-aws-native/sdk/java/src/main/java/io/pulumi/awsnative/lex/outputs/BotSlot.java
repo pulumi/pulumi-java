@@ -21,14 +21,14 @@ public final class BotSlot {
     private final String slotTypeName;
     private final BotSlotValueElicitationSetting valueElicitationSetting;
 
-    @OutputCustomType.Constructor({"description","multipleValuesSetting","name","obfuscationSetting","slotTypeName","valueElicitationSetting"})
+    @OutputCustomType.Constructor
     private BotSlot(
-        @Nullable String description,
-        @Nullable BotMultipleValuesSetting multipleValuesSetting,
-        String name,
-        @Nullable BotObfuscationSetting obfuscationSetting,
-        String slotTypeName,
-        BotSlotValueElicitationSetting valueElicitationSetting) {
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("multipleValuesSetting") @Nullable BotMultipleValuesSetting multipleValuesSetting,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("obfuscationSetting") @Nullable BotObfuscationSetting obfuscationSetting,
+        @OutputCustomType.Parameter("slotTypeName") String slotTypeName,
+        @OutputCustomType.Parameter("valueElicitationSetting") BotSlotValueElicitationSetting valueElicitationSetting) {
         this.description = description;
         this.multipleValuesSetting = multipleValuesSetting;
         this.name = name;

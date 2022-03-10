@@ -14,10 +14,10 @@ public final class TaskDefinitionHostEntry {
     private final @Nullable String hostname;
     private final @Nullable String ipAddress;
 
-    @OutputCustomType.Constructor({"hostname","ipAddress"})
+    @OutputCustomType.Constructor
     private TaskDefinitionHostEntry(
-        @Nullable String hostname,
-        @Nullable String ipAddress) {
+        @OutputCustomType.Parameter("hostname") @Nullable String hostname,
+        @OutputCustomType.Parameter("ipAddress") @Nullable String ipAddress) {
         this.hostname = hostname;
         this.ipAddress = ipAddress;
     }

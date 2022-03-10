@@ -46,15 +46,15 @@ public final class GetDatabaseResult {
      */
     private final @Nullable List<DatabaseTag> tags;
 
-    @OutputCustomType.Constructor({"backupRetention","caCertificateIdentifier","databaseArn","preferredBackupWindow","preferredMaintenanceWindow","publiclyAccessible","tags"})
+    @OutputCustomType.Constructor
     private GetDatabaseResult(
-        @Nullable Boolean backupRetention,
-        @Nullable String caCertificateIdentifier,
-        @Nullable String databaseArn,
-        @Nullable String preferredBackupWindow,
-        @Nullable String preferredMaintenanceWindow,
-        @Nullable Boolean publiclyAccessible,
-        @Nullable List<DatabaseTag> tags) {
+        @OutputCustomType.Parameter("backupRetention") @Nullable Boolean backupRetention,
+        @OutputCustomType.Parameter("caCertificateIdentifier") @Nullable String caCertificateIdentifier,
+        @OutputCustomType.Parameter("databaseArn") @Nullable String databaseArn,
+        @OutputCustomType.Parameter("preferredBackupWindow") @Nullable String preferredBackupWindow,
+        @OutputCustomType.Parameter("preferredMaintenanceWindow") @Nullable String preferredMaintenanceWindow,
+        @OutputCustomType.Parameter("publiclyAccessible") @Nullable Boolean publiclyAccessible,
+        @OutputCustomType.Parameter("tags") @Nullable List<DatabaseTag> tags) {
         this.backupRetention = backupRetention;
         this.caCertificateIdentifier = caCertificateIdentifier;
         this.databaseArn = databaseArn;

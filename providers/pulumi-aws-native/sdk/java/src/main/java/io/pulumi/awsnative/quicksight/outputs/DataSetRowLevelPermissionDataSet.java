@@ -26,12 +26,12 @@ public final class DataSetRowLevelPermissionDataSet {
     private final @Nullable String namespace;
     private final DataSetRowLevelPermissionPolicy permissionPolicy;
 
-    @OutputCustomType.Constructor({"arn","formatVersion","namespace","permissionPolicy"})
+    @OutputCustomType.Constructor
     private DataSetRowLevelPermissionDataSet(
-        String arn,
-        @Nullable DataSetRowLevelPermissionFormatVersion formatVersion,
-        @Nullable String namespace,
-        DataSetRowLevelPermissionPolicy permissionPolicy) {
+        @OutputCustomType.Parameter("arn") String arn,
+        @OutputCustomType.Parameter("formatVersion") @Nullable DataSetRowLevelPermissionFormatVersion formatVersion,
+        @OutputCustomType.Parameter("namespace") @Nullable String namespace,
+        @OutputCustomType.Parameter("permissionPolicy") DataSetRowLevelPermissionPolicy permissionPolicy) {
         this.arn = arn;
         this.formatVersion = formatVersion;
         this.namespace = namespace;

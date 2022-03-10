@@ -14,10 +14,10 @@ public final class FilterDateFilter {
     private final @Nullable Integer endInclusive;
     private final @Nullable Integer startInclusive;
 
-    @OutputCustomType.Constructor({"endInclusive","startInclusive"})
+    @OutputCustomType.Constructor
     private FilterDateFilter(
-        @Nullable Integer endInclusive,
-        @Nullable Integer startInclusive) {
+        @OutputCustomType.Parameter("endInclusive") @Nullable Integer endInclusive,
+        @OutputCustomType.Parameter("startInclusive") @Nullable Integer startInclusive) {
         this.endInclusive = endInclusive;
         this.startInclusive = startInclusive;
     }

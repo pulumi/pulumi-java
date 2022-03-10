@@ -14,10 +14,10 @@ public final class SpotFleetTotalLocalStorageGBRequest {
     private final @Nullable Double max;
     private final @Nullable Double min;
 
-    @OutputCustomType.Constructor({"max","min"})
+    @OutputCustomType.Constructor
     private SpotFleetTotalLocalStorageGBRequest(
-        @Nullable Double max,
-        @Nullable Double min) {
+        @OutputCustomType.Parameter("max") @Nullable Double max,
+        @OutputCustomType.Parameter("min") @Nullable Double min) {
         this.max = max;
         this.min = min;
     }

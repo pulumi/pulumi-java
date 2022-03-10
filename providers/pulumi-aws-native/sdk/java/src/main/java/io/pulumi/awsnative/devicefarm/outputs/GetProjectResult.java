@@ -19,12 +19,12 @@ public final class GetProjectResult {
     private final @Nullable String name;
     private final @Nullable List<ProjectTag> tags;
 
-    @OutputCustomType.Constructor({"arn","defaultJobTimeoutMinutes","name","tags"})
+    @OutputCustomType.Constructor
     private GetProjectResult(
-        @Nullable String arn,
-        @Nullable Integer defaultJobTimeoutMinutes,
-        @Nullable String name,
-        @Nullable List<ProjectTag> tags) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("defaultJobTimeoutMinutes") @Nullable Integer defaultJobTimeoutMinutes,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("tags") @Nullable List<ProjectTag> tags) {
         this.arn = arn;
         this.defaultJobTimeoutMinutes = defaultJobTimeoutMinutes;
         this.name = name;

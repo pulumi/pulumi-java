@@ -28,11 +28,11 @@ public final class DetectorModelSetTimer {
      */
     private final String timerName;
 
-    @OutputCustomType.Constructor({"durationExpression","seconds","timerName"})
+    @OutputCustomType.Constructor
     private DetectorModelSetTimer(
-        @Nullable String durationExpression,
-        @Nullable Integer seconds,
-        String timerName) {
+        @OutputCustomType.Parameter("durationExpression") @Nullable String durationExpression,
+        @OutputCustomType.Parameter("seconds") @Nullable Integer seconds,
+        @OutputCustomType.Parameter("timerName") String timerName) {
         this.durationExpression = durationExpression;
         this.seconds = seconds;
         this.timerName = timerName;

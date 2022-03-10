@@ -62,17 +62,17 @@ public final class GetPrefixListResult {
      */
     private final @Nullable Integer version;
 
-    @OutputCustomType.Constructor({"addressFamily","arn","entries","maxEntries","ownerId","prefixListId","prefixListName","tags","version"})
+    @OutputCustomType.Constructor
     private GetPrefixListResult(
-        @Nullable PrefixListAddressFamily addressFamily,
-        @Nullable String arn,
-        @Nullable List<PrefixListEntry> entries,
-        @Nullable Integer maxEntries,
-        @Nullable String ownerId,
-        @Nullable String prefixListId,
-        @Nullable String prefixListName,
-        @Nullable List<PrefixListTag> tags,
-        @Nullable Integer version) {
+        @OutputCustomType.Parameter("addressFamily") @Nullable PrefixListAddressFamily addressFamily,
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("entries") @Nullable List<PrefixListEntry> entries,
+        @OutputCustomType.Parameter("maxEntries") @Nullable Integer maxEntries,
+        @OutputCustomType.Parameter("ownerId") @Nullable String ownerId,
+        @OutputCustomType.Parameter("prefixListId") @Nullable String prefixListId,
+        @OutputCustomType.Parameter("prefixListName") @Nullable String prefixListName,
+        @OutputCustomType.Parameter("tags") @Nullable List<PrefixListTag> tags,
+        @OutputCustomType.Parameter("version") @Nullable Integer version) {
         this.addressFamily = addressFamily;
         this.arn = arn;
         this.entries = entries;

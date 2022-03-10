@@ -52,17 +52,17 @@ public final class ModelQualityJobDefinitionEndpointInput {
      */
     private final @Nullable String startTimeOffset;
 
-    @OutputCustomType.Constructor({"endTimeOffset","endpointName","inferenceAttribute","localPath","probabilityAttribute","probabilityThresholdAttribute","s3DataDistributionType","s3InputMode","startTimeOffset"})
+    @OutputCustomType.Constructor
     private ModelQualityJobDefinitionEndpointInput(
-        @Nullable String endTimeOffset,
-        String endpointName,
-        @Nullable String inferenceAttribute,
-        String localPath,
-        @Nullable String probabilityAttribute,
-        @Nullable Double probabilityThresholdAttribute,
-        @Nullable ModelQualityJobDefinitionEndpointInputS3DataDistributionType s3DataDistributionType,
-        @Nullable ModelQualityJobDefinitionEndpointInputS3InputMode s3InputMode,
-        @Nullable String startTimeOffset) {
+        @OutputCustomType.Parameter("endTimeOffset") @Nullable String endTimeOffset,
+        @OutputCustomType.Parameter("endpointName") String endpointName,
+        @OutputCustomType.Parameter("inferenceAttribute") @Nullable String inferenceAttribute,
+        @OutputCustomType.Parameter("localPath") String localPath,
+        @OutputCustomType.Parameter("probabilityAttribute") @Nullable String probabilityAttribute,
+        @OutputCustomType.Parameter("probabilityThresholdAttribute") @Nullable Double probabilityThresholdAttribute,
+        @OutputCustomType.Parameter("s3DataDistributionType") @Nullable ModelQualityJobDefinitionEndpointInputS3DataDistributionType s3DataDistributionType,
+        @OutputCustomType.Parameter("s3InputMode") @Nullable ModelQualityJobDefinitionEndpointInputS3InputMode s3InputMode,
+        @OutputCustomType.Parameter("startTimeOffset") @Nullable String startTimeOffset) {
         this.endTimeOffset = endTimeOffset;
         this.endpointName = endpointName;
         this.inferenceAttribute = inferenceAttribute;

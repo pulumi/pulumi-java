@@ -15,10 +15,10 @@ public final class SchedulingPolicyShareAttributes {
     private final @Nullable String shareIdentifier;
     private final @Nullable Double weightFactor;
 
-    @OutputCustomType.Constructor({"shareIdentifier","weightFactor"})
+    @OutputCustomType.Constructor
     private SchedulingPolicyShareAttributes(
-        @Nullable String shareIdentifier,
-        @Nullable Double weightFactor) {
+        @OutputCustomType.Parameter("shareIdentifier") @Nullable String shareIdentifier,
+        @OutputCustomType.Parameter("weightFactor") @Nullable Double weightFactor) {
         this.shareIdentifier = shareIdentifier;
         this.weightFactor = weightFactor;
     }

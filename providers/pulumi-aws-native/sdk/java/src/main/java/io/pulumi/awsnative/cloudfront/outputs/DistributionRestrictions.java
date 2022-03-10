@@ -11,8 +11,8 @@ import java.util.Objects;
 public final class DistributionRestrictions {
     private final DistributionGeoRestriction geoRestriction;
 
-    @OutputCustomType.Constructor({"geoRestriction"})
-    private DistributionRestrictions(DistributionGeoRestriction geoRestriction) {
+    @OutputCustomType.Constructor
+    private DistributionRestrictions(@OutputCustomType.Parameter("geoRestriction") DistributionGeoRestriction geoRestriction) {
         this.geoRestriction = geoRestriction;
     }
 

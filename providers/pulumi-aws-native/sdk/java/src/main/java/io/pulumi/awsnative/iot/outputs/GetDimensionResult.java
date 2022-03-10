@@ -29,11 +29,11 @@ public final class GetDimensionResult {
      */
     private final @Nullable List<DimensionTag> tags;
 
-    @OutputCustomType.Constructor({"arn","stringValues","tags"})
+    @OutputCustomType.Constructor
     private GetDimensionResult(
-        @Nullable String arn,
-        @Nullable List<String> stringValues,
-        @Nullable List<DimensionTag> tags) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("stringValues") @Nullable List<String> stringValues,
+        @OutputCustomType.Parameter("tags") @Nullable List<DimensionTag> tags) {
         this.arn = arn;
         this.stringValues = stringValues;
         this.tags = tags;

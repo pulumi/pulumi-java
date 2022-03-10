@@ -11,8 +11,8 @@ import java.util.Objects;
 public final class RuleGroupDimension {
     private final String value;
 
-    @OutputCustomType.Constructor({"value"})
-    private RuleGroupDimension(String value) {
+    @OutputCustomType.Constructor
+    private RuleGroupDimension(@OutputCustomType.Parameter("value") String value) {
         this.value = value;
     }
 

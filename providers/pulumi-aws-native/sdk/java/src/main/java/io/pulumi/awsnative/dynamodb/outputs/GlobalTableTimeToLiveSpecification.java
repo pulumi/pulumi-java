@@ -15,10 +15,10 @@ public final class GlobalTableTimeToLiveSpecification {
     private final @Nullable String attributeName;
     private final Boolean enabled;
 
-    @OutputCustomType.Constructor({"attributeName","enabled"})
+    @OutputCustomType.Constructor
     private GlobalTableTimeToLiveSpecification(
-        @Nullable String attributeName,
-        Boolean enabled) {
+        @OutputCustomType.Parameter("attributeName") @Nullable String attributeName,
+        @OutputCustomType.Parameter("enabled") Boolean enabled) {
         this.attributeName = attributeName;
         this.enabled = enabled;
     }

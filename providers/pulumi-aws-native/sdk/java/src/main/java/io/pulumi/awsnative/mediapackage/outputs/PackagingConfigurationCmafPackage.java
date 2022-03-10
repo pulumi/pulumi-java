@@ -28,12 +28,12 @@ public final class PackagingConfigurationCmafPackage {
     private final @Nullable Boolean includeEncoderConfigurationInSegments;
     private final @Nullable Integer segmentDurationSeconds;
 
-    @OutputCustomType.Constructor({"encryption","hlsManifests","includeEncoderConfigurationInSegments","segmentDurationSeconds"})
+    @OutputCustomType.Constructor
     private PackagingConfigurationCmafPackage(
-        @Nullable PackagingConfigurationCmafEncryption encryption,
-        List<PackagingConfigurationHlsManifest> hlsManifests,
-        @Nullable Boolean includeEncoderConfigurationInSegments,
-        @Nullable Integer segmentDurationSeconds) {
+        @OutputCustomType.Parameter("encryption") @Nullable PackagingConfigurationCmafEncryption encryption,
+        @OutputCustomType.Parameter("hlsManifests") List<PackagingConfigurationHlsManifest> hlsManifests,
+        @OutputCustomType.Parameter("includeEncoderConfigurationInSegments") @Nullable Boolean includeEncoderConfigurationInSegments,
+        @OutputCustomType.Parameter("segmentDurationSeconds") @Nullable Integer segmentDurationSeconds) {
         this.encryption = encryption;
         this.hlsManifests = hlsManifests;
         this.includeEncoderConfigurationInSegments = includeEncoderConfigurationInSegments;

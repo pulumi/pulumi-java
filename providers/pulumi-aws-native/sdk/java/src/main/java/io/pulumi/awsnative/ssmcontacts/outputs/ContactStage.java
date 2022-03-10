@@ -23,10 +23,10 @@ public final class ContactStage {
      */
     private final @Nullable List<ContactTargets> targets;
 
-    @OutputCustomType.Constructor({"durationInMinutes","targets"})
+    @OutputCustomType.Constructor
     private ContactStage(
-        Integer durationInMinutes,
-        @Nullable List<ContactTargets> targets) {
+        @OutputCustomType.Parameter("durationInMinutes") Integer durationInMinutes,
+        @OutputCustomType.Parameter("targets") @Nullable List<ContactTargets> targets) {
         this.durationInMinutes = durationInMinutes;
         this.targets = targets;
     }

@@ -15,11 +15,11 @@ public final class TopicRuleStepFunctionsAction {
     private final String roleArn;
     private final String stateMachineName;
 
-    @OutputCustomType.Constructor({"executionNamePrefix","roleArn","stateMachineName"})
+    @OutputCustomType.Constructor
     private TopicRuleStepFunctionsAction(
-        @Nullable String executionNamePrefix,
-        String roleArn,
-        String stateMachineName) {
+        @OutputCustomType.Parameter("executionNamePrefix") @Nullable String executionNamePrefix,
+        @OutputCustomType.Parameter("roleArn") String roleArn,
+        @OutputCustomType.Parameter("stateMachineName") String stateMachineName) {
         this.executionNamePrefix = executionNamePrefix;
         this.roleArn = roleArn;
         this.stateMachineName = stateMachineName;

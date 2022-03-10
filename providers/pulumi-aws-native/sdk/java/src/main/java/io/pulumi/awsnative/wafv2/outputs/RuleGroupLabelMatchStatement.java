@@ -13,10 +13,10 @@ public final class RuleGroupLabelMatchStatement {
     private final String key;
     private final RuleGroupLabelMatchScope scope;
 
-    @OutputCustomType.Constructor({"key","scope"})
+    @OutputCustomType.Constructor
     private RuleGroupLabelMatchStatement(
-        String key,
-        RuleGroupLabelMatchScope scope) {
+        @OutputCustomType.Parameter("key") String key,
+        @OutputCustomType.Parameter("scope") RuleGroupLabelMatchScope scope) {
         this.key = key;
         this.scope = scope;
     }

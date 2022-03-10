@@ -27,11 +27,11 @@ public final class GetHostResult {
      */
     private final @Nullable String hostRecovery;
 
-    @OutputCustomType.Constructor({"autoPlacement","hostId","hostRecovery"})
+    @OutputCustomType.Constructor
     private GetHostResult(
-        @Nullable String autoPlacement,
-        @Nullable String hostId,
-        @Nullable String hostRecovery) {
+        @OutputCustomType.Parameter("autoPlacement") @Nullable String autoPlacement,
+        @OutputCustomType.Parameter("hostId") @Nullable String hostId,
+        @OutputCustomType.Parameter("hostRecovery") @Nullable String hostRecovery) {
         this.autoPlacement = autoPlacement;
         this.hostId = hostId;
         this.hostRecovery = hostRecovery;

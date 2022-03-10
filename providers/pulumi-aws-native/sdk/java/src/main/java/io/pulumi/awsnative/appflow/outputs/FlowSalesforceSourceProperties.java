@@ -16,11 +16,11 @@ public final class FlowSalesforceSourceProperties {
     private final @Nullable Boolean includeDeletedRecords;
     private final String object;
 
-    @OutputCustomType.Constructor({"enableDynamicFieldUpdate","includeDeletedRecords","object"})
+    @OutputCustomType.Constructor
     private FlowSalesforceSourceProperties(
-        @Nullable Boolean enableDynamicFieldUpdate,
-        @Nullable Boolean includeDeletedRecords,
-        String object) {
+        @OutputCustomType.Parameter("enableDynamicFieldUpdate") @Nullable Boolean enableDynamicFieldUpdate,
+        @OutputCustomType.Parameter("includeDeletedRecords") @Nullable Boolean includeDeletedRecords,
+        @OutputCustomType.Parameter("object") String object) {
         this.enableDynamicFieldUpdate = enableDynamicFieldUpdate;
         this.includeDeletedRecords = includeDeletedRecords;
         this.object = object;

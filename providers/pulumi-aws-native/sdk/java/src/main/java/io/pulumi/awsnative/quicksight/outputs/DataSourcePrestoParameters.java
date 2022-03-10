@@ -26,11 +26,11 @@ public final class DataSourcePrestoParameters {
      */
     private final Double port;
 
-    @OutputCustomType.Constructor({"catalog","host","port"})
+    @OutputCustomType.Constructor
     private DataSourcePrestoParameters(
-        String catalog,
-        String host,
-        Double port) {
+        @OutputCustomType.Parameter("catalog") String catalog,
+        @OutputCustomType.Parameter("host") String host,
+        @OutputCustomType.Parameter("port") Double port) {
         this.catalog = catalog;
         this.host = host;
         this.port = port;

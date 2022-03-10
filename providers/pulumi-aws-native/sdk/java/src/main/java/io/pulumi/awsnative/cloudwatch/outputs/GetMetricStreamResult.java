@@ -59,17 +59,17 @@ public final class GetMetricStreamResult {
      */
     private final @Nullable String state;
 
-    @OutputCustomType.Constructor({"arn","creationDate","excludeFilters","firehoseArn","includeFilters","lastUpdateDate","outputFormat","roleArn","state"})
+    @OutputCustomType.Constructor
     private GetMetricStreamResult(
-        @Nullable String arn,
-        @Nullable String creationDate,
-        @Nullable List<MetricStreamFilter> excludeFilters,
-        @Nullable String firehoseArn,
-        @Nullable List<MetricStreamFilter> includeFilters,
-        @Nullable String lastUpdateDate,
-        @Nullable String outputFormat,
-        @Nullable String roleArn,
-        @Nullable String state) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("creationDate") @Nullable String creationDate,
+        @OutputCustomType.Parameter("excludeFilters") @Nullable List<MetricStreamFilter> excludeFilters,
+        @OutputCustomType.Parameter("firehoseArn") @Nullable String firehoseArn,
+        @OutputCustomType.Parameter("includeFilters") @Nullable List<MetricStreamFilter> includeFilters,
+        @OutputCustomType.Parameter("lastUpdateDate") @Nullable String lastUpdateDate,
+        @OutputCustomType.Parameter("outputFormat") @Nullable String outputFormat,
+        @OutputCustomType.Parameter("roleArn") @Nullable String roleArn,
+        @OutputCustomType.Parameter("state") @Nullable String state) {
         this.arn = arn;
         this.creationDate = creationDate;
         this.excludeFilters = excludeFilters;

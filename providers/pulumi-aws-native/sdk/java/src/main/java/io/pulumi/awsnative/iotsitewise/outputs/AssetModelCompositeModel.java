@@ -34,12 +34,12 @@ public final class AssetModelCompositeModel {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"compositeModelProperties","description","name","type"})
+    @OutputCustomType.Constructor
     private AssetModelCompositeModel(
-        @Nullable List<AssetModelProperty> compositeModelProperties,
-        @Nullable String description,
-        String name,
-        String type) {
+        @OutputCustomType.Parameter("compositeModelProperties") @Nullable List<AssetModelProperty> compositeModelProperties,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("type") String type) {
         this.compositeModelProperties = compositeModelProperties;
         this.description = description;
         this.name = name;

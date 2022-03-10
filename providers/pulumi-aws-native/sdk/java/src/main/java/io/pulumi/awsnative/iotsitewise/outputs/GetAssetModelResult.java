@@ -57,16 +57,16 @@ public final class GetAssetModelResult {
      */
     private final @Nullable List<AssetModelTag> tags;
 
-    @OutputCustomType.Constructor({"assetModelArn","assetModelCompositeModels","assetModelDescription","assetModelHierarchies","assetModelId","assetModelName","assetModelProperties","tags"})
+    @OutputCustomType.Constructor
     private GetAssetModelResult(
-        @Nullable String assetModelArn,
-        @Nullable List<AssetModelCompositeModel> assetModelCompositeModels,
-        @Nullable String assetModelDescription,
-        @Nullable List<AssetModelHierarchy> assetModelHierarchies,
-        @Nullable String assetModelId,
-        @Nullable String assetModelName,
-        @Nullable List<AssetModelProperty> assetModelProperties,
-        @Nullable List<AssetModelTag> tags) {
+        @OutputCustomType.Parameter("assetModelArn") @Nullable String assetModelArn,
+        @OutputCustomType.Parameter("assetModelCompositeModels") @Nullable List<AssetModelCompositeModel> assetModelCompositeModels,
+        @OutputCustomType.Parameter("assetModelDescription") @Nullable String assetModelDescription,
+        @OutputCustomType.Parameter("assetModelHierarchies") @Nullable List<AssetModelHierarchy> assetModelHierarchies,
+        @OutputCustomType.Parameter("assetModelId") @Nullable String assetModelId,
+        @OutputCustomType.Parameter("assetModelName") @Nullable String assetModelName,
+        @OutputCustomType.Parameter("assetModelProperties") @Nullable List<AssetModelProperty> assetModelProperties,
+        @OutputCustomType.Parameter("tags") @Nullable List<AssetModelTag> tags) {
         this.assetModelArn = assetModelArn;
         this.assetModelCompositeModels = assetModelCompositeModels;
         this.assetModelDescription = assetModelDescription;

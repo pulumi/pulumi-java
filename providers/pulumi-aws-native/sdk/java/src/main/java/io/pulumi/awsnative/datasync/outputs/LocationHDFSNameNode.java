@@ -21,10 +21,10 @@ public final class LocationHDFSNameNode {
      */
     private final Integer port;
 
-    @OutputCustomType.Constructor({"hostname","port"})
+    @OutputCustomType.Constructor
     private LocationHDFSNameNode(
-        String hostname,
-        Integer port) {
+        @OutputCustomType.Parameter("hostname") String hostname,
+        @OutputCustomType.Parameter("port") Integer port) {
         this.hostname = hostname;
         this.port = port;
     }

@@ -61,17 +61,17 @@ public final class AppMonitorConfiguration {
      */
     private final @Nullable List<AppMonitorTelemetry> telemetries;
 
-    @OutputCustomType.Constructor({"allowCookies","enableXRay","excludedPages","favoritePages","guestRoleArn","identityPoolId","includedPages","sessionSampleRate","telemetries"})
+    @OutputCustomType.Constructor
     private AppMonitorConfiguration(
-        @Nullable Boolean allowCookies,
-        @Nullable Boolean enableXRay,
-        @Nullable List<String> excludedPages,
-        @Nullable List<String> favoritePages,
-        @Nullable String guestRoleArn,
-        @Nullable String identityPoolId,
-        @Nullable List<String> includedPages,
-        @Nullable Double sessionSampleRate,
-        @Nullable List<AppMonitorTelemetry> telemetries) {
+        @OutputCustomType.Parameter("allowCookies") @Nullable Boolean allowCookies,
+        @OutputCustomType.Parameter("enableXRay") @Nullable Boolean enableXRay,
+        @OutputCustomType.Parameter("excludedPages") @Nullable List<String> excludedPages,
+        @OutputCustomType.Parameter("favoritePages") @Nullable List<String> favoritePages,
+        @OutputCustomType.Parameter("guestRoleArn") @Nullable String guestRoleArn,
+        @OutputCustomType.Parameter("identityPoolId") @Nullable String identityPoolId,
+        @OutputCustomType.Parameter("includedPages") @Nullable List<String> includedPages,
+        @OutputCustomType.Parameter("sessionSampleRate") @Nullable Double sessionSampleRate,
+        @OutputCustomType.Parameter("telemetries") @Nullable List<AppMonitorTelemetry> telemetries) {
         this.allowCookies = allowCookies;
         this.enableXRay = enableXRay;
         this.excludedPages = excludedPages;

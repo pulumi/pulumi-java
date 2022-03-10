@@ -23,16 +23,16 @@ public final class GetPackageVersionResult {
     private final @Nullable String statusDescription;
     private final @Nullable String updatedLatestPatchVersion;
 
-    @OutputCustomType.Constructor({"isLatestPatch","markLatest","packageArn","packageName","registeredTime","status","statusDescription","updatedLatestPatchVersion"})
+    @OutputCustomType.Constructor
     private GetPackageVersionResult(
-        @Nullable Boolean isLatestPatch,
-        @Nullable Boolean markLatest,
-        @Nullable String packageArn,
-        @Nullable String packageName,
-        @Nullable Integer registeredTime,
-        @Nullable PackageVersionStatus status,
-        @Nullable String statusDescription,
-        @Nullable String updatedLatestPatchVersion) {
+        @OutputCustomType.Parameter("isLatestPatch") @Nullable Boolean isLatestPatch,
+        @OutputCustomType.Parameter("markLatest") @Nullable Boolean markLatest,
+        @OutputCustomType.Parameter("packageArn") @Nullable String packageArn,
+        @OutputCustomType.Parameter("packageName") @Nullable String packageName,
+        @OutputCustomType.Parameter("registeredTime") @Nullable Integer registeredTime,
+        @OutputCustomType.Parameter("status") @Nullable PackageVersionStatus status,
+        @OutputCustomType.Parameter("statusDescription") @Nullable String statusDescription,
+        @OutputCustomType.Parameter("updatedLatestPatchVersion") @Nullable String updatedLatestPatchVersion) {
         this.isLatestPatch = isLatestPatch;
         this.markLatest = markLatest;
         this.packageArn = packageArn;

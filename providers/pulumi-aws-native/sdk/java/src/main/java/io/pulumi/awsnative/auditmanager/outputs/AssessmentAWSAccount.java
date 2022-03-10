@@ -15,11 +15,11 @@ public final class AssessmentAWSAccount {
     private final @Nullable String id;
     private final @Nullable String name;
 
-    @OutputCustomType.Constructor({"emailAddress","id","name"})
+    @OutputCustomType.Constructor
     private AssessmentAWSAccount(
-        @Nullable String emailAddress,
-        @Nullable String id,
-        @Nullable String name) {
+        @OutputCustomType.Parameter("emailAddress") @Nullable String emailAddress,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("name") @Nullable String name) {
         this.emailAddress = emailAddress;
         this.id = id;
         this.name = name;

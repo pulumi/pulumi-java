@@ -20,10 +20,10 @@ public final class BotResponseSpecification {
     private final @Nullable Boolean allowInterrupt;
     private final List<BotMessageGroup> messageGroupsList;
 
-    @OutputCustomType.Constructor({"allowInterrupt","messageGroupsList"})
+    @OutputCustomType.Constructor
     private BotResponseSpecification(
-        @Nullable Boolean allowInterrupt,
-        List<BotMessageGroup> messageGroupsList) {
+        @OutputCustomType.Parameter("allowInterrupt") @Nullable Boolean allowInterrupt,
+        @OutputCustomType.Parameter("messageGroupsList") List<BotMessageGroup> messageGroupsList) {
         this.allowInterrupt = allowInterrupt;
         this.messageGroupsList = messageGroupsList;
     }

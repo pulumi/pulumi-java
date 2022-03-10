@@ -16,11 +16,11 @@ public final class GetPublicKeyResult {
     private final @Nullable String id;
     private final @Nullable PublicKeyConfig publicKeyConfig;
 
-    @OutputCustomType.Constructor({"createdTime","id","publicKeyConfig"})
+    @OutputCustomType.Constructor
     private GetPublicKeyResult(
-        @Nullable String createdTime,
-        @Nullable String id,
-        @Nullable PublicKeyConfig publicKeyConfig) {
+        @OutputCustomType.Parameter("createdTime") @Nullable String createdTime,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("publicKeyConfig") @Nullable PublicKeyConfig publicKeyConfig) {
         this.createdTime = createdTime;
         this.id = id;
         this.publicKeyConfig = publicKeyConfig;

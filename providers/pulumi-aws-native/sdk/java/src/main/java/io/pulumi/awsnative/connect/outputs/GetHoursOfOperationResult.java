@@ -50,15 +50,15 @@ public final class GetHoursOfOperationResult {
      */
     private final @Nullable String timeZone;
 
-    @OutputCustomType.Constructor({"config","description","hoursOfOperationArn","instanceArn","name","tags","timeZone"})
+    @OutputCustomType.Constructor
     private GetHoursOfOperationResult(
-        @Nullable List<HoursOfOperationConfig> config,
-        @Nullable String description,
-        @Nullable String hoursOfOperationArn,
-        @Nullable String instanceArn,
-        @Nullable String name,
-        @Nullable List<HoursOfOperationTag> tags,
-        @Nullable String timeZone) {
+        @OutputCustomType.Parameter("config") @Nullable List<HoursOfOperationConfig> config,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("hoursOfOperationArn") @Nullable String hoursOfOperationArn,
+        @OutputCustomType.Parameter("instanceArn") @Nullable String instanceArn,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("tags") @Nullable List<HoursOfOperationTag> tags,
+        @OutputCustomType.Parameter("timeZone") @Nullable String timeZone) {
         this.config = config;
         this.description = description;
         this.hoursOfOperationArn = hoursOfOperationArn;

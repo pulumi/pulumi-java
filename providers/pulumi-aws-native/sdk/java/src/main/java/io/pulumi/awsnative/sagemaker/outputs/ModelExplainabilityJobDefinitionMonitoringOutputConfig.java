@@ -24,10 +24,10 @@ public final class ModelExplainabilityJobDefinitionMonitoringOutputConfig {
      */
     private final List<ModelExplainabilityJobDefinitionMonitoringOutput> monitoringOutputs;
 
-    @OutputCustomType.Constructor({"kmsKeyId","monitoringOutputs"})
+    @OutputCustomType.Constructor
     private ModelExplainabilityJobDefinitionMonitoringOutputConfig(
-        @Nullable String kmsKeyId,
-        List<ModelExplainabilityJobDefinitionMonitoringOutput> monitoringOutputs) {
+        @OutputCustomType.Parameter("kmsKeyId") @Nullable String kmsKeyId,
+        @OutputCustomType.Parameter("monitoringOutputs") List<ModelExplainabilityJobDefinitionMonitoringOutput> monitoringOutputs) {
         this.kmsKeyId = kmsKeyId;
         this.monitoringOutputs = monitoringOutputs;
     }

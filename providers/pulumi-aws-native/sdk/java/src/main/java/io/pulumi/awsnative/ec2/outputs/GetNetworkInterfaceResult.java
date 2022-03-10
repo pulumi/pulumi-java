@@ -73,19 +73,19 @@ public final class GetNetworkInterfaceResult {
      */
     private final @Nullable List<NetworkInterfaceTag> tags;
 
-    @OutputCustomType.Constructor({"description","groupSet","id","ipv6AddressCount","ipv6Addresses","primaryPrivateIpAddress","privateIpAddresses","secondaryPrivateIpAddressCount","secondaryPrivateIpAddresses","sourceDestCheck","tags"})
+    @OutputCustomType.Constructor
     private GetNetworkInterfaceResult(
-        @Nullable String description,
-        @Nullable List<String> groupSet,
-        @Nullable String id,
-        @Nullable Integer ipv6AddressCount,
-        @Nullable List<NetworkInterfaceInstanceIpv6Address> ipv6Addresses,
-        @Nullable String primaryPrivateIpAddress,
-        @Nullable List<NetworkInterfacePrivateIpAddressSpecification> privateIpAddresses,
-        @Nullable Integer secondaryPrivateIpAddressCount,
-        @Nullable List<String> secondaryPrivateIpAddresses,
-        @Nullable Boolean sourceDestCheck,
-        @Nullable List<NetworkInterfaceTag> tags) {
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("groupSet") @Nullable List<String> groupSet,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("ipv6AddressCount") @Nullable Integer ipv6AddressCount,
+        @OutputCustomType.Parameter("ipv6Addresses") @Nullable List<NetworkInterfaceInstanceIpv6Address> ipv6Addresses,
+        @OutputCustomType.Parameter("primaryPrivateIpAddress") @Nullable String primaryPrivateIpAddress,
+        @OutputCustomType.Parameter("privateIpAddresses") @Nullable List<NetworkInterfacePrivateIpAddressSpecification> privateIpAddresses,
+        @OutputCustomType.Parameter("secondaryPrivateIpAddressCount") @Nullable Integer secondaryPrivateIpAddressCount,
+        @OutputCustomType.Parameter("secondaryPrivateIpAddresses") @Nullable List<String> secondaryPrivateIpAddresses,
+        @OutputCustomType.Parameter("sourceDestCheck") @Nullable Boolean sourceDestCheck,
+        @OutputCustomType.Parameter("tags") @Nullable List<NetworkInterfaceTag> tags) {
         this.description = description;
         this.groupSet = groupSet;
         this.id = id;

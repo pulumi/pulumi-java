@@ -45,25 +45,25 @@ public final class DataSourceParameters {
     private final @Nullable DataSourceSqlServerParameters sqlServerParameters;
     private final @Nullable DataSourceTeradataParameters teradataParameters;
 
-    @OutputCustomType.Constructor({"amazonElasticsearchParameters","amazonOpenSearchParameters","athenaParameters","auroraParameters","auroraPostgreSqlParameters","mariaDbParameters","mySqlParameters","oracleParameters","postgreSqlParameters","prestoParameters","rdsParameters","redshiftParameters","s3Parameters","snowflakeParameters","sparkParameters","sqlServerParameters","teradataParameters"})
+    @OutputCustomType.Constructor
     private DataSourceParameters(
-        @Nullable DataSourceAmazonElasticsearchParameters amazonElasticsearchParameters,
-        @Nullable DataSourceAmazonOpenSearchParameters amazonOpenSearchParameters,
-        @Nullable DataSourceAthenaParameters athenaParameters,
-        @Nullable DataSourceAuroraParameters auroraParameters,
-        @Nullable DataSourceAuroraPostgreSqlParameters auroraPostgreSqlParameters,
-        @Nullable DataSourceMariaDbParameters mariaDbParameters,
-        @Nullable DataSourceMySqlParameters mySqlParameters,
-        @Nullable DataSourceOracleParameters oracleParameters,
-        @Nullable DataSourcePostgreSqlParameters postgreSqlParameters,
-        @Nullable DataSourcePrestoParameters prestoParameters,
-        @Nullable DataSourceRdsParameters rdsParameters,
-        @Nullable DataSourceRedshiftParameters redshiftParameters,
-        @Nullable DataSourceS3Parameters s3Parameters,
-        @Nullable DataSourceSnowflakeParameters snowflakeParameters,
-        @Nullable DataSourceSparkParameters sparkParameters,
-        @Nullable DataSourceSqlServerParameters sqlServerParameters,
-        @Nullable DataSourceTeradataParameters teradataParameters) {
+        @OutputCustomType.Parameter("amazonElasticsearchParameters") @Nullable DataSourceAmazonElasticsearchParameters amazonElasticsearchParameters,
+        @OutputCustomType.Parameter("amazonOpenSearchParameters") @Nullable DataSourceAmazonOpenSearchParameters amazonOpenSearchParameters,
+        @OutputCustomType.Parameter("athenaParameters") @Nullable DataSourceAthenaParameters athenaParameters,
+        @OutputCustomType.Parameter("auroraParameters") @Nullable DataSourceAuroraParameters auroraParameters,
+        @OutputCustomType.Parameter("auroraPostgreSqlParameters") @Nullable DataSourceAuroraPostgreSqlParameters auroraPostgreSqlParameters,
+        @OutputCustomType.Parameter("mariaDbParameters") @Nullable DataSourceMariaDbParameters mariaDbParameters,
+        @OutputCustomType.Parameter("mySqlParameters") @Nullable DataSourceMySqlParameters mySqlParameters,
+        @OutputCustomType.Parameter("oracleParameters") @Nullable DataSourceOracleParameters oracleParameters,
+        @OutputCustomType.Parameter("postgreSqlParameters") @Nullable DataSourcePostgreSqlParameters postgreSqlParameters,
+        @OutputCustomType.Parameter("prestoParameters") @Nullable DataSourcePrestoParameters prestoParameters,
+        @OutputCustomType.Parameter("rdsParameters") @Nullable DataSourceRdsParameters rdsParameters,
+        @OutputCustomType.Parameter("redshiftParameters") @Nullable DataSourceRedshiftParameters redshiftParameters,
+        @OutputCustomType.Parameter("s3Parameters") @Nullable DataSourceS3Parameters s3Parameters,
+        @OutputCustomType.Parameter("snowflakeParameters") @Nullable DataSourceSnowflakeParameters snowflakeParameters,
+        @OutputCustomType.Parameter("sparkParameters") @Nullable DataSourceSparkParameters sparkParameters,
+        @OutputCustomType.Parameter("sqlServerParameters") @Nullable DataSourceSqlServerParameters sqlServerParameters,
+        @OutputCustomType.Parameter("teradataParameters") @Nullable DataSourceTeradataParameters teradataParameters) {
         this.amazonElasticsearchParameters = amazonElasticsearchParameters;
         this.amazonOpenSearchParameters = amazonOpenSearchParameters;
         this.athenaParameters = athenaParameters;

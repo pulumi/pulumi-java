@@ -15,10 +15,10 @@ public final class SpotFleetPrivateIpAddressSpecification {
     private final @Nullable Boolean primary;
     private final String privateIpAddress;
 
-    @OutputCustomType.Constructor({"primary","privateIpAddress"})
+    @OutputCustomType.Constructor
     private SpotFleetPrivateIpAddressSpecification(
-        @Nullable Boolean primary,
-        String privateIpAddress) {
+        @OutputCustomType.Parameter("primary") @Nullable Boolean primary,
+        @OutputCustomType.Parameter("privateIpAddress") String privateIpAddress) {
         this.primary = primary;
         this.privateIpAddress = privateIpAddress;
     }

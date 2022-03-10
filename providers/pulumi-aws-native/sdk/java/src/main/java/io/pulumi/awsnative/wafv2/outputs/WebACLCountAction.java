@@ -13,8 +13,8 @@ import javax.annotation.Nullable;
 public final class WebACLCountAction {
     private final @Nullable WebACLCustomRequestHandling customRequestHandling;
 
-    @OutputCustomType.Constructor({"customRequestHandling"})
-    private WebACLCountAction(@Nullable WebACLCustomRequestHandling customRequestHandling) {
+    @OutputCustomType.Constructor
+    private WebACLCountAction(@OutputCustomType.Parameter("customRequestHandling") @Nullable WebACLCustomRequestHandling customRequestHandling) {
         this.customRequestHandling = customRequestHandling;
     }
 

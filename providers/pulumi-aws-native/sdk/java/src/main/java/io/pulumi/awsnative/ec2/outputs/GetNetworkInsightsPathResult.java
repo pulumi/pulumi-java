@@ -18,12 +18,12 @@ public final class GetNetworkInsightsPathResult {
     private final @Nullable String networkInsightsPathId;
     private final @Nullable List<NetworkInsightsPathTag> tags;
 
-    @OutputCustomType.Constructor({"createdDate","networkInsightsPathArn","networkInsightsPathId","tags"})
+    @OutputCustomType.Constructor
     private GetNetworkInsightsPathResult(
-        @Nullable String createdDate,
-        @Nullable String networkInsightsPathArn,
-        @Nullable String networkInsightsPathId,
-        @Nullable List<NetworkInsightsPathTag> tags) {
+        @OutputCustomType.Parameter("createdDate") @Nullable String createdDate,
+        @OutputCustomType.Parameter("networkInsightsPathArn") @Nullable String networkInsightsPathArn,
+        @OutputCustomType.Parameter("networkInsightsPathId") @Nullable String networkInsightsPathId,
+        @OutputCustomType.Parameter("tags") @Nullable List<NetworkInsightsPathTag> tags) {
         this.createdDate = createdDate;
         this.networkInsightsPathArn = networkInsightsPathArn;
         this.networkInsightsPathId = networkInsightsPathId;

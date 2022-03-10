@@ -38,17 +38,17 @@ public final class MonitoringScheduleMonitoringJobDefinition {
     private final String roleArn;
     private final @Nullable MonitoringScheduleStoppingCondition stoppingCondition;
 
-    @OutputCustomType.Constructor({"baselineConfig","environment","monitoringAppSpecification","monitoringInputs","monitoringOutputConfig","monitoringResources","networkConfig","roleArn","stoppingCondition"})
+    @OutputCustomType.Constructor
     private MonitoringScheduleMonitoringJobDefinition(
-        @Nullable MonitoringScheduleBaselineConfig baselineConfig,
-        @Nullable Object environment,
-        MonitoringScheduleMonitoringAppSpecification monitoringAppSpecification,
-        List<MonitoringScheduleMonitoringInput> monitoringInputs,
-        MonitoringScheduleMonitoringOutputConfig monitoringOutputConfig,
-        MonitoringScheduleMonitoringResources monitoringResources,
-        @Nullable MonitoringScheduleNetworkConfig networkConfig,
-        String roleArn,
-        @Nullable MonitoringScheduleStoppingCondition stoppingCondition) {
+        @OutputCustomType.Parameter("baselineConfig") @Nullable MonitoringScheduleBaselineConfig baselineConfig,
+        @OutputCustomType.Parameter("environment") @Nullable Object environment,
+        @OutputCustomType.Parameter("monitoringAppSpecification") MonitoringScheduleMonitoringAppSpecification monitoringAppSpecification,
+        @OutputCustomType.Parameter("monitoringInputs") List<MonitoringScheduleMonitoringInput> monitoringInputs,
+        @OutputCustomType.Parameter("monitoringOutputConfig") MonitoringScheduleMonitoringOutputConfig monitoringOutputConfig,
+        @OutputCustomType.Parameter("monitoringResources") MonitoringScheduleMonitoringResources monitoringResources,
+        @OutputCustomType.Parameter("networkConfig") @Nullable MonitoringScheduleNetworkConfig networkConfig,
+        @OutputCustomType.Parameter("roleArn") String roleArn,
+        @OutputCustomType.Parameter("stoppingCondition") @Nullable MonitoringScheduleStoppingCondition stoppingCondition) {
         this.baselineConfig = baselineConfig;
         this.environment = environment;
         this.monitoringAppSpecification = monitoringAppSpecification;

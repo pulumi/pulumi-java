@@ -49,15 +49,15 @@ public final class GetSlackChannelConfigurationResult {
      */
     private final @Nullable Boolean userRoleRequired;
 
-    @OutputCustomType.Constructor({"arn","guardrailPolicies","iamRoleArn","loggingLevel","slackChannelId","snsTopicArns","userRoleRequired"})
+    @OutputCustomType.Constructor
     private GetSlackChannelConfigurationResult(
-        @Nullable String arn,
-        @Nullable List<String> guardrailPolicies,
-        @Nullable String iamRoleArn,
-        @Nullable String loggingLevel,
-        @Nullable String slackChannelId,
-        @Nullable List<String> snsTopicArns,
-        @Nullable Boolean userRoleRequired) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("guardrailPolicies") @Nullable List<String> guardrailPolicies,
+        @OutputCustomType.Parameter("iamRoleArn") @Nullable String iamRoleArn,
+        @OutputCustomType.Parameter("loggingLevel") @Nullable String loggingLevel,
+        @OutputCustomType.Parameter("slackChannelId") @Nullable String slackChannelId,
+        @OutputCustomType.Parameter("snsTopicArns") @Nullable List<String> snsTopicArns,
+        @OutputCustomType.Parameter("userRoleRequired") @Nullable Boolean userRoleRequired) {
         this.arn = arn;
         this.guardrailPolicies = guardrailPolicies;
         this.iamRoleArn = iamRoleArn;

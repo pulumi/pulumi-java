@@ -13,8 +13,8 @@ import javax.annotation.Nullable;
 public final class ConfigTrackingConfig {
     private final @Nullable ConfigTrackingConfigAutotrack autotrack;
 
-    @OutputCustomType.Constructor({"autotrack"})
-    private ConfigTrackingConfig(@Nullable ConfigTrackingConfigAutotrack autotrack) {
+    @OutputCustomType.Constructor
+    private ConfigTrackingConfig(@OutputCustomType.Parameter("autotrack") @Nullable ConfigTrackingConfigAutotrack autotrack) {
         this.autotrack = autotrack;
     }
 

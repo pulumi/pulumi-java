@@ -17,11 +17,11 @@ public final class GlobalTableReplicaGlobalSecondaryIndexSpecification {
     private final String indexName;
     private final @Nullable GlobalTableReadProvisionedThroughputSettings readProvisionedThroughputSettings;
 
-    @OutputCustomType.Constructor({"contributorInsightsSpecification","indexName","readProvisionedThroughputSettings"})
+    @OutputCustomType.Constructor
     private GlobalTableReplicaGlobalSecondaryIndexSpecification(
-        @Nullable GlobalTableContributorInsightsSpecification contributorInsightsSpecification,
-        String indexName,
-        @Nullable GlobalTableReadProvisionedThroughputSettings readProvisionedThroughputSettings) {
+        @OutputCustomType.Parameter("contributorInsightsSpecification") @Nullable GlobalTableContributorInsightsSpecification contributorInsightsSpecification,
+        @OutputCustomType.Parameter("indexName") String indexName,
+        @OutputCustomType.Parameter("readProvisionedThroughputSettings") @Nullable GlobalTableReadProvisionedThroughputSettings readProvisionedThroughputSettings) {
         this.contributorInsightsSpecification = contributorInsightsSpecification;
         this.indexName = indexName;
         this.readProvisionedThroughputSettings = readProvisionedThroughputSettings;

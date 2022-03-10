@@ -17,8 +17,8 @@ public final class StorageLensActivityMetrics {
      */
     private final @Nullable Boolean isEnabled;
 
-    @OutputCustomType.Constructor({"isEnabled"})
-    private StorageLensActivityMetrics(@Nullable Boolean isEnabled) {
+    @OutputCustomType.Constructor
+    private StorageLensActivityMetrics(@OutputCustomType.Parameter("isEnabled") @Nullable Boolean isEnabled) {
         this.isEnabled = isEnabled;
     }
 

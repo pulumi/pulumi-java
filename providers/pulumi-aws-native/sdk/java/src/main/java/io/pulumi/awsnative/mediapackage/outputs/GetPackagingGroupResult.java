@@ -34,12 +34,12 @@ public final class GetPackagingGroupResult {
      */
     private final @Nullable PackagingGroupLogConfiguration egressAccessLogs;
 
-    @OutputCustomType.Constructor({"arn","authorization","domainName","egressAccessLogs"})
+    @OutputCustomType.Constructor
     private GetPackagingGroupResult(
-        @Nullable String arn,
-        @Nullable PackagingGroupAuthorization authorization,
-        @Nullable String domainName,
-        @Nullable PackagingGroupLogConfiguration egressAccessLogs) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("authorization") @Nullable PackagingGroupAuthorization authorization,
+        @OutputCustomType.Parameter("domainName") @Nullable String domainName,
+        @OutputCustomType.Parameter("egressAccessLogs") @Nullable PackagingGroupLogConfiguration egressAccessLogs) {
         this.arn = arn;
         this.authorization = authorization;
         this.domainName = domainName;

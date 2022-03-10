@@ -22,14 +22,14 @@ public final class GetAuthorizerResult {
     private final @Nullable String tokenKeyName;
     private final @Nullable Object tokenSigningPublicKeys;
 
-    @OutputCustomType.Constructor({"arn","authorizerFunctionArn","status","tags","tokenKeyName","tokenSigningPublicKeys"})
+    @OutputCustomType.Constructor
     private GetAuthorizerResult(
-        @Nullable String arn,
-        @Nullable String authorizerFunctionArn,
-        @Nullable AuthorizerStatus status,
-        @Nullable List<AuthorizerTag> tags,
-        @Nullable String tokenKeyName,
-        @Nullable Object tokenSigningPublicKeys) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("authorizerFunctionArn") @Nullable String authorizerFunctionArn,
+        @OutputCustomType.Parameter("status") @Nullable AuthorizerStatus status,
+        @OutputCustomType.Parameter("tags") @Nullable List<AuthorizerTag> tags,
+        @OutputCustomType.Parameter("tokenKeyName") @Nullable String tokenKeyName,
+        @OutputCustomType.Parameter("tokenSigningPublicKeys") @Nullable Object tokenSigningPublicKeys) {
         this.arn = arn;
         this.authorizerFunctionArn = authorizerFunctionArn;
         this.status = status;

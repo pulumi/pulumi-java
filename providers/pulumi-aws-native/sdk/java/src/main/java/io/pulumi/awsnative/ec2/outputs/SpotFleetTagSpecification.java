@@ -16,10 +16,10 @@ public final class SpotFleetTagSpecification {
     private final @Nullable SpotFleetTagSpecificationResourceType resourceType;
     private final @Nullable List<SpotFleetTag> tags;
 
-    @OutputCustomType.Constructor({"resourceType","tags"})
+    @OutputCustomType.Constructor
     private SpotFleetTagSpecification(
-        @Nullable SpotFleetTagSpecificationResourceType resourceType,
-        @Nullable List<SpotFleetTag> tags) {
+        @OutputCustomType.Parameter("resourceType") @Nullable SpotFleetTagSpecificationResourceType resourceType,
+        @OutputCustomType.Parameter("tags") @Nullable List<SpotFleetTag> tags) {
         this.resourceType = resourceType;
         this.tags = tags;
     }

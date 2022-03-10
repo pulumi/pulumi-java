@@ -12,10 +12,10 @@ public final class ServiceDeploymentCircuitBreaker {
     private final Boolean enable;
     private final Boolean rollback;
 
-    @OutputCustomType.Constructor({"enable","rollback"})
+    @OutputCustomType.Constructor
     private ServiceDeploymentCircuitBreaker(
-        Boolean enable,
-        Boolean rollback) {
+        @OutputCustomType.Parameter("enable") Boolean enable,
+        @OutputCustomType.Parameter("rollback") Boolean rollback) {
         this.enable = enable;
         this.rollback = rollback;
     }

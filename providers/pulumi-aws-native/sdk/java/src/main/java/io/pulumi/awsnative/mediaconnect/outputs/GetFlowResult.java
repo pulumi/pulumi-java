@@ -34,12 +34,12 @@ public final class GetFlowResult {
      */
     private final @Nullable FlowFailoverConfig sourceFailoverConfig;
 
-    @OutputCustomType.Constructor({"flowArn","flowAvailabilityZone","source","sourceFailoverConfig"})
+    @OutputCustomType.Constructor
     private GetFlowResult(
-        @Nullable String flowArn,
-        @Nullable String flowAvailabilityZone,
-        @Nullable FlowSource source,
-        @Nullable FlowFailoverConfig sourceFailoverConfig) {
+        @OutputCustomType.Parameter("flowArn") @Nullable String flowArn,
+        @OutputCustomType.Parameter("flowAvailabilityZone") @Nullable String flowAvailabilityZone,
+        @OutputCustomType.Parameter("source") @Nullable FlowSource source,
+        @OutputCustomType.Parameter("sourceFailoverConfig") @Nullable FlowFailoverConfig sourceFailoverConfig) {
         this.flowArn = flowArn;
         this.flowAvailabilityZone = flowAvailabilityZone;
         this.source = source;

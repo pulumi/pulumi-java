@@ -16,11 +16,11 @@ public final class DistributionLogging {
     private final @Nullable Boolean includeCookies;
     private final @Nullable String prefix;
 
-    @OutputCustomType.Constructor({"bucket","includeCookies","prefix"})
+    @OutputCustomType.Constructor
     private DistributionLogging(
-        String bucket,
-        @Nullable Boolean includeCookies,
-        @Nullable String prefix) {
+        @OutputCustomType.Parameter("bucket") String bucket,
+        @OutputCustomType.Parameter("includeCookies") @Nullable Boolean includeCookies,
+        @OutputCustomType.Parameter("prefix") @Nullable String prefix) {
         this.bucket = bucket;
         this.includeCookies = includeCookies;
         this.prefix = prefix;

@@ -19,12 +19,12 @@ public final class BotMessage {
     private final @Nullable BotPlainTextMessage plainTextMessage;
     private final @Nullable BotSSMLMessage sSMLMessage;
 
-    @OutputCustomType.Constructor({"customPayload","imageResponseCard","plainTextMessage","sSMLMessage"})
+    @OutputCustomType.Constructor
     private BotMessage(
-        @Nullable BotCustomPayload customPayload,
-        @Nullable BotImageResponseCard imageResponseCard,
-        @Nullable BotPlainTextMessage plainTextMessage,
-        @Nullable BotSSMLMessage sSMLMessage) {
+        @OutputCustomType.Parameter("customPayload") @Nullable BotCustomPayload customPayload,
+        @OutputCustomType.Parameter("imageResponseCard") @Nullable BotImageResponseCard imageResponseCard,
+        @OutputCustomType.Parameter("plainTextMessage") @Nullable BotPlainTextMessage plainTextMessage,
+        @OutputCustomType.Parameter("sSMLMessage") @Nullable BotSSMLMessage sSMLMessage) {
         this.customPayload = customPayload;
         this.imageResponseCard = imageResponseCard;
         this.plainTextMessage = plainTextMessage;

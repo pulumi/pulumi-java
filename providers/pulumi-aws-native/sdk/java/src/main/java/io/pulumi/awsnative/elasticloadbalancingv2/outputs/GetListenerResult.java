@@ -23,15 +23,15 @@ public final class GetListenerResult {
     private final @Nullable String protocol;
     private final @Nullable String sslPolicy;
 
-    @OutputCustomType.Constructor({"alpnPolicy","certificates","defaultActions","listenerArn","port","protocol","sslPolicy"})
+    @OutputCustomType.Constructor
     private GetListenerResult(
-        @Nullable List<String> alpnPolicy,
-        @Nullable List<ListenerCertificate> certificates,
-        @Nullable List<ListenerAction> defaultActions,
-        @Nullable String listenerArn,
-        @Nullable Integer port,
-        @Nullable String protocol,
-        @Nullable String sslPolicy) {
+        @OutputCustomType.Parameter("alpnPolicy") @Nullable List<String> alpnPolicy,
+        @OutputCustomType.Parameter("certificates") @Nullable List<ListenerCertificate> certificates,
+        @OutputCustomType.Parameter("defaultActions") @Nullable List<ListenerAction> defaultActions,
+        @OutputCustomType.Parameter("listenerArn") @Nullable String listenerArn,
+        @OutputCustomType.Parameter("port") @Nullable Integer port,
+        @OutputCustomType.Parameter("protocol") @Nullable String protocol,
+        @OutputCustomType.Parameter("sslPolicy") @Nullable String sslPolicy) {
         this.alpnPolicy = alpnPolicy;
         this.certificates = certificates;
         this.defaultActions = defaultActions;

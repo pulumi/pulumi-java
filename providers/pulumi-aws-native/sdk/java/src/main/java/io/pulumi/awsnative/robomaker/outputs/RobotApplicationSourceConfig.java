@@ -26,11 +26,11 @@ public final class RobotApplicationSourceConfig {
      */
     private final String s3Key;
 
-    @OutputCustomType.Constructor({"architecture","s3Bucket","s3Key"})
+    @OutputCustomType.Constructor
     private RobotApplicationSourceConfig(
-        RobotApplicationSourceConfigArchitecture architecture,
-        String s3Bucket,
-        String s3Key) {
+        @OutputCustomType.Parameter("architecture") RobotApplicationSourceConfigArchitecture architecture,
+        @OutputCustomType.Parameter("s3Bucket") String s3Bucket,
+        @OutputCustomType.Parameter("s3Key") String s3Key) {
         this.architecture = architecture;
         this.s3Bucket = s3Bucket;
         this.s3Key = s3Key;

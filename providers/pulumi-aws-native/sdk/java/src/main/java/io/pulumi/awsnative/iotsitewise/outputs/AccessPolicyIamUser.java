@@ -17,8 +17,8 @@ public final class AccessPolicyIamUser {
      */
     private final @Nullable String arn;
 
-    @OutputCustomType.Constructor({"arn"})
-    private AccessPolicyIamUser(@Nullable String arn) {
+    @OutputCustomType.Constructor
+    private AccessPolicyIamUser(@OutputCustomType.Parameter("arn") @Nullable String arn) {
         this.arn = arn;
     }
 

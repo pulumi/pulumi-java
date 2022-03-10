@@ -17,12 +17,12 @@ public final class TopicRuleS3Action {
     private final String key;
     private final String roleArn;
 
-    @OutputCustomType.Constructor({"bucketName","cannedAcl","key","roleArn"})
+    @OutputCustomType.Constructor
     private TopicRuleS3Action(
-        String bucketName,
-        @Nullable TopicRuleCannedAccessControlList cannedAcl,
-        String key,
-        String roleArn) {
+        @OutputCustomType.Parameter("bucketName") String bucketName,
+        @OutputCustomType.Parameter("cannedAcl") @Nullable TopicRuleCannedAccessControlList cannedAcl,
+        @OutputCustomType.Parameter("key") String key,
+        @OutputCustomType.Parameter("roleArn") String roleArn) {
         this.bucketName = bucketName;
         this.cannedAcl = cannedAcl;
         this.key = key;

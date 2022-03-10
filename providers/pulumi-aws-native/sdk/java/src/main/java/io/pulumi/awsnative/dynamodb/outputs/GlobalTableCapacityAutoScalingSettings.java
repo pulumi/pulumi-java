@@ -17,12 +17,12 @@ public final class GlobalTableCapacityAutoScalingSettings {
     private final @Nullable Integer seedCapacity;
     private final GlobalTableTargetTrackingScalingPolicyConfiguration targetTrackingScalingPolicyConfiguration;
 
-    @OutputCustomType.Constructor({"maxCapacity","minCapacity","seedCapacity","targetTrackingScalingPolicyConfiguration"})
+    @OutputCustomType.Constructor
     private GlobalTableCapacityAutoScalingSettings(
-        Integer maxCapacity,
-        Integer minCapacity,
-        @Nullable Integer seedCapacity,
-        GlobalTableTargetTrackingScalingPolicyConfiguration targetTrackingScalingPolicyConfiguration) {
+        @OutputCustomType.Parameter("maxCapacity") Integer maxCapacity,
+        @OutputCustomType.Parameter("minCapacity") Integer minCapacity,
+        @OutputCustomType.Parameter("seedCapacity") @Nullable Integer seedCapacity,
+        @OutputCustomType.Parameter("targetTrackingScalingPolicyConfiguration") GlobalTableTargetTrackingScalingPolicyConfiguration targetTrackingScalingPolicyConfiguration) {
         this.maxCapacity = maxCapacity;
         this.minCapacity = minCapacity;
         this.seedCapacity = seedCapacity;

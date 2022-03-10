@@ -42,19 +42,19 @@ public final class GetRuleGroupResult {
     private final @Nullable List<RuleGroupTag> tags;
     private final @Nullable RuleGroupVisibilityConfig visibilityConfig;
 
-    @OutputCustomType.Constructor({"arn","availableLabels","capacity","consumedLabels","customResponseBodies","description","id","labelNamespace","rules","tags","visibilityConfig"})
+    @OutputCustomType.Constructor
     private GetRuleGroupResult(
-        @Nullable String arn,
-        @Nullable List<RuleGroupLabelSummary> availableLabels,
-        @Nullable Integer capacity,
-        @Nullable List<RuleGroupLabelSummary> consumedLabels,
-        @Nullable RuleGroupCustomResponseBodies customResponseBodies,
-        @Nullable String description,
-        @Nullable String id,
-        @Nullable String labelNamespace,
-        @Nullable List<RuleGroupRule> rules,
-        @Nullable List<RuleGroupTag> tags,
-        @Nullable RuleGroupVisibilityConfig visibilityConfig) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("availableLabels") @Nullable List<RuleGroupLabelSummary> availableLabels,
+        @OutputCustomType.Parameter("capacity") @Nullable Integer capacity,
+        @OutputCustomType.Parameter("consumedLabels") @Nullable List<RuleGroupLabelSummary> consumedLabels,
+        @OutputCustomType.Parameter("customResponseBodies") @Nullable RuleGroupCustomResponseBodies customResponseBodies,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("labelNamespace") @Nullable String labelNamespace,
+        @OutputCustomType.Parameter("rules") @Nullable List<RuleGroupRule> rules,
+        @OutputCustomType.Parameter("tags") @Nullable List<RuleGroupTag> tags,
+        @OutputCustomType.Parameter("visibilityConfig") @Nullable RuleGroupVisibilityConfig visibilityConfig) {
         this.arn = arn;
         this.availableLabels = availableLabels;
         this.capacity = capacity;

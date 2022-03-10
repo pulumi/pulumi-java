@@ -34,12 +34,12 @@ public final class BotImageResponseCard {
      */
     private final String title;
 
-    @OutputCustomType.Constructor({"buttons","imageUrl","subtitle","title"})
+    @OutputCustomType.Constructor
     private BotImageResponseCard(
-        @Nullable List<BotButton> buttons,
-        @Nullable String imageUrl,
-        @Nullable String subtitle,
-        String title) {
+        @OutputCustomType.Parameter("buttons") @Nullable List<BotButton> buttons,
+        @OutputCustomType.Parameter("imageUrl") @Nullable String imageUrl,
+        @OutputCustomType.Parameter("subtitle") @Nullable String subtitle,
+        @OutputCustomType.Parameter("title") String title) {
         this.buttons = buttons;
         this.imageUrl = imageUrl;
         this.subtitle = subtitle;

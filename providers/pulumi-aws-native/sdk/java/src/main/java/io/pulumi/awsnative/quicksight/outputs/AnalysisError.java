@@ -19,10 +19,10 @@ public final class AnalysisError {
     private final @Nullable String message;
     private final @Nullable AnalysisErrorType type;
 
-    @OutputCustomType.Constructor({"message","type"})
+    @OutputCustomType.Constructor
     private AnalysisError(
-        @Nullable String message,
-        @Nullable AnalysisErrorType type) {
+        @OutputCustomType.Parameter("message") @Nullable String message,
+        @OutputCustomType.Parameter("type") @Nullable AnalysisErrorType type) {
         this.message = message;
         this.type = type;
     }

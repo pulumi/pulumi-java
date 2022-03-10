@@ -13,10 +13,10 @@ public final class IntegrationTaskPropertiesMap {
     private final IntegrationOperatorPropertiesKeys operatorPropertyKey;
     private final String property;
 
-    @OutputCustomType.Constructor({"operatorPropertyKey","property"})
+    @OutputCustomType.Constructor
     private IntegrationTaskPropertiesMap(
-        IntegrationOperatorPropertiesKeys operatorPropertyKey,
-        String property) {
+        @OutputCustomType.Parameter("operatorPropertyKey") IntegrationOperatorPropertiesKeys operatorPropertyKey,
+        @OutputCustomType.Parameter("property") String property) {
         this.operatorPropertyKey = operatorPropertyKey;
         this.property = property;
     }

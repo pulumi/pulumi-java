@@ -77,20 +77,20 @@ public final class GetFirewallRuleGroupAssociationResult {
      */
     private final @Nullable List<FirewallRuleGroupAssociationTag> tags;
 
-    @OutputCustomType.Constructor({"arn","creationTime","creatorRequestId","id","managedOwnerName","modificationTime","mutationProtection","name","priority","status","statusMessage","tags"})
+    @OutputCustomType.Constructor
     private GetFirewallRuleGroupAssociationResult(
-        @Nullable String arn,
-        @Nullable String creationTime,
-        @Nullable String creatorRequestId,
-        @Nullable String id,
-        @Nullable String managedOwnerName,
-        @Nullable String modificationTime,
-        @Nullable FirewallRuleGroupAssociationMutationProtection mutationProtection,
-        @Nullable String name,
-        @Nullable Integer priority,
-        @Nullable FirewallRuleGroupAssociationStatus status,
-        @Nullable String statusMessage,
-        @Nullable List<FirewallRuleGroupAssociationTag> tags) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("creationTime") @Nullable String creationTime,
+        @OutputCustomType.Parameter("creatorRequestId") @Nullable String creatorRequestId,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("managedOwnerName") @Nullable String managedOwnerName,
+        @OutputCustomType.Parameter("modificationTime") @Nullable String modificationTime,
+        @OutputCustomType.Parameter("mutationProtection") @Nullable FirewallRuleGroupAssociationMutationProtection mutationProtection,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("priority") @Nullable Integer priority,
+        @OutputCustomType.Parameter("status") @Nullable FirewallRuleGroupAssociationStatus status,
+        @OutputCustomType.Parameter("statusMessage") @Nullable String statusMessage,
+        @OutputCustomType.Parameter("tags") @Nullable List<FirewallRuleGroupAssociationTag> tags) {
         this.arn = arn;
         this.creationTime = creationTime;
         this.creatorRequestId = creatorRequestId;

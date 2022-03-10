@@ -34,12 +34,12 @@ public final class FlowOutputEncryption {
      */
     private final String secretArn;
 
-    @OutputCustomType.Constructor({"algorithm","keyType","roleArn","secretArn"})
+    @OutputCustomType.Constructor
     private FlowOutputEncryption(
-        @Nullable FlowOutputEncryptionAlgorithm algorithm,
-        @Nullable FlowOutputEncryptionKeyType keyType,
-        String roleArn,
-        String secretArn) {
+        @OutputCustomType.Parameter("algorithm") @Nullable FlowOutputEncryptionAlgorithm algorithm,
+        @OutputCustomType.Parameter("keyType") @Nullable FlowOutputEncryptionKeyType keyType,
+        @OutputCustomType.Parameter("roleArn") String roleArn,
+        @OutputCustomType.Parameter("secretArn") String secretArn) {
         this.algorithm = algorithm;
         this.keyType = keyType;
         this.roleArn = roleArn;

@@ -17,8 +17,8 @@ public final class ThemeBorderStyle {
      */
     private final @Nullable Boolean show;
 
-    @OutputCustomType.Constructor({"show"})
-    private ThemeBorderStyle(@Nullable Boolean show) {
+    @OutputCustomType.Constructor
+    private ThemeBorderStyle(@OutputCustomType.Parameter("show") @Nullable Boolean show) {
         this.show = show;
     }
 

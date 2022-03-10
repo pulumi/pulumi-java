@@ -27,11 +27,11 @@ public final class BotAliasS3BucketLogDestination {
      */
     private final String s3BucketArn;
 
-    @OutputCustomType.Constructor({"kmsKeyArn","logPrefix","s3BucketArn"})
+    @OutputCustomType.Constructor
     private BotAliasS3BucketLogDestination(
-        @Nullable String kmsKeyArn,
-        String logPrefix,
-        String s3BucketArn) {
+        @OutputCustomType.Parameter("kmsKeyArn") @Nullable String kmsKeyArn,
+        @OutputCustomType.Parameter("logPrefix") String logPrefix,
+        @OutputCustomType.Parameter("s3BucketArn") String s3BucketArn) {
         this.kmsKeyArn = kmsKeyArn;
         this.logPrefix = logPrefix;
         this.s3BucketArn = s3BucketArn;

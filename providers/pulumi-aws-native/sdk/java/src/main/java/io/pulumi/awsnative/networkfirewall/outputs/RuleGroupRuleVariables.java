@@ -14,10 +14,10 @@ public final class RuleGroupRuleVariables {
     private final @Nullable Object iPSets;
     private final @Nullable Object portSets;
 
-    @OutputCustomType.Constructor({"iPSets","portSets"})
+    @OutputCustomType.Constructor
     private RuleGroupRuleVariables(
-        @Nullable Object iPSets,
-        @Nullable Object portSets) {
+        @OutputCustomType.Parameter("iPSets") @Nullable Object iPSets,
+        @OutputCustomType.Parameter("portSets") @Nullable Object portSets) {
         this.iPSets = iPSets;
         this.portSets = portSets;
     }

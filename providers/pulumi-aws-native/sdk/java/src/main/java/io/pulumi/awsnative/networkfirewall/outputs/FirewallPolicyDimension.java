@@ -11,8 +11,8 @@ import java.util.Objects;
 public final class FirewallPolicyDimension {
     private final String value;
 
-    @OutputCustomType.Constructor({"value"})
-    private FirewallPolicyDimension(String value) {
+    @OutputCustomType.Constructor
+    private FirewallPolicyDimension(@OutputCustomType.Parameter("value") String value) {
         this.value = value;
     }
 

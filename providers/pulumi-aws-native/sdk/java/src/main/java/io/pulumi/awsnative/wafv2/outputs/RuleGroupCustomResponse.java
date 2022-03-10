@@ -26,11 +26,11 @@ public final class RuleGroupCustomResponse {
      */
     private final @Nullable List<RuleGroupCustomHTTPHeader> responseHeaders;
 
-    @OutputCustomType.Constructor({"customResponseBodyKey","responseCode","responseHeaders"})
+    @OutputCustomType.Constructor
     private RuleGroupCustomResponse(
-        @Nullable String customResponseBodyKey,
-        Integer responseCode,
-        @Nullable List<RuleGroupCustomHTTPHeader> responseHeaders) {
+        @OutputCustomType.Parameter("customResponseBodyKey") @Nullable String customResponseBodyKey,
+        @OutputCustomType.Parameter("responseCode") Integer responseCode,
+        @OutputCustomType.Parameter("responseHeaders") @Nullable List<RuleGroupCustomHTTPHeader> responseHeaders) {
         this.customResponseBodyKey = customResponseBodyKey;
         this.responseCode = responseCode;
         this.responseHeaders = responseHeaders;

@@ -35,20 +35,20 @@ public final class ConnectorProfileProperties {
     private final @Nullable ConnectorProfileVeevaConnectorProfileProperties veeva;
     private final @Nullable ConnectorProfileZendeskConnectorProfileProperties zendesk;
 
-    @OutputCustomType.Constructor({"datadog","dynatrace","inforNexus","marketo","redshift","sAPOData","salesforce","serviceNow","slack","snowflake","veeva","zendesk"})
+    @OutputCustomType.Constructor
     private ConnectorProfileProperties(
-        @Nullable ConnectorProfileDatadogConnectorProfileProperties datadog,
-        @Nullable ConnectorProfileDynatraceConnectorProfileProperties dynatrace,
-        @Nullable ConnectorProfileInforNexusConnectorProfileProperties inforNexus,
-        @Nullable ConnectorProfileMarketoConnectorProfileProperties marketo,
-        @Nullable ConnectorProfileRedshiftConnectorProfileProperties redshift,
-        @Nullable ConnectorProfileSAPODataConnectorProfileProperties sAPOData,
-        @Nullable ConnectorProfileSalesforceConnectorProfileProperties salesforce,
-        @Nullable ConnectorProfileServiceNowConnectorProfileProperties serviceNow,
-        @Nullable ConnectorProfileSlackConnectorProfileProperties slack,
-        @Nullable ConnectorProfileSnowflakeConnectorProfileProperties snowflake,
-        @Nullable ConnectorProfileVeevaConnectorProfileProperties veeva,
-        @Nullable ConnectorProfileZendeskConnectorProfileProperties zendesk) {
+        @OutputCustomType.Parameter("datadog") @Nullable ConnectorProfileDatadogConnectorProfileProperties datadog,
+        @OutputCustomType.Parameter("dynatrace") @Nullable ConnectorProfileDynatraceConnectorProfileProperties dynatrace,
+        @OutputCustomType.Parameter("inforNexus") @Nullable ConnectorProfileInforNexusConnectorProfileProperties inforNexus,
+        @OutputCustomType.Parameter("marketo") @Nullable ConnectorProfileMarketoConnectorProfileProperties marketo,
+        @OutputCustomType.Parameter("redshift") @Nullable ConnectorProfileRedshiftConnectorProfileProperties redshift,
+        @OutputCustomType.Parameter("sAPOData") @Nullable ConnectorProfileSAPODataConnectorProfileProperties sAPOData,
+        @OutputCustomType.Parameter("salesforce") @Nullable ConnectorProfileSalesforceConnectorProfileProperties salesforce,
+        @OutputCustomType.Parameter("serviceNow") @Nullable ConnectorProfileServiceNowConnectorProfileProperties serviceNow,
+        @OutputCustomType.Parameter("slack") @Nullable ConnectorProfileSlackConnectorProfileProperties slack,
+        @OutputCustomType.Parameter("snowflake") @Nullable ConnectorProfileSnowflakeConnectorProfileProperties snowflake,
+        @OutputCustomType.Parameter("veeva") @Nullable ConnectorProfileVeevaConnectorProfileProperties veeva,
+        @OutputCustomType.Parameter("zendesk") @Nullable ConnectorProfileZendeskConnectorProfileProperties zendesk) {
         this.datadog = datadog;
         this.dynatrace = dynatrace;
         this.inforNexus = inforNexus;

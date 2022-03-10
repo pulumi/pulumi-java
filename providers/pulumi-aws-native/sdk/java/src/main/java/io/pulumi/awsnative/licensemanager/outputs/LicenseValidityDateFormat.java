@@ -20,10 +20,10 @@ public final class LicenseValidityDateFormat {
      */
     private final String end;
 
-    @OutputCustomType.Constructor({"begin","end"})
+    @OutputCustomType.Constructor
     private LicenseValidityDateFormat(
-        String begin,
-        String end) {
+        @OutputCustomType.Parameter("begin") String begin,
+        @OutputCustomType.Parameter("end") String end) {
         this.begin = begin;
         this.end = end;
     }

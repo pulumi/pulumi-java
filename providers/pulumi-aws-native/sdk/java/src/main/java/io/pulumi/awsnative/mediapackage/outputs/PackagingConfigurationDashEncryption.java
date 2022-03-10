@@ -11,8 +11,8 @@ import java.util.Objects;
 public final class PackagingConfigurationDashEncryption {
     private final PackagingConfigurationSpekeKeyProvider spekeKeyProvider;
 
-    @OutputCustomType.Constructor({"spekeKeyProvider"})
-    private PackagingConfigurationDashEncryption(PackagingConfigurationSpekeKeyProvider spekeKeyProvider) {
+    @OutputCustomType.Constructor
+    private PackagingConfigurationDashEncryption(@OutputCustomType.Parameter("spekeKeyProvider") PackagingConfigurationSpekeKeyProvider spekeKeyProvider) {
         this.spekeKeyProvider = spekeKeyProvider;
     }
 

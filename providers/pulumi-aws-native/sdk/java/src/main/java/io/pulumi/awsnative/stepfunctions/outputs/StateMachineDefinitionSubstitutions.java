@@ -8,7 +8,7 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class StateMachineDefinitionSubstitutions {
-    @OutputCustomType.Constructor({})
+    @OutputCustomType.Constructor
     private StateMachineDefinitionSubstitutions() {
     }
 

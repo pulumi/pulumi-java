@@ -20,12 +20,12 @@ public final class GlobalTableGlobalSecondaryIndex {
     private final GlobalTableProjection projection;
     private final @Nullable GlobalTableWriteProvisionedThroughputSettings writeProvisionedThroughputSettings;
 
-    @OutputCustomType.Constructor({"indexName","keySchema","projection","writeProvisionedThroughputSettings"})
+    @OutputCustomType.Constructor
     private GlobalTableGlobalSecondaryIndex(
-        String indexName,
-        List<GlobalTableKeySchema> keySchema,
-        GlobalTableProjection projection,
-        @Nullable GlobalTableWriteProvisionedThroughputSettings writeProvisionedThroughputSettings) {
+        @OutputCustomType.Parameter("indexName") String indexName,
+        @OutputCustomType.Parameter("keySchema") List<GlobalTableKeySchema> keySchema,
+        @OutputCustomType.Parameter("projection") GlobalTableProjection projection,
+        @OutputCustomType.Parameter("writeProvisionedThroughputSettings") @Nullable GlobalTableWriteProvisionedThroughputSettings writeProvisionedThroughputSettings) {
         this.indexName = indexName;
         this.keySchema = keySchema;
         this.projection = projection;

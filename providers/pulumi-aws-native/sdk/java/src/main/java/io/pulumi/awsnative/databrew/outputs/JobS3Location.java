@@ -15,11 +15,11 @@ public final class JobS3Location {
     private final @Nullable String bucketOwner;
     private final @Nullable String key;
 
-    @OutputCustomType.Constructor({"bucket","bucketOwner","key"})
+    @OutputCustomType.Constructor
     private JobS3Location(
-        String bucket,
-        @Nullable String bucketOwner,
-        @Nullable String key) {
+        @OutputCustomType.Parameter("bucket") String bucket,
+        @OutputCustomType.Parameter("bucketOwner") @Nullable String bucketOwner,
+        @OutputCustomType.Parameter("key") @Nullable String key) {
         this.bucket = bucket;
         this.bucketOwner = bucketOwner;
         this.key = key;

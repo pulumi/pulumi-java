@@ -34,12 +34,12 @@ public final class GetOrganizationConformancePackResult {
      */
     private final @Nullable List<String> excludedAccounts;
 
-    @OutputCustomType.Constructor({"conformancePackInputParameters","deliveryS3Bucket","deliveryS3KeyPrefix","excludedAccounts"})
+    @OutputCustomType.Constructor
     private GetOrganizationConformancePackResult(
-        @Nullable List<OrganizationConformancePackConformancePackInputParameter> conformancePackInputParameters,
-        @Nullable String deliveryS3Bucket,
-        @Nullable String deliveryS3KeyPrefix,
-        @Nullable List<String> excludedAccounts) {
+        @OutputCustomType.Parameter("conformancePackInputParameters") @Nullable List<OrganizationConformancePackConformancePackInputParameter> conformancePackInputParameters,
+        @OutputCustomType.Parameter("deliveryS3Bucket") @Nullable String deliveryS3Bucket,
+        @OutputCustomType.Parameter("deliveryS3KeyPrefix") @Nullable String deliveryS3KeyPrefix,
+        @OutputCustomType.Parameter("excludedAccounts") @Nullable List<String> excludedAccounts) {
         this.conformancePackInputParameters = conformancePackInputParameters;
         this.deliveryS3Bucket = deliveryS3Bucket;
         this.deliveryS3KeyPrefix = deliveryS3KeyPrefix;

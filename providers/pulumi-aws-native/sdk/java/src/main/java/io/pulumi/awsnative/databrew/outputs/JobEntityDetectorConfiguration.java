@@ -16,10 +16,10 @@ public final class JobEntityDetectorConfiguration {
     private final @Nullable JobAllowedStatistics allowedStatistics;
     private final List<String> entityTypes;
 
-    @OutputCustomType.Constructor({"allowedStatistics","entityTypes"})
+    @OutputCustomType.Constructor
     private JobEntityDetectorConfiguration(
-        @Nullable JobAllowedStatistics allowedStatistics,
-        List<String> entityTypes) {
+        @OutputCustomType.Parameter("allowedStatistics") @Nullable JobAllowedStatistics allowedStatistics,
+        @OutputCustomType.Parameter("entityTypes") List<String> entityTypes) {
         this.allowedStatistics = allowedStatistics;
         this.entityTypes = entityTypes;
     }

@@ -59,17 +59,17 @@ public final class FlowEntitlementEncryption {
      */
     private final @Nullable String url;
 
-    @OutputCustomType.Constructor({"algorithm","constantInitializationVector","deviceId","keyType","region","resourceId","roleArn","secretArn","url"})
+    @OutputCustomType.Constructor
     private FlowEntitlementEncryption(
-        FlowEntitlementEncryptionAlgorithm algorithm,
-        @Nullable String constantInitializationVector,
-        @Nullable String deviceId,
-        @Nullable FlowEntitlementEncryptionKeyType keyType,
-        @Nullable String region,
-        @Nullable String resourceId,
-        String roleArn,
-        @Nullable String secretArn,
-        @Nullable String url) {
+        @OutputCustomType.Parameter("algorithm") FlowEntitlementEncryptionAlgorithm algorithm,
+        @OutputCustomType.Parameter("constantInitializationVector") @Nullable String constantInitializationVector,
+        @OutputCustomType.Parameter("deviceId") @Nullable String deviceId,
+        @OutputCustomType.Parameter("keyType") @Nullable FlowEntitlementEncryptionKeyType keyType,
+        @OutputCustomType.Parameter("region") @Nullable String region,
+        @OutputCustomType.Parameter("resourceId") @Nullable String resourceId,
+        @OutputCustomType.Parameter("roleArn") String roleArn,
+        @OutputCustomType.Parameter("secretArn") @Nullable String secretArn,
+        @OutputCustomType.Parameter("url") @Nullable String url) {
         this.algorithm = algorithm;
         this.constantInitializationVector = constantInitializationVector;
         this.deviceId = deviceId;

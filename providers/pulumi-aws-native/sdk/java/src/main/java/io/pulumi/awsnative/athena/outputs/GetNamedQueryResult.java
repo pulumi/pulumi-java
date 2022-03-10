@@ -17,8 +17,8 @@ public final class GetNamedQueryResult {
      */
     private final @Nullable String namedQueryId;
 
-    @OutputCustomType.Constructor({"namedQueryId"})
-    private GetNamedQueryResult(@Nullable String namedQueryId) {
+    @OutputCustomType.Constructor
+    private GetNamedQueryResult(@OutputCustomType.Parameter("namedQueryId") @Nullable String namedQueryId) {
         this.namedQueryId = namedQueryId;
     }
 

@@ -15,13 +15,13 @@ public final class TopicRuleElasticsearchAction {
     private final String roleArn;
     private final String type;
 
-    @OutputCustomType.Constructor({"endpoint","id","index","roleArn","type"})
+    @OutputCustomType.Constructor
     private TopicRuleElasticsearchAction(
-        String endpoint,
-        String id,
-        String index,
-        String roleArn,
-        String type) {
+        @OutputCustomType.Parameter("endpoint") String endpoint,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("index") String index,
+        @OutputCustomType.Parameter("roleArn") String roleArn,
+        @OutputCustomType.Parameter("type") String type) {
         this.endpoint = endpoint;
         this.id = id;
         this.index = index;

@@ -40,13 +40,13 @@ public final class GetControlPanelResult {
      */
     private final @Nullable ControlPanelStatus status;
 
-    @OutputCustomType.Constructor({"controlPanelArn","defaultControlPanel","name","routingControlCount","status"})
+    @OutputCustomType.Constructor
     private GetControlPanelResult(
-        @Nullable String controlPanelArn,
-        @Nullable Boolean defaultControlPanel,
-        @Nullable String name,
-        @Nullable Integer routingControlCount,
-        @Nullable ControlPanelStatus status) {
+        @OutputCustomType.Parameter("controlPanelArn") @Nullable String controlPanelArn,
+        @OutputCustomType.Parameter("defaultControlPanel") @Nullable Boolean defaultControlPanel,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("routingControlCount") @Nullable Integer routingControlCount,
+        @OutputCustomType.Parameter("status") @Nullable ControlPanelStatus status) {
         this.controlPanelArn = controlPanelArn;
         this.defaultControlPanel = defaultControlPanel;
         this.name = name;

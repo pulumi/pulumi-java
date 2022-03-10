@@ -76,23 +76,23 @@ public final class GetOriginEndpointResult {
      */
     private final @Nullable List<String> whitelist;
 
-    @OutputCustomType.Constructor({"arn","authorization","channelId","cmafPackage","dashPackage","description","hlsPackage","manifestName","mssPackage","origination","startoverWindowSeconds","tags","timeDelaySeconds","url","whitelist"})
+    @OutputCustomType.Constructor
     private GetOriginEndpointResult(
-        @Nullable String arn,
-        @Nullable OriginEndpointAuthorization authorization,
-        @Nullable String channelId,
-        @Nullable OriginEndpointCmafPackage cmafPackage,
-        @Nullable OriginEndpointDashPackage dashPackage,
-        @Nullable String description,
-        @Nullable OriginEndpointHlsPackage hlsPackage,
-        @Nullable String manifestName,
-        @Nullable OriginEndpointMssPackage mssPackage,
-        @Nullable OriginEndpointOrigination origination,
-        @Nullable Integer startoverWindowSeconds,
-        @Nullable List<OriginEndpointTag> tags,
-        @Nullable Integer timeDelaySeconds,
-        @Nullable String url,
-        @Nullable List<String> whitelist) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("authorization") @Nullable OriginEndpointAuthorization authorization,
+        @OutputCustomType.Parameter("channelId") @Nullable String channelId,
+        @OutputCustomType.Parameter("cmafPackage") @Nullable OriginEndpointCmafPackage cmafPackage,
+        @OutputCustomType.Parameter("dashPackage") @Nullable OriginEndpointDashPackage dashPackage,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("hlsPackage") @Nullable OriginEndpointHlsPackage hlsPackage,
+        @OutputCustomType.Parameter("manifestName") @Nullable String manifestName,
+        @OutputCustomType.Parameter("mssPackage") @Nullable OriginEndpointMssPackage mssPackage,
+        @OutputCustomType.Parameter("origination") @Nullable OriginEndpointOrigination origination,
+        @OutputCustomType.Parameter("startoverWindowSeconds") @Nullable Integer startoverWindowSeconds,
+        @OutputCustomType.Parameter("tags") @Nullable List<OriginEndpointTag> tags,
+        @OutputCustomType.Parameter("timeDelaySeconds") @Nullable Integer timeDelaySeconds,
+        @OutputCustomType.Parameter("url") @Nullable String url,
+        @OutputCustomType.Parameter("whitelist") @Nullable List<String> whitelist) {
         this.arn = arn;
         this.authorization = authorization;
         this.channelId = channelId;

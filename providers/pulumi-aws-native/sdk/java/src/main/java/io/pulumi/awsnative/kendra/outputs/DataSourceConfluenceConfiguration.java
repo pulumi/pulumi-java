@@ -29,18 +29,18 @@ public final class DataSourceConfluenceConfiguration {
     private final DataSourceConfluenceVersion version;
     private final @Nullable DataSourceVpcConfiguration vpcConfiguration;
 
-    @OutputCustomType.Constructor({"attachmentConfiguration","blogConfiguration","exclusionPatterns","inclusionPatterns","pageConfiguration","secretArn","serverUrl","spaceConfiguration","version","vpcConfiguration"})
+    @OutputCustomType.Constructor
     private DataSourceConfluenceConfiguration(
-        @Nullable DataSourceConfluenceAttachmentConfiguration attachmentConfiguration,
-        @Nullable DataSourceConfluenceBlogConfiguration blogConfiguration,
-        @Nullable List<String> exclusionPatterns,
-        @Nullable List<String> inclusionPatterns,
-        @Nullable DataSourceConfluencePageConfiguration pageConfiguration,
-        String secretArn,
-        String serverUrl,
-        @Nullable DataSourceConfluenceSpaceConfiguration spaceConfiguration,
-        DataSourceConfluenceVersion version,
-        @Nullable DataSourceVpcConfiguration vpcConfiguration) {
+        @OutputCustomType.Parameter("attachmentConfiguration") @Nullable DataSourceConfluenceAttachmentConfiguration attachmentConfiguration,
+        @OutputCustomType.Parameter("blogConfiguration") @Nullable DataSourceConfluenceBlogConfiguration blogConfiguration,
+        @OutputCustomType.Parameter("exclusionPatterns") @Nullable List<String> exclusionPatterns,
+        @OutputCustomType.Parameter("inclusionPatterns") @Nullable List<String> inclusionPatterns,
+        @OutputCustomType.Parameter("pageConfiguration") @Nullable DataSourceConfluencePageConfiguration pageConfiguration,
+        @OutputCustomType.Parameter("secretArn") String secretArn,
+        @OutputCustomType.Parameter("serverUrl") String serverUrl,
+        @OutputCustomType.Parameter("spaceConfiguration") @Nullable DataSourceConfluenceSpaceConfiguration spaceConfiguration,
+        @OutputCustomType.Parameter("version") DataSourceConfluenceVersion version,
+        @OutputCustomType.Parameter("vpcConfiguration") @Nullable DataSourceVpcConfiguration vpcConfiguration) {
         this.attachmentConfiguration = attachmentConfiguration;
         this.blogConfiguration = blogConfiguration;
         this.exclusionPatterns = exclusionPatterns;

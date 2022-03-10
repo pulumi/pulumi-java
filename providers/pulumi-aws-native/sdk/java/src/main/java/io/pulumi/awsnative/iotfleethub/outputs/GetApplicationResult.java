@@ -75,20 +75,20 @@ public final class GetApplicationResult {
      */
     private final @Nullable List<ApplicationTag> tags;
 
-    @OutputCustomType.Constructor({"applicationArn","applicationCreationDate","applicationDescription","applicationId","applicationLastUpdateDate","applicationName","applicationState","applicationUrl","errorMessage","roleArn","ssoClientId","tags"})
+    @OutputCustomType.Constructor
     private GetApplicationResult(
-        @Nullable String applicationArn,
-        @Nullable Integer applicationCreationDate,
-        @Nullable String applicationDescription,
-        @Nullable String applicationId,
-        @Nullable Integer applicationLastUpdateDate,
-        @Nullable String applicationName,
-        @Nullable String applicationState,
-        @Nullable String applicationUrl,
-        @Nullable String errorMessage,
-        @Nullable String roleArn,
-        @Nullable String ssoClientId,
-        @Nullable List<ApplicationTag> tags) {
+        @OutputCustomType.Parameter("applicationArn") @Nullable String applicationArn,
+        @OutputCustomType.Parameter("applicationCreationDate") @Nullable Integer applicationCreationDate,
+        @OutputCustomType.Parameter("applicationDescription") @Nullable String applicationDescription,
+        @OutputCustomType.Parameter("applicationId") @Nullable String applicationId,
+        @OutputCustomType.Parameter("applicationLastUpdateDate") @Nullable Integer applicationLastUpdateDate,
+        @OutputCustomType.Parameter("applicationName") @Nullable String applicationName,
+        @OutputCustomType.Parameter("applicationState") @Nullable String applicationState,
+        @OutputCustomType.Parameter("applicationUrl") @Nullable String applicationUrl,
+        @OutputCustomType.Parameter("errorMessage") @Nullable String errorMessage,
+        @OutputCustomType.Parameter("roleArn") @Nullable String roleArn,
+        @OutputCustomType.Parameter("ssoClientId") @Nullable String ssoClientId,
+        @OutputCustomType.Parameter("tags") @Nullable List<ApplicationTag> tags) {
         this.applicationArn = applicationArn;
         this.applicationCreationDate = applicationCreationDate;
         this.applicationDescription = applicationDescription;

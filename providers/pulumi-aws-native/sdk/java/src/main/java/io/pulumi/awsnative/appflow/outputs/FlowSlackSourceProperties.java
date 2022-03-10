@@ -11,8 +11,8 @@ import java.util.Objects;
 public final class FlowSlackSourceProperties {
     private final String object;
 
-    @OutputCustomType.Constructor({"object"})
-    private FlowSlackSourceProperties(String object) {
+    @OutputCustomType.Constructor
+    private FlowSlackSourceProperties(@OutputCustomType.Parameter("object") String object) {
         this.object = object;
     }
 

@@ -14,10 +14,10 @@ public final class ServiceUrlEndpointInput {
     private final @Nullable String healthUrl;
     private final String url;
 
-    @OutputCustomType.Constructor({"healthUrl","url"})
+    @OutputCustomType.Constructor
     private ServiceUrlEndpointInput(
-        @Nullable String healthUrl,
-        String url) {
+        @OutputCustomType.Parameter("healthUrl") @Nullable String healthUrl,
+        @OutputCustomType.Parameter("url") String url) {
         this.healthUrl = healthUrl;
         this.url = url;
     }

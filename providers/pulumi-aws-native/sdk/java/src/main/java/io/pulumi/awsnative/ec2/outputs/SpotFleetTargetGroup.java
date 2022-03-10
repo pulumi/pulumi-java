@@ -11,8 +11,8 @@ import java.util.Objects;
 public final class SpotFleetTargetGroup {
     private final String arn;
 
-    @OutputCustomType.Constructor({"arn"})
-    private SpotFleetTargetGroup(String arn) {
+    @OutputCustomType.Constructor
+    private SpotFleetTargetGroup(@OutputCustomType.Parameter("arn") String arn) {
         this.arn = arn;
     }
 

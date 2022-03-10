@@ -19,12 +19,12 @@ public final class ConnectionOAuthParameters {
     private final ConnectionOAuthParametersHttpMethod httpMethod;
     private final @Nullable ConnectionHttpParameters oAuthHttpParameters;
 
-    @OutputCustomType.Constructor({"authorizationEndpoint","clientParameters","httpMethod","oAuthHttpParameters"})
+    @OutputCustomType.Constructor
     private ConnectionOAuthParameters(
-        String authorizationEndpoint,
-        ConnectionClientParameters clientParameters,
-        ConnectionOAuthParametersHttpMethod httpMethod,
-        @Nullable ConnectionHttpParameters oAuthHttpParameters) {
+        @OutputCustomType.Parameter("authorizationEndpoint") String authorizationEndpoint,
+        @OutputCustomType.Parameter("clientParameters") ConnectionClientParameters clientParameters,
+        @OutputCustomType.Parameter("httpMethod") ConnectionOAuthParametersHttpMethod httpMethod,
+        @OutputCustomType.Parameter("oAuthHttpParameters") @Nullable ConnectionHttpParameters oAuthHttpParameters) {
         this.authorizationEndpoint = authorizationEndpoint;
         this.clientParameters = clientParameters;
         this.httpMethod = httpMethod;

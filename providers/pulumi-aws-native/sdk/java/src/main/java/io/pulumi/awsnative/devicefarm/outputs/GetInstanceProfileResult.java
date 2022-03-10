@@ -22,15 +22,15 @@ public final class GetInstanceProfileResult {
     private final @Nullable Boolean rebootAfterUse;
     private final @Nullable List<InstanceProfileTag> tags;
 
-    @OutputCustomType.Constructor({"arn","description","excludeAppPackagesFromCleanup","name","packageCleanup","rebootAfterUse","tags"})
+    @OutputCustomType.Constructor
     private GetInstanceProfileResult(
-        @Nullable String arn,
-        @Nullable String description,
-        @Nullable List<String> excludeAppPackagesFromCleanup,
-        @Nullable String name,
-        @Nullable Boolean packageCleanup,
-        @Nullable Boolean rebootAfterUse,
-        @Nullable List<InstanceProfileTag> tags) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("excludeAppPackagesFromCleanup") @Nullable List<String> excludeAppPackagesFromCleanup,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("packageCleanup") @Nullable Boolean packageCleanup,
+        @OutputCustomType.Parameter("rebootAfterUse") @Nullable Boolean rebootAfterUse,
+        @OutputCustomType.Parameter("tags") @Nullable List<InstanceProfileTag> tags) {
         this.arn = arn;
         this.description = description;
         this.excludeAppPackagesFromCleanup = excludeAppPackagesFromCleanup;

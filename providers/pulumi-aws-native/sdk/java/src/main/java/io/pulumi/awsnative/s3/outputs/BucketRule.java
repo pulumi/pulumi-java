@@ -37,24 +37,24 @@ public final class BucketRule {
     private final @Nullable BucketTransition transition;
     private final @Nullable List<BucketTransition> transitions;
 
-    @OutputCustomType.Constructor({"abortIncompleteMultipartUpload","expirationDate","expirationInDays","expiredObjectDeleteMarker","id","noncurrentVersionExpiration","noncurrentVersionExpirationInDays","noncurrentVersionTransition","noncurrentVersionTransitions","objectSizeGreaterThan","objectSizeLessThan","prefix","status","tagFilters","transition","transitions"})
+    @OutputCustomType.Constructor
     private BucketRule(
-        @Nullable BucketAbortIncompleteMultipartUpload abortIncompleteMultipartUpload,
-        @Nullable String expirationDate,
-        @Nullable Integer expirationInDays,
-        @Nullable Boolean expiredObjectDeleteMarker,
-        @Nullable String id,
-        @Nullable BucketNoncurrentVersionExpiration noncurrentVersionExpiration,
-        @Nullable Integer noncurrentVersionExpirationInDays,
-        @Nullable BucketNoncurrentVersionTransition noncurrentVersionTransition,
-        @Nullable List<BucketNoncurrentVersionTransition> noncurrentVersionTransitions,
-        @Nullable String objectSizeGreaterThan,
-        @Nullable String objectSizeLessThan,
-        @Nullable String prefix,
-        BucketRuleStatus status,
-        @Nullable List<BucketTagFilter> tagFilters,
-        @Nullable BucketTransition transition,
-        @Nullable List<BucketTransition> transitions) {
+        @OutputCustomType.Parameter("abortIncompleteMultipartUpload") @Nullable BucketAbortIncompleteMultipartUpload abortIncompleteMultipartUpload,
+        @OutputCustomType.Parameter("expirationDate") @Nullable String expirationDate,
+        @OutputCustomType.Parameter("expirationInDays") @Nullable Integer expirationInDays,
+        @OutputCustomType.Parameter("expiredObjectDeleteMarker") @Nullable Boolean expiredObjectDeleteMarker,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("noncurrentVersionExpiration") @Nullable BucketNoncurrentVersionExpiration noncurrentVersionExpiration,
+        @OutputCustomType.Parameter("noncurrentVersionExpirationInDays") @Nullable Integer noncurrentVersionExpirationInDays,
+        @OutputCustomType.Parameter("noncurrentVersionTransition") @Nullable BucketNoncurrentVersionTransition noncurrentVersionTransition,
+        @OutputCustomType.Parameter("noncurrentVersionTransitions") @Nullable List<BucketNoncurrentVersionTransition> noncurrentVersionTransitions,
+        @OutputCustomType.Parameter("objectSizeGreaterThan") @Nullable String objectSizeGreaterThan,
+        @OutputCustomType.Parameter("objectSizeLessThan") @Nullable String objectSizeLessThan,
+        @OutputCustomType.Parameter("prefix") @Nullable String prefix,
+        @OutputCustomType.Parameter("status") BucketRuleStatus status,
+        @OutputCustomType.Parameter("tagFilters") @Nullable List<BucketTagFilter> tagFilters,
+        @OutputCustomType.Parameter("transition") @Nullable BucketTransition transition,
+        @OutputCustomType.Parameter("transitions") @Nullable List<BucketTransition> transitions) {
         this.abortIncompleteMultipartUpload = abortIncompleteMultipartUpload;
         this.expirationDate = expirationDate;
         this.expirationInDays = expirationInDays;

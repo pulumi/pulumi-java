@@ -22,10 +22,10 @@ public final class GetPreparedStatementResult {
      */
     private final @Nullable String queryStatement;
 
-    @OutputCustomType.Constructor({"description","queryStatement"})
+    @OutputCustomType.Constructor
     private GetPreparedStatementResult(
-        @Nullable String description,
-        @Nullable String queryStatement) {
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("queryStatement") @Nullable String queryStatement) {
         this.description = description;
         this.queryStatement = queryStatement;
     }

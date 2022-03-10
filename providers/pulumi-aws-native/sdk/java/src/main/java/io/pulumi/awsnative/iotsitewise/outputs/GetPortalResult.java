@@ -63,18 +63,18 @@ public final class GetPortalResult {
      */
     private final @Nullable String roleArn;
 
-    @OutputCustomType.Constructor({"alarms","notificationSenderEmail","portalArn","portalClientId","portalContactEmail","portalDescription","portalId","portalName","portalStartUrl","roleArn"})
+    @OutputCustomType.Constructor
     private GetPortalResult(
-        @Nullable AlarmsProperties alarms,
-        @Nullable String notificationSenderEmail,
-        @Nullable String portalArn,
-        @Nullable String portalClientId,
-        @Nullable String portalContactEmail,
-        @Nullable String portalDescription,
-        @Nullable String portalId,
-        @Nullable String portalName,
-        @Nullable String portalStartUrl,
-        @Nullable String roleArn) {
+        @OutputCustomType.Parameter("alarms") @Nullable AlarmsProperties alarms,
+        @OutputCustomType.Parameter("notificationSenderEmail") @Nullable String notificationSenderEmail,
+        @OutputCustomType.Parameter("portalArn") @Nullable String portalArn,
+        @OutputCustomType.Parameter("portalClientId") @Nullable String portalClientId,
+        @OutputCustomType.Parameter("portalContactEmail") @Nullable String portalContactEmail,
+        @OutputCustomType.Parameter("portalDescription") @Nullable String portalDescription,
+        @OutputCustomType.Parameter("portalId") @Nullable String portalId,
+        @OutputCustomType.Parameter("portalName") @Nullable String portalName,
+        @OutputCustomType.Parameter("portalStartUrl") @Nullable String portalStartUrl,
+        @OutputCustomType.Parameter("roleArn") @Nullable String roleArn) {
         this.alarms = alarms;
         this.notificationSenderEmail = notificationSenderEmail;
         this.portalArn = portalArn;

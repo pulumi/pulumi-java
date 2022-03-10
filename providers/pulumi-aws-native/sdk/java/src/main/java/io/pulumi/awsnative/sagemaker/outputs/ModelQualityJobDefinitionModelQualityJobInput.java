@@ -13,10 +13,10 @@ public final class ModelQualityJobDefinitionModelQualityJobInput {
     private final ModelQualityJobDefinitionEndpointInput endpointInput;
     private final ModelQualityJobDefinitionMonitoringGroundTruthS3Input groundTruthS3Input;
 
-    @OutputCustomType.Constructor({"endpointInput","groundTruthS3Input"})
+    @OutputCustomType.Constructor
     private ModelQualityJobDefinitionModelQualityJobInput(
-        ModelQualityJobDefinitionEndpointInput endpointInput,
-        ModelQualityJobDefinitionMonitoringGroundTruthS3Input groundTruthS3Input) {
+        @OutputCustomType.Parameter("endpointInput") ModelQualityJobDefinitionEndpointInput endpointInput,
+        @OutputCustomType.Parameter("groundTruthS3Input") ModelQualityJobDefinitionMonitoringGroundTruthS3Input groundTruthS3Input) {
         this.endpointInput = endpointInput;
         this.groundTruthS3Input = groundTruthS3Input;
     }

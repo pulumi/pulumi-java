@@ -23,10 +23,10 @@ public final class LoggingConfigurationCondition {
      */
     private final @Nullable LoggingConfigurationConditionLabelNameConditionProperties labelNameCondition;
 
-    @OutputCustomType.Constructor({"actionCondition","labelNameCondition"})
+    @OutputCustomType.Constructor
     private LoggingConfigurationCondition(
-        @Nullable LoggingConfigurationConditionActionConditionProperties actionCondition,
-        @Nullable LoggingConfigurationConditionLabelNameConditionProperties labelNameCondition) {
+        @OutputCustomType.Parameter("actionCondition") @Nullable LoggingConfigurationConditionActionConditionProperties actionCondition,
+        @OutputCustomType.Parameter("labelNameCondition") @Nullable LoggingConfigurationConditionLabelNameConditionProperties labelNameCondition) {
         this.actionCondition = actionCondition;
         this.labelNameCondition = labelNameCondition;
     }

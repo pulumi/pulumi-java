@@ -18,12 +18,12 @@ public final class NetworkInsightsAnalysisAnalysisLoadBalancerTarget {
     private final @Nullable NetworkInsightsAnalysisAnalysisComponent instance;
     private final @Nullable Integer port;
 
-    @OutputCustomType.Constructor({"address","availabilityZone","instance","port"})
+    @OutputCustomType.Constructor
     private NetworkInsightsAnalysisAnalysisLoadBalancerTarget(
-        @Nullable String address,
-        @Nullable String availabilityZone,
-        @Nullable NetworkInsightsAnalysisAnalysisComponent instance,
-        @Nullable Integer port) {
+        @OutputCustomType.Parameter("address") @Nullable String address,
+        @OutputCustomType.Parameter("availabilityZone") @Nullable String availabilityZone,
+        @OutputCustomType.Parameter("instance") @Nullable NetworkInsightsAnalysisAnalysisComponent instance,
+        @OutputCustomType.Parameter("port") @Nullable Integer port) {
         this.address = address;
         this.availabilityZone = availabilityZone;
         this.instance = instance;

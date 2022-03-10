@@ -49,15 +49,15 @@ public final class GetCompositeAlarmResult {
      */
     private final @Nullable List<String> oKActions;
 
-    @OutputCustomType.Constructor({"actionsEnabled","alarmActions","alarmDescription","alarmRule","arn","insufficientDataActions","oKActions"})
+    @OutputCustomType.Constructor
     private GetCompositeAlarmResult(
-        @Nullable Boolean actionsEnabled,
-        @Nullable List<String> alarmActions,
-        @Nullable String alarmDescription,
-        @Nullable String alarmRule,
-        @Nullable String arn,
-        @Nullable List<String> insufficientDataActions,
-        @Nullable List<String> oKActions) {
+        @OutputCustomType.Parameter("actionsEnabled") @Nullable Boolean actionsEnabled,
+        @OutputCustomType.Parameter("alarmActions") @Nullable List<String> alarmActions,
+        @OutputCustomType.Parameter("alarmDescription") @Nullable String alarmDescription,
+        @OutputCustomType.Parameter("alarmRule") @Nullable String alarmRule,
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("insufficientDataActions") @Nullable List<String> insufficientDataActions,
+        @OutputCustomType.Parameter("oKActions") @Nullable List<String> oKActions) {
         this.actionsEnabled = actionsEnabled;
         this.alarmActions = alarmActions;
         this.alarmDescription = alarmDescription;

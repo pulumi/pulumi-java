@@ -13,8 +13,8 @@ import javax.annotation.Nullable;
 public final class GlobalTableWriteProvisionedThroughputSettings {
     private final @Nullable GlobalTableCapacityAutoScalingSettings writeCapacityAutoScalingSettings;
 
-    @OutputCustomType.Constructor({"writeCapacityAutoScalingSettings"})
-    private GlobalTableWriteProvisionedThroughputSettings(@Nullable GlobalTableCapacityAutoScalingSettings writeCapacityAutoScalingSettings) {
+    @OutputCustomType.Constructor
+    private GlobalTableWriteProvisionedThroughputSettings(@OutputCustomType.Parameter("writeCapacityAutoScalingSettings") @Nullable GlobalTableCapacityAutoScalingSettings writeCapacityAutoScalingSettings) {
         this.writeCapacityAutoScalingSettings = writeCapacityAutoScalingSettings;
     }
 

@@ -17,11 +17,11 @@ public final class CapacityProviderAutoScalingGroupProvider {
     private final @Nullable CapacityProviderManagedScaling managedScaling;
     private final @Nullable CapacityProviderAutoScalingGroupProviderManagedTerminationProtection managedTerminationProtection;
 
-    @OutputCustomType.Constructor({"autoScalingGroupArn","managedScaling","managedTerminationProtection"})
+    @OutputCustomType.Constructor
     private CapacityProviderAutoScalingGroupProvider(
-        String autoScalingGroupArn,
-        @Nullable CapacityProviderManagedScaling managedScaling,
-        @Nullable CapacityProviderAutoScalingGroupProviderManagedTerminationProtection managedTerminationProtection) {
+        @OutputCustomType.Parameter("autoScalingGroupArn") String autoScalingGroupArn,
+        @OutputCustomType.Parameter("managedScaling") @Nullable CapacityProviderManagedScaling managedScaling,
+        @OutputCustomType.Parameter("managedTerminationProtection") @Nullable CapacityProviderAutoScalingGroupProviderManagedTerminationProtection managedTerminationProtection) {
         this.autoScalingGroupArn = autoScalingGroupArn;
         this.managedScaling = managedScaling;
         this.managedTerminationProtection = managedTerminationProtection;

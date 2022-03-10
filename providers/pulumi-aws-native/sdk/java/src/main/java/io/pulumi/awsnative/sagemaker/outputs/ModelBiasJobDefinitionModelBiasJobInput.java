@@ -13,10 +13,10 @@ public final class ModelBiasJobDefinitionModelBiasJobInput {
     private final ModelBiasJobDefinitionEndpointInput endpointInput;
     private final ModelBiasJobDefinitionMonitoringGroundTruthS3Input groundTruthS3Input;
 
-    @OutputCustomType.Constructor({"endpointInput","groundTruthS3Input"})
+    @OutputCustomType.Constructor
     private ModelBiasJobDefinitionModelBiasJobInput(
-        ModelBiasJobDefinitionEndpointInput endpointInput,
-        ModelBiasJobDefinitionMonitoringGroundTruthS3Input groundTruthS3Input) {
+        @OutputCustomType.Parameter("endpointInput") ModelBiasJobDefinitionEndpointInput endpointInput,
+        @OutputCustomType.Parameter("groundTruthS3Input") ModelBiasJobDefinitionMonitoringGroundTruthS3Input groundTruthS3Input) {
         this.endpointInput = endpointInput;
         this.groundTruthS3Input = groundTruthS3Input;
     }

@@ -13,10 +13,10 @@ public final class BudgetsActionActionThreshold {
     private final BudgetsActionActionThresholdType type;
     private final Double value;
 
-    @OutputCustomType.Constructor({"type","value"})
+    @OutputCustomType.Constructor
     private BudgetsActionActionThreshold(
-        BudgetsActionActionThresholdType type,
-        Double value) {
+        @OutputCustomType.Parameter("type") BudgetsActionActionThresholdType type,
+        @OutputCustomType.Parameter("value") Double value) {
         this.type = type;
         this.value = value;
     }

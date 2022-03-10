@@ -17,8 +17,8 @@ public final class TemplateColumnGroupColumnSchema {
      */
     private final @Nullable String name;
 
-    @OutputCustomType.Constructor({"name"})
-    private TemplateColumnGroupColumnSchema(@Nullable String name) {
+    @OutputCustomType.Constructor
+    private TemplateColumnGroupColumnSchema(@OutputCustomType.Parameter("name") @Nullable String name) {
         this.name = name;
     }
 

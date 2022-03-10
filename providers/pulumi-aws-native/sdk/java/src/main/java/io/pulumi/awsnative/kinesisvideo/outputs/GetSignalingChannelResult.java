@@ -36,12 +36,12 @@ public final class GetSignalingChannelResult {
      */
     private final @Nullable SignalingChannelType type;
 
-    @OutputCustomType.Constructor({"arn","messageTtlSeconds","tags","type"})
+    @OutputCustomType.Constructor
     private GetSignalingChannelResult(
-        @Nullable String arn,
-        @Nullable Integer messageTtlSeconds,
-        @Nullable List<SignalingChannelTag> tags,
-        @Nullable SignalingChannelType type) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("messageTtlSeconds") @Nullable Integer messageTtlSeconds,
+        @OutputCustomType.Parameter("tags") @Nullable List<SignalingChannelTag> tags,
+        @OutputCustomType.Parameter("type") @Nullable SignalingChannelType type) {
         this.arn = arn;
         this.messageTtlSeconds = messageTtlSeconds;
         this.tags = tags;

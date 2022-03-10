@@ -32,18 +32,18 @@ public final class GetDeliveryStreamResult {
     private final @Nullable DeliveryStreamSplunkDestinationConfiguration splunkDestinationConfiguration;
     private final @Nullable List<DeliveryStreamTag> tags;
 
-    @OutputCustomType.Constructor({"amazonopensearchserviceDestinationConfiguration","arn","deliveryStreamEncryptionConfigurationInput","elasticsearchDestinationConfiguration","extendedS3DestinationConfiguration","httpEndpointDestinationConfiguration","redshiftDestinationConfiguration","s3DestinationConfiguration","splunkDestinationConfiguration","tags"})
+    @OutputCustomType.Constructor
     private GetDeliveryStreamResult(
-        @Nullable DeliveryStreamAmazonopensearchserviceDestinationConfiguration amazonopensearchserviceDestinationConfiguration,
-        @Nullable String arn,
-        @Nullable DeliveryStreamEncryptionConfigurationInput deliveryStreamEncryptionConfigurationInput,
-        @Nullable DeliveryStreamElasticsearchDestinationConfiguration elasticsearchDestinationConfiguration,
-        @Nullable DeliveryStreamExtendedS3DestinationConfiguration extendedS3DestinationConfiguration,
-        @Nullable DeliveryStreamHttpEndpointDestinationConfiguration httpEndpointDestinationConfiguration,
-        @Nullable DeliveryStreamRedshiftDestinationConfiguration redshiftDestinationConfiguration,
-        @Nullable DeliveryStreamS3DestinationConfiguration s3DestinationConfiguration,
-        @Nullable DeliveryStreamSplunkDestinationConfiguration splunkDestinationConfiguration,
-        @Nullable List<DeliveryStreamTag> tags) {
+        @OutputCustomType.Parameter("amazonopensearchserviceDestinationConfiguration") @Nullable DeliveryStreamAmazonopensearchserviceDestinationConfiguration amazonopensearchserviceDestinationConfiguration,
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("deliveryStreamEncryptionConfigurationInput") @Nullable DeliveryStreamEncryptionConfigurationInput deliveryStreamEncryptionConfigurationInput,
+        @OutputCustomType.Parameter("elasticsearchDestinationConfiguration") @Nullable DeliveryStreamElasticsearchDestinationConfiguration elasticsearchDestinationConfiguration,
+        @OutputCustomType.Parameter("extendedS3DestinationConfiguration") @Nullable DeliveryStreamExtendedS3DestinationConfiguration extendedS3DestinationConfiguration,
+        @OutputCustomType.Parameter("httpEndpointDestinationConfiguration") @Nullable DeliveryStreamHttpEndpointDestinationConfiguration httpEndpointDestinationConfiguration,
+        @OutputCustomType.Parameter("redshiftDestinationConfiguration") @Nullable DeliveryStreamRedshiftDestinationConfiguration redshiftDestinationConfiguration,
+        @OutputCustomType.Parameter("s3DestinationConfiguration") @Nullable DeliveryStreamS3DestinationConfiguration s3DestinationConfiguration,
+        @OutputCustomType.Parameter("splunkDestinationConfiguration") @Nullable DeliveryStreamSplunkDestinationConfiguration splunkDestinationConfiguration,
+        @OutputCustomType.Parameter("tags") @Nullable List<DeliveryStreamTag> tags) {
         this.amazonopensearchserviceDestinationConfiguration = amazonopensearchserviceDestinationConfiguration;
         this.arn = arn;
         this.deliveryStreamEncryptionConfigurationInput = deliveryStreamEncryptionConfigurationInput;

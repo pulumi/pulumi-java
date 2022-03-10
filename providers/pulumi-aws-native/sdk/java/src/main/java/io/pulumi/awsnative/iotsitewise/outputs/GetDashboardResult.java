@@ -44,14 +44,14 @@ public final class GetDashboardResult {
      */
     private final @Nullable List<DashboardTag> tags;
 
-    @OutputCustomType.Constructor({"dashboardArn","dashboardDefinition","dashboardDescription","dashboardId","dashboardName","tags"})
+    @OutputCustomType.Constructor
     private GetDashboardResult(
-        @Nullable String dashboardArn,
-        @Nullable String dashboardDefinition,
-        @Nullable String dashboardDescription,
-        @Nullable String dashboardId,
-        @Nullable String dashboardName,
-        @Nullable List<DashboardTag> tags) {
+        @OutputCustomType.Parameter("dashboardArn") @Nullable String dashboardArn,
+        @OutputCustomType.Parameter("dashboardDefinition") @Nullable String dashboardDefinition,
+        @OutputCustomType.Parameter("dashboardDescription") @Nullable String dashboardDescription,
+        @OutputCustomType.Parameter("dashboardId") @Nullable String dashboardId,
+        @OutputCustomType.Parameter("dashboardName") @Nullable String dashboardName,
+        @OutputCustomType.Parameter("tags") @Nullable List<DashboardTag> tags) {
         this.dashboardArn = dashboardArn;
         this.dashboardDefinition = dashboardDefinition;
         this.dashboardDescription = dashboardDescription;

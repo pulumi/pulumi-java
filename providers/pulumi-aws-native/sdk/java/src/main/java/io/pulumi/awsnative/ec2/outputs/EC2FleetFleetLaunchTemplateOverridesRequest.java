@@ -23,16 +23,16 @@ public final class EC2FleetFleetLaunchTemplateOverridesRequest {
     private final @Nullable String subnetId;
     private final @Nullable Double weightedCapacity;
 
-    @OutputCustomType.Constructor({"availabilityZone","instanceRequirements","instanceType","maxPrice","placement","priority","subnetId","weightedCapacity"})
+    @OutputCustomType.Constructor
     private EC2FleetFleetLaunchTemplateOverridesRequest(
-        @Nullable String availabilityZone,
-        @Nullable EC2FleetInstanceRequirementsRequest instanceRequirements,
-        @Nullable String instanceType,
-        @Nullable String maxPrice,
-        @Nullable EC2FleetPlacement placement,
-        @Nullable Double priority,
-        @Nullable String subnetId,
-        @Nullable Double weightedCapacity) {
+        @OutputCustomType.Parameter("availabilityZone") @Nullable String availabilityZone,
+        @OutputCustomType.Parameter("instanceRequirements") @Nullable EC2FleetInstanceRequirementsRequest instanceRequirements,
+        @OutputCustomType.Parameter("instanceType") @Nullable String instanceType,
+        @OutputCustomType.Parameter("maxPrice") @Nullable String maxPrice,
+        @OutputCustomType.Parameter("placement") @Nullable EC2FleetPlacement placement,
+        @OutputCustomType.Parameter("priority") @Nullable Double priority,
+        @OutputCustomType.Parameter("subnetId") @Nullable String subnetId,
+        @OutputCustomType.Parameter("weightedCapacity") @Nullable Double weightedCapacity) {
         this.availabilityZone = availabilityZone;
         this.instanceRequirements = instanceRequirements;
         this.instanceType = instanceType;

@@ -11,8 +11,8 @@ import java.util.Objects;
 public final class VirtualClusterEksInfo {
     private final String namespace;
 
-    @OutputCustomType.Constructor({"namespace"})
-    private VirtualClusterEksInfo(String namespace) {
+    @OutputCustomType.Constructor
+    private VirtualClusterEksInfo(@OutputCustomType.Parameter("namespace") String namespace) {
         this.namespace = namespace;
     }
 

@@ -23,10 +23,10 @@ public final class RobotApplicationRobotSoftwareSuite {
      */
     private final @Nullable RobotApplicationRobotSoftwareSuiteVersion version;
 
-    @OutputCustomType.Constructor({"name","version"})
+    @OutputCustomType.Constructor
     private RobotApplicationRobotSoftwareSuite(
-        RobotApplicationRobotSoftwareSuiteName name,
-        @Nullable RobotApplicationRobotSoftwareSuiteVersion version) {
+        @OutputCustomType.Parameter("name") RobotApplicationRobotSoftwareSuiteName name,
+        @OutputCustomType.Parameter("version") @Nullable RobotApplicationRobotSoftwareSuiteVersion version) {
         this.name = name;
         this.version = version;
     }

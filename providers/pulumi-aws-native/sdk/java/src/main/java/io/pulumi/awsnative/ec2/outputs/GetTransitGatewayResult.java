@@ -25,19 +25,19 @@ public final class GetTransitGatewayResult {
     private final @Nullable List<String> transitGatewayCidrBlocks;
     private final @Nullable String vpnEcmpSupport;
 
-    @OutputCustomType.Constructor({"associationDefaultRouteTableId","autoAcceptSharedAttachments","defaultRouteTableAssociation","defaultRouteTablePropagation","description","dnsSupport","id","propagationDefaultRouteTableId","tags","transitGatewayCidrBlocks","vpnEcmpSupport"})
+    @OutputCustomType.Constructor
     private GetTransitGatewayResult(
-        @Nullable String associationDefaultRouteTableId,
-        @Nullable String autoAcceptSharedAttachments,
-        @Nullable String defaultRouteTableAssociation,
-        @Nullable String defaultRouteTablePropagation,
-        @Nullable String description,
-        @Nullable String dnsSupport,
-        @Nullable String id,
-        @Nullable String propagationDefaultRouteTableId,
-        @Nullable List<TransitGatewayTag> tags,
-        @Nullable List<String> transitGatewayCidrBlocks,
-        @Nullable String vpnEcmpSupport) {
+        @OutputCustomType.Parameter("associationDefaultRouteTableId") @Nullable String associationDefaultRouteTableId,
+        @OutputCustomType.Parameter("autoAcceptSharedAttachments") @Nullable String autoAcceptSharedAttachments,
+        @OutputCustomType.Parameter("defaultRouteTableAssociation") @Nullable String defaultRouteTableAssociation,
+        @OutputCustomType.Parameter("defaultRouteTablePropagation") @Nullable String defaultRouteTablePropagation,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("dnsSupport") @Nullable String dnsSupport,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("propagationDefaultRouteTableId") @Nullable String propagationDefaultRouteTableId,
+        @OutputCustomType.Parameter("tags") @Nullable List<TransitGatewayTag> tags,
+        @OutputCustomType.Parameter("transitGatewayCidrBlocks") @Nullable List<String> transitGatewayCidrBlocks,
+        @OutputCustomType.Parameter("vpnEcmpSupport") @Nullable String vpnEcmpSupport) {
         this.associationDefaultRouteTableId = associationDefaultRouteTableId;
         this.autoAcceptSharedAttachments = autoAcceptSharedAttachments;
         this.defaultRouteTableAssociation = defaultRouteTableAssociation;

@@ -12,10 +12,10 @@ public final class TableColumn {
     private final String columnName;
     private final String columnType;
 
-    @OutputCustomType.Constructor({"columnName","columnType"})
+    @OutputCustomType.Constructor
     private TableColumn(
-        String columnName,
-        String columnType) {
+        @OutputCustomType.Parameter("columnName") String columnName,
+        @OutputCustomType.Parameter("columnType") String columnType) {
         this.columnName = columnName;
         this.columnType = columnType;
     }

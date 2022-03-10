@@ -17,8 +17,8 @@ public final class FilterCriteriaProperties {
      */
     private final @Nullable List<EventSourceMappingFilter> filters;
 
-    @OutputCustomType.Constructor({"filters"})
-    private FilterCriteriaProperties(@Nullable List<EventSourceMappingFilter> filters) {
+    @OutputCustomType.Constructor
+    private FilterCriteriaProperties(@OutputCustomType.Parameter("filters") @Nullable List<EventSourceMappingFilter> filters) {
         this.filters = filters;
     }
 

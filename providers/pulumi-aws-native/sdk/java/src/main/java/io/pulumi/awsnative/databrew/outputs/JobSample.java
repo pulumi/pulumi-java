@@ -15,10 +15,10 @@ public final class JobSample {
     private final @Nullable JobSampleMode mode;
     private final @Nullable Integer size;
 
-    @OutputCustomType.Constructor({"mode","size"})
+    @OutputCustomType.Constructor
     private JobSample(
-        @Nullable JobSampleMode mode,
-        @Nullable Integer size) {
+        @OutputCustomType.Parameter("mode") @Nullable JobSampleMode mode,
+        @OutputCustomType.Parameter("size") @Nullable Integer size) {
         this.mode = mode;
         this.size = size;
     }

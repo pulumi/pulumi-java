@@ -34,14 +34,14 @@ public final class GetPipelineResult {
     private final @Nullable String roleArn;
     private final @Nullable List<PipelineTag> tags;
 
-    @OutputCustomType.Constructor({"parallelismConfiguration","pipelineDefinition","pipelineDescription","pipelineDisplayName","roleArn","tags"})
+    @OutputCustomType.Constructor
     private GetPipelineResult(
-        @Nullable ParallelismConfigurationProperties parallelismConfiguration,
-        @Nullable Object pipelineDefinition,
-        @Nullable String pipelineDescription,
-        @Nullable String pipelineDisplayName,
-        @Nullable String roleArn,
-        @Nullable List<PipelineTag> tags) {
+        @OutputCustomType.Parameter("parallelismConfiguration") @Nullable ParallelismConfigurationProperties parallelismConfiguration,
+        @OutputCustomType.Parameter("pipelineDefinition") @Nullable Object pipelineDefinition,
+        @OutputCustomType.Parameter("pipelineDescription") @Nullable String pipelineDescription,
+        @OutputCustomType.Parameter("pipelineDisplayName") @Nullable String pipelineDisplayName,
+        @OutputCustomType.Parameter("roleArn") @Nullable String roleArn,
+        @OutputCustomType.Parameter("tags") @Nullable List<PipelineTag> tags) {
         this.parallelismConfiguration = parallelismConfiguration;
         this.pipelineDefinition = pipelineDefinition;
         this.pipelineDescription = pipelineDescription;

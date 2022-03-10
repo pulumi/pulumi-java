@@ -15,10 +15,10 @@ public final class OnlineStoreConfigProperties {
     private final @Nullable Boolean enableOnlineStore;
     private final @Nullable FeatureGroupOnlineStoreSecurityConfig securityConfig;
 
-    @OutputCustomType.Constructor({"enableOnlineStore","securityConfig"})
+    @OutputCustomType.Constructor
     private OnlineStoreConfigProperties(
-        @Nullable Boolean enableOnlineStore,
-        @Nullable FeatureGroupOnlineStoreSecurityConfig securityConfig) {
+        @OutputCustomType.Parameter("enableOnlineStore") @Nullable Boolean enableOnlineStore,
+        @OutputCustomType.Parameter("securityConfig") @Nullable FeatureGroupOnlineStoreSecurityConfig securityConfig) {
         this.enableOnlineStore = enableOnlineStore;
         this.securityConfig = securityConfig;
     }

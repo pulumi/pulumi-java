@@ -42,15 +42,15 @@ public final class GetPermissionSetResult {
     private final @Nullable String sessionDuration;
     private final @Nullable List<PermissionSetTag> tags;
 
-    @OutputCustomType.Constructor({"description","inlinePolicy","managedPolicies","permissionSetArn","relayStateType","sessionDuration","tags"})
+    @OutputCustomType.Constructor
     private GetPermissionSetResult(
-        @Nullable String description,
-        @Nullable Object inlinePolicy,
-        @Nullable List<String> managedPolicies,
-        @Nullable String permissionSetArn,
-        @Nullable String relayStateType,
-        @Nullable String sessionDuration,
-        @Nullable List<PermissionSetTag> tags) {
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("inlinePolicy") @Nullable Object inlinePolicy,
+        @OutputCustomType.Parameter("managedPolicies") @Nullable List<String> managedPolicies,
+        @OutputCustomType.Parameter("permissionSetArn") @Nullable String permissionSetArn,
+        @OutputCustomType.Parameter("relayStateType") @Nullable String relayStateType,
+        @OutputCustomType.Parameter("sessionDuration") @Nullable String sessionDuration,
+        @OutputCustomType.Parameter("tags") @Nullable List<PermissionSetTag> tags) {
         this.description = description;
         this.inlinePolicy = inlinePolicy;
         this.managedPolicies = managedPolicies;

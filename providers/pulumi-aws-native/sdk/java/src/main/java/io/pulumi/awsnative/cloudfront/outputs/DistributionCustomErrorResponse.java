@@ -18,12 +18,12 @@ public final class DistributionCustomErrorResponse {
     private final @Nullable Integer responseCode;
     private final @Nullable String responsePagePath;
 
-    @OutputCustomType.Constructor({"errorCachingMinTTL","errorCode","responseCode","responsePagePath"})
+    @OutputCustomType.Constructor
     private DistributionCustomErrorResponse(
-        @Nullable Double errorCachingMinTTL,
-        Integer errorCode,
-        @Nullable Integer responseCode,
-        @Nullable String responsePagePath) {
+        @OutputCustomType.Parameter("errorCachingMinTTL") @Nullable Double errorCachingMinTTL,
+        @OutputCustomType.Parameter("errorCode") Integer errorCode,
+        @OutputCustomType.Parameter("responseCode") @Nullable Integer responseCode,
+        @OutputCustomType.Parameter("responsePagePath") @Nullable String responsePagePath) {
         this.errorCachingMinTTL = errorCachingMinTTL;
         this.errorCode = errorCode;
         this.responseCode = responseCode;

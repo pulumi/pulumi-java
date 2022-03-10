@@ -12,8 +12,8 @@ import java.util.Objects;
 public final class AbortConfigProperties {
     private final List<JobTemplateAbortCriteria> criteriaList;
 
-    @OutputCustomType.Constructor({"criteriaList"})
-    private AbortConfigProperties(List<JobTemplateAbortCriteria> criteriaList) {
+    @OutputCustomType.Constructor
+    private AbortConfigProperties(@OutputCustomType.Parameter("criteriaList") List<JobTemplateAbortCriteria> criteriaList) {
         this.criteriaList = criteriaList;
     }
 

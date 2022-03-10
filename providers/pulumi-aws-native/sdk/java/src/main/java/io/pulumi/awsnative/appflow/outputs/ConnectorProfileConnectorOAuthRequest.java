@@ -23,10 +23,10 @@ public final class ConnectorProfileConnectorOAuthRequest {
      */
     private final @Nullable String redirectUri;
 
-    @OutputCustomType.Constructor({"authCode","redirectUri"})
+    @OutputCustomType.Constructor
     private ConnectorProfileConnectorOAuthRequest(
-        @Nullable String authCode,
-        @Nullable String redirectUri) {
+        @OutputCustomType.Parameter("authCode") @Nullable String authCode,
+        @OutputCustomType.Parameter("redirectUri") @Nullable String redirectUri) {
         this.authCode = authCode;
         this.redirectUri = redirectUri;
     }

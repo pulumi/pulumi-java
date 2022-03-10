@@ -34,12 +34,12 @@ public final class GetConnectionResult {
      */
     private final @Nullable List<ConnectionTag> tags;
 
-    @OutputCustomType.Constructor({"connectionArn","connectionStatus","ownerAccountId","tags"})
+    @OutputCustomType.Constructor
     private GetConnectionResult(
-        @Nullable String connectionArn,
-        @Nullable String connectionStatus,
-        @Nullable String ownerAccountId,
-        @Nullable List<ConnectionTag> tags) {
+        @OutputCustomType.Parameter("connectionArn") @Nullable String connectionArn,
+        @OutputCustomType.Parameter("connectionStatus") @Nullable String connectionStatus,
+        @OutputCustomType.Parameter("ownerAccountId") @Nullable String ownerAccountId,
+        @OutputCustomType.Parameter("tags") @Nullable List<ConnectionTag> tags) {
         this.connectionArn = connectionArn;
         this.connectionStatus = connectionStatus;
         this.ownerAccountId = ownerAccountId;

@@ -15,8 +15,8 @@ public final class TemplateSourceTemplate {
      */
     private final String arn;
 
-    @OutputCustomType.Constructor({"arn"})
-    private TemplateSourceTemplate(String arn) {
+    @OutputCustomType.Constructor
+    private TemplateSourceTemplate(@OutputCustomType.Parameter("arn") String arn) {
         this.arn = arn;
     }
 

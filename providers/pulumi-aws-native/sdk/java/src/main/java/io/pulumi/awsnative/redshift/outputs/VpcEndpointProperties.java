@@ -29,11 +29,11 @@ public final class VpcEndpointProperties {
      */
     private final @Nullable String vpcId;
 
-    @OutputCustomType.Constructor({"networkInterfaces","vpcEndpointId","vpcId"})
+    @OutputCustomType.Constructor
     private VpcEndpointProperties(
-        @Nullable List<EndpointAccessNetworkInterface> networkInterfaces,
-        @Nullable String vpcEndpointId,
-        @Nullable String vpcId) {
+        @OutputCustomType.Parameter("networkInterfaces") @Nullable List<EndpointAccessNetworkInterface> networkInterfaces,
+        @OutputCustomType.Parameter("vpcEndpointId") @Nullable String vpcEndpointId,
+        @OutputCustomType.Parameter("vpcId") @Nullable String vpcId) {
         this.networkInterfaces = networkInterfaces;
         this.vpcEndpointId = vpcEndpointId;
         this.vpcId = vpcId;

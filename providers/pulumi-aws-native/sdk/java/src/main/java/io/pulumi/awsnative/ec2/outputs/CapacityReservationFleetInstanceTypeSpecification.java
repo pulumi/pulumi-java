@@ -22,15 +22,15 @@ public final class CapacityReservationFleetInstanceTypeSpecification {
     private final @Nullable Integer priority;
     private final @Nullable Double weight;
 
-    @OutputCustomType.Constructor({"availabilityZone","availabilityZoneId","ebsOptimized","instancePlatform","instanceType","priority","weight"})
+    @OutputCustomType.Constructor
     private CapacityReservationFleetInstanceTypeSpecification(
-        @Nullable String availabilityZone,
-        @Nullable String availabilityZoneId,
-        @Nullable Boolean ebsOptimized,
-        @Nullable String instancePlatform,
-        @Nullable String instanceType,
-        @Nullable Integer priority,
-        @Nullable Double weight) {
+        @OutputCustomType.Parameter("availabilityZone") @Nullable String availabilityZone,
+        @OutputCustomType.Parameter("availabilityZoneId") @Nullable String availabilityZoneId,
+        @OutputCustomType.Parameter("ebsOptimized") @Nullable Boolean ebsOptimized,
+        @OutputCustomType.Parameter("instancePlatform") @Nullable String instancePlatform,
+        @OutputCustomType.Parameter("instanceType") @Nullable String instanceType,
+        @OutputCustomType.Parameter("priority") @Nullable Integer priority,
+        @OutputCustomType.Parameter("weight") @Nullable Double weight) {
         this.availabilityZone = availabilityZone;
         this.availabilityZoneId = availabilityZoneId;
         this.ebsOptimized = ebsOptimized;

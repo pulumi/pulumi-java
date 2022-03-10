@@ -16,11 +16,11 @@ public final class DomainConfigurationServerCertificateSummary {
     private final @Nullable DomainConfigurationServerCertificateSummaryServerCertificateStatus serverCertificateStatus;
     private final @Nullable String serverCertificateStatusDetail;
 
-    @OutputCustomType.Constructor({"serverCertificateArn","serverCertificateStatus","serverCertificateStatusDetail"})
+    @OutputCustomType.Constructor
     private DomainConfigurationServerCertificateSummary(
-        @Nullable String serverCertificateArn,
-        @Nullable DomainConfigurationServerCertificateSummaryServerCertificateStatus serverCertificateStatus,
-        @Nullable String serverCertificateStatusDetail) {
+        @OutputCustomType.Parameter("serverCertificateArn") @Nullable String serverCertificateArn,
+        @OutputCustomType.Parameter("serverCertificateStatus") @Nullable DomainConfigurationServerCertificateSummaryServerCertificateStatus serverCertificateStatus,
+        @OutputCustomType.Parameter("serverCertificateStatusDetail") @Nullable String serverCertificateStatusDetail) {
         this.serverCertificateArn = serverCertificateArn;
         this.serverCertificateStatus = serverCertificateStatus;
         this.serverCertificateStatusDetail = serverCertificateStatusDetail;

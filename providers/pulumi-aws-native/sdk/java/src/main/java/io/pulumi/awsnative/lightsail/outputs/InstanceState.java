@@ -23,10 +23,10 @@ public final class InstanceState {
      */
     private final @Nullable String name;
 
-    @OutputCustomType.Constructor({"code","name"})
+    @OutputCustomType.Constructor
     private InstanceState(
-        @Nullable Integer code,
-        @Nullable String name) {
+        @OutputCustomType.Parameter("code") @Nullable Integer code,
+        @OutputCustomType.Parameter("name") @Nullable String name) {
         this.code = code;
         this.name = name;
     }

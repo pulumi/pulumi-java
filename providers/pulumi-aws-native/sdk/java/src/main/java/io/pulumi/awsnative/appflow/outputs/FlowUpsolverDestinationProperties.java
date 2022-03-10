@@ -16,11 +16,11 @@ public final class FlowUpsolverDestinationProperties {
     private final @Nullable String bucketPrefix;
     private final FlowUpsolverS3OutputFormatConfig s3OutputFormatConfig;
 
-    @OutputCustomType.Constructor({"bucketName","bucketPrefix","s3OutputFormatConfig"})
+    @OutputCustomType.Constructor
     private FlowUpsolverDestinationProperties(
-        String bucketName,
-        @Nullable String bucketPrefix,
-        FlowUpsolverS3OutputFormatConfig s3OutputFormatConfig) {
+        @OutputCustomType.Parameter("bucketName") String bucketName,
+        @OutputCustomType.Parameter("bucketPrefix") @Nullable String bucketPrefix,
+        @OutputCustomType.Parameter("s3OutputFormatConfig") FlowUpsolverS3OutputFormatConfig s3OutputFormatConfig) {
         this.bucketName = bucketName;
         this.bucketPrefix = bucketPrefix;
         this.s3OutputFormatConfig = s3OutputFormatConfig;

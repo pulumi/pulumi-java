@@ -15,8 +15,8 @@ public final class DataSourceAmazonElasticsearchParameters {
      */
     private final String domain;
 
-    @OutputCustomType.Constructor({"domain"})
-    private DataSourceAmazonElasticsearchParameters(String domain) {
+    @OutputCustomType.Constructor
+    private DataSourceAmazonElasticsearchParameters(@OutputCustomType.Parameter("domain") String domain) {
         this.domain = domain;
     }
 

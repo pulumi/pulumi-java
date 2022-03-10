@@ -15,10 +15,10 @@ public final class DomainEncryptionAtRestOptions {
     private final @Nullable Boolean enabled;
     private final @Nullable String kmsKeyId;
 
-    @OutputCustomType.Constructor({"enabled","kmsKeyId"})
+    @OutputCustomType.Constructor
     private DomainEncryptionAtRestOptions(
-        @Nullable Boolean enabled,
-        @Nullable String kmsKeyId) {
+        @OutputCustomType.Parameter("enabled") @Nullable Boolean enabled,
+        @OutputCustomType.Parameter("kmsKeyId") @Nullable String kmsKeyId) {
         this.enabled = enabled;
         this.kmsKeyId = kmsKeyId;
     }

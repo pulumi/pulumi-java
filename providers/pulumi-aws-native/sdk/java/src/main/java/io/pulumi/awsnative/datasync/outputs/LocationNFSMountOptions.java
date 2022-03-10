@@ -17,8 +17,8 @@ public final class LocationNFSMountOptions {
      */
     private final @Nullable LocationNFSMountOptionsVersion version;
 
-    @OutputCustomType.Constructor({"version"})
-    private LocationNFSMountOptions(@Nullable LocationNFSMountOptionsVersion version) {
+    @OutputCustomType.Constructor
+    private LocationNFSMountOptions(@OutputCustomType.Parameter("version") @Nullable LocationNFSMountOptionsVersion version) {
         this.version = version;
     }
 

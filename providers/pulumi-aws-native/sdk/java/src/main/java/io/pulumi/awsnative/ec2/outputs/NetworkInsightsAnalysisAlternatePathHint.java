@@ -14,10 +14,10 @@ public final class NetworkInsightsAnalysisAlternatePathHint {
     private final @Nullable String componentArn;
     private final @Nullable String componentId;
 
-    @OutputCustomType.Constructor({"componentArn","componentId"})
+    @OutputCustomType.Constructor
     private NetworkInsightsAnalysisAlternatePathHint(
-        @Nullable String componentArn,
-        @Nullable String componentId) {
+        @OutputCustomType.Parameter("componentArn") @Nullable String componentArn,
+        @OutputCustomType.Parameter("componentId") @Nullable String componentId) {
         this.componentArn = componentArn;
         this.componentId = componentId;
     }

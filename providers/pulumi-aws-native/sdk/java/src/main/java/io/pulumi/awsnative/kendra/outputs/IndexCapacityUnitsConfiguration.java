@@ -12,10 +12,10 @@ public final class IndexCapacityUnitsConfiguration {
     private final Integer queryCapacityUnits;
     private final Integer storageCapacityUnits;
 
-    @OutputCustomType.Constructor({"queryCapacityUnits","storageCapacityUnits"})
+    @OutputCustomType.Constructor
     private IndexCapacityUnitsConfiguration(
-        Integer queryCapacityUnits,
-        Integer storageCapacityUnits) {
+        @OutputCustomType.Parameter("queryCapacityUnits") Integer queryCapacityUnits,
+        @OutputCustomType.Parameter("storageCapacityUnits") Integer storageCapacityUnits) {
         this.queryCapacityUnits = queryCapacityUnits;
         this.storageCapacityUnits = storageCapacityUnits;
     }

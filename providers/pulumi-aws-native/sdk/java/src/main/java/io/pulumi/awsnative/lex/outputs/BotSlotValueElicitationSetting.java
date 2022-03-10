@@ -42,13 +42,13 @@ public final class BotSlotValueElicitationSetting {
      */
     private final @Nullable BotWaitAndContinueSpecification waitAndContinueSpecification;
 
-    @OutputCustomType.Constructor({"defaultValueSpecification","promptSpecification","sampleUtterances","slotConstraint","waitAndContinueSpecification"})
+    @OutputCustomType.Constructor
     private BotSlotValueElicitationSetting(
-        @Nullable BotSlotDefaultValueSpecification defaultValueSpecification,
-        @Nullable BotPromptSpecification promptSpecification,
-        @Nullable List<BotSampleUtterance> sampleUtterances,
-        BotSlotConstraint slotConstraint,
-        @Nullable BotWaitAndContinueSpecification waitAndContinueSpecification) {
+        @OutputCustomType.Parameter("defaultValueSpecification") @Nullable BotSlotDefaultValueSpecification defaultValueSpecification,
+        @OutputCustomType.Parameter("promptSpecification") @Nullable BotPromptSpecification promptSpecification,
+        @OutputCustomType.Parameter("sampleUtterances") @Nullable List<BotSampleUtterance> sampleUtterances,
+        @OutputCustomType.Parameter("slotConstraint") BotSlotConstraint slotConstraint,
+        @OutputCustomType.Parameter("waitAndContinueSpecification") @Nullable BotWaitAndContinueSpecification waitAndContinueSpecification) {
         this.defaultValueSpecification = defaultValueSpecification;
         this.promptSpecification = promptSpecification;
         this.sampleUtterances = sampleUtterances;

@@ -13,8 +13,8 @@ import javax.annotation.Nullable;
 public final class DeliveryStreamInputFormatConfiguration {
     private final @Nullable DeliveryStreamDeserializer deserializer;
 
-    @OutputCustomType.Constructor({"deserializer"})
-    private DeliveryStreamInputFormatConfiguration(@Nullable DeliveryStreamDeserializer deserializer) {
+    @OutputCustomType.Constructor
+    private DeliveryStreamInputFormatConfiguration(@OutputCustomType.Parameter("deserializer") @Nullable DeliveryStreamDeserializer deserializer) {
         this.deserializer = deserializer;
     }
 

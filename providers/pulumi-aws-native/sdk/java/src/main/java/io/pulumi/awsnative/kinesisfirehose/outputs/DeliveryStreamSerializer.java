@@ -15,10 +15,10 @@ public final class DeliveryStreamSerializer {
     private final @Nullable DeliveryStreamOrcSerDe orcSerDe;
     private final @Nullable DeliveryStreamParquetSerDe parquetSerDe;
 
-    @OutputCustomType.Constructor({"orcSerDe","parquetSerDe"})
+    @OutputCustomType.Constructor
     private DeliveryStreamSerializer(
-        @Nullable DeliveryStreamOrcSerDe orcSerDe,
-        @Nullable DeliveryStreamParquetSerDe parquetSerDe) {
+        @OutputCustomType.Parameter("orcSerDe") @Nullable DeliveryStreamOrcSerDe orcSerDe,
+        @OutputCustomType.Parameter("parquetSerDe") @Nullable DeliveryStreamParquetSerDe parquetSerDe) {
         this.orcSerDe = orcSerDe;
         this.parquetSerDe = parquetSerDe;
     }

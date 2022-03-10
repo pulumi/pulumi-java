@@ -52,18 +52,18 @@ public final class DetectorEventType {
      */
     private final @Nullable List<DetectorTag> tags;
 
-    @OutputCustomType.Constructor({"arn","createdTime","description","entityTypes","eventVariables","inline","labels","lastUpdatedTime","name","tags"})
+    @OutputCustomType.Constructor
     private DetectorEventType(
-        @Nullable String arn,
-        @Nullable String createdTime,
-        @Nullable String description,
-        @Nullable List<DetectorEntityType> entityTypes,
-        @Nullable List<DetectorEventVariable> eventVariables,
-        @Nullable Boolean inline,
-        @Nullable List<DetectorLabel> labels,
-        @Nullable String lastUpdatedTime,
-        @Nullable String name,
-        @Nullable List<DetectorTag> tags) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("createdTime") @Nullable String createdTime,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("entityTypes") @Nullable List<DetectorEntityType> entityTypes,
+        @OutputCustomType.Parameter("eventVariables") @Nullable List<DetectorEventVariable> eventVariables,
+        @OutputCustomType.Parameter("inline") @Nullable Boolean inline,
+        @OutputCustomType.Parameter("labels") @Nullable List<DetectorLabel> labels,
+        @OutputCustomType.Parameter("lastUpdatedTime") @Nullable String lastUpdatedTime,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("tags") @Nullable List<DetectorTag> tags) {
         this.arn = arn;
         this.createdTime = createdTime;
         this.description = description;

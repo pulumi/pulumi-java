@@ -15,10 +15,10 @@ public final class GetJobTemplateResult {
     private final @Nullable String arn;
     private final @Nullable JobExecutionsRetryConfigProperties jobExecutionsRetryConfig;
 
-    @OutputCustomType.Constructor({"arn","jobExecutionsRetryConfig"})
+    @OutputCustomType.Constructor
     private GetJobTemplateResult(
-        @Nullable String arn,
-        @Nullable JobExecutionsRetryConfigProperties jobExecutionsRetryConfig) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("jobExecutionsRetryConfig") @Nullable JobExecutionsRetryConfigProperties jobExecutionsRetryConfig) {
         this.arn = arn;
         this.jobExecutionsRetryConfig = jobExecutionsRetryConfig;
     }

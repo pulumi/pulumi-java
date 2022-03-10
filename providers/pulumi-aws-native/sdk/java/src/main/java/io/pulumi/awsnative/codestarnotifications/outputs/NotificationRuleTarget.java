@@ -12,10 +12,10 @@ public final class NotificationRuleTarget {
     private final String targetAddress;
     private final String targetType;
 
-    @OutputCustomType.Constructor({"targetAddress","targetType"})
+    @OutputCustomType.Constructor
     private NotificationRuleTarget(
-        String targetAddress,
-        String targetType) {
+        @OutputCustomType.Parameter("targetAddress") String targetAddress,
+        @OutputCustomType.Parameter("targetType") String targetType) {
         this.targetAddress = targetAddress;
         this.targetType = targetType;
     }

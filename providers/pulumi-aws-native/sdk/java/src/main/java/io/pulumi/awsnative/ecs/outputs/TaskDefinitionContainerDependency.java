@@ -14,10 +14,10 @@ public final class TaskDefinitionContainerDependency {
     private final @Nullable String condition;
     private final @Nullable String containerName;
 
-    @OutputCustomType.Constructor({"condition","containerName"})
+    @OutputCustomType.Constructor
     private TaskDefinitionContainerDependency(
-        @Nullable String condition,
-        @Nullable String containerName) {
+        @OutputCustomType.Parameter("condition") @Nullable String condition,
+        @OutputCustomType.Parameter("containerName") @Nullable String containerName) {
         this.condition = condition;
         this.containerName = containerName;
     }

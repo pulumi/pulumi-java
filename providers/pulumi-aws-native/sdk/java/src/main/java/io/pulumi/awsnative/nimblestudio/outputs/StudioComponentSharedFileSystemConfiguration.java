@@ -37,13 +37,13 @@ public final class StudioComponentSharedFileSystemConfiguration {
      */
     private final @Nullable String windowsMountDrive;
 
-    @OutputCustomType.Constructor({"endpoint","fileSystemId","linuxMountPoint","shareName","windowsMountDrive"})
+    @OutputCustomType.Constructor
     private StudioComponentSharedFileSystemConfiguration(
-        @Nullable String endpoint,
-        @Nullable String fileSystemId,
-        @Nullable String linuxMountPoint,
-        @Nullable String shareName,
-        @Nullable String windowsMountDrive) {
+        @OutputCustomType.Parameter("endpoint") @Nullable String endpoint,
+        @OutputCustomType.Parameter("fileSystemId") @Nullable String fileSystemId,
+        @OutputCustomType.Parameter("linuxMountPoint") @Nullable String linuxMountPoint,
+        @OutputCustomType.Parameter("shareName") @Nullable String shareName,
+        @OutputCustomType.Parameter("windowsMountDrive") @Nullable String windowsMountDrive) {
         this.endpoint = endpoint;
         this.fileSystemId = fileSystemId;
         this.linuxMountPoint = linuxMountPoint;

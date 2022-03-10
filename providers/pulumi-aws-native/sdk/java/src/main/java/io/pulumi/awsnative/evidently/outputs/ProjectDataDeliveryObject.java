@@ -15,10 +15,10 @@ public final class ProjectDataDeliveryObject {
     private final @Nullable String logGroup;
     private final @Nullable ProjectS3Destination s3;
 
-    @OutputCustomType.Constructor({"logGroup","s3"})
+    @OutputCustomType.Constructor
     private ProjectDataDeliveryObject(
-        @Nullable String logGroup,
-        @Nullable ProjectS3Destination s3) {
+        @OutputCustomType.Parameter("logGroup") @Nullable String logGroup,
+        @OutputCustomType.Parameter("s3") @Nullable ProjectS3Destination s3) {
         this.logGroup = logGroup;
         this.s3 = s3;
     }

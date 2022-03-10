@@ -16,10 +16,10 @@ public final class ObjectTypeKeyMap {
     private final @Nullable String name;
     private final @Nullable List<ObjectTypeKey> objectTypeKeyList;
 
-    @OutputCustomType.Constructor({"name","objectTypeKeyList"})
+    @OutputCustomType.Constructor
     private ObjectTypeKeyMap(
-        @Nullable String name,
-        @Nullable List<ObjectTypeKey> objectTypeKeyList) {
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("objectTypeKeyList") @Nullable List<ObjectTypeKey> objectTypeKeyList) {
         this.name = name;
         this.objectTypeKeyList = objectTypeKeyList;
     }

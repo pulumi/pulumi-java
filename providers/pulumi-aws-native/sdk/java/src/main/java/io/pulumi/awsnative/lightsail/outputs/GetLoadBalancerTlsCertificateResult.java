@@ -24,11 +24,11 @@ public final class GetLoadBalancerTlsCertificateResult {
      */
     private final @Nullable String status;
 
-    @OutputCustomType.Constructor({"isAttached","loadBalancerTlsCertificateArn","status"})
+    @OutputCustomType.Constructor
     private GetLoadBalancerTlsCertificateResult(
-        @Nullable Boolean isAttached,
-        @Nullable String loadBalancerTlsCertificateArn,
-        @Nullable String status) {
+        @OutputCustomType.Parameter("isAttached") @Nullable Boolean isAttached,
+        @OutputCustomType.Parameter("loadBalancerTlsCertificateArn") @Nullable String loadBalancerTlsCertificateArn,
+        @OutputCustomType.Parameter("status") @Nullable String status) {
         this.isAttached = isAttached;
         this.loadBalancerTlsCertificateArn = loadBalancerTlsCertificateArn;
         this.status = status;

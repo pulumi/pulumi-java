@@ -16,11 +16,11 @@ public final class SpotFleetSpotPlacement {
     private final @Nullable String groupName;
     private final @Nullable SpotFleetSpotPlacementTenancy tenancy;
 
-    @OutputCustomType.Constructor({"availabilityZone","groupName","tenancy"})
+    @OutputCustomType.Constructor
     private SpotFleetSpotPlacement(
-        @Nullable String availabilityZone,
-        @Nullable String groupName,
-        @Nullable SpotFleetSpotPlacementTenancy tenancy) {
+        @OutputCustomType.Parameter("availabilityZone") @Nullable String availabilityZone,
+        @OutputCustomType.Parameter("groupName") @Nullable String groupName,
+        @OutputCustomType.Parameter("tenancy") @Nullable SpotFleetSpotPlacementTenancy tenancy) {
         this.availabilityZone = availabilityZone;
         this.groupName = groupName;
         this.tenancy = tenancy;

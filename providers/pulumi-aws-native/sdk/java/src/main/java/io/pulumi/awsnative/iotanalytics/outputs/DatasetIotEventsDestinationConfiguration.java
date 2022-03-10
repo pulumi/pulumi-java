@@ -12,10 +12,10 @@ public final class DatasetIotEventsDestinationConfiguration {
     private final String inputName;
     private final String roleArn;
 
-    @OutputCustomType.Constructor({"inputName","roleArn"})
+    @OutputCustomType.Constructor
     private DatasetIotEventsDestinationConfiguration(
-        String inputName,
-        String roleArn) {
+        @OutputCustomType.Parameter("inputName") String inputName,
+        @OutputCustomType.Parameter("roleArn") String roleArn) {
         this.inputName = inputName;
         this.roleArn = roleArn;
     }

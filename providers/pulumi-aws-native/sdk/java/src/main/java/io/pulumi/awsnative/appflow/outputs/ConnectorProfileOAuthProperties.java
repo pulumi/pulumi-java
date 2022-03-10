@@ -16,11 +16,11 @@ public final class ConnectorProfileOAuthProperties {
     private final @Nullable List<String> oAuthScopes;
     private final @Nullable String tokenUrl;
 
-    @OutputCustomType.Constructor({"authCodeUrl","oAuthScopes","tokenUrl"})
+    @OutputCustomType.Constructor
     private ConnectorProfileOAuthProperties(
-        @Nullable String authCodeUrl,
-        @Nullable List<String> oAuthScopes,
-        @Nullable String tokenUrl) {
+        @OutputCustomType.Parameter("authCodeUrl") @Nullable String authCodeUrl,
+        @OutputCustomType.Parameter("oAuthScopes") @Nullable List<String> oAuthScopes,
+        @OutputCustomType.Parameter("tokenUrl") @Nullable String tokenUrl) {
         this.authCodeUrl = authCodeUrl;
         this.oAuthScopes = oAuthScopes;
         this.tokenUrl = tokenUrl;

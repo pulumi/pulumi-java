@@ -34,12 +34,12 @@ public final class GetACLResult {
      */
     private final @Nullable List<String> userNames;
 
-    @OutputCustomType.Constructor({"arn","status","tags","userNames"})
+    @OutputCustomType.Constructor
     private GetACLResult(
-        @Nullable String arn,
-        @Nullable String status,
-        @Nullable List<ACLTag> tags,
-        @Nullable List<String> userNames) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("status") @Nullable String status,
+        @OutputCustomType.Parameter("tags") @Nullable List<ACLTag> tags,
+        @OutputCustomType.Parameter("userNames") @Nullable List<String> userNames) {
         this.arn = arn;
         this.status = status;
         this.tags = tags;

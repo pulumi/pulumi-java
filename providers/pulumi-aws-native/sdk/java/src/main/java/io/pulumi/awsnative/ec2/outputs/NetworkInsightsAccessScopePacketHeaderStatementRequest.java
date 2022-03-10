@@ -20,15 +20,15 @@ public final class NetworkInsightsAccessScopePacketHeaderStatementRequest {
     private final @Nullable List<String> sourcePorts;
     private final @Nullable List<String> sourcePrefixLists;
 
-    @OutputCustomType.Constructor({"destinationAddresses","destinationPorts","destinationPrefixLists","protocols","sourceAddresses","sourcePorts","sourcePrefixLists"})
+    @OutputCustomType.Constructor
     private NetworkInsightsAccessScopePacketHeaderStatementRequest(
-        @Nullable List<String> destinationAddresses,
-        @Nullable List<String> destinationPorts,
-        @Nullable List<String> destinationPrefixLists,
-        @Nullable List<NetworkInsightsAccessScopeProtocol> protocols,
-        @Nullable List<String> sourceAddresses,
-        @Nullable List<String> sourcePorts,
-        @Nullable List<String> sourcePrefixLists) {
+        @OutputCustomType.Parameter("destinationAddresses") @Nullable List<String> destinationAddresses,
+        @OutputCustomType.Parameter("destinationPorts") @Nullable List<String> destinationPorts,
+        @OutputCustomType.Parameter("destinationPrefixLists") @Nullable List<String> destinationPrefixLists,
+        @OutputCustomType.Parameter("protocols") @Nullable List<NetworkInsightsAccessScopeProtocol> protocols,
+        @OutputCustomType.Parameter("sourceAddresses") @Nullable List<String> sourceAddresses,
+        @OutputCustomType.Parameter("sourcePorts") @Nullable List<String> sourcePorts,
+        @OutputCustomType.Parameter("sourcePrefixLists") @Nullable List<String> sourcePrefixLists) {
         this.destinationAddresses = destinationAddresses;
         this.destinationPorts = destinationPorts;
         this.destinationPrefixLists = destinationPrefixLists;

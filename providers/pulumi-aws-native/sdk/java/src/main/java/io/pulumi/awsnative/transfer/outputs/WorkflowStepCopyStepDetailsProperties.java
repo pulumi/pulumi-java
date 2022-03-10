@@ -25,11 +25,11 @@ public final class WorkflowStepCopyStepDetailsProperties {
      */
     private final @Nullable WorkflowStepCopyStepDetailsPropertiesOverwriteExisting overwriteExisting;
 
-    @OutputCustomType.Constructor({"destinationFileLocation","name","overwriteExisting"})
+    @OutputCustomType.Constructor
     private WorkflowStepCopyStepDetailsProperties(
-        @Nullable WorkflowInputFileLocation destinationFileLocation,
-        @Nullable String name,
-        @Nullable WorkflowStepCopyStepDetailsPropertiesOverwriteExisting overwriteExisting) {
+        @OutputCustomType.Parameter("destinationFileLocation") @Nullable WorkflowInputFileLocation destinationFileLocation,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("overwriteExisting") @Nullable WorkflowStepCopyStepDetailsPropertiesOverwriteExisting overwriteExisting) {
         this.destinationFileLocation = destinationFileLocation;
         this.name = name;
         this.overwriteExisting = overwriteExisting;

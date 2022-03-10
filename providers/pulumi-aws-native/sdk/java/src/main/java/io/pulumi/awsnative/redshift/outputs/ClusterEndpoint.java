@@ -14,10 +14,10 @@ public final class ClusterEndpoint {
     private final @Nullable String address;
     private final @Nullable String port;
 
-    @OutputCustomType.Constructor({"address","port"})
+    @OutputCustomType.Constructor
     private ClusterEndpoint(
-        @Nullable String address,
-        @Nullable String port) {
+        @OutputCustomType.Parameter("address") @Nullable String address,
+        @OutputCustomType.Parameter("port") @Nullable String port) {
         this.address = address;
         this.port = port;
     }

@@ -21,14 +21,14 @@ public final class RuleGroupMatchAttributes {
     private final @Nullable List<RuleGroupAddress> sources;
     private final @Nullable List<RuleGroupTCPFlagField> tCPFlags;
 
-    @OutputCustomType.Constructor({"destinationPorts","destinations","protocols","sourcePorts","sources","tCPFlags"})
+    @OutputCustomType.Constructor
     private RuleGroupMatchAttributes(
-        @Nullable List<RuleGroupPortRange> destinationPorts,
-        @Nullable List<RuleGroupAddress> destinations,
-        @Nullable List<Integer> protocols,
-        @Nullable List<RuleGroupPortRange> sourcePorts,
-        @Nullable List<RuleGroupAddress> sources,
-        @Nullable List<RuleGroupTCPFlagField> tCPFlags) {
+        @OutputCustomType.Parameter("destinationPorts") @Nullable List<RuleGroupPortRange> destinationPorts,
+        @OutputCustomType.Parameter("destinations") @Nullable List<RuleGroupAddress> destinations,
+        @OutputCustomType.Parameter("protocols") @Nullable List<Integer> protocols,
+        @OutputCustomType.Parameter("sourcePorts") @Nullable List<RuleGroupPortRange> sourcePorts,
+        @OutputCustomType.Parameter("sources") @Nullable List<RuleGroupAddress> sources,
+        @OutputCustomType.Parameter("tCPFlags") @Nullable List<RuleGroupTCPFlagField> tCPFlags) {
         this.destinationPorts = destinationPorts;
         this.destinations = destinations;
         this.protocols = protocols;

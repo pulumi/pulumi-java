@@ -22,10 +22,10 @@ public final class AppImageConfigKernelSpec {
      */
     private final String name;
 
-    @OutputCustomType.Constructor({"displayName","name"})
+    @OutputCustomType.Constructor
     private AppImageConfigKernelSpec(
-        @Nullable String displayName,
-        String name) {
+        @OutputCustomType.Parameter("displayName") @Nullable String displayName,
+        @OutputCustomType.Parameter("name") String name) {
         this.displayName = displayName;
         this.name = name;
     }

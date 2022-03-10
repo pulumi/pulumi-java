@@ -26,12 +26,12 @@ public final class StudioComponentInitializationScript {
      */
     private final @Nullable String script;
 
-    @OutputCustomType.Constructor({"launchProfileProtocolVersion","platform","runContext","script"})
+    @OutputCustomType.Constructor
     private StudioComponentInitializationScript(
-        @Nullable String launchProfileProtocolVersion,
-        @Nullable StudioComponentLaunchProfilePlatform platform,
-        @Nullable StudioComponentInitializationScriptRunContext runContext,
-        @Nullable String script) {
+        @OutputCustomType.Parameter("launchProfileProtocolVersion") @Nullable String launchProfileProtocolVersion,
+        @OutputCustomType.Parameter("platform") @Nullable StudioComponentLaunchProfilePlatform platform,
+        @OutputCustomType.Parameter("runContext") @Nullable StudioComponentInitializationScriptRunContext runContext,
+        @OutputCustomType.Parameter("script") @Nullable String script) {
         this.launchProfileProtocolVersion = launchProfileProtocolVersion;
         this.platform = platform;
         this.runContext = runContext;

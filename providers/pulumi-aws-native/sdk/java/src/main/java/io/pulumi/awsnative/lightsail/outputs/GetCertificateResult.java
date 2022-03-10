@@ -25,11 +25,11 @@ public final class GetCertificateResult {
      */
     private final @Nullable List<CertificateTag> tags;
 
-    @OutputCustomType.Constructor({"certificateArn","status","tags"})
+    @OutputCustomType.Constructor
     private GetCertificateResult(
-        @Nullable String certificateArn,
-        @Nullable String status,
-        @Nullable List<CertificateTag> tags) {
+        @OutputCustomType.Parameter("certificateArn") @Nullable String certificateArn,
+        @OutputCustomType.Parameter("status") @Nullable String status,
+        @OutputCustomType.Parameter("tags") @Nullable List<CertificateTag> tags) {
         this.certificateArn = certificateArn;
         this.status = status;
         this.tags = tags;

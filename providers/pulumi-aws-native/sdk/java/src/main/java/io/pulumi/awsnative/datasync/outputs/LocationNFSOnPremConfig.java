@@ -16,8 +16,8 @@ public final class LocationNFSOnPremConfig {
      */
     private final List<String> agentArns;
 
-    @OutputCustomType.Constructor({"agentArns"})
-    private LocationNFSOnPremConfig(List<String> agentArns) {
+    @OutputCustomType.Constructor
+    private LocationNFSOnPremConfig(@OutputCustomType.Parameter("agentArns") List<String> agentArns) {
         this.agentArns = agentArns;
     }
 

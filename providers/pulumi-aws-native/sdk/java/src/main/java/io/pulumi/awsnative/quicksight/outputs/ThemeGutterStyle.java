@@ -18,8 +18,8 @@ public final class ThemeGutterStyle {
      */
     private final @Nullable Boolean show;
 
-    @OutputCustomType.Constructor({"show"})
-    private ThemeGutterStyle(@Nullable Boolean show) {
+    @OutputCustomType.Constructor
+    private ThemeGutterStyle(@OutputCustomType.Parameter("show") @Nullable Boolean show) {
         this.show = show;
     }
 

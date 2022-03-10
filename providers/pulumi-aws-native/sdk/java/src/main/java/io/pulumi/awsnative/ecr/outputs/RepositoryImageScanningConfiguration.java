@@ -13,8 +13,8 @@ import javax.annotation.Nullable;
 public final class RepositoryImageScanningConfiguration {
     private final @Nullable Boolean scanOnPush;
 
-    @OutputCustomType.Constructor({"scanOnPush"})
-    private RepositoryImageScanningConfiguration(@Nullable Boolean scanOnPush) {
+    @OutputCustomType.Constructor
+    private RepositoryImageScanningConfiguration(@OutputCustomType.Parameter("scanOnPush") @Nullable Boolean scanOnPush) {
         this.scanOnPush = scanOnPush;
     }
 

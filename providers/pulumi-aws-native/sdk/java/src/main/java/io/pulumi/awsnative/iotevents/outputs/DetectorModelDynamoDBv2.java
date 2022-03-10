@@ -19,10 +19,10 @@ public final class DetectorModelDynamoDBv2 {
      */
     private final String tableName;
 
-    @OutputCustomType.Constructor({"payload","tableName"})
+    @OutputCustomType.Constructor
     private DetectorModelDynamoDBv2(
-        @Nullable DetectorModelPayload payload,
-        String tableName) {
+        @OutputCustomType.Parameter("payload") @Nullable DetectorModelPayload payload,
+        @OutputCustomType.Parameter("tableName") String tableName) {
         this.payload = payload;
         this.tableName = tableName;
     }

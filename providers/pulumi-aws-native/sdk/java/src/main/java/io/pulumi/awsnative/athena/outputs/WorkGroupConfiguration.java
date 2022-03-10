@@ -21,14 +21,14 @@ public final class WorkGroupConfiguration {
     private final @Nullable Boolean requesterPaysEnabled;
     private final @Nullable WorkGroupResultConfiguration resultConfiguration;
 
-    @OutputCustomType.Constructor({"bytesScannedCutoffPerQuery","enforceWorkGroupConfiguration","engineVersion","publishCloudWatchMetricsEnabled","requesterPaysEnabled","resultConfiguration"})
+    @OutputCustomType.Constructor
     private WorkGroupConfiguration(
-        @Nullable Integer bytesScannedCutoffPerQuery,
-        @Nullable Boolean enforceWorkGroupConfiguration,
-        @Nullable WorkGroupEngineVersion engineVersion,
-        @Nullable Boolean publishCloudWatchMetricsEnabled,
-        @Nullable Boolean requesterPaysEnabled,
-        @Nullable WorkGroupResultConfiguration resultConfiguration) {
+        @OutputCustomType.Parameter("bytesScannedCutoffPerQuery") @Nullable Integer bytesScannedCutoffPerQuery,
+        @OutputCustomType.Parameter("enforceWorkGroupConfiguration") @Nullable Boolean enforceWorkGroupConfiguration,
+        @OutputCustomType.Parameter("engineVersion") @Nullable WorkGroupEngineVersion engineVersion,
+        @OutputCustomType.Parameter("publishCloudWatchMetricsEnabled") @Nullable Boolean publishCloudWatchMetricsEnabled,
+        @OutputCustomType.Parameter("requesterPaysEnabled") @Nullable Boolean requesterPaysEnabled,
+        @OutputCustomType.Parameter("resultConfiguration") @Nullable WorkGroupResultConfiguration resultConfiguration) {
         this.bytesScannedCutoffPerQuery = bytesScannedCutoffPerQuery;
         this.enforceWorkGroupConfiguration = enforceWorkGroupConfiguration;
         this.engineVersion = engineVersion;

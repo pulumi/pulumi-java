@@ -15,10 +15,10 @@ public final class GetClusterCapacityProviderAssociationsResult {
     private final @Nullable List<String> capacityProviders;
     private final @Nullable List<ClusterCapacityProviderAssociationsCapacityProviderStrategy> defaultCapacityProviderStrategy;
 
-    @OutputCustomType.Constructor({"capacityProviders","defaultCapacityProviderStrategy"})
+    @OutputCustomType.Constructor
     private GetClusterCapacityProviderAssociationsResult(
-        @Nullable List<String> capacityProviders,
-        @Nullable List<ClusterCapacityProviderAssociationsCapacityProviderStrategy> defaultCapacityProviderStrategy) {
+        @OutputCustomType.Parameter("capacityProviders") @Nullable List<String> capacityProviders,
+        @OutputCustomType.Parameter("defaultCapacityProviderStrategy") @Nullable List<ClusterCapacityProviderAssociationsCapacityProviderStrategy> defaultCapacityProviderStrategy) {
         this.capacityProviders = capacityProviders;
         this.defaultCapacityProviderStrategy = defaultCapacityProviderStrategy;
     }

@@ -11,8 +11,8 @@ import java.util.Objects;
 public final class TopicRulePutItemInput {
     private final String tableName;
 
-    @OutputCustomType.Constructor({"tableName"})
-    private TopicRulePutItemInput(String tableName) {
+    @OutputCustomType.Constructor
+    private TopicRulePutItemInput(@OutputCustomType.Parameter("tableName") String tableName) {
         this.tableName = tableName;
     }
 

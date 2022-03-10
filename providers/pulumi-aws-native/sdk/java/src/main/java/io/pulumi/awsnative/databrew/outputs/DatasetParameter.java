@@ -29,13 +29,13 @@ public final class DatasetParameter {
      */
     private final DatasetParameterType type;
 
-    @OutputCustomType.Constructor({"createColumn","datetimeOptions","filter","name","type"})
+    @OutputCustomType.Constructor
     private DatasetParameter(
-        @Nullable Boolean createColumn,
-        @Nullable DatasetDatetimeOptions datetimeOptions,
-        @Nullable DatasetFilterExpression filter,
-        String name,
-        DatasetParameterType type) {
+        @OutputCustomType.Parameter("createColumn") @Nullable Boolean createColumn,
+        @OutputCustomType.Parameter("datetimeOptions") @Nullable DatasetDatetimeOptions datetimeOptions,
+        @OutputCustomType.Parameter("filter") @Nullable DatasetFilterExpression filter,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("type") DatasetParameterType type) {
         this.createColumn = createColumn;
         this.datetimeOptions = datetimeOptions;
         this.filter = filter;

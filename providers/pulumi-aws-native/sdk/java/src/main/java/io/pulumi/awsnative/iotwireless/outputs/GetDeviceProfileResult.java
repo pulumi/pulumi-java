@@ -40,13 +40,13 @@ public final class GetDeviceProfileResult {
      */
     private final @Nullable List<DeviceProfileTag> tags;
 
-    @OutputCustomType.Constructor({"arn","id","loRaWAN","name","tags"})
+    @OutputCustomType.Constructor
     private GetDeviceProfileResult(
-        @Nullable String arn,
-        @Nullable String id,
-        @Nullable DeviceProfileLoRaWANDeviceProfile loRaWAN,
-        @Nullable String name,
-        @Nullable List<DeviceProfileTag> tags) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("loRaWAN") @Nullable DeviceProfileLoRaWANDeviceProfile loRaWAN,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("tags") @Nullable List<DeviceProfileTag> tags) {
         this.arn = arn;
         this.id = id;
         this.loRaWAN = loRaWAN;

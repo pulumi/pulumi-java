@@ -62,17 +62,17 @@ public final class TemplateVersion {
      */
     private final @Nullable Double versionNumber;
 
-    @OutputCustomType.Constructor({"createdTime","dataSetConfigurations","description","errors","sheets","sourceEntityArn","status","themeArn","versionNumber"})
+    @OutputCustomType.Constructor
     private TemplateVersion(
-        @Nullable String createdTime,
-        @Nullable List<TemplateDataSetConfiguration> dataSetConfigurations,
-        @Nullable String description,
-        @Nullable List<TemplateError> errors,
-        @Nullable List<TemplateSheet> sheets,
-        @Nullable String sourceEntityArn,
-        @Nullable TemplateResourceStatus status,
-        @Nullable String themeArn,
-        @Nullable Double versionNumber) {
+        @OutputCustomType.Parameter("createdTime") @Nullable String createdTime,
+        @OutputCustomType.Parameter("dataSetConfigurations") @Nullable List<TemplateDataSetConfiguration> dataSetConfigurations,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("errors") @Nullable List<TemplateError> errors,
+        @OutputCustomType.Parameter("sheets") @Nullable List<TemplateSheet> sheets,
+        @OutputCustomType.Parameter("sourceEntityArn") @Nullable String sourceEntityArn,
+        @OutputCustomType.Parameter("status") @Nullable TemplateResourceStatus status,
+        @OutputCustomType.Parameter("themeArn") @Nullable String themeArn,
+        @OutputCustomType.Parameter("versionNumber") @Nullable Double versionNumber) {
         this.createdTime = createdTime;
         this.dataSetConfigurations = dataSetConfigurations;
         this.description = description;

@@ -21,17 +21,17 @@ public final class CertificateKeyUsage {
     private final @Nullable Boolean keyEncipherment;
     private final @Nullable Boolean nonRepudiation;
 
-    @OutputCustomType.Constructor({"cRLSign","dataEncipherment","decipherOnly","digitalSignature","encipherOnly","keyAgreement","keyCertSign","keyEncipherment","nonRepudiation"})
+    @OutputCustomType.Constructor
     private CertificateKeyUsage(
-        @Nullable Boolean cRLSign,
-        @Nullable Boolean dataEncipherment,
-        @Nullable Boolean decipherOnly,
-        @Nullable Boolean digitalSignature,
-        @Nullable Boolean encipherOnly,
-        @Nullable Boolean keyAgreement,
-        @Nullable Boolean keyCertSign,
-        @Nullable Boolean keyEncipherment,
-        @Nullable Boolean nonRepudiation) {
+        @OutputCustomType.Parameter("cRLSign") @Nullable Boolean cRLSign,
+        @OutputCustomType.Parameter("dataEncipherment") @Nullable Boolean dataEncipherment,
+        @OutputCustomType.Parameter("decipherOnly") @Nullable Boolean decipherOnly,
+        @OutputCustomType.Parameter("digitalSignature") @Nullable Boolean digitalSignature,
+        @OutputCustomType.Parameter("encipherOnly") @Nullable Boolean encipherOnly,
+        @OutputCustomType.Parameter("keyAgreement") @Nullable Boolean keyAgreement,
+        @OutputCustomType.Parameter("keyCertSign") @Nullable Boolean keyCertSign,
+        @OutputCustomType.Parameter("keyEncipherment") @Nullable Boolean keyEncipherment,
+        @OutputCustomType.Parameter("nonRepudiation") @Nullable Boolean nonRepudiation) {
         this.cRLSign = cRLSign;
         this.dataEncipherment = dataEncipherment;
         this.decipherOnly = decipherOnly;

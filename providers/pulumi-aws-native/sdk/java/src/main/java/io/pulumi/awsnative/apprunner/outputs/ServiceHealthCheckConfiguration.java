@@ -44,14 +44,14 @@ public final class ServiceHealthCheckConfiguration {
      */
     private final @Nullable Integer unhealthyThreshold;
 
-    @OutputCustomType.Constructor({"healthyThreshold","interval","path","protocol","timeout","unhealthyThreshold"})
+    @OutputCustomType.Constructor
     private ServiceHealthCheckConfiguration(
-        @Nullable Integer healthyThreshold,
-        @Nullable Integer interval,
-        @Nullable String path,
-        @Nullable ServiceHealthCheckConfigurationProtocol protocol,
-        @Nullable Integer timeout,
-        @Nullable Integer unhealthyThreshold) {
+        @OutputCustomType.Parameter("healthyThreshold") @Nullable Integer healthyThreshold,
+        @OutputCustomType.Parameter("interval") @Nullable Integer interval,
+        @OutputCustomType.Parameter("path") @Nullable String path,
+        @OutputCustomType.Parameter("protocol") @Nullable ServiceHealthCheckConfigurationProtocol protocol,
+        @OutputCustomType.Parameter("timeout") @Nullable Integer timeout,
+        @OutputCustomType.Parameter("unhealthyThreshold") @Nullable Integer unhealthyThreshold) {
         this.healthyThreshold = healthyThreshold;
         this.interval = interval;
         this.path = path;

@@ -27,16 +27,16 @@ public final class ListenerRuleRuleCondition {
     private final @Nullable ListenerRuleSourceIpConfig sourceIpConfig;
     private final @Nullable List<String> values;
 
-    @OutputCustomType.Constructor({"field","hostHeaderConfig","httpHeaderConfig","httpRequestMethodConfig","pathPatternConfig","queryStringConfig","sourceIpConfig","values"})
+    @OutputCustomType.Constructor
     private ListenerRuleRuleCondition(
-        @Nullable String field,
-        @Nullable ListenerRuleHostHeaderConfig hostHeaderConfig,
-        @Nullable ListenerRuleHttpHeaderConfig httpHeaderConfig,
-        @Nullable ListenerRuleHttpRequestMethodConfig httpRequestMethodConfig,
-        @Nullable ListenerRulePathPatternConfig pathPatternConfig,
-        @Nullable ListenerRuleQueryStringConfig queryStringConfig,
-        @Nullable ListenerRuleSourceIpConfig sourceIpConfig,
-        @Nullable List<String> values) {
+        @OutputCustomType.Parameter("field") @Nullable String field,
+        @OutputCustomType.Parameter("hostHeaderConfig") @Nullable ListenerRuleHostHeaderConfig hostHeaderConfig,
+        @OutputCustomType.Parameter("httpHeaderConfig") @Nullable ListenerRuleHttpHeaderConfig httpHeaderConfig,
+        @OutputCustomType.Parameter("httpRequestMethodConfig") @Nullable ListenerRuleHttpRequestMethodConfig httpRequestMethodConfig,
+        @OutputCustomType.Parameter("pathPatternConfig") @Nullable ListenerRulePathPatternConfig pathPatternConfig,
+        @OutputCustomType.Parameter("queryStringConfig") @Nullable ListenerRuleQueryStringConfig queryStringConfig,
+        @OutputCustomType.Parameter("sourceIpConfig") @Nullable ListenerRuleSourceIpConfig sourceIpConfig,
+        @OutputCustomType.Parameter("values") @Nullable List<String> values) {
         this.field = field;
         this.hostHeaderConfig = hostHeaderConfig;
         this.httpHeaderConfig = httpHeaderConfig;

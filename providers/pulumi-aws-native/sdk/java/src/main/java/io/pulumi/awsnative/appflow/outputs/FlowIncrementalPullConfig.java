@@ -13,8 +13,8 @@ import javax.annotation.Nullable;
 public final class FlowIncrementalPullConfig {
     private final @Nullable String datetimeTypeFieldName;
 
-    @OutputCustomType.Constructor({"datetimeTypeFieldName"})
-    private FlowIncrementalPullConfig(@Nullable String datetimeTypeFieldName) {
+    @OutputCustomType.Constructor
+    private FlowIncrementalPullConfig(@OutputCustomType.Parameter("datetimeTypeFieldName") @Nullable String datetimeTypeFieldName) {
         this.datetimeTypeFieldName = datetimeTypeFieldName;
     }
 

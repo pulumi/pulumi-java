@@ -32,12 +32,12 @@ public final class EndpointAccessNetworkInterface {
      */
     private final @Nullable String subnetId;
 
-    @OutputCustomType.Constructor({"availabilityZone","networkInterfaceId","privateIpAddress","subnetId"})
+    @OutputCustomType.Constructor
     private EndpointAccessNetworkInterface(
-        @Nullable String availabilityZone,
-        @Nullable String networkInterfaceId,
-        @Nullable String privateIpAddress,
-        @Nullable String subnetId) {
+        @OutputCustomType.Parameter("availabilityZone") @Nullable String availabilityZone,
+        @OutputCustomType.Parameter("networkInterfaceId") @Nullable String networkInterfaceId,
+        @OutputCustomType.Parameter("privateIpAddress") @Nullable String privateIpAddress,
+        @OutputCustomType.Parameter("subnetId") @Nullable String subnetId) {
         this.availabilityZone = availabilityZone;
         this.networkInterfaceId = networkInterfaceId;
         this.privateIpAddress = privateIpAddress;

@@ -37,15 +37,15 @@ public final class GetDatasetResult {
     private final @Nullable SchemaProperties schema;
     private final @Nullable List<TagsItemProperties> tags;
 
-    @OutputCustomType.Constructor({"arn","dataFrequency","datasetType","domain","encryptionConfig","schema","tags"})
+    @OutputCustomType.Constructor
     private GetDatasetResult(
-        @Nullable String arn,
-        @Nullable String dataFrequency,
-        @Nullable DatasetType datasetType,
-        @Nullable DatasetDomain domain,
-        @Nullable EncryptionConfigProperties encryptionConfig,
-        @Nullable SchemaProperties schema,
-        @Nullable List<TagsItemProperties> tags) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("dataFrequency") @Nullable String dataFrequency,
+        @OutputCustomType.Parameter("datasetType") @Nullable DatasetType datasetType,
+        @OutputCustomType.Parameter("domain") @Nullable DatasetDomain domain,
+        @OutputCustomType.Parameter("encryptionConfig") @Nullable EncryptionConfigProperties encryptionConfig,
+        @OutputCustomType.Parameter("schema") @Nullable SchemaProperties schema,
+        @OutputCustomType.Parameter("tags") @Nullable List<TagsItemProperties> tags) {
         this.arn = arn;
         this.dataFrequency = dataFrequency;
         this.datasetType = datasetType;

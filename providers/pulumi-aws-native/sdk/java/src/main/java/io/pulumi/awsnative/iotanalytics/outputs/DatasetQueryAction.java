@@ -15,10 +15,10 @@ public final class DatasetQueryAction {
     private final @Nullable List<DatasetFilter> filters;
     private final String sqlQuery;
 
-    @OutputCustomType.Constructor({"filters","sqlQuery"})
+    @OutputCustomType.Constructor
     private DatasetQueryAction(
-        @Nullable List<DatasetFilter> filters,
-        String sqlQuery) {
+        @OutputCustomType.Parameter("filters") @Nullable List<DatasetFilter> filters,
+        @OutputCustomType.Parameter("sqlQuery") String sqlQuery) {
         this.filters = filters;
         this.sqlQuery = sqlQuery;
     }

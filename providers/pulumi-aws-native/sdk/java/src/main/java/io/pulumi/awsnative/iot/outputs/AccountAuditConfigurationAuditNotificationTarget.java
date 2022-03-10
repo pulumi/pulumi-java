@@ -28,11 +28,11 @@ public final class AccountAuditConfigurationAuditNotificationTarget {
      */
     private final @Nullable String targetArn;
 
-    @OutputCustomType.Constructor({"enabled","roleArn","targetArn"})
+    @OutputCustomType.Constructor
     private AccountAuditConfigurationAuditNotificationTarget(
-        @Nullable Boolean enabled,
-        @Nullable String roleArn,
-        @Nullable String targetArn) {
+        @OutputCustomType.Parameter("enabled") @Nullable Boolean enabled,
+        @OutputCustomType.Parameter("roleArn") @Nullable String roleArn,
+        @OutputCustomType.Parameter("targetArn") @Nullable String targetArn) {
         this.enabled = enabled;
         this.roleArn = roleArn;
         this.targetArn = targetArn;

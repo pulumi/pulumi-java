@@ -15,11 +15,11 @@ public final class StateMachineS3Location {
     private final String key;
     private final @Nullable String version;
 
-    @OutputCustomType.Constructor({"bucket","key","version"})
+    @OutputCustomType.Constructor
     private StateMachineS3Location(
-        String bucket,
-        String key,
-        @Nullable String version) {
+        @OutputCustomType.Parameter("bucket") String bucket,
+        @OutputCustomType.Parameter("key") String key,
+        @OutputCustomType.Parameter("version") @Nullable String version) {
         this.bucket = bucket;
         this.key = key;
         this.version = version;

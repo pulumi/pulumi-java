@@ -20,14 +20,14 @@ public final class CachePolicyConfig {
     private final String name;
     private final CachePolicyParametersInCacheKeyAndForwardedToOrigin parametersInCacheKeyAndForwardedToOrigin;
 
-    @OutputCustomType.Constructor({"comment","defaultTTL","maxTTL","minTTL","name","parametersInCacheKeyAndForwardedToOrigin"})
+    @OutputCustomType.Constructor
     private CachePolicyConfig(
-        @Nullable String comment,
-        Double defaultTTL,
-        Double maxTTL,
-        Double minTTL,
-        String name,
-        CachePolicyParametersInCacheKeyAndForwardedToOrigin parametersInCacheKeyAndForwardedToOrigin) {
+        @OutputCustomType.Parameter("comment") @Nullable String comment,
+        @OutputCustomType.Parameter("defaultTTL") Double defaultTTL,
+        @OutputCustomType.Parameter("maxTTL") Double maxTTL,
+        @OutputCustomType.Parameter("minTTL") Double minTTL,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("parametersInCacheKeyAndForwardedToOrigin") CachePolicyParametersInCacheKeyAndForwardedToOrigin parametersInCacheKeyAndForwardedToOrigin) {
         this.comment = comment;
         this.defaultTTL = defaultTTL;
         this.maxTTL = maxTTL;

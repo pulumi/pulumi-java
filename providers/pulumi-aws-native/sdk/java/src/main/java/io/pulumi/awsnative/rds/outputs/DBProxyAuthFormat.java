@@ -39,13 +39,13 @@ public final class DBProxyAuthFormat {
      */
     private final @Nullable String userName;
 
-    @OutputCustomType.Constructor({"authScheme","description","iAMAuth","secretArn","userName"})
+    @OutputCustomType.Constructor
     private DBProxyAuthFormat(
-        @Nullable DBProxyAuthFormatAuthScheme authScheme,
-        @Nullable String description,
-        @Nullable DBProxyAuthFormatIAMAuth iAMAuth,
-        @Nullable String secretArn,
-        @Nullable String userName) {
+        @OutputCustomType.Parameter("authScheme") @Nullable DBProxyAuthFormatAuthScheme authScheme,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("iAMAuth") @Nullable DBProxyAuthFormatIAMAuth iAMAuth,
+        @OutputCustomType.Parameter("secretArn") @Nullable String secretArn,
+        @OutputCustomType.Parameter("userName") @Nullable String userName) {
         this.authScheme = authScheme;
         this.description = description;
         this.iAMAuth = iAMAuth;

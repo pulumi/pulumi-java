@@ -33,27 +33,27 @@ public final class ServiceProfileLoRaWANServiceProfile {
     private final @Nullable Integer ulRate;
     private final @Nullable String ulRatePolicy;
 
-    @OutputCustomType.Constructor({"addGwMetadata","channelMask","devStatusReqFreq","dlBucketSize","dlRate","dlRatePolicy","drMax","drMin","hrAllowed","minGwDiversity","nwkGeoLoc","prAllowed","raAllowed","reportDevStatusBattery","reportDevStatusMargin","targetPer","ulBucketSize","ulRate","ulRatePolicy"})
+    @OutputCustomType.Constructor
     private ServiceProfileLoRaWANServiceProfile(
-        @Nullable Boolean addGwMetadata,
-        @Nullable String channelMask,
-        @Nullable Integer devStatusReqFreq,
-        @Nullable Integer dlBucketSize,
-        @Nullable Integer dlRate,
-        @Nullable String dlRatePolicy,
-        @Nullable Integer drMax,
-        @Nullable Integer drMin,
-        @Nullable Boolean hrAllowed,
-        @Nullable Integer minGwDiversity,
-        @Nullable Boolean nwkGeoLoc,
-        @Nullable Boolean prAllowed,
-        @Nullable Boolean raAllowed,
-        @Nullable Boolean reportDevStatusBattery,
-        @Nullable Boolean reportDevStatusMargin,
-        @Nullable Integer targetPer,
-        @Nullable Integer ulBucketSize,
-        @Nullable Integer ulRate,
-        @Nullable String ulRatePolicy) {
+        @OutputCustomType.Parameter("addGwMetadata") @Nullable Boolean addGwMetadata,
+        @OutputCustomType.Parameter("channelMask") @Nullable String channelMask,
+        @OutputCustomType.Parameter("devStatusReqFreq") @Nullable Integer devStatusReqFreq,
+        @OutputCustomType.Parameter("dlBucketSize") @Nullable Integer dlBucketSize,
+        @OutputCustomType.Parameter("dlRate") @Nullable Integer dlRate,
+        @OutputCustomType.Parameter("dlRatePolicy") @Nullable String dlRatePolicy,
+        @OutputCustomType.Parameter("drMax") @Nullable Integer drMax,
+        @OutputCustomType.Parameter("drMin") @Nullable Integer drMin,
+        @OutputCustomType.Parameter("hrAllowed") @Nullable Boolean hrAllowed,
+        @OutputCustomType.Parameter("minGwDiversity") @Nullable Integer minGwDiversity,
+        @OutputCustomType.Parameter("nwkGeoLoc") @Nullable Boolean nwkGeoLoc,
+        @OutputCustomType.Parameter("prAllowed") @Nullable Boolean prAllowed,
+        @OutputCustomType.Parameter("raAllowed") @Nullable Boolean raAllowed,
+        @OutputCustomType.Parameter("reportDevStatusBattery") @Nullable Boolean reportDevStatusBattery,
+        @OutputCustomType.Parameter("reportDevStatusMargin") @Nullable Boolean reportDevStatusMargin,
+        @OutputCustomType.Parameter("targetPer") @Nullable Integer targetPer,
+        @OutputCustomType.Parameter("ulBucketSize") @Nullable Integer ulBucketSize,
+        @OutputCustomType.Parameter("ulRate") @Nullable Integer ulRate,
+        @OutputCustomType.Parameter("ulRatePolicy") @Nullable String ulRatePolicy) {
         this.addGwMetadata = addGwMetadata;
         this.channelMask = channelMask;
         this.devStatusReqFreq = devStatusReqFreq;

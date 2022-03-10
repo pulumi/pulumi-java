@@ -15,10 +15,10 @@ public final class NetworkInsightsAccessScopePathStatementRequest {
     private final @Nullable NetworkInsightsAccessScopePacketHeaderStatementRequest packetHeaderStatement;
     private final @Nullable NetworkInsightsAccessScopeResourceStatementRequest resourceStatement;
 
-    @OutputCustomType.Constructor({"packetHeaderStatement","resourceStatement"})
+    @OutputCustomType.Constructor
     private NetworkInsightsAccessScopePathStatementRequest(
-        @Nullable NetworkInsightsAccessScopePacketHeaderStatementRequest packetHeaderStatement,
-        @Nullable NetworkInsightsAccessScopeResourceStatementRequest resourceStatement) {
+        @OutputCustomType.Parameter("packetHeaderStatement") @Nullable NetworkInsightsAccessScopePacketHeaderStatementRequest packetHeaderStatement,
+        @OutputCustomType.Parameter("resourceStatement") @Nullable NetworkInsightsAccessScopeResourceStatementRequest resourceStatement) {
         this.packetHeaderStatement = packetHeaderStatement;
         this.resourceStatement = resourceStatement;
     }

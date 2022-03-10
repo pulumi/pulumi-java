@@ -25,11 +25,11 @@ public final class DataSetGeoSpatialColumnGroup {
      */
     private final String name;
 
-    @OutputCustomType.Constructor({"columns","countryCode","name"})
+    @OutputCustomType.Constructor
     private DataSetGeoSpatialColumnGroup(
-        List<String> columns,
-        @Nullable DataSetGeoSpatialCountryCode countryCode,
-        String name) {
+        @OutputCustomType.Parameter("columns") List<String> columns,
+        @OutputCustomType.Parameter("countryCode") @Nullable DataSetGeoSpatialCountryCode countryCode,
+        @OutputCustomType.Parameter("name") String name) {
         this.columns = columns;
         this.countryCode = countryCode;
         this.name = name;

@@ -18,12 +18,12 @@ public final class GetTestGridProjectResult {
     private final @Nullable String name;
     private final @Nullable List<TestGridProjectTag> tags;
 
-    @OutputCustomType.Constructor({"arn","description","name","tags"})
+    @OutputCustomType.Constructor
     private GetTestGridProjectResult(
-        @Nullable String arn,
-        @Nullable String description,
-        @Nullable String name,
-        @Nullable List<TestGridProjectTag> tags) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("tags") @Nullable List<TestGridProjectTag> tags) {
         this.arn = arn;
         this.description = description;
         this.name = name;
