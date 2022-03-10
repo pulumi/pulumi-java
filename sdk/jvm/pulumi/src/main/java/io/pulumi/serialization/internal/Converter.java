@@ -29,6 +29,7 @@ import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Parameter;
 import java.util.*;
 import java.util.function.Function;
+import java.util.stream.Collectors;
 
 import static java.util.Objects.requireNonNull;
 import static java.util.stream.Collectors.joining;
@@ -303,7 +304,10 @@ public class Converter {
             }
 
             // Validate that we can decode the argument we've received
-            var expectedParameterNames = Set.of(constructorAnnotation.value());
+            var expectedParameterNames =
+                    Arrays.stream(constructorAnnotation.value())
+                            .map(x -> fixupMangledName(x))
+                            .collect(Collectors.toSet());
             for (var argumentName : argumentsMap.keySet()) {
                 if (!expectedParameterNames.contains(argumentName)) {
                     System.out.printf("can't deserialize: '%s'\n", argumentName);
@@ -323,7 +327,7 @@ public class Converter {
             }
             for (int i = 0, n = constructorParameters.length; i < n; i++) {
                 var parameter = constructorParameters[i];
-                var parameterName = constructorAnnotation.value()[i]; // we cannot use parameter.getName(), because it will be just e.g. 'arg0'
+                var parameterName = fixupMangledName(constructorAnnotation.value()[i]); // we cannot use parameter.getName(), because it will be just e.g. 'arg0'
 
                 // Note: tryGetValue may not find a value here.
                 // That can happen for things like unknown values.
@@ -369,6 +373,15 @@ public class Converter {
                     "Unexpected target type '%s' when deserializing '%s'", targetType.getTypeName(), context
             ));
         }
+    }
+
+    // TODO[pulumi/pulumi-java#218] once the issue with mangled names
+    // is fixed systematically, remove this function.
+    private String fixupMangledName(String name) {
+        if (name != null && name.startsWith("$")) {
+            return name.substring(1);
+        }
+        return name;
     }
 
     private JsonElement tryConvertJsonElement(String context, Object value) {
